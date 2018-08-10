@@ -39,7 +39,8 @@ def on_recv(sock, message):
 
     match = QUITRE.match(message)
     if match:
-        sender, msgtype, msgcontent = match.groups()
+        sender, msgcontent = match.groups()
+        msgtype = "QUIT"
 
     match = MSGRE.match(message)
     if match:
