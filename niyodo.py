@@ -30,7 +30,7 @@ def on_recv(sock, message):
 
     match = PINGRE.match(message)
     if match:
-        sock.send("{}\r\n".format(match.group(1)).encode())
+        sock.send("PONG{}\r\n".format(match.group(1)).encode())
         return
 
     sender, msgtype, msgcontent = "", "", ""
