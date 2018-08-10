@@ -15,11 +15,11 @@ def index():
 def list_years():
     cnx = mysql.connector.Connect(pool_name="niyodo", **config["database"])
     cursor = cnx.cursor()
-    cursor.execute("SELECT DISTINCT YEAR(datetime) FROM message")
+    cursor.execute("SELECT DISTINCT YEAR(datetime) FROM message ORDER BY datetime")
 
     ret = ""
     for year, in cursor:
-        ret += '<a href="{0}/">{0}/</a>'.format(year)
+        ret += '<a href="{0}/">{0}/</a><br>'.format(year)
 
     return '<!DOCTYPE html><head><title>c_lang_cn</title><body>{}</body></html>'.format(ret)
 
@@ -32,7 +32,7 @@ def list_files(year):
     
     ret = ""
     for month, day in cursor:
-        ret += '<a href="{month:02d}-{day:02d}.txt">{month}-{day}.txt</a>'.format(month=month, day=day)
+        ret += '<a href="{month:02d}-{day:02d}.txt">{month:02d}-{day:02d}.txt</a><br>'.format(month=month, day=day)
 
     cnx.close()
     return "<!DOCTYPE html><head><title>{}</title></head><body>{}</body></html>".format(year, ret)
