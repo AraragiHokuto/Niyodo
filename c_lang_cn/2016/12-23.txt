@@ -1,0 +1,109 @@
+00:06 varna quit:Quit: leaving
+00:41 lh_mouse quit:Ping timeout: 258 seconds
+00:43 [CHN]Kirov joined channel
+01:04 zwindl quit:Quit: Connection closed for inactivity
+01:41 zwindl joined channel
+02:31 Mokou quit:Remote host closed the connection
+03:54 zwindl quit:Quit: Connection closed for inactivity
+04:19 cleamooon quit:Quit: Leaving
+05:18 Taggnostr quit:Ping timeout: 256 seconds
+05:20 Taggnostr joined channel
+06:36 Youmu quit:Quit: Connection closed for inactivity
+08:48 lh_mouse joined channel
+08:54 yimis joined channel
+08:55 zwindl joined channel
+09:38 whatofor joined channel
+09:44 yimis quit:Quit: yimis
+09:44 Youmu joined channel
+10:32 perr joined channel
+10:32 perr quit:Changing host
+10:32 perr joined channel
+11:03 ianma_ joined channel
+11:07 ianma__ joined channel
+11:08 ianma_ quit:Ping timeout: 268 seconds
+11:12 ianma__ quit:Ping timeout: 258 seconds
+11:12 ianma_ joined channel
+11:27 ianma joined channel
+11:27 ianma_ quit:Ping timeout: 268 seconds
+11:35 ianma___ joined channel
+11:36 ianma quit:Ping timeout: 260 seconds
+11:44 zwindl quit:Quit: Connection closed for inactivity
+11:52 ianma___ quit:Ping timeout: 246 seconds
+12:02 zwindl joined channel
+12:05 whocares_2 quit:Read error: Connection reset by peer
+12:05 whocares_2 joined channel
+12:26 ianma joined channel
+12:33 [CHN]Kirov quit:Ping timeout: 265 seconds
+12:34 ianma_ joined channel
+12:35 ianma quit:Ping timeout: 248 seconds
+12:40 ianma joined channel
+12:41 ianma_ quit:Ping timeout: 258 seconds
+12:41 ianma quit:Client Quit
+12:43 [CHN]Kirov joined channel
+13:21 [CHN]Kirov quit:Ping timeout: 250 seconds
+13:25 lh_mouse: geordi, << sizeof('♀')
+13:25 lh_mouse: geordi, << sizeof("♀")
+13:25 geordi: warning: multi-character character constant
+13:25 geordi: 4
+13:25 lh_mouse: geordi, << sizeof("ì")
+13:25 geordi: 3
+13:25 lh_mouse: geordi, << sizeof("í")
+13:25 geordi: 3
+14:35 [CHN]Kirov joined channel
+14:36 [CHN]Kirov quit:Read error: Connection reset by peer
+14:44 [CHN]Kirov joined channel
+15:04 lh_mouse: geordi, { istringstream iss("1.2e"); double d; iss >> d; cout <<!!iss; string s; iss.clear(); iss >>s; cout, s; }
+15:04 geordi: false, 
+15:04 lh_mouse: geordi, { istringstream iss("1.2e"); double d; iss >> d; cout <<!!iss; string s; iss.clear(); iss >>s; cout <<' ' <<!!iss <<' ' << s; }
+15:04 geordi: false false 
+15:04 lh_mouse: geordi, { istringstream iss("1.2e"); double d; iss >> d; cout <<!!iss; string s; iss.clear(iss.goodbit); iss >>s; cout <<' ' <<!!iss <<' ' << s; }
+15:04 geordi: false false 
+15:05 lh_mouse: geordi, { istringstream iss("1.2e"); double d; iss >> d; cout <<!!iss; string s; iss.clear(); cout <<' ' <<!!iss <<' ' << s; }
+15:05 geordi: false true 
+15:05 jack joined channel
+15:14 lh_mouse: geordi, { stringstream ss("abcdefg"); char str[100]; ss >>setw(5) >>str; cout <<str; }
+15:14 geordi: abcd
+16:10 Mokou joined channel
+16:43 lh_mouse: geordi, { stringstream ss("   abcdefg"); char str[100]; ss >>setw(5) >>str; cout <<str, ss.gcount(); }
+16:43 geordi: abcd, 0
+16:43 lh_mouse: geordi, { stringstream ss("   abcdefg"); char str[100]; ss >>setw(5) >>str; cout <<str, ss.pcount(); }
+16:43 geordi: error: 'stringstream {aka class stringstream}' has no member named 'pcount'; did you mean 'gcount'? (fix known)
+16:55 [CHN]Kirov quit:Read error: Connection reset by peer
+17:03 [CHN]Kirov joined channel
+17:08 [CHN]Kirov quit:Read error: Connection reset by peer
+17:08 [CHN]Kirov joined channel
+17:14 perr quit:Quit: Leaving
+18:19 guest961244 joined channel
+18:19 guest961244: q
+18:22 wlemuel quit:Read error: Connection reset by peer
+18:45 perr joined channel
+18:46 FrankHB joined channel
+19:22 lhanjian: yiiiii
+19:36 perr quit:Ping timeout: 245 seconds
+19:42 Flandre__: lhanjian: o.o
+19:43 lhanjian: Flandre__: 我在和233song面基
+19:44 Taggnostr quit:Ping timeout: 268 seconds
+19:47 Youmu: lhanjian: /o/
+19:47 Youmu: lhanjian: 恭喜
+19:47 Taggnostr joined channel
+19:53 perr joined channel
+20:12 lh_mouse: wtf??
+20:29 [CHN]Kirov quit:Ping timeout: 250 seconds
+20:29 [CHN]Kirov joined channel
+20:47 lhanjian: lh_mouse: ？
+20:59 whatofor quit:Read error: Connection reset by peer
+21:05 [CHN]Kirov quit:Ping timeout: 250 seconds
+21:06 yimis joined channel
+21:08 yimis quit:Client Quit
+21:45 yafei joined channel
+21:47 yafei quit:Quit: yafei
+21:53 [CHN]Kirov joined channel
+22:01 lh_cat joined channel
+22:04 lh_mouse quit:Ping timeout: 265 seconds
+22:06 hoxily joined channel
+22:09 lh_mouse_ joined channel
+22:11 lh_cat quit:Ping timeout: 260 seconds
+23:23 lh_mouse_ quit:Ping timeout: 248 seconds
+23:27 yimis joined channel
+23:34 perr quit:Quit: Leaving
+23:43 yimis quit:Quit: yimis

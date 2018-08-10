@@ -1,0 +1,498 @@
+00:00 cleamoon: 我在问能在NIC里改的那些A address，CNAME最后干什么用了...
+00:01 lh_mouse: 我只知道 A address 是 IPv4   AAAA address 是 IPv6
+00:01 lh_mouse: 别的不清楚  
+00:02 cleamoon: 但是这些不应该是nameserver自行处理吗，NIC记录这些干什么...
+00:02 xxxxxxxx: http://blog.xieyc.com/differences-between-a-record-and-cname-record/ 是说这个?
+00:02 lh_mouse: 哦 CNAME 应该是指向别的域名  而不直接指向 IP
+00:02 lhjkk: cname是指向另一个域名，让另一个域名的a地址可以解析出ip
+00:02 lhjkk: 本地nic用这些可以缓存
+00:03 cleamoon: soga
+00:03 cleamoon: 也就是说，其实没多大用...
+00:03 lhjkk: 还有邮箱服务器之类的有些协议上的要求
+00:03 lh_mouse: 有用  比如 www.ra2diy.cn 指向 www.ra2diy.com
+00:04 lhjkk: 绅士问的应该是本地缓存有什么用
+00:04 cleamoon: 如果没那么多域名的话...
+00:04 xxxxxxxx: 说起来我这里bilibili.tv不转到bilibili.com了
+00:04 Xilzzert joined channel
+00:04 xxxxxxxx: 只有我一个么?
+00:06 ld-linux joined channel
+00:06 cleamoon: .tv我都打不开...
+00:07 Xilzzerts quit:Ping timeout: 264 seconds
+00:11 xxxxxxxx: cleamoon: 我也打不开才问的看看是不是地区性抽风
+00:22 cleamoon__: 安全公司ESET Canada Research的研究人员发现了一个取名为Linux/Moose的恶意程序。它针对的是调制解调器、家用路由器和其它嵌入式计算机，将这些设备变成一个代理网络，用于创建伪造的社交网络账号和展开欺诈。该蠕虫还能劫持路由器的DNS服务，将DNS请求路由到一个恶意服务器，窃取未加密的社交媒体cookies如Instagram，利用Cookie
+00:22 cleamoon__: 去follow虚假账户。
+00:30 ld-linux joined channel
+00:32 halenrain quit:Ping timeout: 264 seconds
+00:33 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150515071002]
+00:34 ASenR quit:Quit: 晚安
+00:36 cleamoon__: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/na/p7_378171.jpg
+00:45 lhjkk quit:Ping timeout: 245 seconds
+00:54 lh_cat quit:Quit: Connection closed for inactivity
+00:58 Nangcr joined channel
+01:02 Nangcr quit:Remote host closed the connection
+01:02 ld-linux joined channel
+01:26 lh_mouse quit:Read error: Connection reset by peer
+01:33 lh_cat joined channel
+02:00 wlemuel joined channel
+02:05 wlemuel quit:Ping timeout: 240 seconds
+02:09 cleamoon__ quit:Ping timeout: 265 seconds
+02:17 molikto_ quit:Remote host closed the connection
+02:26 cleamoon quit:Remote host closed the connection
+02:26 hoxily quit:Quit: Leaving
+02:54 xxxxxxxx quit:Quit: Leaving...
+03:44 lh_cat quit:Quit: Connection closed for inactivity
+04:44 boosure joined channel
+05:19 FrankHB quit:Read error: Connection reset by peer
+05:19 FrankHB joined channel
+05:38 wlemuel joined channel
+05:43 wlemuel quit:Ping timeout: 264 seconds
+08:02 cleamoon joined channel
+08:40 ASenR joined channel
+09:09 lh_mouse joined channel
+09:13 ASenR quit:Quit: Lost terminal
+09:16 ld-linux joined channel
+09:18 hysw: 咩
+09:34 molikto joined channel
+09:37 hope1 joined channel
+09:39 molikto quit:Remote host closed the connection
+09:40 hope1 quit:Read error: Connection reset by peer
+09:40 hope1 joined channel
+09:45 molikto joined channel
+09:46 hope1 quit:Ping timeout: 264 seconds
+09:47 hope1 joined channel
+09:48 xxxxxxxx joined channel
+09:48 hoxily joined channel
+10:01 iyzsong: morning!
+10:04 hope1: 早
+10:05 hope1: 心情不好就能请假回家的感觉不错
+10:05 boosure quit:Quit: Get your hand off of it
+10:09 ld-linux joined channel
+10:10 lh_mouse: 心情不好就揉 hope1 
+10:12 hope1: 拒绝
+10:13 iyzsong: = =
+10:13 hope1: iyzsong, 揉
+10:14 iyzsong: 我心情挺好～
+10:18 lh_mouse: hope1, QAQ
+10:18 lh_mouse: 给我揉
+10:23 hope1: lh_mouse, 揉耻球去
+10:28 hysw: hope1: 赶紧去斯坦福做教授去
+10:30 molikto quit:Remote host closed the connection
+10:33 whocares_2_ quit:Ping timeout: 245 seconds
+10:40 lh_not_bot: http://ideone.com/32vtg0  HTTP 的编码占了大头
+10:44 ld-linux joined channel
+10:44 hope1 quit:Read error: Connection reset by peer
+10:44 hope1 joined channel
+10:50 hysw: hope1: 赶紧去斯坦福做教授去
+10:53 whocares_2 joined channel
+10:59 wlemuel joined channel
+11:04 wlemuel quit:Ping timeout: 258 seconds
+11:06 hope1 quit:Read error: Connection reset by peer
+11:06 hope1_ joined channel
+11:08 hope1 joined channel
+11:08 hope1_ quit:Read error: Connection reset by peer
+11:10 hope1_ joined channel
+11:10 hope1 quit:Read error: Connection reset by peer
+11:10 ld-linux joined channel
+11:11 hope1_: hysw, 明天月考求rp
+11:12 hysw: 不给
+11:12 hysw: 我下周五有考试
+11:14 lh_not_bot: hope1_: 给我捏捏 
+11:19 hope1_ quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+11:20 xxxxxxxx: 被口支捏跑了
+11:36 ld-linux joined channel
+11:55 endle joined channel
+12:06 ld-linux joined channel
+12:15 ASenR joined channel
+12:17 endle quit:Remote host closed the connection
+12:18 whatofor joined channel
+12:19 xhe joined channel
+12:19 whatofor quit:Read error: Connection reset by peer
+12:19 whatofor joined channel
+12:22 whatofor_1 quit:Ping timeout: 256 seconds
+12:24 ld-linux joined channel
+12:42 xhe quit:Remote host closed the connection
+12:42 varna joined channel
+12:42 xhe joined channel
+12:43 xhe quit:Remote host closed the connection
+12:44 xhe joined channel
+12:44 hoxily quit:Ping timeout: 258 seconds
+12:44 hoxily_ joined channel
+12:45 varna: 今日的CPAN把我震撼了…… https://metacpan.org/release/KARUPA/Aniki-0.02_04
+12:46 hysw: -_-
+12:46 hysw: 把智商交出来!
+12:46 xxxxxxxx: ... 兄贵号?
+12:46 varna: 那个模组是做ORM的
+12:46 varna: 但名字太震撼了
+12:48 xhe: aniki。。。
+12:49 xhe quit:Remote host closed the connection
+12:50 * hysw 作为正常人我滚回去写Haskell去了
+12:50 * varna 已放弃hs cult
+12:50 xhe joined channel
+12:54 xxxxxxxx: 弹药只剩55604了 比想象中用的快....
+12:54 varna: 肝帝太可怕
+12:59 xxxxxxxx: 长良才55级...
+12:59 xxxxxxxx: 3-5似乎还是太低了...
+13:01 xxxxxxxx: 演习似乎忘记打了...
+13:09 hope1 joined channel
+13:11 xxxxxxxx: http://tieba.baidu.com/p/3791476963 <- 然后发现了这么个帖子
+13:12 varna: ...
+13:14 hope1 quit:Ping timeout: 265 seconds
+13:18 xxxxxxxx: http://puu.sh/i3jeh/a267643012.png 谜一般的昼战
+13:18 xxxxxxxx: 装比权是确保的
+13:18 varna: 打3-2队可以不要制空啊
+13:19 varna: 对面是战神的话安心复纵就行
+13:19 varna: 基本上不需要换反潜装
+13:21 ld-linux joined channel
+13:21 xxxxxxxx: 80级的littorio 鸟海 山城 愣是打不过对面等级至少低我十级的船到底为了什么.... 利根才30级
+13:22 xxxxxxxx: 真是梦幻
+13:22 ASenR quit:Quit: Lost terminal
+13:24 whocares_2 quit:Read error: Connection reset by peer
+13:25 xxxxxxxx: 我懂了 一定是大井的锅
+13:30 * hysw 1+1=3 < 一定是这样的
+13:30 xxxxxxxx: 等等 对面潜艇都是1血了 怎么才A胜 说好的S呢
+13:32 varna: 1血和轰沉锁血是不一样的
+13:32 xxxxxxxx: .....
+13:32 xxxxxxxx: 谁搞出来的这种设定.....
+13:33 varna: 演习确实能将敌方轰得不能出手，那就是算作沉了
+13:33 varna: 但临时工没有写额外的UI逻辑，所以锁1血和轰沉1血看上去一样……
+13:34 xxxxxxxx: 真蛋疼
+13:51 xhe quit:Remote host closed the connection
+13:51 whocares_2 joined channel
+13:57 xxxxxxxx: https://gitlab.com/beastix/beastix <- 有喜欢BSD的去玩玩么?
+13:58 lh_not_bot: 装逼権確保
+13:58 xxxxxxxx: 然后poi练习了一下摔跤
+14:00 hoxily left channel:"Leaving"
+14:05 varna: 我把昨天那个电台的三首rap扒下来了
+14:15 wlemuel joined channel
+14:20 wlemuel quit:Ping timeout: 255 seconds
+14:26 ld-linux joined channel
+14:34 hope1 joined channel
+14:38 hope1 quit:Ping timeout: 244 seconds
+14:48 ld-linux joined channel
+15:07 ld-linux joined channel
+15:34 ld-linux joined channel
+15:37 xxxxxxxx: varna 开发成功还是失败是先决定掉落然后看公式能不能出的么?
+15:49 varna: xxxxxxxx: 是
+15:50 xxxxxxxx: 有人试试看用RJ赌电碳么? 我刚才开发失败的历史里有两个32 两个33 还有锅炉
+15:51 varna: cv系能出电探
+15:52 xxxxxxxx: 我造了10发10 10 20 20 然后失败记录看上去都是好东西
+15:54 FrankHB: http://www.zhihu.com/question/30703519 2333
+15:57 varna: 修了一下HOI::Comprehensions的bug
+15:58 ld-linux joined channel
+16:00 xxxxxxxx: 那个问答为啥不是在婊winter 而是在各种赞王根...
+16:02 varna: https://pastebin.mozilla.org/8834939 现在slowsort好看多了
+16:07 ld-linux joined channel
+16:07 lhanjian joined channel
+16:09 molikto joined channel
+16:09 lh_not_bot: molikto: 爆照
+16:10 molikto: 怎麼上傳照片
+16:10 lh_not_bot: molikto: /cs taxonomy #c_lang_cn 
+16:12 lhanjian: molikto, http://picpaste.com/
+16:13 lhanjian quit:Remote host closed the connection
+16:15 xxxxxxxx: 明明是帝都的IP却在用"上傳" 难道也和lhj一样在些奇怪的地方发帖么?
+16:16 FrankHB: winter没什么材料能婊的吧。。。
+16:29 ld-linux joined channel
+16:31 hope1 joined channel
+16:36 hope1 quit:Ping timeout: 258 seconds
+16:55 ld-linux joined channel
+16:59 Xilzzerts joined channel
+17:01 Xilzzert quit:Ping timeout: 246 seconds
+17:05 wlemuel joined channel
+17:08 xxxxxxxx: 3-5磨血确实是用1cl5dd?
+17:08 varna: 随意
+17:08 varna: 我是1cl5dd的
+17:08 xxxxxxxx: 我大概需要先洗把脸....
+17:09 varna: 刷点闪比较好
+17:10 xxxxxxxx: 正打算去刷闪
+17:10 xxxxxxxx: 被打回家几回了...
+17:10 wlemuel quit:Ping timeout: 272 seconds
+17:19 ld-linux joined channel
+17:32 ld-linux joined channel
+17:52 lh_not_bot: 按流量付费是先使用后付费产品，每小时扣费。为了您的服务正常运行，请在变配生效后（2015年08月17日 00时00分）保证您账户余额充足。
+17:52 lh_not_bot: 公网流量：¥0.72/GB
+17:52 lh_not_bot: 你们觉得如何
+18:00 xxxxxxxx: 口支搞得和网吧老板一样...
+18:03 ASenR joined channel
+18:10 xxxxxxxx: 另外价格是按啥定的?
+18:16 varna: xxxxxxxx: FGW
+18:17 xxxxxxxx: varna: ?
+18:17 varna: xxxxxxxx: 发改委
+18:17 xxxxxxxx: orz
+18:17 xxxxxxxx: 我这里输入法说是法工委
+18:26 lh_not_bot: 发给我
+18:26 lh_not_bot: 反光碗
+18:26 varna: 发给我 few 发改委
+18:31 Nangcr joined channel
+18:34 varna: HOI::Comprehensions 0.043的自动测试还是没出来……
+18:38 iyzsong: parsec写着真带感 => https://github.com/iyzsong/fun/blob/master/my-has.hs
+18:39 iyzsong: 于是我先手动clean掉空格和注释，扫表后再unlines [String] - -b
+18:40 Plough joined channel
+18:40 varna: 我似乎又把clang_complete玩坏了
+18:40 Plough: ……什么鬼
+18:41 varna: 弄了几个宏生成几个联合，clang又认不得这是什么鬼了
+18:41 iyzsong: W_W
+18:41 Plough: ……
+18:41 Nangcr: OAO
+18:42 varna: 另外HOI::Comprehensions更新了，如果有用户的话（我感觉大概有两个吧）请升级一下
+18:42 Plough: 了解，虽然我还没用过……
+18:42 varna: 修复了一个generator来自空列表的情况下，及早求值根本停不下来的疏漏
+18:42 FrankHB: makepkg艹了半天结果发现PKGBUILD里一个-j2的j写漏了。。。艹
+18:43 varna: Plough: 现在你可以如此写slowsort: https://pastebin.mozilla.org/8834939
+18:43 Plough: ……-j2为何写进PKGBUILD
+18:43 varna: 它看起来像个正常的slowsort了
+18:43 FrankHB: 当然没有，所以我才需要临时编辑……
+18:43 FrankHB: 临时懒得改conf。
+18:43 Plough: MAKEOPTS不行么
+18:43 Nangcr quit:Quit: -a- Connection Timed Out
+18:44 iyzsong: - -b
+18:44 FrankHB: 一开始没想这么多，实际情况是yaourt顺手y了进去编辑了……
+18:44 Plough: ……
+18:45 FrankHB: 想来想去还是得要个nix的类似物。
+18:45 FrankHB: 看起来原理也不复杂，自己撸个玩玩。
+18:47 varna: nix的麻烦主要还是权限
+18:48 varna: 那东西避不开权限……另外我不确认他们的functional是否意味着更好的事务
+18:50 FrankHB: functional其实无所谓，不过没functional不算xxx lang大概就和winsxs一个尿性了。
+18:53 FrankHB:  Setuid and setgid programs are not currently supported by Nix.嘛。。。。
+18:53 FrankHB: 这种破事先无视。。
+18:54 FrankHB: 看样子得先来个SHA256。没想到吱论题这么快就派上用场了。
+18:55 molikto quit:Remote host closed the connection
+18:57 FrankHB: ……PKGBUILD里configure和make在一起是随打包者高兴么？
+18:58 varna: 是
+19:02 sismvg joined channel
+19:03 sismvg: 不知道今天肉牛是什么感觉
+19:03 sismvg:  4620.27-321.45 (-6.50%) 
+19:04 cleamoon: 牛肉怎么了
+19:06 cleamoon: 5月27日上海复旦大学迎来110周年校庆，官方发布宣传片《To My Light》，随后有人指出此片从创意构思到细节多处与东京大学2014年宣传片《Explorer》相似，有抄袭之嫌。对此，今天复旦大学党委宣传部副部长，也是该片制片人滕育栋回应称，“我们是从校友事迹写的本子，选题不同。我们创作剧本的过程是独立的。”目前复旦大
+19:06 cleamoon: 学官方认证微信号、微博已经移除了此片。
+19:06 sismvg: 肉牛炒股-今天超级暴跌
+19:08 whatofor_1 joined channel
+19:08 varna: 我搜搜Perl有没有好的线程池
+19:09 cleamoon: 在甲骨文与Google有关Java API是否受版权保护的争论中，美国司法部站在了甲骨文一边。Google的Android系统一度包含了几个Java API示例文件，这些文件没有被使用也不具有真正功能，后来Google干脆把它们都移除了。但收购Sun后拥有Java所有权的甲骨文认为，Google侵犯了它的版权。2012年，一位联邦法官作出裁决，裁定API是不受版权保护
+19:09 cleamoon: 的。但上诉法庭推测了这一裁决，认为API是受版权保护的。Google以及计算机科学界的许多人士都主张API不受版权保护，因为它包含了一种操作的方法或系统，允许一个程序与另一个程序互相通信。
+19:09 cleamoon: 牛肉不是退休了吗
+19:11 cleamoon: 102岁的老太太通过了推迟77年的博士论文答辩。这背后当然有一个不同寻常的故事。Ingeborg Syllm-Rapoport出生于德国，1930年代在汉堡大学研究白喉。1938年，25岁的Syllm申请博士学位论文答辩，但她的请求遭到了拒绝，原因是她的母亲是犹太人，是一个“杂种”。纳粹政权以种族理由禁止大学进行论文答辩。她成为数以千计的因犹太
+19:11 cleamoon: 血统从德国学术界驱逐出去的学者和研究员中的一位，他们中有许多人备受折磨或死于集中营，她的教授Rudolf Degkwitz被监禁。Syllm幸运的抵达了美国，从费城的女子医科大学获得了医学学位，并建立了一个家庭。在1950年代这个家庭回到了德国。现年102岁的Syllm-Rapoport本可能仍然是一名医生，当汉堡医学院的院长Uwe Koch-Gromus听到
+19:11 cleamoon: 这个故事后他决定纠正错误，安排 Syllm-Rapoport参加论文答辩，5月13日他们在她的家中完成了一个45分钟的口试，6月9日她将正式成为M.D.-Ph.D。
+19:12 whatofor quit:Ping timeout: 245 seconds
+19:13 sismvg: 。。以后写代码要想办法不用API了
+19:13 sismvg: 233
+19:13 sismvg: -某office的竞争对手破产-原因竟是代码中用了Win32 API
+19:14 cleamoon: 神主twitter里喝酒的图片对面是个有胸妹子
+19:15 xxxxxxxx: cleamoon: 你是想说胸还是妹子?
+19:15 cleamoon: 当然是神主
+19:17 cleamoon: 布欧猫  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/nb/mm_287074.jpg
+19:17 cleamoon: 优质马尾  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/nb/p4_157209.jpg  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/nb/n7_157306.jpg
+19:19 varna: 我以为真是马的尾巴……
+19:19 xxxxxxxx: 我也以为
+19:19 cleamoon: 猥琐如我怎么可能用那种撸
+19:19 xxxxxxxx: 点开真失望
+19:19 Plough: http://imgsrc.baidu.com/forum/pic/item/3dab5eec54e736d1e118bc999e504fc2d46269b9.jpg 新锁屏壁纸
+19:20 varna: Plough: 我已经循环了那三个歌一下午
+19:20 xxxxxxxx: 卧槽
+19:20 Plough: 那个网站的mp3我都得下下来才能放……
+19:20 cleamoon: 原来基王用马撸
+19:21 xxxxxxxx: cleamoon: 你就看这种东西撸么...
+19:21 cleamoon: 这是开胃菜
+19:21 varna: https://graydon2.dreamwidth.org/214016.html 一篇很6的文
+19:22 xxxxxxxx: 应该叫开裆菜
+19:22 cleamoon: 裆是一直开着的
+19:22 xxxxxxxx: 不愧是幼女.....
+19:23 varna: 我想起了一个描述机枪工作机理的词：开膛待击
+19:23 Plough: http://imgsrc.baidu.com/forum/pic/item/abd6aed4b31c8701feaf8177227f9e2f0608ffaf.jpg 依然是壁纸系列
+19:24 xxxxxxxx: varna 乳X?
+19:26 Plough: 灵魂画师画风突变……
+19:26 molikto joined channel
+19:26 varna: Plough: 他之前还画了个很欧式的小卷，不知为何没了
+19:26 lh_not_bot: molikto: 爆照
+19:26 Plough: 中间的补给点里有张RJ不错
+19:27 cleamoon: 我去干3-5，然后全家大破...
+19:27 varna: 我都不走补给点，直接看本家的
+19:27 Plough: 我懒得点只看楼主了
+19:27 varna: 红旗酱@提不起肛
+19:28 molikto: http://picpaste.com/Screenshot_2015-05-28-16-11-33-r3NC7jEC.png
+19:28 varna: 这鼻子不错
+19:29 Plough: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46487948 找到原图了
+19:29 varna: 啊，这个图挺常见的
+19:30 Plough: 我第一次见……
+19:30 varna: 不过对这个RJ, 我有些话要说
+19:30 varna: 你们四航战啊，对源田那一套理论很熟悉
+19:30 varna: ry
+19:30 Plough: 然而RJ也是身经百战了，见得多啦
+19:31 Plough: 似乎RJ上不少老鸟？
+19:31 varna: RJ资历很老，沉得很早
+19:31 xxxxxxxx: 有人试RJ开发电碳么?
+19:31 varna: 电探我推荐赤城
+19:32 Plough: 不过画风比较好的大凤酱似乎很难找啊
+19:32 xxxxxxxx: 铝都会被吃掉吧...
+19:32 varna: 电探的主要成分其实是钢
+19:34 Plough: http://ww3.sinaimg.cn/large/005CDItejw1esk67p82vlj30p018g0zl.jpg <- “老妈似乎并没有理解我在说什么”
+19:34 varna: 你说战列巡洋舰谁懂啊
+19:34 varna: 用原文！巡洋战舰！
+19:34 Plough: 23333
+19:35 xxxxxxxx: 罗马么?
+19:35 varna: 罗马是战舰
+19:35 Plough: 谁跟你说罗马是战巡的
+19:35 Plough: 罗马是绝对正宗的大战舰
+19:35 varna: 不过金刚级是良心产品啊
+19:35 Plough: 毕竟英国货
+19:36 Plough: 你换成妙义看看
+19:36 xxxxxxxx: 图鉴说的
+19:36 varna: 我看看图鉴
+19:36 Plough: ……运营又傻逼了？
+19:36 Plough: 我也看看
+19:36 varna: 高速战舰
+19:36 varna: 没说错啊
+19:37 Plough: 战舰啊
+19:37 Plough: 没说战巡啊
+19:37 varna: 高速战舰是二战开始的主流设计
+19:37 varna: 跟旧概念的巡洋战舰不一样的
+19:37 xxxxxxxx: 74EO的图鉴上
+19:37 varna: 那个不就是游戏图鉴么
+19:38 Plough: 不是的话就是作者逗逼
+19:38 xxxxxxxx: 类别是巡洋战舰
+19:38 Plough: 作者逗逼
+19:38 varna: 那个图鉴的数据源是哪里
+19:38 Plough: 估计是自作聪明把游戏里的高速战舰写成巡洋战舰了
+19:38 varna: 我印象即使金刚级在游戏内部也分类成高速战舰的
+19:38 Plough: 是
+19:39 Plough: 写作“战舰”的舰船总共分为三种类型
+19:39 varna: 而所有二战使用的战舰都是超抖级
+19:39 Plough: 高速战舰/超无畏战舰/战舰
+19:39 varna: 所以超抖这个分类失去意义了
+19:39 Plough: 大和级和长门级我记得是战舰
+19:39 varna: 干脆就没被使用
+19:39 Plough: 扶桑和伊势是超弩级
+19:39 varna: 扶桑不是航天？
+19:39 Plough: 改前
+19:40 varna: 我知道这个意思
+19:40 varna: 但扶桑和伊势的差别就在于航天和航空……
+19:40 Plough: 我要是没记错的话装备是按照舰种限制的
+19:40 Plough: 你看看51……
+19:40 varna: 目前应该还是这样吧
+19:40 Plough: 应该是
+19:40 varna: 不过扶桑和伊势算作超抖级还算是很有依据
+19:41 Plough: 等等
+19:41 Plough: 巨基你看看俾斯麦的分类
+19:41 varna: 即使超抖级有意义的时代，肥桑姐还用着一个低矮的三角桅
+19:41 Plough: 那时候的扶桑一点都不好看
+19:43 Plough: ……意大利文wiki写的也是classe Littorio啊
+19:43 Plough: 果然欧洲人都是按建成时间来的？
+19:44 varna: 欧洲人忙着打砸抢烧
+19:44 xxxxxxxx: 图鉴出错应该也靠谱 浮游要塞的类别里写着航空战舰
+19:44 Plough: 这个应该是对的
+19:45 xxxxxxxx: 北方也是航战
+19:47 Plough: 陆基应该都是航战
+19:47 beefcafe quit:Ping timeout: 248 seconds
+19:48 xxxxxxxx: ....怎么分的
+19:48 Plough: 这个很正常吧
+19:48 Plough: 又能炮击又能放飞机，当然是划成航战最省事
+19:49 rindfleischcafe quit:Ping timeout: 248 seconds
+19:49 beefcafe joined channel
+19:49 Plough: “锅go又出问题了，线路6大建16发出了8个雾岛 ”
+19:50 Plough: varna:  http://ww1.sinaimg.cn/large/bea5857etw1esk3jdtt3bj216o1z4wu5.jpg 你换个这个？
+19:50 rindfleischcafe joined channel
+19:51 varna: Plough: 太乱了
+19:51 varna: 我还是用KTKM
+19:52 Plough: 我现在这个倒是很简洁
+19:52 Plough: 突发：瑞士警方证实，在被逮捕时，全部7名国际足联的官员都突然倒地假装受伤。——Horus9527 译
+19:52 xxxxxxxx: 这个主题是偶像的诅咒还是女神的祝福?
+19:52 varna: 2333
+19:53 varna: 是女神的祝福
+19:54 varna: 有人发我一个空母战记2，晚上回去试玩一下
+19:54 Plough: “女孩子的胸到底有多軟？摸著什麼感覺？” 本來以為原PO是男的，心想，這可能是2015年最悲傷的問題了。 後來發現原PO是女的，心想，這真的是2015年最悲傷的問題了。——devil_xl
+19:54 xxxxxxxx: 哈哈哈
+19:54 wlemuel joined channel
+19:55 varna: 2333
+19:57 cleamoon: 233333
+19:58 sismvg: 23333
+19:58 cleamoon: 会不会过两天出来一个问JJ能多硬的
+19:58 sismvg: 原来po主的手那么短啊
+19:58 sismvg: 畸形太悲惨
+19:59 cleamoon: 药四娘的思想回路似乎和我们不太一样
+19:59 xxxxxxxx: 药娘四在想什么?
+19:59 iyzsong: - -b
+19:59 xxxxxxxx: 笑点不一样啊....
+19:59 wlemuel quit:Ping timeout: 244 seconds
+20:00 sismvg: http://tieba.baidu.com/p/3792083861
+20:01 sismvg: 我觉得身为otaku的当事人的第一反应应该是能不能啪啪啪
+20:02 xxxxxxxx: "同时我也从不会斤斤计较这些财产的问题。" 卧槽你父母还健在呢小孩还没出世呢 想那么远还说不斤斤计较...
+20:05 hope1 joined channel
+20:06 hope1 quit:Read error: Connection reset by peer
+20:06 hope1 joined channel
+20:09 wlemuel joined channel
+20:09 cleamoon: 差19岁... 都能叫儿子了吧... “和孩子抢财产，太羞耻了”
+20:09 xxxxxxxx: cleamoon: 你儿子呢....
+20:09 cleamoon: 我哪有儿子
+20:10 xxxxxxxx: 还没到19岁么?
+20:10 hope1 quit:Client Quit
+20:11 cleamoon: 原来基王家是19岁就一定会出现儿子
+20:11 xxxxxxxx: 你先找出一家19岁有儿子的再说...
+20:11 cleamoon: 用来搞基
+20:11 cleamoon: 旧时侯有的是...
+20:12 hope1 joined channel
+20:16 cleamoon: http://www.bilibili.com/video/av2364515/
+20:20 xhe joined channel
+20:24 sismvg: http://www.bilibili.com/video/av2362534/ 
+20:26 rindfleischcafe quit:Ping timeout: 248 seconds
+20:27 FrankHB quit:Ping timeout: 258 seconds
+20:27 Plough: 明天演习大概能把Lady演习上Lv69
+20:28 Plough: 然而我大概还是得练级
+20:29 wlemuel quit:Ping timeout: 276 seconds
+20:29 FrankHB joined channel
+20:29 cleamoon: http://www.bilibili.com/video/av2364515/
+20:29 cleamoon: 发错了
+20:29 cleamoon: http://www.bilibili.com/video/av454876/
+20:30 wlemuel joined channel
+20:31 cleamoon: 真.开口跪
+20:38 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150513174244]
+20:44 ASenR quit:Quit: Lost terminal
+20:44 Plough: 噗
+20:44 Plough: 南西有赤城的？
+20:46 cleamoon: 欧rz
+20:55 cleamoon: http://www.bilibili.com/video/av454876/index_44.html
+21:04 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:06 hope1 joined channel
+21:07 hope1 quit:Client Quit
+21:08 hope1 joined channel
+21:10 hope1 quit:Client Quit
+21:11 hope1 joined channel
+21:11 BlackKitty joined channel
+21:40 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:47 Plough: 我操又一个水观
+21:48 Plough: 再来一发
+21:48 xxxxxxxx: 欧洲人吃我一矛
+21:48 Plough: 跟了两发没出货……
+21:48 Plough: 你去刺羊驼子
+21:48 xhe quit:Remote host closed the connection
+21:48 Plough: 他水观比我多多了
+21:49 xhe joined channel
+21:49 Plough: varna: 
+21:49 Plough: varna: 你再跟几发？
+21:51 xxxxxxxx: 今天又不是星期五为啥晚上开始就老猫嘛
+21:54 ld-linux joined channel
+21:55 cleamoon: 因为六月份到了？
+22:05 cafebeef joined channel
+22:14 ld-linux joined channel
+22:22 Plough quit:Remote host closed the connection
+22:26 code_new joined channel
+22:30 code_new quit:Ping timeout: 252 seconds
+22:33 ld-linux joined channel
+22:36 code_new joined channel
+22:43 xxxxxxxx: code_new来了
+22:43 code_new: xxxxxxxx: 爆
+22:43 xxxxxxxx: 爆你妹去
+22:43 code_new: 今天网又抽风了
+22:44 code_new: 并不喜欢妹
+22:47 varna quit:Quit: leaving
+23:11 code_new quit:Ping timeout: 264 seconds
+23:16 ld-linux joined channel
+23:20 ASenR joined channel
+23:23 xhe quit:Remote host closed the connection
+23:29 whocares_2 quit:Ping timeout: 272 seconds
+23:29 code_new joined channel
+23:30 ld-linux joined channel
+23:30 whocares_2 joined channel
+23:35 whocares_2 quit:Ping timeout: 265 seconds
+23:35 whocares_2 joined channel
+23:42 ld-linux joined channel
+23:54 ld-linux joined channel

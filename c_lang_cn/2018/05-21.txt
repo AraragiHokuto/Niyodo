@@ -1,0 +1,308 @@
+00:07 cleamoon_: 据说有个直径 1km 左右的陨石打过来了，1/2700 的概率大家一起完，推上大家正在讨论怎么给他导航，别撞偏了
+00:11 varna quit:Ping timeout: 265 seconds
+02:27 Guest30486 quit:*.net *.split
+02:41 Guest30486 joined channel
+02:43 NebulaMoe quit:*.net *.split
+02:44 rvier_roit[m] quit:*.net *.split
+02:44 NebulaMoe joined channel
+02:51 rvier_roit[m] joined channel
+03:26 jingjinghack quit:*.net *.split
+03:28 jingjinghack joined channel
+03:35 hong quit:Quit: hong
+06:23 matchray: Bay to Breakers上還有裸體的人
+09:05 yonka quit:Remote host closed the connection
+09:23 hxhb joined channel
+09:34 hxhb_ joined channel
+09:38 hxhb quit:Ping timeout: 260 seconds
+09:47 lh_mouse joined channel
+09:52 yonka joined channel
+10:32 lh_ideapad joined channel
+11:11 sixand joined channel
+11:17 AetherWind joined channel
+11:23 cleamoon_ quit:Quit: Connection closed for inactivity
+11:33 sixand quit:Ping timeout: 245 seconds
+11:44 lhanjian_: matchray: 我太懒了
+11:47 matchray: 懶於把你家貓帶出去？
+11:51 lhanjian_: matchray: ccls我不写代码就不想动
+11:53 sixand joined channel
+11:54 matchray: 檔案不保存確實很難發現優點
+11:57 sixand quit:Remote host closed the connection
+12:13 laner quit:Remote host closed the connection
+12:13 laner joined channel
+12:22 sixand joined channel
+13:14 sixand1 joined channel
+13:14 sixand quit:Ping timeout: 245 seconds
+13:14 sixand1 is now known as sixand
+13:21 sixand quit:Ping timeout: 260 seconds
+13:31 sixand joined channel
+13:36 sixand quit:Ping timeout: 252 seconds
+13:38 lh_ideapad: geordi, << string("hello").find_first_of("")
+13:38 geordi: 18446744073709551615
+13:38 lh_ideapad: geordi, << string("hello").find_last_of("")
+13:38 geordi: 18446744073709551615
+13:38 lh_ideapad: geordi, << string("hello").find_last_not_of("")
+13:38 geordi: 4
+13:38 lh_ideapad: geordi, << string("hello").find_first_not_of("")
+13:38 geordi: 0
+13:38 lh_ideapad: geordi, << string().find_first_not_of("")
+13:38 geordi: 18446744073709551615
+13:38 lh_ideapad: geordi, << string().find("")
+13:38 geordi: 0
+13:38 lh_ideapad: geordi, << string().rfind("")
+13:38 geordi: 0
+13:40 lh_ideapad: geordi, << string("hello").find('l', 2)
+13:40 geordi: 2
+13:40 lh_ideapad: geordi, << string("hello").find('l', 3)
+13:40 geordi: 3
+13:40 lh_ideapad: geordi, << string("hello").find('l', 4)
+13:40 geordi: 18446744073709551615
+13:40 lh_ideapad: geordi, << string("hello").rfind('l', 4)
+13:40 geordi: 3
+13:40 lh_ideapad: geordi, << string("hello").rfind('l', 3)
+13:40 geordi: 3
+13:40 lh_ideapad: geordi, << string("hello").rfind('l', 2)
+13:40 geordi: 2
+13:40 lh_ideapad: geordi, << string("hello").rfind('l', 1)
+13:40 geordi: 18446744073709551615
+13:54 sixand joined channel
+13:58 matchray: lh_ideapad: 我很討厭 npos
+14:14 yonka quit:Read error: Connection reset by peer
+14:15 yonka joined channel
+14:22 sixand quit:Ping timeout: 245 seconds
+14:27 lh_cat joined channel
+14:30 lh_mouse quit:Ping timeout: 245 seconds
+14:39 CyrusYzGTt quit:Ping timeout: 276 seconds
+15:31 sixand joined channel
+16:08 bloom joined channel
+16:16 sixand1 joined channel
+16:17 sixand quit:Ping timeout: 245 seconds
+16:17 sixand1 is now known as sixand
+16:27 hxhb_ quit:Remote host closed the connection
+17:13 sixand1 joined channel
+17:14 sixand quit:Ping timeout: 245 seconds
+17:14 sixand1 is now known as sixand
+17:26 sixand quit:Remote host closed the connection
+17:27 sixand joined channel
+17:30 asdfasdf joined channel
+17:31 asdfasdf: ...
+17:33 lhanjian_: asdfasdf: 
+17:33 asdfasdf: 在？
+17:35 lhanjian_: 哈
+17:40 asdfasdf: 这是什么聊天啊 ？
+17:40 Mokou: 这是少前聊天群
+17:41 asdfasdf: ？
+17:43 lhanjian_: Mokou: 你终于承认这里是少前群了 抄送小耗@lh_
+17:43 lhanjian_: Mokou: 你终于承认这里是少前群了 抄送小耗@lh_ideapad 
+17:43 lhanjian_: Mokou: 讲道理，木星炮其实不是很常用的，除非你用小公主拖尸
+17:43 Mokou: 玩啊
+17:43 Mokou: 那么在意实用多没意思
+17:44 lhanjian_: Mokou: +1,所以我也眼巴巴地想造出iws2000，然而……
+17:44 lhanjian_: 没有白纸了
+17:44 Mokou: 我iws2000不知道什么时候出来的
+17:44 lhanjian_: 氪是不可能氪的，这被子都不可能氪白纸了
+17:45 lhanjian_: 其他那四把标配手枪好像我都有了
+17:45 lhanjian_: 还有老李我也造不出
+17:45 asdfasdf quit:Quit: Leaving
+17:46 bloom quit:Quit: Leaving
+17:47 lhanjian_: Mokou: 你是欧洲人，我们非洲人是造不出来的，听说新配音很好听？
+17:55 lhanjian_: 刚才我迷糊了，看成了“氪啊，那么在意软妹币多没意思”
+18:04 hong joined channel
+18:36 sixand quit:Remote host closed the connection
+18:37 sixand joined channel
+18:39 lhanjian_: 造出CMS了
+18:51 sixand quit:Ping timeout: 252 seconds
+19:00 lhanjian_: 造出mk48了，机枪可以凑个tierone可
+19:18 AetherWind quit:Quit: Leaving
+19:27 NebulaMoe quit:Quit: reboot
+19:29 cleamoon_ joined channel
+19:45 varna joined channel
+19:46 varna: 噗叽啪
+19:48 iyzsong joined channel
+19:48 lhanjian_: varna: ARMA3战役真得费点心思啊
+19:49 lhanjian_: 五六个人连个车队都拦不下来
+19:50 varna: 这个是啊，一个班拦车队需要挺好的战术
+19:50 varna: 最好还能演练几回
+19:50 lhanjian_: 我还不太会作为队长指挥
+19:50 lhanjian_: 指挥AI有点麻烦
+19:51 varna: 我有个办法
+19:51 lhanjian_: 敌人装甲车来了第一反应不是隐蔽，而是交火，于是GG
+19:51 varna: 你搞一个黑色高级车停在路中间
+19:51 lhanjian_: 恶臭的车对装甲车没用
+19:51 lhanjian_: 敌人装甲车神特么会绕路的
+19:52 varna: 「喂，我刚才停车的时候，你偷看了吧」
+19:52 varna: 「这么喜欢看就让你看个够啊」
+19:53 lhanjian_: 我开的那辆小皮卡压根起不到活动掩体的作用
+19:53 lhanjian_: 上来直接给我打死
+19:53 varna: 便 乘 僧 兵
+19:53 lhanjian_: 虽然该有的都有了，什么火箭筒，地雷炸药，DMR
+19:53 varna: 你们不够清真
+19:55 cleamoon_: 小皮卡丘确实很菜
+19:55 varna: 因为不会自爆
+19:58 varna: https://www.bilibili.com/video/av22386878 结局草
+20:11 lhanjian_: https://www.douyu.com/2881221
+20:12 lhanjian_: varna: cleamoon_ Mokou 直播
+20:12 varna: (｡･ω･)你又不直播色情内容，为什么要看！
+20:12 varna: (｡･ω･)我们要看漂亮小姐姐
+20:12 Mokou: (｡･ω･)我们要看漂亮小姐姐（便乘）
+20:12 varna: 救世啊（二次便乘）
+20:13 cleamoon_: 我现在的网络开irc都有点慢....
+20:13 cleamoon_: 口袋里还真有会自爆的
+20:14 varna: 追 突 黑 色 高 级 车
+20:16 varna: lhanjian_: 喂，有驾照吗
+20:16 lhanjian_: 有啊
+20:16 lhanjian_: 没有卡车的
+20:17 varna: 拿出来看看
+20:17 Mokou: lhanjian_: 行了，跟着我走
+20:19 varna: 我一路向北/黑色高级车追尾/你胆儿好肥/PIGU也这么污秽/风在山口吹/被一转攻势全都是我不对/犬吠惭愧/三回啊三回
+20:19 * varna 周GAY伦
+20:19 iyzsong:  - -
+20:21 cleamoon_: uccu
+20:21 varna: 正在执行任务的lhj，成功拦截了敌方的卡车；但因为过于疲惫，不行追尾了黑色的高级车
+20:21 cleamoon_: 有一群国人似乎正在重拍仲夏夜
+20:21 lhanjian_: 我这是抛弃队友谈逃跑a 
+20:21 varna: cleamoon_: (｡･ω･)ﾉ可以唱的
+20:21 varna: 这个一路向北，就是下北泽的北啊
+20:22 varna: lhanjian_: 1. 先辈雷普远野，是屑；你抛弃队友逃跑，也是屑
+20:22 cleamoon_: varna: 去翻唱然后出道吧
+20:23 cleamoon_: 羊驼子为了拯救频道要成为偶像了
+20:24 varna: GO IS GOD
+20:24 varna: 我发现lhj对极道胁迫那章掌握不熟练，可以多用这个素材
+20:25 CyrusYzGTt joined channel
+20:26 varna: https://manhua.dmzj.com/bozeheshang/67069.shtml 仏系漫画
+20:26 lhanjian_: 队友全部阵亡了
+20:26 lhanjian_: 不过无所谓，他们只是当地游击队的，革命总是要流血要牺牲的
+20:26 varna: https://www.bilibili.com/video/av21172736 战 车 道
+20:28 varna: https://www.bilibili.com/video/av4725185 一下没忍住真的笑出声了（sumipe）
+20:29 lhanjian_: 神特么炮火覆盖
+20:30 lhanjian_: 这怎么逃
+20:32 Mokou: lhanjian_: 套铁幕
+20:32 lhanjian_: 这怎么打
+20:33 varna: 转圈儿握手啊！
+20:34 lhanjian_: 我靠，这火力
+20:34 CyrusYzGTt quit:Ping timeout: 260 seconds
+20:36 lhanjian_: 空中还有直升机
+20:38 Mokou: https://www.bilibili.com/video/av22107642 国 产 京 典
+20:40 lhanjian_: 任务完成
+20:43 sixand joined channel
+20:47 varna: 233333
+20:48 Mokou: https://www.bilibili.com/video/av20281346 水 手
+20:49 lhanjian_: 让我指挥那不是坑队友吗
+20:50 varna: https://www.bilibili.com/video/av21890477 善 子 大 胜 利
+20:57 lhanjian_: live off
+20:57 lhanjian_: 能玩的东西太多，无所适从了
+20:57 lhanjian_: 最近还有个很硬核的游戏，逃离塔科夫
+20:57 lhanjian_: 在枪械的使用上细致的丧心病狂
+20:57 lhanjian_: 什么29+1上单
+20:57 lhanjian_: 拆分枪械机匣，组装枪
+20:58 lhanjian_: 玩不来玩不来
+20:58 lhanjian_: https://www.bilibili.com/video/av9065313
+20:58 lhanjian_: ARMA3的移动我都已经有点操作不来了
+20:58 lhanjian_: 还可以摇头晃脑走路的，操作起来简直手都不够用了
+20:59 varna: 摇头晃脑还行
+20:59 varna: 形如窝狗
+21:00 lhanjian_: 就是只要脑袋，不改变枪和人的指向
+21:00 varna: 你那是溜冰吧
+21:01 lhanjian_: 走路的时候可以不溜冰，开车不溜冰不太安全
+21:01 varna: ^ 玻利维亚难民
+21:02 lhanjian_: arma光是射击本身就足够硬核了
+21:02 lhanjian_: 更不用讲打战术
+21:04 lhanjian_: 还有身体摆姿势，七八种，若干组合键
+21:07 Mokou: https://www.bilibili.com/video/av8659045 Fate/Mozart
+21:10 lhanjian_: varna: 快弄台高端PC，玩60帧的ARMAE
+21:11 varna: lhanjian_: 那至少得先换个住处
+21:11 varna: 现在我放不下那么多设备
+21:12 varna: 另外e是怎么回事，arma是个拉丁文名词么
+21:12 varna: 被变了复数？
+21:20 Mokou: 拉丁文触手可怕
+21:20 varna: 不懂拉丁文
+21:20 varna: 只被亚顿科普过一点
+21:21 varna: 这几天厂里有人拉了个wasm群
+21:21 varna: 看了看wasm编译出来的东西，好吓人
+21:21 varna: 编译器明显还没闷熟……
+21:21 varna: 同一个函数，gcc在不内联的情况下搞出来一句lea一句ret
+21:22 varna: wasm直接下拉rsp-寄存器参数写寄存器-暴力加法-nop-缩回rsp-ret
+21:22 varna: 十分惊恐
+21:26 lhanjian_: 所以讲羊驼子还是需要一个房子
+21:26 lhanjian_: 和一个妹子
+21:26 varna: 租个大点的就好了
+21:27 lhanjian_: 多花点租金租个管理好点的封闭式小区
+21:27 varna: 而且即使没有，也不影响主链路
+21:27 lhanjian_: 殡江太悲剧了
+21:29 Mokou: 你们需要更好地同情铁路
+21:29 lhanjian_: 今天造出了mk48和cms
+21:29 Mokou: 的通勤铁路*
+21:30 lhanjian_: 新的全域事件啊
+21:30 varna: 可以换子弹特效的那个么
+21:33 lhanjian_: 子弹计数边上有标记
+21:33 lhanjian_: 可以无限换蛋
+21:36 lhanjian_: 三种效果
+21:38 lh_ideapad quit:Remote host closed the connection
+21:39 varna: 套装没什么吸引力
+21:41 varna: 有心思的时候组公寓赚点箱子钱抽奇特好了
+21:41 sixand quit:Ping timeout: 245 seconds
+21:43 sixand joined channel
+21:43 lhanjian_: 我不急着肝了
+21:48 varna: https://www.bilibili.com/video/av3602487 终 段 显 象 大 黑 天 摩 罗 林 檎
+21:52 Mokou: https://github.com/sym233/core-values-encoder
+21:55 varna: (｡･ω･)ﾉ仁义八行·如是畜生发菩提心——终段·显象！feyiughreitjypooruefhojgthyjkuli
+21:58 sixand quit:Ping timeout: 252 seconds
+22:01 NebulaMoe joined channel
+22:06 sixand joined channel
+22:07 varna: Mokou: https://img.vim-cn.com/c9/2bedf2b30783788925d50db83bb6e49582f80e.jpg 强力妖精
+22:08 Mokou: 同志！大伊万！
+22:08 lhanjian_: 小胖子就好
+22:09 Mokou: 吨吨吨吨吨吨
+22:09 varna: 这人还把小男孩和胖子合体了
+22:10 varna: (｡･ω･)
+22:10 lh_ideapad joined channel
+22:10 varna: ブッチッパ
+22:10 Mokou: 羊驼先辈把频道变成了厕所
+22:10 Mokou: 真可怕
+22:11 lh_cat: lhanjian_, ???
+22:11 varna: で、出ますよ…多分
+22:13 Mokou: 当着众人随意脱粪的羊驼先辈是人间之屑
+22:14 varna: 菅　野　美　穂
+22:15 varna: 大概是修炼定冈回旋的方向性上出了致命的问题
+22:15 varna: 练成了噗叽啪
+22:16 lhanjian_: lh_cat: 我和红旗硬点了。这里是少前讨论群，然后吓跑一个萌新
+22:16 varna: 什么鬼
+22:16 lhanjian_: 17:40 <Mokou> 这是少前聊天群
+22:17 varna: 讲道理，这里没什么萌新，即使是现在这个样子，来的人也照样可以战力爆表
+22:17 varna: 驲，肚子疼
+22:17 Mokou: 因为脱粪过多而肚子疼的羊驼先辈（因果错乱）
+22:19 lhanjian_: 这都是你在频道脱粪得来的肠道传染病
+22:19 lhanjian_: varna: 现在是什么样子
+22:20 sixand quit:Remote host closed the connection
+22:20 lhanjian_: 我家猫都知道不能随地大小便，脱了粪要好好埋起来
+22:25 lhanjian_: ho
+22:25 lhanjian_: hope1: 海棠那边是几点啊
+22:26 lhanjian_: 莫名其妙全身瘙痒
+22:32 sixand joined channel
+22:38 lhanjian_: 非洲人是不会出货的
+22:39 cirno_ joined channel
+22:39 sixand quit:Remote host closed the connection
+22:40 Mokou: 似乎秦川和斗鱼闹掰了
+22:42 sixand joined channel
+22:43 lhanjian_: 嗯他发了公告
+22:43 lhanjian_: 什么秦川，是大号二五仔！
+22:45 yonka quit:Remote host closed the connection
+22:45 yonka joined channel
+22:46 lhanjian_: 啥时候有黑暗剑22
+22:48 Mokou: 梦里
+22:50 yonka quit:Ping timeout: 252 seconds
+22:51 cleamoon_: 现在很多人一直播就8h以上，感觉这个行业也变成劳动密集型了
+23:00 cirno_ quit:Remote host closed the connection
+23:01 cirno_ joined channel
+23:01 lhanjian_: 毕竟是全职的啊
+23:06 Mokou: 【精日制造德州校园枪击案】德州校园枪击案造成10死13伤。据称杀人动机是一个女孩儿拒绝其追求，恼羞成怒行凶。杀人过程中他一直在播放二战时的日本军歌。他的非死不可主页还发过神风敢死队徽章
+23:07 varna: 《刚果来》》
+23:07 varna: 《刚果来》？
+23:07 Mokou: uccu
+23:28 Mokou: 我还是觉得Whistler的启动界面和登录界面比后来的XP好看
+23:29 lh_cat is now known as lh_mouse
+23:30 lh_mouse: https://github.com/lhmouse/asteria/blob/cow_string/asteria/src/rocket/cow_string.hpp?ts=4  终于快日完了。
+23:30 lh_mouse: 一个星期了。
+23:30 lh_mouse: sb   std::basic_string 
+23:30 cirno_ quit:Remote host closed the connection
+23:31 cirno_ joined channel
+23:49 yonka joined channel

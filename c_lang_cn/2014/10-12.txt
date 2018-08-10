@@ -1,0 +1,1144 @@
+00:02:iyzsong quit:Quit: poweroff
+00:05:condy joined channel
+00:07:PloughP42 quit:Ping timeout: 240 seconds
+00:24:condy quit:Ping timeout: 260 seconds
+00:33:hysw joined channel
+00:36:biergaizi quit:Remote host closed the connection
+00:36:biergaizi joined channel
+00:39:code_new quit:Quit: Leaving
+00:55:hope1 quit:Ping timeout: 255 seconds
+01:34:xxxxxxxxx quit:Quit: Leaving...
+01:42:boosure joined channel
+02:13:lh_mouse: hysw, meow
+02:21:lh_mouse quit:Read error: Connection reset by peer
+04:35:cleamoon quit:Ping timeout: 258 seconds
+04:48:cleamoon joined channel
+05:50:geordi quit:Remote host closed the connection
+05:50:geordi joined channel
+06:42:geordi quit:Remote host closed the connection
+07:07:boosure: barf barf
+08:04:Sleepwalking joined channel
+08:10:cleamoon quit:Remote host closed the connection
+08:13:cleamoon joined channel
+09:15:hysw: 改卷子...
+09:56:iyzsong joined channel
+10:23:lhanjian joined channel
+10:33:hope1 joined channel
+10:47:ring joined channel
+10:57:Petrus07 joined channel
+11:00:Sleepwalking quit:Ping timeout: 272 seconds
+11:05:code_new joined channel
+11:07:Sleepwalking joined channel
+11:10:ring quit:Quit: Bye
+11:32:lhanjian quit:Ping timeout: 244 seconds
+11:36:Sleepwalking quit:Ping timeout: 258 seconds
+11:47:code_new quit:Quit: Leaving
+11:52:Sleepwalking joined channel
+12:38:lhanjian joined channel
+12:47:lhanjian: 单线程多进程模型，就意味着还是得上锁了……
+12:56:hope1 quit:Read error: Connection reset by peer
+13:25:pocmon joined channel
+13:39:whatofor joined channel
+14:22:lh_cat: lhanjian: 锁是不能完全避免的，除非就一个线程。
+14:23:lhanjian: 嗯，如果我多开几个epoll fd呢……
+14:24:lh_cat: 哦，多进程啊。
+14:24:lh_cat: 进程间通信是问题，同步不是问题。
+14:25:lhanjian: soga
+14:27:lh_cat: 多进程么，一个进程一个请求。
+14:28:lh_cat: 用文件同步吧，如果真的需要。
+14:31:hysw quit:Ping timeout: 260 seconds
+14:33:varna joined channel
+14:34:varna: Sleepwalking: 爆
+14:34:varna: MisakaMikoto: 求交配
+14:36:varna: 听说扶桑级要二改了啊哈哈哈哈哈哈哈
+14:36:lhanjian: varna, 爆炸
+14:36:varna: スリガオ海峡における夜戦で丧失した悲剧の戦舰、そのさらなるif改装の実装を今秋予定しています。
+14:36:lhanjian: varna, 对于epollET nonblocking readable socket，需要read两次读出EAGAIN吗
+14:36:varna: lhanjian: 两次？太少了
+14:37:lhanjian: 至少
+14:37:varna: 一次先来个16KB, 读个几次再看轮询不轮询
+14:38:lhanjian: 晕，我不是问在生产环境。我想问的是，只read一次得到rv 小于 要求读取数以后，epoll_wait下次会不会重新通知（ET stream nonblock socket）。还是说，必须read到EAGAIN，epoll_wait才会重新通知
+14:39:varna: ET到EAGAIN
+14:39:condy joined channel
+14:39:lhanjian: varna, 但是epoll(7)认为在stream nonblocking ET的情况下，得到count < rv 也行了，不用要再来第二次读EAGAIN
+14:40:varna: epoll(7)自己都没解决饿死问题，扔给用户了，所以……
+14:41:lhanjian: 捶地……为什么没人开发一个read_twice(2)
+14:42:varna: 如果你对饿死问题取鸵鸟态度，可以在cnt < rv时候停下，我觉得基本不会有问题
+14:42:lh_mouse joined channel
+14:42:lhanjian: 我还是鸵鸟吧……
+14:42:varna: 毕竟手册都这么指出了，大丈夫
+14:42:lhanjian: soga
+14:43:varna: 扶桑级终于要改二了哈哈哈哈，到下个月我手里有两张图纸，果然还是要给扶桑级啊哈哈
+14:44:varna: 利根之类的留到秋活或者十二月吧
+14:44:PloughPhone joined channel
+14:44:PloughPhone: 昨天我笔记本的硬盘挂了……
+14:45:PloughPhone: 弄了个SSD，正在装arch
+14:45:lhanjian: PloughPhone, 旧的不去新的不来
+14:45:PloughPhone: 主要是远征挂不了比较蛋疼
+14:46:varna: 看了下log, 小耗和我的做法似乎都是读到EAGAIN
+14:46:varna: 多一个系统调用换安定性
+14:46:lhanjian: 嗯，耗子说这是传统……
+14:46:varna: PloughPhone: 扶桑级秋季二改
+14:46:PloughPhone: 长门级呢……
+14:46:lhanjian: varna, 有没有在内核里面塞个新调用的价值？
+14:47:varna: lhanjian: 但是epoll本身糟烂传统太多，手册又写得不好，就狼来了；read_twice(2)本身其实有点价值，但我觉得不必加
+14:48:lhanjian: 好。等我把棚户屋搭完了，造个系统调用试试看
+14:49:varna: 我觉得比较有价值的做法不是read_twice(2)
+14:49:lhanjian: 愿闻其详
+14:49:varna: 而是recv(int, void *, int)改
+14:50:varna: 而是recv(int, void *, size_t, int)改
+14:50:lhanjian: soga。羊驼的意思是把适用范围缩小点是吗？
+14:50:varna: 套接字限定，要求在NB fd上加一个flag
+14:50:lhanjian: soga
+14:51:lhanjian: 本来我以为readv就这个作用，结果它只是用来拆分buffer的
+14:51:varna: flag指定读size_t参数尺寸的数据，但要求返回的cnt可能多于缓冲区尺寸
+14:51:varna: 多出的数目无所谓，+1就足够，指出是否还有后续数据
+14:52:lh_mouse: 0 0
+14:52:varna: 这样cnt <= rv的情况对应下一次EAGAIN
+14:52:lh_mouse: 洋沱回来了
+14:52:varna: 昨天感冒复发
+14:53:varna: 今天听说扶桑级要改二，一下子复活了
+14:53:lh_mouse: 裹被子里面打喷嚏
+14:53:lh_mouse: @帝球
+14:53:varna: 确实撸了一炮
+14:54:varna: 我最偏爱的IJN战舰就是扶桑啊哈哈哈哈
+14:56:varna: http://legal.people.com.cn/n/2014/1012/c42510-25815540.html
+14:58:lh_mouse: 我还真见过这种实现的
+14:58:lh_mouse: 不过不是 epoll
+14:58:lh_mouse: 是 M$ 的某个 printf
+14:58:varna: ...
+14:58:varna: 噗，lv95春雨
+14:58:lh_mouse: 如果返回值小于输出缓冲字符数 -1  那么这个事字符串长度
+14:59:lh_mouse: 如果大于或等于  那么这个事实际输出的大小  缓冲里面是截断的数据
+15:07:condy: 小学生的舌头特别甜美!
+15:07:condy: http://acg.shunwang.com/2014/1012/81097.shtml
+15:16:* varna 娶了电酱
+15:19:lhanjian: condy, 这个shunwang.com好萌豚啊，简直是卖肉anime大站哦。棒棒棒
+15:20:condy: 肉肉肉！
+15:20:varna: 老张老张老 转@Fantastical 「转@一小粒：转@左堂堂 老婆：“结婚七周年为什么叫铜婚？” 老公：“七年之痒嘛，就像铜器，呵护好了，光亮如新。疏忽了，就绿了。”」
+15:20:* condy 也是在推上看到的
+15:22:ring joined channel
+15:32:lh_mouse: 萌豚还是人类吗
+15:35:varna: 不是ppoi
+15:39:lh_mouse: Porous polyethylene orbital implant ?
+15:40:varna: ...
+15:41:varna: っぽい
+15:42:sismvg joined channel
+15:52:lhanjian: 在纠结是做caching web proxy还是无caching
+15:53:varna: 先做个前端，别的完再说
+15:54:lhanjian: 前端？
+15:54:varna: TCP框架
+15:54:varna: 好想侵犯药娘啊
+15:55:varna: 肉尻的米尻酱和美尻的肛旗酱呢
+15:55:lhanjian: 把listen/accepet/recv/send封装一层？
+15:55:varna: 至少给个libevent类似物
+15:56:lhanjian: libevent类似的event_base/event_new/event_rm都差不多有了
+15:56:lhanjian: 还有timer
+15:57:lhanjian: evbuffer/bufferevent也要搞一套？
+15:57:varna: buffer你看情况
+15:57:varna: 但是我推荐实现，不过别学libevent
+15:58:plough joined channel
+16:00:varna: plough: 肛
+16:00:plough: varna: 回去自肛
+16:01:varna: 啊啊啊啊
+16:01:varna: 十一月中旬！
+16:01:Plough: 扶桑改二？
+16:02:sismvg: walking dead!
+16:02:sismvg: walking dead!
+16:02:varna: 还有秋活
+16:02:varna: 基本可以认定是莱特湾
+16:02:Plough: 噗，有信浓？
+16:03:varna: 信浓不知道有没有，但官推确认秋活了
+16:03:Plough: Rizon上有#kancolle
+16:03:Plough: 总之我得先把Chrome搞下来
+16:03:varna: 哪国语言
+16:03:Plough: 英语
+16:04:varna: 英文不好玩
+16:04:Plough: 似乎人不少
+16:04:sismvg: http://www.ithome.com/html/it/107355.htm
+16:04:sismvg: 物理不学好还想修车？
+16:04:varna: 一想到我要跟他们说My fuso is waiting for Kai Ni我就浑身难受
+16:04:Plough: 似乎没中文……
+16:04:Plough: 2333
+16:04:Plough: 11区文的话我就只能围观了
+16:05:varna: 要么就是Today I've got a lot of D4Y, sh*t
+16:05:Plough: Oh shito,Nakachan again
+16:05:varna: WAREAOBA WAREAOBA
+16:06:varna: 另，3-2练级可以考虑额外地带二式舰侦
+16:06:Plough: 话说有空改扶桑级为啥不先把长门级改二
+16:06:varna: 有长门的是HOMO
+16:06:Plough: 国民战舰被傻级吊打大丈夫？
+16:06:varna: 扶桑级可是第一批日本自造的战列舰
+16:07:Plough: 水观一发如魂的futa如是说道
+16:07:Plough: 一发入魂
+16:07:varna: 而且到现在我也对不上日本的战机编号和盟军给的代号
+16:08:Plough: 换上ssd以后确实快了不少
+16:08:Plough: 虽说firefox还是没法秒开
+16:10:varna: 今天要二改隼鹰
+16:11:varna: 拖一周了
+16:11:Plough: 隼鹰二改以后的立绘还是不好看，不喜
+16:11:varna: 明天一整天都有会议的讲座，恐怕没时间肝，日常都不太能做
+16:11:Plough: 另外我怎么觉得北上大人语音换了以后感觉略奇怪……
+16:12:varna: 变幼了
+16:12:Plough: 新的和旧的交替着来感觉像两个人
+16:12:varna: 毕竟志向也变了
+16:12:Plough: 问题是只换了一部分……
+16:12:varna: 听着吧，就当北上大人晚上没漫画看，郁闷得鼻子堵了
+16:13:Plough: 就像雾岛改二第三个换装备语音我就觉得违和
+16:13:varna: 雾岛我都好长时间没动过了
+16:13:varna: 说起来最近要赌些大根了
+16:14:varna: 下次基本认定是莱特湾，而且估计要航战，而且估计扶桑级的改造要两个图
+16:14:Plough: 最近缺钢
+16:14:Plough: 虽说今天把东急开了但是东急2差一个桶
+16:14:varna: 肝完隼鹰我就放弃大部分练级，开始南西
+16:15:lh_mouse: Plough, 爆
+16:15:lh_mouse: Plough, 爆
+16:15:lh_mouse: Plough, 爆
+16:15:varna: Plough: 肛
+16:16:Plough: 我觉得我大概要把大建频率放缓了……
+16:16:varna: 唯一要练的是时雨
+16:16:Plough: 等级依然严重虚高中
+16:17:varna: 有桶就行
+16:17:varna: 至少隼鹰出来之后，机动部队的第二梯队也能打了
+16:17:Plough: varna: 对了，acggate现在又把hosts方法加回来了
+16:17:Plough: 能用
+16:17:varna: soga
+16:18:varna: 等acgproxy用不了再说吧
+16:18:varna: 我觉得acgproxy的速度比acggate还好点
+16:18:Plough: 主要是我当时买的是半年卡……
+16:18:varna: ...
+16:18:Plough: 于是差点被坑死
+16:35:varna quit:Ping timeout: 245 seconds
+16:40:varna joined channel
+16:40:varna: 日，谁把我电源按了……
+16:42:varna: 我在出击啊
+16:42:Plough: ……
+16:42:Plough: 打哪
+16:42:varna: 3-2
+16:42:Plough: 那还好
+16:43:varna: 幸好没人中鱼雷
+16:43:varna: 不对
+16:43:varna: 利根被擦了一血
+16:43:Plough: 要是在南西进boss点选阵型前有人按了电源我估计我能把他脑袋扯下来……
+16:43:varna: 南西就算了，就当没进
+16:44:varna: 最近桶太少了，总之隼鹰二改之后我就开始做南西
+16:44:Plough: 7994/24322/4370/12391+216/23
+16:44:Plough: 东急2的旗舰等级要求略疼
+16:44:Plough: 我估计得用神通跑
+16:45:varna: 到周五之前我还在用电酱呢
+16:46:Plough: 主要是神通是重要战力……
+16:46:varna: 电酱是老婆
+16:46:Plough: 虽说秋活之前我应该能搞个DD出来
+16:46:Plough: 有了东急一钢的压力应该会少些
+16:47:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=0d95ef89c0fdfc03e578e3b0e43e87a9/0c9e8eef76094b3669c6029aa0cc7cd98d109d20.jpg # 这不是那谁的下辈子么
+16:48:varna: Such a Type-A Ministory
+16:48:Plough: 看到了，下辈子北上大人依旧没胸
+16:48:varna: 北上大人从3-3开始一路跟我打到现在呢
+16:49:varna: 我记得3-4的时候各种帅气，开幕直接送走喔酱
+16:49:Plough: 北上大人有两次开幕直接一颗鱼雷灭了旗舰
+16:49:Plough: 一次5-3一次6-2
+16:49:varna: 后来不知为何就变成重雷达巡演舰，还学会看漫画
+16:49:Plough: 2333333
+16:50:varna: 其实如果初始舰五个看着都不顺眼的话或许我就娶北上大人了
+16:51:varna: 雷击才是以弱胜强（笑）之奥义
+16:52:varna: 至于扶桑，换上新开发的一四号之后各种主副CI过百
+16:52:Plough: 14我还没给山城装过
+16:52:varna: 以后陆奥那两门大根给扶桑算了
+16:52:Plough: 反正靠等级和21也足够保证命中了
+16:53:varna: 主要是红脸
+16:53:varna: 正常攻略的命中基本都够了
+16:53:Plough: 3366一小时
+16:53:varna: 现在扶桑lv78，再简单练练怎么都够二改了
+16:54:Plough: 然后扶桑极高练度lv95二改
+16:54:varna: lv95好办
+16:54:Plough: 哦哦 13电探
+16:54:varna: 3-2打个几百场就行了
+16:54:Plough: 小型电探，可以给天津风
+16:54:varna: 一三号不错
+16:55:varna: 万一后面又要拼驱逐舰索敌就有用了
+16:55:Plough: 接着来了一个三连鱼雷
+16:55:Plough: 不过反正出货了
+16:55:varna: 今天我赌些大根吧
+16:56:varna: 反正现在在修船
+16:56:varna: 八十资材，确认最近不会大建了，所以先来五发压压精
+16:58:Plough: 去把神通弄上Lv65
+16:58:varna: 噗，15.2 -> 20.3 -> 35.6 ...
+16:59:Plough: ……
+16:59:varna: 直接出货
+16:59:varna: 越过了41
+16:59:Plough: Orz
+16:59:varna: 刚好五个资材十多发
+16:59:varna: 第十一门大根入手
+16:59:Plough: 15.5
+17:00:Plough: 12.7cm
+17:00:Plough: 不赌了……等我各项资源都上10k再豪赌
+17:00:Plough: 另外曾哥居然是Lv65二改……感觉好蛋疼
+17:01:varna: 不喜欢曽哥立绘，一直不改，来一个喂一个
+17:01:varna: 总感觉大傻最近很葱明，又是电探又是大根的
+17:01:Plough: 曾哥改二我觉得还行
+17:01:varna: 曽哥一直都是GLC立绘
+17:02:varna: 这样日常的四发就赌电探吧
+17:03:varna: 对了，那问题就来了
+17:04:varna: 挖掘机技术哪家强？
+17:04:Plough: 话说挖掘机这个梗为啥突然就起来了
+17:04:varna: http://tieba.baidu.com/p/3346854413 # dmmunlocker已死
+17:04:varna: 不知道
+17:04:varna: 以前也就是黑黑fsl三面……
+17:05:varna: 一想起三面道中出现个唐国强就觉得带感
+17:05:cleamoon: http://acg.shunwang.com/2014/1009/80413.shtml
+17:05:varna: 哦操，火鸡也学会抢MVP了……
+17:05:varna: 噗，阿明是妹子！？
+17:05:varna: 撸撸撸
+17:06:varna: 姦山疮终于干了点人做的事
+17:06:cleamoon: 我更吃惊的是还真这么长时间没交带呀...
+17:07:varna: hellsing漫画某角色正传是汉子，外传直接变妹子了，平野耕太表示这货的性别看他心情……
+17:08:varna: 还有什么纹身画起来太麻烦，赐死；日本刀画烦了，赐死……
+17:10:cleamoon: 2333
+17:10:cleamoon: 23333
+17:10:varna: 最糟糕的是除了男主角之外的绝大部分人物（以敌方为主）都是他以前的H漫主角阵容
+17:10:cleamoon: 不要随便成为配角，否则很容易死
+17:10:cleamoon: 23333
+17:10:varna: 从这个意义上来看简直豪华
+17:11:cleamoon: 直接画H漫呗
+17:11:varna: 他以前画很多H漫了，这个大概只是换换口味
+17:12:varna: http://manhua.dmzj.com/nogunslife/ 这个漫画看着不错
+17:12:cleamoon: 酷猫小黑不错的
+17:13:varna: http://manhua.dmzj.com/djssgui/31386.shtml # 我了割草？
+17:13:cleamoon: 略快.....
+17:14:cleamoon: 估计是被骂的实在蛋疼，于是赶紧开始连载了
+17:14:varna: 估计他攒够三户愚吕资源了
+17:15:cleamoon: 皇家国教骑士团...
+17:21:boosure quit:Read error: Connection reset by peer
+17:21:sismvg: 幼女吸血鬼！
+17:22:Plough: 3-2练棒各，结果23位的两只战舰狂抢MVP……
+17:23:varna: 为什么那么多战舰
+17:23:varna: 开出来太费油了吧
+17:23:Plough: 因为她们是大凤号战舰和加贺号战舰
+17:23:varna: 土佐已经被吃了，过去的事就不要提了
+17:24:Plough: 就一个97能撸出比46还高的伤害……
+17:25:cleamoon: 的确不错，有点看头
+17:25:varna: 总觉得新连载的男主角还是金木
+17:25:varna: 大概他没被做成库因克
+17:26:varna: Plough: 你上穿甲弹了么？
+17:27:Plough: 没上，带的是14
+17:27:Plough: 我装上看看
+17:28:varna: 对付这种杂鱼应该不用补正命中
+17:31:Plough: 现在的主要问题是棒各二连通常只能打中一炮……
+17:32:varna: CI呢
+17:32:varna: 而且多少级的棒各啊……
+17:32:Plough: 还没见到CI
+17:32:Plough: Lv65
+17:32:varna: 不至于这么惨，战舰lv65已经能实战了
+17:32:Plough: 我换个41上去看看？
+17:32:varna: 试试吧
+17:32:varna: 还不行的话换试制356
+17:33:Plough: 没有……
+17:34:varna: 哦对那个要棒各改二……
+17:34:varna: ...
+17:34:pocmon quit:Quit: 飘来又飘去～
+17:34:varna: 41吧
+17:34:Plough: 双41CI伤害还行
+17:34:Plough: 等会看看二连怎么样
+17:35:varna: 所以说我是什么时候加入多炮塔神教的……
+17:35:wlemuel joined channel
+17:36:Plough: 噗，忘了
+17:36:varna: 掘削机の操作方を学びたいなら、どうしましょう？
+17:36:Plough: 我不该把战神扔进澡堂的
+17:36:Plough: 应该直接点改造
+17:36:varna: ...
+17:36:Plough: 算了再让她挨一次炸
+17:38:wlemuel: Varna, 山东へ行くべ
+17:38:varna: wlemuel: 山東
+17:39:pocmon joined channel
+17:40:varna: 啊啊，想到扶桑级改二我就激动得一塌糊涂
+17:40:wlemuel_ joined channel
+17:41:lh_mouse: 朝鲜象棋里草书的車写作车
+17:41:varna: 我有个预感，这次活动会在晓的水平线上烧完我所有的桶再逼我从肝尖上挤出点油来
+17:41:Plough: 233333
+17:42:* varna 因为中二所以现在所有的游还写作遊
+17:42:wlemuel quit:Ping timeout: 260 seconds
+17:42:lh_mouse: 放猫
+17:43:varna: 虽说以走之代替氵部不是所有时候都显得很正确
+17:43:lh_mouse: wlemuel_, 是哪只？
+17:43:varna: 但反过来也是一样
+17:44:varna: http://tieba.baidu.com/p/3345591653
+17:44:lh_mouse: ◕.◕
+17:44:varna: ^ 这位楼主的室友漫展回来给他买了特I型的本子
+17:45:varna: 我觉得对着特I型撸反而说明撸点高
+17:45:varna: 想想包子脸政委音的欠雪一脸正经地给提督舔舔就好兴奋啊
+17:45:Plough: ……
+17:45:varna: 经验人数：1人
+17:46:varna: 噗，那本子我看过
+17:46:varna: 很有撸头的
+17:46:wlemuel_ quit:Ping timeout: 260 seconds
+17:47:wlemuel joined channel
+17:48:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=00112046b9a1cd1105b672288929c9fc/d833c895d143ad4b29de82b681025aafa50f06d0.jpg # 粪提就爱作死
+17:48:Plough: 噗
+17:48:varna: 结果5L有个哥们更惨
+17:48:varna: 表示当天一激动直接给喂了
+17:48:Plough: ……
+17:49:varna: 拆矶风沉云龙喂大淀，吉祥三宝
+17:50:* varna 才反应过来自己把两个决战兵器都提前糟蹋了
+17:50:varna: 而且还是投入到了八十级二改的惨烈阵容里
+17:53:varna: http://tieba.baidu.com/p/3346989835 # 刚才那个欠雪本子的哥们发帖被室友看见，室友又给他一个本子……
+17:54:lh_mouse: wlemuel, 是哪只？
+17:55:Plough: ……
+17:55:lh_mouse: 0 0
+17:56:varna: http://tieba.baidu.com/p/3346408676 # su~per kitakami-sama dayo~
+17:57:Plough: 北方幼女都上首页了……
+17:58:varna: 噗，居然猜对了
+17:58:varna: 我想的也是北上
+17:58:varna: 决策树的胜利
+18:03:wlemuel quit:Ping timeout: 260 seconds
+18:03:wlemuel joined channel
+18:07:varna: 啊，川内也终于喂满了
+18:08:varna: 接下来是大腚和乳代田
+18:08:lh_mouse: 求喂
+18:09:varna: 给，气球
+18:10:lh_mouse: 我不吃气球
+18:10:varna: 给，羊味素
+18:10:wlemuel quit:Ping timeout: 255 seconds
+18:10:varna: 气球先拿着，过一会就飞起来了
+18:11:lh_mouse: QAQ
+18:11:lh_mouse: 吃东西去了、
+18:11:wlemuel joined channel
+18:12:varna: 秋活感觉很危险
+18:13:varna: 扶桑（79）山城（65）伊势（43）日向（10）
+18:21:varna: 另，刚才那个口雪本子在i-ab上有
+18:21:varna: 我就不发链接了，题目是《吹雪型駆逐舰の贵重ないやらしいシーン》
+18:22:varna: D.N.A. Lab这也是东 舰 战 争 不 可 避 一 转 攻 势 风 评 被 害
+18:30:biergaizi quit:Quit: 回学校
+18:30:wlemuel: lh_mouse: new here
+18:36:varna: wlemuel: 爆
+18:36:Sleepwalking quit:Remote host closed the connection
+18:38:hoxily joined channel
+18:38:lh_cat: wlemuel 到底是哪只
+18:38:varna: 以前似乎见过，但是一直潜水
+18:38:varna: 19:38 -!- hoxily [~root@125.119.15.9] has joined #c_lang_cn
+18:39:varna: ^ 谁来给他下个kit
+18:39:hoxily: varna: 你好
+18:39:varna: hoxily: 爆
+18:41:varna: 出击5.7k
+18:41:hoxily: varna: 我上次在 roselip fetish 看到了 舔腋下，好可怕！
+18:42:varna: hoxily: 哪里可怕
+18:42:condy: \腋/
+18:42:varna: 温热揉软的腋下哪里不好了
+18:42:condy: 大家腋间愉快!
+18:42:lhanjian: hoxily, 这是啥站……
+18:42:varna: 电酱被大破的时候还会露出腋部呢
+18:43:condy: 大hentai看腋，小hentai看胸...
+18:44:varna: 腋是连接肩部和侧乳的桥梁，集两者精华于一身
+18:44:hoxily: lhanjian: 好像是个系列
+18:44:lhanjian: 夭寿
+18:51:lhanjian: 现在似乎不常见RPC了
+18:52:varna: sun rpc太欠了而已，别的还是有的
+18:52:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=2f400bf2caea15ce41eee001863b3bf3/3801213fb80e7bec789c66962c2eb9389b506b06.jpg # 爱
+18:54:ring quit:Ping timeout: 260 seconds
+18:57:lhanjian: 不爽的时候看看UnixHatersBook，一下子就爽了
+18:57:pocmon quit:Quit: 离开
+18:57:varna: 不爽的时候撸撸管，一下子就爽了
+18:58:ring joined channel
+18:58:lhanjian: 一进入贤者时间又不爽了
+18:58:varna: 次发装填、再突入！
+19:02:xxxxxxxx joined channel
+19:02:varna: sleepwalEAking基佬来了
+19:03:xxxxxxxx: varna 我先提前来一句 爆你妹去
+19:03:* lh_mouse gives varna a fish.
+19:03:lh_mouse: 烤鱼
+19:03:varna: xxxxxxxx: 爆
+19:04:varna: 小耗自己做了尻雨？
+19:04:varna: 烤鱼？
+19:04:lh_mouse: 没 馋了
+19:04:xxxxxxxx: 尻鱼
+19:04:varna: xxxxxxxx: uccu
+19:04:lhanjian: 至于容忍如 语 的语言 能被现 程序员用来编程,我们倒真没想过!我们真 的想
+19:04:lhanjian: 法是把这玩意儿卖给俄国人,让他们的计算机科学至少倒 二十 。当 AT&T 和别的美
+19:04:lhanjian: 国
+19:04:lhanjian: 真的开始使用 Unix 和 C 时,你能想象我们是多么惊讶吗?直到二十
+19:04:lhanjian: ,人们才
+19:04:lhanjian: 从这
+19:04:lhanjian: 的技术恶搞中理出头绪,开发了稍微 得了
+19:04:lhanjian: 的 用程序,但是对于
+19:04:lhanjian: 通 Unix 和 C 程序员的固执(如果不是所有人都这么想的 ),我们深有体 。
+19:04:lhanjian: 最近几
+19:04:lhanjian: ,布莱 、 尼斯和我都 在苹果电脑 运行 Lisp。多 前我们一个愚蠢的
+19:04:varna: 哈哈哈
+19:04:lhanjian: 玩笑,给世界带来多少混乱、困惑和糟糕透顶的编程方法,对 我们真的很内疚。
+19:05:lhanjian: 我艹，这怎么了……
+19:05:varna: 哈哈哈哈哈哈
+19:05:varna: 汉字的序顺ry
+19:05:* lhanjian 觉得，果然C语言酱是不能黑的，一下子汉的字序顺就问题出了
+19:05:condy: lhanjian: Haters有 中文版？
+19:07:varna: condy: 爆
+19:07:lhanjian: 嗯
+19:07:lhanjian: 一个网友自行翻译的
+19:07:varna: 酱尻米？
+19:08:lh_mouse: 链接呢
+19:08:lhanjian: http://www.ppurl.com/2013/07/unix%E7%97%9B%E6%81%A8%E8%80%85%E6%89%8B%E5%86%8C.html
+19:09:lhanjian: 差点在实验室笑出了声
+19:09:lhanjian: varna, 羊驼子不用shell真是英明的决定。虽然perl也没有更好……
+19:10:lh_mouse: 完全不艹 shell 不现实
+19:10:lhanjian: 不现实++
+19:10:lh_mouse: 不管做啥东西 总有些不干净的在下面垫着
+19:10:varna: perl好太多了
+19:10:varna: 在能避免的场合尽量避开sh
+19:10:lhanjian: 但是把shell当命令行一行行用，远比把它当”编程语言“要靠谱的多
+19:10:lh_mouse: 把 shell 局限在尽可能小的范围内
+19:11:lh_mouse: 这点上 shell 不如 cmd   虽然 cmd 挺烂
+19:11:varna: 两回事
+19:11:lh_mouse: 但是 cmd 比 shell 有自知之明
+19:11:varna: windows大部分时候可以不用cmd, 根本谈不上自知之明
+19:11:lhanjian: 最近听说阿里已经在管理服务器的时候，基本抛弃了shell写的货，改用小蛇了。shell完全无法维护……
+19:11:lh_mouse: 批处理啊
+19:11:varna: 欲加之功，何患无辞啊
+19:11:lh_mouse: 批处理还得上 cmd
+19:12:lhanjian: vbs可能比cmd靠谱
+19:12:lh_mouse: js 呢
+19:12:lh_mouse: 我承认 vbs 比 js 功能多
+19:12:lhanjian: 哦
+19:12:lh_mouse: 但是 vb 早就快死了
+19:13:lh_mouse: 我之前确实就写 jscript
+19:13:varna: sh的坏处是那东西是个设计恶劣的语言，但使用场合被巨大地扩大了，以至于出现一大堆舔臭脚的
+19:13:lh_mouse: 但是话说回去了  听为不同
+19:13:lh_mouse: 定位 *
+19:13:xxxxxxxx: @杨臭脚
+19:13:lh_mouse: 你同样没法用 js 取代 批处理
+19:13:lh_mouse: shell/批处理  说难听的
+19:13:lhanjian: 不知道GNU处理好了bash衍生的那一大堆CVE没有
+19:13:lh_mouse: 就是民工
+19:14:varna: 如果说powershell我还觉得可以，缺省的cmd还是不怎么样
+19:14:lh_mouse: ps 没玩过
+19:14:lh_mouse: 我看看
+19:14:lhanjian: powershell似乎也有bash的那个严重bug,好在m$用户足够清醒
+19:15:lhanjian: powershell很好看
+19:15:varna: 至于自知之明？我可不觉得多少看得起自己的东西有自知之明——另一方面，明白自己用处有限的东西也不需要多少自知之明
+19:15:lh_mouse: fuck
+19:15:varna: 所以最后只剩下了一股无知的臭味
+19:16:cleamoon: 有perl完成不了只能用shell的东西？
+19:16:lh_mouse: Copy-Item [-LiteralPath] <string[]> [[-Destination] <string>] [-Container] [-Credential <PSCredential>] [-Exclude <string[]>] [-Filter <string>] [-Force] [-Include <string[]>] [-PassThru] [-Recur se] [-Confirm] [-WhatIf] [-UseTransaction] [<CommonParameters>]  
+19:16:varna: 不是完全抛弃sh
+19:16:lh_mouse: 为什么这么恶心
+19:16:FrankHB: ps1照样二。
+19:16:varna: 我会把一部分sh扔到perl里执行拿结果
+19:16:FrankHB: 一个&&几年了都没动静。
+19:16:lh_mouse: 我只需要一个 cp -rf
+19:16:FrankHB: chcp 65001就boom。
+19:17:varna: 不过有时候你会发现``和system在参数处理上可能还有点小差别，典型的perl问题
+19:17:lh_mouse: 没 boom 啊
+19:17:varna: 提供了多种方法，但每种方法可能都不太一样
+19:17:varna: 所以问题就来了
+19:17:varna: 我肝不肝平面栖战姬呢……
+19:18:lhanjian: 如果当时 尼斯和肯使用电 打字机而不是电传打字机, 能今 我
+19:18:lhanjian: 们敲击的就不是“cp”和“rm”,而是“copy”和“remove” 了。科技拓
+19:18:lhanjian: 我们的选择, 时 限制我们的选择,这就是例子。
+19:18:FrankHB: 现在这个bug修了么。
+19:18:varna: 字汉
+19:18:FrankHB: 看来是.NET的问题。
+19:18:lhanjian: 在man里面经常能看到`'
+19:18:lhanjian: `'简直吐血
+19:18:lhanjian: 还有GNU的各种文档
+19:18:lh_mouse: gcc 输出直接用全角 ‘’
+19:19:varna: 天国的GNU Lightning
+19:19:lhanjian: 全角真是个”伟大“的发明
+19:19:lh_mouse: 汉字算什么
+19:19:varna: 字汉的序顺读影不响阅
+19:19:lh_mouse: ＇＇＂＂ <= 全角英文引号
+19:19:lh_mouse: ‘’“” <= 全角中文引号
+19:20:lhanjian: ”“""?
+19:20:cleamoon: 刚才那句真的很影响阅读...
+19:20:lhanjian: cleamoon, 说明你读得不够快
+19:20:FrankHB: pdf里的一般直接全角中文引号了。
+19:20:varna: cleamoon: 你撸少
+19:20:varna: cleamoon: 我这有欠雪级本子，你拿去撸撸？
+19:21:lhanjian: DOS 和 Windows 提供的 能更象 U 型污水管,而不是废纸篓。这两个
+19:21:lhanjian: 操作系 直接删除文件,但如果用户反悔了,至少还
+19:21:lhanjian: 买
+19:21:lhanjian: 来打
+19:21:lhanjian: 捞一 。这种方式有时侯是 行的。+
+19:21:cleamoon: 刚撸完，下了个33个av的合集，能看的一个都没有
+19:21:lh_mouse: 现代汉语里的双字词有一些是两个意思相近的单字组成的
+19:21:lh_mouse: 这种词颠倒顺序基本不影响阅读
+19:21:lh_mouse: 但是别的不行
+19:21:lh_mouse: 貌似是这样
+19:21:varna: lhanjian: 你最好离线排一次版
+19:22:lhanjian: 这种词倒颠序顺基本不响影读阅？
+19:22:lhanjian: varna, OK
+19:22:varna: 为什么我第一眼看以为lhj那句是对的……
+19:22:lhanjian: eog sucks
+19:22:lh_mouse: 顺  序    阅   读
+19:22:varna: 绝对是撸多了
+19:22:lhanjian: varna, 看多了台版的轻小说？
+19:23:varna: lhanjian: 台版我只买过一套
+19:24:xxxxxxxx: varna 你需要发泄多余的YY之力
+19:24:varna: xxxxxxxx: 对，爆
+19:24:cleamoon: 人类活生在大浩的宇宙当中
+19:24:cleamoon: 感觉还是别扭
+19:24:varna: 人类生活在小耗的宇宙当中
+19:24:cleamoon: 不如 人类活在裆中
+19:24:lh_mouse: 0.0
+19:24:lhanjian: 结果很不幸,因 “history”是 shell 内部命 。这 的例子有很多,请试着列出一张完整的清单(去吧,翻看 sh 或者 csh 的手册页 不算作弊)。
+19:24:lh_mouse: @xym
+19:25:lhanjian: 这个问题我是最恨的
+19:25:xxxxxxxx: 小耗的鱼粥当中 
+19:25:varna: 大宇宙理论不是被放弃了么？
+19:25:varna: 现在大神不是开始研究MFC了么
+19:25:lh_mouse: wth
+19:25:lh_mouse: 链接
+19:26:varna: 找不到了
+19:26:varna: 上个月的事
+19:26:ring quit:Read error: Connection reset by peer
+19:27:cleamoon: 没法擦？jy固定了？
+19:27:varna: 说不定哪天就开始研究MCF了
+19:28:lhanjian: 据 这是贝尔 验了让 有大写的 端使用 Unix 的 法 当登录 是全大写就 入一种特殊的 端模式 将输出全部转换成大写,并且把输入全部转换成小写。这个 能已经从 Single Unix Specification 删除,但仍然见于 Ubuntu GNU/Linux . 。
+19:28:cleamoon: mcf+
+19:29:varna: lhanjian: 你看看你……
+19:29:lhanjian: Ubuntu真是传说。
+19:29:varna: 内部错误
+19:29:lhanjian: 帐户名全是大写，那么就默认进入输出全部为大写的模式……
+19:29:lhanjian: Ubuntu 6.06
+19:30:varna: 内部错误的传统不是“你们都是傻逼，老子说什么你听什么的，别的少他妈管”么
+19:30:FrankHB: pdf的奇葩字体显示++看起来就像个垂直居中的艹……搞了几分钟才反应过来是串接。。。
+19:30:lh_mouse: ++ FrankHB 
+19:31:FrankHB: ++ lh_mouse
+19:31:varna: 好想侵犯药娘啊
+19:31:varna: 药娘都哪去了
+19:31:lh_mouse: FrankHB, error: no matching function call to operator++(const LH_Mouse &);
+19:34:varna: http://tieba.baidu.com/p/3347149060
+19:34:lhanjian: 看来Plan9真是太有必要了
+19:35:lhanjian: 必要到它必须称呼自己为Unix
+19:36:varna: p9已死有事烧纸
+19:36:lhanjian: 突然听说组织可以自己请假了……简直是太好的政策
+19:36:varna: unix有一个好处：它可以让一部分烂货觉得自己的实现不错
+19:36:varna: 而一个坏处是它经常坑你
+19:36:lhanjian: ORZ
+19:37:cleamoon: p9还可以用
+19:37:varna: 驱动
+19:37:lh_mouse: 我还是不理解为啥 dlclose 不会把动态库卸掉
+19:37:cleamoon: 我说用... 不是完全用p9...
+19:37:lh_mouse: dlclose 到底是不是 unix 的东西
+19:37:lhanjian: P9应该加速开发GUI，然后卖给苹果
+19:37:cleamoon: 肯定不可能
+19:37:varna: 然后我再也不会提p9这个东西，甚至不会去费力黑它
+19:38:lhanjian: 现在BellLabs在谁手里来着？
+19:38:varna: 苹果现在的内核是不是Mach改？
+19:39:lhanjian: OS X is based upon the Mach kernel. Certain parts from FreeBSD's and NetBSD's implementation of Unix were incorporated in NeXTSTEP, the core of Mac OS X.
+19:39:lh_mouse: The core of Mac OS X was ripped from MCF/
+19:39:varna: Mach改就没救了
+19:39:lhanjian: The iOS kernel is XNU, the kernel of Darwin.
+19:40:varna: The core of MCF was, is and will always be ripped from xym5366
+19:40:lhanjian: 早就没救了吧
+19:41:lh_mouse: 妈蛋  我想个办法把 poseidon 的 websocket server 移植到 vc 上面去
+19:41:varna: As long as we take the Great Cosmos for granted, we're sinners
+19:41:lh_mouse: websocket 居然区分文本模式和二进制模式
+19:41:lh_mouse: 真是 SB
+19:41:varna: ...
+19:41:StarBrilliant: lh_mouse: 什么事？
+19:41:varna: StarBrilliant: 你下去
+19:41:lh_mouse: o fuck
+19:42:StarBrilliant: varna: 怎么？
+19:42:varna: StarBrilliant: 我们组织一波爆你
+19:42:StarBrilliant: varna: 等我去洗身体
+19:42:lh_mouse: 卧槽
+19:42:varna: StarBrilliant: 快去快回
+19:42:StarBrilliant: 小穴好痒的说
+19:42:lh_mouse: 写个 bot  谁发了 SB 就 kick
+19:43:StarBrilliant: lh_mouse: 什么事？
+19:43:lh_mouse: 这是自动回覆的么
+19:43:varna: 我怀疑学校旧澡堂的大爷们也要打秋活
+19:43:varna: 他们今天停业，开业时间未定
+19:44:lh_mouse: 你们知道 js 这货居然能处理二进制吗
+19:44:lh_mouse: 我瞬间感觉高大上
+19:44:lh_mouse: 然后你们知道吗  我想把二进制当成字符串解释
+19:44:lh_mouse: 然后你们知道吗 我瞬间就感觉被艹了
+19:45:varna: 杀马特杀马特 洗剪吹洗剪吹吹吹
+19:46:cleamoon: 23333
+19:46:StarBrilliant: lh_mouse: 知道呀
+19:46:StarBrilliant: lh_mouse: JS处理二进制有几种方案
+19:46:cleamoon: js还是可以用的
+19:46:StarBrilliant: 有 ArrayBuffer
+19:46:StarBrilliant: 有 Blob
+19:46:lh_mouse: 是 Blob
+19:46:StarBrilliant: 还有 Node.JS 提供的什么个 Buffer
+19:46:lh_mouse: 发的是二进制收到的是 String
+19:46:lh_mouse: 不是
+19:46:StarBrilliant: 还可以用字符串，但是UTF-16比较浪费
+19:46:lh_mouse: 发的文本你收到 String
+19:47:lh_mouse: 发的二进制收到 Blob
+19:47:StarBrilliant: 我前一段时间就写了一个处理二进制的JS程序
+19:47:lh_mouse: 我认为内部处理应该用 UTF-32    持久存储和传输应该用 UTF-8
+19:47:StarBrilliant: lh_mouse: 内部是UTF-16
+19:47:StarBrilliant: lh_mouse: JavaScript规范
+19:47:lh_mouse: 还有   我看 WebSocket 的 RFC 我想骂街
+19:48:StarBrilliant: 用库吧
+19:48:lh_mouse: 艹的  怎么那么多错误处理的破事
+19:48:varna: 毕竟js盛产杀马特
+19:48:lhanjian: 现在node.js甚嚣尘上
+19:48:StarBrilliant: JS写异步很头疼
+19:48:lhanjian: （成语误用）
+19:48:StarBrilliant: Callback Hell
+19:49:lh_mouse: 猫猫大人<lh_mouse@ra2diy.com> 14:29:33 
+19:49:lh_mouse: 8.1.  Handling Errors in UTF-8-Encoded Data   When an endpoint is to interpret a byte stream as UTF-8 but finds that the byte stream is not, in fact, a valid UTF-8 stream, that endpoint MUST _Fail the WebSocket Connection_.  This rule applies both during the opening handshake and during subsequent data exchange.
+19:49:lh_mouse: 猫猫大人<lh_mouse@ra2diy.com> 14:29:44 
+19:49:lh_mouse: QNMB  老子嫌费事
+19:49:lh_mouse: 猫猫大人<lh_mouse@ra2diy.com> 14:30:46 
+19:49:lh_mouse: If the opcode designates text mode but the payload bytes do not make up a valid UTF-8 stream, the behavior is undefined. Period.
+19:49:varna: 我就印象node.js曾经鼓吹过自己的callback, 后来我发现就是个俄式reactor改
+19:49:lhanjian: 到底那种UTF比较适合内部处理？
+19:49:cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/2x/bc_124386.jpg
+19:49:lh_mouse: 这时候感觉 C++ 大法真好
+19:49:cleamoon: 俄式reactor？
+19:49:lh_mouse: lhanjian, 16 据说啊  比 utf-8 快
+19:49:varna: 他们的IO结构是个典型的reactor, 结果被几个人拿出来还小吹了一顿……
+19:50:StarBrilliant: lh_mouse: 内部处理用 UTF-32 最好
+19:50:lhanjian: varna, ++++。
+19:50:lh_mouse: StarBrilliant, 我个人持这种观点
+19:50:StarBrilliant: lhanjian: 但是JS规范是UT-16
+19:50:lh_mouse: 不过不管是 win 还是 java* 都是 utf-16
+19:50:lhanjian: 某node.js支持者竟然还敢叫嚣永远超越斩舰刀
+19:50:varna: 正常
+19:51:varna: 你看看现在自称技术宅的开发者多少是搞web前端的
+19:51:lhanjian: +++++++++++
+19:51:StarBrilliant: lhanjian: Windows 7 之后才是 UTF-16
+19:51:StarBrilliant: 之前是 UCS2
+19:51:lhanjian: 这话就是某前端说的
+19:51:lhanjian: 搞得斩舰刀好像除了反向代理一无是处
+19:51:cleamoon: 那和毛子什么关系
+19:51:cleamoon: 斩舰刀是什么
+19:51:lhanjian: Nginx
+19:52:varna: 除了反向代理还可以做不管业务的前端23333
+19:52:lh_mouse: StarBrilliant, 我记得 XP 开始就是 utf-16 了
+19:52:lh_mouse: 前端跟民工差不多
+19:52:StarBrilliant: lh_mouse: XP 不支持 BMP1 字符
+19:52:StarBrilliant: lh_mouse: Vista 是有很的支持，删除键要按两下
+19:53:cleamoon: ...
+19:53:StarBrilliant: 7 才是半完美支持
+19:53:StarBrilliant: 至今没有 100% 支持
+19:53:lh_mouse: 龍龍龍龍
+19:53:StarBrilliant: lh_mouse: 那个不是 BMP1 字符
+19:53:varna: 鳳鳳鳳鳳
+19:53:lhanjian: 憂鬱的臺灣烏龜
+19:53:cleamoon: js超过nginx？这两个有毛可比性...
+19:54:StarBrilliant: 我觉得与其去支持 UTF-16 不如早点把 CP65001 作为一个合法的 codepage
+19:54:lhanjian: cleamoon, node.js开发的webserver超过nginx
+19:54:lhanjian: "据说已经"
+19:54:varna: 哈哈哈哈
+19:54:lhanjian: 在这种舆论的支持下，明年的平台，他们就会用node.js写了
+19:55:varna: 这言论吓得我赶紧抱住时雨
+19:55:StarBrilliant: lh_mouse lhanjian varna: 𩰪㦲𦰗𠀼 𣂕𣴑𣱳𦁚
+19:55:lhanjian: 我宁可他们用php，好歹php的语法和perl高度相似
+19:55:lhanjian: StarBrilliant, ORZ
+19:55:lhanjian: 哲学书电子计划？
+19:55:PloughPhone quit:Read error: Connection reset by peer
+19:55:varna: lhanjian: php杀马特的地方是他们只有一个屁用不顶的$, 除了难看之外一无是处
+19:55:StarBrilliant: lhanjian: 你能看见？
+19:55:varna: 能
+19:56:lhanjian: StarBrilliant, 都能
+19:56:PloughPhone joined channel
+19:56:lhanjian: DroidSansMono
+19:56:StarBrilliant: varna: PHP也可以写出优秀的代码，但是PHP鼓励程序员写糟糕的代码
+19:56:varna: php没那个$真心没什么
+19:56:varna: simsun 9
+19:56:lh_mouse: varna, 有啊
+19:56:StarBrilliant: lhanjian: Droid Sans 没有这几个字的
+19:56:lh_mouse: aaa 是字符串
+19:56:StarBrilliant: varna: SimSun_ExtB 吧？
+19:56:StarBrilliant: 𩰪㦲𦰗𠀼 𣂕𣴑𣱳𦁚
+19:56:varna: StarBrilliant: 是
+19:56:StarBrilliant: 八中字
+19:56:lhanjian: 那就是DroidSansFallback?
+19:56:StarBrilliant: 八个字
+19:56:varna: lh_mouse: ……
+19:57:lhanjian: 当然看见了八个字……
+19:57:xxxxxxxx: 𩰪㦲𦰗𠀼 𣂕𣴑𣱳𦁚
+19:57:varna: 是八个字啊
+19:57:xxxxxxxx: ....
+19:57:StarBrilliant: 听说WinXP会挂
+19:57:varna: 吱吱吱吱 吱吱吱吱
+19:57:lhanjian: 这几个字我全都不认识……
+19:57:varna: 这里有多少现在用着XP的？
+19:57:cleamoon: 各种神言论
+19:57:varna: windows用户就没几个吧
+19:57:StarBrilliant: 而且 Vista 下打完八个字之后要按16下退格才能删除
+19:58:StarBrilliant: varna: 我刚刚是在黑Windows呀
+19:58:xxxxxxxx: 吱吱吱吱吱 吱吱吱吱吱 吱吱吱吱吱 吱吱吱吱吱
+19:58:StarBrilliant: 现在只有Windows的Unicode支持如此差了吧
+19:58:lh_mouse: StarBrilliant, On Windows 7, the console displays that character as two invalid characters, regardless of the font used.
+19:58:lhanjian: 打完八个字之后要按16下退格才能删除
+19:58:lh_mouse: http://utf8everywhere.org/
+19:58:StarBrilliant: lh_mouse: 这个说的是 console
+19:58:varna: 其实我想黑lighttable ide
+19:58:lhanjian: 这情况在设计不良的Emulator上比比皆是
+19:58:lhanjian: 还是设计的不良的shell？
+19:58:varna: emu
+19:58:varna: 或者说vte吧
+19:59:StarBrilliant: 设计不良的Emulator
+19:59:varna: 日，今天蒸发了至少五千弹药……
+20:00:lh_mouse: 我有个问题哦
+20:00:lh_mouse: 艹  我忘了我要问什么了
+20:00:varna: 挖掘机技术？
+20:00:StarBrilliant: 哪家强
+20:00:cleamoon: 我有个win双启动，淫行需要win
+20:01:varna: 挖掘机当然要去横须贺
+20:01:cleamoon: 小耗不是win吗
+20:01:lh_mouse: 是
+20:02:lhanjian: 现在还用u_short的是啥意思？
+20:02:lh_mouse: 省事
+20:03:lh_mouse: 在程序里用 short 没任何意义
+20:03:lh_mouse: 比 int 慢不说   尺寸也没法保证
+20:04:StarBrilliant: char <= short <= int
+20:04:StarBrilliant: 不能保证尺寸
+20:04:StarBrilliant: 虽然经常定义为16位但是不一定就是16位
+20:04:varna: 难道是进城之后不认路的51顽固派？
+20:04:StarBrilliant: 如果一定要16位得 int16_t
+20:04:varna: StarBrilliant: 常识……
+20:05:StarBrilliant: 当然
+20:05:StarBrilliant: 应该是51
+20:05:lhanjian: varna, nginx和libevent都有u_char
+20:05:StarBrilliant: 23333333333333333333333333
+20:05:StarBrilliant: u_char 没有问题
+20:05:StarBrilliant: char 在 ANSI 
+20:05:StarBrilliant: char 在 ANSI C 里规定是1字节
+20:05:lhanjian: 总记得好象是某BSD对什么socket的函数定义
+20:05:lh_mouse: char 必须是一个字节
+20:05:StarBrilliant: lh_mouse: socket里现在也是 int16_t 了
+20:05:lhanjian: 晕，我糊涂了
+20:05:FrankHB: 看到㦲和14个问号。。
+20:05:varna: FrankHB: 真羞耻
+20:05:lh_mouse: 因为字节是根据 char 定义的……
+20:05:lhanjian: FrankHB, 抓住XP用户
+20:06:lh_mouse: StarBrilliant, unsigned 大法好
+20:06:StarBrilliant: lhanjian: 但是好像 Windows 的 winsock.h 里还用 short
+20:06:lhanjian: 哦，u_short是port
+20:06:PloughPhone quit:Ping timeout: 246 seconds
+20:07:FrankHB: 。。。2012r2
+20:07:varna: 现在你用XtoYZ系列也是uint16_t和uint32_t了
+20:07:varna: struct sockaddr以下的部分别在意u_short就对
+20:07:lh_mouse: Socket(const char *addr, unsigned port); // if the value of parameter `port` cant be represented in uint16_t, the behavior is undefined.
+20:08:lhanjian: socket的这些莫名其妙的类型真疼
+20:08:varna: 有补全无所谓了
+20:09:lh_mouse: 把疼的东西塞到底层  写一遍 以后不要再看 即可
+20:09:* lh_mouse 鸵鸟
+20:09:varna: 明明是钻耗洞
+20:09:lhanjian: 有补全无所谓++
+20:10:lh_mouse: nano 没补全
+20:10:lhanjian: 所谓”脚本语言写些小东西比C快“估计就是这种玩意儿造成的
+20:10:* lh_mouse 要命
+20:10:lh_mouse: 呃
+20:10:* lh_mouse 姚明
+20:10:varna: n++那个编辑控件其实有补全接口的，但是n++默认居然没实现的样子
+20:10:varna: 脚本？小东西？2333
+20:11:varna: 以前百度知道那些数据我最后还不是手操了一个kmp, 用15%+的错误率换了几天时间
+20:11:lhanjian: 你看我打了引号，就知道这是引用别人的话了
+20:11:varna: 知道
+20:11:varna: 而且你引号反了
+20:11:varna: 当时实在没心思搞dom树了，太慢
+20:12:lhanjian: 我这里不太容易区分引号前后……
+20:12:varna: 你先校正一个
+20:12:lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/main/tcp_server_base.cpp#L13
+20:12:lhanjian: ”“”“
+20:13:varna: 反的
+20:13:lhanjian: “”
+20:13:varna: 对了
+20:13:lhanjian: 这样该是对的
+20:14:varna: 现在还有没有人感兴趣数据挖掘问题了，前几天有人（三次元）提过一个给我
+20:14:varna: sismvg,
+20:14:lhanjian: 要到14号字，才能区分“”“”
+20:15:lh_mouse: ⑨号  SimSun 无压力
+20:15:StarBrilliant: 华文 黑体-简 无压力
+20:15:varna: simsun 9无压力
+20:15:StarBrilliant: 用SimSun的够了
+20:15:varna: 我撸得这么狠还在用小尺寸字，lhj你看看你
+20:23:clcn_logbot joined channel
+20:23:varna: sismvg: 有个数据挖掘方面的问题，感兴趣不
+20:23:sismvg: 什么问题
+20:23:sismvg: 我现在在搞一个调查表
+20:24:lh_mouse: 劝退不退的撃沈处理
+20:24:sismvg: 每个人对各个年龄段的判别
+20:24:lh_mouse: xsk
+20:25:lh_mouse: clcn_logbot, 喵
+20:26:varna: sismvg: 现在有网站用户的列表，以及网站中这些用户阅读过的新闻数据（网页），同时提供用户的阅读记录（其记录内容指出了“用户A阅读过新闻X”）；现在考虑从当前的新闻列表中，为每个用户推荐一条新闻，试着提出一个方法
+20:27:varna: .
+20:27:sismvg: 感觉不是很难啊。。新闻有没有类似tag的东西
+20:27:lh_mouse: 救护车失事翻下高速……
+20:28:varna: sismvg: 没有
+20:28:varna: ...
+20:29:varna: 有tag就不是问题了
+20:29:sismvg: 也就是说只要能精确给新闻分类就好了。
+20:29:varna: 没有正解，问我的那哥们也是在试着做一个方案出来
+20:29:varna: 他直接粗暴无语义地上协同过滤，然后就跪了
+20:31:varna: 而我的分类方案打算上TF-IDF
+20:31:varna: 其中语料库用新闻文本的全体
+20:31:sismvg: 先让我把术语了解下
+20:31:sismvg: 新闻的来源都是同一个网站？
+20:31:varna: 这样可以省下一部分主体提取/网页去噪/主题挖掘的麻烦，只需要分词，但精度不好
+20:32:sismvg: 我先看看各个新闻网站的异同性
+20:33:varna: 一个折中的方案是在TF-IDF的计算过程中引入通用本体里词语相似程度（例如考虑本体内近义词关系的LCA）的度量
+20:33:sismvg: 一般来说新闻的标题就足够用了
+20:33:varna: 但是速度感人
+20:33:varna: 不过反正只要考虑语义精度都是速度感人
+20:33:sismvg: 上次看到你发的一个wordnet
+20:34:sismvg: 兴许能用
+20:34:varna: 国内有可用的中文本体，大约17k词
+20:34:varna: 关系可能在1.5m上下
+20:34:sismvg: 跪
+20:34:varna: 总关系数
+20:34:varna: 不过毕竟这种东西肯定会速度感人的
+20:36:sismvg: 能不能对发新闻的人做做手脚呢
+20:36:varna: 别考虑这个，先抽象地正面肛一下
+20:37:Plough: 我操 Lv49喂满的哈酱被一下打成一血
+20:37:Plough: 你TM在逗我？
+20:37:varna: 现在数据挖掘的竞赛也有一些，大多都是给数据集和需求，你提供方法和demo
+20:37:varna: Plough: T有利？
+20:37:sismvg: 不知如何下手
+20:37:Plough: 没看
+20:37:Plough: T有利也不至于啊
+20:38:varna: 至于
+20:38:varna: 比如那个攻击正好没过你血量，不修正……
+20:38:Plough: 2-3的敌人反潜哪有那么强……
+20:38:varna: 脸
+20:39:Plough: 还是个最末位的驱逐
+20:39:varna: 那个驱逐最脸
+20:39:lhanjian: cleamoon, 绅士不是说之前在用P9的IDE（？）的么
+20:39:varna: 因为他攻击力低……
+20:40:Plough: ……
+20:40:Plough: 反正我直接一桶扔过去了
+20:40:Plough: 懒得等40分钟
+20:40:varna: 伤害只要单看血量不够击沉就不修正，这个没办法
+20:41:varna: 现在我已经四个潜艇轮着肝了
+20:41:varna: 两个决战兵器还不如一个三十级的168
+20:41:varna: 后者修起来只要十六分钟多点
+20:44:lhanjian: 当初要是nginx用C++开发……
+20:44:varna: 俄国人会跟你讲道理么
+20:45:lhanjian: 啥意思……
+20:45:varna: 他们用c++也会写成现在这样子的
+20:45:lhanjian: (´ﾟДﾟ`)
+20:45:varna: 卡拉什尼科夫赐我力量吧！
+20:48:varna: 今天蒸发的的弹药估计有八千
+20:50:lh_cat quit:Ping timeout: 250 seconds
+20:51:lh_cat joined channel
+20:53:lhanjian: “如果说node.js有哪点比nginx一定更快的话，那一定是因为前端更熟悉js”
+20:54:varna: 别理他了
+20:54:varna: no bench no bb
+20:54:wlemuel quit:Ping timeout: 255 seconds
+20:55:wlemuel joined channel
+20:55:lh_mouse: C++ 容易写出渣渣
+20:55:varna: 最后一级十三场
+20:56:lhanjian: 到底为什么需要C++……
+20:57:lh_mouse: 可复用性比 C 好
+20:57:lh_mouse: 而且 C 容易写错
+20:57:varna: 附议
+20:57:lhanjian: C++给我一种一定得照着DesignPattern才能用的感觉
+20:58:varna: 反了
+20:58:varna: 写你该写的就行了，在意模式容易逗比
+20:58:* lh_mouse 乐于发明 design parrern
+20:58:lh_mouse: pattern *
+20:58:* varna 乐于玩小耗鼻头
+20:59:lh_mouse: 玩我鼻子咬你哦
+20:59:varna: 鼻子多好玩，又小又软
+20:59:lh_mouse: poseidon 里用到的设计模式么 数数看
+20:59:lh_mouse: 抽象工厂模式  单例模式  观察者模式
+20:59:lh_mouse: 代理模式
+20:59:varna: 不是深刻的过敏性鼻炎患者很难体会鼻子的好玩
+21:00:lh_mouse: epoll 那个地方是个抽象工厂
+21:01:Plough: 话说我怎么找不到irssi的notify.pl了……
+21:01:sismvg: 鼻炎容易水多
+21:01:lh_mouse: virtual shared_ptr<SessionBase> onClientConnect(unique_ptr<Socket>);
+21:01:sismvg: 铀好贵
+21:01:varna: “啊，我的意思是妹之空的情况下飞机除了多点儿索敌剩下的比不过32”
+21:02:varna: ^ 暴露
+21:02:Plough: 在google code上找到了……
+21:02:sismvg: 明天walking dead第五季就开播了
+21:02:varna: 漫画到哪了？
+21:03:sismvg: 不知道
+21:03:sismvg: 我看的是TV
+21:03:varna: 感觉那个漫画还是挺好的，电视剧觉得太长就没看
+21:03:sismvg: 每天2集，看个3周就没了
+21:04:sismvg: 怎么到处都是老太婆的本子呢
+21:04:varna: 我有口雪级本子
+21:04:varna: 上坂瑾哦
+21:05:sismvg: biantai 
+21:05:sismvg: hentai
+21:05:varna: 哈哈哈一发大破，轮换不过来了……
+21:06:sismvg: 百度网盘的断链率又高了
+21:06:varna: 叫你不用客户端
+21:06:sismvg: 开了客户端就不用开FF了
+21:07:sismvg: 直接内存不足，然后卡死
+21:07:lh_mouse: 逗比度狗网盘
+21:07:varna: 国内这些大佬不都喜欢把用户当孙子艹么……
+21:08:sismvg: http://www.ithome.com/html/android/107403.htm
+21:08:sismvg: 找个好的程序员是好事
+21:08:sismvg: 真的
+21:08:sismvg: 直接把x*3写道网页内是故意的吗。。
+21:08:varna: 噗
+21:11:Plough: 老 罗 黑 欢 喜 锤 子 厨 激 怒
+21:11:sismvg: 现在免费软件的规律
+21:12:sismvg: 前几年做的好，吸引粘性用户
+21:12:varna: 今天远征哪来那么多桶……
+21:12:sismvg: 后几年疯狂投放广告
+21:12:Plough: 求测试notify.pl
+21:12:varna: 干什么的？
+21:12:Plough: irssi的
+21:12:sismvg: 你看QQ大前年更本没广告，现在左右边侧栏都是。。
+21:13:lh_mouse: SVIP 无压
+21:13:varna: Plough: 我知道，但是从来没管过那个干嘛
+21:13:Plough: 我想确认下能不能正确产生提醒
+21:13:* lh_mouse 还在用 5.x
+21:13:Plough: 似乎是用libnotify提醒私聊
+21:13:Plough: ……给chanserv发了一条过去，没看到提醒
+21:13:Plough: 噗，看到了
+21:13:Plough: 没load成功
+21:17:varna: Plough: 肛
+21:20:Plough: 漂亮
+21:20:sismvg quit:Quit: sleep
+21:20:Plough: 现在cpan不管装啥都是一吨NOT OK
+21:21:wlemuel quit:Ping timeout: 250 seconds
+21:21:varna: Plough: ABI无关的呢
+21:21:varna: 22:17 <@varna> Plough: 肛
+21:21:varna: 22:20 <@Plough> 漂亮
+21:21:varna: ^ 喔喔
+21:22:Plough: varna: 不清楚，HTML::Entities和ABI有关吗
+21:22:Plough: ……懂了
+21:22:wlemuel joined channel
+21:22:Plough: 没装make
+21:22:varna: 噗
+21:22:varna: Arch没make?
+21:23:Plough: varna: 默认不自带……
+21:23:varna: base-devel里也该有吧
+21:23:varna: 难道你是只装base派
+21:23:Plough: 没装base-devel
+21:23:varna: 果然
+21:23:Plough: 按照官方wiki走下来就是只装base……
+21:23:varna: @肛旗酱细腻的小心思
+21:24:varna: 战神出马，一个顶俩！
+21:24:Plough: 弥生酱又开始搬桶了
+21:24:Plough: 现在有225桶
+21:26:varna: 13x桶
+21:26:varna: 下周开始南西
+21:26:varna: 顺便把伊势和日向练到至少可以带路的等级
+21:27:Plough: 啊，进Boss了
+21:27:varna: 卧槽
+21:27:varna: 刚修好的战神一场大破是闹什么
+21:28:Plough: 要不怎么叫战神……
+21:28:varna: 小耗在试验MemoServ啊
+21:28:varna: 噗，打赢了还给我那珂酱
+21:28:varna: 你们这些欧洲的亚洲的，看看真正的黑鬼吧
+21:29:varna: 一天不出那珂，我浑身难受
+21:29:Plough: notify.pl跑起来了
+21:30:* Plough 今天刚拆了一只那珂酱
+21:33:varna: 最后这几千经验打得好艰难
+21:33:varna: 晚上谁赌电探？
+21:33:Plough: 我先省点钢
+21:33:Plough: 现在油上去了钢还是缺
+21:34:varna: 我肛你
+21:34:varna: 噗，第二个那珂酱
+21:38:hoxily quit:Quit: Leaving
+21:38:wlemuel quit:Ping timeout: 272 seconds
+21:38:wlemuel joined channel
+21:39:varna: 还有两场……
+21:40:abc-phone joined channel
+21:43:varna: 三连装那珂酱……
+21:43:Plough: ……
+21:43:varna: Such a Type-A ministory
+21:43:Plough: @五连装酸素那珂酱
+21:43:Plough quit:Quit: reopen in urxvt
+21:45:Plough joined channel
+21:45:varna: 终于lv80
+21:46:Plough: 隼鹰？
+21:46:varna: +
+21:46:varna: 扶桑也80了
+21:46:Plough: Orz
+21:46:varna: 肚子81，火鸡姐66，利根53
+21:46:xxxxxxxx: 挖掘机技术哪家强 日日夜夜逗舰娘
+21:46:Plough: 我家唯一上Lv80的只有两只大 战 舰
+21:47:varna: 夜夜怎么又出来了
+21:47:varna: 烈风！电探！火箭炮！
+21:48:Plough: 话说娇喘会不会实装震电啊
+21:48:varna: 不会了
+21:48:Plough: 改绝版了没改的给我玩玩也好啊
+21:48:varna: 忘了震电的事情吧
+21:48:hoxily joined channel
+21:49:varna: 估计我们这辈子不会再见到喷气式飞机了
+21:49:Plough: 真让人绝望……
+21:49:varna: 今天净烧6k弹药，算上回复和远征可能不会超过九千
+21:49:Plough: 哈酱已改
+21:51:varna: 现在的前两页
+21:52:varna: 第一页：电酱（118）北上（99）大傻（98）大哔（97）春奈（97）雾岛（89）加贺（87）赤城（85）飞鹰（83）肚子（81）
+21:52:lhanjian quit:Quit: 风光冉冉东西陌
+21:53:varna: 第二页：羽黑（80）隼鹰（80）扶桑（80）飞龙（79）苍龙（78）比叡（76）POI（73）七十铃（ry）I-168（70）神通（66）
+21:53:varna: 第三页末尾是五十三级的战神
+21:54:Plough: 第一页：雾岛82 大傻80 北上70 利根70 大凤67 棒各65 苦瓜63 神通62 川内61 大井60
+21:54:condy: 被 二次元美少女BOT 刷屏了..
+21:55:varna: 以前早苗总ban我，后来怎么中出都不ban了
+21:55:Plough: 第二页：山城60 RJ59 卡嘎58 飞鹰58 伊姆亚58 二傻57 哈酱50 天津风49 雪风47 飞龙47
+21:55:Plough: 另：提督92
+21:55:xxxxxxxx: 21:55:17 varna>以前早苗总ban我，后来怎么中出都不ban了
+21:55:varna: 经验，以后去3-2a尽量带个二式舰侦吧
+21:56:varna: 苍龙和平面栖战姬都送
+21:56:Plough: 那我先把平面栖姬弄出来？
+21:56:varna: 成
+21:57:varna: xxxxxxxx: 后来确实不ban了
+21:57:xxxxxxxx: 已经没感觉了
+21:57:varna: 噗噗
+21:57:varna: 该喷水还是喷水的
+21:58:xxxxxxxx: 只是毫无感情的喷水罢了
+21:58:varna: uccu
+21:59:varna: 哦操
+21:59:varna: 造船也是那珂酱……
+21:59:Plough: ……
+21:59:Plough: 快拆
+21:59:varna: 没救了
+22:00:wlemuel quit:Ping timeout: 258 seconds
+22:01:varna: 赌四发电探
+22:01:wlemuel joined channel
+22:02:Plough: 然后32*2+33*2
+22:02:varna: 21，12cm单装炮，战姬专用护甲*2……
+22:03:varna: 我该说什么好
+22:03:Plough: ……
+22:03:varna: 大傻御苦劳，给我回去反省……
+22:03:Plough: 今天脸黑，诸事不宜
+22:04:varna: 赌电探出两个平面栖姬装备是闹什么
+22:05:condy: http://www.ithome.com/html/it/66015.htm 
+22:05:condy: 真装了就逼B了..
+22:06:varna: 他们漏了yes
+22:06:xxxxxxxx: yes2333
+22:06:varna: 想想yes | cp -i src dst就觉得带感
+22:08:varna: 我明白了
+22:08:varna: 就因为我看了这贴 http://tieba.baidu.com/p/3347437323
+22:08:xxxxxxxx: 胸兆?
+22:09:condy quit:Quit: leaving
+22:09:Plough: 凶兆233333
+22:09:wlemuel quit:Ping timeout: 260 seconds
+22:09:Plough: 今天小心飞去南极洲的意思么
+22:09:varna: 今天快结束了，明天继续攒桶
+22:10:wlemuel joined channel
+22:12:varna: http://tieba.baidu.com/p/3347466414 # ...
+22:12:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=087ca4eac8ef76093c0b99971edca301/2203ac24b899a9014880fb411e950a7b0308f5c7.jpg
+22:12:varna: ^ I-450 Kai Juni
+22:16:lhanjian joined channel
+22:20:lhanjian: 搞不懂为什么libflashplayer总能把我的output Devices 变成dummyoutput
+22:24:PloughPhone joined channel
+22:25:Plough quit:Quit: 睡觉
+22:28:varna: 拼了
+22:28:varna: 三资材大根
+22:29:varna: 全灭
+22:29:varna: 再来五资材
+22:29:varna: 不赌了
+22:29:varna: 一发91一发出货
+22:31:varna: 走了
+22:31:varna: 诸君夜间愉快、武运长久
+22:31:varna quit:Quit: leaving
+22:32:wlemuel quit:Ping timeout: 272 seconds
+22:32:wlemuel joined channel
+22:47:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:02:PloughPhone quit:Ping timeout: 260 seconds
+23:04:wlemuel quit:Ping timeout: 260 seconds
+23:05:wlemuel joined channel
+23:05:PloughPhone joined channel
+23:08:lh_mouse: 0.0
+23:09:lhanjian: O.O
+23:12:lh_cat: 0.0
+23:15:PloughPhone quit:Ping timeout: 258 seconds
+23:20:lhanjian quit:Ping timeout: 245 seconds
+23:21:wlemuel quit:Ping timeout: 246 seconds
+23:22:wlemuel joined channel
+23:51:PloughPhone joined channel

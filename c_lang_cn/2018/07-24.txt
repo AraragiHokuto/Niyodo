@@ -1,0 +1,155 @@
+00:21 iyzsong quit:Ping timeout: 248 seconds
+00:49 cleamoon__ joined channel
+06:51 zhangoke joined channel
+07:11 zhangoke quit:Quit: zhangoke
+09:41 lh_mouse joined channel
+10:16 lh_ideapad joined channel
+11:25 whocares_2_ joined channel
+11:27 whocares_2 quit:Ping timeout: 260 seconds
+11:52 lh_ideapad: geordi, -c union { string s; int n; };
+11:52 geordi: error: namespace-scope anonymous aggregates must be static
+11:52 lh_ideapad: geordi, -c struct foo { union { string s; int n; }; };
+11:52 geordi: Success
+11:52 lh_ideapad: geordi, --clang -c struct foo { union { string s; int n; }; };
+11:52 geordi: Success
+11:52 lh_ideapad: geordi, --clang -c struct foo { union { string s; int n; }; }; foo f;
+11:52 geordi: error: call to implicitly-deleted default constructor of 'foo'
+11:53 lh_ideapad: geordi, --clang -c struct foo { union { string s; int n; }; foo(){ } }; foo f;
+11:53 geordi: error: attempt to use a deleted function
+11:53 lh_ideapad: geordi, --clang -c struct foo { union { string s; int n; }; foo(){ } ~foo(){ } }; foo f;
+11:53 geordi: Success
+11:53 lh_ideapad: geordi,  -c struct foo { union { string s; int n; }; foo(){ } ~foo(){ } }; foo f;
+11:53 geordi: Success
+12:02 lh_ideapad: geordi, << TYPE<char_traits<char>::pos_type>
+12:02 geordi: fpos<__mbstate_t>
+12:02 lh_ideapad: geordi, << TYPE<char_traits<char>::off_type>
+12:03 geordi: long int
+12:22 lh_ideapad: geordi, -c struct { string s; int n; } foo;
+12:22 geordi: Success
+12:22 lh_ideapad: geordi, -c struct { string s; int n; }\;
+12:22 geordi: error: ISO C++ prohibits anonymous structs
+12:22 lh_ideapad: geordi, -c struct { string s; int n; };
+12:22 geordi: Same error.
+12:22 lh_ideapad: geordi, -c union { string s; int n; };
+12:22 geordi: error: namespace-scope anonymous aggregates must be static
+12:22 lh_ideapad: geordi, -c --clang  { string s; int n; };
+12:22 geordi: Success
+12:22 lh_ideapad: geordi, -c --clang struct { string s; int n; };
+12:22 geordi: error: anonymous structs are a GNU extension
+12:22 lh_ideapad: geordi, -c --clang __extension__ struct { string s; int n; };
+12:22 geordi: error: anonymous structs and classes must be class members
+12:22 lh_ideapad: geordi, -c --clang __extension__ union { string s; int n; };
+12:22 geordi: error: anonymous unions at namespace or global scope must be declared 'static' (fix known)
+12:22 lh_ideapad: geordi, fix and show 
+12:22 geordi: -c --clang __extension__ static union { string s; int n; };
+12:28 lh_mouse quit:Read error: Connection reset by peer
+12:28 lh_mouse joined channel
+12:48 dantznc joined channel
+12:48 dantmnf quit:Read error: Connection reset by peer
+12:48 dantznc is now known as dantmnf
+13:16 xhe joined channel
+13:28 xhe quit:Quit: leaving
+13:30 xhe joined channel
+14:00 lhanjian: lh_ideapad: 小耗不在Linux上用QQ的？
+14:01 lh_mouse: lhanjian, linux 上根本没有能用的 qq  。
+14:01 lh_mouse: 还不如用手机。
+14:02 lhanjian: lh_mouse: 可以啊，我一直在linux上用qq
+14:02 lh_mouse: 是官方的吗？
+14:02 lhanjian: QQ8.9.6
+14:02 lhanjian: 对啊
+14:02 lh_mouse: 窝看看。
+14:02 lhanjian: 你可以看看arch的aur
+14:02 lhanjian: 那个可以用的
+14:03 lhanjian: https://aur.archlinux.org/packages/deepin-qq-im/
+14:03 lhanjian: 登陆的时候鼠标多点几次密码输入框，就能输入进去了
+14:03 lh_ideapad: AUR 又不是官方的。
+14:03 lhanjian: 当然是wine啦
+14:03 lh_ideapad: 不考虑非官方版本。
+14:03 lhanjian: 你直接wine轻聊版/TIM也有机会可以用的
+14:04 lh_ideapad: 我台式开着，所以可以挂电脑 QQ  。
+14:04 lhanjian: 哦
+14:04 lhanjian: 那就别折腾Linux QQ了
+14:04 lhanjian: 模范
+14:04 lh_ideapad: 用 TeamViewer 连回去。
+14:04 lhanjian: 麻烦
+14:04 lh_ideapad: lhanjian, 揉。
+14:04 lhanjian: lh_ideapad: 捏耗鼻。（那张R18的图我本来以为我已经DELETE
+14:05 lh_ideapad: 频道里不准开车。
+14:05 lh_ideapad: 频道里不准开车。
+14:05 lh_ideapad: 频道里不准开车。
+14:05 lhanjian: 哦
+14:05 lhanjian: 那不开了
+14:05 lhanjian: 我弄了个#c_lang_r18
+14:05 lh_ideapad: 自重。
+14:05 lhanjian: 有时候，我会偷懒把IRCCLOUD当图床用
+14:06 lhanjian quit:
+14:06 lhanjian joined channel
+14:08 meowray: 我根本不用qq
+14:08 * lh_ideapad slaps meowray around a bit with a large trout
+14:08 lh_ideapad: EAT MY FISH !
+14:08 lhanjian: meowray: 喵睿
+14:09 meowray: 週日uber eats確實叫了魚
+14:09 lhanjian: uber eats还行
+14:11 meowray: lh_ideapad: 來修一下gcc -fsanitize=undefined https://twitter.com/HaskRay/status/1021168146902757376
+14:12 meowray: code at https://gist.github.com/MaskRay/f18c6eacf7560c07c26745b2c4bfa7bb#file-evening_of_the_living_dead-cc
+14:24 lh_ideapad: Aji.
+14:27 meowray: 😿
+14:32 lhanjian: meowray: 喵流眼泪怎么发的
+14:36 meowray: rofimoji Crying Cat Face
+14:37 meowray: unicode裏🐈是僅次於🙎的生物
+14:37 lhanjian: ::heart_eyes_cat:
+14:38 lhanjian: ::heart_eyes_cat:
+14:42 xhe quit:Quit: leaving
+14:44 xhe joined channel
+14:52 lhanjian: ::cat:
+14:57 lh_ideapad: geordi, << chrono::seconds(1).count()
+14:57 geordi: 1
+14:58 lh_ideapad: geordi, << foo(chrono::seconds(1)); void foo(chrono::milliseconds ms){ cout <<ms.count(); }
+14:58 geordi: error: no match for 'operator<<' in 'cout << foo(chrono::duration<long int, ratio<1, 1000> >(chrono::duration<long int>(1)))' (operand types are 'ostream' {aka 'ostream'} and 'void')
+14:58 lh_ideapad: geordi, << foo(chrono::seconds(1)); long foo(chrono::milliseconds ms){ return ms.count(); }
+14:58 geordi: 1000
+14:58 meowray: 一起來做codeforces吧
+15:00 meowray: julia好不好。zip好不好
+15:08 meowray: lhanjian: http://lists.llvm.org/pipermail/llvm-dev/2018-July/124734.html
+15:09 lhanjian: meowray: Roger
+15:17 meowray: zig說錯了
+15:20 meowray: https://andrewkelley.me/post/full-time-zig.html
+15:24 meowray: https://github.com/ziglang/zig Wanted: Windows Developers
+16:02 cleamoon__: M犇竟然还在做cf
+16:04 lhanjian: cleamoon__: 绅士来了
+16:06 cleamoon__: lhanjian: 爆
+16:07 cleamoon__: 我QQ帐号都被锁了
+16:09 lhanjian: cleamoon__: 这怎么办，绅士有没有tg
+16:10 cleamoon__: lhanjian: tg不是随时都能有吗
+16:10 lhanjian: cleamoon__: 也要手机号的吧
+16:11 cleamoon__: lhanjian: tg 还要手机号？
+16:11 lhanjian: cleamoon__: 对啊特了感染
+16:11 lhanjian: telegram是依赖手机的
+16:15 cleamoon__: 蛋疼
+16:15 cleamoon__: 嘛，手机还是有的，我记得QQ解封要身份证号什么的，懒得弄了
+16:18 cleamoon__: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0g/2h/kw_139413.jpg@596w_1l.jpg
+16:19 lhanjian: cleamoon__: QQ不用也罢
+16:20 lhanjian: cleamoon__: 用微信，能跟墙内的互通就好
+16:20 lhanjian: 不然所有IM到了墙内全都完蛋就没意思了
+16:21 cleamoon__: lhanjian: 微信也给我封了...... 告诉我帐号被盗了，需要一个注册了银行卡的好友的手机号.......
+16:21 lhanjian: cleamoon__: 让我来吧
+16:22 cleamoon__: lhanjian: 咱们没加过好友呀......
+16:22 cleamoon__: 要不试试？
+16:22 lhanjian: 试试看
+17:41 IronChick joined channel
+17:42 IronChick left channel:"WeeChat 1.4"
+18:55 IronChick joined channel
+19:52 zhangoke joined channel
+19:57 lh_ideapad quit:Remote host closed the connection
+19:57 lh_ideapad joined channel
+19:57 lh_ideapad quit:Remote host closed the connection
+19:58 lh_ideapad joined channel
+20:01 lh_mouse quit:Read error: Connection reset by peer
+21:13 zhangoke quit:Quit: zhangoke
+21:15 lhanjian: 打不过打不过
+21:23 lh_ideapad quit:Remote host closed the connection
+22:36 lh_mouse joined channel
+23:03 lh_ideapad joined channel
+23:13 lh_ideapad quit:Remote host closed the connection
+23:15 NebulaMoe[m] left channel:"Kicked by @appservice-irc:matrix.org  : removing from IRC because user idle on matrix for 30+ days"
+23:56 xhe quit:Quit: leaving

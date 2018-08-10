@@ -7,8 +7,6 @@ import re
 with open("config.json") as f:
     config = json.load(f)
 
-cnx = mysql.connector.Connect(pool_name = "niyodo", **config["database"])
-
 def connect():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM);
     sock.settimeout(300)
@@ -56,10 +54,12 @@ def on_recv(sock, message):
 
     print(sender, msgtype, msgcontent)
     
+    cnx = mysql.connector.Connect(pool_name = "niyodo", **config["database"])
     cursor = cnx.cursor()
     cursor.execute("INSERT INTO message (type, sender, datetime, content) VALUES (%s, %s, %s, %s)",
                    (msgtype, sender, now, msgcontent))
     cnx.commit()
+    cnx.close()
 
 if __name__ == "__main__":
     while True:

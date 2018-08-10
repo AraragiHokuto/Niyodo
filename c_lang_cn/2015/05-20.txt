@@ -1,0 +1,522 @@
+00:08 cleamoon_ quit:Remote host closed the connection
+00:08 cleamoon joined channel
+00:12 sismvg joined channel
+00:13 izmntuk joined channel
+00:13 sismvg: 墙内有人上的去wiki吗？
+00:15 sismvg quit:Client Quit
+00:27 izmntuk quit:Quit: leaving
+00:28 cleamoon quit:Ping timeout: 240 seconds
+00:30 cleamoon joined channel
+00:32 hoxily quit:Ping timeout: 255 seconds
+00:33 lh_mouse: http://news.sina.com.cn/c/2015-05-19/083431849387.shtml
+00:35 cleamoon__: 中文wiki不是又被墙了吗
+00:38 cleamoon__: 中国邮电大学？
+00:38 hoxily joined channel
+00:38 cleamoon__: 哦，正经的那个是北京邮电吧...
+00:39 cleamoon__: 北京对外贸易学院，有同学在那里...
+00:47 cleamoon quit:Ping timeout: 256 seconds
+00:49 cleamoon joined channel
+00:49 lolisa joined channel
+00:55 WaterA quit:Quit: Lost terminal
+00:55 * lh_mouse slaps lolisa around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+00:56 * lolisa 帅气的躲过了
+00:57 lh_mouse: 又是个的地得不分的
+00:58 lolisa: 手滑。。。
+00:58 lolisa: QAQ
+01:04 lh_cat quit:Quit: Connection closed for inactivity
+01:24 cleamoon__: 的地得用质量不好的拼音输入法打太麻烦了
+01:30 cleamoon__ quit:Quit: Leaving
+01:33 lh_mouse: r f tj
+01:34 lh_mouse quit:Read error: Connection reset by peer
+02:11 condy quit:Ping timeout: 265 seconds
+02:12 iyzsong quit:Ping timeout: 272 seconds
+02:12 cleamoon quit:Ping timeout: 256 seconds
+02:13 condy joined channel
+02:13 cleamoon joined channel
+02:13 iyzsong joined channel
+02:48 izmntuk joined channel
+03:02 xxxxxxxxx joined channel
+03:02 xxxxxxxx quit:Ping timeout: 256 seconds
+03:03 lolisa quit:Ping timeout: 245 seconds
+03:06 lolisa joined channel
+03:19 cleamoon quit:Ping timeout: 250 seconds
+03:20 cleamoon joined channel
+03:28 izmntuk quit:Ping timeout: 244 seconds
+04:00 lolisa quit:Quit: meow
+04:57 xxxxxxxxx quit:Quit: Leaving...
+05:18 cleamoon quit:Ping timeout: 252 seconds
+05:20 cleamoon joined channel
+05:35 boosure joined channel
+07:35 WaterA joined channel
+07:50 cleamoon quit:Ping timeout: 240 seconds
+07:51 cleamoon joined channel
+07:53 WaterA quit:Ping timeout: 264 seconds
+07:54 WaterA joined channel
+08:33 OO_after quit:Ping timeout: 246 seconds
+08:55 slowcoach joined channel
+08:58 cleamoon quit:Ping timeout: 256 seconds
+08:59 cleamoon joined channel
+09:02 slowcoach quit:Ping timeout: 240 seconds
+09:05 WaterA quit:Quit: Lost terminal
+09:06 lh_mouse joined channel
+09:15 wlemuel joined channel
+09:26 Xilzzerts joined channel
+09:34 whatofor joined channel
+09:39 wlemuel quit:Ping timeout: 264 seconds
+09:49 lh_cat joined channel
+09:50 boosure quit:Quit: Get your hand off of it
+10:41 lh_mouse: geordi, << TYPE(::recv)
+10:41 geordi: error: '::recv' has not been declared
+10:41 lh_mouse: geordi, << TYPE(::recv); #include <socket.h>
+10:41 geordi: fatal error: socket.h: No such file or directory
+10:41 lh_mouse: geordi, << TYPE(::recv); #include <sys/socket.h>
+10:41 geordi: lvalue long (int, void*, unsigned long, int)
+10:43 hoxily_ joined channel
+10:46 hoxily quit:Ping timeout: 244 seconds
+11:23 izmntuk joined channel
+11:57 whatofor_1 joined channel
+11:59 whatofor|2 joined channel
+12:00 whatofor quit:Ping timeout: 250 seconds
+12:03 whatofor_1 quit:Ping timeout: 264 seconds
+12:04 lh_cat quit:Quit: Connection closed for inactivity
+12:08 izmntuk quit:Ping timeout: 244 seconds
+12:11 izmntuk joined channel
+12:13 WaterA joined channel
+12:16 xxxxxxxx joined channel
+12:36 whatofor joined channel
+12:38 lhanjian: name.com是个巨坑
+12:39 lhanjian: SSL域名认证死活过不了
+12:39 * hysw 考虑去读个烟酒僧或博士
+12:43 sismvg joined channel
+12:46 hysw: sismvg: 智商
+12:46 * sismvg 的智商被lockl额
+12:47 * sismvg 写的多路复用定时器太烂了
+12:48 hysw: sismvg: 大概十几行可以写完的玩意？
+12:49 sismvg: 不不不。。
+12:50 sismvg: 优先级队列用map之流太慢太慢
+12:50 hysw: sismvg: 堆什么的不是几行就写完的么？
+12:50 hysw: STL明显有现成的
+12:51 sismvg: 慢，你要照顾每个超时时间还有防止由于大量定时器在窗口时间导致线程卡住。。
+12:52 hysw: ?
+12:52 hysw: 超时？
+12:52 hysw: 卡？
+12:53 sismvg: 定时器启动绝对时间A,窗口B,当前绝对时间C,若|C-A|<=B则启动该定时器
+12:54 hysw: sismvg: 这又不怎么难...
+12:55 sismvg: 但是会锁住其他在插入任务的线程很久
+12:55 izmntuk quit:Quit: leaving
+12:55 hysw: 什么意思？
+12:56 sismvg: 某个线程在插入一个新任务,然后定时器的线程在调用callback
+12:56 sismvg: 两个线程抢占锁
+12:57 wlemuel joined channel
+12:57 hysw: 调用callback之前把锁给还了
+12:58 sismvg: 然后你就要锁同一个锁很多次...
+12:58 iyzsong: 锁啥.. 这个callback也新建个线程去跑算了..
+12:58 sismvg: ...我有几千个timer..
+12:59 sismvg: 我去改改boost asio好了》，
+12:59 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150513174244]
+13:00 hysw: iyzsong: 把智商交出来...
+13:01 * iyzsong 没有智商 >.<
+13:01 hysw: iyzsong: 准备明年申请烟酒僧，然后智商完全不够
+13:01 iyzsong: 去吧～
+13:02 hysw: 才上两年大学...
+13:02 iyzsong: 战斗学霸云!
+13:02 xxxxxxxx: hysw: 去抓药娘四榨取智商就好
+13:02 hysw: xxxxxxxx: -_-
+13:03 hysw: iyzsong: 木有妹纸...
+13:03 hysw: iyzsong: 木有实习工作...
+13:03 iyzsong: 谁有?
+13:04 iyzsong: |o^w^o|
+13:04 xxxxxxxx: 肉牛有妹子了然后就不来了
+13:04 hysw: 某个数学系的学神
+13:06 hysw: xxxxxxxx: 没有妹纸是一件很见鬼的事...
+13:06 hysw: xxxxxxxx: 上课无聊死了...
+13:07 iyzsong: 课堂上你想干啥..
+13:08 xxxxxxxx: iyzsong: 明显他是想和妹子上课时干一些羞耻的事情
+13:09 hysw: iyzsong: 基本都在看新闻...
+13:11 hysw: xxxxxxxx: 明显不是...
+13:11 hysw: 需要一个逃课的正当理由...
+13:13 WaterA quit:Quit: Lost terminal
+13:14 hysw: 果然还是得找一堆奇葩课...
+13:27 hysw: iyzsong: 交出智商
+13:29 lhanjian: 虽然安全性有疑虑，不过还是直接淘宝买了个COMODO SSL……
+13:29 hysw: lhanjian: 交出智商
+13:29 lhanjian: hysw, 给*智伤*
+13:30 * lhanjian 成功地把智伤转移给了寒云
+13:31 hysw: 今天吃了某个学神的黑暗料理，表示智伤无效
+13:31 iyzsong: - -
+13:33 hysw: iyzsong: 暑假还是自己做饭比较便宜...
+13:38 * iyzsong 经常做成锅爆炸
+13:50 lhanjian: iyzsong, 燃爆术士iyzsong
+13:51 lh_mouse: 药元四还是不肯承认自己根本就不知道在想啥
+13:52 lh_mouse: 就一个破定时器有毛难写的
+13:52 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/singletons/timer_daemon.cpp#L92
+13:54 lh_mouse: 我觉得药元四有变成 T2 的风险
+13:56 hysw: lh_mouse: 这个可能性不小
+13:57 lh_not_bot: 居然用 map 实现优先队列  这是个连优先队列是啥都不明白的么
+13:57 lh_not_bot: map 本来就是缓存杀手
+13:57 lh_not_bot: 马丹  受不鸟这网路延迟了
+13:58 hysw: 如果没什么效率要求的话map也不是不行
+13:58 lh_cat joined channel
+13:59 lh_mouse quit:Disconnected by services
+14:16 lhanjian: 总算把SSL证书搞定了……
+14:22 izmntuk joined channel
+14:25 xxxxxxxx: iyzsong>经常做成锅爆炸 怎么做到的?
+14:26 lh_not_bot: 我一般面试都不会问很基础的问题   但是我发现我错了
+14:26 lh_not_bot: 很多人连基础的都答不上
+14:26 iyzsong: xxxxxxxx: 开了火，就不管了..
+14:26 xxxxxxxx: iyzsong: 你只是忘记时间了
+14:28 lhanjian: lh_not_bot, 耗子这种面试官是最怕的。耗子认为的基础，就算是我，也答不出几个……
+14:28 iyzsong: lhanjian: 求问
+14:28 lhanjian: 而且，耗子应该能知道，业界水平显然比本频道还要低好几个档次……
+14:29 iyzsong: @错了 lh_not_bot: 求面..
+14:29 lh_not_bot: iyzsong: 你在哪里啊
+14:29 iyzsong: 北京呀
+14:30 lh_not_bot: 0 0 我又不在北京
+14:30 iyzsong: 就在irc里说几道啊 = =
+14:30 xxxxxxxx: 业界水平显然比本频道还要低好几个档次 <- 真的假的....
+14:30 lh_not_bot: iyzsong: 比如怎么把两个 std::list 拼起来
+14:31 xxxxxxxx: 贴吧: 管理模式下可以删除被屏蔽贴啦~~
+14:31 lh_not_bot: 再或者  std::sort 能否对 list 排序   
+14:31 lhanjian: xxxxxxxx, 虽然老批评药元四，但是如果我当面试官，药元四这种在年轻的伙计中算很不错的了吧……
+14:31 xxxxxxxx: 我要做了这种更新我都不敢说.....
+14:32 iyzsong: for循环，逐个添加...
+14:35 izmntuk quit:Quit: leaving
+14:36 lh_not_bot: geordi: { list<int> l1{1,2,3}, l2{4,5,6}; l1.splice(l2); cout <<l1; } // iyzsong 
+14:36 geordi: error: no matching function for call to 'list<int>::splice(list<int>&)'
+14:37 lh_not_bot: geordi: { list<int> l1{1,2,3}, l2{4,5,6}; l1.splice(l1.end(), l2); cout <<l1; } // iyzsong 
+14:37 geordi: {1, 2, 3, 4, 5, 6}
+14:37 iyzsong: 才发现有splice这玩意 - -b
+14:37 xxxxxxxx: 看到帝球说"语法算个球" 在琢磨这句话什么意思
+14:37 lh_not_bot: iyzsong: 我就怕随便问这种东西把人问死
+14:40 iyzsong: 我能不能说'待我先google一下'..
+14:41 xxxxxxxx: http://tieba.baidu.com/p/3764813411 <- 这帖子有点吓人
+14:47 lh_not_bot: iyzsong: google 是啥
+14:48 lh_not_bot: 另外比如 map 或 set 里面对于 key 的要求是什么
+14:48 lh_not_bot: insert 返回什么（有两个重载）    vector resize 和 reserve 什么关系
+14:48 lh_not_bot: deque list vector 的区别和各自的优势  
+14:49 lh_not_bot: 对了上面那个有个坑是   map::erase 返回什么
+14:52 iyzsong: 基本都答不上(I hate C++ XD)
+14:52 * lh_mouse slaps iyzsong around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+14:52 Xilzzert joined channel
+14:57 Xilzzerts quit:Ping timeout: 276 seconds
+14:57 varna joined channel
+14:57 * lh_not_bot slaps varna around a bit with a large trout
+14:57 * varna poies
+14:57 Stevearzh quit:Ping timeout: 256 seconds
+14:58 lh_not_bot: 今天上午发现  poseidon 的计时器写 SB 了
+14:58 varna: 怎么回事
+14:58 iyzsong: insert返回的pair不忍直视啊..
+14:59 lh_not_bot: sleep 塞循环里面了
+14:59 varna: ...
+14:59 lh_not_bot: iyzsong: auto result = foo.insert(bar);
+14:59 varna: 我今天发现之前的语法里有一个右归约的错误
+14:59 lh_not_bot: iyzsong: 两个重载返回的不一样
+14:59 varna: 而且单纯通过%prec指定结合性还不能解决
+15:00 lh_not_bot: 我认为 js 本来可以是(could have been)不错的语言
+15:00 lh_not_bot: 那个闭包设计的不错  而且 . 操作符的定义比 C艹合理
+15:00 xxxxxxxx: 我现在手头有一张图纸 山城80级改不改?
+15:00 varna: 你还有谁
+15:01 lh_not_bot: 不过   就说 C艹 貌似像 js 那样定义 . 了意义也不大   因为没有 gc 只能返回裸指针
+15:01 lh_not_bot: s,貌似,,
+15:01 iyzsong: lh_not_bot: 这里不是只写了一种么[single element (1)]? => http://www.cplusplus.com/reference/map/map/insert/
+15:01 lh_not_bot: iyzsong: /msg nolyc cplusplus
+15:02 lh_not_bot: iyzsong: (2) 呢
+15:02 varna: xxxxxxxx: 你利根二改了么
+15:02 xxxxxxxx: 利根筑摩等级还没到 
+15:02 varna: 六七月份能拿几个图？
+15:03 xxxxxxxx: 能弄出一个就不错了...
+15:03 varna: 怎么可能
+15:03 varna: 3-5对你来说不该难打
+15:04 xxxxxxxx: 轻巡数量不足
+15:04 xxxxxxxx: 还得去多连连级
+15:04 xxxxxxxx: 练练
+15:04 varna: 3-5前哨可以1cl5dd
+15:05 xxxxxxxx: 斩杀呢....
+15:06 Stevearzh joined channel
+15:06 varna: 斩杀下路看情况
+15:06 varna: 我会倾向于1cav门神空劣头目制空
+15:07 xxxxxxxx: 上次不是说似乎要3轻巡么....
+15:07 varna: 1cav3cl2dd可以
+15:07 varna: 但这纯粹是因为反正已经不再确定带路了，所以增加生存力
+15:07 xxxxxxxx: 我就是搞不出3轻巡....
+15:07 varna: 那就用驱逐舰补上去
+15:08 varna: 轻巡等级也不用太高，六七十就行
+15:08 xxxxxxxx: 那还不高....
+15:08 varna: 不高
+15:09 varna: 川内二改都六十多了吧
+15:09 xxxxxxxx: 是啊 我只有神通和川内....
+15:09 varna: NKC呢
+15:10 xxxxxxxx: 36级海上护卫任务中...
+15:10 varna: ...
+15:10 varna: NKC还是挺厉害的，稍微练练吧……
+15:13 iyzsong: lh_not_bot: thx， 这API就不能保持一致么..
+15:17 xxxxxxxx: 要不我还是练长良吧 长良现在38级
+15:18 varna: 也行
+15:18 varna: 长良挺厉害的
+15:22 xxxxxxxx: 但是说回来我到底是改山城还是留着改筑摩或者利根?
+15:23 whocares_2 quit:Ping timeout: 252 seconds
+15:24 varna: 如果你下个月有图，那么看情况
+15:24 varna: 比如如果你有三个以上的航巡，那么利根级无所谓
+15:24 varna: 即使不二改，利根筑摩也是很好的重巡
+15:25 varna: 这样一张图换试41和瑞云12其实很好
+15:25 varna: 但如果缺航巡的话，我觉得不必急着疝城
+15:25 xxxxxxxx: 三个航巡的话不练筑摩利根 我还得练铃谷
+15:26 varna: 铃谷可以3-2跟着混
+15:26 varna: 弄个主副电侦跟着队伍收收杂鱼就行
+15:34 xxxxxxxx: 卧槽 一不小心在买了个教师的桌子家具币没了....
+15:34 xxxxxxxx: 教室
+15:36 xxxxxxxx: 紫阳花桌子不知道下次更新会不会没了...
+15:49 lh_not_bot: 利根画风不错 我喜欢
+15:49 lh_not_bot: 看起来就不是很软只会花钱的那种
+15:49 * lh_not_bot 一定是想多了
+15:49 lh_not_bot: iyzsong: 哪里一致
+15:49 varna: 麻烦，我这个场合的文法消左递归还比较困难
+15:50 Stevearzh quit:Quit: Quit...
+15:50 varna: 而我缺省想要左结合，S-R冲突则造成自然的右结合（对一般的场合来说其实完全可以接受）
+15:56 Stevearzh joined channel
+16:08 iyzsong: lh_not_bot: 带hint的insert为啥不多返回个bool表示是否插入成功?
+16:18 WaterA joined channel
+16:43 xxxxxxxx: http://www.bilibili.com/video/av2343264 各国妹子对男票发火时的样子
+17:05 lh_mouse: iyzsong, 因为那帮人傻逼
+17:07 iyzsong: - -b
+17:09 lh_not_bot: 整个 std map 就是个傻逼
+17:10 lh_not_bot: 我甚至认为整个容器库都是个傻逼  因为不提供侵入式实现  反而发明出 allocator 这种东西开洞  搞得半 推 半 就不干净
+17:11 lh_not_bot: 而其中 map 傻逼的地方比其它的容器更多   例如为什么不提供三态的比较器 (strcmp 这种)
+17:12 lh_not_bot: 虽然异质查找在 C艹 14 里已经实现  但是旧的东西怎么办
+17:13 WaterA quit:Quit: Lost terminal
+17:14 cleamoon quit:Ping timeout: 256 seconds
+17:28 cleamoon joined channel
+17:44 varna: Rust 1.0发布了
+17:56 lhanjian: varna, 羊驼子lag了好久
+17:57 lhanjian: varna, 先爆
+17:57 varna: 我是今天看Perl周报才知道发布了的
+17:58 lhanjian: =v=
+17:58 lhanjian: 不愧是monk
+18:26 izmntuk joined channel
+18:39 Plough joined channel
+18:48 varna: Plough: 掘
+18:48 Plough: varna: 肛
+18:49 lhanjian: varna, 羊驼子不想把Rust拖出来批判一番吗？
+18:50 xxxxxxxx: 为啥..？
+18:50 varna: 我对Rust仍然抱有希望
+18:50 varna: 先出去了
+18:59 izmntuk quit:Ping timeout: 244 seconds
+19:09 izmntuk joined channel
+19:14 lhanjian: golang的hijacker可真是够蛋疼的
+19:26 izmntuk quit:Quit: leaving
+19:34 WaterA joined channel
+19:43 * lh_not_bot bites lhanjian 
+19:44 * lhanjian 感染了鼠疫
+19:48 lh_not_bot: 传鼠疫的不是跳蚤吗
+19:49 lhanjian: 哦，是耗子身上的虱子传病
+19:49 izmntuk joined channel
+19:50 lhanjian: 200 OK和200 Established都是200,有些库搞不定了，哈哈哈哈哈
+19:54 lolisa joined channel
+19:58 iyzsong: wow
+20:04 xeirrr joined channel
+20:06 wlemuel quit:Ping timeout: 245 seconds
+20:08 wlemuel joined channel
+20:08 hysw: -_-
+20:09 * lolisa meow
+20:12 cleamoon: lolisa, 爆
+20:14 * lolisa evade
+20:17 cleamoon: lolisa, 口爆
+20:23 sleepwalking joined channel
+20:25 WaterA quit:Quit: Lost terminal
+20:25 Plough: varna: 所以你这篇的结局就是被亨利沃克吊打然后全灭么……
+20:26 * lolisa evade
+20:26 hysw: 木有妹纸...
+20:37 star_ joined channel
+20:39 * xeirrr thinks lolisa has no way of evading, so he has been f**ked twice
+20:40 star_: china
+20:43 lolisa: xeirrr has good imagination.
+20:43 izmntuk quit:Ping timeout: 244 seconds
+20:45 sismvg joined channel
+20:45 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=40658dbbd10735fa91f04eb1ae500f9f/81086b63f6246b60e74e9dd4eef81a4c500fa2cb.jpg
+20:45 sismvg: jojo 埃及篇首卷销量破W ~ 还好没右肩
+20:46 xeirrr: lolisa: I know you feel shamed, but it's truth. 
+20:46 sleepwalking quit:Quit: Ex-Chat
+20:46 sismvg: 有谁上的去中文wiki的吗
+20:47 cleamoon: 我上得去
+20:48 star_: 我也上的去
+20:48 sismvg: 墙内？
+20:48 cleamoon: 外
+20:48 sismvg: 噗
+20:49 star_: 我windows机器只能翻墙上xchat linux就不用
+20:54 Plough quit:Ping timeout: 244 seconds
+20:54 Plough joined channel
+20:59 cleamoon: Plough, 爆
+21:00 cleamoon: 话说，star_新人？
+21:20 hysw: cleamoon: 把智商交出来
+21:22 cleamoon: hysw, 智商为负
+21:23 hysw: cleamoon: 把妹纸交出来
+21:23 izmntuk joined channel
+21:23 cleamoon: hysw, 你给我几个妹子吧，然后我再还你一个
+21:24 hysw: cleamoon: 木有妹纸
+21:26 star_ quit:Ping timeout: 250 seconds
+21:27 xeirrr: cleamoon: 爆
+21:30 endle joined channel
+21:32 lh_mouse: [19:47:01] <lhanjian> 200 OK和200 Established都是200,有些库搞不定了，哈哈哈哈哈 // 然而 reason phrase 本来就没琴梨用
+21:32 lhanjian: 确实没用
+21:32 lh_mouse: 这个地方应该直接判断 200   对于是不是  OK 另论
+21:34 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/http/response_headers.hpp?ts=4#L18
+21:34 Stevearzh quit:Read error: Connection reset by peer
+21:35 Stevearzh joined channel
+21:35 lhanjian: golang一个echo server坑了我一个半小时……
+21:36 lhanjian: 蛋疼的[:n]
+21:38 lhanjian: 然而还是没解决SSL下SSL的问题……
+21:43 varna: Plough: 亨利沃克一直活到了战后呢……
+21:45 wlemuel quit:Ping timeout: 264 seconds
+21:46 wlemuel joined channel
+21:48 Plough: varna: 所以是你被亨利沃克吊打……
+21:49 varna: 哈哈哈哈有个哥们的空母决战出现了奇怪的吊打
+21:49 Plough: ……什么情况
+21:50 varna: 练度是老兵8，莱特湾102彗星突击对面2CV3BB9DD
+21:50 varna: 掉了99个，对面无损
+21:50 Plough: 噗……
+21:50 xxxxxxxxx joined channel
+21:50 Plough: 那里面是不是还有个鱼雷艇
+21:51 Xilzzert quit:Ping timeout: 265 seconds
+21:51 varna: 亨利沃克的打飞机技术不管在哪里都那么可怕
+21:52 varna: 让他上航母其实是限制他发挥
+21:52 Plough:  2333
+21:52 wlemuel quit:Ping timeout: 246 seconds
+21:52 xxxxxxxx quit:Ping timeout: 272 seconds
+21:52 cleamoon: 我去，意大利船身上那个不是香肠... 刚发现...
+21:52 varna: 至于他基友×纳德，珍珠港的时候大概在舔矶风
+21:53 varna: 当时打完零战在天上转圈，看见底下有矶风直接咕叽一声就俯冲下去照着甲板一顿乱扫
+21:53 varna: cleamoon: ...
+21:54 wlemuel joined channel
+21:54 Plough: 说起来我突然想在舰C里实装Henry Walker
+21:54 varna: 咖啡水鬼
+21:54 cleamoon: 那么，那个是什么呢
+21:55 lolisa quit:Quit: meow
+21:55 Plough: 对空+ackermann^-1(10^10)
+21:56 Plough: 可以替代一整套对空CI装备
+21:56 varna: cleamoon: 那个是放弹片的东西吧
+21:56 varna: 防弹片
+21:56 varna: 日本人的做法是吊棉被……
+21:56 varna: ackermann...
+21:58 Plough: 不对，貌似我记反了……
+21:58 Plough: 去掉-1
+21:58 Plough: 去掉^-1
+21:59 varna: 不过BSM的对空有个细致的地方
+21:59 varna: 你真的可以用机炮扫射对空战位
+22:00 varna: 会有一个爆炸效果，可以打掉防空
+22:00 Plough: 咕？
+22:00 Plough: 哪天我试试……
+22:01 Plough: ……下周有改二？
+22:01 varna: 5.29吧
+22:01 Plough: 次回の「艦これ」全サーバ群共通メンテナンスは、来週【5/29(金曜日)】に実施予定です。同メンテナンスに伴うアップデートでは、艦娘1隻の改二改装の実装などを予定しています。
+22:01 varna: 对，是下周
+22:02 Plough: 5.29
+22:02 Plough: 完了
+22:02 Plough: 阿号要来了
+22:02 varna: 卧槽
+22:02 Plough: 记得之前说的五航要改二么……
+22:02 varna: 「我感到快要窒息，仿佛有一种无形的力量把我们推上战场」
+22:03 Plough: 我是不是该赌点烈风了……
+22:03 Plough: 另外我突然感觉一切都串起来了
+22:03 Plough: 五航改二
+22:03 Plough: 烈风改复活
+22:03 Plough: 这不就是要堆制空么……
+22:04 varna: 「机会就像一阵风，难不成敌人在以逸待劳，出动舰载战斗机、开动全部雷达等待我们上钩？不管怎么说都大势已去了，我这个人对活动深有体会，对天空有一种恐怖感」
+22:04 Plough: 233333
+22:04 varna: ^ 某航空参谋接受翡翠台采访时候的言论
+22:05 cleamoon: ........
+22:05 varna: 我觉得也是
+22:05 Plough: 然后这次E6三个教授杵在那
+22:05 Plough: 底下一个理事长护航
+22:05 cleamoon: 五航改二？
+22:05 varna: 即使不是阿号作战，也要作好苦战的准备
+22:05 Plough: “啊，我不是再说你”
+22:05 Plough: 在*
+22:05 Plough: “我是说在座的各位都是垃圾”
+22:05 varna: 五航改二是newtype杂志的采访
+22:06 varna: 翡翠台简直太妙了
+22:06 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150513174244]
+22:06 varna: 老中医也是
+22:06 Plough: 另外他们是不是还打算来个大凤改二……
+22:07 Plough: 等级我倒不担心，问题是图纸
+22:07 varna: 哈哈哈哈哈那哥们的101个天山又玩掉了七十个，还没战果
+22:07 Plough: 噗
+22:07 Plough: 这都什么鬼……
+22:07 varna: 岩本君则搞掉了七十多机直掩中的四十个，当然是己方
+22:08 varna: 空母决战确实能让人感觉到美帝饱和攻击的可怕
+22:08 varna: 他们一窝一窝地过来对着你就是炸
+22:08 Plough: 来玩口胡的咆哮吧
+22:08 varna: 偶尔还来一些油光水滑的四发飞机
+22:08 Plough: 堆上六基100cm三连装炮
+22:08 varna: 定睛一看，这不深海堡垒重爆么
+22:08 Plough: 然后一顿狂轰烂炸
+22:08 varna: 呜呜地就炸我
+22:08 Plough: ……快造白龙
+22:09 varna: 而且对面被打残的一个3机一个1机B-17编队居然能把我巡洋舰炸得大破
+22:09 Plough: 上天雷吧
+22:10 varna: 秋水都干不动他们
+22:10 varna: 而且秋水那东西的续航力只比六郎长五分钟
+22:11 lhanjian quit:Ping timeout: 272 seconds
+22:11 varna: 哈哈哈哈
+22:11 varna: 他原来读档了
+22:11 varna: 这次102个彗星只被干掉49个
+22:12 varna: 莱特湾壮绝的空母大战，十三打二被人打了火鸡
+22:12 Plough: 噗，毛子什么鬼
+22:12 Plough: 我才知道大凤的震电是完全体配置
+22:12 Plough: 初始配置你猜是烈风？错
+22:13 Plough: 是紫电改五哟
+22:13 varna: ...
+22:13 varna: 改五！？
+22:13 varna: 田中也就改二
+22:14 Plough: 试制紫电改五
+22:14 Plough: 你怕不怕
+22:14 varna: 这是胡来
+22:14 varna: 实际上紫电这个机型已经没必要试制了
+22:14 varna: 冠以试制二字的都是原型机（比如晴岚和烈风）
+22:15 Plough: 毛子一贯胡来
+22:15 Plough: 另外谁能看懂这篇
+22:15 Plough: http://pl.wikipedia.org/wiki/Mitsubishi/Nakajima_A8M
+22:15 Plough: 只有这一种语言……
+22:15 varna: 中岛又代工了？
+22:15 Plough: 似乎是波兰语？
+22:16 Plough: 斯拉夫系的我完全没法看啊
+22:16 varna: 那似乎是个都市传说
+22:17 Plough: 另外似乎有些网页上写着名字是Rifuku
+22:17 Plough: 似乎还是陆风？
+22:17 varna: 可能是
+22:18 varna: 我印象那是个双发的东西
+22:19 varna: 另外十八试舰战是个幌子
+22:20 Plough: 那玩意啥情况
+22:20 varna: A8这个编号应该根本就没有，最接近的项目是十八试舰战阵风（J6K1，川西）
+22:20 Plough: A8M铁定是毛子脑洞的
+22:20 Plough: 然而阵风不是J系列么
+22:20 varna: 是
+22:21 varna: 立项和编号不一致
+22:21 Plough: ……所以毛子就给大凤上了震电？
+22:21 varna: 汉字名和项目名都是甲战，编号是乙战
+22:21 varna: 大概是震电比较出名吧……
+22:21 Plough: 虽说BSP里震电也上舰了……
+22:22 hoxily_ quit:Ping timeout: 256 seconds
+22:22 hoxily joined channel
+22:22 varna: 风系列实际上大多是脑洞
+22:23 varna: 星系列并没能好好装备
+22:23 varna: 山系列类似
+22:23 varna: 光和电……垂死挣扎
+22:23 Plough: 我就知道天山@飞不起来……
+22:23 varna: 彗星那个仪表盘超级可怕
+22:23 Plough: 什么情况
+22:24 varna: http://en.wikipedia.org/wiki/Yokosuka_D4Y#/media/File:D4Y4_cockpit.jpg
+22:25 Plough: ……东西真多
+22:26 Plough: 总之我这周末看看WOWS现在是什么鸟样
+22:27 Plough: 先睡觉去
+22:27 Plough: 诸君武运
+22:27 Plough quit:Quit: 睡觉
+22:29 wlemuel quit:Ping timeout: 276 seconds
+22:29 wlemuel joined channel
+22:34 WaterA joined channel
+22:49 xeirrr quit:Quit: qicr for android: faster and better
+22:52 varna: 回去了
+22:52 varna: 诸君武运
+22:52 varna quit:Remote host closed the connection
+23:01 izmntuk quit:Quit: pipopa
+23:34 endle quit:Quit: Leaving
+23:38 LittleKey joined channel

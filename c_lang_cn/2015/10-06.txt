@@ -1,0 +1,831 @@
+00:06 cleamoon quit:Ping timeout: 246 seconds
+00:11 cleamoon joined channel
+00:31 Mokou: 现充回复我了！
+00:31 Mokou: http://tieba.baidu.com/p/4083578264?pid=76884967131&cid=76911931821#76911931821
+00:31 cleamoon: 噗
+00:31 cleamoon: 肉牛还活着
+00:31 Mokou: 揉牛啪啪啪累了上贴吧休息下
+00:32 xxxxxxxx: 肉牛在边啪边上贴吧转移注意力以延长时间
+00:33 Mokou: xxxxxxxx: 你去19L噗他一下
+00:33 Mokou: 就这么说
+00:33 lh_mouse: 实际上我写自旋锁习惯性 pause
+00:33 cleamoon: 牛肉肉体测试自旋锁
+00:33 lh_mouse: 不写 pause 就不知道 ucode 搞成啥样子了
+00:33 cleamoon: 自 旋 锁
+00:34 xxxxxxxx: 这话还是算了 感觉挺危险...
+00:34 lh_mouse: μcode 应该针对不是字面意义上的自旋进行优化   比如访存可能合并掉
+00:34 lh_mouse: 既然明摆着是自旋就不允许
+00:34 erhandsome quit:Ping timeout: 265 seconds
+00:36 xxxxxxxx: http://news.163.com/15/1005/16/B564QOH900011229.html 这简直是一种新兴产业....
+00:38 cleamoon: 这就是新兴产业
+00:43 Mokou: 睡觉
+00:43 Mokou: 诸君武运
+00:43 Mokou quit:Quit: 睡觉
+00:44 wlemuel quit:Ping timeout: 256 seconds
+01:16 erhandsome joined channel
+01:22 xxxxxxxx: http://www.guancha.cn/broken-news/2015_10_05_336507.shtml <- 住口 吃我流氓茶叶蛋
+01:25 cleamoon: 我只想知道为什么无论是台独还是统一都是敏感话题，明明这个对于大陆人来说基本谁也挨不上
+01:30 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.1/20151001044230]
+02:32 lh_mouse: geordi, { foo({1}); } struct k { int a; }; template<typename ...T> void foo(T...){ BARK; } void foo(k){ BARK; }
+02:32 geordi: foo(k)
+02:51 boosure joined channel
+02:55 erhandsome quit:Quit: ZNC - http://znc.in
+02:56 erhandsome joined channel
+03:01 lh_mouse: geordi, { foo({1}); } struct k { int a; }; template<typename ...T = k> void foo(T...){ BARK; }
+03:01 geordi: error: template parameter pack 'T' cannot have a default argument
+03:06 lh_mouse: geordi, { foo(1, 2); } template<typename T, typename U> void foo(T, U){ BARK; } template<typename T, typename U, typename ...M> void foo(T, U, M...){ BARK; } 
+03:06 geordi: foo(T, U) [with T = int; U = int]
+03:06 lh_mouse: geordi, { foo(1, 2, 3); } template<typename T, typename U> void foo(T, U){ BARK; } template<typename T, typename U, typename ...M> void foo(T, U, M...){ BARK; } 
+03:06 geordi: foo(T, U, M ...) [with T = int; U = int; M = {int}]
+03:09 lh_mouse quit:Read error: Connection reset by peer
+03:35 erhandsome quit:Quit: ZNC - http://znc.in
+03:36 erhandsome joined channel
+03:52 Stevearzh quit:Ping timeout: 252 seconds
+03:56 whocares_2 joined channel
+03:57 whocares_2_ quit:Ping timeout: 246 seconds
+04:32 whocares_2_ joined channel
+04:33 whocares_2 quit:Ping timeout: 260 seconds
+05:05 whocares_2_ quit:Remote host closed the connection
+05:06 whocares_2 joined channel
+06:10 cleamoon quit:Ping timeout: 246 seconds
+06:14 xxxxxxxxx joined channel
+06:15 xxxxxxxx quit:Ping timeout: 250 seconds
+06:42 hope1_ quit:Ping timeout: 246 seconds
+07:46 cleamoon joined channel
+08:20 xxxxxxxxx quit:Quit: Leaving...
+08:35 cleamoon quit:Ping timeout: 246 seconds
+08:36 cleamoon joined channel
+08:49 cleamoon_ joined channel
+08:52 cleamoon quit:Ping timeout: 252 seconds
+09:07 wlemuel joined channel
+09:37 varna joined channel
+09:53 cleamoon_ quit:Ping timeout: 256 seconds
+09:59 varna: https://metacpan.org/pod/Text::Hyphen 
+10:58 Risitide joined channel
+11:31 Guest63976 quit:Remote host closed the connection
+11:31 Guest63976 joined channel
+11:58 Mokou joined channel
+11:58 Mokou: 我现在觉得应该给朝日换岛风的主机
+11:59 Mokou: 那样直接就是十八万匹马力……
+12:02 varna: Mokou: 今天又有几个鱼上钩了
+12:02 Mokou: 以及某非处男
+12:02 varna: 现在我发现钓鱼不怕直钩
+12:02 varna: 某非处男之后还有两个咬钩的
+12:03 Mokou: 所以说你不要那么快就吓到人家……
+12:05 Mokou: 这事我还是没想出太好的解决办法
+12:06 Mokou: 除非强行要求用户提供，否则没法预估需要栈的大小；而等到溢出以后再分配似乎也同样不行？
+12:09 varna: 所以我打算用一个显式的搭载
+12:09 varna: 有一个wrapper包裹后续调用，它有一个上下文
+12:09 varna: 但这里又涉及一个古老的问题：参数要转发
+12:10 Mokou: 交换变量！
+12:10 varna: 看上去不用变更原先原型的做法，是这样
+12:10 varna: 我弄个宏，宏有个作用域，里面有个nested function
+12:11 varna: 然后我用那个函数当wrapper, 看看能不能生成可控的上下文
+12:11 varna: 比如要求在ucontext上做返回链
+12:11 varna: 之后我转发参数到实际的调用上，nested function的原型是void -> void
+12:11 * varna 吃饭
+12:29 * Risitide .
+13:07 OO_after quit:Ping timeout: 246 seconds
+13:08 OO_after joined channel
+13:17 varna: Mokou: 又有新闻了，有个伙计在钓鱼帖里@九重束风景
+13:19 Mokou: 哈哈哈哈
+13:19 Mokou: 求详
+13:19 Mokou: 都117回复了……
+13:19 varna: “给你推荐位 @九重束风景”
+13:20 Mokou: 居然这么快就暴露了
+13:20 Mokou: 你不登上那个号唱个双簧么
+13:20 varna: 我看看记不记得密码
+13:21 varna: 日
+13:21 varna: 有邮箱验证码
+13:21 Mokou: ……
+13:21 varna: 然后百度那个狗日的玩意还被hotmail拦下来了
+13:22 Mokou: ……
+13:22 varna: 申诉要手机
+13:22 Mokou: 屌屌屌屌屌
+13:23 varna: 收到了
+13:39 Risitide: 简直丧病
+13:40 varna: Risitide: 掘
+13:41 Risitide: varna: 你知道你发的那一堆啥意思吗。。
+13:41 varna: Risitide: 啊？
+13:45 lh_mouse joined channel
+13:45 Risitide: 11号要去撸竞赛了。。。
+13:46 varna: OTL
+13:46 varna: 等等，10.11是初赛？
+13:46 Risitide: 恩
+13:46 Risitide: 据说去了就能过。。。完全不需要复习
+13:46 Risitide: 11月复赛。。好有压力
+13:46 Risitide: C吧有国家队的嘛
+13:47 varna: MasterRay
+13:47 Guest63976 quit:Read error: Connection reset by peer
+13:47 Mokou: varna: 话说我们那个Erlang方言你打算怎么搞
+13:47 varna: 初赛按说其实你学校黑暗的话可以免试
+13:47 Guest63976 joined channel
+13:47 varna: 到时候会有一大堆人造分母
+13:47 Mokou: 人造分母+
+13:47 Mokou: 我们化学老师跟我提过这事
+13:47 varna: Mokou: 我没想好，但是我希望搞multimethod
+13:47 varna: 我造过
+13:47 Risitide: 人造分母 是啥。。
+13:48 varna: 当时去初赛走个过场，然后回来造了一天分母
+13:48 Mokou: 我听说要140+，然后觉得我化学水平不够，就没造……
+13:48 varna: 就是你造一些卷子
+13:48 varna: 我那时候比较恶劣，不用真正的人头去，赛后再补……
+13:48 Mokou: 总之外观上我就两个想法
+13:48 Risitide: :confused..
+13:48 varna: 总之不难，好好考
+13:49 Mokou: 其一是参数列表的括号可以省略
+13:49 varna: 子句统一有点难
+13:49 Mokou: 不统一太蛋疼了
+13:49 Mokou: 调整顺序都不方便
+13:49 varna: 你是药娘，可以割一下……
+13:49 Mokou: 你是药娘，我不是
+13:49 varna: 我当然不是药娘
+13:50 Risitide: noip要考三回么
+13:50 varna: 不用
+13:50 varna: 认真准备十一月的比赛就行
+13:50 Mokou: 我是不是该向轻小说学习一下外貌描写……
+13:50 varna: 之后就是省选了
+13:50 varna: Mokou: 别，那些外貌描写都是CnP Paradigm的
+13:51 varna: 我至今都能记起每个章节都有的妲莉安外貌
+13:51 Mokou: ……倒也是
+13:51 Risitide: 所以说到底考几回啊。。
+13:51 Mokou: 不过现在这段确实太生硬了
+13:51 Mokou: 天皇酱好歹也是天区第一美少女
+13:52 varna: 什么东方人风格的牛奶色皮肤啊，大大的黑眼睛啊，细致有蕾丝的黑色洋装、粗糙的骑士手足护具和胸口的大锁，以及每次都会强调的黄莺出谷一样的美妙嗓音……
+13:52 varna: Risitide: 初赛->复赛，没了
+13:52 Risitide: varna: 那省选是啥。。。
+13:52 varna: 省队选拔，然后去NOI
+13:52 Risitide: varna: 我以为是初赛 省选 全国
+13:52 Mokou: 为什么我感觉刚才那段里有些奇怪的声音
+13:53 varna: NOI赛完了CTSC, 之后国家队去IOI
+13:53 Mokou: 东西*
+13:53 varna: 那段里我没掺自己的恶搞
+13:53 varna: 台湾角川的译文确实是“黄莺出谷”
+13:53 Mokou: ……
+13:53 varna: 丹特丽安的书架我买了全套译本的
+13:54 Mokou: 总之实在不行我就先这么放上去，之后再改……
+13:54 Risitide: varna: 当年拿了啥奖？
+13:55 varna: 省一
+13:56 Risitide: varna: 好处都有啥 给降分了么
+13:56 varna: 没，我忘去教务处登记了
+13:56 Risitide: cool..
+13:56 varna: OI搞下来，我主要学会了sc1不要5d开局爆狗rush P
+13:58 Mokou: http://ww1.sinaimg.cn/bmiddle/a01a469dgw1ewqlrj1kiag20a005n7wj.gif “台湾新闻做动画做成这样背后到底是什么样的人……”
+13:58 sismvg joined channel
+13:58 Risitide: va
+13:59 Risitide: varna: 以前省一不是能报送么
+13:59 varna: 不能
+13:59 varna: 能自招
+13:59 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=ce909d6ca951f3dec3b2b96ca4eff0ec/537b7fdfa9ec8a1330a10246f103918fa1ecc0b0.jpg
+13:59 varna: 我印象省级赛保送需要两个一等奖，但数学可能例外
+14:00 sismvg: 又是一年新人时，感觉越来越没法过了。。
+14:02 code_new joined channel
+14:06 Mokou: code_new: 今天早点开始推演怎么样
+14:06 Mokou: 不然两回合过去美军指挥官跑了……
+14:06 code_new: Mokou: 可以
+14:07 code_new: 顺便告诉你们一个不幸的消息……网费到期了
+14:07 Mokou: ……
+14:07 varna: 噗
+14:07 Mokou: 什么情况
+14:07 code_new: 我不知道手机的网能撑多长时间
+14:07 Mokou: ……
+14:07 varna: ……
+14:07 sismvg: 为啥不续费呢
+14:07 varna: sismvg: 爆
+14:07 code_new: 因为还有3天就回家了
+14:08 varna: 演习时间
+14:08 Guest63976 quit:Quit: Konversation terminated!
+14:08 sismvg: 回老家结婚的剧情。。
+14:08 code_new: ……
+14:08 * sismvg 人生第一次被逼婚
+14:08 code_new: 你快跟家人说你找到男朋友了
+14:08 Mokou: 总之这样的话啥时候开始推演
+14:08 Mokou: 再过半小时？
+14:08 Mokou: varna: 
+14:08 sismvg: 从我17岁开始家里人就对我说：你都20的人了，该找个女朋友了
+14:08 varna: ok
+14:08 code_new: 好的
+14:08 Mokou: OK
+14:09 sismvg: 我不知道他们数学怎么学的
+14:09 varna: 我一边手上下码一边推演，正好中间code_new慢慢算
+14:09 code_new: OK
+14:09 varna: 我都二十多的人了，定时器队列还用个二叉堆，简直妮可妮可妮
+14:09 varna: 虽然写完了我还是会用二叉堆
+14:11 varna: 咦，钓鱼帖里29-30炸楼了
+14:11 sismvg: 系统自带的定时器救人间啊
+14:12 varna: epoll用什么自带定时器
+14:12 sismvg: ms
+14:13 Mokou: http://www.chikyuuschool.com/thread/view/2E6CD7046BF111E58628F23C9184D73D
+14:13 Mokou: varna: 
+14:13 varna: 卧槽，有个演习对手叫Alpaca Fleet
+14:13 Mokou: 哈哈哈哈
+14:13 varna: 看我干死他
+14:13 Mokou: “我就是你，你就是我”
+14:14 varna: 反正世界上百分之九十四的羊驼都是一个品种的
+14:14 varna: 不少一头
+14:14 sismvg: Mokou:一股网络小说的味道
+14:15 varna: 一“股”
+14:15 sismvg: 以及看过这么一片文章：形容词会毁掉你的作品
+14:15 varna: 我小时候也是这么相信的
+14:15 Mokou: 阁下的高见是？
+14:16 sismvg: http://www.ithome.com/html/discovery/180540.htm
+14:16 sismvg: 买个大脑
+14:16 sismvg: 不过放在哪里呢。wifi估计都不够用
+14:17 varna: 结果到现在，我写科普的文笔比记叙文高到不知道哪里去了
+14:18 * Mokou 都渣
+14:18 Mokou: 总之我文笔就这样，也只能硬着头皮这么发
+14:19 varna: 我是硬着〇皮……
+14:19 Mokou: uccu
+14:19 varna: 一看你就想歪了
+14:19 Mokou: 你表达的意思就是歪的
+14:19 varna: 我无歪
+14:19 Mokou: 你w歪
+14:19 Mokou: 你看你自己都承认了
+14:20 varna: 这人太污
+14:20 sismvg: 监狱里丢肥皂，怎么能不歪
+14:20 Mokou: 污人喊污
+14:20 varna: 我哪里污了，完全没看出来
+14:21 varna: 我D盘里一个H本子都没有
+14:21 Mokou: 你D盘里一大堆黄图
+14:21 Mokou: 还是动漫的
+14:22 sismvg: 动画
+14:22 varna: 那简直跟交换变量一样都是笑话典范
+14:22 Mokou: 那位最早是不是吹自己把MZ头改了还能执行的那位？
+14:22 varna: 似乎不是？
+14:23 Mokou: 忘了
+14:23 varna: 逗比太多分不清了
+14:23 Mokou: 总之装得一手好逼……
+14:23 varna: 卧槽B子爆炸了
+14:24 varna: 另外我发现自己在啪啪地自打脸啊
+14:24 varna: 我为什么用了那么多读写锁
+14:24 Mokou: 苦逼改革又是怎么回事来着
+14:24 varna: 我知道那会卡住carrier thread
+14:25 Mokou: 那号居然昨天还有发言
+14:25 varna: 他不是已经成功转型成一个轻娱乐人士了么
+14:25 varna: 哈哈哈成功D败……
+14:25 varna: 单横坑人啊
+14:25 Mokou: 你在打哪
+14:25 varna: 我打一个上午打迷糊的演习
+14:26 varna: 当时把稀欧一炸掉，我点了个不夜战
+14:26 varna: 现在点了个夜战，不小心D了……
+14:26 varna: 要是B子不爆炸大概好点，对面有婚舰，毕竟回避高
+14:28 varna: 哦操
+14:28 varna: 我写错东西了
+14:28 Mokou: ……什么情况
+14:29 varna: https://github.com/Akvelog/p7demo/blob/master/p7impl.c#L237 这里是错的
+14:30 Mokou: 我突然搜出了一篇牛逼的小说
+14:30 Mokou: 作为极限射程有四十一海里的大和而言，在炮击战方面，世界上能够和她媲美的舰娘屈指可数。
+14:30 Mokou: 大和能打41nmi了
+14:30 varna: 噗
+14:30 Mokou: 你怕不怕
+14:30 varna: 不行这下我逗比了
+14:30 varna: 逗比大了
+14:32 code_new: 我发现我犯了一个大错……
+14:33 Mokou: ……什么情况
+14:33 code_new: 我算错了BB到BB的索敌范围……
+14:33 Mokou: ……
+14:33 Mokou: 下回合报出来吧
+14:33 code_new: 然后上回合应该就有索敌情况汇报了
+14:33 Mokou: 或者回滚一回合
+14:33 Mokou: varna: 你觉得呢
+14:34 varna: 回滚吧
+14:34 Mokou: OK
+14:34 varna: code_new核实一下
+14:34 varna: 我现在得立刻解决这个重大错误……
+14:34 code_new: Orz抱歉
+14:34 Mokou: 只是一回合问题不大的
+14:34 Mokou: 大丈夫
+14:34 varna: 今天不装逼我还不知道自己弄错东西了
+14:34 code_new: 突然发现BB到BB比BB到CA还小……
+14:34 Mokou: ……
+14:35 Mokou: 其实如果是我的炮击方法的话会稍微麻烦些
+14:35 code_new: 等会到频道里面再更正吧
+14:35 Mokou: 我的索敌方案里是用观瞄仪所在的高度以及的舰的最高点高度一起算出最大目测距离的
+14:35 Mokou: +
+14:36 Mokou: 最大目测发现距离*
+14:36 code_new: 这需要精确到每条船了
+14:36 Mokou: 对
+14:37 Mokou: 所以会复杂很多
+14:37 Mokou: 这是个可选反哈尼
+14:37 Mokou: 可选方案*
+14:37 code_new: 好吧
+14:38 Mokou: “”
+14:38 Mokou: “真恶心把屠女士叫作先生的，一旦有女性做出优秀成绩他们就想方设法把她从女性群体剥离开，冠以男性的称谓，好像这样就能自欺欺人屠女士不是女人是男人一样。荣誉属于男人，耻辱属于女人。但是别yy了，你们以为你们是男人？你们不过是吸着女人的血抢夺着女人成就还高叫着那不是女人是男人的太
+14:38 Mokou: 监罢了”
+14:38 varna: 怎么又有女权主义逗比……
+14:38 Risitide: 说得好
+14:38 Mokou: 其实我觉得我们应该严谨点
+14:38 Risitide: 女权逗士
+14:38 varna: 这些女权主义者永远自卑得一塌糊涂
+14:38 Mokou: 叫女性沙文主义吧
+14:39 Risitide: 别别，万一人家在钓鱼呢。。
+14:39 varna: 那他们是不是该黑女性沙龙主义的林〇音？
+14:39 Mokou: 这就是个女权逗士，不是渔夫
+14:40 Mokou: “一觉醒来评论都炸了，所以说呢，有些人就是不抖机灵活不下去。谁不知道先生有尊称的意思？用带男性色彩的词尊称女人我们都不爱听，包括女汉子，ok？ ”
+14:40 Mokou: “ 那些骂我无知骂傻叉的当然可以忽视了，让我欣喜的是有几百条评论是女权者或者站在女权门口的人有些意识到语言中对女性的不友好甚至歧视了。很多时候就是这种小细节能戳中女权者的神经，或者启蒙潜在的女权者，让他们想：是啊，凭什么呢？只要这样想，就是个太好的开始@高富强 看你也被骂着，
+14:40 Mokou: 共勉233 ”
+14:40 varna: 我觉得这些人最好自己先去学点实在的学问
+14:40 varna: 不然太丢人了
+14:41 Risitide: 我总觉得在钓鱼。。。
+14:41 varna: ok, 修复了
+14:41 sismvg: 我不是萝莉控，我只是女权主义者
+14:41 Mokou: 并不是渔夫
+14:41 varna: 灌了大约几十万会话过去感觉没问题
+14:41 varna: 现在我把本地的p7版本都换成pthread互斥锁
+14:41 varna: 那个地方不能像原来一样上读写锁，否则是错的
+14:41 Mokou: “虽然女权一眼就让人联想到反男权，但我的野心很大，反男权还不够，男人不统治女人了也不代表女人得到真正的自由。只要有婚姻，有家庭，有不是基于爱而提出的道德要求（诸如孝顺和繁衍）都是对自由和人性是压迫。女权从反男权开始，最终要反的是父权。唯有实现母系社会那样的自由才是人类最终
+14:42 Mokou: 的乐土 ”
+14:42 Mokou: 沙文主义没跑了
+14:42 varna: 这个人是不是想当RBQ?
+14:42 Risitide: 。。。
+14:42 Mokou: 大概是
+14:42 Risitide: 你哪里看到的
+14:42 varna: 我觉得回三个字就行了：过多爽
+14:42 Mokou: 微博
+14:42 Mokou: 微博上逗逼太多
+14:43 Mokou: 看着就欢乐
+14:43 Risitide: 母系社会的自由
+14:43 Mokou: “逻辑上是这样：要证明男权是反人性的制度，并不需要证明男权制度下的每一个行为都反人性，只需要证明男权成立的基础是阶级压迫，阶级压迫是反人权的即可。但如果说女权符合人性，我们是可以证明女权角度出发的任何行为都符合人性，是经得起检验的。 ”
+14:43 Mokou: 然而我没看到她的证明
+14:45 varna: 因为证明已经由粉变黑了
+14:45 Mokou: 2333
+14:45 varna: 还有股廉价的塑料味
+14:46 Mokou: 总有人连逻辑是什么都没搞明白就拿着逻辑装逼
+14:47 varna: GJK我认识
+14:47 varna: 他是个GAY
+14:47 varna: 他自己的邮箱都注明了，他叫Gee Law
+14:47 Mokou: uccu
+14:47 varna: 这是真事
+14:48 varna: 贴吧ID Luoji_1995 以前C++吧的一个犀利伙计，疑似北京四中人士
+14:48 Mokou: 我只能搜出Gilbert-Johnson-Keerthi distance algorithm……
+14:48 Mokou: 哦，那位啊
+14:48 varna: 不知道谁接他邮件的时候看到他发件人是Gee Law
+14:48 Mokou: 2333333
+14:48 varna: 然后念了一下
+14:48 Risitide: 自称基佬不一定是gay啊
+14:48 Mokou: 这位最近似乎不太活跃了
+14:49 varna: 一般都是现充去了
+14:49 Mokou: 最近一次发帖是在香水吧，0902
+14:49 varna: ...
+14:49 varna: 这基佬
+14:49 Mokou: 这位似乎是读数学的？
+14:50 Mokou: 另外我最近才发现EAirPeter也在LI里……
+14:50 varna: 至少他数学厉害
+14:50 varna: ...
+14:50 Mokou: 有个伙计发了下他的Github项目的链接
+14:50 Mokou: 我一看用户，EAirPeter
+14:50 Mokou: QQ头像也和贴吧头像一样
+14:51 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=e51307d6504e9258a63486e6ac83d1d1/b408eeef76094b36409ff45fa5cc7cd98c109d9d.jpg 太惨了
+14:51 Mokou: 23333
+14:51 lh_mouse: 性别不一样  爱情才长久
+14:51 Mokou: 然而CS怎么没插足
+14:52 varna: CS都在搞基
+14:52 varna: SE在笑看CS搞基
+14:52 varna: EE在笑看SE, 心里想着搞基
+14:52 varna: ^ 产业链
+14:52 varna: 业（Karma）
+14:58 Risitide: 好烦啊 不想写作业
+14:58 Risitide: 主要是一错了就不想写...
+14:58 varna: 你是妹子么？
+14:58 Risitide: 不是..
+14:58 varna: 那变成女装偶像吧！
+14:58 Risitide: 难道说话有女性化么?
+14:58 Risitide: 丧病
+14:59 varna: 我们来爆你
+14:59 varna: 这频道缺几个妹子
+14:59 Risitide: 俺是班草
+14:59 varna: 大丈夫，不妨碍你在课余时间当女装偶像
+15:00 Risitide: 你是药娘吗..
+15:00 varna: 我负责管理药娘
+15:00 Risitide: 可怕
+15:00 code_new: varna: 快进频道
+15:00 varna: 我的原则是大力推进程序设计语言及其理论在新时代中的鬼畜改革、深化频道高剂量药娘团队组织建设
+15:00 varna: 哦哦……
+15:00 lh_mouse: Risitide, 你还没爆照呢
+15:01 Risitide: lh_mouse: 不爆
+15:01 lh_mouse: Risitide, 你还没爆照呢
+15:02 Mokou: http://ww3.sinaimg.cn/bmiddle/6dd57921jw1ewrdsczavqj20k00m5dki.jpg 丰田的文化输出
+15:05 sismvg: 搞到了一盒998的月饼，打开一看。五仁，豆沙，椰蓉，蛋黄莲蓉各一个。路边摊红酒一瓶
+15:05 sismvg: 。。怎么卖这个价的。。
+15:09 Mokou: http://ww1.sinaimg.cn/bmiddle/6fcb091dgw1ewr32jvc7ij208s02bt8w.jpg http://ww2.sinaimg.cn/bmiddle/6fcb091dgw1ewr32k9a49j20e401c3yp.jpg http://ww2.sinaimg.cn/bmiddle/6fcb091dgw1ewr32lbcxmj20er0130t3.jpg http://ww4.sinaimg.cn/bmiddle/6fcb091dgw1ewr32mksv3j20j402raar.jpg 日本简直心机……
+15:12 condy: 0.0
+15:19 Mokou: http://ww2.sinaimg.cn/mw1024/006cxPuGgw1ewrfbw2mpaj30sx0h8myx.jpg
+15:21 varna: 卧槽
+15:21 varna: 注意他凉席左边
+15:21 Mokou: 我看到了……
+15:22 Risitide: 腿差评
+15:22 Mokou: http://ww2.sinaimg.cn/bmiddle/c0742d06gw1ewq0te0qjcg20ai07t1kx.gif http://ww3.sinaimg.cn/bmiddle/c0742d06gw1ewq0th9y2eg209i06rx6p.gif “这样看来，网红尔康的演技还是稍逊一筹啊”
+15:55 Risitide: http://novel.hongxiu.com/userinfo/41179753.html ...
+16:05 varna: Mokou: 裁判出去了？
+16:06 Mokou: 他没跟我说……
+16:06 varna: 总之他一段时间没说话了？
+16:07 Mokou: 他回我了
+16:07 varna: ok
+16:07 Mokou: 大概是在算索敌……
+16:07 varna: 别算平方……
+16:07 varna: 人类算索敌是可以用指示物目测的……
+16:07 Mokou: condy: 
+16:07 Mokou: code_new: 
+16:07 Mokou: 啊，刚才按错了
+16:08 condy: o.o
+16:08 varna: 没事，反正基头四……
+16:08 code_new: 结束了
+16:08 varna: 辛苦了
+16:08 Mokou: 辛苦了
+16:09 code_new: Otz
+16:33 sismvg: 沙僧2333
+16:34 sismvg: 编剧：这从侧面反映了沙僧的憨厚老实
+16:37 geordi quit:Ping timeout: 264 seconds
+16:41 geordi joined channel
+16:48 lh_mouse: geordi, --version
+16:48 geordi: GCC 6.0.0 20150902 (experimental)
+16:51 sismvg: 进击的版本号
+16:57 code_new: 两个小时才跑了2M流量0 0
+17:00 code_new quit:Quit: 吃饭
+17:00 Risitide: ]/cs
+17:02 condy: ]/cs
+17:02 lh_mouse: /cs flags #c_lang_cn +b Risitide 
+17:03 Risitide: 我也不知道这是啥
+17:03 lh_mouse: 等同于 /msg chanserv
+17:04 * lh_mouse 只要一按下按钮，ChanServ 就会把 Risitide 丢出去
+17:04 * Mokou /kick lh_mouse
+17:05 lh_mouse: 你踢不动我   别妄♀想
+17:06 * Mokou ghosts varna
+17:06 sismvg: http://www.ithome.com/html/it/180541.htm
+17:09 Risitide: 这人有想法啊,拿这个赚钱
+17:10 sismvg: 30年的法师，不是盖的
+17:10 Risitide: 还是很会玩的
+17:10 * lh_mouse slaps Mokou around a bit with varna 
+17:10 * Mokou slaps lh_mouse around a bit with kick
+17:11 Risitide: 这个是拿/me发的么
+17:12 Mokou: 是
+17:16 * lh_mouse 拿出了一只拖鞋
+17:19 lh_mouse: [17:14:10] -ChanServ- The URL of #c_lang_cn has been set to http://chikyuuschool.com/.
+17:19 lh_mouse left channel:"Meow"
+17:19 lh_mouse joined channel
+17:19 lh_mouse: [17:14:30] * Channel #c_lang_cn url: http://chikyuuschool.com/
+17:57 lh_not_bot: http://tieba.baidu.com/p/4074339096?pid=76895953428&cid=76945906103#76945906103
+18:04 boosure quit:Quit: Get your hand off of it
+18:06 sismvg: GFW毒害一代人！@
+18:07 Risitide: gtihub不是没被墙
+18:08 code_new joined channel
+18:12 sismvg: 很慢的，所以没耐心的就打不开
+18:13 Risitide: 木有感觉...
+18:20 erhandsome quit:Quit: ZNC - http://znc.in
+18:21 erhandsome joined channel
+18:22 sismvg: 对了，上周的overlord的中二度实在是爆表。直接付费道具。。。
+18:24 iyzsong: 药丸~
+18:41 sismvg: 你不想想，不付钱你能变得更强吗？
+18:44 sismvg: http://tieba.baidu.com/p/4085860791
+18:48 tutu_wind joined channel
+18:50 tutu_wind: 喵
+18:56 condy: iyzsong: prpr
+18:56 condy: iyzsong: 吃药丸
+18:57 iyzsong: 吃饭去 = =
+18:57 condy: iyzsong: 软啪啪的硬邦邦之路
+19:01 tutu_wind: 刚吃完 ～
+19:05 sismvg: 不用烧饭真是幸福
+19:16 tutu_wind quit:Ping timeout: 240 seconds
+19:20 Risitide quit:Remote host closed the connection
+19:21 sismvg quit:Ping timeout: 244 seconds
+19:21 Risitide joined channel
+19:23 wlemuel quit:Ping timeout: 240 seconds
+19:24 wlemuel joined channel
+19:27 hope1 joined channel
+19:38 Risitide: 推荐GALA的Young 佛如
+19:38 Risitide: young for you
+19:42 hope1 quit:Remote host closed the connection
+19:42 varna: 好想爆个谁啊
+19:42 hope1 joined channel
+19:43 Risitide: varna: 双手，骚年
+19:43 varna: Risitide: 我还是觉得你值得发展成药娘
+19:43 xxxxxxxx joined channel
+19:44 Risitide: varna: 性取向正常
+19:44 xxxxxxxx: https://play.freeciv.org/
+19:44 Risitide: varna: 我们学校倒有个真娘的
+19:44 Risitide: varna: 走路比妹子还要妹子
+19:44 xxxxxxxx: ^有人玩这个么?
+19:45 varna: freeciv被移植了？
+19:46 varna: civ系列我不太碰……暂放
+19:46 xxxxxxxx: 有人造了个如何做爱5的版本
+19:46 hope1: Risitide, 联赛主要是11月的复赛，高中三年每年都可以考。有当年联赛成绩才能参加省选（会有分数限制，但一般来说低于一本线），联赛成绩占一定比例的省选成绩（我省30%，似乎有不同？）。省选进省队后可参加NOI，然后NOI金牌才作为候选国家集训队员参加后续选拔。
+19:47 Risitide: hope1: 为什么你能看到聊天记录呢...
+19:47 varna: 频道有log
+19:47 hope1: freeciv文档坑……
+19:47 varna: 请仔细看topic
+19:47 varna: 一般来说topic由几个部分组成
+19:48 varna: 军国主义黄赌毒对句，频道主题，log, 实用工具和广告位
+19:48 xxxxxxxx: https://github.com/clintbellanger/flare-game 还找到一个这样的东西
+19:48 xxxxxxxx: 美工已死系列
+19:48 hope1: 曾经还是小五主题的……
+19:49 varna: 曾经是东方系列
+19:49 varna: 不过东方系列对句持续了两轮季度吧？
+19:49 xxxxxxxx: 羊驼多久没念过小五小五小拖鞋了?
+19:49 varna: 唵、小五小五、小拖鞋
+19:49 * hope1 重感冒头昏得厉害
+19:49 Risitide: 现在这个对句是哪儿的,我没查到
+19:50 xxxxxxxx: 有人说感冒的时候适合撸管
+19:50 hope1: 是原创
+19:50 Risitide: 好湿
+19:51 xxxxxxxx: https://endless-sky.github.io/ <- 美工依然死亡系列
+19:51 xxxxxxxx: 这些大萝卜还不如FL的飞机...
+19:51 hope1: 外面诊所开了十包各类药剂，平常在校医务室就只有板蓝根神药和藿香正气……
+19:51 Risitide: xxxxxxxx: 这个看上去还好...像雷电...
+19:52 Risitide: 韦德之战有人玩么
+19:52 xxxxxxxx: 那个玩过一点感觉不太好玩...
+19:53 varna: 对句一直是我来维护
+19:53 varna: 不过如果有兴趣也可以别人写
+19:53 xxxxxxxx: 羊驼看那个endless sky的链接了么
+19:53 xxxxxxxx: 我和幼女认为应该添加禁止向羊驼投食的元素
+19:54 Risitide: varna: 文采这么好,没找到女朋友吧
+19:54 hope1: Risitide, 你看错了，这可是大现充
+19:54 xxxxxxxx: Risitide: 他把倒贴妹子派去玩特攻了
+19:54 Mokou: Risitide: 他也就甩过那么几百个妹子
+19:54 Mokou: 不算现充
+19:54 Risitide: 可怕
+19:55 Risitide: 我还以为是个基佬..233
+19:55 varna: xxxxxxxx: 那个我看到了
+19:55 Mokou: 就是因为他是基佬，才成天甩妹子
+19:55 varna: 我哪里甩过几百个妹子
+19:55 Mokou: 你那一整个太平洋舰队的妹子啊
+19:55 varna: 那也没几百个
+19:55 xxxxxxxx: 再发一次羊驼投食事故http://news.ifeng.com/a/20151004/44782466_0.shtml
+19:55 varna: 卧槽这飞机造型
+19:55 Mokou: 没几百个就几十个咯？
+19:56 varna: 美工都在吔屎么……
+19:56 Risitide: 这不是经典雷电造型么....
+19:56 varna: 我看到了Javelin和Sidewinder
+19:56 varna: Risitide: 我宁可看巫女在天上飞
+19:57 Mokou: 另外今天可以早点继续推演
+19:57 Mokou: 我不用去吃饭
+19:57 Mokou: code_new:
+19:57 Mokou: varna: 
+19:57 xxxxxxxx: 我宁可看读音意义上的萝卜在天上飞
+19:57 iyzsong: 各种NASA的飞机.. https://github.com/endless-sky/endless-sky/blob/master/copyright
+19:57 varna: 哦瘊瘊
+19:57 xxxxxxxx: 也不想看形态上的萝卜乱飞...
+19:58 code_new: 来了
+19:58 varna: Mokou: 对了，下午药元四说形容词的事情之后，我突然想硬凹一段尽我所能典雅的东西出来试试看
+19:58 Mokou: 写写写
+19:59 varna: 等code_new开始计算的时候我写一小段
+19:59 code_new: =。=
+19:59 varna: 来段世纪末纪传体
+20:00 Mokou: 说起来，你那个芥菜短篇如何了
+20:00 code_new: 稍等我先整理一下文件
+20:00 Mokou: OK
+20:00 code_new: 其它文件*
+20:01 varna: 芥菜短篇等我回去
+20:08 tutu_wind joined channel
+20:13 sismvg joined channel
+20:20 varna: Mokou: 论不耍花腔的狗血段子 https://pastebin.mozilla.org/8848467
+20:20 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.1/20150929144111]
+20:21 Mokou: 23333
+20:21 lh_mouse: geordi, -c { [&][[noreturn]]{ }(); }
+20:21 geordi: error: expected '{' before '[' token
+20:21 lh_mouse: geordi, -c { [&]()[[noreturn]]{ }(); }
+20:21 geordi: warning: 'noreturn' function does return
+20:22 lh_mouse: geordi, -c { [&]()[[noreturn]]->void{ }(); }
+20:22 geordi: Same warning.
+20:23 varna: 如果不描写，我们至少还可以摆起架子吹逼
+20:25 Risitide: 形容词多到喘不过气..
+20:26 varna: 我文笔不佳
+20:26 varna: 其实我只想强调可靠的王八拳
+20:26 * Mokou 文笔极差
+20:27 varna: 不过至少可以给药元四这样的福克纳信者演示一下，即使要写轻小说风格的东西，文字也不必很轻快
+20:28 Mokou: 不过其实我比较在意的是他那句“网络小说味”
+20:28 varna: 你该多写点H
+20:28 Mokou: uccu
+20:29 Mokou: 大概是因为在我的印象中“网络小说” = “语病漫天错别字满地”
+20:29 Risitide: 差不多
+20:31 varna: 其实刚才那段口胡比较接近我吹逼时候的口语
+20:31 Mokou_ joined channel
+20:31 Mokou quit:Disconnected by services
+20:31 hope1 quit:Remote host closed the connection
+20:32 hope1 joined channel
+20:32 Mokou quit:Client Quit
+20:32 Mokou joined channel
+20:48 varna: 好想侵犯妹子啊！
+20:48 varna: 新人君给我介绍个可以H的妹子吧！
+20:49 Mokou: 你的芥菜短篇里不是有妹子么
+20:49 varna: 我当然懒得写恋爱故事
+20:49 varna: 这是个磕药故事
+20:49 iyzsong: - -
+20:49 varna: EEE!
+20:50 varna: 233song藏起了LEEE过激照片
+20:50 varna: 跟我们说没有
+20:51 varna: http://www.guancha.cn/broken-news/2015_10_06_336619.shtml 三哥……
+20:51 xxxxxxxx: 所以LEEE确认过是妹子了么?
+20:51 varna: 至少本名像是妹子
+20:52 xxxxxxxx: 如果从名字到性格都是可爱的男孩子怎么办?
+20:53 varna: 爆
+20:53 iyzsong: orz
+20:53 varna: http://tieba.baidu.com/p/4086156943 哈哈哈哈
+20:53 xxxxxxxx: 我觉着这是个对女性有优待的时代
+20:53 xxxxxxxx: 举个栗子就举羊驼
+20:53 Mokou: 为什么标题写着新语言内容却是Android
+20:54 Mokou: C语言*
+20:54 varna: 并不明白
+20:54 hope1 quit:Remote host closed the connection
+20:55 hope1 joined channel
+20:56 xxxxxxxx: 不过冰女的远程攻击形态挺好
+20:56 varna: http://tieba.baidu.com/p/4086150044 哈哈哈
+20:57 varna: Onto the DHs we touch
+20:57 Mokou: 哈哈哈哈哈哈
+20:57 * xxxxxxxx 一直看不清传说哥的子弹
+20:57 Mokou: http://tieba.baidu.com/p/4085816023 另外我这边怎么就没人上钩呢……
+20:58 varna: 你不够萌
+20:58 code_new quit:Ping timeout: 244 seconds
+20:59 Mokou: 萌系少女羊驼子
+20:59 varna: 卧槽裁判跪了
+20:59 Mokou: 裁判掉下去了
+20:59 xxxxxxxx quit:Read error: Connection reset by peer
+20:59 Mokou: 基佬掉下去了
+20:59 code_new joined channel
+20:59 Mokou: 裁判被捞上来了
+21:00 xxxxxxxx joined channel
+21:00 Mokou: 基佬被捞上来了
+21:00 xxxxxxxx: 我又回到地球了
+21:00 sismvg joined channel
+21:03 sismvg: ...2个月前被逼踢了一次头发。现在又要叫我剃头，好像我不去就像刨了祖坟一样。看见我爸那秃头我就明白为什么了。
+21:04 xxxxxxxx: 我敢保证你如果试图从别的角度解决问题你会被揍得很惨
+21:04 xxxxxxxx: 别的角度: 生发水 假发套
+21:04 tutu_wind quit:Ping timeout: 250 seconds
+21:05 Mokou: 哈哈哈哈哈哈
+21:05 Mokou: 那货直接把Android替换成C语言发出来了
+21:05 varna: 我都笑尿了
+21:05 Mokou: 因C语言应用采用Java语言而偷懒 
+21:05 varna: “因C语言应用包含Java语言而偷懒”
+21:05 xxxxxxxx: 跑得快的转贴人士
+21:06 Mokou: 在C语言平台开发iPhone应用 
+21:06 sismvg: 理解不能
+21:06 sismvg: 不都是object-c嘛。和C扯什么
+21:07 sismvg: http://tieba.baidu.com/p/4085670029
+21:07 sismvg: 漫画银河英雄传说第一话
+21:10 tutu_wind joined channel
+21:10 sismvg: http://www.ithome.com/html/it/180595.htm
+21:10 sismvg: 关于凤姐的传闻
+21:17 cleamoon_ joined channel
+21:20 varna: 我觉得C语言吧可以办个《存照报》了
+21:20 varna: 总有逗比
+21:21 sismvg: C88好悲惨。没有人扫俺妹的本子了。。。
+21:23 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.1/20150929144111]
+21:23 cleamoon_: 刚才到家附近的小卖部买泡面，偶遇一个朋友，只好装着互相没看见。毕竟都是有朋友圈的人，黄金周这几天他应该在法国，而我在马尔代夫。(zt)
+21:23 varna: 哈哈哈那楼主疯了
+21:23 Mokou: 哈哈哈哈哈哈
+21:23 wlemuel quit:Ping timeout: 246 seconds
+21:25 xxxxxxxx: 他父亲是不是姓廖?
+21:26 cleamoon_: 转一条评论：中医粉看到了中草药，中医黑看到了现代方法，女权主义者看到了女性，学位无用主义者看到了非博士，民族主义者看到了英语不好未留洋，脑回路不明者看到了文革和反美。科研黑们看到了非院士，PKU粉们看到了北大医药学系，蛤丝们看到了黑框眼镜。于是大家都很开心的过完了这一天。
+21:27 xxxxxxxx: 我觉得我太弱了 都没看到....
+21:28 ptbsare_ joined channel
+21:28 Risitide: 还有制度黑
+21:29 condy: wow 北斗神拳草莓味（
+21:30 xxxxxxxx: http://news.sohu.com/20151006/n422621626.shtml 这伙计运气比我好
+21:30 Mokou: 那楼主还在我面前自称朕
+21:30 Mokou: 然而我有天皇酱
+21:31 cleamoon_: 你们在说什么帖子
+21:31 xxxxxxxx: 我连地黄浆都没有
+21:32 varna: http://tieba.baidu.com/p/4086156943 http://tieba.baidu.com/p/4086229413
+21:33 cleamoon_: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/zy/t3_390647.jpg
+21:34 cleamoon_: 估计删评论了，看不到
+21:34 varna: 没事，可以看我的
+21:35 Mokou: 另外字体好花……是百度的锅还是？
+21:35 Mokou: 好象是百度的锅
+21:35 Mokou: 我本地没这么惨
+21:36 varna: 百度压的
+21:36 varna: 文泉驿微米黑没问题的
+21:36 Mokou: +
+21:41 xxxxxxxx: 我在那个帖子来了一篇哈哈哈
+21:42 varna: 2333
+21:43 varna: 这是什么，养土鸡么
+21:43 cleamoon_: 这个到底是在说什么
+21:43 cleamoon_: 23333
+21:44 varna: 这逗比似乎想一边水经验一边装逼
+21:44 varna: 结果被我戳穿三次
+21:44 varna: 啊，帖子没了 
+21:44 cleamoon_: 关键是我看不懂他在说什么呀
+21:45 cleamoon_: 我觉得删帖删评论什么的都太2了
+21:45 cleamoon_: 话说现在谁是吧主？
+21:46 varna: rox 亚夜花的姬/基友 亚夜花
+21:46 Mokou: 我存了HTML
+21:46 cleamoon_: 赶紧推了亚夜花呀
+21:46 cleamoon_: 我上，肉牛归你
+21:46 hope1_ joined channel
+21:47 cleamoon_: http://www.zhihu.com/question/26095733
+21:47 varna: 我舔亚夜花
+21:47 xxxxxxxx: http://www.yangji.com/yangjizixun/show-17612.html 原文
+21:47 varna: 机票亮了
+21:48 varna: Datuo Shi...
+21:48 condy: wow
+21:48 condy: 我发现提问的人是叔度唉（
+21:48 xxxxxxxx: 其实这篇文章的替换放在那个帖子里等于没做
+21:49 Mokou: 说起来，像我家这样上下行带宽对等的网络是不是在天朝比较少见……
+21:49 varna: 是
+21:49 hope1 quit:Ping timeout: 264 seconds
+21:50 xxxxxxxx: 我现在反正不等
+21:51 cleamoon_: 我的也不等
+21:51 Mokou: 我这里是对等的10M
+21:51 cleamoon_: orz
+21:51 xxxxxxxx: 我现在上传甚至还不如以前...
+21:52 cleamoon_: 限制上传是为了什么
+21:52 xxxxxxxx: 因为我得和别人分着用...
+21:53 Mokou: varna: 我发了一下原帖的html
+21:53 varna: 2333
+21:53 Mokou: 删贴就能跑了？拿衣服！
+21:53 varna: 噗，那货被rox处理了？
+21:54 xxxxxxxx: 噗噗噗
+21:54 xxxxxxxx: 串通吧务，谋权篡位
+21:54 Mokou: 这么快就处理了，会不会给人一种钦定的感觉啊？
+21:55 xxxxxxxx: 不是 只算是把他得罪了一下
+21:55 cleamoon_: 你问我兹呲不兹呲，我当然是兹呲的
+21:55 Risitide: 2333
+21:55 varna: 你们这些膜法师啊，乃义务！
+21:55 cleamoon_: 但是装逼也要根据基本法
+21:57 xxxxxxxx: 立次 和立此 什么区别?
+21:57 varna: 我打错字了
+21:58 Risitide: 蛤丝群体越来越壮大啊
+21:58 xxxxxxxx: 这叫背诵革命前辈语录
+22:10 code_new quit:Ping timeout: 250 seconds
+22:12 Mokou: 裁判掉下去了
+22:13 Mokou: varna: http://tieba.baidu.com/p/4086307310
+22:13 varna: 23333
+22:13 varna: 我先撤了
+22:13 varna quit:Quit: leaving
+22:19 hope1_ quit:Ping timeout: 240 seconds
+22:20 code_new joined channel
+22:21 code_new: ……发生了什么
+22:21 Mokou: code_new: 羊驼子撤退了
+22:21 Mokou: 总之先算完这回合剩下的吧
+22:22 cleamoon_: 1dd4ca1bb竟然没干过2bb，等级看来还是有用的
+22:23 cleamoon_: 还是A胜，121+125简直丧病
+22:24 code_new: 我这边在大概22:01就没有反映了，但是一直没重连……
+22:24 Mokou: ……
+22:24 code_new: 然后我等了15分钟，发现不太对……
+22:24 Mokou: ……
+22:24 Mokou: Freenode这几天似乎奇坑
+22:24 Mokou: 不确定是谁的锅
+22:24 code_new: ……
+22:26 code_new: 最后也不知道驼兄下了什么炮击指令……
+22:27 Mokou: ……
+22:27 Mokou: 有点蛋疼
+22:27 Mokou: 有围观群众吗
+22:27 cleamoon_: 我这里似乎没有很坑，是不是盖饭王的问题
+22:27 Mokou: iyzsong: 你有没有美军那边的炮击指令？
+22:28 Mokou: 有的话在美军频道发一下
+22:28 Mokou: code_new: 另外你先加一下双方频道吧
+22:28 code_new: 好的
+22:28 iyzsong: ==
+22:29 Risitide: 你们在玩啥啊..我还以为是舰娘
+22:29 Mokou: 确实有人在玩舰娘，不过我们这边是在推演兵棋
+22:31 Risitide: freenode上的?...
+22:31 Mokou: +
+22:31 code_new: c_lang_sk4_(ijn/usn/obs)
+22:32 code_new: LEEEsong不理我= =
+22:32 Mokou: ……
+22:32 Mokou: iyzsong: 在吗……
+22:32 Risitide quit:Remote host closed the connection
+22:33 Risitide joined channel
+22:33 iyzsong: 在 <_<
+22:33 Mokou: _(:з」∠)_你要是能看到的话麻烦发一下美军那边的炮击指令
+22:33 code_new: 快去usn的频道里看一下>_>
+22:35 Risitide quit:Remote host closed the connection
+22:35 Risitide joined channel
+22:35 condy: てへぺろ(·ω<)
+22:35 iyzsong: 凑合看吧 >.< => https://pastebin.mozilla.org/8848478
+22:36 * lh_mouse slaps condy around a bit with a large trout
+22:36 code_new: 不要发这>.<
+22:36 Mokou: 大丈夫，我没看
+22:36 code_new: 好的
+22:36 lh_mouse: 我没(shou)看(le)
+22:36 yzld2002 joined channel
+22:37 code_new: 我擦……
+22:37 Mokou: ……出什么事了
+22:37 code_new: 22:01:21 我在同一秒发了三条
+22:37 Mokou: ……
+22:37 code_new: 结果只发出去一条
+22:37 Mokou: ……
+22:37 Mokou: 节哀
+22:37 Mokou: 总之先算能结算的吧
+22:37 Mokou: 炮击战是同时进行的
+22:38 code_new: 所以最后驼兄也没有指令……
+22:38 Mokou: ……
+22:38 cleamoon_: ........
+22:38 iyzsong: 0 0
+22:38 cleamoon_: iyzsong, 话说这是什么client
+22:39 iyzsong: tmux/weechat 然而插件都关了，所以我是鼠标选了屏幕粘贴的..
+22:40 condy: =-=
+22:42 Risitide quit:Quit: Risitide
+22:45 Risitide joined channel
+22:45 Risitide joined channel
+22:46 Risitide joined channel
+22:53 * iyzsong AFK
+23:11 risitide1 joined channel
+23:20 risitide1 joined channel
+23:21 risitide1: /cs TAXONOMY #c_lang_cn
+23:22 risitide1: 为什么什么都没有发生..
+23:22 risitide1 left channel:"WeeChat 1.0.1"
+23:22 Mokou: ///msg chanserv TAXONOMY #c_lang_cn
+23:22 Mokou:  /msg chanserv TAXONOMY #c_lang_cn
+23:24 Risitide joined channel
+23:30 Risitide quit:Quit: Risitide
+23:33 Risitide joined channel
+23:42 Stevearzh joined channel

@@ -1,0 +1,143 @@
+00:08 matchray: clang trunk -Wconstant-logical-operand 很强了
+00:09 matchray: error: use of logical '||' with constant operand \n char* p = argc || a ? argv[0] : argv[1];
+00:09 matchray: note: use '|' for a bitwise operation
+00:09 lh_mouse quit:Ping timeout: 245 seconds
+00:10 matchray: 不知道以前爲什麼 warn_logical_instead_of_bitwise 不好用
+00:32 FrankHB quit:Quit: Konversation terminated!
+00:44 lhanjian: 毛子意识到了防弹衣过于坚硬的问题，上调了穿甲弹对护甲的损伤
+00:44 lhanjian: 不过这个战斗工兵大乱斗的问题恐怕还要持续一段时间
+00:45 lhanjian: 毕竟防弹插板这破玩意儿就是这么坚固
+00:54 FrankHB joined channel
+01:50 varna quit:Ping timeout: 260 seconds
+01:58 FrankHB quit:Ping timeout: 245 seconds
+02:07 FrankHB joined channel
+02:50 geordi quit:Remote host closed the connection
+03:12 geordi joined channel
+03:39 FrankHB quit:Ping timeout: 264 seconds
+04:03 FrankHB joined channel
+04:11 FrankHB quit:Ping timeout: 240 seconds
+06:06 zhangoke joined channel
+06:36 zhangoke quit:Quit: zhangoke
+09:33 lh_mouse joined channel
+10:00 FrankHB joined channel
+10:16 lh_ideapad joined channel
+10:32 cirno_ joined channel
+10:43 lh_ideapad quit:Remote host closed the connection
+10:44 cirno_ quit:Remote host closed the connection
+10:45 lh_ideapad joined channel
+10:45 cirno_ joined channel
+11:01 cirno_ quit:Remote host closed the connection
+11:02 cirno_ joined channel
+11:11 sixand joined channel
+11:12 lhanjian: cleamoon_: 这个喵厉害
+11:16 matchray: 你們爲啥沒趕上火車
+11:17 cleamoon_: lhanjian: 战神附体的喵
+11:17 lhanjian: matchray: 市内交通比预期的慢
+11:17 lhanjian: cleamoon_: 氪金喵眼
+11:23 matchray: 火車坐到哪裏？
+11:24 cleamoon_: 梨花酱去了哪里
+11:24 lhanjian: matchray: 回杭州啊
+11:24 lhanjian: cleamoon_: 之前四个人在上海，我和羊驼子回杭州
+11:25 matchray: 你也去杭州了嗎
+11:25 matchray: 阿里郎
+11:28 cleamoon_: orz
+11:28 cleamoon_: 我也想面基呀
+11:28 lhanjian: matchray: 我本来就在杭州，没在阿里
+11:28 lhanjian: cleamoon_: 来啊，飞杭州啊飞上海啊
+11:29 cleamoon_: 太热太贵
+11:30 cleamoon_: 今天斯都最高温22度
+11:31 cirno_ quit:Remote host closed the connection
+11:32 sixand1 joined channel
+11:32 cirno_ joined channel
+11:35 sixand quit:Ping timeout: 240 seconds
+11:35 sixand1 is now known as sixand
+11:40 matchray: github上面有個傢伙提issue。每次我要問問題第二遍才知道回答
+11:40 matchray: 垃圾
+11:40 matchray: 像是第一次永遠聽不懂一樣
+11:40 matchray: 沒那麼多耐心
+11:42 matchray: lh_mouse: 我的承受能力比較強。你可以直接close
+11:45 matchray: 因爲我代碼都沒讀就隨便PR了
+11:47 lh_mouse: matchray, 有额外的问题。
+11:50 matchray: 不知道clang mingw誰在搞。x86_64-pc-windows-msvc 挺好的
+11:50 lhanjian: cleamoon_: 真特么舒服
+12:00 cleamoon_: 有点小冷，夜里能到10度以下
+12:01 cirno_ quit:Remote host closed the connection
+12:02 cirno_ joined channel
+12:17 matchray: Lee Kuan Yew: "I have never believed that democracy brings progress."
+12:18 matchray: 一只老鼠的專案才搞得好
+12:18 matchray: clangd democracy搞得亂七八糟的
+12:31 cirno_ quit:Remote host closed the connection
+12:32 cirno_ joined channel
+12:43 zhangoke joined channel
+12:55 condy quit:Ping timeout: 256 seconds
+12:56 condy joined channel
+13:01 cirno_ quit:Remote host closed the connection
+13:02 cirno_ joined channel
+13:31 cirno_ quit:Remote host closed the connection
+13:32 cirno_ joined channel
+14:01 cirno_ quit:Remote host closed the connection
+14:03 cirno_ joined channel
+14:31 cirno_ quit:Remote host closed the connection
+14:32 cirno_ joined channel
+14:44 sixand quit:Remote host closed the connection
+14:50 sixand joined channel
+15:01 cirno_ quit:Remote host closed the connection
+15:02 cirno_ joined channel
+15:15 cleamoon_ quit:Quit: Connection closed for inactivity
+15:20 wl joined channel
+15:22 sixand1 joined channel
+15:23 sixand quit:Ping timeout: 245 seconds
+15:23 sixand1 is now known as sixand
+15:31 cirno_ quit:Remote host closed the connection
+15:32 cirno_ joined channel
+15:40 sixand quit:Quit: sixand
+15:42 FrankHB quit:Read error: error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac
+16:00 FrankHB joined channel
+16:01 cirno_ quit:Remote host closed the connection
+16:02 cirno_ joined channel
+16:16 lhanjian: https://usercontent.irccloud-cdn.com/file/6UZ1Exr9/image.png
+16:31 cirno_ quit:Remote host closed the connection
+16:32 cirno_ joined channel
+17:02 cirno_ quit:Remote host closed the connection
+17:02 cirno_ joined channel
+17:04 FrankHB quit:Ping timeout: 276 seconds
+17:10 FrankHB joined channel
+17:15 lh_ideapad: geordi, -c struct incomplete; struct foo { unordered_map<int, incomplete> map; };
+17:15 geordi: error: 'pair<_T1, _T2>::second' has incomplete type
+17:15 lh_ideapad: geordi, use --clang
+17:15 geordi: Success
+17:15 lh_ideapad: geordi, -c struct incomplete; struct foo { map<int, incomplete> map; };
+17:15 geordi: error: declaration of 'map<int, incomplete> foo::map'
+17:15 lh_ideapad: geordi, --clang -c struct incomplete; struct foo { map<int, incomplete> map; };
+17:15 geordi: Success
+17:22 cirno_ quit:Quit: WeeChat 2.1
+17:53 zhangoke quit:Quit: zhangoke
+17:56 wl quit:Quit: Leaving
+17:59 FrankHB quit:Ping timeout: 260 seconds
+19:36 iyzsong joined channel
+19:45 FrankHB joined channel
+19:47 iyzsong: Hello
+19:58 iyzsong-x joined channel
+19:59 iyzsong quit:Ping timeout: 240 seconds
+20:00 lh_ideapad quit:Ping timeout: 256 seconds
+20:19 lh_cat joined channel
+20:19 lh_mouse quit:Disconnected by services
+20:19 lh_cat is now known as lh_mouse
+20:33 lh_ideapad joined channel
+20:38 lh_mouse: geordi, -c struct incomplete; using tp = pair<int, incomplete>;
+20:38 geordi: Success
+20:43 whocares_2 joined channel
+20:43 whocares_2_ quit:Ping timeout: 256 seconds
+21:16 cleamoon_ joined channel
+21:20 lh_ideapad quit:Remote host closed the connection
+22:36 iyzsong-x quit:Remote host closed the connection
+22:40 condy quit:Ping timeout: 248 seconds
+22:41 condy joined channel
+23:18 lh_ideapad joined channel
+23:26 cirno_ joined channel
+23:28 iyzsong joined channel
+23:31 cirno_ quit:Remote host closed the connection
+23:32 cirno_ joined channel
+23:35 cirno_ quit:Client Quit
+23:38 matchray: fmv和textrel => sigsegv in glibc rtld
+23:49 lh_ideapad quit:Remote host closed the connection

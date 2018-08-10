@@ -1,0 +1,313 @@
+00:01 Sasasu quit:Quit: WeeChat 1.0.1
+00:13 tutu_wind joined channel
+00:17 tutu_wind quit:Ping timeout: 258 seconds
+01:34 xxxxxxxx quit:Quit: Leaving...
+01:58 lh_mouse quit:Read error: Connection reset by peer
+02:05 cleamooon quit:Ping timeout: 260 seconds
+02:20 Mokou: 睡觉
+02:20 Mokou: 诸君武运
+02:20 Mokou quit:Quit: 睡觉
+02:53 T-J-M quit:Quit: 上课去
+06:59 Sasasu joined channel
+07:15 Mokou joined channel
+08:07 Youmu quit:Quit: Connection closed for inactivity
+08:08 T-J-M joined channel
+08:17 FrankHB quit:Ping timeout: 258 seconds
+08:40 Xilzzerts joined channel
+08:44 FrankHB joined channel
+08:47 tutu joined channel
+08:49 tutu is now known as tutu_wind
+08:51 iyzsong-xx joined channel
+08:54 T-J-M quit:Quit: WeeChat 1.6
+08:59 tutu_wind: 早
+09:14 yimis joined channel
+09:21 tutu_wind quit:Ping timeout: 260 seconds
+09:22 T-J-M joined channel
+09:27 tutu_wind joined channel
+09:39 tutu_wind quit:Ping timeout: 252 seconds
+09:40 cc joined channel
+09:41 cc: 哦哈呦
+09:41 cc: 好安静哦
+09:42 cc joined channel
+09:43 cc: 有人用pidgin吗
+09:56 tutu_wind joined channel
+10:04 tutu_wind quit:Ping timeout: 256 seconds
+10:11 Xilzzerts quit:Remote host closed the connection
+10:12 Xilzzerts joined channel
+10:23 tutu_wind joined channel
+10:27 Mokou quit:Quit: Lost terminal
+10:36 Youmu joined channel
+10:39 tutu_wind quit:Ping timeout: 256 seconds
+10:45 tutu_wind joined channel
+10:54 tutu_wind quit:Ping timeout: 260 seconds
+10:56 tutu_wind joined channel
+11:04 lh_mouse joined channel
+11:09 tutu_wind quit:Ping timeout: 256 seconds
+11:19 cc: 8-)
+11:19 cc: 午饭时间了
+11:27 pjfloyd joined channel
+11:27 pjfloyd quit:Client Quit
+12:05 \f_ quit:Ping timeout: 244 seconds
+12:21 \f_ joined channel
+12:32 tutu joined channel
+12:32 tutu is now known as tutu_wind
+12:35 Sasasu quit:Ping timeout: 260 seconds
+12:43 iyzsong-xx: = =
+12:46 tutu_wind quit:Ping timeout: 250 seconds
+13:00 \f_ quit:Ping timeout: 240 seconds
+13:02 Sasasu joined channel
+13:09 Sasasu quit:Quit: WeeChat 1.0.1
+13:10 Sasasu joined channel
+13:16 \f_ joined channel
+13:24 tutu_wind joined channel
+13:33 xxxxxxxx joined channel
+14:19 iyzsong-xxx joined channel
+14:23 iyzsong-xx quit:Ping timeout: 260 seconds
+14:24 tutu_wind quit:Ping timeout: 250 seconds
+14:27 tutu_wind joined channel
+14:29 Xilzzert joined channel
+14:33 Xilzzerts quit:Ping timeout: 256 seconds
+14:37 tutu_wind quit:Ping timeout: 246 seconds
+15:08 lh_mouse: geordi, { foo f = { 1, 2 }; } struct foo : std::string { int a, b; };
+15:08 geordi: error: could not convert '1' from 'int' to 'string'
+15:08 lh_mouse: geordi, { foo f = { {}, 1, 2 }; } struct foo : std::string { int a, b; };
+15:08 geordi: <no output>
+15:38 lh_mouse: geordi, { foo f = { {}, 1, 2 }; } struct foo : std::string { int a, b; ~foo(){ } };
+15:38 geordi: <no output>
+15:39 lh_mouse: geordi, { foo f = { {}, 1, 2 }; } struct foo : std::string { int a, b; virtual ~foo(){ } };
+15:39 geordi: error: could not convert '{<brace-enclosed initializer list>(), 1, 2}' from '<brace-enclosed initializer list>' to 'foo'
+15:40 lh_mouse: FVCK
+15:40 lh_mouse: geordi, --clang { foo f = { {}, 1, 2 }; } struct foo : std::string { int a, b; virtual ~foo(){ } };
+15:40 geordi: error: no matching constructor for initialization of 'foo'
+15:40 lh_mouse: geordi, --clang { foo f = { {}, 1, 2 }; } struct foo : std::string { int a, b; ~foo(){ } };
+15:40 geordi: <no output>
+15:43 lh_mouse: geordi, --clang { foo f = { {}, 1, 2 }; } struct base { }; struct foo : base { int a, b; };
+15:43 geordi: <no output>
+15:43 lh_mouse: geordi, --clang { foo f = { {}, 1, 2 }; } struct base { virtual ~base(){ } }; struct foo : base { int a, b; };
+15:43 geordi: error: no matching constructor for initialization of 'foo'
+15:43 lh_mouse: geordi, erase virtual
+15:43 geordi: <no output>
+15:51 xxxxxxxxx joined channel
+15:53 xxxxxxxx quit:Ping timeout: 244 seconds
+16:42 xxxxxxxx joined channel
+16:45 xxxxxxxxx quit:Ping timeout: 256 seconds
+16:59 tutu_wind joined channel
+17:03 tutu_wind quit:Ping timeout: 248 seconds
+17:47 cc quit:Quit: Leaving.
+17:55 yimis quit:Quit: yimis
+18:15 Xilzzert quit:Quit: Leaving
+18:46 iyzsong joined channel
+18:47 iyzsong: (┙>∧<)┙へ┻┻
+18:53 FrankHB quit:Ping timeout: 260 seconds
+20:44 FrankHB joined channel
+20:51 whatofor quit:Read error: Connection reset by peer
+20:54 whocares_2 quit:Ping timeout: 248 seconds
+20:54 Mokou joined channel
+20:55 whocares_2 joined channel
+21:35 Mokou: http://ww3.sinaimg.cn/mw690/69fce6e5gw1f9oc92b0ybj20j50g377a.jpg 文化输出
+21:46 varna joined channel
+21:46 varna: _(:з」∠)_
+21:46 Mokou: 羊驼子冒出来了
+21:46 iyzsong: _(:з」∠)_
+21:47 varna: 值班结束了
+21:47 varna: 简直太费体力
+21:47 Mokou: 在我家那台上古时代的笔记本上装了个FreeBSD
+21:48 Mokou: 过两天我弄根网线，玩玩kqueue
+21:48 varna: 二手东还不降价，我决定明天烧个T440
+21:48 Mokou: OTL
+21:49 Mokou: 不去你司天猫上看看么
+21:49 varna: 我司假货都出口转内销了
+21:49 varna: 前段时间还有个农民被坑
+21:50 varna: 而且昨天手淘还抛了个异常，写着FANG_XUE_FENG
+21:50 varna: 不知道是否真的是个胡建来的异常
+21:50 iyzsong: 我在神坑项目里默默引入zope，写了一坨interface, event和adapter  感觉已经把python写成了java...
+21:50 varna: 你还需要一些工厂
+21:50 Mokou: FANG_XUE_FENG是什么鬼
+21:50 varna: 防雪崩
+21:51 Mokou: ……
+21:51 Mokou: 雪崩（呕）
+21:51 varna: 压力过大系统不响应时候的伪装限流措施
+21:51 varna: Java世界里有个叫Hystrix的库用来做这套事情
+21:51 Mokou: 666666
+21:52 iyzsong: 我的adapter直接适配 用户id 当工厂用...
+21:52 varna: 但是这个异常直接被抛到了最终用户面前
+21:52 iyzsong: 2333
+21:52 varna: iyzsong: 适配不是工厂，一般摆了工厂的话，第二方用户是可以踢掉实现的
+21:54 varna: 然后就是吃零食吃到崩
+21:54 varna: 各种烧烤，下午茶分批供应水果糕点KFC膨化食品
+21:56 Mokou: 今天我折腾了半天，给亚陆风云弄了个补丁
+21:56 varna: 哦对，我听说鬼怒二改了？
+21:56 varna: 还穿了雪菜服？
+21:57 Mokou: 二改了
+21:57 Mokou: 火雷惨不忍睹，不能带大发
+21:57 varna: 据说自带远征特效
+21:57 iyzsong: varna: 我看zope在里，工厂的话是 XXXFactor: id -> IXXX,  registerFactor, createObject(IXXX, id).  适配是 XAdapter(role_id)-> IXXX, registerAdapter, IXXX(id)  感觉一样...
+21:57 Mokou: 不能带甲标*
+21:58 Mokou: 远征大队长系列
+21:58 Mokou: 秋活18号，中规模
+21:58 Mokou: 据说这次之所以是中规模，是因为田中害怕提督打不过活动没人去看剧场版
+21:58 varna: iyzsong: 然而假如我是一个开发者用户，希望替掉你的一部分对象创建行为（比如为对象添加方法，或是改写对象的方法），但不改变适配，这时候我会先换掉工厂
+21:58 varna: 剧场版我要看
+21:58 varna: WAREAOBA
+21:59 Mokou: 操你妈！停火！是友军！
+22:00 varna: 看架势这次应该不会那么瞎打南西了
+22:00 varna: 似乎是萨沃岛海战吧
+22:00 Mokou: 据说最多五天打完，不知真假
+22:00 varna: 5藤少将：给我把他们都告上军事法庭（死
+22:01 varna: 哦对，我后面无线团队有个伙计入了个350拼好的B子
+22:01 Mokou: 关押三十分钟，罚金五万
+22:01 Mokou: ……
+22:01 Mokou: 多少钱
+22:01 varna: 当时我看后面一坨军舰色的玩意儿，看了十九分钟才发现是德国来的挫子
+22:01 varna: 不知道
+22:02 Mokou: 大和才是浪漫啊
+22:02 varna: 没桑能看？
+22:02 Mokou: 舰桥爆破，请
+22:02 varna: 估计我的话，岛风雪风小和三选一
+22:02 varna: 现在也没想好
+22:03 Mokou: 申幼女控N
+22:03 Mokou: 自首，请（无慈悲）
+22:03 varna: 小和那吨位不幼了
+22:04 Mokou: 也就大和一个炮塔
+22:04 varna: 不过买了雪风，也许我真被克死
+22:04 * Mokou 
+22:04 * Mokou 买了雪风
+22:04 varna: 考虑岛风吧
+22:05 Mokou: 最后那一下太慢了（岛风并感）
+22:05 Mokou: 不过我家鬼怒离改二还有14级呢
+22:05 varna: 麻烦死了，如果入了新电脑，又要迁移配置
+22:06 Mokou: 直接拆硬盘就是了
+22:06 varna: 别的不说，现在我手头有1.4k首歌要转移……
+22:06 Mokou: 我一直这么干
+22:06 varna: 不拆，硬盘老化了
+22:06 Mokou: 这次我去HK就这样，直接把硬盘和我妈笔记本的换一下
+22:06 Mokou: dd
+22:06 Mokou: 一晚上解决
+22:06 varna: 不干净，我还是重新做一点依赖好了
+22:07 varna: 至少这次我不会拖一大堆haskell
+22:07 varna: racket, clojure, R
+22:07 varna: 还有些奇怪东西
+22:07 iyzsong: orz
+22:07 Mokou: 比如防晒霜？
+22:07 Mokou: 那个，我家是有个阳台的
+22:08 varna: 沙
+22:08 Mokou: 哦对了，说到这个
+22:08 Mokou: 前几天有个新闻
+22:08 Mokou: 【女子相亲时被下药险被强奸 
+22:08 Mokou: 监控拍下全程】11月6日，江苏一男子为了满足自己的欲望，便在相亲的过程中向同行女子下药，还把她带到了宾馆企图性侵。监控显示,这对男女进入快餐店后点餐,服务员拿出饮品后男子将白色粉末倒进去。15分钟后女孩仿佛有点头晕,两人到宾馆开房。警方表示男子涉嫌强奸，已依法处理。
+22:08 varna: 沙
+22:08 Mokou: ^ Nonke就是逊啦
+22:09 varna: 我还以为是饼厂那个被逼出抑郁症的哥们儿
+22:09 Mokou: 抑郁症什么鬼
+22:09 varna: 一个运营被主管+HR逼得抑郁了
+22:09 varna: 在微博上长文声讨
+22:10 Mokou: 没看到……
+22:10 varna: 有时候在想，军棋可以改成某厂棋
+22:10 Mokou: 来个EU4的mod
+22:10 varna: 地雷=故障，炸弹=月饼
+22:11 Mokou: 给亚陆风云patch的时候我感觉clausewize还是挺不错的
+22:11 varna: 其余的按职位来
+22:11 Mokou: 用记事本和画图就可以解决绝大部分问题
+22:12 varna: 对了这次秋活送哪个美国货，Lex?
+22:12 Mokou: 特殊烟囱的航母
+22:12 Mokou: 基本上是Lex
+22:12 varna: 估计是了
+22:12 varna: 那么大一个
+22:12 varna: Lex的话，要再打一次珊瑚海么……
+22:14 iyzsong: varna: 反正就是 {B: A -> B}[B](a)  {}是registry， A -> B 叫什么无所谓啦 0 0
+22:15 varna: http://www.pixiv.net/member_illust.php?mode=manga&illust_id=59343904 超可爱的阳炎
+22:17 Mokou: 亚陆风云那作者还是没回我
+22:22 ToaNii quit:Read error: Connection reset by peer
+22:26 varna: 注册个新的百度帐号
+22:26 Mokou: C艹吧萌新？
+22:28 varna: 旧的被强制手机认证
+22:29 Mokou: 运营爆破
+22:37 cc joined channel
+22:51 Mokou: 噗
+22:51 Mokou: 掉了个翔鹤
+22:52 varna: 可怕
+22:53 varna: 这欧洲人捞鱼都一鹤一鹤的
+22:53 cc: 。
+22:54 varna: 烧点水，来碗黑芝麻糊
+22:54 * cc varna喜欢黑芝麻糊
+22:55 Mokou: 并不捞鱼
+22:55 Mokou: 日常5-4而已
+22:55 varna: 咦，这次作战不是珊瑚海啊
+22:55 cc: 每次主题都是小耗写的啊
+22:55 cc: 真有文采
+22:55 Mokou: 2333333333
+22:55 varna: cc: 我写的
+22:56 cc: varna: 文采飞扬
+22:56 varna: 横空、猫屋、三潜战……还有机动部队回援，这简直丧失
+22:56 Mokou: 文学兄贵suki
+22:57 varna: 而且还有对潜哨戒，这次要强调开幕反潜了？
+22:57 cc: 我再想要不要copy下来到我的频道- -！
+22:57 varna: cc: 军国主义色彩小心
+22:57 Mokou: 估计是
+22:57 Mokou: 不过能开幕反潜的船我应该都有了
+22:57 Mokou: 除了照月
+22:57 varna: 可怕
+22:57 varna: 啊，沼跃？
+22:57 cc: 阔怕
+22:58 Mokou: 小和级能堆出开幕反潜来
+22:58 varna: 素对潜要多少
+22:58 Mokou: 没丁的时候我就用小和级
+22:58 Mokou: 面板值一百，你算三式套
+22:58 Mokou: 基本上78素对潜
+22:58 varna: 面板一百啊，这个好办
+22:58 Mokou: 72*
+22:58 yimis joined channel
+22:58 varna: 小和对潜靠谱，想想齐柏林那次，我对潜担当里就有沼跃
+22:58 Mokou: 反正刚婚的天津风是不行的
+22:59 varna: 对了你的工具打算什么时候出手
+22:59 Mokou: 出国前夕
+22:59 varna: 噫吁戲
+22:59 Mokou: 毕竟等我折腾完这些事以后我还打算先把武藏搞定
+22:59 varna: 那要不你发我个清单，我采购一下……
+23:00 Mokou: 也行，这两天我列一下
+23:00 varna: 多谢多谢，这个辛苦了
+23:00 varna: 你的手皮还在武藏的桅杆上么
+23:00 Mokou: 清下来了
+23:03 varna: 开幕对潜是可行的舰都会来一遍？
+23:03 Mokou: +
+23:03 varna: 那挺好
+23:03 varna: 不太怕潜水姬了
+23:03 Mokou: 所以你看开幕反潜以后我炸潜水姬那么简单
+23:03 Mokou: 三轮对潜，根本不虚
+23:03 varna: 然而如果潜水姬杂在敌主力里，还是个麻烦
+23:04 varna: 让米空去扔垃圾桶，我是不愿意的
+23:04 Mokou: 扔九番茶
+23:04 Mokou: 道中敌人全部昏睡，直接躺赢
+23:05 varna: 下 北 泽 镇 守 府
+23:05 varna: 说个惨剧
+23:05 varna: 现在我撸管的时候，有时候会听到114514、810、1919
+23:05 Mokou: やりますねぇ！
+23:05 varna: 那一瞬间只能靠意志力强行屏蔽过去
+23:06 Mokou: HOMO特有的幻听
+23:06 Mokou: 你不考虑弄张先辈的胸的截图么
+23:06 Mokou: 打在上面
+23:06 varna: 真的会联想到这些，总觉得头脑过分活跃也不是好事
+23:06 varna: 连撸的时候都还保有高度的理性
+23:06 varna: 结果就引发了刻在DNA上的惨剧
+23:06 Mokou: 然而不高度活跃就会野兽化
+23:07 varna: 啊？这里
+23:07 Mokou: 这里喜欢（错乱）
+23:08 Mokou: 说起来我想给EU4来个逸国mod
+23:08 varna: 23333
+23:08 varna: 逸u4
+23:08 Mokou: 逸u4やりますね
+23:08 Mokou: 感觉EU4 mod起来还是很方便的，虽然坑多
+23:09 Mokou: 到时候我可以加上四次运营爆破大会的决议，以及一堆洗脑buff
+23:09 Mokou: 宗教用舰C创价淫梦车万bilibili干杯
+23:10 varna: 你漏了篮球
+23:10 iyzsong: _(:з」∠)_
+23:13 Mokou: http://picpaste.com/pics/OOCjeNLq.1478876983.png 1702的世界地图，感觉亚陆风云里大明还是太强了……
+23:16 varna: @各二万大丈夫教 @呀达呀达教（稀欧一宗） @洗吧福
+23:16 Mokou: 武藏龟头教
+23:17 varna: 现在各二万大丈夫教大概绝种了吧
+23:17 varna: 各二十万还差不多
+23:17 Mokou: 难说，这次秋活搞不好又能养出来一堆
+23:18 varna: 他们没小和（笑）
+23:19 iyzsong quit:Ping timeout: 258 seconds
+23:55 Meow-J quit:Remote host closed the connection
+23:56 Meow-J joined channel

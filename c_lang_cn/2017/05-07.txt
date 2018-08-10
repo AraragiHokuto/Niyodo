@@ -1,0 +1,951 @@
+00:34 nobodyzxc joined channel
+00:39 xhe quit:Quit: leaving
+01:33 FrankHB joined channel
+01:35 FrankHB quit:Read error: Connection reset by peer
+02:05 iyzsong quit:Ping timeout: 240 seconds
+02:06 lh_mouse quit:Ping timeout: 260 seconds
+02:18 nobodyzxc quit:Read error: Connection reset by peer
+03:00 Mokou quit:Remote host closed the connection
+03:54 cleamoon quit:Remote host closed the connection
+03:55 cleamoon joined channel
+05:41 CyrusYzGTt quit:Read error: Connection timed out
+05:42 whatofor quit:Ping timeout: 260 seconds
+05:42 CyrusYzGTt joined channel
+07:43 perr joined channel
+08:34 yimis joined channel
+08:35 alenstar joined channel
+08:44 xhe joined channel
+09:17 yimis quit:Quit: yimis
+09:57 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:44 Mokou joined channel
+10:45 dunderproto joined channel
+11:23 dunderproto quit:Quit: Lost terminal
+14:10 dunderproto joined channel
+14:49 nobodyzxc joined channel
+15:16 Mokou quit:Remote host closed the connection
+15:27 yimis joined channel
+15:46 yimis quit:Quit: yimis
+16:07 Mokou joined channel
+16:26 Dove joined channel
+16:37 Taggnostr quit:Ping timeout: 240 seconds
+16:40 Taggnostr joined channel
+17:00 neophylia joined channel
+17:12 Dove quit:Read error: Connection reset by peer
+17:21 Taggnostr quit:Ping timeout: 268 seconds
+17:23 Taggnostr joined channel
+17:44 lh_mouse joined channel
+18:03 nobodyzxc quit:Quit: leaving
+18:14 alenstar quit:Read error: Connection reset by peer
+18:16 alenstar joined channel
+18:52 varna joined channel
+18:52 varna: https://metacpan.org/pod/MoobX 准备试试这个，不知道好玩不好玩
+18:55 varna: 顺便体验了一下黑魂3三周目的前大半段+小姐姐+环印城40%，感觉老菊简直是在卖萌
+18:55 varna: 他的技术完全不用刷到308级再去揉小姐姐……
+19:11 lh_mouse: 昨天以前 cond var 的 spin loop 包含一个   barrier(); do { pause(); barrier(); } while(--n != 0); 的循环，
+19:12 varna: 对应你之前说的barrier提速？
+19:12 lh_mouse: 我把它改了下，现在是这样      barrier(); do { pause(); } while(--n != 0); barrier();        循环里面的 barrier 被挪外面去了。
+19:12 lh_mouse: 这个明显快了许多。现在已经吊打 windows 原生的那个 cond var 了。
+19:12 varna: hazard被强行消掉？
+19:13 lh_mouse: 另外，之前提到的 timed_wait 反而比较快的问题，和 mcfgthread 里面计时等待的函数被内联有关。这个是不正常的。
+19:13 lh_mouse: hazard 是指什么。
+19:13 varna: 原来如此
+19:14 varna: 或者换个问法，之前说的pause前后barrier提高性能的原因跟这个有关么？
+19:15 varna: 驲，Perl给我抛了一脸异常，仅仅因为一个校验和不符……
+19:15 varna: 八成是下载跪了
+19:15 lh_mouse: 因为 mutex 在第一次尝试锁定失败之后才会进入自旋，而这里必然会先有一个 pause；如果锁定之前进行了某些计算时间的函数调用，就有一种情况，这个函数调用的开销比一个 barrier + pause 要小，但是在线程执行这个函数的时候，另一个线程解锁了 mutex ，就可以在第一次尝试锁定的时候直接成功；否则就可能掉进 pause 里。
+19:15 lh_mouse: varna, barrier 的作用貌似只是暴力清掉了缓存。
+19:15 varna: ...
+19:16 lh_mouse: 不过按道理讲 pause 应该也有这个作用才对。
+19:16 lh_mouse: 而且这里 lfence 和 sfence 都没效果。只有 mfence 有用。
+19:16 lh_mouse: 不是很理解你们 intel 。
+19:16 varna: 必须上seq cst啊……
+19:16 lh_mouse: 对。 ACQ_REL 试了下没用。
+19:16 lh_mouse: 不过这里应该有区别。
+19:17 lh_mouse: x86 是强内存模型的，所以 __atomic_thread_fence(__ATOMIC_ACQ_REL) 是 noop 。
+19:17 lh_mouse: 但是我觉得不应该这样才对。
+19:18 lh_mouse: 开了 SSE2 之后， seq_cst 的 barrier 生成一个 mfence 指令；不开 SSE2 的时候生成的是 lock: or byte ptr[rsp], 0
+19:19 c_lang_noob joined channel
+19:19 lh_mouse: 结合之前的情况， __atomic_compare_exchange 给定 __ATOMIC_SEQ_CST 模型的时候，也只是简单生成了 带 lock 的 cmpxchg 指令。所以这里 lock 语义应该就是 seq_cst 模型。
+19:19 lh_mouse: c_lang_noob, 摸头。
+19:20 varna: (｡･ω･)ﾉ
+19:20 lh_mouse: mfence 应该和 cache validity 有关。只能猜到这里了。
+19:21 c_lang_noob: 大家有什么好的 IRC 频道晒一晒呗
+19:21 lh_mouse: 而且我没有别的环境可以测。（windows 支持 ARM ）
+19:21 lh_mouse: c_lang_noob, 新人要爆照的。
+19:21 varna: 缓存相关的协议太麻烦了_(:з」∠)_
+19:21 lh_mouse: 是这样。做好不容易。
+19:21 varna: windows的东西目前主打intel观望ARM就好
+19:22 varna: 讲个不是笑话的故事，arch其实官方只兹瓷intel兼容机
+19:22 lh_mouse: linux 一开始不是也被嘲笑是 i386 specific 么。
+19:23 varna: 说被嘲笑都不公平，他就是i386 specific
+19:23 c_lang_noob: 然而我刚从arch滚回windows，功力不够
+19:23 lh_mouse: 现在的 atomic 几个 model 实际上的区别ヲ也不是很掌握，只能模糊地知道该用哪个，而且实际上用哪个都不会错。
+19:23 varna: 毕竟intel...
+19:23 lh_mouse: x86 这种满地 relaxed 都不会错……
+19:24 varna: c_lang_noob: ？
+19:24 c_lang_noob quit:Quit: Page closed
+19:24 varna: 前段时间在厂里看到有人似乎搞了一波NUMA, 不知道情况如何
+19:24 lh_mouse:  Page closed
+19:24 varna: web freenode
+19:25 lh_mouse: 非对称内存？
+19:25 Mokou: varna: 悲报，现在活动不养两套北大已经很难打了
+19:25 lh_mouse: varna, webchat 那个谷狗的验证码……
+19:25 Mokou: 我就没打过这么硬的E12
+19:25 Mokou: 我就没打过这么硬的E2
+19:25 varna: lh_mouse: 非对称
+19:25 Mokou: 斩了10次才斩掉
+19:25 varna: puuu
+19:26 varna: 当然厂里还有个笑话：用Java做低延时系统……
+19:26 Mokou: GC，请
+19:26 varna: 最后他们还是撕破脸用了JNI
+19:26 Mokou: ……
+19:26 Mokou: 强行Java么
+19:26 varna: 但讲座上完全没说malloc/mmap挂了怎么处理
+19:26 Mokou: 爆炸啊
+19:26 lh_mouse: 吃 OOM killer 啦。
+19:26 Mokou: (｡･ω･)不然怎么处理
+19:27 varna: 他们想解决刷盘延迟，而Java的内存管理自然是悲剧，结果就JNI去了
+19:27 varna: 怪可怜
+19:27 lh_mouse: varna, 现在我们线上的某个服务器经常吃 oom 不知道他们加了什么奇怪的东西。
+19:27 varna: OOM真有人吃
+19:27 varna: 厂里有人搞了个JVM并发协程
+19:27 lh_mouse: 每次都是 overcommit 到六十几个 G 然后被干掉。
+19:27 varna: 然后推广
+19:27 varna: 一个哥们想着试试吧，然后压测，直接OOM
+19:28 Mokou: 666666666666
+19:28 varna: 但是我不知道他们压了什么奇怪的配置
+19:28 lh_mouse: varna, 实际上 virtual memory 就是非对称的。不过嘛。
+19:28 varna: 估计是连锁反应，非堆配小了，然后直接爆掉
+19:28 lh_mouse: numa 是情有可原的设计。
+19:29 Mokou: varna: http://www.bilibili.com/video/av10339881/ 这期STN快报提了2B的事
+19:29 varna: Mokou: 我已经忘掉涨价，并且删了第一波档
+19:29 Mokou: ……
+19:29 varna: 开了Hard难度之后发现这完全不是个废萌卖肉游戏
+19:29 Mokou: 你不是黑魂玩家么
+19:29 Mokou: 怕什么Hard
+19:29 varna: 初态第一个Boss就可以把我满血一击毙，怕倒是不怕，但死是客观的……
+19:30 Mokou: 你身为黑魂玩家怎么会还没死习惯
+19:30 lh_mouse: gcc 7.1 看来非常易爆。
+19:30 varna: 当然我有点玩过火了，冲着连续判定七个闪避，最后一下没闪开
+19:30 Mokou: uccu
+19:30 Mokou: 跟我这几天玩CSGO似的
+19:30 varna: lh_mouse: 搞出了什么新花样
+19:30 lh_mouse: 之前 gcc 在 32 位系统上为 long long 的除法会生成一个函数调用叫 __divmoddi4 。
+19:31 varna: 我记得他们指出自己换了一些builtin和寄存器分配算法
+19:31 lh_mouse: 现在他们决定，不在每个 TU 中生成这个函数，而是放进 libgcc 里……
+19:31 varna: ...
+19:31 lh_mouse: 于是一大票 -nostdlib 的就杯具了。
+19:31 varna: 这就一个驲字……
+19:31 varna: 我觉得这反C直觉
+19:31 lh_mouse: 目前 winpthread 已经躺了。我提了一个补丁把两个操作数 cast 成 double 。
+19:31 varna: TU内联才是坠吼的
+19:32 lh_mouse: cygwin 目测也躺了。
+19:32 Mokou: 是，不过gcc的意思不一直是不用libgcc就去死么
+19:32 Mokou: 现在osdev上都叫你用libgcc了
+19:32 lh_mouse: 没这么简单。
+19:32 lh_mouse: Mokou, 设想一个场景，你使用 linux 并且有一个 linux native gcc 和 gcc 源码。现在你想要一个 windows 的 native gcc 。
+19:33 lh_mouse: 你第一步是编译 gcc 源码，这样你得到一个 linux -> windows  的 cross gcc 。
+19:33 lh_mouse: 但是有个问题，你需要 windows 的 library 才能编译 windows 程序。
+19:33 varna: Mokou: 其实2B的废萌之处在于Normal可以脚打，但Hard得认真打
+19:33 varna: 最后一战，A2对9S连闪带砍，我觉得够简单了
+19:33 Mokou: lh_mouse: 他们会告诉你“自己移植去”
+19:33 lh_mouse: 这个 library 就是 windows 的那堆 DLL ，当然包括 winpthread ——这时候还没有 libgcc 呢。
+19:34 varna: 反过来9S对A2，三个入侵结束战斗……
+19:34 lh_mouse: 所以变成了一个鸡生蛋蛋生鸡问题。
+19:34 lh_mouse: Mokou, 本来 mingw 就是二等公民。
+19:34 varna: 所以兔站把gcc列入sucking列表是正确的
+19:34 Mokou: +
+19:34 varna: 想想p9p的理想
+19:35 lh_mouse: 9P?!!! （震惊）
+19:35 Mokou: 不过他们那个编译器太执着于传统C了吧
+19:35 varna: 兔子，兔子
+19:35 varna: 兔子很能生的
+19:35 varna: p9p/limbo/dis也是邪教
+19:35 varna: 但至少比gcc干净……
+19:35 lh_mouse: llvm 呢。
+19:36 varna: clang/llvm的文档是屑
+19:36 lh_mouse: libcxx 上次把那个 返回 int 的改成返回 bool 能气死人。
+19:36 varna: 而且我不信任苹果的品味
+19:36 Mokou: say apple. a-pple.
+19:36 lh_mouse: 坐等 4.1 发布。
+19:36 lh_mouse: a-poo-
+19:36 varna: 他们会把各种东西变成API“规范”的形式，而这个形式的道德恐怕来自swift社区
+19:37 lh_mouse: 何谓“规范”？
+19:37 varna: bool instead of int
+19:37 lh_mouse: 关键本来是返回 0 的……
+19:37 lh_mouse: 现在返回的 true ……
+19:37 varna: 我说不好，但如果你在js/nodejs/jvm-family族的用户里泡一阵子，就能感觉到他们的奇异口味
+19:37 Mokou: @stable_api_nonsense
+19:37 lh_mouse: 规范 TMB 哦。posix 规范就是返回 0 哦。
+19:38 lh_mouse: 你这个小捣蛋鬼，看在老天的份上，请不要继续无所事事下去吧。如果你继续这样不听话，我就要用靴子踢你的屁股了。
+19:38 varna: 但是她一脚踢到了我的牙……
+19:38 lh_mouse: 这东西还有人维护吗。
+19:38 lh_mouse: https://github.com/richox/libzling
+19:39 Mokou: 然后你得了青春期骨痛
+19:39 varna: 我记得月牛一年前写Java去了
+19:39 varna: Mokou: 说起来，玩黑魂3也有好多不礼貌的用户
+19:39 lh_mouse: 没文档。不如 mcfgthread。
+19:39 varna: 今天开个新档入侵别人，各种对端拔网线……
+19:39 Mokou: ……
+19:40 Mokou: 拔网线什么鬼
+19:40 varna: 黑魂连接是P2P的，断网的话游戏状态就中断了，强制结束联机
+19:41 varna: 因为没法在业务逻辑上仲裁哪一方掉线……
+19:41 Mokou: 我的意思是怎么还有心理这么叒的黑魂玩家
+19:41 Mokou: 真吉尔丢人，你退游戏吧
+19:41 varna: 鬼知道，最后入侵的一对是个德棍黑店
+19:41 varna: 一个叫BF109，一个叫ME262
+19:41 varna: 我上去一杀二，结果杀错了，先搞死了援助的白灵
+19:41 Mokou: @甲板着火
+19:41 varna: 世界主差一刀被我砍死之前断了网……
+19:41 Mokou: varna: 对了，关于新船
+19:42 Mokou: 海防舰60面板对潜就可以先制反潜，除此之外没有任何用
+19:42 varna: UGUME道歉吧
+19:42 Mokou: 甚至不能当DD跑远征
+19:42 lh_cat joined channel
+19:42 varna: 不能远征可以理解
+19:42 varna: 但立绘是shenmgui
+19:42 Mokou: 但大鹰很莉害
+19:43 Mokou: 可以先制反潜可以夜战反潜
+19:43 varna: ...
+19:43 varna: 瞎丁日设定
+19:43 Mokou: 毕竟田中已经黔驴技穷了
+19:43 Mokou: 我跟你讲，这次E4左边要求潜艇带路
+19:43 varna: ...
+19:43 varna: 新人没法玩啊
+19:43 Mokou: 然后C点有个能先制反潜的苍蝇
+19:43 varna: ...
+19:44 Mokou: 带着新飞机
+19:44 varna: 米孔女神
+19:44 Mokou: 新飞机没雷装
+19:44 Mokou: 但是反潜27
+19:44 Mokou: 但是反潜27
+19:44 Mokou: 但是反潜27
+19:44 varna: 我觉得就这个解法了
+19:44 varna: 这是逼人氪金，态度不好
+19:44 Mokou: 还好，磨血阶段可以用4CV洗地
+19:45 Mokou: 两波陆航+道中支援+8攻开幕基本可以保证对面只能打出一发先制反潜，把损伤遏止在中破
+19:45 varna: 明年这游戏估计药丸
+19:45 Mokou: 之后就是门口一白塔一爷爷四孙子
+19:45 varna: 我听说Y D K R还搞了个毛舰出来
+19:45 varna: 简直丢人
+19:45 Mokou: 甘谷特
+19:45 Mokou: 数据惨不忍睹
+19:46 varna: 不如营里上吊去
+19:46 Mokou: 而且她的日语很奇怪，感觉是看动画片自学的
+19:46 Mokou: 上来对这提督一句貴様
+19:46 varna: 23333333
+19:46 Mokou: 对着*
+19:46 varna: 「你小子」
+19:46 Mokou: 立绘勉强，总之我还是放置策略
+19:46 varna: 哦对，之前重新补了两支尼龙头的笔，全都废了，我简单总结下
+19:47 varna: 1. 刚买来的时候不错，改天补图
+19:47 Mokou: 短信我看到了，开叉是怎么个开法
+19:47 varna: 2. 几千字之后笔尖分叉软化
+19:47 Mokou: 和毛笔用久了类似么
+19:47 varna: 感觉像个拖把
+19:47 Mokou: ……
+19:47 varna: 而且会越来越像拖把
+19:47 Mokou: 掉毛了吧
+19:47 varna: 对比图也到时候补上
+19:48 varna: 3. 补墨之后分叉会继续恶化
+19:48 varna: 简直两个世界
+19:48 varna: 结论：不要买
+19:49 Mokou: 毛笔开叉有个救法
+19:49 varna: 毛笔分叉了还能救一下，这个我不知道怎么救
+19:49 varna: 越救越糟
+19:49 lh_mouse: 为什么消毒水弄到手上的味道和×液那么像。
+19:49 Mokou: 洗干净以后用蛋清浸泡，然后放置15min，之后洗净
+19:49 varna: lh_mouse: 说明你吃的防腐剂太多了……
+19:49 varna: 啊，这个我听说过
+19:49 lh_mouse: varna, 没吃……
+19:49 varna: ...
+19:50 Mokou: 如果这样还救不了，就只能换笔了
+19:50 varna: (｡･ω･)那就是你不慎摄入了一些毒你强！
+19:50 * lh_mouse slaps varna around a bit with a large trout
+19:50 * varna poies out loud
+19:50 lh_mouse: 出去溜达一会。
+19:50 Mokou: varna: 另外据说这次E5又有特攻，不过我还没试
+19:50 lh_mouse: 一天总坐着会生毛病的，
+19:50 Mokou: 第五战队的
+19:50 varna: 第五战队……
+19:51 varna: 所以什么时候给阳炎二改啊
+19:51 Mokou: H佬三天前用这个配置进了斩杀，现在在发疯
+19:51 varna: 阳炎那么可爱
+19:51 varna: 阳炎这个舰，她很好看
+19:51 Mokou: 改二，你们养颜别想啦
+19:51 Mokou: 阳炎*
+19:51 Mokou: 结论：玩FGO吧，美服杰克立绘多棒
+19:52 varna: 等我以后技术好了一定再入一套阳炎，重新做下
+19:52 varna: 稻芳比起阳炎还是少了点均衡感
+19:52 Mokou: 以后我倒是可以直接坐电车去买船膜了，不用淘宝了
+19:52 varna: (｡･ω･)ﾉ以后帮我买啊，我付你邮费之类
+19:52 Mokou: 可以有
+19:52 lh_mouse: 千里江陵吧。
+19:53 varna: 你们有一个好
+19:53 varna: 说到回京，跑得比谁都快
+19:53 * varna 膜法去污
+19:54 varna: 这次我也学学近几年时髦的响应式客户端写法
+19:54 Mokou: 噫，FGO第七章是谁写的，竟然不黑闪闪
+19:54 varna: 虽然Moooooooooooooose是悲剧，不过MoobX看着还不错
+19:55 Mokou: NoobX
+19:55 varna: 不过这个MoobX看起来还是弱了一点，响应函数的组合能力弱
+19:55 Mokou: 噗，蘑菇
+19:55 Mokou: 蘑菇居然不黑闪闪
+19:56 varna: 我觉得把废狗的剧情换成援交少女伊莉亚更好，反正都卵了
+19:56 yafejow joined channel
+19:56 lh_mouse: yafejow, 摸头。
+19:56 varna: yafejow: HELO
+19:57 yafejow: helo
+19:57 lh_mouse: HOLA
+19:57 varna: HALO
+19:57 Mokou: 魔法大妈远坂凛
+19:57 lh_mouse: IP地址: 113.140.11.123陕西省西安市 电信
+19:57 varna: irssi
+19:58 varna: 看来irssi的人气还挺高嘛……
+19:58 Mokou: nkkn，上来就探人底细
+19:58 varna: (｡･ω･)ctcp能算探人底细么
+19:58 varna: (｡･ω･)来一碗茴香豆！
+19:58 Mokou: 所以FGO这果然是卫宫一家子英灵吧
+19:58 Mokou: 凛和老虎都成英灵了
+19:58 varna: 对了，我之前试了下Ghost Recon Wildlands
+19:59 varna: 那感觉
+19:59 Mokou: 如何
+19:59 varna: 我X他大爷的
+19:59 lh_mouse: [19:57:47] -yafejow- VERSION irssi v0.8.21 - running on Linux x86_64
+19:59 lh_mouse: [19:58:49] -lh_not_bot- VERSION irssi v1.0.2-1~bpo8+1\
+19:59 varna: 疯狂掉帧
+19:59 Mokou: ……
+19:59 Mokou: 掉帧什么鬼
+19:59 varna: 好歹我那也是块1060啊……
+19:59 varna: 低画质40-60浮动，卡顿感明显
+20:00 varna: 简单来说就是没法玩
+20:00 Mokou: 哦对，这东西是育碧的
+20:00 Mokou: 育碧的东西你居然用1060就想跑
+20:00 varna: 最糟的是，性能做成这个样子，画面也并不好看
+20:00 Mokou: bug呢
+20:00 varna: 没来得及体验
+20:00 varna: 掉帧实在太严重了，我先扔库里存着
+20:01 Mokou: 育碧可是卖bug送游戏的公司，不体验精髓怎么行
+20:01 varna: 等我换卡之后再说
+20:01 Mokou: Vega，请
+20:01 lh_mouse: varna, 你是在阿里是吧。
+20:01 Mokou: 据吹Vega能超过1080Ti，不过游戏党的观点你懂得
+20:02 varna: 估计彩虹六号吃瓜比他要安定很多，但探员要花钱买太坑
+20:02 varna: lh_mouse: 对
+20:02 Mokou: varna: 买CSGO吧
+20:02 Mokou: 我现在觉得还是CS的手感爽快
+20:02 lh_mouse: varna, 阿里云服是不是有机器在扫公网端口。
+20:02 varna: lh_mouse: 阿里云不清楚，需要我去问下情况么
+20:02 lh_mouse: 不是很要紧，不用问。
+20:03 varna: 我用的ECS也都是内网机器，所以不清楚这块的做法
+20:03 lh_mouse: 拿阿里云的服务器开代理貌似会被查。
+20:03 Mokou: 之后我打算换个sakura的vps
+20:03 lh_mouse: 上次客服给我打电话要陪我停止这个行为。
+20:03 varna: 那种有可能，毕竟所有东西都有审计
+20:03 lh_mouse: 我一气之下把端口改成 3389 了。
+20:03 varna: 233333333
+20:03 lh_mouse: 然后消停到现在。
+20:04 lh_mouse: NMB 的再敢扫我就改成 22 。
+20:04 lh_mouse: 你们谁要用我给你开个账号。
+20:04 varna: 哈哈哈哈哈哈哈哈哈
+20:04 varna: (｡･ω･)ﾉ不用了
+20:04 lh_mouse: medusa 现在要求必须认证（配置文件里不写用户名是不让访问了）。
+20:04 Mokou: 我选择肉身翻墙
+20:04 varna: @jjgirls
+20:05 lh_mouse: medusa 返回 http 407 是 要求使用 digest 认证的。但是目前的客户端默认都是 basic 认证，所以这里不保险。
+20:05 lh_mouse: 被抓包可能把用户名密码漏出去。
+20:06 lh_mouse: curl 可以指定 --proxy-anyauth 别的就不知道了。浏览器这里还是靠谱的，我担心其他工具。
+20:06 CyrusYzGTt joined channel
+20:08 lh_mouse: 2017-05-07 17:35:23.963 01 [   N] INFO  ProxySession constructor: remote = 114.112.96.139:57673, fetch_uuid = 15BE2437-73B0-0635-DA76-A3F53F868A54 #src/proxy_session.cpp:573
+20:08 lh_mouse: 2017-05-07 17:35:23.963 00 [   N] DEBUG TCP connection established: local = 114.215.147.2:3389, remote = 114.112.96.139:57673 #src/tcp_session_base.cpp:142
+20:08 lh_mouse: 2017-05-07 17:35:23.963 01 [   N] DEBUG Proxy session connected: remote = 114.112.96.139:57673 #src/proxy_session.cpp:609
+20:08 lh_mouse: 2017-05-07 17:35:23.963 01 [P   ] DEBUG Received data from proxy client: remote = 114.112.96.139:57673, size = 43 #src/proxy_session.cpp:553
+20:08 lh_mouse: 2017-05-07 17:35:23.963 00 [P   ] WARN  Bad verb:    +&�     Cookie: mstshash=hello #src/http/server_reader.cpp:98
+20:08 lh_mouse: 2017-05-07 17:35:23.963 00 [P   ] INFO  Constructing Exception: file = src/http/server_reader.cpp, line = 99, func = bool Poseidon::Http::ServerReader::put_encoded_data(Poseidon::StreamBuffer, bool), message = Not Implemented #src/exception.cpp:14
+20:08 lh_mouse: 这个。好像有人移位是 RDP 的，每天都有。
+20:08 lh_mouse: s/移位/以为/
+20:08 varna: 毕竟3389……
+20:09 varna: 可以理解
+20:09 lh_mouse: 看阿里云有没有心情分析 3389 的流量了。
+20:09 lh_mouse: 拿这个端口开 HTTP 哈哈哈。
+20:10 * lh_mouse 出门。
+20:10 varna: 我猜按厂里的风格，应该不会去全量扫描
+20:11 xhe: 妙阿
+20:20 varna: Mokou: 现在我觉得挺遗憾的一点，是血源不会移植出PS4
+20:20 varna: 克苏鲁风格的故事应该很有意思
+20:20 Mokou: 要不然你入个PS4？
+20:21 varna: 不入了，太冗余
+20:21 varna: 四小姐机能并不太好，泛用性也不好
+20:21 Mokou: 日亚上一台四万日元，我说不定可以考虑下
+20:22 varna: 似乎血源是一开始给四小姐护驾的作品之一
+20:22 varna: 所以索尼死也不放手
+20:22 Mokou: http://wx4.sinaimg.cn/mw690/737a911fgy1ffd29bxisaj20rs0go76k.jpg 回老家吃芋吧.jpg
+20:23 Mokou: varna: 对了，记得我上次跟你说500以下的舰种ID快用完了么
+20:23 varna: 记得
+20:23 Mokou: 这次用完了
+20:23 varna: 233333
+20:23 Mokou: 他们给深海船ID加了1000
+20:23 varna: ...
+20:23 Mokou: 结果这次有人在安卓版上打通了E5，发现给了只人民教师
+20:24 varna: 哈哈哈哈哈哈哈哈哈哈哈
+20:24 varna: 这个好
+20:24 Mokou: 另外还有个不太相关的，是有人在活动图里捞出了山城改二
+20:24 Mokou: Lv1的山城改二哦
+20:26 Mokou: http://wx1.sinaimg.cn/mw690/e4beb8aegy1ff9e4g52uwj20xc0irjwt.jpg http://wx4.sinaimg.cn/mw690/e4beb8aegy1ff9egiezfdg20a205tb2g.gif
+20:27 varna: 哈哈哈哈哈
+20:27 varna: 明年舰C要不要完呢……
+20:27 Mokou: 估计药丸吧
+20:27 varna: 现在新玩家还多么
+20:27 Mokou: 这都四年了
+20:27 Mokou: 没看到太多
+20:28 varna: 没萌新就比较糟糕了
+20:28 Mokou: 不知道日本那边什么情况
+20:28 Mokou: 国内似乎不多了
+20:28 varna: 我个人的感觉，是他们自己硬生生把路子做窄了
+20:29 varna: 当然不可否认，萌豚怎么伺候都没用的
+20:29 varna: 即使你把蚀刻片和本体打包在一起卖一个素组的价，他们也不会在意……
+20:29 Mokou: 总觉得还是田中手下技术力不行，最后发现情怀不如坑钱
+20:30 varna: 运营的想法也局限了
+20:30 Mokou: 绫波！上！
+20:30 Mokou: E3绫波没能发威，E5接着用
+20:30 varna: (｡･ω･)你要斩杀啦？
+20:30 Mokou: E5刚开始
+20:31 Mokou: 打完E4以后我跑了会铝
+20:31 varna: (｡･ω･)哦，这次有绿条么
+20:31 varna: ...
+20:31 Mokou: E2 E3都有
+20:31 Mokou: E5分两段红条
+20:31 varna: ...
+20:31 Mokou: 换句话说，实质上是8张图
+20:32 varna: 八图四段锁
+20:32 Mokou: 萌新吃丙去吧
+20:32 Mokou: 所以这次我都没速攻
+20:32 Mokou: 搞不好我都能打死
+20:35 Mokou: KCWIKI这攻略居然上了菊花
+20:36 varna: 然而橘花有用么
+20:36 Mokou: 不知道
+20:36 varna: 另外输入法出卖了你
+20:36 Mokou: 故意的
+20:36 varna: ^ 给一
+20:36 Mokou: 总之我带上看看
+20:36 Mokou: 反正我还有十二万肛
+20:36 varna: 那还好
+20:37 Mokou: 妈的这攻略里一堆97友永……
+20:37 varna: 噗
+20:38 varna: 欧洲圣雄的攻略啊
+20:38 varna: 哪来那么多飞龙……
+20:38 Mokou: 飞龙不缺，这次活动我就掉了一堆
+20:38 varna: 可怕
+20:38 Mokou: 然而这不是给萌新看的优化攻略么
+20:38 varna: 你们这些欧洲人，真是太可怕了
+20:38 varna: 我一辈子也没见过十个飞龙
+20:38 Mokou: 还是说我跟不上时代了，现在的萌新都有几百个飞龙的
+20:38 varna: 有两个还是在2-3捞出来的
+20:39 Mokou: 因为你切肤了啊
+20:39 Mokou: 切腹*
+20:39 Mokou: 你不切腹这次你也掉一堆
+20:39 varna: 这次不算，还得能练出来的……
+20:39 Mokou: E3本来我还指望来个神威呢，结果一血飞龙二血苍龙
+20:39 Mokou: 整个人都二航二航二了
+20:39 varna: 海防舰立绘那么难看，不如妮可妮可妮
+20:39 Mokou: 神威是水母
+20:39 Mokou: 那个电推实验舰
+20:40 varna: 哦那个电推的……
+20:40 varna: Akira的立绘，感觉怪怪的
+20:40 Mokou: 似乎他打算玩阿伊驽风格
+20:41 Mokou: 神威这个词应该是阿伊驽人的崇拜对象，和かみ同源
+20:41 varna: 不过总比UGUME的惨剧，以及洗吧福的巨大惨剧要好
+20:41 varna: (｡･ω･)也就是说，是恥球
+20:42 Mokou: 吸巴福不务正业跑去画什么深海
+20:42 varna: 洗吧福的深海惨不忍睹
+20:43 lh_cat: varna: 有无心情写个聊天软件。
+20:43 Mokou: 而且还超叒
+20:43 varna: lh_cat: 要做什么功能？
+20:43 Mokou: 算上我削甲完顺手进击的两次总共四次击破
+20:43 Mokou: 北大都没能出手
+20:43 Mokou: 亏我还听攻略的把北大留给E3了，早知道这样不如给E2……
+20:44 lh_cat: 只是类似 irc，用 websocket 支持网页端。
+20:45 Mokou: (｡･ω･)ﾉ出击啦
+20:45 varna: 服务器中继的话，比起irc差别主要是websocket支持网页么……
+20:46 Mokou: 这次唯一有点用的装备就是航程7的陆战
+20:47 Mokou: 小和中破啦
+20:47 varna: 这次米空活跃么？
+20:47 Mokou: 完全没机会
+20:47 Mokou: E1反潜E2E3拼雷装
+20:48 Mokou: E4只有两个输出位，大家都用航巡
+20:48 lh_cat: 目前想法是这样。
+20:48 varna: 屑活动
+20:48 varna: lh_cat: _(:з」∠)_容我偷懒
+20:48 lh_cat: puu
+20:49 Mokou: 有一只小耗子在喷水
+20:49 lh_cat: Mokou: 咬你。
+20:49 Mokou: 橘花飞到一半挨了一炮
+20:50 Mokou: 果然我还是更喜欢水打……
+20:50 varna: _(:з」∠)_好想侵犯幼女啊
+20:51 Mokou: 啊，主任
+20:51 Mokou: varna: 去玩FGO
+20:51 varna: 不玩，太费肝了
+20:51 Mokou: 昨天我才发现美杜莎小时候这么棒
+20:51 varna: (｡･ω･)我还没用尬舞大剑通一回全boss呢
+20:52 Mokou: 啊，主任又来了
+20:52 Mokou: 我看看绕过主任点需要什么条件
+20:52 varna: (｡･ω･)昨天打到沙力VAN, 实在滚不过去了，羞耻地掏了大盾一条过，三周目的目标又失败了一个
+20:53 Mokou: varna: 另外刚才我才发现E4用的是幌筵航空队
+20:53 varna: ...
+20:53 varna: 上天之后每个人都发现自己体内少了一块肝
+20:53 Mokou: 噗
+20:53 Mokou: 绕过主任点的要求是打丙
+20:53 Mokou: 难度带路6666666
+20:54 varna: 哈哈哈哈哈哈
+20:54 varna: 针路上散发出冲天咸气
+20:54 Mokou: 甲等固定L->M，丙等复数第五舰队带路可以直通Boss，乙没情报
+20:54 Mokou: ……
+20:54 Mokou: 白天把院长轰下去了
+20:55 varna: 可怕的欧洲人
+20:55 Mokou: 院长老了
+20:55 varna: 下回换理事长
+20:55 Mokou: 现在理事长那点血甲也不够看吧
+20:57 Mokou: 毕竟阈值都到180了
+20:58 Mokou: 中破翔鹤一轮176……
+20:58 Mokou: 进夜战拿个S
+20:58 Mokou: 绫波CI啦！
+20:59 varna: (｡･ω･)
+20:59 Mokou: 看掉落
+20:59 Mokou: 好！
+20:59 Mokou: 时雨
+20:59 Mokou: 1-1掉落系列
+21:03 Mokou: 金刚对着只剩三血的HE打了个miss，之后这个HE蹭了大凤8点血
+21:04 Mokou: 噫，这次陆航防空是不是改机制了
+21:04 Mokou: 对面120架飞过来瞬间全空，我方一架没掉
+21:05 varna: 可怕的欧洲人
+21:05 varna: 吓得我不会说话了
+21:05 Mokou: 盘盘这样
+21:05 Mokou: 从E2开始
+21:05 varna: 加了血统判定
+21:05 Mokou: 然而我黑贞又沉了
+21:06 Mokou: 金刚大破
+21:06 Mokou: 前面还得和主任炮战，我退不退避呢
+21:07 Mokou: 不退了
+21:07 Mokou: 绫波79闪，退没了可惜
+21:07 varna: 可怕
+21:07 varna: 这人打了米孔
+21:07 Mokou: 我回港吃桶
+21:08 Mokou: 反正前段作战总共1200血
+21:10 Dove joined channel
+21:10 Mokou: 北方水姬-坏770血239甲……
+21:10 Mokou: 看这数据似乎不用特攻也能打
+21:10 Mokou: 而且到底有没有特攻还是一回事儿
+21:10 varna: 看上去还好
+21:12 Mokou: 特定の艦娘はボス艦隊(両方とも)に対して特効が乗る。対象は「那智、足柄、多摩、木曾、阿武隈、曙、潮、霞、不知火、初霜、Верный（改造前は対象外）」。
+21:12 Mokou: 倍率は1.2倍程度なので、火力の底上げ程度に考えてよい。ただしВерныйのみ、ほかの艦娘とは倍率が違い、1.5倍程度とかなり高い。 
+21:12 Mokou: ^ 日文wiki
+21:12 varna: ...
+21:12 varna: 全是去过阿留申的啊
+21:12 Dove: 这两天玩了玩风暴英雄，还挺好玩的。
+21:13 varna: Dove: 已撸130+h黑魂3……
+21:13 Mokou: 黑魂玩家 黑魂玩家.jpg
+21:13 varna: 什么时候d3出nec, 什么时候我重装战网客户端
+21:13 Mokou: @攻其阴睾
+21:14 Dove: varna: 跪大触，自虐游戏能玩130+h
+21:14 varna: 黑魂3本篇的难度已经明显下调了
+21:14 Mokou: 北上大人捂胸口了
+21:14 varna: 我玩到环印城DLC才感觉到有强调低失误率的桥段
+21:14 Dove: 对我来说大概还是太难，家里机器带不动，没试过。
+21:15 Dove: 赶紧攒钱换机器妈妈买的
+21:15 varna: 至于攻其阴睾的手法，已经形成了一些习惯，比如在玩2b小姐姐的时候习惯性绕背
+21:15 Dove: 2333
+21:16 varna: 尤其最后的孔子/老子boss战，强行绕背然而并没有背刺判定
+21:16 Mokou: 白天打完二队剩六个，对面本队剩两个
+21:16 Mokou: 院长剩33血
+21:16 varna: 可怕
+21:16 varna: 欧洲人一波斩杀
+21:16 Mokou: 然而这才二血
+21:16 Mokou: 而且万一来个猫呢
+21:16 varna: 欧洲人一气斩杀
+21:17 varna: 昨天E结局真给我猫掉一回……
+21:17 Mokou: 另外我才知道削甲同时也削院长
+21:17 varna: 进结局之后问我是否联网，选择是，然后联网失败
+21:17 Mokou: 怀疑院长被针对了
+21:17 Mokou: ……
+21:17 varna: 23333
+21:17 Mokou: 毕竟我没削甲都暴打院长了……
+21:18 varna: Dove: 你要相信，黑魂3是个割草换装恋爱养成游戏
+21:18 Dove: varna: 等我换了机器试一下。
+21:18 varna: 敌人会像割草一样割你
+21:19 Mokou: A胜掉空气
+21:19 varna: 换了什么装防御都差不多
+21:19 varna: 跟你恋爱的妹子都死了
+21:19 Dove: 看起来这个游戏比较现实
+21:20 varna: 不现实，完全不现实
+21:20 varna: 里面的妹子不是被相亲的就是来倒贴的
+21:21 Dove: 好吧，那妹子这部分就PASS了。
+21:21 Mokou: 这方面FGO比较现实
+21:21 Mokou: 妹子都是氪出来的
+21:21 varna: +
+21:22 Mokou: varna: 对了，前几天有张图
+21:22 Mokou: 某人在群里说他花了4000抽黑贞
+21:22 varna: ...
+21:22 Mokou: 回复：“4000都能找个黑贞coser日一顿了”
+21:22 varna: 说得好啊！
+21:22 iyzsong joined channel
+21:22 varna: 但是为什么我想到的是能买小姐姐亚区十次……
+21:22 Dove: 2333
+21:23 Mokou: 论为什么你还是处男
+21:23 varna: 论为什么我还是处男
+21:23 varna: (｡･ω･)作为一个动作游戏玩家，至今我都没达成看2B裙底十次的成就！
+21:23 Mokou: 你整天玩这些游戏能找到媳妇吗.jpg
+21:23 varna: (｡･ω･)我都是一段起跳一段冲刺接二段起跳看的！
+21:24 Mokou: 你应该穿上2b cos服，然后对着镜子看
+21:24 varna: 结果看到大吊
+21:24 Mokou: 正好微博上的程序猿女装大赛还没有C程序猿
+21:24 iyzsong: _(:з」∠)_
+21:24 varna: Mokou: 你去
+21:24 Mokou: 我是C艹程序猿，不是C程序猿
+21:24 lh_mouse: 两个女装子。
+21:24 varna: 那你和米库酱CP一下
+21:25 Mokou: 他自己来就可以了
+21:25 varna: 前方有男，也就是说，女装很有用
+21:25 Mokou: 飞龙中破了
+21:25 varna: \葛温德林/
+21:25 Mokou: uccu
+21:26 Mokou: 翔鹤中破了
+21:27 varna: 我鹤没有一发大破已经很不错
+21:27 Mokou: 毕竟主任手下留情了
+21:27 varna: 对了，昨天我看到一个做700苍龙的
+21:27 varna: 水贴穿帮，甲板上搞出了识别字
+21:27 Mokou: 233333333
+21:28 Mokou: 考据不精
+21:28 Mokou: 噗
+21:28 Mokou: 是苍蝇打的
+21:28 varna: 模型倒是做得很漂亮，但是考据死在了最明显的地方……
+21:28 Mokou: 主任根本没打中
+21:28 varna: 我鹤一贯风格
+21:28 Mokou: (｡･ω･)就你个苍蝇不长眼
+21:28 Mokou: 也不算，毕竟这次苍蝇的新飞机很诡异
+21:28 varna: 又换飞机了？
+21:29 Mokou: 空袭各种打不出伤害，炮击各种发威
+21:29 Mokou: 就是那个反潜飞机
+21:29 varna: 能看出是什么飞机么
+21:29 Mokou: 反潜27爆装忘了，应该没雷装
+21:29 lh_mouse: http://music.163.com/#/song?id=22725549
+21:30 varna: http://music.163.com/#/song?id=593814 同推一首
+21:30 varna: Mokou: 只是带深弹的舰攻？
+21:30 Mokou: +
+21:31 Mokou: wiki上叫鸟型舰攻
+21:31 varna: 数值设定里混入了洗甲板神教的邪教徒
+21:32 Mokou: 噫，这反航
+21:32 Mokou: 打完对面剩四个
+21:32 Mokou: 北上大人还挂了
+21:32 Mokou: 怕是要刁民
+21:32 varna: 不太明白这是个什么攻击机
+21:33 Mokou: 夜战
+21:33 varna: (｡･ω･)血统时间
+21:33 Mokou: 绫波CI啦
+21:33 Mokou: 绫波打对啦
+21:33 varna: 可怕
+21:33 Mokou: 然而没打死
+21:33 varna: 还有人补刀么
+21:33 Mokou: 127/400
+21:33 varna: 绫波先手一般打不死
+21:33 Mokou: 大井打错两发还miss了
+21:33 varna: @打大井
+21:33 Mokou: B子去拍撸爷了
+21:34 varna: 跪了
+21:34 Mokou: 小和和北上已经挂了
+21:34 varna: 小和……
+21:34 Mokou: 小和本来就没指望，不过北上大人没活过闭幕雷击
+21:34 varna: _(:з」∠)_啊，现在350小和卖得好贵啊
+21:34 lh_mouse: https://files.lhmouse.com/gcc-mcf-packages_2017-05-03/
+21:34 varna: 为什么会比田宫阳炎还贵呢
+21:36 Mokou: varna: 新飞机命中18对潜27
+21:36 varna: ...
+21:36 Mokou: 名字大概叫深海哨戒鹰
+21:37 varna: 还是不明白这是什么飞机
+21:37 Mokou: +
+21:37 Mokou: “深海攻撃哨戒鷹改”
+21:37 varna: 舰攻板砖上天的顶点已经是TBM/F了吧
+21:38 Mokou: 不对
+21:38 Mokou: 火力+5 対空+9 装甲+3 対潜+27 回避+4 索敵+3 命中+9 爆装+18 射程超長 
+21:38 varna: 可怕
+21:38 Mokou: 日本论坛上的数据
+21:38 Mokou: 难不成是架空产物……
+21:38 Mokou: 或者是战后物
+21:38 varna: 这像个multirole...
+21:39 Mokou: +
+21:39 Mokou: 对空对潜爆装
+21:39 Mokou: 战后了吧
+21:39 varna: 而且还是上位制空力和爆装
+21:39 Mokou: F-15E Strike Eagle?
+21:39 varna: 怎么都像是机炮挂仓和武器挂点的产物……
+21:39 Mokou: 名字很像
+21:39 varna: 有点，但参数低了
+21:40 Dove: 我去洗个澡
+21:40 varna: 估计是考虑到机载武器对老式硬壳目标的彻透力不足
+21:40 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:40 varna: 但制空太少……
+21:40 Mokou: 平衡考虑？
+21:41 varna: 而且E系列应该是米畜的电子战款式？索敌也有点少ppoi
+21:41 varna: 估计是multirole的第一次尝试，平衡掉了
+21:41 Mokou: +
+21:41 Mokou: 86年的玩意都出来了……
+21:42 varna: @防空水姬
+21:42 Mokou: (｡･ω･)打个屁，签字吧
+21:42 Mokou: 小和大破金刚中破
+21:42 Mokou: 我退避一下吧，毕竟门口了
+21:42 varna: (｡･ω･)坐等各式雷达垂发RPG速射炮
+21:42 Mokou: 虽说少个绫波……
+21:43 varna: 啊，想起来我库里还有套皇牌空战土鸡地平线没下
+21:43 Mokou: 果然又是你个苍蝇在搞事
+21:43 Mokou: 搞事 搞事 搞事
+21:43 varna: 之前遇到致死性bug没能玩起来
+21:43 Mokou: ……
+21:44 varna: 打三分钟之后就会无限卡顿
+21:44 Mokou: 掉了一个NKC48
+21:44 varna: 可怕
+21:44 varna: 活动图都能捞出NKC, 简直是欧洲人
+21:44 Mokou: 欧个丁日
+21:44 Mokou: 你切腹以后不久活动就开始1-1掉落了
+21:45 Mokou: 666666
+21:45 Mokou: 这次是3vs3
+21:45 Mokou: 越来越惨
+21:45 Mokou: 这次回去我上个支援算了
+21:45 varna: 这欧洲人居然不双支援
+21:45 varna: 真可怕
+21:45 Mokou: 刷闪太麻烦
+21:45 Mokou: 而且前几盘陆航没这么划水
+21:46 varna: 偷懒支援可以用航天战舰
+21:46 Mokou: 主要是命中考虑
+21:46 varna: 一波洗过去，刷闪很快
+21:46 varna: 电探……
+21:46 Mokou: 32只有六个
+21:46 Mokou: 而且航天舰战没婚
+21:46 Mokou: 差了30级呢
+21:46 varna: (｡･ω･)你对我桑的爱不够啊
+21:46 varna: (｡･ω･)买个700新金谢罪吧
+21:47 Mokou: (｡･ω･)你桑范用性不够
+21:47 Mokou: 哦对了，说到航天战舰
+21:47 varna: (｡･ω･)乱说，我桑横着竖着都能顺利爆炸
+21:47 Mokou: http://wx4.sinaimg.cn/mw690/e4ff1178gy1ffaw4iks6tj20u00wjtdg.jpg
+21:47 varna: 这图槽点太多
+21:47 Mokou: B子被打死了
+21:47 Mokou: 北上大人打错了，还miss了
+21:47 Mokou: GG
+21:49 Mokou: 绫波去趟1-5
+21:51 Mokou: 66666666
+21:51 Mokou: 我才发现我没给B子带炮
+21:51 varna: 2333333333333
+21:54 Mokou: 不对，我知道什么情况了
+21:54 Mokou: 我先给二队上的装备，然后给一队战舰上炮的时候直接用其他舰娘模式
+21:54 Mokou: 然后就被拆走了
+21:55 varna: ...
+21:55 varna: UI做得太奇葩了
+21:56 Mokou: 噗
+21:56 Mokou: 有人指出F-15E不能对潜
+21:56 Mokou: 应该不是这个
+21:56 Mokou: 基本确认了
+21:57 Mokou: 喷气机的最大效果是没效果
+21:57 Mokou: 不知道写攻略的在想什么
+21:57 xhe quit:Quit: leaving
+22:00 Mokou: 啊对了，这次E5据说有bug
+22:00 varna: 会掉落田中？
+22:00 Mokou: 斩杀以后似乎会绕路
+22:00 varna: ...
+22:00 Mokou: 不用速吸进Boss直接空弹药
+22:00 Mokou: 听说你们想捞船？
+22:00 varna: 也就是说，找的新程序员还是个渣
+22:01 Mokou: 日本的程序猿不都这样么
+22:01 varna: 枕营业嫌疑
+22:01 Mokou: 他们给Mastodon写了个平板端，你猜怎么写的
+22:02 varna: 内嵌IE空间？
+22:02 varna: 控件？
+22:02 Mokou: 全屏webview
+22:02 varna: ...
+22:02 Mokou: 你打开客户端能看到我朝运营商塞进网页的广告飘在半空中
+22:02 Mokou: 要你这客户端何用系列
+22:04 Mokou: 啊，我看到一个四血刁民
+22:05 Mokou: 还是主任仁义
+22:07 Mokou: 41/400 6vs1
+22:07 Mokou: 这把斩不掉我打人了
+22:08 Mokou: 噗
+22:08 Mokou: 开幕空袭轰掉院长241血
+22:10 Mokou: 斩了
+22:10 varna: otl
+22:11 Mokou: 绫波一发CI糊脸毫无悬念
+22:11 Mokou: 削甲去
+22:16 alenstar quit:Ping timeout: 240 seconds
+22:18 Dove joined channel
+22:24 yafejow quit:Ping timeout: 240 seconds
+22:27 paper_octopus: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yr/nx_63779.jpg@596w_1l.jpg  这声明啥意思
+22:29 Dove: 我还以为是代码
+22:31 Dove: 貌似是说内容要比第一次体验多
+22:31 varna: paper_octopus: 要完整体验剧情，需要打四个周目
+22:31 varna: 虽然三周目最后的分支是可以快速选关过的
+22:31 Dove: 字太小看不清还不说人话
+22:32 alenstar joined channel
+22:32 varna: 在第四周目末，如果选对选项的话就可以进入真结局
+22:32 varna: 真结局里可以删档留念
+22:33 Dove: 2333
+22:33 varna: 我就义无反顾地选择删了
+22:34 paper_octopus: 四周目... 删档... 为什么...
+22:34 Mokou: 因为蛋疼？
+22:34 varna: 一二周目是同一个故事的两种视角，游戏体验也不同（2B小姐姐走近战路线，9S则是射击小游戏风格）
+22:35 Mokou: 噫
+22:35 varna: 三周目接续一二周目的故事，在正常结局的情况下有三种分支
+22:35 Mokou: 我才发现后段空袭我方基地的飞机是从堪察加半岛飞过来的
+22:35 Mokou: 果然德国已经完了么
+22:35 varna: 如果进入真结局，就要跟staff玩弹幕游戏，他们都是敌机，最后基本躲不过去，会有玩家存档来当僚机援助
+22:36 varna: 原则上来讲，跑过来当僚机的都是删了档的；不过一个存档能用几回，我就不知道了
+22:36 Mokou: 这什么诡异机制
+22:36 varna: 如果这些都打完了，最后会有全存档删除留念选项，选了的话就能给别人当僚机去了
+22:36 Dove: 那必须选啊
+22:37 varna: 反正一个动作游戏，而且本着兹瓷小姐姐的原则，我就删了……
+22:37 varna: (｡･ω･)但我很清楚我兹瓷小姐姐是因为造型可爱而不是什么剧情感人
+22:38 Dove: 2333
+22:38 Mokou: B站的FGO第六章翻译一堆人哭得稀里哗啦，我面无表情
+22:38 varna: (｡･ω･)火鸡场里哪个伙计死得不比你们惨
+22:38 Dove: 你们的爱呢
+22:38 Mokou: 啊，削甲成功了
+22:38 Mokou: 然而夜战5vs4
+22:39 varna: (｡･ω･)他们有被我塞了黑暗圣经坑死的，有两个尬舞尬死的，还有些不知道怎么就死在路边的
+22:39 paper_octopus: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yq/m6_476855.jpg@596w_1l.jpg ？？？
+22:39 Mokou: 果然没陆航还是不行
+22:39 varna: (｡･ω･)好像都和灰烬大人有关
+22:39 Dove: 我感觉我要被黑暗圣经坑死
+22:39 varna: 2333333333333
+22:39 Dove: 2333
+22:40 Mokou: 66666666666
+22:40 varna: 黑暗圣经其实是这样的
+22:40 varna: 一周目我听说艾尔德里奇弱沉默，于是赶在周目结束之前学到奇迹
+22:40 varna: 二周目用沉默奇迹凹死他，想着走一回剧情吧，就把黑暗圣经给了圣女，圣女被玩坏
+22:41 Dove: 2333
+22:41 varna: 三周目我还想用沉默奇迹凹他，而且耍帅不拿盾，被他活活砍死
+22:41 varna: 一怒之下操了个大盾，流水帐一样把他剁翻
+22:41 varna: \葛温德林/
+22:43 paper_octopus: https://www.zhihu.com/question/59441691?utm_source=com.mcxiaoke.minicat2&utm_medium=social
+22:43 varna: @拥抱变化
+22:43 paper_octopus: 沉迷扶她
+22:44 Dove: 都尼玛博士了，失个学没什么不好。
+22:44 dunderproto quit:Remote host closed the connection
+22:44 varna: 葛温德林是伪娘不是扶她
+22:44 Mokou: 然而那本子是扶他本
+22:45 Mokou: 简直暴殄天物
+22:45 paper_octopus: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yq/e2_488310.jpg@596w_1l.jpg nb
+22:45 paper_octopus: http://www.vgtime.com/topic/572128.jhtml  买买买
+22:45 varna: 那本子有一点不好
+22:46 varna: 里面提到太阳长子
+22:46 varna: 那货干死我不知道多少回
+22:46 Mokou: 2333333333
+22:46 varna: 至少二十次
+22:46 Mokou: 叫你玩什么黑魂游戏
+22:46 Mokou: 你看我就不玩
+22:46 varna: 至今我打他也打怵
+22:46 paper_octopus: 噗，某人天猫买的虾仁里有魔芋做的假货...  http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yp/x7_102947.jpg@596w_1l.jpg
+22:46 paper_octopus: 太阳长子是谁
+22:46 Dove: “我不知道一个认真学习，认真准备出国，认真生活的学生为什么在这个项目中得到这样的对待。”在读博士的想法都这样么？
+22:47 paper_octopus: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yq/4t_445717.jpg@596w_1l.jpg  果然央视和我们不生活在一个次元
+22:47 varna: paper_octopus: 葛温的长子，猎龙战神，后来和古龙结盟被放逐了，在三代里出场，就是古龙顶的无名之王
+22:48 varna: 一共两条血三个阶段，招式比较刚猛，容易被打崩
+22:49 varna: 三代里有关古龙最囧的还是劝退哥霍克伍德的遗言
+22:49 varna: 你聋！你比我还聋！（Ah, you are the dragon. More dragon than I...）
+22:50 paper_octopus: .......
+22:50 paper_octopus: 完全没印象
+22:51 varna: 本来一个挺有故事的战斗
+22:51 Dove: 圣经读到申命记了，摩西是死在这一篇么？
+22:51 Dove: 看前面的剧情他似乎该挂了
+22:51 varna: 约书亚记头上，利未/申命/民数尾上
+22:52 varna: 摩西五经的后三章基本都是声明性质的
+22:52 varna: paper_octopus: 本来挺有故事的战斗，劝退哥终于不持盾了，掏出法兰大剑在不死队要塞和不可燃垃圾决斗
+22:52 varna: 尬舞失败之后会说这么个台词
+22:53 Dove: 利未和民数我读完了，他暂时还没死
+22:53 varna: 不过劝退哥的法兰剑法是买家版本的，所以如果不用直剑刚他的话就很没威胁
+22:55 paper_octopus: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/yp/nx_490183.jpg@596w_1l.jpg 你司
+22:55 varna: 正常
+22:55 paper_octopus: 劝退哥应该设计厉害点
+22:56 varna: 有人的体感是劝退哥比不死队全员厉害
+22:56 varna: 这代的劝退NPC是火鸡场出门右拐的打刀哥
+22:57 lh_cat quit:Quit: Connection closed for inactivity
+22:57 varna: 确实挺强的，不过初始选骑士的话还是可以安定通过
+22:58 varna: 不额外加点的情况下双手持长剑，四次战技重击后接适量平砍差不多就放倒了
+22:58 paper_octopus: 打刀哥不是嘲讽哥吗
+22:58 varna: AI不太会把握居合的距离
+22:58 varna: 所以基本上他的居合都挥空了
+22:58 varna: 嘲讽是不死队那位
+22:58 varna: 进门之后蹲在台阶上
+22:59 paper_octopus: 劝退哥不应该给人的感觉就是“你这么牛逼你怎么不去传火呀”
+22:59 varna: 后面还能看见他去疑似阿尔特留斯的墓前面吊唁
+22:59 paper_octopus: 咦... 我把两人记返了...
+22:59 varna: 打刀哥不说话的，他见你就砍……
+23:00 paper_octopus: http://www.solidot.org/story?sid=52311
+23:00 Mokou: 网络爆炸中，待会再打
+23:00 paper_octopus: .......
+23:01 varna: 不过奇怪的是阿尔特留斯为什么会被埋在火鸡场外面
+23:01 varna: 在无主墓地的同样位置可以拿到迷妹基亚兰的戒指，比较说明问题
+23:03 Dove: 2333
+23:03 Dove: 睡觉去了，明天还要去干活。
+23:04 Dove: 早起啊早起，真是要命，本来就失眠得厉害就趁早上睡一会儿。
+23:04 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:04 varna: NPC里最大的清流就是薄暮国的希里丝
+23:04 varna: 穿衣服有品位，作派也正，不喝血不持盾
+23:04 varna: 经常被各种敌人砍死
+23:05 paper_octopus: .......
+23:05 varna: 希里丝回血都是原地凹一个奇迹大回复……
+23:06 varna: 而能招她打的boss也都比较刚（猎龙铠甲和圣弟压哥）
+23:06 varna: 以至于我产生了圣地亚哥不招她打还好过点的错觉
+23:07 paper_octopus: 这个倒是常见
+23:08 varna: 大王子的招式经常能砍到身后，感觉用别人吸引火力还不如持盾绕后套路
+23:09 varna: 至于猎龙铠甲，我最后也没研究出来怎么让他坠崖死，应该是只能砍翻
+23:10 iyzsong quit:Ping timeout: 246 seconds
+23:10 iyzsong joined channel
+23:12 varna: 哦对
+23:12 alenstar quit:Quit: Leaving.
+23:12 varna: 经常也能见到火鸡场篝火旁边有人死
+23:12 varna: 基本都是持盾状态的劝退哥或者尤利雅搞出来的
+23:13 paper_octopus: 如果所有死的人都会留一片血迹的话估计地图可以直接改成红色了
+23:13 varna: +
+23:14 varna: 总有人觉得，啊，尤利雅是坏人，看着又柔弱，干脆砍死算了
+23:14 varna: (｡･ω･)这么想的人都没见过她硬吃一套葛温五连斩站起来接着怼正面的英姿
+23:15 varna: (｡･ω･)当时我看着就感觉，MDZZ
+23:15 Mokou: 看起来越柔弱战斗力越高不是定则么
+23:15 paper_octopus: 看起来柔弱的不一定柔弱，看起来牛逼的一定很牛逼
+23:15 Mokou: 就像暴露程度与战斗力的关系一样
+23:15 varna: 那个五连斩我吃了基本爆破
+23:15 iyzsong quit:Quit: bye.
+23:16 varna: 不过我不太明白贴吧里那位卡出大白腿的人改了什么
+23:16 varna: 我去卡视角的时候看见里面穿的是腿甲
+23:17 varna: 武器介绍也很厉害，说是挥一刀可以斩杀百名骑士
+23:17 varna: 总体看来，力40敏40的初步水桶，战技一套确实可以斩杀一个刚建号的新手骑士……
+23:18 varna: _(:з」∠)_都是骗人的
+23:18 paper_octopus: ........
+23:19 paper_octopus: @妖梦
+23:19 varna: _(:з」∠)_传火大剑买来不能变形，法兰大剑买来只有一套舞，暗胧费尽力气拿来只有一个破盾咸鱼突
+23:19 varna: _(:з」∠)_老滚mod都做出了传火大剑的所有形态，然而本家就是不给你
+23:20 varna: _(:з」∠)_怀疑历代薪王里混入猎人，武器才能变形
+23:20 varna: _(:з」∠)_PVE最后还不是夺命八连，操作方法是连按八下轻攻击
+23:21 perr quit:Quit: Leaving
+23:22 paper_octopus: .......
+23:23 varna: 环印城DLC里推出了环印骑士直剑，战技是伪葛温五连斩
+23:24 varna: 我兴奋地杀进去死了二十多次把剑拿到，再杀回来凑足素材强化满，发现伤害感人
+23:27 paper_octopus: 武器都是收集向，实用用初始装备就够了
+23:28 varna: PVE实用的武器是安里直剑，运补正极高
+23:28 varna: 情怀也多数能用，因为AI毕竟比较莽
+23:29 varna: 没出招的时候韧性都是0，部分招式才有韧性设定，所以提前打到敌人的话也许能造一个硬直
+23:31 varna: 驲……想用的一套ncurses控件里，CJK文本输入有问题
+23:34 paper_octopus: 这几天撸java深深感觉到其垃圾
+23:37 varna: Java sucks
+23:37 varna: 蛋疼，这玩意儿底下的实现是按字节走的
+23:37 varna: 他的文本框输入不是走整字符的……
+23:37 Mokou: ……
+23:38 paper_octopus: ......
+23:39 varna: 源码里硬编码的，走光标全都没有处理宽字符
+23:39 varna: 乙烷
+23:40 paper_octopus: 改源码
+23:41 varna: 即使改好了，也会冒出一整个没人能维护的第三方fork
+23:41 paper_octopus: 发patch
+23:42 varna: 麻烦
+23:42 varna: 他的整个库都没好好处理宽字符
+23:48 varna: 没办法了，只好不用他
+23:50 varna: (｡･ω･)打倒米英鬼畜！
+23:52 Mokou: http://www.bilibili.com/video/av9476225/
+23:57 varna: paper_octopus: http://www.bilibili.com/video/av7166014 尬舞小姐姐
+23:59 varna: 不过他这个伤害有点谜……
+23:59 varna: 周目数不太清楚，但在没捏余火的情况下搞出这么多血，这是个超水桶

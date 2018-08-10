@@ -1,0 +1,295 @@
+00:13 lh_mouse quit:Read error: Connection reset by peer
+00:22 tutu_leaving joined channel
+00:25 l0nGYear_Sync joined channel
+00:31 perr quit:Quit: Leaving
+00:34 varna: 哈哈哈看到第六话，历史重演了
+00:34 varna: 又要废校了
+00:36 Taggnostr quit:Remote host closed the connection
+00:38 Taggnostr joined channel
+00:44 Mokou: 这里已经被骂惨了
+00:45 Mokou: “有的人因为要废校而成为偶像，有的人因为要成为偶像而废校”
+00:47 varna: 23333333
+00:48 varna: 水团这个背景设定还挺有意思的
+00:48 varna: 然而人设实在让人一点兴趣都提不起来
+00:48 varna: 除了改造成潜艇的我桑
+00:54 Taggnostr quit:Remote host closed the connection
+00:56 Taggnostr joined channel
+00:58 varna quit:Quit: leaving
+01:27 tutu_leaving quit:Ping timeout: 252 seconds
+01:48 Mokou: 睡觉
+01:48 Mokou: 诸君武运
+01:48 Mokou quit:Quit: 睡觉
+01:54 iyzsong-xx quit:Ping timeout: 252 seconds
+01:59 iyzsong-xx joined channel
+02:48 l0nGYear_ quit:Quit: Connection closed for inactivity
+04:08 Youmu quit:Quit: Connection closed for inactivity
+06:19 perr joined channel
+06:19 perr quit:Changing host
+06:19 perr joined channel
+06:37 geordi quit:Remote host closed the connection
+06:38 geordi joined channel
+06:44 cleamoooon: @eleven_K  3  你会不会忽然的出现，在天安门楼上面。你会带着笑脸，挥手寒暄，把我再批判一番；我多么想和你见一面，看看你最近改变。你仍戴着眼镜，裤带高悬，听你讲一点，哪怕只一点，人生经验～
+08:14 FrankHB quit:Ping timeout: 244 seconds
+08:27 iyzsong-xx: 2333
+08:55 FrankHB joined channel
+09:06 lh_mouse joined channel
+09:14 tutu_wind joined channel
+09:17 tutu_wind: morning ~
+09:17 Youmu joined channel
+10:22 FrankHB quit:Ping timeout: 244 seconds
+10:48 BarbaraLove16 joined channel
+10:51 BarbaraLove16 quit:Remote host closed the connection
+11:44 guowang joined channel
+11:47 l0nGYear_Sync quit:Ping timeout: 250 seconds
+12:00 l0nGYear_Sync joined channel
+12:01 l0nGYear_ joined channel
+12:45 iyzsong-xx: =.=
+14:08 l0nGYear_ quit:Quit: Connection closed for inactivity
+15:18 cleamoooon: http://qiwen.lu/32320.html
+15:26 cleamoooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/gn/ny_294139.jpg@596w_1l.jpg
+15:27 kin3z joined channel
+15:37 cleamoooon: http://cn.arealme.com/chinese-vocabulary-size-test/cn/
+16:01 Mokou joined channel
+16:02 lh_mouse: https://github.com/lhmouse/mcfgthread/releases/tag/alpha-0.16
+16:05 kin3z quit:Quit: Leaving
+16:32 tutu_wind quit:Ping timeout: 244 seconds
+16:49 Mokou quit:Remote host closed the connection
+16:51 Izumo joined channel
+16:52 l0nGYear_Sync quit:Remote host closed the connection
+16:53 l0nGYear_Sync joined channel
+17:09 kevingu joined channel
+17:09 kevingu quit:Remote host closed the connection
+17:20 Taggnostr quit:Remote host closed the connection
+17:21 Taggnostr joined channel
+17:27 kyson joined channel
+17:30 kyson quit:
+17:45 iyzsong-xx: 0.0
+17:46 tutu joined channel
+18:00 l0nGYear_Sync quit:Remote host closed the connection
+18:00 l0nGYear_Sync joined channel
+18:19 perr quit:Quit: Leaving
+18:25 tutu is now known as tutu_wind
+18:36 tonymiaofa joined channel
+18:39 FrankHB joined channel
+18:51 guowang quit:Remote host closed the connection
+18:52 guowang joined channel
+18:55 guowang quit:Read error: Connection reset by peer
+18:56 guowang joined channel
+18:56 iyzsong joined channel
+19:10 tonymiaofa quit:Remote host closed the connection
+19:33 kevingu joined channel
+19:37 kevingu quit:Remote host closed the connection
+19:55 iyzsong: (┙>∧<)┙へ┻┻
+20:04 guowang quit:Ping timeout: 258 seconds
+20:07 tutu_wind quit:Ping timeout: 244 seconds
+20:08 tutu_wind joined channel
+20:14 iyzsong: 有没有人带我玩啊 (°Д°)
+20:18 lh_mouse: ヲ要妹子。
+20:45 yimis joined channel
+21:10 perr joined channel
+21:10 perr quit:Changing host
+21:10 perr joined channel
+21:13 tutu_wind: lh_mouse: 吱,一般服务的瓶颈是说它的QPS上不去了然后机器实际上还是有资源可以用的?
+21:30 Mokou joined channel
+21:32 Mokou quit:Remote host closed the connection
+21:32 lh_mouse: QPS 上不去就查数据库的问题。
+21:32 lh_mouse: 数据库做读写分离的话，就可以只看主库的 QPS，毕竟从库可以无限加。
+21:32 iyzsong: 2333
+21:32 lh_mouse: MySQL 逗比，最近应该研究下 mongodb 了。
+21:33 lh_mouse: http://tieba.baidu.com/p/4717802599
+21:33 iyzsong: lh_mouse: 用mongodb的底层wiredtiger，去造一个 (｢・ω・)｢
+21:34 iyzsong: _(:з」∠)_
+21:34 cleamooon joined channel
+21:34 lh_mouse: mongodb 不用读写分离啊。
+21:35 lh_mouse: 原生支持集群，就是这么吊。
+21:37 iyzsong: 没有voltdb看起来刁 0.0
+21:38 cleamoooon quit:Ping timeout: 265 seconds
+21:39 Mokou joined channel
+21:41 l0nGYear_ joined channel
+21:54 lh_mouse quit:Read error: Connection timed out
+21:55 lh_mouse joined channel
+22:02 yimis quit:Ping timeout: 250 seconds
+22:10 yimis joined channel
+22:13 cleamoooon joined channel
+22:15 cleamoon joined channel
+22:16 cleamooon quit:Ping timeout: 265 seconds
+22:17 l0nGYear_Sync quit:Read error: Connection reset by peer
+22:18 cleamoooon quit:Ping timeout: 265 seconds
+22:19 Mokou quit:Quit: Lost terminal
+22:20 Mokou joined channel
+22:22 cleamoon: @Scswga “爸爸，为什么天上的神仙名字里基本都有个仙字，而海里的龙王为什么就没有呢？”
+22:22 cleamoon: “可能是他觉得海仙这个名字并不是很霸气吧……”
+22:24 perr quit:Quit: Leaving
+22:27 varna joined channel
+22:27 varna: 我昨天就不该乌鸦嘴说一天都有干劲的
+22:27 varna: 强行加班到十点多
+22:28 varna: Mokou: 雪菜还行么
+22:29 iyzsong: _(:з」∠)_
+22:32 Mokou: varna: 没炸
+22:32 Mokou: 将近三十万次请求，正常跑完
+22:33 varna: 奇葩
+22:33 Mokou: 这他妈到底什么鬼……
+22:33 varna: 周日我考虑能不能在学派本地环回上试试看
+22:33 cleamoon: orz
+22:33 varna: 雪菜内核毕竟还是旧太多了
+22:33 Mokou: 到时候你给我扔个rsa密钥，我塞进去
+22:34 varna: 还有那个自古以来的尖儿，今天实在处理不动了
+22:34 Mokou: 学派服务器是密钥认证的
+22:34 varna: 哦对
+22:34 varna: 今天本来九点钟就能下班的
+22:34 varna: 结果jquery datepicker出bug了
+22:34 Mokou: ……
+22:34 varna: 单页面应用反复跳转的时候那傻逼玩意儿没把自己清掉
+22:34 varna: 还得我手动清……
+22:35 varna: 结果我还不知道这些破事，掉坑之后排查了四十多分钟
+22:35 Mokou: ……
+22:37 cleamoon: 我粗略的看了一本haskell的书，感觉haskell还是很nb的，为什么没人用呢....
+22:37 Mokou: 各种性能
+22:37 cleamoon: 日常工作和py也差不多吧
+22:37 varna: hs没法面对高压
+22:37 cleamoon: 反正你也不会用这些写内核
+22:37 iyzsong: 比py强太多 =o=
+22:38 varna: 换言之，没法把它接在一个高性能系统后面当业务逻辑
+22:38 cleamoon: 为什么没法高压？
+22:38 Mokou: 你怎么控制峰值
+22:38 varna: lazy eval造成计算展开时候不确定，复杂度只能在真空中均摊地评估
+22:39 cleamoon: soga
+22:39 varna: 但大压力场景死都是死在峰值上
+22:39 cleamoon: 原来是这种诡异的原因
+22:39 varna: 这点恰好是hs运行时的弱点
+22:39 varna: 而且hs作为一种能编译的语言，优化很恶劣
+22:40 cleamoon: intel曾经尝试过写一个intel优化版的ghc，然后发现还不如ghc呢
+22:40 varna: hs强制lazy eval, 这把目标代码打得很碎
+22:41 cleamoon: py性能略好也就是靠了那几个优化版的
+22:41 varna: 因为多数计算都被迫面对可“拆卸”的现实，也即它们不会立刻被计算，必须存着
+22:41 cleamoon: 强制le确实会有麻烦
+22:41 varna: 这比强制gc恶心非常多倍
+22:41 cleamoon: haskell绝对不能取消强制le？
+22:41 varna: 那是hs语义，没办法
+22:41 varna: 就跟C要求ee一样
+22:42 cleamoon: 蛋疼
+22:42 cleamoon: 强制gc还好吧
+22:43 varna: 凑合，虽然经验上需要为峰值付出至少四倍于估计的物理内存
+22:43 varna: 当然，这个估计可能是消耗了大量人日优化出来的C程序，或者C艹程序在观念上的样子
+22:44 cleamoon: 噗
+22:44 cleamoon: 那4倍也不少了
+22:45 varna: 这个内存开销在统计上差不多可以接近马马虎虎的同等速度
+22:45 varna: 我以前看过一个图表
+22:45 cleamoon: 不过我不写服务器，日常很多诡异的任务用hs还是挺爽的
+22:45 varna: 如果允许2-5倍降速，那么用的内存可以更少
+22:45 varna: 这里计算降速可行的基础是其他问题决定了系统瓶颈
+22:46 cleamoon: 别降速了，内存还是便宜
+22:46 varna: 比如大量的中转请求，RPC分发，廉价磁盘读写，网络IO
+22:46 varna: 换言之，还是得先评估瓶颈
+22:46 varna: 哦，还有DB...
+22:48 cleamoon: 服务器真蛋疼
+22:48 varna: 这种都是有意思的地方
+22:48 cleamoon: 感觉就是各种单纯任何的综合点，然后就蛋疼了
+22:49 varna: 系统大了，什么破事都会有
+22:49 varna: accept还可能搞死epoll呢……
+22:49 cleamoon: 什么鬼
+22:50 varna: 比如说fd耗尽但半开连接队列没满，accept会就绪；挂在epoll上的accept fd会按行为决定是否响应
+22:51 varna: LT的情况下，accept fd会持续响应、持续失败，直到逻辑抢到一个空位
+22:51 varna: ET的情况下，accept fd会在第一次就绪之后饿死
+22:51 cleamoon: ......
+22:52 varna: 所以比较诡的workaround是准备适当数量的占茅坑fd, accept如果因为fd不够而失败，就临时释放一个……
+22:52 cleamoon: 感觉写一个google级的服务器比造一个不会坠毁的灰机还难
+22:52 Mokou: 容易
+22:52 Mokou: 你写个脚本，四分钟重启一次服务器
+22:52 Mokou: 然后让老板买一堆硬件
+22:52 cleamoon: ......
+22:53 cleamoon: 如果这个方法可以的话我觉得会有人做的
+22:53 varna: 同时不要在报表里写「服务不可用指标」
+22:53 Mokou: 你忘了RoR么
+22:53 Mokou: I B M 欢 喜
+22:53 cleamoon: 海岛国一个新人工程师一个月的工资就够买5个dell刀片了
+22:53 * varna 素人工程师
+22:54 Mokou: 销 量 倍 增 收 入 大 涨 粪 程 序 喜 欢
+22:54 cleamoon: 另外，之前听说一个FEM模拟软件，卖给ABB，价格是30M一年......
+22:54 varna: ...
+22:55 tutu_wind quit:Ping timeout: 276 seconds
+22:55 cleamoon: 那个说这个的人说如果买硬件能不买这玩意的话公司会买一楼的电脑的
+22:55 cleamoon: 然并卵
+22:57 iyzsong: (°Д°)
+22:58 varna: 啊啊，好想不写前端
+22:58 cleamoon: 羊驼子为什么不是写后端的
+22:58 varna: 我组缺人，所以我前端后端都写
+22:59 cleamoon: orz
+23:00 varna: 但是时间又少，所以前端的东西只能硬写，不会了就现看，看完接着凹
+23:00 cleamoon: 你去雇一个前端就好了
+23:01 varna: 我穷，而且这种活儿外包的结果基本等于我泄密被炒
+23:01 cleamoon: 前端工资应该比你低很多吧
+23:01 cleamoon: 前端也涉及泄密？
+23:02 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/xt/1g_9766.jpg@596w_1l.jpg
+23:03 varna: 其一，现在前端是稀缺动物，因为渣太多；其二，我做这个直接涉及到运营
+23:03 varna: 23333
+23:04 cleamoon: 好的前端少，会一点前端很多
+23:05 iyzsong: _(:з」∠)_
+23:05 cleamoon: 涉及运营的话，让coo写
+23:06 varna: 要是能从别的组借到前端，我现在会舒服很多，只要跟前端商量好参数，我自顾自写+测后端逻辑就行了
+23:07 varna: 那些写起来干净很多
+23:07 Mokou: 啊，真想找个NEW GAME里的游戏公司
+23:07 cleamooon joined channel
+23:08 cleamoon: 你再开除一个后端，然后和老板说你只能光写后端了，让他雇一个前端好了
+23:08 cleamoooon joined channel
+23:10 varna: llss的第一次live衣服还挺惊艳的
+23:10 varna: 一堆大脸土妹子穿上去效果意外不错
+23:10 varna: 但看完之后还是没感觉
+23:12 cleamoon quit:Ping timeout: 265 seconds
+23:12 cleamoooon: 求推荐英文歌曲
+23:13 l0nGYear_Sync joined channel
+23:14 varna: 还真想不出来……
+23:15 cleamoooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/xt/w6_403803.jpg@596w_1l.jpg
+23:15 * lhanjian 痛的扛不住了
+23:16 varna: lhanjian: puuu?
+23:16 lhanjian: 嗯
+23:16 cleamoooon: 蛋疼还是经疼
+23:16 varna: 什么状况
+23:17 lhanjian: 抑郁焦虑疼痛之日常
+23:17 yimis quit:Quit: yimis
+23:17 l0nGYear_Sync quit:Ping timeout: 240 seconds
+23:17 lhanjian: 今天特别持久强度大罢了
+23:17 varna: 那就很糟糕了
+23:17 lhanjian: 痛的
+23:18 cleamoooon: 不能混合阿司匹林吃吗
+23:23 Izumo quit:Quit: Connection closed for inactivity
+23:24 cleamoooon: 对了，海岛国前段时间发生个高级的，一个音乐会，50+个妹子被QJ了... 没人发现.....
+23:25 l0nGYear_Sync joined channel
+23:26 iyzsong: (┙>∧<)┙へ┻┻
+23:26 varna: ...
+23:31 iyzsong: 啊啊啊 睡觉 ╮(￣▽￣)╭
+23:32 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:33 l0nGYear_Sync quit:Remote host closed the connection
+23:34 cleamoooon: http://i0.hdslb.com/bfs/archive/99e349635d551fce793834a8ad3757e86dd1835c.jpg
+23:39 varna: ...
+23:41 cleamoooon: 对了我试验了一个，war3，1000骷髅肛11家正规部队，事实证明，奇美拉AOE好厉害....
+23:42 varna: 驱散呢？
+23:43 cleamoooon: 我用的阿克蒙德的那个dark portal，驱散不了
+23:44 cleamoooon: 而且我才发现那个招数最多能一次召唤出99999的单位，以及这个召唤费人口....
+23:44 cleamoooon: 人口会爆掉，最大是32位的 unsigned int....
+23:49 Mokou: http://ww4.sinaimg.cn/mw690/005xuBYcgw1f6q1f776otg306w05kb29.gif “为什么中国人打乒乓球这么厉害？因为这是一项连老年人也热爱的运动”
+23:49 cleamoooon: ......
+23:50 varna: +1s
+23:50 varna: 我今天才知道有一些Crytek员工跑去了id
+23:51 cleamoooon: 另外还有一个惊异的发现，给英雄装上凤凰的复活有奇效
+23:51 varna: 会造出新的？
+23:51 cleamoooon: 10级英雄复活后是相同职业不同名字的1级
+23:51 varna: ...果然是造了新的
+23:51 cleamoooon: 旧的也没了
+23:52 varna: 我猜这个脚本只是生产一个同类型新单位
+23:52 varna: 并不是什么复活
+23:52 cleamoooon: +
+23:52 cleamoooon: 关键是原来的英雄直接刷没了，都没法复活了
+23:53 tutu_leaving joined channel
+23:53 tutu_leaving is now known as tutu_wind
+23:54 cleamoooon: 还有个可以试的，给小精灵加上九头蛇的那个死了分成两个小的的招数，然后把招数改成会分成两个小精灵，然后在地图上放一个敌对小精灵和一个会流星雨的女祭司，然后，看烟花吧
+23:56 varna: 噫，我以前该试试显卡3隐身肉搏的，听说两拳可以揍死一个异形
+23:56 cleamoooon: 什么鬼
+23:57 varna: 升级作战服的选项里有加强肉搏威力的
+23:57 cleamoooon: 这也太强了
+23:57 varna: 不过我是增强侦查+强化隐匿+隐匿减耗+隐形刺杀……
+23:58 varna: 忘了增强肉搏要替掉哪一类了
+23:58 varna: cleamoooon: 高难度还是得小心，基本敌人打准了自己就会死
+23:58 l0nGYear_ quit:Quit: Connection closed for inactivity
+23:58 varna: 隐身玩脱了是没电开装甲保命的
+23:59 varna: cleamoooon: http://imgsrc.baidu.com/forum/pic/item/1f517e061d950a7bc26780ec0ed162d9f2d3c926.jpg 另外这种程度的画面是几年前的游戏……

@@ -1,0 +1,252 @@
+00:00:hope1: 1 <= p, q <= 10怎么用呢
+00:00:hope1: 打表……
+00:00:condy: 诡异～
+00:01:Sleepwalking quit:Ping timeout: 244 seconds
+00:13:hope1: 假设A=1就能直接求吧
+00:14:condy: 太特殊了.
+00:15:hope1: A^i还要再先摸个10007……
+00:15:hope1: 模
+00:15:erhandsome joined channel
+00:19:cleamoon_: 羽立好好做
+00:20:cleamoon_: 你可是要搞oi的正太
+00:26:* hope1 放弃
+00:29:Petrus07 quit:Quit: Leaving.
+00:30:code_new_ quit:Quit: Leaving
+00:31:T2: 碎叫
+00:32:T2 quit:Quit: Leaving
+00:48:condy quit:Ping timeout: 260 seconds
+00:48:lh_mouse: geordi, --precedence a + b ^ c
+00:48:geordi: (a + b) ^ c
+00:50:erhandsome quit:Ping timeout: 258 seconds
+00:51:erhandsome joined channel
+00:55:lh_mouse: geordi, << sizeof(bar); struct foo { }; struct bar : foo { int a; };
+00:55:geordi: 4
+01:01:yzld2002 quit:Quit: yzld2002
+01:01:lh_mouse: geordi, << sizeof(baz); struct foo { }; struct bar : foo { int a; }; struct baz : foo { bar b; };
+01:01:geordi: 8
+01:01:lh_mouse: geordi, << sizeof(bar), sizeof(baz); struct foo { }; struct bar : foo { int a; }; struct baz : foo { bar b; };
+01:01:geordi: 4, 8
+01:15:code_new quit:Remote host closed the connection
+01:27:youngfly joined channel
+01:28:youngfly quit:Client Quit
+01:44:erhandsome quit:Quit: leaving
+01:50:hope1 quit:Ping timeout: 250 seconds
+01:51:lh_mouse quit:Read error: Connection reset by peer
+02:30:beefcafe joined channel
+02:43:biergaizi_ joined channel
+02:46:biergaizi quit:Ping timeout: 264 seconds
+04:52:izmntuk quit:Ping timeout: 250 seconds
+04:54:izmntuk joined channel
+05:00:boosure joined channel
+05:40:izmntuk_ joined channel
+05:44:izmntuk quit:Ping timeout: 244 seconds
+05:58:cleamoon_ quit:Quit: Leaving
+06:41:cleamoon joined channel
+07:22:izmntuk joined channel
+07:25:izmntuk_ quit:Ping timeout: 240 seconds
+07:43:cleamoon quit:Remote host closed the connection
+07:44:cleamoon joined channel
+07:56:cleamoon quit:Remote host closed the connection
+07:58:cleamoon joined channel
+08:15:cleamoon quit:Remote host closed the connection
+08:17:cleamoon joined channel
+08:18:Sleepwalking joined channel
+08:18:Sleepwalking: 昨天那个滤波器不稳定问题总算解决了
+08:18:Sleepwalking: 不是实现问题，是高阶滤波器本身就容易不稳定
+08:19:Sleepwalking: 拆成四个级联的二阶IIR
+08:21:Sleepwalking: ——三个印度阿三的论文中提到……
+08:45:cleamoon: orz
+08:51:cleamoon: miku的文件我试了试运行，matlab速度完爆octave
+09:31:hope1 joined channel
+09:56:yzld2002 joined channel
+09:59:Sleepwalking: 意料之中啊
+10:00:Sleepwalking: 千刀煞的伽马桶……总算把全极点形式的实现出来了
+10:01:Sleepwalking: 算了半天传递函数老是不对，倒腾半个小时后发现极点的符号反了……
+10:05:hope1: 这是什么……
+10:20:lhanjian joined channel
+10:49:erhandsome joined channel
+11:01:biergaizi_ quit:Quit: Konversation terminated!
+11:03:biergaizi_ joined channel
+11:05:biergaizi_ quit:Client Quit
+11:06:biergaizi_ joined channel
+11:13:lh_cat quit:Remote host closed the connection
+11:16:Plough joined channel
+11:17:endle joined channel
+11:38:T2 joined channel
+11:44:T2 left channel:"Leaving"
+11:44:windforce joined channel
+12:05:Sleepwalking: 解决不了问题只好给博士写邮件了。。。
+12:08:Sleepwalking: 这种时候感觉有个IEEE的邮箱真有用: )
+12:11:hope1: 好厉害的样子…… 写给谁啊，论文作者？
+12:12:yzld2002 quit:Quit: yzld2002
+12:15:Sleepwalking: 恩
+12:16:Sleepwalking: 话说去年这个时候我也在做同样的事诶……
+12:27:lh_mouse joined channel
+12:47:Sleepwalking: lh_mouse: 口支
+12:53:lh_mouse: Sleepwalking, 口苗
+12:53:izmntuk quit:Ping timeout: 250 seconds
+12:54:izmntuk joined channel
+13:06:biergaizi quit:Remote host closed the connection
+13:07:biergaizi joined channel
+13:10:Stevearzh quit:Ping timeout: 245 seconds
+13:10:Stevearzh joined channel
+13:15:erhandsome quit:Ping timeout: 252 seconds
+13:16:izmntuk quit:Remote host closed the connection
+13:17:erhandsome joined channel
+13:17:Sleepwalking: The problem is caused by roundoff error when a number of poles are combined, all very close to the unit circle. Small errors in the eighth-order coefficient, are magnified when the eighth root is taken to give the pole location. These small errors lead to poles outside the unit circle and instability. Thanks to Julius Smith for pointer me to the proper explanation.
+13:17:Sleepwalking: 我了个大草
+13:17:Sleepwalking: 居然是Julius O Smith!
+13:19:Sleepwalking: 【用蓝色帝球作头像的男人】
+13:20:hope1 quit:Ping timeout: 264 seconds
+13:28:hope1 joined channel
+13:28:hope1 quit:Read error: Connection reset by peer
+13:29:Plough quit:Ping timeout: 240 seconds
+13:30:Plough joined channel
+13:42:erhandsome quit:Ping timeout: 244 seconds
+13:42:erhandsome joined channel
+13:49:biergaizi quit:Remote host closed the connection
+13:50:biergaizi joined channel
+14:03:OwenJia joined channel
+14:03:OwenJia quit:Changing host
+14:03:OwenJia joined channel
+14:05:whatofor joined channel
+14:17:code_new joined channel
+15:04:windforce joined channel
+15:07:T2 quit:Ping timeout: 255 seconds
+15:45:lhanjian: clang系有啥反汇编工具么？
+15:46:lh_mouse: 静态的？
+15:46:whocares_2 quit:Ping timeout: 256 seconds
+15:47:* Plough 在反编译舰娘
+15:49:lhanjian: lh_mouse, 动静都行
+15:50:lhanjian: Plough, 啊？
+15:50:lh_mouse: linux ?
+15:50:lhanjian: 嗯
+15:51:lh_mouse: 忘了
+16:04:lh_mouse: geordi, << bar::x; struct foo { enum e { x = 1; } }; struct bar { using e = foo::e; };
+16:04:geordi: error: expected '}' before ';' token
+16:04:lh_mouse: geordi, << bar::x; struct foo { enum e { x = 1 }; }; struct bar { using e = foo::e; };
+16:04:geordi: error: 'x' is not a member of 'bar'
+16:04:lh_mouse: geordi, insert e:: after first ::
+16:04:geordi: 1
+16:12:izmntuk joined channel
+16:14:lh_mouse: geordi, -c enum class foo { x = 1 }; class bar : foo { };
+16:14:geordi: error: expected class-name before '{' token
+16:24:endle quit:Quit: Leaving
+16:26:whocares_2 joined channel
+16:32:FrankHB: llvm-dis?
+16:53:lhanjian: FrankHB, 那个是用来dis LLVM bitcode 的
+17:29:lhanjian quit:Remote host closed the connection
+17:31:beefcafe quit:Ping timeout: 272 seconds
+17:32:Sleepwalking: 终于实现了完整的Cascaded Gammatone IIR filter...
+17:32:beefcafe joined channel
+17:32:Sleepwalking: 鼓捣了一天
+17:37:beefcafe quit:Remote host closed the connection
+17:37:beefcafe joined channel
+17:39:lh_mouse: beefcafe, ?!
+17:40:lh_mouse: 命令行版 Linux 的应用软件和 Windows 整体上就不是一个时代的
+17:40:lh_mouse: 桌面版还没好用的
+17:41:lh_mouse: 麻烦的地方在于  许多 linux 用户以艹脚本和玩各种 trick 为荣   于是又成了阻碍发展的一大动力
+17:41:lh_mouse: 虽然 Windows 上烂货也不少  但是也不乏不少精品  比如 ollyice
+17:42:lh_mouse: vs 完爆 gdb 好几条街
+17:43:Sleepwalking: 【valgrind
+17:43:lh_mouse: 相对而言 Windows 或者 Android 用户讨论的是“谁用过的软件多”   而 linux 用户讨论的往往是“谁会玩的花样多”
+17:44:lh_mouse: 而 linux 软件没有业界统一标准导致各家方言不兼容的例子比比皆是
+17:45:Sleepwalking: linux下的音频是够恶心的
+17:45:lh_mouse: Sleepwalking, 那不是 windows 的问题  因为很多旧的软件的 malloc 是静态链接进去的   而不是 libc 那样动态链接的
+17:45:lh_mouse: 严格来说是编译器的问题
+17:45:lh_mouse: s,编译器,工具链,
+17:47:Sleepwalking: 不过在windows下很难去做“把19300首歌的LRC合并起来去掉格式按全角或半角空格分行剔除非中文字符”这种事
+17:48:lh_mouse: 那只是工具的问题  
+17:48:Sleepwalking: 你讨论的不也是工具的问题吗
+17:48:hoxily` joined channel
+17:49:lh_mouse: 说完整 我说的是工具的设计风格问题   而你说的是工具有没有的问题
+17:50:Sleepwalking: 你不能指望有人能专门为艹LRC写个软件啊
+17:50:lh_mouse: Windows 自带个 js 解释器你知道吗
+17:51:Sleepwalking: 知道
+17:51:lh_mouse: 那东西一般都顶用
+17:51:Sleepwalking: 比awk麻烦多了……
+17:51:lh_mouse: 实在不行写个 html 嵌入 JavaScript 都能完爆 bash 那堆渣
+17:52:Sleepwalking: 我的第一个FFT实现还是用VBS写的呢……
+17:52:* Sleepwalking 也觉得bash很糟糕
+17:55:FrankHB: 就js这种互操作尿性，省省吧。
+17:56:FrankHB: 还不如system("fvck you")。
+17:56:lh_mouse: VBS 也好 JS 也好   带的东西也不少
+17:56:FrankHB: 都逗。
+17:56:lh_mouse: 论 js 和 sed 的正则替换
+17:56:lh_mouse: sed 只有更逗
+17:56:FrankHB: 所谓的脚本，基本上是换个系统就免不了重艹。
+17:57:lh_mouse: SHELL 脚本么
+17:57:FrankHB: 先不说有没有能用的问题。/\就够尿一壶了。
+17:58:lh_mouse: windows 内核本来就支持 /  
+17:58:lh_mouse: 这地方问题是路径里面 \
+17:58:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+17:59:FrankHB: “本来支持”有毛用，Win32不保证都能用，cmd和其它破玩意儿更不保证认识。
+17:59:lh_mouse: 例外的地方非常少   但是文件系统必然支持
+17:59:FrankHB: 注册表呵呵呵呵呵……
+17:59:lh_mouse: 我很怨念的就是 NTFS 不支持 : 做文件名
+17:59:lh_mouse: 但是 linux 满地都是 ::
+17:59:lh_mouse: 2014-12-07 18:00:00.log
+18:00:FrankHB: PATH里面满地:不嫌烦么。
+18:00:lh_mouse: FrankHB, 看上面那个
+18:00:FrankHB: 嘛，你还得指望不碰上逗比DOS保留文件名。
+18:01:FrankHB: 偶尔autocrap艹出个aux就挂了。
+18:01:Sleepwalking: FrankHB: https://ccrma.stanford.edu/~jos/ 这也是个帝球诶
+18:01:FrankHB: 或者nul啊com啊啥的。
+18:01:FrankHB: 总算rm能干掉。
+18:02:lh_mouse: rm -rf FrankHB 
+18:04:lh_mouse: sudo shred -u FrankHB 
+18:04:FrankHB: sudo滚粗。
+18:11:windforce quit:Quit: Leaving
+18:15:xxxxxxxx: 你们是不是需要zsh的path?
+18:16:biergaizi quit:Quit: Konversation terminated!
+18:18:beefcafe quit:Remote host closed the connection
+18:19:beefcafe joined channel
+18:25:Pip joined channel
+18:27:Pip: What is this channel?
+18:27:lh_mouse: Pip, hi
+18:27:lh_mouse: water channel. XD
+18:28:ring joined channel
+18:29:Pip: About what?
+18:29:Pip: Baidu Tieba channel?
+18:29:lh_mouse: About nothing. So the only thing that exists here is water.
+18:30:Pip: ok
+18:30:Pip left channel:"Leaving"
+18:30:Sleepwalking: 又吓跑系列？
+18:30:lh_mouse: 一老外
+18:35:Sleepwalking: http://paste.ubuntu.com.cn/2028425 终于变得比较像样了
+18:51:ring: 人家知道啥是water嘛。。
+19:06:cleamoon: 伦敦帝国学院医学院毒理学教授Stefan Grimm今年10月自杀，大约数周之后，他的一封延迟发送的电子邮件群发给了同事和世界其他地方的同行。邮件的主题是“伦敦帝国学院如何对待教授”。据说他今年收到最后通牒，由于年科研经费到账少于20万英镑，所以他将被辞退。Grimm教授无法忍受这样的侮辱，于是选择了自杀。
+19:12:beefcafe quit:Remote host closed the connection
+19:13:lhanjian joined channel
+19:13:lhanjian quit:Client Quit
+19:14:beefcafe joined channel
+19:14:lhanjian joined channel
+19:27:lhanjian: 真是失败的一天
+19:39:beefcafe quit:Remote host closed the connection
+19:40:beefcafe joined channel
+19:55:xxxxxxxx quit:Ping timeout: 260 seconds
+20:00:Sleepwalking: 默哀
+20:33:Sleepwalking1 joined channel
+20:35:Sleepwalking quit:Ping timeout: 240 seconds
+20:39:Sleepwalking1 quit:Ping timeout: 255 seconds
+20:39:Petrus07 joined channel
+21:01:ring quit:Quit: Bye
+21:06:erhandsome quit:Ping timeout: 245 seconds
+21:08:erhandsome joined channel
+21:18:FrankHB quit:Read error: Connection reset by peer
+21:42:Cristallo joined channel
+21:44:Cristallo left channel:
+21:50:code_new quit:Ping timeout: 258 seconds
+21:50:code_new joined channel
+22:22:dantcloud joined channel
+22:23:lhanjian quit:Quit: Leaving
+22:23:dantcloud quit:Changing host
+22:23:dantcloud joined channel
+22:23:dantcloud quit:Changing host
+22:23:dantcloud joined channel
+22:24:lh_mouse: [master 659b58a] Updates.
+22:24:lh_mouse:  34 files changed, 1513 insertions(+), 1741 deletions(-)
+22:58:erhandsome quit:Ping timeout: 264 seconds
+23:00:Plough quit:Remote host closed the connection
+23:04:erhandsome joined channel
+23:07:yzld2002 joined channel

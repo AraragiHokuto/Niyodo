@@ -1,0 +1,106 @@
+00:07 Mokou quit:Remote host closed the connection
+00:13 Mokou joined channel
+00:18 Mokou quit:Ping timeout: 240 seconds
+00:21 Izumo joined channel
+01:07 lh_mouse: geordi, << TYPE(::strchr)
+01:07 geordi: error: no context to resolve type of 'strchr'
+01:07 lh_mouse: geordi, --clang << TYPE(::strchr)
+01:07 geordi: error: reference to overloaded function could not be resolved; did you mean to call it?
+01:07 lh_mouse: geordi, << TYPE(__builtin_strchr)
+01:07 geordi: warning: ignoring attributes on template argument 'char* (&)(const char*, int)'
+01:08 lh_mouse: geordi, -w << TYPE(__builtin_strchr)
+01:08 geordi: lvalue char*(const char*, int)
+01:14 lh_mouse quit:Ping timeout: 256 seconds
+01:52 \s joined channel
+01:58 Mokou joined channel
+02:52 Mokou quit:Remote host closed the connection
+03:00 cleamooon quit:Quit: Connection closed for inactivity
+03:59 Izumo quit:Quit: Connection closed for inactivity
+04:14 Stevearzh quit:Ping timeout: 260 seconds
+04:15 Stevearzh joined channel
+04:47 cleamooon joined channel
+08:05 Mikan quit:Quit: Connection closed for inactivity
+08:33 Dove joined channel
+09:05 lh_mouse joined channel
+09:15 Ju5t4fun joined channel
+09:38 Mikan joined channel
+09:38 Mikan is now known as Guest28807
+09:39 Guest28807 is now known as Youmu
+09:56 cleamoon joined channel
+09:57 cleamoooon quit:Ping timeout: 240 seconds
+10:30 kin3z joined channel
+10:43 Guest36 joined channel
+10:59 T2 joined channel
+11:01 Dove quit:Ping timeout: 240 seconds
+11:09 abel-abel joined channel
+11:50 lh_mouse quit:Ping timeout: 264 seconds
+11:52 T2 quit:Ping timeout: 246 seconds
+11:53 T2 joined channel
+12:04 abel-abel quit:Ping timeout: 240 seconds
+12:12 Guest36 quit:Quit: My Mac has gone to sleep. ZZZzzz…
+12:52 abel-abel joined channel
+12:59 Ju5t4fun_ joined channel
+13:00 Ju5t4fun quit:Ping timeout: 264 seconds
+13:22 T2 quit:Ping timeout: 240 seconds
+13:31 abel-abel quit:Quit: Leaving
+13:38 Ju5t4fun_ quit:
+13:40 Guest36 joined channel
+13:45 \s quit:Ping timeout: 240 seconds
+13:45 \s joined channel
+13:46 lh_mouse joined channel
+14:16 rapiz joined channel
+14:33 T2 joined channel
+15:29 Stevearzh quit:Remote host closed the connection
+15:31 Stevearzh joined channel
+16:11 lh_mouse: http://www.rizonesoft.com/downloads/notepad3/
+16:19 yimis joined channel
+16:30 Mokou joined channel
+16:47 yimis quit:Quit: yimis
+16:56 manifoldQAQ joined channel
+16:57 rapiz quit:Remote host closed the connection
+17:02 manifoldQAQ quit:Quit: leaving
+17:03 Stevearzh quit:Ping timeout: 240 seconds
+17:06 Stevearzh joined channel
+17:07 manifoldQAQ joined channel
+17:07 Guest36 quit:Quit: My Mac has gone to sleep. ZZZzzz…
+17:07 whocares_2 quit:Ping timeout: 260 seconds
+17:08 whocares_2 joined channel
+17:23 Guest36 joined channel
+17:28 sottd joined channel
+17:29 Guest36 quit:Max SendQ exceeded
+17:32 sottd: 有谁知道android.mk怎么定义宏并带值吗？
+17:34 cleamooon: 在 Ubuntu 桌面发行版换用 Unity 为默认桌面环境六年之后，Canonical 创始人 Mark Shuttleworth 宣布杀死 Unity 桌面，重新回到 GNOME 桌面环境。
+17:37 kin3z quit:Quit: Leaving
+17:58 T2 quit:Ping timeout: 260 seconds
+18:01 sottd: 谢霆锋？
+18:02 Dove joined channel
+18:12 lhanjian: cleamooon: Unity终于弃疗了
+18:16 rapiz joined channel
+18:44 perr joined channel
+18:44 perr quit:Changing host
+18:44 perr joined channel
+18:48 cleamooon: 然而gnome也不好用
+19:06 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+19:22 \s joined channel
+19:24 \s quit:Client Quit
+19:37 Dove quit:Ping timeout: 256 seconds
+20:02 cleamoon quit:Remote host closed the connection
+20:02 cleamoon joined channel
+21:04 \s joined channel
+21:04 iyzsong-m joined channel
+21:04 iyzsong-m: (#･∀･)
+21:12 sottd: 去死吧,IOS
+21:12 sottd: 公司测试机不小心更新到了IOS10
+21:19 sottd: 然后所有的开发用的mac都要强制更新到IOS10
+21:19 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 52.0.1/20170316213829]
+21:24 lh_mouse quit:Read error: Connection reset by peer
+21:26 lh_mouse joined channel
+22:00 perr quit:Remote host closed the connection
+23:12 chrix_liu1 joined channel
+23:13 chrix_liu1 joined channel
+23:15 chrix_liu1 joined channel
+23:19 chrix_liu joined channel
+23:21 chrix_liu quit:Client Quit
+23:49 Mokou quit:Remote host closed the connection
+23:57 rapiz quit:Ping timeout: 268 seconds
+23:58 lh_mouse quit:Ping timeout: 240 seconds

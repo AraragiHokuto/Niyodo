@@ -1,0 +1,54 @@
+00:01 iyzsong-m quit:Ping timeout: 268 seconds
+00:39 cirno_ joined channel
+01:00 cirno_ quit:Remote host closed the connection
+01:06 cirno_ joined channel
+01:12 cirno_ quit:Quit: WeeChat 2.2
+01:12 _31N108E joined channel
+01:42 _31N108E quit:Quit: Mutter: www.mutterirc.com
+02:39 FrankHB quit:Read error: error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac
+07:51 meowray: https://github.com/llvm-mirror/libcxx/tree/master/include/memory#L5483 這裏爲什麼要swap(__temp, *__v)
+08:57 meowray: libc++ std::__1::shared_ptr開銷真是大，總共40字元?
+09:38 lh_mouse joined channel
+10:07 lh_ideapad joined channel
+10:32 cleamoon__ quit:Quit: Connection closed for inactivity
+10:58 komonsterko joined channel
+11:01 FrankHB joined channel
+11:44 \s is now known as \s_
+12:41 Youmu: meowray: 将析构放在 lock 区外面
+12:41 Youmu: meowray: 将可能的析构放在 lock 区外面
+12:55 lhanjian: Youmu:  https://usercontent.irccloud-cdn.com/file/LlDC0xXP/A386D4D1F99863540C81120018A180C5.jpg
+12:55 lhanjian: coney现充
+12:56 meowray: Youmu: 行幫
+12:56 meowray: 好棒
+13:25 lh_ideapad: lhanjian, 你以后发图这种图写清楚。
+13:58 Youmu: lhanjian: #NSFW
+14:28 komonsterko quit:Read error: Connection reset by peer
+14:30 komonsterko joined channel
+15:36 byc joined channel
+15:38 byc quit:Client Quit
+15:51 Taggnostr2 joined channel
+16:06 maoyumaoxun joined channel
+16:06 komonsterko quit:Read error: Connection reset by peer
+16:07 maoyumaoxun: ?
+16:08 maoyumaoxun quit:Client Quit
+16:11 komonsterko joined channel
+16:47 metter quit:Ping timeout: 256 seconds
+16:49 metter joined channel
+20:36 whocares_2_ quit:Ping timeout: 244 seconds
+20:36 whocares_2 joined channel
+21:06 iyzsong-m joined channel
+21:18 iyzsong joined channel
+21:18 iyzsong quit:Remote host closed the connection
+21:22 lh_ideapad quit:Remote host closed the connection
+21:57 komonsterko quit:Quit: Textual IRC Client: www.textualapp.com
+22:24 iyzsong joined channel
+23:18 Youmu quit:Ping timeout: 256 seconds
+23:20 dantmnf quit:Ping timeout: 256 seconds
+23:21 Youmu joined channel
+23:21 Youmu quit:Changing host
+23:21 Youmu joined channel
+23:21 Youmu quit:Changing host
+23:21 Youmu joined channel
+23:28 dantmnf joined channel
+23:56 lh_mouse quit:Ping timeout: 260 seconds
+23:58 iyzsong-m quit:Ping timeout: 240 seconds

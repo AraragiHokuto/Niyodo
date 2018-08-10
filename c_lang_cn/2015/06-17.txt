@@ -1,0 +1,563 @@
+00:03 endle quit:Ping timeout: 256 seconds
+00:12 lhanjian quit:Remote host closed the connection
+00:12 FrankHB quit:Ping timeout: 265 seconds
+00:12 FrankHB joined channel
+00:17 ASenR quit:Ping timeout: 250 seconds
+00:18 ASenR joined channel
+00:20 endle joined channel
+00:22 molikto_ quit:Remote host closed the connection
+00:25 endle quit:Quit: Leaving
+00:36 ASenR quit:Quit: leaving
+00:38 FrankHB quit:Ping timeout: 255 seconds
+00:43 lh_mouse: geordi, -c template<typename 
+00:43 geordi: error: expected nested-name-specifier at end of input
+00:44 lh_mouse: geordi, { foo(&string::push_back); } template<typename R, typename T> void foo(R T::*){ cout <<TYPE<R>, TYPE<T>; } 
+00:44 geordi: void (char), string
+00:45 lh_mouse: geordi, { foo(&string::empty); } template<typename R, typename T> void foo(R T::*){ cout <<TYPE<R>, TYPE<T>; } 
+00:45 geordi: bool () const, string
+00:45 lh_mouse: geordi, << TYPE<bool () const>;
+00:45 geordi: bool () const
+00:45 lh_mouse: geordi, << TYPE_DESC<bool () const>;
+00:45 geordi: bool () const
+00:45 lh_mouse: geordi, << TYPE_DESC<bool ()>;
+00:45 geordi: nullary function returning a boolean
+00:56 lh_mouse: http://tieba.baidu.com/p/3828913886?pid=69953152458&cid=70000390800#69953152458l  不行 笑死我了
+01:07 wlemuel quit:Ping timeout: 264 seconds
+01:07 cleamoon quit:Ping timeout: 264 seconds
+01:08 cleamoon joined channel
+01:29 lolisa quit:Read error: Connection timed out
+01:31 lolisa joined channel
+01:35 xxxxxxxx: http://www.jinlishun.com/about_12_4.html c艹吧帖子里的广告链接到这里
+01:49 lh_mouse: geordi, -c decltype(auto) val = string();
+01:49 geordi: Success
+02:05 lh_mouse quit:Read error: Connection reset by peer
+03:31 xxxxxxxx quit:Quit: Leaving...
+04:09 cleamoon quit:Ping timeout: 276 seconds
+04:10 cleamoon joined channel
+05:23 boosure joined channel
+06:00 iyzsong: 早 o.o
+07:07 lolisa quit:Ping timeout: 276 seconds
+08:30 boosure: 晚上好
+08:53 cleamoon: geordi, <<sizeof(a); struct a{ int x : 4; int y : 4;};
+08:53 geordi: 4
+08:53 cleamoon: geordi, <<sizeof(a); struct a{ int x : 4; int :4; int y : 4;};
+08:53 geordi: 4
+08:53 cleamoon: geordi, <<sizeof(a); struct a{ int x; int y;};
+08:53 geordi: 8
+08:53 cleamoon: geordi, <<sizeof(a); struct a{ int x=0; int y=0;};
+08:53 geordi: 8
+08:54 cleamoon: geordi, <<sizeof(a); struct a{ int x : 8; int : 8; int y : 8;};
+08:54 geordi: 4
+08:55 cleamoon: 什么鬼
+09:04 lh_mouse joined channel
+09:06 cleamoon: geordi, <<sizeof(a); struct a{ int x : 4; int : 4; int y : 4;};
+09:06 geordi: 4
+09:06 cleamoon: lh_mouse, 上边那个到底表示什么...
+09:18 molikto joined channel
+09:20 ASenR joined channel
+09:21 molikto quit:Remote host closed the connection
+09:41 NoxTy joined channel
+09:45 NoxTy quit:Client Quit
+09:57 lh_mouse: cleamoon, bit field?
+10:06 hoxily joined channel
+10:07 molikto joined channel
+10:08 ASenR quit:Quit: Lost terminal
+10:13 boosure quit:Quit: Get your hand off of it
+10:14 NoxTy joined channel
+10:15 molikto quit:Remote host closed the connection
+10:15 lh_not_bot: geordi: <<hex <<reinterpret_cast<uint16_t &>(f); struct foo { uint16_t a : 8 = 0x01; uint16_t b : 8 = 0x02; } f;
+10:15 geordi: error: lvalue required as left operand of assignment
+10:15 lh_not_bot: geordi: <<hex <<reinterpret_cast<uint16_t &>(f); struct foo { uint16_t a = 0x01 : 8; uint16_t b = 0x02 : 8; } f;
+10:15 geordi: error: expected ';' before ':' token
+10:16 lh_not_bot: geordi: { f.a = 0x01; f.b = 0x020304; cout <<hex <<reinterpret_cast<uint16_t &>(f); } struct foo { uint16_t a : 4; uint16_t b : 12; } f;
+10:16 geordi: warning: dereferencing type-punned pointer will break strict-aliasing rules
+10:16 lh_not_bot: geordi: use -w
+10:16 geordi: 3041
+10:17 lh_not_bot: geordi: -r << sizeof(foo)
+10:17 geordi: error: 'foo' was not declared in this scope
+10:17 lh_not_bot: geordi: << sizeof(foo); struct foo { uint16_t a : 4; uint16_t b : 12; } f;
+10:17 geordi: 2
+10:18 lh_not_bot: geordi: use 13
+10:18 geordi: 4
+10:19 Xilzzerts joined channel
+10:21 lh_not_bot: NoxTy: 吃药
+10:21 NoxTy: OAO
+10:22 NoxTy: 不要
+10:22 lh_not_bot: NoxTy: 吃药
+10:22 * lh_not_bot 捏 NoxTy 
+10:22 NoxTy: OwO
+10:23 NoxTy: 蠢呆萌
+10:25 lh_not_bot: NoxTy: 吃点药吧   吃药就不萌了
+10:25 NoxTy: 不要
+10:30 NoxTy quit:Remote host closed the connection
+10:35 varna joined channel
+10:50 molikto joined channel
+11:33 whatofor_1 joined channel
+11:35 whatofor quit:Ping timeout: 252 seconds
+12:10 Xilzzerts quit:Ping timeout: 276 seconds
+12:27 varna: 卧槽我那个闭包不被打脸了
+12:59 ASenR joined channel
+13:08 lhanjian joined channel
+13:19 lhanjian quit:Remote host closed the connection
+13:21 molikto quit:Remote host closed the connection
+13:24 lh_not_bot: varna: ??
+13:47 ASenR quit:Quit: leaving
+13:54 tutu_wind joined channel
+14:00 hoxily quit:Ping timeout: 264 seconds
+14:05 molikto joined channel
+14:15 sismvg joined channel
+14:19 sismvg: 今天凌晨3点的暴雨实在是太叼了
+14:20 sismvg: 门前都给淹了
+14:22 sismvg: 蓄力恶化-序列化 <-微软拼音..
+14:29 xxxxxxxx joined channel
+14:29 xxxxxxxx: 投篮停不下来中
+14:29 xxxxxxxx: 偷懒
+15:02 tutu_wind: 今天又装了一次逼 ... 唉 , 有背我心啊 ...
+15:04 xxxxxxxx: http://fashion.qq.com/a/20150617/016429.htm 成精了
+15:05 * lh_not_bot slaps tutu_wind around a bit with condy 
+15:05 varna: lh_not_bot: 以前我那个闭包只能做一层，今天重新编译之后可以嵌套了……
+15:07 * lh_not_bot slaps condy around a bit with varna 
+15:07 * varna poies
+15:10 * condy poi~
+15:11 lh_not_bot: ~poi();
+15:13 hoxily joined channel
+15:30 varna: 啊啊，终于可以正式开始育成我次世代水雷战队了
+15:34 sismvg quit:Read error: Connection reset by peer
+15:46 lolisa joined channel
+15:46 varna: lolisa: 掘
+16:04 tutu_wind quit:Quit: WeeChat 1.1.1
+16:27 lh_not_bot: sed -ri ':beg;s,(\b[a-z][a-z_]*)([A-Z][a-z]*),\1_\l\2,;t beg' `find src -name '*.?pp'`   
+16:27 lh_not_bot: 看起来就是一坨 sh*t
+16:56 hoxily quit:Quit: WeeChat 1.1.1
+16:56 hoxily joined channel
+17:00 lhanjian joined channel
+17:04 lolisa quit:Ping timeout: 276 seconds
+17:26 xxxxxxxx: http://xj.people.com.cn/n/2015/0617/c188514-25273600.html 读着像小说的新闻...
+17:31 lhanjian quit:Quit: Leaving
+17:36 varna: 发微信……
+17:54 xxxxxxxx: 村长说：“往年的龙舟都是就地取材，自己动手打造，从伐木制造到新船下水，时间长而且很累、很辛苦，龙舟用不了几年就崩裂无法使用了，为了在今年龙舟大赛一展风采，听说淘宝有龙舟卖，而且送货到家，今年村里就决定网购龙舟，我们可是‘宁荒一亩田，不输一条船’啊！下单到制作成品10天时间，广州发货到我们山沟沟收货仅用了一
+17:54 xxxxxxxx: 天时间呀！没让我们久等，真是太方便了，我们可以有更多的时间准备赛前训练了。”
+17:54 xxxxxxxx: ^贵州村民网购600斤玻璃钢龙舟
+18:13 varna: ...
+18:15 endle joined channel
+18:43 Plough joined channel
+18:44 Plough: 这周要做铝号了
+18:44 Plough: 今晚先刷闪解决阿号
+18:50 hoxily quit:Quit: WeeChat 1.2
+18:50 hoxily joined channel
+19:02 varna: 我终于恢复元气了
+19:03 varna: Plough: http://bs-arekore.at.webry.info/201506/article_4.html
+19:05 Plough: ……单横真有回避玄学？
+19:06 varna: 不知道
+19:07 varna: Plough: 另外我发两个代码，你编译一下看
+19:07 varna: 开O2或者O3
+19:07 Plough: 了解
+19:10 molikto quit:Remote host closed the connection
+19:10 varna: Plough: 已msg
+19:17 Plough: 先去吃饭
+19:25 cleamoon: bit field？那怎么填什么数字得到的都一样...
+19:26 varna: ?
+19:27 iyzsong: - -b
+19:27 cleamoon: geordi, <<sizeof(a); struct a{ int x : 8; int : 8; int y : 8;};
+19:27 cleamoon: 这个
+19:27 geordi: 4
+19:28 varna: 得对齐啊
+19:29 varna: 你给个比4B对齐更大的尺寸
+19:30 varna: geordi: <<sizeof(a); struct a{ int x : 16; int : 8; int y : 16;};
+19:30 geordi: 8
+19:30 cleamoon: soga
+19:31 cleamoon: 幸运E ama怎么样了
+19:31 varna: 昨晚打了九级
+19:31 lhanjian joined channel
+19:32 cleamoon: 然后遇到了9
+19:32 varna: 感觉只适合N, 勉强NM, H比较自虐
+19:32 lhanjian: 啊，可以休息五天了
+19:32 cleamoon: 什么打法？毒
+19:32 varna: 物理枪
+19:33 cleamoon: 纯物理？那怎么打
+19:33 cleamoon: 全程jab吗
+19:33 varna: jab fend
+19:33 cleamoon: .....
+19:33 lhanjian: 有个伙计给自己弄的公司代号——榛名
+19:34 varna: 蛤撸娜
+19:34 cleamoon: 23333
+19:34 lhanjian: 23333
+19:36 cleamoon: 所有书都推荐c艹用new而不是malloc，他们本质有什么区别？
+19:37 cleamoon__ joined channel
+19:37 varna: malloc不构造
+19:37 varna: new未必走malloc
+19:39 cleamoon: soga，就是构造的区别？
+19:39 varna: 其他的区别最好问小耗和恥球
+19:40 cleamoon: 羊驼子只关心哲学上得区别？
+19:40 varna: 我不是C艹党……
+19:41 lhanjian: 羊驼不喜欢她对象
+19:42 varna: 不不，演习练米空虽然辛苦但很好的
+19:42 cleamoon: http://www.solidot.org/story?sid=44469
+19:42 varna: 很快米空的等级就要超越我手下最大毒瘤
+19:43 varna: 360什么时候学会卖情怀了
+19:43 molikto joined channel
+19:43 varna: 为何不屏蔽全部电磁波呢
+19:43 varna: 包括太太（若存在）用的手机
+19:44 cleamoon: 其实风德也还是挺好用的，就是同样没意思
+19:44 varna: 风德超无聊
+19:44 varna: 德唯一好玩的练法就是狼德，然而这是个壕玩法
+19:44 cleamoon: 我估计360手机版会加上防止辐射功能
+19:44 cleamoon: 所有肉搏都壕，除非不想进地狱
+19:44 lh_not_bot: 区别大了
+19:44 varna: 狼德比较特别
+19:44 lh_not_bot: 缺省的 new foo 在内存不够时候会抛异常
+19:44 varna: 一般程度的穷人连噩梦都难打
+19:46 Plough: 太太用什么手机
+19:46 varna: 我一个能虐N的穷鬼狼德到了NM被小鬼轮回原形差点没死在野地里
+19:46 Plough: 直接上信号灯多好
+19:46 varna: Plough: 21
+19:46 varna: 翔鹤是最先上21的一批
+19:46 Plough: 21只是对空雷达吧
+19:46 varna: 上灯了，火鸡们读不懂
+19:47 Plough: 那就打下来烤了
+19:47 varna: 需要动用上尉以下的各种人员
+19:47 cleamoon: lh_not_bot, malloc没异常？那还怎么用
+19:47 cleamoon: http://news.163.com/15/0616/09/AS7KS6VG00014JHT.html
+19:48 varna: malloc有时候私下承诺你活着出来的时候一定能看见新鲜的内存
+19:48 varna: 而且这承诺是成立的
+19:48 Plough: 度盘的速度连500KB/s都没有……
+19:48 lolisa joined channel
+19:49 lh_not_bot: malloc 失败返回空指针
+19:49 * lh_not_bot slaps lolisa around a bit with a large trout
+19:50 varna: lolisa: 掘
+19:50 lh_not_bot: Plough: 度狗卡速度又不是一天连天了
+19:50 Plough: 所以恶心
+19:50 lh_not_bot: 我有 vps 口牙我有 vps 口牙
+19:51 * lolisa evade*2
+19:51 varna: fvckjapan
+19:51 lh_not_bot: jjgirls
+19:51 lhanjian: 蛤蛤蛤
+19:52 varna: zhangzhe.wang被HX了
+19:52 lolisa: 恰恰
+19:52 varna: 我最后看到的是那些作死群众续了2天14小时以上
+19:52 varna: 一人次合一秒
+19:52 Plough: 武藏在1-1第一点被艹了五点血下去
+19:52 lolisa: 23333
+19:53 lolisa: 等下，这十几万秒了吧，这么大的流量
+19:53 varna: >223,200s
+19:53 cleamoon__: 长者被转到微博了
+19:53 varna: 而且后来他们还在作死
+19:53 Plough: 总计十点血没了
+19:53 lh_not_bot: varna: 它自己挂了
+19:54 varna: 上面摆了一个挡油罐的小游戏
+19:54 varna: 别问我油罐是什么
+19:54 * lh_not_bot lolisa 被艹了五点血下去
+19:54 lolisa: 你不是说38小时吗？这就2280分钟，136800秒。。。
+19:54 varna: 2天14小时
+19:54 * lolisa baka了
+19:55 varna: 这是62小时啊
+19:55 lolisa: 我记成一天12小时了hhh
+19:55 varna: 卧槽移动给我来个短信把我吓坏了
+19:55 varna: “彩云喊你回家啦！”
+19:55 Plough: ……以为被水表了？
+19:55 Plough: 噗什么鬼
+19:55 varna: 给我来九个格鲁门
+19:55 varna: fvck the jap
+19:55 Plough: 我有A8M
+19:55 lh_not_bot: 反航战
+19:57 libhanjian joined channel
+19:58 Plough: 嗯，小破了
+19:59 lhanjian quit:Remote host closed the connection
+19:59 lh_not_bot: 我跟你说个笑话      T 有利
+20:00 varna: T有利的最后一个折合因素，我手里一点数据都没有
+20:00 varna: 假定射程得宜，那么横头舷侧火力可用
+20:00 varna: 同时不利方也不便于三角测量
+20:00 varna: （不便于横头开火时的测量）
+20:00 varna: 而最后一个因素是散布投影
+20:00 varna: 不过我不厨大舰巨炮所以略
+20:02 Plough: 虽然有T竖处船散布面与舰体重合更大的说法，不过其实我比较怀疑这个因素的影响……
+20:02 Plough: 而且只考虑单舰的话航向毫无意义吧
+20:02 varna: 我看到战列舰论坛马老的译文，说是数据点少的时候也会用高斯分布估算
+20:03 varna: 单舰还是有的
+20:03 Plough: 打个舵两分钟转过去了
+20:03 varna: 尤其多打一容易坑，一般战术条令里会有规定
+20:03 varna: 两分钟炮弹没飞到地方说明横头的射程坑了
+20:03 Plough: 两分钟轰沉只能是脸黑吧
+20:03 varna: 是
+20:03 Plough: 所以咯
+20:03 varna: 但长程T有利会加速脸黑……
+20:03 lh_not_bot: 目视炮击要先打几炮看看远近  然后才齐射吧
+20:04 varna: 原则如此
+20:04 varna: 而且不会真正齐射
+20:04 varna: 不过蝗国是个比较例外的
+20:04 varna: 米鬼英畜一般会要求两轮左右的试射
+20:05 Plough: 然而大和对白平原那个三轮跨射
+20:05 varna: 而蝗国觉得他们应该在试射上取得命中，并且宣称他们的命中率三倍于开战时的米英
+20:05 varna: 并没有人知道这牛吹得有多大
+20:05 Plough: 这似乎也被美方的报告证实了吧
+20:05 Plough: 哦，你说那个三倍啊
+20:05 varna: 问题是那个三倍的数据是两方公开的军队考核数据
+20:06 Plough: 我以为你说三轮跨射……
+20:06 varna: 而用副HOI盘偷跑的例子似乎不在少数……
+20:06 lh_not_bot: 比如扶桑号  貌似就算 T 有利也成不了气候
+20:06 Plough: 不过无所谓了，反正没人能准过俾斯麦
+20:06 varna: 扶桑是个悲剧
+20:06 lh_not_bot: 据说扶桑号十二门主炮侧向齐射会把船掀翻
+20:06 Plough: 也有说法是只是黑烟会遮住舰桥
+20:07 varna: 那必须一齐开火
+20:07 Plough: 说起来藤本案……
+20:07 varna: 但一般舰船不会一齐开火的，那样晃动太大了
+20:07 varna: 但黑烟遮住四十五米高十四层（修掉了一层）的舰桥这个报告应该比较可信
+20:07 Plough: 我觉得藤本案更容易翻，而且我感觉她根本打不中人啊
+20:08 lh_not_bot: 20:04 <+varna> 而蝗国觉得他们应该在试射上取得命中，并且宣称他们的命中率三倍于开战时的米英  // 美军表示我们命中低但是我们弹药数是岛国六倍
+20:08 Plough: 51来个四连，这散布还能看？
+20:09 varna: lh_not_bot: 然而这个问题的讽刺还有个战例——妙高和羽黑曾经打光了几乎所有主炮弹药，靠包括驱逐队在内的支援干沉了一个英国重巡
+20:09 Plough: 泗水么
+20:09 varna: 不说弹药数，反正高呼天闹黑嘎板载也是打不中的
+20:10 varna: 至于美军的命中问题，有些人指出受了一些设备影响
+20:10 varna: 可能包括旧式的连装炮，以及没有HOI的新式三连装主炮
+20:11 Plough: 美军的炮术应该也不差的
+20:11 Plough: 那个首轮跨射……
+20:11 varna: 那是后来了
+20:11 libhanjian quit:Remote host closed the connection
+20:11 varna: 而且我看到一点报告（译文，原文我找不到了），感觉他们的炮术军官后来水平也不错
+20:12 varna: 在训练使用火控雷达的时候，有一个例子里炮术军官根据自己的判断放弃了雷达兵的数据
+20:12 Plough: 然后中了/
+20:12 Plough: 然后中了?
+20:12 varna: 中了
+20:13 Plough: ……
+20:13 varna: 雷达灵敏度不好，回波有时候容易混淆
+20:15 Plough: 美国雷达果然辣鸡，就是不如我科技之国的超级雷达
+20:16 libhanjian joined channel
+20:16 varna: 早期深海太平洋军可能从东洋军那里进口了一些雷达技术
+20:16 varna: 至于HOMO雷达，我什么都不知道
+20:16 Plough: 一开炮立马掉
+20:17 xxxxxxxx: HOMO雷达是用来抓羊驼的么?
+20:18 varna: 一说HOMO雷达，HOMO就出来了
+20:18 Plough: 哈哈哈
+20:18 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/p0/st_170461.jpg   自卑赖射会
+20:18 Plough: 天山友永彗星江草+彗星601*2
+20:18 Plough: 开幕四个miss
+20:18 cleamoon: 一说HOMO雷达，HOMO就出来了
+20:18 Plough: 然后自己被干掉了十多点血
+20:18 Plough: 加贺老师演得实在漂亮
+20:20 varna: 我刷闪都是四个爆战……
+20:22 xxxxxxxx: 然后吸引以为是福利的对手坑铝
+20:22 Plough: 这怎么会坑铝
+20:22 Plough: ……你说羊驼子？
+20:22 varna: 我看到有航母就默认不抢制空
+20:23 varna: 而如果有人看到我一个非婚单舰或者cv+潜艇，他知道我在干什么
+20:23 varna: 而实际上即使对面不制空，我也懒得制空……
+20:24 Plough: 我一般带两个瑞云12
+20:24 molikto quit:Ping timeout: 245 seconds
+20:24 varna: 主要是我即使拿下制空也就是让对面不二连
+20:24 xxxxxxxx: 我通常带一个航战
+20:24 varna: 所以反正都是两边平砍，何必呢……
+20:24 Plough: 我拿下对空的话自己是能二连的……
+20:25 molikto joined channel
+20:25 Plough: 制空*
+20:28 varna: 啊，柱岛开了
+20:29 Plough: 喔？
+20:29 varna: 现在似乎还在放号
+20:29 Plough: 新一届咸鱼岛
+20:29 varna: 速猫湾、猫屋、猫川、作猫湾、猫岛
+20:29 Plough: 23333
+20:29 Plough: 猫川什么鬼
+20:30 Plough: 不就爆炸了那么两次么
+20:30 varna: 现在炸以后说不定就开始炸了
+20:30 Plough: 冬活的时候幌筵也爆炸过
+20:30 Plough: 现在不是挺好的么
+20:31 varna: 我感觉这个月我得用力周才能保住500
+20:31 varna: 不周了
+20:31 Plough: 肝rz
+20:31 Plough: 我现在都只是大将
+20:32 varna: 今年我打过的5-4只有几十盘
+20:32 xxxxxxxx: orz
+20:32 libhanjian quit:Remote host closed the connection
+20:32 varna: 现在五百线1104，我1006
+20:32 varna: 今天要是赶上战果，我恐怕得周八十盘
+20:32 varna: 合计九千弹以上
+20:33 varna: 然后下个月末运营赏脸发我个大灯
+20:33 varna: 直接省个厕所
+20:33 Plough: 233333
+20:33 Plough: 另外现在WOWS里其实是T横方被吊打
+20:33 varna: 因为散布做得不对吧
+20:34 Plough: 是
+20:34 libhanjian joined channel
+20:34 Plough: 毛子把散布搞成横向的了
+20:34 varna: 火力不论，bearing问题不存在，如果散布是正圆，那横头就作死
+20:34 Plough: 为了平衡，嗯
+20:34 varna: ……
+20:34 varna: 见鬼
+20:34 varna: 利根效果如何
+20:34 varna: 有利根吧
+20:34 Plough: 不是正圆，基本上就是和你舰体平行的一条线
+20:34 Plough: 没有
+20:34 Plough: 估计是二线
+20:34 varna: 这是平衡
+20:34 varna: 不好意思把炮都摆在前面
+20:34 Plough: BB直接被平衡成狗屎
+20:35 varna: 还有两组炮没射角
+20:35 Plough: 然而你看看出云
+20:36 Plough: 不过我听说现在出云只能欺负欺负北卡以下，碰上Iowa直接被吊打……
+20:36 varna: 按说开炮的后座力造成的摇晃应该使得飞行线路前后偏差大啊
+20:36 Plough: 我听说以前是这样的
+20:37 Plough: 但是玩家打不中
+20:37 varna: ...
+20:37 varna: 打不中才正常
+20:37 varna: 能有20%的命中率那已经可以称为炮神了
+20:37 Plough: 而且按现在这系统，如果纵向散布的话BB根本不用打了
+20:38 varna: 这真难过
+20:38 Plough: 炮弹落下时与法线夹角小于五度直接判定徹甲不能 
+20:38 varna: ……
+20:38 Plough: 即使是九四式你也别想砸穿DD的甲板
+20:39 Plough: 毛子：“装甲？我们什么时候说我们做过装甲？”
+20:39 varna: 我觉得巡洋舰的14cm或是6in炮上去也足够砸穿了
+20:39 Plough: 巡洋舰的炮弹会从大和的烟囱灌进去
+20:39 varna: 驱逐舰那个防护在更大的舰面前太虚弱了
+20:39 Plough: 然后你那满血大和的舰体就被锅炉炸成两截了
+20:40 varna: ...
+20:40 Plough: 真有人打出来过
+20:40 Plough: 巡洋舰一轮齐射秒大和
+20:40 varna: 所以我说这种海战游戏不适合做成射击风格的……
+20:40 Plough: 他当时正好开了跟踪视角，发现炮弹能从烟囱灌进去直接吓傻了
+20:40 varna: 空战还好说，虽然机动复杂但射击需要的参数少
+20:41 Plough: 我听说WT要加海战了……
+20:41 varna: 他们陆战做完了？
+20:41 Plough: 没玩过，不过进去的时候确实问我是要玩飞机还是坦克了
+20:42 varna: 海战搞成动作的怎么玩怎么假
+20:42 Plough: 也就看看齐射的时候那气势而已
+20:44 Plough: 真玩起来基本都是悲剧
+20:44 Plough: 那天我逮到一个炮术不咋地的大峡谷，和他一顿对肛
+20:44 varna: 可能潜艇战比较好些，像猎杀潜航系列
+20:45 Plough: 把他肛到1K血了
+20:45 Plough: 然后我正等装弹呢，他回头一轮齐射
+20:45 varna: 那系列从我小时候就开始做了，还请了二战的舰长来写了一点指导
+20:45 Plough: 四万血的扶桑瞬间轰沉
+20:45 varna: ……
+20:45 Plough: 我直接傻了
+20:45 Plough: 而且这还不是弹药库爆炸
+20:45 Plough: 不然会解锁成就给我个信号旗的
+20:45 varna: 肥桑被轰沉的理由为何不是殉爆
+20:45 Plough: 然而并没有见到什么信号旗
+20:47 varna: 太奇特
+20:47 Plough: 主要是这场景实在太让人郁闷
+20:48 Plough: 扶桑对大峡谷齐射一轮至少三千点伤害
+20:48 varna: 噗
+20:48 varna: 明天讨论班停了，有几个哥们要去院里拔河比赛
+20:49 Plough: ……
+20:52 beefcafe quit:Ping timeout: 248 seconds
+20:53 beefcafe joined channel
+21:05 ASenR joined channel
+21:07 lhjkkkk joined channel
+21:09 libhanjian quit:Remote host closed the connection
+21:10 varna: 在别的群里水的时候突然输入法出卖了我
+21:10 Plough: ……什么情况
+21:10 varna: wudao的第一候选是雾岛……
+21:10 Plough: ……
+21:11 xxxxxxxxx joined channel
+21:12 xxxxxxxx quit:Ping timeout: 245 seconds
+21:21 Plough: 长门也刷了个小破出来
+21:22 varna: stan那货爆炸了
+21:22 Plough: ……什么情况
+21:22 varna: 他ML把中指弄伤了
+21:22 Plough: 噗
+21:23 Plough: 我们直接来点豆油吧
+21:23 varna: 前几天我刚听说他搞出人命来，后来又说是传言
+21:23 Plough: 就是天一号时大和烧的那种
+21:23 varna: 今天直接跑到舰吧话题帖表示自己做得有点腻了……
+21:23 Plough: ……
+21:24 Plough: 不愧是Big Seven
+21:24 Plough: 满血刷到47点血
+21:24 varna: ...我最多是满血刷小破
+21:24 varna: 没办法的事
+21:39 libhanjian joined channel
+21:42 lhjkkkk quit:Remote host closed the connection
+21:50 xxxxxxxxx: ML把中指弄伤了 <- ML? 中指?
+21:52 varna: Make Love
+21:56 wlemuel joined channel
+22:04 Plough: 黄脸出击居然没出事
+22:05 varna: 我有时候让高练度的舰黄脸刷闪
+22:05 varna: 不然等起来太慢了
+22:05 Plough: 补给船
+22:06 varna: 2-2比较快
+22:06 varna: 掉一次沟搞不好就是四个
+22:06 Plough: 太烧
+22:06 varna: 推荐水面舰
+22:06 Plough: 所以才烧……
+22:06 varna: 水雷战队也可以的
+22:06 Plough: 倒是可以去做铝号？
+22:06 varna: 或者重巡战队
+22:07 varna: 或者2clt
+22:07 varna: 作战也就最多2点，烧的程度我觉得还算可以接受
+22:07 Plough: 3CLT呢
+22:07 varna: 更好
+22:07 varna: 潜艇去太危险了
+22:07 Plough: 我做铝号的时候试试
+22:07 lhjkkkk joined channel
+22:08 varna: 最强的敌人是头目的E喔
+22:08 varna: 其次是白板撸级
+22:08 varna: 然后是头目的E莉
+22:08 varna: 别的没什么
+22:08 xxxxxxxxx: 那怎么弄伤的中指?
+22:08 varna: 制空方面，2航母系确保较高确率Boss
+22:08 varna: 1航母系也有传说的带路
+22:09 varna: 如何打看任务的安排了
+22:09 Plough: 有没有较高掉补给的带路
+22:09 varna: 没有能制空的
+22:09 Plough: ……
+22:09 varna: 要保证EWO级别的制空，我不知道航巡行不行
+22:09 Plough: 这还打个卵
+22:10 varna: 所以我的建议是跟南西混在一起做
+22:10 Plough: 了解 
+22:10 varna: 沟率差不多一半
+22:10 Plough: 二连356
+22:10 Plough: 三连
+22:10 Plough: 终结了
+22:10 varna: ...
+22:11 Plough: 我大概有7页356了……
+22:11 varna: OTL
+22:11 libhanjian quit:Ping timeout: 244 seconds
+22:11 Plough: 几个月没拆了
+22:11 xxxxxxxxx: 然而我这几天一点都不想玩kancolle...
+22:12 Plough: 那就不玩
+22:12 Plough: 你看我砍手一星期回来直接出大和
+22:12 varna: 你肝得太厉害了
+22:12 varna: 歇一段时间看心情吧……
+22:13 xxxxxxxxx: 不是 我最近总想去玩cubeworld
+22:14 xxxxxxxxx: 虽然飞龙还没练
+22:14 xxxxxxxxx: 长门也没取出来
+22:14 xxxxxxxxx: 然而迷之想偷懒
+22:15 Plough: 休闲游戏何必肝
+22:15 varna: 偷懒才对
+22:15 varna: 刚才我想到一个问题啊
+22:15 varna: 下面的CPS都说的是通信顺序进程
+22:16 varna: 若给出一个并发过程的CPS公式，则能演算得到一个图
+22:16 varna: 这图尽最大可能描绘了并发的串行化结果
+22:16 varna: 而给出这CPS公式的前提，是进程为一个函数
+22:17 xxxxxxxxx: 然而我说偷懒基本上就是游戏都不开... 
+22:17 varna: 那么对于一个在纸面上具有purity的语言，是否可以显式引入这样的语法描绘并发呢
+22:19 varna: 然而我怒扇了自己一个大嘴巴
+22:20 varna: 若我以hs cultist的方式确保纸面purity, 那么根本不需要这么考虑问题
+22:20 varna: over
+22:20 xxxxxxxxx: 然而并不能听懂
+22:20 Plough: 然而并不能听懂
+22:20 varna: 你们这一个基佬一个药娘居然串通起来……
+22:20 Plough: 你这妄想症HOMO
+22:21 varna: 我并未妄想
+22:23 wlemuel quit:Ping timeout: 276 seconds
+22:23 varna: 我在创造（Briah）
+22:27 Plough: 阿号依然没能做完
+22:28 Plough: 先睡觉
+22:28 Plough: 诸君武运
+22:28 Plough quit:Quit: 睡觉
+22:29 xxxxxxxxx: http://item.jd.com/1142981991.html <- Briah
+22:30 varna: 那是O'Briah...
+22:36 libhanjian joined channel
+22:37 lhjkkkk quit:Remote host closed the connection
+22:45 lolisa quit:Ping timeout: 276 seconds
+22:55 whocares_2 quit:Ping timeout: 245 seconds
+22:59 varna quit:Quit: leaving
+23:03 hoxily quit:Quit: WeeChat 1.1.1
+23:24 xxxxxxxxx quit:Quit: Leaving...
+23:30 endle quit:Ping timeout: 246 seconds
+23:38 libhanjian quit:Quit: Leaving
+23:40 molikto quit:Ping timeout: 256 seconds
+23:51 molikto joined channel
+23:53 molikto quit:Remote host closed the connection
+23:54 molikto joined channel

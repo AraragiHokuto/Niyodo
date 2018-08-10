@@ -1,0 +1,186 @@
+00:04 lh_cat joined channel
+00:07 lh_mouse quit:Ping timeout: 268 seconds
+00:27 whocares_2_ quit:Read error: Connection reset by peer
+00:27 whocares_2 joined channel
+00:48 whocares_2_ joined channel
+00:50 whocares_2 quit:Ping timeout: 260 seconds
+00:50 CyrusYzGTt joined channel
+01:10 whocares_2_ quit:Ping timeout: 264 seconds
+01:17 CyrusYzGTt quit:Read error: Connection timed out
+01:18 CyrusYzGTt joined channel
+01:23 whocares_2 joined channel
+01:25 lh_cat quit:Ping timeout: 265 seconds
+02:38 condy quit:Ping timeout: 264 seconds
+02:40 condy joined channel
+02:51 CyrusYzGTt quit:Ping timeout: 265 seconds
+03:03 CyrusYzGTt joined channel
+04:39 geordi quit:Remote host closed the connection
+04:42 geordi joined channel
+09:19 AetherWind quit:Quit: IRC for Sailfish 0.9
+09:27 lh_mouse joined channel
+09:30 jhwong joined channel
+09:51 yonka joined channel
+09:55 yonka quit:Ping timeout: 248 seconds
+10:00 yonka joined channel
+10:01 yonka quit:Remote host closed the connection
+10:02 yonka joined channel
+10:12 lh_ideapad joined channel
+10:35 AetherWind joined channel
+10:38 AetherWind quit:Client Quit
+10:38 AetherWind joined channel
+10:39 AetherWind quit:Client Quit
+10:41 AetherWind joined channel
+10:52 AetherWind is now known as AetherWind_GJ
+10:53 AetherWind_GJ is now known as AetherWind
+10:57 cleamoon_ quit:Quit: Connection closed for inactivity
+13:18 matchray: 索引線程把信息餵給主線程；之後源文件保存，索引線程重新索引，主線程怎麼更新自己的信息比較好？
+13:33 AetherWind quit:Quit: Leaving
+13:34 AetherWind joined channel
+13:35 lh_cat joined channel
+13:38 lh_mouse quit:Ping timeout: 256 seconds
+14:02 microPython joined channel
+14:10 AetherWind quit:Quit: Leaving
+14:10 AetherWind joined channel
+14:17 AetherWind quit:Quit: Leaving
+14:18 AetherWind joined channel
+14:28 GoBzzzt_ joined channel
+14:29 GoBzzzt quit:Read error: Connection reset by peer
+14:30 AetherWind quit:Quit: Leaving
+14:31 AetherWind joined channel
+14:34 AetherWind quit:Client Quit
+14:35 AetherWind joined channel
+14:40 lh_cat is now known as lh_mouse
+14:43 \s joined channel
+14:43 \s quit:Changing host
+14:43 \s joined channel
+14:55 AetherWind quit:Quit: Leaving
+14:57 AetherWind joined channel
+14:59 \s quit:Quit: ZZZzzz…
+14:59 \s joined channel
+14:59 \s quit:Changing host
+14:59 \s joined channel
+14:59 \s quit:Client Quit
+15:11 hashjian_l: matchray: 喵睿
+15:11 matchray: 喵唔
+15:26 AetherWind quit:Ping timeout: 256 seconds
+15:27 AetherWind joined channel
+15:46 sixand joined channel
+15:58 sixand quit:Ping timeout: 256 seconds
+16:24 cleamoon_ joined channel
+17:13 \s joined channel
+17:17 \s quit:Ping timeout: 248 seconds
+17:46 lh_ideapad: geordi, { string str;
+17:46 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+17:46 lh_ideapad: geordi, { string str = "hello";  auto it = str.begin(); if(it = str.end()) cout <<"MEOW"; }
+17:46 geordi: error: could not convert '(it = str.string::end())' from 'string::iterator' to 'bool'
+17:55 nighter_ joined channel
+17:55 jhwong quit:
+18:29 yonka quit:Remote host closed the connection
+18:35 yonka joined channel
+18:40 yonka quit:Ping timeout: 240 seconds
+18:44 \s joined channel
+18:44 \s quit:Changing host
+18:44 \s joined channel
+18:48 \s quit:Ping timeout: 256 seconds
+19:11 AetherWind quit:Quit: Leaving
+19:11 tiimmm joined channel
+19:34 Stevearzh quit:Read error: Connection reset by peer
+19:36 hashjian_l: hope1: 海棠来了
+19:37 Stevearzh joined channel
+19:45 cleamoon_: hohoho
+19:55 NebulaMoe joined channel
+20:06 lh_ideapad quit:Remote host closed the connection
+20:07 nighter_ quit:Quit: Leaving
+20:14 hashjian_l: cleamoon_: 绅士
+20:16 tiimmm quit:Quit: Leaving
+20:21 hashjian_l: 今天直播武装突袭3
+20:22 hashjian_l: https://www.douyu.com/2881221
+20:24 NebulaMoe quit:Remote host closed the connection
+20:24 NebulaMoe joined channel
+20:39 varna joined channel
+20:39 varna: 噗叽啪
+20:39 varna: 噗啪
+20:39 varna: 噗叽啪
+20:42 varna: (｡･ω･)海棠居然也在
+20:49 hashjian_l: varna: ARMA3打不下去
+20:49 hashjian_l: 孤军给我一把破手枪，连地图/GPS都没有，往敌人巡逻队缝里钻，闷头死一万次
+20:57 varna: 今天第一盘公寓还算顺，除了倒数第二波兵打的时候整体没压上去吃亏了
+21:06 varna: MD 速成鸡
+21:06 varna: 受不了了
+21:07 varna: 火力压制有个屁用啊……
+21:10 cleamoon_: 我看看这啥游戏
+21:11 cleamoon_: hashjian_l: 没播？
+21:15 hashjian_l: 打不下去了
+21:17 cleamoon_: hashjian_l: 疯狂受苦？
+21:17 cleamoon_: 哈哈哈，ubuntu放弃unity啦
+21:17 cleamoon_: 回归到丑的一B的gnome了
+21:20 cleamoon_: 噗，看到个词，扶 她 林
+21:21 yonka joined channel
+21:22 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pc/9h_499209.jpg@596w_1l.jpg  这个似乎比红丸子好用
+21:23 hashjian_l: 疯狂被毙，战斗意志消失
+21:25 yonka quit:Ping timeout: 248 seconds
+21:29 varna: 第三盘遇到了同样被速成鸡劝退的一个哥们
+21:29 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pc/27_239728.jpg@596w_1l.jpg
+21:31 cleamoon_: 鸿hao之志, jin jin 学子，北大校长教你钓鱼
+21:31 hashjian_l: 不是不可以压制，关键是压制的时候找个制高点，然后压着打
+21:31 hashjian_l: 打不到光压制是很痛苦
+21:32 cleamoon_: 什么 gay予，补gay 之类的，太俗了
+21:32 varna: 制高点不是直接被机枪+榴弹打爆么……
+21:32 hashjian_l: https://usercontent.irccloud-cdn.com/file/eQip6RK0/IMG20180504213024.jpg
+21:32 hashjian_l: 开拓奶住，众人站撸
+21:32 varna: 不管怎么打，上来优先处理奶>霰弹>技工>小姐姐
+21:33 varna: 上来就一顿乱打，看敌人的战损就知道明显思路有问题
+21:33 varna: 会打的话，公寓其实不需要开拓
+21:34 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pc/1v_239820.jpg@596w_1l.jpg
+21:34 hashjian_l: 不过总的来说孤星很弱
+21:34 hashjian_l: 只能和开拓和电工一起缩在后面射
+21:35 varna: 醒醒
+21:35 varna: 敌人的火力，一部分跑酷都是要开蓝T的
+21:36 varna: 要安全就最好能在一个射击窗口内秒掉关键目标
+21:37 metter joined channel
+21:39 cleamoon_: https://www.solidot.org/story?sid=56391  看这类报道就觉得神创论也不是没道理
+21:39 varna: 孤星其实也可以的，搞一个大鸭梨
+21:41 hashjian_l: mg5也行
+21:41 hashjian_l: 大鸭梨太难出了
+21:42 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/jk/hq_267932.gif@596w_1l.gif
+21:44 metter quit:Quit: WeeChat 2.0.1
+21:44 metter joined channel
+21:45 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pa/es_423878.jpg@596w_1l.jpg
+21:47 varna: ok 谋略五件搞定
+21:47 varna: 以后高兴的话也可以兼职电工了
+21:53 varna: cleamoon_: 这个猫不错，多少钱一斤
+21:58 cleamoon_: varna: 这个论筐卖，上面还能放个橘子
+21:59 iyzsong joined channel
+22:06 metter quit:Quit: WeeChat 2.0.1
+22:10 metter joined channel
+22:14 cleamoon_: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pc/h4_233236.jpg@596w_1l.jpg
+22:18 varna: puuu
+22:37 condy: wtf
+22:42 varna quit:Ping timeout: 264 seconds
+22:43 varna joined channel
+23:06 metter quit:Quit: WeeChat 2.0.1
+23:13 hashjian_l: varna: 机密突袭套全了
+23:14 varna: 欧洲人是这样的
+23:14 varna: 你怎么配？6k体还是9k体
+23:16 hashjian_l: 万火啊
+23:17 varna: 突袭不是这么玩的……你站不住
+23:17 varna: 万火基本上只有浪人能搞
+23:17 varna: 狙击不论
+23:18 hashjian_l: 4000体
+23:18 varna: 只有6k和9k两个实用档位吧
+23:18 hashjian_l: 那我再洗一个吧
+23:19 hashjian_l: 6k体怎么玩
+23:20 varna: 6k体6k火，实际上应该都在6.5k左右
+23:20 varna: 突袭只有火体或者1+4的配法，注意六件套的技能
+23:20 varna: 他比起掠夺的好处就是能站住
+23:20 hashjian_l: 嗯
+23:21 hashjian_l: 不过我装等不高
+23:22 varna: 装等不是最关键的
+23:22 varna: 最后还看属性和白字
+23:25 hashjian_l: 6400 6300 2900
+23:30 cleamoon_: 看起来怎么这么像大建
+23:44 hashjian_l:  var varna 激活成就，没空死掉
+23:46 hashjian_l: 感觉挑战本一下子变成了easy难度
+23:51 varna: 好累，躺了
+23:52 hashjian_l: 可以站撸难民营
+23:56 varna quit:Ping timeout: 260 seconds

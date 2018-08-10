@@ -1,0 +1,465 @@
+00:03 lh_not_bot quit:Ping timeout: 250 seconds
+00:04 lh_not_bot joined channel
+00:07 cleamooon: 像是循环节里一直用的一个需要计算一次的变量提到循环节外面算一遍这种优化，gcc能做到吧？
+00:08 lh_mouse: 不一定。
+00:08 lh_mouse: 对于 C艹绝大多数都做不到。
+00:09 cleamooon: .....
+00:09 cleamooon: 于是必须手动？
+00:09 lh_mouse: 是。
+00:10 lh_mouse: 辣鸡 C艹 连一个未使用的 string 都优化不掉。
+00:10 cleamooon: ........
+00:10 cleamooon: 那太蛋疼了
+00:15 cleamooon: vector 没办法像普通数组一样用 malloc 之类的保证其内存使用吗？
+00:19 miao233_ quit:Quit: Leaving.
+00:19 lh_mouse: 什么？
+00:21 cleamooon: 就是 vector 有时一直 push_back 会失败
+00:21 cleamooon: 很奇怪
+00:21 lh_mouse: 怎么会失败。
+00:21 cleamooon: 我怎么知道....
+00:22 lh_mouse: 失败是什么意思。
+00:22 lh_mouse: push_back 是没有返回值的。你抓到异常了？
+00:22 cleamooon: 其实是做 acm 题时，用超大 vector 时经常会出问题
+00:22 lh_mouse: acm 滚出，
+00:24 cleamooon: 但是这个问题还在呀
+00:24 cleamooon: 编译就是 -O2 
+00:24 lh_mouse: 内存炸了吧。
+00:24 cleamooon: 内存炸了+
+00:24 cleamooon: 但是 malloc 可以那么大
+00:25 lh_mouse: libstdc++ 是每次 *2 。
+00:25 cleamooon: 嗯呢
+00:26 cleamooon: 我之前读到了这个
+00:26 cleamooon: 所以觉得很奇怪
+00:26 lh_mouse: 尝试预先 reserve() 。  傻逼 libstdc++ 。
+00:31 lh_mouse quit:Read error: Connection reset by peer
+00:31 tutu_wind quit:Ping timeout: 244 seconds
+00:35 f00x joined channel
+00:39 SliverElf quit:Quit: Leaving
+00:47 Matsune quit:Quit: Leaving
+01:32 cleamooon: geordi, << "abcdef".substr(2, 4);
+01:32 geordi: error: request for member 'substr' in '"abcdef"', which is of non-class type 'const char [7]'
+01:32 cleamooon: geordi, << string str="abcdef"; str.substr(2, 4);
+01:32 geordi: error: 'str' does not name a type
+01:39 condy: geordi: << "abcdef"s.substr(2,4)
+01:39 geordi: cdef
+01:44 cleamooon: 日，误会语法了
+01:48 cleamooon: geordi, << 2<<17
+01:48 geordi: 217
+01:48 cleamooon: geordi, 1<<17
+01:48 geordi: error: expected unqualified-id before numeric constant
+01:49 cleamooon: geordi, << 1 << 17
+01:49 geordi: 117
+01:49 condy: geordi: --precedence << 1 << 17
+01:49 geordi: error: Unexpected `<` at start. Expected expression, statement, or end of code.
+01:49 condy: geordi: --precedence { cout << 1 << 17; }
+01:49 geordi: { ((cout << 1) << 17); }
+01:50 cleamooon: 什么鬼
+01:50 condy: (´・ω・｀)
+01:52 lhanjian: condy: 么么哒
+01:53 condy: =ω=
+01:53 lhanjian: condy的C艹真棒
+01:53 lhanjian: cleamooon: 我和绅士的c艹
+01:53 lhanjian: 一样白痴
+01:56 lhanjian: 碎叫
+02:06 cleamooon: geordi, ((cout << 1) << 17);
+02:06 geordi: error: cannot convert 'ostream' to 'const char*' for argument '1' to 'int printf(const char*, ...)'
+02:06 cleamooon: geordi, << (1<<17)
+02:06 geordi: 131072
+02:06 cleamooon: geordi, << (1<<16)
+02:06 geordi: 65536
+02:08 xxxxxxxx quit:Quit: Leaving...
+02:10 cleamooon: condy, 一般程序不进 main 是怎么回事？
+02:11 condy: cleamooon: 你是说 geordi 吗？
+02:11 cleamooon: condy, 不是，我自己的程序....
+02:11 cleamooon: include
+02:11 condy: cleamooon: 啊？
+02:12 cleamooon: include 和 define 之后就是 main，main 完全没运行
+02:12 condy: cleamooon: 不进main你是怎么知道的.. 
+02:12 cleamooon: condy, 我在 main 的第一句放了个 cout，完全没执行
+02:13 condy: _(:з」∠)_
+02:13 cleamooon: https://pastebin.mozilla.org/8867625
+02:13 cleamooon: 实在看不出哪有毛病
+02:14 condy: 没看出来问题
+02:14 condy: 或许是oj的问题
+02:15 cleamooon: condy, 我是本地试验的....
+02:16 condy: cleamooon: O.O 不会 segmentfault 吗
+02:16 cleamooon: 没显示.....
+02:16 cleamooon: 最诡异的，OJ 上 accept 了......
+02:17 condy: _(:з」∠)_ 我感觉是输入数据不完整=-=
+02:18 cleamooon: 我还没开始输入呀.....
+02:18 condy: 啊
+02:18 cleamooon: 有没有可能是 msys 的锅？
+02:18 condy: 我猜还是 segmenfault 了
+02:18 condy: 执行之后 echo $? 看下
+02:19 cleamooon: 返回 127
+02:19 condy: 不正常退出啊
+02:20 condy: 说明是 msys 没有提示 segment fault (
+02:20 cleamooon: soga
+02:20 condy: (´・ω・｀)
+02:20 cleamooon: msys 怎么经常这样.....
+02:22 condy: O.O
+02:31 cleamooon: condy, 话说condy不睡觉？
+02:31 lhanjian: 怎么这么熟练
+02:32 condy: cleamooon: 写报告中...
+02:32 condy: (´・ω・｀)
+02:32 cleamooon: orz
+02:42 lh_not_bot quit:Ping timeout: 252 seconds
+02:58 cleamooon: geordi, for(unsigned i=1; i>0; i--) cout << i << endl;
+02:58 geordi: error: expected unqualified-id before 'for'
+02:58 cleamooon: geordi, for(unsigned i=1; i>0; i--) << i << endl;
+02:58 geordi: Same error.
+03:13 Youmu: geordi: prepend { and append }
+03:13 geordi: error: expected primary-expression before '<<' token
+03:13 Youmu: geordi: undo and undo and prepend { and append }
+03:13 geordi: error: Unexpected `undo` after `undo and `. Expected edit command.
+03:14 Youmu: geordi: show
+03:14 geordi: {for(unsigned i=1; i>0; i--) << i << endl;}
+03:14 Youmu: geordi: insert cout before first <<
+03:14 geordi: 1
+03:22 cleamooon: geordi, {for(unsigned i=1; i>0; i--) cout << i << " ";}
+03:22 geordi: 1 
+03:22 cleamooon: 为什么我这里就死循环........
+03:25 Youmu: cleamooon: 你确定是 > 而不是 >= 
+03:27 cleamooon quit:Ping timeout: 248 seconds
+03:32 hoxily quit:Read error: Connection reset by peer
+03:48 whatofor_1 joined channel
+03:51 whatofor quit:*.net *.split
+04:32 f00x quit:Ping timeout: 250 seconds
+04:43 hope1 joined channel
+04:43 JQK2 joined channel
+04:48 Stevearzh quit:Disconnected by services
+04:50 JQK quit:*.net *.split
+04:50 Rainboy quit:*.net *.split
+04:50 x-hope quit:*.net *.split
+05:07 Rainboy joined channel
+05:27 whatofor joined channel
+05:27 whatofor_1 quit:Read error: Connection reset by peer
+05:33 lhanjian quit:Quit: Connection closed for inactivity
+06:15 stardust quit:Ping timeout: 248 seconds
+06:20 stardust joined channel
+08:17 Youmu quit:Quit: Connection closed for inactivity
+08:42 cc joined channel
+08:47 Hoxily joined channel
+08:51 cc: 早
+09:08 lh_mouse joined channel
+09:14 tutu_wind joined channel
+09:14 tutu_wind: morning ~
+09:30 LastAvengers joined channel
+09:39 Hoxily quit:Quit: Leaving
+09:42 stardust quit:Changing host
+09:42 stardust joined channel
+09:47 Youmu joined channel
+10:04 LastAvengers quit:Quit: Srain 0.01
+10:09 cc: 今天公司年会去乌镇
+10:09 cc: 玩到周日
+10:09 cc: 中午出发
+10:09 cc: \(^o^)/~
+10:18 iyzsong: 噢噢噢
+10:41 lhanjian joined channel
+10:57 cc quit:Remote host closed the connection
+11:38 lh_mouse: geordi, << PTHREAD_DESTRUCTOR_ITERATIONS
+11:38 geordi: 4
+11:41 Rainboy: 有人吗 问一个SB问题
+11:42 Rainboy: int a[10],b[10],快速交换a,b 不用强制转换
+11:47 Youmu: Rainboy: swap(a[0],b[0]); /* ... */ swap(a[9], b[9]); // 手工展开循环啊
+11:48 tutu_wind: 啥叫强制转换啊
+11:57 iyzsong: 这换了有什么用...
+11:58 lh_mouse: geordi, { int a[10], b[10]; fill_n(a, 10, 1); fill_n(b, 10, 2);     swap(a, b);   cout <<"a = " <<a <<", b = " <<b; }
+11:58 geordi: a = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2}, b = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+11:58 * lh_mouse slaps Youmu around a bit with a large trout
+11:59 Youmu: O.O
+12:15 iyzsong: (#･∀･)
+12:31 lhanjian: 哎哎哎，Kobe的最后一战
+12:38 tutu_wind: watching
+12:38 tutu_wind: 评论盖到3300楼了
+12:41 f00x joined channel
+12:50 lhanjian: tutu_wind: 还有勇士的记录之战
+12:56 lhanjian: tutu_wind: 51PTs
+12:59 lhanjian: 56PTs
+13:00 tutu_wind: 卧槽！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+13:00 lhanjian: 58Pts!
+13:00 lhanjian: 31.6s！
+13:00 lhanjian: O'Neal都笑了
+13:01 tutu_wind: scream 
+13:01 tutu_wind: wow
+13:01 tutu_wind: wow
+13:01 tutu_wind: wow
+13:01 tutu_wind: wow
+13:03 lhanjian: 最后的罚球
+13:03 lhanjian: 罚进，基本上爵士完了
+13:03 lhanjian: Kobe最重要的罚球
+13:04 lhanjian: 锁定胜局
+13:04 lhanjian: 最后拿了个助攻
+13:08 lhanjian: Happy Ending
+13:08 lhanjian: 最后上演大逆转
+13:09 tutu_wind: Happy ending
+13:10 lhanjian: 最后连续投中关键球
+13:10 lhanjian: 关键助攻
+13:10 lhanjian: 奥多姆 来了
+13:10 lhanjian: 看来病好了
+13:11 lhanjian: 搞得勇士的73胜记录都被科比光辉盖下去
+13:11 lhanjian: 了
+13:13 Youmu: 0.0
+13:16 tutu_wind: lhanjian: 农田
+13:16 tutu_wind: lhanjian: not same
+13:16 tutu_wind: lhanjian: 一个是情怀啊
+13:16 lhanjian: 科比这场也创造了好多记录
+13:22 Rainboy quit:Quit: Leaving.
+13:25 Youmu: geordi: { foo(); } constexpr int foo() { for(;;); return 0; }
+13:25 geordi: internal compiler error: Segmentation fault
+13:32 LastAvengers joined channel
+13:47 LastAvengers left channel:"Srain 0.01"
+13:47 LastAvengers joined channel
+14:06 stardust_ joined channel
+14:11 stardust quit:*.net *.split
+14:46 f00x quit:Ping timeout: 250 seconds
+14:52 iyzsong: Yeah, 我也会调epoll了>_<  https://github.com/iyzsong/my-prototypes/blob/master/_6/main.c
+14:53 iyzsong: 不设NON_BLOCKING 好像也可以用...
+14:55 lh_mouse:   char service[6];
+14:55 lh_mouse:   snprintf(service, sizeof(service), "%u", port);
+14:55 lh_mouse: 这是搞什么。
+14:55 lh_mouse: char serv[16]; sprintf(serv, "%u", port);
+14:55 iyzsong: uint16_t转成 char* 啊
+14:56 lh_mouse: sprintf 就行了。
+14:57 iyzsong: 哦～
+14:57 lh_mouse: int sendall(int sockfd, const void *buf, size_t len, int flags)
+14:57 lh_mouse:  int n = send(sockfd, buf + sent, len - sent, flags);
+14:57 lh_mouse: ^   buf + sent 呵呵呵。
+14:58 iyzsong: 写崩了么..
+15:17 f00x joined channel
+15:17 Youmu: iyzsong: 有没有收到邮件？
+15:17 Youmu: iyzsong: 还有2天=-=
+15:27 Youmu: iyzsong: snprintf 当然 service 是非常大的时候会有效率问题，因为要把后面的都填充为0，（线上bug(
+15:28 Stevearzh joined channel
+15:28 * lh_mouse slaps Youmu around a bit with a large trout
+15:29 Youmu: iyzsong: 那个 buf + sent 渣渣没看出来有啥问题啊( orz
+15:29 lh_mouse: snprintf 和 _snprintf 根本不是一回事。
+15:29 Youmu: 😭
+15:30 Youmu: snprintf 实际上用的是 builtin 的那个？
+15:30 LastAvengers: Mr.Y 好厉害。
+15:30 Youmu: LastAvengers: Orz
+15:32 Youmu: geordi: { char buf[20]; snprintf(buf,sizeof(buf),"%d",1); for(int i=1;i<10;++i)cout<<(int)buf[i]; }
+15:32 geordi: 0640000000
+15:33 Youmu: Orz
+15:33 Youmu: 我sb了
+15:37 LastAvengers quit:Remote host closed the connection
+15:57 iyzsong: 噢噢 thx
+16:04 Stevearzh quit:Disconnected by services
+16:04 Stevearzh joined channel
+16:04 Youmu: iyzsong: Orz
+16:05 Youmu: iyzsong: send buf+sent 这个啊，求指点啊.
+16:05 Youmu: iyzsong: 我刚才说的都是错的😭
+16:06 iyzsong: 噢噢 同求 >.<
+16:11 february joined channel
+16:16 tutu_wind: wow
+16:16 tutu_wind: 膜一下
+16:17 Youmu: iyzsong: https://github.com/lhmouse/poseidon/blob/master/src/log.cpp#L166
+16:18 Youmu: 虽然不是一个东西=-=
+16:19 iyzsong: 然而我看不懂这是干啥的... 2333
+16:19 iyzsong: 这个析构函数为何这么熟练?
+16:23 iyzsong: 噫 不是一样么 不管了~
+16:28 iyzsong: 噢噢 用 size_t 就好了吧 0 0
+16:41 Matsune joined channel
+17:17 Dove joined channel
+17:21 whatofor_1 joined channel
+17:21 whatofor quit:Read error: Connection reset by peer
+17:21 Meow-J quit:Quit: Connection closed for inactivity
+17:40 Stevearzh quit:Remote host closed the connection
+17:41 Stevearzh joined channel
+17:43 Stevearzh quit:Remote host closed the connection
+17:48 iyzsong: Dove: 在学啥 带我啊 >.<
+17:49 Dove: iyzsong: APUE，话说你找到工作没？
+17:49 iyzsong: 还没有   我大概5个小时写出来epoll/echo的demo
+17:50 Dove: 怎么会，epoll的man page里直接给了用法。
+17:50 Dove: 照着那个抄也不至于5小时。
+17:51 Dove: 当然我抄了个很渣很渣的，写完就删掉了。
+17:51 iyzsong: 我写代码就是这么慢  socket我之都没有写过..  
+17:52 Dove: iyzsong: http://beej.us/guide/bgnet/output/html/multipage/index.html lhj推荐的socket速成教程。
+17:53 iyzsong: 嗯 我也看的这个
+17:53 Dove: 我现在准备搞个epoll+线程池的模型让它并发
+17:53 iyzsong: 噢噢
+17:53 Dove: 然后怎么搞我就不知道了。
+17:53 T-J-M quit:Ping timeout: 260 seconds
+17:54 cleamoon joined channel
+17:55 Dove: 翻了很多招聘网站，然而我要七月份才能去实习。
+17:56 iyzsong: 哦 那还早 = =
+17:57 Dove: 我都打算不去实习了，明年这个时候再找，先学一年。
+17:58 Youmu: ...
+17:59 Youmu: 明年复明年。。
+17:59 Dove: 多线程和网络编程基本啥都不知道，数据库彻底啥都不知道，不好找啊。
+18:00 Dove: 安心先学吧。
+18:00 iyzsong: o.o
+18:03 Dove: 很多还要求会分布式，然而至少到明年我就没打算会这个。
+18:04 lh_mouse: 你明年也不一定会。
+18:04 Dove: 大概会一点的程度就可以了。
+18:04 Dove: 毕竟应届生
+18:05 iyzsong: 不会也没关系的..
+18:06 Dove: 还是会一点好些，我也不知道C和C艹如何调用除了汇编以外的其他语言的例程，不会写makefile也不会gdb啥的，这一年能干这么多我觉得就够了。
+18:07 Dove: 我不打算用C艹写逻辑所以打算再学一门脚本语言，这就是一年的工作量了。
+18:07 lh_mouse: 就这么点破事也值得一年？
+18:08 Dove: 能学点别的更好，然而主要还是多线程和网络编程不好学。
+18:09 cleamoon: makefile + gdb 简单用法一天就够了吧.....
+18:10 Dove: cleamoon: 这个倒是
+18:10 T-J-M joined channel
+18:11 Stevearzh joined channel
+18:11 lh_mouse: 一天估计记不住。
+18:12 lh_mouse: 得被坑过才能记住。
+18:14 Dove: 数据库也是大坑啊
+18:15 cleamoon quit:Ping timeout: 276 seconds
+18:15 Dove: 不过我打算先会操作使用就可以了
+18:28 Dove: 啊，我的C艹也很水，要干的事情挺多的。
+18:33 iyzsong: 噢噢 C++太口怕啦
+18:34 Stevearzh quit:Remote host closed the connection
+18:34 Stevearzh joined channel
+18:46 Mokou joined channel
+19:00 lh_mouse: songer 是姓宋吗？ 0 0
+19:03 Youmu: lh_mouse: 是哦~
+19:03 Youmu: lh_mouse: wyw 哦~
+19:04 Youmu: lh_mouse: syw 哦~
+19:04 Stevearzh quit:Quit: ZZZzzz…
+19:04 Youmu: 不对。。
+19:04 Youmu: lh_mouse: sww 哦~
+19:06 iyzsong: ...
+19:07 Dove: lh_mouse: C++服务端，特别是游戏服务端怎么学，给点建议呗，在校能做点什么。
+19:08 tutu_wind: 小耗老师也教教渣渣我吧
+19:09 iyzsong: 吼啊 开坑写游戏吧 >.<
+19:09 Dove: 这个不太现实
+19:10 Dove: 你没有客户端可以测试你的服务端逻辑是不是正常
+19:10 iyzsong: 可以是mud和网页文字游戏啊
+19:10 iyzsong: 数千万机器人在线~
+19:12 Dove: 不懂
+19:13 lh_mouse: Dove, 在学校就写玩具。
+19:13 Dove: 我看到的建议都是啃书，去学APUE,UNP,算导,OS,tcp/ip什么的，写的东西都比较初级。
+19:14 Dove: lh_mouse: 嗯，好。
+19:15 tutu_wind: Dove: 大学能系统地学为什么不呢？
+19:16 Dove: tutu_wind: 然而C艹需要经验，光啃书没用。
+19:16 tutu_wind: Dove: 哦哦，好吧
+19:17 Dove: 我不知道能写点什么，有什么好的模型可以实现之类的。
+19:17 tutu_wind: lh_mouse: 小耗老师来吧
+19:17 tutu_wind: 渣渣不会了～
+19:18 lh_mouse: ヲ上学时候就没写过 linux 。
+19:18 tutu_wind: lh_mouse: 哈？
+19:18 Dove: 好吧，那我就去写内核。
+19:18 iyzsong: orz
+19:18 tutu_wind: 膜一下 lh_mouse 
+19:27 JQK2 quit:Ping timeout: 244 seconds
+19:29 JQK joined channel
+19:33 february quit:Read error: Connection reset by peer
+19:41 f00x quit:Remote host closed the connection
+19:41 lhanjian: 今年不去实习，明年更加找不到工作
+19:41 lhanjian: 说完了
+19:41 whatofor_1: T2, 实习吧. 
+19:42 whatofor_1 is now known as whatofor
+19:43 whatofor: 打了局dota 继续开始糊古老的c++builder的代码.
+19:47 iyzsong: orz
+19:48 Youmu: iyzsong: orz
+19:59 tutu_wind: orz
+20:00 lhanjian: orz
+20:00 lhanjian: whatofor:  wtf兄有冒泡了
+20:00 iyzsong: whatofor: 膜拜写IDE的大触
+20:00 whatofor: 啥ide?
+20:00 whatofor: 用ide写代码...
+20:01 whatofor: -.-...
+20:01 iyzsong: 噢噢
+20:01 whatofor: 没文档/没人用/面向运气编程.
+20:02 iyzsong: 写不动 没人要 = =
+20:05 Dove: whatofor: 我找不到实习公司啊。
+20:05 Dove: lhanjian: 我找不到实习公司啊
+20:05 whatofor: 随便找啊 没这么夸张的
+20:06 whatofor: 唯一区别/最大区别是 薪水相关的问题
+20:06 Dove: 我7月份才能去实习，谈了几个，现在找似乎还有点早。
+20:06 Dove: 到时候你给我介绍一个吧
+20:06 lhanjian: Dove: 继续谈。
+20:06 whatofor: 那到时候再找也可以 反正可以去再找
+20:07 Dove: lhanjian: 我一说7月份才能去实习人家都不理我的，我还要返校做毕设啥的。
+20:07 whatofor: 7月 还早呢. 到时候找也可以吧
+20:07 Dove: 嗯
+20:08 Dove: 实习也就只能实习半年
+20:08 whatofor: 今年大四?
+20:08 Dove: 大三
+20:08 whatofor: 还是?
+20:08 Dove: 大四上学期是实习学期。
+20:08 whatofor: 那无所谓吧 一般实习三个月. 半年已经很多了
+20:09 whatofor: 毕设不是明年才做吗?
+20:09 Dove: 然后大四下学期要做毕设啥的。
+20:09 whatofor: 这正常 所以随意实习
+20:09 Dove: 我大三的课要上到7月份
+20:09 Dove: 然后才能去实习
+20:09 whatofor: 便宜的劳动力 很多地方都喜欢
+20:10 Dove: 到时候找吧
+20:10 Dove: 到时候你帮我在你们那个地方推荐一个吧，我人头不熟。
+20:10 whatofor: 我也只是 网上找 反正随意找
+20:11 Dove: 反正北上广深杭哪里我都能去。
+20:11 Dove: 嗯
+20:11 whatofor: 有校招就校招 没就直接网投 各个公司投 广撒网 总能中一些
+20:11 Dove: 嗯
+20:15 lhanjian: https://usercontent.irccloud-cdn.com/file/FIzYWzeT/saiting.jpg
+20:19 Dove: lhanjian: 叼
+20:20 Dove: 我先把APUE啃完丫的。
+20:22 Dove: a special start-up routine is called before the main function is called. The executable program file specifies this routine as the starting address for the program; this is set up by the link editor when it is invoked by the C compiler.
+20:23 Dove: 好吧懂了
+20:32 Stevearzh joined channel
+20:35 whatofor: 现在8g内存真不够用. 还是16G爽
+20:36 Dove: 你干什么要这么多内存
+20:36 whatofor: 我就开了一个浏览器 一个虚拟机 一个vs2013 87%(8g)内存就没了.
+20:37 Youmu: 我就开了一个 chrome, 15G + 12G swap 都满了
+20:38 Dove: whatofor: 虚拟机吃了多少。
+20:39 Dove: Youmu: 咋可能
+20:39 whatofor: 1G吧
+20:39 Youmu: Dove: O.O
+20:39 Dove: VS和浏览器这么狠啊。
+20:40 Youmu: :o 我还开了个 eclipse，占了800M
+20:40 Dove: 2G内存撸过，表示不用vs，然而我的chrome没吃过那么多内存。
+20:40 whatofor: 我看资源监视器 加起来好像只用了4g. 不知道怎么算的了
+20:40 Youmu: https://usercontent.irccloud-cdn.com/file/MIRlkazv/
+20:41 Dove: Youmu: 给跪了
+20:43 Youmu: 😳
+20:46 lhanjian: 内存杀手chrome
+20:47 hoxily joined channel
+20:49 Dove: 我的win下的firefox抽得厉害，只好用chrome了
+20:49 Dove: firefox半天打不开，开了慢死，关还要半天。
+20:50 Dove: 本来是好的，见了鬼了。
+20:54 hoxily quit:Ping timeout: 240 seconds
+20:54 hoxily joined channel
+20:54 tutu_wind quit:Ping timeout: 276 seconds
+21:00 hoxily: Dove: 会不会是遭到了history.pushState攻击
+21:01 Dove: hoxily: 可能是吧，我不太懂。
+21:01 hoxily: https://wiki.mozilla.org/Firefox_3.6/PushState_Security_Review#Security_and_Privacy
+21:01 Dove: hoxily: 我看看，多谢。
+21:01 hoxily: 某个恶意网页向历史记录中加入了成千上万条历史记录
+21:02 hoxily: 这时会很卡
+21:02 Dove: 我的firefox是打都打不开，上百度都很卡。
+21:02 hoxily: 在地址栏里输入地址时，自动补全功能也是基本上废了
+21:17 Dove: 我发现看书的效率高多了，我很开心。
+21:20 erhandsome quit:Ping timeout: 276 seconds
+21:20 lhanjian_ssh quit:Ping timeout: 276 seconds
+21:20 lhanjian_ssh joined channel
+21:21 erhandsome joined channel
+21:49 T2 joined channel
+21:49 T2 quit:Client Quit
+21:50 T2 joined channel
+21:51 lhanjian_ssh quit:Ping timeout: 264 seconds
+21:51 Dove quit:Ping timeout: 264 seconds
+21:51 lhanjian_ssh joined channel
+21:53 T2 is now known as Dove
+21:58 iyzsong: (；・∀・)不开心
+21:58 Dove: 我才不开心哩
+22:00 Dove: 加油找工作吧你
+22:01 Dove: 我也加油
+22:03 Dove: 你就呆在北京了是么？
+22:05 iyzsong: 不知道呀..
+22:08 Dove: 跟我一样全国找嘛？
+22:10 iyzsong: 你说的对／
+22:12 Dove: 哦，那还不错，找到机会比较大，就是工作量大了点。
+22:13 Dove: 好多招聘网站的筛选功能都TM傻逼
+22:13 Dove: 只能不筛选一个个看。
+22:15 Dove: 而且很多没有全国选项，必须选个城市。
+22:23 iyzsong: 除却拍键盘的技能，我的心理,人际和生存能力才是问题(#･∀･)
+22:25 Dove: 都差不多，我还住过非正常人类研究中心呢。
+22:28 iyzsong: 膜
+22:28 miao233_ joined channel
+22:29 cleamoon joined channel
+22:33 miao233_ quit:Ping timeout: 268 seconds
+22:49 Mokou: 睡觉
+22:49 Mokou: 诸君武运
+22:49 Mokou quit:Quit: 睡觉
+23:13 hoxily quit:Quit: Leaving

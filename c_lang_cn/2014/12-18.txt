@@ -1,0 +1,1386 @@
+00:08:yzld2002 quit:Quit: yzld2002
+01:11:code_new quit:Remote host closed the connection
+01:15:lh_mouse: http://tieba.baidu.com/p/3473540080
+01:16:lh_mouse quit:Quit: good night
+01:29:hoxily quit:Ping timeout: 245 seconds
+01:30:hoxily joined channel
+01:39:erhandsome quit:Ping timeout: 256 seconds
+03:59:izmntuk quit:Read error: Connection reset by peer
+04:00:izmntuk joined channel
+06:00:izmntuk quit:Remote host closed the connection
+06:35:boosure joined channel
+09:08:lh_mouse joined channel
+09:17:LittleKey joined channel
+09:33:erhandsome joined channel
+10:03:erhandsome quit:Ping timeout: 264 seconds
+10:07:erhandsome joined channel
+10:09:lh_mouse: >.<
+10:09:xxxxxxxx joined channel
+10:28:whatofor joined channel
+10:37:Xilzzert: 一个zip，7zip不能解压，unzip能解压。。这是什么精神
+10:45:lh_mouse: Xilzzert, 7z 满地都是 bug
+10:45:lh_mouse: 7z 的源码写得跟屎一样
+10:45:lh_mouse: 我最开始用 7z 的库  后来改成 xz 了
+10:45:Xilzzert: WinRAR也解不了。。
+10:45:xxxxxxxx: 口支写个M7Z
+10:47:lh_mouse: 那或许是算法问题
+10:47:lh_mouse: MCF 有这种东西啊
+10:47:lh_mouse: 不过不保证和原来兼容就是了
+10:47:Xilzzert: 不像是算法问题，Compression method指明是deflate了
+10:48:Xilzzert: file #1:  bad zipfile offset (local header sig):  281249
+10:48:Xilzzert:   (attempting to re-compensate)
+10:49:lh_mouse: 问问谷狗呢
+10:49:Xilzzert: 网上都是2G或者4G大小的解压会有这个问题
+10:50:Xilzzert: 我这个才几十兆
+10:54:lh_mouse: 没遇见过
+11:20:xxxxxxxx quit:Read error: Connection reset by peer
+11:21:erhandsome quit:Ping timeout: 264 seconds
+11:21:xxxxxxxx joined channel
+11:23:erhandsome joined channel
+11:30:lh_mouse quit:Quit: svn update
+11:32:lh_mouse joined channel
+12:17:yzld2002 joined channel
+12:20:lh_cat quit:Ping timeout: 245 seconds
+12:28:lh_cat joined channel
+12:39:Stevearzh quit:Remote host closed the connection
+12:40:Stevearzh joined channel
+13:00:erhandsome quit:Ping timeout: 258 seconds
+13:04:erhandsome joined channel
+13:24:T2 joined channel
+13:30:T2: 为什么看不到6月份以后的log？
+13:30:hysw: T2?
+13:31:T2: 嗯
+13:31:T2: 浏览器或者系统的问题？
+13:31:T2: 我这里只有到6-23的log。
+13:32:hysw: 那里？
+13:32:T2: irclogs.benihata.org
+13:34:hysw: 我倒是有一大堆log...
+13:34:T2: 那可能是我系统什么的有问题了。
+13:34:T2: 异教果然
+13:34:xxxxxxxx: 刷新再说
+13:35:T2: 我刷很多遍了啦
+13:36:lh_mouse: T2, https
+13:36:T2: 换了两个浏览器刷了5编
+13:36:T2: 遍
+13:36:T2: lh_mouse, 我试试
+13:37:T2: 无法显示orz
+13:38:T2: 算了放弃
+13:39:lh_mouse: 证书问题无视即可
+13:39:lh_mouse: IE 自重
+13:40:lh_mouse: 他那个免费的 vps 估计跟什么不和谐网站撞车了 于是一起被干掉了
+13:40:T2: 是我这边网的问题似乎。
+13:40:varna joined channel
+13:40:T2: 啊哈
+13:40:varna: xxxxxxxx: 爆
+13:40:T2: 感康了。
+13:40:varna: 昨天头疼一整天，不然就来了
+13:41:varna: 今天反正只是有点咳嗽和鼻涕
+13:41:T2: 多穿点会死？
+13:41:varna: 流感没用的
+13:41:T2: 也是
+13:41:T2: 不过每次流感都能波及到你个死宅...
+13:41:varna: 所以比起多穿点，还是说话前先过大脑更不容易死
+13:42:T2: 啊，我猜又要死了。
+13:42:xxxxxxxx: T2 我昨天提醒过腻了
+13:42:xxxxxxxx: 你
+13:42:varna: 以滥大街的角度来看，我也不算体质好的人，大约中下等吧
+13:42:lh_mouse: varna, http://tieba.baidu.com/p/3473540080
+13:42:varna: 这个中下等还是被拖着锻炼了几年的成果
+13:42:T2: varna, 不算中下，你这是差到一种境界了。
+13:43:xxxxxxxx: 怎么锻炼的?
+13:43:varna: 爬山玩
+13:43:varna: lh_mouse: 我没花了，你收下EA基佬的菊花吧
+13:44:erhandsome quit:Quit: Changing server
+13:44:hysw: T2: http://hysw.org/irclog/c_lang_cn/
+13:44:xxxxxxxx: 卧槽 为什么我又躺枪了
+13:45:T2: hysw, 3Q
+13:45:lh_mouse: hexchat 太 长的中文会变成乱码
+13:45:lh_mouse: hysw, 考虑 https
+13:45:lh_mouse: 最近风声有点紧
+13:45:xxxxxxxx: 口支那个图是哪个频道的?
+13:45:lh_mouse: 红旗那个上次加载一半被 RST 了 我才叫他开 HTTPS 的
+13:45:lh_mouse: xxxxxxxx, ##c++-general
+13:46:varna: 马勒戈壁……今天的演习怎么都跟抽了风一样
+13:46:lh_mouse: o fvck
+13:46:xxxxxxxx: + 我上次也是刷出来一半
+13:46:lh_mouse: 改错了
+13:46:xxxxxxxx: 越来越长了....
+13:47:lh_mouse: 太长会乱
+13:47:lh_mouse: 要么把中文丢前面
+13:47:lh_mouse: 看来没乱
+13:48:lh_mouse: 先这样吧
+13:48:varna: 截断了
+13:48:varna: mcfp, 后面的roj全灭
+13:48:lh_mouse: 哦艹  果然被截断了
+13:48:T2: congrats
+13:48:erhandsome joined channel
+13:49:lh_mouse: 将就下吧  蛋疼
+13:49:lh_mouse: 如果中文截断碰巧在码点内部会变成乱码
+13:49:lh_mouse: 目前就 hexchat 有毛病
+13:49:T2: geordi可以干掉。
+13:49:lh_mouse: 看看改天加点啥
+13:49:T2: geordi bot & usage: http://www.eelis.net/geordi/, ask questions in #geordi 
+13:49:lh_mouse: 加东西再说
+13:50:lh_mouse: 先留着吧
+13:50:erhandsome quit:Client Quit
+13:50:Stevearzh quit:Quit: Be back later ...
+13:54:erhandsome joined channel
+13:54:T2: varna, 槽点是异步还是有阻塞的？等待数据时阻塞？
+13:55:lh_mouse: 异步应该有  但是异步和非阻塞不是一回事
+13:56:T2: lh_mouse, 这我倒是知道。
+13:57:lh_mouse: send 不能叫异步  只能叫非阻塞
+13:58:lh_mouse: 即使是 NONBLOCK  你返回失败就是失败了
+13:58:T2: 异步的话发送数据不阻塞，接收数据可能阻塞？
+13:58:lh_mouse: 这个和 windows 的 WriteFile 不一样
+13:58:varna: 我就不科普了，小耗馒馒地讲
+13:59:lh_mouse: 目测做不到
+13:59:T2: varna, 你还是找点热水..
+13:59:lh_mouse: 也没必要做到
+13:59:T2: lh_mouse, 所以说槽点就是做不到啊。
+13:59:lh_mouse: 我的做法是 session 上面塞一个发送队列
+13:59:T2: 不然我就不作死了。
+14:00:lh_mouse: 你需要发送数据 先从内存池里拿到一个缓冲，把数据写到缓冲里面，然后拿到 session 锁  ，把缓冲串到链表上，然后就把锁释放掉
+14:01:lh_mouse: 持有锁 改几个指针 然后立即释放    然后把当前 session 的时间戳设为当前时间
+14:01:lh_mouse: epoll 线程会轮询的 时间戳不为零就调用 write()
+14:02:T2: 我想想看。
+14:02:lh_mouse: 改时间戳也就是个 BST 改改 key  都很快
+14:02:yzld2002 quit:Remote host closed the connection
+14:02:T2: 好像差不多都是这个姿势。
+14:02:varna: 差不少
+14:02:yzld2002 joined channel
+14:03:lh_mouse: 这里我用的是 ET 的 epoll   连 epoll_ctl 都省了
+14:03:T2: varna, 似乎nginx就是这么干的？
+14:03:T2: 不过那个BST是个红黑。
+14:04:varna: T2: 别似乎，你看看nginx用几个线程，然后那个rbt是用来干什么的
+14:04:varna: 口胡就不好了
+14:04:varna: 至于epoll_ctl...如果服务器模型是L-F的，EPOLLONESHOT还是不可避
+14:04:T2: 那就是我没看懂咯，我的锅。
+14:04:varna: 毕竟ONESHOT彻底地保证线程安全
+14:05:lh_mouse: EPOLLONESHOT 看起来就是触发之后删掉么
+14:05:hysw: uptime: 184 days...
+14:05:T2: lh_mouse, 嗯，然后下一轮手动再添加。
+14:05:varna: 不删，但是如果不epoll_ctl要求mod的话不会再有人检查到了
+14:06:lh_mouse: 跟删掉有什么区别
+14:06:varna: 删掉得add
+14:06:lh_mouse: epoll_ctl 不还是会陷入内核
+14:06:varna: 只考虑陷入内核是一样的
+14:07:varna: 不过我不确认这里只考虑陷入内核有多大差别
+14:07:lh_mouse: 我觉得陷入内核开销不算大
+14:07:lh_mouse: 前几天测试锁  两百万次陷入内核也才五秒钟而已
+14:07:lh_mouse: 还是 windows
+14:07:Stevearzh joined channel
+14:07:T2: notify是怎么个回事？
+14:07:varna: windows真会自己陷入么
+14:07:lh_mouse: 会
+14:08:hysw: 60秒刷新一次log差不多了吧...
+14:08:varna: 我以为大多都做成LPC了
+14:08:varna: hysw: 为什么不是update on update
+14:08:lh_mouse: 是不是 LPC 不清楚
+14:08:lh_mouse: 反正 R3 调试器跟不进去
+14:08:hysw: varna: 懒得改logbot了...
+14:08:varna: hysw: uccu
+14:08:T2: 记录改动？跟平常的轮询的区别就这个？
+14:09:lh_mouse: B8 01 00 00 00 B9 0D 00 00 00 8D 54 24 04 64 FF 15 C0 00 00 00 
+14:09:varna: irc框架即使不愿意写的话现成的也有很多……
+14:09:lh_mouse: 7741F8BC >  B8 01000000                               mov     eax, 1
+14:09:lh_mouse: 7741F8C1    B9 0D000000                               mov     ecx, 0D
+14:09:lh_mouse: 7741F8C6    8D5424 04                                 lea     edx, dword ptr [esp+4]
+14:09:lh_mouse: 7741F8CA    64:FF15 C0000000                          call    dword ptr fs:[C0]
+14:09:lh_mouse: 最下面一条是 WOW64 的伪系统调用
+14:09:varna: call...是个桩？
+14:09:lh_mouse: 大概就是 sysenter 指令
+14:09:lh_mouse: 是的  far jump
+14:09:varna: soga
+14:10:lh_mouse: 改 cs 陷入内核
+14:10:hysw: py2::twisted.words
+14:10:lh_mouse: eax 是功能号  ecx 不清楚 edx 是用户栈
+14:10:lh_mouse: 这是 NT5 的内核
+14:10:varna: 原来真陷入了
+14:10:lh_mouse: 5.1 以后是 sysenter   5.0 以前是 int 0x2E
+14:11:lh_mouse: 这地方跟不进去  但是可能是真的系统调用  也可能不是
+14:11:hysw: 回头再拿C/C++写个logbot... 现在用python坑一坑...
+14:12:lh_mouse: poseidon 可以写
+14:12:lh_mouse: 支持 SSL 哦
+14:12:varna: 就我听说的windows传言来看，是不是搞不好都是一时的事
+14:12:lh_mouse: varna, 的确如此
+14:12:lh_mouse: CriticalSection 删除了 FIFO 的行为
+14:12:lh_mouse: 搞得我只好重载一个
+14:12:lh_mouse: 重造一个
+14:12:varna: 3555
+14:14:lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/template/mmain.cpp#L209  
+14:14:lh_mouse: 384 行有示例
+14:14:lh_mouse: TestClient::create()->send(StreamBuffer("GET / HTTP/1.1\r\nHost: github.com\r\n\r\n"));
+14:14:lh_mouse: 然后就返回一大堆  全都打到屏幕上
+14:15:varna: 操，手机忘充电
+14:15:lh_mouse: IRC 无非就是  NICK lh_bot\r\nUSER lh_bot lh_bot lh_bot lh_bot\r\n
+14:15:hysw: 懒死了...
+14:15:lh_mouse: PRIVMSG NickServ :IDENTIFY :varna is a baka
+14:16:varna: 懒人就该弄个脚本语言找个框架随便拖拉拖拉，弄个chroot防爆，挂起了事
+14:16:hysw: varna: py2::twisted.words.protocols.irc ...
+14:16:varna: 你看看你，有这个怎么还弄个60s扫描
+14:17:varna: 而且你该用Perl
+14:17:hysw: 我只log到某个文件里而已...
+14:18:varna: 生病蹲宿舍的时候弄了些鬼畜生成这种东西 https://pastebin.mozilla.org/8057252
+14:18:varna: 噗，分行分坏了
+14:18:T2: = =，我果然还是滚去撸大物吧。
+14:19:varna: https://pastebin.mozilla.org/8057253
+14:19:hysw: 改卷子还是件奇葩的事...
+14:19:varna: #3~#6和#18是手工加的
+14:19:varna: #1是显式加括号表示克里化的输入
+14:19:varna: #2是经过CPS变换但没有施用停机续延的输出
+14:20:T2: hysw, 找机会多给一两分就可以了。
+14:20:varna: 注释掉的#17是#2的最终形态
+14:20:hysw: T2: 我基本上是慢慢扣分...
+14:21:T2: hysw, soga
+14:21:varna: #18是 let x = +& in ( \c0.(\z k0.(k0 z) x \a2.(a2 1 \a1.(a1 2 \a0.(c0 a0)))) \x.x )
+14:21:hysw: T2: 不过平均分超过7.5/10就有点不正常了...
+14:21:lh_mouse: linux 现在有默认开启的 tcp cookie 支持么？
+14:21:T2: hysw, 那都小事。
+14:21:varna: 没听说过有
+14:22:hysw: T2: 各种坑...
+14:22:varna: T2: 怎么样，来耍这个不
+14:22:lh_mouse: 哦不对 是  syn cookie
+14:22:varna: 《21天编译utlc到c》
+14:22:T2: varna, 好吖，问题是看不懂。
+14:22:hysw: 睡觉酱去了...
+14:23:T2: hysw, 祝超生
+14:23:hysw: ...
+14:23:varna: lh_mouse: 没有默认的，我只会手工操/proc
+14:23:T2: hysw, = =
+14:23:hysw: 我PL课挂了...
+14:23:varna: hysw: 不许黑觉酱，我才睡觉
+14:23:hysw: 算法课估计会挂...
+14:23:T2: 过了考试吧
+14:24:hysw: 系统课被坑死,有可能挂...
+14:24:varna: 他的意思是分数低于90%
+14:24:T2: 我是说我过了考试再跳坑吧。
+14:24:lh_mouse: 以后请说睡 satori
+14:24:T2: 他随意作死就好了。
+14:25:hysw: 还是改卷子好，不用担心挂...
+14:25:T2: 这都被你发现了。
+14:26:T2: 我怎么觉得基佬像妹纸怎么破？
+14:26:varna: 撸
+14:27:T2: = =
+14:27:T2: xxxxxxxx, 喂，你是妹纸么？
+14:27:varna: 我还是那句话，撸太多不好，但是如果成天忙碌而不撸管，最后会发炎
+14:27:varna: 这是我的惨痛经历
+14:27:T2: = =
+14:27:T2: 你的体质就是个炎症产生器。
+14:28:varna: 上医院做了两百多元彩超，医生看了看屁事没有，大滗一挥给我开了差不多钱的消炎药
+14:28:varna: 我回去边吃边撸，撸完顿时清爽
+14:28:T2: = =
+14:29:T2: 附近找个健身中心办张卡每天撸一小时羽毛球，一个月能有显著效果。
+14:29:varna: 不喜欢玩羽毛球
+14:29:whatofor: 冬泳？
+14:29:T2: 别的你目前的体质干不了。
+14:30:varna: 我跟你说个事，今天挺暖和的，十六度到九度
+14:30:T2: 2333
+14:30:varna: 要是我喜欢玩球类运动，还不如找几个哥们到学校体育馆约了打乒乓球
+14:30:varna: 那个我还会打点，羽毛球满场跑能跑死我
+14:30:T2: 乒乓球没用啊。
+14:31:T2: 就要满场跑才行
+14:31:varna: 主要是不喜欢
+14:31:T2: 那没办法咯，只能挂克林霉素了。
+14:32:hysw: hub failed to enable device, error -22 ...
+14:32:varna: 所以基本锻炼就是跑步爬山之类的
+14:32:hysw: T2: 你需要去爬一座8+KiM的山
+14:32:varna: T2一贯口胡，把夸张程度下调就行了
+14:32:T2: hysw, 我待的地方3Kim
+14:33:lh_mouse: 2009 年十二月，TCPCT 支持被部分并入了 Linux 内核，[7][8]但是在 2013 年五月被移除因为它从来没有被完整实现，还会造成性能消耗。[9]
+14:33:xxxxxxxx: T2 你简直吃错药了......
+14:33:whatofor: 爬到海拔11km的山上？
+14:33:T2: varna, 这真不是口胡。
+14:33:lh_mouse: 于是还是那个问题  为什么 TCP 这种逗比还没被淘汰
+14:33:xxxxxxxx: varna 去健身房锻炼肌肉吧
+14:33:hysw: T2: 3Kim Jong-un...
+14:33:varna: xxxxxxxx: 会被肛
+14:34:xxxxxxxx: 你要相信自己以后可以肛回来的
+14:34:varna: lh_mouse: 因为IPv4还活得很好
+14:34:whatofor: 去健身房看妹子？
+14:34:varna: xxxxxxxx: 那时候就晚了，你想想城之内悠二
+14:34:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=648f8c03ca177f3e1034fc0540f43ac7/962bd40735fae6cdceceb5d40cb30f2442a70f08.jpg # 舰狗
+14:35:T2: whatofor, 他现在的体质去健身也没什么用。、
+14:35:xxxxxxxx: 没用个毛
+14:35:whatofor: 健身效果很好啊。 锻炼肌肉效果明显
+14:35:T2: 没，真的，他的目的不是肌肉是体质。
+14:35:whatofor: 阻力+有氧。
+14:35:T2: 做不到，会死的。
+14:36:varna: T2: 你根本不懂EA在说什么
+14:36:whatofor: 这么夸张。。
+14:36:whatofor: ea是基佬
+14:36:T2: varna, 好吧。
+14:36:xxxxxxxx: T2 快去存衣服的地方锻 炼一下
+14:37:T2: xxxxxxxx, 你先去吧。
+14:37:xxxxxxxx: 出来你体制一下就好了
+14:37:xxxxxxxx: 体质
+14:37:T2: xxxxxxxx, 2333，你是妹纸么？
+14:38:xxxxxxxx: 看来你还是应该先吃药
+14:38:T2: 2333
+14:39:whatofor: http://blog.jobbole.com/80241/
+14:41:varna: 抽象：使用规定明确但意义不明的编号，辅以如果没有相关背景就看不懂但确有意义的编号的数字
+14:41:varna: 例：A7M2
+14:42:T2: = =
+14:43:whatofor: switch(n){case 1:...;if(0)case 2:...}
+14:43:whatofor: 我比较好奇能这样写？
+14:44:xxxxxxxx: http://bbs.tianya.cn/post-no11-545360-1.shtml
+14:44:T2: = =
+14:44:xxxxxxxx: 从互联网上的各种混乱C 语言竞赛中学习，追随大师们的脚步。 <- 这些人竟然没有爆炸
+14:45:lh_mouse: 我要妹子
+14:45:varna: 如果非要注释的话，A=甲战（舰战），7=列装第7型，M=三菱，2=第2改型
+14:45:varna: 我要药娘
+14:45:lh_mouse: geordi, -c { int k = 0; switch(k){ int temp1; double temp2; case 0: break; } }
+14:45:geordi: Success
+14:46:xxxxxxxx: T2快去拉妹子
+14:46:xxxxxxxx: 然后快吃药
+14:46:T2: xxxxxxxx, 果然妹纸没兴趣
+14:47:xxxxxxxx: 自立门户
+14:47:xxxxxxxx: 你一直想写系统级的代码。现在机会来了。忽略标准库， 编写你自己的标准，这将会是你简历中的一大亮点。
+14:47:T2: 药还是没停，放心啦。
+14:47:xxxxxxxx: varna T2药没停
+14:47:varna: 螺？
+14:47:T2: 显然不是
+14:47:varna: 补？
+14:48:varna: 哦对
+14:48:varna: 这里谁有人有兴趣周末或者类似的时间来一次SK4对战的
+14:48:T2: 这是神马？
+14:48:varna: 兵棋
+14:49:T2: 不会玩啊，棋类无能。
+14:49:varna: 就是娱乐向的图上推演
+14:49:varna: 我准备了剧本，需要一个美方一个日方
+14:49:varna: 场景大致定在去年秋活E4的铁底海峡
+14:49:xxxxxxxx: 有非方么?
+14:50:T2: 曾经教别人下棋结果被那伙计虐出阴影了。
+14:50:varna: 你可以认为日方是黑鬼
+14:50:varna: 毫无大建货，也没有稀有的可爱幼女
+14:50:hysw: 忽略标准库+1
+14:51:varna: 手册在这里 http://pan.baidu.com/s/1pJwSNoB 参与者只需要知道舰队运动方式、大致的索敌和战斗流程和己方舰船数据就可以了
+14:52:T2: 我看看
+14:52:varna: 因为是科普向的对战，所以只有忽略索敌机的炮雷击战
+14:52:varna: 如果有狂热的航母神教教徒，可以考虑以后再推出珊瑚海或者圣克鲁斯群岛之类的
+14:53:T2: 你们这种沉迷于棋类魔方之类玩意的伙计完全理解不能。
+14:53:varna: 这个比较战术，毫无战略
+14:54:varna: WitP之类的游戏太战略了，每场仗都是自动推演着打，不太好玩
+14:54:xxxxxxxx: http://www.bilibili.com/video/av1718354 找了个BGM
+14:54:T2: 曾经教别人下国际象棋，一个月之后就再没赢过了。
+14:55:varna: 毕竟是海战，你可以按照自己的直觉来
+14:55:varna: 骑士王曾经教导过：“阵型当然是单纵阵。什么？轮型阵？你不懂啊。你完全不懂啊！”
+14:55:T2: 嗯
+14:56:erhandsome quit:Ping timeout: 255 seconds
+14:57:varna: 如果有确定要玩的伙计就告诉我一声，凑足红蓝两方我就回去预演下
+14:58:T2: 这个文档好丰富
+14:58:varna: 也会派发相应的舰船数据，不过SK4的舰船数据比较糙，所以如果有史实修正的话也可以发给我
+15:00:T2: = =
+15:00:varna: 最典型的情况是鱼雷发射器的分布和主炮炮塔的分布
+15:00:lh_mouse: 我要妹子
+15:00:varna: 少数甲巡的主炮是全堆在前甲板上的
+15:01:varna: lh_mouse: 你们把妹子都吓跑了
+15:02:Xilzzert: 中心文件记录和本地文件头的数目不一致。。。
+15:04:lh_mouse: [14:50:51] <lh_mouse> I have learned from a blog that Android suggest developers _not_ let their applications to exit.
+15:04:lh_mouse: [14:51:03] <lh_mouse> ^ Do you know what that means?
+15:04:lh_mouse: [14:51:13] <ekem> that blog hates memory
+15:04:lh_mouse: [14:51:18] <morfin> lol
+15:04:lh_mouse: [14:51:41] <morfin> i would prefer Ubuntu touch i guess
+15:04:lh_mouse: [14:51:47] <lh_mouse> They are saying 'dont call exit()! We have GC! GC will reap your application when it thinks it should!'
+15:04:T2: varna, 这个玩意在哪操作？
+15:04:lh_mouse: 安卓渣渣又被黑了
+15:04:varna: lh_mouse: 嗯，你这话看着超有道理
+15:04:lh_mouse: [14:58:22] <doug64k> android "permissions" dictate to YOU, the owner of the device what permissions the apps are going to TAKE. whether you like it or not. that is NOT an operating system by any definition of the term
+15:04:lh_mouse: [14:59:08] <doug64k> a real operating system is capable of restricting what programs do at the request of its owner
+15:05:lh_mouse: [15:02:00] <lh_mouse> 'Hey here is the application you are gonna install. It wants permission 1, 2 and 3. Please give it those permissions, or do not install it.'
+15:05:lh_mouse: [15:02:20] <morfin> iShit is much worse
+15:05:lh_mouse: [15:02:30] <ekem> oh yeah, there is no way id ever buy an apple product
+15:05:lh_mouse: [15:02:36] <lh_mouse> 'Hey I want to rm -rf /usr, please give me SU permission.'
+15:05:lh_mouse: [15:02:43] <morfin> lol
+15:05:lh_mouse: [15:02:59] <ekem> apple has killed computing as far as im concerned, just like facebook kills async chatting
+15:05:lh_mouse: [15:03:13] <doug64k> lh_mouse: and even when you realize, in horror, that it has that permission (if you missed it) you have zero way of revoking it
+15:05:varna: T2: 原本是桌上游戏，如果玩的话我会开两个临时频道
+15:05:T2: varna, soga
+15:05:varna: lh_mouse: 这长度的log还是找个xxxbin吧
+15:06:lh_mouse: 哦好吧 
+15:06:T2: 那我还是先撸文档
+15:06:lh_mouse: 就这么两段
+15:06:varna: 哦
+15:06:varna: 我以为还在直播，那倒无妨了
+15:06:lh_mouse: 直播貌似停了
+15:06:lh_mouse: 我什么时候发过直播
+15:06:T2: 海战推演的话应该还是可以的罢
+15:07:varna: 倒是
+15:07:varna: T2: 其实核心规则很简单，就是表格多
+15:07:T2: varna, 嗯
+15:12:erhandsome joined channel
+15:25:T2: 二项分布...还原度很高吖。
+15:32:lh_mouse: 推演
+15:37:T2: lh_mouse, 命中什么的二项分布算几率比量化值还是强一些。
+15:38:T2: 虽然说我的脸一贯很黑
+15:38:T2: 常年roll点不过10
+15:39:varna: 射表二项分布挺常见的
+15:40:varna: 我查的一些资料里，二战时期火炮的射表和测距也都那么估算
+15:40:xxxxxxxx: http://static.acfun.mm111.net/h/upload/5235b989-6e36-48cb-b522-63799fe69480.jpg
+15:40:lh_mouse: 不是正态分布么
+15:40:xxxxxxxx: 一张好图
+15:40:lh_mouse: 正[太]分布
+15:41:varna: 卧槽
+15:42:T2: 杨威利即视感
+15:43:lh_mouse: [15:42:39] * - o No distribution of child pornography
+15:43:lh_mouse: 这是说 18X 么
+15:44:varna: 大概只是不准发萝莉正太18x
+15:44:T2: = =
+15:44:varna: 既然没说成人
+15:44:xxxxxxxx: 哪里在发这些 快告诉我
+15:44:lh_mouse: varna, 我也这么想的
+15:45:lh_mouse: xxxxxxxx, Rizon 的 roles
+15:45:lh_mouse: rules *
+15:47:varna: 为何我现在转动首级的时候还会头疼
+15:48:xxxxxxxx: 上? 下？
+15:48:varna: 上头
+15:49:xxxxxxxx: 感冒很正常吧 摇头或者运动的时候会头疼
+15:50:varna: xxxxxxxx: 爆
+15:50:T2: 去趟学校拿准考证
+15:50:whatofor: 又要放假了吗
+15:51:whatofor: 昨天在知乎发现了一个H网：Tumblr 
+15:52:T2: whatofor, 对我来说放假与否没有任何区别。
+15:52:whatofor: 快工作吧， 就有区别了
+15:52:varna: gayhub
+15:53:Xilzzert: lh_mouse, 中心文件记录数目和LocalFileHeader数目不一致。。。。
+15:53:T2: whatofor, 我倒是想，这个状态谁敢雇我？
+15:53:T2: 换我我也不敢，所以还是考研吧。
+15:54:Xilzzert: 武汉本科生月薪不如技工
+15:54:Xilzzert: 权威机构发布薪酬报告，武汉本科生起薪为3100元，技工平均月薪则为3500元至5400元，蓝领收入在未来3至5年内可能全面超过白领。
+15:55:varna: 那么问题来了
+15:56:lh_mouse: 山东某某
+15:56:lh_mouse: Xilzzert, 什么？
+15:56:Xilzzert: 之前提到的那个不能解压的zip
+15:57:T2: Xilzzert, 这是正常
+15:57:FrankHB joined channel
+15:57:whatofor: 敢要的企业一大堆， 只要你去找工作
+15:57:T2: whatofor, 果然还是考研吧。
+15:57:whatofor: 还没读腻吗。。
+15:58:T2: 吐了吖，但是没办法。
+15:58:Xilzzert: 7zip和WinRAR解压不能，unzip可以解压
+15:58:T2: Xilzzert, 你那么确定本科生比技工有用么？
+15:59:Xilzzert: 那得看那个方面了。。
+15:59:T2: 我朝目前的大环境下，多数方面。
+15:59:varna: 对啊，技工可能处女少
+15:59:varna: 本科怎么也有个四成吧
+15:59:T2: 平均2333
+16:00:T2: 撤了，拿准考证去。
+16:00:erhandsome quit:Ping timeout: 244 seconds
+16:00:whatofor: 本科生有学位， 更有用
+16:00:T2: whatofor, 你想多了啊喂。
+16:00:varna: 其实一般来说能力差不多的人之间，学位更有用
+16:01:T2: 这倒是。
+16:01:Xilzzert: 大j8经常有人秀买假学位进大公司拿高薪的
+16:01:whatofor: 没想多， 学位很重要。
+16:01:T2: whatofor, 环境稍微更重要点。
+16:02:T2: 虽然说国内就这样吧，国外毕竟没见过不敢黑。
+16:02:varna: 你想多了
+16:02:xxxxxxxx: 好像见过就敢黑一样....
+16:03:T2: 你看，yinwang那种蠢货都能玩编译，说明环境还是有点用的。
+16:03:T2: 技校里恐怕抓不出来。
+16:03:varna: yinwang蠢？
+16:03:varna: 你逗我？
+16:03:xxxxxxxx: 我先捂住脸
+16:03:varna: 他确实很二，但他不蠢
+16:03:whatofor: yinwang很厉害的。 能上清华能读国外名校。 
+16:04:T2: 价值观不同吧。
+16:04:varna: 价值观个茄子
+16:04:whatofor: yinwang是心态不正常。 在知乎都被人说成民科了
+16:04:varna: yinwang做的东西你能做来也行
+16:04:T2: whatofor, 那是知乎民科太多。
+16:05:whatofor: http://www.zhihu.com/question/27082644 PLT 界的人说王垠是个民科、连 Haskell 的门都没入，这是真的吗？ 
+16:05:T2: 呵呵
+16:05:T2: 你猜
+16:06:varna: whatofor: 不可能
+16:06:varna: 我说几个方面吧
+16:06:varna: yinwang发的论文大概不多，但他不论好坏确实做了几个东西出来
+16:07:T2: 毕业找工作的时候能比yinwang强就可以了。
+16:07:whatofor: 这个我确定。 只是没想到已经他已经很多人认为是民科了
+16:07:varna: Haskell本身并没有值得一提的东西，不过我觉得他们正确地实现了H-M干得不错
+16:07:lh_mouse: H 完了变成了 M
+16:07:varna: 至于xxx界，身为一个学术界水比，我觉得评论可以无视
+16:07:T2: whatofor, 你兼容知乎卧槽。
+16:08:lh_mouse: “C++ 界”
+16:08:varna: 学术领域衡量的标准很简单：论文质量和数量，除此之外不用管
+16:08:whatofor: 知乎是娱乐网站。 我看各种乱七八糟的娱乐
+16:08:varna: 质量可以是本篇质量，也可以是引用数
+16:08:T2: 我已经没有娱乐网站了。
+16:08:T2: 无聊
+16:08:lh_mouse: 贴吧啊
+16:08:varna: 贴吧啊
+16:08:T2: 卧槽，贴吧还不如知乎。
+16:08:lh_mouse: 贴吧很娱乐
+16:08:erhandsome joined channel
+16:08:varna: 你去戒色吧看傻逼玩，多好玩
+16:09:xxxxxxxx: 为啥要去看....
+16:09:T2: 果然上B站
+16:09:T2: 或者补个番
+16:09:T2: 虽然无聊，但是贴吧口味重了点。
+16:09:whatofor: 贴吧太难找到有趣的了。 知乎密度高一些
+16:10:varna: xxxxxxxx: 他们都快自去大势了
+16:10:T2: dota也完了，wow早黄了。
+16:10:T2: 贴吧什么的。
+16:10:xxxxxxxx: 卧槽要不要这么屌
+16:10:T2: 果然我还是撸大物吧。
+16:11:varna: 刀吧以前我喜欢看父子局
+16:11:T2: 大物很逗乐的。
+16:11:lh_mouse: 你可以倒腾 poseidon
+16:11:Xilzzert: 重新下了生化6
+16:11:T2: lh_mouse, 可以考虑
+16:11:lh_mouse: MCF 也行  眼前两个大坑
+16:11:T2: Xilzzert, 垃圾4.5
+16:11:lh_mouse: 一个是 deque 不过我算计着改名字
+16:11:T2: 可玩性还是4高
+16:11:varna: 我先捂脸
+16:11:lh_mouse: 另一个是 shared_ptr
+16:11:Xilzzert: 6胜在剧情够够够长
+16:12:T2: Xilzzert, 果然下个古墓9，玩一遍通关删掉，干脆利落。
+16:12:lh_mouse: shared_ptr 改成用内存池放 control block  不再支持标准库那种 make_shared
+16:12:T2: 连2周目都没有，制作还算良心。
+16:12:lh_mouse: deque 移除随机访问支持
+16:12:varna: 内存池放ctrlblk看着不错，标准库怎么弄的？
+16:13:T2: 什么时候战神以外的游戏没有QTE了什么时候入正。
+16:13:T2: 不解释
+16:13:lh_mouse: varna, 分配一个能同时放下 control block 和新对象的内存  然后手动构造
+16:14:varna: soga
+16:14:lh_mouse: 我的想法就是用静态 map 放下完事
+16:14:varna: 这个我赞同
+16:14:whatofor: poseidon 是啥？
+16:14:T2: 果然还是MCF好玩。
+16:14:lh_mouse: 原本 make_shared 的功能用 intrusive ptr 代替之
+16:14:varna: 小耗的游戏服务器
+16:15:whatofor: 链接看看？
+16:15:lh_mouse: intrusive ptr 不支持弱引用  不过其余方面完爆 make_shared
+16:15:T2: 吉特哈勃/lhmouse/
+16:15:lh_mouse: whatofor, https://github.com/lhmouse/poseidon
+16:16:lh_mouse: intrusive ptr 相对于 shared_ptr 的最大优势是允许拿回所有权  以及手动控制（提供 add_ref 和 drop_ref 接口）
+16:17:T2: 取准考证去了艹。
+16:18:lh_mouse: shared_ptr 麻烦之处在于它的所有权拿不回来  因为这里有 make_shared 这种破事   不过如果干掉 make_shared   同时将删除器显式写进模板参数  这就不成问题
+16:18:xxxxxxxx: T2 去取了多少次了....
+16:18:T2: xxxxxxxx, 最后一次
+16:18:whatofor: 拖延症犯了。 github被墙了吗
+16:18:Xilzzert: 四六级？
+16:18:xxxxxxxx: 没有吧
+16:19:T2: Xilzzert, 嗯
+16:19:T2 quit:Quit: Leaving
+16:19:whatofor: 再次浏览器回车打开了。
+16:19:Xilzzert: gooreplacer插件
+16:19:Xilzzert: 专克Github，Stackoverflow打开缓慢
+16:20:whatofor: 试试
+16:20:lh_mouse: 如果从智能指针上拿回所有权  必须能拿到删除器  这里我所有的智能指针实现都带这么个删除器的参数   同时  为了方便 也提供了一个带虚析构的类  因此删除器就变成了单一类型
+16:20:whatofor: firefox。。
+16:21:Xilzzert: ff不知道有没有。。
+16:22:Xilzzert: liujiacai.net/gooreplacer
+16:23:whatofor: 额， 我的意思是我用ie。。 查到这个是 chrome和firefox用的
+16:24:varna: 那些慢可以开诊断看一下
+16:25:varna: 如果是google ajax之类的可以直接把域名解析到本地
+16:26:Xilzzert: ie。。。
+16:26:whatofor: chrome太流氓。 firefox不知道被装了什么插件， 占用内存高， 访问不知名的广告链接， 被我卸了。
+16:27:whatofor: 无奈只用ie和opera
+16:27:xxxxxxxx: chrome太流氓?
+16:28:varna: 进程数？
+16:28:varna: chrome在我这里的缺点可能只有跟pulse相性不好
+16:28:whatofor: 不给二进制下载。 默认安装到c盘。 
+16:28:whatofor: 还有各种google的更新在电脑里面残留
+16:29:varna: 噗？
+16:29:lh_mouse: Google 本来就是个逗比公司
+16:29:lh_mouse: 除了搜索后端根本乏善可陈
+16:29:varna: google的客户端一直很差
+16:29:lh_mouse: google play 还不给下 APK 呢
+16:29:varna: 他们就是搜索后端做得好吧
+16:29:lh_mouse: 傻逼东西
+16:30:varna: 其他的产品真不太行
+16:30:xxxxxxxx: 下apk似乎有办法
+16:32:Xilzzert: 有不少网站可以，但是不翻墙基本没法用
+16:32:varna: 翻墙是国情，这个没办法
+16:33:xxxxxxxx: 上次在哪里看到个项目的 说可以下google play里面的东西
+16:34:varna: 其实只需要弄个代理
+16:35:varna: 我记得筑波大学还有些免费的可以用
+16:35:xxxxxxxx: http://www.onyxbits.de/raccoon
+16:36:xxxxxxxx: 这个
+16:40:varna: 是时候大建一发了
+16:49:izmntuk joined channel
+16:54:varna: 温暖了
+16:59:erhandsome_ joined channel
+17:00:erhandsome quit:Remote host closed the connection
+17:02:FrankHB quit:Remote host closed the connection
+17:03:FrankHB joined channel
+17:05:varna: FrankHB: 爆
+17:27:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=54c6c053247f9e2f70351d002f31e962/5a3a8c3d70cf3bc76a70bf59d200baa1cc112ac2.jpg
+17:28:varna: ^ 这图用来十循似乎很实用
+17:31:xxxxxxxx: 隔壁老王?
+17:32:varna: 倒霉给粮官
+17:32:varna: 不对，这是曹操杀谁来着
+17:32:varna: 三国好久不温习
+17:33:lh_mouse: 王垕
+17:34:varna: 哦
+17:34:xxxxxxxx: 果真隔壁老王
+17:38:varna: xxxxxxxx: 爆
+17:44:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=a4489e949013b07ebdbd50003cd69113/bb2b737adab44aed71c9a751b01c8701a08bfbb7.jpg
+17:53:hoxily quit:Quit: WeeChat 1.0.1
+17:54:hoxily joined channel
+18:14:lh_cat quit:Ping timeout: 255 seconds
+18:18:lh_cat joined channel
+18:28:hoxily quit:Quit: Leaving
+18:35:Plough joined channel
+18:35:Plough: varna: 先来一句自爆去
+18:35:Plough: 另外我出Z3了……
+18:36:boosure quit:Quit: Get your hand off of it
+18:36:dantmnf: 专门过来日西...
+18:37:Plough: Z3有什么好晒的
+18:40:condy joined channel
+18:44:lh_cat quit:Ping timeout: 258 seconds
+18:45:lh_mouse: condy, 爆照
+18:48:lh_cat joined channel
+18:48:condy: Yada!
+18:49:lh_mouse: condy, 爆照
+18:49:condy: 止めろ！
+18:50:lh_mouse: condy, 爆照
+18:50:condy: 止めろ！
+18:51:condy: 我要代表月亮压扁你～
+18:53:varna: Plough: 你也该转运了
+18:53:Plough: 但是跟着我大建了两发
+18:53:varna: 对了，我有打算周末组织玩盘SK4推演，你有兴趣不
+18:53:Plough: 天若有情天亦老，然后你接
+18:54:varna: 4662出雾岛
+18:54:Plough: 要是周末我能看完规则就玩
+18:54:Plough: 再接
+18:54:Plough: 两发呢
+18:54:varna: 人间正道是扶桑
+18:54:varna: 不用看很多
+18:55:varna: 大致会索敌、运动、炮雷击战就行
+18:55:varna: 剧本是秋活E4
+18:55:Plough: Soga
+18:55:Plough: 对了，舰娘国服搞了个活动
+18:55:varna: 夜战，巡洋舰队
+18:55:Plough: 南京大屠杀纪念日玩江阴保卫战
+18:55:varna: 出去几分钟
+18:58:Plough: 使用“纯国产”“重巡”宁海号打加贺……
+18:59:FrankHB quit:Ping timeout: 258 seconds
+19:00:varna: 听说了
+19:00:varna: 我觉得应该让瓦良格上
+19:01:Plough: 火力雷装各249的重巡你怕不怕
+19:01:Plough: 而且还能用“死亡光线”
+19:01:varna: ...
+19:01:Plough: 跟雾舰超重力炮差不多
+19:01:Plough: 最终Boss的加贺还是没改的版本
+19:03:varna: 那时候不该是双翼舰战么
+19:03:Plough: 国服运营：“历史是什么？能吃么？”
+19:04:lh_mouse: condy, 爆照
+19:04:condy: 真•丧失
+19:05:Plough: 不过第一次听说宁海有超电磁炮以后我还以为国服那帮人学会改swf了
+19:05:varna: Plough: 总之这周玩不起来下周也行
+19:05:Plough: 直到我无意中搞出了这玩意http://picpaste.com/pics/mA5lQo5H.1418900656.gif
+19:06:varna: 超破坏拳……
+19:06:Plough: 不知道是娇喘的临时工们想留着娱乐还是懒得清理代码，总之超重力炮的代码没删
+19:06:Plough: 但是被简化过了
+19:07:lh_mouse: [19:06:01] <Plough> 直到我无意中 出了这玩意http://picpaste.com/pics/mA5lQo5H.1418900656.gif
+19:09:varna: 你这就不对了
+19:09:varna: 红字，音随工义随丝部；撕丝得肉，是为月部
+19:09:Plough: 噗
+19:09:varna: 去丝见月，其名为肛
+19:10:varna: 这样我们得出一个结论：肛旗平时穿的是小和款胖次
+19:10:Plough: 噗噗噗
+19:10:varna: 又小又红、能露出尻部的
+19:10:Plough: 对了，我知道之前那坨很可怕的玩意是干嘛用的了
+19:11:Plough: Core.swf不是解析不了么，去2ch逛了一下我确定它被加密过
+19:11:Plough: 而他们搞的解密方法就是把整个文件当字符串然后用大坨正则替换……
+19:12:varna: 马勒戈壁
+19:12:varna: 他们需要MCF...
+19:13:Plough: 总之近期我是不打算拆Core.swf了，毕竟以以前的版本来看似乎里面代码不多
+19:14:tutu_wind joined channel
+19:14:Plough: 这周的进度是实现了结婚以及（硬编码剧本）的昼战、夜战、昼转夜，准备开始折腾夜转昼
+19:14:Plough: (硬编码剧本的)
+19:15:varna: 我通过把lc强行编译成c-like perl支持了之前CPS变换正确的结论
+19:16:varna: 一共三趟：CPS, 去克里化，lambda提升+代码生成
+19:16:varna: 当然lambda提升不是静态的
+19:19:varna: 等下
+19:19:lh_mouse: 前几天帝球推荐了个什么随机数生成器  我把它的源码拷下来  O3 编过还没 MCF::IsaacEx 的 -O0 快
+19:19:lh_mouse: 其实我啥都没做  我就是人肉把循环 unroll 了一遍
+19:19:varna: 你战斗的阵型补正、目标选择和crit怎么算
+19:20:Plough: 硬编码剧本，不需要算……
+19:20:varna: 哦
+19:20:varna: 测试通信啊
+19:20:Plough: +
+19:20:Plough: 其实我现在最头疼的是命中怎么处理
+19:21:varna: 用别的兵棋公式？
+19:21:Plough: 一直没个具体的公式
+19:21:Plough: 也中
+19:21:Plough: 不过等级补正怎么办
+19:21:varna: sk5
+19:21:Plough: 等我去翻翻
+19:21:varna: 我听说里面有“船员等级”
+19:21:varna: 不过那个要买，我没有
+19:23:Plough: 要不然直接命中=基础命中*等级/100?
+19:23:Plough: 基础命中设高点，装备补正加载后面
+19:23:Plough: 在
+19:24:Plough: if(_data.dto.isNightOnlyBattle() || _data.dto.isNightDayBattle())
+19:24:Plough:             {
+19:24:Plough:                isNight = true;
+19:24:Plough:             }
+19:25:Plough: 从这里看大概夜转昼的代码还没删
+19:25:Plough: 不过怎么触发我不确定
+19:26:varna: 等级/100太黑暗，你做个S型曲线吧，目的是让命中增长在一般二改较高练度达到峰值
+19:26:varna: 然后限定这个补正对基础命中的影响值不超过10%~15%
+19:26:LittleKey quit:Read error: Connection timed out
+19:27:varna: 这样既要求练度，又不至于影响练级和前期推图以及锁船
+19:27:Plough: 也中
+19:27:Plough: 取对数？
+19:28:varna: 你查查生态学方面的典型曲线
+19:28:varna: 种群增长之类的
+19:28:Plough: ……搞个微分方程么
+19:28:varna: 不用
+19:28:Plough: 我记得种群增长是个微分方程来着
+19:28:varna: 不过如果太龌龊了就插值吧
+19:28:varna: 我印象那函数不好看，初等不初等忘了
+19:28:LittleKey joined channel
+19:29:Plough: 或者直接硬编码张表出来？
+19:29:Plough: 反正就150项
+19:29:varna: 也行
+19:29:varna: “这是战术模拟，战术模拟查表理所应当”
+19:29:Plough: 2333333
+19:29:varna: 这么告诉愤怒的合作者
+19:31:Plough: 先去吃饭
+19:32:varna: 爆
+19:32:varna: 饭前爆后要洗手
+19:35:varna: 一阵海吃，算是这几天吃得最舒服的一顿
+19:35:varna: 之前又是发烧又是头疼，基本只吃几个包子烧麦，或者喝点汤扫一堆饭下去……
+19:38:varna: 在发烧的时候炖的海带汤加上米饭其实各种好吃，不过大厨肯定加一滴香之类的东西了
+19:38:varna: 汤喝下去有奇怪味道，要是让他不加估计会更好吃
+19:41:condy: geordi: { int* p = new int[5]; ++p; delete[] p; }
+19:41:geordi: error: tried to delete pointer not returned by previous matching allocation. Aborted
+19:41:condy: geordi: erase ++p
+19:41:geordi: <no output>
+19:41:code_new joined channel
+19:42:cleamoon: 咦，羊驼复活了
+19:42:code_new: 估计生病好了
+19:43:varna: 现在退烧了
+19:43:code_new: 驼兄病娇
+19:46:varna: 我体质不好的
+19:46:varna: 虽说在东北呆了五年比较抗冻些，但流感还是不行
+19:47:cleamoon: 转载:【环球社评】3月3日：美欧的口炮难敌俄罗斯真坦克。3月5日：中国舆论应多挺俄罗斯和普京。3月13日：俄罗斯这次真让西方成了纸老虎。3月19日：普京镇住西方，难在长期主动。12月17日：中国不希望俄罗斯倒下，这谁都知道。12月18日：“卢布贬值拉中国下水”的叫喊很二。
+19:47:cleamoon: 容易得流感？体质诡异...
+19:48:condy: geordi: { foo* p = new foo[3]; ++p; delete[] p; } struct foo { ~foo() { cout<<"~foo "; } };
+19:48:code_new: 在北方更不抗冻，老是呆在暖气屋里面
+19:48:geordi: ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo ~foo 
+19:48:cleamoon: 果然是羊驼吃的东西有问题
+19:49:cleamoon: 2333 http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/82/8d_486400.jpg
+19:49:varna: 岚月酱给我弄点鱼罐头之外的好吃的吧
+19:51:cleamoon:  Skype准备测试英语到西班牙语的即时翻译功能Skype Translate。即时翻译功能首先需要识别你说的话，然后转换成文本，翻译到另一种语言，最后合成与你对话者的语言。它利用了微软研究院的人工智能技术去完成这一说起来但做起来极为艰难的挑战。Skype Translate借组了名为深度神经网络的人工智能研究成果，Google Now Android语音助
+19:51:cleamoon: 手就依靠了深度神经网络的研究突破，而微软则将其应用于Skype翻译。微软研究院负责人 Peter Lee认为它将会改变世界。
+19:51:cleamoon: 你平时都吃什么
+19:52:varna: 炒菜米饭豆腐西北风
+19:52:varna: DBN有什么突破了……
+19:54:cleamoon: 豆腐没太大营养...
+19:54:cleamoon: 彭博社援引匿名知情人士的消息报道，中国计划到2020年将大部分外国技术清除出银行、军方、国企和关键政府机构，替代之中国本土的供应商。中国已在东北吉林的四平市完成了一次本土替代的测试。工作人员用Linux发行版中标麒麟(NeoKylin)替代了微软的Windows操作系统，用浪潮的服务器替代了IBM的服务器
+19:54:cleamoon: linux算中国技术？
+19:55:varna: 营养大丈夫，平时蔬菜吃得比例还是够的
+19:55:varna: 四平啊，离长春不远（笑）
+19:55:varna: 我曾经有段时间看本地报纸
+19:56:varna: 大一大二那阵子吧
+19:56:cleamoon: 多吃点肉呀....
+19:56:varna: 那时候周边砍完怂事件时时见报，常见的地方是四平和公主岭
+19:56:varna: 肉当然吃啊
+19:56:cleamoon: 名为热量的营养，不是维生素...
+19:57:T2 joined channel
+19:57:cleamoon: 那就多吃点
+19:57:cleamoon: 一天5顿那种
+19:57:varna: 一天五顿做不到……
+19:58:T2: varna, 稍微运动下少喝点饮料就可以了。
+19:58:Plough: 我倒不容易得流感，就是腹部容易着凉
+19:58:varna: T2: 你太喜欢打包票了……
+19:58:Plough: 对了
+19:58:Plough: 本月月常3-5我还从幼女那搞了个礼物箱来着
+19:58:varna: 肛旗你那是痛经
+19:58:Plough: 噗
+19:59:varna: 礼物啊，我今天南西得一个
+19:59:Plough: 结果就是到现在我都只打掉3-5一格血
+19:59:T2: varna, 不是包票的锅，你的习性太作死。
+20:00:varna: T2: 我觉得如果你敢打包票，那全世界的问题都解决了；既然全世界的问题没解决，你信誓旦旦地出来跟药元四有什么差别
+20:00:T2: 好吧
+20:01:varna: 爷们和大头有个重大区别
+20:01:varna: 大头上面的头大，爷们下面的头大
+20:01:varna: Plough: 3-5啊，要不是这个月的3-5，我现在能有六百桶
+20:01:Plough: 23333333
+20:02:cleamoon: 药元四是什么梗
+20:02:varna: cleamoon: 药元四经常跳出来喷个东西，然后被群众反噗
+20:03:varna: 比如真相其实是他没看文档之类
+20:03:cleamoon: 我记得容易得流感是体质问题
+20:03:cleamoon: 23333
+20:04:Plough: 另外我真心不想吐槽娇喘临时工的拼写了
+20:04:Plough: 我试图模拟雷爷的开幕，结果api_opening_attack设上完全没用
+20:05:varna: 噗？
+20:05:Plough: 我还检查了三遍确认我写的是attack
+20:05:Plough: 结果回头一看，api_opening_atack……
+20:05:varna: 不会是strike吧
+20:05:varna: 哈哈哈哈哈哈
+20:05:Plough: 他们居然是拼错了以后直接全用错的
+20:06:varna: atack笑死了
+20:06:cleamoon: 23333
+20:09:T2: 吃饭
+20:10:cleamoon: 话说为什么进程间通信很疼？
+20:11:lh_mouse: 不疼啊
+20:11:lh_mouse: socket 完了
+20:11:cleamoon: ...那不和网络一样了？
+20:12:varna: 不一样，换回端口可能不走IP层
+20:12:varna: 环回
+20:12:varna: 再说IPC什么时候该不一样
+20:12:varna: IP:Port实际上就是进程的全网标识啊
+20:14:lh_mouse: 你给本地发个 socket 跟写个 pipe 有什么区别
+20:16:T2: 吖哒，B站又打不开了。
+20:17:Plough: 然而度娘早就看穿了一切http://imgsrc.baidu.com/forum/w%3D580/sign=9f48ca9e0df41bd5da53e8fc61db81a0/3cda7c01213fb80e99ba4c6235d12f2eb83894cb.jpg
+20:19:xxxxxxxx: 为啥不是永居非洲之类的
+20:20:xxxxxxxx: varna 好图一张 http://static.acfun.mm111.net/h/upload/d19dcf51-a108-4f4c-81c4-33770cff8d23.jpg
+20:21:T2: xxxxxxxx, 你是妹纸么？
+20:21:varna: 卧槽
+20:21:varna: 谜之凸起
+20:22:T2: xxxxxxxx, 你是妹纸吧？
+20:23:xxxxxxxx: T2 你还是快吃药吧
+20:23:T2: xxxxxxxx, 你是妹纸咯？
+20:23:xxxxxxxx: varna http://static.acfun.mm111.net/h/upload/5577973f-9f75-4356-a77e-68384a99c52c.jpg
+20:25:varna: 喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔哦
+20:25:varna: 肛旗你看
+20:25:varna: 这个伪娘穿的胖次比肛旗还保守
+20:25:Plough: 噗
+20:26:Plough: 不过这张图不是早就有了么
+20:26:xxxxxxxx: 是么?
+20:27:varna: 估计肛旗买胖次的时候参考过这个
+20:28:Plough: 噗噗噗
+20:29:Plough: 对面有大和，我感觉重巡队压力有点大……
+20:29:varna: 大丈夫
+20:29:varna: 大和昼战也就废你两个
+20:29:Plough: 还有飞龙
+20:29:varna: 航母不管
+20:30:Plough: 我怕被开幕吊打……
+20:30:Plough: 算了，硬着头皮上
+20:31:varna: 我一直被开幕吊打
+20:31:varna: 我日
+20:31:varna: 武大报社演习放了一天都没动
+20:31:Plough: ……
+20:31:varna: 老子便跟你决战
+20:31:Plough: 双Lv1然后武大？
+20:31:varna: 传毛嘎敏来！
+20:32:varna: lv30+啊嘿颜能代
+20:32:Plough: Soga
+20:32:Plough: 似乎不算很难打
+20:32:Plough: 噗
+20:32:varna: 哦操
+20:33:Plough: 我忘了把熊野的瑞云卸下来
+20:33:varna: 武藏扔渠里了……
+20:33:Plough: ……
+20:33:Plough: 桶一个
+20:33:varna: 没武藏我也打死他
+20:33:Plough: 对面利根直接废我两个
+20:33:cleamoon: 我擦，极黑的作者同意治疗了，死妹子又活了
+20:33:Plough: 大和废一个
+20:33:Plough: 3vs3
+20:34:Plough: 估计S胜是没希望了
+20:34:Plough: A胜
+20:34:Plough: 对面利根太可怕
+20:34:cleamoon: 然后被qj了，果然这个尿性
+20:34:Plough: 比大和海猛
+20:34:varna: 这人报社不专业，看我偷他制空
+20:34:Plough: 还猛
+20:35:Plough: 瑞云么
+20:35:varna: 没养出晴岚
+20:35:Plough: 我记得晴岚貌似没对空？
+20:36:varna: 对
+20:36:Plough: 只用来触发航空战么
+20:36:varna: 哈哈哈你小子以为放个五十铃就能压住报复？
+20:36:varna: 晴岚就是炸
+20:37:varna: 制空权确保
+20:37:Plough: 果然不专业,应该放大屁股
+20:37:varna: 能代和欧根被我开幕怒爆
+20:37:varna: 武藏被大傻秒杀
+20:37:Plough: 233333
+20:37:varna: 一轮之后只有大和幸存
+20:37:Plough: 毕竟有制空
+20:37:varna: 无伤
+20:38:Plough: 完全胜利么
+20:38:varna: 费油63弹95，旗舰还带了个练级的绫波
+20:38:varna: 完胜
+20:38:Plough: Orz
+20:38:Plough: 不过完胜和S胜其实是在客户端区分的
+20:38:Plough: 服务端只管扔个S过来
+20:39:varna: 无所谓了，主要是既然他坚持报社，那就干他一次
+20:39:Plough: 主要是我觉得这有点蛋疼
+20:39:Plough: 两边都得统计一次伤害……
+20:39:Plough: 夏活那个莫名奇妙C败也是
+20:39:Plough: 伤害条是客户端自己统计自己画的
+20:41:varna: 服务器端和客户端很可能是两个团队，我觉得这正常
+20:41:lh_mouse: 出来混个一年  看看做游戏的水平如何
+20:42:lh_mouse: 反正国内 IT 基本也就是做游戏了  剩余的大方向已经被瓜分殆尽
+20:42:Plough: 只剩两个螺丝了，今天改修什么呢……
+20:42:lh_mouse: 于是  各路谭XX 培训机构  这样水平的   就都来做游戏了
+20:42:Plough: 啊，三个
+20:44:varna: 于是我们有请游戏行业资深人士小耗来指导行业工作，大家掌股欢迎
+20:46:lh_mouse: 毛  
+20:46:lh_mouse: 我觉得有必要把 poseidon 推销给老外
+20:46:varna: 注意是掌股欢迎
+20:46:varna: 这就有学问了，掌谁的股呢？
+20:47:varna: 肛旗出来下，有事找你
+20:47:Plough: 掌你的股
+20:47:condy: geordi: << __cplusplus
+20:47:geordi: 201500
+20:47:varna: 现在已经不否认肛旗了
+20:48:Plough: 噗
+20:48:Plough: 话说水母怎么练……
+20:49:Plough: 我想尽早弄上Lv15
+20:51:varna: 演习吧
+20:51:varna: 水母练起来极为艰难，不过我有个黑暗的办法
+20:51:varna: 喂满之后3-5带下路……
+20:51:Plough: 1-1?
+20:52:Plough: ……
+20:52:Plough: 我看到了桶在燃烧
+20:53:varna: 说起来因为这周生病没来得及汇报，下午下班之前老板来问了一趟，正好我在
+21:00:cleamoon: 然后老板和你摔 跤
+21:01:varna: 他五十多了，摔不过我
+21:02:Plough: 我才发现羊驼在写同人文？
+21:02:varna: 总之还是跟他说了一下目前我觉得研究应有的看点和坑点，还有之前整理的数据
+21:02:varna: 高中时候就跟人合作搞同人了
+21:03:Plough: soga
+21:03:Plough: 追追追
+21:03:lh_mouse: 羊驼 v.s. 红旗
+21:03:Plough: v.s.是什么情况
+21:03:varna: 当时是合同企划，所以我那部分的文和插图都得自己搞
+21:03:varna: Plough: 是我压着你爆的情况
+21:03:Plough: 插图Orz，难道羊驼是隐藏触？
+21:04:Plough: varna: 是你脑洞巨大的情况
+21:04:varna: 现在已经不会画了
+21:05:T2: 神马同人？
+21:05:Plough: 最近潜艇们老是合击……
+21:05:lh_mouse: 我觉得我应该找个时间好好练字
+21:05:Plough: 好好练字+
+21:05:T2: lh_mouse, 不写一样废了。
+21:05:Plough: 现在手抖
+21:05:varna: 有时间练字的话是个很怡情的事
+21:06:varna: T2: 如果你喜欢手写的话，不少时候会随便胡乱写点东西
+21:06:varna: 比如默写
+21:06:T2: 原来练过很久，高中毕业后没写过东西，现在写的根本不是字。
+21:06:Plough: 默將进酒
+21:07:Plough: 妈的，又开始给我狂进Boss了
+21:07:T2: 没有写字需求的话果然还是算了。
+21:07:varna: 将进酒，蜀道难，好想侵犯楼主啊
+21:07:varna: 这是我默写的老三篇
+21:07:xxxxxxxx: 果然默写好想侵犯楼主啊
+21:07:varna: 將
+21:07:varna: 打qiang没有简体的将……
+21:08:Plough: +
+21:08:Plough: 將进酒是少数我比较喜欢的唐诗
+21:08:varna: 我不特别喜欢
+21:08:Plough: 主要是我总感觉唐诗节奏太单调了……
+21:09:Plough: 噗，南西掉了只大jing
+21:09:varna: 李白的歌有个好处，节奏感自由，多读起来就奔放了
+21:09:cleamoon: 去看乐府诗集
+21:09:varna: 杜甫则是严肃公正
+21:09:Plough: 看楚辞
+21:09:varna: 乐府是汉时候的事了，那时候律诗都不行
+21:09:cleamoon: 侠客行多好
+21:09:varna: 工整*
+21:09:varna: 楚辞我不太喜欢
+21:09:Plough: 我倒挺喜欢楚辞的……
+21:10:varna: 因为你穿着轻飘飘的防空胖次
+21:10:Plough: 噗
+21:10:cleamoon: 兮兮兮兮兮兮兮
+21:10:varna: 体会不了风急天高的舰桥之巍峨
+21:10:Plough: 不过我只喜欢像九歌那样把兮放中间的
+21:10:Plough: 离骚就没啥感觉
+21:11:cleamoon: 用古音读就有感 觉了
+21:11:varna: 因为你骚……
+21:11:Plough: 噗
+21:11:Plough: 你才骚
+21:11:varna: 噫吁嚱，危乎高哉！我希之高，电探上青天！
+21:11:xxxxxxxx: 电探上青天.....
+21:12:Plough: 屈原能放大招，礼拜能么
+21:12:Plough: 李白
+21:12:varna: 李白能开加速
+21:12:varna: 半壁见海日，空中爆肛旗
+21:12:Plough: 噗
+21:12:Plough: 就会篡改古诗
+21:12:varna: 《梦*天姥银留别》
+21:13:varna: 我跟你讲个电探笑话吧
+21:14:varna: 当时要阿号作战了，渊田美津雄看着21号，高兴地想“现在我们也有电探了，这东西日夜不停地工作，一百海里外的敌机都能发现”
+21:14:varna: 作为参考
+21:14:varna: 小泽的作战半径超过三百五十海里，而深海的作战半径应该至少也有二百海里
+21:14:varna: 这时另一个严峻的问题就摆在他们眼前了
+21:15:lh_mouse:  我在写滕王阁序
+21:15:varna: 前方是栗田的直卫队，他们认错了飞机来向，照着一百多机的友军一顿死打
+21:16:Plough: ……
+21:16:varna: 来个滕王阁诗吧
+21:16:Plough: 滕王阁诗好评
+21:16:varna: 阁中息子今何在？唯见长江天际流
+21:16:Plough: 说起来我还想去滕王阁转转的
+21:17:varna: 当时直卫队正在运动，不知道哪个高炮一紧张就开火了，然后全员开打，操得四机战斗不能，其他飞机回头整编
+21:17:varna: 滕王阁重修了吧
+21:18:Plough: 貌似重修过好几次了
+21:18:T2: lh_mouse, 反正描红是没用的，临摹的话硬币效果不确认。
+21:18:T2: 硬币
+21:18:T2: 硬笔
+21:18:T2: 艹
+21:18:varna: 描红有用
+21:18:varna: 先描红在临摹，不然你会走形
+21:18:varna: 再*
+21:19:T2: 描红练不出来，我被坑惨了。
+21:19:T2: 那可能是
+21:19:lh_mouse: 地势极而南溟深 天柱高而北辰远
+21:19:varna: 实际上字最惨的部分不是不够帅气，而是架势奇葩
+21:20:Plough: 写不成一行怎么破
+21:20:Plough: 容易歪
+21:20:varna: 所以横平竖直有架可能比什么“领悟”来得更好
+21:20:T2: Plough, 那都小事。
+21:20:varna: 你需要无歪的教育
+21:20:Plough: 我觉得问题挺大的……
+21:20:lh_mouse: 我只默写  不喜描红
+21:20:Plough: 一眼看上去感觉很乱
+21:20:T2: lh_mouse, 那是可以的。
+21:20:lh_mouse: 我觉得有些字写的还可以 但是多数不行  而且我知道问题在哪里
+21:20:lh_mouse: 折不够硬
+21:21:T2: = =
+21:21:lh_mouse: 很多是圆角转过去的
+21:21:lh_mouse: 当然也许圆珠笔就这样
+21:21:T2: 节奏不对2333
+21:21:T2: 跟笔没关系
+21:21:T2: 虽然说圆珠笔练不出字
+21:21:T2: 但是写出来的效果跟笔没关系
+21:21:varna: 用圆珠笔不好
+21:22:varna: 但是如果你习惯另论
+21:22:Plough: 签字笔和圆珠笔有啥区别吗
+21:22:Plough: 一直没感觉出来
+21:22:varna: 圆珠笔太滑
+21:22:T2: 果然还是用钢笔吧
+21:22:Plough: 高考强制要求0.5mm黑色签字笔
+21:23:varna: 除非你写字习惯和我一样属于手上力气很大但笔尖用力很小的
+21:23:varna: 不然圆珠笔的差别就更大
+21:23:Plough: 我感觉差不多……
+21:23:Plough: 捏得很紧但是压得不紧
+21:23:T2: 练字的时候要保证笔不能被抽走
+21:23:T2: 所以连的话都那样吧
+21:24:T2: 练
+21:24:T2: 虽然说拿来应付我朝的作业着实困难了点。
+21:24:varna: 那个要求过分
+21:25:T2: 我觉得练字基本就是过分的强迫症，程度不同罢了。
+21:26:T2: 当时小食指都快断了的赶脚
+21:26:T2: 毛笔是无名指
+21:26:lh_mouse: varna, 很久之前就发现了
+21:26:lh_mouse: 如果握笔用力太小写字容易走形
+21:26:Plough: 我在5-4捞出了主角……
+21:26:varna: 5-4大批那谁
+21:27:T2: 不过高考语文可以加不少分
+21:27:T2: 2333
+21:27:T2: 目测光语文卷十分以上。
+21:28:varna: 我传一个我平时鼠标垫的乱划看看……
+21:29:T2: = =
+21:30:Plough: 东山急行系列
+21:30:varna: 鼠标垫一般都是大摞用过的讲义
+21:31:Plough: 鼠标垫是学校门口那些辅导班发的
+21:31:Plough: 我光拿个鼠标垫，就不去上
+21:31:T2: http://tieba.baidu.com/p/3474595635 好吧我发现乐点了
+21:31:T2: 这个...我的口味也这么恶劣了...
+21:33:varna: picpaste手机不知为何不能上传……
+21:33:Plough: ……往电脑上复制下？
+21:33:varna: WP手机
+21:34:varna: 我试试hotmail吧……
+21:34:Plough: WP用的是MTP还是啥
+21:34:Plough: mtp的话倒是能弄个go-mtpfs
+21:34:varna: 要连windows
+21:34:varna: 不然没驱动
+21:34:Plough: 虽然及其蛋疼
+21:34:Plough: ……
+21:34:Plough: 两页雷装，我塞给谁呢……
+21:34:varna: hotmail倒是能上，但是为什么要搞那么多花哨东西……
+21:35:Plough: 现在不都流行这些么
+21:35:T2: 突然发现大物其实也挺有意思的...我TM是不是没救了...
+21:35:Plough: 塞给八万钢
+21:36:varna: onedrive也跪了……
+21:36:T2: w我一定是无聊爆了。
+21:37:Plough: onedrive似乎前段时间被墙了
+21:38:T2: 好吧，B站还是打不开
+21:38:varna: 做前端的傻逼实在太多了
+21:39:T2: = =
+21:39:condy: geordi: { using T = [](double) -> int; cout << TYPE<T>; }
+21:39:geordi: error: expected type-specifier before '[' token
+21:39:condy: geordi: { using T = [](double)>int; cout << TYPE<T>; }
+21:39:geordi: Same error.
+21:39:Plough: 前端可是最近几年工资涨幅最大的(笑)
+21:39:condy: geordi: { using T = [](double)->int; cout << TYPE<T>; }
+21:39:geordi: Still same error.
+21:39:condy: ...
+21:42:lh_cat: geordi, replace [] with auto
+21:42:geordi: int (double)
+21:42:LittleKey quit:Quit: Leaving.
+21:42:lh_cat: condy 是笨蛋 
+21:43:Sleepwalking joined channel
+21:43:condy: 我是baka.
+21:43:condy: geordi: show
+21:43:geordi: { using T = auto(double)->int; cout << TYPE<T>; }
+21:43:varna: 不显示进度，不显示报错，连个屁都不放……
+21:44:condy: BS的C++11FAQ上面是这样写的。 using P = [](double)->void;// using plus suffix return type
+21:45:Plough: 上传么
+21:45:Plough: 说起报错，我又想起娇喘程序员埋的坑了
+21:46:Plough: 结婚部分客户端有两次判断，一次在RemodalMain.swf，一次在WeddingMain.swf
+21:46:Plough: 内容是判断结婚对象ID是否>501，如果大于直接猫掉
+21:46:Plough: 原因是“injustice”……
+21:47:xxxxxxxx: http://postimage.org/ 这个试试看?
+21:47:xxxxxxxx: 不知道要不要注册
+21:47:varna: hotmail快传完了
+21:48:xxxxxxxx: 另外可以传百度网盘啊
+21:48:Plough: 还好我机智的先反编译了一遍结婚部分
+21:48:Plough: 不然怎么娶院长
+21:48:varna: 度盘用不了，上传按钮不响应
+21:48:Plough: 23333
+21:48:varna: 百度前端是傻逼
+21:49:Plough: 度娘那牛逼的前端
+21:49:xxxxxxxx: .... 真是威武霸气
+21:50:tutu_wind quit:Ping timeout: 250 seconds
+21:51:varna: http://picpaste.com/yhWqahYH.jpg
+21:51:varna: 这是秋活期间的鼠标垫
+21:53:Plough: 我肯定没撸多
+21:53:varna: 你肯定撸多了
+21:53:Plough: 不过你居然会把计划写在纸上么……
+21:54:xxxxxxxx: 我肯定撸多了
+21:54:varna: 那个是练级计划、战力总结、秋活带路、南风叔CA练法、草泥马之歌写在一起了
+21:54:Plough: Orz
+21:54:varna: 写在鼠标垫上方便我走神
+21:54:Plough: 我纯靠脑子
+21:55:T2: = =
+21:55:varna: 当时我强行倒时差，精神有点不好
+21:55:T2: B站可以打开了腋
+21:55:T2: 可以不用看大悟了
+21:57:T2: 下个视频交多媒体大作业再下个MFC交VC大作业
+21:57:Plough: 通信太差2333333
+21:57:Plough: 果然写的就是你的秋活么
+21:57:varna: 于是兵棋推演还有谁想玩
+21:57:T2: 我想啊
+21:57:varna: 我上面大大地写着我方网络不利
+21:57:T2: 吖吧下个月吧
+21:57:varna: 那绝对是最震撼的通关画面没有之一
+21:58:Plough: 233333333
+21:58:Plough: 对了，你的那珂酱是在道中掉的还是Boss点
+21:58:varna: 上路D点
+21:58:varna: 斩杀不知道出了什么
+21:58:LittleKey joined channel
+21:58:varna: 来来来赌出货了
+21:58:Plough: 那里那珂率似乎不低，我看某dalao打E4捞了两只那珂酱……
+21:59:varna: 大建两个4:30
+21:59:varna: 猜猜谁
+21:59:Plough: 233333
+21:59:varna: 一个6572+20一个低保
+21:59:Plough: 难道你旗舰是大傻么
+21:59:varna: 现在都造好了，你们赌我就点
+21:59:T2: 念了6年大学直到这周才知道考试要怎么过
+21:59:varna: 6572+20是电酱，在贴吧聚赌忘换旗舰了
+21:59:Plough: 我猜日向
+21:59:varna: 第二个呢
+21:59:varna: 时间都一样的
+22:00:Plough: 第二个伊势吧
+22:00:Plough: 各猜一个
+22:00:T2: 果然一旦想考90的时候一切就简单了。
+22:00:Plough: 猜中了我也来一发
+22:00:varna: 连装日向
+22:00:Plough: ……
+22:00:Plough: 不赌了
+22:00:Plough: 明天再赌
+22:01:varna: 我的资源量6572还可以再来三发，不过那样就有资源清零了……
+22:01:Plough: 14376/14461/21298/14972+176/150
+22:02:Plough: 现在预定是超低保之前一周一次
+22:02:Plough: 超低保之后一周两次连赌
+22:02:varna: 20.4k/19.8k/21.0k/18.8k+526/117
+22:03:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=5f46798d2b381f309e198da199004c67/06f4da3df8dcd1007bc8b394718b4710b8122fe6.jpg # 我今天作为一个长者，要在这里告诉你们，那个画柯南的青山刚昌，大建的姿势比你们高到不知道哪里去了，你们要努力提升自己的姿势水平
+22:04:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=22ae848d2b381f309e198da199004c67/06f4da3df8dcd10006204e94718b4710b8122ffe.jpg # 马鹿们也有话说
+22:05:T2: 2333
+22:05:Plough: 2333333
+22:06:hoxily joined channel
+22:07:condy: 最近刚补完柯南的剧场版..
+22:08:varna: Plough: 话说如果开兵棋的话，你是这周末还是下周末有空
+22:08:Plough: 哪个周末都行
+22:09:T2: 果然下周末？
+22:09:varna: 二等一
+22:09:varna: 先问问有没有这周末能玩的
+22:09:T2: 考试
+22:09:T2: 好吧卧槽，要是大学能重来一遍就好了。
+22:10:Plough: 先碎叫
+22:10:T2: 我似乎错过了什么。
+22:10:Plough quit:Quit: 碎叫
+22:11:varna: 还有志愿者么
+22:11:varna: 这次可是铁底湾哦、铁底湾
+22:11:T2: 果然下个月吧
+22:13:hoxily quit:Ping timeout: 258 seconds
+22:16:cleamoon: T2大学多久了
+22:16:T2: cleamoon, 大概这周开始才算吧，以前那个不知道算什么，地狱？
+22:17:cleamoon: 这周成佛了？
+22:18:varna: cleamoon: 玩兵棋不
+22:18:T2: cleamoon, 没有，只是这周打算脑抽了然后发现easy mode。
+22:19:cleamoon: varna, 不会规则
+22:19:T2: 啊啊啊，我TM到底都干了些什么。
+22:19:cleamoon: easy mode是什么？
+22:20:T2: cleamoon, 刷90%。
+22:20:varna: cleamoon: 我有规则书
+22:20:cleamoon: 和老板摔跤？
+22:20:varna: cleamoon: http://pan.baidu.com/s/1mgqnwhE
+22:20:cleamoon: varna, 兵棋和军旗什么区别？
+22:20:cleamoon: 好大....
+22:21:varna: 兵棋是类似推演对战的东西，说是图上推演比较合适
+22:21:varna: 里面有实际的作战规则、参数表、舰船数据表
+22:21:T2: cleamoon, rule book只有两个。
+22:21:xxxxxxxx: 加上非洲海军就可以用金坷垃BGM了
+22:21:varna: 还有补充的速查文档
+22:21:cleamoon: 哦，那种玩意
+22:22:varna: 最近不打算出有大和的战役，所以肯定可以用金坷垃BGM
+22:22:cleamoon: lin上有兵棋软件吗
+22:22:varna: 而且说起来最后还不是美日非战斗
+22:22:varna: 没找到过
+22:22:cleamoon: 刷90%很容易吗....
+22:22:T2: cleamoon, 国内来说反正比我以前的做法简单。
+22:22:varna: 主要是像纸上游戏那么细致的不容易有，如果是战略游戏的话我还找到一个
+22:22:T2: 你们那儿不知道。
+22:24:T2: cleamoon, 我本来也不知道很简单的，关注了一下联系了一下班委然后发现额。
+22:24:cleamoon: 你以前搞什么
+22:24:T2: 搞自己啊
+22:24:cleamoon: varna, 什么
+22:24:cleamoon: 自撸自撸桑
+22:25:varna: cleamoon: http://pan.baidu.com/s/1jGvHg2q 太平洋战争的游戏
+22:25:varna: wine实测可玩
+22:25:varna: 默认的东西，下载英文版和手册就行了
+22:25:varna: 缺省带的几个大战役包括41年开始的太平洋战争，小战役里有著名的珊瑚海
+22:26:varna: 据说很史实，因为日本赢不了
+22:26:LittleKey quit:Quit: Leaving.
+22:26:varna: 之所以赢不了，是因为会扔核弹……
+22:27:varna: 这个打起来比较像早期的野蛮，不过也是战略为主，战术上没什么可说的
+22:27:varna: 好处是可以邮件对战，馒馒拖着打
+22:28:T2: <varna> 据说很史实，因为日本赢不了 2333
+22:28:cleamoon: .......
+22:28:cleamoon: 我去，这么多文件
+22:29:varna: 只下英文版游戏的压缩包就可以玩
+22:29:varna: 手册对应英文版那个
+22:29:varna: 其他的可以不下
+22:29:cleamoon: 我去，兵旗那个也那么多...
+22:29:varna: 安装里面有个bat, 打开看会发现编码可能不对，用本地编码就行了
+22:29:varna: 兵棋那个重要的是游戏规则和附表
+22:30:varna: 其次重要的是速查
+22:30:varna: 剩下的无所谓了
+22:30:varna: 规则一共三十多页，但总结起来要快速玩的话可能读十几页就行
+22:30:varna: 因为有裁判，所以可能必要的部分可以压到十页之内
+22:31:varna: 总之就是会索敌、运动、炮击、雷击，剩下的就看玩家本人了
+22:31:varna: 航空战和反潜另论
+22:31:cleamoon: .......
+22:32:cleamoon: 好麻烦
+22:33:condy: geordi: -w { U2 u; } union U2 { int a; string b; };
+22:33:geordi: error: use of deleted function 'U2::U2()'
+22:33:varna: 毕竟是把军队的东西借用来简化了玩
+22:33:condy: geordi: replace string with complex<double>
+22:33:geordi: Same error.
+22:33:cleamoon: 就不能简化到围棋那个水平吗
+22:33:varna: 围棋太高端了
+22:34:varna: 该说这是sim, 围棋是abst...
+22:34:cleamoon: soga
+22:35:cleamoon: sim类一向规则多
+22:36:varna: 我读了规则，其实核心规则比较接近直觉
+22:36:hoxily joined channel
+22:37:varna: 大多数条框都是说加速减速该怎么算、firing arc怎么来、雷迹怎么简化、回避机动折合的结果是多少……
+22:37:T2: 减速40%，失去动力50%...2333
+22:38:varna: 失去动力是一直失去
+22:38:varna: 你在战史里也能看到xx舰轮机部被弹动力全灭之类的描述
+22:38:varna: 那就只能漂了
+22:39:cleamoon: 感觉这种东西可以算出最佳战术...
+22:39:T2: 这个知道
+22:39:T2: cleamoon, noway
+22:39:T2: 你不会知道对面部署
+22:39:varna: 但是你可以假设对面编成
+22:39:varna: 我举个例子
+22:40:condy: 走了，大家腋间愉快～
+22:40:condy quit:Quit: leaving
+22:40:T2: 直觉和经验的游戏。
+22:40:T2: 打仗可能也就是这么回事吧
+22:41:varna: “我军在1900完成对敌军的包围，于2300后指挥官下令‘全员、开始突击’，此后向敌军发射半数鱼雷，由甲巡领头掩护驱逐队冲向敌人开始炮击”
+22:41:varna: 这战术挺理想的，尤其考虑到主力夜战战队可能配备北上/大井其一
+22:41:varna: 然后美帝一声淫笑，掏出了火控雷达
+22:42:varna: 不过最不差的战术总有，比如抢T头
+22:42:T2: 然后掏出我军背面一支伏兵前后夹击
+22:42:varna: 至少SK4抢T头是合算的
+22:42:varna: 海战哪那么多背面
+22:42:T2: 绕后一把带走我军正面
+22:42:tutu_wind joined channel
+22:42:T2: 海战倒是
+22:42:T2: 不清楚
+22:42:varna: 有的话索敌就看到了，索敌没索到的话很可能他们开不过来
+22:42:cleamoon: game theory + optimization theory... 于是等于回家撸作业
+22:42:varna: 当然有个倒霉情况
+22:43:varna: 就是索敌机自己悲剧了
+22:43:varna: 战例大家都懂的，不赘述
+22:43:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:43:T2: 我军都能包围的话，如果对面不是菜大概会有这么一手。
+22:44:varna: 中途岛
+22:44:varna: 看来我还得点名
+22:44:T2: 好吧
+22:44:varna: 虽然不都是索敌机的错，但日军的索敌直到上午十一点才准了
+22:45:varna: 上午十一点是个什么概念呢（笑）
+22:46:cleamoon: 是锁敌的错
+22:47:varna: 各种都错了
+22:47:varna: 即使出动两个航空战队，单纯论航空战力数量上也没法压制陆基和美帝任务部队本队
+22:47:varna: 这不是场他们一定能赢的仗，所以他们输得不奇怪
+22:48:varna: 只是历史上他们输得太惨了
+22:48:cleamoon: 不是说不愿意撤退吗
+22:48:varna: 等到下午就只剩飞龙一舰了
+22:48:varna: 约克城被怒草也有大E的问题，当时十六任务部队在撸管，连战斗机都没起
+22:49:cleamoon: 噗
+22:49:varna: 至于山口多闻不撤我个人觉得确实有他的问题，不过他要是真回国了有多惨另说
+22:50:cleamoon: 其实中途岛不输他也赢不了
+22:51:varna: 加贺三弹，赤城脸黑，苍龙至少四弹，上午瞬间就送了三个
+22:51:varna: 中途岛不输的话美帝只能更严肃
+22:51:varna: 56那种指望奋力一搏然后拿着资本跟美帝谈判的心理还是太赌了，虽然我觉得对军国主义日本来说这没错
+22:52:varna: 美帝不会跟他谈的
+22:54:varna: 当然说不定山口回国之后56是这表情 http://imgsrc.baidu.com/forum/w%3D580/sign=722d01ac2ef5e0feee1889096c6134e5/a511370e0cf3d7caf9f931c3f11fbe096b63a92f.jpg
+22:54:lh_mouse: 奥巴马宣布美国开始与古巴恢复正常外交关系
+22:54:varna: ...
+22:54:cleamoon: 2333
+22:55:cleamoon: 经济新闻一片说俄罗斯药丸，我怎么就看不出来呢
+22:55:lh_mouse: 中国商务部周三下午谴责了美国对中国太阳能组件征反倾销、反补贴关税的决定，呼吁美国采取负责任的态度妥善处理贸易摩擦。北京或希望采取与欧盟协议相同路线，谈判解决问题
+22:55:lh_mouse: 研究发现老鼠在空间越拥挤时越好斗，表现出“疯狂的过度活跃”。本文不以素质论简化问题，而从航空公司、社会环境、人的心理等环节找出人易怒的原因并提供解决方案。 
+22:56:lh_mouse: 阿里巴巴和百度在已成为世界第二大广告收入源的中国分享主导份额。据最新预测，两者将成为继谷歌、Facebook之后世界排名第三和第四的数字广告商。 
+22:56:T2: 其实我怎么都觉得是当年珍珠港的时候就没炸掉航母的锅
+22:56:varna: 不炸也没几个了，你自己数
+22:57:T2: 能炸不炸，放虎龟山
+22:57:varna: 你跟我说珍珠港有敌机动部队？
+22:57:varna: 深海：大E，主任，萨拉托加，大黄蜂
+22:57:T2: 没有啊
+22:57:T2: 炸几个战列舰也算偷袭战果。
+22:57:cleamoon: 飞机上不算很拥挤吧...
+22:57:varna: 提督：赤城加贺，苍龙飞龙，翔鹤瑞鹤，瑞凤RJ, 飞鹰隼鹰
+22:58:T2: cleamoon, 甲板上很拥挤啊。
+22:58:varna: 然后一航战的航空队还是侵华战争的老兵
+22:58:T2: 逗比思路混乱一会儿想发鱼雷一会想丢炸弹。
+22:58:varna: 翔鹤瑞鹤暂时上不了，不论
+22:58:varna: T2: 求不逗
+22:58:varna: 换装我觉得没问题
+22:59:varna: 如果你非得说换装出事，那问问某战犯甲巡的索敌机干什么去了
+22:59:varna: 然后再数数中途岛上有多少陆基机
+22:59:T2: 索敌鸡纯属逗比。
+22:59:T2: 作死没什么好说的。
+22:59:varna: 然后再问问自己，你把机动部队派出去满大洋找运输航空机的敌航母？
+22:59:cleamoon: 换装太慢了
+22:59:varna: 你有多少油敢那么作死
+23:00:varna: 南西的油马鹿得拿去一半吧，然后还得考虑水雷战队、潜水战队、陆基海航、国内训练
+23:00:varna: 前进基地也得有储备吧
+23:00:varna: 还得想着超 战 舰吧
+23:00:T2: = =
+23:01:varna: 那个换装是对谁都麻烦
+23:01:T2: 放弃超 战 舰搞航母混编队还不错。
+23:01:varna: 放弃？
+23:01:T2: 战列舰蛋用啊。
+23:01:varna: 那时候你是天皇也好东条也好，说放弃大和？
+23:01:varna: 别上帝视角了
+23:01:T2: 好吧。
+23:02:varna: 我现在问你个技术问题，你未必能答对
+23:02:varna: 而当时的人对战列舰也一样
+23:02:varna: 落后自然挨打
+23:02:T2: 也对
+23:03:varna: 实际上这个侵略计划本身就很麻烦，能否成功取决于美国能否向着日本
+23:03:varna: 56所追求的最大战果大概就是这个
+23:03:varna: 不然日本根本没有实力在太平洋上立足
+23:03:varna: 不说现在的日本了，鼎盛的日本也不行
+23:04:varna: 撤退，诸君腋间愉快
+23:04:varna quit:Quit: leaving
+23:10:cleamoon: 破本子装gentoo已经编译了4天了
+23:11:T2: = =
+23:23:Sleepwalking quit:Ping timeout: 264 seconds
+23:33:tutu_wind quit:Ping timeout: 256 seconds
+23:52:Xilzzert quit:Ping timeout: 264 seconds

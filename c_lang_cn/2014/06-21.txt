@@ -1,0 +1,565 @@
+00:03: lolisa joined channel
+00:04: code_new quit:Ping timeout: 264 seconds
+00:17: windforce quit:Quit: Leaving
+00:21: lh_mouse: lolisa, 入碗！
+00:38: lolisa: 不入！
+00:38: lolisa: 今天还在补spirit。。。过几天DSEL就要交货了
+00:38: lolisa: 入什么碗，我还要战斗
+00:53: JQK joined channel
+00:54: hope1 quit:Ping timeout: 240 seconds
+00:57: condy: geordi: << R"(hello)"
+00:57: geordi: hello
+00:59: condy: geordi: << r"(hello)"
+00:59: geordi: error: 'r' was not declared in this scope
+00:59: condy: geordi: << R"\n(hello)"
+00:59: geordi: error: invalid character '\' in raw string delimiter
+00:59: condy: geordi: << R"\dHHH"
+00:59: geordi: Same error.
+00:59: lolisa: geordi: << R"\\(hello)"
+00:59: geordi: Same error.
+00:59: Zirx quit:Read error: Connection reset by peer
+00:59: lolisa: geordi: << R"\\"
+00:59: geordi: Same error.
+00:59: condy: geordi: << R"(\d+)"
+01:00: geordi: \d+
+01:00: condy: geordi: << R"(\d+)"
+01:00: geordi: \d+
+01:01: condy: geordi: << R"\\"
+01:01: geordi: error: invalid character '\' in raw string delimiter
+01:01: condy: geordi: << R"\"
+01:01: geordi: error: Unexpected end of request. Expected any symbol.
+01:05: tsuki joined channel
+01:09: lolisa: geordi: << R"(\)"
+01:09: geordi: \
+01:09: lolisa: geordi: << R"(\\)"
+01:09: geordi: \\
+01:12: lhanjian quit:Ping timeout: 255 seconds
+01:16: lh_mouse: geordi, << R"mark(""""""""")mark";
+01:16: geordi: error: Unexpected `)` after """"""". Expected balanced code or end of request.
+01:18: lh_mouse: geordi, << R"mark(\\\\\\\\)mark";
+01:18: geordi: \\\\\\\\
+01:19: lh_mouse: geordi, << R"delimiter((a|b))delimiter";
+01:19: geordi: (a|b)
+01:19: lh_mouse: geordi, << R"delimiter((a|b)"")delimiter";
+01:19: geordi: (a|b)""
+01:19: lh_mouse: geordi, << R"delimiter("""")delimiter";
+01:19: geordi: """"
+01:20: lh_mouse quit:Read error: Connection reset by peer
+01:31: condy: geordi: << R"delimiter(""")delimiter";
+01:31: geordi: error: Unexpected `)` after `delimiter("""`. Expected balanced code or end of request.
+01:31: condy: geordi: << R"(")"
+01:31: geordi: error: Unexpected `)` after `<< R"("`. Expected balanced code or end of request.
+01:54: JQK quit:Remote host closed the connection
+01:57: condy quit:Quit: WeeChat 0.4.3
+02:53: T3rm1n4t0r: 迅雷创始人在谈及自己的创业史时提到，感谢魔兽世界，当年迅雷被网际快车(FlashGet)压制的时候，网际快车创始人侯延堂迷恋魔兽世界，停止更新软件长达一年，市场份额被迅雷迅速占领。
+02:56: cleamoon: 233
+03:11: lolisa: 2333
+03:11: lolisa: 各位晚安
+03:14: xxxxxxxxx: 做到底快车做的差 虽然那时候不怎么用下载器 不过印象中还是见到快车比较多 用渣雷的人多起来的时候好像是留邮箱求种之后的事情吧
+03:15: cleamoon: 当时逊雷较快
+03:15: xxxxxxxxx: 所以说到底做的渣
+03:16: xxxxxxxxx: 重新更新要是能更快市场也就抢回去了
+03:16: cleamoon: 快车就是个下载器，逊雷有自己的数据库，本身就不平等呀
+04:08: xxxxxxxxx quit:Read error: Connection reset by peer
+04:09: xxxxxxxx joined channel
+04:11: hyperswift: 可怕的pacman cache
+04:13: cleamoon: +
+04:14: hyperswift: 不过貌似当年无聊的给root分配了70GiB...
+04:23: cleamoon: 一共多少？
+05:45: biergaizi: hyperswift: Pacman Cache 是为了防止你滚挂……
+05:45: hyperswift: ...
+05:46: hyperswift: biergaizi: 19.2GiB的pacman cache...
+05:46: biergaizi: 其实不是滚挂，如果不看新闻滚挂肯定救不活。是为了防止某些严重的 regression。很多人没事就清理 pacman cache，结果……
+05:47: biergaizi: hyperswift: 如果你确定现在的系统没问题你可以直接删
+05:47: biergaizi: hyperswift: pacman cache 也可以用工具清理
+05:47: hyperswift: 没啥必要...
+05:47: hyperswift: root还有50%空的...
+05:48: biergaizi: 我就不说我的 /usr/portage/distfiles 一周前已经达到 200 GB+ 了……
+05:48: hyperswift: ...
+05:48: hyperswift: 清理屋子和文件
+05:49: hyperswift: 同步文件真是个淡疼的事情
+05:49: biergaizi: distfiles 积累到这个程度，基本上已经拥有自由软件的整个世界了……就算现在在线所有源码立刻消失，我也丝毫不受影响。
+05:50: biergaizi: 后来本来想清理掉很旧的包
+05:50: biergaizi: 但因为规模太大，计算太慢，于是干脆直接删了
+05:51: biergaizi: 然后顺带清理了 50 多个 zip 刷机包……
+05:51: biergaizi: locate zip | egrep "crespo|grouper" | xargs rm -rf
+05:51: biergaizi: 还有一堆两三年前 clone 下来的超大型源码树
+05:52: biergaizi: 于是现在可用空间终于恢复了。SIZE 1.36T  ALLOC 1.13T  FREE 233G
+05:53: biergaizi: 唉？233 GB 可用？2333333333
+05:55: biergaizi: geordi: printf("1403301333\n", time(NULL));
+05:55: geordi: error: expected constructor, destructor, or type conversion before '(' token
+05:55: biergaizi: geordi: { printf("1403301348\n", time(NULL)); }
+05:55: geordi: warning: format '1403301348' expects argument of type 'char*', but argument 2 has type 'time_t {aka long int}'
+05:56: biergaizi: geordi: { printf("1403301362\n", ctime(time(NULL))); }
+05:56: geordi: error: invalid conversion from 'time_t {aka long int}' to 'const time_t* {aka const long int*}'
+05:56: biergaizi: geordi: { printf("1403301388\n", (const) ctime(time(NULL))); }
+05:56: geordi: error: ISO C++ forbids declaration of 'type name' with no type
+05:56: biergaizi: 你赢了
+05:56: biergaizi: geordi: { printf("1403301417\n", (const time_t *) ctime(time(NULL))); }
+05:56: geordi: error: invalid conversion from 'time_t {aka long int}' to 'const time_t* {aka const long int*}'
+05:57: biergaizi: geordi: { char *time = ctime(time(NULL))); printf("1403301463\n", time); }
+05:57: geordi: error: Unexpected `)` after (NULL)). Expected '}' or balanced code.
+05:57: biergaizi: geordi: { char *time = ctime(time(NULL)); printf("1403301470\n", time); }
+05:57: geordi: error: 'time' cannot be used as a function
+05:58: biergaizi: geordi: #include <time.h> { char *time = ctime(time(NULL)); printf("1403301490\n", time); }
+05:58: geordi: error: extra tokens at end of #include directive
+05:58: biergaizi: geordi: #include<time.h> { char *time = ctime(time(NULL)); printf("1403301499\n", time); }
+05:58: geordi: Same error.
+06:51: windforce joined channel
+07:05: condy_ quit:Ping timeout: 240 seconds
+07:12: xxxxxxxx quit:Quit: Leaving...
+07:35: windforce quit:Quit: Leaving
+07:59: Sleepwalking joined channel
+08:29: GODDOG joined channel
+08:35: iyzsong joined channel
+08:46: hope1 joined channel
+08:57: GODDOG: topic是谁写的啊？
+08:58: hyperswift: 估计是羊驼...
+08:58: GODDOG: 羊驼在用farbox么？
+08:58: cuihao joined channel
+08:58: GODDOG: http://ver1tas.com/
+08:58: GODDOG: 能查到的只有这个
+09:05: varna joined channel
+09:10: varna quit:Ping timeout: 245 seconds
+09:12: varna joined channel
+09:13: varna: Sleepwalking: 爆
+09:14: endle joined channel
+09:14: varna: 会场wlan质量巨差，虽说我也没法指望手头这个rtl8188ce
+09:18: GODDOG: 羊驼的nick
+09:18: GODDOG: 是什么？
+09:20: varna: 是lh_mouse
+09:20: varna: 其实topic早就该换的，但是羊驼在肝舰娘，所以一时忘总是忘
+09:21: Sleepwalking: GODDOG, 是AlpakoHB
+09:21: varna: Sleepwalking: 快来和我交配
+09:21: Sleepwalking: varna, pu
+09:21: GODDOG: 哦  今天没在啊
+09:23: Sleepwalking: geordi, {printf("羊驼是" AlpakoHB);} #define AlpakoHB "varna"
+09:23: geordi: 羊驼是varna
+09:23: varna: GODDOG: 23333
+09:23: GODDOG: ...
+09:23: varna: 今天这网络状况我敢肝才怪
+09:23: varna: 神lag各种断连
+09:23: varna: 万一被bug大破进击沉了电酱我就跪一个月吧
+09:23: GODDOG: varna http://ver1tas.com/ 这个博客是你的？
+09:24: Sleepwalking: varna, 你就别整天YYmiku酱了，我今天下午去和耗子面基233
+09:24: GODDOG: 。。。。
+09:24: varna: 回酒店也是神坑，网络认证系统要IE
+09:25: varna: Sleepwalking: 你敢出轨！
+09:25: varna: GODDOG: 不是
+09:25: Sleepwalking: varna, = =
+09:25: GODDOG: varna topic这句话出自哪里啊？
+09:25: Sleepwalking: 233
+09:26: varna: Lag 39.39
+09:26: GODDOG: varna ？？？ 
+09:26: varna: GODDOG: topic一律每联4/7平起，东方主题，我自己写
+09:27: GODDOG: varna 子不语怪力乱神 这个博客下的留言也是这个
+09:27: GODDOG: varna 你教他的？
+09:28: condy joined channel
+09:28: varna: Sleepwalking: 米库酱不许和小耗交配，止于面基就可以了
+09:28: varna: 明明是ICML'14，总觉得认证弱到伪造证件都能进去
+09:29: whatofor joined channel
+09:29: varna quit:Quit: Reconnecting
+09:30: varna joined channel
+09:30: varna: lag 1xx lag 48.57
+09:32: Sleepwalking: wmii-hg2813 @ Ubuntu trusty 64 有时多个bar会被刷成活动的颜色，似乎是bug……
+09:35: varna quit:Ping timeout: 240 seconds
+09:41: badorange joined channel
+09:50: Sleepwalking_ joined channel
+09:51: wlemuel joined channel
+09:52: wlemuel quit:Remote host closed the connection
+09:54: Sleepwalking quit:Ping timeout: 240 seconds
+10:02: wlemuel joined channel
+10:02: wlemuel quit:Remote host closed the connection
+10:04: xia joined channel
+10:05: wlemuel joined channel
+10:07: xia quit:Remote host closed the connection
+10:09: GODDOG: chrome已卡
+10:10: GODDOG quit:Read error: Connection reset by peer
+10:35: GODDOG joined channel
+11:12: Zirconi joined channel
+11:14: endle quit:Quit: Leaving
+11:14: code_new joined channel
+11:26: GODDOG quit:Remote host closed the connection
+11:55: xxxxxxxx joined channel
+11:55: lemuel joined channel
+11:56: wlemuel quit:Ping timeout: 245 seconds
+12:03: wlemuel joined channel
+12:04: lemuel quit:Ping timeout: 240 seconds
+12:08: wlemuel quit:Ping timeout: 244 seconds
+12:09: xxxxxxxx: http://puu.sh/9DcPP/da2e6220fd.png 
+12:11: silencly07 joined channel
+12:26: varna joined channel
+12:26: varna: Sleepwalking_: 爆
+12:27: xxxxxxxx: http://www.bilibili.com/video/av1169761/
+12:27: xxxxxxxx: 荷兰男高音街头吟唱 YOU RAISE ME UP
+12:29: varna quit:Client Quit
+12:29: varna joined channel
+12:29: xxxxxxxx: 羊驼进出中
+12:29: varna: xxxxxxxx: 爆
+12:30: varna: 国际会议中心的wlan太差了
+12:30: varna: 会议网上注册搞不好得让糖果帮我一下
+12:31: varna: 而且这边还在开什么北京男科论坛，楼下一堆壮阳药广告
+12:32: xxxxxxxx: 吃了这罐壮阳药 屌长输电就能有新突破了
+12:33: varna: 会议中心门口一个大横幅，每天5mg什么药，ED革命性突破云云
+12:33: xxxxxxxx: 这种地方开国际性会议真没问题么...
+12:35: varna: 这是国内 性会议
+12:35: varna: 操，要学生证照片……
+12:36: xxxxxxxx: 不是国际会议中心么?
+12:36: varna: 壮阳药那个是国内的
+12:44: xxxxxxxx: 每次开贴吧的时候flash就会崩.... baidu 用了什么魔法
+12:44: varna quit:Ping timeout: 245 seconds
+12:45: varna joined channel
+12:48: varna: ok, 注册了
+12:49: varna: 这样手续就办完
+12:49: varna quit:Client Quit
+12:49: hyperswift: http://tieba.baidu.com/p/3117754952 < 这家伙难道不知道贴吧有事没事改版么...
+12:52: xxxxxxxx: 知道也没啥区别 这种东西就是有人想搞
+12:54: hyperswift: ...
+12:59: xxxxxxxx: Nightmare! 的bot太可怕了.....
+13:03: varna joined channel
+13:03: varna: 原来会议有提供比较稳健的wlan
+13:04: varna: 就是慢，拖些slides半天
+13:10: varna: 啊哈哈，终于有人提到pthread而不是什么bayesian了
+13:11: xxxxxxxx: 帝球去那个帖子了
+13:12: xxxxxxxx: 幻の上帝: 真能撸的出能赚钱的我就撸个BSD的试试。
+13:12: varna: 终于有实战人员出现了
+13:12: varna: 这个比教授们讲贝叶斯爽快多
+13:17: varna: xxxxxxxx: nm的bot基本是枪口一抖子弹跟你尻走，我只能打过hardcore...
+13:24: xxxxxxxx: free to all里面都直接被剃光头....
+13:25: varna: 你往北坡跑两步
+13:26: xxxxxxxx: 北坡就来吃炮儿了
+13:27: varna: 爆
+13:33: xxxxxxxx:  这几天晚上，舒适地靠在椅子上，啃着鸡爪子，喝着啤酒，电视里二十多个亿万富豪，汗流浃背，奔跑拼抢，累得跟王八犊子似地踢球给我看，作为球迷，我觉得很幸福、很满足！
+13:34: xxxxxxxx: orzzz
+13:36: varna: 嚓，是个巫女党
+13:37: varna: 他们的实现有miko/scala/python版本，难道是丑陋语言全家福么
+13:43: xxxxxxxx: http://www.bilibili.com/video/av20663 <- 老物 脑洞大
+13:44: varna: xxxxxxxx: 爆
+13:45: xxxxxxxx: 爆你妹去
+13:46: varna: 妹妹在美国造船
+13:46: xxxxxxxx: 造个舰娘?
+13:46: varna: 说不定造出喔酱
+13:49: varna: xxxxxxxx: 爆
+13:51: xxxxxxxx: 受非洲提督亲戚的影响会出的一定是...
+13:52: sismvg joined channel
+13:52: varna: 大凤！
+13:54: uuair joined channel
+13:55: sismvg: varna:http://tieba.baidu.com/p/3117420242
+13:55: sismvg: 有类似的证明吗
+13:56: varna: 逼近多项式的BP需要三层
+13:57: varna: 其余的函数我没见过类似的定理
+13:57: varna: 但是另一方面，如果你试图用多项式拟合离散函数那也差不多
+13:59: sismvg: 算了。。先找点代码撸吧
+14:02: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]
+14:03: varna quit:Ping timeout: 244 seconds
+14:04: varna joined channel
+14:04: xxxxxxxx: 羊驼持续进出中
+14:04: varna: xxxxxxxx: 爆
+14:11: lhanjian joined channel
+14:11: varna: lhanjian: 爆
+14:11: lhanjian: caaaaaa
+14:12: varna: 我突然意识到火车站的M记好贵
+14:13: varna: lhanjian: 继续爆
+14:21: Sleepwalking_: 走人，找耗子面基去。。
+14:21: varna: 噗噗
+14:21: xxxxxxxx: The Practice of System and Network Administration
+14:21: xxxxxxxx: 有人看过么?
+14:21: varna: 没
+14:21: varna: 小耗ntr我
+14:21: varna: 小耗ntr我
+14:21: varna: 小耗ntr我
+14:22: varna: 拿气球来
+14:22: Sleepwalking_ quit:Quit: Leaving
+14:22: xxxxxxxx: miku酱回来表示屁股疼就神作了
+14:23: varna: 呜呜
+14:23: xxxxxxxx: 看目录好像一点也不好玩
+14:25: varna: 想搞分布式ML的伙计可以关注下spark这个项目
+14:27: xxxxxxxx: 根据David Rupp在博客中的说法，Scala可能是下下一代Java。 下下一代....
+14:28: varna: scala甚至不会推断递归函数的类型
+14:28: FrankHB: 下一代掉智商是啥。
+14:28: varna: swift
+14:28: varna: FrankHB: 爆
+14:29: FrankHB: swift只能苹果那坨用吧，没java智商杀伤广泛……
+14:29: varna: 那就java 1.9
+14:29: varna: 实际上c艹也不错
+14:30: varna: 不少c艹用户已经认为c艹语义足以作为语义之典范出去强奸其他所有语言和没实作的语义
+14:31: varna: 而他们最大的靠山其实是一个懂得做体系无关和相关优化的编译器
+14:32: FrankHB: 不少c艹用户？谁？
+14:32: FrankHB: 翔之典范倒是没错。
+14:33: sismvg: 实时不是强奸了很多吗？
+14:34: varna_ joined channel
+14:35: varna quit:Quit: Reconnecting
+14:35: xxxxxxxx: 持续进出中
+14:35: varna_: 那些类c艹实作是自愿被艹的
+14:36: FrankHB: 类c艹实作？除了C艹/CLI什么的还有啥。
+14:36: sismvg: 应该是他们都带套了、
+14:36: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+14:37: FrankHB: 现在出来的尽是类C实作吧。
+14:37: IntPtr joined channel
+14:37: varna_: 类c也无所谓，一路货色
+14:38: FrankHB: 类C倒是可以在ABI上狡辩了。
+14:38: IntPtr: 冒泡= =
+14:38: varna_: ABI没法说，移植一次重写一次
+14:39: varna_: IntPtr: 爆
+14:39: lhanjian: IntPtr, 戳
+14:39: FrankHB: C艹的实现得考虑一个系统上还有多个ABI互不兼容的破事。基本上是后无来者。
+14:39: IntPtr: →_→
+14:40: FrankHB: msys2都开始撸nodejs支持了么。
+14:40: FrankHB: npm啥的有戏？
+14:40: varna_: 总有一天我得写个c库硬说是Perl
+14:40: varna_: 看着这些scala太不高兴了
+14:40: IntPtr: node.js不是不支持cygwin么.
+14:41: FrankHB: msys又不是cygwin。
+14:41: varna_: 哦对，下一代危害智商的候选可以有node.js
+14:41: IntPtr: msys2基本就算是cygwin了吧...
+14:41: IntPtr: 反正上次尝试编译跪了
+14:41: FrankHB: 那也是js。node.js还没跟java相提并论的资格。
+14:42: sismvg joined channel
+14:42: varna: sismvg: 爆
+14:42: xxxxxxxx: 怎么听着好像java是邪恶的化身一样....
+14:42: FrankHB: IntPtr: triple都不一样怎么算cygwin。
+14:43: IntPtr: 然后在msys2里执行gem install ...然后看到了加载kernel32.dll失败...
+14:43: FrankHB: 233
+14:43: FrankHB: 说实话这些包管理器的轮子看着实在也不爽。
+14:43: IntPtr: 顺便再 /lib/ruby/2.1.0/ 下面找到了win32这个目录orz
+14:43: FrankHB: 虽然我个动态库cp党也没多少立场罢了。
+14:44: IntPtr: node.js不算太疼吧...
+14:45: varna: xxxxxxxx: 爆
+14:45: FrankHB: 就算node不疼，扯上js就够了。
+14:46: IntPtr: js还好吧感觉. 至少我现在还能用的下去.
+14:46: varna: node.js不太疼，js很疼，用户智力水平和历史知识吹雪（）
+14:46: FrankHB: 艹过ES以后chu的感想：WTF？
+14:46: xxxxxxxx: ES?
+14:47: FrankHB: ECMA-262
+14:47: IntPtr: a.k.a. ecmascript
+14:47: varna: 快讲完了
+14:47: varna: 这些巫女党引入了不少异步操作，然后把它们都扔了
+14:48: sismvg: 3D engine kernel init....
+14:48: FrankHB: 蛤蛤蛤。
+14:48: varna quit:Quit: Reconnecting
+14:48: sismvg: 命名就是D3D和OpenGL的包装而已。。
+14:48: sismvg: 明明
+14:48: varna joined channel
+14:48: xxxxxxxx: 我先想到老牛....
+14:48: FrankHB: 不管异步了。call-by-future啥的有现成的么。
+14:49: varna: 似乎没
+14:49: FrankHB: 突然发现王根那时候也就这种程度嘛……
+14:49: varna: future用在分布式系统里恐怕还会造成腋凤式大漏尿
+14:49: FrankHB: 难怪当时就有即视感。。。原来至少理论上根本不是什么新鲜的东西。
+14:49: FrankHB: ……
+14:49: IntPtr: 话说msys2的patch在crlf行尾会跪算bug还是什么
+14:50: varna: 虽然大概可以通过强制缓存同步稍微补一下
+14:50: FrankHB: 说起来future是Dan Friedman提的？……王根是在翘课么？
+14:50: varna: 噗
+14:50: IntPtr: tr -d "\r" 之后patch就成功了...
+14:50: varna: A little future
+14:51: varna: 总体来说这个tutorial还算比较爽快
+14:52: varna: 尽管语焉不详但提出了不少可用的做法，而且给出了性能对比
+14:52: FrankHB: IntPtr: 怎么跪的。。。直接挂掉的话应该是bug了。
+14:52: varna: 下一个是probability programming, 还得转场
+14:53: IntPtr: FrankHB, hunk FAILED
+14:53: IntPtr: 输出就是这样的东西
+14:53: FrankHB: 不知道是by design还是啥了。
+14:54: IntPtr: 这个.patch也挺奇葩的, 一部分行尾是\r\n一部分是直接\n, 需要patch的文件也是这样...
+14:54: varna: 恥球快脱裤
+14:54: IntPtr: 然后翻issue也没翻到在其他环境下报错
+14:55: varna: 收拾了
+14:55: varna quit:Quit: leaving
+14:56: FrankHB: 如果是msys的patch这样倒也不是不行。mingw的patch就不科学了。
+14:56: FrankHB: 不过现在好像只有msys的么。
+14:56: IntPtr: 还有一个问题, makefile的
+14:57: IntPtr: CPPFLAGS = -DXXX\=\"XXX\"
+14:57: FrankHB: http://sourceforge.net/p/mingw-w64/mailman/mingw-w64-public/thread/5268C156.2040909@gmail.com/
+14:57: IntPtr: 里面是这么写的
+14:57: FrankHB: 好吧，在这个意义上的确和cygwin一样抽。
+14:57: IntPtr: 然后也跪了, 报有游离的"\"
+14:58: IntPtr: 上面说的都是msys下的(不是mingw
+14:58: FrankHB: 破事多的话大不了最后就自己撸个轮子嘛。
+14:58: IntPtr: ..
+14:59: sismvg: 只有大神才会这么说。。
+14:59: FrankHB: 库也一样。一开始就在上游把依赖清理干净就没这么大机会遇到破事了。
+14:59: IntPtr: 最后是给改成 -DXXX='"XXX"' 这样的才过得
+15:00: sismvg: 有多少库会写依赖的。。
+15:01: IntPtr: 还有喜闻乐见的cannot guess build type...
+15:01: FrankHB: 不顺眼的依赖手动排除。于是最后就八成只能变成轮子了。
+15:01: condy_ joined channel
+15:01: FrankHB: autocrap啥的去死吧。。。make已经够烦的了。
+15:02: sismvg_ joined channel
+15:02: xxxxxxxx: http://puu.sh/9DcPP/da2e6220fd.png 
+15:02: sismvg_: 上次碰到一个库依赖DB2,mysql,sqlite3,Oracle,Firebird
+15:02: FrankHB: make -j8
+15:02: sismvg_: 那个蛋疼》。
+15:05: sismvg quit:Ping timeout: 240 seconds
+15:05: IntPtr: 上次尝试编译atom大概给我下下来好几百个npm包吧(
+15:06: xxxxxxxx: 反正我不用rpm包
+15:07: IntPtr: 还光是直接依赖
+15:07: IntPtr: npm不是rpm= =
+15:07: IntPtr: 某node.js的东西
+15:07: xxxxxxxx: 眼抽....
+15:10: sismvg: 昨天某个一瘸一拐的乞丐捡起了掉在公交车座位下的一元硬币。。还是直接弯腰。。
+15:17: varna joined channel
+15:28: varna quit:Quit: leaving
+15:34: cuihao quit:Quit: 离开
+15:41: condy_ quit:Read error: Connection reset by peer
+15:45: sismvg: 创造读姬似乎有点麻烦啊
+15:46: sismvg: 还是卖广播剧来的容易
+15:48: condy1 joined channel
+15:53: uuair quit:Remote host closed the connection
+16:29: lolisa joined channel
+16:38: Zirconi quit:Read error: Connection reset by peer
+16:43: hope1 quit:Ping timeout: 244 seconds
+16:49: biergaizi quit:Quit: Konversation terminated!
+16:50: hope1 joined channel
+16:52: biergaizi joined channel
+17:00: lhanjian quit:Quit: 风光冉冉东西陌
+17:22: hope1 quit:Ping timeout: 240 seconds
+17:33: hope1 joined channel
+17:36: xxxxxxxx: 过然每天还是需要至少六小时以上的睡眠
+17:36: Youmu: geordi: {char* s="1"; cout << (s ?: "fuck"); }
+17:36: geordi: error: ISO C++ does not allow ?: with omitted middle operand
+17:37: Youmu: 又是gcc的扩展。。。
+17:38: lolisa: 各位
+17:39: lolisa: 我需要一个描述Foreach&Some的非unicode方法，有什么好办法没？还是老老实实用unicode里面的？
+17:41: lolisa: stackoverflow.com/questions/10474571/how-to-match-unicode-characters-with-boostspirit好吧，SOisMyFriend2333
+17:49: iyzsong quit:Remote host closed the connection
+17:55: lh_mouse joined channel
+17:56: lh_mouse: 米库酱好萌啊！
+17:56: badorange quit:Quit: Leaving
+17:58: xxxxxxxx: c酱化了....
+17:58: Petrus07 quit:Quit: Leaving.
+18:05: condy quit:Remote host closed the connection
+18:07: lh_mouse: 刚刚找米库酱面基去了
+18:10: iyzsong joined channel
+18:35: silencly07 joined channel
+18:36: sismvg: 润滑油带了吗啊？
+18:39: silencly07 quit:Client Quit
+18:39: silencly07 joined channel
+18:39: sismvg: 啊。。PM叫我撸安卓。。big problem
+18:42: sismvg: varna:是该撸人脸识别的神经元算法还是撸别的呢。。那个能攒点精液
+18:43: iyzsong: = =
+18:54: Zirconi joined channel
+18:57: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+19:29: Youmu: iyzsong: ... 求个.xmonad.hs
+19:29: iyzsong: Youmu: http://dotshare.it/category/wms/xmonad/
+19:30: biergaizi_ joined channel
+19:30: iyzsong: 我的 => https://github.com/iyzsong/_/blob/master/xmonad/xmonad.hs
+19:30: iyzsong: 貌似都很坑..
+19:31: Youmu: 我在haskell.org上找的不能用，竟然有error。
+19:31: iyzsong: 自己慢慢调吧..
+19:31: Youmu: ...
+19:32: Youmu: 不懂haskell.
+19:32: iyzsong: Youmu: 你想要什么布局/效果 对着xmonad-contrib的文档找找
+19:33: Youmu: 好的～
+19:33: biergaizi quit:Ping timeout: 240 seconds
+19:33: iyzsong: 不用怎么懂 我也一直当配置文件用..
+19:34: hope1 quit:Ping timeout: 264 seconds
+19:34: Youmu quit:Quit: WeeChat 0.4.3
+19:37: OwenJia joined channel
+19:38: whocares_2 quit:Remote host closed the connection
+19:39: whocares_2 joined channel
+19:43: Youmu joined channel
+19:47: sismvg joined channel
+19:48: sismvg: irc怎么查看历史记录的
+19:49: Youmu: clcn_logbot: help
+19:49: sismvg: clcn_logbot:help
+19:49: sismvg: clcn_logbot: help
+19:49: sismvg: ?
+19:49: Youmu: clcn_logbot: --help
+19:49: xxxxxxxx: http://irclogs.benihata.org/
+19:50: xxxxxxxx: ^ 请存书签
+20:00: hope1 joined channel
+20:04: tsuki quit:Ping timeout: 255 seconds
+20:07: lhanjian joined channel
+20:08: endle joined channel
+20:16: hope1 quit:Ping timeout: 264 seconds
+20:27: biergaizi__ joined channel
+20:29: Plough joined channel
+20:29: biergaizi_ quit:Ping timeout: 240 seconds
+20:36: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]
+20:39: hope1 joined channel
+20:39: xxxxxxxx: http://www.bilibili.com/video/av1215625/ <- GFW的正确用法
+20:41: xxxxxxxx: http://d71xpfkmvd1d0.cloudfront.net/
+20:44: ghlin joined channel
+20:46: lhanjian: facebook不是已经声明了是因为系统升级导致崩溃么
+20:47: xxxxxxxx: 下面那个连接 美帝开始轰炸自己了...
+20:47: lhanjian: http://www.ettoday.net/news/20140620/370066.htm
+20:48: lhanjian: 如果真是DDOS
+20:48: lhanjian: 不管发射源在哪个国家，都可以扣给中国
+20:49: lhanjian: 如果我朝网军真的蠢到用国内肉鸡直接轰，那我真无语。
+20:49: xxxxxxxx: 卧槽 cloudfront上面怎么搞得和世界大战了一样....
+20:50: lhanjian: 烂苹果真TM恶心
+20:51: sismvg: 令人无语的智商。。项目里某个智能指针模板，重载了 shared_ptr == raw_ptr 但是却没重载反过来的。。
+20:52: xxxxxxxx: http://puu.sh/9DEHB/f3a4b119b9.jpg 要是浏览器給力把这个放到桌面上也好玩....
+21:06: lh_mouse: sismvg, template<typename Ty> class my_ptr : public std::shared_ptr<Ty> { };
+21:15: IntPtr quit:Quit: Page closed
+21:26: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+21:29: Sleepwalking joined channel
+21:29: Plough: geordi: { cout<<sizeof(struct a); }struct a { unsigned short a;unsigned short b;}
+21:29: geordi: error: expected ';' after struct definition
+21:29: Plough: geordi: append ;
+21:29: geordi: 4
+21:33: JQK joined channel
+21:40: windforce joined channel
+21:41: windforce: xxxxxxxx, 你信共产主义么？
+21:42: windforce: xxxxxxxx, 我只是好奇。
+21:43: xxxxxxxx: 我不信主义
+21:44: windforce: 圆来乳此
+21:44: lhanjian: windforce, 你记错了。信的是我
+21:44: windforce: 我果然是极端
+21:44: lhanjian: 为什么这么评价自己？
+21:45: windforce: lhanjian, 嘛，我知道你信，但是我觉得EA基佬的意见对我来说可能比较容易接受。
+21:45: lhanjian: 哦
+21:45: windforce: lhanjian, 不是评价，我只是阐述事实罢了。
+21:46: xxxxxxxx: 本来想晚上跑两圈的 结果今天下雨了...
+21:46: windforce: 2333
+21:47: lhanjian: 2333
+21:47: lh_mouse: Sleepwalking, 吃药
+21:48: xxxxxxxx: http://nullprogram.com/birthday-js
+21:48: windforce: lhanjian, 嘛，反正我这辈子可能都无法相信「主义」，尤其是「共产主义」了。
+21:48: lhanjian: 不信也没什么
+21:48: lhanjian: 我觉得没有信仰不是什么坏事
+21:48: lhanjian: 尤其是政治意味浓重的意识形态
+21:48: Sleepwalking: pu.
+21:48: windforce: +
+21:49: lhanjian: 最烦的就是那些“XX国人没有XX信仰，所以他们不值得我们XX”的言论……
+21:49: xxxxxxxx: 等建立起更方便的交流方式再说主义吧
+21:49: Sleepwalking: 为何coursera上的视频看起来这么可爱，作业就那么可怕。。
+21:49: xxxxxxxx: 不然你怎么上钩呢
+21:50: lh_mouse: 米库酱好萌啊
+21:50: Sleepwalking: 你个死基子。。
+21:50: xxxxxxxx: 你们两个做了么....
+21:50: lhanjian: lh_mouse, Sleepwalking, 面基完毕了？
+21:50: Sleepwalking: xxxxxxxx, 草。。
+21:51: lh_mouse: 其实米库酱一点都不娘
+21:51: lh_mouse: owo
+21:51: windforce: 「信仰」这个词似乎变成单纯的一个武器罢了。
+21:52: lh_mouse: 谁把初音ミク翻译成初音未来的
+21:52: Sleepwalking: lh_mouse, 那是因为我不给陌生叔叔卖萌【pia飞233
+21:52: lhanjian: Sleepwalking, 白胡子大叔米库
+21:54: windforce: 嘛，无聊，还不如撸码。
+21:58: xxxxxxxx quit:Quit: Leaving...
+22:03: xxxxxxxx joined channel
+22:18: Youmu quit:Quit: WeeChat 0.4.3
+22:19: OwenJia quit:Quit: Konversation terminated!
+22:20: OwenJia joined channel
+22:20: condy joined channel
+22:20: lolisa joined channel
+22:24: FrankHB: 初音未来算是官方翻译。
+22:32: iyzsong: wow
+22:32: iyzsong quit:Quit: poweroff
+22:34: Sleepwalking quit:Remote host closed the connection
+22:48: lolisa: such voc
+22:54: lh_mouse: 按官方翻译就是字面翻译
+22:54: lh_mouse: 初音未来  =  初音 not come
+22:54: lh_mouse: 难道是  来る  的 ク？
+23:00: lhanjian quit:Quit: 风光冉冉东西陌
+23:01: hope1 quit:Read error: Connection reset by peer
+23:01: hope1 joined channel
+23:10: whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:15: lh_mouse: http://tieba.baidu.com/p/3119255995  彩笔真他妈多
+23:15: lh_mouse: 居然一眼被我看到这么个帖子
+23:39: JQK quit:Remote host closed the connection
+23:40: endle quit:Quit: Leaving
+23:42: wlemuel joined channel
+23:49: Zirconi quit:Ping timeout: 255 seconds
+23:49: Plough quit:Remote host closed the connection

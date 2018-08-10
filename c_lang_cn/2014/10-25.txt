@@ -1,0 +1,1183 @@
+00:30:hope1 joined channel
+00:54:FrankHB quit:Read error: Connection reset by peer
+00:54:FrankHB joined channel
+01:04:xxxxxxxxx joined channel
+01:04:lh_mouse: CLEAR
+01:05:lh_mouse: R 
+01:05:xxxxxxxx quit:Ping timeout: 245 seconds
+01:05:lh_mouse: 想打 /CLEAR 的
+01:05:lh_mouse: 据说 FreeNode 几个月前出个 bug  普通用户可以使用 NICKSERV 当 nick  于是……
+01:07:hope1: 233
+01:07:cleamoon: 2333
+01:07:FrankHB: 23333
+01:09:lh_mouse: C++                             46            725             20           5616
+01:09:lh_mouse: C/C++ Header                    61            712             61           3499
+01:09:lh_mouse: -------------------------------------------------------------------------------
+01:09:lh_mouse: SUM:                           107           1437             81           9115
+01:14:FrankHB: ...
+01:18:cleamoon: 这应该不是文件个数吧
+01:19:lh_mouse: 107 是文件个数
+01:19:cleamoon: 也不少
+01:23:lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/player_server/module_main.cpp
+01:24:lh_mouse: 补点文档估计能膨胀一倍不到
+01:24:lh_mouse: 例如 
+01:24:lh_mouse: ConfigFile::ConfiFile(const char *path)    // Throws if the file can't be opened.
+01:26:lh_mouse: bool ConfigFile::load(const char *); // Returns true if the file is parsed successfully and loaded, false otherwise. In case of failure(including when exceptions are thrown) the original contents are left unchanged.
+01:28:cleamoon quit:Ping timeout: 256 seconds
+01:43:cleamoon joined channel
+01:54:lh_mouse quit:Quit: night
+01:58:LittleKey quit:Remote host closed the connection
+02:45:AC01236674333 joined channel
+02:54:hope1 quit:Ping timeout: 245 seconds
+02:57:AC01236674333 left channel:
+03:24:boosure joined channel
+03:25:biergaizi quit:Read error: Connection reset by peer
+03:27:biergaizi joined channel
+03:43:cleamoon quit:Ping timeout: 260 seconds
+03:57:cleamoon joined channel
+05:19:dantmnf quit:Ping timeout: 272 seconds
+05:19:dantmnf joined channel
+05:50:cleamoon quit:Quit: Leaving
+05:50:cleamoon_ quit:Quit: Leaving
+05:50:cleamoon joined channel
+05:53:cleamoon quit:Client Quit
+05:53:cleamoon joined channel
+05:55:cleamoon_ joined channel
+05:57:cleamoon_ quit:Client Quit
+05:57:cleamoon_ joined channel
+06:38:xxxxxxxxx quit:Quit: Leaving...
+07:06:hysw quit:Ping timeout: 255 seconds
+07:40:FrankHB quit:Ping timeout: 255 seconds
+08:24:Petrus07 joined channel
+09:33:whatofor joined channel
+09:36:sou_ joined channel
+09:46:lh_cat: mew
+09:48:lhjkk joined channel
+09:57:lh_mouse joined channel
+10:20:code_new joined channel
+10:41:FrankHB joined channel
+11:13:ring joined channel
+11:22:sismvg joined channel
+11:25:sismvg: 跪，群是电子工程的招聘。。
+11:30:Plough joined channel
+11:34:iyzsong quit:Remote host closed the connection
+11:37:Plough: 今天造出了一点对空
+11:45:ring quit:Remote host closed the connection
+11:55:hope1 joined channel
+11:57:GODDOG joined channel
+12:10:GODDOG quit:Quit: leaving
+12:13:boosure quit:Ping timeout: 255 seconds
+12:18:lhjkkk joined channel
+12:18:Plough quit:Ping timeout: 265 seconds
+12:19:Plough joined channel
+12:21:lhjkkk quit:Read error: Connection reset by peer
+12:22:lhjkk quit:Ping timeout: 265 seconds
+12:23:lhjkkk joined channel
+12:28:boosure joined channel
+12:28:lhjkkk quit:Read error: Connection reset by peer
+12:31:condy joined channel
+12:33:lhjkkk joined channel
+12:35:condy quit:Ping timeout: 245 seconds
+12:35:condy joined channel
+12:38:condy: 手机上web irc也是辛苦。。
+12:40:dantmnf: 来了一发低保大建
+12:40:dantmnf: 目测又是肉奥
+12:43:condy: 刚来就要走。QAQ！
+12:44:Plough: 活动前大建大丈夫？
+12:47:condy quit:Ping timeout: 246 seconds
+13:00:xxxxxxxx joined channel
+13:01:sismvg: x^(n->1)+log(x)
+13:20:lh_cat quit:Ping timeout: 245 seconds
+13:21:sismvg: geordi,{int count=3;while(count--) cout<<pow(10,3)<<endl;
+13:21:geordi: error: Unexpected end of request. Expected '}' or balanced code.
+13:21:sismvg: geordi,{int count=3;while(count--) cout<<pow(10,3)<<endl;}
+13:21:geordi: 1000 [+ 2 discarded lines]
+13:22:sismvg: geordi,{int count=3;while(count--) cout<<pow(10,count)<<endl;}
+13:22:geordi: 100 [+ 2 discarded lines]
+13:24:boosure quit:Quit: Get your hand off of it
+13:34:hysw joined channel
+13:35:lhjkkk quit:Remote host closed the connection
+13:38:lhjkkk joined channel
+14:37:lh_cat joined channel
+14:37:lh_cat quit:Changing host
+14:37:lh_cat joined channel
+14:46:iyzsong joined channel
+14:46:lhjkkk quit:Read error: Connection reset by peer
+15:09:handlehard joined channel
+15:16:handlehard quit:Ping timeout: 244 seconds
+15:31:lhjkkk joined channel
+15:38:varna joined channel
+15:38:varna: Plough: 爆
+15:38:varna: code_new: 爆
+15:39:varna: dantmnf: 爆
+15:39:varna: lhjkkk: 爆
+15:39:varna: xxxxxxxx: 爆
+15:59:varna: 噗，演习居然是玖条式白露级全员……
+16:07:Plough: varna: 回去自爆
+16:08:varna: 昨天被坑了大批燃弹钢
+16:08:varna: 现在油只剩41k了……
+16:11:varna: 另外虽然可能煋了，还是推荐下Rainbow Six: Vegas 2
+16:12:varna: 下午刚打通最高难度的故事模式，机器稍微好一点wine大概也可以满帧（不过需要手工调一下引擎参数）
+16:13:varna: 总体来说很耐玩，初见难度略高于cod战役，不过打多了容易背版……
+16:14:Plough: 明石我准备去1-5捞了
+16:14:Plough: 2-5进去一次五个桶实在受不了
+16:14:sismvg: http://tieba.baidu.com/photo/p?kw=%E5%B0%91%E5%B9%B4jump&ie=utf-8&flux=1&tid=3370563736&pic_id=6f6e6d380cd7912328ca5d15ae345982b3b7809c&pn=1&fp=2&see_lz=0
+16:14:sismvg: 233333
+16:14:varna: 1-5我捞了一晚上
+16:16:Plough: 结果呢
+16:16:Plough: 潜艇地狱？
+16:19:varna: 那珂酱哒呦、加古碳呦、WAREAOBA、长colle、168、nuinui、初雪酱@提不起劲、凤翔桑
+16:19:varna: 总之什么都有，就是没有欧洲人点击就送的明石
+16:20:finalbos joined channel
+16:20:Plough: ……
+16:20:Plough: 所以我打算先把棒各二改了再冲进去
+16:21:sou_ quit:Ping timeout: 265 seconds
+16:22:finalbos: ∨基佬
+16:22:varna: xxxxxxxx, finalbos找你
+16:24:Plough: 话说蛋21熟练一般怎么用
+16:24:Plough: 制空还不如紫电改二高……
+16:24:finalbos quit:Client Quit
+16:25:varna: 那个就不用了
+16:25:lhjkkk quit:Ping timeout: 256 seconds
+16:25:varna: 留着作个纪念吧
+16:25:Plough: ……
+16:25:Plough: 毕竟现在是烈风母舰的时代
+16:26:varna: 毕竟现在是全员搭载烈风也未必能制空到最后的时代
+16:26:varna: 简直历史
+16:26:Plough: 还好，3-5Boss似乎没空母系
+16:26:biergaizi quit:Remote host closed the connection
+16:26:Plough: 反正幼女掏出五个泡芙除了震电dalao没人能淡定拿制空
+16:27:biergaizi joined channel
+16:28:varna: 等哪天实装深海堡垒重爆……
+16:28:Plough: 实装依阿华，大和公式出率0.001%
+16:29:varna: 我都能想像出B-17吊打烈风和天山的场面
+16:29:Plough: 然后深海实装外星人，没依阿华的非提都滚粗
+16:29:varna: 那货一肚子机枪
+16:29:Plough: 我去5-4练练棒各试试
+16:29:Plough: 要控MVP吗
+16:29:varna: 顺便正好教育下萌娘百科的萌豚什么叫做level bombing
+16:29:varna: 差多少经验
+16:30:Plough: Lv71
+16:30:varna: 建议别去
+16:30:Plough: 接着3-2?
+16:30:Plough: 苍龙抢MVP概率略高
+16:30:varna: 5-4周回经验可观
+16:30:Plough: 压等级么
+16:30:varna: 你不像我，我怎么都压不住了
+16:30:Plough: 中
+16:31:Plough: 明石我现在考虑是中娇喘的阴毛还是等活动再捞
+16:31:varna: 如果非得去，按你现在的重巡程度恐怕也有点麻烦，而上战舰不全力打的话没法保证周回安定性，全力打就没MVP而增加周回数
+16:31:varna: 明石随意了
+16:32:sismvg: 对于性转的青梅竹马是判定搞基还是BG呢。。
+16:32:Plough: 现在在3-2最大的问题不是事故是MVP
+16:33:Plough: 上两个彗星苍龙直接抢到飞起
+16:34:varna: 一九七一彩云
+16:34:Plough: 事故
+16:34:Plough: 舰攻输出不稳定，太脸
+16:34:varna: 正航不需要那么多东西啊……
+16:34:varna: 舰攻输出倍率似乎是0.8~1.5，但这是炮击战
+16:34:Plough: 我当年练飞龙两个九七都事故……
+16:34:varna: 炮击战基本不用想，就是打不中
+16:34:Plough: 飞龙还能开幕
+16:34:Plough: 打的中
+16:34:Plough: 红脸炮击你怕不怕
+16:35:varna: 这没办法了
+16:35:Plough: 所以现在我都不担心吃鱼雷
+16:35:varna: 如果你非得5-4周回，就上攻略阵容，毕竟不很安全
+16:35:Plough: 我还是在3-2继续吧……
+16:35:Plough: 也就稍微浪费点油
+16:36:code_new: 今天四法紫菜 水侦/天山/彗星/烈风0.0
+16:37:code_new: 旗舰 36RJ
+16:37:varna: 出货了不错
+16:37:Plough: 欧rz
+16:37:code_new: 嗯嗯
+16:37:code_new: 终于出了…
+16:37:varna: 有一两个烈风就可以打到5-4了
+16:37:Plough: 我还有个没拿到手的烈风
+16:38:code_new: 现在才推到4-3
+16:38:varna: 隼鹰有机会改了吧，格子分布不错，回避也上佳
+16:38:Plough: 现在在蹭经验，Lv61
+16:39:Plough: 不过似乎低速舰容易被集火？
+16:40:varna: 轻航毕竟需要放旗舰保护一下，至于低速舰被集火的问题在演习里没体现出来
+16:40:varna: 我就知道POI会被集火，然后就所罗门的南半球
+16:40:Plough: 苍龙两轮炮击一下没miss……
+16:40:Plough: 还好MVP没抢走
+16:41:sismvg: http://www.ithome.com/html/it/109414.htm
+16:42:code_new: POI的仇恨太高了…
+16:43:Plough: POI还没改二
+16:43:Plough: 所以现在我都带X风和XX风
+16:43:varna: 目前能一战的驱逐舰只有三个
+16:43:code_new: POI二改太帅
+16:44:Plough: 我大概会先去改时雨，所以POI不一定有时间肝
+16:44:varna: 电（118）狗（77）岛风（61）
+16:44:Plough: XX风(54)X风(50)
+16:44:Plough: ^简直惨
+16:45:Plough: 苍龙又打中了
+16:45:Plough: 于是MVP没了
+16:45:Plough: 算了我撤一个彗星吧……
+16:46:varna: 说起来莱特湾没有登陆战吧
+16:46:* Plough 是历史盲
+16:48:pocmon joined channel
+16:49:sismvg: 完蛋了，我快被同化成windows狗了
+16:49:code_new quit:Quit: Leaving
+16:49:code_new joined channel
+16:52:Plough: 一库的雷装好凶啊……
+16:52:Plough: 喂了这么久都没满
+16:54:varna: 潜母雷装加两门四连氧气鱼雷之后普遍过百
+16:54:Plough: 噗，棒各二连打了两个miss
+16:54:Plough: 我感觉MVP要不保了
+16:54:Plough: 确定
+16:54:Plough: 隼鹰打中了
+16:57:Plough: 得
+16:57:Plough: 好不容易打中一次这又事故了
+16:59:varna: 你真的不打算拜拜那珂酱么
+16:59:hysw quit:Ping timeout: 250 seconds
+16:59:Plough: 我是奥斯曼人，只拜真主
+17:00:varna: 信仰决定生死啊
+17:01:Plough: 真主降下无数那珂酱，来试验我对他是否忠诚
+17:01:Plough: 所以你看我每次都坚定的把那珂酱拆掉
+17:03:varna: 那珂酱引导我走向胜利
+17:03:Plough: 真主令红脸的隈隈子都能暴击
+17:04:varna: 终于又中破了
+17:04:Plough: 虽说在准备去欧洲的时候我都是叫他天主的
+17:06:Plough: 饿狼泛滥成灾
+17:08:Plough: 棒各变身只打一炮主义者
+17:08:Plough: 还好MVP没丢
+17:12:varna: 黄历说今天不宜练级……
+17:12:Plough: 今天比昨天顺不少
+17:12:Plough: 而且黄历说适合大建的时候我基本都没出货……
+17:16:varna: 卧槽
+17:16:Plough: 出明石了？
+17:16:varna: 昨天我刷了将近三百名的战果
+17:16:Plough: ……
+17:16:varna: 没，我在南西
+17:16:Plough: Orz
+17:17:Plough: 你这么来两天就差不多可以拿到幌筵的前500了
+17:17:Plough: 啊，回到大将的位置上了
+17:17:Plough: 510/3887
+17:18:Plough: 等等这个月不行……
+17:18:Plough: 这个月500线怎么这么吓人
+17:18:Plough: 上个月我记得是863左右
+17:19:Plough: 现在的500线是963
+17:19:Plough: *800左右
+17:19:GODDOG joined channel
+17:20:varna: 岩川可是休闲服
+17:20:[nic] joined channel
+17:20:GODDOG: 冒泡
+17:20:varna: GODDOG: 爆
+17:20:* ring 咕咚咕咚
+17:21:varna: 我曾经徒手刷战果刷到元帅，过一段时间夏活了，我那个鬼哭狼嚎啊
+17:21:GODDOG: varna: 果然无情
+17:21:varna: GODDOG: 明明很有情
+17:21:Plough: 233333
+17:22:Plough: 那珂酱
+17:22:Plough: 拆
+17:22:GODDOG: varna: 被戳爆了 还有情？ 
+17:23:varna: 不是戳爆，是爆菊
+17:23:varna: 卧槽我怎么够了
+17:23:varna: 沟了
+17:23:Plough: 南西还是？
+17:24:varna: 南西和撸号一起做
+17:24:Plough: 那不是很正常么……
+17:24:Plough: 隼鹰：MVP GET
+17:27:GODDOG: 你们又在交流什么 游戏 还是舰娘么？  
+17:28:varna: 舰娘
+17:28:varna: 虽然其实最近发觉wine玩彩虹六号也不错
+17:30:GODDOG: http://imagebin.org/322464
+17:30:GODDOG: 求救一个问题 如图 编译失败
+17:30:Plough: 不是写出来了么
+17:30:varna: imagebin还是不能访问，试一下picpastec.com的图床吧
+17:31:Plough: /bin/sh:sdl2-config:command not found
+17:31:varna: picpaste.com
+17:31:varna: sdl2-config?
+17:31:Plough: make失败
+17:31:varna: 要配置-I和-l么
+17:31:GODDOG: 好的
+17:31:Plough: 大概是
+17:31:varna: 库要是不自带的话，能猜一下pkg-config么
+17:32:varna: 按说库的二进制包会带这些，没有的话大概是自己编译的？
+17:33:GODDOG: varna: 编译成功了一部分 在这里出错了
+17:34:varna: 不是，我看不到图，是说你的sdl...
+17:34:varna: 你有sdl2-config么？
+17:34:GODDOG: varna: 你给我的网址我直接转到电信页面了
+17:35:Plough: 棒各又给我打了两个近失出来
+17:35:GODDOG: varna: sdl2 我通过yum安装说我可能有了
+17:35:varna: picpaste.com
+17:35:varna: 什么叫可能有了……
+17:35:Plough: 这命中跟单纵的飞龙有一拼
+17:35:varna: whereis或者which一下看看到底有没有
+17:36:Plough: 隈隈子总是那么可靠
+17:36:Plough: 又阻止了一次事故
+17:36:GODDOG: varna: 不是 是sdl已经存在 但是sdl2 就根本查不到
+17:37:Plough: fedora?
+17:37:varna: GODDOG: 贴图啊……我都更正两遍是 picpaste.com 了
+17:38:varna: 而且如果红旗指出sdl2-config不存在的话，为什么不查一下这个东西是不是真有
+17:38:GODDOG: varna: 抱歉 我这有点慢
+17:38:Plough: https://apps.fedoraproject.org/packages/SDL2
+17:39:GODDOG: varna: http://picpaste.com/_____________2014-10-25_ae_____5.28.36-pTQ9nONd.png
+17:39:ring quit:Changing host
+17:39:ring joined channel
+17:39:GODDOG: Plough: 谢谢
+17:40:varna: whereis sdl2-config
+17:40:Plough: http://picpaste.com/index-w57yZJqj.png
+17:40:varna: which sdl2-config
+17:40:varna: 都找不到就直接把sdl2包补上
+17:40:Plough: ……慢了一步
+17:41:GODDOG: varna: 我能运行sdl-config 这个命令 但是无法运行sdl2-config 这个命令
+17:41:Plough: 所以说那就把包补上
+17:41:varna: 这两个东西有任何关系么……
+17:42:varna: 如果你PATH里没有sdl2-config就把sdl2包补上
+17:42:GODDOG: varna: 好的
+17:42:GODDOG: varna: Plough 谢谢两位
+17:42:varna: 手工编译本身就容易缺依赖，yum下面这个问题也严重
+17:42:ring quit:Quit: leaving
+17:43:varna: 这方面还是emerge和yaourt比较好
+17:43:Plough: aur确实赞
+17:44:Plough: 不过其实我放弃gentoo是因为不知为啥当年radeon开了dpm就花屏
+17:44:varna: gentoo太热了
+17:44:Plough: 当时是热了才能启动起来
+17:44:Plough: arch正好反过来，热了就花屏
+17:44:varna: 这沟的……
+17:44:xxxxxxxx: 烤个红薯多好
+17:44:Plough: 不过现在arch似乎正常了
+17:45:Plough: 又吃鱼雷了……
+17:45:ring joined channel
+17:47:varna: 我看看撸号和南西哪个先做完
+17:51:wlemuel joined channel
+18:10:varna: 沟
+18:12:sismvg: http://i-ab.com/book/42186.html?page=5
+18:12:sismvg: 作者实在是太可怜了
+18:13:varna: 为何又是肛魔馆……
+18:13:varna: 肛摩狂我模拟起来还是有HAL错误
+18:13:Plough: 还有5.5级
+18:13:Plough: 我怎么突然感觉好累啊……
+18:14:varna: 快吃点猪肝
+18:14:varna: 感觉累的时候，其实你还有六成肝力
+18:14:Plough: 总之妙高要改二三隈要Lv60所以我还得肝
+18:15:Plough: 钢过低保线了，战舰先不拆
+18:15:Plough: 留着喂棒各
+18:16:Plough: 油还是有压力
+18:16:varna: 做南西吧
+18:16:Plough: 先练到我没油了
+18:16:Plough: 我还有10k
+18:16:varna: 哦对
+18:17:varna: 伊势级和长门级的护甲提升了
+18:17:varna: 记得喂一下
+18:17:Plough: 长门已经喂了
+18:17:varna: 陆奥的运提升了整整20%
+18:17:Plough: 陆奥我都丢支援舰队里，运低也没太大关系……
+18:18:varna: 从5变成6了
+18:18:varna: 撸号50%，南西2/5……
+18:19:Plough: 长门提升20%我还高兴点
+18:19:Plough: 人家基数大啊&
+18:19:varna: 抠类挖进塞
+18:19:Plough: 我怎么感觉Lv37的三隈比Lv57的妙高命中高
+18:19:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:19:varna: 装备怎么配的
+18:20:Plough: 都是3号炮+15.5+22+水观
+18:20:varna: ……玄学
+18:20:Plough: 麦霸
+18:20:Plough: 先留着
+18:20:varna: 实在要命中的话要不你换个14上去
+18:20:Plough: 现在的命中就不错了
+18:21:Plough: 绝大部分事故的原因是棒各miss
+18:21:varna: 要不再来一波赌电探（笑）
+18:21:Plough: 我这么机智，怎么会上你这个托的当
+18:21:varna: 说着肛旗酱脱掉了裤子
+18:22:Plough: 说着羊驼开启了脑洞
+18:22:varna: 对了，要不要最上本
+18:22:varna: 很有气氛的
+18:22:Plough: 中
+18:22:Plough: 正好隈隈子在外面
+18:22:varna: packing
+18:23:varna: uploading
+18:24:varna: 噗，网盘怎么校验如此慢
+18:25:Plough: 用OpenCL智能识别18x内容？
+18:26:varna: 这本子的最上发尾其实短了点
+18:30:varna: 噗，伪宅太可怕
+18:31:varna: AWP什么时候成反器材武器了
+18:31:Plough: 和巴雷特搞混了么……
+18:33:varna: .338穿个车门肯定没问题，但你跟.50或者12.7比……
+18:34:Plough: .50那是大炮(笑)
+18:34:varna: 即使国内标准，炮也得20mm
+18:34:varna: 不过我记得巴雷特有23mm的产品……
+18:34:Plough: 我指的是大炮阻
+18:35:varna: XM多少来着，忘了；总之是单兵武器
+18:35:varna: ...
+18:35:varna: 论后座力还得用俄国货
+18:35:varna: 职业军人提前下班搞小护士的不二之选
+18:35:Plough: 233333
+18:35:varna: 当然我没说护士是女的
+18:36:Plough: 不愧是alpako
+18:37:varna: 现在在某潜艇学校的小学同学指出他上学的时候要洗澡确实不敢掉肥皂
+18:37:Plough: 在小学还是在潜艇学校
+18:37:cleamoon_ quit:Ping timeout: 250 seconds
+18:38:varna: 小学的时候是我们一起逗一个台湾佬，后来那个台湾佬变成了Gay, 还是个0……
+18:38:varna: 说的是潜艇学校
+18:38:Plough: ……
+18:38:cleamoon quit:Ping timeout: 250 seconds
+18:38:varna: 小时候我们总打那台湾佬的尻鼓
+18:39:varna: 啊，南西先做完
+18:41:* Plough 急需战神
+18:42:Plough: 等会我看看会不会出现潜艇修不过来的情况
+18:42:varna: 快大建
+18:42:Plough: 出现了我就再去1-5捞几趟明石
+18:42:varna: 你都四个澡堂了，大丈夫
+18:42:Plough: 活动前不做死
+18:42:Plough: 肝飞龙的时候四个澡堂偶尔也要等
+18:42:varna: no zuo no die as he tried
+18:43:varna: 这回让零谷给反潜队护航，大淀就不出动了
+18:43:varna: 零谷（经验人数：0）
+18:44:Plough: 话说那个漫画里隈隈子似乎没中枪？
+18:44:varna: 很多没中枪的
+18:44:Plough: 那就大丈夫
+18:45:varna: 那哥们对日本的处女状况估计有深刻的仇恨
+18:45:Plough: 23333
+18:46:varna: 当然其实我平时走路的时候也会想“我看到的这些人里有多少不是处呢”
+18:47:Plough: 我倒没想过
+18:47:varna: 初中毕竟还是以法师为主
+18:48:Plough: 北鼠队回来了
+18:49:Plough: 还剩11K油，二改棒各应该没问题
+18:50:Plough: 不知道能不能二改苍龙
+18:51:varna: 难
+18:51:Plough: 不过苍龙下周再来也无所谓
+18:51:Plough: 毕竟这周我打算留5k油
+18:51:varna: 低耗队你的事故率可能感人，高耗队估计撑不下来
+18:52:Plough: 那就下周再拿江草
+18:52:Plough: 话说当年我是怎么顶着200油把大凤改了的来着……
+18:52:varna: 感觉你每次去掉cv换cvl都一堆事故
+18:52:Plough: +
+18:53:Plough: 不过现在我感觉更多的是舰攻的问题
+18:53:varna: 我一直用九七……
+18:53:Plough: 脸一黑四颗鱼雷冲着一只倒霉的DD齐刷刷冲过去了
+18:53:Plough: 或者整齐的画出四条平行线然后打出四个大破
+18:54:varna: 哦对，4-3练级如果有轮换打手的话，可以考虑只留三个主力对潜（不算cvl）
+18:54:varna: 更容易保MVP, 但代价是疲劳可能更快
+18:54:Plough: 4-3目前还没开始折腾
+18:54:Plough: 有办法红脸打吗
+18:54:varna: 红脸会死
+18:54:Plough: ……感觉好麻烦
+18:55:varna: 4-3必须保证至少没有疲劳，不然其一会中雷，其二想想J点
+18:55:varna: 红脸的话对面随便谁都能给你个大破
+18:55:Plough: 所以打不出3-2那个频率
+18:56:Plough: 么
+18:56:varna: 不可能
+18:56:Plough: 蛋疼
+18:56:Plough: 明天我边看生放送边试试
+18:56:varna: 但是一次1.5k到2.5k的经验也不错
+18:56:varna: 脸黑可能1k, 不过不至于每次都那么黑
+18:57:Plough: 5-1呢
+18:57:varna: 不安定
+18:57:varna: 无论是罗盘还是潜艇都没4-3安定
+18:57:Plough: Soga
+18:57:Plough: 我看了下，貌似5-1得用F5大发……
+18:57:Plough: 大法
+18:57:varna: 个人观点，4-3不适合结婚，但如果要结婚也没有别的办法
+18:57:Plough: 苍龙又抢MVP了
+18:58:varna: 所以我只在4-3打了98~99的一级14.8k经验
+18:58:Plough: 还好我的第一只婚船应该是大凤
+18:58:Plough: 不过结婚计划可能得推到秋活以后
+18:59:varna: 总算把昨天被骗的桶赚回来
+18:59:Plough: 话说娇喘会不会出个照战果来划弹性的系统
+19:00:Plough: 元帅一个难度大将一个难度中将一个难度之类的
+19:00:varna: 大概……不……会……吧……
+19:00:Plough: 反正娇喘脑洞真这么开我就有救了
+19:00:varna: 要是真有的话，大概下个月我能当半个月元帅
+19:00:Plough: 虽说可能性不大……
+19:01:lh_mouse: geordi, { shared_ptr<int>(weak_ptr<void>()); }
+19:01:geordi: error: invalid conversion from 'void*' to 'int*'
+19:01:Plough: 在幌筵把1-5 2-5 3-5的战果加起来也就是个中将
+19:01:lh_mouse: geordi, replace void with int
+19:01:geordi: terminated by bad_weak_ptr: bad_weak_ptr
+19:02:biergaizi quit:Remote host closed the connection
+19:02:Plough: 棒各雷打不动地只打一炮
+19:02:lh_mouse: [master a50c973] Fixed crash bug due to expired module used in MySQL daemon.
+19:02:lh_mouse:  19 files changed, 701 insertions(+), 129 deletions(-)
+19:02:biergaizi joined channel
+19:02:varna: 2599/525，大将
+19:02:Plough: 心甘情愿地被苍龙抢了MVP
+19:03:Plough: 3887/510，大将
+19:03:varna: 幌筵也还行
+19:03:lh_mouse: FVCK
+19:03:lh_mouse:  src/main/singletons/module_manager.cpp.save   |  218 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+19:03:lh_mouse:  src/main/singletons/module_manager.cpp.save.1 |  241 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+19:03:Plough: 还好，不算恐怖
+19:03:varna: 看来激烈的主要是500线
+19:03:lh_mouse: 智障 GIT
+19:03:Plough: +
+19:03:Plough: 比如说某个徒手刷到500线然后最后一天背刺的dalao
+19:04:varna: 然后他得了个浦风炮和大发
+19:04:Plough: 23333
+19:04:varna: 想想都觉得北上
+19:04:Plough: 运 营 爆 破
+19:04:varna: 哦操
+19:04:Plough: 棒各一发CI打出了4点伤害
+19:05:varna: 浦风我昨天拆了
+19:05:Plough: 苍龙红脸随便点一下157点伤害
+19:05:Plough: 这MVP怎么保嘛娇喘你告诉我
+19:05:Plough: 得，棒各红脸了
+19:06:Plough: 黄脸
+19:06:dantmnf: 明石怎么搞...
+19:06:Plough: 捞
+19:06:dantmnf: 哪捞
+19:06:Plough: 1-5 2-5限时掉落，3-5 6-2门神掉落
+19:07:Plough: 出率感人
+19:07:dantmnf: ........
+19:07:Plough: 1-5 2-5是Boss点
+19:07:Plough: 反正没意外的话我是准备等活动了
+19:08:varna: dantmnf: 你可以去看看
+19:08:Plough: 弥生酱终于不玩水了
+19:08:varna: 我记得你等级不高
+19:09:Plough: 等级不高倒是可以去1-5看看
+19:09:varna: 反正我昨晚打了不知道多少回，战果刷了一堆，最后那珂酱哒呦
+19:09:varna: 最低的掉落是40-
+19:09:varna: 有三十级以上的头目战掉落报告，目前的情况是A胜或者S胜
+19:09:Plough: 娇喘这次应该是打算送船
+19:09:Plough: 不过送船也挡不住脸黑……
+19:09:varna: 是打算扩大氪金面积
+19:10:Plough: 通过送船
+19:10:Plough: 另外周常炸鱼现在似乎给一个改修资材
+19:10:varna: 你想啊，螺丝怎么拿？日常有一些，但是你也可以拿勋章换（笑）
+19:10:Plough: 然后秋活给一个勋章
+19:10:varna: 他要只给一个我就直接砸了换桶
+19:10:Plough: “没打过春活的都是后妈生的”
+19:10:cleamoon_ joined channel
+19:11:cleamoon joined channel
+19:12:cleamoon: 主管互联网的国家信息办公室主任鲁炜昨天在座谈会上表示，中国将建立网上信用记录（意义尚不明），完善褒奖与惩罚机制。他声称“互联网应是一个既讲自由、又讲秩序的空间，每个人都有发表言论和表达看法的自由，但同样要讲秩序，一个人的自由不能建立在别人的不自由之上。”出席座谈会的有
+19:12:cleamoon: 政法委、最高法、最高检、国务院法制办等中央机关代表、清华大学法学院院长王振民和北大教授张颐武等知名专家学者、人民网和腾讯网等网站负责人。鲁炜说，要全面推进网络空间法治化，就要统筹国内国际两个大局，统筹网上网下两种资源，加强网络立法、网络执法、全网守法，全面推进网络空间
+19:12:cleamoon: 法治建设，实现网络健康发展、网络运行有序、网络文化繁荣、网络生态良好、网络空间清朗的目标。鲁炜表示，要引导网民尊法守法，做“中国好网民”。
+19:12:cleamoon: http://www.solidot.org/story?sid=41606
+19:13:varna: 噗呼呼
+19:15:Plough: 你看棒各又只打一炮
+19:15:Plough: 拿我当间宫耍
+19:16:sismvg: 反腐
+19:16:sismvg: 腐
+19:17:cleamoon: 反腐就是禁止BL的意思
+19:17:sismvg: 一个人的自由不能建立在别人的不自由之上-》但是ZF的可以
+19:19:varna: 我一直很奇怪药元四的理想社会是什么样的
+19:19:varna: 当然同时质疑在他的理想社会中，他是否有生存权
+19:20:cleamoon: 所有人都是我的后宫的射会就是理想射会
+19:20:varna: 你也盯上肛旗酱了？
+19:21:cleamoon: 肛旗想要轮 到还早着呢
+19:22:varna: 肛旗你怎么看
+19:22:Plough: 我看你们已经没救了
+19:22:varna: 来，大家来一波
+19:22:varna: Plough: 爆
+19:22:Plough: 埋了吧
+19:22:cleamoon: Plough, 爆
+19:23:cleamoon: 难道同意peko爆了？
+19:23:varna: 那当然
+19:23:Plough: 所以说你们两个该埋了
+19:23:Plough: 脑洞太大了就堵不上了
+19:24:varna: 奶鸭子小说完结，真寻脱处了……
+19:24:Plough: 妈的
+19:25:Plough: 二连CI加起来出率都不到50%是他妈什么情况
+19:25:varna: 怎么配的
+19:25:varna: 双炮91水观？
+19:25:Plough: 双46+一式弹+水观
+19:25:varna: 加彩云
+19:25:Plough: 四个
+19:25:varna: ...
+19:25:varna: 脸
+19:25:Plough: 不管了，先吃饭去
+19:26:Plough: 回来再继续
+19:26:varna: 百度那个直播间是怎么回事
+19:26:cleamoon: 这条新闻本身没什么艹点，网络法制化是应该而且必需的，但是弄一个网络档案就sb了
+19:27:cleamoon: 度娘也开始直播了？
+19:27:varna: 各种丑女
+19:27:cleamoon: 233
+19:30:cleamoon: 房东看某找工作节目，一sb说自己和手冢治虫一起画过画，然后还有人愿意出20k/mo请他，简直233
+19:32:varna: ...
+19:34:cleamoon: 现在peko小耗耻球在刨去开封菜开销和睡务之前弄得到10k吗？
+19:34:cleamoon: 刚毕业时
+19:34:lh_mouse: 不到
+19:34:varna: 小耗似乎是10k
+19:34:varna: 我没找过工作，不知道
+19:35:cleamoon: 小耗似乎没有开封菜福利
+19:35:lh_mouse: 我对开封菜无爱
+19:35:lh_mouse: 开封菜比麦当劳贵一倍多
+19:36:cleamoon: ...怎么会
+19:36:lh_mouse: 一半多  *
+19:36:cleamoon: 哦，那还有可能...
+19:37:cleamoon: 无法比较，除了圆筒从来不吃开封菜，海盗国更是没有开封菜
+19:38:lh_mouse: 有个老外问我 如果你们家里摆了个蒋介石的雕像会不会被罚钱
+19:38:lh_mouse: 我回了一句  Do you think we are living in north korea?
+19:39:lh_mouse: 原来 He who has a Hitler statue in home will be fined in 
+19:39:lh_mouse: Germany.
+19:39:lh_mouse: 随便吐槽  勿当真
+19:40:cleamoon: 有个海盗国问我你们是不是真吃狗肉，然后下一句是给我捎点过来...
+19:40:lh_mouse: 不 我不吃
+19:40:lh_mouse: 对于荤菜我很挑
+19:40:cleamoon: 小耗的主食是种子
+19:41:* lh_mouse 能吃就行
+19:43:hope1: > 统筹国内国际两个大局，统筹网上网下两种资源
+19:44:hope1: 这是要做什么
+19:45:cleamoon: 领导开会扯蛋排比句而已
+19:46:hope1: 听起来好危险啊
+19:46:cleamoon: 那么你上学会觉得学校领导们天天都在宣战
+19:47:lh_mouse: 半斤八两
+19:47:hope1: 但是这里似乎暗指某种具体的措施
+19:47:lh_mouse: 我认为所谓的领袖最高境界就是愚民  因为人民本来就愚昧
+19:47:cleamoon: 愚民+
+19:48:lh_mouse: 不仅古代如此  近代也如此
+19:48:cleamoon: 三胖还天天说圣战3min灭掉米国呢
+19:48:lh_mouse: 三胖没干货
+19:48:hope1: 学校领导扯得都比学校大不少，比较明显
+19:48:cleamoon: 学校领导也没有
+19:48:lh_mouse: 元首啊   裕仁啊
+19:48:hope1: 对啊，但是防火墙管理局有啊
+19:49:GODDOG: 最终 我还是换了个新版的系统镜像
+19:49:cleamoon: 鬼父王管理局也没多大权力，只能玩屌丝
+19:50:hope1: 禁资源共享还是影响很大的，当然是对我等普通网民而言
+19:51:wlemuel quit:Quit: leaving
+19:51:lh_mouse: 谷狗还被关着呢吧
+19:51:cleamoon: 上边的人都在闷声发大财，随便被扔出来说话的都是炮灰
+19:51:* lh_mouse 我们在外面  谷狗在里面
+19:52:varna: https://wen.lu/ 这个还好用
+19:52:lh_mouse: 就这个星期 谷狗破雷吃掉我十兆流量
+19:52:lh_mouse: 还是后台偷偷跑
+19:52:varna: 目前不要VPN
+19:52:lh_mouse: 一觉醒来流量告警  
+19:52:varna: 大家可以试试
+19:52:hope1: 现在谷歌根本没法用了，只有wen.lu之类的代理站暂时还可以
+19:52:varna: wen.lu算是比较好的了
+19:53:varna: hope1: 咦，HO棠今天有假期啊
+19:53:hope1: 总得放一天啊
+19:53:varna: 为什么不去找社长酱
+19:54:cleamoon: 因为在和会长酱啪啪啪
+19:54:hope1: 设立到现在三节社团课都被跳了，运动会练操
+19:54:varna: 这时候更应该发挥洗吧大呲牙精神
+19:54:condy joined channel
+19:55:hope1: 那是什么
+19:55:varna: 司波达也
+19:58:* hope1 是有下限由节操的文盲
+19:58:varna: https://pastebin.mozilla.org/6902990 # 这才是没节操
+19:58:varna: 洗吧大呲牙哪里没节操了
+19:58:hope1: 看起来好吓人
+19:58:varna: 他只是喜欢妹妹而已
+19:59:varna: hope1: 这是以前那个gcc-closure
+19:59:cleamoon: 只是喜欢咪咪而已
+19:59:hope1: 还记得
+19:59:varna: 刚才汇编器莫名其妙地抽风了
+19:59:varna: 我手工创建一个gtk dialog, 结果汇编器报错
+19:59:hope1: 但是真敢用那种东西……
+19:59:varna: 然后我从glade xml拿一个对话框出来，就都好了
+19:59:varna: 大丈夫
+20:00:varna: 对面不知道这是个闭包，只当这是个函数指针
+20:00:varna: 所以如果闭包挂了我就换个写法
+20:01:varna: 绑定的时候是这样： "ctrl-o" => 'Fubuki::Coreutils::c_invoke_action($exports{openfunc})',
+20:01:varna: 在某个perl hash里
+20:02:hope1: 你把这种东西扔到某个包的实现里？
+20:03:cleamoon: 写个编辑器能不这么鬼畜吗
+20:04:hope1: 看来还真是，兼容性没问题吗
+20:04:Plough: 突然发现布嘟嘟原来挺可爱的
+20:07:varna: hope1: 我把一个closure扔到perl hash里，交付后面的coreutils执行（那里是打了xs桩的c代码）
+20:08:varna: ABI/API上由Perl保证，是没问题的；如果真出问题，也就是闭包在gcc上挂了
+20:08:varna: cleamoon: 编辑器不鬼畜还能哪里鬼畜
+20:08:cleamoon: 浏览器呀
+20:09:hope1: 就是闭包实现的问题，gcc加个小数点可能就挂了吧
+20:11:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=378d319fc0fdfc03e578e3b0e43e87a9/0c9e8eef76094b3653dedc8ca0cc7cd98d109d33.jpg # 轻微修改的扶桑立绘
+20:11:Plough: 手还是纸片……
+20:11:varna: hope1: 挂了我就换函数指针，反正这东西基本就是我自己用，如果是别人用也得能接受我程度的精神污染
+20:11:varna: Plough: 至少看起来秀气点了
+20:12:condy: gcc 4.9.1无法这样用..
+20:12:varna: condy: 有什么问题
+20:12:condy: Segmentation fault (core dumped)
+20:12:varna: 跳板代码在栈上
+20:13:varna: 一直也不能直接这么用
+20:13:varna: condy: 这里是实现 https://pastebin.mozilla.org/6903166
+20:13:hope1: 这太牛去了
+20:13:hope1: 扭曲……
+20:13:varna: 因为上下文应该还是在r10（x86_64）里，所以只能套一层
+20:13:lh_mouse: #ifndef     _CLOSURE_GCC_H_  // reserved name
+20:13:condy: 对呀，从你github上已经抄过来了..
+20:14:varna: 例子直接挂了？
+20:14:hope1: 还不如上cfront
+20:14:lh_mouse: 定义本地 struct 多好
+20:14:condy: 不知道。我没有测试你的例子。。
+20:14:varna: condy: 编译一下我那个
+20:14:cleamoon: 你还不如直接perl+scheme呢
+20:15:condy: 你的例子可以..
+20:15:varna: 那就行
+20:15:varna: \x.\y.\z.x + y + z这种套多层的不行是没办法的，我hack不出来了
+20:15:varna: condy: 开O2也可以？
+20:16:condy: 嗯。
+20:16:varna: Plough: 这个好玩，试着玩玩不 http://tieba.baidu.com/p/3324384811
+20:16:varna: ^ 模拟军舰设计的软件
+20:16:cleamoon: 话说到底什么功能必须用闭包
+20:16:Plough: varna: 之前下了，准备等会折腾wine
+20:17:varna: cleamoon: 我懒得传参了
+20:17:lh_mouse: varna, 用 dladdr 获得 __builtin_return_address(0) 然后从静态表里抽句柄貌似可以拿到 SO 自己的句柄
+20:17:varna: lh_mouse: 想想似乎不会被抽掉，也许可以
+20:18:varna: 主要是perl和c互调本身麻烦，如果是lua的话大概好很多
+20:18:pocmon: Plough, 折腾WINE，不如用VBOX的无缝模式
+20:19:Plough: pocmon: 你觉得46cm三连装炮和苍蝇拍哪个对付蚊子更合适
+20:19:FrankHB: cleamoon: 带状态的回调，接口作死没有提供另外的参数，又不想艹现有的存储。
+20:20:cleamoon: 所以还不如直接lisp那类呢...
+20:20:sismvg: http://tieba.baidu.com/p/3371483264
+20:20:varna: 哪个Lisp的FFI能看的
+20:20:Plough: 每次都一炮过去打个大破
+20:21:Plough: 虽然能减少鱼雷但我还是感觉蛋疼口牙
+20:21:cleamoon: 你就整体用lisp呗
+20:21:varna: 另外其实我的话，对付蚊子会用16in三连装
+20:21:varna: 我才不用lisp
+20:21:varna: Perl爆那些lisp三条街出去
+20:21:Plough: varna: 你得能打中
+20:21:varna: Plough: 我先跨射那个蚊子，这是炮术基本
+20:21:Plough: varna: 蚊子回避太高
+20:22:varna: 形成跨射之后试图修正到效力射，反正有近失就行
+20:22:Plough: 回避上万，近失都没机会
+20:22:varna: 不算战斗部的杀伤，崩起来的土也能砸死它
+20:22:Plough: 我觉得你会先被砸死
+20:22:varna: 实在不行还可以近距离突击引发膛炸
+20:22:varna: 玉碎了事
+20:23:Plough: 双打武B401大破冲去1-1么
+20:23:Plough: 大
+20:23:varna: tama碎
+20:23:FrankHB: 尻 射
+20:23:varna: FrankHB: 肛
+20:23:varna: 我什么时候丧失到连恥球都肛了？
+20:24:Plough: 现在
+20:24:varna: 喔
+20:24:Plough: 还有三级
+20:24:lh_mouse: 闭包某种意义上讲是层次更高的抽象  不过实现嘛……
+20:24:Plough: 累
+20:24:varna: lh_mouse: 是更基本的抽象，不过往往坑实现
+20:24:lh_mouse: 看怎么定义基本
+20:25:varna: 是
+20:25:lh_mouse: 例如“函数对象”
+20:25:GODDOG quit:Quit: leaving
+20:25:varna: 这里看是数学的基本还是（实现的）机器的基本
+20:25:varna: 但如果你把c函数当作基本，那么要么回到（实现的）机器基本，要么放弃
+20:26:Plough: 苍龙又暴种了……
+20:26:hope1: “函数”这个说法就是滥用术语……
+20:26:varna: 实现为恶是不得已而为之，但观念上没必要配合
+20:26:hope1: （指c函数）
+20:27:varna: hope1: 我倒是不喜欢“闭包”这个术语，本来闭包应该是一集合上有限充分多次迭代运算收敛得到的结果
+20:27:cleamoon: 为了闭包有10倍的效率减少在一般应用上是没问题的
+20:27:varna: cleamoon: 十倍太多了
+20:27:hope1: 这个也一样
+20:27:lh_mouse: 函数是多对一映射
+20:27:lh_mouse: @状态迁移
+20:27:varna: lh_mouse: \x.\y.x是函数
+20:27:cleamoon: 不十倍不可能的
+20:27:lh_mouse: cleamoon, 看你要干啥
+20:27:varna: 而映射只指出domain -> codomain
+20:28:lh_mouse: 你 1+1 都 搞个 lambda 属于自己作死
+20:28:lh_mouse: 就别怪实现
+20:28:varna: 当提出状态的时候，就提出了操作语义
+20:28:varna: 而函数可以不拘泥与操作语义——除非这时候有人表示老子是标准你们都闭嘴
+20:28:varna: 于*
+20:28:cleamoon: 需要那么多抽象的复杂部分，这种部分一般不是计算密集的
+20:28:varna: 我觉得JVM程度的性能牺牲在桌面应用上是可以承受的
+20:29:lh_mouse: 我想吐槽手感……
+20:29:hope1: 把+作为原语就没问题了啊
+20:29:varna: 原语是掉节操
+20:29:cleamoon: 可以接受+
+20:29:varna: lisp那些原语的节操一个比一个掉得狠
+20:29:lh_mouse: hope1, 等你的原语够多你就发现发明了一坨汇编
+20:29:varna: 当你引入大量原语之后，语义就被原语强奸了
+20:30:varna: 确实你可以从语义上推论原语，但也就到这里了
+20:30:varna: 你没法从语义开始构造意义
+20:30:lh_mouse: 闭包的问题是不确定性太大
+20:30:varna: 或者说可以构造，但可能因为缺乏原语而性能低劣
+20:30:hope1: 至少有正常的scoping
+20:30:varna: scoping是常考
+20:30:lh_mouse: 如果闭包是对象  并且对象依赖于存储  万一存储没了呢
+20:31:varna: 我不奢望有什么continuation, 毕竟控制流意味上的continuation是悲剧
+20:31:hope1: 所谓closure只是高阶函数的糖吧
+20:31:varna: lh_mouse: 这个问题可以把第一分句去掉
+20:31:lh_mouse: 也可以
+20:31:varna: hope1: closure用于实现函数——我是这么看的（我甚至懒得提高阶函数，函数本身不应该是一阶的）
+20:31:lh_mouse: hope1, 不是糖
+20:32:lh_mouse: 如果纯粹是没有什么运行时 overhead   可以算
+20:32:varna: 要么你拒绝函数代以functional function, 要么你试图扩大运行时引入function
+20:32:varna: 走中间道路的修正主义简直没文化真可怕
+20:32:lh_mouse: 这点上 C艹比 C 有节操
+20:33:varna: c是没这个有节操的资本——当然我不知道标准委员会在想什么
+20:33:lh_mouse: C++ 说闭包是对象  但是实现各种内联优化  
+20:33:varna: “我们要跟c++不一样，所以他们有的我们不该有”？
+20:33:hope1: 不该是一阶的+ 但是closure并不是什么实现方法
+20:33:lh_mouse: 因为  闭包对象的类型是唯一的  所以怎么艹都可以
+20:33:varna: lh_mouse: 实际上这里的语义就坑了
+20:33:lh_mouse: C 就不行  于是他们不像 C++ 允许实现胡搞  反而改语言
+20:34:varna: 即使你维持闭包具有一个函数类型，照样可以as-if优化
+20:34:lh_mouse: 例如 function to pointer conversion
+20:34:lh_mouse: varna, 就是 as-if
+20:34:varna: 这一点haskell照样做
+20:34:varna: 他们的do糖是有as-if的，未必真的会函数复合
+20:34:lh_mouse: C++ 伤不起 函数不是一等公民 
+20:35:lh_mouse: 于是就说  闭包不是函数
+20:35:varna: 我一直不太理解C标准委员会的想法
+20:35:varna: 他们再这么搞下去，C就确实地黄掉了
+20:35:lh_mouse: integral promotion 啥时候才能干掉
+20:35:lh_mouse: varna, 不会的  有脑残用户嗯
+20:35:varna: 脑残没办法
+20:36:lh_mouse: 而且 C 的脑残用户比 C++ 忠诚
+20:36:lh_mouse: 或者讲
+20:36:varna: 《本草》都指出“故脑残者无药医也”
+20:36:lh_mouse: C++ 的用户没有 C 那么自以为得计
+20:36:varna: C的脑残用户大多不在PC上吧
+20:36:varna: PC上C脑残的战斗力实在不足
+20:36:lh_mouse: 嘛嘛
+20:37:varna: hope1: 对了，社长酱如何可爱？
+20:38:condy: http://zhuanlan.zhihu.com/dingxiangyisheng/19876662 爱爱有风险，「咬」须谨慎
+20:39:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=39ed592d9d2f07085f052a08d91fb999/08f790529822720eb2c8a99878cb0a46f21fab4a.jpg
+20:39:varna: ^ 村三式潜航运输艇
+20:41:varna: 淋病梅毒尖锐湿疣……怎么这些广告我小时候都见过……
+20:41:condy: 大湿。
+20:41:varna: “你也许对HPV不熟，但你肯定知道「尖锐湿疣」这个病，反正在我老家每走一个电线杆，或者每去一个公厕就要和这个病打个招呼。” # 我感觉00后大概没这感受了
+20:42:varna: condy: 你小时候没在电线杆上见过治性病的广告么……
+20:42:condy: 当然.
+20:43:varna: 所以说么
+20:43:condy: 尖锐湿疣 <- 这个没有..
+20:43:varna: 我印象尖锐湿疣一般字都很大
+20:43:geordi quit:Remote host closed the connection
+20:43:geordi joined channel
+20:46:hope1: varna, 认真，有趣
+20:46:hope1: 具体也说不上来
+20:46:cleamoon: 容易啪啪啪
+20:47:Plough: http://imgsrc.baidu.com/forum/w%3D580/sign=91cd2a53223fb80e0cd161df06d12ffb/37e227d9f2d3572c81fbbabe8913632762d0c36e.jpg
+20:47:varna: hope1: wow
+20:47:varna: hope1: 印象的可爱啊
+20:48:varna: 航母FA级……
+20:48:sismvg: IE啊IE
+20:49:varna: hope1: 跟会长酱比起来，型别差异呢
+20:50:varna: 像是光井穗乃香和七草真由美的差别？
+20:51:sismvg: 草泥马IE
+20:51:hope1: 完全没有可比性吧……
+20:51:sismvg: 差点坑了我网银
+20:52:cleamoon: 大小和胸型都不一样
+20:52:sismvg: IE CPU占用率：87%
+20:53:varna: hope1: 噗，难道是“你们都是我的翅膀”
+20:53:varna: 这简直就是活生生的司波达也
+20:53:hope1: 没有这种事情，也不可能有
+20:54:varna: 没有还真是残念
+20:54:cleamoon: 羽立就要做到我的梦想了
+20:54:cleamoon: 双飞
+20:54:Plough quit:Ping timeout: 256 seconds
+20:54:FrankHB: 实现的所谓基本叫底层，而且只有在已有的实现为前提才有意义。换个角度，涉及实现的东西，只要你不只当接口用，都基本不起来。
+20:55:FrankHB: varna: 10倍？你该肛撸比党去。
+20:55:varna: FrankHB: 撸比那些叛徒迟早会被末日审判的
+20:55:FrankHB: lh_mouse: 函数就是“映射”。
+20:55:varna: 松本大师背离信仰自立邪教，还把圣拉里带坏了
+20:55:hope1: 只是打个招呼的程度而已
+20:56:FrankHB: lh_mouse: 艹个解析干净1+1的parser绝逼比撸个utlc的eval麻烦信不。
+20:56:varna: 搞得现在我们这些坚持perl5 legacy的都变成了粉饰上墙的法利赛人
+20:56:Plough joined channel
+20:56:varna: hope1: TCP招呼？
+20:56:varna: -Hello? Syn -Hello! Syn ACK -Hello~ ACK
+20:57:varna: 然后C-S两方一起dokidoki
+20:59:hope1: 普通的招呼而已，不过社长是班上的语文课代表，有时去问题
+21:00:cleamoon: 打招呼一定要拍一下后背
+21:00:varna: 喔喔
+21:00:Plough: 川内泛滥成灾
+21:00:varna: 不是戳一下鼻子么？
+21:00:cleamoon: 这样就能知道白衬衫里的红色胸罩是真的还是彩绘
+21:00:varna: 你都不看质感和挂钩的？
+21:00:cleamoon: 衬衫太厚
+21:01:varna: 糊她个中破
+21:01:lh_cat: 翻艹帝球
+21:01:varna: 说起来如果把恥球切片炒炒，口感是不是类似腰花？
+21:01:cleamoon: 类似心脏吧
+21:01:varna: 恥球不是软的么？
+21:02:cleamoon: 应该有点咬紧
+21:02:varna: 我感觉没多少嚼劲，想想那个厕所裹被子图
+21:03:cleamoon: 那是什么
+21:04:lh_cat: 翻艹的意思就是正面上完背面上
+21:05:varna: cleamoon: http://picpaste.com/uQZTiTFp.jpg
+21:05:cleamoon: 23333
+21:07:cleamoon: 那就是鱼翅类的口搞
+21:07:cleamoon: 口感
+21:07:varna: 没吃过鱼翅
+21:08:* sismvg cleamoon说那东西和鱼翅一个口感
+21:08:cleamoon: 和粉丝差不多，比粉丝好点
+21:09:varna: 哦
+21:09:Plough quit:Ping timeout: 255 seconds
+21:09:cleamoon: 味道比粉丝淡
+21:09:sismvg: 粉丝+味精+1克酱油+鸡汤
+21:09:sismvg: 不要炖太烂
+21:10:varna: 只有精汤
+21:10:sismvg: 太白了
+21:10:hope1: 羊驼看过这个没： http://chenyufei.info/blog/2011-02-28/wrap-c-function-closure-gcc-nested-function/
+21:10:varna: 老抽
+21:10:varna: hope1: 后来搜到了
+21:10:sismvg: 听说某个岛国的男人会把自己的JY涂到给女性客人的食物上
+21:10:cleamoon: 我更喜欢鸡汤
+21:11:sismvg: 传说这种方法可以增加自己的吸引力
+21:11:sismvg quit:Quit: restart
+21:12:cleamoon: 自己的假牙
+21:12:varna: 我想想涂什么好
+21:12:cleamoon: 甲鱼
+21:12:varna: 什么都不涂了，我先喝两口电浆
+21:12:cleamoon: 鲫鱼
+21:13:varna: 大概是昨天拆大鲸太逆天，最近攒攒RP为好
+21:13:whocares_2 quit:Remote host closed the connection
+21:13:ring quit:Remote host closed the connection
+21:14:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=6c0181afff039245a1b5e107b7afa5c2/a50f4bfbfbedab64ac803aa2f436afc378311ee5.jpg # 进击的……
+21:15:Plough joined channel
+21:16:Plough: 啊啊啊啊啊啊啊啊啊我操这MVP枪的
+21:16:Plough: 就剩900点经验就到Lv78了愣是给我抢一次
+21:16:Plough: 逼着我去1-1刷完最后400点
+21:16:varna: 去5-5啊
+21:16:Plough: 白丢一桶
+21:16:varna: 不用桶
+21:17:Plough: 挂一晚上么
+21:17:varna: 直接单舰进去，回来直接改造
+21:17:Plough: Lv78怎么改
+21:17:varna: 噗
+21:17:pocmon quit:Quit: 飘来又飘去～
+21:17:varna: 我以为苍龙
+21:17:Plough: 棒各……
+21:17:Plough: 苍龙是抢MVP的那货
+21:17:sismvg joined channel
+21:18:Plough: 我现在觉得我可以改名叫间宫了
+21:18:Plough: 没事就去趟1-1消疲劳
+21:18:varna: 哦，给来份套餐
+21:18:Plough: 可以，价格和一艘大和一样
+21:18:varna: 哦，给来份套餐
+21:19:Plough: 先钱后货
+21:19:Plough: 不爽不要买
+21:19:Plough: 强行小破
+21:19:Plough: 醉了
+21:20:cleamoon: 肛旗开价了
+21:20:Plough: 1-1最后一次给我来个A胜，愣是给我卡在Lv77了
+21:20:varna: 赶快趁醉上了肛旗
+21:20:Plough: 妈了个逼
+21:20:Plough: 老子就想练个级怎么就这么麻烦啊田中我操你妈逼的
+21:20:Plough: 硬给老子卡在Lv77不让上了是吧
+21:21:varna: 我算了算，昨天其实就骗掉我2.5k钢
+21:21:varna: 幸好我及时收手
+21:21:Plough: 我现在想找五十个兄贵给田中直肠爆出来然后给他打个蝴蝶结让他直接憋屎憋到死
+21:22:varna: 人生不如意十之八九
+21:22:varna: 多做做南西心情就好了
+21:22:cleamoon: 人生不如意八之九十
+21:22:Plough: 我估计我能心情好到把田中全家带上
+21:23:Plough: 所以还是继续3-2得了
+21:23:varna: 南西就是奇妙地中破了，奇妙地大破了，奇妙地沟了
+21:23:varna: 最后大破中破小破，还有一堆满血红脸
+21:23:varna: 修吧
+21:23:Plough: 田中屁眼就奇妙的被水泥封上拉不出屎了
+21:23:varna: 我还就俩造糖
+21:23:varna: 澡堂
+21:23:Plough: 我只用一套潜艇队
+21:23:varna: 现在我都是淫笑着做完南西的
+21:23:Plough: 每次都是修完回复好疲劳再出去的
+21:24:varna: 小破不管大破不修，不然根本做不完……
+21:24:Plough: 我是蹭点皮就修
+21:24:Plough: 做不完就弃
+21:24:sismvg: .*?(tokyo).* <-这是迅雷的文件名过滤器。。
+21:25:varna: 23333
+21:25:Plough: 至少加个hot啊
+21:26:Plough: 这Lv78升的真TM艰难
+21:26:Plough: 算了，还差两级
+21:26:Plough: 忍吧
+21:27:varna: 夏活之后我一下子就淡定了
+21:27:varna: 没大和还有脸，没脸还有肝，没肝还有桶，没桶我认输……
+21:27:varna: 哦不对，没桶还有勋章
+21:28:Plough: 我要求开放用田中换桶系统
+21:28:Plough: 胳膊两个桶，腿三个桶，肠子每30厘米一个桶，脑子每克一个桶
+21:29:varna: 院长有两个，田中只有一个，打谁好呢？打那个爷爷！
+21:29:sismvg: 问每一个80后印度程序员他们为什么成为程序员
+21:29:sismvg: 总会得到一个一样的回答：我从小就喜欢
+21:30:varna: 拉开裤子一看，他们从来没大过
+21:30:sismvg: 但是1990年印度有多少电脑呢。。
+21:30:Plough: 这Lv78升的真TM艰难
+21:30:varna: @彼得潘
+21:30:Plough: 手滑了
+21:30:Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=05591084247f9e2f70351d002f0be824/472309f790529822d6dc9ba1d4ca7bcb0b46d4e1.jpg
+21:30:varna: 资源是真刷刷掉啊
+21:30:varna: 一次1-5就是110+油150+弹
+21:31:varna: 劝退率倒是极低
+21:31:Plough: 所以我去练棒各了
+21:31:Plough: 今天就是因为大淀第一次出去就被核潜艇轰隆了我才提起劲去练棒各的
+21:31:varna: 大淀嘟脸还是挺可爱的
+21:31:Plough: 没改
+21:32:Plough: 想蹭蹭经验，然后一颗核弹照着旗舰过去了……
+21:32:varna: 咕嘿一下嘟起来了，还撩撩头发，意图很明显啊hshs
+21:32:Plough: 想了想我还是决定看看活动
+21:33:FrankHB quit:Remote host closed the connection
+21:33:varna: 活动重要
+21:33:varna: 活动前的新花样除了改造和新装备就是骗资
+21:33:FrankHB joined channel
+21:47:ring joined channel
+21:47:ring quit:Changing host
+21:47:ring joined channel
+21:49:Plough: 油量掉下1k了
+21:49:Plough: 9969
+21:49:Plough: 今天一天烧了至少6k油……
+21:53:varna: http://tieba.baidu.com/p/3371857923 # 我实在看不惯这些舰娘同人文
+21:54:Plough: 我不太看同人文……
+21:55:Plough: 棒各怎么也变身六号位杀手了
+21:55:Plough: 因为我叫棒各叫多了么……
+21:56:varna: Plough: 所以我在下面补了个脑洞的续写
+21:56:Plough: 23333
+21:57:Plough: 克苏鲁？
+21:57:varna: 卡夫卡，克苏鲁、哲 学
+21:57:Plough: 克苏鲁我看了一阵没看明白
+21:58:Plough: 没能成功的把那些故事串起来
+21:58:varna: 我觉得不明白就对了，本来克苏鲁作品的好看之处不就是无理由（甚至不是意识流）的疯狂和恶意么
+21:59:Plough: 主要是我压根就没搞明白各个故事写的是啥有什么关系
+21:59:Plough: 换句话说我没能把他的世界在脑子里重现出来
+21:59:varna: 你只要知道“人类都被坑”就好了
+22:00:Plough: 完了那up主叫你一起去了
+22:00:varna: 然后就是无理由的发疯和再发疯，从这个意味上来看和尤里西斯开始的意识流有点像……
+22:01:Plough: 我是不知道写wikipedia的那帮家伙是怎么把整个世界理出来的……
+22:01:Plough: Lv79
+22:01:Plough: 再升一级我就能暂时逃离地狱了
+22:01:varna: 我怀疑其中真的有邪神崇拜者
+22:01:Plough: ……当真了么
+22:02:varna: 有当真的……
+22:02:Plough: ……
+22:02:Plough: 我觉得圣经都比它可信多了
+22:03:varna: 旧约那可信度简直帅气逼人，我宁可相信克苏鲁，毕竟发疯的人太多
+22:03:Plough: 现在我手上有四个爱岩
+22:03:varna: 比如看着修理槽都认为自己造出大和的勇士
+22:03:Plough: 23333
+22:04:Plough: 不过以前我在贴吧里认识的一哥们现在跑去信基督了
+22:04:Plough: 应该是国内的新教
+22:05:varna: ...
+22:05:varna: 说起来其实国外比较不发疯的小说，汤姆·克兰西还不错
+22:05:varna: 算是难得的刚正朴实
+22:06:Plough: 汤姆克兰西以前想看，不过没买
+22:07:Plough: 那时候我大概也就四年级……
+22:07:varna: 挺好的，我觉得和他比起来，乔治马丁取悦读者的成分太多
+22:08:Plough: 我现在比较怨念的就是道格拉斯亚当斯死的太早了
+22:09:varna: 被出版社逼着出书似乎也那啥
+22:09:Plough: 主要是42到底是啥给个解释啊！
+22:09:varna: 举个惨烈的例子，比如JK哔琳……
+22:10:Plough: 23333
+22:10:Plough: 我觉得比起哈利波特电影来说原书已经好不少了
+22:10:varna: 电影我在电影频道看了最后一部，那个CQB很激 烈
+22:10:blackskygg joined channel
+22:11:varna: 啊，又来了一个提督
+22:11:cleamoon: 耻球爆？
+22:11:varna: close quarter battle
+22:11:blackskygg: 我已经有两个星期没玩舰娘了，黯然神伤
+22:11:cleamoon: 哦，那段cg不错
+22:11:Plough: 死亡圣器电影最后把接骨木魔杖掰断扔了简直就是中二病暴殄天物
+22:12:blackskygg: 我的双马尾同桌被调走了
+22:12:Plough: 就像某国电影最后把歌德巴赫的证明直接扔河里一样
+22:12:blackskygg: 新同桌是个男的
+22:12:Plough: 他把你爆了
+22:13:varna: 你们这些欧洲人
+22:13:iyzsong` joined channel
+22:13:blackskygg: 双马尾没了
+22:13:Plough: 欧洲人都有明石
+22:13:Plough: 我没有
+22:13:blackskygg: 什么都没了
+22:13:varna: blackskygg: 你赶快造个五十铃
+22:13:varna: 造个五十铃出来，抱着压压精
+22:13:iyzsong quit:Ping timeout: 240 seconds
+22:13:blackskygg: 怎么造
+22:13:varna: 抱哭队这事毕竟因人而异
+22:13:varna: 3333
+22:13:varna: 普建就行，要不你去1-5刷刷也有，就当捞明石
+22:14:blackskygg: 可是我只有十几个肛门
+22:14:Plough: < blackskygg> 可是我只有十几个肛门
+22:14:varna: 噗
+22:14:blackskygg: 我还是去捞吧
+22:14:Plough: 羊驼快去挨个爆掉
+22:15:varna: 我了割草
+22:15:blackskygg: 我今天按照网上的教程做了个飞机杯
+22:15:varna: 十几个肛门我怎么报
+22:15:varna: 爆
+22:15:Plough: 挨个来啊
+22:15:blackskygg: 不过家里没有淀粉只好用面包充数
+22:16:cleamoon: 大家一起来
+22:16:blackskygg: 结果硬邦邦的完全不能用
+22:16:varna: Plough: 要不你也并排趴下吧，多一个肛门大丈夫
+22:16:varna: ...
+22:16:Plough: varna: 我觉得你可以去爆自己的脑洞了
+22:16:Plough: 给自己脑交多爽
+22:17:blackskygg: @桂洪治
+22:17:varna: 快快快，大家排成单纵阵
+22:18:blackskygg: @桂治洪
+22:18:Plough: 不是应该用第四航行警戒序列么
+22:18:Plough: 这几次怎么练的这么顺
+22:18:Plough: 顺的我心里发毛啊
+22:19:varna: 对水比第四序列不适合爆战
+22:19:varna: 総員、爆雷撃戦、用意！
+22:23:sismvg: 百度啊你。。离线下载空间30G，15元一个月
+22:24:sismvg: 迅雷不知道比你便宜多少啊，15元一个月随便下啊
+22:26:Plough: 修不过来了
+22:26:sismvg: 顺带一提，迅雷没离线就是渣。2880个节点的种子，迅雷一直0kb/s..
+22:26:Plough: 叫你用吸血雷挂BT
+22:26:condy: 为啥不用115.。
+22:26:Plough: 估计是被拦了
+22:26:condy: 115还可以用离线。
+22:27:Plough: 你换个正常的BT客户端，如果有速度基本上就是被拦截了
+22:27:sismvg: 115有些东西被举报
+22:27:sismvg: 一样不能下
+22:28:condy: 久经沙场,我连这个都不知道...
+22:28:varna: 被jubao
+22:28:varna: 武藏的guitou
+22:28:condy: - -
+22:28:varna: 决定了，十一月初我打1-5和2-5的战果
+22:29:varna: 目指明石
+22:29:Plough: 不打3-5是为了省桶么
+22:29:varna: 是
+22:29:varna: 省桶省铝
+22:29:Plough: 你试试3BB3SS?
+22:29:varna: 制空太感人
+22:29:Plough: 我实测似乎死的不很惨
+22:30:Plough: 不要制空，拼夜战
+22:30:varna: 问题是我本月只扔了十个桶就斩掉
+22:30:Plough: ……
+22:30:Plough: 欧
+22:30:varna: 即使RP很差，3-5四十桶之内大致也搞定了
+22:30:Plough: 我大概断断续续扔了50~70桶
+22:30:Plough: 猫鼻子点谁谁死
+22:30:varna: 按一血十桶算，这已经是劝得很惨了吧
+22:30:Plough: 幼女点谁谁死
+22:31:sismvg: 几十年前幼儿色情似乎是合法的
+22:31:varna: 所以为活动计，还是省下这个意思不大的战果为好
+22:31:Plough: 有段时间第二点我压根就过不去
+22:31:Plough: SS可以吸引幼女的火力
+22:31:varna: 幼女似乎反潜很差
+22:31:Plough: 不强
+22:31:varna: 有一阵子farm不少人用这个
+22:32:cleamoon: 四元娘想回到过去做幼女
+22:32:varna: 但是毕竟没制空就太悲惨了，而且下个月的3-5毫无收益
+22:32:Plough: 不过那次我脸黑碰上个T有利结果旗舰剩了五点血
+22:32:Plough: T不利
+22:32:varna: 十月份至少还能保证我混个大将打打演习
+22:32:condy: http://www.zhihu.com/question/26072348#answer-8333977 真的挺美的...我不是叛徒...
+22:33:Plough: 还剩2038点经验
+22:33:Plough: 似乎轮不到5-5了
+22:33:varna: 等等，下面有个发图发错了啊，不是兄贵领 导人民么
+22:34:condy: 走了，大家腋间愉快.
+22:34:condy quit:Quit: leaving
+22:35:varna: http://tieba.baidu.com/p/3371942360?see_lz=1 # 感人的故事
+22:35:varna: 造完之后，楼主去阳台了
+22:36:Plough: 还剩886点经验
+22:36:Plough: 苍龙爸爸求不抢MVP
+22:36:Plough: 隼鹰爸爸求不抢MVP
+22:37:varna: 回去了
+22:38:Plough: 这开幕略凶狠……
+22:38:varna: 诸君夜间愉快、武运长久
+22:38:varna quit:Quit: leaving
+22:39:Plough: 啊哈哈哈哈哈哈哈哈哈我终于逃离地狱了
+22:40:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+22:43:Plough: 已喂满
+22:53:biergaizi quit:Remote host closed the connection
+22:55:biergaizi joined channel
+22:56:MisakaMikoto joined channel
+22:56:MisakaMikoto: 窝表示有个问题要问
+23:00:biergaizi_ joined channel
+23:01:biergaizi quit:Ping timeout: 244 seconds
+23:02:MisakaMikoto: ubuntu14.04要安装实时补丁的话要打哪个？内核版本是3.13，但这里 https://www.kernel.org/pub/linux/kernel/projects/rt/ 没有这个版本是什么情况，为啥只有偶数的版本号
+23:02:sou_ joined channel
+23:03:biergaizi_ quit:Remote host closed the connection
+23:03:biergaizi_ joined channel
+23:12:Plough quit:Quit: 碎叫
+23:14:xxxxxxxx: 啊啊啊啊炮姐粗线了
+23:24:xxxxxxxx: 如果没有专门发新版本 大概是上一个版本也能用吧...
+23:26:code_new: MisakaMikoto, https://forum.porteus.org/viewtopic.php?t=3443&p=24651
+23:28:xxxxxxxx: 18:38:17 varna>小学的时候是我们一起逗一个台湾佬，后来那个台湾佬变成了Gay, 还是个0……
+23:28:xxxxxxxx: 18:38:55 varna>小时候我们总打那台湾佬的尻鼓
+23:29:xxxxxxxx: 真是可怕
+23:29:code_new: 小时候认识驼兄是一件很可怕的事……
+23:32:xxxxxxxx: http://www.bilibili.com/video/av1632427/ 迷之鼓起...
+23:38:cleamoon: 这事我们也做过，不过可能没变成基佬
+23:45:LittleKey joined channel

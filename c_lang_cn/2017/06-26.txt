@@ -1,0 +1,121 @@
+00:03 BaiJiFeiLong quit:Remote host closed the connection
+00:04 BaiJiFeiLong joined channel
+00:08 lh_mouse: https://github.com/lhmouse/sudo-win
+00:18 iyzsong quit:Quit: bye.
+00:20 FrankHB quit:Ping timeout: 240 seconds
+00:24 CyrusYzGTt joined channel
+00:38 varna quit:Ping timeout: 240 seconds
+00:48 cleamoon quit:Quit: Connection closed for inactivity
+00:57 cyrushmh joined channel
+00:59 CyrusYzGTt quit:Ping timeout: 240 seconds
+01:03 cleamoon joined channel
+01:15 se_ven__ quit:Ping timeout: 240 seconds
+01:15 lh_mouse: https://lists.debian.org/debian-devel/2017/06/msg00308.html
+01:40 lh_mouse quit:Ping timeout: 240 seconds
+02:00 yonka quit:Remote host closed the connection
+02:03 BaiJiFeiLong quit:Remote host closed the connection
+02:04 BaiJiFeiLong joined channel
+02:07 yonka joined channel
+02:11 yonka quit:Ping timeout: 240 seconds
+02:14 yonka joined channel
+02:18 yonka quit:Ping timeout: 260 seconds
+02:45 yonka_ joined channel
+02:49 yonka_ quit:Ping timeout: 240 seconds
+02:59 yonka joined channel
+03:00 Mokou quit:Remote host closed the connection
+03:03 yonka quit:Ping timeout: 240 seconds
+04:03 BaiJiFeiLong quit:Remote host closed the connection
+04:03 BaiJiFeiLong joined channel
+05:46 Youmu quit:Quit: Connection closed for inactivity
+06:03 BaiJiFeiLong quit:Remote host closed the connection
+06:03 BaiJiFeiLong joined channel
+07:33 yonka joined channel
+07:37 yonka quit:Ping timeout: 260 seconds
+08:03 BaiJiFeiLong quit:Remote host closed the connection
+08:04 BaiJiFeiLong joined channel
+08:25 yonka joined channel
+08:29 yonka quit:Ping timeout: 260 seconds
+09:04 yimis joined channel
+09:20 yonka joined channel
+09:21 yonka quit:Remote host closed the connection
+09:22 Youmu joined channel
+09:23 lh_mouse joined channel
+09:27 yonka joined channel
+09:28 Mokou joined channel
+10:03 BaiJiFeiLong quit:Remote host closed the connection
+10:04 BaiJiFeiLong joined channel
+10:26 BaiJiFeiLong quit:Read error: Connection reset by peer
+10:29 ferencz joined channel
+10:53 ferencz quit:Quit: Leaving
+10:53 iferencz joined channel
+10:54 iferencz is now known as Guest55536
+10:54 Guest55536 quit:Client Quit
+10:55 ferencz joined channel
+10:55 ferencz quit:Client Quit
+10:59 ferencz joined channel
+11:04 Hickey_z joined channel
+11:07 Hickey_z quit:Client Quit
+11:12 ferencz quit:Quit: Leaving
+12:40 se_ven_ joined channel
+13:01 melonpi joined channel
+13:22 iferencz joined channel
+13:23 iferencz is now known as Guest27827
+13:23 Guest27827 quit:Client Quit
+13:23 ferencz joined channel
+13:24 EZ_Shaw joined channel
+13:28 EZ_Shaw quit:Client Quit
+13:33 EZ_Shaw joined channel
+13:38 EZ_Shaw quit:Quit: Leaving
+13:39 EZ_Shaw joined channel
+13:39 EZ_Shaw quit:Remote host closed the connection
+13:57 lh_mouse: geordi, { vector<int> vec{1,2,3,4,5}; for(auto iter = vec.begin(); iter != end; iter++) { if (*it == 3) { vec.erase(iter); --iter; } }  cout <<v; }
+13:57 geordi: error: no match for 'operator!=' in 'iter != end' (operand types are 'vector<int>::iterator' and '<unresolved overloaded function type>')
+13:57 lh_mouse: geordi, { vector<int> vec{1,2,3,4,5}; for(auto iter = vec.begin(); iter != vec.end(); iter++) { if (*it == 3) { vec.erase(iter); --iter; } }  cout <<v; }
+13:57 geordi: error: 'it' was not declared in this scope
+13:57 lh_mouse: geordi, { vector<int> vec{1,2,3,4,5}; for(auto iter = vec.begin(); iter != vec.end(); iter++) { if (*iter == 3) { vec.erase(iter); --iter; } }  cout <<v; }
+13:57 geordi: error: 'v' was not declared in this scope
+13:57 lh_mouse: geordi, { vector<int> vec{1,2,3,4,5}; for(auto iter = vec.begin(); iter != vec.end(); iter++) { if (*iter == 3) { vec.erase(iter); --iter; } }  cout <<vec; }
+13:57 geordi: error: attempt to decrement a singular iterator.
+13:57 lh_mouse: geordi, --clang { vector<int> vec{1,2,3,4,5}; for(auto iter = vec.begin(); iter != vec.end(); iter++) { if (*iter == 3) { vec.erase(iter); --iter; } }  cout <<vec; }
+13:57 geordi: {1, 2, 4, 5}
+14:48 ferencz quit:Remote host closed the connection
+15:06 yimis quit:Quit: yimis
+15:25 Socat1 joined channel
+15:41 OwenJia joined channel
+15:41 OwenJia quit:Changing host
+15:41 OwenJia joined channel
+15:44 lh_not_bot quit:Remote host closed the connection
+15:54 OwenJia quit:Remote host closed the connection
+16:06 lh_not_bot joined channel
+16:06 lh_not_bot is now known as Guest93733
+16:30 Guest93733 quit:Quit: leaving
+16:37 Taggnostr quit:Ping timeout: 255 seconds
+16:43 whocares_2 joined channel
+16:43 whocares_2_ quit:Ping timeout: 260 seconds
+17:17 lh_not_bot joined channel
+17:28 OwenJia joined channel
+18:21 melonpi_ joined channel
+18:24 melonpi quit:Ping timeout: 240 seconds
+19:29 lhanjian: 歪风邪气啊 https://www.zhihu.com/question/61379278/answer/189618520
+19:35 Youmu: https://www.zhihu.com/people/lvhejin/answers 这是谁
+19:36 StardustX: 一看就是老红军
+20:08 cleamoon quit:Quit: Connection closed for inactivity
+20:52 Mokou quit:Remote host closed the connection
+21:22 Mokou joined channel
+21:45 tony_ joined channel
+21:45 tony_: test
+21:48 yonka quit:Remote host closed the connection
+22:13 melonpi_ quit:Remote host closed the connection
+22:13 melonpi_ joined channel
+22:26 tony_ quit:Remote host closed the connection
+22:46 melonpi_ quit:Remote host closed the connection
+22:46 melonpi_ joined channel
+23:07 melonpi_ quit:Remote host closed the connection
+23:07 melonpi_ joined channel
+23:08 melonpi_ quit:Remote host closed the connection
+23:09 melonpi_ joined channel
+23:23 lhanjian: 老婆老婆
+23:32 melonpi_ quit:Remote host closed the connection
+23:32 melonpi_ joined channel
+23:57 lhanjian: 麻烦了，脚踏n条船被酒吧老板知道了
+23:58 lhanjian: 这算个剧情疏漏吧

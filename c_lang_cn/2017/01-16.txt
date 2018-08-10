@@ -1,0 +1,88 @@
+00:04 k0r74n quit:Quit: Leaving
+00:15 zwindl quit:Quit: Connection closed for inactivity
+00:18 zwindl joined channel
+00:18 wlemuel quit:Quit: leaving
+00:21 \f quit:Ping timeout: 256 seconds
+00:24 \f joined channel
+00:40 lh_mouse_: geordi, << alignof(a); alignas(64) int a;
+00:40 geordi: error: ISO C++ does not allow 'alignof' with a non-type
+00:40 lh_mouse_: geordi, << alignof(a); int alignas(64) a;
+00:40 geordi: Same error.
+00:40 lh_mouse_: geordi, << alignof(a); int __attribute__((align(64)) a;
+00:40 geordi: error: Unexpected end of request. Expected ')' or balanced code.
+00:40 Mokou joined channel
+00:40 lh_mouse_: geordi, << alignof(a); int __attribute__((align(64))) a;
+00:40 geordi: error: ISO C++ does not allow 'alignof' with a non-type
+00:41 lh_mouse_: geordi, << __alignof__(a); alignas(64) int a;
+00:41 geordi: 64
+01:01 geordi quit:Remote host closed the connection
+01:01 lh_mouse_ quit:Ping timeout: 248 seconds
+01:01 geordi joined channel
+03:19 \f quit:Remote host closed the connection
+04:22 Mokou_ joined channel
+04:24 Mokou quit:Ping timeout: 252 seconds
+04:33 Mokou_ quit:Remote host closed the connection
+04:55 zwindl quit:Quit: Connection closed for inactivity
+09:01 yimis joined channel
+09:18 lh_mouse joined channel
+09:19 iyzsong-w joined channel
+09:43 Youmu joined channel
+09:46 whatofor joined channel
+10:15 FrankHB joined channel
+11:26 lh_mouse: geordi, -c using F = int (int, int); int foo(F f){ return f(1, 2); }
+11:26 geordi: Success
+12:00 fcg joined channel
+12:15 fcg quit:Quit: Page closed
+12:23 yimis quit:Ping timeout: 240 seconds
+12:24 yimis joined channel
+12:27 iyzsong-w quit:Ping timeout: 240 seconds
+12:43 Mokou joined channel
+12:49 iyzsong-w joined channel
+12:58 Mokou quit:Ping timeout: 252 seconds
+12:59 Mokou joined channel
+13:08 Stevearzh quit:Quit: Quit...
+15:59 iyzsong-w quit:Read error: Connection reset by peer
+16:01 iyzsong-w joined channel
+17:24 yimis quit:Quit: yimis
+18:25 kin3z quit:Quit: Leaving
+18:27 FrankHB quit:Ping timeout: 258 seconds
+18:35 iyzsong-w quit:Ping timeout: 240 seconds
+18:47 iyzsong-w joined channel
+19:04 lh_mouse: geordi, void foo(int &&){ } int bar(){ int i; return i; }
+19:04 geordi: warning: 'i' is used uninitialized in this function
+19:04 lh_mouse: geordi, void foo(int &&){ } int bar(){ int i = 1; return i; }
+19:04 geordi: Success
+19:04 lh_mouse: geordi, void foo(int &&){ } void bar(){ int i = 1; foo(i); }
+19:04 geordi: error: cannot bind rvalue reference of type 'int&&' to lvalue of type 'int'
+19:05 lh_mouse: geordi, void foo(int &&){ } void bar(){ int i = 1; return foo(i); }
+19:05 geordi: Same error.
+19:05 lh_mouse: geordi, int foo(int &&){ return 1; } int bar(){ int i = 2; return foo(i); }
+19:05 geordi: Still same error.
+19:05 lh_mouse: geordi, int foo(int &&){ return 1; } int bar(){ int i = 2; return foo(move(i)); }
+19:05 geordi: Success
+19:08 FrankHB joined channel
+19:09 yimis joined channel
+19:14 yimis quit:Quit: yimis
+19:39 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+20:17 Mokou: geordi: << sizeof(unique_ptr<int, test>); void test(int*)  {};
+20:17 geordi: error: extra ';'
+20:17 Mokou: geordi: << sizeof(unique_ptr<int, test>); void test(int*)  {}
+20:17 geordi: error: type/value mismatch at argument 2 in template parameter list for 'template<class _Tp, class _Dp> class unique_ptr'
+20:18 Mokou: geordi: << sizeof(unique_ptr<int, viod(*)(int*)>);
+20:18 geordi: error: 'viod' was not declared in this scope
+20:18 Mokou: geordi: << sizeof(unique_ptr<int, void(*)(int*)>);
+20:18 geordi: 16
+20:22 iyzsong joined channel
+20:28 cleamooon: 人民日报：2017年首次出访，习近平主席将如何阐述人类从哪里来，现在在哪里，将到哪里去，这一人类发展的重要命题。人类等待着答案。
+20:34 iyzsong: _(:з」∠)_
+20:36 Youmu: 。。。
+20:36 Youmu: iyzsong: 宋先生不乖
+20:36 iyzsong: - -
+21:24 whatofor quit:Read error: Connection reset by peer
+22:09 FrankHB quit:Ping timeout: 240 seconds
+22:27 Flandre__ quit:Remote host closed the connection
+22:27 aeromax[m] quit:Read error: Connection reset by peer
+22:34 Mokou quit:Remote host closed the connection
+22:35 iyzsong quit:Quit: bye.
+22:58 aeromax[m] joined channel
+23:29 Flandre__ joined channel

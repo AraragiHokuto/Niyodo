@@ -1,0 +1,346 @@
+00:03 lh_ideapad quit:Remote host closed the connection
+00:03 matchray: lhanjian: 你去了嗎？
+00:03 lhanjian: 去了啊
+00:07 Mokou: 可惜我在你京
+00:07 Mokou: 去不了
+00:08 lhanjian: 你京？
+00:09 varna quit:Ping timeout: 265 seconds
+00:26 Mokou: 首都
+00:41 matchray: ccls 依然沒有人關注:(
+01:12 lh_mouse quit:Ping timeout: 256 seconds
+01:28 FrankHB quit:Quit: Konversation terminated!
+01:30 FrankHB joined channel
+01:31 FrankHB quit:Client Quit
+01:32 FrankHB joined channel
+01:33 FrankHB quit:Client Quit
+01:33 FrankHB joined channel
+01:54 lh_cat joined channel
+01:55 lh_cat: lhanjian: 你们赶上车了吗。
+01:59 matchray: 這麼晚才走？
+02:00 matchray: 什麼球？
+02:00 matchray: 足球？
+03:02 cleamoon_ quit:Quit: Connection closed for inactivity
+04:04 lh_cat quit:Quit: Connection closed for inactivity
+06:46 cleamoon_ joined channel
+07:52 zhangoke joined channel
+07:52 zhangoke quit:Client Quit
+08:11 zhangoke joined channel
+08:11 zhangoke quit:Client Quit
+08:38 FrankHB quit:Ping timeout: 240 seconds
+09:10 FrankHB joined channel
+09:22 FrankHB quit:Ping timeout: 240 seconds
+09:42 lh_mouse joined channel
+09:54 FrankHB joined channel
+09:59 lh_cat joined channel
+10:02 lh_mouse quit:Ping timeout: 268 seconds
+10:09 jingjinghack quit:Remote host closed the connection
+10:11 lh_cat is now known as lh_mouse
+10:13 lh_ideapad joined channel
+11:40 condy quit:Ping timeout: 268 seconds
+11:45 condy joined channel
+11:57 sixand joined channel
+12:19 matchray: https://github.com/bpowers/musl/blob/master/src/thread/pthread_once.c#L28 有0,1,2,3四個狀態。狀態1僅僅爲了省一個undo時的FUTEX_WAKE ?
+12:31 zhangoke joined channel
+12:32 zhangoke quit:Client Quit
+12:46 matchray: https://sourceware.org/bugzilla/show_bug.cgi?id=14092 
+12:47 matchray: https://github.com/lhmouse/mcfgthread/blob/master/src/env/c11thread.c
+12:53 matchray: MCF就是 Mouse Compiler-rt Flavor
+12:59 matchray: varna: David Xu
+13:00 matchray: FreeBSD thread他做的
+13:00 wenfeng joined channel
+13:07 lh_ideapad: matchray, 应该是。
+13:10 matchray: "應該是" 是針對 狀態1僅僅爲了省一個undo時的FUTEX_WAKE ? 
+13:12 lh_ideapad: 不太清楚，看起来是这样。
+13:12 lh_ideapad: 窝实现的 once 就只有三个状态。
+13:13 matchray: FreeBSD libthr也是四個狀態，一樣的
+13:13 matchray: C11 不需要考慮cancel
+13:14 matchray: 哪三個狀態？
+13:15 matchray: 所以你們lhanjian lh_cat varna FrankHB見到了？
+13:15 lh_ideapad: unlocked  locked  finished
+13:15 lh_ideapad: 对。
+13:15 lh_ideapad: matchray, https://github.com/lhmouse/mcfgthread/wiki/env-once_flag.h#_mcfcrt_onceresult-_mcfcrt_waitforonceflag_mcfcrt_onceflag-ponceflag-uint64_t-u64untilfastmonoclock
+13:19 matchray: gcc: error: unrecognized command line option ‘-municode’
+13:19 matchray: bear ./build_x86_64_release.sh
+13:22 matchray: 無法在Linux上用ccls閱讀；gg
+13:25 sixand1 joined channel
+13:29 sixand quit:Ping timeout: 264 seconds
+13:29 sixand1 is now known as sixand
+13:36 lh_ideapad: matchray, 怎么感觉你这个是 linux 的 gcc 。
+13:36 lh_ideapad: matchray, x86_64-w64-mingw32-gcc --version 说什么。
+13:42 matchray: 能不能用 clang_cc1 -triple "x86_64-mingw32 替代
+13:43 lh_ideapad: x64 可以。  x86 不行。
+13:43 matchray: 但Linux上還得裝mingw32 header吧？怎麼弄呢
+13:44 lh_ideapad: 编译器支持 c99 和 gnu 风格汇编。
+13:44 matchray: 我覺得用ccls看代碼不需要鏈接
+13:44 lh_ideapad: x86 不行的原因是 clang 不支持 intel syntax 。
+13:44 lh_ideapad: 什么发行版的 linux 。
+13:44 matchray: 能夠根據mingw header 生成object file，bear 就足以生成compile_commands.json
+13:44 matchray: Debian testing
+13:45 lh_ideapad: sudo aptitude install gcc-mingw-w64-x86-64 mingw-w64-x86-64-dev
+13:46 lh_ideapad: 你看一下 build_x86_64_release.sh  。如果有问题就手动 configure 。
+13:47 lh_ideapad: mkdir -p m4; ./configure --build=x86_64-pc-linux --host=x86_64-w64-mingw32; make 
+13:47 lh_ideapad: 不对。
+13:47 lh_ideapad: mkdir -p m4; autoconf -if; ./configure --build=x86_64-pc-linux --host=x86_64-w64-mingw32; make 
+13:47 lh_ideapad: 如果没有 autoconf automake 都需要安装。
+13:48 lh_ideapad: 我并不没有把 configure 提交的习惯，所以你得自己生成。
+13:50 matchray: ../../configure: line 2312: ./conftest.exe: cannot execute binary file: Exec format error
+13:50 matchray: 等等
+13:51 lh_ideapad: configure 指定 --build 和 --host 不同的时候是 cross compile 。
+13:52 matchray: configure可行(build=linux,host=w64-mingw32)，但make依賴 cygpath -m
+13:52 lh_ideapad: 不依赖。如果这个命令不存在会有 fallback 。
+13:53 lh_ideapad: __pch.h: ${srcdir}/src/env/_crtdef.h
+13:53 lh_ideapad:     echo "#include \"$$(cygpath -m "$<" || readlink -f "$<")\"" > $@
+13:54 lh_ideapad: In MSYS2 `readlink` returns a POSIX-ish path which cannot be resolved by a native program e.g. GCC.
+13:55 lh_ideapad: This is not a problem if we cross-compile from Linux.
+13:55 lh_ideapad: ... i could have added a `2>/dev/null` there.
+13:55 matchray: 我的AM_V_CC是空的，CC是gcc
+13:56 lh_ideapad: autoreconf -ifv  运行过么。
+13:57 matchray: cd mcfgthread; autoreconf -ifv;
+13:57 matchray: AM_V_CC依然空，CC是gcc
+13:57 lh_ideapad: ./configure --build=x86_64-pc-linux --host=x86_64-w64-mingw32
+13:58 lh_ideapad: lh_mouse@lhmouse-ideapad ~/GitHub/mcfgthread $ grep -E '^AM_V_CC' Makefile
+13:58 lh_ideapad: AM_V_CC = $(am__v_CC_$(V))
+13:58 lh_ideapad: AM_V_CCLD = $(am__v_CCLD_$(V))
+13:58 matchray: 這個可以；不能用 ../../configure 了
+13:58 lh_ideapad: --build 和 --host 没加吧。
+13:58 lh_ideapad: --build 不一定要加。
+13:59 lh_ideapad: 如果没有 --build ，在有 wine 存在的情况下被当作 native build 。
+13:59 lh_ideapad: 所有 --build 还是建议加，只要和 --host 不一样就行。
+14:00 matchray: make distclean; mkdir -p debug/mingw64; cd debug/mingw64; ../../configure --build=x86_64-pc-linux --host=x86_64-w64-mingw32; bear make
+14:00 lh_ideapad: 应该没问题的。
+14:01 matchray: 嗯，1秒鐘檢索
+14:02 matchray: https://ptpb.pw/AT5x.jpg
+14:03 matchray: 你應該把典型Linux distro構建方式寫一下
+14:05 lh_ideapad: 啊？
+14:05 lh_ideapad: 这是标准的 cross-compile 过程啊。
+14:05 lh_ideapad: 而且窝的 ./build_x86_64_debug.sh 
+14:05 lh_ideapad:  可以直接跑。
+14:06 matchray: No.     ../configure --build="$build" --host="$build" --prefix="$prefix") &&
+14:06 lh_ideapad: 码睿好厉害！
+14:06 sixand1 joined channel
+14:06 lh_ideapad: matchray, 这会被当作 native build 。
+14:06 matchray: 還是希望能用clang構建
+14:07 lh_ideapad: 虽然目前看来没什么问题。
+14:07 lh_ideapad: 那么你得帮窝个忙。
+14:07 matchray: 這樣的問題是autohell會嘗試運行生成的.exe
+14:07 matchray: 然後就fail了
+14:07 lh_ideapad: 你找一个叫 _seh_top.h 的文件。
+14:07 lh_ideapad: 这里有个 x86 的汇编。
+14:07 * matchray don't know windows seh
+14:07 lh_ideapad: 你把它改成 at&t syntax ，再把 Makefile.am 里的 -masm=intel 删除，就能用 clang 编译了。
+14:08 lh_ideapad: 直接改写就行，不用懂。
+14:08 matchray: configure cross compile怎麼用clang 
+14:09 lh_ideapad: ./configure CC=clang  --build=x86_64-pc-linux --host=x86_64-w64-mingw32
+14:09 sixand quit:Ping timeout: 264 seconds
+14:09 sixand1 is now known as sixand
+14:09 lh_ideapad: 编译 c++ 的话用 CXX=clang++
+14:09 matchray: 可能要用 clang -target x86_64-mingw32
+14:10 matchray: mingw32上gcc自動 .intel_syntax ?
+14:10 matchray: mingw32上gcc自動 .intel_syntax noprefix ?
+14:10 lh_ideapad: Makefile.am 里有个 -masm=intel 。
+14:11 lh_ideapad: AM_CPPFLAGS = -Wall -Wextra -pedantic -pedantic-errors -Werror -Wno-error=unused -Winvalid-pch  \
+14:11 lh_ideapad:     -Wwrite-strings -Wconversion -Wsign-conversion -Wdouble-promotion -Wsuggest-attribute=noreturn -Wundef -Wshadow -Wstrict-aliasing=2 \
+14:11 lh_ideapad:     -pipe -mno-stack-arg-probe -masm=intel -municode -ffreestanding \
+14:11 lh_ideapad:     -D__MCFCRT_NO_GENERAL_INCLUDES
+14:11 matchray: clang supports -masm=intel
+14:11 matchray: since Mon Jul 18 18:44:51 2016
+14:12 matchray: Tue May 13 11:11:24 2014
+14:12 lh_ideapad: in the case of clang, `-masm=intel` makes clang GENERATE asm in intel syntax, but it still fails to read `__asm__` declarations.
+14:13 matchray: 需要 %eax
+14:13 matchray: .intel_syntax 但要prefix
+14:14 lh_ideapad: 不止这些。
+14:14 lh_ideapad: C:   i = 42;
+14:14 lh_ideapad: Intel ASM:  mov eax, 42
+14:14 lh_ideapad: AT&T ASM:   movl $42, %eax 
+14:15 lh_ideapad: 如果是 extended asm （有 input 和 output 的）得写两个 % 。
+14:15 matchray: clang: error: unknown argument: '-mno-stack-arg-probe'
+14:15 lh_ideapad: 删除这个参数。
+14:16 matchray: Fri Feb 23 13:47:36 2018 +0000 支持 -mno-stack-arg-probe 了
+14:16 matchray: clang-7: error: argument unused during compilation: '-municode' [-Werror,-Wunused-command-line-argument]
+14:16 lh_ideapad: 升级吧。
+14:17 lh_ideapad: -municode 不认识？
+14:17 FrankHB quit:Ping timeout: 255 seconds
+14:17 lh_ideapad: 这个选项会影响 _UNICODE 宏定义，怎么会不用到。
+14:17 lh_ideapad: 还是 specs 里没写。
+14:18 matchray: -municode 好像clang只在 linker階段用
+14:18 lh_ideapad: 如果 _UNICODE 定义，则 typedef wchar_t _TCHAR; 否则 typedef char _TCHAR; 。
+14:18 lh_ideapad: 不应该。
+14:18 matchray: https://github.com/llvm-mirror/clang/tree/master/lib/Driver/ToolChains/MinGW.cpp#L176
+14:18 lh_ideapad: 改到 bin_mcfgthread_??_dll_LDFLAGS 里即可。
+14:19 lh_ideapad: 怪不得。
+14:19 matchray: gcc -municode 改 _UNICODE 定義？
+14:19 lh_ideapad: lh_mouse@lhmouse-ideapad ~/GitHub/asteria $ x86_64-w64-mingw32-gcc -dumpspecs | grep -F unicode
+14:19 lh_ideapad: %{posix:-D_POSIX_SOURCE} %{mthreads:-D_MT} %{municode:-DUNICODE} %{pthread:-D_REENTRANT} %{!no-pthread:-U_REENTRANT} 
+14:19 lh_ideapad: %{shared|mdll:dllcrt2%O%s}   %{!shared:%{!mdll:%{!municode:crt2%O%s}}}   %{!shared:%{!mdll:%{municode:crt2u%O%s}}}   %{pg:gcrt2%O%s}   crtbegin.o%s   %{fvtable-verify=none:%s;     fvtable-verify=preinit:vtv_start.o%s;     fvtable-verify=std:vtv_start.o%s}
+14:20 lh_ideapad: 这个是 specs 里的参数， 不是代码里的。
+14:20 matchray: 看到了，*cpp:階段
+14:21 matchray: (看起來我找到一個patch機會
+14:21 lh_ideapad: 窝用 clang 编译过 x64 的，但是生成的 DLL 一用就爆炸。
+14:21 matchray: error: unknown warning option '-Wsuggest-attribute=noreturn' [-Werror,-Wunknown-warning-option]
+14:22 lh_ideapad: 这个也可以去掉，没什么用。
+14:22 matchray: -Wno-unknown-warning-option
+14:22 lh_ideapad: 因为现在标准都有 _Noreturn 和 [[noreturn]] 了。
+14:23 lh_ideapad: 但是这两个声明的位置不一样。
+14:23 matchray: ../../src/env/thread.h:12:39: error: calling convention '__stdcall__' ignored for this target
+14:23 matchray: ../../src/env/mcfwin.h:30:10: fatal error: 'windows.h' file not found
+14:23 lh_ideapad: 这个好像不是 windows 的 clang 吧。
+14:24 lh_ideapad: apt 源里没有 mingw-w64 的 clang 。
+14:24 lh_ideapad: msys2 的 pacman 里有。
+14:26 matchray: clang應該是默認帶所有targets的
+14:26 matchray: 拿clang可以編譯powerpc64le，只要找得到header files
+14:27 lh_ideapad: 在 /usr/x86_64-w64-mingw32/include/ 。
+14:27 matchray: lld 可以同時當 coff elf wasm linker ...
+14:27 lh_ideapad: lib 在 /usr/x86_64-w64-mingw32/lib/ 。
+14:27 lh_ideapad: 你看看怎么配置吧。
+14:29 FrankHB joined channel
+14:30 * lh_ideapad slaps FrankHB around a bit with a large trout
+14:36 FrankHB quit:Read error: error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac
+14:38 sixand1 joined channel
+14:40 sixand quit:Ping timeout: 256 seconds
+14:41 sixand1 is now known as sixand
+14:43 matchray: 可能顯式#ifndef UNICODE\n#define UNICODE\n#endif好吧
+14:43 matchray: 這個要加進clang很麻煩，得多一個language option
+14:43 lh_ideapad: 对。 gcc 是 specs 里直接做了 pp 和 linker 的参数。
+14:44 lh_ideapad: 编译的时候 linker 参数用不到，链接的时候 pp 参数也用不到。
+14:44 matchray: gcc/doc/invoke.texi 
+14:44 matchray: 很多選項都是垃圾
+14:49 FrankHB joined channel
+14:55 matchray: 我需要讓 x86_64-mingw32-clang 用 lld-link
+15:00 matchray: error: SEH .xdata exception handling was disabled in PCH file but is currently enabled
+15:00 matchray: error: PCH file was compiled for the target 'x86_64-unknown-linux-gnu' but the current translation unit is being compiled for target
+15:00 matchray:       'x86_64--windows-gnu'
+15:04 matchray: x86_64-mingw32-clang -fuse-ld=lld a.c -o a.exe 這樣是可以鏈接的
+15:06 matchray: lh_ideapad: ln -s clang x86_64-mingw32-clang 即可
+15:07 matchray: i386pep 是x86_64?
+15:08 matchray: clang 的 pch和gcc gch還是不一樣
+15:11 matchray: Dev/llvm/release/lib/clang/7.0.0/include/emmintrin.h:3427:10: error: returning 'int' from a function with incompatible result
+15:11 matchray:       type '__m128' (vector of 4 'float' values)
+15:15 lh_ideapad: make clean  把 PCH 清除重新编译。
+15:15 lh_ideapad: matchray, 
+15:16 lh_ideapad: PCH 必须使用相同的可执行文件和参数生成，以及使用。
+15:16 matchray: 我直接刪除了 -include pch
+15:16 lh_ideapad: “相同”以致于必须是相同的文件。
+15:17 lh_ideapad: matchray, 看来是的。 x64 的叫 PE+ 也就是 PEplus
+15:18 matchray: PATH=/tmp/c:$PATH make src/env/_seh_top.o 可以構建，clang-7 -cc1 -triple x86_64--windows-gnu -emit-obj ...
+15:18 matchray: ../../src/env/inline_mem.h:22:10: error: dereference of pointer to incomplete type 'const char []'
+15:19 matchray: const char (*)[] -> const char ** ?
+15:19 matchray: ../../src/env/thread.c:56:2: error: .seh_ directive must appear within an active frame
+15:20 matchray: clang-7: error: unable to execute command: Segmentation fault
+15:21 matchray: 是的話我可以pr..
+15:35 lh_ideapad: matchray, `const char (*)[]` 无误。
+15:35 lh_ideapad: __p2 是 const char (&)[] 。
+15:36 lh_ideapad: 不能用 const char * ，必须用 [] 。
+15:36 matchray: LDFLAGS -O2 這裏 -O2 意義很小(string suffix merge, gold愚蠢quicksort，lld 3-way string quicksort)
+15:37 lh_ideapad: LDFLAGS -O2 和 -O 一样。
+15:37 lh_ideapad: 不能没有就是了。
+15:37 matchray: gold -O1 -O2 一樣
+15:37 matchray: lld 不一樣
+15:37 matchray: -O1 identical string fold
+15:39 lh_ideapad: .seh_handler 感觉是异常模型的问题。
+15:39 lh_ideapad: -S 看看一下吧。
+15:39 matchray: llvm seh是不完善的
+15:40 lh_ideapad: 给 GAS 生成的函数要有个 directive R .
+15:41 matchray: const char [] 不會decay嗎
+15:41 lh_ideapad: .seh_proc   _MCFCRT_WrapThreadProcWithSehTop
+15:41 lh_ideapad: 不会。 "o“ 的 operand 是 lvalue 。
+15:42 lh_ideapad: 这个 "o" 只是告诉 GCC 这个左值是输入。  上面的 p1 是输出。
+15:42 lh_ideapad: 如果没有这两个 constraint 那么 GCC 就会认为 *p1 *p2 不会被 asm 修改。
+15:43 matchray: inline asm也是不完善的
+15:43 lh_ideapad: 如果直接用 *(const char *)p1 那么 GCC 知道 *p1 会被修改，但是 p1[1] 不会。
+15:43 lh_ideapad: 如果用 *(const char (*)[])p1 那么 p1 + offset 的所有范围都认为是可能被修改的。
+15:44 lh_ideapad: 如果你不用这个，有个 workaround 。
+15:44 lh_ideapad: 把 "=o"(*(char (*)[])__p1),    "o"(*(const char (*)[])__p2),    删除，在下面再加一行    : "memory" 。
+15:45 lh_ideapad: 把整个 memory clobber 掉。
+15:45 lh_ideapad: 不用 memory clobber 的意义在于，这个是 overpowered 把所有的 p1 p2 无关的重排也禁止了。
+15:47 matchray: ERMSB, rep movsb 比 rep movsd , rep movsq 好
+15:54 matchray: "=c"(__dumb) "c"(__n) 僅僅爲了優化？
+15:54 matchray: 爲啥不用 "+c"
+15:54 matchray: o
+15:54 matchray: 下面用到
+15:57 matchray: 報告指出glibc的memcpy很多地方是冗餘的
+15:57 matchray: 幾個少量的常見size 展開+rep movsb就足夠好了
+15:58 matchray: 不過rep movsb用於超長似乎有一定啓動開銷(30 40 cycles忘記哪裏聽得
+15:58 matchray: 較短時可能比不上sse copy
+16:01 lh_mouse: matchray, rep movsb 要求 CPU 支持 ERMSB 。
+16:01 sixand1 joined channel
+16:01 lh_mouse: 而且，就我的测试结果，n 较小时候打不过 switch case 的。
+16:02 lh_mouse: ERMSB 主打的是 i/o throughout 但是 high latency 解决不也。
+16:02 lh_mouse: 解决不了 *
+16:03 lh_mouse: matchray, 这里手写 inline 因为 -nostdlib 。 虽然 NTDLL 有 RtlCopyMemory() 可以用不过那个是外部函数，不能 inline 的。
+16:03 sixand quit:Ping timeout: 245 seconds
+16:03 sixand1 is now known as sixand
+16:04 lh_mouse: 这里有一个不 inline 的  https://github.com/lhmouse/MCF/blob/master/MCFCRT/src/stdc/string/_memcpy_impl.h 
+16:04 lh_mouse: rep movs 实际是 optimize for size 了。
+16:10 sixand quit:Ping timeout: 240 seconds
+16:17 sixand joined channel
+16:35 lh_ideapad quit:Quit: For the Red Army!
+16:36 lh_ideapad joined channel
+16:45 lhanjian: matchray: 喵
+17:03 FrankHB quit:Ping timeout: 264 seconds
+17:10 lhanjian: lh_mouse: 喵
+17:16 lh_ideapad: lhanjian, 你们赶上车了吗？
+17:16 lhanjian: 没，退票重买走的
+17:22 sixand quit:Ping timeout: 245 seconds
+17:24 lh_ideapad: 0.0
+17:28 sixand joined channel
+17:41 sixand quit:Ping timeout: 248 seconds
+18:00 sixand joined channel
+18:21 sixand quit:Ping timeout: 240 seconds
+18:27 sixand joined channel
+18:34 sixand quit:Quit: sixand
+18:34 sixand joined channel
+18:40 sixand quit:Quit: sixand
+18:40 sixand joined channel
+18:45 sixand quit:Ping timeout: 256 seconds
+18:55 FrankHB joined channel
+19:40 FrankHB quit:Ping timeout: 240 seconds
+19:47 iyzsong joined channel
+20:10 FrankHB joined channel
+20:26 FrankHB: https://zhuanlan.zhihu.com/p/38476718
+20:29 lh_mouse: 肥球。
+20:29 lh_mouse: 帝球圆滚滚。
+20:36 cleamoon_: 简单说就是，现在吹的区块链做的还没几年前的正经应用好？
+20:40 varna joined channel
+20:40 varna: 噗叽啪
+20:42 cleamoon_: uccu
+20:44 varna: 我在游戏记录里查了一下，至今为止的妖怪boss，怨灵鬼落命四次，飞缘魔小姐姐七次，夜鸟三次；被妖怪杂兵杀掉合计大约不到七次
+20:44 varna: 也就是说，真立花开荒落命搞不好将近一百次……
+20:44 varna: 真姬儿丢人
+20:44 cleamoon_: .......
+20:45 varna: 真·装X遭雷劈
+20:45 cleamoon_: 飞缘魔真少
+20:45 varna: 总想弹反他
+20:45 varna: 飞缘魔一开始不熟悉麻痹躲法和属性伤害死了机会
+20:45 varna: 几回*
+20:45 varna: 其实小姐姐整个人都是套路捏出来的，别失误就行
+20:45 cleamoon_: orz
+20:45 varna: 刚逢魔任务打了个无伤
+20:46 varna: 其实也不是真没中招，开大的时候被抱舔了，然而不算伤害
+20:47 cleamoon_: 在 QQ 浏览器之后，百度手机输入法被发现会在用户无任何操作时调用录音功能
+20:47 varna: ...
+20:47 cleamoon_: orz
+20:48 cleamoon_: 君垃圾游戏本当上手
+20:48 varna: 那个白花花的大长腿还是很好的
+20:50 cleamoon_: 多被踢几次更好
+20:50 cleamoon_: 我记得有个up为了看大腿在那里疯狂落命
+20:50 varna: 看大腿那招第三段需要前引一下，不然不容易出来
+20:51 varna: 有半秒左右看，看高兴了还可以照头一刀
+20:51 varna: 这种时候就看出doraiba的好处了，被女色吸引的地方都奇奇怪怪的
+20:52 cleamoon_: 太太都是看着牛头人说真可爱的
+20:54 varna: 太太刚出伦敦塔的时候一路大呼变态裸男
+20:54 cleamoon_: 23333
+20:55 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/z8/rp_225118.jpg@596w_1l.jpg
+20:55 lh_ideapad: varna, 求个建议 https://github.com/lhmouse/mcfgthread/pull/37  。
+20:56 cleamoon_: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/z9/14_325700.jpg@596w_1l.jpg  #这货一场就没进场几次吧
+20:56 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/z8/zd_347222.jpg@596w_1l.jpg  喵卍解了
+21:00 lh_mouse: 喵。
+21:02 varna: lh_ideapad: 建议不改，但是我不清楚为什么clang会拒绝这个例子
+21:17 FrankHB quit:Ping timeout: 264 seconds
+21:19 lh_ideapad quit:Remote host closed the connection
+21:36 lh_mouse: varna, got √
+21:52 zhangoke joined channel
+22:00 zhangoke quit:Quit: zhangoke
+22:30 FrankHB joined channel
+22:50 lh_ideapad joined channel
+23:15 lh_ideapad quit:Remote host closed the connection
+23:48 iyzsong quit:Ping timeout: 240 seconds

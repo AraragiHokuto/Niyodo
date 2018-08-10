@@ -1,0 +1,377 @@
+00:00 cleamoon: 这里又没有latex parser...
+00:01 Guest48962 quit:Changing host
+00:01 Guest48962 joined channel
+00:01 Guest48962 is now known as \f
+00:01 balabala quit:Remote host closed the connection
+00:02 xxxxxxxx: 我在wikia刷新了半天一个页面出不来
+00:02 xxxxxxxx: 然后我定睛一看 原来是联结里有个toad
+00:14 FrankHB joined channel
+00:17 balabala joined channel
+00:19 balabala: 大一就记忆缺失了
+00:23 balabala quit:Ping timeout: 272 seconds
+00:24 FrankHB: 都是辣鸡。
+00:25 FrankHB: qq的傻叉聊天记录没公开接口不说，乱吃CPU乱吃I/O。
+00:26 FrankHB: 至于文本log已经写坏死掉NTFS文件炸妈了。
+00:28 xxxxxxxx quit:Quit: Leaving...
+00:28 cleamoon: qq渣渣
+00:29 FrankHB: 奇葩的是那个log.txt只要是读写都直接卡死，放在个人目录下懒得备份格盘所以改名了事。
+00:29 cleamoon: 这什么鬼...
+00:29 FrankHB: 当然试过了常规修复无效。
+00:30 FrankHB: 反正NT驱动这里很迷。。。直接内核态卡翔就不管了。
+00:31 FrankHB: 看起来也不想是ALPC死锁。
+00:31 cleamoon: 驱动挂了？好神奇
+00:31 cleamoon: AIPC死锁
+00:36 FrankHB: 不算挂，只是遇到不正常的介质状态时的正常炸妈。
+00:36 FrankHB: 不碰就没问题了。
+00:36 FrankHB: 删除当然也不行。
+00:37 cleamoon: .....
+01:06 cleamoon quit:Ping timeout: 264 seconds
+01:06 Rabika joined channel
+01:08 Youmu quit:Quit: Connection closed for inactivity
+01:09 Rabika joined channel
+01:13 LastAvengers quit:Quit: Srain0.05-git@0.363.0c4b4db close.
+01:28 Rabika left channel:"再见"
+01:49 Mokou: 睡觉
+01:49 Mokou: 诸君武运
+01:49 Mokou quit:Quit: 睡觉
+04:14 cleamoon joined channel
+05:02 cleamoon: gauge, 还醒着吗
+06:05 FrankHB quit:Quit: Konversation terminated!
+06:41 iyzsong joined channel
+06:42 iyzsong quit:Changing host
+06:42 iyzsong joined channel
+06:58 cleamooon joined channel
+07:00 FrankHB joined channel
+07:01 cleamoon quit:Ping timeout: 244 seconds
+08:03 iyzsong: (┙>∧<)┙へ┻┻
+09:19 StardustX joined channel
+09:48 cleamoooon joined channel
+09:51 cleamooon quit:Ping timeout: 244 seconds
+10:52 fy: 卧草 你们真是能High
+10:52 fy: 5点还有人在
+11:15 iyzsong: _(:з」∠)_
+11:18 Rabika joined channel
+11:23 lh_cat joined channel
+11:23 lh_cat: ヲ要漂亮姐姐！
+11:25 fy: 好好写代码 不要出现幻觉
+11:26 * lh_cat slaps fy around a bit with a large scaly dragonfish
+11:28 lh_cat: 原来 irccloud 也有 slap 命令。
+11:29 fy: = =
+11:30 lh_cat: YOUR WISH IS MY COMMAND.
+11:30 fy: [doge]
+11:30 lh_cat: woof!
+11:30 lh_cat is now known as lh_dog
+11:31 fy: 滑稽
+11:31 * lh_dog bites fy
+11:33 sleepwalking joined channel
+11:34 sleepwalking: http://cs241grader.web.engr.illinois.edu/malloc/ #直播新手区虐菜
+11:49 iyzsong: _(:з」∠)_
+11:51 LastAvengers joined channel
+11:52 T-J-M joined channel
+11:59 Rabika joined channel
+12:00 Rabika left channel:"再见"
+12:02 gauge: cleamoooon: OuO
+12:03 gauge: 诶 o 的个数发生了变化...
+12:26 Slap_Bot quit:Remote host closed the connection
+12:30 FrankHB quit:Ping timeout: 244 seconds
+12:35 Slap_Bot joined channel
+12:56 lh_dog: slee
+12:56 lh_dog: sleepwalking: 爆。
+12:57 * lh_dog slaps sleepwalking around a bit with a large yellow bass
+13:01 lh_dog: 每次都是这种破地方。 https://usercontent.irccloud-cdn.com/file/9IWa4zoG/1475298007.JPG
+13:17 lh_dog: \slap sleepwalking
+13:17 * Slap_Bot slaps sleepwalking around a bit with a large trout.
+13:18 sleepwalking: lh_dog, ???
+13:18 sleepwalking: \slap lh_dog
+13:18 * Slap_Bot slaps lh_dog around a bit with a large trout.
+13:19 fy: 23333
+13:24 * lh_dog slaps Slap_Bot around a bit with a large loosejaw
+13:24 sleepwalking: 说起来好久没来IRC了
+13:24 * lh_dog slaps sleepwalking around a bit with a large Mexican blind cavefish
+13:25 * lh_dog slaps sleepwalking around a bit with a large flashlight fish
+13:25 lh_dog: 每次都不一样。
+13:25 * sleepwalking slaps lh_dog around a bit with a babyWHEEL
+13:25 lh_dog: 打你！
+13:26 sleepwalking: man it's a f**king babyWHEEL man!
+13:26 iyzsong: 应该是 “咬你！”
+13:27 * iyzsong 困啊~
+13:27 sleepwalking: 这一晃过去多久了……最近两年吧内有什么事发生吗
+13:27 fy: 两年。。
+13:28 iyzsong: 同不知，好久没看过贴吧了
+13:28 sleepwalking: iyzsong, 啊……那频道内呢。。？
+13:29 fy: 贴吧能有啥大事，整天菜鸡环绕，dalao们时间长了也厌倦的
+13:29 iyzsong: 频道就是欢乐于忧伤的日常吧，能有什么发生?
+13:29 varna joined channel
+13:30 sleepwalking: \slap varna
+13:30 * Slap_Bot slaps varna around a bit with a large trout.
+13:30 lh_dog: sleepwalking: 爆。
+13:30 varna: Slap_Bot: 爆
+13:30 iyzsong: - -b
+13:30 varna: 爆错了
+13:30 varna: sleepwalking: 爆
+13:30 iyzsong: 2333
+13:30 lh_dog: ヲ在飞机上。
+13:30 sleepwalking: burst propagation (BP)?
+13:30 lh_dog: base pointer
+13:31 varna: butt-pierce
+13:31 sleepwalking: 污
+13:31 lh_dog: iyzsong: 咬你！
+13:31 iyzsong: (°Д°)
+13:32 lh_dog: TASTE MY ATOMIC BOMB!!!
+13:33 varna: __atomic_bomb(__ATOMIC_JUST_RELAXED)
+13:34 sleepwalking: 最近CS241有一个拿sbrk实现malloc/free/realloc的作业
+13:35 sleepwalking: 他们搞了一个服务器实时编译学生的实现，测试，然后排行
+13:36 varna: why sbrk
+13:36 varna: 虽然这是常见的想法
+13:36 varna: 但sbrk这种细节其实可以放出去吧，分配器算法还比较重头些
+13:36 sleepwalking: varna, 应该会想去用mmap吧……？
+13:36 varna: mmap慎用
+13:37 varna: 建议master arena用sbrk, slave arenas一次性mmap
+13:37 sleepwalking: varna, 单线程malloc
+13:37 sleepwalking: 这个课还是很基础的
+13:37 varna: 那就是sbrk+比试单区块内分配吞吐量和碎片了
+13:38 sleepwalking: 对
+13:38 varna: 再加点小块桶
+13:38 sleepwalking: 看到作业放出来就直觉性地去Google Scholar搜paper了
+13:38 varna: 所以你为何不把裙子脱掉呢？
+13:39 sleepwalking: varna, http://www.gii.upv.es/tlsf/files/ecrts04_tlsf.pdf 然后发现这玩意非常好使诶
+13:39 varna: 多谢推荐，看一眼
+13:40 sleepwalking: 其实就是double layer bitmap -> free linked list而已
+13:41 sleepwalking: free/malloc都是O(1)，还粗略符合best-fit
+13:43 varna: 实验有点不公平，binary buddy不是用来干这个的……
+13:44 sleepwalking: varna,　那buddy是用来？
+13:44 varna: 在虚拟内存-物理内存映射上抓大页
+13:44 varna: 可以用来当OS的物理页分配器
+13:45 varna: 文章还挺有趣的，收下了
+13:46 sleepwalking: 到了这个层面我就不太懂了，大概意思了解
+13:46 varna: 因为你没脱下裙子
+13:46 iyzsong: _(:з」∠)_
+13:51 varna: sleepwalking: 对了你校有没有可爱的幼女
+13:51 sleepwalking: varna, 什么叫可爱的幼女……大学怎么会有幼女
+13:51 varna: 大学里当然有各种家属吧
+13:52 varna: 幼女就是九岁左右的小女孩
+13:52 fy: 可啪
+13:52 sleepwalking: 幼女没有只有学妹啊……
+13:53 fy: 上午有人要大姐姐
+13:53 varna: 你问学妹要几个幼女
+13:53 fy: 现在又有人要幼女
+13:53 varna: 我一直喜欢幼女
+13:55 sleepwalking: varna, 要了你也得买机票啊……
+13:55 fy: 等一下 就是说可以要到吗
+13:55 fy: interesting
+13:55 sleepwalking: 哦别
+13:56 varna: sleepwalking: 我可以出姬票钱，请务必联系到有交配倾向的幼女
+13:57 sleepwalking: varna, 会被抓去坐牢的
+13:57 iyzsong: ^^ 义正词严 (严肃脸)
+13:57 fy: 连牢都不敢坐，还有脸说喜欢幼女 [doge]
+13:58 LastAvengers: :-|
+13:58 varna: sleepwalking: 别怕，可以在公海上交配的
+13:58 fy: 卧草 套路好深
+13:59 sleepwalking: 但是船只也算国土啊
+13:59 iyzsong: 2333
+13:59 varna: 没关系，我记得天津风还搁浅着呢
+13:59 sleepwalking: 救生圈算船只的一部分吗？
+13:59 varna: 应该不算
+13:59 sleepwalking: 肺活量大丈夫？
+13:59 varna: 这药娘好邪恶？
+13:59 varna: 大丈夫，幼女会先撑不住
+14:00 sleepwalking: 但受憋气时间限制这也太麻烦了吧……
+14:00 varna: 这就跟绞首高潮一样……
+14:01 * varna 在教米库酱糟糕的东西
+14:01 sleepwalking: 还有水流阻力……
+14:01 varna: ^ 这人喜欢润滑
+14:01 fy: 噫 污污污
+14:01 sleepwalking: 那只会变成damping。
+14:02 varna: 要的不就是那个阻尼的感觉……
+14:02 sleepwalking: 不，你连steady-state都进入不了
+14:02 varna: ^ 经验丰富
+14:02 varna: 真可怕，米库酱已经不是处药娘了
+14:03 * iyzsong 不明觉历
+14:03 varna: temporary_threads;
+14:03 varna: 啊
+14:03 fy: 严肃：海水泡着你的话，水分好像会析出吧
+14:04 varna: (｡･ω･)你要相信，活着的时候啪的是幼女，如果因为各种症状死了，沉下去就可以啪欠雪
+14:04 varna: (｡･ω･)欠雪她们都在下面
+14:04 varna: (｡･ω･)一府人团团圆圆，我鹤摇来晃去
+14:05 sleepwalking: 假设你的身体3/4在海水一下做简谐运动产生直径为50cm的acoustic beam的话，我们可以算算看功率密度……
+14:05 varna: (｡･ω･)ﾉ
+14:05 varna: 3/4这个估计可能比较保守
+14:05 varna: 估计我这种人用救生圈都能翻了
+14:06 sleepwalking: 但是水下声学非线性程度是很大的，特别是肥宅脂肪厚，还要考虑到脂肪中的波传递，非线性程度是水的2倍
+14:07 varna: (｡･ω･)我身高179cm体重60+kg, 应该是沉底派
+14:07 sleepwalking: 密度高的话还好
+14:07 fy: 卧草 羊驼挺高的嘛
+14:07 varna: 不高，现在180+一抓一大把
+14:25 sleepwalking: varna, 按照f=2Hz, ξ = 0.2m, 介质海水，plane wave来算的话，功率密度是4.86*10^6 Wm^-2诶
+14:26 sleepwalking: 我觉得你可以去发电
+14:26 fy: 5秒 [滑稽]
+14:26 varna: 电酱！
+14:27 iyzsong: 吼吼~
+14:28 varna: 故知般若膜蛤蟆多咒 是大神咒 是大明咒 是无上咒 是坠吼的咒 能除一切苦 真实不虚
+14:35 sleepwalking: 困，扯了
+14:35 sleepwalking: 撤
+14:35 sleepwalking left channel:"Ex-Chat"
+14:38 fy: 念咒膜蛤无BUG么
+14:38 fy: 献祭1S 消除bug
+14:42 Mokou joined channel
+14:43 yimis joined channel
+14:44 varna: Mokou: 刚把Shadowrun: HK的奖励战役通了，发现里面有种人工病毒叫SARS-III
+14:44 varna: 感染症状是免疫系统失调导致肺部积水，患者有如肺炎
+14:44 Mokou quit:Client Quit
+14:45 Mokou joined channel
+14:46 Mokou quit:Client Quit
+14:47 Mokou_ joined channel
+14:47 Mokou_ is now known as Mokou
+14:51 yimis quit:Quit: yimis
+14:53 iyzsong: 2333
+15:01 Mokou: 复习了一下东方漫才
+15:01 Mokou: 映姬大人真好啊
+15:03 Mokou: http://ww2.sinaimg.cn/mw690/eb2db764gw1f852lgek8ej20go0gamys.jpg
+15:10 Mokou: 【三男子流窜毒狗，毒针误射同伴后用嘴帮其吸毒】29日晚，湖北3名男子相约一起用弓弩射狗。发现目标后，龚某拿出弩准备射击，哪知毒针飞出，扎在同伴殷某的右肩。龚某马上用嘴帮他吸毒，两人都开始晕…另一同伴将他俩送到医院，命是救回来了，3人都被行政拘留了。
+15:21 StardustX quit:Quit: Connection closed for inactivity
+15:23 varna: 战雷出VR版了……
+15:25 fy: 又没摇杆又没VR 显卡腊鸡不说……
+15:25 fy: 全真起飞还天天翻车
+15:25 fy: 我表示内心毫无波动
+15:25 Mokou: 没摇杆怎么全真……
+15:26 fy: 起飞降落还是要玩一下啊
+15:26 Mokou: 扭矩压不住
+15:27 fy: 东倒西歪 不谈了
+15:27 fy: 当年萌新的时候插个手柄去打街机
+15:27 fy: 被人吊起来啪
+15:27 varna: 估计我下一台机器还是带不动战雷
+15:27 fy: 后来换了键鼠 卧草真好用
+15:28 varna: 但应该能开ENB玩玩FL了
+15:28 Mokou: 战雷没问题的，我那台旧本子都能起来
+15:28 varna: 自从wine升级之后，我玩BS:Midway都卡
+15:28 fy: wine这种腊鸡软件
+15:28 fy: 要玩游戏那是原生吧
+15:30 varna: 说起来，前几天看到一个名词：posthumanism
+15:30 varna: 还真有后人类主义这种东西，同时有个子范畴transhumanism
+15:30 Mokou: 66666666666666
+15:30 Mokou: 稗田家修《求闻史记》，至《八云列传》，阿礼记曰：“八云氏凡万有一十七岁矣。”紫乃大忿，则稗田家寿皆不过三十，然《八云列传》固如是。直至阿求，始改《八云列传》为：“八云氏十七，芳华正好。”紫大喜曰：“汝寿可至九十九也！”
+15:30 fy: 哲♂学
+15:30 varna: 而且我意识到，现在的我们恐怕就是后人类的先驱
+15:31 fy: 那得努力搬砖才能成为先驱
+15:31 fy: 一般来说都属于垫脚石
+15:32 varna: 你杂念太多
+15:32 Mokou: 神子初至幻想乡，人莫知之。适逢小町避映姬甚急，执神子袍曰：“救我！”。神子乃隐小町于后。映姬至，语及圣人之道，映姬喜，欢谈至暮，顾之则小町已不在。翌日，神子往人里，或云：“此闻阎罗教谕至暮不倦者！”众皆目之。
+15:32 varna: 啊，这是那些幻想乡段子
+15:32 Mokou: 幻想乡新语
+15:33 Mokou: 博丽复攻赤馆急甚，蕾米招众问计。咲夜曰：“与白玉楼庭师有旧，愿往说之。”至幽冥之界，诣妖梦，妖梦白之西行寺。幽幽子方食樱饼毕，乃徐曰：“告诸来使：‘待西行妖开，吾将亲往救之也。’”
+15:33 Mokou: 博丽巫女见蕾米莉亚。蕾米服紫，以为威仪具足，乃备茶待之。少顷，巫女告辞。蕾米颇自得，乃阴遣人问之曰：“馆主威仪如何？”巫女答曰：“馆主娇柔非常。然床头怀匕女仆，疑真馆主也。”
+15:34 varna: 出去趟
+15:41 Mokou: 今天的低保：战神
+15:42 StardustX joined channel
+15:43 lh_dog quit:Quit: Connection closed for inactivity
+15:45 Mokou: http://ww1.sinaimg.cn/mw690/747f3c21jw1f84tk4k3qqj20im0demyb.jpg
+15:49 Meow-J quit:Remote host closed the connection
+15:49 Meow-J joined channel
+16:53 LastAvengers joined channel
+17:18 iyzsong: _(:з」∠)_
+17:59 lh_not_bot quit:Ping timeout: 244 seconds
+18:00 lh_not_bot joined channel
+18:13 lhanjian: 冒个泡
+18:14 iyzsong:  (｢・ω・)｢
+18:14 lhanjian: (^３^)╱~~
+18:15 fy: (Photo, 67x69) http://104.156.229.12:9123/J9jYDAdI/file_4.jpg 啊 不想动了
+18:16 * iyzsong 去超市买了包水饺回来吃 = =
+18:17 StardustX: 国庆节吃饺子有什么典故没有？
+18:19 iyzsong: 没有吧 o o
+18:22 yimis joined channel
+18:38 yimis quit:Quit: yimis
+18:52 LastAvengers quit:Quit: Srain0.05-git@0.363.0c4b4db close.
+18:56 LastAvengers joined channel
+19:01 iyzsong: (┙>∧<)┙へ┻┻
+19:12 LastAvengers quit:Quit: Srain0.05-git@0.363.0c4b4db close.
+19:23 cleamoooon: 米尻学了些什么呀
+19:26 cleamoooon: 近日，法国一名男子因为“退款问题”而大闹法国一家苹果零售店，用一颗铁球砸烂了店内的十多部苹果设备。据报道，该事件是在当地时间星期四下午一点多发生的，事发地点是法国东部城市第戎的一家苹果零售店。
+19:28 cleamooon joined channel
+19:28 cleamooon: 美国罗切斯特大学医学中心教授Joe Milano几次试图重复韩春雨实验都失败，在其指导下也不能成功，要求韩春雨要么公布秘密方法要么承认造假，并要求韩春雨用他获得的巨额经费赔偿各个实验室为重复其实验造成的金钱和人力损失，并向学术界道歉。
+19:31 cleamoooon quit:Ping timeout: 244 seconds
+19:34 cleamooon: http://tieba.baidu.com/f?kw=%E6%97%A0%E9%87%8F%E5%AF%BF%E7%BB%8F%E6%8C%81%E5%90%8D%E5%BF%B5%E4%BD%9B%E7%8F%AD   这地方好神奇
+19:51 wchen joined channel
+20:08 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/43/ww_246666.jpg@596w_1l.jpg
+20:17 iyzsong: _(:з」∠)_
+20:54 lh_dog joined channel
+20:55 cleamooon: gauge, 在否？
+20:57 gauge: cleamooon: duang
+21:00 CyrusYzGTt joined channel
+21:01 cleamooon: gauge, poi
+21:01 cleamooon: gauge, 在算角动量的和
+21:01 cleamooon: 两个l=1, s=1/2的粒子，算L = L_1 + L_2
+21:02 cleamooon: 算 <L^2>
+21:02 gauge: OuO
+21:02 cleamooon: 于是，我不知道和的 l 应该是什么...
+21:11 gauge: L^{2} = L_{1}^{2} + L_{2}^{2} + 2 L_{1 z} L_{2 z} + S_{1 +} S_{2 -} + S_{1 -} S_{2 +}
+21:11 cleamooon: orz
+21:12 gauge: 期望里面最后两项没有 所以就好啦
+21:12 * gauge 全都忘光了... 刚翻了下书
+21:13 cleamooon: orz
+21:13 LastAvengers joined channel
+21:13 cleamooon: 不过不是用 |+-> 之类的东西分析吗
+21:15 gauge: 先把 L^{2} 用能作用在现在的态上的算符表示出来再算嘛
+21:16 cleamooon: soga
+21:18 gauge: OuO 现在在学量子吗?
+21:19 cleamooon: 在做量子作业...
+21:20 cleamooon: 然而课上讲的不很清楚，就一个 S=S_1 + S_2
+21:20 cleamooon: 然后告诉同理
+21:21 gauge: :o 有讲升降算符啥的吗?
+21:21 cleamooon: 那个有讲
+21:24 cleamooon: L_z1 L_z2 还是没法算呀...
+21:25 gauge: 那两个粒子在什么态上?
+21:25 cleamooon: l=1, s=1/2
+21:26 gauge: m 呢?
+21:27 cleamooon: 没给... 求所有可能性...
+21:27 gauge: 上面的 S 都是 L 咱打错了...
+21:27 cleamooon: 哦
+21:43 gauge: 所有可能性是说对所有的 m 的组合算一遍吗?
+21:43 cleamooon: +
+21:45 gauge: L_{1 z} 和 L_{2 z} 都可以取遍 -1, 0, +1 所以代进去就好了?
+21:45 cleamooon: ...
+21:49 gauge: OuO 不是这个意思呀...
+21:49 cleamooon: 略蛋疼的题目
+21:52 gauge: :o
+21:53 cleamooon: 如果算 J^2，就算 L^2 + S^2 _
+21:53 cleamooon: ？
+21:54 cleamooon: 没有什么奇特的坑点？
+21:58 gauge: 应该还是按照上面的样子展开?
+21:58 cleamooon: 好蛋疼
+21:59 cleamooon: 感觉很厉害的东西，结果只是枚举？
+22:03 Mokou: 一直以来，历史都是由赢家来书写，直到输家发明了互联网。
+22:03 Mokou: ——sethop 
+22:03 cleamooon: 233333
+22:06 Matsune joined channel
+22:07 Matsune: 房子好贵
+22:08 cleamooon: 出国就买房orz
+22:08 iyzsong: _(:з」∠)_
+22:10 Mokou: 【甲午战争英雄舰“致远”纪念舰正式下水】2014年9月17日下水的“致远”纪念舰在两年之后，于9月30日在丹东港正式下水。10月1日清晨，“致远”纪念舰披着霞光从丹东港出发，经过数小时拖航后，在浪头港亮相，在场所有人面容肃穆，默默目送它离开。“致远”纪念舰由民间筹集资金，丹东港丹船重工建
+22:10 Mokou: 造，按照一比一比例复制历史上的致远舰。市民登上浪头港附近的安东海关纪念馆大楼，可以清楚地看到纪念舰整体。
+22:10 Mokou: ^ 谁说我大清完了！？
+22:13 cleamooon: ........
+22:13 Matsune: 租房。。
+22:13 Matsune: 这学校周围有条路叫荒神口
+22:23 gauge: 谁叫没指定是用啥态求期望呢...
+22:43 cleamooon: gauge, 既然每个粒子都有 m=-1,0,1，为什么和就只有 -1, 0, 1 这三个情况呢？
+22:48 gauge: cleamooon: L_{z} 应该也能取到 -2 和 +2 ?
+22:48 gauge: | 1,1 > 的 L^{2} = 6, L_{z} = 2
+22:50 cleamooon: 为什么....
+22:51 gauge: | l_{1} = 1, m_{1} = 1, l_{2} = 1, m_{2} = 1 >
+22:52 gauge: m = m_{1} + m_{2}
+22:52 gauge: l (l + 1) = l_{1} (l_{1} + 1) + l_{2} (l_{2} + 1) + 2 m_{1} m_{2}
+22:53 gauge: 这样?
+22:54 gauge: 它是 L^{2} 的本征态 因为 S_{1 +} 和 S_{2 +} 都不能作用在它上面
+22:55 cleamooon: l (l + 1) = l_{1} (l_{1} + 1) + l_{2} (l_{2} + 1) + 2 m_{1} m_{2}  <-- 这个是个标准的公式？
+22:55 Matsune quit:Read error: Connection reset by peer
+22:56 gauge: 就是上面那个展开式作用在 | 1,1 > 上面
+22:57 gauge: 最后两项没有
+23:04 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+23:06 lh_dog: Mokou: 爆。
+23:19 wchen quit:Remote host closed the connection
+23:29 cleamooon: 我通过不断地凑数，总算凑出了 6...
+23:31 cleamooon: gauge, | 1,1 > 的 L^{2} = 6 指的是 m_1, m_2 是 1 和 1
+23:31 cleamooon: ？
+23:31 gauge: 是呀 咱没写清楚...
+23:32 cleamooon: 啊... 我一直以为是 l=1, m=1......
+23:33 cleamooon: 好吧，我凑数了
+23:40 cleamooon: 啊，卧槽，我刚刚意识到， |lm>和|sm> 的 m，不是一个m

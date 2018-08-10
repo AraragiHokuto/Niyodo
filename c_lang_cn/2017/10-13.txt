@@ -1,0 +1,204 @@
+10:05 Oyodo joined channel
+10:06 YangMame joined channel
+10:08 YangMame quit:Remote host closed the connection
+10:09 YangMame joined channel
+10:22 Sn0rt` joined channel
+10:29 YangMame quit:Quit: Konversation terminated!
+10:30 YangMame joined channel
+11:18 GODDOG quit:Remote host closed the connection
+11:21 YangMame quit:Remote host closed the connection
+11:22 YangMame joined channel
+11:23 Sn0rt` quit:Remote host closed the connection
+11:25 YangMame quit:Remote host closed the connection
+11:26 YangMame joined channel
+11:37 YangMame quit:Remote host closed the connection
+11:38 YangMame joined channel
+11:47 GODDOG joined channel
+11:52 YangMame quit:Remote host closed the connection
+11:53 YangMame joined channel
+11:56 Mokou joined channel
+12:01 YangMame quit:Remote host closed the connection
+12:01 YangMame joined channel
+12:32 CyrusYzGTt quit:Ping timeout: 240 seconds
+12:37 YangMame quit:Remote host closed the connection
+12:38 YangMame joined channel
+13:05 GODDOG quit:
+13:25 sottd joined channel
+13:35 Izumo quit:Quit: Connection closed for inactivity
+13:48 lhanjian: cleamoon_: 这基佬
+13:54 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 56.0/20170926190823]
+14:15 CyrusYzGTt joined channel
+14:22 YangMame quit:Quit: Konversation terminated!
+14:23 YangMame joined channel
+14:25 CyrusYzGTt quit:Ping timeout: 255 seconds
+14:46 YangMame quit:Ping timeout: 240 seconds
+14:46 YangMame joined channel
+14:47 CyrusYzGTt joined channel
+15:09 YangMame quit:Ping timeout: 240 seconds
+15:10 YangMame joined channel
+15:21 YangMame quit:Ping timeout: 246 seconds
+15:26 cleamoon_ quit:Quit: Connection closed for inactivity
+15:42 YangMame joined channel
+15:47 YangMame quit:Quit: Konversation terminated!
+15:47 YangMame joined channel
+15:53 YangMame quit:Quit: Konversation terminated!
+15:54 YangMame joined channel
+15:55 YangMame quit:Client Quit
+15:55 YangMame joined channel
+16:51 YangMame quit:Quit: Konversation terminated!
+16:53 YangMame joined channel
+17:58 B005ter quit:Quit: Leaving.
+18:09 mask0101_ joined channel
+18:18 YangMame quit:Remote host closed the connection
+18:19 YangMame joined channel
+18:21 varna joined channel
+18:22 varna: 连上十五天班之后终于有个周末了，虽说还要小心撸管时候被拉去解决线上问题
+18:33 lhanjian: varna: 数据丢了，你手工恢复一下，交易记录，很重要
+18:34 varna: (｡･ω･)交易的找xxx, 菜鸟的找yyy, UOP/OIC的问题请去zzz提工单并钉uuu, 我这里有vvv单据提供，有问题随时打我电话
+18:35 varna: 手工追数据倒不是问题，问题是隔了八百里的链路问题都砸到我这里来，我也很无奈
+18:36 varna: 而且最大的问题
+18:36 varna: 我手上还欠着八周目劳伦斯呢
+18:37 varna: 他才杀了我不到二十次
+18:37 varna: 甚至可能只有十五次以下
+18:38 B005ter joined channel
+18:40 lhanjian: varna: 你要先跟领导说，这事儿我帮不上忙啊
+18:40 lhanjian: 我到阿里的第二个礼拜，就是个中间件的P6撕比
+18:40 lhanjian: 震动了两边的Leader P8
+18:40 lhanjian: 搞了个leader间快速沟通机制
+18:40 lhanjian: 和
+18:41 lhanjian: 是我的师兄扔给我的，因为他不想管，然后就由我来打太极了
+18:41 varna: 给我感觉没那么麻烦，天猫群众加班上头，我半夜十二点给P8打电话走审批都有人鸟我
+18:41 lhanjian: varna: DS3八周目我也快打完了
+18:41 varna: 一点钟以后有人发版有人开会
+18:41 varna: 差不多到四点钟才都变成咸鱼
+18:42 lhanjian: 现在形势真是更差了
+18:42 varna: 该找人得找人，菜鸟物流系统崩了，我角虫手再长也没用
+18:42 lhanjian: “你们管入口，查一下日志嘛”
+18:43 lhanjian: （脑补，我特么给你翻nginx日志嘛？！）
+18:43 B005ter quit:Ping timeout: 260 seconds
+18:43 varna: 我还真给他们翻线上集群日志和DB，人肉关联商品货品库存单据
+18:43 varna: 该做的不甩锅，但做不了的没必要充冤大头
+18:44 varna: 这次本来链路就很长，我一个人盖不住的
+18:44 * lhanjian 我就是那种“有事别找我，你能找其他部门解决的事情就绝对不要找我”
+18:44 * lhanjian 你说的这个东西我们肯定改，问题是没有时间表
+18:45 varna: (｡･ω･)找你们老板来，我们谈一下
+18:45 varna: 实在不行打着联调旗号跑工位后面盯着
+18:45 * lhanjian ：这东西做在我们的系统上费力不讨好，对你们也不利，还是和XX联系一下吧
+18:45 varna: 有个伙计楞被我们轮番盯投降了
+18:45 lhanjian: varna: 对啊，所以他到我们晨会的时候拍桌子来了
+18:46 lhanjian: 从我的师兄/小组长/主管，全都震动了
+18:46 varna: 而且也不是提无理要求，大家把域划分清楚
+18:46 varna: 但是实在不配合，那就没办法了
+18:46 lhanjian: 然后主管电联对方主管
+18:46 lhanjian: 那家伙都要被气的掉眼泪了
+18:46 varna: 项目很急，我不管你们哭鼻子还是闹气，交出接口就行
+18:47 varna: 当然说话不会说得这么直白
+18:47 lhanjian: 我们也急啊，你要改的这个旧东西的主人早就离职了，XX老伙计说这个问题是为了兼容XXX问题留下来的，改了问题更多，要不你们再在那边兼容一下吧？
+18:47 varna: 这种事情就事论事好了
+18:47 lhanjian: 最后的结果是，大家互相兼容一下……
+18:48 varna: 但是基本上能搬出这种说辞来的，事情上都有问题
+18:48 varna: 你可以搬说辞，但不要光玩政治不做事，这样风气太差
+18:48 lhanjian: varna: 就事论事说不清楚，其实我们可以再为了兼容而兼容一下的，问题是谁愿意碰古旧的代码啊
+18:48 lhanjian: 而且没完没了，找不到尺寸
+18:49 varna: 愿意不愿意，事情得认真看待
+18:49 varna: 不是说谁要兼容谁，而是你怎么看自己的产品
+18:49 lhanjian: 这东西本来一开始做就不该做到我们系统上的
+18:49 varna: 不是怎么去做项目
+18:49 varna: 那很合理啊
+18:49 varna: 直接甩掉
+18:49 lhanjian: 这是个历史遗留问题
+18:49 varna: 老板应该清楚该干什么，除非他软肋多
+18:49 varna: 你看
+18:49 varna: 绕来绕去又变成legacy
+18:49 lhanjian: 因为让他们的伙计重新搞一个也骂娘
+18:50 varna: 不是骂不骂娘的问题，是花了这么多力气去政治，没人出方案
+18:50 varna: 管他什么方案先出几个，然后拉起来开会
+18:50 lhanjian: 最后只能是互相兼容一下
+18:50 varna: 这么绕下去，至少我自己就一个印象：你们产品有问题
+18:50 varna: 技术债迟早要还的
+18:51 lhanjian: 我特么亲自上服务器用tcpdump拖日志帮他过滤消息，确认是他们的问题
+18:51 lhanjian: 然后他不会抓包
+18:51 lhanjian: 联调查BUG
+18:51 lhanjian: 药丸
+18:52 varna: 这都不是主要问题
+18:52 varna: 你做了多少努力，这一点都不重要
+18:52 lhanjian: 这个产品是他们的，压根就不是我们的，只是留着又不能动
+18:52 varna: 重要的是两边怎么排期，产品怎么看，风险抛出来多少
+18:52 varna: 先把你自己忘了
+18:53 * lhanjian 热衷于办公室政治，研究不可能研究清楚的“责任边界”
+18:53 varna: 研究这玩意没什么用
+18:53 varna: 事情早做晚做是一回事，做不做是另一回事
+18:54 varna: 要做，那就这里那里地把关注点列出来
+18:54 varna: 饼厂还没糟糕到必须靠政治沟通的程度
+18:55 lhanjian: 还是要靠领导沟通
+18:55 varna: 低优先级项目确实需要施压
+18:56 \s quit:Remote host closed the connection
+18:56 varna: 然而我还是这个观点：想清楚要做什么，风险是什么，需要什么人提供什么协助
+18:56 \s joined channel
+18:56 \s quit:Changing host
+18:56 \s joined channel
+18:56 varna: 然后再说怎么办
+18:56 varna: 不然本末倒置
+18:56 B005ter joined channel
+18:58 lhanjian: 下班 下班
+18:58 lhanjian: 家里猫要饿死了
+19:00 B005ter: 没做个定时自动投喂么哈哈
+19:00 varna: 大概怕被猫逆向了
+19:01 varna: _(:з」∠)_再打一波劳伦斯，目标是今晚通过
+19:01 varna: _(:з」∠)_求PD别打我电话
+19:01 GODDOG joined channel
+19:06 mask0101_ quit:Remote host closed the connection
+19:07 mask0101_ joined channel
+19:07 iyzsong-m joined channel
+19:13 mask0101_ quit:Remote host closed the connection
+19:13 mask0101_ joined channel
+19:14 varna: 不太明白P1触发二次陶喆到底是个什么状况……
+19:21 mask0101_ quit:Remote host closed the connection
+19:21 mask0101_ joined channel
+19:22 varna: (｡･ω･)ﾉ
+19:22 B005ter quit:Read error: Connection reset by peer
+19:29 iyzsong-m: (；・∀・)
+19:29 iyzsong-m: 周未好
+19:29 varna: (｡･ω･)ﾉ
+19:33 iyzsong joined channel
+19:34 iyzsong-m quit:Ping timeout: 260 seconds
+19:35 varna: 击破
+19:36 varna: 应该说这货没那么让人感到恐惧了，但还是很厉害
+19:46 varna: 啊啊
+19:46 varna: 好想抱幼女取暖
+19:48 GODDOG quit:Ping timeout: 248 seconds
+19:49 GODDOG joined channel
+19:50 GODDOG: oh~
+19:50 GODDOG: my
+19:50 GODDOG: 这网络
+19:50 varna: 最近PSN也连不上了，我似乎懂的
+19:52 iyzsong quit:Ping timeout: 260 seconds
+19:58 GODDOG: 喜迎十九大
+20:02 Stevearzh quit:Excess Flood
+20:03 \ss joined channel
+20:04 \s quit:Ping timeout: 248 seconds
+20:05 Stevearzh joined channel
+20:22 sn0rt joined channel
+20:25 sn0rt quit:Remote host closed the connection
+20:29 sn0rt joined channel
+20:36 sn0rt` joined channel
+20:38 sn0rt quit:Ping timeout: 240 seconds
+20:38 GODDOG quit:Ping timeout: 255 seconds
+21:04 iyzsong joined channel
+21:07 B005ter joined channel
+21:14 mask0101_ quit:Quit: WeeChat 1.9.1
+21:15 mao_ joined channel
+21:43 cleamoon_ joined channel
+21:58 varna: 总觉得凹了几十小时的噬神者之后，反应速度又好了一些
+21:59 varna: 也可能是进化出了可以自助施行代米空汁-夜战素反应的器官
+21:59 mao_ quit:Quit: Leaving
+22:00 YangMame quit:Quit: Konversation terminated!
+22:54 cleamoon_: varna: 进化出了yd？
+23:20 iyzsong quit:Ping timeout: 240 seconds
+23:22 condy quit:Ping timeout: 240 seconds
+23:23 varna quit:Ping timeout: 248 seconds
+23:28 condy joined channel
+23:39 jin7boy joined channel
+23:42 jin7boy quit:Client Quit
+23:46 \ss quit:Ping timeout: 240 seconds
+23:57 sn0rt` quit:Ping timeout: 264 seconds

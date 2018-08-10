@@ -1,0 +1,249 @@
+11:53 clcn_logbot joined channel
+11:53 varna: 你要为一般桌面用户程序提供dll-hell-based compatibility?
+11:53 varna: 我觉得这个理想很奇异啊
+11:54 iyzsong: 这里只是在不同glibc版本之间共享了locale，结果它不兼容了 <_<
+11:55 varna: 我觉得在一个容器里维持不同的C runtime就很糟糕
+11:57 iyzsong: 其实我只要rebuild一下系统就行了，然而最近北京访问外网网速一直在3k/s左右..
+11:57 varna: rebuild...
+11:59 lhanjian_: 文献综述还是好恶心啊
+12:00 Mokou: http://ww2.sinaimg.cn/bmiddle/ea0a5e30jw1ewnnjt9qlrj20m80go0va.jpg 目瞪口呆
+12:00 iyzsong: 论文怎么写啊 >.<
+12:01 lhanjian_: Mokou: 这样的线虫太可怕了
+12:01 iyzsong: 2333
+12:03 varna: 文献综述还好吧？
+12:04 lhanjian_: varna: 我的选题太奇葩，不知道怎么写。
+12:04 varna: 你选的什么？
+12:04 lhanjian_: varna: 题目内容： 高性能Web服务器资源动态优化配置系统设计与实现 任务书内容： 1）设计与实现Nginx更新动态配置的基本命令。（2）实现解析nginx原有配置文件；在解析配置文件完成后，合并Nginx原始配置和动态配置；劫持Nginx解析HTTP/1.1 Host字段的回调函数并且插入动态配置的回调函数；（3）实现多进程间共享动态配置功能；多进程间互相�
+12:05 varna: 这有什么可综述的
+12:05 lhanjian_: varna: 就是说啊……
+12:05 varna: 白纸黑字大大地写上：“是，按我说的做！”
+12:05 lhanjian_: 没文献可以引用……于是只能到处抄博客抄文档了……
+12:06 lhanjian_: 然而这样的东西怎么“引用”
+12:06 varna: 内 部 错 误 一 转 攻 势 z l i b 爆 破 用 户 激 怒 诉 讼 不 可 避 
+12:06 lhanjian_: 要吹B我也吹不出2000字，更何况还有3000字的开题报告要吹B……
+12:07 varna: 我看看我那个开题报告怎么写的
+12:07 lhanjian_: 找淘宝，结果枪手表示这写不了= =
+12:07 iyzsong: - -b
+12:08 lhanjian_: 我也是醉了
+12:08 varna: https://pastebin.mozilla.org/8848241 开题报告没几个字
+12:08 lhanjian_: 大不了失败算了。下学期重新选题
+12:09 lhanjian_: 三、开题报告的字数要求： 正文字数不得少于3000字。
+12:09 lhanjian_: 一、综述本课题国内外研究动态，说明选题的依据和意义                                         二、研究的基本内容，拟解决的主要问题：                       三、研究步骤、方法及措施：
+12:09 lhanjian_: 四、研究工作进度： 序号 时间 内容 1   2   3   4   5   6   7   8   9   10    五、主要参考文献：                   六、指导教师审核意见：                   指导教师签字：                      年  月  日 七、系（教研室）评议意见：
+12:09 lhanjian_: 这牙膏挤得我泪流满面
+12:10 varna: 综述……我就写了1.8k字
+12:11 lhanjian_: 综述我们要2000字以上
+12:11 lhanjian_: T-T
+12:11 lhanjian_: 万恶的学校
+12:11 varna: 研究工作进度这个似乎好办点，一共十条的话可以这么写：1) 一队刷闪 2) 二队刷闪 3) 道中支援刷闪 4) 决战支援刷闪 5) 舰攻补练度 6) 确认损害和损管 7) 掉沟了
+12:11 iyzsong: orz
+12:12 lhanjian_: orz
+12:13 lhanjian_: 还好斩舰刀出版了基本BOOK，作者各不相同，不然真是药丸
+12:14 lhanjian_: 几本
+12:14 varna: reference里允许引用在线材料么？
+12:14 varna: 允许的话你可以来点repo和manual啊
+12:14 lhanjian_: 没说
+12:14 varna: 显得你见多识广裤腰高
+12:15 iyzsong: 允许吧 不然没几个论文写nginx吧
+12:15 lhanjian_: 反正，Nginx的出版书籍多。强行把没关联的引用到Nginx的Book上去，嘿嘿
+12:15 hysw quit:Remote host closed the connection
+12:15 hysw joined channel
+12:16 varna: 这是ngx, 识得晤识得啦？
+12:16 lhanjian_: 毛子的那个Igor，比你们不知道高到哪里去了
+12:16 lhanjian_: 我和他谈笑风生
+12:16 * iyzsong 去填饭~
+12:17 * hysw 没有计算姬...
+12:17 lhanjian_: 吃饭去。
+12:24 varna: https://pic1.zhimg.com/6fc558ded31d0d2a1317d0b5dcaaddc4_b.jpg ...
+12:37 Stevearzh joined channel
+12:40 sismvg joined channel
+12:41 sismvg: 衣服太久放在床底下没有洗掉，今天准备洗的时候发现长蛆了。。
+12:42 varna: 噗
+12:48 sismvg: 费曼记忆法的一个大缺点：你每复习一次，就要写上几十张A4..
+12:50 tutu_wind joined channel
+12:50 varna: 为什么不用点看起来愚蠢的办法
+12:50 varna: 直接强行记住
+12:51 sismvg: @茵蒂克丝
+12:52 Mokou: 强行记住OTL
+12:52 varna: 记不住就继续强行记，直到记住
+12:52 Mokou: OTL
+12:53 varna: 对了，你什么时候把K拆掉？
+12:53 Mokou: 今天或者明天吧
+12:53 varna: ok
+12:53 Mokou: 前天一晚上没睡，昨天只能玩玩MC……
+12:53 varna: 一晚上没睡（意味深）
+12:53 Mokou: 蚊子
+12:53 varna: 〇子
+12:54 Mokou: 每到快要睡着的时候就到你耳边嗡嗡一下
+12:54 Mokou: 我一点半开始睡，两点半吵醒一次，三点吵醒一次，三点半吵醒一次，四点半吵醒一次，五点吵醒一次，五点半吵醒一次，六点半吵醒以后我直接起床了
+12:54 varna: 我觉得这是个比喻的说法
+12:54 Mokou: 并不是
+12:55 Mokou: 我脖子上现在还有个 蚊子包
+12:55 varna: 你一点半开始啪，强行一夜七次郎
+12:55 varna: 息子上至今还有个包
+12:56 sismvg: 蚊子变强了，去年这个时候早就没蚊子了。。
+12:56 varna: 青岛现在真有
+12:56 varna: 我脚侧面就被叮一个
+12:59 sismvg: 天上的云好像被加上了锐化滤镜。。
+13:03 code_new joined channel
+13:03 tutu_wind: 蚊子变强了 +1
+13:04 sismvg: 不知道把文字放到手表上它会不会进化
+13:11 hysw: 继续玩PGM去了...
+13:21 sismvg: 渣渣玩游戏，大神玩API，超神造大神玩的API。。
+13:26 tutu_wind quit:Ping timeout: 252 seconds
+14:14 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.1/20150929144111]
+14:15 x-iyzsong joined channel
+14:19 x-iyzsong: 0 0
+14:20 condy joined channel
+14:22 * x-iyzsong 去玩LoL了 = =
+14:25 condy: x-iyzsong: prpr
+14:31 xiongmao86 quit:Quit: Leaving...
+14:35 ring joined channel
+14:37 x-iyzsong: 啦啦啦
+14:37 condy: 我是骑马的小赢家
+14:37 ring: 啦啦啦
+14:41 x-iyzsong: 你们都在玩啥？
+14:42 condy: x-iyzsong: 在玩人生Online啊（
+14:43 x-iyzsong: 好像作弊啊
+14:43 condy: 好想再load一次（
+14:43 condy: =-=
+14:44 x-iyzsong: 没有存档 只能rewind
+15:31 hope1 joined channel
+15:33 hope1 quit:Client Quit
+15:33 hope1 joined channel
+15:59 sismvg joined channel
+16:18 lhanjian_: http://img1.cache.netease.com/catchpic/F/FD/FDA04E70D5254514D5DF2F348E9CDFB9.jpg
+16:18 lhanjian_: The Imperial Chinese Navy
+16:18 lhanjian_: ICN
+16:19 lhanjian_: http://news.163.com/15/1003/05/B4VRI18500014AED_2.html
+16:21 sismvg: 孙悟空拿着金箍棒向多元宇宙发号施令
+16:34 sismvg: e是为了求指数函数的导数才弄出来的，还是在此之前就有了？
+16:36 hope1: e最早应该是复利计算衍生出来的？
+16:38 hope1: Imperial Chinese Army...
+16:41 ring quit:Quit: Bye
+16:43 lhanjian_: 大清北洋水师
+16:44 sismvg: 水军《-不知道为什么听起来比海军厉害
+16:45 lhanjian_: sismvg: 因为水包括江河湖海
+16:55 lhanjian_ quit:Remote host closed the connection
+16:56 lhanjian_ joined channel
+17:02 lh_mouse joined channel
+17:09 Mokou: http://ww1.sinaimg.cn/bmiddle/80251f63gw1ewf4pg7wblj20a10dejry.jpg
+17:15 condy: +
+17:17 lh_mouse: [17:12:18] -NickServ- richselian is not registered.
+17:18 richselian: 我在考虑要不要group 23333
+17:18 * lh_mouse slaps richselian around a bit with a large trout
+17:21 Taiho: 我如此丧病
+17:23 lh_mouse: 你如此丧病
+17:24 Taiho: 今天下水的两条航妈被抢了……
+17:25 condy: 买了青岛的阿里云ECS，求玩法
+17:31 lh_mouse: condy, 送给我  我帮你玩
+17:31 condy: 0.0
+17:32 condy: 最渣的配置，学生套餐（
+17:32 lhanjian_ quit:Remote host closed the connection
+17:33 sismvg: 开上shadowsocks..然后关机
+17:34 condy: 国内的主机，开shadowsocks有啥用（
+17:34 sismvg: 所以说你那个没用嘛
+17:35 lh_mouse: condy, http://img.vim-cn.com/33/e0c3fbf1d81794b4fc9b5700491af5016e0f39.png
+17:35 condy: 0.0
+17:35 condy: 膜（
+17:36 sismvg: 拿来玩blog吧
+17:36 lh_mouse: 没域名有卵用
+17:37 lh_mouse: condy, https://github.com/lhmouse/poseidon
+17:37 condy: 。。。
+17:38 condy: 拿来测试这个服务器框架吗。。
+17:38 lh_mouse: 你也可以自己写东西玩
+17:38 x-iyzsong: 为什么说是game server framework?
+17:39 lh_mouse: 字面意思
+17:39 x-iyzsong: 有游戏么 <_<
+17:39 lh_mouse: 这个不让说
+17:39 lh_mouse: 我只能说  无可奉告
+17:39 x-iyzsong: 好吧
+17:39 lh_mouse: 你们也不高兴对不对  
+17:42 FrankHB quit:Ping timeout: 246 seconds
+17:51 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=eff5c49d4dfbfbeddc59367748f1f78e/1f4fc511728b47100c48a86ec5cec3fdfd03231f.jpg
+17:51 sismvg: 银河英雄传说漫画版人设。
+18:09 gwl_ joined channel
+18:15 varna: 藤崎龙！
+18:15 varna: 藤崎龙好评
+18:16 varna: 他画的《尸鬼》改编漫画我就很喜欢
+18:18 sismvg: 听说原作崩坏家
+18:22 varna: 别光听说
+18:22 varna: 很赞的
+19:09 lh_mouse quit:Ping timeout: 260 seconds
+19:14 sismvg quit:Ping timeout: 246 seconds
+19:16 code_new quit:Ping timeout: 256 seconds
+19:16 code_new joined channel
+19:23 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+19:27 lh_mouse joined channel
+19:56 sismvg joined channel
+19:58 xxxxxxxx joined channel
+19:58 xxxxxxxx: taiho?
+19:58 Taiho: 大凤
+19:58 xxxxxxxx: 第一反应太后
+20:02 xxxxxxxx: http://www.cnbeta.com/articles/435591.htm
+20:02 xxxxxxxx: 评论区总能看到这样的战争
+20:04 xxxxxxxx: http://news.zol.com.cn/544/5443199.html nomad毁灭人类
+20:07 xxxxxxxx: 据《日本经济新闻》25日报道，日本自民党24日召开议员大会正式决定安倍晋三担任总裁。安倍在记者会上表示，“ 安倍经济学进入第二幕”，同时提出了“安倍经济学”的“新三支箭”。安倍还喊出口号，希望通过“新三支箭”，迈向“一亿总活跃社会”。
+20:08 xxxxxxxx: 一亿总...... 我记得以前有个泡汤的跑路计划也是这个开头
+20:10 cleamoon: 我看成了一亿总 沼跃 社会
+20:12 x-iyzsong: 不明觉历
+20:16 cleamoon: 秋叶原  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/zq/w2_164110.jpg
+20:32 cleamoon quit:Ping timeout: 244 seconds
+20:33 cleamoon__ joined channel
+20:33 cleamoon_ quit:Ping timeout: 255 seconds
+20:35 lhanjian_ joined channel
+20:35 gwl_ quit:
+20:46 cleamoon joined channel
+20:56 sismvg: 混蛋，大皇帝的那个广告太恶心了，差点吐出来
+20:57 Taiho: 破五再连任，破四当天皇
+21:08 xxxxxxxx: http://www.bilibili.com/video/av2984155/ 不朽尸王的保健体操
+21:08 Taiho: 滴滴，绅士卡
+21:11 sismvg: 我明智的在看到第一眼之前关了它
+21:11 sismvg: 刚才那个坑爹的广告把我吓得不轻。。
+22:06 xxxxxxxx: http://www.bilibili.com/video/av2734825/
+22:06 varna quit:Quit: leaving
+22:12 lh_mouse: geordi, { my_class c; use(c); } namespace k { struct my_class { operator int(){ return 123; } }; void use(int a){ printf("use(%d)", a); } }
+22:12 geordi: error: 'my_class' was not declared in this scope
+22:13 lh_mouse: geordi, { k::my_class c; use(c); } namespace k { struct my_class { operator int(){ return 123; } }; void use(int a){ printf("use(%d)", a); } }
+22:13 geordi: use(123)
+22:15 lh_mouse: geordi, { k::my_class c; use(int(c)); } namespace k { struct my_class { operator int(){ return 123; } }; void use(int a){ printf("use(%d)", a); } }
+22:15 geordi: error: 'use' was not declared in this scope
+22:16 lh_mouse: geordi, { k::my_class c; use((k::my_class &&)c); } namespace k { struct my_class { operator int(){ return 123; } }; void use(int a){ printf("use(%d)", a); } }
+22:16 geordi: use(123)
+22:17 FrankHB joined channel
+22:18 condy: adl找到了唉（
+22:19 condy quit:Quit: leaving
+22:19 condy joined channel
+22:21 momoka joined channel
+22:22 Guest51970 quit:Client Quit
+22:24 FrankHB: geordi, {N::C c; auto& r = c; use(r);} namespace N { struct C{operator int(){return 123;}}; void use(C& c){printf("use(%d)", int(c));}}
+22:24 geordi: use(123)
+22:24 FrankHB: 明明也找得到嘛……
+22:25 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.1/20150929144111]
+22:36 Youmu` joined channel
+22:39 Youmu` joined channel
+22:40 lh_mouse: IP地址: 115.28.150.204山东省青岛市 阿里巴巴
+22:41 momoka: ...
+22:41 momoka: 被发现了
+22:41 momoka quit:Quit: momoka
+22:42 cleamoon__: 阿里巴巴？谁？
+22:46 lh_mouse: condy
+22:49 cleamoon: soga
+22:57 lh_mouse: geordi, { f(5); } void f(float){ BARK; } void f(double){ BARK; } void f(long double){ BARK; }
+22:57 geordi: error: call of overloaded 'f(int)' is ambiguous
+23:01 lh_mouse: geordi, << log(5)
+23:01 geordi: 1.60944
+23:01 lh_mouse: geordi, << TYPE(log)
+23:01 geordi: error: no context to resolve type of 'log'
+23:02 lh_mouse: geordi, << std::log(5); \ #include <cmath> 
+23:02 geordi: 1.60944
+23:02 lh_mouse: geordi, << TYPE(std::log(5)); \ #include <cmath> 
+23:02 geordi: prvalue double
+23:02 lh_mouse: geordi, << TYPE(std::log(5.0l)); \ #include <cmath> 
+23:02 geordi: prvalue long double
+23:03 lh_mouse: geordi, { log(5); }
+23:03 geordi: <no output>
+23:06 lh_mouse: geordi, << isgreater(1, 2)
+23:06 geordi: false
+23:06 lh_mouse: geordi, << isgreater(1, 2ll)
+23:06 geordi: false

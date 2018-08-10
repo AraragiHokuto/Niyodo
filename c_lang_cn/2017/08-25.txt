@@ -1,0 +1,115 @@
+01:15 Mokou quit:Quit: Lost terminal
+01:54 lh_mouse quit:Ping timeout: 240 seconds
+02:13 Youmu quit:Quit: Connection closed for inactivity
+08:14 FrankHB quit:Ping timeout: 240 seconds
+08:42 FrankHB joined channel
+08:46 jin7boy joined channel
+09:14 jin7boy quit:Quit: Leaving
+09:45 Chineseboy joined channel
+09:46 Chineseboy: p
+09:46 Chineseboy: 没人我就把频道占为己有了啊
+09:46 Chineseboy: ，，，，
+09:50 Chineseboy: ?
+09:55 Chineseboy quit:Ping timeout: 260 seconds
+10:02 StardustX joined channel
+10:21 Chineseboy joined channel
+10:21 Chineseboy:  /msg ChanServ TAXONOMY #c_lang_cn
+10:23 StardustX: Chineseboy: 前面多了个空格
+10:26 Chineseboy quit:Ping timeout: 260 seconds
+10:26 Chineseboy joined channel
+10:26 Chineseboy: 为什么我看不到消息
+10:27 Chineseboy: 啊啊
+10:27 Chineseboy: !!!
+10:27 Chineseboy: 只能在消息记录看
+10:31 Chineseboy quit:Ping timeout: 260 seconds
+10:33 Chineseboy joined channel
+10:33 Chineseboy: 有人不理我吗
+10:33 Chineseboy: 55555
+10:33 Chineseboy: 第一次进，这么冷清
+10:34 Chineseboy: 还玩个屁啊
+10:38 Chineseboy quit:Ping timeout: 260 seconds
+10:48 StardustX: ...
+10:50 \s: ...
+10:50 \s: 这伙计是哪来的
+10:51 StardustX: 用了代理，地址位置不详
+11:19 CyrusYzGTt quit:Ping timeout: 252 seconds
+11:32 CyrusYzGTt joined channel
+11:44 sottd joined channel
+11:44 sottd: qq的讨论组坏掉啦
+11:44 sottd: Make a big news
+12:03 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 54.0.1/20170628075643]
+12:03 Mokou joined channel
+12:10 Youmu joined channel
+12:12 lh_mouse joined channel
+12:27 Mokou quit:Remote host closed the connection
+12:28 Plough joined channel
+13:41 StardustX quit:Remote host closed the connection
+13:42 StardustX joined channel
+13:52 StardustX quit:Remote host closed the connection
+13:53 StardustX joined channel
+13:56 lh_mouse: geordi, { uintptr_t w = 0x123456789abcdef0; w = __builtin_bswap64(((w << 16) & 0xFFFF0000FFFF0000) | ((w & 0xFFFF0000FFFF0000) >> 16))); cout <<hex <<w; }
+13:56 geordi: error: Unexpected `)` after `>> 16))`. Expected '}' or balanced code.
+13:56 Mokou joined channel
+13:56 lh_mouse: geordi, { uintptr_t w = 0x123456789abcdef0; w = __builtin_bswap64(((w << 16) & 0xFFFF0000FFFF0000) | ((w & 0xFFFF0000FFFF0000) >> 16)); cout <<hex <<w; }
+13:56 geordi: bc9af0de34127856
+13:57 lh_mouse: geordi, { uintptr_t w = 0x123456789abcdef0; w = (((w << 16) & 0xFFFF0000FFFF0000) | ((w & 0xFFFF0000FFFF0000) >> 16)); cout <<hex <<w; }
+13:57 geordi: 56781234def09abc
+13:59 lh_mouse: geordi, { uintptr_t w = 0x123456789abcdef0; w = __builtin_bswap64(((w << 16) & 0xFF00FF00FF00FF00) | ((w & 0xFF00FF00FF00FF00) >> 16)); cout <<hex <<w; }
+13:59 geordi: 9a00de009a0056
+13:59 Plough quit:Ping timeout: 240 seconds
+13:59 lh_mouse: geordi, replace all 16 with 8
+13:59 geordi: def09abc56781234
+14:06 Mokou quit:Ping timeout: 252 seconds
+14:12 Mokou joined channel
+14:32 Mokou quit:Ping timeout: 252 seconds
+14:51 Mokou joined channel
+15:02 condy quit:Ping timeout: 248 seconds
+15:06 condy joined channel
+15:31 Mokou_ joined channel
+15:34 Mokou quit:Ping timeout: 240 seconds
+16:09 testtesttest joined channel
+16:15 Mokou joined channel
+16:18 Mokou_ quit:Ping timeout: 240 seconds
+16:19 StardustX quit:Remote host closed the connection
+16:19 StardustX joined channel
+16:41 whocares_2 quit:Ping timeout: 248 seconds
+16:41 whocares_2 joined channel
+16:46 Mokou quit:Ping timeout: 252 seconds
+17:03 Mokou joined channel
+17:20 \s quit:Remote host closed the connection
+17:21 \s joined channel
+17:21 \s quit:Changing host
+17:21 \s joined channel
+17:23 Mokou quit:Ping timeout: 248 seconds
+17:26 Mokou joined channel
+17:34 testtesttest quit:Quit: testtesttest
+17:49 FrankHB quit:Ping timeout: 252 seconds
+17:52 dh_pc joined channel
+18:13 dh_pc quit:Remote host closed the connection
+18:38 Mokou quit:Ping timeout: 240 seconds
+19:32 StardustX quit:Remote host closed the connection
+19:39 Mokou joined channel
+19:41 FrankHB joined channel
+20:01 iyzsong joined channel
+20:25 Mokou quit:Ping timeout: 260 seconds
+20:33 FrankHB quit:*.net *.split
+20:33 FrankHB joined channel
+20:44 Plough joined channel
+20:50 CyrusYzGTt quit:Ping timeout: 260 seconds
+20:50 Mokou joined channel
+20:51 Plough quit:Ping timeout: 260 seconds
+20:52 gauge is now known as OriginCode_
+20:53 OriginCode_ is now known as gauge
+21:03 StardustX joined channel
+21:04 CyrusYzGTt joined channel
+21:04 condy quit:Ping timeout: 248 seconds
+21:08 condy joined channel
+21:36 StardustX quit:Quit: 告辭
+22:34 Mokou_ joined channel
+22:37 Mokou quit:Ping timeout: 246 seconds
+22:44 Mokou_ is now known as Mokou
+22:55 condy quit:Ping timeout: 240 seconds
+22:55 condy joined channel
+23:20 condy quit:Ping timeout: 240 seconds
+23:25 condy joined channel
+23:32 Mokou quit:Read error: Connection reset by peer

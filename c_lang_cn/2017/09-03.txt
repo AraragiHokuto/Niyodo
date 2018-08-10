@@ -1,0 +1,556 @@
+00:00 Plough: uccu
+00:04 lhanjian: uccu men
+00:34 lh_mouse: geordi, { constexpr auto a = __builtin_nan(""); cout <<(a == a); }
+00:34 geordi: false
+00:34 lh_mouse: geordi, { constexpr auto a = __builtin_nan(""); cout <<(a < a); }
+00:34 geordi: false
+00:34 lh_mouse: geordi, { constexpr auto a = __builtin_nan(""); cout <<(a <= a); }
+00:34 geordi: false
+00:34 lh_mouse: geordi, { constexpr auto a = __builtin_nan(""); cout <<(a > a); }
+00:34 geordi: false
+00:39 Plough: 这饭团子味道还不错
+00:39 Plough: 挺适合当夜战储备粮的
+00:42 varna: 何不买林檎
+00:49 Plough: 林檎请即刻中止
+00:52 lhanjian: 街舞打小姐姐不错
+00:57 lhanjian: varna: PS4的应用可以装一下，功能完善
+00:59 varna: 直播之类的？
+00:59 lhanjian: 嗯
+01:00 lhanjian: 聊天也可以打字
+01:01 varna: 缺省带的东西不能直播么
+01:02 lhanjian: 打字麻烦
+01:02 varna: 怎么启用？
+01:02 varna: 等下我凹完这个最终决战试试播一次血源
+01:02 lhanjian: 那是个安卓应用
+01:03 varna: ...
+01:03 lhanjian: 羊驼子自己探索下吧，功能好多
+01:03 varna: 安卓应用就懒得装了
+01:03 varna: 我倒是能看到你的观看请求
+01:03 lhanjian: 嗯
+01:03 varna: 但是我怎么响应呢
+01:03 lh_mouse: geordi, { double k; __asm__(".intel_syntax noprefix; movsd qword ptr[%%0], xmm0; .att_syntax;" ::"r"(&k)); }
+01:03 geordi: error: bad expression
+01:04 lhanjian: 按一下ps键？
+01:04 varna: share里面开始分享？
+01:04 lh_mouse: geordi, { double k; __asm__(".intel_syntax noprefix; movsd qword ptr[%0], xmm0; .att_syntax;" ::"r"(&k)); }
+01:04 geordi: <no output>
+01:04 lhanjian: 不知道……
+01:05 varna: 等会儿试试
+01:12 Plough: 困了，先睡
+01:12 Plough: 诸君武运
+01:13 varna: 这最终Boss好鶸啊……
+01:13 varna: (｡･ω･)ﾉ不愧是米空
+01:21 varna: lhanjian: 我试着播一下血源看
+01:24 varna: 连接速度测试不通过……
+01:24 varna: 六到不行
+01:24 lhanjian: ……
+01:24 lhanjian: 渣渣PSn
+01:34 cleamoon: 四小姐竟然运行安卓
+01:38 varna: 每次篝火回城都能看见十几个在老窝里自杀的
+01:40 varna: 祈祷下这次三胖能给我两个血石块
+01:42 cleamoon: 然后三胖把你从塔上推下去了
+01:42 varna: 地牢的三胖
+01:42 varna: 卧槽真给了
+01:44 cleamoon: orz
+01:44 cleamoon: 赶紧奶自己一口
+01:44 varna: 地牢三胖还是很友善的，拿大鸡腿的上来一喆掏死，片儿刀的引他出双持下砸一喆掏残然后随手枪决，火枪的近身盲区里砍到他掏鸡腿之后随手枪决
+01:44 varna: 比打小怪都容易
+01:46 cleamoon: 对了，阿里会买intel的编译器之类的东西吗
+01:46 varna: 不会，但是和intel的研发有合作
+01:46 cleamoon: soga
+01:46 varna: 厂里的基建没有依赖icc
+01:46 cleamoon: 我还以为大公司都会买呢
+01:47 cleamoon: 哦，你们用巫女.....
+01:47 varna: 非巫女的部分也不用icc
+01:47 varna: 硬件上的合作更密切些
+01:48 cleamoon: 硬件合作？你们也搞这个？
+01:49 varna: 新款服务器采购，还有一些做算法的芯片采购（比如gz压缩）
+01:49 varna: 其他的部分未必和intel相关，但存储、GPU、FPGA之类的东西也有各式合作
+01:50 cleamoon: soga
+01:50 cleamoon: 以为你们还做intel的外包呢
+01:51 iyzsong quit:Ping timeout: 240 seconds
+01:53 varna: 估计在我攒够一个血岩的灵视之前，血石块出不全了
+01:57 cleamoon: 灵视高了能看到更多好玩的就好了
+01:59 varna: 刷一次两点灵视，现在我已经54点了
+01:59 varna: 血石块还差一个
+02:01 Plough quit:Ping timeout: 255 seconds
+02:05 varna: 刷齐了……
+02:06 cleamoon: orz
+02:07 varna: 用砖哥试试新锯刀的手感
+02:10 lhanjian: 太阳直剑能加的buff还是不多啊
+02:10 varna: 5.9k
+02:10 varna: 比起手杖的6.3k确实差出了5%
+02:13 varna: 近战连段仍然朴素实用
+02:15 varna: 后面的流程里拿着耍一耍
+02:20 cleamoon: 噗，一个标语写的我们万众一心，推上人看成了我们万众-1s
+02:22 lhanjian: PS4玩家太弱了
+02:22 lhanjian: 一个能弹反街舞都没见到
+02:23 varna: 仔细想想，少了300伤害似乎也没少什么
+02:24 varna: 但如果叠上20%的对怪兽加成，还得下周目再试验下
+02:27 varna: 算下来差了将近一击
+02:27 varna: 不算亏
+02:29 cleamoon: 听老菊说这类游戏都是玩很多一周目呀
+02:29 varna: 血源确实一周目好玩
+02:29 varna: 高周目对伤害量的要求比较高，需要刻意去刷
+03:31 cleamoon: 赶紧来个奥术开荒
+03:39 varna quit:Ping timeout: 240 seconds
+04:05 lh_mouse quit:Ping timeout: 248 seconds
+08:47 jin7boy joined channel
+09:13 jin7boy quit:Quit: Leaving
+09:44 Arisaka joined channel
+09:51 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:27 iyzsong joined channel
+11:18 visionsmile joined channel
+11:19 visionsmile quit:Client Quit
+11:23 visionsmile joined channel
+11:27 visionsmile quit:Quit: Leaving
+11:27 visionsmile joined channel
+11:47 visionsmile quit:Remote host closed the connection
+11:47 visionsmile joined channel
+11:49 visionsmile quit:Remote host closed the connection
+11:54 StardustX joined channel
+13:18 iyzsong-m joined channel
+13:24 simonHHH joined channel
+13:30 iyzsong-m quit:Ping timeout: 252 seconds
+13:31 * simonHHH 
+13:36 simonHHH quit:Ping timeout: 240 seconds
+13:36 simonHHH joined channel
+13:51 iyzsong quit:Ping timeout: 248 seconds
+13:58 varna joined channel
+13:59 varna: _(:з」∠)_头一次感觉锯刀雷符大力丸这么爽
+14:00 varna: 一套没打好的连段下来，罗姆只剩1/3血
+14:03 Taggnostr2 quit:Remote host closed the connection
+14:07 jin7boy joined channel
+14:44 condy quit:Ping timeout: 248 seconds
+14:47 condy joined channel
+15:22 \s quit:Remote host closed the connection
+15:37 StardustX quit:Quit: 告辭
+15:59 Plough joined channel
+16:01 varna: (｡･ω･)ﾉ
+16:15 Plough quit:Ping timeout: 240 seconds
+16:19 c__ joined channel
+16:20 c__ quit:Max SendQ exceeded
+16:21 c__ joined channel
+16:21 c__ quit:Max SendQ exceeded
+16:22 c__ joined channel
+16:23 c__ quit:Max SendQ exceeded
+16:23 c__ joined channel
+16:24 c__ quit:Max SendQ exceeded
+16:33 lhanjian: varna: ୧(﹒︠ᴗ﹒︡)୨
+16:33 lhanjian: 街舞金牌好容易
+16:34 lhanjian: 一直转一直转
+16:38 varna quit:Disconnected by services
+16:38 varna joined channel
+16:39 varna: lhanjian: 敌人弱和流派强是两回事吧
+16:40 lhanjian: 碰到重武器我也转
+16:40 lhanjian: 掐住他r1之间的空隙就能来一套
+16:40 varna: ……他怎么会先出刀的
+16:41 varna: 不太清楚这些人的思路
+16:41 lhanjian: 他不出刀我就扔飞刀逼走位
+16:42 lhanjian: 重武器侠大都没远程
+16:42 varna: 没用啊……
+16:42 varna: mong男不该全套重甲配1.3k裸血
+16:42 lhanjian: 120级
+16:43 varna: 换血都换不起的话，我觉得重武器反而吃亏
+16:44 lhanjian: 而且我也是全套洛骑48韧性
+16:44 lhanjian: 我一套街舞伤害已经比他r1二连高了
+16:44 varna: 什么鬼
+16:44 varna: 果然是等级问题
+16:45 varna: 我一套连段打在mong男身上也就半血左右
+16:45 varna: (｢・ω・)｢罢了罢了
+16:52 varna: 奇怪，四小姐怎么报告说有数据损坏
+17:06 varna: 卧槽我吃着兽丸被秒了……
+17:07 varna: 不过大力丸真带劲啊，一套连直接11k+
+17:07 varna: 敌人像纸糊的一样
+17:14 varna: 卧槽被一枪秒了……
+17:15 varna: 怒丢三十多万魂
+17:15 varna: 本来还能升一级的
+17:24 lhanjian: 又干掉一个大剑小盾侠
+17:24 lhanjian: 这帮伙计不会弹又非要弹
+17:27 lhanjian: 我判断失误，全套街舞是略多于半血
+17:27 iyzsong joined channel
+17:28 varna: 顺便把噩梦之主也收掉算了
+17:28 StardustX joined channel
+17:29 lhanjian: 如果小刀没戳着，略少于半血
+17:30 lhanjian: 终于碰到一个谨慎的大鸡腿哥
+17:32 lhanjian: 这帮用盖尔大剑战技的伙计也太不把街舞放眼里了
+17:34 varna: 四小姐服的PvP水平怎么如此烂的
+17:34 varna: 都跑去PC了？
+17:34 lhanjian: 不知道啊
+17:35 varna: 盖尔大剑都打不过有点丢人
+17:35 lhanjian: 他一段完了不收招。直接吃我一套街舞反击
+17:36 varna: 都是大侠
+17:37 lhanjian: 又秒掉一个环特大侠
+17:37 lhanjian: 硬吃他一击，然后连他一套街舞
+17:37 varna: (｡･ω･)ﾉ把韧装脱了，穿制服出镜
+17:38 lhanjian: 那会被直剑嫌弃
+17:38 varna: 不会的
+17:39 lhanjian: 终于碰到一个会玩的半叶哥了
+17:40 Izumo joined channel
+17:40 lhanjian: 裤裆里掏出一团火把我砸死了
+17:40 lhanjian: 应该是个智信战士
+17:41 lhanjian: 又是一个胡乱走位的特大剑侠
+17:41 Izumo: 我在考虑要不要去趟秋叶原
+17:42 FR13_NDS joined channel
+17:43 lhanjian: 碰上延迟大火球真没办法
+17:45 Rabenda joined channel
+17:45 lhanjian: 噗，和一个狼大剑拼刀同归于尽了
+17:45 lhanjian: 狼跳对街舞
+17:46 lhanjian: 我穿制服出镜一回
+17:47 Rabenda quit:Remote host closed the connection
+17:47 Rabenda joined channel
+17:48 varna: 噩梦之主继续被卡AI枪决
+17:48 lhanjian: 韧性10，可能真的被直剑欺负
+17:48 varna: 不会的
+17:49 varna: 拼的是出招霸体，不是受击
+17:49 varna: 别被打到就好了
+17:50 lhanjian: 舞死一个法爷
+17:50 Izumo: 对了，去野兽邸那天我还看到这么个玩意
+17:51 Izumo: https://usercontent.irccloud-cdn.com/file/1T4cqlmB/IMG20170830125332.jpg
+17:51 Izumo: 可以，这很共产
+17:51 varna: 233333
+17:51 varna: 为什么会画一条咸鱼呢
+17:52 Izumo: 日共早咸了吧
+17:52 lhanjian: varna: 韧性不是用来出招的时候避免对手打断的么
+17:52 varna: 招式有自带韧性，搜一下可以查到一个表格
+17:52 Izumo: 秋叶原走起
+17:52 varna: 对直剑侠用这个足够了
+17:53 lhanjian: 被巨剑侠压死了……
+17:53 varna: 算了，把剧情努努力打完进六周目，再出去买点东西
+17:53 varna: 脐带没拿全，后面只有奶妈和Gayman
+17:55 lhanjian: 被滑步侠恶心了
+17:55 lhanjian: 我的r1被直剑打断了……
+17:55 varna: 当然会被打断……
+17:56 varna: 按感觉摸一个距离拼街舞就行
+17:57 FR13_NDS: 玩的什么游戏呢
+17:57 lhanjian: FR13_NDS: 黑暗之魂 血源诅咒
+17:57 FR13_NDS: 已通关
+17:58 varna: 几周目？
+17:59 lhanjian: FR13_NDS: 我在PVP.欢迎活尸剑圣
+17:59 varna: 通关党未必打竞技场吧……
+17:59 FR13_NDS: 黑魂3么？
+18:00 FR13_NDS: 我只玩了一周目，手残党
+18:00 lhanjian: 多打几周目，一周目很多玩法都没尝试呢
+18:01 lhanjian: 二周目也要轻松一些
+18:01 varna: 我现在明白了，水桶PvP就是痛苦
+18:01 varna: 在每个人短板都不大的情况下我强行cosplay制造短板
+18:01 FR13_NDS: 黑魂3是pc上玩的海岛版
+18:02 * varna PC坏了一台
+18:02 FR13_NDS: 所以没pvp
+18:02 FrankHB joined channel
+18:02 lhanjian: varna:  你可以点满力敏，狼大曲刀，教宗眼，金石誓约，看看输出多少
+18:04 Izumo: 钦定了 https://usercontent.irccloud-cdn.com/file/rSAqViDj/%2Fstorage%2Femulated%2F0%2Fsina%2Fweibo%2Fweibo%2Fimg-71a18a3b47a80ef22b378b8efea318e2.jpg
+18:04 lhanjian: 应该可以一套基本带走吧
+18:04 lhanjian: 甚至考虑身上再背一下红泪双套，关键时刻一击必杀
+18:06 lhanjian: 碰到一个不忠诚的街舞队
+18:06 lhanjian: 穿狼大套，打不过我换爪子滑步，还放咒术，最后被我街舞抓带走
+18:07 varna: 驲，看irc被秒了
+18:07 varna: 我玩黑魂PvP不堆数值的
+18:08 varna: 主手法兰大剑副手铃铛，没有其他武器，衣服也只是不死队一套
+18:08 varna: 随别人怎么费心思，我只看精度
+18:08 lhanjian: 你的结晶枪都输出那么高了……
+18:08 lhanjian: 我可是纯粹物理街舞……
+18:08 horpoppy joined channel
+18:09 lhanjian: 充其量扔飞刀
+18:09 lh_mouse joined channel
+18:09 varna: 纯物理其实不用考虑什么封走位，那是骗自己
+18:09 lhanjian: 那也只是用来逼走位耗最后一点血的
+18:09 varna: 我对面的伙计可能随手掏出一个全buff大火球或者阳光枪
+18:09 lhanjian: 那倒是……
+18:09 lhanjian: 一口大火球直接带走
+18:09 varna: 同时还全身重甲会近战
+18:10 varna: 总得有点对策
+18:10 lhanjian: 那倒是
+18:10 varna: 不过戒指其实也只有法术增幅和咏唱加速
+18:10 lhanjian: 羊驼子还是压级吧，不然太痛苦了
+18:11 varna: PvP还是压120比较健康
+18:11 varna: 一个人只有一种长处
+18:11 lhanjian: 是的
+18:11 lhanjian: 其实智信战士花样也还是很多的
+18:11 lhanjian: 30智信，20力敏，其他血精
+18:11 varna: 智信其实还有个粗制鸦人大短刀的辅助
+18:12 lhanjian: 对
+18:12 * Izumo 下一站到日暮里
+18:12 lhanjian: 而且暗匕首处决一击必杀
+18:12 varna: Izumo: 爆
+18:12 lhanjian: 暗直剑暗洛特大都输出惊人
+18:12 lhanjian: 左手咒术法术伤害也可观
+18:13 Izumo: varna: 肛
+18:13 lhanjian: 之前我玩了一下，PVP太强了，可惜这样街舞就很麻烦
+18:13 Izumo: https://usercontent.irccloud-cdn.com/file/zt6Or1im/irccloudcapture-1231513646.jpg
+18:15 lhanjian: 新日暮里CEO，红旗
+18:16 lhanjian: 暗匕首处决一次2000伤害，我自己都震惊了
+18:16 lhanjian: 竞技场这些狼大剑玩家没一个合格的
+18:17 lhanjian: 战技狼跳送反击
+18:17 varna: 枪毙了梅高奶妈
+18:18 varna: 最后的敌人只剩下gayman了，想到这次不能用手杖掏他就有点遗憾
+18:19 lhanjian: 碰到一个长枪兄，弹反我一次，之后两次无脑战技
+18:19 * varna 憋尿打Gayman提高枪反确率
+18:21 lhanjian: 噗
+18:23 Izumo: 电器街(迫真) https://usercontent.irccloud-cdn.com/file/GZArP7AW/irccloudcapture-401649530.jpg
+18:23 varna: 玛德这AI开始厨三连了……
+18:23 FrankHB quit:Read error: Connection reset by peer
+18:25 varna: 三喆加两发起源弹枪毙
+18:26 varna: 羊驼猎人被迫真的辉夜姬选中，变成了二代目老猎人
+18:28 lhanjian: 老猎人
+18:30 lhanjian: 被忍耐拳头咒术哥打死了
+18:30 varna: 锯刀不愧是封面钦定的武器，打起来直爽有效
+18:31 FrankHB joined channel
+18:31 lhanjian: 嗯
+18:39 Rabenda quit:Quit: Leaving
+18:40 varna: 把圣职兽切了收工
+18:41 Izumo: https://usercontent.irccloud-cdn.com/file/Keeu55dq/irccloudcapture-1221727085.jpg
+18:41 Izumo: varna, 你司不行啊
+18:42 varna: 两喆+一顿乱砍
+18:42 varna: 锯刀剁怪兽简直神效……
+18:42 varna: 我司在日本的支付就是没干过微信
+18:42 varna: 而且微信确实在日本消费有优惠，而支付宝没有
+18:43 FR13_NDS: 微信这么暴力
+18:43 varna: 微信在日本干得不错的
+18:44 varna: 本来线下小额支付他们就很强
+18:46 lhanjian: 到现在只有猎龙大斧玩家打的不错
+18:48 varna: 唉唉，休息了一周末终于缓过来了
+18:48 varna: 跑西溪还是太累
+18:48 Izumo: varna: 
+18:49 varna: .
+18:49 Izumo: 手滑
+18:49 Izumo: 刚才有个妹抖试图拉我去咖啡厅
+18:50 varna: 去啊
+18:50 varna: 伪娘咖啡厅多好
+18:51 FR13_NDS: 有这嗜好～～～
+18:51 varna: (｡･ω･)葛温德林吼不吼啊？
+18:51 Izumo: 先不去了
+18:51 varna: (｡･ω･)兹瓷不兹瓷啊？
+18:51 Izumo: 不过那个小姐姐英文不错
+18:52 varna: 怕是亚楠逃出来的
+18:52 Izumo: uccu
+18:52 varna: 你不去，就照你后脑一下，打得你晕乎乎，然后一喆带走
+18:52 Izumo: 那是新宿的小姐姐
+18:52 lhanjian: 哈哈哈
+18:53 FR13_NDS quit:Quit: Textual IRC Client: www.textualapp.com
+18:53 lhanjian: 惜别玩家有意思吗，就剩一滴血，一飞刀就带走了
+18:53 varna: 回血距离感不好就容易悲剧
+18:54 varna: 见过几个拿捏得很不错的人，距离刚好差一点能砍到他
+18:55 varna: Izumo: 街上有没有2B小姐姐？
+19:00 lhanjian: 估计这些惜别玩家是用来抗处决的
+19:03 varna: https://www.bilibili.com/video/av14048666/ 这就有人玩上无夜之国2了
+19:19 Arisaka_ joined channel
+19:24 Arisaka_ quit:Remote host closed the connection
+19:26 Izumo: 握日
+19:26 Izumo: 1-1大井
+19:29 Arisaka_ joined channel
+19:32 Arisaka_ quit:Client Quit
+19:38 StardustX quit:Quit: 告辭
+19:40 Izumo: 啊，雾岛
+20:01 varna: 可怕的欧洲人
+20:06 varna: emmmmm
+20:06 varna: 无夜之国2这个打击感简直……
+20:13 Izumo: varna, 没看到2B
+20:14 iyzsong-m joined channel
+20:14 varna: 没有2B太可惜了
+20:15 Izumo: 毕竟现在没展子
+20:15 Izumo: 秋叶原的SEGA倒还有些人在玩舰C
+20:16 Izumo: 不像代代木那家完全没人…
+20:16 varna: 也没有2B援交？
+20:16 Izumo: 没有
+20:16 Izumo: 援交得网上约吧
+20:17 varna: 噫吁戲
+20:17 varna: 光荣硬是把百合pokemon ARPG做成了无双……
+20:17 Izumo: 啊，车上有三个穿浴衣的小姐姐
+20:18 varna: 战斗BGM一起总觉得该吼一句敌羞吾去拖他走
+20:19 varna: 还有骇人的连携技：两个妹子抱在一起对周围的单身狗造成成吨的伤害……
+20:22 iyzsong-m: (；・∀・)
+20:27 Izumo: https://m.weibo.cn/1917488115/4147985967852918
+20:27 Izumo: 唐山穆斯林
+20:27 varna: 绿教这是作死啊
+20:28 Izumo: 并不知道为什么他们有这么大自信
+20:28 varna: 不行，看了二十分钟游玩演示，我就晕奶了
+20:29 varna: 太可怕了，哪里动一下都会引发RY
+20:36 iyzsong-m quit:Ping timeout: 240 seconds
+20:41 StardustX joined channel
+20:47 Plough joined channel
+20:48 varna: Plough: 爆
+20:48 Plough: varna, 肛
+20:51 varna: 总觉得现在自己变得奇怪了
+20:52 varna: 玩血源的时候放松，照顾玩家一点的游戏反而发紧
+20:52 varna: 怕是死太多
+20:52 varna: 我驲
+20:53 varna: 头一回见到把naizi高光烘焙到贴图上的
+20:53 varna: 还多摩是对称的……
+20:54 CyrusYzGTt joined channel
+21:04 lhanjian: 法兰护林员有意思
+21:05 varna: 等级高了之后很少见到护林员了
+21:05 varna: PS4服更容易被招过去？
+21:08 lh_mouse: 放狗啊。
+21:10 varna: 不准养苟
+21:11 varna: _(:з」∠)_明天应该还能在滨江蹲一天，不必太早起来
+21:11 varna: _(:з」∠)_呜呼呼
+21:13 Plough: 你要区西溪了？
+21:13 Plough: 去*
+21:14 varna: 我这周工作日有一半时间在西溪对接天猫的系统
+21:14 Plough: 噫吁嚱
+21:14 varna: 早上得坐班车，比较麻烦
+21:15 Plough: 毕竟你杭州通勤铁路太渣……
+21:15 varna: 地铁的问题在晚上更明显
+21:15 varna: 只要正常加班，肯定赶不上的
+21:15 Plough: 东京的线路基本都是过零点运行的
+21:16 Plough: 现在这个点我还敢去趟机场
+21:16 asdwq joined channel
+21:16 varna: 零点对上班族比较友好
+21:16 varna: 不过司机排班就麻烦了
+21:16 Plough: 杭州地铁人手不够么
+21:17 varna: 应该和规划有关
+21:17 varna: 之前应该没有预想到滨江和西溪会搞出这么一小撮加班青年的
+21:17 Plough: 噫吁嚱
+21:17 Plough: 不知道跟运行图有没有关系
+21:17 Plough: 毕竟东京的线路都是公开时刻表的
+21:18 Plough: 而我听说国内大城市地铁经常吊门……
+21:21 Plough: https://wx2.sinaimg.cn/mw690/6b82f131gy1fj6ohwqbdjj20qo1bf115.jpg 川普大帝
+21:22 varna: (｡･ω･)ﾉ奥义！猪肛裂！
+21:22 Plough: “穆斯林拖欠房租，然后房东就断了水电，穆斯林要房东赔三十万，最后闹到警察局，当警察面说“我们sha人跟杀鸡一样，死过很多人了不怕了”的后续，赔偿穆斯林十万[二哈]小白帽赶快买起来。”
+21:22 * varna 熟练地陶喆了一个二师兄
+21:22 varna: puuuuuuuuuu
+21:22 varna: 是时候出动一些缪斯林了
+21:22 Plough: 名族团结大于天
+21:25 varna: 两喆加两刀带走加斯科因
+21:25 varna: P2台词没念完直接爆出P3，P3变身没变完直接死了
+21:26 varna: 死的时候台词刚播完
+21:26 varna: (｡･ω･)舒爽
+21:26 Plough: http://img.vim-cn.com/c2/a1884a66075c965e25efbee8c441b082f554e0.jpg
+21:26 varna: 过于反动
+21:34 lhanjian: 现在红旗已经……
+21:34 lhanjian: 怕不是回不来了
+21:35 varna: 然而红旗就着一盘天网蛛网捕蝶之法唱出一曲中国人
+21:35 varna: 台下响起经久不息的掌声
+21:36 asdwq joined channel
+21:38 varna: 红旗哪天开学？
+21:39 Plough: 正式开学是21号
+21:39 varna: Plough: 
+21:39 varna: 之前应该需要去办手续？
+21:39 Plough: 有不少，似乎12号开始就得去学校
+21:39 Plough: 活动11号结束
+21:39 varna: 还好，有一周时间逛逛
+21:40 Plough: +
+21:40 Plough: 我在考虑要不要去趟横须贺
+21:41 varna: 结果红旗团结了不被人待见的校花、眼看就要留级的不良少年、利用特权成天穿改造制服的会长……
+21:41 varna: (｡･ω･)最后养成了早睡早起的好习惯
+21:42 Plough: 这哪个番来着
+21:42 varna: Persona 5
+21:42 varna: 有一种累叫你家的猫觉得你累了
+21:42 Plough: 66666666
+21:44 lhanjian: 。很晚了，快睡觉吧
+21:44 lhanjian: varna: 黄毛只是班花吧
+21:44 varna: 于是波特带着还想再做几个开锁器的遗憾睡了……
+21:45 lhanjian: 赶快让国文老师来按摩就好了
+21:45 varna: 如果只是班花的话，说明一个问题：鸭志田的交往范围还要广
+21:45 lhanjian: 睡什么觉
+21:45 varna: 五千元好贵啊
+21:45 varna: 这又不是魂可以定点刷的
+21:46 varna: 鸭志田的迷宫似乎已经被做成MMD舞台了
+21:46 lhanjian: 你等到最高级别，好像就不要钱了
+21:46 varna: 我之前看到过一个阿福跳舞的节目
+21:46 varna: ...
+21:47 lh_mouse: http://music.163.com/#/song?id=438456768
+21:47 StardustX quit:Quit: 告辭
+21:48 varna: 京吹！？
+21:48 varna: 耗居然与时俱进了
+21:48 lhanjian: varna: 校花应该是大小姐/会长吧
+21:49 varna: 哦瘊瘊？
+21:52 lhanjian: 法兰护林员也是召唤玄学
+21:52 lhanjian: 高卷杏和波特一样只是低年级生吧
+21:53 asdwq quit:
+21:54 varna: 因为是低年级生所以可以顶着×花名义延长期限……
+21:55 lhanjian: 最后波特还不是回家读书了
+21:56 varna: 目测还会考回来的
+21:56 varna: 加了那么多知识
+21:57 lhanjian: 哈哈哈
+22:00 varna: 看看六周目白羊的直死力如何
+22:00 varna: 不对，女子力
+22:01 Arisaka quit:Quit: Arisaka
+22:01 Plough: https://wx4.sinaimg.cn/mw690/00677OoNly1fj6ngmozlaj30k00zkq8u.jpg 二次元反智主义
+22:03 varna: 三张火符砍死
+22:03 Plough: https://wx1.sinaimg.cn/mw690/006zWyU1ly1fj6ox3zyu7j30hs0fadgm.jpg “你们不怀疑主持人吗？”
+22:03 varna: 用锯刀的难度比鞭子小多了……
+22:04 varna: 2333333333
+22:04 zp joined channel
+22:05 varna: (｡･ω･)ﾉHELO
+22:06 Plough: https://wx4.sinaimg.cn/mw690/006sJNVZgy1fj4m51ma69j30es0b0tab.jpg
+22:06 zp quit:Client Quit
+22:07 varna: OverQMR!
+22:07 zp joined channel
+22:08 zp quit:Client Quit
+22:09 cleamoon: @xueshudi
+22:09 cleamoon: 不能喝隔夜水，科学研究表明隔夜水中含有一氧化二氢,零醇、氧酚、羟基氢、氢羟酸、苛性氢、二零醚、正氧烷、氧乙烯、氢氧化氢、脱碳甲醛、一氧化二氢、氢化超氧酰、脱氰零醛肟、二聚氢氧酸酐、氢化脱磺硫酸、氧化脱羧乙酸、氢化脱苄苯甲醇等。过量食用会致人死亡，为了你的健康，请转发给每一个人
+22:09 Plough: 煋
+22:10 zvip joined channel
+22:12 zvip quit:Client Quit
+22:14 cleamoon: 朝鲜宣布成功测试氢弹
+22:14 varna: ...
+22:15 zvip joined channel
+22:15 Izumo: 刚才川普大帝的推文说的就是这事儿
+22:16 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/h3/ve_214298.jpg@596w_1l.jpg
+22:16 varna: 说三胖越过底线么
+22:17 Izumo: ＋
+22:17 cleamoon: 越过好多次了
+22:18 cleamoon: 还在底线这里来回摩擦呢
+22:19 zvip quit:Remote host closed the connection
+22:19 cleamoon: 酒妖开始播星际一重制的战役了，有兴趣可以去看
+22:19 varna: 这 个 可 以 有
+22:19 varna: 地址哪里？
+22:20 cleamoon: b站，刚发一期，我估计就他那速度得10+期
+22:20 varna: 养肥
+22:21 zvip joined channel
+22:25 varna: (｡･ω･)ﾉ洗洗衣服
+22:39 zvip quit:Remote host closed the connection
+22:41 Plough: 噗
+22:41 Plough: 三胖用的macbook是山寨货？
+22:43 varna: ...
+22:44 Plough: https://www.weibo.com/djenghljang/home?topnav=1&wvr=6#_0
+22:44 Plough: 啊不对，这个链接用不了
+22:44 Plough: https://www.weibo.com/ttarticle/p/show?id=2309404145720386013404
+22:45 Plough: https://wx2.sinaimg.cn/mw690/0063tQWsgy1fj6no6sk7wj30xc0irgrb.jpg
+22:46 varna: 233333
+22:48 * varna 又听了一遍香泽花椰菜和早见大师姐
+23:00 lhanjian: Plough: 一个普通的linux发行版。不过还自己搞了个UI
+23:00 lhanjian: 朝鲜码农也算有果粉情怀
+23:01 Plough: 据说前两个版本仿的都是windoze
+23:01 lhanjian: 哈哈
+23:02 cleamoon: 太谐了
+23:03 Mokou joined channel
+23:06 Plough quit:Ping timeout: 260 seconds
+23:10 hong joined channel
+23:28 varna: 噫，我总感觉无夜之国2其实就是个……涩晴游戏
+23:34 cleamoon: https://www.zhihu.com/question/36128186/answer/66885779
+23:35 varna: 就我玩下来的感觉，插画在欺诈
+23:35 varna: 琉莉迪丝明显比雅娜丝大至少一号
+23:36 varna: 但至少游戏里面的表现还比较真诚，没有百合卖肉到现在这个程度
+23:36 varna: 现在基本是拔作（虽说拔作也不坏）
+23:38 cleamoon: 最近都没什么好玩的拔作了
+23:39 varna: 安心血疗
+23:39 varna: 刚才打下来，感觉锯刀和鞭子真的是两个世界
+23:39 cleamoon: 好用？
+23:39 varna: 我头一次明显感觉到连续弱点击破打出的硬直
+23:40 varna: 好用
+23:40 cleamoon: orz
+23:40 varna: 五周目重生古神，电符锯刀大力丸一套11k伤害
+23:40 cleamoon: ............
+23:40 varna: 六周目白羊没敢吃大力丸，一阵绕侧夏姬八打砍到不能还手
+23:40 cleamoon: 略高
+23:41 varna: 之前一直担心锯刀手短，现在看来走位小心点也不至于很惨
+23:42 varna: 不过鞭子毕竟是专业陶喆向的
+23:43 varna: 不怕麻烦的话配合大力丸掏出12k+很可行
+23:44 cleamoon: 但是陶喆看起来猥琐
+23:44 varna: 师姐的姿势就很优美，不猥琐
+23:45 varna: 另外陶喆有个细节：掏肾的手会略微兽化
+23:48 varna: yabtw 虽然我现在用着锯刀，符文仍然是三爪痕
+23:49 varna: 三刀解决不了的东西我往往会避免接近战，下午还被一个蛇头人一击瞬杀来着
+23:50 cleamoon: ......
+23:51 varna: 应该正好撞上了什么debuff帧，敌人伤害增幅
+23:52 cleamoon: bug？
+23:52 varna: 后来去古神的路上又撞到拿轮椅的火枪手，贴脸中枪一击毙命，损失三十七万魂
+23:53 varna: 不是bug, 我记得闪避似乎有debuff帧
+23:55 varna: 后面用锯刀串一遍六周目DLC, 看看驴和劳伦斯的效果
+23:58 cleamoon: ......
+23:59 hong quit:Quit: No Ping reply in 180 seconds.
+23:59 varna: 最明显的常态bug就是最速陶喆穿模
+23:59 varna: 触发很简单：打出蹒跚 -> 前冲中保持推摇杆 -> 掏

@@ -1,0 +1,93 @@
+00:24 lh_cat quit:Quit: Connection closed for inactivity
+00:45 xxxxxxxx quit:Quit: Leaving...
+00:59 Mokou quit:Quit: Lost terminal
+01:49 cleamoon joined channel
+01:50 cleamoon_ joined channel
+02:53 boosure joined channel
+03:34 sleepwalking joined channel
+03:52 lh_mouse quit:Read error: Connection reset by peer
+03:59 sleepwalking quit:Ping timeout: 240 seconds
+05:11 sleepwalking joined channel
+06:25 sleepwalking quit:Ping timeout: 240 seconds
+06:58 sleepwalking joined channel
+08:14 hope1 joined channel
+09:41 sismvg joined channel
+09:41 * sismvg 受到了超级boss-real life的攻击
+10:20 iyzsong: 早
+11:23 sismvg: iphone6 plus ,iphone6s plus..
+11:31 hope1 quit:Read error: Connection reset by peer
+11:33 sismvg: 微积分课整个就是个习题课。。20%讲了概念，80%在做习题还有处理各种怪物
+12:51 Mokou joined channel
+13:51 condy joined channel
+13:54 xxxxxxxx joined channel
+14:20 sleepwalking quit:Ping timeout: 240 seconds
+15:17 condy: 一个个都出国了唉（
+15:17 condy: 好厉害（
+15:18 FrankHB quit:Ping timeout: 255 seconds
+15:38 sismvg quit:Read error: Connection reset by peer
+15:46 lh_mouse joined channel
+16:35 sismvg joined channel
+17:13 sismvg: http://bbs.north-plus.net/read.php?tid-168861.html
+17:13 sismvg: 卧槽，烧！
+17:14 sismvg: http://g.hiphotos.baidu.com/zhidao/wh%3D600%2C800/sign=3d09d1c8d762853592b5da27a0df5afe/0b46f21fbe096b63507df56a0e338744ebf8aca0.jpg
+17:23 iyzsong: z.z
+18:21 xxxxxxxx: 大一新生因和女生多说几句话 被打致脾脏摘除
+18:21 xxxxxxxx: 现在的妹子啊...
+18:21 xxxxxxxx: 小吴的舅舅葛先生说,小吴是山东特殊教育职业学院言语听觉康复教育专业的大一新生。19日晚,几名高年级学生突然来到小吴的宿舍,把他打了一顿。第二天他觉得腹痛,被送到市立五院后,医生发现小吴脾脏破裂,随后进行手术将脾脏摘除。
+18:31 sismvg: 警察：他们未成年，我们手上也没有太多的证据，所以他们不犯法
+18:36 hope1 joined channel
+18:39 hope1_ joined channel
+18:39 hope1 quit:Read error: Connection reset by peer
+18:41 hope1_ quit:Read error: Connection reset by peer
+18:42 hope1_ joined channel
+19:06 xxxxxxxx: 王思聪: 你是叶良辰又如何？ 我赵日天并不服。
+19:07 xxxxxxxx: ^这是真的 http://weibo.com/1826792401/CCl8olsl0
+19:07 cleamoon_ quit:Ping timeout: 264 seconds
+19:07 cleamoon quit:Ping timeout: 264 seconds
+19:09 condy: 0.0
+19:09 cleamoon joined channel
+19:10 sismvg quit:Ping timeout: 244 seconds
+19:18 * lh_mouse slaps condy around a bit with a large trout
+19:20 cleamoon_ joined channel
+19:36 hoxily joined channel
+19:45 cleamoon_: http://ww2.sinaimg.cn/mw690/be6bdb92gw1ew5itxm30kg20hs0a0ax1.gif
+19:45 cleamoon_: http://ww4.sinaimg.cn/mw690/be6bdb92gw1eob9wdzcawg20ar08l000.gif
+19:54 sismvg joined channel
+20:04 Risitide joined channel
+20:07 Risitide: 诸君，请教C++字符串常量“ ”的本质是什么?
+20:07 Risitide: “ ”是包含一个空格的字符串。但是似乎与 “” 和“   ”（包含多个空格的字符串）没有区别
+20:08 lh_mouse: C++ 里没有“字符串常量”  
+20:08 lh_mouse: 那个叫“字符串字面量”
+20:16 hoxily quit:Quit: Leaving
+20:17 hope1_ quit:Ping timeout: 260 seconds
+20:34 Risitide: 试了下“/040”是空格，“/0”会忽略后面的字符，“ ”到底是个什么玩意？
+20:36 sismvg: std::string("")
+20:37 sismvg: geordi,<<{string str("abc/0acb");cout<<str}
+20:37 geordi: error: expected primary-expression before '{' token
+20:37 Risitide_ joined channel
+20:37 sismvg: geordi,{string str("abc/0acb");cout<<str;}
+20:37 geordi: abc/0acb
+20:37 Risitide_: 反斜杠，我刚刚打错了
+20:38 Risitide quit:Ping timeout: 244 seconds
+20:38 sismvg: geordi,{string str("abc\0acb");cout<<str;}
+20:38 geordi: abc
+20:39 sismvg: 单变量微积分是一个学期的课吗？
+20:40 Risitide quit:Read error: Connection reset by peer
+20:42 Risitide joined channel
+20:47 Risitide: 太灵异了，同样是 string str3 = str1 + " " +str2 一会str3里有空格，一会没空格
+20:47 Risitide: 还都是半角
+20:55 sismvg quit:Ping timeout: 240 seconds
+20:56 sismvg joined channel
+21:05 sismvg quit:Ping timeout: 252 seconds
+21:09 Risitide quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+21:33 code_new joined channel
+21:45 Meow-J joined channel
+22:07 yzld2002 joined channel
+22:24 risitide joined channel
+22:25 risitide quit:Client Quit
+22:25 risitide joined channel
+22:26 sleepwalking joined channel
+22:31 risitide quit:Quit: Konversation terminated!
+22:48 condy quit:Quit: leaving
+22:52 * iyzsong AFK - 爆炸吧现充们！
+22:56 xxxxxxxx quit:Quit: Leaving...

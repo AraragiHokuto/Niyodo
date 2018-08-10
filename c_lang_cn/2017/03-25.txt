@@ -1,0 +1,161 @@
+00:13 varna: 先睡了
+00:13 varna: 武运
+01:09 cleamooon_ joined channel
+01:10 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+01:46 Mokou quit:Quit: Lost terminal
+02:37 lh_mouse quit:Read error: Connection reset by peer
+04:25 cleamooon_ quit:Quit: Connection closed for inactivity
+06:51 fy joined channel
+06:51 fy1 quit:Read error: Connection reset by peer
+08:10 Youmu quit:Quit: Connection closed for inactivity
+08:47 xhe joined channel
+09:08 lh_mouse joined channel
+09:09 rapiz joined channel
+09:16 slowcoach quit:Quit: slowcoach
+12:23 wlemuel joined channel
+12:29 wlemuel quit:Remote host closed the connection
+12:37 slowcoach joined channel
+12:40 charlesy joined channel
+12:53 rapiz quit:Ping timeout: 268 seconds
+13:09 justin_snake joined channel
+13:55 iyzsong-m joined channel
+14:04 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+14:06 Ju5t4fun joined channel
+14:08 iyzsong joined channel
+14:10 l0nGYear_test_ joined channel
+14:12 rapiz joined channel
+14:29 iyzsong: _(:з」∠)_
+14:42 justin_snake_ joined channel
+14:43 justin_snake quit:Ping timeout: 256 seconds
+14:54 zwindl joined channel
+14:55 Mokou joined channel
+14:58 lh_mouse: http://github.lhmouse.com/
+14:58 lh_mouse: CC BY-NC-ND 4.0 Copyleft 2016 - 2017, LH_Mouse. All wrongs reserved. 
+15:06 Mokou: https://imgs.xkcd.com/comics/flag.png
+15:18 Ju5t4fun quit:
+15:22 lh_mouse: https://github.com/pages-themes/slate/pull/7
+15:26 rapiz quit:Read error: Connection reset by peer
+15:27 rapiz joined channel
+15:56 l0nGYear_test_ quit:Ping timeout: 258 seconds
+16:01 jinzhao joined channel
+16:15 jinzhao left channel:"ERC (IRC client for Emacs 25.2.1)"
+17:15 whocares_2_ joined channel
+17:16 whocares_2 quit:Ping timeout: 268 seconds
+17:39 varna: _(:з」∠)_新本子的屏幕分辨率又不一样，字体又废了
+17:54 Mokou: ……
+17:54 Mokou: 高分屏？
+17:55 varna: 1600x1900 96dpi
+17:56 varna: ubuntu mono 9的字形和hint都毁了
+17:58 varna: 分辨率下调之后，所有字体都毁了
+17:58 varna: 我整个人都不好了，只好找1600x900下能看的字体
+18:00 Mokou: 66666666666
+18:01 Mokou: 调高dpi呢
+18:01 varna: 字体会变大
+18:02 varna: 我需要在瞎眼、可辨认、TTF这三个问题之间权衡
+18:06 Mokou: ……
+18:06 Mokou: Inconsolata?
+18:07 varna: 效果不好
+18:07 Mokou: 啊，幻想嘉年华下完了
+18:10 varna: 壁纸也要做1600x900的新东西
+18:10 varna: _(:з」∠)_好麻烦
+18:11 Mokou: _(:з」∠)_
+18:11 Mokou: 叫你买什么高分屏
+18:13 varna: _(:з」∠)_我都不知道那是高分屏
+18:14 Mokou quit:Quit: Reconnecting
+18:15 Mokou joined channel
+18:24 iyzsong:   2333
+18:48 whatofor_1 joined channel
+18:49 whatofor quit:Read error: Connection reset by peer
+18:49 xhe quit:Quit: leaving
+18:50 iyzsong-m joined channel
+18:54 xhe joined channel
+19:04 lh_mouse: poseidon 要不要发个 release 。
+19:05 lh_mouse: 现在有的坑基本都填完了。
+19:06 xhe quit:Ping timeout: 240 seconds
+19:06 rapiz quit:Ping timeout: 240 seconds
+19:07 xhe joined channel
+19:09 iyzsong quit:Quit: ZNC 1.6.4 - http://znc.in
+19:26 rapiz joined channel
+19:40 zwindl quit:Quit: Connection closed for inactivity
+20:03 varna: MDZZ
+20:03 varna: nouveau这东西居然会锁死系统
+20:04 varna: _(:з」∠)_以后我买显卡巨烂的办公本，我受够了
+20:06 Mokou: 66666666
+20:06 Mokou: 所以说是no view
+20:06 Mokou: 无望
+20:10 StardustX: 羊驼子买了一个什么本子？
+20:11 varna: tp t440p
+20:13 StardustX: 唔，好像tp的独显性能根Intel核芯显卡比没多少优势来着
+20:14 varna: 有，他能明显增加机器发热量
+20:17 Mokou: 233333333
+20:18 rapiz quit:Ping timeout: 260 seconds
+20:25 varna: http://input.fontbureau.com/ 这个有点意思
+20:34 Mokou: 我试试这个
+20:37 varna: 九号字看起来还不错，明天我微调一下下划线，应该就可以全面从这台shiki迁移到koharu了
+20:37 xhe quit:Quit: Lost terminal
+20:37 xhe joined channel
+20:38 Dove joined channel
+20:39 varna: btw 我加了个启动参数nouveau.noaccel=1...
+20:41 varna: 这次吃了太多亏，以后买本子决不能有侥幸心理
+20:41 varna: 去他大爷的显卡
+20:41 Mokou: AMD大法好
+20:42 varna: 英猥达的游戏卡只适合windoze
+20:42 varna: 专业卡另论
+20:42 Mokou: radeon和amdgpu都是随便就装上了
+20:42 Mokou: 毕竟官方支持
+20:42 varna: 我后来想了想，nouveau拉黑太危险了
+20:42 varna: BIOS里关不了独显
+20:44 varna: 显卡声卡网卡触板背光pulse应该都解决了……
+20:44 * varna 一口恶气
+20:55 xhe quit:Quit: leaving
+21:22 lhanjian: 哦哦哦
+21:22 lhanjian: varna: 我现在的机器压根就没有独显
+21:22 * lhanjian 处于轻躁狂状态，好开心
+21:23 varna: 简直X了POI, 刚才简单配置了一下ff
+21:24 varna: 应该差不多了，明天启用
+21:24 varna: 虽然想到显卡驱动里有nouveau, 我有种晕车般的实感
+21:24 varna: 物理性地觉得恶心了
+21:25 varna: 直接把他拉黑看看能不能起X
+21:29 varna: (｡･ω･)ﾉ并没有什么问题
+21:45 lhanjian: 啊啊啊，我控制不住说话的欲望
+21:46 lhanjian: 麻蛋，一直傻笑……
+21:59 iyzsong-m: 2333
+22:15 iyzsong-m quit:Ping timeout: 240 seconds
+22:15 iyzsong-m joined channel
+22:17 varna: 出去买点零食
+22:19 varna: 如果将来有一天我叛变到了debian, 那一定是驱动逼的
+22:19 Mokou: Gentoo，请
+22:22 Dove quit:Read error: Connection reset by peer
+22:24 cleamooon_ joined channel
+22:26 cleamooon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/s1/1h_474179.jpg@596w_1l.jpg
+22:29 varna: (｡･ω･)针兔太热了
+22:30 Mokou: (｡･ω･)正好暖手
+22:31 iyzsong-m: (#･∀･)
+22:31 xhe joined channel
+22:36 abel-abel joined channel
+22:41 varna: (｡･ω･)ﾉ
+22:42 xhe quit:Quit: leaving
+22:42 xhe joined channel
+23:06 whocares_2_ quit:Ping timeout: 240 seconds
+23:06 charlesy quit:Ping timeout: 240 seconds
+23:06 iyzsong-m quit:Ping timeout: 240 seconds
+23:06 whocares_2 joined channel
+23:12 cleamooon_: 伦敦恐袭案凶手名为哈立德·马苏德，出生于英国肯特的一个基督教家庭，原名Adrian
+23:12 cleamooon_: Elms，03年因伤人入狱，在狱中皈依伊斯兰教，改名哈立德。出狱后女儿在他的影响下也皈依伊斯兰，改名并穿戴蒙面罩袍。邻居说他平时温和有礼貌，爱好健身，很少穿伊斯兰服装，看起来很正常 ​​​​
+23:43 varna: _(:з」∠)_现在我的每个字体都要修一遍下划线
+23:43 varna: 下划线高度下沉，给vim的行高亮下划线让出位置
+23:48 cleamooon_: 难道不应该修vim的下划线吗…
+23:49 varna: 那个下划线是libvte自带的
+23:49 varna: 高度固定，似乎无关字体
+23:49 varna: 字体的下划线反倒容易修
+23:49 cleamooon_: ……
+23:49 varna: fontforge改一下就好了
+23:49 cleamooon_: 改成行高亮？
+23:49 cleamooon_: 每个都改略麻烦
+23:50 cleamooon_: 不过也不会用太多种字体
+23:50 varna: 终端用的改掉就可以了
+23:51 varna: 行高亮不太好看
+23:51 cleamooon_: soga
+23:52 varna: btw 最近重新认真玩了一下Salt & Sanctuary, 力荐
+23:52 cleamooon_: mark一下，暑假再说
+23:58 cleamooon_: 流程长吗

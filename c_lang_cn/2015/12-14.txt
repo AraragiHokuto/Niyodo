@@ -1,0 +1,171 @@
+00:02 StardustX: 这就是North Magnetic Pole和magnetic south pole的区别吧，确实不好表达。。
+00:05 lh_mouse: 很多东西都不一样。
+00:06 lh_mouse: 我们称为西北的方向在英文中称为 north west 也就是北西。类似的说法在台湾也存在。
+00:06 lh_mouse: 左下对应的也是 lower / bottom left。
+00:08 lhanjian_: 底左
+00:08 StardustX: 这种一般不会有歧义
+00:08 lh_mouse: 汉语依然按习惯称为左下。
+00:09 xxxxxxxx: 是因为古时书写的格式决定的么?
+00:10 lh_mouse: left 可以称为左边、左侧、左面，但是不能称为左部；bottom 可以称为底部，或者下边、下侧、下面，却不能称为下部。
+00:11 lh_mouse: 同样不能称为底侧，而底边、底面、下部都是完全不同的东西。
+00:12 lh_mouse: geordi, -c template<typename T> struct my_less { constexpr bool operator()(const T &l, const T &r){ return l < r; } }; template class my_less<string>;
+00:12 geordi: Success
+00:12 lh_mouse: geordi, use --clang
+00:12 geordi: warning: class template 'my_less' was previously declared as a struct template (fix known)
+00:12 lh_mouse: geordi, fix
+00:12 geordi: Success
+00:12 lh_mouse: geordi, show
+00:12 geordi: -c --clang template<typename T> struct my_less { constexpr bool operator()(const T &l, const T &r){ return l < r; } }; template struct my_less<string>;
+00:13 lh_mouse: geordi, -c struct my_less { constexpr bool operator()(const string &l, const string &r){ return l < r; } };
+00:13 geordi: error: call to non-constexpr function 'bool operator<(const __cxx11::basic_string<_CharT, _Traits, _Alloc>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]'
+00:13 lh_mouse: geordi, use --clang
+00:13 geordi: error: constexpr function never produces a constant expression
+00:15 lh_mouse: 实际上问题就是“北极”这个词有二义性。
+00:15 lh_mouse: 物理上的北极和地理上的北极不一样。
+00:15 lh_mouse: 如果问地磁 N 极就不会有二义性，因为地理上没有这个东西。
+00:31 lh_mouse: geordi, << TYPE<tuple_element_t<tuple<int, double, char>, 2>>
+00:31 geordi: error: type/value mismatch at argument 1 in template parameter list for 'template<long unsigned int __i, class _Tp> using tuple_element_t = tuple_element::type'
+00:31 lh_mouse: geordi, << TYPE<tuple_element_t<2, tuple<int, double, char>>>
+00:31 geordi: char
+00:31 lh_mouse: geordi, << TYPE<tuple_element_t<3, tuple<int, double, char>>>
+00:31 geordi: error: invalid use of incomplete type 'struct tuple_element<0ul, tuple<> >'
+01:03 linearain: Hi
+01:03 lh_mouse: 0.0
+01:04 linearain: `~`
+01:06 linearain: How are you
+01:07 lh_mouse: meow~
+01:08 linearain: Lh_mouse
+01:09 lh_mouse: 0.0
+01:12 lh_mouse: geordi, -c struct helper { struct element { element(root); } }; struct root { }; };
+01:12 geordi: error: Unexpected `}` after `root { }; `. Expected '/', balanced code, or end of request.
+01:12 lh_mouse: geordi, -c struct helper { struct element { element(root); }; struct root { }; };
+01:12 geordi: error: field 'root' has incomplete type 'helper::element'
+01:13 lh_mouse: geordi, -c struct helper { struct root; struct element { element(root); }; struct root { }; };
+01:13 geordi: Success
+01:13 lh_mouse: geordi, undo and use --clang
+01:13 geordi: error: unknown type name 'root'
+01:13 lh_mouse: geordi, show
+01:13 geordi: -c --clang struct helper { struct element { element(root); }; struct root { }; };
+01:19 cvcd: hhgggh
+01:20 cvcd: test linearain
+03:39 * sleepwalking logged in from EWS linux workstation at Univ. of Illinois
+03:40 sleepwalking: damn good workstations.. Scientific Linux on E3-1240 with 8G ram
+03:41 sleepwalking: double displays
+04:25 linearain: Ji
+04:25 linearain: Hao
+04:25 linearain: Hello
+04:26 linearain: Paranoia!
+04:29 sleepwalking: Hello
+04:30 sleepwalking: Uh
+07:19 linearain: hello
+22:11 varna: Oo
+22:12 * varna 总也记不住周一是大和还是武藏
+22:12 * Mokou 不记
+22:12 lh_mouse: Arbor, 新人爆照。
+22:13 Arbor: lh_mouse: Risitide并不是
+22:13 lh_mouse: 123.149.210.228河南省郑州市 电信
+22:13 lh_mouse: Arbor, 你是妹子么？
+22:13 Arbor: 不是
+22:13 lh_mouse: 爆照啊。
+22:14 xxxxxxxx: 小耗想妹子也不能这么直接吧...
+22:14 varna: 这样就是三个+4一个+2了
+22:14 iyzsong: Arbor: 约么 我许昌的 在北京
+22:14 lh_mouse: xxxxxxxx, 为啥？
+22:14 varna: 大概会吓到妹子
+22:14 Arbor: 我擦，哪里像妹子了= =
+22:14 Mokou: OTL
+22:14 Mokou: 只有两个+1
+22:14 xxxxxxxx: 吓到+1
+22:14 Arbor: 你们不要想搞个大新闻
+22:14 lh_mouse: Arbor, 爆照。
+22:15 varna: 这又是个膜法师
+22:15 varna: 把他交给lhj鉴定吧
+22:15 xxxxxxxx: 又一个膜法师
+22:15 varna: 这周给我鹤和十六万钢发戒指
+22:16 varna: 木村提督保佑一个+6
+22:16 Mokou: 卡半天立绘来个水侦
+22:16 Mokou: 欧非差距
+22:17 Mokou: 问：如何生成一个随机的字符串？答：让新手退出VIM。
+22:17 xxxxxxxx: 欧洲人从没见过水侦?
+22:17 Mokou: 欧洲人出32
+22:17 varna: 巨基+1
+22:18 Mokou: 然而我五页水侦
+22:18 Mokou: 却只有四个32
+22:20 varna: 欧洲人出门一个鲸
+22:20 xxxxxxxx: 让老红军鉴定老红军却跑掉了
+22:21 varna: http://www.bilibili.com/video/av2314972/ 这个其实也不错
+22:21 varna: 原曲《青金石》
+22:22 varna: 说起来，日本的西幻风格作家都喜欢写大场面啊
+22:22 varna: 动辄几万人几十万人，里面搞不好还有超过几千的人肉坦克……
+22:22 xxxxxxxx: 大场面?
+22:23 varna: 你想像一下几千重骑兵屯在一个地方的样子
+22:23 xxxxxxxx: 几十万人战线多长?
+22:23 varna: 不知道，大概比三大战役少很多吧
+22:23 Mokou: @一个坑埋四十万
+22:24 varna: 然而重骑兵一个人得要个马夫管坐骑，得要个骑士侍从给他穿盔甲，还要些侍从，因为搞不好这人有爵位……
+22:24 varna: 然后他那个马横竖还得吃点燕麦
+22:24 Mokou: 然而那个时代的欧罗巴真的能找出这么多人么
+22:24 varna: 这怎么感觉比一个坦克师还烧
+22:24 varna: 能找出来没关系，我们需要五倍的农民养他们
+22:25 xxxxxxxx: 亡灵大军多好
+22:25 varna: 以免他们在原地吃出一个坑，方便把自己埋了
+22:25 varna: 亡灵大军身上挂一个签儿：请酌情添加调味料
+22:26 xxxxxxxx: 然后全拿去炖了粉条了?
+22:26 varna: 粉条留着舔
+22:27 varna: 总有个错觉，某些西幻作家似乎不知道何谓封建
+22:28 varna: 即使在我国，府兵制改成募兵制以后还有人黑（比如张居正）
+22:28 xxxxxxxx: 话说一个法师设定上什么心情施法能力比较强?
+22:28 varna: DND的设定大多要求集中精神
+22:28 Mokou: 然而废蕃置县前的尼碰不就是典型的封建么……
+22:28 Mokou: 藩
+22:29 varna: 实际上我国是相当不封建的
+22:29 varna: 分封一会儿搞得猛一会儿搞得少
+22:29 varna: 实际上DND的人物技能里就有集中精神一项（体质修正）
+22:29 Mokou: 大明那时候分封都快死干净了吧
+22:30 varna: 如果要施行防御性施法，或者施法中被命中，就用这个技能来判定施法成败
+22:30 cleamoon: 中国古代大部分时候是什么制度
+22:30 varna: 其实也还是分封
+22:30 xxxxxxxx: 如果给法师染上某种狂热他膜得更厉害还是膜不了?
+22:31 cleamoon: ...所以说
+22:31 varna: 但跟欧洲的差别似乎是封了贵族食多少户之后，他还是没私兵
+22:31 varna: xxxxxxxx: 没法膜了，他必须能理智思考和排除杂念
+22:31 varna: 大概感觉就像撸管
+22:31 lh_mouse: [22:30:39] <varna> 大概感觉就像撸管
+22:31 Mokou: 有私兵会造反
+22:31 lh_mouse: 万能回复入手！
+22:31 varna: (｡･ω･)ﾉ
+22:32 lh_mouse: <张宝华> 羊先僧，写 Perl 是啥感觉呀？
+22:32 lh_mouse: <varna> 大概感觉就像撸管
+22:32 varna: 2333333
+22:32 cleamoon: 封了贵族食多少户铝吗，大概是贵族都有吃撑的原因吧
+22:32 xxxxxxxx: 哈哈哈
+22:32 varna: 吃撑大家都有的
+22:32 varna: 现在也不那么吃铝，改吃饭了
+22:33 varna: 你把吃撑放在母港晾一会儿，就会问你什么时候开饭
+22:33 varna: 反倒是刘皇叔织席饭铝
+22:33 xxxxxxxx: 问啥时候洗澡的船会出现么?
+22:33 varna: 没
+22:34 varna: http://www.bilibili.com/video/av304159/ 这个也挺好
+22:35 cleamoon: ......
+22:35 varna: BGM/ Colorful Precious Life 茶太
+22:40 varna: https://github.com/irssi/irssi/pull/382 每次Perl次版本变更都会死人
+22:54 lh_mouse: 据说现在护照上的写法也不一致，一般按照本人意愿。
+22:54 lh_mouse: 有写成 oo 的，也有写成 oh 的。
+22:54 lh_mouse: 写成 ō 的也有，不过难打，所以写 o 的也有。
+22:54 Mokou: ……拉丁化真蛋疼
+22:55 lhanjian_: “但现在的世道变了。那些我们曾以为黑到家的，过几年好像就变白了。奥运会期间几位外国运动员因为在公共场合戴上了口罩，引发大家的口诛笔伐，最后不得不以“向中国人民道歉”了事。今天雾霾中的北京城，不戴口罩的人甚至会获得陌生人的善意提醒应加强自我保护。”
+22:55 lh_mouse: 汉语有同样的问题。
+22:55 lhanjian_: http://finance.sina.com.cn/zl/lifestyle/20151214/111424011584.shtml
+22:55 lh_mouse: 不过这个有规定了。
+22:55 lh_mouse: 新的护照上吕和女写作 lyu 和 nyu
+22:56 lh_mouse: 原有 ju qu xu 和 yu 保持不变。
+22:56 Mokou: なるほど
+22:56 lh_mouse: 貌似就是去年新规定。
+22:57 lhanjian_: 现在吧 ü统一为 yu了？
+22:57 lh_mouse: 只是护照。
+22:57 lh_mouse: http://cq.bendibao.com/news/2015227/53416.shtm
+22:58 cleamoon: 那些我们曾以为黑到家的，过几年好像就变白了。 --只是因为奴隶主的话风变了
+23:00 lh_mouse: 英文里没有鱼这个音。汉语拼音里的鱼是从德文里借来的。
+23:00 lh_mouse: 写法和读音都一样。
+23:03 Mokou: 睡觉
+23:03 Mokou: 诸君武运

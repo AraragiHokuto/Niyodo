@@ -1,0 +1,309 @@
+00:23 xhe quit:Quit: leaving
+00:38 Mokou quit:Quit: 睡觉
+00:43 lh_mouse quit:Ping timeout: 240 seconds
+04:28 whocares_2_ quit:Remote host closed the connection
+04:29 whocares_2 joined channel
+05:53 whocares_2 quit:Remote host closed the connection
+05:53 whocares_2 joined channel
+06:36 whocares_2 quit:Remote host closed the connection
+06:36 whocares_2 joined channel
+07:34 iyzsong joined channel
+08:16 CyrusYzGTt quit:Read error: Connection timed out
+08:17 whocares_2 quit:Remote host closed the connection
+08:18 whocares_2 joined channel
+08:18 CyrusYzGTt joined channel
+08:27 jin7boy joined channel
+09:50 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:20 mao joined channel
+10:49 jin7boy quit:Remote host closed the connection
+10:49 jin7boy joined channel
+10:51 jin7boy quit:Remote host closed the connection
+10:52 jin7boy joined channel
+11:08 mao quit:Remote host closed the connection
+11:09 mao joined channel
+11:58 Mokou joined channel
+12:11 mao_ joined channel
+12:14 mao quit:Ping timeout: 240 seconds
+12:48 mao__ joined channel
+12:51 mao_ quit:Ping timeout: 255 seconds
+12:58 mao__ quit:Remote host closed the connection
+12:58 mao__ joined channel
+13:30 Youmu joined channel
+13:40 cleamoon quit:Quit: Connection closed for inactivity
+13:46 mao__ quit:Read error: Connection reset by peer
+13:47 mao__ joined channel
+13:59 lh_mouse joined channel
+13:59 mao__ quit:Remote host closed the connection
+13:59 mao__ joined channel
+14:46 mao__ quit:Read error: Connection reset by peer
+14:47 mao__ joined channel
+14:53 mao_ joined channel
+14:55 mao__ quit:Read error: Connection reset by peer
+14:57 mao_ quit:Ping timeout: 240 seconds
+15:00 mao joined channel
+15:03 mao quit:Client Quit
+15:26 jin7boy quit:Quit: Leaving
+16:09 jin7boy joined channel
+18:32 zhangz joined channel
+18:33 zhangz: geordi, <<__linux
+18:33 geordi: 1
+18:35 zhangz: geordi, #include</etc/passwd>
+18:35 geordi: error: found ':' in nested-name-specifier, expected '::'
+18:35 zhangz: woc没限制include敏感文件啊qwq
+18:43 lhanjian: 你试试看能不能输出？
+18:59 jin7boy quit:Remote host closed the connection
+20:34 dantmnf quit:Quit: ZNC - http://znc.in
+20:35 dantmnf joined channel
+20:42 zhangz quit:Quit: Connection closed for inactivity
+20:47 \ss quit:Remote host closed the connection
+20:50 CyrusYzGTt joined channel
+20:50 \s joined channel
+21:03 varna joined channel
+21:03 Mokou: varna: https://www.twitch.tv/abrahamhokuto
+21:03 Mokou: E5斩杀绝赞连劝中
+21:03 varna: 稍等，刚下班
+21:04 Mokou: 刚才十二连劝以后终于进了一次，刁了
+21:05 lh_mouse: geordi, { ifstream ifs("/etc/passwd"); string str; while(getline(ifs, str)){ cerr <<str <<" "; } }
+21:05 geordi: root:x:0:0:root:/root:/bin/bash daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin bin:x:2:2:bin:/bin:/usr/sbin/nologin sys:x:3:3:sys:/dev:/usr/sbin/nologin sync:x:4:65534:sync:/bin:/bin/sync games:x:5:60:games:/usr/games:/usr/sbin/nologin man:x:6:12:man:/var/cache/man:/usr/sbin/nologin lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin mail:x:8:8:mail:/var
+21:07 varna: (｡･ω･)ﾉ有没有联机血源的
+21:08 varna: 噫，两个雷巡
+21:08 Mokou: 这个点不是问题
+21:08 Mokou: 下个点才是
+21:09 varna: 小姨子跑了
+21:09 varna: 马耳他？
+21:09 Mokou: +
+21:09 varna: 好熟的地方，是不是种芥菜的
+21:10 Mokou: 空袭点和鱼点是最可怕的两个点
+21:10 varna: 那个是空袭战啊
+21:10 Mokou: 我十二连劝80%是这两个点的锅
+21:10 Mokou: +
+21:10 Mokou: 剩下的20%是这两个点的伏笔
+21:10 varna: 能打成这种命中也是可怕
+21:10 Mokou: 打个中破，然后后面的点蹭一下
+21:10 Mokou: 所以磨血阶段大家都是四架陆战扔过去的……
+21:10 Mokou: 然而斩杀没陆航了
+21:10 Mokou: 制空都没有，直接一个均势
+21:10 varna: 今天我才知道业务原来定在九月中旬以后开展
+21:11 Mokou: ……
+21:11 Mokou: 等等疲劳
+21:11 varna: 所以技术要八月底上线绝对是和某其他技术部有郑智斗争
+21:13 varna: 晚上逼乎还给我推送了一堆有关秋山澪的撕逼
+21:13 Mokou: ……
+21:13 Mokou: 逼乎上的技术讨论能看么
+21:14 Mokou: 不管是哪科
+21:14 lh_mouse quit:Read error: Connection reset by peer
+21:14 varna: 围绕秋山澪量产机用的是国产发动机还是拼装毛熊发动机，业余人士们展开了激烈的正论
+21:14 Mokou: E5磨血倒是很愉快，我三次击杀两次都是白天S
+21:14 varna: 争论*
+21:14 varna: 而我只发现了一个问题：Mio的主设计师，他叫杨伟
+21:14 Mokou: 啊，老梗了
+21:15 Mokou: 以前我在杨伟吧就看到有人说这事儿
+21:15 Mokou: 总之这事我觉得可以直接把维特根斯坦那句话扔他们脸上
+21:15 Mokou: “要看不要想！”
+21:16 varna: 没内情争个卵
+21:16 Mokou: +
+21:16 varna: 说到底都是后验概率
+21:16 varna: 又不改变事实
+21:16 varna: 对着撸就好了，好歹丝带姬
+21:17 varna: 顺便看看今天睡觉会不会被半夜炸醒
+21:17 Mokou: 炸醒什么鬼
+21:17 varna: 昨天头疼又发作了
+21:17 Mokou: ……
+21:18 varna: 不想吃（也没有）止疼片就搞了片感康，倒头硬挺
+21:18 varna: 回来似乎还有点苗头，再疼就试试扑尔敏，也许有点过敏了
+21:19 Mokou: 疲劳恢复了，继续
+21:19 Mokou: 直播连上了
+21:19 Mokou: 应该不需要F5
+21:19 varna: 看到了
+21:20 varna: 我驲，广告
+21:20 Mokou: ……
+21:20 Mokou: 回家乐
+21:20 Mokou: 了*
+21:20 varna: 出击不点米空鼻子是不行的
+21:20 Mokou: 主要是这次我被人忽悠了，把西南风锁在了E1
+21:20 Mokou: 不然还有个先制反潜……
+21:20 varna: btw 我有个预感
+21:21 Mokou: 等疲劳
+21:21 Mokou: ……
+21:21 varna: 下周运气不好的话会连战七天
+21:21 Mokou: 刷闪
+21:21 Mokou: ……
+21:21 Mokou: 噫
+21:21 Mokou: 那就坑了
+21:22 varna: 运气好的话连战六天
+21:22 Mokou: 看情况吧，希望六天……
+21:22 Mokou: 我周六到
+21:23 varna: 今天试一晚上，如果再头疼，我就把被子床单都换掉
+21:23 varna: 南方湿乎乎的天气还是不好受
+21:23 Mokou: 小时候我到底怎么在桂林住下六年的
+21:24 varna: 通过吸收妹汁
+21:24 Mokou: 并没有妹汁
+21:24 varna: 姐汁
+21:24 Mokou: 并没有姐汁
+21:24 varna: 自汁
+21:24 Mokou: 这人居然上自己，可怕
+21:25 Mokou: “为了能在看片儿的同时练练英语，我把中文字幕打了码。。效果显著，不到半个小时，我已经可以流畅地在马赛克中辨认中文了。 ​​​​ ”
+21:26 varna: 可啪，这几天全境封锁登陆速度奇快
+21:26 varna: 怕是有几个道中节点不被拦了
+21:27 Mokou: 这是钓鱼执法
+21:28 varna: 那我战网账户应该先被封掉
+21:28 varna: ID: 一群督天灵#5964
+21:28 Mokou: 这叫引蛇出洞
+21:28 varna: 井号后面的部分由系统生成
+21:28 Mokou: 是阳谋
+21:29 varna: 呀，匹配到野队了
+21:29 varna: 吼啊
+21:29 varna: 如果一进去发现地上三个死人就更刺激了
+21:30 varna: 玛德
+21:30 varna: 说中了
+21:30 Mokou: 有网友指出《战狼2》抄袭小说《弹痕》，近日，《战狼2》编剧董群回应:本人董群，笔名纷舞妖姬，代表作《弹痕》 ​​​​ 
+21:34 Mokou: @观察者网： 【小平，您好】#纪念邓小平同志诞辰113周年#
+21:34 Mokou: ①发展才是硬道理②一个革命政党，就怕听不到人民的声音，最可怕的是鸦雀无声③主权问题不是一个可以讨论的问题④我是中国人民的儿子，我深情地爱着我的祖国和人民。
+21:34 Mokou: 2017年8月22日，邓小平同志诞辰113周年纪念日。缅怀，致敬！ ​ 
+21:34 Mokou: ^ 这条微博被禁止评论了，评论区鸦雀无声
+21:37 varna: 噫
+21:37 varna: 我跪了
+21:37 varna: 团扑了
+21:40 varna: 我选择狗呔，这些伙计是怎么打过来的
+21:45 varna: 两个Lv1角色……
+21:46 varna: 关键时刻还卡得开不出枪
+21:51 varna: 谜之团灭
+21:52 varna: 意识模糊……
+21:53 Mokou: 出击
+21:53 Mokou: 直播连上了
+21:53 Mokou: 然后抽了
+21:54 Mokou: 连上了
+22:04 varna: 我驲哦
+22:05 Mokou: 还好我有两个屏幕，不然我还得隔几秒切次窗口看上传速度……
+22:05 Mokou: _(:з」∠)_网络不稳真麻烦
+22:07 Mokou: 最危险的一个点来了
+22:07 Mokou: 剧透告诉我过去了
+22:08 varna: 总算输出了足够火力把Boss打死了
+22:08 Mokou: OTL
+22:08 varna: 等着有人来拉我一把……
+22:08 Mokou: 你这句话让我感觉你也在砍口累……
+22:08 Mokou: 另外我开着直播
+22:10 Mokou: 门神通过
+22:11 varna: (｡･ω･)ﾉ
+22:11 varna: 正好我打完副本
+22:12 Mokou: 陆航炸死六个
+22:12 varna: 不错啊
+22:12 Mokou: 开幕完了对面胜四个
+22:12 varna: 开幕很好
+22:12 varna: 看脸了
+22:12 Mokou: 噫，意大利Y……
+22:13 varna: 不好
+22:13 Mokou: 这图蛋疼在夜战只有两个火力点
+22:13 varna: ...
+22:13 varna: 惊险
+22:13 varna: 6v12有一轮先制雷击？
+22:13 Mokou: 不
+22:14 Mokou: 那是炮击结尾的先制雷击
+22:14 Mokou: 那是炮击结尾的雷击
+22:14 Mokou: 先是本队和敌二队炮击，然而敌二队死光了……
+22:14 varna: 总体来说发挥很好了
+22:14 Mokou: +
+22:16 Mokou: 今晚我打不打E6呢
+22:16 varna: 试试水？
+22:16 Mokou: 试一下也行
+22:16 Mokou: 不上支援
+22:16 varna: 四万八的钢
+22:16 varna: 活动还有几天？
+22:16 Mokou: 预定四周，到现在没说结束时间
+22:18 Mokou: 我看看前段是用武装押运还是运输舰队
+22:18 Mokou: 对了，悲报
+22:18 Mokou: 这次活动重新启用了提督等级弹性系统
+22:19 varna: ...
+22:20 Mokou: 比如E6的TP，我是2k
+22:21 Mokou: 实际上最少1.8k
+22:21 Mokou: 提督等级每5级加一点，一直加到2k……
+22:22 varna: 噫！
+22:22 varna: 我掉线了
+22:22 varna: 路由器对外抽风……
+22:22 Mokou: ……
+22:22 varna: 所以说我信不过tplink
+22:22 Mokou: 阿苏斯，请
+22:23 varna: 服务器化为土豆
+22:23 varna: 估计刚才拥塞
+22:24 varna: 限流状况良好，路由器的锅
+22:24 Mokou: 群里突然冷场
+22:24 varna: 距离上一次重启还不到两周呢
+22:24 Mokou: 我等等有人回答我
+22:27 Mokou: 试试海色配置
+22:30 Mokou: 妈德
+22:30 Mokou: 大发全在远征……
+22:30 Mokou: 明天再打吧
+22:36 varna: 土豆延迟超过一秒，我选择狗呔
+22:36 Mokou: 直播先停了
+22:36 varna: (｡･ω･)ﾉ
+22:36 Mokou: 反正今晚打不了
+22:36 Mokou: 远征吃没了十个大发
+22:37 varna: 听说你们欧洲人动辄几十个大发
+22:37 Mokou: 纯种大发只有14隔
+22:37 Mokou: 纯种大发只有14个
+22:37 varna: (｡･ω･)剩下都改了纸车对吧
+22:37 Mokou: (｡･ω･)纸车只有一个
+22:38 Mokou: 陆战队大发2个，11联队特大发一个
+22:38 varna: 可怕
+22:39 Mokou: 纯种特大发还没拿
+22:39 Mokou: 另外我要不要现场改一下试制41呢……
+22:41 varna: 秀欧气消耗太重了
+22:41 varna: 慎重，你钢不多了
+22:41 Mokou: 我看看钢耗
+22:41 Mokou: 不过等等再改也行
+22:41 Mokou: 几点火力在E6应该没什么大差别
+22:43 Mokou: http://wx3.sinaimg.cn/mw690/7084b203gy1fiqjhvr8puj20p00vy4qp.jpg 衣服瞩目
+22:44 Mokou: 620钢一次
+22:44 Mokou: 改也行不改也行……
+22:44 Mokou: 不改了
+22:48 Mokou: 噫
+22:49 Mokou: 西班牙恐袭那伙人预定要炸的是圣家堂……
+22:52 Mokou: 【西班牙恐袭细节:本想炸教堂 
+22:52 Mokou: 计划败露临时改撞人】当地时间19日，西班牙政府称已经摧毁了制造恐袭事件的一个多达12人的犯罪团伙。另据西班牙媒体表示，这一团伙原计划要将巴塞罗那最重要的景点圣家族教堂炸毁，以希望制造最大可能的轰动效应，但由于此前失手路露马脚，于是改为了驾车冲撞行人。恐怖组织在过去几个月一直计
+22:52 Mokou: 划在巴塞罗那发动“一个或连环性的多个袭击”，并以“制造最大可能的轰动效应为最终目的”。确定以此为目的后，他们计划动用3辆厢式货车载满爆破品，冲撞位于巴塞罗那市繁荣点的圣家族教堂，将这一世纪建筑一举炸飞甚至倒塌。警务高官从事件后缴获的恐袭车辆，确定恐怖组织的原定计划是袭击圣
+22:52 Mokou: 家族教堂。但16日那天的一次爆破试验失败后，让恐怖组织立即改变计划，也就有了17日的兰布拉大道汽车袭击案。
+22:58 Mokou: http://wx2.sinaimg.cn/mw690/006DjQMTgy1fiqkp2g3mhj30ku0gi0u0.jpg
+23:02 varna: 数据链路的质量差到爆……
+23:05 Mokou: https://www.bilibili.com/video/av13270275/?from=search&seid=11770274760589213669
+23:05 Mokou: 水中威胁佬
+23:16 Mokou: https://www.bilibili.com/video/av4725647/ 使用和声接受采访的先辈
+23:17 varna: 这 个 可 以 有
+23:18 varna: 先辈探姬说
+23:19 Mokou: 114514年的未来科技
+23:20 varna: 黑洞草
+23:20 varna: 息子视界
+23:21 varna: https://www.bilibili.com/video/av6828535/ 驻马店先辈
+23:24 Mokou: https://www.bilibili.com/video/av8776592/ 对话中突然发射的先辈
+23:24 iyzsong: _(:з」∠)_
+23:25 varna: 表情草
+23:27 varna: 补一话FA
+23:29 varna: OP不知为何听起来带感多了
+23:29 varna: 不过最好配上宫崎英高让玩家惨死在亚楠的处刑秀
+23:29 Mokou: 黑魂玩家 黑魂玩家
+23:30 varna: 哇这战斗……
+23:30 varna: 何等缺钱！
+23:30 Mokou: 终物语倒是还行
+23:33 Mokou: https://www.bilibili.com/video/av8605696/ 昏睡雷普对决
+23:33 varna: 梵天啊·经费短缺
+23:35 varna: 对于没看过小说的观众来说估计意味不明
+23:35 Mokou: 我等出完了一口气补吧
+23:36 varna: 打戏不忍直视
+23:36 Mokou: 所以型月怎么突然缺钱了
+23:36 varna: 本来FA的人气就……
+23:36 iyzsong quit:Ping timeout: 240 seconds
+23:38 Mokou: 然而FGO不是把阿福的人气拉上来了么
+23:39 varna: 因为是伪娘……
+23:39 varna: (｡･ω･)如果出葛温德林，人气一定更高
+23:39 Mokou: 型月你们看看你们
+23:40 Mokou: 国服一个黑贞就氪了13M……
+23:40 Mokou: 这还是光iOS
+23:40 varna: puuuuuuuuuuuu
+23:41 Mokou: 而且是美刀
+23:41 varna: ...
+23:42 Mokou: 所以型月这是有多铁公鸡……
+23:45 varna: 才想起来肯娘CV配了416
+23:45 varna: (｡･ω･)ﾉ野中萌！好蓝！
+23:47 Mokou: https://www.bilibili.com/video/av9883473/ 诸事不顺的TNOK
+23:52 Mokou: 先睡，明天得早起
+23:52 Mokou: 诸君武运
+23:52 Mokou quit:Quit: 睡觉

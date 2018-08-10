@@ -1,0 +1,498 @@
+00:00 cirno__ quit:Remote host closed the connection
+00:01 cirno__ joined channel
+00:11 varna: 看起来之前连接质量恶劣和wicd选择的蛆洞也有些关系
+00:12 Mokou: https://wx3.sinaimg.cn/mw690/7e694aaegy1frh36f5u50j20eu0czdg9.jpg
+00:12 varna: wext的效果比nl80211好很多
+00:17 lhanjian_: 沉了沉了
+00:17 lhanjian_: 什么新枪都没造出来
+00:18 lhanjian_: 用活动奖励换了一个小狮子
+00:20 lhanjian_: varna: wext是什么鬼
+00:23 lhanjian_: 不行了不行了
+00:23 matchray: 要去見同學了好害怕
+00:25 lhanjian_: 怕什么？
+00:26 lhanjian_: 见小姐姐？
+00:26 matchray: 一個autopilot公司小姊姊
+00:27 Mokou: https://wx2.sinaimg.cn/mw690/0066eXAcly1frh3vnb52gj30ku112gx0.jpg
+00:27 matchray: lh_mouse: 不知道爲什麼 virtual ~Binary(); 這種，virtual destructor也塞在.cpp
+00:28 lh_mouse: matchray, 虚拟的析构函数必须在源文件中定义，类模板除外。
+00:28 lh_mouse: 不允许使用隐式声明的虚拟析构函数。
+00:30 matchray: https://itanium-cxx-abi.github.io/cxx-abi/abi.html#rtti-name 往上翻
+00:30 matchray: Note that this ABI requires elsewhere that a virtual table be emitted for a dynamic type in the object where the first non-inline virtual function member is defined, if any, or everywhere referenced if none. Therefore, an implementation should include at least one non-inline virtual function member and define it in the library, to avoid having user code inadvertently preempt the virtual table. Since the
+00:30 matchray: Standard requires a virtual destructor, and it will rarely be called, it is a good candidate for this role.
+00:30 cirno__ quit:Remote host closed the connection
+00:31 cirno__ joined channel
+00:31 lh_mouse: 虚析构塞头文件里等 RTTI 和 vtable 漫天飞么。
+00:42 yonka joined channel
+00:46 yonka quit:Remote host closed the connection
+00:51 varna: 卧槽这是什么鸡火力……
+00:51 varna: 公寓前两仗都顶不住
+00:53 varna: 混搭突袭浪人……
+00:53 varna: 我真是草了
+00:55 matchray: 只有第一個non-line virtual function member有效
+00:55 varna: 玛德，速成鸡……
+00:56 matchray: 塞virtual ~A() {} 或 virtual ~A(); 是不影響的
+00:56 varna: 打完第二章，三个人进地下道连敌影都不看，直接被灭
+01:00 cirno__ quit:Remote host closed the connection
+01:01 cirno__ joined channel
+01:13 lh_ideapad quit:Remote host closed the connection
+01:19 whocares_2_ joined channel
+01:20 whocares_2 quit:Ping timeout: 276 seconds
+01:23 Taggnostr3 joined channel
+01:24 Taggnostr quit:Ping timeout: 240 seconds
+01:30 cirno__ quit:Remote host closed the connection
+01:31 cirno__ joined channel
+01:39 cleamoon_ quit:Quit: Connection closed for inactivity
+01:43 cirno__ quit:Quit: WeeChat 2.1
+01:47 yonka joined channel
+01:51 yonka quit:Ping timeout: 240 seconds
+01:54 lh_mouse quit:Read error: Connection reset by peer
+02:08 varna quit:Ping timeout: 256 seconds
+02:17 cleamoon_ joined channel
+02:17 cleamoon_: lhanjian_:  我最近一直在玩D2
+02:32 iyzsong quit:Ping timeout: 255 seconds
+02:42 matchray: richox也關注我的ccls了，高興
+02:42 matchray: richox還在玩compressor
+02:43 matchray: 我最近看到zstd也用libdivsufsort-lite
+02:48 cleamoon_: 肉牛还在呀
+02:51 matchray: 在這個頻道？
+02:54 cleamoon_: 这里似乎不在了
+05:29 cleamoon_ quit:Quit: Connection closed for inactivity
+05:49 yonka joined channel
+05:53 yonka quit:Ping timeout: 240 seconds
+06:58 Meow-J___ quit:Ping timeout: 240 seconds
+06:59 Meow-J___ joined channel
+08:59 hong quit:Ping timeout: 265 seconds
+09:38 yonka joined channel
+11:32 iyzsong joined channel
+11:59 yonka quit:Remote host closed the connection
+12:08 lanerwan joined channel
+12:10 varna joined channel
+12:10 varna: 噗叽啪
+12:11 laner joined channel
+12:13 lanerwan quit:Client Quit
+12:18 laner: 刚放出来，现在还有基佬吗？
+12:21 varna: 没有给一了
+12:21 varna: 但是有潜在的药娘
+12:28 lhanjian_: 我堕落了，选择了无能的斜前握把
+12:42 matchray: Maker Faire我這麼宅難得出去一次
+12:46 matchray: 還見到了知乎上的swgr
+12:54 varna: (｡･ω･)ﾉ说到知乎自然是妻海了
+12:59 LANer2 joined channel
+13:01 LANer2 quit:Client Quit
+13:02 LANer2 joined channel
+13:03 yimis1 joined channel
+13:06 LANer2 quit:Client Quit
+13:06 LANer2 joined channel
+13:07 yimis1 quit:Client Quit
+13:08 LANer2 quit:Client Quit
+13:09 LANer2 joined channel
+13:16 iyzsong: 0 0
+13:22 lhanjian_: varna: check your SHD status
+13:28 LANer2 quit:Ping timeout: 264 seconds
+13:29 varna: lhanjian_: lmcc
+13:51 LANer2 joined channel
+13:51 LANer3 joined channel
+13:55 lhanjian_: varna: 两个人打广场试试看？
+13:56 varna: lhanjian_: go
+13:57 lhanjian_: 进门躲到开关那里去，死守小门
+13:57 lhanjian_: varna: 
+14:01 LANer2 quit:Remote host closed the connection
+14:01 LANer3 quit:Remote host closed the connection
+14:06 Mokou: https://usercontent.irccloud-cdn.com/file/HDonXuhY/pquu8rs14hgzp0u6npz459ph.jpg
+14:27 lhanjian_: 对方的枪榴弹杀伤太大
+14:30 varna: 地形
+14:30 varna: 你不可能假设背后有火力支援
+14:30 varna: 活下来是第一位的
+14:31 lhanjian_: 所以我一直往后苟，不过这个地方不太好守
+14:31 * lhanjian_ 需要一个碉堡
+14:31 lhanjian_: 而且基本上都在被压制
+14:31 varna: 压制不是问题，问题是你苟的位置活不下来……
+14:32 varna: 苟也不是问题，背过版就好了
+14:32 varna: 一味推进然后再往回退不是问题，问题是退到一半就想反击
+14:32 varna: 这种时候不如拿出单刷的套路来
+14:33 lhanjian_: 一直退怕不是追的比逃的还快
+14:33 varna: 随你
+14:34 varna: 但是至少哪里出人、出什么配置、到哪里打、怎么打有数就好了
+14:34 lhanjian_: 得开那个掩体间移动会恢复伤害的天赋天赋
+14:34 varna: 不需要
+14:34 varna: 感觉你单刷逃命的故事见少了……
+14:35 lhanjian_: 我基本不单刷传奇本的
+14:35 varna: 跟传奇本无关
+14:36 varna: 这个体验其实就像是你装备不行的时候打普通本
+14:36 lhanjian_: 倒也是
+14:36 lhanjian_: 还是可以堕落了
+14:36 varna: 第一反应都是活下来
+14:36 lhanjian_: 还是堕落了
+14:36 lhanjian_: 哎
+14:38 varna: 而且我下午连你比较卡
+14:39 varna: MD 楼下还在出殡
+14:40 lhanjian_: 我也挺卡，多数时候结算延迟压制不能，连闪光粘单都有延迟
+14:40 varna: 黏弹受影响最大
+14:40 lhanjian_: 急需一梭子打退红字突击兵的时候竟然不算数
+14:42 lhanjian_: 不过还是堕落了，毕竟卡习惯了
+14:44 varna: 神TM军中绿花
+14:45 varna: 什么歌都冒出来了……
+14:46 varna: 咦，我和暗区小姐姐穿的似乎是同款大衣
+14:46 varna: emmm
+14:46 lhanjian_: 哈哈哈
+14:46 lhanjian_: 暗区小姐姐上来就是给你一枪托
+14:46 lhanjian_: 话说其实JTF的普通兵还挺强的
+14:47 lhanjian_: 敢和猎人打近战
+14:47 lhanjian_: 七八枪托倒不下
+14:49 varna: 噗叽啪
+14:50 lhanjian_: 这也能恶臭？！
+14:54 varna: 脱粪这种事情，随处都可以做
+14:57 lhanjian_: 我家猫都知道不能随地乱脱粪
+15:02 lh_mouse joined channel
+15:12 Mokou: lhanjian_: 然后猎人掏出了骨髓灰
+15:13 varna: 这年头还用斧头的猎人恐怕也就大大巴了
+15:22 varna: 噗叽啪
+15:45 matchray: 這裏檔案系統防止directory symlink被訪問，不知道怎麼處理好 https://github.com/MaskRay/ccls/blob/master/src/filesystem.cc#L37
+15:47 matchray: 感覺這個還行
+15:48 matchray: print '%clang\n%cpp -std=gnu++14\n-c-isystem/usr/include' > .ccls
+15:48 matchray: 這樣能補全 /usr/include/ncursesw/ncurses.h
+15:58 LANer2 joined channel
+16:02 LANer2 quit:Read error: Connection reset by peer
+16:13 varna: 掠夺和突袭正面对枪是个什么思路……
+17:03 ifr0zen joined channel
+17:59 LANer2 joined channel
+18:01 LANer2 quit:Client Quit
+18:02 ifr0zen quit:Remote host closed the connection
+18:02 LANer2 joined channel
+18:06 LANer2 quit:Client Quit
+18:08 LANer2 joined channel
+18:10 LANer2 quit:Remote host closed the connection
+18:10 LANer2 joined channel
+18:12 lh_ideapad joined channel
+18:20 lhanjian_: varna: 逛暗区？
+18:23 lhanjian_: Mokou: 猎人应该用霰弹枪
+18:24 varna: 不逛了，刚做了个小重构
+18:24 varna: 被孝子们吵得有点头疼
+18:24 varna: lhanjian_: (｡･ω･)手枪路过
+18:24 varna: 霰弹拌灰简直巨大浪费
+18:24 varna: 手枪好歹1.1k-1.2k
+18:24 lhanjian_: 哪里，贴脸爆头
+18:25 varna: 麻烦
+18:25 varna: 我随便就能打出四位数的伤害，为什么要贴脸……
+18:26 varna: 霰弹我基本装X的时候用，当然对人效果不坏，因为更容易打中
+18:26 varna: 但PvE我拿他就是nerf自己凹造型玩儿_(:з」∠)_
+18:29 varna: 今天便乘了一盘公寓，看到电工放分裂滚雷，突然想到 https://www.bilibili.com/video/av21163107 这个
+18:29 varna: 完 全 一 致
+18:32 varna: https://www.bilibili.com/video/av23457290 爱的供氧
+18:47 LANer2 quit:Ping timeout: 240 seconds
+19:01 lhanjian_: varna: 这么臭的视频
+19:04 Mokou: https://www.bilibili.com/video/av21144721 射 杀 百 头
+19:16 varna: つぅい↑だん↓、けんしょおぉぉぉぉう！やじゅうせんぱい！
+19:21 Mokou: https://www.bilibili.com/video/av22714520 青 岛 巴 士
+19:21 varna: 之前很奇怪中二神为什么会写《相州战神馆学园》系列的作品
+19:21 varna: 现在感觉也好燃啊
+19:22 varna: DiesIrae -> KKK -> 战神馆，燃的程度反而提升了
+19:30 Mokou: https://www.bilibili.com/video/av21729184/ 黄 飞 鸿
+19:32 varna: ブッチッパ！
+19:34 lh_mouse quit:Read error: Connection reset by peer
+19:36 lhanjian_: varna: 同志您需要一把卡拉什尼科夫1947的自动步枪
+19:40 varna: 救世啊（便乘）
+19:49 lhanjian_: varna: 羊驼子也买一把m4吧
+19:50 lhanjian_: 换上RIS护木套件，弄出轻型m4的效果
+19:51 LANer3 joined channel
+19:53 hong joined channel
+19:53 varna: 玩不动
+19:54 varna: 最近都没空出天气来做模型，平时除了ACG的文娱就剩写写字了
+19:54 lhanjian_: 这个很轻松的，比SHD特工还舒服
+19:55 varna: 玩不动就是因为咸鱼的玩法太轻松，玩出彩需要的素养和体能自己都没有
+19:55 varna: 然后就没兴趣了
+19:55 lhanjian_: 你可以魔改啊
+19:55 varna: 跟枪没关系
+19:55 lhanjian_: 这个要动点脑子
+19:55 varna: 挂了一堆圣诞树，最后自己打得不好，对我来说怪滑稽的
+19:56 lhanjian_: 这玩意儿又不是非要下场
+19:56 varna: 对我来说是的……
+19:56 varna: 我不是发烧友
+19:56 lhanjian_: uccu
+19:57 lhanjian_: 局座也不是要会开军舰嘛
+19:57 varna: 不一样
+19:57 varna: 一不会算二不会用，跑个一千米都累
+19:57 lhanjian_: 看枪炮世界也不需要一定会强暴师姐嘛
+19:57 varna: 我觉得我没法说服自己这个是有意思的
+19:57 varna: 这就跟我对自己其他方面的要求一样
+19:57 varna: 很多人拿我这个心态去玩儿，早崩溃了
+20:00 lhanjian_: 反正能玩的东西很多
+20:00 lhanjian_: 我堕落了
+20:05 lhanjian_: 我连养猫都很堕落
+20:05 lhanjian_: 换换粮草，隔两天铲个屎，完了
+20:08 varna: 换换粮|草个两天|铲个雪
+20:08 varna: emmmmmm
+20:08 lhanjian_: 看到一只用爪子吃饭的猫233
+20:09 lhanjian_: http://www.bilibili.com/video/av23325811?share_medium=android&share_source=copy_link&bbid=9F0D2218-D95B-4FC5-9319-AAEF4028680E23665infoc&ts=1526818163441
+20:12 NebulaMoe joined channel
+20:13 LANer3 quit:Ping timeout: 240 seconds
+20:13 varna: 这个猫好厉害
+20:14 varna: 橘面一度非常尴尬
+20:16 hong: 完了
+20:17 varna: hong: (｡･ω･)ﾉ？
+20:17 hong quit:Quit: hong
+20:30 hong joined channel
+20:40 varna: 我驲，真着凉了
+20:40 varna: 关节开始疼
+20:40 * varna 赶快提交一波准备摸鱼
+20:44 lh_mouse joined channel
+20:46 lhanjian_: 我家猫对电视里的猫投出警惕的眼神
+20:55 NebulaMoe quit:Remote host closed the connection
+20:56 lhanjian_: https://usercontent.irccloud-cdn.com/file/M9O0m0rg/wx_camera_1526798975950.jpg
+20:59 varna: 这个好
+21:03 lhanjian_: 哪里好
+21:04 varna: 看着想吃
+21:04 lhanjian_: 不要吃猫猫！
+21:04 lh_mouse: geordi, { string s = "hello", r = "ABCDEF"; auto it = s.insert(s.begin() + 2, r.begin(), r.end()); cout <<*it, (it - s.begin()); }
+21:04 geordi: A, 2
+21:06 CyrusYzGTt joined channel
+21:12 varna: lhanjian_: 猫没吃过，然而兔子真好吃
+21:12 varna: 老妈做的红烧兔腿极好
+21:14 lhanjian_: 兔子我吃过，肉有点紧
+21:15 lhanjian_: 可能是第一次烤，过头了
+21:15 varna: 烤老了
+21:15 varna: 不过兔肉也不会很嫩
+21:15 varna: btw 自烤的话我仍然力荐七八成熟的鸡心
+21:15 varna: 爽脆
+21:16 varna: 佐料可用蚝油
+21:19 lhanjian_: https://usercontent.irccloud-cdn.com/file/8yp9RjNs/06BB0BC6FF2304176D9D2B9F0EEB14F1.jpg
+21:20 lhanjian_: 南无迷你肛菩萨
+21:21 varna: 吉翁大阿罗汉
+21:34 lh_mouse: geordi, << string("hello").find_first_not_of("");
+21:34 geordi: 0
+21:34 lh_mouse: geordi, << string("hello").find_first_of("");
+21:34 geordi: 18446744073709551615
+21:34 lh_mouse: geordi, --clang << string("hello").find_first_not_of("");
+21:34 geordi: 0
+21:34 lh_mouse: geordi, --clang << string("hello").find_first_of("");
+21:34 geordi: 18446744073709551615
+21:34 lh_mouse: geordi, << string("hello").find_last_of("");
+21:34 geordi: 18446744073709551615
+21:34 lh_mouse: geordi, << string("hello").find_last_not_of("");
+21:34 geordi: 4
+21:34 lh_mouse: geordi, << string("").find_last_not_of("");
+21:34 geordi: 18446744073709551615
+21:41 cleamoon_ joined channel
+21:43 lhanjian_: varna: 讲道理武装突袭3能细致玩的地方太多了
+21:43 lhanjian_: 光是一个射击就很需要练习
+21:45 varna: 听起来不错
+21:45 lhanjian_: 官方默认没有风偏地转偏向力，但是弹道，瞄准，屏息，卧姿，跪姿，什么的对射击精度影响明显
+21:45 lhanjian_: 装备重量也有影响
+21:46 varna: 没地转偏向力的话，600+m狙击实际上还是有点理想吧
+21:46 lhanjian_: 机枪 冲锋枪 狙击 突击   在各种不同格斗的情况下表现都有差异
+21:46 lhanjian_: 长距离狙击我还没试过
+21:46 lhanjian_: 100多米用突击步枪都很难打中了
+21:47 lhanjian_: 也不是很难，就是你得用最安稳的射击动作
+21:47 lhanjian_: 而且毕竟自己容易死，所以发挥起来就更加不容易
+21:47 varna: +
+21:48 lhanjian_: 如果不找好有利位置，隐蔽好，你可能大都在慌张地泼水
+21:48 lhanjian_: 或者苟着
+21:49 varna: 草，gayhub又连不上了……
+21:49 lhanjian_: 羊驼子买个一个月二三十块钱的无限流量卡吧
+21:50 lhanjian_: 比蛋疼的华数宽带靠谱多了
+21:53 lhanjian_: 以后绑定宽带直接用这张卡就行
+21:54 varna: 华数出口坑了，我用手机流量推了一下
+21:57 lhanjian_: 现在手机流量太便宜了
+21:57 lhanjian_: 感谢莉卡酱
+21:57 varna: 平时玩GPDP的时候就用手机热点
+21:57 varna: irc和gayhub费不了一点
+21:57 lhanjian_: 而且手机不管是安卓还是iOS都可以轻松的直插电脑当modem用
+21:58 Mokou: 【暴漫侮辱英烈后致歉，叶挺后人：不接受】 L澎湃新闻的秒拍视频 5月20日，叶挺孙子、导演叶大鹰通过媒体回应“暴走漫画发布侮辱董存瑞和叶挺烈士视频”一事，其称知道事情后出离愤怒，并表示不接受“暴走漫画”CEO和主持人的道歉。（视频来源 网络）
+21:58 lhanjian_: 暴漫这个感觉是被盯上了，那是好几年前的视频吧
+21:58 varna: +
+22:00 lhanjian_: 《中华人民共和国英雄烈士保护法》
+22:01 lhanjian_: 看来是要拿暴漫当烈士保护法的一血了
+22:04 lhanjian_: matchray: ccls还没换上，工作机没带回家
+22:04 varna: uccu
+22:05 varna: (｡･ω･)周末故障怎么办啊
+22:05 NebulaMoe joined channel
+22:05 Mokou: (｡･ω･)丢给其他人
+22:05 lhanjian_: varna: 现在还不存在真正意义上的故障
+22:05 varna: 因为用户量不足么……
+22:06 lhanjian_: 中美贸易战停火 就经贸磋商发表联合声
+22:06 lhanjian_: varna: 都还没有成功的在iOS上架
+22:06 lhanjian_: 一直因为内购卡着
+22:06 varna: 再不推进解决的话问题会很大
+22:07 varna: 要是没期限的话就很麻烦了……
+22:08 lhanjian_: 没期限？
+22:08 varna: 客户端那边说什么时候之前一定要解决么
+22:09 lhanjian_: 没说
+22:09 varna: ...
+22:10 varna: 好U闲
+22:10 lh_ideapad quit:Ping timeout: 240 seconds
+22:10 lhanjian_: 版本回退以后，稳定多了
+22:11 lhanjian_: CEO发话，浏览器支持推后（DNS服务不再列为重要事项了）
+22:11 lhanjian_: 那个无DNS解析的旧版本还是基本可用的
+22:12 varna: ...
+22:13 varna: 该抽空复个盘了
+22:13 lhanjian_: 如果没大问题，下周我还得回CDN那边做点事情，不能偏废了
+22:13 lhanjian_: 是的，必须复盘了
+22:13 varna: 窃以为这事情不止一个回退那么简单
+22:13 varna: 实际上还是架构问题
+22:13 lhanjian_: 那些东西得彻底整顿下
+22:13 lhanjian_: 这种狗急跳墙的东西fundamentaly broken
+22:14 cleamoon_: 前几天爆漫请毒奶做节目，累到了老仙，然后老仙祝福了一下
+22:14 lhanjian_: fundamentally broken
+22:14 varna: 要不你们招个新的小姐姐
+22:14 varna: 技术好不好无所谓，可啪就行
+22:14 varna: 提振下士气
+22:14 lhanjian_: uccu
+22:15 varna: 我又不啪你们的小姐姐
+22:15 varna: (｡･ω･)并没有话柄可抓
+22:15 cleamoon_: 对，羊驼子要小哥哥
+22:15 varna: cleamoon_: 爆
+22:16 cleamoon_: 羊驼子需要后入一下
+22:18 cleamoon_: 对了，前几天看到一个很厉害的小片，不知道是真的还是某种CG，一个妹子用长度大于50cm的看起来比较软的棒子后入了自己......
+22:18 varna: 幼女少看毛片
+22:18 varna: 不然会变成绒布球
+22:18 varna: (｡･ω･)
+22:18 cleamoon_: 绒布球多好
+22:19 varna: 快变！
+22:20 cleamoon_: 幼女兽进化，绒布球兽
+22:20 Mokou: https://wx3.sinaimg.cn/mw690/e166e33agy1frhnzx1g7vj20go09ot9g.jpg 太田顺也滚粗车万圈
+22:21 varna: 惊恐
+22:21 cleamoon_: 震惊
+22:21 varna: 讲道理，车万就是ZUN的，再多车万厨的想法也没他一个人的意见重要
+22:22 Mokou: +
+22:22 cleamoon_: 再说车万重要的是整个同人圈，又不是哪一部游戏好不好玩
+22:22 varna: 没同人了车万大不了死……
+22:22 varna: 也无所谓
+22:23 varna: 这本身就是一个人的作品
+22:23 cleamoon_: 对呀
+22:23 varna: 然后有些QA和协力者
+22:23 cleamoon_: zun现在日日饮酒
+22:24 Mokou: ZUN前几天不是来PKU喝青岛啤酒了么
+22:24 varna: 虽然我不喝酒，但综合用户观点，青啤值得一喝
+22:24 varna: 他以前不也狂喝滥吐……
+22:25 varna: 难道现在已经犀利到喝多少都不会吐了
+22:25 Mokou: 我听说他曾经在地震的时候优先保护啤酒导致硬盘损坏来着
+22:25 cleamoon_: 不会吐了，还边喝边直播
+22:25 varna: 2333333
+22:25 cleamoon_: 2333333
+22:25 varna: 进化了
+22:25 varna: 啤——酒！啤——酒！（觉察）
+22:26 Mokou: varna: 东方夏淫梦里还真有个作者拿ZUN创作了
+22:26 varna: 2333333
+22:26 varna: 等等
+22:26 varna: 为什么我说觉察，你就想到inm
+22:26 varna: 你事小鬼罢
+22:27 cleamoon_: 原来zun 41岁了
+22:27 cleamoon_: uccu
+22:27 Mokou: 成天脱粪的人还好意思说我
+22:27 varna: FA!?
+22:27 Mokou: 淫梦厨滚粗C吧圈！(知乎答者并感)
+22:27 varna: 杰哥不要啊（支持国货）
+22:28 Mokou: 梁哥不要啊（指脱粪）
+22:28 cleamoon_: 啊？这游戏是个刀塔？
+22:28 Mokou: FA
+22:29 Mokou: 那个视频被削除了
+22:29 varna: つぅい↑だん↓（庄严）
+22:29 varna: cleamoon_: 是do2的自定义地图吧
+22:29 cleamoon_: 那不是随便下架
+22:29 Mokou: 其实我指的是2016 nico上的合作
+22:29 varna: 然而圈地自萌的厨不高兴了
+22:30 cleamoon_: 其实吧，我觉得神主应该把99%难听的东方音乐下架掉，浪费空间
+22:30 Mokou: 哦你们说梦符祭？
+22:30 varna: +
+22:30 varna: uccu 满脑子inm
+22:30 varna: 雪人（直球）
+22:31 cleamoon_: 东方厨不都是撸人物党
+22:31 varna: Dark wanderer也是车万厨啊
+22:31 varna: 他在梦里都喊着「东方」
+22:32 cleamoon_: 话说大菠萝的设定里是蛮瘦的，有点性感，游戏里根本是个死宅体型
+22:33 varna: D3?
+22:33 Mokou: 我是先扩灰熊还是先扩Negev呢
+22:34 varna: 灰熊
+22:34 varna: 机枪意义有限
+22:34 Mokou: 了解
+22:34 varna: 你们窑子指挥官是这样的，肝力爆炸
+22:34 Mokou: 讲道理，我只打演习
+22:36 cleamoon_: 就是设定集里的原画呀
+22:36 cleamoon_: D2的大菠萝太胖了
+22:37 varna: 我以为那个是正常体型呢
+22:39 cleamoon_: 原画里类似凯瑞甘
+22:40 lhanjian_: 如果扩机枪那就练个机霰队吧
+22:40 lhanjian_: Mokou: 
+22:40 Mokou: 没有霰弹枪
+22:41 Mokou: 倒是准备凑四把手枪练个木星炮
+22:41 lhanjian_: Mokou: 这次活动可以换一个啊
+22:41 lhanjian_: 很划算的
+22:41 lhanjian_: 我换了SAT8
+22:41 varna: 小公主认为你不需要脊髓并拒绝出击
+22:41 Mokou: lhanjian_: 换的就是Negev
+22:41 lhanjian_: 哦
+22:42 lhanjian_: 那就4包1木星炮吧
+22:42 lhanjian_: 小公主太强了
+22:42 varna: AR15太平了
+22:42 varna: 胸口都开那么低还看不到任何特征
+22:42 varna: 怕不是铁板
+22:43 Mokou: uccu
+22:44 varna: (｡･ω･)我现在土豆里的突击步枪就仿照太平公主AR15配的
+22:44 varna: 哦不对，铁板战神AR15
+22:44 lhanjian_: 哈哈哈
+22:44 varna: 反正都一样
+22:44 Mokou: uccu
+22:44 lhanjian_: 15更像射手
+22:45 lhanjian_: 3改你就需要两把了
+22:45 varna: 没有像样的SBR所以算了
+22:46 varna: 15用的副武器还是很时髦的.300 BLK
+22:46 varna: 几年前有希望冲击9mm在特战单位中地位的野猫弹
+22:46 cleamoon_: 前几天看非死不可分析社交媒体都利用了哪些人性的弱点，结果发现，第一大使用非死不可产品的原因是，失眠.......
+22:47 varna: (｡･ω･)而且我建的角色明显是男性，不需要装妹子
+22:47 varna: 现在直接用鬼魅面具把脸遮住
+22:47 cleamoon_: 女装大佬
+22:48 varna: 今天刚出的短弓护膝
+22:48 varna: 奇特六件套成就送个面具
+22:50 varna: 下午简直感动死我，终于组到一队熟悉套路的公寓
+22:50 varna: 愉悦地推过去了
+22:50 varna: 我之前甚至遇到过过渡战道中4喷子灭团的场合
+22:51 lhanjian_: me too
+22:51 varna: 控住之后我68发冲锋枪只能打死两个
+22:51 varna: 这帮人以为没敌人了都冲上去捡弹药
+22:51 varna: 然后……
+22:52 lhanjian_: 体能对射击精度影响太大
+22:52 varna: 23:55 < lhanjian_> 体能对射精击度影响太大
+22:53 lhanjian_: 这个时候最好有一个粘单一个喷火塔控住然后屠杀
+22:53 varna: 差不多，两个手头有强控的人就够了
+22:53 varna: 一人负责两个
+22:53 varna: 人多更好，随便打
+22:53 varna: 结果就这么灭了……
+22:54 varna: 呜
+22:54 varna: 好想吃清真拉面
+22:54 varna: 阿拉花瓜！
+22:56 Mokou: 羊驼子惨遭爆破
+22:56 varna: 噗叽啪
+22:57 cleamoon_: uccu
+22:58 varna: FA!?
+23:01 cleamoon_: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/rx/wc_232801.jpg@596w_1l.jpg
+23:02 yonka joined channel
+23:02 varna: 逃到全灭2333333
+23:02 varna: @月月水火木金金
+23:03 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/rx/4t_219371.jpg@596w_1l.jpg
+23:03 varna: 这猫在练北斗神拳？
+23:04 Mokou: @罗永浩 为什么有那么多要用 photoshop 的人，觉得自己的需求代表了人民的需求？我们公司一千多台电脑，装了 photoshop 的不到30台。最荒唐的是，他们批评我们做 TNT 的时候，不了解人民的需求…… ​​​​
+23:05 cleamoon_: 这个才是  http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/rx/bq_452043.jpg@596w_1l.jpg  http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/rx/br_452054.jpg@596w_1l.jpg
+23:06 varna: 南斗圣拳！舔胸就是好！
+23:06 yonka quit:Ping timeout: 265 seconds
+23:09 cleamoon_: 斯都一个小岛森林大火了，海盗派出了一辆车三个人的消防大军去救火，他们去了后表示反正是小岛，烧完就完了
+23:12 varna: ...
+23:13 cleamoon_: 我家楼下之前冒烟了，消防的来了用了20min疏散，又用了20min砸门，进去乱喷一气，最后啥都没发现
+23:19 nhnhwsnh joined channel
+23:27 nhnhwsnh quit:Ping timeout: 248 seconds
+23:29 Mokou: https://www.irccloud.com/pastebin/wLnhehhM/
+23:32 cleamoon_: 日本以小学生为主？那那些众口到爆的内容是怎么回事
+23:35 cleamoon_: 根据发表在《Progress in Biophysics and Molecular Biology》期刊上的论文，一组科学家认为包括鱿鱼、章鱼和墨鱼在内的头足类动物可能起源于地球之外
+23:37 yonka joined channel
+23:42 lhanjian_: ARMA
+23:42 lhanjian_: 3的联机花样太多了，都不知道从哪儿入手开始玩
+23:47 lh_mouse quit:Read error: Connection reset by peer
+23:50 Mokou: 医生：你得病了。
+23:50 Mokou: 我：那我吃什么药可以好？
+23:50 Mokou: 医生：不需要吃药，你只要适当运动、少吃荤腥油辣就能康复。
+23:50 Mokou: 我：嗷！！不！！
+23:50 Mokou: ——ligarchy ​​​​
+23:52 cleamoon_: 不需要治疗，只要不撸就行了
+23:55 iyzsong quit:Read error: Connection reset by peer
+23:56 NebulaMoe: https://i.imgur.com/gVyNvzB.png
+23:57 cleamoon_: 噗
+23:59 varna: 2333333

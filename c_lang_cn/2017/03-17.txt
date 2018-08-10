@@ -1,0 +1,410 @@
+00:03 iyzsong-m quit:Ping timeout: 256 seconds
+00:06 wlemuel quit:Ping timeout: 246 seconds
+00:07 tgw quit:Quit: Konversation terminated!
+00:18 Mokou quit:Read error: Connection reset by peer
+00:19 Mokou joined channel
+00:19 cleamooon joined channel
+00:31 endle quit:Quit: Leaving
+01:34 whocares_2_ joined channel
+01:35 whocares_2 quit:Ping timeout: 240 seconds
+02:11 Mokou quit:Quit: Lost terminal
+02:13 lh_cat: https://github.com/lhmouse/poseidon/commit/92995337c6eec7dbc985e5febeb8fdcb2763d433
+02:19 lh_cat: 9299533 Epoll refactor.
+02:19 lh_cat:  46 files changed, 1079 insertions(+), 1464 deletions(-)
+02:19 lh_cat: 收工睡觉。，
+02:20 lh_cat quit:Read error: Connection reset by peer
+06:35 cleamooon quit:Quit: Connection closed for inactivity
+08:19 Youmu quit:Quit: Connection closed for inactivity
+08:53 whocares_2 joined channel
+08:54 whocares_2_ quit:Ping timeout: 240 seconds
+09:10 yimis joined channel
+09:10 whocares_2_ joined channel
+09:11 whocares_2 quit:Ping timeout: 240 seconds
+09:24 iyzsong-w joined channel
+09:32 bloom joined channel
+09:39 Youmu joined channel
+09:48 yimis quit:Quit: yimis
+10:14 iyzsong-w quit:Ping timeout: 256 seconds
+10:23 Dove joined channel
+10:37 iyzsong-w joined channel
+11:17 lh_mouse joined channel
+11:24 whatofor quit:Ping timeout: 260 seconds
+11:25 whatofor joined channel
+12:25 iyzsong-w quit:Ping timeout: 258 seconds
+13:00 Dove quit:Ping timeout: 246 seconds
+13:20 iyzsong-w joined channel
+13:57 Mokou joined channel
+14:20 iyzsong-w quit:Ping timeout: 240 seconds
+14:22 Dove joined channel
+14:24 iyzsong-w joined channel
+14:25 bloom quit:Read error: Connection reset by peer
+14:27 bloom joined channel
+16:20 Dove quit:Read error: Connection reset by peer
+17:19 whocares_2 joined channel
+17:20 whocares_2_ quit:Ping timeout: 240 seconds
+17:44 cleamooon joined channel
+18:13 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:51 bloom quit:Quit: bloom
+19:01 xhe joined channel
+19:11 iyzsong-m joined channel
+19:12 iyzsong-m: (# ﾟДﾟ)
+19:13 xhe: 0.0
+19:19 varna joined channel
+19:19 varna: 我昨天就不该乌鸦嘴说什么昨天能搞完
+19:20 varna: 等我下班的时候已经是今天深夜一点钟了
+19:31 iyzsong-m: 2333
+19:34 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+19:39 \s quit:Ping timeout: 258 seconds
+19:49 \s joined channel
+19:52 varna: _(:з」∠)_
+19:52 Mokou: varna: 官推号称他们把昼站火力阈值上调了20%
+19:52 Mokou: 换句话说，现在昼站火力阈值是180
+19:55 varna: 我看到了
+19:55 varna: 武大已死
+19:56 Mokou: qh现在觉得明年就要关服了
+19:56 * Mokou 出总司了，转日服
+19:58 varna: 明年关服是有可能的
+19:58 varna: 不然成天让人玩《水雷之魂》也挺不住
+19:58 Mokou: +
+19:59 varna: 现在敌方重火力各种扬眉吐气
+20:00 varna_ joined channel
+20:00 varna: 雷爷也一样
+20:00 varna quit:Quit: Reconnecting
+20:01 varna_ is now known as varna
+20:01 Mokou: 砍口类是坏文明，我还是去FGO吧
+20:03 varna: 我宁可去玩宫崎英高的阴谋……
+20:03 varna: 好歹刻苦练习之后还有点用
+20:03 Mokou: 日服我有杰克
+20:03 varna: 可怕的欧洲人
+20:03 Mokou: 欧个丁日
+20:03 Mokou: 五块钱九百石头
+20:04 varna: 可怕的资本家
+20:04 Mokou: 三百发抽两个五星是正常的_(:з」∠)_
+20:05 Mokou: varna: http://www.bilibili.com/video/av7789780/ FA动画PV
+20:05 varna: lmcc
+20:05 Mokou: tag: "我对不起今天要翻身"
+20:05 Dove joined channel
+20:06 Mokou: 妈的，改成新的界面以后我远征效率下降不少……
+20:06 Dove: varna: Hello, 我彻底蜕变为神棍了。
+20:06 varna: 啊，太差了
+20:06 varna: Dove: 啊？
+20:06 Dove: 2333
+20:06 varna: 这个FA动画的作画太糟糕了，我期望过高
+20:06 Mokou: 反正是迫真飞哥和村姑的爱情故事……
+20:07 varna: @梵天啊坑死我身
+20:07 Dove: varna: 现在在研究神秘学，魔法，宗教，哲学和灵修什么的。
+20:07 varna: 不考虑研究下玄学么
+20:07 Dove: 研究啊
+20:07 varna: 天若有情天亦老 四六七二出雾岛
+20:07 varna: 人间正道是沧桑 再跟一发稳扶桑
+20:08 varna: 普建三星跟进四星再造果断MP5
+20:10 varna: Mokou: 而且PV里贞德一张嘴我就觉得没救了
+20:10 Dove: 不过刚刚入门，很多相通的基本理念我是认同或者说相信的，但是没找到具体适合我的流派，现在每天冥想和最初级的脉轮训练，顺便随兴趣看点书啥的。
+20:10 varna: 流派啊
+20:10 varna: 两千铝vs三千铝
+20:10 varna: 六千钢vs七千钢
+20:10 Dove: 我自己按自己的想法瞎搞一下吧。
+20:11 Dove: 只要不做偏激的行为应该没什么危险。
+20:12 Mokou_ joined channel
+20:12 Mokou quit:Disconnected by services
+20:12 Mokou_ is now known as Mokou
+20:13 Mokou: varna: 说到玄学，前两天埃及出土了一个巨像，怀疑是拉美西斯二世
+20:13 Mokou: 正好赶上日服拉二up，于是一堆人拿来当圣遗物抽拉二，全都沉了
+20:14 Mokou: 然后今天那雕像拉出来以后看到了铭文，是菩萨美提克一世……
+20:14 varna: 2333333
+20:14 Mokou: 《论圣遗物的重要性》
+20:15 varna: 啊啊累死了
+20:15 varna: 有没有幼女被我侵犯两天的？
+20:15 Mokou: 快上微博找迷妹
+20:16 varna: 哦对
+20:16 varna: 你给我申的邮箱域名是什么来着
+20:16 Mokou: 163.com
+20:16 Dove: 玄学的话，周易看了一半吧，看不懂，只学到了一些做人的道理。
+20:17 Dove: 然后我也不打算学预测啊什么的，所以就先放下了，我比较偏向于魔法和灵修。
+20:17 Dove: 未来这种东西我不打算随便算
+20:18 varna: 我X
+20:18 Dove: 但是魔法还没找到合适的入门的路，然后就先练习脉轮了。
+20:19 varna: 良化纲领这个nick居然被注册了
+20:19 Dove: 2333
+20:19 Mokou: 浙江杭州，性别女
+20:19 lhanjian_ joined channel
+20:19 Mokou: 最后一次出现是2014年8月5日
+20:19 lhanjian_ quit:Remote host closed the connection
+20:20 lhanjian: 果然是FLAG
+20:20 Dove: 神马flag了？
+20:20 varna: (｡･ω･)谁那么喜欢我
+20:21 lhanjian: lh_mouse: 昨天小耗问我去不去上海，今天就知道公司裁了一波人
+20:21 Dove: 我就喜欢啊，不过不是我注册的。
+20:21 lhanjian: varna: 躁动的羊驼子
+20:21 Mokou: 总司新的攻击动画果然帅气
+20:22 Dove: 看来有比我狂热的粉丝。
+20:22 varna: lhanjian: 最近火气确实大了很多
+20:22 varna: 毕竟累得要死，想做的事情只能慢慢来
+20:22 lhanjian: 怎么了呢
+20:22 lhanjian: 嗯
+20:23 varna: 1
+20:23 varna: 啊
+20:23 varna: 打错终端了
+20:24 Dove: 反正你忙，最近都没上，频道也没什么人说话了。
+20:24 varna: 我只是累
+20:25 varna: 毕竟体力一般
+20:25 Dove: 好吧，我觉得我没有给你提建议的程度。
+20:25 cleamooon quit:Ping timeout: 240 seconds
+20:25 varna: 不过至少这段时间下来，我坚定了自己相信非计算密集时用户态线程效率的迷信
+20:25 cleamooon joined channel
+20:26 varna: 至于计算密集，可以迷信硬件并行
+20:26 Dove: soga，又涨姿势了。
+20:27 Dove: 我觉得精神分裂是个神赐的救赎，我现在脑袋也不乱了头也不疼了也和谐平静了很多，得到很多启示，很多东西也想通了。
+20:28 Dove: 当然想不通的更多
+20:28 lhanjian: Dove: 这只能说明你现在情况稳定了一些吧
+20:28 varna: 别想，先来一管压压鲸
+20:28 Dove: 不，我没发病之前狭隘短视头痛不已脑袋还很乱。
+20:29 lhanjian: 我上个见到的SP患者是个妹子，她一直想出院来着，后来我给了她些建议，后来她出院了，然后就杳无音讯了
+20:29 lhanjian: 我在想我可能起了反作用
+20:29 Dove: 至少开阔了我的视野，不过我还是不知道自己不知道什么。
+20:29 Dove: 但是我比较随和平静了。
+20:29 varna: 想太多
+20:30 Mokou: +
+20:30 Dove: 现在也不想了。
+20:30 varna: 似可这么想：
+20:30 varna: 好想侵犯妹子啊
+20:30 varna: 想把她压在教室的桌子上
+20:30 Dove: 2333
+20:30 varna: 拉住她的耳朵，听她的呜咽声
+20:30 varna: 然后侵犯她
+20:30 varna: 下略
+20:30 Mokou: ノ　ン　ケ　死　滅
+20:31 lhanjian: Dove: T2在SP期间有什么感受？
+20:31 Dove: 我只是发现冥想可以缓解疲劳，但是我自己也不得要领，等我研究一下再推荐你一点办法。
+20:32 Dove: lhanjian: 当时很痛苦，然后根本是非人的体验，跟做梦一样。
+20:32 Dove: 但是现在回想领悟了一些东西。
+20:32 lhanjian: 嗯
+20:34 Dove: 反正我现在是个神棍了，沉迷魔法灵修神秘学什么的不能自拔。
+20:35 Dove: 我也没打算自拔2333
+20:35 Dove: 不过还是没什么知识储备也没什么经验，伪神棍。
+20:36 lhanjian: 有趣就好
+20:36 Dove: 嗯，我只是想做个正直善良有耐心和智慧的人而已，另外对力量和魔法抱有兴趣。
+20:37 lhanjian: 我认识的那个SP妹子，挺玄奥的，我至今不知道她说的那件事情是不是真的
+20:37 Dove: 但是我没什么智慧，所以等于白说。
+20:37 Dove: SP的时候很多东西都很玄奥
+20:37 Dove: 所以我才坚定地成为神棍。
+20:38 Dove: 眼见为实
+20:38 Dove: 我有一种 我终于找到了自己的道路 的感觉。
+20:38 lhanjian: 但是处于症状中的时候看不见真实，或者说无法意识到自己看的不是真实吧
+20:39 Dove: 不，思维很清晰啊，比正常清晰多了，另外有各种可以考证的事件。
+20:39 Dove: 比较庞杂但是还是可以旁敲侧击地考证到不少。
+20:40 Dove: 然后最近研究了一些这些方面的东西，有些理念我深以为然，也搞了自己的一套理论。
+20:40 lhanjian: 嗯
+20:41 lhanjian: 我记得那个时候T2在频道里说了些摸不着头脑的话
+20:41 Dove: 然后随心随缘学点做点。
+20:41 lhanjian: 好久了
+20:41 varna: Mokou: 现在我恢复了紧缩内存的策略，打算在紧缩的基础上提供简单的令牌方法提高调度能力
+20:41 Dove: 那个时候第一次SP突发，没什么经验，根本无意识自己在干什么。
+20:41 Mokou: OTL
+20:41 varna: 用栈容量估测会搞出大新闻，不太和谐
+20:42 Mokou: 前天我准备接着处理翠香
+20:42 varna: 目前能看到的一点是主动yield的时候必须提供令牌，以供创建新uthread
+20:42 Mokou: 然后我盯着代码看了半天，最后决定重来一遍
+20:42 varna: 但IO怎么搞还没想好
+20:42 varna: (｡･ω･)用p7r
+20:42 Mokou: (｡･ω･)我这是C艹
+20:42 varna: (｡･ω･)迅捷如电，凛若黑铁，太平洋上坚固城垒
+20:43 lhanjian: Dove: 虽然我不是SP，不过那种经验确实差不多
+20:43 Mokou: 虽说我确实考虑过来个C艹绑定
+20:43 Mokou: 不过我自己用的话还是偏好翠香
+20:43 lhanjian: Dove: 审视自己的能力会极大的提高
+20:43 Dove: 神秘体验而已，有些愉悦有些痛苦。
+20:43 varna: (｡･ω･)献出进程的一部分，领略愉悦吧
+20:43 Dove: 是的
+20:44 Dove: 不过我主要还是从过往选择中审视自己，但是最近变化比较大。
+20:44 Dove: 比方说我终于下定决心退学了，然后感觉很好。
+20:44 varna: Mokou: 刚才看了魂3街舞，感觉好炫啊，有机会一定要体验下
+20:45 varna: 有个手柄的话应该能顺利受苦
+20:45 lhanjian: Dove: 跳出来比在里面纠结好的多吧
+20:45 Mokou: 我自己的手柄是个北通战戟
+20:45 Dove: 好太多，我以前只是缺乏勇气魄力和没能认识自己。
+20:46 varna: sbeam有没有什么可用的手柄？
+20:46 Mokou: Sbeam Controller不知道如何
+20:46 lhanjian: Mokou: 不好用。我有
+20:46 varna: 如果是Xbox系的就不好
+20:46 varna: PS系的手柄比较习惯
+20:46 Dove: 然后也得到了一些我只能归类于天启的东西，让我认识到很多东西。
+20:47 Dove: 比方说世界远远超越了我可怜的思维甚至想象
+20:48 varna: 往下我想体感下libtask
+20:49 Mokou: http://picpaste.com/TbbDbOnT.jpg
+20:49 lhanjian: varna: 以前给羊驼子的那个nanomsg好像已经把那些char *改回void *了
+20:49 varna: lhanjian: 2333333333
+20:49 lhanjian: int nn_send (int s, const void *buf, size_t len, int flags);
+20:50 Dove: 然后个人道德有极大的提高2333
+20:50 varna: 这段时间体验了一下metaq, 就是外面称作rocketMQ的玩意儿
+20:50 varna: 感觉刷盘的队列也还不错
+20:50 Dove: 这是什么黑科技
+20:50 lhanjian: 消息队列的话，我用过nsq/Kafka
+20:50 varna: kafka后来在厂内基本被mq取代了
+20:51 lhanjian: 为什么？
+20:51 varna: 集群性能&HA方面的考虑
+20:51 Dove: 哦，你们的QQ发我下吧，我把所有群都退了，太吵。
+20:52 varna: 1324843093 基本不上
+20:52 Dove: 我QQ上删得就剩4好友。
+20:52 Dove: 最近上得比较多，以前也基本不上。
+20:52 varna: 现在qq邮箱我只用来登陆麦乐送
+20:52 Dove: 2333
+20:53 Mokou: 居然不膜球
+20:53 varna: 在长春膜球是因为麦乐送不服务
+20:55 Dove: 最近看了 http://www.iqiyi.com/v_19rrnwsqdo.html#vfrm=2-3-0-1 纪录片，通灵之战14 15 17季的熟肉，然后几本书，其他乱七八糟的东西。
+20:56 varna: 这几天还被某nosql集群坑飞
+20:56 Dove: 2333
+20:56 varna: 单行写入KB以下规模怒吃调度，而且估计底下是SATA
+20:56 varna: 一条写入两分钟
+20:56 varna: 我感觉到重大地操蛋
+20:57 Mokou: “几个SQL数据库进了一个NoSQL Bar，转了一圈以后他们出来了”
+20:57 Mokou: “因为他们找不到table”
+20:57 varna: 23333
+20:57 varna: table还是有的
+21:00 Dove: 我虽然听不懂但是我也能感觉这玩意消耗巨大的体力。
+21:05 varna: Mokou: btw上面的log明天求删一下
+21:05 Dove: 2333
+21:05 Dove: 不要挂今天的log就好了
+21:05 Mokou: OK
+21:05 varna: 现在能删更好
+21:06 varna: 黑得有点直白了
+21:06 Mokou: log没有锁，可能会丢一部分
+21:06 Mokou: 不过也无所谓了
+21:06 varna: thx
+21:07 Oyodo joined channel
+21:07 Mokou: OK
+21:07 varna: 不过我估计相当一部分老板会喜欢Java用户的人海战术
+21:08 varna: 举例来说，一台机器一年成本80k￥，比一个工程师便宜多了
+21:08 varna: 而开发一个高性能系统怎么也得搞两三个工程师起手……
+21:09 varna: 而且万一这些人写了个脚本去点月饼
+21:09 varna: 啊，那个什么
+21:09 Mokou: 即开除，请
+21:09 lhanjian: varna: 这点我也黑了好多次了。
+21:10 varna: 虽说这事其实和写脚本点月饼没有多少重大关系，不过姑且这么黑一下
+21:10 lhanjian: 还有一条，5个1倍效率的码农，比1个5倍效率的码农更便宜，更受老板欢迎
+21:10 Dove: 是吗？
+21:11 varna: 因为有一整个中间件团队保证人海战术可用
+21:11 varna: 中间件的作用之一就是让一般程度的烂码运行起来，然后靠运维保证这些玩意儿有很好的环境
+21:11 varna: 之后上面的人就可以去搞业务了
+21:12 varna: 反正Java就是cache miss generator, 你想写有救了都难
+21:12 Mokou: 阿福！
+21:12 varna: 可怕
+21:12 Mokou: 我抽出阿福了！
+21:12 varna: 欧洲人出货了
+21:12 Mokou: 毕竟石头号
+21:12 varna: 可怕
+21:12 Dove: 血统啊
+21:12 varna: 欧洲人祭天成功
+21:12 varna: 我普建一发助兴吧
+21:13 Mokou: 虽说这个石头号我是打算拿来当初始的
+21:13 Dove: 我发现我还是比较喜欢我现在轻松的工作
+21:13 lhanjian: Dove: T2现在在做些小生意？
+21:13 Mokou: 阿福超可爱
+21:13 varna: 2星，跪了
+21:13 Dove: lhanjian: 在某会计师事务所打杂。
+21:13 varna: 再造一发
+21:13 varna: 2星，跪了
+21:13 lhanjian: Dove: 嗯
+21:14 varna: 还剩2资材，任务都做不完了……
+21:14 Dove: 最近会计师搞实名制，所以打杂的人很多事情不能插手了，就比较轻松。
+21:14 varna: 可怕的欧洲人吸走了我的欧气
+21:14 varna: 最近我造出来最好的东西是三连装MP5
+21:14 Mokou: 欧个丁日，拉二出不来_(:з」∠)_
+21:15 varna: 那是因为我的欧气本来就不足，你也没吸到多少
+21:15 varna: 但我更非了
+21:15 Mokou: 抽到五百石头收手
+21:15 varna: 我还是好好打猎吧
+21:16 varna: 本来要是能出个三星也能凑足十五核把国货姐扩一下的
+21:16 varna: 结果什么都没有
+21:16 varna: (｡･ω･)欧洲人太可怕了
+21:16 Mokou: 拉二出不来，拉二就是出不来～
+21:17 Mokou: 妈的兰斯洛特
+21:17 varna: (｡･ω･)ﾉArrrrrrrrrrrthuuuuuuuuuuurrrr.
+21:18 Mokou: (｡･ω･)这个是剑兰，没狂化
+21:18 varna: 没看头
+21:19 Mokou: 目前单体第一剑，能打倒是真的
+21:19 varna: 但立绘像洗剪吹
+21:19 varna: 我觉得设定原案的兰斯洛特比较好
+21:20 Mokou: ……阿三哥
+21:20 Mokou: 手滑抽错池子出了五星，看来拉二是来不了了
+21:20 Mokou: 收手
+21:22 wlemuel joined channel
+21:22 Mokou: http://picpaste.com/8YrTFcPA.jpg
+21:22 Mokou: ^ 我方舰船已死
+21:23 varna: 哈哈哈哈
+21:24 varna: 快堪所难堪、忍所不能忍，为万世开太平吧
+21:24 Mokou: 下次活动我还是丙吧
+21:25 varna: 大和级的装甲数值本来是按照昼战150算的
+21:25 varna: 提到180之后己方战舰都不好打
+21:26 varna: 田中这么瞎搞，难怪没人愿意给他做动画第二季
+21:26 Mokou: 修正了游戏能玩的Bug系列
+21:27 varna: 赶快把以前伴随我出院的曲子都拿出来听听
+21:27 varna: (｡･ω･)现在激流勇退，不失为井上成美
+21:28 varna: (｡･ω･)不退，就是宇垣缠
+21:28 Mokou: (｡･ω･)幌筵制盐厂开张啦！
+21:29 whatofor quit:Ping timeout: 260 seconds
+21:29 varna: 如果这么搞的话，希望能推出合作玩法
+21:30 varna: 不然容错率太低了
+21:30 Mokou: 天国的友军舰队
+21:33 wlemuel quit:Quit: leaving
+21:33 varna: 啊啊好想揉幼女
+21:33 Mokou: FGO入坑，请
+21:33 Mokou: 里面有幼女
+21:33 varna: 废狗题材不喜
+21:34 varna: 少前幼女奇怪地大多长了胸
+21:34 varna: 而且作为一个现代战争信徒，我相信突击步枪
+21:34 varna: 结果这游戏黑突击步枪黑得一塌糊涂
+21:34 Mokou: 啊，安日天……
+21:51 \f_ quit:Ping timeout: 256 seconds
+22:07 \f_ joined channel
+22:09 lh_mouse: 求给 poseidon 刷广告。
+22:09 varna: (｡･ω･)ﾉ
+22:10 lh_mouse: 花两天时间成功把 epoll singleton 干掉。
+22:10 lh_mouse: 现在所有 singletob 都是事实上的 static class 。
+22:10 varna: tob
+22:11 lh_mouse: varna, 看了 epoll 文档，确认ヲ不需要 epollctl 的 EPOLL_DEL 了。
+22:11 lh_mouse: 文档如此，所以 socket 直接 close 了就行。
+22:12 varna: epoll里的fd保证close时去除
+22:12 varna: 这个在2.6.xx时代已经保证了
+22:12 lh_mouse: 这样 socket 里也不需要放一个 epoll 指针了。
+22:12 varna: 很安全的
+22:12 lh_mouse: varna, 不保证在有多个 fd 时删除。
+22:13 lh_mouse: 但是一旦真正关闭就会被删。
+22:13 varna: 不dup的话还好
+22:14 lh_mouse: 按现在场合没有这种情况，所以就能用。
+22:15 lh_mouse: 现在只要无脑 EPOLL_HUP EPOLL_ERR 就行，如果 socket 从 map 里删除，析构函数会把它关掉。
+22:17 lh_mouse: EpollDaemon 精简出来只两个函数：添加一个 socket 和加入写队列。
+22:17 lh_mouse: 看来改 iocp 或 kqueue 也容易。
+22:17 varna: 我又想起远在天际的mtcp了
+22:18 lh_mouse: 原始的动力是做  UdpServer 之前  accept 是轮询，一直没心情改。
+22:18 lh_mouse: 原来是 reactor 现在用 proactor 了。
+22:18 * varna 同步切面邪教徒
+22:19 lh_mouse: 业务依然是 reactor 。 io mux 是 proactor 。
+22:20 lh_cat joined channel
+22:21 lh_cat: 肛道理，ヲ认为 tcp socket 这 accept 很坑。
+22:22 lh_cat: 不过 reactor 无力抽象 accept 和 recv。
+22:22 lh_cat: 只能用 proactor 。
+22:22 Mokou: varna: 川普大统领似乎打算造新的战列舰
+22:23 varna: puuu?
+22:23 lh_cat: udp 有了之后就可以大干快上了。
+22:23 Mokou: http://foxtrotalpha.jalopnik.com/trump-s-crazy-idea-to-bring-back-battleships-might-actu-1731114811
+22:24 lh_cat: 一双白鞋，出来三天，重新系下鞋带，已经不是一个颜色了。
+22:26 varna: 口支？
+22:27 varna: 口支口支口支
+22:28 lh_cat:  
+22:28 Mokou: 曹操远征，半途缺水，于是登高而望，曰：“前方有梅林”。军士口皆生津，士气大振，急急而行。果然有梅林，于是分而食之。旬日，长安有急报曰：“有胡王亚瑟寇边，具言为国师报仇”操笑曰：无妨，且唤土狼日之。众皆抚掌大笑曰：丞相英明，想那胡酋身为起点三大公车之首，纵无土狼，吾等日翻她
+22:28 Mokou: 亦是易如反掌
+22:28 lh_cat: medusa 需要推广。
+22:31 lh_mouse: 为什么 udp 需要两个字节的长度。
+22:32 lh_mouse: 只要四位记住 ip 报文里哪些是无效的就行了口牙。
+22:56 cleamooon: 西固某网咖大事件，一名玩家因打LOL队友太坑，导致自己排位输了，一气之下没控制住情绪一头撞向电脑！导致如此悲剧！ http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/r4/vh_438531.jpg@596w_1l.jpg
+22:57 Dove: 2333333
+23:02 Dove: 睡觉啦
+23:03 gauge is now known as qwq
+23:04 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:04 qwq is now known as gauge
+23:29 iyzsong-w joined channel
+23:35 varna: _(:з」∠)_
+23:35 varna: 好累，先躺着去了
+23:35 varna: _(:з」∠)_健斗，有幼女的话务必考虑转手给我
+23:54 iyzsong-w: -.-

@@ -1,0 +1,136 @@
+00:00 lh_mouse quit:Read error: Connection reset by peer
+00:09 xxxxxxxxx joined channel
+00:12 xxxxxxxx quit:Ping timeout: 245 seconds
+00:19 LastAvengers quit:Quit: Srain0.05-git@0.367.69acfba close.
+00:34 xxxxxxxxx quit:Quit: Leaving...
+01:22 cleamooon quit:Ping timeout: 250 seconds
+01:46 cleamooon joined channel
+01:52 Mokou: 睡觉
+01:52 Mokou: 诸君武运
+01:52 Mokou quit:Quit: 睡觉
+01:57 T-J-M quit:Quit: WeeChat 1.6
+02:57 Youmu quit:Quit: Connection closed for inactivity
+03:26 cleamooon quit:Ping timeout: 265 seconds
+04:07 cleamooon joined channel
+04:08 cleamoooon joined channel
+04:11 cleamooon quit:Ping timeout: 250 seconds
+04:47 Xilzzert joined channel
+04:51 Xilzzerts quit:Ping timeout: 276 seconds
+06:04 T-J-M joined channel
+06:13 T-J-M quit:Quit: WeeChat 1.6
+08:20 FrankHB quit:Ping timeout: 244 seconds
+08:37 sss joined channel
+08:45 FrankHB joined channel
+08:57 iyzsong-xx joined channel
+09:09 lh_mouse joined channel
+09:11 sss quit:Remote host closed the connection
+09:24 iyzsong-xx: = =
+09:27 LastAvengers joined channel
+09:32 Youmu joined channel
+09:45 lh_not_bot quit:Ping timeout: 244 seconds
+09:46 lh_not_bot joined channel
+10:49 lh_not_bot: geordi: -c { char a alignas(16); }
+10:49 geordi: Success
+10:49 lh_not_bot: geordi: -c { char a[10] alignas(16); }
+10:49 geordi: Success
+10:49 lh_not_bot: geordi: -c { alignas(16) char a[10]; }
+10:49 geordi: Success
+11:03 sss joined channel
+11:04 sss quit:Client Quit
+11:38 T-J-M joined channel
+11:47 Youmu quit:Quit: Connection closed for inactivity
+12:00 lh_not_bot: geordi: -c int a; struct foo { int b = a++; };
+12:00 geordi: Success
+12:20 LastAvengers quit:Ping timeout: 245 seconds
+12:23 Sasasu joined channel
+12:29 whocares_2_ joined channel
+12:29 whocares_2 quit:Ping timeout: 245 seconds
+12:39 Youmu joined channel
+12:46 LastAvengers joined channel
+12:51 LastAvengers quit:Ping timeout: 256 seconds
+13:13 cleamoooon quit:Ping timeout: 260 seconds
+13:24 LastAvengers joined channel
+13:28 Mokou joined channel
+13:56 Xilzzerts joined channel
+13:56 Xilzzert quit:Remote host closed the connection
+13:59 sottd joined channel
+14:00 sottd: 食屎去吧,阿里云。服务器莫名其妙当机，搞得服务中断了8个小时.
+14:01 sottd: 这还不算，一周还会莫名奇妙的中断两三次网络。半夜爬起来重启机器简直痛苦
+14:02 Mokou: 运营爆破，请
+14:03 Xilzzert joined channel
+14:07 Xilzzerts quit:Ping timeout: 250 seconds
+14:40 lh_mouse: 阿里云除了傻逼电商一贯的作风以外倒也还好。
+14:47 Youmu quit:Quit: Connection closed for inactivity
+15:16 StardustX joined channel
+15:33 bestcan_ joined channel
+15:33 bestcan_ quit:Max SendQ exceeded
+15:34 bestcan_ joined channel
+15:35 bestcan_ quit:Client Quit
+15:37 bestucan joined channel
+15:39 bestucan___ joined channel
+15:39 bestucan___ quit:Max SendQ exceeded
+15:50 bestucan quit:Remote host closed the connection
+15:51 bestucan joined channel
+15:53 xxxxxxxx joined channel
+16:08 iyzsong-xx: - -b
+16:36 Sn0rt is now known as Sn0rt_afk
+17:00 lh_mouse: geordi, << sizeof(bitset<1>);
+17:00 geordi: 8
+17:00 lh_mouse: geordi, << sizeof(bitset<0>);
+17:00 geordi: 1
+17:00 lh_mouse: geordi, << sizeof(bitset<5>);
+17:00 geordi: 8
+17:00 lh_mouse: geordi, << sizeof(bitset<64>);
+17:00 geordi: 8
+17:00 lh_mouse: geordi, << sizeof(bitset<65>);
+17:00 geordi: 16
+17:00 lh_mouse: geordi, << sizeof(bitset<128>);
+17:00 geordi: 16
+17:00 lh_mouse: geordi, << sizeof(bitset<129>);
+17:00 geordi: 24
+17:04 lh_mouse: geordi, << bitset<16>(100)
+17:04 geordi: 0000000001100100
+17:08 Sn0rt_afk is now known as Sn0rt
+17:10 bestucan quit:Remote host closed the connection
+17:10 bestucan joined channel
+17:11 bestucan quit:Remote host closed the connection
+17:12 bestucan joined channel
+17:23 Flandre__ quit:Remote host closed the connection
+17:37 Flandre__ joined channel
+17:51 Xilzzert quit:Remote host closed the connection
+18:03 Sn0rt is now known as Sn0rt_afk
+18:04 iyzsong-xx quit:Read error: Connection reset by peer
+18:19 StardustX quit:Remote host closed the connection
+18:20 Youmu joined channel
+18:29 StardustX joined channel
+18:48 bestucan quit:Remote host closed the connection
+18:48 iyzsong joined channel
+18:52 iyzsong: 周末好 0 0
+18:57 Sasasu quit:Read error: Connection reset by peer
+18:57 Sasasu joined channel
+18:58 LastAvengers quit:Quit: Srain0.05-git@0.367.69acfba close.
+19:02 yimis joined channel
+19:02 FrankHB quit:Ping timeout: 260 seconds
+19:11 cleamooon joined channel
+19:38 cleamoooon joined channel
+19:41 cleamooon quit:Ping timeout: 260 seconds
+19:48 yimis quit:Quit: yimis
+19:59 FrankHB joined channel
+20:10 sottd quit:Remote host closed the connection
+20:13 LastAvengers joined channel
+20:14 FrankHB quit:Remote host closed the connection
+20:15 FrankHB joined channel
+20:22 Sasasu quit:*.net *.split
+20:37 Youmu quit:Quit: Connection closed for inactivity
+20:55 whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:10 Flandre__ quit:Remote host closed the connection
+21:51 Meow-J quit:Ping timeout: 260 seconds
+22:17 Sasasu joined channel
+22:24 cleamoooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/7c/r2_282934.jpg@596w_1l.jpg
+22:27 cleamoooon: @铱叔 您好，根据用户举报，您在问题 既然自由泳速度最快，青蛙为什么用蛙泳？ 中的回答已被删除，原因是「政治敏感」。如果您对本次处理结果有异议，请回复本条私信，我们会及时复查。
+22:32 Meow-J joined channel
+22:35 iyzsong quit:Ping timeout: 260 seconds
+22:39 bestucan joined channel
+22:41 iyzsong joined channel
+22:45 bestucan quit:Remote host closed the connection
+23:58 iyzsong quit:Quit: bye.

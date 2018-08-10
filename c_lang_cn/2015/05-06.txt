@@ -1,0 +1,887 @@
+00:09 pocmon quit:Quit: Leaving.
+00:13 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150420225811]
+00:13 lh_cat quit:Quit: Connection closed for inactivity
+00:33 lolisa joined channel
+01:09 cleamoon quit:Ping timeout: 272 seconds
+01:12 lh_mouse quit:Read error: Connection reset by peer
+01:34 hysw quit:Quit: Konversation terminated!
+02:31 cleamoon joined channel
+02:46 LittleKey quit:Quit: Leaving.
+04:16 geordi quit:Remote host closed the connection
+04:16 geordi joined channel
+04:42 condy quit:Ping timeout: 256 seconds
+04:43 dantmnf quit:Ping timeout: 256 seconds
+04:48 dantmnf joined channel
+04:48 condy joined channel
+05:46 cleamoon quit:Ping timeout: 240 seconds
+06:03 geordi quit:Remote host closed the connection
+06:18 cleamoon joined channel
+06:30 iyzsong1 joined channel
+06:32 iyzsong quit:Ping timeout: 252 seconds
+06:35 boosure joined channel
+07:00 cleamoon_ quit:Ping timeout: 272 seconds
+07:00 cleamoon_ joined channel
+07:10 cleamoon_ quit:Ping timeout: 256 seconds
+07:12 cleamoon_ joined channel
+07:15 cleamoon quit:Ping timeout: 240 seconds
+07:17 hope1 joined channel
+07:23 hope1 quit:Ping timeout: 272 seconds
+07:28 cleamoon joined channel
+08:57 cleamoon_: 伊19,get daze
+09:04 lh_mouse joined channel
+09:10 cleamoon_: E3出了岛风...
+09:20 iyzsong quit:Changing host
+09:20 iyzsong joined channel
+09:20 cleamoon_ quit:Ping timeout: 256 seconds
+09:21 cleamoon_ joined channel
+09:31 cleamoon_ quit:Ping timeout: 264 seconds
+09:33 cleamoon_ joined channel
+09:37 Xilzzerts joined channel
+09:38 boosure quit:Quit: Get your hand off of it
+09:40 lolisa: daze 什么鬼
+09:40 cleamoon quit:Ping timeout: 272 seconds
+09:42 cleamoon_ quit:Ping timeout: 240 seconds
+09:43 cleamoon_ joined channel
+09:53 iyzsong: 早
+09:53 cleamoon_ quit:Ping timeout: 240 seconds
+09:55 cleamoon_ joined channel
+10:06 sismvg joined channel
+10:07 lh_mouse: iyzsong, 捏
+10:08 sismvg: 当vector的内存不够存放新元素时有比指数规避更好的内存分配方法吗
+10:08 lh_mouse: no silver bullet
+10:10 sismvg: 我在想用某个曲线函数行不行
+10:17 cleamoon_ quit:Ping timeout: 240 seconds
+10:19 cleamoon_ joined channel
+11:04 cleamoon_ quit:Ping timeout: 240 seconds
+11:06 cleamoon_ joined channel
+11:06 hoxily quit:Ping timeout: 265 seconds
+11:07 hoxily joined channel
+11:25 cleamoon_ quit:Ping timeout: 240 seconds
+11:26 cleamoon_ joined channel
+11:33 cleamoon_ quit:Ping timeout: 240 seconds
+11:34 lhjkk joined channel
+11:34 cleamoon_ joined channel
+11:39 cleamoon_ quit:Ping timeout: 240 seconds
+11:40 cleamoon_ joined channel
+11:41 varna joined channel
+11:42 varna: 啊，有一些基佬和药娘
+11:42 varna: 先爆谁好呢
+11:44 varna: 10:08 sismvg: 当vector的内存不够存放新元素时有比指数规避更好的内存分配方法吗
+11:44 varna: 10:10 sismvg: 我在想用某个曲线函数行不行
+11:44 varna: 你要什么样的曲线？种群增长率？
+11:56 sismvg: varna:差不多
+12:00 sismvg: 我想用在运行时才能知道某个对象内存占用的archive上
+12:01 varna: 你为什么不自己提供一套分配器呢
+12:02 Dove joined channel
+12:02 Dove: Now, we are one.
+12:02 varna: 然后更细致地，你期望对象分配失败率和内存占用率这两个函数达到如何的权衡程度
+12:02 varna: 我并不觉得你真正考虑了目标函数，而指数增长其实能满足你
+12:02 Dove: let me try utf-8
+12:03 varna: 同时你并没声明对象生存时间
+12:03 varna: 实际上对一个短会话来说，内存池可能就够了
+12:03 varna: 而RPC未必要长连接
+12:04 varna: NFS信令也未必需要长久的大缓冲
+12:04 varna: 我不知道这方面的需求你考虑过多少
+12:04 izmntuk quit:Remote host closed the connection
+12:04 sismvg: 跪
+12:08 xxxxxxxxx: 昨天E5掉了只稀有驱逐
+12:08 lh_not_bot: 卖了两双鞋  送到了 （开心）
+12:08 xxxxxxxxx: varna E6是机动还是水打?
+12:09 varna: lh_not_bot: 运动鞋还是休闲鞋？
+12:09 lh_not_bot: 我说个事情  当你觉得 malloc 是瓶颈的时候可以试试 tcmalloc
+12:09 lh_not_bot: 运动鞋
+12:09 varna: xxxxxxxxx: E6甲么
+12:09 lh_not_bot: 两双不到五百块钱
+12:09 varna: 哦，那挺好的
+12:09 * lh_not_bot slaps Dove around a bit with a large trout
+12:10 lh_not_bot: IP地址: 223.220.29.64青海省西宁市 电信
+12:10 varna: xxxxxxxxx: 如果是甲的话，用什么取决于你的主力状况
+12:10 xxxxxxxxx: varna: 对
+12:11 xxxxxxxxx: 主力就那几个...
+12:11 varna: xxxxxxxxx: 没法说，贴一下你的主力、火炮、飞机状况看看吧……
+12:12 xxxxxxxxx: 主力等级排序?
+12:12 varna: 最高的4bb 4cv 4ca 4dd
+12:13 xxxxxxxxx: http://puu.sh/hD8I2/b7596dab58.png 装备
+12:13 Dove: Whatever, I'm not a machine.
+12:14 varna: 装备挺好的，能打
+12:14 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+12:14 Dove joined channel
+12:15 Dove: At least not yet
+12:15 Dove: So where is the god damn utf-8?
+12:15 Dove: Jesus Christ
+12:16 varna: xxxxxxxxx: 目前看来你水打和机动都能凑够装备，唯一的考虑就是主力等级了
+12:16 Dove: See you then
+12:16 xxxxxxxxx: http://puu.sh/hD8QL/f864458a43.jpg cv http://puu.sh/hD8S1/7efcc69b20.jpg bb
+12:16 Dove: I love you gays
+12:16 Dove quit:Client Quit
+12:16 xxxxxxxxx: 重巡和上次没啥变化
+12:17 varna: 夜战套你都有吧
+12:17 varna: 1灯2弹1侦
+12:17 varna: 另外有没有司令部
+12:18 xxxxxxxxx: 没有司令部
+12:18 varna: 大淀没有的话比较辛苦
+12:18 varna: 可能会劝退得比较厉害
+12:18 varna: 这个没办法，或者捞大淀或者刷漂亮的三层闪
+12:19 varna: 二队的配法我用了1ca2dd1cl2clt
+12:19 xxxxxxxxx: 比E5不用潜艇还容易劝退么?
+12:20 varna: 三条路的道中有三个Boss级（上路院长夜战，中路斩杀形态M姬，下路院长昼战）
+12:20 varna: 门神固定轮型主任，护航2cvl/2cv
+12:20 xxxxxxxxx: Clt的话北上75 大井77(提等级因为摔得狠)
+12:20 varna: clt必须有
+12:20 varna: 虽然这等级低了点不过没别的选择，直接用
+12:20 varna: 一队水打我用了1ca3bb2cvl, ca对空
+12:21 varna: 一队机动我用了2bb4cv
+12:21 varna: 制空情况在wikia能查到，我就犯懒了
+12:21 xxxxxxxxx: 那个容易大破?
+12:21 varna: 除了水打上路第一点是白送的之外，其他都有能力劝退
+12:21 xxxxxxxxx: 卧槽....
+12:22 varna: 你看看wikia上的敌编成就明白了……
+12:22 varna: 当然我个人的感觉是水打上路稍微容易点
+12:22 varna: 但如果用水打，请务必带一个低速战舰，namely 陆奥
+12:22 * xxxxxxxxx 看不懂游戏里的日文所以根本不知道哪个船是哪个...
+12:22 varna: 那么我稍微解释下吧
+12:23 xxxxxxxxx: 制空能找到
+12:23 varna: 水打上路：敌巡洋舰队（弱鸡）——院长+无CI的五舰夜战——门神（轮型主任，也就是航母栖姬）
+12:24 varna: 中路：M姬（斩杀形态，180搭载SB2C, 护航可能2cvl）——复纵撸爷（基本白送）——门神
+12:24 varna: 下路：1FCA2FCLT带头的夜战——单纵或者复纵院长（战舰栖姬）——门神
+12:24 xxxxxxxxx: 航母栖姬在哪个图上有么?
+12:24 varna: 曾经的MI E4头目，后来担任浑作战、特鲁克空袭和这次十一号作战的最终面门神
+12:25 varna: 6-1沟里也有
+12:25 xxxxxxxxx: 那我肯定没见过...
+12:25 varna: 搭载168
+12:25 xxxxxxxxx: 深海的船好厉害....
+12:25 varna: 航空机类型是F6F(?) TBM SB2C的新式阵容
+12:25 varna: 火力不用担心，一发大破大和级是没问题的，所以不少时候会出保护
+12:25 xxxxxxxxx: 猫头飞机之类的?
+12:25 varna: 就是那三个猫头
+12:26 varna: 原型neta基本是USS Yorktown
+12:26 varna: 中途岛战殁的初代约克城
+12:26 xxxxxxxxx: 美国人也到印度洋上了么....
+12:27 varna: 毕竟我们不能期望出现竞技神之类的弱鸡……
+12:28 varna: 另外提一点
+12:29 whatofor_1 joined channel
+12:29 varna: 攻略阵容全程空优就可以了，前哨战敌人是理事长+撸改+2*重巡捏级+2*爷爷
+12:29 varna: 斩杀道中不变，头目的一个捏级替换成主任
+12:29 varna: 2cvl带1彩云罚站可以空优
+12:30 varna: 推荐的尝试是水打上路和机动下路
+12:30 varna: 中路比较骇人，体感好也可以试试；不过M姬实在太猛，如果前哨战觉得击杀轻松可以一队二队各一潜艇T一下
+12:30 xxxxxxxxx: 那我试试看机动好了 听说水打有命中惩罚
+12:31 varna: 水打你可以用适重炮
+12:31 varna: 我的感觉是练度够了水打照打不误
+12:31 xxxxxxxxx: 迷彩跑终于有用了系列?
+12:31 varna: 试制356
+12:31 varna: 迷彩炮当然是要吃灰的
+12:31 xxxxxxxxx: 并没有那种东西
+12:31 varna: 棒各系列任务
+12:31 whatofor quit:Ping timeout: 240 seconds
+12:32 varna: 机动的话记得刷闪上道中支援
+12:32 xxxxxxxxx: 我得能拿到足够的船去开后面的任务...
+12:32 varna: 地图血量3300，理事长全程500血200甲
+12:32 varna: 打到500血就进斩杀阶段，所以前哨不必拿下完整的六个击杀
+12:34 xxxxxxxxx: 另外提督等级100勒
+12:34 xxxxxxxxx: 了
+12:34 xxxxxxxxx: 正式百无长
+12:35 xxxxxxxxx: 再出击几次E1
+12:35 xxxxxxxxx: 另外油只有33302了....
+12:36 varna: 够用了
+12:37 xxxxxxxxx: E1莫非特别不容易出大淀?
+12:38 varna: 不多的样子
+12:38 varna: 不过E6甲的难度下调很大一部分也是建立在前哨用司令部退避的情况
+12:38 varna: 前哨战只要能退避进就肯定有制空
+12:38 varna: 当然两次退避当我没说
+12:39 xxxxxxxxx: E1-5都被劝退过 且都出门被劝退过
+12:40 varna: 不行就刷闪
+12:40 varna: 给懒人的建议是53闪以上有回避buff
+12:41 xxxxxxxxx: 要刷肯定得刷85 不刷就等49疲劳
+12:41 varna: 毕竟24个三层闪……
+12:41 varna: 最后双支援我每队3闪就出门了，道中的山城还空着手出去
+12:42 varna: 忘带装备了
+12:42 xxxxxxxxx: 然而我E5就没刷....
+12:42 varna: E5不用刷
+12:42 varna: 如果不怕损管的话E5可以无闪虐杀
+12:42 varna: 但不是捞船阵容
+12:42 xxxxxxxxx: 老劝退后来连支援都不带  最后两血才带的支援
+12:42 * xxxxxxxxx 用了3bb
+12:44 varna: 我觉得就基佬这肝度，下次可以开荒
+12:45 xxxxxxxxx: 真的肝帝活动前都在练级
+12:45 xxxxxxxxx: 我活动前在偷懒或者2-3
+12:45 varna: 然而你还是太肝
+12:46 xxxxxxxxx: 觉得这次活动不拿勋章就亏了
+12:47 varna: 我倒觉得这次的勋章完全没什么含金量
+12:47 xxxxxxxxx: 换图纸的勋章
+12:48 varna: 有可能
+12:48 varna: 但无所谓
+12:48 xxxxxxxxx: 不是说甲鱼勋章就是普通勋章
+12:48 varna: 哦
+12:48 varna: 这次确实图纸缺口很大
+12:49 xxxxxxxxx: 按照刚开始活动的时候我得一路咸一个勋章都没有
+12:49 varna: 从冬到春一口气塞了四个要图纸的舰
+12:49 xxxxxxxxx: 然而打3-5的时候羊驼还说活动前不该缺勋章
+12:51 xxxxxxxxx: 存了那么久资源一个勋章都拿不到难以接受
+12:51 varna: 我没想到这么多，现在把2bb3cv都改了我就真没图了
+12:51 cleamoon_ quit:Ping timeout: 240 seconds
+12:51 varna: 我手头就5图2章……
+12:51 xxxxxxxxx: 毕竟你图多...
+12:51 varna: 这也太多了
+12:51 varna: 一个月一般人也就0.75图
+12:52 varna: 直接把我大建不出货的存货都烧光，可想而知……
+12:52 varna: 这估计是让收集癖的新玩家继续玩的节奏
+12:52 cleamoon_ joined channel
+12:57 varna: xxxxxxxxx: http://tieba.baidu.com/p/3745599947 另外这贴是周回主义blog的E6攻略
+12:58 varna: 这个攻略我只有一点不赞同：不要轮型，全程全力进攻
+12:59 lh_not_bot: 艹帝球滚一滚那个精品贴哪去了？ cqwrteur
+12:59 lh_not_bot: ---帝球滚一滚，妹子如春笋
+13:13 xxxxxxxxx: varna 这个攻略能拿出来这堆东西的人大概都不会看....
+13:15 sismvg: http://tieba.baidu.com/p/3743269641 美剧行尸走肉，饰演神父的演员被警方逮捕
+13:16 sismvg: 万众所归
+13:19 lhjkk quit:Quit: Leaving
+13:23 cleamoon_ quit:Ping timeout: 244 seconds
+13:25 cleamoon_ joined channel
+13:26 lh_not_bot: http://economy.gmw.cn/2015-05/06/content_15580893.htm
+13:29 sismvg: 国际空间站储备有足够的氧气、食品、水和其他生活必需品，可保证宇航员们两三个月的生活。目前国际空间站轨道高度约400公里，尚有储备燃料支撑，可以等到下次10月份货运飞船的到来。
+13:29 sismvg: ^某运送火箭发射失败，然后官方如是说
+13:31 sismvg: 只用MSDEF
+13:35 lh_not_bot: 实在要说有什么不好的影响，庞之浩指出，此次飞船坠落的最大损失就是当年苏联红军占领柏林，插在城堡上的一面红旗。为了纪念纪念卫国战争胜利70周年，俄罗斯将这面红旗放在了飞船上，这面相当于文物级的红旗就此消失了。
+13:35 lh_not_bot: @plough
+13:38 xxxxxxxxx: 一趟E1 望月如月睦月
+13:39 cleamoon_ quit:Ping timeout: 244 seconds
+13:40 cleamoon_ joined channel
+13:41 lh_not_bot: http://www.360doc.com/content/12/0628/08/385631_220890859.shtml   这黑的
+13:48 cleamoon_ quit:Ping timeout: 244 seconds
+13:49 cleamoon_ joined channel
+13:51 lhjkk joined channel
+13:54 sismvg: http://www.ithome.com/html/discovery/146036.htm
+13:54 sismvg: 现在还差个脑子
+13:54 cleamoon_ quit:Ping timeout: 244 seconds
+13:56 cleamoon_ joined channel
+13:56 lh_mouse: lhjkk, 捏捏
+13:56 lhjkk: lh_mouse 不给捏
+13:56 lhjkk: 夹住耗鼻子
+13:59 pocmon joined channel
+14:08 FrankHB joined channel
+14:19 lhjkk quit:Ping timeout: 256 seconds
+14:26 pocmon quit:Remote host closed the connection
+14:31 FrankHB quit:Remote host closed the connection
+14:31 FrankHB joined channel
+14:51 cleamoon_ quit:Ping timeout: 244 seconds
+14:52 cleamoon_ joined channel
+15:02 cleamoon_ quit:Ping timeout: 244 seconds
+15:03 cleamoon_ joined channel
+15:06 lh_not_bot:  configuration error:  couldn't check user.  Check your authn provider!  这什么鬼
+15:13 cleamoon_ quit:Ping timeout: 244 seconds
+15:14 cleamoon_ joined channel
+15:20 cleamoon_ quit:Ping timeout: 244 seconds
+15:26 cleamoon_ joined channel
+15:37 lhjkk joined channel
+15:38 cleamoon_ quit:Ping timeout: 244 seconds
+15:39 cleamoon_ joined channel
+16:00 cleamoon_ quit:Ping timeout: 244 seconds
+16:01 izmntuk joined channel
+16:02 cleamoon_ joined channel
+16:07 lhjkkk joined channel
+16:07 lhjkk quit:Remote host closed the connection
+16:09 lhjkkkk joined channel
+16:11 cleamoon_ quit:Ping timeout: 244 seconds
+16:11 lhjkkk quit:Remote host closed the connection
+16:12 cleamoon_ joined channel
+16:19 cleamoon_ quit:Ping timeout: 244 seconds
+16:21 cleamoon_ joined channel
+16:25 izmntuk quit:Quit: leaving
+16:27 FrankHB quit:Remote host closed the connection
+16:27 FrankHB joined channel
+16:29 cleamoon_ quit:Ping timeout: 244 seconds
+16:29 FrankHB quit:Read error: Connection reset by peer
+16:30 FrankHB joined channel
+16:31 cleamoon_ joined channel
+16:38 izmntuk joined channel
+16:40 izmntuk quit:Client Quit
+16:52 cleamoon_ quit:Ping timeout: 244 seconds
+16:54 cleamoon_ joined channel
+17:00 varna quit:*.net *.split
+17:00 hoxily quit:*.net *.split
+17:00 sismvg quit:*.net *.split
+17:00 JQK quit:*.net *.split
+17:03 varna joined channel
+17:03 hoxily joined channel
+17:03 sismvg joined channel
+17:03 JQK joined channel
+17:03 izmntuk joined channel
+17:04 cleamoon_ quit:Ping timeout: 244 seconds
+17:06 cleamoon_ joined channel
+17:08 lhjkkk joined channel
+17:08 lhjkkkk quit:Remote host closed the connection
+17:14 cleamoon_ quit:Ping timeout: 244 seconds
+17:15 cleamoon_ joined channel
+17:22 cleamoon_ quit:Ping timeout: 244 seconds
+17:24 cleamoon_ joined channel
+17:25 lh_mouse quit:Read error: Connection timed out
+17:26 lh_mouse joined channel
+17:27 xeirrr joined channel
+17:27 xeirrr: varna: 爆
+17:28 xeirrr: varna: 羊驼认识唐风吗？
+17:28 xeirrr: perl大神
+17:28 xeirrr: varna: perl大神唐凤在plurk上面写了married: http://www.plurk.com/audreyt  问题是她嫁(娶)的是男的还是女的
+17:29 xeirrr: varna: "Relationship: Married"
+17:29 varna: 宗汉酱是变性的啊
+17:29 lhjkkk: 宗汉酱啊！
+17:30 varna: 肯定嫁男人
+17:30 varna: 为何lhj如此兴奋，真可怕
+17:30 xeirrr: varna: 你确定？
+17:31 varna: 我不确定
+17:31 xeirrr: “肯定嫁男人”？
+17:31 varna: 说肯定二字就是猜测了
+17:31 cleamoon_ quit:Ping timeout: 244 seconds
+17:31 xeirrr: 哦哦
+17:31 varna: 不过我觉得你现在去告白还来得及
+17:32 xeirrr: 她大我太多
+17:33 varna: 果然你短
+17:33 cleamoon_ joined channel
+17:33 xeirrr: bdsm varna 
+17:34 xxxxxxxxx: 帝吧赛马?
+17:34 varna: xxxxxxxxx: 你看你顺序都不对
+17:35 xxxxxxxxx: M点的那些飞姬太可怕了 
+17:35 FrankHB: 别的什么 不打算买 不懂什么 不到什么 白带司马 ……
+17:35 FrankHB: 绷带死妈 ……
+17:36 varna: 不懂什么 busman 表达式没 不打算没 不都是么
+17:36 xxxxxxxxx: 变电所马
+17:36 varna: 恥球的飞妈大定理……
+17:37 lhjkkk quit:Remote host closed the connection
+17:38 cleamoon_ quit:Ping timeout: 244 seconds
+17:39 xxxxxxxxx: varna 夜战点发动夜战套感觉敌人也变屌了
+17:39 varna: 你可以把灯撤了
+17:39 xxxxxxxxx: 设定就是这样的么...
+17:39 varna: 设定不是，但是灯好歹有一点嘲讽，不确定旗舰是否完全可以抵消
+17:40 cleamoon_ joined channel
+17:41 xxxxxxxxx: 进一次boss 7个桶....
+17:42 xxxxxxxxx: 这才一血 斩杀大概全家吃桶
+17:43 varna: 这不拿下一血了么，挺好的
+17:46 xxxxxxxxx: varna 我已经跑了四次花了3000油才弄到1血...
+17:47 xxxxxxxxx: 感觉资源会不够用
+17:49 varna: 机动？
+17:49 xxxxxxxxx: 机动...
+17:50 xxxxxxxxx: 不过主要是飞姬太狠了
+17:50 varna: 机动下路的夜战太狠
+17:51 xxxxxxxxx: 一股猫了的味道....
+17:53 varna: 一股猫尿的味道
+17:57 cleamoon_ quit:Ping timeout: 244 seconds
+17:59 cleamoon_ joined channel
+18:02 xxxxxxxxx: http://tieba.baidu.com/p/3744419060 猫尿的味道是这个帖子里散发出来的
+18:06 Plough joined channel
+18:06 varna: 啊，肛旗
+18:06 varna: 肛旗肛旗肛
+18:06 Plough: varna: 你先把肛门闭上
+18:07 varna: 那你张开吧
+18:07 varna: 正好我进去一趟
+18:07 Plough: 你闭上肛门的目的是让我拿钢管再捅开
+18:07 varna: 今天更新了一下文
+18:07 Plough: 跟我的月工没有关系的
+18:08 varna: 然后听中国军魂练老李
+18:08 Plough: 唔？我看看
+18:08 Plough: ……
+18:08 Plough: 我准备下笔了
+18:08 varna: 另外BS: Midway里的零战简直太赞了
+18:08 varna: 横着竖着斜着倒着都能飞
+18:08 Plough: 2333
+18:08 varna: 全面碾压敌攻击队
+18:08 varna: 这才是战斗机啊
+18:09 Plough: BSP里根本不用零战碾压
+18:09 Plough: 你随便开条小和过去就可以了
+18:09 varna: 震电手感如何
+18:09 xxxxxxxxx: 战斗机明明是一起飞立刻就被打下来才对
+18:09 Plough: 震电速度不错
+18:09 varna: 有速度就好
+18:09 Plough: 不过我一直不擅长狗斗，所以手感什么的评价不出来……
+18:10 varna: 我那是逗狗不是狗斗……
+18:10 Plough: 23333
+18:10 varna: 毕竟没有用零战跟F4F交手的时候
+18:10 varna: 飞机挑战2是图拉基岛，4阶段
+18:11 varna: 先来9波27机深海堡垒重爆
+18:11 varna: 护卫机场
+18:11 varna: 然后是二十波多点的三机编队SBD/TBF, 护卫2驱逐
+18:11 Plough: 叽风叽风叽
+18:11 varna: 之后是十多波三机编队SBD, 护卫船厂
+18:12 varna: 最后敌人会派出两个红补给
+18:12 varna: 但是全程没有直掩机
+18:12 Plough: ……
+18:12 Plough: @code_new
+18:12 cleamoon_ quit:Ping timeout: 244 seconds
+18:12 Plough: 虽说他是没飞机能放
+18:12 varna: 不过深海堡垒重爆的火力足以扫掉零战
+18:13 varna: 那东西一尻都是枪
+18:13 Plough: 23333
+18:13 xxxxxxxxx: 看到红旗念咒然后我表示E5的时候掉了稀有驱逐
+18:13 Plough: 矶风么
+18:13 Plough: 看我打死你这欧洲人
+18:13 xxxxxxxxx: +
+18:13 varna: 频道矶风普及了啊
+18:13 varna: 你们这些欧皇
+18:13 xeirrr quit:Quit: Leaving
+18:14 Plough: varna: 来，我们组个欧洲打击部队干死巨基
+18:14 varna: 我是非洲人
+18:14 cleamoon_ joined channel
+18:14 Plough: 你在地中海
+18:14 varna: 然而你看我的肤色，跟我的心一样都黑透了
+18:14 Plough: 然而我早已看穿了你黑色迷彩下的雪白肌肤
+18:15 varna: 那是升华的肝块
+18:15 xxxxxxxxx: 然而除了改造送的装备并没有什么卵用系列
+18:15 Plough: 你的肝还是完整的
+18:15 Plough: 拆拆拆
+18:15 varna: 矶风就是为了可爱才捞的
+18:15 varna: 那些装备没什么用处
+18:15 xxxxxxxxx: 等我改完了就喂掉
+18:15 varna: 卧槽
+18:15 Plough: 果然欧皇
+18:15 xxxxxxxxx: varna毕竟土豪
+18:15 Plough: 下次再捞一个
+18:16 varna: 全A王难得长了回胸，就这么喂了
+18:16 Plough: 另外矶风难道不是拿来当支援旗舰的么
+18:16 Plough: 组个黑鬼打击部队出去，一帮人正笑呢
+18:16 varna: 川澄四个配音担当里三个有胸
+18:16 Plough: 支援一来，全瞎
+18:17 varna: 肛旗飘飘军号响 人已出翔雷鸣电闪
+18:17 cleamoon joined channel
+18:17 varna: 老李四十了，再练十级就好
+18:17 xxxxxxxxx: 雷鸣电闪...
+18:17 varna: 奥义是这四个：破晓作响爆雷震电
+18:18 xxxxxxxxx: 镇守府里炸开了锅
+18:20 Plough_ joined channel
+18:20 Plough: 如果只是以消耗为饵诱敌深入的话，我同样怀嚼疑究竟谁能耗得过谁嚼嚼。
+18:20 Guest57778: 如果只是以消耗为饵诱敌深入的话，我同样怀嚼疑究竟谁能耗得过谁嚼嚼。
+18:20 Plough: 我整个人都嚼嚼了
+18:20 Guest57778: 我整个人都嚼嚼了
+18:20 Guest57778 quit:Quit: Reconnecting
+18:21 Plough: 噗
+18:21 Plough: 这时候发过来了……
+18:21 xxxxxxxxx: 蓝胖子红旗
+18:21 varna: 出个A杖
+18:23 Plough: 下面是主任么……
+18:23 Plough: 大E？
+18:23 varna: 那个舰队的编号其实很奇特
+18:24 varna: 尼米兹带队的时候是第七舰队
+18:24 Plough: 啊，是喔酱？
+18:24 varna: 亨利沃克的时候是第五舰队
+18:24 Plough: ……
+18:24 varna: 日本情报部门最后居然还搞明白了这似乎是一个队伍
+18:24 varna: 而天皇只知道萨拉托加被轰沉六次
+18:24 Plough: 233333
+18:27 varna: 今天的3补给出了妙高
+18:27 varna: 稀有度正在上升，明天就是金底
+18:27 Plough: @金刚
+18:27 xxxxxxxxx: 金刚
+18:27 varna: 今天出过金刚了
+18:27 Plough: 伊势
+18:28 varna: 今日的3-2就差南风叔没出过
+18:32 varna: 练级麻烦死了……四十以后升一级要打四盘
+18:33 Plough: 怎么今天贴吧里这么多哭E6难的……
+18:33 varna: 是时候了
+18:33 varna: 先晒后婊的节奏感
+18:33 varna: 我日
+18:34 varna: 周转不过来了
+18:34 Plough: ……远征队补给不了？
+18:34 varna: 潜艇修不过来了
+18:34 Plough: 另外我现在怀疑kancolle-db.net上的掉落是三个难度一起统计的
+18:34 xxxxxxxxx: 快去捞马战神
+18:34 Plough: 不然为何矶风率只有1.
+18:35 Plough: 不然为何矶风率只有1.72%
+18:35 Plough: ……涨到1.75了
+18:36 xxxxxxxxx: 有差别么....
+18:36 Plough: 有
+18:36 Plough: 平均你每捞一万次都能多掉三个矶风
+18:36 Plough: 12:02 Dove joined channel
+18:36 Plough: 12:02 Dove: Now, we are one.
+18:36 Plough: 这是T2么……
+18:37 varna: 认为是
+18:37 xxxxxxxxx: 我能的话 先捞1w次大腚
+18:37 Plough: 怎么开始说英文了
+18:37 varna: 他编码跪了
+18:37 Plough: 而且台词还一股Grandmapocalypse既视感……
+18:38 varna: 台词是阿尔萨斯和耐奥祖合体之后的
+18:38 Plough: ……
+18:38 varna: war3th亡灵战役结局动画
+18:38 Plough: 终于不说什么你上他妹子了么……
+18:39 xxxxxxxxx: 我觉得只是编码跪了没法说
+18:39 Plough: 也是
+18:40 varna: http://tieba.baidu.com/p/3746490682
+18:40 Plough: 2333333
+18:40 varna: 下面那块黑板有点像6-2啊
+18:41 xxxxxxxxx: 老师表情
+18:41 Plough: 是有点
+18:41 varna: 老师神似局座
+18:42 izmntuk quit:Quit: reboot
+18:42 xxxxxxxxx: "你捞吧....."
+18:50 cleamoon_: E5夜战只有2轻巡1驱逐呀... 带潜艇反而是累赘
+18:51 varna: E5夜战为何会冒出直卫队
+18:51 cleamoon_: 另外，E3 wikia上写的easy+的19和本子风我都出了.....
+18:51 varna: E5的水面打击力量应该只有重巡和/或战舰
+18:51 cleamoon_: I点对吧
+18:51 varna: 哦，你说敌人啊
+18:51 cleamoon_: 是呀...
+18:51 varna: 我之前就是说这个，丙等没必要潜艇
+18:52 varna: 敌人不CI
+18:52 cleamoon_: soga
+18:52 cleamoon_: 19有了，那么下一个就是511
+18:52 varna: E6拼脸吧
+18:52 varna: 头目有
+18:52 cleamoon_: 还有几天，大概行
+18:53 cleamoon_: 等活动结束大建401
+18:54 cleamoon_: 我擦，E5 boss略强...
+18:54 varna: 别怂，你有三式弹
+18:54 xxxxxxxxx: 就算是401 也就是个当RBQ的命
+18:54 cleamoon_: 混乱是什么鬼...
+18:54 varna: 小破
+18:54 cleamoon_: 差24血斩.....
+18:54 varna: 陆基的三个破损评语不一样
+18:55 cleamoon_: 得到白露...
+18:55 Plough: 没S掉不了啥好东西吧
+18:55 cleamoon_: 亏大了
+18:55 Plough: 倒是有那珂酱
+18:55 xxxxxxxxx: S掉金刚 雾岛 咖喱
+18:56 Plough: 你都有矶风了
+18:56 cleamoon_: 铃谷不带飞机了，换主炮
+18:56 cleamoon_: 我去
+18:56 cleamoon_: 基王欧皇
+18:56 cleamoon_: 北上无伤？我去，你叛变了吧
+18:56 Plough: 频我不欧
+18:56 xxxxxxxxx: 除了那个E5掉的全是这些...
+18:57 varna: 频我不欧
+18:58 cleamoon_: 频我不欧
+18:59 cleamoon_: 我E3捞到了得到了神圣庇护的6只那智...
+19:00 cleamoon_: 我擦，最近总有，近代化改造，写着+5最后+3
+19:00 xxxxxxxxx: ^真欧洲人
+19:01 cleamoon_: +1的都变成了不加...
+19:04 xxxxxxxxx: http://news.163.com/15/0505/16/AOS84IM8000146BE.html?bdsj
+19:04 xxxxxxxxx: 那么问题就来了
+19:05 varna: 蓝翔
+19:21 xiaoxi joined channel
+19:25 Plough: 噗
+19:25 Plough: 啊，看错了
+19:27 Plough: http://tieba.baidu.com/p/3745192367 ……真没耐心
+19:28 Plough: http://tieba.baidu.com/p/3743504508 ……
+19:28 xxxxxxxxx: 作死灯
+19:29 xxxxxxxxx: 一开对面重巡CI了
+19:30 lolisa: CI？
+19:33 geordi joined channel
+19:47 LittleKey joined channel
+20:09 hope1 joined channel
+20:09 xiaoxi quit:Quit: 离开
+20:10 hope1: 胸牌滚出
+20:10 hope1: 有没有人现在在北京的？
+20:11 Plough: 我在青岛
+20:11 cleamoon_ quit:Remote host closed the connection
+20:12 cleamoon_ joined channel
+20:12 hope1: @ iyzsong
+20:13 xxxxxxxxx: http://tieba.baidu.com/p/3746613565 <- 肝帝
+20:15 sismvg: http://www.ithome.com/html/it/146149.htm
+20:25 hope1 left channel:"AndroIRC"
+20:25 xxxxxxxxx: 联装熊野
+20:25 hope1 joined channel
+20:26 Plough: 今晚我干脆把罗马改了得了
+20:27 Plough: 5-4走起
+20:29 hope1_ joined channel
+20:29 hope1 quit:Read error: Connection reset by peer
+20:33 iyzsong: hope1_: ^o^
+20:36 xxxxxxxxx: 吹雪无数次被重巡大破 这一切都是为了什么....
+20:40 cleamoon quit:Ping timeout: 244 seconds
+20:43 hope1_: a
+20:47 Plough: 我习惯性地点到了E5上……
+20:48 iyzsong: hope1_: 什么事?
+20:50 xxxxxxxxx quit:Quit: Leaving...
+20:51 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=51993cf5a5ec08fa260013af69ef3d4d/bbf98282b9014a905099def7ac773912b11beec0.jpg
+20:51 sismvg: 腾讯的翻译...
+20:59 hope1_ quit:Remote host closed the connection
+20:59 hope1 joined channel
+21:02 FrankHB quit:Remote host closed the connection
+21:03 hope1 quit:Remote host closed the connection
+21:03 lh_mouse quit:Read error: Connection reset by peer
+21:03 FrankHB joined channel
+21:05 hope1 joined channel
+21:06 hope1: iyzsong, 我现在在北京，明天应该没什么安排，来面基不
+21:06 iyzsong: - -b
+21:07 iyzsong: 你要带我玩嘛?
+21:10 hope1: 我第一次来北京啊
+21:10 iyzsong: hope1: 我也不熟..  那我们随便转?
+21:11 hope1: 行啊
+21:12 iyzsong: = =b  我一直不晓得干啥。。
+21:14 iyzsong: 感觉我要坑你啊..
+21:16 * lolisa 善意的提醒iyzsong海棠的声音很受（大雾
+21:16 iyzsong: o.o
+21:16 iyzsong: hope1: 去哪啊??
+21:17 hope1: 反正不会有这几天窝在人大坑……
+21:18 hope1: 唔，不知道啊…… 反正随便转转咯
+21:19 * iyzsong 已经疯了  @_@
+21:21 hope1: 我现在就跟着学校的人在外面，他们都是现查的地方……
+21:21 sismvg: eixt
+21:21 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150415140819]
+21:22 hope1: 于是你在哪？怎么找你
+21:23 iyzsong: 我在昌平回龙观，约个地铁站(我从龙泽地铁站走..)?
+21:23 Plough: 罗马一改
+21:24 varna: 你们又搞基！
+21:25 iyzsong: hope1: 你说个地方，我来吧
+21:25 iyzsong: varna: = =
+21:26 hope1: 我不知道这边的地铁站，得查一下
+21:26 hope1: 我住在人民大学站边上
+21:27 varna: 3P Univ...
+21:27 hope1: 这届CTSC是人大承办的……
+21:28 iyzsong: hope1: 行，那我明天上午来?
+21:28 hoxily` joined channel
+21:29 Plough: 噗
+21:29 Plough: 今天出了两个五十铃牌
+21:29 hope1: 或许我来比较好？反正都行，具体什么时间？
+21:30 cleamoon joined channel
+21:30 hoxily quit:Ping timeout: 256 seconds
+21:30 cleamoon: 推荐本书：李锐口述往事
+21:30 iyzsong: hope1: 9:00? 我吃完早饭就去
+21:30 Plough: 啊，北上大人Lv97了
+21:31 cleamoon: 海棠的新后宫？
+21:31 varna: 中缀式语法还是难受
+21:31 varna: 用起来舒服，写语法分析不那么舒服，没法无脑写……
+21:31 Plough: 你准备弄lisp了？
+21:31 varna: 不
+21:31 varna: 我还是用中缀式
+21:32 varna: 此处不可退让
+21:32 Plough: 勇者
+21:32 Plough: 我坚定地不点那个改造按钮
+21:32 varna: 前缀式就没有multimethod了
+21:32 Plough: 绝不叛变U派
+21:32 Plough: multimethod是？
+21:33 varna: 是个糖
+21:33 Plough: 啊，查到了
+21:33 varna: 实际上没那么复杂
+21:33 varna: 一个方法是对一个函数第一运算数的bind之后所得的结果
+21:33 varna: 就这样
+21:33 hope1: 等下，APIO似乎是明天上午报道…… 待我问一下
+21:33 cleamoon: 我觉得中缀方便的地方基本都是算式吧
+21:34 varna: 也就是object.method( blah )是method(object, blah)的糖
+21:34 Plough: Soga
+21:34 varna: 中缀的语法有很多可以耍的地方
+21:34 varna: 前缀反正只有一种语法：f o1 o2 ... on
+21:34 varna: 单 纵 阵
+21:34 Plough: 2333
+21:35 cleamoon: 我倒没觉得上面那个糖有多大意义...
+21:35 hope1: 哦，已经有住宿的似乎可以不去
+21:35 Plough: 我有401了！
+21:35 Plough: 我有401了！
+21:35 Plough: 3359/2312/9079/14261+401
+21:35 varna: 23333
+21:35 varna: cleamoon: 看着好玩，而且可以消去原型继承
+21:35 cleamoon: ...
+21:36 varna: 实际上它的好用更多时候需要一个类型系统
+21:36 cleamoon: 我还是觉得除了算式，没什么中缀好用的地方
+21:36 varna: 这类型系统里对is-a关系形成一个格
+21:36 varna: 那么value.function( blah )在blah合式的情况下，对value构成至少是参数化的多态
+21:37 iyzsong: hope1: 哦，把电话发给我，我明天到了给你打..
+21:37 varna: 而这个参数化多态可以是存在量词的
+21:37 cleamoon: 于是呢
+21:37 varna: 没了，看着好玩而已
+21:38 varna: 而且最重要的是Perl里没有这东西
+21:38 cleamoon: ....
+21:39 varna: 当然其实刚才我斗争了一小阵子
+21:39 varna: 前缀式的语法分析真的超好写……
+21:39 cleamoon: 就是就是
+21:39 hope1 quit:Read error: Connection reset by peer
+21:40 hope1 joined channel
+21:42 varna: 卧槽
+21:42 Plough: http://ww3.sinaimg.cn/large/40282fc7gw1eruty71jerj20fj1r8gul.jpg
+21:42 varna: 几个月不见的传统桥段
+21:42 varna: 瑞凤干得好
+21:42 Plough: ……抢MVP？
+21:42 varna: +
+21:43 cleamoon: 拜查理周刊和其它恐怖袭击事件所赐，法国议会以438票对86票批准了法案“Intelligence Service Bill”，本质上是授权情报机构对法国境内的通信进行大规模的监控。法国情报机构现在有权拦截和监听任何数字通信，其中包括电话、电子邮件和社交媒体。为了实行监控，法案要求法国托管商和ISP安装“黑盒子”去保留客户的所有数字
+21:43 cleamoon: 通讯。法案还要求建立一个委员会去监管情报技术，委员会由6名法官、3名国民议会代表和3名上议院参议员和1名技术专家组成。上个月，托管服务商威胁如果议会批准法案他们将离开法国。
+21:44 iyzsong: hope1: ok, 那明天见 (我应该不会忘..)
+21:44 cleamoon: 在奇虎360之后，三大评测机构AV-Comparatives、AV-Test Institute和Virus Bulletin发表声明以作弊为由撤销了腾讯电脑管家的评测成绩。在宣布撤销360评测成绩时，评测机构曾指出奇虎的中国竞争对手百度和腾讯也都有为了提高评分而优化的行为。他们对此展开了深入调查，发现腾讯电脑管家的最近版本都包含了这些优化，而这些优化对于
+21:44 cleamoon: 普通用户几乎没有任何价值，反而会降低防护水平。原因是腾讯建立了一个白名单，将测试使用的安装程序和软件排除在扫描范围之内，每次AV-Test改变程序腾讯都会更新名单。不扫描测试程序是为了显得腾讯电脑管家运行流畅，但如果恶意程序使用了白名单中的名字，那么它们将不会被安全软件探测出。为了更好的评测得分，
+21:44 cleamoon: 腾讯将用户置于风险之中。
+21:49 hope1: ok
+21:49 cleamoon: 话说，那个泡芙到底是什么
+21:51 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/kk/23_155327.jpg
+21:51 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/kk/24_155322.jpg
+21:52 varna: 岸炮、防空炮、机场跑道/机库、鱼雷艇用小码头的综合
+21:54 cleamoon: 综合成了泡芙呀...
+21:55 cleamoon: 对了，我看看活动掉不掉明石
+21:55 varna: 不掉
+21:55 varna: 目前没报告吧
+21:55 cleamoon: ....
+21:55 Plough: 说起来我突然想到一件事
+21:55 Plough: 深海的雷达难不成是Mk3->Mk8->Mk13么……
+21:56 varna: 深海水上电探这个东西我已经不知道该是什么了
+21:57 Xilzzerts quit:Ping timeout: 276 seconds
+22:03 Plough: 我猜是Mk13
+22:03 Plough: 另外32居然有参数留下来？
+22:04 varna: 噗
+22:04 Plough: 波长10km，功率2kW
+22:04 Plough: 造了60个
+22:05 Plough: 这是combinedfleet.com上的数据
+22:05 varna: 60个……
+22:05 Plough: 1944年9月研制完成
+22:07 varna: 卧槽我在话题帖奶出8h
+22:07 Plough: ……
+22:07 Plough: 欧rz
+22:07 varna: 武藏……
+22:07 lh_cat joined channel
+22:08 Plough: 欧洲人取我性命
+22:09 code_new joined channel
+22:09 varna: 欧皇code_new来了
+22:09 varna: 吓得我58大破
+22:09 code_new: 噗噗噗
+22:09 whocares_2 quit:Ping timeout: 265 seconds
+22:09 code_new: 这就对了
+22:09 lh_cat: 口苗
+22:10 code_new: 酋长的光芒下你们休想捞船赌船
+22:10 Plough: 欧皇code_new来了
+22:11 Plough: 吓得我吃了矶风的料理
+22:11 lh_cat: 欧皇code_new来了
+22:11 code_new: 卧槽
+22:11 code_new: 你们这群欧皇
+22:12 varna: 我看看今晚表演下云龙5-2
+22:12 varna: 没几级要改造了
+22:13 varna: 还有不到2k经验，折合两场
+22:13 code_new: 今晚阳光明媚，我被晒得更黑了
+22:14 cleamoon: 尔等欧皇赶紧退散
+22:14 Plough: http://ww4.sinaimg.cn/mw690/6487c5cagw1errfd91jjnj20dc0et74z.jpg 春E6实录
+22:14 varna: 你们这些欧洲人啊
+22:14 varna: 23333
+22:14 code_new: 23333
+22:15 Plough: 虽说我觉得做这图的人可以直接放弃夏活了……
+22:15 varna: 总之不可慢心
+22:15 varna: 浑作战是中规模，特鲁克也是
+22:16 varna: 较大型是较大型更大的大型
+22:16 varna: 这是血泪的教训
+22:16 Plough: 23333
+22:18 varna: 云龙50
+22:18 varna: 烧图改修准备出击
+22:19 varna: 噗，1k弹750钢，比大凤贵……
+22:19 varna: 不过慧601很赞啊
+22:20 varna: 火力看着也不错，可以打支援（笑）
+22:20 cleamoon: http://www.bilibili.com/video/av1970123/
+22:21 varna: 天山601这个有点尴尬
+22:21 code_new: 话说天城你们都练了吗
+22:21 varna: 没练，这几天收拾出来
+22:22 varna: 我看看5-2除了2cv1cvl之外的要求
+22:22 cleamoon: 天城41级
+22:22 code_new: 天城貌似只能当花瓶= =
+22:22 whocares_2 joined channel
+22:22 varna: 现在天城35葛城34
+22:22 varna: 云龙级支援不错
+22:22 varna: 火力很好
+22:22 code_new: 哦哦
+22:22 varna: 还可以打二线
+22:22 varna: 当个隼鹰用
+22:23 varna: 当然隼鹰是一线
+22:23 varna: 啊只有2cv1cvl
+22:23 varna: 干
+22:23 code_new: 锁船多的时候倒是可以派上用场
+22:23 varna: 准备战力当然是要对付锁船的
+22:24 cleamoon: E5全是驻磨
+22:27 varna: 哈哈哈哈哈哈哈哈珊瑚海的伙计们我回来了
+22:27 code_new: ……发生了什么
+22:28 varna: 601空5-2出击任务
+22:28 code_new: ……
+22:28 Plough: http://picpaste.com/1BCVXgaV.jpg P了张图
+22:28 varna: 2333333
+22:29 varna: 在九个月之后我终于回来拿烈601和扳手了
+22:29 code_new: 话说秋津洲是什么时候的船……
+22:29 varna: E6
+22:29 varna: 搭载二式大艇一机
+22:29 varna: 因为大艇太大了所以带不了别的
+22:29 code_new: 这次活动E6的奖励吗？
+22:29 varna: +
+22:29 code_new: 好吧……从wiki上突然看到了
+22:30 cleamoon: 23333
+22:30 cleamoon: 来，欧皇，一晚上通活动
+22:30 Plough: 有个消息
+22:30 Plough: 罗马大建预订，5H
+22:30 varna: 这倒是听说了
+22:30 cleamoon: ...
+22:30 Plough: 预定*
+22:30 varna: 但我只花了三四万资源就捞出罗马
+22:30 Plough: 我看看活动那天我留下来的数据
+22:31 cleamoon: 我不要
+22:31 varna: 这也就是大建五六发的量
+22:31 cleamoon: 到时候他们再弄个罗马专用公式，不出大武的，基本就是坑人了
+22:31 code_new: 我能看到5h就很高兴了……就算是肉奥
+22:32 cleamoon_ quit:Ping timeout: 256 seconds
+22:32 varna: 等等
+22:32 varna: 这话的意思是不是活动前我得召唤BSM
+22:32 varna: 不然会出罗马二号机……
+22:32 cleamoon: 噗
+22:32 lh_cat: 新的 https://usercontent.irccloud-cdn.com/file/71cxHZ8J/1430922576.JPG
+22:32 varna: 当然这是幻想
+22:32 varna: lh_cat: 看着不错啊
+22:33 cleamoon_ joined channel
+22:33 Plough: 然而为何拆包能拆出进大建来……
+22:33 varna: 5-2双姬
+22:33 Plough: 如果是按造建造时间的话，Littorio的建造时间也是五小时
+22:33 varna: 为何我当初会觉得这个阵容难打
+22:33 Plough: 因为你当初还是个鶸……
+22:34 Plough: 而现在是dalao
+22:34 varna: 新编二航我做了三四次……
+22:34 lh_mouse joined channel
+22:34 varna: 收拾了
+22:34 varna: 回去拆列噗
+22:34 Plough: Orz
+22:34 varna: 掉落差一点就是三隈了
+22:34 varna: 就差四十五度
+22:34 Plough: ……毛嘎米？
+22:35 varna: +
+22:35 varna: 然而我说个笑话
+22:35 varna: 加贺桑满血出去的
+22:35 varna: 回来小破了
+22:35 Plough: 233333
+22:35 Plough: 记得之前那张图么
+22:35 varna: 一航战强行荣耀
+22:35 Plough: “他们火力很稀疏”
+22:35 varna: 只有几个泡芙
+22:36 Plough: 明天回来我打算把婚舰出击收拾了
+22:36 Plough: 先碎叫
+22:37 Plough: 诸君武运
+22:37 Plough: 不对，是睡觉
+22:37 Plough quit:Quit: 睡觉
+22:37 varna: 还好，拆对了
+22:37 varna: 居然黑觉酱
+22:37 code_new: 不是操心吗，怎么又睡觉了
+22:38 cleamoon: 下了几个觉酱本子，基本都是读别人思想然后被玩坏了
+22:39 varna: 总之5-2的三隈仍然没有
+22:39 cleamoon: 我还没有三隈
+22:39 code_new: 你需要在晚10点之前捞船
+22:40 code_new: 因为那时候我还没来
+22:40 varna: 我是非洲人，捞不出船是正常的
+22:40 cleamoon: 哈哈哈，改造替代补给+修理大法好
+22:40 code_new: 不，我们非洲不欢迎欧洲细作
+22:40 varna: 你们出货都比我早
+22:41 cleamoon: 伊势get daze
+22:41 code_new: 欧洲人都是爆发型的
+22:41 varna: 诸君有大凤的时候，我还在迷糊着给加贺桑上飞机呢
+22:41 varna: 再过两周我就入坑一周年了……
+22:41 cleamoon: 我去，雾岛改造要太多
+22:41 code_new: 然而后来我就只出了武藏……
+22:41 varna: 期间我脸黑的程度足以劝退三个师的萌豚
+22:41 cleamoon: 探照灯是什么鬼...
+22:42 varna: 加夜战buff和一个嘲讽debuff, 旗舰带的话嘲讽会少
+22:43 code_new: 照明弹的话只有川内身上有吗
+22:44 varna: 绫波也有一个
+22:44 code_new: 哦哦
+22:44 varna: 保证发动率需要的最低数目是1灯2弹1侦
+22:44 varna: 由四舰分别带
+22:46 code_new: 一般倒是只带一个照明弹
+22:46 varna: 当然如果格子足够，可以1舰带三种不同的装备
+22:46 varna: 比如蜜瓜或者大淀
+22:46 varna: 照明弹尽量带两个，基本都能发动
+22:46 varna: 灯和照明弹只要多于1hp就有发动率
+22:46 cleamoon: 欧提们在讨论我没有见过的装备的使用方法
+22:47 varna: 这些装备很容易凑
+22:47 code_new: 然后并没有练绫波
+22:47 varna: 川内送夜战三件，绫波有第二个照明弹
+22:47 varna: 探照灯太多了
+22:48 code_new: 探照灯是比较多
+22:51 varna: 先回去了，诸君武运
+22:51 varna quit:Quit: leaving
+23:06 hope1_ joined channel
+23:06 hope1 quit:Read error: Connection reset by peer
+23:08 hope1_ quit:Read error: Connection reset by peer
+23:12 lhanjian joined channel
+23:16 hope1_ joined channel
+23:17 lolisa quit:Quit: Leaving
+23:33 hope1_ quit:Read error: Connection reset by peer
+23:33 hope1_ joined channel
+23:52 JQK quit:Ping timeout: 256 seconds

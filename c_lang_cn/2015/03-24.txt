@@ -1,0 +1,771 @@
+00:00 Stevearzh joined channel
+00:00 Stevearzh quit:Changing host
+00:00 Stevearzh joined channel
+00:00 Stevearzh: TTTTTest
+00:00 Stevearzh: TTTTTest
+00:00 Stevearzh: RRRRR
+00:01 Stevearzh: 4,51234567
+00:01 Stevearzh: 4,5 1234567
+00:17 lh_mouse: 今天看了一眼 mozilla 的 js 引擎源码   狗眼一下就瞎了
+00:18 xxxxxxxx: 看到了啥?
+00:19 lh_mouse: 满地 裸指针
+00:26 cleamoon__: ……
+00:26 lh_mouse: http://www.ibm.com/developerworks/cn/linux/shell/js/js_engine/
+00:27 lh_mouse: 看  程序样例  
+00:27 lh_mouse: 这尼玛 也叫结构清晰？？
+00:27 cleamoon__: 2333
+00:28 lh_mouse: 满地 ***** * NMB 啊
+00:29 cleamoon__: c嘛，正常
+00:31 Stevearzh quit:Quit: Quit.
+00:32 Stevearzh joined channel
+00:33 lhanjian: 在各类针对主流浏览器FF/Chrome/Safari的攻击比赛中，Firefox的奖金是最低的，因为代码漏洞最多……
+00:33 cleamoon__: 不用ff用什么
+00:35 lhanjian: cleamoon__, ?
+00:35 lh_mouse: js 滚粗就是
+00:35 lhanjian: Chromium?
+00:36 lh_mouse: js 这种遗毒是怎么霍霍祖国的花朵的
+00:36 lhanjian: js滚粗不太可能，现在正吹的天花乱坠呢
+00:36 lh_mouse: 所以我不做前端 
+00:36 lh_mouse: 怕掉智商
+00:36 lhanjian: 连nginx的作者都要把js内嵌进nginx里……想搞个nginx内核的node.js出来
+00:37 cleamoon__: chromium又没好多少…
+00:37 xxxxxxxx: google-chrome多好
+00:37 lh_mouse: 我建议你们研习下如何用 T-expr 写指令式程序
+00:37 lhanjian: cleamoon__, 至少谷歌比mozilla有钱啊……
+00:37 lh_mouse: var(a "hello ") var(b "world!") cat(a b) print(a)
+00:38 xxxxxxxx: lhanjian: 他们的用户大概也比FF用户有钱
+00:38 cleamoon__: 有钱又不代表做得好…… 见IE
+00:38 lhanjian: xxxxxxxx, 估计safari用户更有钱
+00:38 lh_mouse: opera 用户飞过
+00:38 cleamoon__: opera用的是webkit
+00:38 lh_mouse: 12 以及以前不是
+00:38 cleamoon__: safari渣渣
+00:39 lh_mouse: 12.17 以前是 presto
+00:39 cleamoon__: 谁用那么古老的……
+00:39 lhanjian: cleamoon__, IE11的安全性反倒是好的。微软的新技术多
+00:39 lhanjian: IE11以后
+00:40 cleamoon__: IE8之后的就没试过了
+00:40 lh_mouse: 垃圾
+00:40 cleamoon__: 没插件系统的浏览器一律不考虑
+00:40 lh_mouse: 一个随随便便就被插 件搞死的渣浏览器
+00:40 lh_mouse: 交行的插 件有 bug 直接导致 IE 挂
+00:40 lh_mouse: 垃圾  插件挂了把浏览器搞死
+00:41 xxxxxxxx: lhanjian: 毕竟有钱 造个系统不卖座可以造个新的
+00:41 lhanjian: 被插件搞死又不稀奇
+00:41 lh_mouse: 不稀奇？
+00:41 lh_mouse: opera 何时被插件搞死过
+00:41 lhanjian: opera没试过
+00:42 lh_mouse: 插件死了浏览器也不会死
+00:42 lh_mouse: 逗比浏览器滚出好了
+00:42 lhanjian: 哦，想起来了。opera我也被flash卡死过
+00:42 lhanjian: 除非不把flash当插件
+00:42 lh_mouse: 旧版 flash 有内存泄漏
+00:42 lhanjian: 放心吧，adobe会让flash一直“旧”下去的
+00:42 lhanjian: adobe自己都绝望了
+00:43 lh_mouse: 我说的挂不是内存泄漏  是直接应用程序 xxx 指令不能访问 xxx 内存
+00:43 lhanjian: 哦
+00:43 xxxxxxxx: 然而flash 就算更新了....
+00:44 xxxxxxxx: 也好像没更新一样....
+00:44 lh_mouse: 睡觉(satori)
+00:44 lh_mouse quit:Read error: Connection reset by peer
+00:44 Petrus07 quit:Quit: Leaving.
+00:51 supermelody90 quit:Ping timeout: 246 seconds
+00:53 lhanjian: sleep
+00:53 lhanjian quit:Quit: Leaving
+01:06 cleamoon__ quit:Ping timeout: 265 seconds
+01:14 xxxxxxxx quit:Quit: Leaving...
+02:36 hoxily quit:Quit: Leaving
+05:39 lolisa joined channel
+07:03 lolisa quit:Quit: Leaving
+08:17 whocares_2 quit:Remote host closed the connection
+08:17 whocares_2 joined channel
+08:49 Stevearzh quit:Read error: Connection reset by peer
+09:07 lh_mouse joined channel
+09:45 Stevearzh joined channel
+09:56 lh_bot: IP地址: 221.221.15.95北京市海淀区 联通
+10:13 lhanjian joined channel
+10:17 Stevearzh: ...
+10:21 lhanjian: ...
+10:35 tutu joined channel
+10:35 cleamoon quit:Ping timeout: 265 seconds
+10:39 cleamoon joined channel
+10:43 tutu: condy,
+10:44 * lh_bot slaps Stevearzh around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+10:45 Stevearzh: Pia!<(=ｏ ‵-′)ノ☆ lh_bot     
+10:46 lh_bot: 怎么看起来好像 condy 的马甲
+10:46 lh_bot: 这频道里这么多 condy
+10:46 tutu: lh_mouse,小耗，决策树问题不会了
+10:46 lh_bot: me either
+10:46 tutu:  T_T
+10:47 lhanjian: MachineLearning?
+10:47 tutu: 求出来信息增益，然后捏？
+10:48 * lhanjian 怎么可能会MachineLearning呢。Andrew Ng的课都没认真学
+10:48 tutu: lhanjian,阿嘻，就是简单的决策而已
+10:48 tutu: 网易的那个？？？
+10:48 lhanjian: Coursera.org
+10:48 tutu: 喔喔 …
+10:48 lhanjian: 网易那个是个镜像讨论站
+10:49 tutu: 原来如此
+10:49 tutu: 那…假设你学过喽
+10:49 lhanjian: 可是我不会决策树啊……
+10:50 tutu: T_T
+10:50 tutu: 那肿么推荐呢
+10:52 Xilzzerts joined channel
+10:54 lhanjian: tutu, 我不造……（当初懒得写Matlab，所以没学明白
+10:54 KonpakuYoumu` joined channel
+10:55 tutu: 555~
+10:56 * lh_bot slaps KonpakuYoumu` around a bit with a large trout
+10:56 tutu: KonpakuYoumu,here?
+11:02 KonpakuYoumu` joined channel
+11:24 xxxxxxxx joined channel
+11:33 tutu_ joined channel
+11:33 tutu quit:Read error: Connection reset by peer
+11:38 lhanjian quit:Ping timeout: 246 seconds
+11:46 lh_bot: http://paste.ubuntu.com/10666106/
+11:46 lh_bot: 熊孩子系列
+11:47 lhanjian joined channel
+11:48 lh_bot: 老外也有熊孩子
+11:51 lhanjian quit:Client Quit
+11:52 yzld2002 joined channel
+11:56 xxxxxxxx: "要知道，我是世界上最强的语言设计者之一（很可能没有之一），我的价值是不限定于任何国家的，它不需要任何人的肯定。" 然而王垠又开始写这些了....
+12:03 tutu_ quit:Remote host closed the connection
+12:06 whocares_2 quit:Ping timeout: 245 seconds
+12:06 whocares_2 joined channel
+12:41 lh_mouse quit:Read error: Connection timed out
+12:46 lh_mouse joined channel
+12:50 Stevearzh quit:Ping timeout: 256 seconds
+12:55 Stevearzh joined channel
+13:19 lhanjian joined channel
+13:25 hoxily joined channel
+13:31 KonpakuYoumu` joined channel
+13:32 lhanjian: 如果不是因为Chromium内存实在太捉鸡，窝一定抛弃FF了
+14:17 whatofor: lhanjian: 程序员, 买16G内存用
+14:17 lhanjian: whatofor, 笔记本= =
+14:18 whatofor: lhanjian: 如果不是win7 homebasic, 可以支持16G吧?
+14:18 lhanjian: 不过考虑下台笔记本买个8G内存内置，然后再买个8G内存插上
+14:18 lhanjian: whatofor, 没插槽了
+14:19 whatofor: lhanjian: 可惜
+15:30 hoxily quit:Read error: Connection reset by peer
+15:30 hoxily joined channel
+15:31 hoxily quit:Read error: Connection reset by peer
+15:32 hoxily joined channel
+15:37 lhanjian quit:Remote host closed the connection
+15:52 sawfish joined channel
+16:03 Medivh quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+16:05 Medivh joined channel
+16:07 tutu joined channel
+16:12 Azuresong: 矮油复习考研去了，诸君愉快。
+16:12 Azuresong quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+16:14 tutu quit:Read error: Connection reset by peer
+16:15 tutu joined channel
+16:22 tutu quit:Ping timeout: 250 seconds
+16:22 tutu joined channel
+16:28 lh_bot: 又是来一句莫名其妙的然后就消失
+16:29 xxxxxxxx: 还好 不是开炮就行了..
+16:29 iyzsong: =.=
+16:30 lh_bot: geordi: -c struct foo { template<typename T> foo(){ } foo(int) : foo<int>() { } };
+16:30 geordi: error: 'struct foo foo::foo' is not a non-static data member of 'foo'
+16:31 lh_bot: geordi: -c struct foo { template<typename T> foo(){ } foo(int) : template foo<int>() { } };
+16:31 geordi: error: expected identifier before 'template'
+16:31 lh_bot: geordi: -c struct foo { template<typename T> foo(T){ } }; struct bar : foo { using foo::foo; }; bar b(1);
+16:31 geordi: Success
+16:42 tutu quit:Quit: -a- Android IRC 2.1.3
+17:07 sismvg joined channel
+17:09 sismvg: It's a funny world we live in
+17:09 sismvg: 今年第三次被骂：“你整天就知道看书看书，看出个什么东西来了！”
+17:10 sismvg: "看书能当饭吃啊！“《-这句也常有
+17:35 lh_bot: 看书当药吃
+17:45 whatofor_1 joined channel
+17:46 hoxily_ joined channel
+17:48 whatofor quit:Ping timeout: 256 seconds
+17:50 hoxily quit:Ping timeout: 272 seconds
+18:09 KonpakuYoumu` joined channel
+18:20 KonpakuYoumu` joined channel
+18:33 cleamoon: CNNIC发行的一个中级CA被发现发行了Google域名的假证书，该中级CA证书已被Chrome和Mozilla Firefox撤销
+18:34 Plough joined channel
+18:41 lh_cat: 笑看
+18:43 sismvg: 2333
+18:44 sismvg: 嘛。。反正发布发现都差不多啦
+19:00 lhanjian joined channel
+19:13 cleamoon: 据新华社报道，一架空客320飞机在法国南部坠毁，法国警方和航空官员已证实坠机事件。
+19:14 xeirrr joined channel
+19:14 lhanjian: 搞了半天模拟异步 listen() {accept;recv();do_sth();send();close()};
+19:14 lhanjian: 没想出舒服的方法……
+19:50 sismvg: 可怜的rick
+19:51 xeirrr: rick是谁？
+20:08 lh_bot: 0 0
+20:08 * lh_bot slaps xeirrr around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+20:09 sismvg: 瑞克-》行尸走肉
+20:14 Plough: 汉沙
+20:15 Petrus07 joined channel
+20:15 Plough: 汉沙土豪也摔飞机了……
+20:19 xeirrr: .sm lh_bot 
+20:20 condy: Pia!<(=ｏ ‵-′)ノ☆
+20:22 xeirrr: condy: 爆
+20:23 condy: Pia!<(=ｏ ‵-′)ノ☆ xeirrr 
+20:33 Azuresong joined channel
+20:38 cleamoon quit:Read error: Connection reset by peer
+20:39 Azuresong quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:40 Stevearzh: ....
+20:42 lolisa joined channel
+20:42 lh_cat: 喵
+20:43 xeirrr: Stevearzh
+20:46 Stevearzh: Pia!<(=ｏ ‵-′)ノ☆ xeirrr
+20:46 lh_cat: 喵喵喵
+20:47 Stevearzh: Meow
+20:50 xeirrr: 来，到我手上来
+20:50 xeirrr: 话说，妹子很久没来了吧？
+20:50 lh_bot: 是
+20:50 lhanjian: 妹子高考去了
+20:51 lhanjian: 是那个妹子吧？
+20:51 lh_bot: （噘嘴）
+20:51 xeirrr: 这证明了妹子学会了如何取消自动登录
+20:51 lh_cat: 我要妹子！
+20:52 lh_cat: 妹子呢
+20:52 lh_cat: ChanServ: 妹子呢
+20:53 sismvg: en
+20:53 cleamoon joined channel
+20:58 Azuresong joined channel
+20:58 Azuresong quit:Client Quit
+21:02 cleamoon quit:Read error: Connection reset by peer
+21:13 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.4/20150320202338]
+21:18 cleamoon joined channel
+21:23 varna joined channel
+21:23 varna: 法国人写的论文简直就是狗屎
+21:25 xeirrr: varna: 爆
+21:25 varna: 我终于看懂了他们的多值逻辑部分，然而他们的算法终于像尸米山一样矗立在我面前
+21:25 varna: xeirrr: 你这基佬
+21:25 varna: 整整五大坨注释不像注释、伪码显得像注释、注释和伪码混得乱七八糟的东西
+21:26 varna: 我打下5-5泄愤
+21:27 cleamoon quit:Read error: Connection reset by peer
+21:31 xxxxxxxx: varna 球大建公式 今天先造掉上次说好的更新前大建
+21:32 varna: 4672+20 4257+20 7777100
+21:33 varna: 32不够用……
+21:34 varna: 第一点
+21:34 varna: 轮型
+21:34 varna: 支援到着
+21:34 xxxxxxxx: 然而看上去都挺凶险...
+21:34 varna: T有利……
+21:35 varna: 危险了
+21:35 varna: 加贺半血小破
+21:35 varna: 第二点
+21:35 varna: 喔改
+21:36 varna: 支援到着
+21:36 varna: 大和小破简直丧心病狂
+21:36 varna: 加贺大破
+21:36 varna: 这摔的
+21:38 xxxxxxxx: 4257吧还是... 
+21:38 Azuresong joined channel
+21:38 varna: 又是轮型
+21:38 Azuresong: nonono
+21:39 Azuresong: '我知道你们是一起的吖
+21:39 varna: 又是T有利，又是加贺……
+21:39 varna: 神啊
+21:39 Azuresong: 唉我真是艹了
+21:39 Azuresong: 能补救么？
+21:39 xxxxxxxx: 飞鹰 4257 20 
+21:40 xxxxxxxx: 第一个水池
+21:40 Plough: Azuresong: 阁下是哪位？
+21:40 varna: 没喔改
+21:40 varna: Plough: T2
+21:40 xxxxxxxx: 直接喷完 加贺一只
+21:40 Plough: Soga
+21:40 varna: 支援到着
+21:40 varna: ok, 打剩两个
+21:40 Plough: 切回来一看羊驼子和T2都来了……
+21:40 varna: 轻母一轻巡一
+21:41 varna: 我之前一直在做讲义
+21:41 varna: 雷爷饶命！
+21:41 Plough: 说起来那个法国人的论文你找到了？
+21:41 varna: 雷爷放我！
+21:41 Azuresong: 劳资不是故意轮形的啊
+21:41 varna: 我找到另外一个讲符号概率的
+21:42 varna: 加贺中破！
+21:42 varna: 干得好！
+21:42 Plough: 开幕还是？
+21:42 varna: 雷爷补刀失败
+21:42 varna: 加贺中破，过了
+21:42 Plough: 漂亮
+21:42 varna: T不利的锅
+21:43 xxxxxxxx: 4627也来了一发 扶桑
+21:43 varna: 战舰方面长门小破
+21:43 Azuresong: 不是，你们这么轮我受得了啊。
+21:43 varna: 哦操
+21:43 varna: 最多掉……
+21:43 Plough: ……
+21:43 lh_mouse_ joined channel
+21:43 Plough: “你打吧 你就打不过去”
+21:44 xxxxxxxx: 好啦 更新前大建结束 回去拉铝去
+21:44 Azuresong: 你们要更新个什么？
+21:45 varna: 没关系，我们继续
+21:45 varna: 第三次
+21:45 Xilzzerts quit:Ping timeout: 246 seconds
+21:45 Plough: 我进Boss了……
+21:45 cleamoon joined channel
+21:45 varna: 5-5？
+21:45 Plough: 2-3
+21:45 Plough: 补给船
+21:45 varna: ...
+21:45 Azuresong: 算了我TM还是念书去吧
+21:45 Azuresong: 这种事儿不适合我
+21:45 varna: 你每次说念书，结果念书都念不过游戏党……
+21:45 xxxxxxxx: 今天2-3我四连进boss 3连破...
+21:46 varna: 支援到着
+21:46 varna: T有利
+21:46 varna: 神啊
+21:46 lh_mouse quit:Ping timeout: 250 seconds
+21:46 varna: 幸好小破的是大和
+21:46 Plough: ……这是多少钢？
+21:46 varna: 五百多吧
+21:46 varna: 至少不少于四百
+21:47 Plough: 壕
+21:47 varna: 我还剩两万一
+21:47 Plough: 我还剩一万四
+21:47 varna: 第二点
+21:47 varna: 喔改
+21:47 varna: 支援没来……
+21:47 lolisa: varna,你以前写的C语言闭包能不能让我看下？我找不到了
+21:47 Plough: 之前一两天一发401公式
+21:47 Plough: 烧得太爽了
+21:47 varna: lolisa: 等下
+21:48 Plough: 今天份的那珂酱
+21:48 varna: lolisa: https://github.com/Akvelog/langtoy/tree/master/closure-gcc
+21:48 varna: A胜通过，大和小破
+21:49 varna: 我奶一口：下把POI敲掉雷爷！
+21:49 Plough: 然后欧洲支援劝退了
+21:49 varna: 我那个神一样的欧洲支援
+21:49 varna: 一次灭了五个……
+21:49 Plough: 然后雷爷一发开幕雷
+21:49 varna: 支援到着
+21:49 Plough: “真是漂亮的支援，再来一次吧”
+21:49 varna: 长门！
+21:49 * varna 哭
+21:50 Plough: ……什么情况
+21:50 lolisa: 谢了。
+21:50 varna: 哦，雷爷劝我不哭
+21:50 varna: 一发把赤城也大破了
+21:50 Plough: ……
+21:50 Plough: 我也去一趟5-5玩玩
+21:50 Plough: 40级的大姐姐大丈夫？
+21:50 varna: 最后雷爷1/270
+21:50 varna: 40级算了
+21:50 Plough: 那我带棒各？
+21:50 varna: 雾岛吧
+21:51 Plough: 中，雾岛
+21:51 Plough: 雾岛俾斯麦武藏大凤加贺飞龙
+21:51 Plough: 飞龙都骑脸了，不可能苏的
+21:51 varna: 第四次出击
+21:52 cleamoon quit:Read error: Connection reset by peer
+21:52 varna: 单纵雷爷……
+21:52 Plough: ……
+21:52 varna: 支援到着
+21:52 varna: 同航
+21:53 varna: 打错了啊！
+21:53 varna: 雷爷miss
+21:53 varna: miss的话就没有下一发了，直接送走
+21:53 Plough: Orz
+21:53 code_new joined channel
+21:53 varna: code_new: 爆
+21:53 varna: 第二点
+21:53 code_new: varna: 爆爆
+21:54 varna: 没有喔改
+21:54 varna: 支援到着
+21:54 varna: 嗒酱撸掉
+21:54 varna: 联合舰队旗舰开始火力秀
+21:54 code_new: 5-5你们每月都打吗……
+21:54 varna: 冲着幸存的那个孙子一顿猛轰
+21:55 varna: 我是因为有武大了才打着玩
+21:55 code_new: QAQ
+21:55 varna: 雷爷饶命啊！
+21:55 varna: 雷爷求温柔！
+21:55 varna: 单纵……
+21:55 varna: 支援到着
+21:55 varna: 吃撑……
+21:56 varna: 算了
+21:56 varna: 算了啊（哭）
+21:56 Plough: 隼鹰雾岛武藏俾斯麦加贺大凤
+21:56 Plough: 没有支援
+21:56 Plough: 出击
+21:56 xxxxxxxx: 哭是怎么回事...
+21:56 varna: 一发鱼雷
+21:57 * Plough 不带吃撑
+21:57 Plough: 回家
+21:57 Plough: 制空确保开幕大破俾斯麦
+21:57 varna: 卧槽，瞬间烧掉的五千燃料是怎么回事
+21:57 lh_cat: 羊驼卖萌
+21:57 varna: 难道我打的也是肝雪难度
+21:58 Plough: 你看看我的难度
+21:58 varna: 最后一次，明天就靠58了
+21:58 Plough: 制空确保开幕大破俾斯麦是什么概念
+21:58 Plough: 满血三层闪俾斯麦啊……
+21:58 varna: 是你基本没击落敌机……
+21:58 varna: 脸太黑
+21:58 Plough: 所以说啊
+21:58 Plough: 掉落南风叔一只
+21:58 varna: 这次能过！
+21:58 code_new: 话说5-5跟冬活E5甲比，哪个强度更大
+21:58 Plough: 5-5算个屁
+21:58 varna: 5-5跟E5甲没法比
+21:59 code_new: ……
+21:59 varna: 吃撑进门小摔
+21:59 Plough: 我上个超 支 援
+21:59 code_new: 好吧，我是3-5都没通
+21:59 varna: 二轮炮击战开始对雷爷集火
+21:59 varna: 雷爷试探性地打了大和一发
+22:00 xxxxxxxx: code_new: 我也没通... 应该说试都没试过
+22:00 varna: 隼鹰49/55 吃撑49/77 危险
+22:00 Plough: 我全程1CAV3CL2DD打掉了
+22:00 varna: 加贺Lv96
+22:00 lhanjian: 二面过了
+22:00 code_new: xxxxxxxx: 我就试了两次，都劝退就放弃了……
+22:00 lhanjian: 高度评价
+22:00 varna: 3-5加入玉足神教
+22:00 varna: lhanjian: 都考你什么了
+22:00 lhanjian: 紧张地我都胃痉挛了
+22:01 lhanjian: varna, 照着简历死磕
+22:01 varna: ……你有什么可紧张的，我这种水货才找不到工作
+22:01 code_new: lhanjian: 恭喜
+22:01 * Plough 这辈子没希望了
+22:01 lhanjian quit:Quit: Leaving
+22:01 varna: 第二点喔改
+22:01 varna: 支援到着
+22:01 lhanjian joined channel
+22:01 varna: 嗒酱压制
+22:01 xeirrr: Plough, 
+22:01 lhanjian: varna, 我回答的那些，你都知道。
+22:02 lhanjian: 而且有些你知道的比我深
+22:02 varna: 隼鹰中破
+22:02 Plough: 支援出发
+22:02 Plough: 我操
+22:02 varna: 加贺！
+22:02 Plough: 我忘给航母装舰爆了……
+22:02 varna: 加贺桑你太过分了啊！
+22:02 Plough: 不管了
+22:02 varna: lhanjian: 比如？
+22:02 Azuresong: 我操
+22:02 lhanjian: 惊群/nginx优化技巧/gcc扩展
+22:02 Plough: 我全都不懂……
+22:02 lhanjian: http server 实现
+22:02 varna: nginx优化我没碰过
+22:02 lhanjian: 二叉/堆
+22:03 lhanjian: 红黑
+22:03 lhanjian: 流水线
+22:03 varna: 流水线？
+22:03 xxxxxxxx: http://news.china.com.cn/2015-03/24/content_35142005.htm
+22:03 lhanjian: buitin_expect
+22:03 varna: 指令流水我可是连常见UV配对都背不过的
+22:03 Stevearzh quit:Quit: Quit...
+22:03 lhanjian: 不会问这么细
+22:03 Plough: 铁相今天状态不太对啊
+22:03 Plough: 弹着观测都miss……
+22:03 varna: 那问什么
+22:03 dantmnf: 对了，我那边有人沉潜艇了
+22:04 varna: 5-5放弃
+22:04 varna: 这个月也是肝雪难度
+22:04 Plough: 第一点通过
+22:04 xxxxxxxx: dantmnf: 详情？
+22:04 dantmnf: 结算的时候，大破的潜艇 +0 经验
+22:04 Plough: 回港发现不见了？
+22:04 varna: dantmnf: 重复战斗么，他们用什么插件了
+22:04 Plough: 喔改……
+22:05 Plough: 开幕雾岛小破
+22:05 varna: 五盘全都没进去，这确实是肝雪难度了
+22:05 dantmnf: 回家就不见了，具体不清楚
+22:05 varna: 具体不清楚没法说
+22:05 Azuresong: 我是北京队，这算救援么？
+22:05 Plough: 噗
+22:05 Plough: 我今天脑子在想啥啊
+22:05 Plough: 隼鹰没罚站……
+22:05 varna: 我只能简单地告诉你，我肝大和的时候一天打了119个出击
+22:06 dantmnf: 不过他作死用手机玩
+22:06 Plough: 手机跟Bug没关系
+22:06 Plough: 手机只是不缓存加大服务器压力而已
+22:06 varna: 今天的5-5坚定了我下个月也不打5-5的信心，我真没资源了
+22:06 Azuresong: 你妹夫我还是去还贷款吧
+22:06 Plough: 回家
+22:06 Azuresong quit:Remote host closed the connection
+22:06 Plough: 这次不错，好歹进门神了
+22:07 xxxxxxxx: 手机大概就不是KCV和航海日志的锅了吧
+22:07 dantmnf: 手机的 Firefox 倒是可以改设置+软链接来暴力缓存
+22:07 varna: 我只能这么说：小概率bug, 练级潜艇请带损管
+22:08 xxxxxxxx: 大概有人把锅甩给手机...
+22:08 dantmnf: 嗯
+22:08 varna: 做南西的话潜艇很少大破，即使小概率遇到重复战斗也是小概率死人
+22:08 varna: 401和U酱铝酱请放旗舰
+22:08 dantmnf: 他是 3-2
+22:08 Plough: 最后一次出击
+22:09 varna: 今天的5-5打得我还是挺难过的
+22:09 Plough: ……我又忘记给支援空母上舰爆了
+22:09 varna: 下回我还是认真点，本队全闪出击好了
+22:09 xxxxxxxx: 说完我的潜艇在南西大破了...
+22:09 cleamoon joined channel
+22:09 varna: 刚才我五盘下来，资源除了铝跟大建了一发没什么差别
+22:10 xxxxxxxx: 不遇轮形行不行
+22:10 varna: 泡澡的桶出去，现在开始南西
+22:11 varna: 看我一小时搞定
+22:11 xxxxxxxx: varna 祝你也遇轮形
+22:11 varna: 我经常遇到轮型
+22:11 varna: 别忘了我的南西出击数比你多很多……
+22:12 xxxxxxxx: 总数我信了
+22:13 xxxxxxxx: 强行从下午做到现在
+22:13 varna: 加贺桑还是一如既往地能演，这我就放心了
+22:14 varna: 第一次就走上面，估计要进
+22:15 varna: 三补给的魔力
+22:15 varna: 反潜打掉一半
+22:15 varna: 来个飞鹰！
+22:15 xxxxxxxx: 三补给不进三次boss不科学
+22:15 lhanjian quit:Quit: Leaving
+22:16 varna: 捡了90油
+22:16 varna: 第一次进Boss了
+22:16 varna: 武大一起出动的消耗简直太可怕了
+22:16 varna: 轮型4反潜
+22:16 varna: T有利
+22:16 varna: 直接准备换人了
+22:17 varna: 168硬闪三发
+22:18 varna: 第二次出门E
+22:18 Plough quit:Read error: Connection reset by peer
+22:18 Plough_ joined channel
+22:18 Plough: 刚才键盘又抽了，上来汇报下
+22:18 Plough: 人生中的5-5第一血拿下……
+22:18 code_new quit:Remote host closed the connection
+22:18 varna: 好
+22:19 varna: 所以说你的脸还是比我好
+22:19 varna: 但是你还打算继续打么
+22:19 Plough: 我这打了十多次才进去一次
+22:19 varna: 还有一周时间，你差500线多少
+22:19 Plough: 周末看看
+22:19 code_new joined channel
+22:19 Plough: 战果根本不用想
+22:19 varna: 强行NE
+22:19 cleamoon quit:Read error: Connection reset by peer
+22:19 varna: 我还是继续忍辱负重吧
+22:19 Plough: geordi: << 1147-412
+22:19 geordi: 735
+22:19 varna: ...
+22:20 Plough: ^ 差这么多
+22:20 varna: 没救了
+22:20 varna: 我估计幌筵月末能有一千三以上吧
+22:20 Plough: 肯定的
+22:20 Plough: 估计一堆人还没打1-5 2-5呢……
+22:20 varna: 安定的估计应该是一千五
+22:20 Plough: 再来个背刺
+22:20 varna: 5-5我仍然放弃
+22:21 Stevearzh joined channel
+22:21 varna: 武大的消耗……太可怕了
+22:21 Plough: 本队我只用了武藏，大和在支援里
+22:21 varna: 确实战舰再也没出过事故（长门你看看你这个果汁派）
+22:21 Plough: 233333
+22:22 Plough: 另外我还是建议你赌赌俾斯麦
+22:22 Plough: 刚才同航单纵雷爷一发鱼雷冲着俾斯麦过去了
+22:22 Plough: 结果硬吃了下来……
+22:22 varna: 四月份我尤其没时间对付大建
+22:22 xxxxxxxx: 今天我好像发现一个1-1肝船的对手...
+22:22 varna: 另外有人看懂今天T2在说些什么吗
+22:22 Plough: 我没有
+22:23 varna: 第二次强行NE
+22:23 varna: 成功掉沟
+22:23 Plough: 这次斩杀不知道是脸好还是配置确实比较安定
+22:23 Plough: 总之反航我也斩掉了
+22:23 varna: 反航斩掉不奇怪
+22:24 varna: 只要三个战舰够机智，可以干掉的
+22:24 Plough: 白天留下269血的雷爷和满血喔改
+22:24 varna: 我曾经也是这样
+22:24 varna: 武藏一发秒雷爷，我觉得骑脸了
+22:24 Plough: 夜战雾岛没智商，照着雷爷撸了两发
+22:24 varna: 然后就没有然后
+22:24 Plough: 然后武藏一个平A糊了喔改175……
+22:25 varna: 大傻没击破，长门强行擦弹
+22:25 Plough: 这多正常
+22:25 Plough: 我今天打演习
+22:25 Plough: 夜战对面一个四十级的摩耶连擦六炮一滴血没掉
+22:26 varna: 开始南西
+22:26 varna: 如果十五分钟之后没进三次，我就换一个特别的编队
+22:26 hoxily_ joined channel
+22:26 Plough: 攻击发起者分别是65级装备两门二号炮和欧根电探的鸟海、75级装备51 46 一式弹的武藏、59级装备两门POI炮和一个33的岛风
+22:27 varna: 毕竟今天我赶时间
+22:27 Plough: 我就看着对面的摩耶这么擦了六炮
+22:27 varna: 现在主力驱逐队还没80的剩下时雨和响爷
+22:27 varna: 都差三四级的样子
+22:27 Plough: 武大长陆吃喝？
+22:27 Plough: 以后我要是烦了就这么去踢馆
+22:27 varna: 鹰鹰北大狗狗
+22:27 Plough: 吃撑换大凤
+22:27 Plough: 或者我直接双大武北大木
+22:28 varna: 2-2带路走起，速攻搞定
+22:28 varna: 即使我缺资源，也不差赶时间的资源
+22:28 lh_mouse: geordi, -c void *p = (1 + 2) ^ 3;
+22:28 geordi: Success
+22:28 Plough: 话说航空战演习有计划吗
+22:28 varna: 你俩商量个时间，提前告诉我
+22:28 Plough: code_new: 
+22:28 varna: 被冬活一拖直接拖到开学是我的锅，老李生没捞出来
+22:29 varna: 哦操掉沟了
+22:29 Plough: 另外珊瑚海我们要不要考虑再找一个美军指挥官……
+22:29 varna: 可以
+22:29 hoxily quit:Ping timeout: 255 seconds
+22:29 varna: 今天危险了，我去2-2
+22:29 Plough: 去2-5
+22:29 varna: 2-5没有我要的了
+22:29 Plough: 2-5有带路
+22:30 code_new: Plough: 清明节吧
+22:30 code_new: 这学期没什么时间
+22:30 Plough: 中
+22:30 varna: 北上大井飞鹰隼鹰POI小和
+22:31 varna: 陪大洋彼岸远道而来的诸君从航空战打到雷击战
+22:32 varna: 平均等级100.33
+22:33 varna: 2-2走起
+22:33 varna: 进门NE
+22:34 varna: 敌单纵
+22:35 varna: 哦操
+22:36 varna: 拿喷滚
+22:37 cleamoon joined channel
+22:38 Azuresong joined channel
+22:39 varna: 怒进，第一次
+22:39 varna: 体验咱任务部队的怒火吧哈哈哈
+22:39 Azuresong: 好好好
+22:40 varna: POI居然没摔
+22:40 Azuresong: 什么玩意？
+22:40 lh_mouse: Azuresong, 能不要莫名其妙么
+22:40 Azuresong: 我听不懂
+22:40 Plough: 我还是觉得现在T2只要看见有人说话就觉得是在和他说话
+22:40 lh_mouse: 前几天被关小黑屋没关够火候啊
+22:41 Plough: 不然我实在无法理解T2的神出鬼没……
+22:41 Azuresong: 现在不还是小黑屋么。
+22:41 varna: 我只提一个意见，诸君在事态发展成人身攻击之前不必quiet
+22:41 varna: 当然如果只是攻击我可以无视
+22:41 varna: 第三次出击
+22:41 Plough: 我没看出这个例外有什么必要
+22:42 lh_mouse: Azuresong, 明摆着不是
+22:42 varna: 攻击我，我不会不爽
+22:42 Plough: 不会说话就闭上嘴
+22:42 Plough: 我不爽
+22:42 Plough: 看着就烦
+22:42 Azuresong: 嗯
+22:42 varna: 果然你是深爱着我的
+22:42 Plough: 怎么说你也是在舰尾值班的
+22:42 Plough: 劳苦功高
+22:42 varna: 吓得北大来了个合击
+22:43 varna: 那个转圈姿势现在据说称作二人转
+22:43 varna: 加回避的
+22:43 Plough: 233333
+22:43 varna: 怒进
+22:43 varna: 阵容还是单纵双重巡
+22:44 Plough: 流改……
+22:44 varna: 开幕开掉五个
+22:44 Plough: 果然大凤专业造流改么
+22:44 varna: 大凤应该造彗星才对
+22:44 Plough: 卧槽
+22:44 varna: 奥宫正武：我们需要更多的彗星……啊，阿部君你们还没飞起来么？
+22:44 Plough: 日常四发一流改一烈噗……
+22:44 varna: 欧rz
+22:44 xxxxxxxx: 我觉得不是大凤的原因
+22:45 Azuresong quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:45 Plough: 11架烈噗了
+22:45 xxxxxxxx: 用加贺这几天也是出流星 流星改 不出彗星一二甲
+22:45 varna: 等疲劳的时候潜艇队去南西
+22:45 Plough: 一二甲我就四个
+22:45 Plough: 流改我都十几只了……
+22:46 xxxxxxxx: 我就一个一二甲
+22:46 varna: 今天我就一个痛感：我32不够用
+22:46 Plough: 不过要是把德国舰爆和江草算上的话也有七只
+22:46 Plough: 我就两个三二
+22:46 varna: 我似乎有五个
+22:46 Plough: 欧r
+22:46 Plough: 欧rz
+22:46 varna: 但客观上就是不够
+22:46 Plough: 32我觉得永远都不够……
+22:47 varna: 支援要的电探好多好多
+22:47 cleamoon quit:Read error: Connection reset by peer
+22:47 varna: 哦对，舰娘乃歌有下载了
+22:47 varna: 动画原声碟也有了
+22:47 varna: 翔鹤瑞鹤的vocal和let's not say goodbye比较好
+22:48 varna: 响爷的哈拉韶也不错
+22:48 Plough: 了解，明天我找找……
+22:48 Plough: 今天继续改修三号炮
+22:48 varna: 找不到我可以上传一点
+22:49 varna: 今天来不及了
+22:49 xeirrr left channel:"Leaving"
+22:49 Plough: 我也快下了
+22:49 varna: 今天我日常周常欠了一大堆
+22:49 varna: 可恶的法国人
+22:50 varna: 写算法用不等宽字体还不排版
+22:50 xxxxxxxx: 话说有人听说过什么造一二甲的玄学么
+22:51 varna: 12甲玄学大概是每天找四个时段一次五发
+22:51 varna: 卧槽单纵孙子一发中破shenmegui
+22:51 varna: 熟悉的南西
+22:51 varna: 怒掉沟
+22:54 dantmnf: 我有八个一二甲，一个流改...
+22:54 xxxxxxxx: 我有5个流改1个一二甲
+22:54 varna: 我没数流改，12甲大概够支援用
+22:55 varna: 这次2-2头目还是巡洋舰队
+22:55 varna: T有利……
+22:55 varna: 小和中摔
+22:55 varna: 下次换欠雪吧
+22:55 Plough: 碎叫
+22:55 Plough quit:Quit: 碎叫
+22:56 dantmnf: 话说彗星江草有坑吗
+22:56 varna: 坑？
+22:57 varna: 跟所有的转换任务一样，不要锁装备
+22:57 varna: 虽然拆彗星不要紧
+22:57 varna: 轻航疲劳就换翔鹤吧
+22:57 varna: 掉沟……
+22:58 varna: 其实我还满喜欢翔鹤的
+22:58 varna: 沟里赫然一个撸爷
+22:58 varna: KTKM你打错了啊！
+22:58 varna: 欠雪中破
+22:58 varna: 太过分
+22:58 varna: 下回换岛风
+23:00 varna: 第四次
+23:01 varna: 喔酱……
+23:01 dantmnf: 另外重巡怎么快速练到一改？
+23:01 code_new: 话说-vorous是一个什么词尾
+23:01 varna: dantmnf: 演习
+23:02 varna: code_new: 我没研究过词缀和词尾的意思……
+23:02 code_new: varna: 好吧
+23:03 varna: 第五回，进门NE
+23:03 varna: 哈哈哈尔等居然单横
+23:04 varna: 噗
+23:04 varna: 沟上
+23:04 cleamoon joined channel
+23:07 varna: 南西结束
+23:07 varna: 一小时多五分钟
+23:07 varna: 实际大概不到一小时吧
+23:07 varna: T有利……
+23:07 varna: 无伤解决
+23:07 varna: 还可以打反潜
+23:08 varna: 糟……
+23:08 varna: ktkm疲劳……刷趟闪去
+23:10 varna: 知道ktkm能一挑三结果来了四舰
+23:11 dantmnf: 水母似乎能一挑四？
+23:12 dantmnf: 我上次试了一下，中破回来了
+23:12 varna: 水母战力不行
+23:12 varna: 高等级能抢点
+23:12 varna: 强点
+23:12 varna: 反潜走起
+23:13 varna: 进门沟S
+23:13 varna: 嗒酱……
+23:13 varna: 今天如此丧
+23:13 varna: 肥桑打错人
+23:13 varna: KTKM怒闪
+23:13 varna: 嗒酱再见
+23:14 varna: 噗
+23:14 varna: 我日……
+23:14 varna: 太太大破……
+23:14 dantmnf: 噗我刚才要查什么来着...
+23:14 dantmnf: 转眼就忘了
+23:15 varna: 拼一次
+23:15 varna: 又是S...
+23:15 varna: 太难过了
+23:15 dantmnf: 哦想起来了
+23:16 varna: miss...
+23:16 cleamoon quit:Read error: Connection reset by peer
+23:17 varna: 今天的航空战队打得好差进
+23:17 varna: 差劲*
+23:19 varna: 反潜打完
+23:21 varna: 净亏五桶，回去了
+23:21 varna: 诸君武运
+23:21 varna quit:Quit: leaving
+23:21 xxxxxxxx: ...亏桶还要打
+23:33 cleamoon joined channel
+23:41 cleamoon quit:Read error: Connection reset by peer
+23:58 cleamoon joined channel

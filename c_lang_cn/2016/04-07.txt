@@ -1,0 +1,985 @@
+00:00 lh_mouse quit:Read error: Connection reset by peer
+00:14 Sous-Titre: exit
+00:14 Sous-Titre quit:Quit: WeeChat 1.4
+00:34 cleamooon: @嘎子哥:“上海交大”应该改名“蛤工大”。
+00:45 QCF quit:
+00:51 T-J-M quit:Ping timeout: 252 seconds
+00:57 cleamooon quit:Ping timeout: 268 seconds
+01:04 wlemuel quit:Ping timeout: 246 seconds
+01:25 stardust quit:Quit: Leaving
+01:49 Matsune quit:Ping timeout: 264 seconds
+02:17 Youmu quit:Quit: Connection closed for inactivity
+03:22 lhanjian quit:Quit: Connection closed for inactivity
+03:29 Youmu joined channel
+04:42 CyrusYzGTt quit:Ping timeout: 240 seconds
+04:53 CyrusYzGTt joined channel
+05:40 cleamoon joined channel
+07:13 Aaron is now known as Guest9735
+07:54 CyrusYzGTt quit:Ping timeout: 246 seconds
+07:57 Youmu quit:Quit: Connection closed for inactivity
+08:11 bestucan joined channel
+08:18 FrankHB quit:Ping timeout: 244 seconds
+08:21 AaronLi1 joined channel
+08:21 AaronLi quit:Ping timeout: 250 seconds
+08:21 AaronLi1 is now known as AaronLi
+08:33 Hoxily joined channel
+08:45 cc joined channel
+09:01 tutu_wind joined channel
+09:04 lhanjian joined channel
+09:04 tutu_wind: morning ~
+09:05 iyzsong: 膜 = =
+09:05 lh_mouse joined channel
+09:07 bestucan quit:Quit: bestucan
+09:09 FrankHB joined channel
+09:13 tutu_wind: http://new.xiyoulinux.org
+09:13 tutu_wind: 有兴趣玩一下～
+09:15 cc: 2006.2007.2008..
+09:15 cc: 点一下就跳一下
+09:15 cc: 调到2016然后又变成2006
+09:17 iyzsong: 不会玩
+09:21 cc: tutu_wind: 怎么玩的
+09:24 lh_cat joined channel
+09:27 tutu_wind: cc: 我还没来得及看。。。
+09:33 cleamoon quit:Ping timeout: 276 seconds
+09:52 Hoxily_ joined channel
+09:53 Hoxily_ quit:Client Quit
+09:54 Hoxily quit:Ping timeout: 260 seconds
+09:54 FrankHB quit:Ping timeout: 248 seconds
+09:56 FrankHB joined channel
+10:12 AaronLi quit:Remote host closed the connection
+10:12 AaronLi joined channel
+10:21 cc: 同学会，同学会，拆散一对是一对
+10:21 cc: 尼玛都毕业3年了，搞毛线同学会啊
+10:26 iyzsong: orz
+10:27 condy: iyzsong: orz
+10:27 condy: iyzsong: 还有9天～
+10:27 cc: orz
+10:32 FrankHB quit:Ping timeout: 248 seconds
+10:32 FrankHB joined channel
+10:35 Guest9735 quit:Quit: Leaving
+11:01 Aaron joined channel
+11:02 Aaron is now known as Guest74835
+11:05 Guest74835 quit:Client Quit
+11:14 hportsnap_els9 joined channel
+11:15 Yuri joined channel
+11:25 stardust joined channel
+11:34 lh_mouse: Yuri, 新人爆照。
+11:39 lhanjian: https://blog.cloudflare.com/preventing-malicious-request-loops/
+11:40 iyzsong: 喵~
+11:44 iyzsong: condy: 快饿死了...
+11:52 lh_cat quit:Quit: Connection closed for inactivity
+12:09 CyrusYzGTt joined channel
+12:19 Dove joined channel
+12:20 cyrushmh joined channel
+12:24 CyrusYzGTt quit:Ping timeout: 248 seconds
+12:30 iyzsong: ʕ•ٹ•ʔ
+12:31 iyzsong: 今天好热呀
+12:41 Yuri: 还好吧，还可以开空调嘛~~~
+12:49 Dove: 接受一个参数协程实现成功了
+12:49 Dove: 我终于把这点渣渣搞明白了
+12:50 Dove: 不过协浮点寄存器啥的都没保存。
+12:50 Stevearzh quit:Ping timeout: 246 seconds
+12:52 iyzsong: orz
+12:54 Dove: iyzsong: 我是渣渣，哎，继续撸书去了，啥时候能学会撸后端啊，我现在连C艹怎么调用数据库怎么返回JSON结构之类的基本问题都不知道。
+12:58 iyzsong: 我大概知道。都是调API...
+12:59 Dove: 哦，那应该不难。
+13:00 lyt joined channel
+13:00 Dove: 调API的话我学了半天的SQL语言啥的有用么？
+13:07 iyzsong: 有呀，就是传SQL语句。也有用ORM不传的
+13:08 Dove: 哦，soga，多谢指点。
+13:16 FrankHB quit:Read error: Connection reset by peer
+13:17 FrankHB joined channel
+13:47 lhanjian: https://www.zhihu.com/question/41793894
+13:47 lhanjian: “一个pi的推力有多大？”
+13:47 cyrushmh quit:Ping timeout: 264 seconds
+13:48 lh_mouse: 一个π的推力有多大？
+13:48 stardust quit:Quit: Leaving
+13:51 lhanjian: pi4
+13:51 lhanjian: pi股的pi
+14:14 AaronLi quit:Ping timeout: 248 seconds
+14:17 T-J-M joined channel
+14:18 Stevearzh joined channel
+14:21 varna joined channel
+14:22 stardust joined channel
+14:24 lhanjian: varna: 
+14:24 lhanjian: 爆炸
+14:25 varna: 这可怕的现充居然让我爆炸！
+14:26 lhanjian: varna: https://www.zhihu.com/question/41793894
+14:27 varna: 233333
+14:27 varna: 航空发动机该给岚月酱看
+14:27 lhanjian: 月酱不在
+14:28 lhanjian: 航空发动机 火箭发动机
+14:28 Dove: 没信心了就看贴吧真是太有效了
+14:29 varna: 笑尿了
+14:29 lhanjian: “祸害一下搞火箭的”
+14:30 lhanjian: “祸害一下搞飞机的”
+14:31 Dove: 搞飞机啊
+14:31 Dove: 这个不错
+14:31 lhanjian: “随后，经过进一步查证，它的处理器并非自家FX，而是Intel Core i7-4790K，AMD随后也承认了这一说法，并表示他们认为Core i7是游戏玩家的完美之选。”
+14:31 lhanjian: http://mb.zol.com.cn/526/5269858.html
+14:33 Dove: 小时候的梦想：“等我有了钱就买wii”
+14:33 varna: 中学时候的梦想：“好想侵犯楼主啊（以下从略）”
+14:34 Dove: 2333
+14:35 Dove: 我终于成功实现了支持参数的协程，终于搞懂了那点渣渣。
+14:35 varna: 并不渣
+14:35 varna: 你参数是怎么做的，不会是从栈上压进去的吧
+14:36 Dove: 是的
+14:36 lh_mouse quit:Read error: Connection reset by peer
+14:36 varna: x86-64 system v abi怎么办
+14:36 varna: 帧底优化怎么避开
+14:36 lh_mouse joined channel
+14:36 Dove: c->crstack[STACKSIZE - 1] = arg;     c->crstack[STACKSIZE - 2] = crtn_end;     c->crstack[STACKSIZE - 3] = entrance;     c->crstack[STACKSIZE - 4] = &(c->crstack[STACKSIZE]);
+14:37 Dove: 这个还没想
+14:38 varna: uccu
+14:38 Dove: 我懒得写，就copy了你的稍微改了下。
+14:39 Dove: 然而协浮点寄存器依然没保存
+14:39 varna: uccu
+14:39 varna: 忽悠自己没意思
+14:40 Dove: 帧底优化怎么做的？
+14:41 Dove: 而且crtn_end里直接free(curr_crtn)的话会把当前的运行栈给free掉
+14:42 varna: 你的[er]bp可能被编译器在优化的时候干掉
+14:42 varna: 至于运行用的栈怎么解决，你自己想
+14:42 varna: 这样至少不至于给出一个「渣渣」的评论
+14:42 varna: 毕竟没人喜欢漏内存
+14:43 Dove: 嗯，我再想想。
+14:44 varna: ^ 23333
+14:44 stardust quit:Quit: Leaving
+14:46 Dove: 一般的话都会有backup的一个链表装运行完的协程控制块拿来重用吧，不会直接free。
+14:47 Dove: 我想想先切个栈再free行不行。
+14:47 varna: Dove: 你非得找个借口避免去掉栈？何必呢
+14:48 varna: 我说个事情：一般先把内存做干净再说对象缓存
+14:48 varna: 不然你创建十万个coro, 都塞缓存里？
+14:48 varna: 那简直感人
+14:49 lhanjian: 毕竟不能急着万恶之源啊
+14:49 Dove: 去掉栈怎么搞我没想过
+14:49 Dove: 不切栈？
+14:49 varna: (｡･ω･)ﾉ看你怎么做了
+14:50 Dove: 有点难的样子
+14:50 Dove: 继续撸一下APUE，这个慢慢想。
+14:51 varna: ...
+14:51 varna: 这都什么跟什么
+14:52 Dove: 啊咧，我就是扯个淡。
+14:52 varna: https://www.zhihu.com/question/33576932 笑尿了
+14:53 varna: Dove: 我记得一开始你还说这是“那点渣渣”，而且“搞懂了”
+14:53 Dove: 我错了
+14:55 Dove: 我记得makecontext是吧前6参都塞寄存器里，然而我找不到实现了。
+14:57 * varna sight
+14:57 * varna sigh
+14:58 lh_mouse quit:Read error: Connection timed out
+14:58 lh_mouse joined channel
+15:11 Dove: 不切栈就得拷栈咯，额，我还是撸书去先。
+15:12 varna: ^ 23333333
+15:12 Dove: 笑什么吖。
+15:12 Dove: 我是弱鸡
+15:12 Dove: 你又不是不知道
+15:15 varna: 我只是觉得人淡泊点容易专心
+15:15 Dove: 嗯
+15:16 varna: 我很奇怪为何总有人觉得自己一下就悟透了什么玩意
+15:16 varna: 然后出来搞个大新闻
+15:16 cleamoon joined channel
+15:16 Dove: 我就是随便扯个蛋
+15:16 varna: 然而看起来没什么趣味
+15:17 varna: 老实说甚至不如一个黄段子，至少黄段子本身是赤裸裸的低俗
+15:17 Dove: 嗯
+15:17 varna: 甚至到现在你还用「随便扯个蛋」这种话来淡化你对自己的看法
+15:18 lhanjian: http://news.xinhuanet.com/overseas/2016-04/07/c_128872016.htm
+15:20 lhanjian: T2一边用太简单来为搞大新闻，又用自己太渣来抵触别人的批评，这样不好的。
+15:20 varna: lhanjian: 这成绩看着好惨啊，小孩子是被逼出来的……
+15:21 lhanjian: varna: 感觉这种能力的伙计用不着逼这么急的。晚几年读大学也不至于人生不完整吧
+15:22 varna: 没办法，我不想评论别人的教育方式，我只说这母亲自己的成绩应该不会太好
+15:22 cleamoon: 我只觉得长的好惨呀
+15:22 iyzsong: orz
+15:23 Dove: 好吧我错了
+15:23 lhanjian: 老毛都是战略上藐视敌人，战术上重视敌人，T2有时候是反的
+15:23 varna: 我感觉一般成绩尚可的父母，在知识性的方面顺其自然的更多
+15:24 varna: 倒是该多教小孩点性知识，省得他们得慢前……
+15:24 lhanjian: varna: 其实很对啊
+15:24 varna: 感觉现在家庭对女孩的性教育明显比对男孩的成功一些
+15:25 lhanjian: 不仅是性教育
+15:25 varna: 虽说慢前这个事另论
+15:25 varna: 对了给岚月酱看那个发动机的
+15:25 lhanjian: 我感觉现在的妹子大多都靠得住，男的靠得住的反而越来越少了
+15:25 cleamoon: 看到了额
+15:25 varna: cleamoon: https://www.zhihu.com/question/41793894
+15:25 varna: lhanjian: 那正常，男性成熟得晚
+15:26 varna: 女孩子已经有主意的年龄，男生还是一帮混小子呢
+15:26 varna: 正常
+15:26 cleamoon: 其实吧，火箭推力有一个简单的算法，直接用牛二算就好了，反正小于千分之一，有误差也无所谓
+15:26 lhanjian: varna: 可能不仅是这样吧。现在废宅越来越多了，像以前那样胆子大的符合刻板印象的男孩子好像反而不多了。当然，也可能只是我个人的经历带来的错觉
+15:27 varna: 我倒不这么觉得
+15:27 varna: 我觉得90后这批人还是挺赞的
+15:27 cleamoon: 我倒觉得教女孩是怕出去被占便宜，不教男孩是怕想出去占便宜
+15:27 varna: 没经大事不谈勇气，想多了容易想太多
+15:28 varna: cleamoon: 至少教教怎么整理个人卫生，以前我在火车上见到一个大一的哥们，连包〇垢都没清过……
+15:28 lhanjian: varna: 想起来我的包X粘连，还是请医生弄开的
+15:28 condy: Σ<(= ° △ °|||)>︴
+15:28 varna: lhanjian: 所以说生理卫生教育还是得有……
+15:29 lhanjian: varna: 是啊。如果当时医生不给我弄开，那就只能割包X了
+15:29 cleamoon: 这个做的奇差，包括海盗学校都不教，不过可能海盗家里教
+15:30 varna: 学校基本没戏的，家长教一下比较好
+15:30 cleamoon: 指望帝都家长不如指望有个好学校
+15:30 varna: 我就不说「等我有了小孩」这种昏话了
+15:31 lhanjian: 要不然就搞本靠谱的书让他们看
+15:31 * varna _(:з」∠)_
+15:31 lhanjian: 看完了家长稍微问下，看看弄明白了没
+15:31 lhanjian: varna: 你看我之前都只是说羊驼的后代，没说羊驼的小孩
+15:31 cleamoon: 教育问题呢，有知识不等于知道怎么用知识，知道怎么用知识不等于会生活
+15:31 varna: 小孩：「爸啊，听说果皇以前素人出道，那个是不是很厉害？」 父亲：「闭嘴刷闪去」
+15:31 cleamoon: 羊驼子的后代都被冲走了
+15:32 lhanjian: cleamoon: 是啊。不会生活的路过
+15:32 varna: lhanjian: 你需要找个妹子，一个妹子能极大地改善日常生活品质
+15:32 Dove: 我是不会有小孩的，所以我表示鸭梨不大。
+15:32 cleamoon: 会生活也不代表能世俗意义上的成功
+15:32 varna: 比如你的居所整洁程度
+15:33 lhanjian: varna: 线虫朋友们都这么教我，然并卵
+15:33 cleamoon: 我不觉得妹子能改善生活品质
+15:33 varna: 还行，至少能强迫人打扫屋子
+15:33 cleamoon: 也许居所卫生了，但是心理卫生怎么办
+15:33 varna: 那没办法了
+15:33 varna: 需要你有顽强的意志……
+15:33 Dove: cleamoon: 世俗意义上的成功...“我转了点钱让SB知道了。”？
+15:33 Dove: 赚
+15:34 cleamoon: 钱，权，名，三者得一谓世俗的成功
+15:35 Dove: 然而我这辈子大概赚不到什么钱，后两者没兴趣，所以注定是卢瑟。
+15:36 cleamoon: 我觉得那神童他妈的教育方法教育出来的孩子很难超过她自己，因为那人只是擅长背，并不擅长想
+15:36 february joined channel
+15:37 Dove: 擅长背也是好的
+15:37 Dove: 问题是真的擅长背么?
+15:37 lhanjian: cleamoon: 心理卫生什么的，这方面我是特别差的
+15:38 Dove: 住精神病院的表示心理卫生纯属扯淡
+15:38 iyzsong: 窝已经污的不行了 = =
+15:38 Dove: 2333
+15:38 lhanjian: “神楽坂夜月:讲道理，当年家里条件不允许，我都是看着电视上的丰胸广告和内衣广告撸的。”
+15:38 iyzsong: orz
+15:38 Dove: 讲道理，那个真的是扯淡，不要有鸭梨。
+15:39 condy: orz
+15:39 condy: iyzsong: 还有9天
+15:39 Dove: 按照心理医生的标准，正常人的心理没一个健康的。
+15:39 iyzsong: condy: 哦.. 又不需要啥准备
+15:40 condy: iyzsong: 理发之类的
+15:40 condy: iyzsong: 可能会遇到你将来的老婆(
+15:40 varna: 噫噫噫！
+15:40 lhanjian: http://www.cnbeta.com/articles/490473.htm
+15:40 varna: 噫噫噫噫噫噫！
+15:40 cleamoon: 内衣广告确实可以撸呀
+15:40 iyzsong: 舔舔舔 *.*
+15:41 varna: 请务必带LEEE玉照回来！
+15:41 varna: lhanjian: 郭敬明？
+15:41 lhanjian: 23333
+15:42 lhanjian: “目前，魏永康已在一家公司从事软件开发工作4年。”
+15:42 cleamoon: 郭比特 23333
+15:42 lhanjian: 果然啊，社交能力差的伙计都写代码去了
+15:43 Dove: 社交能力差+1
+15:43 * varna 是提督
+15:43 Dove: 直接没有社交能力
+15:43 condy: iyzsong: 看微博啊，leee 发她的照了(
+15:43 cleamoon: 我给一个婴儿看av，能不能让他5岁就成熟？
+15:43 cleamoon: orz
+15:43 condy: iyzsong: 看微博啊，leee 发她的腿照了(
+15:43 cleamoon: leee的微博是什么
+15:43 Dove: leee的微博是什么
+15:43 condy: Kontinuation
+15:43 varna: 噫噫噫
+15:45 iyzsong: condy: 哦 不看..
+15:45 lhanjian: “好多人都说编译原理重要，编译原理重要个毛啊。说得好像你能靠写编译器养活自己一样[拜拜]”
+15:45 lhanjian: 这话我好像听羊驼子也说过类似的
+15:45 cleamoon: @百鬼夜行 我同学的弟妹叫 关羽 我同学的弟弟叫 马超…… 转@菜菌 初中认识的女孩子叫项羽。
+15:45 lhanjian: 怪不得羊驼子差点就……
+15:46 varna: 我的角度不太一样
+15:46 cleamoon: KWC发布报告称，在去年12月至今年2月这个三个月期间，苹果公司在中国城市的智能手机销售份额出现了自2014年以来的首次下滑，市场份额下滑了3.2%。 #药丸
+15:47 varna: 如果你能迅速制造DSL, 那么你的客户会感到极其愤怒；如果你不能，那也不用管了
+15:47 Dove: 然而我并没有看到照片
+15:47 Dove: 然而我并没有看到照片
+15:47 Dove: 然而我并没有看到照片
+15:47 february quit:Read error: Connection reset by peer
+15:48 Dove: condy: 哪里有腿照
+15:48 lhanjian: 谁想个办法把L3E拉过来？
+15:48 condy: Dove: 可能她删了吧..
+15:48 varna: 以前在贴吧都不太露面的
+15:48 condy: 我明明还prpr了一下的(
+15:49 cleamoon: @alicemagnet 
+15:49 cleamoon: 他转身朝着黑板，拿起一支粉笔，使出全身的力量，写了几个大字：
+15:49 cleamoon: “μ's forever！”
+15:49 cleamoon: 然后他呆在那儿，头靠着墙壁，话也不说，只向我们做了一个手势：“放学了，——你们走吧。”
+15:49 lhanjian: 还是算了。不然死宅又卖丑了
+15:49 condy: Dove: http://ww2.sinaimg.cn/large/a341e42fgw1f2m8geo8g1j219c0pg44q.jpg
+15:50 varna: 我现在后悔的事情主要是当时没在学校里贴寻人启事把她轰出来
+15:50 february joined channel
+15:50 Dove: condy: thx
+15:50 varna: hshs
+15:50 cleamoon: 这腿... 不是腿控无法置评
+15:51 lhanjian: 是白丝就好了
+15:52 Stevearzh quit:Remote host closed the connection
+15:53 cleamoon: 白丝确实不错
+15:53 lh_cat joined channel
+15:53 FrankHB quit:Read error: Connection reset by peer
+15:53 lhanjian: varna: 羊驼子果然还是念着这事儿啊，话说现在也净身了，主动点呗
+15:53 lhanjian: （误
+15:54 varna: lhanjian: 你想太多，人生的趣味一多半都在遗憾上
+15:54 cleamoon: @Fatal1tyV：合并请求提交：xx，那个yy提交了，资瓷不资瓷啊？代码评审有不靠谱评论：你们啊，不要总想搞一个大新闻就把我的代码批判一番！图样！有靠谱评论：这个写法，是坠吼的！代码评审过了：通过了啊，我就给你们讲有一句古话，叫闷声发大财。功能发布了被同事赞：一点微小的贡献，谢谢大家。
+15:54 lhanjian: 希望如此吧
+15:55 lh_not_bot: lh_not_bot: meow
+15:55 cleamoon: 我觉得人生的趣味一多半都在吃饭上
+15:55 Dove: 人生的趣味一多半都在遗憾上+
+15:55 varna: 自口苗了
+15:55 lh_not_bot: lh_cat: meow
+15:55 lhanjian: lh_not_bot: 吱
+15:55 lhanjian: 代码评审过了：我的代码几百个同事一致通过！
+15:56 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/fk/e8_24134.jpg@596w_1l.jpg   23333333
+15:56 lhanjian: 这个codestyle drawing啊，E可赛艇
+15:56 iyzsong: orz
+15:56 lhanjian: 突然想起来我的工作gitlab头像就是大黄蛤和长者，还是轮子盖章版的
+15:57 * lhanjian 提一下裤子
+15:58 cleamoon: 这个岛风好，大概还算safe  http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/fj/90_89520.jpg@596w_1l.jpg
+15:58 varna: 这是鹿岛
+16:00 cleamoon: 哦，说错了
+16:02 lhanjian: “6年级学会打飞机，现在185，那要是当时不会的话现在要长到多高?”
+16:03 lhanjian: https://v2ex.com/t/269133#reply137
+16:03 stardust joined channel
+16:09 varna: 最近有人玩钦定么？
+16:10 cleamoon: 似乎没有人在玩
+16:11 cleamoon: 对了，推荐个视频，星际老游侠的边角料番外篇7
+16:11 lhanjian: varna: 缺少膜法师
+16:11 cleamoon: 全程笑死的视频
+16:12 stardust: 那个钦定需要几个膜法师来着？
+16:12 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=3ec1121bae773912c4268569c8188675/8c0676fa828ba61e60119c894634970a314e5948.jpg Yet another cup
+16:12 varna: stardust: 七个
+16:12 varna: 长者，总设计师，HK记者，董先生，三个大学生
+16:13 varna: 每一个先生对应三个大学生
+16:15 * lhanjian stardust: 膜导师来了
+16:15 cleamoon: 三〇全开
+16:17 stardust quit:Remote host closed the connection
+16:18 stardust joined channel
+16:20 lhanjian: https://v2ex.com/t/268859
+16:21 lhanjian: 噗噗噗
+16:22 varna: lhanjian: 逼乎上有这种问题，我记得
+16:23 Stevearzh joined channel
+16:27 lh_cat: varna: 自旋的 pause 换成 usleep(0.1) 效果明显。
+16:28 cleamoon: 我觉得可以装成变态天天在直播间骚扰她，要不她回来，要不她就不会再回来了
+16:28 varna: lh_cat: pause是奔腾那个spinlock hint的pause?
+16:28 lh_cat: 是。
+16:29 varna: otl
+16:29 lh_cat: 那个 pause 去掉也比原来快。
+16:29 varna: 奇异，我觉得这是OS调度策略的事情
+16:49 february quit:Read error: Connection reset by peer
+16:51 Stevearzh quit:Remote host closed the connection
+16:54 Stevearzh joined channel
+17:01 T2 joined channel
+17:02 lyt quit:Quit: lyt
+17:03 Dove quit:Ping timeout: 250 seconds
+17:06 Yuntian joined channel
+17:07 february joined channel
+17:12 T2 quit:Ping timeout: 276 seconds
+17:14 varna: 似乎来了新人
+17:14 february: 谁？
+17:14 varna: 18:03 -!- Yuntian [~Yuntian@153.99.217.52] has joined #c_lang_cn
+17:15 cleamoon: 孕舔
+17:16 february: 他是个高手。。。 linux 4.4
+17:17 cleamoon: 南京呀
+17:17 Yuntian: ?
+17:17 cleamoon: 就是他写出了linux 4.4？
+17:17 Yuntian: 我只是学生。。 。。 
+17:18 Yuntian: 一只萌新 你们在说什么  。。 
+17:18 stardust: Huh?
+17:18 february: hi Yuntian， 我是大一 
+17:18 varna: february: 你在逗乐么……
+17:18 stardust: linux 4.4是什么😂
+17:18 Yuntian: 我是大三 
+17:19 cleamoon: 大三萌萌哒
+17:19 february: kernel
+17:19 varna: ctcp version出来的版本吧
+17:19 cleamoon: 是提督吗
+17:19 varna: 然而这和手法有什么关系，作为一个蒟蒻我不太明白……
+17:19 Yuntian: 我用的是 ubuntu  16.04 
+17:19 cleamoon: 现在arch是什么版
+17:19 varna: 我看看
+17:19 Yuntian: arch 2016-03 
+17:19 february: varna， 是
+17:19 varna: 先同步一下
+17:20 Yuntian: 我前几天玩的 。  
+17:20 february: Yuntian， 我用debian 8.3
+17:20 february: ubuntu 15.10
+17:20 february: freebsd 9.3
+17:20 Yuntian: 这个 也是才换成的。
+17:21 varna: february: kqueue好用么？
+17:21 varna: 驲，pacman过滤起来太慢了……
+17:21 varna: cleamoon: core/linux 4.4.5-1
+17:21 varna: testing/linux 4.5-1
+17:22 february: varna，我几乎没用过kde下的软件
+17:22 varna: february: 我在说API, 请睁大眼睛
+17:22 february: varna， 我用的是mate 1.12
+17:22 varna: february: 我在说API, 请睁大眼睛
+17:22 cleamoon: 羊驼子开testing？
+17:22 stardust: 2333
+17:22 varna: 不开
+17:22 varna: arch testing是找死
+17:23 varna: 另外我自从把内核升到4.3.3-3之后，开机就有吐核现象
+17:23 varna: 估计到我换本子之前我都不会再按季斗争了……
+17:23 cleamoon: 开testing还不如直接用aur里的玩意
+17:23 stardust: 还有关屏了没法还原
+17:23 varna: 我这还能复原，不过开机的时候也有小概率屏幕彻底黑掉
+17:23 february: 我用的是 hp stream 11
+17:24 varna: TP E430
+17:24 Yuntian: 我的  tp t430
+17:24 varna: february: 其实看到说BSD的人，我就想问问kqueue这玩意到底如何……因为我只用过epoll
+17:25 varna: 但你的回答近乎可以变成一个梗……
+17:26 cleamoon: 彻底黑掉什么鬼
+17:26 Yuntian: 用arch邪教的人多么  
+17:26 lhanjian: 看到k就是kde系列么……2333
+17:26 february: varna，https://people.freebsd.org/~jlemon/papers/kqueue.pdf
+17:27 varna: february: 我问的是你自己的感受
+17:27 varna: Yuntian: 这里有几个
+17:27 cleamoon: 下次买电脑时看看有没有linux驱动吧
+17:28 Yuntian: 我的 thinkpad 还好啊 
+17:28 Yuntian: 驱动挺好的 ， 
+17:28 Yuntian: 我还有一个 华硕的 用的 比较麻烦。 
+17:29 andy_lv joined channel
+17:30 Matsune joined channel
+17:31 Matsune: 这几天日元跟吃了屎一样疯涨 我好慌
+17:33 cleamoon: 瑞士特维尔镇两名穆斯林男学生表示出于宗教原因拒绝与女教师握手。校方为了平息事态做出责令两名学生既不和女教师握手也不和男教师握手的决定。结果事情反而不断发酵，在社会上引起广泛争论。
+17:33 cc: 神马，日元疯长？
+17:33 varna: 意识模糊，四月份我应该没什么戒指要发了……
+17:33 cleamoon: 好像又有新人？
+17:34 cleamoon: 是日元涨还是rmb跌？
+17:34 varna: 日元涨
+17:34 cc: 我只知道上海的菜价涨 房价跌
+17:34 Matsune: 日元涨
+17:35 Matsune: 从0.056涨到了今天差不多0.06了
+17:36 andy_lv: 新手，测试一下
+17:36 andy_lv: ^_^
+17:36 february: varna， 在freebsd kqueue比epoll要好，因为他是团队直接优化
+17:37 lhanjian: 。。。
+17:37 lhanjian: 搞笑么
+17:37 andy_lv: 找到组织了
+17:37 cleamoon: orz
+17:37 lhanjian: 难道freebsd还有epoll
+17:37 cleamoon: 涨得略多
+17:37 lhanjian: andy_lv: 贴吧来的？
+17:37 varna: february: 你在开什么玩笑
+17:37 andy_lv: 嗯
+17:37 lhanjian: andy_lv: 贴吧id？
+17:37 cleamoon: andy_lv, 舰娘吧？
+17:38 varna: february: 求大神指导下，我感觉我的网络编程都白搞了
+17:38 andy_lv: 不是，随便起的，第一次玩irc
+17:40 lhanjian: andy_lv: 在哪儿看到的IRC这个频道？
+17:40 cc quit:Remote host closed the connection
+17:40 Matsune: 在新日暮里
+17:42 andy_lv: lhanjian 在贴吧看到的
+17:42 iyzsong: orz
+17:42 lhanjian: andy_lv: ok
+17:42 Yuntian: 我是在 hexchat的发现里面发现的 
+17:42 varna: 哦瘊瘊
+17:44 iyzsong:  吼啊 欢迎ʕ•ٹ•ʔ
+17:44 february: varna, 怎么了？ 我又没说epoll效率比kqueue低.
+17:45 varna: february: 不，你仔细看看你话里的槽点；如果没看出来，求指导下我这小白……
+17:48 Yuntian: http://img.vim-cn.com/d8/c0139502c6fefc8aea1ad221a01b8f52eab9f2.png
+17:49 Yuntian: 试一试 怎么发图片 。
+17:51 february: varna, 团队-》官方 这总行了？
+17:52 varna: february: 我换个问法：你写过支持并发连接的TCP服务器吧
+17:52 cleamoon: Yuntian, 这图标好谐呀
+17:52 Yuntian: ？
+17:53 Yuntian: 图标 ？
+17:53 cleamoon: 桌面的图标
+17:53 Yuntian: 恩 
+17:53 Yuntian: 我觉得很好看啊
+17:53 cleamoon: varna, 那是个大一的学生......
+17:53 cleamoon: Yuntian, 是挺好看的，叫什么？
+17:53 varna: cleamoon: 但他既然没放弃，就说明他会……
+17:53 varna: 不然我相信他不耻于说「不知道」
+17:54 Yuntian: numix
+17:54 cyrushmh joined channel
+17:55 cleamoon: varna, 这有什么不相信的
+17:55 varna: cleamoon: 晋太元中
+17:56 Yuntian: 武陵人
+17:56 varna: (｡･ω･)ﾉ捕鱼为业
+17:57 cleamoon: 炸鱼为业
+17:58 iyzsong: thanks for all the fish :-
+17:58 Yuntian: 我想问下怎么 @ 别人 
+17:58 lhanjian: iyzsong: Tks for 有人
+17:59 Yuntian: <lhanjian> 
+17:59 lhanjian: 基本上提到别人名字都可能会有提醒
+17:59 february: varna, socket -> 端口 ——》 listen -》 accept -》 process ——》finish ？？
+18:00 varna: february: yooooooo
+18:00 Yuntian: 好吧 
+18:00 varna: 诸君，一个段子穿着家养小精灵多比的茶壶保暖套在我们面前跳舞……
+18:00 varna: february: 你确认你平时都是这么做的？
+18:02 cleamoon: 多比不是有袜子吗
+18:02 varna: 多比后来有各种衣服
+18:03 varna: 包括赫敏织的所有帽子袜子
+18:03 varna: 不过“一个笑话穿着多比的茶壶保暖套跳舞”应该是罗恩嘲笑珀西的原话
+18:04 cleamoon: 没看过太多原著.....
+18:13 february: varna， 对不起我不是程序员，这是4个月前我在读《unix网络编程 api》的时候看到的tcp服务器过程。 可能我记错了 。。。对不起！ 编程我是小白...
+18:14 varna: february: _(:з」∠)_
+18:15 Matsune: 大家好 我是一只萌新
+18:15 varna: ^ 给一
+18:15 iyzsong: 大家好 我是一只萌污
+18:18 cleamoon: 大家好 我是一只变态
+18:18 cleamoon: varna <-- 这个是给一
+18:18 varna: 我只是头羊驼
+18:19 iyzsong: 太可怕啦
+18:19 cleamoon: Algayca
+18:20 varna: Alpacius!
+18:25 stardust quit:
+18:25 stardust joined channel
+18:26 cleamoon: GayPerlcius
+18:29 lh_mouse: [17:34:16] <february> varna， 在freebsd kqueue比epoll要好，因为他是团队直接优化 // epoll 是 Linux specific ，你在 FreeBSD 根本无 epoll 可用。
+18:30 lh_mouse: 所以这更像是搞笑的语气，就好像狮子不会和老虎大家一样搞笑。
+18:30 lh_mouse: s@大家@打架@
+18:31 lh_mouse: [16:26:57] <varna> 奇异，我觉得这是OS调度策略的事情 // pause 不应当和调度有关。
+18:31 varna: lh_mouse: pause无关，但usleep应该有关
+18:32 varna: 不过删去pause的结果没法这么解释
+18:32 lh_mouse: 实际用的是 NtDelayExecution 它精确到 0.1 个 μs。
+18:32 varna: 这个会引发内核级别的重调度么？
+18:32 lh_mouse: 会的。
+18:33 lh_mouse: 延迟改成 0 会明显不同。
+18:33 lh_mouse: 而延迟 0.1 us 和 100 us 并无区别。
+18:33 varna: 0的话是要求yield, 然后立刻醒来？
+18:33 varna: 这样的话相当于白吃一个陷入了
+18:34 lh_mouse: 没有文档可以依靠。有专门的 yield 的  syscall，实际看起来和 sleep(0) 差不多。
+18:35 varna: 0.1和100没差别的话，总觉得是在依赖OS自己的调度
+18:35 lh_mouse: 是。
+18:36 lh_mouse: 但是比无脑自旋会快很多。
+18:36 varna: 无脑自旋在调度面前败下阵来的感觉……
+18:36 lh_mouse: pause 自旋时间大概在 7000 - 8000 ms，去掉 pause 大概在 3000 - 3500，用 usleep 自旋大概在 300 左右。
+18:36 lh_mouse: 一共是 100 条线程。
+18:36 varna: 噫，差别巨大
+18:37 cleamoon: 狮子会和老虎打架吗？
+18:37 lh_mouse: 无脑自旋虽然陷入次数低很多，但是总执行时间多了二十倍有余。
+18:37 lh_mouse: cleamoon, 不会。地理隔离。
+18:37 cleamoon: soga
+18:38 cleamoon: 老虎一般生活在哪，我只知道草原上都是狮子
+18:38 varna: cleamoon: 亚洲
+18:38 cleamoon: soga
+18:38 varna: 老虎一般需要生活在山地
+18:39 lh_mouse: 野生狮子和野生老虎大家的概率非常之低。
+18:39 lh_mouse: 呃。
+18:39 lh_mouse: s@大家@打架@
+18:39 lh_mouse: sed 有个笑话。
+18:40 Mokou joined channel
+18:40 lh_mouse: /foo/s/bar/baz/gi
+18:42 lh_cat quit:Quit: Connection closed for inactivity
+18:46 cleamoon: varna, 羊驼子那天说的，工作会一些基础但是门槛高的东西比较好，那这类会不会变成无脑重复和类似维护测试这类的工作呢？
+18:47 varna: 不会，因为我觉得ML领域里，能吹水的人不少，但基本功好的人还是少数
+18:48 varna: 但有个尴尬点，如果公司对ML方法的认识就是折腾数据而不是把算法实现进系统，那可能就沦为你说的状况了
+18:48 cleamoon: 我讨厌的就是做一个完全没有实现的工作
+18:48 cleamoon: 灰机有可能就是实现完全和你无关的
+18:49 Mokou: http://ww1.sinaimg.cn/mw690/844527a1gw1f2oaglwngkg209b06qe8g.gif “谷歌的人工智能肥肠喜欢狗”
+18:49 varna: 这一坨沙耶一样的东西是怎么回事……
+18:50 Mokou: 不 可 名 状
+18:50 cleamoon: 我感受到了哈士奇的力量
+18:52 andy_lv:  /quit
+18:53 andy_lv quit:Quit: leaving
+18:54 Matsune: 其实我觉得很多地方都是能吹水的人不少 基本功好的人少。。。
+18:55 cleamoon: 越大的系统每个工人越不重要？
+18:55 Mokou: http://ww3.sinaimg.cn/mw690/6bb08cd9jw1f2obby626fj20ic28fn7t.jpg 洋葱新闻注意
+18:55 Matsune: 我打算毕业回家之后疯狂刷一波题 去日本之前锻炼锻炼基本功
+18:56 cleamoon: 数学基本功刷什么题
+18:57 Matsune: 刷物理题。。。
+18:57 cleamoon: .......
+18:57 Matsune: 求！积！分！
+18:58 Matsune: 昨天去找老师说毕设的事情 他还跟我说应用数学很多东西都是相通的
+18:59 Matsune: 还给了本小册子我看 说虽然做组合 以后也说不定用得到呢 之类的。。。
+19:00 cleamoon: 现在就给你一道，一个椭圆体，长为a，宽为b，以为圆形的横截面中心的垂线为对称线，求 int dm*r_m^2，dm是每一小块的质量，设整个质量为1，r_m是中线到质量dm的距离
+19:01 * Matsune 突然失明了看不见任何东西
+19:01 cleamoon: 大家赶快上了祭音
+19:02 varna: Matsune: 爆
+19:02 Mokou: http://ww2.sinaimg.cn/mw690/6aa09e8fjw1f2o9xbn7pjj20qo173gvq.jpg
+19:03 Matsune: 说起失明 我感觉现在的视力测试站的位置到视力表的距离 比我初中高中的时候要近
+19:03 Matsune: 是错觉吗
+19:04 cleamoon: 是错觉，你没在检测视力，你在被爆
+19:04 february quit:Quit: Leaving
+19:05 Matsune: 我高中的时候测视力就是5.0 5.0
+19:05 Matsune: 我现在明显感觉视力下降了
+19:05 Matsune: 前段时间去测居然是5.1 4.9
+19:07 * Mokou 4.7 5.0
+19:07 * varna 八百度
+19:07 cleamoon: 275度
+19:08 cleamoon: 羊驼子真是800度的话，摘下眼镜就什么都看不到了，就可以爆了
+19:09 varna: 我可从局部放出射流，相当于一台火箭发动机
+19:09 Mokou: * 需要提前注入燃料
+19:11 cleamoon: 从后注入
+19:14 lhanjian: 近视啦也很正常
+19:15 varna: 这次活动备战简直讽刺到爆
+19:15 varna: 资源肯定是我有史以来最多的一次
+19:15 varna: 然而桶太少了
+19:15 Mokou: 你占一卦看看打不打甲
+19:16 varna: 不用占，打甲
+19:16 varna: 打不过就咸
+19:16 varna: 现在我有63k/81k/70-k/69k，但只有339桶
+19:17 Mokou: OTL
+19:18 Mokou: http://ww3.sinaimg.cn/mw690/76ce3987jw1f2nwgzdt15j20dc0hsjth.jpg http://ww2.sinaimg.cn/mw690/76ce3987jw1f2nwhojev2j20dc0hs0ub.jpg 东京和大阪的警察招聘海报
+19:19 cleamoon: 为了尔等太多的资源，来一个，E9需要10个火箭，然后E8 boss隔壁开放U酱打捞
+19:19 varna: 233333
+19:19 varna: 资源不是问题，主要麻烦是桶
+19:19 Mokou: 我看这大阪府是药丸啊
+19:19 varna: 即使我资源被掏空，也有办法快速恢复
+19:19 varna: 但桶就不行了
+19:20 Mokou: +
+19:20 cleamoon: 按我那个脑洞资源就是问题了
+19:20 varna: 首先跪的还是桶
+19:20 varna: 活动打捞，资源都是其次
+19:20 Mokou: 25.4K/25.3K/50.3K/10.7K + 317/742
+19:20 cleamoon: 桶也可以剋呀
+19:20 varna: 不，我恢复资源是不花钱的
+19:20 cleamoon: 资源和黑旗差不多
+19:20 Mokou: 你桶多
+19:20 Mokou: 资源我随随便便就能搞一堆
+19:21 cleamoon: 也没多多少，零头只比你们的和多一点
+19:21 andy_lv joined channel
+19:23 Mokou: “讲道理，当年家里条件不允许，我都是看着电视上的丰胸广告和内衣广告撸的。”
+19:23 Mokou: “广告不都是几十秒........”
+19:23 cleamoon: http://photo30.bababian.com/upload6/20121222/A29CE8928841EC74FADFB87BDB157E8F.jpg   卧槽，我一直以为死神的作者是个文艺青年，敢情是个 deep dark fantasy
+19:24 varna: o
+19:24 varna: 敲错了……
+19:24 Mokou: 0
+19:24 cleamoon: O
+19:24 Mokou: ◯
+19:24 cleamoon: ∞
+19:26 cleamoon: 耻球分裂
+19:28 andy_lv joined channel
+19:29 AaronLi joined channel
+19:30 Stevearzh quit:Ping timeout: 244 seconds
+19:39 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=a55992a58044ebf86d716437e9f8d736/993c0efbfbedab64cd76e666f036afc378311ec7.jpg 卧槽……
+19:40 Mokou: 噗
+19:40 varna: 吃饭去，这个太吓人了
+19:40 Mokou: 魔王无所不能 
+19:43 Dove joined channel
+19:51 iyzsong: 吃饭 o.o
+19:52 FrankHB joined channel
+20:00 bestucan joined channel
+20:01 Mokou: http://ww4.sinaimg.cn/mw690/a7cb85c1jw1f2odvbf3uhj20f03s4wod.jpg
+20:05 hoxily joined channel
+20:09 Mokou: 央视纪录片也拿着剑刃对砸……
+20:11 iyzsong: 剑都拿来是捅的吗？
+20:11 Mokou: 这个问羊驼子
+20:13 tutu_wind: wow
+20:22 iyzsong: 爆炸0o0
+20:22 condy: iyzsong: 肛
+20:22 condy: iyzsong: 肛！
+20:24 iyzsong: condy: 我把票打印了出来，可以不用微信啦 = =
+20:25 condy: iyzsong: 肛！
+20:25 condy: iyzsong: 好厉害！
+20:25 varna: iyzsong: 剑有很多类型，用剑者是否穿盔甲也对使用的剑术有很大影响，但无论如何剑是用来砍人的，不是用来砸对方武器的……
+20:27 condy: iyzsong: O.O
+20:27 condy: iyzsong: 还有9天
+20:27 bestucan quit:Quit: bestucan
+20:28 varna: 噫噫噫
+20:28 varna: 233song要和LEEE去听演唱会，然后共进烛光晚餐，然后（从略）啦！
+20:30 varna: 现充真可怕
+20:30 iyzsong: varna: 和破condy去..
+20:30 varna: 不是说能见到噫噫噫么？
+20:30 cleamoon: 然后233song在饭店被绑住，来了一群黑叔叔，然后从略
+20:30 varna: cleamoon: 他在北京，不在广州
+20:31 cleamoon: 也可以的
+20:33 iyzsong: varna: 谁说的..
+20:33 cc joined channel
+20:34 varna: iyzsong: condy不是说可能见到你未来娇妻什么的
+20:34 Mokou: 不，未来娇气就是condy
+20:34 Mokou: (确信)
+20:34 Mokou: 娇妻*
+20:34 * iyzsong 已吓尿
+20:35 * varna 把BGM换成了以前LEEE推荐的曲子
+20:35 varna: 呜呼呼
+20:35 iyzsong: 我不需要娇妻啊 我是抖M
+20:35 iyzsong: 我去
+20:36 cleamoon: varna, 做CS是不是应该会一些业务逻辑比较好？
+20:37 varna: cleamoon: 业务逻辑是从需求里来的，你想说的不是这个吧
+20:40 Mokou: http://ww3.sinaimg.cn/mw690/be3b7789gw1f2obgui4irg20660b4u0y.gif “啊，看了好像生孩子”
+20:40 Mokou: 好想*
+20:41 cleamoon: varna, 会不会发生不明白逻辑的情况？
+20:41 * cc 我们朵朵也很可爱！
+20:42 varna: cleamoon: 客户说不会话是正常的，看造化吧
+20:42 AaronLi1 joined channel
+20:43 lh_cat joined channel
+20:44 Mokou: 妈蛋日元又涨了？
+20:44 Mokou: 10kJPY现在似乎是592RMB了
+20:45 AaronLi quit:Ping timeout: 260 seconds
+20:45 AaronLi1 is now known as AaronLi
+20:45 cc: 。。。
+20:45 cc: 这个不是今天下班的时候说了么
+20:45 varna: 算了，换个古老的BGM: Raistlin and Rose
+20:46 x-hope: 每天都被画的感觉好棒啊（
+20:47 varna: 噗噗噗！
+20:47 varna: HO棠求介绍可爱的妹子！
+20:47 cleamoon: orz
+20:47 cleamoon: 现充之气太强了
+20:47 cleamoon: 受不了了
+20:47 * Mokou 被击沉
+20:49 Dove: 现充HO棠
+20:49 varna: 太可怕了，不行我五六月份去红旗那儿拐1d4个妹子来……
+20:49 x-hope: 超开心的
+20:49 varna: 这样我加班的时候就可以舔了
+20:49 Dove: 你准备啥时候去入职，不再找找看么？
+20:50 cleamoon: 1d4个？
+20:50 varna: Dove: 我入职时间跟那边都谈好了
+20:50 Mokou: 这现充真可怕，还要抢我妹子
+20:50 Dove: 啊，那就祝你一切顺利。
+20:50 cleamoon: 这群现充，我要烧烧烧
+20:50 varna: cleamoon: xdy = 掷x次y面骰，把结果相加
+20:50 Dove: 我不是现充啊
+20:51 varna: Dove: 我跟你说过，这年头工作不好找
+20:51 Dove: 嗯，我猜也是难。
+20:51 Dove: 我要失业啦，啊啊啊啊啊。
+20:52 cleamoon: 就上次T2问的那个 getc 的问题看，如果你能找到10k的工作，我觉得我年薪百万不是梦想
+20:53 Dove: 我会找到给你看的，毕竟还有一年，我可以补一点。
+20:54 cleamoon: 哦，你说的不是现在找呀
+20:54 Dove: 嗯，我还大三呢，挂三门课，实习我都不想去。
+20:55 Dove: 不过都是体育之类的修修也就过了
+20:57 cleamoon: 你想要点动力吗
+20:58 cleamoon: 18年前T2能弄到月薪10k的工作，我就把船全拆了
+20:58 Dove: 这么看不起我。
+20:59 cleamoon: 我赌的也不大呀
+20:59 Yuntian:  我也大三哎  
+20:59 Dove: 握爪
+20:59 Yuntian: 准备找工作了
+20:59 Dove: 你会什么？
+20:59 Yuntian: 我考了CCIE
+21:00 varna: 思科啊……你要去做通信？
+21:00 Yuntian: 恩 
+21:00 varna: 不错不错
+21:01 Yuntian: 因为不想考研 。。 
+21:01 Dove: 同不想考研
+21:01 cleamoon: 思科呀，如果见到方校长，请帮我问候他全家
+21:01 Yuntian: 方校长 是谁？ 
+21:02 Dove: 病魔的基友
+21:02 varna: 方滨兴
+21:02 varna: 病魔的基友+
+21:02 Yuntian: 。。。。
+21:03 Yuntian: 不是 那个 搞墙的么 
+21:03 varna: 是那个
+21:03 Yuntian: 我是南邮的 。 
+21:03 varna: 这么长时间了，病魔始终没战胜他
+21:03 Yuntian: 花钱买个vpn不就好了  。 
+21:04 tutu_wind quit:Ping timeout: 264 seconds
+21:04 varna: 两回事
+21:04 cleamoon: 战胜不了的，那么多福利呢
+21:04 varna: @jjgirls
+21:05 Yuntian: 就算病魔战胜了他 
+21:05 Yuntian: 还是有另一个替代它 
+21:06 varna: 好歹病魔战胜方校长显示了这个病魔不是怂逼
+21:07 Yuntian: 恩 
+21:07 cleamoon: 我倒不想让病魔战胜他，得个生不如死的病就好了，不需要死的，罪不当诛
+21:08 varna: 对了，岚月酱还记得那个火箭发动机的问题吧
+21:08 cleamoon: 记得呀
+21:09 varna: 下面有个人提到菊花其实是单涵道
+21:09 varna: 我不知道涵道是什么，但如果进行肛门造瘘的话，是不是就变成多涵道了？
+21:10 Yuntian quit:Quit: Leaving
+21:11 Yuntian joined channel
+21:11 cleamoon: 涵道说人话就是口，菊花只有一个口，涡轮是有入口出口的
+21:11 cleamoon: 肛门造瘘是什么
+21:12 cleamoon: 哦，多造几个菊呀
+21:12 varna: +
+21:12 cleamoon: 我觉得那也应该叫单涵道吧...... 毕竟没有入口
+21:12 varna: 哦哦……
+21:12 cleamoon: 不过，火箭发动机说涵道吗？
+21:13 cleamoon: 涵道一般都是灰机发动 机吧.....
+21:13 varna: 那人按照一开始航空发动机的tag说的
+21:13 varna: 后来tag才改了火箭
+21:13 varna: 余谈，有种叫肛瘘的病变就是钢管周边感染破裂形成瘘管，多一个菊花……
+21:14 varna: 我好奇在知乎上搜了一下，有人转了个0的自述，那给一就是被人肛出了肛瘘……
+21:14 cleamoon: 其实，他们都忽略了一个很重要的地方，稍作改装也许就能飞起来，重点是，屁，是可以点燃的
+21:14 cleamoon: 噗
+21:14 varna: 屁股也可燃，所以这似乎很糟糕
+21:14 andy_lv quit:Quit: Changing server
+21:15 cleamoon: 人类几乎不可燃
+21:15 cleamoon: 正常大气压下人类熔点比燃点低
+21:15 cleamoon: 燃烧前就融化了
+21:15 cleamoon: 当然，毛发燃点很低
+21:16 cleamoon: 丝袜也低
+21:16 cleamoon: 估计跳蛋也低
+21:16 cleamoon: 出么
+21:16 varna: 哦哦
+21:16 cleamoon: 出门.....
+21:16 andy_lv joined channel
+21:20 AaronLi quit:Ping timeout: 276 seconds
+21:22 cleamoon quit:Ping timeout: 268 seconds
+21:24 Yuntian quit:Remote host closed the connection
+21:29 varna: 提问：为什么近年国内ijn粉越来越多，而且越来越光明正大？ 回答：因为IJN是抗日(本陆军)主力之一 
+21:29 Dove: 2333
+21:33 x-hope: 233
+21:35 lhanjian: 2333
+21:35 lhanjian: 陆军马鹿
+21:35 lhanjian: 海军马陆
+21:36 Mokou: 帝国海军在与帝国陆军斗争的同时，还要分心与米英鬼畜战斗
+21:36 miao233_ joined channel
+21:36 Mokou: 另外海军是八嘎
+21:37 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+21:37 varna: 今天跑远征2得了两个桶……
+21:38 cc joined channel
+21:42 Mokou: ……
+21:42 Mokou: 今天我跑远征2大概也得了两个桶
+21:44 varna: 随机数有问题
+21:45 Sous-Titre joined channel
+21:47 Sous-Titre: 各位，有这边有个 ping 的问题。ping baidu.com 一直超时。但是访问网页没问题。
+21:47 varna: Sous-Titre: traceroute能走通？
+21:48 Stevearzh joined channel
+21:48 Sous-Titre: neng 
+21:48 Sous-Titre: 能
+21:48 Sous-Titre: 1  10.3.255.254 (10.3.255.254)  1.884 ms  1.322 ms  1.263 ms
+21:48 varna: 那也许只是你道中某处禁了ping?
+21:48 Sous-Titre: 2  hca0.u-bordeaux.fr (147.210.245.254)  1.725 ms  6.403 ms  1.651 ms
+21:48 varna: 百度自己的服务器没禁ping
+21:48 Sous-Titre: 我就是不知道我干了什么……
+21:49 varna: 大概不是你的问题
+21:50 varna: 其他协议没问题的话，暂时不管ICMP echo也行
+21:50 Sous-Titre: 我想测试网易音乐的 ip
+21:51 Sous-Titre: 结果一看什么都 ping 不通了
+21:51 Sous-Titre: 反而 ping 百度的 nslookup ip 可以
+21:52 varna: 要ip的话直接DNS解析吧
+21:52 varna: 不排除某处禁ping的可能性
+21:52 varna: 你ping局域网内的主机应该就不会死
+21:53 Sous-Titre: 对
+21:53 Sous-Titre: 主机没问题
+21:53 Sous-Titre: 就是各种网址，全不行
+21:53 varna: 也许是某个防火墙过滤掉的
+21:53 Sous-Titre: DNS 我也没加东西= =
+21:53 Sous-Titre: 我现在用手机开热点试试。
+21:54 Sous-Titre: 囧…… 学校防火墙干的……
+21:55 Sous-Titre: 谢谢谢谢
+21:55 varna: Sous-Titre: 爆
+21:58 miao233_ quit:Ping timeout: 246 seconds
+22:02 lhanjian: http://weibo.com/5851185687/DpUe560tS
+22:02 lhanjian: varna: 
+22:03 varna: 词牌我不懂……
+22:03 Mokou: https://tusenpo.github.io/FlappyFrog/?from=singlemessage&isappinstalled=0
+22:03 varna: 噗
+22:03 varna: 随便找个词牌对一下
+22:04 lhanjian: 吐血了
+22:04 lhanjian: 感觉跟词牌还是不太贴的吧
+22:05 varna: ok应该不是填的
+22:05 lhanjian: 打油词（？）
+22:05 cc: https://www.zhihu.com/question/36246233
+22:05 varna: 蝶恋花上来是中平中仄平仄仄
+22:05 varna: 直接炸裂
+22:05 varna: 古韵我没了解过，略去
+22:07 cleamoon joined channel
+22:08 cleamoon: varna, 比如如果搞 ML 会一些商管，搞数值会一些数理化这类的，应该很有优势？还是两可的？
+22:09 lhanjian: Mokou: 2333333333333333
+22:09 cc quit:Quit: xc:www.chnxc.net
+22:10 varna: cleamoon: 前者没意义，后者会数学应该好
+22:11 cleamoon: varna, 搞数值不会数学不是去卖的吗......
+22:12 varna: 所以说……
+22:13 varna: 需求这个事强求不得
+22:13 cleamoon: 这个 flappy蛤 略容易
+22:14 tutu_wind joined channel
+22:14 cleamoon: varna, 但是比如污理什么的不很用得上？
+22:14 lhanjian: cleamoon: 但是效率不容易达到80%吧
+22:14 cleamoon: lhanjian, 不知道效率怎么计算的
+22:15 Dove: cleamoon: 写物理的电学什么的程序赚得很多的。
+22:15 cleamoon: 电学？@羊驼子
+22:15 varna: cleamoon: +
+22:15 varna: 电学啊，我会一些
+22:15 cleamoon: Dove, 你指的是什么电学的程序
+22:16 Dove: 我不懂不好说
+22:16 varna: cleamoon: 效率应该是过一个障碍+1s, 你付出的生命就是游戏时间
+22:16 cleamoon: soga
+22:17 lhanjian: https://www.zhihu.com/question/42224326
+22:17 lhanjian: 总想搞两个大新闻
+22:17 cleamoon: varna, 基本上说，数学多会些很有用？
+22:18 AaronLi joined channel
+22:19 varna: cleamoon: 我是这么看的，不过只限于研究向的；CS工程的话，还是拼基本功
+22:19 cleamoon: varna, 基本功是？撸码能力吗？
+22:19 varna: +
+22:20 cleamoon: 撸码能力基本就是练嘛，没什么其他奇术
+22:20 Dove: 就是电能分析程序，PLC梯形图啥的吧
+22:20 varna: 我听着歌给蛤打拍子，结果续死了……
+22:21 Dove: 写这种貌似赚得多，不过貌似一般软硬件电气自动化都要懂点。
+22:22 varna: http://tieba.baidu.com/p/4463257529 写轮眼
+22:23 cleamoon: 续了55s，80%
+22:23 cleamoon: 嗯，这种东西顶多是 matlab 的一个部件吧，也就是普通的工资
+22:24 varna: 所谓电学就是舔电的学问
+22:25 Dove: 一般是电能分析仪什么的软件部分实现，跟matlab的部件扯不上关系吧。
+22:27 cleamoon: 又续了156s，81%...... 这个不上升呀
+22:28 cleamoon: 电能质量分析仪
+22:28 cleamoon: ？
+22:28 Dove: 似乎是这个东西，我也不懂。
+22:31 Mokou quit:Ping timeout: 250 seconds
+22:33 Mokou joined channel
+22:34 AaronLi quit:Remote host closed the connection
+22:34 varna: 优しGAYな言叶ささやく / 伪の可爱さじゃなくて  # 噫
+22:35 tutu_wind quit:Ping timeout: 248 seconds
+22:36 lh_mouse: 言叶 差评。
+22:36 varna: 驲
+22:36 varna: 从旧网页贴出来的时候没看转码……
+22:37 cleamoon: 看了一下，电能质量分析仪的程序部分不难呀
+22:37 condy: 桂言叶吗(
+22:37 varna: 优しGAYな言葉ささやく / 伪の可爱さじゃなくて  # 噫
+22:37 Dove: 不难么，那就不知道了。
+22:38 cleamoon: lhanjian, 这种家长很多很多很多的，不算新闻了
+22:40 cleamoon: 就是一个后端是电脑的测量仪嘛，实在没信心前段都不需要计算，后端计算可以胡来的地方就很大了
+22:41 Dove: 布吉岛
+22:42 Dove: 我等着你年薪百万，话说感觉也不算很多。
+22:42 stardust: 电力电子不是属于电气专业的吗
+22:42 Dove: 交叉方向懂的人少吧
+22:43 stardust: 感觉没什么交叉的
+22:43 Dove: 他们应该不怎么会写代码
+22:43 cleamoon: 交叉不大
+22:44 Dove: APUE看着不是一般的蛋疼
+22:45 Dove: 幸好linux的API都比较好记。
+22:45 varna: 你有man
+22:46 Dove: 这书还介绍一些系统的机制。
+22:46 Dove: 我是linux盲所以还是读一下
+22:47 iyzsong: 要girl不要man
+22:47 lh_mouse: alias girl=man
+22:47 iyzsong: orz
+22:48 cleamoon: API 的话一般不都现查吗？
+22:48 cleamoon: 噗
+22:48 cleamoon: 带把女神
+22:49 cleamoon: varna, 基本功的话，读 Software Technology 比较好？
+22:49 varna: cleamoon: 基本功基本不可能在学校学到
+22:50 cleamoon: varna, 我校都是 project.... 不是让你学的，是让你做的....
+22:50 varna: 那种培养不出来
+22:50 tutu_wind joined channel
+22:50 varna: 基本功靠见识和积累
+22:51 Dove: 我打算啃完APUE去啃unix network programming和tcp/ip详解卷1作为后端基础知识，基本功暂时放弃了，啃完撸点东西读点码。
+22:51 varna: 啃完233333
+22:51 Dove: 去读nginx啥的
+22:52 Dove: 一边啃一边撸码？
+22:52 hoxily quit:Quit: Leaving
+22:52 cleamoon: varna, 见识和积累哪里找.... 布鲁斯特吗
+22:52 Dove: 我猜github
+22:52 iyzsong: (ーー;)
+22:52 condy: 我猜开天坑 Σ<(= ° △ °|||)>︴
+22:52 lh_cat quit:Quit: Connection closed for inactivity
+22:53 cleamoon: 吉特哈勃还不如我自己开天坑呢.....
+22:53 varna: cleamoon: 不知道，大概靠做失败品吧
+22:54 cleamoon: 于是还是靠开天坑呀.....
+22:54 * varna @提不起劲
+22:54 iyzsong: 开不动..
+22:55 hportsnap_els9 quit:Quit: Leaving
+22:56 Dove: 碎觉，诸君武运。
+22:56 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:57 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=82d399f0d7160924dc25a213e406359b/a6630ac2d5628535d1f32c8797ef76c6a7ef633c.jpg # 我要斩了嵌字
+22:58 cleamoon: varna, Software technology 是这类课  https://pastebin.mozilla.org/8866764
+22:58 cleamoon: 这tm是什么字体......
+22:59 varna: cleamoon: 我觉得这方向很卵，不会的学了还是不会
+23:00 cleamoon: soga
+23:00 cleamoon: varna, 我看课基本是安全方向的课多
+23:01 varna: 感觉坑
+23:01 varna: CS搬砖的话基本都是破事了
+23:01 cleamoon: Software Reliability 这类的
+23:01 varna: 课上没法讲的东西居多
+23:01 cleamoon: 就是破事呀......
+23:02 cleamoon: CS 反正都是破事
+23:03 varna: 问题是课上没人告诉你各种细节
+23:06 cleamoon: 看了一下，似乎确实有点水
+23:07 cleamoon: https://www.kth.se/social/course/DD2459/page/lecture-notes-53/  这什么诡异课程安排
+23:07 varna: Access denied, 要帐号
+23:07 cleamoon: ......
+23:08 cleamoon: https://pastebin.mozilla.org/8866768  等于什么都没教
+23:08 cleamoon: 看来还是学点有用的，然后自己多撸撸撸吧
+23:08 varna: 工程向的计算机技术就是这样
+23:09 cleamoon: 理论CS也挺水的
+23:10 cleamoon: https://pastebin.mozilla.org/8866769
+23:12 stardust: 我这儿的《嵌入式系统》课，花了四个课时讲怎么写Makefile。。
+23:12 cleamoon: .......
+23:12 AaronLi joined channel
+23:13 Mokou: 先睡
+23:13 Mokou: 诸君武运
+23:13 Mokou quit:Quit: 睡觉
+23:19 varna quit:Quit: leaving
+23:23 lh_mouse quit:Read error: Connection reset by peer
+23:24 lh_mouse joined channel
+23:28 AaronLi quit:Ping timeout: 264 seconds
+23:38 AaronLi joined channel
+23:43 AaronLi quit:Ping timeout: 264 seconds

@@ -1,0 +1,920 @@
+0:0 hope1:我搜搜有没有答案
+0:1 xxxxxxxx_ joined channel
+0:2 hope1:B
+0:3 iyzsong:2333,  我是这样想的: x方向每走7, y方向走4,  假定边长为28  最終各走28的倍数才能回到原点  4x, 7x, 第一次是4*28  
+0:6 hope1:x方向每走7，y方向走4？不对吧
+0:6 xxxxxxxxx joined channel
+0:7 iyzsong:好像是不对..
+0:7 varna:不对
+0:8 varna:这题该硬算……
+0:9 varna:沿射线EF走到F, 然后算F点反射线FG的落点，有AG=5/7
+0:10 varna:从而G处反射直接落在边中点上，两次反射之后到A, 原路返回
+0:10 varna:以上
+0:11 iyzsong:0.0
+0:12 iyzsong:如果是我 果断猜B弃..
+0:13 varna:其实这题有个诡诈的地方
+0:13 varna:他告诉你遇到顶点原路返回了，那一定是只算一半路径
+0:13 iyzsong:数学老师: 不会就选B 2333
+0:13 varna:所以凑这个一半路径试试
+0:14 varna:数学老师教我题设都有用2333
+0:14 iyzsong:orz
+0:21 xxxxxxxxx:噗然后就没了?
+0:21 varna:没了
+0:21 xxxxxxxxx:正太呢?
+0:22 hope1:图似乎画错了…… 计算中
+0:24 condy:hope1, 其实是个等比三角形的题目。
+0:26 xxxxxxxxx:我也觉得
+0:27 xxxxxxxxx:扩展网格以后反射轨迹应该可以化成一条直线
+0:27 varna:麻烦
+0:28 varna:不如硬算，两步就出来了
+0:29 hope1:怎么会反射到边中点上……
+0:29 hope1:condy, 怎么说
+0:29 xxxxxxxxx:就找个点然后算长度的程度
+0:29 varna:hope1: 算两次
+0:30 condy:hope1, 就是xxx的思路。
+0:31 xxxxxxxxx:类似于我只找镜子里的成像不找原物体的意思
+0:35 xxxxxxxxx:某个角开始的话 回到原点就是横向整数 纵向整数 不是角的话 再算上偏移就行了
+0:35 xxxxxxxxx:虽然说到底还是找点
+0:35 condy:走过的横、纵距离必须都为2的倍数，即h：w=7：4，而h、w需为偶数，则h最小为14，w最小为8，不过答案似乎不对啊。2根号65，一定是答案错了。。QAQ
+0:36 whocares_2 joined channel
+0:42 varna:噗
+0:42 varna:我算错了？
+0:43 *xxxxxxxxx 发觉自己判定回到原点的部分似乎搞错了....
+0:44 varna:草草草
+0:44 varna:又算错了
+0:44 *varna 算术不及格
+0:44 hope1:算术不及格+
+1:3 hoxily joined channel
+1:3 varna:yooo
+1:3 hope1:xxxxxxxxx, condy, 但是这样怎么得出总路程……
+1:4 condy:hope1, 总路程=sqrt(h^2+w^2)
+1:8 xxxxxxxxx:找出等长度的那根直线 然后算那根直线的长度
+1:9 xxxxxxxxx:算折线的长度感觉上就很坑
+1:9 varna:不坑
+1:9 hope1:就是说怎么找啊，又不知道来回反弹了几次
+1:10 hope1:算折线得迭代很多步啊
+1:10 cleamoon_ joined channel
+1:11 condy:hope1, 竖直走过的距离：横向走过的距离为=7：4，因为是返回，所以都为偶数。
+1:13 condy:就是将那个线直接做镜像，顺便将ABCD也镜像。
+1:14 hysw:分析学的分数出现了... 果然挂了...
+1:17 xxxxxxxxx:回到原点本身是有规律的 拆成两个方向上的运动的话 基本上就是都晃了几圈的程度 
+1:17 xxxxxxxxx:当然不是说晃的圈数一样
+1:19 xxxxxxxxx:只要纵向和横向经过不同的圈数后又正好又遇上了就是回到原点了吧?
+1:19 hysw:我果然是学渣
+1:20 xxxxxxxxx:学霸软绵绵云又在忽悠人了
+1:20 hysw:分析学挂了...
+1:23 xxxxxxxxx:画个坐标系 单个方向上 运动一单位是半圈 两单位是一圈
+1:24 xxxxxxxxx:两个方向上同时运动整数圈 就回到原点
+1:24 hope1 joined channel
+1:26 hope1:结果算出来是2sqrt(65)
+1:26 varna:+
+1:26 varna:最后不可能是一半的东西
+1:27 varna:如果你画图就会发现只可能是原路返回
+1:28 hope1:刚刚硬算了一遍结果也不可能是3sqrt(65)/2
+1:28 xxxxxxxxx:原路返回就是连续撞两次墙的结果
+1:28 hope1:这一定不是标准答案
+1:33 hope1:还有填空第二题，涉及曲线不会做
+1:33 varna:展开
+1:35 varna:你知道母线长，知道底面半径，就能算出圆锥侧面有多少度
+1:36 varna:然后你取弧AB对应的弦，弦长就是最短路
+1:37 varna:弧AB对应的圆心角ASB同样以弧长算出来
+1:38 hope1:嗯，算一下
+1:41 whocares_2 joined channel
+1:47 varna:说起来海棠真的不打算听海棠青春么……
+1:48 xxxxxxxxx:自high ?
+1:49 varna:听听幻想乡外面的人是怎么演海棠的啊
+1:49 xxxxxxxxx:幻想乡入口在哪?
+1:50 xxxxxxxxx:或者说怎么划分里外的?
+1:50 varna:幻想入
+1:50 hoxily:xxxxxxxxx: 入口应该是在 上海 吧
+1:50 varna:虽然陆路相连，但是被紫妹封锁了
+1:50 varna:所以不神隐是进不去的
+1:51 xxxxxxxxx:要是能侵略幻想乡就好了
+1:51 varna:概念上就做不到吧
+1:51 varna:侵略幻想乡的比较好的做法是让王 爆了神主
+1:52 xxxxxxxxx:啊 还 要 上?
+1:56 hope1:condy, 白丝魔理沙还在，不过不知道数据库是不是保留了
+1:56 varna:HOHOHO~HOTate~
+1:56 varna:hope1: 被加入猫娘回路，不能H了
+1:57 hysw:Cook竟然不在办公室
+1:57 varna:你要去爆他？
+1:57 xxxxxxxxx:去厨房看看
+1:57 hope1:varna, 原来如此
+1:57 varna:+
+1:57 varna:厨房好评
+1:57 hysw:Problem Set 4出现了...
+1:57 varna:你分析挂了是怎么回事
+1:57 varna:期中考？
+1:57 condy:正在分析数据包。。。
+1:58 varna:GJ
+1:58 hysw:ASIAN fail
+1:58 hope1:显然不可能挂
+1:58 varna:我觉得挂了就是考了八十
+1:58 hope1:+
+1:59 varna:我整个本科除了汇编编译c艹离散概率之类的东西大约都是85+-...
+1:59 varna:及格线上下2333
+1:59 hysw:varna: OTL
+1:59 hope1:除了高数
+1:59 varna:高数那个稀烂分数是自作孽
+2:0 hysw:高等数学这种高上大的玩意不敢碰
+2:0 *hysw 高等数学这种高大上的玩意不敢碰
+2:0 varna:你都学分析了还说什么
+2:1 varna:啊，岛风小必吃的链子缠住了解不开
+2:1 hope1:代理问题解决了？
+2:1 varna:没刷到号
+2:1 varna:代理超级好
+2:1 varna:一下子就能刷出服务器列表
+2:2 hysw:多元函数微积分, 常微分方程 之类的东西完全不会
+2:2 hope1:没刷到号刚刚是怎么回事……
+2:2 varna:我就是多元积分和常微分方程那学期差点不及格
+2:2 varna:hope1: 那个是周六漫展通行证送的岛风怀表
+2:2 hope1:@rox
+2:2 varna:rox第二学期的高数就挂了
+2:3 cleamoon_ joined channel
+2:4 hope1:文科生好像也得考高数？
+2:4 hysw:cleamoon_: OTL
+2:4 varna:hope1: 即使考也是高数C, 有一部分简单微积分和一些概率统计，不知道有多少线性代数
+2:4 hoxily:高等数学（甲）、高等数学（乙）？
+2:4 varna:按考研分类吧
+2:5 varna:基本是三档
+2:5 varna:比较全面的一类，理科和计算机会考
+2:5 varna:强调微积分和数值计算的一类，可能概率比较少，工科会考
+2:5 varna:余下的就是剪裁过给文科/社科考的
+2:6 xxxxxxxxx:睫毛掉进眼睛了.....
+2:7 varna:大块人心
+2:8 hysw:TOPICS IN OPERATOR ALGEBRAS: K-THEORY AND C*-ALGEBRAS < wtf is this
+2:8 varna:这些代数是干嘛的，好玩么
+2:9 hysw:COMBINATORIAL THEORY-ADDITIVE COMBINATORICS < 据说是要死的
+2:11 hysw:果然计算机科学的grad course和math东西比起来就是彻底的水
+2:11 hope1:OTL
+2:12 varna:OTL
+2:12 hope1:14题有什么不用算cos(36deg)的方法吗……
+2:12 varna:lmss
+2:12 varna:相似比我看看能不能比出来……
+2:14 varna:能
+2:14 xxxxxxxxx:http://www.bilibili.tv/video/av1072397/ 看完这个我都不会烧肉了...
+2:14 varna:不对，撸多
+2:15 varna:似乎没有
+2:15 hysw:不知道要不要下学期去搞定掉KRR
+2:15 varna:面积比应该是相似比的平方
+2:15 varna:相似比躲不开这个
+2:16 varna:hysw: krr建议搞
+2:16 hysw:CSC2532 Dynamical Systems and Artificial Intelligence ...
+2:19 *hysw 我这个学弱都快成学渣了
+2:19 varna:Stop showing off ZHAZHA
+2:19 xxxxxxxxx:2333
+2:20 hysw:前两天制造的冰块挺好的
+2:20 hysw:透明度max
+2:20 varna:你是想造胖次吧
+2:21 hoxily:透明的Pants
+2:23 hysw:可惜只有葡萄汁,没有葡萄酒也没有妹纸...
+2:24 xxxxxxxxx:葡萄...
+2:24 hysw:grape...
+2:25 cleamoon_ joined channel
+2:31 varna:寒云居然把樱桃变成了葡萄
+2:31 varna:难道你给妹子下药了
+2:31 hysw:从来就没有妹纸
+2:33 varna:那怎么搞出的葡萄
+2:34 hysw:果汁...
+2:34 varna:在场群众谁信
+2:34 varna:不管你信不信，反正我是不信
+2:34 hysw:难道羊驼已经彻底坏掉了么...
+2:34 hysw:好希望能有一只没有学霸属性的可爱的同时具有数学娘和文学娘属性的计算姬来帮我写试卷...
+2:35 varna:看到葡萄想起RT是正常反应
+2:35 xxxxxxxxx:羊驼什么时候没坏掉过?
+2:40 varna:最近钅觉摄取不足
+2:42 xxxxxxxxx:说的好像摄取了就不坏掉了一样
+2:42 hysw:下半年CSC265的教授是Faith Ellen...
+2:44 boosure joined channel
+2:44 varna:摄取足了就去舔小拖鞋了
+2:45 xxxxxxxxx:找个小本子记下 羊驼摄取了钅觉之后会坏掉的更厉害
+2:46 hysw:下半年的算法分析课的教授阵容太恐怖了
+2:46 hysw:Allan Borodin + Stephen Cook 是什么情况...
+2:57 hysw:果然选课得选那些正教授教的课
+3:0 cleamoon_ joined channel
+3:5 _root joined channel
+3:12 hoxily joined channel
+3:13 varna:yooo
+3:13 hysw:Topics in Knowledge Representation and Reasoning: Automated Planning and Reasoning about Action <貌似暑假有这货
+3:21 *hoxily 05睡04觉07觉
+3:21 hysw:觉觉好可怜
+3:21 xxxxxxxxx:@varna
+3:23 varna:噗
+3:23 varna:不许黑觉大人
+3:33 cleamoon_:alpako又把小觉放置play
+3:34 hope1:还是睡三小时吧……
+3:35 cleamoon_:怎么海棠也一起陪
+3:36 hope1:做题
+3:36 varna:HOHOHO~HOTate~
+3:38 cleamoon_:yooooooo，海棠也开始刷题了
+3:38 hope1:对了，羊驼那书找到没
+3:39 hope1:不过考试完之前也没时间看就是了
+3:39 hysw:我还是在暑假刷 Topics in Knowledge Representation and Reasoning: Automated Planning and Reasoning about Action 算了..
+3:40 hope1:cleamoon_, 现在还得上课，也挤不出多少时间刷题……
+3:40 *hysw 强烈推荐Michael Spivak 写的 Calculus
+3:40 cleamoon_:暑假补番
+3:40 cleamoon_:如果会的话就别上课了专心刷题呗
+3:41 hysw:暑假去解决topology去...
+3:41 varna:http://www.innawoods.net/swf/InnaWoods.swf
+3:41 varna:hope1: 没，似乎是扔家了
+3:41 *hope1 $ echo 'Michael Spivak    Calculus' >> booklist
+3:43 hope1:cleamoon_, 还得中考拿个毕业证
+3:43 cleamoon_:topology渣渣
+3:43 hysw:?
+3:43 cleamoon_:直接中考呀，不过语文什么的能过吗....
+3:45 hope1:及格拿个毕业证解决学籍问题就行…… 单科成绩应该没要求吧？
+3:47 cleamoon_:soga
+3:48 cleamoon_:那样按北京是在中考前有一个毕业考，那个很容易
+3:50 hope1:这里应该是统一考然后算成绩
+3:53 hope1:帝球写的static_cast<void>(arg)是什么意思……
+3:54 varna:扔个效果图 http://imagebin.org/307023
+3:54 hope1:这是什么游戏？
+3:55 cleamoon_:soga
+3:56 varna:hope1: http://www.innawoods.net/swf/InnaWoods.swf
+3:56 cleamoon_:看起来略麻烦
+3:56 varna:只是军宅换装留念的flash
+3:57 varna:不过如果有TRPG的话说不定可以用这个搞character sheet
+4:0 cleamoon_:寄存器太小，内存几乎没有，太麻烦的没法玩
+4:1 varna:不是游戏
+4:15 cleamoon_:换装癖的flash？
+4:17 varna:以军宅cos来说我觉得不太够
+4:18 varna:举例来说其实我想要把Grendel的DMR但没找到……
+4:26 cleamoon_:不可能都有吧...
+4:28 varna:但是Grendel 6.5也算是名气不错的东西了
+4:28 varna:所以最后我凑合换了把SVD
+4:28 cleamoon_:alpako试试看the binding of isaac，挺不错的
+4:28 varna:不喜
+4:29 cleamoon_:对吾等来说，名气最大的是沙鹰和51
+4:29 varna:沙鹰就是悲剧……
+4:30 varna:动静巨大，载弹量超少，后座力还大
+4:31 cleamoon_:沙鹰是吉祥物
+4:31 varna:...
+4:32 cleamoon_:http://photo.fanfou.com/n0/0a/jp/sg_147959.jpg
+4:32 varna:2333
+4:33 cleamoon_:@Happy锤酱：小野：爸比，你会用热水壶吗？ 岳父：不会啊！小野：那我浇你好了。岳父：好啊。岳父卒，享年31岁。
+4:33 cleamoon_:@千万不要放弃治疗啊：马上到五一黄金周了，到时去游乐场去坐过山车时可以带上几个螺栓，然后在开车前一刻对坐在你前面的 人说：哥们儿，这个从你的座位里掉出来了。
+4:34 cleamoon_:23333 @六壁坂：蛤蛤蛤看到一个好刺激的梗：「我觉得社会主义是世界上最大的同人，原作都完结十多年了，还在出同人本」。
+4:35 varna:2333
+4:37 varna:不行，还是在花式爆炸
+5:5 cleamoon_:从刚才一直修到现在？
+5:7 varna:玩了一小时游戏
+5:7 varna:我始终没法理解错误
+5:7 cleamoon_:推倒重修
+5:8 varna:没用
+5:8 cleamoon_:换个库
+5:9 varna:?
+5:9 varna:整个库都是我手操的
+5:10 cleamoon_:噗...
+5:10 cleamoon_:重新编译就崩？
+5:11 varna:那个无所谓了
+5:11 varna:主要是开多个内核线程搭载协程做阻塞IO的时候会跪在两千个请求附近
+5:12 cleamoon_:一定会跪？
+5:12 varna:某处free了会跪，不free看着漏会即死
+5:12 varna:串行没错
+5:13 cleamoon_:这什么奇葩状况....
+5:13 varna:鬼知道
+5:14 varna:按说不free怎么都不该死
+5:14 varna:而且因为是并发，所以死的往往是不被trace的那个线程
+5:14 varna:valgrind则是疯狂误报然后崩溃
+5:16 hysw:自己去trace一下malloc和free然后分析log?
+5:16 varna:不行
+5:16 hysw:#define malloc malloc_loged ?
+5:16 varna:malloc hook不是线程安全的
+5:16 hysw:那你用什么alloc?
+5:17 varna:^
+5:17 varna:是malloc hook, 不是ptmalloc
+5:17 varna:现在的glibc malloc都是安全的
+5:18 hysw:把malloc给替换掉然后自己做logging
+5:19 varna:问题未必在malloc上
+5:19 cleamoon_:还能在free上呀....
+5:20 hysw:把malloc和free log掉然后手工分析配对
+5:21 varna:可能都不在这些上
+5:21 varna:线程安全+串行无漏
+5:21 varna:我怀疑有corruption
+5:21 hysw:https://pastebin.mozilla.org/4908190
+5:21 hysw:然后写个脚本去检查一下
+5:22 varna:不好
+5:22 hysw:代码?
+5:22 cleamoon_:corruption？
+5:22 varna:看到sigsegv就去怀疑malloc-free配对出错我觉得是甜过头了
+5:22 hysw:话说没代码我也没法...
+5:23 varna:有代码我也不认为你能怎么样
+5:23 varna:https://pastebin.mozilla.org/4908193
+5:23 varna:尤其是这样的
+5:24 hysw:有测试用的代码么?
+5:24 varna:在底下
+5:24 varna:#382以下
+5:25 varna:测试用的客户端你自己写个发请求的echo client吧
+5:26 hysw:p7impl.h?
+5:26 varna:https://pastebin.mozilla.org/4908204
+5:26 varna:https://pastebin.mozilla.org/4908212
+5:26 varna:https://pastebin.mozilla.org/4908206
+5:27 cleamoon_:这个无理，看不懂....
+5:30 hysw:net_common.h?
+5:31 varna:哦，那个你差不多把inet用的东西扔进去就够了
+5:31 varna:https://pastebin.mozilla.org/4908270
+5:31 varna:无脑用这个也行
+5:37 boosure joined channel
+5:38 varna:啊，天亮了
+5:49 hysw:p7_carrier_prepare 最后那个return 看上去有点问题
+5:51 hysw:free然后return
+5:52 varna:没问题
+5:52 varna:不过我还是防范一下看
+5:53 varna:无关
+5:54 varna:实际上如果那个位置都被轰沉的话carrier应该灭了才对
+5:55 varna:实际上也没有走到那两个free_safe
+5:56 varna:啊咧
+5:57 varna:哦撸多……
+5:57 varna:还是炸了
+6:1 hysw:顺便nthreads参数一般是多少
+6:2 varna:argv[1]给2肯定会挂，给1肯定不会挂，给3以上10以下我觉得是正常的
+6:2 varna:>1应该都会死
+6:11 cleamoon joined channel
+6:14 varna:不行，理解不能
+6:14 hysw:有sample client么
+6:15 varna:有
+6:15 varna:四年前的货 https://pastebin.mozilla.org/4908627
+6:22 hysw:malloc返回0x20是什么情况
+6:22 varna:哪里
+6:22 varna:log里有行号么
+6:23 hysw:p7_iowrap_的第一行
+6:24 varna:噗？
+6:24 varna:malloc挂了？
+6:25 hysw:刚才 size 和 ptr 的位置看反了...
+6:25 varna:噗
+6:25 varna:返回32的话ln 349就该死的
+6:26 varna:那个位置是低区的内核首啊
+6:26 hysw:实际问题是p7_coro_cntx_new_ MALLOC 0x7fffec0008c0 size:41920
+6:26 varna:噗？
+6:27 varna:我确实也检测到了成吨这样的悲剧
+6:28 hysw:我这里是10thread + 一个client就直接死了
+6:28 varna:1thread呢
+6:28 hysw:直接挂
+6:28 varna:噗？
+6:29 varna:命令行参数给1怎么会挂的
+6:29 hysw:没挂... gdb给了一堆乱七八糟的东西...
+6:29 varna:别用gdb啊
+6:29 varna:你先看看能不能活
+6:29 hysw:一个没问题
+6:30 varna:#define MALLOC_CHECK 3
+6:30 varna:试试这个
+6:34 varna:log给的结论是全都是子线程错了
+6:39 varna:似乎也不是错
+6:44 hysw:sp=0x7fffeffff3a0是怎么出现的...
+6:45 varna:那个应该是正常的
+6:45 varna:等等
+6:45 varna:不对
+6:45 varna:我这里没拿到那么高的sp
+6:46 varna:414     register unsigned long long sp __asm__ ("rsp");
+6:46 varna:415     printf("sp at %x\n", sp);
+6:46 varna:[varna@shiki p7]$ ./a.out 2 2> edump1
+6:46 varna:sp at bd325c00
+6:47 varna:hysw: 你在哪里看到的那个高sp
+6:47 varna:如果是子线程的协程，那应该是一致的
+6:48 varna:那个sp在堆里操出来的栈帧上
+6:50 hysw:buffered_vfprintf
+6:50 hysw:另外 [New Thread 0x7ffff7816700 (LWP 28740)] <这是怎么回事?
+6:50 varna:这个是日常
+6:51 varna:你不会试图用gdb去拦这坨并发的玩意吧……
+6:51 hysw:只是在考虑哪里可能出错...
+6:51 varna:现在有哪些嫌疑处？
+6:52 varna:主要最奇葩的是撤掉free居然会即死
+6:52 hysw:话说那个NewThread的log是你写的还是怎么回事?
+6:52 varna:哪个
+6:52 hysw:[New Thread 0x7ffff6013700 (LWP 28743)]
+6:52 varna:gdb自己的
+7:0 hysw:话说backtrace的那些地址是栈的地址吧?
+7:1 varna:是
+7:2 hysw:莫名其妙的和malloc的位置差了0X200000左右...
+7:3 varna:哪个carrier上的
+7:3 hysw:全部
+7:4 varna:疼
+7:11 varna:悲剧的路径始于#304, 但我不确认去掉这个分支是不是掩盖了错误
+7:19 hysw:cntx->uc.uc_stack.ss_sp = cntx->stack <这没问题么?
+7:20 varna:看手册
+7:21 varna:这里要求提供首址而不是栈底
+7:21 hysw:cntx->stack 完全是无意义状态
+7:22 hysw:好吧... 这竟然是vla
+7:23 varna:这里当然得是FLA
+7:30 boosure joined channel
+7:35 varna:回去了
+7:35 varna:今天也是大破
+7:35 varna:大家早间愉快
+8:6 iyzsong joined channel
+8:9 hysw:iyzsong: 求GPA
+8:13 iyzsong:啥玩意 不懂
+8:36 hysw:iyzsong: 看上去可以拿我现在学的那些课去毁灭贴吧里一大堆人的梦想
+8:37 silencly07 joined channel
+8:37 iyzsong:...
+8:38 hysw:拿个分析学就够吓死一堆人了...
+8:40 sismvg joined channel
+8:48 sismvg joined channel
+9:9 lh_mouse joined channel
+9:11 richselian joined channel
+9:21 *hysw /set richselian --onfire
+9:35 xxxxxxxx_ joined channel
+9:37 lh_mouse:geordi, { int a, *p = &a; S s; a += s; } struct S { }; S &operator+=(int *lhs, S){ cout << lhs; } 
+9:37 geordi:error: no match for 'operator+=' (operand types are 'int' and 'S')
+9:38 lh_mouse:geordi, replace a before += with p
+9:38 geordi:error: String `+=` occurs multiple times.
+9:38 lh_mouse:geordi, replace a before first += with p
+9:38 geordi:error: String `a` occurs multiple times before first +=.
+9:38 lh_mouse:Damn
+9:38 lh_mouse:geordi, { int a, *p = &a; S s; p += s; } struct S { }; S &operator+=(int *lhs, S){ cout << lhs; } 
+9:38 geordi:warning: no return statement in function returning non-void
+9:38 lh_mouse:geordi, { int a, *p = &a; S s; p += s; } struct S { }; int *operator+=(int *lhs, S){ cout << lhs; return lhs; } 
+9:38 geordi:0x7fff2470ec3c
+9:38 lh_mouse:geordi, { int a, *p = &a; cout << p <<' '; S s; p += s; } struct S { }; int *operator+=(int *lhs, S){ cout << lhs; return lhs; } 
+9:38 geordi:0x7fffcb6f997c 0x7fffcb6f997c
+9:39 lh_mouse:geordi, { int a, *p = &a; cout << p << ' '; S s; (p++) += s; } struct S { }; int *operator+=(int *lhs, S){ cout << lhs; return lhs; } 
+9:39 geordi:0x7fff02ca4d3c 0x7fff02ca4d3c
+9:39 lh_mouse:geordi, replace p++ with ++p
+9:39 geordi:0x7fff97bdb3dc 0x7fff97bdb3e0
+9:39 richselian:geordi, { cout << getenv("PWD"); }
+9:39 geordi:<no output>
+9:39 richselian:geordi, { cout << getcwd(); }
+9:39 geordi:error: too few arguments to function 'char* getcwd(char*, size_t)'
+9:40 richselian:geordi, { cout << get_current_dir_name(); }
+9:40 geordi:/
+9:40 richselian:geordi, { cout << getenv("JAVA_HOME"); }
+9:40 geordi:<no output>
+9:41 richselian:geordi, { cout << environ[0]; }
+9:41 geordi:LC_CTYPE=en_US.utf8
+9:41 richselian:geordi, { cout << environ[1]; }
+9:41 geordi:PATH=/home/eelis/soft/bin:/home/eelis/bin:/home/eelis/.cabal/bin:/sbin:/home/eelis/apps/ghc/bin:/home/eelis/apps/gccsvn/bin:/home/eelis/apps/llvm/bin:/home/eelis/apps/vim/bin:/home/eelis/soft/bin:/home/eelis/bin:/home/eelis/.cabal/bin:/sbin:/home/eelis/apps/ghc/bin:/home/eelis/apps/gccsvn/bin:/home/eelis/apps/llvm/bin:/home/eelis/apps/vim/bin:/usr/
+9:41 richselian:geordi, { cout << environ[2]; }
+9:41 geordi:GLIBCXX_DEBUG_MESSAGE_LENGTH=0
+9:42 richselian:geordi, { for (int i = 0; environ[i]; i++) cout << environ[i] << endl; }
+9:42 geordi:LC_CTYPE=en_US.utf8 [+ 3 discarded lines]
+9:42 hysw:richselian: << environ[BAIDU_HR_ID]
+9:42 richselian:geordi, { cout << environ[3]; }
+9:42 geordi:LD_PRELOAD=/libtpreload.so /libdiagnose_sigsys.so
+9:42 richselian:geordi, { cout << environ[4]; }
+9:42 geordi:<no output>
+9:43 lh_mouse:richselian, 你这样玩机器人作者会不高兴的。
+9:50 lh_cat joined channel
+10:11 lh_cat:T-expr <- lists
+10:12 lh_cat:lists <- list* delim*
+10:12 lh_cat:list <- delim* name? \( lists \)
+10:12 lh_cat:delim <- TAB | SPACE | CR | LF
+10:12 hysw:你准备怎么实现cdr?
+10:13 lh_cat:name <- ".*" | [^delim]*
+10:13 lh_cat:不需要那种东西
+10:14 lh_cat:list <- delim* name? ( \( lists \) )?
+10:14 lh_cat:这样 lists 可以去掉
+10:16 lh_cat:lists <- ( delim* name? ( \( lists \) )? )*
+10:18 lh_cat:直接写状态机比这破东西省事多了
+10:19 Zirx joined channel
+10:21 hysw:直接递归下降不就得了
+10:31 Zirx joined channel
+10:39 sismvg joined channel
+10:41 sismvg joined channel
+10:42 sismvg:总感觉自己被做跳板了
+10:43 sismvg:今天早上到现在都收到了十几万个包了，基本都是同样的3个地址
+10:43 sismvg:封了端口段不行，ip也屏蔽还是挡不住。。fork
+10:57 xxxxxxxx_:win?
+10:58 sismvg:linux
+10:58 condy:iptables没有效果？
+10:59 sismvg:haven't
+11:0 condy:跪。
+11:1 sismvg:前就开始了，原来屏蔽了好几次，都挡住了
+11:1 sismvg:这次不行了。。
+11:1 sismvg:3天前就开始了，原来屏蔽了好几次，都挡住了
+11:1 sismvg:这次不行了。。
+11:2 xxxxxxxx_:不行了只是什么情况?
+11:2 xxxxxxxx_:是指...
+11:3 sismvg:挡不住了，CPU虽然不是很高，也就20%左右
+11:6 sismvg:丧心病狂我的直接屏蔽了50000-60000之间的端口
+11:6 sismvg:还有220.181.0.0/8 的ip段
+11:6 sismvg:结果还是。。。
+11:6 Zirx joined channel
+11:8 xxxxxxxx_:http://deflate.medialayer.com/ 不知道什么情况 所以不知道这个东西有没有用
+11:10 iyzsong:可以去#ubuntu-cn问问
+11:10 xxxxxxxx_:iyzsong 你听明白是怎么回事了?
+11:12 sismvg:等我试试看..
+11:14 sismvg:deploy.static.akamaitechnologies.com 是什么,好多他的包
+11:17 xxxxxxxx_:Akamai provides many IT services like application hosting, content delivery,
+11:17 xxxxxxxx_:and streaming media services, but they are probably best known for their
+11:17 xxxxxxxx_:massive distributed computer infrastructure. 
+11:18 sismvg:我也是查到这个。。。
+11:22 xxxxxxxx_:http://www.akamai.cn/enzs/ 找他们去
+11:25 iyzsong joined channel
+11:26 lh_cat:geordi, << TYPE(std::make_unique<int>);
+11:26 geordi:error: no context to resolve type of 'make_unique<int>'
+11:28 lh_cat:geordi, { unique_ptr<int[]> p(new int[2]); cout << p[0]; } void *operator new(size_t cb){ auto p = (int *)::malloc(cb); *p = 0x12345678; return p; } void operator delete(void *p) noexcept { ::free(p); }
+11:28 geordi:-1819044973
+11:28 lh_cat:geordi, { unique_ptr<int[]> p(new int[2]); cout << p[0]; } void *operator new(size_t cb){ auto p = (int *)::malloc(cb); p[1] = 0x12345678; return p; } void operator delete(void *p) noexcept { ::free(p); }
+11:28 geordi:-1819044973
+11:28 sismvg:仔细找了一下，好像和AVG更新有关系..
+11:28 lh_cat:geordi, { unique_ptr<int[]> p(new int[2]); printf("%u", p[0]); } void *operator new(size_t cb){ auto p = (int *)::malloc(cb); p[0] = 12345678; return p; } void operator delete(void *p) noexcept { ::free(p); }
+11:28 geordi:2475922323
+11:28 lh_cat:geordi, { unique_ptr<int[]> p(new int[2]); printf("%X", p[0]); } void *operator new(size_t cb){ auto p = (int *)::malloc(cb); p[0] = 0x12345678; return p; } void operator delete(void *p) noexcept { ::free(p); }
+11:28 geordi:93939393
+11:29 lh_cat:geordi, { auto p = make_unique<int[]>(2); printf("%08X", p[0]); }
+11:29 geordi:00000000
+11:29 lh_cat:geordi, { unique_ptr<int[]> p(new int[2]); printf("%08X", p[0]); }
+11:29 geordi:93939393
+11:31 xxxxxxxx_:AVG是指杀毒软件?
+11:32 lh_cat:av-guard
+11:34 xxxxxxxx_:英国电子产品以旧换新交易网站CompareMyMobile最新调查结果显示，在购买三星最新一代智能手机Galaxy S5的用户中，近38%来自iPhone用户。
+11:35 sismvg:指杀毒
+11:35 xxxxxxxx_:要那些东西干啥....
+11:35 xxxxxxxx_:安全更新发行版做的都会很勤快吧
+11:41 sismvg:瞎装的而且我装的是clamav
+11:42 lh_cat:geordi, --version
+11:42 geordi:g++ (GCC) 4.10.0 20140418 (experimental)
+11:42 xxxxxxxx_:版本跟的好快啊
+11:43 sismvg:昨天刚刚看到4.9
+11:44 Li_o joined channel
+11:44 Li_o:for(step1,step2;step3,step4;step5,step6)
+11:44 Li_o:它的顺序是什么。
+11:45 sismvg:?什么顺序
+11:46 Li_o:逗号运算符在 for里面的运算顺序，
+11:46 lh_cat:array new 从一开始就不该存在
+11:47 sismvg:什么顺序
+11:47 sismvg:google一下求值顺序不好了
+11:49 Li_o:https://gist.github.com/anonymous/8f31ede30b2da65446fb
+11:50 sismvg:1  2 3 4 5 6
+11:53 lh_cat:geordi, { int a[100]; auto p1 = new(b) int[3]{ 1, 2, 3 }; pritnf("%d %d %d %d %d", a[0], a[1], a[2], a[3], a[4]); } 
+11:53 geordi:error: 'b' was not declared in this scope
+11:53 Li_o:https://gist.github.com/anonymous/cb3fccd71dc7e460d273
+11:53 lh_cat:geordi, { int a[100]; new(a) int[3]{ 1, 2, 3 }; printf("%d %d %d %d %d", a[0], a[1], a[2], a[3], a[4]); } 
+11:53 geordi:1 2 3 0 0
+11:54 Li_o:geordi 是个机器人？
+11:56 lh_cat:geordi, << "はい";
+11:56 geordi:はい
+11:57 sismvg:centos yum install gcc=gcc4.4 
+12:2 sismvg:geordi, {int* baka=nullptr; *baka}
+12:2 geordi:error: expected ';' before '}' token
+12:3 Li_o:geordi,<<"qq";
+12:3 geordi:qq
+12:15 sismvg:geordi,{template<std::size_t Count> class test{ enum={val=test<Count>::value;};
+12:15 geordi:error: Unexpected end of request. Expected '}' or balanced code.
+12:16 sismvg:geordi,{template<std::size_t Count> class test{ enum={val=test<Count>::value};};
+12:16 geordi:Same error.
+12:17 sismvg:搞一个编译期死循环会怎么样
+12:17 sismvg:geordi,{template<std::size_t Count> class test{ enum={val=test<Count>::value};}; test<100> val;}
+12:17 geordi:error: a template declaration cannot appear at block scope
+12:20 sismvg:{template<int count> class test{ enum {value=test<count-1>::value}; }; template<> class test<0>{enum {value=0}; }; test<0xFFFFFFFF> value;}
+12:25 sismvg:geordi wt
+12:34 xia joined channel
+12:44 Guest91311 joined channel
+12:53 ZzHiyori joined channel
+13:10 randomclown joined channel
+13:11 Zirx joined channel
+13:11 randomclown:有么有人有bilibilitv的邀请码
+13:13 hoxily:randomclown: 我有
+13:14 randomclown:hoxily: 借用一个?
+13:16 ZzHiyori joined channel
+13:18 hoxily joined channel
+13:18 randomclown:hoxily: 借用一个?
+13:19 hoxily:randomclown: 刚才lag太高，重新连接。
+13:19 hoxily:randomclown: 见private message
+13:19 hoxily:randomclown: 收到了没？
+13:21 randomclown:hoxily: 拿到,多谢
+13:25 hoxily:randomclown: hoxily@qq.com这是我Alipay帐号
+13:25 xxxxxxxx_:自己答个题不好么...
+13:27 zzzzzzzz joined channel
+13:27 randomclown:hoxily: 我只有btc/doge haha
+13:27 xxxxxxxx_:原来试过 搜索+碰运气基本就能弄到70分左右了
+13:49 sismvg joined channel
+13:51 Zirx joined channel
+13:51 xia joined channel
+13:51 user32 joined channel
+13:54 zzzzzzzz:>困...
+13:55 user32:zzzzzzzz: 人生短短几十年，少睡点，说不定何时会长眠！
+13:55 condy:？
+13:55 condy:?
+13:55 condy:^
+13:55 condy:>>>this
+13:55 user32:condy: 网友，你好哦
+13:56 condy:>fvck
+13:56 user32:condy: 无聊！打几个实用点的字出来聊行不
+13:56 condy:* weather
+13:56 user32:condy: none
+13:56 condy:* 北京天气
+13:56 user32:condy: 抱歉，没找到《北京天气》的歌词
+13:57 condy:* 草泥马
+13:57 user32:condy: 抱歉，没找到《草泥马》的歌词
+13:57 condy:* the tao of programming
+13:57 user32:condy: none
+13:57 condy:*love
+13:57 user32:condy: none
+13:57 condy:*romance
+13:58 sismvg:* Blumenkranz
+13:58 sismvg:*Blumenkranz
+14:3 lh_cat joined channel
+14:5 zzzzzzzz:?:
+14:5 user32:zzzzzzzz: 这里是richselian的自动售货机v0.2
+14:5 user32:zzzzzzzz:  ============================================================
+14:5 user32:zzzzzzzz:   :+内容		表达式计算器。
+14:5 user32:zzzzzzzz: ...Ignore 9 more lines
+14:13 sismvg:+6+1
+14:13 user32:sismvg: 7
+14:13 sismvg:+548314*35456
+14:13 user32:sismvg: 19441021184
+14:14 sismvg:+2^32
+14:14 user32:sismvg: 4294967296
+14:15 sismvg:+2^200
+14:15 sismvg:+2^200
+14:15 user32:sismvg: 1.60693804425899e+60
+14:15 zzzzzzzz:>草泥马
+14:15 user32:zzzzzzzz: 呵呵，一大群草泥马在奔跑。。。。世上没这马
+14:15 zzzzzzzz:^:
+14:15 sismvg:+3.141592689793238462643383279%0.5^10
+14:15 user32:zzzzzzzz: 4月23日 晴转多云 14℃/22℃
+14:15 user32:zzzzzzzz: 4月24日 多云 16℃/21℃
+14:15 user32:sismvg: 算不出来。
+14:16 sismvg:+3.141592689793238462643383279^2
+14:16 user32:sismvg: 9.86960462856232
+14:17 sismvg:+3.141592689793238462643383279%54^3
+14:17 user32:sismvg: 3
+14:19 sismvg:zha zha 
+14:19 sismvg:+4<<3
+14:19 user32:sismvg: 43
+14:20 sismvg:wtf
+14:20 sismvg:+5<<1
+14:20 user32:sismvg: 51
+14:21 sismvg:+57546453445458433452*2^32
+14:21 user32:sismvg: 2.4716013554903e+29
+14:21 sismvg:+3/0
+14:21 user32:sismvg: 算不出来。
+14:21 sismvg:>nai
+14:22 sismvg:>草泥马
+14:22 user32:sismvg: 呵呵，一大群草泥马在奔跑。。。。世上没这马
+14:23 sismvg:>饿死了
+14:23 user32:sismvg: 给你买好吃的
+14:23 sismvg:>从不吃零食
+14:23 user32:sismvg: 乖嘛，就吃一口
+14:24 xxxxxxxx_:要是回答快来吃叔叔的棒棒糖就神作了
+14:24 sismvg:hentai 
+14:24 sismvg:>什么
+14:24 user32:sismvg: 什么哦？
+14:24 sismvg:>MFC是什么
+14:24 user32:sismvg: 我是狗。一条狗
+14:25 sismvg:>昨天我家狗被偷了
+14:25 user32:sismvg: 嗯。跟你一样可爱
+14:25 sismvg:>你太自恋了
+14:25 user32:sismvg: 自恋，得有本钱，像菲菲我本钱足足滴哟~
+14:26 sismvg:>自己名字都写错了的家伙
+14:26 user32:sismvg: 那啥是对的？
+14:26 sismvg:>你猜
+14:26 user32:sismvg: 你猜我猜不猜
+14:27 sismvg:你猜我猜你猜我猜不猜
+14:28 sismvg:>你猜我猜你你猜我猜不猜
+14:28 user32:sismvg: 不猜不猜，你直接说吧
+14:29 sismvg:>渣渣，扎碴去吧
+14:29 user32:sismvg: 嗯，去
+14:29 sismvg:>你是人吗
+14:29 user32:sismvg: 你不觉得你这问题很白痴么，不是人难道是鬼啊
+14:30 sismvg:>你是人吗
+14:30 user32:sismvg: 当然，我是女人啊
+14:30 sismvg:>你是人吗
+14:30 user32:sismvg: 你不觉得你这问题很白痴么，不是人难道是鬼啊
+14:30 sismvg:>你是人吗
+14:30 user32:sismvg: 还用问么，肯定是人啊~
+14:30 sismvg:>你是人吗
+14:30 user32:sismvg: 当然，我是女人啊
+14:31 sismvg:>你是人吗
+14:31 user32:sismvg: 你不觉得你这问题很白痴么，不是人难道是鬼啊
+14:31 sismvg:渣AI
+14:32 xxxxxxxx_:回答啥不渣?
+14:32 hoxily:>你竟然是女人？
+14:32 user32:hoxily: 你是男人
+14:32 sismvg:反问我或者不重复对一句话回答
+14:33 hoxily:>捡肥皂听说过没有？
+14:33 user32:hoxily: 球球球球？球儿？
+14:35 sismvg:>小龙女到底算不算破鞋
+14:35 user32:sismvg: 我觉得她和云子很配
+14:36 sismvg:>what the fuck
+14:36 user32:sismvg: 礼貌点，别骂人
+14:36 xxxxxxxx_:一种抖M想被调戏的气息
+14:36 sismvg:>you are human?
+14:36 user32:sismvg: 不可以罵髒話唷
+14:36 sismvg:这个都不能识别
+14:37 sismvg:>Linux是个碴
+14:37 user32:sismvg: 嘻嘻，谢谢
+14:37 xxxxxxxx_:你觉得天朝有多少人用英文训练bot?
+14:38 sismvg:多训练没有问题
+14:38 ZzHiyori:问题不应该是出在现有的AI水准训练他们有很大作用吗...
+14:38 sismvg:好难理解
+14:39 xxxxxxxx_:现有的ai水准是个傻?
+14:39 xxxxxxxx_:啥?
+14:39 ZzHiyori:你们想训练成什么样子 把一个bot
+14:39 xxxxxxxx_:我不想训练bot
+14:39 sismvg:母猪
+14:40 ZzHiyori:母猪是不会说话的.
+14:40 sismvg:看来你还太年轻\
+14:41 ZzHiyori:母猪说话很迎合你的需求么...
+18:38 clcn_logger joined channel
+18:44 tsuki_ joined channel
+18:57 tsuki joined channel
+19:0 randomclown:richselian: 疼?
+19:0 richselian:疼
+19:1 randomclown:为何
+19:2 lh_cat:被 XX 了
+19:2 tsuki joined channel
+19:4 tsuki_ joined channel
+19:4 tsuki joined channel
+19:6 tsuki joined channel
+19:23 Zirconi joined channel
+19:23 Zirconi:快播涉传播淫秽信息被查 警方封存公司电脑
+19:25 Plough joined channel
+19:28 Zirconi:马媒：客机可能降落某地 或重启调查
+19:33 iyzsong:2333
+19:33 Root joined channel
+19:37 tsuki:噗
+19:40 lh_cat:geordi, { unique_ptr<S[]> p(new S[3]); } struct S { ~S(){ BARK; } }; 
+19:40 geordi:S::~S() S::~S() S::~S()
+19:40 lh_cat:geordi, remove []
+19:40 geordi:S::~S() error: tried to delete pointer not returned by previous matching allocation. Aborted
+19:40 richselian:在贴吧首页买了一个彩票，中了40块钱。。
+19:41 Zirconi:http://imagebin.org/307086
+19:44 richselian:发现彩票有时候还是靠谱的
+19:47 richselian:hope1` 有靠谱的地方
+19:48 richselian:彩票只是 输出期望O < 输入I
+19:49 richselian:但是期望是大量case的时候才会体现出来
+19:50 tsuki:so？
+19:51 richselian:所以可以构造一个概率分布，使得case数远少于期望体现出来所需的case数
+19:52 richselian:比如 有99.99%的概率赚1元，0.01%的概率亏20000元
+19:53 richselian:然后只买一次
+19:54 richselian:这样可以认为 小概率事件基本不可能发生
+19:54 tsuki:那也不能买
+19:55 tsuki:而且这类彩票也不多
+19:55 tsuki:而且很可能是买一次要20000元
+19:56 richselian:可以构造
+19:57 tsuki:那也不值
+19:57 richselian:玩一次还是可以的
+19:57 richselian:玩大的话，期望就表现出来了
+19:57 tsuki:一次也有期望
+19:58 tsuki:100个数字，买一个，一次100，猜中给2000，怎么构造？
+19:58 richselian:只要本钱多，可以把亏的期望降到足够小
+19:59 lh_cat:我曾经和我们高中老师研究过这种问题
+19:59 tsuki:期望又不根据实验数量改变
+19:59 lh_cat:比方说 赌博  输 60% 赢 40%  输赢都一块钱
+19:59 richselian:比如猜硬币，中得1块，不中亏2块
+20:0 lh_cat:我赌一次，如果赢了  下次就再赌一块钱
+20:0 lh_cat:如果输了 下次就赌两块
+20:0 lh_cat:如果还输 就赌四块
+20:0 richselian:耗子正解
+20:0 lh_cat:如果算数学期望
+20:0 tsuki:这个做法已经破解了
+20:0 tsuki:好多年了
+20:0 richselian:期望肯定是亏的
+20:0 lh_cat:0.5 + 0.25 + 0.125 + ... = 1
+20:0 lh_cat:期望是正的
+20:1 lh_cat:也就是说数学期望这么算 肯定是赢钱的
+20:1 lh_cat:但是这里有个问题  前提是你的本金足够多
+20:1 lh_cat:在你赢钱之前你必须有足够的本金输得起
+20:1 tsuki:耗子那个是赌n元赢了得n元吧？
+20:1 richselian:期望是亏的，但是赚的概率可以是非常大
+20:1 lh_cat:如果你连输十次  就要两千块钱的本金
+20:2 lh_cat:richselian, 期望是赢的
+20:2 richselian:lh_cat: 输的
+20:2 lh_cat:你自己算好了
+20:2 richselian:lh_cat: 期望不可能>=1
+20:2 lh_cat:赌一次赢一块钱是 0.4
+20:2 lh_cat:赌两次赢一块钱是 0.6 * 0.4
+20:3 lh_cat:赌三次赢一块钱是 0.6^2 * 0.4
+20:3 lh_cat:最后数学期望是 0.4 * 1 / (1 - 0.6^N)
+20:3 tsuki:你赌n元赢了给n+1元？
+20:3 lh_cat:N 趋近无穷大结果肯定是正的  只是你本金够不够的问题
+20:4 tsuki:而且这么算还是少于50%呀
+20:4 lh_cat:tsuki, 平均每次
+20:4 richselian:每次期望都<1，加起来肯定<1呀
+20:4 lh_cat:很大概率你不可能赌一次就赢钱
+20:4 richselian:期望是负的，这个必然
+20:4 lh_cat:比如这里胜率是 0.4   数学期望就是 +0.4
+20:4 lh_cat:也就是说平均每次赌都赢 0.4
+20:5 richselian:你算的这个是概率了
+20:5 richselian:不是期望
+20:5 lh_cat:这就是期望  你自己去加好了
+20:6 lh_cat:哦  不对 上面写错了
+20:6 tsuki:耗子写个程序试试就知道了，这个是亏钱的
+20:6 lh_cat:0.4 * 1 / (1 - 0.6)
+20:6 lh_cat:结果是 1
+20:6 lh_cat:tsuki, 这我们都讨论过的
+20:6 richselian:这个就是概率嘛。。
+20:6 richselian:无限接近1
+20:6 lh_cat:如果把你从开始赌直到最终赢钱算作“一次”
+20:7 lh_cat:那你每一次都只能赢一块钱
+20:7 lh_cat:但是每一次都是无限接近于必然赢钱
+20:7 tsuki:耗子刚才那个例子是可以一次性赌n元吧？不是赌n元时得赌n次吧？
+20:7 lh_cat:1 2 4 8 16 32 ...
+20:7 lh_cat:直到赢钱为止
+20:7 lh_cat:比如赌三次输了  赔了七块钱
+20:7 lh_cat:第四次赢了八块钱  就赢了一块钱
+20:8 richselian:如果羸1元的概率是99.99%，那么不羸的话肯定要亏10000以上
+20:8 lh_cat:但是这个概率无限接近于 1
+20:8 richselian:不然卖票的就亏了
+20:8 lh_cat:所以说最后只取决于本金
+20:9 richselian:哈哈又中了一个40
+20:9 lh_cat:彩票这种东西也会有人信
+20:9 lh_cat:你看过 1984 么
+20:9 richselian:提钱走人
+20:9 richselian:不玩了
+20:9 lh_cat:不送
+20:9 tsuki:你应该说看过概率论吗...
+20:10 richselian:我还玩过压缩姬
+20:11 lh_cat:谁没玩过
+20:11 lh_cat:https://github.com/lhmouse/MCF/blob/master/MCF/Compression/Z.hpp
+20:11 lh_cat:干净  简单  kecao
+20:11 richselian:明显没有libzling的好
+20:12 tsuki:zling上次测试结果可一般...
+20:12 lh_cat:你还是找几万个用户测试几遍再说
+20:12 lh_cat:zlib 比 lzma 压缩率不差太多，20% 左右
+20:12 richselian:刷爆ltcb就行
+20:12 lh_cat:可是 zlib 不会吃掉好几百 MiB 内存
+20:13 richselian:libzling也不会
+20:13 tsuki:zling我的测试结果还不如gzip呢...
+20:13 richselian:tsuki: 你用什么数据测的
+20:13 lh_cat:呵呵
+20:14 tsuki:一个短视频
+20:14 richselian:。。。。。。
+20:14 richselian:我就知道
+20:15 tsuki:还有一个zip压缩包
+20:15 richselian:。。。。。。。。。
+20:15 tsuki:然后是一个word
+20:15 tsuki:文档
+20:15 richselian:tsuki: 你会发现那些数据用naive huffman来处理是压缩率最高的
+20:16 richselian:回家吃饭
+20:25 cleamoon_ joined channel
+20:25 tsuki:lh_cat: 想了一下，你那个赢钱的概率是接近一的，期望还是负的，以为最后可能是投入1W赢1元，再加上本身的期望，最后期望是负的了
+20:31 tsuki:啊？
+20:31 tsuki:昨天什么题...
+20:32 lh_cat:tsuki, 有限次数的期望和无限次数的期望不一样
+20:33 tsuki:无限次的期望就不懂了
+20:34 lh_cat:不过其实讨论这个无限的情况没意义的
+20:34 lh_cat:就跟自然数和偶数一样多一样
+20:36 condy:hope1`: 用绝对值的定义。
+20:36 condy:(4)只会分类讨论。。。2333
+20:37 condy:hope1`: (3)的话，当n为偶数时的话在中间2个之间是最小的，奇数的话就是中间那个数了。可以在图上画图看出来。
+20:38 tsuki:hope1`: 设 p<x<p+1, 然后式子变成 px - (1+p)*p/2 + (p+1+n)*(n-p)/2 + (n-p)x
+20:38 tsuki:大概是这个式子，里面可能有点问题
+20:39 condy:反证吧。
+20:40 tsuki:设成一个数，然后拆开就行了
+20:40 tsuki:这个反证麻烦
+20:41 condy:确实。
+20:41 tsuki:4也是这个思想，设为p，然后直接展开
+20:42 tsuki:等差数列求和会吧？
+20:43 tsuki:里面是正的绝对值直接消掉
+20:43 condy:去绝对值。
+20:43 tsuki:负的加负号去掉
+20:43 tsuki:然后直接优化最后那个式子
+20:44 condy:px - (1+p)*p/2 + (p+1+n)*(n-p)/2 - (n-p)x
+20:44 condy:                             ……
+20:44 condy:                                 ^
+20:45 tsuki:新版gcc？
+20:46 tsuki:啊，那个公式我写反了
+20:46 tsuki:前边是负的，后边是正的
+20:48 tsuki:这考试还真不很简单呢
+20:52 condy:也可以证明一下。以n为偶数为例，|x-1| + |x-n| >= n-1，等号取得的时候1<=1<=n;然后一步步推进，将范围界定。
+20:52 condy:hope1`: ^
+20:58 condy:hope1`: 取最小值的时候。
+20:58 tsuki:这个和奇偶有什么关系...
+20:58 condy:1<=x<=n
+20:59 condy:比较喜欢对称的。当然奇也是对称的。。
+20:59 condy:233
+21:0 tsuki:这个不能推进吧，在p和q间最小不直接导致p-1和q+1之间最小
+21:0 tsuki:奇偶性最不对称了...
+21:2 condy:[p,q] => [p+1,q-1]
+21:3 tsuki_ joined channel
+21:4 tsuki joined channel
+21:5 tsuki_ joined channel
+21:18 tsuki joined channel
+21:18 tsuki:condy: 那个不好推吧
+21:19 condy:tsuki: 不是从|x-1|+|x-n|, |x-2|+|x-n-1|,...推吗？
+21:19 condy:上面的第一个不等式都满足最小时，即x属于中间两个数中间。
+21:20 condy:每一个不等式。
+21:20 tsuki:那两个最小不代表整个最小
+21:20 condy:tsuki: 是，不过后面的不等式的范围都在上一个不等式的范围内。n/2 个不等式都满足最小了。
+21:22 condy:hope1`: 是的。
+21:22 tsuki:直接拆开好了，这么证很可能错
+21:26 tsuki:逻辑上容易错
+21:27 tsuki:就是设 p<=x<p+1呀
+21:29 tsuki_ joined channel
+21:35 tsuki_:麻烦吗？
+21:40 tsuki_:这个哪有细节...
+21:43 tsuki_:两种方法都试试，这种练习比较好
+21:45 tsuki_:话说这考试多长时间？
+21:48 Zirconi:“目前，我国人均GDP达到6700多美元，已经属于中高收入国家的行列，我们的目标是希望通过‘十三五’的努力，用世界银行的标准接近高收入国家的行列，如果做得更好一点，可能就进入高收入国家的行列。”徐林说。
+21:48 condy:geordi: << sizeof(getchar());
+21:48 geordi:4
+21:49 tsuki_:完全不是
+21:49 tsuki_:挺长的，时间应该够
+21:52 Zirconi:这几天三天两头有人堵马路，不是闹拆迁就是闹工资。万一哪天早上就开始堵了迟到怎么算。。
+21:52 silencly07 joined channel
+21:52 tsuki_:你也一起去闹不就好了
+21:55 Zirconi:。。。
+21:55 Zirconi:今天就走了五站路
+21:59 tsuki_:没捡到钱？
+22:16 condy:大家一定要快乐地玩耍哦！
+22:22 condy joined channel
+22:30 endle joined channel
+22:41 tsuki_:4就我那方法算呀
+22:42 tsuki_:设 px<1<(p+1)x
+22:44 iyzsong joined channel
+22:48 tsuki_:会夹
+22:51 tsuki joined channel
+23:0 T2 joined channel
+23:7 iyzsong joined channel

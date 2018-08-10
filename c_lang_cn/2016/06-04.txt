@@ -1,0 +1,287 @@
+00:05 T-J-M: 弱弱地问一句:既然*作为运算符是指“取指针的内容”,那么为什么不能用*pointer.memberval替代pointer->memberval ?
+00:15 Youmu: geordi: --predence *p.m
+00:15 geordi: error: No such option: --predence
+00:15 Youmu: geordi: --precedence *p.m
+00:15 geordi: *(p.m)
+00:16 Youmu: T-J-M: ^
+00:16 T-J-M: Youmu: ……
+00:19 T-J-M: Pia!<(=ｏ ‵-′)ノ☆ Youmu 纯C编译不过去
+00:28 T-J-M: Youmu: (*p).m编译过去了……运算符优先级问题?
+00:29 condy: T-J-M: ...
+01:01 Matsune_ quit:Read error: Connection reset by peer
+01:07 stardustx quit:Quit: Leaving
+01:23 Kresnt quit:Read error: Connection reset by peer
+01:31 Mokou: 睡覺
+01:31 Mokou: 諸君武運
+01:31 Mokou quit:Quit: 睡覺
+01:54 lhanjian: 有活人吗
+01:54 lhanjian: 哦，不对，有牲口吗？
+01:54 lhanjian: 也不对，有禽兽吗？
+02:22 Youmu quit:Quit: Connection closed for inactivity
+08:21 iyzsong: ( ；∀；)
+09:08 lh_mouse joined channel
+09:26 cleamoon joined channel
+09:32 lhanjian: 早
+09:33 lh_mouse: 焼了这只现充！
+09:33 lhanjian: 哦哦哦
+09:33 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/nv/6h_424639.jpg@596w_1l.jpg
+09:33 lhanjian: 说好的不烧真爱呢
+09:34 iyzsong: w.w
+09:35 cleamoon: 有真爱了？来，给我火焰喷射器
+09:35 lh_mouse: 这现充在开嘲讽。
+09:36 lhanjian: orz，求不烧
+09:37 cleamoon: 这线虫竟然管我这吃剩炸鱼残渣度日的渣渣线虫
+09:38 iyzsong: 又周末了  求带 o o
+09:38 lh_cat joined channel
+09:38 cleamoon: lhanjian, 有妹子了？
+09:40 hoxily joined channel
+09:40 lh_cat: 艹妹现充来亨鸡。
+09:41 lh_cat: 妈妈说不要和现充说话。
+09:41 lhanjian: 小耗不是也有妹嘛
+09:42 iyzsong: orz
+09:43 iyzsong: 快把妹子骗过来 >_<
+09:43 lhanjian: 才不，我们这些丧尸
+09:43 iyzsong: 2333
+09:43 lhanjian: 会把妹子吓坏
+09:43 lhanjian: 我下次让妹子用我的nick说几句话吧
+09:44 cleamoon: 好的，我一定要让你们分手
+09:44 iyzsong: 怎么知道是不是你扮的..
+09:45 cleamoon: 无图无真相
+09:45 cleamoon: 如果我告诉妹子你的爱与信仰都给了某眼睛两栖类会怎么样
+09:46 lhanjian: 她也是膜法师啊
+09:46 iyzsong: ->.<-
+09:46 lhanjian: 还有个紫金港膜法协会
+09:47 cleamoon: orz
+09:48 cleamoon: 如果我说你也是两栖类呢
+09:48 lhanjian: 药丸
+09:51 Mokou joined channel
+09:51 cleamoon: 我说你是女装两栖类
+09:52 lhanjian: 她知道我有女装啊
+09:52 cleamoon: 卧槽
+09:52 cleamoon: 莫非她是个汉子？
+09:52 lhanjian: 想多了
+09:52 lhanjian: 她还差点把她没穿过的裙子给我穿了
+09:53 lhanjian: 我怎么知道啊，变态相吸嘛，瑞典变态不是很多嘛
+09:53 cleamoon: 哦，两个女装子
+09:53 lhanjian: 呸呸呸
+09:53 cleamoon: 瑞典变态年纪都很大呀... 我这么小就变态的很少
+09:54 cleamoon: 而且我在海盗国显得年纪很小...... 不受欢迎......
+09:54 Mokou: 因爲你不是土著？
+09:54 Mokou: 華夏大地也盛產變態吧
+09:56 cleamoon: 海盗变态都是嬉皮，我认为那种都是sb
+09:57 Mokou: ……
+09:59 iyzsong: 2333
+10:00 iyzsong: lhanjian: 也推荐个女汉子给我啊
+10:00 cleamoon: <iyzsong> lhanjian: 也推荐个〇汉子给我啊
+10:01 iyzsong: - -
+10:01 lhanjian: 。。。
+10:24 lh_mouse: [09:47:38] <lhanjian> 她还差点把她没穿过的裙子给我穿了
+10:24 lh_mouse: [09:47:38] <lhanjian> 她还差点把她没穿过的裙子给我穿了
+10:24 lh_mouse: [09:47:38] <lhanjian> 她还差点把她没穿过的裙子给我穿了
+10:25 lhanjian: 口二口
+10:26 cleamoon: 两个女装子一起出门想必是很好的
+10:30 cleamoon: 23333
+10:40 IntPtr joined channel
+10:41 varna joined channel
+10:41 varna: (｡･ω･)
+10:42 cleamoon: varna, 爆
+10:42 varna: 上游一转攻势，把跟fastdfs通信的全套步骤都甩给我了
+10:42 varna: 现在我还得补一套tracker协议
+10:44 cleamoon: orz
+10:45 varna: 本来我以为他们会处理tracker侧通信的
+10:45 lhanjian: 羊驼子来了
+10:45 varna: (｡･ω･)ﾉ来了
+10:45 ubuntu joined channel
+10:45 varna: ^ puuuu
+10:45 ubuntu is now known as Guest39553
+10:46 cleamoon: 昨天重温了一下A1的剧情，看完就一个感觉，整个时间他们根本就是让hero去死的
+10:46 lh_mouse: varna, 来亨鸡现充了。
+10:46 varna: lh_mouse: 他先前跟我说过
+10:46 cleamoon: 解救cain之类的也是顺便，无所谓的事
+10:46 lh_mouse: QuQ
+10:46 cleamoon: 难道穿女装就能得到妹子吗
+10:46 varna: cleamoon: D2英雄全程都在送死，每个人都有充分理由不出去打
+10:47 lhanjian: 小耗吃羊驼子的醋了
+10:47 varna: 小耗那个叫蘸醋
+10:47 endle joined channel
+10:47 varna: lhanjian: btw, pull一下servcraft
+10:48 lhanjian: 等我能正常看代码吧。。。一看代码我就有点犯病
+10:48 lh_mouse: lhanjian, pull 一下 medusa  。
+10:48 lh_mouse: 还有 poseidon  。
+10:48 cleamoon: 我觉得他们最充分的理由就是怂
+10:48 lhanjian: 啊啊啊，都来了。反正是pull，我就回去拉一下吧，代码就不看了
+10:48 xxxxxxxx quit:Quit: Leaving...
+10:50 cleamoon: 看代码就犯病？我觉得你是被码农爆了
+10:51 Mokou: 羊駝子冒出來了
+10:51 varna: 我昨天凌晨以为自己发现了问题，把锅砸到了libuuid头上
+10:51 varna: 然后我想，那coro用的tag就别uuid了，直接md5 salty吧
+10:52 varna: md5开起来之后照样丧失，加了点log一看，名字不匹配
+10:52 Mokou: ……
+10:52 varna: 最后我羞耻地发现自己开字符串的时候少了一字节
+10:52 Mokou: 正常
+10:52 varna: 然后就没有然后了
+10:52 lh_mouse: git reset --hard
+10:52 cleamoon: orz
+10:52 Mokou: 我跟你講，之前我寫GL的時候出過一個離奇的問題
+10:53 lh_mouse: Mokou, Motou.
+10:53 varna: 不过libuuid不报错的函数系列确实不保证并发安全
+10:53 Mokou: shader會隨機地編譯失敗
+10:53 Mokou: 你懂得
+10:53 varna: 他们鼓吹在正常的时间段内，uuid重复率如同开发者被陨石砸到的概率
+10:53 varna: 然后就有很多人被陨石砸了
+10:53 Mokou: 我開gdb進去一看，讀進去的shader後面多了一大坨神奇的東西
+10:54 Mokou: ……
+10:54 Mokou: @光武帝
+10:54 lh_mouse: 自己写 uuid 。
+10:54 cleamoon: @ipv6肯定够用
+10:55 varna: 其实我不需要大尺寸时空上的唯一性，所以就简单加了盐
+10:55 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/uuid.cpp#L36
+10:55 varna: 然后确保极少数冲突的业务自行失败、不发生泄漏
+10:56 varna: 最后把一个加盐混成32+1B cstring的格式化缓冲打印扔给agent当接口
+10:58 lh_mouse: uuid ftw .
+10:58 varna: 啊哈哈！衣服到了！
+10:58 varna: 中午吃饭的时候顺便去取
+10:58 Mokou: 羊駝子馬上就要被打死了
+10:58 Mokou: 真可惜
+10:58 lh_mouse: 44 位毫秒时间戳 + 14 位进程内原子自增 + 16 位 pid + 48 位随机  + 6 位固定。
+10:59 varna: 我现在是对端userid + 进程内原子自增 + 时间戳，不用随机数
+10:59 varna: 不保证理论不死，但服务器保证死人不波及活人
+10:59 varna: 一个冲突致死的coro会因为超时而死掉
+11:01 IntPtr: 冒泡
+11:02 * lh_mouse slaps IntPtr around a bit with a large trout
+11:02 ball_cactus joined channel
+11:06 february joined channel
+11:07 cleamoon: 卧槽，在某次解说中，毒奶说91去接他儿子了，去接小小色了
+11:07 cleamoon: 然后瞬间就变成隔壁老黄了
+11:09 varna: 驲，U键又飞了
+11:13 lhanjian: 哦哦哦
+11:16 iyzsong:  蛤蛤蛤
+11:23 endle quit:Ping timeout: 240 seconds
+11:34 * iyzsong 黑暗料理准备中..
+11:41 endle joined channel
+11:45 varna: 啊啊麻烦死了，我还得单独准备一个tracker agent
+11:45 lh_cat quit:Quit: Connection closed for inactivity
+11:53 whatofor joined channel
+12:11 varna: (｡･ω･)WTF叔
+12:13 iyzsong: 0.0
+12:44 varna: 吃饭去
+12:55 AutoGavy joined channel
+12:57 lh_mouse quit:Read error: Connection reset by peer
+12:57 lh_mouse joined channel
+13:07 ball_cactus quit:Ping timeout: 244 seconds
+13:09 lh_cat joined channel
+13:14 ball_cactus joined channel
+13:31 ball_cactus quit:Ping timeout: 276 seconds
+13:51 lh_mouse_ joined channel
+13:51 ball_cactus joined channel
+13:52 lh_mouse quit:Ping timeout: 258 seconds
+13:56 lh_mouse_ is now known as lh_mouse
+13:57 lh_mouse quit:Quit: I have China's blessing!
+13:57 lh_mouse joined channel
+14:01 lh_mouse: FOR THE RED ARMY!
+14:05 iyzsong: - -b
+14:05 lh_mouse left channel:"For the Red Army!"
+14:06 lh_mouse joined channel
+14:07 endle quit:Quit: Leaving
+14:31 Youmu joined channel
+14:36 Guest39553 quit:Quit: Leaving
+14:42 iyzsong quit:Ping timeout: 260 seconds
+14:44 iyzsong joined channel
+14:52 iyzsong: 吼大的雨 0.0
+14:54 varna: 白学衣服不错，趁特价还有再加一单
+14:58 lh_mouse: 来亨鸡已经现充了，羊驼还在……
+14:59 varna: 还在白……
+15:04 Mokou: 打死打死
+15:04 varna: (｡･ω･)路上没人打我
+15:05 Mokou: 啊寫wiki好麻煩
+15:05 varna: 不过买来的衣服还是先洗洗好
+15:05 Mokou: +
+15:06 Mokou: 不然萬一生產車間裏有個真姬廚，結果導致衣服上帶有蒼白螺旋體
+15:06 Mokou: 雖說對你來說沒差
+15:06 varna: 我希浪漫
+15:06 varna: 真姬有梅毒
+15:07 Mokou: (｡･ω･)辣雞塔羅牌不如我大周易
+15:08 varna: (｡･ω･)我希十二门主炮
+15:09 Mokou: (｡･ω･)用周易理念造船可以裝備六十四門主炮
+15:09 varna: p7又更了一个细节，可以顺手pull一下
+15:09 Mokou: OK，等我寫完wiki
+15:09 Mokou: 另外wiki寫完以後求校對，英文我只會讀不會寫……
+15:09 varna: 哦瘊瘊
+15:10 Mokou: 把網頁字體換成了Noto Sans
+15:10 Mokou: 還是糊，不過比微米黑好
+15:10 varna: 又偏头疼了
+15:11 varna: 对了昨天糖果跟我说现在伪娘技术先进到可以制造让年轻法师啪了都分不出来的假……通海阀
+15:11 varna: 我觉得米尻酱开发计划可以继续了
+15:11 JQK quit:Ping timeout: 244 seconds
+15:11 Mokou: (｡･ω･)上上上
+15:12 dantmnf quit:Ping timeout: 244 seconds
+15:12 Mokou: 谁把我的收徒贴删了
+15:12 varna: 哈哈哈
+15:12 Mokou: 百度给恢复了然后吧务炸了
+15:12 Mokou: 什麼鬼
+15:12 dantmnf joined channel
+15:13 varna: Mokou: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=b9f79f367c899e51788e3a1c729cd833/b21bb051f8198618ba77a34f4ded2e738ad4e6cd.jpg 梗
+15:13 JQK joined channel
+15:13 Mokou: 噫
+15:14 Mokou: 再噗噗啊
+15:14 Mokou: 算了我再發一次看看
+15:14 Mokou: 再刪了我去C艹吧……
+15:15 lh_cat quit:Quit: Connection closed for inactivity
+15:18 ball_cactus quit:Quit: Leaving
+15:24 varna: http://www.bilibili.com/video/av4852793/ 爱马仕
+15:47 AutoGavy quit:Quit: Connection closed for inactivity
+17:09 Guest82083 joined channel
+17:45 lh_mouse: 	mkdir -p "$$(dirname '$@')"
+17:45 lh_mouse: 	cp -p libmcfgthread.dll.a '$@'
+17:45 lh_mouse: ^^ QNMLGBD Makefile
+17:45 lh_mouse: s/$/\.am/
+18:00 february quit:Read error: Connection reset by peer
+18:40 lhanjian: lh_mouse: 被紫金港的妹子围着坐了一圈，我感觉压力很大
+18:40 varna: lhanjian: 后宫真可怕，求介绍一个
+18:41 lhanjian: 来杭州啊
+18:41 lhanjian: varna:
+18:41 varna: (｡･ω･)介绍个我预热一下！预热一下！
+18:42 lhanjian: 这个经管学院的妹子比例巨高
+18:42 lhanjian: 我还不认识几个呢哭哭
+18:42 lhanjian: 呸。我要认识其他妹子干什么
+18:42 varna: 对啊介绍给我
+18:44 lhanjian: 尴尬癌犯了
+18:45 varna: (｡･ω･)哦瘊瘊
+18:46 varna: 今天事情大体挺愉快，晚上多吃点
+18:46 lhanjian: 哦哦哦
+18:51 stardustx joined channel
+19:10 hope1: iyzsong, 做料理的样子好可爱啊
+19:10 varna: hope1: hotatatata
+19:10 iyzsong: -_-b
+19:14 hope1: Victoria Park.
+19:18 hope1: 八点开始
+19:19 varna: 20:13 < hope1> 八点开始   # 舰时区
+19:20 varna: http://tieba.baidu.com/p/4582781269
+19:21 varna: 名词：股鸣地 掘
+19:22 Youmu quit:Quit: Connection closed for inactivity
+19:22 iyzsong: orz
+19:34 JQK_Phone joined channel
+19:40 Mokou: http://ww1.sinaimg.cn/mw690/e7d1526cgw1f4jf8ro2dmj20k00bdaaj.jpg “？？？？操你妈的我还以为一块钱包邮呢，大骗子，举报了”
+19:43 JQK_Phone quit:Quit: 氫氮氧氟氯，氦氖氬氪氙。
+19:52 lhanjian: 浙大简直是黑长直和马尾控的天堂
+20:12 stardustx: 原来lhj已经这么现充了
+20:12 varna quit:Quit: leaving
+20:30 Rapiz joined channel
+20:32 Rapiz joined channel
+20:53 stardustx quit:Quit: Leaving
+21:19 cleamoon: 拳王阿里逝世，享年74岁
+21:21 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/nw/12_355104.jpg@596w_1l.jpg
+21:26 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/nv/zf_360547.gif@596w_1l.gif
+22:26 stardustx joined channel
+22:31 Guest82083 quit:Quit: EliteBNC free bnc service - http://elitebnc.org - be a part of the Elite!
+22:33 Rapiz joined channel
+23:03 Youmu joined channel
+23:06 stardustx quit:Quit: Leaving
+23:06 CyrusYzGTt joined channel
+23:18 xxxxxxxx joined channel
+23:25 xu0o0 joined channel
+23:26 xu0o0 is now known as Guest18254
+23:32 hoxily quit:Quit: WeeChat 1.5
+23:36 cleamoon quit:Quit: Leaving
+23:46 CyrusYzGTt quit:Ping timeout: 244 seconds
+23:48 stardustx joined channel

@@ -1,0 +1,1056 @@
+00:00:Petrus07 quit:Quit: Leaving.
+00:32:cleamoon quit:Ping timeout: 265 seconds
+00:33:cleamoon_ quit:Ping timeout: 272 seconds
+00:33:cleamoon_ joined channel
+00:34:boosure joined channel
+00:46:cleamoon joined channel
+01:12:geordi quit:Remote host closed the connection
+01:13:geordi joined channel
+01:21:lh_mouse: 开了一堆进程跑压力测试结果 SIGKILL了
+01:22:lh_mouse quit:Read error: Connection reset by peer
+01:28:LittleKey quit:Quit: Leaving.
+01:31:FrankHB quit:Quit: Konversation terminated!
+01:35:geordi quit:Remote host closed the connection
+01:35:geordi joined channel
+01:37:StarBrilliant quit:*.net *.split
+01:37:StarBrilliant joined channel
+01:40:khysw joined channel
+01:44:FrankHB joined channel
+02:08:FrankHB quit:Quit: Konversation terminated!
+02:26:FrankHB joined channel
+02:35:xxxxxxxxx quit:Quit: Leaving...
+04:49:cleamoon quit:Ping timeout: 258 seconds
+05:02:cleamoon joined channel
+05:19:cleamoon quit:Ping timeout: 246 seconds
+05:33:cleamoon joined channel
+08:44:sou_ joined channel
+08:48:lhanjian joined channel
+08:49:LittleKey joined channel
+09:01:Plough joined channel
+09:02:lhanjian: FrankHB, 耻球，要用别人的2-clause BSD的代码要做什么？
+09:11:lhanjian quit:Ping timeout: 245 seconds
+09:13:lhanjian joined channel
+09:16:boosure quit:Ping timeout: 272 seconds
+09:24:boosure joined channel
+09:27:LittleKey quit:Remote host closed the connection
+09:28:LittleKey joined channel
+09:37:lh_cat: 喵
+09:42:whatofor joined channel
+09:42:LittleKey quit:Remote host closed the connection
+09:44:LittleKey joined channel
+09:48:lhanjian quit:Ping timeout: 244 seconds
+10:11:lhjkk joined channel
+10:31:lh_mouse joined channel
+10:31:lh_mouse: mew
+10:36:FrankHB: lhjkk: 1.保留license的副本。2.如果可能，在程序里reproduce。搞个关于什么的。
+10:50:lhjkk quit:Read error: Connection reset by peer
+10:50:lhjkk joined channel
+11:23:lh_mouse: 关于  帝球的菊花
+11:28:FrankHB: 菊你奶奶。
+11:32:lh_mouse: geordi, << decltype(::memcpy);
+11:32:geordi: error: expected primary-expression before 'decltype'
+11:33:lh_mouse: geordi, << TYPE<decltype(::memcpy)>;
+11:33:geordi: void* (void*, void const*, unsigned long)
+11:33:lh_mouse: geordi, << is_reference<decltype(::memcpy)>();
+11:33:geordi: false
+11:33:lh_mouse: geordi, << is_pointer<decltype(::memcpy)>();
+11:33:geordi: false
+11:34:lh_mouse: geordi, << is_pointer<decay_t<decltype(::memcpy)>>();
+11:34:geordi: true
+11:36:sismvg joined channel
+11:38:lhjkk quit:Ping timeout: 245 seconds
+11:45:lhjkk joined channel
+12:05:dantmnf: geordi怎么了...
+12:09:sismvg: georid<<"幼女发起了由幼女主导的幼女执行的为了幼女的独立的幼女战争";
+12:09:geordi: 幼女发起了由幼女主导的幼女执行的为了幼女的独立的幼女战争
+12:09:sismvg: 这不好的嘛
+12:10:FrankHB: georid<<'幼女'
+12:10:geordi: warning: character constant too long for its type
+12:10:FrankHB: georid<<'..'
+12:10:geordi: warning: multi-character character constant
+12:10:FrankHB: 直接给吃了么。
+12:10:sismvg: georid<<" ";
+12:10:geordi:  
+12:11:sismvg: 大叔发起了由幼女主导的幼女执行的为了幼女的独立的幼女战争
+12:11:sismvg: 瞬间邪恶了
+12:14:sismvg: ui和正交从来就是死对头啊
+12:17:FrankHB quit:Remote host closed the connection
+12:24:xxxxxxxx joined channel
+12:24:xxxxxxxx: http://puu.sh/cj334/bae96fa777.jpg
+12:27:xxxxxxxx: 强行熊孩子
+12:31:lh_mouse: geordi, -w <<'..' // FrankHB
+12:31:geordi: 11822
+12:32:FrankHB joined channel
+12:33:FrankHB quit:Remote host closed the connection
+12:33:FrankHB joined channel
+12:58:lh_mouse: FrankHB, 你想干掉 value category 的话   关于“纯右值的动态类型就是其静态类型”如何定义？
+13:00:FrankHB: <<'幼女'
+13:01:FrankHB: 噗贴错了。
+13:01:FrankHB: lh_mouse: 干掉value category，塞进类型系统里面，照样有区别。
+13:01:FrankHB: lvalue都是&之类。
+13:02:FrankHB: 反正现在非引用的lvalue也体现不出这里的区别。
+13:05:xxxxxxxx: 帝球也是幼女控....
+13:05:lh_mouse: !give FrankHB 幼女
+13:09:sismvg: dirty item真是难算
+13:22:lhanjian joined channel
+13:27:Plough: 我操
+13:27:Plough: 单横对单横满血雾岛被闭幕雷大破了？
+13:27:khysw: Plough: 交出智商
+13:27:Plough: 你TM逗我？
+13:28:FrankHB: 哦，干掉非引用lvalue以后typeid什么的可能疼点。
+13:28:khysw: 正式加入prolog党...
+13:29:lh_bot joined channel
+13:29:lh_mouse: 0.0
+13:29:lh_bot: 0.0
+13:30:lh_mouse: MEOW
+13:37:Plough: 我操
+13:37:Plough: 单横核潜艇
+13:37:Plough: 梯形核潜艇
+13:37:lhjkk quit:Read error: Connection reset by peer
+13:37:Plough: 这游戏还能不能玩了
+13:37:lhjkk joined channel
+13:39:lh_bot quit:Ping timeout: 272 seconds
+13:41:varna joined channel
+13:41:varna: 看来今天肛旗还痛经，就先不爆了
+13:41:Plough: varna: 我TM现在感觉这游戏没法玩了
+13:41:Plough: 5-2出击
+13:41:Plough: 潜艇点一看对面单横
+13:41:Plough: 闭幕雷过来轰隆，大破
+13:41:Plough: 一看对面梯形
+13:41:Plough: 开幕雷过来轰隆，大破
+13:42:varna: ...
+13:42:Plough: 妈的哪来这么多核潜艇
+13:42:Plough: 满血雾岛被单横潜艇闭幕雷一下秒掉我也算是涨见识了
+13:42:varna: 开始周常
+13:43:Plough: 总之我先把天山友永拿到再说
+13:43:khysw quit:Ping timeout: 272 seconds
+13:43:Plough: 另外今天练级事故率低多了
+13:43:Plough: 71->77一共两次事故
+13:44:varna: 今天我演习差点没输三场
+13:44:sismvg: CDirtyRect
+13:44:sismvg: fork
+13:44:Plough: ……
+13:44:varna: 水雷战队怒草欧洲6bb失败
+13:44:Plough: 我把陪练空母的配置换成了彗星*2+彩云+2
+13:44:Plough: varna: 这种情况不是该用潜艇大队么
+13:44:varna: Plough: 练级
+13:44:Plough: 挨个蹭
+13:45:varna: 来不及……
+13:45:Plough: ……反正小船我准备听天由命了
+13:45:Plough: 大船还一堆要练的呢，怎么想也来不及
+13:45:varna: 所以我屯资了
+13:46:Plough: 苍龙棒各妙高我准备先弄出来
+13:46:Plough: 前两个战力后面一个是为了电探
+13:47:varna: 妈的……
+13:47:varna: 每天都这样
+13:51:Plough: 再去一次
+13:52:varna: 上支援
+13:52:Plough: 先上了Boss支援
+13:52:Plough: 道中支援等会看看
+13:52:varna: 能上最好都上
+13:52:varna: 大白腿系列太不经打
+13:52:Plough: 我有两个舰队在远征
+13:52:Plough: 所以得等等
+13:53:lhanjian: varna, 爆！
+13:53:varna: lhanjian: uccu
+13:53:Plough: 潜艇爷爷们求放过
+13:53:lhjkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+13:53:Plough: 单横六潜
+13:53:Plough: 开幕躲过去了
+13:53:lhanjian: varna, 夭寿啦　，又爆错了
+13:53:Plough: 闭幕两颗雷
+13:54:Plough: 过去了
+13:54:Plough: G点……
+13:54:varna: 不是带路配置？
+13:54:Plough: 是
+13:54:Plough: 下去再回去
+13:54:varna: 那惨了
+13:55:Plough: 过去了
+13:56:Plough: 不过说好的60运呢，为啥都打雪亲王……
+13:56:varna: 美军下辈子的怨念
+13:57:Plough: Boss支援打掉喔级和一只DD
+13:57:Plough: 然后雾岛被塔姐大破了……压力好大
+13:57:Plough: 得，亲王大破
+13:57:varna: 用力
+13:58:Plough: 我感觉没戏了
+13:58:varna: 还有谁会反潜
+13:58:varna: 应该还有一个
+13:58:Plough: 天津风大破
+13:58:varna: ...
+13:58:Plough: 我已经没火力点了
+13:58:Plough: 剩三个航母，都省得我夜战了……
+13:59:Plough: 我把RJ换成大傻试试
+14:00:varna: 拼罗盘比带路稳
+14:01:Plough: 不过其实刚才那局输在塔姐智商太高上……
+14:01:Plough: 上来直接灭了雾岛
+14:01:varna: ...
+14:02:Plough: 去见潜艇爷爷了
+14:03:Plough: 轮形
+14:03:Plough: CVL DD 4SS
+14:03:Plough: 闭幕一颗雷
+14:03:Plough: 蹭血，过去了
+14:04:Plough: 看罗盘娘了
+14:04:Plough: 安拉胡阿克巴！
+14:04:Plough: 沟了
+14:07:sismvg quit:Ping timeout: 246 seconds
+14:08:varna: 噗
+14:08:Plough: 又是轮形潜艇……
+14:08:varna: 当时我烧了两个损管也不是白烧的，反正烧完沟一次D败一次
+14:08:Plough: 蛋疼
+14:09:varna: 对了今天肛旗怎么没上学？还运动会？
+14:09:Plough: 没，还是不舒服
+14:09:varna: 痛经真麻烦
+14:09:varna: 要不我们来做点舒服的事？
+14:09:Plough: 脑洞也是病，得治
+14:10:Plough: 沟了
+14:10:Plough: 我还是换带路配置吧……
+14:10:varna: 带路真心危险
+14:10:xxxxxxxx: 痛经危险么?
+14:10:Plough: 危险和进不去我宁可选前者
+14:10:varna: 万一你碰上一对鬼
+14:10:varna: 我击杀失败四次之后放弃了带路配置
+14:10:Plough: 我这辈子用非带路配置就没进过Boss
+14:11:varna: 你该先舒服舒服
+14:11:xxxxxxxx: ....
+14:12:Plough: 我TM就剩1k油了……
+14:12:varna: 拼拼拼
+14:12:Plough: 烧了2k油没做完一个出击任务，真蛋疼
+14:12:varna: 油可以没有，游泳队必须有
+14:12:Plough: 先等疲劳回复过来
+14:12:varna: 飞龙出击我绝对不止2k油弹
+14:13:Plough: 所以苍龙任务你直接变身脸帝
+14:13:varna: 没办法
+14:13:varna: 昨天我做了整整六个小时的撸号
+14:13:varna: 除了中破就是大破
+14:14:Plough: 我先去看看今天有没有dalao在打5-5
+14:14:varna: 你来一发？
+14:14:Plough: 会死
+14:14:Plough: 因为我没油了
+14:14:varna: 傻傻傻吃喝鸟
+14:14:Plough: 顺便我家暴食Lv44
+14:14:varna: ...
+14:14:Plough: 我还不如带二航二航二……
+14:14:varna: 简直二航笑眯眯
+14:15:xxxxxxxx: 傻傻傻吃喝鸟是啥?
+14:15:Plough: 自从有了大鸟以后我家暴食的等级就没动过
+14:15:varna: 三个金刚级，赤城加贺大哔
+14:15:xxxxxxxx: 真神奇....
+14:16:Plough: 没看到5-5，看到一个5-3
+14:16:Plough: 去围观下
+14:16:sismvg joined channel
+14:16:sismvg: 擦。。刚才被分出去了
+14:17:Plough: 进去第一眼：大鲸
+14:17:varna: 噗
+14:17:varna: 5-3大鲸？喝大了？
+14:17:Plough: 他大概在找装备
+14:17:varna: POI又摔了
+14:18:Plough: 他一格血都没打掉……
+14:18:varna: ...
+14:18:Plough: 大傻妙高鱼雷筑摩POI响爷
+14:18:Plough: 全一改
+14:19:varna: 他哪来的大鲸……
+14:19:Plough: 不知道……2-5?
+14:19:Plough: “新人打2-5掉了个不能放飞机的母舰，请问dalao这是啥船怎么用”
+14:19:Plough: 大概是这种感觉
+14:20:varna: C败……
+14:20:Plough: 第一点无伤
+14:20:Plough: 好了第二点塔姐直接大破响爷
+14:20:Plough: 莉酱CI了！羽黑中破了！
+14:20:Plough: 第二个莉酱给羽黑补了一刀
+14:20:varna: 干得好
+14:20:Plough: CL一炮大破妙高
+14:20:varna: 妙高
+14:20:Plough: 三个大破回家了23333
+14:21:Plough: 不过这只不说话
+14:21:Plough: 我看看有没有说话的
+14:22:Plough: 有个正在打5-5Boss点的
+14:22:Plough: 晚上长门对着喔改擦了两下弹……
+14:23:Plough: 于是没斩掉
+14:23:varna: 没夜侦？
+14:24:Plough: 先报舰队：Lv82隼鹰Lv84武藏Lv82长门Lv79陆奥Lv88飞龙Lv89卡嘎
+14:24:Plough: 有夜侦
+14:24:varna: 噗
+14:24:varna: 有guitou
+14:24:Plough: "Homoじゃないんですよ"
+14:24:Plough: 他刚才说的
+14:24:varna: 哈哈哈哈哈
+14:28:varna: 你看看你们这些HOMO
+14:28:Plough: 所以说不是HOO
+14:29:Plough: HOMO
+14:30:varna: winetricks没有d3d9.dll?
+14:31:Plough: 大概得直接装整个DX9
+14:31:varna: d3dx9系列我都有……
+14:32:varna: 试试directx9
+14:33:varna: 噗，有d3d9.dll啊
+14:38:Plough: 我做飞龙任务愣是把飞龙又练了一级……
+14:40:Plough: 又去见塔姐了……
+14:40:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=62ee5360d72a283443a636036bb4c92e/44024f55b319ebc4b5f235e48126cffc1f1716f3.jpg
+14:40:Plough: 飞龙中破
+14:41:Plough: RJ中破
+14:41:Plough: 不过好歹过去了
+14:42:varna: 危险
+14:42:varna: 你没给飞龙加个小黄炮之类的？
+14:42:Plough: 危险也没辙……
+14:42:Plough: 没
+14:42:Plough: 祈祷塔姐这次打空母吧
+14:42:varna: 嗒酱……
+14:42:varna: 嗒酱娇起来也比较麻烦
+14:42:Plough: 战鬼双喔配置
+14:43:varna: 还好
+14:43:Plough: 哎呦真去打空母了
+14:43:Plough: 三个火力点都在，夜战
+14:44:Plough: ……剩了一只喔酱
+14:44:varna: ...
+14:44:varna: 回去给飞龙最后一个上个小黄炮抢出手吧
+14:44:sismvg: UI和数据分离根本不可能啊啊啊啊啊啊啊啊
+14:44:Plough: 我已经出不去了
+14:45:varna: ...
+14:45:varna: 东急二和北鼠能一起开么……
+14:46:Plough: 啊还能在出去一次
+14:46:Plough: 不过回来没法补给
+14:46:Plough: 还是没桶
+14:46:varna: 那还是别出去了，先打周常吧……
+14:46:Plough: 我看看东急还剩多久
+14:46:Plough: 9分钟……
+14:46:varna: 没戏了
+14:47:Plough: 桶掉回258了
+14:47:sismvg: A1 和东映简直毁漫画
+14:47:varna: 我现在似乎是259……
+14:47:varna: 已经有多少天没用过桶了
+14:49:varna: Plough: 对了，我现在觉得继承一个gobject也不算很麻烦，是不是没救了
+14:49:Plough: varna: 我觉得是
+14:49:varna: 卧槽大破！？
+14:49:varna: 大破！？
+14:49:Plough: 2-3么
+14:49:varna: 2-3下路轻巡给我弄个大破
+14:50:Plough: 我挨过好几次了……
+14:50:varna: 天天大破，苍龙都排不上队啊
+14:50:Plough: 等级问题？
+14:51:varna: 我去2-3的潜艇只有一个30-的
+14:51:varna: 其余上到76下到35
+14:51:Plough: ……
+14:51:Plough: 脸
+14:51:sismvg: http://tieba.baidu.com/p/3361314532 卧槽，这小学生太淡定了
+14:52:whocares_2 quit:Remote host closed the connection
+14:53:whocares_2 joined channel
+14:53:varna: 我看看南西先做完还是伊号先做完
+14:53:varna: 前者差一次，后者刚一半
+14:55:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=a0257b85a486c91708035231f90671cf/aa18972bd40735fad322d1c49d510fb30e2408f8.jpg
+14:58:Plough: 妈的
+14:58:Plough: B点后面真是随机的？
+14:58:Plough: 我怎么次次都下去见塔爷
+15:00:varna: 非带路大概率嗒酱
+15:00:varna: 可能是3/4吧
+15:00:Plough: 所以我一只用的都是带路配置
+15:00:Plough: 依然大概率塔爷
+15:00:varna: 那是因为珊瑚海参战的是火鸡和肚子
+15:00:Plough: 非带路配置我现在是100%沟
+15:01:varna: ……果然我脸都用来推图
+15:01:varna: 哪来那么多子日
+15:02:varna: 南西先做完，伊号80%，通商破坏50%……
+15:03:Plough: 我去你妈了个逼的
+15:03:Plough: 上损管直接出门大破
+15:03:varna: ...
+15:15:varna: 三个中破，干得漂亮
+15:21:sismvg: YSLib..淫色研究室。。
+15:22:Plough: Lib->实验室？
+15:22:sismvg: 出自石头门
+15:22:sismvg: 的翻译错误
+15:23:varna: 银兽库
+15:23:varna:  床前明月光 肝出六千钢 举头造大和 低头出扶桑
+15:24:sismvg: 横批 ->快点买点卡
+15:24:varna:  鹅鹅鹅 普建求加贺 直接喷个火 结果出那珂
+15:24:Plough: 氪金大建官方都不推荐
+15:25:varna: 官方希望大家买戒指
+15:25:varna: 买了就能打过5-5
+15:25:sismvg: 买买买
+15:25:sismvg: FJ花钱买美少女战士的新手办
+15:25:Plough: 要是买了以后就能找五十个黑人把田中直接干死我就买
+15:26:sismvg: 若木拿稿费造大和
+15:26:sismvg: 数据->UI交互点->UI细节
+15:27:sismvg: 总有那么些人用vector搞insert
+15:28:varna: 一下午已经收入十三桶……
+15:28:Plough: Orz
+15:29:varna: 不过里面有很多水分，比如远征队RP爆发、三航母、西村队出击
+15:29:varna: 光后两个任务就有五桶
+15:29:Plough: 一下午已经烧了15桶
+15:30:varna: 要不咱俩先炒会饭
+15:30:Plough: 回去自爆
+15:30:varna: 肛旗酱总拒绝我，我都快变成奈亚子了
+15:31:sismvg: 周日和周一是活着的意义啊
+15:31:* varna 每天的安排都差不多
+15:31:varna: 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+15:31:varna: 饶了我吧我不要打Boss啊
+15:32:varna: 加上南西这也连着不下六次了
+15:32:* sismvg Walking dead and shinban
+15:32:varna: 刚修好的潜艇又炸得稀烂
+15:33:varna: 噗看错了，伊号才50%+
+15:33:sismvg: 新番的发音是shinban?
+15:34:varna: 不确认
+15:34:varna: 感觉应该是
+15:35:sismvg: PP的女主终于黑了
+15:35:sismvg: 男主（云雀）又不见了
+15:39:varna: 这2-3打得我特别想肛了肛旗
+15:40:varna: 直接送回家
+15:51:sismvg: ADT的初始化是个大坑
+15:57:pmM joined channel
+15:58:pmM quit:Client Quit
+16:05:LittleKey quit:Quit: Leaving.
+16:08:LittleKey joined channel
+16:10:varna: 卧槽
+16:10:varna: 十连Boss, 这次送了我两个大破
+16:10:varna: 吓得我抱住矶波就是一阵哆嗦
+16:11:lh_mouse: https://www.alien.net.au/irc/irc2numerics.html
+16:11:lh_mouse: Plough, 
+16:12:lh_mouse: Plough, 你不上课的啊
+16:14:varna: lh_mouse: 他痛经
+16:15:lh_mouse: [15:27:54] 18<29sismvg18> 总有那么些人用vector搞insert  // 奇怪么
+16:16:lh_mouse: geordi,  { vector<int> v{0,1,3,4,5,6}; v.insert(upper_bound(v.begin(), v.end(), 2), 2); cout <<v; }
+16:16:geordi: {0, 1, 2, 3, 4, 5, 6}
+16:19:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=bfc1767c0955b3199cf9827d73928226/6f061d950a7b02086bf6059c61d9f2d3572cc88b.jpg
+16:24:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+16:35:cleamoon: @空雪梦见 这啥？！// 新浪视频 【最高法：未成年人与幼女发生性关系情节轻微不定罪】鉴于部分性侵害犯罪的低龄化特点，《意见》规定，已满十四周岁不满十六周岁的人偶尔与幼女发生性关系，情节轻微、未造成严重后果的，不认为是犯罪。
+16:36:varna: 卧槽！？
+16:36:varna: 啊啊啊啊啊啊啊啊啊啊啊啊
+16:36:varna: 偶尔
+16:36:varna: 偶尔
+16:36:Plough: 妈的我刚好16……
+16:36:varna: 偶尔和幼女发生性关系
+16:37:varna: 我二十四了啊……
+16:37:lhanjian: 2006年02月09日 07:29:29
+16:38:FrankHB: 这什么煋闻。
+16:39:varna: 哈哈哈哈
+16:39:varna: 又是两个中破
+16:40:varna: 我的伊号居然是一个一个航母打下来的
+16:45:Plough: 这两天直接暴烧10k弹药……
+16:45:Plough: 准确的说似乎是12k
+16:45:varna: 肝船没办法
+16:46:varna: 12k一个二改算是差不多的数目吧
+16:46:lhanjian: varna, 羊驼子眼里的内存池的理想状态是啥？
+16:46:varna: lhanjian: 我两方面都不知道（其一是我没想过，其二是我不知道你的具体意思）
+16:46:varna: 出去几分钟
+16:46:varna: 很快回来
+16:54:varna: .
+16:54:varna: lhanjian: 怎么想起这么个问题了
+17:01:xxxxxxxx: 他肯定和幼女做了什么
+17:02:varna: cleamoon, 
+17:03:varna: xxxxxxxx: 对了我今天爆你没有？
+17:05:xxxxxxxx: 爆你妹去
+17:06:varna: 看来是没爆
+17:25:boosure quit:Ping timeout: 260 seconds
+17:35:cleamoon:  香港警方周日表示，拘捕了一名抗议组织者，并指控其通过网络留言板煽动他人冲击警方。自9月末爆发街头抗议活动以来，这是首次有人因为这一理由而被捕。周六被捕的这名23岁男子被控煽动他人“到旺角参与非法集会、冲击警方及瘫痪铁路”。警方并未透露被捕的那名男子具体发布了什么讯息，或是在哪里发布。他被控“
+17:35:cleamoon: 有犯罪或不诚实意图而使用电脑”和“非法集会”。警方称，该男子还参加了上周五旺角的抗议活动。根据现行法律，“有犯罪意图”而使用电脑者可构成刑事犯罪，适用于最高5年监禁的刑罚。警方表示，为了抗议而瘫痪交通属于非法行为。
+17:36:cleamoon: varna, ？
+17:36:varna: cleamoon: 18:01 < xxxxxxxx> 他肯定和幼女做了什么
+17:37:cleamoon: 唉，想当年多泡几个妹子就好了
+17:38:varna: 这个怎么说
+17:38:varna: 岚月酱现在想开按摩会馆？
+17:39:cleamoon: @Vickyatmes：世界就是如此不公平，“你妈逼”是骂人，“你爸屌”却是称赞。
+17:40:cleamoon: 反正和幼女偶尔啪啪啪也没关系
+17:40:cleamoon: @windyye：儿子今天带了顶海贼帽得意洋洋去小区游乐场玩，一个比他大点的小姑娘兴奋地跳过来说，“你是海盗吗？”儿子说，“不是，只是带了顶海盗帽。”姑娘不死心，“你来装海盗吧。啊，我好怕，你想要对我做什么？”儿子说，“我想要你走开。” #论怎么说话没朋友
+17:40:cleamoon: 23333  @majunpu：中午在麦当劳里吃套餐。旁边座是两位妙龄女子。两人吃着聊着，突然一人问，“为什么都是薯条，麦当劳就是比肯德基的硬点咸点也好吃点呢？”另一妹子开（yin)心(dang）的笑道，“因为麦当劳是叔叔，而肯德基是爷爷啊。”正吃着薯条的我，觉得这个世界不会好......
+17:40:varna: 噗
+17:41:boosure joined channel
+17:42:FrankHB: http://v.youku.com/v_show/id_XODAzOTY1MTM2.html 蛤蛤蛤蛤。。
+17:43:xxxxxxxxx joined channel
+17:43:cleamoon: 对了，有什么好的查语法的工具吗？
+17:43:sou_ quit:Remote host closed the connection
+17:43:boosure quit:Client Quit
+17:43:varna: cleamoon: 语法？
+17:43:xxxxxxxxx: 步步高打火机?
+17:46:xxxxxxxx quit:Ping timeout: 240 seconds
+17:46:cleamoon: 英文语法
+17:46:cleamoon: 不是syntax
+17:46:cleamoon: 是grammar
+17:47:varna: 哦，word
+17:48:lh_mouse: 可以合理不上课  换我我也去
+17:48:varna: 现在据说连尖沙嘴都要占了？
+17:49:lh_mouse: 去占中的都是吃饱了不想上班或者不想上课的
+17:49:lh_mouse: 要么是现充 要么有后台
+17:50:varna: 我怎么感觉学生运动都是少数几个那两类人领着一堆以为自己很重要的逗比呢
+17:50:varna: 又是两个中破……
+17:51:lh_mouse: 经济损失还没所谓的民主重要  X 虫上脑
+17:51:varna: 罗盘总这么欺负我，我也不太高兴
+17:52:cleamoon: 经济损失没有不变成第二个大陆重要
+17:52:cleamoon: 民主什么的瞎掰
+17:53:lh_mouse: @招显聪
+17:53:lh_mouse: 你觉得那种人很有尊严  你就去
+17:53:lh_mouse: 变成大陆总比变成阿三强
+17:53:varna: 这个我赞同
+17:54:lh_mouse: 阿三就是比香港早超生二十年而已
+17:54:varna: 罗盘欺负我，所以我只好采用一点不会被吊打的阵容
+17:54:varna: 2bb4cv给对面的伙计们洗洗脸吧
+17:54:lh_mouse: 你为什么会说香港变成大陆  我不理解
+17:54:cleamoon: 不觉得香港继续下去能变成阿三
+17:54:lh_mouse: 照你的逻辑香港也会变成阿三
+17:55:cleamoon: 阿三对香港没有控制权
+17:55:condy joined channel
+17:55:lh_mouse: 你没看懂我说的什么意思
+17:55:lh_mouse: 如果英国管控下出了个阿三  那么香港也会变成那个样子
+17:55:varna: 我就说一点
+17:55:cleamoon: 噗
+17:55:lh_mouse: 实际上香港现在真的有人说他们是英国人
+17:55:cleamoon: 英国还控制了米国，澳大利亚等呢
+17:56:lh_mouse: 这你都知道的
+17:56:lh_mouse: 美国两百年前就独立了
+17:56:varna: 算了我不说了，妊娠攻击略严重
+17:56:cleamoon: 如果你写了一个小python程序，写的渣渣，于是你用的所有东西都是渣渣？
+17:57:varna: ?
+17:57:FrankHB: geordi, --version
+17:57:geordi: g++ (GCC) 5.0.0 20141019 (experimental)
+17:57:cleamoon: 英国殖民的地方出了一个渣渣，于是所有他殖民的地方都是渣渣？
+17:57:lh_mouse: 什么东西
+17:57:varna: 卧槽
+17:57:lh_mouse: cleamoon, 脑洞
+17:57:varna: 居然被糊了第二个大破
+17:58:cleamoon: 阿三sb的地方是极端种族歧视和极端贫富不均
+17:58:lh_mouse: 香港和阿三水土不一样
+17:58:varna: 我只能说岚月酱常年处于因为自己处境还行所以高谈阔论的状态
+17:58:cleamoon: 当然是
+17:59:varna: 那么就两个字：放屁
+17:59:lh_mouse: 比方说  香港水土比较好  那么变成大陆又如何
+17:59:lh_mouse: 比如我知道我不上班就不会有人发工资  于是我就不会去占中
+17:59:lh_mouse: （假如有的话）
+17:59:lh_mouse: 实际上不是没有   前两年反日游行就是例子
+17:59:lh_mouse: 我可懒得去  笑看
+18:00:cleamoon: 但是有人去
+18:00:lh_mouse: 那帮人都是现充
+18:00:cleamoon: 去的话有工资
+18:00:varna: 那么问题来了：去的是什么人？
+18:00:* lh_mouse 不是现充
+18:00:varna: 什么人给他们钱？
+18:00:varna: 什么人保障他们事后的权益？
+18:00:cleamoon: 垃圾回收党呗
+18:00:lh_mouse: 有人跑一趟给两千块钱我也去
+18:00:lh_mouse: @洛杉矶墙火炬那个
+18:01:lh_mouse: 抢*
+18:01:varna: 如果都能确凿地保障，那是另一回事；不过我怎么都感觉是一小坨人操作一大堆傻逼
+18:01:cleamoon: 当然是
+18:02:varna: 那就跟香港本身没什么关系
+18:02:lh_mouse: 嘛 香港特区政府呼吁 说现在已经损失好几千亿啦   我觉得对于占中那帮人一点号召力都没有
+18:02:cleamoon: 如果你说上街的不少是sb，那我同意，如果你说他们追求的全是fp，那是瞎掰
+18:02:lh_mouse: 亏的又不是平均  
+18:02:lh_mouse: 那帮占中的说不定还能拿钱
+18:02:cleamoon: 我觉得全国罢工一个月都损失不了几千亿
+18:02:varna: 这个呼吁对谁来说都没有号召力
+18:03:cleamoon: 而且一个特首下岗了不就结束了，一种意义上说是他造成的损失
+18:03:lh_mouse: cleamoon, 难说  香港是金融中心   你当然不能按大陆的 GDP 算
+18:03:varna: 说意义就没意义了
+18:03:lh_mouse: cleamoon, 你叫奥巴马滚  他滚不滚
+18:04:varna: 如果一个特首能这么拔掉，那TG也太逗了
+18:04:lh_mouse: 战中的就那么几千人
+18:04:varna: 个人在国家面前只有闹，没有力量
+18:04:lh_cat quit:Ping timeout: 255 seconds
+18:04:cleamoon: 如果米国爆发全国大游行，obama怎么可能不滚
+18:04:varna: 如果有点力量，就不用搞闹剧，直接搞颠覆去
+18:04:varna: 你怎么搞出个全国游行
+18:05:cleamoon: 占中看图片都几万，全香港才几个人
+18:05:lh_mouse: 哦 难道占中是全民游行？
+18:05:cleamoon: 你刚说完个人只有闹
+18:05:lh_mouse: cleamoon, 上海都好几千万人
+18:05:varna: 我还是这么说
+18:05:varna: 你告诉我，个人怎么组织起来这些
+18:05:cleamoon: 不是全民，但肯定不是日人民报说的几千人
+18:06:varna: 然后我们把那几个组织者去掉，剩下的几万人有用么
+18:06:lh_mouse: 你要说自发  我认为绝壁扯犊子
+18:06:cleamoon: 为什么去掉呢？
+18:06:lh_mouse: 第一  没人有那么高觉悟
+18:06:varna: 没有目的，没有想法，没有能力，没有背景的几万人屁用没有
+18:06:lh_mouse: 第二   不给钱我可不去
+18:06:cleamoon: 你不去
+18:06:varna: 所以核心是那几个人背后有什么
+18:06:cleamoon: 有人去
+18:06:cleamoon: 你认为给钱了
+18:06:varna: 说白了，去的人里有多少比例是真有影响力的
+18:06:cleamoon: 我认为没给
+18:06:lh_mouse: 至少不用上课
+18:07:cleamoon: 如果这类事在瑞典发生，不给钱我也去
+18:07:lh_mouse: 咱都过来人
+18:07:cleamoon: 所以我认为没给钱
+18:07:cleamoon: 至少没都给钱
+18:07:varna: 毕竟你政治上幼稚……
+18:07:cleamoon: 如果在国内给钱我都不去
+18:07:lh_mouse: 瑞典不会有人占中  一点追求都没有
+18:07:varna: 有追求也没用
+18:08:cleamoon: 因为我们不用占中
+18:08:varna: 有追求的废柴不如没追求
+18:08:varna: 而且实际上还有个问题：特首下台不下台，谁来决定
+18:09:cleamoon: 为什么那些人就是废柴呢？
+18:09:varna: 别混淆
+18:09:varna: 如果你非要追究这件事情里谁有用谁没用，考虑下他们多少人能影响到那个决定特首下台与否的领导层
+18:09:cleamoon: 事实就是无论有谁在组织，很多人是想要出门才去的
+18:10:varna: 想要没用
+18:10:varna: 我不觉得这件事情里所有人都是被利诱的，但我反而看不起那些自发的
+18:10:cleamoon: 如果你想说这个的结果，那么占中的领导者一开始就说了，这个占中100%失败
+18:10:varna: 不是占中本身
+18:11:varna: 前前后后看一下就知道了
+18:11:cleamoon: 如果你觉得出门不值，那从个人角度当然不值，但是从全民角度是肯定必要的
+18:11:varna: 错了
+18:11:varna: 全民？这个概念只有在公民知道他们要什么的时候才有必要
+18:12:LittleKey quit:Quit: Leaving.
+18:12:cleamoon: 那永远不会有
+18:12:varna: 他们要的东西，他们自己知道吗？能争取到吗？跟谁合作能争取到？
+18:12:varna: 有多少参加运动的人能回答这问题
+18:13:cleamoon: 他们想要真自制
+18:13:cleamoon: 不能争取到
+18:13:cleamoon: 和谁合作也不能争取到
+18:13:varna: 那么，他们有能力自治么
+18:13:cleamoon: 这个占中一开始就说了
+18:13:Kanna joined channel
+18:13:varna: 我想当国家主席，我够格么
+18:14:cleamoon: 你想做你家的头，你够格
+18:14:varna: 别偷换概念
+18:14:cleamoon: 这没偷换
+18:14:varna: 这个“自治”具体指什么
+18:14:Kanna: 围观
+18:14:Plough: 不懂政治
+18:14:Plough: 不过看到这我只想@苏格拉底
+18:14:varna: 跳过政府？自行任命官员？仿西方的民主制？
+18:14:lhanjian: Kanna, 很不幸，kanna酱来的时候正好碰到大家在饭后谈笑风声
+18:15:cleamoon: 除军权以外，其他权利可以自己决定
+18:15:varna: 中国的一个省为什么有这个权力
+18:15:cleamoon: 什么制度无所谓，关键是他们要自己决定什么制度
+18:15:varna: 如果他们认为自己和中国人不一样，那么他们应该独立
+18:15:cleamoon: 很多人就是想独立
+18:15:varna: 那就没余地了，可以直接认定是反动
+18:16:varna: 中国的一个省没有独立的余地。Period.
+18:16:cleamoon: 一个省凭什么没有权力？因为上头不给
+18:16:condy: geordi: { for (int i=1;i<10;++i)cout<<ALIGN(i)<<" "; } int ALIGN(int x) { return (x + 7) & ~7; }
+18:16:geordi: 8 8 8 8 8 8 8 8 16 
+18:16:varna: 因为这里不是联邦，是共和国
+18:16:cleamoon: 为什么独立就是反动，因为上头不许
+18:16:varna: 这没错
+18:16:cleamoon: 总结，上头不干
+18:16:varna: 那么你觉得你跟上头不一致，你可以选择对着干
+18:17:cleamoon: 在大陆这么干是自杀
+18:17:Plough: 你干不过我不是我的错
+18:17:varna: 反动不是个贬义词，你可以直接理解成“反对现行政策”
+18:17:varna: 那么最后就剩下一项了——典型的站着说话不腰疼的情况
+18:18:cleamoon: 就是站着说话不腰疼
+18:18:varna: 居安而不思危、事情到自己头上的时候（虽说未必有几个人知道）反倒哭得比谁都响
+18:18:cleamoon: 在大陆自发出门的100%是sb
+18:18:cleamoon: 在香港我都不一定会去
+18:19:cleamoon: 但是我不会反对他们去
+18:19:varna: 那就只剩下个人意见了
+18:19:varna: 简单地说，我是反对的
+18:19:varna: 虽说我的话语权可能也只比诸君多一点
+18:20:cleamoon: 为什么反对呢？
+18:20:varna: 愚蠢
+18:20:cleamoon: 大众只能明白愚蠢的东西
+18:20:varna: 从他们的角度上来看，在准备不足的时候发动了毫无意义的行动，牵扯了一堆傻逼
+18:21:cleamoon: 你和大众说经济政治军事，不如和他们说自由，因为他们不懂
+18:21:varna: 傻逼运动的利益被幕后篡夺几近定律，怎么就是不明白
+18:21:varna: 他们更不懂自由
+18:21:cleamoon: 当然不懂
+18:21:varna: 所以大众只是pawn
+18:21:cleamoon: 但是他们懂经济政治军事
+18:21:varna: 懂？
+18:21:cleamoon: 大众当然只是pawn
+18:21:cleamoon: 幕后懂
+18:21:cleamoon: 不是大众懂
+18:22:varna: 幕后啊，他们和底下的pawn利益一致么？
+18:22:cleamoon: 重要吗？
+18:22:varna: 重要
+18:22:varna: 如果大众只是希望宣泄情绪，那么无所谓
+18:22:varna: 不然最后不会有事实上的利益一致
+18:22:cleamoon: 大众想什么无所谓
+18:22:varna: 我说了，连事实上的利益一致都不会有
+18:23:cleamoon: 很可能没有
+18:23:varna: 那么为什么做这件事
+18:23:varna: 因为自己没有能力？
+18:23:cleamoon: 但是在大陆你连做幕后的可能都没有
+18:23:varna: 问题又来了，幕后是谁？
+18:23:cleamoon: 因为想做幕后
+18:23:varna: 是希望当幕后的港人？别逗
+18:23:cleamoon: 谁能得益谁都可以做幕后
+18:24:varna: 一个脑子里有点东西的人就能参加运动？幼稚
+18:24:varna: 大事件没有偶发的，但机会可能是偶然的
+18:24:varna: 省省美国梦吧
+18:25:cleamoon: 但是完全没机会就没有后面的事了
+18:25:varna: 无论在哪里，幕后都是推动力而不是合流的结果
+18:25:cleamoon: 对呀
+18:25:cleamoon: 这和我说的没什么矛盾呀
+18:26:varna: 相信一介小民百姓可以成为推动力本身就是美国梦
+18:26:varna: 所以大部分的参与者只是愚蠢，而实际的幕后在做什么你并不知道，同时也不保证利益一致
+18:26:varna: 那么最后参与者们还剩下什么？
+18:27:varna: 谁能够保证他们的政治权利、经济利益和生而自由？
+18:27:cleamoon: 谁关心参与者
+18:27:varna: 那么事情就简单了：谁能操作这件事情
+18:27:cleamoon: 幕后想要做什么难说，但是结果很好预测
+18:27:cleamoon: 谁关心呢
+18:27:varna: 背景不足的人不行，背景足够的人不予讨论
+18:28:varna: 那么回到一开始的话题，问题只是“我为什么反对”吧
+18:28:cleamoon: 所以没明白你是在为谁说话，参与的人吗？
+18:29:varna: 我只是从各方面都着眼一下
+18:29:varna: 最后我的意见是这件事情本身愚蠢不堪，没有承诺可言
+18:30:cleamoon: 都着眼只能偷换概念，任何一方的利益，方式，等等都不一致，怎么可能都说
+18:31:varna: 因为你总是习惯把自己摆在一方的立场上，认为自己应当支持某一方
+18:31:cleamoon: 我习惯做不参与，然后考虑结果，然后得利的一般人的立场
+18:31:varna: 典型的和平上头，习于特权而疏于权力的知识分子思想而已
+18:33:cleamoon: 如果不和平那干什么都没用，特权哪里都有，争取特权就是成功，权力本身比特权还难，而且本身就是知识分子
+18:33:lhanjian: 我国不是自由主义的民主制度，所以共和国的省在宪法上和民国的省就不是一个意思，民国的省是地方自治机构，共和国只有村一级是基层群众自治制度
+18:34:varna: 所以你考虑的问题只有“在现有的情况下我如何得利”，而没有考虑现有的得利者需要配合权力者才能保证他们的权益
+18:34:cleamoon: 一开始就说了，不是为了改变国家，只是希望有可能做这种事，要不永无出头之日
+18:34:cleamoon: 对呀
+18:34:varna: 那么谁能让“你”出头呢
+18:34:lhanjian: 单纯从我个人的角度，如果能把谈笑风声的时间用来搞技术，必然高中没那么贫乏
+18:34:cleamoon: 我又没说我要反对权力者
+18:35:cleamoon: 自己让
+18:35:varna: 自己？求别逗乐
+18:35:varna: 瑞典就算了，我不讨论瑞典
+18:35:lhanjian: 绅士最终放弃了作为中国公民改变国家体制的可能性
+18:35:varna: lhanjian: 我有个观察，嘴上谈论技术越多的伙计技术越没法看
+18:35:varna: 更重要的是毅力和趣味
+18:36:cleamoon: 简单的例子吧，比如一群sb去占中，你拿一堆小吃可乐去就能每晚上挣好多钱
+18:36:varna: 你看事情都只看一步么……
+18:36:FrankHB: cleamoon: python的渣渣显然不是因为写了小python的渣渣。
+18:36:lhanjian: varna, 一点不错．所以我觉得自己花在政治上谈笑风声的时间如果用来埋头搞技术，肯定比现在强
+18:36:cleamoon: 我去卖东西
+18:36:varna: lhanjian: 别埋头，多抬抬头；肝不补脸，玄不救非
+18:36:varna: cleamoon: 如果在大陆你敢这么做么
+18:36:cleamoon: 不是去参加占中
+18:37:cleamoon: 所以不想成为大陆这样的
+18:37:varna: 我不追究你是不是去占中，只看你是不是在现场跟他们有往来
+18:37:varna: 有的话直接先列入嫌疑范畴
+18:37:FrankHB: lh_mouse: 港灿还不高兴你不信风水呢。
+18:37:cleamoon: 无论做什么都不可以，那就无论什么钱都只能既得利益者得
+18:37:varna: 我觉得哪国的监察系统都会有这样的想法
+18:38:cleamoon: 还有市中心那些因此倒闭的店铺你就可能买了
+18:38:varna: 没考虑到如果你自己在市中心有店的情况么，还真是轻松
+18:38:lhanjian: 事实上，如果不是搞技术去了，我可能就在国庆前后占中的时候赚了一笔小钱了＾
+18:39:lh_cat joined channel
+18:39:varna: 考虑一件事情的时候事先预言式地把自己放在有小利的地方还真是方便的论证
+18:39:varna: 吃饭去
+18:39:cleamoon: 我想的就只是只有活水才能让不会水的人有可能捞一条鱼，死水的话鱼都在湖底
+18:39:cleamoon: 如果我有店我会开店卖东西
+18:40:lhanjian: varna, 羊驼子用google搜一下＂肝不补脸玄不救非＂，结果大多是你的ＩＲＣ发言２３３３３
+18:40:FrankHB: 开店多河蟹。
+18:40:cleamoon: 23333
+18:41:cleamoon: 无论是不是一开始有利，但是毫无变化如果没有利益就完了
+18:41:FrankHB: 总之关我P事……
+18:43:condy: https://www.google.com/?gws_rd=ssl#q=%E7%BE%8E%E5%B0%BB%E7%9A%84miku%E9%85%B1
+18:43:condy: 竟然第一页就有了..
+18:43:lhanjian: Plough, 红旗酱能不能不让谷歌收录你的log?
+18:43:lhanjian: 太作死了
+18:44:FrankHB: robots么
+18:44:FrankHB: 。。。这有啥，又不是策划绑架幼女。
+18:44:cleamoon: 咱们策划绑架幼女吧
+18:45:FrankHB: 我觉得凭绅士的水平不用和我们凡人讨论的。。。
+18:46:cleamoon: 怎么让幼女去没多少人的地方比较难
+18:46:cleamoon: 虽然放饵的话有可能把父母一起弄来
+18:47:cleamoon: 于是校车就是个好选择了
+18:48:cleamoon: 弄死个校车司机很容易，然后一车的幼女正太
+18:48:cleamoon: 剩下的就是买家的问题了
+18:49:FrankHB: 不是自主消费么……
+18:49:lh_mouse: 全家和联华并排摆一起几个人会去全家
+18:49:lh_mouse: 自主消费蛋蛋
+18:49:lh_mouse: 周 瑜黄 盖问题
+18:49:FrankHB: 小心一车正太尻你一脸。。。
+18:50:lhanjian: 一车正太２３３３３
+18:51:lh_mouse: 一车帝球 五毛钱一斤
+18:51:lh_mouse: 沙瓤的
+18:51:lhanjian: 帝球好几吨，不便宜呢
+18:51:lh_mouse: 不怕  切成臊子卖
+18:52:cleamoon: 一车怎么自主
+18:53:cleamoon: 一车正太也能用呀，alpako这种天天爆人的
+18:53:lh_mouse: 我觉得有班上的人都不会去占中
+18:53:lh_mouse: 一穿三百金枪不倒
+18:54:cleamoon: 金乳罩，铁裤衩
+18:55:lh_mouse: 羊驼的割炬是等离子的
+18:55:lh_mouse: 扒光天下 BXA
+18:55:lh_mouse: 你穿的太多啦
+18:56:lh_mouse: 话说  凡客版孙策  大乔喊我回家吃饭  我去西太平洋把书念  是什么梗
+19:00:lhanjian: 全身炸裂啊，昨天体测，今天连抖腿都疼死了
+19:03:cleamoon: 跑了个马拉松？
+19:03:lhanjian: 坐位体前屈＋引体向上＋５０米＋１０００米＋跳远＋身高／体重＋肺活量
+19:04:cleamoon: 看成了坐 体位 前屈
+19:05:cleamoon: 淫体向上一个都做不了
+19:05:lhanjian: 我就做了一个
+19:05:lhanjian: 我草，我的５０米它没算数啊啊啊啊
+19:05:lhanjian: 周五还要补测！！
+19:06:cleamoon: 体位 前屈100个？
+19:07:lhanjian: 那个就是拉韧带的啦
+19:08:lhanjian: 类似于膝盖绷直，然后用手碰触脚
+19:08:cleamoon: 哦，那个
+19:08:Kanna: 淫体9个的路过，表示11个及格
+19:09:cleamoon: 韧带多沉？
+19:12:lhanjian: 韧带韧性越好，你手能够到的距离就越远
+19:12:cleamoon: 咦，你指的不是手拉一个韧带吗...
+19:13:cleamoon: 只是前屈的话直接趴下不就好了
+19:14:MisakaMikoto|2 joined channel
+19:15:lhanjian: 我艹，以我现在的状态补测很危险啊
+19:15:cleamoon: 难道还算分？
+19:15:condy: geordi: { foo(); } static void __always_inline foo() {}
+19:15:geordi: <no output>
+19:15:lhanjian: cleamoon, 总平均分５０分及格
+19:16:cleamoon: ...简直shit
+19:16:lhanjian: 　哦，搞错了
+19:16:lhanjian: 只要我去了应该就能及格．现在已经有４９分了
+19:17:lhanjian: 我艹，６０分及格．完蛋了
+19:17:MisakaMikoto quit:Ping timeout: 265 seconds
+19:18:cleamoon: 周五测的话你现在开始每天跑3k都够不少了
+19:18:lhanjian: 我是差一个５０米
+19:18:lhanjian: 没测
+19:19:cleamoon: 50m要多久
+19:19:lhanjian: 我还差１１分
+19:20:cleamoon: 听起来挺多的
+19:20:lhanjian: 其实很少啦，只要跑出５０米９秒就行．不过我现在全身都疼怎么跑的出来啊啊啊啊
+19:21:cleamoon: 9s.....我小学都行
+19:21:cleamoon: 找个人摔 一 跤就不疼了
+19:22:cleamoon: 不动会一直疼，一动就好了
+19:31:lh_mouse: geordi, { ifstream ifs; ifs.exceptions(ios::badbit | ios::eofbit | ios::failbit | ios::goodbit); ifs.open("/this_does_not_exist"); }
+19:31:geordi: terminated by ios_base::failure: basic_ios::clear
+19:33:iyzsong joined channel
+19:33:lhanjian: iyzsong, 抱
+19:34:iyzsong: lhanjian: 晚上好
+19:42:Mran____ joined channel
+19:52:cleamoon: 噗，双11成电商的标准节日了
+19:53:cleamoon: 【男子天生斜眼 歌厅遭三人无故暴揍】近日，山东淄博某歌厅内，三名男子一起殴打另一陌生男子。原来打人者王某、李某、孙某酒后在结账时发现赵某在斜眼瞅他们，遂上前对赵某拳打脚踢，整个过程持续了五六分钟。民警了解到，赵某是天生斜眼http://t.cn/R7qSjyt
+19:54:sismvg joined channel
+19:56:condy: 直接看LK的源码死都没有看出啥来，问一下大家怎么看开源的代码啊？
+19:57:lhanjian: condy, 抽象的东西你想从实现里读出来，没那么容易吧．
+19:57:lhanjian: 尤其是那些流程比较长的算法
+19:57:condy: 我只是想要看kmalloc，结果失败了.
+19:58:xxxxxxxx joined channel
+19:58:lhanjian: 你得先找找kmalloc的文档，看看算法的描述是什么，再来看代码吧
+19:59:xxxxxxxxx quit:Ping timeout: 260 seconds
+20:00:condy: 找到了，感觉这个还可以..http://www.cse.iitd.ernet.in/~suban/csl373/A5/Memory-management.2/presentation.pdf
+20:00:condy: 如果给乃萌一个level-db,这个代码该怎么看？
+20:01:lhanjian: 出名的玩意儿，上网找源码分析
+20:01:lhanjian: 然后摸个大概．
+20:01:lhanjian: 然后在深入看源码
+20:02:condy: OAO，好有道理！(。・_・。)
+20:02:lh_mouse: condy, 爆照
+20:02:condy: 人家是大叔(。・_・。)
+20:03:lhanjian: 我在看libevent，死也不肯看别人的源码分析，走了一大堆弯路
+20:04:lhanjian: 我在看libevent的时候
+20:04:cleamoon: 不出名的玩意呢
+20:04:lhanjian: 当然，网上那些伙计，有些是人云亦云的，未见的靠谱
+20:04:Plough: 不好
+20:04:Plough: 提督Lv95了
+20:04:condy: 我还以为你要提些建议了..
+20:04:lhanjian: 我也是＾
+20:05:lhanjian: 搞得我心脏一惊^
+20:05:Plough: ……
+20:05:cleamoon: 2333
+20:05:Plough: 我要提建议绝对不会上来就一句不好
+20:05:lh_mouse: condy, 爆照
+20:05:condy: (ง •̀_•́)ง
+20:07:cleamoon: 这是什么诡异符号...
+20:07:condy: 我也不知道..看起来萌就行。
+20:07:condy: (✪㉨✪)
+20:07:condy: (￣(エ)￣) 工口熊
+20:12:cleamoon: 有没有什么外行看着很吊，可实际很渣，可以扔在CV上充数的东西？
+20:13:sou_ joined channel
+20:14:sismvg: 看源码分析不如看设计文档
+20:21:sismvg: http://i-ab.com/book/61.html?page=9
+20:21:sismvg: 百合prprprppr
+20:28:condy: 脑洞大开模式。
+20:28:condy: 哪里这么顺利。
+20:33:Plough: 连着三个CI……
+20:34:Plough: 合着我这几天的脸全攒在今天爆发了么
+20:42:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+21:00:lh_mouse: condy, 爆照
+21:01:condy: 不想伤害大家的眼睛。(´・ω・｀)
+21:05:lhanjian: condy, 爆爆爆，私密分享
+21:05:condy: QAQ
+21:06:condy: 真的是大叔..
+21:06:condy: 所以大叔爱loli。
+21:08:condy: http://puu.sh/cjpWI.jpg
+21:09:condy: ^ 这个当手机壁纸不错.
+21:09:cleamoon: 太无耻了
+21:09:cleamoon: 竟然还穿着衣服
+21:15:lh_mouse: condy, 爆照
+21:16:condy: 0.0
+21:16:condy: 这肯定是自动的。
+21:27:Mran____ quit:Ping timeout: 265 seconds
+21:27:varna: 谁赌电探！
+21:28:Plough: 几发
+21:28:varna: 四发，日常
+21:28:Plough: 我来五发吧
+21:28:varna: 成
+21:28:Plough: 10/10/251/250?
+21:28:varna: .
+21:29:Plough: 秘书Lv83雾岛
+21:29:varna: lv98大傻
+21:29:Plough: 7.7mm机枪
+21:29:lhanjian: varna, 爆。羊驼子饭吃了很久
+21:29:lhanjian: 有神秘！
+21:29:varna: 企鹅
+21:29:Plough: 12.7mm机枪
+21:30:cleamoon: 把糖果吃了吧
+21:30:Plough: 企鹅
+21:30:Plough: 10cm高脚炮
+21:30:Plough: 61cm三连鱼雷
+21:31:Plough: 惨啊
+21:31:varna: 另外那个肝不补脸玄不救非是怎么回事
+21:31:varna: 怎么都搜到我了
+21:31:Plough: 不知道
+21:31:Plough: 大概谁把log的地址发出去被Google爬到了
+21:31:lhanjian: 因为红旗酱的log被谷歌收录了
+21:32:lhanjian: 快上robots.txt禁止它
+21:32:varna: 四连装企鹅
+21:32:Plough: 三联装企鹅
+21:32:varna: 补两发
+21:32:Plough: 四连装了
+21:33:Plough: 7.7mm机枪
+21:33:varna: 全是企鹅
+21:33:Plough: 12.7mm机枪
+21:33:Plough: 停手
+21:34:varna: 铝赌到一万九或者出货
+21:34:Plough: 翻了一下刚入坑时的Log,发现这游戏真心玩的越久越难玩……
+21:35:varna: 帅
+21:35:varna: 两千多铝蒸发了
+21:35:varna: 就出了一个12cm jj
+21:35:Plough: ……
+21:35:Plough: 我还烧了3k铝出了一堆机枪呢
+21:36:varna: 到月底之前不赌电探了
+21:36:Plough: 活动前不赌了
+21:36:Plough: 我宁可去把妙高改二
+21:36:varna: 都戒赌吧……
+21:36:Plough: 1236/13336/15571/10962+260/70
+21:36:Plough: 总之钢终于比弹药多了
+21:37:varna: 41604/38822/38032/18986+270/91
+21:37:Plough: 壕
+21:37:varna: 你在肝船，不算数
+21:38:varna: 把通商破坏收拾了
+21:38:Plough: 今天懒得折腾了，周常炸鱼明天做
+21:38:Plough: 这周末开始棒各和苍龙的改二
+21:39:Plough: 另外我是不是该跑跑东急一了……
+21:39:varna: 是
+21:39:varna: 我现在已经放弃东急二了
+21:40:varna: 燃料靠潜艇和北鼠，第四队全力东急一
+21:40:Plough: 我把远征5那队先撤下来试试
+21:40:varna: 肝船的话2/5/21比较合算吧，就是累
+21:40:Plough: 也中，反正肝船不至于缺钢
+21:41:lh_cat: condy 爆照
+21:41:condy: QAQ
+21:41:varna: 钢你可以先吃低保，有闲了再说
+21:42:varna: 燃料方面如果十一月你没有练级的安排就开始南西吧，毕竟基本都是净赚……
+21:42:Plough: 精神污染……
+21:42:varna: 老实说我以前从来没想到是这么赚的
+21:42:varna: 确实挺污染
+21:43:Plough: 所以我决定听天由命
+21:43:varna: 现在我开始听着草泥马之歌跑南西了
+21:44:lh_cat: condy 不爆照把你扔去喂羊驼
+21:44:varna: 喔喔喔喔哦
+21:44:condy: OAO
+21:44:condy: 两个都不想怎么办..
+21:45:cleamoon:  你应该都听说过这句话“不要将所有蛋放在一个篮子里。”从Google混乱的产品线看，搜索巨人是将这句谚语深埋在心里。Google的产品策略就是每样都做两件，如果A产品行不通，B计划也许能行。最极端的案例是Google的即时通讯服务。在某个阶段Google的Android系统有四种不同的发送文字信息的方式：: Google Talk、Google+ Messenger、Messagi
+21:45:cleamoon: ng&nbsp;(Android'的短信应用)和Google Voice。今天Google已经统一了即时通讯应用。但Google未来是否会将所有的IM努力集中在这个单一的IM产品上。错。Google正在开发第五个IM应用。这个程序的使用不需要有Google帐户，它的目标是Facebook的 Whatsapp。
+21:45:lh_cat: 爆照
+21:45:varna: 喂羊驼
+21:45:varna: 271桶
+21:45:lh_cat: 谷狗玩鸟枪
+21:45:varna: 运气好的话说不定够打通E3了
+21:46:cleamoon: 我去，全去参加  经济学人10月18日文章“美人江山一把抓 - 圣战者捕获女奴的骄傲”： 可兰经中明确的指示了当你攻占一座城池后应该做什么的具体行动方针：“如果是成年男性，力斩之，如果是妇孺，奴隶之。” 伊斯兰国（IS）完全按照经典指示去办事，这可以在它上个月占领的伊拉克北部Sinjar地区的行动中体现出来，据联
+21:46:cleamoon: 合国和国际人权组织报告，所有被“圣战者”捕获的信仰Yazidi的山地居民，男性数以百计的被处死，而约2000妇孺被虏掠，这些被掠走的人的命运被最新出版的IS在线电子官方杂志 “Dabiq”英文版上的一篇文章“奴隶制在灭世前复兴（The Revival of Slavery Before the Hour）”所揭示，文中说，依据可兰经中先知的教诲，以及传统伊斯兰法
+21:46:cleamoon: 律，在战争中获得的异教徒女人都是战利品，重新翻新这一除了几个穆斯林国家之外早就被伊斯兰世界废除超过一个世纪的古老传统，作者热切的写道：“先知预言了，当奴隶妞给主人生仔的时刻，就是旧世界终结的标志”，这些女人的用处就是下仔成为圣战者为真主战斗。Yazidi妇孺就是这么用的，五分之一的Yazidi妇孺被送到
+21:46:cleamoon: 了首都khums ，当然这也是基于伟大的传统：“所有的穆斯林指挥官共享战利品”。"
+21:47:sou_ quit:Remote host closed the connection
+21:47:Plough: 拜飞龙任务所赐我现在有260桶
+21:47:varna: 手一抖把舰娘关了
+21:47:Plough: 决定了，300桶之前不用桶
+21:47:varna: 忘了焦点还在chrome上……
+21:47:Plough: ……
+21:49:Plough: B战的生放松比nico还卡
+21:50:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=818922a275094b36db921be593f77dd9/9825bc315c6034a8eefb64fcc8134954092376b6.jpg
+21:50:varna: ^ 局座
+21:50:cleamoon: 2333
+21:53:cleamoon: lhanjian, 对了，刚才你说国庆怎么挣钱，难道发生了什么事情？
+21:53:Plough: http://wikiwiki.jp/kancolle/?%A4%CD%A4%B3%C4%DF%A4%EB%A4%B7%A4%D5%A4%E9%A4%C3%A4%B0
+21:54:lh_cat: 说伊斯兰是和平宗教的那些人怎么想的
+21:54:varna: Plough: 求转述
+21:54:varna: lh_cat: 似乎是宗派差异？
+21:54:varna: Plough: 我读不出验证码
+21:54:Plough: varna: 猫娘的wiki页面
+21:54:cleamoon: 和奥姆真理比起来和平？
+21:54:lh_cat: 嘛  
+21:54:lhanjian: cleamoon, 利用占中导致的港股重挫获利啊
+21:55:Plough: 稍等我截张图
+21:55:cleamoon: 哦，没挫多少...
+21:55:lh_cat: 基督教也不算和平
+21:55:lhanjian: cleamoon, 几个点不少了。
+21:55:varna: @十字军
+21:55:cleamoon: 就挫了几天，然后就恢复了
+21:55:lh_cat: 宗教就没有和平的
+21:55:lhanjian: 信仰就没有和平的
+21:55:varna: 信仰还好，宗教就跪了
+21:56:varna: 我新春哥，就很和平
+21:56:lh_cat: 我信春哥
+21:56:lh_cat: 果然 
+21:57:Plough: varna: http://picpaste.com/2014-10-20-225609_641x552_scrot-Ii08Zksj.png
+21:57:lh_cat: 伊斯兰承认信仰自由  承认其他宗教合法
+21:57:cleamoon: 春哥可以给予无限生命且不挂科，基督什么的玩意只能让人死
+21:57:varna: Plough: ...
+21:57:lh_cat: 作为反例   基督教就不承认
+21:57:cleamoon: 推荐个bbc纪录片：poor us，讲贫穷的
+21:58:Plough: 这个似乎是个demo
+21:58:Plough: 不过我在考虑把她实装到我私服1-1的沟里……
+21:58:varna: cleamoon: 信基督，死后上天堂；信释迦，死后成佛；信春哥，原地满状态复活
+21:58:cleamoon: +
+21:59:cleamoon: 我还是喜欢满状态复活
+21:59:Plough: 身为不可知论者我表示谁都不信
+21:59:cleamoon: 小心春哥爆你菊
+21:59:Plough: 除非春哥先向我证明他的存在
+22:00:varna: 我替春哥肛你
+22:00:cleamoon: peko，代表春哥爆了他
+22:00:Plough: 你爆不掉我
+22:00:* varna 和岚月酱联动了
+22:00:cleamoon: 试试吧
+22:01:cleamoon: 红旗十分欲求不满，无法满足
+22:01:Plough: http://www.bilibili.com/video/av850175/ <-这就是猫神的战斗力
+22:04:lh_cat: 不可知论和可知论强调的是两个方面  都不算错
+22:05:lh_cat: 唯心主义者压力不大
+22:06:lhanjian: 耗子是自称主观唯心主义么？
+22:06:lh_cat: 是
+22:06:cleamoon: 这玩意有不是自称的吗...
+22:07:lhanjian: 这样的话，是不是就可以否认其他人给出的任何例子的可靠性了么……
+22:07:lh_cat: 操  ifstream 一 getline 就扔异常
+22:07:lh_cat: lhanjian 定义 可靠
+22:07:lh_cat: 可靠的定义是不可靠的
+22:11:lhanjian quit:Quit: 风光冉冉东西陌
+22:11:lh_cat: frankhb 
+22:15:LittleKey joined channel
+22:18:Plough: 5k出击了
+22:19:varna: 6120
+22:19:varna: 红旗也蛮肝的啊……
+22:19:Plough: 4895/5078
+22:21:Plough: 今天先下了……
+22:22:Plough quit:Quit: 碎叫
+22:29:lh_mouse: 洗澡澡
+22:30:condy: geordi: { unorder_map<int, foo> m; } struct foo { int a, b; };
+22:30:geordi: error: 'unorder_map' was not declared in this scope
+22:30:condy: geordi: replace unorder with unordered
+22:30:geordi: <no output>
+22:32:Kanna: geordi: { return float(1.11111); }
+22:32:geordi: Exited: ExitFailure 1
+22:33:Kanna: geordi: { <<float(1.11111); }
+22:33:geordi: error: expected primary-expression before '<<' token
+22:33:Kanna: geordi: { std::cout<<float(1.11111); }
+22:33:geordi: 1.11111
+22:33:Kanna: geordi: { std::cout<<float(1.111111111111111111); }
+22:33:geordi: 1.11111
+22:33:varna: 走了
+22:33:varna: 诸君夜间愉快、武运长久
+22:33:varna quit:Quit: leaving
+22:34:condy quit:Quit: leaving
+22:34:cleamoon: 每次alpako下线都带走几个
+22:40:Petrus07 joined channel
+22:43:whatofor quit:Ping timeout: 245 seconds
+22:52:lh_mouse: geordi, << "kanna 是笨蛋"
+22:52:geordi: kanna 是笨蛋
+22:56:Kanna: geordi: << "meow meow ..."
+22:56:geordi: meow meow ...
+23:01:lh_mouse: geordi, { ifstream ifs("/dev/rand"); string ln; while(getline(ifs, ln)); }
+23:01:geordi: <no output>
+23:01:lh_mouse: geordi, { ifstream ifs("/dev/rand"); ifs.exception(ios::failbit); string ln; while(getline(ifs, ln)); }
+23:01:geordi: error: 'ifstream' has no member named 'exception'
+23:01:lh_mouse: geordi, insert s after exception
+23:01:geordi: terminated by ios_base::failure: basic_ios::clear
+23:06:lhanjian joined channel
+23:14:khysw joined channel
+23:15:iyzsong quit:Quit: poweroff
+23:19:lhanjian: 夜晚供电了，撸码
+23:30:khysw: 半个小时后考OS，把智商交出来
+23:58:* lh_mouse 给 khysw 烧香

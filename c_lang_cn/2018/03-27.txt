@@ -1,0 +1,183 @@
+00:03 cleamoon_: 一句话点出91智 力：“爆科多兽有没有前途呀”
+00:07 varna: 23333
+00:08 cleamoon_: 91玩魔兽就喜欢爆爆爆
+00:09 lh_ideapad quit:Remote host closed the connection
+00:15 varna: cleamoon_: 91现在打到哪关了
+00:15 varna: 之前看他打EI对战，感觉他学了一个好古典的蜘蛛开局
+00:15 cleamoon_: varna: 最近的还没看完，估计打到兽族后面了
+00:17 varna: roc兽族回血太麻烦了
+00:17 cleamoon_: 对，91现在卡在这个上了
+00:18 cleamoon_: 死血狼骑留家里，一关打完了都不会回满的
+00:23 matchray: perl6 没有sigils?
+00:24 matchray: perl6还需要写$吗
+00:24 varna: 不是没有，而是失去意义了
+00:25 varna: 变成了像匈牙利前缀一样的东西
+00:27 matchray: 要perl6何用
+00:29 varna: (｡･ω･)ﾉ并没有什么用！
+00:36 hanjian_l: perl6难产
+00:43 matchray: $没用了又不去掉
+00:43 matchray: 除了varna没人喜欢
+00:44 hanjian_l: 我想弃了土豆的坑了
+00:44 hanjian_l: 肝的累。缺乏愉悦感
+00:45 varna: 瘟疫暖暖
+00:46 varna: matchray: 我也不喜欢Perl 6
+00:46 hanjian_l: 衣服不好看
+00:51 lh_cat quit:Ping timeout: 240 seconds
+01:01 yonka quit:Remote host closed the connection
+01:38 Taggnostr quit:Remote host closed the connection
+01:44 Taggnostr joined channel
+02:17 varna quit:Ping timeout: 248 seconds
+02:56 cleamoon_ quit:Quit: Connection closed for inactivity
+07:26 xuri joined channel
+07:31 lichun quit:Ping timeout: 265 seconds
+07:53 xuri quit:Ping timeout: 260 seconds
+07:54 xuri joined channel
+07:55 xuri quit:Remote host closed the connection
+08:32 runwei joined channel
+08:43 lh_mouse joined channel
+09:06 Dove joined channel
+09:26 lh_ideapad joined channel
+09:28 runwei quit:Remote host closed the connection
+09:29 runwei joined channel
+09:35 lh_ideapad: geordi, << is_convertible<string, const char *>::value
+09:35 geordi: false
+09:35 lh_ideapad: geordi, swap string and const char *
+09:35 geordi: true
+09:59 yonka joined channel
+10:21 iyzsong-m joined channel
+10:30 Dove quit:Read error: Connection reset by peer
+11:03 NebulaMoe joined channel
+11:07 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+11:35 Youmu: -.-
+12:12 Dove joined channel
+12:43 xuri joined channel
+12:55 matchray: 正在建設我的~/.config/doom/
+13:04 xuri quit:Ping timeout: 240 seconds
+14:26 NebulaMoe quit:Quit: leaving
+15:59 xuri joined channel
+16:10 Dove: orz
+16:12 xuri quit:Ping timeout: 240 seconds
+16:17 xuri joined channel
+16:17 xuri quit:Client Quit
+16:17 xuri joined channel
+16:18 jingjinghack joined channel
+16:31 xuricn joined channel
+16:32 xuricn quit:Remote host closed the connection
+16:33 xuri quit:Ping timeout: 240 seconds
+16:40 xuri joined channel
+16:45 xuri quit:Remote host closed the connection
+17:39 jingjinghack quit:Remote host closed the connection
+17:39 jingjinghack joined channel
+18:17 iyzsong-m joined channel
+18:22 liulanghaitun joined channel
+18:24 iyzsong-m quit:Read error: Connection reset by peer
+18:25 iyzsong-m joined channel
+18:27 iyzsong-m: (°ー°〃)
+19:16 iyzsong-m quit:Ping timeout: 240 seconds
+19:24 cleamoon_ joined channel
+19:25 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/g4/hh_345893.jpg@596w_1l.jpg
+19:37 liulanghaitun quit:Quit: leaving
+20:01 Dove quit:Read error: Connection reset by peer
+20:21 NebulaMoe joined channel
+20:29 varna joined channel
+20:30 varna: _(:з」∠)_妻海妻海妻
+20:32 hanjian_l: var varna 需要支援，卡副本了
+20:33 varna: 哪里，我看你在发电厂？
+20:33 NebulaMoe quit:Quit: leaving
+20:33 hanjian_l: 对
+20:34 varna: 进度条居然又[友善]了
+20:38 jingjinghack quit:Remote host closed the connection
+20:38 jingjinghack joined channel
+20:43 lh_ideapad: varna, 窝又来请教问题啦。
+20:43 varna: _(:з」∠)_不敢当
+20:44 lh_ideapad: 用栈解析中缀式，是否需要两个栈。
+20:44 lh_ideapad: 还有。
+20:44 iyzsong-m joined channel
+20:45 lh_ideapad: a += b += c 这种从右往左计算的怎么办。
+20:45 lh_ideapad: 窝现在的实现， expression 是个大链表。
+20:45 varna: 我已经放弃栈解析中缀式了，太不自由
+20:47 lh_ideapad: 现有的问题还是要解决一下的。
+20:47 lh_ideapad: 右结合的问题，除非禁止开车。
+20:48 lh_ideapad: C 的标准是直接用文法约束的（assignment-expression 和 addictive-expression 的规约不同。）
+20:50 varna: 文法约束是最容易的，如果要解析右结合，相当于你要在假定左结合自然的扫描里搞反例
+20:52 yonka quit:Remote host closed the connection
+20:53 yonka joined channel
+20:56 yonka_ joined channel
+20:56 yonka_ quit:Remote host closed the connection
+20:56 yonka_ joined channel
+20:56 yonka quit:Read error: Connection reset by peer
+20:56 lh_ideapad: 目前的实现是单链表。
+20:57 lh_ideapad: 反向扫描是不可能的。除非不用栈解析。
+20:57 ASpathfinder joined channel
+20:59 lh_ideapad: 是否可以设定子优先级。
+21:01 iyzsong-m: ('・ω・')
+21:01 varna: (｡･ω･)那会疼死的
+21:01 yonka_ quit:Read error: Connection reset by peer
+21:01 ASpathfinder quit:Quit: Leaving.
+21:02 ASpathfinder joined channel
+21:06 lh_ideapad: 要么，约定结合性。实际上结合性是在栈顶的算符和序列里的算符的优先级相等时候决定是否出栈的。
+21:07 lh_ideapad: 这很好区别。
+21:07 lh_ideapad: 窝看看。
+21:07 runwei quit:Remote host closed the connection
+21:08 lh_ideapad: 羊驼觉得这个 test 如何：  https://travis-ci.org/lhmouse/asteria/jobs/358867769
+21:08 runwei joined channel
+21:08 lh_ideapad: https://github.com/lhmouse/asteria/blob/master/tests/reference.cpp
+21:08 lh_ideapad: 还是不得不区分左右值。
+21:08 lh_ideapad: Reference 有四种。
+21:09 lh_ideapad: 具名和 scope 的变量（左值），数组成员（左值），对象成员（左值），右值。
+21:09 lh_ideapad: 先走了。
+21:09 lh_ideapad quit:Remote host closed the connection
+21:09 iyzsong-m: (・.・;)
+21:12 lh_cat joined channel
+21:13 lh_cat: 剩下的问题是短路。
+21:14 lh_cat: 解析但是不求值。
+21:18 ASpathfinder quit:Ping timeout: 240 seconds
+21:44 iyzsong-m quit:Ping timeout: 268 seconds
+21:49 varna quit:Ping timeout: 256 seconds
+22:00 varna joined channel
+22:25 yonka joined channel
+22:50 yonka quit:Remote host closed the connection
+22:59 Kaimaris quit:Quit: WeeChat 1.5
+23:21 hanjian_l: varna: 看的怎么样
+23:21 varna: hanjian_l: 没好的
+23:21 varna: 大栓只有基地一把暗区一把
+23:25 hanjian_l: 玩栓狙太需要耐心
+23:25 hanjian_l: 慢啊
+23:31 Stevearzh quit:Remote host closed the connection
+23:33 Stevearzh joined channel
+23:41 varna: hanjian_l: 狙击其实不慢，别一直开镜蹲着就行
+23:41 varna: 抓住一个人就尽量把他秒了
+23:46 cleamoon_: varna: 羊驼子知道好玩的 2d roguelike 游戏吗
+23:47 varna: 2d roguelike接触很少了
+23:47 cleamoon_: 古代的也行
+23:47 cleamoon_: zelda-like 也行
+23:47 cleamoon_: 或者说好玩的 2d 游戏
+23:47 cleamoon_: 别咸鱼避难所那么难的
+23:48 varna: 咸鱼避难所不太难吧……
+23:48 cleamoon_: 对我来说难.....
+23:48 varna: 最近玩的2d游戏都是主机上的
+23:48 cleamoon_: 主机上竟然出 2d 游戏
+23:49 cleamoon_: 我以为都是 3A 大作呢
+23:49 varna: 香草社的横版2d很有名
+23:49 varna: 比如奥丁领域和龙之皇冠（胧村正我错过了）
+23:49 condy: cleamoon_: shark系列
+23:49 condy: cleamoon_: the mark of ninja
+23:49 varna: 哦想起来一个2d fps...
+23:50 condy: cleamoon_: 哦，原来是 shank =0=
+23:50 condy: cleamoon_: http://store.steampowered.com/agecheck/app/102840/
+23:51 cleamoon_: mark of ninja 玩过了，感觉超憋屈的玩法，像对付TR一样，赢了也不爽
+23:51 cleamoon_: Shank 买了，还没玩，以后试试
+23:51 varna: (｡･ω･)ﾉ那还是试试sbeam七大名作之一的2d fps吧
+23:51 lh_cat quit:Quit: Connection closed for inactivity
+23:51 cleamoon_: 还有七大名作
+23:52 cleamoon_: 其中有没有萝莉模拟器
+23:52 varna: 我的意思是说，草猫
+23:52 cleamoon_: 噗
+23:53 cleamoon_: 在学校艹猫恐怕不太好
+23:53 cleamoon_: 会被人当成猫奴的
+23:56 cleamoon_: 卧槽，我发现七大名作除了sakura spirit 我都玩过......
+23:56 varna: 你居然玩过模拟山羊！
+23:57 varna: 对了，造枪那个好玩么
+23:57 cleamoon_: 造枪？
+23:58 cleamoon_: 哦，the bridge 也没玩过，我以为造桥呢
+23:58 cleamoon_: 山羊当然玩过，不过晕，删了

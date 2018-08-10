@@ -1,0 +1,317 @@
+00:36 lh_mouse quit:Read error: Connection reset by peer
+00:54 xxxxxxxx quit:Quit: Leaving...
+01:01 izmntuk quit:Remote host closed the connection
+01:13 k1mibk quit:Quit: Textual IRC Client: www.textualapp.com
+01:19 k1mibk_ joined channel
+01:20 k1mibk_ quit:Client Quit
+01:21 kim1bk joined channel
+01:31 kim1bk quit:Quit: Textual IRC Client: www.textualapp.com
+01:33 kim1bk joined channel
+02:19 k1mibk joined channel
+02:21 kim1bk quit:Quit: Textual IRC Client: www.textualapp.com
+02:55 FrankHB quit:Read error: Connection reset by peer
+02:55 FrankHB joined channel
+03:20 cleamoon_ quit:Read error: Connection reset by peer
+03:20 cleamoon quit:Read error: Connection reset by peer
+03:41 cleamoon joined channel
+03:41 cleamoon__ joined channel
+03:42 cleamoon_ joined channel
+03:46 cleamoon__ quit:Ping timeout: 252 seconds
+04:14 lh_cat quit:Ping timeout: 252 seconds
+04:16 lh_cat joined channel
+06:16 k1mibk quit:Quit: Textual IRC Client: www.textualapp.com
+06:17 k1mibk joined channel
+08:08 boosure joined channel
+08:49 cleamoon_ quit:Remote host closed the connection
+09:06 lh_mouse joined channel
+09:37 boosure quit:Quit: Get your hand off of it
+09:41 whatofor joined channel
+09:41 Xilzzerts joined channel
+09:46 xxxxxxxx joined channel
+10:01 lh_bot: 喵帕斯
+10:18 lhanjian joined channel
+10:24 condy: 看了一下is_base_of的源码，突然不懂了..
+10:27 lh_bot: 那东西有源码吗
+10:27 lh_bot: geordi: << __is_base_of (ios_base, ostream);
+10:27 geordi: true
+10:27 lh_bot: geordi: replace ios_base with istream
+10:27 geordi: false
+10:30 condy: 有boost的..
+10:30 lh_bot: boost 渣渣
+10:30 condy: lh_bot: http://codepad.org/lCMg36F5
+10:31 condy: geordi: << is_base_of<foo, bar>::value; struct foo {}; struct bar:private foo{};
+10:31 geordi: true
+10:31 lh_bot: 渣渣
+10:31 condy: ...
+10:32 condy: 是实现的不好吗？
+10:32 lhanjian: 耗子偶尔会把boost的缺点，解读为boost总体也渣渣
+10:32 lhanjian: 不过也确实没有不sucks的东西……
+10:32 lh_bot: geordi: << is_base_of<base, fin>::value; struct base { }; struct derived1 : base { }; struct derived2 : base { }; struct fin : derived1, derived2 { };
+10:32 geordi: true
+10:32 lh_bot: condy: ……
+10:33 lh_bot: ^^
+10:33 condy: ...
+10:33 condy: 确实suck了。
+10:33 lh_bot: boost 逗比
+10:33 lh_bot: lhanjian: 自己看上面
+10:34 lh_bot: 我说错什么了  多重继承怎么办
+10:34 lhanjian: 呃，是我自以为是了……（不懂C++
+10:35 cleamoon quit:Ping timeout: 252 seconds
+10:37 cleamoon joined channel
+10:37 lh_bot: 哦不对这个地方可以过
+10:38 lh_bot: 我看下
+10:45 lh_bot: condy: http://stackoverflow.com/questions/2910979/how-does-is-base-of-work
+10:46 lh_bot: 上面确实是看错了  我还以为是用 D *  转成 B * 重载的
+10:50 condy: 0.0
+10:51 condy: 我也找到了这个了..
+10:55 lh_bot: 不管这个实现如何  它也比不上 __is_base_of
+10:55 lh_bot: 后者是编译器 intrinsic    不管是速度还是可靠性都远超过前者
+10:57 lh_bot: 10:31 < lhanjian> 耗子偶尔会把boost的缺点，解读为boost总体也渣渣 // 不渣渣的都进标准库了
+10:57 lh_bot: 剩下的全是渣渣
+10:57 lh_bot: 别的我不说  就 posix_time 整个就是一坨屎
+10:58 lh_bot: 至于什么 shared_ptr 不能用 nullptr 初始化纯粹就是自己跟不上
+10:59 condy: geordi: << __is_base_of(base,fin); struct base{}; struct d1:base{}; struct d2:base{}; struct fin:d1,d2{};
+10:59 geordi: true
+11:00 condy: geordi: replace d1,d2 with private d1, private d2
+11:00 geordi: true
+11:01 lh_bot: boost 我觉得可堪用的有一个 multi_index_container 不过还是和标准库容器一样的破事多
+11:01 lh_bot: 而且得手动 const_cast
+11:26 hoxily joined channel
+11:47 Stevearzh joined channel
+11:52 yzld2002 joined channel
+12:04 sismvg joined channel
+12:05 sismvg: http://www.ithome.com/html/it/133241.htm
+12:05 sismvg: 大头儿子他们家多富有？
+12:05 sismvg: 总结：千万元级别
+12:18 lhanjian quit:Ping timeout: 265 seconds
+12:20 sismvg: FrankHB:听说你写过Identicon ?
+12:20 FrankHB: 不用搞什么多重继承，一个private就吃瘪了。
+12:21 sismvg: 求Identicon 的代码
+12:22 FrankHB: 没撸过。
+12:24 sismvg: http://www.ithome.com/html/next/133222.htm
+12:24 sismvg: 土豪人傻钱多
+12:31 hoxily quit:Ping timeout: 255 seconds
+12:46 lhanjian joined channel
+13:03 hoxily joined channel
+13:24 lh_bot: FrankHB: private 继承可以过
+13:24 lh_bot: 这个地方没有派生类到基类转换所以不管是 private 继承还是多重继承都可以
+13:32 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=cbe49b258fd4b31cf03c94b3b7d6276f/7823f4198618367a5bbdffbb2a738bd4b31ce517.jpg
+13:32 sismvg: look at the floor
+13:33 sismvg: flour
+13:34 lh_bot: 这里的关键在于   无论是 private 继承还是多重继承  本质上还是“可转换”的（只是“谁能转换”和“如何转换”）的问题   只要不实际地进行转换操作就不会编译错误
+13:35 condy: lh_bot: 为什么必须要有第2个参数？ 不都是int吗. 可是去掉后就错掉了.
+13:36 lh_bot: condy: 要求重载的实体具有 check(holder(), int()) 的可调用形式
+13:36 lh_bot: 同时其中第一个必须是模板
+13:37 lh_bot: 你把第二个参数去掉这两个形式就不一致了
+13:37 condy: 为什么第一个必须是模板？
+13:39 lh_bot: 如果两个都是函数会有歧义
+13:40 condy: 如果B, D有相关关系，就会有二义性吗..
+13:41 condy: 感觉这个地方好巧妙.
+13:43 lh_bot: 你把隐式类型转换的路径画一下就明白了了
+13:46 condy: Soga.
+13:50 tutu_wind joined channel
+13:50 lh_bot: tutu_wind: 捏耳朵
+13:51 tutu_wind: lh_bot: 估计以后没得捏了...
+13:51 lh_bot: 0 0
+13:51 lh_bot: 兔兔要走了？
+13:51 tutu_wind: lh_bot: 今天就要估计就要挂掉了 ...
+13:51 lh_bot: 考试啊
+13:52 tutu_wind: lh_bot: 呜 ~ 面试 ~
+13:52 lh_bot: 0 0
+13:52 tutu_wind: lh_bot: 虽然电话还没打过来 . 不过也快了 ...
+13:53 lh_bot: 0 0 不回来了么
+13:54 tutu_wind: lh_bot: 就在学校啊 ~~~ 
+13:56 lhanjian: tutu和condy是一个学校的吧？
+13:57 tutu_wind: ... ... ... ...
+13:58 tutu_wind: How do you know that ?
+14:07 sismvg: http://www.ithome.com/html/it/133258.htm
+14:07 sismvg: AC震荡
+14:08 sismvg: 事实证明。谁先告谁赢
+14:10 tutu_wind: ...
+14:10 FrankHB: 只是SFINAE么。
+14:10 tutu_wind: AC娘还活着?
+14:10 FrankHB: 这dt玩意儿。
+14:10 lh_bot: FrankHB: 是的
+14:10 lh_bot: FrankHB: 不对  不是
+14:10 lh_bot: 只是个普通的重载
+14:10 tutu_wind: FrankHB: 很少见你上来啊 ... 
+14:10 lh_bot: 短路了
+14:10 FrankHB: .
+14:10 FrankHB: 好吧没细看过boost的实现。
+14:11 lh_bot: 我第一眼看错了以为是通过派生类到基类转换重载
+14:11 lh_bot: 这里只是根据“可转换性”的重载
+14:12 FrankHB: 还是算SFINAE，否则就直接ill-formed了。
+14:13 FrankHB: 那个码打的啥，不就是光驱子么。
+14:14 FrankHB: http://tieba.baidu.com/p/3627400941 233
+14:14 tutu_wind quit:Quit: WeeChat 0.4.3
+14:14 lh_bot: FrankHB: 不能算  哪里 F 了
+14:15 lh_bot: 涉及到两个重载拾取规则：一个是 const 和不带 const 的成员函数    另一个是函数模板和函数
+14:17 sismvg: http://baike.baidu.com/link?url=JDL9jz5Atm4oyxVRgajUUm4E933pZyzZNroyjV3cpOFnQa1ybYXYby2aQ9NL7zDmw6GmQinbzGV7aZYN-kybz3O57ZEDWhoudKMkQcTn7KHiW9v-h8Wbe8fyKZh91p5m
+14:17 sismvg: 大哥你听我解释，不要杀我
+14:18 sismvg: GFW又升级了。
+14:19 sismvg: DNS污染的新招。和0几年那次搞谷歌一个手段
+14:20 sismvg: http://article.pchome.net/content-1762442.html
+14:20 FrankHB: 。。。好吧没const Host，没F。
+14:20 sismvg: 谁能受到remote ie 的验证邮件吗/
+14:20 FrankHB: 这种疼货。。
+14:20 lh_bot: __is_base_of 大法好
+14:20 FrankHB: 还不如is_convertible清楚点。
+14:20 sismvg: 本来用remote ie 翻墙，结果发现某一天hotmail上不去
+14:21 sismvg: 等hotmail恢复以后发现MS的验证邮件似乎都收不到了
+14:33 sismvg quit:Ping timeout: 246 seconds
+15:08 KonpakuYoumu` joined channel
+15:09 KonpakuYoumu`: Youmu, 本体来了。
+15:10 * lh_bot slaps KonpakuYoumu` around a bit with a large trout
+15:34 KonpakuYoumu` joined channel
+15:35 xxxxxxxx: 恐怕裤有木?
+16:48 condy: 明明是魂魄妖梦酱。
+17:24 izmntuk joined channel
+17:32 code_new joined channel
+17:45 lhanjian: condy也喜欢妖梦！！
+18:11 Stevearzh quit:Quit: Quit...
+18:15 Stevearzh joined channel
+18:17 condy: lhanjian: 是呀！
+18:17 condy: lhanjian: 最喜欢了！
+18:17 lhanjian: condy, 我也是我也是！
+18:17 condy: 可是我却还喜欢着梦梦酱.. (我是个坏人
+18:35 Plough joined channel
+18:35 lhanjian: "今天的DRAM单元为了让内存容量更大，所以在物理密度上更紧凑，但这样很难阻止临近的内存单元之间的电子上的互相影响，在足够多的访问次数后可以让某个单元的值从1变成0，或者相反。"
+18:44 xxxxxxxx: 今天羊驼没来？
+18:49 lh_cat quit:Ping timeout: 245 seconds
+18:52 lh_cat joined channel
+19:06 lh_bot: 你们这群死宅啊
+19:06 lh_bot: 乖 乖 站 好
+19:08 cleamoon: lhanjian, 加大电压可以防止干扰，就是费电
+19:11 cleamoon: 据说苹果发布会不忍直视，有人看了吗
+19:15 Plough: http://ww1.sinaimg.cn/large/5d379f5fjw1eq0m12oj8bj20c8c0v7uk.jpg 这个？
+19:18 cleamoon: 23333333333
+19:19 cleamoon: 简直完美
+19:38 Plough: A站的播放器就是比B站的狗屎好
+19:42 cleamoon: A站管理被收了
+19:45 tutu joined channel
+19:45 tutu: lh_mouse: 我回来了 ~ 
+20:07 lhanjian: f
+20:09 tutu: 应该是跪了 ... 
+20:10 tutu: 惨 ... 
+20:11 lh_bot: tutu: 摸头
+20:11 tutu: lh_bot: T_T
+20:12 tutu: 不过收获很大的说 ... 
+20:12 lh_bot: ？
+20:13 tutu: 因为被虐的很惨 , 所以收获很大 ...
+20:30 FrankHB quit:Remote host closed the connection
+20:30 FrankHB joined channel
+20:39 cleamoon: tutu, 抖M？
+20:39 tutu: cleamoon: 啥?
+20:40 tutu: cleamoon: 耻球前辈很少出现啊
+20:40 cleamoon: tutu, 因为被虐，所以很舒 服
+20:40 cleamoon: tutu, 不容易炸出来而且反射弧太长而已
+20:41 tutu: cleamoon: 喔喔 ... 好吧 ~ 
+20:42 Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=d499207bd954564ee565e43183e59d82/4610b912c8fcc3ce5e30d55b9645d688d53f20e1.jpg
+20:43 cleamoon: 233333
+20:43 cleamoon: 啊，大建出山城......
+20:57 xxxxxxxx: cleamoon: 不缺铝么?
+21:00 lh_bot: FrankHB: ^
+21:00 cleamoon: 现在缺钢
+21:06 tutu quit:Ping timeout: 255 seconds
+21:07 FrankHB: ?
+21:10 tutu joined channel
+21:11 lh_bot: FrankHB: ^ tutu 找你
+21:11 tutu: 啊 不知道啊  
+21:12 tutu: 刚才掉了 ... 
+21:12 tutu: buddy 算法 ... 
+21:14 tutu: 我傻逼了 ... 无视吧 ~ 
+21:29 xxxxxxxx: 捞出一个陆奥
+21:29 Plough: 欧rz
+21:30 xxxxxxxx: 山云可以拆?
+21:38 code_new: 欧rz
+21:38 xxxxxxxx: 陆奥不是欧洲人都不想要的东西么...
+21:38 tutu: TCP/IP 状态机 ... 
+21:38 code_new: 收藏用，随便
+21:40 cleamoon: 欧rz
+21:41 xxxxxxxx: 消耗了一下钢和弹出了一个46炮
+21:42 xxxxxxxx: 还有个91弹 似乎正好给陆奥装上
+21:45 lh_cat quit:Ping timeout: 264 seconds
+21:46 lh_cat joined channel
+21:50 code_new: 话说我文件夹里面有很多文件，想删除一个阿拉伯文名字的文件该怎么办= =
+21:50 code_new: 必须通过inode吗
+21:51 tutu: ... 
+21:52 tutu: 可以用正则一下
+21:53 code_new: 额，好吧
+21:54 xxxxxxxx: 大概要吃猫了
+21:54 tutu: ls | egrep '^[a-z]|[A-Z]' -v | xargs rm 
+21:54 tutu: 小心点  试试 
+21:55 code_new: ��thank you
+21:55 xxxxxxxx: �� 是啥?
+21:55 code_new: ……？
+21:55 tutu: 乱码的
+21:55 code_new: 省略号
+21:56 xxxxxxxx: code_new: 我这里老看到你发两个黑块
+21:56 code_new: xchat的问题吗……
+21:56 lhanjian: 直接上perl用 不匹配不就好了……
+21:56 code_new: xxxxxxxx, 我上面那句话，后面那个有问题吗
+21:56 code_new: lhanjian, perl只会随机数……
+21:56 xxxxxxxx: 省略号问号没问题
+21:57 cleamoon: 话说，饼有什么用
+21:57 xxxxxxxx: cleamoon: 10个饼换一个道具 
+21:57 cleamoon: 什么道具？
+21:57 code_new: ��a
+21:57 code_new: 这个乱码吗
+21:57 cleamoon: 在哪换？
+21:57 xxxxxxxx: code_new: 这里有
+21:57 cleamoon: 乱
+21:57 xxxxxxxx: cleamoon: 任务里
+21:57 code_new: 奇怪
+21:57 xxxxxxxx: 收集饼的任务
+21:57 cleamoon: 没看到这个任务呀...
+21:58 xxxxxxxx: 出击任务里没有么?
+21:59 cleamoon: 没有我没见过的任务呀
+22:00 xxxxxxxx: 出击任务 名字里就带饼
+22:00 xxxxxxxx: 开始收集3个 完成后第二个任务收集10个饼
+22:01 xxxxxxxx: 2-2捞铝真是稳 指不定什么时候就出个大破...
+22:01 cleamoon: 没有...
+22:02 cleamoon: 能换的是什么道具
+22:02 xxxxxxxx: 看不太懂....
+22:02 condy: 开thunar删的有救吗..
+22:03 xxxxxxxx: 羊驼好像说是夜战用的?
+22:03 w15tp joined channel
+22:03 w15tp quit:Quit: w15tp
+22:03 iyzsong: o.o
+22:04 condy: o.o
+22:04 w15tp joined channel
+22:04 condy:   o.o
+22:04 condy: 和 iyzsong 的o.o在同一列唉.
+22:05 xxxxxxxx: cleamoon: http://puu.sh/gusqx/f7e19effb1.jpg 这个东西
+22:05 cleamoon: 感觉挺坑的
+22:08 whatofor quit:Read error: Connection reset by peer
+22:08 iyzsong: Good night! >.<
+22:08 * iyzsong AFK
+22:09 tutu quit:Ping timeout: 240 seconds
+22:09 whatofor joined channel
+22:14 codenew joined channel
+22:14 codenew: ……test
+22:15 codenew: 有问题吗
+22:15 codenew: xxxxxxxx: 
+22:17 codenew quit:Client Quit
+22:17 code_new: 看来就是xchat的问题了= =
+22:17 xxxxxxxx: 没有问题
+22:19 code_new: ��test
+22:20 lhanjian quit:Quit: Leaving
+22:20 xxxxxxxx: 有问题...
+22:20 code_new: 好吧，换个客户端……
+22:26 code_new quit:Quit: Leaving
+22:26 code_new joined channel
+22:30 izmntuk quit:Quit: leaving
+22:41 wlemuel joined channel
+22:43 lhjkk joined channel
+22:44 lh_mouse: [21:49:49] <code_new> 话说我文件夹里面有很多文件，想删除一个阿拉伯文名字的文件该怎么办= =  // ls > my_lst 然后用文本编辑器干掉剩下的最后  cat my_lst | xargs -i rm {}
+22:44 hoxily quit:Quit: WeeChat 1.1.1
+22:46 izmntuk joined channel
+22:54 w15tp quit:Quit: w15tp
+23:01 Plough: 碎叫
+23:01 Plough quit:Quit: 碎叫
+23:05 code_new: lh_mouse: 了解了，thank you
+23:30 lhjkk quit:Ping timeout: 245 seconds
+23:31 whatofor quit:Read error: Connection reset by peer
+23:37 lhjkk joined channel
+23:47 lhjkk quit:Read error: Connection reset by peer
+23:49 lhjkk joined channel

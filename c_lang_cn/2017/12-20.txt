@@ -1,0 +1,289 @@
+00:02 lh_mouse quit:Read error: Connection reset by peer
+00:04 Guest35405 quit:Read error: Connection reset by peer
+00:04 Guest35405 joined channel
+00:09 varna: 摸了摸了
+00:10 varna: 磕点瓜子睡觉
+00:10 Aldrich: varna: 刚才那段你听明白了把
+00:10 varna: 哪段？
+00:10 Aldrich: varna: 街机版那段
+00:10 varna: 听懂了
+00:10 varna: 我找找四小姐配套的耳机
+00:10 Aldrich: 我用的是PSCamera……
+00:11 lhanjian: 我用的是大法的耳机
+00:11 Aldrich: 总之街机版这outrange还颇有效
+00:11 Aldrich: 可以在接敌之前直接轰沉半数敌舰……
+00:13 Aldrich: varna: 另外下次活动之后就是舰娘二期
+00:13 Aldrich: 你要不要考虑回坑
+00:13 Aldrich: 据说会有友军舰队
+00:15 nicball_ joined channel
+00:15 varna: 不回
+00:15 varna: 太累了
+00:15 Aldrich: 咸
+00:16 varna: 找出来了！
+00:17 Aldrich: 要测试下能不能连么
+00:17 nicball quit:Ping timeout: 260 seconds
+00:18 varna: 但是没有立体声好别扭
+00:18 Aldrich: +
+00:18 Aldrich: 要不然你弄个便宜耳麦
+00:18 varna: 有什么推荐的么
+00:19 Aldrich: 没研究过，以前我用的是罗技的便宜货……
+00:19 Aldrich: varna: 另外据说大部分usb mic都能用
+00:20 varna: 还有个问题，接麦之后音频输出到哪里
+00:21 Aldrich: usb mic接上以后音频应该还是从手柄输出
+00:21 Aldrich: 至少ps camera是这样
+00:21 varna: 直接mic接主机？
+00:24 nicball_ quit:Ping timeout: 260 seconds
+00:27 varna: 感觉G36C还挺好用的
+00:28 varna: 我记起来了，立绘也很骚气
+00:28 varna: 而且我没造出来
+00:29 varna: 好像大家都有，就我没有
+00:31 Aldrich: +
+00:31 varna: 我还免费领了未来战士和国土资源局套组
+00:31 Aldrich: 我直接把PSCamera捅到Pro的菊花上，然后就能用了
+00:32 varna: 免费（迫真）
+00:32 lhanjian: M16好用，快买
+00:32 Aldrich: varna: 我听说还有可以接耳机的3.5mm mic
+00:32 varna: 不好看
+00:32 varna: Aldrich: OTL
+00:32 Aldrich: 要不要上你司产品搜一下
+00:33 varna: (｡･ω･)ﾉ22号如果我能完成手头所有项目的开发，就买一个
+00:33 Aldrich: https://item.jd.com/3659770.html 或者这种转接线？
+00:33 Aldrich: 不确定能不能用
+00:33 varna: 但是没麦有个好处
+00:34 varna: 坐车坐飞机躺尸的时候，可以偷偷磕瓜子
+00:34 varna: 刚才有三次玩脱是瓜子磕到一半来不及瞄准
+00:35 varna: 不过vivi确实不错啊
+00:35 varna: 摸哨反应速度很快
+00:40 lh_cat quit:Quit: Connection closed for inactivity
+00:44 varna: 说起来我们刚才是什么难度？最高的？
+00:51 lhanjian: 极限
+00:51 varna: 难怪死得更快了，不过感觉也还算合理
+00:51 varna: 只要被包了基本会死
+00:51 lhanjian: 难度在看不到小地图上没发现的敌人
+00:52 varna: 啊？
+00:52 varna: 原来是这样啊
+00:52 lhanjian: 就是你没有标记的话，就看不到小地图上的红点
+00:52 varna: 我说怎么回事……
+00:53 lhanjian: 所以容易被流弹乱枪打死
+00:53 varna: 下回该点一些反抗军的侦查技能
+00:56 Aldrich: 躺了，明天有事儿，得早点起
+00:56 lhanjian: 我们下次攻击几次通信中心就好
+00:56 Aldrich: (｡･ω･)ﾉ武运
+00:56 varna: (｡･ω･)ﾉ
+00:56 varna: 那个任务好玩
+00:56 varna: 各种爆炸物乱舞
+01:00 Guest35405 quit:Quit: Guest35405
+01:43 varna quit:Ping timeout: 252 seconds
+02:50 N00d1e5 joined channel
+03:17 whocares_2_ quit:Read error: Connection reset by peer
+03:18 whocares_2 joined channel
+03:21 Taggnostr quit:Remote host closed the connection
+03:22 Taggnostr joined channel
+04:14 cleamoon_ quit:Quit: Connection closed for inactivity
+04:36 N00d1e5 quit:Quit: Leaving.
+05:56 cleamoon_ joined channel
+07:14 Aldrich: geordi: { t a{1, 2}; } struct a { int a, b,  c; };
+07:14 geordi: error: 't' was not declared in this scope
+07:14 Aldrich: geordi: { t a{1, 2}; } struct t { int a, b,  c; };
+07:14 geordi: <no output>
+07:15 Aldrich: geordi: { t a{1, 2}; std::cout << a.a << a.b << a.c << std::endl; } struct t { int a, b,  c; };
+07:15 geordi: 120
+08:48 lh_mouse joined channel
+09:04 YangMame joined channel
+09:33 YangMame quit:Read error: Connection reset by peer
+09:34 YangMame joined channel
+09:46 c joined channel
+09:46 c is now known as Guest33774
+09:55 ininkf joined channel
+10:02 jiuye joined channel
+10:03 L-ios1 joined channel
+10:03 L-ios quit:Ping timeout: 256 seconds
+10:03 L-ios1 is now known as L-ios
+10:06 ininkf quit:Ping timeout: 240 seconds
+10:08 zhangdepang joined channel
+10:13 ininkf joined channel
+10:16 zhangdepang quit:Remote host closed the connection
+10:16 zhangdepang joined channel
+11:09 YangMame quit:Remote host closed the connection
+11:11 YangMame joined channel
+11:19 ininkf quit:Ping timeout: 265 seconds
+11:23 YangMame quit:Remote host closed the connection
+11:24 YangMame joined channel
+11:30 YangMame quit:Quit: Konversation terminated!
+11:31 YangMame joined channel
+11:32 ininkf joined channel
+11:32 YangMame quit:Client Quit
+11:33 YangMame joined channel
+11:33 YangMame quit:Client Quit
+11:34 Sd5w joined channel
+11:34 YangMame joined channel
+11:35 YangMame quit:Client Quit
+11:36 YangMame joined channel
+11:37 Sd5w2 joined channel
+11:38 Sd5w2 quit:Remote host closed the connection
+11:39 Sd5w quit:Ping timeout: 248 seconds
+11:48 _jiuye_ joined channel
+11:49 jiuye quit:Ping timeout: 240 seconds
+11:49 _jiuye_ is now known as jiuye
+12:18 Guest33774 quit:Quit: Guest33774
+12:50 Guest33774 joined channel
+13:03 zdm-jl joined channel
+13:46 NebulaMoe joined channel
+14:03 ininkf quit:Read error: Connection reset by peer
+14:04 ininkf joined channel
+14:11 zdm-jl quit:Quit: zdm-jl
+14:13 zdm-jl joined channel
+14:24 ininkf quit:Read error: Connection reset by peer
+14:27 ininkf joined channel
+14:31 ininkf quit:Read error: Connection reset by peer
+14:38 lh_mouse: geordi, { optional<int> a; cout <<a; }
+14:38 geordi: <none>
+14:38 ininkf joined channel
+14:38 lh_mouse: geordi, { optional<int> a; a = 1; cout <<a; }
+14:38 geordi: 1
+14:38 lh_mouse: geordi, { optional<int> a; a = 1; a = { }; cout <<a; }
+14:38 geordi: <none>
+14:38 lh_mouse: geordi, { optional<int> a; a = 1; a.clear(); cout <<a; }
+14:38 geordi: error: 'class optional<int>' has no member named 'clear'
+14:38 lh_mouse: geordi, { optional<int> a; a = 1; a.reset(); cout <<a; }
+14:38 geordi: <none>
+14:51 Guest33774 quit:Quit: Guest33774
+14:54 lh_mouse: geordi, << std::none
+14:54 geordi: error: 'none' is not a member of 'std'
+14:54 lh_mouse: geordi, << std::none_t
+14:54 geordi: error: 'none_t' is not a member of 'std'
+14:55 lhanjian: nuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+15:06 yimis joined channel
+15:10 L-ios1 joined channel
+15:10 L-ios quit:Ping timeout: 240 seconds
+15:10 L-ios1 is now known as L-ios
+15:20 Aldrich: 试了一下，android手机可以直接当usb mic使
+15:20 Aldrich: 羊驼子说不定有救了
+15:23 zdm-jl quit:Quit: zdm-jl
+15:25 ininkf quit:Read error: Connection reset by peer
+15:25 ininkf joined channel
+16:02 lh_mouse: geordi, { foo f; f.t i = 0; } struct foo { using t = int; };
+16:02 geordi: error: invalid use of 'using t = int'
+16:02 lh_mouse: geordi, { foo f; f.t i = 0; } struct foo { typedef int t; };
+16:02 geordi: error: invalid use of 'foo::t'
+16:08 Aldrich: geordi: << sizeof(_t); struct _t {};
+16:08 geordi: 1
+16:31 lhanjian: Aldrich: 有救了
+16:31 lhanjian: 问题是为啥不直接买一个耳麦？
+16:32 lhanjian: 买个那种 2to1的3.5mm转接器，然后买个小麦克风
+16:32 lhanjian: 另外一个就插自己现在用的耳机
+16:33 lhanjian: Aldrich: 95用起来手感如何
+16:33 Aldrich: 还没用
+16:34 Aldrich: 昨天我也是这么提议的，不过他似乎打算22号再入
+16:37 lhanjian: 其实Type-95不好玩
+16:38 lhanjian: 没有好用的瞄准镜，不能挂枪榴弹
+16:45 lhanjian: 我感觉我冲锋陷阵习惯性的思维是“技术装备比人金贵”“步兵就是消耗品”
+16:45 * lhanjian 是政委
+16:45 lhanjian: 兄弟们跟我冲！
+16:45 * lhanjian 倒下
+16:53 ininkf quit:Quit: 下班回家
+16:56 * lhanjian 对 Aldrich 按下方块键劫持，按下三角键拷问
+17:00 Dove joined channel
+17:03 lhanjian: http://imgsrc.baidu.com/forum/pic/item/e043aa345982b2b742e487363aadcbef77099bd4.jpg
+17:03 lhanjian: http://imgsrc.baidu.com/forum/pic/item/4b7c05087bf40ad1259f79115c2c11dfa8ecced4.jpg
+17:04 lhanjian: 战术握把的抓法很膜性啊
+17:05 NebulaMoe quit:Quit: Leaving...
+17:11 yimis quit:Quit: yimis
+17:12 lhanjian: http://imgsrc.baidu.com/forum/pic/item/89fbc4cec3fdfc038795b329df3f8794a5c226bc.jpg
+17:14 lhanjian: 党卫军公安部队
+17:14 NebulaMoe joined channel
+17:32 lh_mouse quit:Read error: Connection reset by peer
+17:32 lh_mouse joined channel
+17:42 L-ios quit:Quit: L-ios
+17:46 lh_mouse: geordi, { (f)(1); } template<typename T> void f(T &&t){ cout <<t; }
+17:46 geordi: 1
+17:46 lh_mouse: geordi, { ((f))(1); } template<typename T> void f(T &&t){ cout <<t; }
+17:46 geordi: 1
+17:46 lh_mouse: geordi, use --calng
+17:46 geordi: error: No such option: --calng
+17:46 lh_mouse: geordi, use --clang
+17:46 geordi: 1
+17:46 L-ios joined channel
+17:46 lh_mouse: geordi, { (+f)(1); } template<typename T> void f(T &&t){ cout <<t; }
+17:46 geordi: error: wrong type argument to unary plus
+17:52 L-ios quit:Remote host closed the connection
+17:53 L-ios joined channel
+17:56 Dove: lhanjian: 揉
+17:57 Dove: 每天睡觉的生活，连个谈资都没有。
+17:58 Dove: 尼玛的这年头想找人聊聊天都不知道说什么好
+17:58 zhangdepang quit:Ping timeout: 248 seconds
+17:59 Dove: 哦对了，网易的吃鸡，PC端的体验跟屎一样，彻底打消了我玩游戏的欲望。
+18:00 zhangdepang joined channel
+18:00 Dove: 暴雪游戏真的是无聊，我要脱坑。
+18:01 Dove: 然后网易系就跟我没什么关系了，但是我又不想改投腾讯系，所以就不玩了吧，反正也没有什么玩的兴致。
+18:02 Dove: 然后家里不可能让我玩主机游戏，大概传火什么的自虐向游戏我也玩不动。
+18:03 Dove: 所以正在找新的消遣娱乐项目
+18:03 Dove: 感觉并没有什么想玩的
+18:04 Dove: 可以学学围棋吧，纸牌麻将什么的从来都不喜。
+18:05 Dove: 嗯，就这么定了，围棋。
+18:07 zhangdepang quit:Quit: Leaving
+18:39 L-ios quit:Remote host closed the connection
+18:39 L-ios joined channel
+18:40 N00d1e5 joined channel
+19:02 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:15 iyzsong joined channel
+19:38 Dove joined channel
+19:38 Dove quit:Client Quit
+19:39 Dove joined channel
+19:41 Dove: 不能再这样睡了卧槽，不然到死都是P都不知道。
+19:42 johnny_ joined channel
+19:46 Dove: 认真工作麻麻的
+19:59 lhanjian: 梁华来了
+19:59 Stevearzh quit:Quit: Quit...
+20:07 lh_mouse: IP地址: 113.246.209.173湖南省长沙市 电信
+20:11 Aldrich: 我在外面
+20:13 Stevearzh joined channel
+20:23 Dove: lhanjian: 梁华是谁？
+20:26 Aldrich: 读出来
+20:29 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+20:34 CyrusYzGTt joined channel
+20:34 N00d1e5 quit:Read error: Connection reset by peer
+20:35 N00d1e51 joined channel
+20:37 iyzsong: _(:з」∠)_
+20:52 Dove: 好吧，是羊驼。
+20:53 N00d1e51 quit:Quit: Leaving.
+20:55 Dove: 我去洗个澡
+20:57 * iyzsong 感冒啦 _(:з」∠)_
+20:58 Dove: 摸摸头
+20:58 Dove: 吃点药，多喝点水，早点睡。
+20:58 Dove: 我这儿很冷，也容易感冒，而且最近天干物燥的。
+21:13 iyzsong: 喝杯水就去睡 _(:з」∠)_
+21:16 c joined channel
+21:16 c is now known as Guest34543
+21:18 iyzsong: Dove: 我有一个大胆的想法...  我们来共享日记吧
+21:23 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+21:28 Dove: 哪里有羊驼？
+21:32 Aldrich: https://usercontent.irccloud-cdn.com/file/fFe4rPWz/DSC_0114.JPG
+21:44 YangMame quit:Quit: Konversation terminated!
+21:44 Dove: 诸君真是太有趣了。
+21:45 Dove: 有感而发，就当我犯病吧。
+21:59 lhanjian: \s: 缉毒情况如何
+21:59 lhanjian: Stevearzh: 
+22:01 nooooone quit:Remote host closed the connection
+22:01 nooooone joined channel
+22:03 nooooone quit:Max SendQ exceeded
+22:03 NebulaMoe quit:Quit: Connection closed for inactivity
+22:03 nooooone joined channel
+22:04 Stevearzh: lhanjian: 昨天打了几个任务，还没太上手
+22:04 nooooone quit:Remote host closed the connection
+22:04 nooooone joined channel
+22:06 lhanjian: nice
+22:22 cleamoon_ quit:Quit: Connection closed for inactivity
+22:27 NebulaMoe joined channel
+22:30 Dove: 睡觉去了，诸君晚安，夜间愉快。
+22:30 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:48 nooooone quit:Remote host closed the connection
+22:49 nooooone joined channel
+23:05 Guest34543 quit:Ping timeout: 264 seconds
+23:18 Aldrich: 回来了
+23:18 Aldrich: lhanjian: 羊驼子zaima
+23:21 whocares_2 quit:Remote host closed the connection
+23:22 whocares_2 joined channel
+23:37 nooooone_ joined channel
+23:40 nooooone quit:Ping timeout: 240 seconds
+23:49 lh_mouse quit:Ping timeout: 272 seconds

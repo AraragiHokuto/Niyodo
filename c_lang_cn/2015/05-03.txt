@@ -1,0 +1,1496 @@
+00:04 cleamoon quit:Ping timeout: 256 seconds
+00:04 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150420225811]
+00:05 cleamoon joined channel
+00:06 LittleKey joined channel
+00:23 cleamoon quit:Ping timeout: 256 seconds
+00:24 cleamoon joined channel
+00:49 xxxxxxxx quit:Quit: Leaving...
+00:52 izmntuk joined channel
+00:58 Matsune quit:Read error: Connection reset by peer
+01:11 cleamoon quit:Ping timeout: 240 seconds
+01:12 cleamoon joined channel
+01:21 izmntuk quit:Ping timeout: 244 seconds
+01:41 LittleKey quit:Quit: Leaving.
+02:02 lh_mouse quit:Read error: Connection reset by peer
+02:22 cleamoon__ quit:Read error: Connection reset by peer
+04:53 boosure joined channel
+04:55 cleamoon quit:Ping timeout: 245 seconds
+04:57 cleamoon joined channel
+06:35 hope1 quit:Ping timeout: 250 seconds
+07:17 cleamoon quit:Ping timeout: 240 seconds
+07:19 cleamoon joined channel
+07:26 xxxxxxxx joined channel
+07:31 xeirrr joined channel
+07:32 cleamoon quit:Ping timeout: 272 seconds
+07:33 cleamoon joined channel
+07:35 xeirrr quit:Quit: xeirrr
+07:55 cleamoon__ joined channel
+08:02 cleamoon quit:Ping timeout: 264 seconds
+08:08 cleamoon joined channel
+08:18 cleamoon quit:Ping timeout: 264 seconds
+08:20 cleamoon joined channel
+08:34 cleamoon quit:Ping timeout: 272 seconds
+08:51 cleamoon joined channel
+09:10 cleamoon quit:Ping timeout: 265 seconds
+09:11 hoxily quit:Ping timeout: 244 seconds
+09:11 cleamoon joined channel
+09:14 hoxily joined channel
+09:20 cleamoon quit:Ping timeout: 265 seconds
+09:21 cleamoon joined channel
+10:01 wsyh quit:Quit: ~hysw();
+10:16 cleamoon quit:Ping timeout: 244 seconds
+10:18 cleamoon joined channel
+10:28 Plough joined channel
+10:30 Plough: Zak好像进斩杀了
+10:35 Plough: 神通被院长CI大破，劝退
+10:38 izmntuk joined channel
+10:40 Plough: 罗马抬手一炮爆了自己……
+10:41 cleamoon quit:Ping timeout: 250 seconds
+10:42 Plough: 噗
+10:42 Plough: 他带龙凤了
+10:43 cleamoon joined channel
+10:43 izmntuk_ joined channel
+10:44 izmntuk_ quit:Client Quit
+10:46 Plough: 第二轮他干沉了院长……
+10:47 Plough: Can dream come true guys? Can dream come true?
+10:47 Plough: 我操
+10:47 Plough: 鳖型阵……
+10:48 cleamoon quit:Ping timeout: 250 seconds
+10:48 Plough: 神通大破了……
+10:48 Plough: JINTSU YOU F@CKING BITCH
+10:49 cleamoon joined channel
+11:07 xxxxxxxx: http://www.bilibili.com/video/av1226060/ ccav10的节目
+11:08 cleamoon quit:Ping timeout: 250 seconds
+11:09 cleamoon joined channel
+11:09 Plough: Faithful double line
+11:11 Plough: 终于进去一次
+11:11 Plough: 真不容易
+11:14 Plough: 第一队打完对面还剩四只
+11:14 Plough: 欧根灭了一只
+11:14 Plough: 我看看闭幕能不能干掉NE
+11:14 Plough: 6vs3
+11:14 Plough: 玄
+11:15 Plough: 北上大破
+11:15 Plough: 没戏了
+11:15 Plough: OOI大破
+11:15 Plough: 没斩掉……
+11:44 cleamoon quit:Ping timeout: 250 seconds
+11:46 cleamoon joined channel
+11:48 Plough: 斩掉了
+11:49 Plough: 我操
+11:49 Plough: Roma
+11:53 sleepwalking joined channel
+11:55 sleepwalking: 有三台奔腾一台赛扬淘汰下来的旧电脑，加起来大约50GFLOPS，如何处理？
+11:55 sleepwalking: 另外还一个atom上网本和一个奔腾M笔记本
+11:57 Plough: 送我
+11:59 Plough: 我操
+11:59 Plough: 八小时
+12:05 Plough: Zak今天欧非了啊
+12:05 Plough: 飞*
+12:05 xxxxxxxx: sleepwalking: http://zh.wikipedia.org/wiki/%E8%B4%9D%E5%A5%A5%E6%AD%A6%E5%A4%AB%E6%9C%BA%E7%BE%A4 搞这个?
+12:11 sleepwalking: 可是加起来还不如一块儿i5
+12:15 cleamoon quit:Ping timeout: 250 seconds
+12:27 sleepwalking quit:Remote host closed the connection
+12:32 cleamoon joined channel
+12:36 hope1 joined channel
+12:36 hope1: 到北京了
+12:42 hope1 quit:Read error: Connection reset by peer
+12:43 hope1 joined channel
+12:43 hope1 quit:Read error: Connection reset by peer
+12:44 hope1 joined channel
+12:44 hope1_ joined channel
+13:16 lh_mouse joined channel
+13:24 cleamoon quit:Ping timeout: 250 seconds
+13:26 cleamoon joined channel
+13:31 varna joined channel
+13:32 varna: 我走在路上冒出了两个想法
+13:32 varna: 其一是一个弱类型背景下的模式匹配糖
+13:33 varna: < pattern as invocation( foo ) > { foobar }
+13:34 Plough: 看到短信了么
+13:34 varna: < . as . > 的值是\x.unit或者\x.x
+13:34 varna: 看到了
+13:34 Plough: Zak这次太可怕了
+13:34 varna: 不过这里其实有一个问题
+13:34 varna: \x.x返回x, 但未必求值x
+13:35 varna: 我先放下这个问题
+13:35 varna: 其二是一个脑洞，我姑且给它起个名字叫invocation by context, 至于是什么……总之如果它存在，应当用于解决上面的问题
+13:35 varna: 至于这次的第十一号作战，我认清了它的实质
+13:36 varna: 这是一次打通前往欧洲的光辉大道的作战
+13:36 Plough: ……
+13:36 Plough: 然而我并没有矶风
+13:37 varna: 另外循环了一大顿E5-E6头目战BGM之后，觉得这个也可以归入「炮雷击战、开始」这个主题
+13:38 Plough: 深海视角的炮雷击战开始？
+13:38 varna: 最后词比较清楚的一部分似乎也是个变奏
+13:38 Plough: 对了，SK4里面鱼雷的唯一作用似乎就是攻击？
+13:38 varna: 美军后期有声导反潜鱼雷
+13:38 cleamoon quit:Ping timeout: 255 seconds
+13:38 varna: 但总之也是进攻
+13:38 varna: 你有什么打算？
+13:39 Plough: 我想用鱼雷限制走位
+13:39 Plough: 前面有一颗鱼雷，只有26%的爆炸率
+13:39 Plough: 但炸了你就死了
+13:39 Plough: 你躲不躲
+13:39 cleamoon joined channel
+13:40 varna: 可以，但因为没法确定测算，我仍然在考虑用射线的到达前概率
+13:40 varna: 而且全程都是到达前
+13:41 varna: 当然多集多散的相对追迹误修正仍然有效
+13:41 Plough: 另外，其实手册后面有一个类似速射的规则
+13:41 varna: 咕？
+13:42 varna: POI绫波小和三保三时间
+13:42 varna: 看我能拿下几盘
+13:42 Plough: 不过是把当前距离上的ROF乘2（如果火炮有能力的话）
+13:42 varna: 这仍然不合理
+13:42 Plough: 此时把H2表上的命中*60%
+13:42 varna: 什么鬼
+13:42 Plough: 我也觉得不合理，不过这是个方向
+13:42 varna: 诸元都固定了……
+13:42 varna: 诸元固定之后命中不该下修
+13:43 Plough: 所以还是麻烦
+13:43 varna: 实际上在期望上取得了120%的命中弹数
+13:43 Plough: 另外照明弹的规则你看到了吗
+13:43 varna: 看到了
+13:43 varna: 我后来有过这个建议
+13:43 varna: 小口径直接投射
+13:43 Plough: 是，我以为你没看到……
+13:43 varna: 卧槽这把保不住了
+13:44 varna: 灭了
+13:44 hope1: varna, 这和普通的模式匹配有什么区别？
+13:45 varna: hope1: 我只是重新整备了它的形式语义
+13:45 varna: 这样使得模式匹配形成一个算子
+13:46 varna: 这算子返回一个一元函数，决定是否执行匹配失败的处理
+13:46 varna: 当然这个算子可以更规范一点（但同时也需要副作用）
+13:47 varna: 比如在一个单子上下文中返回TRUE或者FALSE
+13:47 varna: 两个参数分别是模式匹配的结果和失败的处理函数
+13:48 varna: 我更倾向后一个写法
+13:48 hope1: 这样似乎不涉及模式匹配自身的语义和实现啊，只是在描述类型?
+13:49 varna: 涉及到指称语义
+13:49 varna: 我看看找个办法形式地写出这个东西来
+13:50 varna: 不过其实再怎么写，这里也需要最终的as-if
+13:50 varna: 所以我只是在给既存的东西找个台阶下
+13:52 hope1: 现有的模式匹配没有形式语义的表示吗？
+13:52 varna: 现有的模式匹配可以上一个操作语义
+13:53 varna: 不过我觉得它可以大部分是指称的
+13:53 cleamoon quit:Ping timeout: 252 seconds
+13:53 varna: 其实是我在考虑如果做一个小脚本的话，我需要什么
+13:53 varna: 比如multimethod, 原型继承，模式匹配……这样的东西
+13:54 hope1: 这样啊
+13:54 hope1: 模式匹配至少很好用
+13:54 hope1: 不过也可以考虑用library实现?
+13:55 varna: 因为哦我不想直接要异常，也不想要撸比式的契约
+13:55 cleamoon joined channel
+13:55 varna: 它如果是指称可以描述的，那么它确实可以退化成库
+13:55 varna: 但退化成库的坏处是不能让实现者选择as-if
+13:55 varna: 这过分纯化（purification）了
+13:56 varna: 所以从逗乐的角度来看，不如只把事情说清楚
+13:56 varna: 怎么做则是另一回事了
+13:57 hope1: as-if是啥……
+13:58 varna: 比如我在语义中给出了形式的定义
+13:58 varna: 但这个定义的有效性只维持到语义分析阶段
+13:58 endle joined channel
+13:59 varna: 一旦要生成不论何种形式可执行的程序，实现者不应该再被形式语义限制
+13:59 lh_cat joined channel
+13:59 varna: 换言之，只生成半可定义的——对定义域上输入可以得出正确结果的——结果
+14:00 varna: 只要用户提供了合式（well-formed）的程序，emitter就只有义务保证结果半可定义
+14:01 hope1: 换言之不正确的输入会导致未定义行为/结果，不必检测输入的正确性？
+14:01 varna: +
+14:02 varna: 当然这是极端情况
+14:02 varna: 实际上我甚至鼓励实现者抛弃这个形式语义
+14:02 varna: 比如说前面的< . as . >返回的\x.unit或\x.x（暂且这么说）
+14:02 varna: 其中unit是一个一值类型的值
+14:03 varna: 我不认为此处一定被实现成函数
+14:03 varna: 在合适的情况下，直接生成控制流的转移（比如跳转）也应当被鼓励
+14:04 varna: 如果这只是一行的表达式，并没有人在意最终的值，那么为什么要强迫生成函数呢
+14:04 varna: 结果只要仿若语义的预测结果就行了，当然仿若二字是一个长解释的略语
+14:05 hope1: 但是这返回的函数可以作其他处理啊(假如函数是first-class对象的话)
+14:05 varna: 所以是“在合适的情况下”
+14:05 varna: 注意我的例子是“如果这是一行的表达式”
+14:06 varna: 这就如同你写下i++之后的情况一样
+14:06 varna: s/一样//
+14:07 hope1: 也就是说给予实现者相当程度的自由进行优化
+14:07 varna: 毕竟我不认为语义的纯化应当变成实现的纯化
+14:07 varna: 函数式和形式化的好处是给出的描述便于操纵
+14:08 varna: 但如果一路保持此等优良性质，对实现是不利的（大家也都大致能举出例子，比如多余的调用、可以简单实现的控制流）
+14:08 varna: 而我眼下的观点是事情尽量讲出来之后就到此为止了
+14:09 hope1: 而假若要求实现为标准库就没法进行一些优化了，是这个意思？
+14:09 varna: +
+14:09 varna: 而且它会显得像std::xxxx
+14:09 hope1: 原来如此
+14:10 hope1: 但这种基于具体语言特性的优化通常也不会有很显著的效果吧，太宽泛了
+14:10 varna: 总比purify好
+14:12 varna: ……活动期间的演习一个比一个难打
+14:13 Plough: 另外我突然想到一个问题
+14:13 Plough: E5道中我是不是该上航空支援
+14:13 varna: 你还有铝啊
+14:13 Plough: 一万六，比钢还多
+14:13 varna: ……强行吃败
+14:13 varna: 不行了，绫波换大和
+14:14 Plough: Orz
+14:14 Plough: 我先去试几次
+14:14 Plough: 不行我就带满流改炸过第一点
+14:14 varna: 双51双电探
+14:14 hope1: 但假如没法允许用户很容易地拓展实现的话，这种自由的意义就很有限了
+14:15 varna: hope1: 这里的用户并非最终用户，而对我来说，其实我更在意那一纸语义
+14:15 varna: 矶风打灯带照明弹，天津风带照明弹，夜战勇仪
+14:15 varna: 用意*
+14:16 Plough: 东舰共荣……
+14:16 varna: 反正也没制空
+14:16 varna: 直接给大和堆命中
+14:17 Plough: 昨晚武大在E5的命中有点堪忧，原因不明 
+14:17 hope1: 到中关村了
+14:17 varna: 裤子的锅
+14:17 Plough: 这几次如果还是这样的话我就考虑撤掉51
+14:17 varna: hope1: 咦，怎么去北京了
+14:18 hope1: CTSC和APIO
+14:18 varna: CTSC...
+14:18 varna: OTL
+14:18 varna: 卧槽
+14:18 varna: 大姐姐被爆了
+14:19 Plough: http://ww3.sinaimg.cn/large/c59ed13dgw1erqbk54yydj20hs0iewfh.jpg 这张小姨子不错
+14:20 varna: KTKM智商上线，斩了
+14:20 Plough: B子也打不中
+14:20 varna: 打个演习搞得跟攻略战一样……
+14:20 hope1: 报名似乎只看联赛成绩
+14:20 Plough: 麻烦
+14:20 varna: hope1: 噗，不要省选啊
+14:20 Plough: 还是鸟海靠得住
+14:21 varna: 天狗杀进国家队的场景想想就可怕
+14:21 Plough: 说起来其实我是不是该给鸟海氪个戒指
+14:21 Plough: 智商太高了
+14:21 varna: 氪戒指之后智商会下降
+14:21 Plough: ……
+14:21 Plough: 我家大凤表现还不错啊
+14:21 hope1: 个别省份还没选完，反正非正式选手嘛
+14:21 varna: POI都摔晕了
+14:21 varna: hope1: 非正式的强力选手……
+14:21 Plough: 昨天叽号作战第一次，白天对面剩4个
+14:21 Plough: 我方U酱大破
+14:21 Plough: 这没戏了吧
+14:21 hope1: 正式选手只有冬令营15人
+14:22 Plough: 结果夜战鸟海上来一个四选一照着M姬爆了共计600多点
+14:22 varna: 我觉得以后OI党的问候语改成ORZHOTATATA好了
+14:22 Plough: 23333
+14:23 Plough: U酱大破了，我试试这次用不用损管
+14:23 Plough: 用的话以后我就不带潜艇了……
+14:23 varna: 还有一个机会，大姐姐看你的了！
+14:23 varna: 中破，还有戏
+14:24 varna: ok
+14:24 Plough: 开幕大破RJ
+14:24 varna: 卧槽八门舰首
+14:24 Plough: 什么鬼
+14:24 Plough: ……遇上dalao了？
+14:24 Plough: 武藏被祖宗怒爆
+14:24 varna: 不确认是哪个
+14:24 Plough: 这几个超战舰哟……
+14:24 Plough: 写着八门的话就是潜艇用的了
+14:25 varna: 欧洲人果然熟练
+14:25 Plough: 我就说个事
+14:25 Plough: 这玩意要大鲸才能拿
+14:25 Plough: 4vs3
+14:25 varna: 我知道，所以我没拿到
+14:25 Plough: 所以我也没拿到
+14:25 Plough: 这次估计S不了
+14:25 varna: 我奶你一口
+14:25 Plough: 31血
+14:26 Plough: 虽说B子尽力了……
+14:26 Plough: 这次怎么这么多衣笠
+14:26 varna: 「我的神 我的神 你为何遗弃我」
+14:26 Plough: 衣笠还是遗弃我吧……
+14:27 Plough: 似乎Boss点的反潜极弱？
+14:27 Plough: 你在Boss点用过损管吗
+14:27 hope1: 燕山大酒店……
+14:27 Plough: 前哨时
+14:28 Plough: 再出去一次
+14:28 Plough: 这次居然走了A点……
+14:28 varna: Plough: 损管是斩杀的
+14:28 varna: 爷爷没打掉，一发带走了
+14:29 varna: M姬基本可以无视
+14:29 Plough: 我到现在没用过
+14:29 Plough: 哎呦这次命中不错
+14:29 Plough: 我看看Boss点表现如何
+14:29 varna: 前哨阵容没什么损管
+14:29 Plough: 不过我有点担心RJ
+14:29 varna: 全都是强行锁血
+14:29 hope1: CCF居然还有制服…… 感觉好羞耻的样子
+14:29 Plough: 另外我跟你讲
+14:29 varna: hope1: CCF有制服！？
+14:29 Plough: Zak用龙凤打的E6
+14:29 varna: 噗噗噗噗噗噗
+14:29 varna: 我用龙凤捞的老李……
+14:30 Plough: 而且他还在主任点空优了
+14:30 varna: ...
+14:30 varna: 他那点战机都能空优！？
+14:30 Plough: 应该是龙凤和千代田
+14:30 Plough: 估计是烈改太可怕
+14:30 Plough: 不过他用RJ就没空优，所以换了……
+14:30 varna: 然而他烈风都没两三个吧……
+14:30 Plough: 每次开幕我都能看见一个白色飞机呜呜飞过去
+14:31 varna: 熟练21……
+14:31 Plough: 另外他骂人进化了
+14:31 varna: 噩梦的铝原色和美国人心中的零战神话么
+14:31 Plough: JINTSU YOU F@CKING BITCH!
+14:31 varna: 233333333333
+14:31 varna: 居然对玉足之二水战如此评论
+14:31 Plough: 第一次斩杀神通被院长干掉了
+14:31 varna: 难道不知道神通出门就是看玉足的么
+14:32 Plough: 第二次斩杀神通躲过了院长CI、FCL、爷爷
+14:32 Plough: 他一高兴在主任点选了鳖型阵
+14:32 varna: ....
+14:32 varna: 找死
+14:32 Plough: 然后各种神闪避，全躲过去了
+14:32 varna: ...
+14:32 Plough: 他正高兴呢：“你看鳖型阵没问题吧”
+14:32 Plough: 然后主任手指一指，咣当
+14:32 Plough: 神通以外全员无破
+14:33 Plough: 他差点气得大破进级
+14:33 Plough: 进击*
+14:33 Plough: SHOULD I JUST CONTINUE?
+14:33 varna: 这才斩失败两次而已
+14:34 Plough: 主要是又是躲院长CI又是躲主任飞机的，他正高兴着呢……
+14:34 Plough: “这把稳了”
+14:34 Plough: 不过好歹是冷静下来撤退了
+14:34 Plough: 第三把进去了，没斩掉
+14:34 Plough: 北大全员出手前大破
+14:34 varna: 信仰的复纵阵和鳖型阵并不能拯救他
+14:34 xxxxxxxx: 好好的小伙子乱立什么旗
+14:34 Plough: 不对，第三把他劝退了
+14:35 Plough: 主任点第四阵型，两个大破
+14:35 Plough: 第四把他就换了Faithful double line，过去了
+14:35 Plough: 又没S
+14:35 Plough: 大和两个miss
+14:35 xxxxxxxx: 快给我掉一堆168
+14:35 Plough: 我还是换46吧……
+14:35 varna: 我突然有个想法
+14:36 varna: 给2-5攻略队里背照明弹的重巡上两个欧提炮
+14:36 Plough: 51先吃灰，换46
+14:36 xxxxxxxx: 照明弹那些通常给谁带?
+14:37 Plough: 他应该是第五把斩掉了
+14:37 varna: 不需要昼战二连的，或者夜战蹭血的
+14:37 varna: 比如POI
+14:37 Plough: 然后一看掉落，罗马
+14:37 varna: ...
+14:37 Plough: 然后我就聋了
+14:37 xxxxxxxx: POI为啥不需要二连?
+14:37 Plough: 然后一高兴直播大建，8小时
+14:37 Plough: 然后我又瞎了
+14:37 Plough: 不过他第二发大和和大凤都失败了
+14:38 Plough: 第二发是扶桑级，第三发是二航二航二
+14:38 hope1: 第一次拿到印了名字的胸牌，好感动
+14:38 varna: 以后你出去参加会议什么的也会有的
+14:38 varna: 可以试试来个胸牌colle
+14:38 Plough: 胸colle
+14:39 Plough: 1000油已浪费
+14:39 xxxxxxxx: 胸垫colle
+14:41 varna: 2-5走起
+14:41 Plough: FCL反潜真是百发百中……
+14:41 varna: 六个巡洋舰脸上全是条
+14:41 varna: 卧槽搞错了
+14:42 varna: 拼了
+14:42 Plough: 什么情况
+14:42 xxxxxxxx: 噗噗噗 2-3那个任务原来不是带深雪是带丛云...
+14:42 varna: 5ca1cav无桶赌国运成功
+14:42 Plough: 深雪被电酱撞下去了
+14:42 varna: xxxxxxxx: 深雪战前被电酱断头了
+14:42 varna: 2-5忘带路了……
+14:42 Plough: 其实我每次都忘
+14:42 varna: 我就感觉配装有点奇怪
+14:43 Plough: B子开幕大破
+14:43 Plough: 今天B子状态不对啊
+14:43 xxxxxxxx: 然而暂时我还能当一天元帅的样子...
+14:44 varna: 我完全不想当元帅了
+14:44 varna: 演习太难打
+14:44 xxxxxxxx: 然后就要被甘地们爆来爆去了
+14:44 Plough: 大和小姐请认真一点
+14:44 varna: 高雄大破
+14:44 Plough: 夜战对着低速战舰两个miss是什么情况
+14:44 Plough: 我掉金底船了！
+14:45 xxxxxxxx: 金刚?
+14:45 Plough: 金刚
+14:45 Plough: 日，没油了……
+14:45 Plough: 我考虑弄个巡洋舰队吧
+14:46 Plough: 战舰太能吃，还不给我干活
+14:46 varna: ECA还是太麻烦了
+14:47 varna: Plough: 没油了你先去把1-5 1-6收拾了吧
+14:48 varna: 说不定捞个三千油呢
+14:48 Plough: 打算这么来
+14:48 Plough: 我现在只有260点油
+14:48 varna: 又是莉改
+14:48 Plough: 1-6怎么推来着
+14:48 Plough: 4DD1CL1CAV?
+14:48 cleamoon quit:Ping timeout: 272 seconds
+14:48 varna: 要带秋津丸
+14:48 varna: 不然就1cl5dd
+14:48 varna: 妙高CI大破
+14:48 Plough: 我记得之前有个CAV配置的
+14:48 varna: 五月的2-5脸黑迷糊了
+14:49 xxxxxxxx: 1-6好打么?
+14:49 varna: 好打
+14:50 varna: 进门2clt...
+14:50 xxxxxxxx: 脸扛飞机?
+14:50 varna: CI
+14:50 varna: 卧槽进门大破
+14:50 varna: 妙高你够了
+14:51 Plough: 妙高姐今天状态不佳么……
+14:51 xxxxxxxx: 谁能放对空CI?
+14:51 Plough: 小和
+14:51 xxxxxxxx: 没有...
+14:52 varna: 对空CI配置很多，看wiki吧
+14:52 varna: 这把再劝退我就换配置
+14:54 xxxxxxxx: 然而活动没打我却在这里捞潜艇...
+14:54 Plough: 我有个疯狂的想法
+14:54 Plough: 4CA(V)1CVL1SS捞E5'
+14:55 Plough: 反正CA夜战也能干死祖宗
+14:55 Plough: 爆M姬鸟海一个就够了
+14:55 varna: 通过
+14:55 varna: 那就推延一下吧，不管通过数，劝退了就换配置
+14:56 Plough: 不对
+14:56 Plough: 我没油了，打不了1-5……
+14:56 varna: 刷闪来个北鼠
+14:57 varna: 羽黑一炮跪
+14:58 varna: 我猜这把有个鲸
+14:58 Plough: 欧rz
+14:58 varna: 乳风
+14:58 varna: 也不错，十七驱凑齐了
+14:59 Plough: 噗，碉堡了
+14:59 Plough: 有人卖号，开价两百
+14:59 Plough: 原因是太欧
+14:59 varna: ...
+14:59 varna: ..
+14:59 Plough: 有岛风有金刚
+14:59 Plough: 欧得不行
+14:59 varna: 哈哈哈哈哈哈哈哈哈哈哈哈
+14:59 hope1: 四人套间，还行
+14:59 Plough: http://tieba.baidu.com/p/3739897225
+14:59 Plough: 就这个
+15:00 varna: hope1: 比赛哪天开始？
+15:00 varna: Plough: 看3L, 楼主其实被骗钱了
+15:00 Plough: 看到了
+15:00 Plough: 叫他不问问再买……
+15:01 varna: 这程度帐号跟tb市价没差别，就十多块一个……
+15:01 Plough: 这个我觉得应该得便宜一点
+15:02 Plough: 都黑了
+15:02 varna: 黑了2333
+15:02 varna: 二血出击
+15:03 JQK quit:Remote host closed the connection
+15:04 varna: 固定莉改了……
+15:04 varna: CI了
+15:04 hope1: 明天day1
+15:05 varna: 近乎满血通过
+15:05 varna: hope1: GL
+15:07 varna: 4v3
+15:07 varna: 而且是上面三个
+15:07 varna: 拼抽屉原理吧
+15:08 JQK joined channel
+15:08 varna: 浦风……
+15:10 varna: http://tieba.baidu.com/p/3738907341 2333333
+15:11 varna: http://tieba.baidu.com/p/3736793044 卧槽大新闻
+15:12 xxxxxxxx: 肉牛回家专心揉舔撸去了
+15:13 xxxxxxxx: 小_埃: 一看楼主就是没编译过gcc，才编译10分钟算啥，过去我编译个gcc花了不止10个小时……
+15:13 xxxxxxxx: 这是在算盘上编译么...
+15:13 Plough: 我才发现日本之形里面那个军舰寿司包的是大姐姐……
+15:14 varna: ...
+15:14 Plough: 前面两级炮塔，甲板一整块，加上那个舰桥
+15:14 Plough: 大姐姐没跑了
+15:14 varna: 我进C语言吧看了一眼，全是逗比
+15:14 Plough: 两基*
+15:15 varna: 卧槽
+15:15 varna: fclt!
+15:15 varna: 利根直接中破
+15:15 varna: 那雷装基本是吃曽哥一发开幕
+15:16 varna: FCA
+15:16 varna: 总比莉改好
+15:16 varna: 擦伤通过
+15:18 xxxxxxxx: 话说哪边捞168最省?
+15:18 varna: 2-3
+15:19 varna: 3-3也不错
+15:19 xxxxxxxx: 2-3....
+15:20 varna: 连装浦风
+15:20 xxxxxxxx: 3-3空母大概能消耗少点
+15:21 varna: 这把有鲸
+15:22 xxxxxxxx: 平时做任务不觉得 1-5捞潜艇的时候才觉得第一点真烦...
+15:22 varna: 又是2clt
+15:22 varna: 还行吧，先验大约10%劝退
+15:23 xxxxxxxx: 我感觉比10%高多了...
+15:23 xxxxxxxx: 20-30%
+15:23 varna: 那也差不多
+15:23 varna: 你捞了多少盘？
+15:24 varna: 夜战擦伤通过
+15:24 xxxxxxxx: 今天大概不超过20回
+15:24 varna: 那还在误差范围内
+15:25 varna: 我那次不到一百盘明石差不多劝退了十盘
+15:25 varna: 今天2-5也是，三连劝退四连进
+15:25 xxxxxxxx: 我这里RJ buki ooi轮流大破
+15:26 endle quit:Quit: Leaving
+15:26 varna: 击破，夜战捞个鲸
+15:27 varna: 八……
+15:28 OwenJia quit:Quit: Konversation terminated!
+15:47 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=67246258bd0e7bec23da03e91f15b838/574e9258d109b3dec2a7923fc9bf6c81800a4c48.jpg
+15:49 Plough: 2333333
+15:49 sleepwalking joined channel
+15:49 hope1_ quit:Ping timeout: 252 seconds
+15:49 hope1 quit:Ping timeout: 252 seconds
+15:53 xxxxxxxx: 快给我168 168 168和168
+15:53 xxxxxxxx: 菊月....
+15:56 varna: 我刚出了一个58一个168……
+15:56 varna: 正好留给航母洗地
+15:57 xxxxxxxx: 吃我一矛
+15:58 xxxxxxxx: 168倒是没出来RJ又大破了....
+15:59 xxxxxxxx: 啊啊啊出168了!!!
+15:59 sleepwalking quit:Remote host closed the connection
+15:59 xxxxxxxx: RJ大破果然屌
+16:04 xxxxxxxx: 顺带我觉得元帅的演习比中将靠谱多了 中将的演习全是报复社会的
+16:05 varna: 中将逗比太多，而且他们根本报复不动
+16:05 varna: 但我这里的元帅区各种日德兰
+16:06 varna: 你看着阵容没什么特别的，但进去一打就感觉他们是装了32和HOMO雷达捞船的
+16:06 varna: 各种高命中
+16:08 xxxxxxxx: 中将的演习不管你打得赢打不赢 总之没经验
+16:10 xxxxxxxx: http://puu.sh/hzDru/2453656cb1.png 面对土豪的捞船队 机制的拿B走人
+16:10 xxxxxxxx: 机智
+16:12 Plough: 噗，Cookie clicker太可怕了
+16:12 Plough: 里面有个机制叫Grandmapocalypse
+16:12 varna: pocalypse是什么
+16:13 Plough: apocalypse
+16:13 varna: 卧槽
+16:13 varna: 我草草草
+16:13 varna: 1-5没打掉
+16:13 Plough: 某个升级会触发这个场景
+16:13 varna: 强行反潜miss
+16:13 varna: 然后二选一选错
+16:13 Plough: 然后Grandma会开始一步一步恶魔化……
+16:13 varna: 真恶心
+16:13 Plough: 兵家常事
+16:14 varna: 今年每个月我都会出一回这种破事
+16:14 varna: 是不是该找几个萌新教我怎么反潜了
+16:14 Plough: 找萌新什么情况
+16:15 varna: 萌新这次的著名言论比如水打E6逗比，必须用机动
+16:15 xxxxxxxx: 羊驼需要新的腋毛?
+16:15 Plough: 23333
+16:15 varna: 什么水打就是打不中你需要机动
+16:15 varna: 然后看了看等级和配置，我一阵银笑
+16:16 varna: 打不中怪战舰也是醉了
+16:16 xxxxxxxx: http://puu.sh/hzDH0/8c8fff1202.jpg 这演习我打赢了会不会明天就上不了了...
+16:16 varna: 他的名字是「反正大家都出陆奥」的意思
+16:17 xxxxxxxx: 啊那没关系 反正我也出不了五小时
+16:17 Plough: 萌新告诉你冬E5很好打
+16:17 Plough: 配置对了一遍就斩掉了
+16:17 Plough: 自己配置不对，然后说E5难脸黑斩不掉的都是逗逼
+16:17 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=922473baa6cc7cd9fa2d34d1093a203f/5fdf8db1cb13495437a88033534e9258d1094a36.jpg
+16:18 xxxxxxxx: 强行...
+16:18 varna: http://tieba.baidu.com/p/3739870682 清霜……
+16:19 xxxxxxxx: 反正我把清霜拆了...
+16:19 Plough: 欧rz
+16:20 varna: 噗
+16:20 Plough: 我觉得我捞舞风也会捞成这个样
+16:20 varna: 生拆大战舰！
+16:20 Plough: 你看我卡舞风卡多久了
+16:20 Matsune joined channel
+16:21 varna: 米空一血大破，电浆结束战斗
+16:22 varna: 收拾下把1-6打了
+16:24 xxxxxxxx: 啊没记错 果然图鉴里是有的
+16:26 varna: 欧洲人真可怕
+16:28 varna: 小和强行吃桶
+16:28 varna: 200铝
+16:33 lh_cat quit:Quit: Connection closed for inactivity
+16:33 varna: 500钢
+16:33 Plough: 炸鱼miss一次
+16:35 Plough: 那珂酱
+16:37 xxxxxxxx: 然而我觉得我是亚洲人 印度洋上北森提奈岛土著
+16:37 Plough: 欧rz
+16:38 * Plough 是北非人
+16:38 xxxxxxxx: 北非的白人
+16:38 Plough: 被遗忘的余割: 回复 宅小黄 :我E1捞了两百桶一个天津风一个女儿 看着天津地图出的 你可以试试
+16:39 Plough: 天津地图233333
+16:39 varna: ...
+16:39 varna: 已经没救了
+16:40 Plough: 炸鱼miss两次
+16:40 Plough: 你不是一个人
+16:41 xxxxxxxx: 对了E345哪边比较吃重巡?
+16:41 Plough: 5
+16:41 Plough: 不对3
+16:41 varna: E3
+16:41 varna: 但E5要质量高的
+16:41 xxxxxxxx: 你们说数量?
+16:42 xxxxxxxx: 我想问的是等级来着...
+16:42 varna: 那就E5
+16:42 Plough: 5
+16:42 varna: 毕竟要命中
+16:42 xxxxxxxx: 大概多少级?
+16:43 varna: 不知道
+16:43 Plough: 我建议Lv80
+16:43 varna: 我用的大概是八九十级
+16:43 Plough: 但是你一口气肝出来不很现实
+16:43 Plough: 不过毕竟你是肝帝
+16:43 xxxxxxxx: 90级不现实....
+16:43 Plough: 果然是肝帝
+16:43 xxxxxxxx: E4呢?
+16:44 varna: 你能拿出多少航母
+16:46 xxxxxxxx: 所有空母的话 80级的正规空母3只轻空母2只 70级轻空母一只 50级正规空母 算上葛城两只
+16:46 varna: E4出四个，E5用加贺
+16:46 Plough: 用加贺有点压力吧
+16:46 xxxxxxxx: E5只用一只?
+16:46 Plough: 啊，E5
+16:46 Plough: 大丈夫
+16:47 Plough: E5我用一只RJ都狗
+16:47 Plough: 够*
+16:47 varna: E5那得带路吧
+16:47 Plough: 是
+16:47 varna: 能带路E5随便就行
+16:47 Plough: 不带路的话加贺也够了
+16:47 Plough: 我用大凤推的不是
+16:48 xxxxxxxx: 航巡只有60级最上...
+16:48 varna: 鸟海呢
+16:48 varna: 你打的什么难度，甲还是乙
+16:48 xxxxxxxx: 最好甲
+16:48 varna: 你战舰有多少
+16:48 xxxxxxxx: 四傻和陆奥
+16:49 varna: 别的呢
+16:49 xxxxxxxx: 没了
+16:49 varna: E5用两个
+16:49 Plough: 扶桑级呢
+16:49 varna: 然后其他的安排到E4
+16:49 varna: 战舰重巡全员三式弹
+16:49 varna: E5可以鸟海RJ带路
+16:50 xxxxxxxx: 扶桑58 山城65...
+16:50 varna: 回避航空战的话RJ可以带舰爆
+16:50 varna: 够用了
+16:50 varna: 肥桑肥城也可以扔到E4去
+16:50 Plough: 不过我还是建议尽快改二扶桑级
+16:50 xxxxxxxx: 我得有图纸...
+16:50 Plough: 扶桑级改二以后的适重炮是41，这点不同于傻级
+16:51 varna: 图纸……现在手头有2章5图
+16:51 Plough: Orz
+16:51 varna: 正好云龙葛城天城L子R子一人一个
+16:51 Plough: 一章两图
+16:51 Plough: 还有B子两个呢
+16:51 varna: B子的事情慢慢来吧
+16:51 Plough: 你都到欧洲了
+16:51 varna: 我先不急着大建了
+16:51 Plough: 下一发就出
+16:52 varna: 活动前也就造造低保
+16:52 varna: 现在我最大的问题是电探不够
+16:52 Plough: 支援我打算以后四主炮
+16:52 Plough: 代替电探
+16:53 varna: 我开始赌32
+16:53 varna: 今天就赌
+16:53 Plough: 我再赌两个32就差不多了
+16:53 Plough: 四条航母一人两个
+16:54 varna: 你看你也有六个32
+16:54 xxxxxxxx: 预计是第一张图纸改鸟海 然后再搞一个徽章改葛城
+16:54 Plough: 两个
+16:54 varna: ...
+16:54 Plough: 32*4 HOMO*2 22改四*2
+16:54 Plough: 正好八个
+16:54 varna: ...
+16:54 Plough: 然后刷闪
+16:54 varna: 又吃了一堆D
+16:55 Plough: 这两次活动我都这么打下来了
+16:55 Plough: 夏活我还能打不下来么……
+16:55 varna: 卧槽
+16:55 varna: 要出事
+16:55 Plough: 一库……
+16:55 varna: 还好中破
+16:55 Plough: 好多一库
+16:56 Plough: 对了捞完矶风我得尽快把云龙练起来
+16:56 Plough: RJ中破……
+16:56 varna: 五百油
+16:57 Plough: 炸鱼miss三次
+16:57 Plough: 好在天津风上线斩掉了
+16:57 Plough: 虽说没S略残念
+16:57 varna: 原来欠雪和小和吃败都吃红了……难怪打不中
+16:59 xxxxxxxx: 鸟海离改造还有13W经验....
+16:59 varna: http://tieba.baidu.com/p/3740007179 咸咸咸咸咸咸低练度参考
+17:00 varna: 卧槽往下翻的时候我看到了大凤
+17:01 Plough: 你不也有……
+17:01 varna: 是说参考价值
+17:01 Plough: 用吃货就是了
+17:02 varna: 他吃喝大凤机动部队走的中路
+17:02 varna: 欧皇脸帝
+17:02 Plough: 噗
+17:02 Plough: 二航二航二吧
+17:02 xxxxxxxx: 依然没有飞龙
+17:02 varna: niconiconi到中路是寻死吧……
+17:02 Plough: 刷闪
+17:02 varna: 只能刷闪了，但支援谁打
+17:03 varna: 哦不对，咸鱼那个不用支援也行
+17:03 Plough: 航空战点B胜
+17:03 Plough: 我完全不用吃败啊……
+17:03 varna: 我是水雷战队带过去的，只能吃败
+17:03 Plough: 加个CAV就是了
+17:03 varna: 不想掉沟
+17:03 Plough: 不沟啊
+17:04 varna: 噗？
+17:04 Plough: DD旗舰
+17:04 Plough: CAV放下面
+17:04 varna: 哦
+17:04 varna: 算了怪麻烦
+17:04 varna: 我吃败好了
+17:04 Plough: ……这多蛋疼
+17:04 xxxxxxxx: 13w经验打完又是两天过去了...
+17:04 Plough: A->E->G->F->B
+17:04 Plough: 500油
+17:04 varna: 我都三百败了
+17:04 varna: 不差那点
+17:05 Plough: 1-6是几次出击来着
+17:05 varna: 7
+17:05 Plough: 了解
+17:05 Plough: 运营最近怎么这么喜欢7……
+17:06 varna: 他们觉得自己太6了
+17:06 Plough: 233333
+17:07 Plough: Grandma进化了
+17:07 varna: http://tieba.baidu.com/p/3740149388 新米（迫真）
+17:08 Plough: 噗
+17:08 Plough: 航空战点我手一滑选了个单横
+17:08 Plough: 劝退了
+17:08 varna: ...
+17:08 Plough: 既然如此夜战一把……
+17:09 Plough: S
+17:09 Plough: 掉落空气
+17:11 varna: 水雷南西走起
+17:11 Plough: http://tieba.baidu.com/p/3739699835 你说的是这个？
+17:12 varna: Plough: 这是今天的，昨天更多
+17:12 Plough: 今天Zak的直播里50%是汉字
+17:12 varna: ..
+17:12 Plough: 其中40%是机动和水打两个神教在战斗
+17:12 varna: 真没意思
+17:13 varna: ok, 确保Boss路线
+17:13 Plough: 剩下的10%是毒奶
+17:14 Plough: http://imgsrc.baidu.com/forum/pic/item/6c0e639759ee3d6d487a239e46166d224e4adede.jpg 北上大人又改造了啊
+17:14 varna: ...
+17:14 varna: 强行道中三战
+17:16 varna: 收工
+17:17 Plough: 另外还有一个问题
+17:18 Plough: 俾斯麦的38系列不是傻级的适重炮
+17:18 varna: 列装38改的意义……
+17:18 Plough: 所以改一堆38改出来并没卵用……
+17:18 Plough: 不如给356加几颗星
+17:18 Plough: 噗我操
+17:18 Plough: 沟了
+17:19 Plough: 这个配置还是有概率沟的
+17:19 varna: ...
+17:19 Plough: 然而为何上个月和前几次都没沟……
+17:20 Plough: 再试一次
+17:21 Plough: 沟了
+17:21 Plough: 这不科学啊
+17:21 Plough: 难不成下路只能吃败么
+17:21 varna: 我想来发低保
+17:21 Plough: 1-6是什么时候实装的来着
+17:22 varna: 四月
+17:22 Plough: 赌赌赌
+17:22 varna: 求旗舰 
+17:22 varna: 目指三隈
+17:23 Plough: 她姐姐？
+17:23 varna: 最上太惨
+17:24 Plough: 或者来个新船召唤阵吧
+17:24 varna: 算了惯例用驱逐舰召唤
+17:24 varna: 第二槽走起
+17:24 varna: 噗
+17:24 varna: 长或者陆
+17:24 Plough: 长
+17:24 varna: 喷了看看
+17:25 varna: 笼罩拉包尔的阴云飘到了岩川上空
+17:25 Plough: ……
+17:25 varna: 第二发4:30
+17:25 varna: 第三发4:20
+17:25 varna: 喷掉
+17:26 varna: 最后一发决死一击
+17:27 Plough: 姨妈大！
+17:27 varna: 强行进行欧洲召唤
+17:27 varna: 4673+20
+17:27 Plough: 换旗舰吧
+17:27 Plough: Z3旗舰Z1二号位
+17:27 varna: 我一直是Z3 Z1...
+17:27 Plough: 那就中
+17:28 varna: 4:00
+17:28 Plough: ……
+17:28 xxxxxxxx: 金刚
+17:28 Plough: 一定是你系统时间快了一小时
+17:28 Plough: 快调慢一小时
+17:28 varna: 目前的资源数
+17:28 varna: 22925/1235/28702/2128
+17:28 varna: 明天的演习支援别指望大姐姐了
+17:32 varna: 就这样，活动蒸发了八万油八万钢十万弹五万铝……
+17:33 varna: 我整个人都迷糊了
+17:33 Plough: 这次没沟
+17:34 Plough: 时雨闪避=0
+17:34 varna: 看来在召唤阵里混入叛徒的尝试也失败了
+17:34 Plough: 300油
+17:34 varna: 德国鬼子真他大爷认真……
+17:35 Plough: 23333
+17:35 Plough: 一定是德国提督带着眼镜看了下你的召唤阵
+17:35 varna: 卧槽
+17:35 varna: 6人
+17:36 cleamoon joined channel
+17:36 varna: 对了，vv级两个都要图么？
+17:36 Plough: 都要
+17:36 varna: 那就正好用完吧
+17:36 varna: B子先放弃了
+17:36 varna: 不然我弹药都不够练级的
+17:39 varna: 话题帖：“去了趟面包店，发现一款饼干叫：罗马盾牌。我立马买了一盒”
+17:39 Plough: 23333
+17:39 Plough: 但这不就是活动给的普列赛么
+17:40 varna: 吃三个捞一次
+17:40 Plough: 3CA1CAV1CVL1SS捞船阵容第一次试验
+17:42 Plough: 撸爷试图强行锁血，失败了
+17:42 varna: 看你打一盘然后出去吃饭
+17:42 Plough: 夜战点
+17:42 Plough: 其实我有点担心重巡在Boss点的生存里
+17:42 Plough: 力*
+17:43 Plough: 夜战点冲过去了，U酱中破
+17:43 varna: 我突然觉得咸鱼湾可以改名叫假鱼湾
+17:43 Plough: 233333
+17:44 Plough: 单纵冲进Boss点
+17:44 xxxxxxxx: 假鱼?
+17:44 BlackKitty joined channel
+17:44 BlackKitty: hello
+17:44 varna: hello
+17:45 Plough: 开幕利根中破
+17:45 BlackKitty: hw r u
+17:45 Plough: 妙高面壁
+17:45 * varna is salty
+17:45 xxxxxxxx: BlackKitty: 这个是在黑雷总么?
+17:45 BlackKitty: what's the fuck
+17:46 Plough: 重巡开始围殴Boss
+17:46 Plough: RJ补掉第二个浮游炮
+17:46 Plough: 夜战
+17:46 BlackKitty: Plough
+17:46 Plough: 鸟海秒祖宗
+17:46 Plough: 羽黑大破
+17:46 Plough: 有点玄
+17:46 Plough: ……S了
+17:46 Plough: 这盘看来有点危险，不过可行
+17:46 BlackKitty: Plough, what r u talking about
+17:46 Plough: BlackKitty: Kantai Collectioon
+17:46 Plough: BlackKitty: Kantai Collection
+17:47 Plough: 我操我出了
+17:47 Plough: 比叡
+17:47 varna: 噗
+17:47 varna: nOOItcelloc
+17:47 Plough: 23333
+17:47 Plough: 再来一轮，然后我去洗澡
+17:48 BlackKitty: ...
+17:48 varna: 吃饭去
+17:48 varna: 本来想查篇论文结果突然忘了标题
+17:48 Plough: ……
+17:48 BlackKitty: 大家都是C语言吧的孩纸么
+17:49 Plough: 我是舰狗吧的潜水党
+17:49 varna: 啊
+17:49 varna: 阁下是什么时候从C语言吧找过来的
+17:49 BlackKitty: 。。。刚才
+17:49 varna: 哦
+17:49 varna: 欢迎来到黑暗的频道
+17:49 Plough: 说起来好久没人从本部过来了……
+17:49 varna: 请随意发起话题
+17:49 Plough: 撸爷爆了羽黑
+17:50 varna: 本部已经变成傻逼尸体堆出的垃圾山了
+17:50 Plough: 我看看她能不能坚持到Boss点
+17:50 varna: 你去看看就知道
+17:50 xxxxxxxx: 这里已经算是DA RK阵营了么...
+17:50 BlackKitty: 竟然会有这么多人，我以为没人用irc了
+17:50 varna: xxxxxxxx: 你向转投光明阵营也行
+17:50 Plough: 去看过，为了保护视力我退出来了
+17:50 Plough: 撸爷今天依旧威武
+17:50 Plough: 中破一个小破一个
+17:51 varna: BlackKitty: 阁下是妹子么
+17:51 Plough: U酱大破
+17:51 BlackKitty: 为何这样说。。
+17:52 xxxxxxxx: 是futa么？
+17:52 Plough: 补给船CI
+17:52 Plough: 打了羽黑一点血……
+17:52 Plough: 吓死我了
+17:52 varna: BlackKitty: 是妹子的话有优待
+17:52 Plough: 单纵就是干
+17:52 xxxxxxxx: 优待额外的性 骚扰?
+17:53 Plough: 利根又中破了
+17:53 BlackKitty: 汗。。。
+17:53 Plough: 这次够呛
+17:53 BlackKitty: 这里是不是很少妹子
+17:53 varna: 是
+17:54 xxxxxxxx: 反正被指出: 不堪入目
+17:54 Plough: 羽黑下跪
+17:54 Plough: 3vs2
+17:54 varna: 现在本部已经发展到 http://tieba.baidu.com/p/3738300692 这样的帖子都没人删的程度了
+17:54 Plough: 鸟海灭掉M姬，妙高干掉祖宗，收工
+17:54 Plough: 可行
+17:55 varna: 可行性很高啊
+17:55 Plough: +
+17:55 Plough: 妙高
+17:55 Plough: 这回连金底都不是了
+17:55 Plough: 去洗澡
+17:55 varna: 估计BlackKitty是妹子
+17:55 BlackKitty: 汗
+17:56 BlackKitty: 你们都用linux的么
+17:56 varna: BlackKitty: 阁下平时比较喜欢用什么语言的？
+17:56 xxxxxxxx: 经常出汗明显是咸湿基佬
+17:56 varna: 这里现在是不是还是很多Archer
+17:56 * Plough 是Archer
+17:57 BlackKitty: 汉语
+17:57 BlackKitty: :D
+17:57 xxxxxxxx: win党中 linux下flash会频繁爆炸导致闪瞎双眼
+17:58 varna: 咦
+17:58 varna: 我怎么还有权限的
+17:58 varna: 来来来屠版
+17:58 xxxxxxxx: varna 之前不是说给你小吧了么
+17:59 varna: 我小吧不是因为长久不去被撤了么
+17:59 pocmon joined channel
+17:59 BlackKitty: varna你ID是啥
+17:59 varna: 现在的本部在美琴的领导下已经变成他们TX群的垃圾集散地和城乡结合部了吧
+17:59 xxxxxxxx: 那就不知道了
+18:00 varna: BlackKitty: 以前的C语言吧大吧之一，ID比较多
+18:00 xxxxxxxx: 你是在黑炮姐咯
+18:00 BlackKitty|2 joined channel
+18:00 varna: 我觉得吧话题上挂着群宣传没什么不可以黑的
+18:01 BlackKitty: 汗
+18:01 xxxxxxxx: 毕竟已经不想看小裙子了
+18:02 cleamoon quit:Ping timeout: 264 seconds
+18:03 varna: BlackKitty: http://tieba.baidu.com/p/1407556663 阁下可以参考下这贴
+18:03 cleamoon joined channel
+18:03 xxxxxxxx: 又是这个
+18:03 BlackKitty: 看过。。。。
+18:04 BlackKitty: 怎么老说阁下
+18:04 varna: 因为不知道男女
+18:04 biergaizi quit:Quit: Konversation terminated!
+18:04 varna: 不然就直接爆了
+18:05 BlackKitty: 大家用IRC都是出于什么目的。。。
+18:05 varna: 想多爆十几个药娘
+18:06 BlackKitty: 。。？
+18:06 xxxxxxxx: 重巡真是烦....
+18:06 varna: BlackKitty: 药娘是什么可以自行谷歌
+18:07 varna: 比起这个，你是做什么开发/研究的……
+18:07 xxxxxxxx: 相互查户口中
+18:08 varna: 总不能让新人认为这里除了舰狗就是舰狗，虽然确实挺多舰狗
+18:08 BlackKitty: 汗
+18:08 BlackKitty: so hentai
+18:08 xxxxxxxx: 还有噗口支噗口支
+18:09 BlackKitty: 我是学生
+18:09 varna: 学生也欢迎
+18:09 varna: 这里很多学生
+18:09 varna: 当然因为各人的口味不同，所以别太指望能加入所有人的对话
+18:09 varna: 发起你喜欢的话题就行
+18:10 xxxxxxxx: 似乎先中破也不是啥特别好的办法出个事故就大破了...
+18:11 BlackKitty: 我也不知道说什么
+18:11 varna: 说点你觉得有趣的东西
+18:11 xxxxxxxx: 介绍性癖之类的
+18:11 varna: 其实我之前提那个模式匹配鬼畜干脆就没想好形式合适的指称语义……
+18:13 BlackKitty: 我想用cpp或c#开发安卓应用，不知可行否
+18:14 BlackKitty quit:Read error: Connection reset by peer
+18:14 varna: 比如 < pattern as invocation( foobar ) > { blah } 这个语法，在前面的模式匹配算子因为失败返回\x.x的时候，\x.x { blah }被正确求实的结果是一等函数{ blah }
+18:14 varna: 而不是{ blah }被调用的结果
+18:14 varna: 这里一个明显的问题是lc不考虑无参的函数，函数都是一参
+18:15 BlackKitty joined channel
+18:15 varna: 所以一个匿名函数语法糖 { blah } 似乎应该具有形式\x.blah
+18:16 varna: 而算子失败的返回值应当是\x.x unit, 其中unit仍然是前述的一值类型所具有的唯一值
+18:16 BlackKitty: 不明觉厉
+18:16 varna: BlackKitty: 我不搞安卓，但我听说安卓可以用ndk做c艹开发
+18:17 varna: 你可以试着搜搜相关的资料
+18:17 BlackKitty: 额，你是做什么哒
+18:17 varna: 我是舰狗
+18:18 BlackKitty: 那是什么
+18:18 BlackKitty: 。。。
+18:18 xxxxxxxx: http://www.bilibili.com/video/av2281064/
+18:18 varna: BlackKitty: http://zh.moegirl.org/%E8%88%B0%E9%98%9FCollection
+18:19 varna: 平时的爱好是鬼畜，档案上的方向是数据挖掘、机器学习和Web智能
+18:20 BlackKitty: 。。。为什么好多人都喜欢日漫，尤其是IT行业的家伙
+18:20 varna: 因为我们没有女朋友
+18:20 varna: 哦对
+18:20 xxxxxxxx: 美漫出了超级英雄还有啥?
+18:20 varna: 如果对海战有兴趣，也可以加入频道的兵棋推演
+18:21 BlackKitty: 美漫 南方公园 不错
+18:21 varna: 目前予定中的两个剧本是珊瑚海（裁判Plough）和基斯卡岛撤退（裁判是我）
+18:21 varna: 如果凑齐人的话就正式准备数据开打
+18:21 BlackKitty: 应该是动画
+18:24 xxxxxxxx: 改造前还需要经验123333
+18:24 xxxxxxxx: 这数字真嘲讽....
+18:25 varna: 崩れて 剥がれて/もう 二度 届かないの/波の 向こうの/光の中
+18:25 varna: 这歌词强行吃核弹么
+18:27 varna: 下面还有一段结构相近的词
+18:27 varna: 总觉得是一段长门一段新泽西的强行战术性洗白
+18:27 cleamoon quit:Ping timeout: 255 seconds
+18:27 varna: 总之先吃饭
+18:29 cleamoon joined channel
+18:29 xxxxxxxx: 10级168 强行无伤一轮
+18:32 Matsune: 我用IRC 出于和这里的基佬聊天这个目的
+18:33 xxxxxxxx: Matsune: 你这个基佬
+18:34 BlackKitty quit:Ping timeout: 276 seconds
+18:34 Plough: Grandma彻底魔化了
+18:44 xxxxxxxx: 好烦啊重巡无限疲劳
+18:51 cleamoon quit:Ping timeout: 255 seconds
+18:53 pocmon quit:Quit: Leaving.
+19:10 cleamoon joined channel
+19:12 cleamoon__: 竟然有新人，而且我竟然错过了
+19:12 Plough: 岚月酱懊悔地脱下了裤子
+19:12 xxxxxxxx: 开始揉
+19:14 * cleamoon__ 脱下了肛旗的裤子
+19:15 Plough: 利根大破
+19:15 Plough: 祖宗轰沉
+19:15 Plough: 3vs1怎么苏
+19:15 Plough: S了
+19:17 izmntuk quit:Quit: reboot
+19:18 cleamoon__: fleuria.
+19:18 cleamoon__: 「试想，13 亿人口中有 8、9 亿的劳动者，如果他们都投入创业和创新创造，这将是巨大的力量。」 #噗
+19:18 xiaoxi joined channel
+19:19 xxxxxxxx: 这将是巨大的混乱
+19:20 cleamoon__: 优质大师，nfsw nfsw nfsw nfsw  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/kb/s8_484613.jpg
+19:23 cleamoon__: http://www.solidot.org/story?sid=43923
+19:23 xxxxxxxx: 老流氓联合小流氓
+19:26 varna: 牛肉面真好啊
+19:28 cleamoon__: 问道题，输入一个队列表<a_i, b_i>，还有一个n，然后使得一个 (sum(x_i*a_i))^2 + (sum(x_i*b_i))^2 = n^2，求最小的可能的 sum(x_i)，100个test case，n<300，列表长度<40
+19:28 cleamoon__: 壕
+19:29 Plough: 刚才劝退了一次
+19:29 Plough: 今晚估计没法捞了
+19:31 izmntuk joined channel
+19:32 Plough: 奇虎360递交到杀毒软件测试机构的产品样本被发现与消费者使用的版本存在明显差异，被认为是作弊。评测机构Virus Bulletin、Av-Comparatives和AV-Test发表联合声明，宣布撤销对奇虎360的认证。奇虎360提供给评测的产品修改了默认设置，其中包括：启用竞争对手Bitdefender的杀毒引擎，关闭自己的QVM引擎
+19:34 varna: 想想这个怎么做
+19:34 cleamoon__: 自己的不是杀毒是扫描硬盘吧
+19:35 varna: 我是个逗比
+19:35 cleamoon quit:Remote host closed the connection
+19:35 hope1 joined channel
+19:35 Plough: 你被T2盗号了？
+19:35 varna: 我算错数了……
+19:36 Plough: ……
+19:36 cleamoon joined channel
+19:36 varna: n<300想了个n^2<=300
+19:36 varna: 不过应该也一样的
+19:36 varna: 枚举斜边n的勾股数，然后暴力做……
+19:38 tutu_wind joined channel
+19:39 cleamoon__: 你确定时间够？
+19:39 cleamoon__: 100个test case呢
+19:39 varna: 枚举一个不超过90k
+19:40 varna: 枚举一百个不超过9m
+19:40 varna: 我没算错数吧……
+19:40 varna: 哦不对
+19:40 varna: 枚举一个不超过三百
+19:40 varna: 勾股数a, b, n, n已知，a < n枚举
+19:41 varna: 一个例子枚举三百回
+19:42 varna: 每次求出合适的a, b之后，注意到a = sum(ai*xi) b = sum(bi*xi)
+19:42 varna: 啊我似乎搞错了什么？
+19:43 varna: 然后得到一个约束sum( (ai+bi)xi ) = a+b
+19:43 varna: 这是个线性约束……
+19:43 varna: 然而这是个狗日的整数规划么
+19:43 varna: 如果是的话就不好办了……
+19:44 lh_cat joined channel
+19:44 Plough: 为何我总感觉意大利船的语音相当生硬
+19:45 lh_cat: 吃烤羊腿ing
+19:45 Plough: 一股棒读感
+19:45 cleamoon__: 也就是求最小的能被a+b整除的ai+bi咯？
+19:45 varna: 不过差不多了
+19:45 varna: 如果是整数规划的话，a+b必须被一切ai+bi整除
+19:46 varna: 但最后这个问题没贡献
+19:46 varna: 因为你要的是min sum(xi)
+19:46 varna: 而约束是 sum( (ai+bi)xi ) = a+b
+19:46 varna: 这是个线性规划，但如果约束xi是整数的话就坑爆了
+19:47 varna: Plough: 就是相当生硬
+19:48 xeirrr joined channel
+19:49 xeirrr: Varna: love u
+19:49 cleamoon__: xi当然是整数
+19:49 cleamoon__: 尔等基佬
+19:49 varna: 基佬真可怕
+19:49 varna: 那我这么变换就不好办了
+19:49 xeirrr: general love
+19:49 cleamoon quit:Remote host closed the connection
+19:50 cleamoon__: 勃 爱
+19:50 cleamoon joined channel
+19:50 xeirrr: cleamoon: 爆
+19:51 cleamoon__: 基佬来来来，抬尻
+19:57 Plough: 别打祖宗了，你们打不动的啊……
+19:57 Plough: 补给船上演深海锁血大戏
+19:57 Plough: 这次可能有点麻烦
+19:57 Plough: 啊，闭幕雷把补给船收拾掉了
+19:58 varna: Plough: 我发现有个糟糕的地方
+19:58 varna: M姬的开场台词「モウ…トベナイノ……トベナイノヨ……ワカル？…ネェ」
+19:58 varna: 菊座也说过……
+19:58 Plough: 飞不起来
+19:58 varna: 飞不起来 最多掉沟里
+19:58 Plough: 你一发出来我立马想到了……
+19:58 Plough: S胜
+19:58 Plough: 果然连金底都不出了
+20:00 Plough: 今晚最后一趟
+20:00 varna: 另外有人提到这个东西 http://en.wikipedia.org/wiki/Tachikawa_Ki-77
+20:01 Plough: 我操T有利
+20:01 Plough: RJ中破
+20:01 varna: 妄想中的日版B系列
+20:01 Plough: 利根中破
+20:01 Plough: 今天的撸酱也一如既往地威武
+20:02 Plough: ……夏活奖励？
+20:02 Plough: 来个这玩意改
+20:03 varna: 有人指出M姬也可能是印度洋失踪的Ki-77原型机
+20:03 Plough: ……一架飞机为何是陆基
+20:03 varna: 台词「飞不起来」
+20:03 varna: 不过毕竟M姬是现在的肝岛国际机场（Gan International Airport）
+20:04 varna: 我觉得这是恶意，想想我那七十多盘
+20:05 Plough: 23333
+20:05 Plough: 还是说是混合体
+20:06 Plough: 蛋疼了
+20:06 Plough: 没人理浮游炮
+20:06 Plough: 3vs2
+20:07 Plough: S了
+20:07 Plough: 终于是金地了
+20:07 Plough: 金底*
+20:08 varna: 噗我被骗了！
+20:08 varna: M姬有胸！
+20:08 Plough: 有一点
+20:08 varna: 不小呢
+20:08 Plough: 你看看港湾
+20:08 Plough: 然后你就会觉得这已经不错了
+20:08 izmntuk quit:Quit: poweroff
+20:09 varna: 那个是恶意
+20:11 Plough: 另外M姬确实无制空
+20:12 Plough: 噗，M姬的劣化徹甲弹升过级
+20:12 Plough: 现在是+15火力+5命中
+20:14 varna: ...
+20:14 varna: 贫铀弹·改
+20:14 Plough: 比前两代泊地用的版本多了5点火力
+20:14 Plough: 不过是直接把数据改了
+20:14 Plough: 不是加了新装备
+20:17 varna: ...
+20:21 cleamoon__: 我擦，差点把葛城喂了...
+20:23 varna: 喂了就是神作
+20:23 cleamoon__: 我完全没给任何船上锁
+20:23 Plough: 嘬死
+20:25 Plough: 矶风的出率从1.71%掉到1.59%了
+20:26 varna: 坐等手滑喂主力
+20:28 xxxxxxxx quit:Quit: Leaving...
+20:35 cleamoon: 怎么可能喂主力，差好多页呢
+20:36 izmntuk joined channel
+20:37 Plough: 33……
+20:38 Plough: 然后卡了半天立绘出个了7.7mm机枪
+20:43 Plough: 我是憋一个星期资源集中捞呢还是每天捞三次呢……
+20:45 varna: 每天三次
+20:46 varna: 集中捞谁都受不了
+20:46 varna: 太恶心了
+20:46 Plough: 也是
+20:46 Plough: 想想我那块屏幕
+20:46 varna: 这还不是E6E2那种安逸捞法
+20:46 varna: 捞全图肯定吃桶
+20:46 Plough: 那智的对空也满了……
+20:49 whocares_2 quit:Remote host closed the connection
+20:49 whocares_2 joined channel
+20:52 Plough: http://picpaste.com/q8lISlw7.jpg 区区罗马，谁没有
+20:53 varna: 233333333
+20:53 varna: 等下
+20:53 varna: K和H我没出过筑摩……
+20:53 varna: 利根有一个
+20:57 xiaoxi quit:Quit: 离开
+20:59 sismvg joined channel
+21:00 sismvg: nvida
+21:00 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=951120aae5fe9925cb0c695804a95ee4/34cd9fdda144ad34f6babfe8d5a20cf430ad8542.jpg
+21:00 sismvg: amd
+21:00 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=dc91b161b43533faf5b6932698d2fdca/f1093ed12f2eb9385e19429dd0628535e4dd6f53.jpg
+21:12 lh_not_bot: 刚吃烤羊腿的时候又看见一个穿长筒袜的♀  长得还可以
+21:12 sismvg: ♀  ->人妖？
+21:12 lh_not_bot: 是♀
+21:12 lh_not_bot: 不是♂
+21:12 varna: 烤羊腿好吃不，加什么料的？
+21:13 lh_not_bot: 挺好吃的
+21:13 lh_not_bot: 不过我不喜欢膻味
+21:13 sleepwalking joined channel
+21:13 varna: 我也不喜欢，但是烤的应该膻味小吧……
+21:13 lh_not_bot: 长筒袜  黑长直  ♀
+21:13 varna: sleepwalking: 爆
+21:13 lh_not_bot: 是的
+21:13 cleamoon__: 长着络腮胡子和胸毛
+21:13 lh_not_bot: 脸有点长 看起来是还在上学的
+21:14 cleamoon__: 羊肉就要涮着吃
+21:14 sismvg: ♀ho\
+21:14 varna: 涮锅子我还是喜欢肥牛
+21:14 sleepwalking: varna: 现在有7000燃，8000钢，8000弹，8000铝，大建怎么赌
+21:14 varna: sleepwalking: 别赌，快去打活动
+21:14 sismvg: ♀后面加个空格我以为是预定俗称的空格》。
+21:14 sleepwalking: 炼度不够
+21:14 varna: 最高多少级
+21:14 lh_not_bot: sismvg: 你想多了
+21:14 cleamoon__: 这样的   http://i.imgur.com/6EtiG.jpg
+21:14 lh_not_bot: 别用你的想法衡量我
+21:14 Plough: 说起来现在好多人喜欢“新米造个战舰”然后100cm炮五基十门啊……
+21:15 varna: sleepwalking: 如果你特别想赌的话，要战舰还是航母
+21:15 varna: 战舰有大和武藏（你暂时赌不出俾斯麦），航母有大凤
+21:15 sleepwalking: 驱逐平均20，战舰空母三四十左右
+21:15 sleepwalking: 要航母
+21:15 varna: 不是不能打，但我估计你没兴趣打
+21:15 cleamoon__: 能打一两个活动了
+21:16 cleamoon__: E1就给航母
+21:16 varna: 如果真没兴趣，航母用4k 2k 5k >=5.2k
+21:16 varna: 资材可以20
+21:16 varna: cleamoon__: 葛城E2
+21:16 cleamoon__: 是吗... 没注意
+21:16 lh_not_bot: 为毛大建是靠运气的 难道不是先规划再建么
+21:16 sleepwalking: 好
+21:17 cleamoon__: 那样还怎么让人氪金
+21:17 varna: 这不是战略游戏而是休闲游戏
+21:17 lh_not_bot: 我是 RTS 党
+21:17 lh_not_bot: /.\
+21:17 yzld2002 joined channel
+21:17 varna: 喜欢战略游戏的，我这里有附赠322页手册的海战
+21:17 sismvg: geordi,{map<int,int> var;auto iter=var.begin();auto iter2=iter;}
+21:17 sleepwalking: varna: 顺序是油弹钢铝？
+21:17 geordi: <no output>
+21:18 Plough: 对了
+21:18 varna: sleepwalking: 是
+21:18 Plough: 小耗对兵棋有兴趣吗
+21:18 sleepwalking: 好
+21:18 lh_not_bot: Plough: 干啥
+21:18 sismvg: geordi{map<int,int> var;auto iter=var.begin();int count=100;while(count--)auto iter2=iter;}
+21:18 geordi: <no output>
+21:18 varna: 快看米尻酱大建了！
+21:18 Plough: 羊驼子弄了个剧本，然而确认
+21:18 Plough: 珊瑚海的剧本也缺人
+21:18 Plough: 缺人*
+21:18 lh_not_bot: int count 滚出
+21:18 sleepwalking: 多少开发资材
+21:18 lh_not_bot: 居然不用 std::advance
+21:18 Plough: 你现在有多少
+21:19 sleepwalking: 80个
+21:19 lh_not_bot: Plough: 叫我玩？
+21:19 varna: 认真造可以用20
+21:19 Plough: 20吧
+21:19 varna: Plough: 我觉得你还是到35群里科普吧
+21:19 Plough: 科普过了，没人来
+21:19 varna: 我那个剧本要是有玩家参与，谁裁判都可以
+21:19 Plough:  我去别的群试试
+21:19 sleepwalking: 这不就是岛风go上的嘛
+21:20 varna: sleepwalking: 大建常用的东西就那么几个，写在一本叫《金刚经》的书里
+21:20 lh_not_bot: Plough: 我不玩   不过叫我写这游戏我可能有兴趣
+21:21 sleepwalking: 4:20
+21:21 Plough: ……肯定是因为你墨迹了
+21:21 sleepwalking: 扶桑或加贺
+21:21 Plough: lh_not_bot: 了解，那我先找找别人……
+21:21 varna: ...
+21:22 varna: 墨迹扶桑
+21:22 varna: 然而果断出什么，大家都懂
+21:22 varna: 我下午那发果断B子看看是个谁
+21:23 varna: 还有五分钟
+21:24 Plough: ……
+21:24 Plough: 我还是喜欢直接点上喷火器
+21:24 Plough: 留着也没卵用
+21:25 varna: 我喷灯快喷完了……
+21:25 sleepwalking: 出加贺！！
+21:25 varna: 之前的大建都喷了
+21:25 varna: 噗，悲剧了
+21:25 Plough: ……为何你喷灯用这么快
+21:25 varna: 我本来也就不到两百个
+21:25 Plough: 我还有440个，然而我每次大建都直接喷
+21:26 varna: 是不是你日常建造不喷？
+21:26 Plough: 不喷
+21:26 varna: 我日常一般懒得等，都喷两个
+21:26 Plough: 现在有四个槽
+21:26 varna: ...
+21:26 Plough: 以前一般刚回来点两个
+21:26 varna: 欧洲人真可怕
+21:26 Plough: 撤退前点两个
+21:26 Plough: 我主要是想试试官方玄学，然而并没卵用
+21:26 Plough: 我还是没有401
+21:28 varna: 看看小和绫波哪个先99
+21:28 varna: 先到的先发
+21:30 Plough: 噗，有人自豪地表示他在一条船上装了70基三连装127
+21:30 sismvg: 终于写完坑爹的定时器了
+21:31 varna: 卧槽
+21:31 sleepwalking quit:Read error: Connection reset by peer
+21:31 varna: 他要逼平亨利沃克的击落数么
+21:31 Plough: 然而他的那玩意并不是高角炮
+21:32 Plough: 这什么鬼，洗甲板专用船么……
+21:32 varna: 那这是什么鬼
+21:32 Plough: 我也不知道
+21:32 Plough: 壮哉我大洗甲板神教
+21:32 varna: 大概是在黑俾斯麦
+21:32 Plough: 233333
+21:32 Plough: Similar to Bismarck in size and firepower
+21:33 Plough: 另外似乎主教的那个炮嗑药程度也不轻
+21:33 Plough: 数据和维内托的M1934差不多
+21:33 Plough: 然而法国人把八门炮都装在了前面
+21:34 varna: 这是欧洲流行的打法么……
+21:34 Plough: 大概是……
+21:34 varna: 看来这种事情还是扬基佬靠谱
+21:34 varna: 欧洲的大爷们总是迷迷糊糊的
+21:34 Plough: 我看看不列颠的玩意
+21:37 Plough: 同是20kyd
+21:37 Plough: M1934的徹甲力约20in
+21:38 Plough: TMPWOE的SKC 34徹甲力约16.kin
+21:38 Plough: TMPWOE的SKC 34徹甲力约16.5in
+21:38 varna: 然而德国水兵ry
+21:38 Plough: KGV的Mark 7徹甲力约11.2in
+21:38 Plough: 这差远了啊……
+21:38 Plough: 果然wiki上是在黑俾斯麦
+21:39 Plough: 以上都是水平徹甲
+21:39 cleamoon__: 求E4配置
+21:39 cleamoon__: 还是机动？
+21:40 Plough: 等等，我是不是把术语混了
+21:40 Plough: 是“水平方向上的徹甲力”
+21:40 varna: cleamoon__: 机动4cv
+21:40 varna: 这是水平方向
+21:40 varna: 也就是穿透垂直装甲
+21:41 Plough: 那看来我没搞错
+21:41 varna: 如果是打甲板的话彻甲力比这个小很多
+21:41 cleamoon__: varna, 二队争取火力，主队全制空就好？
+21:41 varna: cleamoon__: 你有多少铝
+21:41 Plough: M1934的垂直徹甲力优势倒不大
+21:41 cleamoon__: 3100
+21:41 cleamoon__: 31000
+21:41 Plough: 壕
+21:41 varna: 只拿空优，航母其余带攻击队
+21:41 varna: 但考虑到各人情况不同，攻击队有两种配法
+21:42 Plough: M1934垂直徹甲2.86in，SKC 34是2.96in，Mark 7是2.85in
+21:42 varna: 其一是只带舰攻，集中轰炸机场
+21:42 cleamoon__: 我擦，boss有两个鬼
+21:42 varna: 只有一个
+21:42 cleamoon__: 哦
+21:42 varna: 开胸毛衣那个是新Boss, 旧港湾是沟里的
+21:42 varna: 其二是带舰爆，这样你的航母只会攻击敌舰
+21:42 cleamoon__: 多少是空优？
+21:42 varna: 丙等我查查
+21:42 cleamoon__: 吃喝太太罚站？
+21:43 varna: 空优前哨228斩杀258
+21:43 varna: 凑到这个程度以上，因为道中有敌航母
+21:44 cleamoon__: 那就吃喝太太罚站吧，我只有一个烈风
+21:44 varna: 丙等道中只有一般的喔酱，装备Mk2舰载机
+21:44 hoxily quit:Ping timeout: 245 seconds
+21:44 Plough: 噗，Hood确实不行
+21:44 varna: 战舰和重巡全都带三式弹，全力进攻
+21:44 cleamoon__: E4掉落略神奇呀
+21:44 Plough: 20kyd上徹甲力11in
+21:44 varna: 没有的话必须赌出来，不然打不动
+21:44 cleamoon__: 三式弹？
+21:44 Plough: 还不如KGV的Mark VII
+21:45 varna: 10 90 90 30
+21:45 cleamoon__: 我应该没有
+21:45 Plough: 赌吧
+21:45 varna: 日军的笑话般的铝热剂对空弹
+21:45 varna: 不过在游戏里是对陆必需品
+21:45 cleamoon__: 难道要打陆地？
+21:45 Plough: 港湾就是
+21:45 cleamoon__: ...
+21:45 varna: E4E5都是机场
+21:47 cleamoon__: .....
+21:47 cleamoon__: 就是说我需要至少10个三式弹
+21:47 cleamoon__: 至少50发...
+21:49 sismvg: just do it->just do IT ...你看，耐克都在给IT打广告
+21:49 cleamoon__: 噗
+21:49 varna: 不用那么多
+21:50 varna: 两个底限，三个凑合，四个就够用
+21:50 varna: 我自己也就五个，然而并不能用更多
+21:51 Plough: navweaps上说本子最初的超大和级计划是九万吨……
+21:51 Plough: 带八门或九门51炮
+21:51 cleamoon__: 不是全带三式弹吗
+21:52 cleamoon__: 战舰ca很多呀
+21:52 Plough: 每个战舰CA一个三式弹
+21:52 Plough: 难不成你不带炮光带炮弹么……
+21:53 varna: 四个格子是两个主炮、三式弹、飞机
+21:53 varna: 你能装备三四个舰就行，如果只有三个的话就给二队带两个
+21:54 cleamoon__: ...
+21:54 sismvg: http://bbs.soul-plus.org/read.php?tid=136999
+21:54 sismvg: 233
+21:59 lh_cat: 我旁边有两个日本人
+22:00 varna: 卧槽
+22:00 varna: 魔劣这什么展开！？
+22:00 varna: 虽说佐岛勤是个傻逼，而且看起来仍然是个傻逼
+22:01 Plough: 撤退前最后捞一次
+22:03 code_new joined channel
+22:03 Plough: 第一点U酱小破，不过冲过去了
+22:04 boosure quit:Quit: Get your hand off of it
+22:05 Plough: U酱大破
+22:05 cleamoon__: 1993全是副炮
+22:05 Plough: 冲过去了
+22:06 Plough: 利根中破
+22:07 Plough: 泡芙上演深海锁血大法
+22:07 Plough: 没锁成功，下去了
+22:07 Plough: 4vs2
+22:08 Plough: 鸟海继续秒M姬
+22:08 Plough: S胜
+22:08 Plough: U酱Lv60了……
+22:08 Plough: 扶桑
+22:09 Plough: 东急回来了，再来一次
+22:09 cleamoon__: 赌几百次才能出三式弹...
+22:10 varna: 赌不出的话改造也会送
+22:10 varna: 比叡和棒各都有一个
+22:11 cleamoon__: 出了个九一穿甲弹
+22:11 varna: 摩耶我忘了
+22:11 cleamoon__: 第二个
+22:11 Plough: 掉了羊驼子的头像
+22:11 Plough: 继续
+22:11 Plough: 卡了
+22:12 Plough: 活了
+22:13 Plough: 这次U酱无伤……
+22:13 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150415140819]
+22:14 Plough: 又卡了
+22:16 Plough: 估计活不了了……
+22:17 Plough: 得，我服
+22:17 Plough: F5
+22:18 varna: 仔细看了看理事长，我越发相信身后那个舾装是田中
+22:18 Plough: 233333
+22:18 Plough: 田中手操么
+22:19 varna: 模理事长尻部的咸猪手……
+22:20 Plough: 23333
+22:20 Plough: T有利……
+22:21 Plough: 莉酱上演深海锁血
+22:21 Plough: Rj大破，回家
+22:21 Plough: 强行不让捞
+22:27 varna: 我发现了一个可怕的问题
+22:27 varna: 还记得特鲁克之后的那个活动头目预测图么
+22:27 varna: 春活是理事长 院长*2 主任 撸改*2
+22:27 varna: 命中率高达50%
+22:27 Plough: http://tieba.baidu.com/p/3702491689
+22:27 Plough: 23333
+22:28 Plough: 2L注意
+22:28 varna: 理由如图233333
+22:29 varna: 然而他居然不喜欢那么高的舰桥
+22:29 Plough: 底下还有更多
+22:29 varna: 噗
+22:29 varna: 笑尿了
+22:30 varna: 下面一堆舰狗……
+22:30 hoxily joined channel
+22:31 Plough: 战列舰吧现在似乎舰狗不少
+22:31 Plough: 另外其实我最喜欢的还是大和的舰桥
+22:31 Plough: 整洁而不失威严
+22:31 Plough: 虽说我不太喜欢大和的船体……
+22:32 varna: 大和太威严
+22:32 varna: 以至于我看到海雾的大和，觉得“这没差别啊”
+22:33 Plough: 23333
+22:33 varna: 反倒是高雄级和金刚级瞬间霸气冲天
+22:33 varna: 炮塔舰桥轮机部全打开，里面一排排垂发
+22:33 Plough: 然而金刚那舰桥比扶桑好不到哪去
+22:33 Plough: 乱七八糟
+22:33 varna: 还行
+22:34 varna: 金刚扶桑长门这三个原理相同
+22:34 Plough: 俾斯麦我是一点没觉得好看
+22:34 varna: 搞得跟重庆有些住宅区一样
+22:34 Plough: 船体又胖舰桥又矮……
+22:34 varna: 俾斯麦看着一股巡洋舰风味
+22:34 Plough: 毕竟大型欧根
+22:34 varna: 倒是希佩尔级干净利索
+22:35 varna: 不过巡洋舰里我看着比较喜欢的反倒是亚特兰大
+22:35 Plough: 亚特兰大炮太多……
+22:35 varna: 一个黑暗蠕动的刺猬
+22:35 Plough: 23333
+22:35 varna: 意外地有压迫感
+22:36 Plough: 萌大拿我也不太喜欢
+22:36 hoxily quit:Remote host closed the connection
+22:36 hoxily joined channel
+22:37 Plough: 把大和的舰桥和维内托的舰体结合起来我大概就比较满意了
+22:37 varna: 所以说还是欠雪级可爱
+22:37 varna: 岛风的造型看着太丧失了
+22:37 Plough: DD太小
+22:37 varna: 一个板房，上面架个电探，然后就开始鱼雷鱼雷鱼雷
+22:38 varna: 舰尾两个连装炮
+22:39 Plough: 岛风很快的
+22:39 Plough: 另外听说鱼雷世界里面扶桑也比长门强？
+22:40 varna: 多毛争肛的力量
+22:41 varna: 多炮塔神教似乎总能在各种游戏数值设计里取得上风，鬼知道为什么
+22:41 Plough: 装甲太麻烦了么……
+22:41 varna: 而且似乎毛子们认为鱼雷也是3*3好于4*2
+22:41 varna: 欠雪酱大胜利，阳炎全家爆炸
+22:41 Plough: 233333
+22:41 Plough: 不过欠雪级有长矛么
+22:43 varna: 没有
+22:43 Plough: 所以毛子直接无视了鱼雷本体的差异……
+22:43 varna: 特型是八年式，白露级开始用九零管和九二管
+22:43 Plough: なるほど
+22:44 Plough: 先碎叫了……
+22:44 Plough: 诸君武运
+22:44 Plough quit:Quit: 碎叫
+22:47 varna quit:Quit: leaving
+22:49 cleamoon quit:Ping timeout: 240 seconds
+22:51 cleamoon joined channel
+22:57 geordi quit:Remote host closed the connection
+23:00 tutu_wind left channel:"晚安~"
+23:23 izmntuk quit:Ping timeout: 244 seconds
+23:45 whocares_2_ joined channel
+23:46 whocares_2 quit:Ping timeout: 240 seconds
+23:50 cleamoon quit:Remote host closed the connection
+23:50 cleamoon joined channel

@@ -1,0 +1,252 @@
+00:11 yonka joined channel
+00:13 N00d1e5_Bot quit:Ping timeout: 256 seconds
+00:15 N00d1e5_Bot joined channel
+00:16 yonka quit:Ping timeout: 265 seconds
+00:48 iyzsong quit:Ping timeout: 255 seconds
+00:52 matchray: http://www.epubit.com.cn/book/details/7959 
+01:23 hanjian_l: 我买了一个块intel x86的单片机
+01:29 NebulaX: x86 还有单片机？（惊
+01:37 lh_mouse quit:Ping timeout: 268 seconds
+03:25 cleamoon_: hanjian_l: 要做什么
+03:36 hanjian_l: cleamoon_: 拿来折腾一下，看看能不能写个内核进去
+03:36 cleamoon_: orz
+03:36 hanjian_l: cleamoon_: 
+03:37 hanjian_l: NebulaX: 
+03:37 hanjian_l: https://www.amazon.com/gp/product/B00MF753JY/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
+03:39 cleamoon_: 为啥没写价格
+03:40 hanjian_l: cleamoon_: 30USD
+03:41 hanjian_l: cleamoon_: 没有亚马逊自营的
+03:41 cleamoon_: soga
+03:42 cleamoon_: 也许10年之后就出现了知名大喷子梨花酱
+03:44 hanjian_l: cleamoon_: 想多了，我是在跟着Youmu折腾这个https://web.stanford.edu/class/cs140e/syllabus/
+03:45 cleamoon_: orz
+03:47 NebulaX: 这东西定位好尴尬
+03:48 NebulaX: 性价比不如rpi
+03:48 NebulaX: 需要低功耗的场合又比不上 cortex-m 系列的单片机
+03:50 hanjian_l: 是啊
+03:50 hanjian_l: 就是个学习用具，便宜
+03:51 cleamoon_: orz
+03:56 hanjian_l: 我也就是买来当玩具的
+03:57 cleamoon_: 真 壕
+03:57 hanjian_l: 最近美元贬值厉害
+03:58 cleamoon_: 感觉斯坦福的课比我校难很多
+04:04 hanjian_l: cleamoon_: 这些学校都有强制退学的吧，所以课程压力发了疯的大
+04:09 hanjian_l: NebulaX: 但关键它是最便宜的X86单片机
+04:17 hanjian_l: 而且intel的东西都还比较扎实吧
+04:26 Youmu quit:Quit: Connection closed for inactivity
+04:26 cleamoon_: hanjian_l: 梨花酱比起coursera，udacity一类的还是喜欢大学课程？
+04:28 yonka joined channel
+04:32 yonka quit:Ping timeout: 264 seconds
+04:51 hanjian_l: cleamoon_: 都喜欢
+04:51 hanjian_l: coursera有视频，大学课程没有那么多追着你跑的作业
+04:51 cleamoon_: hanjian_l: 竟然还没睡
+04:51 hanjian_l: cleamoon_: 睡不着了
+04:51 hanjian_l: 索性白天再补觉
+04:51 cleamoon_: courera还没一次跟着弄下来
+04:51 hanjian_l: 是啊
+04:51 hanjian_l: 我也就是看看视频
+04:52 cleamoon_: 不过我还是蛮喜欢作业的
+04:52 hanjian_l: 做了以后对知识的理解会深刻很多
+04:52 cleamoon_: 比起屎一样考试内容
+04:52 cleamoon_: +
+04:52 hanjian_l: 但我不喜欢作业限定工具
+04:53 cleamoon_: 我校除了cs系所有课程都限定matlab.....
+04:53 hanjian_l: 哈哈哈
+04:53 hanjian_l: 哪怕能用python也好啊
+04:54 cleamoon_: 不存在的，只有高端大气上档次的cs系才被允许在极特殊情况下用python
+04:54 cleamoon_: 其他时候cs系是java限定
+04:54 cleamoon_: 最神奇的，ML的master整个是R限定.......
+05:04 matchray: lh_not_bot: http://www.eel.is/c++draft/cstdint.syn#2
+06:09 hanjian_l: 我现在相当依赖各种cheatsheat
+06:10 cleamoon_: 谁来把c艹标准写成一个cheatsheat
+07:42 hanjian_l: 一夜没睡
+08:29 yonka joined channel
+08:33 yonka quit:Ping timeout: 276 seconds
+08:37 * Aldrich 准备去京都
+09:03 iyzsong joined channel
+09:05 iyzsong: hello :o
+09:21 iyzsong quit:Ping timeout: 256 seconds
+09:25 iyzsong joined channel
+09:46 FrankHB joined channel
+09:46 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+09:52 lh_mouse joined channel
+10:20 lh_not_bot: matchray: 喵踏板车喵？多写哇。
+10:32 y_km joined channel
+10:37 tutu_wind joined channel
+10:45 y_km joined channel
+10:59 y_km quit:Quit: leaving
+11:36 matchray: lh_mouse: 把你背的C++标准，拿出一部分换其他的知识，你会换吗，会的话换什么
+11:36 matchray: int8_t 在 cstdint 里也是有的
+11:46 lh_mouse: matchray, 换把妹吧。 （逃）
+11:50 hitman-usa joined channel
+12:00 whocares_2 quit:Ping timeout: 248 seconds
+12:00 whocares_2_ joined channel
+12:16 FrankHB quit:Ping timeout: 248 seconds
+12:35 matchray: lh_mouse: 赞 Minnie Mouse
+12:44 yonka joined channel
+12:44 yonka quit:Remote host closed the connection
+12:44 yonka joined channel
+12:58 lh_mouse: 0.0
+13:00 Zenghui joined channel
+13:06 matchray: 我很讨厌这种issue不写清楚的人 https://github.com/cquery-project/cquery/issues/406
+13:06 matchray: 之前还发过两个
+13:16 matchray: %Btest%B
+13:18 iyzsong: orz
+13:33 matchray: mingw https://github.com/archlinuxcn/repo/issues/656
+13:33 matchray: 老鼠的食粮
+13:45 varna joined channel
+13:52 FrankHB joined channel
+14:00 hitman-usa quit:Remote host closed the connection
+14:01 hitman-usa joined channel
+14:15 hitman-usa quit:Quit: hitman-usa
+14:16 hitman-usa joined channel
+14:26 matchray: clangd 的人写代码还是挺考究的：
+14:26 matchray: template <class Type> class Key {
+14:26 matchray: public: static_assert(!std::is_reference<Type>::value, "Reference arguments to Key<> are not allowed");
+14:26 matchray: 我因为技艺不行只会写用得到的东西
+14:41 tutu_wind quit:Ping timeout: 248 seconds
+15:09 lh_mouse: matchray, 没兴趣。 arch 自重。
+15:09 lh_mouse: arch 社区感觉就是一帮小屁孩。
+15:10 lh_mouse: matchray, static_assert 还是应该加一些的。
+15:11 varna: 讲道理，你还没受够成熟的大人们么……
+15:11 lh_mouse: 实际上 c++98 里就有 static_assert  这个 keyword 。
+15:11 lh_mouse: varna, 但是我更讨厌熊孩子。
+15:12 varna: 我是反过来的
+15:12 varna: 成天变着法儿斗争，都腻歪了
+15:12 lh_mouse: 总比不懂礼貌的小孩子抢糖吃要不让人心烦。
+15:16 lh_mouse: 失道而后德，失德而后仁，失仁而后义，失义而后礼。夫礼者，忠信之薄，而乱之首。   //  然而我觉得人应该学会在不该讲话的时候闭嘴，而不是整天叽叽喳喳的。
+15:16 varna: 这个嘛
+15:17 varna: 道德毕竟是阶级的，作为一个和平的人，我相信不让人讲话的方式是直接粗暴解决
+15:17 varna: 如果不能解决，多说其实无益，随性好了
+15:20 lh_mouse: (>w<)
+15:20 varna: 但是
+15:20 lh_mouse: varna, a 站倒闭了。
+15:20 varna: 这都是针对人类说的！
+15:21 lh_mouse: 喵！
+15:21 varna: 对四害我们就要放小红丸子
+15:21 varna: 是啊，我在药乎上看到了……
+15:21 varna: A站的运营水准比屑站差太多
+15:21 lh_mouse: 怎么变药乎了。
+15:21 varna: 上面药娘撕逼激烈所以叫药乎
+15:22 Aldrich: 京都的山看着不错 https://usercontent.irccloud-cdn.com/file/2VmYNEzJ/DSC_0218.JPG
+15:22 lh_not_bot: ↑↑ 整天看药娘的 varna 。
+15:22 varna: 我关注了好几个药娘小姐姐
+15:22 varna: 风景好+
+15:22 lh_not_bot: Aldrich: 你这现序。
+15:22 lh_not_bot: 现充 * 
+15:23 Aldrich: 比东京的高楼+破村漂亮多了…
+15:28 Aldrich: 而且都这个点了电车居然还有座
+15:36 varna: 不知道港服买的黑盐能不能用国服帐号玩
+15:43 Aldrich: https://usercontent.irccloud-cdn.com/file/cXdnetRM/DSC_0219.JPG
+15:45 varna: (｡･ω･)ﾉ腋，看起来黑盐不区分帐号
+15:46 Zenghui quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+16:06 varna: Unspeakable Deep击破
+16:06 varna: _(:з」∠)_一百六十七刀无伤
+16:10 cleamoon_ quit:Quit: Connection closed for inactivity
+16:14 tutu_wind joined channel
+16:25 hanjian_l: varna: .vv驼子来了
+16:27 hanjian_l: varna: 你只要设定常用主机，所有账号都能玩
+16:28 hanjian_l: 除非是像育碧那样自己还有一套账号的
+16:30 matchray: cquery/src/query.h 要加一个 garbage collector 吗
+16:31 matchray: https://github.com/cquery-project/cquery/blob/master/src/query.h#L365 这里面是交叉引用所有需要的资料结构。
+16:32 matchray: `std::vector<QueryType> types;` 这个只会push_back，不会减小；失效的东西是靠 type.def = nullopt 实现的 https://github.com/cquery-project/cquery/blob/master/src/query.cc#L800
+16:33 matchray: 但 QueryFunc::callers (https://tinyurl.com/y8358y3r ) 等会存储ID，一个id过期了不会从callers里删除；
+16:34 matchray: 怎么办呢
+16:40 varna: matchray: 看这个场景，其实不需要严格gc，只需要引用计数？
+16:40 varna: 还是说只需要同时失效
+16:49 matchray: 不用严格gc的话，就需要表示 QueryType 是否失效。现在是靠 optional<Def> QueryType::def 来判断的
+16:53 matchray: 因为对于指向一个物件的引用，不愿意存储反向引用，只能用timestamp之类方法判断引用是否失效了
+16:53 lh_mouse: weak_ptr
+16:55 matchray: 感觉我可以对 https://github.com/cquery-project/cquery/blob/master/src/query.h#L23 动手，把QueryFileId用的8字节拆成两部分
+16:56 FrankHB:  static_assert(std::is_same_v<Type, std::decay_t<Type>>, "fvck urself");
+16:57 FrankHB: A站有运营？！
+16:57 matchray: weak_ptr 没用……还浪费空间
+16:59 matchray: 我不想作者把 IndexType::def 也改成 optional ... https://github.com/cquery-project/cquery/issues/403
+17:01 matchray: 但是 QueryType { std::vector<QueryVarId> instances; } // 这种，QueryVarId本身是8字节，我就没法塞timestamp了
+17:01 * lh_mouse slaps FrankHB around a bit with a large trout
+17:01 lh_mouse: matchray, 你去问 FrankHB  。
+17:01 matchray: QueryType { std::vector<QueryLocation> uses; } // 这个我可以把QueryLocation原本浪费的16字节充分利用一下，填timestamp
+17:01 matchray: lh_mouse: 幻之上帝？
+17:03 matchray: (BTW, clangd 空间用的很浪费的。。
+17:04 matchray: (现在cquery检索llvm+clang+libcxx+libcxxabi+clang-tools-extra也就RES 1450MB
+17:04 matchray: (不过比起rtags多不少了，
+17:06 lh_mouse: 渣渣。
+17:06 lh_mouse: 浪费内存的都是邪教。
+17:06 lh_mouse: 包括傻逼 windows 。
+17:08 Aldrich: 啊，好缺核心
+17:08 FrankHB: 是比overcommit更普适的zz。
+17:08 Aldrich: 谁给我30个核心，我好把97姐二扩了
+17:10 cleamoon_ joined channel
+17:13 matchray: lh_mouse: 那你还让我用weak_ptr :(
+17:13 matchray: llvm大量bitfields的
+17:22 lh_mouse: matchray, 语义正确行优先于效率。
+17:22 lh_mouse: 为了 semantical correctness 的事情，能叫 ZZ 么？
+17:23 varna: 叫吱吱！
+17:46 Stevearzh quit:Ping timeout: 256 seconds
+17:49 * lh_mouse slaps varna around a bit with a large trout
+17:52 hitman-usa is now known as xiaofie
+18:52 cc joined channel
+20:03 CyrusYzGTt joined channel
+20:18 CyrusYzGTt quit:Ping timeout: 248 seconds
+20:21 hanjian_l: varna: 联不联
+20:21 varna: hanjian_l: 等下，我买了季票
+20:21 hanjian_l: good
+20:21 hanjian_l: 入坑
+20:21 varna: 今天搞了港服PSN号
+20:22 hanjian_l: 嗯
+20:22 hanjian_l: 早就该有了
+20:22 hanjian_l: 我一直都是港服plus会员
+20:25 Aldrich: 港服plus会员+
+20:26 Aldrich: 你邀请我干啥
+20:26 Aldrich: 我在京都……
+20:26 hanjian_l: 随手全部拉进来了
+20:26 Aldrich: 能直播么
+20:26 Aldrich: 能直播的话我围观下
+20:27 hanjian_l: 我试试看
+20:28 FrankHB quit:Ping timeout: 240 seconds
+20:33 hanjian_l: 调试中
+20:34 hanjian_l: Aldrich: live.bilibili.com/5225221
+20:35 hanjian_l: varna: 还在测试吗？
+20:36 varna: 我在下载啊……
+20:36 Aldrich: 社会主义的网速
+20:38 varna: 黑盐真好啊
+20:40 FrankHB joined channel
+20:57 Aldrich: 啊
+20:57 Aldrich: lhj被吸入了
+20:59 hanjian_l: 过于随意了
+20:59 hanjian_l: varna: 羊驼子还需要多久
+21:00 varna: 全下完估计今晚没戏了
+21:00 hanjian_l: varna: 那就别下了，先玩，玩完了挂着晚上下
+21:01 varna: 已删，不急，没戏……
+21:02 hanjian_l: 没戏？
+21:07 Aldrich: varna: 话说中级模拟什么程度可以打
+21:08 varna: 几十级就可以了
+21:09 Aldrich: 我现在最高的一队只有四十级……
+21:10 varna: 差不多
+21:10 Aldrich: 主要还是太缺核心了
+21:10 lh_mouse quit:Ping timeout: 240 seconds
+21:10 Aldrich: 整整一队等着从零扩到二扩……
+21:14 xiaofie quit:Quit: xiaofie
+21:15 Aldrich: 太困了，我先躺
+21:15 Aldrich: 今天消耗了不少体力
+21:15 Aldrich: 诸君武运
+21:17 hanjian_l: 我队伍最高才25
+21:19 Aldrich: 海豹是这样的
+21:23 hanjian_l: Aldrich: 海豹是啥意思，我两个号都才刚拿到M4A1小姐姐
+21:24 Aldrich: 天天晒出货的人
+21:25 hanjian_l: 哈哈哈
+21:26 hanjian_l: 这两天运气不佳，没出5星的了。
+21:26 hanjian_l: 倒是花4个10出了个5星装备
+21:26 hanjian_l: 简直奇迹
+21:28 Aldrich: MD，说好十点送到，结果现在才开始做
+21:29 Aldrich: 你京都麦乐送吔屎吧
+21:30 Aldrich: md直接完成了什么鬼
+21:30 Aldrich: 不管了，先躺
+21:30 Aldrich: 我药都嗑下去了
+21:43 hanjian_l: varna: 今晚没戏了？
+21:45 varna: nay
+21:46 hanjian_l: 。
+21:57 cleamoon_: 能点外卖的地方真好，生活在郊区连外卖都没人送
+22:18 tutu_wind quit:Quit: 碎叫
+23:11 zzw joined channel
+23:19 zzw quit:Remote host closed the connection

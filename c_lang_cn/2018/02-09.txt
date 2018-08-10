@@ -1,0 +1,117 @@
+00:34 iyzsong quit:Ping timeout: 240 seconds
+00:47 yonka quit:Remote host closed the connection
+00:47 yonka joined channel
+00:52 yonka quit:Ping timeout: 265 seconds
+04:42 cleamoon_ quit:Quit: Connection closed for inactivity
+04:55 cleamoon_ joined channel
+04:57 ChanServ quit:*.net *.split
+05:31 ChanServ joined channel
+08:58 lh_mouse joined channel
+09:04 Taggnostr quit:Remote host closed the connection
+09:05 Taggnostr joined channel
+09:36 yonka joined channel
+09:36 yonka quit:Remote host closed the connection
+09:36 yonka joined channel
+10:25 L-ios1 joined channel
+10:26 L-ios quit:Ping timeout: 240 seconds
+10:26 L-ios1 is now known as L-ios
+11:52 cleamoon_ quit:Quit: Connection closed for inactivity
+11:59 whocares_2 joined channel
+11:59 whocares_2_ quit:Ping timeout: 260 seconds
+13:34 Youmu: lh_mouse: 0.0
+13:36 lh_mouse: Youmu, 0.0
+13:36 Youmu: 只是想 0.0 一下而已
+13:42 lh_mouse: 0.0
+13:46 matchray: 想念C++17 aggregate initialization: no virtual, private, or protected (since C++17) base classes
+13:46 matchray: struct IndexFuncRef : Reference {}; // 無法在C++11 aggregate 
+13:53 lh_mouse: 0.0
+13:53 matchray: struct A { enum E e; }; struct B : A { B() = default; B(E e) : A{e} {} };  
+13:53 matchray: B() 會初始化 e 爲 0 嗎？
+13:53 matchray: wg21.link/p0017
+13:59 yonka_ joined channel
+14:02 yonka quit:Ping timeout: 248 seconds
+14:08 Youmu: 不会
+14:09 matchray: 又是一隻語言律師
+14:09 Youmu: geordi: { B b; b.test(); } enum E{A,B}; struct A{ enum E e; }; struct B : A { B() = default; void test() { cout << e; } };
+14:09 geordi: error: expected ';' before 'b' (fix known)
+14:09 matchray: 因爲 default initialization 吧
+14:09 Youmu: geordi: fix
+14:09 geordi: error: 'b' was not declared in this scope
+14:10 Youmu: geordi: replace A,B with CA,CB
+14:10 geordi: error: declaration does not declare anything
+14:10 Youmu: geordi: show
+14:10 geordi: { B; b; b.test(); } enum E{CA,CB}; struct A{ enum E e; }; struct B : A { B() = default; void test() { cout << e; } };
+14:11 Youmu: geordi: remove first ;
+14:11 geordi: 32765
+14:11 Youmu: 就是这样
+14:28 lh_mouse: Youmu, 你这个不是 aggregate 。
+14:29 lh_mouse: 11.6.1 Aggregates [dcl.init.aggr]
+14:29 lh_mouse: 1 An aggregate is an array or a class (Clause 12) with
+14:29 lh_mouse: (1.1) — no user-provided, explicit, or inherited constructors (15.1),
+14:30 lh_mouse: 噢不对。
+14:30 lh_mouse: A function is user-provided if it is user-declared and not explicitly defaulted or deleted
+14:30 lh_mouse: on its first declaration.
+14:30 lh_mouse: geordi, use --clang
+14:30 geordi: warning: 1st function call argument is an uninitialized value
+14:31 lh_mouse: geordi, use -w
+14:31 geordi: -2042626224
+14:32 lh_mouse: Youmu, 你这个是 default initialization 。
+14:32 lh_mouse: geordi, undo and undo and append { } after first b
+14:32 geordi: error: Unexpected `undo` after `undo and `. Expected edit command.
+14:32 lh_mouse: geordi, show
+14:32 geordi: -w --clang { B b; b.test(); } enum E{CA,CB}; struct A{ enum E e; }; struct B : A { B() = default; void test() { cout << e; } };
+14:32 lh_mouse: geordi, append { } after first b
+14:32 geordi: 0
+14:33 lh_mouse: geordi, remove -w and --clang
+14:33 geordi: 0
+14:33 lh_mouse: geordi, show
+14:33 geordi: { B b{ }; b.test(); } enum E{CA,CB}; struct A{ enum E e; }; struct B : A { B() = default; void test() { cout << e; } };
+14:33 lh_mouse: Youmu, ^^
+14:33 matchray: lh_mouse: 我的例子，e 是 unspecified 吧
+14:33 lh_mouse: matchray, indeterminate
+14:33 matchray: 原來術語叫indeterminate
+14:34 lh_mouse: `b.e` is default-initialized to an indeterminate value.
+14:38 lh_mouse: std::shared_ptr<T> load(std::memory_order order = std::memory_order_seq_cst) const noexcept;
+14:38 lh_mouse: Atomically returns a copy of the underlying shared pointer. Memory is ordered according to order. The behavior is undefined if order is not std::memory_order_release or std::memory_order_acq_rel.
+14:38 lh_mouse: --  by default the behavior of this function is undefined.
+14:39 lh_mouse: http://en.cppreference.com/w/cpp/memory/shared_ptr/atomic2
+14:39 lh_mouse: （其实是 cppreference 写错了）
+15:05 yonka_ quit:Remote host closed the connection
+15:10 yonka joined channel
+15:43 matchray: gcc -Wreturn-type 弱智
+16:06 lh_mouse: ？？？？
+16:07 matchray: 可能是我弱智
+16:07 matchray: void f() { switch (e) { case E::E0: ... 所有分支return } /* no return*/ }
+16:07 matchray: 這種情況會 -Werror=return-type
+16:10 lh_mouse: 请 abort(); 
+16:10 lh_mouse: __builtin_trap(); 
+16:10 lh_mouse: __builtin_unreachable();
+16:11 matchray: ...
+16:11 matchray: 不想污染我的代码
+16:11 lh_mouse: default: std::abort();
+16:11 matchray: 所以我还是 if ctx.env.CXX_NAME == 'gcc': cxxflags.append('-Wno-return-type')
+16:12 matchray: 就像我不能让 MSVC 用 /WX  (-Werror) 因为MSVC弱智
+16:12 lh_mouse: 万一真手贱了呢。
+16:12 matchray: 让clang给我纠错
+16:12 lh_mouse: VC is a noncompiler.
+16:19 matchray: 发现 https://github.com/emilk/loguru 也不是太烂
+16:21 matchray: ERROR_CONTEXT
+17:57 L-ios quit:Quit: L-ios
+18:00 cleamoon_ joined channel
+20:00 condy quit:Ping timeout: 252 seconds
+20:04 yonka quit:Remote host closed the connection
+20:09 yonka joined channel
+20:10 cleamoon_ quit:Quit: Connection closed for inactivity
+20:13 yonka quit:Ping timeout: 240 seconds
+20:16 yonka joined channel
+20:20 cleamoon_ joined channel
+20:21 yonka quit:Ping timeout: 264 seconds
+20:42 lh_mouse: http://v.youku.com/v_show/id_XMTg2MDQyOTQ5Mg==.html
+20:54 sailyang joined channel
+20:55 iyzsong joined channel
+21:42 yonka joined channel
+21:46 yonka quit:Ping timeout: 240 seconds
+21:57 condy joined channel
+22:45 Arisaka joined channel
+23:04 lh_mouse quit:Ping timeout: 240 seconds
+23:29 iyzsong quit:Ping timeout: 248 seconds

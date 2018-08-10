@@ -1,0 +1,247 @@
+00:40 whocares_2_ quit:Read error: Connection reset by peer
+00:40 whocares_2 joined channel
+01:19 whocares_2_ joined channel
+01:19 whocares_2 quit:Ping timeout: 240 seconds
+01:28 varna quit:Ping timeout: 260 seconds
+01:45 sixand quit:Quit: sixand
+02:01 lh_ideapad quit:Remote host closed the connection
+02:06 lh_mouse quit:Ping timeout: 240 seconds
+02:43 cleamoon_: geordi: cout << 1<<2
+02:43 geordi: error: 'cout' does not name a type; did you mean 'cosl'? (fix known)
+02:43 cleamoon_: geordi: << (1<<2)
+02:43 geordi: 4
+09:22 Stevearzh quit:Read error: Connection reset by peer
+09:25 Stevearzh joined channel
+09:41 leemeng joined channel
+09:47 lh_mouse joined channel
+09:54 yonka joined channel
+10:20 AetherWind joined channel
+10:24 lh_ideapad joined channel
+10:46 NebulaMoe_ joined channel
+10:48 steven___ joined channel
+10:48 NebulaMoe is now known as Guest30486
+10:48 Guest30486 quit:Killed (livingstone.freenode.net (Nickname regained by services))
+10:48 NebulaMoe_ is now known as NebulaMoe
+10:48 Guest30486 joined channel
+11:18 \s joined channel
+11:19 \s quit:Changing host
+11:19 \s joined channel
+12:42 lh_ideapad quit:Quit: For the Red Army!
+12:43 lh_ideapad joined channel
+12:44 lh_ideapad: geordi, <<hex <<allocator_traits<string::allocator_type>::max_size(string().get_allocator())
+12:44 geordi: ffffffffffffffff
+12:45 lh_ideapad: geordi, << string().max_size()
+12:45 geordi: 9223372036854775807
+12:45 lh_ideapad: geordi, << hex << string().max_size()
+12:45 geordi: 7fffffffffffffff
+12:58 \s quit:Ping timeout: 256 seconds
+13:46 \s joined channel
+14:05 ifr0zen joined channel
+14:14 yonka quit:Remote host closed the connection
+14:16 yonka joined channel
+14:45 yonka quit:Remote host closed the connection
+14:50 lh_ideapad: geordi, << string("hello").substr(string::npos, 3);
+14:50 geordi: terminated by out_of_range: basic_string::substr: __pos (which is 18446744073709551615) > this->size() (which is 5)
+14:55 yonka joined channel
+16:06 jingjinghack quit:Remote host closed the connection
+16:07 jingjinghack joined channel
+16:20 lh_ideapad: geordi, -c auto c = std::string::const_iterator("hello");
+16:20 geordi: Success
+16:20 lh_ideapad: geordi, use --clang
+16:20 geordi: error: calling a private constructor of class '__wrap_iter<const char *>'
+16:21 lh_ideapad: geordi, -c template<typename T> struct foo { friend T; }
+16:21 geordi: error: expected ';' after struct definition (fix known)
+16:22 lh_ideapad: geordi, -c template<typename T> struct foo { friend T; };
+16:22 geordi: Success
+16:22 lh_ideapad: geordi, use --clang
+16:22 geordi: Success
+16:22 lh_ideapad: geordi, -c template<typename T> struct foo { friend class T; };
+16:22 geordi: error: using template type parameter 'T' after 'class'
+16:56 lh_ideapad: geordi, -c template<typename T> struct foo { friend foo<const T>; };
+16:56 geordi: Success
+16:56 lh_ideapad: geordi, -c template<typename T> struct foo { friend foo<T>; };
+16:56 geordi: warning: class 'foo<T>' is implicitly friends with itself
+16:56 lh_ideapad: geordi, -c --clang template<typename T> struct foo { friend foo<const T>; };
+16:56 geordi: Success
+17:20 AetherWind quit:Quit: Leaving
+17:26 T2 joined channel
+17:28 johnson1994 joined channel
+17:28 starjohnson joined channel
+17:32 starjohnson quit:Client Quit
+17:32 johnson1994 quit:Client Quit
+17:35 AnnziYu quit:
+17:44 leemeng: ?
+18:10 NebulaMoe: ?
+18:15 leemeng: ls
+18:20 NebulaMoe: ls: cannot access '#c_lang_cn': No such file or directory
+18:21 lhanjian_: 233
+18:27 ifr0zen quit:Remote host closed the connection
+18:28 leemeng: NebulaMoe, ....
+18:28 leemeng: 😨悟空你又调皮了😃
+18:35 yonka quit:Remote host closed the connection
+18:48 varna joined channel
+18:49 varna quit:Client Quit
+18:50 varna joined channel
+18:55 lhanjian_: varna: 杀红了眼
+18:56 varna: (｡･ω･)不能理解你们这些顺风上头、逆风头疯狂撞地的热血青年
+18:56 lhanjian_: 哈哈哈
+18:58 lhanjian_: 周常块刷完了
+19:01 cleamoon_: varna: 推荐最新的老菊的直播录像，随机之魂 之 【亚尔特留斯养四王当狗，不死院屠宰场满地是猪】的锄地砍树老农丢人视频
+19:02 varna: puuuu
+19:06 varna_ joined channel
+19:06 varna quit:Ping timeout: 260 seconds
+19:07 varna_ is now known as varna
+19:10 varna: 噗叽啪
+19:11 lhanjian_: 乌拉！！！！
+19:11 varna: ^ 见到自分形就兴奋得大喊大叫的屑
+19:15 lhanjian_: 玩脱了
+19:26 varna quit:Read error: Connection reset by peer
+19:32 leemeng: /bye
+19:32 leemeng quit:Quit: leaving
+19:33 varna joined channel
+19:34 varna: 把外面的旧路由换掉了
+19:38 lhanjian_: 周常箱子又是一堆没用的东西
+19:50 varna quit:Ping timeout: 240 seconds
+20:12 varna joined channel
+20:17 varna_ joined channel
+20:17 varna quit:Ping timeout: 256 seconds
+20:17 varna_ is now known as varna
+20:23 varna: 我真是X了POI了
+20:23 varna: 为什么wlan会给我自动开节能
+20:28 yonka joined channel
+20:29 iyzsong joined channel
+20:29 yonka quit:Remote host closed the connection
+20:30 yonka joined channel
+20:32 Mokou: 三小时以后97姐就能满级了
+20:32 varna: MD 高峰期链路质量好差
+20:33 varna: 随手抓了下包，各种快启动的迹象
+20:33 varna: 阵发重传/DUP ACK
+20:33 lhanjian_: Mokou: 97我早满级了，不是很强，不过胜在早期输出高
+20:33 varna: 估计房东这个宽带就是不行
+20:34 varna: 等我转岗时候租个好点的
+20:34 Mokou: 甘地是这样的
+20:34 lhanjian_: 电信的最好
+20:34 Mokou: NTT的最好
+20:34 lhanjian_: 霓虹是这样的
+20:34 T2: 我才是甘地
+20:35 T2: 肝星际快吐了
+20:35 T2: 但是也没啥别的好玩
+20:35 Mokou: 智障Cinnamon
+20:35 Mokou: 3.8以后他们改了一个地方，于是部分metacity-1及metacity-2有可能出问题
+20:35 Mokou: 然后他们就在设置里屏蔽掉了*所有*metacity-1和metacity-2主题
+20:36 varna: deauthenticating的问题解决了，但感觉wlan连接质量还是很差
+20:36 Mokou: https://wx2.sinaimg.cn/mw690/ea1431aagy1frd1h3ry9wj21kw0g0hdt.jpg 总之搞了一个longhorn的主题
+20:37 Mokou: muffin降级到3.6，cinnamon设置的源码被我打了个补丁
+20:37 Mokou: 都扔aur上了
+20:37 varna: 这个网卡看起来需要一个有线中继
+20:37 varna: 或者干脆直接接有线
+20:37 Mokou: 有线王道
+20:37 varna: 等换房时候吧，现在我懒得动了
+20:40 Mokou: https://ww4.sinaimg.cn/bmiddle/e166e33agy1frda6otpdcj20u01hc7l2.jpg
+20:43 varna: 草过2333
+20:46 lhanjian_: varna: 羊驼子m4的单发伤害多少？
+20:48 Mokou: 先躺，今天困死了
+20:48 Mokou: 武运
+20:48 varna: 面板20k+，全buff+暴击爆头0.1-0.14M
+20:50 lhanjian_: 你是9k火？
+20:50 lhanjian_: 我只有18k
+20:50 varna: 6.5k火
+20:50 varna: 哦不对，也可能白字20k-
+20:51 varna: 我把那个小公主最佳化到顶了
+20:51 varna: 其实差不了一点，主要看暴击爆头
+20:57 varna: btw 突袭的基准应该是精英增伤+40%+、彻甲+80%+
+20:57 varna: 按这个套路走一般都莓问题
+21:00 T2: 有趣啊，又没事做了。
+21:06 T2: 我怕是减不了肥了
+21:06 T2: 停药之后再说吧
+21:07 T2: 感觉这药能直接改变人的代谢循环，光少吃也没什么用。
+21:08 T2: 标准死肥宅
+21:11 T2: 我不知道装了2345的什么东西，大概是解压工具，然后有个隐藏文件夹叫2345AvScan
+21:11 T2: 2333
+21:17 lh_ideapad quit:Remote host closed the connection
+21:30 varna: https://www.bilibili.com/video/av19880041 在看这个，还挺有趣的
+21:31 lhanjian_: 哦，我是0暴击0爆头
+21:31 T2: 我看看
+21:31 lhanjian_: 错了
+21:33 T2: 手边就放着一本魔法石
+21:34 lhanjian_: 我的破甲和精伤都不够
+21:35 NebulaMoe quit:Quit: Connection closed for inactivity
+21:36 lhanjian_: varna: 因为突袭套的破甲和精伤没洗对？
+21:38 NebulaMoe joined channel
+21:41 varna: 身上的五件防具提供破甲/暴击/精英伤，也可以加一个稳定
+21:41 varna: 膛口/瞄具双爆
+21:41 varna: 其余的看你喜欢
+21:45 lhanjian_: 双爆全给我弄没了……
+21:46 lhanjian_: 只有爆头没有暴击
+21:46 q_xjfd joined channel
+21:47 varna: 上个卡宾镜吧
+21:47 varna: 稳定+弱化的双爆
+21:47 T2: 好吧，我其实不太喜欢这种类型的纪录片。
+21:48 varna: 膛口一般会倾向一侧、弱化另一侧
+21:48 varna: 爆头还是暴击看你喜欢
+21:48 T2: 哈利波特的电影我也并没有看全。
+21:48 T2: 还是书好看
+21:49 varna: 最喜欢魔法石的电影
+21:49 T2: 魔法石是很不错
+21:50 T2: 我看了最多的就是魔法石，书不记得读了几遍，还玩过两个魔法石的游戏。
+21:50 T2: 后面几本有些阴暗
+21:50 T2: 不喜欢
+21:51 T2: 魔法石就很happy了
+21:51 varna: 书都挺好，但电影系列的话，魔法石太惊艳了
+21:51 T2: 后面我觉得写得太压抑了
+21:51 varna: 七部书里面最喜欢第三卷
+21:51 T2: 前几本都不错
+21:53 T2: 不过全程不压抑的话我也想不出来怎么结尾。
+21:54 T2: 不过最后学校都不去了，邓布利多都挂了实在是有点惨。
+21:55 T2: 自从火焰杯结束，伏地魔复活开始就是这个调调，不太喜欢。
+21:56 T2: 最后一本尤其压抑
+21:56 varna: (｡･ω･)伏地魔草了贝拉
+21:56 T2: 2333
+21:58 T2: 好懒啊我，对什么都没太大兴趣研究的感觉。
+21:58 T2: 猛肝一阵之后就会进入这个状态。
+22:00 T2: 睡觉啦睡觉啦，诸君晚安，夜间愉快。
+22:00 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:05 q_xjfd quit:Remote host closed the connection
+22:26 lhanjian_: 冲锋枪还挺好用的嘛
+22:32 lhanjian_: 水弹枪shd
+22:34 lhanjian_: varna: 冲锋枪你用来应付什么场景？
+22:36 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+22:37 varna: 10m之内
+22:37 varna: 还有pvp
+22:38 lh_ideapad joined channel
+22:40 lhanjian_: 我还是打的太差
+22:43 lhanjian_: mp5n射速和m4差不多，有什么明显优势么
+22:43 varna: 暴击
+22:43 varna: 而且冲锋枪后座力普遍小
+22:44 varna: 同是近程，冲锋枪的高暴击率基本可以弥补他的侵彻力问题
+22:50 yonka quit:Remote host closed the connection
+22:53 lhanjian_: 终于打出想要的喷子了sasg12k
+22:56 lhanjian_: 扫描暴击的效果更好
+23:04 lhanjian_: 没有喷子心里真是不安稳
+23:06 varna: 其实我局得膛口用制退会好些，但现在手里的M4是在cos平胸战神AR15所以刻意削减了性能
+23:07 varna: 正常的话，膛口制退+双爆，镜用Spectre DR双爆，护木用小握把
+23:07 varna: 实战力应该会好些
+23:08 varna: 这个装扮应该比较适合lvoa-c，设计本身就考虑到了不带消音器的CQB
+23:09 lhanjian_: 通过双爆极限拉升输出？
+23:10 varna: 爆头暴击都是有了明显比没有好的属性
+23:10 varna: 但对AR来说，主要其实是射速、层数、精英增伤、彻甲
+23:11 lhanjian_: 我把暴击换成了准确稳定换单速度
+23:11 varna: 全身稳定有一两个件就够了
+23:11 varna: 准确不需要，换弹速度不需要
+23:12 varna: 机密六件比常规四件的优势就是buff消退速度慢很多
+23:13 varna: 尤其小公主这种打三发丟一发的类型
+23:13 varna: 躺了，前两天热得没怎么睡好，上班时候好累
+23:18 varna quit:Ping timeout: 256 seconds
+23:46 lh_mouse: geordi, extern int a[1]; int a[];
+23:46 geordi: Success
+23:46 lh_mouse: geordi, use --clang
+23:46 geordi: Success
+23:46 lh_mouse: geordi, extern int a[]; int a[5];
+23:46 geordi: Success
+23:46 lh_mouse: geordi, extern int a[] = { 1 }; int a[5];
+23:46 geordi: error: conflicting declaration 'int a [5]'
+23:46 lh_mouse: geordi, extern int a[] = { 1 }; int a[];
+23:46 geordi: error: redefinition of 'int a []'
+23:51 yonka joined channel
+23:55 yonka quit:Ping timeout: 240 seconds
+23:55 NebulaMoe quit:Quit: Connection closed for inactivity

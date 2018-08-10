@@ -1,0 +1,148 @@
+00:03 bfk quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.6/20150605094246]
+00:16 lhanjian quit:Quit: Leaving
+01:17 molikto quit:Remote host closed the connection
+01:32 lh_mouse quit:Read error: Connection reset by peer
+01:50 hysw: UsedSwap:4.2GiB...
+03:02 ASenR quit:Quit: Lost terminal
+07:00 xxxxxxxx quit:Quit: Leaving...
+07:03 boosure joined channel
+07:11 cleamoon__ joined channel
+09:07 lh_mouse joined channel
+09:17 xxxxxxxx joined channel
+09:35 whocares_2 joined channel
+09:37 whocares_2_ quit:Ping timeout: 256 seconds
+09:46 molikto joined channel
+09:46 molikto quit:Remote host closed the connection
+10:00 hyswisabaka: 枣
+10:01 * lh_not_bot slaps hyswisabaka around a bit with a large trout
+10:01 hyswisabaka: 消失掉了...
+10:02 * hyswisabaka treat lh_not_bot using hydrogen peroxide
+10:11 molikto joined channel
+10:12 molikto quit:Remote host closed the connection
+10:13 boosure quit:Quit: Get your hand off of it
+10:20 ASenR joined channel
+10:27 cleamoon__ quit:Ping timeout: 248 seconds
+10:31 xxxxxxxxx joined channel
+10:32 xxxxxxxxx quit:Client Quit
+10:32 xxxxxxxx quit:Ping timeout: 265 seconds
+10:34 molikto joined channel
+10:50 hoxily joined channel
+10:54 molikto quit:Read error: Connection reset by peer
+10:54 molikto_ joined channel
+11:26 lh_mouse quit:Read error: Connection timed out
+11:27 lh_mouse joined channel
+11:27 hoxily` joined channel
+11:28 hoxily quit:Ping timeout: 264 seconds
+11:50 Dove joined channel
+11:57 hoxily` joined channel
+11:58 hoxily quit:Ping timeout: 252 seconds
+12:24 FrankHB quit:Read error: Connection reset by peer
+12:25 FrankHB joined channel
+12:28 lhanjian joined channel
+12:36 hoxily quit:Remote host closed the connection
+12:40 hoxily joined channel
+12:43 lh_cat joined channel
+12:45 lh_mouse quit:Ping timeout: 252 seconds
+12:46 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+13:12 lhanjian quit:Quit: Leaving
+13:26 ASenR quit:Quit: Lost terminal
+13:34 FrankHB quit:Remote host closed the connection
+13:35 FrankHB joined channel
+13:41 FrankHB quit:Read error: Connection reset by peer
+13:41 FrankHB joined channel
+13:43 yzld2002 joined channel
+13:52 yzld2002 quit:Remote host closed the connection
+13:53 yzld2002 joined channel
+13:54 Dove joined channel
+14:08 iyzsong: V_V
+14:15 condy: OuO
+14:51 ASenR joined channel
+15:13 ASenR quit:Quit: Lost terminal
+16:09 molikto_ quit:Read error: Connection reset by peer
+16:09 molikto joined channel
+16:11 lhanjian joined channel
+17:01 endle joined channel
+17:29 yzld2002 quit:Quit: yzld2002
+17:38 lhanjian: 腾讯也是够SB的，Q币支付竟然没有任何验证
+17:38 * lhanjian 损失11个Q币
+17:42 Dove: 杯具
+17:54 lh_not_bot: lhanjian: 你支付了啥
+17:54 lhanjian: 被盗号
+17:54 * lh_not_bot 从不用企鹅币支付
+17:54 lhanjian: SB腾讯，Q币连个支付密码都没有
+17:54 lh_not_bot: lhanjian: 人才
+17:54 lh_not_bot: lhanjian: 你平时用企鹅么
+17:54 lhanjian: 用
+17:55 lh_not_bot: win 的？
+17:55 lhanjian: 偶尔用Win，一般用手机
+17:55 lhanjian: Linux也可以Wine，能用。
+17:55 lh_not_bot: 有兴趣加群么  384042845
+17:56 lhanjian: 耗子的群？
+17:56 lhanjian: 好
+17:56 whatofor_1 quit:Read error: Connection reset by peer
+17:58 lh_mouse: 0.0
+17:58 Dove: C++标准编号是n3376？
+17:58 Dove: 不记得了
+17:59 lh_not_bot: 那是五位数字吗
+18:00 Dove: 14882？
+18:00 whatofor_1 joined channel
+18:01 Dove: 那3376是什么来着？C？
+18:02 Dove: 好吧，似乎是个draft
+18:04 ASenR joined channel
+18:05 molikto quit:Remote host closed the connection
+18:05 lhanjian: lh_not_bot, 顺手给耗子扔了一个添加好友
+18:21 hoxily quit:Quit: WeeChat 1.1.1
+18:44 Plough joined channel
+18:59 cleamoon__ joined channel
+19:05 Dove quit:Read error: Connection reset by peer
+19:20 * lh_not_bot bites lhanjian 
+19:27 ASenR quit:Quit: Lost terminal
+19:32 xxxxxxxx joined channel
+19:38 lh_mouse: Plough, 摸头
+19:43 iyzsong: 呼 呼 呼 呼
+19:45 lh_mouse: iyzsong, 摸头
+19:50 biergaizi joined channel
+19:54 lh_not_bot: geordi: { constexpr array<int, 3> a{{1,2,3}}; foo(print_triple, a); } void print_triple(int a, int b, int c){ cout <<a, b, c; } template<typename F, typename T, size_t N, size_t ...I> void real_foo(F f, array<T, N> a, index_sequence<I...>){ f(a.at(I)...); } template<typename F, typename T, size_t N> void foo(F f, array<T, N> a){ real_foo(f, a, make_index_sequence<N>()); }
+19:54 geordi: 1, 2, 3
+20:02 cleamoon__ quit:Ping timeout: 244 seconds
+20:11 molikto joined channel
+20:30 molikto quit:Remote host closed the connection
+20:31 lh_not_bot: geordi: << TYPE<my_result_of_t<int (double, long)>>; template<typename T> struct my_result_of; template<typename R, typename ...A> struct my_result_of { using type = R; }; template<typename F> using my_result_of_t = typename my_result_of<F>::type;
+20:31 geordi: error: redeclared with 2 template parameters
+20:31 lh_not_bot: geordi: << TYPE<my_result_of_t<int (double, long)>>; template<typename T> struct my_result_of; template<typename R, typename ...A> struct my_result_of<R, A...> { using type = R; }; template<typename F> using my_result_of_t = typename my_result_of<F>::type;
+20:31 geordi: error: wrong number of template arguments (2, should be 1)
+20:31 lh_not_bot: geordi: << TYPE<my_result_of_t<int (double, long)>>; template<typename T> struct my_result_of; template<typename R, typename ...A> struct my_result_of<R(A...)> { using type = R; }; template<typename F> using my_result_of_t = typename my_result_of<F>::type;
+20:31 geordi: int
+20:32 xxxxxxxx: http://tieba.baidu.com/p/3789090941 这帖子
+20:45 ASenR joined channel
+20:54 lhanjian quit:Remote host closed the connection
+20:56 lhanjian joined channel
+21:05 lh_cat joined channel
+21:36 hope1 joined channel
+21:52 lhanjian: http://mil.firefox.news.cn/15/0624/15/5CWU0YBJHSQX2V1T.html
+21:55 Nangcr joined channel
+21:57 hope1 quit:Ping timeout: 256 seconds
+22:00 hope1 joined channel
+22:01 Nangcr quit:Remote host closed the connection
+22:04 hope1 quit:Ping timeout: 255 seconds
+22:18 lhanjian quit:Quit: Leaving
+22:22 Plough quit:Quit: leaving
+22:31 ASenR quit:Ping timeout: 272 seconds
+22:32 ASenR joined channel
+22:38 endle quit:Quit: Leaving
+22:44 beefcafe_ quit:Remote host closed the connection
+22:47 cafebeef joined channel
+23:31 lh_cat quit:Quit: Connection closed for inactivity
+23:35 molikto joined channel
+23:46 molikto: 喵
+23:50 * lh_mouse slaps molikto around a bit with a large trout
+23:50 molikto: 好烦. 
+23:51 lh_mouse: 0 0
+23:51 molikto: 今晚从北京回天津我学校然后散步一小时... 明早回京上班
+23:52 * iyzsong AFK
+23:52 molikto: 什么事afk
+23:53 molikto: .... 懂了
+23:53 molikto: cleamoon: 求聊天
+23:54 lh_mouse: 0.0
+23:54 xxxxxxxx: 你应该说求约
+23:55 molikto: xxxxxxxx: 你们这群基佬...

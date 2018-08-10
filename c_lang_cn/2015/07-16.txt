@@ -1,0 +1,1164 @@
+00:13 whocares_2 joined channel
+00:17 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+00:24 yzld2002 quit:Quit: yzld2002
+00:58 tutu_ joined channel
+00:59 tutu_: condy,
+01:00 tutu_: 貌似都睡了
+01:00 * lh_mouse slaps tutu_ around a bit with a large trout
+01:01 tutu_: 疼…
+01:01 tutu_: 小耗，有个问题
+01:01 tutu_: 你困么？
+01:01 gauge: 2333
+01:02 cleamoon: 2333
+01:02 lh_mouse: no
+01:04 tutu_: 我想统一PC和android的请求，所以想用HTTP协议， 用一套
+01:04 ASenR quit:Ping timeout: 264 seconds
+01:04 tutu_: Json来组织要执行的东西或者查询的东西
+01:05 ASenR joined channel
+01:05 lh_mouse: 问题呢
+01:06 tutu_: 问题是，这算不算是造轮子
+01:06 lh_mouse: 不算
+01:06 lh_mouse: 造轮子是针对具体实现说的
+01:07 tutu_: 喔 ~
+01:07 lh_mouse: RichSelian: 嘛，在百度骗到了HR妹纸
+01:07 lh_mouse: 嘲讽 MAX
+01:13 LittleKey joined channel
+01:17 FrankHB: 揉牛已经脱靶几次了？
+01:17 cleamoon quit:Read error: Connection reset by peer
+01:20 whatofor joined channel
+01:21 lh_mouse: 百度那种地方不养人
+01:22 lh_mouse: 嘛  有个事情我之前说过
+01:22 lh_mouse: 比如就说游戏行业  我问一句网页游戏服务器的性能瓶颈在什么地方基本就能把应届生噎死
+01:23 lh_mouse: 我觉得能跟一个厉害的主程混很重要——当然对于百度我呵呵
+01:23 whatofor_1 quit:Ping timeout: 248 seconds
+01:24 tutu_: QPS ?  小耗说的很犀利 ~
+01:25 lh_mouse: CPU / 内存 / 网络 IO / 磁盘 IO / 数据库 IO
+01:26 cleamoon joined channel
+01:29 tutu_: 小耗，数据库操作那边是用链接池？还是别的方式？
+01:29 lh_mouse: 这就有很多实现了
+01:30 lh_mouse: 我是用连接池的   表名散列化除以连接数求余丢到对应线程上  每个表只对应一个线程
+01:31 tutu_: 我看到别人的测试数据说是把链接池改成pipeline性能还可以提高
+01:32 lh_mouse: 这个实际测过才好说话
+01:32 LittleKey quit:Ping timeout: 256 seconds
+01:32 tutu_: 恩呢，觉得好奇 ~ 
+01:32 lh_mouse: 我直接在 C艹上造了延迟写入和写入合并   再加上 memcache 应该作用不太大了
+01:33 lh_mouse: 倒是很多写服务端的满地乱写 sql    这样问题会比较大
+01:35 lh_mouse quit:Quit: meow
+01:35 tutu_: 阿勒，睡啦 …
+01:53 cleamoon_ joined channel
+02:22 ASenR quit:Quit: Lost terminal
+02:36 tutu_ quit:Ping timeout: 248 seconds
+03:04 molikto quit:Remote host closed the connection
+03:06 cleamoon quit:Ping timeout: 264 seconds
+03:23 whatofor quit:Read error: Connection reset by peer
+04:02 Ivan97 quit:Quit: Connection closed for inactivity
+06:00 tutu_ joined channel
+06:32 hoxily joined channel
+06:42 cleamoon joined channel
+06:43 hoxily quit:Quit: Leaving
+07:36 tutu__ joined channel
+07:39 tutu_ quit:Ping timeout: 256 seconds
+07:49 tutu__ quit:Ping timeout: 265 seconds
+07:56 cleamoon_ quit:Remote host closed the connection
+08:09 hoxily joined channel
+08:09 xxxxxxxx joined channel
+09:01 Ivan97 joined channel
+09:03 boosure joined channel
+09:17 lh_mouse joined channel
+09:49 whatofor joined channel
+09:58 tutu_ joined channel
+10:05 tutu_ quit:Read error: Connection reset by peer
+10:06 tutu_ joined channel
+10:10 boosure quit:Quit: Get your hand off of it
+10:10 whatofor_1 joined channel
+10:13 whatofor quit:Ping timeout: 264 seconds
+10:16 * lh_not_bot meows
+10:31 tutu_ quit:Read error: Connection reset by peer
+10:31 tutu_ joined channel
+10:36 tutu_ quit:Read error: Connection reset by peer
+10:36 tutu_ joined channel
+10:48 hoxily quit:Quit: Leaving
+11:12 w15tp joined channel
+11:12 w15tp: kjl
+11:13 w15tp: 23结婚算不算晚
+11:17 w15tp quit:Remote host closed the connection
+11:22 FrankHB quit:Ping timeout: 240 seconds
+11:22 Ivan97 quit:Quit: Connection closed for inactivity
+11:24 molikto joined channel
+11:32 lh_mouse: 卧槽   这是啪啪啪了的节奏
+11:42 Mokou joined channel
+11:53 Mokou: 大和Lv95达成
+12:01 sismvg joined channel
+12:03 tutu_ quit:Read error: Connection reset by peer
+12:09 varna joined channel
+12:10 varna: Mokou: 同步一下，现在应该是可以用的
+12:13 Mokou: varna: 了解
+12:13 Mokou: 另外美军那位似乎在线上
+12:14 Mokou: 他表示对数据头疼，看不明白手册……
+12:14 varna: 这个我找不到切入点……他怎么跟你说的
+12:15 varna: 哦操
+12:15 varna: 我是不是又错过五连雷改修了？
+12:15 Mokou: 我刚才那句基本上就是变换成了间接引语
+12:15 varna: ...
+12:15 varna: 我记得我发给他译文/注解了……
+12:16 Mokou: 现在我是告诉他“计算部分不用看太细，那部分是裁判算的”
+12:16 varna: +
+12:16 varna: 希望自己事先评估战术的话，玩家懂得规则也很有用，但不是必要的
+12:16 Mokou: 然后他还没回我
+12:17 varna: 我感觉这次活动我要出事啊
+12:17 varna: 现在才六万多
+12:17 Mokou: 我现在弹药还不到六万
+12:17 Mokou: 过段时间可能得改跑远征2了
+12:17 varna: 我一直在跑桶
+12:17 sismvg: 我已经放弃了在面试的时候复习... 就没个正常的HR..
+12:17 lh_not_bot: geordi: { foo f = { 123 }; f = { }; cout <<f.i; } struct foo { int i; };
+12:17 geordi: 0
+12:17 Mokou: 麻烦死了
+12:17 Mokou: 又是中文zip
+12:18 varna: 艹
+12:18 sismvg: 一个干了几年服务器的，不知道RPC是啥..
+12:18 varna: 演习卡战果什么鬼
+12:18 Mokou: ……
+12:18 varna: 为何就不能好好用网络，非得被ban
+12:21 tutu_ joined channel
+12:25 varna: Mokou: 另外现在我允许这样的IO了 https://pastebin.mozilla.org/8839653
+12:26 varna: 在原先iowrap的读写模式和fd参数之间加一个毫秒计的超时参数
+12:26 varna: 区别于一般系统调用的0/-1返回值，如果是p7超时则返回-2
+12:28 varna: 实现方面，定时器事件优先被处置，但由于目前我不推荐异步定时，所以假如在定时器超时之后的某个小时段内IO就绪，这IO不会被放弃
+12:28 varna: 小时段从定时器事件被处理持续到epoll引发的协程重调度发生
+12:29 varna: 只要重调度发生、内核线程脱离调度循环，那么一个协程的定时器状态就被确定了
+12:29 varna: 总体来说比较龌龊
+12:29 Mokou: 了解
+12:30 varna: 前天我提到一个压缩定时器堆的优化
+12:30 varna: 试验+反思了一下，这东西更适合reactor的单线程循环做
+12:31 varna: 如果p7正常工作，应该不容易累积定时器
+12:31 varna: 但一个reactor的IO线程则容易累积下来
+12:32 varna: 如果你写超时的话，可以考虑把误差在一定范围之内的定时器对象压在一起，用其中的一个超时时刻为键压到优先队列里
+12:32 varna: 这会有小误差，不过我个人认为没什么影响
+12:33 sismvg quit:Read error: Connection timed out
+12:38 Mokou: 了解
+12:39 Mokou: 这zip真TM莉害
+12:39 varna: 好不容易和平两天，结果今天回来又开始被迫ban人
+12:39 Mokou: 同一个目录下的文件名
+12:39 Mokou: 一半是utf8，一半是gb2312
+12:39 varna: 这帮人是真不知道自己在干什么吗
+12:42 varna: Mokou: 噗，美军那位offline了
+12:43 xxxxxxxx: varna: 羊驼觉得 23结婚算不算晚?
+12:43 varna: 在什么地方
+12:44 xxxxxxxx: 12:11:08 w15tp>kjl
+12:44 xxxxxxxx: 12:11:47 w15tp>23结婚算不算晚
+12:44 varna: 哦，那人啊
+12:44 varna: 要是在农村不知道算不算晚，肯定不算早
+12:44 varna: 大城市就是早了
+12:45 varna: 三线城市的话，就我听说的状况似乎正常
+12:53 varna: ……实验室这个桌子的锅
+12:53 varna: 我在宿舍用一天机器，鼠标手也没发作
+12:53 varna: 然而换回实验室直接各种症状
+12:54 varna: 八月份找个时间去医院看看吧……
+13:02 tutu_ quit:Read error: Connection reset by peer
+13:02 tutu_ joined channel
+13:03 tutu_ quit:Read error: Connection reset by peer
+13:03 Mokou: 我了个大艹
+13:03 Mokou: 解压个zip都得写个py脚本出来
+13:04 Mokou: 这世界为何充满了恶意
+13:04 tutu_ joined channel
+13:04 lh_mouse quit:Read error: Connection timed out
+13:04 hysw: Mokou: 为啥耍蛇？
+13:05 Mokou: hysw: 往前翻翻你就懂了
+13:05 * hysw 让学习什么的见鬼去算了
+13:06 hysw: Mokou: 直接重命名不得了...
+13:06 varna: https://metacpan.org/pod/Parse::CSV 今天的metacpan -- 这是个杂物，但也不是不能用
+13:06 lh_mouse joined channel
+13:07 Mokou: 别逗
+13:07 varna: 一层一层重命名也是醉了
+13:08 sismvg joined channel
+13:08 sismvg: 好热
+13:10 * hysw 貌似猜答案的技术比以前差了...
+13:12 sismvg: 这是线虫的写照
+13:13 varna: lh_mouse: 突然想起来，你以前是不是提过手麻的事？
+13:14 molikto quit:Remote host closed the connection
+13:17 varna: 看我六连烧
+13:19 lh_not_bot: varna: ?
+13:19 Mokou: http://www.bilibili.com/video/av2282903/ 这个的特效不错啊
+13:19 Mokou: (必須アモト酸注意)
+13:21 varna: lh_not_bot: 具体是怎么麻的？
+13:23 varna: ok, 决战兵器也准备好了……
+13:23 varna: 手工从四连升到五连然后升到+6的鱼雷
+13:25 lh_not_bot: varna: 什么时候
+13:26 varna: lh_not_bot: 忘了，似乎上个月？
+13:28 lh_not_bot: 没印象了
+13:28 varna: 哦
+13:30 varna: http://www.bilibili.com/video/av2575915/ 骨痛二婶子
+13:30 varna: 不对
+13:30 varna: 骨痛大狸子
+13:30 varna: BGM开始之后才发觉不对
+13:30 tutu_ quit:Remote host closed the connection
+13:32 Mokou: 怪不得大狸子自称老朽……
+13:32 varna: 以前这个素材是骨痛的灵知信仰
+13:38 Mokou: ……
+13:39 Mokou: http://www.bilibili.com/video/av1964428/ 完 全 一 致
+13:41 lh_not_bot: 谁又被 Ban 了？
+13:41 varna: 啊？
+13:42 lh_not_bot: 12:37 <+varna> 好不容易和平两天，结果今天回来又开始被迫ban人
+13:42 varna: http://www.bilibili.com/video/av665497/
+13:42 varna: lh_not_bot: 哦，我说局域网
+13:43 varna: 我那个DLink的旧路由器估计是扔家里了，所以实验室还在用着没法限定流量的旧TP-Link货
+13:43 Mokou quit:Ping timeout: 252 seconds
+13:45 sismvg: 有人写过windows服务吗. 一个服务一定需要个服务控制程序吗
+13:52 xxxxxxxx: chrome终于不让我用npapi的flash了
+13:59 Mokou joined channel
+13:59 Mokou: 改回信道13又好了……
+14:00 Mokou: 这隔一段时间就爆炸一次我TM遭得住
+14:00 molikto joined channel
+14:00 xxxxxxxx: http://news.163.com/15/0714/18/AUGL46T200014AEE.html
+14:00 xxxxxxxx: 宫崎骏敦促安倍承认侵华历史 网友：大师就是大师
+14:03 varna: 《起风了》感觉比较暧昧
+14:03 Mokou: varna: 刚才我开wireshark看了一下
+14:03 Mokou: 浏览器连不上192.168.1.1在wireshark里的表现是收不到syn-ack
+14:04 Mokou: 但是我能看到其他client发过来的ARP包……
+14:04 varna: 而且我怕看那片子的原因是我造出来的九六战和零战已经够多了……
+14:04 varna: Mokou: channel的问题？
+14:04 Mokou: varna: 改了13好了，但是上次爆炸的时候我是把13改成了11……
+14:04 varna: 这个跟别人用什么也有点关系
+14:05 Mokou: 但是只有我这一台机器爆炸
+14:05 Mokou: 手机一点问题没有
+14:05 varna: 差不多
+14:05 varna: 这情况跟我遇到的类似
+14:05 varna: 另外修暖气的还没好……
+14:05 Mokou: ……
+14:06 varna: 昨天我在宿舍听了一天NKC解体音
+14:06 varna: 早上七点钟也是，半睡半醒想着再来半小时吧
+14:06 varna: 咣咣咣
+14:06 varna: 直接从我宿舍的墙上过来了
+14:07 Mokou: 23333
+14:07 Mokou: 要不你回青岛躲躲？
+14:07 varna: 就几天，不值两张车票钱
+14:08 Mokou: 说起来你遇到的是什么情况
+14:08 varna: 哈哈哈夜战面板火力193的绫波
+14:08 Mokou: Orz
+14:09 varna: 把duang卸下去了换上新兵器
+14:09 Mokou: 我操
+14:09 Mokou: 之前那个压缩包第一个flac还是坏的……
+14:09 varna: ...
+14:11 varna: 绫波拉着临近的POI一起中破了
+14:15 varna: http://www.bilibili.com/video/av1922328/ 丞相的aLIEz
+14:18 Mokou: 不对，应该不是flac的问题
+14:18 Mokou: 大概是他的音源……
+14:20 varna: 日
+14:21 varna: 我至今仍然不知道那个潜艇打掉没有……
+14:21 varna: ...打掉了
+14:35 Mokou: 终于安静了
+14:35 Mokou: 就为了听个专辑
+14:35 Mokou: 我先写了个Python脚本解压zip
+14:35 Mokou: 然后还得用Audacity干掉开头那段杂音
+14:35 Mokou: 这世界为何充满恶意
+14:36 varna: 我已经把一个涉嫌吸血的机器关进去了
+14:39 Mokou: 大块人心
+14:39 Mokou: 大快人心
+14:40 varna: 至少到我吃完饭为止别出来了，反正也没人，估计是挂机下载
+14:40 varna: 然而挂机为什么不晚上走前挂起来呢
+14:44 varna: http://www.bilibili.com/video/av2571060/ 海色
+14:49 Mokou: 满篇粗鄙之语……
+14:49 Mokou: 另外，我这边RA3只要装d3dx9就能跑起来
+14:49 Mokou: 你要不要试试
+14:49 Mokou: 别装全套dx，只装d3dx9
+14:51 varna: RA3就不试了……
+14:56 varna: http://www.bilibili.com/video/av2541782/ 年上者向
+14:58 sismvg: 旭日就是个奇葩。。还出个弓箭少女
+14:59 sismvg: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=49547273
+15:01 varna: http://www.bilibili.com/video/av2408870/ 光良/童话 不要看字幕，仔细听唱了什么……
+15:16 lh_not_bot: 王林被抓了
+15:24 tutu_wind:  床上开光大师兄。。。
+15:24 tutu_wind: 没有兄
+15:33 lhanjian quit:Ping timeout: 264 seconds
+15:34 Mokou: http://picpaste.com/YyK1s6eq.png 百度药丸
+15:40 sismvg: 百度不会药丸的
+15:40 sismvg: 就算破产了都不一定会
+15:41 lhanjian joined channel
+15:43 sismvg: 说来你是墙外的?
+15:43 Mokou: 不是啊
+15:44 sismvg: 我看不到这个图
+16:01 xxxxxxxx quit:Ping timeout: 246 seconds
+16:01 xxxxxxxx joined channel
+16:12 wsyh joined channel
+16:12 hysw quit:Read error: Connection reset by peer
+16:14 [nic] joined channel
+16:14 Guest44776 quit:Client Quit
+16:15 nicball joined channel
+16:19 whocares_2 quit:Remote host closed the connection
+16:31 ASenR joined channel
+16:43 xiongmao86 joined channel
+16:43 whocares_2 joined channel
+16:43 xiongmao86: 这里可以问有关c++的内容吗？
+16:43 varna: 随意
+16:43 varna: 这里随意聊
+16:44 xiongmao86: 我看到这种代码不太理解： new (Allocator) MachineRegisterInfo(this);
+16:44 varna: llvm么……
+16:44 xiongmao86: new后面加括号是新版c++的东东吗？
+16:44 xiongmao86: 嗯
+16:45 varna: 我不确认是新花样
+16:46 varna: 我在c艹98的时候见过这个
+16:47 xiongmao86: 反正我以前学c++就没有学全
+16:49 xiongmao86: 这中间括号里面放allocator是什么用法？
+16:50 varna: placement
+16:50 tutu_wind quit:Ping timeout: 246 seconds
+16:51 varna: http://www.cplusplus.com/reference/new/operator%20new/ 如果你需要例子可以看这
+16:51 molikto quit:Remote host closed the connection
+16:53 molikto joined channel
+16:53 Mokou: varna: "也就是说这是直接看游戏UI指挥就行了？"
+16:53 Mokou: 我干脆把他叫来IRC吧……
+16:54 xiongmao86: varna: 嗯谢谢。
+16:54 varna: Mokou: 如果可能的话
+16:54 varna: xiongmao86: 不客气
+16:54 varna: Mokou: 不行的话你们建个TX的讨论组？
+16:55 varna: Mokou: 似乎QQ用户习惯那种东西
+16:55 Mokou: 他以前似乎被我拉来过
+16:55 varna: 哦
+16:55 Mokou: 应该知道IRC是什么
+16:56 varna: TX我对外交流也用，只是那里的多人同时交流太封闭了
+16:56 varna: 弄个群还得加
+16:56 Mokou: 可以设置成公共群吧
+16:57 varna: 少有人那么干的吧
+16:57 Mokou: 确实
+16:57 varna: QQ群有各种权限控制么……
+16:57 Mokou: 不过毕竟QQ那环境……
+16:57 varna: 我记得只有按时间禁言和踢
+16:57 Mokou: +
+16:58 varna: 58闹着要下班……
+16:58 varna: 给我来个10/18
+17:00 Mokou: ……
+17:01 varna: 另外我仍然提请割地
+17:01 Mokou: 割地指？
+17:02 varna: izuMAN的HTTP/MEM/blah之类部分割出去……
+17:02 varna: 不过有点麻烦
+17:02 Mokou: 这个之后再说……
+17:02 varna: 不行就算了
+17:02 Mokou: 我现在的设计有这个倾向
+17:02 varna: 反正现在你的仓库组织也能用
+17:02 varna: 不过如果我弄到本地的话比较乐
+17:03 varna: 算了不管他
+17:03 Mokou: 不过拆得太彻底的话不太好弄，因为parser是要分配内存的……
+17:03 Mokou: 而且我不喜欢回调
+17:03 varna: 我也不喜欢，所以我后来尝试了一些过激行为
+17:03 varna: 那些潜在危险太大，就不搬到台面上了
+17:04 varna: 先clone一份
+17:04 Mokou: 总之我是希望达成这样一种效果
+17:04 Mokou: 各组件之间有依赖
+17:04 Mokou: 但是如果有人希望拿走某一组件的话，他应该可以很轻松的剥离依赖
+17:05 varna: 无所谓了，我想了想，先按你现在的目录组织做吧
+17:05 varna: util我一律用你的
+17:05 Mokou: 你准备对kashiwara开刀了？
+17:06 varna: 容我眨眨眼
+17:06 varna: 还好，p7那个依赖是空的
+17:06 varna: 这样我测试倒是方便
+17:07 varna: 本地我用p7的时候其实是动态链接的
+17:08 tutu1 joined channel
+17:09 Mokou: 动态链接太麻烦了
+17:10 xiongmao86 quit:Quit: Leaving...
+17:11 varna: 其实做成.a也行，怎么都行
+17:12 Mokou: 所以我是编译成.a的
+17:13 varna: 看到了
+17:14 varna: 我处理下Makefile部分，不会影响
+17:14 Mokou: 了解
+17:14 Mokou: 影响也没关系，随便折腾就成
+17:15 varna: 其实util用你的也还好
+17:15 varna: 至少内存什么的部分我可以甩锅……
+17:15 Mokou: 233333
+17:16 varna: http://tieba.baidu.com/p/3897468133
+17:16 Mokou: 对了，要不要我先把Kashiwara从Izumo的repo里拆出来
+17:16 Mokou: 然后你直接pull kashiwara
+17:16 varna: 不用
+17:17 varna: 那样我可能会把整套东西卸了，之后再阳炎化
+17:17 Mokou: 23333
+17:17 Mokou: 另外你觉得Kashiwara和Asuka哪个好
+17:17 varna: Asuka太常见了
+17:17 varna: 但前一个名字究竟是什么，我没查出来
+17:18 Mokou: 橿（かし）原（わら）
+17:18 varna: Kashiwara我至少可以简写个K, 然后告诉别人“这个叫喀秋莎”
+17:18 varna: 哦……
+17:18 varna: 橿原赞
+17:18 varna: 虽然我赞的和你说的估计不是一个东西
+17:18 Mokou: 还是IJN梗……
+17:19 Mokou: 橿原丸和出云丸
+17:19 varna: 哦，原来真是啊
+17:19 Mokou: 真是
+17:19 Mokou: 不然我怎么会想到这么冷门的名字的
+17:20 Mokou: 啊，查了下，橿原的假名似乎写作かしはら……
+17:20 Mokou: 不过读作kashiwara应该没问题
+17:20 varna: 你们这些人啊，对航空战那一套理论很熟悉，航海啊，naive! ——奥宫 正武
+17:20 Mokou: 23333
+17:21 Mokou: 是，Wiki上的罗马音是写作Kashiwara Maru的
+17:21 Mokou: 不过假名是かしはら
+17:21 varna: 想想翔鹤
+17:22 varna: 当时不识字的美军怎么硬是读成一个大战舰来着……
+17:22 Mokou: 2333333
+17:22 varna: 他们看到翔鹤二字但不认得是什么，之后就开始脑洞
+17:22 varna: 根本就没有那样的翔鹤，都是化学的特技
+17:23 Mokou: 当时美帝不知道本子的战舰是古国名的？
+17:24 varna: 他们知道
+17:24 varna: 我忘了他们怎么读的了，但应该是查字典之后选错了读音的锅
+17:24 Mokou: 23333
+17:24 varna: 毕竟没有互联网，很难考证具体的东西……
+17:26 varna: http://tieba.baidu.com/p/3897488692?fr=frs 舰吧没救小新闻
+17:26 Mokou: 没救了
+17:27 sismvg quit:Ping timeout: 244 seconds
+17:32 varna: 八万钢站在K岛的岸上 刘海切开冬日的晨光～
+17:32 sismvg joined channel
+17:32 varna: 好激动啊明天八万钢就要二改了哈哈哈
+17:32 tutu_wind: 好湿 。。。 
+17:32 varna: 不是湿
+17:33 varna: 扒的《喀秋莎》……
+17:33 Mokou: 优衣库那个视频撸点不高啊
+17:33 Mokou: 太短了
+17:33 varna: 那是什么？
+17:33 tutu_wind: 但是有其它角度的
+17:33 Mokou: varna: http://news.ifeng.com/a/20150715/44170736_0.shtml
+17:34 ASenR quit:Quit: Lost terminal
+17:34 sismvg: 本子既视感
+17:34 varna: 这都不是问题
+17:35 varna: 问题是我还是没有女朋友
+17:35 tutu_wind: 视频就不分享了啊 。。。
+17:35 tutu_wind: 贴吧里有 。。。 不知道今天还在不 。
+17:36 varna: 在岩川寻求邂逅的我是不是搞错了什么
+17:36 Mokou: 23333
+17:36 Mokou: 你都邂逅北上大人了
+17:36 varna: 北上大人下次活动应该能一百三了
+17:36 Mokou: 大凤才110……
+17:36 Mokou: 果真是欧皇肝帝，是在下输了
+17:37 varna: 另外我公开地问个事吧
+17:37 varna: 水面部队为主的前进部队，你是喜欢历史的配置还是喜欢Big7
+17:37 Mokou: 我考虑下
+17:38 varna: 限于政治上正确，长门我不太考虑
+17:38 varna: 不过如果有强烈要求也无所谓，那两个性能没什么差别
+17:38 Mokou: 14in够不够我徹甲
+17:38 varna: 不够
+17:38 Mokou: ……
+17:38 Mokou: 那有点麻烦
+17:38 varna: 至少按照战舰对轰的原则来说不够
+17:39 Mokou: 这样的话能给我高雄级吗
+17:39 varna: 能
+17:39 Mokou: 我考虑洗甲板
+17:39 varna: 这么说吧
+17:39 Mokou: 那就历史地用高速吧
+17:39 varna: 哦
+17:39 varna: 我只是问问
+17:39 Mokou: 嘛，其实我也偏向高速
+17:39 varna: 那就这样吧
+17:39 Mokou: 然而本子的高速BB和美帝的高速BB差距太大……
+17:40 Mokou: 嗯，就这样
+17:40 varna: 美国人那是真·战舰，日本那些……
+17:40 Mokou: 战巡改改改
+17:40 varna: 反正从设计上说是战舰也没错
+17:40 varna: 然而总是弱了点
+17:41 varna: 估计后来预算也不够了，丸三的时候都在骗预算
+17:41 Mokou: 可惜天城级没造完
+17:41 varna: 然后那时候日本国内的军费比例还在狂涨不止
+17:41 varna: 大概是造不完
+17:41 varna: 阳炎十八超人也干不过一百几十个后期型啊……
+17:41 Mokou: 13号舰我就不指望了……
+17:41 varna: 岛风也没量产，干什么都缺钱
+17:42 Mokou: 说起来13号舰的46炮应该不是九四式吧
+17:42 varna: 46炮有异于94式的型号么？
+17:42 Mokou: 我查查
+17:42 varna: 94式之后直接走48炮路线了吧……
+17:42 Mokou: 感觉94式这么高科技的玩意不像是那时候能设计出来的
+17:42 Mokou: 他们不是先造的48炮么……
+17:42 varna: 噗？
+17:43 varna: 46都造不好，他们疯了么
+17:43 Mokou: 所以啊
+17:43 varna: 那个三连装炮塔已经是工厂的极限了
+17:43 Mokou: 造出来了，试验一下，直接炸膛
+17:43 Mokou: 他们没有办法，卖了48炮抵债，造出来的46
+17:43 varna: 更大的炮根本没有机器处理……
+17:43 nicball quit:Quit: Leaving
+17:43 varna: 然而小姨子还是跑了
+17:43 Mokou: 23333
+17:44 Mokou: 对，不一样
+17:44 varna: 其实要是那个大甩卖变成十元一个钱包，我说不定真买
+17:44 Mokou: 13号舰用的是46cm/45 五年式
+17:44 Mokou: 完全没有伪称
+17:44 varna: 其实伪称只有坏处吧
+17:44 varna: 日军上层有一部分人不知道，美军上层有一部分人知道……
+17:44 Mokou: 23333
+17:44 varna: 凤翔桑作战不力
+17:45 varna: 所以后来吸取教训，换了长甲板
+17:45 Mokou: 凤翔尽力啦，为何还黑她
+17:45 varna: 菊座都退休了
+17:45 Mokou: 然后就开不出去了
+17:45 varna: 现在是爱宕的时代
+17:46 Mokou: 五年式的资料基本没有
+17:46 Mokou: 大概没造过实物
+17:47 varna: 48炮好歹还有个管子……
+17:47 Mokou: 大概是没来得及造条约就签了吧
+17:47 varna: 哦对，目前我设定的剧本里，双方都没有对空雷达火控
+17:47 varna: VT信管限定5in/38倍径炮
+17:47 Mokou: 了解
+17:47 Mokou: 然而美帝还是有五寸机关炮……
+17:48 varna: 不过SK4规则对高射瞄准仪的调整看上去并不友好
+17:48 Mokou: 规则怎么处理的
+17:48 varna: 没观瞄火控下修，只有观瞄则是不修正
+17:48 Mokou: ……
+17:49 varna: 生动解释了美帝掌握核心科技的自信
+17:49 Mokou: 明天三隈应该就能退出演习对了
+17:49 Mokou: 队*
+17:50 varna: 三隈三十级……
+17:50 Mokou: 没关系，我有只三隈Lv1
+17:50 varna: 五月份以来我弄到的新舰很少有能实战的
+17:50 Mokou: 我也是
+17:50 varna: 就葛城练到七十
+17:50 varna: 你还练了面条系列
+17:51 Mokou: 也就罗马能被拉出去用用
+17:51 varna: 然而我准备了高档的航战天国
+17:51 Mokou: 云龙天城葛城没一个能打的
+17:51 varna: 伊势80日向79……
+17:51 Mokou: 上意大利不如上雾岛
+17:51 Mokou: 日向20+……
+17:51 varna: 这两位简直6
+17:51 varna: 常年冷板凳，但一打3-2就拉出来
+17:51 Mokou: 日向等级太低，我都用伊势
+17:51 Mokou: 结果伊势等级越来越高
+17:52 varna: 一开始我也是
+17:52 varna: 后来我刻意地提高二逗比出场率
+17:52 Mokou: 我怕打不中……
+17:52 Mokou: 山城88扶桑80伊势82日向28
+17:52 Mokou: 这俩逗逼等级正好反过来
+17:52 sismvg: http://www.ithome.com/html/discovery/163281.htm
+17:53 sismvg: 物理渣表示好厉害
+17:53 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=7d992cd696529822053339cbe7cb7b3b/46badb510fb30f24791dfc12ce95d143ac4b03ca.jpg 黎塞留旁边那些是什么鬼
+17:53 Mokou: ……
+17:53 Mokou: 反舰巡洋盆？
+17:54 varna: 不知道是什么东西，感觉比巡洋盆大很多……
+17:54 varna: 我这里是肥桑85肥城81
+17:54 Mokou: Orz
+17:54 varna: 大凤都81了，然而肥城是我第一个战舰……
+17:55 Mokou: 扶桑等级低是因为她是最后一只来我家的老BB
+17:55 varna: 旧货我最后见的忘了是伊势还是日向
+17:55 Mokou: 我第一个战舰好象是南风叔
+17:55 varna: 2-4的时候这两个我都没有
+17:55 Mokou: 虽说其实两只Big Seven也新不到哪去……
+17:55 varna: 改造长门级是日本人为数不多的兴趣之一
+17:56 varna: 腐锅人都觉得这实在腐锅大
+17:56 varna: 腐国
+17:56 Mokou: 腐国人把老衲的三门主炮全造在前面
+17:56 Mokou: 留下两千吨排水没敢用
+17:56 Mokou: 三基*
+17:57 varna: 然而即使如此，小道消息仍然指出老衲参数优于长门……
+17:57 Mokou: 这个应该不算小道消息吧
+17:57 Mokou: 老衲>长门>大峡谷应该算是公认排名
+17:57 varna: 我们忘掉美国的早期物
+17:58 Mokou: 另外我听说老衲的舰艏鱼雷疑似命中过俾斯麦……
+17:58 varna: 实战证明，衣阿华在对空战斗中也起到了重大作用，堪称典范
+17:58 varna: 那个消息我也听说过
+17:59 varna: 不过好一点的读法应该是爱荷华……
+17:59 Mokou: 所以不装鱼雷的战舰和不装主炮的航妈有什么区别
+17:59 varna: 我总是习惯用衣阿华这个译名
+17:59 Mokou: 依阿华算是习惯译法吧
+17:59 Mokou: 我也习惯
+17:59 varna: 就跟约翰一样
+17:59 Mokou: 虽说读音不对……
+17:59 Mokou: 约翰应该来自拉丁文？
+17:59 Asuka joined channel
+17:59 Asuka: .
+17:59 varna: 英文的约翰译成琼恩更好，不过英文比较逗
+17:59 Asuka: 进来了
+18:00 varna: 欢迎
+18:00 Mokou: ……果然还是该用Kashiwara
+18:00 Asuka: 中途以断了一条腿的代价进来的2333
+18:00 Mokou: varna: 这位就是美军玩家
+18:00 varna: 噗？
+18:01 varna: 哦，是深海军啊……欢迎
+18:01 varna: 我是裁判
+18:01 Mokou: 他试图活动一下，结果崴膝盖了
+18:01 varna: Dream Crusher
+18:01 Mokou: 这样讨论配置应该方便些
+18:02 Mokou: 不然我一个IJN指挥官帮深海传话……
+18:02 varna: 先说说规则的事情吧……Asuka觉得规则繁琐？
+18:02 varna: 大丈夫，最多把你发配到塞班岛
+18:02 varna: 前辈·南云中二和新来的机动部队指挥官·小泽痔三郎
+18:02 Mokou: 我为蝗国立过功！我为MI流过血！
+18:02 varna: 你们去十一航舰搞基吧
+18:03 Mokou: 我要死守蝗国新锐的装甲航母
+18:03 Mokou: 你看我都发过戒指了
+18:03 varna: 稍等
+18:03 Dove joined channel
+18:04 xxxxxxxx: http://ww1.sinaimg.cn/bmiddle/7199a862gw1eu4mla236nj20ap1chq92.jpg
+18:04 xxxxxxxx: 高能系列
+18:05 Dove: 你们谁看大圣归来了？
+18:05 Mokou: 这什么鬼
+18:05 Mokou: 原味胖次？
+18:06 xxxxxxxx: 一个卖写真和胖次的雌性地球生物
+18:07 xxxxxxxx: 和另外一个应该是男性的地球生物
+18:08 xxxxxxxx: http://ww3.sinaimg.cn/bmiddle/7199a862gw1etwcfvtaolj20b10t5q7g.jpg 不撸也不会晚上弄脏内裤的办法 
+18:09 Mokou: 噗，我突然发现了一个问题
+18:09 Mokou: 今天是我入坑一周年……
+18:09 Asuka: 话说 在哪下载 能不能预览一下。。
+18:09 Mokou: 没有下载
+18:09 Mokou: 因为这不是个软件……
+18:09 xxxxxxxx: 下载啥?
+18:09 Mokou: 兵棋
+18:09 xxxxxxxx: ....
+18:10 Mokou: 深海军玩家其实还没有理解兵棋的实质……
+18:10 xxxxxxxx: 不是有规则书可以下么...
+18:10 Mokou: 规则书羊驼子应该已经发给他了
+18:10 Mokou: 连带注解一起
+18:11 Mokou: 晚上我去发个帖子吧
+18:11 xxxxxxxx: http://weibo.com/yaojigirl 刚才那些图都从这里找到的 逗乐物挺多的
+18:12 xxxxxxxx: 顺带这个用户我是从LEEE的微博点出去几圈偶然找到的 并不是在找和谐物的时候找到的
+18:13 Asuka: 我还以为是RTS呢。
+18:13 Mokou: 解释就是掩饰
+18:13 Mokou: 不是电子游戏
+18:14 xxxxxxxx: 看了几张图纸后 我产生一种 "莫非有妹子的都是2B 或者妹子都是2B么" 的怀疑
+18:16 Asuka: 怪不得。。
+18:18 Asuka: 怪不得看视频的时候感觉是幻灯片 原来这么玩的。。
+18:18 Mokou: 明白玩法了？
+18:19 xxxxxxxx: 红旗和羊驼还拍了教学片？
+18:19 Asuka: 看来不是RTS那种玩烂鼠标
+18:22 Mokou: 跟鼠标并没有什么琴梨关系……
+18:23 molikto quit:Remote host closed the connection
+18:24 molikto joined channel
+18:27 Dove quit:Read error: Connection reset by peer
+18:28 molikto quit:Ping timeout: 252 seconds
+18:30 varna: 回来了
+18:37 xxxxxxxx: 结果你们开始了么?
+18:37 varna: 没呢
+18:37 varna: 看美方还有什么别的问题……
+18:40 ASenR joined channel
+18:46 molikto joined channel
+18:56 Asuka: ？
+18:56 Asuka: 额 抱歉 刚才研究别的了
+18:57 varna: 大丈夫
+18:57 varna: 七点钟我出去有点事
+18:57 varna: 稍等下
+19:08 lh_mouse: 有新人？
+19:09 Mokou: 深海军的指挥官
+19:13 lh_mouse: 是新人么
+19:15 Mokou: 是
+19:24 varna: 回来了
+19:24 Mokou: 两个linode之一死也连不上……
+19:25 varna: 不可达还是连不上
+19:25 Mokou: ssh时timeout
+19:26 Mokou: 实在不行我用linode后台的网页终端试试
+19:26 varna: ping可达ssh超时的话先放放
+19:26 varna: 刚才灵竹沟跪了
+19:26 Mokou: ……
+19:26 Mokou: 然而每多开一小时我就要多花0.3$
+19:27 varna: 赶快关了吧
+19:27 Mokou: 关了没用
+19:27 Mokou: 得删
+19:27 varna: 先放弃那个测试机吧
+19:27 varna: 本地能对比出差异就行，不行再拼
+19:27 Mokou: 我试试后台
+19:28 Mokou: 后台延迟极大，但能上
+19:28 varna: 跟灵竹沟类似了
+19:28 varna: 先放弃这打算吧
+19:29 varna: 旁边那台机器似乎搞坏了什么，现在bash抽风中，我又不想备份（还有个哥们的数据也在上面，先不动他的）
+19:29 Mokou: 然而我Tokyo的主服务器依然流畅如风
+19:30 varna: 不然我可以至少在LAN上试试ab
+19:30 Mokou: ……
+19:30 Mokou: 其实你可以试试wrk
+19:30 varna: wrk听说过
+19:30 Mokou: 流量我是用wrk测的
+19:30 varna: 不过我觉得还是稍微真一点好
+19:30 varna: 毕竟本机运行bench怎么想都只能用来验证一部分内存错误
+19:31 Mokou: ab似乎只能测n个请求需要多长时间
+19:31 Mokou: wrk反过来，一段时间内多少请求
+19:32 varna: 这个不错
+19:32 Mokou: Linode依然不支持FreeBSD……
+19:32 Mokou: DO的网络又不太好
+19:33 varna: 对了，建议加个log
+19:33 varna: 即使用系统log也留个口
+19:33 Mokou: 了解
+19:33 lh_mouse quit:Read error: Connection reset by peer
+19:33 varna: 粗暴的东西可以man 3 syslog
+19:34 Mokou: 测试代码本来是有log的，但是往终端输出太耗时间
+19:34 Mokou: 我就注释掉了
+19:34 lh_mouse joined channel
+19:34 varna: 打终端太慢了，用syslog先替着
+19:34 varna: 虽然这会往你的系统日志里输出大量奇怪物
+19:36 Mokou: 我看看nginx的log怎么做的
+19:36 Mokou: 简单的话我直接抄一个
+19:36 varna: log都不简单
+19:36 varna: 你还不如抄波塞冬的……
+19:36 varna: ngx那***的玩意
+19:38 Asuka: 。。。人体关节的气泡断裂会影响其机能吗
+19:38 Asuka: 气泡破裂 大错
+19:38 lh_mouse: Asuka, 摸头
+19:38 varna: 我不知道……
+19:39 varna: 要是你觉得严重，最好去医院
+19:39 Mokou: +
+19:39 tutu_wind: +1
+19:40 varna: 医院烧钱，然而他们毕竟专业，虽然可能专业地烧你钱
+19:42 Asuka: 不是啊
+19:42 Asuka: 是掰手指那种。。
+19:42 tutu_wind: 刚才搜了一下，我们折手指头啪啪响也算是
+19:42 Asuka: 我怀疑这次崴腿和这个有关。。
+19:44 Asuka: 除了抻腿还有抻腰这坏习惯 两只手背后抓在一起向上抻。。。结果我同学都黑我练瑜伽2333
+19:44 Asuka: 然后人为制造脑部暂时缺血 昏个一两秒 免得困什么的。。
+19:45 tutu_wind: 原来是这样昏的 。。。
+19:47 lh_mouse: poseidon 的 log 要 C艹的运算符重载的
+19:47 lh_mouse: 不过目测 printf style 也可以用
+19:59 varna: 只能劣化下了
+20:00 varna: 所以说C标准委员会简直啊
+20:00 varna: 简直啊
+20:01 varna: 我想要的东西那么多，然而他们一个也不加，半个也不提
+20:01 varna: 一人之心，千万人之心也
+20:02 varna: Asuka: ...这什么揉软操
+20:03 tutu_wind: varna: 摸头 ～
+20:03 varna: 居然模我狗头
+20:03 * varna poies
+20:04 code_new joined channel
+20:04 varna: code_new: 爆
+20:04 varna: 对了，昨晚我宿舍进个白猫（熟练）
+20:05 varna: 我把手伸过去，猫就把鼻子凑来
+20:05 varna: 结果发现光模鼻子不给吃的，那猫瞬间学聪明
+20:05 varna: 伸过手就不鸟我了
+20:05 varna: 如是四回，猫衮粗
+20:05 code_new: varna: 爆
+20:05 varna: code_new: 快大建
+20:06 code_new: 猫竟然没咬你
+20:06 code_new: 然而还没回去
+20:06 varna: 大丈夫
+20:07 varna: 猫一般不太咬人
+20:07 varna: 一般怕人的话第一反应是跑
+20:07 tutu_wind: 用Json 定义一套请求 ，还要加出错情况，是不是有点找虐 。
+20:08 varna: 没什么吧
+20:08 code_new: 跑到宿舍去的一般都是求食
+20:08 varna: 但异常麻烦
+20:08 varna: 问题是我住六楼
+20:08 varna: 这猫难道还是个6xx空的火鸡航空队么
+20:09 code_new: 给猫爷跪了
+20:09 code_new: 你该拜一拜的
+20:09 tutu_wind: 那，远程请求 ，还可以用什么呢？ 又要跨语言，Meow ～
+20:09 molikto quit:Remote host closed the connection
+20:10 varna: 你可以作个大死考察下DCOM
+20:10 varna: 总之把数据发过去就行——但你很难发异常……
+20:10 varna: 假定对端有*相同*语义语用的异常可能还好点
+20:11 tutu_wind: 异常得另外定义状态了 ～ 
+20:11 varna: 不止是状态
+20:11 tutu_wind: 可惜没有啊 ～ 
+20:11 varna: 不过只考虑C的话，问题简化不少
+20:11 varna: 毕竟是废土
+20:11 tutu_wind: Android端可以用C++
+20:12 varna: 对了，兔兔来给我做试验品吧
+20:12 molikto joined channel
+20:12 varna: 肛旗已经先行了，你不是一个人在作死
+20:12 tutu_wind: 额 。。。 不献菊
+20:12 varna: https://github.com/Akvelog/p7demo 这个
+20:13 tutu_wind: 呀 Golang 
+20:14 varna: https://pastebin.mozilla.org/8839681 你可以简单地实现服务哦
+20:14 tutu_wind: OK ～乐意为之～ 
+20:14 yzld2002 joined channel
+20:14 cleamoon quit:Ping timeout: 240 seconds
+20:14 varna: ucontext被deprecate的原因居然是使用了参数列表()
+20:15 varna: POSIX那群人啊
+20:20 code_new: 话说肛旗怎么改名了
+20:20 varna: 他以前也用妹红这ID
+20:20 varna: 频道开始花式永夜抄的时候用得比较多
+20:21 code_new: 怎么突然就改回去了
+20:21 varna: 大概是尻疼
+20:21 code_new: =_=
+20:22 code_new: 认了半天
+20:22 varna: 另外没有特别情况的话准备看推演吧
+20:22 varna: 虽然我感觉这次的规模似乎有点大了……不过试试看
+20:23 code_new: 好的。什么时候
+20:23 code_new: 驼兄不适合打小规模
+20:24 varna: 不确认
+20:24 varna: 如果拖的话，说不定你回家能看
+20:25 code_new: 好的
+20:25 varna: 大规模我真会那啥的
+20:25 varna: 还好电探少
+20:26 code_new: 这次规模具体大在什么地方了
+20:27 code_new: 船只数量和地图比例？
+20:27 varna: 水面战和航空战都可能有
+20:27 varna: 算着疼
+20:28 varna: 我那点算力你也见识过的，巨不够用……
+20:28 code_new: 感觉会很有看头
+20:28 code_new: 肛旗不是要动用脚本了吗
+20:28 varna: 掷骰我也用脚本
+20:28 varna: 然而索敌……
+20:28 Mokou: 索敌自求多福
+20:28 varna: 你和T2那场水面战，我索敌最后都是剪枝着算的
+20:29 varna: 目测不太可能的索敌判定都不算了
+20:29 varna: 不然复杂度直接飙上平方的一半
+20:29 clcn_sk4bot joined channel
+20:29 code_new: =_=
+20:29 Mokou: .sk4 d100*10
+20:29 Mokou: 等等怎么用的来着
+20:29 varna: 看代码吧23333
+20:29 tutu_wind: 羊驼前辈自己完成调度啊 
+20:30 code_new: 2333
+20:30 Mokou: sk4 d100*10
+20:30 clcn_sk4bot: Roll d100 10 time(s):86 58 78 80 51 88 80 46 87 32 
+20:30 varna: tutu_wind: 协程是这样的：每个线程搭载多个协程，这里由内核调度；一旦发生了阻塞IO（目前只有这个），就重调度
+20:30 varna: 协程也可以主动放弃控制权
+20:31 Mokou: 你要不要考虑加个人工重调度
+20:31 varna: 但不是协作式的，是单纯的用户态并发
+20:31 varna: 不考虑
+20:31 varna: 这东西就是无脑地发出去，然后不管了
+20:31 Mokou: なるほど
+20:31 varna: rubtine的代码你如果需要，我可以打包给你
+20:31 varna: 但我不打算扔仓库了
+20:31 tutu_wind: 渣渣要好生膜拜下前辈的代码 。
+20:32 varna: 我代码丑
+20:32 Mokou: https://github.com/AbrahamHokuto/rubtine
+20:32 molikto quit:Remote host closed the connection
+20:32 Mokou: 不要问我为什么会在我帐号上
+20:32 Mokou: 我也忘了
+20:32 tutu_wind: get
+20:32 varna: 小耗和恥球的东西好看，我的东西仅仅能达到一些要求而已
+20:32 varna: 卧槽
+20:32 varna: 什么状况
+20:32 Mokou: 不知道……
+20:33 varna: contribution也是诡异的……
+20:33 varna: 算了就这样吧
+20:33 Mokou: 要不要炸掉
+20:33 varna: 想炸就炸，不想炸随意
+20:34 varna: 不过那程序太羞耻了，我自己反正是炸了
+20:34 Mokou: 是不是因为我fork了，然后你炸了……
+20:34 varna: 你fork了啊
+20:34 tutu_wind: 。。。
+20:34 varna: 那就对了
+20:34 Mokou: 我忘了
+20:34 Mokou: 可能是
+20:34 varna: 不然没理由活着
+20:34 varna: 随意吧，反正历史信息都有
+20:35 varna: 写那个其实是我以前的东西被TLS坑了
+20:35 Mokou: 哦，我写了个DEMO……
+20:35 varna: 一下不高兴，就写了个彻底协作式的
+20:35 Mokou: 炸了吧
+20:35 Mokou: 这个应该是我改过的
+20:36 varna: 好
+20:36 varna: 留本地拷贝吧，哪天你想改个好看点的再单独建
+20:36 clcn_sk4bot quit:Remote host closed the connection
+20:36 Mokou: 嗯
+20:36 varna: 那个limbo的基本形态其实是我写协程类似物的时候一直在用的
+20:36 varna: 好处是简单，坏处是多了一层跳转
+20:37 varna: 总体来说坏处多于好处
+20:37 cleamoon joined channel
+20:38 Mokou: 另外我的event_loop打算先处理timeout
+20:39 Mokou: 如果epoll返回时deadline过了，直接干掉
+20:39 varna: 先处理超时是对的
+20:39 Mokou: 即使IO操作可以进行了也这么来
+20:39 varna: p7之所以不删事件，是考虑到别的事情
+20:39 varna: 这体系太迟钝了
+20:39 varna: 调度循环不能保证被访问的频率，所以我希望更多的东西能活下来
+20:39 Mokou: なるほど
+20:40 Mokou: 主要是我觉得我这么来问题应该不大
+20:40 varna: 但单线程IO的话我会直接取消事件
+20:40 varna: 因为这是对的
+20:40 Mokou: 你身为一个HTTP Client，怎么就卡着这个deadline就绪了呢？
+20:40 varna: event loop不该复活事件
+20:40 whatofor_1 quit:Read error: Connection reset by peer
+20:40 varna: 因为它足够快
+20:40 varna: 但p7我不敢说
+20:41 varna: 实际上我们这里可以引入一个粗略的估计
+20:41 whatofor_1 joined channel
+20:41 varna: 你的ev loop里有一个确定的现象：所有IO和超时都伴随着顺序发生的evloop循环
+20:41 Mokou: 我当时就吟了两句诗，叫“苟利效率生死以，岂因祸福避趋之”
+20:41 varna: 而我么……
+20:42 varna: 我给你说下我本地echo test的心态
+20:42 varna: 我就不喜欢看到有几个明明可以活的pinger死在超时上
+20:42 varna: 而如果我不恰当处理，真有几次死了五个
+20:42 Mokou: ……
+20:42 varna: 虽然不是那个复活IO就绪协程的锅
+20:42 varna: 2k个死了五个
+20:42 varna: 这死亡率太高
+20:43 Mokou: 调度太费时间了么
+20:43 Mokou: 切换*
+20:43 varna: 不是
+20:44 varna: 有人认为自己超时了，拒绝生还
+20:44 Mokou: ……
+20:44 Mokou: 这什么情况
+20:44 varna: 超时wrap最后没有超时复位
+20:45 varna: 后来简单补了一下，就是咕咕几下2k个过去了
+20:45 varna: 另一边我用telnet同时挂着连接让他超时
+20:45 varna: 不过说个题外的，以前我给evloop的这种测试还要猛一点
+20:46 varna: 本地20并发顺序一万个快速的，然后另外似乎是20并发超时堵上800个，每个30s
+20:47 xxxxxxxx: 不过开打了么?
+20:47 Mokou: 我一般直接开1k并发……
+20:47 varna: 没有
+20:47 varna: 开打会通知的
+20:47 Mokou: 另外你怎么判定超时的
+20:47 varna: 你的意思是？
+20:47 varna: 实现还是别的
+20:48 Mokou: 实现
+20:48 varna: 超时定时器直接挂上carrier的定时器堆
+20:48 Mokou: 我还是没太明白拒绝生还的原因……
+20:48 varna: 然后epoll
+20:48 code_new quit:Ping timeout: 244 seconds
+20:48 varna: 但超时生效的话会专门设协程里一个标志，方便API
+20:48 varna: 定时器的销毁和协程无关
+20:49 varna: 那个拒绝生还不好复现
+20:49 varna: 似乎是这样的
+20:49 varna: 有几个就绪的家伙一直没被调度，结果……
+20:49 code_new joined channel
+20:49 Mokou: ……饿死了？
+20:49 varna: 看那样子是饿死了
+20:50 varna: 我只复现出少数的几回
+20:50 Mokou: 但是就绪了不应该超时吧
+20:50 Mokou: 还是说他们自己取得当前时间戳？
+20:50 varna: 时间戳应该不是问题
+20:51 Mokou: 那是epoll_wait返回的时候时间没到，结果饿着饿着过了deadline？
+20:51 varna: 这可能性有，但是不大
+20:51 Mokou: 超时是setsockopt设置的？
+20:51 varna: 没用那个
+20:52 varna: 那个只有你上recv之类的时候才会真触发，epoll不会鸟的
+20:52 Mokou: ……我有点混乱
+20:52 varna: 我也有点混乱
+20:52 varna: 如果你测试的话，去掉libp7.h ln44
+20:52 Mokou: 我看看
+20:52 varna: p7_timeout_reset()
+20:52 varna: 然后设定超时
+20:53 varna: 超时建议取3000ms
+20:53 Mokou: 我改一下K试试
+20:54 varna: 也有可能是我真的搞错了东西
+20:55 varna: 那些协程该被饿死
+20:55 code_new quit:Quit: Leaving
+20:56 varna: 小卷乖……小卷不摔……
+20:56 varna: 然而小卷miss
+20:56 varna: 这简直了……
+20:57 varna: 次世代水雷战队总是在耍我玩
+20:57 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/sd/pf_42197.jpg
+20:58 varna: 这提督好眼熟
+20:58 varna: cleamoon: 说起来，你玩过mount & blade么……
+21:00 Mokou: 你echo test怎么跑的
+21:01 varna: http://tieba.baidu.com/p/3898774273?fr=frs 还真有人买了武藏那个电探格子的眼镜
+21:01 varna: Mokou: 报错的例子是fork20, 每个顺序发100连接要求回显Hello Server
+21:01 Mokou: 不到一秒一万个跑完了，完全没效果……
+21:01 varna: ...
+21:01 varna: 来五万个
+21:01 varna: 他娘的资本主义
+21:02 varna: 你试试一次五万，先跑二十万
+21:02 varna: 顺序来，省得fd撑不住
+21:02 varna: 或者一万多来十次也行
+21:02 Mokou: 一千并发五十万请求，没看到超时
+21:03 Mokou: 难不成是ab请求的姿势不正确？
+21:03 Mokou: 我用wrk看看
+21:04 varna: 卧槽
+21:04 varna: 什么鬼
+21:04 sismvg: 一秒1万次..什么机器
+21:05 sismvg: 资本主义!.我这里1.5秒才5000..
+21:05 varna: 你要是能确认这件事，我就改一下
+21:05 hoxily joined channel
+21:05 Mokou: 一千并发一分钟，没看到超时
+21:05 varna: 我选择死亡
+21:05 Mokou: 惟一一行read timeout是我用telnet挂的
+21:06 Mokou: 吞吐量731.47MB
+21:06 Mokou: 以防万一我删掉kashiwara重新保存一下所有文件
+21:06 Mokou: ln44应该确实注释掉了……
+21:06 varna: 已灭
+21:07 varna: 将来要是我找到工作，也要买个好一点的机器给这些东西试试……
+21:07 varna: 但前提是我得能找到工作
+21:07 Mokou: 你那是并发开少了吧……
+21:07 varna: 我开不多……
+21:07 varna: 开多了我自己都能确保自己的装逼权
+21:08 Mokou: 一千并发一分钟，吞吐量731.70MB，请求数约1390K
+21:08 varna: ...
+21:08 Mokou: 没看到任何timeout或者read/write时的错误
+21:08 varna: 那就先这样
+21:08 varna: 出问题再说
+21:08 sismvg: 你可以开个whlie(true);
+21:08 varna: 其实对p7的最后一次大修是去年四月份的某个漫展上
+21:09 Mokou: 然而我10并发跑一万个请求也只用了0.57秒……
+21:09 varna: 中午修了修，给了基本的echo test, 然后下午跟着鬼叔狂嚎千本幼女
+21:09 Mokou: 我把代码打个压缩包给你看看？
+21:09 cleamoon: varna, 我玩过mount一个usb....
+21:09 varna: Mokou: 不用
+21:10 varna: Mokou: 我的读写比你的还简单
+21:10 Mokou: 那你那边不应该比我这边慢啊……
+21:10 varna: 你读的时候只要用的是p7_iowrap_timed就行
+21:10 Mokou: 是
+21:10 varna: 我机器……
+21:10 Mokou: telnet挂上去确实能超时
+21:10 Mokou: 差距没那么大吧……
+21:10 varna: 那就行
+21:10 varna: 鬼知道
+21:11 lh_mouse: Mokou, 你连 localhost ?
+21:11 Mokou: 或者你把你的demo给我试试
+21:11 Mokou: lh_mouse: 是
+21:11 varna: 不用了，我觉得K的demo更有参考价值
+21:11 lh_mouse: Mokou, 测不出问题的
+21:11 lh_mouse: localhost 开小灶了
+21:11 Mokou: 羊驼子那个是不是localhost
+21:11 varna: 是
+21:11 Ivan97 joined channel
+21:11 varna: 所以我没拦他localhost测试
+21:11 varna: 这里不是要真实吞吐量
+21:12 lh_mouse: Ivan97, 爆照
+21:12 varna: 因为我自己昨天离线都死了五个
+21:12 Ivan97: lh_mouse: 你会失望的…不如保持神秘感
+21:12 lh_mouse: Ivan97, 爆照
+21:13 varna: Mokou: 同步一下，用现在的版本
+21:13 varna: 没什么本质变化
+21:14 Mokou: 说起来我要不要去发个一周年几年贴
+21:14 Mokou: 纪念*
+21:14 Mokou: 感觉没啥好写的……
+21:15 varna: ok
+21:15 varna: 我自己也复现不能了
+21:15 varna: 可以写一个
+21:15 varna: 我去顶
+21:17 varna: 操，我忘修船了
+21:17 varna: 今天修不完潜艇了，就这样吧
+21:18 varna: Mokou: 你可以打那些入坑三周要拿甲的dalao脸啊
+21:18 lh_mouse: reviewboard 有人倒腾过么
+21:18 lh_mouse: 能直接用 git repository 工作么
+21:18 tutu_wind: 今天的日志好丰盛啊 ～ 
+21:19 lh_mouse: 傻逼 git   必须依赖 ssh 这种接口
+21:19 Mokou: 等我连上舰娘……
+21:19 varna: reviewboard我搜搜去
+21:20 varna: 看着不错的样子
+21:21 Asuka: 。。
+21:21 varna: tutu_wind: 来试用p7吧，它具有相当好的爆炸力
+21:21 Asuka: 刚刚把吃撑改了
+21:21 varna: Asuka: 咦，你在哪区
+21:21 Asuka: 现在舰队一堆中破小破的病号 玩不动了。。
+21:21 varna: 挂着修修
+21:22 varna: 一开始都那样
+21:22 Asuka: 得修上好几天
+21:22 varna: 等到了3-2就好点了
+21:22 tutu_wind: varna: 不需要看懂代码么？
+21:22 varna: 再趁着1-5简单，去搞点168
+21:22 Asuka: 本想把扶桑改了
+21:22 varna: tutu_wind: 想看代码也行，想直接用也行
+21:22 Asuka: 或者山城 正好缺战航
+21:23 tutu_wind: varna: 渣渣的想借鉴一下羊驼前辈的思想 。。。
+21:23 Mokou: 我忘了当时帮他扔到哪区了
+21:23 Mokou: 不是咸鱼湾就是猫屋
+21:23 varna: tutu_wind: 我没什么思想，把事情做出来已经很费力了……
+21:24 varna: 实际上我只是把我做过的几样事情合在一起弄出这个协程
+21:26 tutu_wind: 能作出羊驼前辈这样的成绩 ， 需要哪些基础啊？
+21:26 varna: 不需要多少基础
+21:26 varna: 岚月酱对我的评价挺准的，我会的东西大多可以速成
+21:27 Mokou: 我尝试解决wrk停止一瞬间kashiwara会爆炸的问题
+21:27 tutu_wind: varna: 喔喔 T_T 刚才你和Mokou的对话 ，没肿么听懂 。。。 T_T .
+21:28 Mokou: 结果kashiwara直接把gdb炸了
+21:28 Mokou: linux-nat.c:2578: internal-error: status_callback: Assertion `lp->status != 0' failed.
+21:28 Mokou: A problem internal to GDB has been detected,
+21:28 Mokou: further debugging may prove unreliable.
+21:28 varna: 噗？
+21:28 tutu_wind: 我回头看日志吧 ~ 
+21:28 Mokou: 最开始的问题应该是SIGPIPE
+21:28 Mokou: 我SIG_IGN之后还是爆炸……
+21:28 varna: ignore
+21:28 varna: 一开始为何不炸……
+21:28 Mokou: *** Error in `/home/plough/workspace/codes/izumo/kashiwara': double free or corruption (fasttop): 0x00007fffe8d163c0 ***
+21:28 Mokou: 概率
+21:29 varna: 奇怪，我这里echo一直没炸
+21:29 varna: 能看调用栈么
+21:29 Mokou: 我看看这次gdb炸不眨
+21:29 Mokou: 炸不炸*
+21:29 varna: 你怎么炸的
+21:29 varna: 还是ab么
+21:29 Mokou: wrk
+21:30 varna: ab持续不炸？
+21:30 Mokou: wrk应该是到时间直接关socket，所以会SIGPIPE……
+21:30 Mokou: +
+21:30 Mokou: ab应该是礼貌地等服务器关socket
+21:30 varna: EPOLLERR应该被直接唤起才对
+21:30 varna: 你试着来这么一个
+21:31 varna: telnet然后直接关
+21:31 varna: 我这里没跪
+21:32 Mokou: 没跪
+21:32 Mokou: 我觉得应该写完请求不等响应直接关
+21:32 Mokou: write才会sigpipe吧
+21:32 Mokou: read就sigpipe了应该不太可能，来不及
+21:32 varna: 你检查一下是谁pipe了
+21:33 Mokou: gdb里看到的是write
+21:33 varna: 不挂调试，直接strerror(errsv)看是谁挂了
+21:34 varna: 加上fd和时间戳
+21:34 Mokou: 噗，我懂了
+21:34 Mokou: SIG_IGN以后我忘make了……
+21:34 varna: 噗哈哈哈
+21:35 Mokou: 现在不会炸了
+21:36 varna: 那个其实你不绑IGN也行
+21:36 varna: 我推荐你写在选项里
+21:36 Mokou: 由用户决定？
+21:37 varna: MSG_NOSIGNAL
+21:37 varna: 这里我不推荐用read/write的原因之一
+21:37 varna: 你缺第四个参数
+21:37 Mokou: なるほど
+21:37 Mokou: 代以recv/send么
+21:38 varna: 对
+21:38 varna: 虽然有些书的示例上会用r/w这一对儿
+21:38 Mokou: 了解
+21:38 varna: 不过网络我一直推荐就用套接字那些
+21:38 Mokou: 另外其实我用DWM式配置是想提高效率……
+21:38 Mokou: 虽说我想过一个更可怕的方法
+21:38 varna: 嘛，反正就启动一次
+21:39 varna: 随意了
+21:39 Mokou: 弄个DSL出来
+21:39 varna: 先弄些基本的出来就行
+21:39 Mokou: 启动时把配置文件展开成脚本的形式
+21:39 Mokou: 然后JIT到机器码
+21:39 Mokou: 最后直接把event_loop出来的地址改写到JIT结果对应的入口
+21:39 varna: 会疼，但是这个可以libgccjit
+21:40 varna: 不过老实说，服务器上我不太喜欢有爆炸力的东西
+21:40 Mokou: 这个我觉得有点太丧病……
+21:40 varna: p7是例外，因为它就是fork on conn向的
+21:40 Mokou: p7用起来倒是很爽
+21:40 Mokou: 直接block在上面就不用管了
+21:40 varna: 我说个笑话
+21:41 varna: 有时候我觉得用go, 我就放弃了自己的这些鬼畜
+21:41 varna: 然后我就不高兴……
+21:41 Mokou: 2333333
+21:41 Mokou: 还是喜欢用自己的轮子么
+21:41 varna: 不是
+21:41 varna: 是觉得没什么爆炸物可以制作了
+21:41 varna: 不过我不用go的主要原因是它部署弄得跟巫女一样
+21:42 Mokou: 现在的语言都太安全了？
+21:42 varna: 不然就也用它了
+21:42 varna: 什么东西都要看那些目录来配置
+21:42 varna: 虽说其实一般C库也一样，但已经有一套配置了，我觉得再弄一套出来不合适
+21:43 varna: 搞个个人电脑还要一国两制，你们对西方的那一套理论ry
+21:43 Mokou: 要是我看不爽就直接screw you然后自己搞一套出来
+21:43 varna: 抛开部署，go挺好的
+21:43 Mokou: 入坑一周年都不让我做补给船做得舒服些
+21:43 varna: 虽然看着丑，但是很多时候能代替C
+21:43 varna: 分行不论
+21:44 varna: 那个奇妙的加分号规则加得我云里雾里
+21:44 varna: 去他大爷的什么傻乎乎玩意儿……
+21:44 Mokou: 我还是对c-like物感觉审美疲劳……
+21:44 sismvg: 分号能让代码看起来更加的“叼"
+21:44 varna: go可以不写分号
+21:44 varna: 但他会试图强制地、提前地给你加
+21:44 Mokou: 然后它用预处理器加分号
+21:44 Mokou: 预处理器
+21:44 varna: 即使你找到了一片不深不浅的水域
+21:44 varna: 一块不大不小的木板
+21:45 varna: 相信我，你会提前强制溺毙
+21:45 Mokou: 遇见了预处理器，你就会被水淹没，不知所措
+21:45 sismvg: 总算做出了个rpcbind..写服务意外的很麻烦
+21:45 molikto joined channel
+21:46 varna: 我当时真是不知所措
+21:46 varna: 我就想分个行
+21:46 varna: 他给我加个分号
+21:46 Asuka: 话说 明天早上8：00有可能去学校 下午3:00补课。。
+21:46 varna: 大丈夫
+21:46 Asuka: 可能会有段时间来不了。。
+21:47 varna: 如果有事情，也会先确认你有没有时间的
+21:47 Asuka: 啊这样 谢谢
+21:47 varna: 不客气
+21:50 varna: http://www.bilibili.com/video/av1554666/ 月刊少女
+21:52 varna: 十点关楼，撤了
+21:53 varna: 明天维护，请诸君准备好长远征
+21:53 varna quit:Quit: leaving
+21:53 Asuka quit:
+21:54 hoxily: 来不及肛了
+21:57 xxxxxxxx: 好好肛道理
+22:05 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+22:08 hoxily quit:Quit: Leaving
+22:21 hoxily joined channel
+22:35 tutu_ joined channel
+22:47 hoxily quit:Read error: Connection reset by peer
+22:47 hoxily joined channel
+22:51 tutu_ quit:Read error: Connection reset by peer
+22:51 tutu_ joined channel
+22:53 cleamoon- joined channel
+23:01 xxxxxxxx quit:Ping timeout: 264 seconds
+23:01 biergaizi joined channel
+23:01 xxxxxxxx joined channel
+23:15 hoxily quit:Quit: Leaving
+23:37 Mokou: 睡觉
+23:37 Mokou: 诸君武运
+23:37 Mokou quit:Quit: 睡觉
+23:58 xxxxxxxx quit:Quit: Leaving...

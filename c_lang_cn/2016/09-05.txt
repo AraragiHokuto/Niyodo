@@ -1,0 +1,493 @@
+00:28 whocares_2_ joined channel
+00:28 whocares_2 quit:Ping timeout: 265 seconds
+00:30 whocares_2_ quit:Remote host closed the connection
+00:30 FrankHB quit:Ping timeout: 240 seconds
+00:30 whocares_2 joined channel
+00:45 FrankHB joined channel
+00:55 lh_mouse quit:Ping timeout: 265 seconds
+00:59 randomclown joined channel
+01:38 Youmu quit:Quit: Connection closed for inactivity
+01:54 CaMoT quit:Ping timeout: 258 seconds
+02:53 linearain joined channel
+02:54 linearain: hi, does anyone know huihan9?
+02:55 linearain: he used to be here
+02:59 Mokou quit:Quit: leaving
+03:57 Meow-J quit:Remote host closed the connection
+03:57 Meow-J joined channel
+04:09 linearain quit:Quit: Leaving
+06:54 T-J-M quit:Ping timeout: 240 seconds
+07:01 T-J-M joined channel
+07:09 T-J-M quit:Ping timeout: 276 seconds
+07:10 T-J-M joined channel
+08:03 FrankHB quit:Ping timeout: 252 seconds
+08:19 T-J-M quit:Ping timeout: 258 seconds
+08:34 FrankHB joined channel
+08:36 T-J-M joined channel
+08:49 iyzsong-xx: = =
+08:53 CaMoT joined channel
+08:56 lh_mouse joined channel
+09:09 cleamoon quit:Ping timeout: 240 seconds
+09:16 ianma joined channel
+09:18 wchen joined channel
+09:23 Youmu joined channel
+09:26 ianma quit:Remote host closed the connection
+09:33 ianma_ joined channel
+09:38 whatofor joined channel
+09:41 wchen quit:Ping timeout: 265 seconds
+09:50 whatofor quit:Ping timeout: 276 seconds
+09:55 ianma_ quit:Remote host closed the connection
+09:56 CaMoT quit:Ping timeout: 255 seconds
+10:15 ianma_ joined channel
+10:44 StardustX joined channel
+11:17 ianma_ quit:Ping timeout: 265 seconds
+11:41 ianma joined channel
+12:22 CaMoT joined channel
+12:22 CaMoT quit:Max SendQ exceeded
+12:24 CaMoT joined channel
+12:25 CaMoT quit:Max SendQ exceeded
+12:26 ianma quit:Remote host closed the connection
+12:26 CaMoT joined channel
+12:31 CaMoT quit:Ping timeout: 255 seconds
+12:40 iyzsong-xx: = =
+12:43 ianma joined channel
+12:55 StardustX quit:Remote host closed the connection
+14:01 xxxxxxxx quit:Quit: Leaving...
+14:14 ianma quit:Remote host closed the connection
+14:17 wchen joined channel
+14:18 Youmu quit:Quit: Connection closed for inactivity
+14:24 cleamoon joined channel
+14:35 wchen quit:Read error: Connection reset by peer
+14:41 ianma joined channel
+14:45 ianma quit:Remote host closed the connection
+14:45 cleamoon quit:Ping timeout: 250 seconds
+14:48 cleamoon joined channel
+14:58 ianma_ joined channel
+15:28 ianma_ quit:Remote host closed the connection
+15:31 Izumo joined channel
+15:31 ianma joined channel
+15:39 Mokou joined channel
+15:47 cleamooon joined channel
+15:53 ianma quit:Remote host closed the connection
+16:04 ianma_ joined channel
+16:06 cleamooon quit:Ping timeout: 260 seconds
+16:09 ianma_ quit:Remote host closed the connection
+16:10 ianma joined channel
+16:11 ianma quit:Remote host closed the connection
+16:11 StardustX joined channel
+16:11 ianma joined channel
+16:16 ianma quit:Ping timeout: 252 seconds
+16:17 cleamooon joined channel
+16:29 ianma_ joined channel
+16:37 ianma_ quit:Remote host closed the connection
+16:48 cleamoooon joined channel
+16:50 ianma joined channel
+16:52 cleamooon quit:Ping timeout: 258 seconds
+16:54 ianma quit:Remote host closed the connection
+16:55 ianma_ joined channel
+16:55 Youmu joined channel
+17:11 ianma_ quit:Remote host closed the connection
+17:26 ianma_ joined channel
+17:28 cleamoooon quit:Ping timeout: 244 seconds
+17:34 cleamoooon joined channel
+17:37 StardustX quit:Quit: Leaving
+17:37 ianma_ quit:Ping timeout: 250 seconds
+17:42 lh_mouse: geordi, << +HUGE_VAL
+17:42 geordi: inf
+17:43 Izumo quit:Quit: Connection closed for inactivity
+17:45 iyzsong-xx: x.x
+17:50 cleamoooon quit:Ping timeout: 244 seconds
+18:01 cleamoooon joined channel
+18:11 FrankHB quit:Ping timeout: 244 seconds
+18:14 ianma_ joined channel
+18:17 ianma_ quit:Remote host closed the connection
+18:38 FrankHB joined channel
+18:48 cleamooon joined channel
+18:48 cleamooon: @噗尺：老婆不知为何突然生气骂我，我哄了半天她才冷静下来问：“你现在知道你错在哪里了吗？”我怒道：“你什么意思？难道我没有错就不能被你骂了？”
+18:50 cleamooon: lhanjian:  http://lishuo3.coding.me/lishuo3/
+18:57 cleamoooon quit:Ping timeout: 265 seconds
+18:58 cleamoooon joined channel
+19:03 StardustX joined channel
+19:04 iyzsong joined channel
+19:04 yimis joined channel
+19:04 yimis quit:Client Quit
+19:07 [HoroServ] is now known as gauge
+19:07 iyzsong: (┙>∧<)┙へ┻┻
+19:11 cleamoooon quit:Ping timeout: 258 seconds
+19:11 iyzsong: - -
+19:12 cleamoooon joined channel
+19:16 Youmu: lh_mouse: gcc 4.8.2 的版本是不是 atomic 库有问题？
+19:19 Youmu: (现在有这样一个场景：1个producer, 1个consumer, 还有个主线程。主线程直接退出，producer没有启动，队列里没有数据，可是consumer还是会 try_dequeue 成功
+19:39 february joined channel
+19:44 lh_mouse: Youmu, 不知道，没用过。
+19:44 Youmu: O.O
+19:51 cleamoooon quit:Ping timeout: 258 seconds
+19:51 cleamoooon joined channel
+19:58 ianma_ joined channel
+20:04 ianma_ quit:Remote host closed the connection
+20:05 ianma joined channel
+20:09 ianma quit:Remote host closed the connection
+20:09 ianma_ joined channel
+20:12 varna joined channel
+20:12 varna: 去个超市都能遇到传教的半吊子鬼知道真假的盲信基督徒
+20:12 varna: 我对宗教没有兴趣，不要再来了
+20:12 CyrusYzGTt joined channel
+20:16 StardustX: 我见过一个基督徒自称是北大毕业的，用热力学第二定律传教
+20:16 cleamooon: 手持佛珠，身穿道袍，见面划一个十字，说：安拉乎阿克巴
+20:17 iyzsong: _(:з」∠)_
+20:17 cleamooon: 他的教主是nicolas carnot？
+20:18 varna: 手持念珠，见面划一个十字，说：不要滥用int
+20:18 Mokou: 耻球神教徒？
+20:18 StardustX: 233
+20:18 varna: 现代水雷屋
+20:18 Mokou: http://ww2.sinaimg.cn/mw690/006bm8Y7jw1f7i3t5kivqj30c80kojsf.jpg 翔鹤姐不要啊
+20:19 cleamooon: 不用int还用double呀
+20:19 varna: 滥用int代表程序对符号和整数长度的控制失当了
+20:20 varna: 个人推荐int只用来对付历史遗留问题，以及表示和尺寸无关的返回值
+20:20 StardustX: 然后我耐心的给那个教徒科普热力学第二定律是应用于孤立系统的
+20:20 varna: 我感觉街上传教的虔婆大爷们圣经都没我熟……
+20:20 Mokou: 梁牧首
+20:21 varna: 以前还在学校里遇到一个传教的楞头青，看来他对圣保罗有关信和行的关系纠结得不够深，被堵噎住了
+20:21 Mokou: 66666666666
+20:21 Mokou: 总感觉我朝天主教一股山寨气息……
+20:22 varna: 圣保罗在那时代的使徒里给我印象最好，也是因为他的思想没有局限于信春哥原地满状态复活
+20:23 varna: 正经的教会还可以的
+20:23 varna: 不过地方小教会就没什么意思，讲道常有糟粕
+20:23 varna: 赞美诗选集里也一大堆糟粕
+20:23 varna: 不论一般文化，单纯从基督教看来都未必可取
+20:23 cleamooon: 之前有个给老爸传教的，说世界上所有错事都是撒旦做的，撒旦的化身是犹太人，世界上所有坏事也是犹太人做的，包括一战二战... 老爸说要不是客人多真想努力吐槽
+20:23 Mokou: _(:з」∠)_
+20:24 varna: 不过这个黑点耶稣自己都提过，所以不意外
+20:24 Mokou: 其实我一直好奇，不服从罗马教会的真的能算天主教么
+20:24 varna: 不能
+20:24 varna: 天主教这一宗当然得听教皇的，所以……
+20:24 cleamooon: 只能算基督教吧
+20:24 varna: 自成一宗可以
+20:24 Mokou: 异端！吃我十字军！
+20:25 varna: 毕竟信仰和宗派是两码事
+20:25 Mokou: 另外现在天主教官方的翻译应该是教宗？
+20:25 varna: 信上帝不代表不艹加尔文
+20:25 varna: 应该是
+20:26 varna: http://www.bilibili.com/video/av3361235/ 感觉好囧 # 《天地明察》电影版
+20:26 Mokou: 虽说我对教宗最主要的印象是人形ATM
+20:26 cleamooon: 还说信上帝就能平安，不信就一家都倒霉
+20:27 cleamooon: 真人电影呀，我还是等着看漫画吧
+20:27 varna: 那是西木野提款姬
+20:27 varna: 漫画完结了，可看
+20:27 Mokou: uccu
+20:29 varna: 啊啊，关孝和出场了
+20:29 cleamooon: 完结了？我上次才看到旅行中的一个人挂了...
+20:30 varna: 长着和漫画一样的苦逼脸
+20:30 varna: cleamooon: 那才一半左右
+20:31 varna: 噫，后面的镜头开始有意思了
+20:31 varna: 卧槽题目改了
+20:33 cleamooon: 漫画出得好快
+20:33 cleamooon: 我倒是希望多些数学
+20:34 varna: r=10的圆O内作长度9的弦AB，过圆心O作AB的中垂线交圆于D
+20:34 varna: 手滑
+20:34 varna: 交AB于D
+20:34 varna: 求OD
+20:34 varna: 这题为何变得如此暴力
+20:35 varna: 小说和漫画里那个9/12/15的直角三角形内两个互切、切两边的30/7半径圆还要好点……
+20:37 cleamooon: 弦是什么来得...
+20:38 varna: 圆内非直径的线段
+20:38 varna: 和圆有两个交点
+20:38 varna: puuuuuu开场天元
+20:38 cleamooon: 哦，这不就是个勾股就完了吗...
+20:39 varna: 对啊
+20:39 varna: 把题说出来之后就结束了……
+20:39 cleamooon: 果然越快餐智商要求就得越低吗
+20:39 varna: 之前那个还逼人犯懒解三角
+20:40 cleamooon: 漫画里那个题用基础方法做，还挺不错的
+20:41 varna: +
+20:41 varna: 平几应该禁三角
+20:41 varna: 不然就崩了
+20:41 cleamooon: 顺便禁止解析和向量解法
+20:42 varna: +
+20:43 cleamooon: 直接撸几何原本吧，挺好玩的
+20:44 varna: 几何原本的体系很有趣，不过传说欧几里德自己也被图误导着误撞了几题
+20:44 varna: 电影调整了一些叙事速度，感觉不错
+20:45 varna: 上览棋的桥段被大改了
+20:45 varna: 作为叙事来说无可挑剔，毕竟电影玩文艺范多了容易叙事崩坏掉
+20:47 varna: puuuuu那题还没解开
+20:47 varna: 那时代是不是没有跟弦相关的定理传入日本……
+20:49 varna: _(:з」∠)_米饭看着真开胃啊
+20:50 cleamooon: 感冒就这好吃，开餐车不怕了
+20:51 cleamooon: 可能和圆有关的都没有吧
+20:51 cleamoooon quit:Ping timeout: 258 seconds
+20:51 cleamoooon joined channel
+20:52 varna: 毕竟说出来的话题目就全说破了，但过圆心向弦作的垂线就那么回事
+20:52 varna: 啊，看错了
+20:52 varna: 原来是求弧长
+20:53 cleamooon: 这不用三角还真不好弄
+20:53 varna: 用三角就是个查表功夫，不用三角的话就得取巧了
+20:55 cleamooon: 身为moer的尊严不允许我这种题查表
+20:55 varna: 但初等弧长求法有任何跟圆心角没关的么，想来也不可能
+20:55 varna: 不知道角度就不知道弧有多长，从三角形里作出角度的东西就是三角了
+20:58 varna: 所以那年代做这种题困难的原因是没三角函数表的时候，展开三角函数困难？
+20:58 varna: 关孝和疑似搞过这个玩意儿
+20:58 cleamooon: 连表都没有的时候，应该没有展开的理论吧
+20:59 varna: 我现在觉得看对题目之后，这个题确实在neta关孝和本人的理论
+21:00 varna: 他搞过牛顿插值
+21:01 cleamooon: soga
+21:01 cleamooon: 哈哈哈，果然如我所想，20pi／7
+21:01 cleamooon: 当然，不是准确值
+21:02 Mokou: http://ww1.sinaimg.cn/mw690/69200e95gw1f7cwrc3ubgj20qk0zkgq1.jpg
+21:02 cleamooon: 可能，不是准确值
+21:02 varna: 关孝和其人还是颇进步的，不过不知为何东方人就是不喜欢发明代数
+21:02 cleamooon: 当时我就吟了两句诗
+21:03 cleamooon: 东方人也不怎么喜欢几何呀... 
+21:03 varna: 梦里不觉秋已深
+21:03 varna: 23333333黑得好
+21:03 varna: 不过似乎插值技术普遍不错，因为要修历法
+21:03 varna: 对十进制的应用也还算先进，虽说后来世界人民都用上了
+21:04 lhanjian: varna: 浙江这边信基督的挺多的
+21:04 * cleamooon 插值是什么都忘了...
+21:05 lhanjian: 可能你身边某个伙计就是信教群众，所以闷声发大财吧
+21:05 varna: 我信米空
+21:05 varna: 果然现代人学的、破烂的工程数学搞得人意识模糊
+21:06 cleamooon: 我信拉面
+21:06 varna: RAmen
+21:06 Mokou: He boiled for your sins
+21:06 Mokou: RAmen
+21:06 cleamooon: 如果有搞古代的几何代数数论就能赚钱的工作我一定去做一辈子
+21:07 varna: 反了，古代能搞哲学和科学的都得是有钱人或者有钱人的附庸
+21:07 varna: 职业研究者是现代才可行的
+21:08 varna: 这道策演得像个……Gay
+21:09 cleamooon: 也许，其实，就是...
+21:09 cleamooon: 所以说，好想要钱呀
+21:10 cleamooon: 哪位大佬行行好赏我几个亿呀
+21:10 varna: 而且要是没有欧几里德，数学恐怕会有更多处于比不开窍还不开窍的时期……
+21:12 cleamooon: 隔壁老欧贡献确实很大
+21:15 varna: 不过看冈田准一演这个总觉得有点违和
+21:16 varna: 也许找个长相更平凡的人来演会更好……
+21:16 Mokou: http://ww2.sinaimg.cn/mw690/75b7cf73gw1f7gibwzg5fj20eq1w0wm4.jpg 弟控半藏
+21:17 varna: 天使开大怒送十一杀
+21:18 varna: 这不是笑话，而且被大起来之后为了对得起天使，我真参与过这种十一杀送人头……
+21:20 Mokou: 你被强化了！快送！
+21:21 varna: 这个也出过，不过还好……
+21:21 varna: 当时打直布罗陀进攻，手76被强化，一打四干不过啊……
+21:21 Mokou: 2333333
+21:23 varna: 所以后来缺奶的时候我都选DJ
+21:23 varna: 容易活容易浪，跟路人团混也混得起
+21:23 cleamooon: 作为fps，屁股如果神枪法，能赢吗？
+21:23 varna: 不能
+21:24 varna: 枪法好能帮你撂倒多一两个人是真的，适合去打输出位
+21:24 varna: 这个挺重要的
+21:25 cleamooon: soga，好想看finatic什么的回来玩屁股
+21:25 varna: 不过我感觉比较重要的还是默契
+21:25 varna: 制定好基本战术，有一两个核心，其他人跟着他们的思路打
+21:26 varna: 崩了就撤回去重整
+21:26 CyrusYzGTt quit:Ping timeout: 244 seconds
+21:26 february quit:Ping timeout: 244 seconds
+21:26 iyzsong quit:Ping timeout: 244 seconds
+21:26 february joined channel
+21:26 varna: 路人局最不好的地方，就是一旦攻守崩了一波，核心意图就没有了，会有相当一段时间场面散乱
+21:26 CyrusYzGTt joined channel
+21:27 varna: 这种时候拦也拦不住，只能祈祷个人技术和运气
+21:27 varna: 我觉得职业战队应该不会有这种问题
+21:27 varna: 俗称不抱团
+21:27 cleamooon: 所以cs的职业队回来玩屁股多好，虽然我不会看
+21:28 varna: 屁股的另一个问题就是转播仍然不好看
+21:29 varna: 游戏里面的镜头预设太少了，直播起来乱糟糟的
+21:29 cleamooon: 6屏同时播
+21:29 varna: 播第一视角其实不合适，最好是第一+重点场景的定点镜头
+21:29 varna: 加观察者就可以了
+21:29 iyzsong joined channel
+21:31 cleamooon: 所以需要很多屏幕呀
+21:31 cleamooon: 或者直接当rts直播
+21:32 varna: 那就变成CS直播了，收视率会很差
+21:32 varna: CS比赛连我这种人都只喜欢看战报
+21:32 cleamooon: ......
+21:32 cleamooon: 其实吧，我也只会看战报...
+21:33 varna: 选手技术都太好，没看点
+21:33 varna: duang一下就决出生死了
+21:33 Mokou: RA3比赛好看
+21:33 Mokou: 各种谐
+21:33 varna: 现在我还看的比赛也就魔兽了
+21:33 Mokou: 什么五幻影骑脸铁锤，苏联惊呼不可战胜
+21:33 varna: 几年下来，选手的操作水平上升得可怕，即使达不到sc1的程度
+21:33 Mokou: 结果一个大冷冻拍下来，忘了把幻影拉开
+21:35 cleamooon: sc1太可怕了，不过还是war3好玩，一个锤子定胜负
+21:36 cleamooon: 真的撑得到大冷冻吗...
+21:36 varna: 1.27似乎不再是DH的时代了
+21:36 Mokou: 旗鼓相当的对xie手xing打到大冷冻出来很正常啊
+21:37 cleamooon: 但是mk还是很nb
+21:40 varna: MK出不来的
+21:40 varna: 我还是相信大法的战术地位
+21:41 cleamooon: 大fa+mk
+21:42 Mokou: 2-5连掉两个雾岛
+21:45 varna: 欧
+21:45 varna: 一般人都出高雄
+21:47 varna: 驲，这米饭看着真好吃啊
+21:49 varna: 要不是水槽淘米不方便，我该搞个电饭煲的……
+21:49 cleamooon: 2-5 orz
+21:49 cleamooon: 水槽太小？
+21:50 varna: 小而浅，就是洗脸程度
+21:50 varna: 厨房用的话，怎么也得是个深一些的平底水槽
+21:51 varna: _(:з」∠)_做出米饭的话，配上酱油也好、咸菜也好，味道绝对赞
+21:51 cleamooon: 不怕浪费水的话可以用换鱼水的方法洗
+21:52 varna: 还可以买来大葱蘸着酱油，就了米饭吃
+21:52 varna: 健康便宜好吃
+21:52 varna: 那样太麻烦了
+21:53 varna: 现在我洗衣服都是用淋浴喷头放水的，就是因为水槽太小
+21:53 cleamooon: 为了吃好吃的还能嫌麻烦吗，虽说我是如果让我做饭我宁可不吃的类型
+21:53 cleamooon: 把水槽砸了吧
+21:55 varna: 啊，麻吕眉
+21:57 cleamooon: 对了，舰娘那个雷装火力之类的正多边形战力图，有作为统计图的学名吗？
+21:58 varna: 雷达图
+21:58 varna: 似乎是这么叫的
+21:59 cleamooon: soga, tks
+22:04 varna: 关孝和一副芥菜磕多了的表情
+22:06 cleamooon: 于是初等解法到底有没有
+22:06 cleamoooon quit:Ping timeout: 258 seconds
+22:07 cleamoooon joined channel
+22:07 varna: 如果要数值解的话，就得插值
+22:07 varna: 插值确实是初等的
+22:07 varna: 展开三角函数则不是……
+22:08 cleamooon: ...
+22:09 cleamooon: 艹，我说怎么这课讲义内容这么少，原来连作业都要求自己去找／看论文
+22:10 ianma_ quit:Quit: Leaving...
+22:18 varna: 你系连幼女都没有，课业又重，不会撸管过度么
+22:18 cleamooon: 艹，没简单解决办法，看论文了
+22:19 cleamooon: 撸管都没时间，我都需要洗涤灵加速了
+22:19 varna: 撸管都没时间的话更得放松了
+22:20 varna: 如果一管不能解决问题，那多一管也不能
+22:20 cleamooon: 真不愧是世界一流的灰机系，第一次作业的第一道题是把一个论文弄成matlab码，我说怎么这破作业给两周时间
+22:21 varna: ...
+22:21 varna: 这可是个脏活，论文里说半截话的不少
+22:22 cleamooon: 问老师问题都是一种“你不会呀，没关系，我也不会”的态度
+22:22 varna: 我觉得你们的作业里应该包括了教授们的杂活
+22:22 cleamooon: 是iso出的standard，应该不至于看不懂
+22:22 cleamooon: 当然包括了...
+22:23 cleamooon: 而且不是研究的杂活，是教学的，上课随随便便一讲，剩下你们回家看吧
+22:23 varna: ...
+22:23 varna: 最后还是自生自灭啊
+22:23 varna: 感觉要先进的话必须自己找教授去联系进研究室？
+22:24 cleamooon: 顺便一提，应该使用的iso standard是要钱的，我们用的是网上能找到的us standard...
+22:24 varna: ...
+22:25 cleamooon: 似乎先进在于毕业后工作能力强，学校骄傲的自称，公司喜欢用我们的原因就是这玩意都撑下来了，工作就没什么可怕的了
+22:26 varna: 这倒是正常的
+22:27 cleamooon: 至于作为学校的先进性，主要来自于，教授希望你做些他都没做的事情...
+22:28 varna: 这不是很厉害吗……研究失败了是正常的，能取得一点微小的成果就可以
+22:28 CyrusYzGTt quit:Ping timeout: 244 seconds
+22:29 cleamooon: 只做了一些微小的工作
+22:30 iyzsong: _(:з」∠)_
+22:30 varna: 念诗吧
+22:30 varna: 梦
+22:30 cleamooon: 其实吧，研究成功了才奇怪吧
+22:30 varna: +
+22:31 varna: 多数研究都是前进艰难，但小成果有
+22:31 varna: 能做到为同行和后人积累经验就可以了
+22:33 cleamooon: 成果就是让你后悔选这个系吧
+22:33 varna: 因为没有幼女
+22:33 cleamooon: 顺便让你觉得学到的都是错的
+22:34 varna: 这正常
+22:35 varna: 至少我反观计算机系的教学，感觉本科学生学下来，应该明白怎么砸烂自己的狗头
+22:37 cleamooon: 之前一个哥们学习成绩优异，被选上去米帝验证自己的超音速设计，做了个真实大小的模型，然后，0.85马赫不到就共振成蜂鸟了
+22:39 varna: 233333
+22:40 lh_mouse: geordi, { int quo; double rem = quorem(9.801000, -9.899000, &rem); cout <<quo, rem; }
+22:40 geordi: error: 'quorem' was not declared in this scope
+22:40 cleamooon: 顺便一提，这个设计是他的master thesis
+22:40 lh_mouse: geordi, { int quo; double rem = remquo(9.801000, -9.899000, &rem); cout <<quo, rem; }
+22:40 geordi: error: no matching function for call to 'remquo(double, double, double*)'
+22:40 varna: OTL
+22:40 lh_mouse: geordi, { int quo; double rem = remquo(9.801000, -9.899000, &quo); cout <<quo, rem; }
+22:40 geordi: -1, -0.098
+22:42 gauge: i.e. 毕业无望 ?
+22:43 varna: 我觉得thesis会被驳回
+22:43 varna: 毕竟理论出现了问题
+22:43 cleamooon: 毕业无望+
+22:44 cleamooon: 哪里驳回了，优秀论文呢，教授跟他说“你放心去吧，后面的工作就交给我了”
+22:45 varna: ...
+22:45 varna: 但硕士论文不是要供公开检索的么
+22:45 cleamooon: 是呀，检索又不代表是对的
+22:45 cleamooon: 今年春天教授会带着改进版去米帝的
+22:45 varna: 虽说如此，但连额外说明都没有的话，会困扰别人的
+22:46 cleamooon: 哦，那种问题我就不知道了，可能会有修改的要求吧
+22:48 cleamooon: 不过我校很多东西是在公司做的，其实很多不能检索的... 尤其是数据...
+22:48 varna: 保密正常
+22:49 cleamooon: 如果你看一篇论文，最后来一句：“其实，上面都是错的（笑”
+22:51 varna: 至少写在实验和结论里，那两部分我一定会看
+22:54 cleamooon: orz
+22:56 varna: 摘要、intro、实验、结论，这是我浏览时候看的
+23:00 cleamooon: 不看证明／论证？
+23:01 varna: 我未必会去看理论，先从这四部分里决定要不要往下看
+23:02 varna: 摘要会说明论文的目的和方法，结论更多地说明成果，实验提供信度，intro提供横向比较
+23:03 varna: 这些都写不好但理论不错的文，遇到的概率恐怕跟爱宕半夜雷击命中的概率差不多低
+23:04 cleamooon: soga
+23:05 varna: 电影看完了，感觉唯一亮点就是改历失败时候的压力写得比小说真
+23:05 varna: 其余的燃点一概没有……
+23:06 cleamooon: ......
+23:06 varna: 尤其最后部分
+23:07 varna: 原著那种历经磨难的自如心态完全被改掉了，极差评
+23:07 cleamooon: 你看了小说？
+23:08 varna: 我先看完的小说
+23:08 cleamooon: orz
+23:08 varna: 有翻译版的
+23:08 varna: 我日文也就是过不了考试的水准
+23:08 cleamooon: orz
+23:11 lh_mouse quit:Quit: For the Red Army!
+23:12 lh_mouse joined channel
+23:20 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:22 cleamooon: 3333有秋云？
+23:23 varna: 有
+23:23 varna: 这个是我鹤超改造系列任务推出时候的故事了
+23:24 varna: 我就赌出过几个
+23:24 cleamooon: orz
+23:25 varna: 我还是喜欢翔鹤以前的立绘
+23:25 varna: 新立绘表情奇异，感觉自己被牛头人
+23:27 cleamooon: @夜骸 “宁波市长卢子跃，2014年8月以来，多次安排公务用车，接送浙江省金华市的理发师，往返500公里，到宁波市专门为其理发”，于是我专门放狗搜了卢市长的照片，明明是个地中海，呃……
+23:27 cleamooon: 其实就是那样吧
+23:28 cleamooon: 你的船都是随随便便几百几千人上过的
+23:28 varna: 说得好，基斯卡岛撤退的时候一个轻巡就载了一千多人
+23:31 cleamooon: 以三次元的观点看，这些都是绿茶中的比齐王呀
+23:39 Mokou: OK
+23:39 cleamooon: 噗，现在都有这功能里吗
+23:39 varna: 手工的
+23:40 cleamooon: orz
+23:40 Mokou: 用文本编辑器打开log文件，删掉那几行，保存
+23:40 varna: http://tieba.baidu.com/p/4761652412 现在的年轻人……
+23:40 cleamooon: 嘛，这只证明，秘书应该不止能干，还得能干
+23:41 cleamooon: 还在搜索便宜的vps／hosting中
+23:41 Mokou: linode
+23:41 varna: ^ 壕
+23:41 Mokou: ^ 壕
+23:41 * varna 穷
+23:42 cleamooon: 道理我都懂，不过为什么帖子那么花哨呀
+23:42 * Mokou 买买买(qiong)
+23:42 varna: 那些道理其实一大半都是狗屁
+23:42 Mokou: 这都什么破玩意
+23:43 cleamooon: c的语法再难记，那去死吧
+23:43 cleamooon: 饿饿饿，曲颈向火锅，白天看薪水，账单比钱多
+23:43 varna: C的语法其实很恶心
+23:43 Mokou: 怎么本部只剩一个吧主了
+23:43 cleamooon: 但不难记
+23:43 varna: 因为写一个C的AST解析就很麻烦
+23:43 Mokou: 要不然你们研究决定把我选到本部去吧
+23:43 * Mokou 会念诗
+23:43 varna: 抚子加班比我还黑，就被百度撤了
+23:44 cleamooon: "所以学习 c语言，首先要记住c语言里可用的数据类型都有哪些，掌握每种数据类型的定义和使用规则"
+23:44 Mokou: 我这帐号就是发帖数少了点，没法申请
+23:45 cleamooon: 我怎么觉得没找到一小半不是狗屁的东西
+23:45 cleamooon: 海洋生物死哪去了
+23:46 * varna 抬手打了个CLOAK_REALTIME_COARSE
+23:46 Mokou: 我才是海鲜大战舰舰长
+23:46 * varna has enabled nanovision
+23:47 * Mokou has enabled console
+23:47 varna: 啊啊麻烦死了，突然想起来定时器还要单独写
+23:48 varna: 有个妹子帮我写这些util多好
+23:48 varna: RBT都现成的，妹子用用，多和谐
+23:48 cleamooon: 如果c吧和c艹吧都被卖药的占据，我觉得，也不错呀
+23:48 varna: 那挺好的
+23:49 Mokou: RBQ有没有现成的
+23:49 varna: RBQ没有
+23:50 Taggnostr quit:Remote host closed the connection
+23:50 varna: 只有血水，没有妹汁啊
+23:50 Mokou: 去撩一个
+23:50 Taggnostr joined channel
+23:50 varna: 我又撩不来
+23:51 cleamooon: 到时候黑旗买螺内酯多方便
+23:53 cleamooon: 淦，本以为standard好读一点，倒是容易理解，不过243页也太长了
+23:53 cleamoooon quit:Ping timeout: 258 seconds
+23:53 cleamoooon joined channel
+23:55 cleamoooon quit:Client Quit

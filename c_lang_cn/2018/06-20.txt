@@ -1,0 +1,115 @@
+00:05 iyzsong-x quit:Quit: ZNC 1.7.0 - https://znc.in
+00:27 matchray: lh_mouse: readelf -s /usr/lib/gcc/x86_64-linux-gnu/8/libstdc++.a | grep pthread_cond_destroy -> WEAK DEFAULT UND
+00:28 matchray: {g,clang}++ -std=c++11 -static -pthread a.cc => SIGSEGV
+00:28 matchray: int main() { std::condition_variable cv; }
+00:50 lh_mouse quit:Read error: Connection reset by peer
+07:34 zhangoke joined channel
+09:35 jpzhu quit:Quit: leaving
+09:38 lh_mouse joined channel
+09:40 leemeng joined channel
+10:11 lh_mouse: matchray, put `-pthread` after your source/object files.
+10:15 matchray: lh_mouse: only  -whole-archive -lpthread -no-whole-archive 
+10:15 matchray: unrelated to -pthread
+10:15 lh_mouse: oh you are using `-static`.
+10:15 lh_mouse: why the would you use `-lpthread` after all?
+10:15 matchray: -lpthread is just ignored because libstdc++ has a weak undefined reference to pthread
+10:16 lh_mouse: pthread doc says you should 'compile and link with `-pthread`'.
+10:16 matchray: condition_variable calls functions defined in libpthread.a
+10:16 matchray: -pthread -lpthread only differs by a macro
+10:16 matchray: _REENTRANT
+10:16 lh_mouse: well this is yet another reason why you shouldn'
+10:16 matchray: In glibc the difference is fairly small
+10:16 lh_mouse: t use `-static`.
+10:16 lh_mouse: no the difference is not trivial.
+10:17 lh_mouse: the doc says you should use `-pthread`. so use it. period.
+10:20 sixand joined channel
+10:29 sixand quit:Ping timeout: 260 seconds
+10:45 matchray: the linker does not understand -pthread
+10:45 matchray: the compiler driver does
+10:46 matchray: when clang sees -pthread, it sets _REENTRANT and passes -lpthread to the linker. period.
+10:47 matchray: clang -fuse-ld=lld a.cc -static -whole-archive -lpthread -Wl,-no-whole-archive => good
+10:47 matchray: clang -fuse-ld=lld a.cc -static -lpthread  => condition_variable causes weak pthread_cond_destroy which is 0, SIGSEGV. period.
+10:47 lh_ideapad joined channel
+10:49 matchray: I don't use -pthread because you can not control the link order 
+10:49 matchray: try -whole-archive -pthread -Wl,-no-whole-archive and see the difference
+11:23 lh_ideapad: geordi, << string("abc").find_first_not_of("abc", 3);
+11:23 geordi: 18446744073709551615
+11:43 Meow-J___ quit:Ping timeout: 256 seconds
+11:46 Meow-J___ joined channel
+11:48 Youmu quit:Ping timeout: 256 seconds
+11:48 lhanjian quit:Ping timeout: 276 seconds
+11:48 cleamoon_ quit:Ping timeout: 245 seconds
+11:50 Mokou quit:Ping timeout: 276 seconds
+11:51 Meow-J___ quit:Ping timeout: 260 seconds
+11:56 sixand joined channel
+13:05 sixand1 joined channel
+13:06 sixand quit:Ping timeout: 248 seconds
+13:06 sixand1 is now known as sixand
+13:22 lhanjian joined channel
+13:22 cleamoon_ joined channel
+13:28 Youmu joined channel
+13:31 Mokou joined channel
+13:44 matchray: https://blogs.dropbox.com/tech/2018/06/building-better-compression-together-with-divans/
+13:47 cleamoon_ quit:
+13:55 Mokou quit:Ping timeout: 256 seconds
+13:56 lhanjian quit:Ping timeout: 256 seconds
+13:57 Youmu quit:Ping timeout: 256 seconds
+14:08 lh_mouse: http://cnm.buhuibaidu.me/
+14:09 lh_mouse: https://cnm.buhuibaidu.me/
+14:09 lh_mouse: https://cnm.buhuibaidu.me/?s=mcfgthread
+14:11 Mokou joined channel
+14:20 Meow-J___ joined channel
+14:23 Meow-J___ quit:Max SendQ exceeded
+14:23 Youmu joined channel
+14:23 Meow-J___ joined channel
+14:24 lhanjian joined channel
+14:51 zhangoke quit:Quit: zhangoke
+17:40 genesisfrank joined channel
+17:41 genesisfrank quit:Client Quit
+17:45 genesisfrank joined channel
+17:55 whocares_2_ joined channel
+17:56 whocares_2 quit:Ping timeout: 256 seconds
+17:58 genesisfrank quit:Quit: Leaving
+17:59 genesisfrank joined channel
+18:09 genesisfrank quit:Quit: Leaving
+18:50 sixand quit:Ping timeout: 264 seconds
+19:08 lh_mouse: geordi, << unordered_map<int, string>().load_factor()
+19:08 geordi: 0
+19:08 lh_mouse: geordi, << unordered_map<int, string>().max_load_factor()
+19:08 geordi: 1
+19:09 lh_mouse: geordi, << unordered_map<int, string>{{1,"hello“},{2,"world"},{3,"meow"}}.max_load_factor()
+19:09 geordi: error: Unexpected end of request. Expected any symbol.
+19:09 lh_mouse: geordi, << unordered_map<int, string>({{1,"hello“},{2,"world"},{3,"meow"}}).max_load_factor()
+19:09 geordi: Same error.
+19:10 lh_mouse: geordi, { unordered_map<int, string> m{{1,"hello“},{2,"world"},{3,"meow"}}; cout <<m.max_load_factor(); }
+19:10 geordi: Still same error.
+19:10 lh_mouse: geordi, << unordered_map<int, string>({{1,"hello"},{2,"world"},{3,"meow"}}).max_load_factor()
+19:10 geordi: 1
+19:10 lh_mouse: geordi, << unordered_multimap<int, string>({{1,"hello"},{2,"world"},{3,"meow"}}).max_load_factor()
+19:10 geordi: 1
+19:10 lh_mouse: geordi, << unordered_multimap<int, string>({{1,"hello"},{3,"world"},{3,"meow"}}).max_load_factor()
+19:10 geordi: 1
+19:10 lh_mouse: geordi, << unordered_multimap<int, string>({{3,"hello"},{3,"world"},{3,"meow"}}).max_load_factor()
+19:10 geordi: 1
+19:11 iyzsong joined channel
+19:41 leemeng quit:Remote host closed the connection
+20:44 lh_ideapad quit:Remote host closed the connection
+20:46 lh_ideapad joined channel
+20:46 lh_ideapad quit:Remote host closed the connection
+20:56 lh_ideapad joined channel
+20:59 cleamoon_ joined channel
+21:12 lh_ideapad quit:Remote host closed the connection
+21:18 iyzsong quit:Read error: Connection reset by peer
+21:19 iyzsong joined channel
+21:30 zhangoke joined channel
+21:59 zhangoke quit:Quit: zhangoke
+23:38 chenjunyu138 joined channel
+23:39 chenjunyu138: emmm
+23:39 chenjunyu138: hello
+23:40 cleamoon_: hello
+23:40 chenjunyu138: 怎么说话呢
+23:40 chenjunyu138: 怎么没人说话呢？
+23:41 cleamoon_: 大概都在现充
+23:42 chenjunyu138: 哈哈，好吧
+23:45 lh_mouse quit:Ping timeout: 240 seconds
+23:47 chenjunyu138 quit:Quit: chenjunyu138

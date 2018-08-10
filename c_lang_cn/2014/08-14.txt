@@ -1,0 +1,984 @@
+00:02:acgtyrant joined channel
+00:02:wysaid joined channel
+00:02:wysaid: http://wge.wysaid.org/webgl/simple_demos/gui_test4.html 求测一下这个demo在高分辨率下的帧率（把Sprite数目加到500）
+00:03:condy: wysaid: 30FPS左右。
+00:06:wysaid: 突然发现滚轮事件在chrome以外的浏览器上是错的
+00:06:wysaid: 汗
+00:06:wysaid: GUI部分又要做兼容了
+00:06:wysaid: 真麻烦
+00:12:\q joined channel
+00:18:hope1` joined channel
+00:22:hope1 quit:Ping timeout: 255 seconds
+00:49:hope1`: 【东方】《本命测试器》小谈；《幻想乡：疫区前线》构想与预告 http://tieba.baidu.com/p/3228626435 看起来很不错
+00:50:hope1`: 标题也复制过来了…
+00:53:condy: 有娇滴滴的女孩子死掉是最不想看到的。QAQ~
+01:07:lh_mouse quit:Read error: Connection reset by peer
+01:08:wysaid quit:Quit: ChatZilla 0.9.90.1 [Firefox 31.0/20140716183446]
+01:55:zzzzzzzz joined channel
+02:02:zzzzzzzz quit:Quit: Lost terminal
+02:20:hope1 joined channel
+02:37:zzzzzzzzzzzzzz joined channel
+02:37:zzzzzzzzzzzzzz left channel:
+02:41:JQK quit:*.net *.split
+02:52:boosure joined channel
+03:44:JQK joined channel
+03:44:cleamoon joined channel
+03:50:boosure quit:Ping timeout: 246 seconds
+04:06:hysw joined channel
+04:23:boosure joined channel
+04:29:boosure quit:Ping timeout: 250 seconds
+05:05:boosure joined channel
+06:07:boosure quit:Ping timeout: 246 seconds
+06:17:boosure joined channel
+06:39:xxxxxxxxx joined channel
+06:39:xxxxxxxxx: http://www.gayhub.com/ orzzzzz
+07:14:sismvg joined channel
+07:41:hysw quit:Ping timeout: 250 seconds
+07:55:lh_mouse joined channel
+07:56:lh_mouse: geordi, <<has_trivial_copy_constructor<int>::value;
+07:56:geordi: 1
+07:57:lh_mouse: geordi, <<has_trivial_copy_constructor<foo>::value; struct foo { foo(const foo &) = delete; };
+07:57:geordi: 1
+07:58:lh_mouse: geordi, replace = delete with { }
+07:58:geordi: 0
+07:58:cleamoon quit:Read error: Connection reset by peer
+07:59:lh_mouse: geordi, << has_trivial_move_constructor <int> ::value
+07:59:geordi: error: 'has_trivial_move_constructor' was not declared in this scope
+08:08:cleamoon joined channel
+08:23:lh_mouse quit:Read error: Connection reset by peer
+08:24:lh_mouse joined channel
+08:26:hope1 quit:Ping timeout: 264 seconds
+08:27:cleamoon quit:Read error: Connection reset by peer
+08:35:boosure quit:Ping timeout: 264 seconds
+08:41:endle joined channel
+08:54:hysw joined channel
+08:59:endle quit:Ping timeout: 250 seconds
+09:08:varna joined channel
+09:09:varna: POI-
+09:09:varna: 没有药娘啊
+09:09:varna: acgtyrant: 阁下也加入频道高剂量药娘团队吧？
+09:09:hysw: -_-
+09:10:hysw: 不和谐
+09:11:varna: 哪里不和谐了
+09:11:lh_mouse: 为毛有人说 C 比 C++ 好
+09:11:varna: 以齐白石老人的口气说：喔！剂量大！
+09:11:varna: lh_mouse: 他们c写少了
+09:11:hysw: 汇编比Java好...
+09:12:xxxxxxxxx: java汇编好!
+09:12:lh_mouse: 我个人觉得 C 可取的地方   第一是语言本身的特性比较少  库的特性多
+09:12:hysw: xxxxxxxxx: +
+09:12:varna: @金狼古十四
+09:12:lh_mouse: 第二个是坑少
+09:12:endle joined channel
+09:13:hysw: 还不如去写static typed scheme
+09:13:lh_mouse: varna, 
+09:13:varna: .
+09:13:lh_mouse: 昨天那个  insert_hint 的问题  我想出来了
+09:13:varna: 怎么做的？
+09:13:varna: 先Orz
+09:14:lh_mouse: 对于新节点 X 根据某个 hint  假定在常数时间内找到两个节点 A B   使得  A <= X 且 X < B
+09:14:lh_mouse: 其中 AB 相邻
+09:14:lh_mouse: 假定 AB 存在公共父节点 R  则必有 A<R<B 与 AB 相邻 矛盾  故 AB 之间不存在任何公共父节点
+09:15:lh_mouse: 因此 要么 A 是 B 的（直接或间接）父节点   要么   B 是 A 的父节点
+09:15:varna: 那么这里就是O(1)了
+09:16:lh_mouse: 假定 A 是 B 的父节点   则 B 必然没有左子树
+09:17:lh_mouse: 因此将 X 作为 B 的左子树插入即可    反之将 X 作为 A 的右子树插入
+09:18:hysw: 无视rotation?
+09:18:varna: bst
+09:19:lh_mouse: 需要
+09:19:lh_mouse: 不过那个是公共操作
+09:19:lh_mouse: 这里有点小坑的是  C++11 要求树结构是 stable 的
+09:20:lh_mouse: 如果两个元素 key 相等   后插入的放在先插入的后面
+09:20:varna: 这里没法说了
+09:21:lh_mouse: varna, 上面的条件就是针对这情况的处理
+09:21:lh_mouse:  A <= X 且 X < B  **
+09:23:varna: 哦……
+09:34:whatofor joined channel
+09:42:sismvg: http://www.bilibili.com/video/av1399663/
+09:42:sismvg: 16:35 大熊和静香SMplay
+09:42:boosure joined channel
+09:45:xxxxxxxxx: http://www.bilibili.com/video/av1028048/
+09:47:condy: http://www.bilibili.com/video/av1134256/
+09:48:condy: 开头真是太赞了。
+09:51:xxxxxxxxx: http://puu.sh/aRzvS/293d518600.jpg
+09:54:condy: ^ 使用者的年龄层次吗。。
+09:57:varna: 结论2：我需要成吨的烈风
+09:57:varna: 第四个击杀拿下
+09:59:condy: http://d.hiphotos.baidu.com/album/s%3D266%3Bq%3D90/sign=a863d8f68701a18bf4eb1549a8147635/77c6a7efce1b9d16de4dc4bbf3deb48f8d546465.jpg?v=tbs
+10:00:condy: ^ 这竟然可以当签名。。。
+10:04:sismvg: 注意打上NSFW
+10:06:varna: 一个喔酱的猫头战机CAP能打我七八十烈风……
+10:06:varna: 日本飞机真是太差劲了
+10:07:hysw: Facebook YouTube Google Wikipedia 用户路过
+10:14:varna: http://www.firearmsworld.net/sight/russainoptic/1p29_reticule2.jpg # 尻准镜
+10:14:krfantasy joined channel
+10:15:varna: krfantasy: HELO
+10:16:endle quit:Ping timeout: 264 seconds
+10:16:krfantasy: varna: Hi ;-)
+10:27:sismvg: 一个程序异常查了2个小时。。最后发现原来是GPU内存不够，然后异常信息在cpu调试下看不见。。
+10:28:varna: 你在用ANN算什么？
+10:29:sismvg: 什么都没算
+10:30:sismvg: 只是在做测试和写库
+10:30:sismvg: 招募以下条件测试员: vs2012 or vs 2013 ,windows 8 以上,显卡支持dx11,显存最好超过2G
+10:31:sismvg: 奖励：1Wdogecoin
+10:32:varna: ...
+10:33:endle joined channel
+10:33:sismvg: GPU的稳定性太坑了。。快的时候40毫秒能算(2^22)*10次，慢的时候150ms..
+10:37:hysw: sismvg: 把智商交出来
+10:37:sismvg: 吧显卡给我
+10:37:sismvg: 昨天崩溃了2次。。
+10:37:hysw: 我现在就只有HD 4600
+10:38:sismvg: ..还没买吗
+10:38:hysw: ?
+10:38:hysw: 没钱
+10:39:hysw: sismvg: 你给我$10000的话我可以给你邮寄几个780Ti过来
+10:39:sismvg: 。。。。。
+10:42:boosure quit:Ping timeout: 244 seconds
+10:58:boosure joined channel
+11:14:varna: http://tieba.baidu.com/p/3211027221
+11:14:varna: ^ 佳作
+11:15:richselian joined channel
+11:15:xxxxxxxxx: FA尧Dark舜。。。。
+11:16:varna: 岂不知天下boy，皆愿生肛你尻
+11:17:xxxxxxxxx: 昔日石井、须藤之时，哲♂学衰落，淫梦酿祸，运营爆破，大势所趋。净网之后，逸峰，大力，FFF等接踵而起。劫持哲♂学，残暴兄♂贵，因之，A站之上，弱子为官；B站之间，小学生食禄。
+11:18:xxxxxxxxx: 净网都中枪
+11:20:varna: 岂不知天下boy，皆愿生肛你尻
+11:32:acgtyrant quit:Remote host closed the connection
+11:35:iyzsong joined channel
+11:49:krfantas` joined channel
+11:50:varna: 狂人fantasy回来了
+11:50:biergaizi_ joined channel
+11:51:krfantas` joined channel
+11:53:krfantasy quit:Ping timeout: 250 seconds
+11:53:biergaizi quit:Ping timeout: 250 seconds
+11:53:biergaizi_ quit:Remote host closed the connection
+11:53:biergaizi__ joined channel
+11:54:krfantasy: 呼，终于把 nickname 给换回来了……
+11:56:biergaizi__ quit:Remote host closed the connection
+11:57:biergaizi__ joined channel
+12:02:AbyssPilot joined channel
+12:02:* AbyssPilot 
+12:04:* AbyssPilot 编成了一只雷级。http://picpaste.com/WP_20140814_11_58_55_Pro-cezcVO5Q.jpg
+12:05:sismvg: 又提高了一倍的计算速度
+12:07:lh_mouse: krfantasy, 揉
+12:07:xxxxxxxxx: http://it.21cn.com/mobile/guide/a/2014/0812/13/28006871.shtml
+12:12:whatofor quit:Read error: Connection reset by peer
+12:13:whatofor joined channel
+12:15:varna: AbyssPilot: 今天加了二十搭载的烈风，情况稍微好一点了
+12:15:AbyssPilot: 咧噗。
+12:16:AbyssPilot: http://www.acfun.tv/a/ac1336856 脸基尼。知道啥叫比基尼了吧？
+12:17:varna: 今天bing有这个新闻
+12:19:AbyssPilot: 奥亚子是第四位下令对伊拉克开战的美国总统。前三个是老布什、克林顿、小布什。
+12:19:AbyssPilot: ↑噗呼呼。
+12:19:biergaizi quit:Quit: Konversation terminated!
+12:19:Plough joined channel
+12:20:biergaizi joined channel
+12:23:Plough: varna: bbv带路试了吗
+12:26:sismvg: http://tieba.baidu.com/p/3229374450
+12:26:sismvg: 我无语了
+12:30:Xilzzerts joined channel
+12:31:varna: Plough: 沟，不要用
+12:32:Plough: 收到
+12:35:varna: 早上北上摔得太狠了，索性让大井也投入作战
+12:35:varna: 出动了108搭载的烈风，终于拿到空优
+12:36:AbyssPilot: 然后呢？
+12:38:varna: 喔酱终于不会一次把大傻炸个中破了
+12:39:AbyssPilot: 喷了多少铝？
+12:39:varna: 空优击坠率大约是八成，不劣势大约是六成
+12:39:varna: 不到一百？
+12:39:varna: AL基本不耗铝，MI的报告倒是有七烈风一烈改喷七八百的
+12:40:varna: 也有索敌帝指出多带爆战会好，但是大家都明白这次作战的关键是烈风、彩云、电探
+12:40:lh_mouse: mysql 的驱动比 mongodb 的看起来干净不少
+12:40:lh_mouse: （C艹的）
+12:40:varna: 多带烈风还可以在幼女处抢到空优，可以安定二连
+12:41:lh_mouse: 不过  sql 还是看着太恶心
+12:41:varna: mysql的接口还行
+12:41:varna: 除了少数几个恶心人的小地方之外还算不错的
+12:41:varna: （C的）
+12:46:varna: AbyssPilot: 现在我还剩三个击杀，三五天之内应该就可以搞定，然后大建去了
+12:47:AbyssPilot: 赌矢矧？
+12:48:varna: 4763
+12:48:Plough: 大和么
+12:48:varna: 随意
+12:48:AbyssPilot: 出啥看脸公式？
+12:48:Plough: 然后赌两次的成果加起来就是一个大和
+12:48:varna: 往下的重点建设，考虑一个半月内重巡二轻巡三驱逐二航战四的情况
+12:49:varna: 随意建建
+12:49:varna: 航战可以适当削减，毕竟练轻巡和驱逐有点麻烦
+12:49:hope1 joined channel
+12:49:Plough: 昨天把扶桑赌出来了
+12:49:varna: 看到了
+12:49:varna: 我以为你打出来的
+12:50:Plough: 赌的
+12:50:Plough: 本意是长门级，不过扶桑也不错
+12:50:varna: 重巡的备选是利根和羽黑，轻巡是川内、大淀、八万钢，驱逐是雪风和时雨
+12:50:Plough: 图鉴&编成任务
+12:50:varna: 如果入手了长门就替掉一个航战练起来
+12:51:Plough: 61cm鱼雷
+12:51:Plough: 说好的三式弹狙击公式呢
+12:51:varna: 理由方面
+12:52:varna: 利根=索敌，羽黑=全能力强；川内=装备+能力，大淀=四个洞，八万钢=可爱
+12:52:varna: 雪风时雨大家都懂的
+12:53:Plough: 机枪&15.2副炮&失败
+12:53:Plough: 简直惨
+12:53:Plough: 日常前两发两个一小时
+12:53:Plough: 我怀疑是两个偶像……
+12:54:varna: KUMA级
+12:54:varna: 我猜是蛋和神通
+12:54:Plough: 喷火器留着给大建，先放置吧
+12:54:varna: ...
+12:54:varna: 你要大建几发
+12:55:varna: 日常喷两个的话还是可以保证喷灯稳定增长的
+12:55:Plough: 不知道，捞到高压锅以后直接资源清零？
+12:55:varna: 噗
+12:55:Plough: 现在一共31个
+12:55:xxxxxxxxx: 五十发?
+12:55:varna: 开学没时间打了么
+12:55:sismvg: http://tieba.baidu.com/photo/p?kw=%C9%D9%C4%EAjump&flux=1&tid=3229470572&pic_id=e4da9f0a304e251f6be4dbdca486c9177e3e53f5&pn=1&fp=2&see_lz=1
+12:55:Plough: 五十发简直壕
+12:55:sismvg: 我的小兰不可能这么可爱
+12:55:Plough: 有，但是少
+12:55:Plough: 靠低保应该也能回不少
+12:56:varna: xxxxxxxxx: 曾经有个dalao四十发武藏失败来着
+12:56:richselian quit:Ping timeout: 245 seconds
+12:56:varna: 低保其实很多
+12:56:Plough: 不过我现在资源也不多
+12:56:Plough: 2822/8459/2732/6209+21/13
+12:56:varna: 只要不夯推图低保能维持不少
+12:58:Plough: 目前低保数11500
+12:59:varna: 现在我倒不担心重巡和航母梯队，麻烦的是轻巡和驱逐
+13:00:varna: 练到lv60的话还是有点麻烦的
+13:03:AbyssPilot: 你不是有蜜瓜么？
+13:03:varna: 蜜瓜只能反潜不能打
+13:03:varna: 大淀可以双炮+夜战装备+电探
+13:04:xxxxxxxxx: 蜜瓜羊驼
+13:04:AbyssPilot: 其实该给大淀装备企鹅 + 彩云 + 罗盘 + 猫。
+13:04:varna: 以后蜜瓜的地位基本是对潜大员了，1-5攻略、4-3确保和其他零碎反潜
+13:04:varna: 呜十铃类似，不过因为等级高所以要拿去带东急
+13:10:acgtyrant joined channel
+13:10:AbyssPilot: 现在几十几铃了？
+13:10:varna_ joined channel
+13:10:varna quit:Disconnected by services
+13:10:varna: 网络又震荡了
+13:10:varna: 这次的建设要强调水上打击部队和低速战舰
+13:10:xxxxxxxxx: 13:05:31 AbyssPilot>现在几十几铃了？
+13:10:varna: AbyssPilot: 五十二铃
+13:10:varna: 因为最近没东急所以升级缓慢
+13:10:AbyssPilot: 一直在反潜来着？
+13:10:varna: 一直在赤城给食
+13:10:varna: MI作战充分说明了角川坚决黑航母到底的思路
+13:10:varna: 所以将来的建设方略还是不会有太大变化吧
+13:12:varna: ——“航母机动部队应该布置在X绍尔、X里亚纳附近削减美军部队”
+13:12:Xilzzerts quit:Read error: Connection reset by peer
+13:13:AbyssPilot: 消减 233。
+13:13:AbyssPilot: 话说我就不信提督没搞到深海光杂鱼就二三百只的情报。
+13:14:varna: 深海要是愿意搞，造三四个联合舰队也造出来了
+13:14:varna: 提督侧还得搞什么优秀船只援助金
+13:14:varna: 弄出一些贫瘠的肚子
+13:15:xxxxxxxxx: 贫瘠的肚子是说没屎么?
+13:15:varna: 瑞凤比较瘦小
+13:15:varna: 中破以上会露出毫无水平线的肚子
+13:17:varna: AbyssPilot: 而且亚洲官僚大家都懂，小泽被射了一天之后，早上起来才听说自己被过了一天狂欢节变成火鸡
+13:18:AbyssPilot: 船长们的虚报。
+13:18:xxxxxxxxx quit:Quit: Leaving...
+13:21:lh_mouse: namespace std{
+13:21:lh_mouse:     // operator << for SQLString output
+13:21:lh_mouse:     inline ostream & operator << (ostream & os, const sql::SQLString & str )
+13:21:lh_mouse: …… 2B 
+13:23:* biergaizi 正在用 gdb 调试 gdb……
+13:28:hysw: biergaizi: gj
+13:29:AbyssPilot: @Unix 痛恨者。
+13:30:Plough: @用gdb调试gdb在调试gdb调试gdb时崩溃所吐的核时崩溃所吐的核
+13:31:biergaizi: MIPS 平台几乎没人能测试，遇到这问题一点都不奇怪
+13:32:acgtyrant quit:Quit: 绝赞 Quit 中
+13:33:biergaizi: Plough: 处理 core 文件的逻辑也有问题，这一点想做也做不到。我正在试着排除一些基本可能，然后去 bisect
+13:33:biergaizi: 然后在这破 MIPS 机器上运行 bisect 脚本，我就可以干点别的去了
+13:34:acgtyrant joined channel
+13:34:acgtyrant quit:Remote host closed the connection
+13:36:Xilzzerts joined channel
+13:38:varna: Plough: 爆
+13:39:Plough: 自 炒去
+13:39:varna: 快来被我侵犯
+13:39:Plough: 21~90图鉴全开
+13:39:Plough: 啥时候再来只大井就好了
+13:40:lh_mouse: 居然有人用 mips
+13:42:varna: 图鉴差千岁改/甲/航改和长门
+13:42:varna: 千岁一直没动过
+13:42:biergaizi: lh_mouse: 龙芯 2F 什么的……
+13:42:krfantasy quit:Ping timeout: 264 seconds
+13:44:sismvg: 什么时候出个四圣兽操作系统。。
+13:45:acgtyrant joined channel
+13:45:biergaizi: wwwwwwwwwww
+13:46:sismvg: 四神兽操作系统，搭配麒麟core以及龙芯3.0,龙眼440核战术显卡》。
+13:46:biergaizi: 没有 cos 么……
+13:47:sismvg: china os 还活着？
+13:48:biergaizi: 上次 Linux User Group 活动的时候见到了一个搞 cos 的……
+13:48:sismvg: 在国庆节购买还附送党员证
+13:48:biergaizi: 他也吐槽说就是自主编译
+13:48:biergaizi: 移动版基于 Android，还有个基于 Mint 的桌面版
+13:49:sismvg: china linux
+13:52:varna: 十神兽版吧
+13:54:Plough: 日常前两只名取神通
+14:03:sismvg: http://www.ithome.com/html/out/98878.htm
+14:03:AbyssPilot: http://dynasty-scans.com/chapters/muchi_muchi_of_life 23333333
+14:03:sismvg: 2333
+14:04:varna: 好想侵犯红旗啊！
+14:05:hysw: 靠... 学费$12K... 这还让不让人活了...
+14:05:sismvg: 12000*6.25..艹
+14:05:varna: 听说你是壕，他们多收你一些
+14:05:sismvg: 对
+14:05:hysw: 为啥计算机科学就得比正常的学费贵4.5K...
+14:06:AbyssPilot: 真·土豪。
+14:06:sismvg: 贵一点才能招到跟多人啊
+14:06:AbyssPilot: 哪是招人，是外聘。
+14:06:varna: 没桶
+14:06:varna: 阳炎酱@喜欢玩水
+14:06:AbyssPilot: 自从上了大学我才知道外教不是外籍教师是外聘教师。
+14:06:AbyssPilot: 又一个玩水的？
+14:06:varna: 远征一队都在玩水
+14:07:varna: 也不带上提督……
+14:07:AbyssPilot: 再换个带队的。
+14:07:sismvg: ..我们学校的外交就是外籍教师啊。。
+14:07:varna: 带盒花生回来给我也行啊
+14:07:hysw: 能弄到大概13K的贷款... < 起码还可以活...
+14:07:varna: uccu
+14:07:sismvg: 噗。。。没有助学基金？
+14:08:varna: sismvg: Gay金
+14:08:sismvg: 卖菊花
+14:08:hysw: 助学金啥的就几个K...
+14:08:AbyssPilot: ↑都是操着一口不如 SG 的英不英中不中语的海王八。
+14:08:hysw: This is no sense
+14:09:sismvg: ...
+14:09:sismvg: :(
+14:10:hysw: sismvg: 把智商交出来
+14:10:sismvg: 话说几个K也够了吧
+14:10:hysw: 学费什么的就已经12K了...
+14:10:hysw: 3K连住宿都不够...
+14:10:varna: 加上护木耳费怎么也得有个十几万吧
+14:10:sismvg: 。。。打工吧少年
+14:10:hysw: 坑爹的加拿大物价
+14:11:sismvg: 233
+14:11:hysw: sismvg: 做助教什么的...
+14:11:AbyssPilot: 真心不如你。某个物件导向建模还是分析设计的课来着，外教说这里有个表示屏幕上按钮啊文本框啊的类，你们给它取个名吧。我：control。外教：控制？我：……
+14:11:sismvg: 2333
+14:11:varna: 我：制御
+14:11:AbyssPilot: 你这军国主义。
+14:11:varna: 啊呀咔命！板载！
+14:11:* hysw Ciew->Vontroller
+14:12:AbyssPilot: 不是那珂命？
+14:12:sismvg: 你看我写个类CControl
+14:12:varna: 先拜亚夜花再拜NKC
+14:12:hysw: Montroller Vodel Clew 
+14:13:sismvg: 自己想象上海物价真不贵。。15块钱能吃撑死。。
+14:13:sismvg: 仔细想想。
+14:13:AbyssPilot: Vodel←一股 CV 味。
+14:13:hysw: sismvg: 土豪你好
+14:13:varna: 寒云都吃木耳
+14:13:sismvg: 国外买得到木耳吗？
+14:14:varna: 黑的粉的都有
+14:14:sismvg: 大学有粉的吗
+14:14:hysw: varna: 把智商交出来
+14:14:varna: 不知道
+14:15:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=99e271026e224f4a5799731b39cc9052/3b87e950352ac65c3b216157f8f2b21193138ae9.jpg # 又疯了一个
+14:15:varna: hysw: 给你这剥削阶级干嘛，我还等着邀击你你
+14:15:varna: hysw: 给你这剥削阶级干嘛，我还等着邀击你呢
+14:15:sismvg: 作为提速1倍的代价。。多占了100M显卡内存擦。
+14:15:sismvg: 大土豪，分美金
+14:15:hysw: 停机问题... 不就是几行解决的证明么...
+14:15:hysw: sismvg: 没显存的路过
+14:16:sismvg: 不可能没显存的吧。。
+14:16:AbyssPilot: http://www.pixiv.net/member_illust.php?mode=manga&illust_id=44148116 P1 ←那咔～
+14:16:hysw: sismvg: DVMT
+14:16:AbyssPilot: 不是说谁拿着被缴获的那只零战么？
+14:16:sismvg: soga
+14:17:varna: 曙和狗屁提督更新了啊
+14:17:varna: 不对
+14:17:AbyssPilot: 刚在 P 站看了七话。
+14:17:varna: 旧的
+14:17:hysw: sismvg: 你送我几张GTX 780Ti或Titan Z吧
+14:17:sismvg: 输入神经元为2的次方的速度：10ms 为2次方-1的速度:INF...
+14:18:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=cb088d1d6863f6241c5d390bb744eb32/ec2036f082025aaf9d1878eff8edab64034f1a9a.jpg
+14:18:hysw: sismvg: 你在看什么书？
+14:18:sismvg: 《machine learning>
+14:18:hysw: sismvg: OTL
+14:18:sismvg: -_-
+14:19:hysw: varna:  Topics in Computational Complexity (Communication complexity and Applications to Computer Sc.) < 话说这种课有必要学么？
+14:19:sismvg: 别担心。。微积分根本看不懂
+14:19:varna: hysw: 本科的？
+14:20:hysw: 烟酒僧的
+14:20:varna: Commu Complexity不知道是什么
+14:20:AbyssPilot: 通讯复杂性？
+14:21:AbyssPilot: 另外↑那个翔鹤该用 http://picpaste.com/________________2-6NXGoroE.png 这个。
+14:21:hysw: sismvg: https://www.coursera.org/course/neuralnets < 这货貌似不错
+14:22:sismvg: ...如果有英文字幕的话也许我能看懂。。
+14:22:hysw: OTL
+14:22:AbyssPilot: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=41072541 粪提。
+14:22:varna: 大淀原来是平的
+14:22:AbyssPilot: 哎？
+14:23:varna: 有人拉出去大破了……
+14:24:varna: @雷爷验真身
+14:24:hysw: CSC411H1 F - Machine Learning 
+14:24:hysw: CSC420H1 F - Intro Image Unstand 
+14:24:sismvg: GPU Programming
+14:24:varna: F2A4S11 - So Nage
+14:24:hysw: CSC369H1 F - Operating Systems < 这货貌似是水货
+14:24:varna: F2A4S11 Kai - So Nage
+14:24:varna: F2A4S11 Kai Ni - Wow So Nage
+14:25:hysw: sismvg: 把智商交出来
+14:25:hysw: sismvg: 或者送我几张GTX 780Ti或Titan Z吧
+14:25:sismvg: 等dogecoin涨到1usd一个我就给你
+14:25:hysw: 现在多少？
+14:27:sismvg: 0.00014usd
+14:27:AbyssPilot: http://www.pixiv.net/member_illust.php?id=8213&tag=%E8%89%A6%E3%81%93%E3%82%8C 2333333333333
+14:29:varna: 哈哈哈有个精神污染过度的拆了六个烈风……
+14:29:AbyssPilot: http://www.pixiv.net/member_illust.php?mode=manga&illust_id=38923958 那珂真爱。
+14:29:AbyssPilot: 咧噗。
+14:29:varna: http://tieba.baidu.com/p/3229922449
+14:29:varna: 卧槽，原来那个尼笑系列是同一作者啊……
+14:30:varna: 睡觉
+14:30:varna quit:Quit: leaving
+14:33:hysw: 羊驼掉了
+14:33:hysw: 羊驼的智商也掉了
+14:33:hysw: 羊驼的智商被我捡起来了
+14:35:sismvg: varna的智商被加密了
+14:35:sismvg: 用的是OpenSSL
+14:35:sismvg: hysw由于太过兴奋而进了医院
+14:36:sismvg: 出院第一天发现OpenSSL刚好在住院的期间更新了
+14:42:hysw: LEEE算法，OpenSSL什么的弱爆了
+14:57:Xilzzerts: 还真有RTFM这网站。。。
+15:03:JQK quit:Ping timeout: 272 seconds
+15:05:hope1 quit:Ping timeout: 272 seconds
+15:05:acgtyrant quit:Ping timeout: 255 seconds
+15:05:hope1 joined channel
+15:07:lh_mouse: openssl 渣
+15:07:lh_mouse: 你可以试试 mcf::IsaacEx
+15:10:Plough: 又TM是高雄！？
+15:10:Plough: E2 Boss点A胜固定掉落高雄是吧
+15:14:hope1: IsaacEx?
+15:26:Plough: 卧槽
+15:27:Plough: 放弃开幕空袭堆制空，E2 Boss点直接给我拿了个完全胜利
+15:27:Plough: 掉落夕张
+15:29:acgtyrant joined channel
+15:30:boosure quit:Read error: Connection reset by peer
+15:32:xxxxxxxxx joined channel
+15:58:cleamoon joined channel
+16:01:sismvg: 百度盘开启大河蟹模式
+16:02:AbyssPilot: http://www.freeworldgroup.com/games9/gameindex/a-duck-has-an-adventure.htm 鸭生。看你第一次选到哪个结局上了。
+16:26:xxxxxxxxx: 旁边似乎在吵架?
+16:41:wysaid joined channel
+16:42:wysaid: 羊驼居然不是24小时待机，差评
+16:42:xxxxxxxxx: .....
+16:43:AbyssPilot: ...
+16:44:xxxxxxxxx: 野良驼
+16:44:AbyssPilot: 噗。
+16:50:cleamoon quit:Read error: Connection reset by peer
+16:50:JQK joined channel
+16:52:iyzsong quit:Quit: WeeChat 0.4.3
+16:53:acgtyrant quit:Ping timeout: 250 seconds
+17:13:cleamoon joined channel
+17:14:wysaid quit:Quit: ChatZilla 0.9.90.1 [Firefox 31.0/20140716183446]
+17:21:Plough: 卧槽
+17:21:Plough: 我出烈风了
+17:28:varna joined channel
+17:28:varna: POI.
+17:28:varna: Plough: 爆
+17:28:Plough: 刚出完烈风羊驼子就上来了
+17:29:xxxxxxxxx: 今天D2么?
+17:29:varna: 汝可识得此烈风流星阵？
+17:29:varna: 不D2
+17:29:varna: 家里上战网坑，回去再说
+17:29:Plough: 进入斩杀阶段了
+17:29:Plough: 500血的幼女还是有压力
+17:29:Plough: 我再去一次试试
+17:29:varna: 我差两次
+17:30:varna: 要是再给我出援交级我还得顶着大破再去
+17:30:cleamoon: sublime甚好，emacs，vim死球
+17:30:Plough: 不是壕用不起
+17:30:cleamoon: 免费版无限制
+17:31:AbyssPilot: MCFString 甚好，c-str、std::basic_string 死球。←鼠辈语气。
+17:31:Plough: 第一点利根被集火，小破
+17:31:Plough: 其他擦伤
+17:32:Plough: 撸爷一发CI把我弄回去了
+17:32:varna: 麻烦，还差一两个桶
+17:32:Plough: 这回利根怎么这么惨
+17:33:xxxxxxxxx: sublime能在终端里用么?
+17:34:cleamoon: 不能
+17:34:cleamoon: 似乎是gtk的货
+17:35:varna: cleamoon: 求截图
+17:35:varna: 我看看岚月酱的底裤
+17:36:xxxxxxxxx: 羊驼说不定喜欢
+17:36:varna: prpr
+17:36:cleamoon: http://www.sublimetext.com/
+17:36:varna: 那个不算
+17:36:cleamoon: aur里有，安了直接用
+17:36:varna: 啊啊啊我想砸勋章
+17:36:Plough: 带上损管出去看看
+17:37:Plough: 砸砸砸
+17:37:varna: 不行，为了亚夜花命、那珂酱和联合舰队的老脸，不能砸
+17:38:Plough: 利根中破
+17:38:xxxxxxxxx: 和顶座有关系么?
+17:38:Plough: 去你妈的T有利
+17:38:varna: 亚夜花命是胜利女神啊
+17:38:cleamoon: 我就这么用：  http://www.antonoffplus.com/wp-content/uploads/2013/07/Sublime-Text2.png
+17:38:xxxxxxxxx: 羊驼还是拜部落女神好
+17:39:cleamoon: 不用配置，c艹之类的编译运行自带（用g艹）
+17:39:varna: 我现在还存着四个lv1 NKC
+17:39:varna: cleamoon: 那些也没用啊
+17:39:varna: cleamoon: 他又不能替我生成/写makefile
+17:40:xxxxxxxxx: 羊驼看到那个诺基亚手机的介绍了么?
+17:40:cleamoon: ......你的makefile很难写吗
+17:40:varna: 没看
+17:40:varna: cleamoon: 我不喜欢那些带编译运行的
+17:40:xxxxxxxxx: 诺基亚130复古功能机：售19欧元 36天超长续航
+17:40:Plough quit:Read error: Connection reset by peer
+17:41:varna: 噗
+17:41:sismvg: http://www.ithome.com/html/it/98961.htm
+17:41:sismvg: 这就是DOGE！
+17:41:cleamoon: 又不是必须用...
+17:41:Plough joined channel
+17:41:varna: cleamoon: 有那个功能我就难受……
+17:42:xxxxxxxxx: 这手机屌不屌?
+17:42:Sleepwalking joined channel
+17:42:varna: xxxxxxxxx: 爆
+17:42:varna: Sleepwalking: 爆！
+17:42:varna: Sleepwalking: 爆！
+17:42:varna: Sleepwalking: 爆！
+17:42:xxxxxxxxx: 该设备跟其他诺基亚功能机一样，拥有超强续航，播放音乐可达46小时，或者支持16小时视频播放。
+17:42:Sleepwalking: 。
+17:42:varna: {{{{{{{{}}}}}}}}: 别换nick了
+17:42:varna: Sleepwalking: 米库酱快来被我侵犯
+17:42:cleamoon: 那emacs等对你来说应该是煎熬...
+17:42:{{{{{{{{}}}}}}}}: varna: 好的。
+17:42:Sleepwalking: 明天我生日。
+17:42:varna: {{{{{{{{}}}}}}}}: 我以为你的客户端抽风了
+17:42:cleamoon: 虽然sublime只有几种语言的
+17:43:varna: Sleepwalking: 明天我日
+17:43:Sleepwalking: 。。。。
+17:43:cleamoon: Sleepwalking, 明天我日你生
+17:43:varna: 3P3P
+17:43:Sleepwalking: 10:00~12:00 mumble场   20:00~22:00 YY场
+17:43:xxxxxxxxx: 找C酱去啊 和一群基佬说只会被爆菊的
+17:43:Sleepwalking: 明天Rocaloid有活动
+17:43:sismvg: 拿出地址，送你doge
+17:44:varna: Sleepwalking: 明天我们组织好了爆你
+17:44:xxxxxxxxx: 药娘送药中
+17:44:Sleepwalking: talk.midymidy.com:64738 #Rocaloid
+17:45:varna: 你要找个没人地方跟C酱表白？
+17:45:xxxxxxxxx: 这里基本没人
+17:46:xxxxxxxxx: 除了丧失就是丧失
+17:46:Sleepwalking: YY: 12722553
+17:46:xxxxxxxxx: http://www.bilibili.com/video/av1395008/ 实用教程
+17:47:varna: Sleepwalking: 重点是快来被我侵犯啊
+17:47:cleamoon: 表白什么，先啪啪啪
+17:47:cleamoon: 女方表白就说我想想
+17:47:varna: cleamoon: 不是表白之后啪啪啪成功率会提升么
+17:48:cleamoon: 来了就不是侵犯了，就是外卖了
+17:48:varna: 侵犯PLAY
+17:48:varna: 反正我还差一两个桶才能出击
+17:49:cleamoon: 没表白成功率也不小
+17:49:* AbyssPilot 打下一架神风，结果让残骸板载上了。
+17:50:xxxxxxxxx: 刚才那个教程有人看了么?
+17:50:varna: 噗，有个哥们放弃MI之后出了大井大潮阿武隈……
+17:51:varna: cleamoon: 这倒是
+17:51:cleamoon: 看来alpako已经丧失了施法能力
+17:51:varna: 噗，揉胸教程
+17:51:xxxxxxxxx: 羊驼有经验?
+17:51:varna: 我各种意义上都是处男
+17:52:xxxxxxxxx: @肉牛
+17:53:varna: 看来打下AL之后我要努力大建
+17:53:xxxxxxxxx: http://www.bilibili.com/video/av1388896/ 那个勇士能看完?
+17:53:varna: 到时候我也有大井大潮
+17:53:varna: 不看，缓存珍贵，我方网络不利
+17:53:cleamoon: 教程23333
+17:54:varna: 啪啪啪起来岚月酱不是经验丰富么
+17:54:varna: 操，开那个视频之后flash崩溃了
+17:54:varna: 幸好我没出击
+17:54:Plough: 2333
+17:54:xxxxxxxxx: 这个揉胸技巧我猜岚月酱也不会
+17:54:varna: 基佬坑我，我们组织一波爆起
+17:55:varna: xxxxxxxxx: 爆
+17:55:xxxxxxxxx: 很高段的技巧
+17:55:cleamoon: 话说为什么瑞典妹子小学僧就C+，话说为什么大学僧也不带罩...
+17:55:varna: Plough: 活动期间大建似乎真有效
+17:55:varna: cleamoon: 小学发育过早，大学胸部下垂
+17:55:sismvg: 现在看见那些要为暑假作业苦逼的高中生，我就各种爽
+17:56:xxxxxxxxx: 然后继续挖矿2333
+17:56:varna: 现在看见那些要为暑假作业苦逼的高中生，我就各种爆
+17:56:AbyssPilot: 爆。
+17:57:cleamoon: 给我几个高中萌妹子爆
+17:57:Sleepwalking left channel:
+17:57:Plough: 等我打完E2试试
+17:57:xxxxxxxxx: 你看你看miku酱都跑了
+17:57:Plough: 看这架势高压锅够呛能捞到
+17:57:varna: 拼拼RP
+17:57:cleamoon: 话说，我确实是有个干姐姐的... 就是她略强...
+17:57:Plough: 击破完先大建一发再捞高压锅
+17:58:Plough: 反正还有时间
+17:58:varna: 我要大建起来就没钢了，所以权衡下要不要高压锅……
+17:58:Plough: 我现在钢也就刚破千……
+17:58:biergaizi quit:Ping timeout: 250 seconds
+17:58:varna: 6.6k/18.3k/9.2k/7.3k 0/45
+17:59:Plough: 除了桶简直壕
+17:59:varna: 钢太少
+17:59:sismvg: fock..什么人工处理，故意想要拿我的狗币去炒，今天早上转出的doge到现在都没汇到我的钱包。。
+17:59:xxxxxxxxx: 话说手机用来防弹的话 电池应该朝外侧还是内侧?
+17:59:varna: xxxxxxxxx: 外侧，当反应装甲用
+17:59:sismvg: 流言终结者：手机不能防弹，诺基亚也一样
+18:00:varna: 打通E2之后我得组织一个东急队
+18:00:Plough: 第一点全员擦伤
+18:00:Plough: 全员只有擦伤
+18:01:Plough: 大建我要出货了直接扔去E2
+18:02:Plough: 夜战点无伤
+18:02:Plough: 这次脸似乎还行
+18:02:sismvg: http://i-ab.com/1822/ 感觉做的有点坑爹
+18:02:varna: 没桶
+18:02:Plough: 门神4SS
+18:02:varna: 开始修最上
+18:02:varna: 4ss梯形确认
+18:02:AbyssPilot: 好好的 T 有利让我转成了反航战撞船玩。南达科他对三只驱逐舰四只运输船对面还不会放鱼雷。
+18:03:varna: AbyssPilot: 你不形成跨射
+18:03:xxxxxxxxx: 红旗被收购了...
+18:03:AbyssPilot: 直射。
+18:03:Plough: 大傻小破
+18:03:AbyssPilot: 红旗 linux？
+18:03:Plough: 单纵肝过去
+18:03:xxxxxxxxx: 中科红旗
+18:04:varna: 上支援了？
+18:04:Plough: 嗯
+18:04:varna: 看看RP吧
+18:04:Plough: 空优 GET
+18:04:varna: 我希望明天早上能斩杀，不然还得拖一天
+18:04:Plough: 噗
+18:04:Plough: 支援只打掉一只……
+18:04:Plough: 加贺大破
+18:05:Plough: 北上大破
+18:05:varna: 都无所谓
+18:05:AbyssPilot: 打到最后有个驱逐舰想跑，让我一炮糊轮机上了。
+18:05:Plough: 幼女还剩325点血
+18:05:varna: ...
+18:05:varna: 拼了
+18:05:Plough: 明明是空优就是不连击……
+18:05:Plough: 182点血
+18:05:Plough: 我还是回家赌三式弹吧
+18:05:varna: 残念
+18:06:Plough: RJ呀！！！！！！！！！！！
+18:06:Plough: 喂棒各去
+18:07:varna: 今天晚上看看能不能出击
+18:07:varna: 航母修起来太费事了
+18:07:Plough: 棒各全喂满了
+18:07:hope1: java占2G内存……
+18:08:xxxxxxxxx: 可以理解嘛
+18:08:varna: 4G时代占4G内存才是正道
+18:08:xxxxxxxxx: http://tieba.baidu.com/p/3230029862
+18:08:xxxxxxxxx: 【技术贴】妹纸手把手教你搭建nagios监控系统
+18:08:hope1: 总共就4G
+18:08:varna: HOHOHO-
+18:09:xxxxxxxxx: 4G时代的4G是这个4G的意思么...
+18:09:varna: 不是
+18:11:xxxxxxxxx: 话说明天有人去围观miku酱么?
+18:11:varna: 我不去
+18:11:hope1: 明天怎么了？
+18:11:Plough: 赌340结果出了91pad……
+18:11:varna: hope1: 米库酱生 日
+18:11:varna: Plough: 我的91弹两个都是这么来的
+18:12:varna: 现在稍微有点麻烦，我的决战支援只有两门大根
+18:12:Plough: 我的决战支援41都用不起……
+18:12:varna: 让太太塞一些12甲去凑数吧
+18:12:cleamoon: 噬谎者这个漫画不错
+18:13:Plough: 16/5330/763/5330+4/9
+18:13:Plough: 简直惨
+18:13:varna: 你还有四个桶
+18:13:Plough: 我现在都出不去……
+18:13:varna: 从E1攻略结束之后我的桶就都是从胆囊里逃出来的了
+18:13:varna: 掏
+18:14:xxxxxxxxx: 弹幕:OpenGL?怪不得老崩溃，用DirextX做多好
+18:14:varna: 2333
+18:14:cleamoon: 蛋爆碎
+18:14:xxxxxxxxx: 土豪的世界难以理解
+18:15:Plough: 明天估计得歇一天
+18:15:Plough: 弹未尽油已绝
+18:16:AbyssPilot: >EA 哪的弹幕？
+18:16:xxxxxxxxx: http://www.bilibili.com/video/av1146888
+18:17:varna: 我来四发三式弹
+18:18:AbyssPilot: 弹幕：DX就只能在windows上玩了好么。←你们都没看过 wine 的 DX 在羊驼机器上奔走如飞，连本机 OGL 都没那么快。
+18:18:varna: 全失败了
+18:18:AbyssPilot: 噗。
+18:18:cleamoon: http://www.bilibili.com/video/av1387837/
+18:19:xxxxxxxxx: wine怎么搞DX的?
+18:19:varna: 企鹅，12.7连装炮A型，7.7mm机枪，水侦
+18:19:Plough: 貌似是转成OGL
+18:19:varna: Plough: LK 3.12之后不是有支持么
+18:19:AbyssPilot: 据羊驼说是内核有 hack？
+18:19:Plough: 0 0不清楚
+18:20:cleamoon: win下vba最快8倍速，lin下原生vba最快4倍速，lin下wine的vba最快12倍速.....
+18:20:varna: 我玩无冬之夜2有时候比1还快，前者dx后者gl
+18:20:AbyssPilot: 你看看。
+18:20:xxxxxxxxx: 我在win上玩D2的时候风扇比minecraft都响...
+18:21:varna: xxxxxxxxx: 爆
+18:21:varna: 最近不东急钢一直不够
+18:21:xxxxxxxxx: 和生成新地图的时候一个水平...
+18:21:varna: 实在不行就只好委屈电酱带队去开东急二了
+18:22:cleamoon: 不小心买了26W的基金，差点吐血，今天一看，发现挣了3k...
+18:22:AbyssPilot: 土豪。
+18:22:lh_mouse: 土豪。
+18:22:varna: 土耗。
+18:23:* lh_mouse bites varna.
+18:23:sismvg: 块买dogecoin
+18:24:cleamoon: 那类东西从来不买
+18:24:cleamoon: 基金都是按错了才买的
+18:24:varna: sismvg: 你看看你都被别人套牢了
+18:24:varna: 散户赚钱有如非提造大和
+18:24:sismvg: 坑爹的人工
+18:25:varna: 非理法权天啊
+18:25:sismvg: 我的目的只是让dogecoin更加多，而不是cny
+18:25:varna: 非提没道理可讲，不受法律保护，没有权益保证，天塌下来也绕不过好望角
+18:26:sismvg: 的确
+18:26:cleamoon: 穿内衣？
+18:26:cleamoon: 这个名字的自称货币的玩意还敢买我表示佩服
+18:26:varna: 自己都保不住还试图建设美好社会，最后还不是被夺取成果
+18:27:xxxxxxxxx: 我觉得过几天药娘四就要赠送屁股求人买狗哔了
+18:27:varna: xxxxxxxxx: 爆
+18:27:xxxxxxxxx: 羊驼快准备好入手
+18:27:varna: xxxxxxxxx: 我觉得该先爆你
+18:27:varna: @生肛汝尻
+18:28:cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0a/xr/g5_385442.jpg
+18:29:sismvg: 男的
+18:29:cleamoon: 中国推进怒江水电站计划 <-- 看成了中国怒推水江电站 <-- ra玩多了...
+18:30:varna: 幼女不错
+18:30:varna: 看起来天津风
+18:30:varna: 电站2333
+18:30:varna: 吃饭
+18:31:hope1 quit:Quit: Reconnecting
+18:32:cleamoon: 出门
+18:32:hope1 joined channel
+18:33:hysw: Moe root task < -.-
+18:42:\q joined channel
+18:47:sismvg: china:what is root?
+18:53:Xilzzerts quit:Read error: Connection reset by peer
+18:58:hysw quit:Quit: ~hysw();
+19:02:condy: http://picpaste.com/2-lPMOeWsp.png 
+19:02:condy: ^ 这上面的是啥意思？
+19:03:condy: 不懂日语。
+19:04:varna: display size不足，似乎会调低分辨率
+19:06:condy: 好像确实是这个问题。在把VirtualBox缩小之后才出现的。。
+19:13:FrankHB: http://www.bilibili.com/video/av1169375/
+19:15:hope1 quit:Ping timeout: 240 seconds
+19:15:\q joined channel
+19:16:xxxxxxxxx: 印象中这个视频我发过...
+19:23:varna: xxxxxxxxx: 爆
+19:23:AbyssPilot: 二代里舰载俯冲轰炸机被黑得体无完肤，连个幼女都炸不动。
+19:23:varna: 一二甲！一航战！
+19:30:varna: 稍稍有点想换回openbox了
+19:31:varna: 不过还是wmii顺手
+19:35:condy: 刚刚装了herbstluftwm要试试手。。
+19:38:varna: 看着还不错
+19:38:varna: 自带面板还是要自己弄一个？
+19:42:condy: 好像只装了dzen2..
+19:43:varna: soga
+19:44:sismvg: 用API要担心专利问题吗？
+19:45:varna: 问问恥球
+19:45:sismvg: 他灰色名字是什么意思
+19:46:varna: 我客户端禁用颜色
+19:46:sismvg: 。。。。。
+19:47:sismvg: FrankHB:用API的时候需要担心版权问题吗？
+19:47:varna: sismvg: 著作权还是专利
+19:47:sismvg: 专利
+19:47:sismvg: 应该属于专利问题
+19:47:varna: 你申请专利？
+19:47:sismvg: 我用别人的东西
+19:47:varna: 我以前只申过著作权，审批巨松……
+19:48:sismvg: 。。。看谷歌的专利数量就知道专利估计也松
+19:48:varna: 个人弄专利很麻烦
+19:48:varna: 公司学校还好说
+19:49:sismvg: 专利不就是专门用来坑别人的嘛
+19:49:xxxxxxxxx: 四元药研究中心
+19:49:varna: 极少时候不是
+19:49:varna: xxxxxxxxx: 爆
+19:50:sismvg: 也只能是极少。。我就担心API用着用着就被告了。。
+19:50:varna: 你们啊，不要总是想着搞个大 新 闻出来
+19:50:varna: 当时美国有个南达科他酱，我跟她谈笑风生
+19:50:acgtyrant joined channel
+19:50:varna: acgtyrant: 爆
+19:50:sismvg: 柯达
+19:51:varna: @南方栖战姬
+19:52:sismvg: 政协委员抱陌生女子跳水库导致女子死亡
+19:52:varna: 噗？
+19:52:acgtyrant: varna, 凝
+19:52:varna: acgtyrant: 菊爆的爆
+19:52:sismvg: 赔了368RMB然后做了1年半牢
+19:52:sismvg: 368W
+19:53:sismvg: 还缓刑两年。。
+19:53:varna: acgtyrant: 因为这里妹子实在太少了，现在开始培养药娘，后来进展到见谁爆谁
+19:53:acgtyrant: ……
+19:53:acgtyrant left channel:
+19:54:sismvg: 听说facebook有70%的员工都是男人.
+19:54:AbyssPilot: 又变成政协了？
+19:54:varna: 扫地大妈也算进去了？
+19:54:sismvg: 科技行业妹子少，难得有个妹子
+19:54:varna: eee
+19:54:sismvg: 就算有了也是坑
+19:54:varna: eee
+19:55:sismvg: eee ?
+19:55:varna: LEEE
+19:56:sismvg: LEEE妹子多
+19:56:sismvg: ?
+19:56:varna: LEEE是妹子
+19:56:sismvg: 不认识
+19:56:varna: 切
+19:57:xxxxxxxxx: 羊驼: 切
+19:57:varna: 复 纵 阵
+19:59:varna: debian时代我一直没试过tint2
+19:59:varna: 不知道效果究竟如何
+19:59:varna: 玄 学 阵
+19:59:* AbyssPilot 组成了水上打击部队。
+20:00:varna: 大傻21hp, 略危险
+20:00:varna: 轮 型 阵
+20:00:varna: 人民教师……
+20:01:varna: 果然蹭血劝退了
+20:01:AbyssPilot: 舰载机你这 (9)！我都降对地方了你给我复飞？还悠哉游哉地踩了脚升降机。
+20:03:varna: 有点窝火
+20:03:AbyssPilot: ↑前面一个飞机刚被升降机送下去，自机跟上来一脚油门踩过了迈过升降机直接又起来了。
+20:04:varna: 去他大爷的勋章
+20:04:varna: 砸砸砸
+20:05:AbyssPilot: 着了角川的道了吧。
+20:05:varna: 反正下个月有两个，E2有一个，手头还剩一个
+20:05:varna: 够利根的
+20:06:* AbyssPilot 用哇酱击沉了鱼雷艇。
+20:08:varna: 北上大人差一点
+20:08:varna: 希望能活过门神
+20:10:varna: 活过去了
+20:10:AbyssPilot: 提督刷出来两只夕雾……
+20:11:varna: ...
+20:11:varna: 希望主要火力点别受损
+20:12:varna: 糟
+20:12:varna: 击破不能
+20:14:varna: 事不如愿，十之八九
+20:15:xxxxxxxxx: 脸不够好 十有八九
+20:15:varna: 两个勋章已扔，利根再见……
+20:15:AbyssPilot: 着了道了着了道了。
+20:15:varna: 这样比较亏
+20:16:varna: 总之继续打吧，估计还得再来个三四天
+20:16:varna: 天津风说不定也得放弃了，斩杀阶段投入不如产出
+20:16:varna: 下回上决战支援
+20:17:varna: 四门大根两组12甲稍微清一下杂鱼
+20:18:varna: ——总之我宁可扔勋章也不氪桶
+20:18:AbyssPilot: 心比天高脸比煤黑。
+20:19:varna: 而且我确实扔掉了全部勋章换桶……
+20:19:varna: 这次活动下来可以考虑让矶波穿着矶风的衣服抱着哭了
+20:21:AbyssPilot: 啊对，谁说大淀是平的，她还是有点料的。
+20:23:varna: 明天争取打两次吧
+20:25:hope1 joined channel
+20:26:sismvg: http://www.bilibili.com/video/av1228216/
+20:26:sismvg: 原本我都忘了掰手指了。。看了这个视频我又记起来了。。
+20:28:AbyssPilot: http://www.acfun.tv/a/ac1337703 我们来说个笑话：韩国的载人航天。
+20:31:sismvg: 韩国有足够的空间来承担失败的风险阿莫。。
+20:31:sismvg: 吗
+20:32:Plough: 两个勋章之前砸了
+20:32:Plough: 结果第一点赤城直接摔了
+20:32:varna: 最后榛名被一炮大破，我知道大势已去，就开始安排修船进度
+20:33:xxxxxxxxx: 唐纳德·昂格尔（Donald Unger）用自己的双手进行了长达60年的“对照实验”：每天掰响自己的左手指关节，而从来不掰右手的关节。最终，他的左右手都没有出现关节炎，两只手看起来也没有什么差异。
+20:33:AbyssPilot: 喔，so bang-ge。
+20:35:varna: 噗
+20:35:varna: 昼战航母全罚站了，没人炸驱逐也是个问题
+20:35:xxxxxxxxx: 这绝对不科学
+20:35:xxxxxxxxx: 他撸管用的哪只手..
+20:36:varna: 如果斩杀出一个浮游要塞就更吸引火力了
+20:36:varna: http://tieba.baidu.com/p/3230379379 # 正义的伙伴
+20:36:* AbyssPilot 总被人说别掰了看你那大骨节让你掰的，但总觉得看起来大完全是因为手指头上没肉……
+20:37:xxxxxxxxx: 看脚指头就知道了
+20:37:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=5851a540554e9258a63486e6ac82d1d1/ba77aef81a4c510f888baf3e6359252dd42aa57e.jpg
+20:37:xxxxxxxxx: 脚指头从来没掰过 该粗的照样粗
+20:37:sismvg: 正义的伙伴，赞
+20:38:AbyssPilot: 脚趾头从来掰，该细的照样细。
+20:38:sismvg: 最后，二楼楼中楼一句话："有多少妹子会日文？|
+20:38:varna: 居然敢沉电酱
+20:39:varna: 简直是粪提中的粪提
+20:39:xxxxxxxxx: 脚指头都不放过.....
+20:39:* AbyssPilot 假如玩的话会五月雨 / 笑起手，绝不用电。
+20:39:varna: 为何五月雨？
+20:40:AbyssPilot: 四只里看着最顺眼。除了从云。
+20:41:varna: ……被遗忘的两个白露级泪流满面
+20:41:varna: 终于有专门看她顺眼的提督了
+20:41:AbyssPilot: 从云 = 论外，五月雨 > 笑 >> 涟 >>> 电。啊，凉风就免了。
+20:42:varna: 刚北方幼女看我可怜，走前送个RJ
+20:42:varna: 凉风太爷们
+20:42:AbyssPilot: RJ 呀！！！！
+20:42:varna: 等我明天拿去喂最上
+20:42:AbyssPilot: 加啥？
+20:42:varna: 对空
+20:42:varna: 加对空的有岛风、利根级、轻航、航母和战舰
+20:42:AbyssPilot: ↑顺带一提结婚的话是吃撑。
+20:42:varna: 还有蜜瓜
+20:43:AbyssPilot: 记得有个谁是四项都加来着。
+20:43:varna: 蜜瓜
+20:43:xxxxxxxxx: (C85) [P.P.P (Cocorono Arika)] Doughnut "Ka" Genshou!? (Vocaloid) [Chinese] [CE家族社] <- rl不对!!!
+20:44:varna: 利根级应该也是
+20:44:AbyssPilot: V+ 本？谁x谁？
+20:45:varna: 米库酱×红旗酱？
+20:45:xxxxxxxxx: 葱和时常没有脸的男性...
+20:46:varna: 提督！？
+20:47:xxxxxxxxx: 提督上船去
+20:47:AbyssPilot: 噗，不是百合啊。
+20:47:xxxxxxxxx: (C85) [Atariya Kyoushitsu (Mokumokuren)] Aya-chan kara Ecchi na Service shite Moratta (Touhou Project) [Chinese] [伞尖绅士汉化组]
+20:47:AbyssPilot: 话说蜜瓜的语音听起来比想象中软啊。
+20:48:varna: 蜜瓜略腻
+20:48:AbyssPilot: ↑被文文做了全套？
+20:48:varna: 感觉openbox有不少不错的窗口主题
+20:48:xxxxxxxxx: 没点开
+20:49:varna: 或许回学校换一次吧
+20:49:AbyssPilot: 是说标题。
+20:50:xxxxxxxxx: openbox shift+鼠标点击设置成窗口移动之类的 然后d2就吃不到shift了
+20:50:varna: ...
+20:51:varna: 换成win吧
+20:51:varna: 面板不知道tint2和dzen哪个好看
+20:52:endle_ joined channel
+20:53:AbyssPilot: Shift + 鼠标点击设置成窗口移动？？这什么思想感情？
+20:53:xxxxxxxxx: 不是游戏谁会用shift+鼠标点击....
+20:54:AbyssPilot: ListView 表示不服。Edit 表示 LV 你给我一边凉快去。
+20:54:varna: 好想侵犯米库酱！
+20:55:endle quit:Ping timeout: 255 seconds
+20:58:AbyssPilot: 可惜没在这。
+20:59:xxxxxxxxx: openbox大概还是tint2好点...
+21:00:varna: 但是dzen看起来配置比较方便
+21:03:xxxxxxxxx: https://urukrama.wordpress.com/2008/07/21/a-tabbed-desktop/ 这个看上去...
+21:07:AbyssPilot: 做為改修素材時可以同時提升四項性能，因此早期可用在確定艦娘改修數值是否封頂，但10/23官方加入艦娘改造階段顯示後已經不需要這麼做，連同筑摩一起失業了 ←利根检查员（已失业）。
+21:10:varna: 现在没搞清楚大破和击毁的血条削减是否一样
+21:11:AbyssPilot: 我是個劍骨頭。身是鐵疙瘩，血是玻璃渣。我打過上千把劍。既沒賠。也沒賺。打劍又他媽的辛苦。只能枯等著客人來。也沒法後悔，我只會打鐵。唉，我這輩子只能打鐵了。←•英靈化的衛宮士郎咒文
+21:11:varna: 2333
+21:12:varna: 似乎是不一样，还是白打……
+21:13:AbyssPilot: 噗。
+21:13:varna: 没打完的血还是得打下去，这样跟没打差不多吗
+21:14:varna: 钢已经掉下九千，东急不可避了
+21:19:hope1: xxxxxxxxx, 窗口管理器键位不能加个Mod4吗……
+21:19:AbyssPilot quit:Ping timeout: 246 seconds
+21:25:xxxxxxxxx: 只有右边有mod4
+21:26:xxxxxxxxx: 右边还要拿鼠标
+21:26:hope1: ... 这什么反人类的键盘，左撇子专用？
+21:26:hope1: 我这只有左边有Mod4
+21:28:varna: 我整个人都不好了
+21:28:varna: "If RV is magical, ..."
+21:28:hope1: RV?
+21:29:varna: reference value
+21:48:condy quit:Ping timeout: 260 seconds
+21:51:endle_ quit:Ping timeout: 240 seconds
+22:02:sismvg: http://tieba.baidu.com/p/3230778402
+22:02:sismvg: 西尾又开始玩jump了
+22:04:endle_ joined channel
+22:17:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+22:24:endle_ quit:Read error: Connection reset by peer
+22:26:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:34:varna: 哈哈哈，客户拿着一坨c程序问我要类图
+22:35:varna: 类你大爷啊，dogexygen也救不了你
+22:36:Plough: 23333333
+22:38:varna: 组织了一个豪华的远征队开东急二
+22:40:varna: Plough: 刚拿下一个击杀
+22:40:Plough: Orz
+22:40:varna: http://picpaste.com/ORm6gbIr.png # 远征队
+22:40:Plough: 我得回回血了
+22:41:Plough: 915/1451/6802/5609+6/9
+22:41:Plough: 915/6802/1451/5609
+22:41:varna: 睡觉
+22:41:varna quit:Quit: leaving
+23:33:hope1 quit:Ping timeout: 240 seconds
+23:38:hope1 joined channel
+23:47:xxxxxxxxx quit:Quit: Leaving...

@@ -1,0 +1,515 @@
+00:05 varna: 搞定下班
+00:07 varna quit:Quit: qicr for android: faster and better
+00:14 ftantic: ●﹏●
+00:36 varna joined channel
+00:36 varna: 简直操碎肝
+00:59 Aldrich: https://wx1.sinaimg.cn/mw690/6dd57921ly1fnaggtdymoj212g0fe77s.jpg
+01:00 Aldrich: https://wx3.sinaimg.cn/mw690/6dd57921ly1fna4hr7dyhj209z04u41i.jpg 暴雪罪大滔天，搞得网易怨声载道
+01:06 Aldrich: https://wx1.sinaimg.cn/mw690/0071yU3Zgy1fnarrkt40nj30m80li401.jpg 人民政府明令不得转世
+01:07 ftantic1 joined channel
+01:08 ftantic quit:Ping timeout: 252 seconds
+01:08 ftantic1 is now known as ftantic
+01:11 lhanjian: varna: Aldrich 休闲一下？
+01:11 lhanjian: 羊驼子带我去该隐
+01:11 Aldrich: 看羊驼子了
+01:11 varna: 打不动了，晚上泡点面吃睡了
+01:11 varna: 该隐赫斯特进度没开
+01:12 lhanjian: 我也没开啊
+01:12 lhanjian: 不知道怎么走
+01:13 varna: 没开完boss不能带的
+01:13 lhanjian: 好像禁忌森林我也忘了怎么打走了
+01:13 Aldrich: 那我先躺了
+01:13 varna: 我先把没吃的晚饭补上
+01:13 Aldrich: 武运
+01:16 Aldrich: varna: 对了，你耳机到了没
+01:16 varna: 没
+01:17 Aldrich: 噫吁嚱
+01:17 Aldrich: 你杭州居然不是第二天就到
+01:17 varna: 今天到我也开不动车了
+01:17 varna: 累的时候懒得动嘴，太费神
+01:18 Aldrich: 也是
+01:18 Aldrich: 总之之后找机会吧
+01:18 * Aldrich 躺
+01:22 varna: 感觉现在我打罗姆的套路彻底堕落了
+01:23 varna: 前半血抽掉+控血线，次1/4血抽掉，剩下的直接起源弹凹飞
+01:24 lhanjian: 羊驼子给我带路吧
+01:24 lhanjian: 还是禁忌森林
+01:24 lhanjian: 那地方我找不到入口了
+01:24 varna: 带不动了_(:з」∠)_今天真的累跪
+01:24 varna: 吃点东西就躺了
+01:32 lhanjian: 噗噜噜
+01:37 varna: 吃完泡面了
+01:38 varna: 躺_(:з」∠)_
+01:45 ftantic quit:Quit: ftantic
+02:00 lhanjian: varna:然而并没有
+02:05 varna quit:Ping timeout: 255 seconds
+02:11 stevenking quit:Quit: Connection closed for inactivity
+05:55 N00d1e5_Bot quit:Ping timeout: 240 seconds
+08:16 zb111 joined channel
+08:26 ftantic joined channel
+08:33 ftantic: test.
+08:37 ftantic quit:Quit: ftantic
+09:01 wurui joined channel
+09:28 lh_mouse joined channel
+09:49 L-ios1 joined channel
+09:50 L-ios quit:Ping timeout: 260 seconds
+09:50 L-ios1 is now known as L-ios
+09:51 uzzrroOOOO joined channel
+10:07 L-ios quit:Ping timeout: 248 seconds
+10:08 L-ios joined channel
+10:11 L-ios quit:Remote host closed the connection
+10:15 L-ios joined channel
+10:44 EDC404 joined channel
+10:48 L-ios1 joined channel
+10:50 L-ios quit:Ping timeout: 276 seconds
+10:50 L-ios1 is now known as L-ios
+10:59 wurui quit:Remote host closed the connection
+11:11 L-ios1 joined channel
+11:11 L-ios quit:Ping timeout: 248 seconds
+11:11 L-ios1 is now known as L-ios
+11:22 lh_mouse: lhanjian, 你厂现在配的镜像都不开 swap 吗？
+11:22 lh_mouse: OOM 炸了也不管？
+11:22 lhanjian: lh_mouse: OOM炸了？
+11:22 lhanjian: 这是怎么回事？
+11:22 lhanjian: 你用了我厂的服务了？
+11:22 lh_mouse: git bundle 的进程因为 OOM 炸了。
+11:23 lhanjian: 这关我厂什么事？（upyun.com?)
+11:25 lh_mouse: 噗。
+11:26 lh_mouse: 你不在 ali 了啊。
+11:26 lh_mouse: 看来是 varna 的锅。
+11:42 lh_mouse quit:Read error: Connection reset by peer
+11:44 lh_mouse joined channel
+11:45 L-ios1 joined channel
+11:46 L-ios quit:Ping timeout: 248 seconds
+11:46 L-ios1 is now known as L-ios
+12:00 lhanjian: lh_mouse: 锅个屁，羊驼子是业务线的，哪有空管渣渣阿里云。你要真有空管这事儿，应该去阿里云开工单，他们会有技术/技术支持给你想要的回复
+12:01 lh_mouse: 傻逼阿里云，趁早放弃治疗。
+12:01 lh_mouse: 阿里云的技术就是一帮傻逼。
+12:15 zb111 quit:Remote host closed the connection
+12:37 matchray: 好久沒做題了T_T https://github.com/jacobdufault/cquery/commit/aa1ab94db5412d9e7b5741fc66e8d3dfd24908b1
+12:38 matchray: 阿里云真的很傻嗎
+12:54 matchray: lhanjian: 對很多項目不需要 compile_commands.json，echo clang > .cquery 就夠了
+12:55 lhanjian: matchray: 这个无所谓，反正compile_commands.json是自动生成的
+12:56 lhanjian: matchray: 在小耗眼里，只有SB和特别SB的区别
+12:58 lhanjian: http://k.sina.com.cn/article_1595424542_5f183f1e027001kwd.html
+12:58 lhanjian: 这个似乎是国内唯一能射军用国内外枪械的地方
+13:00 matchray: lhanjian: 我們這些用code assistant的SB?
+13:01 lhanjian: matchray: 对，在小耗眼里我们都是不用nano的SB
+13:01 lhanjian: 可能你是SB，我是用VIM的特级SB
+13:02 matchray: 感覺應該體驗vscode
+13:03 lhanjian: 我用过
+13:03 lhanjian: 体验不错
+13:03 lhanjian: 但还是老问题，没法在ssh里用
+13:04 lhanjian: 能在终端里用的editor，也就vi/emacs/nano外加plan9那几个了
+13:08 lhanjian: 编辑器还要考虑一个问题，在一个部署了古老发行版软件源的机器上，能不能简单地通过包管理器安装？
+13:09 matchray: 包管理器裏不可能有的
+13:10 lhanjian: matchray: archlinuxcn源有vscode-bin
+13:10 lhanjian: 甚至有cquery-git
+13:10 lhanjian: https://www.irccloud.com/pastebin/f1qrdKQp/
+13:12 matchray: cquery-git 我也改過
+13:12 matchray: 我在 FreeBSD OpenIndiana 上編譯成功cquery
+13:14 lhanjian: 真的难编译的是LLVM+Clang
+13:14 lhanjian: 这个太要命
+13:14 matchray: 是。
+13:14 matchray: 所以推薦 --bundled-clang=5.0.1，這個選項是默認的
+13:14 matchray: OpenIndiana 不得不 pkg install clang-40
+13:15 matchray: ./waf configure --use-system-clang
+13:16 matchray: lh_mouse: 要序列化 std::variant ……
+13:17 matchray: 要 template binary search + std::get 了？
+13:19 lhanjian: 话说mr酱能不能用简体？繁体看着密恐……
+13:22 lhanjian: 我用的苹果那个hiragino GB
+13:23 lhanjian: 改回DROID SANS了
+13:23 lhanjian: 一下子优雅多了
+13:23 matchray: 不好呢
+13:24 lhanjian: 哦,没事,随意
+13:24 bzzzt quit:Ping timeout: 260 seconds
+13:26 lh_mouse: arch ZZ 
+13:27 lh_mouse: 当玩具玩玩算了。
+13:27 lh_mouse: 一帮小孩子搞的东西……
+13:27 lh_mouse: 人也 SB  东西也 SB 。
+13:29 matchray: cquery滿足了我寫template和算法的需求
+13:31 lh_mouse: matchray, std::visit 还是什么。
+13:31 lh_mouse: 少写 C艹 少写 模板……
+13:32 matchray: type-matching visitor ?
+13:33 matchray: std::visit([&i](auto&& arg) { if (index() == i) Reflect(); i++; })
+13:34 lh_mouse: 大概吧，还得加一个 type index 。
+13:34 bzzzt joined channel
+13:34 matchray: ::index() 是動態的……
+13:35 lhanjian: Debian才真是老古董和GNU教条主义
+13:35 lhanjian: 加上Ubuntu猪队友
+13:35 lh_mouse: 教条总比飞妈强。
+13:35 lhanjian: arch就是个人用着最舒服
+13:35 lhanjian: 飞什么妈？
+13:36 lhanjian: 教条就是有妈也不要
+13:36 lh_mouse: 滚炸了退版本都退不回去。
+13:36 lhanjian: 谁让你不备份
+13:36 lhanjian: 说得好像Debian
+13:36 lh_mouse: debian 倒是宿主机经常炸。
+13:36 lhanjian: 跪了你就能一键还原
+13:36 lh_mouse: 重装了更新了，又炸了？
+13:37 lhanjian: 我没碰到这情况
+13:37 lhanjian: 安装过程中你就应该确保最新，然后安定的跑起来
+13:37 lh_mouse: 哪那么多给你更新的……
+13:37 lhanjian: 没稳定跑起来的安装，不算安装成功
+13:38 lh_mouse: 得了吧， arch 就是你再吱吱也没吱吱过 centos 和 ubuntu 。
+13:38 lh_mouse: 你线上环境敢直接滚 arch 了？
+13:38 lhanjian: arch的对手从来都不是服务端老古董和newbie笨兔
+13:38 lhanjian: >arch就是个人用着最舒服
+13:39 lh_mouse: 你家服务器用 arch 了/
+13:39 lh_mouse: 看来菜逼连 windows 都没干过。
+13:39 lhanjian: arch就是我的宿主机自用
+13:39 lh_mouse: windows 都舔着碧莲说自己能当服务器系统了。
+13:39 lhanjian: 你看你都转进到商业windows
+13:39 lh_mouse: 可是 arch 呢？
+13:39 lhanjian: 了
+13:39 lh_mouse: 可是 arch 呢？可是 arch 呢？可是 arch 呢？
+13:39 lhanjian: 可是我们arch不收费，活人多啊
+13:39 matchray: using lsRequestId = std::variant<std::monostate, double, std::string>;
+13:40 lhanjian: windows呢？50RMB重装一次系统，QNM的微软支持电话？
+13:40 lh_mouse: lhanjian, 除了 win 谁家收费了。
+13:40 lhanjian: Redhat啊
+13:40 lh_mouse: redhat 社区版不收费谢谢，
+13:40 lhanjian: 卖服务喽～不掏钱不给修BUG～
+13:40 matchray: int v; Reflect(visitor, v); id = v;
+13:40 lhanjian: 呸
+13:40 lh_mouse: centos 和 ubuntu 随便揪一个就能打死 arch 了。
+13:41 lh_mouse: [13:27:15] <lh_mouse> 一帮小孩子搞的东西……
+13:41 lh_mouse: [13:27:20] <lh_mouse> 人也 SB  东西也 SB 
+13:41 lh_mouse: 懂了没有？
+13:41 lhanjian: 打死arch我也不会在我的宿主机上装笨兔和伪服务端OS
+13:41 lh_mouse: 你们媒体呀，还是要提高自己的姿势水平。
+13:41 lhanjian: 我们arch就是滚的最快，钦定了！
+13:42 matchray: std::variant<std::monostate, double, std::string>  default-init 就是 null 對吧
+13:42 lh_mouse: 自觉。
+13:43 matchray: Arch多好
+13:43 lhanjian: ubuntu要砍掉脑袋（Unity）才好用
+13:43 lhanjian: CentOS6/7在PC上都不好用
+13:43 lhanjian: 砍了脑袋的兔子连耗子都不如
+13:43 matchray: 線上系統CoreOS流行嗎
+13:44 lhanjian: 没用过
+13:44 lhanjian: matchray: 贵司有CoreOS的ECS提供吗？
+13:45 matchray: 不懂
+13:48 lhanjian: matchray: 看了下GoogleCloud有CoreOS
+13:49 matchray: variant reflection好難……
+13:51 lh_mouse: matchray, 默认好像是 std::none 还是啥来着。
+13:52 lh_mouse: 记不得那么多。
+13:52 matchray: 對， 是要 type index
+13:52 matchray:       Reflect(visitor, std::get<N - 1>(value)); 不行的
+13:53 matchray: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1603.pdf
+13:53 matchray: 原來這個很早就有了啊
+13:55 matchray: tuple_element
+13:56 lhanjian: C党最大的好处就是可以放弃观看变化的文档
+13:56 lhanjian: 虽然还是有同志们试图加些不碍事的小东西
+13:56 matchray: lhanjian: _Atomic 用過嗎
+13:56 lhanjian: matchray: C的我用过
+13:56 lhanjian: 用了跟没用一样那个
+13:56 lhanjian: 因为我只是为了用而用
+13:56 matchray: C Support for Multiple Address Spaces
+13:57 matchray: _Decimal128
+13:57 matchray: clang沒實現哦
+13:58 lhanjian: 所以我一般不用Clang
+13:58 lh_mouse: _Atomic 没卵用。
+13:58 * matchray 是自豪的man-pages contributor
+13:58 lh_mouse: 没法指定显式的 memory model 和咸鱼有什么区别。
+13:59 lhanjian: 我已经用上了gcc 7.2
+13:59 lh_mouse: poseidon 还支持 gcc 7 呢。
+13:59 lh_mouse: c11 值得学的只有 _Generic 和 _Static_assert 而已。
+13:59 matchray: TS 18661-4:2015;
+14:00 lh_mouse: s/gcc 7/gcc 4.7/
+14:00 lhanjian: 还有 threads.h
+14:00 lh_mouse: 没用。
+14:00 lhanjian: 人民群众真欢喜啊
+14:00 lh_mouse: 傻逼 posix-ish 。
+14:00 lhanjian: 有C11Book吗
+14:01 lh_mouse: 有。
+14:01 lh_mouse: 窝啊。（逃）
+14:01 lhanjian: 等待啊等待啊
+14:02 lhanjian: 等待万恶的GNU和Clang支持threads.h
+14:02 lhanjian: ISO/IEC 9899:201x 哎哟C11文档不收钱了
+14:04 L-ios1 joined channel
+14:04 lh_mouse: 跟 clang 什么关系。
+14:04 lh_mouse: 要支持也是 crt 的事。
+14:04 L-ios quit:Ping timeout: 240 seconds
+14:04 L-ios1 is now known as L-ios
+14:05 lhanjian: LLVM？
+14:05 lhanjian: glibc？
+14:06 lhanjian: musl支持threads.h了
+14:08 lh_mouse: Aji
+14:08 lh_mouse: musl 又没干过 glibc 。
+14:09 matchray: pthread robust mutex
+14:09 lhanjian: lh_mouse: 但他至少现有了C11较完整的实现
+14:09 lhanjian: 可以把完了
+14:09 lhanjian: 把玩了
+14:09 lh_mouse: Aji. robustness == IQ compatibility
+14:10 lhanjian: http://www.musl-libc.org/how.html
+14:10 lhanjian: 而且manual很有好感
+14:14 matchray: 像這樣學習template又能造福大家是很快樂的 https://github.com/jacobdufault/cquery/pull/279/files
+14:15 matchray: 是不是應該學習mpack variant怎麼實現的？
+14:15 lhanjian: 看起来threads.h里面该有的都有了
+14:16 lh_mouse: lhanjian, 这也叫 manual ？
+14:16 lhanjian: lh_mouse: how
+14:16 lh_mouse: 这最多能算个 introduction 。
+14:16 lhanjian: lh_mouse: http://www.musl-libc.org/doc/1.0.0/manual.html
+14:16 matchray: robust mutex?
+14:16 matchray: reader-priority writer-priority
+14:16 matchray: std::mutex是公平的
+14:17 matchray: shared_mutex
+14:17 matchray: 但有些時候想reader priority
+14:17 lhanjian: 读写锁真的有意义？
+14:17 lh_mouse: 意义不大。
+14:17 lh_mouse: 不是完全没有。
+14:18 lh_mouse: 现在的锁已经没有 lock convey 的问题了。
+14:19 lhanjian: 看来还是C11文档机智，要什么rwlock，一律mutex！
+14:19 lh_mouse: 这种情况下高竞态应该试图改进算法（例如 copy-on-write 或 copy-and-swap） 而不是试图改进锁本身。
+14:19 lh_mouse: c11 SB  比 pthread 还 SB 。
+14:19 lh_mouse: mtx_t 这 zz 缩写就不说了，
+14:19 lh_mouse: 居然没有 recursive_mutex_t 直接复用 mtx_t 。
+14:20 lh_mouse: 如果不缩写，是和 pthread 一样的 SB 。
+14:20 lh_mouse: 缩写之后是不如 pthread 的 SB 。
+14:21 lh_mouse: lhanjian, c11 里没有 rwlock .
+14:21 lhanjian: 反正pthread是SB
+14:21 lhanjian: lh_mouse: 我就这个意思啊，没有才好
+14:21 lhanjian: 但我讨厌bsearch_s
+14:21 lhanjian: 但我讨厌qsort_s
+14:21 lhanjian: 这是m￥
+14:22 lhanjian: 混入委员会了
+14:24 lhanjian: lh_mouse: 干嘛非得把mtx_t拆开
+14:24 lhanjian: init的确定好类型，自己取好名字嘛
+14:25 lh_mouse: lhanjian, 哦，我 lock 的时候还得判断一下类型咯？
+14:25 lhanjian: lh_mouse: 你已经确定了mtx_t的类型，当然知道啊
+14:25 lhanjian: 何必再判断一次？
+14:26 lh_mouse: 怎么确定？
+14:26 lh_mouse: mtx_lock 居然知道是不是 recursive 了？
+14:27 lh_mouse: mtx_timedlock 也是蠢。
+14:28 lhanjian: 我没明白小耗意思
+14:28 lh_mouse: https://github.com/lhmouse/mcfgthread/blob/master/src/env/c11thread.h#L171
+14:28 lh_mouse: https://github.com/lhmouse/mcfgthread/blob/master/src/env/gthread.h#L130
+14:29 lh_mouse: 高下立判。
+14:29 lh_mouse: 你以为那 if(__mutex->__mask & mtx_recursive){ 是什么狗屁玩意。
+14:30 lhanjian: 狗屁玩意儿狗屁玩意儿
+14:33 matchray: c++ - What is the copy-and-swap idiom
+14:34 matchray: lh_mouse爲什麼造了這麼多東西呀
+14:36 lhanjian: 小耗鄙视当下的弱智各种thread实现
+14:36 matchray: msvc name mangling
+14:36 matchray: msvc的 abi 怎麼看
+14:36 lhanjian: 但我不太愿意看小耗代码的原因是因为大写太多
+14:36 matchray: 現在有了cquery你沒有理由不看了
+14:36 lhanjian: cquery我只用不改
+14:37 lhanjian: :call LanguageClient_textDocument_definition() 想让我手输这段绝对是痴心妄想
+14:37 matchray: 沒有理由不看lh_mouse造的這些東西了
+14:37 lhanjian: 是啊，被迫看了一下小耗的c11thread.h
+14:37 matchray: lhanjian: 這個挺對的，因爲你肯定會 nnoremap 掉
+14:37 lhanjian: 对比了musl的thread.h
+14:38 lhanjian: nnoremap <silent> gd <C-w>v:call LanguageClient_textDocument_definition()<CR>
+14:38 matchray: 不喜歡 <C-w>v
+14:38 lhanjian: <C-w>s?
+14:38 lhanjian: nnoremap <silent> gD :call LanguageClient_textDocument_definition()<CR>
+14:38 lhanjian: 我都有的
+14:39 matchray: <C-w>v不會窗口越來越多嗎
+14:39 lhanjian: 所以要结合gD啊
+14:39 lhanjian: 第一层用gd，后面就gD了
+14:41 matchray: js/ts 用 number ，C++ 還是用int方便
+14:41 lh_mouse: lhanjian, c11 那个 call_once 也是 SB  。
+14:41 lh_mouse: 根本不能返回错误，只能 abort() 。
+14:41 lh_mouse: 还不如 std::call_once 。
+14:41 lhanjian: call_once本来就挺傻比
+14:42 lh_mouse: lhanjian,   https://github.com/lhmouse/mcfgthread/wiki/env-once_flag.h#void-_mcfcrt_signalonceflagasaborted_mcfcrt_onceflag-ponceflag
+14:42 lh_mouse: 我就不说什么了。
+14:42 matchray: libcxx 值得學習嗎
+14:43 lhanjian: 这个call_once根源在C上吧
+14:43 lhanjian: 又没有靠谱的异常
+14:43 lh_mouse: auto result = ::_MCFCRT_WaitForOnceFlagForever(&flag); try { do_init(); } catch(...){ ::_MCFCRT_SignalOnceFlagAsAborted(&flag); throw; } ::_MCFCRT_SignalOnceFlagAsFinished(&flag); 
+14:43 lhanjian: 死就死透了
+14:44 uzzrroOOOO quit:Quit: No Ping reply in 180 seconds.
+14:44 matchray: exception用不來
+14:45 lhanjian: 用不来+1
+14:45 lhanjian: 我讨厌异常
+14:45 lhanjian: 虽然我也讨厌-1+errno
+14:45 uzzrroOOOO joined channel
+14:46 lhanjian: 还是需要一个optional那种东西
+14:46 lhanjian: 这样就不用若干行的异常处理了
+14:46 lhanjian: 根据返回值的类型自动走下文
+14:46 matchray: std::error_code
+14:47 lh_mouse: 居然有人讨厌异常。
+14:47 lhanjian: 你知道，我是忠实的C用户（可能加上一点方言）
+14:48 lhanjian: 轱辘辘的吐出一大串流程，真糟糕啊
+14:48 lh_mouse: 让我饶罗翔来教你用异常：   https://github.com/lhmouse/poseidon-circe/blob/master/circe-foyer/src/servlets.cpp
+14:48 lhanjian: 然后我得“倒着”处理异常
+14:48 lh_mouse: 什么叫 modern, exceptional c++ 。
+14:48 lh_mouse: 这个文件里一个 if 都没有。
+14:48 lhanjian: 好！
+14:48 lhanjian: 我选择rua！st
+14:49 lh_mouse: 出错就丢异常，发送端的 promise 会接收到一个一样的异常。
+14:50 lhanjian: 我喜欢的那部分C++都在Rust里，另一部分在Gopher里
+14:50 lhanjian: 可能还有一小部分在Lua里
+14:50 lhanjian: 剩下的大概在GNU extension里
+14:51 lhanjian: 我应该是频道里最穷的码农
+14:51 lhanjian: ￥4791 income
+14:52 lh_mouse: musl 能干过 mcfgthread 了？
+14:52 lh_mouse: mcfgthread 在 windows x86 和 x64 上干翻各种实现无语来。
+14:52 lh_mouse: 无压力  * 
+14:52 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/Benchmarking
+14:52 lh_mouse: SRWLOCK 都不是对手。
+14:52 lhanjian: 干不过，musl完全是个Unix-like用具
+14:53 lhanjian: 更多的时候我思考的是如何让小耗的mcf有更多人敢工业化应用
+14:54 lh_mouse: 不现实。
+14:54 lh_mouse: mcf  过于激进。不如 poseidon 稳定。
+14:54 lhanjian: 激进不要紧，开发者也是傻子，你多几个产品用用，然后缝缝补补，就像GCC一样，敢用了
+14:55 lhanjian: poseidon名字取得不好，google搜github poseidon，要到第三页才是你的
+14:56 lh_mouse: poseidon-circe 
+14:57 * matchray 瞻仰mouse
+14:57 * lh_mouse 跪拜 mr 大犇。
+14:58 lhanjian: 给两位月入50000CNY/USD大佬跪下
+15:02 lh_mouse: 没有。
+15:02 * lh_mouse 拜 lhanjian 。
+15:02 lhanjian: 我是5000CNY/month
+15:02 lhanjian: 不到小耗的零头
+15:03 lhanjian: 不到MR的指头
+15:03 lh_mouse: 反正最终目标是把 clang 用户洗过来。
+15:03 lh_mouse: https://sourceforge.net/p/mingw-w64/mailman/message/35777634/
+15:03 * lhanjian 论一个“重点培养对象”是如何堕落为公司的五保户
+15:04 lh_mouse: 噗。
+15:04 lh_mouse: lhanjian, 摸摸头。
+15:04 matchray: 終點培養對象？
+15:07 lhanjian: matchray: 本来是可能给我快速晋升来着，现在成了时刻面临劝退危险的五保户
+15:08 matchray: 爲啥勸退。你走了誰寫C
+15:08 matchray: (爲啥是C
+15:08 matchray: lh_mouse: 評價一下 C C++ 項目代碼質量
+15:08 lhanjian: matchray: 因为不是C的话，其他人连能看懂C++的都没有
+15:09 lhanjian: 以一般的业界观点看，C也比较利于profile和performance optimization
+15:09 lhanjian: C++则要求更高，更难招人
+15:17 lhanjian: matchray: 功能已经和IDE接近了，而且速度快很多，不过需要我背记些快捷键～
+15:20 lh_mouse: matchray, 都是辣鸡，不如 poseidon 不如 mcf。 （逃）
+15:20 lh_mouse: [15:09:08] <lhanjian> 以一般的业界观点看，C也比较利于profile和performance optimization // 你还真搞错了。
+15:20 lh_mouse: 你强调的这两点根本看不出 C 和 C++ 的区别。
+15:21 lh_mouse: 这个是相对于其他东西的“优势”。
+15:23 lh_mouse: 如果一定要我说一句话：都什么年代了还写 C 。
+15:23 lh_mouse: 确定 C艹 的 freestanding 还不够用的时候才能用 C 。
+15:23 lhanjian: lh_mouse: 所以你看我狡猾地使用了“一般的业界观点”，其实我自己并没有这么觉得C比C++都多好优化
+15:23 lh_mouse: 比如 C 的 freestanding environment 就没要求 malloc 。
+15:24 lhanjian: 我leader优化python弄的AI，就用的C++改写的
+15:24 lh_mouse: 对于外面这帮彩笔而言 C 比 C艹 兼容智商。
+15:24 lh_mouse: 可维护性都是一样地辣鸡。
+15:24 lh_mouse: 所以 C艹 也不如 C 有优势。
+15:25 lh_mouse: C艹 更看能力和天赋，C  完全是吃经验。
+15:25 lh_mouse: 如果都不足么……
+15:25 lh_mouse: 呵呵呵呵呵呵呵呵呵呵呵呵呵呵。
+15:25 matchray: C艹 更看能力和天赋  .....
+15:26 lh_mouse: matchray, 跪求大犇帮窝宣传宣传。 XD
+15:26 matchray: 所以我們是不是應該放棄C++了
+15:26 lh_mouse: 是的。
+15:26 lh_mouse: 这辣鸡语言快扔了吧。
+15:26 matchray: lh_mouse: poseidon?
+15:26 lh_mouse: 你看 C艹17都加了什么狗屁。
+15:27 lh_mouse: 直到今天 C艹 的标准库连一个［起码能用的］ SHA-1 和 endianess support 都没有。
+15:27 lh_mouse: endianness *
+15:27 lh_mouse: matchray, mcfgthread 哇。 >w<
+15:29 matchray: sha-1淘汰了啊以後用BLAKE2
+15:29 lh_mouse: 我设想的就是。  std::sha1_context ctx;   ctx.update("hello"); ctx.update("world!"); auto sha1 = ctx.finalize();  std::cerr <<sha1 /* 3c608e47152c7b175e9d3c171002dc234bb00953 */; 
+15:44 lhanjian: Ruaaaaaast!
+15:50 lhanjian: matchray: 怎么find definition跳到声明去了
+15:52 lhanjian: 又正常了……
+15:58 matchray: 正在檢索中吧
+15:59 matchray: 另外聲明定義可以互相跳的
+15:59 matchray: 剛剛push了一個std::holds_alternative 開心 https://github.com/jacobdufault/cquery/commit/92b864ffcf6b3d6db6c06b273bd6ce2f35cc8bf4
+16:00 matchray: lhanjian: variant Reflect(Reader&, std::variant<...>&) 越來越難看了……
+16:05 matchray: https://github.com/jacobdufault/cquery/pull/274/files
+16:06 matchray: 他也写了个scan line..
+16:09 lhanjian: matchray: 我和lh_mouse都是lh开头的，所以貌似你打错了？
+16:11 matchray: 嗯，召唤老鼠
+16:13 lhanjian is now known as hanjian_l
+16:24 lh_mouse: 0.0
+16:24 matchray: 一只老鼠 https://github.com/jacobdufault/cquery/pull/274#issuecomment-356532351
+16:28 matchray: 怎么写一个 利用 rapidjson 的 Reflect(Reader&, std::variant<...>&)
+16:45 lh_mouse: matchray, switch(type()){ case String:  ... case Number: ... case Boolean: ... }; 呗……
+16:48 hanjian_l: 没想到你们浓眉大眼的C++已经用上type switch了
+17:22 uzzrroOOOO quit:Ping timeout: 276 seconds
+17:22 wurui joined channel
+17:29 wurui quit:Quit: http://quassel-irc.org - ???????
+17:29 wurui joined channel
+17:29 wurui quit:Remote host closed the connection
+17:30 wurui joined channel
+18:15 erhandsome quit:Quit: %null%
+18:17 wurui quit:Remote host closed the connection
+18:24 hanjian_l: matchray: 有了reference list以后感觉舒坦多了
+18:25 hanjian_l: 终于不用脑残C+S-c /C+S-v nnnnn了
+18:35 erhandsome joined channel
+19:05 iyzsong joined channel
+19:18 L-ios quit:Read error: Connection reset by peer
+19:19 Dove joined channel
+19:20 L-ios joined channel
+20:00 bzzzt quit:Ping timeout: 240 seconds
+20:11 bzzzt joined channel
+20:22 Stevearzh quit:Remote host closed the connection
+20:23 Aldrich:  hanjian_l 
+20:24 Aldrich: 还来么
+20:25 Stevearzh joined channel
+20:29 hanjian_l: 来
+20:29 hanjian_l: 我吃饭先
+20:30 Aldrich: OK
+20:30 Aldrich: 那我也去买点便当
+20:35 hanjian_l: 来了
+20:35 hanjian_l: 好，不急
+20:37 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:38 Aldrich: 那就先来吧
+20:38 Aldrich: 不怎么饿
+20:39 hanjian_l: 嗯，我已经入队了
+20:40 hanjian_l: 你简单吃点，别伤着胃了
+20:40 Aldrich: 我四点多的时候吃了一餐金拱门
+20:40 Aldrich: 现在处于半饿不饿的状态
+20:43 \s quit:Max SendQ exceeded
+20:44 \s joined channel
+21:17 N00d1e5 joined channel
+21:48 AndroUser joined channel
+21:49 AndroUser quit:Client Quit
+21:49 ring joined channel
+22:03 ring is now known as nicball
+22:28 Aldrich:  现在吃盒饭就正好了
+22:39 hanjian_l: 诡异的德国商家
+22:44 FrankHB joined channel
+23:15 hanjian_l: Aldrich: 回来了
+23:21 nicball quit:Ping timeout: 268 seconds
+23:23 iyzsong quit:Ping timeout: 264 seconds
+23:25 Aldrich: 等会我打算躺了
+23:31 nicball joined channel
+23:34 nicball quit:Client Quit
+23:38 varna joined channel
+23:38 varna: _(:з」∠)_哪里有幼女
+23:38 varna: 幼女
+23:39 hanjian_l: 羊驼子！教我洛加流斯
+23:40 hanjian_l: 那个捷径也太特么远了
+23:40 varna: 本周目没到那里，捷径从灯走电梯穿过妹抖上房顶绕两个石像鬼，此后刺条儿
+23:41 varna: 我自己的打法，老王P1闪开所有奥术引枪反
+23:41 varna: 进P2之前如果有背刺就刺一个，跳过爆气就没办法了
+23:41 varna: P2中保持近距离前跨一步引近战枪反，其余看发挥
+23:42 whocares_2_ quit:Ping timeout: 260 seconds
+23:42 varna: 七周目血量估算大约19k
+23:42 varna: 一周目大约9k
+23:42 hanjian_l: 不过它韧性差！一枪直接打断
+23:42 whocares_2 joined channel
+23:42 varna: 如果转阶段让他爆出气了，P2全程霸体
+23:43 varna: 另外喂狗组据说有个奥义，打一下顿一下，他AI有问题还手迟钝
+23:45 varna: btw 老王的枪反最好提前出枪，感觉判定靠前
+23:46 varna: 霰弹枪当我没说
+23:50 hanjian_l: 就差一点点。。。
+23:50 hanjian_l: 它太软了
+23:51 varna: 老王高周目比较乏力，弱很多对策
+23:55 hanjian_l: 我试图和它拼刀作死了
+23:56 varna: 两刀就会死吧
+23:56 hanjian_l: 一阶段要多打她一点血
+23:56 hanjian_l: 三刀
+23:56 Aldrich: puuuuuuuuuuuuuuu
+23:56 Aldrich: 羊驼子来车么
+23:56 varna: 车不动，今天加班加懵了，忘拿耳机
+23:56 Aldrich: 那我就不爬起来了
+23:56 Aldrich: 另外迷宫谁带我玩
+23:56 hanjian_l: 迷宫？
+23:57 Aldrich: 血源
+23:57 varna: 迷宫力荐自己强撸
+23:57 varna: 那种无助感习惯之后很带感的
+23:57 Aldrich: 我跑去亚楠中心报了下仇，得了5k魂
+23:57 Aldrich: _(:з」∠)_
+23:58 varna: 而且要好宝石的话，半血迷宫不可避
+23:58 varna: (｡･ω･)听说你们血条丢人
+23:58 varna: btw 主线Lv4金杯强制半血
+23:59 Aldrich: ……

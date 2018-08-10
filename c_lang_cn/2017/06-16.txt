@@ -1,0 +1,613 @@
+00:00 n5090 joined channel
+00:01 lh_mouse: BM 呢？
+00:01 lh_mouse: n5090, hi.
+00:02 cleamoon: “为什么历史上没有潮汕籍太监？”答案是：历史上有100多个皇帝，只用过1个潮汕籍太监，但他第一天进宫当差，就被斩首了，从此潮汕人摆脱了当太监的悲惨命运。斩首的原因是：派他伺候皇帝用膳，他准备妥当之后用潮汕话高声跪喊---皇上～驾崩了！（吃饭了）
+00:02 lh_mouse: varna, 我大概能想象出为什么。
+00:02 varna: BM我实践下来平均感觉比KMP好
+00:02 lh_mouse: 比如 abcdefghijklmn 这种，模式串几乎不重复的。
+00:02 lh_mouse: KMP 近似于暴搜了。
+00:02 lh_mouse: BM 是反过来的所以应该好一些。
+00:03 lh_mouse: 如果是 aaabaaabaaabaaab 这种大量重复的，KMP 应该会好一些。
+00:03 varna: KMP的暴搜程度依赖模式串的特征
+00:03 varna: 但我觉得多数模式串下KMP的表现很平庸
+00:03 varna: 毕竟自然语言倾向于形成不那么自重复的模式
+00:04 xenon_ joined channel
+00:04 lh_mouse: xenon_, 捏。
+00:04 varna: 妹子 or 女装子？
+00:04 xenon_: 男
+00:04 lh_mouse: varna, 刚才有人这么说了。
+00:04 xenon_: 我终于登进来了。。。
+00:05 varna: xenon_: 女装子也是男的
+00:05 xenon_: 这个app简直崩溃
+00:05 lh_mouse: mmp 今天又修了一个 ncurses 的 bug 。
+00:05 varna: 但是很可爱
+00:05 lh_mouse: 	CON.inp = CreateFile(TEXT("CONIN$"), GENERIC_READ, FILE_SHARE_READ, 0, OPEN_EXISTING, 0, 0) /* GetStdHandle(STD_INPUT_HANDLE) */;
+00:05 lh_mouse: 	CON.out = CreateFile(TEXT("CONOUT$"), GENERIC_WRITE, FILE_SHARE_WRITE, 0, OPEN_EXISTING, 0, 0) /* GetStdHandle(STD_OUTPUT_HANDLE) */;
+00:05 lh_mouse: 本来用 GetStdHandle() 的，每个进程只初始化一次。
+00:06 lh_mouse: 但是 哪弄
+00:06 lh_mouse: nano 逗比，他把 std input 给重定向了。
+00:06 lh_mouse: （用 dup2(open("/dev/tty", O_RDONLY), 0) 覆盖了 fd 0）
+00:07 lh_mouse: 结果 ncurses 在 win 上炸了……wgetch() 始终返回 ERR 。
+00:07 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/4m/jb_291325.jpg@596w_1l.jpg  BOSS样
+00:07 xenon_: 这个叫什么IRC cloud的app ban了我ss的IP。。。简直见鬼
+00:07 lh_mouse: 我一看这句柄是输入的 pipe 啊。
+00:07 lh_mouse: xenon_, irc cloud 不要用代理上。
+00:07 lh_mouse: 他们看起来过分敏感，而且不能用 126 邮箱注册。
+00:07 Taggnostr joined channel
+00:07 xenon_: 这样啊
+00:08 lhanjian: irccloud 适合直连
+00:08 xenon_: 我用的MS邮箱
+00:08 cleamoon: 用这玩意的越来越多了
+00:08 Taggnostr2 quit:Ping timeout: 246 seconds
+00:08 xenon_: qq好像不让注册
+00:08 varna: qq...
+00:08 lh_mouse: no registration is allowed from that domain.
+00:08 xenon_: 对对对
+00:09 lhanjian: varna: 圣女不见了
+00:09 lh_mouse: --- THEY HAVE BANNED CHINESE MAIN PROVIDERS ---
+00:09 xenon_: 诶，我名字怎么多了个短横线
+00:09 xenon_: 重名么
+00:09 varna: lhanjian: 伊果把她拐走了
+00:09 lh_mouse: 是。
+00:09 lh_mouse: xenon_, 试试  /nick xenon  。
+00:09 n5090 quit:Remote host closed the connection
+00:09 Mokou is now known as richselian
+00:10 richselian is now known as Mokou
+00:10 xenon_: 嗷
+00:10 lh_mouse: 好像还真注册了。
+00:10 varna: lhanjian: 现在从火鸡场去古达子的位置，准备战斗
+00:10 xenon_: already used
+00:10 lh_mouse: [00:07:52] -NickServ- Information on xenon (account xenon):
+00:10 lh_mouse: [00:07:52] -NickServ- Registered : Mar 04 01:38:28 2004 (13y 15w 1d ago)
+00:10 lhanjian: varna: ok
+00:10 xenon_: 哇噢
+00:10 * lh_mouse slaps Mokou around a bit with a large trout
+00:10 xenon_: 你们怎么玩的啊
+00:10 lh_mouse: 大家快上，干死这伪装非处男的。
+00:10 varna: Mokou: 爆
+00:11 lh_mouse: Mokou, 爆
+00:11 xenon_: 都是用/ 实现的？
+00:11 Mokou: varna: 爆
+00:11 Mokou: lh_mouse: 耗
+00:11 lh_mouse: xenon_, 是的命令都是 / 开头的。
+00:11 * varna 陶喆！
+00:11 n3424 joined channel
+00:11 * Mokou 攻其阴睾
+00:11 varna: 黑魂有毒
+00:11 lh_mouse: IP地址: 59.78.30.187上海市闵行区 教育网
+00:11 lhanjian: varna: 被他一刀秒杀
+00:11 varna: 幸好前两代和恶魂画面太差完全不想玩
+00:12 varna: lhanjian: 他力量50
+00:12 varna: 你看情况打，别莽
+00:12 Mokou is now known as richselian
+00:12 richselian: 总之这个nick还是注册在我帐号上……
+00:12 cleamoon: 其实血缘做的不错
+00:12 varna: 当然他弱法兰大剑
+00:12 varna: 血源做得非常好
+00:12 lh_mouse: [00:10:28] -NickServ- Information on richselian (account shikieiki):
+00:12 lh_mouse: 无耻。
+00:12 cleamoon: 噗，这是肉牛？
+00:12 varna: 我晚霞来，感觉非常好
+00:12 varna: 这是红旗
+00:12 lh_mouse: 无耻，无耻，无耻。
+00:12 varna: 玩下来*
+00:12 varna: 就是三十帧比较不爽
+00:13 richselian: 当时月牛帐号蒸发了，我怕有人抢走就先抢了
+00:13 varna: 六十帧的话一准神作
+00:13 richselian: 不过看起来他也不打算回来了
+00:13 lh_mouse: 人家养小孩去了。
+00:13 varna: 他正在跟奶粉钱和学区房奋斗呢
+00:13 richselian: 噫吁嚱
+00:13 richselian is now known as Mokou
+00:13 cleamoon: 【男子捡手机后猜对密码转走万余元欲给女友整容被抓】杭州张先生不慎丢失手机，后发现银行卡内存款少了13600元遂报警。警方抓获嫌疑人涂某。据其交代，他在网吧捡到手机，随手输入1234就解开了锁屏，重置支付密码后将钱转给了自己，这笔钱他本打算给女友做整容用，但还没来得及告诉她就被抓
+00:13 Mokou: 所以说生什么小孩
+00:14 cleamoon: .......
+00:14 lh_mouse: 操他妈的学区房。贷款一个月得还一两万，好地段还不止。
+00:14 varna: 虽说只要地段别太差，学区不学区无所谓
+00:14 cleamoon: 帝都学区房有很多3平米一百万+的，经常合几十万一平米
+00:14 varna: 然而现在房都很贵
+00:15 Mokou: 去东京买房吧
+00:15 Mokou: 日本房地产泡沫早炸了
+00:15 varna: 我宁可去京东买房
+00:15 lhanjian: 日本收房产税的吧
+00:15 lh_mouse: cleamoon, 北京出新政策了，多少平方以下的不算数了。
+00:15 cleamoon: 噗
+00:15 cleamoon: 这tm也行
+00:15 varna: 最近全国都在打压房地产市场
+00:16 varna: 反正跟我这种活尸半点关系没有
+00:16 Mokou: 半点关系没有+
+00:16 cleamoon: 他们不怕崩盘吗
+00:16 varna: 现在这么搞下去也会麻烦的
+00:17 lh_mouse: 上海买一套房，就算郊区，两百万。首付 35% 就是七十万，剩下 130 万，贷款二十年，每年 6%，二十年连本带利 220% * 130 = 286 万，24 个月还清，每个月 一万二左右。
+00:17 lhanjian: 现在实际上只冻结了交易，房价掉下来问题也不小啊
+00:17 lh_mouse: 房价不可能掉。
+00:17 Mokou: 房价已经砸了吧
+00:17 FrankHB quit:Read error: Connection reset by peer
+00:17 varna: 能不涨就是理想的了，掉不可能
+00:17 Mokou: 只是特级和一线还顶着
+00:18 lh_mouse: 你贷款时候和银行签的协议就是抵押物如果跌了，差价你赔给银行。
+00:18 lh_mouse: 房价万一跌了，一半的民营企业会死掉。
+00:18 varna: 而且在社会主义我国，多数自称小资的人满脑子都是小农思想
+00:18 varna: +
+00:19 xenon_: 咦，为什么有的人名字前面有个小点点
+00:19 Mokou: 权限汪？
+00:19 cleamoon: 一线以下的城市已经不贵了，或者说和一线比不贵....
+00:19 varna: 然而其实郊区还会坑，因为需要一辆车；然而车还得摇号等个牌
+00:20 xenon_: 哦是的
+00:20 varna: 结论：结婚成本太高，回报太低
+00:20 lh_mouse: 放到桌面
+00:20 lh_mouse: 凤凰网卫视 >2017-06-15 石评大财经 朱文晖：美牛肉重入中国市场 罗斯为何总结出这条经验
+00:20 Mokou: 论日式郊区化的优越性
+00:20 cleamoon: 我记得有人算帝都摇号的期望时间是无限......
+00:20 lh_mouse: xenon_, 你看到的那个 chanserv 前面那样的是 channel operator ，剩下的是 voice 。
+00:21 lh_mouse: 这频道不是所有的 voice 都是 operator 但是大概是这样的。
+00:21 lh_mouse: geordi, << "meow";
+00:21 geordi: meow
+00:21 varna: geordi: << "squeak";
+00:21 geordi: squeak
+00:22 xenon_: lh_mouse: 嗷谢谢，我是用的安卓第三方客户端，第一次用IRC有好多蒙逼的地方
+00:22 Taggnostr2 joined channel
+00:23 cleamoon: 基本没太多需要用的地方，就是个聊天的东西
+00:23 Taggnostr quit:Ping timeout: 240 seconds
+00:23 varna: 过十二点了，有谁敢半夜看一话算法天女？
+00:23 * Mokou 在看伪物语
+00:23 xenon_: 算法天女？？ 算法？
+00:24 lh_mouse: varna, 你又在散步邪教了。
+00:24 lh_mouse: 散布 *
+00:24 varna: 舞法天女
+00:24 varna: lh_mouse: 那剧实在太可怕了，我姑且散布一下
+00:24 xenon_: 那个尬舞的？
+00:24 varna: +
+00:25 varna: (｡･ω･)ﾉ法兰舞法天舞台！Killing!
+00:25 varna: YOU DIED
+00:25 xenon_: +是什么意思？
+00:25 varna: roger / copy / agree / etc
+00:25 xenon_: 感到自己是一只萌新
+00:25 xenon_: 噢噢
+00:26 varna: 算了我勇敢地看一话
+00:27 xenon_: me 的效果会是什么。。
+00:27 Taggnostr joined channel
+00:27 * xenon_ 
+00:27 xenon_: 诶？这是啥
+00:27 * varna demo message
+00:27 * Mokou slaps varna around a bit with a large trout
+00:27 cleamoon: 氙君打算长期来吗
+00:27 xenon_: 小一些的消息？
+00:27 * cleamoon 突 出 自 己
+00:27 xenon_: 唔，不知道，第一次用嘛
+00:28 * Mokou 插入幼女
+00:28 * varna 可以把主谓连起来写一个完整的第三人称句子
+00:28 Taggnostr2 quit:Ping timeout: 255 seconds
+00:28 xenon_: 唔，手机上显示是斜体的小号字
+00:28 xenon_: 还是有缩进的
+00:29 xenon_: 感觉这是给新世界啊，完全没听说过的东西，还这么热闹
+00:29 xenon_: 我说IRC
+00:29 Mokou: 是美丽新世界
+00:29 varna: 不是给一的新世界，这里没有给一
+00:29 varna: 虽然有些药娘和女装子
+00:29 Mokou: ^ 给一
+00:30 varna: ^ 女装子
+00:30 xenon_: 发不出表情真是尴尬呢
+00:30 lhanjian: 易果被我用弓箭射死了
+00:30 Mokou: 上箭头具有传递性
+00:30 xenon_: 我想说 个 
+00:30 xenon_: 这是个新世界
+00:30 n3424 quit:Remote host closed the connection
+00:31 varna: (｡･ω･)ﾉ在新世界高唱一曲忠诚的赞歌
+00:31 lhanjian: varna: 祭祀场不亏是我家，易果不会进来，然后我就让他葬身家门口了
+00:31 varna: 祭祀场门会卡住外面的敌意生物
+00:32 varna: 毛多弱火 装逼弱雷 体大弱门 体胖弱菊 入侵弱智 趁敌不备 攻其阴睾 黑暗之魂 胯下做人
+00:33 lhanjian: 我本来想把想把他骗到摔死的
+00:33 varna: 伊果还会在环印城公墓入侵一次
+00:33 varna: 那时候他已经忘了自己是谁、这里是哪里、晚饭吃什么
+00:34 lhanjian: 伊莲娜的剧情就这么没了？
+00:34 xenon_: 啊，该睡觉了
+00:34 xenon_: 晚安各位
+00:34 cleamoon: 8
+00:35 varna: lhanjian: 还需要给第二本
+00:35 varna: 之后你需要杀了她
+00:35 lhanjian: 什么？！
+00:36 varna: 两本黑暗圣经+买光所有奇迹，圣女会被玩坏
+00:37 cleamoon: 所谓玩坏是什么样的
+00:37 varna: 戴着伊果的摩恩臂甲触碰她，她会把你当作伊果，要求兑现承诺杀了她
+00:37 varna: 杀掉就好
+00:37 varna: cleamoon: 就是失去感知了
+00:37 varna: 不过讲道理啊，圣女比起其他女孩子来说没什么特点的
+00:38 varna: 不如黑切粉的尤利雅
+00:38 lhanjian: 那臂甲在哪儿？
+00:39 varna: 击杀伊果之后去买
+00:40 se_ven_ quit:Ping timeout: 258 seconds
+00:42 lhanjian: 话说火防碳到底是哪个大佬的女儿姐妹
+00:43 varna: 很含混，两种可能
+00:43 varna: 第一种认为是洛斯里克的王妃
+00:44 varna: 当然王妃一个人打断了撸到死的腿、把古达子钉在火鸡场门口，还把自己的元素灰戒指给了迟来的灰烬，这也厉害过头
+00:44 varna: 不过有兴趣的话可以注意火防碳的手，上面有仿佛被螺旋剑烫伤的痕迹
+00:45 varna: 第二种认为可能是撸到死用秘术炼成的奇怪软妹，原型是他自己的火防女
+00:45 lhanjian: 那老头的火防女又是谁
+00:46 varna: 就只是故事里的人了
+00:47 varna: 撸到死也是个有故事的人
+00:47 varna: 砍死他再回来，他会说梦话
+00:47 varna: 第一次会喊疼（少见的表现出痛苦的薪王）
+00:47 varna: 第二次会请求什么人（似乎很多）原谅他
+00:48 varna: 至于他到底搞了什么，可以看头盖骨戒指的说明
+00:48 varna: 恐怕他跟艾尔德里奇的差别，仅仅是选择传火
+00:48 varna: 单从外面看，都是现象级的吃货
+00:49 lhanjian: 炼魂，被家里人赶出来了
+00:49 varna: 不止是炼
+00:49 varna: 他把自己硬吃成了一个薪王，而且拉出来二回烧的时候仍然头脑清醒
+00:49 varna: 其他人都烧脑残了
+00:50 lhanjian: 厉害了
+00:51 Mokou: http://wx2.sinaimg.cn/mw690/0066eXAcly1fgmc4m63gfj30tm0m876f.jpg 6666666
+00:51 lhanjian: 其他人不也是脑子还在么
+00:51 lhanjian: 王子一对
+00:51 varna: 王子压根没烧
+00:52 varna: 不死队薪王化之后直接被深渊污染
+00:52 lhanjian: 哦，对，一次也没烧
+00:52 varna: 尤姆也被污染，还把大量被罪业之火烧死的居民搬回了王座
+00:52 varna: 艾尔德里奇可能是神志最清醒的一个，他嘴里还含着半截我家葛温德林
+00:52 lhanjian: 哈哈哈
+00:52 varna: 但他的表现非常奇怪
+00:53 varna: BGM是葛温德林的变奏，完全没有自己的招式
+00:53 lh_cat joined channel
+00:53 lh_mouse quit:Ping timeout: 240 seconds
+00:53 varna: 法术是葛温德林的，奇迹用了葛温德林记忆中的普里希拉镰刀
+00:54 varna: 武器可能来自墓王尼特
+00:54 varna: 换言之，艾尔德里奇自己看起来已经没剩下多少东西了
+00:55 varna: btw 沙力万还有一点被砍掉的故事
+00:56 varna: DLC1冰湖底部有一个一直在哭的树妖，基本可以认定那玩意儿曾经是沙力万的母亲
+00:56 varna: 他还青涩的时候，在画中世界留了两个法术
+00:56 varna: 不过反正每个人基本都疯了……
+00:59 lhanjian: Orz，那个暗灵不出来了
+00:59 lhanjian: 看来只有我们控制的灰烬大人还比较正常
+01:00 varna: 灰烬头脑清醒的时候比较清醒，但他行动的最大动力，其实是获得自己没法产生的余火
+01:00 varna: 只要击杀有火的英雄和薪王就能得到火，这是灰烬最大的动力
+01:01 lhanjian: 没办法，也没其他事情可做的
+01:01 varna: 撸到死知道这一点，所以请求灰烬去猎王
+01:01 varna: 「此人火瘾巨大，日后必成大器」
+01:02 lhanjian: 灰烬到处捡垃圾
+01:02 varna: 其他不死人或多或少有自己的使命
+01:02 lhanjian: 话说里面的正常人都去哪儿了
+01:02 varna: 洛斯里克是所谓漂泊汇聚之地，也就是说，它其实把薪王们的故乡连在了一起
+01:03 varna: 夸张一点的话，甚至可以认为这里破碎到虽然正常地有时间感，但过去、现在、未来基本都是一回事
+01:04 varna: 被卷进来的正常人基本也都疯了
+01:04 varna: 完成使命的不死人不是死了就是疯了
+01:04 lhanjian: 可是一个活人也没见到啊
+01:04 lhanjian: 都是不死人，要不然就是死人
+01:04 varna: 洛斯里克已经全都崩溃了
+01:04 varna: 被卷进洛斯里克的地区，也基本都是这种彻底疯狂的地方
+01:05 varna: 恐怕最真实的世界，就是你看到的初始之火的火炉
+01:07 cleamoon: 哪里有完整的包括直线的剧情设定可看...
+01:07 varna: 黑桐谷歌？
+01:07 varna: 其实很多剧情关联都靠脑补了
+01:07 cleamoon: 设定集里也没说？
+01:08 varna: 目前发布的设定集只是画册
+01:09 lhanjian: 话说无火祭祀场我都没去
+01:09 varna: 无火祭祀场和火鸡场在空间上是确实重合的
+01:09 lhanjian: 感觉不走王城入口的左边那条路，故事就简单的一塌糊涂
+01:09 varna: 比如说你在火鸡场写了一些色情标语，到无火祭祀场也能看到
+01:10 cleamoon: 恋爱养成游戏剧情靠脑补不成H游戏了吗
+01:10 varna: 古达的盔甲说明也指出，迟到的英雄古达没有赶上传火，而后来堕入深渊的他被不死人英雄击败
+01:11 varna: 后来古达子变成螺旋剑的舰桥
+01:11 varna: 手滑，剑鞘
+01:13 cleamoon: 提督暴露
+01:15 varna: 我把整个输入法都迁到新本子上了
+01:15 varna: 结果……
+01:16 lhanjian: 主角早就变成活尸了也还清醒
+01:16 lhanjian: 这点厉害
+01:16 varna: 这是他最厉害的一点……
+01:16 varna: 一般不死人只要死几回就会逐渐丧失理智
+01:16 varna: 这货只要有火磕就不会疯
+01:16 varna: 身上开八个洞基本剩不下多少人性了
+01:17 varna: 卧槽看算法天女都能看到里面幼女露点
+01:17 lhanjian: 算法天女到底是啥
+01:18 varna: 舞法天女
+01:18 varna: 造型太可怕了，被人称为算法天女
+01:27 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+01:32 lhanjian: 罗莎莉亚很多相关剧情好像我也没碰到
+01:32 Mokou: 路人女主更新了
+01:33 varna: 罗莎莉亚的剧情比较少
+01:34 varna: 血红眼眸宝珠+交一条舌头+击破吃神，就足够触发两个关键节点了
+01:35 lhanjian: 哦，我没交舌头，顺便把莱昂纳德还给砍了
+01:43 lhanjian: 灰心哥就更不用说，连解说剧情的机会都没有就被我砍了
+01:44 lhanjian: 真 一事无成
+01:46 varna: 如果你按照灰心哥的说法去跑图，就能让佛多林克爷爷多活一会儿
+01:59 cleamoon: 赶明看看谷歌的视频，缕缕剧情
+02:01 cleamoon: 似乎剧情没我想象的晦涩但远比我想象的多
+02:02 lhanjian: 黑桐谷歌的视频还讲了剧情？
+02:02 lhanjian: 哦，说到黑桐谷歌，羊驼子可以看看他的最后生还者视频，这算是
+02:03 lhanjian: ps3大作在ps4重制最好的范例了
+02:03 varna: 谷歌把关键道具的介绍都念了一遍
+02:03 varna: _(:з」∠)_现在我只想受死，不想大作了
+02:04 cleamoon: 都念了一遍？好M
+02:04 varna: 这次血源我也试试比较极限的打法，坚持陶喆
+02:05 lhanjian: 最后生还者是一本道，不需要几周目的
+02:05 cleamoon: 那个剧情略蛋疼
+02:05 varna: 但是提不起兴趣……
+02:05 lhanjian: 一周目你把难度调高，收集要素全部顺手做了就好
+02:05 lhanjian: 最后生还者的可玩性很强
+02:06 varna: ？
+02:06 lhanjian: 潜入暗杀类的
+02:06 lhanjian: 不知道该怎么说
+02:06 cleamoon: 不是都一种解法吗....
+02:06 lhanjian: 这算是我的主机游戏入坑作
+02:07 cleamoon: 我的话，推荐把wow通了
+02:07 varna: 我的主机入坑似乎是鬼武者3
+02:08 varna: 现在我的口味有点走极端了
+02:08 varna: 一方面是JRPG风格，另一边是宫崎英高
+02:09 lhanjian: 哈哈哈
+02:09 lhanjian: 狂战传说轨迹系列
+02:10 varna: 轨迹拒绝
+02:22 varna quit:Ping timeout: 240 seconds
+02:40 Mokou quit:Ping timeout: 255 seconds
+03:46 Oyodo joined channel
+04:46 Youmu quit:Quit: Connection closed for inactivity
+07:10 Taggnostr quit:Remote host closed the connection
+07:32 xenon_: 早上好
+07:34 yonka joined channel
+07:38 yonka quit:Ping timeout: 240 seconds
+08:24 cleamoon: 早
+08:45 Mokou joined channel
+08:51 se_ven__ joined channel
+09:15 lh_mouse joined channel
+09:26 yonka joined channel
+09:26 yimis joined channel
+09:26 yimis quit:Client Quit
+09:43 Youmu joined channel
+10:03 Taggnostr joined channel
+10:06 keyboardman joined channel
+10:10 keyboardman quit:Ping timeout: 260 seconds
+13:03 se_ven__ quit:Remote host closed the connection
+14:16 yonka quit:Remote host closed the connection
+14:19 yonka joined channel
+14:23 yonka quit:Ping timeout: 240 seconds
+14:35 yonka joined channel
+14:59 yonka quit:Remote host closed the connection
+14:59 yonka joined channel
+15:03 yimis joined channel
+16:17 lh_mouse: geordi, { uint8_t a = 0x05, b = 0xFE; cout << __builtin_sub_overflow(a, b, nullptr); }
+16:17 geordi: error: argument 3 in call to function '__builtin_sub_overflow' does not have pointer to integral type
+16:17 lh_mouse: geordi, { uint8_t a = 0x05, b = 0xFE, c; cout << __builtin_sub_overflow(a, b, &c); }
+16:17 geordi: true
+16:23 yonka quit:Remote host closed the connection
+16:25 yonka joined channel
+16:26 yonka quit:Remote host closed the connection
+16:26 yonka joined channel
+17:21 sottd joined channel
+17:28 CyrusYzGTt quit:Ping timeout: 240 seconds
+17:31 lh_mouse: geordi, { unsigned i = 1; cout <<(-1 == i); }
+17:31 geordi: warning: comparison between signed and unsigned integer expressions
+17:31 lh_mouse: geordi, { unsigned i = 1; cout <<(int() == i); }
+17:31 geordi: false
+17:31 lh_mouse: geordi, { unsigned i = 1; cout <<(short() == i); }
+17:31 geordi: false
+17:32 sottd: 有谁知道怎么在firefox上发一个post请求吗？
+17:36 Youmu: ajax
+17:44 yimis quit:Quit: yimis
+18:14 lh_mouse: geordi, { for(int i = 0; i < 100; ++i){ cout <<"abc"[rand() % 3]; }
+18:14 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+18:14 lh_mouse: geordi, { for(int i = 0; i < 100; ++i){ cout <<"abc"[rand() % 3]; } }
+18:14 geordi: bbabcbbaabcbcbcbaabbccaacccbbbcaaacabbbbaaaccbcccacbbccaccbbaacaccbabcaaaacaccacbaaccaaccbaacabbbaac
+18:15 lh_mouse: geordi, { for(int i = 0; i < 100; ++i){ cout <<"abcd"[rand() % 4]; } }
+18:15 geordi: dcbdbdcabbcdcddcacaadadbcccdddbcccbdbadcbbbdabcadcbcdaabccabbbadabcbbbadcbcdcadcdaacaaddcdaaaadacccd
+18:19 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 53.0.3/20170518000419]
+18:26 CyrusYzGTt joined channel
+19:41 varna joined channel
+19:42 varna: (｡･ω･)
+20:05 yonka quit:Remote host closed the connection
+20:23 varna: _(:з」∠)_
+20:26 Mokou: _(:з」∠)_ <- 插入
+20:26 varna: 没有六十帧还是觉得浑身不爽
+20:27 varna: 刚才失足落地，被一堆口支围攻
+20:27 varna: (｡･ω･)如果不是不死人的根性爆发，就死在底下了
+20:29 Mokou: 我那白学同学误把腰斩线当雪菜TE了，结果玩完了跑过来跟我说感觉浮气线最好
+20:29 Mokou: 我一脸懵逼，跟他扯了半天雪菜TE以后发现驴唇不对马嘴
+20:29 varna: ...
+20:30 Youmu: lh_mouse: 问一个问题，当出现 bad_alloc 时怎么保证服务还是可用的？不可能处处 try catch 吧
+20:30 lh_mouse: Youmu, top level try..catch .
+20:31 lh_mouse: 然而和业务扔出的异常并没什么区别……
+20:32 varna: _(:з」∠)_费力探索了半天，终于能升级了
+20:32 varna: 真辛苦
+20:32 lh_mouse: 口支口支口支
+20:32 varna: ^ 口支了
+20:33 Mokou: 吱乎
+20:34 varna: 233333
+20:34 varna: 吱呼
+20:34 iyzsong joined channel
+20:35 varna: 陶喆似乎比弹反容易多了……
+20:35 varna: 不过毕竟PC上玩魂3是六十帧的判定
+21:05 varna: Mokou: https://www.zhihu.com/people/nao-diamond/answers 缪斯林激怒
+21:06 Mokou: 666666666
+21:06 Mokou: 山东人激怒
+21:06 varna: 总觉得我这个联想的显示器会让不错的画面变得一般、一般的画面变成一坨悲剧
+21:07 Mokou: 说到这个
+21:07 varna: 打了几个小时血源，看画面总觉得像是撸多了
+21:07 Mokou: 我出国的时候显示器肯定带不走，爸妈也用不上
+21:07 Mokou: 你要么
+21:07 varna: 什么尺寸的
+21:07 Mokou: 21.5 1920x1080
+21:07 Mokou: 一台DVI（准备返修）一台HDMI
+21:07 varna: 能从底座上卸下来么
+21:07 Mokou: 壁挂大概不性
+21:07 Mokou: 不行*
+21:08 varna: 那就算了
+21:08 varna: 不是壁挂
+21:08 varna: 只需要能支起来
+21:08 varna: 力学地支起来就行
+21:08 Mokou: https://item.jd.com/12141681979.html 底座是那块板子
+21:09 Mokou: 你试试把板子卸掉，脖子从桌边伸下去？
+21:09 varna: 下不去
+21:09 varna: 不过这个底座大约多大尺寸
+21:09 varna: 怀疑这样的结构可以直接上桌子
+21:10 varna: 25x13，似乎可以；但是你出国得九月份？
+21:11 varna: _(:з」∠)_要是你现在不考虑出手的话，对我来说入个现货更方便
+21:12 Mokou: 出境八月底
+21:12 Mokou: 目前是这么预定的
+21:12 varna: 那就不考虑了，现货更方便
+21:12 Mokou: 总之到时候我看看啥时候可以出再考虑吧
+21:13 varna: 主要是直接下单的话我几天内就能拿到
+21:13 Mokou: 这倒是，反正也不贵
+21:13 varna: +
+21:13 Mokou: 总之你要是买了的话我就挂咸鱼
+21:13 varna: 不买了
+21:13 varna: 咸鱼23333
+21:13 varna: 舰狗改不了吃丙
+21:14 Mokou: 论你司产品的起名水平
+21:14 varna: (｡･ω･)我司产品已屠杀
+21:14 varna: (｡･ω･)PD已屠杀
+21:14 varna: (｡･ω･)ﾉ玛丽亚师姐陶我！
+21:15 Mokou: 之前你司的阿里飞猪不是还有破坏民族团结的嫌疑么
+21:15 varna: 是啊
+21:15 varna: 不是嫌疑，反正坐实了
+21:15 Mokou: 不过我记得后来是举报人蒸发了
+21:15 varna: 屁股决定脑袋，也许他的脑袋被变成了屁股
+21:16 varna: _(:з」∠)_猎人服装好帅啊，比黑魂的轻重盔甲帅了一个档次出去
+21:16 Mokou: 这次幼儿园那事还有几个昵称看着像和平教徒的帐号在微博上拍手称快
+21:17 Mokou: 然后被上合官博看到了
+21:17 varna: 幼女园事情是恐怖袭击还是报复社会呢……
+21:17 Mokou: 现在其中一个帐号蒸发了，另一个清空微博认怂了
+21:18 varna: 说起来我厂死忠似乎有黑京东的习惯
+21:18 varna: 然而这次大促我还是给京东刷了一波GMV
+21:19 Mokou: 你这叛徒
+21:19 Mokou: Mayun is watching
+21:20 Mokou: http://wx3.sinaimg.cn/mw690/9cb6a73dly1fgmbfygrdkj20oz0pzwmj.jpg http://wx1.sinaimg.cn/mw690/9cb6a73dly1fgmbfvfn2pj20p10fln34.jpg <- 被上合官博看到的那两位
+21:22 varna: https://www.zhihu.com/question/61101844/answer/184077175
+21:23 Mokou: 张女士还没取关我
+21:23 Mokou: 害怕
+21:23 Mokou: 我是不是被锁定惹
+21:25 varna: (｡･ω･)温暖潮湿
+21:29 varna: 现在我桌上的走线已经彻底没救了
+21:30 Mokou: 如果你最喜欢的乐队突然来医院看望你，你就知道自己肯定完犊子了。
+21:30 Mokou: ——reddit shakingthebeef ​​​​ 
+21:30 varna: 四小姐上面叠着zbox, 后面两根电源线两根HDMI一根USB键盘线，笔记本支架后面绕出去一根电源一根鼠标一根键盘，面板前面还有两支手柄……
+21:30 Mokou: 现在我把机箱放到了桌下，然后用胶带强行固定……
+21:31 varna: 耳机线是从笔记本后面绕过来的，省得搭在手上
+21:31 Mokou: http://wx1.sinaimg.cn/mw690/7e948b4dly1fgl19l0zu1j20hs0b6glz.jpg
+21:32 varna: 2333333
+21:32 varna: 我再挑战一两话算法天女
+21:33 wolfpython joined channel
+21:34 varna: python!
+21:34 varna: (｡･ω･)ﾉ是时候发起圣战了
+21:50 Mokou: 这么想写脚本就让你写啊，到操场去写php
+21:52 varna: 写够一万行
+21:55 Mokou: 今天把伪物语补完了
+21:55 Mokou: 同样满脑子杀必死……
+21:56 varna: 现在我满脑子都是血
+21:56 varna: 那个血飙的，比黑魂处决多了不知道多少
+21:56 Mokou: 你来个新房风的血吧，各种颜色的
+21:57 varna: (｡･ω･)然而做了一下功课，发现第一个Boss没法枪反，必须硬打
+21:57 varna: (｡･ω･)什么鬼啊
+22:06 Mokou: http://wx4.sinaimg.cn/mw690/6dd57921ly1fgndpjd4upj20k00xcwoq.jpg
+22:06 varna: puuuuuuuuuuuuuuuuuuuuuuuuu
+22:10 Mokou: https://img.vim-cn.com/11/2c244facb95b9f502fd8fc239a0034239e8e04.jpg  军用荷兰语
+22:11 CyrusYzGTt quit:Ping timeout: 240 seconds
+22:12 varna: 花姑娘……
+22:13 Mokou: http://wx4.sinaimg.cn/mw1024/65233829ly1fgnd3wzmctj20ox04m750.jpg 你坛党争
+22:16 Mokou: http://www.bilibili.com/video/av519929/ gigguk黑物语
+22:25 CyrusYzGTt joined channel
+22:31 varna: 现在我在逼乎上发个兹瓷都会被和谐
+22:32 Mokou: 微博的推眼镜表情已经全面改成圆框了
+22:32 varna: 23333
+22:32 varna: 昨天捏脸的时候有眼镜配件，然而只有圆框
+22:32 Mokou: http://www.bilibili.com/video/av11113333/ gigguk黑黄漫老师
+22:32 Mokou: 逸民激怒
+22:34 varna: 自从我开始战场磕桶之后，似乎少前多数情况也没那么麻烦了
+22:35 Mokou: OTL
+22:35 varna: 然而还是有少数一看就不好打的情况，并且我肝废了
+22:36 varna: 最近打了好几个演习才把416满扩，其他的还猴年码月
+22:36 varna: (｡･ω･)坚决不肝，打不动就不打，当一辈子萌新
+22:37 * Mokou 甚至没再装少前
+22:38 varna: 少前的部分立绘我还比较喜欢
+22:38 varna: AR和404的缺省立绘就不错
+22:39 varna: 不过最近少前怎么搞出钱来的，难道真的是靠家具十一连……
+22:39 Mokou: 不知道，我觉得有可能
+22:40 Mokou: “都沉了这么多单了，下一单肯定出”
+22:40 varna: 严重怀疑是这个入口
+22:41 varna: 国内手游IP和其他产业的距离比较远，不靠内购想不出怎么搞出￥
+22:41 varna: 但是为什么会有那么多人疯狂地十一连……
+22:42 Mokou: 毕竟赌博
+22:44 varna: 简直可啪
+22:46 yimis joined channel
+22:51 Mokou: http://www.bookwalker.com.tw/ 娇喘家的电子出版物商城
+22:53 varna: 幼女战记
+22:53 varna: 噫
+22:57 varna: 我驲，我在算法天女十六话遭受了巨大的精神冲击
+22:57 varna: 有人来挑战么，5:00开始
+23:00 Mokou: 战不了 战不了
+23:02 iyzsong: 2333
+23:03 varna: 要不是满剧幼女，恐怕我早已从活尸化为死尸
+23:03 yimis quit:Quit: yimis
+23:06 ring joined channel
+23:07 varna: 月球？
+23:07 varna: nikuball
+23:08 Mokou: mikuball
+23:08 varna: mikonball
+23:10 varna: 米空球，似乎很厉害
+23:10 Mokou: 噗
+23:10 ring: XD
+23:10 Mokou: 蒙古古代还有个“萌子”的译名啊
+23:10 varna: 2333333
+23:10 ring: 其实我以前来过
+23:10 varna: nicball这个nick我有印象
+23:11 Mokou: http://ctext.org/wiki.pl?if=gb&chapter=982337&remap=gb#p19
+23:11 varna: (｡･ω･)ﾉ欢迎冒泡
+23:11 Mokou: 言毕升堂分宾主而坐嚞战灼无语抡乃稍进而问曰萌子小邦何烦皇帝亲行汝嘉不能对
+23:11 Mokou: 这译名6666666
+23:12 varna: 不能对|抡 第一眼句逗成 「不能对抡」
+23:12 Mokou: uccu
+23:12 varna: 这是我发自内心的感受
+23:12 Mokou: 萌古和萌古子到还算正常
+23:12 varna: 根本不能对抡，敌人韧性太高
+23:12 Mokou: uccu
+23:14 ring: 为什么古人没有发明标点符号呢（
+23:14 varna: 其实不是萌子，而是艹明子
+23:14 Stevearzh quit:Ping timeout: 240 seconds
+23:14 Mokou: 然而蒙古不是被大明艹么
+23:14 iyzsong quit:Ping timeout: 246 seconds
+23:14 varna: 就是说，把明粉艹得意识模糊的族类
+23:14 Mokou: 又不是满清
+23:14 varna: (｡･ω･)全靠张教主
+23:15 Mokou: ring: 古代有标点符号吧，只是没标准化所以不用
+23:15 Mokou: 我记得不少印刷物是带句读的
+23:15 varna: 有句读
+23:15 varna: 会用一个句号断出来
+23:16 Mokou: 我还见过用小号的“句”和“逗”字的
+23:16 varna: 毕竟后来文字需要通俗化了
+23:16 varna: 文言本来不需要显式用符号断
+23:16 Mokou: +
+23:16 varna: 古人也不知道什么叫对抡……
+23:17 Stevearzh joined channel
+23:17 varna: RUA
+23:17 varna: 算法天女弹幕里混入大量缪斯林
+23:17 varna: 太可怕了
+23:18 Mokou: 冰岛以前有译作“伊斯兰”的
+23:18 Mokou: 突然清真
+23:18 varna: (｡･ω･)ﾉ赛俩目
+23:18 ring quit:Remote host closed the connection
+23:18 ring joined channel
+23:18 Mokou: http://dailynews.sina.com/bg/news/int/xinhuanet/20141013/01176155410.html 然后我一查，查出这么个新闻
+23:19 CyrusYzGTt quit:Ping timeout: 246 seconds
+23:20 Mokou: 荷兰有旧译“大和”
+23:20 Mokou: 突然昭和
+23:21 wolfpython quit:Ping timeout: 240 seconds
+23:22 varna: 然而井盖还是没了
+23:22 Mokou: 地域歧视，举报了
+23:22 Mokou: 明天走路小心脚下
+23:22 varna: 此地无铜三百两
+23:23 Mokou: 噗
+23:23 Mokou: 大和这个译名居然是辛丑条约里用的
+23:23 CyrusYzGTt joined channel
+23:24 varna: fedora!
+23:24 Mokou: 而且上面一行就是“大日本国”
+23:24 Mokou: 突然昭和
+23:25 ring quit:Remote host closed the connection
+23:27 Mokou: 【山东男子撞人逃逸致被撞者伤重身亡，次日得知死者是自己父亲】6月9日22时30分许，菏泽至牡丹区小留镇的259省道常刘庄村附近一辆轿车和三轮车发生交通事故。轿车司机杨某撞人后弃车逃逸，被撞者因伤重不治死亡。次日，家人找到在外躲藏的杨某，他才知道受害人竟是自己的亲生父亲。交警部门表示，
+23:27 Mokou: 该案中受害人和肇事人虽是父子关系，但肇事人杨某的行为已经构成了交通肇事罪，而且还有逃逸情节，他依然会被追究法律责任。牡丹晚报
+23:30 [nic] joined channel
+23:30 [nic] quit:Client Quit
+23:30 ring joined channel
+23:34 varna: 做一下功课，准备体验第一个Boss
+23:42 AndChat-140625 joined channel
+23:42 ring quit:Remote host closed the connection
+23:53 varna: (｡･ω･)ﾉ拼了
+23:53 ring joined channel
+23:53 AndChat-140625 quit:Remote host closed the connection

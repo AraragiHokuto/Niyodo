@@ -1,0 +1,935 @@
+00:30 hope1_ quit:Ping timeout: 244 seconds
+00:40 whocares_2 quit:Ping timeout: 244 seconds
+00:47 hoxily quit:Quit: Leaving
+00:55 whocares_2 joined channel
+01:12 lh_mouse quit:Ping timeout: 260 seconds
+01:36 hope1_ joined channel
+02:08 Izumo quit:Quit: Connection closed for inactivity
+02:19 hope1_ quit:Ping timeout: 276 seconds
+02:19 hope1_ joined channel
+02:20 FrankHB quit:Ping timeout: 240 seconds
+02:21 FrankHB joined channel
+02:49 hope1_ quit:Ping timeout: 244 seconds
+02:49 hope1_ joined channel
+03:12 condy quit:Ping timeout: 260 seconds
+03:13 Flandre` quit:Ping timeout: 260 seconds
+03:13 Flandre` joined channel
+03:13 Flandre` is now known as Guest28364
+03:14 condy joined channel
+03:23 Youmu quit:Quit: Connection closed for inactivity
+04:28 hope1_ quit:Ping timeout: 240 seconds
+04:35 cleamoon: geordi, << (4<<1)
+04:35 geordi: 8
+04:40 hope1_ joined channel
+04:44 hope1_ quit:Ping timeout: 258 seconds
+05:11 cleamoon: geordi, << 1+7.6/3+ 2*5.5/5.1
+05:11 geordi: 5.6902
+05:12 hope1_ joined channel
+05:34 Youmu joined channel
+05:47 Guest28364 quit:Changing host
+05:47 Guest28364 joined channel
+05:47 Guest28364 is now known as Flandre`
+06:35 Mokou joined channel
+07:05 hope1_: 起飞去纽约
+07:05 cleamoon: orz
+07:25 hope1_ quit:Ping timeout: 240 seconds
+07:50 Mokou quit:Quit: Lost terminal
+08:14 FrankHB quit:Ping timeout: 244 seconds
+08:23 Youmu quit:Quit: Connection closed for inactivity
+08:43 FrankHB joined channel
+08:47 lh_mouse joined channel
+09:04 cleamooon joined channel
+09:07 cleamoon quit:Ping timeout: 260 seconds
+09:15 cleamoon_ quit:Read error: Connection reset by peer
+09:19 cleamoooon joined channel
+09:19 cleamooon quit:Read error: Connection reset by peer
+09:29 cc joined channel
+09:31 CyrusYzGTt joined channel
+09:32 cleamoon_ joined channel
+09:40 Youmu joined channel
+09:56 cc quit:Remote host closed the connection
+09:57 cc joined channel
+10:21 Mokou joined channel
+10:44 sottd joined channel
+10:44 sottd: http://society.firefox.huanqiu.com/16/0621/07/JEO36MRSWL5N0QH2.html
+10:44 sottd: 女老师向学生求婚..
+10:47 cleamoooon: 放开那个学生，让我来
+10:50 lh_mouse: 恶俗。
+10:50 sottd quit:Read error: Connection timed out
+10:50 sottd joined channel
+10:52 sottd: 为啥utf-8会有带bom和不带bom的两种呢.昨天背着东西坑了3个小时。。
+10:52 Mokou: 因爲傻
+10:53 sottd: 啊,8个渠道用url传参数，3个用json,今天又有一个用xml..
+10:57 sottd: 这...xml的那个渠道竟然没有用md5做个sign来防伪造..
+10:58 lh_mouse: Aji.
+10:58 lh_mouse: 傻逼 BOM 。
+10:58 lh_mouse: 网路传输不用 big endian 的通通都去死。
+11:00 lh_mouse: lhanjian, 你这现充又在企鹅上晒妹了。
+11:00 cleamoooon: 烧了他
+11:00 lhanjian: 哪有
+11:04 sottd: http://img.vim-cn.com/76/6e0c662b32d05c4c5a3cdf3d74cadec6f8ae36.jpg 
+11:08 lhanjian: lh_mouse: 哪有
+11:11 Mokou: 哈哈哈哈哈
+11:11 Mokou: 寫了個fb console驅動
+11:11 Mokou: 在Bochs裏每兩秒就能輸出一個字符
+11:13 cleamoooon: ......
+11:15 Mokou: 不過至少能證明我驅動寫對了
+11:15 Mokou: 我研究一下PCI怎麼玩
+11:15 cleamoooon: orz
+11:19 sottd: 大牛
+11:20 * Mokou 渣
+11:22 * sottd 害怕
+11:24 sottd quit:Quit: 干活
+11:40 FrankHB: 傻逼big endian。
+11:43 lh_mouse: 傻逼帝球。
+11:43 FrankHB: http://frank.harvard.edu/~coldwell/toolchain/bigendian.html 耗逼吱。
+11:45 lh_mouse: FrankHB, 傻逼球。物理层管你什么 set clear 。
+11:45 FrankHB: 逗比，物理层管你什么字节。
+11:50 Mokou quit:Ping timeout: 244 seconds
+11:50 Mokou joined channel
+12:02 Mokou: 不過qemu下速度其實還行
+12:13 Mokou quit:Ping timeout: 244 seconds
+12:13 Mokou joined channel
+12:14 iyzsong-xx joined channel
+12:15 Mokou_ joined channel
+12:15 lh_mouse: ヲ说个笑话，耻球他们家物理层没有字节。
+12:15 lh_mouse: 虽然字节这个说法其实不准确。
+12:16 Mokou quit:Read error: Connection reset by peer
+12:16 lh_mouse: 准确的说法是 octet .
+12:16 Mokou_ is now known as Mokou
+12:53 sottd joined channel
+12:53 sottd: http://tech.hexun.com/2016-06-20/184491088.html 好啦
+12:57 lh_mouse: 傻逼 C。
+13:03 FrankHB: 物理层管你屁octet。
+13:04 FrankHB: 谁给你钦定物理层能让你有oct的东西的。
+13:06 sottd: acg.sugling.in
+13:09 lh_cat joined channel
+13:19 Mokou quit:Remote host closed the connection
+13:20 lh_cat: 喵一声。 https://usercontent.irccloud-cdn.com/file/3njAIthx/1466485986.JPG
+13:21 sottd: 啊啊啊啊，我的眼睛
+13:22 FrankHB: http://www.zhihu.com/question/34230517 233
+13:23 sottd: 我甚至不知道winobjc
+13:34 FrankHB: https://github.com/Microsoft/WinObjC/issues/35 23333
+13:35 lhanjian: lh_cat: 这是自拍？
+13:37 lh_mouse: lhanjian, 是。
+13:38 sottd: 我忘了一切
+13:38 sottd: 就像看见了the slience
+13:42 amy666 joined channel
+13:43 lhanjian: 小耗比我想象的还要清秀和瘦一点
+13:43 lhanjian: 确实有一点班长酱的味道
+13:43 lhanjian: lh_mouse:
+13:44 sottd: http://www.ithome.com/html/it/235083.htm
+13:45 lh_mouse: lhanjian, 这现充快闭嘴。
+13:47 amy666 quit:Remote host closed the connection
+13:49 amy666 joined channel
+13:53 Izumo joined channel
+13:53 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+13:56 amy666 quit:Read error: Connection refused
+14:37 lh_mouse quit:Read error: Connection reset by peer
+14:38 lh_mouse joined channel
+14:45 sottd joined channel
+15:15 FrankHB quit:Read error: Connection reset by peer
+15:16 FrankHB joined channel
+15:22 Youmu: wow
+15:22 Youmu: 已保存
+15:46 lh_cat quit:Quit: Connection closed for inactivity
+16:36 sottd: 文档啊文档，为什么那么多人写不好你
+16:37 varna joined channel
+16:37 varna: puuu, 幼女变得好长
+17:06 * sottd 讨厌标记语言、
+17:07 * varna 兹瓷sottd
+17:10 sottd: 刚才摸了下测试中的小米盒子,烫伤了
+17:11 varna: 23333
+17:15 sottd: 测试的时候用手机短信付了钱，10分钟后收到了提醒..
+17:32 varna: 驲，我的ssh怎么都卡死了
+17:32 varna: 可恶
+17:42 cc quit:Remote host closed the connection
+17:44 CyrusYzGTt quit:Remote host closed the connection
+17:56 varna: http://www.tudou.com/programs/view/3OzH8QDWBX0/ EI!
+17:58 sottd: 用门夹过的核桃还补脑吗?...
+17:59 varna: 233333
+18:12 iyzsong-xx quit:Remote host closed the connection
+18:17 CyrusYzGTt joined channel
+18:21 Mokou joined channel
+18:21 Mokou: 咦羊駝子冒出來了
+18:21 Mokou: 我聽說Rust現在正在改標準庫，準備把OOM時的panic!換成返回錯誤
+18:23 varna: 噫，现在EI这图上亡灵可以这么刚猛啊
+18:23 varna: 蜘蛛毁灭胖子全盘把三蛋打崩
+18:23 varna: Mokou: 啊，他们有理智了？
+18:23 FrankHB quit:Ping timeout: 240 seconds
+18:23 varna: 现在我看到UD赢就高兴_(:з」∠)_
+18:24 Mokou_ joined channel
+18:24 Mokou quit:Read error: Connection reset by peer
+18:24 Mokou_ is now known as Mokou
+18:25 Mokou: http://ww2.sinaimg.cn/bmiddle/006n3N8xjw1f530dezfmaj30hs0ay3zj.jpg 50已到
+18:27 varna: 噫
+18:27 varna: 我被这个绕后秒杀过
+18:27 varna: (｡･ω･)ﾉ竜神の剣を食ら——ええええ # 类似这感觉
+18:27 Mokou: 2333333
+18:28 Mokou: 我聽說麥克雷是爸爸
+18:28 varna: 感觉还行
+18:28 varna: 只是威力大
+18:28 varna: 反正队友不抱团不跟着车走，选什么都被杀崩
+18:28 varna: 想到初期都是这样的队友你怎么敢竜ry
+18:29 varna: 还不如去跟困难AI练习
+18:29 varna: 然后你花了一百九十八大元上网打AI
+18:29 varna: 极其北上
+18:30 Mokou: ……聽着跟WoWS似的
+18:30 varna: 只要有角色分工的小队竞技都这德行
+18:30 Mokou: 網遊都這尿性麼
+18:30 varna: 前天下午我重新捡起了自己以前打刀塔的感觉
+18:30 varna: 只要不是人人平等的死亡竞赛，那么职责分配一定是问题
+18:30 varna: 路人这点最麻烦，但职业选手打起来会很好看
+18:31 Mokou: 給剛發的鋼筆上點水試試
+18:31 varna: 之前有盘打防守居然都被杀崩了
+18:32 varna: 最后我看着不好，选了堡垒试图拖延敌人，结果被对面肾上腺素全开的伙计竜ry掉
+18:33 varna: 他一刀没砍死我，我一兔兔没搞死他，他第二刀比我手快……
+18:33 Mokou: ……
+18:34 varna: 不过PIGU确实算是竞技向FPS的杰作了
+18:34 varna: 如果能够好好研究地图、制定战术、定期组织练习的话，会打得很好看
+18:34 varna: 然而根本做不到
+18:35 varna: 操作感也极佳
+18:36 Mokou: 開黑吧
+18:37 varna: 开黑比较好
+18:37 varna: 匹配到的比赛只能看队友觉悟，然而竞技游戏的常识是总有人缺觉悟
+18:37 varna: 我个人技术又不那么神，没法杀出缺口的话互角一定输_(:з」∠)_
+18:39 hoxily joined channel
+18:41 varna: 为何土豆上的淘宝广告会给我推荐小姐姐T-shirt
+18:42 Mokou: 因爲土豆檢測到你有梅毒
+18:42 Mokou: 噫，這鋼筆阻尼好大
+18:42 varna: (｡･ω･)完全不梅毒
+18:43 Mokou: 我終於把Grub給的memory map讀出來了
+18:44 Mokou: 然而看着好蛋疼
+18:57 varna: http://www.tudou.com/programs/view/deabi5JCiyg/ 丧失大战植物人
+18:57 varna: ^ 一代补丁一代神，穷鬼今年也翻身
+19:04 sottd: 合并代码是痛苦的，合并别人的代码更痛苦，而在此之上：合并别人1个月没有update过的代码让人想死。。
+19:04 varna: 你提交之前该看黄历
+19:06 sottd: 没测过谁敢提交..
+19:06 varna: 不，我的意思是 http://sandbox.runjs.cn/show/yu9cs4i4 这里求个签
+19:07 varna: 要是犯冲的话就卡午夜提交，说不定一次commit影响你下个月的运势
+19:07 sottd: 什么都没有显示,最后看到的是小吉，然后就泛白了
+19:07 varna: 泛白的应该是不吉不凶的普通签
+19:07 sottd: 太好了
+19:08 sottd: 不过我才刚刚开始而已
+19:08 sottd: 小凶
+19:13 sottd: 合并完啦~
+19:13 varna: (｡･ω･)ﾉ
+19:14 Mokou: 先去吃飯
+19:16 sottd: 先是语法bug两只
+19:17 varna: ...
+19:18 iyzsong joined channel
+19:18 iyzsong quit:Changing host
+19:18 iyzsong joined channel
+19:21 sottd: 配置bug1只
+19:21 iyzsong: (┙>∧<)┙へ┻┻
+19:24 varna: (｡･ω･)
+19:24 lhanjian: sottd: 这事儿我干过。让那伙计自己rebase
+19:24 lhanjian: 主分支先
+19:25 varna: lhj出来了
+19:25 varna: 爆他
+19:26 varna: lhanjian: 最近打算给servcraft加一个reactor
+19:27 lhanjian: 怎么又reactor可
+19:27 lhanjian: 了
+19:27 varna: servcraft本来就是toolkit
+19:27 lhanjian: 嗯
+19:27 varna: 而且这个东西其实只是被搁置，一开始我就打算要有
+19:27 Mokou: 回來了
+19:28 varna: 现在的reactor, 用起来都太复杂
+19:28 Mokou: 用Noshiro
+19:28 Mokou: (｡･ω･)疾如p7
+19:28 varna: 你那个做完了就是proactor
+19:28 varna: 我会保持很简单的形式，让线程池也能用
+19:29 Mokou: 不過Noshiro的Benchmark確實嚇了我一跳
+19:29 varna: ab?
+19:29 Mokou: ab和wrk
+19:29 varna: 我现在彻底相信ab是自灭的了
+19:29 Mokou: 能達到p7同級
+19:29 sottd: 配置和语法bug各一直
+19:30 varna: _(:з」∠)_
+19:30 Mokou: 畢竟現在的noshiro就是個胡亂拼起來的能動的玩意……
+19:30 Mokou: 我舉個栗子
+19:30 varna: 你得这么想：我费了不少功夫，才让p7能看到传统框架的脚后跟
+19:31 Mokou: noshiro的超時隊列的實現不是二叉堆，是鏈表
+19:31 Mokou: 你信麼
+19:31 Mokou: 直接一個O(n)插入
+19:31 varna: ……现在p7的超时队列是RBT...
+19:31 Mokou: ……RBT什麼情況
+19:32 varna: 我去年把超时队列换掉了
+19:32 Mokou: 不過RBT也比鏈表好吧
+19:32 varna: servcraft/util现在提供来自俄国的红黑树
+19:32 varna: 这个我实测差距不像你想像得那么大
+19:32 iyzsong: _(:з」∠)_
+19:32 varna: 举例来说，二叉堆时代，p7的超时队列删除是线性的
+19:33 sottd: 我发现了一个问题，我似乎，可能，大概，也许。是公司里的唯一一只单身狗
+19:33 varna: 但因为吞吐量不会达到让线性复杂度变得拖累的数量级，所以不是瓶颈
+19:34 iyzsong: sottd: (｢・ω・)｢ 我也是
+19:34 Mokou: 說起來你覺得插入O(1)刪除O(n)合適還是插入O(n)刪除O(1)合適？
+19:34 Mokou: 我重新考慮了下，感覺似乎應該用前者
+19:34 varna: 均摊无所谓，但我倾向前者
+19:34 varna: 删除甚至可以惰性
+19:35 Mokou: 畢竟刪除未必是因爲超時
+19:35 Mokou: 而如果不是因爲超時，那麼這個刪除直接是常數時間
+19:35 FrankHB joined channel
+19:35 varna: 其实我觉得你可以在bench的时候加一个统计
+19:35 varna: 这统计维护超时定时器队列里的最大存量和平均存量
+19:36 varna: 比如说你开1k并发，即使假定不可能存在的满载n长度删除持续进行，数量级在1M
+19:36 varna: 1M线性对你的CPU来说不是问题
+19:36 varna: 实际上对我还是OIer时代的旧judge都不是问题
+19:37 Mokou: 到也是，等我整理下代碼來這麼一次試試
+19:37 varna: 当时我估计单核线性1s的量级是2e7 - 1e8
+19:37 varna: 但你可以想像那些CPU并不好
+19:37 Mokou: ……
+19:38 Mokou: 也就是說我說不定可以就先偷這麼個懶？
+19:38 varna: 基本可以不管，但迟早得换掉
+19:38 Mokou: +
+19:38 Mokou: 換肯定換，不過我打算先把接口穩定下來再說
+19:39 varna: 我跟你说，现在我甚至直接手一划在reactor里用散列表注册伪会话层元数据
+19:39 varna: 这点性能根本不是瓶颈
+19:39 varna: 当你仔细地考虑过小事情之后，就可以放心作死去了
+19:39 varna: (｡･ω･)ﾉ春菜大丈夫
+19:40 varna: 至于超时定时器队列的内部接口，应该完全是恒定的
+19:40 Mokou: (｡･ω･)姬姬姬姬姬姬
+19:40 varna: 我当时替掉二叉堆的时候，整个接口主要更动了定时器队列的类型
+19:43 Mokou: なるほど
+19:43 Mokou: 對了，之前我在微博上看到個衣服，覺得挺適合你的
+19:43 Mokou: https://item.taobao.com/item.htm?id=528702182873&spm=a310v.4.88.1 你要不要試試看
+19:43 varna: puuu
+19:44 varna: 看到雪纺我就知道不对劲
+19:44 varna: 连图都不用看
+19:44 varna: 虽然我不穿女装，但我必须怒骂这哪门子雪纺
+19:44 Mokou: (｡･ω･)女裝知識豐富
+19:44 varna: 这质感
+19:45 varna: 简直就是糟蹋原料的化学品
+19:45 Mokou: 或者你來個好點的女裝
+19:46 Mokou: 你看評論裏都說穿上以後bug少了
+19:46 varna: 你想想张爱玲小说里那个乔其纱的写法，想想你在路边看到的料子
+19:46 varna: 然后再看看这个水泥一样的光感
+19:46 varna: (｡･ω･)好歹我也是考虑过给妹子搭配衣服的，尽管我现在是条死透了的舰狗
+19:46 Mokou: 水泥光感確定不是後期技術太渣麼
+19:47 varna: 他这个摄影技术，后期只能用谷歌图片救场
+19:47 Mokou: 總之我覺得你可以來個女裝，以後每次編譯前先對着屏幕來個二航二航二
+19:47 Mokou: 233333
+19:47 Mokou: (｡･ω･)說不定一趟過呢
+19:48 varna: 二航二航二可以有，我可以高吼六嘎哇尕敵呕ry
+19:49 Mokou: 然後GCC: 50已到，等死吧你
+19:49 Mokou: 不過今天我拆分console driver的時候居然真的一趟過了
+19:49 varna: 感觉我短暂的PIGU体验里面经历了很多事
+19:50 varna: 比如被一个六嘎ry在不到十米的距离内抄了后辈
+19:50 varna: 那人估计兴奋了，照我就是一个大
+19:51 varna: typo, 后背
+19:51 * varna 小春大法好
+19:51 Mokou: uccu
+19:51 Mokou: 雖說console driver後來有點小問題
+19:51 Mokou: 我寫了個framebuffer console driver，效果把群
+19:52 Mokou: 在Bochs上每兩秒就可以往屏幕上打印一個字符
+19:52 Mokou: 拔羣*
+19:52 varna: 不错
+19:52 varna: 显得很直白
+19:52 Mokou: 後來變成了每兩秒一行，我把顯存更新改到換行再做了
+19:53 varna: 23333333333333
+19:53 Mokou: 不過qemu上性能其實還可以
+19:53 Mokou: http://picpaste.com/pYNJqlHi.png 現在就這樣
+19:53 Mokou: 總之我需要一個更快的memcpy……
+19:53 varna: 我觉得应该不是memcpy的锅
+19:54 varna: 或者你把bochs主频开高
+19:54 varna: 缺省主频很低
+19:54 Mokou: 我試試
+19:54 varna: 运气不好的话说不定你每秒钟只能执行0.1M条指令的感觉
+19:54 varna: 然后如果你拼命刷全屏的话就会死了
+19:56 Mokou: 我把ips改成10億試試
+19:56 varna: 另外现在这个速度慢其实无所谓
+19:56 varna: 如果你真要做GUI, 肯定得有遮挡算法
+19:56 Mokou: 反正是bochs驅動？
+19:56 Mokou: 遮擋算法這些我打算交給顯卡驅動做
+19:56 varna: 窗口之间得有遮挡关系，不会轻易刷全屏的
+19:57 Mokou: 這個倒是，之前我在考慮這個問題
+19:57 Mokou: 不過想了想太麻煩，不管了
+19:57 varna: 窗口是个GUI概念，不是显示的概念
+19:57 varna: 所以早期不管没什么
+19:57 Mokou: 果然有效果，比之前慢了不少
+19:57 varna: 哈哈哈哈
+19:57 Mokou: ……我開太高了？
+19:57 cleamoon_: 做GUI orz
+19:58 varna: 六斤喏K E N 口 我 L A G
+19:58 varna: 不知道什么状况
+19:58 varna: 吔饭去
+19:58 Mokou: 我還是用qemu玩繪圖算了
+20:00 cleamoooon: 黑旗去哪买个古董本子用来测试就好了呀
+20:01 Mokou: 沒錢
+20:01 cleamoon_: 古董估计也就100？
+20:02 Mokou: 買回來三天燒了
+20:02 FrankHB: 显卡管你毛遮挡。。还是直接3d了？
+20:02 cleamoooon: 那倒是有可能...
+20:02 Mokou: 100基本就這種貨色
+20:02 Mokou: FrankHB: 顯卡驅動，連着FB一起提供
+20:03 Mokou: 或者說整個繪圖部分
+20:04 cleamoon_: 黑旗不试试写成plan9那样？
+20:05 Mokou: 有計劃學plan9，不過不打算照抄
+20:06 cleamoon_: soga
+20:12 cleamoon_: varna, 有个perl不明白的，@array=(1,2,3)，加东西时，为什么写 $array[4] = 5
+20:12 sottd: ...刚才遇到个不能调试的bug,F5 F5一直按着，然后..然后竟然能调试了》。
+20:12 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+20:22 hoxily quit:Quit: Leaving
+20:28 Izumo quit:Quit: Connection closed for inactivity
+20:30 hoxily joined channel
+20:32 iyzsong quit:Ping timeout: 276 seconds
+20:33 iyzsong joined channel
+20:36 lucid joined channel
+20:39 varna: cleamoon_: 可以乱写的
+20:39 varna: cleamoon_: Perl数组总是有合适的尺寸，虽然其中没赋值的元素未定义
+20:39 cleamoon_: 乱写什么鬼
+20:39 cleamoon_: 不是那个，是array前面的那个东西
+20:39 cleamoon_: 为什么不是 @array[4]
+20:40 Mokou: (1, 2, 3, undef, 5)？
+20:40 varna: +
+20:40 varna: cleamoon_: sigils标明变量的性质
+20:40 varna: 而sigil后面的那个名字，只是个名字
+20:40 varna: $a[4]一定是个标量
+20:40 varna: 所以用$
+20:41 varna: 这里的意义并不是“对数组a取下标4的元素”
+20:41 varna: 而是“对数组a的下标4上的对象，求标量值”
+20:41 cleamoon_: soga
+20:41 cleamoon_: 蛋疼
+20:41 varna: 所以我不喜欢Perl 6对sigils的变化
+20:41 cleamoon_: 变化什么了
+20:41 varna: sigils应当是为名字附加意义、使之被求值的东西，而非简单的类型tag
+20:42 varna: Perl 6的写法会是@a[4]
+20:42 varna: 另外我之所以断言$a[4]是标量，是因为Perl的数组被展平
+20:42 cleamoon_: 脚本语言那么多意义干什么...
+20:43 cleamoon_: 既然所有东西都能算数组，那干脆就都是数组好了呀
+20:43 varna: (1, 2, 3, (4, 5), 6) 就是(1, 2, 3, 4, 5, 6)
+20:43 varna: 不
+20:43 lucid quit:Remote host closed the connection
+20:43 Youmu quit:Quit: Connection closed for inactivity
+20:43 varna: Perl并非真正的弱类型
+20:43 varna: 散列和数组在尺寸合适的时候可以互换
+20:43 varna: 但这个工作并不那么简单
+20:44 varna: 如果你看perldoc perlguts/perlxs/perlxstutor的话，会发现即使解释器也不像教程里说的那样，弱类型地工作
+20:44 varna: sv(iv/nv/pv/rv) av hv gv有严格的界限
+20:44 varna: 转换很容易但未必廉价
+20:45 cleamoon_: 所以我感觉 perl 对日常工作的简化程度并没有比 c艹 高很多
+20:45 varna: 而且有些时候也未必能在Perl语言的程度上转换成功
+20:45 varna: 不
+20:45 varna: 你不用管内存了
+20:45 cleamoon_: 哦，这算个好事
+20:45 varna: 而且创建对象变得很容易，就地执行代码也容易，处理字符串的工具多
+20:46 varna: 你还可以轻易地与shell命令交互
+20:46 cleamoon_: 但是感觉没容易到python的水平
+20:46 varna: 我之所以现在还选择Perl, 是因为我觉得它比很多自居先进的语言冷静
+20:46 Mokou: 但Py寫起來不舒服
+20:46 cleamoon_: 不舒服+
+20:46 varna: py以为自己能解决问题，但他们甚至在生成要自动执行的代码的时候都浑身难受
+20:46 varna: 而且还瞎抛
+20:47 Mokou: 瞎拋最蛋疼
+20:47 Mokou: 滿地try except
+20:47 cleamoon_: perl不会瞎抛吗？
+20:47 varna: 自然Perl效率很惨，不过你不会用他去做压力大的工作
+20:47 varna: Perl没异常
+20:47 cleamoon_: .....
+20:47 cleamoon_: 果然是高级版的c
+20:47 varna: 差很多
+20:48 varna: Perl在algol信徒还在思考自己要不要缺省全字符大写的年代，已经具备了应有的特性
+20:48 varna: 而当新时代的孩子们还在稀罕lambda expression的时候，我寺早已对一等函数看惯
+20:49 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+20:49 cleamoon_: perl有一等函数？
+20:49 varna: 自带
+20:49 cleamoon_: soga
+20:49 varna: $ perl -e 'my $a = 1; my $b = sub { print $a, "\n" }; $b->()'
+20:50 varna: ^ 喏
+20:50 varna: 语法也不用特别变化
+20:52 varna: cleamoon_: https://metacpan.org/pod/Wraith#SYNOPSIS 你甚至可以用Perl简单地写出一个计算器，语法制导的风格是haskellists惯用的Parsec
+20:54 cleamoon_: 看起来也挺蛋疼的
+20:54 varna: cleamoon_: 顺便推荐一场比赛 http://www.tudou.com/programs/view/3OzH8QDWBX0/ 现在UD虎起来连HUM都能揉
+20:54 cleamoon_: 那是HUM打得菜吧
+20:54 varna: UD=120 HUM=三蛋
+20:54 varna: 水平是有保证的
+20:54 cleamoon_: ......
+20:55 cleamoon_: 怎么赢得
+20:55 varna: 120最近比赛很多，看他操作挺细腻的，胆子也大
+20:55 varna: 图是EI, UD全程压制HUM
+20:55 cleamoon_: 我之前看UD是被克死了
+20:55 varna: 蜘蛛毁灭补胖子
+20:55 varna: 而且最近UD的打法不一样了
+20:55 cleamoon_: 哦？
+20:56 varna: 现在UD见面很少有NC一波强秒趁气势猛冲的
+20:56 cleamoon_: 毁灭胖子怕魔免那玩意呀
+20:56 varna: 都是DK怂，操作阵型保持输出，Lich带节奏
+20:56 varna: 破法没用
+20:56 cleamoon_: 哦？那很新颖呀，不进攻了？
+20:56 varna: 地面主力是蜘蛛
+20:56 varna: 现在的UD似乎讲究保持持续火力
+20:57 varna: DK找机会NC脸杀
+20:57 varna: 连杀*
+20:57 varna: 比赛时间不长，推荐看看
+20:58 varna: 之前happy复出了，打法还是124时代的糊脸一波强秒，对水平相当的对手就吃亏
+20:58 cleamoon_: 不过UD持续能力不强
+20:58 cleamoon_: 开矿太难了
+20:58 varna: UD毕竟十九分钟真男人
+20:59 varna: 被拖到大后期节奏的话不知鹿死谁手
+20:59 varna: 不过新版本UD选手明显谨慎，蜘蛛死亡率低
+20:59 cleamoon_: 哦
+20:59 cleamoon_: 那很好呀
+20:59 varna: 上面120那盘甚至出了三攻
+20:59 cleamoon_: orz
+21:00 cleamoon_: 不过页面到现在还没打开
+21:00 varna: 中间最精彩的一段，是前期UD压HUM分矿
+21:00 varna: 全员残血就是不撤，持续施压挺到车子到场，一阵猛奶原地复活了
+21:01 cleamoon_: 卧操，这略nb呀
+21:01 cleamoon_: 我印象里蜘蛛很容易死
+21:01 varna: 蜘蛛中甲还行，但腿短手短
+21:01 varna: 前几天还看过悲情的埋地一把粉……
+21:02 cleamoon_: 手不短吧
+21:02 cleamoon_: 腿是真短
+21:02 varna: 射程多少来着，550？
+21:03 varna: 是550
+21:03 varna: UD战法还有个变化
+21:03 varna: 现在即使对NE, 似乎也不像以前那么流行狗转蜘蛛或者三本狂狗了
+21:04 cleamoon_: NE
+21:04 varna: 不知道为什么，感觉选手的操作水平是不降反升的
+21:04 cleamoon_: NE用毁灭？
+21:04 cleamoon_: ...
+21:04 cleamoon_: 应该是要求重新加入war3比赛吧
+21:04 varna: 毁灭打熊正当，但以前我学UD的时候似乎都推荐对NE用近战阵容
+21:04 varna: 我觉得war3比赛该有，选手水平其实很好
+21:04 cleamoon_: 玩家没有了
+21:05 varna: 以前是有几个很厉害的人，现在是平均不错；大家拉兵都比较细致，而且讲究英雄抢点、timing、正面战场拉锯转火
+21:05 cleamoon_: 毁灭打熊鹿有个问题，续航真不行
+21:05 varna: 甚至能看到UD出冰龙，对面可是moon啊
+21:05 varna: 虽说moon老了
+21:06 varna: 我有个错觉，他在放水
+21:06 cleamoon_: 所以war3也是好看的，不像sc2，运营好了把兵点到敌人面前就好了
+21:06 hoxily quit:Quit: Leaving
+21:06 varna: 毁灭的续航确实不行，但一波留下一两头熊可以，还有腐球呢
+21:06 cleamoon_: 冰龙有毛用呀....
+21:07 varna: 120 vs moon, 不知道怎么就出了冰龙，还是两个
+21:07 varna: moon直接崩了
+21:07 cleamoon_: .......
+21:07 varna: 地面的熊根本挺不住冰龙那么喷
+21:07 cleamoon_: 没有鹿吗
+21:07 varna: 有，但是被地面部队压制
+21:07 cleamoon_: 那是全面压制了
+21:07 varna: 那是个看起来很标准的蜘蛛毁灭，不知为何冒出了shade
+21:08 varna: UD出牺牲池基本也没别的说道了……
+21:08 cleamoon_: 这种部队应该无数archer解决
+21:08 varna: archer会被lich搞死
+21:08 cleamoon_: NE也有英雄的呀...
+21:09 varna: 那场NE是DH+那加，UD是DK+那加+lich
+21:09 varna: 剩下就看临场反应和timing了
+21:09 varna: 冰封王座之后UD的正规战术里应该没有冰龙一说了，估计也就耍一回
+21:09 cleamoon_: 娜迦.... 果然是瞬杀型
+21:10 varna: 现在给我的感觉，是UD在正面战场上的弹性要求很多
+21:10 varna: 如果追求歼灭的话，似乎容易打亏
+21:10 varna: 因为死不起人
+21:10 cleamoon_: soga
+21:11 cleamoon_: 在不比赛n年之后战术终于成熟了
+21:11 cleamoon_: 然而我还是只会用女猎
+21:11 varna: 我现在还抱着看UD赢就高兴的扭曲心态……
+21:11 varna: 以前UD基本都是被人揉
+21:12 varna: 可能跟补丁也有关，现在都127了
+21:12 varna: 不过不管怎么说，我觉得war3比赛比sc2好看多了
+21:12 varna: 正面战场细致精彩，还不是轰隆轰隆一阵特效就结束了
+21:13 cleamoon_: 对于外行来说sc2比赛好... 因为war3不知道该看哪
+21:13 varna: war3也不需要很会吧，遭遇战能单挑一个AI就行
+21:13 cleamoon_: 不过现在很大部分sc2的观众不是玩家，而是去听相声的，比如我
+21:14 varna: +
+21:14 cleamoon_: 然而我遭遇战打不过中级电脑
+21:14 varna: 不过总觉得看不过瘾
+21:14 cleamoon_: 我都不看的，只听...
+21:14 varna: 你不抓AI练级？
+21:14 cleamoon_: 不抓
+21:15 varna: 那样可能麻烦
+21:15 cleamoon_: 抓不到呀...
+21:15 varna: AI兵攒多了并不好打
+21:15 cleamoon_: war3我喜欢看高手对决，sc2好看的是菜鸡互啄
+21:15 varna: 有几个兵就可以抓了，不过得学一点开局套路
+21:15 cleamoon_: 我没太多套路的...
+21:15 varna: 那样就坑了
+21:16 varna: 没套路的坏处是时间不好把握
+21:16 cleamoon_: 双远古造完了出4个archer出门
+21:16 varna: ...
+21:16 cleamoon_: 时间还是好把握的，反正每次都一样
+21:16 varna: NE首发DH的惯例是兵营陪练第一个点吧……
+21:17 cleamoon_: 做不到
+21:17 cleamoon_: 不是造太远就是造的时候被打
+21:17 varna: 不用操作，平A就行
+21:17 cleamoon_: 没到打的时候呢
+21:17 varna: DH和兵加上拔起来的兵营走出去
+21:17 cleamoon_: 兵营建不好位置
+21:18 cleamoon_: 还有平A把兵营A死的
+21:18 varna: 兵营位置蛋疼，得按地图来
+21:18 varna: 打中间吃个树
+21:18 varna: 不然真会被A死
+21:19 cleamoon_: 掌握不好时机
+21:19 varna: _(:з」∠)_看视频模仿
+21:19 varna: 说起来我得看一下现在UD的开局，不过解说似乎不太给镜头
+21:20 varna: 出的是蜘蛛，但首发英雄时间不像是蜘蛛流的样子
+21:20 cleamoon_: 关键是吃几次亏就想问爹了
+21:20 cleamoon_: 所以水平没有进步
+21:21 varna: 揉脸
+21:21 varna: 打AI的话EI那种小图比较容易上手赢
+21:21 cleamoon_: 卧操，真三每代片头都有吕布，而且一代比一代神
+21:21 varna: 说起来等我换电脑，就装一个war3
+21:21 varna: (｡･ω･)我就是不玩sc2
+21:22 cleamoon_: 现在都tm能翻江倒海和赤兔冲浪了
+21:22 cleamoon_: 你现在的电脑带不动war3？
+21:22 varna: 我不想用wine玩
+21:22 varna: 似乎有一点显示问题
+21:23 varna: 有场120对Fly的比赛，看看
+21:23 varna: 17min
+21:23 cleamoon_: 换电脑双启动？
+21:23 varna: +
+21:23 varna: 网银之类东西有些也得用windoze
+21:23 varna: 到时候我还可以试试MCF
+21:24 cleamoon_: 你就 windoze + vbox 呗
+21:24 varna: windoze + arch
+21:25 cleamoon_: 咦，我刚发现这场我看过...
+21:25 varna: OTL
+21:25 varna: moon最近奇怪地输得不少
+21:25 cleamoon_: 又失恋了吧
+21:26 varna: 不过比起退役前惨败的盖哥，似乎状态还是好一点
+21:26 cleamoon_: 反正不是比赛，无所谓
+21:26 varna: 恐怕只是他没法维持训练水平了
+21:26 varna: 现在他这么打打也不坏，有人气
+21:26 varna: 他输我也看
+21:26 cleamoon_: 似乎在打三线sc2
+21:26 cleamoon_: grubby还在吗
+21:26 varna: grubby没见过了
+21:26 varna: 现在兽王应该是fly吧
+21:27 cleamoon_: 希望能把疯蛤弄回来
+21:27 varna: 查了一下，11年他放弃war3转型sc2了，但成绩似乎一般
+21:28 cleamoon_: 我都没看到过他耶....
+21:28 cleamoon_: 转sc2的似乎都不很好
+21:28 varna: +
+21:28 varna: 现在war3其实有一个问题，很多比赛集中在中国
+21:29 varna: 欧洲选手比较麻烦，尤其是lag方面
+21:29 varna: 不过如果能请到半退隐的大牌选手来捧场，我觉得人气就不会低的
+21:29 varna: 现在还有心思看war3的观众，小学生比例应该很少
+21:30 Mokou: 深圳小学生当街闹分手,女孩声泪俱下:你吃的辣条是我买的
+21:31 varna: 不对，至少120vsfly的这场开局是标准的蜘蛛流
+21:31 varna: 外放地穴内放坟场，4采金补1狗采木，祭坛晚
+21:32 varna: Mokou: 这个6
+21:33 Mokou: http://ww3.sinaimg.cn/mw690/c1057f28gw1f5329zmlxrj20c80lpdgk.jpg
+21:34 lh_mouse: MCF MCF MCF
+21:34 varna: 2333333333
+21:34 iyzsong: _(:з」∠)_
+21:34 varna: cleamoon_: 解说提了一嘴，grubby现在还偶尔打打war3...
+21:35 lh_mouse: https://github.com/lhmouse/mcfgthread/issues/5
+21:37 varna: 我去现在选手的卡位这么细致……
+21:40 cleamoon_: 现在sc2很多比赛也在中国呀
+21:40 cleamoon_: 至少很多能拿钱的比赛
+21:40 varna: +
+21:40 varna: 刚才说中国的war3比赛在欧洲也有转播
+21:40 varna: 可能有数万观众
+21:41 cleamoon_: orz
+21:41 varna: 我去，DK在自家门口被强杀……
+21:41 varna: 蜘蛛倒了两个
+21:42 cleamoon_: 挂了呀
+21:42 varna: 三个了……
+21:42 varna: 一个蜘蛛埋地躲网
+21:43 varna: fly这波打得太猛，打完之后44人口对UD的31人口
+21:43 cleamoon_: 受族呀，很可能带粉的
+21:43 varna: 不用带粉了
+21:43 varna: DK一倒，地面部队挺不住了
+21:43 varna: 兽族是传统的优先贱圣，转白牛狼骑的战术
+21:43 varna: 打蜘蛛还可以补科多
+21:44 varna: 亡灵补回42人口，买到三发DR
+21:44 cleamoon_: 白牛不会用
+21:44 cleamoon_: 只知道能复活
+21:44 varna: 白牛关键，要挂灵魂链
+21:44 cleamoon_: 只有这个吧？
+21:45 varna: 一旦灵魂链挂上，兽族因为共享伤害的缘故部队会很抗打
+21:45 varna: 正面撕开突破口会变难，配合小Y的治疗
+21:45 varna: 现在的兽人似乎还会配合狂暴猎头
+21:46 cleamoon_: 对了，我在考虑，如果stat能得到两倍，所有技能能学满，d2哪个职业最爽快，即可近战，可aoe，可召唤，不容易死
+21:46 cleamoon_: 狂暴猎头什么鬼
+21:46 varna: 刺客
+21:46 cleamoon_: 感觉和我之前看的完全不一样呀
+21:47 varna: 拳打小怪脚踢头目、放陷阱放影子，走位用速度爆发和暗影斗篷
+21:47 varna: 一定很好看
+21:47 varna: 兽族战术变化不多，但狂暴猎头我以前也没见过
+21:47 cleamoon_: 刺客呀，这堆东西都放出来也手忙脚乱的
+21:47 varna: d2确实，放技能很麻烦
+21:48 varna: 得按一下键盘，再点鼠标
+21:48 varna: 驲，我感觉亡灵要崩
+21:48 cleamoon_: 我试了试召唤骨nec，没有想象中爽快
+21:48 varna: 我去，DK吃了一个蜘蛛保命！
+21:48 varna: 网完打打完羊，就要被秒杀的时候一口吃掉一个蜘蛛
+21:49 varna: 但亡灵这无力回天啊……
+21:49 cleamoon_: orz，我都没见过几次吃东西的
+21:49 varna: 现在Lv5巫妖似乎按三nova一冰甲一吃来升
+21:49 varna: 但DK升吃，这绝对有阴谋
+21:50 varna: 2缠绕1光环1吃，估计认为一级光环的加速足够他操作出来了
+21:50 cleamoon_: 又不是骷髅海，吃绝对有想法的
+21:51 varna: 冰封王座里骷髅海没市场
+21:51 cleamoon_: 我倒是听喜欢看骷髅海呢
+21:51 cleamoon_: 虽然会被瞬间驱散
+21:51 varna: 我觉得DK作为UD非内战核心，点技能应该甚至没有耍诡计的余地……
+21:52 varna: 恐怕是新时代的流行趋势
+21:53 cleamoon_: UD恢复能力低也是麻烦
+21:53 iyzsong: 骷髅海占领魔法泉打很爽  ╮(￣▽￣)╭
+21:53 varna: 回复能力有两台车的话其实很优秀
+21:53 varna: 骷髅海会被一招秒杀的
+21:53 varna: 双方两败俱伤，UD略吃亏；orc撤退，UD压制orc分矿，但orc升了城防……
+21:54 varna: 现在三英雄一边等着支援，一边吃着车子奶，一边无助地干那个水泥房子
+21:54 cleamoon_: 蜘蛛又不能吃尸体
+21:54 cleamoon_: 哦，你说灵车呀
+21:54 varna: 黑曜石雕像
+21:54 varna: 五个字打起来太麻烦了
+21:55 varna: 又一台车被orc拦截，UD被反打一波，劣势了
+21:55 varna: 蜘蛛还在死
+21:55 cleamoon_: 灵车变身瞬间确实可怕
+21:55 varna: 不行这要崩了
+21:55 varna: orc瞬间就能爆出一波部队
+21:55 varna: UD点位不好，容易被拦截
+21:56 varna: 贱圣出了闪避、奎靴、+12爪、电球
+21:56 varna: 已经无敌了
+21:56 iyzsong: _(:з」∠)_
+21:56 varna: UD gg
+21:56 varna: fly全程压制
+21:56 cleamoon_: orc的药很便宜，还有治疗波，ne恢复方法有的是，hum有群辽，就ud只能靠dk一个人努力挤奶
+21:56 varna: UD必须出车子奶
+21:56 varna: 有两台的话，回复力就极高
+21:56 cleamoon_: 车子奶的慢
+21:57 varna: 很快的
+21:57 varna: 但你得操作，像我就操不出来
+21:57 cleamoon_: 不能瞬间回复
+21:57 varna: 瞬间回复力靠DK
+21:57 cleamoon_: 咦，不是自动的吗
+21:57 varna: 不，操作的话可以在短时间内快速回复血和魔
+21:57 varna: 以前俗称的车子闪白光就是
+21:58 varna: UD如果要战后回复的话得上腐地
+21:58 cleamoon_: 真三7有魏蜀吴晋就好了，吕布传是什么鬼
+21:59 varna: 以前也有吧？
+21:59 cleamoon_: 哦？我都没发现耶
+21:59 cleamoon_: 但不是和魏蜀吴同等地位的传记呀
+21:59 varna: if-story而已
+21:59 varna: 光荣对吕布似乎有特别的怨念
+21:59 cleamoon_: 现在是默认开始就是吕布
+21:59 varna: ...
+21:59 varna: shenmegui, 开始不该是赵云么
+22:00 varna: 再看一盘，还是120和fly
+22:00 cleamoon_: 片头里出场最多的是，吕布女儿...
+22:01 varna: 无双我一直都不喜欢，太奇葩了
+22:01 cleamoon_: 只是玩个爽
+22:02 varna: 咦，这个图上UD封家封不住？
+22:02 varna: 哦不对，那个空间不够贱圣进去
+22:03 cleamoon_: 噗，吕布任务一开始出来个比吕布低两头的穿布衣的玩意和吕布劝进，我以为是便当小兵，然后那厮自称丁原.... 你把所有钱都给儿子穿衣服了吧
+22:03 varna: .....................
+22:04 varna: 我发现一个变化，现在DK确实地不买鞋了
+22:04 cleamoon_: 咦，为什么
+22:04 varna: 以前我学的是第一天晚上0215要去商店抢鞋
+22:04 varna: 估计和UD不强秒敌方有关
+22:05 cleamoon_: 神tm第一关是杀十常侍，连正经战斗都不是了
+22:05 cleamoon_: 防守反击式UD
+22:05 varna: UD在战略上其实是积极了
+22:06 varna: 顶级选手的双线骚扰显得更坚决，但不像以前那样强调UD的瞬间爆发
+22:06 cleamoon_: 神tm rougelike的武器，狂乱之尖剑
+22:06 varna: timing也比较果决
+22:06 varna: ...
+22:06 cleamoon_: 以前UD的双线骚扰就是双线送兵
+22:06 varna: 120感觉练习得很厉害啊，DK总是不缺蓝用
+22:07 varna: 总有至少一发C
+22:07 varna: 啊，家没封住23333
+22:07 varna: 4/5 23333333
+22:08 varna: UD三本进度成功被拖
+22:08 varna: 三本中退掉补农民再重新起升级
+22:09 varna: 现在桥林解说风格还有个变化，他不再满地图找飞羊了
+22:10 varna: puuuu, 三发PL
+22:11 cleamoon_: 没封住23333
+22:11 cleamoon_: ......
+22:11 cleamoon_: 哪有那么多飞羊
+22:11 varna: 哈哈哈哈贱圣露馅了
+22:11 varna: 疾风步时间到了现形……
+22:12 varna: 毁灭被网了强行费蓝
+22:12 varna: 屁股要倒
+22:13 varna: 我去
+22:13 varna: 各种黑血极限
+22:13 varna: 最后一台被堵住的车子被迫飞起来
+22:14 cleamoon_: orz
+22:14 cleamoon_: 听起来打得好激烈呀
+22:14 varna: 超激烈
+22:15 varna: 来回走位转火，现在在6级石头人的点打起来，PL拿到一个大蓝递给DK
+22:15 varna: 毁灭发挥良好
+22:15 varna: UD崩了
+22:15 varna: 看看狼骑的情况
+22:16 varna: 狼骑被来回操作就是不死
+22:16 varna: DK!
+22:16 varna: 我去
+22:16 varna: 一口蜘蛛
+22:16 Mokou: http://ww1.sinaimg.cn/mw690/51720b6fgw1f4yl2wcgnkj20fw0gtaas.jpg 可以，這很皿煮
+22:17 varna: puuu
+22:17 varna: fly补了一些飞龙
+22:17 varna: UD练花岗岩
+22:17 varna: 要被抓……
+22:18 varna: KTKR!
+22:18 varna: 拉锯中——
+22:18 varna: 三块大砖砸在拉怪的lich头上，又交火了
+22:19 cleamoon_: 飞龙骑脸怎么苏
+22:19 varna: orc崩了！崩了！
+22:20 varna: orc没兵了！
+22:21 varna: 兵临城下
+22:21 cleamoon_: 卧操，貂蝉的身世知晓了，他爸是李咏！
+22:21 cleamoon_: 脸也太tm长了
+22:21 varna: orc又崩了
+22:22 varna: 啊啊！
+22:22 varna: DK反杀贱圣成功
+22:22 varna: orc gg
+22:22 cleamoon_: orz
+22:22 cleamoon_: ud的崛起
+22:22 varna: 这场的战术就很典型，DK阵后游走为主
+22:22 varna: 但即使这么打，UD英雄仍然在场上存在感强大
+22:23 cleamoon_: 咱们干脆弄一个集资，让大家出钱弄线上war3比赛好了
+22:23 varna: 没人投钱……
+22:23 cleamoon_: 所以集资呀
+22:23 varna: 其实看这个播放量还不错，一场比赛的播放数在10k-20k之间
+22:24 cleamoon_: 关键是水分多少
+22:24 varna: 但没法和流行的游戏竞争了，因为看起来太麻烦
+22:24 varna: 咦有个三蛋打infi的
+22:24 cleamoon_: 上次一场lol直播，显示观看量13亿
+22:24 varna: 2333333
+22:24 Mokou: 23333333
+22:24 varna: 没事，只要都有水分，就有可比性
+22:24 cleamoon_: 那可是直播耶
+22:25 cleamoon_: 逗鱼水分似乎比较多
+22:25 Mokou: 下次給你來個一百億
+22:25 varna: 桥林已经是国内一流著名的war3解说了，以前世界前列的选手也大致跟他有点交集
+22:25 cleamoon_: sc2直播长时间保持在20W
+22:26 varna: 拿他的非直播点击数跟其他流行游戏比，就知道war3已经不热了
+22:26 cleamoon_: 林桥缺个谐星做逗艮
+22:26 varna: 他走专业路线
+22:26 varna: puuuu, 这个是三蛋和infi的败者复活赛
+22:26 varna: 这下好玩了
+22:26 cleamoon_: 专业也可以谐呀
+22:27 varna: HUM内战，正好我看看新时代的内战怎么玩
+22:27 cleamoon_: 不过这也是区别，war3打不好不好看，打得好才好看
+22:27 varna: 124时代，国内的HUM一般会用NE当应付内战的种族，现在也许不一样了
+22:27 varna: 打不好不好看+
+22:27 varna: 一般厉害的人打war3都不怎么好看
+22:28 cleamoon_: sc2现在是史诗级的菜鸡互啄和世界前三的比赛才好看
+22:28 varna: 现在为什么那么多天灾骨钟……
+22:28 varna: 十场比赛里有三个
+22:28 cleamoon_: orz
+22:28 cleamoon_: orz
+22:29 cleamoon_: 天佑不死
+22:29 cleamoon_: 话说，undead这个词的翻译，不死总觉得不对
+22:29 varna: 基本上只能意译
+22:29 cleamoon_: 如果是do和undo的区别，那么undead应该是死了活
+22:30 varna: 三蛋搞到智力+6、+6爪、偷换
+22:30 varna: 死了活+
+22:30 cleamoon_: 复活族又太正面了，所以，僵尸族？
+22:30 iyzsong: (｢・ω・)｢
+22:30 cleamoon_: 偷换是什么
+22:30 varna: 基本un-dead应该是逆转死亡的过程，但意译成亡灵就行了，只强调结果
+22:30 varna: 头环
+22:30 varna: 手滑了
+22:30 cleamoon_: 哦
+22:30 varna: infi手里有吸血
+22:30 cleamoon_: 我还以为加入偷对方物品的高级货物了呢
+22:31 varna: 防御+2、+6爪
+22:31 varna: 完全一样的战术，脚男黄皮水人，交火了
+22:31 varna: 各种反补
+22:33 varna: HUM前期的DPS就是拙计
+22:34 cleamoon_: 农民起义挺强的
+22:34 varna: 三蛋大法带着两个爪子一个斗篷一个头环和成吨巨魔压制infi分矿
+22:34 varna: 双方Lv5大法
+22:35 T-J-M is now known as TommyJerryMairo
+22:35 varna: 三蛋逼infi磕药跟他消耗
+22:35 varna: 买了巨魔小泥人之类
+22:36 varna: 压制infi祭坛里的MK
+22:36 varna: 压制成功，三蛋回防分矿，用几个塔换了祭坛和里面的MK
+22:37 cleamoooon: 自称AppleJ4ck的攻击者声称对本周一早晨暴雪游戏服务器的宕机事件负责。这次事件影响了暴雪的《守望先锋》、《炉石传说》、《魔兽世界》、《暗黑》等游戏。AppleJ4ck在Twitter上说，这次攻击只是测试，许诺未来将会发生更多的宕机事件。AppleJ4ck被认为与臭名昭著的DDoS攻击组织 Lizard Squad有关联。
+22:37 varna: 233333
+22:37 varna: 三蛋直接跳了三本
+22:38 varna: 没出法系
+22:38 lh_mouse: 三本直接跳了三蛋
+22:39 varna: 看来人族内战还是这么熊包，得看十分多钟的巨魔大战
+22:40 cleamoooon: https://www.zhihu.com/question/26525931/answer/106993181
+22:40 TommyJerryMairo is now known as T-J-M
+22:40 cleamoon_: 人族内战的话我会选择熊猫
+22:40 varna: infi走破法路线，继天灾骨钟之后又打到毁灭号角……
+22:40 cleamoooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/qt/zq_206691.jpg@596w_1l.jpg
+22:40 varna: 三蛋出了六级大法，走小炮骑士路线
+22:40 cleamoooon: .......
+22:41 cleamoooon: infi人品爆棚
+22:41 varna: 不过脚男用吸血光环是不是只能吸两点血？
+22:42 varna: infi被克制，崩了
+22:42 varna: TP回城，三蛋传送追击
+22:42 varna: 小炮升碎片，已经开始拆家了
+22:43 cleamoooon: 脚男吸血基本就是威慑效果
+22:43 varna: 三蛋四黄皮双绿皮小炮骑士拿下了infi
+22:43 varna: 双矿压制之后的三本二发pal
+22:44 varna: 法系部队在三本部队面前太勉强了
+22:44 Mokou quit:Ping timeout: 240 seconds
+22:44 cleamoooon: 人族不就擅长万金油吗
+22:45 varna: 万金油应该是二矿二本法系辅助转型，但三蛋这次是跳三本的
+22:45 varna: 他的减速和治疗都靠买的雇佣兵
+22:45 cleamoon_: orz
+22:45 varna: 靠连续游走压制争取机会
+22:46 varna: 中间他基本没有停止对infi两个矿的交替压制，结果infi没法正经抄他家
+22:46 cleamoon_: 三本的话，似乎只能空军？
+22:46 varna: 骑士
+22:46 cleamoon_: 骑士被压制到死
+22:46 varna: 切进去之后法系缺乏对应的抵抗力
+22:46 Mokou joined channel
+22:46 varna: 他后面有小炮压阵，主输出靠大量黄皮绿皮
+22:47 varna: 整整四个黄皮
+22:47 varna: 大法还靠宝物加了二十多攻
+22:47 varna: 输出环境非常安定，infi正面干不过的
+22:47 cleamoon_: 我很想知道现在雇佣兵一般多少钱，这种送死的活
+22:48 varna: 三次元雇佣兵的shoot job不多了
+22:49 cleamoon_: 其实军队也可以算雇佣兵
+22:49 cleamoon_: 这么一算的话，工资挺低的
+22:49 varna: 那是中世纪风格的观点
+22:49 varna: 现在PMC雇佣兵的稳定经济收入可以考虑战术训练、顾问派遣
+22:50 cleamoon_: orz
+22:50 varna: guard job的日工资可能会按百或千美元的数量级算
+22:50 cleamoon_: orz
+22:51 varna: 但纯粹的shoot job涉及很多麻烦事情，所以PMC在伊战之后可能更注重安保、训练和顾问工作
+22:51 varna: 毕竟工作干净又稳定，如果公司声望高，甚至可以接到警察之类的训练业务
+22:52 varna: 至于干净，是相对被军队雇去打工最后还得背锅（“非人道行为是〇水公司的临时工干的，跟我军无关，缺乏监督是个决策失误”）来说的
+22:55 varna: btw新版本DH的献祭似乎buff了
+22:55 varna: DH首发学献祭的不少
+22:56 cleamoon_: 献祭烧农民挺快的
+22:56 cleamoon_: 不能农民起义了
+22:56 varna: 现在更厉害了，连脚男都能顶
+22:56 cleamoon_: orz
+22:59 lhanjian: lh_mouse: 今天好像是小耗的生日？
+22:59 varna: (｡･ω･)咦？
+22:59 lh_mouse: 昨天。
+22:59 cleamoon_: 哦？
+22:59 varna: (｡･ω･)ﾉ
+23:00 cleamoon_: (｡･ω･)ﾉ
+23:00 lh_mouse: (｡･ω･)ﾉ羊
+23:00 lh_mouse: 手里拎着个羊。
+23:00 varna: (｡･ω･)ﾉ不了解情况不过还是补祝下生日快乐
+23:00 varna: puuu
+23:00 lh_mouse: (｡･ω･)ﾉ羊
+23:00 varna: (｡･ω･)ﾉ羊驼不是羊
+23:00 lh_mouse: (｡･ω･)ﾉ羊驼
+23:01 cleamoon_: 扶她羊驼子
+23:01 varna: ( ﾟДﾟ)σ
+23:01 varna: ( ﾟДﾟ)σ耗 # 点耗鼻
+23:02 iyzsong quit:Ping timeout: 264 seconds
+23:02 cleamoon_: 为什么点菊
+23:03 varna: 是鼻子
+23:03 cleamoon_: 为什么不点菊
+23:03 varna: 噫，最近这些比赛是线下赛啊
+23:03 varna: 还挺正式的，Lyn都复出了
+23:03 lhanjian: 补小耗生快～
+23:03 cleamoon_: 噗，怎么做到的
+23:04 varna: 似乎有电器厂商赞助
+23:04 cleamoon_: 快生耗小
+23:04 varna: 倒念别有风味
+23:04 iyzsong joined channel
+23:05 Mokou: 重啓去windoze
+23:05 Mokou quit:Quit: reboot
+23:06 varna quit:Quit: leaving
+23:06 Izumo joined channel
+23:11 Youmu joined channel
+23:11 iyzsong quit:Ping timeout: 260 seconds
+23:14 stardust is now known as stardustx
+23:14 iyzsong joined channel
+23:16 EAirPeter joined channel
+23:17 iyzsong quit:Client Quit
+23:17 * lh_mouse slaps EAirPeter around a bit with a large trout
+23:18 cleamoon_: 海洋生物来了

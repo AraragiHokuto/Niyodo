@@ -1,0 +1,157 @@
+00:03 varna: https://www.bilibili.com/video/av15006149 力 场 盾
+00:12 varna quit:Ping timeout: 248 seconds
+01:18 iyzsong quit:Quit: ZNC 1.7.0 - https://znc.in
+01:23 Alan_ quit:Remote host closed the connection
+01:23 Alan_ joined channel
+01:29 Alan_ quit:Ping timeout: 260 seconds
+01:29 Alan_ joined channel
+01:34 Alan_ quit:Ping timeout: 264 seconds
+01:46 Alan_ joined channel
+01:58 Alan_ quit:Remote host closed the connection
+02:04 Alan_ joined channel
+02:09 CyrusYzGTt quit:Ping timeout: 265 seconds
+02:10 CyrusYzGTt joined channel
+02:31 Alan_ quit:Remote host closed the connection
+02:57 Alan_ joined channel
+02:58 Alan___ joined channel
+02:58 Alan_ quit:Read error: Connection reset by peer
+03:03 Alan___ quit:Ping timeout: 264 seconds
+03:24 whocares_2 joined channel
+03:25 whocares_2_ quit:Ping timeout: 240 seconds
+04:46 Alan_ joined channel
+04:51 Alan_ quit:Ping timeout: 240 seconds
+06:34 Alan_ joined channel
+06:39 Alan_ quit:Ping timeout: 240 seconds
+07:28 zhangoke joined channel
+09:17 Alan_ joined channel
+09:41 lh_mouse joined channel
+09:46 ZhangShurong joined channel
+10:09 ZhangShurong quit:Ping timeout: 248 seconds
+10:12 lh_ideapad joined channel
+10:12 ZhangShurong joined channel
+10:15 ZhangShurong quit:Client Quit
+10:17 ZhangShurong joined channel
+10:34 ZhangShurong quit:Ping timeout: 260 seconds
+10:38 sixand joined channel
+11:44 cleamoon_ quit:Quit: Connection closed for inactivity
+12:42 sixand quit:Ping timeout: 265 seconds
+12:45 zhangoke quit:Quit: zhangoke
+13:09 sixand joined channel
+13:24 Alan_ quit:Remote host closed the connection
+13:36 lh_ideapad quit:Ping timeout: 240 seconds
+13:51 lh_ideapad joined channel
+14:35 ZhangShurong joined channel
+14:49 ZhangShurong quit:Remote host closed the connection
+14:50 ZhangShurong joined channel
+14:56 jingjinghack quit:Write error: Connection reset by peer
+14:57 jingjinghack joined channel
+15:04 ZhangShurong quit:Ping timeout: 260 seconds
+15:05 ZhangShurong joined channel
+15:05 Alan_ joined channel
+15:11 Alan_ quit:Ping timeout: 264 seconds
+15:34 chenstrace joined channel
+15:36 chenstrace: https://www.zhihu.com/question/281103892   这个问题，谁帮忙解答一下呗
+15:46 lhanjian_: chenstrace: 
+15:52 lhanjian_: chenstrace: 你把printf都去掉试试，你在往stdout写东西，所以状态不断被重置了？
+15:59 chenstrace: 谢谢您， 我试一下
+16:06 sixand1 joined channel
+16:07 chenstrace: 去掉printf， 还是不行。
+16:08 sixand quit:Ping timeout: 268 seconds
+16:08 sixand1 is now known as sixand
+16:10 lhanjian_: chenstrace: stdout设成非阻塞了么
+16:12 lh_mouse: chenstrace, 你不理解 epoll ET ……
+16:12 lh_mouse: 而且， stdin 不一定是可写的。
+16:12 lh_mouse: stdout 和 stderr 才是可写的。
+16:12 chenstrace: 我只是做一个实验， 
+16:13 chenstrace: 能帮忙解释一下程序的现象吗
+16:13 lh_mouse: chenstrace, ET 的意思是，如果有状态变更，会返回一个 event 。至于返回的 event 是什么，并没保证。
+16:14 sixand quit:Ping timeout: 255 seconds
+16:16 lh_mouse: 你监测的是 EPOLLOUT 但是有状态变更就会收到事件。
+16:16 lh_mouse: 而且这时候基本 EPOLLOUT 是必然的，因为输出缓冲基本不会满。
+16:16 chenstrace: 这正是我想问的， 这个状态变更， 对于stdin这个文件描述符来说， 具体是什么状态变更
+16:16 lh_mouse: 和 socket 一样，只要写缓冲未满，一般情况下收到的 EPOLLIN 会带上 EPOLLOUT 。
+16:16 chenstrace: 但是， 我用的是ET
+16:17 lh_mouse: 可读状态。
+16:17 lh_mouse: [16:13:14] <lh_mouse> chenstrace, ET 的意思是，如果有状态变更，会返回一个 event 。至于返回的 event 是什么，并没保证。
+16:17 lh_mouse: 如果有状态变更，就把当前状态复制到 event 里，然后队列。
+16:17 lh_mouse: epoll_wait() 从队列中取出指定的状态。
+16:18 chenstrace: 我关注的关键是，  man手册上说 edge-triggered mode delivers events only when changes occur on the monitored file descriptor
+16:19 chenstrace: 我把printf去掉， 确实是OK的
+16:20 ZhangShurong quit:Ping timeout: 268 seconds
+16:20 lh_mouse: 可能 stdin 和 stdout 是同一个设备的两个 fd 吧。
+16:22 lh_mouse: cat | ./a.out 就能看出区别了。
+16:22 Alan_ joined channel
+16:22 lh_mouse: 这样 stdin 和 stdout 就是两个设备了。
+16:23 lh_mouse: chenstrace, >>>  only when changes occur <<< on the monitored file descriptor  
+16:23 lh_mouse: 不是 changes of the modes specified occur 。
+16:26 chenstrace: 已经证实了我的想法， 现在就是返回一次了。  https://paste.ubuntu.com/p/9WGF3Gv754/
+16:27 lh_mouse: 这里的 'changes' 应该指的是设备上的变化，因为实际 fd 是可以 dup() 的。
+16:28 lh_mouse: 这样可能出现两个 fd 引用同一设备的情况。
+16:28 lhanjian_: chenstrace: 我说的对吧，你一边输出一边监控肯定悲剧的
+16:28 lh_mouse: 如果 stdin 和 stdout 是同一个设备，那么你实际上监测的是 stdout 的 EPOLLOUT 。
+16:29 lhanjian_: 虎符
+16:30 chenstrace: lhanjian_ ，  我不知道怎么私聊， 谢谢你
+16:30 lh_mouse: 准备交出 PY 了么。
+16:30 lhanjian_: chenstrace: 私聊用/msg lhanjian_ XXXXXX。不用谢
+16:30 lhanjian_: lh_mouse: 这是假的小耗
+16:30 * lh_mouse slaps lhanjian_ around a bit with a large trout
+16:30 lhanjian_: lh_mouse: 條鱼出游从容
+16:31 lh_mouse: ChanServ, kick lhanjian_ 
+16:31 lhanjian_ is now known as lhanjian
+16:33 lh_ideapad quit:Ping timeout: 264 seconds
+16:46 lh_ideapad joined channel
+17:41 Alan_ quit:Remote host closed the connection
+17:49 whocares_2 quit:Remote host closed the connection
+18:13 CyrusYzGTt quit:Ping timeout: 256 seconds
+18:19 lh_ideapad quit:Remote host closed the connection
+18:25 CyrusYzGTt joined channel
+19:23 cleamoon_ joined channel
+20:07 iyzsong joined channel
+20:12 lh_mouse quit:Read error: Connection reset by peer
+20:13 lh_mouse joined channel
+20:14 Alan__ joined channel
+20:19 Alan__ quit:Remote host closed the connection
+20:38 varna joined channel
+20:38 varna: 噗叽啪
+20:44 lhanjian: uccu
+20:45 lh_cat joined channel
+20:47 hope1 quit:Ping timeout: 245 seconds
+20:47 hope1 joined channel
+20:48 lh_mouse quit:Ping timeout: 245 seconds
+20:55 varna: 夕莉莉莉
+21:05 cleamoon_: 萝莉  http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/wq/0k_511116.gif@596w_1l.gif
+21:12 varna: 夕莉莉莉
+21:14 lhanjian: varna: 机械生命！
+21:16 lhanjian: Android！
+21:20 varna: https://www.bilibili.com/video/av22764684
+21:23 cleamoon_: uccu
+21:25 chenstrace1 joined channel
+21:30 cleamoon_: varna: 感觉TL2四处都充斥着“我是D2”的怨念
+21:30 varna: 差不多
+21:30 varna: 但数值做得不怎么样
+21:30 cleamoon_: 数值可以mod
+21:31 cleamoon_: 作为新手，D2的数值也很有问题，不查攻略我不信谁能第一次玩打过噩梦
+21:36 cleamoon_: 特朗普政府周五表示，将对价值500亿美元进口到美国的中国产品征收25%关税，北京已经表示，也将对价值约500亿美元的美国进口产品征收关税进行报复  #我穿越了？
+21:45 zhangoke joined channel
+21:50 lhanjian: cleamoon_: 川普还是反复了
+21:54 cleamoon_: 难道不是时空跳跃者吗
+21:54 lhanjian: 终于到了喜闻乐见的剧情了
+21:54 Alan__ joined channel
+21:54 lhanjian: varna: 来玩 便成人 啊，好的很啊
+21:54 varna: 不喜欢
+22:02 ZhangShurong joined channel
+22:16 CyrusYzGTt quit:Ping timeout: 264 seconds
+22:27 chenstrace1 quit:Quit: Leaving.
+22:30 CyrusYzGTt joined channel
+22:34 zhangoke quit:Quit: zhangoke
+22:41 jjjjjj joined channel
+22:42 jjjjjj quit:Client Quit
+22:42 jjjjjj joined channel
+22:43 jjjjjj quit:Client Quit
+23:03 chenstrace1 joined channel
+23:05 ZhangShurong quit:Quit: Konversation terminated!
+23:12 lhanjian: 我刚代表人造人处决了一个生物人，仅仅是为了讨生物人小姐姐高兴
+23:17 xanthu joined channel
+23:35 iyzsong quit:Ping timeout: 245 seconds
+23:56 lh_ideapad joined channel
+23:56 chenstrace1 quit:Quit: Leaving.

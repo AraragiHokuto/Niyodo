@@ -1,0 +1,116 @@
+00:22 cleamoon_: 热死了，今年海盗气温爆表，都赶上帝都了
+00:22 iyzsong joined channel
+00:27 cleamoon_: 现在30度
+00:27 iyzsong: 2333
+00:28 cleamoon_: 这是一个电器店不卖空调，只有大型电器店才有电扇的地方呀
+00:36 lh_mouse: varna, https://gitlab.com/fcitx/fcitx/issues/425
+00:36 lh_mouse: 有好用的截图软件推荐么。
+00:36 lh_mouse: mint 自带的截图不能截软键盘。
+00:38 cleamoon_: lh_mouse: 试试 xfce4－screenshooter？不确定这个能不能截软键盘
+00:40 varna: 以前用过scrot，但不知道对软键盘的支持情况
+00:49 iyzsong quit:Ping timeout: 240 seconds
+00:53 lh_mouse: 0.0
+01:29 lh_mouse: varna, cleamoon_  用 shutter 了，还不错。
+01:29 lh_mouse: https://unix.stackexchange.com/questions/319945/mate-custom-shortcut-for-keyboard-layout-in-linux-mint-18-sarah
+01:30 lh_mouse: 用 dconf-editor 改了默认的 mate-screenshot 。
+01:30 lh_mouse: 效果拔群。
+01:30 lh_mouse: 现在和 QQ 手感差不多了，就是反应慢点， 不过可以选区截图了。
+01:37 lh_ideapad quit:Remote host closed the connection
+01:45 lh_mouse quit:Ping timeout: 264 seconds
+01:46 cleamoon_: QQ截图确实不错
+02:09 varna quit:Ping timeout: 240 seconds
+07:29 zhangoke joined channel
+07:44 zhangoke quit:Quit: zhangoke
+09:39 lh_mouse joined channel
+10:05 lh_ideapad joined channel
+10:08 lh_ideapad quit:Client Quit
+10:08 lh_ideapad joined channel
+10:09 lh_ideapad quit:Changing host
+10:09 lh_ideapad joined channel
+10:09 lh_ideapad quit:Remote host closed the connection
+10:09 lh_ideapad joined channel
+10:10 lh_ideapad quit:Changing host
+10:10 lh_ideapad joined channel
+10:21 lh_ideapad quit:Quit: For the Red Army!
+10:21 lh_ideapad joined channel
+10:23 lh_mouse quit:Quit: For the Red Army!
+10:25 lh_mouse joined channel
+10:52 lh_ideapad quit:Remote host closed the connection
+10:53 lh_ideapad joined channel
+11:07 FrankHB joined channel
+12:02 lh_ideapad quit:Remote host closed the connection
+12:02 lh_ideapad joined channel
+12:06 lh_ideapad quit:Remote host closed the connection
+12:07 lh_ideapad joined channel
+12:08 \s joined channel
+12:08 \s quit:Changing host
+12:08 \s joined channel
+13:12 FrankHB quit:Read error: error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac
+13:34 FrankHB joined channel
+15:24 lh_mouse: geordi, << is_nothrow_move_constructible<int>::value
+15:24 geordi: true
+15:34 meowray: [class.virtual]p2 final overriders
+15:39 zhangoke joined channel
+15:39 meowray: geordi: { struct animal{};struct rodent:animal{short limbs;long tail;};struct lh_mouse:rodent{int cxx;};cout<<is_standard_layout<lh_mouse>::value; }
+15:39 geordi: false
+15:49 zhangoke quit:Quit: zhangoke
+15:50 FrankHB quit:Ping timeout: 240 seconds
+16:12 sixand joined channel
+16:26 FrankHB joined channel
+16:49 whocares_2_ quit:Ping timeout: 264 seconds
+16:49 whocares_2 joined channel
+17:04 FrankHB quit:Ping timeout: 260 seconds
+17:33 sixand quit:Ping timeout: 276 seconds
+18:20 komonsterko joined channel
+18:25 komonsterko quit:Ping timeout: 244 seconds
+19:36 iyzsong joined channel
+20:02 varna joined channel
+20:03 varna: Mokou: 我似乎领悟了，所谓的「无二打」，就是「三回啊三回」
+20:39 lhanjian: varna: 药丸
+20:45 lh_ideapad quit:Remote host closed the connection
+20:46 lh_ideapad joined channel
+20:52 varna: 刚才追命一样终于把出问题的上游追到发bugfix了
+20:52 varna: 但是我脖子好僵啊……该买个午睡用的靠枕了
+20:54 zhangoke joined channel
+20:56 lhanjian: varna: 堕落了
+20:59 varna: 这些年下来没点颈椎问题也奇怪，去年我还这么评论自己
+21:00 varna: 现在已经不太好了，那还算正常
+21:07 cleamoon_ quit:Quit: Connection closed for inactivity
+21:12 zhangoke quit:Quit: zhangoke
+21:22 lh_ideapad quit:Remote host closed the connection
+21:24 lhanjian: 万恶的资本主义
+21:27 varna: 什么鬼，这些人发了一个小时
+21:27 varna: 算了，我记得有几个上游应用确实一次发布超过二十分钟
+21:28 varna: 每批再灰一小时，也差不多
+21:44 varna: 回想了一下
+21:44 varna: 今天我只见到三个幼女
+21:44 varna: 大概是这样的原因，整体生化反应程度低落，现在都犯困了
+21:46 varna: 虽说现在躺下睡到凌晨五点起来再做随便什么事情都挺可能更有建设性
+21:47 varna: (｡･ω･)ﾉ然而有药娘么
+21:51 iyzsong quit:Ping timeout: 256 seconds
+21:52 varna_ joined channel
+21:52 varna quit:Disconnected by services
+21:52 varna_ is now known as varna
+22:21 Mokou: varna: HOMO特有的联想
+22:24 varna: 护车之鬼将（三回）
+22:25 Mokou: 传统艺能（指武术）
+22:26 varna: 传统艺能（A+++）
+22:26 varna: 开演之时（三十分钟五万）
+22:26 varna: S A B E R
+22:26 varna: 总觉得月球完了
+22:26 varna: 彻底inm化
+22:27 Mokou: 现在还有没inm化的东西吗
+22:28 varna: 米空（确信）
+22:30 Mokou: GO IS GOD, 米空也是神
+22:31 varna: 牙白！牙白！（悲怆）
+22:31 whocares_2_ joined channel
+22:32 varna: 看到自己信仰的神原来是GO，我仿佛化身为失去了太阳的太阳战士
+22:32 varna: RUA
+22:32 whocares_2 quit:Ping timeout: 264 seconds
+22:34 varna: 紫云啊，化作耳目（确信）
+22:35 varna: 吴港啊，拆掉机库（半恼）
+22:35 varna: 紫云啊，重刷练度（震声）
+22:35 varna: (｡･ω･)ﾉ神性A（指MiGOn）
+22:36 * varna 堕入邪道
+22:43 Mokou: HOMO特有诗歌创作
+22:52 Mokou: 【不愿陪父亲“吃鸡”被打 男孩把父亲推下楼梯后要跳楼[黑线]】12日，浙江宁波一小区内，因父亲总让儿子陪自己玩吃鸡游戏，玩了一局后儿子心烦不想玩，奶奶说了其几句，男孩出口顶撞奶奶，父亲生气上来打他，随后被300斤的儿子推下楼梯。男孩自己也欲跳楼寻短见。（宁波晚报）http://t.cn/RgVtkpw 

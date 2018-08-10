@@ -1,0 +1,851 @@
+00:08 lh_mouse quit:Read error: Connection reset by peer
+00:20 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.5/20150602115007]
+00:35 ld-linux_a23 joined channel
+00:39 molikto joined channel
+00:40 molikto_ quit:Read error: Connection reset by peer
+00:41 molikto quit:Remote host closed the connection
+00:42 molikto joined channel
+00:47 molikto quit:Ping timeout: 276 seconds
+00:56 tutu_wind: 都睡了 ...
+01:33 cleamoon quit:Ping timeout: 256 seconds
+01:36 cleamoon joined channel
+01:48 xxxxxxxx: 3-3出飞龙了
+01:55 tutu_wind: 都睡了吧 xxxxxxxx 
+02:05 tutu_wind: 大家晚安 ~ 
+02:05 tutu_wind quit:Quit: 晚安 ~
+03:03 ASenR quit:Quit: Lost terminal
+03:08 molikto joined channel
+03:15 molikto quit:Ping timeout: 256 seconds
+03:30 ld-linux_a23 joined channel
+04:24 whocares_2 quit:Remote host closed the connection
+04:25 whocares_2 joined channel
+04:56 xxxxxxxx quit:Quit: Leaving...
+05:19 molikto joined channel
+05:41 boosure joined channel
+06:04 boosure quit:Quit: Get your hand off of it
+06:18 molikto_ joined channel
+06:18 molikto quit:Read error: Connection reset by peer
+07:21 molikto_ quit:Remote host closed the connection
+07:23 molikto joined channel
+07:24 molikto quit:Remote host closed the connection
+07:45 molikto joined channel
+08:20 molikto quit:Remote host closed the connection
+08:32 tutu_ joined channel
+08:32 tutu_: 早 ~
+08:32 lhjkk joined channel
+08:33 lhjkk: 早
+08:35 hysw: 枣...
+08:38 lhjkk: 今天的寒云也是在赶作业？
+08:45 lhjkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+08:49 xxxxxxxx joined channel
+09:11 lh_mouse joined channel
+09:20 xxxxxxxx: http://sd.china.com.cn/a/2015/tyyl_0608/238652.html
+09:45 hope1 joined channel
+09:48 whatofor joined channel
+09:50 tutu_ quit:Read error: Connection reset by peer
+09:51 tutu_ joined channel
+09:54 tutu_ quit:Read error: Connection reset by peer
+09:54 tutu_ joined channel
+10:17 tutu_ quit:Read error: Connection reset by peer
+10:18 tutu_ joined channel
+10:54 molikto joined channel
+11:16 ld-linux_a23 joined channel
+11:24 tutu_ quit:Read error: Connection reset by peer
+11:25 tutu_ joined channel
+11:27 ASenR joined channel
+11:32 hysw: 靠... 电脑时间差了20+分钟...
+11:35 molikto quit:Ping timeout: 245 seconds
+11:36 ld-linux_a23 joined channel
+11:37 molikto joined channel
+11:52 varna joined channel
+12:05 tutu_ quit:Read error: Connection reset by peer
+12:06 tutu_ joined channel
+12:11 blackskygg joined channel
+12:12 blackskygg: varna: 我下午考书法
+12:16 ld-linux_a23 joined channel
+12:17 varna: blackskygg: OTL
+12:19 blackskygg: 其实是考英语
+12:19 blackskygg: 但也相当于考书法
+12:22 blackskygg: 我去撸去
+12:22 blackskygg quit:Quit: Bye
+12:29 tutu_: 阿勒
+12:29 tutu_: 真有高考哒？
+12:31 varna: 更多是搞尻的
+12:37 xxxxxxxx: http://www.bilibili.com/video/av1270892/
+12:40 tutu_: sleeping ~ Zzzz
+12:47 xxxxxxxx: 10发出了两个32电探 明天再开发 中午休息一会
+12:50 xxxxxxxx quit:Quit: Leaving...
+12:50 varna: OTL
+12:57 tutu_ quit:Read error: Connection reset by peer
+12:58 tutu__ joined channel
+13:08 tutu__ quit:Ping timeout: 256 seconds
+13:17 molikto quit:Ping timeout: 264 seconds
+13:24 varna: http://edu.gmw.cn/2015-06/07/content_15902170.htm 这题目一看就想到大建……
+13:28 KniKee joined channel
+13:29 KniKee quit:Client Quit
+13:31 KoniKee joined channel
+13:31 tutu_ joined channel
+13:39 lh_not_bot: geordi: -c { foo f("hello"); } struct foo { foo(std::string); };
+13:39 geordi: Success
+13:40 lh_not_bot: geordi: -c { bar b("hello"); } struct foo { foo(std::string); }; struct bar { bar(foo); };
+13:40 geordi: error: no matching function for call to 'bar::bar(const char [6])'
+13:43 KoniKee quit:Remote host closed the connection
+13:51 condy: geordi: replace last foo with {foo}
+13:51 geordi: error: expected unqualified-id before '{' token
+13:51 condy: geordi: undo and replace "hello" with {"hello"}
+13:51 geordi: Success
+13:59 molikto joined channel
+14:15 lh_not_bot: geordi: replace "hello" with {"hello"}
+14:15 geordi: error: call of overloaded 'bar(<brace-enclosed initializer list>)' is ambiguous
+14:15 lh_not_bot: geordi: show
+14:15 geordi: -c { bar b({{"hello"}}); } struct foo { foo(std::string); }; struct bar { bar(foo); };
+14:16 lh_not_bot: geordi: << condy; const auto condy[] = {'B','A','K','A',0};
+14:16 geordi: error: 'condy' declared as array of 'const auto'
+14:16 lh_not_bot: geordi: replace auto with char
+14:16 geordi: BAKA
+14:16 lh_not_bot: geordi: << condy; const auto condy = {'B','A','K','A',0};
+14:16 geordi: error: unable to deduce 'const initializer_list<const auto>' from '{'B', 'A', 'K', 'A', 0}'
+14:16 lh_not_bot: geordi: << condy; const auto condy = {'B','A','K','A', '\0'};
+14:16 geordi: {'B', 'A', 'K', 'A', '\0'}
+14:34 lh_mouse quit:Read error: Connection reset by peer
+14:34 lh_mouse joined channel
+15:00 xxxxxxxx joined channel
+15:10 xxxxxxxx: 睡了一觉精神多了
+15:10 xxxxxxxx: 顺手开发了一下又一个32....
+15:13 varna: 噗
+15:13 varna: 太欧了
+15:14 xxxxxxxx: 然而这一定是因为我平时不怎么黑RJ
+15:26 lh_not_bot: geordi: << TYPE<common_type_t<int &, int &>>;
+15:26 geordi: int
+15:31 xxxxxxxx quit:Ping timeout: 255 seconds
+15:32 xxxxxxxx joined channel
+15:49 hope1 quit:Ping timeout: 272 seconds
+16:00 iyzsong: 哈o哈
+16:05 varna: iyzsong: eee?
+16:07 tutu_ quit:Ping timeout: 252 seconds
+16:10 iyzsong:  zxz
+16:10 xxxxxxxx: eee?
+16:14 endle joined channel
+16:19 lh_not_bot: geordi: template<typename T, bool = std::is_copy_constructible<T>::value> struct crtp { }; struct foo : crtp<foo> { }; static_assert(std::is_copy_constructible<foo>::value, "!!");
+16:19 geordi: error: static assertion failed: !!
+16:19 lh_not_bot: geordi: use --clang
+16:19 geordi: error: static_assert failed "!!"
+16:37 xxxxxxxx: 然而iyzsong不说话了
+16:37 iyzsong: 说啥啊
+16:37 varna: eee
+16:38 ld-linux_a23 joined channel
+16:39 iyzsong: 不带我玩
+16:41 cleamoon__ joined channel
+16:42 cleamoon__: 《华尔街日报》报道（付费墙），中国外科医生Xiaoping Ren自2013年起完成了上千例老鼠的头部移植手术，他下一步计划在猴子身上实行换头术，最终目标将是人类。老鼠在换了头后最长活了一天。这位外科医生希望创造第一例灵长类动物的头部移植。头部移植在道德上有争议，很多科学家怀疑美国会允许任何与头部移植相关的
+16:42 cleamoon__: 研究。Xiaoping Ren原来在辛辛那提大学工作，他辞职回到中国的原因可能就是美国不允许做头部移植实验。纽约大学的一名医学伦理教授认为这名医生的想法非常荒诞。
+16:44 iyzsong: = =
+16:46 xxxxxxxx: @DIO
+16:48 cleamoon__: 四十岁的马萨诸塞州男子George Cross因身穿星球大战帝国冲锋队队服手拿假的冲锋枪经过一所小学外被捕。当时他正准备去向朋友炫耀他的服装，但校长看到他拿着枪后拨打了911，学校也因此临时关闭。警方发言人称 Cross已经完全认识到了自己的错误，他被控扰乱学校，但在没有认罪后自保释放。
+16:49 varna: ...
+16:53 cleamoon__ quit:Ping timeout: 265 seconds
+16:55 cleamoon: 有一台笔记本连不上wifi，显示wifi没有正确的ip-configuration是什么鬼
+16:56 varna: 不知道
+16:56 cleamoon: 而且还只是不能连一个路由器
+16:56 cleamoon: 其他都行
+16:58 varna: ...
+17:01 ld-linux_a23 joined channel
+17:09 beefcafe quit:Ping timeout: 248 seconds
+17:10 beefcafe joined channel
+17:13 xxxxxxxx: 我现在越来越觉得康熙王朝的片尾曲是基佬事后曲
+17:13 xxxxxxxx: 大男人不好做 再辛苦也不说 躺下自己把忧伤抚摸 <- 比如这段
+17:14 iyzsong:  - -b
+17:15 condy: - -b
+17:15 varna: 你这基佬
+17:16 cleamoon: 你这基 佬 
+17:18 xxxxxxxx: 这一听就能想象出来一个基佬事后捂着菊花流眼泪的情形
+17:19 varna: 为何你在想像基佬
+17:20 cleamoon: 木匠看什么都是大头钉，基王见什么都是基佬
+17:20 xxxxxxxx: 把江山扛在我肩头一刻 就已经决定我男儿本色 <- 还有这句一听就是两条毛腿肩上扛的意思
+17:20 varna: 伟大的导师佛洛伊德指出，风景是女性的
+17:20 varna: 为何你会认为江山是男性的
+17:21 xxxxxxxx: 山一样的妹子？
+17:21 varna: 危楼高百尺 手可摘星辰 主炮一齐射 黑烟不见人
+17:22 xxxxxxxx: 还有这句 大男人不好做 风险中依然执著 儿女情长都藏在心窝 任它一路坎坷
+17:23 xxxxxxxx: 风险大概是说刚烈 
+17:23 xxxxxxxx: 儿女情长藏在心窝 表现出来的是啥?
+17:23 cleamoon: 表现出了真不愧是基王
+17:24 varna: 不愧是基头四之首
+17:25 xxxxxxxx: 最后那个一路坎坷 肯定是在说忧伤制造的过程
+17:27 xxxxxxxx: 还有大海的气魄也听微妙
+17:27 xxxxxxxx: 挺
+17:31 iyzsong: orz
+17:32 cleamoon: 不愧是基头四之首
+17:32 varna: 不愧是基头四之首
+17:35 lh_not_bot: 不愧是
+17:37 cleamoon: 今年高考语文作文题简直奇葩，各种shenmegui
+17:37 varna: 同一
+17:37 varna: 同意
+17:38 varna: 还有个鼓励大建用混合公式、赌出什么算什么的题目
+17:38 xxxxxxxx: 混用公式?
+17:39 varna: 那个肉豆什么的题目
+17:39 xxxxxxxx: 噗噗噗研表究明了
+17:39 cleamoon: 哦，那个
+17:39 cleamoon: 文章和人品 -> 他到底想让写什么
+17:40 varna: 那个马姓的女星，叫什么来着
+17:40 xxxxxxxx: 写文章的人品
+17:40 xxxxxxxx: 马伊琍
+17:40 cleamoon: 马化腾？
+17:42 cleamoon: 马三立
+17:43 xxxxxxxx: 马德华
+17:49 cleamoon: 降级wifi driver后解决了... win渣渣
+17:50 xxxxxxxx: 什么鬼....
+17:50 xxxxxxxx: 自带的?
+17:50 cleamoon: 应该是自带的
+17:50 ASenR quit:Quit: Reconnecting
+17:51 cleamoon: 自动升级驱动，然后生成了没法用
+17:51 ASenR joined channel
+17:51 xxxxxxxx: 驱动也会自动升级么?
+17:51 cleamoon: 会
+17:52 cleamoon: 也有可能是我运行windows update时弄的...
+17:52 varna: http://pan.baidu.com/s/1qWHVEJa
+17:52 cleamoon: 所有的补丁都一个名字
+17:52 varna: 一个不错的江南皮革厂MAD
+17:52 cleamoon: ......
+17:53 varna: 黄鹤欠下三个亿，带着他的小姨子跑了
+17:53 varna: 留下整个拉包尔卖零战换钱
+18:04 ld-linux_a23 joined channel
+18:04 iyzsong: 去吃饭HO--
+18:07 molikto quit:Remote host closed the connection
+18:25 xxxxxxxx: varna 5-4练级是靠空母洗地?
+18:27 varna: xxxxxxxx: 不是
+18:28 xxxxxxxx: 那带三个空母为了啥?
+18:28 varna: xxxxxxxx: 高速周全图，铝耗控制在一盘100以下就行
+18:28 varna: 控制铝耗
+18:28 xxxxxxxx: 又吃铝....
+18:28 xxxxxxxx: 我还要造电碳呢
+18:29 xxxxxxxx: 不能像3-2那样红脸刷么?
+18:29 cleamoon: 来两发大和
+18:29 varna: 不能
+18:29 cleamoon: 有人下注吗
+18:29 varna: 你看看阵容就知道了
+18:29 varna: cleamoon: 我赌一发战神一发大和
+18:30 cleamoon: 召唤阵单小卷
+18:30 cleamoon: 你觉得可能吗...
+18:30 xxxxxxxx: 我猜合体就是大和
+18:31 cleamoon: 合体大和2333
+18:31 cleamoon: 改成一发，突然发现没弹药
+18:31 cleamoon: 发
+18:31 cleamoon: fa
+18:31 cleamoon: 4：20 
+18:31 varna: ...
+18:31 xxxxxxxx: 然而没人猜中
+18:32 xxxxxxxx: 5-4运输船也没有多少
+18:32 xxxxxxxx: 哪里运输船多?
+18:32 varna: 2-3
+18:33 xxxxxxxx: 5-4攻略要带桶么?
+18:34 varna: 合计4
+18:38 xxxxxxxx: 那就毛神搬桶
+18:45 Plough joined channel
+18:48 Plough: 11 12 13放假，我回去玩玩爸爸世界
+18:48 molikto joined channel
+18:48 xxxxxxxx: 我有卵用了
+18:48 Plough: 欧rz
+18:49 cleamoon__ joined channel
+18:52 cleamoon__: http://img.solidot.com.cn/0/782/liQaEdu0gEWaM.jpg  新的动漫封杀名单
+18:52 xxxxxxxx: 然而这个和欧应该没关系
+18:52 cleamoon__: 爸爸世界？
+18:52 xxxxxxxx: @焚化部
+18:52 cleamoon__: 鬼父？
+18:52 Plough: 巡洋舰世界
+18:53 cleamoon__: 暗杀教室是什么鬼
+18:53 xxxxxxxx: 之前不是还是鱼类世界么?
+18:53 cleamoon__: 是怕老百姓想到/学会暗杀这个招吗
+18:54 cleamoon__: 大部分没看过不知道怎么样，但是想看了
+18:54 Plough: 现在是内测
+18:54 Plough: 大改很正常
+18:55 cleamoon__: kukule提示有风险，要谨慎提示：一位老股民因多次向同事、朋友、家人提示炒股风险，害身边很多朋友错失发财良机，前日在公园散步又提示风险，同事忍无可忍将其打成重伤，目前尚未出院，打人同事拒绝道歉和赔偿医药费已被刑事拘留。(zt)
+18:56 cleamoon__: Google开发了自己的编程语言Go，而苹果开发了Swift。为什么两大科技巨人要卷入编程语言的圣战之中？一种理论认为，开发自己的语言可以让招聘变得更容易。以Go语言为例，Google已经开发了大量用Go编写的服务器程序，它更可能招聘一位精通Go的开发者，这可以减少培训时间。但另一些人指出这说不通，认为开发自己的语言是
+18:56 cleamoon__: 为了防止雇员跳槽，因为自己的语言自己用的多，而其它地方用的少，有利于让有经验的雇员留在公司里。另一些人认为，学术性的语言和行业语言方向不同。
+18:56 cleamoon__: 明显是为了控制sb程序员呀
+18:59 xxxxxxxx: 其实是为了方便大家装逼 我会ooo 你会xxx 我们都好厉害啊
+19:02 xxxxxxxx: 根据有关文化市场法律法规，12318全国文化市场举报网站受理对以下领域违法行为的举报投诉：（一）营业性演出活动 <- 这条怎么理解?
+19:03 whatofor: 营业 性演出活动? 这个如何演出?
+19:07 tutu_ joined channel
+19:09 xxxxxxxx: 卧槽RJ拿MVP了 简直神奇
+19:11 cleamoon: 我刚刚以包子的名义在12318骂了他们一顿
+19:11 cleamoon: 感觉做troll好舒服
+19:12 xxxxxxxx: 你干了啥?
+19:12 cleamoon: 我说我是包子，然后指出了他们IQ不足20的事实
+19:13 cleamoon: 然后提交了举报
+19:13 xxxxxxxx: 然后大概就被当成2x忽略了
+19:15 xxxxxxxx: 然而毛神一进boss就大破
+19:15 Plough: 然后一发东风飞了过去
+19:16 cleamoon: 2x很正常
+19:16 cleamoon: 我感觉的troll魂觉醒了
+19:16 cleamoon: 我去B站发几个引战弹幕
+19:16 xxxxxxxx: 这个人真是....
+19:18 cleamoon: 骂up会被举报，引战就没事了
+19:18 cleamoon: 我知道可以游戏区提其他up，然后最乱的就是科技区
+19:19 xxxxxxxx: 反正我就觉得游戏区一群玻璃心
+19:19 cleamoon: 剧透吗？
+19:19 xxxxxxxx: 不是 UP本人都没跳呢 观众跳起来了 不许提XXX
+19:19 cleamoon: 2333
+19:19 cleamoon: 好的，我上了
+19:20 cleamoon: i wanna经常跳
+19:20 cleamoon: 先找几个i wanna的刷
+19:20 cleamoon: 话说纯黑 黑桐什么的应该刷谁？我不怎么看他们的视频
+19:21 xxxxxxxx: 不清楚 你找个然后发谁谁谁比UP厉害多了
+19:22 xxxxxxxx: 随便找
+19:22 cleamoon: 可是一个在玩fps的我说散人更厉害战不起来呀
+19:22 xxxxxxxx: 我对观众还真没信心
+19:23 cleamoon: 不过老E刷熬厂长和反之都行
+19:24 xxxxxxxx: 说不定有人就说散人FPS菜 然后就有人说你有本事和他玩xxx 再后来说不定还有人说u can u up
+19:24 cleamoon: 我去试试
+19:24 xxxxxxxx: B站科技区说神棍/广告区还差不多
+19:25 tutu_ quit:Read error: Connection reset by peer
+19:25 tutu_ joined channel
+19:26 cleamoon: 鬼畜似乎什么都能说
+19:28 cleamoon: 老E里刷了一堆熬厂长的，不过我看不到效果...
+19:33 cleamoon__: http://www.bilibili.com/video/av2413038/
+19:34 lh_mouse quit:Read error: Connection reset by peer
+19:35 lh_mouse joined channel
+19:35 Plough: 我突然发现薯条蘸辣酱味道也很不错
+19:36 cleamoon: ...
+19:37 condy: 番茄党在此！
+19:37 cleamoon: 顺便一提，罐头的汤是不喝的...
+19:38 Plough: 臭鱼罐头？
+19:41 cleamoon: +
+19:44 wlemuel joined channel
+19:50 cleamoon__: 真实状态的罐头   http://www.popsci.com/sites/popsci.com/files/styles/medium_1x_/public/import/2013/images/2012/04/surst1.png?itok=t60fmWEV
+19:51 lh_not_bot: 我突然发现薯条蘸红旗酱味道也很不错
+19:52 lh_not_bot: geordi: { int i = 1; int j = i << 4; }
+19:52 geordi: internal compiler error: Segmentation fault
+19:52 lh_not_bot: geordi: { int i = 1; int j = i + 4; }
+19:52 cleamoon__: 这里已经基本完成了从 c_lang 到 gay_homo 的转变
+19:52 geordi: <no output>
+19:52 lh_not_bot: geordi: { int i = 1; int j = i >> 4; }
+19:52 geordi: <no output>
+19:53 xxxxxxxx: 这罐头放了几十年了吧....
+19:53 lh_mouse quit:Quit: Meow
+19:53 lh_mouse joined channel
+19:53 cleamoon__: 这就是正常状态的...
+19:59 lh_mouse quit:Read error: Connection reset by peer
+20:01 wlemuel quit:Ping timeout: 256 seconds
+20:05 Plough: http://www.3366.com/flash/72915.shtml 一搜臭鱼罐头还搜出这么个玩意……
+20:06 cleamoon__: .......
+20:06 lh_not_bot: Plough: 捏
+20:07 wlemuel joined channel
+20:08 Plough: http://www.guokr.com/blog/354968/ 看起来真可怕
+20:08 lh_not_bot: Plough: 捏
+20:08 Plough: lh_not_bot: 捏
+20:10 lh_not_bot: 咬你
+20:10 Plough: 你鼻子被捏住了，咬不到
+20:11 cleamoon__: http://www.bilibili.com/video/av2252846/
+20:15 cleamoon__: Rust没能从C++中吸取教训。C++资源管理模型的致命问题不在于不安全（其实只要严格遵守纪律就不会出事，基本不用脑子），而在于对象ownership成为接口的一部分，暴露了内部实现，导致接口不一致和不稳定。最后，除非有超强的设计能力和可以随时call for refactor的全盘控制，你很难阻止一个C++项目 shared_ptr满天飞，也就是放弃
+20:15 cleamoon__: 治疗。而Rust大规模应用的后果估计也是Rc满天飞，它还好死不死为解决多核效率问题搞出了个Arc vs. Rc，不早早从根本上fix这个问题，以后有够Rust开发者罪受的。    #真的？
+20:18 molikto quit:Remote host closed the connection
+20:18 tutu__ joined channel
+20:20 xxxxxxxx: @FrankHB varna
+20:20 Plough: FrankHB: 
+20:20 Plough: varna: 
+20:20 lh_not_bot: ownership 不是接口的一部分？GC 满天飞？
+20:20 varna: .
+20:20 Plough: 羊驼子在的啊……
+20:21 varna: 我刚回来
+20:21 lh_not_bot: shared_ptr 满天飞还不是因为 shared_ptr 挂羊头卖狗肉的缘故  跟 C++ 有什么关系
+20:21 Plough: 你看看岚月酱那段
+20:21 lh_not_bot: 话说我正在搞 intrusive_ptr 呢   弄好了 intrusive_weak_ptr 之后就把 shared_ptr 干掉
+20:21 varna: 至于ownership
+20:21 tutu_ quit:Ping timeout: 252 seconds
+20:22 varna: 我只说一个问题
+20:22 varna: 不放弃说不清道不明的variable-name-value, 无异于当婊子立牌坊
+20:23 varna: 而总有那么一批用户认为高级婊子应该叫交际花，不叫鸡
+20:23 varna: 就这样
+20:23 varna: 逼良为娼没什么，立牌坊简直是婊子的职业素养
+20:24 Plough: 另外，我准备转巡洋舰了
+20:24 varna: 战舰不好玩？
+20:24 lh_not_bot: 非侵入式引用计数怎么看都是笑话  第一 完全非侵入式太弱（enable_shared_from_this 直接就 pass 了）  第二 几乎没什么绝对需要非侵入式的场景  第三 接口污染，ABI 污染
+20:24 Plough: 听贴吧里的说法，似乎现在巡洋舰世界里就四种爸爸
+20:24 Plough: 最上爸爸，藏王爸爸，克里夫兰爸爸，德梅因爸爸
+20:24 Plough: 其他的都是儿子
+20:24 lh_not_bot: 目前唯一的优势就剩下 weak_ptr 了
+20:24 xxxxxxxx: 儿子干爸爸多爽
+20:24 Plough: 战舰填装一次30轮
+20:25 Plough: DD一轮齐射直接轰沉
+20:25 Plough: 30秒*
+20:25 varna: 我来发低保
+20:25 lh_not_bot: shared_ptr 吃掉所有权之后就拿不回来  这是病 得治
+20:25 Plough: 而且现在逗乐是毛子根本不知道水平装甲是什么玩意
+20:26 Plough: 他们直接设定了个角度，只要砸下去的角度太大直接判定穿不了
+20:26 xxxxxxxx: 我猜半个大和
+20:26 Plough: 大和的一式弹穿不了重巡的甲板你信么
+20:26 varna: ...
+20:26 lh_not_bot: 某种意义上讲这现象是标准库设计者的傻逼间接造成的  因为他们总以为像 C艹 这种语言可以无视除了 C艹和 C 以外的所有语言
+20:26 xxxxxxxx: 魔法重巡?
+20:26 Plough: 是
+20:26 varna: 我倒觉得只是用户放不下“我很高端”这个幻觉
+20:27 Plough: 所以现在这四级都是爸爸
+20:27 Plough: 最上爹十五门炮，德梅因爹有八寸机关枪
+20:27 Plough: 每秒1.5发HE直接放火烧死你
+20:27 lh_not_bot: 而且做得远远不如纯 C 干净——C 的特性太少反而坑也少了
+20:27 Plough: 克里夫兰干脆就是第一轮还没落下去第三轮已经在天上飞了
+20:27 Plough: 藏王爹火炮加鱼雷上肛大舰下撸DD
+20:28 varna: 我似乎中MNB了
+20:28 lh_mouse joined channel
+20:28 Plough: BSM!
+20:28 Plough: BSM!
+20:28 Plough: BSM!
+20:28 Plough: 快点
+20:28 varna: 旗舰电酱
+20:29 varna: 我都不想喷了
+20:29 xxxxxxxx: MNB(妈蛋 那是 BSM)
+20:29 Plough: ……
+20:29 Plough: 41呢
+20:29 varna: MNB
+20:29 Plough: 我现在怀疑理事长有自虐倾向
+20:29 Plough: http://picpaste.com/qL38KyXp.png 这是昨天的某次测试
+20:29 Plough: 白天三轮炮击的结果
+20:30 xxxxxxxx: MNB(妈蛋 那是 BSM(大七陆))
+20:30 varna: ...
+20:31 Plough: 惟一一次撸院长还打了个miss……
+20:31 tutu_wind joined channel
+20:31 ld-linux_a23 joined channel
+20:31 varna: 这回这个萨满也不太对……
+20:31 Plough: ……什么情况
+20:32 varna: http://tieba.baidu.com/p/3814763398
+20:32 varna: 我没资源了，就陪他们赌低保
+20:32 Plough: 我也来一发
+20:34 Plough: 腐国哒召唤阵，旗舰Waifu
+20:35 xxxxxxxx: 然而我依然不大建
+20:35 Plough: 召唤出了一条不幸舰
+20:38 varna: 这次我机智地留了个9野
+20:38 xxxxxxxx: 9野?
+20:38 Plough: 熊野
+20:39 xxxxxxxx: 为啥叫9野?
+20:39 Plough: 另外断剑我看到命运的五分钟那里了
+20:39 Plough: 因为9人
+20:39 varna: 1上2隈5谷9野
+20:39 varna: 经验人数
+20:40 Plough: 那家伙专门用了一章来讲为什么应该是命运的四十五分钟而不是五分钟……
+20:40 FrankHB quit:Read error: Connection reset by peer
+20:40 varna: 哦哦，他们的分析怎么说的？
+20:40 Plough: 他们指出了一个问题
+20:40 Plough: 那段时间四条航妈一直在不停的收放CAP
+20:40 FrankHB joined channel
+20:40 Plough: 比如赤城在15分钟前刚刚降了一波下来
+20:41 Plough: 其他三条也没闲着
+20:41 Plough: 而蝗军从来不会把攻击机推到一边空出位置给飞机降落
+20:41 Plough: 他们都直接扔机库的……
+20:42 Plough: 美军攻击队的目击者报告也可以证明这点
+20:42 Plough: 所有美军飞行员都报告当时四条航妈的甲板上飞机很少，而且都是零战
+20:42 Plough: 说明攻击队的飞机还在机库里面呢
+20:43 varna: 甚至日军也有这样的报告
+20:43 Plough: 是
+20:43 Plough: 战史里也是这么写的
+20:43 varna: 而且报告人有一个统一特点
+20:43 varna: 阑尾都没割
+20:43 Plough: 233333
+20:43 xxxxxxxx: 阑尾都没割？
+20:44 Plough: 渊田在去MI的路上得了急性阑尾炎
+20:44 varna: 某同人作家出击之后阑尾炎发作了
+20:44 OO_after joined channel
+20:44 Plough: 这点其实断剑一开始也提到了
+20:44 Plough: 一大早渊田拖着虚弱的身体爬上赤城的舰岛……
+20:44 xxxxxxxx: 阑尾炎这点?
+20:44 Plough: 有关于渊田的描写
+20:45 varna: 渊田基本没法指挥作战吧
+20:45 Plough: 估计是，不过他应该确实去过舰岛
+20:45 varna: 他自己也说出去了
+20:45 varna: 而且他还说自己中间晕过去了
+20:45 Plough: 醒来以后他发现只要五分钟攻击队就可以起飞了？
+20:46 varna: 233333
+20:48 varna: 还剩2.8k弹药，看看把绫波的最后十五盘打了吧……
+20:48 Plough: 其实断剑写得挺精彩的
+20:48 Plough: 比起考据勘误更像一本故事书
+20:48 varna: 噗噗？
+20:49 Plough: 他是写了整个MI的作战过程
+20:49 varna: 哦
+20:49 Plough: 而不光是勘误
+20:50 varna: 哦对
+20:51 varna: 我搞出一个不用封装惰性求值的monadic parser用的many
+20:51 Plough: 听起来好高端
+20:51 varna: 以前Wraith那个不是要惰性求值么
+20:51 varna: 现在换了个写法……
+20:52 varna: https://pastebin.mozilla.org/8836071 demo是这样的
+20:54 varna: 噗，进门J
+20:54 Plough: ……你在4-3？
+20:54 varna: +
+20:54 varna: 啊，嗒酱被秒了
+20:54 varna: 绫波还有三万经验，我准备手工解决
+20:54 varna: 空出一些演习给米空，这样能少打些出击
+20:55 Plough: 肝rz
+20:55 varna: 4-3正常的话一场2.5k经验呢
+20:55 varna: 也不用打很多
+20:55 Plough: 然后我进去以后一条潜艇都没炸掉
+20:56 Plough: 昨天我进去以后就来了这么一次
+20:56 varna: 对了
+20:56 varna: 今天不是高考么，你们没放假？
+20:56 Plough: 两个魔王加上一个Z3，最差的一个三式水听，最好的一整个三式套
+20:56 Plough: 摆个单横炸了六次一发没中
+20:56 Plough: 我都看傻了
+20:56 varna: ...
+20:56 Plough: 39中不是高考考场，不放假……
+20:56 Plough: 我们只放中考
+20:57 varna: ……
+20:57 Plough: 也就是周四周五周六
+20:57 varna: 噗，有个伙计拯救了那帖
+20:57 varna: 401
+20:58 Plough: 周日很可能要补一天
+20:58 Plough: ……
+20:58 Plough: 401拯救世界
+20:58 varna: 但是他没发帖
+20:58 Plough: 然后我冲进南西
+20:58 Plough: 猫了
+21:00 Plough: 说起来昨天我在战舰世界看到一个贴
+21:00 hope1_ joined channel
+21:00 Plough: “这游戏里大和有一式弹么？”
+21:00 Plough: “没有”
+21:00 Plough: 三式弹*
+21:00 varna: ...
+21:00 Plough: “那防空不会很惨么”
+21:00 varna: 噗噗
+21:00 varna: 神展开
+21:01 Plough: 我才知道还有人真以为三式弹能防空……
+21:01 varna: 今天我改了一个一式弹
+21:01 Plough: 壕rz
+21:01 varna: 本来就是要改91的，结果任务接错了
+21:01 Plough: ……
+21:01 varna: 想想来点有建设性的吧，直接改了个一式弹
+21:01 Plough: 四星？
+21:01 varna: 1
+21:01 Plough: なるほど
+21:02 varna: 一式弹我只打算改1星
+21:02 varna: 其余的交给46
+21:02 Plough: 我还是用四星91弹
+21:02 Plough: 便宜
+21:02 varna: 91其实性价比高
+21:02 varna: 我准备先翻新一些4星-6星的
+21:02 Plough: 六星似乎并没卵用
+21:03 varna: 是么
+21:03 varna: 那就列装4星吧
+21:03 Plough: 开根以后直接去掉小数点了
+21:03 varna: 我记得是不去的？
+21:03 varna: 改修的小数应该是最后才去掉的吧
+21:03 Plough: 不去的似乎是类型补正？
+21:03 Plough: 就是大口径主炮的那个1.5
+21:04 Plough: 两门九星炮总共加九点火力
+21:04 varna: 但是鱼雷没法解释？
+21:04 Plough: 不清楚……
+21:04 varna: 我记得雷装是有加在一起再取整一说的
+21:04 Plough: 或者你试试，看看能不能爆出高点的伤害
+21:04 varna: 我试试吧
+21:04 Plough: 今天我赌46
+21:04 varna: 反正91+6便宜
+21:05 Plough: +
+21:05 Plough: 甲标……
+21:05 varna: 我那大半页甲标都是46出的，各种骇人
+21:05 Plough: 你应该改个十星甲标出来
+21:05 Plough: 然后升级
+21:06 varna: 肛标的
+21:06 Plough: 命中率100%哦
+21:06 varna: 那东西我知道
+21:06 varna: 好歹我对新式水雷战术也是有兴趣的
+21:06 varna: 放出去之后提督直接被肛倒
+21:06 Plough: 那可是你老婆的杰作
+21:07 varna: 没办法的事
+21:08 varna: 另外等级格差已经扩大到很难挽回的地步了
+21:09 varna: KTKM Lv127过半，电浆还是Lv124
+21:09 Plough: 另外我才知道combinedfleet.com是断剑的作者搞的……
+21:09 varna: 噗
+21:09 varna: 是他们弄的啊
+21:09 Plough: ……电酱被北上大人超了么
+21:10 Plough: 你看首页最底下
+21:10 varna: 电酱其实罗马假日之后就被超了……
+21:10 Plough: Also by the same authors:
+21:10 varna: ...
+21:10 varna: 所以这其实是一群厨？
+21:10 Plough: 然后一个断剑的广告
+21:10 Plough: 估计是
+21:10 varna: 现在弄得我自己都有点想算算水雷战术了
+21:11 Plough: 算算算
+21:11 varna: 最近业余地算一算
+21:11 Plough: 期待羊驼子革新水雷战术
+21:11 varna: 那是个梦
+21:11 varna: 我能把照准线算明白就已经是大成功了……
+21:11 Plough: 说起来我突然想搞一个两万吨的重巡出来
+21:11 varna: 噗
+21:11 Plough: 155副炮
+21:11 varna: 超甲巡？
+21:12 Plough: 跟历史的计划没啥关系，你就当我喝了点伏特加
+21:12 Plough: 203
+21:12 Plough: 152副炮
+21:12 varna: 我要真认为你喝了伏特加，现在直接买动车票回去肛了你
+21:12 Plough: 然后你被我用127的HE烧成了POI
+21:13 Plough: 14单装炮
+21:13 varna: 不过为什么这么多炮的
+21:13 varna: 那得有多少廓炮
+21:13 Plough: 这是我的开发……
+21:13 Plough: 要说伏特加级的设计的话，其实我是想弄个决战的时候用来吓唬人的玩意
+21:14 varna: 八十门鱼雷！
+21:14 Plough: 五基十五门203 + 40门鱼雷发射管
+21:14 varna: 把炮都认了
+21:14 varna: 扔了
+21:14 Plough: 那成鱼雷艇了
+21:14 Plough: 叫什么重巡
+21:14 varna: 你说得对，不如造四十个鱼雷艇
+21:14 Plough: 23333
+21:15 Plough: 副炮和防空枪全撤掉
+21:15 Plough: 舰队决战搞什么防空
+21:15 varna: 有关鱼雷艇，倒是有个笑话
+21:16 varna: 鼠输送期间时雨的舰长原为一（Hara Tameichi）后来被调回国，当鱼雷艇学校教官
+21:16 varna: 结果不知为何给他教学的鱼雷艇速力不超过20kt
+21:16 Plough: ……
+21:17 Plough: 什么鬼
+21:17 varna: 后来他被调出去了，还是鱼雷艇学校
+21:17 varna: 给他送了最新式鱼雷艇，他一看都傻了：震洋
+21:17 Plough: 噗
+21:17 Plough: 特攻兵器……
+21:18 varna: 最后这帮开飞机的开船的都去教人特攻了……
+21:18 Plough: 另外昨天我有了一个发现
+21:18 Plough: 都说本子脑洞大，现在我找到根源了
+21:18 Plough: 问题出在他们老师身上
+21:18 Plough: 你看看1917年的暴怒
+21:19 varna: 英国人干什么了
+21:19 Plough: 前面一门18in
+21:19 Plough: 后面一串飞行甲板
+21:19 xxxxxxxx: 鱼雷艇要什么水上舰 造潜艇吧
+21:19 molikto joined channel
+21:19 varna: 潜艇造起来麻烦，速度又慢
+21:20 varna: ……立派的航空战舰……
+21:20 Plough: 颇有伊势日向的风范
+21:20 Plough: 其实这玩意最早是战巡
+21:20 Plough: 前后各一门18in，总计两门
+21:20 Plough: 没错总计两门
+21:21 Plough: 后来他们想搞航妈，于是就把后面的主炮扯了，架了个飞行甲板上去……
+21:21 Plough: 撤了*
+21:21 varna: 太立派了
+21:21 xxxxxxxx: 然后造出了形如RA2驱逐舰的东西?
+21:21 Plough: 然后他们觉得这样太奇葩，整个一个四不像
+21:21 Plough: 然后他们把前面的主炮也扯了，又加了个甲板上去
+21:21 varna: 我今天拿到的一个机动部队作战条令里面还有指出一舰大凤级+2航战的配置……
+21:21 Plough: 你要记得战巡的舰桥是在正中央的
+21:22 varna: ……
+21:22 Plough: 这玩意是个什么样你就能想象出来了……
+21:22 varna: 不过那个条令我就不上传了，扫描质量极差
+21:22 Plough: ……什么鬼
+21:22 Plough: 他们真觉得航战能用？
+21:22 varna: 字都被扫成了淡淡的粉红色
+21:23 molikto quit:Remote host closed the connection
+21:23 varna: 不知道扫描者那个镜头出什么鬼问题了
+21:23 varna: 不止是能用，还要带舰爆
+21:23 Plough: 结果根本停不下来
+21:23 xxxxxxxx: 扫描者使用了毁图秀秀
+21:24 varna: 这J点打得，平砍秀……
+21:25 varna: s/得/的/
+21:25 xxxxxxxx: http://www.qlwb.com.cn/2015/0608/397926.shtml
+21:25 molikto joined channel
+21:27 varna: xxxxxxxx: 爆
+21:28 xxxxxxxx: 50补给船想想都麻烦
+21:28 xxxxxxxx: 说着 19中破了
+21:29 xxxxxxxx: 之前看到说联合舰队2队旗舰大破了进击也不会沉?
+21:30 varna: 目前如此认为
+21:30 varna: 但是一个hotfix就可能改变这状况
+21:31 varna: 另外我找到一个南西新玄学BGM
+21:31 varna: 莫扎特，震怒之日（dies irae）
+21:32 xxxxxxxx: 补给船的玄学还是进boss的?
+21:32 varna: 听了之后2-2都能拿喷滚
+21:32 xxxxxxxx: 球连接!
+21:32 varna: 你随便网上搜搜就行
+21:34 xxxxxxxx: 毛 我又进boss了
+21:34 xxxxxxxx: 这个BGayM一定是假的
+21:34 varna: ...
+21:34 varna: 你听的时候一定要中二一些
+21:35 varna: 还不行的话，可以表演妮可妮可妮
+21:35 xxxxxxxx: 然而羊驼的玄学太羞耻了....
+21:36 xxxxxxxx: 想象一下羊驼每周在实验室里妮可妮可妮 捂脸
+21:37 cleamoon quit:Ping timeout: 264 seconds
+21:38 cleamoon joined channel
+21:38 Plough: 基佬的脑补能力真可怕
+21:39 varna: 基佬的脑补能力真可怕
+21:40 xxxxxxxx: http://music.baidu.com/song/48165884 看到dies irae 我就想到了这个比较熟悉一点的BGM
+21:40 varna: 柏辽兹似乎适合撸……
+21:40 * varna 面壁
+21:41 Plough: 说起来干舷高度一般怎么确定？
+21:41 varna: 这个我真不知道
+21:42 xxxxxxxx: 适合撸?
+21:42 varna: xxxxxxxx: 爆
+21:42 xxxxxxxx: 为啥?
+21:42 varna: 只是感觉
+21:43 varna: 又是嗒酱
+21:44 varna: 估计要出事了
+21:44 * xxxxxxxx 柏辽兹只听这一段 不清楚适不适合撸
+21:44 varna: 还好，中破
+21:46 varna: 咦，出了个恬珑
+21:48 molikto quit:Remote host closed the connection
+21:51 xxxxxxxx: 羊驼捞出来个伪娘
+21:52 cleamoon__: 基王眼里都是基佬
+21:52 xxxxxxxx: 不 你是幼女
+21:52 varna: 卧槽我代理挂了
+21:53 xxxxxxxx: 鼓掌!
+21:53 cleamoon__: 靠把对方当成萝莉撸
+21:53 Plough: ……
+21:53 Plough: 什么鬼
+21:53 varna: 复活了
+21:54 xxxxxxxx: 然而如果是基佬为何要对萝莉撸
+21:54 varna: 又挂了
+21:55 varna: 现在间歇性死亡
+21:55 cleamoon__: 基王自爆是双
+22:06 lolisa joined channel
+22:09 xxxxxxxx: cleamoon: ^自爆是双的出来了
+22:10 lolisa: 噗，怎么我一进来就在说些糟糕的事情
+22:11 varna: lolisa: 爆
+22:11 cleamoon__: 那不是这里的主要内容吗
+22:11 cleamoon__: lolisa, 爆
+22:15 varna: 噗，我居然在某个群里见到了CheyTac公司的粉……
+22:16 cleamoon__: 那是什么公司
+22:17 varna: 一个造冷门狙击枪的公司
+22:18 xxxxxxxx: 为啥造冷门...
+22:19 varna: 他们主打产品的口径不知为何很冷门，只有他们用那个规格的子弹
+22:19 xxxxxxxx: 那种子弹是旧东西还是新东西还是半死不活的东西?
+22:19 varna: 是前无古人，说不定也后无来者的东西
+22:20 xxxxxxxx: 为啥要造这种东西....
+22:20 varna: 鬼知道……
+22:21 FrankHB quit:Read error: Connection reset by peer
+22:22 varna: 那个口径叫.408 CheyTac, 感兴趣可以八卦一下……
+22:22 FrankHB joined channel
+22:23 cleamoon__: 弄个口径 .405就好了
+22:23 varna: 十二发.450弹漏斗
+22:24 varna: 换个管子和供弹具适配到歪把子上
+22:25 xxxxxxxx: 该弹外形介于0.50英寸勃朗宁机枪弹和0.338英寸拉普阿弹之间,经过外弹道优化设计,具有非常好的存速能力,在2 000m的距离上仍能保持超音速飞行,CheyTac公司称其有效射程可达2 400m
+22:26 varna: 但最悲哀的是，只有他们一家的产品用那个弹
+22:27 Plough: https://pastebin.mozilla.org/8836084 临时堆了这么一个出来
+22:27 Plough: 明天再改
+22:27 varna: 所以连傻多速的深海军都不买他们的东西……
+22:27 varna: 平甲板？
+22:27 varna: 这个在日本近海作战没问题么？
+22:27 varna: 远海
+22:27 varna: 撸多
+22:27 Plough: 大和不也是一个坡……
+22:28 varna: 大和比起那些，它火控就走不了太远的纬度……
+22:28 xxxxxxxx: 所有的枪都应当使用标准的小红丸子大小的子弹
+22:29 varna: 那是打耗子用的耗枪
+22:29 Plough: 这玩意也没打算走太远
+22:29 varna: 但是最近不是流行用小耗试验换头术么……
+22:29 Plough: 决战的时候搬出来吓唬人的
+22:29 varna: 据说最成功的换头耗存活了一天
+22:29 Plough: 不然这玩意的装甲比毛嘎米还薄……
+22:29 varna: ...
+22:30 Plough: 其实我现在在考虑一个问题
+22:30 varna: 小泽痔三郎中将疯了
+22:30 Plough: 我能不能放下那八十门鱼雷发射管……
+22:30 Plough: 小泽喷掉了蝗国那么多飞机
+22:30 Plough: 都是因为他不会配装
+22:31 varna: 还有最后一趟
+22:32 Plough: 总之明天我考虑下怎么改
+22:32 Plough: 吃水8米，干舷平均7.7米
+22:33 varna: 米空吃水多少来着……似乎不到6
+22:34 Plough: 毛嘎米是6.5
+22:34 varna: 高雄呢
+22:34 cleamoon quit:Ping timeout: 245 seconds
+22:34 Plough: 6.11
+22:34 lolisa: 2.4KM。。。当年抗日的时候有效射程就八百里了（雾
+22:35 Plough: 不对我记错了
+22:35 Plough: 毛嘎米是5.5
+22:35 varna: ...
+22:35 Plough: 5谷是5.9
+22:35 Plough: 但是你要记得这玩意两万吨
+22:35 Plough: 虽说似乎我严重地浪费了吨位……
+22:35 varna: 我也觉得，至少就火炮口径来说
+22:36 hysw: 智商
+22:36 lh_mouse: 弄了点樱桃和油桃吃
+22:36 cleamoon joined channel
+22:36 Plough: 上10in?
+22:36 Plough: 不过那还叫重巡么
+22:36 cleamoon__: 海洋生物又来卖弱了
+22:37 varna: 你可以复古战巡
+22:37 Plough: 不好玩
+22:37 varna: 那我有个建议
+22:37 Plough: 而且那样毛子会把这玩意扔进BB线的
+22:37 varna: 降低舰体强度，装舰首八门
+22:38 lolisa: 海洋生物hhh
+22:38 Plough: 我试试
+22:38 varna: lolisa: 爆
+22:39 * lolisa evade
+22:39 xxxxxxxx: 那个大建帖子有没下文了?
+22:40 cleamoon__: 一般不记名调查时如果遇到敏感问题人们不愿意回答真实答案怎么办，比如你被基头四干了多久之类的
+22:40 cleamoon__: 另外调查中总会有我这样瞎填的怎么破
+22:40 varna: 瞎填的是少数吧
+22:40 xxxxxxxx: 大题量 自己矛盾的都扔掉
+22:41 varna: 至于真实答案，这个只能靠大题量覆盖
+22:41 wlemuel quit:Ping timeout: 255 seconds
+22:41 cleamoon__: 怎么个大量题？
+22:42 lolisa: 我记得有个好玩的方法，就是YN题拋个硬币，抛正了填真答案抛反面了随机填。。。
+22:42 varna: lolisa: 爆
+22:42 Plough: https://pastebin.mozilla.org/8836086 今天就先改成这样
+22:42 Plough: 先睡觉，诸君武运
+22:42 Plough quit:Quit: 睡觉
+22:42 cleamoon__: 你被干了1min? 你被干了2min? 你被干了3min? 你被干了4min? 你被干了5min? 你被干了6min? 你被干了7min? 你被干了8min? 你被干了9min? 
+22:42 cleamoon__: lolisa, 那个方法我知道，但是还是没法保证填真的...
+22:43 xxxxxxxx: cleamoon__: 很多心理测验都是类似的问题重复几遍 强行让题量翻倍
+22:43 xxxxxxxx: 硬币那个办法以前似乎是在谁的博客上看过 原本是做是否选择
+22:43 hysw: 心理学明显就是奇葩版的统计学...
+22:43 lolisa: matrix xxx
+22:44 KoniKee joined channel
+22:45 xxxxxxxx: 58大破...
+22:45 cleamoon__: 问题：你被爆了吧？你真的被爆了吧？不用害羞，你是被爆了吧？你哪里被爆了呢？不不不，刚才那个不是诱导询问，我只是想说你被爆了吧？总之你被爆了吧？
+22:46 hysw: 问题： 你填了否：是 / 否
+22:46 xxxxxxxx: 答: 艹
+22:47 cleamoon__: 哦，你被艹了
+22:47 cleamoon__: 这个方法挺有用呀
+22:47 KoniKee quit:Remote host closed the connection
+22:48 xxxxxxxx: 你看你们又把人吓跑了
+22:48 lolisa: UCCU
+22:48 cleamoon__: 还不是记录，没关系
+22:48 varna: lolisa: 爆
+22:51 hysw: EarlGrey...
+22:51 lolisa: EarlyGay
+22:51 cleamoon__: 基佬所见略同
+22:52 varna: lolisa: 爆
+22:53 cleamoon__: lolisa: 爆
+22:54 * hysw 滚回去喝茶去了...
+22:55 * iyzsong 白开水来一碗
+22:55 lolisa: 快喝阿帕茶
+22:56 lolisa: 注：JOJO第五部里面主角加入黑帮的时候黑帮成员让他喝圣水
+22:56 hysw: 注孤生...
+22:57 lolisa: 死了，JOJO里面的人大部分都会领便当
+22:57 varna: lolisa: 爆
+22:58 cleamoon__: 干什么叫JOJO，直接叫JJ多好
+22:58 varna: 撤了
+22:58 varna: 诸君武运
+22:58 varna quit:Quit: leaving
+22:58 * lolisa evade
+22:58 lolisa: 8
+23:00 hysw: 麦片的糖加多了 -_-...
+23:00 lh_mouse: 现充云
+23:02 lolisa: 话说第三部也是有一个差不多的剧情，主角团一人给敌人和着粥吃他自己排下的一坨东西，正所谓先喝阿帕茶再吃典明粥
+23:03 cleamoon__: 你想吃鱼罐头吗
+23:04 * lh_mouse slaps lolisa around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+23:04 * lolisa evade
+23:05 hope1_ quit:Ping timeout: 244 seconds
+23:06 hysw: lh_mouse: 爆智商
+23:06 hysw: lh_mouse: 送你大批量的智伤
+23:08 * lh_mouse slaps hysw around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+23:08 hope1_ joined channel
+23:12 hysw: hope1_: 把智商交出来
+23:15 hysw: hope1_: 把智商交出来!!!
+23:16 iyzsong: 这玩意要怎么交
+23:17 cleamoon__: 这时候啪啪啪就好了 (迫真
+23:17 hysw: iyzsong: 智商明显是量子态的...
+23:17 hysw: cleamoon__: 木有妹纸... -_-
+23:18 cleamoon__: 你可以和基王啪啪啪
+23:19 hysw: cleamoon__: 对啪啪啪没兴趣...
+23:19 cleamoon__: 鸟残？
+23:22 hysw: 连妹纸都没有，考虑啪啪啪什么的会变成彻底的脑残的...
+23:22 hysw: 虽然现在已经是个脑残了...
+23:23 cleamoon__: 果然是鸟残
+23:24 hysw: cleamoon__: -_-
+23:26 endle quit:Quit: Leaving
+23:47 xxxxxxxx: 然而准备早饭的时候被楼下敲水管了
+23:47 cleamoon__: 因为你动的太慢了？
+23:49 xxxxxxxx: 明显是因为声音太大了
+23:50 cleamoon__: 以后啪啪啪小点声
+23:51 xxxxxxxx: 都怪幼女叫得太响了
+23:53 cleamoon__: 噗，
+23:53 cleamoon__: 基王的脑补力增加了
+23:53 ASenR quit:Remote host closed the connection
+23:55 ASenR joined channel

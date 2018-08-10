@@ -1,0 +1,607 @@
+00:01:krfantasy1 quit:Quit: krfantasy1
+00:01:krfantasy joined channel
+00:03:wlemuel quit:Quit: Lost terminal
+00:20:LittleKey quit:Quit: Leaving.
+00:23:erhandsome quit:Quit: leaving
+00:29:biergaizi_ quit:Remote host closed the connection
+00:29:biergaizi_ joined channel
+01:06:lh_mouse quit:Quit: night
+01:31:krfantasy quit:Ping timeout: 250 seconds
+03:44:biergaizi_ quit:Quit: Konversation terminated!
+05:07:sheep```` joined channel
+05:12:cleamoon__ quit:Read error: Connection reset by peer
+05:35:xxxxxxxx quit:Ping timeout: 245 seconds
+05:35:xxxxxxxx joined channel
+07:23:erhandsome joined channel
+07:34:cleamoon joined channel
+08:16:cleamoon quit:Read error: Connection reset by peer
+08:17:cleamoon joined channel
+08:18:erhandsome quit:Ping timeout: 250 seconds
+08:31:xxxxxxxx quit:Quit: Leaving...
+09:30:lh_cat quit:Ping timeout: 255 seconds
+09:33:lh_cat joined channel
+09:36:sismvg joined channel
+09:39:whatofor joined channel
+09:42:Sleepwalking joined channel
+09:43:Sleepwalking: 第一次目睹ANN靠谱地发挥作用了……
+09:43:Sleepwalking: 现在出来一个用我的发音习惯+二言的声音唱歌的东西……
+09:51:condy joined channel
+09:55:sismvg: 噗
+09:56:sismvg: 每一个GUI库都会把各种东西重新实现一边
+09:56:sismvg: 一遍
+09:56:sismvg: string,vector,thread,threadpool,sort各种各样
+09:56:sismvg: 明明都有过了的。。
+09:57:lhanjian joined channel
+09:57:condy: 你是在说Qt吗.
+10:02:sismvg: 不止QT
+10:03:sismvg: 用STL的话我能节省非常多的时间。。考虑效率都是假的
+10:04:Sleepwalking: 听说C艹11的STL变得很快？
+10:05:sismvg: 没听说过。
+10:05:Sleepwalking: C++ Primer 5th Edition上看到的
+10:06:condy: 应该是因为有了移动语义吧...
+10:06:sismvg: 我一直都NRV。
+10:08:sismvg: preview tool=可视化工具？
+10:09:lh_mouse joined channel
+10:09:condy: 是RVO吧.
+10:10:sismvg: rvo太邪恶了，所以我用NRV
+10:10:sismvg: rvo=relaxed v**inal outlet
+10:11:sismvg: NRV=not return valu
+10:11:lh_mouse: [22:04:28] <lhanjian> 吱用过Windows Server吗？
+10:11:lh_mouse:   // 用过两年 2003
+10:12:lh_mouse: 日常用
+10:12:lh_mouse: 还有  不许叫我吱
+10:12:condy: 口支.
+10:13:Sleepwalking: lh_吱：吱吱吱！ 吱吱 吱吱C吱艹吱吱，吱STL吱吱，吱vector吱吱吱？
+10:13:lh_mouse: Sleepwalking, 捏
+10:14:lh_mouse: condy, 爆照
+10:14:condy: (´・ω・｀)
+10:14:sismvg: win server干嘛用的
+10:14:lh_mouse: 服务器版操作系统
+10:15:lhanjian: 微软周三公布了.NET开发框架开源计划。公司拟将这长期以来只能运行于Windows系统下的开发环境，通过GitHub开源，以实现跨平台支持Mac OS X和Linux。根据微软公布的计划，在该公司下一次发布.NET开发框架时，整个服务器开发环境，从ASP.NET 5下至Common Language Runtime和Base Class Libraries，都将实现开源。
+10:15:sismvg: 2333
+10:15:sismvg: 真的有人会用吗。。
+10:16:FrankHB quit:Read error: Connection reset by peer
+10:16:FrankHB joined channel
+10:17:lhanjian: sismvg, 6成的市场份额
+10:18:Sleepwalking: 如果真行的话，我会用
+10:19:lh_mouse: 233
+10:20:* sismvg all right,what is .net?
+10:21:iyzsong joined channel
+10:22:lh_mouse: iyzsong, 揉
+10:27:lhanjian: https://github.com/dotnet/corefx
+10:28:lhanjian: C#党要跳起来了
+10:28:lhanjian: This repository contains the foundational libraries that make up the .NET Core development stack.
+10:28:lhanjian: his project is licensed under the MIT license.
+10:28:lhanjian: 微软疯了
+10:28:lhanjian: FrankHB, 求耻球评价
+10:33:sismvg: 什么时候blend for visual studio 能跨平台就好了。。
+10:38:lhanjian: Visual Studio 这个当下最好没有之一的 IDE 正式支持编写 Android 和 iOS 程序。
+10:38:lhanjian: http://www.36kr.com/p/216927.html
+10:41:sismvg: vs是最卡的IDE
+10:42:sismvg: 也是最吃硬盘的
+10:47:lh_cat quit:Ping timeout: 264 seconds
+10:50:boosure quit:Quit: Get your hand off of it
+11:00:whatofor: 最卡吗？ 没idea eclipse之类的卡吧
+11:00:lhanjian: 我的C::B也莫名的假死
+11:00:condy: Pycharm表示不报.
+11:00:lhanjian: 还能不能愉快地看代码了
+11:01:condy: s/报/服
+11:03:lhanjian: condy, 求个读工程代码舒服的工具。命令行的不要。
+11:04:whatofor: notepad++
+11:04:condy: vim。。
+11:04:condy: Understand.
+11:04:lhanjian: 这些玩意儿都太蛋疼
+11:04:condy: Understand好像在aur里.
+11:04:whatofor: insight还是啥
+11:04:lhanjian: 我就想noobie一回
+11:05:condy: source insight..
+11:06:lhanjian: arch……
+11:06:condy: wine.
+11:07:iyzsong: - -
+11:07:condy: iyzsong: /o/
+11:07:lh_mouse: vim 滚出
+11:07:condy: iyzsong: 来推荐几个.
+11:07:condy: QAQ
+11:08:Sleepwalking: gedit.........
+11:08:lh_mouse: Sleepwalking, 捏捏捏
+11:09:lh_mouse: condy, 爆照
+11:09:lh_mouse: 你看看人家米库酱
+11:09:lh_mouse: 再看看你
+11:09:lhanjian: miku怎么了？
+11:09:condy: 我还有understand.
+11:10:* iyzsong just use less ..
+11:10:lh_mouse: iyzsong, 揉
+11:10:lh_mouse: 【男子APEC期间没假期，竟遭“丈母娘”鄙视被迫分手】“连个APEC假都没有，肯定是混企业的打工狗，这种人没出息的…”昨天，北京女孩彤彤在妈妈的逼迫下，与刚相亲交往不到一周的男友小崔分了手。但让一家人没想到的是，分手后小崔回了条信息，“都怪我这几天在怀柔开APEC，没顾上你…”
+11:10:iyzsong: lh_mouse: piu
+11:15:condy: 233
+11:16:sismvg: qmake cmake make nmake
+11:16:sismvg: qcnm
+11:16:Sleepwalking: cnmake!
+11:16:sismvg: 233
+11:17:Sleepwalking: 为什么cmake不干脆叫cake
+11:17:Sleepwalking: 【dmake -> dick
+11:23:iyzsong: orz
+11:23:iyzsong: I can not type Chinese now :-
+11:24:lhanjian: eclipse读读代码还是可以的
+11:24:lhanjian: 好
+11:25:sismvg: 尼玛，百度什么坑爹搜索算法，08年的QT的教程放在第二位.
+11:26:Sleepwalking quit:Ping timeout: 240 seconds
+11:27:lhanjian: 我跟你讲个笑话，百度更懂中文
+11:29:lh_mouse: 这是实话 百度搜出来的东西确实挺符合菜比口味
+11:30:lh_mouse: 内容水平被 google 甩出三条街
+11:30:lh_mouse: 挺符合国情的  确实
+11:30:lhanjian: 这个我理解
+11:30:lhanjian: 他们有些针对nubi的手工优化挺不错的
+11:30:MisakaMikoto: https://github.com/breakwa11/gfw_whitelist
+11:33:lh_mouse: 我觉得百度现在不是更懂中文  而是更懂中国人的中文
+11:34:lh_mouse: 你跟他们讲属于他们都未必听得懂
+11:34:lh_mouse: s,属于,术语,
+11:34:lh_mouse: 毕竟整体水平低导致拖低智商   整点高端货给他们看又开始不明觉厉了
+11:34:lhanjian: 我觉得仅限于内地网民的中文
+11:35:lhanjian: 部分
+11:35:lh_mouse: 多数人都如此  个人意见
+11:35:lh_mouse: 虽然我不是愤青  但是这个是事实
+11:35:sismvg_ joined channel
+11:36:lh_mouse: 我又想起了民可使由之不可使知之
+11:36:lhanjian: 群众的眼睛是雪亮的，群众的脑袋却未必
+11:37:lh_mouse: 一群人的智商有可能比这群人中的任何一个人更低
+11:37:lhanjian: 《乌合之众》？
+11:37:sismvg quit:Ping timeout: 255 seconds
+11:37:lh_mouse: ggl 群体迷思
+11:38:lh_mouse: 我记得是叫这个名字
+11:38:sismvg: 所以股市才有钱赚
+11:38:sismvg: 以上指的是操盘手，而不是正常投资
+11:39:lhanjian: soga
+11:39:sismvg: QT3.0的教程你还放。。
+11:40:lh_mouse: 学校还在讲 TC 为何没人吐槽
+11:40:lhanjian: 坐在我右边的这位正在用TC写OS的某部分
+11:40:lhanjian: 吐槽无力啊……
+11:41:lh_mouse: 他应该用 nano 写
+11:42:lhanjian: Turbo C是IDE吧
+11:42:lhanjian: 在DOS上哪有nano
+11:42:sismvg: vc6,tc，坑人
+11:43:lh_mouse: lhanjian, 哪个 DOS？
+11:43:lh_mouse: IBM-DOS？
+11:43:lhanjian: XP上那个模拟的
+11:44:lh_mouse: 那写个吊毛的内核，实模式都不支持
+11:45:lh_mouse: 还不如用 vmware
+11:45:lh_mouse: 哦不是内核 是 OS
+11:45:lhanjian: lh_mouse, 他们那是作业。想不写也不行
+11:45:lhanjian: 16位……
+11:45:lhanjian: 而且一堆莫名其妙的BUG
+11:45:lhanjian: 这伙计已经快砸键盘了
+11:52:lhanjian:    吃饭去
+12:12:condy quit:Ping timeout: 272 seconds
+12:12:whocares_2 quit:Ping timeout: 272 seconds
+12:13:whocares_2 joined channel
+12:16:condy joined channel
+12:23:lh_mouse: http://blog.aliyun.com/1841?spm=0.0.0.0.H7etPG&msctype=email&mscmsgid=136714111100114936
+12:23:lh_mouse: ONS……
+12:23:lh_mouse: 好没节操的名字
+12:27:lh_mouse: 着陆器“菲莱”号
+12:27:lh_mouse: 看了一早晨都看成了韭菜
+12:37:code_new joined channel
+12:48:erhandsome joined channel
+12:59:lhanjian: code_new, 揉
+12:59:code_new: lhanjian, 捏jianjian
+13:01:lh_mouse: code_new, 我也要揉！
+13:01:code_new: lh_mouse, 不给揉
+13:02:code_new: lh_mouse, 捏耗吱
+13:03:sismvg quit:Remote host closed the connection
+13:04:code_new: 新出了个城娘……
+13:04:code_new: 竟然把舰娘顶下来了……
+13:09:lh_mouse: code_new, 我也要揉！
+13:09:code_new: lh_mouse, QAQ
+13:10:lh_mouse: 揉揉揉
+13:11:code_new: 不给揉QAQ
+13:18:Sleepwalking1 joined channel
+13:29:whatofor_1 joined channel
+13:30:whatofor quit:Read error: Connection reset by peer
+13:49:sismvg joined channel
+13:54:erhandsome quit:Ping timeout: 255 seconds
+13:55:erhandsome joined channel
+14:14:hysw: 随便写写的malloc竟然接近libc的速度... -_-
+14:16:lhanjian: 你把所有的库函数全部用自己的代替，哪怕实现一模一样，性能都会提升不少
+14:19:erhandsome quit:Ping timeout: 255 seconds
+14:21:shui_code joined channel
+14:39:lh_mouse: geordi, -c vector<::size_t> v;
+14:39:geordi: Success
+14:39:lh_mouse: geordi, <::
+14:39:geordi: error: expected unqualified-id before '<' token
+14:40:lh_mouse: geordi, { <::]{ cout <<"meow"; }(); }
+14:40:geordi: error: Unexpected `]` after `{ <::`. Expected '}', '/', or balanced code.
+14:41:lh_mouse: geordi, { /*[*/<::]{ cout <<"meow"; }(); } // >
+14:41:geordi: error: Unexpected `]` after *[*/<::. Expected '}', '/', or balanced code.
+14:41:sismvg: 不能理解信号槽有什么好剖析的。。
+14:41:lh_mouse: 垃圾有什么好剖析的
+14:44:lh_mouse: hysw, libc 带调试的
+14:45:hysw: -_\-
+14:48:sismvg: 我理解了，宁愿看一大堆E文的文档，也不要看CSDN还有各种坑爹的中文blog..
+14:49:hysw: 英文文档一堆堆的...
+14:50:sismvg: 中文blog,错的一堆堆的，而且还一幕一眼
+14:50:sismvg: 一样
+14:56:lhanjian: 一帮二货把博客抄來抄去却没有几个自己验证的
+14:57:biergaizi joined channel
+15:08:sismvg: http://www.ithome.com/html/game/112361.htm
+15:09:sismvg: 魔兽争霸4
+15:09:sismvg: 不知道是不是真的啊
+15:09:lh_cat joined channel
+15:25:lh_cat quit:Ping timeout: 255 seconds
+15:29:lh_cat joined channel
+15:33:Sleepwalking quit:Ping timeout: 240 seconds
+15:42:lh_cat quit:Ping timeout: 255 seconds
+15:43:lh_cat joined channel
+15:45:lhanjian: timer到底是用gettimeofday好，还是clock_gettime好呢……
+15:45:cleamoon:  带鱼人工养殖课题组 写道 "佛山日报消息称，广电总局可能于12月出台“明星限薪令”，对演员片酬进行限制。此政策目前进入内部征求意见阶段。此前广电总局刚刚发布了《广电总局关于加强互联网视听节目内容管理的通知》，要求网络视听节目删剪不良内容，包括：一夜情、婚外情、性暗示、隐晦性行为、贬损公安军人形
+15:45:cleamoon: 象、曲解中华文明、恶搞英雄和领袖、宣扬颓废人生观、刻意渲染民族愚昧落后等在内。"
+15:45:cleamoon: 什么都别拍了
+15:47:lh_mouse: lhanjian, clock_gettime
+15:47:sismvg: 限影封网
+15:48:hysw: lhanjian: clock_gettime
+15:48:lhanjian: 嗯，坚定了我继续维护现有clock_gettime的决心
+15:49:hysw: 如果是算时间的话 > CLOCK_REALTIME
+15:49:Sleepwalking joined channel
+15:50:lhanjian: hysw, 计算elasped应该用不着现实时间吧
+15:51:hysw: elapsed的话CLOCK_MONOTONIC
+15:51:lhanjian: +
+15:52:hysw: 顺便如果要算性能的话再加上rdtscp
+15:58:lh_mouse: lhanjian, https://github.com/lhmouse/poseidon/blob/master/src/main/utilities.cpp#L18
+16:03:lhanjian: 耗子把MONO和REAL都做了一份
+16:11:lh_mouse: 用途都不一样好么
+16:11:lh_mouse: MONO 是你系统启动时候开始计时的
+16:43:Xilzzerts joined channel
+16:46:iyzsong quit:Remote host closed the connection
+16:52:izmntuk joined channel
+16:56:FrankHB: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=63400 。
+17:01:sismvg: http://tieba.baidu.com/p/3405837868
+17:01:sismvg: 线虫必须死！！！！！！！！！！！！！！
+17:05:lh_mouse: 你没吻过妹子啊
+17:07:Xilzzerts: invalid address or address of corrupt block 0x7813cee0 passed to try_realloc_chunk
+17:08:lh_mouse: 渣渣 winpthread
+17:08:lh_mouse: std::uint64_t GetNtTime() noexcept {	union {		FILETIME ft;		ULARGE_INTEGER uli;	} un;	::GetSystemTimeAsFileTime(&un.ft);	return un.uli.QuadPart;}
+17:08:sismvg: 终于能下意识看懂了。。
+17:11:sismvg: QT的c艹的奇淫技巧还不够
+17:11:whocares_2 quit:Ping timeout: 250 seconds
+17:22:Sleepwalking: Masked Bitch -> Hidden Bitch Model
+17:23:Sleepwalking: #隐碧池模型
+17:31:Sleepwalking quit:Remote host closed the connection
+17:32:Sleepwalking joined channel
+17:32:lhanjian: eclipse真是比C::B看起来舒服多了
+17:34:condy: hj酱的irssi也是这种情况吗？ http://puu.sh/cOU2i.png
+17:38:cleamoon_ joined channel
+17:40:cleamoon__ joined channel
+17:40:cleamoon_ quit:Read error: Connection reset by peer
+17:40:sismvg: 请原谅我看成了Misaked bitch..
+17:42:lhanjian: condy, 我是xchat啦
+17:42:condy: 0.0
+17:42:Xilzzerts: ..居然有代码realloc了mmap后的内存。。
+17:43:lhanjian: Xilzzerts, 吐核了？
+17:43:Xilzzerts: invalid address or address of corrupt block 0x7813cee0 passed to try_realloc_chunk
+17:44:Xilzzerts: 然后SEGV了。。
+17:44:whocares_2 joined channel
+17:44:lhanjian: 果然吐核了……
+17:45:Sleepwalking quit:Ping timeout: 245 seconds
+17:47:Xilzzerts: malloc的内存应该比mmap的多点东西
+17:47:sismvg: http://tieba.baidu.com/p/3406535266
+17:47:sismvg: 干吱魂
+17:50:Sleepwalking joined channel
+17:59:code_new_ joined channel
+18:01:Plough joined channel
+18:03:code_new quit:Ping timeout: 240 seconds
+18:10:Xilzzerts: 公司有人写了一段Python
+18:10:Xilzzerts: 一跑，python进程吐核
+18:11:cleamoon__: 2333
+18:11:lhanjian: 233333
+18:11:lhanjian: 他是如何做到让小蛇吐核的23333
+18:12:Plough: 2333333
+18:13:FrankHB: 不知道为啥eclipse上的中文字体大小经常丧心病狂。
+18:13:cleamoon__ quit:Read error: Connection reset by peer
+18:14:cleamoon_ joined channel
+18:14:lhanjian: 估计是字体用不上渲染
+18:15:lhanjian: 一是开发语言从Erlang 转为Java。 小米原来的消息系统是使用Erlang开发的，所以推送系统的第一版也是基于Erlang；但是Erlang的社区不够活跃，开发人员很难找，学习曲线陡，支持工具和类库少，所以后来开发团队选择了使用Java重新开发；迁移到Java后，对开发人员的要求降低，各种工具和类库较多，大大提高了开发效率。
+18:16:sismvg: 开发人员：运行效率？fuvk!
+18:16:lhanjian: 再靠谱的DSL，都敌不过工具和类库多的Java
+18:16:lhanjian: Java大胜利……
+18:16:Xilzzerts: 小米居然找到写Erlang的了。。
+18:17:sismvg: 现在到处都是开发效率，开发效率
+18:17:lhanjian: 小米的意思不就是写二郎的实在太少，于是二郎党徒纷纷改说巫女吸引丧失码农么
+18:17:sismvg: 手游也是的
+18:17:sismvg: 赶紧开发，捞一笔就走
+18:18:lhanjian: 于是浪费时间在C上，倒不如选种写起来快，而且容易在人力上和物力上横向扩展的语言……
+18:18:cleamoon_: 开发效率当然最重要
+18:19:sismvg: 用户关系他们要不要用360清理内存
+18:19:sismvg: 关心
+18:19:sismvg: 开发效率快自然好。不过质量下降也是事实
+18:19:cleamoon_: 没必然联系
+18:21:Xilzzerts: Java现在运行效率也不错了，就是内存开销大
+18:21:lhanjian: 程序的功能能基本达到预期目的，就算成功了
+18:21:lhanjian: 至于质量，那是什么？
+18:21:sismvg: 2333
+18:21:lhanjian: 再说了，Java也能后期优化，或者开始使用以后逐渐优化
+18:21:sismvg: 所以我总是要为到底开2个vs还是开2个ff纠结
+18:22:biergaizi quit:Quit: Konversation terminated!
+18:23:Xilzzerts: google在Android4.4上不是上了那个用LLVM编译bytecode的黑科技么
+18:24:lhanjian: delvit?
+18:24:lhanjian: 估计效果有限
+18:24:Xilzzerts: Art
+18:24:cleamoon_: 效果有限+
+18:25:cleamoon_: 试过了
+18:25:lhanjian: 虽然Java的玩意儿在内存充裕的时候，运行速度倒是尚可
+18:25:lhanjian: 但是Android撞到内存不足的天花板的时候太多了
+18:26:cleamoon_: 我现在就内存不足
+18:27:sismvg: ..桶排序在内存充足的时候也能用
+18:28:lhanjian: 每次内存不足，手机拼命swap的时候，我就崩溃
+18:28:lhanjian: 换了10年前的LK，我估计安卓是出不来
+18:32:cleamoon_: jvm还宣称是硬件受限环境下的虚拟机
+18:33:lhanjian: 谷歌虽然解决了应用的基本运行环境，但是遭遇到GPU，他们最后还是倒在了兼容性面前了
+18:33:lhanjian: 默哀
+18:33:cleamoon_: 他们赶紧撸硬件吧
+18:34:sismvg: 不是有ARA嘛
+18:35:sismvg: 没用过LLVM，很叼吗？
+18:35:lhanjian: sismvg, Clang的编译器后端
+18:35:sismvg: 有多叼
+18:35:condy: sismvg: 确实叼.
+18:35:lhanjian: 至少编译速度完爆gc
+18:35:lhanjian: c
+18:36:lhanjian: 还有个还算靠谱的静态分析工具
+18:36:condy: 错误提示比gcc好.
+18:36:cleamoon_: 药四娘想要很多屌
+18:36:lhanjian: +
+18:36:condy: +
+18:36:condy: 2333
+18:36:lhanjian: clang相对用户友好
+18:36:Sleepwalking: +
+18:36:sismvg: cleamoon_ 叼 not 屌
+18:36:lhanjian: 你们再Diao下去，小耗要T你们了
+18:37:sismvg: you are hentai! 我是boy
+18:37:condy: futa不要说话。
+18:37:sismvg: 语法还是部署
+18:37:sismvg: 不熟
+18:38:Plough: オマエヘンタイ！
+18:39:sismvg: 编译错误什么的。。多年被vs给逼的看错误码就知道发生了什么
+18:40:cleamoon_: 药M娘
+18:40:cleamoon_: M四娘
+18:40:abc-phone joined channel
+18:41:lh_mouse: [18:18:31] 18<19lhanjian18> 于是浪费时间在C上，倒不如选种写起来快，而且容易在人力上和物力上横向扩展的语言……
+18:41:sismvg: 跨平台好烦
+18:41:lh_mouse: [18:18:52] 18<26cleamoon_18> 开发效率当然最重要  // 换到多数猴子手里啥语言都能写出 shit
+18:41:lh_mouse: 包括 C 或者 Java
+18:41:cleamoon_: 那当然
+18:42:lhanjian: 那当然
+18:42:cleamoon_: 所以找个现成的最快
+18:42:lh_mouse: 区别就是用 C 如果你水平够可以写出质量好的  但是用 java 是你想写都写不出
+18:42:lhanjian: lh_mouse, +
+18:42:lh_mouse: 不过多数人的水平当然看不出区别
+18:42:lhanjian: 但是码农们能折腾的越少，越不容易作死
+18:42:lhanjian: 如果Shit的功能能基本符合要求，shit也吃了
+18:42:lhanjian: 怕就怕Shit里有毒
+18:42:lh_mouse: 如何防止人自杀？把手剁了不就完了
+18:43:lh_mouse: ^ java
+18:43:sismvg: 不作死也会死
+18:43:lhanjian: 用Java虽然必然是shit，但至少Shit里很难带毒
+18:45:cleamoon_: 如果有个货找码农，开发个页游，该有的都得有，出2000，那基本只能随便找点代码凑凑
+18:45:lhanjian: 但对客户来说，凑凑出来的东西，是那么回事儿，也就忽悠过去了
+18:45:sismvg: 速度诚可贵，开发价更高，若为兼容性，两者皆可抛
+18:46:cleamoon_: 兼容性？那是什么？能吃吗？
+18:46:FrankHB: OOM了叫没毒？
+18:46:lhanjian: 等。
+18:46:cleamoon_: 一片一片的ie6 only应用
+18:47:sismvg: 2333
+18:47:sismvg: 什么时候来个firefox only
+18:47:cleamoon_: 有的是
+18:47:FrankHB: 各种插件已经是了。
+18:48:sismvg: 插件不算
+18:48:cleamoon_: 还有ff 3.6 only呢
+18:48:sismvg: 。。是什么
+18:48:cleamoon_: 某sb银行插件
+18:49:lhanjian: 工行的网银就是FF某低版本可用
+18:49:sismvg: 银行插件记得基本都是IE only
+18:49:lh_mouse: 没插件的呢
+18:49:sismvg: 农行说着都可以，结果还是Ie only
+18:49:lh_mouse: 交行的不要插件  短信验证就够
+18:50:lhanjian: 交行胆子好大
+18:50:FrankHB: 支付宝也一坨无视插 件。
+18:50:cleamoon_: 挪威航空订机票只要人名.....
+18:52:* sismvg 成功的调教了一只猫
+18:53:cleamoon_: 然后药四娘就被爆了
+18:53:* sismvg 成功调教了一只sismvg
+18:53:sismvg: 忘了不能中文nick了。。
+18:53:cleamoon_: 果真M四娘
+18:53:sismvg: 不能中文nick太柯亨
+18:54:sismvg: 可恨
+18:54:condy: Dijkstra 说计算科学不应该被叫做"computer science"... 那叫啥？
+18:54:condy:                /机\
+18:56:cleamoon_: 叫修电脑的
+18:57:lhanjian: computing science?
+18:57:Xilzzerts quit:Read error: Connection reset by peer
+18:58:cleamoon_: 233333   www.zhihu.com/question/19978254/answer/18838890
+18:58:sismvg: 叫做应用数学
+18:59:sismvg: 其实可以给各种学科加上个应用
+19:00:sismvg: 应用化学(造毒品的) 应用物理(码农) 应用数学(算法工程狮) 应用斯巴达(运维) 应用美术(PS)
+19:01:cleamoon_: 应用物理和码农毛关系
+19:01:cleamoon_: 应用数学也和算法没关系
+19:04:lh_mouse: 应用数学 (2+2=?)
+19:04:cleamoon_ quit:Read error: Connection reset by peer
+19:04:cleamoon_ joined channel
+19:05:ring quit:Read error: Connection reset by peer
+19:05:iyzsong joined channel
+19:05:cleamoon_ quit:Read error: Connection reset by peer
+19:06:cleamoon_ joined channel
+19:06:sismvg: 物理有关系啊，我们操纵代码的时候最后不是和电子扯关系嘛
+19:07:cleamoon__ joined channel
+19:10:cleamoon__ quit:Read error: Connection reset by peer
+19:10:cleamoon_ quit:Ping timeout: 265 seconds
+19:14:lhanjian: 看来我暂时不能实现pipeline了。还没想好怎么解决已经收到一条Request，在还没有Response之前，如何处理同一个Client发来的新request
+19:15:lh_mouse: 收到 request 就往全局队列里面一丢
+19:15:lh_mouse: 就完了
+19:20:cleamoon_ joined channel
+19:21:cleamoon_: 噗，那这说法所有学科都是数学了
+19:21:cleamoon_: 应用现在基本就是数值，统计，金融和算法
+19:24:lh_mouse: lhanjian, 单线程相对好做 因为队列只有一个
+19:25:ring joined channel
+19:25:lh_mouse: 如果你要做多线程  就得弄 session
+19:25:lh_mouse: 根据 session  ば不同的 request 放到对应的 session 的队列里面
+19:25:lh_mouse: s,ば,把,
+19:26:lhanjian: 我应该换个问法。
+19:26:lhanjian: 感觉是我想多了
+19:27:lhanjian: 在TCP的情况下不会乱序
+19:27:lh_mouse: 只是你收到的数据不乱而已
+19:31:FrankHB quit:Remote host closed the connection
+19:31:FrankHB joined channel
+19:32:lhanjian: 应该这么问，在 非管线 的情况下，同一个客户端的第一个请求还没有回应他看，他又发了第二个请求，我应该回应/抛弃哪条？
+19:33:lh_mouse: 你 session 没请求队列？
+19:33:lhanjian: 有。
+19:33:lh_mouse: 往队列里面丢
+19:43:xxxxxxxx joined channel
+19:50:lhanjian: http://static.acfun.mm111.net/h/image/2014-10-13/ab15e955-7c5c-44d3-bf72-a98a50f8eea0.jpg
+19:50:lh_mouse: geordi, <<is_nothrow_copyable<runtime_error>::value;
+19:50:geordi: error: 'is_nothrow_copyable' was not declared in this scope
+19:50:lh_mouse: geordi, <<is_nothrow_copy_constructible<runtime_error>::value;
+19:50:geordi: false
+20:07:FrankHB quit:Remote host closed the connection
+20:07:FrankHB joined channel
+20:09:cleamoon_: 最近羊驼不在，脱团了？
+20:13:sismvg: 233
+20:13:sismvg: varna遇上了GF大妈
+20:15:cleamoon_: 2333
+20:15:hoxily joined channel
+20:16:FrankHB: GF=管饭？
+20:16:cleamoon_: 公愤
+20:16:cleamoon_: 关了人家的的视频，被五马分尸了
+20:16:sismvg: GFW 管饭网
+20:17:cleamoon_: 搞父王
+20:17:sismvg: 噗
+20:18:sismvg: 不已繁殖为目的的恋爱就是搞基
+20:19:cleamoon_: 现在越来越多的人妖，伪娘，基佬了，马上妹子又会灭绝了
+20:20:sismvg: 时代的潮流不可阻挡
+20:20:sismvg: 如何分辨加了酱油的白萝卜和土豆？
+20:20:cleamoon_: 吃一口
+20:21:cleamoon_: 再说这两个模样就不一样
+20:21:sismvg: 切成块了的
+20:21:sismvg: 放到锅里的时候没法分辨了
+20:22:cleamoon_: 吃一口，没死的是白萝卜
+20:22:sismvg: 酱油沐我身，安能辨我是土豆还是萝卜？
+20:22:sismvg: 猫似乎很喜欢土豆
+20:23:cleamoon_: 口感也不一样
+20:23:cleamoon_: 我养的猫都很喜欢吃虫子
+20:23:sismvg: 蟑螂吃不
+20:23:cleamoon_: 没蟑螂
+20:24:sismvg: 你已经被资本主义毒害
+20:24:sismvg: onedrive就是个大流氓，你管都关不掉
+20:25:cleamoon_: 平房才没蟑螂....
+20:25:sismvg: 我也是平房啊
+20:25:sismvg: 一次我打了16只蟑螂
+20:26:cleamoon_: 那你家没蚂蚁
+20:26:cleamoon_: 我家5个蚂蚁窝
+20:26:sismvg: 没有。。
+20:26:sismvg: pu
+20:28:sismvg: 看到过去的百度分享的本子被下载了上千次，又被保存了几百次，还是有那么些欣慰的。
+20:28:sismvg: 后来我想了一下，怎么评论就这么少，我才意识到大家都是一只手打字的，实在不方便……咳！要注意卫生呀
+20:31:cleamoon_: 因为药四娘看的都是练习次男道的人看的东西，一只手都被砍掉了
+20:32:cleamoon_: 然后被几个基佬，其中一个是羊驼，搞了3个月
+20:34:krfantasy joined channel
+20:44:Sleepwalking quit:Ping timeout: 258 seconds
+20:48:condy: xxxxxxxx: 乃的irssi怎么调教成不是这个样子的？http://puu.sh/cOU2i.png
+20:55:ring quit:Ping timeout: 245 seconds
+21:00:ring joined channel
+21:03:sismvg: 那群家伙，拿三文鱼给猫做猫饭。。我都没吃过三文鱼啊
+21:04:cleamoon_: 然后猫不吃吧
+21:05:cleamoon_: 油太大，太腥了
+21:05:cleamoon_: 鳕鱼比较好
+21:06:* sismvg 只吃过淡水鱼
+21:08:cleamoon_: 带鱼没吃过？
+21:08:lhanjian: 回寝室
+21:08:lhanjian quit:Quit: 风光冉冉东西陌
+21:09:sismvg: 好吧
+21:09:sismvg: 你太认证了
+21:09:sismvg: 人渣
+21:09:sismvg: 认真
+21:12:FrankHB quit:Remote host closed the connection
+21:13:FrankHB joined channel
+21:21:FrankHB quit:Remote host closed the connection
+21:21:FrankHB joined channel
+21:26:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+21:26:FrankHB quit:Remote host closed the connection
+21:27:FrankHB joined channel
+21:28:condy quit:Quit: Changing server
+21:28:condy joined channel
+21:32:random151 joined channel
+21:33:random151: 有人没有
+21:33:condy: 有！先爆照。
+21:33:random151: 怎么爆，不会用
+21:33:condy: lh_mouse: ^
+21:34:condy: lh_cat: ^
+21:34:condy: random151: 可以用picpaste.com这个图床.
+21:36:random151: 我是水货，你说的这些我都不懂
+21:36:condy: 0.0
+21:41:cleamoon_: 水货？虾仁吗
+21:41:lh_cat: 揣着明白装糊涂
+21:44:Lili_ joined channel
+21:45:sismvg joined channel
+21:45:sismvg: http://www.ithome.com/html/out/112500.htm
+21:45:sismvg: 天朝的未成年人保护法：未成年人不是人
+21:46:Lili_ quit:Client Quit
+21:46:sismvg: 见义勇为不是好事情，看到别人快被打死的时候赶快逃跑报警
+21:47:sismvg: 不留证据谋杀+即使有证据也无法靠着法律制裁的方法实在是太多太多了
+21:48:cleamoon_: 看不到，说了什么
+21:50:sismvg: http://www.ithome.com/html/out/112500.htm
+21:51:sismvg: 道德沦丧，世风日下。所以出门带点武器是好事情
+21:51:cleamoon_: 打不开
+21:51:condy: 1未成年人见义勇为，因未满18岁，不能被评为“见义勇为”。。
+21:51:cleamoon_: 噗
+21:51:cleamoon_: 那算什么
+21:51:condy: 少年救人负重伤，因未成年不能评“见义勇为”
+21:51:krfantasy: 2333
+21:52:sismvg: 假设我在8个月以前策划一场杀人的话，装装反省 进去几个月就能出来了
+21:53:cleamoon_: 于是药四娘今年14岁零8个月？
+21:53:sismvg: 噗
+21:54:sismvg: 14岁令几个月是少管所吧
+21:54:cleamoon_: 那你5岁零8个月？
+21:56:sismvg: 你应该猜7岁零4月
+21:56:sismvg: 这样可以在nlgn内猜到
+21:56:cleamoon_: 为毛？
+21:56:sismvg: 二分查找啊
+21:56:cleamoon_: .....
+21:57:cleamoon_: 你又不说猜打了还是小了
+21:57:sismvg: 突然想起一道靠随机算法的面试题
+21:57:cleamoon_: 大了
+21:57:sismvg: 那是我面世以来最考算法能力的
+21:58:cleamoon_: 什么题
+21:58:sismvg: 给定一个猜拳游戏，让电脑有70%还是多少的的概率胜利
+21:58:cleamoon_: 随一个70%的数字，是了就赢
+21:59:sismvg: 猜拳啊。。
+21:59:cleamoon_: 是呀
+22:00:richselian joined channel
+22:00:sismvg: 我是用作弊..
+22:00:sismvg: 因为那道题没有说要一起出。。
+22:01:cleamoon_: 我刚说的就是那意思...
+22:01:sismvg: 然后面试官就非洲人了
+22:01:xxxxxxxx: condy:  你说啥
+22:02:condy: xxxxxxxx: irssi显示\t时不会将\t以4个空格显示，而是会显示I..
+22:02:condy: 现在已经解决了，加载个tab_stops插件就可以解决了..
+22:02:lh_mouse: 内牛来了
+22:03:cleamoon__ joined channel
+22:03:random151 quit:Ping timeout: 246 seconds
+22:04:xxxxxxxx: 内牛。。。
+22:04:sismvg: 肉牛
+22:05:cleamoon_ quit:Ping timeout: 250 seconds
+22:06:sismvg: 看猫吧的帖子，一个个给猫吃的。牛肉，三文鱼，各种肝，美士猫粮，低端猫粮全部无视掉
+22:06:sismvg: 看见一个人给猫吃700一袋子的猫粮。我一个月伙食都没这么多
+22:08:erhandsome joined channel
+22:08:cleamoon__ quit:Ping timeout: 265 seconds
+22:14:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+22:18:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:22:lh_mouse: 爆照的呢
+22:26:Plough quit:Remote host closed the connection
+22:30:krfantasy quit:Ping timeout: 250 seconds
+22:30:krfantasy1 joined channel
+22:35:shui_code quit:Quit: WeeChat 0.4.2
+22:40:condy quit:Ping timeout: 265 seconds
+22:48:lh_cat quit:Ping timeout: 255 seconds
+22:54:erhandsome quit:Ping timeout: 256 seconds
+22:59:lh_cat joined channel
+23:01:xxxxxxxx: http://tieba.baidu.com/p/3407136207 ....
+23:04:ring quit:Ping timeout: 264 seconds
+23:12:erhandsome joined channel
+23:22:iyzsong quit:Quit: bye!
+23:45:hoxily quit:Quit: Leaving

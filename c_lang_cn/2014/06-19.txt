@@ -1,0 +1,568 @@
+00:01: condy_: geordi: {string s="1"; istringstream iss(s); string line(1); iss >> line; cout << line; }
+00:01: geordi: error: no matching function for call to 'string::basic_string(int)'
+00:01: condy_: geordi: {string s="1"; istringstream iss(s); string line(1, 'x'); iss >> line; cout << line; }
+00:01: geordi: 1
+00:17: ZzHiyori quit:Read error: Connection reset by peer
+00:20: condy_ quit:Read error: Connection reset by peer
+00:20: condy_ joined channel
+00:43: GODDOG quit:Ping timeout: 264 seconds
+01:27: condy_ quit:Quit: leaving
+01:52: lh_mouse quit:Read error: Connection reset by peer
+02:12: xxxxxxxx quit:Quit: Leaving...
+02:46: boosure joined channel
+03:22: hyperswift: 听说数学系的都不用计算器
+03:44: cleamoon: 不用
+03:48: cleamoon_ quit:Ping timeout: 240 seconds
+03:59: hyperswift: 听说计算机系的都不用计算器
+04:07: cleamoon: 国家新闻出版广电总局6月18日下发通报，要求各新闻单位对记者站、网站、经营部门、采编部门进行集中检查清理，认真纠正存在的违法违规问题，把好新闻采访关，禁止记者站跨行业、跨领域采访报道，禁止新闻记者和记者站未经本单位同意私自开展批评报道。
+04:08: cleamoon: 计算机系当然用计算机
+04:09: condy quit:Remote host closed the connection
+04:23: cleamoon quit:Remote host closed the connection
+04:24: boosure quit:Ping timeout: 272 seconds
+04:26: cleamoon joined channel
+04:55: whocares_2 quit:Ping timeout: 255 seconds
+05:56: hope1 quit:Ping timeout: 245 seconds
+05:59: boosure joined channel
+07:14: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]
+07:58: whocares_2 joined channel
+08:51: zzzzzzzz quit:Quit: Konversation terminated!
+09:15: lh_mouse joined channel
+09:26: whatofor joined channel
+09:28: boosure quit:Quit: Get your hand off of it
+09:37: sismvg joined channel
+09:47: code_new joined channel
+09:47: lh_mouse: geordi, { pair<int, double> a; cout <<a; }
+09:47: geordi: {0, 0}
+09:58: condy joined channel
+10:01: xxxxxxxx joined channel
+10:02: zzzzzzzz joined channel
+10:25: sismvg: 擦。。凌晨4点下班。。10点上班。。
+10:26: hyperswift: 喜闻乐见
+10:31: condy quit:Ping timeout: 272 seconds
+10:31: condy joined channel
+10:34: lh_mouse: sismvg, 吃药
+10:35: sismvg: cmake 怎么配置boost啊。。
+10:38: lh_mouse: 不用 cmake 不用 boost
+10:39: hyperswift: boost.jam?
+10:39: sismvg: 坑了
+10:39: sismvg: 要boost1.55，但是debian 的apg-get只有1.49
+10:39: sismvg: 自己安装path又不对。。
+10:40: sismvg: 我需要google
+10:40: hyperswift: 自己编译...
+10:41: hyperswift: sismvg: 加入arch吧
+10:41: sismvg: 结局一样
+10:41: lolisa joined channel
+10:41: lh_mouse: 为什么非得用 boost？
+10:42: lolisa: 大家早DAZE
+10:42: lh_mouse: boost 接口跟傻逼一样
+10:42: hyperswift: sismvg: ArchLinux的boost是1.55的..
+10:42: lolisa: lh_mouse,接口不好可以自己包装啊，有很多东西重写太烦
+10:43: lh_mouse: lolisa, 包装你大爷
+10:43: lh_mouse: 你自己去看看  boost::multi_index
+10:43: lh_mouse: 你包装一个我看看？
+10:43: lolisa: 没用过。。。
+10:43: lolisa: 我一般用boost::serialization
+10:43: hyperswift: 是个语言就有一大堆坑
+10:43: xxxxxxxx: 先去google下有没有现成的再说
+10:43: lh_mouse: serialization 比 multi_index 还傻逼
+10:44: lh_mouse: lolisa, 我问你  boost 那东西用同一个函数实现串行化和反串行化对不对
+10:44: lolisa: lh_mouse,可以分开的
+10:44: lh_mouse: 你认为一个串行化的成员函数是否应当是 const 限定的？
+10:44: lh_mouse: lolisa, 不是可以不可以，就是必须分开
+10:45: lolisa: 我知道
+10:45: lh_mouse: lolisa, 你觉得 Boost 那种傻逼接口塞到一个函数里万一我写错了怎么办
+10:45: lolisa: 我说的是boost的版本可以弄成一个read一个write
+10:45: lh_mouse: 如果本来的串行化调了反串行化的函数（而且还他妈的是同一个运算符重载）
+10:45: lh_mouse: 结果会如何？
+10:46: lolisa: 可以分开来写的啊
+10:46: lh_mouse: 简直就是没长脑的人设计的
+10:46: lh_mouse: lolisa, 文档里怎么写的
+10:46: lh_mouse: 你觉得文档鼓励这种写法很好？
+10:46: lolisa: 。。。好吧
+10:46: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]
+10:54: sleepwalking joined channel
+10:54: sleepwalking: abstract declarator中的*叫什么？
+10:56: hyperswift: sleepwalking: 打土豪
+10:59: sleepwalking: 233
+11:01: hyperswift: sleepwalking: 你这一堆电脑手机显示屏什么的太土豪了
+11:01: sleepwalking: 只有两个本子嘛。。那些显示器都不带主机的。。
+11:01: hyperswift: sleepwalking: 去Stanford被Knuth教授虐吧
+11:01: sleepwalking: 况且一个本子还是坑爹的Lemote
+11:02: hyperswift: Lemote?
+11:02: xxxxxxxx: LEEE?
+11:03: hyperswift: xxxxxxxx: 少一个E
+11:03: sleepwalking: 价值300元的龙芯MIPS处理器的垃圾本，性能堪比PentiumII，听说大胡子曾经用过
+11:03: hyperswift: sleepwalking: 我怎么看到Thinkpad了...
+11:03: sleepwalking: 那个是我爸淘汰下来先隔我房间的07年的旧本子
+11:04: hyperswift: 07年一点都不旧...
+11:05: hyperswift: sleepwalking: 去Stanford被Knuth教授虐智商吧
+11:05: sleepwalking: 。。
+11:05: hyperswift: stat又考砸了...
+11:05: xxxxxxxx: http://www.bilibili.com/video/av1204718/
+11:05: sleepwalking: 你考的啥
+11:05: hyperswift: 统计学...
+11:05: hyperswift: 考试没一次上90%的
+11:07: hyperswift: 话说现在我桌子上还摆着我自己制造的笔桶和小书架..
+11:07: xxxxxxxx: 自己制造?
+11:07: sleepwalking: 看错成ssat了。。
+11:08: hyperswift: 枫木和樱桃木制品...
+11:10: xxxxxxxx: 用手抠出来的?
+11:13: hyperswift: 带锯，钻床之类的货色...
+11:14: hyperswift: 还有很少量的紫芯木
+11:17: hyperswift: 自制品的质量比宜家制品好不少...
+11:38: windforce joined channel
+11:39: windforce: https://pastebin.mozilla.org/5433333  好吧，照顾逗比，强异常安全保证。
+11:39: windforce: 嗯，这坑结束了。
+11:40: windforce: 最终还是在每条路径上都检测了无数遍2333。
+11:57: lh_mouse: geordi, << noexcept(foo.swap(bar)); list<int> foo, bar;
+11:57: geordi: false
+11:57: lh_mouse: geordi, replace list with vector
+11:57: geordi: true
+11:57: lh_mouse: geordi, replace vector with set
+11:57: geordi: true
+11:58: lh_mouse: geordi, << noexcept(foo.splice(foo.end(), bar)); list<int> foo, bar;
+11:58: geordi: true
+12:12: sismvg: arch装起来麻烦，debian软件包又总是不是最新，centos装个依赖累死人
+12:14: windforce: sismvg, arch
+12:28: xxxxxxxx: 你先能把系统救回来再推荐别人用arch
+12:41: windforce: xxxxxxxx, 救不回来重装呗。
+12:46: sismvg: 正在装gnome
+12:46: sismvg: 怎么启动。。
+12:46: sismvg: startx不行
+12:48: windforce: sismvg, = = 装好就行了。xorg 什么的装了么？
+12:48: hyperswift: pacman -S gdm (详细 https://wiki.archlinux.org/index.php/display_manager)
+12:48: sismvg: 没有
+12:48: hyperswift: sismvg: OTL...
+12:48: xxxxxxxx: http://manjaro.org/ 嫌麻烦用这个 要是有底气换arch源自己换
+12:48: hyperswift: windforce: 话说X不是依赖关系的么...
+12:48: sismvg: 我这里没有提示》。
+12:49: hyperswift: sismvg: 去装个dm什么的就完事了...
+12:49: hyperswift: gnome这奇葩的话就gdm
+12:51: hyperswift: KDE用户路过...
+12:52: xxxxxxxx: @xdm
+12:52: hyperswift: xdm...
+13:07: sismvg: 还是不行。。
+13:08: hyperswift: sismvg: 装上gdm然后systemctl enable gdm
+13:11: sismvg: 找不到gdm。。
+13:12: hyperswift: ?
+13:36: lolisa joined channel
+13:49: hope1 joined channel
+13:56: sismvg: gdm[517] couldn't connect to system bus : could not connect : no such file or directory
+13:57: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]
+14:02: hyperswift: sismvg: dbus出问题了？
+14:04: sismvg: 桌面开起来了，鼠标键盘没反应,fuck
+14:04: sismvg: fuck the arch
+14:06: sismvg: ubuntu的boost是多少
+14:09: GODDOG joined channel
+14:20: lh_mouse: geordi, vector<int> v; v.iterator i = v.begin();
+14:20: geordi: error: 'v' does not name a type
+14:46: xxxxxxxx: 为了个boost换个arch 你的时间多不值钱...
+14:50: varna joined channel
+14:51: varna: sleepwalking: 爆
+14:51: sleepwalking: iyzsong, https://github.com/Rocaloid/Rocaloid-Doc/tree/master/CodeStandard  我写了一半感到操蛋极了
+14:57: windforce: = =
+14:59: windforce: sleepwalking, 码呢？
+14:59: sleepwalking: windforce, 啥？
+15:00: windforce: sleepwalking, 没找到码腋。
+15:00: sleepwalking: 不知所云。。
+15:00: windforce: sleepwalking, 找到了。
+15:07: windforce: 撸去了。
+15:07: windforce quit:Quit: Leaving
+15:11: varna: 为什么非得用RUtils...
+15:12: xxxxxxxx: 看成RUtous...
+15:13: sismvg: PM 好逻辑。。说着要成为20%的人，又说着要融入群体。。
+15:15: xxxxxxxx: 5个人中有一个男性其余都是女性 完全可以融入群体啊
+15:16: sleepwalking: 。。。。
+15:16: varna: 那是插入群体
+15:17: sismvg: 好像有什么不对的地方
+15:17: sismvg: 总之是逼我闪人的节奏啊。。
+15:17: xxxxxxxx: varna: 确实是融入
+15:17: varna: xxxxxxxx: 怎么融入
+15:18: xxxxxxxx: 吃药啊
+15:18: varna: 噗
+15:18: varna: 米库酱快吃药
+15:18: sismvg: 多吃点螺旋藻
+15:18: varna: 疼死了，晚上六点以后预定房间需要信用卡担保
+15:19: cleamoon: alpako去开房了
+15:19: varna: 要去开会了
+15:19: varna: 两个考试一个6.24一个7.2
+15:20: sleepwalking: 要是有没副作用的药我就吃了233
+15:20: cleamoon: 对，和柠子开 会
+15:20: cleamoon: 没有副作用
+15:20: sleepwalking: 骗人= =
+15:20: sismvg: 吃前摇一摇
+15:20: cleamoon: 它的全部作用就是让你成为药娘
+15:21: cleamoon: 怎么变成两个考试了
+15:21: sleepwalking: \这边已经放假了/
+15:21: varna: 形式语义学和物件导向什么的
+15:21: * varna 从不在意假期差别
+15:23: sismvg: 好高端的样子
+15:23: cleamoon: 不在意+
+15:23: sismvg: 为什么有时候会没有角括号呢？
+15:23: cleamoon: 有假期更忙
+15:25: sismvg: 假期除了看书似乎没别的事情干了
+15:25: varna: sleepwalking: 吃了螺内酯之后溢乳不是副作用
+15:25: cleamoon: +
+15:25: sleepwalking: 你怎么这么清楚= =
+15:26: cleamoon: 你看，四元娘吃完了不是还算清醒
+15:26: cleamoon: alpako是药娘团团长，当然要以身作则
+15:26: varna: 我没吃
+15:26: varna: 岚月酱是幼女不必吃
+15:26: sleepwalking: 话说频道里有人玩UTAU吗
+15:26: xxxxxxxx: 羊驼子同理
+15:27: varna: 下面直播一发大建
+15:27: varna: 秘书：加贺（Lv65, 闪） 副官：赤城（Lv64）
+15:27: varna: 公式：4/2/5/6 + 20
+15:28: cleamoon: 由它？
+15:28: varna: 建造开始……
+15:28: varna: 哦我操
+15:29: varna: 又一个加贺
+15:29: xxxxxxxx: 一定是漏了拜顶座的步骤
+15:30: sleepwalking: cleamoon, 一个歌声合成前端
+15:33: cleamoon: 不喜唱出来的玩意
+15:34: sleepwalking: cleamoon, 那是因为大多数后端太废了，而且接口设计得太渣。
+15:35: cleamoon: 真人唱的都不喜
+15:35: cleamoon: 擦，感冒了下雨还要出门办事...
+15:36: varna: 湿身幼女公务.avi
+15:36: sismvg: @开发三味
+15:38: varna: 下周接着来
+15:49: cleamoon: alpako的周经
+15:51: varna: 哈哈哈演习对面有个4bb2cv的
+15:51: varna: 看我单潜艇……
+15:52: varna: 168！教她们做人！
+15:52: varna: 噗，三发雷击两发miss
+15:52: varna: 只有B胜
+15:53: GODDOG: 23个人
+15:53: GODDOG: 还好
+15:54: condy quit:Ping timeout: 272 seconds
+15:55: condy joined channel
+15:57: GODDOG: 万恶的C语言
+15:59: sismvg: 应该是万恶的用着C++当成C的家伙
+15:59: cleamoon: 那不是很正常的事吗
+15:59: GODDOG: sismvg: no C语言本身就是万恶的
+16:00: whatofor: c
+16:00: cleamoon: 对了，问一个，函数重载和虚函数有毛区别
+16:00: whatofor: c++当c用比单纯用c舒服好多。
+16:00: whatofor: 没关系
+16:00: cleamoon: 虚函数不是标识可以重载吗？
+16:00: sismvg: 一个要占用额外内存一个不用
+16:01: whatofor: 哪个是重载？不知道术语。
+16:01: whatofor: 那就是不同的this参数吧
+16:01: GODDOG: 第一次用const这个修饰符
+16:01: cleamoon: 算了，先出门了
+16:05: lhanjian joined channel
+16:05: lhanjian: do
+16:06: varna: lhanjian: 爆
+16:06: lhanjian: code_new, 捏
+16:06: lhanjian: varna, 回爆
+16:06: whatofor: nip
+16:06: varna: 以后试着每周麒麟臂发作一次赌大凤
+16:06: lhanjian: whatofor, wtf兄揉揉揉揉揉揉
+16:06: varna: 好想要大凤啊
+16:11: GODDOG: lhanjian: 爆
+16:12: lhanjian: GODDOG, 你个线虫也爆。想得美，挤
+16:12: sleepwalking: C语言当C++用多好- -
+16:12: varna: sleepwalking: 难看而没用
+16:12: sleepwalking: varna, 明明很萌的好么
+16:12: varna: 品味问题
+16:12: GODDOG: lhanjian: 你的牙线不勒手么？
+16:13: varna: 我确实觉得这种字面上仿造基于数据聚合的对象的做法难看
+16:13: lhanjian: GODDOG, 牙线？
+16:22: GODDOG: lhanjian: 你下面的牙线？ 难带改称牙签了？
+16:23: lhanjian: GODDOG, 混淡
+16:23: lhanjian: 好恶心
+16:28: varna: lhj3cm?
+16:29: GODDOG: 哎
+16:30: xxxxxxxx: http://www.bilibili.com/video/av100130 这个谁看过?
+16:31: GODDOG: 没有
+16:31: GODDOG: lhanjian: int(*int) a;
+16:32: GODDOG: 这句大概什么意思？ google不到类似的东西
+16:33: varna: 这句大概是错的
+16:33: GODDOG: varna: 打错了
+16:33: GODDOG: varna: int (*int) (a*);
+16:34: varna: 这句大概是错的
+16:34: GODDOG: varna: ...
+16:35: varna: int (*a)(int *) ?
+16:35: GODDOG: var
+16:35: GODDOG: varna: http://imagebin.org/313991
+16:36: GODDOG: varna: 虽然我这边刷新后图就挂了
+16:36: varna: 连接不能，他图床请求
+16:36: GODDOG: 。。。
+16:36: lolisa joined channel
+16:37: GODDOG: varna: 你有别的聊天软件么？ 比如adium 之类的
+16:37: varna: 不用那些
+16:37: varna: 如果是程序，直接上程序吧；不然指出出处也行
+16:38: GODDOG: varna: 论文上的实例代码 LOL
+16:39: varna: 噗
+16:39: varna: 这什么烂玩意
+16:41: xxxxxxxx: 是init啊
+16:42: GODDOG: 出处应该是 /usr/include/libavcodec/avcodec.h
+16:42: GODDOG: 如果你 安装过 libcodec-dev
+16:43: GODDOG: xxxxxxxx: 是init 
+16:43: GODDOG: sorrry
+16:43: GODDOG: 但这句什么意思？
+16:45: GODDOG: 。。。。
+16:46: varna: rq4ln
+16:47: xxxxxxxx: http://puu.sh/9AfVI/6e2804221b.png
+16:47: varna: 噗
+16:47: varna: 我之前说过int (*a)(int *), 大概他没看见爱呢……
+16:47: varna: 就是个函数指针
+16:48: GODDOG: varna: 函数指针？ 哦 
+16:48: GODDOG: xxxxxxxx: 谢谢
+16:49: varna: s/爱//
+16:49: varna: 估计又是手滑jain了
+16:50: GODDOG: 。。。
+16:53: cleamoon: 感觉这么写超难看
+16:55: cleamoon: 2009年，Debian及其衍生发行版用嵌入式GLIBC(EGLIBC)取代了GNU C Library(GLIBC)。EGLIBC是GLIBC的改良版，源代码和二进制都兼容于GLIBC。然而五年后的今天，EGLIBC已经是一个死亡的项目，所以Debian又用GLIBC替换了EGLIBC。EGLIBC死得其所，因为过去几年GLIBC的开发发生了很大的变化，主要是两大事件所致：其一是 Ulrich Drepper在2010年离开Red Hat和GL
+16:55: cleamoon: IBC加入了高盛，其二是GLIBC指导委员会2012年自行解散。这两件大事改变了团队协作和开发环境，现在的GLIBC开发是基于同行审议，代码bug很少，而 EGLIBC的大部分功能都已合并到GLIBC。
+16:55: varna: 今天不是大凤沉没日么，为什么造不出大凤……
+16:56: cleamoon: 湖北武汉明年将动工建造两座一千米高的凤凰塔，竣工之后它将超过目前世界上最高的建筑物，位于迪拜的830米高的哈利法塔。British Chetwoods建筑师事务所表示，这对千米高塔将会建在武汉的一个湖心岛上，施工面积达到47公顷。设计简介称，这是一个“标志性”建筑的开发项目，建筑师已经在设计中加入了多种环境元素，以对
+16:56: cleamoon: 抗湖北的空气和水污染。较高的塔会负责从湖中取水，净化，然后再输入湖中。两个塔中的净化装置会净化周边空气，它们会用太阳能发电机自给自足。其他环保设计包括：风力涡轮、热风筒、做水循环的生物质锅炉和氢燃料电池。双塔的设计灵感来自中国传说中成对神鸟凤凰，其中雄鸟是凤，雌鸟是凰。较高的“雄”塔整合
+16:56: cleamoon: 了多数的环保功能，并向“雌”塔供应冷气、水和电。它们还会包含一个巨大的垂直花园，还有餐厅、画廊、酒吧和其他文娱设施。
+16:56: cleamoon: 无良转载：　OpenerDNS是面向国内普通互联网用户开放的"高速 安全 免费"的域名解析服务器。还在使用Google DNS或者Opendns吗？还在不断更改host文件吗？现在就切换到OpenerDNS地址: 42.120.21.30。OpenerDNS的服务器托管在国内，比国外DNS服务器访问速度更快。OpenerDNS自开通以来，短短半个月时间就达到日均请求100万次。2014年6月，日均请
+16:56: cleamoon: 求数已经接近1亿次。开发者声称利用动态3层代理技术，实现Google、Twitter、Facebook、Gmail的加速访问。
+16:59: hyperswift: gfw难道想迫使我去写port forwarding么...
+16:59: GODDOG: 无法理解
+16:59: lh_mouse: geordi, { vector<foo> v; v.emplace_back(); cout <<v.back().i; } struct foo { int i; foo(){ } };
+16:59: geordi: -1819044973
+17:00: lh_mouse: geordi, replace emplace_back() with resize(1)
+17:00: geordi: -1819044973
+17:03: GODDOG: 明白了
+17:06: cleamoon: 再次出门
+17:21: lhanjian: hyperswift, 寒云担心回国没法用墙外网？
+17:23: varna: http://tieba.baidu.com/p/3114146288 酋长
+17:29: lh_mouse: [master 0061e66] Updates.
+17:29: lh_mouse:  12 files changed, 497 insertions(+), 539 deletions(-)
+17:31: lh_mouse: git push origin :master -f
+17:32: sismvg: 我需要google。。
+17:33: lh_mouse: sismvg, https://s3-sa-east-1.amazonaws.com/google7/index.html
+17:48: lolisa quit:Ping timeout: 244 seconds
+17:59: lhanjian: 耗子竟然用轮子物
+18:00: lhanjian: http://www.googlestable.com/
+18:00: lhanjian: 这个NO POLTICS
+18:00: xxxxxxxx: 没有抗争就没有自由2333
+18:01: lh_mouse: lhanjian, 轮子又如何
+18:01: lhanjian: 不如何……
+18:01: lhanjian: 轮子物容易死来死去（虽然AMAZON S3短期来看不会封）
+18:01: lhanjian: 下线吃饭去了
+18:02: lhanjian quit:Quit: 风光冉冉东西陌
+18:02: lh_mouse: 一边骂小日本  一边对着 Av 拤
+18:02: lh_mouse: 233
+18:04: varna: startpage不错
+18:09: code_new quit:Remote host closed the connection
+18:18: lolisa joined channel
+18:25: biergaizi quit:Quit: Konversation terminated!
+18:27: biergaizi joined channel
+18:29: sismvg: 起风了出720了
+18:30: sismvg: 快点周某啊啊啊
+18:30: sismvg: 周末
+18:30: varna quit:Quit: leaving
+18:35: GODDOG quit:Quit: leaving
+18:40: Plough joined channel
+18:42: code_new joined channel
+18:42: condy1 joined channel
+18:59: Youmu: geordi: { while (int x = 1) {cout<<x;}}
+18:59: Youmu: geordi: << "hello"
+18:59: geordi: 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+18:59: geordi: hello
+19:00: iyzsong: 2333
+19:05: sismvg: PM;心脏病是要去克服的，你总不能整个项目团队都坐过山车，就你一个因为心脏病不去坐吧，这是一个融入团队的过程
+19:05: sismvg: 你一点点的给自己增加压力，来克服心脏病，总有一天心脏病能好的
+19:06: sismvg: 世界级的难题被PM解决了，鼓掌。。
+19:07: Youmu: iyzsong酱是不是在学ML啊？
+19:08: iyzsong: Youmu: 没有了
+19:08: iyzsong: 我现在在东软实习...
+19:09: Youmu: iyzsong: ... 又得一个人了。
+19:10: iyzsong: x.x
+19:12: lhanjian joined channel
+19:12: lhanjian: 有一个目录testp ，目录下有一个文件testpp
+19:12: lhanjian: testp的权限是711，testpp权限是744
+19:12: lhanjian: ls testp -> permission denied
+19:13: lhanjian: cat testp/testpp -> （正常出结果了）
+19:13: lhanjian: why?
+19:13: lhanjian: 当前用户是others
+19:17: Youmu: drwx--x--x / -rwxr--r-- 
+19:17: lhanjian: 找到原因了……
+19:17: lhanjian: x 	execute 	execute a file or recurse a directory tree
+19:20: Youmu: hj酱好棒!
+19:20: sismvg: 征兵体检没逃掉。。
+19:20: sismvg: super big trouble
+19:21: sismvg: 倒霉死了，PM逼着让我做过山车，还必须要用QQ，征兵体检没过。。
+19:21: xxxxxxxx: 噗 中华大加农
+19:21: iyzsong: orz
+19:22: sismvg: 征兵体检没逃掉
+19:22: xxxxxxxx: 我也没逃掉
+19:22: sismvg: 总之交罚款什么的
+19:22: xxxxxxxx: 最后没让我去当兵
+19:22: sismvg: 当不上的
+19:22: sismvg: 只是走过场
+19:22: sismvg: 话说体检什么来着
+19:23: xxxxxxxx: 不不不我这里当兵的人少到已经强制征兵了
+19:23: sismvg: 中国虽然是强制征兵法但是实际是可以自己选择的
+19:24: xxxxxxxx: 最后说我什么思想不太好没有意愿 人数够了所以不用去了
+19:24: xxxxxxxx: 好在人数凑够了
+19:24: xxxxxxxx: 不然就被抓走了
+19:25: sismvg: 早点换国籍
+19:25: sismvg: 这和民国抓壮丁有什么差别
+19:26: xxxxxxxx: 政治信仰不同
+19:27: GODDOG joined channel
+19:27: lhanjian: xxxxxxxx, 按说你大学军训参加过，就免服兵役了啊
+19:27: sismvg: 但是对我们来说结局一样啊
+19:28: lhanjian: 结局一样？
+19:29: sismvg: 各种麻烦
+19:31: lhanjian: 哟，MR酱
+19:32: sismvg: 怎么可能，3年的知识空白可不是那么容易填的
+19:33: xxxxxxxx: 知识空白不可怕 可怕的是你要和一群想法神奇的家伙混三年
+19:33: lhanjian: 义务兵不需要3年吧
+19:35: sismvg: 我现在连1个月都不能空白
+19:35: sismvg: xxxxxxxx:会体检什么呢
+19:35: sismvg: 我做个准备
+19:37: xxxxxxxx: 不清楚你们那 主要是看体重比例和视力之类的
+19:37: lhanjian: 这个可以靠你的军训证明免服兵役的吧……
+19:38: sismvg: 体重没问题。。视力的话。。我的眼睛很奇怪。。就是不近视。。
+19:39: lhanjian: 装近视（如果你们不用机器测的话）
+19:39: xxxxxxxx: 我眼镜都带了几年了他们用机器检查说我是装近视你敢信?
+19:40: sismvg: 可以通过压迫视神经达到短时间高度近视
+19:40: sismvg: 但是不能太长
+19:40: lhanjian: xxxxxxxx, sismvg不是说他不近视么……
+19:41: lhanjian: xxxxxxxx, 你要是近视的话，怕啥啊……
+19:41: xxxxxxxx: 关键是视力过了.....
+19:41: sismvg: 你多少度。。
+19:41: lhanjian: 看来你的学历太“高”了……
+19:41: sismvg: 像我这个低学历的很危险
+19:42: xxxxxxxx: 现在350度的眼镜凑合用 似乎有点散光
+19:42: sismvg: 大概是个什么感觉，不用眼镜的时候
+19:42: lhanjian: sismvg, 你要是高中学历，那就当兵很难躲了吧
+19:42: sismvg: 我是职校。。但是是科技工作者
+19:43: xxxxxxxx: 不戴眼镜我连键盘上的字都看不清....
+19:43: lhanjian: 同等学力呢？
+19:44: lolisa: \q,没关系了
+19:44: sismvg: 不清楚呢
+19:44: sismvg: 开了学籍证明都没逃掉。。
+19:44: lolisa: 现在已经优化出10倍速了233
+19:45: sismvg: relase
+19:45: sismvg: release
+19:45: lolisa: ？
+19:45: sismvg: release模式
+19:45: lolisa: 是啊
+19:45: lolisa: 不是
+19:45: lolisa: CPTD
+19:45: lolisa: 还有一本logic for CS:foundations of ATP
+19:46: lolisa: 我就是照着后面一本输的，但是速度好慢。。。
+19:46: lolisa: 然后最后面的resolution method又太鬼畜不会写。。。
+19:47: xxxxxxxx: lhanjian: 话说和学历没关系 我遇到那次是先体检再查你身份
+19:48: lhanjian: soga
+19:48: sismvg: 本来逃过今年的话就能去海外工作了。。
+19:49: lolisa: \q,你说的书英文名字叫什么？我想看下
+19:49: lolisa: CPDT,手滑了
+19:50: lolisa: Certificated Programming with Dependent Type
+19:50: lolisa: 主讲COQ
+19:50: lolisa: CPDT不是ATP啊
+19:50: lolisa: ATP是后面那一本
+19:51: lolisa: 你这本也是COQ！谢了，CPDT看完一遍后正愁没有what to read next
+19:51: lhanjian: sismvg, 现在已经限制你出境了？！
+19:51: sismvg: 没有，但是出国要明年。。
+19:52: lhanjian: sismvg, 还是先打听消息吧……
+19:52: xxxxxxxx: 出国干啥? 做手术?
+19:53: lolisa: 不对吧
+19:53: sismvg: 保密
+19:53: lolisa: CPDT好像是经典老书
+19:53: lhanjian: <sismvg> 本来逃过今年的话就能去海外工作了。。
+19:53: xxxxxxxx: 看来是类似卖屁股之类的
+19:53: sismvg: 烧
+19:54: sismvg: 希望我请假回来的时候没被开掉。。
+19:54: lolisa: 真的好像是今年的书哎，看来是记错了
+20:04: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+20:06: windforce joined channel
+20:12: lolisa: http://tieba.baidu.com/p/2637023154 炮姐又卖萌2333
+20:12: xxxxxxxx: 1楼2013-10-07 16:41
+20:14: lolisa: 我知道，这个时候炮姐的AI已经破了全球记录了吧
+20:15: whatofor: 我说感觉几年前就看过了。。
+20:15: xxxxxxxx: 几年前......
+20:15: whatofor: 总之很久了。
+20:15: lolisa: 说不定炮姐经常卖萌卖弱。。。2333
+20:19: xia joined channel
+20:23: zzzzzzzz quit:Quit: Konversation terminated!
+20:23: FrankHB joined channel
+20:25: GODDOG quit:Quit: leaving
+20:29: windforce: = = 
+20:29: windforce: 我还回了卧槽。
+20:33: GODDOG joined channel
+20:39: GODDOG quit:Quit: leaving
+20:41: code_new quit:Remote host closed the connection
+20:41: xia quit:Quit: ChatZilla 0.9.90.1 [Firefox 30.0/20140605174243]
+20:41: GODDOG joined channel
+20:46: GODDOG quit:Client Quit
+21:06: lolisa: 不一定手动吧，怎么看都是代码生成的
+21:13: hope1: google好像恢复了？
+21:17: windforce: hope1, 我这儿没。
+21:18: xxxxxxxx: 时好时坏不过goagent可用了
+21:18: hope1: 不知道是运营商还是大墙
+21:18: windforce: 啊，卧槽，回去改圆来那个二叉堆，我才发现那会儿多SB。
+21:19: windforce: 把个程序写成那样，难为羊驼还有心情跟我讲内存池。
+21:19: windforce: = =
+21:21: iyzsong quit:Quit: poweroff
+21:24: FrankBH joined channel
+21:24: lolisa: frankBH什么情况
+21:26: windforce: = =
+21:26: windforce: 高仿
+21:26: windforce: 球耻
+21:37: lolisa: 我果然不是圣斗士2333
+21:37: lolisa: 昨天书忘在学校今天又是这样2333
+21:37: FvankHB: 不圣斗士也是每次被打个半死才能爆发的 别担心
+21:39: lh_mouse: FrankHB, 
+21:39: AvankHB: = =
+21:40: windforce: 2333
+21:41: lh_mouse: [master 77b192a] Added mcf dll.
+21:41: lh_mouse:  12 files changed, 216 insertions(+), 30 deletions(-)
+21:48: hope1 quit:Ping timeout: 255 seconds
+21:48: lhanjian quit:Quit: 风光冉冉东西陌
+21:51: windforce: Total Download Size:    508.63 MiB
+21:51: windforce: Total Installed Size:   1997.99 MiB
+21:51: windforce: Net Upgrade Size:       89.80 MiB
+21:51: windforce: = =
+21:52: Youmu: :: Starting full system upgrade...
+21:52: Youmu:  there is nothing to do
+21:52: Youmu: = =
+21:52: lh_mouse: geordi, <<noexcept(foo.swap(bar)); vector<int> foo, bar;
+21:52: geordi: true
+21:58: windforce: = =
+21:59: Youmu quit:Quit: WeeChat 0.4.3
+22:01: SleepHB: 大家好我是睡球
+22:01: lolisa: 我是萝莉球
+22:01: lh_mouse: lolisa, 快入碗！
+22:02: lolisa: 还在优化了。。。
+22:02: lh_mouse: geordi, { try { foo(); } catch(int e){ cout <<"exception caught -> " <<e; } } void foo() throw(char) { throw 12345; }
+22:02: geordi: terminated by unexpected exception: 12345
+22:04: windforce: lolisa, 快上炕
+22:05: FvankHB: 我要强调我不是基球
+22:05: FvankHB: 我一点也不基
+22:05: FrankHB: 肛你丫的。
+22:05: windforce:  = =
+22:05: windforce: 23333
+22:06: windforce: 本世纪最搞的笑话
+22:06: windforce: 你这只大线虫
+22:06: lh_mouse: lolisa, 快入碗！
+22:10: FrankBH quit:
+22:10: windforce: syu完毕 重启
+22:14: windforce quit:Quit: Leaving
+22:15: windforce joined channel
+22:23: hope1 joined channel
+22:29: Plough quit:Remote host closed the connection
+22:33: GODDOG joined channel
+22:38: windforce quit:Quit: 碎叫。
+22:40: whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:41: silencly07 joined channel
+22:45: hope1 quit:Read error: Connection reset by peer
+23:02: zzzzzzzz joined channel
+23:07: lolisa: 今天我发现听DOKIDOKI可以为我带来好运
+23:07: cleamoon quit:Ping timeout: 272 seconds
+23:07: lolisa: 听了一会代码就提速200倍了
+23:07: cleamoon joined channel
+23:09: lolisa: 2333
+23:10: FvankHB: 你可以进一步提高自己恋童程度试试看
+23:14: GODDOG quit:Ping timeout: 255 seconds
+23:20: lh_mouse: 20140618总编辑时间 内地高校开启“女神营销”模式招揽生源
+23:20: lh_mouse: 播放数：17280
+23:36: SleepHB quit:Quit: Leaving
+23:50: lolisa quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140614054737]

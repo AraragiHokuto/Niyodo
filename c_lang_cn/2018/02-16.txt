@@ -1,0 +1,163 @@
+00:05 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+00:12 \s quit:Remote host closed the connection
+00:14 \s joined channel
+00:35 \s quit:Remote host closed the connection
+00:36 \s joined channel
+00:38 varna quit:Ping timeout: 240 seconds
+01:34 matchray: 喵
+01:46 xhe quit:Quit: leaving
+01:58 \s quit:Remote host closed the connection
+01:59 \s joined channel
+02:04 \s quit:Remote host closed the connection
+02:05 \s joined channel
+02:08 \s quit:Remote host closed the connection
+02:09 \s joined channel
+02:09 \s quit:Changing host
+02:09 \s joined channel
+02:11 \s quit:Remote host closed the connection
+02:13 \s joined channel
+02:18 \s quit:Remote host closed the connection
+02:20 \s joined channel
+02:23 \s quit:Remote host closed the connection
+02:24 \s joined channel
+02:29 \s quit:Remote host closed the connection
+02:31 \s joined channel
+03:18 \s quit:Remote host closed the connection
+03:18 \s joined channel
+03:18 \s quit:Changing host
+03:18 \s joined channel
+03:54 \s quit:Remote host closed the connection
+03:56 \s joined channel
+04:01 \s quit:Remote host closed the connection
+04:01 \s joined channel
+04:01 \s quit:Changing host
+04:01 \s joined channel
+04:06 \s quit:Remote host closed the connection
+04:06 \s joined channel
+04:06 \s quit:Changing host
+04:06 \s joined channel
+04:10 \s quit:Remote host closed the connection
+04:12 \s joined channel
+04:15 \s quit:Remote host closed the connection
+04:18 \s joined channel
+04:41 FrankHB joined channel
+05:12 cleamoon_ quit:Quit: Connection closed for inactivity
+06:32 \s quit:Remote host closed the connection
+06:33 \s joined channel
+06:37 \s quit:Remote host closed the connection
+06:39 \s joined channel
+06:42 \s quit:Remote host closed the connection
+06:44 \s joined channel
+07:37 cleamoon_ joined channel
+09:27 \s quit:Remote host closed the connection
+09:28 \s joined channel
+09:33 \s quit:Remote host closed the connection
+09:35 \s joined channel
+09:39 \s quit:Remote host closed the connection
+09:41 \s joined channel
+09:46 \s quit:Remote host closed the connection
+09:47 \s joined channel
+09:48 lhanjian: matchray: 喵呜
+09:48 lhanjian: Aldrich: ping
+09:49 cleamoon_: lhanjian: 春节吼呀
+09:49 matchray: varna新年不献诗一首吗
+09:50 lhanjian: cleamoon_: 春节吼～
+09:51 \s quit:Remote host closed the connection
+09:52 \s joined channel
+09:58 \s quit:Remote host closed the connection
+09:59 \s joined channel
+10:01 xhe joined channel
+11:03 Youmu: lhanjian: 你这个有房的现充
+11:34 \s quit:Remote host closed the connection
+11:35 \s joined channel
+11:39 \s quit:Remote host closed the connection
+11:40 \s joined channel
+11:40 \s quit:Changing host
+11:40 \s joined channel
+11:44 iyzsong joined channel
+12:04 \s quit:Remote host closed the connection
+12:05 \s joined channel
+12:09 \s quit:Remote host closed the connection
+12:11 \s joined channel
+12:14 \s quit:Remote host closed the connection
+12:15 \s joined channel
+12:17 lhanjian: Youmu: 回家了？
+12:19 \s quit:Remote host closed the connection
+12:21 \s joined channel
+12:39 \s quit:Remote host closed the connection
+12:41 \s joined channel
+12:44 \s quit:Remote host closed the connection
+12:45 \s joined channel
+12:48 \s quit:Remote host closed the connection
+12:50 \s joined channel
+12:57 \s quit:Remote host closed the connection
+12:59 \s joined channel
+13:02 \s quit:Remote host closed the connection
+13:03 \s joined channel
+13:05 \s quit:Remote host closed the connection
+13:06 \s joined channel
+13:13 iyzsong quit:Ping timeout: 240 seconds
+13:22 \s quit:Remote host closed the connection
+13:22 \s joined channel
+13:22 \s quit:Changing host
+13:22 \s joined channel
+13:48 \s quit:Remote host closed the connection
+13:49 \s joined channel
+13:50 \s quit:Remote host closed the connection
+13:51 \s joined channel
+13:53 \s quit:Client Quit
+15:55 matchray: lh_not_bot: 怎麼解除 const Cat* getCat() const{return cat;} \n Cat* getCat(){return cat;} // 的重複勞動。return cat可能更複雜
+15:57 matchray: https://github.com/lhmouse/poseidon/blob/master/src/mutex.hpp#L69 這種把member放在class末尾的做法我很討厭；苦於沒人做 $cquery/memberHierarchy 可視化
+15:58 matchray: https://google.github.io/styleguide/cppguide.html#Declaration_Order  造成閱讀障礙
+16:00 matchray: Names and Order of Includes 哪種方式對PCH最友好
+16:02 matchray: 只能寫       return const_cast<DefInfo *>(this)->getMacroInfo(); 了
+16:06 fy quit:Remote host closed the connection
+16:07 fy joined channel
+16:56 iyzsong joined channel
+18:54 Taggnostr quit:Remote host closed the connection
+18:54 Taggnostr joined channel
+19:06 cc joined channel
+19:14 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+19:54 lhanjian: 毁了毁了
+19:54 lhanjian: 莫名其妙不能boot到硬盘了
+19:54 lhanjian: 明明硬盘还能找到
+19:57 iyzsong quit:Ping timeout: 276 seconds
+20:16 iyzsong joined channel
+20:29 GoBzzzt joined channel
+20:30 \s joined channel
+20:30 \s quit:Changing host
+20:30 \s joined channel
+20:30 \s quit:Client Quit
+20:39 cleamoon_: 你的超算还是你的本子
+21:40 Guest24 joined channel
+21:48 Guest24 quit:Remote host closed the connection
+21:51 lhanjian: cleamoon_: SteamBox，现在好了
+21:58 cc_ joined channel
+22:01 cc_ quit:Client Quit
+22:04 cleamoon_: lhanjian: orz，你的玩具好多
+22:05 lhanjian: cleamoon_: 我忍不住，就是要买
+22:05 lhanjian: 我还买了个X86的单片机
+22:06 cleamoon_: 土豪的心理我不懂
+22:07 cleamoon_: 话说steambox好吗
+22:08 lhanjian: cleamoon_: https://www.amazon.com/gp/product/B00MF753JY/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
+22:08 lhanjian: cleamoon_: 还不错，用起来简单，装个win10就好
+22:11 lhanjian: cleamoon_: https://www.amazon.com/gp/product/B00MF753JY/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
+22:12 cleamoon_: 那不就是一台电脑了吗
+22:15 lhanjian: cleamoon_: 就是一台电脑啊
+22:17 cleamoon_: lhanjian: 那就没法倒持了呀
+22:18 lhanjian: 倒持？
+22:18 cleamoon_: 类似折腾
+22:18 cleamoon_: 网络语言，作死
+22:19 lhanjian: cleamoon_: 可以折腾啊
+22:19 lhanjian: 显卡插槽是MXM
+22:19 lhanjian: 你可以转接成PCIE
+22:19 lhanjian: CPU
+22:19 lhanjian: 什么都能换
+22:19 lhanjian: (除了主板
+22:21 cleamoon_: lhanjian: 于是梨花酱在上面玩了什么吗
+22:24 cc_ joined channel
+22:31 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+22:36 lhanjian: cleamoon_: 现在准备弄MXMtoPCI
+22:36 lhanjian: cleamoon_: 现在准备弄MXMtoPCIE转接卡，换换口味
+22:37 cleamoon_: .........
+22:41 cc_ quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…

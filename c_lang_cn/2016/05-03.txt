@@ -1,0 +1,330 @@
+00:09 Matsune_ quit:Quit: Leaving
+00:18 Mokou: 睡覺
+00:18 Mokou: 諸君武運
+00:18 Mokou quit:Quit: 睡覺
+00:33 lh_mouse quit:Read error: Connection reset by peer
+01:34 lhanjian quit:Quit: Connection closed for inactivity
+01:35 xxxxxxxxx quit:Quit: Leaving...
+02:34 stardust quit:Quit: Connection closed for inactivity
+04:32 dantznc joined channel
+04:32 dantmnf quit:Ping timeout: 268 seconds
+04:32 dantznc is now known as dantmnf
+04:37 x-iyzsong quit:Ping timeout: 276 seconds
+04:38 iyzsong joined channel
+04:43 Youmu quit:Read error: Connection reset by peer
+04:44 Youmu joined channel
+04:59 Youmu quit:Quit: Connection closed for inactivity
+05:06 cleamoon quit:Read error: Connection reset by peer
+05:13 condy quit:Ping timeout: 246 seconds
+05:14 lh_not_bot quit:Ping timeout: 246 seconds
+05:15 lh_not_bot joined channel
+05:16 condy joined channel
+05:23 cleamoon joined channel
+06:24 cleamoon quit:Read error: Connection reset by peer
+06:38 cleamoon joined channel
+06:42 cleamoon_ joined channel
+07:06 cleamoon_ quit:Read error: Connection reset by peer
+07:06 cleamoon quit:Read error: Connection reset by peer
+07:07 cleamoon joined channel
+07:23 cleamoon_ joined channel
+08:02 cleamoon_ quit:Read error: Connection reset by peer
+08:02 cleamoon quit:Read error: Connection reset by peer
+08:03 cleamoon joined channel
+08:19 cleamoon_ joined channel
+08:46 cc joined channel
+09:18 lh_mouse joined channel
+09:34 cleamoon_ quit:Read error: Connection reset by peer
+09:34 cleamoon quit:Read error: Connection reset by peer
+09:35 cleamoon joined channel
+09:52 cleamoon_ joined channel
+09:58 whatofor joined channel
+10:17 cleamoon_ quit:Read error: Connection reset by peer
+10:17 cleamoon quit:Read error: Connection reset by peer
+10:18 cleamoon joined channel
+10:36 cleamooon joined channel
+10:36 cleamoon quit:Read error: Connection reset by peer
+11:30 cleamooon quit:Read error: Connection reset by peer
+11:59 stardust joined channel
+12:29 Dove joined channel
+12:38 whatofor_1 joined channel
+12:42 whatofor quit:Ping timeout: 276 seconds
+12:49 Dove: dirty page是什么？ wiki上没有。
+12:50 Dove: 好吧，百度百科有脏页这个玩意。
+13:17 lhanjian joined channel
+13:34 iyzsong: m(_ _;)m
+13:39 Dove: iyzsong: 揉 捏
+13:42 iyzsong: 在手机上玩这种小说 吼啊 http://ifdb.tads.org/viewgame?id=qzftg3j8nh5f34i2
+13:43 cc: 上午忙完，下午打酱油的节奏~
+13:53 Dove: iyzsong: 英文的orz
+13:54 Dove: cc: 你是做什么工作的吖？
+13:55 Hoxily joined channel
+13:56 Dove: 我想找点美剧看，不想看书。
+13:56 cc: Dove: 医疗器械工程师
+13:56 Dove: cc: soga
+13:57 iyzsong: orz
+13:58 Dove: 比码农高级多了
+14:06 cc: 没啥技术含量，还是你们搞计算机的厉害
+14:15 Dove: 搞毛啊，搞来搞去啥都没搞会。
+14:37 lh_mouse: geordi, cout << sizeof(pthred_mutex_t)
+14:37 geordi: error: 'cout' does not name a type
+14:37 lh_mouse: geordi, << sizeof(pthred_mutex_t)
+14:37 geordi: error: 'pthred_mutex_t' was not declared in this scope
+14:37 Seger joined channel
+14:37 lh_mouse: geordi, << sizeof(pthread_mutex_t)
+14:37 geordi: 40
+14:38 lh_mouse: geordi, << sizeof(pthread_cond_t)
+14:38 geordi: 48
+14:38 lh_mouse: geordi, << sizeof(pthread_t)
+14:38 geordi: 8
+14:40 lh_mouse: geordi, << sizeof(pthread_key_t)
+14:40 geordi: 4
+14:40 lh_mouse: 辣鸡。
+14:55 Youmu joined channel
+15:33 lh_mouse: geordi, << TYPE<decltype(string::push_back)>
+15:33 geordi: error: invalid use of non-static member function 'void __cxx11::basic_string<_CharT, _Traits, _Alloc>::push_back(_CharT) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]'
+15:34 lhanjian quit:Quit: Connection closed for inactivity
+15:46 condy: -.-
+15:48 Dove: condy: 揉
+15:48 condy: 0.0
+15:49 Dove: condy: 捏
+15:49 Dove: 好无聊啊，我看书都看了一章了，好有效率卧槽。
+15:49 condy: (｢・ω・)｢
+15:50 Dove: 有没有什么好看的好玩的东西推荐啊。
+15:51 Dove: 翘课到网吧看书，旁边的人都在lol。
+15:51 Dove: 算了，回去了。
+15:51 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+16:02 Oyodo joined channel
+16:02 Hoxily quit:Ping timeout: 276 seconds
+16:03 felixonmars joined channel
+16:27 code_new joined channel
+16:29 Dove joined channel
+16:31 Dove: 啊，到家了。
+16:32 condy: 羡慕
+16:39 T-J-M joined channel
+16:57 xxxxxxxx joined channel
+17:05 lhanjian joined channel
+17:17 Youmu: geordi: insert & before string
+17:17 geordi: void (__cxx11::basic_string<char, char_traits<char>, allocator<char> >::*)(char)
+17:22 * lh_mouse slaps condy around a bit with a large trout
+17:25 xxxxxxxx: 尊敬的新浪微盘用户，
+17:25 xxxxxxxx: 您好，非常抱歉的通知您，为配合监管部门专项整治行动，我们将于2016年6月30日关闭免费个人用户的存储服务，即日起逐步暂停分享及站内搜索服务至整改结束，请您及时备份您的文件，过期新浪微盘将不再保留您的数据。微盘会员、微博会员及新浪VIP邮箱用户的服务不受到此次调整影响（会员服务细则）。
+17:28 Dove: 哈哈哈，我不用新浪的盘。
+17:29 Dove: 微盘会员、微博会员及新浪VIP邮箱用户的服务不受到此次调整影响（会员服务细则）。2333
+17:44 cc quit:Remote host closed the connection
+18:29 Hoxily_ quit:Quit: Leaving
+18:38 Mokou joined channel
+18:41 cleamooon joined channel
+18:46 xxxxxxxx: 然而重点是会员和VIP为啥能不受影响?
+18:47 cleamooon quit:Ping timeout: 250 seconds
+19:03 Mokou: 莽
+19:04 Mokou: 噫，这命中
+19:04 Mokou: 不能上主力就是蛋疼
+19:13 Mokou: 被打回去了
+19:14 lhanjian quit:Quit: Connection closed for inactivity
+19:20 cc joined channel
+19:29 Youmu quit:Quit: Connection closed for inactivity
+19:47 code_new: 活动四段锁有点慌啊> <
+19:48 hoxily joined channel
+19:49 code_new: Mokou: 红旗打到哪了
+19:49 Mokou: code_new: 我刚开始出击
+19:49 code_new: 好吧
+19:49 Mokou: 我得上学呢
+19:49 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+19:50 code_new: 我刚打完南西……
+19:50 code_new: 活动还没动
+19:51 Mokou: OTL
+19:51 Mokou: 活动期间打南西的肝帝
+19:52 code_new: 想等你们一起打的OTL
+19:52 Mokou: http://ww1.sinaimg.cn/mw690/712146a4gw1f3ib95n3mmj20fk15jall.jpg
+19:52 Mokou: 你还有多少桶
+19:52 code_new: 1653
+19:52 Mokou: 好
+19:52 Mokou: 开荒交给你了
+19:53 code_new: ……不是有dalao开到E6了吗
+19:53 Mokou: dalao的配置你学得了么
+19:53 Mokou: 想想哈里发的装备
+19:53 code_new: 没看哈里发的直播
+19:54 code_new: 据说日本dalaoE6甲打了12万油弹
+19:54 code_new: 66个女神
+19:54 Mokou: 先吔一轮哈里发权杖，再吔一轮五连MAX，最后全队12女神
+19:54 Mokou: 你怎么学
+19:55 code_new: OTL
+19:55 Mokou: (｡･ω･)ﾉ所以开荒的重任就交给你了
+19:56 code_new: 好吧……
+19:56 code_new: 你E1已经开始了吗
+19:56 Mokou: 在打
+19:56 Mokou: 用的海色配置
+19:56 code_new: 哦哦
+19:58 Mokou: 我先剧透一下，E1门神随机院长主任
+19:59 cc joined channel
+19:59 code_new: ……
+20:00 cc quit:Client Quit
+20:01 code_new: wiki上看到了……
+20:01 Mokou: 而且进那个点的时候基本上没油了
+20:01 code_new: 我更希望是院长
+20:01 code_new: 你走的上路还是下路
+20:02 Mokou: 下路
+20:02 code_new: 哦哦
+20:02 Mokou: 我觉得上路过不了门神
+20:03 code_new: 下路A点有点恐怖啊
+20:03 Mokou: A点躺过吧
+20:03 Mokou: 水打不是
+20:04 code_new: 好吧
+20:07 xxxxxxxx: “不能再允许中国强奸我们国家。”当地时间1日，美国共和党总统参选人特朗普参加印第安纳州韦恩堡市竞选活动时再次语出惊人，用“强奸”形容美国对中国的贸易逆差问题。虽然一向大嘴的特朗普在竞选中多次就中国贸易问题口出狂言，但美国媒体称，这是他谈及此事第一次使用“强奸”字眼。
+20:07 Mokou: 这白银花花地往大清国流啊
+20:08 code_new: 2333
+20:09 iyzsong: .( ；∀；)
+20:11 code_new: 我试试上路的走法劝退率如何
+20:13 code_new: 距离远征归还还有五分钟_(:з」∠)_ 
+20:13 Mokou: 主任……
+20:13 Mokou: 这次要回家
+20:13 code_new: 脸过去
+20:14 Mokou: ^ 完了这毒奶奶我了
+20:14 Mokou: 还好，没劝退
+20:15 code_new: ( ；∀；)
+20:15 Mokou: 下一盘我换两条BB
+20:15 code_new: 四段锁好慌啊……
+20:15 code_new: 感觉dd严重不足
+20:16 Mokou: 刷闪上
+20:20 condy: iyzsong: 家里爽不爽?
+20:20 iyzsong: (*´∀｀)不爽啊
+20:24 code_new: Mokou: 驼兄今晚不来了吗
+20:24 Mokou: code_new: 他感冒
+20:24 code_new: 好吧
+20:27 condy: iyzsong: _(:з」∠)_
+20:33 iyzsong: (つд⊂)
+20:38 condy: iyzsong: _(:з」∠)_
+20:38 condy: iyzsong: prpr
+20:38 condy: iyzsong: O_O
+20:48 Mokou: E1斩了
+20:49 Mokou: 间宫
+20:49 Mokou: 伊良湖*2
+20:49 Mokou: 饭团*2
+20:49 Mokou: 大发小战车
+20:50 Dove: iyzsong: 你咋了？
+20:50 Dove: 我也好不爽啊。
+20:51 code_new: Orz
+20:51 Dove: 都没有片看。
+20:51 Dove: 好看的美剧都死绝了么？
+20:55 xxxxxxxx: 我坚信羊驼其实是约妹子去现充了 随便找了个感冒的借口233
+20:55 xxxxxxxx: 或者在自己扮女朋友233
+21:08 code_new: 噫
+21:11 xxxxxxxx quit:Quit: Leaving...
+21:18 code_new: E1上路配置还不错
+21:21 code_new: 2cvl2ca2bb+1cl5dd 全高速水打
+21:24 code_new: 主任OTL
+21:24 code_new: 强行司令部
+21:25 Mokou: 劝退了
+21:25 Mokou: E2我先打到这
+21:25 Mokou: 明天再说
+21:26 code_new: C败……
+21:27 code_new: 把带彩云的cvl带回去以后，boss马上给我来了个T不利……
+21:28 Mokou: ……
+21:28 code_new: 还好boss很弱……
+21:29 Mokou: boss吊着打
+21:29 Mokou: 问题在于你得先活到Boss
+21:31 code_new: 目前为止还没劝退
+21:31 Mokou: OTL
+21:31 code_new: 才打了两次而已……
+21:32 Mokou: 我第一次进去直接被打回来
+21:32 code_new: ……
+21:35 code_new: Mokou: 话说红旗这次屯了多少资源
+21:36 Mokou: 十一万油弹六百五十桶
+21:36 Mokou: 极其悲惨
+21:36 code_new: 还可以
+21:36 Mokou: 桶完全不够
+21:37 code_new: E6消耗很大，不知E7怎样
+21:38 Mokou: E7啊，我报个数据
+21:38 Mokou: 850/270
+21:39 code_new: 这两个数字是？
+21:39 Mokou: 850血270甲
+21:39 code_new: …………
+21:39 Mokou: 也是姬级麻将桌
+21:40 code_new: 我选择咸鱼
+21:40 Mokou: E6丙三个姬
+21:41 code_new: ……
+21:41 Mokou: 你还觉得六百桶还可以么……
+21:46 code_new: 田中：想获得自由和民主是需要付出艰辛的努力的
+21:46 Mokou: 田中：谁还当甲鱼？
+21:47 code_new: 哈里发打完E7了吗
+21:47 Mokou: 下午五点首次E6突破
+21:48 Mokou: 到现在没人见过E7斩杀什么样
+21:48 code_new: 哦哦
+21:48 code_new: ……
+21:51 Mokou: 啊，出来了
+21:51 Mokou: 六方会谈
+21:51 code_new: ……
+21:51 code_new: 哪六方
+21:52 Mokou: 中枢姬-坏 主任 院长*2 驱逐古姬*2
+21:53 code_new: ……
+21:55 Mokou: 不是很懂活动怎么打
+21:55 code_new: 鱼点大破QAQ
+21:56 code_new: 每次活动都是智商的比拼
+21:57 code_new: 门神T有病
+21:58 stardust: http://mil.news.sina.com.cn/china/2016-05-01/doc-ifxrtztc3113517.shtml  <-- 日本程序员
+21:59 code_new: ……
+22:01 Mokou: 驱逐古姬 195/167
+22:02 code_new: 这是什么驱逐，这么厚的皮
+22:02 Mokou: 这是比睦月级还老几代的驱逐舰
+22:02 code_new: ……
+22:05 Mokou: E7丙斩杀：中枢姬800 飞行场500 院长*2 后期爷*2
+22:06 code_new: OTL
+22:06 code_new: 想当个咸鱼都难啊
+22:07 Mokou: 也就是说这次的E7丙基本上是夏活E7甲
+22:07 Mokou: 如果没有削弱的话
+22:07 code_new: …………
+22:07 Mokou: 羊驼子弃坑了
+22:08 code_new: 要专心工作了吗
+22:08 Mokou: 大概是
+22:08 Mokou: 这活动没法打
+22:08 code_new: 好吧
+22:09 code_new: 为了自由和民主……
+22:09 Mokou: 去他妈的皿煮目田
+22:09 code_new: 2333
+22:10 Mokou: 简直胡闹
+22:10 Mokou: 得亏夏E7有个削甲，不然我估计明天田中就得被刺杀
+22:11 code_new: E7丙boss斩杀护甲多少
+22:11 Mokou: 不知道
+22:11 code_new: 好吧
+22:12 Mokou: 不过我这么说吧
+22:12 Mokou: 如果这玩意护甲是0，那么魔王雷CI完全暴击勉强能打死
+22:13 code_new: ……
+22:13 Mokou: 但这次不给你上魔王
+22:16 code_new: E1斩杀
+22:17 cc joined channel
+22:22 code_new: Mokou: 话说E2需要上主力dd吗
+22:22 Mokou: 你需要上能带大发的DD
+22:22 code_new: ……
+22:23 Mokou: 那是个6-4
+22:23 code_new: ……
+22:24 T2 joined channel
+22:24 code_new: 能带大发的dd只有(霞/睦月/如月)改二？
+22:25 Mokou: 霞睦月如月皋月江风响改二
+22:25 code_new: 哦哦
+22:26 Dove quit:Ping timeout: 260 seconds
+22:26 cc: 我今天花了$369.99
+22:27 code_new: 壕
+22:27 cc: 买了魅族的pro5 ubuntu。。。。
+22:27 cc: 16号朋友回国，带过来
+22:27 cc: 不知道能不能用。。。。
+22:27 code_new: OTL
+22:29 T2 quit:Ping timeout: 260 seconds
+22:31 code_new: E2可以捞照月了
+22:31 code_new: 我先丙走一波
+22:50 code_new: 竟然被小鬼1滴血劝退……
+22:52 Mokou: 正常
+22:52 code_new: 虽然说捞照月不需要进boss
+22:53 lhanjian joined channel
+22:53 code_new: lhanjian: 揉
+22:54 cc: 睡觉！
+22:54 lhanjian: 捏
+22:54 cc quit:Quit: xc:www.chnxc.net
+22:54 lhanjian: 妞妞
+22:54 lhanjian: 有点累，碎觉了
+22:54 code_new: 安
+22:58 code_new: F点全家桶……
+22:58 code_new: 我打的可是丙啊……
+23:03 Mokou: 先睡
+23:03 Mokou: 诸君武运
+23:03 Mokou quit:Quit: 睡觉
+23:50 code_new quit:Read error: Connection reset by peer

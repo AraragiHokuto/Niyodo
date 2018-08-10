@@ -1,0 +1,429 @@
+00:13:acgtyrant quit:Remote host closed the connection
+00:29:lh_mouse quit:Read error: Connection reset by peer
+00:35:slowcoach quit:Ping timeout: 260 seconds
+00:50:zzzzzzzz quit:Quit: Leaving
+00:56:zzzzzzzz joined channel
+01:06:iyzsong quit:Quit: poweroff
+01:07:cleamoon^ joined channel
+01:09:Petrus07 quit:Quit: Leaving.
+02:04:khysw joined channel
+02:29:khysw quit:Read error: Connection reset by peer
+02:47:hysw joined channel
+02:47:khysw joined channel
+06:02:sismvg joined channel
+06:24:sismvg quit:Read error: Connection reset by peer
+06:31:hysw quit:Ping timeout: 264 seconds
+07:47:sismvg joined channel
+07:48:sismvg: 金士顿骇客神条 国外:480包邮 国内:600 包邮
+07:49:sismvg: 结果关税要100
+08:09:khysw quit:Ping timeout: 252 seconds
+08:15:khysw joined channel
+08:27:_0943x joined channel
+08:28:_0943x left channel:
+08:42:slowcoach joined channel
+08:46:khysw quit:Read error: Connection reset by peer
+08:57:khysw joined channel
+08:58:iyzsong joined channel
+09:03:yujie joined channel
+09:06:yujie: 燕过南楼半色秋
+09:10:yujie left channel:"Leaving"
+09:10:tree_ joined channel
+09:15:khysw: (=.=)
+09:20:khysw quit:Read error: Connection reset by peer
+09:29:khysw joined channel
+09:32:khysw quit:Read error: Connection reset by peer
+09:32:tree_ quit:Remote host closed the connection
+09:33:sismvg_ joined channel
+09:34:sismvg quit:Ping timeout: 264 seconds
+09:37:whatofor joined channel
+09:38:sismvg_ quit:Ping timeout: 245 seconds
+09:38:sismvg_ joined channel
+09:41:hysw joined channel
+09:41:khysw joined channel
+09:45:sismvg_ quit:Remote host closed the connection
+09:47:whocares_2 quit:Ping timeout: 255 seconds
+09:47:zzzzzzzz quit:Ping timeout: 245 seconds
+10:04:lh_mouse joined channel
+11:29:zzzzzzzz joined channel
+11:54:sismvg joined channel
+11:59:sismvg quit:Ping timeout: 272 seconds
+12:00:sismvg joined channel
+12:13:sismvg quit:Read error: Connection reset by peer
+12:14:sismvg_ joined channel
+12:20:slowcoach quit:Ping timeout: 246 seconds
+12:23:sismvg__ joined channel
+12:23:sismvg_ quit:Read error: Connection reset by peer
+12:27:hysw: sismvg__:  什么情况?
+12:27:sismvg__ quit:Read error: Connection reset by peer
+12:27:sismvg joined channel
+12:28:hysw: sismvg:  什么情况?
+12:28:sismvg: ？
+12:28:hysw: 一堆Connection reset by peer
+12:28:sismvg: sb的电信定制版的问题
+12:29:hysw: sismvg: 把智商交出来
+12:29:sismvg quit:Read error: Connection reset by peer
+12:30:sismvg joined channel
+12:30:sismvg: 坑爹的wifi
+12:32:sismvg_ joined channel
+12:32:sismvg quit:Read error: Connection reset by peer
+12:33:hysw: sismvg_: 去弄个Linksys EA6900之类的去玩玩？
+12:33:sismvg_: 买不道
+12:34:sismvg_: 还是买诺基亚ba
+12:34:hysw: 貌似价格游$200+
+12:36:sismvg_: 我只有100
+12:53:Xilzzerts joined channel
+12:57:sismvg_ quit:Remote host closed the connection
+13:20:lh_mouse: geordi, <<0b'0110'1010
+13:20:geordi: error: digit separator after base indicator
+13:20:lh_mouse: geordi, <<0b0'0110'1010
+13:20:geordi: 106
+13:32:lh_mouse: geordi, 123_nin; template<typename CharT, CharT First> constexpr unsigned long long nin_impl(unsigned long long ull){ return First - '0'; } template<typename CharT, CharT First, CharT... Remaining> constexpr unsigned long long nin_impl(unsigned long long ull){ return nin_impl<CharT, Remaining...>() * 9 + (First - '0'); } template<typename CharT, CharT First, CharT... Remaining> constexpr unsigned long long operator""_nin(){ return nin_impl<CharT, 
+13:32:geordi: error: Unexpected end of request. Expected '}', '/', or balanced code.
+13:32:lh_mouse: First, Remaining...>(); }
+13:33:lh_mouse: geordi, 123_nin; typedef unsigned long long Ull; template<typename CharT, CharT First> constexpr Ull nin_impl(){ return First - '0'; } template<typename CharT, CharT First, CharT... Remaining> constexpr Ull nin_impl(){ return nin_impl<CharT, Remaining...>() * 9 + (First - '0'); } template<typename CharT, CharT First, CharT... Remaining> constexpr Ull operator""_nin(){ return nin_impl<CharT, First, Remaining...>(); }
+13:33:geordi: error: expected unqualified-id before numeric constant
+13:33:lh_mouse: geordi, <<123_nin; typedef unsigned long long Ull; template<typename CharT, CharT First> constexpr Ull nin_impl(){ return First - '0'; } template<typename CharT, CharT First, CharT... Remaining> constexpr Ull nin_impl(){ return nin_impl<CharT, Remaining...>() * 9 + (First - '0'); } template<typename CharT, CharT First, CharT... Remaining> constexpr Ull operator""_nin(){ return nin_impl<CharT, First, Remaining...>(); }
+13:33:geordi: error: literal operator template 'constexpr Ull operator""_nin()' has invalid parameter list.  Expected non-type template argument pack <char...> or <CharT, CharT...>
+14:05:slowcoach joined channel
+14:38:blackskygg joined channel
+14:42:lh_mouse: blackskygg, 揉
+14:43:endle joined channel
+14:54:blackskygg: lh-mouse, 爆
+14:57:lh_mouse: blackskygg, 去死
+14:58:blackskygg: 你竟口出狂言
+14:58:blackskygg: 出言不逊
+14:59:lh_mouse: blackskygg, 有本事来咬我呀
+15:04:endle quit:Quit: Leaving
+15:10:lh_mouse: geordi, { shared_ptr<int> p; p = nullptr; }
+15:10:geordi: <no output>
+15:10:lh_mouse: geordi, <<foo(); shared_ptr<int> foo(){ return nullptr; }
+15:10:geordi: 0
+15:11:varna joined channel
+15:12:varna: 好想侵犯药娘啊
+15:13:hysw: varna: 把智商交出来
+15:13:varna: 不给
+15:15:GODDOG joined channel
+15:16:varna: hysw: 要不这样吧，你变成药娘先让我侵犯了
+15:17:GODDOG: 无聊的下午
+15:17:GODDOG: varna: 你们在讨论什么有趣的事情？ 
+15:17:sismvg joined channel
+15:17:varna: 我刚来
+15:17:varna: 寒云要我给他智商，我觉得应该先组织一波爆了他
+15:18:cleamoon^: 讨论爆药娘
+15:18:sismvg: 主板好贵
+15:18:sismvg: 微星ph67死机王
+15:18:GODDOG quit:Client Quit
+15:18:Xilzzerts: 刚出来的X99似乎不错
+15:19:GODDOG joined channel
+15:19:sismvg: 1500一个
+15:20:hysw: 只有Z97-A的路过
+15:20:sismvg:  多晒到
+15:20:hysw: ?
+15:20:sismvg: 少刀
+15:21:sismvg: 多少刀
+15:21:Xilzzerts: B85我就满意了。。。
+15:21:hysw: sismvg: 没你那玩意贵
+15:22:sismvg: b85淘宝都是水货
+15:22:sismvg: 亚马逊中国用visa还是什么
+15:22:Xilzzerts: 淘宝600多京东800
+15:23:sismvg: 米国呢
+15:23:GODDOG: github 如果不用git工具 如何提交代码？ 
+15:23:sismvg: svn
+15:24:GODDOG: o
+15:26:iyzsong: - -b
+15:26:hysw: 貌似B85差不多就500
+15:29:sismvg: 还是换内存的好
+15:30:hysw_logbot joined channel
+15:30:sismvg: 2*2g +1*4g
+15:30:sismvg: 不知道会不会死机
+15:30:hysw: 8GiB*2飘过...
+15:30:sismvg: shnne
+15:31:sismvg: 剥削阶级
+15:31:sismvg: 关税之锤耀光芒
+15:31:hysw: HyperX Fury还是不错的...
+15:31:sismvg: 天朝要560
+15:32:hysw: 不算太贵...
+15:33:sismvg: 我看到个80刀的打折
+15:33:hysw: sismvg: 8GiB?
+15:33:sismvg: 2*4g
+15:34:hysw: -_- 我现在是用单条8GiB...
+15:35:sismvg: 12年的内存价格什么时候到来
+15:36:hysw: 等DDR VI 10GHz中
+15:41:sismvg quit:Remote host closed the connection
+15:43:sismvg joined channel
+15:44:GODDOG quit:Quit: leaving
+15:46:slowcoach quit:Ping timeout: 260 seconds
+15:48:slowcoach joined channel
+15:53:hysw quit:Ping timeout: 255 seconds
+16:03:varna: alsa崩溃了……
+16:03:sismvg: i3变成了赛扬..
+16:07:lh_mouse: 0 0
+16:07:sismvg: http://m.tiebaimg.com/timg?wapp&quality=100&size=b540_2000&cut_x=0&cut_w=0&cut_y=0&cut_h=0&sec=1369815402&di=48f3e05c46d9bd02f86518c6e5ec18ff&wh_rate=null&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2Fde025ce736d12f2e7ad08b774cc2d5628435683a.jpg
+16:07:sismvg: 少女你谁？
+16:09:varna: 好想侵犯药娘啊
+16:11:sismvg: 京东的东西好贵.
+16:11:sismvg: 我要tv版长门
+16:12:varna: 我等舰娘想歌上架
+16:13:sismvg: 吃我辽宁号
+16:13:lh_mouse: varna, 设计一个可动态卸载的动态库   至少需要三个回调： on_load(handle self);  notify_unload();  on_unload();   
+16:14:lh_mouse: 这样有问题么
+16:14:sismvg: 钢练:我要和妈妈合为一体。。
+16:14:varna: lh_mouse: 你要造组件？
+16:14:varna: 看上去没问题
+16:18:* varna 只上过鞍山号
+16:18:lh_mouse: varna, 动态库里怎么拿到自己的句柄  （dlopen 返回那个东西）
+16:19:varna: lh_mouse: 我也不知道怎么拿，估计你得workaround
+16:20:lh_mouse: varna, 以往的做法是 on_load(weak_ptr<Module> self);
+16:20:varna: soga
+16:20:lh_mouse: 操蛋的地方是显而易见的
+16:20:lh_mouse: 万一作死用了 shared_ptr  模块就卸不掉了
+16:20:lh_mouse: 自己保存自己的强引用怎么卸掉
+16:20:varna: 你非得这么分布地处理当然卸不掉……
+16:21:lh_mouse: 而且 on_load 用的是 C 回调  万一签名不一样 233
+16:21:varna: 为什么不配套一坨bus, 虽然显得沉重
+16:21:lh_mouse: varna, 我打个比方好了
+16:22:lh_mouse: 比如我加载一个模块  该模块响应 HTTP 请求   /foo
+16:22:lh_mouse: 我需要在 on_load 里面注册响应器
+16:22:varna: 哦，这样的啊
+16:22:lh_mouse: 但是有个问题  因为模块可能被卸掉  导致可执行代码也被卸掉了
+16:22:cleamoon joined channel
+16:22:lh_mouse: 所以 注册响应器的时候需要保存一个模块自身的弱引用  来检测模块是否被卸掉
+16:22:lh_mouse: 结果是这样的
+16:23:lh_mouse: shared_ptr<Servlet> p = register_servlet("/foo", self, responder_function);
+16:23:lh_mouse: self 是  weak_ptr<Module>
+16:24:lh_mouse: responder_function  大概是 HttpStatus responder_function(const char *verb, const map &get, const map &post)
+16:24:blackskygg quit:Ping timeout: 260 seconds
+16:24:lh_mouse: 这个弱引用是个句柄  但是模块自己还拿不到  于是只好塞 on_load 里面   但是我非常想改掉
+16:26:varna: 我看着还是不难受，估计你也不会接受workaround
+16:26:lh_mouse: 这东西应该做成静态的
+16:27:lh_mouse: 而不是塞到函数参数里
+16:27:lh_mouse: 写个静态函数  register_servlet 去掉这个参数
+16:27:lh_mouse: 否则到处带着太恶心
+16:29:sismvg quit:Read error: Connection reset by peer
+16:29:sismvg joined channel
+16:32:varna: cleamoon^: 今天放号
+16:51:sismvg: 长颈鹿对摩托车一见钟情企图与其发生性关系 
+16:52:varna: 肛啊！
+16:53:cleamoon: 没在家...
+16:53:varna: ...
+16:54:cleamoon: 等我回家都明天了...
+17:19:cleamoon: 顺便zeal丁又卡壳了...
+17:20:cleamoon: 没有伤加破不了物免
+17:23:sismvg: 我无法直视丹麦了。。
+17:24:sismvg: 每年有上千人去丹麦。。就是为了和动物啪啪啪。。
+17:24:sismvg: 而且还有动物*院
+17:36:tree_ joined channel
+17:36:cleamoon: 噗，怎么可能
+17:38:slowcoach quit:Ping timeout: 272 seconds
+17:39:tree_ quit:Remote host closed the connection
+18:04:cLeaMooN_ joined channel
+18:07:cleamoon quit:Read error: Connection reset by peer
+18:08:iyzsong quit:Quit: WeeChat 1.0
+18:09:cLeaMooN_ quit:Ping timeout: 272 seconds
+18:17:condy joined channel
+18:34:cleamoon joined channel
+18:37:Plough joined channel
+18:38:Xilzzerts quit:Quit: Leaving
+18:40:condy quit:Quit: leaving
+18:41:condy joined channel
+18:42:slowcoach joined channel
+19:04:Plough: 4-4斩了
+19:04:Plough: 掉落哈撸那
+19:26:iyzsong joined channel
+19:33:lolisa joined channel
+19:47:whocares_2 joined channel
+19:52:condy: geordi: { chat* s = itoa(10, 0, 10); cout << s; }
+19:52:geordi: error: 'chat' was not declared in this scope
+19:52:condy: geordi: replace chat with char
+19:52:geordi: error: 'itoa' was not declared in this scope
+19:56:lh_mouse: lolisa, 快到碗里来
+20:02:lolisa: 还在重构代码了QAQ之前的设计太烂改了3天了
+20:02:sismvg: 游民不能下游戏了。
+20:03:lolisa: lh_mouse，我想要一个first order logic的可以分辨constant&free_variable的DSEL，应该怎么写= =我顶多全部搞成free_variable= =
+20:07:cLeaMooN_ joined channel
+20:07:cleamoon quit:Read error: Connection reset by peer
+20:13:* lh_mouse 两眼四十五度望着天
+20:16:sismvg: 市区只能看到水泥
+20:17:sismvg: 郊区只能看到对面楼上的幼女
+20:18:cLeaMooN_: @我会假装看风景
+20:23:sismvg: tolove47已出
+20:24:iyzsong: 啥东西?
+20:26:condy: 赞！
+20:27:sismvg: 教练 我要当稠鱼烧
+20:28:sismvg: @iyzsong:nsfw
+20:36:code_new joined channel
+20:36:iyzsong: O.O
+20:36:cLeaMooN_: 浓缩废物？
+20:40:sismvg: not safe for wirk
+20:40:sismvg: work
+20:49:sismvg: 第一次看见MVC体系结构的时候以为是什么很叼的东西
+20:50:lh_mouse: MVC 渣渣
+20:50:sismvg: 结果看了wiki以后才知道这和自己写应用的时候的做饭没区别
+20:50:sismvg: 做法
+20:51:lh_mouse: 做应用也不用 MVC
+20:51:lh_mouse: 神经病
+20:51:lh_mouse: 本来 MC 可以合并
+20:52:sismvg: mfc？
+20:52:sismvg: 专业名词坑人
+20:52:lh_mouse: MCF 不是专业名词
+20:53:sismvg: my cf？
+20:54:sismvg: 商家主板不修了，直接退了我钱..
+20:54:iyzsong: 2333
+20:54:sismvg: 浪费我两天时间。。
+20:55:sismvg: 然后新的卖家发了百事园通
+20:55:sismvg: 看来我还是去实体店吧
+21:02:hoxily|droid joined channel
+21:04:SoftRUN joined channel
+21:05:whocares_2 quit:Ping timeout: 246 seconds
+21:07:sismvg: 爱莉好可爱
+21:08:whocares_2 joined channel
+21:08:MoeIcenowy joined channel
+21:08:cLeaMooN_ quit:Ping timeout: 272 seconds
+21:14:MoeIcenowy quit:Read error: Connection reset by peer
+21:14:MoeIcenowy joined channel
+21:15:cleamoon joined channel
+21:16:varna: 红旗出来
+21:16:sismvg quit:Quit: -a- Android IRC 2.1.3
+21:16:* varna 要在红旗酱上面行炒饭之事
+21:16:MoeIcenowy: ？
+21:17:acgtyrant joined channel
+21:17:varna: MoeIcenowy: 炒 饭之事就是东方馅挂炒饭的炒 饭
+21:17:MoeIcenowy quit:Client Quit
+21:19:zzzzzzzz quit:
+21:20:zzzzzzzz joined channel
+21:25:* varna 好想侵犯红旗啊
+21:32:cLeaMooN_ joined channel
+21:32:cleamoon quit:Read error: Connection reset by peer
+21:33:condy: 似乎鬼父出新的了..
+21:33:varna: 噗
+21:37:MoeIcenowy joined channel
+21:45:GODDOG joined channel
+21:50:GODDOG quit:Client Quit
+21:53:Plough: 9085/25005/7660/8905+163/19
+21:53:Plough: 这周末应该能让各项都跑上一万
+21:53:Plough: 不过还得大建……
+21:53:* varna 在肝苍龙
+21:54:* Plough 在屯资源
+21:55:Plough: 另外4-4斩掉了
+21:55:varna: 速推5-1 5-2
+21:56:varna: 然后喂满北上，准备两个幼女，开始治疗吧……
+21:56:Plough: 明天回来推
+21:56:varna: 我还是穷得只剩钢了
+21:57:varna: 飞龙打掉的燃弹太多，昨天又连续打下两个勋章
+21:57:Plough: 4662一下就能让我钢只剩1.5k
+21:57:Plough: 哦对1-5和2-5刷新了
+21:57:Plough: 明天回来一块处理
+21:57:varna: 总之先把战斗力培养起来，不然下次活动还是不行
+21:58:Plough: 我边赌边肝
+21:58:Plough: 先把傻级二改
+21:58:varna: 还需要一些高档电探
+21:58:Plough: 赌赌赌
+21:58:varna: 或者水观
+21:59:varna: 为火力计，还要几门大根
+21:59:Plough: 水观貌似大和上有？
+21:59:varna: 我得有大和系列
+21:59:Plough: 我体感傻级上41更好
+21:59:Plough: 现在大根扔给肉奥了
+21:59:varna: 顺便一提，其实三座水侦是比水观更好的东西……
+21:59:varna: 金刚级上双46没问题
+22:00:varna: 即使上试制41火力也不够，双46不影响命中
+22:00:Plough: 命中感觉好点 不知道是不是心理作用
+22:00:varna: 等级作用
+22:00:Plough: 哪天装回去试试
+22:00:varna: 2-5程度的敌人除了喔改之外就是吊打
+22:00:varna: 不过我现在还没喔改
+22:01:varna: 5-5程度如果运气好也能轰沉雷爷
+22:01:Plough: 土豆不能网页全屏真蛋疼
+22:02:cleamoon joined channel
+22:02:cLeaMooN_ quit:Read error: Connection reset by peer
+22:02:varna: 刚才用了bs:midway的作弊方法，晚上回去开一回大和……
+22:02:varna: 那智战队三打十五的任务实在有点坑，我只打沉十四个之后那智就咕嘿了
+22:03:Plough: 23333
+22:03:Plough: 我还没下
+22:03:varna: 五波攻击，前三波是cl+2dd, 后两波是莉级+2dd
+22:03:varna: 己方是那智、涟、潮
+22:04:varna: 然后游戏脑洞大开，把妙高级的布局换成了利根级……
+22:05:Plough: 2333333
+22:05:varna: 美军战役里还有鹦鹉螺凿沉棒各的奇妙故事
+22:05:varna: 日军不是太旧的驱逐舰上都写着WHObuki, 航母上都是Ka...
+22:06:Plough: ……
+22:06:Plough: 偷懒么
+22:06:varna: 倒数第二关是南云机动部队进攻中途岛，要是不看gui谁知道打的是赤城还是加贺
+22:06:varna: bs:midway/pacific模型上各种偷懒
+22:07:varna: 那珂酱的飞剪首似乎也被他们脑洞掉了
+22:07:varna: 故事设定从日军偷袭珍珠港开始，结果midway里干脆没有一关你能开美军战舰的
+22:07:condy: 妖妖梦也不难，新作的话辉针城难度也偏低（希望不是错觉吧？）
+22:07:condy: ...
+22:07:Plough: 23333
+22:08:condy: 为啥我觉得比较难。。
+22:08:Plough: 辉针城难度偏低？
+22:08:varna: condy: hzc的e很容易，之后弹幕厚
+22:08:condy: e没有通。。
+22:08:varna: hzc我用灵梦B打了两遍就通了……
+22:08:condy: Orz!
+22:08:varna: 四面开始觉得撑不住就砸B吧……
+22:08:varna: 前三面补给超多
+22:09:condy: +
+22:09:varna: 要抢东西还怕死的话就甩个B
+22:09:condy: 一直挂在音符那关.
+22:09:varna: 那关道中别走神
+22:09:Plough: E的逆转符卡我能硬扭
+22:10:Plough: N我就没到过五面……
+22:10:varna: Plough: 最后midway里战舰的部分是用ship challenge硬补的，第一关扶桑山城对三个伊级、十一个伊级后期型爷爷、两个莉级和三个撸级，只能控制扶桑
+22:10:cleamoon: hzc很难吗
+22:10:varna: E我攻封到过四面……
+22:11:varna: Plough: 然后第四关是大和，晚上回去体验下超 战 舰有多莉害
+22:11:Plough: 我看看周末有没有时间挂
+22:12:varna: pacific倒是比较完整了，糖果给我演示过南方栖战姬怒草提督
+22:12:varna: 不过炮雷击战的设定我还是喜欢midway; pacific的损管太神奇了
+22:15:varna: plane challenge全是日军，难度中等；sub challenge美军一关日军两关，最后一关突破敌任务部队E群击沉某栖姬至今没打过去……
+22:16:Moe_Icenowy joined channel
+22:16:MoeIcenowy quit:Read error: Connection reset by peer
+22:16:varna: http://tieba.baidu.com/p/3273554263
+22:21:iyzsong quit:Read error: Connection reset by peer
+22:21:iyzsong joined channel
+22:26:zz joined channel
+22:27:iyzsong quit:Read error: Connection reset by peer
+22:28:varna: 回去了
+22:28:iyzsong joined channel
+22:28:varna: 诸君夜间愉快，武运长久，撸管不缺纸
+22:28:varna quit:Quit: leaving
+22:29:zz: ……
+22:30:zz quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+22:30:condy quit:Quit: leaving
+22:31:code_new quit:Quit: Leaving
+22:33:Zz-fire joined channel
+22:35:Zz-fire: 刚接触这个，不怎么懂
+22:35:Zz-fire: 有人吗
+22:39:gansteed joined channel
+22:40:Zz-fire: 刚刚接触这个，不知道怎么弄
+22:41:Zz-fire: 网上也没收到使用方法
+22:43:cleamoon: 不需要弄
+22:44:gansteed quit:Quit: Leaving
+22:45:Zz-fire: 我是在百度上搜到以前的帖子进入了这个频道，为什么都没人啊
+22:48:MoeIcenowy quit:Ping timeout: 276 seconds
+22:51:cleamoon: 都是丧失，没有人
+22:54:iyzsong: -.-
+22:58:Plough quit:Remote host closed the connection
+22:58:Zz-fire: 以后是不是c语言有问题我都可以来问大牛们
+23:00:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:00:cleamoon: 那要看那些大牛愿不愿意答...
+23:02:iyzsong quit:Read error: Connection reset by peer
+23:03:iyzsong joined channel
+23:03:cleamoon quit:Read error: Connection reset by peer
+23:04:cleamoon joined channel
+23:09:cleamoon quit:Ping timeout: 272 seconds
+23:15:iyzsong quit:Read error: Connection reset by peer
+23:15:iyzsong joined channel
+23:20:Zz-fire joined channel
+23:25:lh_mouse: acgtyrant, 揉
+23:33:iyzsong quit:Read error: Connection reset by peer
+23:34:iyzsong joined channel
+23:35:iyzsong quit:Read error: Connection reset by peer
+23:35:SoftRUN quit:Quit: 离开
+23:37:slowcoach: ＝－＝
+23:37:Zz-fire: 为嘛我进linux吧聊天是这我热闹
+23:42:lh_mouse: slowcoach, 揉
+23:52:slowcoach: lh_mouse, 好久不见啊菊苣
+23:52:slowcoach: ＝－＝
+23:53:slowcoach: 这个时间大部分都休息了，Zz-fire

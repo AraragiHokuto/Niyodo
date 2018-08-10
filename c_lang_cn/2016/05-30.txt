@@ -1,0 +1,161 @@
+00:10 stardustx joined channel
+00:10 stardustx quit:Client Quit
+00:16 stardustx joined channel
+00:56 stardustx quit:Quit: Leaving
+00:58 Youmu quit:Quit: Connection closed for inactivity
+01:38 Mokou quit:Remote host closed the connection
+05:51 Stevearzh quit:Remote host closed the connection
+05:53 Stevearzh joined channel
+05:56 cleamoon quit:Ping timeout: 240 seconds
+05:58 cleamoon joined channel
+06:47 cleamoon quit:Ping timeout: 252 seconds
+06:48 cleamoon joined channel
+07:02 cleamoon quit:Ping timeout: 272 seconds
+07:04 cleamoon joined channel
+07:31 id10086 joined channel
+08:12 FrankHB quit:Ping timeout: 252 seconds
+08:38 cleamoon quit:Ping timeout: 264 seconds
+08:51 FrankHB joined channel
+09:06 lh_mouse joined channel
+09:35 lh_cat joined channel
+10:04 whocares_2_ joined channel
+10:05 whocares_2 quit:Ping timeout: 272 seconds
+10:20 whatofor joined channel
+10:34 Stevearzh quit:Remote host closed the connection
+10:36 Stevearzh joined channel
+10:46 whatofor quit:Ping timeout: 264 seconds
+11:07 id10086 quit:Ping timeout: 260 seconds
+11:08 id10086 joined channel
+11:45 lh_cat quit:Quit: Connection closed for inactivity
+11:49 Youmu joined channel
+11:50 whatofor joined channel
+11:54 cleamoon__ quit:Ping timeout: 244 seconds
+12:02 FrankHB quit:Ping timeout: 276 seconds
+12:37 AutoGavy joined channel
+12:43 lh_mouse quit:Quit: I have China's blessing!
+12:44 lh_mouse joined channel
+12:46 iyzsong-xx joined channel
+13:00 whatofor quit:Ping timeout: 260 seconds
+13:13 Stevearzh quit:Quit: ZZZzzz…
+13:25 czh joined channel
+13:36 czh quit:Ping timeout: 244 seconds
+13:36 sottd joined channel
+13:37 * sottd 被安卓和Java坑的倒地不起
+14:09 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+14:18 Youmu quit:Quit: Connection closed for inactivity
+14:26 Stevearzh joined channel
+15:10 whocares_2 joined channel
+15:11 whocares_2_ quit:Ping timeout: 276 seconds
+15:14 id10086 quit:Ping timeout: 244 seconds
+15:15 Mokou joined channel
+15:17 AutoGavy quit:Quit: Connection closed for inactivity
+15:27 Youmu joined channel
+15:30 hysw joined channel
+15:31 hysw: 貌似又没人
+15:38 condy: hysw: o.o
+15:39 hysw: 悲伤的世界
+15:39 condy: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/na/4d_72233.jpg@596w_1l.jpg
+15:40 hysw: 颜值太低，很碍眼的...
+15:44 Stevearzh quit:Disconnected by services
+15:48 Stevearzh joined channel
+15:56 iyzsong-` joined channel
+16:00 hysw: iyzsong: 烧烧烧
+16:01 iyzsong-xx quit:Ping timeout: 264 seconds
+16:03 Stevearzh quit:Ping timeout: 260 seconds
+16:04 Stevearzh joined channel
+16:06 lh_not_bot quit:Ping timeout: 260 seconds
+16:07 whocares_2_ joined channel
+16:08 lh_not_bot joined channel
+16:08 whocares_2 quit:Ping timeout: 260 seconds
+16:11 whatofor joined channel
+16:12 hysw: wtf...
+16:14 stardustx joined channel
+16:16 hysw quit:Quit: Page closed
+16:18 Stevearzh quit:Excess Flood
+16:53 Guest89048 joined channel
+17:01 Guest89048: 这个怎么玩的，也不见人说话
+17:26 * lh_mouse slaps Guest89048 around a bit with a large trout
+17:33 sottd joined channel
+17:33 sottd: ...又一次的被SDK的bug给坑了
+17:34 lh_mouse: geordi, { void *ret; __gthread_t t; __gthread_create(&t, [](void *p){ cout <<"param = " <<p; return (void *)0x12345; }, (void *)0x54321); __gthread_join(t); cout <<", ret = " <<ret; }
+17:34 geordi: error: too few arguments to function 'int __gthread_join(__gthread_t, void**)'
+17:34 lh_mouse: geordi, { void *ret; __gthread_t t; __gthread_create(&t, [](void *p){ cout <<"param = " <<p; return (void *)0x12345; }, (void *)0x54321); __gthread_join(t, &ret); cout <<", ret = " <<ret; }
+17:34 geordi: param = 0x54321, ret = 0x12345
+17:36 sottd: startActivityForResult在安卓的文档上说这东西是阻塞的,但只有在子View上才是..工作线程及及时用runOnUiThread也没法让其阻塞..
+17:37 condy: 0.0
+17:37 condy: geordi: { thread t(foo); t.join(); } void foo(){BARK;}
+17:37 geordi: foo()
+17:38 condy: 咦！竟然可以创建线程了
+17:39 sottd: geordi:{ thread t(wtf); t.join();} void wtf(){cout<<"fuck ui thread";}
+17:39 geordi: fuck ui thread
+17:41 sottd: 哦..刚刚作死的在startActivityForResult后面加了sleep(3000),结果UI界面原来是startActivity以后才出来
+17:43 sottd: 有可能在C++里面搞个DSL Lisp吗
+17:58 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+18:03 Guest89048 quit:Quit: Leaving
+18:11 AutoGavy joined channel
+18:11 iyzsong-` quit:Remote host closed the connection
+18:15 lh_mouse: geordi, { __gthread_detach(__gthread_self()); }
+18:15 geordi: <no output>
+18:15 lh_mouse: geordi, { __gthread_detach(__gthread_self()); __gthread_detach(__gthread_self()); }
+18:16 geordi: <no output>
+18:25 sottd joined channel
+18:25 sottd: .....
+18:26 sottd: 安卓启动相机以后会通过UI线程来更新UI，而startActivityForResult则会在相机启动以后立马返回
+18:27 sottd: 这时候相机和启动相机的线程是异步的
+18:27 sottd: 但是跟新数据确实在启动相机的线程，也就是UI线程
+18:27 sottd: 跟新-》更新
+18:28 sottd: 为了获取相机返回的数据只有两个办法：忙等待 or 阻塞线程直到相机退出 ,但这时候被阻塞的线程只能是UI线程
+18:33 cleamoon joined channel
+18:35 stardustx quit:Quit: Leaving
+18:39 cleamoon_ joined channel
+18:49 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/n9/yb_374855.jpg@596w_1l.jpg  什么和什么
+19:08 iyzsong: = =
+19:14 condy: iyzsong: 0.0
+19:14 condy: iyzsong: 下班了吗？
+19:16 iyzsong: condy: 是呀
+19:17 sottd: 好早
+19:17 condy: iyzsong: 人生赢家
+19:19 * iyzsong 大失败..
+19:22 condy: iyzsong: 出去找女朋友啊
+19:22 condy: iyzsong: Mr.宋 这么帅气
+19:22 condy: iyzsong: 发型超骚！
+19:22 iyzsong: - -b
+19:22 iyzsong: 怎么找..
+19:22 condy: iyzsong: 不要从公司里找
+19:23 iyzsong: 不会啊~
+19:23 condy: iyzsong: = =#
+19:23 condy: iyzsong: 无非是先接近距离
+19:23 condy: iyzsong: 拉*
+19:23 cleamoon: 找HR揉舔撸呀
+19:23 condy: iyzsong: 然后再增加聊天频率*
+19:23 condy: iyzsong: 然后就没有了……
+19:24 cleamooon joined channel
+19:25 * iyzsong can't understand.
+19:26 sottd: Your staff undersootd you
+19:26 sottd: Your staff understood you
+19:28 cleamoon quit:Ping timeout: 244 seconds
+19:28 cleamooon: 先接近，然后看准几率抓住脖子，拔掉脑袋都能吃，蛋白质是牛肉的六倍
+19:31 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+19:32 iyzsong: 今天看了个服务端代码，用了基于twisted的firefly，然后启动的时候把全部数据从mysql拷到redis，关闭的时候再写回去。 感觉好厉害 o.o
+19:32 cleamoon_: orz
+19:33 condy: iyzsong: Orz
+19:34 condy: iyzsong: 容灾处理呢？
+19:34 iyzsong: 不晓得..
+19:48 Mokou: 強者的程序永不出錯
+19:48 Mokou: 不需要容災
+19:50 condy: 0.0
+19:50 iyzsong: 大概只用备份mysql数据库就行了吧..
+20:17 AutoGavy quit:Quit: Connection closed for inactivity
+20:19 cleamoooon joined channel
+20:23 cleamooon quit:Ping timeout: 276 seconds
+20:40 stardustx joined channel
+20:52 CyrusYzGTt joined channel
+21:29 stardustx quit:Quit: Leaving
+22:27 AutoGavy joined channel
+22:38 FrankHB joined channel
+22:58 Youmu quit:Quit: Connection closed for inactivity
+23:01 hoxily joined channel
+23:29 hoxily quit:Quit: Leaving
+23:33 lh_mouse quit:Read error: Connection reset by peer
+23:44 cleamooon joined channel
+23:48 cleamoooon quit:Ping timeout: 276 seconds

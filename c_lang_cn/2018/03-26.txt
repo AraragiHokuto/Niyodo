@@ -1,0 +1,285 @@
+00:04 FrankHB quit:Ping timeout: 268 seconds
+00:11 CyrusYzGTt joined channel
+00:32 hanjian_l: varna: 这种时候才应该大声说，有小姐姐吗？
+00:34 varna: hanjian_l: 枪声太响了，现在我所有的武器都加了消音器
+00:34 lh_ideapad: 有 小 姐 姐 吗 ？
+00:34 lh_ideapad: 有 小 姐 吗 ？
+00:34 * lh_ideapad 噫。
+00:34 * varna 放小红丸子除四害
+00:35 hanjian_l: varna: 枪不响有用吗？
+00:35 jimmylu2333-rpi3 quit:Remote host closed the connection
+00:35 varna: 讲道理，现代消音器多数时候不妨碍超音速弹的弹道
+00:35 varna: 毛子PBS那种作死太严重了
+00:37 CyrusYzGTt quit:Read error: Connection timed out
+00:39 lh_mouse: http://a3.qpic.cn/psb?/V14dEMxF4YmxjB/Ep0W5KRKQut5r5iTb7n9V4BEjoP4dgAOdPNhPvc*Z1k!/b/dCIBAAAAAAAA&ek=1&kp=1&pt=0&bo=BQI.AgUCPgIRECc!&vuin=1337555126&tm=1521993600&sce=50-1-1&rf=4-0
+00:39 lh_mouse: 商务部：？？？？？？
+00:40 varna: 运营还是图样
+00:41 jimmylu2333-rpi3 joined channel
+00:42 matchray: 是不是因爲不知道牆是什麼
+00:42 matchray: 一不小心犯錯誤了
+00:42 matchray: 粟添：国王的名字
+00:48 CyrusYzGTt joined channel
+00:50 hanjian_l:  运营爆破
+01:03 varna quit:Ping timeout: 240 seconds
+01:15 CyrusYzGTt quit:Read error: Connection timed out
+01:16 CyrusYzGTt joined channel
+01:25 lh_ideapad quit:Remote host closed the connection
+01:29 lh_mouse quit:Ping timeout: 240 seconds
+02:12 GreyHound quit:Ping timeout: 264 seconds
+06:04 Izumo joined channel
+06:04 Izumo quit:Client Quit
+06:45 Mokou: geordi: --version
+06:45 geordi: GCC 8.0.1 20180117 (experimental)
+06:49 matchray: geordi: let f=1:f in f
+06:49 geordi: error: 'let' does not name a type; did you mean 'getc'? (fix known)
+08:27 cleamoon_ joined channel
+09:05 misaka00251 joined channel
+09:11 lh_mouse joined channel
+09:12 misaka00251 quit:Quit: Leaving
+09:13 misaka00251 joined channel
+09:14 misaka00251 quit:Client Quit
+09:39 Dove joined channel
+09:54 geordi quit:Remote host closed the connection
+09:55 geordi joined channel
+09:58 yonka joined channel
+10:07 lh_ideapad joined channel
+10:20 lh_ideapad: geordi, <<ns::meow(); namespace ns { const char * meow(){ return __FUNCTION__; } }
+10:20 geordi: meow
+10:21 lh_ideapad: geordi, <<ns::meow(); namespace ns { const char * meow(){ return __func__; } }
+10:21 geordi: meow
+10:21 lh_ideapad: geordi, <<ns::meow(); namespace ns { const char * meow(){ return __PRETTY_FUNCTION__; } }
+10:21 geordi: const char* ns::meow()
+10:21 lh_ideapad: geordi, << string(0)
+10:21 geordi: terminated by logic_error: basic_string::_M_construct null not valid
+11:46 lh_ideapad: 辣鸡 std 连这破玩意都没有。  https://github.com/lhmouse/asteria/blob/master/src/type_tuple.hpp#L12
+12:00 Youmu: 第一个可以 decltype + std::get<N> 来搞吧，就是丑了点
+12:08 CyrusYzGTt quit:Ping timeout: 276 seconds
+12:10 CyrusYzGTt joined channel
+12:43 runwei joined channel
+12:53 cleamoon_ quit:Quit: Connection closed for inactivity
+12:53 lh_ideapad: 搞 Youmu  。
+13:32 runwei quit:Quit: Leaving
+13:40 lh_ideapad: geordi, << is_base_of_v<string, string &>
+13:40 geordi: false
+13:48 jimmylu2333-sr quit:Ping timeout: 246 seconds
+13:48 iyzsong joined channel
+13:56 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+14:15 NebulaMoe joined channel
+14:21 iyzsong quit:Ping timeout: 264 seconds
+14:27 AndroUser joined channel
+14:27 AndroUser left channel:"退出消息"
+14:27 AndroUser joined channel
+14:28 lh_mouse quit:Read error: Connection reset by peer
+14:28 lh_mouse joined channel
+14:33 AndroUser: name
+14:33 AndroUser left channel:"AndroIRC"
+14:34 yonka quit:Read error: Connection reset by peer
+14:35 yonka joined channel
+14:35 AndroUser joined channel
+14:35 AndroUser: name
+14:36 hanjian_l: AndroUser: /nick YourNewNickName
+14:36 AndroUser: 好的，谢谢
+14:36 hanjian_l: Mokou: 快来全境吧，我们需要一个电工特工
+14:37 AndroUser is now known as YourNewNickName
+14:38 YourNewNickName is now known as xuri
+14:38 xuri: 0
+14:39 NebulaMoe: 刚才那一瞬间，差点把刚喝的水喷出来 
+14:41 xuri is now known as xuricn
+14:46 NebulaMoe quit:Quit: leaving
+14:52 xuricn quit:Read error: Connection reset by peer
+14:56 CyrusYzGTt joined channel
+14:56 xuri joined channel
+15:04 jingjinghack quit:Ping timeout: 268 seconds
+15:04 xuri quit:Remote host closed the connection
+15:05 NebulaMoe joined channel
+15:26 whocares_2_ joined channel
+15:26 whocares_2 quit:Ping timeout: 256 seconds
+16:05 jimmylu2333-fedo joined channel
+16:15 lh_ideapad: geordi, { int a = 2, b = 3; a += b += 4; cout <<a, b; }
+16:15 geordi: 9, 7
+17:00 iyzsong-m joined channel
+17:03 iyzsong-mm joined channel
+17:05 iyzsong-m quit:Ping timeout: 248 seconds
+17:13 iyzsong-mm: （ ・∀・）
+17:39 iyzsong-mm quit:Ping timeout: 248 seconds
+17:41 iyzsong-m joined channel
+17:45 Taggnostr2 quit:Remote host closed the connection
+17:46 Taggnostr joined channel
+18:11 iyzsong-m quit:Ping timeout: 240 seconds
+18:19 CyrusYzGTt quit:Ping timeout: 240 seconds
+18:20 iyzsong-m joined channel
+18:53 jimmylu2333-fedo quit:Remote host closed the connection
+18:57 cleamoon_ joined channel
+19:08 xuri joined channel
+19:26 lh_ideapad: geordi, { E e; e = 1; } enum E { foo, bar };
+19:26 geordi: error: invalid conversion from 'int' to 'E'
+19:26 lh_ideapad: geordi, { E e; e = 1; } enum E : int { foo, bar };
+19:26 geordi: Same error.
+19:26 lh_ideapad: geordi, { E e; e = F::meow; } enum E { foo, bar }; enum F { meow, woof };
+19:26 geordi: error: cannot convert 'F' to 'E' in assignment
+19:31 xuri quit:Remote host closed the connection
+19:32 xuri joined channel
+19:40 Dove quit:Read error: Connection reset by peer
+19:54 iyzsong-m: (；´Д｀)
+20:01 varna joined channel
+20:05 Dove joined channel
+20:10 iyzsong-mm joined channel
+20:10 iyzsong-m quit:Read error: Connection reset by peer
+20:16 xuri quit:Ping timeout: 240 seconds
+20:21 iyzsong-mm: 在家打酱油 _(._.)_
+20:27 iyzsong-mm quit:Read error: Connection reset by peer
+20:28 iyzsong-m joined channel
+20:37 Youmu: iyzsong-m: 你这id的颜色，我以为 varna 下班了！
+20:37 iyzsong-m: (#･∀･)
+20:38 Dove: 啊咧，今天有点寂寞。
+20:41 iyzsong-m: 没有工作 心慌慌
+20:41 Dove: 不要慌，不打紧的。
+20:41 iyzsong-m: 2333
+20:41 Dove: 真的
+20:43 Youmu: ouo
+20:43 Youmu: iyzsong-m: 要来深圳玩吗
+20:43 iyzsong-m: 不会去...
+20:44 Youmu: iyzsong-m: QAQ
+20:44 iyzsong-m: (・_・;)
+21:00 Dove: 睡觉了，诸君晚安，夜间愉快。
+21:00 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:05 varna: hanjian_l: 今天不想组……
+21:06 yonka quit:Remote host closed the connection
+21:09 yonka joined channel
+21:09 Mokou: varna: 网络还是爆炸么
+21:10 varna: 我在调试加速器，上游爆炸中
+21:10 lh_ideapad quit:Remote host closed the connection
+21:10 Mokou: lhj似乎是想让你带我把等级刷上去
+21:10 varna: 本来这个点的土豆就很爆炸
+21:11 varna: 看你的想法了，肝不动的话悠闲点也行
+21:11 yonka_ joined channel
+21:11 Mokou: 我肝一下也可以，反正刚才给别人演示打神父疯狂丢人，现在肾上腺素狂飙根本睡不着
+21:12 varna: 我回基地开点儿箱子
+21:12 Mokou: 组么
+21:12 yonka__ joined channel
+21:13 varna: 等我一会儿，我看看连接稳不稳
+21:13 Mokou: OK
+21:13 hanjian_l: 三件死眼三件孤星机密
+21:13 yonka quit:Ping timeout: 248 seconds
+21:15 varna: 玛德
+21:15 varna: 沉了
+21:16 varna: 九个箱子出了两个包
+21:16 varna: 其余都是垃圾
+21:16 varna: 两个包还都得洗两个位置
+21:16 varna: 这就没办法了
+21:16 yonka_ quit:Ping timeout: 276 seconds
+21:17 yonka__ quit:Ping timeout: 276 seconds
+21:18 iyzsong-m quit:Ping timeout: 240 seconds
+21:19 varna: 我真是X了POI了
+21:20 cleamoon_: varna: 羊驼试了狼德吧? 为什么我的狼德攻击这么慢
+21:21 varna: cleamoon_: 武器必须用某个暗金棍子
+21:21 cleamoon_: 用的不是ribcracker但是用的东西比那个快呀
+21:21 varna: puuu?
+21:22 cleamoon_: 用的是fast的暗金巨 棍
+21:22 cleamoon_: ribcracker只是normal呀
+21:24 cleamoon_: 攻击力我就忍了，打得实在太慢了
+21:25 cleamoon_: 15级加速加吸血的那招三级集气，打得比bb普通状态慢
+21:27 Stevearzh quit:Read error: Connection reset by peer
+21:27 varna: 加速效果似乎不坏
+21:27 varna: 我现在打敌人几乎没有延迟
+21:27 varna: 别疯狂掉线应该就行
+21:28 cleamoon_: orz
+21:29 Stevearzh joined channel
+21:30 varna: 然而这次的大抢购真的太悲剧了
+21:30 varna: 出了两个机密死眼背包，第三个费洛氧气面具，一堆我不想要的东西
+21:32 hanjian_l: varna: 来
+21:32 cleamoon_: 没有交 易系统？
+21:33 varna: 没
+21:37 varna: 玛德
+21:39 CyrusYzGTt joined channel
+21:40 varna: hanjian_l: 单刷吧，我速度不稳，别邀请了
+21:41 Mokou: 那我先撤了
+21:42 varna: OK
+21:42 varna: 恶心得嗦不粗话
+21:42 varna: 非洲人是这样的
+22:01 hanjian_l: 没了双倍伤，打死来巨痛苦
+22:03 hanjian_l: 忍者单车信差包是什么鬼
+22:03 lh_ideapad joined channel
+22:05 lh_mouse: varna, 前天关于 lvalueness 的讨论见过么。
+22:06 varna: nay
+22:06 varna: 我嚓
+22:06 varna: 刷到一半崩溃还行
+22:07 varna: 太智障了
+22:07 lh_mouse: let a = {}; let b = a['b'] /* `a['b']` is used as an rvalue. b = undefined. */  a['b'] = 42; /* `a['b']` is used as an lvalue. Creates `a['b']`.
+22:08 varna: 为什么一定要沿用左右值这种混杂了实现私货的概念呢
+22:08 varna: 或者反过来说，同是私货一堆的东西，为什么**选了**左右值
+22:09 lh_mouse: 现在看，是不得不这样了。
+22:09 varna: 如果仅仅是因为出发点只有C++风格一种，那我选择吃瓜
+22:09 lh_mouse: a['b'] 的语义是上下文相关的。
+22:09 lh_mouse: 这不是 C艹。是 JavaScript 。
+22:09 varna: 这其实不是个理由
+22:09 lh_mouse: Perl 好像也是这样。
+22:09 varna: Perl不是
+22:09 varna: Perl区分名字和值
+22:09 lh_mouse: PHP 是的。
+22:09 varna: a和$a不是一回事
+22:10 lh_mouse: varna, $a[1] = 42;  是不是也是创建了 a 的第二个元素。
+22:11 varna: 对，但这个语句的意思是“已知名字a的语义适当，以标量语义引用其值为数组a的第二个元素，为它赋值42”
+22:11 lh_mouse: $a[1] 出现在左值上下文中会创建这个元素，出现在右值上下文中不会。
+22:11 yonka joined channel
+22:11 lh_mouse: 所以语言实现必须区分左右值。
+22:11 varna: 但实现和语义不是一回事
+22:12 lh_mouse: o_O
+22:12 varna: 实现是可以随意捏的，语义需要可操作（而未必是法令式）的概念
+22:12 lh_mouse: $a[1] 的上下文相关性太坑了。
+22:12 lh_mouse: 还不如全换成函数干净。
+22:14 varna: Perl 5 sigils可以说完全是St.Larry的个人趣味
+22:15 varna: 我很喜欢，但应该说，对多数正经的用户来说，它平添复杂度
+22:15 varna: 只是文字游戏而已
+22:15 lh_mouse: 喵。
+22:18 EliotZ joined channel
+22:19 cleamoon_: sigils看起来还好，就是每次写都要蛋疼一下
+22:19 lh_mouse: 听说猪厂的技术总监年薪 200w 。
+22:19 cleamoon_: orz
+22:20 varna: sigils甚至被Perl 6抛弃了
+22:20 cleamoon_: 噗
+22:20 lh_mouse: 按预计，我是想 Expression::evaluate() 返回一个 Value_ptr<Variable> ， 现在不得不返回 Reference 。
+22:21 cleamoon_: Perl 6是要造反呀
+22:21 varna: Perl 6里的sigils很丢人，已经不具有标量/矢量这种数的变化
+22:21 lh_mouse: Reference 可以是 Direct_reference  （直接引用 Value_ptr<Variable>）  ，Array_element （Value_ptr<Array> + index） 或者 Object_member  （Value_ptr<Object> + name ）。
+22:24 EliotZ quit:Quit: Leaving
+22:28 EliotZ joined channel
+22:34 EliotZ quit:Quit: Leaving
+22:34 lh_cat joined channel
+22:34 lh_mouse quit:Ping timeout: 276 seconds
+22:36 varna: hanjian_l: 迫真太太活动中心的前段作战用dmr风格的heel意外好打
+22:37 hanjian_l: hrel？
+22:37 EliotZ joined channel
+22:38 varna: 就那把417
+22:38 varna: 和devil一对的
+22:38 varna: 瞄具用elcan dr
+22:39 EliotZ quit:Client Quit
+22:39 varna: btw 忍者单车信差包用来配非机密不错，可以让你做出一个4+2+2的套装效果
+22:39 varna: 或者3+3+2
+22:39 EliotZ joined channel
+22:40 hanjian_l: 是啊
+22:40 hanjian_l: 我现在是浪人3加孤星4
+22:42 varna: 带着非洲勇士的愤怒，我在五十分钟内打完了两盘……
+22:44 varna: hanjian_l: 何不试试孤星4浪人2突袭2
+22:44 varna: 多秒几个人，就不用苟着回血了
+22:47 NebulaMoe quit:Quit: 睡觉
+22:48 varna: shenmegui 我机密孤星齐了
+22:48 varna: 死眼还差两件……
+23:07 hanjian_l: 我试试看
+23:09 hanjian_l: 我现在是fnc 加 浪人
+23:09 hanjian_l: 苟的不行
+23:10 varna: 现在如果是一个机枪手的配置，我甚至都懒得怂
+23:10 varna: 直接一波狂点拿下敌酋
+23:12 EliotZ quit:
+23:19 hanjian_l: 我没那么高输出
+23:32 varna: 我似乎明白了，DMR的伤害够打出硬直，射速够连续打出硬直，窗口比栓动大
+23:41 varna: 第四个氧气面罩，然后我迫真地毕业了
+23:42 varna: 不对
+23:42 varna: 我驲，这手套是个悲剧
+23:53 hanjian_l: varna: 举盾，贴脸屠杀三个boss
+23:54 varna: 吼啊
+23:54 hanjian_l: 就是冲锋枪弹药和弹匣都太少
+23:56 varna: 神tm五件套机密死眼比我混搭442还差……
+23:57 varna: 毫无优势
+23:59 varna: 不刷了，随缘吧
+23:59 varna: 我需要一个很好的手套，不过看来这次出得并不好

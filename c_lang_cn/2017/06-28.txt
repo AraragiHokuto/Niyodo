@@ -1,0 +1,129 @@
+00:03 lh_cat joined channel
+00:05 lh_mouse quit:Ping timeout: 260 seconds
+00:06 lh_mouse_ joined channel
+00:07 lh_cat quit:Ping timeout: 240 seconds
+00:07 lh_mouse_ is now known as lh_mouse
+00:17 Mokou quit:Ping timeout: 260 seconds
+00:19 CyrusYzGTt joined channel
+00:22 cyrushmh quit:Ping timeout: 240 seconds
+00:36 varna: 哇！
+00:36 varna: 被师姐斩杀了！
+00:36 varna: (｡･ω･)ﾉ好幸福！
+00:38 varna: 两刀直死太帅了_(:з」∠)_
+00:45 varna: 师姐、击破
+00:45 varna: 求婚失败
+01:03 varna: (｡･ω･)ﾉCurse the fiends, their children, too; and their children, forever true
+01:29 lh_mouse quit:Read error: Connection reset by peer
+01:46 se_ven____ quit:Ping timeout: 240 seconds
+02:04 varna quit:Ping timeout: 260 seconds
+02:13 CyrusYzGTt quit:Ping timeout: 260 seconds
+02:26 CyrusYzGTt joined channel
+02:48 Taggnostr2 joined channel
+02:48 Taggnostr quit:Ping timeout: 260 seconds
+03:03 OwenJia joined channel
+03:03 OwenJia quit:Changing host
+03:03 OwenJia joined channel
+03:03 owen quit:Remote host closed the connection
+03:39 melonpi_ quit:Read error: Connection reset by peer
+04:09 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+04:12 CyrusYzGTt joined channel
+04:39 yonka joined channel
+04:43 yonka quit:Ping timeout: 240 seconds
+04:52 Youmu quit:Quit: Connection closed for inactivity
+05:43 Taggnostr2 quit:Ping timeout: 246 seconds
+05:44 Taggnostr joined channel
+08:07 yonka joined channel
+08:12 yonka quit:Ping timeout: 276 seconds
+08:17 yonka joined channel
+08:22 yonka quit:Ping timeout: 260 seconds
+09:11 yimis joined channel
+09:12 witz joined channel
+09:13 yimis quit:Client Quit
+09:16 witz quit:Remote host closed the connection
+09:21 rayBH joined channel
+09:21 lh_mouse joined channel
+09:28 Mokou joined channel
+09:40 Youmu joined channel
+09:43 yonka joined channel
+10:38 rayBH quit:Read error: Connection reset by peer
+10:42 witz joined channel
+11:12 witz quit:
+12:06 \s quit:Excess Flood
+12:08 \s joined channel
+12:48 se_ven__ joined channel
+14:08 rayBH joined channel
+14:11 lh_mouse: geordi, << hex << (1ll << 53);
+14:11 geordi: 20000000000000
+14:11 lh_mouse: geordi, << (0x20000000000000p-53 == 1)
+14:11 geordi: true
+14:12 lh_mouse: geordi, << (0x1FFFFFFFFFFFFFp-53 + 0x1p-53)
+14:12 geordi: 1
+14:12 lh_mouse: geordi, << (0x.FFFFFFFFFFFFF1 + 0x1p-53)
+14:12 geordi: error: hexadecimal floating constants require an exponent
+14:12 lh_mouse: geordi, << (0x0.FFFFFFFFFFFFF1p0 + 0x1p-53)
+14:12 geordi: 1
+14:13 lh_mouse: geordi, << (0x0.FFFFFFFFFFFFF1p0 + 0x1p-53 == 1)
+14:13 geordi: false
+14:13 lh_mouse: geordi, << (0x0.FFFFFFFFFFFFF8p0 + 0x1p-53 == 1)
+14:13 geordi: true
+14:13 lh_mouse: geordi, << (0x0.FFFFFFFFFFFFFCp0)
+14:13 geordi: 1
+14:13 lh_mouse: geordi, << (0x0.FFFFFFFFFFFFF8p0)
+14:13 geordi: 1
+14:14 lh_mouse: geordi, << setprecision(30) << (0x0.FFFFFFFFFFFFFCp0)
+14:14 geordi: 1
+14:14 lh_mouse: geordi, << setprecision(30) << (0x0.FFFFFFFFFFFFF8p0)
+14:14 geordi: 0.999999999999999888977697537484
+14:43 puzhou joined channel
+14:50 sleenxiu joined channel
+16:42 whocares_2_ joined channel
+16:42 whocares_2 quit:Ping timeout: 255 seconds
+18:16 OwenJia quit:Ping timeout: 276 seconds
+18:22 OwenJia joined channel
+18:22 OwenJia quit:Changing host
+18:22 OwenJia joined channel
+18:35 Dove joined channel
+18:52 iyzsong-m joined channel
+18:54 iyzsong-m: (；´∀｀)
+19:11 iyzsong-m quit:Ping timeout: 255 seconds
+19:38 iyzsong joined channel
+19:48 Dove quit:Ping timeout: 260 seconds
+19:53 Dove joined channel
+20:01 rayBH joined channel
+20:08 rayBH quit:Quit: leaving
+20:47 dnha123 joined channel
+21:16 Dove quit:Read error: Connection reset by peer
+21:45 yonka quit:Remote host closed the connection
+22:06 lh_mouse: http://seclists.org/oss-sec/2017/q2/562
+22:06 lh_mouse: cnmb
+22:56 dnha123 quit:Quit: Connection closed for inactivity
+23:21 varna joined channel
+23:22 varna: _(:з」∠)_在食堂吃坏了，浑身无力
+23:36 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+23:38 Taggnostr2 joined channel
+23:40 Taggnostr quit:Ping timeout: 240 seconds
+23:52 lhanjian: varna: ！！！！
+23:52 lhanjian: 我p5通关了！！！
+23:52 varna: _(:з」∠)_
+23:52 varna: 我顶着腹泻跟科斯孤儿对杀了数十局，只勉强掌握了P1的一半
+23:53 varna: P2招式几乎没有理解
+23:53 lhanjian: 血源也太难了
+23:53 lhanjian: 可以调低难度吗
+23:53 varna: 还好
+23:53 varna: 不可以
+23:53 varna: 这是魂系游戏，只能升难度……
+23:53 lhanjian: p5我全程都是最低难度
+23:53 varna: 昨天跟师姐求婚失败了
+23:54 lhanjian: 回合制RPG实在是没太多兴趣了
+23:54 varna: 大约六喆，踩着节奏陶死
+23:54 varna: 然而孤儿怎么看都得八喆左右
+23:54 varna: P1打出四喆，但P2完全抓不到枪反时机
+23:55 lhanjian: 我在想我的p5碟是应该卖了还是怎么处理
+23:55 varna: 可以卖给我
+23:55 lhanjian: 好啊
+23:55 varna: 周末你在杭州的话找你去拿好了
+23:56 lhanjian: 我去找你好了，周六我要进城的
+23:56 varna: OK
+23:58 varna: 这次科斯孤儿完全不想预先做功课，自己摸索一下好了
+23:59 varna: 不过感觉血源的Boss打下来，没有魂那么富于压迫感
+23:59 varna: 大概是死亡惩罚还不够残酷

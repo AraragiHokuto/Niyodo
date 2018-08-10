@@ -1,0 +1,522 @@
+00:07 xu0o0 joined channel
+00:07 xu0o0 is now known as Guest35431
+00:08 CyrusYzGTt quit:Ping timeout: 244 seconds
+00:23 wlemuel quit:Quit: leaving
+00:49 cleamoon quit:Ping timeout: 268 seconds
+01:11 Guest35431 quit:Ping timeout: 268 seconds
+01:33 xu0o0 joined channel
+01:34 xu0o0 is now known as Guest30722
+01:57 samurai_ quit:Quit: 离开
+02:15 Guest30722 quit:Ping timeout: 268 seconds
+02:32 lh_mouse quit:Ping timeout: 240 seconds
+02:40 SliverElf quit:Ping timeout: 246 seconds
+03:40 Rainboy quit:Ping timeout: 276 seconds
+03:41 Rainboy joined channel
+04:13 lhanjian quit:Quit: Connection closed for inactivity
+06:12 cleamoon joined channel
+06:47 Youmu quit:Quit: Connection closed for inactivity
+07:36 T_O_W joined channel
+07:41 T_O_W quit:Ping timeout: 244 seconds
+07:42 T_O_W joined channel
+07:42 T_O_W quit:Remote host closed the connection
+07:45 iyzsong: 早
+07:50 CyrusYzGTt joined channel
+07:59 CyrusYzGTt quit:Ping timeout: 264 seconds
+08:20 lhanjian joined channel
+08:59 Rainboy: 哈哈
+09:03 cc joined channel
+09:07 lh_mouse joined channel
+09:10 iyzsong: (≧▽≦)
+09:16 lh_cat joined channel
+09:26 tutu_wind joined channel
+09:26 tutu_wind: morning ~
+09:29 cleamoon quit:Ping timeout: 276 seconds
+09:45 Youmu joined channel
+10:00 iyzsong: 膜
+10:13 Aaron joined channel
+10:13 Aaron is now known as Guest81172
+10:14 Youmu: iyzsong: 膜
+10:18 tutu_wind quit:Quit: WeeChat 1.2
+10:29 lh_mouse quit:Read error: Connection reset by peer
+10:33 lh_mouse joined channel
+10:47 tutu_wind joined channel
+10:51 Guest81172 quit:Quit: Leaving
+11:23 lh_cat quit:Quit: Connection closed for inactivity
+11:26 lh_mouse quit:Read error: Connection reset by peer
+11:27 lh_mouse joined channel
+11:40 lh_mouse: geordi, << (helper(), 1); struct helper { constexpr helper(){ } ~helper(){ cout <<"~helper()"; } };
+11:40 geordi: 1~helper()
+11:40 lh_mouse: geordi, << noexcept((helper(), 1)); struct helper { constexpr helper(){ } ~helper(){ cout <<"~helper()"; } };
+11:40 geordi: true
+11:41 lh_mouse: geordi, { int a[((helper(), 1))]; } struct helper { constexpr helper(){ } ~helper(){ cout <<"~helper()"; } };
+11:41 geordi: error: ISO C++ forbids variable length array 'a'
+11:48 Youmu: 咦
+11:48 Youmu: geordi: { int a[(1,2,3)]; }
+11:48 geordi: <no output>
+11:48 Youmu: -.-
+12:18 Dove joined channel
+12:22 iyzsong: 噢噢 今天还是一样的不熟练
+12:22 Dove: o o
+12:23 iyzsong: 下午好~
+12:24 Youmu: iyzsong: 打死伪白学家！
+12:24 cc quit:Remote host closed the connection
+12:24 Youmu: iyzsong: 这周六哦~
+12:24 iyzsong: 噢噢
+12:24 cc joined channel
+12:25 iyzsong: Youmu: 话说你昨天说的V酱是谁啊?
+12:25 Youmu: iyzsong: -.-
+12:25 Youmu: iyzsong: 本频道v开头的不就只是varna 吗
+12:26 iyzsong: 噫 没问题了..
+12:54 cc quit:Remote host closed the connection
+12:55 cc joined channel
+12:57 Dove: 我用windows cmd试验了一下，win下的stdout似乎是unbuffered，而linux下是line-buffered。
+12:58 Mokou joined channel
+12:59 Dove: Youmu: 你在帝都哪里？
+12:59 Dove: 哪里上班？
+12:59 Youmu: Dove: ouo
+13:01 Dove: OUO，个人安全存储和中小企业服务器领域的全球首家集团化公司，公司专注一个核心：数据安全；覆盖两大产业：移动互联网和中小企业服务器。 << 这个？
+13:02 iyzsong: orz
+13:02 tutu_wind: wow
+13:02 * iyzsong 跑出去吃饭
+13:03 Youmu: 。。。
+13:03 Youmu: ouo 是个表情。。
+13:03 Dove: soga
+13:03 stardust: 2333
+13:03 Mokou: (#・∀・)
+13:05 Dove: 我想做个调查，大家都在哪里上班，统计一下偏好。
+13:09 tutu_wind: u.u
+13:10 lh_cat joined channel
+13:11 lh_cat: 21:06:56 <Mokou> Meikhuo the Hualaishi, bi nimen buzhi khaodao nali qu le // 全是送气音？
+13:12 iyzsong: 北京 无业废宅(TдT)
+13:13 lh_cat: meikuo te hualaishi, pi nimen puzhi kaotao naliqu le.
+13:13 lh_cat: wo ken tha thanxiaofenhsheng .
+13:14 Dove: iyzsong: 摸摸，握爪。
+13:16 Mokou: lh_cat: 是
+13:16 Mokou: Meiguo de hualaishi, bi nimen buzhi gaodao nali qu le
+13:16 lh_mouse: [12:54:39] <Dove> 我用windows cmd试验了一下，win下的stdout似乎是unbuffered，而linux下是line-buffered。 // Depends. The only thing I know for sure is that if you use WriteFile to write the console directly it will be unbuffered because the console is unbuffered according to M$'s documentation.
+13:18 Dove: lh_mouse: soga
+13:18 Dove: 我用的fputc
+13:19 Dove: 在cmd默认的标准输出上它是unbuffered
+13:29 Stevearzh quit:Quit: ZZZzzz…
+13:30 Matsune joined channel
+13:41 iyzsong: I'm angry!
+13:42 iyzsong: Matsune: 舔
+13:42 Dove: 你咋了？
+13:44 iyzsong: 没咋  通常的交流 0 0
+13:45 tutu_wind: 喵 ~
+14:01 FrankHB joined channel
+14:09 lh_mouse: https://github.com/lhmouse/mcfgthread 求小白鼠。
+14:13 cc quit:Remote host closed the connection
+14:14 cc joined channel
+14:16 Rainboy: 哦哈
+14:23 cc quit:Remote host closed the connection
+14:24 cc joined channel
+14:29 Matsune: 据参考消息网4月12日报道，美媒称，不到一年前，因伦理风险而被一些重要研究人员呼吁暂停使用的基因组编辑技术，被中国科学家再次利用并编辑人类胚胎基因，新植入突变体或可抗艾滋病毒。
+14:30 Rainboy: ?
+14:31 iyzsong: orz
+14:32 iyzsong: Rainboy: ???
+14:32 Matsune: 再过几十年 生下来可以点天赋了
+14:33 iyzsong: 口怕
+14:36 lh_mouse: 天♂赋。
+14:43 Matsune: 话说天朝科学家为啥能不理这些所谓国际上的伦理舆论压力？
+14:43 cc quit:Remote host closed the connection
+14:44 cc joined channel
+14:51 tutu_wind quit:Quit: WeeChat 1.2
+14:51 Rainboy: :-D
+14:51 Rainboy: 天朝
+15:04 Stevearzh joined channel
+15:23 lh_cat quit:Quit: Connection closed for inactivity
+15:53 varna joined channel
+15:53 varna: 咦，这旗今天痛〇
+16:03 Mokou: 你痛〇
+16:06 varna: 今天我居然瞬间就把南西做完了
+16:10 Mokou: OTL
+16:17 varna: ACFun: 某哥们打篮球打出了360度扭蛋，错过治疗机会，切了
+16:21 Mokou: ……
+16:22 varna: 我学会一个豆知识：扭蛋六小时之内可以手工复位
+16:23 Mokou: 什么鬼
+16:23 varna: 医生的说法
+16:23 varna: 再晚就基本只能切了
+16:32 Mokou: “大部分人只关注你飞的高不高，关心你的人才会在乎你飞的累不累。”
+16:32 Mokou: “难道就没有人好奇你咋会飞呢？”
+16:33 varna: 谁管田中啊(｡･ω･)ﾉ
+16:33 Mokou: 对了田中偷税那事有新消息吗
+16:33 varna: 没有了
+16:33 varna: 那个偷税似乎很普遍
+16:33 varna: 没人管
+16:34 Mokou: ……
+16:34 Mokou: 真遗憾
+16:34 varna: 田中：你们不要听得风就是雨
+16:36 Mokou: 说起来上个月的战果奖励有消息了吗
+16:37 Mokou: Taharrush Game: 捉住一名女性，两个男穆斯林充当守卫者剩下所有穆斯林尽全力去强奸女性，以守卫者拉着女性逃跑或者女性被强奸定输赢 
+16:40 varna: 233333
+16:40 Matsune: 其实我本来是挺想把神经网络处理器叫NNP（Neural Network Processor）的，但陈老师他们把它起了名字叫DianNao（电脑）。这里面还有一段渊源：
+16:40 Matsune: 本来陈老师课题组想给这个芯片起个electric brain之类的名字的，后来与陈老师课题组合作的一位法国学者建议他们给成果起个中文名字，这样对于法国方面来说是外文，显得比较“洋气“。
+16:40 varna: 战果没消息，估计你得等到二十号
+16:40 Mokou: _(:з」∠)_
+16:41 Mokou: 另外那个Taharrush Game是真事
+16:41 varna: ...
+16:41 Mokou: 现在正在欧洲各地上演
+16:42 Mokou: 欧罗巴斯坦真药丸……
+16:43 varna: 在遥远的东方，印度人民笑而不语
+16:51 Mokou: 大概我们都误会百度竞价搜索了，试想李彦宏和一干百度搜索骨干一边剥花生一边说要如何正确引导病患，总不能首页直接给你列黑名单那海了去了，不如就让他们竞价，你百度一下哪家医院靠前就不能去哪家，钱还赚了，依法治国依智商治病，可以。交了钱的莆田医院：我操你妈。 
+16:53 varna: 23333
+16:55 Mokou: http://ww3.sinaimg.cn/mw690/87246b09jw1f2okncqrhkj20ef0gotb1.jpg
+17:19 iyzsong: 污染警告 >>> http://iyzsong.gift/m/the-end-of-the-world.ogg
+17:21 varna: 音量奇特
+17:22 iyzsong: 手机录音..
+17:23 iyzsong: 有没有前途？
+17:24 SliverElf joined channel
+17:24 varna: 听不见声音
+17:24 iyzsong: 噗 我这听的挺好
+17:29 lh_mouse: https://gcc.gnu.org/ml/gcc/2016-04/msg00080.html
+17:29 lh_mouse: varna, ^^
+17:29 iyzsong: orz
+17:30 varna: Great Job
+17:30 varna: 不过我怀疑阻力会很大
+17:31 lh_mouse: ヲ只是招人研究下怎么加 thread model 。
+17:32 varna: _(:з」∠)_
+17:32 lh_mouse: ヲ看能挣几个 star 。
+17:33 Mokou: 有一个app提醒我好久没健身了，于是就被我删掉了。
+17:33 Mokou: ——dreamsafari
+17:37 Youmu: orz
+17:40 cc quit:Remote host closed the connection
+17:43 varna_ joined channel
+17:43 varna quit:Disconnected by services
+17:43 varna_ is now known as varna
+17:45 SliverElf quit:Ping timeout: 240 seconds
+17:50 Meow-J quit:*.net *.split
+17:59 Meow-J joined channel
+18:10 Dove: 我发现现在找实习还是太早了，然而我有点坐不住了。
+18:11 varna: 坐不住了就不怂直接上
+18:11 Dove: 太菜了，啥都不会不敢上。
+18:11 varna: 那为什么坐不住
+18:11 Dove: 学还是学得进去的。
+18:12 varna: _(:з」∠)_看不出来
+18:14 Dove: 真的啦
+18:14 FrankHB quit:Ping timeout: 268 seconds
+18:14 Dove: 我在学
+18:15 varna: 你似乎学了有一周以上了？
+18:17 SliverElf joined channel
+18:18 Dove: varna: 是的
+18:19 varna: 看上去很失败啊
+18:20 Dove: 是的，慢慢来吧。
+18:20 Youmu: O.O
+18:20 varna: 慢慢来233333
+18:21 cleamoon joined channel
+18:21 varna: 然而我觉得原理不明白、API又没用过几回的话，不如放下架子去学点皮毛
+18:21 varna: 反正很多皮毛都很好用
+18:21 Dove: 我正在学API啊。
+18:22 AaronLi joined channel
+18:24 varna: 不会是拿着书按顺序学吧
+18:24 cleamoon: 英国理论物理学家霍金（Stephen Hawking）与俄罗斯亿万富翁和慈善家Yuri Milner宣布了1亿美元的星际旅行计划。去年他们还共同宣布了1亿美元的搜寻地外生命计划。
+18:26 Dove: 杯具的是我就是拿着书顺序学的，我想看看书，里面讲一些别的东西。
+18:28 varna: 要不你给自己一个简单的目标：3h之内，搞出一个不像样子的epoll-based tcp echo server
+18:29 AaronLi quit:Ping timeout: 276 seconds
+18:29 Dove: 我试试看。
+18:30 cc joined channel
+18:30 varna: 不必试，这事应该能快速完成
+18:30 varna: 没什么台阶可下
+18:31 Dove: 好的
+18:32 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/f2/yk_11646.gif@596w_1l.gif
+18:33 varna: cleamoon: 出翔就是大作
+18:34 cleamoon: 喵一般不在床上出翔
+18:39 cleamoon: varna, 羊驼子有英文字帖吗？
+18:40 varna: cleamoon: 没有……
+18:41 cleamoon: 写字又慢又难看的表示伤不起呀.....
+18:44 whocares_2 quit:Ping timeout: 268 seconds
+18:44 whocares_2 joined channel
+18:45 cleamoon: 卧槽，怎么在国外搞完事的恐怖分子都躲到海盗国来了，瞧不起海盗国警察吗
+18:47 FrankHB joined channel
+18:54 AaronLi joined channel
+18:54 T-J-M quit:Ping timeout: 260 seconds
+18:56 T-J-M joined channel
+18:59 cleamoon: varna, 羊驼子研究过控制工程方面的东西吗？
+19:00 varna: cleamoon: 完全没有
+19:02 cleamoon: .......
+19:02 cleamoon: varna, 线性和非线性优化呢？
+19:03 varna: 只知道线性规划和动态规划
+19:04 cleamoon: ......
+19:04 Mokou: 去吔饭
+19:06 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+19:13 Stevearzh quit:Quit: ZZZzzz…
+19:13 FrankHB quit:Read error: Connection reset by peer
+19:16 Youmu: 膜拜
+19:22 LastAvengers joined channel
+19:23 Mokou: .
+19:23 Mokou: 打错
+19:26 LastAvengers quit:Remote host closed the connection
+19:30 Youmu: 摸鱼(
+19:30 AaronLi1 joined channel
+19:30 AaronLi quit:Ping timeout: 248 seconds
+19:30 AaronLi1 is now known as AaronLi
+19:38 Oyodo quit:Ping timeout: 264 seconds
+19:38 Oyodo joined channel
+19:43 lh_not_bot quit:Ping timeout: 252 seconds
+19:44 lh_not_bot joined channel
+19:45 hoxily joined channel
+19:56 lh_cat joined channel
+20:03 tutu_wind joined channel
+20:16 SliverElf quit:Ping timeout: 244 seconds
+20:28 Rainboy: 哈哈
+20:29 varna: ?
+20:30 Stevearzh joined channel
+20:39 Mokou: 故宫首次公开回应灵异事件：稀奇古怪的恐怖故事往往以夜深人静的紫禁城为背景，月黑风高，古宅深院，孤魂冤鬼，或泣或歌，听来森然恐怖。但故宫昨天回应：这纯属子虚乌有。历代故宫人从没在紫禁城看过、经历过什么灵异事件，等非开放区域开放后，这些传闻将不攻自破。“我在这二百多年了，就从
+20:39 Mokou: 来没见过什么灵异事件。”看门的刘大爷接受采访时说道。
+20:39 iyzsong: orz
+20:40 cleamoon: 233333
+20:42 varna: 2333333
+20:47 Mokou: http://ww2.sinaimg.cn/mw690/a7b7d1cejw1f2vbr9bgu6j20qo1beh03.jpg “去年掉在湖里的青蛙子帽子，今年有人捡着放到土地神那里了”
+20:48 cleamoon: 噗
+21:03 tutu_wind quit:Ping timeout: 276 seconds
+21:03 srainbot joined channel
+21:08 cc___ joined channel
+21:09 cc___ is now known as cc
+21:18 lh_mouse: Mokou, 药丸。
+21:18 lh_mouse: 土地神也喜欢青蛙子？
+21:31 SliverElf joined channel
+21:32 Stevearzh quit:Quit: Quit...
+21:32 hoxily: 看门的刘大爷活了200多年？
+21:32 varna: +
+21:36 Stevearzh joined channel
+21:37 lh_mouse_ joined channel
+21:37 varna_ joined channel
+21:37 varna quit:Disconnected by services
+21:37 varna_ is now known as varna
+21:40 cc___ joined channel
+21:41 lh_mouse quit:Disconnected by services
+21:41 lh_mouse_ is now known as lh_mouse
+21:43 cc quit:Killed (adams.freenode.net (Nickname regained by services))
+21:43 cc___ is now known as cc
+21:45 Taggnostr3 joined channel
+21:46 Taggnostr quit:*.net *.split
+21:56 varna: DMM那个英语会话教程到底是什么鬼……
+21:56 varna: 为何一个黄网有这种业务
+21:57 Mokou: 噗？
+21:57 Mokou: 确定不是某英语老师的余弦片么
+21:58 varna: 似乎不是
+21:58 varna: 某英语老师：“我把你们当学生，你们呢，一个一个都想〇我”
+21:59 varna: 另外我感觉自己得了奇怪的病，想把sh*t album 2的动画再看一遍
+21:59 cleamoon: .......
+21:59 Mokou: 这人完了
+22:01 Mokou: 25 - 30 是个很恐怖的年龄段，你会发现之前你想赶上的人还在你前面，而有一些后生已经把你超越了。
+22:01 Mokou: ——ppcelery
+22:02 varna: 我一定受到了神罚：黑真姬，结果变成真姬爱好者；看了白学，还想再看一遍
+22:04 varna: 好好的舰狗，打完6-4就疯了
+22:04 Mokou: 爸妈养你这么大，你竟然去打6-4
+22:04 lh_cat quit:Quit: Connection closed for inactivity
+22:04 varna: 世事无常啊
+22:04 cleamoon quit:Ping timeout: 260 seconds
+22:05 JQK quit:Ping timeout: 276 seconds
+22:07 dantmnf quit:Ping timeout: 276 seconds
+22:07 Mokou: NSFW http://ww1.sinaimg.cn/mw690/bb8ea731jw1f2v69k3692g205006p1ak.gif 子非鱼，安知鱼之乐？
+22:07 varna: puuuuu
+22:07 varna: 这种技术，我到二十岁以后才听人说过……
+22:07 tutu_wind joined channel
+22:07 JQK joined channel
+22:09 Mokou: 完蛋，被你说完以后我也有点想去看白学了
+22:09 varna: 看看吧
+22:09 varna: 然后决定你支持一水战还是二航战！
+22:09 varna: 啊，新编的二航战
+22:09 Mokou: 我支持新编一航战
+22:09 lhanjian: varna: 羊驼子直接推游戏吧
+22:10 lhanjian: Wine可以跑的，就是CG视频略有些问题
+22:11 varna: lhanjian: 麻烦，暂时先不推
+22:11 varna: 我觉得对北原春希这个人物，画龙点睛足够了
+22:11 Mokou: 现在我刷个三层闪跟玩一样
+22:11 Mokou: 这几个月我都经历了些什么
+22:11 varna: 女角还真不显得多么丰富，尽管细节多
+22:11 lhanjian: 动画基本没有还原心理活动
+22:11 varna: 但北原这人的渣性不需要多少描写，从事件里就能体会到
+22:11 varna: lhanjian: 我的意思正是不需要那些
+22:11 dantmnf joined channel
+22:11 lhanjian: 动画没有体现在渣的表现下，内心的自我纠结
+22:11 varna: 图样……
+22:11 lhanjian: 那点苍白的人物动作……
+22:12 Mokou: 你说这个谁懂啊
+22:12 varna: 说那个苍白，是因为你没有见过或者体会过
+22:12 lhanjian: 算了，就当我是白学家的胡言乱语吧
+22:12 varna: 我不喜欢大段的心理直写，正是因为很多事情的醍醐味正好来自第三人称观察
+22:12 varna: 你想想平时你看别人的时候，看不到他们的心理
+22:13 Mokou: +
+22:13 varna: 你用逻辑和体感把事情连在一起，用经验和有色眼镜进行粗略的甄别，然后通过进一步的观察修正
+22:13 xxxxxxxx joined channel
+22:13 varna: 而老实说，看到北原做的那些烂事，我觉得已经足够勾勒出这人的剪影了
+22:14 varna: 当然观众可能希望看更细致的东西，这倒不是错
+22:14 xxxxxxxx: 卧槽羊驼竟然还在?
+22:14 varna: 十点钟而已
+22:14 Mokou: xxxxxxxx: 这段时间羊驼子不在实验室
+22:14 varna: 而且开学之后实验室也是十一点关门
+22:15 xxxxxxxx: http://cnews.chinadaily.com.cn/2016-04/11/content_24429422.htm 这破站药丸
+22:15 varna: 实际上北原这人渣给我感受最深刻的事情就是他提高练度之后还去一转攻势撩和纱
+22:15 Matsune: 我材料寄过去学校说成绩单太老了让我给份新的
+22:15 Matsune: 坑我的钱
+22:16 varna: 我对这个一转攻势的评价是四个字：忠实本性
+22:16 varna: 当然补一个说明
+22:17 Mokou: 【霍金开微博的原因曝光：揭秘时间旅行！】北京时间4月12日上午10点12分，著名物理学家霍金教授在微博发出第一条微博向中国网友问好。据了解，他开通微博是因为一个偶然，他在中国的助手有次抱怨微博刷新首页全是前几天的内容，一直在研究时间旅行问题的霍金教授眼神在那一刻犀利了起来。
+22:17 varna: 一转攻势是前后都包含的
+22:17 xxxxxxxx: http://news.gmw.cn/2016-04/11/content_19662624.htm <- 为何现在的新闻也要搞成标题党一样的调子?
+22:17 varna: Mokou: 2333
+22:18 xxxxxxxx: "芳芳担心王某不会放自己走，就苦苦哀求，并表示身上没带钱，可回家拿卡取。王某觉得不安全，就询问芳芳的支付宝是否有钱。之后，王某拿着芳芳的手机，分3次转账到自己的账户，共计人民币2.5万元。"
+22:19 varna: lhanjian: 对了，你提到“自我纠结”——我觉得这是很多WA2文本读者的一个误区，甚至可能是他们给自己找的借口
+22:19 xxxxxxxx: 这是支付宝的广告么?
+22:19 varna: 简单来说，把我放到北原那个情景下面，我照样会一转攻势，而且照例给自己找借口
+22:20 varna: 当然我支持一水战(｡･ω･)ﾉ
+22:22 srainbot quit:Remote host closed the connection
+22:22 lhanjian: orz
+22:22 Mokou: (#・∀・)新编一航战才是最高
+22:23 xxxxxxxx: 有白学家在安利? 说好的先打死呢?
+22:23 varna: (｡･ω･)你们先去练习两个月着舰姬姬姬姬。
+22:23 Mokou: varna: 说起来你觉得韩寒怎么样
+22:23 varna: 我没读过韩寒的东西
+22:24 Mokou: 我也没读过，倒是有人跟我安利过
+22:24 Mokou: 虽说一堆人把他叫当代鲁迅让我对他一直没好感……
+22:25 varna: 鲁迅岂是随便能比的(｡･ω･)
+22:25 Mokou: “再写几年他就是鲁迅，他只是少一些鲁迅身上的深沉和悲剧感。人们总说80后怎么怎么，实在是太类型化了，80后其实也不乏韩寒这样有想法的（梁文道评）。”
+22:25 varna: 噗
+22:25 varna: 这是只看了“丧家的资本家的乏走狗”才能说出来的评论吧
+22:26 Mokou: 我觉得是
+22:26 Matsune: 不研究白学没法成为鲁迅的
+22:26 Mokou: 我总感觉不少人只读过课本上的几篇鲁迅就开始谈笑风生
+22:26 varna: 以立身处事为荣的人，多数没法理解他们口中的悲剧感
+22:26 Mokou: http://news.qq.com/a/20100409/001336.htm
+22:27 varna: Matsune: 你支持一水战还是二航战
+22:27 lhanjian: 一转攻势！窝是忠实的狗党！
+22:28 varna: 好！虽然我不觉得冬马是什么小三然而我支持雪菜！
+22:28 varna: 爆这个裤子！
+22:28 Matsune: 我没研究过白学
+22:28 varna: Matsune: 你和上面那条裤子有不可告人的联系，也许通过deep web
+22:29 Mokou: 我找时间看看韩寒的东西吧
+22:29 Mokou: 不过迅哥儿最擅长的是杂文，不知道韩寒有没有类似物
+22:29 varna: ^ 这旗要去忽悠妹子了
+22:29 Matsune: 说起来GAL好久没玩什么了
+22:29 varna: 我倒觉得迅哥儿擅长的是小说、散文和学问……
+22:29 Matsune: 白学放在硬盘里一直没动
+22:30 lhanjian: 发现了菜党，狗党和窝一起咬死这个羊驼！
+22:30 lhanjian: 明明是我先！
+22:30 Mokou: 忽悠个屁妹子
+22:30 varna: lhanjian: 你们这些狗党有一个好处，跑得比谁都快！
+22:31 Matsune: 我印象中我推的最后一个剧情作GAL可能是虚之少女？
+22:31 Mokou: 杂文毕竟多，而且对思想表达得更直白……
+22:31 Matsune: 后面大概接近一年都没推了
+22:31 cc quit:Quit: xc:www.chnxc.net
+22:31 varna: Mokou: 我觉得鲁迅很难让其他人追赶上的原因之一，在于他的思想很多时候看起来与其说入世不如说是出世
+22:32 Mokou: 比如？
+22:32 varna: 我很难具体举例，但建议读读他的描写
+22:33 varna: 我觉得他“入世”的部分来自于更深远的部分
+22:34 Mokou: _(:з」∠)_
+22:34 Mokou: 我再读读
+22:34 Mokou: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=f1c76b61c4cec3fd8b3ea77de6b3d63f/83025aafa40f4bfbb33808f9044f78f0f63618b6.jpg 特有幻视
+22:34 varna: 人没法遗世独立，但偶尔会格格不入；一个我立刻能想到的例子，是《好的故事》
+22:35 miao233_ joined channel
+22:38 Matsune: 我突然想起来我去年吃的一坨屎
+22:38 Matsune: 实在是想推荐大家也吃一吃
+22:38 varna: (｡･ω･)ﾉ
+22:38 Matsune: 有个GAL叫做 民工女友
+22:39 xxxxxxxx: 见多食广
+22:39 varna: 噗？
+22:39 varna: 名取作啊……
+22:39 Matsune: 应该是ELF最后的作品了 ELF今年倒闭了
+22:39 lhanjian: 倒闭！
+22:39 xxxxxxxx: 我怎么觉得他们的老板带着小姨子跑了...
+22:40 Matsune: 现在GAL业界已经快要GG了
+22:40 varna: 萌二太好满足导致业界停滞不前……
+22:41 Matsune: 也有业界人士实力分析说是因为PC销量越来越低。。。
+22:41 varna: 而且我看了看介绍，这游戏里似乎有个很重要的角色姓田中？
+22:41 Matsune: 谈到移动端想做18x限制太大
+22:41 Matsune: 是的
+22:41 varna: 这翔我拒吔
+22:42 varna: 虽然日本人姓田中的很多
+22:42 Matsune: 我有天晚上在贴吧看了一个人的直播 看的我半夜从床上跳起来了
+22:42 Matsune: 直播民工女友
+22:43 varna: 又是牛头人又是田中的，我有点受不了
+22:43 AaronLi quit:Ping timeout: 248 seconds
+22:44 AaronLi joined channel
+22:44 Matsune: 说起来民工女友的脚本家还有一个名作
+22:44 Matsune: 媚肉之香
+22:44 lhanjian: 哦哦哦
+22:45 varna: puuu
+22:47 Matsune: 为什么会这么喜欢写NTR呢 让人很难懂啊
+22:48 varna: 也许是五水战的流毒
+22:48 AaronLi quit:Ping timeout: 244 seconds
+22:50 cleamoon joined channel
+22:52 lhanjian: 看到ff15的总监督小田田认为日本游戏技术不行是因为他们太喜欢做完项目就打散项目组
+22:52 varna: ...
+22:52 Matsune: 药丸药丸
+22:52 varna: 日本的家用机游戏不错啊？
+22:54 lhanjian: 现在搞三a大作的水平比欧美有一些差距了
+22:55 Matsune: 我觉得经济还是一方面的原因吧
+22:55 lhanjian: 最终幻想作为旗舰，搞到现在都没法把帧率和画质稳定下
+22:55 lhanjian: 这个不像
+22:55 Matsune: 之前合金装备的时候说到底还是预算的问题
+22:56 varna: MGS在四代结束了
+22:56 lhanjian: 小田田指出，日系也有技术好的，合金装备画质和帧率平衡的很好，索尼的顽皮狗旗下的神海美末画质帧率都很稳健
+22:56 varna: 如果玩家想要什么就给他们什么的话，最后我们只能称赞引擎程序员了
+22:56 lhanjian: 得益于他们并不轻易和重整打散团队
+22:56 Mokou: 睡觉
+22:56 Mokou: 诸君武运
+22:56 Mokou quit:Quit: 睡觉
+22:57 varna: 不过我有个偏见：日系游戏的引擎确实干不过欧美
+22:57 varna: 他们从我玩家用机的时代开始就不擅长营造真实光影
+22:58 cleamoon: 我觉得引擎和技术不是问题
+22:58 varna: 贴图分辨率也好，法线高光环境光也好，都差了一截
+22:58 cleamoon: 虽然做不出来3A，但是很多游戏并不是靠那些的
+22:58 varna: 没办法
+22:59 varna: 时代不同了，游戏还得把自己卖出去才行
+22:59 Matsune: 得开拓天朝市场
+22:59 cleamoon: 我现在看着那种画面我就不想买
+23:00 cleamoon: 反而喜欢好的像素风游戏
+23:00 Matsune: V社通过dota2把steam带入天朝之后 steam上好多游戏都开始出简中了
+23:00 varna: 我看重美术设计
+23:00 varna: 比如色指定，人物衣着，建筑风格
+23:01 varna: 早期欧美游戏令人不快的一点就在于他们的低分辨率漫射贴图搞得跟呕吐物一样
+23:01 varna: 现在就好太多了
+23:01 varna: 当然BO3那个材质我受不了，看着像……电木
+23:02 varna: 先撤
+23:02 varna: 武运
+23:02 varna quit:Quit: leaving
+23:04 lhanjian: 应该是靠gta5吧
+23:05 cleamoon: 其实3A我不喜欢还有个最大的原因，就是电脑带不动
+23:05 Matsune: lhanjian: 早在GTA5之前就有一小部分dota2玩家开始在steam上买游戏了
+23:05 Matsune: 那时候还没有中国特别丁家渠
+23:05 Matsune: 定价区
+23:07 lhanjian: 绅士应该买游戏机
+23:07 lhanjian: 从此不再思考性能问题
+23:07 cleamoon: 没钱
+23:07 cleamoon: 连nds都买不起
+23:07 lhanjian: 不贵
+23:07 Dove: 我刚刚发现了一个不错的招聘
+23:07 Matsune: GTA5在特价区之后了 特价区之后我发现好多游戏就开始疯狂出简中了。。。
+23:08 Dove: 赶紧联系了一下。
+23:08 lhanjian: 2000多一点就可以拿下主机
+23:09 cleamoon: orz
+23:09 cleamoon: 土豪求包养
+23:12 lh_mouse quit:Read error: Connection reset by peer
+23:12 lh_mouse joined channel
+23:14 lhanjian: cleamoon: 绅士一个月生活费多少？
+23:15 Dove: 碎觉，诸君武运。
+23:15 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:15 lhanjian: Matsune: 没吧。那会儿人民币计价还没开始
+23:15 cleamoon quit:Quit: Leaving
+23:15 lhanjian: 现在国产辣鸡单机已经没有借口可找了
+23:16 cleamoon joined channel
+23:16 lhanjian: 不管是盗版，还是市场容量，都有了
+23:16 cleamoon: lhanjian, 没有生活费
+23:17 cleamoon: 没有任何钱
+23:17 Matsune: 还有文化局的锅
+23:17 lhanjian: 广电对国产游戏审的偏松的
+23:18 lhanjian: 而且国产游戏大都不需要蹭那些偏门的
+23:19 cleamoon: 国产游戏就算了吧
+23:19 cleamoon: 太急功近利了
+23:19 lhanjian: 是啊
+23:27 cleamoon: 我觉得国产就做几个血战上海滩就好了
+23:36 lhanjian: 血战缅甸也不错
+23:36 lhanjian: 傲世三国
+23:36 lhanjian: 也不错
+23:36 lhanjian: 秦殇也不错
+23:38 cleamooon joined channel
+23:40 cleamooon: 都没玩过.....
+23:40 cleamooon: 国内游戏可称为好的还是仙剑那个系列的
+23:41 lhanjian: 现在就是一坨辣鸡
+23:41 cleamooon: 引来了超多苍蝇的辣鸡
+23:47 cleamoon quit:*.net *.split

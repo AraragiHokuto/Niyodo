@@ -1,0 +1,1173 @@
+00:11:FrankHB: geordi, { ifstream ifs("/dev/rand"); ifs.exception(ios::failbit); string ln; while(getline(ifs, ln)); }
+00:11:geordi: error: 'ifstream' has no member named 'exception'
+00:12:FrankHB: geordi, { ifstream ifs("/dev/rand"); ifs.exceptions(ios::failbit); string ln; while(getline(ifs, ln)); }
+00:12:geordi: terminated by ios_base::failure: basic_ios::clear
+00:12:FrankHB: 反应真慢。。。
+00:12:FrankHB: 说明读了一大坨。。
+00:12:FrankHB: geordi, { ifstream ifs("/dev/rand"); ifs.exceptions(ios::eofbit); string ln; while(getline(ifs, ln)); }
+00:12:geordi: <no output>
+00:12:FrankHB: geordi, { ifstream ifs("/dev/rand"); ifs.exceptions(ios::failbit); string ln; getline(ifs, ln); }
+00:12:geordi: terminated by ios_base::failure: basic_ios::clear
+00:12:FrankHB: 噗。。
+00:14:Kanna quit:Ping timeout: 245 seconds
+00:15:FrankHB: geordi, { ifstream ifs("/dev/rand"); cout << ifs.is_open() << endl; ifs.exceptions(ios::failbit); string ln; getline(ifs, ln); }
+00:15:geordi: false [+ 1 discarded line]
+00:17:lh_mouse: fvck
+00:17:FrankHB: 23333
+00:26:Petrus07 quit:Quit: Leaving.
+01:02:lhanjian quit:Quit: 风光冉冉东西陌
+01:15:lh_mouse: ⑨
+01:42:LittleKey quit:Quit: Leaving.
+01:45:lh_mouse quit:Quit: Meow meow meow
+02:32:xxxxxxxx quit:Quit: Leaving...
+03:03:boosure joined channel
+03:53:lh_cat quit:Ping timeout: 272 seconds
+03:56:lh_cat joined channel
+05:02:geordi quit:Remote host closed the connection
+05:02:geordi joined channel
+07:09:cleamoon_ quit:Ping timeout: 265 seconds
+07:09:cleamoon quit:Ping timeout: 272 seconds
+07:17:whocares_2 quit:Ping timeout: 260 seconds
+07:37:FrankHB quit:Read error: Connection reset by peer
+08:09:whocares_2 joined channel
+08:35:sou_ joined channel
+08:38:lhanjian joined channel
+08:47:libhanjian joined channel
+08:48:lhanjian quit:Ping timeout: 240 seconds
+08:54:libhanjian quit:Ping timeout: 255 seconds
+08:56:libhanjian joined channel
+08:57:lh_mouse joined channel
+09:02:LittleKey joined channel
+09:09:lh_cat: mew
+09:10:LittleKey: morning
+09:34:lh_cat: baka 
+09:38:LittleKey: :'(
+09:38:LittleKey: 感觉不会再爱了
+09:39:libhanjian quit:Quit: 风光冉冉东西陌
+09:42:LittleKey: 我这离上海挺近的啊
+09:45:whatofor joined channel
+09:52:lh_cat quit:Ping timeout: 272 seconds
+09:52:lh_mouse: ?
+09:52:lh_cat joined channel
+10:06:lhjkk joined channel
+10:13:sou_ quit:Remote host closed the connection
+10:18:lhanjian joined channel
+10:19:Kanna joined channel
+10:20:sismvg joined channel
+10:21:sismvg: 阿拉，就一个ChanServ
+10:22:lh_mouse: LittleKey, 来玩么
+10:22:sou_ joined channel
+10:22:lh_mouse: sou_, 捏
+10:23:sou_: ??
+10:23:sou_: 捏我干啥？我又不是女的
+10:23:sou_: lh_mouse: ?
+10:24:lhjkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+10:29:Kanna: sou_: 猫猫面前你就是女的 (^_O)
+10:32:varna joined channel
+10:32:varna: dantmnf: 爆
+10:32:varna: lhanjian: 爆
+10:32:varna: MisakaMikoto|2: 求交配
+10:33:lhanjian: varna, 早
+10:33:lhanjian: varna, 上课撸中
+10:35:lhanjian quit:Quit: 风光冉冉东西陌
+10:35:lhanjian joined channel
+10:36:sismvg: sou_太年轻了，以为只有雌性能捏
+10:36:sismvg: listbox < treeview?
+10:37:* varna 准备把以前那个c closure扔进黑魔法大乱斗里
+10:38:varna: lhanjian: 对着谁撸
+10:38:khysw: 智商不够了... 还是不学代数了...
+10:39:sou_: sismvg: 我只喜欢捏女的 
+10:39:lhanjian: varna, 对着肥宅老湿撸
+10:39:sou_: 嘿嘿  
+10:39:sismvg: khysw:求不要间接打击学渣了
+10:39:varna: lhanjian: 为何不肛了他
+10:40:sismvg: 高等数学第一章我整整看了一周才会。。
+10:40:varna: sou_: 阁下似乎是最近来的新人？
+10:40:varna: sismvg: 第一章是什么，极限么？
+10:40:sismvg: 极限&集合
+10:40:sou_: varna: 是啊 
+10:40:khysw: http://hysw.org/note/MAT257.html
+10:40:varna: sou_: 可以爆么
+10:40:sou_: 人太少了 
+10:40:lhanjian: varna, 肛不过呢
+10:40:varna: 这里人实在不多，丧失有几个，禽兽也有几个
+10:41:varna: 还有些舰队狗
+10:41:* varna POIes
+10:41:khysw: 我是学渣
+10:41:sismvg: log2(学渣)
+10:42:varna: 中哔大都没敢去只上了本校的学渣
+10:42:sismvg: khysw 是chinese?
+10:42:khysw: ?
+10:42:varna: 他不是浙江的么？
+10:43:sismvg: 跪，流血生
+10:44:sismvg: 行尸走肉定律->一个新的黑人出现，那么队伍中的黑人中必有一个要撕掉
+10:44:varna: 头一次发觉岛风的肚子还挺可爱的
+10:44:sismvg: 死掉
+10:44:varna: 现在TV演到死谁了？
+10:44:sismvg: 萌点明明是腿
+10:45:varna: 腿啊，我想想谁的比较好
+10:45:varna: 阿贺野？矶风？大哔？时津风？
+10:46:sismvg: 下一个是bob
+10:46:sismvg: 已经食人族吃了腿了
+10:46:varna: 喔齁齁
+10:47:varna: 居然在演习发现本格的3-2队
+10:48:varna: 黏连不绝五月雨，妹汁甚润最上川
+10:48:varna: 卧槽有诈，这货打3-2带什么照明弹……
+11:02:sismvg: http://www.ithome.com/html/it/108701.htm 店大欺客
+11:02:sismvg: 这不可恨，可恨的是还有被欺的用户叫你去那家店
+11:06:khysw: 线性规划...
+11:07:varna: SNS狗大多傻逼怎么就是不明白
+11:09:khysw: varna: 话说闲心规划的内点算法有好的参考资料么？
+11:09:varna: 七月份有个看起来很高端的LP系列讲座，看起来实在太高端了我就没去……
+11:09:khysw: varna: 话说线性规划的内点算法有好的参考资料么？
+11:09:varna: 我也不知道
+11:09:khysw: 今年Cook教三年级的算法课...
+11:12:khysw: Introduction to Graph Theory < 我先OTL再说
+11:13:khysw: Topics covered will include: Trees, Colouring, Matchings, Network Flows, Planarity, Hamiltonicity and many other aspects of graph theory.
+11:17:sismvg: Introduction to Graph Theory equal to "buy GPU!, buy GTX690"
+11:17:sismvg: 不知道错了没有
+11:19:khysw: 靠... 这明显是会死的理论计算机科学课...
+11:20:sismvg: 智商不够用
+11:21:varna: sismvg: 没文化真可怕
+11:21:sismvg: 跪
+11:21:sismvg: E文还是不行
+11:23:lhanjian: sismvg, 这特么是图论
+11:23:khysw: 显卡什么的明显是图形学
+11:23:sismvg: 图论的后面就应该是图形学了吧
+11:24:khysw: sismvg: 你可以去重修数学了
+11:24:sismvg: 我在呢。。
+11:24:lhanjian: 以后不要叫图论，改叫树论，省得有些伙计搞混
+11:24:khysw: lhanjian: 去死
+11:24:sismvg: soga
+11:25:sismvg: 是那个图论啊。。
+11:25:khysw: lhanjian: 树只是一种图
+11:25:lhanjian: khysw, 把这两个货交换一下
+11:25:khysw: ...
+11:25:varna: 树论是讲什么的，艹大树么
+11:25:sismvg: 哲 学层面
+11:26:khysw: 那明显是数论
+11:27:xxxxxxxx joined channel
+11:27:varna: xxxxxxxx: 爆
+11:27:xxxxxxxx: varna 爆你妹去
+11:27:lhanjian: 把计算图形学，改成计算绘图学
+11:28:lhanjian: 今天的巨基元气满满
+11:29:varna: xxxxxxxx: 爆
+11:30:xxxxxxxx: varna 爆你姐去
+11:30:sismvg: http://www.ithome.com/html/iphone/108705.htm23
+11:30:sismvg: http://www.ithome.com/html/iphone/108705.htm
+11:30:sismvg: 2333
+11:32:Kanna quit:Ping timeout: 240 seconds
+11:35:lhanjian quit:Quit: 风光冉冉东西陌
+11:42:varna: xxxxxxxx: 爆
+11:46:LittleKey quit:Ping timeout: 272 seconds
+11:49:xxxxxxxx: 爆红旗去
+11:49:varna: 肛旗最近痛经
+11:50:xxxxxxxx: 痛经可以用尻
+11:51:khysw: 拟阵...
+11:53:sismvg: 尼玛,pm2.5 188...
+11:57:Kanna joined channel
+11:57:sismvg: varna,kanna
+11:58:handlehard joined channel
+11:58:khysw: pm 2.5 42...
+11:58:sismvg: 资本主义
+11:58:handlehard quit:Client Quit
+11:59:handlehard joined channel
+12:00:khysw: 数学太难...
+12:03:handlehard2 joined channel
+12:03:handlehard quit:Ping timeout: 255 seconds
+12:04:handlehard2 quit:Client Quit
+12:04:handlehard joined channel
+12:13:handlehard quit:Ping timeout: 265 seconds
+12:20:sismvg: 招聘要求：性格开朗，善于与他人交流。。
+12:20:varna: 性 格开朗，善于与他人交 流
+12:20:sismvg: 写招聘要求的真的是技术ＨＲ嘛。。
+12:20:varna: 交流是必要的
+12:20:sismvg: 开朗才是问题
+12:20:varna: 自己闷罐子一个谁理你啊……
+12:21:varna: 扑克脸没关系，负面情绪别都写脸上就行
+12:21:sismvg: 性格开朗。。就代表一定会被叫去KTV之类的地方
+12:21:sismvg: 然后。。然后哈
+12:21:varna: 然后你不就脱离处男了么
+12:21:sismvg: 然后我就进医院躺着了
+12:21:varna: 对着护士撸一炮
+12:22:sismvg: 你懂什么
+12:22:sismvg: 护士一般都是大妈
+12:22:varna: 我在ICU躺过，没有大妈
+12:22:sismvg: 年轻护士都在输液房
+12:22:varna: 所以说你还是图样图森破
+12:22:sismvg: 我遇到的都是大妈
+12:23:sismvg: 土豪医院
+12:23:sismvg: 自己写一次treeview以后才发现
+12:23:sismvg: list是那么的难懂
+12:23:sismvg: 弄
+12:24:sismvg: http://www.ithome.com/html/it/108718.htm 一般都是由智商引起的并发症
+12:25:sismvg: ListView分页装载数据这种实现细节干嘛要暴露给用户。。
+12:26:lh_mouse: 羊驼呢
+12:26:varna: 马上就吃饭去了
+12:26:lh_mouse: 我发现一只化学系的学弟你有兴趣攻略么
+12:26:varna: 是个基佬？
+12:26:lh_mouse: 不知道呢
+12:27:varna: 先委托wysaid鉴定一下吧
+12:27:lh_mouse: 不过是个整天喊快来骑我的
+12:27:varna: wysaid比较擅长应付大龄基佬学弟
+12:27:lh_mouse: 0 0
+12:28:xxxxxxxxx joined channel
+12:29:LittleKey joined channel
+12:30:xxxxxxxx quit:Ping timeout: 260 seconds
+12:32:khysw: 智商不够怎么办？
+12:32:varna: 撸
+12:32:lhanjian joined channel
+12:32:varna: 吃饭去
+12:32:lhanjian: 刚吃完
+12:32:khysw: dvorak...
+12:35:handlehard joined channel
+12:36:lhanjian: w
+12:36:lhanjian: 我朝对苹果的存储系统实施了SSL中间人攻击……
+12:38:khysw: lhanjian: 你的智商已被我窃取
+12:39:lh_mouse: varna, 你可以教他打艦娘
+12:43:sismvg: 偷智商不算偷
+12:45:handlehard quit:Read error: Connection reset by peer
+12:46:handlehard joined channel
+12:57:sismvg: 也许是出于对青春的回忆，中学的青涩恋爱和水手服似乎是日本男性心中的最爱，而为了刺激这一点，日本的漫画、动画甚至是偶像文化里都会一直出现这些可爱的水手服少女形象。不用思考下个月要还的房贷，也不用费心陪女朋友逛街吃饭，比起现实中要处理的复杂的男女问题和不得不面对的生活压�
+12:57:sismvg: ��，看看漫画，和虚拟游戏里的女朋友聊聊天，再用充气娃娃解决一下生理问题，这简单得多了——无怪乎宅男们纷纷不要恋爱，只要二次元了
+12:57:sismvg: 鬼
+12:57:sismvg: 跪
+12:59:handlehard quit:Ping timeout: 260 seconds
+13:00:handlehard joined channel
+13:01:handlehard quit:Client Quit
+13:27:handlehard joined channel
+13:56:condy joined channel
+14:06:handlehard2 joined channel
+14:06:handlehard quit:Ping timeout: 250 seconds
+14:07:handlehard joined channel
+14:11:handlehard2 quit:Ping timeout: 265 seconds
+14:11:whocares_2_ joined channel
+14:12:whocares_2 quit:Ping timeout: 240 seconds
+14:14:condy: 已满14周岁未满16周岁的青少年偶尔与幼女发生性关系，情节轻微，未赞成严重后果的，不认为是犯罪。//我们已经赶不上了，只能靠新生代了。顺便问一句偶尔是有多偶尔？(zt)
+14:16:pocmon joined channel
+14:17:condy: pacman即视感。
+14:20:condy: http://www.solidot.org/story?sid=41544
+14:20:Xilzzerts joined channel
+14:20:condy: 真是水深火热.
+14:20:Xilzzerts: 雜湊表(Hashtable) -- C 語言
+14:20:varna: 杂凑这个名词是比较早的译法
+14:21:sismvg: 大腐国只能有BL
+14:21:sismvg: Lolita好像是E过的？
+14:21:sismvg: 国
+14:22:varna: https://pastebin.mozilla.org/6835426
+14:22:varna: ^ 奥术
+14:22:xxxxxxxx joined channel
+14:23:varna: xxxxxxxx: 爆
+14:24:xxxxxxxxx quit:Ping timeout: 240 seconds
+14:24:condy: 关于薪酬回报上，有本科同学现在已经20k月薪了，IT的。我相信读研的话这个比较难做到吧。
+14:24:condy: 至于不读研的损失：失去了在学校读研期间找老婆的机会。毕竟妹子在学校会比较纯。这个我是听同事说的，不关我事……
+14:25:condy: ^ 读研的好处。
+14:25:condy: 原来是这样.
+14:27:varna: 妹子在学校？
+14:27:varna: 女大学生如何如何，又鸟如何如何
+14:27:sismvg: 读研的的有妹子？
+14:27:varna: 不少
+14:28:varna: 所以说药元四怎么总是自信满满地玩脱……
+14:28:sismvg: 我就知道你会理解错误
+14:28:varna: 现充也一堆
+14:29:sismvg: 跪，IT相关的研究生。。
+14:29:sismvg: 竟然会有妹子
+14:29:varna: 我觉得只是你混得太痤了
+14:29:varna: 不玩舰娘的人不少都有妹子
+14:29:sismvg: 只对幼女发情
+14:30:handlehard quit:Ping timeout: 272 seconds
+14:30:lhanjian: 周围就线虫一堆，我就太痤了
+14:31:varna: 大家都来用黑魔法吧
+14:32:varna: 我把一个调用内嵌perl解释器的c函数扔在一个手工闭包里，塞进Perl运行时打入xs桩回调
+14:32:sismvg: perl解释perl?
+14:33:varna: c->perl->xsub->c->perl->perl
+14:35:sismvg: 噗。
+14:38:sismvg: http://tieba.baidu.com/p/3363352337 车田正美的特技-》画黄金
+14:38:varna: 下面那个黄金不是圣G的画风么？
+14:39:sismvg: 车田正美准备出新作
+14:40:varna: 圣斗士NG自打脸还不够狠么……
+14:43:sismvg: http://zhidao.baidu.com/daily/view?id=2947
+14:43:sismvg: 悲剧的鼻炎
+14:45:handlehard joined channel
+14:45:varna: sou_: 能爆不？
+14:45:sou_: ？？？
+14:45:condy: 快抬尻的意思。
+14:45:varna: sou_: 新人来这里要被爆的
+14:45:varna: condy: 快抬尻
+14:46:condy: QAQ
+14:47:sou_: 怎么搞的和QQ那种货啊似的 
+14:47:sou_: 你在IRC里面分新旧？
+14:48:varna: 显然跟irc无关
+14:48:sismvg: 长期这个频道都被varna霸占，所以自然产生了群组概念
+14:48:varna: sismvg: 你要founder么
+14:49:sismvg: ？
+14:49:varna: 看不懂就算了
+14:49:sismvg: 失败？创始人？
+14:49:varna: 看不懂就算了
+14:49:lhanjian: 不要乱给羊驼扣帽子
+14:50:sismvg: ...
+14:50:sismvg: 被批斗了
+14:50:lhanjian: 不必这么想
+14:50:varna: 我还没开始噗呢
+14:50:varna: 反正你会自行玩脱，都不用噗……
+14:50:lhanjian: 大家嘻嘻哈哈就好了
+14:51:varna: 有时候也没法很嘻哈，毕竟我没太极的巫女大人、可爱的宅女神大人、舰队的胜利女神那么有涵养
+14:52:Xilzzerts: 上头通知下月扣30所得税
+14:52:lhanjian: Xilzzerts, 给组织交所得税了……
+14:52:varna: 三十？
+14:53:Xilzzerts: 现在起征点不是3k5吗？
+14:53:varna: 是啊
+14:54:varna: 你基本工资多少……
+14:54:sismvg: 30%？
+14:55:varna: PurpleIRC is a Minecraft Bukkit plugin that connects to IRC as a bot. It will relay messages between the game and IRC.
+14:55:varna: ^ 原来是MC物？
+14:55:Xilzzerts: 30块，不是30%
+14:56:varna: 30%可以跟遗产税一拼了
+14:58:lhanjian: 好像没遗产税吧
+14:58:sismvg: 人死了都不能避免交税。
+14:58:lhanjian: 只有遗赠税
+14:58:varna: lhanjian: 爆
+14:59:sismvg: 最近网络货币也要交税了。。澳大利亚要整整交20%..
+14:59:sismvg: 还要扣去所得税
+15:00:varna: 所以说还是准备脱手为好
+15:00:varna: 越套越牢啊
+15:01:sismvg: 才出来几年而已
+15:01:sismvg: 自然会不稳定
+15:01:varna: 稳定不稳定是一回事，被操不被操是另一回事
+15:01:varna: 散户毕竟只是被套肥羊
+15:01:sismvg: 现在都把bitcoin看成杠杆工具
+15:02:sismvg: 嘛，反正货币革命都这样。、
+15:03:varna: 问题是这个货币究竟能在什么程度上被纳入谁的信用，这个我便一直也不放心口牙
+15:03:sismvg: 没有中心化
+15:03:sismvg: 所以是平坦的
+15:03:sismvg: 平摊
+15:03:varna: 那么现在“货币”意味着什么呢
+15:04:varna: 如果是一个均摊的信用，我还是不敢信……
+15:04:sismvg: 均摊的反而安全，不用担心政府操作的通货膨胀
+15:04:varna: 2333
+15:04:varna: 怎么又冒出来政府阴谋论了……政府要操你你也跑不了
+15:04:sismvg: “政府操作”->政策失误一类的东西
+15:05:varna: 但是问题又来了，谁来保证这个信用……
+15:05:sismvg: 所有人。。
+15:05:sismvg: 这是优点，也是缺点
+15:05:varna: 或者我换个问法
+15:05:varna: 80%的用户能够在多大程度上保证相当比例的信用
+15:06:varna: 或者另一方面，这80%用户对整个盘子有多大的操作力
+15:06:sismvg: 20%掌握着大权，所以现在bitcoin才被当成杠杆工具
+15:06:varna: 更直白地问，谁有能力制止恶意砸盘和政府破坏
+15:06:sismvg: 80%的散户
+15:06:pocmon quit:Quit: 飘来又飘去～
+15:06:varna: 如果没有，我还是相当不信任这个前景
+15:06:sismvg: 现在挡不住
+15:07:varna: 所以说么
+15:07:sismvg: 前景估计是后几代货币
+15:07:varna: 理想不错，但能力不济……信用这东西还是跟力量挂钩的，除非货币的概念彻底变掉
+15:07:sismvg: dogecoin的战略对了，但是市值却被中国人操纵
+15:07:varna: 战略是一方面
+15:08:handlehard quit:Ping timeout: 245 seconds
+15:08:sismvg: 但是操纵者不好过，dogecoin的死忠掌握了60%的货币
+15:08:varna: 我觉得另一方面是因为缺乏真正的价值，又没有保障力，所以容易被砸
+15:08:sismvg: 所以需要认可者&死忠
+15:08:sismvg: 宣传以及流动是功课点
+15:08:sismvg: 攻克
+15:08:varna: 我换个词吧，所以需要被榨取资产的小白鼠
+15:09:sismvg: +1
+15:09:varna: 如果你的身后没有足够多的硬通货和力量保证，那么怎么都是吸引蛾子
+15:09:sismvg: 但是操纵者操盘就是为了让小白鼠吐出这些币
+15:09:sismvg: 硬通货就是算力
+15:09:varna: 问题来了
+15:09:varna: 计算的价值和黄金的价值是需要换算的
+15:09:varna: 而目前真正硬的部分还是黄金
+15:10:lhanjian: 没有使用价值的算力当不了硬通货。
+15:10:sismvg: 算力是由机器带来了
+15:10:varna: 计算相对来说还是太脆弱，所以我之前提到“缺乏真正的价值”
+15:10:FrankHB joined channel
+15:10:sismvg: 黄金的真正价值呢？
+15:10:varna: 比起黄金的价值，计算更容易被滥用和操纵
+15:10:sismvg: 这点
+15:10:varna: 黄金的价值是个历史原因，你可以直接认同——因为主要的经济体都认同
+15:10:sismvg: 黄金比算力男操纵
+15:11:sismvg: 难
+15:11:lhanjian: 黄金的使用价值还不够多么，光是一个装饰品就够多了
+15:11:lhanjian: 黄金远远比算力难于操纵
+15:11:varna: 我觉得单纯作为人类的硬通货来说，黄金的价值也足够了
+15:11:sismvg: 黄金假设有大金矿被发现，或者大量产出则产生大跌
+15:11:sismvg: 货币每天的产出是一模一样的
+15:11:varna: 几个矿左右不了大规模的金价
+15:11:sismvg: 一天10个就10个
+15:11:varna: 而你这里存在一个问题
+15:12:varna: 电子货币的体系里，货币还是信用，而价值落到了计算上
+15:12:varna: 那么如何使得计算融入现有的通货体系，或者建立安定的计算-黄金兑换就变成问题
+15:12:sismvg: 计算排除了通货膨胀的可能
+15:12:varna: 现在我不讨论优势如何，而讨论如何前进
+15:13:sismvg: 前进只能靠时间
+15:13:sismvg: 一两年是不可能的
+15:13:varna: 试图排除历史包袱单纯前进，相信time goes on而不作前瞻的话，不会有进步
+15:13:sismvg: 现在bitcoin相当于黄金，是良币
+15:13:varna: 如果你打算等黄金死掉，这是做梦
+15:14:varna: 良币？我觉得只是不入流的币……
+15:14:sismvg: 为何不入流？
+15:14:FrankHB: 作为支付手段黄金早就死得差不多了。
+15:14:sismvg: bitcoin高速交易，不用税收
+15:14:sismvg: （可以用技术手段逃掉）
+15:14:varna: sismvg: 你看看，又是个人方面的考虑
+15:15:varna: 如果你能逃掉，那别人也能逃掉，往下就有别的方案和制约
+15:15:sismvg: 银行1%的手续费对于大宗交易的影响
+15:15:lhanjian: 只要TG决定禁止电子虚拟商品，立马上GFW禁止比特币协议，死。
+15:15:sismvg: 挡不住
+15:15:varna: 不是挡不住的问题，而是你又天真了
+15:15:lhanjian: 光只是下份人民银行的文件，比特币就跌了2/3
+15:15:varna: 你相信一个抹消别人利益的东西会顺利随时间发展么……
+15:15:sismvg: 你让你个新生货币对抗政府？
+15:16:varna: 你根本对抗不了，所以你得融合
+15:16:sismvg: 消除了银行的利益
+15:16:lhanjian: 没有政府保障的货币，价值本身就令人怀疑。
+15:16:varna: 如果你连融合都不知道怎么做，那只有无能二字可言
+15:16:sismvg: 但是对于其他企业节省的钱是巨大的
+15:16:varna: 把个人扩大到企业没意义
+15:16:sismvg: bitcoin的核心->去中心化
+15:16:varna: 单就税收一事论，你告诉我谁会放弃
+15:17:sismvg: 你没法不放弃
+15:17:varna: 谁会放弃，为何放弃
+15:17:varna: 全盘市场经济无限扩大？
+15:17:lhanjian: 如果比特币冲击了国家的税收，我相信中央会采取更严厉的刑法
+15:17:varna: 一件事情不是因为理想所以就可以达成的，往往因为理想好而不得不为恶
+15:17:lhanjian: 比如说抓到一个比特币用户，算他偷漏了多少税收
+15:18:sismvg: 我问一句，谁真的愿意交税？
+15:18:lhanjian: 左派。
+15:18:sismvg: bitcoin可以减少税收，交易手续费等一大堆的东西
+15:18:varna: 我问一句，政府真的愿意不收税？
+15:18:sismvg: 所带来的节省可以支持企业发展
+15:18:lhanjian: 有人想节省，有人就是想不让你节省
+15:18:sismvg: 所以这是对抗
+15:18:varna: TG不论，考虑你的理想经济，你如何维持国家机器？
+15:19:sismvg: 国家机器就是中心
+15:19:varna: 还是说你打算安那其？
+15:19:varna: 那么再往下，在去中心化的时代，谁来保障你的个人权益？
+15:19:lhanjian: 可能比特币只能适用于无政府主义的自由市场经济
+15:19:varna: 假如说我现在计划谋杀，谁来保证我能受到惩罚？
+15:20:varna: 无政府主义者会有他们的论调，但我想听听你的
+15:20:sismvg: 的确是个问题
+15:20:sismvg: 这要扯到科技力了
+15:20:varna: 别扯
+15:20:varna: 科技力是中立的
+15:21:varna: 如果你期望一个公正的第三方，那么谁来保证这个第三方不变成下一个中心
+15:21:varna: 而限制知识的使用和传播就又会衍生一大堆自由爱好者的脑洞
+15:21:varna: 所以比起去中心，我宁可相信列维坦
+15:22:lhanjian: 如果美国有个土豪研发超级量子/光子计算机成功……计算力以10^24的速度暴涨
+15:22:sismvg: 他也只能每天拿到10个
+15:22:varna: lhanjian: 那我会先让他给我点个电探
+15:23:varna: sismvg: 个数不是问题，而是信用是否增长，同时价值受什么影响
+15:23:varna: 毕竟计算的价值不很容易衡量
+15:23:varna: （虽然其他的也不容易）
+15:23:lhanjian: sismvg, 以后每天的10个都是它的了。这样仅有比特币作为等价物的社会就剩下两极，最开始拥有大量比特币的群体，和最后掌控了99.99%计算力的群体
+15:23:sismvg: 那么如果你支持中心化，那么你不能保证中心点为了利益而做出影响市场的事情
+15:23:lhanjian: 去中心化就飘渺了
+15:23:varna: 中心必然有自己的利益
+15:23:varna: 你需要的是合作
+15:23:sismvg: bitcoin是有限量的
+15:24:varna: 不可能有一个无私的中心，但一个代表了六成利益的中心比一堆散沙更容易维护既得利益
+15:24:sismvg: 合作必然会破裂，无中心化只有恐慌
+15:24:varna: 而单纯限制货币发行相当于限制价值
+15:24:varna: 换言之，缺乏别的方式来保证信用
+15:25:varna: 这背后的心理还是比较虚弱，不然不至于采取近乎常数的算法衡量信用增长
+15:25:sismvg: 先是发行量的问题，这种限制是绝对的，由大量的矿工确认的
+15:25:varna: 你没理解
+15:25:lhanjian: 另外，原来绅士提过，货币的增长量应当和人类生产力的发展保持某种比例关系，每天只能增长10个，就等于是通缩了。
+15:25:sismvg: 背后心理现在时不足
+15:25:varna: lhj的说法后半句基本是我的意思
+15:25:sismvg: 但是bitcoin价值会上去
+15:26:varna: 货币增长和价值增长在药元四的叙述里看不出来关联
+15:26:sismvg: 然后他的陷落是更具市场的
+15:26:sismvg: 而不是单一的中心
+15:26:sismvg: 根据
+15:26:varna: 单纯价值增长之后炒作，这近乎市场化的恐慌
+15:26:varna: 换言之二字：危机
+15:26:lhanjian: 在完全的市场经济上，货币的价值“上去”，不是一件正常的事情
+15:26:varna: 你以为自己持有了有价值的东西，但最后你发现全都是泡沫
+15:27:sismvg: 市场保持“能量守恒？”
+15:27:sismvg: 黄金一样
+15:27:sismvg: 不要用历史来掩盖黄金的价值
+15:27:varna: 问题是你现在能抹消黄金的价值么
+15:27:varna: 如果能，那么这个争辩是有意义的
+15:28:sismvg: 谁知道能不能
+15:28:varna: 不然就是“都是世界的错”这种拒绝现象的悲催视角
+15:28:varna: 简而言之，你不能，大部分人也不能
+15:28:sismvg: bitcoin一直在努力，那么以后会有两个派别
+15:28:varna: 结果你作为一个新货币的支持者，连前进方向也不愿意找，只是一味强调其合理性
+15:28:sismvg: 一个网络货币，一个硬通货
+15:28:sismvg: 硬通货的价值损失太容易
+15:28:varna: 该怎么说呢，毕竟这个领域有先到者，所以强调合理性意义有限
+15:29:varna: 出于推广体系的考虑，在简略的合理性之后是其可行性和稳定性
+15:29:lhanjian: 如果有两个派别，那么网络货币只不过是一种商品，而不是你想要的一般等价物
+15:30:sismvg: 一个民生问题，你愿你拿着一张信用卡去买100W的车子，然后交1W的手续费
+15:30:varna: 别谈民生
+15:30:varna: 民众没有解决民生问题的权力
+15:30:sismvg: 没有民生何来货币？
+15:30:varna: 民生产生货币？
+15:30:sismvg: 民众挖矿就是对网络货币的支撑
+15:30:varna: 2333
+15:30:sismvg: 持有则是信用
+15:30:varna: 持有就是信用太脆弱了
+15:31:sismvg: 民生就产生了货币
+15:31:sismvg: 纸币也是为了方便而产生的
+15:31:varna: 纸币没有价值
+15:31:sismvg: 比特币则更加的方便
+15:31:sismvg: 纸币的价值依旧是信用
+15:31:varna: 金属货币还好，纸币只有价值，但你在逃避问题
+15:31:lhanjian: 如果民众发现了空余的计算力的其它用途怎么办？
+15:32:sismvg: 比特币也是信用，但是还存在其他种类的货币
+15:32:varna: 问题是这个信用如何保证自己能够稳定
+15:32:sismvg: lhanjan:去看一下比特币白皮书
+15:32:sismvg: 所有人来保证
+15:32:varna: 你相信民众的力量？你没有力量
+15:32:varna: 你相信算法的力量？你不会算法
+15:32:sismvg: 你相信奴隶的力量吗？
+15:32:varna: 我相信机器
+15:32:sismvg: 哲 学问题
+15:33:sismvg: 机器是人造的
+15:33:varna: 你没看懂我的意思
+15:33:varna: 我强调过列维坦了
+15:33:varna: 这都看不懂的话回去 补
+15:33:varna: 现状摆在你面前：你能抵挡砸盘么？
+15:33:sismvg: 现在不能，说了。
+15:34:varna: 那么如何能
+15:34:sismvg: bitcoin还没有流通
+15:34:varna: 不是何时能，是如何能
+15:34:sismvg: 十几年，二十几年
+15:34:lhanjian: 比特币怎么没有流通？
+15:34:varna: 不是何时能，是如何能
+15:34:varna: 不是何时能，是如何能
+15:34:varna: 不是何时能，是如何能
+15:34:sismvg: 纸币花了几百年来流通
+15:34:varna: 别跟我提时间，时间是开展计划的载体
+15:34:lhanjian: 纸币怎么就花了几百年？
+15:34:varna: 难道纸币的流通是自发的？
+15:34:varna: 就算你从银票开始说吧
+15:35:sismvg: 是有类银行组织发起的
+15:35:lhanjian: 只要政府能够提供信用，新的纸币明天就可以发出来
+15:35:varna: 一开始有地方银行发行支票，之后呢？
+15:35:sismvg: 个人组织也可以
+15:35:varna: 谁引导了，谁管制了，谁允许通过了？
+15:35:sismvg: 企业为了自己必须保证
+15:35:varna: 而且这些组织在多大程度上代表了一个地区的经济？
+15:35:varna: 别忘了当时发行银票的组织，资产足以撑起不少范围
+15:36:varna: 企业需要考虑资产负债，而不是信用和通货
+15:36:sismvg: 信用和通货才能吸引更多的用户
+15:36:sismvg: 来减少负债，增加资产
+15:36:varna: 没错，但是企业如何提供这些？
+15:36:varna: 谁来提供？
+15:36:varna: 如何提供？
+15:36:varna: 时间不解决问题，但时间给你解决问题的平台
+15:36:sismvg: 假设吧整个比特币网络看成企业呢？
+15:37:varna: 那就毁了
+15:37:varna: 想想典型市场经济的经济危机吧
+15:37:varna: 你只考虑消费而不考虑生产
+15:37:varna: 同样不考虑生产和发行方信用
+15:37:lhanjian: 信用就提升不了。愿意用比特币的伙计希望通过比特币避税逃税，而政府显然不希望逃税避税
+15:38:varna: 最后不还是“老子觉得自己不该被制度管束”
+15:38:sismvg: 发行方太过庞大也会造成危机
+15:38:sismvg: 而去中心化则看起来庞大，但是这个平摊的
+15:38:lhanjian: 如果说是单纯地减少货币在流通环节的浪费，比如银行手续费，那就让比特币和银联做竞争，强迫银联降低跨境支付的费用好了
+15:38:sismvg: 银行的利益呢？
+15:38:varna: sismvg: 最大的去中心化是无管制的市场经济，你觉得这个没问题？
+15:39:sismvg: 无管制？
+15:39:sismvg: 你的无管制是什么意思？
+15:39:varna: 还是说你持有“发行者比我笨，我能比他们做得更好”这样的想法？
+15:39:varna: sismvg: 简单来说，跳过政府调控
+15:39:sismvg: 你看，你又说政府了
+15:39:varna: 没错
+15:40:varna: 问题很简单：你觉得你能比政府做得更好么？
+15:40:varna: 如果能，请做
+15:40:FrankHB: 嘴炮不就是做的一种么。
+15:40:varna: 而且不是在力量均衡的情况下——而是在现状下
+15:40:sismvg: 你觉得政治家给社会带来了什么？
+15:40:lhanjian: 四元的意思就是要不要政府或者是政府不要管经济？
+15:40:varna: sismvg: 当然是恶啊
+15:40:sismvg: 最后真正好的还不是那么几个官员？
+15:41:varna: sismvg: 难道你觉得人可以不为恶就保证一定程度的权益？
+15:41:varna: 别逗了
+15:41:sismvg: 比特币消除了这种一个人的恶
+15:41:varna: 我不需要好，只需要四成靠谱
+15:41:sismvg: 只有大多数人都恶的时候才行
+15:41:varna: 错了
+15:41:sismvg: 而中心化则是一个恶，全部都死
+15:41:FrankHB: 政府又不是必要之恶教会……
+15:41:varna: 大多数人一样脑满肠肥
+15:41:sismvg: 去中心化就是消除掉一个恶的影响
+15:42:varna: sismvg: 但是一堆傻逼更糟糕
+15:42:sismvg: 互相牵制利益
+15:42:varna: 哈哈哈
+15:42:sismvg: 翻上去一个
+15:42:varna: 现在你看看谁在牵制你们
+15:42:varna: 说白了不还是自己无能又希望能够主宰自己
+15:42:sismvg: 你以为自己没被牵制？
+15:42:lhanjian: 问题是你手里的比特币和庄家的比特币根本就天壤之别，如果比特币成为货币，那么他们就是垄断银行家了
+15:43:varna: 我惯于被牵制，但是看起来你觉得自己比我更好
+15:43:varna: 一堆无力无能的人凑起来还是无力无能
+15:43:sismvg: 反过来，一个无力的人让一群有力的人无力就是中心化的问题
+15:44:varna: sismvg: 比例上多少人是有力的？
+15:44:candy76041820 joined channel
+15:44:candy76041820 left channel:
+15:45:varna: 另外我问一句，具体来说，什么算法、体制、方法保证货币的去中心化能在可持有技术的人平等持有技术的情况下能够顺利维持？
+15:45:varna: 我觉得如果觉得自己是一个有vision的支持者，应当予以前瞻
+15:45:varna: 不然要么是肥羊要么是蛀虫，说辞也就可以无视了
+15:47:varna: 所以这件事情最后还是跟大家之前问责政府的说法类似：不是“这件事情如何好”，而是“这件事情如何做”
+15:47:varna: 去做，说不定会好（虽然就网络货币来说，我不相信去中心化）
+15:48:sismvg: 我相信去中心化。
+15:48:varna: 不能做，那么坐视它被别人篡夺
+15:48:varna: 毕竟被篡夺的好东西太多了
+15:48:sismvg: 被夺篡？
+15:49:varna: 如果大部分出力的参与者不能劳心治之，那么抛去技术因素不论，成果会被篡夺
+15:49:varna: 我点到为止
+15:49:varna: 比起列维坦还是安那其，成果被篡夺而事情变质是更糟糕的
+15:49:sismvg: 好吧。现在搞比特币都是技术人员爱，企业家或操盘手为了利益
+15:50:varna: 不止是这个问题
+15:50:varna: 说白了就跟以前闹大革命一样
+15:50:sismvg: 是革命，但不是你意义上的大革命
+15:50:varna: 仗也打了，成果也有一点了，但是舵往哪里打呢
+15:50:sismvg: 现在的目标是流通性和稳定性
+15:50:varna: 我没看到大部分网络货币用户具有这样的意识
+15:51:sismvg: 要培养
+15:51:varna: 你自己都提不出具体方案
+15:51:sismvg: 我当然不行
+15:51:varna: 我作为国家货币的支持者，被国家操纵倒也无所谓了
+15:51:sismvg: 我是技术人员，而不是吉野家
+15:51:sismvg: 企业家
+15:51:varna: 但如果一个新势力群体中的多数人不能做到这一点，问题很严重
+15:51:FrankHB: 吉野家233
+15:52:sismvg: 混蛋kunlun.ime
+15:52:varna: 技术人员和牛肉丼的目标并不一致
+15:52:varna: 在分歧的时候，成果就被夺走了
+15:52:FrankHB: 你一个人信不信关谁P事，等足够多的人都信了再说。
+15:52:varna: 你不再有话语权的时候就是失败的时候
+15:52:sismvg: 夺走的人为了自己也要宣传
+15:53:varna: 宣传有个屁用……
+15:53:sismvg: 让自己的币更加有价值
+15:53:lhanjian: 我觉得跑路比宣传有用。
+15:53:sismvg: 跑路就是放弃
+15:53:lhanjian: 这点比特币市场和股市一样。
+15:53:varna: 问题是你们不再有话语权了，那么长期利益上最后你不会有维持自己的余地
+15:53:sismvg: 所以不能乱投资
+15:53:FrankHB: 你干不掉庄家，自己又不是庄家，不跑路怎么混饭吃。
+15:53:varna: 最后仍然是操盘者说了算，而两方一旦产生利益冲突，你没法回护
+15:53:varna: 最后就是你放下庄家跑路了
+15:54:sismvg: 比特币不能有庄家
+15:54:sismvg: 有庄家就是错的，目标是消除庄家
+15:54:varna: 你光这么说，但是你不会做
+15:54:FrankHB: 但是现在就有啊，你怎么整。
+15:54:sismvg: 我没那个能力
+15:54:varna: 这样的人不在少数
+15:54:varna: 你看
+15:54:sismvg: 我只能持有而已
+15:54:lhanjian: 现在已经有掌握绝对多数的庄家了
+15:54:FrankHB: 一个个定点清除？
+15:54:varna: 你这样，很多人也这样
+15:54:varna: 但是庄家持有价值，你持有他们的信用
+15:54:FrankHB: 除了ZF谁有这个能耐？
+15:54:varna: 怎么办
+15:55:varna: 他们的利益和你不一致的时候，你怎么办呢
+15:55:sismvg: 政府的生杀大权就是不稳定性所在
+15:55:varna: 你不满政府有生杀大权么
+15:55:sismvg: 不稳定
+15:55:FrankHB: 政府和庄家的危害哪个大？
+15:55:sismvg: 看利益
+15:55:sismvg: 对于散户庄家
+15:55:lhanjian: 说到底四元是无政府主义者
+15:55:varna: 还是说你觉得更没保证的庄家更靠谱？
+15:55:sismvg: 对于大型企业征服
+15:55:sismvg: 政府
+15:55:varna: 散户2333
+15:55:varna: 散户到哪里都是被榨
+15:56:FrankHB: 庄家比政府显然更中心化。
+15:56:sismvg: 所以不能要
+15:56:varna: 但是怎么去掉他们
+15:56:FrankHB: 为什么你先考虑对付政府呢。靶子大？
+15:56:lhanjian: 但是比特币已经有庄家了，怎么办？
+15:56:sismvg: 我没说我要对付征服
+15:56:sismvg: 政府
+15:56:sismvg: 换到了默认输入法。。      
+15:56:varna: 那么我们来对付庄家
+15:56:lhanjian: 电子商品的协议开发又不可能平等地邀请全人类
+15:57:FrankHB: 怎么对付。把他们都变成药娘么。
+15:57:varna: 作为一个技术人员，你如何提出方案赶走庄家呢
+15:57:varna: 你放弃，那么和你同等程度的人也就会放弃
+15:57:sismvg: 撒
+15:57:lhanjian: 挖矿的去中心化也不能保证全人类都拥有均等的算力
+15:57:varna: 那么庄家还是在
+15:57:sismvg: 对啊，这就是现在的问题啊
+15:57:varna: 实际上你是有代表性的
+15:57:FrankHB: 实际上最容易的应该是自己变成庄家，这样就相对公平了。
+15:58:lhanjian: 而且对于最初的庄家而言，他们当时挖矿的成本比现在挖矿的成本低太多了
+15:58:varna: 如果不能解决这个，那么说什么好处都是空谈
+15:58:varna: 跟聊共产主义差不多
+15:58:FrankHB: 还不如抠脚皮。
+15:58:sismvg: 狗币的庄家比比特币的要弱的多
+15:58:varna: “在充分发达的资本主义基础上……全球……同时……建成……，啊女仆，我们来H一下”
+15:58:sismvg: 原因就是技术人员还有另一个经济学家做出了好的决策
+15:58:varna: 好的？
+15:58:varna: 2333
+15:58:varna: 相信别人是失败的第一步
+15:59:sismvg: 结果来看这是好的
+15:59:varna: 你不相信政府，而你相信第三方，同时你不能提出正面论证
+15:59:FrankHB: 暴露了更多逗比这个结果么。
+15:59:varna: 我质疑这个思考方式
+15:59:sismvg: 我相信的不是第三方
+15:59:sismvg: 也不是ZF
+15:59:FrankHB: 你自己？
+15:59:varna: 那么你相信什么？
+15:59:FrankHB: 这个倒是正论。
+15:59:sismvg: 你们都坑我
+15:59:varna: 我没看你拿出任何立得住的理论啊
+16:00:FrankHB: 看，你不是信别人都坑你了。
+16:00:lhanjian: 到现在你都没给出如何解决电子协议商品最初的庄家的问题
+16:00:sismvg: 我的理论就是比特币是去中心化，高效率货币。是革命
+16:00:varna: 但是你没有理论
+16:00:varna: 你只有口号
+16:00:FrankHB: 没有可操作性的玩意儿能革谁的命。
+16:00:varna: 国内马克思主义教育的一个流毒是把口号党理论
+16:00:sismvg: 口号党是只说不做
+16:00:varna: s/党/当/
+16:01:varna: 问题是你不知道如何做，只好挑了一个自己看上去还行的方式
+16:01:varna: 那么你和类似你的群体就已经从决策层中排除了
+16:01:sismvg: 你们现在就是对比特币之类的网络货币的稳定性和信用保证进行吐槽
+16:01:varna: 我现在在攻击你所相信的大众保证
+16:02:varna: 你的大众只能按照引导的方向去做
+16:02:sismvg: 在大众保证成立以前你只能攻击他
+16:02:varna: 那么如何使得它成立？
+16:02:sismvg: 持有，使用
+16:02:varna: 或许是当我们看到你能提出方案的时候？
+16:02:lhanjian: 谁也没法承认比特币已经从7000+降到2300+了。
+16:02:lhanjian: 谁也没法否认比特币已经从7000+降到2300+了。
+16:02:varna: 你是否能说明为何持有和使用能保证这方案成立？
+16:02:sismvg: 你也没法承认比特币从0.2美元涨到了2300rmb
+16:03:sismvg: 我不能，我没那个能力 now
+16:03:varna: 以后会有么？
+16:03:sismvg: 谁知道呢
+16:03:varna: 你看
+16:03:varna: 你们仍然没法成为支持货币的大众头脑
+16:03:sismvg: 你不能保证
+16:03:varna: 你也不能——而且比我更不能
+16:04:varna: 你甚至没有提出前瞻考虑的计划——比如“我如何试图称为”
+16:04:varna: 成为*
+16:04:sismvg: 你能保证那一天你不被通货膨胀所坑？
+16:04:varna: 我不在意
+16:04:lhanjian: 通货膨胀不只是货币发行的问题
+16:04:sismvg: 中心点谈判失败散点会死的很惨
+16:04:varna: 货币的方面，我即使被坑也只会单方面考虑适应政府政策
+16:04:varna: 所以你不要逃避话题
+16:04:lhanjian: 即便是被通货膨胀坑了，也不一定是政府的力量使然
+16:05:varna: 你们在强调大众头脑，但你们的大众缺乏头脑、徒具力量
+16:05:varna: 革命不缺士兵，缺将
+16:05:sismvg: 我没有强调大众头脑，强调大众互相制约
+16:05:varna: 你们需要人人皆将的未来，但现在穿得甚至不如三九年的国军
+16:05:lhanjian: 而比特币没法处理在经济衰退的时候，如何控制它的发行量，以确保比特币不会迅速贬值
+16:05:varna: 那么什么机制、体制、算法保证这个制约？
+16:05:varna: 那么什么机制、体制、算法保证这个制约？
+16:06:varna: 能直白地告诉我么
+16:06:sismvg: 区块链
+16:06:sismvg: 看比特币白皮书
+16:06:varna: 这理论提出了何种程度的保证？
+16:06:varna: 同时，这理论提出了何种程度的论证？
+16:06:sismvg: 比特币本身不出现中心点
+16:06:varna: 既然你看过，大概可以简介并且从逻辑上论证其可行性吧
+16:06:varna: 这个论证没价值
+16:06:varna: 继续往下
+16:06:varna: 一直走到结论看看
+16:07:FrankHB: 然后为什么会有庄家？
+16:07:varna: 然后再回扣现象，提出可能的改进方向看看
+16:07:varna: 这叫做理论
+16:08:varna: 一直说着“我们要做”然后顺着别人告诉你的方向去做，这和你批评的政府有何差异
+16:08:sismvg: 好吧，我承认。我现在不能对对类似货币产生大的影响。
+16:08:sismvg: 但是我会支持他
+16:09:varna: 你的去中心化应该也意味着决策从中心移除，那么根源的方向性是否替代了决策？这个方向性是否是参与者可以公平调整的？
+16:09:lhanjian: 以后能产生大的影响的伙计，也就是那个客观上中心化了的庄家而已
+16:09:varna: 我们不需要一个小岛秀夫的JD
+16:09:varna: 也不需要爱国者之枪
+16:09:varna: 如果真有，我宁可选择政府
+16:09:sismvg: 无法说服你。。
+16:10:varna: 说服我不重要，能求同存异就行
+16:10:varna: 但是现在你似乎也没能做到……
+16:11:sismvg: 你认为货币要有中心机构监管
+16:11:varna: 错
+16:11:sismvg: 我看你就是这么说的
+16:11:varna: 实际上我刚才指出的另一点，就是“人”的中心化被移除，代以“理念”和“机制”
+16:11:varna: 你没看到我底下的意思
+16:11:varna: 17:11 <@varna> 实际上我刚才指出的另一点，就是“人”的中心化被移除，代以“理念”和“机制”
+16:11:sismvg: 	"如果真有，我宁可选择政府"
+16:12:varna: 别只读表面
+16:12:varna: 我为什么选择政府？
+16:12:varna: 17:11 <@varna> 实际上我刚才指出的另一点，就是“人”的中心化被移除，代以“理念”和“机制”
+16:12:FrankHB: 干掉中心机构放任庄家不就是更显然的笑话。
+16:12:varna: 17:11 <@varna> 实际上我刚才指出的另一点，就是“人”的中心化被移除，代以“理念”和“机制”
+16:12:varna: 17:11 <@varna> 实际上我刚才指出的另一点，就是“人”的中心化被移除，代以“理念”和“机制”
+16:12:sismvg: 庄家就是中心点。。
+16:12:varna: 那么告诉我，这个“理念”和“机制”是你的么？
+16:12:FrankHB: 庄家不是“监管机构”。
+16:12:varna: 如果不是，你能介入修正么？
+16:12:varna: 如果不能，那么它们代表了谁？
+16:12:varna: 这就是所谓的爱国者之枪
+16:12:FrankHB: 庄家可不提供信用。
+16:13:FrankHB: 自然也不需要为整个市场的信用负责。
+16:13:varna: 由机制来替代人的愚蠢决策看似可证明可论证，但问题是多少人能参与机制而非使用机制，同时这个机制源于何处流向何方
+16:14:FrankHB: 哪个中心不可靠？如果你要说规模，或者一个庄家干不过一个政府，而干掉一个滥发货币的政府通常比对付一个庄家麻烦得多。但是庄家总体呢？
+16:14:varna: 我并非无脑强调政府，但如果你把人的政府和算法的体系放在平等地位上来看，对于80%用户而言其可操作性的差别具体又在哪里呢？
+16:15:khysw quit:Ping timeout: 245 seconds
+16:15:FrankHB: 你以为放任不关心和操纵信用的人来决定市场，信用就不会有问题了？
+16:15:FrankHB: 根本就没什么理论支持这一点。
+16:16:varna: 实际上我可以举另一个强调“自由”的例子：当下流行的开源软件
+16:16:FrankHB: 抠脚皮大汉算是庄家代言人么。
+16:16:varna: 从用户数量与影响力/操作力的关系来看有其相似之处
+16:17:iyzsong joined channel
+16:19:varna: FrankHB: 干掉一个滥发货币的津巴布韦政府或许也不麻烦……
+16:20:FrankHB: varna: 外部当然不是特别麻烦。但是内部已经够呛了。你看现在津巴布韦国内账户都清零了有多大动静。
+16:21:FrankHB: 远一点的例子，法币也不是被群众肛翻的。
+16:21:varna: 这倒是
+16:21:varna: 法国没法说，毕竟他们点满了罢工和烧车天赋，作死特长……
+16:21:sismvg: 真正价值是谁定义的？
+16:21:varna: 别在意这个
+16:21:varna: 问题是你能否取代现有的价值
+16:21:FrankHB: 。。。我说kmt。。。
+16:21:lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/main/csv_parser.cpp
+16:22:varna: FrankHB: kmt啊……
+16:22:sismvg: 没有保证，只有不断尝试
+16:22:varna: 而且你绕不开爱国者之枪的问题
+16:22:FrankHB: 金圆券一般算是自发救世吧。后来就是被外人肛了……
+16:22:varna: 这实际上是好几个方面
+16:23:varna: 你“相信”机制和人治不一样，但你不“论证”也不“改进”
+16:23:FrankHB: lh_mouse: 不把trim什么的抽出去？
+16:23:varna: 那么这和我相信政府没什么差别——我本人也不参加国家机关的政策制定
+16:23:sismvg: “爱国者之枪问题是什么
+16:24:varna: 简单来说就是“机制制约的无政府状态仍然是一个列维坦，代表少数人而非大多数参与者的意志”
+16:24:varna: MGS4
+16:24:FrankHB: 相信不相信政府另说，关键问题在于你现在找不到更可信的。另外，如果这里是津巴布韦你自然就相信美利坚了。
+16:25:sismvg: 没有多少人会相信突然出现的新事物，要让别人相信就和传销一样
+16:25:lh_mouse: FrankHB, 无必要
+16:25:sismvg: 虽然不带暴力
+16:25:varna: 实际上在大多数人不能确切理解并操作机制的时候，机制的制定者就成为了列维坦
+16:25:varna: sismvg: 不要逃避问题
+16:25:sismvg: 我在总结问题
+16:25:varna: 错
+16:26:sismvg: 然后尝试回答
+16:26:FrankHB: lh_mouse: \t\r\n几遍看着不疼？
+16:26:varna: 作为技术人员，这里的大多数人都善于接受观念——但要求是论述完好的观念
+16:26:lh_mouse: FrankHB, 一个是 ltrim 一个是 rtrim
+16:26:varna: 而你则放弃甄别概念之间的相似和相异程度，代以信念和理想
+16:27:varna: 我不认为这是技术人员应有的思考（虽然是技术人员常见的天真）
+16:27:sismvg: 然后由于技术人员的稀少性，反而导致了中心点
+16:27:sismvg: ”稀少性“是相对的
+16:27:FrankHB: lh_mouse: 好吧。
+16:27:varna: 这个不重要
+16:27:FrankHB: 就用到一遍也罢。
+16:27:varna: 重要的是自居技术人员的你没法解决，那么多少人能解决？这个问题说过很多遍了，我不想再重复
+16:27:lh_mouse: FrankHB, 87 我是真得觉得恶心的
+16:27:lh_mouse: #87
+16:27:lh_mouse: 毫无办法
+16:28:sismvg: 需要找懂得人合作
+16:28:varna: 规避问题、强调理念、逃避现状的论述不需要出现第二次
+16:28:varna: 以上，以下类似的论述我不会再回应
+16:28:sismvg: 并不是所有人都是经济学家，但是所有人都会使用货币
+16:28:varna: 省省吧
+16:28:sismvg: 啊，中心点又来了。。
+16:28:sismvg: 让我补习
+16:28:varna: 我说过这是爱国者之枪
+16:29:FrankHB: ...
+16:31:FrankHB: lh_mouse: 不直接erase？
+16:33:lh_mouse: FrankHB, 我不确定 getline() 是否会复用 line   如果确实如此  没必要 erase
+16:33:lh_mouse: 除非写 getline 的人脑子抽风  否则不大可能重分配
+16:34:FrankHB: 这种疼货。。。还不如直接扔掉getline逐字符艹算了。
+16:36:lh_mouse: 懒
+16:39:cleamoon joined channel
+16:41:varna: 来了个幼女
+16:44:FrankHB: 来爆一个傻佬♪
+16:46:lh_mouse: lh_mouse@lhmouse-dev:~/poseidon$ git commit -a -m "Fuck boost. There is no owner_less.hpp in some earlier versions?"
+16:48:FrankHB: 叫你艹boost。
+16:50:lhanjian: boost毕竟还在开发
+16:51:varna: lhanjian: 爆
+16:52:lhanjian: varna, 炸
+16:59:lh_mouse: C++                             41            633             17           4913
+16:59:lh_mouse: C/C++ Header                    58            665             63           3249
+17:00:varna: lhj的肛部到底有什么功能……
+17:03:cleamoon quit:Ping timeout: 245 seconds
+17:03:handlehard joined channel
+17:14:handlehard quit:Ping timeout: 250 seconds
+17:16:cleamoon joined channel
+17:26:pocmon joined channel
+17:27:varna: pocmon: HELO
+17:28:pocmon: varna, helo
+17:29:varna: pocmon: 以前似乎不太见到这个nick啊
+17:32:pocmon: varna, 有段时间没来了
+17:33:varna: pocmon: soga
+17:33:condy: pocket monster...
+17:33:varna: xchat ubuntu
+17:33:lh_cat quit:Ping timeout: 255 seconds
+17:36:lhanjian: varna, 我是四次元肛，一戳就炸
+17:39:varna: 噗
+17:39:pocmon quit:Quit: 飘来又飘去～
+17:42:iyzsong quit:Quit: WeeChat 1.0.1
+17:46:sou_ quit:Read error: Connection reset by peer
+17:49:whocares[0] joined channel
+17:50:boosure quit:Quit: Get your hand off of it
+17:50:whocares[0]: geordi << -0x80000000
+17:50:geordi: 2147483648
+17:51:whocares[0] left channel:
+17:53:lhanjian: geordi << -0.4fffffff
+17:53:geordi: error: unable to find numeric literal operator 'operator""fffffff'
+17:54:lhanjian: geordi count << 0.4fffffff
+17:54:lhanjian: geordi << 0.4fffffff
+17:54:geordi: Same error.
+17:54:lhanjian: geordi << 4fffffff
+17:54:geordi: Still same error.
+17:54:lhanjian: geordi << 0x4fffffff
+17:54:geordi: 1342177279
+17:54:lhanjian: geordi << 0x4ffffffff
+17:54:geordi: 21474836479
+17:56:varna: geordi: << "lhanjian, 爆"
+17:56:geordi: lhanjian, 爆
+18:03:condy: geordi: << -0
+18:03:geordi: 0
+18:04:condy: geordi: << TYPE<decltype(-0x80000000)>
+18:04:geordi: unsigned int
+18:05:condy: geordi: << 0x80000000
+18:05:geordi: 2147483648
+18:06:condy: geordi: << -0x1
+18:06:geordi: -1
+18:07:condy: geordi: << INT_MAX
+18:07:geordi: 2147483647
+18:08:lh_cat joined channel
+18:09:condy: geordi: << -0x7fffffff
+18:09:geordi: -2147483647
+18:09:lh_mouse: https://114.215.147.2:8860/load    用户名 admin  密码 pass
+18:11:condy: geordi: << TYPE<decltype(0x80000000)>
+18:11:geordi: unsigned int
+18:11:varna: Already loaded
+18:11:condy: geordi: << TYPE<decltype(0x7fffffff)>
+18:11:geordi: int
+18:13:LittleKey quit:Quit: Leaving.
+18:23:lh_mouse: geordi, -c { foo(1); } template<typename T> void foo(T &&); template<typename T> void foo(T &) = delete;
+18:23:geordi: Success
+18:23:lh_mouse: geordi, -r { auto i = 1; foo(i); }
+18:23:geordi: error: use of deleted function 'void foo(int&)'
+18:24:lh_mouse: geordi, prepend const  before auto
+18:24:geordi: error: use of deleted function 'void foo(const int&)'
+18:25:condy: 怎么连const int&也被 delete了..
+18:28:Plough joined channel
+18:28:Plough: 翻了下LOG,感觉我错过了不少？
+18:29:Xilzzerts quit:Read error: Connection reset by peer
+18:33:lh_mouse: geordi, -r { const auto i = 1; foo(i); } template<typename T> void foo(const T &);
+18:33:geordi: Success
+18:33:lh_mouse: geordi, show
+18:33:geordi: -c { const auto i = 1; foo(i); } template<typename T> void foo(T &&); template<typename T> void foo(T &) = delete; template<typename T> void foo(const T &);
+18:39:code_new joined channel
+18:45:handlehard joined channel
+18:48:cleamoon_ joined channel
+18:48:lh_mouse: geordi, -c { const int x = 1; foo(i); } template<typename T> foo(T &);
+18:48:geordi: error: expected constructor, destructor, or type conversion before ';' token
+18:48:lh_mouse: geordi, insert void  before last foo
+18:48:geordi: error: 'i' was not declared in this scope
+18:48:lh_mouse: geordi, replace x with 1
+18:48:geordi: error: expected unqualified-id before numeric constant
+18:48:lh_mouse: geordi, undo and replace x with i
+18:48:geordi: Success
+18:49:lh_mouse: geordi, prepend volatile  before const
+18:49:geordi: Success
+18:49:lh_mouse: geordi, replace last T with const T
+18:49:geordi: Success
+18:49:handlehard quit:Ping timeout: 255 seconds
+18:49:lh_mouse: geordi, show
+18:49:geordi: -c { volatile const int i = 1; foo(i); } template<typename T> void foo(const T &);
+18:50:lh_mouse: geordi, replace const T & with T &&
+18:50:geordi: Success
+18:50:lh_mouse: 能把 const 和 value category 扯上关系也算一大奇葩了
+18:57:handlehard joined channel
+18:59:condy_ joined channel
+19:02:handlehard quit:Client Quit
+19:05:cleamoon_: 23333 前几天室友淘宝上买一件衣服，卖家说上图好评立马返现五元。于是室友穿上衣服自信美美的拍了五张照片。今天卖家给朋友返现了十元，叫室友把图片给删了。(zt)
+19:09:sismvg: http://www.ithome.com/html/out/108800.htm
+19:09:sismvg: 对于50岁的老头，那么20岁的算。。算什么。。
+19:14:YoumuSama: ...
+19:14:YoumuSama: 你们这些hentai。
+19:17:lh_mouse: 躺了
+19:17:lh_mouse: YoumuSama, 爆照
+19:19:YoumuSama quit:Ping timeout: 245 seconds
+19:24:condy: QAQ
+19:27:lh_mouse: condy, 爆照
+19:27:condy: 我是大叔。(´・ω・｀)
+19:28:cleamoon_: 233  @Horus9527: 男性版的假高潮：亲爱的你炒的这道菜简直太好吃了 #译自英语推
+19:29:condy: 女性版的估计就是你的dick让我的pussy好舒服..
+19:31:cleamoon_:  经历一年半的开发之后，最新版的GNU Emacs 24.4正式发布。主要新功能包括：内置Web浏览器，改进多显示器和全屏支持，默认启用Electric自动缩进，支持保存和恢复框架和窗口状态，支持Emacs Lisp包的数字签名，文本终端支持菜单，Emacs Lisp引入新的建议机制，支持文件通知，新的矩形标记模式，等等。详细变化可浏览changes list。
+19:36:cleamoon_ quit:Ping timeout: 255 seconds
+19:37:cleamoon quit:*.net *.split
+19:37:varna quit:*.net *.split
+19:37:hysw_logbot quit:*.net *.split
+19:37:varna joined channel
+19:37:lh_mouse: condy, 爆照
+19:37:cleamoon joined channel
+19:37:condy: 刚刚分完网就这样，人家不要了啦！(´・ω・｀)
+19:38:cleamoon_ joined channel
+19:42:lhanjian: condy, 趁着分网赶快鲍照
+19:43:condy: = =#
+19:47:lh_mouse: condy, 爆照
+19:49:condy: 0.0
+19:53:Plough: 我终于进3-5的Boss了……
+19:53:Plough: T不利，酸爽
+19:54:Plough: 妈的
+19:54:Plough: 旗舰剩3点血
+20:01:sismvg: 百度贴吧的最下方。。又什么花样
+20:02:Kanna: sismvg: 。。广告
+20:03:Kanna: 看错了，不是
+20:08:condy: sismvg: http://tietuku.com/cfbc2725131d1b69
+20:08:sismvg: ?
+20:08:sismvg: 我喜欢百合
+20:08:sismvg: 基佬NO
+20:11:lh_mouse: condy, 爆照
+20:11:condy: 0 0
+20:13:sismvg: 顺带下面一张cos瞎了我的狗眼。
+20:17:lhanjian: Kanna, 好久不见呢
+20:21:condy: geordi: { cout < "123"; }
+20:21:geordi: error: no match for 'operator<' (operand types are 'ostream {aka ostream}' and 'const char [4]')
+20:21:condy: geordi: { string s="a"; cout < s; }
+20:21:geordi: error: no match for 'operator<' (operand types are 'ostream {aka ostream}' and 'string {aka string}')
+20:22:Kanna: lhanjian: 嗯，好久不见
+20:24:lhanjian: Kanna, 现在Kanna应该是正式毕业了？
+20:24:Kanna: 明年
+20:36:Petrus07 joined channel
+21:07:handlehard joined channel
+21:08:handlehard quit:Client Quit
+21:12:varna: Plough: 爆
+21:12:Plough: varna: 回去自爆
+21:13:varna: Plough: 不是不痛经了么
+21:13:Plough: 试了一下3-5的3bb3ss阵容，还是要看脸
+21:13:varna: 3bb3ss是作死
+21:13:Plough: 刚才娇喘“什么？居然让那家伙进Boss了？”直接一个T不利拍我脸上了
+21:13:varna: 没制空就是被吊打啊
+21:14:Plough: 还好，至少不是100%劝退了
+21:15:varna: Plough: 我把另一个黑魔法奥义塞进了fubuki
+21:16:varna: Plough: https://pastebin.mozilla.org/6839166 # demo
+21:18:Plough: 感觉好可怕
+21:18:varna: evalview是上下文中的变量
+21:26:varna: Plough: 这个东西其实用来给下方的eval编辑框运行Perl程序
+21:27:lh_mouse: 招人写 IRC bot
+21:27:lh_mouse: mysql 和 SSL 都有了
+21:27:lh_mouse: 招个人写协议
+21:28:varna: Plough: 类似这样的，终端的高亮部分是输出
+21:28:varna: Plough: http://picpaste.com/BqkcJkD2.png
+21:30:cleamoon_: lh_mouse, 你出多少钱
+21:30:FrankHB: 直接从avplayer那坨拖个过来改改不就行了。
+21:31:Plough quit:Ping timeout: 244 seconds
+21:31:varna: 肛旗肛下去了
+21:31:Plough joined channel
+21:32:varna: Plough: http://picpaste.com/BqkcJkD2.png
+21:36:code_new quit:Ping timeout: 244 seconds
+21:37:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+21:42:lh_cat: cleamoon_: this is a non-commercial project.
+21:48:handlehard joined channel
+21:50:lhanjian quit:Quit: 风光冉冉东西陌
+21:52:handlehard quit:Client Quit
+21:54:handlehard joined channel
+21:58:lh_cat quit:Ping timeout: 240 seconds
+21:59:handlehard quit:Ping timeout: 272 seconds
+22:04:varna: 啊啊啊啊药娘呢
+22:06:varna: Plough: 快出来被肛
+22:06:lh_cat joined channel
+22:06:Plough: varna: 回去自爆
+22:06:Plough: 在研究建娘
+22:06:cleamoon_: 建娘？
+22:08:varna: 一个盖舰桥的游戏
+22:08:varna: Plough: 建娘据说很肝啊
+22:08:Plough: varna: 不清楚
+22:08:Plough: 不过我现在资源要手动收
+22:08:varna: 而且人设不好看又没梗
+22:09:Plough: 主要是屯资期没事干太无聊了……
+22:09:varna: 舰娘再怎么说不是个架空脑洞，算是军国主义翻案
+22:09:varna: 屯资期啊，你不做南西当然没办法（摊手）
+22:09:Plough: 如果firefox能开舰娘的话我倒可以去玩小号
+22:09:Plough: 问题是娇喘临时工写得一手好flash
+22:09:varna: 做上南西你每天收拾吐出来的肝渣也得花一阵子
+22:10:Plough: 我的肝脏要留着给信浓酱
+22:10:Plough: 就算遥遥无期
+22:10:varna: 我便要在晓的水平线上画几个正字口牙
+22:11:varna: Plough: 屯资期你可以修炼黑魔法么
+22:11:Plough: varna: 看情况，不过平时大概不行
+22:11:varna: 比如perlxs 2333
+22:11:Plough: 很难找到一段较长的能让我不受打扰的时间
+22:12:varna: 其实是很易懂的东西，只不过又长又渣的文档也是一绝
+22:12:varna: Plough: 你就说你便秘，蹲一天不出来，出来之后说拉脱肛了刚才在努力往回塞
+22:12:Plough: 码代码码到一半被打断我会想杀人
+22:12:cleamoon_: 这招我试过了
+22:12:Plough: 噗
+22:12:varna: 噗
+22:13:varna: 拉脱维亚
+22:13:cleamoon_: 不过那次是真便秘了
+22:13:varna: ...
+22:13:cleamoon_: 1q84看了三分之一
+22:14:Plough: 不过建娘的人设确实一般
+22:14:varna: perlxs, perlapi, perlcall, perlguts这四个文档有一个共同点
+22:14:Plough: 而且名字全都是片假一定是故意的
+22:15:Plough: 我看不懂片假啊啊啊啊啊
+22:15:varna: 看完之后你不知道内存怎么算不漏
+22:15:varna: Plough: 噗，拼出来念念不就行了
+22:15:Plough: varna: 没背过
+22:15:varna: Plough: 多看看就好了，日文其实我先认的是片假名，因为当时玩PS2多……
+22:16:Plough: 我认识塔酱喔酱撸酱雷夜阿级伊级哈撸那塔卡哦伊哦那没了
+22:16:Plough: 所以会蛋疼死
+22:17:Plough: 我看看anthy能不能设置成输入片假名
+22:17:varna: 2333
+22:17:Plough: 哦哦可以
+22:17:Plough: 以后用片假名打好了
+22:18:varna: 突然一股深海骚气噗面而来
+22:18:varna: 到时候就看着肛旗酱「泥奏凯」
+22:18:Plough: 噗
+22:18:varna: 要不就是「咧噗、咧噗」
+22:19:Plough: 哦对了
+22:19:Plough: anthy貌似打不出烈风
+22:19:varna: 啊？
+22:19:varna: 单独打汉字吧
+22:19:cleamoon_: 爱问下载还没恢复？
+22:20:varna: 另外烈風是有个促音的
+22:20:Plough: rebbuu->列部右
+22:20:Plough: bbuu他老给我拆开……出不了风
+22:21:varna: ppu
+22:21:Plough: 噗那是个圈？
+22:21:Plough: 被chrome的显示坑了……
+22:21:Plough: 怪不得
+22:21:varna: reppuu
+22:21:cleamoon_: 这个好  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/3k/xb_115361.jpg
+22:21:varna: 我说怎么你打不出来……
+22:22:varna: 2333
+22:22:Plough: chrome上显示的ぷ我怎么看都是ぶ
+22:23:varna: 你被肛少
+22:24:Plough: 明明是它把圈显示成了方形的还发虚
+22:25:varna: http://tieba.baidu.com/p/3364286610
+22:25:varna: ^ NColle
+22:25:Plough: 为这事我还换过mozc
+22:25:Plough: 后来发现mozc打inazuma出不来电就又换回来了
+22:26:varna: 岛风狗在三个月内制造十万只那珂看来绝非虚言
+22:26:Plough: 2333
+22:26:Plough: 我先睡觉去
+22:27:LittleKey joined channel
+22:27:varna: 爆
+22:27:Plough quit:Quit: 碎叫
+22:34:condy quit:Quit: leaving
+22:50:lhjkk joined channel
+22:53:lhjkk: Rumor：喝醉酒的俄罗斯机场铲雪车司机撞毁法国道达尔的CEO的私人飞机，造成机毁人亡。（等待俄罗斯官方媒体证实）
+22:54:cleamoon_: wiki：道达尔（Total，Euronext：FP， NYSE：TOT) 是一家法国石油公司，是目前世界六大石油公司之一
+22:54:cleamoon_: 他完了...
+22:57:varna: 走了
+22:57:varna: 诸君夜间愉快、武运长久
+22:57:varna quit:Quit: leaving
+23:01:dantmnf: iOS 自带日语输入法 打 いなずま 出来 ⚡︎ ⚡️ 就是没有 電 。。
+23:01:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:02:StarBrilliant left channel:"无法忍受一个经常出现喷子和脏话的频道。"
+23:07:cleamoon_: StarBrilliant (brilliant@unaffiliated/starbrilliant) has left ("无法忍受一个经常出现喷子和脏话的频道。")  #这里吗？
+23:09:Kanna quit:Quit: Leaving
+23:10:lhjkkk joined channel
+23:10:lh_mouse: イナズマ
+23:12:cleamoon_: 什么意思？闪电？
+23:14:lhjkk quit:Ping timeout: 250 seconds
+23:19:lhjkkk quit:Ping timeout: 255 seconds
+23:23:lhjkkk joined channel
+23:39:lhjkkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+23:51:wlemuel joined channel
+23:56:Petrus07 quit:Quit: Leaving.
+23:57:wlemuel quit:Quit: Lost terminal

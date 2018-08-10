@@ -1,0 +1,128 @@
+00:11 Matsune quit:Read error: Connection reset by peer
+00:11 varna quit:Quit: leaving
+00:27 Youmu quit:Quit: Connection closed for inactivity
+01:26 LastAvengers quit:Quit: Srain0.05-git@0.367.69acfba close.
+01:43 T-J-M joined channel
+01:43 T-J-M quit:Client Quit
+01:43 T-J-M joined channel
+04:23 condy quit:Ping timeout: 256 seconds
+04:26 condy joined channel
+05:57 cleamoon joined channel
+06:21 cleamoon quit:Ping timeout: 244 seconds
+06:59 Sasasu joined channel
+07:53 FrankHB quit:Ping timeout: 244 seconds
+07:57 Gary31179 joined channel
+07:57 Gary31179 quit:Remote host closed the connection
+08:24 FrankHB joined channel
+08:33 sdfasdfasdfasdfa joined channel
+08:51 sdfasdfasdfasdfa quit:Ping timeout: 256 seconds
+08:53 sdfasdfasdfasdfa joined channel
+08:56 iyzsong-xx joined channel
+09:00 yimis joined channel
+09:07 sdfasdfasdfasdfa quit:Quit: Leaving
+09:11 lh_mouse joined channel
+09:28 iyzsong-xx: 0 0
+09:31 LastAvengers joined channel
+10:15 Xilzzerts joined channel
+10:16 Youmu joined channel
+10:48 perr joined channel
+10:48 perr quit:Changing host
+10:48 perr joined channel
+10:59 fengyunljp joined channel
+11:01 fengyunljp quit:Client Quit
+11:25 iyzsong-xxx joined channel
+11:28 iyzsong-xx quit:Ping timeout: 268 seconds
+11:36 yimis quit:Quit: yimis
+11:42 perr quit:Ping timeout: 250 seconds
+12:27 Xilzzerts quit:Remote host closed the connection
+12:27 Xilzzerts joined channel
+12:38 iyzsong-xxx: x.x
+13:25 Gary31179 joined channel
+13:30 lh_mouse: geordi, <<is_seq(9,4,5); bool is_seq(int a, int b, int c){ auto x = max({a,b,c}); auto n = min({a,b,c}); auto c = a^b^c^x^n; return (x-c==1)&&(c-n==1); }
+13:30 geordi: error: declaration of 'auto c' shadows a parameter
+13:30 lh_mouse: geordi, <<is_seq(9,4,5); bool is_seq(int a, int b, int c){ auto x = max({a,b,c}); auto n = min({a,b,c}); auto d = a^b^c^x^n; return (x-d==1)&&(d-n==1); }
+13:30 geordi: false
+13:31 lh_mouse: geordi, -r <<is_seq(6,4,5)
+13:31 geordi: true
+13:45 lh_mouse: geordi, -r <<is_seq(INT_MAX,INT_MIN,INT_MIN-1)
+13:45 geordi: warning: integer overflow in expression
+13:45 lh_mouse: geordi, -r <<is_seq(INT_MAX,INT_MIN,INT_MIN+1)
+13:45 geordi: error: signed integer overflow: 2147483647 - -2147483647 cannot be represented in type 'int'
+13:45 lh_mouse: geordi, -wr <<is_seq(INT_MAX,INT_MIN,INT_MIN+1)
+13:45 geordi: Same error.
+13:46 lh_mouse: geordi, --clang -wr <<is_seq(INT_MAX,INT_MIN,INT_MIN+1)
+13:46 geordi: Still same error.
+14:02 Sasasu[D] joined channel
+14:07 Youmu quit:Quit: Connection closed for inactivity
+14:34 Gary31179 quit:Ping timeout: 265 seconds
+14:41 Youmu joined channel
+14:49 Sasasu quit:Ping timeout: 256 seconds
+14:49 Sasasu joined channel
+14:54 Gary31179 joined channel
+15:14 lh_cat joined channel
+15:15 iyzsong-xxx: x.x
+15:17 Gary31179 quit:Remote host closed the connection
+15:40 Sasasu[D] quit:Ping timeout: 260 seconds
+15:41 perr joined channel
+15:49 Sasasu[D] joined channel
+15:51 pokit joined channel
+15:56 yimis joined channel
+16:04 fengyunljp joined channel
+16:05 yimis quit:Quit: yimis
+16:05 fengyunljp quit:Remote host closed the connection
+16:43 LastAvengers joined channel
+16:54 perr quit:Ping timeout: 256 seconds
+17:09 l0nGYear_Sync joined channel
+17:15 pokit quit:Quit: 离开
+17:18 l0nGYear_Sync quit:Remote host closed the connection
+17:31 fy6 joined channel
+17:33 fy quit:Remote host closed the connection
+17:36 pokit joined channel
+17:37 Youmu quit:Quit: Connection closed for inactivity
+17:38 pokit quit:Client Quit
+17:40 Gary31179 joined channel
+17:41 Sasasu[D] quit:Ping timeout: 250 seconds
+17:46 Gary31179 quit:Remote host closed the connection
+18:05 iyzsong-xxx quit:Read error: Connection reset by peer
+18:25 FrankHB quit:Ping timeout: 260 seconds
+18:28 Youmu joined channel
+18:51 yimis joined channel
+18:52 lh_cat quit:Quit: Connection closed for inactivity
+18:52 iyzsong joined channel
+18:54 FrankHB joined channel
+18:58 yimis quit:Quit: yimis
+19:05 iyzsong: (┙>∧<)┙へ┻┻
+19:08 FrankHB quit:Remote host closed the connection
+19:11 FrankHB joined channel
+19:16 FrankHB quit:Remote host closed the connection
+19:17 FrankHB joined channel
+20:23 whocares_2_ quit:Ping timeout: 250 seconds
+20:25 whocares_2 joined channel
+20:46 Xilzzerts quit:Ping timeout: 260 seconds
+20:50 fengyunljp joined channel
+20:54 fengyunljp quit:Read error: Connection reset by peer
+21:19 Mokou joined channel
+21:21 lh_mouse quit:Read error: Connection reset by peer
+21:22 lh_mouse joined channel
+21:43 LastAvengers joined channel
+21:45 whocares_2_ joined channel
+21:47 whocares_2 quit:Ping timeout: 260 seconds
+21:48 LastAvengers quit:Ping timeout: 268 seconds
+21:54 LastAvengers joined channel
+22:20 fengyunljp joined channel
+22:24 fengyunljp quit:Client Quit
+22:26 cleamoon joined channel
+22:29 condy quit:Ping timeout: 252 seconds
+22:32 \f_ quit:Ping timeout: 250 seconds
+22:32 condy joined channel
+22:37 condy quit:Ping timeout: 265 seconds
+22:42 condy joined channel
+22:51 cleamoon quit:Ping timeout: 268 seconds
+22:52 \f_ joined channel
+22:58 iyzsong quit:Quit: bye.
+23:11 \f_ quit:Ping timeout: 250 seconds
+23:24 cleamoon joined channel
+23:32 \f_ joined channel
+23:32 Sasasu quit:Quit: WeeChat 1.0.1
+23:42 \f_ quit:Ping timeout: 256 seconds
+23:48 cleamoon quit:Ping timeout: 250 seconds

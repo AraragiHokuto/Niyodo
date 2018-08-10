@@ -1,0 +1,83 @@
+00:00 Dove: 忘了有FD_CLOEXEC这么个东西。
+00:00 varna: 另一个逻辑：fork后来很多COW -> fork很可能要为exec服务 -> 古代服务器有些fork on conn -> fd该不该活几个
+00:00 varna: 挺多侧面都能引导你去看看man execve, 或者干脆man execl从see also转到execve
+00:01 Dove: 哎呀，真的是脑抽了。
+00:01 varna: 你甚至不需要知道有close on exec
+00:01 Dove: exec的东西我看了。
+00:01 varna: 你也不需要记得exec究竟做了什么
+00:01 varna: 提两个问题，答案就来了
+00:01 Dove: 嗯
+00:02 Dove: 我主要是看书看得意识有点模糊。
+00:02 Dove: orz
+00:03 Dove: 实际也并没看进去多少书。
+00:04 varna: 这不是我能深究的事情，但如果是我，我会问自己一句：真的是看书看累了么
+00:04 Dove: 我脑袋有水orz
+00:04 Dove: 想东西太乱了。
+00:04 varna: 你压力略大
+00:05 Dove: 是的
+00:05 Dove: 一方面按时毕业压力有点大，一方面要找工作，一方面还什么都不会。
+00:05 Dove: 我快郁闷死了。
+00:06 Dove: 然而我还不能集中学习
+00:06 Dove: 注意力都不集中，思维不乱才鬼了。
+00:07 Dove: 话说你准备夜战么。
+00:07 varna: 我刚测试了一点新花样
+00:07 Dove: 干啥的？
+00:08 varna: 给服务器的缓冲链加了个快速废弃-快速重用
+00:09 varna: 方便单协程做中转上传/下载
+00:09 Dove: 不懂
+00:10 varna: 简单来说，我直接读一批数据进缓冲链，然后打一个iovec发出去
+00:10 Dove: 那什么是快速废弃和重用呢？
+00:10 varna: 原地快速把缓冲内容无效化，但内存不去掉，也不把缓冲块扔回什么缓存，直接放在原处
+00:11 Dove: 哦，这样啊。
+00:12 varna: 这个缓冲链已经要走malloc了，我不想一遍一遍折腾malloc-free
+00:12 Dove: 我打算写个用户指定缓冲区的cycled buffer，到时候可以支持这个功能。
+00:12 Matsune quit:Quit: Leaving
+00:12 varna: 不懂
+00:14 varna: 环形缓冲放在这种地方，你想直接压死下行数目么
+00:14 Dove: 不是，我只是说我打算写个环形缓冲。
+00:14 varna: storage <---highspeed---> server-side agent <---lowspeed---> remote client
+00:15 varna: 这么个场景
+00:15 varna: one coro per agent, no more no less
+00:16 Dove: 这个好像能看懂
+00:16 Dove: 啊蛤蛤
+00:17 varna: 真的么
+00:17 Dove: 我先睡觉去了哈，家里人再喊了。
+00:17 Dove: 我不知道真不真，还得再想想。
+00:17 Youmu quit:Quit: Connection closed for inactivity
+00:18 Dove: 但是你要控制数据流量对吧
+00:19 Dove: 具体怎么控制我没懂呢还。
+00:19 varna: 不不不
+00:20 varna: 我们跳过细节，先说结论：你要是确认自己懂的话，你应该知道这里怎么实现了
+00:20 Dove: 那就是不懂。
+00:20 varna: 对p7来说这么做基本是在玩命，我自己没给过这种场景的demo
+00:21 varna: 如果不在意速度，这个地方应该是 storage <--TCP--> storage agent <--IPC--> frontend agent <--TCP--> client
+00:21 varna: 但我不想要那个IPC
+00:21 varna: 原因从略，清清浊浊
+00:21 Dove: 哦，酱紫啊。
+00:22 varna: 原因从略，这个解释是不完全的
+00:23 varna: 变成这样是p7实现的原因
+00:23 varna: 不然我觉得应该有人问why not wait for a socketpair
+00:24 Dove: 不懂了
+00:26 varna: https://github.com/Akvelog/servcraft/blob/master/p7/p7impl.c#L776 问题从这里开始的，解释太长， http://cpp.ra2diy.com/forum.php?mod=viewthread&tid=47&extra=page%3D1 这里涉及了一部分
+00:27 varna: 一开始那个waitk不是local auto
+00:29 Dove: 你是说这个waitk的生存期不够？
+00:29 varna: 慢慢来，你能看到p7_iowrap_是干什么的吧
+00:30 varna: 这东西是个local auto, 但在795行返回的时候，用的成员全都不是在这函数里填的
+00:32 Dove: 我表示看不懂，然而家里人催我睡觉。
+00:32 Dove: 我先去睡了，明天学习下。
+00:32 Dove: 你不睡了么？
+00:33 varna: 这才十二点半
+00:33 Dove: orz，没有人烦就是好。
+00:33 Dove: 那我先去睡了哈，晚安。
+00:33 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+00:43 lhanjian quit:Quit: Connection closed for inactivity
+00:49 cleamoon joined channel
+02:22 Youmu joined channel
+03:10 cleamoon quit:Ping timeout: 268 seconds
+03:49 cleamoon joined channel
+03:49 cleamoon quit:Client Quit
+03:54 Stevearzh quit:Remote host closed the connection
+03:54 Stevearzh joined channel
+06:21 cleamoon joined channel
+06:37 cleamooon joined channel
+06:43 cleamoon quit:Read error: Connection reset by peer

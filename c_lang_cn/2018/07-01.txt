@@ -1,0 +1,124 @@
+00:30 matchray: 喵
+00:30 varna: 惊恐
+01:03 varna quit:Ping timeout: 240 seconds
+01:05 iyzsong quit:Read error: Connection reset by peer
+01:28 lh_ideapad quit:Remote host closed the connection
+01:45 lh_mouse quit:Ping timeout: 240 seconds
+02:45 iyzsong joined channel
+04:38 iyzsong quit:Ping timeout: 260 seconds
+05:50 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+06:18 matchray: https://www.youtube.com/watch?v=SYmbOvN60N0
+06:27 matchray: 送室友去NYC有感 https://reviews.llvm.org/D48806
+06:29 cleamoon_: ?
+06:31 matchray: 今天上海llvm social，不能至，室友明天就要走了，有感而發revision
+06:32 cleamoon_: ......厉害
+07:08 zhangoke joined channel
+07:32 zhangoke quit:Quit: zhangoke
+10:01 Taggnostr2 quit:Ping timeout: 256 seconds
+10:47 varna joined channel
+10:48 varna quit:Client Quit
+10:56 iyzsong joined channel
+11:33 iyzsong quit:Read error: Connection reset by peer
+12:31 lh_cat joined channel
+12:47 matchray: 似乎肥貓也來llvm social
+13:03 iyzsong joined channel
+13:17 lh_cat: 谁，felixonmars ？
+13:19 matchray: en
+13:19 matchray: 老鼠聽說來了一隻貓，迅速變成了🐈
+13:21 lh_cat: 肥猫什么来头。
+13:25 Sasasu quit:Quit: WeeChat 1.6
+13:28 Sasasu joined channel
+13:30 Sasasu quit:Client Quit
+13:30 Sasasu joined channel
+13:30 wenfeng quit:Quit: WeeChat 2.1
+13:36 Sasasu quit:Quit: WeeChat 1.6
+13:42 matchray: Arch Linux維護者
+13:43 matchray: 世界上打包最多的貓
+13:43 matchray: 可能和深度有關係
+13:43 matchray: 但我也沒見過啊
+13:47 matchray: pthread_spin_lock():  while (*(volatile int *)s || a_cas(s, 0, EBUSY)) pause();
+13:47 matchray: 感覺怪怪的
+13:59 zhangoke joined channel
+14:00 zhangoke quit:Client Quit
+14:07 Sasasu joined channel
+14:42 lh_cat: http://www.freebuf.com/news/174410.html
+14:47 iyzsong: >.<
+14:55 matchray: 看到肥貓了嗎
+14:56 matchray: felix+| （我在旁边的店里吃面
+14:56 matchray: 這是一個小時前了
+14:56 iyzsong: _(:з」∠)_
+15:02 matchray: 我想看老鼠
+15:20 lh_ideapad joined channel
+15:23 varna joined channel
+15:24 lh_ideapad quit:Remote host closed the connection
+15:25 varna: FrankHB: 没看到葱色的工口引力源？
+15:33 matchray: lh_cat: 老鼠給我推薦 ccls 啊
+15:33 lh_cat: 啥？
+15:33 varna: cquery fork
+15:34 matchray: https://emacs-china.org/t/topic/6262
+15:34 varna: 要不MR神犇变成小姐姐代言一下
+15:35 matchray: varna小姊姊給我推廣
+15:35 varna: 我吃藕变不出来
+15:37 lh_mouse joined channel
+15:39 matchray: 改了一下
+15:43 varna: FrankHB: 球快冒出来
+15:44 matchray: 法爾娜在llvm social嗎？FrankHB呢？
+15:44 matchray: 這個 6262鏈接，裏面的視頻是不是很方便
+15:44 varna: 据说球刚才说话了
+15:45 varna: 但我就听到恒星轰隆轰隆的声音
+16:08 varna quit:Ping timeout: 255 seconds
+16:27 lhanjian: matchray: emmm
+16:54 lh_ideapad joined channel
+17:12 lh_ideapad quit:Remote host closed the connection
+17:24 cp99 joined channel
+17:34 Taggnostr joined channel
+17:51 lh_cat quit:Quit: Connection closed for inactivity
+18:17 cp99 quit:Quit: Leaving
+19:59 iyzsong quit:Ping timeout: 255 seconds
+20:02 iyzsong joined channel
+20:19 lh_mouse quit:Read error: Connection reset by peer
+20:21 lh_mouse joined channel
+20:31 CyrusYzGTt joined channel
+20:45 whocares_2_ joined channel
+20:45 whocares_2 quit:Ping timeout: 264 seconds
+20:58 lh_ideapad joined channel
+21:28 iyzsong quit:Quit: ZNC 1.7.0 - https://znc.in
+21:29 iyzsong joined channel
+22:10 zhangoke joined channel
+22:13 varna joined channel
+22:13 varna: 今天一路看到了绝对有超过二十个幼女
+22:15 varna: btw 恥球和我高中一个浑名戒空大师的同学超姬儿像
+22:27 FrankHB quit:Quit: Konversation terminated!
+22:28 FrankHB joined channel
+22:31 FrankHB: 终于搞定输入法了。。。
+22:31 FrankHB: 分辨率真tmd感人。。
+22:32 FrankHB: 算了vcxscr还是开自动缩放得了……
+22:32 FrankHB quit:Client Quit
+22:33 cleamoon_: 高僧出现了
+22:33 varna: (｡･ω･)而且今天还玩了球咧
+22:35 FrankHB joined channel
+22:36 cleamoon_: 和高僧玩了球？
+22:37 varna: 就是玩了恥球
+22:37 FrankHB: mmp开了缩放果然非常感人。。。
+22:38 FrankHB: 除了鼠标光标正常了以及没模糊了以外都tmd小……
+22:43 varna: 看老菊打飞缘魔小姐姐也巨喜感
+22:44 cleamoon_: 老菊似乎没好好玩杰落命
+22:44 zhangoke quit:Quit: zhangoke
+22:44 varna: 跟魂没法比，不过玩得可以了
+22:49 varna: 不过飞缘魔我自己也是打刀上段重斩黑魂过的
+22:51 cleamoon_: 对黑魂是真爱呀
+22:51 lh_ideapad quit:Remote host closed the connection
+22:52 cleamoon_: 直播还刷了几次奇特的mod
+22:52 varna: 我想到一个问题啊
+22:53 varna: 之前打立花的时候，我的阴阳术有三个封力符可用
+22:53 varna: 因为是技能所以也没有总量限制
+22:53 varna: 然而我正义地没用……
+23:00 cleamoon_: 太正义了，不是纯正的外乡人
+23:00 iyzsong quit:Quit: ZNC 1.7.0 - https://znc.in
+23:16 * varna 作为一个外乡人，熟练运用前后法击破敌人
+23:16 lhanjian: emmmm
+23:17 lh_ideapad joined channel
+23:38 lh_ideapad quit:Remote host closed the connection
+23:42 lh_ideapad joined channel
+23:46 lh_ideapad quit:Remote host closed the connection
+23:51 lh_ideapad joined channel

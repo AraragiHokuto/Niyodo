@@ -1,0 +1,694 @@
+00:05 nodefree quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+00:12 varna: __start_context 45.18%  handle_client 36.22%
+00:12 varna: 这两个比例似乎稍微接近了些
+00:12 yimis quit:Quit: yimis
+00:13 yimis joined channel
+00:13 yimis quit:Client Quit
+00:15 varna: 36.00%的调用来自handle_client, 次高是sched_loop的1.98%
+00:15 varna: 似乎还算有效
+00:15 Mokou: OTL
+00:16 varna: perf干这种细致活儿还可以
+00:16 varna: 毕竟gprof上多线程就尿崩
+00:21 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 47.0.1/20160623154057]
+00:24 varna: 非children的overhead统计似乎已经挺好看了
+00:24 varna: __swapcontext 9.35%  sched_loop 8.31%
+00:25 varna: handle_client里面有一读一写一灭亡，合计至少五次切换
+00:25 varna: overhead 1.87%
+00:26 varna: 似乎刚好凑出9.35%
+00:26 Mokou: 噫，LI似乎有人钓鱼大成功了
+00:27 varna: puu?
+00:28 Mokou: 他在其他群里拿P4和i5比主频
+00:28 Mokou: 没人看出问题
+00:29 hoxily quit:Quit: Leaving
+00:30 varna: ...
+00:32 Mokou: 游戏党真可怕
+00:32 Mokou: 某深海提督最近还一直和我吹AMD要搞48c96t，所以马上要翻身了
+00:32 varna: 要不你建议他先看看英特尔的手册有多厚？
+00:33 varna: 从粗浅的学起
+00:33 Mokou: 很久以前我拿一堆流水资料扔他脸上和他撕过
+00:33 Mokou: 他表示“讨论性能不看跑分看这些卵用？”
+00:33 varna: 他读过benchmark程序么
+00:34 Mokou: 他大概点开过benchmark程序的界面
+00:34 varna: 直接让他讲讲bench原理和各个bench套件的针对性就好了
+00:34 Mokou: 毕竟windoze下的bench都是编译好的exe不是
+00:35 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+00:35 varna: it's ok
+00:35 varna: \PONG/
+00:35 Mokou: 好可怕
+00:35 Mokou: 佚影三重奏: 有爹了财力好转 倒不用担心没钱研究架构了
+00:35 Mokou: 佚影三重奏: 回复 佚影三重奏 :估计48c96t的zen+的图纸都画好了。。只不过a卡就惨了 2018年前a卡都是那德行（明年的vega是6970幅度的改进 注重于高频 估计还是被爆）
+00:35 varna: ...
+00:36 Mokou: 一眼看穿2018
+00:36 varna: 我觉得无视他吧
+00:36 Mokou: 我五体投地，现在都不敢讲话
+00:36 varna: 关掉硬件加速看看ff崩不崩
+00:36 varna: 我怀疑又是硬件加速的问题
+00:36 cleamoon: 图纸都画好了... 好有画面感
+00:36 varna: 现在ff缺省开plugin container, flash再死也不会死出多大花样
+00:37 Mokou: 我去显卡吧之类的主要是想看壕晒机器，结果每次都能看到游戏党秀智商
+00:38 Mokou: 之前还有人说AMD64不是真正的64位架构，*只有IA64*才是
+00:38 varna: ia64...
+00:38 varna: ia64可不是x86-64啊
+00:38 Mokou: 而且是*最早的*64位架构
+00:38 Mokou: 对，他说的就是x86-64不是真正的64位架构
+00:38 cleamoon: 去民科吧多好
+00:39 varna: 我驲，看来不是硬件加速的锅
+00:39 Mokou: 我估计他没听过PPC/SPARC之类的名字……
+00:39 cleamoon: 我记得之前看到有人说win都在研究支持16核了，linux连双核都不支持
+00:39 Mokou: 2333333
+00:39 Mokou: 他用的什么，linux 0.0.1么
+00:40 varna: ia64那个指令集我见过一点点
+00:40 varna: 反正不兼容x86...
+00:40 varna: 最后一次看ia64代码是红旗报p7崩溃之后
+00:40 Mokou: ia64没推广开似乎就是因为x86兼容性问题？
+00:40 varna: 走错目录了
+00:40 Mokou: 噫
+00:41 varna: glibc交叉参考给我搜出一份ia64的__start_context
+00:42 varna: 不过既然学派、雪菜、四季三台机器都不报错……
+00:42 varna: (｡･ω･)我觉得是你安了什么奇怪的glibc
+00:42 Mokou: 然而IA64是2001年首次发布的，PPC 620早在97年就出来了
+00:42 Mokou: 2.24-1
+00:42 varna: -1我还真没试过
+00:43 varna: 要不你编译个版本，叫2.24+1s
+00:43 Mokou: 噫
+00:43 Mokou: 学派的glibc比我本地的新
+00:43 cleamoon: 2333
+00:43 varna: 我的是2.24-2
+00:44 Mokou: 这两个版本之间有什么差别么
+00:44 Mokou: abs里面能不能找到pkgbuild
+00:44 varna: 没diff过，当时只从gnu的ftp上拖了两个稳定版对比
+00:45 varna: changelog看来差别不明显
+00:45 varna: 对ucontext主要的改动就是三月份那一处
+00:45 Mokou: 我升级一次试试
+00:47 Mokou: 重启下
+00:47 Mokou quit:Quit: rebooting
+00:48 Mokou joined channel
+00:48 varna: http://www.xiami.com/play?ids=/song/playlist/id/1771685788/object_name/default/object_id/0#loaded 想起这个BGM也不错
+00:50 Mokou: 炸了
+00:50 Mokou: glibc 2.24-2
+00:51 varna: ...
+00:51 varna: LK 4.7.0-1 glibc 2.24-2 x86-64
+00:51 varna: 如果是这些的话，明天我真的还得搞一个简化测试给你运行
+00:52 Mokou: LK 4.7.1-1
+00:52 Mokou: 当然4.7.0也炸了
+00:52 varna: 应该没多少差别，LK恐怕管不到这些
+00:52 varna: 主要相关的还是glibc
+00:52 Mokou: +
+00:53 varna: 纳米服拒绝启动，并向你抛了一个蓝屏，颜色类似蕾姆
+00:54 Mokou: 噗
+00:54 Mokou: 我说怎么gentoo认不到usb键盘
+00:54 Mokou: LK内核默认没开USB3.0……
+00:54 varna: 没hid驱动？
+00:54 varna: ……
+00:54 Mokou: 我主版上只有3.0接口
+00:57 Mokou: 我切去gentoo下跑一次试试
+00:57 Mokou quit:Remote host closed the connection
+01:01 Izumo joined channel
+01:14 Mokou joined channel
+01:14 Mokou: gcc 4.9.3 libc 2.22 LK 4.7.1
+01:14 Mokou: 炸了
+01:14 Mokou: 没有X太蛋疼没看炸点，不过看wrk的反应估计一致
+01:14 Mokou: 系统是全新的
+01:15 Mokou: varna: 
+01:16 varna: ...
+01:16 Mokou: 2.22是15年8月的版本……
+01:16 Mokou: 这锅甚至不是三月更新的
+01:16 varna: 奇怪
+01:17 varna: 而且你之前也做过不少本地测试
+01:17 Mokou: 别告诉我真是Skylake的问题
+01:17 Mokou: 没在这太机器上做过
+01:17 varna: 这是新机器？
+01:17 Mokou: 台*
+01:17 varna: ……
+01:17 Mokou: 现在是台式机
+01:17 varna: 见鬼
+01:17 Mokou: 以前的本子是Haswell的i3
+01:17 varna: 学派呢
+01:17 Mokou: 学派是古老的Xen机器，估计Sandy Bridge以下
+01:17 Mokou: 和你那个大概差不多
+01:18 varna: 驲
+01:18 varna: 看来我得攒钱买一台i7
+01:18 Mokou: 要不然你弄一块4790k给我寄过来……
+01:19 Mokou: (｡･ω･)我换上去试试
+01:19 Mokou: CPU现在36度，肯定不是发热的问题
+01:20 varna: 你方便作个死么
+01:20 Mokou: 怎么作
+01:20 varna: 把所有__ATOMIC_ACQUIRE和__ATOMIC_RELEASE都换成__ATOMIC_SEQ_CST
+01:20 varna: 直接正则
+01:21 Mokou: 我试试
+01:23 Mokou: 炸了
+01:23 varna: 悲剧
+01:24 varna: 你能看到打包的编译选项么
+01:24 Mokou: p7编译选项？
+01:24 varna: 能的话查一下 --enable-lock-elision
+01:24 varna: glibc
+01:26 Mokou: 有
+01:26 varna: yes?
+01:26 varna: 或者只要不是no
+01:26 Mokou: PKGBUILD里显式地加在了configure后面
+01:26 varna: 玛德
+01:27 varna: 你有心思的话给我加个issue吧，中奖了
+01:27 varna: skylake + pthread + HLE
+01:27 Mokou: 66666666
+01:27 varna: 这是致命的
+01:27 Mokou: 毕竟到现在位置我这里的崩溃率是100%……
+01:27 varna: 就我对这个流言的考察，似乎是没救的
+01:27 Mokou: 明天我上微博问问有没有人有装了Linux的skylake机器
+01:28 varna: 也成
+01:28 Mokou: Broadwell and Skylake……
+01:28 Mokou: 正好是Haswell之后
+01:28 varna: 这个问题引发了一整批崩溃
+01:29 varna: 一部分人对上游的建议是禁用HLE
+01:29 Mokou: 这问题直接横跨了两代微架构啊
+01:29 Mokou: 而且Skylake应该是个tock……
+01:30 varna: https://bbs.archlinux.org/viewtopic.php?id=206647 这里还有一批战死的
+01:30 varna: i7-6700 gtx970m
+01:30 varna: duang地一下就死了
+01:30 Mokou: 970
+01:30 Mokou: 啊，底下有个970m
+01:31 varna: 天池杀
+01:31 Mokou: 我问一下有没有broadwell或者skylake的机器
+01:31 Mokou: 这太莉害了，锅直接到了intel头上
+01:31 varna: 毕竟这崩溃得毫无道理
+01:31 varna: 我确认过glibc的两个实现，除了符号之外没任何差别
+01:32 varna: 而2.24的符号能够工作
+01:32 Mokou: 而且2.22都炸了
+01:32 varna: 是啊……
+01:32 Mokou: 我明天试试在gentoo下干掉HLE
+01:32 varna: 上面那批冤魂就是2.22死的
+01:32 Mokou: intel干得漂亮
+01:32 varna: 要真是天池杀就太喜感了
+01:32 Mokou: 又一个处理器bug……
+01:33 Mokou: Haswell的TSX bug是不是刚坑完来着
+01:33 varna: 是
+01:33 varna: 敲碗等fix
+01:33 varna: 要不让恥球给造一个好的处理器出来
+01:34 Mokou: 让耻球发个microcode更新
+01:35 varna: 我关掉了必应的首页动画，似乎好多了
+01:35 Mokou: 噫
+01:35 varna: 怀疑是某个so在h5工作的情况下自爆
+01:35 varna: 之前看h5播放器就能稳定死掉
+01:35 Mokou: ……
+01:35 Mokou: 绘图坑了么
+01:35 lhanjian: 呜呜呜
+01:35 varna: 不知道，坑的时间还都很奇妙
+01:35 varna: lhanjian: 快介绍妹妹给我
+01:35 Mokou: 握日
+01:36 varna: 有时候是绘图结束之后坑掉
+01:36 Mokou: All Haswell CPUs and some Broadwell CPUs were updated by Intel to have
+01:36 Mokou: the HLE and RTM features disabled. This will prevent
+01:36 Mokou: "-cpu Haswell,enforce" and "-cpu Broadwell,enforce" from running out of
+01:36 Mokou: the box on those CPUs.
+01:36 Mokou: DISABLED
+01:36 varna: 哈哈哈哈哈哈哈哈哈哈
+01:36 varna: 我押四成是中奖了
+01:36 Mokou: 结果我那本子上跑的时候可能根本就没有HLE这回事
+01:36 lhanjian: varna:  她太小啦
+01:37 varna: lhanjian: 胸小的好！
+01:37 varna: 你看我们现在很可能遭到来自CPU的直接轰炸
+01:37 varna: 急需妹子支援
+01:37 Mokou: Intel TSX provides two software interfaces. The first, called Hardware Lock Elision (HLE) is a legacy compatible instruction set extension (comprised of the XACQUIRE and XRELEASE prefixes) that are used to specify transactional regions. 
+01:37 Mokou: 结果这就是TSX bug
+01:38 varna: glibc里不确认坑到什么程度
+01:38 varna: 但我确实在gcc里看到了这两个前缀的实装
+01:38 Mokou: 66666666
+01:38 Mokou: 我看看能不能找到人测试
+01:38 Mokou: 或者我关掉HLE试一次
+01:38 varna: 小心点
+01:38 varna: 建议只做关HLE的测试
+01:38 lhanjian: varna: 她骨架子大，不是贫乳。我是说她年纪小。
+01:39 lhanjian: 跟我们观念差距太大
+01:39 varna: 这个bug现在应该不致死了，不然应该也不至于明目张胆开HLE
+01:39 Mokou: 怕伤及他人数据么
+01:39 varna: 对
+01:39 varna: lhanjian: 她喜欢Java？
+01:39 Mokou: 能找到志愿者的话我试着把风险跟他们说明白吧
+01:39 varna: 不是不可以
+01:39 lhanjian: 学医吧
+01:39 varna: 哦哦
+01:40 lhanjian: 关键是我跟她不熟，干妹妹也介绍不了啊
+01:40 varna: 噫！我把显卡3的OST弄丢了！呜呼呼！
+01:41 varna: 809MB 生拖
+01:43 varna: 其实我还是有点担心可能是竞态，但K的业务又不复杂……
+01:43 Mokou: 而且其他机器也没炸啊
+01:43 varna: +
+01:43 varna: 一个跟echo没多大差别的测试程序……
+01:43 Mokou: 我这里一般三万到五万次请求就炸了……
+01:43 Mokou: 竞态差距应该没那么大
+01:43 varna: 现在我胡乱折腾2.5M都是安定的
+01:44 varna: p7消竞态的手法高度粗暴，而且-n1都炸没道理
+01:44 Mokou: +
+01:44 varna: 反正英猥达驱动都比我先死
+01:46 varna: 不过我还是希望这个技术能好起来的
+01:47 varna: 虽说如果事务内存逐渐普及的话，我这种水雷屋的日子会越来越辛苦
+01:47 varna: 也许将来做HLVM会是有意思的
+01:48 Mokou: OTL
+01:48 Mokou: 来写Mizuho
+01:48 varna: 唉唉好想舔妹子
+01:48 Mokou: 好想要2699v47
+01:48 Mokou: 好想要2699v4
+01:49 xxxxxxxx: v47给人一种大光头的感觉
+01:49 Mokou: 虽说Broadwell-E也有TSX bug……
+01:52 varna: 见鬼了
+01:52 Mokou: 什么情况，你那里炸了？
+01:53 varna: 只是感慨下
+01:53 varna: 我这里还好的
+01:53 varna: 噫，游侠那个OST居然是三十多个wav
+01:53 varna: 也是绝
+01:53 Mokou: ……
+01:54 varna: 要是关HLE的测试能通过，这崩溃估计能吹出去撩妹了
+01:56 Mokou: 什么鬼
+01:56 varna: (｡･ω･)日常吹吹水
+01:56 Mokou: 我反汇编了一下，炸在了一条FPU指令上
+01:56 varna: ...
+01:56 Mokou:    0x00007ffff7876bc5 <+37>:	mov    0xe0(%rdi),%rcx
+01:56 Mokou: => 0x00007ffff7876bcc <+44>:	fldenv (%rcx)
+01:56 Mokou:    0x00007ffff7876bce <+46>:	ldmxcsr 0x1c0(%rdi)
+01:56 Mokou:    0x00007ffff7876bd5 <+53>:	mov    0xa0(%rdi),%rsp
+01:56 varna: 这短我记得……是在ucontext里面啊
+01:56 varna: 段*
+01:56 Mokou: 对
+01:57 varna: 这泥马
+01:57 Mokou: 这次是setuontext炸了
+01:58 varna: 能看出是GPE还是其他的么
+01:58 Mokou: 我反汇编的时候还有个虫子冒出来跟我狗斗，被我直接击坠在了机箱侧板上
+01:58 varna: 如果是GPE的话……
+01:59 varna: 有点奇异
+02:00 varna: 今早先随他去吧……
+02:01 T-J-M joined channel
+02:01 Mokou: 有意思了
+02:01 Mokou: 噫
+02:01 Mokou: 炸了
+02:02 Mokou: 关掉HLE只是延后了死刑
+02:02 Mokou: 我重启一次看看
+02:02 Mokou: 还不行就另找锅
+02:02 varna: 奇特
+02:02 Mokou quit:Remote host closed the connection
+02:02 varna: https://www.blognone.com/node/37931 清真的技术
+02:03 Mokou joined channel
+02:04 Mokou: 还是炸，还是那条FLDENV
+02:05 varna: 诡异
+02:05 varna: 这次有bt么
+02:05 Mokou: 没有
+02:06 Mokou: 恐怕不是HLE的锅
+02:06 varna: 这下有意思了
+02:07 iyzsong joined channel
+02:08 Mokou: 要是能弄块4790k就好了
+02:08 Mokou: 说不定可以确定到底是架构问题还是竞态问题
+02:08 Mokou: _(:з」∠)_没钱真麻烦
+02:08 iyzsong: (┙>∧<)┙へ┻┻
+02:09 varna: 先搁置
+02:09 varna: 我打算写更简单的ucontext demo给你，看看怎么挂的
+02:10 Mokou: OK
+02:10 varna: 明天我写来看，终于有个没事情的周日
+02:10 varna: 活见鬼了
+02:10 Mokou: => 0x00007ffff7876b1c <+44>:	fldenv (%rcx)
+02:10 Mokou: rcx            0x43d0	17360
+02:11 Mokou: rcx里面的值很奇怪啊
+02:11 varna: 0x43d0?
+02:11 varna: 这值好诡异
+02:11 Mokou: +
+02:11 Mokou: fldenv会读一段14或28字节的内存
+02:11 varna: http://www.oschina.net/p/servcraft-p7 这个例子的回显正确么
+02:12 varna: 啊，你可能没客户端
+02:13 Mokou: 我去吱坛复制
+02:13 varna: ok
+02:13 varna: 那儿也没有……
+02:13 Mokou: 有例子
+02:14 varna: 例子太旧了
+02:14 varna: oschina那个是新版的
+02:15 Mokou: 可以直接复制
+02:15 varna: 哦
+02:15 varna: 用py凹个echo client估计不麻烦？
+02:16 Mokou: 我用飞龙来一个
+02:24 nodefree joined channel
+02:25 varna: nodefree: HELO
+02:25 nodefree: WA
+02:28 iyzsong: 蟑螂好可怕啊 ●﹏●
+02:29 Mokou: 看起来没问题
+02:30 varna: ...
+02:31 varna: 我们要不要搞个纯傻逼的HTTP Test Server降低干扰……
+02:31 Mokou: 可以试试……
+02:31 varna: 等睡醒
+02:31 varna: 这都三点半了
+02:31 varna: 哦不对，两点半
+02:32 varna: 我还没看小姐姐！
+02:32 varna: 驲驲驲
+02:32 varna: 昨/今天也辛苦了
+02:32 Mokou: 我先撤退了
+02:33 Mokou: 武运
+02:33 Mokou quit:Quit: 睡觉
+02:51 varna: 噫，saint snow的歌挺好听啊
+02:51 varna: (｡･ω･)ﾉ本届小姐姐下台！
+02:52 mxparson joined channel
+02:55 varna: 啊，来新人了
+02:55 varna: 欢迎
+02:56 mxparson left channel:"Ex-Chat"
+03:23 Izumo quit:Quit: Connection closed for inactivity
+05:03 yimis joined channel
+05:12 yimis quit:Quit: yimis
+05:25 cleamoon: varna, 羊驼子又活着？
+05:55 yimis joined channel
+05:57 yimis quit:Remote host closed the connection
+06:02 geordi_ joined channel
+06:03 xxxxxxxx quit:Ping timeout: 252 seconds
+06:03 varna quit:Ping timeout: 252 seconds
+06:04 iyzsong quit:Ping timeout: 252 seconds
+06:04 geordi quit:Ping timeout: 252 seconds
+06:04 dantmnf quit:Ping timeout: 252 seconds
+06:05 varna joined channel
+06:06 xxxxxxxx joined channel
+06:09 dantmnf joined channel
+06:15 iyzsong joined channel
+06:17 iyzsong:  (┙>∧<)┙へ┻┻
+08:35 lhanjian: varna: 早～
+08:35 lhanjian: 大家早～
+08:36 iyzsong: (┙>∧<)┙へ┻┻   
+10:08 kin3z joined channel
+10:11 AutoGavy joined channel
+11:04 Mokou joined channel
+11:10 Mokou quit:Remote host closed the connection
+11:12 Izumo joined channel
+11:22 lhanjian: 金牌！
+11:23 lhanjian: 女排金牌！Get!
+11:31 varna: 啊！错过了！
+11:32 varna: 驲驲驲！
+11:32 * varna 洗衣服
+11:33 iyzsong: 寻找小强...
+12:02 varna: (｡･ω･)回来了
+12:03 varna: 一觉睡到十一点，强行错过女排
+12:13 xxxxxxxx quit:Ping timeout: 244 seconds
+12:19 cleamoon: aws student又能注册了
+12:19 cleamoon: 打排球手蛮疼的
+12:24 varna: +1
+12:26 Izumo: 105/644 43/480
+12:26 Izumo: 5vs2
+12:26 Izumo: 斩了
+12:27 varna: OTL
+12:27 cleamoon: orz
+12:27 cleamoon: 活动什么时候结束
+12:28 Izumo: 我记得是31号？
+12:28 cleamoon: soga
+12:28 cleamoon: 那我还有机会捞船
+12:29 Izumo: E3的恶心之处在于它逼着你打甲……
+12:29 Izumo: 只有甲等给银河
+12:30 varna: 银河……
+12:30 cleamoon: .....
+12:30 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=26085805e150352ab16125006378f9f2/b8389b504fc2d56299ce875fef1190ef77c66cb9.jpg
+12:30 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=79831e989516fdfad86cc6e684b48d54/fc1f4134970a304efb734549d9c8a786c9175c34.jpg
+12:31 Izumo: Betty野中队 雷12爆13
+12:32 varna: 坐等银河江草队
+12:32 Izumo: Betty三四型 雷11爆12
+12:32 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/yz/xv_497101.jpg@596w_1l.jpg
+12:32 Izumo: 银河 雷14爆14
+12:33 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=4fb1fc8973f40ad115e4c7eb671710df/6a600c338744ebf85f86af8ed1f9d72a6159a788.jpg
+12:33 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/yz/xt_497102.jpg@596w_1l.jpg
+12:33 cleamoon: 这什么
+12:34 varna: 粪牛排
+12:35 cleamoon: .....
+12:35 cleamoon: 我擦，土耳其爆炸了
+12:36 Izumo: 懒得折腾，E4我乙
+12:40 cleamoon: 普通舰队夜战大不了潜水 姬吧？
+12:42 Izumo: 打不了
+12:42 Izumo: 白天没炸死直接撤退就行
+12:43 cleamoon: shit
+12:43 cleamoon: 每战一桶好浪费
+12:48 cleamoon: shit，好船都要捞
+12:59 cleamoon: varna, fov复出了，不过打的似乎还没wfz好
+13:00 varna: ...
+13:03 cleamoon: 另外ne打ud为什么不用三远了，反正出熊也是被瞬秒
+13:05 varna: 三远打ud太容易被爆掉吧，输出尚可但生存乏力
+13:06 varna: fov打moon!
+13:06 cleamoon: 熊也没增加什么生存力，还给对方大量经 验
+13:06 varna: 我看看这个视频
+13:06 cleamoon: 古代打法
+13:06 cleamoon: 天地双鬼
+13:07 varna: 噫
+13:07 varna: 这个好
+13:07 varna: 蜘蛛流都看腻了（虽然我只学过这个）
+13:07 cleamoon: 还是狗流看着爽
+13:12 varna: 两个精彩围杀
+13:12 varna: 还是不一样……
+13:25 Izumo: E4一血
+13:25 varna: 噫噫噫
+13:25 varna: fov输了
+13:25 varna: 太惨了，moon打得很聪明
+13:26 cleamoon: 三线分兵很美，那时我以为已经挂了
+13:26 Izumo: 第四条江风……
+13:26 cleamoon: orz
+13:26 varna: 两场心理战都直击对手
+13:27 cleamoon: 不过能看到天地双鬼也很好
+13:27 Izumo: 等疲劳，玩玩RA3
+13:27 cleamoon: 黑旗不玩war3吗
+13:27 Izumo: 不玩
+13:27 varna: fov操作还是很漂亮
+13:28 Izumo: 题材没兴趣
+13:28 varna: 再看一场focus vs fov的
+13:28 cleamoon: 不过竟然没有对付天地鬼完克的现代战术
+13:29 varna: 猥琐脚男，不求胜只求拖
+13:30 varna: 像最后fov那一波必须打的，moon开出矿的话他就难堪了
+13:30 cleamoon: ne怎么脚男...
+13:31 varna: ne没办法的
+13:31 varna: 熊猫小鹿已经是很好的战术了，ne容易被ud打崩
+13:33 cleamoon: 乱矿三远吧，至少好看
+13:38 varna: 升本屠农……
+13:40 varna: 喔喔喔喔喔
+13:40 varna: C死贱圣了！大快人心！
+13:41 cleamoon: 23333
+13:41 cleamoon: 贱圣太贱了
+13:45 varna: ud要输啊
+13:45 cleamoon: 作为ne最大bug，月井为什么很多人不愿意造呢，我看就moon造的多，能把熊猫灌死
+13:45 varna: 贵
+13:46 varna: 运营的钱算得比较紧
+13:46 cleamoon: 比药便宜多了
+13:46 varna: 多数时候不用那么多药
+13:46 varna: 药是用来增加战场上有效血量的
+13:48 cleamoon: 我比较习惯的ne对战是到死英雄不到4，全场死十次，用乱拍死敌人
+13:48 varna: 啊啊dk到了
+13:48 varna: 倒了*
+13:55 l0nGYear_Sync joined channel
+13:56 l0nGYear_Sync quit:Remote host closed the connection
+14:25 Izumo: E4二血
+14:33 varna: (｡･ω･)ﾉ2kfd + 2k并发
+14:33 varna: -n2
+14:34 varna: 90%:20ms 95%:1006ms 99%:1218ms
+14:38 cleamoon: orz
+14:42 Izumo: 差距略大
+14:43 AutoGavy quit:Quit: Connection closed for inactivity
+14:44 varna: 为什么到网上随便找了个go http echo, 连100k总数1k并发都跑不完……
+14:45 varna: 100并发总算跑完了
+14:45 varna: 没有奇怪的尖儿，qps 6509.49
+14:45 varna: 等一下他的2msl, 看看K跑-n1的100并发
+14:46 varna: go用的示例库是net/http
+14:46 cleamoon: why not 用 python？
+14:46 varna: 因为目标是goroutine
+14:46 varna: kashiwara -n1
+14:47 varna: 有一个尖儿，qps 20905.48
+14:47 varna: 1k并发19931.67
+14:48 varna: 2k有点不稳，三波一万九
+14:48 varna: 惨的时候一万五
+14:53 varna: 然而我发现一个问题，为什么listen的参数我只给了32……
+14:54 Izumo: 四血拿下
+14:54 Izumo: 还剩三血
+14:57 varna: 我总感觉之前暴死是参数开太少了……
+14:58 varna: 用1k个fd、积压数32、总线程2，去拼1k-2k并发……
+14:58 Izumo: ……
+14:58 Izumo: backlog我最少开128
+14:58 varna: 现在我开了2kfd, 积压数SOMAXCONN（128），总线程2
+15:01 Izumo: 另外这次E4甲耗资基本在二十万附近
+15:01 Izumo: 一张图
+15:01 varna: 出了一个很难复现的bug
+15:02 Izumo: 什么bug
+15:02 varna: 短路重调度不知道卡死在什么地方了
+15:04 varna: golang服务器冒出了一个巨大的尖儿：18086ms...
+15:04 varna: 200并发
+15:04 varna: 2k的没扛住，死在第77083个上了
+15:08 Izumo: 噗
+15:08 Izumo: 道中掉了个云龙
+15:08 varna: 可怕的欧洲人
+15:08 Izumo: 欧个姬姬
+15:09 Izumo: 新船一个没有
+15:14 Izumo: 五血
+15:22 Izumo: 辣鸡 院长
+15:22 Izumo: 夜战被我打了个完全胜利
+15:26 varna: 我该稍微监控一点acceptor的调度情况
+15:27 Izumo: 六血白天S
+15:27 Izumo: 卧槽
+15:28 varna: ^ 这人出货了
+15:28 Izumo: 那个伊26喷雾有奇效
+15:28 Izumo: 一喷就出
+15:36 varna: 交错2k合计200k不到4k并发
+15:36 varna: 我看看能不能复现
+15:36 Izumo: 夜战点凌波老挨打……
+15:36 Izumo: 绫波
+15:36 varna: ^ 名字都写不对
+15:36 Izumo: 辣鸡搜狗
+15:37 Izumo: fcitx默认是对的
+15:42 Izumo: 斩了
+15:48 varna: OTL
+15:53 Mokou joined channel
+15:54 Mokou: E4乙全程脚打……
+15:54 Mokou: 就一次退避，没有劝退
+15:54 Mokou: 一次A胜是院长没打掉
+15:55 cleamoon: 好的，那我估计能斩咸鱼
+15:55 Mokou: 丙级劝退可能莉害些
+15:55 Mokou: 丙级院长会二连
+15:55 cleamoon: 噗
+15:56 cleamoon: 现在难度都倒着来了吗
+15:56 Mokou: 乙等以上是CI，可以拼中破保护
+15:56 cleamoon: 不做咸鱼和咸鱼有什么区别
+15:56 Mokou:  当然甲等有两个院长，中破保护是卵用的
+15:56 cleamoon: soga
+15:56 cleamoon: 然而你为什么不甲
+15:58 Mokou: 我怎么甲
+15:59 Mokou: 一共两万油
+15:59 cleamoon: 现在还是活动开始时？
+15:59 Mokou: 开始时
+15:59 cleamoon: .....那确实难点
+15:59 Mokou: 而且如果现在我剩两万油，说明我没法甲
+15:59 cleamoon: 尤其是黑旗
+16:00 cleamoon: 不是还有一周多吗
+16:00 Mokou: 行啊，你一周帮我跑二十万各项资源出来
+16:00 Mokou: 我先不论E4甲要劝退多长时间
+16:01 cleamoon: 甲和乙的区别没那么大吧.....
+16:01 Mokou: 觉得没那么大，你打
+16:01 Mokou: 我见过的人基本光斩杀就得十万
+16:01 cleamoon: 不打
+16:01 cleamoon: 没装备
+16:01 Mokou: 不用什么特殊装备
+16:02 cleamoon: 我咸我的
+16:02 cleamoon: 我连三式都不够
+16:02 varna: 驲，周日在楼上开电钻……
+16:03 Mokou: ……
+16:03 varna: 如果我没学过仏法估计得尿崩
+16:03 cleamoon: 开封菜走起
+16:03 Mokou: 我家一楼那个老头有个爱好
+16:04 Mokou: 在假期做木工活
+16:04 Mokou: 而且他起得特别早
+16:04 cleamoon: ....
+16:04 cleamoon: 你可以培养一个夜里打架子鼓的爱好
+16:05 cleamoon: “不都说早睡早起身体好吗，那您干脆不要睡了”
+16:05 Mokou: 我培养个用他人寿命续命的爱好算了
+16:05 cleamoon: +1s
+16:07 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/z0/w4_344409.jpg@596w_1l.jpg
+16:11 cleamoon: varna, 羊驼子了解过 fault tolerance programming 吗？
+16:12 varna: 这个名词的提法很宽泛
+16:12 varna: 我以前听说的容错编程基本都建立在分布式的基础上
+16:12 varna: 但分布式的玩意儿都是一坨悲剧
+16:13 cleamoon: 这是一套技术还是另一个paradigm？
+16:14 varna: 从我了解的观点来看，是一些零散经验的总和
+16:14 cleamoon: 什么鬼...
+16:14 cleamoon: 听起来感觉很不靠谱呀
+16:14 varna: 要是靠谱的话，业界就该用起来了
+16:15 cleamoon: ......
+16:16 lh_mouse joined channel
+17:03 kin3z quit:Quit: Leaving
+17:11 lh_mouse quit:Read error: Connection reset by peer
+17:13 Mokou: 噗
+17:13 lh_mouse joined channel
+17:13 Mokou: 到目前为止能支持1080p全最高显卡3的显卡只有新泰坦……
+17:13 Mokou: 支持意为任何场景60fps以上
+17:13 lh_mouse: Mokou, Motou.
+17:17 varna: ...
+17:36 tutu_wind joined channel
+17:45 Rinrin- joined channel
+17:51 yimis joined channel
+17:53 Izumo quit:Quit: Connection closed for inactivity
+18:01 tutu_wind quit:Ping timeout: 244 seconds
+18:08 lh_mouse: 菲律宾要退联？？！
+18:08 varna: puuu?
+18:08 varna: 出去买点东西
+18:12 lh_mouse: http://mil.news.sina.com.cn/china/2016-08-21/doc-ifxvcsrm2081778.shtml
+18:14 whocares_2 joined channel
+18:59 nodefree quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+19:05 lh_mouse quit:Read error: Connection reset by peer
+19:07 lh_mouse joined channel
+19:28 hope1 joined channel
+19:34 varna: hotatata
+19:35 hope1: iyzsong, 家里有老鼠，蟑螂目前还没见到
+19:35 hope1: 长途巴士中转的时候忘记拿箱子了，现在滞留纽约
+19:35 hope1: 未满十八不能住酒店
+19:38 varna: ...
+19:38 varna: 你都三百多岁了……
+19:39 hope1: 我可是十七岁的少女
+19:40 hope1: 不过反正也住不起——然后以这个理由强行在巴士公司的值班室通宵了一晚
+19:42 hope1: 美帝到处开空调都喜欢开十六度……
+19:43 Mokou: 美帝也有这破规定啊
+19:43 hope1: 啊，你是说日本？国内没有的吧
+19:44 Mokou: HK
+19:44 Mokou: 日本我不知道，可能有些酒店也有
+19:44 Mokou: 虽说日本成人是二十岁
+19:44 hope1: 美帝未满十八基本上什么都干不了，airbnb、青年旅社之类都形式上要求十八岁……
+19:45 Mokou: ……
+19:45 Mokou: 坑
+19:45 hope1: 所以在纽约这种地方就只能睡地铁了。要是在小地方应该可以找个motel现钞解决……
+19:46 hope1: 当然，满了十八岁你立即就可以持枪
+19:46 hope1: 虽然喝酒要等二十一岁
+20:07 hope1: 穿帽衫+短裤+凉鞋袜子出门会比较像游客还是比较不像游客
+20:08 varna: 比较像
+20:08 varna: 不对
+20:08 varna: 去掉袜子吧
+20:10 hope1: 感觉只要把帽子套上就不那么容易被搭话
+20:10 lh_mouse: https://github.com/lhmouse/mcfgthread/releases/tag/beta-0.17.0
+20:12 hope1: 在加上肆无忌惮地横穿马路就是正宗纽约客风范了
+20:12 hope1: 我知道了，问题在于双肩包
+20:19 cleamoon_ joined channel
+20:20 varna: http://www.bilibili.com/video/av4704983/
+20:20 varna: cleamoon: ^
+20:20 varna: Mokou: ^
+20:20 varna: hope1: ^
+20:25 hope1_ joined channel
+20:25 hope1 quit:Ping timeout: 276 seconds
+20:27 kevingu joined channel
+20:28 varna: 说起来，有部很有意思的美国（？）轻小说
+20:28 varna: ninja slayer
+20:28 varna: 这个被翻译成日文引进日本了
+20:29 cleamoon_: lmcc
+20:30 varna: http://bangumi.bilibili.com/anime/3456/ 动画也不错
+20:30 hope1_ quit:Ping timeout: 276 seconds
+20:30 hope1_ joined channel
+20:35 kevingu quit:Remote host closed the connection
+20:35 cleamoon_: looks fine
+20:35 varna: 很有意思的
+20:36 cleamoon_: 賽博朋克・忍者格鬥小說
+20:37 Mokou: http://www.bilibili.com/video/av5605488/
+20:38 hope1_: 成功拿到箱子上了巴士，没能过上想象中的纽约街头生活……
+20:39 cleamoon_: orz
+20:44 hope1_: 咦看起来还不错
+20:44 kevingu joined channel
+20:44 hope1_: 美国轻小说？原名是什么
+20:47 varna: 就叫ninja slayer
+20:53 hope1_ quit:Ping timeout: 276 seconds
+21:00 CyrusYzGTt joined channel
+21:04 Mokou: 谦虚的作者写导论，基本原理
+21:04 Mokou: 嘚瑟的作者写大全，21天精通
+21:04 Mokou: ——VinkySimon 
+21:06 cleamoon_: 我去叫21天精通算法导论
+21:07 cleamoon_: 我去写本书叫21天精通算法导论
+21:09 Mokou: 《21天精通算法导论：基本原理》
+21:11 cleamoon_: 《21天精通算法大全导论：基本原理》
+21:12 Mokou: 《21天精通算法导论：基本原理大全》
+21:13 cleamoon_: 23333
+21:19 iyzsong: _(:з」∠)_
+21:42 cleamoon_ quit:Ping timeout: 250 seconds
+21:50 Mokou:  玩会DOOM
+21:50 Mokou quit:Remote host closed the connection
+21:57 Izumo joined channel
+22:20 yimis quit:Quit: yimis
+22:23 nodefree joined channel
+22:23 CyrusYzGTt quit:Ping timeout: 240 seconds
+22:33 kevingu quit:Remote host closed the connection
+22:43 cleamoon_ joined channel
+22:43 kevingu joined channel
+22:48 kevingu quit:Ping timeout: 250 seconds
+22:52 iyzsong quit:Remote host closed the connection
+22:53 cleamoon_ quit:Ping timeout: 265 seconds
+22:55 T-J-M quit:Quit: 搬家
+22:57 varna quit:Quit: leaving
+23:05 kevingu joined channel
+23:10 kevingu quit:Remote host closed the connection
+23:13 tutu_wind joined channel
+23:16 geordi_ quit:Remote host closed the connection
+23:16 geordi joined channel
+23:19 FrankHB joined channel
+23:23 lucid joined channel

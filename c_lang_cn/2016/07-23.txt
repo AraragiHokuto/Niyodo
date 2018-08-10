@@ -1,0 +1,251 @@
+00:02 wlemuel_ quit:Ping timeout: 240 seconds
+00:03 wlemuel quit:Ping timeout: 258 seconds
+00:18 Mokou: 睡觉
+00:18 Mokou: 诸君武运
+00:18 Mokou quit:Quit: 睡觉
+00:34 cleamooon joined channel
+00:39 lh_mouse quit:Ping timeout: 240 seconds
+00:59 condy quit:Quit: ZNC - http://znc.in
+01:00 condy joined channel
+01:33 condy quit:Ping timeout: 244 seconds
+01:34 condy joined channel
+02:09 condy quit:Ping timeout: 244 seconds
+02:12 condy joined channel
+06:07 Mokou joined channel
+07:41 wlemuel joined channel
+07:41 wlemuel_ joined channel
+08:06 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+08:31 endle joined channel
+08:47 endle quit:Quit: Leaving
+09:05 lh_mouse joined channel
+09:14 cleamooon quit:Ping timeout: 260 seconds
+09:38 iyzsong joined channel
+09:42 iyzsong quit:Changing host
+09:42 iyzsong joined channel
+09:43 iyzsong: 枣 (┙>∧<)┙へ┻┻
+09:51 wlemuel_ quit:Remote host closed the connection
+09:51 wlemuel_ joined channel
+10:05 wlemuel quit:Remote host closed the connection
+10:05 wlemuel joined channel
+10:53 AutoGavy joined channel
+10:59 lh_mouse: AutoGay
+12:19 sottd joined channel
+12:19 * sottd die isue
+12:29 sottd: java sb 一个String.isEmpty还要搞个API level..
+12:30 sottd: 没有这个函数的String能叫String吗..
+12:32 sottd: 喷一下java的异常体系好了,
+12:33 sottd: 如果一个函数声明说要抛出某个异常，那么Java都是强制要求你取处理它的,但是如果该异常没有被声明则不需要
+12:34 sottd: 那么问题来了, Socket.close谁来处理?
+12:35 sottd: 人人都会这么想：既然这里不用强制处理异常那么干脆不做好饿啦
+12:38 sottd: 还有Java代码的安全性，一个被混淆的包除了会给开发人员带来无尽的麻烦和难以调试的问题以外什么都得不到,因为混淆只是改了改路标,有经验的人还是能找到代码中有价值的东西
+12:40 sottd: 一个被混淆了的包,跑出异常的时候会给你如下的东西:a.b.c.e.a.d.g(Unknow Source)
+13:02 AutoGavy quit:Quit: Connection closed for inactivity
+13:19 lh_mouse: [12:35:18] <sottd> 人人都会这么想：既然这里不用强制处理异常那么干脆不做好饿啦 // 有几个 java 厨听过 exception neutrality？
+13:23 lh_mouse: 本来 basic exception safety 就是个 invariant，java 那种缺 determinate destruction 的真·二逼没法收拾才是根本，人肉 try ... catch ... rethrow 跟 C 厨又没什么两样了，扬汤止沸。
+13:29 sottd: 对了,为什么7/23以后的日志都没了
+13:30 iyzsong: ╮(￣▽￣)╭
+13:30 sottd: varna是转职现充抛弃频道了吗
+13:30 lh_mouse: 7/23？
+13:31 sottd: 7月23号开始,日志都没了，是放到别的文件夹了吗
+13:31 * sottd 疯了
+13:32 sottd: 和第三方作斗争让我智商变0了
+13:32 iyzsong: _(:з」∠)_
+13:35 lh_mouse: geordi, -c int __restrict__ i = 1;
+13:35 geordi: error: '__restrict__' qualifiers cannot be applied to 'int'
+13:42 sottd: geordi,<<"test";
+13:42 geordi: test
+13:42 sottd: geordi,string temp="test";
+13:42 geordi: Success
+13:43 sottd: geordi,void test{ <<"test";}
+13:43 geordi: error: variable or field 'test' declared void
+13:43 sottd: geordi,void test(){ <<"test";}
+13:43 geordi: error: expected primary-expression before '<<' token
+13:52 sottd: geordi,template<bool v> struct V{};
+13:52 geordi: Success
+13:52 sottd: geordi,template<bool v> struct V{}; typedef V< 1> 2> type1;
+13:52 geordi: error: expected unqualified-id before numeric constant
+13:53 sottd: geordi,template<bool v> struct V{}; typedef V< (1>2)> type1;
+13:53 geordi: Success
+13:53 sottd: vs直接炸掉..
+13:55 sottd: geordi,template<bool v> struct V{}; typedef V< 1)> type1;
+13:55 geordi: error: Unexpected `)` after `typedef V< 1`. Expected balanced code or end of request.
+14:46 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+14:58 wchen joined channel
+14:58 cleamooon joined channel
+14:59 lhanjian: 羊驼子只是刚开始上班比较忙吧
+15:00 iyzsong: (┙>∧<)┙へ┻┻
+15:01 lh_mouse: ↖羊驼子被 lhanjian 包养啦↗
+15:01 iyzsong: 嫉(°Д°)妒
+15:03 Mokou: 羊驼子现在在996
+15:04 lhanjian: 羊驼子在折腾ja a呢
+15:04 iyzsong: _(:з」∠)_
+15:04 Mokou: 他娘的ALi系列
+15:06 cleamooon: 996是什么
+15:06 Mokou: 9am上班，9pm下班，一周六天
+15:07 cleamooon: orz
+15:09 cleamooon: 上那么久干什么，java那么难debug吗
+15:09 Mokou: 鬼知道
+15:10 cleamooon: 你情夫的事都不关心吗
+15:11 Mokou: 不是你丈夫么
+15:11 Mokou: 身为妻子不关心自己丈夫，怎么当好一个好妻子
+15:11 Mokou: 你这不清真啊
+15:11 cleamooon: 风hen流tai如我怎么可能结婚
+15:12 Mokou: 因为不结婚就不清真，所以你得清真
+15:13 cleamooon: 然而海盗国近一半的人选择同居，剩下，都很清真
+15:14 Mokou: 试了一下1-5新练级法
+15:14 Mokou: 结论：可以练，不过只能1带5
+15:14 Mokou: 否则巨亏
+15:15 cleamooon: 我也不知道这个算不算nsfw  http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/vc/mr_221519.jpg@596w_1l.jpg
+15:15 cleamooon: 1-5过了80怎么都亏吧
+15:15 cleamooon: 太容易瞬间爆炸了
+15:15 Mokou: 现在有先制反潜了，可以练
+15:15 Mokou: 但是先制反潜的要求是面板反潜值一百以上
+15:16 Mokou: 这是个什么概念呢
+15:16 cleamooon: 噗
+15:16 lh_mouse: / mopthread = the mother of pthread
+15:16 Mokou: 我给我绫波塞上最好的反潜装备，反潜值是95
+15:16 lh_mouse: 最开始叫 Fpthread ，不过太没诚意了。
+15:16 lh_mouse: extern _MCFCRT_STD uintptr_t __MCFCRT_MopthreadCreate(void (*__pfnProc)(void *), const void *__pParams, _MCFCRT_STD size_t __uSizeOfParams) _MCFCRT_NOEXCEPT;
+15:16 Mokou: 所以基本上只有呜十铃和朝潮改二丁能达成要求
+15:17 lh_mouse: __MCFCRT_MokouthreadCreate
+15:17 lh_mouse: Motouthread
+15:17 cleamooon: 现在似乎不少人喜欢朝潮...
+15:18 Mokou: 朝潮改二立绘挺赞
+15:19 cleamooon: 你们这些颜控
+15:20 cleamooon: 卧槽，85级
+15:21 cleamooon: 而且直接改二丁
+15:21 Mokou: 还好，霞88呢
+15:21 Mokou: 朝潮改二是70/85
+15:21 cleamooon: 最近又有什么丧病的活动了吗
+15:22 Mokou: 夏活是中规模活动
+15:22 Mokou: 还没开
+15:22 cleamooon: 太可惜了，竟然是中规模
+15:23 Mokou: (｡･ω･)当然，规模和难度并没有关系
+15:23 Mokou: 该吔的屎还得吔
+15:25 cleamooon: 可是没法大规模的吔了
+15:28 cleamooon: Mokou, http://www.bilibili.com/video/av5438581/ 这个游戏黑旗可能喜欢
+15:28 Mokou: 等会我看看
+15:29 cleamooon: 地缘政治模拟器
+15:29 cleamooon: 现在你需要艹妹？
+15:29 Mokou: 我在培养萝莉
+15:29 cleamooon: orz
+15:29 Mokou: 从云还有九百多场呢
+15:29 cleamooon: 分我几只
+15:30 Mokou: 你再去抢个号
+15:30 cleamooon: 咦
+15:30 cleamooon: 你又跳坑了？
+15:30 Mokou: 不，我只是舔萝莉
+15:30 Mokou: 夏活我看看能不能咸过去，不能就不打
+15:30 Mokou: 坚决不吔屎
+15:31 cleamooon: orz
+15:33 cleamooon: 什么时候开放了玩家交 易我再入，然后靠卖桶为生
+15:34 Mokou: 然后出了bug，桶和钱都被系统吃了
+15:40 cleamooon: 没关系，我是有正能量的人，我相信日本程序员，尤其是短毛猫的程序员
+15:40 Mokou: 但你不清真也不姓党
+15:41 cleamooon: 话说缪斯林入党会要求退教吗
+15:42 Mokou: 不知道，理论上应该是要的？
+15:44 cleamooon: 黑旗没入几次党玩玩
+15:45 cleamoooon joined channel
+15:45 Mokou: 不打算入
+15:46 cleamoooon: 据说党员在国企年终能多拿到一本挂历
+15:47 iyzsong: ╮(￣▽￣)╭
+15:49 cleamooon quit:Ping timeout: 260 seconds
+15:52 cleamoooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/vd/vz_12287.jpg@596w_1l.jpg
+16:25 Matsune joined channel
+16:29 Mokou: http://ww4.sinaimg.cn/mw690/a4f175c9gw1f63x3dbjj3j20hs0p4n07.jpg
+16:31 cleamoooon: 我记得有几个cos自己黄漫女主的女画师...
+16:31 Mokou: 比如大嘘？
+16:33 condy quit:Quit: ZNC - http://znc.in
+16:34 condy joined channel
+16:34 cleamoooon: 好希望有个合法萝莉也这么搞呀
+17:15 Mokou: 大潮还剩三百场
+17:15 Mokou: 我看看今晚能不能改二
+17:15 cleamoooon: orz
+17:16 cleamoooon: return of the 肝帝
+17:16 Mokou: 肝个JB，我乌黑浓密
+17:16 Mokou: 这次我都感觉我操作太慢了
+17:17 cleamoooon: 哦，原来是打算要肝个jb，好污呀
+17:17 lh_mouse: geordi, << sizeof(k), alignof(decltype(k)); char k[1] __attribute__((__mode__(__TI__)));
+17:17 geordi: error: mode 'TI' applied to inappropriate type
+17:17 lh_mouse: geordi, << sizeof(k), alignof(decltype(k)); int k[1] __attribute__((__mode__(__TI__)));
+17:17 geordi: Same error.
+17:18 lh_mouse: geordi, << sizeof(k), alignof(decltype(k)); int k __attribute__((__mode__(__TI__)));
+17:18 geordi: 16, 16
+17:31 Mokou: http://ww4.sinaimg.cn/mw690/dc183f59jw1f63w04t1vej20g40lhq4g.jpg
+17:34 cleamoooon: 第二个是啥
+17:35 Matsune: 我看见学校一个社团叫 RPG研究会
+17:35 Matsune: 我差点以为他们研究火箭筒的
+17:36 Mokou: Pola
+17:36 condy quit:Quit: ZNC - http://znc.in
+17:37 cleamoooon: 有没有清真研究会
+17:38 Matsune: 没 宗教系社团只有四个
+17:38 Matsune: 两个是基督教的
+17:38 condy joined channel
+17:38 Matsune: 剩下一个life philosophy
+17:38 Matsune: 一个unification church study
+17:38 cleamoooon: orz
+17:39 cleamoooon: 竟然没有佛教
+17:39 Mokou: 我印象中十一区的穆斯林是真·温和穆斯林？
+17:39 cleamoooon: 啊啊，这个pola很是我的菜呀
+17:39 Matsune: 好像是
+17:39 cleamoooon: 和鹿岛差不多
+17:40 Mokou: 好象是上次活动的奖励
+17:40 cleamoooon: orz
+17:40 cleamoooon: 啊啊啊，酒鬼，露出癖，太好了
+17:41 Mokou: (｡･ω･)叫你删号
+17:42 Matsune: 居然还有全学生自治委员会
+17:43 cleamoooon: 我没删呀
+17:43 cleamoooon: 但是我也没有pola呀....
+17:43 Mokou: 噫
+17:43 Mokou: (｡･ω･)快把桶给我，我帮你拿pola
+17:43 Mokou: (｡･ω･)帮你舔帮你啪
+17:43 cleamoooon: 不是上次活动吗
+17:43 Mokou: 我有啊
+17:44 Mokou: 而且说不定下次活动能捞
+17:44 cleamoooon: .........
+17:46 cleamoooon: 其实，我可以继续玩的
+17:46 cleamoooon: 不过怎么萌娘百科的图都挂了？
+17:47 Mokou: 我看看
+17:48 Mokou: 我这里没挂……
+17:49 cleamoooon: .....
+18:14 cleamooon joined channel
+18:17 cleamoooon quit:Ping timeout: 260 seconds
+18:18 condy quit:Quit: ZNC - http://znc.in
+18:20 condy joined channel
+18:29 condy quit:Quit: Airi
+18:30 condy joined channel
+18:32 condy quit:Client Quit
+18:32 condy joined channel
+18:33 condy quit:Remote host closed the connection
+18:35 condy joined channel
+18:36 Matsune_ joined channel
+18:38 Matsune quit:Ping timeout: 240 seconds
+18:42 lhanjian: Matsune_: 音酱还在苏州ヾ( ･`⌓´･)ﾉﾞ？
+18:46 Matsune_ quit:Ping timeout: 240 seconds
+18:47 Matsune joined channel
+18:47 Matsune: lhanjian: 刚才网掉了。。。
+18:47 Matsune: 我回家二十天了
+18:48 lhanjian: 酱样啊
+18:51 Matsune: 每天在家混吃等死
+18:52 cleamooon: 祭音不是该去11区了吗
+18:52 Matsune: 九月去
+18:52 iyzsong: _(:з」∠)_
+18:53 Matsune: 现在还等着申请宿舍出结果
+19:03 cleamooon: 11区买psp什么的会不会便宜
+19:06 cleamooon: 最近看了那个unix痛恨者手册，感觉就是我竟无言以对
+20:12 endle joined channel
+20:25 iyzsong: (┙>∧<)┙へ┻┻
+20:46 axmmisaka joined channel
+20:46 axmmisaka: 有人吗
+20:50 iyzsong: 有哟
+20:52 axmmisaka: dalao好
+20:53 axmmisaka: 我给我的表改表盘呢 可是需要java...我啥都不会
+20:53 iyzsong: _(:з」∠)_
+20:53 axmmisaka: irc不能发表情好尴尬
+21:18 endle quit:Quit: Leaving
+21:18 Mokou: http://www.bilibili.com/video/av5371126/
+21:23 lh_mouse: http://v.youku.com/v_show/id_XMjUxODY3ODcy.html
+22:30 lh_mouse: http://v.ifeng.com/news/world/201607/01315046-b65e-45d1-95bb-77c3e99ee842.shtml
+23:13 wolfpython joined channel
+23:41 Matsune quit:Read error: Connection reset by peer
+23:59 Mokou: 大潮改二

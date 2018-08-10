@@ -1,0 +1,540 @@
+00:03:Petrus07 quit:Quit: Leaving.
+00:07:krfantasy quit:Remote host closed the connection
+00:42:condy joined channel
+00:42:zzzzzzzzz quit:Quit: Leaving
+00:43:boosure quit:Ping timeout: 240 seconds
+00:50:condy: geordi: { vector<int> a={2,3,1}; sort(a.rbegin(),r.rend()); cout << a; }
+00:50:geordi: error: 'r' was not declared in this scope
+00:50:condy: geordi: replace third r with a
+00:50:geordi: error: 'class vector<int>' has no member named 'abegin'
+00:51:condy: geordi: undo and replace fourth r with a
+00:51:geordi: {3, 2, 1}
+01:40:condy quit:Quit: WeeChat 1.0
+01:47:lh_mouse quit:Read error: Connection reset by peer
+04:24:boosure joined channel
+04:37:hoxily|droid joined channel
+05:08:cleamoon joined channel
+05:18:hysw joined channel
+05:20:boosure quit:Ping timeout: 260 seconds
+05:32:hysw quit:Ping timeout: 255 seconds
+06:12:boosure joined channel
+07:07:sismvg joined channel
+07:30:hysw joined channel
+07:32:boosure quit:Ping timeout: 245 seconds
+07:49:boosure joined channel
+08:12:sismvg: 美国内存多少钱
+08:12:sismvg: 今年8g内存比12年贵了1倍。。
+08:12:sismvg: hysw:have
+08:16:code_new joined channel
+08:27:sismvg quit:Ping timeout: 255 seconds
+08:30:sismvg joined channel
+08:39:cleamoon quit:Ping timeout: 245 seconds
+08:40:sismvg quit:Ping timeout: 260 seconds
+08:49:sismvg joined channel
+09:00:zzzzzzzz joined channel
+09:05:hysw: sismvg: 两条比较好的8G大概$150
+09:22:sismvg: 天朝也差不多啊。。
+09:24:sismvg: 买个真货真不容易
+09:30:sismvg: hysw:能帮我看下金士顿多少吗
+09:30:hysw: 我两条HyperX Fury大概$175
+09:32:hysw: http://www.canadacomputers.com/ < 看的懂的话差不多就这价位了
+09:33:whatofor joined channel
+09:35:cleamoon^ joined channel
+09:38:sismvg quit:Remote host closed the connection
+09:38:Sleepwalking joined channel
+09:40:sismvg joined channel
+09:40:sismvg quit:Remote host closed the connection
+09:40:Sleepwalking: hysw: ED填了MCS of CMU, RD: U of Waterloo, U of Washington, Purdue, UC全系列..., GIT, UIUC.
+09:41:Sleepwalking: 感觉做得一手好死
+09:41:hysw: 没填UT?
+09:41:Sleepwalking: 没
+09:41:hysw: 现在把智商交出来
+09:41:Sleepwalking: 父上似乎不太想让我去枫叶国
+09:41:Sleepwalking: 【二言要去枫叶国……
+09:41:hysw: waterloo...
+09:44:Sleepwalking: hysw: 还有  差不多可以开始翻译那个课程了
+09:44:hysw: ...
+09:44:Sleepwalking: srt已经搞到了~
+09:45:Sleepwalking: hysw: 你有gmail邮箱吗
+09:45:hysw: Sleepwalking: ?
+09:45:Sleepwalking: hysw: 某翻译组用google docs
+09:45:hysw: hyswpc@gmail.com
+09:45:Sleepwalking: 好的
+09:48:Sleepwalking: 我先去把那堆mp4和srt整理一下。。
+09:49:hysw: Sleepwalking: 去申请UT吧..
+09:49:hysw: 回头我可以直接把你的智商给弄走
+09:50:sismvg joined channel
+09:51:hysw: sismvg: 把智商交出来，顺便送我几片GTX 780Ti吧
+09:51:sismvg: 我要真货
+09:52:sismvg: 中国假货太多了
+09:52:sismvg: 美国卖运费又坑爹
+09:52:sismvg: 买
+09:53:Sleepwalking: hysw: 教授好像不会压视频……
+09:53:Sleepwalking: 每个mp4都有几百M……
+09:53:hysw: 某表示i7-4790K+16GiB什么的就差一张好点的显卡了...
+09:53:Sleepwalking: 时长才10分钟。。
+09:53:Sleepwalking: goagent无力……
+09:54:Sleepwalking: hysw: 你能帮我拖到国内网盘上吗
+09:54:hysw: Sleepwalking: 哪个网页？
+09:54:Sleepwalking: hysw: 他给我一个google docs的分享……
+09:54:Sleepwalking: 错 google drive
+09:55:hysw: ssh可以用么？
+09:57:Sleepwalking: 没ssh
+09:57:hysw: Sleepwalking: ?
+09:57:Sleepwalking: 【其实是不会用
+10:03:lh_mouse joined channel
+10:03:lh_mouse: warning: Can't attach LWP -947304269: No child processes
+10:03:lh_mouse: A problem internal to GDB has been detected,
+10:03:lh_mouse: further debugging may prove unreliable.
+10:10:sismvg: 亚马逊上也是一堆假货
+10:11:hysw: sismvg: http://www.newegg.ca/?
+10:12:Sleepwalking: hysw: 发你邮件了
+10:13:sismvg: 送得到天朝吗。。
+10:14:Sleepwalking: hysw: 记得发私密链接 别公开就行
+10:15:lh_mouse: Sleepwalking, 米！库！酱！快！吃！药！
+10:35:Sleepwalking quit:Ping timeout: 255 seconds
+10:52:whatofor_1 joined channel
+10:55:whatofor quit:Ping timeout: 245 seconds
+11:03:sismvg: 老干妈:old fuck mom
+11:04:sismvg: old fuck mom:愤怒女士
+11:04:sismvg: 这翻译
+11:47:sismvg quit:Ping timeout: 245 seconds
+11:48:sismvg joined channel
+11:49:code_new quit:Ping timeout: 255 seconds
+11:53:lh_mouse: geordi, <<TYPE<typename std::underlying_type<e>::type>;  enum e { dummy };
+11:53:geordi: unsigned int
+12:11:hysw: 编码这种玩意还是够耗计算量的...
+12:32:code_new joined channel
+12:37:hoxily joined channel
+12:48:sismvg quit:Ping timeout: 245 seconds
+12:54:cleamoon joined channel
+13:00:sismvg joined channel
+13:18:iyzsong joined channel
+13:20:Xilzzerts joined channel
+13:28:hyswtest joined channel
+13:28:hysw: -_- 这...
+13:31:hysw: 好坑...\
+13:32:sismvg_ joined channel
+13:32:sismvg quit:Read error: Connection reset by peer
+13:35:lh_mouse: geordi, <<PRINT(MACRO_TYPE(map<char, int>)); \ #define PRINT(t_) TYPE<T> \ #define MACRO_TYPE(t_) typename helper<void(t_)>::type \ template<typename F> struct helper; template<typename R, typename P> struct helper<R(P)> { typedef P type; };
+13:35:geordi: error: 'T' was not declared in this scope
+13:36:lh_mouse: geordi, <<PRINT(MACRO_TYPE(map<char, int>)); \ #define PRINT(t_) TYPE<t_> \ #define MACRO_TYPE(t_) typename helper<void(t_)>::type \ template<typename F> struct helper; template<typename R, typename P> struct helper<R(P)> { typedef P type; };
+13:36:geordi: error: macro "MACRO_TYPE" passed 2 arguments, but takes just 1
+13:36:lh_mouse: geordi, <<PRINT(MACRO_TYPE(map<char, int>)); \ #define PRINT(t_) TYPE<T> \ #define MACRO_TYPE(...) typename helper<void(...)>::type \ template<typename F> struct helper; template<typename R, typename P> struct helper<R(P)> { typedef P type; };
+13:36:geordi: error: 'T' was not declared in this scope
+13:36:lh_mouse: geordi, <<PRINT(MACRO_TYPE(map<char, int>)); \ #define PRINT(t_) TYPE<t_> \ #define MACRO_TYPE(...) typename helper<void(...)>::type \ template<typename F> struct helper; template<typename R, typename P> struct helper<R(P)> { typedef P type; };
+13:36:geordi: error: 'type' in 'struct helper<void(...)>' does not name a type
+13:44:hysw: testing...
+13:48:sismvg_ quit:Ping timeout: 260 seconds
+14:28:cLeaMooN_ joined channel
+14:28:cleamoon quit:Read error: Connection reset by peer
+14:32:tree_ joined channel
+14:34:cleamoon joined channel
+14:34:cLeaMooN_ quit:Read error: Connection reset by peer
+14:36:sismvg joined channel
+14:43:tree_ quit:Remote host closed the connection
+14:45:slowcoach joined channel
+14:45:slowcoach: =-=
+14:46:varna joined channel
+15:06:varna: 成语：弃穴方肛
+15:09:cleamoon quit:Ping timeout: 260 seconds
+15:12:gansteed joined channel
+15:18:gansteed quit:Quit: Leaving
+15:20:lh_mouse: http://tieba.baidu.com/p/3271153114
+15:21:varna: 2333
+15:21:varna: 哪里的逗比？
+15:53:cleamoon joined channel
+15:58:blackskygg joined channel
+15:59:cleamoon quit:Ping timeout: 255 seconds
+15:59:varna: blackskygg: 爆
+15:59:varna: blackskygg: 高三考生怎么周二能上线的……
+16:00:blackskygg: 体育课
+16:02:blackskygg: 我上个星期换了部电脑
+16:02:blackskygg: 然后就多了两个舰队
+16:02:lh_mouse: blackskygg, 揉
+16:03:blackskygg quit:Read error: Connection reset by peer
+16:03:varna: ...
+16:03:blackskygg joined channel
+16:04:varna: 刚打完月初的2-5，斩杀的假摔秀简直感人至深
+16:05:blackskygg: 远征是个什么概念
+16:06:varna: 得资源和消耗品的概念
+16:06:varna: 难道你没远征过么……
+16:06:varna: 不对，听说欧洲人一小时回复两千资源，似乎是不用远征的……
+16:07:cleamoon joined channel
+16:08:blackskygg: 我不是欧洲人
+16:08:blackskygg: 应该不是
+16:08:blackskygg: 我没有远征过
+16:08:blackskygg: 有什么好处
+16:08:cleamoon: 一个库里的一个变量在某部分(5%左右)可变，其他时候不可变
+16:09:cleamoon: c可能吗...
+16:10:varna: cleamoon: 不折腾
+16:10:varna: blackskygg: 之前说过是得资源和消耗品，不然你只靠自然回复根本撑不住那些大吃货
+16:10:varna: blackskygg: 消耗品比如资材、快速建造和修复材
+16:11:blackskygg: 原来如此
+16:11:varna: 详细的列表和成功条件可以查到
+16:11:blackskygg: varna, 问你一个严肃的问题
+16:11:varna: ?
+16:11:varna: 你要决定结婚对象了？
+16:12:blackskygg: Tanenbaum怎么念
+16:12:varna: ...
+16:12:varna: 我从没查过标准的读法
+16:13:blackskygg: 那你是怎么念的
+16:13:varna: http://www.pronouncenames.com/pronounce/Tanenbaum
+16:13:varna: 我按照这个念法
+16:18:cleamoon: 爱宕不错，金发巨乳萝莉的姐姐
+16:19:* varna 爱宕都拎去合成了
+16:19:cleamoon: ......
+16:19:cleamoon: 属性不好？
+16:20:blackskygg quit:Ping timeout: 245 seconds
+16:20:sismvg quit:Ping timeout: 245 seconds
+16:21:cleamoon: 欧提 =？ 四元娘
+16:21:varna: 属性还行，不过也不算很上等，而且我不喜欢金发巨乳
+16:21:varna: 提督的人种简单地按脸色划分，脸白的都是欧洲人
+16:23:cleamoon: 金发巨乳萝莉的姐姐是理想的炮友
+16:25:varna: 现在我等级最高的仍然是贫乳幼女
+16:25:varna: 第二高的是贫乳少女
+16:26:varna: 在水雷战队作战和舰队决战中都能大活跃的当然还是贫乳
+16:26:cleamoon: 第三的是贫乳熟女？
+16:27:blackskygg joined channel
+16:27:cleamoon: 话说WO酱有什么可萌的，看起来那么可怕
+16:28:varna: 长相可爱
+16:28:varna: 格纳库、高角炮和飞行甲板以外的部分是观赏用的
+16:29:varna: 难道你喜欢贫乳的人民教师撸酱
+16:29:sismvg joined channel
+16:30:cleamoon: 我喜欢爱宕
+16:32:varna: ...
+16:32:varna: 跟若木民喜一个口味
+16:32:varna: 你有点危险啊
+16:35:cleamoon: 哦，他的口味还好
+16:35:cleamoon: 有什么危险的，他自首了？
+16:36:varna: 他最后让神大人和千寻在一起了
+16:36:varna: 吓得我头和身体分离，身体飞起来了
+16:37:cleamoon: 噗噗噗噗噗噗噗噗噗噗
+16:37:cleamoon: 收了小恶魔也好呀
+16:39:varna: 当时他攒了1.4户愚吕资源准备活动，顺便跟爱宕结婚，然后神知就这么结束了
+16:40:varna: 我曾经以为是小恶魔结局，结果……
+16:41:cleamoon: 他想进化去画猎人吗
+16:41:cleamoon: 编辑没弄死他
+16:42:varna: 搞不好他责编也是舰队狗……
+16:44:cleamoon: ......
+16:45:cleamoon: 既然要匆匆结束为什么不小恶魔结局呀...
+16:45:varna: God knows
+16:46:cleamoon: 推了妹妹多好
+16:49:varna: 所以说么
+16:54:cleamoon: 话说俺妹怎么最后打起来了...
+16:55:varna: 看不下去了，就听说后来有撕逼大战
+16:58:cleamoon: 噗
+16:59:sismvg quit:Read error: Connection reset by peer
+17:00:sismvg joined channel
+17:00:slowcoach: 好可怕的大战
+17:00:sismvg: 结婚啪啪啪就是happy end？
+17:00:sismvg: 土妹子去死
+17:01:sismvg: 妹线真爱
+17:01:cleamoon: 近期看到的良心只有小圆剧场版
+17:01:sismvg: 黑化美
+17:01:cleamoon: 明显不是黑化
+17:01:sismvg: 但是我又想到了斋滕结婚了
+17:02:sismvg: 本来就是黑的
+17:02:cleamoon: 那都不是黑，明显除了圈养小圆外所有事都比结界里好
+17:03:sismvg: 俺妹从来只有实妹结局 福建丝也表示是开放妹妹线
+17:03:sismvg: 就是黑
+17:04:varna: 小圆兽交本谁有？
+17:04:sismvg: :(
+17:04:cleamoon: 为什么没有实妹啪啪啪
+17:04:sismvg: 啪啪啪就是爱？
+17:04:cleamoon: 和贝贝算兽交吗
+17:04:sismvg: 我看到过。。
+17:04:sismvg: c86有
+17:05:cleamoon: 和枪械算吗
+17:05:sismvg: 那个是sex toys
+17:05:sismvg: 要看啪啪啪就看我的云盘好了
+17:06:varna: 不算，当时见到有个提督的签名是小圆被狗啪啪啪……
+17:06:cleamoon: 四元娘的D盘：王的圣地
+17:06:cleamoon: 哦，那个看到过
+17:06:cleamoon: 没剧情，就是精虫上脑想画兽交而已
+17:07:varna: 噗
+17:07:sismvg: 没有撸点
+17:07:varna: 没剧情太差
+17:07:sismvg: 我还是喜欢百合本
+17:08:sismvg: 我的d盘只有福尔摩思
+17:08:sismvg: watson slow
+17:08:varna: 我想爆红旗
+17:08:cleamoon: 四元娘喜欢看高智商小受
+17:09:varna: 药元四喜欢被爆
+17:09:cleamoon: +
+17:10:cleamoon: alpako的编辑器源码拿来
+17:10:varna: 这两天在肝船
+17:10:sismvg: watson是受
+17:10:sismvg: 我喜欢妹本
+17:11:varna: 我要爆红旗
+17:11:sismvg: 今天找到了丢失一年的小鸠的耳罩
+17:12:cleamoon: 你可以爆四元
+17:12:sismvg: 你是自己想被爆
+17:13:sismvg: 这和散布同桌女生喜欢某某男生是一样的
+17:14:varna: 你快吃药
+17:14:varna: 最近红旗酱上学，我们缺药娘爆
+17:14:sismvg: 鼻炎喷雾不能吃
+17:15:cleamoon: 干什么散播同桌女生喜欢别人？散播的肯定是喜欢我呀
+17:16:varna: 散布不都是说抛射体的么
+17:16:varna: 比如枪弹炮弹之类
+17:16:sismvg: 这是一种解除压力的方式
+17:16:sismvg: 主板还没修好
+17:17:sismvg: 我想要visa啊
+17:17:cleamoon: 接触压力爆四元好了
+17:18:sismvg: 你看看 你又用了
+17:18:cleamoon quit:Read error: Connection reset by peer
+17:18:cLeaMooN_ joined channel
+17:20:varna: 今天得了熊野，算是战果
+17:22:whocares_2 quit:Ping timeout: 240 seconds
+17:25:whocares_2 joined channel
+17:28:cLeaMooN_ quit:Read error: Connection reset by peer
+17:28:varna: 2015春，舰娘PSV发售
+17:28:cleamoon joined channel
+17:28:cleamoon: 海棠不来了？
+17:29:varna: hoho?
+17:29:varna: 海棠在会长酱吧
+17:29:varna: 这里一群丧失哪有会长酱好
+17:32:cleamoon: 会长酱不能爆他
+17:33:varna: 他推会长酱
+17:36:cleamoon: 重色轻丧的人
+17:36:slowcoach quit:Ping timeout: 260 seconds
+17:37:varna: 不都是这样
+17:37:varna: 要不我玩舰娘干嘛
+17:37:varna: 色都不重，难道是ED么
+17:39:cleamoon: 色丧都要
+17:42:cleamoon: 最好是丧失的色
+17:42:varna: @五岁幼女岚月酱
+17:43:cleamoon: @好想被不认识的男人当成肉便器轮奸
+17:43:cleamoon: 以上是一个b站up
+17:45:varna: 2333
+17:50:cLeaMooN_ joined channel
+17:50:cleamoon quit:Read error: Connection reset by peer
+17:53:iyzsong quit:Quit: WeeChat 1.0
+17:58:hysw quit:Ping timeout: 260 seconds
+18:07:blackskygg quit:Quit: Bye
+18:12:cLeaMooN_ quit:Ping timeout: 264 seconds
+18:12:FrankHB quit:Ping timeout: 255 seconds
+18:13:GODDOG joined channel
+18:15:FrankHB joined channel
+18:18:sismvg quit:Ping timeout: 246 seconds
+18:23:GODDOG: 无聊
+18:26:boosure quit:Read error: Connection reset by peer
+18:29:slowcoach joined channel
+18:30:Plough joined channel
+18:36:GODDOG quit:Quit: leaving
+18:36:GODDOG joined channel
+18:37:Xilzzerts quit:Read error: Connection reset by peer
+18:37:GODDOG quit:Client Quit
+18:38:GODDOG joined channel
+18:40:sismvg joined channel
+18:43:lh_mouse: acgtyrant, 揉
+18:52:sismvg quit:Ping timeout: 245 seconds
+18:56:GODDOG: IRC的list命令有限制数量的选项么？ 
+18:56:cleamoon joined channel
+18:56:GODDOG: 比如列出前十个频道之类的
+18:58:GODDOG quit:Quit: leaving
+18:59:GODDOG joined channel
+19:01:cLeaMooN_ joined channel
+19:01:cleamoon quit:Read error: Connection reset by peer
+19:04:cLeaMooN_ quit:Read error: Connection reset by peer
+19:09:cleamoon joined channel
+19:09:cleamoon: alpako还在
+19:11:GODDOG quit:Ping timeout: 260 seconds
+19:15:condy joined channel
+19:16:cleamoon: 在伊朗最大的移动运营商Irancell宣布将在大学和政府机关测试3G服务，以及伊朗总统哈桑·鲁哈尼早些时候表示要升级互联网服务之后，伊朗什叶派大阿亚图拉Makarem Shirazi发表评论，批评3G和高速网络是不道德的是违反人性的，认为需要标准保护用户远离不道德不人道的视频、照片、谣言和间谍活动，“某些人不应该假设我们反对
+19:18:lh_mouse: 乱码
+19:19:cleamoon: 伊朗宗教领袖说3G是不道德违反人性的
+19:19:sismvg joined channel
+19:19:lh_mouse: 干爆他们
+19:23:cleamoon: 他的意思可能是看av太慢，无法快进，违反人性
+19:34:condy: geordi: { int a[14]; iota(a,a+14,1); cout<<accumulate(a,a+14,0, [](int init, int v) { return init * v; }); }
+19:34:geordi: 0
+19:34:condy: geordi: replace 0 with 1
+19:34:geordi: 1278945280
+19:34:condy: geordi: replace all 14 with 11
+19:34:geordi: 39916800
+19:37:sismvg quit:Ping timeout: 255 seconds
+19:39:condy: http://tw.gigacircle.com/1999199-1
+19:40:condy: 0.0
+19:40:sismvg joined channel
+19:41:condy: 推銷員因為工作忙壹個星期有五天不在家，自然對太太有所歉意，想利用整個周末補償她！
+19:41:condy: 壹個星期六，當他們在那張會嘎嘎做響的床上親熱時……忽然！！
+19:42:condy: 隔壁的老太太用力敲著墻壁，大喊著：妳們有完沒完！壹個星期有七天！妳們就不能休息壹天嗎？
+19:42:condy: 233
+19:43:condy: 来自http://tw.gigacircle.com/1998999-1
+19:50:cleamoon: 2333
+19:57:sismvg: 贤者模式: 人类为什么要啪啪啪呢
+19:57:acgtyrant quit:Ping timeout: 240 seconds
+19:58:cleamoon: 为了进入贤者模式去和香草啪啪啪
+19:59:cLeaMooN_ joined channel
+19:59:cleamoon quit:Read error: Connection reset by peer
+20:00:sismvg: 爱莉好可爱
+20:01:iyzsong joined channel
+20:04:condy: sismvg: 是又出新的了？
+20:04:sismvg: 我就知道你会这么问
+20:04:sismvg: 是钢练拉
+20:05:condy: ...
+20:06:cLeaMooN_: 鬼父的老爸叫钢炼？
+20:07:sismvg: 。。。
+20:07:sismvg: sinne
+20:07:sismvg: shnne
+20:08:cleamoon joined channel
+20:08:cLeaMooN_ quit:Read error: Connection reset by peer
+20:21:condy quit:Ping timeout: 260 seconds
+20:23:condy joined channel
+20:26:acgtyrant joined channel
+20:41:condy quit:Ping timeout: 240 seconds
+20:42:condy joined channel
+20:43:sismvg quit:Ping timeout: 252 seconds
+20:55:zzzzzzzz quit:
+20:59:Petrus07 joined channel
+21:05:zzzzzzzz joined channel
+21:16:MoeIcenowy joined channel
+21:18:varna: 快来药娘
+21:18:MoeIcenowy quit:Read error: Connection reset by peer
+21:20:condy: ^ 这个是妹子哦！
+21:20:zzzzzzzz: 妹子+
+21:20:MoeIcenowy joined channel
+21:20:varna: 妹子都走了你们说什么
+21:20:varna: 快吃药
+21:20:zzzzzzzz: 妹子又来了 MoeIcenowy 
+21:20:varna: 喔喔？
+21:21:zzzzzzzz: 安同的妹子
+21:21:varna: 安同……
+21:21:varna: 是那个发行版？
+21:21:zzzzzzzz: 是的吧
+21:22:varna: 不知道他们后来从debian里面走出来多远了
+21:22:varna: 看以前linux吧的说法，似乎用了一部分debian的东西
+21:22:iyzsong: 自己写了build系统吧
+21:23:varna: soga
+21:23:zzzzzzzz: 我是网上查了才知道，，不是基于OpenSUSE的吗？
+21:23:varna: 以前的安装我记得沿用了一些debian
+21:23:zzzzzzzz: 唔
+21:23:varna: 不过一直不太关注这些友好的发行版，所以……
+21:24:* iyzsong 在龙芯本上运行debian/sid中
+21:24:zzzzzzzz: 同不关注....
+21:24:iyzsong: 友好 = =
+21:24:varna: 噗噗噗噗，为什么1-5进去第一次就完美地失败了……
+21:26:MoeIcenowy quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+21:26:MoeIcenowy joined channel
+21:26:varna: 大淀倒是及时地智商上线了，不过其他人……
+21:29:varna: 所以说水雷战队对空差对潜差简直那啥
+21:30:varna: 第一杀拿下
+21:36:Plough quit:Ping timeout: 264 seconds
+21:36:Plough joined channel
+21:37:varna: Plough: 爆
+21:37:varna: 红旗酱快来被我行炒饭之事
+21:37:iyzsong: 。。
+21:37:cleamoon: 龙芯买不到
+21:38:cleamoon: 为什么很多人说bsd疼的少？
+21:38:iyzsong: 3A/B?
+21:38:cleamoon: 3B？
+21:38:varna: BSD疼得多吧
+21:38:* zzzzzzzz 也想试试bsd...
+21:38:varna: 他们需要一个Linux模拟器
+21:39:zzzzzzzz: 为啥要Linux模拟器
+21:39:MoeIcenowy: BSD有吧
+21:39:cleamoon: 不少人都说free/openbsd疼的少...
+21:39:MoeIcenowy: 比如大银河麒麟
+21:39:varna: 第三杀用意，出击了
+21:40:iyzsong: 用BSD就像感觉回到6年前
+21:40:cleamoon: 六年前发生了什么？
+21:40:zzzzzzzz: 6年前...
+21:40:varna: 六年前的Hudson河啊
+21:40:zzzzzzzz: 因为用BSD的人比较少吗...
+21:40:varna: 现在想想，那也都是孔明
+21:40:varna: -- Solid Snake
+21:41:iyzsong: - - 我只是随便说的一个数字
+21:41:varna: 我有不好的预感，这一杀恐怕拿不下……
+21:42:cleamoon: bsd的缺点就是很多东西运行不了了
+21:42:varna: 孕行？
+21:42:cleamoon: 部分linux游戏
+21:43:zzzzzzzz: bsd能运行水果的东西不？
+21:43:varna: 没试过
+21:43:cleamoon: 很多偏门的东西都不知道有没有bsd版
+21:43:varna: 那珂酱保佑！智商上线！
+21:44:zzzzzzzz: 偏门...
+21:44:varna: 又是一个北上的故事
+21:45:iyzsong: >.<
+21:46:varna: 两次都留下大破的敌方旗舰真是太悲痛了
+21:48:FrankHB quit:Read error: Connection reset by peer
+21:48:iyzsong: 不过openbsd的faq写的真的很好  www.openbsd.org/faq/index.html
+21:48:FrankHB joined channel
+21:49:cleamoon: 耻球似乎支持bsd
+21:51:varna: ...
+21:51:varna: 操……
+21:52:varna: 怎么又没击杀
+21:53:varna: 在压倒性优势下击杀不能已经开始准备进入我军的传统了么
+21:55:varna: 南方栖战姬也是，潜水yo级也是
+21:56:cleamoon: 听说潜艇是水中的18禁？
+21:56:varna: ?
+21:57:varna: 己方潜艇只是全员死库水而已
+21:57:cleamoon: 不止一艘潜艇？
+21:58:varna: I-8, I-19, I-58, I-168, I-401, 三式潜航运输艇
+21:58:varna: 目前实装/先行配信的是这些
+21:59:varna: 当然因为三式潜航运输艇名字太长所以缩略为maruyu, 浑名马战神……
+22:01:lh_mouse: meow
+22:01:varna: 鼻子伸来
+22:02:varna: 不伸来就捉你去烤肉
+22:03:lh_mouse: QAQZ
+22:03:cleamoon: 耳朵伸来
+22:03:varna: 反正现在大排档的羊肉串有耗肉有猫肉，都可以烤
+22:04:* lh_mouse QAQ
+22:04:varna: 猫耳朵好玩么？以前没太模过
+22:04:lh_mouse: OJTZ
+22:04:varna: 斩杀
+22:05:varna: 目前的反潜队：大腚（40）电（117）扶桑（63）出云MAN（75）
+22:05:varna: 月初的一百七十五战果到手
+22:07:cleamoon: 喵耳挺好玩的，又凉又软，还不总躲开
+22:08:varna: 我小时候模就感觉是软骨手感，不如鼻子好玩
+22:09:lh_mouse: o.o
+22:09:lh_mouse: =w=
+22:11:cleamoon: 鼻子总躲
+22:12:varna: 你别太快模，慢慢把手伸上去，猫自己会把鼻子凑过来
+22:13:cleamoon: 我养了一个月那只只会把头凑过来
+22:14:cleamoon: 然后拼命的蹭
+22:14:lh_mouse: ⊙ω⊙
+22:15:varna: 猫头上有虱子？
+22:16:cleamoon: 或者用尾巴打我脸，尤其是我在立flag时
+22:16:cleamoon: 也许有，两个月没洗澡
+22:16:varna: 那叫长程尻击
+22:16:varna: 长程尻击你怕不怕
+22:17:iyzsong: =.=
+22:18:cleamoon: 不怕，我会强行后入
+22:19:varna: 等到猫鼻子逐渐提高练度之后就能学会更多的奥义了
+22:20:varna: 比如易 建 联
+22:22:cleamoon: 以后我养喵起名叫帕秋莉
+22:23:varna: GO
+22:25:varna: 养的第一只可以叫欠雪
+22:26:varna: 然后每天逗着玩
+22:26:varna: 头上扣个桶之类的
+22:30:condy quit:Quit: leaving
+22:32:cleamoon: 那不如叫岛风
+22:34:varna: 吹雪可是震惊世界的强力驱逐舰
+22:34:cleamoon: 不够骚想干
+22:35:varna: 岛风为首岛风为止的丙级驱逐舰纯粹是舰本那群人被打得脸肿之后还不肯放弃的妄想
+22:35:varna: 明明阳炎级又一次响亮地证明了以火力和雷装为重点的舰队驱逐舰面对美帝铺天盖地的猫鼻子飞机除了被凿沉之外屁用不顶……
+22:36:cleamoon: 妄想多好，丁字裤多棒
+22:36:varna: 包子脸！包子脸！
+22:36:varna: 其实也有仿照响推出雪风改二的脑洞
+22:37:varna: 雪风后来给了委座，所以也有人建议米库去学几句中文，攻击语音改成娘希匹
+22:38:cleamoon: 娘西皮好评
+22:38:varna: 回去了
+22:38:varna: 诸君夜间愉快、武运长久、撸管没纸的时候不停水
+22:38:varna quit:Quit: leaving
+22:47:iyzsong quit:Quit: reboot
+22:49:cleamoon: 噗，难道alpako撸管时没纸了然后停水了？
+22:58:MoeIcenowy quit:Read error: Connection reset by peer
+22:59:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:00:cLeaMooN_ joined channel
+23:00:cleamoon quit:Read error: Connection reset by peer
+23:03:MoeIcenowy joined channel
+23:03:MoeIcenowy left channel:
+23:05:cLeaMooN_ quit:Ping timeout: 272 seconds
+23:05:FrankHB quit:Remote host closed the connection
+23:06:FrankHB joined channel
+23:13:iyzsong joined channel
+23:17:Plough quit:Remote host closed the connection
+23:45:slowcoach quit:Ping timeout: 268 seconds
+23:47:slowcoach joined channel
+23:49:code_new quit:Quit: Leaving

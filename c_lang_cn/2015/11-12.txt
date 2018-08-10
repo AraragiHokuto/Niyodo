@@ -1,0 +1,1605 @@
+00:09 Flandre1 quit:Quit: WeeChat 1.3
+00:38 cleamoon joined channel
+00:40 cleamoon_ joined channel
+00:43 cleamoon quit:Ping timeout: 246 seconds
+00:46 cleamoon__ joined channel
+00:49 cleamoon_ quit:Ping timeout: 240 seconds
+00:50 cleamoon__ quit:Ping timeout: 250 seconds
+01:00 lh_mouse: geordi, -c { map<int, foo> m; m.emplace(1, 2); } struct foo { explicit foo(int); };
+01:00 geordi: Success
+01:00 lh_mouse: geordi, use --clang
+01:00 geordi: Success
+01:13 lh_mouse quit:Read error: Connection reset by peer
+01:37 cleamoon joined channel
+03:27 whatofor_1 quit:Read error: Connection reset by peer
+03:53 boosure joined channel
+05:35 lhjkk quit:Remote host closed the connection
+05:35 lhjkk joined channel
+07:17 RivDo joined channel
+07:57 FrankHB quit:Ping timeout: 244 seconds
+08:22 xxxxxxxx quit:Quit: Leaving...
+08:30 FrankHB joined channel
+08:32 RivDo quit:Ping timeout: 246 seconds
+08:34 RivDo joined channel
+08:37 lhjkk quit:Remote host closed the connection
+08:53 hoxily joined channel
+09:12 RivDo joined channel
+09:15 lh_mouse joined channel
+09:19 RivDo quit:Quit: Leaving.
+09:29 RivDo joined channel
+09:31 FrankHB quit:Ping timeout: 276 seconds
+09:33 Stevearzh quit:Ping timeout: 276 seconds
+09:33 lhjkk joined channel
+09:34 RivDo quit:Ping timeout: 260 seconds
+09:53 RivDo joined channel
+09:54 czh joined channel
+09:54 whatofor joined channel
+10:30 lhjkk quit:Quit: Leaving
+10:31 lhjkk joined channel
+10:40 Stevearzh joined channel
+10:49 varna joined channel
+10:50 * lh_mouse slaps varna around a bit with a large trout
+10:51 * varna mousoies
+10:52 lh_mouse: varna, http://paste.ubuntu.com/13235146/
+10:52 varna: lmotl
+10:52 varna: 啊，log
+10:54 varna: 原因我不能确定，不过我觉得你的这个说法应该差不多：
+10:54 varna: [10:46:36] <lh_mouse> In my opinion the most probable reason is that, the connection was closed gracefully before the HTTP response could be received completely.
+10:54 lh_mouse: ?
+10:54 varna: 另外errno的序列化输出信息，我印象是success而不是no error
+10:55 lh_mouse: geordi, << strerror(0)
+10:55 geordi: Success
+10:56 lh_mouse: debian@debian:~$ echo -e '#include <stdio.h>\n#include<string.h>\nint main(){ puts(strerror(0)); }\n' | gcc -x c - -std=c99 && ./a.out 
+10:56 lh_mouse: Success
+10:57 varna: 早上编辑部给我来个电话，估计那一千多大元的版面费我得彻底地自掏腰包了——明年五月份才能交钱，正好赶不上报销
+10:57 lh_mouse: 真是一个被〇的故事
+10:57 varna: 最逗的是他们的邮件被hotmail退掉了
+10:58 lh_mouse: /w\
+10:58 cleamoon: ......
+10:58 cleamoon: 什么鬼
+10:59 varna: jlu.edu.cn的域名应该没什么问题，所以我猜是hotmail抽风
+10:59 lh_mouse: gmail 啊
+10:59 varna: 我花了很久才教育好它，perlweekly不是spam
+10:59 varna: gmail荒废挺久了，不想用
+10:59 lh_mouse: godaddy 的邮件只有 gmail 能收到
+11:00 varna: hotmail和我手机的outlook也有绑定，平时查东西方便；等到以后我自己租主机的时候再考虑用gmail吧，虽说现在有放宽架势但谁知道呢……
+11:02 lh_mouse: /w\
+11:02 cleamoon: 你学校没有邮箱吗
+11:03 lh_mouse: 我主要用 126 的  不过 lh_mouse at ra2diy dot com 也会拿来装逼権確保
+11:03 cleamoon: 装逼権不应该越短越好吗
+11:03 varna: 我学校有，然而我一直没去申请
+11:03 varna: 于是就没有了
+11:04 lh_mouse: lh_mouse@boy.next.door.zhuang.bi.quan.que.bao
+11:04 varna: 以至于我论文投稿用的都是hotmail邮箱……
+11:04 cleamoon: 用学校的各种好
+11:05 varna: JLU这个国内还行
+11:05 pocmon joined channel
+11:05 varna: 不过想想论文投出去之后上面一个大大的sceneviper at hotmail dot com也显得很乐
+11:05 varna: “这中二怎么弄出个大新闻的”
+11:06 cleamoon: 23333
+11:06 lh_mouse: 观点  中国政府依然控制着女性的身体 盛可以 从一胎制到二胎制，中国政府控制女性人身权利的本质没有变，新政策依然没有顾及人的尊严，中国人还是没有决定自己生育行为的自由。 
+11:06 lh_mouse: NYT 上怎么会有这么脑残的社论
+11:06 varna: 这是社论？
+11:07 varna: 薯条吃多了吧
+11:07 cleamoon: NYT怎么可能有社论
+11:07 lh_mouse: 这帮公蜘   真是屁大点事都能扯上人权
+11:07 lh_mouse: 不应该叫社论
+11:07 lh_mouse: 用大鸟台的说法应该叫评论员文章
+11:07 cleamoon: 我有短域名，但是没邮箱...
+11:07 lhjkk: 这种只是转的其他人的评论吧，只有代表本社观点的才叫社论吧
+11:08 varna: 我装逼都用withering at cpan dot org, 然而后来发现总有人通过这个邮箱捐几百万美元给我
+11:08 lh_mouse: https://d29wf9v92yfuxv.cloudfront.net/article/e0597c68c4f0eeeb7db5351d05ab5ba2/
+11:08 varna: 还有两个非洲伙计说想去欧洲
+11:08 cleamoon: 外国很少有代表本社观点的时候吧
+11:08 cleamoon: 23333
+11:08 lh_mouse: 哦  我一直以为社论是“社会评论”
+11:08 lhjkk: 确实没标记社论
+11:08 varna: 我他〇混了一年半还在南非当欧洲人的兼职大管家呢……
+11:08 lhjkk: 只是个“评论”
+11:08 lhjkk: 只是个“观点”
+11:08 lh_mouse: 是评论
+11:08 cleamoon: withering看起来很壕？
+11:08 varna: 评论脑残就无所谓了
+11:09 lhjkk: OP-ED CONTRIBUTOR
+11:09 lh_mouse: 社论看来是国内的官方词
+11:09 lh_mouse: 应该叫“总编评论文章”
+11:09 varna: 至今为止收到的钱估计都快够我下半辈子NEET了
+11:09 varna: “医院里热火朝天的景象让我瞠目结舌。我永远不能忘记那一幕，四个穿迷彩服的壮年男子，各扯一条胳膊腿，将一个哭叫挣扎的年轻女人抬进了手术室”
+11:09 varna: 这人练kuma轮功的吧
+11:09 lh_mouse: 不过 NYT 有如此逗比的文章实在罕见
+11:10 lh_mouse: varna, 外媒黑兔子不奇怪
+11:10 cleamoon: 迄今为止收到的还不够做NEET的？你的NEET要花多少钱
+11:10 cleamoon: NYT上不罕见吧
+11:10 lh_mouse: 很罕见
+11:10 cleamoon: 反正都是娱乐新闻
+11:10 lh_mouse: NYT 刻意黑兔子比较少
+11:10 lh_mouse: CNN 很多
+11:10 lh_mouse: 你对比一下就能看出来
+11:11 cleamoon: Nature上发了这种文章就好玩了
+11:11 lh_mouse: NYT 这般发文简直跟招显聪那个脑残一样了
+11:11 varna: cleamoon: NEET的话就可以租很多昂贵的服务器了
+11:11 cleamoon: 招显聪？和王思聪什么关系
+11:12 cleamoon: varna, 你要服务器干什么，自己一个人玩舰娘私服吗
+11:12 varna: 我还真好奇，Nature Science Cell这三个地方有没有真脑残的文章
+11:12 lh_mouse: 还有之前那个什么“香港不需要大陆的民主   英国港督不称职国内自然会弹劾他”  真 TM 好笑
+11:12 varna: 谁知道呢，反正当NEET之后可以慢慢想
+11:12 varna: 而且在我国还得准备治病的￥……
+11:12 lh_mouse: 英国人凭啥关心你中国香港如何如何
+11:12 lhjkk: 强行送人流产的
+11:13 varna: 英国人还是该关注下一代国王是威廉还是哈里
+11:13 lhjkk: 我是听说过很多例了
+11:13 cleamoon: Cell是关于什么的
+11:13 lhjkk: 还有到处追着人家到外地做引产的
+11:13 varna: 应该是生物学
+11:13 lhjkk: 为了啥，就是为了那点钱
+11:13 lhjkk: 那点社会抚养费在我家那边，很多根本没上交，变成黑钱流到地方官员口袋里去了
+11:13 varna: 我日，瞬间又丢包
+11:13 cleamoon: 小耗发的那句话本身没什么喷点吧
+11:14 varna: 喷点很大
+11:14 cleamoon: 社会抚养费，那是什么
+11:14 varna: 香港毕竟是我国领土
+11:14 varna: 腐国人要吃炸鱼薯条可以回国吃
+11:14 lhjkk: 绅士说的是计生的那个
+11:14 cleamoon: 这两句是连着的？
+11:14 cleamoon: 我以为是分开的...
+11:15 lhjkk: cleamoon, 社会抚养费 就是 超生罚款， 在以前你可以这么理解
+11:15 lh_mouse: 现在也没错
+11:15 lhjkk: 对
+11:15 lh_mouse: 就是听起来好一点
+11:15 varna: 我觉得可以叫中出税……
+11:15 lh_mouse: uccu
+11:15 lhjkk: 我反正觉得强制引产可以黑
+11:16 varna: 让它名头上显得色情些，可以通过转移注意力的方式淡化矛盾
+11:16 cleamoon: soga
+11:16 lhjkk: 更不要讲围绕 社会抚养费 的利益争夺
+11:16 varna: 夜战API没发出去，只得个B胜……
+11:16 cleamoon: 反证射会抚养费肯定没给射会
+11:17 cleamoon: 做5-1任务又tm遇到潜艇
+11:17 lhjkk: 我看到的就是，老家农民想要超生少罚点钱，那就不交给政府，交给黑官，他们不管，那就合法超生了。程序什么的无视
+11:18 sismvg joined channel
+11:18 lhjkk: 不想再说了，感觉慢慢的负能量
+11:18 varna: 不满
+11:18 cleamoon: 具体什么程序我不知道，我只知道老爸去广(dong)东(guan)看到每个人都好多孩子
+11:18 varna: 你要明白，超生的前提是有个妹子或者妇女给你生孩子
+11:19 lh_mouse: 有时候我说不客气的
+11:19 lh_mouse: 我不同情这帮超生的
+11:19 cleamoon: 其实我对领土什么的完全没好感，独不独立什么的完全无所谓
+11:19 cleamoon: 你应该同情我们这些没人给生的
+11:20 lh_mouse: ##c++ 里有一个人叫 BustyLoliChan
+11:20 varna: 我觉得小耗这方面其实可能只考虑了富有思想性的方面，而忽略了一个生理状况（虽然对于大部分超生党来说，他们也没考虑）
+11:20 cleamoon: 干脆叫单身狗抚养费好了
+11:20 varna: 实际上如果只生一胎，对某些妇女来说可能会引发从轻微到严重程度不等的后续疾病
+11:20 varna: 有致死可能
+11:20 cleamoon: 富有思想性是什么，图样图森破吗
+11:21 varna: 对于这件事，我也只能说轮到谁谁知道
+11:21 varna: 当然实际上大部分超生党并不是因为这个原因才超生的
+11:21 varna: 所以忽略无妨——这个现象只是客观地存在
+11:21 lh_mouse: 超生很多是因为无知   当然张导演就算了
+11:21 cleamoon: 反证父母要求我以后尽量多弄几个
+11:21 varna: 无知+
+11:22 varna: 张艺谋还有妙可
+11:22 czh quit:Quit: Lost terminal
+11:23 cleamoon: 无知可以用教育解决，可是罚款反而会让人觉得这才是对的
+11:23 lh_mouse: 能解决个 j8
+11:23 lh_mouse: 你怎么用教育解决无知
+11:23 varna: 因为在教育难以解决的时候，罚款确实是短期对的；而教育基本没法解决
+11:23 varna: 除非你相信教育能改变人而不是规范人
+11:23 lhjkk: 根本就没罚款，给计生官员的福利怎么能叫罚款》？
+11:23 lh_mouse: 解决无知最有效的办法是拖去当炮灰
+11:24 varna: lhjkk: 把头缩进裤腰里，你头上有个卫星
+11:24 varna: 不让moha之后lhj的负能量直接爆发了
+11:24 lhjkk: 这破freenode迟早药丸
+11:24 varna: 从这个意义上看，膜法师的执念还真是可怕……
+11:25 lh_mouse: 现在的问题是你如何高告诉一帮无知的人“超生是不对的”
+11:25 cleamoon: call me 图样图森破，我就是觉得教育有用
+11:25 lh_mouse: 如果他们无法理解你说的   你只能用他们可以理解的方式告诉他们   比如罚款
+11:25 lhjkk: 没问题了，毕竟可以生二胎了
+11:25 varna: 我也希望教育有用，然而即使在教育发达的国家，仍然一堆傻逼……
+11:25 varna: 我把小耗的说法换个我们常见的
+11:25 lh_mouse: 教育要人愿意接受教育   比如你给我讲微积分我可能会一拳抡死你
+11:26 sismvg: 我突然在想吃了那么多桃核的我是怎么活下来的。。
+11:26 varna: 如果他们没法理解你不让他们伸手，你只能用他们可以理解的方式告诉他们，比如十循
+11:26 lh_mouse: 我的观点就是教育解决不了无知
+11:26 varna: 看看现在的C语言吧是什么，简直一个垃圾山
+11:26 lhjkk: 干活了
+11:26 lh_mouse: 无知是一种客观规律
+11:26 varna: 还不如同性交友呢
+11:26 sismvg: 那我们来讲拓补学吧
+11:26 varna: 拓扑（topology）
+11:26 lh_mouse: 客观规律基本没法改变   所以干脆打破客观规律算了
+11:27 cleamoon: 解决无知不是把人教育成科学家让他们去自己探知，而是直接告诉他们应该正确的结论，拥有很多知识的依旧可以是SB，但至少不再无知了
+11:27 varna: 然而灌输结论需要洗脑
+11:27 varna: 不然你的结论就会扔掉
+11:27 lh_mouse: [11:26:20] <varna> 还不如同性交友呢  // sed -e 's,同,,' -e 's,友,,'
+11:27 cleamoon: 总想着教育能解决SB的问题，那是本末倒置
+11:27 sismvg: 拓(ta)扑 ?
+11:27 lh_mouse: cleamoon, 然而人家并听不进你在讲啥
+11:27 cleamoon: 教育就是一种洗脑方法
+11:27 varna: 不信我们现在真的给小耗灌一个Rolle定理进去，他下午就忘掉
+11:27 varna: 洗脑的教育现在限于社会道德吧
+11:27 varna: 而且洗得也不好
+11:28 varna: sismvg: 这是个音译词
+11:28 varna: 念ta4的时候，拓是说做石碑那种东西的拓片
+11:28 cleamoon: 成功学不就挺好用
+11:28 whatofor quit:Ping timeout: 240 seconds
+11:28 varna: 成功学成功地在我身上失败了
+11:28 lh_mouse: 还不如叫鸡汤学
+11:29 varna: 老子就当撸瑟，拒绝鸡汤
+11:29 varna: 所以这个不够洗脑
+11:29 sismvg: 鸡汤穷三代，魔兽毁一生
+11:29 cleamoon: 就是鸡汤学，用鸡汤学的方法告诉无知的人信息就好了
+11:29 varna: 一个比较成功的洗脑是“杀人不好”，这个算普及得还不错了
+11:29 lh_mouse: 所谓“成功学”我觉得是人择原理
+11:29 varna: 就是人择
+11:29 lh_mouse: 先射一箭  再画上圈
+11:30 varna: 而试图复现人择的结果是很困难的
+11:30 cleamoon: 把SB弄成不SB是远远超过教育的能力的事情，但是告诉无知的人知识是教育能做到的
+11:30 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+11:30 varna: 知识和行动是有差别的
+11:30 whatofor joined channel
+11:30 varna: 能把知识投入行动或者有理由地拒绝知识的人，都有些智能
+11:31 varna: 实际上圣保罗也讨论过这类问题（虽然是宗教的，但纠结了他大半辈子）
+11:31 cleamoon: 那是因为你没有把这些知识insert到大脑里
+11:31 varna: 这个insert就是关键所在
+11:31 cleamoon: 你只是弄了个list等着他们输入
+11:32 lh_mouse: 于是人家问  List 是什么
+11:32 varna: 如果你期待更好的方法论，那倒是正论，只是天国路窄……
+11:32 lh_mouse: 俺只知道土豆  山药
+11:32 varna: List是一棵被他们老母坐过的Tree...
+11:32 cleamoon: 兲朝现在这么庞大的洗脑机关，用来做点正事多好
+11:33 varna: 就是，多生几个女儿……虽说估计宁可当别人的k奶去也不会嫁给我吧
+11:33 varna: 说起来我几乎没在学校食堂见过山药啊
+11:33 varna: 明明很好吃
+11:34 cleamoon: 我也就吃过一两次山药
+11:34 cleamoon: 不过芋头很好吃
+11:34 varna: 芋头也不错，你那里怎么吃的
+11:35 cleamoon: 就是煮了之后粘糖吃
+11:35 cleamoon: 帝都芋头不很便宜
+11:35 varna: 哦，没试过炖肉么？
+11:35 varna: 你可以叫它绫波炖芋头
+11:35 varna: http://baike.baidu.com/view/570882.htm 海棠兔
+11:35 cleamoon: 太贵，不想浪费
+11:35 varna: ……
+11:37 cleamoon: 我现在的世界观是，兲朝平流层是有资源很力量做很多事的，不过其中很多都很有可能导致他们个人利益的损失，所以不做
+11:38 varna: 我的想法相反
+11:38 varna: 这个可以想想鲁迅一个比喻的讽刺
+11:39 varna: 农家妇女想像皇后娘娘的午后，躺在大床上，突然喊一句“太监，拿个柿饼来”
+11:39 varna: http://b.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=330e51a54bfbfbedc8543e2d19999c53/b7003af33a87e9505c8b33f610385343faf2b488.jpg 这个兔……
+11:40 cleamoon: 这个梗没懂
+11:40 cleamoon: 这兔球
+11:41 varna: 简单来说就是想象力极限了
+11:41 varna: 地方估计很多地头蛇
+11:41 varna: 你想像下如果让你带着一堆傻逼去做一个项目，你还没法操刀做实现的时候会搞成什么样子
+11:43 cleamoon: 那前提是全国加起来也没几个能用的人
+11:43 varna: 障碍重重
+11:44 varna: 要是那么容易做，老实说有傻逼其实也该能做到
+11:44 cleamoon: 可我的感觉是能用的人有的是
+11:44 varna: 被堵住的很多
+11:45 varna: 因为傻逼的群众基础很广，我不是在黑Java
+11:45 cleamoon: 能被堵住本身就是个问题
+11:45 varna: 越往下越容易堵住
+11:45 cleamoon: 吃饭睡觉黑Java
+11:46 varna: 我用我的生命黑Java和Python
+11:46 cleamoon: 用不着下边挑人
+11:46 varna: 上面挑人得累死
+11:46 varna: 考察一个人本来就很难，所以比较实际的策略是挑看上去凑合的
+11:47 cleamoon: 累死无所谓吧，又不是舰娘，远征来的人都是用来送的
+11:47 varna: 大概还是有所谓的，毕竟得有大菊观（想想9神）
+11:48 cleamoon: 大菊观又不需要他们自己想
+11:48 cleamoon: 他们自己负责挑人就行了
+11:48 varna: 没法实施，你需要多长的考察周期和什么样的考核方式……
+11:49 varna: 如果都是理想的，那你不如加入我们共有主义者阵营
+11:49 varna: 那样连这个步骤都可以省掉，大家按能力参加各种工作，这样我不必总是一个撸管者
+11:49 RivDo joined channel
+11:50 cleamoon: 如果连考察周期和考核方式都不知道，那现在应该全体都是废物
+11:50 varna: 但是我觉得如果真要制定不那么理想的考察办法，效果不会很好的
+11:51 cleamoon: 关键是你为什么认为考核方法不理想
+11:52 RivDo quit:Client Quit
+11:52 varna: 因为我没见过理想的……
+11:52 varna: 也因为我自己考察别人的角度就有非常大的偏见
+11:53 cleamoon: 亲自培养就是个好办法
+11:53 varna: 缺点是有点慢
+11:53 cleamoon: 而且也不需要无偏见
+11:53 varna: 无偏见做不到，不过需要能服众，除非决策机构的脑子都足够聪明，或者气度不错
+11:53 cleamoon: 不很慢，菌队里都是
+11:54 varna: 军队里那是其他的考虑，你懂的……
+11:54 cleamoon: 服众可以靠9mm和结果
+11:54 cleamoon: 不需要执行人自己的完美
+11:55 varna: 军国主义倾向看上去有短期快速的执行力，但那样下来的结果是对等的意见扩大内部斗争、不对等的意见造成一意孤行
+11:55 cleamoon: 偏要一个完美的执行人去做最基础的事根本就是要求完美的编辑器+编译器才开始撸码
+11:55 varna: 一个聪明的军国主义者还能解决一时问题，然而一个东条英机就……
+11:55 cleamoon: 哪就菌国主义了
+11:55 varna: 操我忘了自己刷了几回闪
+11:55 cleamoon: 最多菌省主义
+11:56 varna: 算了补两次
+11:59 varna: cleamoon: 啊，秋活有小和
+11:59 cleamoon: 现在兲朝经济政 治简直比米帝还米帝
+11:59 varna: “作戦開始は来週【11/18(水)】予定。「秋月」などとの邂逅も可能です。”
+11:59 cleamoon: varna, 捞的？
+12:00 varna: 当然是捞的……
+12:00 varna: 小和是去年的二面奖励
+12:01 cleamoon: 希望这次我能弄到所有船
+12:01 varna: 估计一号机掉率会提升吧，毕竟都缺席一年了
+12:02 varna: 这他娘的……P2P党再给我去死几分钟
+12:02 cleamoon: 一号机？
+12:02 RivDo joined channel
+12:02 varna: 如果没有的话应该会有掉率提高的样子
+12:02 cleamoon: soga
+12:03 cleamoon: 我想要几个明石...
+12:04 varna: ……
+12:04 Stevearzh quit:Quit: WeeChat 1.3-dev
+12:04 cleamoon: 我觉得政策需要的是类似工程的，即使满眼hack也要订一个目标做，不能只要有缺点就不做，那太过“何不食肉糜”了
+12:04 Stevearzh joined channel
+12:05 varna: 我觉得政策在大部分时候需要对付受众
+12:05 varna: 工程也一样
+12:05 varna: 最终用户大多是逗比，说都不会话
+12:06 varna: 昨天糖果给我讲了个笑话
+12:06 varna: 他帮他毕业高中的老师做了个统计软件，然后突然用户报bug
+12:06 cleamoon: 产品需要考虑受众，工程不需要
+12:06 varna: 说是前三十名平均分和全班平均分一样
+12:06 varna: 然后拿来数据一看，班上就三十个人
+12:06 cleamoon: ......
+12:07 cleamoon: 所以呢
+12:07 cleamoon: 这种无所谓吧
+12:07 varna: 有这种人就有更逗乐的
+12:07 varna: 毕竟工程接的是委托，而委托人大多说不会话
+12:07 cleamoon: 无所谓
+12:07 varna: 如果真能那样就好了
+12:08 varna: 这方面我不争辩它不好，我只是觉得难
+12:08 varna: 马勒戈壁……
+12:08 cleamoon: 你得知道，政策是委托人是会说话的，还能说英文呢
+12:09 cleamoon: 贱民不是政策的受众，只是政策的副作用
+12:09 varna: 然而受众则是另一回事了
+12:09 varna: 哦，如果你强行甄别那我就不讨论了
+12:09 varna: 最后还是强行缩减论域而已……
+12:09 varna: 他妈的是谁在内网找死
+12:10 cleamoon: 不是强行甄别，是不需要特意对付，反正你没法选择不通过
+12:10 varna: 那样也没意义
+12:10 varna: 这政策缺乏进步性
+12:11 cleamoon: 进步性是什么
+12:11 varna: 它无非是几个独善其身的布尔乔亚对自身利益的巩固，而这政策的提出者又变成了别人眼中庸俗的肉食者
+12:11 varna: 也就是说，你打着冠冕堂皇的幌子解决自己的问题，把这个问题抛给了别的阶级
+12:12 varna: 我觉得这倒不如讲明了说“老子不爽，给我应得的”
+12:12 cleamoon: 这不就是事实吗
+12:13 lh_mouse quit:Read error: Connection reset by peer
+12:13 varna: 如果只是如此的话，压根没必要这么绕弯
+12:13 varna: 你的说明方式仿佛在打自己的脸
+12:13 varna: 噗，MDNS
+12:14 varna: 这个东西我在内网第一次见到
+12:14 varna: 简直是傻逼，难道那主机没配置DNS?
+12:16 varna: 还有一台隔一阵子就发现一次DHCP IPv6路由的……租期都不明白了么
+12:16 cleamoon: 我的意思就是本身就是这样，但是他们也有能力做点人事，但是最后都变成了维护自我利益
+12:16 varna: 这倒是正解
+12:17 varna: 不过我仍然不觉得毒瘤在特别靠上的地方，因为激烈的变化会造成大部分蠢货没法接受的结果
+12:17 cleamoon: 于是我们说了半天到底说了什么... 果然我的表达力很有问题...
+12:18 varna: 没事，只是达成了大体上的一致
+12:18 varna: 我日，看到一个在淘宝上刷什么返利的
+12:18 cleamoon: 毒瘤满处都是，如果只有平流层是毒奶的话，他们自然会自己改变一下的
+12:18 varna: 正好是我点杀的那个主机
+12:20 cleamoon: 还有一个事实，根据我见过的官僚，他们真的大多数时候没想很多...
+12:20 varna: 这个我预想过，不过你见过的大部分都是帝都本市的吧……
+12:20 cleamoon: 顺便推荐WCS2015星际世界总决赛，挺精彩的
+12:21 varna: SC2我已经看不懂了……兵种参数我都不了解
+12:21 cleamoon: 我也不了解，一次都没玩过
+12:21 cleamoon: 但是很爽呀
+12:21 varna: 看场面华丽总觉得缺乏投入感……
+12:22 cleamoon: 这水平的本身就没投入感
+12:22 cleamoon: 玩的不是一种游戏
+12:22 varna: 不过至少可以勉强学去一点点，而且sc2我不知道为什么总是缺乏兴趣……
+12:23 varna: 真见鬼，那个主机在子网内发现什么东西……
+12:23 yzld2002 joined channel
+12:26 varna: DHCP Solicit的频率高得超乎常识
+12:26 varna: 这些巴拉森
+12:26 cleamoon: sc2的比赛只有最高水平的才好看
+12:26 xxxxxxxx joined channel
+12:27 xxxxxxxx: varna: 羊驼听说过path of exile么?
+12:28 varna: 没听说过……
+12:28 varna: 那个傻逼主机进行路由器发现的明显间隔甚至只有三十多秒
+12:28 varna: 这都是些什么鬼
+12:31 xxxxxxxx: 一形如D2的游戏
+12:32 xxxxxxxx: 不过不能单机(似乎)
+12:33 cleamoon: WCS果然很好看，很符合我世界观的战斗和胜利
+12:34 cleamoon: 就tm这奖杯也太大了，拿不动...
+12:35 xxxxxxxx: http://tieba.baidu.com/p/4072771230 一个可能是土豪的帖子
+12:36 varna: cleamoon: 来个充血的千斤顶
+12:37 cleamoon: 唉，就缺最后一个冠军拿不动奖杯把奖杯摔碎的惊喜，要不就大片向了
+12:37 xxxxxxxx: cleamoon: 幼女可以试试看这个游戏 朝内我不抱期望了
+12:38 varna: 感觉这个画面我带不动
+12:39 xxxxxxxx: 我也感觉带不动 但更主要的是网络估计吃翔
+12:39 cleamoon: 司令部要员可以直接吃了吧？
+12:39 varna: 可以
+12:39 varna: 吃了就加最大遂行任务数
+12:40 cleamoon: 如果能得5个就好了
+12:40 varna: +
+12:41 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=6013effe17dfa9ecfd2e561f52ebf503/500fd9f9d72a6059b7ed6cf82e34349b023bba57.jpg 息子草
+12:41 xxxxxxxx: 我以为草是那个草...
+12:41 cleamoon: 噗
+12:42 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=e13515c375f082022d9291377bc0faed/8601a18b87d6277fd251c3d82e381f30e824fc8b.jpg 股间摩擦米军
+12:43 varna: 出去趟
+12:45 cleamoon: 这游戏看起来很美好
+12:48 xxxxxxxx: http://war.163.com/15/1110/13/B82I3T3A00014J0G.html 打不过我信 然而这文看着不靠谱...
+12:52 cleamoon: 虽然我不懂，然后这文看着不靠谱
+12:57 Flandre joined channel
+13:07 lh_mouse joined channel
+13:44 tutu_wind joined channel
+13:45 tutu_wind: 今天人好多喵～
+13:55 varna: 好想侵犯个谁啊
+13:56 cleamoon: varna, 爆
+13:56 varna: 这幼女
+13:56 varna: 女孩子家总想着搞基
+13:57 cleamoon: 你弯腰，我告诉你女孩子家怎么搞基
+13:57 varna: 我才不上钩
+14:01 cleamoon: 那你蹲下张嘴
+14:01 varna: 这幼女
+14:02 cleamoon: 2-5捞船消耗略大
+14:04 varna: 6-2更糟糕
+14:05 cleamoon: 不是说6-2好打吗
+14:05 xxxxxxxx: 发改委专家:中国人口若少于10亿就要奖励生育
+14:05 cleamoon: 等活动完了，剩下的资源我不打算放烟花，还是都捞了船和换成勋章
+14:06 cleamoon: 少于10亿略难
+14:06 varna: 我要造一些战神给十六万钢吃
+14:07 cleamoon: 我还没得到过一个扬陆呢
+14:08 cleamoon: 我想要那个增加远征收入的东西
+14:09 cleamoon: 平常攻略时ca和bb是带电碳还是穿甲弹？
+14:09 xxxxxxxx: 罗技发布iPad Pro专用键盘配件Creat
+14:10 varna: cleamoon: 目前没实装20.3口径的九一弹，所以重巡一般用电探；战舰用穿甲弹
+14:10 cleamoon: soga
+14:10 xxxxxxxx: 我觉得这种产品真傻B 自己造出来的东西还要别家擦个屁股
+14:11 cleamoon: @Steve用手指
+14:11 cleamoon: 勋章拿到了
+14:11 xxxxxxxx: 而他们的用户还一个劲地吹那些残疾产品完美
+14:12 cleamoon: 肥城肥桑先改哪个没区别吧？
+14:12 cleamoon: 卧槽卧槽卧槽卧槽卧槽卧槽卧槽
+14:12 cleamoon: 大鲸
+14:12 cleamoon: 暂时不能打了，rp又用完了
+14:13 varna: OTL...
+14:13 varna: cleamoon: 区别很小
+14:13 cleamoon: 大鲸血略厚
+14:14 cleamoon: 于是，大鲸有什么用呢
+14:14 cleamoon: 为什么都想要
+14:14 xxxxxxxx: 不知道 似乎就一张图带路
+14:15 varna: 胸大
+14:15 cleamoon: 你这入坑三天就出大鲸的
+14:15 xxxxxxxx: 三天个毛 我最少磨蹭了一个星期才进活动图的
+14:16 xxxxxxxx: http://news.sohu.com/20151112/n426150428.shtml
+14:16 cleamoon: 潜水艦53cm艦首魚雷能开幕雷吗
+14:16 xxxxxxxx: 我觉得他没有破解什么
+14:17 xxxxxxxx: 一个游戏改改客户端服务端就像个XX一样全信了
+14:18 cleamoon: 大鲸就一个任务？那略废
+14:18 xxxxxxxx: 开发商可以去制杖
+14:19 varna: 那个鱼雷只是一般的潜射鱼雷而已
+14:19 varna: 而且只能潜艇用
+14:19 xxxxxxxx: 似乎现在日本的潜艇还在用53.3?
+14:20 varna: 似乎是
+14:20 xxxxxxxx: 等等后面有没有.3我有些迷糊...
+14:22 cleamoon: 熟练偷窥员什么时候用
+14:23 varna: 见张目前并不知道有什么卵用
+14:23 varna: 推测跟CI有关，但我没感觉出变化
+14:23 cleamoon: ...
+14:24 xxxxxxxx: .... 其他人还搜 三式对空弹(配了个黑猫警长的图)
+14:25 xxxxxxxx: 这都什么鬼...
+14:25 hoxily quit:Quit: Leaving
+14:33 cleamoon: 又捞到了小卷，嘛，也行，反正之前的被吃了
+14:41 varna: 我日哦
+14:41 varna: 今天这网络怎么了
+14:42 varna: 隔一阵子丢一个包
+14:45 xxxxxxxx: 东京大学建设的可用于直接观测重力波的大型低温重力波望远镜“KAGRA”所在中央实验室。该实验室位于岐阜县飞騨市。11月6日上午，东京大学宇宙线研究所将其向日本媒体公开
+14:49 xxxxxxxx: 引力波这样的东西可以检测了么...
+14:50 xxxxxxxx: 感觉好厉害啊
+14:52 xxxxxxxx: http://www.cas.cn/xw/kjsm/gjdt/201105/t20110525_3141659.shtml 看着真是六
+14:52 xxxxxxxx: 溜
+14:54 xxxxxxxx: ★所以如果将这种聪明才智用到武器上的话，日本依然是世界最强大的国家之一。 <- 把看AV的力气用到日女朋友身上 日本就不会少子了
+14:55 varna: 倒是真有个自卫官把心思用在了走私EoTech上
+14:56 varna: 不过后来他被抓了
+15:01 varna: 这周照例不打南西，胡乱跑跑远征了事
+15:03 varna: 晚上走之前拖个大帝国看看到底什么感觉，要是脑残右棍就回去玩空母决战好了……
+15:03 varna: （虽然感觉就是脑残右棍）
+15:03 xxxxxxxx: 右棍?
+15:03 varna: 简略的说法，简单来说就是支持二战时候日本的侵略战争
+15:04 xxxxxxxx: 为何没人干死他们?
+15:04 varna: 大概因为太脑残了，干都没意思
+15:06 varna: 不过空母决战变数略多，至今我不知道他们的对空、制空、空袭是怎么算的
+15:06 varna: 超优势的大攻击队去打一个一般的舰队都可能一个也轰不下去
+15:07 xxxxxxxx: 中新网11月7日电 据外媒报道，在德国的难民逼近100万，德国政府5日表明，将加快把不获批准的难民遣送出境。<- 然而这些人能被送去哪里?
+15:07 varna: 希腊
+15:07 xxxxxxxx: 这个主意太棒了!
+15:07 pocmon quit:Quit: 闪...
+15:10 varna: 对了
+15:10 varna: 今天听说俄罗斯田联风评被害，2016奥运俄国田径项目禁赛
+15:12 xxxxxxxx: http://www.cs.com.cn/ssgs/kj/201511/t20151110_4836967.html
+15:12 lh_cat joined channel
+15:12 varna: xxxxxxxx: 这个设计师为什么不去discovery美工组危害一下新战机
+15:12 lh_mouse quit:Ping timeout: 240 seconds
+15:13 varna: 让对手分不清头和尻，在狗斗里很有优势啊
+15:13 xxxxxxxx: 我想到一个词
+15:13 xxxxxxxx: 灵车漂移
+15:13 lh_not_bot quit:Ping timeout: 260 seconds
+15:13 xxxxxxxx: 这东西简直就是个能动的棺材
+15:14 varna: 我们只需要一个马路杀手了，找个妹子司机来！
+15:14 sismvg joined channel
+15:14 sismvg: fine buy you 是什么意思?
+15:15 lh_not_bot joined channel
+15:15 varna: 不知道
+15:15 xxxxxxxx: http://mil.news.sina.com.cn/2015-11-11/1043843601.html
+15:15 xxxxxxxx: 默默开始数轮子
+15:15 sismvg: taxonomy里的临时代理是http?
+15:15 sismvg: 终于要开始换扎古了吗
+15:16 varna: 坦克生产线需要有人背锅的
+15:16 varna: 如果不是大规模突击，不需要那样的战车；然而即使没有大规模突击，也得准备战车……
+15:17 lh_cat: sismvg, 给钱
+15:18 sismvg: 我还是等赛风找到一个能用的中转好了
+15:19 varna: 咦，这位Lv107的二习习鹤为什么没改……
+15:19 varna: 难道是个单纯的肝帝
+15:19 xxxxxxxx: 他使用了蛤蛤的膜法
+15:20 varna: 我这种不肝的人到了Lv107也没觉得会缺图纸，而岩川的新米应该不太多吧……
+15:20 xxxxxxxx: http://news.163.com/15/1110/14/B82N98C400014JB6.html
+15:21 varna: 2345……
+15:21 varna: 这简直贼喊捉贼
+15:21 xxxxxxxx: 如果你原本想访问A网站，但是有人偷偷做了手脚，让你实际上打开的是B网站，这就叫流量劫持。<-  我想到了什么奇怪的事件
+15:21 varna: 这其实是标准的DNS投毒
+15:22 varna: 而且我觉得在座诸君应该都被奇怪地坑过
+15:22 varna: 哦瘊瘊(｡･ω･)ﾉ
+15:22 sismvg quit:Ping timeout: 240 seconds
+15:23 xxxxxxxx: 我记得以前有一次是A站被忽悠到B站去了 还是反过来
+15:23 varna: 似乎是反过来吧
+15:23 varna: 屑站应该搞不动猴子
+15:23 xxxxxxxx: 当时好像还有啥开播
+15:24 varna: 上不去的应该总是屑站
+15:24 xxxxxxxx: 这算逸国风情
+15:25 sismvg joined channel
+15:25 varna: 至今我也没A站帐号，能邀请什么的吗……
+15:25 xxxxxxxx: 我至今也没有
+15:25 varna: lhj似乎有些邀请码
+15:26 lh_mouse: 我没有 either
+15:26 lhjkk: a
+15:26 lhjkk: 站那次不是流量劫持
+15:26 varna: lh_mouse: 那个帐号是人类用的吧
+15:26 xxxxxxxx: 因为我当时试图找个站注册的时候 A站要等节日
+15:26 varna: 你没节日？
+15:27 xxxxxxxx: 学者称不能指望美不搞事因奥巴马说不做世界老二 <- 世界老二哈哈哈
+15:27 varna: DOW...
+15:27 varna: DotW
+15:33 xxxxxxxx: http://mil.news.sina.com.cn/2015-11-10/1139843512.html 印度试射烈火4导弹可携核弹头 射程覆盖北京
+15:33 RivDo quit:Quit: Leaving.
+15:33 RivDo joined channel
+15:33 xxxxxxxx: 覆盖也不虚 毕竟指哪不打哪
+15:36 * lh_mouse slaps varna around a bit with a large trout
+15:37 * varna poies
+15:46 xxxxxxxx: http://2chcn.com/55889/ 这个算生物制油装置么
+15:50 sismvg: 好吧,写firefox的autoproxy的那位仁兄可以去重修le 
+15:55 sismvg quit:Remote host closed the connection
+16:00 varna: 晚上弄点面包吃……最近感冒之后似乎有些肠胃反应
+16:01 suisuijiang joined channel
+16:02 hoxily joined channel
+16:03 varna: 碎碎念来了，赣他
+16:06 hoxily quit:Client Quit
+16:07 hoxily joined channel
+16:09 RivDo quit:Ping timeout: 250 seconds
+16:20 suisuijiang: .
+16:20 varna: suisuijiang: 爆
+16:20 suisuijiang: 肛我干嘛
+16:21 varna: 我没妹子啊
+16:21 varna: 抓到谁都想肛
+16:22 suisuijiang: http://www.suisuijiang.com:10086/ 我写了一个聊天室，但是80端口被Apache占了。。怎么样能隐藏这个端口号呢？
+16:22 RivDo joined channel
+16:22 varna: 去掉http
+16:22 varna: http=80, 其余的非著名端口本来也该手工写
+16:22 suisuijiang: 去掉http是什么鬼。。
+16:22 varna: 去掉http没有帮助
+16:23 varna: 因为本来那些东西就是协议对应的玩意儿
+16:23 suisuijiang: 我希望用户能通过.com/relaxchat这样的URL来访问。
+16:23 suisuijiang: 后台用10086端口处理。
+16:23 suisuijiang: 我设置了URL转发，但是URL直接变了。
+16:24 varna: url rewrite失败了？
+16:24 suisuijiang: 成功的，但是地址栏会变 - -
+16:24 varna: 那个是当然的
+16:24 suisuijiang: 怎样不变啊。。
+16:24 varna: 为何问这种问题……你觉得能不变么
+16:24 varna: 浏览器拿的是新url啊
+16:25 lhjkk: 你可以用SSL，然后https访问呢
+16:25 varna: 这里你可以换个更直白的做法
+16:25 varna: 第一，上SSL
+16:25 lhjkk: 虽然我觉得这样更恶心，你还得手工输入https://
+16:25 varna: 第二，后台加一个业务逻辑
+16:25 suisuijiang: 我的另一个转发到本站地址的。它就不变啊。
+16:25 varna: ……
+16:25 varna: 伙计，你真的知道底下发生了什么吗……
+16:25 lhjkk: 另外，80端口不是你自己的么？
+16:26 lhjkk: 为啥不在apache上配好跳转？
+16:26 suisuijiang: RewriteRule ^loves/([^.]+)/?$ loves/showpage.php?url=$1 
+16:26 suisuijiang: 这条规则可以保持URL不变。。
+16:26 lhjkk: 嫌rewrite太麻烦，你可以换一个Host，换一个域名，再配apache
+16:26 suisuijiang: RewriteRule ^relaxchat/?$ http://www.suisuijiang.com:10086 [L] - -但是这个不行，我想让它也行。。
+16:26 lhjkk: 至少二级域名在你的掌控之中啊
+16:27 varna: http://xxx:2333 这个简直6……
+16:27 lhjkk: 我了个去，干嘛搞这么麻烦……，你直接把301/302跳过去也行啊
+16:27 suisuijiang: URL还会变啊。。
+16:27 varna: 那你直接用个fcgi走80不就行了……
+16:28 varna: 干嘛让浏览器直接走后台
+16:28 varna: 让后台绕过前端直接爆炸么
+16:28 lhjkk: 我感觉ssj既没有想清楚自己的需求，也没弄明白apache/httpd怎么用
+16:28 varna: 另外为何它不能发送……
+16:28 varna: 我敲了好多好多enter都是换行
+16:29 varna: ff 40.0.2 arch仓库
+16:29 suisuijiang: 我的需求是。用户地址保持www.suisuijiang.com/relaxroom来访问这个应用
+16:29 suisuijiang: 我也不确定httpd可以么。。
+16:29 suisuijiang: 你什么浏览器？
+16:30 varna: 17:28 <+varna> ff 40.0.2 arch仓库
+16:30 varna: 那你真不如直接做个fcgi之类的东西对付一下
+16:30 varna: 反正你也不需要特别的后端服务器吧？
+16:30 suisuijiang: fcgi是嘛。不会玩
+16:31 varna: 如果需要的话我现在试试能不能先大大地ping他一下……
+16:32 varna: lhjkk: 另外我没试过http 3字头的重定向，发回来的时候浏览器一般怎么处理
+16:32 suisuijiang: 一个Node程序就必须占用一个端口 - -
+16:32 varna: njs啊……
+16:32 suisuijiang: 同一机器运行多个node应用就麻烦了
+16:32 varna: 你为什么要硬编码端口呢
+16:33 varna: 写一个中间件给他们分配端口，然后运行时分拣不行么
+16:33 suisuijiang: 端口是应用的配置文件决定的。。
+16:33 suisuijiang: 不硬。
+16:33 varna: 你甚至不能在应用程序启动的时候生成临时参数用的配置么？
+16:34 varna: 比如说，要求一个基础配置文件a包含一个启动配置b, 而b是在服务器启动时生成的
+16:34 varna: 这可以做到吧
+16:34 suisuijiang: 用处是什么。。
+16:34 xxxxxxxx: 不能让www.suisuijiang.com/relaxroom里头带一个你需要的页面么?
+16:34 varna: 用处是你根本不需要在意手写配置
+16:34 varna: 你可以直接给出部署一切本机上运行的node程序的端口范围
+16:35 varna: 然后中间件就可以给出一个可用的端口（如果有）
+16:35 varna: 之后生成启动配置，直接launch
+16:35 varna: 这种事情不必人工做，因为你也不用去配置手写端口的转发规则
+16:35 varna: 转交那个中间件就行了
+16:35 suisuijiang: 程序是sails框架的，我不清楚它自己支持启动时指定端口么。
+16:36 suisuijiang: 这貌似跟需求并没有什么关系。。
+16:36 varna: 我只是觉得你的考虑太……直白了
+16:36 varna: 那你试试apache的.htaccess吧
+16:36 varna: 在里面要求301重定向，不要用302
+16:37 suisuijiang: 试过了 - -
+16:38 varna: 重定向都不行的话试试http转https呢，lhj提过的那样
+16:39 varna: 浏览器应该会明确指出非常见端口的，因为常见端口可以用协议名省略
+16:39 suisuijiang: 再加一个程序呢。。
+16:39 varna: 你看，你又不肯想扩展性，又想加东西，又想解决手头的问题……
+16:40 varna: 然后还不想看框架文档……
+16:40 suisuijiang: https也只能指向一个程序
+16:40 suisuijiang: 框架文档我都读完了。。
+16:40 varna: 然后文档里写的不就是用配置文件指定启动端口么？
+16:42 suisuijiang: 这个在哪个端口启动没关系啊。
+16:42 varna: 如果你不接受本机转发这样的想法，这里恐怕有点麻烦……因为我怀疑浏览器恐怕会确实指明非熟知的端口
+16:42 varna: 因为当你写下protoname://的时候，这实际上是个指定了usage的协议……
+16:43 suisuijiang: 我再看看。。
+16:45 varna: 说起来啊，你能不能绕个弯？
+16:45 suisuijiang: 怎么绕。。
+16:45 varna: 刚才巨基提了，如果你准备一个页面，然后在里面内嵌跟node应用直接走通信的东西呢
+16:45 varna: 虽然可能你那边的node代码要改
+16:46 suisuijiang: 这个。。
+16:46 suisuijiang: 似乎也可行。
+16:47 suisuijiang: 但是这样子前端页面跟node后端不好一起发布了。
+16:47 varna: 这是个缺点
+16:47 varna: 不过我确实不确认浏览器在遇到非典型端口上的非http协议的时候，会如何跟用户提示url...
+16:48 suisuijiang: www.suisuijiang.com/relaxchat
+16:48 suisuijiang: 会更改URL的
+16:48 varna: 这个我试过了，照样改
+16:49 suisuijiang: 大概只能把前端部署在Apache上了
+16:49 varna: 另外提醒一点
+16:49 suisuijiang: 那样的话，前端的接口调用语句不相当于写死了么。。
+16:49 varna: 我收到的HTTP状态码是101（协议变更）
+16:50 whocares_2_ quit:Remote host closed the connection
+16:50 whocares_2 joined channel
+16:50 varna: 这个没办法，所以确实发布会麻烦
+16:51 suisuijiang: -。-
+16:51 suisuijiang: 那就保持端口号吧。。
+16:52 varna: 残念……
+16:52 varna: 其实我还是觉得这个有点危险
+16:53 varna: 我用chrome试试能不能发送
+16:53 varna: 火狐干脆发不出去
+16:53 suisuijiang: 对了，我今天添加了一个$(window).unload注销用户的代码
+16:53 varna: 兼容性问题……
+16:54 suisuijiang: 我突然想起来，如果打开了多个窗口，Session被注销掉，其它窗口就完蛋了。
+16:54 suisuijiang: 火狐是新版么？
+16:55 varna: 你测试的版本号是多少，哪里的build
+16:56 suisuijiang: 我没试过。。
+16:56 suisuijiang: 我在纳闷，也没什么奇葩API。为何火狐不支持呢。
+16:56 varna: arch repo: extra/firefox 40.0.2-1
+16:58 whatofor_1 joined channel
+16:58 RivDo quit:Quit: Leaving.
+16:58 whatofor|2 joined channel
+17:00 lh_mouse: sudo apt-get purge apache2  然后用 80 即可
+17:01 whatofor quit:Ping timeout: 264 seconds
+17:02 whatofor_1 quit:Ping timeout: 265 seconds
+17:02 suisuijiang: 楼上是在卸载Apache么。。
+17:06 varna: 另外你的页面在我这边的ff上显示也有问题
+17:06 varna: 滚动条跑到显示对话的UI区域上了
+17:07 suisuijiang: - -
+17:07 suisuijiang: 火狐奇葩问题多
+17:07 varna: 然而chrome进程多
+17:08 varna: 现在开着chrome的原因是我第二个屏幕上挂着舰C
+17:08 suisuijiang: 如何能让Google更快的收录自己网站上的内容呢？
+17:09 varna: 我不太会刷PR
+17:09 xxxxxxxx: 给钱?
+17:10 varna: 那是百度吧
+17:10 suisuijiang: - - 应该不会给钱吧。。
+17:10 suisuijiang: 想CSDN这种，发表的博客一般第二天就可以搜到了。
+17:11 varna: 百度的合作形式多种多样（笑）
+17:11 varna: 谷歌的话你可以试着刷刷pr, 不过别指望
+17:11 suisuijiang: 百度更完蛋，至今未收录。
+17:12 suisuijiang: 之收录了主页。。
+17:12 xxxxxxxx: 另外我的意思是 在那个诡异的端口的网页上搞好 最后在想让用户访问的页面上放个形如<iframe src=......的东西
+17:12 varna: suisuijiang: 非http的估计爬虫压根不会进吧
+17:13 suisuijiang: 是HTTP丫
+17:13 varna: 你难道说你那个聊天是http?
+17:13 suisuijiang: iframe似乎靠谱。
+17:14 varna: 中间都吃101了，爬虫也许会放弃吧……
+17:14 suisuijiang: 聊天那个不算，让搜索引擎收录自己博客上的文章
+17:14 varna: 哦，那个就麻烦了
+17:14 varna: 你那站有多长时间了？
+17:15 suisuijiang: 按标题完全匹配来搜的话，Google能搜到，百度不行。
+17:15 suisuijiang: 不长。。
+17:15 suisuijiang: 俩月多？
+17:15 varna: 不长的话恐怕都不会进排名提升……
+17:16 suisuijiang: 看来还要再做做优化。。
+17:16 varna: 怎么这博客看着像是转了一堆软文……
+17:16 suisuijiang: - -
+17:16 hoxily: 轻聊不能用呀
+17:16 varna: 你真的不是用那三四页文章来做测试的么
+17:16 varna: 感觉重复率过高的话也容易在SEO里吃亏的吧
+17:16 suisuijiang: 随手写or转的
+17:17 suisuijiang: 楼上，轻聊怎么不能用了？
+17:17 varna: CSDN那种名气大的地方还好说，小站点再重复率高容易吃亏
+17:17 varna: 容易被混入强行加内容的渣站行列
+17:18 suisuijiang: - -
+17:18 suisuijiang: 水平又不高，写不出来干货。
+17:18 varna: 那不如先不写……
+17:18 varna: 这样无论是爬虫还是人类看来都只有反作用吧
+17:18 xxxxxxxx: 羊驼的博客
+17:18 varna: 我有几个博客，每一个都荒废了
+17:19 suisuijiang: ..
+17:19 varna: http://blog.chinaunix.net/uid/28110881.html 最后一个应该是这里
+17:19 suisuijiang: 挂着玩嘛
+17:19 hoxily: 按下Enter键发不出去呀
+17:20 varna: 没意思
+17:20 xxxxxxxx: a
+17:20 xxxxxxxx: this is a slightly long test message 2
+17:20 varna: 我基本没什么干货可以写
+17:20 xxxxxxxx: 这个不是你们发的么?
+17:20 varna: 是我发的
+17:20 varna: 自己做这些破事现在觉得实在不值得写，跟别人说两下就行了，反正都好懂
+17:21 xxxxxxxx: 我的测试也成功了啊
+17:21 suisuijiang: 发不出去的用的什么浏览器？火狐似乎不行
+17:21 hoxily: Firefox啊
+17:21 suisuijiang: 换。。
+17:21 varna: 让别人换浏览器？
+17:21 varna: 高大上，伺候不起
+17:22 varna: 你的意思是说，让用户忍受chrome开进程么
+17:22 varna: 还是说前端开发者已经忘了什么是Linux进程，觉得也没关系
+17:22 hoxily: firefox 42.0
+17:22 suisuijiang: $('#message').keydown() 发送仅仅是一个jquery啊，为何火狐如此傲娇
+17:22 varna: 为何你不测试一下
+17:23 xxxxxxxx: 开发者已经忘记什么是linux上的flash了
+17:23 suisuijiang: 前端随便写的。边查jquery怎么用编写。
+17:23 suisuijiang: 并不是很懂
+17:24 varna: _(:з」∠)_
+17:25 * varna 感觉自己已经被业界抛弃了
+17:25 suisuijiang: _(:з」∠)
+17:25 xxxxxxxx: 你看看你用手机用个被抛弃的用浏览器又用个被抛弃的
+17:25 suisuijiang: 羊驼在哪工作啊？
+17:25 varna: 说起来啊，如果你调换下shift-enter和enter的检测顺序如何呢
+17:26 varna: 我工作很悲剧的，不提
+17:26 xxxxxxxx: 幼教行业?
+17:26 varna: 幼教(｡･ω･)ﾉ
+17:26 suisuijiang: if (event.keyCode == '13' && !event.shiftKey) 
+17:26 suisuijiang: shift判断是这么搞的 - -
+17:26 varna: 总之来年在某厂先混几天再说
+17:27 varna: 火狐的问题是所有的enter都是换行
+17:27 varna: 这很奇怪
+17:27 varna: 你是先检测enter的么？
+17:27 varna: 还是先判断shift
+17:27 suisuijiang: 如上代码。。
+17:28 varna: 这只是一个条件
+17:28 varna: 单纯的enter呢
+17:28 varna: 不对
+17:28 suisuijiang: 没别的了。
+17:28 varna: ok, 顺序换过来
+17:28 varna: 反过来写会有变化么
+17:28 varna: 或者干脆把逻辑换过来
+17:28 suisuijiang: 会有区别么。。
+17:28 varna: 看看是哪个行为
+17:28 xxxxxxxx: 说起被抛弃 大家应该想想逸国风情的生放送
+17:28 varna: 不知道，所以试试看
+17:29 suisuijiang: 能进Firefox的debug么，看看执行流程
+17:29 varna: 你连调试都不试的话，天上又不会掉下来解法
+17:29 varna: 我看看
+17:29 varna: 等下，你那边没火狐？
+17:29 suisuijiang: 从不用Firefox - -
+17:29 varna: 装一个试试
+17:29 varna: 我很少见到前端开发者不做兼容性测试的啊，例外也差不多就是JLU那些山炮
+17:29 xxxxxxxx: 有一段时间 他们的直播间我这里打字靠一个个试
+17:30 xxxxxxxx: 还有组词
+17:30 xxxxxxxx: 连选词我都看不见
+17:30 xxxxxxxx: 最可怕的是我在用win7
+17:31 xxxxxxxx: 并不是什么Linux那种习惯性被抛弃的货
+17:31 xxxxxxxx: 结局就是做网页的TM已经自残成性了
+17:31 suisuijiang: 最近在做node.js实习。。就写了玩。
+17:32 varna: njs啊……
+17:33 tutu_wind quit:Quit: WeeChat 1.2
+17:33 varna: _(:з」∠)_真时髦，我之前申的还是C（或者C艹，总之总有人分不清）开发
+17:34 xxxxxxxx: 或者世界上已经没人使用微软拼音了?
+17:35 varna: 我已经对一部分前端开发者深恶痛绝了
+17:35 suisuijiang: ReferenceError: event is not defined 原因在这。
+17:35 varna: 举例来说，百度的页面里标签没有id, 疼迅的webqq越改越恶心，干脆不让我用id和密码登陆，某厂的页面里全是flash
+17:36 varna: 我赌十个NKC, 写这些页面的傻逼们，有人给他们织毛衣
+17:36 suisuijiang: 本来在一家公司做java，挂机三个月没事干，然后离职重新找实习了。。
+17:36 czh joined channel
+17:37 suisuijiang: 随手投了一个node。居然收了我。就开始学它了。
+17:37 varna: 要是真临时让我做Java还不让换岗，可以考虑干一阵子滚了……
+17:37 varna: 我比较化外，一恨Java二恨Py
+17:38 varna: 说起来现在njs似乎还不错的，糖果那里前段时间也去了个搞njs的
+17:40 suisuijiang: 嗯，看起来不错
+17:40 lhjkk: node.js啊，异教啊
+17:40 lhjkk: js邪教啊
+17:40 suisuijiang: 学起来也简单。。
+17:40 varna: 不过js系列的语言给我印象其实还行，就是一直懒得弄这些前端……
+17:40 lhjkk: 2012：“我们今年js可以统一全平台啦” 
+17:40 lhjkk: 2013：“我们今年js可以统一全平台啦”
+17:40 lhjkk: 2014：“我们今年js可以统一全平台啦”
+17:40 lhjkk: 2015：“我们今年js可以统一全平台啦”
+17:40 varna: 而且总觉得js写烂的人那么多，应该有难度
+17:41 varna: 或者全是坑
+17:41 suisuijiang: - -
+17:41 varna: 当然我把js换成C, 这个话应该看着更好玩
+17:41 suisuijiang: https://github.com/yinxin630/chatroom-with-sails/
+17:41 varna: “而且总觉得C写烂的人那么多，应该全是坑”
+17:41 varna: (｡･ω･)ﾉ给你点个follow
+17:41 lhjkk: js那些该有的特性好像都有了
+17:42 lhjkk: 前端总是比该死的后端敢于用更多的语言特性
+17:42 lhjkk: suisuijiang, 话说是贴吧那个碎碎念？
+17:42 varna: lhjkk: https://github.com/Akvelog/servcraft 来，我们上后端作死
+17:43 varna: 听听久违的SIGSEGV（迫真）爆鸣声爽爽吧
+17:43 suisuijiang: @lhjkk 是的
+17:43 lhjkk: 哦，好久不见
+17:44 lhanjian_: suisuijiang, 怎么不见常来呢
+17:44 varna: 大概因为这里太色情了
+17:44 suisuijiang: 贴吧一直在。这里没怎么来。
+17:45 suisuijiang: 前几天去sails的IRC提问，然后路过这里。
+17:45 lhanjian_: 上次说话好像有好几个月了吧
+17:45 lhanjian_: nodejs包括v8的源码还是可以读读的
+17:45 suisuijiang: Firefox的问题搞定了。。
+17:45 lhanjian_: 虽然谷歌的C++未必值得学习吧
+17:45 varna: 你小心，lhj要找你搞基……
+17:45 lhanjian_: 以前耗子不是喷过v8的实现来着么
+17:46 suisuijiang: 妈蛋，因为我搜到的那个jquery代码不太规范。
+17:46 suisuijiang: 所以在Firefox上报错了。
+17:46 varna: 大丈夫，喷归喷，就当个热闹看
+17:46 lhanjian_: 那倒是
+17:46 varna: 妹子脸没特点可以看胸看尻看腿嘛
+17:47 xxxxxxxx: 不怕没特点怕太有特点
+17:48 varna: 另外C语言吧现在快变成废品处理站了吧……
+17:48 varna: 看着整版整版的帖都可以直接批量删
+17:48 suisuijiang: 批量删 +1
+17:49 varna: 然而并没人删
+17:49 suisuijiang: 我有删啊 - -
+17:49 varna: 那就是吞吐率太高了……
+17:49 varna: 不然饭前便后删个五十帖一百帖的……
+17:50 xxxxxxxx: 不管喜不喜欢鸵鸟式处理最简单...
+17:50 suisuijiang: 我算了算，吧里日删150左右
+17:50 varna: 太少了
+17:50 varna: 哦对，有新错误
+17:51 varna: 现在我用火狐的时候，登陆UI会直接消失，仿佛我已经输入了ID
+17:51 varna: 像正常输入ID那样带特效地淡出
+17:51 suisuijiang: 前端时间进不去后台。
+17:51 varna: 现在好了
+17:51 varna: 刚才是拿着cookie查不出东西吧？
+17:52 suisuijiang: 忆_碎碎念	封禁	1天	_craftG	2014-03-09 18:20
+17:52 suisuijiang: _(:з」∠)_
+17:52 varna: 咦，我被封过啊
+17:52 varna: 另外我需要清掉缓存么？
+17:52 varna: 你的服务器应该要求我更新缓存吧
+17:53 varna: 现在还是不行
+17:53 suisuijiang: 是你封我好么。
+17:53 varna: ff 40.0.2
+17:53 varna: 哦，我为什么封你……
+17:53 suisuijiang: 只是本地改了，没部署呢
+17:53 varna: 哦哦
+17:53 suisuijiang: 大概误封
+17:53 suisuijiang: 顶座后来解了
+17:54 varna: 可能是贴吧被攻击那次？
+17:54 suisuijiang: 太久远，不知
+17:54 varna: 我忘了时间，一般我不会下手封人的……封的基本都是骂人党
+17:54 suisuijiang: 重构的话，一般是重构哪些呢？
+17:55 suisuijiang: 我回头改改代码，重新部署。。以后有时间再加加功能玩
+17:55 varna: 重构你在写代码的时候准备好要重构的部分……
+17:55 varna: 不然我们可以礼貌地称之为重写
+17:56 suisuijiang: - -
+17:56 varna: 玩笑
+17:56 suisuijiang: 后端给前端返回的Message都没用上 - -
+17:57 varna: 典型的地方像是看起来臃肿的循环，硬编码的列表，明明可以不吃多少性能dispatch但缺少这个中间层的地方
+17:57 varna: 或者是大量连续的条件判断，而不是函数复合，或者其他你能想到的方式
+17:57 suisuijiang: 感觉我司项目可以大量重构。
+17:57 varna: 但是成本……
+17:58 varna: 如果那东西交付之前都没人管的话，断念吧
+17:58 suisuijiang: 我司新转向node的，主程俩月经验
+17:58 varna: 大丈夫，你成为偶像来拯救部门
+17:58 varna: 拿出转文时候的勇气来
+17:58 suisuijiang: 。。
+17:59 suisuijiang: 没有话语权啊
+17:59 varna: 你先让主程染上梅毒
+17:59 varna: 然后说你有八年的node经验，可以熟练地交换两个变量
+17:59 varna: s/变量/变量的值/
+18:00 suisuijiang: 我司项目，后端返回了诸如20001 20002 40001 等等返回码，我觉得还是用标准HTTP码更好吧，
+18:00 varna: 有明确定义其实也无妨了
+18:01 varna: 尤其是HTTP这个烂摊子，如果能避免的话避免一下能减少一些灾难
+18:01 suisuijiang: 可以类似GitHub API那样实现一套Restful接口嘛。
+18:02 varna: 做不做这个看情况
+18:03 varna: 做了会好看，而实际上当强调REST的时候，你就会开始考虑HTTP的第二个T到底怎么解释了……
+18:03 czh quit:Quit: WeeChat 1.1.1
+18:03 suisuijiang: 我司项目现有一套由框架提供的Restful接口，然后有一套自实现的类似updateUserName的接口。
+18:03 suisuijiang: 感觉怪怪的
+18:04 varna: 迟早会变成垃圾山吧
+18:04 varna: 不过前端我毕竟了解有限，没做过……
+18:05 suisuijiang: - -
+18:05 suisuijiang: 不甚了解，跟着主程走吧
+18:05 varna: http://tieba.baidu.com/p/4155600821 23333333333333
+18:05 suisuijiang: 看主程QQ资料上年龄也就24。。
+18:06 lhanjian_: 耗子也才这么大，不也当上主程了
+18:06 varna: 24也不小了
+18:06 lhanjian_: 看水平别看年龄
+18:06 suisuijiang: 11位号码 (¬_¬)
+18:06 lhanjian_: 逗比老伙计别太多
+18:06 varna: 逗比老伙计往往太多
+18:06 suisuijiang: 93年是二十几啊
+18:06 varna: 然而拥抱变化的都是新人
+18:06 lhanjian_: 今年15年
+18:07 lhanjian_: varna, 新人路过
+18:07 suisuijiang: 是22还是23啊。。
+18:07 varna: 我明年也会当新人的，大丈夫
+18:07 suisuijiang: 我一直我知道我几岁了
+18:07 varna: 我总觉得我司（迫真）有点悬啊
+18:07 suisuijiang: 不知道
+18:07 varna: 你出生那年是0岁
+18:08 Flandre: 22啊
+18:08 lhanjian_: varna, 总之小心点。不过看贵主管的话语权了
+18:08 suisuijiang: 好吧
+18:08 varna: lhanjian_: 看着来吧
+18:08 lhanjian_: 大不了失业（真诚
+18:09 varna: 大不了失业这句话挺对的……
+18:09 * lhanjian_ 失业中
+18:09 varna: 尤其我这种学些失业技术的人
+18:09 lhanjian_: 学些前后端(Web/iOS/Android)，找工作万金油
+18:10 lhanjian_: 进可大厂混资历，退可小厂多拿钱
+18:10 suisuijiang: 学node搞全栈吧
+18:10 lhanjian_: 你看，Web
+18:10 lhanjian_: 玩家跳出来宣告全面胜利了
+18:11 varna: 我有时候觉得自己懒，毕竟如果换这些web东西，我相当一段时间内都没法达到现在这个半吊子的鬼畜程度
+18:11 varna: 最后还是失业
+18:11 lhanjian_: varna, +
+18:11 lhanjian_: 同
+18:11 suisuijiang: 鬼畜程序。
+18:11 suisuijiang: 程度。
+18:11 lhanjian_: 搞iOS，10个月能拿15K+
+18:11 lhanjian_: （讲真
+18:11 suisuijiang: 怎么打字各种错字 - -
+18:11 lhanjian_: 认识至少3个这样的伙计了
+18:12 lhanjian_: 别人在喝啤酒，我们连啤酒泡沫都碰不太着
+18:12 varna: 总之下家得物色一下，我总觉得我司挺悬的
+18:12 lhanjian_: 只能安慰自己，水平太差
+18:12 * varna 水平太差
+18:13 lhanjian_: 告诉自己是因为水平太差而不是选错了活，就给予了自己“说不定哪天稍微好些就有工作了呢”
+18:13 varna: 其实是中二入骨
+18:13 lhanjian_: 嗯哼
+18:14 lhanjian_: suisuijiang, 好好干啊……Web还能再火10年……
+18:14 varna: 我还听过“很多用C的同学转Java也觉得没问题”的结论呢
+18:14 lhanjian_: js党至少已经快统一前端了（浏览器/Mobile Native）
+18:14 varna: 是啊，那些用C的同学写了些什么狗屁程序，去C语言吧一看就知道了
+18:14 lhanjian_: varna, 那种混饭吃的程度是没问题。
+18:14 lhanjian_: 严肃的讲就扯淡了
+18:14 varna: 混下去迟早拥抱变化
+18:15 suisuijiang: 10年蛮久的啦。
+18:15 lhanjian_: varna, 放心吧。你的业绩看组内的。你个人的KPI出不了大问题。
+18:16 lhanjian_: suisuijiang, 少打了“至少”
+18:16 lhanjian_: 从上个世纪末 HTTP/HTML 出生以来，就没冷过
+18:16 varna: yoooooooooooooooo, 我发现了这个 https://github.com/lhjay1/leactor
+18:16 lhanjian_: 我现在就把他删了
+18:16 lhanjian_: 整个一垃圾
+18:17 varna: 能运行就好
+18:17 lhanjian_: 不能。
+18:17 lhanjian_: 正确的运行
+18:17 lhanjian_: 虽然 好像曾经 能正确地运行示例代码
+18:17 varna: 不能正确“的”运行，但能正确“地”运行
+18:18 lhanjian_: 的->地
+18:18 varna: 要不重新弄一个？
+18:18 lhanjian_: 还不如羊驼子原来那个完成度高
+18:18 lhanjian_: 回家去再聊天
+18:18 varna: 我现在手头一个“正常”的reactor都没有
+18:19 varna: 出去买点面包吃
+18:19 lhanjian_ quit:Remote host closed the connection
+18:34 suisuijiang quit:Quit: Page closed
+18:35 Mokou joined channel
+18:37 xxxxxxxx quit:Quit: Leaving...
+18:38 czh joined channel
+18:40 Mokou: http://ww2.sinaimg.cn/bmiddle/62d5ef0agw1exv4nqfow6j20fi082wfr.jpg 辐射4 对于捏脸系统又进一步进行了升级，现在你完全可以捏一个自己想要的脸！
+18:41 varna: 没有捏肛系统差评
+18:41 Mokou: uccuf
+18:41 Mokou: uccu
+18:42 Mokou: http://ww4.sinaimg.cn/bmiddle/e4613608gw1exw6ciix9sj20hs0a0my6.jpg
+18:42 varna: http://tieba.baidu.com/p/4155921747 我已投币
+18:43 Mokou quit:Quit: leaving
+18:43 Mokou joined channel
+18:43 Mokou: 已投
+18:52 varna: 那人居然也投滑稽币，怎么办
+18:53 varna: 这感觉就像去自动售货机买饮料，结果扔进去的硬币从退币口出来了
+18:53 Mokou: 2333
+18:53 Mokou: 炮姐掉他
+18:53 varna: 我先问问他开不开车
+18:54 czh quit:Quit: WeeChat 1.1.1
+18:55 Flandre quit:Ping timeout: 246 seconds
+19:00 boosure quit:Quit: Get your hand off of it
+19:01 varna: 日，我踩地雷了
+19:01 varna: 买的甜甜圈里居然有甜奶油……
+19:01 Mokou: ……什么情况
+19:01 varna: 幸好有一些没什么味道的全麦吐司
+19:01 varna: 强行吃完之后把奶油埋葬在底下好了
+19:02 varna: 那个面包店一定出了新品……
+19:02 Mokou: 你不喜欢奶油？
+19:03 varna: 各种意义上
+19:03 Mokou: なるほど
+19:14 varna: 不行，我想跟翻车那位装个逼
+19:15 varna: 找个借口，如果他再回复我，我就确保一下装逼权
+19:23 code_new joined channel
+19:25 varna: 码新来了
+19:25 varna: 赣他
+19:26 code_new: varna: 肛
+19:26 varna: 这基佬
+19:29 * varna 终于把出击要用的阵容修好了
+19:29 code_new: 今天1-6打得好累……
+19:29 code_new: 打了四次，劝退三次
+19:30 varna: 夯
+19:31 code_new: 其中一次旗舰在最后一个战斗点被大破……
+19:31 code_new: 真是神一样敌人
+19:31 Xilzzert quit:Ping timeout: 240 seconds
+19:31 Mokou: 这不是日常么
+19:32 varna: 我还是没动1-5之外的地方
+19:32 Mokou: 我还是没动1-5 2-5 3-5 4-5之外的地方
+19:33 Mokou: http://ww1.sinaimg.cn/bmiddle/891c9115jw1exy2jdn8bfj20fb070jru.jpg 1111日本某医院急诊患者都是和POCKY有关
+19:33 varna: 尿道损伤……
+19:33 Stevearzh quit:Ping timeout: 252 seconds
+19:33 varna: Pocky Game崩了门牙……
+19:33 Mokou: 引人深思
+19:33 varna: 然而那两位尿道损伤是什么鬼
+19:33 Mokou: 不过日本的Pocky那么硬的？
+19:34 varna: 我也奇怪
+19:34 Mokou: 还是阿基米德之力……
+19:34 varna: 大概我国的面粉不够硬
+19:34 varna: 高日德，那些奶油没被埋好
+19:34 Mokou: In Soviet, Pocky eats you!
+19:34 varna: 现在我开始干呕
+19:35 code_new: 吃pocky也可以造成这种损伤吗……
+19:35 varna: 吃不是问题
+19:35 varna: 问题是尿道损伤
+19:36 Mokou: "eat"
+19:36 Mokou: http://ww1.sinaimg.cn/bmiddle/6ce66826gw1exy1y4i4n8j20go0m8gm8.jpg “以后阅兵上顺丰吧”
+19:38 varna: 昨天我试了试玩FL的时候开BGM
+19:39 varna: 效果非常骇人，我试图集中精力做两件事的时候居然物理性地感觉到了难受
+19:41 wlemuel joined channel
+19:46 Mokou: 【浙江：男子因颜值情商双高 竟#同时交往500名女网友#骗财骗色】嘉兴23岁的金某，通讯录中有500个女网友，他从中挑选或骗财或财色兼收。警方称，金某虽只有初中文化，但相貌好情商高，因此屡能得手。而他被捕后还狡辩称：本只想好好谈恋爱，不知她们为啥转钱给我。 @小新说事
+19:47 varna: 卧槽
+19:47 hoxily: []
+19:47 varna: 这比《神的记事本》里写的宏哥还厉害啊！
+19:50 code_new: 记得之前CCAV也报道过类似的
+19:50 code_new: 那个是交往了十几个
+19:50 code_new: 最后男主角出车祸才被发现
+19:52 varna: 小白脸真是有前途的行业……
+19:53 varna: 我感觉到奶油在燃烧了
+19:53 varna: 每次我想尝新口味的时候都是灾难，这大概是诅咒
+19:55 Mokou: 双11就是蛋疼
+19:56 Mokou: 昨天下的单到现在都没动静
+19:56 varna: 你终于买有护翼的了么……
+19:57 Mokou: 你买防侧漏的
+19:57 varna: 这红旗
+19:58 varna: 这周末我得去看一下咖啡馆的情况
+19:58 varna: 今天简直糟透了
+19:59 Mokou: 我买的是试制五年式替芯（黑）、一五式中性笔改一、试制一年式替芯
+19:59 varna: 哈哈哈哈
+19:59 varna: 那楼主回复我了
+19:59 varna: 我先排一个单逼阵
+20:00 Mokou: 晋太原中
+20:03 Mokou: 桶终于回来点了……
+20:03 Mokou: 615
+20:04 code_new: th15难度略高啊……
+20:05 code_new: 打E在第二面道中死了无数回了……
+20:05 Mokou: 估计神主打夏活了
+20:05 Mokou: 然后发现“原来游戏制作者也可以这么缺德啊”
+20:07 varna: th15我放弃
+20:07 cleamoon: 芝加哥大学的数学和计算机科学教授László Babai在11月10日宣布了能有效解决图同构问题的新算法。斯坦福大学的计算机科学家Ryan Williams说，他一开始以为是个玩笑，特地查了下那天是不是愚人节。他认为新的算法有可能是过去十多年计算机科学理论最重要的突破。Babai的算法还需要被仔细检查，他思考这个问题已有30多年了。他
+20:07 cleamoon: 声称算法能在拟多项式时间内判定最复杂的图，他拒绝接受采访，表示需要先确保能经受同事们的多轮拷问。麻省大学的理论计算机科学家Neil Immerman说，一位数学家在宣布重大发现前没有递交书面证据是不同寻常的做法，但Babai是非常聪明和可靠的人，是图同构问题的顶级专家，相信他能证明他的声明。
+20:08 tutu_wind joined channel
+20:10 varna: 卧槽？
+20:10 varna: 等等，拟多项式时间是什么
+20:10 varna: P-Space?
+20:11 varna: 我不太熟悉这些术语……
+20:12 cleamoon: 双11前后，虚假购物钓鱼网站大幅增多，不少用户中招，从受骗者的出生年代看，90后占比43.9%，80后占比42.9%，70后占比8.2%，60后占比1.0%，其他年龄段4.1%。
+20:12 cleamoon: 我找找原文
+20:13 varna: 我是不知道这个术语的意思……
+20:14 cleamoon: https://www.sciencenews.org/article/new-algorithm-cracks-graph-problem
+20:14 varna: 这个我先收藏
+20:15 iyzsong: 要爆炸了？
+20:15 varna: 既然他是专家，应该不会赖账
+20:15 varna: 是对是错都能有个说法的
+20:16 tutu_wind: varna: 羊驼酱看看这个是不是。。。
+20:16 tutu_wind: https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/09PSPACE.pdf
+20:16 varna: tutu_wind: 你直接搜的P-Space?
+20:16 tutu_wind: 哦哦
+20:16 cleamoon: 今日，云计算服务商创宇云于网站发布公告称，因资金链断裂，即日起停止运营，将对资产进行盘点，并要求用户两周内迁离。早先，创宇云曾推出仅需1800元的70年永久云主机，在市场上引起轰动。
+20:16 varna: P-Space的定义其实比较通俗
+20:17 cleamoon: 这个是课件吧
+20:17 tutu_wind: 恩，看起来是
+20:17 varna: 这类判定问题可以用一个确定性图灵机在多项式时间内解出来
+20:17 varna: 但我不知道拟多项式是什么意思……
+20:17 varna: 搜搜wiki
+20:17 tutu_wind: varna: 好～
+20:18 varna: 不是说你……
+20:18 varna: 我找到词条了，看一眼
+20:18 varna: "Quasi-polynomial time algorithms are algorithms that run slower than polynomial time, yet not so slow as to be exponential time."
+20:18 Flandre joined channel
+20:18 varna: 2333333
+20:18 Mokou: 233333
+20:19 varna: 举例是2^O((lgn)^c), 其中c是常数
+20:19 varna: 这是quasipolynomial的底限
+20:19 varna: 不会比这个更慢了
+20:20 varna: 另外我弄了一个看起来并不那么恶心的逼优问题给那个开车的伙计
+20:21 Mokou: 坐等stall……
+20:22 varna: 我截图的时候总能截到那个小卷
+20:23 cleamoon: 我好像错过了超多的对话
+20:24 varna: ^ 这幼女今天捕到鲸了
+20:24 Mokou: cleamoon: 爆
+20:24 Mokou: 你们都有鲸
+20:25 varna: 我没鲸
+20:25 Mokou: 龙凤也是鲸
+20:25 varna: 哦瘊瘊？
+20:26 Mokou: 反正晚上都会闹鬼
+20:26 cleamoon: 晚上闹鬼？大鲸会从电脑里爬出来？
+20:26 tutu_wind: 喵～
+20:27 varna: 龙凤午三时也会dokidoki的
+20:27 varna: 虽然只是犯困
+20:28 varna: 再说胸那么大，会卡住的
+20:28 Mokou: cleamoon: 晚上大鲸里会传出闹鬼的声音
+20:28 varna: 那是因为小仓唯已经经验人数突破0了……
+20:28 Mokou: uccu
+20:29 varna: 这是真的
+20:30 varna: 啊，那位大神没看懂我要他写什么
+20:30 varna: such kitakamical a story
+20:30 Mokou: Terrain! Terrain!
+20:34 asdf2 joined channel
+20:36 asdf2 joined channel
+20:43 Mokou: http://ww2.sinaimg.cn/bmiddle/c0788b86gw1exygrxaeqdj20go0b4aa3.jpg “实验证明，如果不小心把荧光棒掉到马桶里，会产生一种异界之门的酷炫感……[doge]”
+20:43 cleamoon: 最近上b站和bd站都略慢，或者说上所有天朝网站都很慢
+20:44 Mokou: http://ww1.sinaimg.cn/bmiddle/737a911fgw1exyfpqc9i0j20go0m8jv1.jpg 爱抖露战舰
+20:44 cleamoon: 赶紧穿过异界之门去幻 想 乡
+20:44 sismvg joined channel
+20:44 sismvg: 替身使者眼中的两岸领导人会面：http://imgsrc.baidu.com/forum/w%3D580/sign=c197502e848ba61edfeec827713597cc/8ac0b1389b504fc2a5c0e6e1e3dde71192ef6da1.jpg
+20:45 lhanjian_ joined channel
+20:46 cleamoon: 不够炫酷
+20:47 Stevearzh joined channel
+20:48 cleamoon: 看这握手总有一种“把你手里的钱给我”“不给不给”“你给我拿过来”“唉，等等看那边”“卧槽，好多人”“蛋定，不要让他们看出来我们在抢一块钱”
+20:50 Mokou: 噗
+20:50 Mokou: wows里的北上大人复活了
+20:51 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+20:51 varna: KTKM!
+20:51 Mokou: 依然是八级船
+20:51 code_new: 终于通关了卧槽……
+20:51 code_new: 最后一面打了十几条命……
+20:52 Mokou: OTL
+20:52 randomclown quit:Quit: Leaving
+20:52 varna: 等等，出正式版了？
+20:52 code_new: 手残到不行……
+20:52 code_new: 没有，体验版
+20:52 varna: 哦，三面是金刚如来吧
+20:52 Mokou: http://ww3.sinaimg.cn/bmiddle/b28db48cgw1exy7k2f0iyg208c05ku0y.gif 闹钟
+20:53 code_new: 感觉都是新人
+20:53 varna: 不，我是说金刚如来
+20:53 varna: 也成为罗纳尔自〇尼奥或者香蕉君
+20:53 Mokou: http://tieba.baidu.com/p/3971552133 不过这个是什么情况
+20:53 tutu_wind quit:Quit: running
+20:54 varna: 噗，发布了
+20:54 varna: 然而不打
+20:54 code_new: 哆来咪·苏伊特
+20:54 varna: code_new: 你似乎对金刚如来没什么印象……
+20:55 code_new: 对这个名字有印象……但是样貌忘了
+20:55 varna: 哦看来我搞错了
+20:55 varna: 金刚如来是五面
+20:55 code_new: Orz
+20:55 code_new: 体验版E只有三面
+20:56 varna: 不过这次的主题好黑暗啊
+20:56 Mokou: 另外魔性的鱼的作者似乎闹了个大性闻？
+20:56 varna: 不玩了
+20:56 varna: Mokou: 挺久的事了，他闹黄了真剑六十分
+20:56 code_new: 早苗值得一玩
+20:56 cleamoon: 这次似乎是第一次6面boss也是exboss？
+20:56 varna: 似乎是
+20:57 varna: 我现在手已经彻底残了……
+20:57 varna: 不说左手，平时打弹幕的右手已经反应迟钝
+20:58 cleamoon: 「杀意的百合」「用于逼死瓮中鼠的单纯弹幕」「用于杀人的纯粹弹幕」，这boss中二度爆表呀
+20:58 cleamoon: http://upload.thwiki.cc/f/fd/%E7%BA%AF%E7%8B%90%EF%BC%88%E7%BB%80%E7%8F%A0%E4%BC%A0%E7%AB%8B%E7%BB%98%EF%BC%89.png  不过人社不错
+20:58 varna: 而且神主一直在强调「斩杀」啊
+20:58 varna: 我总觉得他遭到了污染
+20:59 code_new: 第三面BOSS就死了十几回，后面简直不敢想……
+20:59 varna: 没有抱B死吧
+20:59 code_new: 我觉着我能见到BOSS就已经很不容易了……
+20:59 code_new: B不能乱放
+21:00 varna: 会出什么事情？
+21:00 cleamoon: 不会又是用B减攻击吧
+21:00 code_new: th15有两个模式：一个是无限复活，复活后回到一个纪录点，B的持有量是在那个纪录点时的量
+21:00 code_new: 另一个是正常的，有命限制的
+21:00 varna: 哦，我想起来介绍里说的了
+21:01 varna: 说是用了蓬莱之药吧
+21:01 code_new: 哦哦
+21:01 Mokou: 噗
+21:01 Mokou: 那玩意量产了？
+21:01 varna: 师酱专供……
+21:01 Mokou: 有师酱啊
+21:01 Mokou: 打打打
+21:01 varna: 没有
+21:02 varna: 只有零战和晴岚
+21:02 Mokou: ……
+21:02 code_new: 早苗的B实在很炫
+21:02 varna: 另外我给一个提案
+21:02 Mokou: 我要紫电！
+21:02 cleamoon: 卧槽，这是第一次敌人的目的单纯是要弄死幻想乡所有人吧
+21:02 iyzsong: 我要妹子 =.=
+21:02 cleamoon: 或者说这是第一次敌人开始杀人吧
+21:02 varna: 最近红旗似乎还是忙，如果来不及的话，如果我能打完活动，就做一个悠闲的剧本如何
+21:02 varna: cleamoon: 对，我就是说这点
+21:02 Mokou: 也行
+21:02 varna: 以前都是在玩乐，唯一杀气腾腾的就是永夜抄
+21:03 varna: 作战预定是二阶段一方面
+21:03 cleamoon: yyc最后不也算是误会，而且也没要杀谁呀
+21:03 varna: 跨度大约是两个玩家可参与的18h
+21:03 cleamoon: 这次这个略黑暗
+21:03 varna: cleamoon: 月之民也是要杀人的，但没说得那么明确，而且有艹姬姐妹罩着
+21:03 cleamoon: 神主玩完夏活打算报复世界吗
+21:04 varna: 这次我觉得又是要杀人、又是说「斩杀」的，总觉得神主真的去斩杀了
+21:04 cleamoon: 杀蓬莱人吗
+21:04 varna: 斩防空姬
+21:04 Mokou: +
+21:04 varna: Mokou: 另外这次的打算是允许多于一名玩家参与
+21:04 Mokou: 然而能找到吗
+21:04 varna: 我需要每方一个预案和一个XO
+21:05 Mokou: XO?
+21:05 varna: XO = eXecute Officer
+21:05 Mokou: naruhodo
+21:05 varna: 如果找不到XO, 就由我来执行
+21:05 varna: 预定进行第一阶段18h的作战之后进入再部署的阶段
+21:05 cleamoon: 这次的完美无缺模式，知道的人应该都看出来了，
+21:05 cleamoon: 它的原型是以I Wanna（I Wanna be the Guy）这类游戏为代表的，
+21:05 cleamoon: 不讲理、高难度，且反复尝试性强的学习游戏；游戏的不讲理程度也并没有浪费，
+21:05 cleamoon: 完美无缺模式是一个将不讲理的理由通过设定和故事融入了东方世界观的模式。
+21:05 varna: 这包括了行军部署和中途补给
+21:05 cleamoon: 月之都原来就是I Wanna！
+21:05 cleamoon: 神主受什么刺激了
+21:05 varna: 然后再进行18h作战
+21:06 varna: 这个脑洞不知道双方能不能接受
+21:06 Mokou: 也就是一个人制定预案，然后另一个人执行预案？
+21:06 cleamoon: 每天都在漫长地挑战不知道能不能躲过去的开发途中的弹幕。
+21:06 cleamoon: 　如果知道能不能躲过去还好，但在开发阶段可能不可能只有通过自己去尝试了。
+21:06 cleamoon: 　真正的地狱其实在开发现场！
+21:06 cleamoon: 　（……下次作一个更和善点的游戏吧）
+21:06 cleamoon: 因为已经完成了，所以噩梦已经离开了我的手中。
+21:06 cleamoon: 　这次噩梦应该会来到你身边吧。
+21:06 cleamoon: 田中既视感
+21:06 varna: Mokou: 在不能确认怎么执行的时候我会确认的
+21:07 varna: 第二阶段我不会参与执行
+21:07 varna: 大体的感觉是侦查--反侦查--部署+补给+补给线破坏--预定决战
+21:08 Mokou: 田中怎么可能这么善良
+21:08 varna: 神主好歹是高技术的STG玩家……
+21:08 varna: 而且舰C也不是靠喝酒就能解决的
+21:08 Mokou: 神主：“我不断的增加难度，直到我刚好能打过去，就把那个难度设定成L，然后依次下调”
+21:08 Mokou: 地
+21:08 varna: DLD吧
+21:09 Mokou: 田中：“我不断地增加难度，直到我刚好打不过去，就把那个难度设定成丙，然后依次上调”
+21:10 cleamoon: 新角色能力：吃团子越多变得越强程度的能力
+21:10 Mokou: 其实我那个剧本的问题主要是我想做的细节计算太多了……
+21:10 cleamoon: 23333
+21:10 varna: 大剧本还是该有一个
+21:11 varna: 不过我们可以先从一个试毒的剧本开始，一点点调整，直到裁判刚好累死为止
+21:11 Mokou: 23333
+21:11 randomclown_ joined channel
+21:11 randomclown_ quit:Client Quit
+21:11 cleamoon: 另一个：能力：从口中说出便可使事态逆转的能力 #新闻联播？
+21:11 Mokou: 或者我们再找一个玩家，然后羊驼子也来当裁判？
+21:11 randomclown joined channel
+21:12 varna: 也行
+21:12 cleamoon: 哦，卧槽，不是，是tm毒奶
+21:12 varna: 是黄旭东
+21:12 cleamoon: 对于某种事态，一旦经过自己的口中（尤其是对和事情有关的人），
+21:12 cleamoon: 　　这个事态就会向反方向发展。
+21:12 Mokou: 岚月酱也来玩兵棋吧
+21:12 varna: 是黄旭东啊！
+21:12 cleamoon: 我不懂规则呀....
+21:12 Mokou: 规则不用懂太多
+21:12 cleamoon: 如果她想做成什么事情，那一定悉数失败，
+21:12 cleamoon: 　　如果有什么坏事发生，那她的能力一定可以使事态好转。
+21:13 varna: 飞龙骑脸……
+21:13 cleamoon: 真神黄旭东进入幻想乡啦
+21:13 Mokou: 八非都放出来了怎么可能打不中嘛
+21:13 Mokou: 妹红苏不了的
+21:14 varna: 可惜八非用两个B还是能耍赖打过去的……
+21:14 cleamoon: 卧槽，上次漫画去月都是观光，这次他们回来可tm是侵略
+21:14 varna: 至于硬扭，我倒是看过魔魔丸录像，说是练习了两百几十次
+21:15 Mokou: 我觉得神主就没打算让你扭过去……
+21:16 varna: 八非那个多数是反应能力了吧，如果喝大了也许可以……
+21:16 Mokou: 来，干了这瓶防冻液
+21:16 Mokou: 其实我觉得八非最需要的是视力……
+21:16 varna: 那个速度看清似乎不太重要了
+21:16 Mokou: 眼都瞎了
+21:16 varna: 弹速和频率都是均匀的吧
+21:17 Mokou: 不过还是随机的吧
+21:17 varna: 应该是奇数弹？
+21:17 varna: 我忘了
+21:17 Mokou: 忘了+
+21:17 Mokou: 不过奇数弹不至于这么难躲吧……
+21:17 varna: 手上错了就不行
+21:17 varna: 毕竟还是快
+21:17 Mokou: 还是偶数封位奇数斩杀？
+21:17 Mokou: 我记得不止一个发射器
+21:17 wlemuel quit:Remote host closed the connection
+21:18 varna: 记不清楚了
+21:18 varna: 打的时候我都意识模糊
+21:18 Mokou: 我现在连老师那里都不一定过得去……
+21:18 Mokou: 八非我都是直接B的……
+21:18 varna: 老师好歹可以炸过去
+21:18 cleamoon: 性格如9，但是立绘略黑  http://thwiki.cc/%E6%B8%85%E5%85%B0#mediaviewer/File:%E6%B8%85%E5%85%B0%EF%BC%88%E7%BB%80%E7%8F%A0%E4%BC%A0%E7%AB%8B%E7%BB%98%EF%BC%89.png
+21:18 Mokou: 老师炸过去凯风快晴怎么办
+21:18 Mokou: B不够用……
+21:18 varna: 也炸
+21:19 varna: 非符尽量少炸点，用人类的B
+21:19 wlemuel joined channel
+21:19 varna: 紫妹的B不够劲
+21:19 Mokou: 来个吃货的B
+21:20 varna: 吃货的话似乎该考虑如何对付道中最后一个妖精
+21:20 Mokou: 扭
+21:20 Mokou: 不过徐福时空大概会蛋疼点？
+21:20 varna: 太感人了
+21:20 varna: 徐福时空还行
+21:20 Mokou: 毕竟要处理两层
+21:20 varna: 但那个的坑点是弹速不均匀
+21:20 varna: 我忘了本气扭的要点……
+21:21 Mokou: ……
+21:21 varna: 最后一个妖精似乎是可以内避的
+21:21 varna: 需要胆量
+21:21 Mokou: 内避啊
+21:21 Mokou: 我又想起以前我能中避Hard阿波罗了……
+21:22 varna: 还有人宣称uuz也有安定
+21:22 varna: 然后就死了
+21:22 Mokou: 23333
+21:22 code_new: http://imgsrc.baidu.com/forum/w%3D580/sign=af8aaca51c4c510faec4e21250582528/e9ff12f6905298225ac04baed1ca7bcb0846d4cd.jpg
+21:22 code_new: 美国妖精好棒
+21:22 varna: 那就是金刚如来
+21:22 code_new: 感觉没印象呢
+21:23 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=0d1ff455d50735fa91f04eb1ae510f9f/3ae8b7b7d0a20cf497aaa89177094b36acaf9934.jpg 这位（左一）
+21:23 code_new: ……
+21:23 varna: 他是贝奥兰迪的部下，擅长回避
+21:23 wlemuel quit:Ping timeout: 250 seconds
+21:24 Mokou: 另外我有点想让Kusari迁都去北海道……
+21:24 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=572b83770ad162d985ee621421dea950/c574add3fd1f4134c229c8cd251f95cad0c85ed5.jpg 这个图也不错
+21:24 varna: 北海道乱
+21:24 code_new: 看图片就给人一种回避了得的感觉……
+21:24 Mokou: 历史梗
+21:24 code_new: 23333
+21:24 varna: 啊，那位大神回复我了
+21:24 wlemuel joined channel
+21:24 varna: “,,,本人理解很差，我再看看”
+21:24 varna: ^ 原文
+21:24 Mokou: 23333
+21:25 cihsop joined channel
+21:26 cihsop: git的使用感觉真复杂(也许是我自己太糟糕）
+21:26 varna: git惹麻烦的时候就是很麻烦
+21:27 Mokou: 总之现在在我的设定里基本上是这样
+21:28 Mokou: Kusari => 德川幕府，EoF => 明治政府
+21:28 varna: 昨天我试了一下Kusari海军版的drake
+21:28 varna: wyrm
+21:29 cleamoon: varna, 你在和谁讨论什么
+21:29 varna: 太差了
+21:29 varna: cleamoon: 我一下没克制住，去装逼了 http://tieba.baidu.com/p/4155921747?pid=78938652800&cid=78939385739#78939385739
+21:29 Mokou: ……什么情况
+21:30 varna: 买到的时候一看有四十个电池和bot, 我就觉得不妙
+21:30 cihsop: 我有一个很严重的问题。
+21:30 varna: 出去扭了两圈，那手感跟Onuris类似，直接地说就是机动力大幅度下降
+21:30 cleamoon: 我有一种预感，这次东方新作的同人漫画会负能量爆满，如果恋恋还在的话肯定天天喷并拒绝汉化一堆
+21:30 varna: 完全不如血龙版的Tanto
+21:30 varna: cleamoon: +
+21:30 Mokou: ……
+21:30 varna: Tanto用起来那个速度感超爽快的
+21:30 cihsop: 贴吧里的“伸手党”为什么不来这里“伸手”？ “那将会多么愉悦。”
+21:31 varna: 也不用配什么非RP规则的炮，就用血龙原装武器
+21:31 varna: cihsop: 因为来这里很麻烦那
+21:31 varna: s/那//
+21:32 cihsop: 我连个链表都写不出来。“作为伸手党应该有伸手党的基本素养。“不怕麻烦”。
+21:32 cleamoon: 编程我可是很懂，halo wold有四种写法
+21:33 varna: HELO?
+21:33 varna: HELO--
+21:33 varna: (｡･ω･)ﾉ哦瘊瘊
+21:33 lhanjian_: cihsop, 因为他们“来这里”的耐心都没有
+21:33 cihsop: 看来中二也有中二的好处。+1
+21:33 varna: 本来在windows用户中间，irc也不流行
+21:33 varna: 功能又少
+21:34 varna: 大家都喜欢花花绿绿的东西
+21:34 varna: 内裤也是
+21:34 cihsop: 问题： 你给的东西什么意思？
+21:34 lhanjian_: 在windows下，没有办法舒服地得到一个稳定可用免费的IRC Client
+21:34 varna: 欠雪的白边甚至还没有初春的情趣内衣受关注
+21:34 cihsop: 有关作用域的辩证？
+21:34 cihsop: “又脑补了”
+21:34 varna: cihsop: 不是，那东西被用于实现小半个半残future
+21:35 cleamoon: lhanjian_, hexchat不就挺好
+21:35 lhanjian_: pchat难找，hexchat不稳定，chrome/firefox插件被墙
+21:35 cihsop: “起码windows下 的webirc绝对的好用。“
+21:35 cleamoon: hexchat不稳定吗，我没怎么崩溃过
+21:35 cleamoon: cihsop, 你的“”是什么意思
+21:35 varna: 我印象以前小耗用hexchat崩过
+21:35 randomclown: 我也在用hexchat
+21:35 randomclown: weechat有一点蛋疼
+21:36 cihsop: 说话的意思啊。“意为自己以为很深（zhong）奥（er）的话先标出来“ 
+21:36 cihsop: 算是克制自己的一个方法。
+21:37 varna: 说起来，我最近都没见到irssi的宽字符出错
+21:37 cleamoon: soga，果然和不中二的人用法不同
+21:37 varna: 以前每周都有一两个
+21:37 cihsop: 唉， 我看到了。varna.你给的里面是有个"结构体“的东西/
+21:38 varna: 啊？
+21:38 cihsop: 在头文件里面见到的一堆东西都是这。“定义 XXX什么的。”
+21:38 varna: 身为作者的我都没看见……
+21:38 cihsop: 好吧，不应该看自己不懂得。“思而不学则惘”
+21:38 varna: 头文件如果你想看可以看，但我觉得太羞耻，不想帖出来
+21:39 varna: 我只保证那里没有什么结构体
+21:39 cleamoon: 我看不到回复...... 度娘慢到爆
+21:39 Mokou: 然而你背错了
+21:40 Mokou: irssi的宽字符在我这里还是不时出错
+21:41 Mokou: 原因不明，我只记得slack下出错概率相当高……
+21:41 varna: 那可能是我撸多了看不清
+21:42 Mokou: 总之我打算这样设定
+21:42 Mokou: EoF借大英之力反攻Kusari，打了Kusari一大片下来
+21:42 varna: 哦艹
+21:43 Mokou: 这些和原来的几个边界星系组成了EoF的八个星系
+21:43 varna: 不要那个炮艇
+21:43 varna: 腐国只要出动炮艇就可以把敌人恶心死
+21:43 Mokou: 因为东京都丢了，Kusari只好迁都北海道
+21:43 Mokou: 233333
+21:43 Mokou: 我肯定不要那个炮艇
+21:43 Mokou: 这样就历史了
+21:43 Mokou: EoF的领土是五畿七道
+21:43 Mokou: Kusari是北海道和希腊字母星系
+21:44 StardustX joined channel
+21:44 Mokou: 本格的明治政府对德川幕府
+21:44 varna: 套三七的明亮天空啊……
+21:44 cihsop: “话说按部就班的学习比起随行而学少了许多乐趣“
+21:45 cihsop: +1
+21:45 varna: 然而不按部就班做的话，需要一些才气
+21:45 Mokou: 总之我还是觉得Kusari共和国是在NETA虾夷共和国……
+21:45 cleamoon: 那只是因为你还没有习惯做题时分泌多巴胺
+21:45 cihsop quit:Quit: cihsop
+21:45 * Mokou 没才气而且不按部就班
+21:46 Mokou: 然后就变成渣渣了
+21:46 cihsop joined channel
+21:46 varna: 我只知道上课睡觉的时候会石更……
+21:46 cleamoon: 然后就去妨碍元首了？
+21:46 varna: 尤其是数据库和操作系统
+21:46 cleamoon: 你只是梦到了香蕉君
+21:47 varna: 大三的时候我还不太会哲学
+21:48 cleamoon: 自穴成菜
+21:48 ASenR joined channel
+21:48 cihsop: 难怪会有“ 爱情喷剂“的电影。
+21:48 cihsop: 就是喷了这个东西散发的气味会让对方喜欢你。“范冰冰演的那个。“
+21:49 cihsop: 其实我也有。睡觉前默写下“高中的英语书“。也会很舒服。
+21:49 cihsop: “脑抽+1“引退。
+21:50 varna: 我还是按顺序默写蜀道难和将进酒
+21:50 varna: 不过后来在默春江花月夜的时候不幸混入污物
+21:50 varna: 毕竟周一的时候浑身都在疼，于是动笔怒写“空里田中不觉飞”
+21:51 cleamoon: 23333
+21:57 varna: 嘛，活动开始之前我先准备一些参考文献出来
+21:57 varna: 然后就可以安心作战几天了
+22:02 varna: 另外izumo的内存池要不要换个更干净点的？
+22:02 varna: 以前那个写得太黏了
+22:02 cleamoon: 里面加入了太多男汁
+22:03 varna: 这幼女
+22:04 ASenR quit:Quit: 匿
+22:06 varna: 到今天为止六百三十八桶
+22:07 cleamoon: 1345
+22:07 Mokou: 621
+22:08 cleamoon: 然而我没有明石
+22:08 Mokou: 内存池换个也行，如果你有兴趣写的话……
+22:08 Mokou: 活动的时候明石有用？
+22:08 varna: 我打算把那个扔到servcraft/util里
+22:08 Mokou: OK
+22:09 varna: 零碎东西，只提供源码级别的用法
+22:09 cleamoon: 名是不是可以修船吗
+22:09 varna: 太慢了
+22:09 Mokou: 入渠也可以修船
+22:09 varna: 而且活动少有小破
+22:09 Mokou: 按你这么说所有人都不需要桶了
+22:10 cleamoon: 小破入渠没地，用桶太亏
+22:10 varna: 小破就要修七八个小时的
+22:10 varna: 当然可能驱逐舰两三个小时能出来？我没太算过……
+22:11 cihsop quit:Quit: cihsop
+22:11 varna: 我喜欢速攻之后歇着
+22:11 Mokou: 总之要让我家大凤在两个小时以内泡完澡的话基本上得确保失去的血量在两点以内
+22:11 cleamoon: 驱逐2h经常
+22:11 Mokou: 一点一小时多
+22:11 cleamoon: 我的练度低
+22:12 Mokou: 所以你说个卵明石……
+22:12 varna: 明石最常见的修船其实是刷战果
+22:12 varna: 一天也就打三五盘，然后就可以挂着修了
+22:12 varna: 中破大破入渠，小破擦伤明石
+22:12 varna: 活动的话，倒是可以给支援队挂着，好歹也节约
+22:13 Mokou: 刷战果的话一天不是一般二十盘起么……
+22:13 varna: 不是
+22:13 varna: 我只是说保五百
+22:13 Mokou: 就是五百啊
+22:13 varna: 保二十会变成废人的
+22:13 varna: 保五百的话各区应该都差不多
+22:13 cleamoon: 明石3-5也掉？
+22:13 varna: ex图全通，日常一天三到十盘，如果算着不够，周末一天补二十到三十盘
+22:14 varna: cleamoon: 北酱点有，极少，但是可以刷
+22:14 Mokou: 到了月底一天五盘的话两天就飞出五百了吧
+22:14 varna: 月底就那几天
+22:14 varna: 夯
+22:14 varna: 挺过九点就行
+22:14 Mokou: 九点前还有几百战果的爆菊呢
+22:14 Mokou: 我都能速攻4-5
+22:15 varna: 有，但是那种无所谓了
+22:15 Mokou: 先睡
+22:15 cleamoon: 出门
+22:15 Mokou: 所以我不刷战果&
+22:15 Mokou: 武运
+22:15 Mokou quit:Quit: 睡觉
+22:17 hoxily quit:Quit: Leaving
+22:21 randomclown: u2.dmhy有人有吗?
+22:23 varna: 没有那里的帐号
+22:23 randomclown: 在国外真麻烦
+22:23 cleamoon quit:Ping timeout: 244 seconds
+22:24 lh_mouse: 卧槽
+22:24 varna: 居然是海外党
+22:24 randomclown: lh_mouse: 好久不见
+22:24 cihsop joined channel
+22:24 lh_mouse: ？
+22:24 lh_mouse: randomclown, 爆照
+22:24 cihsop: 手机的git clone也需要ssh密钥？
+22:25 randomclown: 我每次都有cloak要不然早爆了
+22:25 cihsop: 设置里 密码帐号都对就是无法取得权限。
+22:27 lh_mouse: randomclown, 不爆照我把你丢出去
+22:27 randomclown: lh_mouse: 查log了
+22:28 randomclown: 有一次爆了
+22:28 lh_mouse: randomclown, 爆照
+22:28 varna: 啊！？、
+22:28 lh_mouse: 没看到
+22:28 varna: s/、//
+22:29 randomclown: 因为freenode把我的名字给删了
+22:29 randomclown: haha
+22:29 lh_mouse: randomclown, 爆照
+22:36 varna quit:Quit: leaving
+22:50 cihsop: github 验证不了163邮箱。这是什么鬼。
+22:52 randomclown: haha
+22:53 randomclown: 用gmail吧
+22:53 randomclown: qq,163什么的好多人都看不起
+22:56 cihsop: 歧视。+1
+22:56 cihsop: 刚刚申请了 cihsop@qq.com
+22:56 cihsop: 其实蛮好用的。
+23:03 lhanjian_: 腾讯邮箱可以显示foxmail后缀的，显得普通点
+23:05 randomclown: 曾经管理过过自己的mail server
+23:05 randomclown: 好蛋疼
+23:15 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151103081951]
+23:19 yzld2002 quit:Remote host closed the connection
+23:20 ptbsare joined channel
+23:22 ptbsare quit:Remote host closed the connection
+23:29 lhanjian_ quit:Remote host closed the connection
+23:31 lh_mouse: 企鹅邮箱会丢邮件
+23:35 cleamoon joined channel
+23:37 cleamoon_ joined channel
+23:39 lh_mouse quit:Read error: Connection reset by peer
+23:40 cleamoon quit:Ping timeout: 240 seconds
+23:40 lh_mouse joined channel
+23:50 lh_mouse: geordi, << TYPE(p); int * __restrict__ p;
+23:50 geordi: lvalue int* restrict
+23:53 Flandre: geordi: replace (p) with <decltype(p)>
+23:53 geordi: int* restrict
+23:53 * lh_mouse slaps Flandre around a bit with a large trout
+23:54 Flandre: jojo
+23:54 lh_mouse: Flandre, 把胖次脱了
+23:54 Flandre: ouo
+23:54 Flandre: 好hentai.
+23:57 cleamoon_ quit:Ping timeout: 240 seconds

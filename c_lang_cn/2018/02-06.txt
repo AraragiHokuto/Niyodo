@@ -1,0 +1,748 @@
+01:04 lh_mouse quit:Read error: Connection reset by peer
+05:17 yonka joined channel
+08:48 lh_mouse joined channel
+09:05 yonka quit:Remote host closed the connection
+09:42 yonka joined channel
+09:44 yonka_ joined channel
+09:44 yonka_ quit:Remote host closed the connection
+09:44 yonka_ joined channel
+09:44 yonka quit:Read error: Connection reset by peer
+09:56 hanjian_l: Aldrich: 上班就挂着出后勤
+10:13 sailyang joined channel
+11:05 cleamoon_ quit:Quit: Connection closed for inactivity
+11:11 matchray: https://reviews.llvm.org/D42893  https://reviews.llvm.org/D42895
+11:11 L-ios1 joined channel
+11:12 L-ios quit:Ping timeout: 240 seconds
+11:12 L-ios1 is now known as L-ios
+11:17 lh_mouse: http://m.qpic.cn/psb?/V12g7MBV1FbUus/2NtLTqBpaXqTNORCtt0tfH6tsUvZm1BReDeIN99MzxA!/b/dFYBAAAAAAAA&bo=HALAAwAAAAABJ90!&rf=viewer_4
+11:29 hanjian_l: lh_mouse: 2马赫的曹操，说曹操曹操到（比这还快，因为说艹，曹操就到了
+11:45 Arisaka joined channel
+11:47 L-ios1 joined channel
+11:47 L-ios quit:Ping timeout: 252 seconds
+11:47 L-ios1 is now known as L-ios
+11:53 sailyang quit:Ping timeout: 256 seconds
+12:34 matchray: hanjian_l: 有人说其他os都是用aio来做RWF_NONBLOCK的
+12:34 hanjian_l: matchray: 对，BSD那个是已经做成了的。Linux这个却拖了10年
+12:34 hanjian_l: 换句话说bsd/windows的异步io是“真的”
+12:35 hanjian_l: 之前linux那个aio限制太多太艹单了，也和epoll体系不融合（epoll本身也不如kquue漂亮
+12:35 hanjian_l: windows是最彻底的，他的io早就支持异步了，用不着epoll/kqueue这种东西
+12:37 L-ios1 joined channel
+12:39 L-ios quit:Ping timeout: 268 seconds
+12:39 L-ios1 is now known as L-ios
+12:41 ngkaho1234[m] joined channel
+12:45 matchray: 邀請一位大神討論aio
+12:46 ngkaho1234[m]: 不敢，我只是來觀摩的 :(
+12:48 hanjian_l: ngkaho1234[m]: 欢迎欢迎
+12:49 matchray: ~iyzsong@fsf/member/iyzsong  這是邪教組織成員？
+12:52 hanjian_l: matchray: 你的OS不清真
+13:25 ngkaho1234[m]: 剛剛在說什麼？preadv2 ?
+13:33 lh_mouse: windows 的异步太难用。
+13:34 lh_mouse: 我支持原生同步，用户自己开线程异步。
+13:34 lh_mouse quit:Quit: For the Red Army!
+13:34 ngkaho1234[m]: 然後就走了。 :)
+13:35 lh_mouse joined channel
+13:36 hanjian_l: ngkaho1234[m]: 嗯
+13:36 hanjian_l: ngkaho1234[m]: 没走，他小号一直挂着lh_not_bot
+13:37 hanjian_l: lh_mouse: 默认reactor，还是比默认preactor好舒服？
+13:37 ngkaho1234[m]: https://github.lhmouse.com/
+13:37 lh_mouse: ngkaho1234[m], ???
+13:37 lh_mouse: hanjian_l, no comments. I don't care.
+13:37 hanjian_l: lh_mouse: no, you care.
+13:38 hanjian_l: You are careful, more careful than i.
+13:38 lh_mouse: hanjian_l, 这里不用 no  。
+13:38 ngkaho1234[m]: 只說aio的話，freebsd也有。從socket到normal file到pipe
+13:38 hanjian_l: yes, you care
+13:38 hanjian_l: ngkaho1234[m]: 对，freebsd早就有了完整的一套了
+13:38 lh_mouse: 只有 linux 没有原生异步。
+13:39 hanjian_l: lh_mouse: 是的，fxxking linux.
+13:39 ngkaho1234[m]: hanjian_l: 配合kqueue作爲completion，其實也是類似iocp那套……
+13:39 hanjian_l: ngkaho1234[m]: 我知道
+13:39 ngkaho1234[m]: 這點我還是喜歡的
+13:39 lh_mouse: 异步如果不封装成同步，通常都很难用。
+13:39 hanjian_l: windows freebsd他们这些都是等价实现了的
+13:39 hanjian_l: 就linux在aio上是残废
+13:39 lh_mouse: 所以，异常的价值，就在于封装成同步的方便程度了。
+13:39 lh_mouse: s/异常/异步/
+13:39 ngkaho1234[m]: linux aio的情況比較尷尬……
+13:40 ngkaho1234[m]: 因爲關心的似乎只有xfs和database人
+13:40 ngkaho1234[m]: 其他人好像就讓這套system自生自滅
+13:40 lh_mouse: 为什么你们都用繁体。
+13:40 hanjian_l: 现在才有RWF_*DSYNC/HIPRI/SYNC/NOWAIT
+13:40 ngkaho1234[m]: 沒有爲什麼。
+13:41 hanjian_l: ngkaho1234[m]: 但其实这个问题在lkml里面也讨论了好多年了，方案少说也有三种
+13:41 ngkaho1234[m]: 我只會寫繁體字，習慣上自然是繁體……
+13:41 lh_mouse: 好吧，没有为什么。
+13:41 hanjian_l: 结果最后还是加了个syscall
+13:41 ngkaho1234[m]: hanjian_l: 有一個是dave chinner提到的，就是generic thread pool
+13:41 ngkaho1234[m]: 然而無人做
+13:41 lh_mouse: 跟窝差不多，正好反过来。
+13:41 lh_mouse: 窝认得繁体，不过好多吃不准怎么写。
+13:41 ngkaho1234[m]: 喔
+13:42 hanjian_l: ngkaho1234[m]: M:N线程？
+13:42 lh_mouse: 仅仅是认识的水平。
+13:42 hanjian_l: 还是类似windows的fibre
+13:42 ngkaho1234[m]: hanjian_l: 1:1
+13:42 lh_mouse: hanjian_l, fiber
+13:42 ngkaho1234[m]: nt我都忘記了是不是fiber……
+13:43 hanjian_l: lh_mouse: pool english
+13:43 lh_mouse: ngkaho1234[m], 你們都是谷狗大佬哇。
+13:43 ngkaho1234[m]: lh_mouse: what do you mean?
+13:43 hanjian_l: ngkaho1234[m]: work for Google？
+13:43 ngkaho1234[m]: nope
+13:43 lh_mouse: 你们就是在 google 的大佬哇。
+13:43 hanjian_l: yeah
+13:43 lh_mouse: <_<
+13:43 lh_mouse: s/就/才/
+13:44 lh_mouse: puu
+13:44 ngkaho1234[m]: google有不少應屆畢業生的。
+13:44 lh_mouse: s/就/都/
+13:44 ngkaho1234[m]: 不是大佬
+13:44 sailyang joined channel
+13:44 lh_mouse: 果然都是在谷狗。
+13:44 * lh_mouse slaps sailyang around a bit with a large trout
+13:44 L-ios quit:Ping timeout: 260 seconds
+13:45 ngkaho1234[m]: hanjian_l: poop english :(
+13:45 hanjian_l: 233
+13:46 lh_mouse: poll(english)
+13:46 matchray: I speak pidgin English
+13:46 ngkaho1234[m]: https://github.com/matt-wu/Ext3Fsd/blob/master/Ext3Fsd/dispatch.c#L171
+13:46 ngkaho1234[m]: 我沒有記錯好像不是fiber...
+13:46 lh_mouse: fiber 是用户态的。
+13:47 matchray: 老鼠肯定會把這個C項目批判一番
+13:47 hanjian_l: ngkaho1234[m]: 话说generic是指什么
+13:47 ngkaho1234[m]: hanjian_l: 通用的worker fallback
+13:47 ngkaho1234[m]: 應付的是linux aio unconditional block問題
+13:51 ngkaho1234[m]: https://patchwork.kernel.org/patch/8012401/
+13:52 ngkaho1234[m]: lh_mouse: Windows的userspace aio infrasturcture用fiber？
+13:52 ngkaho1234[m]: 這個有點好奇他們怎麼做的
+13:53 lh_mouse: 没做过。
+13:53 ngkaho1234[m]: ？
+13:53 L-ios joined channel
+13:53 lh_mouse: 窝没玩过 fiber   这么高大上的东西。
+13:53 ngkaho1234[m]: 喔
+13:54 lh_mouse: （特指 windows 的 fiber 。）
+13:58 hanjian_l: ngkaho1234[m]: 这段patchwork值得仔细看吗？
+13:58 ngkaho1234[m]: hanjian_l: 不知道。不過裏面有提到linux xfs的io path處理手法……
+13:58 hanjian_l: 可怜的xfs
+13:59 ngkaho1234[m]: 畢竟是xfs developers說的
+14:00 hanjian_l: 嗯，有linus大喷子的深度讨论，回家我看看
+14:00 * ngkaho1234[m] sent a long message: ngkaho1234[m]_2018-02-06_06:00:01.txt <https://matrix.org/_matrix/media/v1/download/matrix.org/cvwtiCicCjpzhBEzoQfEkYmv>
+14:00 hanjian_l: we always use threads for IO submission or we accept that occasionally the AIO submission will block.」
+14:00 hanjian_l: 无奈
+14:00 hanjian_l: 啊
+14:01 hanjian_l: 毕竟读磁盘就是卡CPU总线
+14:01 ngkaho1234[m]: 只看block mapping lock之類的情況，這是一個安全做法。也是其他有aio的kernel的做法……
+14:02 ngkaho1234[m]: 畢竟app還真的不會去應付無故的aio() block...
+14:03 hanjian_l: 还是要避免的吧
+14:03 hanjian_l: 至少对围绕网络io编程的服务端开发来说
+14:03 hanjian_l: 你看nginx，为了避免磁盘io block，弄了一个线程池去读盘
+14:04 hanjian_l: 这是在RWF_*出现之前，最常用的有效方法了吧
+14:04 ngkaho1234[m]: 我覺得是爲了合理的aio行爲
+14:04 ngkaho1234[m]: 主要是一般都期望aio()之類的是不會突然來幾個5ms spike...
+14:05 ngkaho1234[m]: 是，nginx也用了不少技巧來避免……
+14:05 hanjian_l: 对
+14:05 hanjian_l: 大家都希望DJ在打碟的时候能继续唱歌跳舞，而不是低着头等碟转过来再唱
+14:06 ngkaho1234[m]: 但是linux，尤其是ext4，完全不符合要求
+14:06 ngkaho1234[m]: xfs雖然也不是idea行爲，但是只會block第一個io request，因爲load bmap
+14:06 hanjian_l: 万恶的linux filesystem
+14:07 ngkaho1234[m]: linux native aio這東西從merge進來後好像進了雪櫃一樣……
+14:08 hanjian_l: 用的人极少，用了以后评价也不佳
+14:08 hanjian_l: 加入以后立刻变成了包袱
+14:09 ngkaho1234[m]: 結果在linux aio，除了用xfs以外，幾乎無用，但你又不能強迫所有linux用戶用xfs
+14:09 hanjian_l: 这也导致现在的aio拖了这么久才出，大家都怕新出的东西”又不够用，又不好用，又惹麻烦“
+14:09 ngkaho1234[m]: socket/pipe不能用，算了；file除了那一兩個fs其他都不能用，那用來幹什麼……
+14:10 hanjian_l: 现在，我们终于有RWF_NOWAIT，终于可以安心EAGAIN了
+14:10 hanjian_l: 终于可以偷摸一把磁盘酱的PP而不用被抓了
+14:10 ngkaho1234[m]: 然後app要處理readahead :/
+14:10 hanjian_l: 让他们处理吧
+14:11 ngkaho1234[m]: anyway, 在linux還是用userspace threadpool吧，沒有辦法的辦法
+14:14 ngkaho1234[m] left channel:"User left"
+14:14 hanjian_l: readahead() attempts to schedule the reads in the background and return immediately.  However, it may block while it reads the filesystem metadata needed to locate the requested blocks.  This  occurs frequently with ext[234] on large files using indirect blocks instead of extents, giving the appearance that the call blocks until the requested data has been read.
+14:14 hanjian_l: 这话的意思就是，“用XFS吧，真的不会阻塞了”
+14:17 hanjian_l: 过段时间，看看lkml.org会不会出一篇关于epoll_wait和readahead/pread/writev2的文章来总结这个问题吧
+14:17 hanjian_l: 实在是不喜欢threadpool in my implementation
+14:18 hanjian_l: 4.14才刚出呢
+14:22 sailyang quit:Ping timeout: 252 seconds
+16:27 yonka_ quit:Remote host closed the connection
+16:29 yonka joined channel
+16:31 yonka quit:Remote host closed the connection
+16:31 yonka joined channel
+16:34 yonka_ joined channel
+16:38 yonka quit:Ping timeout: 260 seconds
+17:00 cleamoon_ joined channel
+18:50 ksqsf joined channel
+19:27 varna joined channel
+19:27 varna: _(:з」∠)_好想被逢世小姐姐抓去结婚啊
+19:38 ksqsf quit:Ping timeout: 248 seconds
+19:39 cleamoon_: 羊驼子竟然也开始乳摇了
+19:39 varna: 没买任系
+19:40 varna: 只是无限loop逢世ED歌
+19:40 cleamoon_: orz
+19:40 varna: 最近重新把P5捡起来，一周目快通掉了
+19:40 cleamoon_: 我至今还没把乳摇看完呢
+19:40 cleamoon_: 不知道哪个up有认认真真的做完的
+19:41 varna: doraiba
+19:41 cleamoon_: 太太呀，哪天看看
+19:42 cleamoon_: 太太不娇喘呀
+19:42 varna: 但是会惊叫
+19:42 varna: 要娇喘就看血源
+19:43 varna: btw 其实太太低调地表现了非常好的技术
+19:43 varna: 后面各种连段，而且只用很低级的胶卷
+19:43 cleamoon_: 该翻译的有没有翻译？
+19:44 varna: 都有字母和朗诵
+19:44 varna: 字幕*
+19:44 cleamoon_: 好评
+19:44 varna: 这方面太太做得很仔细，所有捡到的文献都读了
+19:44 hanjian_l: https://usercontent.irccloud-cdn.com/file/LW7SlL2G/Screenshot_2018-02-06-19-24-19-05.png
+19:45 hanjian_l: varna: 
+19:45 cleamoon_: b站的不是短更，不看文献就是全程字幕，看着特累
+19:45 varna: hanjian_l: 这个炼丹炉可以啊
+19:45 varna: 我也可以试着玩点花样了
+19:45 hanjian_l: cpu 一半i3 一半i5 一半固态一半机械
+19:45 cleamoon_: orz
+19:45 hanjian_l: 内存4G 显卡750Ti
+19:45 hanjian_l: 总价格不会超过2W
+19:46 varna: 最近不急着要款的话我年后先换手机，不然只好一笔一笔打给你了
+19:46 varna: 看着跟洗钱不会洗一样
+19:46 hanjian_l: 不急
+19:46 hanjian_l: 我过两天就发工资了
+19:47 hanjian_l: 爹妈那边闲钱也够我日常，不买游戏就好了
+19:47 cleamoon_: orz
+19:47 cleamoon_: 这是什么诡异电脑
+19:48 hanjian_l: 总共十台
+19:48 hanjian_l: 炼丹炉
+19:48 varna: 炼丹炉
+19:48 varna: 当然我不太会炼丹，可能拿来烧砖
+19:48 hanjian_l: 也可以当超级游戏机
+19:48 hanjian_l: 也可以挖矿
+19:49 varna: 对我来说就是个砖窑了
+19:49 cleamoon_: orz
+19:49 cleamoon_: 炼丹是做什么
+19:49 varna: 反正也没女朋友，花钱建点设施
+19:49 varna: tenserflow
+19:51 cleamoon_: orz 自己撸tensorflow
+19:52 hanjian_l: 初五初六就到货了
+19:52 hanjian_l: varna: 我们先把openstack的云平台管理器做好吧
+19:52 hanjian_l: 手撸一个？
+19:54 cleamoon_: 你们要做些什么呢，投资之类的？
+19:54 varna: 你确认用openstack么
+19:54 varna: docker有没有什么可以直接部署的方案？
+19:55 hanjian_l: 也要基于linux container或者windows hyperv
+19:55 varna: container没问题，不过我觉得openstack系的方案是不是二次开发比docker没意思点
+19:55 hanjian_l: 我还是希望利用vt-d，这样我们可以给最终用户真切的750ti
+19:55 varna: 反正都没做过，赶个新潮
+19:55 hanjian_l: OpenStack我也不喜欢
+19:56 hanjian_l: 我们自己想个办法把资源的聚合和隔离做了吧
+19:56 varna: 现在我觉得趋势还是基于容器的解决方案
+19:56 hanjian_l: 是的
+19:56 varna: 先上一版能动的
+19:56 hanjian_l: 嗯
+19:57 varna: 动起来之后再考虑资源问题
+19:57 hanjian_l: 现在我们首先要把机器之间的链路打通啊
+19:57 varna: docker有kubernetes之类的东西
+19:58 hanjian_l: 我不是说这个，我是说物理连接
+19:58 hanjian_l: 现在我们有的是10台孤立的电脑
+19:58 hanjian_l: 而不是已经成型的超算
+19:59 varna: 组这种你有经验么，还是说直接组个网
+19:59 hanjian_l: 我没有多口交换机，而且似乎通信能力可能也不足以支撑tensorflow吧？
+19:59 cleamoon_: orz
+19:59 varna: 没交换机是个悲剧
+19:59 cleamoon_: 直接用网络通信的超算能用吗
+19:59 hanjian_l: 我们找找有没有主板级别的交并口通信？
+19:59 varna: +
+19:59 hanjian_l: 问问超算神犇
+19:59 varna: 最好还是主板级别
+19:59 hanjian_l: matchray: 召唤
+20:00 varna: cleamoon_: 那需要很好的内网建设和机房建设
+20:00 hanjian_l: matchray: 超算的CPU和RAM是如何链接起来的？
+20:00 hanjian_l: cleamoon_: 万兆网卡甚至是光网直连这个真的用不起
+20:01 varna: 在公司我可以把内网当一个大带宽总线用，但是自己炼丹就不行了
+20:01 hanjian_l: 是的
+20:01 varna: 而且厂里一搞就是一大堆机器做计算服务
+20:01 varna: 根本没法比
+20:02 lh_mouse: 0.0
+20:02 varna: (｡･ω･)ﾉ这次需要lhj罩一下我，调度也好计算服务也好，都是我没接触过的领域了
+20:02 hanjian_l: 总之我不希望使用交换机，不希望每台机器成为一个独立的单元。那样不就等于买了10台电脑组了个破网吧。虽然我确实找图吧基佬问过，但我不想开网吧
+20:02 hanjian_l: varna: matchray 我们还有会搞超算的神上神犇
+20:02 varna: +1
+20:03 varna: 暴力组网就不好玩了
+20:03 cleamoon_: 至少用InfiniBand吧
+20:03 hanjian_l: 现在有个可行的方案是买两块6PCIE接口的主板，链接GPU，CPU不知道有没有类似物
+20:03 varna: 但是如果动真格的话，做水平扩展不可避免烧预算级别的组网
+20:03 varna: 比较残念
+20:04 hanjian_l: cleamoon_: PCIE级别的通信带宽是15GiB/s
+20:05 hanjian_l: 我们要考虑省预算，不是心疼钱，而是这也是我们学习炼丹的一部分
+20:05 hanjian_l: 如何有效地利用有限地资源提供尽可能完整可靠的服务？
+20:05 varna: 这里不是说省预算
+20:06 varna: 而是觉得这个技术方案是有瓶颈的，他迟早没法满足生产级别的需求
+20:06 varna: 认识到这点就OK了
+20:06 hanjian_l: 嗯
+20:07 hanjian_l: 我想的大方向是，能尽可能地接近水平扩展的TensorFlow计算能力，能尽可能地提供最终用户可接受的ECS服务
+20:07 hanjian_l: 似乎核心问题还是IO
+20:07 hanjian_l: 通信
+20:07 varna: 做不到的，通信问题巨大
+20:07 varna: SLA需要运维方案堆出来
+20:07 varna: 先做个能动的东西出来然后检讨吧……
+20:08 hanjian_l: 嗯
+20:08 hanjian_l: PCIE问题不大，我可以买两块6PCIE插槽的主板，预算不到1000就行
+20:08 varna: 预算我加一些都行
+20:08 hanjian_l: 但是CPU和RAM，我是没头绪的
+20:08 varna: +
+20:08 cleamoon_: PCIE这么便宜
+20:09 hanjian_l: cleamoon_: 映泰H81A，5PCIE小，1PCIE大。小的PCIE可以转接出大的PCIE。
+20:09 hanjian_l: 等超算犇MR酱来给我们讲讲怎么搞吧
+20:11 cleamoon_: 你们打算做出正经的产品吗
+20:11 hanjian_l: 电源风扇这个卖家应该都会把原有的给我，所以供电散热应该不是大问题
+20:11 varna: 做不出正经产品
+20:11 hanjian_l: cleamoon_: 是朝着这个目标来推动学习。不可能正经出产品。哪有用图吧基佬思路开CloudService的
+20:11 varna: 产品是要能卖的，现在市面上大厂的解决方案完爆这种张思德搞法
+20:12 hanjian_l: 我甚至是刻意选的易硬件故障的X手货，目标是“容易出错，迫使我们想解决方案”，然而产品是“避免出错，少让客户想解决方案”
+20:12 cleamoon_: ...........
+20:13 varna: (｡･ω･)喂哥们儿，给你提个P1吼不吼啊
+20:13 hanjian_l: 当然，如果说骗天使投资……想想就行了。
+20:13 hanjian_l: varna: 这故障我不背。
+20:13 varna: 蛤蛤蛤蛤
+20:13 varna: 迅速的标准反应
+20:14 varna: (｡･ω･)背了可以给你介绍故障娘哦
+20:15 cleamoon_: 不买个显卡把其中一台弄成CUDA版？
+20:15 varna: 都CUDA吧
+20:15 varna: 不然搞不动
+20:15 cleamoon_: 壕orz
+20:15 hanjian_l: cleamoon_: 都是N卡啊，本来就是CUDA，不然没法TensorFlow
+20:16 hanjian_l: 750Ti性能也很不错，接近GTX960了
+20:16 varna: 二手货的话还好
+20:16 hanjian_l: 10台750Ti，大概能把PC版的荒野跑出4K/60FPS吧
+20:16 varna: 求轻黑荒野23333333
+20:17 cleamoon_: ..........这什么游戏
+20:17 varna: 幽灵行动荒野
+20:17 varna: 就是平时开的车
+20:18 hanjian_l: 看来我还需要买一条十分长的HDMI线啊
+20:18 cleamoon_: 我怀疑十台电脑的理想加速都抵不上网络的瓶颈
+20:19 hanjian_l: 显卡没事，但我不清楚交火支不支持2块以上的显卡
+20:19 varna: 我的第一反应是长线拖累帧数，后来才反应过来是炼丹用的
+20:19 hanjian_l: 显卡可以都插在一块主板上
+20:19 hanjian_l: 但是CPU和Ram很难搞
+20:20 hanjian_l: 也许我们需要一个单片机硬件大牛，来给主板加两条飞线
+20:20 varna: 需要一个大猫鼻子
+20:20 hanjian_l: 我们先给集群命名吧，村云。
+20:21 cleamoon_: 亚楠通网了
+20:21 varna: 先不命名吧，大张旗鼓的事情往往都会黄的
+20:21 hanjian_l: 亚楠原型机吧
+20:22 varna: 原型什么？
+20:22 cleamoon_: 秀恩爱分得快
+20:22 varna: 摩罗？
+20:22 hanjian_l: 说机不带吧，幸福你我他
+20:23 hanjian_l: 说回钱的事儿，那老板不会跑路，因为他是一家杭州连锁网吧的老总
+20:23 cleamoon_: @黄鹤
+20:23 varna: @瑞鹤
+20:24 hanjian_l: va
+20:24 varna: 之前把协程调度部分的设计又砍了，继续向迫真反应式靠拢
+20:24 hanjian_l: varna: 话说羊驼子有空去线下买两块 映泰H81A主板？
+20:24 hanjian_l: 线上也行，但我担心过年拿不到货
+20:24 hanjian_l: 初五初六机器娘们就来了
+20:25 varna: 线上我估计拿不到货，要不周六正好约你去找找看
+20:25 varna: 这周是周日加班
+20:25 hanjian_l: 我周六上班的
+20:25 hanjian_l: 这周七天班
+20:25 hanjian_l: 一天都少不了
+20:25 hanjian_l: 我是12号-21号放假，不过可能初五初六就回杭州了
+20:25 varna: 快递明天就停了，杭州这边的电脑城我也不太熟
+20:26 varna: 我是12-23
+20:26 varna: 三天年假两天调休加一个春节
+20:26 hanjian_l: 嗯
+20:26 varna: 全都在杭州，时间比较随意
+20:26 hanjian_l: 我问问卖游戏的伙计好了，他那个地方有卖主板的
+20:26 varna: (｡･ω･)ﾉ撒速噶焦卡
+20:27 cleamoon_: 于是你们打算用tf做什么
+20:27 varna: lhj炼丹
+20:28 varna: 我不会炼丹只能烧砖
+20:28 hanjian_l: 我也只是在学炼丹
+20:28 hanjian_l: 其实也没学会
+20:28 cleamoon_: 我怎么记得羊驼子是学炼丹的
+20:28 cleamoon_: 我也想学习炼丹呀
+20:28 varna: (｡･ω･)贝叶斯炼不出丹
+20:29 hanjian_l: 羊驼子是学胡言乱语的
+20:29 varna: +
+20:31 hanjian_l: 拜托卖碟的伙计帮我询价了
+20:31 varna: 惊恐，这人发起了一波询盘
+20:31 varna: 撒速噶焦卡！
+20:32 hanjian_l: 卖H碟，卖A碟，卖3级碟
+20:32 varna: (｡･ω･)村点飞叶子才是村淘的出路
+20:33 cleamoon_: Perl的事能算胡言乱语吗，Perl，僧侣的事，能算胡言乱语吗，接着便是难懂的话，什么正则表达式，什么TMTOWTDI
+20:34 hanjian_l: varna: https://en.wikipedia.org/wiki/OpenShift
+20:34 hanjian_l: 这个似乎符合羊驼子的期望
+20:34 varna: RH kubernetes 2333333
+20:34 varna: 这个可以有
+20:34 hanjian_l: container-based的docker集群平台
+20:34 hanjian_l: RH！
+20:34 hanjian_l: 哈哈哈
+20:34 hanjian_l: 又是RH
+20:34 varna: 简直天谴
+20:34 varna: (｡･ω･)你以为自己逃离el7了
+20:35 varna: 然而
+20:36 hanjian_l: https://en.wikipedia.org/wiki/Cloud_computing_comparison
+20:36 hanjian_l: el7还行的，至少是3.10内核，可以跑docker
+20:36 hanjian_l: el56就无语了
+20:37 hanjian_l: 不行啊，OpenShift不支持windows guest
+20:38 varna: 你这么说，有一种____的感觉
+20:38 hanjian_l: 至少要有一个能够通过vt-d充分利用显卡资源能让我4k/60FPS开车的虚拟机吧
+20:38 hanjian_l: 机不带吧
+20:38 varna: 虚拟什么
+20:38 varna: 哈哈哈哈私有云游戏机
+20:39 cleamoon_: 终于向神壕迈出了重要而且卓越的一步
+20:39 varna: lhj其实深藏不露的
+20:40 varna: (｡･ω･)典型走资派
+20:41 ksqsf joined channel
+20:41 cleamoon_: 以后可以打土豪分超算了
+20:43 Aldrich: 我们来搞羊驼人吧
+20:43 Aldrich: 让两个羊驼人互相问答
+20:43 varna: 啊，LSTM羊驼人
+20:44 varna: 作为一个佛兰肯斯坦（男）的原型，我要求给我造一个野中萌版的佛兰肯斯坦互相对话
+20:44 varna: 要很蓝的那种
+20:44 Aldrich: 不过这里的关键是训练集怎么搞
+20:44 Aldrich: 毕竟从irclogs里滤出问题和回答太困难了……
+20:44 cleamoon_: 爬twitter
+20:44 cleamoon_: 爬知乎
+20:44 varna: 我在药乎上都沉默地关注小姐姐
+20:45 cleamoon_: 爬firefox历史
+20:45 hanjian_l: 不过其实体验过一回4K/60FPS，恐怕就不再会用他打游戏了
+20:45 hanjian_l: AlphaGo可以做到自己跟自己下棋做训练，那么自然语言是不是也可以这么生成呢
+20:45 varna: 不可以
+20:46 varna: 还记得FB那两个说不会话的悲剧LSTM么
+20:46 cleamoon_: 不存在的
+20:46 varna: 上新闻的那两位
+20:46 varna: 实验基本上失败了
+20:46 cleamoon_: 召集几个语言学家看他们在说什么呀
+20:47 varna: 在说quenya的话就毁灭了
+20:48 cleamoon_: 也许是在讨论小姐姐
+20:48 varna: (｡･ω･)妻海小姐姐似乎又找到了新的男朋友
+20:49 hanjian_l: CPU并联找不到非通信的解决方案，而我们的预算也不足以买能够放4个以上CPU的主板
+20:50 varna: (｡･ω･)再加点钱呢
+20:50 varna: 不行就只好通信了
+20:50 hanjian_l: 如何把两台电脑连接在一起，并行执行？ - 张冰的回答 - 知乎
+20:50 hanjian_l: https://www.zhihu.com/question/66169229/answer/239172892
+20:51 Aldrich: 卧槽
+20:51 Aldrich: 我造出了Vector
+20:51 hanjian_l: 这是唯一一个提出解决方案的虚拟化码农，但我想我炼丹3年也练不出这水平
+20:51 varna: 疼，现在市面上的炼丹一般怎么架构的还得再看看
+20:51 cleamoon_: 用plan9
+20:52 varna: 9p的实现非常糟糕
+20:52 Aldrich: 之前我倒是认识过一个搞虚拟化的哥们儿，不过现在他已经去天国了
+20:52 varna: vivi好啊
+20:52 cleamoon_: 市面上的炼丹方法买不起吧
+20:52 varna: 参考一下
+20:52 varna: 总不至于说进行大规模虚拟化
+20:53 Aldrich: 先躺
+20:53 Aldrich: 诸君武运
+20:53 varna: (｡･ω･)ﾉ
+20:54 varna: 啊啊，哪里有幼女
+20:55 cleamoon_: 你伪造一个15岁的身份就可以合法的偶尔喝幼女啪啪啪了
+20:57 varna: 「进行了漫长的只属于两人的对弈」
+20:57 cleamoon_: 不会多漫长的
+20:57 varna: 是梗
+20:58 hanjian_l: varna: 我找到了PCIE互联线的相关信息，然而，答主提到，天河二号是自研自用的，没有公开发售……
+20:58 varna: ...
+20:58 cleamoon_: 梗好多....
+20:59 cleamoon_: 我知道我校用的啥，不过个人肯定用不起.....
+20:59 varna: 卧槽
+20:59 varna: 印象空间最终支线要打一个摩罗
+21:00 varna: 真姬儿……直白
+21:00 cleamoon_: 谁有空帮我看一下这个程序编译运行有没有问题  https://ideone.com/MxFQxe
+21:00 cleamoon_: 我这里出这问题  tcp_peer_send_blocking: send() to socket 12 failed: Transport endpoint is not connected (128)，关键是几分钟前没这问题....
+21:01 hanjian_l: varna: https://zh.wikipedia.org/wiki/HyperTranspor 这里有很多有效信息
+21:01 varna: 我觉得在考虑CPU互联之前先想问个事情
+21:01 varna: tenserflow真的需要这么密集的CPU互联么
+21:02 varna: cleamoon_: MPI? 编译有问题的话查下头文件搜索路径对不对
+21:02 hanjian_l: 不需要，TF是GPU的
+21:02 varna: 那么CPU互联的实现也可以暂放
+21:03 hanjian_l: 我只是在考虑先把资源聚合，然后再做虚拟机/容器的CPU计算资源分配
+21:03 hanjian_l: CPU资源聚合
+21:03 hanjian_l: 当然，肯定要完成有既定解决方案的部分
+21:03 varna: 反过来，先提供外观
+21:03 hanjian_l: GPU互联的方案，矿卡大佬们已经法子很多了
+21:03 varna: 这里冷静下
+21:03 hanjian_l: varna: 有道理
+21:04 varna: 自底向上的成本巨大，我觉得排期都排不开
+21:04 cleamoon_: varna: 编译没问题，运行有问题
+21:04 cleamoon_: 这程序都没通信的部分，但是还是有错误
+21:05 hanjian_l: varna: 那就自顶向下吧，但我担心这样我就沉溺于既有的东西里了。
+21:05 varna: MPI没搞过
+21:05 varna: hanjian_l: 先有个东西，不然其实都没东西可担心
+21:05 varna: (｡･ω･)排期很紧的
+21:05 hanjian_l: CPU互联就放放，等MR酱来了再问问他们超算怎么搞的
+21:06 cleamoon_: varna: 在用arch？
+21:06 varna: arch
+21:07 varna: 但MPI不是缺省配的吧
+21:07 hanjian_l: 那GPU的问题已经解决了，我先把GPU的PCIE扩展线买了
+21:07 cleamoon_: varna: 编译用 mpicc a.c 然后试试运行 mpirun -np 4 a.out
+21:08 varna: 等下，我可能需要装一波mpi
+21:08 hanjian_l: mpi？
+21:08 varna: 岚月酱的小问题
+21:09 varna: 卧槽
+21:09 varna: 这东西好大
+21:10 cleamoon_: 啊？这不就几个.so和一堆wrapper吗....
+21:10 varna: intel-mpi
+21:10 varna: 是这个包吧
+21:10 cleamoon_: 不是，openmpi....
+21:10 cleamoon_: 我看看arch有没有这个
+21:11 hanjian_l: arch肯定有intel的那个mpi啊
+21:11 varna: 有
+21:11 varna: extra
+21:11 varna: 等下我刷一遍库
+21:12 cleamoon_: 我在用win+cygwin，所以蛋疼....
+21:12 hanjian_l: cleamoon_: 用win+wlsa 
+21:12 hanjian_l: cleamoon_: 用win+wls啊
+21:12 hanjian_l: wsl
+21:13 cleamoon_: wsl里写的东西win下不能运行呀
+21:13 hanjian_l: cleamoon_: 啊？那你就在wsl里运行好啦啊
+21:13 cleamoon_: 不过也可以试试
+21:13 hanjian_l: 反正只是CUI的
+21:14 varna: 我只有两个slots
+21:14 varna: 运行正常
+21:14 varna: [varna@koharu misctests]$ mpirun -np 2 a.out 
+21:14 varna: Hello world! I'm process 1 out of 2 processes
+21:14 varna: Hello world! I'm process 0 out of 2 processes
+21:14 varna: [varna@koharu misctests]$ 
+21:15 varna: 机会难得，我作个死吧
+21:15 cleamoon_: 是应该类似这样
+21:15 varna: Su一下
+21:15 cleamoon_: 啊，你要做什么
+21:16 varna: 我日
+21:16 varna: gcc-libs-multilib依赖破损？
+21:16 cleamoon_: 话说不少人都要求wsl加上cuda和tensorflow的支持
+21:16 cleamoon_: 噗
+21:16 cleamoon_: 你多久没更新了
+21:16 hanjian_l: cleamoon_: 做不到的吧，碰不到硬件的
+21:17 hanjian_l: gcc-multilib已经不需要了
+21:17 varna: 哦，不需要了啊
+21:17 hanjian_l: 先 Syyu吧
+21:17 cleamoon_: hanjian_l: 似乎理论上可以
+21:17 varna: Syy做了
+21:17 varna: 那直接更新了
+21:17 varna: 神啊，请保佑我
+21:18 varna: 如果可能，请撤掉这流血的刀——然而不要从我的意思，来个最新版的我耍耍
+21:19 hanjian_l: 每周滚一次，不会滚挂
+21:19 hanjian_l: 你几个月来一次，就挂了
+21:19 varna: 我懒得验证重启
+21:19 hanjian_l: 就跟妹子那什么一样
+21:19 varna: 结果拖延症就发作了
+21:19 hanjian_l: 土壤工业用
+21:19 cleamoon_: 干脆一年重装一次好了
+21:22 yonka_ quit:Remote host closed the connection
+21:22 yonka joined channel
+21:23 varna: arch永远让人dokidoki的
+21:23 varna: 是很好的女友
+21:25 yonka_ joined channel
+21:25 yonka quit:Read error: Connection reset by peer
+21:27 cleamoon_: 我日了poi了，chrome占了5M的硬盘读写
+21:28 cleamoon_: 确实像病娇女友，一段时间不理就要捅死你
+21:29 yonka_ quit:Ping timeout: 248 seconds
+21:29 hanjian_l: varna: 找到了如何将手中 20 多台旧电脑，组建一台超级计算机？ - feemung的回答 - 知乎
+21:29 hanjian_l: https://www.zhihu.com/question/21116669/answer/18864330
+21:29 hanjian_l: 老外做的
+21:29 varna: 想想二爷和病娇妹妹的对话
+21:30 varna: hanjian_l: 其实我是这么想的
+21:30 varna: 你的需求里有个很根本的矛盾
+21:31 varna: 要做可扩展的服务，就不能太依赖膨胀的单节点
+21:33 yonka joined channel
+21:34 varna: _(:з」∠)_啊，辉夜Persona好强啊
+21:35 yonka quit:Read error: Connection reset by peer
+21:35 varna: _(:з」∠)_就是凹
+21:38 varna: wow keyring
+21:38 varna: 人类的坟场啊
+21:38 Arisaka quit:Ping timeout: 256 seconds
+21:39 varna: puuuu
+21:39 varna: keyring损坏
+21:39 cleamoon_: 噗
+21:40 cleamoon_: 好玩了
+21:40 varna: 手工更新archlinux-keyring
+21:41 varna: 搞定
+21:41 varna: 永远都是这样
+21:41 varna: keyring暴死的时候总得手工拉一次
+21:42 yonka joined channel
+21:43 varna: 结束了
+21:43 cleamoon_: reboot
+21:43 varna: 圆神保佑，我重启了
+21:43 varna quit:Quit: leaving
+21:44 cleamoon_: 见证奇迹的时候到了
+21:44 hanjian_l: https://www.zhihu.com/question/21116669
+21:44 hanjian_l: 好多泼冷水的
+21:45 cleamoon_: 正常
+21:46 hanjian_l: 看来除非我能搞出天河二号那种PCIE通信卡，不然是超算不了，而且就算超算了，他也不可能是通用桌面计算机。
+21:47 yonka quit:Ping timeout: 260 seconds
+21:47 hanjian_l: 显卡还略有可能，这还是拜nv/amd的交火设计
+21:47 hanjian_l: 老老实实炼丹吧，顺便研究一下“云计算"
+21:47 cleamoon_: 用网络通信是可以超算的，我校有一台教育和 pre-/post- 计算的超算就是走网络
+21:47 hanjian_l: 老老实实炼丹吧，顺便研究一下“云计算”
+21:48 hanjian_l: 问题是云计算的货，一般都是单个多核CPU拆开为多个虚拟机，而不是反过来……
+21:48 cleamoon_: 那就是另外的问题了
+21:48 hanjian_l: .
+21:49 cleamoon_: 超算和“云计算”的目的可不一样
+21:49 varna joined channel
+21:50 varna: (｡･ω･)ﾉ复活了
+21:50 hanjian_l: varna: 看下日志
+21:50 hanjian_l: varna: 本来也不会有啥问题
+21:50 varna: 从来不看dmesg
+21:50 varna: 以前其实主要wine暴死
+21:50 varna: 现在不用了，就随他去
+21:50 hanjian_l: varna: 我说irclog……
+21:51 varna: 等下
+21:51 varna: 我的gtkrc炸了
+21:52 cleamoon_: 据说wine 3.0 连office 2016都能运行
+21:52 hanjian_l: 确实可以提
+21:52 hanjian_l: 现在TIM可以稳定运行了
+21:54 cleamoon_: office 重要，qq 什么的随风去吧
+21:54 hanjian_l: varna: 看来我们的机器还是只能炼丹
+21:55 yonka joined channel
+21:55 hanjian_l: varna: 基于容器也不容易让两颗CPU为同一个进程的不同线程运算啊
+21:56 varna: 这下智障了
+21:56 varna: gtk2拒绝识别我的图标主题
+21:57 varna: hanjian_l: 先冷静下
+21:57 hanjian_l: 我得冷静下
+21:59 varna: 玛德，到底升级了什么导致图标失灵
+21:59 yonka quit:Ping timeout: 260 seconds
+22:02 hanjian_l: 你把图标主题重新安装一次吧
+22:03 hanjian_l: 图标主题那个package
+22:03 varna: 我驲，他们不会是……迁到了gtk3图标吧
+22:05 hanjian_l: 我想肯定是的
+22:07 varna: gdk-pixbuf-query-loaders 刷了也没有用
+22:09 hanjian_l: 装个lxapperance吧
+22:09 varna: 有用么……
+22:10 cleamoon_: 有可能有用
+22:11 hanjian_l: 那玩意儿可以让你手工导入theme
+22:11 varna: 我现在就是手工导入theme的
+22:11 hanjian_l: 专治gtk各种不服
+22:12 hanjian_l: 反正字体，鼠标，图标都能改
+22:12 varna: 然而这东西不会给我搞个lxde全家桶么
+22:12 hanjian_l: 你注意下Ss看看有哪几种
+22:12 cleamoon_: 不会
+22:12 hanjian_l: 绝不会
+22:12 cleamoon_: lxde是分开的
+22:12 hanjian_l: lxde的东西从来不会全家桶的
+22:14 varna: 识别不能
+22:14 varna: 太可怕了
+22:14 hanjian_l: 识别不能？
+22:15 varna: 对
+22:15 hanjian_l: 格式不兼容了，死透了
+22:15 hanjian_l: 找aur，换回gtk2
+22:15 hanjian_l: 我很多东西都是ignore upgrade的
+22:15 varna: 这些东西确实是gtk2
+22:15 varna: 我降级一下吧
+22:15 hanjian_l: 我还在思考我们应该用哪种虚拟化
+22:16 varna: 你冷静下
+22:16 hanjian_l: 原生虚拟化（kvm/xen），还是操作系统层虚拟化
+22:16 varna: 事情是可以并行想的
+22:16 varna: 别躁动
+22:16 ksqsf quit:Remote host closed the connection
+22:17 ksqsf joined channel
+22:17 varna: 降级gtk2也没有用
+22:17 hanjian_l: 也对，GPU的问题，现在我已经下了两块主板的询价和转接器的支付
+22:17 hanjian_l: pcie转接器
+22:18 hanjian_l: 然后还有电源问题，电源应该是可以孤立启动的，那么我应该需要一个多孔（10+）排插，
+22:19 hanjian_l: 硬盘有固态和机械两种，根据以后可能做着K-V存储玩，那么我们可以在上面玩裸盘并三层缓存读写的存储系统
+22:21 hanjian_l: 内存总计40GiB，但是分成了10条，我找找看有没有PCIE的内存扩展槽
+22:24 hanjian_l: 内存扩展版有不少
+22:24 hanjian_l: 直接插在DIMM上的
+22:25 hanjian_l: 这样预算超支可能会有点严重
+22:25 hanjian_l: CPU也找到扩展槽了，但是不清楚是不是Dell限定
+22:26 hanjian_l: 如果都能用，那么大概还需要3K+预算
+22:26 hanjian_l: 我想我还是需要抽空去电子市场，看来不得不年初六再开始折腾了
+22:26 hanjian_l: varna: 那会儿我们一起去逛电子市场吧
+22:29 varna: 成
+22:31 ksqsf quit:Remote host closed the connection
+22:31 condy: 叼叼叼
+22:32 ksqsf joined channel
+22:34 cleamoon_: orz
+22:38 varna: 醉了，降级gdk-pixbuf2也没用
+22:38 hanjian_l: 看来要想“万用”要折腾的东西比预计的还要多
+22:41 varna: 虽说关键的应用没受致死性的冲击，但还是很不爽
+22:41 hanjian_l: 羊驼子 是哪天放假？
+22:42 hanjian_l: 毕竟眼睛受伤害
+22:44 varna: 我2.12
+22:44 varna: 其实终端反倒干净了
+22:44 varna: 不看图标只看文字的终端还挺不坏的
+22:45 varna: 但deadbeef就有点不爽了
+22:45 hanjian_l: 那就2月12好了
+22:45 hanjian_l: 我那天也开始放假并且也没回家
+22:46 varna: (｡･ω･)ﾉ
+22:49 ksqsf quit:Remote host closed the connection
+22:49 ksqsf joined channel
+22:55 varna: 醉了，降级什么都没用
+22:55 cleamoon_: 我觉得吧，这机器内存有点小了
+22:56 hanjian_l: 内存？
+22:56 cleamoon_: 内存
+22:56 cleamoon_: 羊驼子用的什么诡异主题
+22:56 varna: 以前一直用的图标主题，AnyColorYouLike
+22:56 varna: gnomelook上的
+22:58 hanjian_l: cleamoon_: 所以我在买内存扩展槽
+22:58 cleamoon_: .....这个从来没用过，不知道了
+22:59 varna: gtk-update-icon-cache -f -t直接报生成缓存失败，怀疑有什么没parse出来的
+23:00 varna: 简单的SVG都能跪，不知道怎么搞的
+23:01 varna: 实在不行，我就研究下这套玩意儿，workaround一下
+23:02 varna: _(:з」∠)_无非就相当于我拿着SVG素材重新做了一套图标——虽然实在懒得动这么大的工程
+23:03 varna: 唉，真的和妹子一样
+23:03 varna: 偶尔会闹闹矛盾
+23:10 cleamoon_: 我校干杂活的古代超算的一个小node：2 x 12 cores Intel E5-2690v3 Haswell，512 GB RAM - 24 cores，1 x NVIDIA Tesla K80
+23:10 cleamoon_: 这个就是用网络通信的超算
+23:14 Meow-J_ quit:
+23:14 varna: 一 转 攻 势 去 I O E 农 村 包 围 城 市 暴 力 革 命 不 可 避
+23:15 Meow-J_ joined channel
+23:26 hanjian_l: cleamoon_: 12核还是2核？
+23:27 hanjian_l: 超算的带宽是多少
+23:30 cleamoon_:  12核
+23:31 cleamoon_: 12 GB/s
+23:31 cleamoon_: 好放肆的超算
+23:33 lh_mouse: 网易居然在搞情趣用品。
+23:33 lh_mouse: 还把广告放在邮箱的主页上？？！
+23:34 lh_mouse: 夭寿啦！
+23:34 varna: ...
+23:34 varna: 成人用品其实一直是个销量不错的行业
+23:34 varna: 但公开打广告确实不太符合国情
+23:34 lh_mouse: varna, https://img.vim-cn.com/1e/4502121a3cbfd609bfaeea991e552155c4fdaf.png
+23:35 varna: ...
+23:35 varna: 神TM
+23:35 varna: 这么打广告有点强X用户的品味啊
+23:35 varna: 不喜欢
+23:36 lh_mouse quit:Read error: Connection reset by peer
+23:37 ksqsf quit:Ping timeout: 276 seconds
+23:37 cleamoon_: 什么鬼
+23:39 hanjian_l: cleamoon_: 每秒12GB是怎么回事
+23:40 Aldrich quit:
+23:41 Aldrich joined channel
+23:42 cleamoon_: hanjian_l: Full bisectional Infiniband EDR
+23:42 cleamoon_: 你不要总想和不差钱的货比呀.....
+23:42 hanjian_l: 我看到infiniband我就认栽了
+23:43 varna: 都是经费啊
+23:43 cleamoon_: 这个还是没人想用的慢机器呢....
+23:43 varna: 走私给我怎么样
+23:43 varna: 我出￥450
+23:44 cleamoon_: 怎么也得12450吧
+23:44 varna: ￥12450也行
+23:44 cleamoon_: 单位是kg 24k gold
+23:44 varna: 日元哦
+23:44 cleamoon_: 学校确实在卖这台机器，不过没人要.....
+23:44 varna: 要不你拿出拆井盖的气势，扒一些周边回来
+23:46 cleamoon_: 周边都是尘土
+23:46 varna: 尘归尘土归土，设备好好的就行
+23:47 hanjian_l: 这种通信工具主要是销售额捉急吧
+23:47 hanjian_l: 所以便宜不了
+23:47 varna: 不然也不会有人想去开发黑光纤
+23:49 hanjian_l: https://usercontent.irccloud-cdn.com/file/il3N4tfu/Screenshot_2018-02-06-23-48-57-35.png
+23:49 cleamoon_: 正经用于计算的超算用的不是这个
+23:49 hanjian_l: . infiniband卡不贵，交换机贵
+23:50 varna: 这个交换机吧
+23:50 hanjian_l: 所以如果两台直连会不会好点
+23:50 cleamoon_: 交换机一般多少钱
+23:50 hanjian_l: 看图
+23:50 varna: 蛤蛤蛤蛤
+23:50 hanjian_l: 交换机4位数，卡只要三位数
+23:51 cleamoon_: 嗯，很好....
+23:52 hanjian_l: 找到一个二手的便宜货
+23:52 hanjian_l: 800
+23:52 varna: 惊恐
+23:52 varna: 这么便宜，怕是快坏了
+23:52 hanjian_l: 8口的
+23:52 hanjian_l: https://usercontent.irccloud-cdn.com/file/metNF6GX/Screenshot_2018-02-06-23-51-53-59.png
+23:52 varna: ...
+23:55 varna: _(:з」∠)_驲了，死活凹不出单体咒杀的技能
+23:55 hanjian_l: 卡都便宜，交换机贵

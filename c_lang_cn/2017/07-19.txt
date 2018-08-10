@@ -1,0 +1,393 @@
+00:00 perr quit:Quit: Leaving
+01:06 lh_mouse quit:Read error: Connection reset by peer
+01:37 sottd joined channel
+01:37 sottd: 分享个事情
+01:37 sottd: 刚刚解决了一个bug,感觉整个公司都傻逼了（包括我自己）
+01:38 sottd: 原因是因为一个程序从svn上取下代码，去安卓上运行，然后崩溃。
+01:38 sottd: 今天是上线前两天。
+01:38 sottd: 整个公司来来回回测试，调试，改代码。过了6个小时还没查到bug
+01:39 sottd: 最后发现是那个程序对取下的代码做了点小改动（没commit)
+01:40 sottd: 然后崩了。
+01:40 sottd: 发现的方法是对整个svn版本二分，查到底那一块更新导致的崩溃。最后取最新版本的时候正常了。
+01:42 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 54.0.1/20170628075643]
+03:17 deep-book-gk_ joined channel
+03:33 Izumo quit:Quit: Connection closed for inactivity
+04:09 Youmu quit:Quit: Connection closed for inactivity
+08:51 OwenJia joined channel
+09:05 StardustX joined channel
+09:19 yimis joined channel
+09:19 yimis quit:Client Quit
+09:25 yonka joined channel
+09:26 yonka quit:Remote host closed the connection
+09:26 yonka joined channel
+09:51 fe1fan joined channel
+10:00 Youmu joined channel
+11:41 fe1fan quit:Remote host closed the connection
+11:58 StardustX quit:Quit: Leaving
+12:21 yangqh_ joined channel
+12:23 yangqh_ quit:Client Quit
+12:30 lh_mouse joined channel
+13:43 Mokou joined channel
+14:34 StardustX joined channel
+14:37 sou joined channel
+14:38 sou quit:Client Quit
+15:06 lh_mouse: geordi, << std::strtod("", 0);
+15:06 geordi: 0
+15:27 badb0y joined channel
+17:00 yimis joined channel
+17:20 yimis quit:Quit: yimis
+17:36 yimis joined channel
+17:42 yimis quit:Quit: yimis
+18:28 OwenJia quit:Ping timeout: 255 seconds
+18:42 CloudFStrife joined channel
+18:47 CloudFStrife left channel:"再见"
+19:43 StardustX quit:Quit: Leaving
+19:45 varna joined channel
+19:46 varna: 悲剧，那块黑轴确认烧废了
+19:47 varna: btw 今天在翻JDK的时候发现1.8终于改掉了以前那个超级贰的AtomicInteger
+19:48 varna: 他们曾经写了一个二逼的__atomic_add_fetch(): 首先load, 然后本地加，然后cas, 如果cas失败了就再来一遍，直到成功……
+19:49 iyzsong joined channel
+19:50 varna: 后来Doug Lea搞了一个LongAdder, 实测下来IPS确实成数倍地提升
+19:52 iyzsong: _(:з」∠)_
+19:53 varna: 最近英特尔还搞了个新的skylake片子出来，据称可以减缓活跃核心数增加时候，turbo的下降程度
+19:53 varna: 不过毕竟是新花样
+20:16 Youmu: varna: 问一个问题，http 短连接压测有哪些可优化点
+20:16 Youmu: s/压测//
+20:17 varna: 你被timedwait压崩了么……
+20:17 Youmu: 已经设置 tw_reuse tw_recycle 了
+20:17 Youmu: 顺便还把 tw_bucket 设成了1000
+20:17 Youmu: 但是还是不行 =-=
+20:18 varna: 内核参数调调也不行么
+20:19 Youmu: 调过 somax backlog 相关的
+20:19 Youmu: 把 timestamp 也关了，效果甚微
+20:20 varna: 仍然看到大量timed wait的话，只能加机器了……
+20:22 Youmu: timewait 状态的连接用 netstat 看的话，是比较少了，因为令 tw_bucket = 1000 的话， timewait 状态的连接最多保存 1000 个，多的会被释放掉
+20:22 varna: 但如果你觉得崩了，按说应该少得不显著
+20:23 varna: 所以这个打崩和syn cookie有关系么
+20:23 Youmu: 内核认为syn flood 了
+20:23 Youmu: 但是 syn cookie 只是多增加一个步骤而已，对于正常的连接来说，影响不大吧
+20:24 varna: 压测还是生产环境
+20:24 Youmu: 压测
+20:24 varna: 认定syn洪泛的时候连接会被拒掉吧
+20:26 Youmu: 刚刚看了下 dmesg，发现没有 syn flood 了 =-=
+20:26 Taggnostr joined channel
+20:26 varna: ...
+20:26 Taggnostr2 quit:Ping timeout: 240 seconds
+20:26 varna: 没有洪泛，tw桶也控制住了，但连接数还是上不去？
+20:27 Youmu: 连接数上去了，但是抓包发现，客户端的一个 syn 要重传 2 次
+20:27 Youmu: 到压测末尾，一个连接要经过 10s =-=
+20:28 varna: 半开队列都爆了么
+20:29 Youmu: 半队列这个有测试过，开了 abort_on_overflow ，客户端侧检测到的 RST 数量基本没有增加
+20:31 varna: 这样的话，是否考虑做一系列测试看看性能暴跌的拐点出在什么位置上
+20:33 Youmu: 2 台客户端 24 并发 与 12 台客户端 160 并发测出来的 qps 一样 =-=
+20:33 varna: qps不是目标
+20:34 Youmu: CPU 负载？
+20:34 varna: RT
+20:34 varna: qps在满载和超荷的时候基本会符合定律的
+20:34 varna: 看看RT在什么时候崩掉了
+20:36 Youmu: 这个倒没有完整测试过 =-=
+20:36 varna: 我自己压测的时候关注RT更多
+20:40 Mokou: http://tieba.baidu.com/p/4185478334 什么地方都能冒出伸手党……
+20:40 varna: 日，这块备用键盘的fn触发pgup/down总是有问题
+20:40 varna: 得换个新的了
+20:40 varna: 有没有什么尺寸不大的键盘推荐呢
+20:41 * Mokou 只用全尺寸
+20:41 varna: 桌子摆不开
+20:41 varna: 没四小姐的话也许还有戏
+20:42 Mokou: ikbc c87?
+20:42 Mokou: 360x140x45mm
+20:42 varna: 上一块就是ikbc c87黑轴
+20:42 varna: 尺寸合乎要求，但烧得太快了
+20:42 Mokou: 再入个红轴
+20:42 varna: 原因不明
+20:42 varna: 样子我也比较喜欢
+20:42 varna: 但这次想换个品牌
+20:43 Mokou: mx-board 1.0贵一些，而且似乎大一些
+20:43 Mokou: 不过是cherry
+20:44 varna: 60%的似乎泛用性不好，只适合vim
+20:44 varna: 或者踏板
+20:45 varna: 如果能增补带有方向键的小键盘似乎也凑合
+20:45 varna: 不过小键盘多数只有数字键ppoi
+20:45 Mokou: mx-board 1.0是87键的啊
+20:45 Mokou: 370x150x25
+20:46 varna: 不，我的意思是有点想试试60%尺寸
+20:46 Mokou: なるほど
+20:46 varna: 对鼠标操作更友好
+20:46 varna: 但一般终端操作仍然需要方向键
+20:46 varna: 如果能解决的话，似乎比较雷巡
+20:46 varna: 理想*
+20:46 Mokou: uccu
+20:47 varna: lmcc
+20:47 Mokou: zsh可以用emacs键绑定
+20:47 varna: (｡･ω･)你的意思是说，我得买一个踏板
+20:47 iyzsong: 2333
+20:47 Mokou: (｡･ω･)我的意思是你需要锻炼一下小指
+20:47 Mokou: 不然以后有了妹子怎么办
+20:47 varna: (｡･ω･)我的腕管神经劳损已经比较严重了
+20:48 varna: (｡･ω･)有妹子的话，我可以跟她分手嘛
+20:48 Mokou: 你预算多少
+20:48 varna: 期望五百软妹币左右
+20:49 varna: 1k+-我怕又烧了
+20:49 Mokou: 五百软的60%恐怕还是得ikbc……
+20:49 varna: 驲
+20:49 varna: 八百软呢
+20:49 Mokou: 直接跳到1.2k
+20:49 varna: ...
+20:49 Mokou: filco minila
+20:49 varna: 万恶的资本主义
+20:49 varna: 我观望一下
+20:49 varna: 1.2k不考虑
+20:50 Mokou: 观望下吧，实在不行你就考虑下mx1.0
+20:50 varna: 有那些钱，再加一些软，我都能给zbox换个核了
+20:50 Mokou: 毕竟cherry
+20:50 varna: +
+20:52 yonka quit:Remote host closed the connection
+20:52 varna: 似乎给zbox换个核也不坏
+20:52 varna: 最近看看手册，有没有坑
+20:53 varna: z酱也该升级下了
+20:53 Mokou: (｡･ω･)要不然你弄个二百的达尔优，搞出一堆灯
+20:53 varna: (｡･ω･)杀马特杀马特，洗剪吹吹吹吹
+20:53 Mokou: 在京城去的那家网吧里面倒是一堆达尔优
+20:54 Mokou: 我就记得我那机器的左shift是坏的，敲密码敲半天
+20:56 varna: 网吧里的键盘手感太烂
+20:56 varna: 一种真姬感
+21:03 StardustX joined channel
+21:07 Mokou: http://wx1.sinaimg.cn/mw690/a65784afly1fhogc6ligij20dd0nkmzl.jpg 微NSFW
+21:13 iyzsong: _(:з」∠)_
+21:27 Youmu: 1.9G 的 pcap 文件……
+21:27 Youmu: #GG
+21:27 varna: ...
+21:39 StardustX quit:Quit: Leaving
+21:40 lhanjian: varna: 小姐姐好难打
+21:40 lhanjian: varna: 我已经269个小时了
+21:41 varna: 芙莉德的话
+21:41 varna: P1掌握掉所有招式，注意抓隐身
+21:41 lhanjian: 三阶段容错率太低
+21:41 lhanjian: 而我已经没有余火了
+21:41 varna: P2说书人杖照着神父喷一下，两发足够毙命
+21:41 lhanjian: 一二阶段都不是问题
+21:42 lhanjian: 说书人我是把老爷爷喷死了
+21:42 lhanjian: 感觉这虽然不是逃课，相当于抄作业了
+21:42 varna: P3注意两种爆炎AOE的躲避时机（一个提前一个滞后），八连的前四连看看是否断连，断掉的话直接抢断
+21:43 varna: 黑蛇连续翻滚躲开，黑炎附魔的三连直接抓收招
+21:43 varna: 隐身可以抓现形，如果抓不到务必保持移动
+21:43 varna: 进P3推荐保有十二瓶以上的血
+21:43 varna: 然后就看手法了
+21:43 Mokou: http://wx2.sinaimg.cn/mw690/006SJv14ly1fhn29lvr5dj30hl0g1n01.jpg
+21:44 lhanjian: 12瓶……
+21:44 varna: P1一两瓶，P2说书人杖的话应该一瓶容错
+21:44 varna: 十瓶以上安定
+21:44 lhanjian: 我最近的一回，就剩一刀的血，结果小姐姐出刀比我的黑特大快
+21:44 varna: P1不喝更好
+21:45 varna: 镰刀斩击有时候没有硬直，不好判断
+21:46 varna: 不行的话准备一些反曲刃扔过去
+21:46 varna: 小姐姐弱血
+21:52 Izumo joined channel
+21:52 Mokou quit:Remote host closed the connection
+21:59 lhanjian: 吐血
+21:59 lhanjian: 用特大剑就是忍不住莽
+22:00 varna: 特大剑的莽是建立在一换一不亏的基础上
+22:00 varna: 然而你用一千三的血去换两万二……
+22:04 lhanjian: 干死了
+22:04 lhanjian: 麻蛋
+22:05 lhanjian: 我现在是1500血180精
+22:05 varna: ...
+22:05 varna: 等下
+22:05 varna: 180足够了
+22:05 varna: 无buff面板封顶160
+22:05 lhanjian: 我现在是余火状态
+22:05 varna: 三周目？
+22:05 lhanjian: 嗯
+22:05 varna: 差不多
+22:05 varna: 我捏火也就1.6k
+22:06 lhanjian: 俘虏戒指宠爱戒指
+22:06 varna: 锁链不推荐PvE用
+22:06 varna: 留一个机动位吧
+22:07 lhanjian: 我一般机动绿花
+22:07 varna: 我固定宠爱+3绿花+3，跑图消音，PvE钢铁+3
+22:07 lhanjian: 一般我不用钢铁，用哈维尔
+22:07 varna: PvP把后两个换成咏唱加速和法伤增幅
+22:08 lhanjian: 话说最高输出是哪样戒指和法术？
+22:08 varna: 幽暗头冠，魔力怪手，狂吼龙徽，副手烛台
+22:08 varna: 这个是法伤
+22:09 varna: 暗术我不熟悉
+22:09 varna: 咒术增幅太少，PvE大概是靠咒术增幅凹大火球，不知道比起结晶枪和暗术如何
+22:11 lhanjian: 物理攻击呢？
+22:11 lhanjian: 罗伊德法王眼狼曲刀？
+22:11 varna: 红泪石+摩里安刃剑+老狼曲剑+法王眼，HP极低时
+22:12 lhanjian: 刷誓约物品好辛苦
+22:12 varna: 懒得刷了，太麻烦……
+22:12 lhanjian: 是啊
+22:12 varna: 耳朵我浪费的数目恐怕也有二十多个了
+22:13 varna: 太阳徽章交到二十六个的时候一不小心开周目了
+22:13 varna: 然后就一直懒得管……
+22:13 lhanjian: 我就是……浪费了25个耳朵
+22:14 lhanjian: 一个个刷够了耳朵，就去把团长砍了，温暖的火加烙铁
+22:14 varna: 真可怕
+22:14 varna: 总有一天我要在法王后院抓到你
+22:21 lhanjian: 羊驼子来竞技场吧
+22:22 varna: 稍等，P5走点剧情存个档
+22:23 lhanjian: 低负重的翻滚距离真可怕
+22:28 lhanjian: 用特大剑会上瘾
+22:28 lhanjian: 现在连打boss都忍不住要对凹
+22:29 lhanjian: 强行打断她，然后补一刀什么的
+22:30 varna: 已登陆，配对密码是？
+22:32 varna: lhanjian: ^
+22:32 lhanjian: ok，稍等
+22:33 lhanjian: 和上次一样，lhj123
+22:33 lhanjian: go
+22:33 lhanjian: 圆形舞台
+22:33 lhanjian: varna:
+22:34 varna: 匹配不到
+22:34 lhanjian: ok
+22:35 lhanjian: Orz
+22:35 varna: 太温和了
+22:36 varna: 卧槽崩溃了……
+22:36 varna: 重开一下
+22:36 lhanjian: 噗
+22:39 lhanjian: 用特大剑PVP不熟悉233
+22:40 lhanjian: 不过这种虎的感觉真不错
+22:40 varna: 感觉你出招还是很温和
+22:40 lhanjian: 是啊，滚啊滚戳啊戳的
+22:40 lhanjian: 箭步我也不太舍得用
+22:41 lhanjian: 似乎配对不太好？
+22:43 lhanjian: 还是要敢于箭步，敢于蓄力重击
+22:45 lhanjian: 法兰大剑的削韧倍率是不是不高
+22:45 varna: 不高
+22:45 varna: 除了看起来帅之外没什么用
+22:46 lhanjian: 狡猾的法爷
+22:46 lhanjian: 特大剑还有背后判定太搞笑了
+22:46 varna: 基本上法兰大剑没法打断特大剑出招的
+22:50 lhanjian: 法兰大剑小动作厉害
+22:51 varna: 其实基本是特大剑模组
+22:52 lhanjian: 哎哟，亏了
+22:53 lhanjian: 这个箭步确实强大的飞起
+22:53 varna: 很厉害的
+22:54 lhanjian: 还有蓄力重击，一个拍地上一个凹上天
+22:55 lhanjian: 羊驼子的精力很足啊
+22:55 varna: 面板179
+22:56 lhanjian: 我180
+22:56 varna: 法兰大剑平砍可以劈六刀
+22:56 Izumo: "关于“送外卖是使用清真箱还是炼丹炉还是莲花台还是圣光盒”这一问题上，克苏鲁教派出现了罕见的沉默 ​​​​"
+22:56 varna: 一般特大剑四刀
+22:56 varna: 233333333
+22:57 lhanjian: 克鲁苏怎么了
+22:57 varna: 发糖
+22:57 CyrusYzGTt quit:Ping timeout: 258 seconds
+22:57 lhanjian: 法兰大剑更像大剑
+22:58 varna: 特大剑的模组，大曲刀的耗精
+22:58 varna: 面板587
+22:58 varna: 我越来越觉得这是个自虐武器
+22:59 varna: 不过太习惯他的动作了
+22:59 lhanjian: 我面板640
+23:00 varna: 箭步凹空不收招是会死的
+23:00 lhanjian: 我知道
+23:00 lhanjian: 我把精力浪费太多
+23:02 lhanjian: 我下一把上激光炮
+23:02 varna: 月光大剑？
+23:02 lhanjian: 双王子
+23:03 varna: 哦
+23:04 lhanjian: 贪刀了贪刀了
+23:04 lhanjian: 其实是我忘记补蓝了
+23:06 varna: 算错了
+23:06 lhanjian: 哈哈哈
+23:06 lhanjian: 这完全是手枪对法术
+23:06 varna: 算了，安稳点打
+23:06 lhanjian: 好像还有一把刀也是激光炮
+23:06 varna: 直剑
+23:07 lhanjian: 镰刀
+23:07 varna: 咦
+23:07 varna: 打成这样就有点烂了
+23:08 lhanjian: 有的伙计很反感我用激光枪，如果我输了，有的伙计会对我下指
+23:08 varna: 还算好的
+23:08 varna: 圣光+回血的也有
+23:08 lhanjian: 回血……
+23:08 varna: 习惯了，不在乎
+23:09 varna: 不管他们用什么，我都是这一套
+23:09 varna: 精度不够是我不行
+23:09 Izumo: 黒塗りの高級車に追突してしまうbot:
+23:09 Izumo: 人類が制海権を失った世界。海を蹂躙する「深海棲艦」に対抗する艦娘の拠点「鎮守府」に、ある日、新たな艦娘「特型駆逐艦・吹雪」が着任し、疲れからか、不幸にも黒塗りの高級車に追突してしまう。後輩をかばいすべての責任を負った三浦に対し、車の主、暴力団員谷岡に言い渡された示談の条件とは…。
+23:10 varna: 奇怪
+23:10 lhanjian: 延迟了？
+23:10 lhanjian: 激光炮有点目押考试的味道
+23:12 varna: 总算错血
+23:12 lhanjian: 激光炮竟然还可以霸体
+23:12 lhanjian: 强行扛了你的结晶块
+23:13 lhanjian: 我换黑骑士剑了（大剑）
+23:14 lhanjian: 我去洗个澡
+23:14 lhanjian: Afk
+23:14 varna: .
+23:14 lhanjian: varna: .
+23:15 lhanjian: 忍耐不太会用
+23:15 lhanjian: 不过这激光炮确实太鬼畜了
+23:15 lhanjian: 萝莉安自己的激光炮都没这么快
+23:15 varna: 应该是我算错什么了
+23:16 lhanjian: 我一直在抓羊驼子的翻滚非无敌帧
+23:17 varna: 居然还有用黑什么剑的……
+23:19 varna: 呀，杀回金牌了
+23:20 varna: 不对
+23:20 varna: 还是银牌
+23:25 lhanjian: 光明刀233
+23:25 varna: 回来了？
+23:25 lhanjian: 嗯
+23:26 lhanjian: loading
+23:28 lhanjian: 似乎还有不少大剑特大剑是特殊模组的？
+23:28 varna: 各有差别
+23:29 lhanjian: 刚才碰到一个也是尬舞的大剑
+23:29 lhanjian: 羊驼子你的韧性是多少？
+23:29 varna: 盖尔大剑
+23:29 varna: 10.x
+23:30 lhanjian: 韧性太低面对轻武器也会吃亏的
+23:30 lhanjian: 我是32
+23:30 varna: 面板10.23
+23:30 varna: 我一直的原则是不管对手什么配置，我只cosplay上
+23:30 varna: 输了就是战术不对精度不够
+23:31 varna: 这个算是忍耐的正解
+23:31 lhanjian: 嗯，那我也cosplay好了
+23:31 lhanjian: 也轻松愉快
+23:31 varna: 无所谓
+23:31 varna: 我不是为了轻松愉快去的
+23:31 lhanjian: 毕竟实用的装备太丑了
+23:31 varna: 该赢照赢，输了就反省
+23:32 varna: 奥盾圣光箭步忍耐惜别雷柱什么的都见过一圈了……
+23:33 varna: 玩脱了2333
+23:33 lhanjian: 强大是一时的，漂亮是一辈子的
+23:34 varna: 夏姬八打就会丢人
+23:35 lhanjian: 这个忍耐的用法也忒简单了
+23:35 varna: 目押确反
+23:37 lhanjian: 轻武器不加盾还是难用
+23:37 varna: 换套更烂的装备试试
+23:38 varna: 好久没穿PvE衣服出来见人了
+23:39 lhanjian: 炎型大剑我死活刷不出来
+23:40 varna: 这也是个玩具
+23:41 lhanjian: 没耐力了233
+23:43 lhanjian: 盖尔大剑？
+23:43 varna: +
+23:43 lhanjian: 套路看着顺眼
+23:43 lhanjian: 仅次于尬舞大剑了
+23:43 varna: 其实这个套路很实用
+23:44 varna: 佯攻追打
+23:44 varna: 战技砸地凹错了2333
+23:44 lhanjian: 亚特大的战技削韧不太足
+23:45 lhanjian: 应该叫亚长枪才对233
+23:45 lhanjian: 长枪里面没有比他好用的
+23:46 lhanjian: 233
+23:46 lhanjian: 卑鄙的外乡人
+23:46 varna: 猎人手段
+23:47 lhanjian: 最莽的环印大剑
+23:48 varna: 这次我试一个从来没玩过的花招
+23:49 varna: 这玩意真的不好用
+23:49 lhanjian: 太慢了
+23:51 lhanjian: 蛤曲？
+23:51 varna: 狼
+23:51 varna: 我没有蛤曲
+23:51 lhanjian: 哦，我剑草不够，没得到
+23:54 varna: 暗胧
+23:54 lhanjian: 我们把徽章拿掉吧，看不清装备
+23:56 varna: 破碎刀
+23:56 lhanjian: 嗯PVP神器
+23:57 varna: 黑刀
+23:58 lhanjian: 匕首拳套对距离要求太苛刻，玩不来
+23:59 varna: 啊，羽骑士
+23:59 varna: 噗，我运10搞什么出血……
+23:59 lhanjian: 羽骑士旋风

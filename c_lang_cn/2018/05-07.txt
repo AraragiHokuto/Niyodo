@@ -1,0 +1,180 @@
+00:05 hashjian_l: Stevearzh: 没事，多周目很正常
+00:50 lh_mouse joined channel
+00:50 IntPtr quit:Quit: Ping timeout (120 seconds)
+00:52 IntPtr joined channel
+00:52 lh_cat quit:Ping timeout: 260 seconds
+01:07 cleamoon_ joined channel
+01:22 lh_mouse quit:Ping timeout: 268 seconds
+01:56 yonka quit:Remote host closed the connection
+02:57 yonka joined channel
+02:59 _31N108E joined channel
+03:02 yonka quit:Ping timeout: 256 seconds
+03:07 _30N107E joined channel
+03:20 _30N107E quit:Quit: http://quassel-irc.org - Chat comfortably. Anywhere.
+03:23 _30N107E joined channel
+03:34 _30N107E quit:Quit: http://quassel-irc.org - Chat comfortably. Anywhere.
+03:34 _30N107E joined channel
+03:40 _31N108E quit:Quit: Mutter: www.mutterirc.com
+04:04 _30N107E quit:Quit: http://quassel-irc.org - Chat comfortably. Anywhere.
+05:12 whocares_2 quit:Remote host closed the connection
+05:13 whocares_2 joined channel
+05:18 IntPtr quit:Quit: Ping timeout (120 seconds)
+05:19 IntPtr joined channel
+05:53 Stevearzh quit:*.net *.split
+05:54 Stevearzh joined channel
+06:00 Stevearzh quit:Read error: Connection reset by peer
+06:47 yangwang1999 quit:Remote host closed the connection
+07:29 yonka joined channel
+07:33 yonka quit:Ping timeout: 260 seconds
+08:03 wlemuel joined channel
+08:07 wlemuel quit:Client Quit
+08:55 Stevearzh joined channel
+08:55 GreyHound joined channel
+09:04 NebulaMoe quit:Quit: Leaving...
+09:06 wlemuel joined channel
+09:27 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+09:31 wlemuel joined channel
+09:34 Stevearzh quit:Ping timeout: 240 seconds
+09:35 lh_mouse joined channel
+09:39 GreyHound quit:Ping timeout: 240 seconds
+09:52 NebulaMoe joined channel
+10:14 yonka joined channel
+10:22 AetherWind joined channel
+10:27 \s joined channel
+10:27 \s quit:Changing host
+10:27 \s joined channel
+10:43 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+11:00 wlemuel joined channel
+11:05 NebulaMoe quit:Quit: Leaving...
+11:07 lh_mouse quit:Read error: Connection timed out
+11:55 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+12:00 GreyHound joined channel
+12:12 lh_ideapad joined channel
+12:20 NebulaMoe joined channel
+12:20 GreyHound quit:Read error: Connection reset by peer
+12:45 matchray: 给ccls一个配置选项起名，用来指定额外的clang命令行选项。原来叫 extraClangArguments
+12:45 matchray: clang-tidy 等工具叫 -extra-arg= (单数形式)
+12:46 matchray: 和 -extra-arg-before=
+12:46 matchray: 我应该怎么弄？ clang.extraArgs 和 clang.extraArgsBefore ?
+12:52 wlemuel joined channel
+12:54 sixand joined channel
+12:56 cleamoon_ quit:Quit: Connection closed for inactivity
+13:00 matchray: 快速列出一个class有哪些member function是不是很有意义
+13:00 matchray: 根据类型名找函数
+13:01 matchray: 想一想除了 $ccls/{call,member,inheritance}Hierarchy 外还有什么方便实现又有用的功能
+13:17 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+13:25 lh_mouse joined channel
+14:03 wlemuel joined channel
+14:03 yonka quit:Ping timeout: 240 seconds
+14:13 yonka joined channel
+15:03 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+15:32 wlemuel joined channel
+15:36 wlemuel quit:Max SendQ exceeded
+15:39 hashjian_l: matchray: 喵睿
+15:42 * matchray 喵唔~喵唔~呜
+15:57 hashjian_l: matchray: https://www.zhihu.com/question/276181325 喵睿趁机打广告
+16:03 lh_ideapad: matchray, 爆照，
+16:13 sixand quit:Ping timeout: 248 seconds
+16:16 CyrusYzGTt quit:Ping timeout: 268 seconds
+16:29 hashjian_l: Mokou: 
+16:40 _30N107E joined channel
+17:10 CyrusYzGTt joined channel
+17:39 _30N107E quit:Quit: http://quassel-irc.org - Chat comfortably. Anywhere.
+17:45 sixand joined channel
+17:48 sixand1 joined channel
+17:50 sixand quit:Ping timeout: 268 seconds
+17:51 lh_not_bot quit:Ping timeout: 240 seconds
+17:51 lh_not_bot joined channel
+17:52 sixand1 quit:Ping timeout: 264 seconds
+18:04 yonka quit:Remote host closed the connection
+18:04 yonka joined channel
+18:09 yonka quit:Ping timeout: 256 seconds
+18:37 AetherWind quit:Quit: Leaving
+18:40 yonka joined channel
+18:44 yonka quit:Ping timeout: 264 seconds
+18:50 GreyHound joined channel
+18:55 GreyHound quit:Ping timeout: 260 seconds
+19:07 ifr0zen joined channel
+19:16 cleamoon_ joined channel
+19:40 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pv/pj_407233.jpg@596w_1l.jpg  什么地方不对
+19:48 lh_mouse: geordi, << __builtin_ia32_tzcnt(42)
+19:48 geordi: error: '__builtin_ia32_tzcnt' was not declared in this scope
+20:03 hashjian_l: cleamoon_: 绅士
+20:03 cleamoon_: hashjian_l: 爆
+20:05 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pt/my_408325.jpg@596w_1l.jpg  这货是丧彪呀
+20:06 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pv/tb_406872.jpg@596w_1l.jpg  
+20:09 cleamoon_: hashjian_l: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pt/89_407446.gif@596w_1l.gif
+20:12 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/pt/8x_407426.jpg@596w_1l.jpg  稍微走点心行不
+20:22 yonka joined channel
+20:28 yonka_ joined channel
+20:28 yonka quit:Read error: Connection reset by peer
+20:34 hashjian_l: cleamoon_: 这猫在求艹
+20:36 cleamoon_: 欲求不满的喵
+20:37 ifr0zen quit:
+20:58 yonka_ quit:Remote host closed the connection
+20:59 yonka joined channel
+21:00 AetherWind joined channel
+21:02 AetherWind quit:Client Quit
+21:03 yonka quit:Ping timeout: 256 seconds
+21:03 whocares_2_ joined channel
+21:08 hashjian_l: https://usercontent.irccloud-cdn.com/file/IGzzQKAX/IMG20180507195244.jpg
+21:08 hashjian_l: cleamoon_: quin的新黑魂视频令人震惊啊
+21:10 yonka joined channel
+21:11 whocares_2 quit:*.net *.split
+21:15 yonka quit:Remote host closed the connection
+21:15 yonka joined channel
+21:20 yonka quit:Ping timeout: 248 seconds
+21:26 varna joined channel
+21:28 cleamoon_: 怎么个震惊?
+21:35 lh_ideapad quit:Remote host closed the connection
+21:48 QCF joined channel
+21:48 QCF quit:Client Quit
+22:01 varna: 噗叽啪
+22:16 yonka joined channel
+22:20 yonka quit:Remote host closed the connection
+22:20 yonka joined channel
+22:21 u0_a210 joined channel
+22:21 yonka quit:Remote host closed the connection
+22:24 AetherWind joined channel
+22:25 u0_a210 quit:Quit: WeeChat 2.1
+22:26 AndChat611184 joined channel
+22:27 AndChat611184 quit:Client Quit
+22:32 varna: 见鬼了，谁给外面的路由做了个复位
+22:44 varna: http://tieba.baidu.com/p/5686757053 <-- 惊现Ureys猫鼻子大犇
+22:45 varna: 想打个招呼，不过帐号被全吧封禁了
+23:06 AetherWind quit:Changing host
+23:06 AetherWind joined channel
+23:09 cleamoon_: b站要求绑定手机之后瞬间投币回复人数少了很多
+23:09 cleamoon_: 贴吧也没多少正经人用了
+23:09 cleamoon_: 不知道这些人都是怎么想的
+23:14 varna quit:Ping timeout: 240 seconds
+23:15 varna joined channel
+23:15 yonka joined channel
+23:16 varna quit:Client Quit
+23:16 varna_ joined channel
+23:16 varna_ is now known as varna
+23:16 AetherWind quit:Quit: IRC for Sailfish 0.9
+23:17 varna: 一阵拥塞
+23:17 varna: 还有个被吸血的鸡疯狂堵网络
+23:18 AetherWind joined channel
+23:19 yonka quit:Ping timeout: 240 seconds
+23:26 AetherWind quit:Remote host closed the connection
+23:26 AetherWind joined channel
+23:27 AetherWind quit:Remote host closed the connection
+23:27 AetherWind joined channel
+23:27 AetherWind quit:Remote host closed the connection
+23:28 AetherWind joined channel
+23:33 AetherWind quit:Quit: IRC for Sailfish 0.9
+23:34 AetherWind joined channel
+23:36 AetherWind quit:Client Quit
+23:40 hashjian_l: 吼
+23:41 Stevearzh joined channel
+23:41 hashjian_l: cleamoon_: quin竟然哥打的这么安稳的
+23:41 hashjian_l: varna: 141特遣队
+23:43 AetherWind joined channel
+23:43 cleamoon_: 难道quin一定就要是猛男吗
+23:45 AetherWind quit:Client Quit
+23:46 lh_ideapad joined channel
+23:46 hashjian_l: cleamoon_: 我以为他是谐星二五仔呢，没想到是个遛无名的bad，ass
+23:50 cleamoon_: 二五仔都在鱼市呢
+23:59 varna quit:Ping timeout: 264 seconds

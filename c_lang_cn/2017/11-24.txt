@@ -1,0 +1,207 @@
+00:04 cuichen joined channel
+00:07 cuichen: 23333
+00:08 cuichen left channel:"WeeChat 1.4"
+00:08 cuichen joined channel
+00:10 cuichen left channel:"WeeChat 1.4"
+00:13 lh_mouse: geordi, << _rdpid_u32
+00:13 geordi: error: '_rdpid_u32' was not declared in this scope
+00:13 lh_mouse: geordi, << _mm_setzero_pd;  #include <emmintrin.h>
+00:13 geordi: error: undefined reference to '_mm_setzero_pd()'
+00:14 Dove: 睡觉去了。
+00:14 Dove: 诸君晚安，夜间愉快。
+00:14 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+00:20 cuichen joined channel
+00:53 cuichen quit:Ping timeout: 246 seconds
+01:12 Xilzzerts joined channel
+01:16 lh_mouse quit:Ping timeout: 240 seconds
+01:17 Xilzzerts quit:Ping timeout: 240 seconds
+02:06 Xilzzerts joined channel
+02:11 Xilzzerts quit:Ping timeout: 240 seconds
+02:12 Xilzzerts joined channel
+02:16 Xilzzerts quit:Ping timeout: 240 seconds
+02:42 B005ter joined channel
+04:25 Youmu quit:Quit: Connection closed for inactivity
+04:53 Xilzzerts joined channel
+04:57 Xilzzerts quit:Ping timeout: 240 seconds
+05:05 B005ter quit:Quit: Leaving.
+05:47 Xilzzerts joined channel
+05:51 Xilzzerts quit:Ping timeout: 240 seconds
+05:52 Xilzzerts joined channel
+05:56 Xilzzerts quit:Ping timeout: 240 seconds
+07:53 Xilzzerts joined channel
+07:57 Xilzzerts quit:Ping timeout: 240 seconds
+08:47 Xilzzerts joined channel
+08:48 lh_mouse joined channel
+08:52 Xilzzerts quit:Ping timeout: 240 seconds
+08:52 Xilzzerts joined channel
+08:57 Xilzzerts quit:Ping timeout: 240 seconds
+09:08 L-ios1 joined channel
+09:10 L-ios quit:Ping timeout: 248 seconds
+09:10 L-ios1 is now known as L-ios
+09:10 dh_pc joined channel
+09:49 Xilzzerts joined channel
+09:51 L-ios1 joined channel
+09:51 L-ios quit:Ping timeout: 248 seconds
+09:51 L-ios1 is now known as L-ios
+09:55 Youmu joined channel
+09:59 Xilzzerts quit:Quit: Leaving
+10:04 L-ios quit:Ping timeout: 255 seconds
+10:05 L-ios joined channel
+10:27 L-ios quit:Quit: L-ios
+10:33 L-ios joined channel
+10:47 L-ios quit:Ping timeout: 240 seconds
+11:01 L-ios joined channel
+11:12 \s joined channel
+11:12 \s quit:Changing host
+11:12 \s joined channel
+12:12 \s quit:Quit: ZZZzzz…
+12:17 \s joined channel
+12:17 \s quit:Changing host
+12:17 \s joined channel
+12:21 \s quit:Client Quit
+12:39 bzzzt quit:Ping timeout: 248 seconds
+12:40 L-ios quit:Quit: L-ios
+13:57 \s joined channel
+13:57 \s quit:Changing host
+13:57 \s joined channel
+13:59 bzzzt joined channel
+14:43 lh_mouse: geordi, { auto pd = make_unique<D>(); auto pb1 = reinterpret_cast<B *>(pd.get()); auto pb2 = (B *)pd.get(); cout <<pb1, pb2; } struct A { double a; virtual ~A(){ } }; struct B { double b; virtual ~B(){ } }; class D : A, B { };
+14:43 geordi: 0x26d5650, 0x26d5660
+15:34 Dove joined channel
+15:40 zb111 joined channel
+15:45 CyrusYzGTt quit:Ping timeout: 255 seconds
+16:13 CyrusYzGTt joined channel
+16:39 Dove quit:Ping timeout: 240 seconds
+16:46 dh_pc quit:Ping timeout: 240 seconds
+16:47 zb111 quit:Read error: Connection reset by peer
+16:47 \s quit:Quit: ZZZzzz…
+16:48 zb111 joined channel
+16:53 zb111_ joined channel
+16:54 zb111__ joined channel
+16:57 zb111 quit:Ping timeout: 268 seconds
+16:57 zb111_ quit:Ping timeout: 252 seconds
+16:58 zb111 joined channel
+17:00 zb111_ joined channel
+17:00 zb111__ quit:Ping timeout: 248 seconds
+17:02 zb111 quit:Ping timeout: 248 seconds
+17:03 dh_pc joined channel
+17:04 zb111_ quit:Ping timeout: 240 seconds
+17:05 zb111 joined channel
+17:08 Youmu: 为啥2个输出不一样 =-=
+17:08 Youmu: :o 看漏了，原来是多继承
+17:09 \s joined channel
+17:09 \s quit:Changing host
+17:09 \s joined channel
+17:12 Dove joined channel
+17:12 Youmu: geordi: remove first A,
+17:12 geordi: 0x2509650, 0x2509650
+17:33 zb111 quit:Ping timeout: 240 seconds
+17:45 MameYang joined channel
+17:55 dh_pc quit:Remote host closed the connection
+18:29 MameYang quit:Remote host closed the connection
+18:34 Dove quit:Ping timeout: 250 seconds
+18:41 Dove joined channel
+18:44 T2 joined channel
+18:45 Dove quit:Ping timeout: 240 seconds
+18:57 T2 is now known as Dove
+18:58 iyzsong joined channel
+19:08 \s quit:Ping timeout: 250 seconds
+19:29 Dove: iyzsong: 你们先写点别的等我一下好不？我下周去一趟贵州。
+19:29 iyzsong: _(:з」∠)_
+19:29 Dove: 我也很烦
+19:30 Dove: 没事瞎j8乱跑个什么玩意
+19:30 iyzsong: 羡慕啊
+19:30 Dove: 美其名曰 旅游
+19:31 Dove: 无奈我爹非要让我去，那个傻逼想到一出就是一出，别人都必须配合他。
+19:31 Dove: 其实多半人都这样
+19:32 Dove: 本事不大，脾气不小。
+19:32 Dove: 包括我
+19:37 Dove: 想戒除这种自以为是，很难。
+19:37 Dove: 总是不知不觉又冒出来了。
+19:38 Dove: 何况我爹那种压根没有自知之明的伙计。
+19:52 cleamoon_: 这时候笑就好了
+19:58 B005ter joined channel
+20:01 Dove: 我也觉得
+20:15 iyzsong: 你一见我就笑，我这年少无知太其妙。和我在一起，是否很无聊？ 2333
+20:16 Dove: iyzsong: 你才不无聊。
+20:17 Dove: 你想多了
+20:17 Dove: 见你就笑是因为你有意思。
+20:20 iyzsong: 周末好 _(:з」∠)_
+20:21 Dove: 周末好
+20:37 StardustX[C]: iyzsong: 我也想加入 hentai noob 组 _(:з」∠)_ nebula_moe (at) outlook.com 
+20:38 iyzsong: (｢・ω・)｢
+20:39 iyzsong: StardustX[C]: 发了
+20:40 hitman-usa joined channel
+20:40 StardustX[C]: OK
+20:46 Dove: iyzsong: 你们先写吧，我自己慢慢摸索。
+20:47 Dove: 也比较有乐趣
+20:48 Dove: 主要是我效率实在不高，赶不上你们的进度。
+20:51 iyzsong: 别指望我，我只会瞎搞。
+20:51 cleamoon_: 宋先生发了
+20:51 Dove: 没敢指望
+20:58 iyzsong: 星尘X和C草月酱 _(:з」∠)_
+20:59 Youmu: StardustX[C]: 星尘dalao
+20:59 Youmu: StardustX[C]: Or2
+21:00 StardustX[C]: Youmu: ？？
+21:00 Youmu: O.O
+21:00 Youmu: 没事，我只是日常仰望一下而已
+21:01 StardustX[C]: 我 Gtihub 一个 repo 都没有，你这样说我是大佬我会折寿的
+21:01 MameYang joined channel
+21:03 hitman-usa: test
+21:05 cleamoon_: iyzsong: 于是写ed？
+21:08 MameYang quit:Quit: Konversation terminated!
+21:09 hitman-usa quit:Remote host closed the connection
+21:16 iyzsong: 是呀... 我先想个框架
+21:17 CyrusYzGTt quit:Ping timeout: 255 seconds
+21:18 cleamoon_: 什么样的
+21:18 iyzsong: 我们从 ed bootstrap 怎么样?  ed < input.ed => hline.py, hline.py < input.ed => hline.py
+21:18 cleamoon_: 我试试写regex engine？
+21:18 iyzsong: _(:з」∠)_
+21:19 cleamoon_: 等等，有点没看懂
+21:20 cleamoon_: 等于是compiler？
+21:21 iyzsong: 比如源码是 input.ed，只准一直填加，执行 'ed < input.ed' 生成 hline.py 文件，然后 'hline.py < input.ed' 生成它自己..
+21:22 iyzsong: 有没有觉的很厉害？
+21:34 CyrusYzGTt joined channel
+21:50 Dove: iyzsong: orz
+21:54 cleamoon_: iyzsong: 自编译？
+21:54 cleamoon_: 类似自编译，但编译器本身是py写的？
+21:55 cleamoon_: iyzsong: 第一个 ed 是原装的那个？
+21:56 iyzsong: 嗯，不是编译，只是验证行为和 ed (子集)一致，有个参照。
+21:57 cleamoon_: 哦，那可以呀
+21:57 iyzsong: 随便用什么语言写吧~
+21:57 cleamoon_: 用 brainf@ck
+21:58 iyzsong: 不过我好像也只会 python ...
+21:59 Mokou is now known as Aldrich
+22:00 Aldrich is now known as Gwyndolin
+22:00 Gwyndolin is now known as Aldrich
+22:00 * cleamoon_ 只会瓶子根的python
+22:02 cleamoon_: 那个生成的 hline.py 是啥，ed 应该生成的不是文本吗....
+22:03 iyzsong: 是呀，就是真源码。
+22:03 iyzsong: input.ed 是源代码的编辑历史。
+22:06 cleamoon_: 然而不会写 ed....
+22:06 cleamoon_: 感觉写这个比写 ed 的 interpreter 难多了
+22:08 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:08 Dove joined channel
+22:19 cleamoon_: iyzsong: 不如再写一个 run backward？输入文本，输出对应的 ed 方法文件
+22:20 cleamoon_: 然后再弄个生成动画，也许会很好玩
+22:23 iyzsong: 但是可能的输出有很多啊，最简单的就 'a\n{内容}\n.\nw\nq\n' ..
+22:27 * iyzsong 先写了个 Makefile https://github.com/in-the-name-of-hentai/hline/commit/5783f4f1c9227148071b8caaab5f1a15b38ce4e7
+22:30 Dove: orz，先睡觉去了。
+22:30 iyzsong: 窝也去床上躺着了 _(:з」∠)_
+22:31 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:34 cleamoon_: 输出最短的呗....
+22:34 iyzsong: ed 可以调外部程序的...
+22:35 cleamoon_: 睡了...我还在写latex....
+22:35 iyzsong: _(:з」∠)_ 拜拜
+22:35 cleamoon_: iyzsong: 不调用外部程序的情况下，最短的ed生成文件
+22:36 cleamoon_: iyzsong: 宋先生也睡了？
+22:36 iyzsong: 准备去看看电视再睡
+22:36 cleamoon_: orz
+22:36 cleamoon_: 醉生梦死
+22:37 cleamoon_: 我还是想写 ed 用的那个 regex engine...
+22:37 iyzsong: orz
+22:40 Aldrich: 写个C/S式的编辑器
+22:41 * iyzsong AFK
+22:46 iyzsong quit:Ping timeout: 268 seconds
+23:26 lh_mouse: cleamoon_, 直接用 pcre 啊。
+23:31 cleamoon_: lh_mouse: 那就不是练习了呀....

@@ -1,0 +1,1143 @@
+00:17 lh_mouse: geordi, -c template<typename T> struct foo { }; template<typename T> struct bar { template class foo<T>; };
+00:17 geordi: error: expected '<' before 'class'
+01:00 lh_mouse quit:Read error: Connection reset by peer
+01:10 ahe quit:Quit: 离开
+02:38 cleamoon joined channel
+02:51 hope1_ quit:Remote host closed the connection
+02:52 hope1_ joined channel
+03:08 xxxxxxxxx joined channel
+03:10 xxxxxxxx quit:Ping timeout: 268 seconds
+03:31 cleamoon quit:Ping timeout: 250 seconds
+03:31 cleamoon joined channel
+03:52 cleamoon quit:Ping timeout: 240 seconds
+04:03 xxxxxxxxx quit:Quit: Leaving...
+04:50 cleamoon joined channel
+05:00 cleamoon quit:Ping timeout: 240 seconds
+05:25 hysw:  hope1_ 链表归并的空间复杂度是O(log n)
+05:40 cleamoon joined channel
+05:54 hysw: hope1_ lh_dog: https://gist.github.com/hysw/ed006f008e8fd3865a65
+06:39 iyzsong quit:*.net *.split
+07:08 cleamoon_ joined channel
+07:09 hope1_ quit:Remote host closed the connection
+07:15 cleamoon quit:Ping timeout: 272 seconds
+07:28 iyzsong joined channel
+08:13 hope1_ joined channel
+08:20 hope1_ quit:Ping timeout: 240 seconds
+09:01 cleamoon joined channel
+09:03 cleamoon_ quit:Ping timeout: 246 seconds
+09:09 lh_mouse joined channel
+09:39 hope1_ joined channel
+09:42 hope1_ quit:Read error: Connection reset by peer
+09:42 hope1_ joined channel
+09:53 whatofor joined channel
+10:10 libhanjian joined channel
+10:10 xxxxxxxx joined channel
+10:16 hope1_ quit:Read error: Connection reset by peer
+10:24 whatofor quit:Ping timeout: 264 seconds
+10:24 whatofor joined channel
+10:30 whatofor_1 joined channel
+10:32 whatofor quit:Ping timeout: 240 seconds
+10:37 libhanjian: lh_mouse, 在x86-32/64上，是不是完全可以假定指针的最后两个位可以拿来自己用？
+11:03 Stevearzh joined channel
+11:03 Stevearzh quit:Changing host
+11:03 Stevearzh joined channel
+11:17 libhanjian: Garbage Collection这书倒是挺好的，不过我也没耐心再看下去了……
+12:13 libhanjian quit:Quit: Leaving
+12:16 x-iyzsong joined channel
+12:26 varna joined channel
+12:28 lh_mouse quit:Read error: Connection reset by peer
+12:29 xxxxxxxx: 羊驼冒出来了
+12:29 hysw: 羊驼求智商
+12:31 * varna 又弄了些宏来坑杀项目
+12:31 xxxxxxxx: varna: 羊驼用aminer.org么?
+12:32 ahe joined channel
+12:33 Mokou joined channel
+12:33 varna: 用
+12:33 xxxxxxxx: 据吹"有些地方"比google的学术搜索还好 真的?
+12:33 * Mokou 头疼
+12:33 varna: 没什么特别感觉
+12:33 varna: 其实我自己用的参考文献，一般直接去ACM和IEEE的电子图书馆搜
+12:34 xxxxxxxx: 找到一个镜像 http://scholar.glgoo.org/
+12:36 xxxxxxxx: 「艦これ」次回の全稼働サーバ群共通メンテナンス＆アップデートは、来週【9/25(金)】に実施予定です。「新任務」実装の他に、何隻かの「秋の季節限定艦娘グラフィック」追加実装等を予定しています。秋の艦娘も、引き続きどうぞよろしくお願い致します。 #艦これ
+12:36 xxxxxxxx: 据说有新任务
+12:36 varna: 基本是翔鹤改二任务
+12:39 xxxxxxxx: "Data Science = statistics who uses python and lives in San Francisco"
+12:45 xxxxxxxx: http://news.163.com/15/0912/16/B3B0QJ7U00014AED.html :　登录齐鲁晚报网,或用手机扫描二维码观看视频,当年老师的音容笑貌或许会在你的眼前浮现。　(宗禾)
+12:45 xxxxxxxx: 作出了不得了的预判系列
+12:58 lolisa joined channel
+13:17 x-iyzsong joined channel
+13:20 x-iyzsong: = =
+13:22 * lolisa meow
+13:27 hysw: 感觉多大计算机科学彻底疯了
+13:28 x-iyzsong: 我也想疯~
+13:29 hysw: x-iyzsong: ?
+13:30 * x-iyzsong 弱渣匿了 >.<
+13:32 hope1 joined channel
+13:37 hysw: x-iyzsong: ??
+13:38 hysw: x-iyzsong: 在多大待了两年才发现计科竟然还存在妹纸 -_- 世界观瞬间崩溃
+13:38 Mokou: varna: 话说噩耗是？
+13:40 x-iyzsong: hysw: 当然会存在吧..
+13:40 hysw: x-iyzsong: 一只都没发现
+13:40 hysw: x-iyzsong: 一直都没发现
+13:45 hysw: 有烧烤肉牛么？
+13:54 hope1 quit:Read error: Connection reset by peer
+14:08 xxxxxxxx: Mokou: 噩耗?
+14:09 Stevearzh quit:Ping timeout: 256 seconds
+14:13 condy joined channel
+14:16 xxxxxxxx: http://www.zhihu.com/question/35592095
+14:16 ahe quit:Quit: 离开
+14:31 lh_mouse joined channel
+14:33 condy: lh_mouse: 求证实 http://www.zhihu.com/question/27087937#answer-9764769
+14:36 Mokou: varna: 话说我在考虑文集的实现方式
+14:36 Mokou: 一种是一个文章只能归属于一个文集
+14:36 Mokou: 另外一个是一个文章可以归属于多个文集
+14:36 Mokou: 不过后者似乎实现起来麻烦些……
+14:39 varna: 你可以适配一下，比如变成按tag搜索
+14:39 varna: 一个文集=一个tag, 但搜索的时候特别处理一下（比如提供搜索相关文集）
+14:40 varna: 类似于现在流行的按tag搜索一般关键字，和按tag搜索专集
+14:45 Stevearzh joined channel
+14:45 Stevearzh quit:Changing host
+14:45 Stevearzh joined channel
+15:00 lh_not_bot: 有人倒腾过 kvm 么
+15:00 varna: 没
+15:01 lh_not_bot: condy: 扯蛋的
+15:01 condy: 0.0
+15:01 lh_not_bot: 纯英文基本没有  教材很多人都用翻译的
+15:08 Mokou: 日本Twitter全民晒大腿[馋嘴]最近日本推被女性大腿刷屏~~只要打上话题#撫で回したくなるふとももグランプリ，你就可以晒大腿~别问为什么，网络趋势你搞不懂~
+15:09 Mokou: http://ww2.sinaimg.cn/bmiddle/d54a1fa7jw1ew1wdn6es0j20gqc1d4qp.jpg
+15:12 varna: 那个死库水里有什么不对！
+15:12 varna: 那绝对不是耻丘
+15:12 Mokou: 23333
+15:16 Mokou: 对了
+15:16 xxxxxxxx: 然而那个看起来找不到蛋蛋啊...
+15:16 Mokou: 我给阳炎加了个把主题存成草稿的功能
+15:16 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=f5dc0150db54564ee565e43183e59d82/4610b912c8fcc3ce7f75f4709445d688d43f203f.jpg
+15:16 varna: xxxxxxxx: 说不定是割了的药娘
+15:16 Mokou: 算是一种预览……
+15:18 x-iyzsong: lh_not_bot: 我用 libvirtd, 算不算 <_<
+15:18 Mokou: varna: tag和文集似乎还不太一样？
+15:18 varna: 不太一样
+15:19 Mokou: 我是希望作者能把属于一个系列的文章整合起来，方便阅览
+15:19 varna: 那样的话，推荐一篇文章只能属于一个文集
+15:19 varna: 没必要做成文摘
+15:19 Mokou: 也是
+15:20 xxxxxxxx: 文集能引用文集么?
+15:20 Mokou: 不能
+15:20 varna: 对了，之前你在C语言吧召唤我是怎么回事
+15:20 Mokou: 有个伸手贴
+15:20 Mokou: 要求用一段代码输出如下的图形：
+15:20 Mokou: '*'xn
+15:21 varna: 哦，菱形？
+15:21 Mokou: '*'xm . 'Jilin University' . '*'xm
+15:21 Mokou: '*'xn
+15:21 varna: 噗
+15:21 Mokou: 所以我就想到你了……
+15:21 varna: 今天我作了个死
+15:21 varna: [varna@shiki ev1]$ more ev1_root_alloc.h
+15:21 varna: #pragma once
+15:21 varna: #define     ROOT_ALLOC_PREFIX       ev1
+15:21 varna: #include    "../include/root_alloc_gen.h"
+15:21 varna: [varna@shiki ev1]$ more ev1_root_alloc.c 
+15:21 varna: #include    "./ev1_root_alloc.h"
+15:21 varna: #include    "../include/root_alloc_gen.c"
+15:21 varna: #undef      ROOT_ALLOC_PREFIX
+15:21 varna: over
+15:22 Mokou: ……
+15:22 Mokou: 是我的错觉还是这写法真的比较奇葩
+15:22 varna: 个人娱乐用用可以
+15:22 varna: 这两个文件都是被生成出来的
+15:23 varna: 因为不少地方都要用到独立但形式一致的root allocator
+15:23 varna: 索性就把那些东西扔在一起，然后生成一点
+15:23 Mokou: なるほど
+15:24 varna: 这就是没有女朋友的下场啊
+15:24 Mokou: 谁叫你把别人甩了
+15:24 xxxxxxxx: 那和女朋友的关系?
+15:25 varna: 有妹子谁还会作死去把接口折腾成这鬼样子
+15:25 * hysw 木有计算姬...
+15:25 xxxxxxxx: 你还有电浆
+15:26 varna: 嗯，最近欠雪也要走上大人的阶梯了
+15:26 varna: 还有五万多
+15:26 varna: 今天我还遇到一个Lv150不改二的欠雪
+15:26 varna: 圆圆的包子脸看着非常可爱
+15:26 xxxxxxxx: orz
+15:26 * Mokou 把欠雪改二了
+15:27 Mokou: 我发现我现在心态越来越好了
+15:27 Mokou: 以前补给船做不完浑身不舒服
+15:27 Mokou: 现在我连第一次出击都不做一样淡定……
+15:27 xxxxxxxx: 死鱼后更加愉悦
+15:27 varna: 我要大建
+15:27 varna: 16:21 < xxxxxxxx> 死鱼后更加愉悦
+15:27 varna: ^ 这是yym六面吧
+15:27 Mokou: 你现在大建吗
+15:27 varna: 我没资源
+15:28 xxxxxxxx: 忘了
+15:28 Mokou: 大建的话我陪你一发7777
+15:28 varna: 现在一发下去，我就穷光了
+15:28 varna: 周末吧
+15:28 Mokou: 吃低保吃到了15k
+15:28 Mokou: OK
+15:28 varna: 万一我又想做潜水战队邀击了……
+15:28 Mokou: 秋活打不过去我咸，咸不过去我滚蛋
+15:28 Mokou: 懒得玩
+15:29 Mokou: 还是写阳炎更愉快……
+15:29 varna: 最近有什么同人音乐推荐么？
+15:29 xxxxxxxx: 木有
+15:29 Mokou: http://music.163.com/#/album?id=2075900
+15:29 varna: 我手头的音乐好久没更新了
+15:29 Mokou: 最近我在循环这张
+15:29 varna: 妖精的〇巴……
+15:29 Mokou: 虽说我没看过……
+15:30 xxxxxxxx: clattanoia 我觉着挺好 如果你不讨厌吵闹的话 
+15:31 Mokou: 算了，我先来一发4662
+15:31 varna: 那好，我跟一发4672+20
+15:31 Mokou: 反正到周末就回复回来了
+15:31 Mokou: Z3旗舰Z1二号位
+15:32 Mokou: 等我先把几天前造的3333收了……
+15:32 Mokou: 拆只那珂酱
+15:32 Mokou: 咦，紫菜只剩800了……
+15:33 varna: 卧槽5h
+15:33 Mokou: OTL
+15:33 xxxxxxxx: BSM!
+15:33 Mokou: 肯定BSM啊
+15:33 varna: 出了！
+15:33 Mokou: Z3都骑脸了
+15:33 varna: 哈哈哈哈
+15:34 varna: Z1万岁
+15:34 Mokou: 你看
+15:34 varna: 这次我用的Z1Z3...
+15:34 Mokou: 那只其实是我家的Z3帮你造的
+15:34 varna: 太赞
+15:34 varna: 一个大凤一个俾斯麦
+15:34 varna: 强行奶出来的
+15:34 Mokou: 航战天国
+15:34 Mokou: 两门356
+15:35 Mokou: 大逗逼
+15:35 Mokou: 棒各
+15:35 varna: 手里还四张图，够用
+15:35 Mokou: OTL
+15:35 varna: 我攒一些资源，然后在3-2练出来
+15:36 varna: 正好还有一批168
+15:36 Mokou: 我拿去给那珂酱喂下对空
+15:36 varna: 这简直欧爆了，俾斯麦不到三十发就出货……
+15:36 Mokou: 毕竟是欧洲驼
+15:36 varna: BGM: Broken English
+15:36 varna: Hellsing OVA 5里纳粹伞兵空降时候的BGM
+15:37 hysw: 计算机科学的计算姬 -_- 彻底的稀有物种
+15:37 Mokou: 现充出来晒了
+15:37 Mokou: 试制三连装企鹅
+15:37 varna: 233song拒绝给我LEEE玉照
+15:37 varna: 频道现充太多了
+15:37 xxxxxxxx: 把他绑起来!
+15:37 Mokou: 出电探啦！
+15:38 varna: 14么……
+15:38 Mokou: 伊势
+15:38 hysw: 现实是我这学期会被各种课程整死的
+15:38 Mokou: 某种意义上这算是电探的航战天国？
+15:38 varna: 我就剩2.5k钢了，先不跟
+15:38 Mokou: 我还剩1.4k钢
+15:38 hysw: 平时5门，这次有8门...
+15:38 varna: 那好吧
+15:38 varna: 我刷完闪，把钢赌到一千四
+15:38 Mokou: 你毕竟要打秋活……
+15:38 varna: 没事
+15:39 Mokou: 啊，我打错了
+15:39 Mokou: 14k
+15:39 varna: 到月底为止我不会用钢了
+15:39 x-iyzsong: 我也想要啊
+15:39 varna: 噗
+15:39 * hysw 明天早上还有数学课，先滚了
+15:39 Mokou: 你还是别跟了……
+15:39 varna: 那我不跟了
+15:39 varna: 我正好战备一下，把俾斯麦练起来
+15:39 Mokou: 毕竟打完活动我油弹见底钢剩五万
+15:39 varna: 然后还要准备亚顿之矛用的螺丝
+15:39 * Mokou 并没有什么41炮
+15:39 xxxxxxxx: x-iyzsong: LEEE确定是妹子了?
+15:40 varna: 41我之前赌出一些
+15:40 Mokou: 我也赌出来一些
+15:40 Mokou: 然后就喂给嗑改了
+15:40 varna: 连续的口径上升玄学之后就是试制连装企鹅
+15:40 x-iyzsong: xxxxxxxx: 我相信 varna
+15:40 varna: 现在我手头就35螺丝
+15:40 Mokou: 4螺丝
+15:41 varna: 五连雷整吃了我七十多个
+15:41 Mokou: 嗑改们吃了我大概一百多……
+15:41 varna: 最后耗材四连雷不够了，我只能连续确保……
+15:41 varna: 毕竟大炮
+15:41 varna: 四连升星一次确保似乎也就五个？
+15:41 Mokou: 而且还有一门嗑药炮进化的时候失败了
+15:41 Mokou: 7个螺丝直接蒸发
+15:42 varna: ……好能赌
+15:42 Mokou: 当时我只有12个螺丝，就想赌一吧
+15:42 Mokou: 把*
+15:42 Mokou: 然后我就彻底穷死了……
+15:42 varna: 这样下次活动，我就能给大和用高命中的主炮了
+15:42 varna: 二队也有大姐姐带着打
+15:42 Mokou: 我还是信仰嗑改
+15:42 varna: 虽然练度应该还是雾岛更好
+15:43 varna: 毕竟是老将
+15:43 Mokou: 毕竟大家都能用，而且推定第一舰队命中最高60%不是……
+15:43 Mokou: 我家大和116
+15:43 varna: 是六成，但平砍命中还是好
+15:43 varna: 我用你那两个+4的都感觉好太多了
+15:43 Mokou: 后来我斩杀的时候道中用嗑改平砍各种咣咣咣
+15:43 varna: 半数时候能打中就好
+15:44 Mokou: 考虑上适型补正，我觉得两门满星嗑改大概也有一个32的效果……
+15:44 Mokou: 等比叡冲上Lv90我就开始准备婚B子
+15:44 varna: 磕改的适性应该只有面条姐妹吧，其余的41以下适型应该是非超重
+15:44 varna: 虽然38改其实也一样
+15:44 Mokou: 前段时间我看到的结论似乎是效果和38改差不多
+15:45 varna: 这个可以理解
+15:45 Mokou: 41对大和级有2%的命中补正，嗑改应该不会更差……
+15:45 varna: 因为除了本国货之外都只是非超重，所以只能看面板和改修的补正
+15:45 varna: 而大和级尤其麻烦，似乎没有适型、没有超重
+15:46 Mokou: 我记得傻级上嗑改效果是比41好的
+15:46 varna: 磕改我没太管，水打直接用了41+6
+15:46 varna: 这次其实还有个鬼畜
+15:46 varna: E2我41炮不够用了，给日向上了两个46
+15:46 varna: 居然还挺好用的
+15:47 Mokou: http://jn.yeyou.com/news/07032015/225505901.shtml 这个似乎是WE的验证……
+15:47 varna: 看文风就是亚顿的
+15:47 Mokou: Lv99大傻上4*41的命中是0.3471
+15:47 Mokou: 嗑改是0.3438
+15:47 varna: 应该是他活动之前在海色上发的数据
+15:48 varna: 这看起来是一样的
+15:48 Mokou: 是
+15:48 Mokou: 但是嗑改的火力要高
+15:48 varna: 也就是说，在试制41普及之前，这两个都可以用来过渡
+15:48 Mokou: 然而试制41目前不能改修
+15:48 varna: 残念的是目前最多也就四个试制41，而且不能改修
+15:48 Mokou: 其实我挺喜欢试制41的……
+15:49 varna: 那炮不错，看看什么时候进改修清单
+15:49 varna: 我给你的决战支援用的应该是51+46+试41+电探……
+15:49 Mokou: 说到试制41，我现在想造个3*3的战巡出来
+15:50 Mokou: 主炮我在考虑是用九四式还是九〇式……
+15:50 varna: 356超甲巡？
+15:50 Mokou: 14in太小了
+15:50 Mokou: 也就能穿个俾斯麦
+15:50 varna: 再大的话撑不住了吧
+15:50 varna: 俾斯麦好歹是浪费了两万吨的战舰
+15:50 varna: 战巡打不过战舰没什么羞耻的
+15:50 Mokou: 其实这个方案的考虑类似毛嘎米，不过可能更极端一些
+15:51 Mokou: 对外声称战巡，同时留出大量吨位给压舱水
+15:51 Mokou: 之后改装成本格的高速战列舰
+15:52 Mokou: 比如说造成时主装6in/20deg，之后抽掉压舱水变成16in/20deg
+15:52 varna: 防护呢
+15:52 varna: 还是日式的重点防御？
+15:52 Mokou: 是
+15:52 Mokou: 我的造舰风格其实类似藤本君……
+15:52 varna: 3x3战巡，舰体能摆开么？
+15:52 varna: 弹药库被弹率之类的
+15:53 Mokou: 3*3全部前置
+15:53 Mokou: 弹药库不回太大
+15:53 varna: ...
+15:53 Mokou: 会*
+15:53 varna: 我桑肥美如希、肥美如希！
+15:53 xxxxxxxx: 如希?
+15:53 Mokou: LL
+15:53 varna: 东条希
+15:53 xxxxxxxx: LL不懂...
+15:54 varna: 比较丰满，被称为肥希
+15:54 Mokou: 某神棍妹子，因为体型问题外号肥希
+15:54 varna: 肥桑这词是我类比的
+15:54 xxxxxxxx: 圆脸...
+15:54 varna: 还是那个日真姬得梅毒来得直白
+15:54 varna: 不知道多大仇
+15:55 Mokou: 这个设计其实之前我也有设想，就是我说的那个出云改防空战列舰
+15:55 Mokou: 但是出云那个自慰棒舰桥实在太难看
+15:55 varna: 总比欠雪航改二好……
+15:55 Mokou: 而且挂着个古国名搞个6in主装……
+15:55 Mokou: 6in啊
+15:55 varna: 那方案没变成舰吧破事梗实在太可惜
+15:55 Mokou: 重巡都能穿啊
+15:55 varna: 不仅欠雪航改，还航改二
+15:56 varna: 还有个据吹能带水上机（怀疑是九x水侦）的欠穗
+15:56 Mokou: ……
+15:57 Mokou: 欠穗带水侦卵用？
+15:57 varna: 就活动之前，贴吧里有个德棍在糟蹋欠雪
+15:57 varna: 后来连齐柏林木甲板飞喷气机的神论都出来了
+15:57 varna: 是不是他本人说的我不清楚
+15:57 xxxxxxxx: http://www.zhihu.com/question/34503351#answer-19246949 逼乎?
+15:58 varna: 美食这个问题吧……我穷，我觉得要是想吃得香点可以多干点活
+15:58 varna: 饿了就诸事方便
+15:59 xxxxxxxx: 我觉着幼女可能知道
+15:59 varna: 而且让淑女呻吟、绅士骂脏话的东西他肯定有
+16:00 varna: 鱼罐头在他那里应该最好弄
+16:01 varna: 我至今记得那个勇敢的日本小伙，他在自家厕所里穿上塑料膜吃罐头，整个视频里没吃几口，都在颤抖
+16:01 varna: 吃进去之后就在吐
+16:01 xxxxxxxx: 在厕所吃东西....
+16:01 varna: 自家厕所还是干净的，而且方便呕吐
+16:01 varna: 塑料膜吃完应该也直接扔了
+16:03 * lolisa say hi to varna
+16:04 * varna 扒下了摩罗沙的裤子
+16:05 Mokou: 木甲板上电吹风不着火的技术不是早就被德棍发明出来了么
+16:06 Mokou: 毕竟科技之国，德国的火是烧不坏甲板的
+16:06 varna: 咦，青山在医院里憋了个甲等出来……
+16:06 Mokou: ……
+16:06 varna: 他的基友若木正在嚎啕大哭
+16:06 varna: 还有被计划通的玖条等人
+16:06 * Mokou 嚎啕大哭了额
+16:07 * Mokou 嚎啕大哭了
+16:07 varna: http://news.sohu.com/20150913/n421016656.shtml ...
+16:07 varna: 评论：李某某缺心眼，吴某某16岁，你18岁，他没事你死定了，他是拿你练胆呢。
+16:08 Mokou: ……
+16:08 varna: 又黑网游
+16:08 lolisa: 羊陀你就这样对好久没看到你的朋友吗＝ =
+16:08 varna: 从来也不黑白酒和汽车
+16:08 varna: lolisa: 好久没看到你了，当然想来一炮啊！
+16:08 * Mokou 家的U酱还是U酱
+16:09 varna: 铝酱逼婚中，潜艇的戒指我以后一起发
+16:09 varna: 现在还差168和哔欧一
+16:09 Mokou: OTL
+16:09 Mokou: 我家潜艇长期放假中
+16:09 xxxxxxxx: @坚定的萌友
+16:09 varna: 我现在缺鱼雷
+16:09 Mokou: 我现在缺练度
+16:09 varna: 潜艇都得用三连雷，你能想像么
+16:10 Mokou: 贴吧dalao都告诉你了，150*24斩杀一次过
+16:10 varna: 贴吧dalao的练度连我都不如（笑）
+16:10 lolisa: BTW varna 压力大的话怎么办怎么解压又可以不降低工作量．．．
+16:10 Mokou: 贴吧dalao看过别人直播，还能通过直播建立数学模型
+16:10 Mokou: 你这种新米能吗？能吗？吗》
+16:10 varna: lolisa: 每天定个时间出去锻炼，不要在乎工作量
+16:10 Mokou: 你这种新米能吗？能吗？吗？
+16:10 xxxxxxxx: 换个高压肝
+16:11 lolisa: 这个在做，还有没有？
+16:11 varna: 放宽心
+16:11 varna: 干得了就干，干不动就不干，不干要吃瘪的话就用心吃瘪
+16:12 varna: 当然了，这不是精英们的心态
+16:12 Mokou: 这是羊驼子这种类型的现充的心态
+16:12 xxxxxxxx: 精英们什么心态?
+16:12 lolisa: 我也不想啊ＱＡＱ第一件任务就好艰巨我怕完成不了
+16:12 varna: 别怕
+16:12 varna: 去做，别想太多
+16:13 varna: 如果你真的做不到，还可以总结教训，然后吃瘪
+16:13 varna: 人不是靠做成功事情堆起来的
+16:14 Mokou: 噗
+16:14 Mokou: 我忘了给比叡带炮……
+16:14 lolisa: 谢谢羊陀=w=
+16:15 Mokou: 5-4第一点就这么A败了
+16:15 varna: 道谢的时候脱下裤子是常识，不过既然你的裤子已经被先行扒下来了……
+16:15 varna: 其实说别怕也不对
+16:15 varna: 这么说吧，习惯那个恐惧心理
+16:16 lolisa: \me　觉得如果羊陀不变态的话肯定能找到很多妹子
+16:16 Mokou: 反了
+16:16 varna: 我平时一点也不变态
+16:17 varna: 然而也找不到妹子
+16:17 Mokou: 因为你把她甩了
+16:17 xxxxxxxx: 羊驼找妹子去了么?
+16:17 varna: xxxxxxxx: 没
+16:17 lolisa: 刚刚发不出．．．
+16:17 Mokou: 开幕轰死塔酱……
+16:17 varna: 你怎么打5-4？
+16:17 xxxxxxxx: 和我说大建不出货一样没有说服力
+16:18 Mokou: 小姨子南风叔那智大尻吃撑天城
+16:18 varna: 然而你看红旗，他是很现充的
+16:18 Mokou: 小姨子村田友永江草，其他航妈罚站
+16:18 varna: 你要制空？
+16:18 Mokou: 确保
+16:18 varna: 哦
+16:18 Mokou: 我想减少蹭血
+16:18 varna: 我还是蹲3-2吧
+16:19 varna: 轻母低速的太多了
+16:19 varna: 这月的战果我也不会有，如果要战果的话恐怕得刷超过五百盘，那样就不合算了
+16:20 Mokou: 我只是想要练度而且懒得进Boss
+16:21 Mokou: 掉了很莉害的驱逐舰
+16:21 varna: 5-4不该是道中猛欠雪？
+16:21 Mokou: 但是掉了绫波……
+16:21 varna: 绫波最初那个立绘，总给我一种把包子脸捧在手里揉的冲动
+16:22 Mokou: 23333
+16:22 Mokou: 不过5-4练高速航妈其实不错的
+16:22 Mokou: 基本都能确保MVP
+16:23 Mokou: 一天三趟，直接就是一万多经验
+16:23 varna: 航母我之前狂轰滥炸，把那几个新来的好歹都炸到了七十多；不过长远看来，还是5-4合算
+16:23 varna: 要是一天三盘就有一万经验，我就可以考虑下怎么减少损害了
+16:23 Mokou: 说起来，我听说“大鳳”指的实际上是庄公说的大鹏？
+16:23 varna: 啊？
+16:24 Mokou: 那天在贴吧看到这么一个说法……
+16:24 varna: 不是说大鹏往北酱那儿一蹿，出来就变成咸鱼……
+16:24 lolisa quit:Quit: meow
+16:24 Mokou: 怪不得以前3-5我走上路那么难走……
+16:24 varna: 3-5上路我现在觉得3cv3ca搏命是个打法了
+16:25 Mokou: 如果开幕能比较稳定地炸死爷爷的话我觉得没准可以2CA1SS
+16:25 Mokou: 北酱直接废了
+16:25 varna: 别指望，爷爷会活着的
+16:25 Mokou: 问题就是这个
+16:25 varna: 但毕竟轮型北酱，斩杀可以试试
+16:26 varna: 我那次的开幕都太欧了，不能当例子
+16:26 x-iyzsong joined channel
+16:26 varna: 但我觉得，脸接轮型北酱一炮和拼着下路掉沟劝退，这两件事情的差距变小了很多
+16:26 varna: 毕竟你没战舰，就一炮
+16:27 Mokou: 也是
+16:27 Mokou: 不过万一过段时间田中嘿嘿一笑，北酱变成了航战
+16:27 varna: 历史倒车也不是没开过
+16:29 Mokou: 日
+16:29 Mokou: 我在看网页，一按C-w
+16:30 Mokou: 舰C飞了
+16:30 varna: 这事我干过
+16:30 varna: 焦点错了
+16:30 Mokou: 我还是改下焦点设置
+16:30 varna: 所以现在我用鼠标中键
+16:30 Mokou: 我他妈在出击啊……
+16:30 varna: 反正手速练习的基础之一是不用键盘
+16:31 Mokou: 直接一片黄脸
+16:31 xxxxxxxx: 撸管?
+16:31 varna: 主要说暴雪的战术动作游戏
+16:32 varna: ……终于，我被逼着给驱逐舰换了一份反潜装
+16:32 varna: 结果中破了
+16:32 Mokou: ……
+16:32 varna: 这阵容应该是个4-5搏命的
+16:32 Mokou: 咦
+16:32 Mokou: 我才发现一个问题
+16:33 varna: 4bb1ss1cv, 很标准
+16:33 Mokou: 太太和大凤是八座铝号锅炉带动四个蒸汽轮机
+16:33 varna: 但是如果没有奇迹的话，这盘我要输……
+16:33 Mokou: 大和是十二座锅炉带动四个蒸汽轮机……
+16:33 Mokou: 这压力得多底啊
+16:33 varna: 拼了
+16:33 varna: 我看看俾斯麦的第一次选择题做得如何
+16:34 Mokou: 这么说的话，大和如果愿意提高锅炉压力的话马力应该能大不少？
+16:34 varna: 做错了，没办法……
+16:34 Mokou: 虽说我不知道航速能不能提到28kt
+16:34 varna: 然而大和的马力……
+16:35 Mokou: 我听说这事又是平贺的锅，他不敢让大和锅炉压力太高
+16:35 Mokou: 然而武藏的锅炉还是爆炸了
+16:36 varna: 而且一炸一窝
+16:36 xxxxxxxx: 材料不够好?
+16:36 Mokou: 不是
+16:36 Mokou: 当时已经弃舰了
+16:36 varna: 日本的动力部安排也不便于军舰生存
+16:37 varna: 他们最大的杰作还是舰桥
+16:37 Mokou: M$捞出武藏进行探测的结论是武藏下沉的时候可能有两到三次爆炸
+16:37 Mokou: 第一次大概就是锅炉爆炸
+16:37 Mokou: 舰桥+
+16:37 varna: 锅炉爆炸……鱼雷吃太多了吧
+16:37 Mokou: 噗
+16:37 xxxxxxxx: 制造工艺不行?
+16:37 Mokou: 大和的锅炉压力比KGV还低……
+16:37 varna: xxxxxxxx: 吃了二十条鱼雷还不炸，那简直……
+16:38 Mokou: 吃了20发鱼雷，还没人管了
+16:38 varna: 武藏的轮机部是在中间吧
+16:38 Mokou: 爆炸很正常吧
+16:38 Mokou: 我看看
+16:38 varna: 前面锅炉后面涡轮的样子？
+16:38 xxxxxxxx: 不敢让大和锅炉压力太高 <- 这个
+16:38 Mokou: 是
+16:39 varna: 我怀疑那只是平贺的风格？
+16:39 xxxxxxxx: 是因为工艺 或者材料?
+16:39 varna: 翔鹤就没那么多事，驱逐舰都追不上
+16:39 varna: 当时的直卫队应该是魔性的鱼
+16:39 Mokou: 现在的说法是平贺派太保守
+16:40 Mokou: http://picpaste.com/RgW2z8gt.png 这是大和
+16:40 varna: 想想魔性的鱼一边在后面开到最大马力一边乳摇……
+16:40 Mokou: 39是轮机部，40是锅炉室
+16:40 varna: 果然还是日式风格
+16:40 varna: 锅炉和涡轮分开放
+16:40 Mokou: 太太那个事有说法是海况问题
+16:41 varna: 海况正常
+16:41 varna: 驱逐舰在不太糟的大洋上都会很颠的
+16:41 Mokou: 有人说当时浪太大等等原因导致锅炉太响，让舰员误判成了40kt
+16:41 Mokou: 其实当时鱼并没有那么快
+16:42 varna: 我一直以为是魔性的鱼不敢追
+16:42 varna: 怕跟在后面海况不好，弄出几个大新闻
+16:42 varna: 继第四舰队事件之后出个第五航空战队事件
+16:42 Mokou: 护卫也要按照基本法
+16:42 varna: 那他们的司令官要跑得比谁都快
+16:42 Mokou: 虽说基本法是勒瑟
+16:42 varna: 我换个RAP
+16:43 varna: 不能总听早苗的靡靡之音
+16:43 varna: zhangzhe.wang的几个rap被我扒下来了
+16:45 varna: 卧槽，中文维基有“膜蛤”这个词条……
+16:46 varna: https://pastebin.mozilla.org/8846266 还有个作死的
+16:47 Mokou: 2333
+16:48 Mokou: 其实这么说的话，我设计朝日的时候用大和的动力系统大概就可以？
+16:48 Mokou: 锅炉压力高些
+16:48 varna: 你要勇敢，要向翔鹤看齐
+16:48 Mokou: 翔鹤锅炉太贵了
+16:49 varna: 冬天晚睡的龙也好，春天早上支帐篷的龙也好，都是二羽鹤啊
+16:50 varna: http://liyuwiki.com/media/2015_08/liyuwiki_com_1440600765.jpg ...
+16:53 varna: 我突然想起个国内的神译名，比拽哥马粪还犀利点
+16:53 varna: 以前看龙枪系列，骑士Strum Brightblade的儿子叫Steel
+16:54 varna: 本来没什么，Strum被译成“史东”也没什么
+16:54 varna: 然而Steel在某个版本里就变成了“史钢”
+16:54 Mokou: ……
+16:55 varna: 形神兼备，比“一个黑黑的侏儒”（A dark elf）还猛
+16:55 varna: 译林的小精灵小矮人更是被甩了一条莫利亚大坑出去
+16:56 xxxxxxxx: 没搞懂...
+16:56 varna: Strum被强行姓史，于是他儿子的名字就被半意译了
+16:57 varna: 行不改名坐不改姓的骑士史钢君
+16:57 xxxxxxxx: 这个我理解了 史钢这个名字不行么?
+16:57 varna: 没什么不行，它已经上升到了一个境界——我甚至都接受这名字了
+16:57 Mokou: 你看我家小姨子这就70了
+16:58 Mokou: 吃撑这就60了
+16:58 varna: Steel出场的那几卷龙枪传承，一开始我看的译本就是史钢版的
+16:58 varna: 总比“一个黑黑的侏儒”版要好……
+16:59 varna: 至于拽哥马粪，其实如果看HP的话会发现他们的名字都起得奇奇怪怪地古风，而国内引进时候那几位翻译恐怕费了些力气让中译名念起来顺
+16:59 xxxxxxxx: 然而我看到史钢这个名字我觉着译者是想把名字里面的ST继承表示出来...
+17:00 varna: 港译则求音似而不顺
+17:00 Mokou: http://tieba.baidu.com/p/4041312349 怎么又有人说改二送震电
+17:00 varna: 史钢那译法太……本土化了，虽然我挺喜欢这名字的
+17:01 Mokou: 屎肛？
+17:01 Mokou: 小姨子对着撸级打了个233
+17:01 varna: 但是对比下的话，其实会发现“史钢”比“斯蒂尔”更容易接受点
+17:02 xxxxxxxx: 我甚至从一开始就不知道该怎么给出我接受不了这个翻译的理由
+17:02 hope1 joined channel
+17:03 varna: 至于龙枪系列小说，那曾经是个团报，也曾经有个基本法（尽量记下冒险经历）
+17:03 varna: 结果他们开团开到故事第一卷的不到一半，团灭了
+17:07 Mokou_ joined channel
+17:07 Mokou quit:Ping timeout: 246 seconds
+17:13 Mokou: 噗
+17:13 Mokou: 我的演习队友里居然有同样信仰嗑药炮的
+17:13 Mokou: 这个元帅的B子带着两门嗑改……
+17:15 varna: ...
+17:17 Mokou: 建造当時の米戦艦の最大速力は20 - 22ノットであった。日本海軍は改装によって、長門型/伊勢型/扶桑型戦艦を25ノット、金剛型を30ノットに向上させていたため、部隊単位で優速であった。大和型の27ノットは、米新型戦艦が25ノットと見積もられていたために、これを上回る速力として承認されたもので
+17:17 Mokou: ある。
+17:17 Mokou: 然而他们并没有想到北卡28kt……
+17:18 sismvg joined channel
+17:19 varna: 这种邀击战略还是图样图森破
+17:19 sismvg: 原创动画越来越喜欢把 狗血剧情当卖点了啊.
+17:19 varna: 大概是他们的特务工作效果不佳
+17:20 sismvg: nsfw http://bbs.north-plus.net/read.php?tid=166103&page=e&#a
+17:20 Mokou: 叫他们学什么德国的情报系统
+17:21 varna: 德国的情报似乎还行，至少他们知道屎蛋被苏联人围住回不来……
+17:22 Mokou: 然而日撸战争时本子的情报系统各种IMBA……
+17:23 varna: 那大概是帝国主义日本鼎盛的时候了
+17:23 varna: 撸西亚当时也不行
+17:24 Mokou: 两门嗑改打个没改的雾岛打了两个miss
+17:24 Mokou: 所以我不喜欢用傻级
+17:24 Mokou: 不过我听说中途岛缺水跟德国人的密码机也有关系
+17:32 varna: 德国人的密码不错，不过最好的情报还是“痒。好吃。”
+17:32 Mokou: 23333
+17:33 varna: 收一个远征，去吃晚饭
+17:33 sismvg: 把德文-》中文-》粤语-》拼音-》加密
+17:34 varna: 粤语者（Death Eaters）
+17:59 hope1 quit:Ping timeout: 255 seconds
+18:01 boosure quit:Quit: Get your hand off of it
+18:30 hope1 joined channel
+18:40 hope1 quit:Ping timeout: 260 seconds
+18:49 lh_mouse quit:Read error: Connection timed out
+18:52 lh_mouse joined channel
+18:57 varna: 我问个事情
+18:57 varna: 亿力屠夫和十亿智沉默，谁赢面大
+18:58 Stevearzh: Dota?
+18:59 lh_mouse quit:Read error: Connection reset by peer
+18:59 varna: dota
+18:59 lh_mouse joined channel
+19:02 sismvg quit:Ping timeout: 244 seconds
+19:03 Stevearzh: 屠夫的A杖肢解可以增强自身力量值100%的额外伤害，并且获得和造成的伤害等量的治疗量；沉默的智慧之刃4级每次攻击附加智力的90%作为额外伤害（Dota 2 的）
+19:03 Stevearzh: 感觉屠夫厉害一点
+19:03 varna: 其实我主要说dota1
+19:04 Stevearzh: 1 没玩过。。不过应该差不太多？
+19:04 varna: 而且问题是这么多主属性，普攻的攻击力都该爆了
+19:04 Stevearzh: 嗯
+19:04 varna: 当然沉默血少、回血少，有先手大
+19:04 varna: 如果只允许出绿杖，会是什么状况呢
+19:05 Stevearzh: 沉默大CD也比较长
+19:05 Stevearzh: 绿杖的话。。
+19:05 varna: 不说CD, 就说见面有视野的时候屠夫何时出钩、沉默何时出大……
+19:06 Stevearzh: 沉默先用法球a
+19:07 varna: 能秒杀么……
+19:07 varna: 应该能
+19:07 Stevearzh: 力量加血啊
+19:07 Stevearzh: 不行吧
+19:07 varna: dota2一点力换算多少血
+19:07 Stevearzh: 沉默被屠夫打一下会死
+19:08 varna: 还有每秒回血量
+19:08 varna: 这两个参数我不熟
+19:08 Stevearzh: 我查一下，记不太清了
+19:09 varna: 我还是比较支持沉默，毕竟屠夫出钩这事说不准
+19:10 Stevearzh: 感觉远程的话沉默占优，近的话屠夫比较厉害
+19:11 varna: 本科时候跟同学蛋疼讨论，距离700-800，允许带绿杖，亿力屠夫 vs 十亿智沉默……
+19:11 varna: 后来我们都放弃讨论，玩imba去了
+19:11 Stevearzh: 力量每点家19点血，0.01血回，敏捷每点加1%攻速，0.3护甲，智力每点加20点蓝，0.1蓝回。若为主属性每点加1攻击力
+19:11 Stevearzh: 。。。。
+19:11 varna: 不过算了算，亿力屠夫是不是该对应百亿智沉默？
+19:11 Stevearzh: 感觉有点蛋疼
+19:15 lh_not_bot: 原来 dy 也是吉大的
+19:15 lh_not_bot: 某红色警戒吧前吧主
+19:17 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=027f7f9730d12f2ece05ae687fc3d5ff/2cececec8a1363271b43dc73978fa0ec09fac7f3.jpg 灵魂的雪风……
+19:19 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+19:22 Mokou: 果然藤本了……
+19:23 Mokou: 复合强度0.84
+19:23 Mokou: 我看看能不能削一下动力舱装甲
+19:28 varna: 造船软件我这里还是wine失败
+19:28 varna: 虽说其实我对欠雪航改和欠穗有一点点兴趣……
+19:29 Mokou: winetricks dotnet20
+19:29 Mokou: 以及fakechinese
+19:29 Mokou: 该怎么砍呢……
+19:29 Mokou: 305mm的主装我不想再削了
+19:31 varna: 去掉一座炮塔，加一个飞行甲板
+19:31 ahe joined channel
+19:31 xxxxxxxx: varna: 屠夫和沉默的配装呢?
+19:31 varna: 我们的目标是星辰大海
+19:31 Mokou: 再装个大艇酱
+19:31 varna: xxxxxxxx: 只允许出绿杖
+19:31 Mokou: 彗星是什么玩意
+19:32 Mokou: 大艇酱可以帮助多艘战舰进行观测，其他飞机做得到吗
+19:33 varna: 我都忘了大艇酱提高观测数这事了
+19:33 varna: 光记得每次我97大艇出去就被爆，敌人PBY飞我这里来整整一个中队的零战打不掉
+19:34 Mokou: ……
+19:34 varna: 美军侦察机极其坚韧
+19:34 Mokou: It's a fortess!
+19:35 Mokou: 那玩意一定是堡垒重爆伪装的
+19:35 varna: ress
+19:35 Mokou: 啊，打错了……
+19:36 Mokou: 很好，现在完美了
+19:36 varna: 敌人的陆上轰炸机来了，那就简直像噩梦一样
+19:36 varna: 我都不愿意在加贺桑身上押三个NKC
+19:38 xxxxxxxx: 我觉着沉默应该带上刷新bkb...
+19:39 varna: 啊，布因的挂轴没写名
+19:39 varna: 56应该就被葬在那
+19:39 varna: 虽说他guitou了，但有个纪念碑
+19:40 ahe quit:Ping timeout: 244 seconds
+19:43 ahe joined channel
+19:50 varna: http://baike.baidu.com/view/1338892.htm
+19:52 xxxxxxxx: 这只羊驼好污啊
+19:54 varna: 这基佬
+19:56 sismvg joined channel
+19:57 varna: ……苍蓝的金刚从六十话开始大建，都几个月了……
+19:57 varna: 这伊势还没造出来呢
+19:59 Mokou: 复合强度1.00，完美
+20:00 Mokou: https://pastebin.mozilla.org/8846274
+20:00 Mokou: 试制410mm/50九〇式主炮三基九门全部前置
+20:01 Mokou: 副炮是傻级的副炮/阿嘿颜的主炮，三基四门，布置同改前的大和级
+20:01 Mokou: 主装6in/20，刚好覆盖弹药库和动力舱
+20:01 Mokou: 160k shp的马力
+20:02 Mokou: 最大航速30kn，航程7000/15
+20:02 Mokou: 不过不适合大西洋
+20:03 Mokou: 标排47kt，满排51kt
+20:03 Mokou: varna: 
+20:03 Mokou: 另外伊势不是已经造出来了么……
+20:04 varna: 没造好
+20:04 Mokou: 心智模型都出来了
+20:05 varna: 现在我看到的剧情是舰体没完成warp, 爱宕被长门调走了，雪风回收了日向和比叡
+20:05 varna: 总旗舰连十个喷灯都舍不得
+20:05 Mokou: 噗，舰体没完成warp的啊？
+20:05 varna: 还在造呢，401要用超重力炮狙击的样子
+20:06 Mokou: 刚才发的是建成状态
+20:06 Mokou: 对外可以宣称标排40kt
+20:06 Mokou: 因为有6kt的压舱水……
+20:06 sismvg quit:Ping timeout: 246 seconds
+20:06 varna: 3.7雷……
+20:07 varna: 四万六千吨的超甲巡
+20:07 Mokou: 这船和俾斯麦对打，你觉得怎么样
+20:07 varna: 球鼻首和一号机雷战术……
+20:07 Mokou: 虽说德棍一定会告诉我俾斯麦会在三万米上瞄准我的弹药库一炮结束战斗
+20:07 xxxxxxxx: 那当然猜BSM是无敌的
+20:08 varna: 第二主炮抬高？
+20:08 Mokou: 是
+20:08 Mokou: 类似高雄
+20:08 varna: 那第三炮塔还是直指司令塔的
+20:08 Mokou: 其实我现在觉得这个设计挺好的
+20:08 varna: 这是后期很多人对利根级的看法
+20:08 Mokou: 射角不会有很大问题
+20:08 varna: 认为射角的问题确实不大
+20:09 Mokou: 没人会直着朝敌舰冲过去……
+20:09 varna: 但是我想想啊，假如敌方派出巡洋舰的话，我举个简单的例子
+20:09 Mokou: T不利也不是垂直的
+20:10 varna: 比如说，派出了标准的巡洋舰，装备了六门巡洋舰标准的奇怪口径连装速射能量炮和舰首鱼雷发射器，以及VLS和强制波动装甲
+20:10 varna: 我们管这个假想敌叫NAGARA
+20:10 varna: 似乎也不好办っぽい
+20:11 ahe quit:Ping timeout: 272 seconds
+20:11 Mokou: 这时候你可以把看起来空空如也的后部甲板打开
+20:11 Mokou: 然后用震动弹头进行一次饱和攻击
+20:11 varna: 这主意不错
+20:12 varna: 振动弹头至少是经过实战检验的
+20:12 varna: 不过有个事情
+20:13 varna: 如果你把俾斯麦的全套参数输进去让软件计算，稳定性的参数会是多少呢
+20:13 Mokou: 等会我试试
+20:13 Mokou: 不过我觉得复合强度很可能会比较吓人
+20:13 varna: 2333
+20:13 varna: 我主要担心这船用41炮的命中
+20:13 Mokou: 我也不知道复合强度是怎么翻译出来的，总之这东西似乎是船体载重和实际复纵的比值
+20:14 Mokou: 大丈夫，Iowa散布不过800m
+20:14 lh_mouse: 不过我觉得复合强度很可能会比较吓人
+20:14 Mokou: 你要相信HOI的力量
+20:14 Mokou: 负重*
+20:14 varna: 152和九六神炮毕竟就那样了
+20:14 varna: HOI我倒是信仰的，不过这要是在太平的洋面上摩擦摩擦……
+20:15 varna: 而且还有个巨大问题
+20:15 Mokou: https://pastebin.mozilla.org/8846277 这是改装以后的高速战列舰版本
+20:15 varna: 长门的满载是>42kbrt
+20:15 Mokou quit:Quit: Reconnecting
+20:16 Mokou joined channel
+20:16 Mokou: 抽掉了那条tsu爷
+20:16 varna: 这个超甲巡已经不在任何条约可以找借口的范围内了……
+20:16 Mokou: 本来就不是条约舰……
+20:16 varna: 最多是巡洋战舰改高速战舰，跟Iowa拼
+20:16 Mokou: 只是情报上的手段
+20:17 Mokou: 什么大和主炮410
+20:17 Mokou: 假想敌确实是Iowa，不过蝗国主炮……
+20:17 varna: 47kbrt的假想敌我觉得就该是Iowa
+20:17 varna: 吨位差不多
+20:17 Mokou: 副炮的变化类似于大和级
+20:18 Mokou: 拆掉了侧舷的6in，换成了每舷各五基十门长10cm连装高角炮酱
+20:18 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f6bd739bd362853592e0d229a0ee76f2/e903b20e7bec54e75b3c1377bf389b504ec26a47.jpg 我在战列舰吧见到一个不错的九六神炮改造图
+20:18 varna: 两舷防空？
+20:18 Mokou: +
+20:18 Mokou: 长10cm的性能似乎比八九式好得多
+20:18 varna: 这个打法有点像是在应对日军的空袭
+20:18 Mokou: 毕竟蝗国战列舰
+20:19 varna: 至少摩耶的经验指出，防空火力和管控集中会更好
+20:19 Mokou: 主装厚度增加到了14in，装甲甲板厚度变成了150mm
+20:19 Mokou: 主装倾角依然20deg
+20:19 Mokou: 这个防护是可以吊打南达的
+20:20 Mokou: 其他的基本没什么变化
+20:20 Mokou: 依然是30knn
+20:20 Mokou: 依然是30kn
+20:20 varna: 狼子野心昭然若揭
+20:21 varna: summon more dumplings
+20:21 Mokou: 23333
+20:21 Mokou: 不过我觉得这条船如果被转交给美帝了，他们不会拆
+20:21 varna: 他们会研究一下九六神炮
+20:21 Mokou: 30kn的速度足够伴随航母部队作战
+20:21 varna: 为什么日本人会用这东西
+20:22 varna: 那个50发弹匣的示意图我都笑了
+20:22 xxxxxxxx: 没看懂那个九六式...
+20:22 varna: 25mm三连装机炮不是弹链供弹的
+20:22 Mokou: 因为陸軍は馬鹿です
+20:22 Mokou: 我们就不用陆军的20mm
+20:23 varna: 打的时候需要弹药兵手动固定并装填15发弹匣
+20:23 varna: 因为弹匣上似乎连卡榫都没有
+20:23 xxxxxxxx: 原来机炮不是弹链供弹的么....
+20:23 varna: 蝗国的这个机炮不是
+20:23 Mokou: 九六神炮不是
+20:23 varna: 不然也不会被蔑称为九六神炮，跟手拉机相提并论
+20:24 Mokou: 手拉机能秒f22
+20:24 Mokou: 你有什么不满么
+20:24 varna: 我有，我提案把CAC Mio涂成F22涂装
+20:24 varna: 我觉得那个显得比较帅
+20:26 Mokou: 反正都会被秒
+20:26 varna: 25mm集中配置的摩耶……
+20:26 varna: 算了这是个笑话
+20:26 lh_mouse: http://www.highlandsun.com/hyc/malloc/
+20:26 Mokou: 摩耶可以对空CI，俾斯麦能做到吗？
+20:28 Mokou: 就算你造一群Iowa然后飞起来，摩耶一样给你打下八条
+20:28 Mokou: 不过说实话，我觉得这船不一定能干过Iowa
+20:28 Mokou: 水平防护差了些
+20:29 Mokou: Iowa是178，朝日是150
+20:32 xxxxxxxx: 二战之后有没有专门用来发射各种导弹鱼雷的大船?
+20:32 Mokou: Iowa
+20:32 Mokou: 这个绝对够大
+20:32 xxxxxxxx: 那个不是战舰么?
+20:33 Mokou: 改装了
+20:37 xxxxxxxx: 四联装“战斧”巡航导弹8座 <- 就这个?
+20:38 Mokou: 是
+20:46 cleamoon: 本身有网，弄上路由器之后没网了是怎么回事
+20:48 xxxxxxxx: 似乎美国人想在船上装电磁炮
+20:49 tutu_wind joined channel
+20:55 varna: cleamoon: 路由器WAN口配置对了？
+20:55 varna: 你那边的服务有没有要求验证mac地址
+20:55 cleamoon: varna, wan根本就没什么可配置的，就是dynamic ip address就没别的选项了
+20:55 cleamoon: 应该没有
+20:56 iyzsong quit:Quit: WeeChat 1.3
+20:56 iyzsong joined channel
+20:56 cleamoon: 何况我这个路由器还是在另一个路由器之后的
+20:56 xxxxxxxx: 一万个路由
+20:57 cleamoon: 那个路由是可以用的
+20:57 varna: cleamoon: 你原先的机器是静态IP么？
+20:58 xxxxxxxx: http://www.onr.navy.mil/~/media/Files/Fact-Sheets/35/Electromagnetic%20Railgun_Dec%2029%202014.ashx <- PDF 据说是电磁炮试验品
+20:58 cleamoon: varna, 一直是动态呀...
+20:58 varna: 路由器坏了？
+20:58 xxxxxxxx: 以前他大概是用老的路由 现在要加一个
+20:59 varna: 路由器能够从上游获得dhcp的IP么
+20:59 xxxxxxxx: 是这样的意思么?
+20:59 cleamoon: varna, 我怀疑是，课时换了一个之后还这个毛病
+20:59 cleamoon: 得不到
+20:59 varna: 原来是R1 <-> PC; 现在是R1 <-> R2 <-> PC吧
+20:59 varna: 要是连IP都得不到，说不定是线路或者接口坏了
+21:00 varna: 如果你确认PC能DHCP成功而路由器不能，那换一个试试
+21:00 cleamoon: 原来也是R1 <-> R2 <-> PC，昨天房东作死把R1接口插错了，然后我去弄了一下，然后我这里崩了.....
+21:00 varna: ...
+21:00 xxxxxxxx: 神奇的房东
+21:00 varna: 多换几个口看吧……
+21:00 varna: 不行重启下R1
+21:00 xxxxxxxx: 房东有女儿么?
+21:01 cleamoon: 我一直用无线...
+21:01 cleamoon: R1那里没问题
+21:01 cleamoon: 我现在用的就是R1的无线....
+21:01 varna: 但现在你的问题不是R2不能得到R1分配的动态IP么？
+21:01 * lh_mouse slaps varna around a bit with a large trout
+21:02 varna: R2的WAN口应该接到R1的某个LAN口上，说不定正好坏了一个
+21:02 lh_mouse: qemu VM 配置成功了
+21:02 varna: lh_mouse: 给，庆功的小红丸子
+21:02 lh_mouse: 居然要个什么 vnc viewer
+21:02 xxxxxxxx: 口支要虚拟啥东西?
+21:02 iyzsong: 不是 spice 么
+21:02 varna: 今天确认我不用交一万元学费了，可以吃点小红丸子庆祝
+21:02 cleamoon: 可是R1的LAN口过来的线我的笔记本是能用的...
+21:03 varna: 你用的是R1 <-> R2的线？
+21:03 cleamoon: +
+21:03 varna: 那说不定是R2的WAN口坏了
+21:03 cleamoon: 哦，现在是直连R1，R1 <-> R2的线也是好的
+21:04 varna: 如果你想作死，可以把R1的配置克隆到R2上，撤掉R1换R2在出口
+21:04 cleamoon: VAN怎么会突然被玩坏掉呢......
+21:04 varna: 保证R2的MAC地址克隆是对的，然后看看能不能拿到上游的IP
+21:04 cleamoon: ........
+21:04 varna: 如果不能，R2就可以扔一边了
+21:05 varna: 这事我在实验室干过
+21:05 varna: 等到我悲哀地放弃了之后，出门找了咖啡馆，才发现线被挖断了
+21:05 iyzsong: = =
+21:06 cleamoon: 哦，在R1的控制面板里看不到R2的图标都....
+21:06 cleamoon: R2太捉急，我都不知道在哪看...
+21:06 varna: 口都跪了的话什么也看不见……
+21:07 varna: 一般的家用路由器估计也不太会让你登入系统去操作更多东西
+21:07 cleamoon: 可是我没有进行抽插呀，为什么口会跪
+21:08 Mokou: 往某个群里发了一下我刚才那个设计案
+21:08 xxxxxxxx: 不是通常能用http协议访问控制一些功能的么
+21:08 varna: 你把陆奥和伊势翻出来问问，他们一直蹲着，但还是爆炸了……
+21:08 Mokou: 然后冒出一个人跟我喊那个方案只能在海里开，没意思
+21:08 cleamoon: ......
+21:08 Mokou: 问我为什么不脑洞个星舰
+21:08 varna: xxxxxxxx: 我希望有个带权限的console口，让我能够远程登陆进去操作
+21:08 Mokou: 告诉我星舰航速12000c，比我这东西不知高到哪里去了
+21:08 varna: LONG LIVES THE DRAGON!
+21:09 xxxxxxxx: 我没见过鼓励家庭用户这么玩的...
+21:09 varna: 吔我kusari海军科技之结晶吧
+21:10 cleamoon: 顺便，插上之后R2的wan灯是亮的.......
+21:10 xxxxxxxx: 你就告诉他们其实这是个星舰
+21:10 varna: 一般路由器的灯闪动才是在传输数据吧？
+21:10 Mokou: 这里总结下最近德国大量涌入难民(大部分是青壮年男性)所带来的恶行:Chemnitz 7岁女孩在公园被强奸;Freising女学生临晨被强奸;慕尼黑老城区28岁中国女生被难民强奸未遂;中国男生被在火车上殴打;ISIS武装分子混入难民;拜仁富人区老夫妇被入室抢劫,72岁老人被杀死;拜仁24岁女生被强奸
+21:10 xxxxxxxx: 然后胡扯一堆
+21:10 varna: 印度难民？
+21:10 Mokou: 似乎是穆斯林
+21:10 varna: 另外我今天可是成功涌入德国……
+21:11 Mokou: 哦，我报警了
+21:11 xxxxxxxx: 穆斯林
+21:11 Mokou: 那个七岁幼女的事就是你犯的吧
+21:11 varna: 是
+21:11 iyzsong: <_<
+21:11 Mokou: 没关系
+21:11 cleamoon: 噗
+21:11 varna: 现在我正在远程参谋五岁幼女的修电脑问题
+21:11 Mokou: 好好改造，下辈子还是好羊驼
+21:11 cleamoon: 发图像
+21:11 varna: 这话好熟悉
+21:12 varna: 我本科军训的时候，教官让我们想个口号，喊起来带感
+21:12 cleamoon: 换了一个，更痛快，完全没效果
+21:12 varna: 最后决议通过的就是「好好改造 重返社会 重新做人 造福人类」
+21:12 cleamoon: 应该对着主席台喊喊“同志们好”
+21:12 xxxxxxxx: ISIS的锅 似乎是叙利亚的难民逃去欧洲 进入欧洲之后到处流窜 想去德国英国之类的国家
+21:12 varna: 我没去检阅的方队
+21:13 Mokou: https://pastebin.mozilla.org/8846284
+21:13 varna: 那个据说要站好长时间，我当时觉得站不住，跟教官申请说能不能当咸鱼
+21:13 varna: 教官直接把我轰回咸鱼队了
+21:13 Mokou: 2333
+21:14 xxxxxxxx: 注: 咸鱼队是挂着熏的
+21:14 varna: 我有个问题啊
+21:14 xxxxxxxx: 训
+21:14 varna: 加百列在干什么
+21:14 Mokou: 在泡妹子
+21:14 varna: 他负责过的最大的工作，似乎就是告诉人们处女怀孕……
+21:15 cleamoon: 噗，检阅都站不住吗
+21:15 xxxxxxxx: 搜救飞离地球的田中母亲
+21:15 cleamoon: 体虚羊驼子
+21:15 Mokou: 其实那些怀孕的处女都是他干的
+21:15 varna: cleamoon: 平时训的时间有点长，还要端着正步站
+21:15 varna: 一般立正站着倒是没什么，但端正步还是挺痛苦的……
+21:16 cleamoon: 那不都是正常训练内容吗...
+21:16 varna: 但是甲鱼队的时间长
+21:16 varna: 我想军事系列课程拿个良好就行了……
+21:16 cleamoon: 一天？
+21:16 cleamoon: 军训还有分......
+21:16 varna: 没那么夸张
+21:17 varna: 军训有评级的，优良及格不及格
+21:17 varna: 然后还有个军事理论课
+21:17 varna: 直到现在我才知道那些课都是骗我的，敌人的驱逐舰是实心的
+21:17 Mokou: 论鱼雷和炸弹的选用？
+21:17 varna: 根本不是什么一炮俩眼的东西
+21:18 Mokou: 然而约翰斯顿一炮至少四个眼
+21:18 cleamoon: 哈哈哈哈哈，把dynamic改成static后我连R2都连不上了
+21:18 varna: ...
+21:18 varna: 你改的是wan口还是IP池设定
+21:18 Mokou: 话说课上怎么说DDG的
+21:18 varna: 对了，我建议个简单的试验法
+21:18 cleamoon: 我就把dns改了，其他都没变...
+21:19 varna: 你记下R2的WAN口MAC, 在R1上给R2分配静态IP（但这仍然是DHCP）
+21:19 varna: Mokou: 忘了，我就记得他们总拿轰炸教学楼当例子
+21:19 cleamoon: 噗
+21:19 Mokou:  “当舰娘进入你的生命里时，你再也背负不起其他人，因为她们一只就重几千吨“（出自伪劣舰娘迷：草匪）《游戏天地》采访了著名的舰娘控，NGA舰娘版版主、二次元国家地理版版主的ywwuyi（爽哥），看看他的背负.【专访NGA舰C区版主爽哥：不要小看铁底提督】
+21:19 varna: 可能只有一次课的举例是说占领教学楼
+21:19 varna: 爽哥233333
+21:20 Mokou: 说起这个，其实我经常会想大和能不能打到39
+21:20 Mokou: 只考虑射程和弹道
+21:20 varna: 从哪打
+21:21 varna: 另外我有个怀疑
+21:21 xxxxxxxx: 爽哥死亡冲锋,亚美刷闪试配置,弯华在解谜,人称力之爽哥,技之亚美,智之弯华
+21:21 Mokou: 就是在想存不存在这样一个点，使得大和不会搁浅
+21:21 Mokou: 而且能打到39
+21:21 varna: 技之亚美不是说亚美开科技么？
+21:21 Mokou: 不知道
+21:22 xxxxxxxx: 不知道
+21:22 Mokou: 不过他刷闪是真的
+21:22 Mokou: 试配置也是真的
+21:22 varna: 而且似乎还有个怂之曲水
+21:22 varna: 至于qh, 他现在剩下的乐趣是给群里的人改名片
+21:22 xxxxxxxx: 那又是干了什么?
+21:22 varna: 全都跟Gay有关
+21:23 varna: 不知道
+21:23 Mokou: 不是运之曲水么
+21:23 hope1 joined channel
+21:23 Mokou: 我记得他是斗鱼第一个过的
+21:23 cleamoon: 东东枪几分钟前收到一位陌生网友发来的私信，全文如下——“我怕三十晚上祝福太多，你会不在意我的问候。我怕初一早上的鞭炮声太吵，你会听不到我的祝福。我拍初二中午的菜肴太香，你会看不见我的短信。所以选择这个时候给你送来祝福，给您和您家人拜个早年！”……这是……什么情况？您别吓我……
+21:24 xxxxxxxx: 太早了....
+21:24 varna: 我觉得发短信的人可能认为自己挺不过下一次活动，已经做好了玉碎的准备
+21:26 Mokou: 然而小泽眉头一皱，发现事情并不单纯
+21:26 Mokou: http://www.cbigame.com/guandian/news.detail.php?id=15443
+21:27 lh_mouse: [20:58:46] <varna> 今天确认我不用交一万元学费了，可以吃点小红丸子庆祝 // 你把自己买了多点
+21:27 lh_mouse: s,买,卖,
+21:27 hope1 quit:Ping timeout: 246 seconds
+21:27 varna: lh_mouse: 我最后还是赶上了成果申报
+21:28 lh_mouse: varna, 我以为你把自己卖给阿里了
+21:28 lh_mouse: varna, 今年百度校招待遇如何
+21:28 varna: 我确实卖给阿里了
+21:28 lh_mouse: 卖了一个月 15k？
+21:28 varna: 10*15
+21:29 lh_mouse: 考 
+21:29 cleamoon: orz
+21:29 lh_mouse: 这是打发要饭的节奏
+21:29 varna: 待遇我已经不打算多谈了
+21:29 cleamoon: 已经卖了？
+21:29 varna: 先找份工作凑合着
+21:29 cleamoon: 怎么这么早?
+21:29 varna: 内推其实该更早点
+21:30 varna: 只不过今年各种坑爹
+21:30 cleamoon: orz
+21:30 cleamoon: 竟然是内推
+21:30 cleamoon: 什么是内推
+21:30 varna: 有个员工推荐你，过了简历筛选之后一般可以免个笔试什么的
+21:31 Mokou: OTL
+21:31 Mokou: 七年以后你还在阿里么
+21:31 varna: 七年之后我恐怕都能见到小泽了
+21:31 Mokou: 我想找人内推
+21:31 varna: 那时候你的同学应该就可以
+21:31 cleamoon: orz
+21:32 varna: 不过总体来说，我仍然认为马云是个混帐
+21:32 cleamoon: 小泽纯一郎？
+21:32 Mokou: 治三郎
+21:32 varna: 小泽痔三郎
+21:32 varna: 之前疼迅倒是也来过个电话，不过来得有点晚
+21:33 varna: 面试官似乎特别喜欢coro, 不过看上去他只用过lua coro...
+21:33 cleamoon: orz
+21:33 cleamoon: 不愧是羊驼子
+21:33 tutu_wind: OTZ
+21:33 cleamoon: 过于orz了
+21:33 lh_mouse: 老子的 coro 是自己写的
+21:33 varna: 老子的coro...用了一点deprecated的东西
+21:34 condy: OJTZ
+21:36 varna: 对了，红旗把学派的代码扔在哪了？
+21:36 varna: 有仓库么
+21:36 cleamoon: 羊驼子要自己弄一个？
+21:36 varna: 我只是想看看
+21:36 varna: 现在应该还是用Perl做的不是，之前他刚把那些烂摊子拖起来
+21:37 varna: 我自己手头要弄的私活是糖果那边的一些东西
+21:38 varna: 估计让他们维护一个基于波塞冬的服务器有点难，所以我试着搞点下里巴人的代码……
+21:38 cleamoon: orz
+21:39 varna: 但我还是不敢拿他们来试p7的毒
+21:39 varna: 虽然kashiwara的ab测试指出p7目前是可以用的
+21:40 varna: 而且拿那种东西写出来的服务器，会话层不好看
+21:42 varna: 我了个去，为何生化危机电影里冒出一堆舰狗……
+21:42 varna: 先是几个POI的，后来冒出一个なのです
+21:43 varna: 我也なのです一下
+21:44 cleamoon: 你去阿里做什么呢
+21:44 cleamoon: 吉祥物？
+21:44 varna: b2b
+21:44 varna: 还是弄服务器端
+21:45 cleamoon: orz
+21:45 cleamoon: 我只会说orz了
+21:45 varna: 你的工作会比我强多了
+21:45 varna: 我哪天失业都不知道，说不定瞬间就爆炸了
+21:53 condy: prpr
+21:53 condy: 可惜hj走了（
+21:54 tutu_wind: 会不会存在多个进程同时发生页错误，同时进入内核态。？
+21:54 xxxxxxxx: condy感到寂寞了
+21:54 cleamoon: 我的工作只是人形计算器
+21:54 varna: 会
+21:55 varna: 但内核是有锁的
+21:55 varna: 当然，实现方面粒度也是在逐渐提高
+21:55 varna: 罗马不是一天建成的，但由良是
+21:57 condy: 原来如此
+21:58 varna: 实际你有时候可以体验一下页错误
+21:58 varna: 比如说用vim打开一篇文档，保持其他进程运行而且容易观察，然后:%s/\n/\n\n/g
+21:58 varna: 在你难以忍受的时候把vim杀了
+21:59 xxxxxxxx: varna:  我得说个脸黑的新高度 之前我去打A姐 A姐什么都没掉 单人应该不会出现怪物其实在远处这种情况 
+21:59 varna: 之后看整个系统怎么自己硌吱硌吱
+21:59 varna: xxxxxxxx: ...
+21:59 varna: 我觉得吧，A姐喜欢异性恋的人，可你是基佬……
+21:59 condy: 然后OOM把vim给kill掉了（
+21:59 cleamoon: 噗
+22:00 varna: 我没等到OOM
+22:00 varna: 在它自认为处理了五千多行之后，我把它干掉了
+22:00 varna: 最后我换了个做法
+22:00 varna: perl -e 'while (<>) { print "$_\n" }' <srcfile >dstfile
+22:00 cleamoon: 大虫子我遇到过给我掉了一个损坏的长戟和几瓶药的情况...
+22:02 varna: 单机他们至少会掉金装啊
+22:03 cleamoon: 蓝装倒是真少见
+22:03 xxxxxxxx: 全卷轴表示并没有说好的金装备 噩梦的菠萝我都遇到过全蓝色...
+22:03 varna: 那是服务器坑吧
+22:04 varna: KD我挺勤快的，但全蓝装真太少了
+22:04 xxxxxxxx: 然而我单人也遇到了全蓝色的菠萝 还都是些不值钱的
+22:04 xxxxxxxx: "憎恨之王墨菲斯特，全名叫 Dul'Mephistos，一般称为 Mephisto。某些人认为，如果说燃烧地狱真的存在一个领袖的话，那就是墨菲斯托了。"
+22:04 varna: 不过我噩梦基本都KM, 普通倒是喜欢用刺客档去KB/KD拿点低级装备给新档用
+22:05 xxxxxxxx: 这只鸡竟然是领袖
+22:05 cleamoon: 赌46炮略难...
+22:05 varna: Mephisto不该是Mephistopheles的短称呼么
+22:05 varna: 就是用法力诱惑浮士德的那位
+22:06 varna: cleamoon: 今天我赌了赌，全灭了
+22:06 cleamoon: 全灭+
+22:06 varna: 我再来两次
+22:06 xxxxxxxx: 暗黑2中之所以大家对墨菲斯托有很深的印象可能是这货实在太Easy了吧，而且掉宝率也很高，作为暗黑系列故事中最为年长的领袖其“墨菲斯托之石故事线”也是老玩家记忆犹新的，墨菲斯托强大到可以控制自己的灵魂石，并且腐化了萨卡兰姆的教士。
+22:07 xxxxxxxx: 然而还是一直鸡
+22:07 varna: 只是因为他不幸在三幕而且总被杀……
+22:07 varna: 剧情里M很威的
+22:07 varna: 整个Zakarum教会都被他控制了
+22:08 xxxxxxxx: 另外有说法说sor的力量是源自恶魔 羊驼知道相关的设定么?
+22:08 varna: 那个是胡编的
+22:08 varna: 设定里人类就是有法力的啊
+22:09 varna: 日，只剩1.5k钢了，出了个41
+22:09 varna: 等着我拿来都祭了亚顿之矛
+22:09 cleamoon: 设定里有没有说为什么召唤nec那么nb
+22:09 condy quit:Quit: leaving
+22:10 varna: nec的祖师Rathma是最初的人类之一，Linarian...
+22:10 cleamoon: .......
+22:10 varna: 或者直白地说，是创造了人类的天使和恶魔的孩子
+22:11 cleamoon: orz
+22:12 varna: 不朽之王布尔卡索是另一个
+22:12 varna: 不过他似乎是石头里崩出来的
+22:12 cleamoon: 然而还是挂了
+22:13 varna: Rathma应该没挂
+22:13 tutu_wind quit:Ping timeout: 246 seconds
+22:13 cleamoon: 那怎么把套装扔了...
+22:13 varna: 当时看The Sin War小说，里面写Rathma各种帅各种威风
+22:13 xxxxxxxx: 死灵法师 设定上来说会死么?
+22:13 varna: 不朽之王大概只是不朽……他懒得管了吧
+22:13 varna: nec是人
+22:14 varna: 只是有些法力而已
+22:14 cleamoon: ......
+22:15 lh_cat joined channel
+22:38 hysw: 上课去...
+22:38 ahe joined channel
+22:39 xxxxxxxx: http://tieba.baidu.com/p/3022464317 12L: Sth day of Ratham 在草席的某天（我实在是不明白Ratham这个单词是什么意思，百度和必应是草席，地铺什么的，所以我猜可能是躺在草堆里休息的意思）
+22:40 varna: S应该是扫描问题
+22:40 varna: Ratham看着是个月份名，说不定就是纪念Rathma的？
+22:41 xxxxxxxx: 下面的评论里给了个链接
+22:45 varna: 至于庇护之地的守护者，Rathma严格来说不是
+22:45 varna: 说到守护者，就是说塔格奥了；不过前段时间暴雪公开地说，塔格奥现在离开了庇护之地
+22:47 varna: 撤了
+22:47 varna: 诸君武运
+22:47 varna: 本月内有翔鹤改二，9.25维护
+22:47 Mokou: 我也撤了
+22:47 Mokou: 武运
+22:47 varna: 今年瑞鹤也会改二的
+22:47 Mokou quit:Quit: 睡觉
+22:48 varna quit:Quit: leaving
+22:49 ahe quit:Read error: Connection reset by peer
+22:58 hysw: lh_mouse: https://gist.github.com/hysw/ed006f008e8fd3865a65 < 链表log n space归并
+22:59 * hysw 滚去上课去了
+22:59 iyzsong: orz
+22:59 cleamoon: orz
+23:00 cleamoon: 果然在这里就是被虐
+23:06 lh_mouse: hysw, thanks
+23:07 ahe joined channel
+23:07 ahe quit:Read error: Connection reset by peer
+23:25 xxxxxxxx quit:Quit: Leaving...

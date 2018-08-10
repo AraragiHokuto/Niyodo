@@ -1,0 +1,823 @@
+00:02 varna: 23333
+00:03 iyzsong-m: (*´∀｀)
+00:03 cleamooon: orz
+00:06 varna: 咦，王林死了
+00:06 varna: 我觉得练气功救不了中国人
+00:07 varna: 我即使是死了，钉在棺材里了，也要用将腐朽的喉咙喊出「あたし的にはOKです」
+00:12 ShiinaMashiro quit:Quit: Connection closed for inactivity
+00:12 cleamooon: 王林死了?
+00:13 varna: 报道说死了
+00:15 cleamooon: orz 又少了一个会龟派气功的
+00:29 Mokou: varna: 爽哥斩了E2
+00:29 varna: OTL
+00:30 varna: 我驲哦，三场80k经验的演习下来，416酱还不到Lv68……
+00:30 cleamooon: orz
+00:30 Mokou: OTL
+00:30 varna: 一人16k经验还是有点少，但高级演习我刷不动，只好单刷中级
+00:30 varna: 太蛋疼了
+00:36 Mokou: 噗
+00:36 Mokou: 折纸的微博复活了
+00:38 varna: ...
+00:39 varna: 张女士尿道口安否
+00:39 Mokou: varna: 对了，说到这个
+00:40 Mokou: 张女士的尿道似乎不是手术失败了
+00:40 varna: 噗？
+00:40 Mokou: 而是手术完还没长好的那段时间她援交过度，自己作绷的
+00:40 Mokou: 手术本身是没问题的
+00:40 B005ter_ joined channel
+00:40 B005ter quit:Read error: Connection reset by peer
+00:41 varna: puuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+00:42 varna: 张女士的援交这么成功？
+00:42 Mokou: 你想想魏先生都能成情圣呢
+00:42 cleamooon: 什么情况？
+00:42 Mokou: 我现在是真心佩服世界的奇妙
+00:44 Mokou: https://wiki.esu.moe/%E5%BC%A0%E5%BF%BB%E9%93%83#.E6.9D.80.E5.AE.B3.E5.AB.8C.E7.96.91
+00:44 Mokou: cleamooon: ^
+00:45 varna: 肠子也随之脱出233333333333333
+00:45 cleamooon: 看到moe后缀就有不祥的预感
+00:45 varna: 分类：女人（dickgirl）
+00:45 cleamooon: 卧槽，怎么地址这么详尽
+00:48 lh_mouse: 王林死了有三种可能：
+00:48 lh_mouse: 第一，真的病死了。（私以为可能性不大。）
+00:49 varna: 我只能谨慎地说「报道说死了」
+00:49 lh_mouse: 第二，某些人怕走漏口风灭口。（可能性一般）
+00:49 varna: 至于他怎么死的，或者死了没有，我选择止罪
+00:49 lh_mouse: 第三，放消息死了，其实没死，跑了。（这个可能性比较大一点。）
+00:50 lh_mouse: varna, 你们媒体千万要注意，不要听得风就是雨。
+00:50 varna: (｡･ω･)识得！识得！
+00:50 lh_mouse: 不过王林，据说给老百姓还做了一些好事情。
+00:50 cleamooon: 还有一种，买到船票了，我看哪里说16号彗星撞地球
+00:50 wlemuel joined channel
+00:50 varna: 人不必一棍子打死
+00:51 lh_mouse: varna, 找到了个好网站。
+00:51 lh_mouse: http://wu-chinese.com/minidict/
+00:51 varna: 但那一棍子不打下去，也不代表没有下一棍子……
+00:51 lh_mouse: 杭州话上海话都有。
+00:51 varna: 我不太喜欢南方话，所以尽量不沾_(:з」∠)_
+00:51 lh_mouse: 不过估计杭州话比上海话难学。杭州话据说有八个声调，上海话只有五个。
+00:51 lh_mouse: varna, 听懂还是要的……
+00:52 lh_mouse: 虽然ヲ只能听出四个声调……
+00:52 varna: 懒得懂，到哪里我都是个外地人_(:з」∠)_
+00:52 lh_mouse: 没追求。
+00:52 varna: 当然了
+00:54 varna: 当然也可以说我是后人类主义信徒
+00:54 varna: 虽说后人类主义压根没有资质被称为「主义」
+00:55 Mokou: 共有主义，请
+00:55 wlemuel quit:Ping timeout: 240 seconds
+00:55 lh_mouse: https://my.oschina.net/766/blog/156685
+00:55 lh_mouse: Mokou, ^
+00:56 Mokou: 懒得编译ngx了
+00:56 varna: ngx编译还挺人性的，不过看来这旗直取兽性了
+00:56 Mokou: 懒得写PKGBUILD
+00:56 B005ter_ quit:Remote host closed the connection
+00:58 varna: 啊啊蛋疼
+00:59 varna: 我估计明天也补不完消磁电路的部分
+00:59 Mokou: 14个大发，水打E2
+00:59 cleamooon: 消磁电路?
+01:00 Mokou: 我试一下
+01:00 lh_not_bot quit:Remote host closed the connection
+01:00 varna: cleamooon: 之前入了一个1:350利根，但舷侧居然没开出消磁电路，于是我自己买了通用蚀刻件补上去
+01:00 lh_mouse: debian 上有 nginx-light nginx-full nginx-extras 三个版本。
+01:00 lh_mouse: apt-get install 装的是 nginx-full 。
+01:01 lh_mouse: 可以手动装 extras，带这个功能了。
+01:01 Mokou: 我用arch
+01:02 cleamooon: orz
+01:03 Mokou: 劝退了
+01:04 varna: 服务器我基本不会考虑arch, 前段时间试水又被nouveau坑了
+01:04 Mokou: (｡･ω･)反正服务器上也没有nouveau
+01:05 varna: pacstrap上去之后塞了一些奇怪的包
+01:05 lh_mouse: 特朗普和安倍见记者。
+01:05 lh_mouse: 特朗普问安倍：他们在说啥？
+01:05 lh_mouse: 安倍：请看着我。（look at me）
+01:05 varna: 而且t440p上面关机还要单独处理，systemd又bug了
+01:05 lh_mouse: （特朗普看着安倍）
+01:05 lh_mouse: 安倍：不是我，是那些记者说看着他们。
+01:05 varna: 233333333333
+01:06 cleamooon: 233333333
+01:06 lh_mouse: 就今天的新闻。
+01:06 varna: Mr.Rump的智力水平像是开过扎进海里的舰攻一样
+01:06 varna: @蝗军吃掉了你的脑子
+01:06 Mokou: 熟悉的纵横家
+01:07 Mokou: 嗨呀，皋月的等级还是太低了
+01:07 Mokou: 80都没到
+01:07 varna: ^ 萝莉控
+01:07 Mokou: ^ 萝莉控
+01:08 varna: 我哪里是萝莉控！
+01:08 Mokou: 你都猥亵过多少萝莉了，还说我
+01:08 Mokou: 丢人
+01:08 varna: 卧槽出四星了
+01:08 Mokou: OTL
+01:08 varna: 拆了
+01:08 Mokou: OTL
+01:08 Mokou: 在欧洲四星都是当核心用的
+01:09 varna: _(:з」∠)_我今天早上刚用9核心二扩的手枪
+01:09 Mokou: OTL
+01:09 cleamooon: orz
+01:09 varna: _(:з」∠)_犯不着为这个事等到七十级……
+01:09 Mokou: 我都是屯着等二号机的
+01:09 varna: 等不来，MP5已经拆超过四个了
+01:10 Mokou: 劝退了
+01:10 Mokou: 噫吁嚱
+01:10 Mokou: 两个罚站轻母都压不住
+01:11 varna: 主任又巴福了？
+01:11 Mokou: 双WOGAY
+01:12 varna: 陆航呢
+01:13 Mokou: 扔Boss了
+01:13 Mokou: 下次出击我扔那点试试
+01:13 varna: 坑
+01:13 varna: 不扔boss没问题么
+01:13 Mokou: 水打不缺火力
+01:13 varna: puuuuuuu
+01:13 varna: 水打搬砖？
+01:13 Mokou: 14大发水打啊
+01:13 varna: 太可怕了
+01:14 Mokou: 我看看这个队伍能不能进Boss
+01:14 Mokou: 能的话就好办了
+01:14 varna: 你们这些修炼茅山道术的怪物
+01:15 Mokou: 噫吁嚱，锁船搞得我都不敢上主力
+01:15 varna: 可怕，这人尚未使出全力
+01:16 Mokou: 所以我连Boss都进不去
+01:16 Mokou: puuuuuuu
+01:16 Mokou: 二队有三条船我没带装备
+01:16 Mokou: 6666666666
+01:16 varna: ...
+01:16 varna: 南无三，这是何等的慢心
+01:16 varna: 不愧julao
+01:16 Mokou: 刚才羽黑罗马欧根在手撕深海
+01:20 Mokou: 接着来
+01:21 Mokou: 劝退了
+01:21 Mokou: 皋月你不行啊
+01:22 varna: 再来三层吧
+01:22 Mokou: 懒得刷了
+01:22 Mokou: E2就刷闪E3怎么办
+01:22 varna: 睦月级改二也信不过的
+01:22 varna: E3猛刷闪
+01:22 Mokou: 那我还不如丙
+01:22 Mokou: (｡･ω･)现在和以前不一样，我的肝要留给FGO
+01:23 varna: 爆肝也好，活动也好，明明是舰先
+01:23 varna: 为什么会变成这样
+01:23 Mokou: 因为FGO玩起来比较偷税
+01:23 varna: 千晶般的展开
+01:25 Mokou: 咦
+01:25 Mokou: 有人说E2的主任是MI版
+01:25 varna: pu?
+01:25 varna: 旧式舰载机？
+01:25 Mokou: 我看看能不能进去
+01:25 Mokou: 听说是
+01:25 Mokou: 不过那两个wogay绝对是熊猫版
+01:26 varna: 米畜已经把能飞的飞机都拉出来作战了啊
+01:26 Mokou: 不然我不可能空优都没有
+01:26 varna: 我感觉蝗国要输
+01:26 Mokou: 蝗国不是一直在输么
+01:26 Mokou: 丢人，签字吧
+01:26 varna: 空母十九、战舰四
+01:26 varna: 总觉得田中在有意往签字了写
+01:27 varna: 越打越缩……
+01:27 Mokou: E1本土近海都被封锁了，九州旁边都是美帝的舰队
+01:27 varna: (｡･ω･)啊对，自从我坠机那年起，简直兵败如山倒
+01:27 Mokou: 八嘎还誓死不找马鹿从路上运，非得武装押运
+01:27 Mokou: (｡･ω･)叫你坐什么一式陆攻
+01:27 Mokou: 那玩意能坐么
+01:27 varna: (｡･ω･)请给我拍个《连沟汉队长官羊驼二三三》
+01:28 Mokou: (｡･ω･)然后请客吃雪么
+01:28 varna: (｡･ω･)小豆糕！
+01:28 varna: (｡･ω･)甜粥！
+01:28 Mokou: “这红茶是我家先辈专门为您泡的”
+01:28 varna: (｡･ω･)烧鱼！
+01:28 varna: 啊，那个，我家有gcc的
+01:29 Mokou: 噫吁嚱，FGO这次活动难度还不低
+01:29 Mokou: 四十万血的雷电法王……
+01:30 varna: 我就看他们说要什么什么礼装
+01:30 varna: 抱着大腿去怼
+01:30 Mokou: 礼装有加成
+01:30 Mokou: 比如加掉落/加威力
+01:30 Mokou: 你抽出来的那个五星效果是每个可以让G型零件掉落+1
+01:30 varna: (｡･ω･)难易度G
+01:31 Mokou: 2中破通过WOGAY点
+01:31 Mokou: 终于空优了
+01:31 varna: 空优也不好办
+01:31 Mokou: 空优至少战舰有火力
+01:31 Mokou: 均势还打个屁
+01:31 varna: 至今我落下个听到空袭就会双手响亮合十的病
+01:32 Mokou: 你那是3-5打多了
+01:32 Mokou: 666666666
+01:32 Mokou: 前面又一个WOGAY，劝退了
+01:32 varna: ...
+01:32 Mokou: 我撤三个大发上个对空CI吧
+01:32 varna: 可以有
+01:32 Mokou: 这个点可以空优，不需要陆航辅助
+01:32 varna: 谁来？
+01:32 Mokou: 初月
+01:32 varna: 可怕的肝力
+01:33 Mokou: 三个对空CI要员里她等级最低
+01:33 varna: 目测你耶一百二
+01:33 varna: 青岛社的摩耶似乎也不卖了，略残念
+01:34 Mokou: 不到，107
+01:34 varna: julao
+01:34 Mokou: 我耶婚得晚
+01:34 varna: 2人
+01:34 iyzsong-m: 睡啦( ´∀｀)
+01:34 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+01:34 varna: (｡･ω･)ﾉ
+01:34 Mokou: 然而她是喜欢今勇二提督的
+01:34 varna: 不像我鹤……
+01:35 Mokou: 这图蛋疼在得带彩云，没地方放司令部
+01:36 Mokou: 等等陆航疲劳
+01:36 varna: 搬砖队谁带彩云？
+01:37 Mokou: 搬砖队大概用水上机
+01:37 Mokou: 得带水母的
+01:38 varna: 哦，那就是空母带彩云，但水母要带紫云
+01:38 varna: 很合理
+01:38 Mokou: 不过我试试一彩云配置
+01:39 varna: (｡･ω･)反正云字辈都是侦察机
+01:39 Mokou: (｡･ω･)我现在也有紫云的
+01:39 varna: (｡･ω･)还不给米空配上！
+01:39 Mokou: (｡･ω･)没带米空，她不能带大发
+01:39 varna: (｡･ω･)米空能搬桶_(:з」∠)_
+01:40 Mokou: 啊对了，玉藻前的叫声就是米空……
+01:40 varna: ...
+01:40 varna: 我教后继有人
+01:40 Mokou: (｡･ω･)快来FGO膜米空
+01:40 varna: L射已经替我去了
+01:40 Mokou: 你来抽一个，我抱你的玉藻前用
+01:41 varna: 抽这个卡，也要看历史的进程
+01:41 Mokou: 西方那些国家我哪个没去过？我当然知道你们欧洲人都有五星C阶
+01:41 Mokou: 老苏和H佬现在都有爸爸
+01:42 Mokou: 而且老苏现在已经成为我群最大海报
+01:42 Mokou: 海豹*
+01:42 varna: 他政治不正确
+01:42 Mokou: 他新年福袋一发出了三个五星从者
+01:42 varna: 斗他
+01:42 Mokou: 这是个什么概念呢
+01:42 Mokou: 十连双黄是国王级别
+01:42 varna: ...
+01:42 Mokou: 如果再算上他那两个五星礼装，教皇都得跪下
+01:43 varna: ...
+01:43 varna: 伊势日向哪里去
+01:43 Mokou: 他那一张截图贴出来我们直接吓尿了
+01:44 Mokou: _(:з」∠)_好想要孔明和C狐啊
+01:44 Mokou: 我C阶都只能用安徒生
+01:46 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/ky/jy_137706.jpg@596w_1l.jpg
+01:46 varna: 噫吁戲，我到哪里去再搞11个核心呢
+01:47 Mokou: 你造几个五星出来拆了
+01:47 varna: 试了一下，没造出来
+01:47 Mokou: 欧洲人真可怕
+01:48 Mokou: 进去了
+01:48 varna: (｡･ω･)ﾉ突突突！
+01:48 varna: 痔疮2333
+01:49 B005ter joined channel
+01:49 Mokou: Boss点空优
+01:49 varna: 把这个月的石头都算上，我也买不起一个环……
+01:49 Mokou: 氪
+01:49 varna: _(:з」∠)_贵
+01:49 Mokou: 不冲钱你会变得更强么
+01:50 Mokou: (｡･ω･)或者你来玩FGO吧，FGO就没有戒指卖
+01:50 xhe quit:Ping timeout: 240 seconds
+01:50 varna: _(:з」∠)_那么多钱，我去买颜料多好
+01:50 Mokou: FGO其实是有戒指类似物的
+01:50 varna: 哦对了！
+01:51 varna: 我去凹木星炮，得了红包回来十连，搞不好就有
+01:51 Mokou: FGO每个从者可以再临四次，每次再临等级和等级上限跟稀有度相关
+01:51 Mokou: A胜滚
+01:51 varna: 但是上次凹炮出了事故，那炮不知为何没哑火，抬手一下把后排白学2000打退场了……
+01:52 Izumo quit:Quit: Connection closed for inactivity
+01:53 Mokou: 1X从者满级60，2X满级65，3X满级70，4X满级80，5X满级90
+01:53 Mokou: 但如果用圣杯的话，可以在这之上再提升等级
+01:53 Mokou: 每个圣杯提升10级，直到100级
+01:54 varna: 噫吁戲
+01:54 Mokou: 而圣杯的获取方式只有剧情每章一个，以及活动有时候会给一个
+01:54 varna: 少前那个环其实不套也可以
+01:54 Mokou: 所以圣杯其实比戒指有诚意多了……
+01:54 cleamooon: 每个圣杯orz 设定都扔了？
+01:55 Mokou: FGO又不是圣杯战争
+01:55 varna: 通常好感上限100，90+的好感会附加伤害命中回避各5%
+01:55 varna: 环了之后上限150，140+的好感再附加5%
+01:55 varna: 修理时间似乎会减少30%，不过属性加值感觉不那么吸引人
+01:55 varna: 像是在骗氪
+01:56 Mokou: 毕竟FGO不用骗氪……
+01:56 varna: 都在狂氪
+01:56 Mokou: +
+01:56 varna: 少前核心玩家似乎氪得比较猛，我就算了
+01:56 Mokou: 啊，得到了第一个Lily
+01:56 varna: 可怕
+01:57 varna: 睡了
+01:57 varna: 健斗
+01:57 Mokou: Lily宝具等级+1
+02:38 Youmu quit:Quit: Connection closed for inactivity
+03:57 lh_mouse quit:Ping timeout: 240 seconds
+05:38 Mokou: E2运完
+05:39 cleamooon: orz
+05:44 Mokou quit:Remote host closed the connection
+09:59 yimis joined channel
+10:02 yimis quit:Client Quit
+10:59 iyzsong-m joined channel
+11:00 xhe joined channel
+11:08 B005ter quit:Read error: Connection reset by peer
+11:08 B005ter joined channel
+11:41 wlemuel joined channel
+12:05 Stevearzh quit:Ping timeout: 245 seconds
+12:06 Stevearzh joined channel
+12:07 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+12:16 iyzsong-m joined channel
+12:16 iyzsong-m: :-|
+12:54 iyzsong-m quit:Ping timeout: 255 seconds
+13:11 iyzsong joined channel
+13:40 wlemuel quit:Ping timeout: 252 seconds
+13:43 Guest25908 joined channel
+13:50 Guest25908 quit:Remote host closed the connection
+14:11 xhe quit:Ping timeout: 240 seconds
+14:11 xhe joined channel
+14:21 ShiinaMashiro joined channel
+14:26 iyzsong quit:Quit: ZNC 1.6.4 - http://znc.in
+15:39 FiveBroDeepBook joined channel
+15:40 Mokou joined channel
+15:41 Mokou: http://wx2.sinaimg.cn/mw690/a35ef9b0ly1fclpe7z00ij21g10qon32.jpg “分享一下我校学汉语的歪果仁”
+15:50 iyzsong joined channel
+16:01 iyzsong quit:Quit: ZNC 1.6.4 - http://znc.in
+16:05 varna: _(:з」∠)_
+16:06 varna: 下午普建骗核心，出了国产amr幼女
+16:06 Mokou: 后端作战1730开放
+16:06 varna: 23333
+16:06 Mokou: e2水打流劝退率一般，不过进去就能赢
+16:06 Mokou: 一次77TP，总共七次A胜
+16:07 varna: 怎么都是搬砖
+16:07 Mokou: 鬼知道
+16:08 varna: 新买的键鼠套装还凑合，键盘挺好的，鼠标是渣
+16:08 Mokou: 我看他们用机动的十几AP在那运，简直蛋疼
+16:08 varna: 太轻了，甚至会被线带着走
+16:08 Mokou: TP*
+16:08 Mokou: 6666666
+16:08 varna: 下回买鼠标的时候我还是买个无线的
+16:08 Mokou: 无线鼠标不是有延迟么
+16:08 varna: 驲
+16:08 varna: 那就继续买罗技
+16:09 Mokou: 我听说玩游戏的时候会坑
+16:09 Mokou: 我一直没入无线就是因为这个
+16:09 varna: 驲，那就不买了
+16:09 varna: 这次弄了个全尺寸的键盘
+16:10 varna: 终于不用把手挤在一小块地方
+16:10 Mokou: (｡･ω･)入红轴！
+16:10 varna: 玛德这些照顾妹子手感的便携硬件真是堕落不堪
+16:10 Mokou: 想想macbook
+16:10 varna: macbook看着像个女包
+16:10 Mokou: 23333
+16:13 wlemuel joined channel
+16:13 varna: 而且这次买的键盘有一点好
+16:13 varna: 没有fn
+16:34 Mokou: 提督の皆さん、お待たせして申し訳ありません。現在、サーバを停止しない形で「後段作戦」作戦海域の更新&同開放作業を進めています。全サーバ群の完了予定時刻は【19:15】となる見込みです。お待たせして、大変申し訳ありません。
+16:35 lh_mouse joined channel
+16:45 Dove joined channel
+16:50 iyzsong joined channel
+16:51 iyzsong: (┙>∧<)┙へ┻┻
+17:01 varna: (｡･ω･)ﾉ
+17:02 yi joined channel
+17:04 yi quit:Remote host closed the connection
+17:11 B005ter quit:Remote host closed the connection
+17:11 B005ter joined channel
+17:12 B005ter quit:Remote host closed the connection
+17:12 B005ter joined channel
+17:13 B005ter quit:Remote host closed the connection
+17:13 B005ter joined channel
+17:14 B005ter quit:Remote host closed the connection
+17:14 B005ter joined channel
+17:14 wlemuel quit:Ping timeout: 255 seconds
+17:14 B005ter quit:Remote host closed the connection
+17:15 B005ter joined channel
+17:15 B005ter quit:Remote host closed the connection
+17:15 B005ter joined channel
+17:16 B005ter quit:Remote host closed the connection
+17:16 B005ter joined channel
+17:17 B005ter quit:Remote host closed the connection
+17:17 B005ter joined channel
+17:18 B005ter quit:Remote host closed the connection
+17:18 B005ter joined channel
+17:19 varna: _(:з」∠)_找点篮球看
+17:20 varna: http://www.bilibili.com/video/av719121/ 北职篮
+17:23 B005ter quit:Ping timeout: 240 seconds
+17:23 Mokou: 伊14的腿看起来不错
+17:23 Mokou: http://wx2.sinaimg.cn/mw690/e4beb8aegy1fcnsmuqzquj20a00a0wi7.jpg
+17:26 Youmu joined channel
+17:27 varna: 这个画风，看起来像是库撸库撸
+17:55 xhe quit:Quit: leaving
+17:57 Mokou quit:Quit: 切windoze
+17:58 Dove: 零子居然反杀了RUGAL
+17:58 Dove: 这并不科学
+17:59 Izumo joined channel
+18:04 Dove: 社长打对面应该1穿4才对
+18:21 Izumo: http://wx2.sinaimg.cn/mw690/725f479bly1fcnuiy3w33j20a00a0aea.jpg 上一张尸块
+18:21 iyzsong-m joined channel
+18:21 Izumo: 【重磅：马来西亚宣布清真血无必要】马来西亚卫生部总监发声强调，穆斯林可以接受非穆斯林捐献的器官和血液。并声明马来西亚器官捐献的分配的根据是临床判断，并不分捐献者的种族、宗教、社会地位与背景。他同时声明，非穆斯林捐献的器官和血液，因此很有可能
+18:21 Izumo: 分配给穆斯林。 ​​​​
+18:22 iyzsong-m: (#･∀･)
+18:23 Izumo: http://wx4.sinaimg.cn/mw690/7652ed6dgy1fcnu603z68j20tq0jmjt2.jpg 下北泽艺术馆
+18:46 iyzsong-m quit:Ping timeout: 255 seconds
+18:54 lh_mouse: http://v.ifeng.com/news/society/201702/0176c317-032a-43bd-bccd-9763568b96b7.shtml
+18:54 iyzsong quit:Ping timeout: 264 seconds
+18:55 iyzsong joined channel
+19:06 xhe joined channel
+19:10 Dove quit:Read error: Connection reset by peer
+19:12 varna: _(:з」∠)_好想侵犯幼女啊
+19:12 B005ter joined channel
+19:12 iyzsong: _(:з」∠)_
+19:16 xhe quit:Ping timeout: 240 seconds
+19:17 xhe joined channel
+19:22 xhe quit:Quit: leaving
+19:48 varna: Izumo: E3怎么样
+19:48 Izumo: varna: 鸽到2300了
+19:49 varna: 2333333333
+19:49 varna: 不对
+19:49 varna: 3955555555555
+19:49 Izumo: 6666666666666
+19:49 varna: 核心不够用了，下周我是不是该憋资源赌大建……
+19:49 Izumo: 【「後段作戦」をお待ちの提督の皆さんへ】
+19:49 Izumo: 更新＆開放作業を行っていましたが、申し訳ありません。同更新投入作業が遅れています。本日【23:00】迄の投入を目指して、現在作業を再度進めています。今暫くだけお時間を頂けますと幸いです。お待たせしてしまい、大変申し訳ありません。
+19:50 Izumo: 我现在接上了方向盘玩NFS14
+19:50 varna: 到明天为止，一队应该都能达到三扩，但国货妹要吃三十核_(:з」∠)_
+19:51 varna: _(:з」∠)_结果我还是没去折腾新机器的本子，正在考虑要不要打个格前枪
+19:51 varna: 移动硬盘里还有部黑色行动2没通
+19:53 xhe joined channel
+19:54 varna: _(:з」∠)_先刷两圈5-4
+19:57 Izumo: 你没有头发.jpg
+19:57 Izumo: +
+19:57 Izumo: 按错
+19:57 varna: 看这架势搞不好能刷三圈
+19:58 varna: 现在效能已经过万了
+19:58 Mokou joined channel
+20:01 Mokou: 打完了E2结果现在好无聊_(:з」∠)_
+20:02 varna: 揉脸吧
+20:02 Mokou: 另外我感觉E2的wogay不行啊
+20:02 varna: 估计是bug
+20:02 Mokou: 经常打不中
+20:02 Mokou: 上次wogay至少大破一个的
+20:02 varna: 那是因为你变强了
+20:03 Mokou: 并没有，上次是我主力，这次是二三线
+20:03 varna: 不是说你家妹子，是说你本人
+20:03 Mokou: 但我头发更黑更浓密了
+20:03 varna: 那是因为你其他地方的毛发长到了头上
+20:04 Mokou: 你看看你这思想
+20:04 Mokou: 丢人
+20:04 varna: 我没有用大脑思考
+20:05 varna: 用的都是精虫
+20:05 varna: @卡利亚叔叔
+20:06 varna: 昨天我似乎给你抽出一张上面画着很苦逼雁夜的礼装卡，那个卵到什么程度？
+20:06 Mokou: 觉醒的意志啊
+20:07 Mokou: 等会我看看
+20:08 Mokou: 每回合12NP & HP减500
+20:09 varna: ...
+20:09 Mokou: 每回合12NP效果不错，但加上后面的就卵了……
+20:09 iyzsong quit:Quit: bye.
+20:09 varna: 果然什么事沾上雁夜叔叔就是悲剧
+20:09 Mokou: 同样是四星，虚数魔术初始60NP
+20:10 varna: 毕竟是樱
+20:10 Mokou: 这得五回合才能达到虚数魔术的效果，还得扣2.5k血
+20:10 Mokou: 然而除非高难度活动本否则撑死7、8回合……
+20:10 varna: (｡･ω･)雁夜苦逼一辈子也达不到樱一工程的效果吧，这个已经很给他面子了
+20:11 Mokou: (｡･ω･)毕竟雁夜不能用〇液补给
+20:12 varna: (｡･ω･)他可以用少女的魔力块
+20:12 Mokou: 当然更大的问题是我有宝石翁了
+20:12 varna: (｡･ω･)可怕的欧洲人
+20:12 Mokou: 初始80NP，带个孔明开幕就是一发宝具
+20:12 varna: (｡･ω･)啊，原来这就是欧洲的战法
+20:13 Mokou: (｡･ω･)这是非洲人的打法
+20:13 Mokou: 欧洲人会用满破黑圣杯+双孔明
+20:13 Mokou: 还要什么NP礼装
+20:14 iyzsong-m joined channel
+20:14 Mokou: _(:з」∠)_孔明爸爸快来啊
+20:15 Mokou: varna: http://www.bilibili.com/video/av8295695/ gigguk新作
+20:18 lh_mouse: geordi, << __FMA__
+20:18 geordi: 1
+20:18 varna: 为什么开篇不足两分钟，蕾姆就出现了两次
+20:18 Mokou: 因为他是RE姆厨？
+20:20 varna: 大概因为所有饮水机的制造商都是RE姆厨
+20:22 varna: 我驲，后面好多蕾姆
+20:23 varna: 我需要看点篮球拳冷静一下
+20:23 varna: 同时想办法再掏出三个核心准备三扩
+20:24 varna: (｡･ω･)ﾉ部落之友Sten Mk2！
+20:26 Mokou: _(:з」∠)_闪闪满破了
+20:26 Mokou: 然并卵，国服还是没开闪闪宝具本
+20:33 xhe quit:Quit: leaving
+20:35 Dove joined channel
+20:45 varna: _(:з」∠)_幼女幼女平坦的胸口
+20:48 varna: http://img.vim-cn.com/44/4b73f02395fd599aede388b4b4688cb5be5f5a.png 旧素材/nanosuit娘/迫真剪纸风
+20:53 Dove: 好嘛
+20:55 varna: 其实本来还买了孤岛危机1的
+20:55 varna: 然后他直接运行崩溃
+20:55 varna: 退款
+20:57 Dove: 哈哈
+20:57 Dove: 显卡危机我也就玩过一会儿
+20:58 Dove: 大学的时候同学的机器上装着有
+20:58 varna: 2和3的美术设计我超喜欢，一代的nanosuit样子我也挺喜欢的
+20:58 varna: 二代开始，场景、光影和武器的设计都很赞
+20:58 Dove: 美术确实不错
+20:59 Dove: 你爱好实在是广泛
+20:59 varna: 而且自带关准星选项，不影响看风景
+20:59 varna: 美术还是有意思的
+21:00 Dove: 美术我完全不懂
+21:01 * varna 爱好幼女
+21:01 Dove: 2333
+21:02 Dove: 我对生活都没什么兴趣了，很无聊的一个人。
+21:02 varna: 明后天挑个下班早的时候去买点黑芝麻糊
+21:03 varna: 最近懒得开空调，晚上得喝点热的
+21:03 Dove: 南方牌的？
+21:03 varna: +
+21:03 Dove: 别的感觉没那个好吃
+21:03 varna: 就那个牌子好吃
+21:04 Dove: 我也感觉，小时候常吃，后来没吃到了，吃别的都没那个好吃。
+21:05 varna: 有些老牌子还是挺赞的
+21:05 Dove: 是的
+21:05 varna: 青岛有种钙奶饼干，几十年下来还是那个味儿，很不错
+21:05 varna: 后来挺多仿制品都没他的单纯味道
+21:05 Dove: 我们这边没有那种牌子的东西
+21:06 varna: 那个算是本地特色的零食，青岛人以前拿水泡软了喂小孩吃一点
+21:06 varna: 消化不好的时候也可以这么吃
+21:06 Dove: 我本来想弄点特产在网上卖，什么枸杞藏红花之类的，但是没有品牌货，也没有进货渠道，质量我又不懂就作罢了。
+21:06 varna: 开店太麻烦了
+21:06 Mokou: 本地特色+
+21:06 varna: 从渠道到运营都能累死
+21:07 Dove: 要卖总得卖点质量好的
+21:07 Dove: 关键我完全不懂好坏
+21:07 varna: 找个懂行的哥们儿跟你一起搞呢
+21:08 Dove: 土特产懂行的我还真是不认识。
+21:08 varna: 慢慢来吧
+21:08 Dove: 嗯
+21:08 varna: 哪天遇到靠谱的可以聊聊，万一火了呢
+21:08 Dove: 不会太火的
+21:08 varna: 这个是旧的窝狗梗
+21:09 Dove: 哈哈
+21:10 varna: 一想到明天又要开一堆蛋疼的会就浑身蛋疼
+21:10 varna: 后天是雪菜被鸽纪念日，还要开会
+21:10 Dove: 不会比年会蛋疼的
+21:10 Dove: 你要这么想
+21:10 varna: 年会之前开过了，我就坐在下面吃东西
+21:11 varna: 虽说不怎么好吃
+21:11 Dove: 好吧，别的会好像没东西吃。
+21:11 varna: 有瘪吃
+21:11 varna: 各种麻烦
+21:11 Dove: 看出来了
+21:12 varna: 总之挺过二月份应该能舒服一阵子
+21:12 Dove: 大厂是这样了
+21:12 varna: 月饼厂其实还好，相对很不官僚
+21:12 Dove: 尤其是你这种有能力的得累死
+21:12 varna: 都累
+21:13 Dove: 这么想想我的生活虽然没啥希望但是还是挺悠哉的
+21:13 Dove: 虽然心累就是了
+21:13 Dove: 我已经心死了，不累，2333。
+21:15 varna: 搞那么活也未必有意思，现在有房有车有妹子就满足的新时代小农一抓一大把，不信春哥的话最后还不都得咽气……
+21:15 varna: 关键还是要信春哥
+21:16 Dove: 我现在坚信世界只是意识中的幻象，所以什么事情都有可能发生，唯一让我好奇的就是咽了气之后能不能好点。
+21:17 varna: 跟我念：观自在长者行深般若膜蛤蟆多时
+21:18 Dove: 是我一个人意识的幻象还是很多人所有人意识的幻象我就不清楚了，然后也有很多没法解释的现象，至于跟我没有交集的那就是薛定谔中间态，我就当他们不存在。
+21:19 varna: 这个问题建议先撸
+21:19 varna: 撸完三管头脑如果清凉了就可以写码，迷糊了可以睡觉……
+21:20 Dove: 比方说在劳资的意识里劳资应该至少能飞吧，妈个鸡连个破灰机都能飞我居然不能太不科学了。不过精分的时候确实见到不少有趣的幻象就是了。
+21:21 Dove: 比方说我看见两只狐狸和两个美女，别人似乎是看不见的就是了。
+21:22 varna: http://www.bilibili.com/video/av726199/ 这里有魔法少女
+21:22 Dove: 两个狐狸是在大街上看见的，美女就坐我家沙发上然而我家人显然并不能看到。
+21:23 Dove: 虽然我也就看到一下下，转头就没了。
+21:23 Dove: 那两个狐狸超可爱。
+21:24 varna: 可爱就好
+21:24 Dove: 我跟着它们走了一段然后它们走到石头后面消失了。
+21:24 varna: 总比看到奇怪玩意儿好多了
+21:24 Dove: 倒没有看到奇怪的玩意，我还想看看可惜看不到了。
+21:24 Dove: 怅然若失
+21:26 Dove: 幻视还是比较难得的，幻听那阵子倒是经常有。
+21:27 Dove: 我发现跟真的没什么两样继而对世界的真实性产生了怀疑也是很正常，不过这个世界是个幻觉似乎更好接受一些。
+21:28 Dove: 也很能解释很多问题
+21:29 Dove: 也带来了劳资为什么不能在幻觉里飞这样的问题，不过我就算做梦也鲜有能飞的，所以也还好。
+21:30 Dove: 每天就闲着没事大概在思考这样的问题了。
+21:30 yimis joined channel
+21:32 Dove: 大概是我的潜意识固有地认为我并不能飞所以飞不起来吧。
+21:32 Dove: 这是我的解释
+21:34 FiveBroDeepBook joined channel
+21:35 Dove: 那个美女也是，我意识到她并不是真实存在的，所以她就消失了，应该是这么回事。
+21:37 Dove: 有点信则有不信则无的意思。
+21:37 Dove: 好了，深井闲聊到此为止。
+21:40 iyzsong-m: (#･∀･) 
+21:40 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/m3/sk_115950.jpg@596w_1l.jpg
+21:40 varna: 口苗不错
+21:41 cleamooon: 印尼首都雅加达发生大规模示威，十多万名强硬派穆斯林聚集在雅加达独立清真寺周围，呼吁市民在下周的选举中抛弃华裔省长钟万学，选出一名穆斯林省长。
+21:42 varna: 不然他们就全员化为阳炎厨？
+21:43 cleamooon: 那不正好吗
+21:43 Dove: 你们这么黑绿绿有违基本法
+21:43 Dove: 虽然说绿绿确实不咋地就是了
+21:44 varna: 再说阳炎十九铁汉还有一个没胜利爆炸成功呢
+21:44 Dove: 黑绿绿文我都要看吐了，人类癌症什么的论调。
+21:45 varna: 穆斯林有一点不错：菜式好吃
+21:46 Dove: 清真吃少了可以，吃多了容易烦。
+21:46 varna: 饼可以常吃
+21:46 cleamooon: 菜式好吃+
+21:46 Dove: 天天吃清真就吃不下了
+21:46 varna: Y?
+21:46 cleamooon: 帝都小吃一般都是清真小吃
+21:46 varna: 你不太喜欢牛羊肉味么
+21:47 Dove: 不是
+21:47 Dove: 我挺喜欢的
+21:47 xhe joined channel
+21:47 varna: 那就是吃的时候厨师会爆炸？
+21:47 Dove: 我们这里吃的都是牛羊肉，然而牛肉面啊什么的天天吃很烦。
+21:47 varna: 牛肉面容易吃上火，搞点别的干粮吃吃
+21:48 Dove: 还是得换点家常口味吃。
+21:48 cleamooon: kongfu http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/m3/vw_312584.gif@596w_1l.gif
+21:48 cleamooon: 帝都的清真小吃里似乎没有牛肉面... 
+21:48 Dove: 我们这边流行兰州拉面，其实全国的兰州拉面馆多半都是我们这边的人开的，真的兰州人开反而被我们这边的人抵制。
+21:49 Dove: 尤其是我们这里的化隆人
+21:49 Dove: 基本上全是开拉面馆为生的
+21:50 Dove: 而且打得都是兰州拉面的旗号
+21:50 varna: ...
+21:51 cleamooon: 求介绍几个你们那里的金发碧眼萝莉
+21:51 Mokou: 之前上海拉面黑帮那事不就是化隆黑帮么
+21:51 Dove: 我们这里的穆斯林血统不纯，没有金发碧眼的
+21:52 Dove: 基本上都是拉帮结派的 全国开拉面馆的都是化隆人
+21:52 Dove: 别的人开会被当地化隆人联合抵制
+21:52 Dove: 多半开不下去
+21:53 Dove: 所以这些就是恶霸没错了
+21:53 cleamooon: 话说我初中有个回族妹子的确是符合萝莉的身娇腰柔易推倒性质的，软的很
+21:53 Dove: 初中妹子你都还惦记着
+21:53 Dove: 初中妹子长啥样我都不记得了
+21:54 varna: 求跟她生一个幼女打包给我被我侵犯
+21:55 cleamooon: 因为脸还没长开不好看遂没下手，啊，现在肠子都悔断了，那时好妹子好多呀
+21:56 Dove: 2333
+21:58 cleamooon: 如果我能回到过去，我一定，先，买房
+21:59 Dove: 可以
+22:01 Dove: 我相信过去和未来都是既定的事实，你每个想法行为都是确定的，所以回到过去你也不会买房而是该干嘛干嘛。
+22:01 Dove: I didn't choose this life, it chose me.
+22:02 Izumo quit:Quit: Connection closed for inactivity
+22:02 Mokou: varna: 悲报：又鸽了
+22:02 Mokou: 现在官推直接不说时间了
+22:03 cleamooon: 我当然要保持我现在的变态思想回去呀
+22:03 cleamooon: ......
+22:03 varna: 39555555555555
+22:03 Dove: 可能没法保持你的变态思想回去
+22:05 Dove: 我TM觉得时空是指意识延伸出来作为媒介的幻象而已，所以妈个鸡我感觉我是推销邪教的。
+22:05 Dove: 但是我相信我自己的理论2333
+22:06 cleamooon: 只有邪说不叫邪教，还需要邪恶的举动，比如推遍世间萝莉
+22:07 Dove: 推遍世间萝莉又不邪恶，虽然我做不到就是了。
+22:09 Dove: 虽说三年血赚死刑不亏就是了。
+22:10 cleamooon: 亏，我还想上少女呢
+22:10 Dove: 麻麻的我的理论还需要不断完善才行
+22:13 yimis quit:Quit: yimis
+22:16 wlemuel joined channel
+22:17 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:17 Dove joined channel
+22:17 iyzsong-m: m(_ _;)m 睡觉
+22:17 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+22:17 Dove: 睡觉去啦 诸君晚安 夜间愉快
+22:18 Dove quit:Client Quit
+22:18 varna: (｡･ω･)ﾉ
+22:42 KeyCoffee joined channel
+22:45 Mokou: OK，开了
+22:46 varna: (｡･ω･)ﾉ
+22:46 Mokou: 噗，什么鬼
+22:46 Mokou: E3出击一次两个彩云？
+22:47 Mokou: 6666666
+22:49 varna: 什么机理
+22:49 Mokou: 似乎E3得先运输两个彩云
+22:49 Mokou: 实现是出击前拆两个，打赢还两个
+22:49 varna: ...
+22:50 Mokou: D败算运输失败彩云报废，接着拆
+22:50 Mokou: 6666666666
+22:50 varna: ...
+22:50 varna: 真会玩儿
+22:51 Mokou: 合着复数彩云是让你拆的
+22:51 cleamooon: 卧槽
+22:51 cleamooon: 那还玩啥
+22:52 ShiinaMashiro quit:Quit: Connection closed for inactivity
+22:52 Mokou: Bos: s一姬二主任二塔一运输 1CL1TSU4祖宗
+22:53 varna: _(:з」∠)_啊，终于能用疯狗般的火力扫进5-1e了
+23:01 varna: (｡･ω･)三回合十歼灭占领过关，终于有核心给副T三扩了
+23:06 Mokou: 削甲点：1离岛3飞行场
+23:06 varna: ...
+23:07 varna: 我猜只要打掉下面的两个运输船？
+23:07 Mokou: 下面是两个田中小鬼
+23:08 varna: ...
+23:08 varna: 这怎么打
+23:16 Mokou: 沟了两次
+23:16 Mokou: 我等别人问问配置吧……
+23:18 cleamooon: 冰岛四大火山都准备喷发
+23:18 cleamooon: 世界药丸系列
+23:20 Mokou: http://wx1.sinaimg.cn/mw690/e4beb8aegy1fco1pbumcmj20s50llwtu.jpg 伊14
+23:20 varna: shizuma...
+23:21 cleamooon: 呃呃呃，这个不好
+23:21 varna: 会笑的小和换上了失禁风的发型之后憋了三天没洗头
+23:21 varna: 样子我倒挺喜欢的
+23:21 Mokou: 三天没洗头23333333
+23:21 varna: 这个可以有！
+23:22 Mokou: http://wx1.sinaimg.cn/mw690/e4beb8aegy1fco1po4rh6j20mp0kvqgk.jpg 伊13
+23:22 varna: 这个就太色了，不如伊14
+23:22 Mokou: 反正我捞不到
+23:23 varna: 总体来说shizuma潜艇还是很好的、
+23:23 cleamooon: 道理我都懂，乳〇上那个用过的套子是什么
+23:23 varna: s/、//
+23:26 varna: _(:з」∠)_11k效能，应该可以去凹一下5-2e了
+23:26 varna: _(:з」∠)_现在E3有直播的么
+23:27 Mokou: 爽哥
+23:28 varna: 卧槽
+23:28 varna: 我被百度全吧封禁了
+23:28 Mokou: 666666666
+23:28 Mokou: 什么理由
+23:28 varna: 最近我似乎没发什么儿童色情啊
+23:28 Mokou: 你的新ID？
+23:28 varna: 对
+23:28 varna: 难道百度现在连PIGU都不让说了？
+23:28 cleamooon: 233333
+23:28 Mokou: 6666666666
+23:28 cleamooon: 我也是
+23:29 varna: 唉唉
+23:29 Mokou: 帖子被隐藏
+23:29 varna: 明天我再去碰个瓷，买一下孤岛危机1
+23:29 varna: 要是网上的兼容性解决方案都不好用，就继续退款
+23:30 Mokou: 我橘子上面有没有孤岛来着
+23:30 Mokou: 忘了
+23:30 varna: 橘子上买东西方便么
+23:31 varna: 不方便的话显卡3我将来继续玩盗版……
+23:31 Mokou: 非常不方便，得上你司产品找代购
+23:31 varna: 那就只能盗版了
+23:31 Mokou: 或者多币种信用卡应该也行？
+23:31 varna: 我有个很漂亮的英文版，毫无汉化痕迹
+23:32 varna: 汉化的版本实在太差了，第一关"Post-human"愣是被译成“人类灭绝之后”
+23:33 wlemuel quit:Ping timeout: 256 seconds
+23:33 Mokou: 66666666
+23:33 Mokou: 五月天五月天
+23:33 varna: 不过对这系列，我总怀疑日本玩家会有个剧情上的疑问
+23:34 varna: 「这作战服如此厉害，为何还要拿枪打敌人」
+23:34 Mokou: 23333333
+23:35 varna: - 五月天五月天，我们有一个男人要下去了  - 闪电1-1，很显然你是被雇佣的  - 放下武器
+23:35 cleamooon: 神级翻译
+23:35 varna: 原文
+23:36 varna: 1. Mayday mayday we've got a man down
+23:36 varna: 2. Lighting 1-1, you're clear to engage
+23:36 cleamooon: 我怀疑google机翻都比这个强
+23:36 varna: 3. (Fighter pliot) Weapons away
+23:36 cleamooon: 23333 weapons away
+23:37 varna: 哦不对，五月天那个有两个版本
+23:37 varna: 最著名的应该是“我们要下去了”
+23:37 varna: 连进行时的将来语义都正确地翻译出来
+23:37 Mokou: 23333333
+23:37 varna: 真是高手！
+23:38 Mokou: @青春期骨痛
+23:38 varna: 小石
+23:38 varna: ko ishi 似乎没什么错
+23:39 Mokou: 深海双子栖姬：火力220 雷装190 对空160 装甲218
+23:39 varna: 双子栖姬是什么鬼
+23:39 Mokou: 不知道
+23:39 varna: 这东西看起来是水面舰，但它是什么？
+23:39 Mokou: BBV
+23:40 Mokou: http://wx2.sinaimg.cn/mw690/e4beb8aegy1fco1r1bskjj20j20d8k5s.jpg
+23:40 Mokou: 血量800
+23:41 varna: 九六神炮？！
+23:41 varna: 我没看错吧
+23:42 varna: 九六神炮+舰首鱼雷+球，这到底是从哪本古书里爬出来的怪物
+23:42 cleamooon: 像步惊云
+23:42 varna: 怎么看都像是浮到水面上的潜母
+23:42 varna: 左边的奇怪兵装应该是深海的泛用鱼雷管
+23:43 Mokou: 彩云运完了
+23:43 Mokou: _(:з」∠)_天国的两个彩云啊
+23:43 Mokou: varna: 另外，这次E3有雷爷
+23:43 cleamooon: 噗
+23:44 varna: 我驲
+23:44 varna: 我还记得 我们的约定 一辈子 都不上雷级
+23:44 varna: 这什么状况，说好的活动无雷爷呢
+23:44 Mokou: 鬼知道
+23:45 Mokou: http://wx2.sinaimg.cn/mw690/e4beb8aegy1fco3gjtqhcj20w80jc4qp.jpg
+23:45 varna: 而且这个双子姬怎么看都不像是水面舰啊
+23:45 varna: 其实就是潜艇吧
+23:45 Mokou: 应该是潜艇
+23:45 varna: puuuuuuuuuuuuuuuuuuuu
+23:45 varna: 这不就是5-5门神加强……
+23:45 Mokou: 但是游戏里是BBV
+23:45 Mokou: 不然218甲的潜艇打个屁
+23:45 varna: 另外截图提督差评
+23:46 varna: 绫波小和雪菜都没婚
+23:46 Mokou: varna: 削甲现在据说是那个点S
+23:46 varna: puhahahahahahahahahahahh
+23:46 cleamooon: 田中会说这次不是活动，是福利
+23:46 varna: 看来军令部没换人
+23:46 Mokou: 我还是等等吧
+23:46 Mokou: 218甲800血，底下还有两个主任
+23:46 varna: 这简直是狗屁
+23:47 varna: 打什么啊，无非去送命博运气
+23:47 Mokou: 罢了，反正现在雷爷就这样
+23:47 Mokou: 还不如wogay
+23:47 varna: 另外九六神炮为何能堆到对空一百六的，舰上搭载亨利沃克了？
+23:47 Mokou: 雷爷就那一发雷，wogay制空确保没大破你三个都是给你脸
+23:48 Mokou: 估计那亨利沃克还会掌大勺……
+23:48 varna: 人家好歹是珍珠港打飞机出身的
+23:48 varna: 精通各类防空炮
+23:48 Mokou: 唉
+23:49 Mokou: 现在的活动啊，一代不如一代！
+23:49 varna: 卧槽两回合内胜利歼灭十个，这是在让我打什么
+23:51 Mokou: 我上个标准机动试试
+23:53 Mokou: varna: 金雷血量440
+23:53 varna: ...
+23:53 Mokou: 简直胡闹……
+23:53 varna: 金雷……
+23:54 cleamooon: 给你弄个速吸带路就好玩了
+23:54 Mokou: 我都不想打了
+23:54 varna: 简直是噩梦，金雷都出来了、
+23:54 Mokou: 这都什么玩意
+23:54 varna: s/、//
+23:54 cleamooon: 新键盘还没适应？
+23:54 Mokou: 等等情报看看到底是真是假
+23:55 Mokou: 反正红雷是真的
+23:55 varna: 新键盘是巧克力式的，回车容易敲到顿号
+23:55 cleamooon: 那就发呗

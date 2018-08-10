@@ -1,0 +1,1342 @@
+00:01 lh_mouse joined channel
+00:04 lh_mouse quit:Read error: Connection reset by peer
+00:04 lh_mouse joined channel
+00:29 cleamoon_ quit:Read error: Connection reset by peer
+00:29 cleamoon__ quit:Read error: Connection reset by peer
+00:30 lh_mouse quit:Read error: Connection reset by peer
+00:46 cleamoon_ joined channel
+00:47 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150404130542]
+01:23 Matsune quit:Read error: Connection reset by peer
+01:35 cleamoon_ quit:Read error: Connection reset by peer
+01:48 hoxily joined channel
+01:51 cleamoon_ joined channel
+02:06 lolisa quit:Quit: Leaving
+02:13 hoxily joined channel
+02:18 cleamoon_ quit:Read error: Connection reset by peer
+02:18 hoxily quit:Quit: Leaving
+02:26 hoxily joined channel
+02:35 cleamoon_ joined channel
+03:01 cleamoon_ quit:Read error: Connection reset by peer
+03:15 xxxxxxxx: hoxily: 话说D2 2drop那个国度为何都没人?
+03:17 cleamoon__ joined channel
+03:19 cleamoon_ joined channel
+03:39 cleamoon_ quit:Ping timeout: 276 seconds
+03:40 cleamoon_ joined channel
+03:53 whocares_2 quit:Remote host closed the connection
+03:59 whocares_2 joined channel
+04:05 cleamoon_ quit:Ping timeout: 264 seconds
+04:06 cleamoon_ joined channel
+04:18 cLeaMooN joined channel
+04:18 cleamoon__ quit:Read error: Connection reset by peer
+04:21 cleamoon_ quit:Ping timeout: 264 seconds
+04:22 cleamoon_ joined channel
+05:08 cleamoon_ quit:Read error: Connection reset by peer
+05:08 cLeaMooN quit:Read error: Connection reset by peer
+05:08 cLeaMooN joined channel
+05:24 cleamoon_ joined channel
+05:49 cleamoon__ joined channel
+05:49 cLeaMooN quit:Read error: Connection reset by peer
+07:31 cleamoon_ quit:Read error: Connection reset by peer
+07:41 hoxily: xxxxxxxx: 大概都去玩这个了，http://bbs.anhei2.com/forum-160-1.html
+07:41 hoxily: xxxxxxxx: 要不就玩 原版的 1.13, 1.11
+07:44 xxxxxxxx: 1.13那个哪里原版了....
+07:44 xxxxxxxx: 掉落命名惨不忍睹
+07:44 xxxxxxxx: 明明
+07:44 xxxxxxxx: 比单人的时候差多了
+07:48 cleamoon_ joined channel
+08:12 cleamoon_ quit:Remote host closed the connection
+08:37 cleamoon__ quit:Ping timeout: 245 seconds
+09:06 xxxxxxxx quit:Quit: Leaving...
+09:08 lh_mouse joined channel
+09:31 Xilzzerts joined channel
+09:32 cleamoon__ joined channel
+09:34 whatofor joined channel
+09:46 varna joined channel
+09:50 varna: 本周目指燃弹一户愚吕
+09:51 varna: 哦不对，燃钢
+09:51 varna: 弹药说不定只能九万出头的样子
+09:52 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=38522221770e0cf3a0f74ef33a7df21f/b3119313b07eca80cd38b6d4942397dda14483c0.jpg
+10:00 pocmon joined channel
+10:01 xiaoxi joined channel
+10:09 izmntuk joined channel
+10:10 pocmon quit:Quit: Leaving.
+11:05 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=c848f6668035e5dd902ca5d746fda6ef/18d8bc3eb13533fa0501851aadd3fd1f41345b4a.jpg
+11:06 iyzsong:  *.*
+11:12 Xilzzerts: 今天看到的简历上写着：精通C/C++语言的编程技巧；
+11:16 varna: 喜闻乐见节奏？
+11:18 Xilzzerts: 熟悉HTML协议
+11:18 varna: 2333333333
+11:19 xiaoxi quit:Ping timeout: 250 seconds
+11:20 Xilzzerts: 别笑，在腾讯工作了三四年
+11:20 varna: HTML协议什么鬼
+11:20 Xilzzerts: 熟悉TCP/IP协议，熟练掌握linux网络编程技巧；
+11:21 Xilzzerts: 为啥他总强调编程技巧？
+11:21 varna: 大概是觉得自己很高端
+11:25 izmntuk quit:Quit: leaving
+11:25 Xilzzerts: 我竟然想不出有什么Linux网络编程技巧。。。
+11:25 varna: 你可以问问他
+11:27 Xilzzerts: 研究生妹子，还是给别人面算了
+11:29 Xilzzerts: 我被面怕了。。
+11:29 varna: 妹子啊！
+11:29 varna: 别怂，上上上！
+11:31 Xilzzerts: 各种奇葩面试，上次网络部面运维，那人说Linux是红帽发明的
+11:32 varna: ...
+11:34 Xilzzerts: TCP上层有个ICMP协议
+11:35 varna: 卧槽……
+11:35 varna: 这种人是怎么敢出来混的
+11:36 Xilzzerts: 快排的平均时间复杂度是O(lgn)
+11:37 Xilzzerts: 我已经想不出啥能问的了
+11:37 varna: ...
+11:37 varna: 什么大学的
+11:38 Xilzzerts: 都是硕士。。
+11:38 Xilzzerts: 武科大，武汉理工的
+11:38 izmntuk joined channel
+11:39 varna: 硕士倒是正常
+11:39 varna: 我的感觉是平均情况来看同一学校的硕士比本科生源档次要低
+11:40 iyzsong: - -b
+11:40 xiaoxi joined channel
+11:43 lh_not_bot: geordi: { istringstream iss("1,2,3,"); string str; while(getline(iss, str)) cout, str.size(); }
+11:43 geordi: , 6
+11:43 lh_not_bot: geordi: { istringstream iss("1,2,3,"); string str; while(getline(iss, str, ',')) cout, str.size(); }
+11:43 geordi: , 1, 1, 1
+11:44 lh_not_bot: 11:10:35 < Xilzzerts> 今天看到的简历上写着：精通C/C++语言的编程技巧； // 你可以问他 sizeof('a') 等于几
+11:46 varna: 我赌三个NKC答案是1
+11:46 lh_not_bot: 另外   说自己精通 C++ 的   可以问下 c++98 std::string 的实现
+11:46 varna: *对方的答案
+11:46 lh_not_bot: varna: 对了  我有个想法
+11:46 lh_not_bot: 你看看啊 
+11:46 varna: 什么想法？
+11:47 lh_not_bot: 比如设定一个类 C++ 的语言    非类成员的函数和类成员的函数   由一个函数名字组成的表达式是一个纯右值  其结果是一个闭包（本质是目前的函数指针）
+11:47 lh_not_bot: 重点是后面这个：
+11:48 varna: 这里有个小问题
+11:48 varna: “其结果是一个闭包”，然而这表达式是一个函数名
+11:48 sismvg joined channel
+11:48 varna: 首先不论在你的定义下何谓右值
+11:48 varna: 这里的闭包绑定已经不是词法作用域了吧
+11:48 sismvg: git commit以后为什么网页github上看不见文件
+11:48 varna: sismvg: 你没推送
+11:49 lh_not_bot: obj.mem_func 以及 ptr->mem_func  这样的表达式其求值结果是一个具有类型 struct _Impl_def { _Class *ptr; _Mem_func func; }; 这样的闭包
+11:49 sismvg: git push?
+11:49 lh_not_bot: varna: 不是词法
+11:49 lh_not_bot: 词法不用改
+11:49 lh_not_bot: git push 差评
+11:49 sismvg: 我需要知道怎么弄
+11:49 lh_not_bot: varna: 改了 C艹 的语法
+11:49 lh_not_bot: 目前 obj.mem_func(param) 这是“成员函数调用表达式”
+11:50 varna: lh_not_bot: 我的意思是，所谓词法作用域是类似 T var; /* foobar */ T' func( blah ) { /* foobar */ var; /* undeclared */ }
+11:50 lh_not_bot: 我的意思  obj.mem_func 相当于  bind(mem_func, obj, ...)
+11:50 varna: 哦
+11:50 varna: 你是这个意思啊
+11:50 lh_not_bot: varna: 这是 AS 的做法
+11:50 varna: 其实这个实现我见过，go就是这么干的
+11:50 varna: 他们的方法就是预绑定函数
+11:50 lh_not_bot: obj.func 结果就少了一个参数   可以直接丢给别的回调
+11:51 varna: 我觉得挺好的
+11:51 lh_not_bot: 我认为这做法很好
+11:51 varna: 调用约定上方便很多
+11:51 varna: 不至于方法和非方法差别那么大
+11:51 lh_not_bot: 目前 C艹的语法是开洞的 （单弄了个表达式类型）
+11:51 sismvg: git push了还是找不到..
+11:51 lh_not_bot: 当然究其本源还是最开始没有闭包的概念
+11:52 varna: 我个人倾向于方法以函数来实现，而非在语义里有特立独行的“方法”定义
+11:52 lh_not_bot: git push origin master
+11:52 lh_not_bot: git push 建议关掉  否则 push 哪个分支都不知道
+11:52 lh_not_bot: 如果远端没有   git 这傻逼东西会自动给你建一个分支
+11:53 * varna 从来没敢直接git push
+11:53 lh_not_bot: 可以关掉  
+11:53 lh_not_bot: fatal: You didn't specify any refspecs to push, and push.default is "nothing".
+11:53 lh_not_bot: 而且    git 的删除分支的命令很奇怪
+11:54 lh_not_bot: 我保证你想破脑袋都想不出来
+11:54 sismvg: push 上去了
+11:54 lh_not_bot: 我就没见过设计得这么傻逼的东西
+11:54 lh_not_bot: 11:50:12 <+varna> 我个人倾向于方法以函数来实现，而非在语义里有特立独行的“方法”定义 // 赞成
+11:55 varna: git的几个删除都比较鬼畜
+11:55 lh_not_bot: 原本在 C艹 里 obj.func(param) 是整个表达式   这么拆开  变成两部分
+11:55 lh_not_bot: obj.func 返回一个右值闭包对象   后面的是普通的后缀 operator()
+11:57 sismvg: autoconf 和automake靠谱吗
+11:57 lh_not_bot: 显然不靠谱
+11:57 varna: autocrap
+11:57 lh_not_bot: 一个倒腾宏替换的东西能多靠谱
+11:57 lh_not_bot: 前天刚被坑过
+11:58 lh_not_bot: 它提示我少一个 lib   我查了 config.log 一看
+11:58 lh_not_bot: undefined reference to `nanosleep`
+11:58 lh_not_bot: 它确实是 undefined reference   链接器报错    于是 autocrap 认为缺 libncurses  - 实际上缺的是 libwinpthread
+12:00 lh_not_bot: 本身倒腾文本替换的东西都是人为强加语义   于是就是各种 trick  而且稍微对不上就趴窝  参考 busybox 那个 This is not GNU sed version 4.0
+12:00 varna: 2333
+12:02 xeirrr joined channel
+12:02 sismvg: 数位板还是没有纸那么好用啊
+12:02 xeirrr: Varna: 爆
+12:02 lh_not_bot: 宏替换很多时候是能解决问题的  但是万一出错就坑人了
+12:03 lh_not_bot: 我上次还遇到过自己写的   宏定义生成结构   #include 上面一行的 #define 行尾多了个反斜线
+12:03 varna: xeirrr: 你这基佬
+12:03 varna: sismvg: 我记得sai有防抖功能？
+12:03 lh_not_bot: 表现为   预处理器没报错   编译器提示某某结构没定义  
+12:03 lh_not_bot: 我还以为  include guard 写错了
+12:03 sismvg: 不是防抖，是一笔下去太硬了
+12:03 lh_not_bot: 看了十几分钟  两个结构顺序调换了一下  提示宏重定义  于是发现 #include 没包含进去
+12:05 xiaoxi quit:Remote host closed the connection
+12:06 sismvg: 我开始想念vs了..
+12:07 yzld2002 joined channel
+12:15 lh_not_bot: geordi: { istringstream iss("1,2"); int i, j; iss >>i; iss.str("3,4"); iss >>i >>j; cout <<i, j; }
+12:15 geordi: 3, 0
+12:15 lh_not_bot: geordi: { istringstream iss("1,2"); int i, j; iss >>i; iss.str("3,4"); iss.clear(); iss >>i >>j; cout <<i, j; }
+12:15 geordi: 3, 0
+12:15 lh_not_bot: geordi: { istringstream iss("1 2"); int i, j; iss >>i; iss.str("3 4"); iss >>i >>j; cout <<i, j; }
+12:15 geordi: 3, 4
+12:34 cleamoon__ quit:Ping timeout: 272 seconds
+12:40 hope1 joined channel
+12:48 cleamoon__ joined channel
+12:52 lolisa joined channel
+12:53 varna: 啊，药娘来了
+12:53 varna: lolisa: 爆
+12:53 * lolisa 才不是药娘
+12:53 * lolisa 只是一只帅气可爱的魔理沙
+12:53 varna: 那是伪娘？
+12:53 varna: 伪娘更好，不用吃药可以直接爆
+12:54 * lolisa ignore varna
+12:54 lolisa: 今天一个上午的课竟然干了3～400行Coq代码，过了两章书，感觉萌萌的DAZE=w=
+12:55 varna: lolisa: 爆
+12:56 sismvg: 渣渣
+12:56 cleamoon joined channel
+12:59 xeirrr: cleamoon: 爆
+13:00 xeirrr: lolisa: ...
+13:01 sismvg: vim的c++函数原型提示是用哪个插件
+13:01 varna: 自己写一个吧
+13:01 whatofor_1 joined channel
+13:01 varna: c函数原型提示我就是自制的
+13:02 xeirrr: 羊駝不困？
+13:02 sismvg: 自制。。。
+13:05 whatofor quit:Ping timeout: 272 seconds
+13:07 lolisa quit:Quit: Leaving
+13:10 cleamoon__ quit:Ping timeout: 240 seconds
+13:15 xeirrr quit:Remote host closed the connection
+13:18 hope1 quit:Ping timeout: 240 seconds
+13:18 izmntuk quit:Quit: leaving
+13:20 hope1 joined channel
+13:20 cleamoon quit:Ping timeout: 256 seconds
+13:21 cleamoon joined channel
+13:21 hope1: 网络流复杂度真是玄学…… dinic跑过了10^6个点的数据
+13:24 Matsune joined channel
+13:27 cleamoon quit:Ping timeout: 256 seconds
+13:28 cleamoon joined channel
+13:30 izmntuk joined channel
+14:06 sismvg: dbm能用通配符吗？
+14:10 sismvg: 花了两个小时写dbm的代码，结果发现dbm不能模糊查询..
+14:17 iyzsong: sismvg: 就是个key-value么？ 看了下gdbm，只能全扫一遍的样子...
+14:17 sismvg: 扫一遍对普通机器还好。但是某些渣机器就，比如树莓
+14:18 sismvg: 还有手机
+14:18 hope1_ joined channel
+14:18 sismvg: 还是装个mysql吧
+14:18 iyzsong: 2333
+14:19 sismvg: 又要重写
+14:33 iyzsong: 然而我听不懂leee说什么... -> http://picpaste.com/x-GzaNNL6r.png
+14:38 hope1_: http://site.douban.com/Sleepmakeswaves/ 这个？
+14:40 iyzsong: 应该是
+14:47 NonPandaPool joined channel
+14:50 lhjkk joined channel
+14:54 sismvg: 有人用过mysqlpp吗
+15:07 NonPandaPool quit:Remote host closed the connection
+15:22 varna: 233song和LEEE似乎进展很好的样子
+15:22 cleamoon__ joined channel
+15:22 varna: 看起来真好啊好羡慕啊……
+15:23 varna: 现在我的情感生活只剩下4.28要活动了
+15:24 iyzsong: >o<
+15:24 cleamoon__: 啊啊，连这里都各种线虫秀恩爱吗
+15:24 varna: 你有LEEE的照片么
+15:25 cleamoon__: 我大FFF团的光辉呢
+15:25 varna: 在这呢
+15:25 varna: 我这周要攒到油钢一户愚吕
+15:25 iyzsong: 没有 名字还不知道..
+15:25 varna: ...
+15:25 cleamoon__: 羊驼是基佬们的荣耀
+15:26 cleamoon__: 没名字没照片没住址直接表白呀，你是个汉子
+15:27 varna: 现在的耗材数是83.7/79.3/90.6/45.9+711
+15:28 varna: 一周两万油应该还是可以平摊到一天三千的
+15:28 cleamoon__: 我是你的1/3
+15:29 varna: 又一个一改结婚的大傻……
+15:29 varna: 真爱党总是那么可怕
+15:31 cleamoon__: ......
+15:32 varna: 还有什么一百五十级望月怒草武藏
+15:32 sismvg: 迅雷看看连个播放列表排序都能写错
+15:32 varna: 虽说那跟朝潮怒爆院长一样是个运气活
+15:33 cleamoon__: 150级能做到吗......
+15:33 hope1 quit:Read error: Connection reset by peer
+15:34 varna: 基本很难做到
+15:34 hope1 joined channel
+15:34 varna: 结婚按比例提升血量，提升2-6运，降低固定比例的消耗
+15:34 varna: 但舰种差距还是不可弥补的
+15:39 cleamoon__ quit:Ping timeout: 265 seconds
+15:39 lhjkk quit:Read error: Connection reset by peer
+15:41 cleamoon__ joined channel
+15:41 cleamoon quit:Ping timeout: 256 seconds
+15:42 cleamoon__: 那天运营弄一个250级可以转生的机制....
+15:42 cleamoon joined channel
+15:43 varna: ...
+15:43 varna: 然而北上大人的转生……
+15:43 varna: 金刚好歹宙斯盾，北上直接降格成改五十铃级护卫舰
+15:46 NonPandaPool joined channel
+15:54 hoxily quit:Ping timeout: 264 seconds
+15:56 cleamoon__: 现在确定28号活动了？
+15:58 varna: 确定了
+15:58 varna: 官推已经放话
+16:01 hoxily joined channel
+16:06 cleamoon quit:Ping timeout: 265 seconds
+16:08 cleamoon joined channel
+16:09 xeirrr joined channel
+16:09 NonPandaPool quit:Remote host closed the connection
+16:11 cleamoon__ quit:Ping timeout: 276 seconds
+16:11 cleamoon__ joined channel
+16:12 hope1` joined channel
+16:14 hope1_ quit:Ping timeout: 245 seconds
+16:15 cleamoon quit:Ping timeout: 244 seconds
+16:16 hope1 quit:Read error: Connection timed out
+16:16 hope1 joined channel
+16:17 cleamoon joined channel
+16:19 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=520c9c2ed10735fa91f04eb1ae6a0fb3/728da9773912b31b4945f31c8318367adab4e1de.jpg 明目张胆
+16:20 hoxily` joined channel
+16:21 hope1`: 今年浙江的题都是傲娇少女幽香
+16:22 varna: 幽香傲娇！？
+16:22 varna: 逗我
+16:22 cleamoon__: 那是什么？
+16:22 varna: 他们想一口气吃三炮么
+16:23 hoxily quit:Ping timeout: 248 seconds
+16:23 cleamoon__: 论向日葵的养殖和紫妈的年龄jiwncicnwhcbccadbckhqjocnihwd
+16:23 hope1`: http://www.lydsy.com/JudgeOnline/problem.php?id=3925 嗯
+16:23 varna: 噗
+16:23 varna: 这作死的描述
+16:24 varna: “由于幽香是一位人生经验丰富，见得多了的长者”
+16:24 varna: 然后这么大的作死就出了个最小生成树么……
+16:25 NonPandaPool joined channel
+16:25 xeirrr: 艦娘很火嗎？考試都考這個
+16:25 varna: 现在已经三百万玩家了
+16:26 xeirrr: wow
+16:26 hope1`: 题解 http://wjmzbmr.com/archives/zjoi-2015-day-1%E9%A2%98%E8%A7%A3/
+16:27 hope1`: 虽然还是不会做
+16:31 varna: 我印象lrj在书里讲过类似的算法，似乎是网络流一章
+16:33 varna: hope1`: 说起来昨天的题目怎么样？
+16:34 cleamoon___ joined channel
+16:34 cleamoon__ quit:Ping timeout: 265 seconds
+16:35 sismvg: http://tieba.baidu.com/p/3712773586
+16:35 sismvg: 格雷一脸严肃的从口袋里掏出一部触屏手机
+16:36 cleamoon__ joined channel
+16:37 hope1`: 昨天第一题是个神奇的完全二叉树上的dp，暴力都没法写…… 用一个看起来是n^2的dp，然后利用完全二叉树上子树大小和为n log n，完全没想到
+16:37 varna: 现在的题越来越花式了……
+16:38 * varna 迫切感觉到自己智力低下
+16:38 cleamoon__: 只是诡异的知识点越来越多了吧
+16:38 xeirrr: sismvg: ...
+16:38 varna: 我觉得利用二叉树性质这种算是不错的题目
+16:39 cleamoon__: 如果是能想到的当然好
+16:40 hope1`: 第二题看错题了，题目描述比较复杂，大概是给定一个环状编码序列，任意指定位置开始解密，单点修改某位置的编码，查询解密后离指定位置“距离”最远的零区间，范围 10^5
+16:40 cleamoon__: 就怕以后弄一堆没法知道的
+16:40 cleamoon quit:Ping timeout: 244 seconds
+16:40 hope1`: 当时以为起始位置是固定的，然后写了个两百多行的分块发现不对……
+16:40 varna: hope1`: 结果又是要手工推导性质的题目么……
+16:40 cleamoon___ quit:Ping timeout: 256 seconds
+16:42 cleamoon joined channel
+16:42 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=a00badc979d98d1076d40c391104b90e/8cb1cb13495409235382584b9758d109b3de491f.jpg 鲸
+16:42 cleamoon__: 难道平常是直接上代码？
+16:42 hope1`: 据说正解是线段树，没问具体的
+16:43 cleamoon__: 问羊陀子就好了
+16:43 varna: 哦
+16:43 varna: 我渣
+16:43 varna: 现在HO棠肯定比我厉害多了
+16:44 varna: 准确说是厉害太多了
+16:44 cleamoon__: 羊陀子不是搞poi的吗
+16:44 hoxily_ joined channel
+16:44 cleamoon__: noi
+16:44 sismvg: 我受够字幕编码问题了。。都存unicode又不会撑死硬盘
+16:45 iyzsong: utf-8 POI
+16:45 varna: 我打完省赛就高考去了……
+16:46 varna: MR神上神犇是NOI党
+16:46 cleamoon quit:Ping timeout: 244 seconds
+16:47 NonPandaPool quit:
+16:47 cleamoon__: 省赛不就是noi吗... 难道noi还有个全国决赛？
+16:47 hope1`: 第三题比较良心，给定一棵树，询问链上有多少点权小于操作时间t减去给定值c，初始时点权为+inf，单点修改将点权置为操作时间
+16:47 varna: cleamoon__: 当然有全国赛了……
+16:48 varna: 省赛一般有后缀p啊……
+16:48 xeirrr: 獲獎了？
+16:48 varna: 省1我就撤了
+16:48 cleamoon joined channel
+16:48 varna: 没去省选，当时成绩比较惨
+16:48 cleamoon__: soga
+16:49 sismvg: 受不了了。。
+16:49 sismvg: 一个字幕弄了我半小时
+16:49 xeirrr: 重在參與
+16:49 cleamoon__: 参与+
+16:50 hope1`: 直接dfs序就能转成序列上的询问，正解是注意到查询值递增，然后直接主席树。主要是暴力分给的比较良心，直接树状数组标记是否修改过就能有60%
+16:50 varna: 重点是跟我们一届竞赛的一个哥们叫Jia Longfeng, 我们费力决定了平时叫他假兄还是隆兄还是丰胸
+16:50 hope1`: 于是我就只拿了69
+16:50 hope1`: 噗60
+16:50 varna: 色气的HO棠……
+16:50 cleamoon__: 2333333
+16:53 cleamoon__: 这题的主题是firestation吗
+16:53 varna: 不要说得跟整个消防局都是基佬一样
+16:53 varna: 虽然确实都是
+16:55 hope1`: 背景是某大型情报公司，操作有指派情报员搜集情报和传递情报查询危险度
+16:55 varna: hope1`: 岚月酱的梗是某GV
+16:55 varna: 其中主角（比利〇灵顿 饰）所在的消防局就叫firestation 69
+16:56 pocmon joined channel
+16:56 hope1`: ...
+16:56 cleamoon__: 于是是制服gv？
+16:57 xeirrr: uniform
+16:57 varna: 安个模组
+16:58 hope1`: 至少其中4道题是如果知道想法应该能随便写的，结果…… 不过难点本来就在建模上就是了
+16:58 varna: 总之HO棠要今年十一月再战了？
+16:58 OO_after quit:Remote host closed the connection
+16:59 hope1`: 是
+16:59 varna: HO~
+17:00 varna: 今天连CPAN好慢
+17:00 sismvg: 图雪中
+17:00 sismvg: 途血
+17:00 cleamoon__: 11月抱着妹子战
+17:00 varna: cleamoon__: 他不是有会长酱、社长酱、院长、主任、教授、理事长、春雨姬、轻巡姬等数百万人的后宫么
+17:00 varna: 哦，少了有意思酱
+17:01 cleamoon__: 还有有意思酱等
+17:01 cleamoon__: 还有被遗忘的文文酱
+17:02 varna: 我们还是说点不那么现充的话题吧
+17:03 xeirrr quit:Ping timeout: 265 seconds
+17:04 xeirrr joined channel
+17:06 sismvg: 我已经对贴吧人智商没有希望了
+17:07 sismvg: 一个人能带上几十个人一起错
+17:08 cleamoon_1 joined channel
+17:08 cleamoon__ quit:Ping timeout: 265 seconds
+17:08 cleamoon_1: 不断地掉后把所有用户名都占用了.....
+17:09 varna: 现在我卡回港了就ban一下MAC, 瞬间好用……
+17:09 varna: 这些人八成开着迅雷在被人做种
+17:10 cleamoon_1: pps 度娘盘之类的也一样
+17:10 varna: 哦，我忘了pps
+17:11 cleamoon_1: 本想装个度娘下载器，结果必须装在用户目录，我改成一般的程序文件夹显示权限不够
+17:11 cleamoon_1: 然后我删了
+17:11 hope1 quit:Read error: Connection reset by peer
+17:11 varna: 一边磕瓜子一边被人做种的感觉如何，我不知道他们是怎么体验的
+17:12 cleamoon_1: pps刚装上就在c盘边上加了个图标，后台弄个东西开始上传
+17:12 cleamoon_1: 然后我又删了
+17:12 varna: 这么犀利的啊
+17:12 cleamoon_1: 比起来360好多了
+17:12 varna: 噗
+17:12 varna: 他们似乎也有360……
+17:13 hope1 joined channel
+17:13 varna: 简直瘟疫
+17:13 FrankHB quit:Quit: Konversation terminated!
+17:13 cleamoon quit:Ping timeout: 264 seconds
+17:13 cleamoon_1: 23333
+17:14 cleamoon joined channel
+17:16 cleamoon_1: qq是下载所有发了的图片，于是两天cache 1G
+17:16 OO_after joined channel
+17:16 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=0a6bfc266e600c33f079dec02a77510f/ac345982b2b7d0a26dfc3bafceef76094b369ace.jpg 另外这里是验证班的一点结论
+17:17 varna: 结论限定常规舰队编成，推论是其实用力装大炮就对了
+17:17 cleamoon_1: ....
+17:18 varna: 联合舰队水上部队的命中则大多是打水漂，八门38改+6能否改善命中还要看海色他们的实战情况
+17:19 cleamoon_1: 水上部队最重要的舰种是什么
+17:20 varna: 雷巡和驱逐舰
+17:20 cleamoon_1: .....那我没戏了
+17:20 varna: 雪风程度就行
+17:20 cleamoon_1: 4-3怎么练级
+17:21 varna: 驱逐舰不多于1，有一个航母或者轻母制空
+17:21 varna: 如果害怕J点出事就带雷巡
+17:21 varna: 不要带航巡，但要有一个压过火力的战舰和一个重巡护航
+17:21 varna: 其余可以灵活地配置反潜火力
+17:21 xxxxxxxx joined channel
+17:22 varna: 路线其一是进门SE潜艇点，这一点之后还有一点潜艇；如果进门S走了J，能通过的话会固定来到进门SE的潜艇点，仍然是两场反潜
+17:22 cleamoon_1: 其余只有一个了.... 而且一次只能练一个驱逐....
+17:23 varna: 弱点是开销比较大，危险比较高，不太容易高密度连续打
+17:23 varna: 我的配法是旗舰+1bbv2clt1ca1cv[l]
+17:23 varna: 潜艇点一场旗舰MVP的经验在1k以上
+17:23 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=8a21e946d388d43ff0a991fa4d25d21b/faedab64034f78f08114d4c07c310a55b3191ce1.jpg # 抱井
+17:24 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=8b179817cdfcc3ceb4c0c93ba245d6b7/ed9149f431adcbefba0e6a33a9af2edda3cc9f84.jpg # 信念的力量
+17:24 cleamoon_1: 感觉还没有3-2省心呢
+17:25 varna: 4-3不省心，但是不慢
+17:25 varna: 而且你没到80的话不是该1-5 A单舰么……
+17:25 cleamoon_1: 前几天到80了...
+17:25 cleamoon_1: 只能咸鱼了...
+17:25 xxxxxxxx: 3-2慢?
+17:25 varna: 顺便一提，丙级难度的头目未必很难，如果有POI神通和二改雷巡的话不必太担心了
+17:26 varna: 3-2我现在的渠数目小半天也就不超过二十万经验的样子
+17:26 varna: 想一天养一个苍龙出来肯定不现实……
+17:26 varna: 而且我也不喜欢那么打
+17:27 xxxxxxxx: 一天养一个什么鬼....
+17:27 cleamoon_1: 那些我都没练呀... 这几天一直在练重巡
+17:27 varna: 重巡有点也不错
+17:28 varna: POI神通和雷巡没有的话有点虚了，不过前期关卡大概不会有雷巡很大戏份吧
+17:28 cleamoon_1: 只是35级左右
+17:28 varna: 而且POI Lv55就二改，可以迅速准备
+17:29 varna: 打打演习吧
+17:29 varna: 而且活动二十天呢
+17:31 xeirrr quit:Quit: Leaving
+17:31 cleamoon_1: 回家练练poi
+17:33 FrankHB joined channel
+17:38 xxxxxxxx: 卧槽那个2drop的国度都什么鬼 女伯爵那个塔第五层的弓箭怪射冰箭....
+17:38 varna: ...
+17:38 varna: 什么难度
+17:38 varna: 要是N的话就比较麻烦了……
+17:39 xxxxxxxx: 普通难度...
+17:39 varna: ...
+17:39 varna: 太见鬼
+17:40 cleamoon_1: ......
+17:40 cleamoon_1: 单机玩吧
+17:41 xxxxxxxx: 掉的东西比 1.13shanghai那个国度好点
+17:41 varna: 1.13 shanghai那个太惨了
+17:41 xxxxxxxx: 难度简直不是给人玩得
+17:41 varna: 基佬之前不是掉过6tp么
+17:41 varna: d2我不太想在线玩了，偶尔单机来一把就好
+17:41 xxxxxxxx: 毕竟非洲人
+17:41 cleamoon_1: 就是不给人玩才能挣钱
+17:42 xxxxxxxx: 对了最开始我是去3C那边想看看 掉不掉高级符文 然后NEC直接被一个电秒了
+17:42 cleamoon_1: 有人说现在游戏是越不好玩越好了
+17:43 varna: 网游的掉落率总是很坑的
+17:44 xxxxxxxx: 感觉似乎怪物的元素攻击强了不少
+17:44 varna: 其实d2比较好的玩法是几个伙计真弄个LAN游戏玩
+17:44 varna: 比较悠闲
+17:44 cleamoon_1: +
+17:44 cleamoon_1: 或者真正战网
+17:45 varna: 现在暴雪还运行d2战网么？
+17:45 cleamoon_1: 谁知道
+17:46 cleamoon_1: 自己搭一个
+17:46 cleamoon_1: 壕如肛旗应该可以
+17:47 boosure quit:Quit: Get your hand off of it
+17:48 varna: 肛如壕旗
+17:49 cleamoon_1: 旗如肛壕
+17:50 cleamoon_1: 话说有人试过ps2模拟器吗？
+17:50 varna: 我试过
+17:50 varna: 玩某女神系RPG, hack开满显示四十帧实际可能也就三十帧
+17:50 varna: 那东西还是配个好机子才行
+17:51 cleamoon_1: 30不够吗
+17:51 varna: 游戏满帧六十
+17:51 cleamoon_1: ......
+17:51 varna: 你操作起来那个四十帧感觉卡得稀里糊涂
+17:52 cleamoon_1: psp模拟器呢
+17:53 varna: 没试过了
+18:00 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=ecb0e6a709f431adbcd243317b0dacaf/3b292df5e0fe9925e2366a6531a85edf8db171c8.jpg 请逐字读舰名
+18:01 lh_not_bot: 鸟海改
+18:02 varna: lh_not_bot: 给，奖励的气球
+18:02 cleamoon quit:Ping timeout: 264 seconds
+18:03 cleamoon_1 quit:Ping timeout: 256 seconds
+18:03 cleamoon joined channel
+18:04 * lh_not_bot slaps varna around a bit with a large trout
+18:05 Matsune: 这两天我这的人都在砍大菠萝3
+18:05 * varna 作势要拿出一个老鼠夹
+18:06 varna: 我只看过别人的d3攻略视频，感觉画面很好，气氛也不错，不过没法彻底单机太疼了
+18:06 varna: 单纯要打砍杀+收集的ARPG, 其实火炬之光也很好
+18:09 varna: 对了
+18:10 varna: 洗机织的毛衣/线衣，诸君有什么建议么
+18:10 varna: 昨天用洗衣皂搓，效果还可以，但是太麻烦而且有掉肥皂危险
+18:23 cleamoon__ joined channel
+18:26 Xilzzerts: 洗衣液？
+18:26 varna: 绵毛那种？
+18:32 cleamoon__: 有人需要润滑菊花？
+18:34 varna: 19:07 <+varna> 洗机织的毛衣/线衣，诸君有什么建议么
+18:34 varna: 19:07 <+varna> 昨天用洗衣皂搓，效果还可以，但是太麻烦而且有掉肥皂危险
+18:37 lolisa joined channel
+18:43 iyzsong: 晚上好!
+18:45 cleamoon quit:Ping timeout: 264 seconds
+18:46 cleamoon joined channel
+18:50 Plough joined channel
+18:50 sismvg: 拿超流体做肥皂表面--嗯
+18:51 Plough: varna: 麻烦把那个瑞凤壁纸再发下吧
+18:51 Plough: 我缺壁纸了……
+18:52 Plough: 噗
+18:53 Plough: freenode上什么时候有了个#kancolle-cn……
+18:54 cleamoon__ quit:Ping timeout: 245 seconds
+18:54 cleamoon__ joined channel
+18:54 xxxxxxxx: 然而并没有人
+18:54 Plough: Rizon上的#kancolle人多
+18:55 Plough: 不过是英文频道
+18:55 Plough: Topic for #kancolle: http://kancolle.wikia.com ||  http://wikiwiki.jp/kancolle/ || 4/2/5/7/20? || 6/5/7/2/20? || don't  shoot me if you get 4hr or 2hr or worse ||  ＤＡＩＬＹ　ＲＥＭＩＮＤＥＲ http://puu.sh/8GleL
+18:55 Plough: ^#kancolle的topic
+18:56 xxxxxxxx: 最后这个图是什么鬼....
+18:56 Plough: 鬼知道……
+19:01 cleamoon__ quit:Ping timeout: 252 seconds
+19:04 cleamoon__ joined channel
+19:04 cleamoon quit:Ping timeout: 264 seconds
+19:05 cleamoon joined channel
+19:06 cleamoon__: 开始做gamma放射线的实验
+19:07 yzld2002 quit:Quit: yzld2002
+19:11 yzld2002 joined channel
+19:17 cleamoon quit:Ping timeout: 264 seconds
+19:18 cleamoon joined channel
+19:28 xeirrr joined channel
+19:30 cleamoon__ quit:Ping timeout: 265 seconds
+19:32 cleamoon quit:Ping timeout: 264 seconds
+19:33 cleamoon joined channel
+19:36 xeirrr: lolisa:爆
+19:38 cleamoon quit:Ping timeout: 264 seconds
+19:39 cleamoon joined channel
+19:41 lhjkk joined channel
+19:44 dara_andr joined channel
+19:48 Plough quit:Ping timeout: 255 seconds
+19:49 lhjkkk joined channel
+19:51 lhjkk quit:Read error: Connection reset by peer
+19:51 izmntuk quit:Quit: leaving
+19:51 pocmon quit:Remote host closed the connection
+19:54 * sismvg 切菜的时候掀翻了自己的指甲盖
+19:54 sismvg: 疼爆了
+19:55 xeirrr: 你是家庭婦男？
+19:55 sismvg: 我只是在烧晚饭
+19:56 cleamoon: 铯137
+19:57 xeirrr: 求av番號
+19:57 sismvg: 然后出现了冰淇凌侠
+20:00 cleamoon_ joined channel
+20:07 Plough joined channel
+20:10 xxxxxxxx: http://puu.sh/hktgG/70e1c4ed27.png 2drop的A5冰洞掉落 感觉比1.13里面的属性好
+20:10 cleamoon: 同组的发现要把放射性物质用手拿出来，吓傻了
+20:13 sismvg: 会不会变成神奇四侠
+20:14 dara_andr: 神奇四侠。。。
+20:14 lh_not_bot: geordi: { char temp[20]; istringstream iss("123456789"); iss >>setw(4) >>temp; cout <<temp; }
+20:14 geordi: 123
+20:16 cleamoon__ joined channel
+20:20 cleamoon quit:Ping timeout: 256 seconds
+20:23 xeirrr quit:Quit: brb
+20:24 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+20:34 cleamoon_ quit:Ping timeout: 264 seconds
+20:35 cleamoon_ joined channel
+20:37 cleamoon__ quit:Ping timeout: 250 seconds
+20:41 cleamoon__ joined channel
+20:43 cleamoon_ quit:Ping timeout: 264 seconds
+20:44 cleamoon_ joined channel
+20:45 sismvg joined channel
+20:47 sismvg: github干嘛把windows客户端的安装文件放到亚马逊云裳。。
+20:47 sismvg: 搞得根本下不下来..
+20:49 iyzsong: 亚马逊是最快的CDN吧
+20:49 sleepwalking joined channel
+20:49 iyzsong: sleepwalking: 晚上好..
+20:49 sleepwalking: iyzsong: hi
+20:51 sleepwalking: varna: 有什么监督学习方法能给出多个类别和各个类别的可能性？除了naive bayes和kNN
+20:51 lolisa: sleepwalking, 我只能进UW pre phy sci了orz。。。其他全拒。。。
+20:51 lolisa: 话说你最后选了内一间？
+20:51 sismvg quit:Ping timeout: 240 seconds
+20:51 sleepwalking: 哈哈哈我也录了UW phy sci, 最后选了UIUC/Math+CS
+20:52 lolisa: 真好。。。
+20:52 lolisa: 不过今天交到了一个机油了，dome跟他合租
+20:53 cleamoon__: 放射性实验一点也不好玩呀...
+20:53 cleamoon__: 没法弄死点什么...
+20:54 iyzsong: o.o
+20:54 lolisa: 你全身涂满你就可以获得手部射出白色粘稠物体的能力了
+20:55 sleepwalking: varna: 还有一个问题，instance based learning如何减轻训练数据的噪音干扰，同时降低存储空间？Aha 1991的IB3伪代码没看懂
+20:56 hope1: “只能”进UW了，嗯
+20:57 lolisa: 我是运气好啊。。不然连UW都进不去只有普度了啊QAQ
+20:57 sleepwalking: hope1: UW的phy sci很好进，cs巨难进
+20:58 lolisa: 反正我觉得第二年申请对我来说难度不太大，我也没second choice了。。。
+20:58 cleamoon__: 线虫学霸
+20:58 sleepwalking: lolisa: 怎么不去普度，第二年转系听说不简单，，，
+20:58 hope1: 现充学霸
+20:58 lolisa: 话说UW的人很多都是在搞Formal Verification的。。。就我有天IRC上都看到两个会Coq的UW PHD。。。
+20:59 lolisa: 普度CS实在太。。。我还是赌赌看吧，毕竟老本还是积累了不少的
+20:59 sleepwalking: 普度CS不错啊，比UC的（除UCB）都好
+21:00 lolisa: 我去查了不是20左右吗。。。
+21:00 sleepwalking: UC各自30+
+21:00 sleepwalking: 各种
+21:00 lolisa: 但是UW CS可是7啊，并且UW是Coq特化，也跟微软近。。。
+21:01 cleamoon__: 尔等线虫学霸
+21:01 sleepwalking: UW的offer还说我没有艺术细胞让我必须选一门艺术课不然不录我
+21:01 lolisa: FV特化的我以前以为就TexasAustin+CMU，想不到UW也很不错。。。
+21:02 lolisa: 线虫你妹啊，学霸你妹啊，这里同班同学有UCB有Brown的，我算什么。。。而且都估计没有我努力。。。
+21:03 sleepwalking: lolisa说的是 线虫(lolisa|学霸), 我们说的是 线虫(lolisa)
+21:04 sismvg joined channel
+21:04 cleamoon__: 三流大学的盯你们
+21:05 lolisa: 问题是我依然没懂我那线虫了。。。辛辛苦苦这么久大学差点全灭。。。。
+21:05 cleamoon__: 但是没有灭
+21:05 cleamoon__: 于是就是线虫学霸了
+21:06 sleepwalking: 今年的录取状况很怪，主要看脸和提督所属大陆
+21:07 lolisa: 问题是我们班我这是中等录取状态啊。。。而我班里可是拼命的学了啊，这三年身体都拖垮了。。。连肾都会莫名其妙的痛，估计熬夜熬多了
+21:07 sleepwalking quit:Read error: Connection reset by peer
+21:07 sleepwal_ joined channel
+21:07 sleepwal_: 寝室网好差
+21:13 lolisa: 干，今天写代码一路顺风，保持了1min 1loc的速度到放学，700+行了，然后竟然在最后一个lemma上卡死。。。
+21:14 sleepwal_: 今天花了一个晚自习在一个EM算法实现的bug上了。。
+21:14 cleamoon__: 听土豪哭穷，听学霸叫苦，听线虫说妹子不够萌
+21:14 lolisa: EM是？
+21:15 cleamoon__: 我只想说，烧烧烧烧烧烧烧
+21:15 sleepwal_: Expectation Maximization
+21:15 lolisa: 我这辈子单身了17年从来没有妹子好不。。。
+21:15 Petrus07 joined channel
+21:15 lolisa: 我也连手机都没买过，老妈很严格的。。。
+21:15 lolisa: sleepwal_, thx
+21:16 sleepwal_: ?
+21:16 sleepwal_: 没妹子+
+21:16 lolisa: 就是刚刚的定义的thx啊= =习惯而已。。。
+21:17 sleepwal_: 妹子是什么啊，有电酱就可以了！
+21:17 sismvg: 啊。。。麻烦死了github for windows死活装不上。。赛风又只有10kb/s的速度
+21:17 sleepwal_: gh for win是坑
+21:17 lhjkkk quit:Ping timeout: 240 seconds
+21:18 sismvg: gh for win 非常优雅
+21:18 sleepwal_: 一个基本只能push的GUI
+21:18 cleamoon__: 米尻都睡过几个了怎么可能没妹子
+21:18 sismvg: 还能clone
+21:20 lolisa: 今天在UW群随便给一群不会编程的科普了一下CS，AI再顺路喷了喷JAVA，然后我就变成稀缺资源被抢着当室友了，唯一能让我稍微感到安慰的一点。。。
+21:20 sleepwal_: 不要中国室友啊
+21:21 varna: 回来了
+21:21 sismvg: 为什么都有室友，而不出去租着住呢
+21:21 lolisa: 我知道，就留了一个空塞美国佬。。。
+21:21 varna: 然而我回来就看到一堆现充
+21:21 Plough: 快肛了他们
+21:21 lolisa: 我自理能力很差，一个人会死的。。。
+21:21 lolisa: varna,我查到了
+21:21 lolisa: 是在public general上的，没有特别的patent就能拿去用，只需要在readme上cite一下
+21:21 Plough: wifi似乎终于好了
+21:22 varna: 先回复一下之前的address
+21:22 varna: 瑞凤壁纸我上传一下
+21:22 Plough: Danke
+21:23 lh_not_bot: 21:19:50 < lolisa> 是在public general上的，没有特别的patent就能拿去用，只需要在readme上cite一下  // 
+21:23 lh_not_bot: 看成没有特别的 pants 了
+21:23 lh_not_bot: 我面壁去
+21:23 varna: Plough: http://pan.baidu.com/s/1hqjDQHQ 
+21:23 varna: sleepwal_: 大部分贝叶斯方法我觉得都值得参考
+21:23 varna: sleepwal_: 如果你不畏艰险，可以把你的数据学习成一个贝叶斯网络
+21:24 sleepwal_: 不是说那货的inference是intractable的吗
+21:24 varna: 如果多分类之间有重叠，可以参考一些多标签分类方法
+21:24 varna: 但是你追求什么样的inference呢
+21:24 varna: 必要的话你可以简化一个贝叶斯网络
+21:24 varna: 比如强行引入kappa calculus, 以概率的上下界导出一个相对简单的传播算法
+21:25 varna: 毕竟贝叶斯网络本身略复杂
+21:25 sleepwal_: 看上去很吓人
+21:25 varna: 我认为效果一般
+21:25 varna: kappa calculus需要的假定比较多
+21:25 varna: 而你很可能拿不出合适的底数小正数
+21:26 varna: 所以现在的问题其实变成了你追求的是理论模型还是针对问题的学习性能
+21:26 sleepwal_: 我真对后者
+21:26 varna: 那我就比较棘手了，因为我不熟悉你常用的启发式……
+21:27 sleepwal_: 那instance based的呢，就是第二个问题
+21:27 varna: 你的实例有多少
+21:27 sleepwal_: 几十万个
+21:28 varna: 其中的噪音类似什么样的
+21:28 sleepwal_: 类别有五十个左右
+21:28 sleepwal_: 少于5%的样本是错的
+21:29 cleamoon_ quit:Ping timeout: 264 seconds
+21:30 varna: 你还是在用神经网络类似物学习么？
+21:30 cleamoon_ joined channel
+21:30 sleepwal_: 如果抛开噪音和存储问题，我直接把到各个concept下每个instance的距离规范化一下，是不是可以充当分类概率？
+21:31 varna: 这里存疑
+21:31 sleepwal_: 没用ANN类似物
+21:31 lh_not_bot: sleepwal_: 卖个萌吧
+21:31 sleepwal_: lh_not_bot: 呸
+21:31 * lh_not_bot slaps sleepwal_ around a bit with a large trout
+21:31 varna: 考虑对一个concept, 在你的规范化概率中存在一个上界和一个下界
+21:31 sleepwalking: meow
+21:31 varna: 如果你的实际数据超出这个界了怎么办
+21:32 Sleepwalking: predictor attribute也是一堆类别，所以比较安全
+21:33 varna: 我觉得这里规范化的唯一好处是你可能可以甩掉一些奇葩数据
+21:33 lolisa: Sleepwalking, 谢了，刚刚跟两个室友交流了一下，他们同意去5人dome。。。
+21:33 lh_not_bot: 交 流
+21:33 varna: 如果施以z-score, 可能数值上奇葩的东西会在sigma之外甚至3sigma之外
+21:34 varna: 但我不觉得这东西像个好的先验概率
+21:34 sismvg: github和vs的相性太差
+21:34 varna: 或者这样
+21:34 varna: 你能确保你的训练数据里有上下界么
+21:35 Sleepwalking: 我见到有人用instance based方法给出两三个类别和各自的概率，然后用viterbi把它们串起来
+21:35 Sleepwalking: 能确保
+21:35 varna: 那就成
+21:35 varna: 直接上z-score, 然后你的规范化实例服从高斯分布
+21:35 varna: 这里的上下界最好是理论上下界
+21:36 Sleepwalking: 好，谢谢
+21:36 varna: 你把裤子脱了
+21:37 varna: 233333
+21:37 cleamoon__: dome是什么
+21:37 varna: 这nick简直机智
+21:37 cleamoon__: 233333
+21:37 varna: cleamoon__: 裤子上被迪克撑起的穹顶
+21:37 lolisa: 我不会拼音啊QAQ拼不出来
+21:38 varna: 噗
+21:38 lolisa: ×舍
+21:38 varna: 宿舍
+21:38 varna: su4she4
+21:38 cleamoon__: 噗
+21:38 varna: 你还真是拼音不好啊……
+21:38 lolisa: 内个我试了好多次。。。试的是shuo。。。
+21:38 varna: ...
+21:38 cleamoon__: xiu4she4
+21:38 lolisa: 我是香港那边的人。。。没有拼音这吗事。。。
+21:38 lolisa: 谢了=w=
+21:38 cleamoon__: xiu1she4
+21:38 lh_not_bot: 拼音五笔混用路过
+21:38 sismvg: github怎么获取一个文件（只要一个）
+21:38 varna: 原来是香港人啊……不考虑试试武比？
+21:38 varna: 噗
+21:38 cleamoon__: xiu3she4
+21:38 varna: 五笔
+21:38 cleamoon__: 233333
+21:39 cleamoon__: 暴露
+21:39 * varna 掩面
+21:39 sismvg: ggttc
+21:39 lolisa: 我在香港的时候不会用电脑，自然也没学5笔。。。
+21:39 cleamoon__: 哥哥天天吃
+21:39 varna: 广告条提出
+21:39 cleamoon__: 用手写呀
+21:39 varna: lolisa: 来，张开嘴，说“啊～”
+21:39 lolisa: 后来到了成都才学拼音，学得很烂，所以才经常混用英文啊。。。
+21:40 lolisa: QAQ YADA
+21:41 varna: 另外提供壁纸配套的瑞凤海报 http://picpaste.com/qHZ7oG3X.png ——这次不是平顶瑞凤了
+21:41 lolisb: varna: 话说回来 那个存储和噪音的问题咋办
+21:41 lolisa: 噗，现在才看到米库酱的新ID
+21:41 lolisa: 搞什么鬼啊
+21:41 cleamoon__: 成都呀，可以和海棠面基
+21:42 lolisb: hope1: 
+21:42 varna: lolisb: 存储我没什么通用的建议，只能伺机行事；噪音的问题你可以先这么试验：标注出噪音数据，然后看看正规化之后它们的分布
+21:42 lolisa: 不知道海棠是成都的。。。不过要面基得快点了，再过几个月就走了。。。
+21:42 varna: lolisb: 如果噪音真的被甩到sigma或者3sigma之外，我觉得也可以暂时无视
+21:43 lolisb: 没办法。。。
+21:43 lolisb: varna: Aha, David W. Instance based learning algorithms. 1991
+21:43 * sismvg 长期依赖白番茄来打 class{}; 结果一用Linux就写成了class{}.
+21:44 hope1: 唔
+21:44 varna: 我下载一下
+21:44 lolisb: Table 5的算法解决了这个问题，但是我有两部分没看懂
+21:44 hope1: 你是在成都上高中还是什么？
+21:44 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+21:45 lolisa: 是，成都外国语
+21:45 Xilzzerts quit:Ping timeout: 244 seconds
+21:45 lolisa: 在百草路附近，你呢？
+21:45 hope1: 我在七中
+21:45 varna: lolisb: “解决了这个问题”？
+21:45 lolisa: 我是路痴。。。离这近不？
+21:45 varna: 我日
+21:45 cleamoon__: 再过几个月萝莉就死了
+21:45 lolisb: 应该说减轻了
+21:46 varna: ACM电子图书馆没有库存！？
+21:46 varna: 逗我
+21:46 lolisb: 这个直接有公开的pdf啊
+21:46 hope1: 百草路是在郫县方向？
+21:46 lolisa: 好像是的。。。
+21:46 lolisa: 我不太清楚。。。
+21:46 lolisa: 很baka的我，别在意
+21:47 varna: 我看到一个pdf
+21:48 varna: lolisb: David W. Aha, Dennis Kibler, Noise-Tolerant Instance-Based Learning Algorithms ?
+21:48 hope1: 似乎比较远…… 我平时在高新校区（国际部），在华阳那边。竞赛集训的时候在
+21:48 hope1: 上竞赛的时候在林荫
+21:49 lolisa: 。。。要不算了吧？反正我们两也不shou
+21:49 lolisa: 中海国际那边？
+21:49 lolisb: varna: 不是，你直接在google scholar上搜，第一个那个3977引用的就是
+21:49 lolisa: 熟
+21:49 varna: 我google scholar挂了，现在都是ACM/IEEE混用……
+21:49 lolisb: www.gfsoso.com
+21:49 varna: thx
+21:50 varna: DW Aha, D Kibler, MK Albert
+21:50 lolisb: 对就是他们
+21:50 varna: ACM居然还真没库存，简直那啥
+21:51 lolisb: 毕竟古物
+21:51 varna: 我扫扫这文……
+21:51 lolisa: 作大死了，怪不得证不出。。。原来是不该apply的theorem apply了。。。
+21:51 lolisb: 大部分都是分析性质，看下IB1/2/3的伪代码即可
+21:52 hope1: 似乎是的，我对这边也不熟…… 林荫在市中心倒是不算远。前几天我还在电子科大参加省选来着……
+21:52 cleamoon__: 不受
+21:52 Plough: http://picpaste.com/lfHgybDE.jpg 加贺桑你死得惨啊
+21:52 varna: Plough: 噗
+21:53 Plough: 吓得我直接两颗鱼雷炸了Intrepid
+21:53 lolisa: 你什么时候有空？有空可以过来，我请你吃饭，这是地铁站旁边，百草路
+21:54 lolisa: 金科北路后几站，金克拉的金科，兵库北的北
+21:54 Plough: http://ww4.sinaimg.cn/large/b42852b4jw1eraxd8xu53j20qo0hs0u5.jpg 这是撞击的场景
+21:54 Plough: 注意加贺桑后面那条船
+21:54 varna: 哦我操
+21:54 varna: 那是武还是大
+21:54 lolisb: 大和？
+21:54 varna: 加贺的时代应该没有武藏
+21:54 Plough: 鬼知道，估计是大
+21:55 varna: 八成大和……
+21:55 Plough: 然而大和1937年11月4日动工
+21:55 Plough: 这是淞沪会战，1937年8月13日-11月26日
+21:56 varna: 二营长，把意大利炮拉出来
+21:56 Plough: 这片简直6得飞起
+21:56 varna: lolisb: 我扫了三个算法，感觉得看那些定理才行……
+21:57 Plough: “我要以最小的伤亡撞沉嘉和（字幕是这么打的），应该怎么办？”
+21:57 Plough: “唯有人机一体”
+21:57 varna: ...
+21:57 Plough: “然而我听说嘉和号的对空火力几乎无法穿越”
+21:57 lolisb: 他只是证明收敛性啊
+21:57 varna: 问题就是那个收敛性不是……
+21:58 varna: 比如IB2那个算法，那么几行东西能变出任何魔术来么……
+21:58 lolisb: 不，问题是IB3（table 5）为什么要选个i <- random value
+21:59 cleamoon__: 为什么没人学数学/物理
+22:00 varna: ……这里略奇特
+22:00 * lolisa 今天任务终于完成了，好开心=w=
+22:00 varna: 他只检验了第i最相似就就断言分类或者试图更新CD...
+22:00 lolisa: varna,我能问一个有点二的问题吗？
+22:00 hope1: lolisa, 好啊，thx。我这几天刚省选完，还没回去上课，明后天应该有时间。之后的话…… 下周要去北京，但是之后的周末应该都有时间
+22:00 varna: lolisa: 你先把裤子脱了
+22:00 lolisb: 第十九页上面说 we use a policy that closely simulates the behavior of the algorithm...
+22:01 lolisa: hope1,ok，我也有时间
+22:01 lolisa: varna,我是真的很认真的想知道答案，尽管有点二
+22:01 varna: lolisa: 总之先问，男女之事可以后面再做
+22:02 varna: lolisb: 那种遁词我觉得你可以忽略……
+22:02 lolisa: 如果我真改名做雾雨魔理沙会对我的人生产生什么影响？
+22:02 hope1: cleamoon__, 我倒是有些兴趣想学，但一翻开wiki上近一些的东西，这都shenmegui……
+22:02 varna: lolisb: 最糟的是这个性质没给证明
+22:02 lolisb: 我真的不懂他这么做意义何在啊，本来就是不太确定的样本，还给随机一下
+22:03 varna: lolisa: 如果你蹲在美国，大概无所谓；他们分不清kirisame marisa和shirisame marosa有什么差别
+22:03 Plough: 对了
+22:03 varna: lolisb: 我的感觉是这里作者找不到合适的方法来检验这个了……
+22:03 Plough: 有人指出那个大和是改装后的……
+22:03 varna: Plough: 他们连155炮塔都能看清！？
+22:03 Plough: varna: 他们应该看了原剧
+22:03 cleamoon__: hope1, wiki的水平时上时下，没法看
+22:03 cleamoon__: 不如直接撸书
+22:04 hope1: 但是国内不允许这么改名的吧。美国允许自己改吗？
+22:04 lhjkkk joined channel
+22:04 varna: lolisb: 但另一方面，如果你在中国，我觉得你会被大多数人认为是weird, 这不太好混
+22:04 lolisa: 好吧，我socialize上不关心，只是担心会不会选PHDmaster找工作或者当下的录进大学CS系进行负面影响。。。
+22:04 lolisb: 好难办，我得找替代了
+22:04 hope1: 不会有护照什么的奇怪的问题吗
+22:04 lolisa: 不会，这方面我问过。。。
+22:04 varna: lolisa: 我觉得你需要考虑的反而是社会问题
+22:04 cleamoon__: 改完名重办护照就好了
+22:04 lhjkkk quit:Client Quit
+22:05 varna: 至少在中国，一个中国人用了日式名字的话会给大部分人糟糕的印象
+22:05 lhjkkk joined channel
+22:05 iyzsong: 2333
+22:05 varna: 而且他们可能也能读出shirisame marosa是“尻雨摩罗沙”
+22:05 hope1: cleamoon__, 反正都是同样的鬼畜，书上只会有更多的证明。会再附带一些解释，但还是鬼畜
+22:05 lolisa: 如果是社会问题，我随时可以改回来，我觉得最糟糕的问题是如果为了这种东西录大学，录系会不会带来什么负面影响，因为大学进不去CS毁前程啊。。。
+22:05 varna: 国外一般不会
+22:06 lolisa: 内就好，谢了。
+22:06 varna: 反正你是个黄种人
+22:06 varna: 叫的名字无非也就那么几种，他们分不清的
+22:06 code_new joined channel
+22:06 hope1: 东亚人都差不多233
+22:06 cleamoon__: hope1, 普通入门书都可以不用纸笔盲读了，你只需要好一点的书
+22:06 varna: 我对欧洲人的印象也只限于他们有奇怪的姓，比如把ijk连在一起写
+22:06 cleamoon__: 老爸本身想让我改日本名....
+22:07 lh_cat joined channel
+22:07 lolisb: 啊啦啦啦滚去刷作业了
+22:07 Plough: 说起来我终于能玩东方了……
+22:07 varna: cleamoon__: 要不你真改个，比如青山肝伤
+22:07 Plough: 23333
+22:07 varna: 或者若木打狗
+22:07 lolisa: 我主要是魔理沙综合症晚期才打算改。。。
+22:07 varna: lolisa: 来一发yyc L 魔理沙单人低封！
+22:07 hope1: cleamoon__, http://en.wikipedia.org/wiki/Monstrous_moonshine 比如说这种鬼畜
+22:07 varna: 频道好久没人表演东方了
+22:08 Plough: 我先去下一个辉针城
+22:08 hope1: 唉，新电脑薄膜键盘有三键锁定，然后就再也没法东方了
+22:08 lolisa: 我yyc e标准结局
+22:08 lolisa: 是一个手癌
+22:08 lh_cat: 喵喵喵喵喵
+22:08 lolisa: 话说改个名字没有奇葩版权问题吧。。。
+22:08 cleamoon__: 青山肝伤
+22:08 cleamoon__:  23333
+22:09 cleamoon__: 我有日本名，只是平时不用罢了
+22:09 Plough: 说起来我怎么感觉从文章里完全看不出大佐是玉子烧啊……
+22:09 cleamoon__: 我的本子是shift锁定...
+22:09 cleamoon__: 连i wanna都不行...
+22:09 hope1: lolisa, http://writers.stackexchange.com/questions/291/are-names-of-characters-copyrighted-by-authors
+22:10 cleamoon__: hope1, 等你基础学点了就会发现wiki讲的非常浅
+22:10 cleamoon__: 包括这种
+22:10 varna: Plough: 因为这次写的玉子烧性格黑暗而老练，不那么幼了……
+22:11 Plough: 你对玉子烧做了什么
+22:11 Plough: 少佐是大尻？
+22:11 lolisa: nice，这样我的toy language就顺带叫(9)语言了(大雾
+22:11 lolisa: hope1, thx
+22:11 varna: Plough: 玉子烧可是老牌航舰啊，少佐是大尻无误（6-1是我家大尻第一次实战）
+22:12 varna: 每次我想做一个玩具语言，我都会去回头看看Perl, 然后我就放弃了动手的打算
+22:12 lolisb: 大尻是啥？大凤？
+22:12 Plough: 老牌未必黑暗啊……
+22:12 varna: lolisb: 大淀
+22:12 cleamoon_ quit:Ping timeout: 264 seconds
+22:12 Plough: varna: Topic for #kancolle: http://kancolle.wikia.com ||  http://wikiwiki.jp/kancolle/ || 4/2/5/7/20? || 6/5/7/2/20? || don't  shoot me if you get 4hr or 2hr or worse ||  ＤＡＩＬＹ　ＲＥＭＩＮＤＥＲ http://puu.sh/8GleL
+22:12 varna: 噗
+22:12 Plough: ^#kancolle的topic
+22:12 hope1: 似乎是不能被版权但是有可能做成商标，但是东方没这情况
+22:13 varna: 哈哈哈哈
+22:13 lolisa: 我学PLT学FV学AI就是打算有朝一日塞到一个玩具语言里面。。。没事，来日方长嘛，别问我方长是谁
+22:13 varna: 这是哪个服务器上的频道……
+22:13 Plough: Rizon
+22:13 varna: 哦
+22:13 Plough: 我这几天又过去看了看
+22:13 cleamoon_ joined channel
+22:13 Plough: 然后我就看到某人在哭
+22:14 Plough: One of my friends = Got yamato on first LSC
+22:14 varna: Plough: 实际上我觉得练度高了人难免会黑，你看奥宫在机动部队那书最后是怎么黑后期机动部队指挥官的……
+22:14 varna: 233333
+22:14 Plough: Another one of my friends = Got yahagi on first LSC
+22:14 varna: 这些欧皇
+22:14 hope1: 一直想学这些东西（PLT，AI），但总感觉坑太深应该先学好文化课……
+22:16 lolisa: 文化课是？
+22:16 varna: 我现在觉得多学学不那么花哨的数学是个好事，如果你想做这些的话
+22:16 hope1: 竞赛之外的正常（学校）学科
+22:16 varna: 我自己就是数学渣，处处捉襟见肘
+22:16 lolisa: 好吧，谢了，我最近也意识到，就一直在补数学///
+22:16 lolisa: 。。。
+22:17 Plough: 数学渣+
+22:17 hope1: 不那么花哨是指？那坨分析学么……
+22:17 lolisb: 数学渣+
+22:17 cleamoon__: freenode的#kancolle？
+22:17 Plough: Rizon
+22:17 varna: cleamoon__: Rizon
+22:17 lolisb: 幸亏去了Math+CS...
+22:17 lolisa: 数学渣渣渣，单渣已经无法形容我的渣了
+22:17 varna: hope1: 我个人觉得学高代/线代和概率论比较常用
+22:17 cleamoon__: 数学有用+
+22:18 lolisa: 高代是？abstract algebra?
+22:18 lolisb: +, multivariate calculus
+22:18 cleamoon__: 所有数学都很有用
+22:18 varna: 我的感觉是你有个想法，然后想推导它性质的时候，数学就能立刻用上
+22:18 varna: 不然很多想法根本发挥不出来
+22:18 cleamoon__: 多元微积分就是微积分吧
+22:18 Plough: 什么鬼
+22:18 Plough: 卡了下立绘结果出个天山
+22:19 cleamoon__: 还有复分，函数分析，fourier，pde
+22:19 varna: lolisa: 高等代数研究方程组、矩阵、多项式之类的东西
+22:19 varna: lolisa: 简易化的版本就是工科也要学的线性代数了
+22:19 cleamoon__: 群，环，高等微积分，离散
+22:19 varna: 物理做连续的东西多一些
+22:19 cleamoon__: 都是基础
+22:19 lolisa: 好吧，最近就有点在补abstract algebra...
+22:19 lolisb: 微积分掺了线代的屎，有毒
+22:20 varna: 如果做计算机方面的研究，我更推荐入手练习线代和概率
+22:20 cleamoon__: 所有东西都有线代的屎，都有毒
+22:20 varna: 而我的微积分简直就是shit里有毒
+22:20 lolisa: OK, 我等下就去补。。。
+22:20 varna: 学校的破考试最后我都低空飞过
+22:21 hope1: 之前偶然点到了这种东西 http://en.wikipedia.org/wiki/Classification_of_finite_simple_groups 感觉群论太鬼畜了没法玩……
+22:21 Plough: 那珂酱也Lv58了……
+22:21 Matsune: 組合せ数学、離散幾何学、離散構造学、応用解析学、大規模数理学、コンピュータ実験数学   阪大的计算机基础数学专攻方向学的玩意
+22:21 Plough: 接下来应该是蜜瓜
+22:22 cleamoon__: 群论往大了学什么都有
+22:22 cleamoon__: 但是用不着
+22:22 varna: コンピュータ実験数学 ……
+22:22 Matsune: 线代概率基础部分 计算机理论往上面还是组合用的多一点
+22:22 lolisa: 但是HOTT不是需要群论基础没。。。
+22:22 cleamoon__: コンピュータ是什么
+22:22 varna: computer
+22:22 Plough: Computer?
+22:22 Matsune: computer
+22:22 cleamoon__: ....
+22:22 varna: 硬念出来就行了
+22:23 Matsune: 实验数学估计教的是数模类似物
+22:23 * cleamoon__ 不认识五十音图
+22:23 * lolisa 什么是50音图，能吃吗？
+22:23 cleamoon__: 能
+22:23 * varna 初中玩PS2游戏的时候跟着配音强念片假名……
+22:23 cleamoon__: 你脱裤，我喂你
+22:23 Plough: 不过为什么念出来以后我想到了撸西亚文的Computer……
+22:23 code_new: バージョン..
+22:24 lolisa: QAQ 你又欺负我，一点都不乖
+22:24 code_new: 这个念出来也不知道
+22:24 Matsune: 撸了几天组合撸傻了
+22:24 Matsune: 决定去看看离散几何是什么玩意
+22:24 lolisa: http://www.bilibili.com/video/av2065442/index_3.html 不错的东方CD，电音比较强
+22:24 cleamoon__: 我们学校的cs系上的数学课：线代+离散+数值
+22:24 cleamoon__: 没了
+22:24 cleamoon__: 不喜欢电音
+22:24 Matsune: 他这个是修士的课
+22:24 varna: code_new: ver这个音只能强行猜
+22:24 lolisb: ps2小时候在同学家天天玩啊好怀念
+22:24 Matsune: 计算机基础数学方向
+22:24 cleamoon__: 修士是什么，传教士？
+22:25 Matsune: 国内叫做研究生
+22:25 Plough: 噗
+22:25 lolisb: lolisa: 你可以听听Silver Nitrate做的东方remix
+22:25 Plough: 居然是version
+22:25 Matsune: 另外据我了解
+22:25 code_new: varna: 日语貌似所有念作[vi:]的都念作ば
+22:25 Matsune: 国内本科教组合的学校也没几个吧
+22:25 Matsune: 话说羊驼大学组合应该挺厉害的
+22:25 varna: 我本科有组合数学的课
+22:26 varna: 然而只教了基础的原理和解生成函数的初步
+22:26 lhjkkk quit:Read error: Connection reset by peer
+22:26 Plough: 说起来最近我突然反应过来
+22:26 Plough: 难不成良化这个ID来自你真名么……
+22:26 varna: 而我解方程的精确率要以散布计
+22:26 lolisa: 谢了，我这就去听
+22:26 varna: Plough: 不是
+22:26 varna: Plough: 良化是《图书馆战争》的梗
+22:26 varna: 另外推一个旧专辑 紅染の鬼が哭く 这个还可以
+22:26 lolisa: lolisb, 你不是V家厨+舰队狗没，怎么也会东方
+22:26 Matsune: 因为我这教组合的教授
+22:26 Matsune: 是吉大某教授的徒弟。。。
+22:27 lolisa: 谢了，还有其他的CD吗？我收藏起来慢慢听
+22:27 lolisb: Silver Nitrate又不是只混东方。。
+22:27 varna: Matsune: 吉大数学其实挺强的，计算机系一开始是数学系发展出来的
+22:27 cleamoon__: 反正数学是学多少都不嫌多的
+22:27 Plough: なるほど
+22:27 cleamoon__: 怎么都能用得上
+22:27 Matsune: varna:  这我倒是知道
+22:27 varna: lolisa: 満月の夜に超旋律的重低爆音 这个也可以
+22:27 lhjkk joined channel
+22:27 Matsune: 数学学多了 没饭吃（笑
+22:27 lolisa: varna,没懂，图书馆战争里面的什么梗？
+22:27 lhjkk: varna, 揉
+22:28 varna: lolisa: 另外旋律死亡风格的摇滚你听么
+22:28 lolisb: 还有就是Bernis的The Stars my Destination专辑
+22:28 lolisb: 最近迷上
+22:28 varna: lolisa: 里面设定日本政府有个查处不和谐图书的公安机关叫图书良化队
+22:28 cleamoon__: 数学水平和工资成线性正比哦
+22:28 lolisa: 什么是死亡风格？
+22:28 Plough: 最近我倒是去听Absolute Castaway的东西了
+22:28 cleamoon__: whisper record好，就是不像东方
+22:29 lolisa: 就是吼得很吵的那种？
+22:29 varna: lolisa: 像丧尸电影里那样死尸嚎叫的死腔和不错的配器
+22:29 Matsune: 纯数这些年都惨得很啊
+22:29 lolisa: 试试看吧。。。但是不怎么感冒。。。
+22:29 lolisa: 我最喜欢的一般都是电音
+22:29 varna: lolisa: 我给你找找
+22:30 * lolisb 听avicii比较多
+22:30 hope1: Matsune, 现在哪些东西算是纯数？
+22:30 cleamoon__: 纯数惨的大多是不灵活或者学的太差吧
+22:30 varna: lolisa: 艺人Bach 专辑IMMORTAL VENGEANCE
+22:30 varna: lolisa: 还有Thousand Leaves的Blind Night Sorrow
+22:31 varna: lolisa: 这两张口味不太重，里面也有纯器乐的部分
+22:31 Matsune: hope1:  主要是数论 代数 和分析
+22:32 Matsune: 还有拓扑
+22:32 hope1: 这不是全都算进去了……
+22:32 Matsune: 像是统计概率组合就不是纯数了基本上
+22:32 Matsune: 组合可能还能沾点边
+22:32 cleamoon__: 数论代数分析都不是纯数吧
+22:32 cleamoon__: 拓扑也不完全算
+22:32 cleamoon__: 都有大量应用
+22:32 Matsune: 纯数不是说他没有应用
+22:33 cleamoon__: 我觉得纯数就是完全没用的东西
+22:33 Matsune: 计算数学也不算是纯数了
+22:33 cleamoon__: 比如集合论的逻辑
+22:33 Matsune: 可以说数学的根基其实是没什么用的东西（笑
+22:33 varna: cleamoon__: 逻辑其实是很基础的东西了
+22:34 cleamoon__: varna, 集合论的逻辑哪里都没在用的，prolog用的和集合论无关
+22:34 hope1: lolisa, 于是怎么约？
+22:34 Matsune: 数理逻辑和一般说的逻辑学是两码事
+22:34 lolisb quit:Quit: Leaving
+22:35 lolisa: 你有一天有时间
+22:35 lolisa: 到中海国际来就是了
+22:35 lolisa: 什么时候有空？
+22:35 cleamoon__: 不是数理逻辑，是用古典逻辑撸ZF集合论
+22:35 hope1: 明后天吧
+22:35 cleamoon__: 坑爹到死
+22:35 varna: cleamoon__: 古典逻辑搞ZF集合论什么鬼……
+22:35 lolisa: 后天6点？
+22:36 hope1: 周三晚上六点？
+22:36 cleamoon__: varna, 隔壁学校的一个坑课
+22:37 Plough: “还有阿……兰州记得用词精致些〔dos窗口〕神马的最讨厌了”
+22:37 varna: ...
+22:37 Matsune: 纯数的界限其实还是有点模糊的
+22:37 cleamoon__: Matsune, 求推荐好玩的数学课呀
+22:37 lolisa: 我6点以后都有时间，放学了嘛
+22:37 Plough: 于是会卖萌的羊驼子是什么时候消失的呢……
+22:37 Matsune: cleamoon__:  我现在就看些组合
+22:37 cleamoon__: Matsune, 之前学的没有觉得好玩的？
+22:38 Matsune: cleamoon__:  我不知道什么好玩 但我知道数值分析简直是难玩死了。。。
+22:38 varna: Plough: 在我习惯按首页收敛血洗C语言吧头版之后
+22:38 Matsune: 其实我不太明白什么叫做好玩
+22:38 cleamoon__: 数值多好玩，而且也不难吧
+22:39 hope1: lolisa, 明天有没有时间，我本来打算后天晚自习回学校的
+22:39 lolisa: 等一下，varna曾经是个萌货？
+22:39 cleamoon__: 数值属于不需要纸笔就能看的
+22:39 Plough: 让我把你变回萌系人物吧
+22:39 lolisa: 有，一样放学了啊
+22:39 varna: Plough: 把你的身心燃弹钢铝桶都献给我就可以了
+22:39 Matsune: 不需要纸笔反而让我觉得我不是在看数学物了
+22:40 lolisa: 红旗发动了种族天赋技能“搞基”
+22:40 Plough: lolisa: 爆
+22:40 Matsune: 有时候需要写写算算稳定一下心率
+22:40 Plough: 然而你立刻就被我爆了
+22:40 Plough: varna: 我来给你上点药
+22:40 hope1: 那就明天吧，留个联系方式
+22:40 varna: Matsune: 跪数学帝
+22:40 lolisa: 然而帅气可爱的lolisa闪躲掉了
+22:40 lolisa: 不好办。。。我没手机。。。
+22:40 Plough: 然而这是lolisa的脑补
+22:40 hope1: 高三六点就放学了？
+22:41 lolisa: 国际部
+22:41 lolisa: 我现在去跟家人借一个
+22:41 varna: hope1: 你们约个明确地点等吧？
+22:41 lolisa: 地铁站？
+22:41 hope1: 也行
+22:41 Matsune: 小心被黑叔叔拐走了
+22:41 Plough: 说起来真要出去面基的话我都没件能穿的衣服……
+22:41 lolisa: 我明天衣服上就是marisa，不会有另一个逗比穿同样衣服的
+22:42 hope1: Plough, 我好像也是…… 衣服一个月没洗了orz
+22:42 Plough: 其实是压根没衣服给我穿
+22:42 hope1: lolisa, 地铁站有什么标志性建筑之类的？
+22:42 Plough: 除了校服
+22:43 code_new: 我还是穿的一个半月前的冬装……
+22:43 hope1: 整个地铁站范围还是太大了
+22:43 Matsune: 我看天热了换了点夏装
+22:43 Matsune: 结果第二天温度骤降十来度
+22:43 Matsune: 就感冒了
+22:44 Plough: 医生对我说：“如果你再不改变自己的生活习惯，那你不是抽烟抽到死，就是喝酒喝到死。——选择权在你自己，你好好想想吧！” 　 　 哦哦，那我选喝酒。 ——MammaCass
+22:44 hope1: 感冒还没好……
+22:44 varna: 我现在还是运动裤+薄毛衣+冲锋衣……
+22:44 code_new: 最低气温不上10度我还不敢换衣服
+22:44 Plough: 我现在穿得也很厚
+22:44 cleamoon__: 萝莉穿摩罗沙cos，海棠穿文文cos，这样就好找了
+22:44 varna: cleamoon__: +
+22:44 varna: 不对
+22:44 varna: HO棠该穿海棠cos
+22:45 cleamoon__: 他对海棠的爱不如文文
+22:45 Plough: 虽说即使如此今天某文学社社长（女）准备把我拽过去纳新，说是要“加点颜值”
+22:45 hope1: 你们这些现充
+22:45 Plough: 然而在听我和她扯了一通M1937的散布问题以后她果断地放弃了这个想法
+22:46 lolisa: 18782088872
+22:46 Plough: hope1: 我被线虫嘲讽了，现在想自杀
+22:46 Plough: 你该怎么赔偿我
+22:46 whatofor_1 quit:Read error: Connection reset by peer
+22:46 lolisa: hope1,弄到手机了，好办，地铁站又不大
+22:46 code_new: 肛旗颜值多高0.0快爆照
+22:46 hope1: lolisa, 不要直接发到这里啊，这里有log的
+22:47 whatofor_1 joined channel
+22:47 Plough: 不给
+22:47 lolisa: 我baka死了。。。
+22:47 varna: Plough: 然而你该告诉她还有更糟糕的水雷战队爱好者
+22:47 code_new: 难道都是女装？
+22:47 lolisa: 不过手机号很快就不用了，whatever
+22:47 Plough: 我准备跟她讲的
+22:47 varna: 大舰巨炮其实是很正常的爱好
+22:47 Plough: 不过她已经被吓跑了
+22:47 Plough: 大舰巨炮多帅气
+22:48 lolisa: hope1,明天穿cos来吧，这样好认
+22:48 hope1: 虽然我用手机也不太方便，最近给我摔坏了，打电话经常突然断掉……
+22:48 Plough: 光用鱼雷连打没打中人都不知道
+22:48 Plough: 参见瓜岛夜战南胖子
+22:48 cleamoon_ quit:Ping timeout: 264 seconds
+22:48 varna: 知道啊，你只要数数掉下来的飞机数，然后硬说是鱼雷打中了敌舰
+22:48 varna: 然后强行奏军舰进行曲
+22:48 varna: 皆大欢喜
+22:48 lolisa: 你喜欢吃什么？5～7块钱的麻辣烫可以不？
+22:49 varna: 再树一两个典型，POI啊绫波啊
+22:49 Plough: 然后院长发动了雷达照准射击
+22:49 hope1: 没cos，除了诡异的校服就只有穿了若干个月的冲锋衣了……
+22:49 hope1: 行啊
+22:49 varna: 什么鬼神无双，打得对面轮机长吓得把总闸都拉了
+22:49 Plough: 另外瓜岛夜战那场现在似乎有新说法了
+22:49 Plough: 我看看能不能找到那个贴
+22:49 varna: 哦，别说轮机长
+22:49 varna: 说是绫波打的
+22:49 * lolisa 唔脸
+22:49 cleamoon_ joined channel
+22:49 lolisa: 你是不知道6块钱的麻辣烫还是在卖萌
+22:50 lolisa: 还是真心想被我上
+22:50 hope1: 还真没吃过…… 我几乎不出门orz
+22:50 Plough: 有一个推测是头槌其实吃了院长20发
+22:50 varna: 噗
+22:50 Plough: 不是九发
+22:50 varna: 噗呼呼哈哈哈哈
+22:50 varna: 二十发……
+22:50 lolisa: 。。。这个梗说的是某女去看某男，某男请她吃6块钱麻辣烫
+22:50 varna: 这不打成酱了
+22:50 lolisa: 然后干了她七次
+22:50 varna: lolisa: 卧槽
+22:51 Plough: http://imgsrc.baidu.com/forum/pic/item/7e3c30f33a87e950ccc4561314385343faf2b4bf.jpg 这是中弹图
+22:51 varna: lolisa: 我想学这奥义然后干你七次……
+22:51 hope1: 卧槽……
+22:51 Plough: 红色为16in，蓝色为5in
+22:51 xxxxxxxx: 球过程
+22:51 lolisa: 这梗成都很出名的啊，我们班全部都知道
+22:51 lolisa: 我不知道，是听朋友说的
+22:51 Matsune: 这梗我也知道
+22:51 xxxxxxxx: 6块钱干7次 就算一次一块 之前还白干一次...
+22:52 cleamoon__: 我觉得有1log页没什么用...
+22:52 code_new: 买六赠一
+22:52 cleamoon__: 海棠手机干什么用
+22:52 varna: Plough: ...这要是真的，射得也太准了
+22:53 xxxxxxxx: 大概是买五赠一
+22:53 varna: 舰炮轰中二十弹简直骇人
+22:53 Plough: 或者说日本人对金刚级的改修太魔法了
+22:53 Plough: 居然挺了二十发……
+22:53 cleamoon__: 我等看海棠破处
+22:53 varna: 大部分都在主装上
+22:53 hope1: cleamoon__, 迷路之后开百度地图……
+22:53 varna: 金刚级的改装是强化主装的不是
+22:53 Plough: 是，但是院长可是16in……
+22:54 Plough: 所以说日本人这改修简直赚大了
+22:54 xxxxxxxx: 肯定是因为他们没上鱼雷
+22:54 Plough: 鱼雷打了
+22:54 varna: xxxxxxxx: 高雄爱宕全打偏了
+22:54 Plough: 两颗全部提前误爆
+22:54 cleamoon__: 海棠来学物理吧，这样数学就都用得上了
+22:54 varna: 至于美国鱼雷，我们忘掉它
+22:55 Plough: 之后南达听到爆炸声改变航向了
+22:55 Plough: 所以后面的全都没中
+22:55 varna: 重巡里比较虎的其实是妙高羽黑
+22:55 Plough: 不然就凭南达那防雷，两颗93吃下去……
+22:56 xxxxxxxx: 2颗炸沉的船就又多了?
+22:56 varna: 而第六战队简直就是……作为看热闹的后人我不予评述，但如果那些传闻有一半是真的
+22:56 lolisa: hope1，我知道明天该怎么招待你了，想起来附近有一家很不错的店
+22:56 varna: xxxxxxxx: 两枚鱼雷就是重创
+22:56 cleamoon__: 不错的快捷酒店？
+22:56 Plough: 未必沉，不过最少瘫上几个月
+22:56 xxxxxxxx: 他俩要约炮？
+22:56 varna: 而且战舰不是平顶晒鱼船
+22:56 Plough: 另外，舰娘吧里有人挖了点数据
+22:57 Plough: 发现维内托主炮的散布其实和Iowa的差不多……
+22:57 varna: 平顶可以狂修乱补，战舰这种吃强度的东西你胡乱补补看
+22:57 varna: 反正你补不补，约克城级甲板吃两枚航弹就差不多了
+22:57 varna: 然而爱荷华……
+22:57 varna: 或者退一步说南达
+22:57 Plough: 其实我听说南胖子的防雷不如北卡
+22:58 varna: 你该数数日本鱼雷打中的都是些什么
+22:58 varna: 毕竟美军战舰有能力协同机动部队作战……
+22:58 Plough: 所谓最优秀的条约战列舰意思就是充分利用吨位，适当调整防护也是其中之一……
+22:58 hope1: lolisa, thx，不过我现在感冒咳嗽，估计吃不了太辣的
+22:58 varna: 而大半夜跟水雷屋杀得风生水起的都是护航的爷爷……
+22:58 varna: 还有些巡洋舰什么的
+22:59 Plough: http://tieba.baidu.com/p/3707515177 这是那个对维内托的研究贴
+22:59 Plough: 看完那贴我在考虑给维内托来个戒指安慰下她
+22:59 varna: HektorX...这人我有印象，他跟那个轻巡能代研究员/重巡摩耶研究员关系不错
+23:00 varna: 就是做碧海蓝天太平洋的那个
+23:00 lolisa: OK，那家店的东西不太辣
+23:00 Plough: なるほど
+23:00 lolisa: 要不吃面？
+23:00 Plough: 总之我感觉我要变成意粉了……
+23:00 lolisa: 面的话完全不辣。。。算了明天见面说
+23:00 hope1: 都行，这个无所谓
+23:00 varna: 我仍然信仰鱼雷
+23:01 Plough: 然而除了IJN鱼雷都没法看
+23:01 Plough: 还记得科技之国那骇人的DUD率么……
+23:01 cleamoon__: lolisa下面给海棠吃
+23:01 Plough: 碎叫
+23:01 Plough: 朱军武运
+23:02 cleamoon__: 朱军....
+23:03 cleamoon__: 担担面不错
+23:03 Plough quit:Quit: 碎叫
+23:03 cleamoon__: 川菜不辣的有好吃的吗
+23:03 cleamoon__: 或者说，菜不辣的有好吃的吗
+23:05 lolisa: 睡小五
+23:05 hope1: 手机打不通？
+23:05 hope1: 晚安
+23:06 lolisa: 怎么会？你先打通了我再睡
+23:06 cleamoon__: 小五又被睡了
+23:06 cleamoon__: 好闪，好闪呀
+23:06 lolisa: 打过来吧，我估计看到你了
+23:07 * lolisa 认为hope1的声音是受中受
+23:08 hope1: 只是感冒了而已……
+23:08 lolisa: 。。。就是说你不感冒的时候声音是受不是受中受了
+23:08 xxxxxxxx: lolisa 在给自己立被后入的flag
+23:09 hope1: 不，我平常说话很愤青的……
+23:09 lolisa: 我只是在调戏你了
+23:09 lhjkkk joined channel
+23:09 * lolisa 其实是双。。。
+23:09 varna: 先撤了
+23:10 varna: 诸君武运
+23:10 varna quit:Quit: leaving
+23:10 xxxxxxxx: futa?
+23:10 lhjkkkk joined channel
+23:10 hope1: 咳咳
+23:10 lolisa: Orz。。。。。
+23:10 cleamoon__: 愤青的受
+23:10 cleamoon__: futa2333
+23:10 lolisa: 男女通吃的意思而已。。。不过我又不是见人就上的禽兽，有什么好怕的= =
+23:10 cleamoon__: futa功，后宫受
+23:10 cleamoon__: 可以弄个漫画了
+23:11 cleamoon__: 我是见妹子就上的禽兽
+23:11 lolisa: 包括紫妈？
+23:12 cleamoon__: 当然
+23:12 cleamoon__: 大妈多萌fjsalfhahfuvnsalsfjfoöfhagagv
+23:12 xxxxxxxx: cleamoon_: 给 春哥
+23:13 lhjkk quit:Remote host closed the connection
+23:13 lhjkkkk quit:Remote host closed the connection
+23:14 hope1: cleamoon__, 本来是有些兴趣学物理的，直到我看到上面那坨鬼畜……
+23:14 cleamoon__: 春哥是汗子中的汉子
+23:14 xxxxxxxx: 鬼畜的都是数学的部分
+23:15 cleamoon__: hope1, 哪坨鬼畜？
+23:15 Petrus07 quit:Quit: Leaving.
+23:18 hope1: cleamoon__, 比如刚刚那坨群论和规范场论什么的，monstrous moonshine里面的证明还是用的理论物理的定理……
+23:21 hope1: http://en.wikipedia.org/wiki/Classification_of_finite_simple_groups 而且这种东西一点也不优美嘛，26个特例什么的……
+23:25 cleamoon__: 那不是特例吧...
+23:26 lolisa quit:Quit: Leaving
+23:26 cleamoon__: 这类东西学高级了都很难看
+23:26 cleamoon__: 我早就没有小时候学数学的那个洁癖了
+23:28 hope1: 感觉很没救的样子……
+23:30 cleamoon__: 都很没救
+23:30 cleamoon__: 高级货还保持不是满地hack的基本没有
+23:30 cleamoon__: 至少我没见过
+23:31 xxxxxxxx: yin语言啊
+23:32 cleamoon__: 智障都不敢拿出来溜溜
+23:52 hope1: http://pomf.se/ 很不错的样子
+23:53 cleamoon__: 好东西
+23:53 cleamoon__: 实验做完了，满身gamma放射线的回家了
+23:58 cleamoon__ quit:Ping timeout: 272 seconds
+23:59 cleamoon__ joined channel

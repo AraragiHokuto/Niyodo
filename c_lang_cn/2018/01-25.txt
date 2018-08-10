@@ -1,0 +1,153 @@
+00:13 yonka quit:Remote host closed the connection
+00:14 yonka joined channel
+00:17 lh_mouse quit:Ping timeout: 248 seconds
+00:18 yonka quit:Ping timeout: 255 seconds
+00:19 CyrusYzGTt quit:Ping timeout: 256 seconds
+00:26 tcheng joined channel
+01:13 tcheng quit:Read error: Connection reset by peer
+01:59 N00d1e5 joined channel
+02:02 N00d1e5: 各位凌晨好。
+02:02 N00d1e5: 有个问题没有搜到答案，linux 下，如何使用 gcc-4.7 作为默认 gcc？
+02:03 N00d1e5: 也就是说，在我不安装最新 gcc，只安装 gcc-4.7 的前提下，如何消灭掉 “/bin/sh: 1: gcc: not found” 错误信息？
+02:20 NccT quit:Ping timeout: 256 seconds
+04:48 N00d1e5 quit:Quit: Leaving.
+05:15 yonka joined channel
+05:19 yonka quit:Ping timeout: 240 seconds
+05:43 cleamoon_: tid nu
+06:00 geordi quit:Remote host closed the connection
+06:09 geordi joined channel
+08:19 whocares_2_ joined channel
+08:19 whocares_2 quit:Ping timeout: 256 seconds
+08:50 lh_mouse joined channel
+09:20 wlemuel joined channel
+09:53 yonka joined channel
+09:57 yonka quit:Ping timeout: 240 seconds
+09:58 yonka joined channel
+11:43 tomatoJuice joined channel
+11:52 hanjian_l: 代码倒着运行也要花费不少于正着运行的时间啊
+11:52 * hanjian_l reverse-continuing
+11:53 ksqsf joined channel
+12:43 matchray: gdb target record ? 
+12:43 matchray: 展示一下怎么做的
+13:34 ksqsf quit:Ping timeout: 248 seconds
+14:19 hanjian_l: matchray: rr啊，不是gdb直接来
+14:29 zb111 joined channel
+15:08 zb111_ joined channel
+15:10 zb111 quit:Ping timeout: 240 seconds
+15:23 zb111_ quit:Read error: Connection reset by peer
+15:24 zb111 joined channel
+15:29 zb111 quit:Read error: Connection reset by peer
+15:30 zb111 joined channel
+15:52 zb111 quit:Ping timeout: 240 seconds
+15:52 zb111 joined channel
+15:59 zb111_ joined channel
+16:00 zb111 quit:Ping timeout: 252 seconds
+16:04 zb111_ quit:Read error: Connection reset by peer
+16:06 zb111 joined channel
+16:27 CyrusYzGTt joined channel
+16:51 zb111_ joined channel
+16:53 zb111 quit:Ping timeout: 246 seconds
+16:56 zb111_ quit:Ping timeout: 256 seconds
+17:02 lh_mouse: geordi, { autp ps = make_unique<string>("hello world!"); auto pmf = &string::size; cout <<(ps->*pmf)(); }
+17:02 geordi: error: 'autp' was not declared in this scope
+17:02 lh_mouse: geordi, { auto ps = make_unique<string>("hello world!"); auto pmf = &string::size; cout <<(ps->*pmf)(); }
+17:02 geordi: error: no match for 'operator->*' in 'ps ->* pmf' (operand types are 'unique_ptr<string, default_delete<string > >' and 'long unsigned int (string::*)() const noexcept')
+17:02 lh_mouse: geordi, { auto ps = make_unique<string>("hello world!"); auto pmf = &string::size; cout <<(ps.get()->*pmf)(); }
+17:02 geordi: 12
+17:16 wlemuel quit:Quit: leaving
+19:41 Youmu: geordi: struct foo { int operator->*() { return 0; } };
+19:41 geordi: error: 'int foo::operator->*()' must have exactly one argument
+19:41 Youmu: geordi: struct foo { int operator->*(int) { return 0; } };
+19:41 geordi: Success
+20:47 iyzsong joined channel
+20:50 iyzsong: o.o
+21:12 yonka quit:Remote host closed the connection
+21:12 yonka joined channel
+21:16 yonka quit:Ping timeout: 240 seconds
+21:22 yonka joined channel
+21:27 yonka quit:Ping timeout: 268 seconds
+22:00 lh_mouse: C:\Users\LH_Mouse>gcc --version
+22:00 lh_mouse: gcc (gcc-7-branch HEAD with MCF thread model, built by LH_Mouse.) 7.3.1 20180125
+22:12 ksqsf joined channel
+22:15 lh_mouse: タマド  洗了件衣服，口袋里有个小纸条忘记掏出来了……
+22:19 cleamoon_: 前几天老妈洗衣服把一家子的护照都给洗了....
+22:19 Aldrich: 洗护照还行
+22:21 cleamoon_: 现在不知道能不能出境呢.....
+22:21 cleamoon_: 被卡在海关就遭中了
+22:21 hanjian_l: cleamoon_: 没在瑞典，所以悲剧了？
+22:22 cleamoon_: +
+22:22 hanjian_l: 变成难民还行
+22:22 Aldrich: 找大使馆吧
+22:22 hanjian_l: 遣送到中国就麻烦了
+22:23 cleamoon_: 大使馆表示管不着
+22:23 cleamoon_: 就在中国......
+22:23 Aldrich: 应该不会吧，岚月酱不是已经移民了么……
+22:24 Aldrich: cleamoon_: 你们瑞典大使馆什么鬼
+22:24 hanjian_l: https://usercontent.irccloud-cdn.com/file/RbKAnVYQ/IMG20180125222315.jpg
+22:24 cleamoon_: 回国半个月，然后遭中了
+22:25 hanjian_l: 然后绅士掏出了久违的天朝身份证
+22:25 cleamoon_: 我没回
+22:25 Aldrich: cleamoon_: 按理说这事儿大使馆应该管的
+22:25 hanjian_l:  瑞典间谍娇绅士
+22:25 cleamoon_: 神奇的是竟然还带着我的护照并一起洗了.......
+22:25 Aldrich: ……为什么要带你的护照
+22:26 Aldrich: 你们瑞典还有其他身份证件么
+22:26 cleamoon_: 有，然而老爸没有
+22:26 cleamoon_: 因为有护照所以没申请身份证
+22:27 Aldrich: 66666666666
+22:27 cleamoon_: 于是老爸现在光荣的成为了黑户
+22:27 yonka joined channel
+22:27 cleamoon_: 回瑞典还是走法兰克福转机....
+22:28 Aldrich: ……
+22:28 Aldrich: 法兰克福转机要过海关么
+22:29 iyzsong quit:Ping timeout: 240 seconds
+22:29 cleamoon_: 当然.....
+22:29 Aldrich: ……
+22:29 Aldrich: 什么破机场
+22:29 cleamoon_: 在哪里进欧盟在哪里过海关
+22:29 Aldrich: 哦，申根区啊
+22:29 cleamoon_: 欧盟之内没有海关
+22:30 Aldrich: 我不确定瑞典是不是申根区来着
+22:30 cleamoon_: 我之前飞芬兰都没有安检......
+22:30 Aldrich: 是的话我大三说不定去找你玩
+22:30 cleamoon_: 是深根区
+22:30 Aldrich: 我想试试看能不能去维也纳交换一年
+22:30 cleamoon_: 吼呀
+22:30 cleamoon_: orz
+22:30 cleamoon_: 为何维也纳
+22:31 Aldrich: 好玩
+22:31 cleamoon_: orz
+22:31 yonka quit:Ping timeout: 240 seconds
+22:31 Aldrich: 而且其他的交换项目大多是政经学部的
+22:31 Aldrich: 学分不好换算
+22:32 cleamoon_: 也可以找个不要学费的大学交换，然后周末打飞机
+22:33 Aldrich: http://wx4.sinaimg.cn/large/006cEG6Lly1fnt3e4n3vwj31kw1s0drv.jpg
+22:35 cleamoon_: unbearable summer 是什么样的
+22:35 Aldrich: 热
+22:36 cleamoon_: ......
+22:40 cleamoon_: 原来soba那么多人吃
+22:42 cleamoon_: Aldrich: 日本人一般吃饭口重吗？我从网上看到两种截然相反的观点
+22:42 Aldrich: Aldrich: 日本人的口味怎么说呢
+22:42 Aldrich: 我觉得其实是这样的
+22:43 Aldrich: 不清淡，然而各种味道都不突出
+22:43 Aldrich: 很平均的感觉
+22:44 cleamoon_: soga
+22:47 cleamoon_: 感觉和海盗正好相反的口味
+22:51 Aldrich: 和我国其实也相反
+22:51 Aldrich: 不过日本的中国饭店不少
+22:52 cleamoon_: 去了11区当然要各种饭团寿司才对
+22:52 Aldrich: 他们喜欢在饭团子里面包各种海产品，而我又不喜欢吃海货……
+22:53 Aldrich: 其实我是便当党
+22:54 cleamoon_: 章鱼香肠党
+22:54 cleamoon_: 不喜海货在11区略苦....
+22:56 Guest537 joined channel
+22:57 Guest537:  /msg ChanServ TAXONOMY #c_lang_cn 
+22:58 Guest537 quit:Remote host closed the connection
+23:00 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/70/h6_207038.jpg@596w_1l.jpg
+23:17 hanjian_l: 真冷啊
+23:21 lh_mouse: GCC 7.3 发布了：  https://gcc-mcf.lhmouse.com/
+23:26 yonka joined channel
+23:30 yonka quit:Ping timeout: 240 seconds
+23:32 ksqsf_ joined channel
+23:35 ksqsf quit:Ping timeout: 252 seconds
+23:58 cleamoon_: 小蚝不都用gcc 8了吗

@@ -1,0 +1,129 @@
+00:14 poi joined channel
+00:14 poi: hello
+00:15 poi: 请问如何编译一个Android的开源输入法...
+00:15 poi: 没有拼音输入法比较难受0.0 不想用商业软件...
+00:22 iyzsong: poi: good luck~
+00:26 iyzsong: poi: you may want this: https://github.com/lizhangqu/PinyinIME
+00:26 poi: thank you 
+00:26 poi: let me try
+00:57 poi quit:Ping timeout: 260 seconds
+01:03 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+02:25 sixand joined channel
+06:06 \s quit:Ping timeout: 256 seconds
+07:14 zhangoke joined channel
+08:35 sixand quit:Ping timeout: 264 seconds
+09:37 lh_mouse joined channel
+10:12 lh_ideapad joined channel
+10:15 sixand joined channel
+10:25 sixand quit:Ping timeout: 265 seconds
+11:21 \s joined channel
+11:21 \s quit:Changing host
+11:21 \s joined channel
+12:18 lh_ideapad: geordi_, { a = b; } enum A { foo } a; enum B { bar } b;
+12:18 geordi_: error: cannot convert 'B' to 'A' in assignment
+12:18 lh_ideapad: geordi_, { a = bar; } enum A { foo } a; enum B { bar } b;
+12:18 geordi_: Same error.
+12:18 lh_ideapad: geordi_, { a = foo; } enum A { foo } a; enum B { bar } b;
+12:18 geordi_: <no output>
+13:25 zhangoke quit:Quit: zhangoke
+15:09 leemeng joined channel
+15:23 Frinsecta joined channel
+15:53 Frinsecta quit:Remote host closed the connection
+16:33 sixand joined channel
+16:42 sixand quit:Ping timeout: 264 seconds
+16:49 lh_ideapad: geordi_, << foo(value); enum e : unsigned char { value = 65 }; void foo(int){ BARK; } void foo(unsigned char){ BARK; }
+16:49 geordi_: error: no match for 'operator<<' in 'cout << foo(((int)value))' (operand types are 'ostream' {aka 'ostream'} and 'void')
+16:49 lh_ideapad: geordi_, { foo(value); } enum e : unsigned char { value = 65 }; void foo(int){ BARK; } void foo(unsigned char){ BARK; }
+16:49 geordi_: foo(int)
+16:50 lh_ideapad: geordi_, { foo(value); } enum e : unsigned char { value = 65 }; void foo(unsigned long){ BARK; } void foo(unsigned char){ BARK; }
+16:50 geordi_: error: call of overloaded 'foo(e)' is ambiguous
+17:06 sixand joined channel
+17:08 sixand quit:Client Quit
+17:09 leemeng quit:Remote host closed the connection
+17:18 Frinsecta joined channel
+17:28 lh_ideapad: geordi_, << & string :: npos;
+17:28 geordi_: 0x4eba50
+17:28 lh_ideapad: geordi_, use --clang
+17:28 geordi_: 0x524c40
+17:32 Dove joined channel
+17:36 Dove quit:Client Quit
+17:36 Dove joined channel
+17:37 Dove quit:Client Quit
+17:37 Vassis joined channel
+17:38 Vassis: 换个名字2333
+17:38 Vassis: 我是T2
+17:41 Fri joined channel
+17:42 Fri quit:Remote host closed the connection
+17:45 Frinsecta quit:Ping timeout: 264 seconds
+19:10 varna joined channel
+19:10 varna: 眼滑把「东方永夜抄」看成了「东方夏银梦」
+19:10 varna: 脑子怕是进雪
+19:10 Vassis: 2333
+19:10 varna: Vassis: 噫，你居然知道
+19:11 varna: 刚才我看东方的时候，你是不是偷看了啊？
+19:11 Vassis: 我不知道什么是夏银梦
+19:11 varna: 这么喜欢看就让你看个够啊（震声）
+19:11 Vassis: 卧槽，羊驼今天是暴走模式。
+19:12 varna: 玩梗而已
+19:12 Vassis: 你从哪收集那么多梗的
+19:12 varna: 雪堆里（直球）
+19:13 Vassis: 2333
+19:14 Mokou: 今天手柄到了
+19:14 Mokou: 两次过了三基佬
+19:14 varna: 二周目？
+19:14 Mokou: 港服一周目
+19:15 varna: 现在想想，NG7+我唯一有点心虚的Boss就是三基佬了
+19:15 varna: 现在劳伦斯甚至都被排除在名单之外
+19:15 Mokou: 怎么跟速通党似的
+19:15 varna: 只是看起来一样，三基佬的主要问题是需要留神控场
+19:15 Mokou: 这道是
+19:16 Mokou: 毕竟三个人
+19:16 varna: 劳伦斯只有一个人，也不过就是一招秒杀，尽量别被打中就好了
+19:16 Mokou: https://www.bilibili.com/video/av11739910 目力哥
+19:16 varna: 我又不太会控，只好一点突破
+19:17 varna: 女 妖 之 嚎
+19:17 varna: 我嚓缘之空
+19:17 varna: 不对，怨之空
+19:18 varna: 春 日 野 兽
+19:18 varna: 看完目力再来看四面黄头发的小女孩
+19:19 Mokou: 这个黄头发的小女孩好可怜（顺风车）
+19:22 varna: 唵·摩罗沙曲奇娑婆诃
+19:26 varna: 对了，梦想夏乡还有下文么
+19:26 Mokou: 妹子第一发低保的产物是长门
+19:26 Mokou: 不知道
+19:27 varna: 惊恐
+19:27 varna: 欧洲人的家眷果然也血统高贵
+19:27 Mokou: 似乎现在梦想夏乡一共四话
+19:28 varna: 是四章（指正）
+19:28 Mokou: 被 害 扩 大
+19:33 lh_ideapad quit:Remote host closed the connection
+19:35 lh_ideapad joined channel
+19:36 iyzsong joined channel
+19:53 lh_not_bot quit:Quit: Lost terminal
+19:55 lh_not_bot joined channel
+20:17 whocares_2_ joined channel
+20:17 whocares_2 quit:Ping timeout: 260 seconds
+20:35 lhanjian_: 唔，猫主子
+20:44 Vassis: lhanjian_: 揉
+20:46 Frinsecta joined channel
+20:48 sixand joined channel
+20:52 lhanjian_: 不给揉
+20:52 Frinsecta quit:Remote host closed the connection
+21:27 sixand quit:Quit: sixand
+21:51 rky joined channel
+21:55 rky quit:Ping timeout: 260 seconds
+21:57 lh_ideapad quit:Remote host closed the connection
+21:58 lh_ideapad joined channel
+22:00 lh_ideapad quit:Remote host closed the connection
+22:54 varna: 噗叽啪
+23:02 Vassis: 哎呀，睡觉去了，诸君晚安，夜间愉快。
+23:02 Vassis quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:16 lh_mouse: varna, https://mp.weixin.qq.com/s/qL1aW2kDiBPIy83K30iGGw
+23:16 lh_mouse: 有兴趣么。
+23:17 varna: 远程围观
+23:19 lhanjian_: varna: u go i go
+23:19 varna: 这么短的时间，就llvm来说我基本跟旁边的路灯柱没什么差别
+23:21 varna: 基本上浮光掠影地听个花哨打个酱油，就不太有兴趣了
+23:33 lh_mouse: 其实，主要是看看周边的人啊，项目啊。
+23:33 lh_mouse: 不是针对 llvm 。
+23:40 varna quit:Ping timeout: 260 seconds

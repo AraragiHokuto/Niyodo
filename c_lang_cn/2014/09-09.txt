@@ -1,0 +1,480 @@
+00:06:acgtyrant quit:Ping timeout: 276 seconds
+00:21:uuair joined channel
+00:33:Petrus07 quit:Quit: Leaving.
+00:38:lh_mouse: geordi, -c struct foo { map<int, foo> m; };
+00:38:geordi: Success
+00:38:lh_mouse: geordi, -c struct foo { set<foo> m; };
+00:38:geordi: Success
+00:39:lh_mouse: geordi, -c { foo f; } struct foo { set<foo> m; };
+00:39:geordi: Success
+00:39:lh_mouse: geordi, -c { foo f; } struct foo { map<foo, int> m; bool operator<(const foo &rhs){ return less<void>()(this, &rhs); } };
+00:39:geordi: Success
+00:40:lh_mouse: geordi, -c { foo f; f[foo()] = 123; } struct foo { map<foo, int> m; bool operator<(const foo &rhs){ return less<void>()(this, &rhs); } };
+00:40:geordi: error: no match for 'operator[]' (operand types are 'foo' and 'foo')
+00:40:lh_mouse: geordi, -c { foo f; f.m[foo()] = 123; } struct foo { map<foo, int> m; bool operator<(const foo &rhs){ return less<void>()(this, &rhs); } };
+00:40:geordi: error: no match for 'operator<' (operand types are 'const foo' and 'const foo')
+00:40:uuair quit:
+00:40:lh_mouse: geordi, -c { foo f; f.m[foo()] = 123; } struct foo { map<foo, int> m; bool operator<(const foo &rhs) const { return less<void>()(this, &rhs); } };
+00:40:geordi: Success
+00:40:uuair joined channel
+00:43:lh_mouse: geordi, -c struct foo { set<pair<int, foo>> m; };
+00:43:geordi: Success
+00:44:lh_mouse: geordi, -c struct foo { using T = pair<int, foo>::second; };
+00:44:geordi: error: 'pair<_T1, _T2>::second' has incomplete type
+00:52:uuair quit:
+01:08:lh_mouse quit:Read error: Connection reset by peer
+01:08:zzzzzzzzzzz quit:Quit: Leaving
+01:13:wsyh joined channel
+01:19:khysw joined channel
+01:19:wsyh quit:Read error: Connection reset by peer
+01:25:cleamoon joined channel
+01:26:khysw quit:Ping timeout: 245 seconds
+02:12:khysw joined channel
+02:32:khysw quit:Quit: ~hysw();
+06:25:ZedFire joined channel
+07:20:cleamoon quit:Read error: Connection reset by peer
+07:33:ZedFire quit:Read error: Connection reset by peer
+07:55:acgtyrant joined channel
+08:02:varna joined channel
+08:02:varna: MisakaMikoto: 爆
+08:37:FrankHB quit:Read error: Connection reset by peer
+09:04:iyzsong joined channel
+09:07:varna: http://tieba.baidu.com/p/3284110503 # 提督捕鲸
+09:18:Xilzzerts joined channel
+09:19:uuair joined channel
+09:19:uuair_ joined channel
+09:20:nk1ox joined channel
+09:21:acgtyrant quit:Remote host closed the connection
+09:34:uuair quit:Quit: leaving
+09:38:lh_mouse joined channel
+09:39:lh_mouse: 0 0
+09:39:uuair joined channel
+09:40:varna: 耗来，耗来
+09:40:varna: @开车轧耗子
+09:42:lh_mouse: 现在的新人啊  我也很为他们捉急啊
+09:43:lh_mouse: 以后看到新人就应该全黑屋 你们啊  NAIVE
+09:44:varna: 我跟你说啊，美国有个爱荷华，我跟她谈笑风生
+09:45:lh_mouse: 我跟你讲哦   帝球只有一个  羊驼的爱荷华却有两个！
+09:46:varna: 噗
+09:46:varna: 两个嗒酱……
+09:46:lh_mouse: 一个叫 Iowa  一个叫 iowb
+09:51:FrankHB joined channel
+09:52:varna: Iowa/Iota
+09:52:varna: iowb黑得不错
+09:53:lh_mouse: geordi, { int a[5]; itoa(a, 5, 10); cout <<a; }
+09:53:geordi: error: 'itoa' was not declared in this scope
+09:53:lh_mouse: wtf
+09:53:uuair quit:Quit: leaving
+09:53:lh_mouse: geordi, { int a[5]; iota(a, 5, 10); cout <<a; }
+09:53:geordi: error: no matching function for call to 'iota(int [5], int, int)'
+09:54:lh_mouse: 坑爹  
+09:54:uuair joined channel
+09:54:lh_mouse: geordi, { int a[5]; iota(begin(a), end(a), 10); cout <<a; }
+09:54:geordi: {10, 11, 12, 13, 14}
+09:54:lh_mouse: bingo
+09:55:varna: bingouse
+09:55:* lh_mouse bites varna 
+09:55:* varna poies
+09:56:lh_mouse:  铁板烤羊排
+09:56:varna: 吊丝吃法明明是平地锅的蚝油煎肉片
+09:56:varna: 不过没有蚝油用耗油也可以的样子
+09:56:varna: 平底
+09:57:lh_mouse: 0 0
+09:57:lh_mouse: 平底锅不是拿来煎肉吧
+09:57:lh_mouse: @红太狼的平底锅
+09:57:lh_mouse: 我知道了  一定是拿来砸羊驼的！
+09:58:* lh_mouse 抄起了平底锅
+09:58:varna: 其实小的电磁锅也行，以前做过
+09:58:lh_mouse: 看我多聪明
+09:58:lh_mouse: 电磁锅容易粘
+09:58:lh_mouse: 那种不粘锅能不能用电磁炉的
+09:59:varna: 不是放电磁炉的，自带加热
+09:59:lh_mouse: 0 0
+09:59:lh_mouse: 高端
+09:59:varna: 电磁炉的话没法分批煎，只能一次都做出来
+10:00:lh_mouse: 有人问  用那种电热锅煎鱼粘锅怎么办  答曰把加热放锅盖上即可
+10:01:varna: 2333
+10:01:uuair_ quit:Remote host closed the connection
+10:01:varna: 做鱼太麻烦了
+10:02:uuair_ joined channel
+10:04:* lh_mouse 不爱吃鱼
+10:04:lh_mouse: 有刺
+10:05:varna: 海鱼有些还好，刺少
+10:06:varna: 也有些鲈鱼虽然刺多但确实超好吃
+10:06:varna: 不过小黄花什么的还是做起来麻烦吃起来麻烦……
+10:06:uuair_ quit:Client Quit
+10:18:blackskygg joined channel
+10:19:varna: 欧洲人来了
+10:38:blackskygg quit:Ping timeout: 255 seconds
+10:39:blackskygg joined channel
+11:01:blackskygg quit:Ping timeout: 255 seconds
+11:04:varna: 小耗怎么又遇到逗比了
+11:09:blackskygg joined channel
+11:16:sismvg joined channel
+11:16:sismvg: http://www.ithome.com/html/it/48065.htm
+11:16:sismvg: 版权流氓，专利流氓
+11:17:sismvg: 真不理解版权法和专利法是怎么定的
+11:17:sismvg: API也能申请专利，前天看到个拍照方式也专利。。
+11:20:varna: 你现在感觉怎样、感觉怎样呀
+11:22:lh_mouse: varna, 教他们用智能指针还教错了
+11:22:sismvg: ?
+11:22:lh_mouse: 朝菌不知晦朔  蟪蛄不知春秋
+11:23:sismvg: 分子式能不能申请专利。
+11:23:varna: lh_mouse: 逗比不就是这样么，多说反倒没用
+11:27:lh_mouse: 这帮人没有教化之必要
+11:28:lh_mouse: 还拖自己智商
+11:29:sismvg quit:Read error: Connection reset by peer
+11:29:lh_mouse: 何况我开始吐槽的的 Qt  怎么就有人捡骂的
+11:29:lh_mouse: 这年代想对事不对人都难  居然有人自己往自己身上捡？
+11:29:varna: 我现在都懒得说话了，反正很多时候都说不通
+11:30:varna: 不会就事论事的人太多
+11:30:* lh_mouse 对人不对事
+11:31:sismvg joined channel
+11:31:* varna 只撸管
+11:31:sismvg: 黑子本
+11:32:1JTAADVXX joined channel
+11:33:wsyh joined channel
+11:34:1JTAADVXX quit:Ping timeout: 252 seconds
+11:38:sismvg: http://www.ithome.com/html/out/102512.htm
+11:38:sismvg: 小电影界的希望
+11:39:varna: 这样我是不是可以直接靠意念让米库酱高潮了？
+11:40:hysw quit:*.net *.split
+11:40:Xilzzerts: 这年头流行PHP写后台服务？有啥好处？
+11:41:wsyh: import 的翻译是 '导入' ？
+11:41:sismvg: UCCU
+11:41:sismvg: 就不能用线虫的想法嘛
+11:44:sismvg: http://bbs.soul-plus.net/read.php?tid-97174.html
+11:44:sismvg: NSFW
+11:44:sismvg: 小忍太赞了
+11:49:wsyh: python的declare 究竟该叫声明还是定义...
+11:50:sismvg: who care
+11:50:wsyh: 在翻译东西...
+11:50:wsyh: @sleepwalking
+11:59:blackskygg: girrit拿来干嘛用的
+12:04:blackskygg quit:Remote host closed the connection
+12:05:blackskygg joined channel
+12:13:blackskygg quit:Remote host closed the connection
+12:14:lh_mouse: code review 的
+12:15:lh_mouse: 那东西真烂  还只支持 IE9
+12:15:lh_mouse: 垃圾
+12:15:wsyh: lh_mouse: ?
+12:15:cleamoon joined channel
+12:17:lh_mouse: 不是说 gerrit 么
+12:31:JQK2 quit:Quit: JQK2
+12:47:nk1ox quit:Quit: my pants aren't legal, so...
+13:03:cleamoon quit:Remote host closed the connection
+13:17:lh_mouse: geordi, -c struct foo { int a; static constexpr p = &foo::a; };
+13:17:geordi: error: 'p' does not name a type
+13:17:lh_mouse: geordi, -c struct foo { int a; static constexpr auto p = &foo::a; };
+13:17:geordi: Success
+13:17:lh_mouse: geordi, -c struct foo { int a; struct bar { static constexpr auto p = &foo::a; }; };
+13:17:geordi: Success
+13:17:lh_mouse: geordi, -c struct foo { struct bar { static constexpr auto p = &foo::a; }; int a; };
+13:17:geordi: error: incomplete type 'foo' used in nested name specifier
+13:18:lh_mouse: geordi, -c telpmate<typename> struct foo { struct bar { static constexpr auto p = &foo::a; }; int a; }; template class foo<int>;
+13:18:geordi: error: 'telpmate' does not name a type
+13:18:lh_mouse: geordi, -c template<typename> struct foo { struct bar { static constexpr auto p = &foo::a; }; int a; }; template class foo<int>;
+13:18:geordi: Success
+13:44:acgtyrant joined channel
+13:47:lh_mouse: acgtyrant, 揉
+13:56:cleamoon joined channel
+14:09:wsyh quit:Ping timeout: 246 seconds
+14:17:wsyh joined channel
+14:22:Xilzzerts: pthread_mutex_lock也能SIGSEGV？
+14:26:lh_mouse: Xilzzerts, 参数是什么
+14:27:Xilzzerts: 肯定是某个pthread_mutex_t啊
+14:29:lh_mouse: geordi, <<TYPE(pthread_mutex_lock);
+14:29:geordi: lvalue int (pthread_mutex_t*)
+14:30:lh_mouse: 到底是  mutex 还是 &mutex？
+14:33:wsyh quit:Ping timeout: 240 seconds
+14:34:lh_mouse: geordi, template<typename ...T> struct foo : public T... { }; template struct foo<string, vector<int>, ostream>;
+14:34:geordi: Success
+14:34:acgtyrant quit:Ping timeout: 268 seconds
+14:44:Xilzzerts: &mutex。。
+14:45:sismvg: c45写完了
+14:45:sismvg: 但是没有测试样例
+14:45:sismvg: kesu
+14:45:cleamoon quit:Read error: Connection reset by peer
+14:46:cleamoon joined channel
+14:50:lh_mouse: geordi, { char buf1[5], buf2[5] = "meow"; std::copy(buf1, static_cast<const char *>(std::end(buf1)), buf2); }
+14:50:geordi: error: no matching function for call to 'copy(char [5], const char*, char [5])'
+15:03:varna: 好累啊啊，快拿药娘来
+15:11:cleamoon: 怎么感觉c艹新加的东西越来越难优化了...
+15:11:varna: 好累好像爆药娘
+15:11:varna: 想
+15:12:cleamoon: 昨天那个药娘在的
+15:12:varna: 那个不是药娘
+15:12:varna: 而且这类型的爆起来不好玩
+15:13:cleamoon: 四元娘也在
+15:13:cleamoon: 你也可以爆耗子
+15:13:varna: 我只会烤小耗
+15:14:varna: 从他尻里串个签进去，翻来复去烤他，发出海老臭之后就烤好了，蘸醋吃
+15:14:sismvg: 我是男的！
+15:14:varna: 药娘都是男的
+15:14:sismvg: 超5
+15:14:sismvg: c45
+15:14:sismvg: 好麻烦
+15:15:cleamoon: 沾醋？
+15:15:cleamoon: 不应该是酱油吗
+15:15:sismvg: 连续值离散化以后会导致一些样例没法被筛选出来
+15:15:varna: 蘸醋之后烤好的小耗会吱吱作响
+15:16:cleamoon: 那是没烤好的吧
+15:16:sismvg: 最后本来有3个离散值的某个元素到了树的后面几层就变得只有2个了
+15:16:varna: 你不会黑魔法，所以你烤好的小耗不会响
+15:17:lh_mouse: 喂
+15:17:cleamoon: 我会白魔法，但是被弄白了后没法吃
+15:18:varna: sismvg: 举例子说说？
+15:19:sismvg: 一堆连续值有12个属性，然后被离散成了2个
+15:19:varna: 连续值有十二个属性？
+15:19:varna: 这什么说法……
+15:19:sismvg: ..
+15:19:sismvg: 12个不同的值
+15:21:varna: 你确认这个离散化本身是合理的么？
+15:21:sismvg: 不太确信
+15:21:varna: 那不就行了……
+15:21:sismvg: 我是按照书上弄得
+15:21:sismvg: 不排除我做错了
+15:21:varna: 你得知道离散化合理才可以折腾
+15:22:varna: 一个连续属性潜在的分支可能有不少，但如果你只上一个阈值点分成两半未必符合规律
+15:23:sismvg: 分掉两半以后其他属性也会受影响
+15:23:sismvg: 本来有一个属性有3个值，但是由于连续值被分成了两半，所以3个值中的某个一值也被剔除掉了
+15:23:sismvg: 在筛选样例的时候
+15:24:varna: 本来就是这样
+15:26:sismvg: 但是这样就会出错啊。
+15:27:sismvg: 测试的时候有一个值找不到
+15:27:varna: 都说了离散化未必靠谱
+15:27:varna: 你强制分成两半的下场就是这样
+15:27:sismvg: 。
+15:28:sismvg: 今天本来想吃茶泡饭，然后记起来了家里有几年前买的白茶，还没开封
+15:28:sismvg: 打开一看，里面跑出了一个小强。。
+15:29:varna: 吃
+15:29:sismvg: 地址给我，我炸好了给你送过去
+15:30:sismvg: google又上不去了
+15:31:varna: 岩川3631号
+15:31:sismvg: 。。你看卡你
+15:31:sismvg: 卡尼
+15:31:sismvg: 看你
+15:31:sismvg: 我是不是该烧两个，另一个给O酱
+15:32:varna: 喔酱在美国
+15:33:sismvg: 该怎么办呢
+15:33:sismvg: 网上也没有源码之类的东西
+15:33:sismvg: vpn又没了，想买也木有rmb
+15:34:cleamoon: 认命吧
+15:34:sismvg: 研究一下好了
+15:35:acgtyrant joined channel
+15:39:sismvg: 我在想我是不是理解错了
+15:39:sismvg: varna:连续值是在训练集传入的时候离散化一次就行了还是个子树都要离散化？
+15:40:varna: 每个子树分割吧
+15:41:sismvg: 好纠结
+15:41:varna: c4.5本来就是id3-kai吧
+15:43:sismvg: 仔细想想的话无论怎么离散化都会导致其他属性被影响
+15:47:varna: 你只要做划分就会影响
+16:04:cLeaMooN_ joined channel
+16:05:cleamoon__ joined channel
+16:07:cleamoon quit:Ping timeout: 246 seconds
+16:07:cleamoon__ quit:Read error: Connection reset by peer
+16:09:cLeaMooN_ quit:Ping timeout: 272 seconds
+16:10:acgtyrant quit:Ping timeout: 252 seconds
+16:15:cleamoon joined channel
+16:24:varna: CPU最近温度好高
+16:38:cleamoon: 撸多
+16:43:cleamoon: b站这个改版没正经变化呀..
+16:45:varna: b站都不太去了
+16:45:varna: 最近做哲 学的人越来越少
+16:51:uuair quit:Quit: leaving
+16:53:uuair joined channel
+16:53:ZedFire joined channel
+17:00:cleamoon: 你做呀
+17:01:cleamoon: 你和miku做一个，红旗配音
+17:02:varna: 我不强壮
+17:02:varna: 要不你看这个 http://manhua.dmzj.com/haihu2/5604-25.shtml
+17:05:acgtyrant joined channel
+17:05:ZedFire quit:Ping timeout: 240 seconds
+17:05:cleamoon: 这不是你的原型吗
+17:05:cleamoon: 强而有力酱
+17:07:cleamoon: 强而有力 => qeyl => qerl => perl => alpako
+17:08:varna: 这是EA基佬修炼的功夫
+17:08:varna: 就是次男道（BOY NEXT DOOR）
+17:10:acgtyrant quit:Ping timeout: 272 seconds
+17:13:zzzzzzzz joined channel
+17:13:acgtyrant joined channel
+17:13:cleamoon: 基王早就已经炼成了，他现在是boy狩猎中
+17:16:varna: soga
+17:16:varna: 原来他真的被基佬侵犯了三个月……
+17:19:cleamoon: 是他侵犯了被基佬侵犯的次男三个月
+17:20:varna: ...
+17:21:acgtyrant quit:Ping timeout: 245 seconds
+17:24:cleamoon: 然后他去皇家布鲁斯特学院学习挖掘基 基术
+17:29:acgtyrant joined channel
+17:35:acgtyrant quit:Ping timeout: 264 seconds
+17:37:cleamoon: 头发太长了，好烦人
+17:37:varna: 塞到鼻孔里
+17:37:cleamoon: 噗
+17:38:cleamoon: 原来羊驼都是这么处理羊毛的
+17:38:varna: 我会把羊驼毛发射出去
+17:39:cleamoon: 发毛的alpako
+17:41:lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCF/Containers/MultiIndexMap.hpp  写完发现头好疼
+17:42:varna: 耗头小
+17:43:cleamoon: 拔了头就可以吃了
+17:45:lh_mouse: 不能吃的！
+17:45:cleamoon: 对于贝爷来说，小耗是最好的蛋白质来源
+17:45:varna: 那就不拔头直接吃吃
+17:46:varna: 先用羊味素的水泡起来吧
+17:46:cleamoon: 小耗喜欢挂炉还是炭烧？
+17:55:lh_mouse: > <
+17:56:iyzsong quit:Quit: WeeChat 1.0
+18:04:cleamoon quit:Read error: Connection reset by peer
+18:11:sismvg: varna:http://i-ab.com/wp/2014-09/69284/
+18:11:sismvg: 你要的药娘
+18:11:sismvg: NSFW
+18:12:varna: 噗
+18:20:cleamoon joined channel
+18:21:whatofor joined channel
+18:26:cLeaMooN_ joined channel
+18:26:cleamoon quit:Read error: Connection reset by peer
+18:33:Plough joined channel
+18:39:cLeaMooN_: 我记得吧里某妹子在日本某大学？
+18:43:Xilzzerts quit:Quit: Leaving
+18:49:zzzzzzzz: 妹子！
+18:51:cLeaMooN_: 我记得和梵高有什么关系的
+18:52:Plough: 卧槽今天上来就出一个46……
+18:54:Plough: 卧槽二连了
+18:54:Plough: 瞬间我就有四个46了……
+19:12:cleamoon joined channel
+19:12:cLeaMooN_ quit:Read error: Connection reset by peer
+19:13:condy joined channel
+19:25:sismvg: http://www.bilibili.com/video/av1511108/
+19:25:sismvg: 超级可怕，世界的黑暗
+19:27:sismvg: varna:假设决策树无法决策一个测试样例，那么应该把这个样例从测试集合中去掉
+19:27:sismvg: 还是算决策树出错呢？
+19:32:iyzsong joined channel
+19:46:Plough quit:Quit: Lost terminal
+19:46:Plough joined channel
+19:52:whatofor_1 joined channel
+19:56:whatofor quit:Ping timeout: 252 seconds
+20:01:cleamoon quit:*.net *.split
+20:05:cleamoon joined channel
+20:05:Plough: 去一趟5-3
+20:07:melun joined channel
+20:07:Plough: 第一点安定的过了
+20:07:Plough: 塔姐我来啦
+20:07:Plough: 三只莉酱……
+20:07:Plough: 魔王中破
+20:08:Plough: 莉酱没CI
+20:08:Plough: 过去了
+20:08:melun left channel:
+20:11:Plough: 沟了……
+20:11:Plough: 妈蛋
+20:11:Plough: 另外我发现傻级上双46似乎还是不行
+20:11:Plough: 几乎完全没有命中
+20:16:Plough: 出门大破……
+20:16:Plough: 今天先不打了
+20:26:cleamoon: 我去，好可怕的net split
+20:44:SoftRUN joined channel
+20:45:blackskygg joined channel
+20:45:blackskygg quit:Client Quit
+20:49:acgtyrant joined channel
+20:49:SoftRUN quit:Quit: 离开
+20:50:Helloguy joined channel
+20:51:Helloguy: 用笔记本感觉硬盘才是影响系统速度的最关键的，不知道大家是不是也是这样？
+20:51:acgtyrant: 廢話
+20:58:Helloguy: 以前以为是CPU
+20:58:Helloguy: 直到有一天发现，CPU使用率5%，电脑却卡的要死
+20:58:varna: Plough: 好想侵犯红旗啊！
+20:58:iyzsong quit:Ping timeout: 268 seconds
+20:58:Plough: varna: 去自 炒
+20:59:varna: 金刚级上双46命中不行是因为反航战和等级问题
+20:59:Plough: 卧槽大傻被CL大破了……
+20:59:varna: 练到八十级就没这问题了
+20:59:Helloguy: 想了半天，发现当时只有硬盘灯在狂闪
+20:59:varna: 看看今天的第五个改造案能不能顺利完成
+21:00:Helloguy: 从此之后，就发现每次卡的时候，都是硬盘在狂闪
+21:00:Helloguy: 反而CPU利用率100%的时候，倒是没事
+21:00:MisakaMikoto quit:Remote host closed the connection
+21:00:MisakaMikoto joined channel
+21:01:Plough: 再给大傻刷三层闪
+21:01:varna: 今天已经改造的有陆奥、羽黑、隼鹰（一改）和千代田
+21:01:Plough: 反正生放送的那位现在在偷油
+21:02:Plough: 刷闪都能小破
+21:02:Plough: 二连发46把今天的脸用完了么……
+21:03:varna: 让我爆几下就好了
+21:03:cleamoon quit:Read error: Connection reset by peer
+21:03:Plough: 你那只陆奥是陆奥二号？
+21:03:cleamoon joined channel
+21:04:varna: Plough: 我陆奥就没怎么动过
+21:04:Plough: Soga
+21:04:varna: 低速战舰基本都是沟
+21:05:Plough: 生放送这位真敢玩
+21:05:Plough: 间宫还亮着就冲去5-3了……
+21:05:Anon quit:Quit: Leaving
+21:05:varna: 作死
+21:06:Plough: 第一点过去了
+21:06:Plough: 我看他接下来怎么样
+21:06:Plough: 不过他家大傻CI率好高啊
+21:06:Plough: 单纵……
+21:06:Plough: 铃谷被塔姐中破了
+21:07:Plough: 卧槽第二点他也过去了……
+21:07:Plough: 直接冲进Boss了
+21:08:varna: 再打五十场
+21:08:varna: 弹药应该是跟不上了，没办法
+21:08:cleamoon quit:Ping timeout: 272 seconds
+21:09:Plough: 哈哈哈
+21:09:Plough: 大傻一炮打到旗舰上留了4滴血……
+21:09:Plough: 看夜战了
+21:09:Plough: 噗
+21:09:Plough: 这时候生放送停了
+21:18:MoeIcenowy joined channel
+21:24:StarBrilliant: 喵？
+21:24:StarBrilliant: MoeIcenowy: 好久不见
+21:25:MoeIcenowy: 呢
+21:25:StarBrilliant: 一个小时不见琳都要崩溃了
+21:25:MoeIcenowy: 琳最近在广雅图书馆看轻小说
+21:25:StarBrilliant: 琳没有在看我的故事
+21:25:StarBrilliant: 好伤心
+21:25:StarBrilliant: 我可是专心在写
+21:25:StarBrilliant: 琳竟然没有在专心看
+21:26:StarBrilliant: 偶写了五个小时呀！
+21:26:MoeIcenowy quit:Remote host closed the connection
+21:29:MoeIcenowy joined channel
+21:34:Plough: 算了
+21:34:Plough: 今晚刷三层闪留着明天用吧
+21:34:Plough: 今天不推了
+21:39:condy: geordi: << sizeof(long)
+21:39:geordi: 8
+21:41:MoeIcenowy: 64。。。
+21:49:MoeIcenowy quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+22:05:condy: SB了，原来把base设成std::size_t,怪不得负数转换各种错...
+22:06:Helloguy_ joined channel
+22:07:Helloguy__ joined channel
+22:07:Helloguy quit:Ping timeout: 245 seconds
+22:10:Helloguy_ quit:Ping timeout: 246 seconds
+22:16:Helloguy_ joined channel
+22:17:Helloguy quit:Ping timeout: 246 seconds
+22:19:lh_mouse quit:Read error: Connection reset by peer
+22:20:lh_mouse joined channel
+22:27:wsyh joined channel
+22:27:wsyh: varna: 把智商交出来
+22:28:code_new joined channel
+22:30:condy quit:Ping timeout: 268 seconds
+22:33:Helloguy quit:Quit: ChatZilla 0.9.90.1 [Firefox 31.0/20140716183446]
+22:43:varna quit:Quit: leaving
+22:57:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:04:suncc joined channel
+23:09:suncc quit:Client Quit
+23:10:Plough quit:Quit: Lost terminal
+23:11:gansteed joined channel
+23:13:hoxily joined channel
+23:30:lh_mouse: geordi, { std::vector<int> v; v.size_type i = 123; cout <<i; }
+23:30:geordi: error: invalid use of 'vector<int>::size_type'
+23:31:gansteed quit:Quit: Leaving
+23:34:gansteed joined channel
+23:39:acgtyrant quit:Remote host closed the connection
+23:47:acgtyrant joined channel
+23:50:lh_mouse: geordi, <<TYPE<underlying_t<E>>; enum E { };
+23:50:geordi: error: 'underlying_t' was not declared in this scope
+23:51:lh_mouse: geordi, <<TYPE<typename underlying_type<E>::type>; enum E { };
+23:51:geordi: unsigned int
+23:55:lh_mouse: geordi, <<TYPE<typename underlying_type<E>::type>; enum class E { };
+23:55:geordi: int
+23:55:gansteed quit:Quit: Leaving
+23:56:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]

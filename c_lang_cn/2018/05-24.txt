@@ -1,0 +1,292 @@
+00:00 lhanjian_: 我还是当云玩家吧
+00:00 cirno__ quit:Remote host closed the connection
+00:03 cleamoon_: 晕3D的连视频都看不了
+00:04 varna quit:Ping timeout: 268 seconds
+00:22 lh_cat joined channel
+00:23 lh_mouse quit:Ping timeout: 245 seconds
+00:23 lh_ideapad quit:Ping timeout: 252 seconds
+00:27 lh_cat is now known as lh_mouse
+00:36 lh_ideapad joined channel
+00:38 lhanjian_: cleamoon_: 这次真的是剁手了
+00:38 lhanjian_: 买了个 逃离塔克夫 1000-RMB
+00:40 lhanjian_: 不过毛子的服务器直连还挺快的
+00:40 lhanjian_: 10MiB/s
+00:41 NebulaMoe quit:Quit: Leaving...
+00:51 lh_mouse: geordi, class base { void foo(); }; class derived : base { friend class night; }; class night { auto check(){ return &base::foo; } };
+00:51 geordi: error: 'void base::foo()' is private within this context
+00:51 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { auto check(){ return &base::foo; } };
+00:51 geordi: error: 'void base::foo()' is protected within this context
+00:51 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { auto check(){ return &derived::foo; } };
+00:51 geordi: Success
+00:52 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { auto check(){ return static_cast<void (base::*)()>(&derived::foo); } };
+00:52 geordi: Success
+01:16 whocares_2 quit:Ping timeout: 245 seconds
+01:17 whocares_2 joined channel
+01:18 lh_ideapad quit:Remote host closed the connection
+01:19 lh_mouse quit:Quit: Good night.
+01:36 sagiri joined channel
+01:43 sagiri quit:Quit: Lost terminal
+02:38 whocares_2_ joined channel
+02:38 whocares_2 quit:Ping timeout: 260 seconds
+03:33 Taggnostr quit:Quit: No Ping reply in 180 seconds.
+03:38 Taggnostr joined channel
+04:09 \s quit:Ping timeout: 245 seconds
+04:12 \s joined channel
+04:16 cleamoon_: lhanjian_: orz
+04:16 cleamoon_: lhanjian_: 土豪求包养
+04:55 sixand1 joined channel
+04:56 sixand quit:Ping timeout: 252 seconds
+04:56 sixand1 is now known as sixand
+06:35 \s quit:Ping timeout: 248 seconds
+06:36 \s joined channel
+06:36 \s quit:Changing host
+06:36 \s joined channel
+06:37 lhanjian_: cl
+06:37 lhanjian_: cleamoon_: 这次过后我要两个月不买游戏了
+06:38 cleamoon_: lhanjian_: 也就是说每个月花在游戏上500？比我吃饭都多
+06:39 lhanjian_: cleamoon_: 国内吃饭也贵
+06:39 tutu_wind joined channel
+06:42 cleamoon_: lhanjian_: 我现在感觉国内消费真心高，现在帝都很多东西的物价不比欧洲低了
+06:43 lhanjian_: 都是被房价顶起来的
+06:43 lhanjian_: 真的是见了鬼
+06:44 cleamoon_: 房价还能导致鸡肉价格上升吗.....
+06:44 lhanjian_: 会啊
+06:44 lhanjian_: 房价基本上连动所有基本生活必需品往上涨
+06:45 lhanjian_: 凡是需要摊位、仓储的，都往上涨
+06:45 lhanjian_: 你在流动小摊贩手里买的，和在商超铺面手里买的，价格就有差异
+06:46 cleamoon_: 帝都已经没有小贩了，早市全都取缔了
+06:46 cleamoon_: 最便宜的地方是沃尔玛
+06:48 cleamoon_: 依旧觉得很便宜的就是笔和书
+06:48 lhanjian_: 这个产量大
+06:49 lhanjian_: 国内书是真的便宜的过分
+06:49 lhanjian_: 因为出版商大都是国有企业，没有太大的盈利的动机
+06:49 lhanjian_: 而且垄断发行，所以进口书按照国内价，一下子便宜了70%
+06:50 lhanjian_: 互联网销售以后，还要再打五折
+06:50 cleamoon_: 不过我也不需要买书了，网上下的书够我看一辈子的
+06:50 lhanjian_: 嗯，就怕他们被那些跨国垄断书商打官司打掉
+06:50 lhanjian_: 不过应该不会
+06:51 lhanjian_: 总有那么几个国家拒绝打击互联网传播出版品で
+06:51 lhanjian_: 海盗党万岁！
+06:51 cleamoon_: 应该不会，书价翻十倍怕不是要烧了书店
+06:52 lhanjian_: 现在都网上买书了
+06:53 cleamoon_: 之前米帝查到一个海盗下载电影，和海盗高法告了四年，胜诉了，得到了查到的那天的那个人的IP，然后他们就后悔了，“我要这玩意有tm什么用呀”
+06:54 cleamoon_: 海盗连亚马逊都没有
+06:54 lhanjian_: 哈哈哈，英国德国亚马逊还是可以往海盗送的吧
+06:55 lhanjian_: 欧洲亚马逊还是不少的
+06:55 cleamoon_: 用kindle的比在地铁上用鼠标的还少
+06:55 lhanjian_: 讲道理，还不如淘宝
+06:55 cleamoon_: 好多东西都不送，比如Fire HD
+06:55 lhanjian_: 淘宝送瑞典要多花多少钱？
+06:56 cleamoon_: 不知道，给送吗
+06:56 lhanjian_: 应该有
+06:57 cleamoon_: 我看一下，怎么首页全是女装
+06:57 lhanjian_: 西班牙都有很多人用淘宝
+06:57 lhanjian_: 用s.taobao.com
+06:57 lhanjian_: 别管什么www.taobao.com首页
+06:57 lhanjian_: http://www.lete.com/taobao/sweden.html
+06:57 lhanjian_: 查到还有专门帮转运瑞典で
+06:58 cleamoon_: DHL，首重：500，首重计价：124元，续重：500g，续重计价：33元
+06:58 cleamoon_: 有点贵
+06:59 lhanjian_: 如果买书的话，这点费用不算什么吧
+06:59 cleamoon_: 书很重呀
+06:59 lhanjian_: 一本书100USD，但是中国版只要100CNY不到
+06:59 cleamoon_: 这倒是
+07:00 lhanjian_: 而且关税你懂得，海盗国内税那么贵，你走海淘，不知道逃掉多少税
+07:00 cleamoon_: 需要最多的还是电饭煲之类的，海盗也有，不过功能太少，真的只能蒸饭
+07:01 cleamoon_: 海盗打算给海涛加税.....
+07:01 cleamoon_: 之前海关卡了40W的包裹，退回了10W+件
+07:02 lhanjian_: 我擦
+07:02 lhanjian_: 不过应该还是比一般货物进口便宜
+07:02 cleamoon_: 那是
+07:03 cleamoon_: 就是加一个50的入口费和25%的关税，包裹很多都是100以下的东西，手机套什么的，所以他们索性不要了
+07:03 lhanjian_: 给这种零零碎碎的东西加税，政府会被骂で
+07:04 cleamoon_: 然而并没有
+07:05 lhanjian_: 毕竟苛捐杂税的国家
+07:05 cleamoon_: 似乎现在谈好了一个条件，具体没注意
+07:06 cleamoon_: 美其名曰保护国内产业，然而国内手机套也是中国进口的呀
+07:07 lhanjian_: 是啊
+07:08 lhanjian_: 瑞典本土又不可能生产手机套比国内便宜
+07:08 lhanjian_: 天朝是世界工厂的局面还能维持很长时间啊
+07:09 cleamoon_: 海盗造卫星时最大的支出都还是工资...劳动密集基本不是福利企业就是倒闭企业
+07:12 lhanjian_: 哈哈哈
+07:15 matchray: https://code-golf.io
+07:15 matchray: perl 6
+07:15 cleamoon_: 感觉海盗这里就类似天朝三线城市，要啥啥没有，做啥都不方便，满地都是树
+07:16 lhanjian_: cleamoon_: 哈哈哈，属于天朝北方环境比较好的少数城市之一？
+07:17 cleamoon_: Perl 6 竟然是个蝴蝶
+07:17 cleamoon_: 属于哪里不知道了，我除了帝都哪都没去过.....
+07:18 lhanjian_: cleamoon_: 绅士祖籍是哪里的
+07:18 cleamoon_: 小孩子每天玩的是滑板车，收集口袋妖怪卡牌，高档人士玩四驱车
+07:19 cleamoon_: 我家三代都是帝都土著.....
+07:19 lhanjian_: 那还真是老北京啊
+07:19 cleamoon_: 然而不会说土话
+07:22 cleamoon_: lhanjian_: 梨花酱呢
+07:24 lhanjian_: cleamoon_: 台（江）湾（西）南昌（下面一个县）人啊
+07:24 lhanjian_: 秦川CMN那个是南昌市骂
+07:25 cleamoon_: 原来是豫章人
+07:25 cleamoon_: soga，原来是大秦人
+07:25 lhanjian_: 不能跟秦川他们这些市民比，我是县城村民
+07:26 cleamoon_: 差不多
+07:26 cleamoon_: 难道说你家还有地吗
+07:26 lhanjian_: 有啊
+07:26 lhanjian_: 只是村里只剩下住宅地里
+07:26 cleamoon_: orz
+07:27 lhanjian_: 不过村里的地没什么价值
+07:28 cleamoon_: 可以种菜呀
+07:29 cleamoon_: 向地主低头
+07:29 cleamoon_: 如果发生了战争饥荒你们就是饿不死的那批
+07:30 lhanjian_: 种菜233
+07:32 lhanjian_: 我外婆家是种菜很多，每个礼拜可以吃无公害蔬菜
+07:32 cleamoon_: orz
+07:32 cleamoon_: 羡慕呀
+07:32 lhanjian_: 只施肥不打农药的那种
+07:32 lhanjian_: 以前外婆家里有个小圆子
+07:33 lhanjian_: 还有两三颗桔子树
+07:33 lhanjian_: 可惜现在拆迁没了
+07:33 lhanjian_: 很不爽啊
+07:33 cleamoon_: 海盗不打农药的菜超贵，黄瓜30+一公斤
+07:33 cleamoon_: 再种呀
+07:33 lhanjian_: 天朝这样便宜的菜价，全世界都没几个地方有吧
+07:34 cleamoon_: 蔬菜还是国内便宜
+07:34 lhanjian_: 是啊
+07:35 cleamoon_: 比国内便宜就遇到过一次，清仓处理圆白菜，1分钱一公斤
+07:35 cleamoon_: 我都惊了，买了4颗，四舍五入5毛
+07:35 cleamoon_: 当时最小货币就是5毛
+07:39 cleamoon_: 贵还不是问题，问题是种类少，油菜，冬瓜，韭菜，冬菜，雪里红，茴香，藕，小葱等等都没有
+07:39 lhanjian_: 恐怕自己种还来的划算点
+07:40 cleamoon_: 不划算，帝都霾成那样一年还有2400h左右阳光，斯都只有不到1800h
+07:41 lhanjian_: 开灯照吧
+07:41 cleamoon_: ........
+07:42 cleamoon_: 九几年有过一次一年1000h阳光的，自杀人数翻了四倍
+07:43 cleamoon_: 似乎是夏至那段时间天天下雨，一天就损失20h阳关
+07:43 lhanjian_: 惨
+07:44 tutu_wind quit:Ping timeout: 252 seconds
+07:46 cleamoon_: lhanjian_: 这两个月你可以试试D2
+07:47 lhanjian_: 不急，好多游戏要玩
+07:47 lhanjian_: 然而我精力最近比较差
+07:47 cleamoon_: D2不用买了，服务器做的一般
+07:47 cleamoon_: 那就别玩了...
+07:53 hong quit:Quit: hong
+07:55 lhanjian_: cleamoon_: 失眠了一晚上，喝杯咖啡去上班
+07:56 cleamoon_: lhanjian_: 如果可以在家工作就好了
+07:56 lhanjian_: cleamoon_: Remote也解决不了工作效率低下的问题啊
+07:57 cleamoon_: lhanjian_: 最起码可以随时睡呀
+07:59 lhanjian_: 是啊
+08:00 cleamoon_: 而且效率低可以靠时长堆呀
+08:15 lhanjian_: 蛤
+08:15 cleamoon_: 苟
+09:06 liuzhoou joined channel
+09:07 tutu_wind joined channel
+09:41 lh_mouse joined channel
+10:08 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { void (foo::*check())(){ return &base::foo; } };
+10:08 geordi: error: 'foo' has not been declared
+10:08 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { void (base::*check())(){ return &base::foo; } };
+10:08 geordi: error: 'void base::foo()' is protected within this context
+10:08 lh_mouse: geordi, class base { protected: void foo(); }; class derived : base { friend class night; }; class night { void (base::*check())(){ return static_cast<void (base::*)()>(&derived::foo); } };
+10:08 geordi: Success
+10:17 lh_ideapad joined channel
+10:39 AetherWind joined channel
+11:10 sixand quit:Quit: sixand
+13:06 cleamoon_ quit:Quit: Connection closed for inactivity
+13:06 CyrusYzGTt joined channel
+13:16 \s quit:Ping timeout: 245 seconds
+13:16 \s_ joined channel
+13:33 CyrusYzGTt quit:Read error: Connection timed out
+13:35 CyrusYzGTt joined channel
+13:38 lh_mouse quit:Read error: Connection reset by peer
+13:39 lh_mouse joined channel
+13:40 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+13:43 CyrusYzGTt joined channel
+14:01 CyrusYzGTt quit:Read error: Connection timed out
+14:04 CyrusYzGTt joined channel
+14:32 CyrusYzGTt quit:Read error: Connection timed out
+14:33 CyrusYzGTt joined channel
+15:07 lh_mouse: geordi, << sizeof(foo); struct foo { int a; int b:0; };
+15:07 geordi: error: zero width for bit-field 'foo::b'
+15:07 lh_mouse: geordi, << sizeof(foo); struct foo { int a; int:0; };
+15:07 geordi: 4
+15:08 lh_mouse: geordi, << sizeof(foo); struct foo { int a; long:0; };
+15:08 geordi: 8
+15:08 lh_mouse: geordi, replace sizeof with alignof
+15:08 geordi: 4
+15:10 lh_mouse: geordi, << alignof(foo); struct foo { int a; alignof(long) long:0; };
+15:10 geordi: error: expected unqualified-id before 'alignof'
+15:10 lh_mouse: geordi, << alignof(foo); struct foo { int a; alignas(long) long:0; };
+15:10 geordi: 4
+15:10 lh_mouse: geordi, << alignof(foo); struct foo { int a; alignas(long long) long:0; };
+15:10 geordi: 4
+15:13 lh_mouse: geordi, << sizeof(struct { int : 0; });
+15:13 geordi: error: types may not be defined in 'sizeof' expressions
+15:13 lh_mouse: geordi, << sizeof(foo); struct foo { int : 0; };
+15:13 geordi: 1
+15:18 lh_mouse: geordi, << alignof(foo); union foo { int a; long : 0; };
+15:18 geordi: 4
+15:18 lh_mouse: geordi, << alignof(foo); union foo { int a; long b; };
+15:18 geordi: 8
+15:18 lh_mouse: geordi, << alignof(foo); union foo { int a; long b[10]; };
+15:18 geordi: 8
+15:19 lh_mouse: geordi, replace alignof with sizeof
+15:19 geordi: 80
+17:07 jingjinghack quit:Ping timeout: 250 seconds
+17:13 jingjinghack joined channel
+17:38 lh_ideapad quit:Ping timeout: 245 seconds
+17:41 runwei_ joined channel
+17:58 liuzhoou quit:Quit: http://quassel-irc.org - Chat comfortably. Anywhere.
+18:57 lh_ideapad joined channel
+19:03 cleamoon_ joined channel
+19:07 AetherWind quit:Quit: Leaving
+19:16 cirno_ joined channel
+19:30 cirno_ quit:Remote host closed the connection
+19:31 cirno_ joined channel
+19:37 tutu_wind quit:Ping timeout: 240 seconds
+20:00 cirno_ quit:Remote host closed the connection
+20:01 cirno_ joined channel
+20:04 varna joined channel
+20:08 lhanjian_: varna:  塑料袋
+20:30 cirno_ quit:Remote host closed the connection
+20:31 cirno_ joined channel
+20:31 varna: 噗叽啪
+20:32 varna: hotatata
+20:44 lhanjian_: varna: 都给你塑料袋了，还脱粉
+20:48 varna: 看个手书再做一点集成测试
+20:48 varna: 看最近的情况，到下周末为止连上十二天班不可避，所以每天至少别压得太满
+20:53 \s_ is now known as \s
+20:53 \s quit:Changing host
+20:53 \s joined channel
+21:00 cirno_ quit:Remote host closed the connection
+21:01 cirno_ joined channel
+21:04 hong joined channel
+21:09 iyzsong joined channel
+21:15 tutu_wind joined channel
+21:15 cirno_ quit:Quit: WeeChat 2.1
+21:17 lh_ideapad quit:Remote host closed the connection
+21:19 tutu_wind quit:Client Quit
+21:22 hong quit:Quit: hong
+21:23 hong joined channel
+21:24 hong quit:Client Quit
+21:25 hong joined channel
+21:26 hong quit:Client Quit
+21:26 hong joined channel
+21:28 cleamoon_: 小米旗下的智能灯具品牌 Yeelight 近日宣布，由于无法满足 GDPR 的要求，将不再向欧洲用户提供服务。
+21:28 cleamoon_: 你，不应该只是个灯泡吗
+21:31 cleamoon_: 有日本友人在买的生菜里发现了一只冻了三天的蛤，然后养了起来
+21:46 cirno_ joined channel
+21:53 hong quit:Quit: hong
+22:00 cirno_ quit:Remote host closed the connection
+22:01 cirno_ joined channel
+22:25 Mokou: 【特朗普宣布取消与金正恩6月12日在新加坡的会晤】美国白宫24日发表声明说，美国总统特朗普宣布取消与朝鲜最高领导人金正恩于6月12日在新加坡的会晤。特朗普早前曾表示，美方为会晤设置了“条件”，如果美方的要求得不到满足，会晤就不会举行。负责朝鲜对美关系的朝鲜外务省副相崔善姬今天发表谈话，表示如果美
+22:25 Mokou: 国继续亵渎朝鲜的善意，将向朝鲜最高领导层提议重新考虑朝美领导人会晤。
+22:29 cleamoon_: 我想知道又有多少人赌输了
+22:30 cirno_ quit:Remote host closed the connection
+22:31 cirno_ joined channel
+22:31 gauge: :o
+22:32 Mokou: 【叶挺后人决定起诉“暴走漫画” 坚决维护英烈荣誉】据中国青年网5月24日消息，5月23日凌晨，叶挺将军后人、国内知名导演叶大鹰向中国青年网透露，对“暴走漫画”发布含有戏谑侮辱叶挺烈士内容短视频的这一行为，叶挺将军家人已决定起诉。
+22:33 cleamoon_: 看来暴走只能靠老仙了
+22:39 cleamoon_: 看了一下川普的信，现在感觉就是这货的钱怎么挣得
+23:00 cirno_ quit:Remote host closed the connection
+23:01 cirno_ joined channel
+23:30 cirno_ quit:Remote host closed the connection
+23:31 cirno_ joined channel
+23:33 varna: 噗叽啪
+23:57 Mokou: https://usercontent.irccloud-cdn.com/file/Zxke0kuB/%E6%8D%95%E8%8E%B7.PNG
+23:58 varna: puuuuuuuuuuuuuuuuuuuuuuuuuu

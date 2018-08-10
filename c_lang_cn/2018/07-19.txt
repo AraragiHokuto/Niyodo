@@ -1,0 +1,125 @@
+00:55 CyrusYzGTt quit:Ping timeout: 256 seconds
+01:11 lh_cat quit:Ping timeout: 245 seconds
+01:18 cleamoon_ joined channel
+01:32 condy quit:Ping timeout: 264 seconds
+01:33 condy joined channel
+10:02 lh_mouse joined channel
+10:13 blackberry9900 joined channel
+10:17 BlackBerry9999 joined channel
+10:19 blackberry9900 quit:Ping timeout: 244 seconds
+10:41 lh_ideapad joined channel
+10:44 \s_ quit:Ping timeout: 240 seconds
+11:17 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ foo f[0]; }; char storage[1000]; int main(){ auto p = new(storage) foo(); p->~foo(); }
+11:17 geordi: error: 'foo::~foo()' is private within this context
+11:17 lh_ideapad: geordi, use --clang
+11:17 geordi: error: '~foo' is a private member of 'foo'
+11:19 BlackBerry9999 quit:Ping timeout: 260 seconds
+11:19 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ foo f[0]; }; char storage[1000]; int main(){ auto p = new(storage) header(); p->~header(); }
+11:19 geordi: error: use of deleted function 'header::header()'
+11:32 \s joined channel
+11:34 meowray: 咳嗽
+13:19 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ foo f[0]; ~header(){ } }; char storage[1000]; int main(){ auto p = new(storage) foo(); p->~foo(); }
+13:19 geordi: error: 'foo::~foo()' is private within this context
+13:19 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ union { foo f; } f[0]; }; char storage[1000]; int main(){ auto p = new(storage) header(); p->~header(); }
+13:19 geordi: error: use of deleted function 'header::header()'
+13:19 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ union k { foo f; ~k(){ } } f[0]; }; char storage[1000]; int main(){ auto p = new(storage) header(); p->~header(); }
+13:19 geordi: Same error.
+13:19 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ union k { foo f; k(){ } } f[0]; }; char storage[1000]; int main(){ auto p = new(storage) header(); p->~header(); }
+13:19 geordi: Still same error.
+13:20 lh_ideapad: geordi, -c struct foo { private: ~foo(){ } }; struct header { int a; __extension__ union k { foo f; k(){ } ~k(){ } } f[0]; }; char storage[1000]; int main(){ auto p = new(storage) header(); p->~header(); }
+13:20 geordi: Success
+13:22 lh_ideapad: geordi, -c union foo { string s; };
+13:22 geordi: Success
+13:23 lh_ideapad: geordi, -c union foo { string s; }; foo f;
+13:23 geordi: error: use of deleted function 'foo::foo()'
+13:23 lh_ideapad: geordi, -c union foo { string s; foo() = default; }; foo f;
+13:23 geordi: Same error.
+13:23 lh_ideapad: geordi, -c union foo { string s; foo() = default; ~foo() = default; }; foo f;
+13:23 geordi: Still same error.
+13:24 lh_ideapad: geordi, -c union foo { string s; constexpr foo(){ } ~foo(){ } }; foo f;
+13:24 geordi: error: 'constexpr' constructor for union 'foo' must initialize exactly one non-static data member
+13:24 lh_ideapad: geordi, -c union foo { string s; foo(){ } ~foo(){ } }; foo f;
+13:24 geordi: Success
+13:29 cleamoon__ joined channel
+13:31 cleamoon_ quit:Ping timeout: 276 seconds
+13:51 meowray: http://eel.is/c++draft/class.ctor#5.1
+14:02 lh_mouse: aji.
+14:02 lh_mouse: zero-sized array 也要求 accessible destructor ，SB 。
+14:03 lh_mouse: 逼我搞这种 trick ：  https://github.com/lhmouse/asteria/blob/master/asteria/src/rocket/cow_vector.hpp#L55
+14:04 meowray: compiler-rt sanitizer部分C++寫得超級醜陋啊
+14:04 meowray: long lh_mouse;
+14:05 lh_mouse: 这 cow_vector 看来没啥问题了。
+14:05 lh_mouse: 下一步开搞 cow_hashmap 了。
+14:05 meowray: dense map?
+14:05 lh_mouse: std::unordered_map 
+14:05 meowray: open addressing + simd
+14:05 lh_mouse: 必须支持 incomplete value type 。
+14:06 lh_mouse: 反正 libstdc++ 辣鸡。
+14:19 CyrusYzGTt joined channel
+14:47 fornew joined channel
+15:09 lh_mouse: geordi, -c long unsigned int a = 1;
+15:09 geordi: Success
+15:10 lh_mouse: geordi, -c int long unsigned a = 42;
+15:10 geordi: Success
+15:10 lh_mouse: geordi, -c int long unsigned long a = 42;
+15:10 geordi: Success
+15:10 lh_mouse: geordi, -c int long unsigned long a = 42; static_assert(sizeof(a) == 8);
+15:10 geordi: Success
+15:10 lh_mouse: geordi, use --clang
+15:10 geordi: Success
+15:12 meowray: geordi: -c long double = 1.q;
+15:12 geordi: error: expected unqualified-id before '=' token
+15:12 meowray: geordi: -c __float128 f = 1.q;
+15:12 geordi: error: unable to find numeric literal operator 'operator""q'
+15:16 lh_mouse: geordi, << WORD_BIT
+15:16 geordi: 32
+15:16 lh_mouse: geordi, << __WORD_BIT__
+15:16 geordi: error: '__WORD_BIT__' was not declared in this scope
+15:18 lh_mouse: geordi, << sizeof(meowray);  struct meowray { char fat[SIZE_MAX] };
+15:18 geordi: error: size of array 'fat' is negative
+15:18 lh_mouse: geordi, << sizeof(meowray);  struct meowray { char fat[SIZE_MAX]; };
+15:18 geordi: Same error.
+15:19 lh_mouse: geordi, << sizeof(meowray);  struct meowray { char fat[PTRDIFF_MAX]; };
+15:19 geordi: 9223372036854775807
+15:19 lh_mouse: geordi, undo and use --clang
+15:19 geordi: error: array is too large (18446744073709551615 elements)
+15:32 meowray: https://github.com/llvm-mirror/clang/tree/master/lib/Sema/SemaType.cpp#L2179
+15:39 lh_mouse: aji.
+15:44 meowray: bad aji
+15:45 meowray: http://wiki.c2.com/?WikiAji
+16:23 fornew quit:Quit: Leaving
+17:32 zhangoke joined channel
+17:45 zhangoke quit:Quit: zhangoke
+18:01 zhangoke joined channel
+18:02 zhangoke quit:Client Quit
+19:08 Taggnostr2 joined channel
+19:09 Taggnostr3 quit:Ping timeout: 248 seconds
+19:27 iyzsong joined channel
+19:35 lh_mouse: geordi, --clang -c struct foo { std::size_t size; __extension__ std::string data[0]; };
+19:35 geordi: Success
+19:47 lh_mouse: meowray, 
+19:47 lh_mouse: [19:40:26] <lh_mouse> redi, seems a bug?  https://wandbox.org/permlink/c2IMBvSeeXQcoBr7
+19:47 lh_mouse: [19:41:09] <redi> lh_mouse: yes
+19:47 lh_mouse: [19:41:19] <redi> it works in non-templates
+19:47 lh_mouse: [19:41:37] <redi> so it should work in templates
+19:56 iyzsong-x joined channel
+20:00 iyzsong quit:Ping timeout: 240 seconds
+20:36 cyrushmh joined channel
+20:36 whocares_2 quit:Ping timeout: 244 seconds
+20:37 whocares_2 joined channel
+20:39 CyrusYzGTt quit:Ping timeout: 260 seconds
+20:44 CyrusYzGTt joined channel
+20:48 cyrushmh quit:Ping timeout: 264 seconds
+21:17 CyrusYzGTt quit:Ping timeout: 264 seconds
+21:25 lh_ideapad quit:Remote host closed the connection
+21:30 CyrusYzGTt joined channel
+21:46 cleamoon__ quit:Quit: Connection closed for inactivity
+22:09 varna joined channel
+22:09 varna: 噗叽啪
+23:27 \s quit:Ping timeout: 245 seconds
+23:30 \s joined channel
+23:39 iyzsong-x quit:Quit: ZNC 1.7.0 - https://znc.in
+23:43 meowray: lh_mouse: you can remove -pedantic-errors
+23:44 lh_mouse: removal of `-pedantic-errors` is not an option.
+23:45 lh_mouse: it was added by intention.
+23:56 meowray: https://ziglang.org/documentation/master/

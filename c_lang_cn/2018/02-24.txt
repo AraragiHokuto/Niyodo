@@ -1,0 +1,259 @@
+00:06 \s joined channel
+00:34 matchray: bbs.ra2diy.com
+00:59 cirno_ quit:Remote host closed the connection
+02:06 matchray quit:Ping timeout: 268 seconds
+02:37 Khazeus_ joined channel
+02:37 Youmu_ joined channel
+02:44 Youmu quit:*.net *.split
+02:44 Khazeus quit:*.net *.split
+02:44 Khazeus_ is now known as Khazeus
+02:44 Youmu_ is now known as Youmu
+03:11 \u joined channel
+05:12 cleamoon_ quit:Quit: Connection closed for inactivity
+08:10 N00d1e5_Bot quit:Remote host closed the connection
+08:39 \u is now known as matchray
+08:40 lh_mouse joined channel
+09:21 yonka joined channel
+09:53 lh_not_bot: jingjinghack: matchray 就是个大犇。
+09:56 matchray: 大老鼠
+09:59 matchray: 老鼠了解TLS的几种模式吗？global-dynamic initial-exec local-exec ..
+10:05 lh_mouse: System V 的？
+10:06 lh_mouse: 没有。只了解一点 windows 的。
+10:10 matchray: https://www.airs.com/blog/archives/44
+10:21 lh_mouse: matchray, 和 windows 差不多。
+10:22 matchray: time clang++ -fsyntax-only -std=c++11 -xc++ =(printf '#include <functional>')
+10:22 matchray: 这个也很慢，regex iostream都慢
+10:22 matchray: 一个.h用了std::function，不得不#include <functional>
+10:31 lh_mouse: <functional> 建议加预编译头。
+10:31 lh_mouse: 否则尝试改用 pimpl。
+10:43 Stevearzh quit:Quit: Quit...
+10:58 lh_not_bot quit:Remote host closed the connection
+10:59 lh_not_bot joined channel
+11:07 matchray: waf pch不出来……
+11:14 lh_mouse: geordi, << is_pod<foo>::value; struct foo { double a; void bark(); };
+11:14 geordi: true
+12:02 Andrew3 joined channel
+12:18 lh_cat joined channel
+12:21 lh_mouse quit:Ping timeout: 240 seconds
+12:23 Andrew3 quit:Quit: Andrew3
+12:39 cirno_ joined channel
+12:52 cirno_ quit:Ping timeout: 255 seconds
+12:54 Andrew3 joined channel
+12:56 matchray: 从IDE到Emacs，到底做到什么程度值得？ "先介绍一下我自己的情况，我是本科刚刚毕业半年，现供职于一家游戏开发公司。"
+12:56 matchray: "入职以后，我主要负责客户端的工作，使用vs2010进行C/C++开发" https://emacs-china.org/t/topic/5150
+13:02 runwei joined channel
+13:23 lh_cat is now known as lh_mouse
+13:34 Andrew3 quit:Quit: Andrew3
+13:43 Andrew3 joined channel
+14:01 Andrew3 quit:Quit: Andrew3
+14:10 Khazeus quit:Quit: Connection closed for inactivity
+14:29 wuxie_ joined channel
+15:17 z joined channel
+15:17 z is now known as Guest17208
+15:22 Guest17208 quit:Quit: Guest17208
+15:45 matchray: http://www.msys2.org/
+15:48 lh_mouse: ???
+15:49 matchray: pacman -S ...
+15:50 lh_mouse: ????
+15:58 runwei quit:Quit: Leaving
+16:08 runwei joined channel
+16:09 runwei quit:Remote host closed the connection
+16:10 runwei joined channel
+16:22 runwei quit:Remote host closed the connection
+16:22 runwei joined channel
+16:24 runwei quit:Client Quit
+17:08 moyotar joined channel
+17:30 runwei joined channel
+17:33 runwei quit:Client Quit
+17:50 yonka quit:Remote host closed the connection
+17:53 yonka joined channel
+17:55 yonka_ joined channel
+17:57 yonka quit:Ping timeout: 248 seconds
+18:00 yonka_ quit:Ping timeout: 264 seconds
+18:29 iyzsong-m joined channel
+18:33 iyzsong-m: (#･∀･)
+18:47 varna joined channel
+18:47 varna: lhanjian: 机器款打过去了
+18:48 lhanjian: varna: 你这样我们像是在搞什么非法交易233。
+18:48 lhanjian: 暂时还没收到，估计有个时间差
+18:48 varna: (｡･ω･)你心里有鬼
+18:48 varna: 直接打的支付宝
+18:48 varna: 银行卡有奇怪的限额，懒得管了
+18:49 varna: 估计2h内应该也能到帐
+18:49 varna: 才发觉我衮回来上一天班之后又休一天
+18:50 lhanjian: varna: 收到了
+18:50 * varna 请假从不看日期
+18:52 varna: 另外昨天晚上我才羞耻地发现赖克斯帮和暴徒其实是两批人
+18:52 varna: 周常全打错了
+18:54 lhanjian: varna: 暴徒是零零散散的吧
+18:54 iyzsong-m quit:Read error: Connection reset by peer
+18:55 varna: 又TM卡成狗了
+18:55 varna: 进暗区先因为卡爆交了一个大
+18:55 varna: 真姬儿悲剧
+18:58 varna: 这打的是北斗神拳吧
+18:58 varna: 打完之后都可以说一句「你已经死了」
+19:07 lhanjian: varna: 贴吧大佬还有窑子练级攻略
+19:08 varna: 太麻烦了，肝不动
+19:08 lhanjian: wa酱和T91没核心，迟迟升不了*3
+19:09 iyzsong joined channel
+19:32 varna: 换上套装天赋之后，十米之内的站桩简直是屠杀
+19:38 lh_mouse: 买了个  https://item.jd.com/5536551.html  
+19:38 lh_mouse: 明天就到，买了装 mint。
+19:38 varna: 超极本啊
+19:39 varna: 看着圆圆的
+19:39 lh_mouse: 这牛逼的 CPU 没有独立显卡，正好装 Mint 不是吗？
+19:39 lh_mouse: @FrankHB 
+19:39 varna: 恥球那个撕逼的大戏么……
+20:07 Stevearzh joined channel
+20:19 Dove joined channel
+20:21 Dove: 买了把吉他，幸福得要死。
+20:22 varna: (｡･ω･)ﾉ
+20:22 varna: 自己玩，还是有人玩乐队
+20:23 Dove: 自己玩，不知道赫尔墨斯发明的七弦琴是什么样的，也想玩玩。
+20:23 Dove: 不会弹其实，就是自己瞎搞。
+20:23 varna: 记得你以前玩过？
+20:23 Dove: 以前玩乐队，我是主唱。
+20:24 varna: wow cool
+20:24 iyzsong: orz
+20:24 Dove: 不喜欢玩个音乐搞得像学数学一样，就没学，瞎搞。
+20:24 Dove: 所以基本还是不识谱
+20:25 Dove: 小时候没训练过，所以音准什么的感觉也不好。
+20:26 varna: 敌人似乎吼了句什么E.M.T.
+20:26 varna: 这个必须死
+20:26 varna: R.M.T.正道
+20:26 Dove: 2333
+20:28 Aldrich: RMT野蛮，EMT文明
+20:29 lhanjian: 不给力
+20:30 iyzsong: my guitar and e-keyboard are rusting..  i'm too lazy :x
+20:30 Dove: 我是闲着没事干所以瞎J8弹。
+20:31 iyzsong: mee too 2333
+20:31 Dove: 最近还无聊，都在看高晓松的节目，一本正经地扯淡真是令人钦佩。
+20:32 Dove: 什么晓说啦晓松奇谈啦什么的。
+20:32 varna: eee
+20:33 varna: 趁着网络还好，赶紧把ke土豆周常gua做了zi
+20:37 Dove: 无知怎么办呢，不过看起来像我这种无知的人似乎最幸福。
+20:38 Dove: 毕竟老子都那么说了。
+20:43 Aldrich: varna: https://www.douyu.com/3881003
+20:43 Aldrich: 密码你知道
+20:44 lhanjian: 月子
+20:44 varna: (｡･ω･)ﾉ我再刷两趟警察学校就去
+20:45 Dove: 直播都要加密码咯
+20:46 lhanjian: 日了日了
+20:46 Dove: 刚学吉他有个窍门，开个音乐放着，然后你怎么瞎j8弹，只要声音小点都会觉得自己弹得不错。
+20:47 iyzsong: - -b
+20:47 Dove: 最好弹出来的声音你自己都听不见
+20:48 iyzsong: Dove: which book do you use?
+20:49 Dove: 我没用书，就是自己瞎弹。
+20:49 iyzsong: orz
+20:49 Dove: 和弦都按不住要书来有卵用
+20:50 Dove: 这个东西我感觉还是想怎么玩怎么玩比较重要
+20:51 iyzsong: fair enough
+20:51 Dove: 比方说E-G-D-E这样的和弦循环
+20:51 Dove: 瞎j8弹，还可以听。
+20:51 Dove: 不管是扫弦还是分解和弦还是乱七八糟瞎弹
+20:56 NebulaX: 开心就好
+20:57 varna: +
+20:57 Dove: 我也觉得
+20:59 lhanjian: 服务目前无法使用
+21:01 varna: shenmegui 燃烧弹击杀不算爆炸物击杀……
+21:02 Aldrich: varna: 我先给群里的人开播了
+21:03 varna: ok
+21:10 varna: 卧槽
+21:10 varna: 我的周常箱子出了一直想要的狙击枪
+21:11 varna: 赚到
+21:11 lhanjian: 欧洲人！
+21:11 Dove: 卧槽
+21:11 varna: 欧炸了
+21:11 Dove: 这尼玛也可以的
+21:13 varna: Heel, 就那把魔改417
+21:14 lhanjian: 魔改417？
+21:14 lhanjian: SR？
+21:14 varna: 装等270，单发52.3k，射速275
+21:14 varna: 攒钱洗一个暴击天赋应该就好了
+21:15 lhanjian: 你这是要毕业的节奏
+21:16 varna: 差得远，连机密套都没有
+21:16 varna: 等我凑一套死眼
+21:18 varna: 现在裸拿这个狙击枪，DPS大约396k，不过感觉很虚
+21:18 varna: 真凑出来掩体内开镜100%暴击就不虚了
+21:19 Dove: 壕
+21:22 Aldrich: varna: E1一血了
+21:22 varna: 马上来，我收拾下物品
+21:22 Aldrich: OK
+21:23 varna: _(:з」∠)_呜，好爽
+21:25 varna: 等下，现在活动的BGM还是大越香里负责么
+21:25 varna: 感觉好奇怪啊，完全走电子路线了
+21:26 varna: 地图界面的BGM还是原来的风格
+21:28 Aldrich: 不知道，应该是
+21:29 varna: 警戒阵……这个看起来总算有点像水雷战队的前进阵型了
+21:30 varna: 你勺药丸
+21:31 varna: 卧槽
+21:31 varna: 我看到一个欧洲人
+21:31 varna: 这人磨血磨出一个米空
+21:37 Aldrich: 这阵型的意思其实是“打个锤子”
+21:38 varna: 重点是米空
+21:39 lhanjian: 羊驼子来救我……
+21:39 lhanjian: 我被射爆了
+21:40 varna: _(:з」∠)_流量都用去看直播了
+21:40 varna: 你在哪？
+21:40 lhanjian: 暗区
+21:40 lhanjian: 谁我都打不过
+21:41 lhanjian: 我就刷刷暗区点数，结果难度上升了，我火力和装甲都不给力
+21:41 varna: 要不先搞点白区装备回来再打
+21:41 lhanjian: 怎么搞
+21:41 varna: 我现在暗区Lv33起平了，打到的装备都很难用
+21:41 lhanjian: 我暗区33
+21:41 lhanjian: 我暗区27
+21:42 varna: 组了之后我应该进不了27暗区，基本没救了
+21:42 lhanjian: 我可以把你邀请到我的暗区来吧
+21:42 varna: btw 其实我是Lv24在暗区打到Lv41，然后卡Lv29升到Lv50
+21:43 varna: _(:з」∠)_等会试下，我先看看直播；目前感觉看了直播，土豆就熟了
+21:54 lhanjian: varna: 暗区捡了几个紫装，没机会回收
+21:55 varna: 我上线试试连接质量
+21:56 lhanjian: 已经7件装备了，都在回收店
+21:58 varna: 这条读得感觉像是掉线的节奏
+21:59 varna: 说起来你要不要点卖钱的装备
+21:59 varna: 哦不对
+21:59 varna: 单刷的不能共享……
+22:01 lhanjian: 我现在捡了东西躲在角落瑟瑟发抖
+22:10 Kaimaris quit:Ping timeout: 264 seconds
+22:10 Kaimaris_ joined channel
+22:12 Dove: 睡觉啦
+22:12 Dove: 诸君晚安，夜间愉快。
+22:12 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:12 Aldrich: varna: 看到锤子阵的效果了吧
+22:16 yonka joined channel
+22:18 condy quit:Ping timeout: 256 seconds
+22:19 condy joined channel
+22:30 lhanjian: varna: mission failed，我把东西丢了
+22:33 Aldrich: varna: 超管来了
+22:33 Aldrich: 我转twitch
+22:35 Aldrich: https://www.twitch.tv/abrahamhokuto
+22:38 ahgbbsswyu joined channel
+22:38 lhanjian: 我直接被T出土豆了
+22:39 varna: twitch卡爆了
+22:40 varna: 怎么说呢，这种仅凭希望、实际生还率极低的行动，我觉得不做也罢……
+22:40 varna: 伤害延迟5s以上就意味着蹲点输出的时候完全没法预判血量，因为敌人会包过来
+22:41 varna: 包过来的原因是自机操作延迟造成的火力压制缺位
+22:41 varna: 然后情况就会一路恶化
+22:41 varna: 单刷的时候这种悲剧遇到太多了
+22:42 Aldrich: varna: 你再试试？
+22:42 Aldrich: 我换港服了
+22:42 varna: 我放弃
+22:43 varna: 这个上下行太惨了
+22:43 varna: MD 全卡住了……
+22:43 Aldrich: ……
+22:44 Aldrich: 我换群内直播了
+22:46 lhanjian: varna: 。
+22:47 varna: 登不上，我现在能爬上去买箱子就烧高香了
+22:49 lhanjian: 我现在连土豆都连不上了
+22:49 lhanjian: mission failed
+22:56 ahgbbsswyu quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+23:11 lhanjian: 卧槽，打战役出了马卡罗夫娘
+23:11 lhanjian: 造都没造出来过
+23:14 varna: 继续冲挑战难度活动中心
+23:20 lhanjian: 我在单刷困难停尸间
+23:21 varna: 没有死眼套，用狙击枪还是太惊险了
+23:24 varna: 反倒突袭套的骇人增伤可以让我三秒内撂倒一个机枪手
+23:37 yonka quit:Remote host closed the connection
+23:54 iyzsong quit:Ping timeout: 248 seconds
+23:55 lh_mouse quit:Ping timeout: 248 seconds

@@ -1,0 +1,234 @@
+00:00 xhe quit:Quit: leaving
+00:05 iyzsong quit:Ping timeout: 252 seconds
+03:25 cleamoon_ joined channel
+06:43 yonka joined channel
+06:48 yonka quit:Ping timeout: 248 seconds
+08:46 lh_mouse joined channel
+09:25 hanjian_l: lh_mouse: 其实就是拆开了pull的自动merge功能吧？
+09:40 yonka joined channel
+09:42 lh_mouse: hanjian_l, merge --ff-only 还是有用的。
+09:42 lh_mouse: 有本地修改的情况下 merge 不需要 stash 。
+09:46 yonka quit:Ping timeout: 240 seconds
+09:48 yonka joined channel
+10:01 L-ios1 joined channel
+10:01 L-ios quit:Ping timeout: 240 seconds
+10:01 L-ios1 is now known as L-ios
+10:11 L-ios1 joined channel
+10:12 L-ios quit:Ping timeout: 248 seconds
+10:12 L-ios1 is now known as L-ios
+10:20 hanjian_l: matchray: 更新了下vimPlugin们，似乎功能正常了不少
+10:21 hanjian_l: 有空我看看他做了些什么
+10:21 hanjian_l: 不过那伙计似乎是Rust用户，优先更新Rust需要的特性（Neovim）
+10:21 hanjian_l: LC
+10:49 L-ios quit:Ping timeout: 240 seconds
+10:49 L-ios joined channel
+10:59 matchray: regex_match 默认用 ECMAScript 怎么办
+10:59 matchray: std::regex_search
+11:12 matchray: hanjian_l: 什么功能正常了
+11:12 hanjian_l: matchray: 跳来跳去，还有没有上次那个奇怪的报错了
+11:13 matchray: https://github.com/autozimu/LanguageClient-neovim/issues/299
+11:13 matchray: 感觉达到了宣传效果
+11:14 matchray: 就是让用户去人家repo提议支持我们产品的xx功能
+11:19 hanjian_l: 厉害的睿酱
+11:21 hanjian_l: matchray: 人家发现你了呢 autozimu：@MaskRay Were you able to point to some docs detailing this API?
+11:46 zzw joined channel
+11:51 hanjian_l: Aldrich: 我有97妹了！！！
+11:51 hanjian_l: 小建大成功
+11:56 hanjian_l: Aldrich: 另外一个号建出T91了！
+11:59 matchray: hanjian_l: 你怎么知道我的名字怎么写
+11:59 hanjian_l: matchray: 你有好多实名的PPT
+11:59 hanjian_l: matchray: 在你博客上好多呢
+12:03 whocares_2_ quit:Ping timeout: 240 seconds
+12:04 whocares_2 joined channel
+12:14 matchray: 嗯
+12:14 matchray: 現在想法變了。名字還是暴露好
+12:15 matchray: 在江湖混的
+12:16 Protein joined channel
+12:16 matchray: 這個怎麼辦 https://github.com/cquery-project/cquery/commit/302f4869e3efbac2ee64ae24ce690592364b8529#commitcomment-27197556
+12:35 zzw quit:Remote host closed the connection
+12:57 Protein quit:Quit: Leaving
+13:02 cleamoon_: 喷人用小号，作死开新号
+13:04 hitman-usa joined channel
+13:08 lh_mouse quit:Read error: Connection reset by peer
+13:09 lh_mouse joined channel
+13:19 hitman-usa is now known as xiaojiejie
+13:24 matchray: 如何在一个项目上坚持3年半
+13:48 lh_mouse: LOG_S(ERROR) << "cacheDirectory cannot be empty.";
+13:48 lh_mouse: 真难看。
+14:00 xiaojiejie quit:Remote host closed the connection
+14:06 matchray: 我讨厌这个
+14:06 matchray: lh怎么看
+14:06 matchray: .cquery_cached_index/***/.json -> .js
+14:07 xiaojiejie joined channel
+14:14 Youmu: PROJ_LOG_DEBUG(xxx, yyy, zzz); 这种好啊
+14:16 matchray: kdevelop 只有 plugins/clang/codecompletion/completionhelper.cpp 用了 clang_getSpecializedCursorTemplate ；看来对模板无能为力
+14:17 matchray: boost::uint64_t .....
+14:20 matchray: stdint.h 呢
+14:20 matchray: 为什么 boost::uint64_t 而 ::time_t ?
+14:20 matchray: ::std
+14:22 matchray: 我不喜欢 <c???> 都用 <???.h> 的
+14:22 cleamoon_: time_t 没规定是什么类型呀
+14:23 matchray: 特别是 gmtime_r 这种 POSIX 而不是 C99 C11 的
+14:26 matchray: 我想问为什么 ::time_t 带 :: 
+14:31 cleamoon_:  哦，那不知道.....
+14:39 lh_mouse: matchray, 如果是 std 的就用  std::  ， POSIX 的就  :: 。
+14:40 lh_mouse: 所以有时候是 <ctime> 有时候是 <time.h> 。
+14:40 matchray: endian.hpp   const unsigned char *read = reinterpret_cast<const unsigned char *>(&mem); // 会不会不安全
+14:40 lh_mouse: 如果两个都用了，就两个都包含。
+14:40 lh_mouse: 不会。  unsigned char * 有 aliasing 保证。
+14:40 matchray: memcpy
+14:40 lh_mouse: unsigned char *, char *, 和 std::byte * 。
+14:41 lh_mouse: 注意 c99 还包含 signed char 。
+14:41 lh_mouse: 另外，能 alias 的指针必须是左值。
+14:42 lh_mouse: 所以，直接 reinterpret_cast 然后 dereference 是有问题的。
+14:42 matchray: https://stackoverflow.com/questions/16260033/reinterpret-cast-between-char-and-stduint8-t-safe
+14:42 matchray: "However, doing reinterpret_cast from char* to std::uint8_t* and then dereferencing the resulting pointer is a violation of strict aliasing rule and is undefined behavior if std::uint8_t is implemented as extended unsigned integer type."
+14:43 lh_mouse: 必须用 unsigned char 。
+14:43 lh_mouse: 11 If a program attempts to access the stored value of an object through a glvalue of other than one of the
+14:43 lh_mouse: following types the behavior is undefined:63
+14:43 lh_mouse: (11.8) — a char, unsigned char, or std::byte type
+14:43 lh_mouse: C99 的说法是 a character type  也就是 ((un)?signed)? char 。
+14:48 matchray: http://eel.is/c++draft/basic.lval#11.8
+14:48 matchray: 刚才网卡了
+14:49 matchray: "直接 reinterpret_cast 然后 dereference 是有问题的。" ??
+14:50 matchray: C++竟然不包含 signed char...
+14:51 lh_mouse: matchray, '  ... through a glvalue of other than one of the following types  ... '
+14:51 lh_mouse: 以 char, unsigned char ,  std::byte 的 glvalue 访问是不会导致 UB 的。
+14:52 matchray: en
+14:54 matchray: 我在 "boost" 上按了 textDocument/References ，我的emacs就卡了
+14:54 matchray: 2364 references
+15:04 matchray: XSI-compliant   ::strerror_r 返回 int 而不是 const char * // FreeBSD会编译不过
+15:04 matchray: errno.cpp
+15:04 CyrusYzGTt quit:Ping timeout: 240 seconds
+15:15 lh_mouse: 对。目前并不支持除了 linux 以外和系统。
+15:20 CyrusYzGTt joined channel
+15:26 matchray: SharedNts 是什麼的縮寫
+15:47 CyrusYzGTt quit:Read error: Connection timed out
+15:57 lh_mouse: matchray, shared null-terminated string 
+15:58 matchray: asciiz
+15:59 lh_mouse: 又没规定 ascii 。
+15:59 lh_mouse: nts 是个 term 。
+15:59 lh_mouse: 还有 ntmbs 。
+15:59 lh_mouse: ntcs  =  null-terminated character string 
+16:00 lh_mouse: ntmbs = null-terminated multibyte string
+16:00 matchray: 你又不支持非linux
+16:08 \s quit:Read error: Connection reset by peer
+16:09 \s joined channel
+16:16 lh_mouse: ?????
+16:16 lh_mouse: linux 也不是 ascii 啊。
+16:27 matchray: bool RecursiveMutex::UniqueLock::is_locked() const NOEXCEPT {return m_locked;} // 爲什麼一行的也寫在外面
+16:31 matchray: LOGGER 魔法沒看。cquery告訴我重載了comma
+16:33 matchray:  // operator<< 的 name lookup 拖慢编译速度。
+16:35 matchray: 我之前碰到一個 istream 問題，不知道怎麼辦https://github.com/cquery-project/cquery/issues/334 最後換 getchar() 了 :(
+16:36 matchray: 特別是 VSCode LSP 給cquery進程用 Unix domain socket；
+16:36 matchray: Emacs lsp-mode ; LanguageClient-neovim 用 pipe  (unidirectional on Linux, bidirectional on FreeBSD)
+16:37 hanjian_l: strerror_r这玩意儿我在linux也经常得不到const char *的结果哦
+16:37 hanjian_l: 一般也都是int返回
+16:37 matchray: 沒開_GNU_SOURCE？沒用 -std=gnu++11
+16:38 matchray: -std=c++11 也默認 _GNU_SOURCE
+16:39 matchray: -xc++ 默認 _GNU_SOURCE 1 而 -xc 不是？
+16:40 matchray: libstdc++ needs this macro to be defined.
+16:46 lh_mouse: hanjian_l, 用 automake 自动会加 _GNU_SOURCE 。
+16:46 hanjian_l: 哦
+16:46 hanjian_l: autoxxxx我都没用过
+16:46 lh_mouse: matchray, 不允许一行的函数定义不换行。
+16:46 lh_mouse: 太尼玛傻逼了，一眼望过去连是声明还是定义都不知道。
+16:48 xiaojiejie: 这个频道有TG群吗？
+16:48 lh_mouse: 不知道。也许没有。
+16:49 lh_mouse: xiaojiejie, 噫，有小姐姐！
+16:52 cleamoon_: Telegram？
+16:54 xiaojiejie: yes！
+16:54 hanjian_l: xiaojiejie: 可以搞一个TG群，然后两边同步？
+16:54 cleamoon_: 没听谁说有过
+16:54 hanjian_l: 但是感觉没有必要，而且大家不喜欢发些占视野的图片
+16:57 xiaojiejie: 图片不转发
+16:57 lh_mouse: matchray, 你既然提了这个，窝想把以前的东西改一下。
+16:57 lh_mouse: { } 作为函数定义干脆也不允许换成算了。
+16:57 lh_mouse: s/换成/换行/
+16:57 lh_mouse: xiaojiejie, 爆照。
+16:59 cleamoon_: 可以写一个bot呀，这里没规定不许用bot的
+17:05 xiaojiejie: lh_mouse 2333
+17:14 xiaojiejie: 问题是你们都用TG吗？
+17:14 xiaojiejie: 还是只用IRC？
+17:14 hanjian_l: 我用，但是用的少
+17:14 hanjian_l: IM工具被墙了令人很不舒服
+17:15 xiaojiejie: 现在都是其他IM和IRC互联~
+17:15 xiaojiejie: tg上不少群和irc都是互通的
+17:18 hanjian_l: 那你来弄个bot同步下？
+17:19 xiaojiejie: 我有TG群就是个irc同步的
+17:19 hanjian_l: 弄个试试看
+17:19 hanjian_l: 名字就叫irc_clang_cn_test好了
+17:20 xiaojiejie: 人数少，挂vps不合算啊
+17:21 cleamoon_: 弄好了挂别人vps上呗
+17:22 cleamoon_: 这里好多人有vps
+17:22 xiaojiejie: 那你们用linux吗？
+17:22 xiaojiejie: 都使用什么版本？
+17:23 hanjian_l: 这里ArchLinux用户最多
+17:23 xiaojiejie: 我是有个TG群gentoo 和 arch linux版本的，在和irc互联
+17:24 xiaojiejie: 要不你们也挂下我的irc频道
+17:24 xiaojiejie: ？
+17:31 cleamoon_: gentoo orz
+17:32 xiaojiejie:  #xiuxian
+17:32 xiaojiejie: 标题有TG群链接，和irc是互联的！
+17:37 hanjian_l: xiaojiejie: 链接在哪儿
+17:44 Aldrich: hanjian_l: 打死海豹
+17:45 hanjian_l: Aldrich: 海豹？
+17:46 Aldrich: hanjian_l: 你啊
+17:46 hanjian_l: Aldrich: 我的枪娘们全被我扔去后勤了
+17:46 xiaojiejie: 在欢迎信息里
+17:46 hanjian_l: Aldrich: 为啥我是海豹
+17:46 Aldrich: hanjian_l: 我一醒来就看见手机上两个召唤提示
+17:46 hanjian_l: xiaojiejie: 我来了
+17:47 hanjian_l: Aldrich: 哦吼吼吼
+17:47 hanjian_l: 我还造出了3个四星
+17:47 hanjian_l: 还有 希普卡
+17:48 hanjian_l: 还有 56-1
+17:49 hanjian_l: PTRD
+17:49 hanjian_l: MosinNagan
+17:49 hanjian_l: https://usercontent.irccloud-cdn.com/file/gSZ8bFun/DeepinScreenshot_player_20180130175201.png
+17:49 hanjian_l: 这是大号
+17:50 \s: 你们打 MHW 了吗
+17:50 Aldrich: 可怕
+17:50 hanjian_l: \s: 买了，没玩
+17:50 \s: hanjian_l: Orz
+17:50 hanjian_l: \s: 暂时不想跟风玩
+17:50 hanjian_l: 在玩全境封锁
+17:51 \s: 我还在考虑
+17:51 hanjian_l: https://usercontent.irccloud-cdn.com/file/QdtDD6yV/Screenshot_2018-01-30-17-51-25-93.png
+18:30 L-ios quit:Quit: L-ios
+18:36 hanjian_l:  微软又要买买买了，EA、蓝洞和Valve都在考虑范围内
+18:38 cleamoon_: 买EA？
+18:38 CyrusYzGTt joined channel
+18:54 geordi quit:Remote host closed the connection
+19:05 CyrusYzGTt quit:Read error: Connection timed out
+19:07 hanjian_l: Aldrich: 上全境
+19:08 CyrusYzGTt joined channel
+19:09 Aldrich: 在吃饭
+19:27 tiimmm joined channel
+19:34 CyrusYzGTt quit:Read error: Connection timed out
+19:37 CyrusYzGTt joined channel
+20:03 CyrusYzGTt quit:Read error: Connection timed out
+20:10 CyrusYzGTt joined channel
+20:12 hanjian_l: 看来今天是休闲的一天
+20:23 xiaojiejie quit:Quit: xiaojiejie
+20:27 hanjian_l: cleamoon_: 可能
+20:29 hanjian_l: Aldrich: 玩啥
+20:36 Aldrich: 休闲吧
+20:36 Aldrich: 今天不太想联机
+20:39 hanjian_l: 摸了摸了
+21:21 iyzsong joined channel
+21:22 cleamoon_ quit:Quit: Connection closed for inactivity
+22:11 xhe joined channel
+22:29 lh_mouse: http://v.youku.com/v_show/id_XMTY5OTU5NzI=.html
+22:30 tiimmm quit:Quit: Leaving
+22:34 lh_mouse: Listen pussycat! Don't let me catch you picking on my little cousin when I'm around, you understand? Now beat it!
+23:06 N00d1e5 joined channel
+23:12 yonka quit:Remote host closed the connection
+23:13 xhe quit:Quit: leaving
+23:34 N00d1e51 joined channel
+23:34 N00d1e5 quit:Read error: Connection reset by peer
+23:49 demonxian3 joined channel
+23:49 demonxian3: hello
+23:50 demonxian3: is someone here
+23:51 demonxian3 quit:Quit: leaving
+23:56 iyzsong quit:Ping timeout: 264 seconds

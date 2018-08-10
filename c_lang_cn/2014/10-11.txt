@@ -1,0 +1,520 @@
+00:11:hoxily quit:Quit: Leaving
+00:22:hysw joined channel
+00:24:StarBrilliant quit:Quit: ZNC - http://znc.in
+00:38:zzzzzzzzz joined channel
+00:41:Petrus07 quit:Quit: Leaving.
+00:47:zzzzzzzz left channel:
+01:15:Stevearzh joined channel
+01:27:lh_mouse quit:Read error: Connection reset by peer
+01:30:lh_cat joined channel
+01:31:lh_cat quit:Read error: Connection reset by peer
+01:37:xxxxxxxxx quit:Quit: Leaving...
+01:43:hysw quit:Ping timeout: 246 seconds
+01:44:hysw joined channel
+01:49:hysw quit:Ping timeout: 272 seconds
+01:50:lh_cat joined channel
+02:20:Stevearzh quit:Remote host closed the connection
+02:51:boosure joined channel
+05:42:cleamoon quit:Ping timeout: 250 seconds
+05:57:cleamoon joined channel
+06:32:Sleepwalking joined channel
+06:39:Sleepwalking quit:Ping timeout: 272 seconds
+07:06:Sleepwalking joined channel
+07:22:whocares_2_ joined channel
+07:23:whocares_2 quit:Ping timeout: 272 seconds
+08:22:hysw joined channel
+08:30:lhanjian joined channel
+08:34:lhanjian quit:Client Quit
+08:34:lhanjian joined channel
+08:51:sismvg joined channel
+09:11:lh_cat: meow
+09:23:FrankHB quit:Read error: Connection reset by peer
+09:26:Plough joined channel
+09:36:whatofor joined channel
+09:38:sismvg: http://tieba.baidu.com/p/3344135729
+09:38:sismvg: 23333333333333
+09:43:lh_mouse joined channel
+09:45:lhanjian quit:Remote host closed the connection
+10:00:pocmon joined channel
+10:15:lhanjian joined channel
+10:22:wysaid joined channel
+10:22:wysaid: 爆
+10:25:lhanjian: wysaid, 爆你个菊花老怪
+10:25:Plough quit:Ping timeout: 260 seconds
+11:01:Petrus07 joined channel
+11:05:finalbos joined channel
+11:05:Stevearzh joined channel
+11:14:xxxxxxxx joined channel
+11:37:finalbos quit:Ping timeout: 260 seconds
+11:46:boosure: ruff
+11:54:lh_mouse: 0.0
+11:55:lh_mouse: Visual Studio 2013 Express    4.8 GiB   天理何在
+11:58:pocmon: 没必要下全部吧
+11:59:lhanjian: express不好用吧
+12:00:lhanjian: 总算用loopback跑出饿死的效果来了
+12:00:pocmon: 一般是够用了
+12:03:lh_mouse: 我只要编译器
+12:05:boosure quit:Quit: Get your hand off of it
+12:24:lhanjian: 耗子用啥编辑器？
+12:24:lhanjian: sublime？
+12:24:xxxxxxxx: nano
+12:26:lhanjian: xxxxxxxx, 巨基来了
+12:32:xxxxxxxx: 到处扯帝国主义等等的东西是从苏联传过来的么?
+12:33:lh_cat: nano 把 justify 关掉
+12:33:lh_cat: 还有  得改下配置
+12:33:lh_cat: 我用 2.3.6
+12:35:Xilzzerts joined channel
+12:50:xxxxxxxx quit:Quit: Leaving...
+12:55:lh_mouse quit:Read error: Connection reset by peer
+12:55:lh_mouse joined channel
+12:57:Xilzzerts: 贴吧又进入debug mode了？
+12:58:Stevearzh quit:Remote host closed the connection
+12:58:dantmnf: 一直都是
+13:00:lh_mouse: geordi, { ifstream ifs("http://www.baidu.com/"); char c; while(ifs >> c){ cout <<c; } }
+13:00:geordi: <no output>
+13:03:lh_mouse: lh_cat, meow
+13:04:lh_cat: lh_mouse, meow
+13:07:Sleepwalking quit:Ping timeout: 258 seconds
+13:09:hysw: profiling...
+13:11:sismvg: 花了整整13行，就为了说一句：“当且当连接点和接收器链接上了以后，才能通过枚举吧消息发到每个接收器上"
+13:12:sismvg: 中文的精简度被吃了
+13:12:* lh_mouse begins to profile hysw.
+13:15:sismvg: 而且还把server和client的顺序写错了。。
+13:15:lhanjian: 这句话长的我气都踹不过来了
+13:18:sismvg: 比起密密麻麻的13行好多了
+13:19:condy joined channel
+13:20:lh_mouse: condy, 爆照
+13:20:condy: 人家才刚刚来..
+13:21:condy: QAQ
+13:23:xxxxxxxx joined channel
+13:25:lh_mouse: 中国渔民在与韩国海警冲突中身亡 
+13:25:lh_mouse: CHOE SANG-HUN 
+13:25:lh_mouse: 周五，韩国海警称其在盘查一艘越境捕捞的中国渔船时，与渔民发生冲突，期间海警开枪，渔船船长中弹，在送往医院后不治身亡。中方对此表示震惊和强烈不满。 
+13:26:xxxxxxxx: 昨天电视里说了
+13:26:lh_mouse: 大陆年轻人同情香港“占中”者寥寥 
+13:26:lh_mouse: 杰安迪 
+13:26:lh_mouse: 北京街头公开支持香港“占中”抗议者及其民主诉求的人很难找，这不仅是政府审查和压制所致。看好莱坞长大的中国80后、90后，即使在私下场合，也很少同情香港抗议者。 
+13:26:lh_mouse: 物美价廉的好手机：中国一加 
+13:26:lh_mouse: FARHAD MANJOO 
+13:26:lh_mouse: 世界各地的科技迷们对来自中国的一加手机已垂涎数月。裸机只有300美元的一加手机性能十分出色。若能成功，瞄准国际市场的一加必将冲击价格居高不下的智能手机市场。 
+13:27:lh_mouse: @小米 @锤子
+13:28:lh_mouse: ⊙.⊙
+13:31:lhanjian: 耗子突然刷屏了
+13:32:Sleepwalking joined channel
+13:32:xxxxxxxx: 口支发新闻
+13:49:kyun joined channel
+13:50:krfantasy joined channel
+13:53:lhanjian quit:Remote host closed the connection
+13:53:lhanjian joined channel
+13:55:lh_dog joined channel
+13:55:lh_dog: boom
+13:55:dantmnf: 猫鼠狗
+14:03:dantmnf quit:Remote host closed the connection
+14:03:lh_mouse: http://114.215.147.2/test_websocket.htm
+14:03:dantmnf joined channel
+14:08:lhanjian: 耗子写起js来了……
+14:08:hoxily joined channel
+14:12:Plough joined channel
+14:18:condy: lh_mouse: http://imagebin.org/321484
+14:20:hoxily quit:Quit: Leaving
+14:23:sismvg: 为什么用imagebin啦。总是红
+14:23:condy: 因为我懒..
+14:24:lh_mouse: 新版 IE 连不上
+14:24:lh_mouse: geordi, << strcasecmp("Websocket", "websocket");
+14:24:geordi: 0
+14:25:condy: geordi: { struct addrinfo hints; }
+14:25:geordi: error: aggregate 'main(int, char**)::addrinfo hints' has incomplete type and cannot be defined
+14:29:Sleepwalking quit:Ping timeout: 255 seconds
+14:39:hysw quit:Ping timeout: 272 seconds
+14:42:Sleepwalking joined channel
+14:46:lhanjian quit:Remote host closed the connection
+14:46:lhanjian joined channel
+14:46:lhanjian quit:Remote host closed the connection
+14:46:lhanjian joined channel
+14:47:lhanjian quit:Remote host closed the connection
+14:59:sismvg: 仔细想想的话每次1%的转账费，银行简直是暴利啊。。
+15:00:lh_mouse: 扯
+15:00:lh_mouse: 异地转账   千分之五  五十块封顶
+15:01:lh_mouse: 本地跨行提现  多少都两块
+15:10:krfantas` joined channel
+15:11:lh_mouse: !info
+15:12:krfantasy quit:Ping timeout: 245 seconds
+15:26:lhanjian joined channel
+15:28:Xilzzerts: lhanjian (~yaaic@36.16.131.93) 已进入
+15:29:lhanjian: ⊙▽⊙
+15:29:lh_mouse: 点错
+15:56:lhanjian quit:Read error: Connection reset by peer
+15:57:lhanjian joined channel
+15:57:krfantasy joined channel
+15:57:sismvg: 又是要绑定手机。。
+15:57:sismvg: 想要数据想疯了
+16:01:krfantasy left channel:
+16:01:krfantasy joined channel
+16:03:sismvg: 撸个COM组件麻烦死了啦。。要管连接点、组件注册的几百行代码、IID的管理、一遍又一遍的实现QueryInterface,AddRef、balabala
+16:04:sismvg: 又因为要二进制层复用还不能重载、模板来简化上面的问题。。
+16:08:lh_mouse quit:Read error: Connection reset by peer
+16:08:kyun: 以後可能電腦上Q都要掃掃二維碼了
+16:09:sismvg: 撸个能让C调用Cpp的导出的mangling库把。。
+16:10:lh_mouse joined channel
+16:12:sismvg: 我找到了炮姐的萌点！
+16:13:sismvg: 炮姐的萌点是袜子啊，松软的袜子+淡棕色板鞋。。
+16:13:sismvg: Pr
+16:16:condy: prpr
+16:17:sismvg: http://i-ab.com/book/150957.html?page=22
+16:19:sismvg: http://blog.csdn.net/chenyujing1234/article/details/7753863
+16:20:sismvg: 这种讲解才好。。简练
+16:26:Administrator joined channel
+16:27:hope1: 百度文库怎么下东西？
+16:32:hope1: 现在不绑定邮箱就不让下了……
+16:34:sismvg: 说为了防盗号都是假的，就是为了投放广告。。
+16:37:hope1: 显然
+16:37:dantmnf quit:Ping timeout: 272 seconds
+16:37:hope1: 所以怎么绕开啊
+16:37:condy: o.o
+16:37:condy: 找到一个好东西...我来学习一下..http://stanford.edu/~stepp/cppdoc/
+16:38:sismvg: network\tp\ver1\version\thunderplatform.exe 
+16:38:sismvg: runtime error:pure virtual function call
+16:38:sismvg: 额。。那个家伙写错了？
+16:39:sismvg: condy:为什么类名前面都要带个字母？
+16:40:sismvg: 不由命名空间了吗。。
+16:40:condy: 哪里？
+16:43:sismvg: GWindow
+16:44:condy: ...
+16:44:sismvg: 直接namespace stf{namespace gui{balabala}}不行吗。。
+16:44:condy: 没看这个头文件..
+16:45:sismvg: 顺带STL内部实现不管，外部统一小写。。
+16:45:condy: 自己的类名也要小写..
+16:45:condy: ?
+16:47:sismvg: 不是啊
+16:48:kyun: 因爲那個年代沒命名空間吧
+16:55:condy: geordi: { extern int _ZN12_GLOBAL__N_13valE; cout << _ZN12_GLOBAL__N_13valE; } namespace { int val = 0xff; }
+16:55:geordi: 255
+16:55:hope1: G = graphical?
+16:57:lh_mouse: Gpoint
+16:58:kyun: C庫還不都是這個，所有函數前面是整個項目名
+17:00:lhanjian quit:Read error: Connection reset by peer
+17:00:sismvg: 这样怎么复用呢
+17:00:lhanjian joined channel
+17:01:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+17:03:lh_dog quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140410211157]
+17:19:kyun: 大家喜歡重新造輪，也沒甚麼複不複用
+17:19:krfantasy quit:Read error: Connection reset by peer
+17:21:krfantasy joined channel
+17:22:condy: geordi: << INFINITY
+17:22:geordi: inf
+17:27:Plough quit:Quit: Page closed
+17:31:lh_mouse: clcn_logbot, meow
+17:31:lh_mouse: hysw_logbot, meow
+17:32:hope1` joined channel
+17:33:lh_mouse: ..
+17:34:lh_mouse: Plough, 爆
+17:34:lh_mouse: Plough, 爆
+17:35:lh_mouse: 什么情况
+17:36:lh_mouse: Plough, 爆
+17:36:lh_mouse: Plough, 爆
+17:36:lh_mouse: ok
+17:37:lh_mouse: Plough: 爆
+17:37:lhanjian: 操蛋啦，要把可能未读完的事件扔进去轮询，又得修改借口了……
+17:38:lh_mouse: lhanjian, 除非读出 EWOULDBLOCK 否则不要丢给 epoll
+17:38:lhanjian: 我知道啊
+17:39:lh_mouse: 所以“可能未读完”这是一个不可能的事情
+17:39:lhanjian: 现在是rcv_size < need_size 或者 EAGAIN 扔给epoll自己重来
+17:39:lhanjian: rcv_size == need_size 继续轮询
+17:39:lh_mouse: 噗
+17:40:lh_mouse: rcv_size = recv(..);  if(rcv_size < 0){ if(errno = EWOULDBLOCK){ reepoll(); return; } panic(); }  on_read(buffer, rcv_size);
+17:41:lh_mouse: errno == 
+17:41:lh_mouse: “必须读出 EAGAIN”  明白？
+17:41:lhanjian:            For  example,  if  you  call read(2) by asking to read a certain amount of
+17:41:lhanjian:            data and read(2) returns a lower number of bytes, you can be sure of  hav‐
+17:41:lhanjian:            ing  exhausted  the  read  I/O space for the file descriptor.
+17:41:lhanjian: epoll(7)
+17:43:lh_mouse: lhanjian, A9  Receiving  an event from epoll_wait(2) should suggest to you that such file descriptor is ready for the requested I/O operation.  You must
+17:43:lh_mouse:            consider it ready until the next (nonblocking) read/write yields EAGAIN.
+17:43:hope1 quit:Read error: Connection reset by peer
+17:45:lhanjian: 它说的是，只要确定 下一次 读/写会产生EAGAIN就行吧。如果是TCP，只要确信返回值小于请求值，那么再次读的话，就必然产生EAGAIN了，没必要真把这个EAGAIN read/write出来吧。
+17:51:lh_mouse: until the next (nonblocking) read/write yields EAGAIN.  // is going to yield?
+17:55:kyun quit:Read error: Connection reset by peer
+17:55:cleamoon: http://www.peacehall.com/news/gb/china/2014/10/201410110807.shtml
+17:58:condy: Description:
+17:58:condy: Certain JavaScript files cause ctags to enter an infinite loop until it runs out of disk space, resulting in denial of service.
+17:58:condy: 233
+17:58:condy: https://bugs.archlinux.org/task/42246
+18:01:cleamoon: @幻灭妖僧：女人之间的友谊，源于共同讨厌一个女人，止于共同喜欢一个男人。
+18:01:condy: 真理 ^
+18:01:cleamoon: @NalaGinrut：知乎就是这样一个地方，学生畅谈文革历史功过沉浮，搞产品规划的阔论程序设计面向对象思想，学文科的讨论量子物理的哲学性分歧，没结婚的劝告人们如何对待一段感情，写过一堆helloworld的在研究程序语言的设计理念及未来走向，只用过OOP的在思考FP究竟问题在哪里 #知乎果然是个好名字
+18:02:condy: 这是twitter上的吧..
+18:04:JQK joined channel
+18:04:cleamoon: 不知道
+18:07:dantmnf joined channel
+18:09:wysaid quit:Remote host closed the connection
+18:14:condy: geordi: { typedef int (p)(); cout << TYPE_DESC(p); }
+18:14:geordi: error: template argument 1 is invalid
+18:14:condy: geordi: replace last p with int
+18:14:geordi: Same error.
+18:15:condy: geordi: << TYPE_DESC(int)
+18:15:geordi: Same error.
+18:15:condy: geordi: << TYPE_DESC<int>
+18:15:geordi: integer
+18:15:condy: geordi: { typedef int (p)(); cout << TYPE_DESC<p>; }
+18:15:geordi: nullary function returning an integer
+18:15:lhanjian: 耗子是对的。
+18:15:condy: geordi: prepend * before first p
+18:15:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>') Compile: Alarm clock
+18:15:condy: geordi: show
+18:15:geordi: { ty*pedef int (p)(); cout << TYPE_DESC<p>; }
+18:16:condy: geordi: undo and replace (p) with (*p)
+18:16:geordi: pointer to a nullary function returning an integer
+18:20:code_new joined channel
+18:20:lh_mouse: lhanjian, ?
+18:21:lh_cat: 喵
+18:23:lhanjian: 我还在测到底如果没有读出AGAIN,epoll_wait还会不会通知。强迫症的SX啊我……
+18:26:lh_mouse: 抖M汉奸
+18:27:lhanjian: telnet 输入几个字符；read一次32，rv=6，然后直接进epoll_wait；然后telnet再输入几个字符，epoll_wait rv=1
+18:27:lhanjian: 看起来其实不需要读出来EAGAIN？
+18:36:condy: geordi: { cout<<typedef_exist<A>::value; } struct A { typedef int key_type; }; template<typename T> struct typedef_exist{ typedef char yes[1]; typedef char no[2]; static const bool value = sizeof(check(T)) == sizeof(yes); template<typename U> yes check(typename U::key_type*); template<typename> no check(...);};
+18:36:geordi: error: 'check' was not declared in this scope
+18:37:lhanjian: lh_mouse, 如果是必须读出EAGAIN，那就意味着，ET的fd可读的时候，我至少要读两次？
+18:37:lhanjian: +nonblock
+18:40:lh_mouse: 我是这么干的
+18:41:lhanjian: 耗子，真的不需要读两次啊
+18:42:lhanjian: 刚才实测出来了……
+18:45:* lhanjian 埋头做袋鼠状
+18:47:condy: geordi: { typedef int (p)(); p a; cout << TYPE<decltype(a)>; }
+18:47:geordi: int ()
+18:51:Xilzzerts quit:Read error: Connection reset by peer
+18:53:lh_mouse: 嘛 我看下资料
+18:53:lhanjian: ( ´д`)
+19:01:lh_cat: 读到 EAGAIN 是传统做法
+19:05:lhanjian: 这个有资料支撑么……
+19:05:iyzsong joined channel
+19:12:condy: geordi: { raise(9); }
+19:12:geordi: <no output>
+19:13:condy: geordi: { auto ret = raise(9); cout<<ret; }
+19:13:geordi: -65535
+19:13:condy: geordi: replace 9 with 15
+19:13:geordi: -65535
+19:14:condy: geordi: { auto ret = raise(SIGALARM); cout<<ret; }
+19:14:geordi: error: 'SIGALARM' was not declared in this scope
+19:14:condy: geordi: replace ALARM with ALRM
+19:14:geordi: -65535
+19:15:condy: geordi: { auto ret=kill(getpid(), SIGTERM); cout<<ret;}
+19:15:geordi: Operation not permitted: kill
+19:25:condy: geordi: << typeid(int).name()
+19:25:geordi: int
+19:26:condy: geordi: { auto f1 = TYPE; auto f2 = typeid; cout<<TYPE<f1>, TYPE<f2>; }
+19:26:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>') Compile: Alarm clock
+19:26:condy: geordi: erase everying 
+19:26:geordi: error: String `everying ` does not occur.
+19:27:condy: geordi: { auto f = TYPE; cout<<TYPE<f>; }
+19:27:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>') Compile: Alarm clock
+19:29:condy: geordi: { function<void> f; }
+19:29:geordi: error: aggregate 'function<void> f' has incomplete type and cannot be defined
+19:29:condy: geordi: { function<void()> f = [](){return 1;}; }
+19:29:geordi: <no output>
+19:30:condy: geordi: { function<void()> f = [](){cout<<"run";return 1;}; f(); }
+19:30:geordi: run
+19:31:condy: geordi: { function<int()> f = [](){}; f(); }
+19:31:geordi: error: conversion from 'main(int, char**)::<lambda()>' to non-scalar type 'function<int()>' requested
+19:34:lh_cat: geordi, 
+19:34:geordi: Success
+19:36:lh_cat: Plough: 爆
+19:36:lh_cat: Plough: 爆
+19:37:lh_cat: lhanjian: 看洋沱怎么说
+19:38:lhanjian: 哦
+19:39:pocmon quit:Quit: 飘来又飘去～
+19:41:condy: geordi: <<is_same<unsigned char, uint8_t>::value
+19:41:geordi: 1
+19:43:lhanjian: 不管了，准备写上层了。
+19:45:geordi quit:Remote host closed the connection
+19:47:lh_cat: condy, 爆照
+19:47:condy: 大叔就不爆了。。
+19:55:lh_cat: 爆照
+19:59:condy: QAQ
+20:00:lh_cat quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+20:01:lh_cat joined channel
+20:01:lh_cat quit:Client Quit
+20:02:lh_cat joined channel
+20:03:lh_cat: 😂
+20:04:lh_cat: (´•ω•`๑)
+20:06:condy: (。・_・。)
+20:17:sismvg joined channel
+20:20:sismvg: 看到个讲雾霾的帖子，然后来了个神回复 <雾以吸为贵>
+20:20:Sleepwalking quit:Ping timeout: 260 seconds
+20:21:cleamoon: 2333  老天是公平的，虽然你长的丑，但是你想的美啊。(zt)
+20:25:FrankHB joined channel
+20:26:krfantas` joined channel
+20:28:krfantasy quit:Ping timeout: 272 seconds
+20:34:geordi joined channel
+20:43:Sleepwalking joined channel
+20:50:lh_mouse: geordi, << TYPE(__asm__("nop; ));
+20:50:geordi: error: Unexpected end of request. Expected any symbol.
+20:52:condy: geordi: replace )) with "))
+20:52:geordi: error: template argument 1 is invalid
+20:53:condy: geordi: << TYPE<__asm__("nop")>
+20:53:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>') Compile: Alarm clock
+20:56:StarBrilliant joined channel
+20:56:sismvg: 既然都说了接收器是一个COM对象,为什么还要在花去5行说接收器有QueryInterface的所以然呢。。
+20:57:sismvg: COM原理与应用明显是为了赚稿费啊
+20:57:lh_mouse: COM 本身就是为了赚稿费
+20:57:lh_mouse: 你们谁能告诉我怎么把 vs express 里面的 C# 删掉
+20:58:condy: M$强制推广..
+20:59:FrankHB: VS这货现在就是.NET撸的删掉了也腾不出多少空间。
+21:00:lh_mouse: 我就是借编译器用下
+21:00:condy: geordi: { bar(inc); } int inc(int x) { return ++x; } void bar(int fun(int x)) { cout<<fun(1); }
+21:00:geordi: 2
+21:01:ring joined channel
+21:01:condy: geordi: { bar(inc); } void bar(int fun(int)) { cout<<TYPE<decltype(fun)>; } int inc(int x) { }
+21:01:geordi: warning: no return statement in function returning non-void
+21:01:condy: geordi: prepend -w
+21:01:geordi: int (*)(int)
+21:02:lh_mouse: function-to-pointer conversion
+21:02:condy: geordi: replace fun(int) with (&fun)(int)
+21:02:geordi: int (&)(int)
+21:02:sismvg: 装VS不都要提供个十几G才行吗。。
+21:02:lh_mouse: geordi, << (***********************************foo)();  int foo(){ return 123; }
+21:02:geordi: 123
+21:03:condy: geordi:  << (***********************************&&&&&&foo)();  int foo(){ return 123; }
+21:03:geordi: error: label 'foo' used but not defined
+21:03:condy: geordi:  << (***********************************&foo)();  int foo(){ return 123; }
+21:03:geordi: 123
+21:03:PloughP42 joined channel
+21:05:cleamoon: .....
+21:14:sismvg: IRC的表情不够多啊
+21:16:condy: (。・_・。)
+21:16:condy: ( ´∀`)σ)Д`)
+21:16:condy: (´・ω・｀)
+21:16:condy: (｢・ω・)｢
+21:17:condy: (ง •̀_•́)ง
+21:17:condy: (┙>∧<)┙へ┻┻
+21:17:condy: (￣□￣)
+21:17:condy: (๑´ڡ`๑)
+21:17:condy: _(:з」∠)_
+21:17:condy: QAQ
+21:17:condy: ˊ_>ˋ
+21:17:condy: (ˊ_>ˋ)
+21:17:condy: ...
+21:17:condy: sismvg: ^ 够了吧..
+21:17:sismvg: ..我没法输入颜文字。。
+21:18:condy: 怎么可能..
+21:18:sismvg: 英库输入法的颜文字插件就是个摆设
+21:18:pocmon joined channel
+21:18:sismvg: (●'◡'●)
+21:18:pocmonM joined channel
+21:19:sismvg: 这个是慢的吓死人的系统自带输入法打出来的。。
+21:19:Petrus07 quit:Quit: Leaving.
+21:21:condy: sismvg: ...
+21:21:sismvg: 看看win10能不能修好，反正win8的Z版能免费升级
+21:22:pocmonM: win8自带输入法？
+21:22:sismvg: yea
+21:22:pocmonM: 拼音？五笔？
+21:22:sismvg: 都有
+21:23:pocmonM: 慢吗？
+21:24:pocmonM quit:Quit: 飘呀飘～～
+21:24:sismvg: 很慢。。
+21:24:pocmonM joined channel
+21:24:sismvg: 比如你打iostream的时候他会在str卡住1秒，然后给再打出eam..
+21:25:pocmonM: 你是不是把拼写纠错打开了
+21:25:sismvg: 我默认都是E文。
+21:27:sismvg: 再比如给老妈发短信的时候打：”把妹妹嫁给我朋友吧“的时候，把朋友两个字卡掉了
+21:27:sismvg: 第二天你就能进德国骨科
+21:30:condy: 233
+21:33:lh_mouse: http://ideone.com/SWLcZa
+21:36:pocmon: 哇，在LINUX下也没这么卡过
+21:37:condy: make_index_sequence 没有。。
+21:37:condy: 这个要用TMP..
+21:37:condy: 吗..
+21:38:lh_mouse: -std=c++14
+21:39:condy: 还是不行..
+21:39:lh_mouse: 版本呢
+21:39:condy: 4.9.1
+21:39:condy: g++
+21:40:sismvg: tuple太疼了
+21:41:lh_mouse: c++14 编译不过？
+21:41:lh_mouse: 什么错误？
+21:41:condy: 眼花了，递归层数太深了..
+21:42:lh_mouse: 羊驼是不是被妹子拐跑了
+21:42:condy: geordi: --show-compile-flags
+21:42:geordi: -finput-charset=UTF-8 -O0 -std=c++1z -pedantic-errors -Wall -Wextra -Wno-empty-body -Wno-missing-field-initializers -Wwrite-strings -Wno-deprecated -Wno-unused-parameter -Wno-unused-variable -Wno-non-virtual-dtor -Wno-variadic-macros -fno-diagnostics-show-option -fno-use-linker-plugin -fmessage-length=0 -ftemplate-depth-128 -fno-merge-constants -fn
+21:43:sismvg: struct{type,type1,type2};拯救藏生
+21:43:pocmon quit:Quit: 飘来又飘去～
+21:44:lh_mouse: condy, 你把 index_sequence< 换成 integer_sequence<unsigned, 
+21:44:krfantasy joined channel
+21:47:condy: ...
+21:48:pocmonM quit:Quit: 飘呀飘～～
+21:49:krfantas` joined channel
+21:50:ring quit:Remote host closed the connection
+21:50:krfantasy quit:Ping timeout: 250 seconds
+21:50:condy: geordi: { vector<string> a={"a", "bb", "ccc"}; transform(a.begin(),a.end(),ostream_iterator<int>(cout,' '), mem_fun_ref(&string::length)); }
+21:50:geordi: error: invalid conversion from 'char' to 'const char*'
+21:52:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+21:52:condy: geordi: replace ' ' with " "
+21:52:geordi: 1 2 3 
+21:58:condy: geordi: { vector<int> a={1,2};auto i=a.begin(); cout<<i;}
+21:58:geordi: error: no type named 'iterator' in 'class vector<int>::iterator' Compile: Alarm clock
+21:59:condy: geordi: { vector<int> a = {1,2}; cout<<a.begin(); }
+21:59:geordi: Same error.
+22:02:condy: geordi: { vector<int> a={1,2};}
+22:02:geordi: <no output>
+22:03:ring joined channel
+22:03:ring quit:Client Quit
+22:03:xxxxxxxx: 德国骨科最后还是和妹妹在一起了
+22:03:xxxxxxxx: 你只会被打断第三条腿
+22:04:endle joined channel
+22:10:condy: !sm tqy@没有丁丁
+22:10:condy: ...
+22:10:condy: 发错了..
+22:13:xxxxxxxx: 哈哈哈
+22:13:lh_mouse: !sm condy 
+22:13:xxxxxxxx: condy@只有丁丁
+22:13:condy: QAQ
+22:15:hope1 joined channel
+22:15:hope1: 问道题
+22:17:condy quit:Quit: leaving
+22:18:hope1: 有n个圈，初始时在第n号，当前在第k号时等概率随机跳到1到k号圈内，到1时停止，问平均跳的次数
+22:20:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:21:lh_mouse: 当前在第k号时等概率随机跳到1到k号圈内  // 1 ~ k 还是 1 ~ k-1
+22:22:hope1: 1~k，有可能留在原地
+22:24:* lh_mouse 不会算
+22:28:lh_mouse: f(1) = 0
+22:29:lh_mouse: f(k) = 1 + 1/k sigma[i=1,k] f(i)
+22:30:cleamoon: 可以有函数vector吗？
+22:30:lh_mouse: 什么是函数
+22:30:cleamoon: 就是vector里的东西是一串函数
+22:31:cleamoon: hope1, log n吧？
+22:31:hope1: nP(n) = (sum[k=1,n-1] P(k)) + (sum[k=1,inf] (k*(n-1))/n^k) 这个行不行
+22:31:hope1: cleamoon, 不是吧
+22:32:lh_mouse: cleamoon, 函数不是对象
+22:32:lh_mouse: hope1, (k-1)[ f(k) - f(k-1) ] = 1
+22:32:hope1: 给了几组样例，P(2) = 2, P(3) = 2.5
+22:33:cleamoon: P(2) = 2？ 不是应该不是1次就是2次吗？所以应该是 1.5呀
+22:34:hope1: 不一定啊，可以无限留在原地
+22:35:cleamoon: 哦，还有那个...
+22:37:krfantas` joined channel
+22:37:Sleepwalking quit:Ping timeout: 255 seconds
+22:40:cleamoon: 你模拟几十个看看规律
+22:40:lhanjian quit:Remote host closed the connection
+22:41:hope1: 不用吧
+22:42:hope1: 后面那个级数应该能求出来
+22:42:lh_mouse: 调和级数求不出来
+22:42:lh_mouse: 这是常识
+22:42:hope1: 不是调和级数
+22:42:lh_mouse: 不是调和级数是啥
+22:42:hope1: 是底数小于1的几何级数
+22:43:lh_mouse: f(n) = 1 + 1 + 1/2 + 1/3 + 1/4 + ... + 1/(k-1)
+22:43:lh_mouse: (n >= 2)
+22:43:lh_mouse: k 换成 n
+22:43:cleamoon: 概率还不会，所以不知道，我会直接找规律
+22:43:hope1: 只是(n-1) * (sum[k=1,inf] k*(n^-k))
+22:44:hope1: noip初赛题，不可能涉及什么复杂的概率技巧吧
+22:44:lh_mouse: 你看我上面那个通项
+22:45:hope1: 你是说平均次数的通项？
+22:45:lh_mouse: 是
+22:45:hope1: 那有可能，最后求的只是P(5)
+22:46:cleamoon: 如果是这个公式那直接算就好了
+22:55:hope1: 答案没错
+22:55:hope1: 是37/12
+23:09:hope1: 明白了
+23:09:hope1: thx
+23:35:xxxxxxxxx joined channel
+23:39:xxxxxxxx quit:Ping timeout: 255 seconds
+23:46:endle quit:Quit: Leaving

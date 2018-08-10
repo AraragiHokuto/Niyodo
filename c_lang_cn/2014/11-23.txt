@@ -1,0 +1,182 @@
+00:14:whocares_2 joined channel
+00:15:whocares_2_ quit:Ping timeout: 245 seconds
+00:17:tutu joined channel
+00:28:lh_mouse quit:Read error: Connection reset by peer
+01:04:hope1 quit:Ping timeout: 250 seconds
+01:37:boosure joined channel
+01:52:Petrus07 quit:Quit: Leaving.
+02:22:whocares_2_ joined channel
+02:25:whocares_2 quit:Ping timeout: 255 seconds
+02:56:Stevearzh joined channel
+03:43:cleamoon joined channel
+03:43:Stevearzh quit:Quit: This computer has gone to sleep
+04:19:MisakaMikoto|2 joined channel
+05:57:cleamoon quit:Ping timeout: 255 seconds
+06:12:cleamoon joined channel
+06:22:MisakaMikoto|2 joined channel
+06:57:tutu_wind joined channel
+06:57:tutu_wind quit:Client Quit
+06:57:tutu1 joined channel
+07:11:tutu quit:Remote host closed the connection
+07:19:cleamoon quit:Remote host closed the connection
+07:22:cleamoon joined channel
+07:49:Sleepwalking joined channel
+08:15:cleamoon quit:Ping timeout: 244 seconds
+08:30:cleamoon joined channel
+08:33:tutu_wind quit:Ping timeout: 245 seconds
+08:38:tutu_wind joined channel
+08:42:boosure quit:Ping timeout: 264 seconds
+09:08:tutu_wind quit:Quit: WeeChat 0.4.3
+09:25:boosure joined channel
+10:11:lh_cat quit:Remote host closed the connection
+10:16:erhandsome joined channel
+10:18:JQK_Phone joined channel
+10:36:ring joined channel
+11:07:lh_cat joined channel
+11:28:JQK_Phone quit:Ping timeout: 240 seconds
+11:44:Petrus07 joined channel
+11:45:hope1 joined channel
+11:46:Sleepwalking1 joined channel
+11:48:Sleepwalking quit:Ping timeout: 250 seconds
+12:00:JQK_Phone joined channel
+12:00:Plough joined channel
+12:10:Plough: 哦哦哦33
+13:01:condy joined channel
+13:06:lhanjian joined channel
+13:15:JQK_Phone quit:Remote host closed the connection
+13:17:lhanjian: 中午好
+13:22:lhanjian quit:Ping timeout: 255 seconds
+13:23:ring quit:Ping timeout: 245 seconds
+13:24:lhanjian joined channel
+13:29:hope1 quit:Ping timeout: 265 seconds
+13:29:Stevearzh joined channel
+13:32:lhanjian quit:Quit: 风光冉冉东西陌
+13:32:lhanjian joined channel
+13:39:condy: geordi: { while (*env) cout << *env++ << " "; }
+13:39:geordi: error: 'env' was not declared in this scope
+13:39:condy: geordi: int main(int argc, char* argv[], char* env[]) { while (*env) cout << *env++ << " "; }
+13:39:geordi: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin GLIBCXX_DEBUG_MESSAGE_LENGTH=0 LD_PRELOAD=libgeordi_preload.so libdiagnose_sigsys.so GEORDI_REQUESTER=condy GEORDI_WHERE=#c_lang_cn 
+13:47:lhanjian: condy酱终于抓出来了一些有用的信息
+13:47:condy: 0.0
+13:53:lh_mouse joined channel
+14:07:condy: geordi: << sizeof(foo); struct { char[0]; };
+14:07:geordi: error: expected unqualified-id before '[' token
+14:07:condy: geordi: << sizeof(foo); struct { char a[0]; };
+14:07:geordi: error: ISO C++ forbids zero-size array 'a'
+14:09:lhanjian: geordi, << getpagesize(); <<endl
+14:09:geordi: error: expected unqualified-id before '<<' token
+14:09:lhanjian: geordi, << getpagesize();
+14:09:geordi: 4096
+14:09:lhanjian: geordi, <<sysconf(_SC_PAGESIZE);
+14:09:geordi: 4096
+14:13:iyzsong joined channel
+14:14:lhanjian: q
+14:14:lhanjian: 墙国越来越牛了，连gnu.org我都得开https
+14:14:condy: geordi: << sizeof(foo); struct foo { static int a; }; int foo::a = 0;
+14:14:geordi: 1
+14:15:lh_mouse: 逗  那个一直都是 https
+14:15:iyzsong: http://www.gnu.org, normal here
+14:18:condy: http://www.gnu.org It works.
+14:19:lh_mouse: geordi, -r << is_empty<foo>();
+14:19:geordi: true
+14:19:xxxxxxxx quit:Quit: Leaving...
+14:19:iyzsong: I have just replace my OS with Guix, many things not work  >.<
+14:20:code_new joined channel
+14:21:erhandsome quit:Ping timeout: 255 seconds
+14:24:erhandsome joined channel
+14:26:lh_mouse: 逗
+14:29:Sleepwalking quit:Quit: Leaving.
+14:33:lh_mouse: geordi, { derived d; } struct base { explicit base() = default; } struct derived : base { };
+14:33:geordi: error: expected ';' after struct definition
+14:37:FrankHB quit:Read error: Connection reset by peer
+14:38:condy: geordi: insert ; after second }
+14:38:geordi: warning: unused variable 'd'
+14:38:condy: geordi: prepend -w
+14:38:geordi: <no output>
+14:41:FrankHB joined channel
+14:55:lhanjian quit:Ping timeout: 245 seconds
+15:02:lhanjian joined channel
+15:11:JQK quit:Remote host closed the connection
+15:22:condy: 之前见有人问舰娘为什么红，后有人问一本正经地回答说系统如何好，角色如何有特色，历史捏他如何多……我看了一半感觉都是废话啊，不就是妹子够多吗哪来这么多屁话啊！要把舰娘都改成舰男你看阿宅们倒是玩不玩啊！（zt）
+15:23:lh_mouse: @三国杀
+15:23:condy: @小乔
+15:23:lh_mouse: @condy
+15:25:condy: 我是男孩子...
+15:34:pocmon joined channel
+15:35:lh_mouse: condy, 爆照
+15:35:condy: >.<
+15:42:Plough: lh_mouse: 我把https弄上了
+15:42:Plough: https://irclogs.benihata.org/
+15:49:erhandsome quit:Ping timeout: 240 seconds
+15:52:lh_mouse: 0.0
+16:21:Stevearzh quit:Quit: This computer has gone to sleep
+16:25:iyzsong quit:Remote host closed the connection
+16:27:erhandsome joined channel
+16:27:hoxily joined channel
+16:29:pocmon quit:Quit: 飘来又飘去～
+16:29:tutu_wind joined channel
+16:46:lh_mouse: condy, 爆照
+16:46:condy: TAT
+17:48:Stevearzh joined channel
+17:53:Stevearzh quit:Client Quit
+17:55:Stevearzh joined channel
+17:56:hoxily quit:Ping timeout: 250 seconds
+17:57:lh_mouse quit:Read error: Connection reset by peer
+17:57:hoxily joined channel
+18:04:lh_mouse joined channel
+18:28:tutu_wind quit:Ping timeout: 244 seconds
+18:30:tutu_wind joined channel
+18:32:Plough: 命中惨成这样你他妈跟我说这是T有利!?
+18:41:Plough: S胜不可能
+18:44:hoxily quit:Ping timeout: 244 seconds
+18:45:hoxily joined channel
+18:50:Stevearzh quit:Quit: 离开
+19:18:lh_mouse: https://www.youtube.com/watch?v=eQJmTqiEAsk
+19:18:Plough: 这次道中脸这么好，我感觉我还是出不了货
+19:18:Plough: 道中秋云，没戏了
+19:20:Plough: 果然
+19:23:Stevearzh joined channel
+19:42:lh_mouse quit:Read error: Connection reset by peer
+19:53:Plough: 我操
+19:53:Plough: 我他妈连赤城都出了朝云就是不来
+19:55:random341 joined channel
+19:57:random341 quit:Client Quit
+20:12:Plough: 我就看看是时雨先上Lv70还是朝云先来
+20:21:lhanjian quit:Quit: 风光冉冉东西陌
+20:22:ptbsare joined channel
+20:35:tutu_wind quit:Ping timeout: 258 seconds
+20:35:ptbsare left channel:"离开"
+20:36:erhandsome quit:Ping timeout: 272 seconds
+20:38:erhandsome joined channel
+20:43:Stevearzh quit:Quit: This computer has gone to sleep
+21:10:Stevearzh joined channel
+21:11:Plough: 我操我不要防晒霜啊啊啊啊啊啊啊啊
+21:11:Plough: 我对防晒霜一点兴趣都没有别给我出了行不行啊
+21:16:Stevearzh quit:Quit: WeeChat 1.0.1
+21:19:tutu joined channel
+21:23:Stevearzh joined channel
+21:25:Stevearzh quit:Quit: WeeChat 1.0.1
+21:27:Stevearzh joined channel
+21:27:Stevearzh quit:Client Quit
+21:29:Stevearzh joined channel
+21:43:tutu quit:Ping timeout: 256 seconds
+22:08:xxxxxxxx joined channel
+22:14:endle joined channel
+22:17:Stevearzh quit:Quit: WeeChat 1.0.1
+22:19:tutu joined channel
+22:21:Stevearzh joined channel
+22:27:condy: 各位腋间愉快！
+22:27:condy quit:Quit: leaving
+22:34:Plough quit:Remote host closed the connection
+22:50:code_new quit:Ping timeout: 245 seconds
+23:03:code_new joined channel
+23:07:endle quit:Quit: Leaving
+23:25:izmntuk joined channel
+23:36:tutu quit:Ping timeout: 272 seconds
+23:43:blackskygg joined channel
+23:46:blackskygg: 为什么那么久没来topic变成了口支的
+23:47:blackskygg: 还有一直很在意那上面的两句诗
+23:51:Stevearzh quit:Quit: WeeChat 1.0.1
+23:53:blackskygg quit:Quit: Bye
+23:53:blackskygg joined channel
+23:59:tutu joined channel

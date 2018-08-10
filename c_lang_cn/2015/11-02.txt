@@ -1,0 +1,237 @@
+01:04 yzld2002 quit:Remote host closed the connection
+06:20 tutu_wind joined channel
+07:09 cleamoon quit:Ping timeout: 256 seconds
+07:16 cleamoon joined channel
+07:32 cleamoon quit:Ping timeout: 264 seconds
+07:33 cleamoon joined channel
+07:48 xxxxxxxx quit:Quit: Leaving...
+07:57 FrankHB quit:Ping timeout: 244 seconds
+07:58 tutu_wind: morning ~
+08:26 lh_mouse joined channel
+08:34 FrankHB joined channel
+08:39 x-iyzsong joined channel
+09:08 Stevearzh quit:Ping timeout: 250 seconds
+09:25 lhanjian joined channel
+09:28 x-iyzsong: 早!
+09:40 lhanjian: x-iyzsong, 早
+09:59 yggds1 joined channel
+10:00 etby joined channel
+10:48 Stevearzh joined channel
+11:05 yggds joined channel
+11:07 yggds1 quit:Ping timeout: 250 seconds
+11:17 lh_mouse quit:Ping timeout: 240 seconds
+11:18 lh_mouse joined channel
+11:30 etby quit:Ping timeout: 244 seconds
+12:00 cleamoon quit:Ping timeout: 255 seconds
+12:24 yzld2002 joined channel
+12:24 x-iyzsong joined channel
+12:57 condy quit:Ping timeout: 252 seconds
+12:58 condy joined channel
+13:02 Mokou joined channel
+13:04 Flandre joined channel
+13:10 lh_mouse: IP地址: 47.88.137.33美国
+14:07 whocares_2_ joined channel
+14:08 whocares_2 quit:Ping timeout: 256 seconds
+14:24 yzld2002 quit:Remote host closed the connection
+14:34 sismvg joined channel
+14:37 sismvg: http://www.ithome.com/html/it/185915.htm
+14:46 x-iyzsong joined channel
+14:46 sismvg: 出口好慢
+14:49 FrankHB quit:Ping timeout: 246 seconds
+15:01 blackskygg joined channel
+15:01 blackskygg quit:Client Quit
+15:02 blackskygg joined channel
+15:02 blackskygg: 有没有人知道怎么收发一个Ethernet II帧
+15:03 Stevearzh quit:Ping timeout: 240 seconds
+15:03 sismvg: win10自动更新搞得鬼。。
+15:04 blackskygg: socket(AF_PACKET, SOCK_DGRAM, htons(ETH_P_ALL))
+15:05 blackskygg: 这个如果我在这个socket上调用recv()会得到什么东西？
+15:06 lhanjian: 这个直接看UNP吧
+15:06 lhanjian: 收发IP及其以下层的Socket已经没什么保障可言了
+15:07 blackskygg: 因为现在是要求实现一个在数据链路层上的私有协议
+15:07 blackskygg: 然后报文是以Ethernet II的形式发过来的
+15:07 lhanjian: 发包大概用Socket还有可能实现。收包的话就得用些库了
+15:07 lhanjian: libpcap之类的
+15:08 blackskygg: 为什么
+15:08 blackskygg: 收包不能用socket实现
+15:09 lhanjian: 比如你想接受一个ICMP包，协议栈为什么要交给你呢？
+15:09 lhanjian: 协议栈自己应该相应这个ICMP
+15:10 lhanjian: 响应
+15:10 lhanjian: 总之RAW SOCKET的接受不靠谱，高度取决于你的OS怎么实现协议栈的
+15:10 lhanjian: 这种事情，大概应该用libnet（发）+libpcap（收）
+15:20 blackskygg: 因为我要实现一个数据链路层上的协议，所以只好使用raw socket
+15:21 lhanjian: 发包可以用RAW SOCKET
+15:21 lhanjian: 收包的话，如果想要可靠的从链路层上收到，你得用更贴近协议栈的接口
+15:23 blackskygg: 好吧
+15:23 blackskygg: 谢谢
+16:10 xxxxxxxx joined channel
+16:29 blackskygg quit:Quit: ~~
+16:38 StarDustX joined channel
+16:47 sismvg: (斜眼)文化人就是臭老九，好好的实数方程非要你写成复形式
+16:49 xxxxxxxx: http://ww1.sinaimg.cn/mw1024/be6bdb92gw1exluwpl571j20eu0dxdj6.jpg
+16:52 StarDustX quit:Ping timeout: 250 seconds
+16:53 lhanjian: xxxxxxxx, 以后不会再有用这种东西的需求了。再说也不新鲜
+16:55 StarDustX joined channel
+16:57 sismvg: 雕虫小技，何足挂齿
+16:57 sismvg: 每次看到传奇的HPMP条就让我想到百事可乐。。
+17:00 xxxxxxxx: lhanjian: 你实践过么....
+17:01 lhanjian: xxxxxxxx, 穿件外套把袖子放在桌子上结果左手藏在抽屉里这件事当然实践过
+17:01 lhanjian: 然并卵，正常人是不会总盯着自己裤裆看的
+17:01 xxxxxxxx: 然而袖子看上去不回很不正常么?
+17:02 xxxxxxxx: 会
+17:03 lhanjian: 一般不容易，你往里面塞给文具盒什么的
+17:03 lhanjian: 冬天嘛，手藏起来很正常
+17:11 sismvg: pixiv的合法幼女标签好污
+17:13 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=3b9cd13ed12a60595210e1121835342d/0be4612442a7d933a206d984ab4bd11372f00175.jpg
+17:17 xxxxxxxx: 放到水里能钓上来一万条鱼
+17:21 sismvg: walking dead!
+17:21 * sismvg is a walker
+17:22 Dove joined channel
+17:28 lh_mouse: 药元四依然吐不出象牙
+17:29 sismvg: 不用a?
+17:29 sismvg: 查了没错啊
+17:38 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.2/20151014143721]
+17:40 lhanjian left channel:"Leaving"
+17:43 lhanjian__ joined channel
+18:08 lhanjian__ quit:Ping timeout: 272 seconds
+18:30 Mokou: 轮形T有利
+18:30 Mokou: 田中你妈死得怎么这么惨
+18:33 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:34 Mokou: 又他妈轮形
+18:59 boosure quit:Quit: Get your hand off of it
+19:20 cleamoon joined channel
+19:21 Mokou: 强行中破
+19:21 Mokou: 强行大破
+19:21 xxxxxxxx: 安倍刚走 美国务卿又访中亚5国宣布新援助
+19:25 tutu_wind quit:Ping timeout: 260 seconds
+19:26 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/24/dj_162872.jpg
+19:27 cleamoon: 官方媒体报道，中国计划从2020年起建造世界最强大的超级对撞机。中科院高能物理研究所所长王贻芳说，对撞机的最终版概念设计预计将在2016年底完成，它设计将能产生7倍于LHC的对撞能量，能生成数百万希格斯玻色子。王贻芳称，LHC已经达到了它的能级设计限制，无法再在现有设施上大幅提升对撞能力。欧洲粒子物理研究所
+19:27 cleamoon: 也有LHC升级计划。中国的超级对撞机计划始于2013年，候选建造位置是秦皇岛。
+19:28 cleamoon: 10月30日，哈尔滨佛学院揭牌仪式在哈尔滨极乐寺隆重举行。黑龙江省委统战部、黑龙江省民族事务委员会、黑龙江省宗教事务局等政府相关部门出席了仪式并揭牌。
+19:28 cleamoon:   #终于
+19:31 cleamoon: http://www.solidot.org/story?sid=46011
+19:38 xxxxxxxx: 字母组哈哈哈
+19:38 lh_mouse: geordi, { int *p; cout <<decltype(*p); }
+19:38 geordi: error: expected primary-expression before 'decltype'
+19:38 lh_mouse: geordi, { int *p; cout <<TYPE<decltype(*p)>(); }
+19:38 geordi: error: no matching function for call to 'TYPE()'
+19:38 lh_mouse: geordi, { int *p; cout <<TYPE<decltype(*p)>; }
+19:38 geordi: int&
+19:47 Flandre quit:Ping timeout: 240 seconds
+20:03 code_new joined channel
+20:03 Flandre joined channel
+20:07 lh_mouse quit:Ping timeout: 246 seconds
+20:18 StarDustX joined channel
+20:26 iyzsong: x.x
+20:49 Flandre: iyzsong: prpr
+20:49 Flandre: iyzsong: 你住在哪里呀？
+20:49 iyzsong: 龙泽/回龙观
+20:50 Flandre: iyzsong: 那你不是离 Stevearzh 特别得近吗。。
+20:50 iyzsong: 不知道 不熟啊
+21:01 Stevearzh joined channel
+21:02 iyzsong: StarDustX: 晚上好呀
+21:02 iyzsong: Stevearzh: 晚上好~
+21:02 Stevearzh: iyzsong: 晚上好
+21:03 StarDustX: 晚上好
+21:04 Flandre: iyzsong: prpr
+21:05 iyzsong: Stevearzh: 你在哪里上班？
+21:05 Stevearzh: iyzsong: 望京啊
+21:07 iyzsong: 挺远..
+21:07 iyzsong: 我电话面过一家在望京的 把我pass了 - -b
+21:08 Stevearzh: 唔。。
+21:08 Stevearzh: 你是找运维的工作?
+21:09 iyzsong: 不是的 当时还是找的dev
+21:09 Stevearzh: 哦
+21:11 iyzsong: 我还在石景山干过1个月.  我住在回龙观 有空带我玩呀
+21:11 Stevearzh: iyzsong: 嗯好啊
+21:12 Stevearzh: 你住在哪，我在回龙观地铁对面
+21:12 Stevearzh: 不过最近一直都会比较忙了。。
+21:12 iyzsong: 我在一个圈里 融泽嘉园  离龙泽站更近
+21:13 iyzsong: 你那边我没去过..
+21:13 Stevearzh: O.O
+21:13 erhandsome: 约！
+21:13 Stevearzh: 龙泽就是下一站嘛
+21:13 sismvg joined channel
+21:13 iyzsong: 这周末我还要去武汉 下周有空
+21:13 Stevearzh: erhandsome: 二帅来啊
+21:14 Stevearzh: 下周末我尽量抽时间。。
+21:14 erhandsome: Stevearzh: 没钱天天跑...
+21:14 * iyzsong 很闲~
+21:14 Stevearzh: erhandsome: 。。。
+21:14 sismvg: 百度搜索：急性肺炎
+21:14 * Stevearzh 累死...
+21:14 sismvg: noooooooooo,希望这是假消息
+21:14 erhandsome: Stevearzh: 等德国佬回来的时候再面吧
+21:15 Stevearzh: 卧槽，德国佬啥时候回来
+21:15 erhandsome: Stevearzh: 他说12月
+21:15 Stevearzh: O.O
+21:15 erhandsome: Stevearzh: 还要请瓜哥吃饭呢
+21:15 Stevearzh: 好
+21:17 iyzsong: sismvg: 你跪啦?
+21:18 sismvg: 伊澄的声优死了
+21:18 sismvg: 38岁
+21:18 Mokou: 大清亡了
+21:18 iyzsong: 看到了 虽然不知道是谁 <_<
+21:19 iyzsong: 我的另一个频道发的这个 => https://www.reddit.com/r/anime/comments/3r61t2/matsuki_miyu_anna_nishikinomiya_yoshinoyasensei/
+21:19 erhandsome: iyzsong: 你也是胖子么
+21:19 iyzsong: 不是
+21:20 Stevearzh: 。。。
+21:21 xxxxxxxx: 也是胖子233
+21:21 sismvg: 上周删的帖子，今天给了我提醒》。
+21:22 cleamoon quit:Ping timeout: 240 seconds
+21:25 sismvg: 试试表明，生病时就工作和立死亡flag差不多
+21:31 * iyzsong RIP
+21:34 xxxxxxxx: 药娘四表示试了 药娘四还活着
+22:07 wlemuel joined channel
+22:14 Flandre quit:Quit: WeeChat 1.3
+22:20 lh_mouse joined channel
+22:27 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.2/20151014143721]
+22:31 lhanjian__ joined channel
+22:40 Mokou quit:Quit: 睡觉
+22:50 yzld2002 joined channel
+23:02 wlemuel quit:Ping timeout: 264 seconds
+23:30 dantznc joined channel
+23:35 dantmnf quit:*.net *.split
+23:43 lhanjian__ quit:Ping timeout: 260 seconds
+23:45 lh_mouse: geordi, << {1,2,3}.size()
+23:45 geordi: error: expected primary-expression before '{' token
+23:45 lh_mouse: geordi, << new auto{1,2,3}.size()
+23:45 geordi: error: direct-list-initialization of 'auto' requires exactly one element
+23:46 lh_cat joined channel
+23:46 lh_cat: geordi, << a.size(); auto a = {1,2,3};
+23:46 geordi: 3
+23:46 lh_mouse quit:Disconnected by services
+23:48 condy: geordi: -r << TYPE<decltype(a)>; 
+23:48 geordi: error: 'a' was not declared in this scope
+23:48 condy: geordi: << TYPE<decltype(a)>; auto a = {1,2,3};
+23:48 geordi: initializer_list<int> 
+23:48 lh_not_bot quit:Disconnected by services
+23:49 condy: geordi: << TYPE<decltype({1,2,3})>;
+23:49 geordi: error: parse error in template argument list
+23:50 lh_mouse: condy, 摸头
+23:50 condy: o.o
+23:50 lh_mouse: condy, 摸头
+23:50 lh_mouse: condy, 求近照
+23:50 condy: (┙>∧<)┙へ┻┻
+23:50 lh_not_bot joined channel
+23:51 lh_mouse: condy, 求近照
+23:51 condy: 瞎眼向（
+23:51 condy: 还是算了。
+23:54 lh_mouse: condy, 求近照
+23:54 condy: >_<
+23:54 condy: 真瞎眼向啊！
+23:54 lh_mouse: condy, 求近照
+23:55 condy: ……
+23:55 lh_mouse: condy, 求近照
+23:55 lh_not_bot quit:Ping timeout: 246 seconds
+23:55 lh_not_bot joined channel
+23:56 condy: Pia!<(=ｏ ‵-′)ノ☆ lh_mouse 
+23:56 lh_mouse: condy, 求近照
+23:56 condy: Orz, 要不要这么坚持（
+23:57 lh_mouse: condy, 求近照
+23:57 condy: ...
+23:57 lh_mouse: condy, 求近照
+23:57 condy: 来北京玩啊（
+23:57 lh_mouse: condy, 求近照
+23:58 lh_mouse: 来上海玩啊（
+23:58 Stevearzh: 233

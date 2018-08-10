@@ -1,0 +1,760 @@
+00:00 lhanjian: 哦
+00:01 lhanjian: OK，回归正题，耗子现在这样弄了个框架我就不能直接侵入式的开发了，那么现在应该怎么做？
+00:01 lh_mouse: 配置文件不应该随随便便就覆盖    所以我写了个 run_server 用本地的配置文件
+00:01 lh_mouse: 侵入式？
+00:02 lh_mouse: 改这个文件   https://github.com/lhmouse/poseidon-medusa/blob/master/src/proxy_http_session.cpp  
+00:03 lh_mouse: 实际上 poseidon 改成闭源的  就是这样的结果
+00:03 lh_mouse: 只有头文件和动态库  没有实现的源码
+00:03 Stevearzh quit:Quit: Be back later...
+00:03 lh_mouse: onHeader  里面判定直接 GET 和 CONNECT 的两种使用姿势  然后分别处理
+00:04 lh_mouse: onRequest 不用动 
+00:04 Stevearzh joined channel
+00:04 lh_mouse: 例如 CONNECT 谓词   创建一个 TCPClient 直接返回就行了
+00:07 lhanjian: 耗子说的，“空的HTTPserver”是什么意思？
+00:08 Stevearzh quit:Ping timeout: 240 seconds
+00:09 lh_mouse: 就是说它是一个 HTTP Server  但是只会返回 403  
+00:09 lh_mouse: 别的什么都不会做
+00:09 code_new quit:Remote host closed the connection
+00:10 lh_mouse: lhanjian, 你试试 curl -v '114.215.147.2:5322'
+00:13 lhanjian: soga
+00:14 lhanjian: 不过 curl -v 'localhost:5259'不会成功……2015-04-27 00:10:08.103 00 [   N] ERROR ::SSL_accept() = -1, ::SSL_get_error() = 1 #src/tcp_server_base.cpp:38
+00:14 lh_mouse: https://
+00:15 lhanjian: soga
+00:16 lh_mouse: 这个我不知道为什么没法用浏览器访问
+00:22 lhanjian: lh_mouse, 我这里能显示404
+00:22 lhanjian: Firefox
+00:22 lhanjian: 不过我把端口改成443了
+00:22 lhanjian: 又不行了……
+00:34 lh_mouse: lhanjian, poseidon    src/ssl_factories.cpp      30 行 57 行  TLSv1 改成 SSLv23
+00:34 lh_mouse: 这样就能用浏览器访问了
+00:34 lhanjian: soga
+00:35 lhanjian: 这个先不管，反正要实现的也不是这个……
+00:38 lhanjian: 没电了，碎叫
+00:38 lhanjian quit:Quit: Leaving
+00:45 lh_mouse quit:Read error: Connection reset by peer
+00:50 hoxily quit:Ping timeout: 244 seconds
+00:55 lh_cat joined channel
+00:57 lh_cat: 大凤不是被一发鱼雷就击沉的么
+01:01 cleamoon_ quit:Ping timeout: 265 seconds
+01:03 cleamoon_ joined channel
+01:14 wlemuel quit:Ping timeout: 276 seconds
+01:28 cleamoon_ quit:Ping timeout: 250 seconds
+01:29 cleamoon_ joined channel
+01:43 hoxily joined channel
+01:48 hoxily quit:Ping timeout: 240 seconds
+02:34 cleamoon_ quit:Ping timeout: 250 seconds
+02:36 cleamoon_ joined channel
+02:44 hoxily joined channel
+03:30 cleamoon_ quit:Ping timeout: 250 seconds
+03:31 cleamoon_ joined channel
+03:34 xxxxxxxx: cleamoon_: 幼女还打不过史莱姆么?
+04:07 cleamoon_ quit:Ping timeout: 245 seconds
+04:08 cleamoon_ joined channel
+04:16 xxxxxxxx quit:Quit: Leaving...
+05:58 boosure quit:Quit: Get your hand off of it
+06:00 cleamoon_ quit:Ping timeout: 256 seconds
+06:02 cleamoon_ joined channel
+06:19 cleamoon joined channel
+06:53 lh_cat quit:Quit: Connection closed for inactivity
+07:00 xxxxxxxx joined channel
+07:36 cleamoon_ quit:Remote host closed the connection
+07:37 cleamoon_ joined channel
+08:16 OO_after quit:Ping timeout: 256 seconds
+08:23 OO_after joined channel
+08:56 izmntuk quit:Quit: leaving
+09:12 pocmon joined channel
+09:12 lh_mouse joined channel
+09:18 cleamoon quit:Ping timeout: 244 seconds
+09:21 xxxxxxxx quit:Quit: Leaving...
+09:25 Stevearzh joined channel
+09:25 Xilzzerts joined channel
+09:26 Stevearzh quit:Read error: Connection reset by peer
+09:26 Stevearzh joined channel
+09:46 whatofor joined channel
+09:47 pocmon quit:Remote host closed the connection
+09:51 pocmon joined channel
+10:03 sismvg joined channel
+10:03 sismvg: hash_map的迭代器何时会失效？
+10:04 sismvg: geordi<<{hash_map<int,int> mp;map.insert(make_pair(10,10)); map.insert(make_pair(20,10)); auto iter=map.find(20); map.erase(10); iter->second;}
+10:04 geordi: error: expected primary-expression before '{' token
+10:04 sismvg: geordi,{hash_map<int,int> mp;map.insert(make_pair(10,10)); map.insert(make_pair(20,10)); auto iter=map.find(20); map.erase(10); iter->second;}
+10:04 geordi: error: 'hash_map' was not declared in this scope
+10:05 sismvg: geordi,{std::hash_map<int,int> mp;map.insert(make_pair(10,10)); map.insert(make_pair(20,10)); auto iter=map.find(20); map.erase(10); iter->second;}
+10:05 geordi: error: 'hash_map' is not a member of 'std'
+10:05 sismvg: ...
+10:11 lhanjian joined channel
+10:36 lh_cat joined channel
+10:51 lhanjian: lh_cat, 耗子有没有对uri做大小写统一为大写或小写的转换？
+10:53 cleamoon_ quit:Ping timeout: 265 seconds
+10:54 cleamoon_ joined channel
+11:02 lh_not_bot: lhanjian: 不应该转换
+11:03 lh_not_bot: 明确来讲就是不允许   连改写都不许做
+11:03 lhanjian: 这就导致 必须手工处理 http Http HTtp htTP …………………………
+11:03 lh_not_bot: URI 不一定是真的 URI   比如 websocket
+11:03 lh_not_bot: lhanjian: 第一  URI 可能是大小写敏感的   第二 有些东西根本就不是真的 URI 比如 WebSocket
+11:03 lhanjian: 好
+11:10 sismvg: windows有提供spinlock吗
+11:10 lh_not_bot: 没有
+11:11 lh_not_bot: geordi: replace hash_map with unordered_map 
+11:11 geordi: error: missing template arguments before '.' token
+11:12 sismvg: 。。我找到了个PKSPIN_LOCK结构
+11:12 lhanjian: 那个是win内核驱动编程采用的spinlock吧
+11:13 lhanjian: 才用
+11:13 lh_not_bot: sismvg: https://github.com/lhmouse/MCF/blob/master/MCF/Thread/_SpinLock.hpp#L16
+11:21 Stevearzh quit:Ping timeout: 244 seconds
+11:22 lhanjian: lh_not_bot, 看起来我要在onHeader里面完成GET的uri发现、转发uri的创建，然后再建立一个HttpClient获取数据并返回？
+11:22 lh_not_bot: 大体上是这样  但是必须异步做
+11:23 cleamoon_ quit:Ping timeout: 252 seconds
+11:24 lhanjian: 然后我应该调用哪些接口……
+11:24 lhanjian: 就这个HttpClient
+11:24 lh_not_bot: onHeader 里面创建个 client 返回就行了   client 得处理返回的数据
+11:25 lh_not_bot: 以 TcpClientBase 做基类 重写 
+11:25 lh_not_bot: onReadAvail
+11:26 lh_not_bot: 这里得完成对服务器返回的解码处理    然后转发给原来的 session
+11:26 lh_not_bot: 代理服务器收到被代理客户端的请求时候要把 Proxy- 的报头全部删除  然后加一个 X-Forward-For
+11:27 lhanjian: X-Forward-For 应该不是，应该是Via……
+11:27 lhanjian: TinyProxy用的是Via
+11:28 lh_not_bot: 我在考虑另一个问题
+11:29 lh_not_bot: 因为 CONNECT 后面的东西是明文发的   有可能被拦截掉
+11:29 lhanjian: 昨天我就说了这个问题。
+11:29 lh_not_bot: 因为我现在是两个  VPS  我提一点我的想法
+11:29 lhanjian: 代理在与客户连接的时候，就得先ssl一下……
+11:30 lh_not_bot: 代理不能用 SSL
+11:30 lh_not_bot: 如果被代理的连接也是要 SSL 的怎么办
+11:30 lh_not_bot: 我现在这个阿里云的直接架一个代理服务端  收到请求之后加密一遍用 cbpp 转发到美国 vps 上去  用那个去 fetch
+11:31 lhanjian: 于是又走回了同时要实现Client/Server的老路……
+11:31 lh_not_bot: 这个肯定要的  但是 cbpp client 是现成的
+11:32 lhanjian: 被代理的连接也是SSl有什么关系？代理服务器又不关心CONNECT之后，隧道里走的连接是什么数据
+11:32 lh_not_bot: lhanjian: 你一开始 用 HTTPS 的时候 CONNECT 本身就是 SSL 了
+11:32 lh_not_bot: 你难道想在 SSL 里面套一个 SSL 隧道？
+11:32 lhanjian: 对啊……
+11:32 lh_not_bot: 理想很丰满 现实很骨感
+11:33 lhanjian: 不然怎么隐匿CONNECT的URI……
+11:33 lhanjian: 如果要自己做混淆
+11:33 lhanjian: 那又何必要做HTTP代理……
+11:33 lh_not_bot: 你得照顾浏览器
+11:33 lhanjian: 浏览器就是会用GET发代理请求，这个我们就已经没办法了
+11:34 lh_not_bot: 不一定    很多客户端都可以走隧道
+11:34 lh_not_bot: 不是说浏览器
+11:34 lh_not_bot: 比如  邮件客户端
+11:34 lh_not_bot: 所以必须支持两套  
+11:34 lhanjian: 我觉得不一定是SSL下SSL，但是必须在一条带混淆/加密的隧道下面走数据是肯定的……
+11:35 lh_not_bot: 是的
+11:35 lhanjian: 如果浏览器可以支持https 的 proxy，那么就ssl下ssl，也挺好的，至少用起来简单
+11:35 lhanjian: 如果要另外开发客户端，那么就走回类似agent软件的老路里面去了……
+11:37 lhanjian: 当然，用https下https，那也没好到哪儿去，毕竟用户得自行配置证书了。
+11:37 lhanjian: 就和GoA那个证书导入的过程类似
+11:38 lhanjian: 而从Chrome和google.com来看，他们已经不接受在google.com使用https代理然后带上https代理的自签名证书了。
+11:39 lhanjian: 也就是说https代理这个做法在严格的https验证的情况下已经不可行了……
+11:40 lhanjian: 应该是从Chrome 41开始的
+11:41 hoxily_ joined channel
+11:44 hoxily quit:Read error: Connection reset by peer
+11:44 lhanjian quit:Quit: Leaving
+11:50 lhanjian joined channel
+11:54 Xilzzerts quit:Read error: Connection reset by peer
+12:01 Xilzzerts joined channel
+12:10 xeirrr joined channel
+12:21 lh_mouse: lhanjian, 本地客户端转发是一种解决方案
+12:22 lh_mouse: 我的想法是   用国内的 VPS 转发  这样省去本地客户端
+12:22 lh_mouse: lhanjian, GoA 那个属于正向代理  需要代理配置证书
+12:22 lhanjian: 这样不就强迫客户连接国内VPS了么……
+12:23 lh_mouse: 如果用 SSL Tunnel 本质上是客户端和被代理服务器直接通信
+12:23 lh_mouse: lhanjian, 有好处  方便设定 pac
+12:23 lhanjian: 是这样。
+12:23 lhanjian: 能PAC也好
+12:23 lh_mouse: 或者干脆白名单   直接转发国内
+12:23 lh_mouse: 这样走的 hops 比较少
+12:23 lhanjian: 不过那样就做socks5代理算了
+12:23 xeirrr: goa你们还能用？
+12:23 lh_mouse: 挂了
+12:24 lhanjian: xeirrr, 不能。只是在讨论proxy的实现和使用
+12:24 lh_mouse: 用国内 vps  实际上和本地客户端没区别
+12:24 lh_mouse: 但是管理起来方便
+12:24 xeirrr: 哦，我这里自14年下旬就一直皇子
+12:25 xeirrr: 黄字×
+12:25 xeirrr: 黄字*
+12:30 yzld2002 joined channel
+12:36 xeirrr quit:Quit: Leaving
+12:41 pocmon quit:Remote host closed the connection
+12:41 pocmon joined channel
+12:48 pocmon quit:Read error: Connection reset by peer
+12:49 pocmon joined channel
+12:52 lhanjian: lh_mouse, 如果是HTTPS tunnel的话，就得确认现有的浏览器是不是真的会与代理建立SSL连接了
+12:57 lhanjian: 确认是支持的。至少chrome自带……
+12:57 lhanjian: http://www.chromium.org/developers/design-documents/secure-web-proxy
+13:05 lh_not_bot: lhanjian: 你可以试试他发送的是什么
+13:05 izmntuk joined channel
+13:12 lh_mouse: 这样其实还要写个 PAC
+13:18 izmntuk quit:Ping timeout: 244 seconds
+13:18 iyzsong: PAC不是静态serve的一个js文件么?
+13:21 lh_mouse: iyzsong, 不要求是静态
+13:28 izmntuk joined channel
+13:29 hoxily- joined channel
+13:29 iyzsong: 哦 我firefox直接用的‘file:///...'
+13:31 theJian joined channel
+13:33 hoxily_ quit:Ping timeout: 256 seconds
+13:44 theJian quit:Quit: Leaving
+13:45 theJian joined channel
+13:46 theJian quit:Client Quit
+13:50 izmntuk quit:Quit: leaving
+13:54 xeirrr joined channel
+14:02 Matsune joined channel
+14:03 Matsune: http://www.bilibili.com/video/av2235473/
+14:14 hoxily_ joined channel
+14:17 Guest31 joined channel
+14:18 Guest31 quit:Max SendQ exceeded
+14:20 Guest31 joined channel
+14:27 Guest31 quit:Ping timeout: 272 seconds
+14:28 hoxily- joined channel
+14:28 hoxily_ quit:Ping timeout: 255 seconds
+14:30 lhanjian: 证书真是TMD操蛋玩意儿
+14:32 Xilzzerts: 上次破解某RSA加密的东西
+14:32 Xilzzerts: 在程序里面翻到了他的公钥
+14:33 Xilzzerts: 发现字符串是私钥加密的。。。
+14:35 lhanjian: 私钥加密2333333333333
+14:35 lhanjian: 这是作大死吧
+14:36 lhanjian: lh_mouse, 在https proxy下面，还是用的本来的GET http/CONNECT https
+14:37 lhanjian: 哦，直接就不用CONNECT https了，直接GET了……
+14:39 lhanjian: 但是奇妙的是，http用的GET http://xxx，但是https反而直接就GET /uri 了
+14:41 shui_code joined channel
+14:42 tutu1 joined channel
+14:42 Guest31 joined channel
+14:49 shui_cod1 joined channel
+14:53 shui_code quit:Ping timeout: 256 seconds
+14:57 cui_inspur joined channel
+14:59 Xilzzerts: 不是还有个Host域吗
+15:00 Guest31 quit:Quit: Textual IRC Client: www.textualapp.com
+15:00 Guest31 joined channel
+15:03 lhanjian: Xilzzerts, 那个不会因为http proxy转发改变
+15:03 lh_cat quit:Quit: Connection closed for inactivity
+15:27 sismvg: geordi,{int fun(int){} typedef result_of<decltype(fun)>::type type;}
+15:27 geordi: error: a function-definition is not allowed here before '{' token
+15:27 sismvg: geordi,{int fun(int){}; typedef result_of<decltype(fun)>::type type;}
+15:27 geordi: Same error.
+15:27 sismvg: geordi,{typedef result_of<int(*)(int)>::type type;}
+15:27 geordi: error: 'type' in 'class result_of<int (*)(int)>' does not name a type
+15:29 sismvg: std::result_of<int(int)>::type 提示函数不接受一个参数是怎么回事..
+15:30 cleamoon joined channel
+15:34 Stevearzh joined channel
+15:41 cleamoon quit:Ping timeout: 255 seconds
+15:45 lhanjian: firefox死活连接不上https proxy
+15:47 lhanjian: opera/chromium都没问题
+15:52 lhanjian: firefox-developer成功
+15:52 lhanjian: 看起来是FoxyProxy和自带的代理设置冲突有点悲剧
+15:57 tutu_wind: shadowsocks 可以用的 ...
+16:01 lhanjian: tutu_wind, 我在测试https proxy，准备写一个……
+16:01 tutu_wind: lhanjian: 喔喔 , 那是什么啊 ? 自己做一个代理么?
+16:01 lhanjian: 差不多
+16:01 tutu_wind: lhanjian: 可以效力么?
+16:02 lhanjian: 因为https proxy不需要客户端的
+16:02 lhanjian: tutu_wind, 问吱，用的他的poseidon框架
+16:02 tutu_wind: soga ~ 
+16:02 tutu_wind: lhanjian: 原来如此啊 ... 小耗的东西还木看多少呢...
+16:02 tutu_wind: lhanjian: 给你加油了 
+16:09 lhanjian: tutu_wind, 我也是照着葫芦画瓢，摸着石头过河……
+16:13 ppts quit:Ping timeout: 264 seconds
+16:22 tutu_wind: lhanjian: 总之加油啦 ~ 
+16:22 tutu_wind: lhanjian: 我也努力 ~ 
+16:22 tutu_wind quit:Quit: WeeChat 1.1.1
+16:33 yzld2002 quit:Remote host closed the connection
+16:33 yzld2002 joined channel
+16:37 yzld2003 joined channel
+16:37 yzld2002 quit:Remote host closed the connection
+16:41 shui_cod1 quit:Quit: WeeChat 0.4.2
+17:16 lhanjian quit:Remote host closed the connection
+17:31 cleamoon joined channel
+17:40 pocmon quit:Remote host closed the connection
+17:44 condy: o.o
+17:52 xeirrr joined channel
+17:53 cleamoon quit:Ping timeout: 272 seconds
+17:55 cleamoon joined channel
+18:01 cui_inspur quit:Quit: 离开
+18:16 lolisa joined channel
+18:19 cleamoon: 【多地天猫店主被约谈补税，声称“只能提价或破产跑路”】一天猫店主最近被国税局约谈，称其去年交易额80万以下的申报较低，根据实际交易400多万，要补交28%即100多万。对此，很多店主都承认存在刷单。由于担心补交数额巨大，一些店主打算提价，甚至有人要关店跑路。
+18:19 cleamoon: lolisa, 爆
+18:20 lolisa: 话说我今天任务超量完成了，剩下的时间各位觉得该学数学学逻辑学还是拿去传教= =
+18:24 cleamoon: lolisa, 你来给我传教吧
+18:25 lolisa: 。。。你想学Coq？
+18:25 cleamoon: 如果好玩的话
+18:28 lolisa: 好吧，你对semantic有兴趣吗？
+18:28 lolisa: 有兴趣的话可以看Software Foundation，只想学Coq的话看Coq Art，不懂的尽管问就是了，我会尽力解答的=w=
+18:29 cleamoon: .....你这传教得也太不专业了
+18:30 lolisa: 我不会教人。。。另外我传教本来是打算写写effective coq
+18:31 cleamoon: 你说说coq能做些什么好玩的
+18:32 lolisa: 在Coq里你能写程序，你能证定理，你能程序当定理定理当程序，你还能自动化的写程序写定理（ATP
+18:33 Matsune: 这玩意是只能证明定理还是可以试着证些猜想？
+18:33 lolisa: 比如说我有一次就让Coq给我写出了七树归一的split的代码（其实我手动化了几行，不然会爆CPU
+18:33 lolisa: 可以试着证明。
+18:33 Matsune: 有什么建树吗
+18:33 Matsune: 有没有什么比较值得一提的成果
+18:34 cleamoon: 也就是说全都让coq写很慢？
+18:34 lolisa: cleamoon, ATP 本身就是复杂度爆表的东西。
+18:34 lolisa: 四色定理
+18:34 lolisa: Feit-Thompson Theorem（我也不知道是什么鬼
+18:34 lolisa: C subset
+18:34 lolisa: 的compiler
+18:35 lolisa: 另外HOTT有很多地方都用了Coq去formalize
+18:35 cleamoon: HOTT？
+18:35 Matsune: 四色定理
+18:36 Matsune: 话说到现在都还有许多数学家并不承认机器证明的结果
+18:36 lolisa: 我也不知道HOTT是什么，学HOTT要Cat theory，我还在死啃。。。
+18:37 lolisa: Matsune,就算如此，Coq也可以输出人类读得懂的proof。。。
+18:37 Matsune: lolisa:  其实没啥用
+18:37 Matsune: 这年头真的需要做证明的人也就那么点
+18:38 cleamoon: 需要作证明的不少，但是基本没什么实际作用
+18:38 lolisa: 的确是现实作用不太大，但是我本人觉得好玩。。。
+18:39 Matsune: 数学家们觉得这东西不优美
+18:39 lolisa: 另外Coq证出来的软件出错率就算不说到0,也会比其他方法得多，比如Coq写的C subset compiler至今在CSmith下没抓出bug，而GCC Clang早就满身××了。。。
+18:40 cleamoon: 有类似coq的其他软件吗？
+18:40 lolisa: 等下，我记得没这吗事吧。。。你说的这东西是指？
+18:40 cleamoon: 话说，那么coq类似prolog？
+18:40 Matsune: 我指的是机器证明
+18:40 cleamoon: 数学家其实不很关注结果，他们希望能从证明中获得新的东西
+18:41 Matsune: 的确
+18:41 lolisa: Matsune，但是一般人用Coq手动证明的部分都是90%以上，剩下的10%也可以很简单的展开成手动证明
+18:41 lolisa: proof assistant有，agda idris都可以，就是都没有自动化部分
+18:41 xeirrr joined channel
+18:42 Matsune: 数学家追求精简而巧妙的证明
+18:42 lolisa: cleamoon,不是。Coq分三部分，一部分是普通的带有dependent type的PL，一部分是Command，一部分是Tactic，像prolog的也就tactic部分
+18:42 Matsune: 存在的机械化的步骤越多
+18:42 Matsune: 越不受人待见
+18:42 Matsune: 所以组合学的地位就低
+18:42 xeirrr: I don't think so
+18:43 cleamoon: 四色第一次机器证明出来后宣布了都没人讨论
+18:43 Matsune: 四色第一次机器证明出来 承认的人就没几个
+18:43 lolisa: Matsune，一般Coq的机械化的地方都没那末吊，在数学估计就是it is obvious that,n = m -> m = n之类的小东西。。。大体的东西Coq可很小被用于机械化
+18:44 Matsune: 我不是指计算步骤这种东西叫做机械化
+18:45 Matsune: 有些离散的数学
+18:45 cleamoon: 穷举的解法很多人都不喜欢
+18:45 Matsune: 它本身的建立 到定理的证明
+18:46 Matsune: 都可以用一套方法步骤照着一步一步走过来
+18:46 Matsune: 其中没有什么波澜
+18:46 Matsune: 有时候仿佛发现了很多新东西 实际上还是被套在一个圈子里面
+18:47 lolisa: Matsune，那你说的机械化Coq不怎么有人采用。除了四色代理，大部分人用Coq机械化的都是一些很trivial的东西，数学家只是改用it is obvious that之类的词语了，这种级别的机械化我觉得没什么决定性的，而且Coq可以完全不采取任何机械化手段，决定权在你。
+18:48 Matsune: lolisa:  所以说 这东西的具体价值在哪呢
+18:48 cleamoon: 在于好玩呗
+18:48 FrankHB: 数学的具体价值在哪呢。
+18:48 Plough joined channel
+18:48 cleamoon: 也就是说coq是一套工具？
+18:48 cleamoon: Plough, 爆
+18:49 lolisa: Coq本身就是Proof Assistant啊= =
+18:49 cleamoon: soga
+18:49 FrankHB: 节约什么东西算不算数学的废话成本，这就是价值。
+18:49 cleamoon: 那么coq是基于什么理论呢？
+18:49 FrankHB: 至于承认不承认，关我屁事。
+18:49 lolisa: Matsune，我也说了，要说当下的具体价值，Coq出来的软件本身就可以达到其他方法的软件低的出错率。
+18:50 lolisa: cleamoon, Calculus Of Construction
+18:50 Matsune: 承不承认不关你的事 只不过一个东西想试着往数学上靠靠 业界不承认 理论就难以发展
+18:51 FrankHB: 要我说的话所谓的初等数学绝大多数部分都算不上什么数“学”，只是应用的经验罢了。
+18:51 Matsune: 我并不关心理论的具体价值在何处
+18:51 cleamoon: lolisa, 那是一本书？
+18:51 FrankHB: 业界？
+18:51 Matsune: 数学界
+18:51 Matsune: 有人养着你乐意给钱也就够了
+18:51 Plough: https://pastebin.mozilla.org/8831514
+18:51 FrankHB: 数学有能耐定义什么是数学么。
+18:51 lolisa: Software Foundation(讲Semantic+Coq),Coq Art(讲coq
+18:51 Plough: 春活相关的官推
+18:51 Matsune: 所以主流数学根本不是研究数学的根基不是么
+18:52 cleamoon: 数学界有能耐
+18:52 FrankHB: 数学里面更能骗钱混饭吃的东西就更数学么。
+18:52 Matsune: 这个结论哪里得到的
+18:52 FrankHB: 所以主流数学在能混饭吃的学科里早就边缘化了。
+18:53 lhanjian joined channel
+18:53 FrankHB: 方便骗经费的难道不是那些应用么。
+18:53 Matsune: 也还有那么一波人并不靠应用混饭吃
+18:54 FrankHB: cleamoon: 数学界大概没什么能耐，否则王 根也不会那么有脸皮吱了。
+18:54 Matsune: 所以说数学界的歧视链也是长的很
+18:54 cleamoon: 数学界可以鄙视你，但是不能灭了你
+18:54 Matsune: 处于不同的层次说着不一样的话
+18:55 FrankHB: 反正外人来看混不到饭还不都是一样被歧视的。
+18:55 Matsune: 所以我一开始说 这年头真需要做证明的人没几个
+18:55 FrankHB: 那就直说清楚好了。因为是混饭界嘛。
+18:56 FrankHB: 搞什么数学界的名头。
+18:56 Matsune: 混饭这个词
+18:56 Matsune: 太模糊了
+18:56 FrankHB: 那是。混饭数学界。
+18:56 FrankHB: 也有其它混饭界。
+18:56 FrankHB: 混饭是一种交叉学科。
+18:56 cleamoon: 但是需要证明的基本就不会喜欢机械证明
+18:57 Matsune: 当然不会喜欢
+18:57 cleamoon: 不需要的也不在乎
+18:57 FrankHB: 需要证明来干嘛。
+18:57 Matsune: 抛开极少数天才的那种 或许真的觉得不够优美
+18:57 Matsune: 大多数顶多是跟着说说装逼
+18:57 lolisa: cleamoon，有QQ吧。我建了一个Coq群，欢迎加入
+18:58 FrankHB: 需要那形式化方法混饭的、需要艹证明论混饭的，会在乎这些事么。
+18:58 cleamoon: lolisa, 好呀，里面有妹子吗
+18:58 FrankHB: 剩下的不靠这个混饭的，大概也没什么心情考虑什么喜欢不喜欢吧。
+18:58 lolisa: 有小正太还有我
+18:58 Matsune: 环境不够优美（笑
+18:59 cleamoon: 需要艹证明论混饭的会在乎
+18:59 FrankHB: 因为数学界没法证明这些东西不数学，也没法提出完全替代的有效方法，所以喜欢或者不喜欢充其量也就是圈子内的行为艺术罢了，实在无伤大雅。
+18:59 cleamoon: lolisa, 就两个...？
+18:59 lolisa: 不，50+人了
+18:59 FrankHB: cleamoon: 艹证明论混饭的难道不习惯拿这坨理论当饭票么。
+18:59 Matsune: 我有时候觉得也就是种古老的遗留下来的认知
+19:00 Matsune: 认为机器证明不好
+19:00 xeirrr quit:Ping timeout: 244 seconds
+19:00 cleamoon: 那种纯混饭的忽略
+19:00 Matsune: 我其实并不觉得他们能说出什么具体不好的有说服力的原因
+19:00 FrankHB: 哪有什么纯不纯的。
+19:00 Matsune: 不过这圈子已经这样了 没什么办法
+19:01 FrankHB: 没有余力提供替代干掉需求的，有什么能耐实践洁癖了。
+19:01 FrankHB: 在哪个领域不都一样么。
+19:02 xiaoxi joined channel
+19:02 FrankHB: 我是觉得搞机器证明还是证明论的，里面应该有不少对具体证明已经没多少兴趣的了。
+19:03 FrankHB: 正因为形而下的没法满 足，所以才搞些形而上的东西。这样的东西也无关混饭了。
+19:03 cleamoon: 理论界洁癖是好事，什么都能用就行是不可能有新理论的
+19:03 Matsune: 另外我也不太清楚他们到底用什么定义的难易
+19:03 FrankHB: 这是另一种洁癖。
+19:03 Matsune: 就像我室友跟我说代数几何要比复分析难
+19:03 Matsune: 不过真的做到最前沿了这到底是怎么区分难易的
+19:03 FrankHB: 就像常年艹算法的不待见OI一样。
+19:04 FrankHB: 太具体的东西，无论如何也有过于明确的局限性。而不管怎么具体，数学结论的混饭能力毕竟相当有限。这种两难算是职业上的现实问题。
+19:05 cleamoon: 一般最前沿的难易也就是出成果的难易度吧
+19:05 FrankHB: 所以要洁癖就干脆地舍弃一方好了。
+19:05 lolisa: Matsune, 数学界有什么出名的award？
+19:05 FrankHB: 这个也算因人而异了，还不怎么说的清楚。不知道哈代要是活到现在会往哪方面靠。
+19:06 cleamoon: 菲尔兹奖
+19:06 FrankHB: Fields
+19:06 lolisa: thx
+19:06 cleamoon: 哈代？
+19:07 Matsune: 出成果的话 还是要和领域内现有问题的数量挂钩的吧
+19:08 FrankHB: “真正的数学对战争毫无影响”，枪炮专家与飞机设计师所需要的数学是trivial的。
+19:08 cleamoon: 完全不trivial
+19:08 FrankHB: 那些混饭吃的以数学角度来说就更trivial了。
+19:08 FrankHB: 当然，混饭本身对人来说通常不trivial。
+19:09 FrankHB: 考虑研究领域来说，把他算到数学界之外是不现实的；而如果说他能代表一部分数学界的观点，那么剩下数学界的洁癖有多少效用，就值得怀疑了。
+19:09 Matsune: 我什么时候要是见到一个学数学走火入魔的人
+19:10 Matsune: 我得好好采访一下他
+19:10 Plough quit:Ping timeout: 256 seconds
+19:10 cleamoon: 你去采访一下那个陶什么呗
+19:10 cleamoon: 他写过一个什么是好数学的文章
+19:10 cleamoon: 效用完全没有
+19:11 Matsune: 我估计结论十有八九是 人蠢不能怪社会
+19:11 lolisa: 终于找到了。。。Fields得主之一就是一个Coq厨
+19:11 lolisa: http://www.scilogs.com/hlf/voevodskys-mathematical-revolution/
+19:11 cleamoon: 菲尔兹我记得主要是年轻人
+19:11 lolisa: 是，他还有github。。。
+19:12 lolisa: 吓得我赶紧fo了
+19:12 Matsune: 未满40
+19:12 Matsune: 才能获得 不过我记得费马大定理那货是个意外
+19:12 FrankHB: 自己玩玩就好，对外人来说这点东西没啥意思了。
+19:13 cleamoon: 我觉得对于绝大多数人来说什么都没意义
+19:13 FrankHB: 要有意思或者效用的，不管是吸引眼球还是混饭，最打紧的，是“客观”。
+19:13 FrankHB: 也就是我之前提到的节约废话的成本——这是谁都没法否认的价值。
+19:14 FrankHB: 信不信相对来说没什么必要，因为在一些条件之下不得不信。如果你能证明不信的意义，倒是真能赚到了。问题是这不太可能。
+19:14 Matsune: 就是太倔强了
+19:15 cleamoon: 不明白节约废话的成本什么意思
+19:15 FrankHB: 机器证明和一些足够抽象的数学的一样，在具体结论上排除个别偶然因素是有一些作用的。换句话说，这些“技术”使参与数学发挥价值的受众扩大了，让数学更像是技术而不是艺术。
+19:15 Matsune: 我一直觉得数学需要一个统一的规范化的符号系统
+19:15 cleamoon: 这基本不可能
+19:16 FrankHB: 所以变相让圈子里的人失去了价值，大概这才引起一些人的反感。
+19:16 FrankHB: 不见得是一个，但是需求一直有。
+19:16 Matsune: 许多数学家 不管是做什么的
+19:16 lolisa: 话说我最主要的问题还没解决呢。。。今晚是学逻辑学学数学挖坑还是传教。。。
+19:16 Matsune: 大都觉得自己所从事的事情很高贵
+19:16 Matsune: 应该小众 而不是让更多的人能够参与进来
+19:16 cleamoon: lolisa, 撸管
+19:17 lolisa: 我很认真（严肃状
+19:17 FrankHB: 我倒认为机器更高贵，起码在不装13浪费我时间这点上。
+19:17 cleamoon: 觉得高贵的基本都是装逼党
+19:17 Matsune: 这是我很反感的 以至于我看点组合还会被些立志做纯理论的鄙视
+19:17 Matsune: 认为我看的东西太简单了
+19:18 FrankHB: 蠢理论？
+19:18 FrankHB: 纯理论做些什么东西呢，像哈代认为的“纯粹数学”？
+19:18 cleamoon: 那些基本也还是装逼党
+19:18 Matsune: 谁知道呢 他们眼中的纯数学并不包括离散（笑
+19:18 FrankHB: 历史事实指出从来就没有什么人能把所有数学分支的潜力预测对。
+19:19 FrankHB: 而且我也说了，数学并没能耐决定什么是数学，这更像是扯皮的社会活动。
+19:19 FrankHB: 就像科学也没能耐决定什么是科学一样。这都是哲学问题。
+19:19 FrankHB: 顺便，图书馆学里的学科分类只是一种妥协，客体是文献而不是人的活动。
+19:20 cleamoon: 科学有基本科学的哲学假设，如果同意就是科学，不同意就不是
+19:21 FrankHB: 当然也不是说数学界里没人这就让神棍说了算了。笛卡尔牛顿莱布尼兹之类怎么说都是近水楼台先得月了。而希尔伯特、罗素、怀特海、哥德尔、冯·诺依曼之类的则是现代比较专业的了。
+19:22 cleamoon: 而纯数学鄙视离散一类的基本和后端鄙视前端差不多
+19:22 FrankHB: 换句话说所谓数学界里的人也不都只搞数学，也有很多搞数学哲学的。有些人根本就是哲学专业的。
+19:22 cleamoon: 哥德尔是逻辑学家
+19:22 Matsune: C鄙视Java
+19:22 cleamoon: c鄙视java+
+19:23 izmntuk joined channel
+19:23 Matsune: 早期数学不能混饭吃的时候
+19:23 FrankHB: 要代婊数学界，先把数学界内部的不同观点肃清才有些说服力吧。
+19:23 Matsune: 哲学就已经能吃饭了
+19:23 Matsune: 没什么希望 就我现在来看这内部矛盾大约和什么语言是最好的差不多
+19:23 FrankHB: 混饭当然是混战了。
+19:24 FrankHB: 这不一样，先天话语权不同。
+19:24 FrankHB: 这些具体高级语言之间是取代和被取代的关系。
+19:24 FrankHB: 而基础数学一些东西之间怎么取代基本上应用数学没法插嘴。
+19:24 FrankHB: 干掉集合论的可能是范畴论但绝不会是概率论。
+19:24 Matsune: 这倒是
+19:25 FrankHB: 这点不管是不是圈子内或者外行都应该有自觉。于是接下来要固守圈子，必然分化出不同没法互相替代的领域方向。
+19:25 Plough joined channel
+19:26 FrankHB: 这就减少了作为整体的数学界的意义。于是这些矛盾相应地就不是那么重要了——本来就道不同不相为谋，又不碍着混饭，非交叉学科还有依赖性扯什么蛋。
+19:26 FrankHB: 某种意义上正是因为非得把不同观点的人算成一整个数学界才有一些矛盾的吧。
+19:27 Matsune: 人总还是追求统一的
+19:27 Matsune: 或者这么说
+19:27 FrankHB: 我觉得当事人愿意怎么同意很难说。
+19:27 cleamoon: c和lisp也不真能互相替代，这不阻止他们互相鄙视
+19:27 Matsune: 虽然我不是做xx方向的 但是如果能把我和他归在一起 反而提升了我的逼格
+19:27 Matsune: 所以我可能乐意说我和他是一回事
+19:27 FrankHB: 比如说，搞应用混饭的，愿意和搞纯理论的一起混饭还是能骗经费的经济学叫兽混饭呢？
+19:28 Guest31 joined channel
+19:28 FrankHB: 逼格的市场毕竟还不够健全，不那么容易骗饭。
+19:28 FrankHB: 还有比逼格实际得多的东西。
+19:28 Matsune: 既然决定混饭了肯定还是找些混的多的比较好
+19:28 cleamoon: 如果一定要混饭的话当然是搞经济的，但是不是所有人都需要混饭
+19:29 Matsune: 但是人又不希望自己的事业被人看低
+19:29 FrankHB: 大部分人恐怕是能混饭就混饭吧，多多益善。
+19:29 FrankHB: 而且就是混饭，外人来看逼格也不低啊。
+19:29 Guest31 quit:Client Quit
+19:29 FrankHB: 要当鸡头还是凤尾看各人口味了。
+19:30 cleamoon: 大多数人没有被考虑的必要
+19:30 FrankHB: 不，有必要。因为不管混不混饭，生产出饭的都不是这些人。
+19:31 FrankHB: 你不考虑，别人不待见你，你就饿死了。
+19:31 Matsune: 生产出饭的果然还是自己可爱的妻子吧
+19:32 cleamoon: 同行是冤家，不是同行无所谓，于是总结，无所谓他们待见不待见
+19:32 FrankHB: 如果光凭逼格，你也得找到可靠的关系。会待见你逼格给你饭的，大概只可能是大多数人里面的一部分。
+19:32 xeirrr joined channel
+19:32 FrankHB: 要逼格只能靠同行，因为外行不懂。
+19:32 Matsune: 很少一部分
+19:32 FrankHB: 一个人吹逼格又吹不起来。
+19:32 FrankHB: 吹起来你就去当政治家了，谁还浪费时间搞什么数学。
+19:33 Matsune: 不过是从什么时候开始 应用就会被认为比理论逼格低了呢
+19:33 FrankHB: 现实的人也没空这样认为吧。
+19:34 FrankHB: 碍着骗经费装13了，可能会负面宣传一下。实际怎么样，受到多少待见，又是另一回事了。
+19:34 lolisa: 从plato开始？我没记错的话他有点建议理论实践分隔。。。
+19:35 FrankHB: Plato有逼格的观念么。
+19:35 FrankHB: 社会地位可是实实在在的利益，不是什么逼格。
+19:35 lolisa: 好吧。。。
+19:36 cleamoon: 感觉耻球说的基本是在所有人都穷疯了的地方的穷疯了的人
+19:36 xeirrr: lolisa: 爆
+19:36 cleamoon: lolisa, 群号是什么
+19:36 FrankHB: 我也没挑特定的人说。
+19:36 ppts joined channel
+19:36 lolisa: 372347110
+19:36 FrankHB: 只是说，各种各样的人都有，搞一块儿不统一很正常。
+19:37 FrankHB: 其实就算按经典的学科分类也不算奇怪吧。数学是能和整个自然哲学和其它哲学并列的大类。
+19:37 FrankHB: 当然现在一级学科什么的另说了。
+19:40 FrankHB: 嘛，《数学原本》没法像《自然哲学的数学原理》在同时代一桶浆糊，多少也能说明一些问题。
+19:41 xxxxxxxx joined channel
+19:43 cleamoon: 搞不到一起很正常，但是每个人都有自己的观点也很正常
+19:43 cleamoon: 用不着处处都设身处地的想
+19:44 FrankHB: 拿数学界的一部分喷另一部分就有点匪夷所思了。
+19:44 FrankHB: 好像生物学喷物理学一样。
+19:45 FrankHB: 也就数学和哲学还有那么闲了吧。
+19:45 xxxxxxxx: @文学
+19:45 cleamoon: 物理也一样
+19:46 cleamoon: cs不是也是满地圣战
+19:46 cleamoon: vim/emacs都能喷
+19:46 xeirrr quit:Read error: Connection reset by peer
+19:47 cleamoon: lolisa, 验证信息是什么？
+19:47 lolisa: 没有。
+19:47 lolisa: 随你填。
+19:47 cleamoon: 发了
+19:47 cleamoon: 你是群主吧
+19:48 FrankHB: 搞文学互喷的多数连学术共同体都算不上，宗教战争很正常。
+19:48 lolisa: 是，我亲手建起来的群，成员都基本上是我一个个传教的。。。
+19:48 cleamoon: 我以为成员都是你一个个爆过的
+19:48 FrankHB: cs如王 根所说，很大部分跟s没关系。大多是m，其它是厨。
+19:49 cleamoon: 王 根大多数观点也和cs没关系，大多是喷，其他是傲
+19:49 lolisa: 在大学群安利Coq失败了。。。内个在听的估计没懂。。。
+19:49 FrankHB: 我看是闲得疼。也许最近找到活了就闭嘴了。
+19:50 xxxxxxxx: cleamoon: 幼女打得过史莱姆了么?
+19:50 lolisa: 我也说了今天的任务双倍完成了，下一章又太难。。。现在又混入挖坑填坑什么坑的选择disability中。。。
+19:51 cleamoon: xxxxxxxx, 被沙漠某东西连续喷死三回，于是后来没玩
+19:51 xxxxxxxx: 吐沙子的?
+19:52 cleamoon: 那个是沙子？
+19:52 cleamoon: 我以为是粪呢
+19:52 xxxxxxxx: 那个没装备的时候挖过去然后慢慢敲死就行
+19:53 FrankHB: 没事干的给YSLib当白吱。
+19:53 lolisa: 。。。我现在又不用GUI
+19:54 FrankHB: 就是检查能不能编译啥的……
+19:54 lolisa: OK，这我做得来
+19:54 FrankHB: 而且YBase完全无关GUI。
+19:54 cleamoon: 一个健康的成年白吱不少钱呢
+19:55 FrankHB: 这算上繁殖能力了吧。
+19:55 FrankHB: lolisa: 其实也不只是编译了……不过我对直接参考wiki搭环境是不是能让人看得懂一直微妙地缺乏信心。。。
+19:56 cleamoon: 繁殖能力+
+19:56 ppts quit:Quit: Textual IRC Client: www.textualapp.com
+19:56 cleamoon: 你去贴吧找个喷子试试看，你就可以彻底失去信心了
+19:57 FrankHB: 喷子无所谓了，估计也达不到白吱标准。
+19:58 FrankHB: 现在需要吱的部分主要是现有文档质量问题。只是测试编译我自己也行，但是要让公开的文档容易理解肯定我一个人不行。
+19:59 cleamoon: 弄好了脚本，可以直接运行的，怎么都能装
+20:00 FrankHB: 我不太确定能跑得动脚本之前的步骤有没有说得足够到位。
+20:00 FrankHB: 环境复杂，我没把握完全不说漏。
+20:00 lolisa: 。。。我已经被绕晕了orz。。。
+20:00 FrankHB: 另外，脚本中也有不同路径。不过这个也可以用常规测试方法，慢慢来也罢。
+20:00 FrankHB: ……果然。。。
+20:01 cleamoon: 噗
+20:01 cleamoon: lolisa, 我被踢了
+20:01 cleamoon: 只发了一条
+20:01 lolisa: 噗，再加吧，别作死
+20:01 cleamoon: lolisa, 你不是群主吗
+20:02 FrankHB: 问题：魔理沙是处女吗
+20:02 ppts joined channel
+20:02 cleamoon: +
+20:02 xxxxxxxx: 不是
+20:02 lolisa: 有10个管理员啊。。。
+20:02 xxxxxxxx: 肯定不是
+20:02 cleamoon: ......
+20:02 FrankHB: 飞了也不算神转折啊……
+20:02 cleamoon: 我以为就一个管理员呢
+20:02 lolisa: 不算神转折。。。
+20:03 lolisa: 我是随手给最先加的10个人管理员称号的，所以随时都可以加人。。。
+20:03 cleamoon: 我又加了
+20:04 cleamoon: 这种天天都上的基本不需要别的管理员吧
+20:04 lolisa: 没看到消息吧。。。
+20:04 lolisa: 也对，不过现在也不好下懒得下了。。。
+20:04 pocmon joined channel
+20:06 lolisa: 算了，我还是看点线代压压惊吧，地球内build我太笨没弄懂
+20:06 cleamoon: 线代直接做题吧
+20:06 FrankHB: QAQ
+20:06 FrankHB: 比线代还疼么。
+20:06 xxxxxxxx: 压鲸
+20:06 FrankHB: 哪里没看懂。。。
+20:06 lolisa: ORZ。。。地球我从来都没有用过make
+20:07 FrankHB: 我不用make啊。。。
+20:07 FrankHB: 直接提供脚本了。
+20:07 xxxxxxxx: 球链接?
+20:07 FrankHB: gcc -flto倒是自己会调用，这个根本就不用管了。
+20:07 lolisa: 我的意思是我是deploy白痴。。。
+20:07 FrankHB: https://bitbucket.org/FrankHB/yslib/wiki
+20:07 ppts quit:Quit: Textual IRC Client: www.textualapp.com
+20:07 lolisa: 一直都是.hpp完事的，你找我当白鼠实在找错了。。。
+20:08 FrankHB: 有到看不懂的程度么。。。
+20:08 FrankHB: 我的意思是炸出哪里最看不懂的……要是都看不懂那就没救了。。。
+20:08 lolisa: 我在看。。。不过BTW线代不怎么难吧。。。
+20:08 FrankHB: 炸出→找出
+20:09 cleamoon: 比线代还疼23333
+20:09 lolisa: OK。。。不过线代疼没（还没开始看
+20:10 FrankHB: 看来下次还得造个one click installer。
+20:10 FrankHB: 一个脚本还不够，顺便得把msys2自动拖下来。。。
+20:10 lolisa: 适用于 DS 等使用 Makefile 的平台 - DS？
+20:10 FrankHB: ok，DS得加链接。
+20:10 lolisa: 。。。make我勉强能用，one click太内啥了。。。不过我手动build完全不会。。。
+20:10 FrankHB: 这个可以略过了。
+20:10 lolisa: DS是。。。
+20:11 FrankHB: (Nintendo/iQue) DS (arm-none-eabi)(using DeSmuME to run on PC)
+20:11 FrankHB: Home.md有写……
+20:11 cleamoon: FrankHB, 我建议中文英文分开放...
+20:11 lolisa: 这什么鬼。。。吊吊吊
+20:11 FrankHB: cleamoon: 只有首页是放一起的。
+20:11 cleamoon: 哦
+20:12 FrankHB: 因为Home.md似乎不好改名……https://bitbucket.org/FrankHB/yslib/wiki/WikiRules.en-US.md就自己打脸了。
+20:15 lolisa: cleamoon，再加一次吧，我给里面的人说了。。。
+20:16 cleamoon: ......
+20:16 cleamoon: 原来都不是你同意
+20:17 lolisa: 不，我有同意的。。。我只是告诉他们别再飞你了。。。
+20:17 xxxxxxxx: 帝球的文档是不是写的有点细...?
+20:18 lolisa: marisa@lolisa:~/GitSource/FrankHB/YSLib/Tools/Scripts$ ./SHBuild-YSLib.sh bash: ./SHBuild-YSLib.sh: /usr/bin/bash: bad interpreter: No such file or directory。。。
+20:19 sismvg: socket不能跨线程吗..
+20:19 * xxxxxxxx 看了一半去打演习了
+20:19 FrankHB: ...咦没bash么。
+20:19 lolisa: 不是，我就是用的bash输这几行
+20:19 FrankHB: 你用的啥环境……
+20:19 lolisa: debian。。。
+20:20 FrankHB: 。。。好吧那是不直接支持了。
+20:20 cleamoon: .......
+20:20 FrankHB: 不过改一下shebang，YBase应该是能造的出来的。
+20:20 FrankHB: 或者先临时ln -s一下。
+20:20 xxxxxxxx: 蛇棒?
+20:20 FrankHB: Linux支持还在坑里呢。。。
+20:20 lolisa: 。。。
+20:21 lolisa: 话说线代很难没。。。我看了几页感觉难度适中啊。。。
+20:21 FrankHB: 还真没GUI……
+20:21 FrankHB: 是疼。。
+20:22 lolisa: 疼也得补，我AI要深入不打算补线代哈哈哈哈哈
+20:22 cleamoon: 线代很容易呀
+20:23 cleamoon: 做题就好了
+20:23 lolisa: 内就好，我最喜欢做题了，人笨，不做题记不住东西。。。
+20:23 cleamoon: 难度比高中mo容易得多
+20:23 lolisa: mo？moe？
+20:23 lolisa: 懂了。。。
+20:31 xiaoxi quit:Quit: 离开
+20:32 cleamoon: 4月25日，尼泊尔发生里氏8.1级地震（中国录得数据）造成严重人员伤亡，宣布全国进入紧急状态。尼泊尔地震发生后，大批中国游客开始撤离，然而有网络传言声称“中国政府已组织专机将中国公民从尼泊尔抢运回国”，甚至有消息指“乘中国护照人士免费乘机”，后经证实，此类消息并不符实。
+20:33 cleamoon: http://qiwen.lu/28576.html
+20:36 FrankHB: 姑且都#!/usr/bin/env了……
+20:37 lolisa: ORZ，以前写的一个lib换一种写法就110行->10+行了。。。
+20:38 lolisa: 还一气咳成，果然人傻的时候不适合写代码。。。
+20:38 lolisa: 话说是一气？成，怎么打？
+20:39 cleamoon: 一气呵成
+20:39 cleamoon: he1
+20:39 cleamoon: 大概是
+20:39 lolisa: 呵，出来了，thx
+20:40 xxxxxxxx: 其实你们都是外国人....
+20:40 lolisa: cleamoon也是？
+20:40 cleamoon: 我是幻想乡居民
+20:40 lolisa: 这么巧，我也是DAZE
+20:40 cleamoon: 我住香霖堂
+20:41 xxxxxxxx: 那个是欧洲人 长矛的目标
+20:43 izmntuk quit:Quit: reboot
+20:44 lolisa quit:Quit: Leaving
+20:49 * Plough 是土耳其海军司令
+20:51 ppts_ joined channel
+20:51 cleamoon: 我被酋长羁押了，一个月没好东西了
+20:54 ppts_ quit:Client Quit
+20:54 ppts joined channel
+20:55 xxxxxxxx: 印度洋 北森提奈岛海军
+20:56 xxxxxxxx: 欧洲人吃我一矛
+20:58 Plough: 我大伊斯兰文明还惧你长矛？
+20:59 xxxxxxxx: 吃我传承6万年的投掷长矛
+21:00 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=93318c2e3ff33a879e6d0012f65c1018/6703e1b44aed2e73cddc89328201a18b87d6fa74.jpg
+21:00 sismvg: 23
+21:01 cleamoon: 这什么鬼
+21:09 xxxxxxxx: 相互舔屎?
+21:13 pocmon quit:Quit: Leaving.
+21:15 sismvg: 监狱学园，互相看尿尿
+21:16 Nexus joined channel
+21:22 Nexus quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:34 xxxxxxxx: sismvg: 药娘四口味真重
+21:34 cleamoon quit:Ping timeout: 256 seconds
+21:37 lhanjian quit:Remote host closed the connection
+21:39 xeirrr joined channel
+21:40 wsyh joined channel
+21:41 hysw quit:Remote host closed the connection
+21:49 condy: 0.0
+21:50 xeirrr joined channel
+21:50 tutu_wind joined channel
+21:51 sismvg: 终于写好了demo..
+21:57 lh_cat joined channel
+21:58 theJian joined channel
+22:03 code_new joined channel
+22:05 sismvg: recvfrom(sock,buf,size,0,from,fromlen); <-from里的port和client的port不一致怎么办
+22:12 lhanjian joined channel
+22:15 lh_cat: 争取今晚把 http client
+22:15 lh_cat: 写完
+22:16 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+22:21 lhanjian: lh_cat, 耗子差不多了？
+22:21 lh_cat: 不知道knx
+22:21 lh_cat: s,knx,呢,
+22:25 tutu_wind: lh_cat: 小耗刚把得 ~
+22:36 code_new quit:Remote host closed the connection
+22:41 theJian quit:Quit: Leaving
+22:43 Plough: 今晚睡觉
+22:43 Plough quit:Quit: 睡觉
+22:48 wlemuel joined channel
+23:01 code_new joined channel
+23:03 code_new: 請教一下……fcitx默認繁體，從哪裏調 = =
+23:04 izmntuk joined channel
+23:07 iyzsong: code_new: ~/.config/fcitx/conf/fcitx-chttrans.config
+23:07 lhanjian: Ctrl+Shift+F
+23:09 code_new: iyzsong: thank u
+23:10 code_new: lhanjian: 打开那个文件 发现那个快捷键没启用= =
+23:10 lhanjian: ...
+23:10 iyzsong: 那个默认就是启用的
+23:10 code_new: 然而并没有用……之前试过了
+23:11 iyzsong: - -b
+23:11 code_new: 每次都得手动调一下schema list = =
+23:13 code_new: 界面和词库秒杀ibus了= = 果断弃ibus
+23:18 tutu_wind quit:Quit: WeeChat 1.1.1
+23:19 xxxxxxxx: code_new: 为何才想起来换fcitx...
+23:20 code_new: xxxxxxxx: 因为太懒……
+23:20 code_new: 发现用ibus更浪费时间
+23:24 izmntuk quit:Quit: leaving
+23:44 wlemuel quit:Ping timeout: 272 seconds
+23:45 yzld2003 quit:Ping timeout: 272 seconds
+23:45 wlemuel joined channel
+23:45 yzld2002 joined channel
+23:52 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150420225811]
+23:59 lhanjian quit:Ping timeout: 250 seconds

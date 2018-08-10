@@ -1,0 +1,983 @@
+00:19 xxxxxxxx quit:Quit: Leaving...
+00:33 hoxily quit:Quit: Leaving
+00:46 wlemuel quit:Ping timeout: 244 seconds
+01:07 Youmu quit:Quit: Connection closed for inactivity
+01:23 cleamoon quit:Ping timeout: 268 seconds
+01:32 Matsune quit:Read error: Connection reset by peer
+01:44 Mokou: 睡觉
+01:44 Mokou: 诸君武运
+01:44 Mokou quit:Quit: 睡觉
+01:50 SliverElf quit:Ping timeout: 260 seconds
+03:01 Sous-Titre joined channel
+03:03 Sous-Titre quit:Client Quit
+03:31 Meow-J quit:Quit: Connection closed for inactivity
+04:22 lhanjian quit:Quit: Connection closed for inactivity
+05:00 T-J-M quit:Ping timeout: 264 seconds
+05:00 T-J-M joined channel
+06:22 Taggnostr quit:Ping timeout: 248 seconds
+06:23 Taggnostr joined channel
+07:17 cleamoon joined channel
+08:22 hportsnap_els9 joined channel
+08:28 cc joined channel
+08:33 cc: 早
+08:34 iyzsong: 膜..
+08:35 cleamoon: 爆
+08:35 cc: ....
+09:08 cleamoon quit:Ping timeout: 240 seconds
+09:10 stardust joined channel
+09:24 lh_cat joined channel
+09:24 lh_cat: http://arstechnica.com/information-technology/2016/04/why-microsoft-needed-to-make-windows-run-linux-software/
+09:24 lh_cat: 纯转发。
+09:47 SliverElf joined channel
+09:54 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+10:09 hportsnap_els9 quit:Quit: Leaving
+10:12 cc joined channel
+10:21 tutu_wind joined channel
+10:21 tutu_wind: meow~
+10:37 f00x joined channel
+10:38 lhanjian joined channel
+10:38 miao233_ joined channel
+10:42 Matsune joined channel
+10:43 Matsune: 话说有没有什么O(n)的算法来求n个数中第n/2小的数？
+10:53 miao233_ quit:Quit: Leaving.
+11:00 lhanjian: quick selection
+11:00 lhanjian: Matsune:
+11:01 lhanjian: 不过好像只是平均能达到线性的样子
+11:01 Matsune: 嗯 那个只能平均达到线性
+11:02 Matsune: 我跟教授说算法学过一点点啦 教授：那我出个题考考你
+11:04 lhanjian: 这教授真有情怀
+11:09 f00x: 没什么惊喜啊
+11:13 f00x:  /cs TAXONOMY #c_lang_cn
+11:16 iyzsong: 惊 >.<
+11:16 stardust: f00x, 前面多了一个空格
+11:17 f00x: soga
+11:19 Stevearzh quit:Disconnected by services
+11:22 lhanjian: stardust: 膜法师早
+11:22 lhanjian: iyzsong: 揉233song
+11:23 iyzsong: 好恍惚啊
+11:24 stardust: lhanjian, 已经中午啦
+11:24 lhanjian: stardust: 被你发现了！
+11:24 f00x: 想备份一下自己的linux系统，看了网上的帖子，不过还是不确定究竟哪些目录需要备份，有经验的说下
+11:25 lhanjian: f00x: 我觉得还是全盘备份吧
+11:25 lhanjian: 那些混乱的目录谁特么也搞不清楚
+11:26 f00x: 好像全盘也不是特别大
+11:27 lhanjian: 一般来说全盘也很小的
+11:28 * iyzsong 从未备份过...
+11:28 f00x: lhanjian, 备份后恢复出来是不是就跟自己原来的系统一模一样了
+11:29 f00x: 之前ubuntu崩过，重装后又要慢慢完善，还是备份下好
+11:29 lhanjian: f00x: 基本上是。不过我觉得要小心点，毕竟引导什么的比较微妙
+11:33 lh_cat quit:Quit: Connection closed for inactivity
+11:33 bestucan joined channel
+11:34 bestucan quit:Read error: Connection reset by peer
+11:34 f00x: 应该可以在虚拟机试着恢复下吧
+11:35 bestucan joined channel
+11:37 andy_lv joined channel
+11:39 bestucan quit:Client Quit
+11:45 tutu_wind quit:Ping timeout: 244 seconds
+11:48 andy_lv quit:Quit: leaving
+11:53 cc: 有人知道红客联盟么。。。。
+11:56 miao233_ joined channel
+12:22 stardust quit:Quit: Leaving
+12:25 miao233_ quit:K-Lined
+12:30 february joined channel
+12:32 february quit:Remote host closed the connection
+12:42 Yuntian joined channel
+12:47 stardust joined channel
+13:00 Stevearzh joined channel
+13:04 Dove joined channel
+13:07 lhanjian: “我軍已經研究出未來對付日本軍隊的方法：痛艦。暫定有LL系列，東方系列，艦C系列”
+13:09 Dove: = =
+13:13 tutu_wind joined channel
+13:33 tutu_wind quit:Ping timeout: 248 seconds
+13:49 f00x quit:Quit: 离开
+13:54 tutu_wind joined channel
+13:55 Yuntian quit:Remote host closed the connection
+13:56 wlemuel joined channel
+14:06 hao joined channel
+14:06 hao: hi
+14:08 andy_lv joined channel
+14:09 Matsune: hi
+14:09 andy_lv: hello
+14:09 andy_lv: 弱弱的问下，voice用户是什么
+14:15 Dove quit:Ping timeout: 264 seconds
+14:21 lhanjian: Matsune: 音酱来了
+14:22 Matsune: lhanjian: 我写了两个看到过的算法回去 还补了句可以的话我们可以桶！排序！
+14:23 lhanjian: Matsune: 桶排主要是为了拆开过大的数据集合吧？
+14:24 Matsune: lhanjian: 教授也没提空间要求 只说了时间要O(n) 所以我就说空间换时间的话也能做
+14:25 february joined channel
+14:27 lhanjian: Matsune: 夏天来了的感觉
+14:28 Matsune: lhanjian: 差不多 我几天前就只穿一件了 虽说那时候还在下雨
+14:28 lhanjian: 现在已经可以穿着短裤呆家里了
+14:31 samurai joined channel
+14:31 samurai is now known as Guest72490
+14:31 iyzsong: 0 0
+14:31 tutu_wind: wow
+14:32 Matsune: 我这还不能短裤
+14:33 iyzsong: 外面好多白毛在飞舞
+14:34 Guest72490 is now known as f00x
+14:35 andy_lv: 0.0
+14:42 andy_lv is now known as little-cat
+14:43 little-cat is now known as andy_lv
+14:43 Mokou joined channel
+14:50 f00x quit:Quit: 离开
+14:50 hao quit:Quit: Leaving
+14:59 lhanjian: Matsune: 话说偏序关系到底是一种怎样的关系？
+15:00 Matsune: lhanjian: 从定义来的话就是满足自反性 反对称性和传递性的二元关系
+15:00 lhanjian: 还是……举个例子吧……
+15:01 lhanjian: 剩下三个定义也不怎么理解（除了传递性好像耳熟点，自反性好像知道点）
+15:02 Matsune: 定义在数集上的小于关系
+15:02 Matsune: 就是一个偏序关系
+15:03 Matsune: 小于等于
+15:03 Matsune: 小于不是
+15:04 iyzsong: 吼啊 学习啦 http://mathworld.wolfram.com/PartialOrder.html
+15:04 pandada8 quit:Ping timeout: 276 seconds
+15:06 lhanjian: Matsune: 那啥属于 不定义 在数集上的小于等于关系？
+15:12 Matsune: 其实用小于等于这个例子不好 因为这不仅仅是个偏序关系 还是个全序关系
+15:12 Matsune: 换个例子
+15:12 Matsune: 集合A = {a, b}的幂集{空集, a, b, {a,b}}
+15:13 Youmu joined channel
+15:14 Matsune: 在这个幂集上的集合之间的包含关系
+15:14 Matsune: 他是一个偏序关系
+15:14 Matsune: 偏序 partial order
+15:14 whocares_2 quit:Ping timeout: 244 seconds
+15:15 Matsune: 英文说的很直白 这是一个部分关系
+15:15 whocares_2 joined channel
+15:15 Matsune: 就是说集合上并不是所有元素两两之间都可以有这样的关系
+15:15 lhanjian: 比如a,b？
+15:15 lhanjian: a和b？
+15:15 Matsune: 对
+15:15 Matsune: 他们就不存在包含关系
+15:16 Matsune: 而之前提到的实数集上的小于等于
+15:16 Matsune: 这是一个全序关系 任何两个实数 都可以比较大小
+15:16 lhanjian: 如果是1,2,3,4之间的话，任意两者之间都一定可以比个大小对吧？
+15:16 lhanjian: 所以是全序？
+15:17 iyzsong: 是呀 0 0
+15:17 lhanjian: 那偏序为啥不翻译成 部分有序？
+15:17 Matsune: 这就不知道了
+15:17 iyzsong: @翻译
+15:18 lhanjian: “坚决打击数学翻译界脱离人民群众的不正之风”
+15:18 lhanjian: 哎哎哎，有个数学音娘真好
+15:20 Matsune: 不是还有人民的数学家 华罗庚嘛
+15:21 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+15:22 whocares_2 quit:Remote host closed the connection
+15:22 whocares_2 joined channel
+15:23 lhanjian: 华罗庚怎么了？
+15:23 pandada8 joined channel
+15:24 Matsune: 没看过他写的东西 不知道他的用词和翻译到底亲民不亲民 直白不直白
+15:24 iyzsong: 华老好啊 我都听说过
+15:28 pandada8 quit:Ping timeout: 248 seconds
+15:34 Dove joined channel
+15:59 pandada8 joined channel
+16:02 stardust quit:
+16:08 stardust joined channel
+16:10 AaronLi joined channel
+16:21 pandada8 quit:Ping timeout: 268 seconds
+16:30 T-J-M quit:Quit: 吾去矣
+16:36 lh_mouse: [14:56:24] <lhanjian> Matsune: 话说偏序关系到底是一种怎样的关系？ // 满足 Matsune 提出的三个性质，不一定可比较的关系，是偏序关系。
+16:36 lhanjian: got
+16:36 lh_mouse: 比如 {a}, {b} 相互之间不构成子集关系，因此子集是偏序关系。
+16:37 T-J-M joined channel
+16:37 lh_mouse: 满足自反性、反对称性和传递性，同时任意两个元素之间都可以比较，是弱序关系。
+16:39 lh_mouse: 模比较是弱序关系。例如 取 5 的模， 14 % 5 > 18 % 5 > 11 % 5。
+16:40 lh_mouse: 如果 !(a R b) 且 !(b R a) 则 a == b 这就称为全序关系。例如定义在正整数上的 < 是全序，但是正整数上的模比较不是全序，例如 14 % 5 == 19 % 5 但是 14 != 19。
+16:42 Matsune: <不满足自反吧 1<1是不成立的
+16:42 lh_mouse: 满足反自反性(x R x === false)、反对称性和传递性的关系称为严格的，满足自反性(x R x === true)、反对称性和传递性的关系称为非严格的。
+16:43 lh_mouse: Matsune, 看错了，看成严格弱序了。
+16:43 lh_mouse: ヲ以为 lhj 在说 C艹的 严格弱序。
+16:43 lh_mouse: 只是说纯粹的弱序是不约定自反性的。
+16:44 lh_mouse: < > 是严格弱序，<= >= 是非严格弱序。
+16:45 Matsune: C艹上的事情我就不太清楚了
+16:45 lhanjian: 我刚才是在看 逻辑时钟 相关的东西，里面提到了 全序多播
+16:45 lh_mouse: C艹 的比较器要求严格弱序。
+16:47 lh_mouse: 全序关系是弱序关系。同时，对于严格全序若 !(a R b) && !(b R a)，对于非严格全序若 (a R b) && (b R a)，则 a == b。
+16:47 lh_mouse: 这是弱序和全序的区别。
+16:47 lh_mouse: strcmp 是全序，而 strcasecmp 是弱序。
+16:48 pandada8 joined channel
+16:49 andy_lv quit:Ping timeout: 268 seconds
+16:49 lh_mouse: 整数的比较是全序，而浮点数的比较是偏序，因为 NaN < NaN 和 NaN > NaN 都是 true 。
+16:49 lh_mouse: geordi, << (NaN < NaN)
+16:49 geordi: error: 'NaN' was not declared in this scope
+16:50 lh_mouse: geordi, << (numeric_limits<double>::quiet_NaN() < numeric_limits<double>::quiet_NaN())
+16:50 geordi: false
+16:50 lh_mouse: 呃，好像记反了。
+16:50 lh_mouse: geordi, << (numeric_limits<double>::quiet_NaN() <= numeric_limits<double>::quiet_NaN())
+16:50 geordi: false
+16:50 lh_mouse: geordi, << (numeric_limits<double>::quiet_NaN() > numeric_limits<double>::quiet_NaN())
+16:50 geordi: false
+16:50 lh_mouse: geordi, << (numeric_limits<double>::quiet_NaN() != numeric_limits<double>::quiet_NaN())
+16:50 geordi: true
+16:50 lh_mouse: 看起来确实是反了。
+16:51 lh_mouse: NaN != NaN 是 true 。
+16:51 lh_mouse: geordi, << (numeric_limits<double>::signaling_NaN() != numeric_limits<double>::quiet_NaN())
+16:51 geordi: true
+16:51 lh_mouse: geordi, << (numeric_limits<double>::signaling_NaN() < numeric_limits<double>::quiet_NaN())
+16:51 geordi: false
+16:55 lh_mouse: 按道理来讲应该是 unordered，不过 C艹这里怎么规定的ヲ忘了。
+17:09 AaronLi quit:Quit: AaronLi
+17:10 AaronLi joined channel
+17:10 stardust quit:Quit: Leaving
+17:10 AaronLi quit:Client Quit
+17:11 stardust joined channel
+17:12 cleamoon joined channel
+17:23 cleamoon: 在四次失败的尝试之后，SpaceX的Falcon 9火箭第一级成功垂直着陆在一个无人的海上平台上。
+17:24 lhanjian: 天朝有压力啊
+17:24 lhanjian: 不知道NASA怎么看
+17:25 cleamoon: 和天朝有什么关系，放出去的核导弹又不用考虑降落资肆不好
+17:25 lhanjian: 天朝好歹是第三航天大国
+17:26 cleamoon: 第三？你信？
+17:26 lhanjian: 从载人航天算
+17:29 cleamoon: 载人航天真的没高级技术......
+17:29 cleamoon: 和航天一个水平的
+17:30 cc joined channel
+17:30 lhanjian: 问题是其他国家都稀烂了
+17:30 stardust: 从月球车来看也是第三
+17:30 stardust: 月球软着陆还是有技术含量的
+17:30 lhanjian: 别真把天朝当曹县
+17:30 Mokou: 不是天朝的话是哪个国家？
+17:31 cleamoon: 曹县是什么
+17:31 lhanjian: 朝鲜啊
+17:32 lhanjian: 朝鲜不就是不在意火箭姿势，能发弹道导弹才是王道
+17:33 cleamoon: 印度欧洲都不错呀
+17:33 cleamoon: 只不过过了冷战都不打算把人扔上去玩一圈了
+17:33 lhanjian: “别着火就行”
+17:33 lhanjian: “别互相扯淡就行”
+17:37 cleamoon: lhanjian, ？
+17:37 lhanjian: 没啥，只能祝今年三哥运气好，能把人送上去了
+17:38 lhanjian: 西欧各国在大重大投入的项目上一贯互相牵扯，没法一条心又不只这一次
+17:38 lhanjian: 项目能照计划进行就不错了
+17:40 stardust: 伽利略定位系统进度就比北斗慢一截，频段都被抢了
+17:40 lhanjian: 还有他们的 核聚变研究 ……
+17:41 cleamoon: 核聚变不是牵扯的问题，是难度问题
+17:42 cleamoon: 不过即使是第一其实也卵用，现在航天是完全没收益的，有一个空间站足够了
+17:42 lhanjian: 这个不是指研究进展
+17:43 lhanjian: 他们连投资建设的资金都拖拖拉拉，都想往里塞人，出钱又互相扯皮
+17:43 cc: 在这个阳光明媚的天气感冒了，痛苦。。。
+17:44 cleamoon: 那肯定，如果近期能造出来就没人扯淡了
+17:44 cleamoon: 关键就是几个关键技术还没影呢
+17:45 lhanjian: 我指的是那个核聚变实验装置，好像叫托卡马克？
+17:45 lhanjian: 美帝早就弄好了不只一个，天朝自己的也弄好了，反而跟欧洲一起建的还没影儿
+17:45 cleamoon: 我指的是 ITER.....
+17:46 lhanjian: 我也说的是ITER啊
+17:46 lhanjian: “2015	托卡马克组装开始[21]。”
+17:46 cleamoon: 中国哪里弄好了
+17:46 lhanjian: EAST啊
+17:47 cleamoon: EAST 不是输出高于输入的
+17:47 cleamoon: 如果可以输出低于输入的话那我校都能做
+17:47 lhanjian: 我知道，这种技术有的不少
+17:48 lhanjian: 问题是，欧洲怎么能拖了几年，还不把实验器材搞定
+17:48 cleamoon: ITER 是世界上第一个也是唯一一个理论输出高于输入的
+17:48 cleamoon: 因为技术没有呀.....
+17:48 cleamoon: 没技术谁愿意出钱
+17:49 lhanjian: 是啊
+17:49 lhanjian: 问题是不先投入，这技术也很难搞出来啊
+17:49 cleamoon: 10T单向磁场，高温超导或者容易的获取低温
+17:49 lhanjian: 都不给钱，那还不如各自回家自己搞算了
+17:49 cleamoon: 这些技术很难在 iter 里弄出来，因为这几个别人也都在做
+17:50 cleamoon: 如果没一个做出来那 iter 凭什么能做出来
+17:50 lhanjian: 不就是因为大家不合作，所以各自都还是在自己家搞了么
+17:50 lhanjian: 如果iter没优势，那么当初大家干嘛要合作？
+17:50 cleamoon: 不是，我说的那几个都是所有人都想要的技术
+17:50 cleamoon: 不光是 iter 用
+17:50 cleamoon: 因为一个国家建不起.......
+17:51 cleamoon: 一开始想的挺好，过几年这几个技术就都有了，大家先造着，等有技术了在用
+17:51 samurai joined channel
+17:51 cleamoon: 后来发现这几个技术有点难
+17:51 lhanjian: 计划赶不上变化
+17:51 lhanjian: 感觉最后可能还是美帝先自己搞出来了
+17:51 cleamoon: 然后纷纷撤资了
+17:51 samurai is now known as Guest92620
+17:52 cleamoon: 美帝没在搞
+17:52 Guest92620 is now known as f00x
+17:52 cleamoon: 除了这几个瓶颈的技术应该谁都有了，毕竟我这小破学校都能自己弄出来，可是这几个瓶颈，有点难呀
+17:54 lhanjian: 美好的未来就在眼前，然而就是技术突不破？
+17:54 cleamoon: +
+17:55 cleamoon: 美好嘛，也一般，之前老师讲过，除了不怕泄露和不需要原料，其实 iter 如果供电不比普通核电站便宜太多
+17:55 cleamoon: 大概也就便宜4-6成
+17:55 lhanjian: 那也很多了
+17:56 lhanjian: 而且意义不仅在此，随着时间推移，会逐步打击中东产油国，说不定可以缓解欧洲绿化的危险
+17:56 cleamoon: 不持家的表示无感到底多低
+17:56 cleamoon: 我估计 iter 造完时，要不欧洲绿化完成，要不缪斯林被灭掉了
+17:57 cleamoon: iter 的宣传人员说还需要10年，工程师说还需要 20 年，我校老师说不乐观估计可能要 50 年
+17:58 cleamoon: 毕竟，tm的 iter 是没有装备输电线的.....
+17:58 cleamoon: 想要发电造完了 iter 之后还tm得再造一个......
+17:58 lhanjian: 天朝估计，核聚变发电要等到本世纪下半叶……
+17:59 cleamoon: 除非多个技术突破，否则没戏
+17:59 stardust: 有了可控核聚变，就能建亚顿之矛了
+17:59 cleamoon: 你看米帝都放弃这个技术了，换成激光了
+17:59 cleamoon: 亚顿之矛是什么？
+17:59 lhanjian: cleamoon: 星际战舰
+18:00 stardust: SC2里面的神族战舰
+18:00 stardust: 核心是太阳炉
+18:00 cleamoon: 噗
+18:00 cleamoon: 离子发动机还没影呢
+18:01 stardust: 离子发动机已经有了啊，虽说只能拿来调姿
+18:01 cleamoon: 而且你看看 iter 的大小，让这玩意飞起来比弄几个强AI还难
+18:02 cleamoon: 乐观估计，靠核聚变航天需要300年
+18:02 lhanjian: oh，人类还存在吗……
+18:03 lhanjian: “中国离子火箭“吹动一张纸”意义重大”
+18:03 Dove quit:Ping timeout: 240 seconds
+18:03 cleamoon: 意义是有的，不过离能用还远
+18:03 cleamoon: 至少能吹动纸了
+18:03 cleamoon: 至少是个宏观物体了
+18:04 stardust: 好象是推力达到1N了量级了
+18:05 cleamoon: 中国现在的科技优势不是在航天这些古代科技，而是量子力学的应用上，包括超流和超导
+18:05 lhanjian: cleamoon: 为啥绅士觉得天朝的科技是在未来科技上？
+18:05 cleamoon: 所以其实中国很有可能撸出好用的超导
+18:05 cleamoon: 因为就是呀...... 不是觉得呀......
+18:06 cleamoon: 中国一直在做这些呀
+18:06 cleamoon: 我校要撸量子物理基本就是去中国的
+18:06 lhanjian: 我去，看来是真有希望啊
+18:06 cleamoon: 不过没在做量子计算机
+18:07 Youmu quit:Quit: Connection closed for inactivity
+18:07 cleamoon: 没在大规模做
+18:07 lhanjian: 天朝可能是在计算机上落后太多了吧
+18:07 lhanjian: 毕竟计算机还是古代科技
+18:07 cleamoon: 计算机不是古代科技
+18:08 cleamoon: 航天是古代是因为技术上容易
+18:08 cleamoon: 计算机并不容易
+18:08 lhanjian: 从手摇式开始算呢？
+18:08 cleamoon: 现在又没在用手摇的技术......
+18:09 cleamoon: 可是现代火箭和古代的其实原理一样，只是其他地方改进了
+18:10 lhanjian: 还是气体喷射？
+18:10 cleamoon: 中国超过世界，算是世界一流，有的研究所算世界第一的还是量子方面的
+18:11 cleamoon: 还是用牛二
+18:11 lhanjian: 才发现天朝的EAST也是全超导的
+18:11 lhanjian: 牛二？
+18:11 stardust: 第二定律
+18:11 cleamoon: 现在没有高强度单向磁场，要造大的只能全超导
+18:11 lhanjian: 哦
+18:12 cleamoon: 牛炖
+18:12 lhanjian: 知道
+18:12 february quit:Ping timeout: 244 seconds
+18:12 lhanjian: 我以为绅士在说量子，所以没意识到是牛顿
+18:12 lhanjian: 不知道能不能活着看到这些未来科技
+18:13 cleamoon: 估计能活着看到，大规模应用悬
+18:15 lhanjian: 光子计算机呢？
+18:15 lhanjian: 以前听说日本人搞出过硅激光的实验品
+18:16 cleamoon: 其实中国的大规模盗版基本毁了中国软件业，然后间接干死了硬件研发
+18:17 cleamoon: 光晶不了解，似乎我校没一个人在做
+18:19 lhanjian: 天顶星科技还是很遥远啊
+18:20 cleamoon: 好中二的名字......
+18:20 cleamoon: intel 在尝试多层cpu了
+18:21 cleamoon: 有生之年cpu可能大规模提速
+18:21 lhanjian: 打破摩尔定律？
+18:22 cleamoon: 那估计悬
+18:22 cleamoon: 现在已经比摩尔慢了，以后我估计能赶上
+18:22 lhanjian: 现在好象是即便是叠加上多核的发展，才勉强贴上摩尔定律
+18:22 cleamoon: 对
+18:23 cleamoon: 双层可以帮助赶上一些
+18:23 cleamoon: 多层的技术，咱们还是谈谈超导吧
+18:23 lhanjian: 假设摩尔定律是对的，那么以后肯定会有一次突破式的进步来把发展速度拉回来
+18:23 cleamoon: 靠量子计算机了
+18:24 cleamoon: 有好几个其实中国都能赶上的领域，不过因为投入和领导sb导致没有的
+18:25 lhanjian: 其实 “领导sb” 也是投入不足， 教育投入不足
+18:27 cleamoon: 我觉得海盗都能搞会的东西天朝应该是能搞的，至少能搞到世界一流左右，可是，没人觉得有用....
+18:27 lhanjian: 无法让资本赚得利益的东西，就只能靠财政投入，这就很有限了
+18:28 lhanjian: 而天朝的资本家不仅仅是不会投资“没用”的东西，连投资周期比较长的东西都不那么愿意投钱
+18:28 cleamoon: 对
+18:29 cleamoon: 量子就是因为好忽悠所以才发展好
+18:29 cleamoon: 财政其实也够，不过需要拔毛
+18:29 lhanjian: 研究人员有时候还是要多忽悠一下，不然投资都搞不来，可惜会忽悠的都是浪费钱的辣鸡人
+18:30 cleamoon: 不都是
+18:30 cleamoon: 但是很多被忽悠的都是垃圾
+18:30 lhanjian: 是啊
+18:30 lhanjian: 十进制通信网
+18:30 lhanjian: 吐血
+18:30 cleamoon: 噗
+18:30 stardust: 233十进制通信网是什么
+18:31 cleamoon: 这是什么鬼
+18:32 cleamoon: 其实目标是未来科技的话，中国是有一个很严重的短板的，就是数学
+18:32 cleamoon: 不知道至今埋没多少人才了
+18:33 lhanjian: Matsune: 
+18:33 lhanjian: 一般认为天朝的数学水平反而不怎么落后
+18:34 cleamoon: 科研落后呀
+18:35 cleamoon: lhanjian, 中国一般主管科研的部门是什么
+18:35 lhanjian: 科技部？
+18:37 lhanjian: 科技部是唯一一个非TG党员任部长的国务院组成部门
+18:39 cleamoon: 日，科技部网站放tm什么新闻呀
+18:40 lhanjian: 绅士想看什么？
+18:40 cleamoon: 科研成果报告
+18:41 Mokou: 悲报：http://ww3.sinaimg.cn/mw690/005E6x6Ojw1f2qhf85pdcj30qo1begoe.jpg
+18:42 cleamoon: 噗
+18:42 cleamoon: 怎么上涨这么快
+18:42 lhanjian: cleamoon: 搜 国家自然科学奖 国家最高科学技术奖
+18:42 cleamoon: 这一下亏了超过一成的钱呀
+18:42 cleamoon: lhanjian, 这些奖靠谱吗.....
+18:43 lhanjian: cleamoon: 你看成果嘛
+18:43 lhanjian: 这么多年好像争议比较大的都是那个蛋疼的 透明计算
+18:44 lhanjian: cleamoon: https://zh.wikipedia.org/wiki/%E5%9B%BD%E5%AE%B6%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E5%A5%96
+18:44 cleamoon: 中国没有软件业，做软件科研难点
+18:44 lhanjian: https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%9C%80%E9%AB%98%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A5%96
+18:45 cleamoon: 铁基超导体，这个略nb呀
+18:46 lhanjian: 如果你看他们这些实验室自己发布的信息，好像还有更多可以算 进步 的成果
+18:46 lhanjian: 列在这里的都是一等奖，每年还有二三等将
+18:46 cleamoon: 那肯定，获奖的肯定比可用的少很多
+18:46 cleamoon: 毕竟奖很少
+18:47 cleamoon: 快20年没有数学的奖了
+18:48 lhanjian: 是啊
+18:49 cleamoon: 早晚会因为这个出问题
+18:49 Mokou: http://ww2.sinaimg.cn/mw690/a0fae7b2gw1f2qki8azp2j20bb0xcn1m.jpg
+18:50 cleamoon: 卧槽，这个想知道怎么做的
+18:51 cleamoon: Mokou, 黑旗大学打算学CS？
+18:51 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+18:52 Mokou: cleamoon: +
+18:52 cleamoon: Mokou, 有什么倾向的方向吗？
+18:52 Mokou: 暂时没有
+18:53 lhanjian: cleamoon: http://www.most.cn/ztzl/gjkxjsjldh/jldh2014/jldh14jlgg/201501/t20150107_117322.htm 2014年有数学相关的二等奖
+18:53 cleamoon: Mokou, 有打算做科研吗？
+18:53 Mokou: 我打算留校
+18:54 cleamoon: soga
+18:55 cleamoon: lhanjian, 看了一下这几个，说真的，这几个数学连我校都干不过...... 数学投入还是太少了
+18:55 tutu_wind quit:Ping timeout: 260 seconds
+18:55 lhanjian: 可能还是急功近利
+18:55 lhanjian: 吧
+18:55 lhanjian: 毕竟数学对产业的直接贡献难以证实
+18:56 cleamoon: 很难有短期直接影响
+18:56 lhanjian: 是啊
+18:58 lhanjian: 还有国家科学技术进步奖
+19:00 lhanjian: http://www.nosta.gov.cn/upload/2016slgb/zr_101/zrIndex.html
+19:02 lhanjian: 这好像是今年选送国家自然科学奖的数学类
+19:05 Matsune: 中国有个问题 就是教育资源实在是太集中了
+19:05 cleamoon: 有几个不很了解，不过这个看起来好多了
+19:05 Matsune: 数学基本就靠北京
+19:05 cleamoon: 噗
+19:05 cleamoon: 北京哪有人才
+19:06 cleamoon: imo多少年没北京人了
+19:06 lhanjian: Matsune: 我看这些数学奖，好多奖都是山东大学的人弄得
+19:06 Matsune: 我说的是教育资源
+19:06 cleamoon: 我宁可让数学集中在湖南
+19:06 Matsune: 不是学生或者是其他
+19:07 cleamoon: 那略二了
+19:08 Matsune: 基础类研究 基本只能看清北中科院
+19:08 Matsune: 全在北京
+19:08 cleamoon: 太坑
+19:08 Matsune: 特别不利于地区间的交流
+19:10 cleamoon: 海盗国高福利适合科研，即使这样基础研究也差的一比，基础太拼人才了
+19:10 cleamoon: 而高考中考太消耗人才了
+19:11 lhanjian: cleamoon: 算比例的话，海盗国的科研比例还是高的惊人的吧
+19:12 cleamoon: 惊人+
+19:13 cleamoon: 但是基础研究和人数无关，和人才有关
+19:13 Matsune: 清北中科院资源多了以后 可能体制内科研的现象也不会那么严重
+19:14 Matsune: 亚洲这边的基础科研 全靠本子撑着
+19:15 cleamoon: Matsune, 日本擅长什么研究？
+19:16 Matsune: 日本物理和数学都不弱吧
+19:16 Matsune: 数学方面近些年有个特别有名的
+19:16 Matsune: 望月新一
+19:18 cleamoon: 望月 和 新一 的合体，都是眼睛呀.....
+19:18 lhanjian: Matsune: 又是个数论鬼才？
+19:18 cleamoon: 卧槽，这哥们搞的领域我挺喜欢呀
+19:18 Matsune: 搞代数几何的
+19:19 cleamoon: 望月新一5岁的时候随父母离开日本前往纽约，他进入菲利普斯埃克塞特学院读中学，并在1985年毕业。[2]他于16岁进入普林斯顿大学读本科，并毕业于1988年。[2]然后他在Gerd Faltings导师指导下于23岁获得博士学位。[1]他于1992年进入京都大学数理解析研究所，并于2002年晋升为教授[1]
+19:19 Matsune: 自己创造了所谓的宇宙际几何学 说自己证明了abc猜想
+19:19 cleamoon: 噗，那个abc猜想的作者呀
+19:20 lhanjian: 一旦证实了猜想，是不是说明这伙计开辟了数学的新天地？
+19:20 cleamoon: 不是 terence 组织人要看论文了吗，500页人多也能看完吧
+19:20 Matsune: 是的 搞出一个新的研究方向
+19:20 Matsune: 他的论文很难看 因为大多数人对代数几何的研究没这么深
+19:20 Matsune: 据说世界上可能只有五十来个人能看他的论文
+19:20 cleamoon: 这货的证明本身就是个研究方向
+19:21 cleamoon: 噗
+19:21 cleamoon: 50人够审稿了
+19:21 cleamoon: 把那50人绑过来
+19:21 stardust: “宇宙际几何学”,名字好中二。。
+19:23 lhanjian: http://ww1.sinaimg.cn/large/4cd3493fjw1f2qmvvku1oj20de0y07d7.jpg
+19:23 cleamoon: 我也想搞纯数学呀，不过我校连给纯数学的办公室都没有.....
+19:23 lhanjian: stardust: 窝觉得这个可能是把日文汉字直接弄过来了
+19:25 Matsune: http://www.kurims.kyoto-u.ac.jp/~motizuki/top-japanese.html
+19:25 cleamoon: 似乎就是为了中二.....
+19:25 Matsune: 而且这货还不算老
+19:25 Matsune: 是现在日本数学的中坚力量
+19:26 cleamoon: 这货跟谁学得网页背景这么难看
+19:26 Matsune: http://kyouindb.iimc.kyoto-u.ac.jp/j/lA3fA
+19:26 lhanjian: 话说日文的 际 应该翻译成什么？
+19:27 Matsune: 我估计就会直接译成宇宙际
+19:28 Matsune: 际 是边缘的意思
+19:28 stardust: Inter-universal感觉更中二了o.o
+19:28 cleamoon: 京都的呀，祭音赶紧去要几个签名
+19:31 Matsune: 京大出了两个菲尔兹
+19:31 Matsune: 东大出了一个
+19:31 cleamoon: orz
+19:32 Matsune: 东亚数学也全靠本子撑场面
+19:32 cleamoon: 祭音来个第三个？
+19:32 Matsune: 没戏了2333
+19:32 Mokou: http://ww4.sinaimg.cn/mw690/779812f7gw1f2q8zgo3caj20ku0lw414.jpg
+19:33 hoxily joined channel
+19:33 Matsune: 我感觉菲尔兹是不是都是给了纯数那边的
+19:34 cleamoon: 不超过40，有可能的
+19:34 Matsune: 四十岁之前解决了NP&P 就有机会了
+19:35 cleamoon: 那你加油吧
+19:37 Matsune: 这样说的我无言以对
+19:37 Matsune: 我觉得我没那本事
+19:37 lhanjian: Mokou: 我看了下原文，并没有爆头。只是朝天放枪
+19:39 cleamoon: Matsune, 说实话，你搞出来NP P的概率我觉得都比 T2 这两年弄到10k月薪大
+19:39 cleamoon: 哦，不在呀，那不说他了
+19:39 Mokou: 是
+19:42 Matsune: 这种世纪难题 有时候还是需要拍拍脑袋的
+19:42 Matsune: 我打算如果研究生很顺利 就考虑继续读组合优化 如果不顺利的话 打算转到AI去吧
+19:42 cleamoon: 来，把脑袋伸过来，我给你加个buff
+19:43 cleamoon: orz
+19:43 cleamoon: 然而我的研究僧只有基础课
+19:43 Matsune: 在京大学数学 肯定不能把这机会给浪费了
+19:43 cleamoon: +
+19:44 Matsune: 至于后路 就看我什么本事了
+19:44 cleamoon: 没有后路比较好
+19:53 lhanjian: 今天闲聊了好久啊
+19:53 cleamoon: lhanjian, 爆
+19:53 lhanjian: 这幼女
+20:02 Dove joined channel
+20:20 hoxily1 joined channel
+20:20 Mokou: 哟西
+20:20 Mokou: 安卓版先行登录中了
+20:20 cleamoon: orz
+20:39 andy_lv joined channel
+20:39 february joined channel
+20:43 february quit:Max SendQ exceeded
+20:43 february joined channel
+20:48 february quit:Excess Flood
+20:49 february joined channel
+20:52 february quit:Excess Flood
+20:53 february joined channel
+20:56 february quit:Excess Flood
+20:57 february joined channel
+20:57 cc joined channel
+20:58 T-J-M quit:Ping timeout: 268 seconds
+20:59 x-hope: 我买了苹果的音乐播放器
+20:59 x-hope: 意外地良心
+21:00 cleamoon: orz
+21:00 * iyzsong 无脑果黑不作评价
+21:00 cleamoon: 现充之路不可还
+21:00 stardust quit:Quit: stardust
+21:00 x-hope: 感觉甚至可以算是很长时间内第一次看到的不那么suck的设备
+21:02 cleamoon: orz
+21:02 x-hope: iyzsong, iPod shuffle没有苹果的一贯作风，不关联iTunes这种东西，可以说就是个普通的音乐播放器而已
+21:02 february quit:Quit: Leaving
+21:03 february joined channel
+21:03 cleamoon: 我隐约看到了未来海棠姬左拥右抱金发巨乳妹子，拿着MBP看报道自己的新闻的样子
+21:03 x-hope: 既然如此我觉得就无所谓了，软件上没有束缚就行，我不打算像RMS一样要求开源BIOS
+21:04 x-hope: cleamoon, MBP就是另一回事了，封闭生态不可忍
+21:05 iyzsong: 哦 那还挺好 :o
+21:05 cleamoon: 那么，未来海棠姬左拥右抱金发巨乳妹子，拿着装着Arch的MBP看报道自己的新闻的样子
+21:05 stardust joined channel
+21:06 iyzsong: 我以前见的nano好像必须用iTunes..
+21:06 x-hope: 往里面放mp3就行，没有我想象中的drm什么的
+21:06 x-hope: 对，苹果的所有其他产品好像都关联iTunes，只有shuffle没有
+21:07 T-J-M joined channel
+21:10 lhanjian: cleamoon: +1
+21:11 lhanjian: x-hope: 放心吧，用iPod shuffle都有情怀的海棠，以后一定会说出“OSX也有舒服的GUI，也可以装自己的东西，不那么封闭，还是个UNIX呢，完全没有iOS那样一贯的作风呢”
+21:12 lhanjian: 可以说就是个普通的PC操作系统呢
+21:15 cleamoon: 没用过osx，不知道哪里封闭
+21:16 lhanjian: 比起Win8 Win10 可能还更开放一点
+21:16 cleamoon: 那个要钱的wine优化叫什么来的？
+21:16 x-hope: lhanjian, 并没有什么情怀，只觉得是个足够可用的产品。
+21:16 iyzsong: crossover
+21:17 cleamoon: iyzsong, tks
+21:17 lhanjian: 但窝要黑shuffle性价比低
+21:17 x-hope: 对硬件方面完全不了解。我刚买的是35p
+21:17 x-hope: 350RMB
+21:18 lhanjian: 具体哪款？
+21:18 x-hope: 你觉得应该是什么价位才对？
+21:18 x-hope: 我看看
+21:19 x-hope: 红色的ipod shuffle，在零售店买的
+21:20 x-hope: 反正应该是现款
+21:24 lhanjian: 2GiB？
+21:24 x-hope: 对
+21:24 lhanjian: 同等价位，大法有4GiB的
+21:24 lhanjian: 国产货，大概100RMB就有4GiB
+21:24 cleamoon: 罪恶滔天的好+
+21:24 x-hope: 这个其实不是很有所谓吧…… 反正我用不完
+21:24 lhanjian: 当然，这里没有考虑iPod Shuflle 是不是用了更好的播放芯片
+21:25 lh_cat joined channel
+21:25 lhanjian: 也不考虑海棠是不是觉得shuffle比较好看
+21:25 x-hope: 存储感觉不是成本大头？
+21:25 lhanjian: 然而这几乎是，不把设备拆开来看里面的设计和用料的最容易的指标了
+21:25 lhanjian: 也不是外貌等个人体验为主的指标
+21:26 lhanjian: 而且shuffle甚至没有一个基础的屏幕……
+21:26 stardust quit:Changing host
+21:26 stardust joined channel
+21:26 stardust quit:Changing host
+21:26 stardust joined channel
+21:26 lhanjian: 不过我感觉窝多管闲事了，毕竟海棠本来买来乐呵乐呵，结果理性一分析，就容易觉得乏味了
+21:26 x-hope: 屏幕对续航的影响太大，而且并不需要
+21:27 lhanjian: 大多数MP3播放器都有自动关闭屏幕的设计
+21:27 stardust quit:
+21:27 lhanjian: 而且大法那款，标称播放时间18小时。shuffle自称最大15小时播放时间
+21:28 iyzsong: shuffle不就是要随机播放的感觉么..
+21:28 cleamoon: 理性一分析，我为什么要听音乐呢.....
+21:28 x-hope: 有语音的标题朗读设定的
+21:28 stardust joined channel
+21:28 lhanjian: shuffle毛重60克，索法30克……
+21:29 lh_cat: shuffle 不好用。
+21:29 x-hope: 我觉得这样反倒是使用体验会好不少。比较do one thing and do it well，一个音乐播放器不需要太多东西
+21:29 x-hope: lh_cat, 我还没有开始用，为什么呢？
+21:30 lh_cat: 要 傻逼 iTunes。
+21:30 x-hope: lh_cat, 不用iTunes
+21:30 lh_cat: 而且不能指定播放。
+21:30 x-hope: 我专门问了这个的，不然肯定不会买
+21:30 lh_cat: 没试过 itools 。
+21:30 lh_cat: 理论可行，
+21:31 lhanjian: 而且shuffle疑似还在耳机里加入了用于鉴定耳机生产厂的芯片
+21:31 lhanjian: 进一步排斥了替代耳机的可能
+21:31 x-hope: 可以设定默认播放顺序，虽然这个功能似乎是需要iTunes，但我相信GNU
+21:31 cleamoon: 两个ext4分区，能不能在不损坏其中一个的情况下把另一个的空间合并过来？
+21:32 x-hope: 耳机怎么会不能替代……
+21:32 x-hope: cleamoon, 空间连续就可以
+21:32 cleamoon: x
+21:32 lhanjian: “未经授权的设备”
+21:32 cleamoon: x-hope, 比如 sda3 sda4 这种？
+21:32 lhanjian: 现在iOS已经引入了这样的功能了，某些充电线没效果了，而且是软件引入的，8以前貌似没这个限制
+21:32 cleamoon: 保住 sda3？
+21:32 x-hope: cleamoon, 而且应该必须是后面的并到前面去
+21:33 cleamoon: ｓｏｇａ
+21:33 lhanjian: 所以难以觉得是为了保障用户的安全
+21:33 iyzsong: 用gparted 把一个删掉 另一个拖一拖就行了
+21:33 lh_cat: 没什么卯月。
+21:33 x-hope: lhanjian, 苹果的其他产品的确是这个尿性。但shuffle不需要iTunes也没有drm，犯不着吧。
+21:34 iyzsong: 这里果黑众多啊 0 0
+21:34 lhanjian: 海棠可以拿第三方的耳机插上去试试看
+21:34 lhanjian: 如果声道是全的说明没这限制
+21:34 lh_mouse: shuffle 是拿来装逼之外再无卯月。
+21:34 lhanjian: 当然，shuffle的电池还不可替换，官方的替换电池，价格一定会让你觉得直接再买一个更划算
+21:34 cleamoon: 都是穷逼，否则苹果全套焦作人
+21:35 lhanjian: 装逼效果也不好的，因为shuffle的这个造型，华强北有无数假冒的
+21:36 lhanjian: 毕竟它完全不能体现苹果的配套软件
+21:36 cleamoon: 我之前买的mp3，买回来就惊了，电池是替换的，存储是microsd......
+21:36 lhanjian: 我在几年前就见过shuffle的高仿品了
+21:37 lh_mouse: 之前有同事说 shuffle 最值钱之处是那个苹果 logo 。
+21:37 cleamoon: 不用P9983别说装逼
+21:37 lh_mouse: 这天气是要天天洗澡的节奏。
+21:39 lhanjian: 苹果最值得买的恐怕还就剩下iPhone了
+21:40 stardust quit:Read error: Connection reset by peer
+21:40 lhanjian: 当然也是安卓衬托出来的
+21:40 lh_mouse: 辣鸡 iPhone。
+21:40 lhanjian: 辣鸡是必然的
+21:40 cleamoon: 我觉得苹果的垃圾桶挺不错的
+21:41 lh_mouse: 辣鸡苹果。
+21:41 lhanjian: 辣鸡苹果+
+21:42 cleamoon: 辣鸡苹果+
+21:42 Mokou: 辣鸡苹果+
+21:42 lh_mouse: Mokou, Motou.
+21:43 x-hope: lhanjian, 具体限制在于？我不确定我听得出来
+21:43 Mokou: lh_mouse: Niebi.
+21:43 lh_mouse: 9_9
+21:43 february: 我好想哭！　被＃＃ｃ给ｂａｎｎｅｄ了
+21:43 lhanjian: x-hope: 已经听了？但是听不出来？那就说明应该没这限制
+21:43 lh_mouse: O_O
+21:43 x-hope: lh_mouse, 300RMB有什么可装逼的…… 我之前在京东买的音乐播放器也就这个价
+21:44 Mokou: 壕TL
+21:44 lh_mouse: x-hope, ヲ年会抽的。
+21:44 cleamoon: 壕orz
+21:44 lhanjian: 看来苹果还没有丧心病狂到一个普通播放器也要限制第三方设备的逗比程度
+21:44 lh_mouse: february, 作死了？
+21:45 stardust joined channel
+21:46 x-hope: lh_mouse, 你确定是说连屏幕都没有的shuffle？
+21:46 lh_cat: 是。
+21:46 lh_cat: 没有屏幕。
+21:47 february: lh_mouse, 没有 只是不懂得规矩，然后就。。。　连说一声对不起的机会都不给就直接ｂａｎｎｅｄ
+21:49 lh_cat: february: 尝试 /msg 。
+21:50 cleamoon: ##c 能有什么规矩，不许说 void** 的坏话？
+21:50 lh_cat: ##c ヲ就去过一次。
+21:50 lhanjian: cleamoon: 233333
+21:51 hoxily1 quit:Quit: WeeChat 1.3
+21:51 hoxily quit:Quit: Leaving
+21:52 lh_cat: 粗口林应该欢喜那地方。
+21:52 AaronLi joined channel
+21:53 lh_cat: C 用户多是不懂啥是语义的，而用实现取代语义。
+21:53 february: lh_mouse, 还有我开了个小窗，和＃＃ｃ里的一个ｂｏｔ对话，　然后我把它骂了一桶。。。
+21:54 iyzsong: 2333
+21:54 lh_cat: bot
+21:54 AaronLi quit:Client Quit
+21:55 lhanjian: 23333
+21:55 cleamoon: 23333
+21:57 lh_cat: lh_not_bot: 有人叫你。
+21:58 x-hope: 不过粗口林似乎也是用MBP。所以说用或者不用某个产品并不涉及什么价值判断吧……
+21:59 cc quit:Quit: xc:www.chnxc.net
+21:59 cleamoon: 粗口林用的air
+21:59 cleamoon: 他说怕吵
+21:59 x-hope: 这样啊
+21:59 lhanjian: 粗口林用Mac？
+22:00 lh_cat: 反正ヲ不买。
+22:00 lhanjian: 啥叫价值判断
+22:00 cleamoon: 反正ヲ买不起
+22:00 lhanjian: lh_cat: 小耗现在用的什么本子？
+22:00 iyzsong: 是呀 他又不是GNU党..
+22:00 x-hope: 对，粗口林应该五年前就在用macbook了
+22:00 lh_cat: 不许学ヲ说话！
+22:00 lh_cat: lhanjian: 不用本子。
+22:01 february: 粗口林是啥？
+22:01 lh_cat: linus
+22:01 february: ｓｏｇａ
+22:01 lhanjian: 不用本子？
+22:02 x-hope: 除非是说剥削童工什么的。不过这个嘛……
+22:03 lhanjian: 剥削童工？
+22:03 lhanjian: 倒不说富士康血汗工厂
+22:03 x-hope: 好像看到过这样的报告……
+22:04 lh_cat: lh_not_bot: you are an idiot.
+22:04 Mokou: http://ww4.sinaimg.cn/mw1024/a72135fejw1f2q7b2dmdfj21a50qoal3.jpg 本子竟在电视上公然
+22:04 x-hope: 对，说不定就是在说富士康
+22:05 lh_cat: lh_not_bot: you are an idiot.
+22:05 lhanjian: Mokou: 引用一句长者语录，“有利于中日友好的事，要竭尽全力去做。不利于中日友好的事，绝不要去做！”
+22:06 lhanjian: （同时边讲话边为自己鼓掌）
+22:06 x-hope: 大运河文件吗
+22:06 Mokou: +
+22:06 x-hope: 这种新闻所有海外媒体都会报道的吧……
+22:06 february: 粗口林　在ｉｒｃ里叫啥？
+22:06 lh_mouse: 粗口林就是 Linus。
+22:07 x-hope: 哦，可能还有俄罗斯不会
+22:08 lhanjian: x-hope: 俄罗斯只提波罗申科，不提普京
+22:09 stardust: 毕竟是王侯将相啊
+22:09 cleamoon: 卧槽，海盗一个地方火车直接冲出了车站
+22:10 Mokou: http://ww2.sinaimg.cn/mw690/a7cb85c1jw1f2qqetekswj20f00jz75r.jpg 这机箱不错
+22:10 lh_mouse: Mokou, Motou.
+22:11 cleamoon: 确实不错
+22:11 x-hope: 俄罗斯是通过什么方式控制媒体的？感觉并不能像我朝一样明目张胆啊
+22:11 lh_mouse: 感觉跟美帝类似。
+22:12 lhanjian: x-hope: 行政指令
+22:12 x-hope: 应该比美帝强得多
+22:12 cleamoon: 于是还是明目张胆？
+22:12 lhanjian: cleamoon: 应该这么说吧，普京做到的，就是包子想做的，“审查合法化”，“有法治你”
+22:12 x-hope: lhanjian, 果然啊
+22:13 lhanjian: “我们完全是依法监管非法媒体非法言论”
+22:13 cleamoon: 天朝合不合法无所谓吧
+22:13 lhanjian: cleamoon: 形式上的理直气壮
+22:13 cleamoon: 天朝有城管治你
+22:13 cleamoon: 拳头上的理直气壮
+22:14 x-hope: lh_cat, 美帝体系并不能阻止小媒体自己搞大新闻，但是俄罗斯就不一样
+22:14 lh_cat: lh_not_bot: you are an idiot.
+22:14 lh_cat was kicked by 
+22:15 lhanjian: 俄罗斯好像连类似于游行示威法的玩意儿也弄出来了，3个人以上一律要报批
+22:15 lh_mouse: 一直就应该有。
+22:15 lh_mouse: 包括之前叶利钦炮打白宫事件。
+22:15 Matsune: 俄罗斯的媒体也经常有说“应该学习中国”
+22:16 lhanjian: 老实说，普京怎么做到的这些？
+22:16 cleamoon: 3个人以上一律要报批？禁止4P？
+22:16 lhanjian: “枪杆子底下出政权”》
+22:16 Matsune: 下面全是自己人
+22:16 lhanjian: 。
+22:16 lh_cat joined channel
+22:18 Dove quit:Ping timeout: 248 seconds
+22:20 lhanjian: “看来还是要坚持普京同志和统俄党的坚强领导”
+22:23 x-hope: lhanjian, 我前几天听了一个同性恋公益的演讲
+22:23 lhanjian: 哦？
+22:24 Mokou: http://ww2.sinaimg.cn/large/66cb4654gw1f2ltfxye5hj20md0n0diw.jpg
+22:24 x-hope: 他们用各种方式尝试绕过******法，被叫停过一次，但后来似乎沟通成功了
+22:25 lhanjian: 什么法？
+22:25 lhanjian: x-hope: 反正都挂代理了，干嘛还自我审查
+22:25 cleamoon: 反新日暮里攻占幻想乡法
+22:26 lhanjian: 当然，有个国内手机厂商的安卓系统开发者说，某个安卓的关键控件（TextView什么的）是应有关部门要求，全面收集用户信息的
+22:28 cleamoon: 不明白这个和希尔伯特空间有什么联系.... 37个点的运动直接上矩阵就好了，都能口算111维积分，口算个矩阵变换不很容易
+22:28 Mokou: 矩阵逼格不够高
+22:30 lhanjian: 海棠试图绕过关键词过滤被带走了，呜呜呜真可怕
+22:31 cleamoon: 真可怕
+22:33 x-hope: 并没有挂代理，公共频道。其他都无所谓，这个感觉会比较麻烦？Well，集会游行示威法。
+22:34 x-hope: 哦，我正好是华为手机……
+22:34 lhanjian: 危险……
+22:34 february quit:Remote host closed the connection
+22:34 lhanjian: 和谁沟通？沟通啥？
+22:34 x-hope: 不管，人家可是公开演讲，虽然只是，TEDxYouth
+22:35 x-hope: 市政府？
+22:35 x-hope: 他们搞同志联谊会。
+22:35 lhanjian: 虽然天朝的法律里已经删除了所有可能规定同性恋违法的行为，但是还是在宣传上并不支持吧
+22:35 lhanjian: 行为->内容
+22:36 miao233_ joined channel
+22:36 cleamoon: 你可以说 击毁有型侍卫FA，既没问题又中二
+22:36 lhanjian: 不过其实他们搞私下的联谊会，一般来说不做任何申报是最简单的吧
+22:36 lhanjian: cleamoon: 23333
+22:37 x-hope: 他们说去年有三个里程碑事件，算是官方释出了比以往友好不少的信号
+22:37 Dove joined channel
+22:37 x-hope: lhanjian, 公开活动发声
+22:37 lhanjian: 哦
+22:37 lhanjian: 那是挺意外的
+22:38 stardust: 不过中国自古以来就对同性恋较为宽容
+22:38 cleamoon: 王的威光
+22:38 x-hope: 一个是中山大学那个，诉教育部行政不作为立案了
+22:40 x-hope: 不是很记得剩下的了。他们大概一个月之后出视频吧，要做字幕翻译，几个高二学生组织的TED
+22:40 lhanjian: 就是修那个什么要抢中山大学的地盘？
+22:41 x-hope: 不是，被注销校园卡，通知父母辅导员施压的那个
+22:42 x-hope: 起因是多数国内教材在今天仍使用旧的定义，把同性恋算作精神疾病
+22:42 lhanjian: 嗯
+22:42 guowang joined channel
+22:43 guowang: Oyodo: 
+22:43 x-hope: stardust, 当时现场有不少家长，气氛特别不对。据说后来有很多家长打电话给赞助商CEO，然后他们要出声明说这都是学生个人行为
+22:43 cleamoon: 异性恋才是精神疾病
+22:44 Dove: 异性恋才是精神疾病+
+22:45 Dove: 要不是傻逼的各种激素分泌超标你会对女人有兴趣？
+22:46 x-hope: 可不要说这种话……
+22:46 stardust: 明朝时男风可是雅兴啊。恐同的风气应该是清朝时开始的
+22:46 Dove: 问题是精虫上脑的大脑反应就和精神分裂如出一辙
+22:47 cleamoon: 如果不是为了啪啪啪，大多数男人还是愿意和男人一起玩
+22:47 condy: Σ<(= ° △ °|||)>︴
+22:47 guowang: 有人试过 neovim么?
+22:47 x-hope: 哦对，还有一个是央视以积极正面形象报道了某国的同性恋骄傲游行
+22:47 Dove: 如果不是分泌超标，你不会想啪啪啪。
+22:48 cleamoon: 同性恋骄傲游行...... 我觉得是海盗......
+22:48 * x-hope 一向是少数人
+22:48 cleamoon: 这现充
+22:48 Dove: 这现充
+22:48 x-hope: cleamoon, 好像是德国？不记得了
+22:48 Dove: guowang: 没试过，好用么。
+22:48 iyzsong: (#･∀･)
+22:48 lhanjian: 有趣
+22:49 lhanjian: 天朝本来对这类问题都是低调处理的
+22:49 Dove: 性别不同怎么结婚
+22:49 Dove: 异性拿来啪啪啪就可以了
+22:49 cleamoon: 海盗确实有个每年的 stockholm pride 游行
+22:49 x-hope: 是在成都，这边可能宽松不少
+22:50 Dove: 成都确实
+22:50 * x-hope 认为婚姻制度将逐渐消亡解构
+22:51 cleamoon: orz
+22:51 Dove: 你想多了，婚姻这种陋习才不会消亡。
+22:51 lhanjian: 海棠一下子和马教主观点一致了
+22:51 cleamoon: 主义，海棠要开后宫啦
+22:51 cleamoon: 海棠只是说重婚罪这种陋习应该消除掉
+22:52 Dove: 现充开后宫有什么好奇怪的。
+22:52 cleamoon: 确实
+22:52 x-hope: Dove, 离婚率已经大幅上升，自愿性行为和婚姻也很明显地在解耦合
+22:52 Dove: 每天只能看几页书，看不进去怎么办。
+22:53 lhanjian: 其实天朝还是很保守的
+22:53 Dove: x-hope: 然而陋习不是那么容易战胜的。
+22:53 x-hope: 天朝保守+
+22:53 lhanjian: 较发达的城市还没有成为主流
+22:53 x-hope: 不过部分西方国家也并没有那么进步，和天朝差不多的比比皆是
+22:54 lhanjian: 比如？
+22:54 cleamoon: 比如大多数国家不允许海棠姬娶几十个老婆，尤其不许娶12岁的老婆
+22:55 x-hope: 不过我朝还有过半的农村和对应的传统。我刚才没考虑这点
+22:56 Dove: 不结婚的卢瑟撸过
+22:56 * x-hope 见识狭隘
+22:56 lhanjian: 农村已经不过半了
+22:57 x-hope: 考虑超生人口？
+22:57 Dove: 农民占的人口比例呢？
+22:57 lhanjian: 城市化率最少的算法也有百分之56了
+22:57 lhanjian: 还有的说法是65
+22:58 x-hope: 农村不上户口的比例要高得多吧
+22:59 lhanjian: 但是应该不会超过总人口的百分之5吧
+22:59 Dove: 我朝的农民是真的惨
+22:59 x-hope: 难说
+22:59 lhanjian: 当然，偏题了。毕竟人虽然进了城市，观念却没变过来
+23:00 Dove: 然而没觉得多数城市人的观念有多先进
+23:00 x-hope: 我其实没怎么在城市生活过，一直住在城郊而且（更重要地是）不出门
+23:00 cleamoon: orz
+23:00 cleamoon: 不出门也能有妹子
+23:01 Dove: 不扯这种淡，我要学技术，我要挣钱！
+23:01 cleamoon: 海棠撩妹，愿者上钩
+23:01 Dove: 平心而论海棠并不撩妹
+23:01 lhanjian: 海棠留学的事情已经大定了？
+23:03 Dove: lhanjian: 你的技术是怎么学的
+23:03 Dove: 这个问法好像比较不好
+23:03 Dove: 。
+23:04 lhanjian: 不知道怎么回答，我都是胡乱玩的
+23:04 lhanjian: 应该问他们科班出身的
+23:04 Dove: 看不进去书
+23:04 Dove: 想找点东西玩
+23:04 lh_mouse: 看书有毛用。
+23:05 Dove: 那怎么搞
+23:06 x-hope: lhanjian, 暑校已经申请到了，大学申请暑假回来做
+23:06 Dove: x-hope: OTL
+23:07 x-hope: https://a.uguu.se/rthkec.png
+23:07 cleamoon: 我估计我有大概率搞CS了
+23:08 Dove: cleamoon: 欢淫
+23:08 x-hope: Dove, 学东西心态平和一点，不要急躁
+23:08 Dove: 我很急躁啊我勒个去
+23:08 cleamoon: Dove, 要不要比比谁学的快
+23:08 Dove: cleamoon: 比就比
+23:08 cleamoon: 你比我多撸3年
+23:08 Dove: 没有，我就没学。
+23:09 x-hope: 当然，我并没有找工作的压力，可能略何不食肉糜。但真学东西的话急躁了反正我不行。
+23:09 cleamoon: 你至少cs大三了，我毛都不会呀
+23:09 Dove: 然而你高估了我朝CS大三的水平。
+23:09 cleamoon: 至少比什么都不会高
+23:10 Dove: 就是啥都不会
+23:10 Dove: 连hello world都搞不清的都有。
+23:10 x-hope: 虽然说我根本不会什么cs，也没学啥东西…… 不过方法上有钻研的兴趣会好太多
+23:11 x-hope: cleamoon, 未必。熟悉其他学科科研或工程方法论的人可能反而适应得很好
+23:11 Dove: 兴趣我倒是有的
+23:11 cleamoon: 而且 T2 还有一个优势，就是我学的东西和 T2 学的完全不一样
+23:11 stardust: 我现在在担心自己学了半吊子电路和半吊子C语言，万一考不上研能干什么:(
+23:11 Dove: cleamoon: 我啥都没学
+23:11 x-hope: 我的意思是，搞清楚看起来不那么有用的东西的兴趣
+23:11 cleamoon: x-hope, 请问怎么把一个图论的问题翻译成微分方程
+23:12 cleamoon: Dove, 以后学的东西
+23:12 x-hope: cleamoon, 不是这个意思。
+23:12 Dove: 我就要毕业了，彼此彼此。
+23:12 lhanjian: x-hope: 原来还有一年毕业啊
+23:12 cleamoon: Dove, 你不大三吗？
+23:12 lhanjian: stardust: 什么也不能干。不过好歹也能靠学校混个出路吧
+23:12 x-hope: 但物理学生对于将理论形式化的做法应该很有经验吧
+23:13 Dove: 你不能学嘛，大四又没课，不过这反而比较好，反正都靠自学。
+23:13 cleamoon: x-hope, 分成小块 + 积分，或者是直接脑洞成微分方程，总之要的是方程
+23:14 cleamoon: Dove, 那么就这样，你明年没课自学，我明年忙死但是也是自学，然后你毕业时咱们拼后端实力
+23:14 x-hope: cleamoon, 噫，真可以啊
+23:14 Dove: cleamoon: 好
+23:14 cleamoon: 我master学的东西对后端的帮助，似乎还不如不学
+23:14 cleamoon: 好
+23:14 x-hope: 我只知道可以搞成线性规划
+23:14 x-hope: 厉害
+23:15 cleamoon: 赌海棠的屁屁
+23:15 iyzsong: (；・∀・)
+23:15 Dove: 这个赌注不错
+23:15 cleamoon: 线性规划不是物理范畴吧....
+23:15 iyzsong: 别闹
+23:15 Dove: 我们教的课对后端的帮助也是不如不学。
+23:16 Dove: 我已经绝望了
+23:16 cleamoon: 即使学灰机也还有这个赌注，不过对 T2 更加不利一点，因为学CS的话我打算双休
+23:16 x-hope: Dove, 自己学啊…… 我有课上咯
+23:17 Dove: 双修不错啊
+23:17 Dove: 是自己学啊。
+23:18 iyzsong: hope酱由我来守护 ʕ•ٹ•ʔ
+23:18 Dove: 哈哈
+23:18 cleamoon: 那么赌宋先生的屁屁？
+23:19 iyzsong: 你又来不了，关我屁事..
+23:20 cleamoon: 是的，关你屁事
+23:20 cleamoon: 来吧，抬尻
+23:20 iyzsong: 2333
+23:21 Dove: 先强忍着把这点书看完然后去研究libevent
+23:21 iyzsong: 所以你们要比什么啊..
+23:22 Dove: 比什么好呢。
+23:22 Dove: 到时候再说吧
+23:22 cleamoon: 比小蚝那种系统构架+代码？
+23:22 cleamoon: 这样小蚝可以做裁判
+23:24 Dove: 我估计我俩谁都写不出
+23:25 cleamoon: 我肯定写不出，但是可以写一部分然后设计一部分构架呀
+23:25 cleamoon: 就波塞冬那种的
+23:25 Dove: 试试看吧
+23:25 Dove: 我都不知道那玩意干嘛的。
+23:26 cleamoon: 耗曰：波塞冬（Poseidon）是一个游戏服务端框架。
+23:26 x-hope: 感觉T2有点强行直接学很高大上的东西？
+23:27 Dove: x-hope: 我在学API，哪里高大上了。
+23:27 Dove: APUE + UNP的傻逼组合还高大上那就真没啥可学了。
+23:28 x-hope: 好嘛，不懂。
+23:29 Dove: 我的目标就是写个http server啥的，然后参考libevent把它搞成事件驱动。
+23:29 iyzsong: 我倒是常常强行装X,然而并无卵用
+23:30 cleamoon: 宋先生可以逢人就说“你又不姓董”
+23:31 iyzsong: 何解？
+23:32 cleamoon: 钦定
+23:33 condy: iyzsong: o.o
+23:33 iyzsong: ( ﾟдﾟ)
+23:34 lhanjian: condy: o o
+23:34 x-hope: 有人看过石膏BOYS吗
+23:34 x-hope: 设定很棒的样子
+23:35 iyzsong: 祝大家都开心幸福～
+23:35 condy: iyzsong: 还差一个礼拜
+23:35 x-hope: 诶？你怎么了
+23:35 iyzsong: 石膏..
+23:35 cleamoon: 还差一个礼拜他们就要结婚了
+23:35 Dove: 我明天醒来突然技术NB得不行我就开心幸福了。
+23:36 iyzsong: 没事呀;)
+23:38 x-hope: 突然说这话感觉好奇怪啊。不过还是祝过得开心
+23:38 x-hope: condy, 还有一个星期？
+23:40 condy: x-hope: 一个星期之后有个大会(我和 iyzsong 都 参加了)
+23:42 cleamoon: 不是螳臂当车的歹徒大会吧？
+23:42 wlemuel quit:Quit: Lost terminal
+23:42 x-hope: 这样啊
+23:42 iyzsong: 下午同学请吃饭(婚请)，大概我还没缓过来..
+23:42 condy: <(=￣～￣=)>
+23:43 cleamoon: orz
+23:43 iyzsong: 好像是什么go语言的？
+23:43 lhanjian: gopher conf吧
+23:43 cleamoon: 饭局都要自己比赛挣的表示羡慕嫉妒恨
+23:44 iyzsong: 对。我和condy去看看人多
+23:45 x-hope: 啊啊看来要等明年才有机会去圣地亚哥漫展了
+23:45 x-hope: 或者后年……
+23:45 iyzsong: (≧▽≦)
+23:46 cleamoon: 圣地亚哥农展
+23:51 stardust quit:Quit: 滚去睡觉
+23:59 Dove: 碎觉，诸君武运

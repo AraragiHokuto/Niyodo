@@ -1,0 +1,1143 @@
+00:04 ASenR quit:Ping timeout: 264 seconds
+00:06 ahe quit:Ping timeout: 256 seconds
+00:06 libhanjian quit:Quit: Leaving
+00:06 ASenR joined channel
+00:19 sleepwalking joined channel
+00:24 sleepwalking quit:Ping timeout: 252 seconds
+00:31 FrankHB quit:Read error: Connection reset by peer
+00:33 hysw quit:Ping timeout: 264 seconds
+00:41 hysw joined channel
+00:43 sleepwalking joined channel
+00:46 Mokou: 睡觉
+00:46 Mokou: 诸君武运
+00:46 Mokou quit:Quit: 睡觉
+00:48 sleepwalking quit:Ping timeout: 252 seconds
+01:32 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+01:35 shuchang joined channel
+01:43 shuchang quit:Remote host closed the connection
+02:55 cleamoon joined channel
+02:55 boosure joined channel
+03:04 lh_mouse: geordi, { auto l = []{ puts("hello world!"); using T = decltype(l); T()(); }
+03:04 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+03:04 lh_mouse: geordi, { auto l = []{ puts("hello world!"); }; using T = decltype(l); T()(); }
+03:04 geordi: error: use of deleted function 'main(int, char**)::<lambda()>::<lambda>()'
+03:45 lh_mouse: geordi, { foo f; cout <<f(1); } struct foo { auto bar(auto v){ return v + 1; } };
+03:45 geordi: error: ISO C++ forbids use of 'auto' in parameter declaration
+03:45 lh_mouse: geordi, { foo f; cout <<f.bar(1); } struct foo { auto bar(auto v){ return v + 1; } };
+03:45 geordi: Same error.
+03:45 lh_mouse: geordi, { foo f; cout <<f(1); } struct foo { auto operator()(auto v){ return v + 1; } };
+03:45 geordi: Still same error.
+03:46 cleamoon quit:Ping timeout: 244 seconds
+03:46 lh_mouse: geordi, { int i; foo()(i); cout <<i; } struct foo { auto operator()(auto &v){ ++v; } };
+03:46 geordi: Again, same error.
+03:46 lh_mouse: geordi, { int i; foo<int>()(i); cout <<i; } template<typename T> struct foo { auto operator()(auto &v){ ++v; } };
+03:46 geordi: Same error.
+03:47 cleamoon joined channel
+03:48 lh_mouse: geordi, { foo<int> f; int k = 1; f::bar()(k); cout <<k; } template<typename T> struct foo { struct bar { void operator()(auto &v){ ++v; } }; };
+03:48 geordi: Give up already.
+03:48 cleamoon: 噗，这什么错误代码
+03:49 lh_mouse: g++ 4.9.3 过了
+03:50 cleamoon: 不都5.0了吗
+03:52 lh_mouse: geordi, --ver
+03:52 geordi: error: No such option: --ver
+03:52 lh_mouse: geordi, -v
+03:52 geordi: GCC 6.0.0 20150902 (experimental)
+03:53 cleamoon: 噗... 好高端
+03:57 hysw quit:Quit: ~hysw();
+03:57 hysw joined channel
+04:01 ASenR quit:Ping timeout: 255 seconds
+04:16 xxxxxxxx joined channel
+04:26 lh_mouse quit:Quit: taste my nuclear bomb!
+07:26 cleamoon quit:Ping timeout: 244 seconds
+07:34 cleamoon joined channel
+07:54 ahe joined channel
+08:01 hysw quit:Ping timeout: 252 seconds
+08:02 hysw joined channel
+08:07 wsyh joined channel
+08:07 hysw quit:Ping timeout: 264 seconds
+08:41 hoxily quit:Quit: Leaving
+09:18 ahe quit:Quit: 离开
+09:42 hysw joined channel
+09:44 wsyh quit:Ping timeout: 264 seconds
+10:34 libhanjian joined channel
+10:35 libhanjian quit:Client Quit
+10:35 lhanjian: 早
+10:44 iyzsong: 枣
+10:45 lhanjian: 揉
+10:50 Mokou joined channel
+11:09 ASenR joined channel
+11:26 xxxxxxxx: http://www.bilibili.com/video/av2806257/
+11:41 tutu_wind joined channel
+11:43 tutu_wind: cleamoon: 今天人好少啊
+12:00 Mokou: 今天遇到的怎么全是斜着的单纵
+12:02 xxxxxxxx: 也许今天的设定是 你的单纵别人看上去是斜的
+12:03 Mokou: 然而我并没有单纵
+12:05 Mokou: 后期祖宗平A大破大凤
+13:22 ASenR quit:Ping timeout: 265 seconds
+13:36 varna joined channel
+13:36 Mokou: 据说Zak在直播的时候看到满屏幕的中文看不懂，烦了
+13:36 Mokou: 来了一句chinese get out
+13:36 varna: 233333
+13:37 Mokou: 估计是精污了
+13:37 varna: 小将们不高兴了？
+13:37 Mokou: 以他家那舰队去打不削甲的E7……
+13:37 Mokou: 还好，我看的时候没看到小将
+13:37 varna: 那还好
+13:37 Mokou: 不过这确实没啥好指责的啊
+13:38 Mokou: 跑去twitch刷中文
+13:38 varna: 省得小将们指责说，我军刚换了帅气的新衣服，就有美国人试图在军国主义的战场上破坏邦交
+13:38 Mokou: 23333
+13:38 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=a6aed8970cd162d985ee621421dea950/7e488e64034f78f053900ca07f310a55b2191c6b.jpg
+13:39 varna: 23333333
+13:39 varna: 标兵那位太惨了
+13:40 varna: 不过我军这个新衣服看着确实很帅啊，现在开始走深海军路子了
+13:40 Mokou: 比以前的好多了
+13:40 Mokou: 啥时候把涂装也换换……
+13:40 varna: 07式和11式我也挺喜欢的
+13:40 Mokou: 我记得以前有人给我军装备上过深海涂装
+13:40 Mokou: 瞬间霸气了
+13:41 varna: 不过现在彻底推广MICH式的头盔，然后还配了防弹护目镜
+13:41 varna: 样式也是深海经典款式……
+13:41 * Mokou 在刷闪
+13:41 varna: 还有手套什么的，迷彩也倾向ACU（虽然跟那个翔绿色的不太一样）
+13:41 Mokou: 之前我突然想试试俾斯麦双雷灯张放旗舰
+13:42 Mokou: 不过想想还是算了，22运有点惨……
+13:42 varna: 以后要是能推广MOLLE就好了，可惜估计太贵
+13:42 varna: MOLLE本身倒没什么，但随之而来的后勤压力就……
+13:42 varna: 俾斯麦我觉得还是保护二队就好
+13:42 Mokou: +
+13:43 Mokou: 话说你要不要搞个csgo
+13:43 Mokou: 我试了下，intel能跑
+13:43 varna: 不玩
+13:43 varna: 我等下一次wine...
+13:44 Mokou: linux版
+13:44 Mokou: V社的游戏基本已经全线移植了
+13:44 varna: 那就更不玩了
+13:44 varna: 突然想起来，那个呕吐黄似乎有点接近深海军也用过的multicam
+13:44 Mokou: 我是先把wine降回1.7.40了
+13:45 Mokou: 或者你搞个1.6？
+13:45 Mokou: 也有linux版的
+13:45 Mokou: 不过CZDS的linux版稍微有点bug，不知道CS有没有
+13:45 varna: 我是觉得麻烦了
+13:46 Mokou: 麻烦指？
+13:46 varna: 不想专门去折腾游戏
+13:46 varna: 卧槽这什么鬼
+13:46 varna: 个位数等级的511我单纵炸不掉
+13:46 Mokou: 官方源装个steam，然后登录上去下载就成
+13:46 Mokou: 不算麻烦吧
+13:46 varna: 算
+13:46 Mokou: ……
+13:46 varna: 想起来就没兴趣……
+13:46 Mokou: Freelancer不是更麻烦
+13:47 varna: 游戏这个东西我基本是想起来玩的时候才不会怕麻烦
+13:47 Mokou: なるほど
+13:47 Mokou: 你要是以后有兴趣的话倒是可以跟我说一声
+13:47 Mokou: 到时候万一打折了我先帮你屯一下
+13:47 varna: 那个不急
+13:47 varna: 买不起就先不买了……
+13:48 Mokou: 我去跳蚤市场看了下，CSGO大约是45左右
+13:48 varna: 太悲惨，我TMD居然输了一个平均等级不过三十的演习……
+13:48 Mokou: 跟官方价格差不多……
+13:48 varna: 那个511绝对喂满了
+13:48 Mokou: ……
+13:48 varna: 不然不可能单纵炸不掉
+13:48 Mokou: 有鱼的时候我还是习惯复纵
+13:49 Mokou: CSGO官方价8美刀
+13:49 Mokou: 不过L4D2比较便宜
+13:49 Mokou: 官方价20刀，跳蚤市场36就可以搞到
+13:51 varna: 今天的演习都不怎么舒服
+13:51 varna: 有个元帅在修船，不过下面摆了三个潜艇
+13:52 varna: 我看看他明石怎么配的
+13:52 varna: 这搞不好还真是四修理槽明石……
+13:53 Mokou: OTL
+13:56 Mokou: 啊，看到个45的CSS
+13:58 varna: 啊啊啊啊！
+13:58 varna: 神通浴衣予定！
+13:58 hope1 joined channel
+13:59 Mokou: 不过我更关心的是我能不能拿到昭跃……
+13:59 varna: 还有人黑阅兵，我觉得黑点不错
+13:59 Mokou: 吃顿好
+13:59 varna: 防弹护目镜（时髦值+5） 战术手套（时髦值+5） 战术背心（时髦值+5） 牛皮手枪套（时髦值-100）
+14:00 varna: 简直好顶赞
+14:00 Mokou: 233333
+14:00 Mokou: 开始重温CZDS了
+14:01 Mokou: 现在我的感觉是这玩意不算烂游戏，但说实话和V社的水准有点不符……
+14:04 Mokou: 给玩家的引导太少了
+14:04 Mokou: 即使小学我通过三遍关，现在我回去玩还是经常被水淹没不知所措
+14:06 varna: 你需要一个ddv
+14:06 varna: 我鼎力推荐RJ小姐
+14:06 Mokou: 日常1.1
+14:06 Mokou: 日常1/1
+14:08 varna: 岩川疯了
+14:08 varna: 今天9.4，313战果排一千八
+14:08 Mokou: ……
+14:08 varna: 我什么都不知道，晚上我去食堂吃顿好的
+14:10 varna: 对了说个跟K相关的事情
+14:11 varna: p7demo我会保留，但p7和s1我会收缩到一个repo底下
+14:11 varna: 今天我想了想，打算把p7的内存分配也换成s1那样的接口，这样就需要两个地方共用一些代码
+14:11 Mokou: 了解
+14:12 * Mokou 正在用scout大杀特杀
+14:12 varna: 目前没什么需要实际去做的事情
+14:12 varna: Lv108大将：通丙也很重要
+14:13 varna: 挂了个131香取带的队伍，92武藏压阵……
+14:15 varna: 还有个伙计也在水雷战队练级，跟他正面冲突一下
+14:23 Mokou: 噗
+14:24 Mokou: CZDS这AI简直逗乐
+14:24 varna: 鬼打墙？
+14:24 Mokou: AI队友被你打了多了以后会开始打你
+14:24 varna: ...
+14:24 Mokou: AI队友被AI队友打多了以后也会开始打打他的那个队友
+14:24 Mokou: 然后正好有一个敌人和两个队友三点一线了
+14:24 Mokou: 正好后面那个队友是无敌的
+14:24 Mokou: 然后你懂得……
+14:24 varna: 结果他们开始狂杀么
+14:24 Mokou: +
+14:25 varna: いい風ね……
+14:26 varna: 3-2好久不见
+14:26 Mokou: OTL
+14:28 varna: 按照惯例，由我军二逗比日向负责压阵……
+14:30 varna: 结果上来就修船不可避，开幕就开掉两个
+14:30 Mokou: 话说你在练谁，大凤？
+14:31 varna: 云龙（51），僚舰是凤翔（33）和祥凤（32），重巡用那智（53）
+14:31 varna: 大凤接下来需要的就是严酷的实战考验了
+14:32 Mokou: なるほど
+14:32 varna: 云龙之后的安排是天城，这两个也要争取上七十
+14:32 Mokou: 二队刷完，开始刷支援
+14:33 varna: 当时云龙是最后改造的，改完出了一次任务，以后就都是放置了
+14:35 varna: 虽说球大看着有点别扭，但云龙语音还是超赞的
+14:35 varna: 有米空味道
+14:35 Mokou: 话说我找到个BGM
+14:36 Mokou: http://music.163.com/#/song?id=406355
+14:36 varna: 喔？
+14:36 Mokou: 削甲的时候我用了
+14:36 varna: 啊，这个
+14:36 Mokou: 港湾只有一次活到了晚上
+14:36 varna: 这个很赞的
+14:36 Mokou: +
+14:36 varna: 我有个舰C MAD就是用这个当BGM的
+14:36 lhanjian: 中午好
+14:36 varna: 下午好
+14:37 lhanjian: = =
+14:37 varna: 网易的音乐怎么扒……我刷一下
+14:37 varna: 看到了一个mpeg
+14:38 lhanjian: 网易用F12下mp
+14:38 lhanjian: 3
+14:38 Mokou: from japan to japan也不错
+14:38 Mokou: 那张专辑里的
+14:38 varna: 扒下来了
+14:38 Mokou: 我把大和级的配装换了一下
+14:38 Mokou: 炮换成了51+381MAX
+14:39 varna: 果然是你的信仰……
+14:39 * Mokou 是意吹
+14:39 varna: 我用38改主要是觉得用了这个之后WE会保佑我
+14:40 varna: 不过网易这个播放器为什么允许浏览器把整个mpeg暴露出来……
+14:41 Mokou: 网易似乎本来就可以免费下的
+14:41 varna: 哦
+14:41 varna: 等我开工具reload的时候，mp3已经被缓存了
+14:42 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/x9/cn_112233.jpg
+14:44 varna: 说个乐子
+14:44 varna: 前天我刷闪的时候，三次里有两次反射性地点去二队
+14:44 Mokou: ……
+14:44 lhanjian: 网易也比较随意吧，反正别刻意提供下载就是
+14:45 varna: 我现在觉得，我的很多抖M性质都是阶跃性地养成的
+14:46 varna: 特鲁克教我刷闪远征，饼号作战治我夜战恐惧症，现在这个鬼地方让我能面不改色地无限补闪
+14:47 varna: 而4-5出了之后，我干脆连勋章和图纸都不怎么在意了
+14:49 varna: 所以现在我总结出来的模式差不多就是活动如果能通关，就赌低保，然后以一组为一批次练一趟级
+14:49 varna: 这样一年的大规模练级也就四次
+14:53 condy joined channel
+14:56 xxxxxxxx: 13:33:10 Mokou>据说Zak在直播的时候看到满屏幕的中文看不懂，烦了
+14:56 xxxxxxxx: 13:33:14 Mokou>来了一句chinese get out
+14:56 xxxxxxxx: ^写了啥?
+14:56 Mokou: 中文
+14:57 xxxxxxxx: 中文在说啥?
+14:57 Mokou: 我咋知道……
+14:57 xxxxxxxx: ...
+14:58 varna: 今天四点钟去吃饭，有点肚饿
+14:59 Mokou: 还差两个闪
+15:00 Mokou: http://ww2.sinaimg.cn/bmiddle/69ec49b4gw1evpr26t5ghj20u00u0dkx.jpg “自从来之后我的平板一直都是她占着”
+15:00 Mokou: 看了感觉真可怜
+15:02 * varna 第一反应是七十级二改没什么突出点只能打二线真可怜，觉得自己真可怜
+15:02 Mokou: ……
+15:03 xxxxxxxx: 兄妹?
+15:03 varna: 我属于极少数对响爷毫无感觉的奇特萝莉控
+15:03 Mokou: 那是个娃娃
+15:03 xxxxxxxx: 是吗....
+15:03 Mokou: 【6.9万“缩水”成690元？ 大妈持砖头怒砸银行】近日，福州林大妈到当地银行存款6.9万元，存款单上显示存入69,000.00元。回家后她将存款单给丈夫看，谁知丈夫看错千位分隔符，以为只存入690元。林大妈认为丈夫是对的，便携砖头到银行，砸坏评价器。
+15:03 varna: 不过练3-2其实还有点不好，这个主要是田中的问题
+15:04 varna: 航母系的台词重复太多了
+15:04 cleamoon quit:Ping timeout: 265 seconds
+15:05 varna: 结果现在的航母系角色个性，只能根据几个特征区分：1. 配音  2. 下厨水平  3. 少数航母是逗比，我不点名
+15:07 Mokou: 喂船
+15:10 Mokou: 出击
+15:11 Mokou: E
+15:11 Mokou: 空袭炸死0
+15:11 Mokou: 开幕总共死三个
+15:11 Mokou: T有利
+15:12 Mokou: 八八爷
+15:12 Mokou: 闪过去了
+15:13 Mokou: 第二点空确
+15:13 Mokou: 开幕总共死三个
+15:13 varna: 好顶赞
+15:13 varna: 看俾斯麦的
+15:13 ASenR joined channel
+15:13 Mokou: B子miss了
+15:14 Mokou: 喔改大破，通过了
+15:14 Mokou: 我赌五毛沟离岛
+15:15 Mokou: ……没沟
+15:15 Mokou: 赌五毛劝退
+15:15 Mokou: 复纵
+15:15 Mokou: 同航
+15:15 varna: 用力干，大丈夫
+15:16 Mokou: 整个道中B子就没打中过
+15:16 Mokou: 绫波大破
+15:16 varna: 拼了
+15:16 varna: 等等，你带司令部了？
+15:16 Mokou: 带了
+15:16 varna: 平了
+15:16 varna: 拼了*
+15:16 Mokou: 我就知道会这样……
+15:16 Mokou: B子全程miss
+15:16 Mokou: 退避
+15:17 Mokou: 回去又得刷两个三层……
+15:17 Mokou: 开始放玄学BGM
+15:17 Mokou: 恭敬地听委员长说完了话
+15:17 Mokou: 空袭全打委员长
+15:17 xxxxxxxx quit:Quit: Leaving...
+15:18 Mokou: 支援打死一个
+15:18 Mokou: 八万钢大破一个
+15:18 Mokou: 反航
+15:18 Mokou: B子专注miss三十年
+15:18 varna: 亚顿！
+15:18 Mokou: 妙高大破
+15:18 varna: 亚顿保住B子和欧根！
+15:18 Mokou: 大凤大破
+15:19 varna: 还好，雪风还在
+15:19 Mokou: 飞龙中破
+15:19 Mokou: 雪风护卫了
+15:19 varna: 哦对
+15:19 Mokou: 199 230 284
+15:19 varna: 拼了
+15:19 varna: 旗舰三选一
+15:19 Mokou: 八万钢CI
+15:19 Mokou: 打委员长，71
+15:19 Mokou: 欧根中破
+15:19 Mokou: 大破了
+15:20 Mokou: 99/255
+15:20 varna: ...
+15:20 Mokou: B子两发不彻甲
+15:20 Mokou: C败
+15:20 varna: Truk Revisited
+15:21 Mokou: 刷闪
+15:21 Mokou: 我还是好奇你那边B子是怎么徹甲的……
+15:21 Mokou: 完全不可能啊
+15:22 varna: 我也不知道
+15:22 varna: 我自己的所有二连都没有彻甲过
+15:22 varna: 但凡击杀，一律都是无中破的CI
+15:22 varna: 中破了都不行
+15:22 Mokou: 这次绫波得背锅
+15:22 Mokou: 多一发CI没准就爆掉了
+15:23 varna: 多两个人就多两个挨打的，减轻负担
+15:23 Mokou: 不过这次其实是田中手操
+15:24 Mokou: 对面三个全打欧根
+15:24 Mokou: 一炮中破两炮大破不放心还再来一炮
+15:24 varna: 屁股反光所致
+15:24 Mokou: 大概是院长白天被大和吓到了
+15:24 Mokou: 硬吃两炮吃了个小破出来……
+15:25 Mokou: 算了，我先刷两层
+15:25 Mokou: 步调一致
+15:25 varna: 刚才还掉疝城，现在就掉由 良了
+15:26 Mokou: 明天就得吃甲章了
+15:26 Mokou: 现在还剩两万……
+15:26 varna: 现在还有多少油
+15:26 varna: 哦……
+15:26 Mokou: 然而弹药怎么办
+15:26 varna: 你还有一万弹么
+15:27 Mokou: 比油略多一点
+15:27 varna: 那还凑合
+15:27 Mokou: 强烈要求实装钢换油弹系统
+15:27 Mokou: 我家大和很靠谱，不用那么多钢的
+15:27 varna: 确实靠谱
+15:27 varna: 我打的时候似乎就没大破过
+15:28 Mokou: 不愧是联合舰队旗舰
+15:28 Mokou: （本格的）
+15:29 Mokou: 我至今仍然记得某前任联合舰队旗舰被第一点的阿嘿颜一炮大破
+15:29 varna: 现在练3-2确实方便了不少
+15:29 Mokou: 咣叽
+15:30 Mokou: 不过这次的智商比特鲁克好多了
+15:30 Mokou: 刚才两个三选一都选对了
+15:30 Mokou: 要是特鲁克的话刚才那场我肯定不C败
+15:30 Mokou: 副院长绝对下去了
+15:31 Mokou: 我要不要把欧根往前面提一提
+15:31 Mokou: 提到二号位
+15:31 varna: 超·破·坏·拳！
+15:31 varna: 我的安排是六号位上一个一锤定音（虽然基本都入夜大破）的CI, 然后其他人往前堆
+15:32 Mokou: 那我六号位雪亲王？
+15:32 varna: 前哨战的时候是欧根旗舰，三号位绫波，六号位雪风
+15:32 varna: （给你的编成）
+15:32 Mokou: 我试试
+15:32 varna: 我自己的只有两个CI火力点，十六万不安定，暂时不算
+15:32 Mokou: 江草君和友永君都失忆了
+15:32 varna: 江草君不在支援？
+15:33 Mokou: 村田君变成了\
+15:33 Mokou: 不在
+15:33 varna: 有点可惜啊
+15:33 Mokou: 支援智商不行的
+15:33 Mokou: 老打正院长
+15:33 hoxily joined channel
+15:33 Mokou: 不过我还是换下去试试
+15:35 Mokou: 出击
+15:36 Mokou: E
+15:37 Mokou: 开幕总共炸死2
+15:37 Mokou: T有利
+15:37 Mokou: 两发鱼雷
+15:37 Mokou: 绫波中破
+15:37 Mokou: 我要不要换成时雨……
+15:38 varna: ...
+15:38 varna: 随意吧
+15:38 varna: 我觉得可以有
+15:39 Mokou: 第二点空确
+15:39 Mokou: 开幕总共炸死1
+15:39 Mokou: 哦，复纵
+15:39 Mokou: 我觉得到这里就结束了
+15:39 Mokou: 两发鱼雷
+15:39 Mokou: 武藏中破
+15:40 Mokou: 大和小破
+15:40 Mokou: 这健康度相当堪忧啊
+15:40 Mokou: 没沟
+15:41 Mokou: 武藏大破了
+15:41 varna: ...
+15:41 varna: 见鬼
+15:41 Mokou: 开幕轰沉2
+15:42 Mokou: 喔改全部罚站
+15:42 Mokou: 好在绫波没摔……
+15:42 Mokou: 不然退避都不行
+15:42 Mokou: 大和、村田君，拜托了
+15:44 Mokou: 开幕共计轰沉0
+15:44 Mokou: T有利
+15:44 Mokou: 八万钢中破
+15:44 Mokou: 绫波大破
+15:44 Mokou: 八万钢大破
+15:44 varna: ...
+15:44 Mokou: 大凤中破
+15:44 varna: 这什么鬼，估计要斩杀了
+15:44 Mokou: 大和中破
+15:44 hoxily_ joined channel
+15:45 Mokou: 大和大破
+15:45 Mokou: 加贺大破
+15:45 Mokou: 三打五
+15:45 Mokou: 这简直特鲁克
+15:45 Mokou: 二打五
+15:45 varna: ...
+15:46 Mokou: 欧根不CI
+15:46 varna: 要斩
+15:46 Mokou: 院长CI
+15:46 Mokou: 0打五
+15:46 varna: ...
+15:46 Mokou: 178 289 112 0 13 8
+15:46 Mokou: 这杖太漂亮
+15:46 Mokou: D败
+15:47 varna: 这是T不利？
+15:47 Mokou: T有利
+15:47 varna: ...
+15:47 Mokou: 支援依赖咣当一下两个院长各掉40+
+15:47 varna: 己方命中率倒是如此
+15:48 Mokou: 一来*
+15:48 varna: 我感觉这次T有利己方的命中率很惨
+15:48 Mokou: 两个祖宗被开幕炸成残血，然后就再也没人打了
+15:48 varna: 希望只是体感
+15:48 Mokou: 命中很好
+15:48 Mokou: 但是打不动
+15:48 hoxily quit:Ping timeout: 244 seconds
+15:48 Mokou: 因为白天都去打院长和委员长了
+15:48 Mokou: 所以我说这简直特鲁克……
+15:49 Mokou: 补闪
+15:50 Mokou: 要不然我放弃八万钢CI，给B子一个先手
+15:50 Mokou: 20运的CI率不太行吧
+15:51 varna: 根本不行
+15:51 varna: 我用双雷主要是为了提高雷击命中和伤害
+15:51 varna: 希望更大确率搞死祖宗
+15:51 Mokou: 那我把欧根和B子提到前面
+15:54 Mokou: http://ww1.sinaimg.cn/bmiddle/a41c5d7bgw1evqbalw29cg206g0a0qv7.gif 养狗千日
+15:55 varna: 卧槽
+15:55 varna: POI飞起来了
+15:55 Mokou: 23333
+15:55 varna: 这难道是传说中的飞行艇母舰（飞母）
+15:56 Mokou: “The hen is the wisest of all the animal creation because she never cackles until after the egg has been laid.” 原话
+15:57 Mokou: “母鸡是最聪明的动物，因为她在下完蛋以后从不高声炫耀。” 某大V的翻译
+15:58 varna: 233333
+15:58 varna: 这都什么啊
+15:58 Mokou: not until = 从来不
+15:58 Mokou: 我英语渣，你不要骗我
+15:59 cleamoon joined channel
+15:59 varna: 今天我又补打了死鱼卡，然而那楼主消失了
+16:00 Mokou: 我都死了，何况他……
+16:00 varna: 那楼主都不敢出来了
+16:02 Mokou: 出击
+16:03 Mokou: 回家
+16:03 cleamoon: .......
+16:03 Mokou: 很好，我又要刷36个闪了
+16:03 varna: 我给他留了三个补给船玄学，不过拦不住沟
+16:03 varna: 我四连出门沟接一个离岛沟的时候大家也见过了……
+16:03 Mokou: varna: 建议先去吃饭
+16:03 Mokou: 这至少得一小时
+16:03 cleamoon: 黑旗脸太黑
+16:04 varna: 我打完这场就去吃
+16:04 varna: 中午喝了些西北风……
+16:04 cleamoon: 一天不应该就一顿饭吗
+16:04 varna: 学校食堂便宜，且吃且珍惜
+16:05 cleamoon: 毕业了不能回来蹭饭？
+16:05 varna: 我回自己号之后瞬间就打出三个那珂酱
+16:05 varna: 毕业了我又不在长春……
+16:05 varna: 不过公司附近如果有大学，去学校食堂蹭饭确实绝佳
+16:06 varna: 不少学校的食堂应该也都支持现金打票买饭
+16:07 cleamoon: 毕业了羊陀子去哪
+16:07 varna: 目前还是杭州
+16:07 varna: 吃饭去
+16:08 cleamoon: 羊陀子去找小耗了
+16:10 ahe joined channel
+16:27 cleamoon quit:Ping timeout: 250 seconds
+16:29 hope1 quit:Ping timeout: 268 seconds
+16:29 cleamoon joined channel
+16:36 Mokou: 我干脆去35群里直播下
+16:41 cleamoon: 斩杀阶段？
+16:41 Mokou: 是
+16:41 ASenR quit:Ping timeout: 268 seconds
+16:50 varna: 吃完了
+16:51 Mokou: 等我刷完闪重启去win
+16:51 varna: 漏内存2333
+16:51 Mokou: 倒不是，只是直播功能根本wine不了
+16:52 Mokou: 16G内存够它漏一阵的……
+16:57 hope1 joined channel
+16:57 varna: hotatata
+16:58 Mokou: “グラマンはどうした、グラマンはどうした！”
+16:58 Mokou: guraman是啥……
+16:58 Mokou: 噗
+16:58 Mokou: 格鲁门
+16:58 varna: 古拉曼嘛
+16:59 varna: 日本飞行员的最大怨念
+16:59 varna: 他们习惯把猫系列舰战都称为格鲁门飞机
+16:59 Mokou: 这个是森下君
+17:00 Mokou: 森下は最後まで艦橋に残っており沈没時の大渦に巻き込まれたが、爆発によって渦から投げ出され意識不明のまま浮かんでいた（この爆発のため、すでに海にとびこんでいて離れていたものや、沈没時に艦橋上部にいたものは渦からなげだされ助かったが、甲板付近にいた大部分のものは死亡した）。森
+17:00 Mokou: 下は、海面で従兵の小宮山善一郎に発見され、駆逐艦冬月の内火艇により助けられた。甲板に上げられた森下は、突然目を見張って、「グラマンはどうした、グラマンはどうした！」とどなって、ふたたび意識を失ったという。その後、4月8日に佐世保の海軍病院に入院した。
+17:00 varna: ...
+17:01 Mokou: 然并卵，三式弹已经爆炸了
+17:01 varna: 去食堂的时候想吃的盖饭没有了，亏我还早去
+17:01 Mokou: ……
+17:10 cleamoon: 吃卧草盖饭吗
+17:10 varna: 卧草已经被河蟹得差不多了，只能吃正常的
+17:11 cleamoon: 昨天蛤蛤出现了
+17:12 varna: 昨天我没看到直播，就查了很帅的新军服图片
+17:13 cleamoon: 我看了个录播，似乎没什么新鲜东西
+17:19 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=51b8fc32fe1986184147ef8c7aec2e69/bc7e93fd5266d016eb87e77b912bd40734fa3568.jpg
+17:19 Mokou quit:Quit: rebooting
+17:20 varna: 23333333
+17:21 Plough joined channel
+17:22 ASenR joined channel
+17:22 cleamoon: 233333333
+17:25 cleamoon: fa，毛子教授，他默认我们全会type theory，来这里是复习的，还tm不如直接看书呢.....
+17:29 condy quit:Ping timeout: 260 seconds
+17:30 condy joined channel
+17:32 hope1 quit:Ping timeout: 240 seconds
+17:34 ASenR quit:Ping timeout: 255 seconds
+17:38 lh_mouse joined channel
+17:39 Mokou: 出击
+17:39 Mokou: E
+17:40 Mokou: 卡出击中
+17:42 Mokou: F5
+17:43 varna: ...
+17:43 cleamoon: 。。。
+17:43 Mokou: 小霸王服务器你算计我
+17:43 varna: 你续了五秒
+17:44 Mokou: 深海所有船都续了一秒
+17:44 Mokou: 蛋疼的地方主要是支援没闪了
+17:46 varna: 所以支援很多时候我用肥桑肥城，带上四个水爆防小破
+17:46 varna: 可惜大逗比二逗比不争气
+17:54 hope1 joined channel
+17:54 lh_mouse: varna, http://tieba.baidu.com/p/4020740280
+17:54 Mokou: 于是我只好在三五群里直播刷闪
+17:55 Mokou: 刷闪卡了
+17:55 cleamoon: 23333
+17:56 cleamoon: 果然不应该续命
+17:56 varna: lh_mouse: pong, engaging
+17:59 lh_mouse: (void)((++p == v.GetEnd()) && (p = nullptr));  // 这算黑科技不
+17:59 varna: 不算
+17:59 Mokou: F5
+17:59 Mokou: 这活动我还打不大
+17:59 Mokou: 打不打*
+17:59 Mokou: 换着花样喂我吃瘪
+17:59 varna: 这用法看着挺正的，我就经常这么类似地搞
+18:00 lh_mouse: 总比  ++p; if(p == end()) p = 0;  好看
+18:00 varna: +
+18:01 cleamoon: 这对于新手有点那个了...
+18:02 varna: 一个是&&/||, 还一个是逗号
+18:02 varna: 不少时候我自己就这么简单地写一行
+18:02 varna: 新手在学语言的时候应该知道这上面有短路，所以没问题
+18:02 lh_mouse: ++p, p == end() ? p = 0 : p;
+18:03 cleamoon: 看不到if我浑身难受
+18:03 varna: 我是挺不喜欢if的，少写一个算一个
+18:03 lh_mouse: (++p == end) && (p = 0)
+18:04 lh_mouse: varna, 昨天遇到个怪现象
+18:04 cleamoon: 都这么写不蛋疼？
+18:04 varna: lh_mouse: 什么状况
+18:04 lh_mouse: varna, 一个循环中有两个分支  加了一个 __asm__("");  优化掉一个
+18:05 varna: 噗
+18:05 varna: 这我只能当个故事记下，完全不知道什么状况
+18:06 lh_mouse: varna, 你稍等下
+18:06 varna: ok
+18:06 cleamoon: ...
+18:09 lh_mouse: varna, http://paste.ubuntu.com/12271905/
+18:09 lh_mouse: 不同的地方我用星号标出来了
+18:10 Mokou: BattleMain.swf读不下来
+18:10 Mokou: 原因不明
+18:12 cleamoon quit:Ping timeout: 250 seconds
+18:12 varna: 看不明白为何一个空内联汇编让je那个分支蒸发了……
+18:12 lh_mouse: 变成 cmove 了
+18:12 varna: 你加个垃圾的花指令，它会变成什么呢
+18:12 lh_mouse: 有 asm 就行
+18:12 varna: ...
+18:12 lh_mouse: 我最先发现是 int3
+18:12 lh_mouse: 后来发现空的也可以
+18:13 varna: 难道gcc在生成cmov系列指令的时候有问题？
+18:13 varna: 如果你不暗示，就不会生成出来这样？
+18:13 * lh_mouse shrugs
+18:13 lh_mouse: GCC 渣渣
+18:14 sismvg joined channel
+18:14 varna: 我只是听说过传言gcc在cmov上有点谨慎
+18:15 lh_mouse: cmov 依然会造成流水线气泡
+18:15 sismvg: ..今天上百度搜索shadowsocks.. 然后直接法律法规了
+18:15 sismvg: 前天还能搜到的
+18:15 lh_mouse: 我只说下个人观点
+18:15 lh_mouse: intel 的处理器上 jcc 跳一条指令和 cmov 应该没什么区别
+18:15 lh_mouse: 生成的 u code 应该一样
+18:15 varna: 这样啊
+18:15 lh_mouse: 当然我也没法知道 intel 怎么生成的 u code
+18:15 ahe quit:Read error: Connection reset by peer
+18:16 lh_mouse: 猜的 
+18:16 varna: 这个案例我先存起来了
+18:23 condy: 好神奇（
+18:23 Mokou: 终于开了
+18:24 varna: http://tieba.baidu.com/p/4020740280 5L
+18:24 varna: 不过就是领域有别的问题，怎么就变成装逼了
+18:24 varna: C艹吧现在也出产奇葩么
+18:30 Mokou: 我看不懂的都是装逼
+18:30 varna: 然而真逼只要看个步兵片就能认得了……
+18:31 lh_mouse: varna, https://gcc.gnu.org/bugzilla/show_bug.cgi?id=67449
+18:31 hope1 quit:Ping timeout: 265 seconds
+18:31 ahe joined channel
+18:31 varna: bookmarked
+18:32 varna: 我关注一下这issue的后续发展
+18:36 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=119356b5292eb938ec6d7afae56385fe/c5218cdeb48f8c54d19a907b3c292df5e1fe7f8d.jpg
+18:40 varna: 突然想试试德国舰爆了
+18:40 varna: 拿来刷两盘练度看看
+18:51 Mokou: 出击
+18:51 lh_mouse: 我认为  正义必胜是一句废话
+18:52 Mokou: 开幕总共炸死三个大破两个
+18:52 varna: 好
+18:53 Mokou: 八八爷个人秀
+18:53 Mokou: 蹭五血
+18:53 Mokou: 通过
+18:53 varna: 换个BGM
+18:53 varna: 《大神》主题曲，reset
+18:54 Mokou: 我总感觉这次要沟离岛
+18:54 Mokou: 开幕炸死四个
+18:54 Mokou: 然而复纵
+18:55 Mokou: 通过
+18:55 Mokou: 没沟
+18:56 varna: OTL
+18:56 varna: 我就不奶了
+18:56 Mokou: 一路复纵……
+18:56 Mokou: 开幕炸死三个
+18:56 Mokou: 一条鱼雷
+18:57 Mokou: 最后一次空袭
+18:57 Mokou: 通过
+18:57 Mokou: 加贺小破，其余全员无破
+18:57 varna: OTL
+18:58 Mokou: 恭敬地等委员长说完话
+18:58 Mokou: 开幕炸死两个、大破88爷
+18:58 Mokou: 雪亲王中破
+18:59 Mokou: 绫波中破
+18:59 Mokou: 妙高中破
+18:59 varna: 拼了
+18:59 Mokou: 加贺大破
+18:59 varna: 大丈夫
+18:59 Mokou: 大凤大破
+18:59 varna: 还有武大
+19:00 varna: 坚持下来
+19:00 Mokou: 武藏中破
+19:00 hope1 joined channel
+19:00 Mokou: 181 163 290
+19:00 Mokou: 欧根不CI
+19:00 Mokou: 105 163
+19:01 Mokou: 98 163
+19:01 varna: ...
+19:07 varna: such a trucial story...
+19:18 ahe quit:Quit: 离开
+19:19 Mokou: 吃饭回来了
+19:21 lh_mouse: 马英九称台湾抗战早大陆三十年
+19:22 varna: 台湾
+19:22 varna: 唔
+19:22 lh_mouse: qnmlgb 的    你把光头扒出来问问
+19:22 lh_mouse: 清末的时候台湾到底是什么鸟
+19:27 sismvg_ joined channel
+19:29 sismvg quit:Ping timeout: 260 seconds
+19:30 hope1 quit:Ping timeout: 244 seconds
+19:32 Mokou: 我爸正在设想兔子如何吊打美帝
+19:33 varna: 这个容易
+19:33 varna: 我有个本科同学，在沈阳当特种cheng兵guan
+19:33 Mokou: 23333
+19:33 varna: 阅兵都不让他们去
+19:34 Mokou: 不过说真的，我现在开始怀疑我兔到底会不会走上军国主义道路了
+19:34 varna: 不会
+19:34 varna: 军国主义道路挺难走的，需要一大批脑残
+19:34 Mokou: 虽说肉食者应该是比我聪明得多了
+19:35 Mokou: 脑残还少么……
+19:35 varna: 我兔的大人物应该挺聪明的
+19:35 Mokou: +
+19:35 varna: 下级脑残没办法，全世界都一样
+19:35 Mokou: 也只能这么希望了
+19:35 Mokou: 他正在发表全民皆兵战斗力世界第一的论调
+19:35 varna: ...
+19:35 Mokou: 我都怀疑过段时间他会开始考虑十六亿玉碎……
+19:35 varna: 这跟一亿玉碎卵差别……
+19:36 varna: 无非十五六亿
+19:36 Mokou: 所以说这不就是军国主义么
+19:36 varna: 连运营都跟不上就玉碎了，这就是军国主义搞砸
+19:36 Mokou: 刚才他原话：“我要是上去了第一个灭了日本”
+19:36 Mokou: 我差点一句“所以你当不上”顶回去
+19:38 Mokou: 其他的论调比如我兔可以海军不要从陆上灭了鹰酱
+19:38 Mokou: 我不知道他准备怎么让陆军到达美帝本土，大概是从白令海峡游过去
+19:38 varna: 试制甲板弹射器
+19:39 Mokou: 然而没有甲板
+19:39 varna: 明天去理发
+19:40 varna: 八点钟出去采购点东西
+19:41 Mokou: 出击
+19:41 Mokou: 我把鸟海弄过来配个二连试试
+19:41 Mokou: CI太不稳定了
+19:42 Mokou: 开幕炸死三个
+19:42 Mokou: 二队解决
+19:43 varna: OTL
+19:43 Mokou: 俾斯麦94
+19:43 Mokou: 然而我觉得这次要沟离岛
+19:43 Mokou: 都多少次没沟了
+19:44 Mokou: 复纵T有利
+19:44 Mokou: 绫波中破
+19:45 Mokou: 通过
+19:45 Mokou: 没沟……
+19:45 varna: 绫波坚持住
+19:46 Mokou: 然后绫波坚持住了，其他两个船摔了
+19:46 Mokou: 加贺开幕中破
+19:46 Mokou: 开幕炸死四个
+19:46 Mokou: 二队没事了
+19:47 Mokou: 通过
+19:47 Mokou: 绫波小姐，能麻烦做一下被害担当吗？
+19:49 Mokou: 卡战斗开始中
+19:49 Mokou: 开了
+19:49 Mokou: 恭敬地等委员长说完话
+19:49 varna: 干干干
+19:49 varna: 算了不采购了，明天再说
+19:50 Mokou: 反航
+19:50 Mokou: 开幕打死1
+19:50 Mokou: 八万钢中破
+19:50 Mokou: 绫波大破
+19:50 Mokou: 大凤大破
+19:50 Mokou: 苍龙中破
+19:51 varna: 有点麻烦
+19:51 varna: 其他人能清掉杂鱼么
+19:51 Mokou: 五打五
+19:51 varna: ...
+19:51 Mokou: 肯定都去打院长啊
+19:51 Mokou: 谁没事那么傻逼，去打杂鱼啊
+19:51 Mokou: 欧根不Ci
+19:52 Mokou: 126 141 6 0 0 5
+19:52 Mokou: 没有一个CI
+19:53 varna: CI要员的闪够用吧
+19:53 Mokou: 不太够，就三层
+19:53 varna: 绫波可以理解，雪风……
+19:54 Mokou: 绫波大破了
+19:54 Mokou: 欧根是旗舰
+19:54 Mokou: 我带灯了
+19:54 Mokou: ALL THE Bounces
+19:54 Mokou: 最后只有院长CI
+19:54 varna: 欧根旗舰不出CI的事情大约四成以下
+19:54 varna: 以前我在5-3试见张的时候也就这程度
+19:54 Mokou: 在我这里是九成以上
+19:55 Mokou: 欧根要是CI了，我应该花上几十个亿请全球人民吃饭
+19:55 Mokou: 这概率值得我这么庆祝
+19:58 Mokou: 油12k弹17k
+20:01 varna: http://baike.baidu.com/view/2162451.htm?fromtitle=%E9%AA%91%E5%85%B5&fromid=3000959&type=syn#viewPageContent
+20:02 Mokou: 虽说已经知道我拿不到照月了，但我现在还是有点郁闷啊
+20:02 Mokou: 花式不出CI
+20:03 Mokou: 二连打不动，CI出不来
+20:03 Mokou: 我到底该怎么打呢
+20:06 varna: 今天早点回去
+20:08 lh_mouse: 回去把妹
+20:08 varna: 哪有妹
+20:09 lh_mouse: 不用解释
+20:10 Mokou: 然后刷个闪还猫了
+20:10 Mokou: http://ww3.sinaimg.cn/mw1024/eac38e3dgw1evqmupe72rj20lm0e8myv.jpg
+20:11 varna: 这个研究员和重巡摩耶研究员是什么关系？
+20:11 Mokou: 就是他
+20:12 varna: 哦，原来他们在搞基
+20:14 Mokou: 为什么只是做个战史八卦视频都能搞成宫斗戏
+20:14 Mokou: 262为何如此之屌
+20:14 varna: 我总觉得越是无足轻重的人越喜欢搞小圈子
+20:15 varna: 觉得自己很厉害了啊，能雄霸一方了啊，最后都TM回去捞风云
+20:15 varna: 管你雄霸不雄霸
+20:15 Mokou: 23333
+20:17 Mokou: 另外，我听说现在太阳偏左的八嘎旗一般不认为需要和谐？
+20:17 Mokou: 要和谐的只有居中的马鹿旗
+20:18 varna: 因为野郎对我国的侵略，教材里一般不提
+20:18 varna: 主要都说马鹿的
+20:18 Mokou: 他说的似乎是国际上的认识
+20:18 varna: 确实，不过放在逗比面前的东西，偶尔也考虑下三人成虎的事情
+20:19 Mokou: 然而我只知道韩国愤青逼得毛子只能把WoWS里的IJN换成日章旗
+20:19 Mokou: 现在里面一堆膏药，难看得要死
+20:19 Mokou: 还得我手动打mod换回旭日旗……
+20:20 varna: 韩国愤青似乎比我国还愤
+20:20 Mokou: +
+20:20 varna: 而且他们似乎还坚信他们参与了抗日斗争
+20:20 varna: 嘛，我没有在黑安重根
+20:20 Mokou: 他们刺杀了伊藤首相
+20:21 Mokou: 然后韩国就灭了
+20:21 varna: 安重根确实斗争了
+20:21 varna: 不论方法，反正他打的是枪不是嘴炮
+20:21 Mokou: 然而我还是觉得这斗争方式不太对
+20:21 Mokou: 类似塞尔维亚的爱国青年们
+20:21 varna: 对不对不容易看出来，所以我选择无视这个评论
+20:22 varna: 确实后人容易综合地看问题，但在当时没法说究竟是做好还是不做好、做什么更好
+20:22 Mokou: 不过这看法大概是有点事后诸葛……
+20:22 varna: 当然这不是为他的政治观点开脱
+20:22 Mokou: 然而我们毕竟是后人
+20:22 varna: 我只是觉得，这种反抗侵略的做法不论别的，至少是勇士了
+20:23 varna: 别人看着他做的事情，虽然政治层面上被坑了，但是有人会受到鼓舞
+20:23 sismvg: http://www.ithome.com/html/chrome/173945.htm
+20:24 sismvg: 不太感觉这种优化有意义。。最后还吃要吃磁盘
+20:24 varna: 也就是说，他们还是拒绝放弃一页一进程？
+20:24 Mokou: 不过其实我觉得，需要反对的不是上帝视角
+20:25 Mokou: 而是依赖上帝视角来贬低历史人物，从而太高自己
+20:25 Mokou: 抬高*
+20:25 varna: 那种人无视就好
+20:25 varna: 史书给前人评论，从太史公以来就是如此，没什么特别的
+20:25 varna: 只不过太史公对武帝的意见比较大，所以专门挑了几篇东西黑他
+20:25 Mokou: 比如说南云就一逗逼，我要是当提督的话比他不知高到哪里去了
+20:26 varna: 可能真能高25cm?
+20:26 varna: 南云忠一不太高吧
+20:26 Mokou: 23333
+20:26 sismvg: chrome:坚守fork
+20:28 ahe joined channel
+20:28 sismvg: 百度云的链接用迅雷下载的时候偶尔会出现【链接不合法】的问题。。
+20:29 Mokou: 说起来，今天上午深海提督发了个帖子
+20:29 Mokou: 表示像他一样醒着的人最好的时光是三战之后
+20:29 sismvg: http://www.ithome.com/html/android/173941.htm
+20:30 Mokou: 理由是目光短浅的肉食者和小将们到那时候都被蘑菇干掉了
+20:30 Mokou: 活下来的会是如他一般的精英
+20:30 code_new joined channel
+20:31 varna: 唔
+20:31 Mokou: 后来他删贴了
+20:31 varna: 他是怎么觉得自己就精英了的……
+20:31 varna: 恕我直言，完全看不出来
+20:31 Mokou: 他看破红尘了啊
+20:32 varna: ...
+20:32 Mokou: 你看在一片愚蠢的公知和小将里，他是多么地清醒……
+20:32 varna: 看破红尘没关系，他得看破辐射尘……
+20:32 Mokou: 犹如大和立于王八群之中
+20:32 varna: 公认北斗神拳两千年以来最大的天才·二爷都挺不住了
+20:33 Mokou: 总之我回了句“求不逗”
+20:33 Mokou: 过了一会他删贴了，原因不明
+20:34 Mokou: 虽说其实我看到这种言论的时候常有危机感
+20:35 varna: 危机感？
+20:36 Mokou: 我看到这种言论的第一反应是“逗”
+20:36 Mokou: 然而我总觉得这种反应等同于“我不知比你们高到哪里去了”
+20:36 varna: 没法这么等同
+20:36 Mokou: 然后我就会想，我是不是一样的逗乐……
+20:37 varna: 你逗不逗无所谓的
+20:37 varna: 问题是一个逗乐的事情摆在你面前，就应景地笑两声
+20:37 varna: 较真了谁都逗
+20:38 Mokou: 也就是说等发现自己到底怎么逗以后再解决么
+20:38 varna: 保持警惕就行
+20:38 varna: 或者说放轻松
+20:38 varna: 伟大领袖说过，团结紧张严肃活泼
+20:39 varna: 这话我觉得超赞
+20:39 Mokou: 也只能这么来……
+20:39 Mokou: 毕竟我没法对自己开上帝视角
+20:40 Mokou: 总之先去吃屎
+20:40 Mokou: E
+20:41 Mokou: 开幕总共炸死两个
+20:42 Mokou: 八八爷
+20:42 Mokou: 鸟海被蹭13点
+20:43 Mokou: 开幕轰沉3
+20:43 Mokou: 我就没见过轮型的第二点
+20:43 Mokou: 欧根大破
+20:44 Mokou: 这次我进击 
+20:44 Mokou: 沉了我弃坑
+20:45 Mokou: 没沟
+20:45 libhanjian joined channel
+20:45 Mokou: 绫波大破
+20:45 Mokou: 开幕轰沉2
+20:46 sismvg: 。。找了个旧金山的机房。。 ping比新加坡的好了50ms.. 
+20:47 Mokou: 绫波退避
+20:48 Mokou: 换BGM
+20:50 Mokou: 开幕共计轰沉2
+20:50 Mokou: T有利
+20:50 Mokou: 鸟海大破
+20:50 Mokou: 八万钢中破
+20:50 Mokou: 大破了
+20:50 Mokou: 大和大破
+20:50 Mokou: 1vs3
+20:50 Mokou: 俾斯麦选错人
+20:52 Mokou: 油掉下一万
+20:57 code_new: 感觉git clone的速度越来越慢了= =
+20:58 ahe quit:Read error: Connection reset by peer
+21:02 code_new quit:Quit: logout
+21:03 Mokou: http://ww3.sinaimg.cn/bmiddle/9b61e9edgw1evqog4ddqaj20dw0dcwfl.jpg
+21:03 varna: MP3，还好
+21:04 Mokou: 右手
+21:04 Mokou: 大丈夫，我可以只塞一根手指
+21:06 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=8f40b8f4f003738dde4a0c2a831ab073/24ebf93eb13533fab4ca547aaed3fd1f41345b1d.jpg
+21:07 code_new joined channel
+21:11 Mokou: 我吃几个北酱小礼盒
+21:12 Mokou: 回了2K油弹
+21:13 varna: ...
+21:13 Mokou: 菱饼也吃完了
+21:13 Mokou: 现在是13k油17k弹
+21:18 Mokou: 这次真是要玉碎了……
+21:18 Mokou: 不成功便成仁
+21:18 Mokou: 我打丙都来不及了
+21:20 ahe joined channel
+21:20 varna: 甲章还在？
+21:20 Mokou: 还在
+21:20 Mokou: 但吃了以后我会继续打甲
+21:20 varna: 那就只能玉碎了
+21:20 Mokou: 能打掉，我就把新的甲章吃了
+21:21 varna: salty as we are
+21:21 Mokou: 来祭奠咸鱼烈士和田中的亲妈
+21:22 Mokou: 去你妈的，甲章是个什么垃圾玩意
+21:22 Mokou: 不如吃了大建
+21:23 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+21:24 Mokou: 今天你啥时候走
+21:24 Mokou: 我是打到11点，等天灯灭了再睡
+21:25 varna: 我看你打完吧，十一点关门，那之前我回去
+21:26 varna: 这翔好歹我也参与吃了两口
+21:26 Mokou: 成
+21:27 Mokou: 不过最终在打游戏的还是RNG
+21:27 Mokou: 我们只是观众
+21:28 Mokou: 出击
+21:29 Mokou: E
+21:29 Mokou: 现在这BGM很应景啊
+21:29 Mokou: 一股悲壮感
+21:29 Mokou: 开幕miss、支援没来
+21:29 Mokou: 最后只打沉一个
+21:30 Mokou: B子小破
+21:30 Mokou: 好在通过了
+21:32 Mokou: 开幕轰沉3
+21:32 Mokou: 二队解决
+21:33 Mokou: 没沟
+21:33 varna: OTL
+21:33 Mokou: 武藏开幕中破
+21:34 Mokou: T有利
+21:34 varna: ...
+21:34 Mokou: 八万钢中破
+21:34 Mokou: 通过
+21:36 Mokou: 开幕轰沉0
+21:36 Mokou: 同行
+21:37 Mokou: 同航
+21:37 Mokou: 俾斯麦大破
+21:37 Mokou: 绫波中破
+21:37 varna: ...
+21:37 varna: 爆炸的太多了啊……
+21:38 Mokou: 全是平砍……
+21:38 Mokou: 四打三，我方一个中破
+21:38 Mokou: 欧根不CI
+21:39 Mokou: 田中手操，剩下三个全部中破
+21:39 Mokou: 142 124 263
+21:39 varna: ...
+21:39 varna: 太惨了
+21:39 Mokou: C败
+21:41 Mokou: 欧根一下午不CI一次的概率是多少
+21:41 Mokou: 你帮我算下
+21:41 Mokou: 大约6次
+21:41 Mokou: 每次都有照明弹，期中三次有探照灯
+21:41 Mokou: 其中*
+21:42 varna: 这他娘……
+21:42 varna: 这太黑了吧
+21:43 Mokou: 所以我不太知道这游戏该怎么玩……
+21:45 varna: _(:з」∠)_
+21:46 code_new: 这游戏真难……
+21:46 varna: 这已经超越了一般的黑
+21:46 varna: 比我都黑
+21:46 Mokou: 我应该不至于弱智到连雷CI都配不出来啊……
+21:47 varna: 基本玩法这里的人都会，没什么可说的
+21:47 Mokou: 三雷一灯能出CI的吧
+21:47 varna: 配得再烂能烂到哪去
+21:47 varna: 然而这黑度
+21:47 Mokou: 我换BGM试试
+21:47 varna: 灯也不嘲讽，放旗舰也不打
+21:48 Mokou: 直接一个手操废掉你所有火力点
+21:48 Mokou: 真的，刚才那场鸟海和雪风都是满血进夜战的
+21:48 Mokou: 然后两个院长直接按顺序每人一炮
+21:49 Mokou: 咣咣两个中破
+21:49 Mokou: 刁民权确保
+21:50 Mokou: http://music.163.com/#/song?id=26178041 下一次Boss点的BGM
+21:51 ASenR joined channel
+21:52 gansteed joined channel
+21:52 gansteed: http://paste.ubuntu.com/12273050/
+21:52 gansteed: 大家帮忙找个bug？归并排序,算法无法正常工作：http://paste.ubuntu.com/12273050/
+21:53 varna: 我懒得给你手工调程序了，所以如果你能准备调试器的话，我可以问几个参考性的问题
+21:53 gansteed: 嗯
+21:53 gansteed: 你说吧
+21:54 varna: 首先，错误结果是多少
+21:54 gansteed: 5	4	3	2	1	7	6	8	9	10
+21:55 Mokou: 群里建议我试试六舰战空优
+21:55 Mokou: 我赌一把看看
+21:57 varna: gansteed: 那么你有没有跟踪过第一个分点的情况？
+21:57 lh_mouse: 一回来就看到个伸手的
+21:57 lh_mouse: 虽然一般时候我会装看不见
+21:57 gansteed: 10 9正常
+21:57 gansteed: 之后就没有再跟踪了
+21:57 varna: 接着跟
+21:58 gansteed: 嗯，我每次打印出来吧
+22:02 Mokou: E
+22:03 Mokou: 这次是六舰攻
+22:03 Mokou: 支援又没来
+22:03 Mokou: 开幕共计轰沉2
+22:04 Mokou: 雷击解决
+22:04 Mokou: 雪风小破，通过
+22:04 varna: 雪风坚持
+22:04 varna: 雪风大丈夫
+22:05 varna: 想想那个两百四十多的击杀，再来一次我们就赢了
+22:05 Mokou: 我草终于来个轮型……
+22:05 Mokou: 开幕共计轰沉3
+22:05 Mokou: 喔改罚站
+22:06 Mokou: 猪口君一炮秒了
+22:06 Mokou: 绫波Lv80
+22:06 Mokou: 没沟
+22:06 varna: 又升了两级……
+22:06 varna: 我走时候还是78
+22:07 Mokou: 于是我这队终于没有80以下的了……
+22:07 Mokou: 苍龙中破
+22:07 Mokou: 好了，雪风大破了
+22:08 Mokou: 二队又少了两个
+22:08 varna: ...
+22:09 Mokou: 这次BGM用千年的祈愿
+22:10 Mokou: 空袭全部miss
+22:10 Mokou: 支援炸掉一个
+22:10 Mokou: 开幕共计轰沉2
+22:10 Mokou: 欧根大破
+22:10 Mokou: 八万钢中破
+22:10 Mokou: 俾斯麦中破
+22:10 Mokou: 直接GG
+22:11 varna: ...
+22:11 varna: 拼了
+22:11 Mokou: 武藏大破
+22:11 Mokou: 加贺中破
+22:11 Mokou: 88爷剩2血没人管
+22:12 varna: ...
+22:12 Mokou: 鸟海大破
+22:12 Mokou: 田中手操
+22:13 varna: 全灭了
+22:13 Mokou: 我忘了看剩下多少血了
+22:13 Mokou: 总之剩4个
+22:14 varna: 标准特鲁克
+22:16 Mokou: 还剩七千油
+22:18 Mokou: 天灯快灭了
+22:18 Mokou: 这次我只刷两层
+22:21 Mokou: 群里有人告诉我旗舰不能带灯……
+22:23 varna: 你听他忽悠
+22:23 varna: 僚舰带灯也不嘲讽，要是嘲讽的话我还能给你省五千
+22:25 Mokou: 他的理论是旗舰带灯的话满血僚舰会去援护
+22:25 Mokou: 然后就变成手操了
+22:25 varna: 逗……
+22:25 varna: 援护有动画的
+22:25 varna: 配装对一套过 mod.1
+22:26 Mokou: 总之我都试试吧，就当换换脸……
+22:26 Mokou: 旗舰也没嘲讽
+22:38 tutu_wind quit:Remote host closed the connection
+22:38 Mokou: 准备吃甲章
+22:38 Mokou: 吃了
+22:39 Mokou: 回家
+22:41 Mokou: 今晚我还打不打
+22:41 Mokou: 要补六个闪
+22:41 varna: 补完还有一盘
+22:42 Mokou: 估计来不及了
+22:42 Mokou: 刷闪大概半小时
+22:43 varna: 残念
+22:43 Mokou: 总之我先刷一趟看看
+22:44 Mokou: 不行我就先削甲了，明天再打
+22:45 gansteed left channel:"Leaving"
+22:46 hoxily quit:Quit: Leaving
+22:47 Mokou: 总之这次能打掉我就吃甲章
+22:48 Mokou: 打不掉我拆船或者卖号
+22:49 varna: 冷静
+22:49 Mokou: 我觉得我够冷静了
+22:49 varna: 总有一天，活动会恶心到必须切丙爬过去的
+22:49 varna: 那时候爬过去就行了
+22:49 Mokou: 特鲁克打不掉，我忍了
+22:49 Mokou: 这次要是还是像特鲁克那样打不掉，我也忍了
+22:49 Mokou: 连续六次欧根不CI，什么意思？
+22:49 Mokou: 什么意思？
+22:50 Mokou: 故意的吧？
+22:50 varna: 我只能说，恶意很多，学着挺住
+22:50 varna: 当然不是逼你吃翔，你不想吃随时可以不吃，毕竟恶心
+22:50 Mokou: 我知道
+22:51 Mokou: 但是现在玩这游戏我一点都不愉快
+22:51 varna: 但欧根这理由，我觉得只是脸太黑
+22:51 varna: 人生不如意十之八九
+22:51 varna: 不过现在你怎么做都随便
+22:51 varna: 人就是随性点好
+22:51 Mokou: 既然不如意已经十之八九了，我何必自找麻烦
+22:51 varna: 不不，这个话痛苦得多
+22:52 varna: 但就是因为十之八九不如意，所以我劝你，但同时也说你随性做
+22:53 Mokou: 有人开始喊CLT OP
+22:53 Mokou: 禁得好
+22:54 varna: 啊？
+22:54 Mokou: 我倒是觉得应该禁clt
+22:54 Mokou: clt有点过分了
+22:55 Mokou: 夜战输出无敌，白天打二队一般输出
+22:55 Mokou: 一半'
+22:55 varna: 禁是禁了，然而之后怎么办，数值没有想好
+22:55 Mokou: 对着395甲的驱逐舰喊输出无敌
+22:55 Mokou: 我很好奇他的大脑是什么构造
+22:56 varna: 这种人不懂得一点点的小成果有多可贵
+22:56 varna: 能斩掉并不是靠操作的，把它当真，那太傻了
+22:57 Mokou: 玩这游戏的是RNG，不是我们
+22:57 Mokou: 为什么就是不动
+22:57 Mokou: 不懂
+22:57 varna: 而我后来之所以能一边淫笑一边补十几次闪，首先因为我运气好斩杀了，其次才是我稍有点意志力，怎么就不肯面对自己那点龌龊心理呢
+22:58 varna: 这种人稍微有点心浮气燥了
+22:59 varna: 如果让我以事情来总结，总体来说是瘪吃得有点少
+22:59 varna: 自己吃瘪的时候想想别人的感受，他就知道自己在嘲讽谁
+23:00 varna: 虽说我讲这些破道理的时候总有人用配装练度之类的来说
+23:00 varna: 我就举一个例子吧
+23:01 varna: http://tieba.baidu.com/p/3967882032 这贴
+23:01 Mokou: 接下来楼下发配装 很重要 ，配装对了很好打
+23:01 Mokou: 去死吧
+23:01 varna: 这是第二帖
+23:02 Mokou: 冬E5还他妈配置对了一趟过呢
+23:02 varna: 第一贴里面我直接当面质问他来着
+23:02 Mokou: 哦，合着我现在只能换一万油是我配置不对
+23:02 varna: 他那个E3甲三万过基本是针对我之前说法的
+23:02 Mokou: 去你妈了个逼的
+23:02 varna: 我当时的说法很简单
+23:02 varna: 我火力比你强，制空比你好，主炮命中比你高，为什么刁民
+23:02 varna: 哦，练度也高
+23:03 cleamoon joined channel
+23:03 varna: E3甲我通关之后都不愿意去
+23:04 varna: 那地方能有五成击破率，我都谢天谢地了
+23:04 Mokou: 算了，我不弃坑了
+23:04 Mokou: 这次活动结束我就改两门权杖出来
+23:04 Mokou: 然后下次再有新人他妈跟我说装备
+23:04 Mokou: 我就把这两门权杖拍他脸上
+23:04 cleamoon: 斩了？
+23:04 Mokou: 你配装牛逼，你到是把权杖拿出来啊
+23:04 Mokou: 没
+23:04 varna: 还有希望
+23:05 Mokou: 油17k弹药12k
+23:05 varna: 我先回去了，不过如果你明天觉得缺资源，我可以稍微帮你处理下
+23:05 varna quit:Quit: leaving
+23:05 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/xc/ev_109111.jpg
+23:06 cleamoon: 缺资源怎么处理，羊驼子给氪吗
+23:08 cleamoon: 弄了vps之后我终于发现了，我要vps没用...
+23:09 code_new quit:Remote host closed the connection
+23:14 Meow-J joined channel
+23:17 lh_cat joined channel
+23:19 lh_mouse quit:Ping timeout: 265 seconds

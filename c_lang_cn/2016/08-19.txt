@@ -1,0 +1,251 @@
+00:05 Izumo: 果然，这游戏好简单，爆天狗就赢了
+00:05 Izumo: 天狗轰炸机真可怕
+00:06 cleamoon: orz
+00:08 cleamoon: 然而落地之后天狗也会炸到自己人
+00:11 xxxxxxxx quit:Quit: Leaving...
+00:13 Izumo: 落地什么鬼
+00:13 Izumo: 这是天狗轰炸机，不是天狗机甲
+00:15 cleamoon: 哦，那就不知道了
+00:15 Izumo: 500一个，只有飞行形态，技能是撞
+00:16 lh_mouse quit:Ping timeout: 264 seconds
+00:19 tutu_wind joined channel
+00:20 cleamoon: 撞什么鬼，鬼王那个吗
+00:21 yimis quit:Quit: yimis
+00:21 Izumo: 背景设定里说过“阳炎”在我们这条世界线里对应的是“神风”
+00:21 Izumo: 你懂得
+00:22 cleamoon: ......
+00:23 Izumo: 五个天狗可以灭掉一个矿场
+00:23 cleamoon: orz
+00:23 cleamoon: 这攻击力略高了
+00:24 Izumo: 不过压不住对面空军的话就会很麻烦
+00:24 Izumo: 弄几个阿波罗守在那里就很难冲进去了
+00:26 cleamoon: 硬冲只为干矿场可以吗
+00:26 Izumo: 会被阿波罗半路全抓
+00:26 Izumo: 那玩意血爆
+00:26 Izumo: 薄
+00:27 cleamoon: soga
+00:27 cleamoon: 听起来飞的也不快
+00:27 Izumo: 升了发动机以后还行，但是天狗的机动性肯定干不过阿波罗
+00:30 cleamoon: 阿波罗太强了
+00:33 cleamooon joined channel
+00:35 tutu_wind quit:Ping timeout: 258 seconds
+00:36 cleamoon quit:Ping timeout: 240 seconds
+00:40 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 47.0.1/20160623154057]
+01:01 AutoGavy joined channel
+01:01 AutoGavy: 我还以为我进了ra3对战频道
+03:13 AutoGavy quit:Quit: Connection closed for inactivity
+04:33 Izumo quit:Quit: Connection closed for inactivity
+05:28 yimis joined channel
+05:30 yimis quit:Client Quit
+05:30 cleamoon joined channel
+05:32 cleamoon quit:Client Quit
+06:15 cleamoooon joined channel
+06:19 cleamooon quit:Ping timeout: 265 seconds
+06:27 geordi quit:Remote host closed the connection
+06:28 geordi joined channel
+07:58 FrankHB quit:Ping timeout: 258 seconds
+08:16 iyzsong-xx joined channel
+08:27 iyzsong-xx: = =
+08:27 iyzsong-xx: 好多大蟑螂 -.-
+08:31 Xilzzerts joined channel
+08:39 FrankHB joined channel
+09:14 lh_mouse joined channel
+09:22 FrankHB quit:Ping timeout: 244 seconds
+10:10 kevingu joined channel
+10:43 kevingu quit:Remote host closed the connection
+10:53 kevingu joined channel
+11:34 kevingu quit:Remote host closed the connection
+11:34 kevingu joined channel
+11:39 kevingu quit:Ping timeout: 265 seconds
+11:54 motionman joined channel
+11:55 kevingu joined channel
+11:56 motionman left channel:"Leaving"
+13:05 FrankHB joined channel
+13:12 FrankHB quit:Ping timeout: 265 seconds
+13:14 kevingu quit:Remote host closed the connection
+13:23 lh_mouse quit:Read error: Connection timed out
+13:24 lh_mouse joined channel
+13:57 T-J-M joined channel
+14:29 kevingu joined channel
+14:33 Mokou joined channel
+14:34 Izumo joined channel
+14:40 kevingu quit:Remote host closed the connection
+14:51 Xilzzerts quit:Ping timeout: 260 seconds
+14:56 kevingu joined channel
+15:01 kevingu quit:Ping timeout: 258 seconds
+15:27 cleamoooon: AMD公布Zen处理器细节，称其性能超过英特尔Broadwell-E
+15:28 cleamoooon: PowerShell 开源，加入 Linux 和 Mac支持
+15:48 cleamoooon: http://www.qdaily.com/articles/30983.html?share_from=app
+15:57 test_ joined channel
+16:02 test_: someone online ?
+16:02 test_: nobody ?
+16:03 cleamoooon: 躺
+16:03 test_: tang ?
+16:10 garbon joined channel
+16:10 garbon: hellow
+16:11 test_ quit:Remote host closed the connection
+16:14 ahdlkajfajf joined channel
+16:14 ahdlkajfajf: hi
+16:15 ahdlkajfajf: hello
+16:15 garbon: ����û��
+16:15 StardustBot quit:Remote host closed the connection
+16:15 ahdlkajfajf: 大家好
+16:16 garbon: hellow
+16:17 StardustBot joined channel
+16:19 cleamoooon: 看不到什么字符...
+16:21 garbon: luanma
+16:21 ahdlkajfajf: update the new version
+16:22 garbon: 6.35
+16:23 StardustBot quit:Remote host closed the connection
+16:25 kevingu joined channel
+16:32 kevingu quit:Remote host closed the connection
+16:36 StardustBot joined channel
+16:48 lh_mouse: geordi, -c { unique_ptr<const int> ptr; }
+16:48 StardustBot quit:Remote host closed the connection
+16:48 geordi: Success
+16:49 lh_mouse: geordi, -c { unique_ptr<const int, default_delete<int>> ptr; }
+16:49 geordi: error: no match for call to '(unique_ptr<const int, default_delete<int> >::deleter_type {aka default_delete<int>}) (const int*&)'
+16:49 lh_mouse: geordi, -c { unique_ptr<int, default_delete<const int>> ptr; }
+16:49 geordi: Success
+16:50 iyzsong-xx: -.-
+16:54 StardustBot joined channel
+17:17 kevingu joined channel
+17:18 Mokou quit:Remote host closed the connection
+17:21 kevingu quit:Remote host closed the connection
+17:21 kevingu joined channel
+17:26 kevingu quit:Ping timeout: 276 seconds
+17:33 Mokou joined channel
+17:44 yimis joined channel
+17:53 lh_mouse: https://github.com/lhmouse/intrusive_ptr/blob/master/intrusive_ptr.hpp
+17:53 whatofor joined channel
+18:08 iyzsong-xx quit:Read error: Connection reset by peer
+19:04 yimis quit:Quit: yimis
+19:05 cleamooon joined channel
+19:05 l0nGYear_Sync joined channel
+19:05 l0nGYear_Sync quit:Remote host closed the connection
+19:08 cleamoooon quit:Ping timeout: 258 seconds
+19:17 yimis joined channel
+19:29 Mokou quit:Remote host closed the connection
+19:33 Izumo quit:Quit: Connection closed for inactivity
+19:33 Mokou joined channel
+19:39 Mokou quit:Remote host closed the connection
+19:43 kevingu joined channel
+19:44 kevingu quit:Remote host closed the connection
+19:55 Meow-J quit:Remote host closed the connection
+19:55 Meow-J joined channel
+20:09 Mokou joined channel
+20:32 Mokou_ joined channel
+20:32 Mokou quit:Disconnected by services
+20:32 Mokou_ is now known as Mokou
+20:49 Mokou: geordi: << EPOLLIN | EPOLLOUT
+20:49 geordi: error: 'EPOLLIN' was not declared in this scope
+20:49 StardustBot quit:Remote host closed the connection
+20:50 Mokou: geordi: << EPOLLIN | EPOLLOUT; #include <epoll.h>
+20:50 geordi: error: epoll.h: No such file or directory
+20:50 Mokou: geordi: << EPOLLIN | EPOLLOUT; #include <sys/epoll.h>
+20:50 geordi: error: no match for 'operator|' in 'cout.ostream::operator<<(1u) | EPOLLOUT' (operand types are 'ostream::__ostream_type {aka ostream}' and 'EPOLL_EVENTS')
+20:50 Mokou: geordi: << (EPOLLIN | EPOLLOUT); #include <sys/epoll.h>
+20:50 geordi: 5
+20:50 Mokou: geordi: << (EPOLLIN); #include <sys/epoll.h>
+20:50 geordi: 1
+20:50 Mokou: geordi: << EPOLLOUT; #include <sys/epoll.h>
+20:50 geordi: 4
+20:50 Mokou: geordi: << EPOLLET; #include <sys/epoll.h>
+20:50 geordi: 2147483648
+21:01 yimis quit:Remote host closed the connection
+21:01 yimis joined channel
+21:05 kevingu joined channel
+21:06 kevingu quit:Remote host closed the connection
+21:27 Mokou: geordi: << EPOLL_CLOEXEC; #include <sys/epoll.h>
+21:27 geordi: 524288
+21:28 cleamoooon joined channel
+21:29 StardustX: 噗。。。我的bot会在使用geordi的时候segmentation fualt
+21:34 varna joined channel
+21:34 Mokou: 羊驼子冒出来了
+21:34 varna: 下班去拿了新的黑框眼镜
+21:35 Mokou: 结果你的寿命减半了
+21:35 varna: 也好，省得我不知道四十岁以后干什么
+21:35 lhanjian: 晚上好
+21:41 Oyodo joined channel
+21:43 whatofor quit:Ping timeout: 265 seconds
+21:48 hoxily_ joined channel
+21:49 varna: lhanjian: 百技五天，感觉西溪的食堂还不如滨江的，人多、菜吃了上火、无限的西红柿炒鸡蛋
+21:49 varna: 想不出吃什么了就要一份西红柿炒鸡蛋
+21:49 lhanjian: 蛤蛤蛤
+21:51 varna: 不过同组妹子都很可爱而且是滨江的
+21:51 T-J-M quit:Quit: 吾去矣
+21:52 varna: 噫，林丹被李宗伟斩了？
+21:53 lhanjian: 我勒个去
+21:53 lhanjian: 对啊
+21:53 varna: 挺好的
+21:54 lhanjian: 啊？
+21:54 lhanjian: 据说阿里的妹子都不合适找
+21:54 varna: 大丈夫
+21:54 varna: 妹子都是很聪明的
+21:55 lhanjian: 是啊，所以不合适
+21:55 varna: 而且你看我这种人，其实找不到女朋友
+21:55 lhanjian: 我以前的leader就这么说阿里的妹子
+21:55 varna: 我现在的leader...只跟我亲切地谈了下KPI
+21:59 lhanjian: 鼓掌
+22:00 garbon: ����
+22:00 hoxily quit:Quit: WeeChat 0.4.2
+22:00 smartrf joined channel
+22:00 smartrf quit:Client Quit
+22:01 garbon quit:
+22:02 varna: 估计KPI的事情得排到九月末
+22:03 varna: (｡･ω･)用力加班留心作死
+22:04 lhanjian: 用力加班……留心作死……
+22:13 varna: p7修修的话，我还有个新的想法要做
+22:14 varna: 一直不想用nanomsg, 那东西总觉得感觉怪异
+22:24 lhanjian: 就是怪异啊
+22:25 varna: zmq家的玩意儿
+22:29 lh_mouse: http://baike.baidu.com/view/170314.htm
+22:29 lh_mouse: 谁还记得这个。
+22:29 varna: 没看过
+22:30 * lh_mouse slaps varna around a bit with a large trout
+22:31 * varna poies
+22:35 Mokou: http://ww3.sinaimg.cn/mw690/805c3d47jw1f6zcy9kh81g207i050kjo.gif 在生产环境调Bug
+22:37 varna: 我听到一个骇人的例子
+22:37 iyzsong joined channel
+22:38 varna: 某软件相信自己顶过巨大压力没问题，但他们的read是不检查返回尺寸的
+22:38 Mokou: 不检查返回尺寸？那什么鬼……
+22:38 varna: 故事没完
+22:39 varna: 这个故事最糟糕的部分在于，讲故事的人差点相信read返回了不足的尺寸就可以收手了
+22:40 Mokou: ……什么鬼
+22:41 Mokou: 他们的read每次都能回满的么
+22:43 varna: 有一次没回满
+22:44 varna: recv回不满这种事情，按说应该在弱网测试里直接体现，不知道测试的人在干什么
+22:44 varna: 我在雪菜边上都能强行打出一个recv不满来
+22:44 Mokou: 回不满才是正常情况吧……
+22:44 varna: LAN经常能回满的
+22:44 varna: 这个在开发环境里容易被忽略
+22:45 Mokou: ……我习惯一次读4k，基本上回不满
+22:46 varna: localhost高速连灌都不满？
+22:46 Mokou: 不一定每次都高速连灌啊……
+22:46 Mokou: 你得先确认收发内容正确性吧
+22:47 Mokou: 一个HTTP请求都不一定能到4k
+22:47 varna: 未必，我有些时候是单连接缓冲中转的
+22:47 iyzsong: (┙>∧<)┙へ┻┻
+22:47 Mokou: 噫
+22:47 Mokou: 看来我比较小新
+22:48 Mokou: 小心
+22:48 varna: 当然后来业务方自己挺不住了，放弃单连接方案
+22:48 varna: 他们不太会搞
+22:53 iyzsong: 2333
+23:05 lh_mouse: [22:38:39] <varna> 这个故事最糟糕的部分在于，讲故事的人差点相信read返回了不足的尺寸就可以收手了 // 谷狗一下 EPOLLRDHUP ，你会找到你想要的。
+23:12 varna: lh_mouse: 别高估
+23:12 ahdlkajfajf quit:Ping timeout: 264 seconds
+23:12 lh_mouse: varna, EPOLLRDHUP 就是做这个的。
+23:12 Mokou: http://ww1.sinaimg.cn/mw690/9881e45dgw1f6zg1lumeqj20c00iqjso.jpg
+23:12 varna: lh_mouse: 我知道
+23:13 varna: 所以只需要想想为什么我在知道的时候还装傻就好了
+23:13 lh_mouse: ヲ是不指望 EPOLLRDHUP 的。
+23:13 lh_mouse: 只要读到东莞南溪就再读一次，直到 EAGAIN 。
+23:13 lh_mouse: s/东莞南溪/东西/
+23:14 varna: 读到EAGAIN在各种时候都比较安全，因为这种套接字上没必要不开非阻塞
+23:17 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:40 hoxily_ quit:Quit: Leaving
+23:46 lh_mouse: 中文 wikipedia 现在能上么？
+23:47 varna: 不能
+23:52 condy: echo `dig +short en.wikipedia.org` zh.wikipedia.org >> /etc/hosts
+23:59 varna: echo "+1s"

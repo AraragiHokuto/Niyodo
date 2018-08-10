@@ -1,0 +1,903 @@
+00:11:boosure|2 joined channel
+00:13:boosure quit:Ping timeout: 240 seconds
+00:15:boosure quit:Changing host
+00:15:boosure joined channel
+00:36:Petrus07 quit:Quit: Leaving.
+00:50:erhandsome quit:Ping timeout: 245 seconds
+00:54:cleamoon_ quit:Ping timeout: 245 seconds
+01:04:LittleKey quit:Quit: Leaving.
+01:05:yzld2002 quit:Quit: yzld2002
+01:45:lh_mouse quit:Quit: Meow
+04:06:xxxxxxxx quit:Ping timeout: 264 seconds
+06:10:izmntuk quit:Ping timeout: 264 seconds
+06:46:cleamoon__ quit:Ping timeout: 240 seconds
+07:02:wlemuel joined channel
+07:03:cleamoon joined channel
+07:06:wlemuel quit:Ping timeout: 256 seconds
+08:09:whocares_2 quit:Read error: Connection reset by peer
+09:07:lh_mouse joined channel
+09:16:Xilzzerts joined channel
+09:23:lh_cat quit:Read error: Connection reset by peer
+09:29:lh_cat joined channel
+09:29:lh_cat quit:Signing in (lh_cat)
+09:29:lh_cat joined channel
+09:34:TwitchGG joined channel
+09:35:Guest16349 quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+09:36:whatofor joined channel
+09:59:whocares_2 joined channel
+10:14:lh_cat joined channel
+10:14:lh_cat quit:Signing in (lh_cat)
+10:14:lh_cat joined channel
+10:15:Guest31786 quit:Client Quit
+10:15:lh_cat joined channel
+10:27:TwitchGG quit:Read error: Connection reset by peer
+10:56:lh_mouse quit:Read error: Connection reset by peer
+11:00:lh_mouse joined channel
+11:04:lh_mouse quit:Client Quit
+11:04:lh_mouse joined channel
+11:40:yzld2002 joined channel
+11:53:erhandsome joined channel
+12:02:yzld2002 quit:Ping timeout: 245 seconds
+12:25:TwitchGG joined channel
+12:26:yzld2002 joined channel
+12:36:lh_mouse quit:Read error: Connection timed out
+13:03:lh_mouse joined channel
+13:23:erhandsome quit:Ping timeout: 240 seconds
+13:26:erhandsome joined channel
+13:27:lh_mouse quit:Read error: Connection reset by peer
+13:40:lh_mouse joined channel
+13:41:Plough joined channel
+13:49:varna joined channel
+13:50:varna: memo已经看了
+13:50:varna: 两个评论
+13:50:varna: 其一，这故事煋了，那个生放送已经有一段时间
+13:51:varna: 其二，总有逗比觉得自己比别人聪明，应该指导别人干什么……
+13:51:Plough: 啥memo
+13:51:varna: 小耗给我发的Memo
+13:51:varna: MemoServ上的
+13:52:varna: http://postimg.org/image/5pwslrvph/
+13:52:Plough: Soga
+13:52:varna: 有这言论的伙计大概是觉得自己很厉害了，有如神圣不列颠帝国地九十九代皇帝陛下，他说什么别人就该听什么
+13:52:Plough: 第四门POI炮GET
+13:54:Plough: “这是错的，可笑！”
+13:55:varna: 这大概就是自居精英阶层实则认识水平上不去、资产数目没法看的政治局扩大会议（路边队）
+13:55:Plough: 23333
+13:57:varna: 说白了就是觉得自己比起别人还不错就有底子指手画脚的逗比
+13:57:varna: 怪可怜的
+14:01:varna: 有关1.18后的SK4推演，移步临时频道#c_lang_sk4
+14:11:condy joined channel
+14:13:T2 joined channel
+14:28:varna: yooo
+14:28:hysw: varna:把智商交出来
+14:29:varna: 不给你这剥削阶级
+14:29:varna: 要不这样吧
+14:30:varna: 你给我买把C7A2包邮
+14:38:FrankHB quit:Remote host closed the connection
+14:40:FrankHB joined channel
+14:50:lh_mouse quit:Read error: Connection timed out
+14:57:hysw: 究竟是去学编译还是算法是个大问题
+14:58:varna: 编译好玩，纯粹算法不如学数学吧
+14:58:varna: 要是想搞基础算法的话体感多学点数学有帮助得多
+14:58:hysw: 用巫女语教编译...
+14:59:hysw: 感觉会很抽风...
+14:59:boosure quit:Ping timeout: 265 seconds
+14:59:varna: 参考书目里不会有那个巫女语写编译器的书吧
+14:59:varna: 忘了叫什么了，我似乎还有那个pdf...
+15:01:Plough: 龙书里面貌似也有巫女语？
+15:02:hysw: Crafting a Compiler?
+15:02:varna: 龙书我后来买了第二版还扔家里了
+15:02:varna: 忘了，那个pdf给我扔某角落里懒得看了
+15:02:varna: 看他还不如逐PASS自己研究，巫女实现太烦人
+15:02:hysw: 龙书的英文影印版有一本，比加拿大这奇葩地方便宜多了...
+15:03:condy: 高级编译器-设计与实现 <- 这个？
+15:03:varna: 不管他了
+15:03:Plough: 话说我又想坑文件系统了
+15:03:varna: 龙书一版二版都买了国内出版的影印版，不过我其实只读过一版
+15:04:hysw: Plough: 我被ext2已经坑死过一回了...
+15:04:Plough: 我想搞个版本文件系统玩玩
+15:04:hysw: 不过天知道为什么那堆助教给了我那错误百出的实现满分...
+15:04:Plough: ext2似乎不难吧
+15:05:varna: 先弄个FAT试试水吧
+15:05:hysw: Plough: 天知道教授要你实现什么...
+15:05:varna: 反正现在FAT其实比ext2实用
+15:05:hysw: 我宁可FFS
+15:05:varna: 满大街都是ext4, ext2实在没什么看头
+15:05:varna: 之前岚月酱不还被btrfs搞死了……
+15:06:Plough: btrfs似乎是SSD杀手
+15:06:hysw: varna: ext4什么的作为一个作业估计太过了...
+15:06:Plough: 所以我没敢用……
+15:06:hysw: Plough: ?
+15:06:varna: 我的意思是实用向的
+15:06:varna: FAT现在还有不少小的存储设备可以用
+15:06:Plough: hysw: 以前看到过
+15:06:Plough: 不过这个现在大概已经修好了
+15:06:hysw: varna: 那玩意是个作业...
+15:07:hysw: 不过为啥不是FFS这是个很严重的问题
+15:07:varna: 我又不管你作业
+15:07:Plough: FFS指哪个
+15:07:hysw: 我SSD上还空着80G没分配...
+15:07:Plough: 我还空着120G
+15:08:hysw: Plough: ?
+15:08:hysw: FFS: Berkeley Fast File System
+15:08:Plough: 了解
+15:08:varna: 我似乎听说过这个东西
+15:08:hysw: Plough: 你是空着还是没分配？
+15:08:Plough: 没分配
+15:08:varna: 120G都快空出一块盘了吧……
+15:09:Plough: 本来计划扔给windows的
+15:09:whocares_2 quit:Ping timeout: 245 seconds
+15:09:Plough: 不过一直没装……
+15:09:varna: 如果非要装windows我也不会扔SSD
+15:10:hysw: varna: ext2什么的似乎抄了不少FFS的玩意...
+15:10:varna: Linux本身就是Minix基础上系统V和BSD的杂交产物
+15:10:hysw: Windows我分了一个512G的ntfs盘...
+15:10:Plough: 我只有一块SSD
+15:11:hysw: 可惜没申请到TA,否则我就去弄个RAID玩玩...
+15:11:FrankHB quit:Remote host closed the connection
+15:12:FrankHB joined channel
+15:13:varna: 还是想侵犯个谁
+15:14:hysw: varna:你去找user256去吧
+15:15:lh_mouse joined channel
+15:15:varna: 我觉得比较现实的看法是我们把肛旗爆了
+15:16:Plough: 铁相！
+15:16:hysw: 背光键盘在晚上用挺好的...
+15:19:lh_bot: _craftG'ing a compiler
+15:20:lh_bot: ^ 15:02 <@hysw> Crafting a Compiler?
+15:20:varna: _craftGay a compiler
+15:20:lh_bot: 或者叫 _craftG-izing a compiler
+15:20:Plough: 铁相一炮把对面的自己爆了……
+15:23:varna: 等会去吃点牛揉面
+15:29:boosure joined channel
+15:31:lh_bot: 你们有没有感觉最近官方网在抽风
+15:32:lh_bot: 国外的网站都奇慢
+15:33:condy: 今天的github特别慢。
+15:34:varna: 我这里还好
+15:35:Plough: 噗
+15:36:Plough: IJN居然脑洞过AP弹防空
+15:36:varna: 跳蛋防空么
+15:36:Plough: +
+15:36:varna: 日本人的脑洞还少么
+15:36:varna: 比起震电来，AP弹防空都显得靠谱了
+15:37:Plough: 233333
+15:37:Xilzzerts: epoll能监控waitpid吗，，
+15:37:Xilzzerts: 感觉比较科幻
+15:37:lh_bot: 可以
+15:37:varna: 可以
+15:37:lh_bot: 直接返回 -1   errno 是 EINTR
+15:38:varna: 如果非要这么做，推荐epoll_pwait
+15:38:varna: 当然你检测EINTR也行
+15:42:Xilzzerts: 居然真有这种玩法。
+15:43:lh_bot: 个人以为没啥用
+15:43:lh_bot: EINTR 除了给逗比设计擦屁股以外没任何使用价值
+15:43:lh_bot: 如果真想好好利用参数还不够
+15:43:varna: EINTR是个蛋碎传统，那么有这么个问题
+15:44:Xilzzerts: 实际上现在是想ptrace一堆进程，然后waitpid
+15:44:varna: 如果你抛去EINTR, 一堆人会说这不符合长期用户的直觉
+15:44:varna: 如果你沿用EINTR, 一堆人会说这不符合他们长期以来的直觉
+15:44:varna: 然后就是撕逼大战
+15:44:lh_bot: POSIX 遗毒
+15:44:varna: 如果你非要epoll上挂信号，还是epoll_pwait吧
+15:45:lh_bot: epoll_pwait 能 EINTR 我没意见
+15:45:Plough: 红CLT这是多能闪……
+15:45:lh_bot: epoll_wait 能 EINTR 就是春逗比
+15:45:Plough: 吃了四发CI没掉血
+15:45:Plough: 五发才大破
+15:45:lh_bot: s,春,纯,
+15:45:varna: 你看，单方面的撕逼大战开始了
+15:45:varna: 我就不战了
+15:45:lh_bot: 不光是这地方
+15:45:lh_bot: recv 什么的都得开小灶
+15:45:Plough: 女儿中破，先这么撑着
+15:46:lh_bot: 人为规定“这种不是错误”
+15:46:lh_bot: 逗比程度仅次于自然语言
+15:46:* varna 笑笑不说话
+15:47:lh_bot: 然而不管怎么样同步非阻塞依然是好的设计风格  比某 OS 异步非阻塞的逗比要强太多
+15:48:varna: 结果每个人都觉得发明API的人有其傻逼之处，而API到现在还是这熊样子
+15:48:varna: 意味不明
+15:49:varna: wrapper lib一大堆，基本都显得更熊
+15:50:lh_bot: 他们应该请我去设计
+15:50:lh_bot: “老子才高八斗”
+15:50:varna: 你的设计我实在不买账
+15:51:varna: 如果你是API设计者的话，大概我的言论会跟现在的你类似
+15:51:lh_bot: 羊驼：我们打算在 linux 6.xx 中全面替换为 perl 接口
+15:52:varna: 我自居愚蠢，所以我容忍各种愚蠢之处
+15:52:varna: 然而自居有能者往往限制用户的可能性，因为用户比他们愚蠢
+15:52:varna: 我对库就是这样的态度
+15:53:Xilzzerts: 问一个SB问题，是吧waitpid指针给epoll_data的那个void *？
+15:53:lh_bot: 我认为 C++ 用户（统计上讲）比 C 用户更愚蠢  所以我基本不用别人的 C++ 库
+15:53:varna: 不是
+15:53:lh_bot: 其余同理
+15:53:varna: Xilzzerts: ready = epoll_pwait(epfd, &events, maxevents, timeout, &sigmask);
+15:54:lh_bot: 并非用户比库的作者更愚蠢   而是互相愚蠢
+15:54:varna: Xilzzerts: 细节不赘述，你看man epoll_wait里，会有epoll_pwait
+15:54:Xilzzerts: varna, Android木有pwait
+15:54:varna: 噗
+15:54:lh_bot: android 逗比系统
+15:54:varna: sigprocmask(SIG_SETMASK, &sigmask, &origmask);
+15:54:varna: ready = epoll_wait(epfd, &events, maxevents, timeout);
+15:55:varna: sigprocmask(SIG_SETMASK, &origmask, NULL);
+15:55:varna: 保证这三个原子地执行
+15:55:varna: 怎么保证看Android怎么愚弄你了
+15:55:varna: 别跟我说Android所有的多路复用都没p版本的
+15:56:Xilzzerts: selectp倒有
+15:57:varna: pselect要是能凑合用用也行
+15:57:varna: 不过如果你多路复用上挂的东西比几十个更多、fd范围太大的话就算了
+15:58:lh_bot: select 为什么不用 epoll 实现呢
+15:59:varna: 理由有三：select是旧货，需要兼容使用select的破烂旧货，没必要再费人力
+15:59:varna: 说白了就是既然大家都知道有epoll, 那么就去用epoll吧
+15:59:lh_bot: 不是  接口不做改动
+15:59:varna: 让select自己冷死
+15:59:lh_bot: kqueue 呢   iocp 呢
+15:59:varna: 接口不作改动的select还是能疼死
+16:00:varna: 轮询整个监听集合不是select的责任而是用户的事情，所以没什么意思
+16:00:varna: kq? iocp? 你在epoll的地方说这个有什么用
+16:00:Plough: 连着吃了三发鱼雷
+16:01:varna: 场景都换了说什么epoll, 根本就不存在……
+16:01:lh_bot: epoll 的接口挺恶心  我只能说
+16:01:varna: 凑合
+16:01:lh_bot: 换成裸回调还比现在的好点
+16:01:varna: epoll没有责任回调，我觉得这不是epoll接口的恶心之处
+16:02:varna: epoll接口的差劲之处在于查询功能太弱了
+16:02:lh_bot: void on_epollin(epoll_data_t data){ }
+16:02:varna: 没必要
+16:02:varna: 这不是一个纯粹的reactor
+16:02:lh_bot: 我希望有一个 epollin 是 LT  但是 epollout 是 ET 的
+16:02:varna: 实际上epoll只提供notification, 让用户自己去做framework
+16:03:varna: 上来就飞回调我很不爽，所以我会自己映射
+16:03:lh_bot: 回调是更改数据结构的
+16:03:varna: 如果有你的需求，在那个位置的epoll data上我会绑一个回调
+16:03:varna: 数据、事件回调、桩回调三个
+16:03:lh_bot: 于是你的回调就没参数了……
+16:03:varna: 三个
+16:04:Plough: 我是不喜欢回调
+16:04:lh_bot: 16:02 <+lh_bot> 我希望有一个 epollin 是 LT  但是 epollout 是 ET 的 // 注意 IOCP 是这样的
+16:04:Plough: 弄FFI的时候简直疼飞
+16:04:lh_bot: 我主要指 EPOLLOUT 这个地方
+16:04:varna: 或者我直接绑一个小包，里面有数据和事件回调，实际上我以前就是这么做的
+16:04:lh_bot: 用回调可以完全把 EPOLLOUT 封死在 epoll 内部
+16:05:lh_bot: varna: uccu
+16:05:varna: 但是这不该是epoll内部的事
+16:05:varna: 仅仅是你需要这么做
+16:05:varna: 实际上我会把这件事情归咎到c的闭包上
+16:05:lh_bot: 算了现在的也可以将就用
+16:06:lh_bot: 只是 data 塞了个 fd   到时候查表拿到 socket 指针  然后手动在 send
+16:17:varna: 早点去吃饭了
+16:18:varna: 回来简单直播一下平衡剧本用的测试推演，感兴趣的伙计可以移步#c_lang_sk4
+16:18:Plough: 女儿第四次吃鱼雷
+16:19:Plough: 第三次大破
+16:40:izmntuk joined channel
+16:46:endle joined channel
+16:51:lh_bot: varna: int i = 123; char temp[32]; my_formatter(temp, s,d)("i = ", i); // 这个看起来如何
+16:51:lh_bot: varna: int i = 123; char temp[32]; my_formatter(temp, sz, dec)("i = ", i); // 这个呢
+16:52:erhandsome quit:Ping timeout: 245 seconds
+16:58:erhandsome joined channel
+17:07:MisakaMikoto|2 joined channel
+17:08:MisakaMikoto|2 left channel:"喵"
+17:12:varna: lh_bot: 这个看起来好多了
+17:14:MisakaMikoto|2 joined channel
+17:17:MisakaMikoto|2 left channel:"喵"
+17:21:lh_mouse: 上面那个还是下面那个
+17:22:varna: 下面那个
+17:24:whocares_2 joined channel
+17:25:MisakaMikoto joined channel
+17:26:lh_mouse: 有点坑爹的是预处理器不认识 <>
+17:26:lh_mouse: 于是它会把模板拆成两半
+17:28:endle quit:Quit: Leaving
+17:31:varna: 毛蛋
+17:31:Xilzzerts quit:Read error: Connection reset by peer
+17:31:varna: Lambda Lifting里说什么Let等价……
+17:31:Xilzzerts joined channel
+17:46:TwitchGG quit:Ping timeout: 245 seconds
+17:48:wlemuel joined channel
+17:54:Plough: 最上级全员Lv60达成
+17:54:varna: 熊野我拆了
+17:55:Plough: ……
+17:57:varna: Moose的make test又挂了
+17:57:varna: Moose党智硬
+18:04:varna: Moose简直是Perl之耻
+18:04:Plough: 23333
+18:04:varna: 卧槽
+18:04:varna: 依赖都不全……我日他大爷的
+18:05:varna: Makefile.PL里应该好好写依赖啊
+18:06:Plough: 你在用moose物？
+18:06:Plough: 深海击沉保护系列
+18:06:varna: Devel::REPL
+18:06:varna: 不行了，他们自己都找不到自己的Plugin
+18:06:Plough: ……原来这玩意用了Moose的？
+18:06:varna: 调用栈里一大堆Moose
+18:09:Plough: 潜艇又修不过来了
+18:09:Plough: 我觉得我该找个时间赌赌马战神了
+18:19:varna: 无限缺依赖
+18:19:varna: 写Makefile.PL那哥们绝对喝大了
+18:20:Plough: 233333
+18:22:Plough: 利根开幕灭四个……
+18:23:Plough: 还好没抢MVP
+18:24:varna: 终于能用了
+18:26:Sleepwalking joined channel
+18:26:Sleepwalking: iyzsong: 请查邮件
+18:28:T2: Sleepwalking, 卧槽先爆
+18:30:condy quit:Ping timeout: 264 seconds
+18:32:condy joined channel
+18:34:lh_bot: geordi: { foo(1, 2, 3); } template<typename ...T> void foo(T ...t){ (cout << t ...); }
+18:34:geordi: error: expected ')' before '...' token
+18:34:lh_bot: geordi: { foo(1, 2, 3); } template<typename ...T> void foo(T ...t){ (cout ... << t); }
+18:34:geordi: Same error.
+18:35:lh_bot: geordi: { foo(1, 2, 3); } template<typename ...T> void foo(T ...t){ (cout << ... << t); }
+18:35:geordi: error: expected primary-expression before '...' token
+18:35:lh_bot: geordi: { foo(1, 2, 3); } template<typename ...T> void foo(T ...t){ (void)(cout << ... << t); }
+18:35:geordi: Same error.
+18:36:lh_bot: geordi: { foo(1, 2, 3); } template<typename ...T> void foo(T ...t){ bool b = (cout << ... << t); }
+18:36:geordi: Still same error.
+18:39:lh_bot: geordi: << { 1, 2, 3 } [0]
+18:39:geordi: error: expected primary-expression before '{' token
+18:39:lh_bot: 渣渣
+19:07:condy: geordi: << TYPE({1,2,3})
+19:07:geordi: error: ISO C++ forbids braced-groups within expressions
+19:07:condy: geordi: { auto il = {1,2}; cout<<TYPE(il); }
+19:07:geordi: lvalue initializer_list<int> 
+19:08:FrankHB: 这玩意儿gcc5实现了？
+19:08:FrankHB: brace那坨本来就是渣渣。
+19:13:wlemuel quit:Ping timeout: 264 seconds
+19:14:wlemuel joined channel
+19:19:wlemuel quit:Ping timeout: 244 seconds
+19:20:wlemuel joined channel
+19:26:wlemuel quit:Ping timeout: 244 seconds
+19:27:wlemuel joined channel
+19:33:lh_mouse quit:Read error: Connection reset by peer
+19:34:lh_mouse joined channel
+19:39:yzld2002 quit:Remote host closed the connection
+19:40:yzld2002 joined channel
+19:51:cleamoon: http://news.163.com/15/0104/16/AF4LQMJO0001124J.html
+19:52:cleamoon: 生病在床，男友端来鸡汤说：宝贝，趁热喝了吧。 她感动的接过鸡汤：味道真好，你什么时候学会做鸡汤了？ 男友淡定的道：刚买了包香菇炖鸡面，我把面吃了。。。但营养都在汤里。。。(zt)
+19:52:condy: 233
+19:53:varna: 2333
+19:58:xxxxxxxx joined channel
+19:59:cleamoon: 许多人可能还停留在AMD显卡对Linux支持很差的阶段，而现实是AMD的Linux支持在过去几年有了巨大飞跃，无论是性能还是可靠性。Phoronix评测了最新的闭源Linux版和Windows的催化剂驱动，以及开源的Radeon Gallium3D驱动。结果显示，在部分 OpenGL评测项目中，Linux版的催化剂在性能上打败了Windows。而AMD的Linux开源驱动过去一年增加了很多新
+19:59:cleamoon: 功能，包括OpenMAX/AMD视频编码支持，改进电源管理，等等。性能上的改进同样巨大。
+20:00:xxxxxxxx: 驱动救不了发热量(撸迅脸
+20:00:varna: 肛旗怎么说
+20:01:varna: 他不是被迫弄了个自留镜像么
+20:01:cleamoon: 肛旗用的amd？
+20:02:varna: 他应该是A卡
+20:02:cleamoon: nvidia努力的方向是cuda，不是一般用户使用...
+20:03:varna: 不过我还是希望英猥达能加强一点optimus的，bbb还是不好
+20:03:xxxxxxxx: 英猥达努力的方向不是威力更大么?
+20:04:cleamoon: 他在lin上的收入主要是超算...
+20:04:cleamoon: 现在游戏多一点了，可能以后会好点吧
+20:09:cleamoon: 不过以后人们都用intel显卡了吧...
+20:10:xxxxxxxx: http://i2.hdslb.com/live/cover/82/820d96e237a19e6d2bba50ac7226d916.jpg
+20:10:xxxxxxxx: intel 显卡?
+20:11:cleamoon: 自带的
+20:17:Plough: 催化剂？
+20:17:Plough: 性能还行，虽然救不了wine
+20:17:Plough: 但是有个问题
+20:17:Plough: 装上以后你能不能开X就看脸了
+20:17:varna: 用的时候必须脱裤，不然性能不好？
+20:17:varna: 这不是问题啊
+20:18:Plough: 这当然是问题……
+20:18:varna: 你脱裤有什么的
+20:18:varna: 群众说是不是
+20:18:Plough: 我每次startx都有30%的概率会卡死
+20:18:Plough: 噗死你
+20:19:cleamoon: 2333
+20:19:cleamoon: 肛旗脱裤吧
+20:19:Plough: cleamoon: 自爆去
+20:19:Plough: 我操
+20:19:varna: 对了我事前打个广告
+20:19:Plough: 伊姆亚一发大破……
+20:19:Plough: 还是1血
+20:20:varna: 有没有人喜欢本格的超 战 舰大 战 舰对轰？
+20:20:varna: 大舰巨炮主义者喜欢的东西都可以有
+20:20:cleamoon: 喜欢呀
+20:20:Plough: 我喜欢
+20:20:varna: 岚月酱以后来一次？
+20:21:varna: 我感觉我自己想的剧本全都是水雷战队
+20:21:varna: 幼女真好啊hshsprpr
+20:22:cleamoon: 我喜欢看而已... 对轰没有策略可言
+20:22:varna: 还是有的
+20:23:varna: 可能我会把初始距离设定得足够开始一小时一轮的索敌阶段
+20:23:varna: 这样双方可以进行适当的索敌，调整方位和巡航阵型
+20:23:varna: 毕竟战舰战队要有直卫队的，里面总得有巡洋舰和驱逐舰
+20:24:Plough: 我突然想到一个事
+20:24:Plough: 这么来的话裁判不会过劳死么……
+20:24:varna: 会
+20:24:Plough: 多来几个裁判？
+20:24:cleamoon: 2333
+20:24:varna: 我是这么想的
+20:24:Plough: cleamoon: 你来吧
+20:24:Plough: 这场我准备开大和的
+20:24:varna: 我跟你说，这次的瓜岛海战打起来我就得索敌死
+20:25:Plough: 那珊瑚岛怎么办
+20:25:Plough: 我是不是该先把大鸟娶了再死
+20:25:varna: 珊瑚海好说，没多少东西
+20:25:varna: 这次的索敌两分钟一两趟，还全是雷达……
+20:25:cleamoon: 我都不知道规则
+20:25:Plough: 到时候你在北边对面在南边
+20:26:varna: 没关系，航空战可以这样
+20:26:Plough: 然后你的索敌队往北飞他往南飞
+20:26:cleamoon: 赶紧写程序吧
+20:26:Plough: 我老血各种吐还不能提醒你门
+20:26:Plough: 你们*
+20:26:varna: 让玩家指定一个多轮计划，然后大粒度执行
+20:26:varna: 中间如果有接敌就停在接敌轮
+20:27:varna: 2min一次的航空战裁判会死的
+20:27:Plough: 直接加速跳过中间么
+20:27:varna: 对
+20:27:Plough: 也是
+20:27:varna: 玩家以2min为一单位给出指令，但裁判可以在没有接敌或者不关键的地方批处理
+20:28:varna: 不然每轮记CAP你就能死
+20:28:Plough: 比如在路上呜呜呜的时候么
+20:28:varna: 即使有脚本你也能手抽死
+20:28:Plough: 233333
+20:28:wlemuel quit:Ping timeout: 245 seconds
+20:29:varna: 另外指出一点
+20:29:varna: 航空队log玩家自己维护
+20:29:varna: 或者你简单挂个bot
+20:29:varna: 这个好写，随便弄点东西就行了
+20:30:Plough: 了解
+20:30:varna: 最麻烦的其实就是航空队状态，因为太多
+20:30:Plough: 等我自己推的时候看看有哪些麻烦之处
+20:30:varna: 麻烦了说不定脱下裤子就不麻烦
+20:31:Plough: 我的宰相可是带了两门大根的铁相
+20:31:Plough: 不过果然开始练级以后弹药就不够了
+20:32:Plough: 今天铁相的等级被弹药拖死在72了
+20:32:varna: 所以我基本都不专门练级
+20:32:cleamoon: 全部裁判维护，航母10v10，我估计裁判活不了多久
+20:32:Plough: 所以我决定先娶大凤
+20:32:varna: 我会直接电文日方玩家：广岛被爆
+20:32:Plough: 233333
+20:32:varna: 朕深知世界ry
+20:33:Plough: 别啊，接着玉碎
+20:33:T2: varna, 总之我只要在战舰后面不装AP往西开，见人就把战舰往左打个45度就能赢咯。
+20:33:varna: 然后让他起立听完玉音
+20:33:varna: T2: 你问问肛旗战舰一路向西的结果可能是什么
+20:33:cleamoon: 玩家一局全飞机继续上一轮飞行，然后裁判就吐血了
+20:34:T2: 不战舰西南，小船一路向西。
+20:34:varna: 至少我已经努力制造出一个局面，美军炮击有利的情况下南方头上记下三十三枚鱼雷
+20:34:T2: 他在别的地方那就没办法了
+20:34:wlemuel joined channel
+20:34:varna: 院长头上一枚
+20:34:T2: = =
+20:34:Plough: 等等这个没剧透么
+20:34:varna: 没
+20:35:Plough: T2的配置
+20:35:varna: 历史上就是南方和院长
+20:35:T2: 总之拿到地图再说吧。
+20:35:varna: 维基上都有，这不关键
+20:35:varna: 实际上这个我也会大致告诉两方，不然两方都没法确定炮雷击战的打法
+20:35:varna: 算是最基本的情报吧
+20:35:Plough: 你在还原历史这点？
+20:35:T2: 李是往西北作死去的，我会往南的。
+20:36:varna: 战前总有情报
+20:36:varna: 往南……该怎么说呢，我还是觉得你没算过炮击战
+20:37:T2: 还没，后天大后天连考2天。
+20:37:varna: 保持长程炮击的话，几乎是在赌1%~2%的国运
+20:38:T2: 总之用小船挡住他，谁近打谁。
+20:38:varna: 挡住2333
+20:38:varna: 为什么你总是相信不经计算的复杂过程的结果
+20:39:T2: 好吧
+20:39:varna: 虽然我认为这场你赢面大，但说实话那是我并不太相信code_new对幼女的爱
+20:39:T2: 地图都没拿到计算毛啊
+20:39:varna: 是因为*
+20:39:varna: ……不能算为何硬算，又没人让你算……
+20:40:T2: 好吧
+20:40:varna: 还是那句话，你优势非常大，但一定不要轻视敌人的脑洞战力
+20:41:T2: 唔，好吧。
+20:42:varna: 一发B类鱼雷击中南方程度装甲造成的伤害是200,三发上去大概就掉队了
+20:42:varna: 一旦战舰掉队，你的主力舰优势将会被严重削弱
+20:43:varna: 所以注意巡航战速和警戒阵型
+20:44:T2: 这个倒是，但是要不要同航是个问题。
+20:44:T2: 看情况吧。
+20:44:varna: 先别太考虑这个
+20:44:varna: 考完要是有兴趣的话，考虑下为何注意巡航战速
+20:45:T2: 远距离的话单纵，近一点转复纵咯。
+20:45:varna: 毕竟以小搏大的打法不太多
+20:45:chinglish joined channel
+20:46:Plough: 今天没能把铁相改二略残念
+20:46:varna: chinglish: 欢迎
+20:46:Plough: 改三
+20:46:lh_bot: chinglish: 有新人？
+20:46:chinglish: 这里是做什么的? 文学？
+20:47:cleamoon: 这里是不 堪 入 目的
+20:47:varna: chinglish: 以程序设计为基本的综合话题
+20:47:varna: topic由日常事项和一个对句组成
+20:47:chinglish: 哦
+20:48:wlemuel quit:Ping timeout: 265 seconds
+20:49:Plough: 哦哦东急队回来了
+20:49:wlemuel joined channel
+20:49:Plough: 我看看能不能给铁相再提一级
+20:49:varna: 桶2333
+20:49:* Plough 吸取教训保留了四个桶
+20:49:cleamoon: 近期新人不少呀
+20:50:Plough: 北鼠队也回来了
+20:50:varna: 新人是药娘不？
+20:50:Sleepwalking quit:Ping timeout: 256 seconds
+20:50:lh_bot: 新人都被你们带坏啦 >.<
+20:51:chinglish: 我只是在 频道清单中看见个有中文topic的就进来瞅瞅
+20:51:varna: 哦
+20:51:varna: 不过无所谓了，随便聊吧
+20:51:varna: topic的对句最近一段时间还是军国主义黄赌毒
+20:51:varna: 如果不喜欢的话还望谅解
+20:52:chinglish: !help
+20:52:chinglish: 这个频道的 bot 能做些什么?
+20:53:lh_bot: 我不是 bot
+20:53:varna: 那个不是我们实现的，lh_bot是个活人
+20:53:varna: geordi是bot, 可以求值c++程序
+20:53:lh_bot: geordi: << "chinglish, 喵";
+20:53:geordi: chinglish, 喵
+20:53:varna: 如果不知道怎么用，可以看topic里的链接
+20:54:chinglish: 这样啊
+20:54:lh_bot: clcn_logbot: 
+20:54:lh_bot: Plough: 爆
+20:54:lh_bot: Plough: 爆
+20:55:lh_bot: Plough: 爆
+20:55:varna: chinglish: 还有一些logbot, topic里也有说明
+20:55:MisakaMikoto: 爆
+20:55:varna: MisakaMikoto: 爆
+20:55:chinglish: 我以为是些趣味性的机器人,原来是算术的
+20:55:Plough: lh_bot: 我家铁相上可是养了猫的
+20:55:varna: 那个猫极其祥瑞
+20:55:varna: 上谁谁出事
+20:55:MisakaMikoto: 乃萌都是会被窝爆的
+20:56:lh_bot: 铁相 是谁
+20:56:varna: 我记得被那个猫搞沉的不止俾斯麦
+20:56:Plough: 那只猫是在给铁相报仇
+20:56:lh_bot: 这两天 team viewer 倒是猫了
+20:56:lh_bot: 几秒钟就断线
+20:56:lh_bot: 目测 他的服务器被官方网搞了
+20:56:lh_cat: 我又连不上自己电脑了
+20:57:varna: chinglish: 这次的主题仍然是驱逐舰（夕暮、绫波、白露、吹雪、有明）
+20:57:wlemuel quit:Ping timeout: 256 seconds
+20:57:chinglish: 驱逐舰?
+20:57:varna: 括号里那五个
+20:58:varna: 因为二战时候日本的驱逐舰从dd-35吹雪开始就不用编号了，所以直呼其名
+20:58:wlemuel joined channel
+20:59:chinglish: 我不懂那些, 我倒是听过 甲午战争北洋师的那几艘船? 定远 什么的
+20:59:varna: 北洋……说起来似乎兵棋论坛上有几个哥们试着再现过甲午海战的？
+21:00:lh_bot: 甲午海战和坦克屠杀骑兵有什么区别
+21:00:lh_bot: 北洋水师的炮弹里都死装沙子的
+21:00:varna: 区别是坦克可能有点旧了
+21:01:varna: 现在的说法是装沙子的炮弹可能限于高爆穿甲弹（鬼知道这是什么弹种）
+21:01:Plough: 有人说里面装沙子的是实心AP弹
+21:01:chinglish: 为什么 C 语言频道的人要聊这些?
+21:01:varna: 但是不管怎么说，北洋水师的实力大概还是不如当时的日本海军
+21:01:lh_bot: 北洋水师：我们有 UltraAP！  日本海军：plate 笑而不语
+21:01:varna: chinglish: 因为这里不强行要求讨论程序
+21:02:varna: 当然你可以随意选择你喜欢的话题
+21:02:varna: 也可以对其他人的观点随意地不买账
+21:02:wlemuel quit:Ping timeout: 256 seconds
+21:02:varna: 不过如果你要讨论程序的话，我们一样奉陪……
+21:03:varna: 虽然话题可能发展到阁下闻所未闻的奇特领域
+21:03:wlemuel joined channel
+21:04:Plough: By casting the projectile point downwards and forming the head in an iron mold, the hot metal was suddenly chilled and became intensely hard (resistant to deformation through a Martensite phase transformation), while the remainder of the mold, being formed of sand, allowed the metal to cool slowly and the body of the shot to be made tough (resistant to shattering).
+21:04:lh_bot: condy: 喂食
+21:04:Plough: ^From wikipedia
+21:04:condy: = =
+21:04:* condy 已张口
+21:04:lh_bot: varna: 上啊
+21:04:varna: 这弹种真惨……
+21:04:Plough: 不对，这是模具……
+21:04:varna: lh_bot: 我来了
+21:05:varna: condy: 给你羊味素
+21:05:condy: 这是虾米..
+21:06:Plough: 目前为止没找到里面填沙相关的资料
+21:07:varna: 填沙大概不可避了
+21:07:varna: 但一味怪罪填沙和命运五分钟有多大差别，这我也存疑
+21:09:lh_bot: 我想想前几天发明的协议以后要不要扩展下
+21:10:chinglish: 你们用的什么 IRC 客户端？
+21:10:lh_bot: irssi
+21:11:varna: irssi
+21:11:varna: 这里不禁止你用ctcp, 随意看看吧
+21:12:MisakaMikoto: KVIrc
+21:12:chinglish: 你们在 linux 下？
+21:12:varna: 我是
+21:13:cleamoon: hexchat，arch
+21:13:chinglish: 我倒是装过双系统的 ubuntu, 但感觉不好用..
+21:13:varna: ubuntu就是不好用
+21:13:varna: 用arch吧
+21:13:lh_bot: lh_mouse: ^
+21:14:chinglish: 因为我是经常要写 haxe 程序, 所以还是 windows 平台好用.
+21:14:lh_bot: 居然不是 HTTPS 的
+21:15:iyzsong: mosh/tmux/weechat o.O
+21:15:lh_bot: 啊  不是
+21:15:cleamoon: haxe？
+21:15:lh_bot: 居然不是 SSL 的
+21:15:iyzsong: haxe is cool :)
+21:15:chinglish: 我只用 haxe 来写 flash 和 js 的, 当然 cpp 的也有但少..
+21:16:iyzsong: chinglish: any game? I'd like to try
+21:16:chinglish: 虽然 haxe 可以编译成 java , c# , python 但那些语言我不熟， 基本没用过..
+21:16:varna: 为何不能编译成Perl
+21:17:Plough: perlmonks状态的羊驼子出现了
+21:17:cleamoon: haxe支持lin呀
+21:17:chinglish: 但是 haxe 编辑器我个人觉得 flashdevelop 最好用, 但这个只有 win 平台的
+21:18:lh_bot: 啊为什么不试试 MCF 呢
+21:18:cleamoon: 233
+21:19:varna: 2333
+21:19:varna: 还是来学黑魔法吧
+21:19:chinglish: iyzsong: haxe 就
+21:19:chinglish: 写flash 比较成熟, 其它不好说
+21:19:FrankHB quit:Ping timeout: 244 seconds
+21:19:chinglish: 你们接触过 虚拟币么? 比如 bitcoin 或其它山寨币..
+21:20:condy: @ sismvg
+21:20:Plough: 药元四不在
+21:20:varna: 这里炒虚拟币的只有药元四了吧
+21:20:T2: varna, 2战日本鱼雷的航速是多少？
+21:20:varna: 以前我大噗过他
+21:20:varna: T2: 表T
+21:20:varna: 出于游戏方便考虑，我就用那个表了
+21:20:T2: 好吧，我算算我能保持单纵几个回合。
+21:20:Plough: 那天仔细我用log全程围观了你噗他
+21:20:Plough: 自习*
+21:20:varna: 别算了
+21:21:varna: 八年式11500/36 22000/28
+21:21:varna: 九三式22000/48 44000/36
+21:21:varna: 一个是B类一个是A类
+21:21:lh_bot: 九三式理论航速 60
+21:21:T2: 卧槽，那我还是见人就准备变阵吧。
+21:21:varna: 你可以认为所有九零管都填了九三式
+21:22:lh_bot: 实际最高 50
+21:22:lh_bot: 巡航 36
+21:22:lh_bot: 50 节航速射程 22km   36 节 40km
+21:22:T2: 看他航向。
+21:22:Plough: 首先你得能见着
+21:22:varna: 还是那句话，既然我能塞三十三枚鱼雷过去……
+21:23:T2: 反正变阵也得两回合。
+21:23:Plough: 至于怎么个见不着法自己考虑
+21:23:varna: 两回合！？
+21:23:T2: 嗯
+21:23:varna: 我了割草
+21:23:T2: 4分钟妥妥
+21:23:varna: 你开的是鱼雷艇么
+21:23:varna: SK4的机动已经很魔法了，但是战舰战队四分钟……
+21:24:Plough: 两回合变阵妙高就不会飞了
+21:24:T2: 绝对够了
+21:24:varna: 来来来，你现场演示下
+21:24:T2: 让鱼雷炸到我直播吃翔。
+21:24:wlemuel quit:Ping timeout: 245 seconds
+21:24:T2: 那要看情况。
+21:24:Plough: 我等直播
+21:24:T2: 2回合都多了。
+21:24:hysw: 连堆都忘了怎么写了...
+21:24:T2: 我本来想1回合，算了一下不现实。
+21:25:varna: 假定复纵，四舰边长2000yd距离，28kt前进，转向2min/90战舰、2min/180驱逐舰
+21:25:varna: 你给我演示下怎么两分钟变成单纵
+21:25:lh_bot: geordi: { vector<int> v{ 5,3,6,8,7,2,1,4,9 }; make_heap(begin(v), end(v)); sort_heap(begin(v), end(v)); cout <<v; }
+21:25:geordi: {1, 2, 3, 4, 5, 6, 7, 8, 9}
+21:25:wlemuel joined channel
+21:26:varna: 现在你给指令，我裁判
+21:26:hysw: lh_bot: 我还不至于蠢到不会用标准库...
+21:26:MisakaMikoto: 奶茶出事了？
+21:26:varna: 奶茶似乎逗比了
+21:26:cleamoon quit:Ping timeout: 244 seconds
+21:26:varna: 大概是松了吧
+21:27:windforce joined channel
+21:27:windforce: 因为有角度。
+21:27:varna: windforce: 假定复纵，四舰边长2000yd距离，28kt前进，转向2min/90战舰、2min/180驱逐舰
+21:27:varna: 你现在下指令变给我看看
+21:27:windforce: 我不可能28kt前进的。
+21:27:varna: 18kt?
+21:27:varna: 13kt?
+21:27:windforce: 太慢了点..
+21:27:windforce: 18太慢了
+21:28:varna: 你编队里没战舰？
+21:28:windforce: 有
+21:28:varna: 那么问题来了
+21:28:windforce: dd右转90 战舰左转45减速 dd全速
+21:28:varna: 减速在下一轮生效，减到多少？
+21:28:windforce: 再转回平行。
+21:29:windforce: 减60%
+21:29:varna: 你看规则书了么
+21:29:MisakaMikoto: 什么松了
+21:29:lh_bot: 这种八卦新闻居然有人看  
+21:29:varna: 减60%之后你能转成什么样，咱们试试
+21:29:lh_bot: 没什么营养的  于是又成了三俗的铁证了
+21:29:FrankHB joined channel
+21:29:windforce: 那个延迟的一回合不算，要2回合。
+21:30:varna: 问题是现在看有营养东西的人也未必有文化……
+21:30:windforce: 航速算20比较方便。
+21:30:T2 quit:Ping timeout: 245 seconds
+21:30:varna: 我再给你算算
+21:30:lh_bot: 我个人的意见是装有文化也比自居没文化强
+21:30:FrankHB quit:Client Quit
+21:30:lh_bot: 尤其是自居×丝的
+21:30:windforce: dd右转45 不是90.
+21:30:varna: lh_bot: 我觉得只有没文化的人才会装有文化……
+21:30:varna: 一丘之壑
+21:30:windforce: 战舰左转45
+21:31:windforce: dd用不着90
+21:31:varna: 战舰1890yd/2min, 驱逐舰2565yd/2min?
+21:32:lh_bot: 回去了
+21:32:windforce: 本来是单纵 航速算20。
+21:32:windforce: 嗯
+21:32:FrankHB joined channel
+21:32:varna: 单纵变复纵，巡航速度20？
+21:32:windforce: 嗯
+21:32:windforce: 战舰在前
+21:32:varna: 噗
+21:32:varna: 噗哈哈哈哈
+21:33:varna: 然后呢
+21:33:windforce: 必须战舰在前
+21:33:varna: 我先不评论你逗不逗
+21:33:windforce: 他兵力优势太大
+21:33:varna: 我先不评论你逗不逗
+21:33:varna: 你的指令是？
+21:33:windforce: 战舰转向一边45，dd另一边45
+21:34:windforce: 战舰减速60% dd加速1/3
+21:34:windforce: 然后转回平行。
+21:35:wlemuel_ joined channel
+21:35:windforce: 然后战舰加速，dd减速。
+21:36:varna: 这是4min?
+21:36:windforce: 鱼雷有命中可能的状态只有4min
+21:36:wlemuel quit:Ping timeout: 244 seconds
+21:36:varna: 你怎么算鱼雷的
+21:37:windforce: 垂直航向
+21:37:varna: 敌人离你多远，bearing多少，最后出来的hit factor多少
+21:37:varna: 那么你何时发现敌人，敌人在多少距离上
+21:37:windforce: 暴露在垂直航向视野内的时间。
+21:37:FrankHB quit:Remote host closed the connection
+21:37:varna: 别逗我，dd挡不住bb的LoS
+21:37:windforce: 至于我什么时候发现敌人鬼才知道。
+21:37:varna: 你不知道这个算个茄子啊……
+21:37:windforce: 我把dd算成一条线了。
+21:37:FrankHB joined channel
+21:37:windforce: 战舰算成另一条。
+21:38:varna: 我先不说线
+21:38:varna: 你告诉我LoS谁能挡住战舰
+21:38:windforce: dd能遮住战舰就算挡住了。
+21:38:varna: 逗
+21:38:varna: 那么就算你挡住雷迹了，告诉我dd和bb的被弹率预估分别是多少
+21:38:varna: 或者算个简单的
+21:39:varna: 预估全弹不命中率，战列线上各舰都是多少
+21:39:erhandsome quit:Ping timeout: 245 seconds
+21:39:erhandsome joined channel
+21:39:varna: 我说个简单的道理
+21:39:erhandsome quit:Client Quit
+21:39:varna: 一个驱逐大约370+ft长
+21:39:erhandsome joined channel
+21:39:varna: 一个战舰大约660+ft长
+21:40:cleamoon joined channel
+21:40:varna: 然后我们考虑before雷迹
+21:40:varna: 假定中雷服从二项分布
+21:40:varna: 然后按照before雷迹折算1/2被弹率
+21:41:varna: 这时候你就意识到预估接敌位置的重要性了
+21:41:wlemuel_ quit:Ping timeout: 256 seconds
+21:41:varna: 你在何处使用水上电探、何处使用照明弹、何处使用探照灯辅助索敌，都是需要考虑的内容——敌人也一样
+21:42:windforce: 他得看见我再放雷吧= =
+21:42:cleamoon: http://www.zhihu.com/question/26591736
+21:42:wlemuel joined channel
+21:42:varna: 问题是敌人在多长距离上看到你？
+21:42:varna: 这个很好算吧
+21:42:windforce: 最远也就2W码了不起了吧，最近也就1W码。
+21:43:windforce: 其实角度很小。
+21:43:windforce: 很好挡。
+21:43:varna: 如果你给出这个估计——在20kyd上你都没能拦住敌人的话，我自己的推演中十八发鱼雷已经出去了
+21:43:varna: 问题是你干脆都不知道鱼雷命中怎么算吧
+21:43:windforce: 嗯
+21:43:Plough: 坦诚地承认了
+21:44:windforce: 我不会中就是了。
+21:44:varna: 那么你现在算一下20kyd上before雷迹上dd的不被弹率和bb的不被弹率吧
+21:44:windforce: 如果他在20kyd以外放雷，他的雷还没到船就沉得差不多了。
+21:44:varna: 假设敌二舰各三集三散
+21:44:varna: 哦？
+21:44:Petrus07 joined channel
+21:45:varna: 你算过命中率么？
+21:45:varna: 假定无月光海况3东风4kt
+21:45:windforce: 这倒没。
+21:45:varna: 你的炮击战从何处开始到何处，期间使用何种辅助手段？
+21:45:Plough: 坦诚地承认了
+21:46:varna: 你以为我没在三四万码上试图阻击么
+21:46:windforce: = =
+21:46:windforce: 雷达是个好物
+21:46:windforce: 好吧
+21:46:varna: 那么你说说你的hit determination能取到多少吧
+21:47:windforce: 炮击战三万码开始到打完吧。
+21:47:Plough: 真可惜
+21:47:windforce: 期间闪光少不了。
+21:47:Plough: 还差十次3-2就能改二了
+21:47:varna: 照明弹射程75%，计入命中
+21:47:varna: 我先给你算算第一次炮击的命中
+21:47:windforce: 烟雾似乎对我自己影响还大些，先算了。
+21:48:varna: 命中诸元：目标尺寸-2 DCT+26 火控雷达+14 超长距炮击战-12 敌速力极高-12 敌处于化学烟幕后-16 无月光-18
+21:49:varna: 合计-20修正到1~10
+21:49:windforce: 噗。
+21:49:windforce: 差不多就这回事。
+21:49:varna: ROF=1 前主炮均有射角 每炮1发合计6发
+21:49:varna: 单发命中率1%
+21:49:windforce: = =
+21:49:cleamoon: windforce是t2？
+21:50:windforce: cleamoon, 嗯
+21:50:varna: 全弹不命中可能94.15%
+21:50:varna: 我不知道你作何感想
+21:50:wlemuel quit:Ping timeout: 255 seconds
+21:50:windforce: 好吧我算算命中10%以上要多远去。
+21:50:FrankHB quit:Remote host closed the connection
+21:50:varna: 即使加上照明弹，命中诸元也大致是1~10
+21:51:varna: 命中10%？
+21:51:varna: 经验上你要取到命中判别21~30
+21:51:FrankHB joined channel
+21:51:windforce: 10~20就可以了
+21:51:windforce: 11~20
+21:52:varna: 你少算了很多东西
+21:52:windforce: = =
+21:52:varna: 11-20 ROF4 单炮最多命中一弹
+21:52:varna: 但你知道ROF4是什么意思么
+21:52:windforce: 好吧
+21:52:varna: 这离敌军雷击结束还晚3kyd
+21:53:varna: 你可以赌，实际上长程炮击战也是你的优势
+21:53:varna: 但你得明白这优势在纸面上到底有多大
+21:54:windforce: 卧槽我总不能拿着战舰去找1W5之内找那伙计的不愉快吧，9dd啊。
+21:54:varna: 9dd你稳输，几乎不可能赢
+21:54:varna: 这是游戏，不是历史
+21:54:varna: 我的目标只是给日军三成胜算
+21:54:windforce: 不是9dd那就好说了。
+21:54:varna: 允许他赌，但他不能犯大错
+21:55:varna: 我自己的推演实际上日军总DP数比美军少很多
+21:55:windforce: 9dd我打算后面装打dd的弹然后不行就同航赌一发国运来着。
+21:55:FrankHB quit:Remote host closed the connection
+21:55:varna: 简单来说，我上来是用一个我觉得日军输面极大的场景来平衡的
+21:55:windforce: 好吧
+21:55:FrankHB joined channel
+21:55:varna: 如果在这个场景里我能找到赢的办法，那我只需要简单上调日方玩家的战力
+21:56:windforce: 好吧
+21:57:varna: 而实际上我给日军玩家的战力会高于我测试用的
+21:57:varna: 这样允许玩家犯小错
+21:57:varna: 但是如果给我9dd, 你基本会输
+21:57:windforce: 只要不是9dd就行。
+21:58:windforce: 9dd就给我依阿华吧
+21:58:windforce: 我就赌同航了。
+21:58:windforce: = =
+21:58:varna: 我不觉得这场日军该赢，我只希望两边能尽力打得精彩
+21:58:windforce: 我尽量
+21:59:varna: 但毕竟是游戏，所以我希望日军玩家能在巧思和国运的帮助下取得不错的战果
+22:00:windforce: 好吧
+22:00:varna: 顺便提出一点，before雷迹上不能阻挡LoS的舰以目标舰被弹概率的1/2被弹
+22:00:varna: after雷迹上则是1/4
+22:00:varna: 但这时不考虑LoS
+22:01:varna: 在鱼雷按计算应当抵达目标的回合前，before雷迹的判定都是有效的
+22:01:cleamoon quit:Ping timeout: 245 seconds
+22:01:windforce: 卧槽
+22:02:windforce: 那我要那4dd鸟用，减射程么。
+22:02:varna: 当然还有个问题
+22:02:varna: before雷迹生效期间，越过雷迹并且明显应当被命中的舰也参与命中判定
+22:03:windforce: soga
+22:03:windforce: 那还行。
+22:03:varna: 我会按照速度和雷迹判定before雷迹的有效部分
+22:05:Xilzzerts quit:Ping timeout: 240 seconds
+22:05:varna: 如果很容易就能长距离阻击水雷战队，那我也就不必费心继续推演了
+22:06:windforce: 好吧
+22:09:cleamoon joined channel
+22:10:varna: 但我还是那句话
+22:10:varna: 你正常打就能赢
+22:10:varna: 至于何谓正常，稍稍体会一下
+22:11:windforce: 好的
+22:24:lh_mouse_ joined channel
+22:25:lh_mouse_: hilake, 也是新人？
+22:25:lh_mouse quit:Disconnected by services
+22:26:condy: 肯定是萌萌的新人。
+22:36:cleamoon quit:Quit: Leaving
+22:37:cleamoon joined channel
+22:38:condy quit:Quit: leaving
+22:46:Plough quit:Quit: 碎叫
+23:02:varna quit:Quit: leaving
+23:03:whatofor quit:Read error: Connection reset by peer
+23:29:AngelC joined channel
+23:30:AngelC: QAQ
+23:31:cleamoon: ？
+23:31:AngelC: 明天古代汉语考试
+23:32:cleamoon: 考什么... xxx的古语怎么说吗
+23:33:AngelC: 古音古韵
+23:33:AngelC: 古语
+23:33:AngelC: 汉字的起源 发展
+23:33:AngelC: 论语 庄子 诗经
+23:33:cleamoon: ...
+23:34:AngelC: 卧槽简直不是人看的
+23:40:LittleKey joined channel
+23:41:cleamoon: 难道你的文言很好
+23:44:Xilzzerts joined channel
+23:47:AngelC: 正在恶补
+23:51:cleamoon: ...
+23:52:AngelC: 学霸云属于时差党吧。。
+23:53:cleamoon: 对的
+23:54:cleamoon: 多伦多u学霸云
+23:54:AngelC: 那边应该11点了。。。
+23:55:cleamoon: 那就不知道了

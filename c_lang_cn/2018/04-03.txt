@@ -1,0 +1,300 @@
+00:00 yonka joined channel
+00:37 yonka quit:Remote host closed the connection
+01:28 matchray: 我需要實現一個類似glog loguru的RAII operator<< log了
+01:32 Stang quit:Quit: Connection closed for inactivity
+02:04 _micolore quit:Read error: Connection reset by peer
+02:04 _micolore joined channel
+07:03 whocares_2_ joined channel
+07:03 whocares_2 quit:Ping timeout: 260 seconds
+08:55 xuri joined channel
+08:55 xuri quit:Remote host closed the connection
+09:33 yonka joined channel
+09:44 pclj` joined channel
+09:52 pclj` left channel:"ERC (IRC client for Emacs 25.3.1)"
+10:37 _micolore quit:Quit: Leaving
+10:57 iyzsong-m joined channel
+11:22 iyzsong-m: (ーー゛)
+11:51 iyzsong-m quit:Read error: Connection reset by peer
+11:52 iyzsong-m joined channel
+12:06 lichun quit:Read error: Connection reset by peer
+12:10 lichun joined channel
+12:18 pclj` joined channel
+12:20 pclj` left channel:"ERC (IRC client for Emacs 25.3.1)"
+12:21 lichun quit:Ping timeout: 268 seconds
+12:23 lichun joined channel
+12:29 lichun quit:Remote host closed the connection
+12:40 lichun joined channel
+13:19 iyzsong-m quit:Ping timeout: 260 seconds
+13:45 Youmu: operator << 这么丑
+13:45 Youmu: 不如用 LOG_XXX(...)
+14:07 jingjinghack quit:*.net *.split
+14:13 lh_mouse joined channel
+14:14 jingjinghack joined channel
+14:36 liulanghaitun joined channel
+15:13 lh_ideapad joined channel
+15:34 \s quit:Read error: No route to host
+15:35 \s joined channel
+15:47 cleamoon_: http://acm.nankai.edu.cn/new/p2347.html  
+15:47 cleamoon_: 震惊了
+15:48 cleamoon_: 恶臭的OJer
+16:16 hanjian_l: cleamoon_: 绅士，恶臭不堪
+16:18 cleamoon_: 然而我不是OJer
+16:22 hanjian_l: cleamoon_: 绅士就是恶臭的代名词
+16:23 cleamoon_: 经过了euphoria的洗礼，我已经成为正直的人了
+16:23 cleamoon_: 现在看到各种图已经心如止水了
+16:24 hanjian_l: cleamoon_: 你废了，需要吃药
+16:27 hanjian_l: cleamoon_: 绅士发一只北欧土猫吧
+16:29 cleamoon_: 我现在看到某些绑头发的金毛就浑身难受
+16:30 cleamoon_: 赶明遇到了我照几张照片
+16:31 cleamoon_: 家那边地铁口有一只被喂的很肥的喵
+16:34 hanjian_l: 月巴 @Youma
+16:34 hanjian_l: 月巴 @Youmu
+16:36 cleamoon_: 面基过？
+16:36 hanjian_l: Youmu: 肥不肥？
+16:37 cleamoon_: 地铁周围都是饭馆，地铁里也暖和，那只喵就不回家了.....
+16:37 hanjian_l: 噗噗噗
+16:37 hanjian_l: 肥喵原来是这样养成的
+16:38 cleamoon_: 铲屎官说过不要喂了，然而，没人在乎....
+16:39 cleamoon_: 有时那喵也在我家店里睡觉
+16:40 hanjian_l: 偷偷抱走，绅士变身铲屎官
+16:41 hanjian_l: 要不就天天撸它，让它舍不得走
+16:41 cleamoon_: 可以撸可以吸但不用自己花钱去看病，多好
+16:41 hanjian_l: uccu
+16:42 hanjian_l: 它哪天在你店里生一窝崽
+16:42 cleamoon_: 舍不得不存在的，那喵三文鱼都不吃
+16:43 hanjian_l: 这么高贵？
+16:43 cleamoon_: 这个可以，授精一下收集小喵也可以
+16:43 cleamoon_: 可能觉得太油吧
+16:43 cleamoon_: 反正不吃
+16:46 cleamoon_: hanjian_l: 梨花酱的喵吃什么
+16:46 hanjian_l: cleamoon_: 猫粮
+16:46 cleamoon_: orz
+16:46 cleamoon_: 竟然不是自己做，果然壕
+16:48 hanjian_l: 不是很贵，一包能吃两个月
+16:48 cleamoon_: 哦，果然，之前NTR别人的喵也是吃猫粮很慢
+16:49 cleamoon_: 似乎养喵不贵？
+16:59 hanjian_l: 不贵
+16:59 hanjian_l: 打打疫苗，稍微阉割一下就好
+17:00 Youmu: hanjian_l: 😓
+17:01 cleamoon_: 割了，可以随便啪啪啪了
+17:02 hanjian_l: cleamoon_: 它就不会老是吼叫了
+17:03 hanjian_l: Youmu: 撸
+17:03 cleamoon_: 不发情有什么意思
+17:06 iyzsong-m joined channel
+17:10 yonka quit:Remote host closed the connection
+17:15 yonka joined channel
+17:19 iyzsong-m: (✽ ﾟдﾟ ✽)
+17:26 hanjian_l: cleamoon_: 发情那是发疯啊
+17:27 cleamoon_: hanjian_l: 多好，病娇喵主子
+17:27 hanjian_l: cleamoon_: 关键是晚上吵死了
+17:28 cleamoon_: 习惯就好
+17:32 hanjian_l: 睡不着的
+17:32 hanjian_l: 太吵了
+17:34 cleamoon_: 我记得我小时候养喵夜里都是一起睡或者扔出门的....
+17:39 hanjian_l: 一起睡也不行啊……
+17:40 cleamoon_: .....够欲求不满的
+17:41 hanjian_l: 它就是会叫，总不能一直撸着它睡
+17:43 cleamoon_: 奇怪
+18:00 lh_ideapad_ joined channel
+18:04 lh_ideapad quit:Ping timeout: 260 seconds
+18:58 lh_ideapad_ quit:Remote host closed the connection
+19:15 lh_cat joined channel
+20:02 liulanghaitun joined channel
+20:12 NebulaMoe joined channel
+20:30 lh_mouse quit:Read error: Connection reset by peer
+20:30 lh_ideapad joined channel
+20:35 lh_mouse joined channel
+20:35 lh_ideapad quit:Ping timeout: 276 seconds
+20:37 varna joined channel
+20:37 varna: (｡･ω･)ﾉ有没有迫真小姐姐呀？
+20:48 lh_ideapad joined channel
+20:54 lh_mouse: varna, 之前提到的预处理，我想了下，还是改成预处理成 reverse polish 。
+20:55 lh_mouse: 把优先级丢给解析去做。
+20:55 lh_mouse: 不过，计算这里的工作量依然很大。
+20:57 varna: 太痛苦了，感觉你把很多机巧塞给了一个不适合处理语言的东西
+20:58 lh_mouse: O.O ?
+20:58 lh_mouse: 窝先照 reverse polish 做。expression 这里应该没什么难度了，主要是工作量。
+20:59 varna: 以后也不会加入新语法，还是新语法会以builtin语义的形式塞进来呢
+20:59 iyzsong-m quit:Ping timeout: 256 seconds
+20:59 varna: 觉得这么搞有点一锤子买卖
+20:59 iyzsong-mm joined channel
+20:59 lh_mouse: 目前的假定是不加新语法。
+20:59 varna: 其实也行
+21:00 lh_mouse: 本来一个正则文法，东西多了容易出幺蛾子。
+21:00 lh_mouse: 其实现在问题也有几个比较大的。
+21:00 lh_mouse: 比如 JavaScript 里，可以使用 function 定义函数，也可以定义 closure 。
+21:01 lh_mouse: 但是，因为函数定义是 statement ， 而 closure 的定义是 expression ， 我只能当两个 keyword 去做。
+21:01 varna: 不喜欢做成全expressions？
+21:02 lh_mouse: 好像没什么可行性。
+21:02 varna: 即使对不显式引入类型的无类型/弱类型倾向语言，在观念上引入底类型和底类型的唯一值也是可以说通的
+21:02 lh_mouse: 真正有问题的不是 statement 而是 definition 和 expression 的二义性。
+21:02 lh_mouse: 是这样的。
+21:02 varna: 是的
+21:03 varna: lisp系处理这个二义性的方法过分丑陋，我也懒得推荐
+21:03 lh_mouse: 0.0
+21:03 varna: 他们倒是把所有东西都搞成s-exprs了，但有的表达式因之builtin和涉及符号定义而过分高贵
+21:04 varna: 对原本应当鼓吹的符号系统来说，观念上略累赘
+21:04 varna: 即使对过程式语言也过分了
+21:04 lh_mouse: 我觉得区分 statement 和 expression 还是有必要。
+21:04 varna: 其实没办法，很多时候definition和expression就是不该混在一起的
+21:05 lh_mouse: C89 
+21:05 varna: 否则总有些颇显超越的东西
+21:05 varna: 今天看了一点基础理论，实际上在做基于图上redex的处理时候，定义也可以单提出来
+21:06 lh_mouse: 0.0
+21:10 * varna 痛恨自说自话的haskellists
+21:10 Mokou: 义务巫医 https://usercontent.irccloud-cdn.com/file/NrbVvoCj/-7610f177215a6ef1.png
+21:10 iyzsong-mm: (#･∀･)
+21:12 varna: (｡･ω･)ﾉ塔斯丁苟——
+21:13 iyzsong-mm: 来牙～
+21:13 varna: 清明节大概不用加班了，运营的数据明天没法到位
+21:16 iyzsong-mm: sexP 不是很好嘛
+21:16 iyzsong-mm: 2333
+21:17 varna: (｡･ω･)ﾉ小姐姐
+21:17 varna: (｡･ω･)ﾉ妻海枕头
+21:19 Dove joined channel
+21:22 Mokou: varna: 等我回家有心情陪我刷个迷宫么
+21:23 cleamoon_: “陶崇园！” “到！” # “今天中午你帮我送饭” “是！”  # “坦坦荡荡说出那六个字。” “爸我永远爱你。” #  “10:10到我办公室来，谈一次，我保证不伤害你。” “是。”…… 3月底，陶崇园跳楼自杀。#这是个导师，真事
+21:23 Mokou: 血太少，单刷略困难
+21:23 varna: Mokou: 没，组队+迷宫，两样不喜欢的事情加在一起……
+21:24 varna: cleamoon_: 这个已经挤爆药乎
+21:24 varna: Mokou: 10血够了吧……
+21:24 Mokou: 不够
+21:24 Mokou: 毕竟打月神
+21:24 varna: 哦，那个月神啊，更没兴趣了
+21:24 cleamoon_: 羊驼子还在看药乎呀
+21:24 varna: 我现在把药乎当新闻客户端用
+21:25 varna: 虽然妻海和枕头他们不撕了
+21:25 varna: (｡･ω･)ﾉ讲道理啊，你这现充的直播里不该出现乌七八糟的东西
+21:25 cleamoon_: 作为新闻客户端好用吗
+21:26 varna: 凑合
+21:26 varna: 肯定不如专业的新闻好
+21:26 varna: 但至少没那么多营销傻逼
+21:29 cleamoon_: 那还不错
+21:30 varna: 瞧峰居然都打到NE战役了
+21:30 cleamoon_: 说起撕，似乎两秒十七枪拿回账户了
+21:30 varna: 我也听说了
+21:30 cleamoon_: 都打到海加尔山了
+21:30 varna: 没关系，继续唱歌
+21:30 cleamoon_: 还没打海加尔山
+21:30 varna: 我卢本伟就是开挂/我卢本伟闹到巨大/我卢本伟多牛逼啊/来咱们来唱一下
+21:30 cleamoon_: 至今都是莽过来的
+21:31 varna: 吃鸡的运营简直蠢爆
+21:32 varna: 不过神之长子也就这点尿性了
+21:32 yonka quit:Remote host closed the connection
+21:32 cleamoon_: https://img.vim-cn.com/86/524cc69df9c805dc8b12e641bcb2dad50d1768.jpg   #神圣的JS
+21:32 cleamoon_: 人家为什么要和一个不认识的为了一个帐号折腾
+21:33 cleamoon_: 反正开挂的多一个不多少一个不少
+21:36 cleamoon_: varna: GPD好用吗
+21:38 varna quit:Ping timeout: 248 seconds
+21:39 varna joined channel
+21:43 Mokou: 社会主义外神
+21:43 Mokou: https://usercontent.irccloud-cdn.com/file/JKKbMWy3/7a3c8210113a1dc0.jpg
+21:44 cleamoon_: 2333333
+21:45 cleamoon_: 只要看着就会san值狂掉但党 性飙升的雕像
+21:46 iyzsong-mm: 2333
+21:50 hanjian_l: 什么月神。
+21:50 varna quit:Ping timeout: 264 seconds
+21:53 hanjian_l: Mokou: 
+21:54 lh_cat quit:Quit: Connection closed for inactivity
+21:55 varna joined channel
+21:55 varna: MD 我想杀人
+21:55 Dove: 2333
+21:56 varna: 前言撤回，屠狗
+21:56 varna: 不知道那一屋出门把wan口拔了
+21:56 Dove: 6666
+21:56 varna: 马勒戈壁的
+21:56 varna: 我出去的时候看到wan口的线都不亮了
+21:58 Dove: 好嘛
+21:59 Dove: 这几天在医院服侍病人，有点惨。
+21:59 Dove: 不过比待在家精神分裂强多了
+21:59 Dove: 那小破病房连个坐的地方都没有
+22:01 varna: ...
+22:02 Dove: 没事，人嘛，不就这么过。
+22:03 Dove: 唯有忍耐到底的，必然得救，不过我已经不指望什么救不救了。
+22:04 cleamoon_: 哈哈哈，被拔网线了
+22:05 varna: 不明白这种自杀行为是什么状况
+22:05 Dove: 2333
+22:05 varna: 出口路由就那一个，接错了线自己也上不去
+22:06 cleamoon_: 大概是因为2s被打了17枪
+22:07 Mokou: hanjian_l: 回家连么
+22:08 Dove: 现在领悟到的终极奥义大概就是逆来顺受，谓之柔弱。
+22:09 Dove: 实在顺不过来的也得受着
+22:09 varna: emmmmm 不如数数自己领悟了多少回
+22:09 Dove: 2333
+22:10 varna: 然后平摊下成本就知道这个领悟有多廉价了
+22:10 Dove: 也对
+22:11 Dove: 我已经不想领悟或者明白什么了
+22:13 cleamoon_: 我最近的领悟是第一口不觉得辣的东西可能越吃越辣
+22:14 Mokou: cleamoon_: 恶意的政治隐喻，踢了
+22:14 Dove: 会觉得烫，而非辣
+22:14 Dove: 比方说比较辣的火锅
+22:14 Dove: 因为你已经感觉不到辣了其实。辣本身只是疼而已。
+22:15 Dove: 并非一种味道
+22:16 iyzsong-mm: (# ﾟДﾟ)
+22:16 cleamoon_: ？？？我吃的是拍黄瓜而非煮田鸡呀
+22:16 Dove: 一样，只是疼过头了。
+22:16 Mokou: 拍黄瓜，暗示激进女权主义，踢了
+22:17 Dove: 微疼是辣，感觉很爽。
+22:17 varna: 煮田鸡
+22:17 Dove: 疼过头的感觉就是疼而非辣了
+22:17 varna: 今天药乎上还有人征求最大的数，一下没忍住
+22:17 varna: 不过似乎还没被删
+22:18 Mokou: 煮田鸡，暗示 ，踢了
+22:18 cleamoon_: 激进女权不是主流论调吗
+22:18 cleamoon_: 征求最大的数？
+22:18 Dove: 只是一部分网上的主流论调而已。
+22:19 Dove: 连非主流都算不上
+22:19 Dove: 就好像脱光上身上街的妹子，其实你并看不到几个。
+22:19 Dove: 只是你感觉很多，错觉而已。
+22:21 cleamoon_: 我怎么没见过，赶紧给我介绍几个
+22:21 hanjian_l: 我要睡觉了，不连了
+22:22 varna: 觉
+22:24 hanjian_l: 反正月神可以陶喆
+22:24 hanjian_l: 狂砍不止
+22:24 hanjian_l: 刚打到奶妈
+22:24 Dove: 不到光膀子上街的程度算个鸡儿激进女权
+22:25 varna: hanjian_l: 迷宫那个
+22:25 Youmu: hanjian_l: 睡这么早！
+22:25 Youmu: hanjian_l: 你为什么不加班！
+22:25 varna: 虽说也不强
+22:25 NebulaMoe quit:Quit: leaving
+22:25 iyzsong-mm: 2333
+22:26 Mokou: 迷宫那个伤害太高了，十血顶不住
+22:26 Mokou: 一招死
+22:27 Dove: 哎尼玛睡觉去了，明天还要去医院。
+22:27 Dove: 诸君武运
+22:27 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:27 cleamoon_: 旗酱也在血疗
+22:29 yonka joined channel
+22:30 hanjian_l: 迷宫我不打
+22:30 hanjian_l: 太枯燥了
+22:30 hanjian_l: Youmu: 加班我的老板明年就会多一辆车吗？
+22:31 Youmu: hanjian_l: 你的思想很危险
+22:32 hanjian_l: 为什么危险？
+22:32 hanjian_l: 我厂不控制微信也不控制扣扣
+22:32 cleamoon_: 车，暗示五对负重轮，举报了
+22:39 varna: hanjian_l: sikgc3sm 没有敌人，只有被删减的月神boss战
+22:39 varna: 应该是个非常高伤的东西
+22:39 varna: 虽然血不太多
+22:40 yonka_ joined channel
+22:40 yonka quit:Ping timeout: 246 seconds
+22:40 Youmu: hanjian_l: 明显我这是反话！
+22:43 hanjian_l: uccu
+22:43 hanjian_l: 血缘我还是先打周目吧
+22:43 hanjian_l: 等两三百级了再去刷迷宫
+22:43 varna: 半夜要是有心情我就自己先试试
+22:43 hanjian_l: Youmu: uccu
+22:44 Youmu: hanjian_l: 「你为什么不加班！」是 IEG 老大曾经说过的话
+22:45 cleamoon_: 因为没有加班费呀
+22:49 jimmylu2333-fedo joined channel
+22:49 jimmylu2333-fedo quit:Client Quit
+22:57 Mokou: hanjian_l: 那个对你应该不难
+22:57 Mokou: 要不要来试试
+22:59 varna quit:Read error: Connection reset by peer
+23:00 varna joined channel
+23:01 hanjian_l: 我躺了已经
+23:01 varna: 神TM一阵拥塞
+23:11 iyzsong-mm quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+23:22 yonka_ quit:Remote host closed the connection
+23:45 lh_ideapad quit:Remote host closed the connection
+23:56 lh_mouse quit:Ping timeout: 276 seconds

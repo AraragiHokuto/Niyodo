@@ -1,0 +1,864 @@
+00:01:boosure quit:Ping timeout: 244 seconds
+00:04:tutu_wind joined channel
+00:06:boosure joined channel
+00:11:boosure quit:Ping timeout: 265 seconds
+00:23:tutu_wind quit:Quit: WeeChat 0.4.3
+00:24:code_new quit:Quit: Leaving
+00:41:boosure joined channel
+00:54:boosure quit:Ping timeout: 265 seconds
+01:03:cleamoon_ quit:Ping timeout: 245 seconds
+01:03:cleamoon quit:Ping timeout: 245 seconds
+01:08:boosure joined channel
+01:16:cleamoon joined channel
+01:16:cleamoon_ joined channel
+01:16:boosure quit:Ping timeout: 244 seconds
+01:17:boosure joined channel
+01:26:cleamoon quit:Ping timeout: 244 seconds
+01:27:cleamoon_ quit:Ping timeout: 265 seconds
+01:39:cleamoon joined channel
+01:59:khysw joined channel
+01:59:LittleKey1 joined channel
+02:00:LittleKey quit:Read error: No route to host
+02:01:ring quit:Ping timeout: 244 seconds
+02:02:lh_cat quit:Ping timeout: 245 seconds
+02:02:LittleKey1 quit:Client Quit
+02:05:lh_cat joined channel
+02:05:lh_cat quit:Changing host
+02:05:lh_cat joined channel
+02:19:ring joined channel
+02:28:cleamoon_ joined channel
+03:40:cleamoon_ quit:Ping timeout: 244 seconds
+04:00:xxxxxxxx quit:Quit: Leaving...
+04:15:cleamoon_ joined channel
+04:35:cleamoon quit:Ping timeout: 255 seconds
+04:38:cleamoon_ quit:Ping timeout: 255 seconds
+04:40:cleamoon_ joined channel
+04:54:cleamoon_ quit:Ping timeout: 272 seconds
+04:55:cleamoon joined channel
+05:06:cleamoon_ joined channel
+05:18:ring quit:Ping timeout: 250 seconds
+05:22:ring joined channel
+05:22:ring quit:Changing host
+05:22:ring joined channel
+05:47:lh_mouse: 起床啦
+06:28:cleamoon: 小耗不工作吗
+06:28:lh_mouse: ?
+06:28:lh_mouse: 今天周一
+06:35:lh_mouse: cleamoon, 现在才几点啊
+06:38:cleamoon: ...早起玩irc呀
+06:39:cleamoon_ quit:Ping timeout: 255 seconds
+06:44:lh_mouse: cleamoon, 起来早而已
+06:46:cleamoon: 哦
+06:47:lh_mouse: 早起码代码
+06:47:lh_mouse: http://v.ifeng.com/live/#4AC51C17-9FBE-47F2-8EE0-8285A66EAFF5
+07:00:cleamoon_ joined channel
+07:05:cleamoon_ quit:Ping timeout: 265 seconds
+07:07:lh_mouse: geordi, << TYPE(p); extern void *const &p;
+07:07:geordi: lvalue void* const
+07:09:cleamoon quit:Ping timeout: 256 seconds
+07:11:boosure quit:Ping timeout: 255 seconds
+07:29:boosure joined channel
+07:42:lh_cat quit:Ping timeout: 255 seconds
+07:49:lh_cat joined channel
+08:07:sou_ joined channel
+08:07:cleamoon joined channel
+08:19:cleamoon quit:Ping timeout: 245 seconds
+08:20:cleamoon joined channel
+08:28:khysw: 奇葩的操作系统期中考试...
+08:29:khysw: 65%...
+08:32:GODDOG joined channel
+08:33:lhanjian joined channel
+08:59:sismvg joined channel
+09:05:lh_cat quit:Ping timeout: 255 seconds
+09:07:lh_cat joined channel
+09:11:lh_cat quit:Client Quit
+09:15:lh_cat joined channel
+09:15:lh_cat quit:Changing host
+09:15:lh_cat joined channel
+09:22:iyzsong joined channel
+09:26:lhanjian quit:Quit: 风光冉冉东西陌
+09:27:sismvg: http://www.ithome.com/html/out/109572.htm
+09:30:handlehard joined channel
+09:32:handlehard quit:Client Quit
+09:40:condy joined channel
+09:42:whatofor joined channel
+09:47:condy quit:Ping timeout: 245 seconds
+09:50:FrankHB: https://github.com/sddm/sddm/blob/master/src/daemon/DaemonApp.h https://github.com/sddm/sddm/blob/master/src/daemon/DaemonApp.cpp 果然一坨SB玩意儿……特么标榜C艹11好像就用了个成员初始化？
+09:53:lh_mouse: 某些人用 C++11 写的还不如我用 C++03 写的
+09:54:FrankHB: 不是某些人的问题，是Qt用户集中SB。
+09:54:FrankHB: 果然应该好好肛了。
+09:56:lh_mouse: FrankHB, 你能不能想出个 c++03 可用的 is_default_constructible
+09:56:FrankHB: lh_mouse: 无趣。is_xxxxx很多都要builtin支持。
+09:56:Mran____ joined channel
+09:57:FrankHB: 没有nothrow可能可以SFINAE，不过也很疼。
+09:57:lh_mouse: is_default_constructible 不需要
+09:57:lh_mouse: 但是需要 decltype
+09:57:FrankHB: sizeof啊。
+09:57:lh_mouse: fvck  早该想到了
+10:00:FrankHB: lh_mouse: 看来直接有现成的： http://stackoverflow.com/questions/12364074/why-does-using-two-sizeofs-work-to-check-whether-a-class-is-default-constructibl
+10:00:lh_mouse: geordi, << my_is_def_cnst<int>::value; template<typename T, int = sizeof(T()), 1> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };
+10:00:geordi: error: expected identifier before numeric constant
+10:00:lh_mouse: geordi, << my_is_def_cnst<int>::value; template<typename T, int = (sizeof(T()), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };
+10:00:geordi: error: invalid application of 'sizeof' to a function type
+10:00:lh_mouse: geordi, << my_is_def_cnst<int>::value; template<typename T, int = (sizeof(declval<T>)), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };
+10:00:geordi: error: Unexpected `)` after `T>)), 1`. Expected balanced code or end of request.
+10:01:lh_mouse: geordi, << my_is_def_cnst<int>::value; template<typename T, int = (sizeof(declval<T>()), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };
+10:01:geordi: warning: left operand of comma operator has no effect
+10:01:lh_mouse: geordi, prepend -w
+10:01:geordi: true
+10:02:lh_mouse: geordi, -r struct foo { foo() = delete; };
+10:02:geordi: Success
+10:02:lh_mouse: geordi, replace first int with 
+10:02:geordi: error: Unexpected end of request. Expected verbatim string.
+10:02:lh_mouse: geordi, show
+10:02:geordi: -w  template<typename T, int = (sizeof(declval<T>()), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };struct foo { foo() = delete; };
+10:02:FrankHB: replace first int with \t能用么。
+10:02:lh_mouse: geordi, -r << my_is_def_cnst<foo>::value; 
+10:02:geordi: true
+10:03:Xilzzerts joined channel
+10:11:Mran____ quit:Ping timeout: 244 seconds
+10:16:khysw: 智商不够
+10:26:Mran____ joined channel
+10:31:sismvg: 做bugs手术吧
+10:31:sismvg: 能让智商上400
+10:34:GODDOG quit:Quit: leaving
+10:42:lh_mouse: geordi, replace declval<T>() with new T()
+10:42:geordi: error: use of deleted function 'foo::foo()'
+10:43:lh_mouse: geordi, replace = delete; with { }
+10:43:geordi: true
+10:43:lh_mouse: geordi, show
+10:43:geordi: -w << my_is_def_cnst<foo>::value;template<typename T, int = (sizeof(new T()), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };struct foo { foo() { } }; 
+10:43:lh_mouse: geordi, replace last () with (int)
+10:43:geordi: error: no matching function for call to 'foo::foo()'
+10:45:Mran____ quit:Ping timeout: 258 seconds
+10:59:lh_mouse: geordi, insert sizeof( before first sizeof and insert ) after new T()
+10:59:geordi: Same error.
+10:59:lh_mouse: geordi, show
+10:59:geordi: -w << my_is_def_cnst<foo>::value;template<typename T, int = (sizeof(sizeof(new T())), 1)> struct my_is_def_cnst { static const bool value = false; }; template<typename T> struct my_is_def_cnst<T, 1> { static const bool value = true; };struct foo { foo(int) { } }; 
+11:02:lh_mouse: geordi, erase () after T
+11:02:geordi: error: String `T` occurs multiple times.
+11:02:lh_mouse: geordi, erase () after second T
+11:02:geordi: error: no matching function for call to 'foo::foo()'
+11:28:xxxxxxxx joined channel
+11:29:lh_mouse: FrankHB, 类里面有 const 成员怎么写 move ctor? 
+11:47:BBI-094 joined channel
+11:48:BBI-094: 测试
+11:49:BBI-094: 有人么？
+11:54:sismvg: 有丧失
+11:54:sismvg: MS符号服务器好慢
+11:56:BBI-094: 额
+11:56:BBI-094: 平时也这么冷清么
+12:00:lh_mouse: ？
+12:04:khysw: -_-
+12:08:lh_mouse: BBI-094, 看起来是新人？
+12:08:sismvg: 羊驼来了你就知道了
+12:08:sismvg: http://www.ithome.com/html/out/109506.htm
+12:08:BBI-094: 额
+12:09:sismvg: 外语啊外语
+12:09:sismvg: 到现在只会2.3门。。
+12:09:BBI-094: 好吧
+12:09:BBI-094: 有问题可以提问么
+12:11:lh_mouse: 问什么
+12:11:BBI-094: C语言的
+12:12:BBI-094: 比如缓冲区之类的 感觉挺难的
+12:12:sismvg: 这里提问：首先你要百度过。。
+12:12:sismvg: 最好bing吧，起码比baidu好
+12:13:sismvg: google镜像:wenlu.com
+12:13:lh_mouse: 没我事了
+12:13:sismvg: 错了wen.lu
+12:13:xxxxxxxx: 药娘四!
+12:13:sismvg: 四元飒!
+12:13:BBI-094: 额
+12:14:xxxxxxxx: 四元药
+12:14:BBI-094: 额
+12:14:Xilzzerts: 锤子手机宣布降价1000元销售，起售价1980元
+12:14:BBI-094: 好强大
+12:14:lh_mouse: http://114.215.147.2:8900/~sys/profile   我开了 valgrind 所以响应比较慢  不过还可以看
+12:14:Xilzzerts: 情怀没了
+12:14:lh_mouse: 注意现在处于压力测试阶段
+12:15:sismvg: 情怀都是销售手段
+12:15:lh_mouse: MIME 我写的  text/csv  看来 opera 不认得
+12:15:sismvg: 改个UI拿出来做手机，用户还大赞剪枝有问题。。
+12:15:sismvg: 简直
+12:15:krfantasy joined channel
+12:15:xxxxxxxx: 现在拿起电话 原价xxxx 直降1000元
+12:15:lh_mouse: krfantasy, 新人？
+12:15:sismvg: 还附送毛泽东语录
+12:16:lh_mouse: 哦  我有
+12:16:lh_mouse: 林彪题词的
+12:17:krfantasy: lh_mouse: 额……我只是有段时间没上 IRC……
+12:17:lh_mouse: 0.0
+12:18:krfantasy: lh_mouse: >3<
+12:19:lh_mouse: -.0
+12:19:lh_mouse: http://postimg.org/image/6p691c34p/
+12:26:lh_mouse: http://postimg.org/image/cxa42v1cb/   三百多进程
+12:28:lhanjian joined channel
+12:28:ring quit:Quit: Bye
+12:29:sismvg: 萌娘百科容貌特征为什么没有眉毛.\
+12:29:sismvg: 粗眉毛也是撸点啊
+13:01:Xilzzert joined channel
+13:01:Xilzzerts quit:Read error: Connection reset by peer
+13:01:BBI-094 joined channel
+13:04:lhanjian: 又不是人人喜欢+1卡
+13:10:sismvg: 又不止她一个人粗眉毛
+13:12:xxxxxxxx: 药娘是性别特征么?
+13:12:krfantasy quit:Remote host closed the connection
+13:16:sismvg: 秀吉
+13:23:cleamoon_ joined channel
+13:26:iyzsong quit:Quit: WeeChat 1.0.1
+13:27:iyzsong joined channel
+13:27:iyzsong: join #nixos
+13:28:iyzsong: o.o
+13:33:sismvg: joing
+13:37:lh_mouse: #nix
+13:37:lh_mouse: *nix
+13:39:lh_mouse: http://codepad.org/tPbGeJfx
+13:40:khysw: phkmalloc...
+13:44:sismvg: malloc
+13:44:sismvg: gomalloc
+13:45:khysw: 又得写malloc...
+13:46:sismvg: 写它干嘛
+13:46:khysw: 作业...
+13:47:sismvg: 实现满天飞
+13:47:Leo__ joined channel
+13:47:sismvg: vs2013太容易崩溃了
+13:47:Leo__: test
+13:48:sismvg: Irc servrr about
+13:48:sismvg: server
+13:52:Leo__: $ /nick leo
+13:52:Leo__ left channel:"Leaving"
+13:57:Leo__ joined channel
+13:59:cleamoon_ quit:Ping timeout: 260 seconds
+14:00:cleamoon_ joined channel
+14:05:cleamoon_ quit:Ping timeout: 265 seconds
+14:12:sismvg: http://www.ithome.com/html/iphone/109602.htm
+14:12:sismvg: 小编啊小编
+14:12:sismvg: 你知道挂起是什么意思吗。。
+14:14:lhanjian quit:Remote host closed the connection
+14:14:lhanjian joined channel
+14:15:lhanjian quit:Remote host closed the connection
+14:16:lhanjian joined channel
+14:17:Leo__ quit:Quit: Leaving
+14:21:Leo__ joined channel
+14:23:sismvg: http://tieba.baidu.com/photo/p?kw=%E4%B8%80%E5%87%BB%E7%94%B7&ie=utf-8&flux=1&tid=3373805159&pic_id=3d564f3fb80e7bec2861b9822c2eb9389a506bf5&pn=1&fp=2&see_lz=0
+14:23:sismvg: hhh
+14:28:Leo__ left channel:"Leaving"
+14:29:lhanjian quit:Remote host closed the connection
+14:31:lhanjian joined channel
+14:34:sismvg: 打代码打的指关节痛。。
+14:37:BBI-094: 3 
+14:38:BBI-094: 麻痹的  再有2小时上班了
+14:40:sismvg: 我还想上班呢
+14:41:lh_mouse: [14:38:21] 18<22BBI-09418> 麻痹的  再有2小时上班了   // 一下就不萌了
+14:44:BBI-094: 嗯嗯，一下子就不萌了
+14:45:sismvg: ?
+14:45:Xilzzert: 还有两个小时不是下班时间么
+14:46:cleamoon quit:Ping timeout: 272 seconds
+14:46:sismvg: 晚班？
+14:47:Xilzzert: 这一行还有晚班这一说？
+14:48:sismvg: 好吧。。
+14:48:sismvg: 也许是维护服务器的呢？
+14:48:sismvg: 早上一拨人，晚上一波
+14:56:lhanjian: 搞运维的都是战士
+14:58:sismvg: 何？
+14:58:varna joined channel
+14:59:varna: dantmnf: 爆
+14:59:varna: Xilzzert: 爆
+14:59:varna: xxxxxxxx: 爆
+14:59:varna: lhanjian: 爆
+14:59:varna: Xilzzert: 爆错了
+14:59:varna: 刚才谁想弄malloc?
+15:00:varna: 求个带arena的
+15:01:varna: no arena no fuso
+15:01:sismvg: 还差两个就能召唤神龙了
+15:02:varna: 今天夜战不可避免了
+15:02:Xilzzert: 又躺枪。。
+15:02:sismvg: MS符号服务器台坑了
+15:02:sismvg: 太
+15:02:Xilzzert: 现在碰到多线程加载so的一堆麻烦
+15:02:sismvg: ms笑
+15:03:varna: 老板还是希望我毕业论文弄贝叶斯，结果我那个巨大脑洞的B-DF Combined Ontology又得无限期拖延
+15:04:sismvg: 脑洞？
+15:05:varna: B是B方法，DF是数据流
+15:06:varna: 我有打算结合下B方法的证明义务和一般意味的子图相似性，不过这是个略麻烦的工程……
+15:07:BBI-094: :'(
+15:07:varna: BBI-094: HELO, 看log阁下是新人？
+15:07:BBI-094: 是新人
+15:08:varna: 欢迎，这里是#touhou-lambda-hentai-news-kancolle-cn
+15:08:varna: 你可以随意讨论喜欢的丧失话题
+15:09:BBI-094: 额
+15:09:BBI-094: linux 下的图形调试前端有推荐么
+15:09:BBI-094: 那个命令行的太坑爹了
+15:10:varna: 没有，我都用命令行的……
+15:10:sismvg: 快回windows
+15:10:sismvg: 终于撸出了个能用的Listbox
+15:10:varna: 不行的话你用gdb mi自己写一个吧
+15:10:sismvg: 可以摆脱C了
+15:10:varna: 明明是个半吊子c艹用户，摆脱c有什么用……
+15:10:BBI-094: ……
+15:10:sismvg: 摆脱了每次都要自己撸虚拟化
+15:11:sismvg: 每次都要重写DrawItem
+15:11:BBI-094: 你们吊
+15:11:varna: 虚拟化（Virtualization）还是Listview的虚拟模式……
+15:11:sismvg: 虚拟模式
+15:11:BBI-094: 我还是用别人写现成的吧，做个伸手党挺好
+15:11:varna: BBI-094: 弄个脚本接上gtk之类的GUI库写一个就行了，不必很麻烦
+15:12:sismvg: list,vector,map,hash_map随便换
+15:12:varna: 主要麻烦是多线程调试的部分我没试过折腾
+15:12:BBI-094: 逗我呢
+15:12:lh_mouse: hash_map  // 呵呵
+15:12:varna: 哪里逗你了……
+15:12:BBI-094: 一看GTK 头都大
+15:12:varna: gdb mi本来就是用来适配前端的，虽然那个mi很难看
+15:12:varna: gtk就是难看，用起来还行
+15:13:varna: 哦对，我发觉上次那个汇编器报错可能跟gcc对nested function的跳板代码处理有关
+15:13:varna: 如果nested function里没有上下文，装载r10的指令会被优化（？）掉
+15:14:varna: 然后我那个hack直接让汇编器抽了
+15:14:BBI-094 joined channel
+15:14:BBI-094: 找到一个
+15:14:BBI-094: Nem
+15:14:BBI-094: Nemiver
+15:14:varna: 试着复现错误的时候大致的结论是这样
+15:14:varna: 哦？我搜搜看
+15:15:varna: 看着还不错
+15:16:BBI-094: en en 
+15:16:varna: 卧槽怎么又是轮型……今天一下午都是轮型
+15:16:BBI-094: ？？？
+15:16:varna: 舰娘
+15:16:BBI-094: 这个东西看起来应该很简单
+15:16:sismvg: http://www.ithome.com/html/out/109623.htm
+15:16:sismvg: 时代的潮流
+15:17:sismvg: 是无法阻挡的
+15:17:BBI-094: 这个东东设置断点倒是满轻松的
+15:17:varna: BBI-094: 命令行打断点就一个b...
+15:17:BBI-094: 后面不还有行号呢么
+15:17:varna: 是啊
+15:18:varna: 反正你手边不都开着编辑器……
+15:18:BBI-094: 不过批量的话还是命令方便
+15:20:BBI-094: 额
+15:20:BBI-094: C吧 吧主在这么
+15:20:BBI-094: 小吧呢
+15:20:varna: 大吧还是小吧
+15:21:BBI-094: 大小皆可，男女通吃
+15:21:varna: 有什么事情么？
+15:21:sismvg: 管理员几乎都是
+15:21:lhanjian: 把电脑垫高点，脖子舒服多了
+15:21:varna: lhanjian: 爆
+15:22:varna: BBI-094: 有什么事情么
+15:22:lhanjian: 为什么羊驼子总能发现汇编器的问题……
+15:22:BBI-094: 没事 就是好奇
+15:22:varna: 不是汇编器的问题，是汇编器直接给我报错了
+15:22:BBI-094: 第一次用IRC 不会大名另
+15:22:BBI-094: 打命令
+15:23:varna: 那个是我hack的时候没料到，现在也不打算补，因为我没法检测是否有上下文
+15:24:varna: 最后我也懒得看生成的汇编，大体粗粗地复现错误是这样的结论
+15:25:lh_mouse: BBI-09418> 没事 就是好奇  // 我♀很♀好♀奇
+15:25:varna: @千反田肛旗
+15:25:BBI-094: //
+15:26:varna: 说起来，现在“力能扛鼎”的第二字是念gang1么
+15:26:BBI-094: 这里能@么？
+15:26:lhanjian: 如果频道的op都不在了，结果topic掉了怎么办？
+15:26:varna: BBI-094: 由客户端决定，一般来说addressing要求在行首指定nick并且予以分割
+15:27:khysw: lvm...
+15:27:varna: lhanjian: op不在不会掉topic, 但是没人没guard的频道会
+15:27:khysw: aquire(智商)
+15:27:varna: 说起来也该换个topic了，晚上想想
+15:27:varna: 这次的topic是狭雾和卷云两只
+15:28:lh_mouse: GUARD 一样会
+15:28:lh_mouse: 最后一个人退了 chanserv 就没了
+15:28:varna: 噗
+15:28:varna: #mcfproj那边是这样的？
+15:28:lh_mouse:  /cs help set
+15:28:lh_mouse: [15:28:58] -18ChanServ- KEEPTOPIC       Enables topic retention.
+15:29:varna: 哦
+15:29:lh_mouse: [15:29:25] -18ChanServ- The KEEPTOPIC flag has been set for channel #c_lang_cn.
+15:29:lh_mouse: done
+15:29:varna: thx
+15:32:BBI-0941 joined channel
+15:34:BBI-0941: 额 再有1小时
+15:34:BBI-0941: 么么达
+15:36:FrankHB: BBI-094是啥番号。。好骑的不是COSQ-016什么的么。。。
+15:36:varna: 难道今天南西打完之后我得腆着脸去打20航母和20运输船……
+15:36:varna: FrankHB: 爆
+15:37:lh_mouse: 羊驼进入了暴走状态  见谁爆谁
+15:37:BBI-0941: ？？？
+15:37:BBI-0941: 这是岛国动作片的番号
+15:38:varna: 我感觉到今天实在不顺
+15:38:BBI-0941: 话说 20航母2o运输穿是啥？
+15:38:BBI-0941: FC /？
+15:38:varna: 是军国主义黄赌毒游戏的每周任务
+15:38:BBI-0941: 这不得打到明天早上啊
+15:40:FrankHB: http://www.javzoo.com/cn/movie/1pp3 这片子有啥特别的么。。
+15:40:BBI-0941: 没啥特别的
+15:40:FrankHB: ...
+15:40:BBI-0941: 看够的节奏
+15:41:BBI-0941: 就是喜欢这种妹之
+15:41:BBI-0941: 估计这辈子舞忘了
+15:43:sismvg: NSFW
+15:43:varna: 啊啊啊啊啊啊啊啊啊啊啊
+15:43:varna: 那珂酱保佑，放过我吧
+15:43:* sismvg varna在老板面前打开了链接
+15:44:varna: 别再进Boss了我南西做完了
+15:44:varna: 还来个轮型，这不是要吊打我再让我修半小时船的节奏……
+15:44:FrankHB: 。。。羊驼不认识这域名么。
+15:44:varna: FrankHB: 药元四逗比又不是一回两回了，你管他干嘛……
+15:45:* varna 常年在实验室上黄网
+15:46:varna: 这已经不是吊打了，是全员大破……
+15:46:varna: 要不是现在给活动屯资我就直接报复性打击了
+15:52:sismvg: 这集walker应该能看到Bob挂了
+15:53:sismvg: 看了下存活名单，就剩5个老人了啊。
+15:53:BBI-0941: 这网站好强达
+15:59:varna: 好想侵犯药娘啊
+15:59:varna: 药娘都哪去了
+16:00:lh_mouse: Plough: 爆
+16:00:lh_mouse: Plough: 爆
+16:00:lh_mouse: 哇
+16:01:khysw quit:Ping timeout: 240 seconds
+16:01:lh_mouse: geordi, << "Plough: 爆"
+16:01:geordi: Plough: 爆
+16:01:geordi: error: stray '\350' in program
+16:01:lh_mouse: 居然变成正文搜索了
+16:02:varna: 噗
+16:02:varna: Plough: 爆
+16:02:lh_mouse: 我记得原来不是开头的匹配不了的
+16:02:varna: 爆 Plough
+16:02:varna: 爆 Plough 爆
+16:02:lh_mouse: 应该先 /mode +q  再爆
+16:02:varna: 果然是匹配频道消息的
+16:03:varna: 我觉得这是回应不指名消息，晚上跟红旗说一声吧
+16:04:lh_mouse: ←_←
+16:04:lh_mouse: ↑_↑
+16:04:lh_mouse: ↖_↖
+16:05:lh_mouse: @看大猩猩专用眼睛  你们见过那个图没
+16:05:varna: 没
+16:08:lh_mouse: varna, http://imgsrc.baidu.com/forum/pic/item/e5c1376d55fbb2fbd9c5ba4e4f4a20a44723dcb4.jpg
+16:08:varna: 噗
+16:10:lh_mouse: 这个图好几年了  我以为你知道
+16:10:lh_mouse: 因为不能和大猩猩对视 所以嘛……
+16:12:varna: 我不知道不能跟大猩猩对视的……
+16:16:BBI-0941: 我擦 上班了
+16:16:BBI-0941: 拜拜了亲们
+16:16:varna: bye
+16:16:lhanjian: 真是干运维的么……
+16:17:BBI-0941: 擦
+16:17:BBI-0941: 前厅经理
+16:17:varna: ...
+16:17:varna: 酒店还是饭店……
+16:17:BBI-0941: 酒店
+16:17:varna: 哦
+16:23:sismvg: 干这行是被叫去写酒店客户端？
+16:41:condy joined channel
+16:48:sismvg: 写出了个奇怪的东西》。
+16:51:varna: sismvg: 爆
+16:52:sismvg: 炒
+16:52:sismvg: 得到了一批奢侈的草鸡蛋。。舍不得吃
+16:57:Plough joined channel
+16:57:varna: Plough: 肛
+16:58:Plough: varna: 回去自肛
+16:58:varna: Plough: 药娘不就是用来肛的么
+17:01:Plough quit:Client Quit
+17:01:Plough joined channel
+17:02:varna: Plough: 肛
+17:02:condy: 我好像伙伴算法理解错了，struct page 里面还存着physical address。。现在写kmalloc各种疼..
+17:02:Plough: varna: 回去自肛
+17:02:Plough: fcitx --replace然後整個X掛了
+17:02:Plough: 簡直帥氣
+17:03:varna: condy: kmalloc不是应该首先维护一个堆和一个堆区，然后提供自用的分配器和sbrk么
+17:04:condy: 对呀，跪在分配器了..
+17:05:varna: 分配器怎么跪了，kmalloc不需要知道具体的物理地址
+17:05:varna: 除非你是跨进程扔块
+17:06:varna: 但这显然不如把kmalloc扔进高区方便
+17:06:condy: 可是如果kfree一下，就不知道如何处理了。
+17:06:varna: 你不想办法弄出物理地址来怎么能处理……
+17:06:varna: 我那伙伴系统是个艹页表的鬼畜
+17:07:varna: 如果做宏内核的话，推荐牺牲高区做伙伴，然后在这上面提供kmalloc
+17:07:varna: 后者是按细粒度对齐的
+17:07:lh_mouse: 妈蛋  qualifier 能坑死人
+17:07:lh_mouse: ifdef POSEIDON_CXX11
+17:07:lh_mouse: #   define CV_VALUE_TYPE(expr_)     typename ::std::remove_reference<decltype(expr_)>::type
+17:07:lh_mouse: #   define VALUE_TYPE(expr_)        decltype(::Poseidon::valueOfHelper(expr_))
+17:07:condy: 细粒度 是啥？
+17:07:varna: 比如8B对齐
+17:07:Plough quit:Quit: Lost terminal
+17:08:lh_mouse: 跑了一个
+17:08:varna: Lost terminal 2333
+17:08:varna: 估计他X挂了
+17:08:condy: 我已经把低区的物理内存地址保存起来了，是不是这样就不好做了啊..
+17:09:Plough joined channel
+17:10:varna: condy: 搞那么麻烦干嘛……这么说吧，你现在怎么打算确定释放部分的尺寸和位置
+17:11:condy: 是说回收物理页面那个时候的？
+17:11:varna: 对
+17:12:varna: malloc不会有这个问题，因为kernel heap被映到全部进程的地址空间里，而malloc的做法本身在free地址的时候不会有确定尺寸的麻烦
+17:12:condy: pmm_alloc返回的是struct page*，而且保存着order.回收的时候必然提供struct page*，order已经记录了。。
+17:12:varna: 那就没什么别的问题了啊
+17:14:condy: 问题是struct page { uint32_t p_addr, v_addr; int order }; 这样的。我看了你的代码，好像并没有记录p_addr...
+17:14:Plough quit:Quit: Lost terminal
+17:16:varna: condy: 你看了我那个帖吧
+17:16:condy: http://tieba.baidu.com/p/2479949112?see_lz=1 
+17:16:condy: 这个？
+17:17:varna: 对
+17:18:Plough joined channel
+17:21:varna: 你能在proc_i386.c里找到pmm的用法
+17:22:condy: 我看看.
+17:22:varna: 但是因为当时我没做完就弃了，其实pmm_alloc的结果你需要自己拿着——换言之，需要一个pager
+17:22:varna: 而我没做pager...
+17:22:sismvg: your ate dirty meat !ahahha
+17:23:Plough: 哦哦今天日常第一发出了流改
+17:23:sismvg: 错了。。
+17:23:varna: sismvg: 你在说什么？
+17:23:cleamoon joined channel
+17:24:sismvg: 你们吃了藏肉
+17:24:sismvg: 脏肉
+17:24:Plough: 剩下的三发是脚和蛋21*2
+17:24:varna: sismvg: 英文“你们”怎么说……
+17:25:sismvg: you are..
+17:27:varna: Plough: 我们来交配吧
+17:27:Plough: varna: 回去自爆
+17:27:varna: 又蹭
+17:27:varna: 总蹭会变成老处女的
+17:29:Plough: varna: 我觉得你用自己的脑洞就足够了
+17:30:varna: 哦操
+17:30:Plough: 日常拆那珂酱
+17:30:varna: 饶了我吧
+17:30:varna: 复纵四轮反潜
+17:30:Plough: ……
+17:30:Plough: 补给船？
+17:30:varna: 我今天下午光大破就修了四五个
+17:30:code_new joined channel
+17:30:varna: 南西已经做完，剩下两个20
+17:30:varna: 补给进度80%+，航母进度50%+
+17:30:Plough: Soga
+17:31:varna: 还好只有危险的小破
+17:31:Plough: 去几趟1-5
+17:32:varna: 爱多路……
+17:32:Plough: 出门RJ中破
+17:34:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=4b6d7d17f8f2b211e42e8546fa816511/8d62bd198618367a81e164b92d738bd4b31ce519.jpg # 表情丰富
+17:34:varna: 哦操
+17:35:varna: 还好是单纵
+17:35:varna: 伙计们对面有两个航母！打打打！
+17:35:varna: 打掉一个
+17:36:sou_ quit:Remote host closed the connection
+17:36:Plough: 妈的
+17:36:Plough: Tenga酱今天抽什么风了
+17:36:Plough: 同航T有利带着闪炸鱼给我各种miss
+17:37:Plough: WAREAOBA
+17:37:varna: 今天我又领悟了一个问题
+17:37:handlehard joined channel
+17:37:varna: 如果潜艇大破了，拉过去修
+17:38:varna: 修完我便还能再战
+17:38:varna: 反正十个大破也就修三百分钟不到
+17:38:Plough: 我是小破就修，基本不会大破
+17:38:Plough: 劝退
+17:38:varna: 不是蹭血，是被一发大破
+17:39:varna: 南西加上补给船我进了七次Boss, 其中六个轮型
+17:39:Plough: 我总感觉越破越脆……
+17:39:varna: 炸得我都淡定了
+17:39:Plough: 我家的祥瑞绝对是盗版的
+17:40:iyzsong quit:Quit: WeeChat 1.0.1
+17:42:handlehard quit:Ping timeout: 260 seconds
+17:43:Plough: 果然，敢不接阿号后果就是进Boss
+17:43:Plough: 复纵
+17:43:Plough: 还好，对面没反潜了
+17:45:boosure quit:Quit: Get your hand off of it
+17:47:pocmon joined channel
+17:48:varna: 哦，中破了
+17:49:FrankHB: http://tieba.baidu.com/p/3375356601 ←招白吱
+17:49:varna: 哦，大破了
+17:52:varna: 哦，大破了
+17:52:varna: 快十个大破了
+17:53:pocmon quit:Ping timeout: 244 seconds
+17:56:varna: 然后进Boss...
+17:56:varna: 轮型
+17:57:varna: 第十次大破GET
+18:00:varna: 继续进Boss
+18:00:varna: 轮型
+18:01:sismvg: who is devil
+18:01:varna: 居然只有中破
+18:02:sismvg: 瑞克杀食人族那段太血腥了
+18:03:endle joined channel
+18:04:condy: sismvg: 你说的是 致命山道？
+18:04:varna: 行尸走肉
+18:04:sismvg: 行尸走肉
+18:04:condy: 没看过...
+18:04:varna: 漫画挺好看的，电视剧我没看过
+18:05:sismvg: 也很好看
+18:05:sismvg: 不过剧情有点不同
+18:05:varna: 毕竟都会改编
+18:06:varna: 洗洗脸，然后处理下对潜和日常明石
+18:06:sismvg: 弩哥吃瘪了
+18:07:condy: geordi: << getpagesize()
+18:07:geordi: 4096
+18:08:varna: 马勒戈壁
+18:08:sismvg: geordi<<std::min((int)10,(uint)10);
+18:08:geordi: error: no matching function for call to 'min(int, uint)'
+18:08:varna: 天天停水，干吗啊
+18:08:varna: 跟他老母的湿润程度保持一致么
+18:09:sismvg: 停水还好
+18:09:sismvg: 我这里每个月停电的次数。
+18:09:sismvg: 不说了
+18:11:dantmnf: 应该是说完第一句就掉线（
+18:11:varna: 啊啊啊给我明石吧
+18:13:varna: 所以说1-5 A还是挺麻烦
+18:13:varna: 一发小破
+18:18:varna: 啊，那珂酱
+18:20:shui_code joined channel
+18:22:varna: 道中又一个那珂酱，我感觉不妙啊
+18:25:varna: 168
+18:26:endle quit:Quit: Leaving
+18:26:Plough: ……
+18:26:varna: 周常清掉就不打了
+18:27:varna: 咦，得了一个螺丝
+18:28:Sleepwalking joined channel
+18:28:lhanjian quit:Ping timeout: 256 seconds
+18:29:varna: Sleepwalking: 肛
+18:36:lh_mouse: 羊驼向米库酱发射了一枚尾 流自导鱼 雷！
+18:42:cleamoon quit:Ping timeout: 245 seconds
+18:49:Sleepwalking quit:Ping timeout: 240 seconds
+18:49:Xilzzert quit:Quit: Leaving
+18:53:varna quit:Ping timeout: 240 seconds
+18:56:condy: https://github.com/Cloudef/loliwm
+18:56:condy: 来自#archlinux-cn。。
+18:57:lh_mouse: condy, 爆照
+18:57:libhanjian joined channel
+18:57:cleamoon joined channel
+18:58:condy: QAQ
+18:58:condy: (｢・ω・)｢
+18:58:condy: ( ´∀`)σ)Д`)
+18:58:lh_mouse: condy, 爆照
+18:58:condy: 我是不基佬啊..
+18:58:lh_mouse: condy, 爆照
+18:58:condy: 我不是基佬啊..
+18:58:condy: (。・_・。)
+18:59:condy: geordi: << "快爆照"
+18:59:geordi: 快爆照
+19:01:* sismvg 强调两遍的话都是假话
+19:01:sismvg: 你写个内核写了3个月？
+19:02:condy: 写了7个礼拜了..
+19:02:sismvg: 1.3个月.
+19:03:lh_mouse: condy, 爆照
+19:03:condy: 叫 sismvg 爆照。
+19:03:sismvg: nop
+19:03:lh_mouse: condy, 爆照
+19:04:sismvg: 既然有nop作为0填充，干嘛不来个yeap作为1填充呢
+19:04:condy: yup.
+19:04:lh_mouse: X86 根本没有 nop 这个指令
+19:24:cleamoon: 内核写3个月也不慢
+19:32:LittleKey joined channel
+19:40:cleamoon_ joined channel
+19:47:sou_ joined channel
+19:56:libhanjian quit:Ping timeout: 245 seconds
+20:14:libhanjian joined channel
+20:24:MisakaMikoto: gcc4.8.1 和 4.8.2 啥区别？
+20:26:lh_mouse: gnu.gcc.org
+20:26:lh_mouse: RF
+20:26:lh_mouse: gcc.gnu.org
+20:38:sismvg: http://tieba.baidu.com/photo/p?kw=%E5%B0%91%E5%B9%B4jump&ie=utf-8&flux=1&tid=3375477138&pic_id=3ad3f0dcd100baa115c64fdf4410b912cafc2ede&pn=1&fp=2&see_lz=1
+20:38:sismvg: 涉嫌妖精的尾巴超级大量剧透
+20:38:sismvg: 做好心理准备
+20:40:cleamoon: 敌人一拳把妖尾打倒了，妖尾一拳把敌人打倒了，敌人一招把妖尾打躺了，妖尾一招把敌人打死了
+20:40:cleamoon: 我剧透了全部妖尾的内容
+20:41:sismvg: 这张图不是那么简单的
+20:44:cleamoon: 我都不知道现在在打谁
+20:46:Petrus07 joined channel
+21:13:sismvg: 500W条目测试通过,yeap
+21:15:Plough: 30驱对潜完成
+21:15:handlehard joined channel
+21:16:handlehard quit:Client Quit
+21:18:sismvg: 快叫你的船吧UI缓一缓
+21:18:sismvg: 换一换
+21:20:varna joined channel
+21:20:varna: 实验室这堆傻逼……
+21:20:varna: 只要把集线器或者路由器放他们旁边就他妈的给我搞个大新闻出来
+21:22:sismvg: http://tieba.baidu.com/p/3375652945
+21:22:varna: 脑子里一堆鸡毛蒜皮脸上一堆肥油别的毛蛋不剩就他妈的给我学挖掘机去
+21:22:sismvg: 受采访的人太苦逼了。不敢说真话。。
+21:24:varna: 青岛市中心城区在哪？
+21:24:LittleKey quit:Quit: Leaving.
+21:24:varna: 我好歹也在青岛住了二十多年，没听说过这地……
+21:24:sismvg: 你不知道。。住魔都的怎么知道。。
+21:25:varna: 至于说真话就苦逼……简直很傻很天真
+21:25:varna: 少有人喜欢听“你是个傻逼”这种真话，包括那些强调讲真话的伙计
+21:25:Leo__ joined channel
+21:25:sismvg: 一直在强调产值。。
+21:27:varna: 所以重要的不是什么事情是真的——反正既然大家都知道了，那么也没必要在没建设意义的时候拿出来说；就几个无能愤青的键盘战争来说是爽快了，其他时候未必
+21:27:Plough:  三只苍蝇……
+21:27:varna: 当然就我的个人观点来看，无能愤青往往觉得自己已经洞悉世事，而别人则是不识庐山真面目ry
+21:27:Plough: 不过还是拿了空优
+21:28:sismvg: 其实预期招几个动漫专业的。。还不如抓点写故事的苦力
+21:28:sismvg: 与其
+21:28:cleamoon: 我喜欢听
+21:28:shui_code quit:Ping timeout: 244 seconds
+21:28:cleamoon: ry是什么
+21:28:varna: 所以u can u up no can no bb也并非全无可取之处
+21:28:varna: cleamoon: “略”的意思
+21:29:cleamoon: 哦...
+21:29:Plough: 两只塔姐……
+21:29:varna: Plough: 这哪里？
+21:29:cleamoon: 以为是乳摇呢
+21:29:Plough: varna: 5-1Boss
+21:29:Plough: 在做棒各出击
+21:29:Plough: 啊，都沉了
+21:29:sismvg: 北斗神拳里喊的是 you are sock 还是you are shock
+21:29:varna: you wa shock
+21:30:sismvg: are wa 
+21:30:varna: 原文you は shock
+21:30:varna: 而且sock和shock的发音很好分吧……除非你地方口音太重
+21:31:Plough: 试制35.6 GET
+21:31:varna: 棒各出击只得试制356的？
+21:31:Plough: 恩
+21:31:varna: ……不做了
+21:31:Plough: 换上以后棒各149火力……真蛋疼
+21:32:varna: 谁赌电探？
+21:32:Plough: 屯资，不赌
+21:32:varna: 土豆赌掉一千刚好在低保线附近
+21:32:Petrus071 joined channel
+21:32:Plough: 土豆离低保还差5k
+21:33:Petrus07 quit:Ping timeout: 244 seconds
+21:33:Plough: 不过棒各出击不难做啊
+21:33:Plough: 一路吊打
+21:34:Plough: 整趟下来我一个小破都没
+21:34:sismvg: http://tieba.baidu.com/photo/p?kw=%E4%B8%80%E5%87%BB%E7%94%B7&ie=utf-8&flux=1&tid=3375610931&pic_id=d2dfba3f8794a4c26dbc9f4f0df41bd5ac6e3989&pn=1&fp=2&see_lz=1
+21:34:varna: 没什么难度，但是我还得做前置
+21:34:sismvg: 看似简单的图，画起来却非常难以还原韵味
+21:34:Plough: 三十驱对潜我带着一堆9394就冲进去了，A胜
+21:34:sismvg: 死鱼眼尤其难搞。。
+21:34:varna: 而且那堆吃货开出去的话，吃掉一个远征的资源还没什么潜在的建设性
+21:34:varna: 三十驱啊
+21:34:varna: 我澡堂不够
+21:35:varna: 今天尤其不够
+21:35:Plough: 我就进去了一次，门神那点的核弹目测触发了中破保护
+21:35:Plough: 然后我就进Boss了
+21:35:varna: 今天大破了十几次
+21:35:varna: 到现在周常大致清了，但潜艇都要修
+21:36:varna: 电探全灭，一千铝打水漂了
+21:36:Plough: 今天头疼，懒得动
+21:36:Plough: 我看看能不能做完补给船，做不完就算了
+21:36:Plough: 所以说砍手很重要
+21:37:varna: 无所谓
+21:37:varna: 估算着资源在正增长就可以试着一赌，毕竟联合舰队似乎一趟活动下来也就喷个一万七八千
+21:38:Plough: 现在最大的问题是我只有六个烈风
+21:38:varna: 赌飞机不
+21:38:Plough: 先不赌，每天日常
+21:38:Plough: 还差一只补给船
+21:38:varna: 残念
+21:38:varna: 我先来五百铝
+21:38:Plough: 2-3又走了上路
+21:39:Plough: 这次打不掉就不打了
+21:39:Plough: 头疼，再打我就该直接吐了
+21:39:Plough: 还好，进沟了
+21:40:varna: 全是天山
+21:40:Leo__ left channel:"Leaving"
+21:40:Plough: ……
+21:41:varna: 再跟五发，把东急的奖励预支掉
+21:42:Plough: 算了，我来三个资材
+21:42:varna: 一发收尾
+21:42:varna: 全灭，追一发
+21:42:Plough: 96舰战
+21:42:varna: 爆战，跟一发
+21:42:Plough: 瑞云
+21:43:varna: 企鹅，补一发
+21:43:Plough: 蛋21
+21:43:Plough: 收手
+21:43:varna: 天山，最后一发
+21:43:varna: 97
+21:43:varna: 惨不忍睹
+21:44:varna: 还剩24k
+21:44:Plough: 13607/20774/27396/17648+272/105
+21:44:varna: 46.6k/46.2k/43.4k/24.1k+356/94
+21:45:varna: 本周赌装备到此为止，以后继续水观
+21:45:varna: 本来想要点一二甲的，结果最近脸黑
+21:46:shui_code joined channel
+21:46:Plough: 貌似支援舰队也有火力150的限制？
+21:46:varna: 似乎有
+21:46:Plough: 那一二甲似乎用处不大啊……
+21:48:varna: 以火鸡计，基础火力：39*2 + 55 + 10*2，下修到152
+21:48:varna: 主要问题是一二甲和彗星之间有一个挺大的断档
+21:48:varna: 考虑到航向修正就比较明显了
+21:49:varna: 啊不对
+21:49:Plough: Soga
+21:49:varna: 39*1.5
+21:49:varna: 基础火力133.5取整到133，没有修正
+21:50:Plough: ……
+21:50:Plough: 我一般直接塞四个彗星
+21:50:Plough: 8*4*2=64
+21:51:varna: 啊不对，这算法搞错了……
+21:51:varna: 支援舰队的火力算法不一样
+21:51:varna: 1.5*39 + 55 + 20n = 150
+21:52:varna: 这样如果保证满基础火力，需要两格12甲
+21:52:varna: 剩下的两格可以塞电探
+21:53:varna: 但是如果考虑到航向因素，多塞一格也是可以的
+21:53:Plough: Soga
+21:53:varna: 我以前的支援舰队毕竟命中感人
+21:53:varna: 最好成绩是5-5打掉一个喔酱
+21:53:Plough: 我看有dalao打E6直接上航空支援……
+21:54:varna: 可能还中破了雷爷
+21:54:Plough: 不知道他为啥这么干
+21:54:Plough: 航空支援我在做飞龙任务的时候试了下，似乎效果不很好
+21:54:Plough: 当时直接打了一片miss
+21:54:varna: 航空支援我没试过，但是考虑敌方对空普遍不错，命中大概仍然感人
+21:55:Plough: 总之还是炮击支援靠谱，E2曾经直接给我打掉对面四只船……
+21:55:varna: E2我都忘了斩杀上没上支援
+21:56:varna: 似乎上了
+21:56:Plough: E2后来捞Tenga的时候没上
+21:56:Plough: 因为我当时冲进去发现能吊打……
+21:56:Plough: 头疼，先碎了
+21:56:varna: 爆
+21:56:Plough: 回去自爆
+21:56:Plough quit:Quit: 碎叫
+22:06:sismvg: vs的文件依赖视图就是个神器啊
+22:07:shui_code quit:Ping timeout: 240 seconds
+22:07:code_new quit:Ping timeout: 265 seconds
+22:07:sismvg: 就是生成时间太长了
+22:07:code_new joined channel
+22:09:varna: 噗，糟苗不知道中出是什么意思了……
+22:11:sismvg: 生成静态库的时候会把main也给生成了吗？
+22:12:varna: 不会
+22:14:libhanjian quit:Quit: 风光冉冉东西陌
+22:16:sismvg: 还是1mb的lib
+22:16:sismvg: 看看怎么缩吧
+22:21:shui_code joined channel
+22:29:varna: 我不行了
+22:30:sismvg: 改Serv了。。
+22:30:varna: 这些货取名直接读过来之后怎么就没几个方便玩重复字梗的仄仄和仄平……
+22:31:sismvg: 我来试试来个丧失下联
+22:31:varna: 不行，对错了2333
+22:31:varna: 重来
+22:32:sismvg: 想不出丧失点的啊
+22:33:varna: 只对二四六七的平仄
+22:34:varna: 这次的neta是丛云、POI、初雪@提不起劲和防晒霜的早霜
+22:34:sismvg: 直觉上能对出有关幼女的东西
+22:35:sismvg: 黑暗，幼女，啪啪啪
+22:35:varna: 下联对坏，不过我懒得考虑两个分句之间的事情了，如果非得认定是连三平那就连三平吧
+22:36:whatofor quit:Read error: Connection reset by peer
+22:36:varna: 上联本来想花式来个夕云和夕立，结果下联找不出合适的名字了，都是舰本的错
+22:38:varna: 对不熟悉梗的读者的解说，所谓夕立（ゆうだち）是傍晚的雷阵雨
+22:38:condy: 走了，大家腋间愉快！
+22:38:condy quit:Quit: leaving
+22:38:lh_mouse: 爆照
+22:38:lh_mouse: 次奥
+22:38:shui_code quit:Quit: WeeChat 0.4.2
+22:38:varna: 当然现役的夕立还是驱逐舰，似乎被观察到监视我国沿海之类
+22:39:sismvg: 不行，我需要给大脑补充水分
+22:39:sismvg: 顺带有什么辅助写Docment还有Copyright的东西吗
+22:39:varna: 耻球
+22:39:sismvg: docu
+22:39:varna: 还有DOGExygen
+22:40:sou_ quit:Remote host closed the connection
+22:40:sismvg: 铃声我想对烛光之类的东西
+22:40:varna: 你先把平仄对上……
+22:40:sismvg: 所以头疼
+22:41:varna: 目前频道topic大致是4+7平起，七字的部分我已经放弃不变格的节操了
+22:42:varna: 至于防晒霜系列的早霜，立绘是这样的 http://images.yeyou.com/2014/xin/2014/08/20/x0820x13.jpg
+22:45:varna: 走了
+22:45:varna: 诸君夜间愉快、武运长久
+22:45:varna quit:Quit: leaving
+22:45:wlemuel joined channel
+22:47:sismvg: 初音初遇除夕音
+23:08:lh_cat quit:Ping timeout: 245 seconds
+23:14:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+23:23:lh_cat joined channel
+23:23:lh_cat quit:Changing host
+23:23:lh_cat joined channel
+23:37:code_new quit:Quit: Leaving
+23:45:BBI-094 joined channel
+23:59:wlemuel: 末菊末了莫伤菊

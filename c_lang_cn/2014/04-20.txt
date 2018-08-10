@@ -1,0 +1,1059 @@
+14:9 clcn_logbot joined channel
+14:9 Plough:.
+14:14 clcn_wikibot joined channel
+14:15 clcn_logbot joined channel
+14:17 clcn_logger joined channel
+14:17 Plough:.
+14:19 lh_mouse:怎么这么多 bot
+14:20 Plough:我的就两个
+14:22 condy:.w RTFM
+14:22 clcn_wikibot:condy:Loading RTFM
+14:22 clcn_wikibot:condy: RTFM is an initialism for the expression "Read the fucking manual" (sometimes flaming or another metaphor or profanity) or, in the context of a Unix environment, "Read the fucking man page" (see man page).
+14:25 lh_mouse:logger 是什么东西
+14:26 Plough:就是聊天记录啊
+14:27 lh_mouse:这里有两个 
+14:27 lh_mouse:clcn_logbot clcn_logger 
+14:27 Plough:那个不是还得找人放出来么
+14:27 iyzsong:0 0
+14:27 Plough:http://irclogs.benihata.org/
+14:27 clcn_logger joined channel
+14:27 Plough:退了一个
+14:28 Plough:两个是失误……
+14:30 lh_mouse joined channel
+14:31 hope1:Plough, 2014-4-20.txt ln 3
+14:32 lh_mouse:Plough, 
+14:32 lh_mouse:http://irclogs.benihata.org/2014-4-20.txt
+14:33 lh_mouse:MIME 类型:	application/octet-stream
+14:33 lh_mouse:这 错了
+14:33 lh_mouse:text/plain
+14:33 lh_mouse:你这样  浏览器打开显示的是文件下载
+14:33 Plough:这个我在nginx设定的是text/plain
+14:33 Plough:不知道啥情况
+14:33 lh_mouse:我浏览器收到的是 octet stream
+14:33 lh_mouse:你看下 CGI 怎么设定的
+14:35 Plough:https://pastebin.mozilla.org/4871085
+14:35 lh_mouse:我没用过 ngix
+14:35 lh_mouse:nginx*
+14:37 T2 joined channel
+14:37 lh_mouse:logsama 又是谁的 bot
+14:37 lh_mouse:看了这么多 bot 就蛋疼
+14:40 Plough:https://pastebin.mozilla.org/4871141
+14:40 Plough:手动请求的结果
+14:40 Plough:但是我这边FF也是下载
+14:40 Plough:不知道为啥
+14:40 lh_mouse:Plough, http://stackoverflow.com/questions/16690809/nginx-default-content-type
+14:40 lh_mouse:你写错地方了吧
+14:40 lh_mouse:放 location / 里面的
+14:41 lh_mouse:Plough, curl -v http://irclogs.benihata.org/2014-4-20.txt
+14:42 Plough: syntax: 	types { ... }
+14:42 Plough:default: 	
+14:42 Plough:types {
+14:42 Plough:    text/html  html;
+14:42 Plough:    image/gif  gif;
+14:42 Plough:    image/jpeg jpg;
+14:42 Plough:}
+14:42 Plough:context: 	http, server, location
+14:42 Plough:这是官网上的
+14:42 code_new joined channel
+14:43 Plough:https://pastebin.mozilla.org/4871152
+14:44 hope1:lh_mouse, 那是@ cleamoon 的
+14:45 lh_mouse:蛋疼
+14:46 hope1:Plough, 可能是ln3的非法字符的问题？
+14:46 Plough:hope1: 可能
+14:46 Plough:我删掉那行试试
+14:46 T2:p
+14:46 T2:Plough, 我想去学派发个贴
+14:46 T2:但是数学公式和代码怎么搞?
+14:47 T2:学派似乎太冷清了
+14:47 Plough:T2: ```lang blablabla ```
+14:47 T2:OK
+14:47 Plough:T2: 数学公式写```math ```
+14:47 T2:OK
+14:48 Plough:T2: 我也觉得……想办法宣传下
+14:48 T2:我估计得写上个把礼拜.
+14:48 Plough:xxxxxxxx_: 球区是？
+14:48 T2:考虑分成几部分
+14:48 Plough:好像的确是……
+14:48 lhanjian joined channel
+14:48 xxxxxxxx_:球指帝球
+14:48 hope1:Plough, 现在是没弹出下载，但是编码又不对了
+14:48 hope1:xxxxxxxx_, http://irclogs.benihata.org
+14:49 Plough:编码写上了
+14:49 Plough:我想个办法防止出现非法字符
+14:49 lh_mouse:MIME 类型:	text/plain
+14:50 hope1:现在对了
+14:50 Plough:跟这个应该没关系
+14:51 T2:Plough, ` << 这是哪个符号?
+14:51 xxxxxxxx_:~`
+14:51 T2:`
+14:51 T2:看到了
+14:52 T2:3Q
+14:58 T2:Plough, 报告似乎有bug
+14:58 Plough:T2: ?
+14:58 T2:<> 尖括号在代码中一行里可以正确显示
+14:59 T2:换行后似乎会被忽略?
+14:59 T2:Plough, http://forum.benihata.org/thread/view/535364b3a4538e0199ac9c8f
+14:59 Plough:看到了
+15:2 Plough:fixed
+15:7 T2:Plough, 3Q
+15:9 T2:Plough, 我觉得我还是先去学学LaTeX语法什么的
+15:12 iyzsong:樱花庄 好顶赞
+15:13 T2:iyzsong, 纳尼?
+15:14 iyzsong:0.0
+15:18 condy:iyzsong: 樱花庄园的宠物女孩？
+15:19 T2:0.0
+15:19 T2:我去撸,沙呦纳啦
+15:29 code_new joined channel
+15:29 iyzsong:condy: +
+15:35 Li_o joined channel
+15:55 clcn_logger joined channel
+15:55 *Plough test
+15:55 hysw: /ban clcn_* ...
+15:57 hysw: /kickba iyzsong
+15:57 iyzsong:- -
+15:57 hysw: /kickban iyzsong
+15:57 T2:0.0
+15:57 hysw: /killburn T2
+15:57 T2:卧槽
+15:58 T2:敢不敢更凶残点?
+15:58 T2: /FFF hysw
+15:58 iyzsong:for i in *; do kill $i; done
+15:58 *Plough 准备去写个clcn_fffbot
+15:58 hysw: /vaporize T2
+15:59 lhanjian:Burn 233song
+15:59 iyzsong:lhanjian: 烧
+16:0 hope1:fireee
+16:0 *hysw /set "Big Brother"  --watching *!*@* --channel #c_lang_cn
+16:0 Plough:clcn.members.mapReduce(
+16:1 Plough:map:function () { if (this.nick != "Plough") emit(this.key,this.name)l },
+16:1 Plough:reduce:function(key,name) { burn(name); })
+16:2 Plough:clcn.members.mapReduce({
+16:2 Plough:map:function () { if (this.nick != "Plough") emit(this.key,this.name)l },
+16:2 Plough:reduce:function(key,name) { set_on_fire(name); }})
+16:2 Plough:这样更好
+16:4 hysw:eval( (\exist nick. Eq(nick, Plough)) => SetOnFire(Plough) )
+16:12 Plough:-module(burnhysw). fun() -> burn(hysw). loop() -> spawn(burnhysw,fun,[]),loop().
+16:14 *Plough c(burnhysw).burnhysw:loop().
+16:14 *hysw Plough不是已经被可计算性给烧掉了么? 怎么又出现了...
+16:15 *Plough 是天下第一水系魔法师
+16:15 xxxxxxxx_:习惯发射白色液体的水法师?
+16:16 hysw:eval( (\exist nick. Eq(nick, Plough)) => ( DryOut(Plough) AND SetOnFire(Plough) ) )
+16:16 Plough:各种颜色
+16:16 Plough:Exception:on 1:1: Illegal argument for DryOut
+16:16 hysw:Plough: 可计算性的东西是不会有Exception的
+16:17 Plough:hysw: 但是他就是抛出来了
+16:17 Plough:至于为啥我也不知道
+16:17 hysw:你自己抛的异常,脑子都被烧成这样了...
+16:18 *hysw /kickban Plough
+16:18 *Plough 手握耻球学派Founder权限
+16:18 hysw:对于耻球学派没啥感觉...
+16:19 hysw:我自己去写HTML去
+16:19 Plough:@heartbleed
+16:20 hysw:无压力
+16:20 Plough:@brainbleed
+16:20 hysw:@heartfuck
+16:21 Plough:@脑浆炸裂
+16:21 iyzsong:还要注册 差评
+16:22 tsuki joined channel
+16:22 hysw:Plough: <<"/set --null"
+16:22 Plough:hysw: <<Gunpower
+16:23 Plough:heat(hysw);
+16:23 hysw:geordi: <<Plough
+16:23 geordi:error: 'Plough' was not declared in this scope
+16:23 hysw:error: 'Gunpower' was not declared in this scope
+16:23 iyzsong:geordi: << << << << << geordi 
+16:23 geordi:error: expected primary-expression before '<<' token
+16:23 Plough:被炸的Gunpower都找不到了
+16:25 hysw:Plough: <<fire
+16:26 *Plough feelt nothing
+16:26 hoxily joined channel
+16:28 hysw:Plough has been slain!
+16:28 hysw:Double Kill!
+16:28 hysw:...
+16:28 hysw:Legendary!
+16:30 Plough:count(hysw.been_killed)
+16:31 Plough:Exception:Overflow
+16:31 hysw:-inf
+16:31 Plough:abs(hysw.been_killed) == hysw.been_killed
+16:31 Plough:true
+16:31 hysw:abs对-inf无效
+16:32 Plough:谁说是-inf
+16:32 Plough:都Overflow了
+16:32 hysw:Overflow包括neg overflow
+16:33 Plough:明显是pos overflow
+16:33 Plough:count哪来的负数
+16:35 hysw:你的count实现有bug
+16:35 Plough:没有bug
+16:35 hysw:那么就是你抽了
+16:40 Plough:很明显不是
+16:41 hysw:你都抽了5分钟了...
+16:41 hysw:不玩了...
+16:46 Plough:2333
+16:47 *hysw /set Plough --onfire
+16:49 *hope1 casts fireball
+16:49 *hope1 casts turn undead
+16:54 iyzsong:-.-
+16:55 iyzsong:hope变丧失了..
+16:56 iyzsong:xxxxxxxx_: 这怎么想都是你们的错
+16:56 *hysw /set iyzsong --onfire
+16:56 xxxxxxxx_:怎么想和我都没关系
+16:56 xxxxxxxx_:既没有妹子 又不丧失的我怎么会有错
+17:5 varna joined channel
+17:5 *varna 抓起红旗酱就是一顿稀烂爆
+17:6 varna:H.B.Flankoi 我多么想趴在窗子旁，专注地看着一场雨。我多么想自己也能哭成这样。我多么想也有人隔着窗子看我，然后过了许多年后，他仍然记得。
+17:6 varna:^ 我啊我啊
+17:6 iyzsong:= =
+17:6 varna:http://fanfou.com/photo/5tHy__jnyrA
+17:7 varna:^ MP, 就是这个老爸！
+17:11 varna:今天漫展通行证到手，送了个岛风怀表，结果我找了半天不知道在哪里校正……
+17:11 varna:难道画着岛风的怀表和岛风本舰一样不靠谱么
+17:12 Plough:2333
+17:13 varna:对了
+17:14 varna:恥球学派现在的帖子渲染是可以替换的么
+17:14 endle joined channel
+17:14 hysw:endle: 求智商,代数学要挂了...
+17:15 Plough:替换指？
+17:16 hope1:快去告白
+17:17 varna_ joined channel
+17:17 hope1:iyzsong, turn undead不是变成丧失，是超度亡灵
+17:17 varna:17:18 <@hope1> 快去告白
+17:17 varna:17:18 <@varna> 我觉得放弃md是正道
+17:17 varna:rq4log
+17:18 Plough:http://irclogs.benihata.org/2014-4-20.txt
+17:18 hope1:Plough, 怎么这么多undefined
+17:19 varna:thx
+17:19 varna:告白是怎么回事？
+17:19 hope1:恋恋/yinwang
+17:19 Plough:不知
+17:19 varna:哦哦
+17:19 varna:yinwang去死
+17:20 varna:恋恋等我找到她家
+17:21 xxxxxxxx_:http://www.bilibili.tv/video/av1069455/index_2.html
+17:21 Plough:render能换
+17:21 Plough:主要问题是原来的那些帖子……
+17:21 varna:噗？
+17:21 varna:不是渲染好的？
+17:21 varna:不对
+17:21 endle:hysw, 我有机化学也要挂了
+17:21 Plough:当然不是
+17:21 varna:不是现渲染的？
+17:21 hope1:难道是硬编码进去的...
+17:22 Plough:是现渲染的
+17:22 Plough:但是原来的帖子不都是用md写的么
+17:22 hope1:那怎么回事
+17:22 varna:哦哦
+17:22 Plough:换了以后那些怎么办
+17:22 varna:那些噗了……
+17:23 Plough:或者Multiple Render?
+17:23 hysw:Plough: 你去写MarkUp的解释器去
+17:23 varna:可以考虑
+17:23 Plough:那新的渲染用啥
+17:23 varna:我觉得可以给帖子打一个tag指定优先解释
+17:23 Plough:这个倒是没问题
+17:23 varna:可以类似perlmonks, 用简单的标记语言做
+17:24 varna:主要是我撸管的时候突然想着用w3m上恥球学派之类的需求
+17:24 varna:然后考虑公式用S表达式而不是mathjax
+17:25 T2 joined channel
+17:26 hysw:varna: 宁可用{}... 写函数的时候()太常用了
+17:26 varna:先转义
+17:26 varna:<p></p> <code></code> <image></image> <formula></formula>
+17:26 varna:或者干脆整篇文章都变S-表达式
+17:27 varna:不过前提是渲染接口留出来
+17:27 hysw:varna: +
+17:27 hysw:话说给个raw_string_syntax还是有必要的
+17:27 T2:varna, 好吧我还是没理解你那个问题...upvalue和闭包什么的我压根没概念..
+17:27 Plough:难度不大
+17:27 Plough:不过我打算先把代码重构完……
+17:27 xxxxxxxx_:据说某地商场开了个男士寄放的地方... 还提供网络
+17:27 xxxxxxxx_:可惜没有妹子....
+17:28 varna:ok
+17:28 varna:LK 3.14感觉响应还是慢些
+17:28 hope1:T2, upvalue?
+17:28 varna:看看后面的版本会不会好
+17:28 varna:T2: upval?
+17:28 varna:我只知道prprval
+17:29 *varna tuna pizza
+17:29 clcn_wikibot joined channel
+17:29 hope1:金枪鱼？
+17:29 T2:varna, 总之我还是先撸别的...
+17:29 xxxxxxxx_:魔法科高校那个小说有人在看么
+17:29 hope1:T2, lmgtfy.com/?q=prvalue
+17:30 T2:allocator 疼
+17:30 hope1:羊驼
+17:30 varna:中译已看完双七卷
+17:30 varna:似乎就译到这了
+17:30 xxxxxxxx_:魔法的设定到底是啥样的?
+17:30 varna:跟半吊子程序一样
+17:31 varna:根基是可培养的超能力，启动方式类似程序
+17:31 varna:因为信息量大所以需要运行时
+17:31 T2:hope1, 我是直接没理解问题在何处.
+17:31 varna:但是一个程序里面只有几个变量，其余都是const/constexpr, 脑残的理由是人脑处理多变量困难
+17:31 hope1:T2, 那你在干嘛
+17:32 xxxxxxxx_:超能力又是什么情况?
+17:32 T2:hope1, 不开心中
+17:32 varna:就是一般意义上的超能力
+17:32 xxxxxxxx_:没有更多说明?
+17:32 varna:没了
+17:33 hope1:普遍的还是就包括男主的几个人有
+17:33 xxxxxxxx_:那多无聊....
+17:33 varna:魔法师是世界范围内都有的，不过不多
+17:33 T2:hope1, http://tieba.baidu.com/p/2991797874 15L
+17:33 varna:而且没有撸到三十岁的设定
+17:33 T2:varna, 打算撸到30的撸过
+17:34 xxxxxxxx_:程序又是靠啥影响"超能力"的
+17:34 T2:FA师
+17:34 varna:因为是开发出来的超能力所以可以借助外设启动
+17:34 xxxxxxxx_:FA师需要摔跤启动
+17:34 hope1:T2, C好像只能无脑void*了
+17:35 varna:魔法师通过朝外设注入称为想子——不是男汁——的东西启动JIT compiler
+17:35 T2:hope1, 我连问题在哪都理解不了.
+17:35 hope1:把glib找出来读读不就好了
+17:35 varna:glib那些破玩意……
+17:35 hope1:T2, 哪有问题
+17:35 xxxxxxxx_:那搞点更好的外设代替人释放不就好了
+17:35 varna:龙傲天就可以
+17:35 hope1:c就这么破啊…… 不然怎么办
+17:35 T2:hope1, 在我看来似乎 typedef void * (*alloc_func)(size_t);
+17:36 varna:以型月术语来说，魔法要经过数工程
+17:36 T2:然后在结构体里加一个成员
+17:36 varna:我估算差不多一工程的法术大概有数百行Perl代码的样子
+17:36 hope1:T2, C没有闭包，所以你还得加个void*参数
+17:36 varna:因为作者说「很难理解」、「数万字符」，所以我猜大概是write-only
+17:37 T2:hope1, 于是我得先去理解下闭包才能理解问题.
+17:37 varna:闭包要理解么……
+17:37 hope1:于是一年后你还在“理解”闭包
+17:38 xxxxxxxx_:数万字符.....
+17:38 varna:刀叉真麻烦
+17:38 T2:让用户封一下自己的内存池只接受一个size_t参数不行么?
+17:38 hysw:universial closure还是得花时间理解的...
+17:38 varna:用户能做到我就不提这需求了
+17:38 hope1:T2, 参考qsort_r
+17:38 varna:内存池未必夹带运行时
+17:38 hysw:universal closure...
+17:39 xxxxxxxx_:听上去设定上也不太好玩的样子....
+17:39 varna:当然不好玩
+17:39 T2:hope1, 我去读一下
+17:39 varna:作者既不懂物理也不懂程序
+17:39 hope1:总之听起来烂大街
+17:40 varna:魔法是更纤细的东西
+17:40 varna:直接跟慢前挂钩
+17:40 hope1:慢前？
+17:40 varna:慢性前列腺炎
+17:40 xxxxxxxx_:听起来跟某种旱季就能卷成卷的生物似的....
+17:40 hysw:我还是耍蛇去算了...
+17:41 hope1:果然
+17:41 varna:撸到三十不容易啊
+17:41 T2:撸到30还是没压力的.
+17:41 xxxxxxxx_:@用绿色笔画出的小猫形状的红线
+17:41 hysw:多伦多大学没有发现可爱的计算姬
+17:42 varna:我可不确认自己不会性欲发作，路上看到一个幼女想着「好可爱好像吹雪啊」然后就进局子了
+17:42 T2:其实撸个一辈子也没什么压力.
+17:42 T2:varna, 那是你不了解幼女
+17:42 varna:幼女幼女平坦的胸口
+17:42 T2:一辈子不确认
+17:42 varna:而且幼女都是轻巡和潜艇
+17:42 xxxxxxxx_:T2撸了五年后: 为什么我还没有妹子
+17:42 T2:30无压力
+17:43 varna:少女才开始重巡
+17:43 T2:xxxxxxxx_, 我已经不会问这样的问题了.
+17:43 xxxxxxxx_:将来会的
+17:43 T2:要妹子何用?
+17:43 varna:干啊
+17:43 xxxxxxxx_:*欲会有的
+17:43 T2:东莞欢迎你
+17:44 hysw:T2: 没有妹纸是很可怜的一件事
+17:44 varna:不能持续调教
+17:44 T2:欢♂淫♂您
+17:44 varna:大家看，寒云饥渴了
+17:44 xxxxxxxx_:东莞不都是在地下行动的鸭么
+17:44 T2:hysw, u're too young
+17:44 varna:xxxxxxxx_: 那是土御门夜壶
+17:45 varna:噗，新教徒开始聚会了？
+17:45 T2:where?
+17:45 *varna 在一个咖啡厅
+17:46 T2:0.0
+17:46 hysw:继续研究哪里有可爱的计算姬或者数学娘
+17:46 varna:匹萨吃完
+17:46 *varna 觉得咖啡厅该供应葱油饼
+17:46 hope1:没去过咖啡厅
+17:46 T2:撸去了
+17:47 T2:腋
+17:47 varna:这是大亚联盟，不是美利坚
+17:47 varna:葱油饼多好吃
+17:47 hysw:星巴克啥的到处都是...
+17:47 varna:也不用刀叉，刀叉麻烦死了
+17:47 varna:Starfvcks?
+17:47 xxxxxxxx_:http://www.bilibili.tv/video/av1069979/ 噗 这个屌
+17:48 T2:varna, 除法散列和SHA-2差多少效率?
+17:48 xxxxxxxx_:fvcky star
+17:48 varna:T2: 干嘛SHA
+17:48 hysw:考试前头痛的话得去弄点咖啡...
+17:48 varna:DJB多简单
+17:48 *varna 喝咖啡头疼，所以今天点了茶
+17:48 T2:varna, 我去看看
+17:48 xxxxxxxx_:拼音的话就太早了
+17:48 xxxxxxxx_:糟
+17:49 varna:多霸气
+17:49 varna:@国防陆军一〇一旅独立魔装大队特尉大黑屌也
+17:49 hysw:Café Reznikoff的咖啡不怎么样...
+17:49 hysw:不过价格可以接受...
+17:50 varna:噗，有个哥们问下挂榴弹是不是用胶粘枪上的……
+17:51 Plough:不是用胶带绑上去的么
+17:52 varna:...
+17:52 varna:你买的国货么……
+17:53 Plough:胶带明明是神器啊
+17:53 *varna 坚持认为无托步枪如果没有D cup不能用，所以零三式才符合国情
+17:54 *Plough 认为D cup更不能用，主要问题是没法集中注意力
+17:54 varna:胸部是用来夹住弹匣的
+17:55 T2:varna, 那个多出来的void*参数是用来指定内存池么?
+17:55 Plough:那不就是乳X换个轴么
+17:56 hysw:void* self...
+17:56 T2:应该不是吧?囧...
+17:56 T2:hysw, 没懂
+17:56 hysw:经常拿这玩意来封装状态...
+17:56 hope1:你管他用来干嘛，传给用户就好了……
+17:56 varna:哪里有void *
+17:56 Plough:struct ht_mempool { allocator_t alloc;deallocator_t dealloc;void* data; }<-这样？
+17:57 varna:allocate_op_t
+17:57 varna:deallocate_op_t
+17:57 hysw:allocator_vtb_t
+17:57 boosure joined channel
+17:57 T2:等我撸个样子
+17:58 hysw:话说弄个vtable也不算太麻烦...
+17:58 varna:噗
+17:59 hysw:加入oop党算了...
+17:59 hysw:type_object_t*
+17:59 Plough:话说djb hash是啥
+18:0 varna:等等
+18:0 varna:upvalue难道是不呸喽呸喽的val
+18:0 varna:Plough: times33
+18:0 Plough:.w times33
+18:0 clcn_wikibot:Plough:Loading times33
+18:0 clcn_wikibot:Plough:Wikipedia does not have an article with this exact name. 
+18:1 hysw:.w wikipedia
+18:1 clcn_wikibot:hysw:Loading wikipedia
+18:1 clcn_wikibot:hysw: Wikipedia (i/ˌwɪkɨˈpiːdiə/ or i/ˌwɪkiˈpiːdiə/ WIK-i-PEE-dee-ə) is a collaboratively edited, multilingual, free Internet encyclopedia that is supported by the non-profit Wikimedia Foundation. Volunteers worldwide collaboratively write Wikipedia's 30 million articles in 287 languages, including over 4.4 million in the English Wikipedia. Anyone who can access the site can edit almost any of its
+18:1 varna:.w DJB Hashing Algorithm
+18:1 clcn_wikibot:varna:Loading DJB Hashing Algorithm
+18:1 clcn_wikibot:varna:Wikipedia does not have an article with this exact name. 
+18:1 varna:.w peropero
+18:1 clcn_wikibot:varna:Loading peropero
+18:1 clcn_wikibot:varna:Wikipedia does not have an article with this exact name. 
+18:1 varna:...
+18:1 Plough:23333
+18:1 varna:真是的
+18:1 hysw:.w varna
+18:1 clcn_wikibot:hysw:Loading varna
+18:1 clcn_wikibot:hysw: Coordinates: 43°13′N 27°55′E﻿ / ﻿43.217°N 27.917°E﻿ / 43.217; 27.917
+18:1 varna:.w varuna
+18:1 clcn_wikibot:varna:Loading varuna
+18:1 clcn_wikibot:varna: In Vedic religion, Varuna (Sanskrit Varuṇa वरुण, Malay: Baruna) or Waruna, is a god of the water and of the celestial ocean, as well as a god of law of the underwater world. A Makara is his mount. In Hindu mythology, Varuna continued to be considered the god of all forms of the water element, particularly the oceans.
+18:1 varna:^ 这才是正解
+18:2 varna:Plough: DJB hash是拿到一个串之后把hash初值乘33之后加上当前字符
+18:2 Plough:查到了
+18:3 varna:另外T2有关currying那帖看到了
+18:3 varna:T2: 你被c的闭包黑得没我惨
+18:4 T2:http://pastebin.mozilla.org/4873104
+18:4 hysw:我继续void* self...
+18:4 Plough:对了
+18:4 Plough:参数转发是org/4873104
+18:4 varna:这什么啊……根本不能用
+18:5 varna:soga
+18:5 Plough:http://gcc.gnu.org/onlinedocs/gcc/Constructing-Calls.html
+18:5 varna:啊对，就这个
+18:5 Plough:是这个？
+18:5 varna:constructing calls
+18:5 Plough:这个也不怎么好用啊……
+18:5 varna:超不好用
+18:5 Plough:23333
+18:5 Plough:自己造个VM吧
+18:6 varna:我宁可用JVM
+18:6 T2:varna, 能解释下为什么不能用么?
+18:6 varna:弄JIT我还不如耗子呢
+18:6 hysw:我回去用PythonVM算了
+18:6 T2:我真没懂
+18:6 Plough:@GIL
+18:6 varna:那个捏恥类的后端功夫好
+18:6 *varna 发明了名词「捏恥类」
+18:6 varna:啊，来了幼女！
+18:6 varna:幼女幼女！
+18:7 varna:T2: 你怎么用我那个内存池
+18:7 lhanjian joined channel
+18:7 T2:varna, 把你那个allocator封一下只接受一个size_t参数就行了啊.
+18:7 *Plough 认为Beam秒PythonVM
+18:7 Plough:T2: 怎么封装
+18:8 Plough:T2: 举个例子
+18:8 T2:Plough, 他本来是接受两个参数
+18:8 Plough:T2: 对啊
+18:8 T2:一个指定内存池的指针
+18:8 T2:一个size_t
+18:8 varna:现在我是传一个具体的内存池对象进去
+18:8 T2:我可以固定让它指向某个内存池
+18:8 varna:噗
+18:8 varna:你逗乐呢
+18:8 Plough:噗+
+18:9 hope1:对啊，怎么把内存池指针绑到函数上
+18:9 varna:内存池是满天飞的东西，你当是用户堆么
+18:9 hysw:然后再制造一层封装吧...
+18:9 hope1:或者说怎么用c实现bind_1st之类的东西
+18:9 varna:再制造封装也得有地方提供一个对象
+18:9 Plough:我现在手里几吨内存池
+18:9 Plough:怎么指定某一个
+18:9 varna:俄式装备就这好处
+18:9 lh_mouse:用 SHA2 怎么能不提 MCF
+18:9 varna:成吨的小内存池
+18:9 varna:lh_mouse+
+18:9 hysw:我还是继续用buddy-heap算了
+18:10 T2:用的时候我建一个内存池
+18:10 Plough:比如我一堆Connection
+18:10 varna:然后你怎么调分配作
+18:10 Plough:每个一个内存池
+18:10 Plough:你怎么搞
+18:10 varna:分配操作
+18:10 T2:lh_mouse, 就是因为你的sha-2丧病.
+18:10 varna:Plough: 实际上应该是一个连接上的每层过滤器和业务一个池
+18:10 varna:T2: 他那个快啊
+18:10 varna:你抄来加个协议也行
+18:10 T2:varna, 我看不懂
+18:11 varna:又不是你要懂，抄来就是了
+18:11 lh_mouse:E:\MCF\Projects\Test>.Debug32.exe
+18:11 lh_mouse:allocated   - p = 008130e0, cb = 6016, ret = 0043acea
+18:11 T2:varna, 那还不如撸个能看懂的.
+18:11 varna:噗
+18:11 hysw:内存池是必须品...
+18:11 hope1:反正GPL
+18:11 T2:反正又不指望用
+18:11 varna:算法照着写一遍就行了
+18:11 varna:用的东西得用靠谱的
+18:11 T2:我是撸来练手
+18:12 varna:另外话说回去，你怎么解决内存池的问题啊
+18:12 T2:再说hash算法已经让用户提供了.
+18:12 lh_mouse:字符串又基本重做了一遍
+18:12 *varna 有个丧心病狂的做法
+18:12 lh_mouse:if(new_cap < current_cap) realloc(new_cap * 1.5);
+18:12 T2:我想想
+18:12 varna:1.5好评
+18:12 hysw:浮点差评
+18:12 varna:1.4附近都不错
+18:12 lh_mouse:明显不会用浮点的
+18:12 varna:但是1.5比较好
+18:13 varna:因为不用浮点
+18:13 hysw:1.4 = 1*7/5 ...
+18:13 varna:除5做起来还得lea一下吧
+18:13 lh_mouse:https://github.com/lhmouse/MCF/blob/master/MCF/Core/String.hpp  #136
+18:14 varna:MCF机簧
+18:14 lh_mouse:搞了个很诡异的方法叫做 xChopAndSplice
+18:14 varna:这是什么
+18:14 lh_mouse:不过这个方法基本是万能的  啥都能干
+18:14 varna:噗
+18:14 varna:取子串？
+18:15 hysw:realloc直接remap不知道怎么样...
+18:15 lh_mouse:chop_splice(rm_begin, rm_end, sp_first, sp_third);
+18:15 iyzsong:去吃饭..
+18:15 varna:third?
+18:15 lh_mouse:这个方法嘛  有点麻烦
+18:15 lh_mouse:是的 third
+18:15 varna:hysw: remap不好，不确认zone足够
+18:15 cleamoon:logsama是我存log用的，如果有地方存了就没用了
+18:16 lh_mouse:varna, 把原来字符串的区间 [0, rm_begin) 拷贝到 [sp_first, )    [rm_end, end) 拷贝到 [sp_third, )
+18:16 Plough:话说写bot明显node.js要方便多了
+18:16 lh_mouse:根据需要自动决定存储
+18:16 T2:varna, // 用户代码
+18:16 T2:some_mpool_t * mpool;
+18:16 T2:void * user_alloc(size_t size)
+18:16 T2:{ return mp_alloc(mpool, size); }
+18:16 hysw:对于小型的就不用了,到一定大小之后还是mapping比较省一点似的...
+18:17 lh_mouse:111222333 变成  __111__333
+18:17 Plough:T2: 我怎么知道是在哪个Connection里
+18:17 varna:lh_mouse: 这个好
+18:17 Plough:T2: 而且多进程怎么办
+18:17 lh_mouse:等有了这东西基本上什么前插后插各种 replace 毫无压力
+18:17 varna:Plough: 你在逗乐么
+18:17 varna:Plough: 搞错了
+18:17 varna:T2: 你在逗乐么
+18:17 lh_mouse:gcc 开 O3 全内联一遍也没差啥
+18:18 Plough:多线程
+18:18 Plough:打错
+18:18 T2:Plough, connection 是什么?
+18:18 varna:T2: 内存池可能成吨，缓存里也得有几千
+18:18 lh_mouse:吃东西去
+18:18 varna:Plough: 我打错，不是说你
+18:18 Plough:varna: 我知道
+18:18 varna:我有个丧心病狂解法其实和这个类似
+18:19 lhanjian:T2是不是想mpool->XXX_operation？可是C好像不行、。
+18:19 varna:lhanjian: 说不定行
+18:19 varna:分配器接口要求两参
+18:19 varna:第一参指针，第二参size_t
+18:19 lhanjian:varna, 我刚想说呢……但是还是丑陋
+18:19 hope1:CALL_METHOD(mpool, vtbl, XXX_op)
+18:19 varna:不是
+18:20 T2:第一参是指向某个节点的指针还是某个链表头的指针?
+18:20 Plough:那跟void*不是差不多
+18:20 Plough:T2: 指向pool的指针吧
+18:20 varna:gen_method(_mpool_, _alloc_size_)
+18:20 varna:生成代码
+18:20 varna:不对
+18:21 varna:gen_method_of(_mpool_)
+18:21 varna:或者
+18:21 Plough:……那是啥
+18:21 varna:gen_method_from(_mpool_, _func_)
+18:21 varna:生成一个函数指针
+18:21 Plough:gen_method_from怎么搞
+18:21 varna:指向代码
+18:21 hope1:这不就是bind吗
+18:22 T2:Plough, 那不就结了?没懂,我只在某一个pool里分配去配不行么?
+18:22 varna:等等我想想这个代码怎么写
+18:22 varna:hope1: 我要生成跳板代码
+18:22 varna:T2: 不行
+18:22 hope1:哦，写opcode啊……
+18:22 varna:hope1: +
+18:22 varna:哦我知道了
+18:22 hope1:丧心病狂
+18:22 Plough:……@可移植性
+18:22 T2:varna, 那就是我对内存池的理解压根是扯淡...
+18:23 varna:mov rcx, rdx; mov rcx, _mpool_; call _func_
+18:23 varna:结了
+18:23 T2:我去读你那个码.
+18:23 T2:没看出哪里不行.
+18:23 varna:二三条指令的操作数运行时写入
+18:23 hope1:Portability is for people who cannot write new programs. —— Torvalds
+18:23 Plough:前略，天国的可移植性
+18:23 varna:T2: 告诉我内存池怎么用
+18:23 varna:我在地狱撸管子
+18:24 T2:varna, 没用过不知道.
+18:24 hysw:自己去制造芯片算了...
+18:24 T2:好吧,原来问题在这儿.
+18:24 Plough:我觉得那还不如用void*……
+18:24 varna:T2: 比如现在我有一万连接，每个连接上可能有十几个池，掌管生存期不同的对象
+18:24 hysw:貌似回头去卡尔顿大学去印刷点电路玩玩
+18:24 varna:Plough: 类型疼，我这个可以无视类型直接操代码
+18:25 Plough:不就cast一下么
+18:25 varna:而且还要封
+18:25 varna:这个可以直接生成方法实例
+18:25 T2:varna, 我先去读读看囧.
+18:25 Plough:mempool本来不也要封个struct么
+18:25 varna:但是没法自动调成员
+18:26 varna:T2: 你读不出来用法的
+18:26 hope1:.w Memory_pool
+18:26 clcn_wikibot:hope1:Loading Memory_pool
+18:26 clcn_wikibot:hope1: Memory pools, also called fixed-size blocks allocation, is the use of pools for memory management that allows dynamic memory allocation comparable to malloc or C++'s operator new. As those implementations suffer from fragmentation because of variable block sizes, it is not recommendable to use them in a real time system due to performance. A more efficient solution is preallocating a number
+18:26 T2:varna, 那怎么搞?
+18:26 Plough:struct hashtable { struct ht_mempool pool; } ht; ht.pool.alloc(ht.pool.data,size);
+18:26 hysw:METHOD_CALL(obj, method, args)
+18:26 varna:T2: 我上面那个丧失解法
+18:26 T2:varna, 一万链接?
+18:26 varna:gen_method_from(_mpool_, _func_)生成三条指令的跳板
+18:27 T2:连接?
+18:27 hysw:varna: 这...
+18:27 varna:hysw: 就是往里面填几个操作数而已
+18:28 hysw:汇编级别的操作我死一边去算了...
+18:28 T2:mlgb抽象了点
+18:28 varna:T2: 这就是恥球跟你提那个受害者参考我的trick
+18:28 Plough:struct hashtable { struct ht_mempool pool; } ht; ht.pool.alloc(ht.pool.data,size);
+18:28 Plough:这多好
+18:28 Plough:直接cast一下就成
+18:29 varna:依赖注入？
+18:29 varna:改一下
+18:29 hysw:push this; call; pop this
+18:29 varna:struct some_struct { struct some_mempool *idep_pool; ... };
+18:30 varna:依赖注入可能也成，不过果然还是操实现解我心头之恨啊
+18:30 Plough:其实就是把mempool的void*拆出来
+18:30 hysw:还是传个闭包之类的算了...
+18:30 Plough:省得还得手动封装
+18:30 varna:hysw: 有闭包我还费这事
+18:30 Plough:hysw: C哪有闭包……
+18:31 hysw:手工...
+18:31 varna:噗
+18:31 varna:实际上如果只有一参的上下文，可以用我那个闭包
+18:31 *Plough 感觉一个比一个丧病
+18:31 varna:保证在gcc/lk/x86-64上正确
+18:31 varna:不对
+18:31 varna:一层
+18:31 varna:多于一层才会错
+18:32 hysw:现在写的函数都是ret func(void* self, ...)
+18:33 hysw:C++这坑爹连vtable都没法改...
+18:33 varna:虚表是实现
+18:33 varna:而且怎么模不到虚表的，不是顺着*cx就上去了么
+18:33 varna:H.B.Flankoi 我只希望她拥有一把小小的伞，撑在自己和良化头顶，让雨打湿他们两人的左肩和右肩，而她还是能那样子笑着。
+18:33 hope1:用虚表实现的应该都会提供builtin改vtbl?
+18:34 varna:g++有么
+18:34 hysw:我还是自己实现虚表算了...
+18:34 Plough:改vtable干啥
+18:34 varna:噗
+18:34 hope1:原文是谁
+18:34 varna:hope1: 矮人
+18:34 varna:噗
+18:34 varna:hope1: 爱人
+18:34 T2:擦擦擦, 我还是先把hashtable搞出来
+18:34 varna:注意这里是H.B.Flankoi不是K.M.Flankoi
+18:35 varna:噗噗噗，新教徒的复活节电影party
+18:35 T2:内存池先去shi吧.
+18:35 hysw:Plough: 动态生成一些类...
+18:35 varna:hysw: 好评
+18:36 Plough:……
+18:36 varna:对了红旗酱
+18:36 hysw:反正函数指针什么的将就用一下算了
+18:36 Plough:?
+18:37 varna:你和米库酱组成爱丽丝药娘团吧
+18:37 Plough:没兴趣
+18:37 varna:药娘哦
+18:37 hysw:有点想直接实现反射...
+18:37 varna:hysw: 你会搞成gobject的，小心
+18:37 hysw:不过懒得去重新制造Java...
+18:37 Plough:那是啥
+18:38 varna:Plough: 吃药的伪娘
+18:38 Plough:没兴趣*2
+18:38 varna:能长出欧派的，参考百度药娘吧
+18:38 T2:话说void*转化成char*然后求值,终止条件判断'\0'会死吧?
+18:38 hysw:歇会去... 回头还得复习厨师给的的笔记...
+18:38 Plough:都伪娘了为啥还要欧派
+18:38 varna:AC还有个基佬的人生第一次告白献给了药娘
+18:39 T2:输入类型不确定啊囧.
+18:39 varna:他以为是妹子，结果233了
+18:39 Plough:233333
+18:39 hope1:T2, 没办法保证不会死
+18:39 varna:没人保证你能活
+18:39 T2:hope1, 似乎是真没什么办法.
+18:39 varna:char *如果是miko-styled string你也未必能活
+18:39 T2:然后long可能会溢出
+18:39 T2:别的倒没什么了.
+18:40 varna:你在合计什么
+18:40 T2:我在合计有没有更合理点的办法
+18:40 varna:散列函数让用户提供，你给出几种可用的散列就是了
+18:40 varna:串提供一种，整数提供一种，用户可以用
+18:41 T2:嗯
+18:41 varna:都不喜欢就用自己的
+18:41 varna:你不是读过GHashTable么
+18:41 T2:是啊,那个玩意的direct_hash完全不负责任的.
+18:42 varna:你是用户的爹么
+18:42 T2:好吧我懂了嗯
+18:45 hope1:chrome就这样，我认为这网站不安全所以你不能进去，还没法跳过……
+18:46 lhanjian:hope1, 海棠的转进好匪夷所思
+18:47 varna:亲爱的用户逻辑
+18:47 varna:而且是HOTate
+18:47 varna:HOHOHO~HOTate
+18:47 varna:温泉什么的、足浴什么的、捏手什么的
+18:47 T2:算导138页的图里的 s = A * 2^w 有误，应该是  s = A / 2^w 
+18:47 varna:啊哈哈
+18:48 T2:啊我错了
+18:48 T2:他没错
+18:48 hope1:lhanjian, 无所谓了，发完才发现似乎不对……
+18:48 T2:是我逗比了.
+18:48 varna:HOHOHO
+18:48 T2:日
+18:48 T2:脑袋不能用了
+18:48 T2:吃饭去先.
+18:49 varna:啊，今天龙傲天出三话了
+18:49 lhanjian:varna, 正在看男猪装X
+18:49 varna:他只是脸上长了个X而已，不要黑他
+18:50 clcn_logger joined channel
+18:50 lhanjian:看了他这是纯粹的“身体技能”。立马让我联想到了起点魔法设定中常出现的“中华古武术“设定……
+18:50 Plough:啊手滑了
+18:50 varna:他那是撸多不慎打出模糊拳了
+18:51 Plough:用Scheme写Truth Available如何
+18:51 varna:不好
+18:52 varna:我目前只推荐开放帖子渲染接口
+18:52 Plough:主要是我觉得Python很难写出漂亮的代码……
+18:52 Plough:try:try:try:try:try:try:try.......
+18:52 T2:))))))))))))
+18:52 tsuki:yinwang复活了1／6血
+18:52 varna:py?
+18:52 varna:2333
+18:53 varna:用Perl
+18:53 Plough:weak type
+18:53 Plough:而且不是会死么
+18:53 varna:不会的
+18:53 varna:你看我都死多少次了
+18:53 varna:我嚓
+18:53 Plough:看着你死感觉好有说服力
+18:53 lh_mouse:看你死么
+18:54 xxxxxxxx_:最多就是分不清代码和睡着时拍出来的东西的差别
+18:54 Plough:所以太吓人了
+18:54 varna:yinwang终于做了点建设性的工作
+18:54 lhanjian:OP的空耳233
+18:55 varna:至于yinwang那个OS设计，其实我比较赞同
+18:55 hope1:yinwang怎么了
+18:55 Plough:今天用node.js把clcn_logger写出来以后瞬间无比想扔Python
+18:55 varna:虽说他过分强调规模而接近multics
+18:55 varna:hope1: 博客里有一篇教新人写解释器的教程
+18:56 cleamoon:其实数据是结构式的，然后互相传数据结构我一直没搞懂怎么做到的......
+18:56 Plough:pack然后传啊
+18:56 varna:cleamoon: 整个VM必须统一
+18:56 varna:libOS = xxVM, 然后在这上面coreutils变成函数
+18:57 varna:一个比较接近这想法的实现是BEAM和erlang shell
+18:57 varna:实际上是「模块化的演算运行时」
+18:57 hope1:varna, 12年的那个？
+18:57 cleamoon:vm统一不就是强奸用户吗
+18:58 xxxxxxxx_:为啥会?
+18:59 varna:「所以函数式语言只要支持 continuation，就会很容易的实现大并发，也许还会更高效，更好用一些。」噗
+18:59 varna:cleamoon: vm和libc有差别么
+19:0 varna:continuation不是process, 两者有显然差别
+19:0 varna:yinwang该补课去了
+19:0 cleamoon:好吧... 我觉得libc就挺强奸的
+19:0 Plough:或者我还是转投node.js算了
+19:1 varna:证明和原因这篇还不错
+19:1 varna:cleamoon: 你要什么，exokernel?
+19:2 varna:H.B.Flankoi 大跃进时代各地盛产人民诗人，山东某地农民大作：一手拿着煎饼吃，一手拿着人民日。为押韵和字数省去了最后的“报”字，堪称千古佳作。
+19:2 varna:23333
+19:2 cleamoon:exokernel
+19:3 lhanjian:龙傲天兄控妹控的丧心病狂啊
+19:4 varna:那哪是兄控
+19:4 varna:那是我好骚啊来干我啊的起点娘
+19:4 lhanjian:哪有，我大起点的比这个刀剑神域的兄控好读了
+19:4 lhanjian:哪有，我大起点的比这个刀剑神域的兄控好多了
+19:4 Plough:haml倒是不错，也有erlang port
+19:4 xxxxxxxx_:起点娘?
+19:4 varna:起点被龙傲天推的女角
+19:4 Plough:问题是你们为啥就这么喜欢用缩进代表scope啊？
+19:5 varna:这是逗比啊
+19:5 lhanjian:Plough, 先统一你们的行为，再统一你们的思想
+19:6 varna:理解的要求值，不理解的也要求值，在求值中加深理解。—— Perl 5
+19:7 xxxxxxxx_:先统一你们的尺寸 再统一你们的松紧度
+19:7 varna:然后早2螺午2螺晚2螺
+19:7 varna:爱丽丝药娘团诞生了！
+19:9 cleamoon:造(bao)福(fu)社会  http://photo3.fanfou.com/n0/0a/jc/77_31068.jpg
+19:9 xxxxxxxx_:http://puu.sh/8g5J9.jpg http://puu.sh/8g5K4.jpg 感觉我快要变成钱赞企了
+19:10 varna:噗
+19:10 varna:猫熊不是尿黄色的么
+19:10 xxxxxxxx_:我还以为是三口支
+19:11 cleamoon:擦，好运气
+19:11 xxxxxxxx_:熊猫屁股那边是屎黄色?
+19:11 cleamoon:个体值报表
+19:11 xxxxxxxx_:刷了两盒蛋....
+19:11 xxxxxxxx_:放生无数...
+19:12 cleamoon:经常带着5个蛋四处跑表示正常...
+19:13 hope1:5个？
+19:13 xxxxxxxx_:哈哈哈哈哈哈
+19:13 cleamoon:在说口袋妖怪
+19:14 xxxxxxxx_:还得刷努力值的样子.....
+19:15 cleamoon:那个好办
+19:15 zwindl joined channel
+19:15 xxxxxxxx_:据说那个改版有地方可以刷努力值....
+19:15 xxxxxxxx_:但是刷东西总是很痛苦的....
+19:17 xxxxxxxx_:http://puu.sh/8g639.png 另外还需要进化一次....
+19:34 cleamoon:刷努力值有不少好地方，改版改烂了就尿了
+19:38 xxxxxxxx_:据说是有专门的地方适合刷努力值
+19:39 xxxxxxxx_:我直接抓土豪犬拿金珠子换药剂先灌了几瓶
+19:41 xxxxxxxx_:然后没钱了
+19:45 cleamoon:噗
+19:46 cleamoon:看看那几个只有1到3种玩意的地方，那边一般都是一种努力值
+19:47 varna:啊呀呀，旁边的新教徒开始洗脑了
+19:47 varna:真是蛋疼
+19:49 varna:仿佛他们的神造了一个不听话的世界，然后要把这个世界用一〇七炮洗一遍泄愤一样
+19:49 varna:这神也真够无能的了
+19:49 xxxxxxxx_:新教徒是指?
+19:50 varna:国内派别不定的路德派教徒
+19:51 xxxxxxxx_:真是宗教???
+19:51 varna:看上去是
+19:51 lh_mouse:百度搜 911  第三条
+19:51 lh_mouse:百度这傻逼 233
+19:51 varna:跟我在别处见到的官方认定的新教徒表现差不多
+19:51 varna:我嚓
+19:51 varna:黄网！
+19:52 lh_mouse:这网站我记得我初中时候就有了
+19:52 varna:噗，一堆广告，真不敬业
+19:52 Plough:@净网行动
+19:52 varna:……我只知道五月天
+19:52 xxxxxxxx_:百度锟斤拷吧
+19:52 T2 joined channel
+19:52 Plough:p2p多好用
+19:52 varna:我常年冲进那吧
+19:52 varna:悲剧的编码
+19:52 Plough:或者百度图片
+19:52 Plough:百度图片:触手
+19:52 varna:百度图片c++
+19:53 varna:以前搜到的第二副图就三点全露
+19:53 varna:虽然毫无撸点
+19:54 varna:操，吐核
+19:55 xxxxxxxx_:去百度图片搜索双头龙 出来的肯定是双头龙
+19:55 xxxxxxxx_:各种双头龙
+19:55 varna:ok
+19:55 varna:我实在受不了这些新教徒
+19:56 varna:信仰是个人自由，以无知无能为荣并且没逻辑实在是人类之耻
+19:57 varna:拿着他们编入了以斯帖记的圣经去愚民吧
+19:59 xxxxxxxx_:果然 去百度图片搜索圣水能搜到这个http://images.17173.com/2012/news/2012/05/23/lj0523rb06s.jpg
+19:59 Plough:不是还有重现正太菊花味道的么
+19:59 varna:只身潜入那儿童设施/少女的圣水只饮一杯/绝对变态的那些幼女照/在微博at残音P
+20:0 varna:千本的樱花/盛开在街角下/而你的程序呢/还不能逆运行
+20:0 xxxxxxxx_:百度图片里搜索日暮里结果我就跪了.....
+20:1 Plough:http://tieba.baidu.com/photo/p?kw=%B3%C1%BB%A8%D7%ED%D3%E3&flux=1&tid=1948702899&pic_id=a8422af790529822753b2b36d7ca7bcb0b46d498&pn=1&fp=2&see_lz=1
+20:1 varna:噗
+20:1 varna:全是自慰棒……
+20:1 varna:啊不对，还有几个假Y道
+20:1 varna:Plough: 我觉得肛肠吧那些哥们该上了
+20:2 Plough:2333
+20:2 varna:我稍稍有点想来一发息子气……
+20:3 varna:虽然日内瓦公约禁止使用息子气，不过杀虫应该是没问题的
+20:3 xxxxxxxx_:http://puu.sh/8g7Tp.jpg <- 窗口大小导致我看到了这样的东西
+20:3 varna:噗
+20:4 varna:肛了王
+20:5 xxxxxxxx_:http://i2.hoopchina.com.cn/blogfile/201101/13/129493203453342.jpg 这图....
+20:5 varna:噗
+20:5 varna:DARK 四天王
+20:5 varna:而且米库居然有胸
+20:7 xxxxxxxx_:搜索新日暮里 http://puu.sh/8g826.jpg 总感觉这顺序是故意的
+20:15 varna:http://pastebin.mozilla.org/4874343
+20:15 varna:^ 信令我实在想不出来了
+20:16 varna:其实我觉得这些半吊子教徒该好好读下St.保罗的书信
+20:16 varna:与其满嘴放炮，不如认真做人
+20:18 varna:顺便放弃他们那个造了人还没造好的全知全能的神
+20:19 hope1:那些全民信教的国家是个什么情况
+20:19 xxxxxxxx_:直接过去让他们稍微安静一些不就好了
+20:20 varna:hope1: 信教不是问题，脑残是问题
+20:20 varna:xxxxxxxx_: 我一个人面对二十多无脑信徒，何必呢
+20:20 varna:以前已经噗过一个主教了
+20:20 cleamoon:主教把你烧死了?
+20:21 varna:不可能，主教只会斜着走
+20:21 varna:我站他面前就打不到了
+20:21 Plough:两个主教并肩站
+20:21 hope1:脑残比例呢？
+20:21 varna:不知道
+20:22 varna:我没去过国外，不过我觉得讲道都到处破绽的教徒简直就是亵渎
+20:22 varna:以流行的说法来说就是黑得漂亮
+20:22 varna:Plough: 站侧面
+20:22 xxxxxxxx_:那是因为你没有信仰
+20:22 varna:并非如此
+20:23 Plough:varna: 退一步就成
+20:23 varna:我就是因为受不了脑残才懒得受洗的
+20:23 xxxxxxxx_:你去问他们他们肯定这么回答你
+20:23 varna:顺便使徒信经里让我信什么圣而公之教会也见鬼去
+20:23 varna:我宁可信总参二部特种战术局的七百张氏度
+20:24 varna:还有先进合格的中国高铁
+20:25 xxxxxxxx_:大家信王勇平 王师傅吧
+20:26 varna:三途の鐵道案内人 王勇平
+20:26 hope1:原来是宣传部部长
+20:27 varna:信用を操る程度の能力 
+20:29 xxxxxxxx_:和信徒众说 xx主教比起你们不知道高到哪去了 我和他谈笑风生
+20:29 xxxxxxxx_:23333
+20:29 varna:刚才忘了makecontext之前先得getcontext
+20:30 varna:xxxxxxxx_: 不该是233，这里必须是蛤蛤
+20:30 varna:不对
+20:30 varna:这里我应该伪装成天主教徒对新教徒发动圣战
+20:32 varna:对了我这里有个捏耗子的视频
+20:32 xxxxxxxx_:然后再去天主教那边冒充新教徒 ?
+20:32 varna:xxxxxxxx_: 没找到天主教
+20:32 varna:而且天主教据说维护大批特种部队，我打不过他们
+20:33 varna:ok
+20:33 varna:http://pan.baidu.com/s/1sjDCQRj
+20:33 varna:^ 大家快看捏耗子啊
+20:33 varna:稀烂小耗
+20:33 xxxxxxxx_:冒充完就跑啊 拉野嘛
+20:34 varna:今天的鞋不适合跑路，太沉了
+20:34 hope1:绿教更拉仇恨吧
+20:34 varna:之前一双登山鞋被我刷了还没干
+20:34 varna:不对
+20:34 varna:我把最关键的忘了
+20:34 *varna 安拉胡阿克巴！安拉胡阿克巴！
+20:35 *varna 从裆下掏出把AKMSU就开始撸
+20:36 xxxxxxxx_:看不清有没有丁丁....
+20:36 xxxxxxxx_:都要被揉成球了
+20:36 varna:揉小耗
+20:38 varna:噗，搜到一坨卖specter ir的伙计在打折
+20:39 cleamoon:前几天有几个教徒找我老爸，一开始就说所有好事都是上帝干的，所有坏事都是撒旦干的，信上帝只能信耶稣，其他都是撒旦，顺便杀光犹太人，然后老爸凌乱了....
+20:39 xxxxxxxx_:打他呀
+20:40 xxxxxxxx_:揍他一顿说对不起这是撒旦干的
+20:40 varna:杀光犹太人2333
+20:40 cleamoon:然后被烧掉吗
+20:40 varna:xxxxxxxx_: 然后上帝和撒旦就开始对战了
+20:40 varna:最后撒旦被圣战，绅士回国
+20:40 varna:我们把绅士爆了
+20:40 varna:以上
+20:41 varna:啊，教徒终于走了
+20:41 xxxxxxxx_:打人是合法的?
+20:41 hope1:耶稣他爸是撒旦？
+20:41 varna:我们至今讳言耶稣是怎么来的这个问题
+20:42 hope1:xxxxxxxx_, 你这撒旦教徒
+20:42 cleamoon:耶稣是自己爆了身为自己的老爸的自己后自己生下来的
+20:42 varna:之前因为把天国大门承包给天朝人而天朝人又二包给阿三哥而名声大噪的St.彼得表示他什么都不知道，只会打渔
+20:43 varna:Trinity是我见过的诡异概念之一
+20:43 xxxxxxxx_:撒旦和大菠萝有关么?
+20:43 varna:Diablo就是魔鬼的意思吧
+20:43 varna:不过大菠萝是好人
+20:43 varna:他从不杀捡尸的玩家
+20:43 cleamoon:baal是什么意思？
+20:43 varna:旧约Baal都中多少枪了
+20:44 xxxxxxxx_:我只觉得光看2的剧情天使们怎么看怎么黑.....
+20:44 varna:你去看列王纪，以色列动辄大批信Baal的
+20:44 varna:然后被圣战，然后打回来，然后又被打回去
+20:44 varna:中间还有动用先知两方对着跳大神的
+20:44 cleamoon:我觉得d2就是怪物们自己舒舒服服的活着，从不进攻人类，但是人类派一个人把他们都灭了
+20:44 hope1:cleamoon, 话说杀光犹太人不会被举报？
+20:44 varna:结果Baal方的先知因为不是处男所以搓不出火球然后被杀光了
+20:45 xxxxxxxx_:cleamoon 也不是
+20:45 cleamoon:hope1, 没那法律，举报也没用
+20:45 varna:上面的故事可以在列王纪里跟先知以利亚相关的部分找到
+20:45 cleamoon:他们是明目张胆的这么说
+20:45 varna:以前有哥们遇到3K党
+20:45 xxxxxxxx_:d2的修道院本来就是新手村那群人的
+20:45 varna:3K党表示要联合全世界的欧美人和亚洲人杀光黑鬼
+20:46 varna:cleamoon: 人类有两个人
+20:46 cleamoon:那只是新手村的人那么说，我可没见到怪物进攻大本营
+20:46 xxxxxxxx_:我觉得对亚洲人来说先杀光欧美人好处多....
+20:46 hope1:蒙古人？
+20:46 varna:先灭了撸西亚
+20:46 varna:他们的东方MAD太单调了
+20:47 varna:而且我受不了游戏里AK枪族比AR枪族差所以我不敢给精锐部队装备AKS-74U的现状
+20:47 varna:装了皮轨加了北约系列瞄具也毫无改善
+20:51 xxxxxxxx_:cleamoon 毕竟一代主城和铁匠都成那样了
+20:51 varna:铁匠大幅度增强
+20:52 varna:以前铁匠可是不会伤害加深的，这可是主力诅咒
+20:52 xxxxxxxx_:那铁匠也死了
+20:53 varna:nec可以不学其他各种诅咒但不能不学伤害加深
+20:53 varna:其实故事是这样的
+20:53 varna:天堂和地狱希望通过大国风度的方式解决问题，于是跑到了SANctuary
+20:54 varna:结果后者被镇压两次，第三次反扑的时候找错了复活母体，结果大菠萝长出了欧派，羞耻而死
+20:54 xxxxxxxx_:噗
+20:54 xxxxxxxx_:据说菠萝还是没死
+20:54 lhanjian joined channel
+20:55 varna:再看一眼这壮丽的天堂吧，英普瑞斯
+20:55 varna:不久它将在我的欧派中间化为灰烬
+20:55 varna:死透了吧
+20:55 varna:soulstone只是个计谋，本体都长出欧派了还是会死的
+20:56 varna:毕竟决战是在天堂打的，而且打成了魂斗罗
+20:56 varna:噗
+20:56 varna:吐核了……
+20:57 varna:corruption
+20:58 varna:噗，valgrind给出了截然不同的结论
+20:58 xxxxxxxx_:>>>Q：所以迪亚布罗永远不会死?
+20:58 xxxxxxxx_:>>>　　Brian：是的，以某些形式来说他是存在的。你可以击败恶魔，但是你无法真正的消灭牠(You can't kill devil, but you can keep it away)。
+20:59 xxxxxxxx_:>>>Q：既然有坏的天使，那未来是否也会有好的恶魔?
+20:59 xxxxxxxx_:>>>　　Brian：哈哈哈(笑)，没有(No)！
+20:59 xxxxxxxx_:这是偏见 从种族设定上就说明天使和恶魔根本没什么不同了
+21:0 varna:偏见+
+21:3 xxxxxxxx_:人类和恶魔应该能达成某种现实的要死的协定 比天使全靠装逼忽悠人还强点 削弱人类的石头也是天使干的
+21:3 varna:操，我似乎搞错什么了
+21:4 xxxxxxxx_:?
+21:4 varna:从limbo回来的时候揉程死了一个
+21:5 Plough: limbo?
+21:5 varna:栈帧自回收上下文
+21:6 Plough:Soga
+21:6 varna:噗噗，似乎某处没锁
+21:11 varna:果然是没锁导致的corruption
+21:11 varna:不过似乎出了别的错误
+21:13 varna:不对
+21:13 varna:又炸了
+21:14 code_new joined channel
+21:20 hope1:天使是主教，恶魔是异端，是撒旦教徒
+21:23 varna:出现了奇怪的现象
+21:27 varna:解决
+21:27 varna:撸多了
+21:28 varna:本来是从多写一读队列A里快速取出所有协程扔另一个队列的
+21:28 varna:结果忘删了
+21:29 hope1:233
+21:29 varna:其实说快速也不够快
+21:29 varna:比较快的方法是直接交换两个队列
+21:30 varna:等我脑袋清醒的时候再想想一致性能不能保持
+21:30 varna:应该是没问题
+21:31 varna:这次的新揉程采用了几个新的花样
+21:31 varna:栈帧自回收类似viphyr和捏程
+21:31 varna:不过协程创建的部分改成了向被选中的内核线程发创建请求
+21:32 varna:这样保证协程队列本身是串行的，调度的时候不用锁
+21:32 varna:然后给每个内核线程加了一个epoll, 用来做阻塞IO和条件锁
+21:33 varna:总之勉强动起来了
+21:33 varna:闪，大家晚间愉快
+21:45 whocares_2 joined channel
+21:57 clcn_logger joined channel
+22:2 silencly07 joined channel
+22:36 condy:大家一定要快乐地玩耍哦！
+22:59 cleamoon_ joined channel
+23:14 condy joined channel

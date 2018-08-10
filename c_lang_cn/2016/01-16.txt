@@ -1,0 +1,369 @@
+01:55 Youmu quit:Quit: Connection closed for inactivity
+02:00 Youmu joined channel
+02:14 cleamoon quit:Ping timeout: 250 seconds
+02:17 whocares_2 joined channel
+03:05 Meow-J quit:Quit: Connection closed for inactivity
+03:19 lh_mouse quit:Ping timeout: 256 seconds
+04:15 Youmu quit:Quit: Connection closed for inactivity
+05:01 hope1 quit:Ping timeout: 250 seconds
+05:57 cleamoon joined channel
+06:26 cleamoon quit:Ping timeout: 255 seconds
+06:30 cleamoon joined channel
+06:45 cleamoon quit:Ping timeout: 255 seconds
+06:49 cleamoon joined channel
+07:32 cleamoon quit:Ping timeout: 255 seconds
+07:42 cleamoon joined channel
+08:06 sou_ joined channel
+08:06 sou_ quit:Read error: Connection reset by peer
+08:22 sou_ joined channel
+08:55 tutu_wind joined channel
+08:55 tutu_wind: morning ~
+09:17 xxxxxxxx quit:Quit: Leaving...
+09:54 Youmu joined channel
+10:28 lh_mouse joined channel
+10:39 tutu_wind: lh_mouse: 摸摸头~
+11:38 lh_mouse: tutu_wind, QAQ
+11:39 condy: lh_mouse: 摸头
+11:41 cleamoon quit:Ping timeout: 255 seconds
+11:52 tutu1234 joined channel
+12:18 tutu1234 quit:Ping timeout: 256 seconds
+12:24 Mokou joined channel
+13:26 lh_mouse: condy, 反摸！
+13:27 condy: O.O
+13:32 xxxxxxxx joined channel
+14:04 lh_mouse: geordi, { foo f; cout <<(1 < f); } struct foo { friend bool operator<(int, const foo &){ return true; } };
+14:04 geordi: true
+14:11 qs joined channel
+14:12 qs: 头回玩儿IRC，有点鸡动，有银迎接没？
+14:14 condy: geordi: << "qs 好棒！"
+14:14 geordi: qs 好棒！
+14:17 lh_mouse: geordi, { foo f; f.check(); } struct foo { void do_check() & { cout <<"lval"; } void do_check() && { cout <<"rval"; } void check(){ do_check(); } }
+14:17 geordi: error: expected ';' after struct definition
+14:17 lh_mouse: geordi, { foo f; f.check(); } struct foo { void do_check() & { cout <<"lval"; } void do_check() && { cout <<"rval"; } void check(){ do_check(); } };
+14:17 geordi: lval
+14:17 lh_mouse: geordi, -r { foo().check(); }
+14:17 geordi: lval
+14:27 qs: 大家都是LINUX下C开发的老猿吗？
+14:28 cleamoon joined channel
+14:29 lh_mouse: qs, ヲ不思。
+14:40 * tutu_wind 是渣猿目前。。。
+14:40 tutu_wind: qs,^
+14:40 qs: 好吧
+14:41 qs: IRC服务器一般大家都连国外的吗？
+14:49 lh_mouse: geordi, { unique_ptr<int, d1> p1; unique_ptr<int, d2> p2; cout <(p1 == p2); } struct d1 { void operator()(int *){ } } struct d2 { void operator()(int *){ } }
+14:49 geordi: error: expected ';' after struct definition
+14:49 lh_mouse: geordi, { unique_ptr<int, d1> p1; unique_ptr<int, d2> p2; cout <(p1 == p2); } struct d1 { void operator()(int *){ } }; struct d2 { void operator()(int *){ } };
+14:49 geordi: error: no match for 'operator<' in 'cout < operator==<int, d1, int, d2>(p1, p2)' (operand types are 'ostream {aka ostream}' and 'bool')
+14:49 lh_mouse: geordi, replace < with <<
+14:49 geordi: error: String `<` occurs multiple times.
+14:49 sou_ quit:Ping timeout: 240 seconds
+14:49 lh_mouse: geordi, replace < after cout with << 
+14:49 geordi: true
+14:49 tutu_wind: O日
+14:50 tutu_wind: Or2
+14:52 * lh_mouse 发现 tutu_wind 撅起了屁股。
+14:53 qs: 俺们不好这口 tutu_wind 不要这样
+14:55 cleamoon quit:Ping timeout: 255 seconds
+14:56 lh_mouse: qs, freenode 没有在中国的服务器。
+14:57 qs: 那你一般是怎么选择服务器的？
+14:57 qs: 头回玩感觉 晕晕的
+14:58 cleamoon joined channel
+14:59 lh_mouse: qs, chat.freenode.net 是轮转的。
+14:59 lh_mouse: 你可以查看 freenode 的网站。  
+14:59 lh_mouse: http://freenode.net
+15:06 tutu_wind: lh_mouse: 喵 ~
+15:07 lh_mouse: tutu_wind, 吃鱼！
+15:07 * lh_mouse slaps tutu_wind around a bit with a large trout
+15:15 tutu_wind: lh_mouse: 药丸子
+15:25 Youmu quit:Quit: Connection closed for inactivity
+15:28 lh_mouse: tutu_wind, 把屁股撅起赖。
+15:36 cleamoon quit:Ping timeout: 255 seconds
+15:38 wlemuel joined channel
+15:45 tutu_wind: lh_mouse: 不撅
+15:58 iyzsong: 0 0
+15:59 condy: iyzsong: 好久不见
+16:09 * iyzsong 没脸见人 /o/
+16:09 condy: iyzsong: 为啥。。
+16:09 tutu_wind: iyzsong: 为啥啊
+16:09 tutu_wind: iyzsong: 摸摸头~
+16:09 iyzsong: 在家睡大觉~
+16:13 tutu_wind: OuO
+16:15 qs quit:Quit: Leaving
+16:15 qs joined channel
+16:17 cleamoon joined channel
+16:40 xxxxxxxx quit:Quit: Leaving...
+16:50 Meow-J joined channel
+16:50 tutu_wind: condy: UI弄好了，对应的.h存在哪里？
+16:51 Youmu joined channel
+16:52 tutu_wind: Youmu: 捏
+16:52 Youmu: X 已崩
+16:53 tutu_wind: Youmu: 换回awsome吧
+16:53 cleamoon: orz
+17:07 tutu_wind: lh_mouse: 小耗，多重继承是不是不推荐用？
+17:14 xxxxxxxx joined channel
+17:15 cleamoon_ joined channel
+17:19 cleamoon quit:Ping timeout: 250 seconds
+17:30 moebooooooot joined channel
+17:38 moebooooooot: 同学们好！
+17:42 iyzsong: moebooooooot: o.o
+17:44 moebooooot joined channel
+17:44 moebooooot: anyone here?
+17:44 moebooooooot quit:Ping timeout: 252 seconds
+17:48 iyzsong: moebooooot: what are you?
+17:49 moebooooot: I have a question. I have CentOS 7 server, installed Python 2.7.5 and Python 3.3.2 on it. Then I installed mysql-connector-python (from yum install). When i run Python 2 and use: "import mysql.connector", everything is ok. But with Python 3 i have an error:
+17:49 moebooooot: ImportError: No module named 'mysql'. Can someone help to solve this issue? Thanks.
+17:50 iyzsong: moebooooot: I think you only install the python2 version,  is there a mysql-connector-python3 for it?
+17:52 moebooooot: no package mysql-connector-python3 available
+17:55 iyzsong: it look like oracle doesn't support python3 with its mysql-connector-python, you might want to install other python modules. (like mysqlclient, PyMySQL).
+18:03 moebooooot quit:Ping timeout: 252 seconds
+18:14 qs quit:Quit: Leaving
+18:16 lh_mouse: tutu_wind, 哪个傻逼说的。
+18:21 zcy joined channel
+18:21 lh_mouse: zcy, meow.
+18:22 lh_mouse: 拉了一个新人过来。
+18:22 zcy: 哈哈
+18:22 zcy: 这个频道是？
+18:23 lh_mouse: zcy, 这里是各类编程黑科技和东方、舰娘、动漫厨的频道。
+18:23 zcy: 黑科技。。。
+18:23 zcy: 感觉黑暗料理的味道
+18:23 zcy: 能给个+么
+18:24 zcy: 66666
+18:24 lh_mouse: 对了，新人应该爆照的。
+18:24 zcy: 我勒个去
+18:24 zcy: 我没罩啊
+18:25 lh_mouse: 对了，ヲ提一个事情，正如 topic 里说的，这个频道有 log 的。
+18:25 lh_mouse: 等会。
+18:25 lh_mouse: Mokou, 你的 log bot 呢？
+18:26 zcy: log是日志么 有什么用
+18:26 lh_mouse: 消息记录。
+18:26 zcy: 就是说 要小心说话咯
+18:26 lh_mouse: 本意不是如此。不过是为了方便查阅。
+18:27 zcy: 还不错  我自己的频道我都不知道怎么设置log
+18:27 lh_mouse: 副作用之一就是，尽量不要讨论写敏感的话题，否则整个频道都会跟着倒霉。
+18:27 zcy: 没有这方面的资料
+18:27 lh_mouse: 自己写 bot 啊。
+18:27 zcy: 额 我都没有相关资料 百度都找不到
+18:27 Mokou: lh_mouse: 在阿
+18:27 zcy: 我的频道一般工作时候挂着 同事和朋友会闲聊几句
+18:28 Mokou: 啊*
+18:28 lh_mouse: 啊♂
+18:28 FrankHB: 啊♂
+18:28 FrankHB: ...
+18:28 * lh_mouse slaps FrankHB around a bit with a large trout
+18:28 Mokou: 冒出来个球
+18:28 zcy: 有相关的资料吗 我打算弄个在我的频道
+18:28 zcy: 不过这个频道好难记啊  好长的名字
+18:28 lh_mouse: 照着 RFC1459 写吧。
+18:28 lh_mouse: 当然需要一个 VPS。
+18:29 lh_mouse: （如果你希望一直挂着的话。）
+18:29 zcy: 晕  我是小白- -
+18:29 zcy: 这么高深。。。
+18:29 lh_mouse: 冒出来一个♂球。
+18:29 lh_mouse: 哦不对。
+18:29 lh_mouse: 冒出来一个○。
+18:30 lh_mouse: zcy, 阁下做什么工作的？
+18:30 zcy: Ih_mouse 具体点 咋弄  百度不怎么好赵
+18:30 zcy: 我小白领
+18:30 zcy: 不是IT的
+18:31 zcy: 因为公司网络被IT禁掉了，不能上别的 所以只能上IRC 聊聊天
+18:31 Mokou: zcy: 真想弄个我那样的bot的话，具体点恐怕得跟你讲上几天
+18:31 lh_mouse: zcy, 第一个字母是 L 。
+18:31 zcy: 。。。
+18:31 zcy: 我很虚心0.0
+18:32 lh_mouse: ヲ认为这是一个兜售 poseidon 的大好机会。
+18:32 lh_mouse: （笑）
+18:32 lh_mouse: zcy, 你有一些语言的编程基础吗？
+18:32 Mokou: 卖卖卖
+18:32 zcy: no...
+18:32 lh_mouse: 什么？ Mokou 同意出售自己的❀了？
+18:32 zcy: 感觉难了
+18:33 lh_mouse: zcy, 没编程基础的话可能就比较难了。
+18:33 zcy: 重口味- -
+18:33 Mokou: lh_mouse: 不，我是鼓动你兜售
+18:33 FrankHB: 没禁IRC是什么姿势。
+18:33 lh_mouse: 应该只是端口。
+18:34 zcy: 可能吧
+18:34 zcy: 不知道为啥可以上IRC
+18:34 zcy: 微信qq还有一些网页都进不了
+18:35 lh_mouse: 果然。
+18:42 lh_mouse: geordi, -c { ns::foo f1; use(f1); } namespace ns { struct foo { friend void use(foo){ } }; }
+18:42 geordi: Success
+18:42 lh_mouse: geordi, -c { ns::foo f1; use(f1); } namespace ns { struct foo { friend void use(foo){ } }; } using ns::use;
+18:42 geordi: error: 'ns::use' has not been declared
+18:43 lh_mouse: geordi, -c { ns::foo f1; ns::use(f1); } namespace ns { struct foo { friend void use(foo){ } }; } using ns::use;
+18:43 geordi: Same error.
+18:43 lh_mouse: geordi, erase using ns::use;
+18:43 geordi: error: 'use' is not a member of 'ns'
+18:43 lh_mouse: geordi, replace friend with friend inline
+18:43 geordi: Same error.
+18:45 lh_mouse: 7 Such a function is implicitly an inline function (7.1.2). A friend function defined in a class is in the (lexical)
+18:45 lh_mouse: scope of the class in which it is defined. A friend function defined outside the class is not (3.4.1).
+18:45 lh_mouse: 坑爹……
+18:46 FrankHB: 煋。
+18:46 lh_mouse: FrankHB, 这个到底算 namespace scope 还是 is in the scope of the class。
+18:47 FrankHB: 外面就是namespace scope了（不算nested class的话）。
+18:48 lh_mouse: 按第六条的规定就是 namespace scope。
+18:48 lh_mouse: 7 Such a function is implicitly an inline function (7.1.2). A friend function defined in a class is in the (lexical)
+18:48 lh_mouse: scope of the class in which it is defined. A friend function defined outside the class is not (3.4.1).
+18:48 lh_mouse: 不对。
+18:48 lh_mouse: 6 A function can be defined in a friend declaration of a class if and only if the class is a non-local class (9.8),
+18:48 lh_mouse: the function name is unqualified, and the function has namespace scope. [ Example:
+18:48 FrankHB: 哦，不对，nested没法声明。
+18:49 lh_mouse: 直接塞进类定义的 friend function 的 inline definition 到底算什么 scope 的。
+18:49 lh_mouse: 看起来没法 using ，可是又说是 namespace scope。
+18:52 FrankHB: 9 Name lookup for a name used in the definition of a friend function (11.3) defined inline in the class granting
+18:52 FrankHB: friendship shall proceed as described for lookup in member function definitions. If the friend function is
+18:52 FrankHB: not defined in the class granting friendship, name lookup in the friend function definition shall proceed as
+18:52 FrankHB: described for lookup in namespace member function definitions.
+18:54 FrankHB: function是namespace scope的。function definition里面的name视是不是in-class definition而定。
+18:55 lh_mouse: that is irrelevant.
+18:55 lh_mouse: ヲ说的是，比如 ADL 的时候，指的是函数自身的 scope。
+18:55 lh_mouse: ville 提到的问题是 linkage。
+18:56 lh_mouse: 根据第一个例子，argument dependent lookup 显然能找到。
+18:56 FrankHB: 哪个问题。
+18:57 lh_mouse: 所以这里说是 namespace scope。
+18:57 lh_mouse: 但是没法 using。
+19:00 lh_mouse: geordi, -c { using namespace ns; use(1); } namespace ns { struct foo { foo(int = 0){ } friend void use(foo){ } }; } // not a member of the namespace.
+19:00 geordi: error: 'use' was not declared in this scope
+19:00 FrankHB: 没有declaration当然没法using了。。。
+19:00 FrankHB: 确切地说name lookup是declaration lookup。。。
+19:01 FrankHB: ADL是洞。
+19:02 lh_mouse: 不算是洞了。
+19:02 lh_mouse: 这个函数如果不通过 ADL 就无法调用。
+19:03 FrankHB: ADL是name lookup rules里的洞。
+19:03 FrankHB: 当然，friend自己就是更大的洞。
+19:03 FrankHB: 而且不只是一个方面。比如access speicifier就绕着走……比如模板……
+19:05 FrankHB: use没被声明，不管是unqualified还是qualified都没法找，在unqualified-id下还就只能指望ADL在另外的namespace里是不是找得到了。
+19:06 FrankHB: 那个linkage什么鬼。
+19:06 lh_mouse: geordi, -c { using namespace ns; use(1); } namespace ns { friend void use(); struct foo { foo(int = 0){ } friend void use(foo){ } }; } // not a member of the namespace.
+19:06 geordi: error: 'friend' used outside of class
+19:06 lh_mouse: geordi, -c { using namespace ns; use(1); } namespace ns { void use(); struct foo { foo(int = 0){ } friend void use(foo){ } }; } // not a member of the namespace.
+19:06 geordi: error: too many arguments to function 'void ns::use()'
+19:06 lh_mouse: geordi, -c { using namespace ns; use(1); } namespace ns { void use(foo); struct foo { foo(int = 0){ } friend void use(foo){ } }; } // not a member of the namespace.
+19:06 geordi: error: variable or field 'use' declared void
+19:06 FrankHB: 哦，那边截图刷出来了。。
+19:06 lh_mouse: geordi, -c { using namespace ns; use(1); } namespace ns { void use(struct foo); struct foo { foo(int = 0){ } friend void use(foo){ } }; }
+19:06 geordi: Success
+19:10 FrankHB: linkage。。block scope extern/static redeclaration in block scopes?
+19:10 FrankHB: ==，ville和V-ille什么鬼……
+19:10 lh_mouse: geordi, -c struct foo { friend void use(foo){ } }; void use(foo){ }
+19:10 geordi: error: redefinition of 'void use(foo)'
+19:10 lh_mouse: FrankHB, 两个人。
+19:11 FrankHB: 名字叫什么。。。
+19:12 lh_mouse: FrankHB, 你自己 /msg 去问。
+19:12 FrankHB: 。。。
+19:12 FrankHB: 公开的我记得就一个VV啊。。。
+19:12 FrankHB: 至于begin什么的，应该明确声明在namespace std。
+19:12 lh_mouse: FrankHB, Ville Voutilainen <ville.voutilainen at gmail dot com> 这个是 V-ille
+19:12 FrankHB: 记得大明湖畔的using std::swap; swap(xxx, yyy); // not only ADL. 么。
+19:13 FrankHB: 所以还有个ville是蜜汁马甲么。
+19:13 lh_mouse: ヲ就只这么写。
+19:13 FrankHB: friend太诡异了。
+19:13 lh_mouse: FrankHB, 那个 ville 有 ##c++ 的 +f 权限。
+19:13 FrankHB: ……
+19:13 lh_mouse: FrankHB, /cs access ##c++ list
+19:14 FrankHB: 虽然也不是说只能ADL不对，但库里面这样不方便，搞不好用户还得多艹轮子……
+19:14 lh_mouse: c++11 以后只要 move constructible/assignable 就可以了。
+19:14 lh_mouse: std::swap 能处理明白。
+19:15 FrankHB: 还有就是std里就该放这些通用的小玩意儿。
+19:15 FrankHB: friend……撑死也只能代替成员。
+19:15 lh_mouse: std 里最好塞一个帝球。
+19:16 FrankHB: 塞个吱。
+19:16 lh_mouse: FrankHB, ヲ考虑的是这个。
+19:16 randomclown joined channel
+19:16 FrankHB: 你的意思是说删除成员begin/end？
+19:16 lh_mouse: 比如 friend basic_string operator+(const charT *, basic_string);
+19:16 FrankHB: 如果一开始就没有这回事倒是好说。
+19:16 lh_mouse: FrankHB, 不是。
+19:16 FrankHB: operator+倒是应该考虑。
+19:16 lh_mouse: FrankHB, 在成员里定义 operator+ 省事。
+19:16 FrankHB: begin什么的就算了吧。
+19:17 lh_mouse: 还有一个是 swap。
+19:17 lh_mouse: begin 可以扔了。swap 不行。
+19:17 FrankHB: 不止是省事的问题。
+19:17 lh_mouse: 污染么？
+19:17 FrankHB: 对。
+19:17 lh_mouse: 据说 operator<< 的 lookup 会拖慢 30% 的速度。
+19:17 FrankHB: 用户代码里如果重载逗比了，刷错误就会一大堆不相干的东西……
+19:17 FrankHB: 速度是黑箱，这个可烦得很。
+19:18 FrankHB: 这方面更容易炸的是自定义iterator。
+19:18 FrankHB: 还有各种重载==什么的我也很不爽。
+19:18 FrankHB: 就不应该放在namespace std里。
+19:18 FrankHB: 考虑==比+还要常用，更容易被坑。
+19:19 FrankHB: 我觉得也不该确定写成friend，而是和container requirements一样列个表。指望std::operator==什么的实在太污了，远不如必要时手艹lambda。
+19:20 FrankHB: 这样顺便也允许使用boost.operators什么的。
+19:20 FrankHB: 现在唯一的问题就是这样不向后兼容。
+19:20 lh_mouse: 向后兼容应该去死。
+19:20 FrankHB: 有什么逗比代码真的static_cast<xxx>(&std::operator==)就呵呵了。
+19:20 FrankHB: 死不掉。
+19:20 FrankHB: 你还得艹Annex C。
+19:21 lh_mouse: Anus C
+19:21 FrankHB: 照以前的尿性先deprecated吧。
+19:21 FrankHB: 这个可以直接撸proposal不用过DR了。
+19:21 lh_mouse: “尿性”是褒义词……
+19:22 FrankHB: 中性。
+19:22 lh_mouse: 东北话里就是褒义词。
+19:22 FrankHB: 隐含反讽。
+19:23 FrankHB: “厨”本来是贬义词，拿来自嘲就变中性了。
+19:23 lh_mouse: 没这么用的。
+19:23 lh_mouse: 听都没听过。
+19:23 FrankHB: 搞笑的是有些人不知出处乱用……
+19:23 FrankHB: 语体色彩中性化是dssq。
+19:23 lh_mouse: 尿性是专门夸人才用。没有反讽的。
+19:23 FrankHB: 认命吧。
+19:23 lh_mouse: 别扯蛋，我十几年都没听过。
+19:23 FrankHB: 方言和小圈子惯用语是另一会死。
+19:24 FrankHB: 放在外人讲的口语里就变味了。
+19:24 lh_mouse: 一定要说反讽倒是有个词，得瑟（第一个字读去声，第二个字读轻声）。
+19:25 FrankHB: 得瑟反倒只是一概只看到当贬义词用……
+19:25 FrankHB: 另外照WG21的立场，兼容是褒扬，所以反而符合原意……
+19:26 FrankHB: 虽然我觉得这里兼容嘛是213，不过谁知道那坨人怎么想的……
+19:39 Taggnostr joined channel
+20:00 hatlist joined channel
+20:01 wlemuel quit:Ping timeout: 265 seconds
+20:05 Mokou: http://ww4.sinaimg.cn/bmiddle/87246b09jw1f00ht0p3rlj20c83fr4eo.jpg
+20:20 zcy quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+20:23 zcy joined channel
+20:23 zcy: lh_mouse 我的＋没了。。。怎么回事
+20:25 zcy: 不过欢迎你们没事挂挂我的频道，不吵，只是希望能够多点人气，这样也让我的朋友们知道irc还是很不错的，他们都以为irc很没落
+20:25 zcy: ＃zydd
+20:31 hope1 joined channel
+20:43 whocares_2_ joined channel
+20:44 whocares_2 quit:Ping timeout: 272 seconds
+21:05 zcy quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:08 wlemuel joined channel
+21:14 wlemuel quit:Ping timeout: 265 seconds
+21:20 Stevearzh_ quit:Read error: Connection reset by peer
+21:20 Stevearzh joined channel
+21:20 Stevearzh quit:Changing host
+21:20 Stevearzh joined channel
+21:36 hope1 quit:Quit: leaving
+21:36 cleamoon_ quit:Ping timeout: 250 seconds
+21:36 JQK joined channel
+22:25 Youmu quit:Quit: Connection closed for inactivity
+22:39 Mokou: “目前的需求迫使我做一个双监听：同时监听一个fd和协程邮箱。所以今天先清理下顽疾…”
+22:39 Mokou: “结论。p7没救了。频道有人有兴趣搞类似实现的么？”
+22:39 Mokou: ^来自羊驼子
+22:43 Mokou: lhanjian: 
+22:50 XL-01 joined channel
+23:00 XL-01 joined channel
+23:02 wlemuel joined channel
+23:02 Youmu joined channel
+23:04 lh_mouse: Mokou, 羊驼子自己怎么没来。
+23:05 Mokou: 估计在宿舍调程序
+23:12 Mokou: https://pic1.zhimg.com/73a412647426ab5675981081dd7a5e38_b.png 台湾大选结果
+23:23 lh_mouse: 真是个兜售 poseidon 的大好商机。
+23:24 condy: 求 overview
+23:25 lh_mouse: ？
+23:25 Mokou: lh_mouse: 用c写一个，说不定羊驼子就用了
+23:25 lh_mouse: 自废武功么？
+23:25 condy: lh_mouse: 求 poseidon 的 overview.
+23:26 lh_mouse: condy, https://github.com/lhmouse/poseidon/tree/master/examples
+23:26 condy: OuO
+23:27 condy: 看过了，跟  asio 好像
+23:31 hatlist quit:Quit: Connection closed for inactivity
+23:31 cleamoon joined channel
+23:35 XL-01 quit:Quit: 绿色便携无乱码！下载xChat果园定制版请打 !get xchat
+23:44 Mokou: xchat果园定制版
+23:55 cleamoon quit:Ping timeout: 255 seconds
+23:59 wlemuel quit:Ping timeout: 250 seconds

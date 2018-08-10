@@ -1,0 +1,402 @@
+00:02:code_new: 帅
+00:02:code_new: 帅比一枚
+00:11:SoftRUN joined channel
+00:30:wysaid joined channel
+00:45:SoftRUN quit:Remote host closed the connection
+01:00:boosure quit:*.net *.split
+01:00:whocares_2 quit:*.net *.split
+01:00:uuair quit:*.net *.split
+01:02:boosure joined channel
+01:02:whocares_2 joined channel
+01:02:uuair joined channel
+01:02:wysaid quit:*.net *.split
+01:02:wysaid joined channel
+01:06:Petrus07 quit:Quit: Leaving.
+01:17:lh_cat quit:Read error: Connection reset by peer
+01:17:khysw joined channel
+01:34:Guest31185 quit:Quit: Leaving
+02:40:wysaid quit:Ping timeout: 255 seconds
+08:07:acgtyrant joined channel
+09:26:sismvg joined channel
+09:30:whatofor joined channel
+09:45:Xilzzerts joined channel
+09:47:lh_mouse joined channel
+10:00:boosure quit:Ping timeout: 246 seconds
+10:04:condy joined channel
+10:10:condy quit:Remote host closed the connection
+10:10:condy joined channel
+10:14:whatofor_1 joined channel
+10:17:whatofor quit:Ping timeout: 272 seconds
+10:26:lh_mouse: geordi, { foo f; } struct foo { compl foo(){ BARK; } };
+10:26:geordi: foo::~foo()
+10:26:lh_mouse: geordi, { foo f; } struct foo { compl foo(){ cout <<"dtor of foo"; } };
+10:26:geordi: dtor of foo
+10:28:lh_mouse: geordi, << "%:";
+10:28:geordi: %:
+10:31:Yangy joined channel
+10:32:Yangy: 人好少啊
+10:33:lh_mouse: 0 0
+10:33:lh_mouse: Yangy, 捏
+10:33:condy: 中断写错了，各种调不对..QAQ~
+10:34:Yangy: lh_mouse, 戳
+10:34:lh_mouse: 0 0
+10:43:boosure joined channel
+10:43:wysaid joined channel
+10:58:khysw: condy: 把智商交出来
+10:58:condy: khysw: 智商不够用了。。
+11:01:condy: 汇编真疼。。。
+11:17:khysw: 继续看OS方面的论文
+11:22:condy: Orz....
+11:23:lh_mouse: 要说  OJTZ
+11:23:khysw: lh_mouse: OTTL
+11:24:* lh_mouse shoots khysw 
+11:30:boosure quit:Ping timeout: 272 seconds
+12:00:hoxily quit:Ping timeout: 240 seconds
+12:14:sismvg: 画出树形图好麻烦
+12:18:khysw: sismvg: @树形图设计者
+12:25:sismvg: 节点摆放是NP的啊
+12:32:SoftRUN joined channel
+12:33:SoftRUN quit:Client Quit
+13:12:cleamoon quit:Remote host closed the connection
+13:19:cleamoon_ quit:Ping timeout: 240 seconds
+13:57:hoxily joined channel
+14:13:sismvg: kesu
+14:13:sismvg: 还是没有一个好的办法填充
+14:15:khysw: sismvg: 把智商交出来
+14:16:sismvg: 智商是一次性用品
+14:19:lhanjian joined channel
+14:58:acgtyrant quit:Ping timeout: 260 seconds
+14:59:varna joined channel
+15:00:varna: 似乎来了新人
+15:01:varna: 另，小耗长得好受啊
+15:06:sismvg: trigun的tv和漫画的画风差别实在是。。
+15:06:khysw quit:Ping timeout: 260 seconds
+15:10:lh_mouse: varna, 噗噗噗
+15:13:varna: 我觉得可以一爆
+15:27:whocares_2 quit:Ping timeout: 246 seconds
+15:43:cleamoon_ joined channel
+15:52:varna: 日……
+15:53:varna: 早年不懂事专猎火鸡的恶果现在越来越严重
+15:54:sismvg: 有没有什么办法画出一个树，并且保证树的节点之间不会互相覆盖？
+15:55:varna: 在gui上画？
+15:55:sismvg: 嗯
+15:55:sismvg: 我这里做要N^2
+15:55:varna: 我记得c艹吧里有人提过画树的布局算法
+15:56:sismvg: 我想要O(n)
+15:56:varna: n是什么
+15:56:varna: 节点数？
+15:56:sismvg: 嗯
+15:56:sismvg: 我这里是保存到一个表，然后把树当成二维坐标系来画
+15:57:sismvg: 但是太慢了
+15:57:varna: 什么意思
+15:57:sismvg: 以树的高度为Y，节点个数为X
+15:57:cleamoon_: 如果知道每个结点有多少叶子倒是可以胡来的画
+15:58:sismvg: 球diamagnetic
+15:58:sismvg: 代码
+15:58:varna: ...
+15:58:varna: 另，你是要自己写还是要用这个算法
+15:58:sismvg: 写
+15:59:varna: 那你的算法不至于是平方啊
+16:01:varna: 我整个人都不好了
+16:01:varna: 今天4-3进门就没走过J点之外的地方
+16:03:cleamoon_: 每层都放那层的叶子个数的点，然后一层一层连线就好了
+16:05:sismvg: 但是父节点怎么放？
+16:05:sismvg: 放中间好了
+16:06:cleamoon_: 随便放呀
+16:07:cleamoon_: 等差的放开
+16:08:sismvg: 不会线之间交叉吗？
+16:09:varna: 树的线不该交叉，你算坐标的时候把父结点算在子节点区间的中心好了
+16:09:cleamoon_: 从最左边开始dfs画
+16:09:cleamoon_: 交叉就不是树了
+16:09:varna: 是
+16:09:varna: 可以反着画一个无序关系的树中的一层……
+16:09:cleamoon_: 我说从最左边dfs填满还能交叉...
+16:10:sismvg: soga
+16:10:cleamoon_: .......
+16:10:cleamoon_: 画这个干什么？
+16:11:varna: 画出决策树么
+16:12:* varna 哗哗地烧弹药
+16:13:sismvg: 模拟了一次，不是很优美
+16:13:sismvg: 不过能用就好
+16:14:varna: 邪恶代码 https://pastebin.mozilla.org/6535927
+16:15:Xilzzerts: graphviz?
+16:15:cleamoon_: 优美估计得n2，就是每个节点算权，权大的空间大，然后放在空间内最靠近父的地方
+16:16:varna: +
+16:16:varna: Xilzzerts: 之前问他是不是要自己写了，不然就给他推荐graphviz
+16:17:acgtyrant joined channel
+16:18:Xilzzerts: 我这边弄JNI各种蛋碎
+16:19:cleamoon_: 教授：多少人想要拉窗帘？1人举手。多少人不想？2人举手....   @班级的民主意愿
+16:19:varna: 啊日日日日
+16:19:varna: 别出嗒酱
+16:20:varna: 还二连劝退……
+16:28:cleamoon_: 感觉peko的码略混乱
+16:29:varna: 我其实只是要#25的变量长度数组
+16:29:varna: #34是习惯性作死
+16:29:cleamoon_: #25？
+16:29:varna: line 25
+16:30:cleamoon_: ....
+16:31:varna: strtok还是要改参数串，那个参数是从perl里面拿出来的不该直接改
+16:32:varna: 所以就地弄了个函数用来处理strtok
+16:38:sismvg: 似乎可以转换成找中点的问题
+16:39:sismvg: 不过就看起来就不像是树，而是魔动王的召唤阵了。。
+16:39:varna: ...
+16:56:condy: geordi: { foo(); } inline void __attribute((always_inline)) foo() { cout << "H"; }
+16:56:geordi: H
+16:56:condy: geordi: replace attribute with attribute__
+16:56:geordi: H
+16:59:varna: geordi: replace attribute__ withe __attribute__
+16:59:geordi: error: Unexpected end of request. Expected " till", " until", " around", " before", " after", " between", " in", " and", " with", or " by".
+16:59:varna: geordi: replace attribute__ with __attribute__
+16:59:geordi: error: variable or field '____attribute__' declared void
+16:59:varna: geordi: show
+16:59:geordi: { foo(); } inline void ____attribute__((always_inline)) foo() { cout << "H"; }
+16:59:varna: geordi: replace ____attribute__ with __attribute__
+16:59:geordi: H
+17:11:condy: 由于自己zuo si，没有用汇编而是在C++里面用了宏生成了isr0~30...导致了它们是函数，于是在发生中断要保存现场时会有问题。。。。现在想要解决掉push %ebp这个问题。。。有什么好的办法吗？ varna 
+17:11:condy: 在O2的情况下，isr0~30都内联了。。。
+17:12:varna: 不要作死
+17:12:varna: 把你的中断函数做成回调
+17:12:varna: 然后用汇编重写isr/irq入口，造一个调用出来
+17:12:varna: 这里我不推荐naked或者等价的做法，还是不太可控，而且不方便
+17:13:condy: ...
+17:18:sismvg: 还可以当成直角三角形来填充到矩形内。。
+17:42:cleamoon__ joined channel
+17:44:cleamoon_ quit:Ping timeout: 260 seconds
+17:46:lh_mouse: condy, 写裸函数
+17:48:Yangy quit:Remote host closed the connection
+17:48:lh_mouse: geordi, << foo(2, 3); extern int foo(int, int) __asm__("_foo"); __asm__("_foo:; leal (%rsi, %rdi), %rax; retq; );
+17:48:geordi: error: Unexpected end of request. Expected any symbol.
+17:48:lh_mouse: geordi, << foo(2, 3); extern int foo(int, int) __asm__("_foo"); __asm__("_foo:; leal (%rsi, %rdi), %rax; retq;");
+17:48:geordi: error: incorrect register `%rax' used with `l' suffix
+17:48:lh_mouse: geordi, << foo(2, 3); extern int foo(int, int) __asm__("_foo"); __asm__("_foo:; leaq (%rsi, %rdi), %rax; retq;");
+17:48:geordi: 5
+17:48:lh_mouse: condy, ^
+17:49:condy: 看到啦。
+17:49:lh_mouse: varna, 这就是我去年问你的那个问题的答案
+17:50:lh_mouse: 我问 gcc 为什么不支持 naked 函数    实际上是有解的  得用 __asm__ 指定 mangled name   然后直接写外面就是
+17:50:lh_mouse: 这个地方实际上不完整
+17:50:lh_mouse: 最好加上  .text; 
+18:04:cleamoon__ quit:Read error: Connection reset by peer
+18:04:cleamoon_ joined channel
+18:05:sismvg: 终于，终于
+18:05:sismvg: 终于看到面试题里有人出模板题目了！
+18:06:lh_mouse: 我还没见过笔试题里出异常的
+18:06:lh_mouse: 这帮彩笔  呵呵呵
+18:09:cleamoon_ quit:Ping timeout: 272 seconds
+18:15:whocares_2 joined channel
+18:23:boosure joined channel
+18:33:hope1 joined channel
+18:34:hope1: 校服每年都要改一次233
+18:35:sismvg: 每次加上一颗星星，3星极制服！
+18:35:Xilzzerts quit:Read error: Connection reset by peer
+18:37:cleamoon_ joined channel
+18:38:cleamoon_: 那个能用pascal编程的带好几个不错的游戏的掌上词典叫什么来得？
+18:38:sismvg: 老霸王
+18:39:cleamoon_: 明显不是
+18:39:lhanjian: 步步高
+18:39:Plough joined channel
+18:39:sismvg: 杰米裸露着下半身跳进了躺在浴缸里的亚当的身上
+18:40:cleamoon_: lhanjian: tks
+18:41:cleamoon_: mb？
+18:42:sismvg: yeap
+18:47:cleamoon_: adam改名叫tom多好
+18:48:sismvg: 杰米改名叫做夏娃好了
+18:49:sismvg: 亚当&夏娃！ 
+18:49:sismvg: 和平奖
+18:49:sismvg: 获奖者：白俄罗斯总统亚历山大·卢卡申科(Alexander Lukashenko)和白俄罗斯警察。
+18:49:sismvg: 获奖原因：卢卡申科推动一项立法，规定在公共场合鼓掌非法。白俄罗斯警察逮捕了一个在公共场合鼓掌的独臂男子。
+18:50:cleamoon_: 白俄可是我国重要经济伙伴，给几个奖没关系
+18:51:sismvg: 首页 >IT资讯>互联网新闻
+18:51:sismvg: 笑死了：2014搞笑诺贝尔奖明日颁发
+18:51:sismvg: 2014-9-18 15:01:38来源：新浪科技作者：晨风责任编辑：刀马人气：4970评论：15
+18:51:sismvg: IT之家（www.ithome.com）：笑死了：2014搞笑诺贝尔奖明日颁发
+18:51:sismvg: 一年一度的“搞笑诺贝尔奖”又要来了！今年的颁奖仪式将在美国东部时间明天傍晚6点(北京时间明天清晨6点)在哈佛大学的桑德斯剧场举行，届时新浪科技也将同步图文直播，为您带来好玩又有趣的“搞笑诺贝尔”。
+18:51:sismvg: 什么是搞笑诺贝尔奖？
+18:51:sismvg: “搞笑诺贝尔奖”(Ig Nobel Prizes)又译“幽默诺贝尔奖”，是对诺贝尔奖的有趣模仿，由科学幽默杂志《不可思议研究年报》(Annals of Improbable Research ,AIR)主办，每年的九月举行“煞有其事”的颁奖典礼。其奖项专门授予那些“乍一看好笑，后又引人深思”的研究工作，其评委中有很多是真正的诺贝尔奖得�
+18:51:sismvg: �。也有搞笑诺奖的得主后来成为了真正的诺奖获得者。按照该活动官网上的资料介绍，设立这一奖项的目的是为了向那些不同寻常的人们致敬，向想象力致敬，并激发人们对科学，医学以及技术领域的关注。
+18:51:sismvg: 搞笑诺贝尔奖最早的创意来自《不可思议研究年报》创始人马克·亚伯拉罕(Marc Abrahams)，他在1991年首次创立了这个项目，并一直担任每一届颁奖仪式的负责人。当时他的设想是将奖项颁发给10个“无法也不应该被复制”的研究项目。该奖每年会颁出10个奖项，涵盖诸多领域，其中包括真正的诺贝尔奖所包
+18:51:sismvg: 括的物理学，化学，生理/医学，文学以及和平奖，但除此之外还有其他领域，比如公共卫生，工程，生物学以及跨学科研究。除了首届搞笑诺贝尔奖曾颁发过三个“虚拟成就奖”之外，此后所有的奖项都颁给了基于现实世界的研究。
+18:51:sismvg: 2010年，安德烈·海姆(Sir Andre Geim)成为首位既获得了搞笑诺贝尔奖，同时也获得真正诺贝尔奖的学者。
+18:51:sismvg: 颁奖典礼冷知识
+18:51:sismvg: 每年的9月份，在哈佛大学桑德斯剧场，会有1100名观众来到现场观看获奖者们上台领取他们的大奖。按照传统，为获奖人颁奖的嘉宾都是真正的诺奖获得者。
+18:51:sismvg: 最开始颁奖典礼的地点选择在麻省理工学院的一个演讲厅，但后来确定在哈佛大学的桑德斯剧场举行。整个典礼过程中充满着各种幽默搞笑的段子和环节，包括所谓的甜普小姐(Miss Sweetie Poo)，这是一位小女孩。当上台发表演讲的人超出预定时间，甜普小姐就会大声喊道：“停下来吧！太无聊了！”，以�
+18:51:sismvg: ��嘲讽现在非常多的冗长会议和演讲。
+18:52:sismvg: 而颁奖典礼的结束通常都会以这样一句有趣的话来作为结束：“如果你没有获奖——尤其是如果你获奖了，那么祝你明年好运！”
+18:52:sismvg: 这项颁奖典礼由哈佛大学计算机协会，拉德克里夫科幻协会(Radcliffe Science Fiction Association)以及哈佛大学拉德克里夫物理系学生会提供资助。
+18:52:sismvg: 在搞笑诺贝尔奖的颁奖典礼上，向台上丢纸飞机也是一项长期传统，还会有人专门负责清扫。物理学教授罗伊·格劳伯(Roy Glauber)便曾经担任这一职位，他是当年度的官方指定“扫帚保管人”。他后来被授予了真正的诺贝尔物理学奖。
+18:52:sismvg: 附：2013搞笑诺贝尔奖颁发：屎壳郎靠银河系导航
+18:52:sismvg: 2013年搞笑诺贝尔奖授奖仪式9月12日晚在美国落下帷幕，会上宣布了各奖项的获奖者，并向他们颁发了奖杯。
+18:52:sismvg: 下面是各奖项及其获奖者：
+18:52:sismvg: 医学奖
+18:52:sismvg: 获奖者：内山雅照(Masateru Uchiyama)[日本]，Xiangyuan Jin[中国，日本]，Qi Zhang[日本]，Toshihito Hirai [日本]、Atsushi Amano[日本]，Hisashi Bashuda [日本]，Masanori Niimi[日本，英国]
+18:52:sismvg: 获奖原因：进行了老鼠听歌剧延长心脏移植存活期的实验，并评估了这种医疗方式的效果。试验发现，听歌剧的老鼠存活期最长，平均为26天，
+18:52:sismvg: 心理学奖
+18:52:sismvg: 获奖者：Laurent Bègue [法国]，布拉德·布什曼(Brad Bushman)[美国，英国，荷兰，波兰]，Oulmann Zerhouni [法国]，Baptiste Subra [法国]，Medhi Ourabah [法国]
+18:52:sismvg: 获奖原因：通过实验证明，那些认为自己喝醉了的人也会觉得自己更有吸引力。
+18:52:sismvg: 生物学和天文学联合奖
+18:52:sismvg: 获奖者：玛丽·达克(Marie Dacke)[瑞典，澳大利亚]，艾米莉·贝尔德(Emily Baird)[瑞典，澳大利亚，德国]，马库斯·伯恩(Marcus Byrne)[南非，英国]，Clarke Scholtz[南非]，Eric Warrant[瑞典，澳大利亚，德国]。
+18:52:sismvg: 获奖原因：研究发现蜣螂在迷路时能够依靠观察银河系找到回家的路。
+18:52:sismvg: 不小心按了全选快捷键。。
+18:53:cleamoon_: 有几个挺有用的
+19:41:boosure|2 joined channel
+19:42:lhanjian quit:Ping timeout: 240 seconds
+19:44:boosure quit:Ping timeout: 258 seconds
+19:56:lhanjian joined channel
+20:03:sismvg: 猎人确定长期休刊-》又来了-》单行本都不够啊
+20:06:condy: 下礼拜动画就要结束了。。QAQ~
+20:07:cleamoon_: 老贼活腻了
+20:20:Plough: 噗
+20:20:Plough: 3366又出一只飞龙……
+21:01:hope1 quit:Read error: Connection reset by peer
+21:03:lhanjian quit:Quit: 风光冉冉东西陌
+21:03:cleamoon_ quit:Read error: Connection reset by peer
+21:03:cleamoon_ joined channel
+21:07:cleamoon_ quit:Ping timeout: 245 seconds
+21:09:varna: 好想赣爆红旗酱啊
+21:09:condy: minix的代码写得好棒!(。・_・。)
+21:10:* condy 今天也元气满满！
+21:11:zzzzzzzz joined channel
+21:27:cleamoon_ joined channel
+21:45:varna: Plough: 日，废弃装备似乎真得点二十四次
+21:45:varna: 娇喘的临时工碉堡了啊
+21:46:varna: 我拆了整整一页的连装炮
+21:48:Plough: ……
+21:48:Plough: 蛋疼
+21:49:varna: 还拆光了所有的机枪、零战21型和脚
+21:49:Plough: 然后没完成么
+21:49:varna: +
+21:49:varna: 连50%进度都没提示
+21:49:Plough: 蛋疼
+21:55:varna: 今天出个舞风，准备拆了
+21:56:* Plough 没舞风
+21:56:Plough: 不过我有点想去捞欧风
+21:58:Plough: 恢复到171桶了
+21:59:varna: 攒着
+21:59:Plough: 准备攒着
+21:59:varna: 今天已经亏了五桶
+22:00:Plough: ……啥情况
+22:00:varna: 4-3
+22:00:Plough: Soga
+22:00:Plough: 2-3进Boss了……
+22:00:wysaid quit:Remote host closed the connection
+22:01:Plough: T不利
+22:01:Plough: 还好
+22:03:Plough: 修三分钟再出去一次
+22:03:cleamoon_: peko竟然还在
+22:03:varna: 等会才回去
+22:04:varna: 开学之后关楼比较晚
+22:04:cleamoon_: 你可以留在楼里，然后执行各种羞耻play
+22:04:varna: 没意思，那样只是烧资源烧桶
+22:05:varna: 本身4-3就很麻烦
+22:05:Plough: 我今天就Lv75了……
+22:05:Plough: 我都不知道怎么涨这么快的
+22:05:varna: 那么在意压等级干嘛
+22:05:Plough: 1-5A
+22:06:varna: 桶多不愁4-3
+22:06:condy: geordi: { auto fn = [](){return 0;} cout << &fn; }
+22:06:varna: 我是因为只有六十桶才盘算的
+22:06:geordi: error: expected ',' or ';' before 'cout'
+22:06:Plough: 还有秋（冬）活和明年春活呢
+22:06:condy: geordi: append ; after second }
+22:06:geordi: error: extra ';'
+22:06:condy: geordi: show
+22:06:geordi: { auto fn = [](){return 0;} cout << &fn; };
+22:06:condy: geordi: { auto fn = [](){return 0;}; cout << &fn; }
+22:06:geordi: 0x7fffd0bde796
+22:08:varna: 今天到此为止，明天再打打看
+22:08:varna: 不行的话我再推迟下航巡改造
+22:10:Plough: 神通？练到多少级了
+22:11:varna: 32
+22:11:Plough: Orz
+22:11:varna: 33
+22:12:sismvg: 矩阵什么的去死吧！
+22:13:Plough: ……又没进补给船点
+22:13:Plough: 不对上面也有两个补给船
+22:13:Plough: 还好
+22:14:cleamoon_: 矩阵多好，可以弄个程序随便啪啪啪幼女
+22:15:sismvg: 幼女：大叔叔好无聊啊
+22:16:cleamoon_: 不愧是药娘四，能说出大叔叔这种词
+22:16:cleamoon_: 我只会叫大叔
+22:17:sismvg: 幼女一般都会这么说
+22:18:sismvg: 叫大叔的一般都是高中生或者大学生
+22:18:cleamoon_: 应该只有药娘四这个药娘幼女会这么说
+22:18:Plough: 事故了……
+22:23:Plough: ……我家这两个潜艇简直是在做伊号
+22:24:Plough: 狂打轻母就不打补给船
+22:24:Plough: 回去把伊号也点上吧
+22:25:varna quit:Quit: leaving
+22:25:code_new: 一发出了熊野0.0
+22:39:* condy 爱莉！
+22:40:condy quit:Quit: leaving
+22:50:wysaid joined channel
+22:58:Plough quit:Remote host closed the connection
+23:03:Petrus07 joined channel
+23:08:hoxily|droid joined channel
+23:16:blackskygg joined channel
+23:17:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:20:sismvg: 竟然还出了lambda题目
+23:28:blackskygg: a^3+b^3=c^3,那么这是一个什么三角形(直？锐？钝？都可以？)
+23:29:zzzzzzzz: 费马大定理？
+23:30:blackskygg: 什么乱七八糟的
+23:30:blackskygg: 这是一道我练习册上的题目
+23:30:cleamoon_: 肯定不是直
+23:31:zzzzzzzz: 当整数n >2时，关于x, y, z的方程 x^n + y^n = z^n 没有正整数解。
+23:31:wangcn joined channel
+23:32:zzzzzzzz: http://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem
+23:33:cleamoon_: 和费馬没关系
+23:33:cleamoon_: 选择题的话直接选锐
+23:33:zzzzzzzz: 没有这种三角形
+23:33:sismvg: 结果他们的示例代码还是除了未定义行为
+23:33:sismvg: 费马大定理不是用质数的特性证明了吗、
+23:34:cleamoon_: 又没说三角形三边是整数
+23:34:zzzzzzzz: 反正是证明了...
+23:34:zzzzzzzz: 费马大定理里也没说xyz是整数啊
+23:34:cleamoon_: 你看看你刚才复制的...
+23:34:blackskygg: 你确定？
+23:35:sismvg: 不是整数就证明他干嘛。。
+23:35:zzzzzzzz: 看错...
+23:36:cleamoon_: 选择就直接锐，如果是证明题就麻烦点
+23:36:blackskygg: cleamoon_, 为何你直接选锐
+23:37:cleamoon_: 随便弄个数进去算就好了
+23:37:zzzzzzzz: 那就特值法试试？
+23:37:blackskygg: 果然
+23:38:blackskygg: 如果要证明呢
+23:38:blackskygg: 这是道高中题目
+23:38:cleamoon_: 证明麻烦点
+23:40:zzzzzzzz: 反证法？
+23:43:blackskygg quit:Remote host closed the connection
+23:43:blackskygg joined channel
+23:43:cleamoon_: 反证加不等式吧
+23:46:sismvg: 拆成质因数
+23:47:sismvg: void * token = onMouseClick += [&](const MouseEvent& e){ //c++的lambda语法
+23:47:sismvg: 	onMouseClick -= token; //注销事件，要保证能在事件触发的时候安全注销。
+23:47:sismvg: }
+23:47:sismvg: 这根本不可能啊
+23:48:sismvg: 整一个UB，你一旦删了内存你就没读写权限了，虽然不会报错但
+23:52:cleamoon_: bl
+23:52:cleamoon_: blackskygg: 就是反证加不等式就好了
+23:52:wangcn quit:Ping timeout: 245 seconds
+23:53:blackskygg: 具体
+23:53:cleamoon_: 懒得打
+23:53:wysaid: 你们这些基佬还不早点睡？
+23:53:wysaid: 有时差的当我没说
+23:53:blackskygg: 额，大概
+23:53:cleamoon_: 你这个基佬不是还没睡
+23:53:blackskygg: 写个关键步骤
+23:53:wysaid: 啊哈，啊哈哈
+23:54:cleamoon_: a2 > b2+c2，a>c
+23:54:cleamoon_: 这里有时差党吗
+23:54:sismvg: hysw
+23:54:sismvg: 剥削阶级
+23:55:cleamoon_: 土豪学霸云，简称豚
+23:56:condy joined channel
+23:56:condy: geordi: { __asm__ __volatile__("int 3"); }
+23:56:geordi: error: operand size mismatch for `int'
+23:56:blackskygg: 学霸云究竟是哪个
+23:57:condy: hysw.
+23:57:blackskygg: 求一句话简介
+23:57:condy: geordi: { __asm__ __volatile__("int $3"); }
+23:57:geordi: Trace/breakpoint trap
+23:57:condy: blackskygg: h y s w => 寒云似雾
+23:58:blackskygg: 是waterloo的那个？
+23:59:condy: blackskygg: ut。

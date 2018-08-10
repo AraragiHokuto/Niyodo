@@ -1,0 +1,195 @@
+00:08 lucaslj joined channel
+00:38 varna quit:Quit: leaving
+00:43 lh_mouse quit:Read error: Connection reset by peer
+00:48 \f_ quit:Ping timeout: 240 seconds
+00:48 \f_ joined channel
+00:54 H0P quit:Quit: WeeChat 1.5
+02:54 cleamooon joined channel
+07:46 Sasasu joined channel
+08:15 cleamooon quit:Quit: Connection closed for inactivity
+08:26 mork joined channel
+08:51 iyzsong-xx joined channel
+09:02 cleamooon joined channel
+09:04 mork quit:Ping timeout: 246 seconds
+09:05 yimis joined channel
+09:05 lh_mouse joined channel
+09:05 yimis quit:Client Quit
+09:06 mork joined channel
+09:40 Youmu joined channel
+09:53 Flandre__ quit:Remote host closed the connection
+09:53 aeromax[m] quit:Write error: Connection reset by peer
+09:53 iyzsong-xx: = =
+10:11 Sasasu quit:Ping timeout: 245 seconds
+10:13 lhanjian: Mokou: 我会常用//，#， $
+10:15 lhanjian: ()还有胡乱用的括号
+10:20 aeromax[m] joined channel
+10:20 Sasasu joined channel
+10:25 lh_mouse: geordi, { char str[] = "hello world !"; istringstream iss; iss->rdbuf()->setbuf(str, strlen(str)); string s; while(iss >>s){ cout <<s <<", "; } }
+10:25 geordi: error: base operand of '->' has non-pointer type 'istringstream {aka istringstream}'
+10:25 lh_mouse: geordi, { char str[] = "hello world !"; istringstream iss; iss.rdbuf()->setbuf(str, strlen(str)); string s; while(iss >>s){ cout <<s <<", "; } }
+10:25 geordi: error: 'basic_stringbuf<_CharT, _Traits, _Alloc>::__streambuf_type* basic_stringbuf<_CharT, _Traits, _Alloc>::setbuf(basic_stringbuf<_CharT, _Traits, _Alloc>::char_type*, streamsize) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>; basic_stringbuf<_CharT, _Traits, _Alloc>::__streambuf_type = streambuf; basic_stringbuf<_Ch
+10:27 lh_mouse: geordi, { char str[] = "hello world !"; stringstream ss; ss.rdbuf()->setbuf(str, strlen(str)); string s; while(ss >>s){ cout <<s <<", "; } }
+10:27 geordi: Same error.
+10:27 lh_mouse: geordi, use --clang
+10:27 geordi: error: 'setbuf' is a protected member of 'streambuf'
+10:27 lh_mouse: geordi, { char str[] = "hello world !"; istringstream iss; iss.rdbuf()->pubsetbuf(str, strlen(str)); string s; while(iss >>s){ cout <<s <<", "; } }
+10:27 geordi: hello, world, !, 
+10:27 lh_mouse: geordi, use --clang
+10:27 geordi: <no output>
+10:31 Flandre__ joined channel
+10:33 lhanjian: Flandre__: 菊苣来了
+11:28 FrankHB joined channel
+12:35 iyzsong-xx: x.x
+13:15 cleamooon quit:Quit: Connection closed for inactivity
+13:15 randomclown joined channel
+13:55 Meow-J quit:Remote host closed the connection
+13:55 Meow-J joined channel
+14:00 Sasasu quit:Ping timeout: 250 seconds
+14:04 randomclown quit:Remote host closed the connection
+14:25 Flandre__ quit:Ping timeout: 245 seconds
+14:25 aeromax[m] quit:Ping timeout: 260 seconds
+14:53 Sasasu joined channel
+14:59 Youmu: lhanjian: -.-
+15:28 Mokou joined channel
+15:41 Sasasu quit:Ping timeout: 260 seconds
+15:44 Sasasu joined channel
+15:46 lh_mouse: geordi, << hex << 'N'
+15:46 geordi: N
+15:46 lh_mouse: geordi, << hex << +'N'
+15:46 geordi: 4e
+15:47 lh_mouse: geordi, << hex << +'C'
+15:47 geordi: 43
+15:47 Mokou quit:Quit: Lost terminal
+15:48 Mokou joined channel
+16:16 aeromax[m] joined channel
+16:16 [nic] joined channel
+16:19 [nic] quit:Client Quit
+16:20 aeromax[m] quit:Ping timeout: 240 seconds
+16:27 [nic] joined channel
+16:36 [nic] quit:Quit: Bye
+17:40 Flandre__ joined channel
+17:44 cleamooon joined channel
+17:52 FrankHB quit:Ping timeout: 265 seconds
+17:53 aeromax[m] joined channel
+18:01 iyzsong-xx quit:Read error: Connection reset by peer
+18:22 FrankHB joined channel
+18:47 yimis joined channel
+18:54 gauge is now known as bokuno_
+18:54 bokuno_ is now known as gauge
+18:59 iyzsong joined channel
+18:59 iyzsong: (┙>∧<)┙へ┻┻
+19:33 Sasasu quit:Quit: WeeChat 1.0.1
+19:33 Sasasu joined channel
+20:16 yimis quit:Quit: yimis
+20:28 FrankHB quit:Remote host closed the connection
+20:28 FrankHB joined channel
+21:05 Matsune joined channel
+21:12 \s quit:Remote host closed the connection
+21:16 Stevearzh joined channel
+21:25 cleamooon quit:Quit: Connection closed for inactivity
+21:25 mork quit:Remote host closed the connection
+22:07 varna joined channel
+22:08 varna: Mokou: 最后我订了几条翻模树脂，准备开模
+22:08 Mokou: varna: _(:з」∠)_
+22:08 Mokou: 手捏还是不行么
+22:08 varna: 估计会手毁
+22:09 Mokou: 噫吁嚱
+22:09 varna: 我仔细看了炮塔，上面有两条纹路需要捏，还有超过六个铆钉
+22:11 varna: 估计开模之后再微调会简单点
+22:11 varna: 大不了费很多天慢慢做，这个很重要
+22:11 Mokou: 最后我还是弄了张你叫啥的票
+22:12 Mokou: 可惜并没有妹子陪我去看
+22:12 varna: 看了剧情之后我感觉看不下去
+22:12 Mokou: 没看剧情
+22:14 varna: 经过了一阵思想斗争，我想，p7r还是继续沿用EPOLLONESHOT吧……
+22:14 Mokou: 每次IO操作的时候加进去？
+22:15 varna: 这里我其实还没斗争好
+22:17 varna: 按说epoll_ctl/ADD应该在所有uthread放弃IO监听之前只调用一次
+22:18 varna: 比如 if (!__atomic_fetch_add(&xxx, 1, __ATOMIC_ACQ_REL)) { epoll_ctl( /* ADD */); } else { epoll_ctl( /* MOD */); }
+22:19 varna: 同样，当诸uthreads放弃IO的时候，也原子地检测epoll_ctl/DEL的时机
+22:20 cleamooon joined channel
+22:20 varna: 但这里其实有个深坑：epoll_ctl会重置被EPOLLONESHOT触发失能的fd
+22:20 varna: 所以这个看似合理的epoll_ctl/MOD实际上会导致伪唤醒
+22:20 varna: 然后就是失控饿死
+22:21 Mokou: 噫吁嚱
+22:21 Mokou: 然而你又只有一个FD？
+22:21 varna: 其实我觉得这里我想太多了，p7的单fd+OOB模式就挺好的
+22:22 cleamooon: 卧槽，irccloud的提醒震动关不掉，手机都快变成跳蛋了
+22:33 varna: 另外还有个地方：p7r的IO委托对象仍然是局部作用局部生存的
+22:41 whocares_2_ joined channel
+22:43 whocares_2 quit:Ping timeout: 260 seconds
+22:45 Mokou: http://ww4.sinaimg.cn/mw1024/6d240505gw1faftemq5fcj21al0qoaf7.jpg 死宅真可怜
+22:46 iyzsong quit:Quit: night.
+22:47 varna: 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+22:50 varna: 钦定了，沿用p7的做法
+22:50 varna: 不为了无谓的自由度作死
+22:50 varna: 手法那么自由的话用pthread就好了
+22:51 cleamooon: .....
+22:53 Mokou: 2un得了个女儿
+22:53 varna: 一次委托最多支持三个事件：一fd的IO、协程间通信和超时定时器
+22:53 varna: puuuuu
+22:53 varna: 太田君顺产也
+22:53 Mokou: http://ww4.sinaimg.cn/mw690/c830572cgw1fagagx5wm8j20gh032jrs.jpg
+22:54 varna: puuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+22:57 varna: 推荐一个东方同人vocal http://www.xiami.com/album/316813198
+22:59 cleamooon: 什么风格的
+22:59 varna: 混合的
+22:59 varna: 極光の旅人 这首推荐
+23:00 cleamooon: 神主是因为老婆怀孕没有〇生活所以上一座才那么黑暗的？
+23:00 cleamooon: 似乎听说过这首
+23:00 Mokou quit:Quit: Lost terminal
+23:01 Mokou joined channel
+23:09 cleamooon: 奇特的风格
+23:10 varna: 这首应该是《天衣无缝》
+23:11 Mokou: http://ww4.sinaimg.cn/mw690/586f5255gw1fag82skghfj20m80enaeq.jpg
+23:11 varna: 23333333
+23:12 varna: HE督库！*65534
+23:12 cleamooon: 2333333
+23:12 varna: 其实如果单论音乐的话，个人还是最喜欢绯想天的
+23:13 cleamooon: 我似乎没听过天衣无缝... 一点印象都没有
+23:13 varna: M子Boss开场之前的对话曲？
+23:13 varna: 剧情=天衣无缝 第一阶段=有顶天变 凹大=幼心地的有顶天
+23:15 Matsune quit:Read error: Connection reset by peer
+23:15 varna: 我就知道有人会在M子的BGM里刷「Ah Thank you sir!」
+23:16 varna: http://www.bilibili.com/video/av6018372/ 而且相关搜索里确实地有这个
+23:16 Mokou: 谢谢茄子！（申淫N）
+23:18 cleamooon: 绯想天不明白操作，没怎么见过M子
+23:18 varna: 绯想天的出招比较正统
+23:20 cleamooon: 然而lunatic战不过
+23:20 varna: 同战不过，只会用王瞎凹……
+23:24 * cleamooon 不会用王... 看不懂王 的 规 则
+23:24 varna: _(:з」∠)_236大火球糊脸
+23:26 Mokou: “如果一个人稍微爱好点文艺，懂点外语，偶尔还会说几句有意思的话，那相当一部分人就要花相当长时间才能看穿TA是个毫无用处的废柴”
+23:26 cleamooon: 赶明再干一次秦心，上次还是lin下刚推倒就崩溃那次呢
+23:27 varna: 心绮楼巫女可爱
+23:28 Mokou: “当你出生的时候，整个CM都在低吟着你的名字，太田魔理沙”
+23:28 varna: 噗？
+23:28 Mokou: 微博上的评论
+23:29 varna: 我以为大女儿叫Darkholme
+23:29 Mokou: 难道不是叫幸成么
+23:29 varna: Fvckrei Gaymu
+23:29 Mokou: 神主的女儿显然是UDK>RU
+23:30 varna: RU姐贵喜欢
+23:30 Mokou: KNN IS GOD
+23:31 cleamooon: 我要看神主女儿们cos
+23:31 varna: 蛮 法 天
+23:33 Mokou: http://www.bilibili.com/video/av1996591/ 幻想乡女仆杀害事件
+23:41 cleamooon: 转“问：羊驼过河为什么会淹死。解释：草泥马不会摆渡啊！”
+23:42 varna: 233333333
+23:42 varna: 河里有后期祖宗
+23:43 Mokou: 大和级，请
+23:43 varna: (｡･ω･)绫波
+23:43 varna: (｡･ω･)超厉害的
+23:43 Mokou: 绫波只有113级
+23:43 Mokou: 大和130呢
+23:44 varna: 弃坑前129
+23:44 Mokou: OTL
+23:51 cleamooon: 恋恋说：怎么啦，虽然我走的不是网红路线，但自认长相还是可以的嘛。
+23:51 varna: 现在让我推的话我还是愿意推的
+23:51 varna: 我可以自行屏蔽脸
+23:52 cleamooon: 除非打出血或者踢出尿，不会湿的哦
+23:52 varna: 大丈夫
+23:56 cleamooon: 你负责受？
+23:56 varna: 可以让恋恋给撸管啊
+23:57 varna: 就当一个低练度飞机杯
+23:59 Sasasu quit:Quit: WeeChat 1.0.1

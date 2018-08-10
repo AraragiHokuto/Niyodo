@@ -1,0 +1,1154 @@
+00:01:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+00:37:code_new quit:Remote host closed the connection
+00:49:Timetvs quit:Quit: My Computer has gone to sleep. ZZZzzz…
+00:51:lh_mouse quit:Quit: Meow
+00:54:cleamoon__ quit:Ping timeout: 244 seconds
+00:54:yzld2002 quit:Quit: yzld2002
+01:03:Stevearzh quit:Quit: Quit...
+01:05:Stevearzh joined channel
+01:08:cleamoon__ joined channel
+01:16:erhandsome quit:Remote host closed the connection
+01:26:cleamoon__ quit:Ping timeout: 250 seconds
+01:39:cleamoon__ joined channel
+01:43:Stevearzh quit:Quit: Quit...
+01:52:Stevearzh joined channel
+02:05:Stevearzh quit:Quit: Quit...
+02:07:Stevearzh joined channel
+03:01:cleamoon__ quit:Remote host closed the connection
+03:19:cleamoon joined channel
+03:29:cleamoon: http://news.sina.com.cn/c/2014-12-30/004231341424.shtml
+04:32:whatofor_1 joined channel
+04:35:whatofor quit:Ping timeout: 250 seconds
+04:53:cleamoon_ joined channel
+04:57:boosure joined channel
+06:12:izmntuk quit:Quit: buh bye!
+07:27:cleamoon quit:Ping timeout: 255 seconds
+07:42:cleamoon_ quit:Ping timeout: 245 seconds
+07:43:cleamoon joined channel
+07:46:erhandsome joined channel
+07:55:cleamoon_ joined channel
+07:59:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+08:04:whatofor joined channel
+08:38:Timepe joined channel
+08:46:cleamoon quit:Ping timeout: 264 seconds
+08:59:cleamoon joined channel
+09:19:Timepe quit:Quit: My Computer has gone to sleep. ZZZzzz…
+09:21:TwitchGG joined channel
+09:22:Timepe joined channel
+09:27:xxxxxxxxx quit:Quit: Leaving...
+09:31:Timepe left channel:"Textual IRC Client: www.textualapp.com"
+09:31:cleamoon quit:Ping timeout: 272 seconds
+09:46:cleamoon joined channel
+09:51:AngelC joined channel
+09:51:AngelC: QAQ
+09:58:sismvg joined channel
+09:58:boosure quit:Quit: Get your hand off of it
+09:58:sismvg: http://www.ithome.com/html/it/120750.htm
+09:58:sismvg: 悲剧的准留学生
+09:59:AngelC: ……
+09:59:AngelC: 古代文学课QAQ
+10:10:lh_mouse joined channel
+10:46:whocares_2 quit:Ping timeout: 244 seconds
+10:47:whocares_2 joined channel
+11:26:sismvg quit:Read error: Connection reset by peer
+11:27:sismvg joined channel
+11:27:sismvg quit:Client Quit
+11:37:lh_mouse: 0.0
+11:42:sismvg joined channel
+11:43:AngelC quit:Ping timeout: 240 seconds
+11:50:Xilzzerts joined channel
+11:51:erhandsome quit:Ping timeout: 250 seconds
+11:55:erhandsome joined channel
+12:23:Xilzzerts quit:Read error: Connection reset by peer
+12:23:Xilzzerts joined channel
+12:40:sismvg: 女士库克
+12:40:lh_mouse: geordi, { valarray<int, 3> v{1,2,3}; cout <<v; }
+12:40:geordi: error: wrong number of template arguments (2, should be 1)
+12:41:lh_mouse: geordi, { valarray<int> v{1,2,3}; cout <<v; }
+12:41:geordi: {1, 2, 3}
+12:43:lh_mouse: geordi, { valarray<int> v{1,2,3}; v *= 2; cout <<v; } template<typename T, typename U> decltype(auto) operator*=(valarray<T> &lhs, const U &rhs){ for(auto &r : lhs){ r *= rhs; } return lhs; }
+12:43:geordi: {2, 4, 6}
+13:10:dantcloud joined channel
+13:14:varna joined channel
+13:15:varna: 听说来了新人
+13:24:lh_mouse: 新人走了
+13:26:JQK_Phone joined channel
+13:29:lh_mouse: 度狗搜英文还不如 bing 靠谱
+13:29:varna: 现在我英文用wenlu和bing
+13:29:sismvg: C87 舰娘，东方，肝城 三分天下
+13:29:varna: 城P不是很没意思么
+13:29:sismvg: 500能撸
+13:29:varna: 另外谁买了《魔性之潮》的本子
+13:30:sismvg: 上Ex找
+13:30:varna: 如果可能的话我想看看实体本……
+13:30:varna: 魔性之潮我记得是全年龄
+13:30:sismvg: 下单10分钟，等你忘了下单的时候他就送过来了
+13:32:sismvg: http://bbs.soul-plus.net/thread.php?fid-98.html nsfw 今年妹系本的数量就和网秦似的
+13:35:varna: 这次的题材是五舰：夕暮、绫波、白露、吹雪、有明
+13:36:varna: 当然按照惯例吹雪的名字是写不对的
+13:43:lh_cat: fvck
+13:46:dantmnf: geordi: int C(0); cout<< C == C++
+13:46:geordi: error: 'cout' does not name a type
+13:46:dantmnf: geordi: {int C(0); cout<< C == C++;}
+13:46:geordi: error: no match for 'operator==' (operand types are 'ostream' and 'int')
+13:47:dantmnf: geordi: {int C(0); cout<< (C == C++);}
+13:47:geordi: warning: operation on 'C' may be undefined
+13:55:varna: 对了药娘都哪去了
+13:59:izmntuk joined channel
+14:02:varna: http://tieba.baidu.com/f?ie=utf-8&kw=%E8%8D%AF%E5%A8%98%E4%BA%8C%E5%8C%BA
+14:04:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+14:08:lh_cat: 公司的网络太烂了
+14:30:sismvg: ladycock nsfw 药娘
+14:45:pocmon joined channel
+14:49:pocmon quit:Client Quit
+14:54:izmntuk quit:Quit: Lost terminal
+14:57:ribuluols joined channel
+15:04:ribuluols quit:Remote host closed the connection
+15:10:ribuluols joined channel
+15:21:dantcloud quit:Quit: Connection closed for inactivity
+15:22:ribuluols quit:Quit: 离开
+15:38:Plough joined channel
+15:38:varna: Plough: 你今天痛经？
+15:38:Plough: varna: 屁……
+15:39:Plough: 下午元旦联欢，三点结束
+15:39:varna: 哦，你今天没痛经……
+15:39:Plough: 后来我翻了下，Y1和Y2貌似确实可以直接当二项分布表用
+15:39:varna: 就是那个意思
+15:40:varna: 似乎I1也是差不多的
+15:40:Plough: 不过怎么用来判定具体报多少细节
+15:40:Plough: I1似乎就是把上面一行换了下
+15:40:varna: 我看看表格
+15:40:varna: 实际上CD也有种判法，就是用Y表
+15:42:Plough: 先赌四发大根
+15:42:varna: 不知道
+15:42:Plough: 这次我准备等资材上一百再大建
+15:43:varna: 这样吧
+15:43:Stevearzh quit:Read error: Connection reset by peer
+15:44:varna: 横行定一个函数prob(t), t是飞行时间
+15:44:varna: 这函数生成横行的一个概率
+15:45:varna: 纵列第一列对应海况和天气调整，第二列对应索敌机数目（多的略去不算）
+15:47:varna: 另外我觉得你该先脱裤
+15:47:varna: 实际如果舰种报告情况不方便的话，就由裁判全权决定给多少情报好了
+15:48:varna: 我仍然推荐不直接报告舰种而是报告舰船特征
+15:48:Plough: 自爆去
+15:48:Plough: 我是打算直接报告特征，不过特征报哪些怎么决定
+15:48:Plough: 还是一口气全报？
+15:49:Plough: 另外最近我这大根出率有点高啊……
+15:49:Plough: 今天又出一门
+15:49:varna: 随意
+15:49:varna: 另外有关炮雷击战，我想提个调整
+15:50:Plough: 我是想模拟一下由能见度等等因素导致的信息量有限，不然一眼看出所有特征还全都正确无误实在魔法……
+15:50:Plough: 攻角问题？
+15:51:varna: 起始时裁判为双方掷d100决定一轮中哪方先机动+炮雷击战结算
+15:51:varna: 然后每轮交换先攻权
+15:51:Plough: 非同步开火？
+15:52:varna: 攻角的事情实际是这样：初期美国鱼雷爆炸率不到29%，爱〇斯坦提出了一个改进案解决了部分攻角问题，使爆炸率提高到48%+
+15:52:varna: 非同步
+15:52:Plough: 了解
+15:52:varna: 这个不是强制的
+15:52:varna: 只是个提案
+15:52:Plough: 这样也不错
+15:52:Plough: 反正我没意见
+15:54:varna: 那你脱裤吧
+15:54:Plough: 自爆去
+15:54:Plough: 说起来我终于可以全队大根冲去5-5了
+15:55:Plough: 现在有七门
+15:55:varna: 下个月打5-5
+15:55:varna: 本月战果线丧心病狂
+15:55:varna: 连岩川这么休闲的地方都将近1.3k了
+15:56:Plough: 我又变成中将了
+15:56:Plough: 这个月是什么情况……
+15:57:varna: 十一月作战送烈601了
+15:57:Plough: 哦对
+15:57:Plough: 然后这个月奖励试制41+试制46
+15:57:varna: 坑死
+15:58:Plough: “大家都这么肝我们就换种奖励吧”
+15:58:Plough: 我居然脸出了一个+7的12.7cm连装炮
+15:59:varna: 我那个B型炮的升级是脸出来的，+8跪了一次
+15:59:Plough: 之前出过一个POI炮了
+16:00:varna: 其实我只打算用127+4
+16:00:Plough: POI炮能用来装逼
+16:02:varna: 下周欠雪二改
+16:02:varna: 好激动啊
+16:04:varna: http://tieba.baidu.com/p/3466416363 医生当药娘……
+16:11:Plough: ……
+16:12:varna: 你有问题可以问他
+16:12:Plough: 噗
+16:14:T2 joined channel
+16:15:T2: 啊，tmd大物下他考的全是上册内容。
+16:17:hysw: T2: 节哀
+16:17:T2: 劳资连上册的书都没也是醉了，又是60节奏。
+16:17:varna: 水上打击部队场景求建议
+16:17:hysw: <= 99.5% 都是挂 -_-
+16:18:varna: 后面美国动辄两个TF出动，不想打航空战都不容易
+16:18:T2: hysw, 劳资看了一堆电啊磁啊光啊黑体白体之类的玩意，他考的全是振子热力机械波。
+16:18:T2: varna, 航空战难。
+16:19:T2: tmd大概能及格吧。
+16:19:hysw: 考点弦论和黑色森林怎么样？
+16:20:T2: 弦论是异端
+16:20:varna: 这样吧
+16:21:varna: Nov 14-15 瓜岛
+16:21:varna: 以战列舰为核心的水上打击部队夜战
+16:21:T2: 不惜加点自己都不知道是什么的维度去统合宏观和微观就是异端
+16:21:T2: = = 战列舰。
+16:22:T2: 虽然说是靠猜，但是这tm猜得比神棍还没水平。
+16:22:hysw: T2: 其实维度什么的是不存在的
+16:22:varna: 你们不是说要战列舰么……
+16:22:varna: 不想来战列舰的话可以试试奇迹的撤退
+16:23:T2: 解释不了就承认自己解释不了又不丢人，非得搞个神教出来。
+16:23:YoumuSama joined channel
+16:23:T2: varna, 都行啊。
+16:24:varna: 奇迹的撤退很需要索敌的
+16:24:varna: 不过如果可能的话，我希望把那个剧本做得精致一些
+16:24:varna: 我还是挺喜欢八万钢的
+16:25:T2: 2333
+16:25:varna: 一惊一乍怪可爱
+16:25:T2: 看你口味
+16:25:varna: 先来个姬烈的吧
+16:25:T2: 我无所谓
+16:26:varna: 瓜达尔卡纳尔海战也有很多著名处的
+16:26:T2: 嗯
+16:26:varna: 比如雾岛和院长、绫波和南方栖战姬
+16:26:varna: 还有一水战的作死灯
+16:27:T2: 可以有
+16:27:varna: 不过晓开灯作死是13日的事
+16:27:varna: 当然跟大部分瓜岛附近的争夺一样，这次的日方（code_new）仍然弱势
+16:28:T2: 我是米军？
+16:28:T2: 啊咧不错哦。
+16:28:varna: code_new提出要攻方，所以我优先给他日军
+16:28:T2: soga
+16:28:varna: 上次他是守方
+16:28:T2: 这个随意的
+16:29:varna: http://tieba.baidu.com/p/3476897060
+16:29:varna: 美方优势很明显，日军需要相当的水准
+16:30:T2: 我只想说其实我朝鸭比鸡值钱，虽说都是强行廉价劳动力。
+16:30:varna: 珊瑚海的剧本就交给肛旗了
+16:30:T2: 不过出口创汇还得靠药娘。
+16:30:T2: 2333
+16:31:T2: 美军的话可以随意点
+16:31:varna: 注意我会给日军兵力优势
+16:32:varna: 史实如此，即使平衡过之后日军也有单纯的兵力优势
+16:32:T2: 嗯
+16:32:izmntuk joined channel
+16:32:T2: 我不至于傻逼到硬拼的。
+16:33:varna: 不硬拼你就真傻了
+16:33:varna: 史实编成知道吧
+16:33:T2: 看情况，防守么不就是堵住胖揍。
+16:33:varna: 日：雾岛/高雄/爱宕/长良/川内/9dd
+16:33:varna: 美：院长/南方/4dd
+16:34:T2: OK
+16:34:varna: 这个你可以查到，不过我未必会给这么样的编成
+16:34:T2: 好的
+16:34:T2: 我都随意
+16:35:varna: 总之现在都没法说，时间还长，我可以自己来一次上帝视角的推演
+16:35:varna: 假定两方都最有利，看看怎么平衡
+16:35:ring joined channel
+16:36:T2: OK
+16:40:biergaizi joined channel
+16:42:varna: 另外我问个事情
+16:42:varna: 玩家有没有条件自己打地图
+16:46:T2: 没有 我不会玩gimp
+16:46:varna: 不是
+16:46:varna: 就是我发图纸，玩家打出来纸上作业
+16:46:Plough: 地图这个事我还在折腾sdl
+16:47:Plough: 我觉得我恐怕手绘也够呛……
+16:47:T2: 手绘的话。
+16:47:varna: 手绘有个方便处：容易统一
+16:48:T2: 试试看吧。
+16:49:ring quit:Ping timeout: 240 seconds
+16:57:varna: 哦操
+16:57:varna: NKC...
+16:58:varna: 对了肛旗
+16:58:varna: 我看药娘二区吧有人买了德国针剂，你要不要试试
+16:59:varna: http://tieba.baidu.com/p/3322969741 23333
+17:01:Plough: 噗噗噗
+17:02:varna: 对了你们联欢会都有什么节目的
+17:03:Plough: 普通的唱唱歌变变魔术啥的
+17:04:Plough: 红眼黑发……这是哪位？
+17:04:varna: 红的是POI
+17:04:YoumuSama: 赤瞳！
+17:04:varna: 5-3邪教阵容 电浆 大傻 棒各 北上 大井 POI
+17:05:varna: 赌的就是雷击
+17:05:Plough: 哦，原来是两个人……
+17:05:varna: 然后我赌输了
+17:05:Plough: 2333333
+17:05:varna: 棒各一击拯救世界
+17:05:Plough: 5-3最后我是单横冲进去炸鱼然后拼夜战
+17:05:varna: 当时都觉得自己打不下来了，棒各突然智商
+17:05:varna: 我是单纵拼雷击的，结果四个雷都打错了
+17:06:Plough: 雷击太脸，夜战废掉四个火力太伤
+17:06:varna: 然后早上我去考了形式语义学，以寒云的标准来说挂了6.5%
+17:06:Plough: 虽说单横废掉了雷击但是至少夜战我能打六只船……
+17:06:Plough: 23333
+17:06:varna: 现在如果让我推荐5-3阵容的话，我会说2bb2ca2dd
+17:07:varna: 刷好闪带好电探，不要飞机
+17:07:Plough: 旗舰带个探照灯吧
+17:07:varna: 僚舰带灯
+17:08:Plough: 似乎旗舰的探照灯没有嘲讽效果
+17:08:varna: 所以更要僚舰
+17:08:Plough: 僚舰嘲讽会死吧
+17:08:varna: 硬吃一发CI大丈夫
+17:08:Plough: 塔姐笑眯眯
+17:08:varna: 但是夜战套我推荐是照明弹和夜侦
+17:09:varna: 这时候就别拼什么ALL THE BONUSES了
+17:09:Plough: 2333
+17:09:Plough: 总之我是用的照明弹夜侦
+17:09:varna: 我用的是脸
+17:09:Plough: 我用的是信仰
+17:09:varna: 当时我胆子比现在大多了
+17:10:varna: 现在我打的话肯定会三层闪决战支援照明弹夜侦
+17:10:Plough: 我又想起nico上某个间宫都没灭就冲去5-3的生放松了
+17:11:Plough: 放送
+17:11:varna: 我经常这么干
+17:11:YoumuSama quit:Ping timeout: 240 seconds
+17:11:Plough: 后来我才反应过来他为什么敢这么打
+17:11:Plough: 他家大傻大概吃了成堆的战神，次次CI……
+17:11:varna: 战舰CI简直喝大
+17:12:Plough: 他就这么打的
+17:12:varna: 我拆点装备压压精
+17:12:Plough: 每次你看他单纵冲进一个点，然后他家大傻就亮出了三门炮
+17:12:Plough: 然后塔姐笑眯眯～
+17:13:Plough: 我去打打演习
+17:13:Plough: 噗
+17:13:Plough: 我才发现我现在正好19k油
+17:13:varna: 没东西拆了
+17:13:Plough: 卧槽
+17:14:Plough: 失身武藏长门陆奥御召舰雾岛
+17:14:varna: 爆了他
+17:14:Plough: 等级63 127 127 127 133 133
+17:14:varna: 一个航巡的事
+17:14:Plough: 哦对
+17:14:Plough: 上毛嘎米
+17:14:Plough: 不过平均40级冲进去是不是有点作死
+17:15:varna: 没事
+17:15:Plough: 我把羽黑拉出来吧
+17:15:varna: 哦，得有个高级的
+17:15:varna: 毛蛋，真没得拆了
+17:15:varna: 拆电探吧
+17:16:varna: wow, 一个呜十铃牌拆了得二十铝
+17:16:Plough: 喔喔喔
+17:16:Plough: 找时间我也拆几个
+17:17:Plough: 长门vs长门
+17:17:Plough: 可惜接着我这边的长门就被对面武藏灭了
+17:17:Plough: 噗？
+17:18:Plough: 高雄一炮撸了武藏74点血你信吗
+17:18:varna: 拆了电探还不够，还得再拆点别的……
+17:19:Plough: 我方三个大破，这仗略硬
+17:19:varna: 哭
+17:19:varna: 我拆紫电吧
+17:19:Plough: ……
+17:19:Plough: 周常还是？
+17:20:varna: 周常
+17:20:Plough: 去1-1捞点127不行吗
+17:20:varna: 怪麻烦
+17:20:varna: 反正紫电也用不上了
+17:20:Plough: 我这边没用的装备总是特别多
+17:20:Plough: 不知为啥
+17:21:varna: 因为你氪了船位
+17:21:varna: 紫电拆了三个还是不够
+17:21:Plough: 这只跟产生船的速度有关吧
+17:21:varna: 拆41……
+17:21:Plough: ……简直壕
+17:21:varna: 拆完了
+17:22:varna: 十六门大根，应该够凑合下的……
+17:22:Plough: Orz
+17:22:Plough: 只有七门
+17:22:varna: 造点飞机
+17:22:varna: 41前段时间又造出来一些所以还够用
+17:23:Plough: 说起来你打算改41么
+17:23:varna: 不打算
+17:23:varna: 我被反航战火力坑怕了
+17:23:Plough: Soga
+17:23:Plough: 我也不准备改了
+17:23:YoumuSama joined channel
+17:24:Plough: 有那些螺丝我还不如用来搞几门五连氧气鱼雷
+17:25:varna: 我现在就62螺丝，折腾不起
+17:25:Stevearzh joined channel
+17:25:Plough: 9螺丝
+17:26:Plough: 另外我总觉得反航下命中才是最大的问题
+17:26:varna: 那是因为你没脱裤
+17:26:Plough: 尤其演习
+17:26:Plough: 那是因为你被我家羽黑轰飞了
+17:26:varna: 卧槽3333造出个1:30
+17:26:Plough: ……
+17:26:varna: 估计瓜
+17:27:varna: 瓜
+17:27:Plough: ……
+17:27:varna: 噗
+17:27:varna: 又一个？
+17:27:Plough: 二连瓜？
+17:27:varna: 连装瓜
+17:27:Plough: ……看见你的大和在哪了吧
+17:27:varna: 天国
+17:27:Plough: 233333
+17:28:varna: 最惨的是我没地方喂对空了
+17:28:Plough: 壕
+17:28:Plough: 我这边高雄对空还没满
+17:28:varna: 实战部队的对空都满了，搬砖队都在外面，欠雪和绫波还没二改……
+17:29:Plough: ……今天重巡磕药了
+17:29:Plough: 毛嘎米又一炮秒了对面大和
+17:30:Plough: 显示55点伤害
+17:30:varna: 这是裤子的力量
+17:31:T2: varna, 不会是只要打沉雾岛就能胜吧？
+17:31:varna: 不会
+17:31:T2: ok
+17:31:varna: 胜利条件很简单
+17:31:Plough: タカオ又不穿裤子
+17:32:T2: 敌全灭？
+17:33:varna: 全灭对方S胜，消灭对方舰数2/3以上A胜，旗舰击破B胜，其余情况下如果日军不能取得2.5倍于敌方伤害的伤害则败
+17:33:varna: 初步这么定
+17:33:varna: 不过实际的B胜条件可能会按比例按编成调整
+17:33:T2: soga
+17:34:T2: 我想要依阿华orz
+17:34:T2: 好吧，时间不对。
+17:35:Plough: 你有依阿华对面不用玩了……
+17:35:varna: Iowa的对手必须是大和
+17:35:T2: = =
+17:35:T2: 那还是算了
+17:35:varna: 这是名妄想
+17:36:Plough: 不过准备用来对付大和的不是萌大拿酱么
+17:36:T2: 2333
+17:36:varna: 大概不是
+17:36:varna: Iowa是火力、速度和精度的均衡，对抗大和还是有戏的
+17:37:varna: 至于50in炮应该是双方超战舰以上军备竞争的结果
+17:37:Plough: 20in吧
+17:37:Stevearzh quit:Remote host closed the connection
+17:37:varna: 哦，50cm
+17:37:Stevearzh joined channel
+17:37:Plough: 我记得萌大拿用的也是16in来着？
+17:38:varna: 蒙大拿不存在吧
+17:38:Plough: 图纸嘛
+17:38:Plough: wiki上写的是16in mark7
+17:39:Plough: 50 cal
+17:39:varna: ...
+17:39:varna: 大丈夫，超战舰怎么可能用大战舰的16in炮
+17:40:Plough: 23333
+17:40:TwitchGG quit:Ping timeout: 245 seconds
+17:41:varna: 以后要是还有人喜欢水雷战队的话，说不定真可以试试奇迹的撤退
+17:44:varna: http://tieba.baidu.com/p/3484741973 敬请关注今晚的《爆近药娘》
+17:48:YoumuSama quit:Ping timeout: 264 seconds
+17:50:T2: = =
+17:50:T2: 又不是冰岛卧槽
+17:51:T2: 不过要是生在冰岛也不至于这么傻逼了。
+17:52:T2: 傻逼可能还是傻逼的，但是不至于作死了。
+17:56:varna: 突然觉得日军的大战舰基本就没出场过
+17:56:varna: 这绝对不是错觉
+18:00:T2: 肯定的
+18:01:T2: 你看，如果中国现在打起来辽宁号先沉了。
+18:01:varna: 不会的
+18:01:xxxxxxxx joined channel
+18:01:T2: 何况那是超 战 舰，然后就没有然后了。
+18:01:varna: 你看我一出门，赤城加贺苍龙飞龙翔鹤瑞鹤都起火了
+18:02:T2: 2333
+18:02:varna: 我当时就说，别火灾就好
+18:02:varna: 结果当天伊势日向就起火了
+18:03:T2: 米帝都拿下伊拉克了共和国卫队都没出现
+18:03:varna: 那都不关键
+18:03:varna: 关键是你得看这个辽宁号好看不好看
+18:03:varna: 比如说凤翔它就好看
+18:03:T2: 2333
+18:03:varna: 而爱宕这个呢，也是世界上最有战斗力的舰之一
+18:03:Plough: 凤翔这个航母可有意思了
+18:04:Plough: 瞬间就被明斯克干掉了
+18:04:varna: 拿鞭子抽你
+18:09:Xilzzerts quit:Quit: Leaving
+18:26:hope1 joined channel
+18:28:varna: hotatata
+18:29:hope1: 新年快乐
+18:29:varna: 新年快乐
+18:30:varna: 新年的会长酱、社长酱和有意思酱如何？
+18:33:hope1: 没见到；选了同一组做项目；留了电话
+18:33:varna: 会长酱好悲剧
+18:33:varna: 社长酱果然有文学少女加分
+18:33:varna: 有意思酱步了会长酱的后尘
+18:34:varna: 结论：似乎属性里有文字比较好
+18:34:hope1: 这次是反过来留了对方的电话
+18:35:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=243ed09eba12c8fcb4f3f6c5cc389345/d01373f082025aaff2badc75f8edab64024f1a87.jpg # 新泽西这梗玩的
+18:35:varna: hope1: 喔喔喔喔
+18:35:varna: 这下有意思了
+18:38:hope1: 似乎都住的不远
+18:38:varna: 哦～
+18:38:varna: 新年找个star*ucks去谈人生的节奏？
+18:40:hope1: 本来有找个地方谈大作业的提议，好像被我无意识的推掉了
+18:40:cleamoon: 战争前最重要的东西之一是地形，赶紧找好周围的快捷酒店
+18:40:varna: 你这无意识太差了
+18:40:varna: 简直差到无以复加
+18:41:cleamoon: 跟她说不谈大作业了，谈好 玩的事吧
+18:41:varna: 最后还把锅推到小恋头上
+18:41:T2: 话说兴登堡那个十万吨级800mm是在逗我么。
+18:41:T2: 元首果然是脑残
+18:43:hope1: 大概是习惯问题吧，也没来得及纠正
+18:44:varna: 你看看你
+18:44:hope1: 啊哈哈
+18:44:cleamoon: 超过78%的PHP网站存在漏洞，Perl最安全
+18:45:cleamoon: 和文文冷淡期，习惯拒绝约会了
+18:45:hysw: 要挂了...
+18:45:varna: 社长酱和有意思酱不都很可爱的么
+18:45:varna: 难道你是H O M O...
+18:45:xxxxxxxx: 为什么线虫的气味越来越浓了
+18:45:varna: xxxxxxxx: 爆
+18:46:hysw: Starbucks什么的到处都是...
+18:46:hysw: hope1: 竟然出现了...
+18:47:cleamoon: 神作  http://www.bilibili.com/video/av535489/
+18:47:hysw: hope1: 赶紧去麻省理工受虐去
+18:47:hope1: 当然很可爱啊！
+18:47:hope1: hysw, 求推荐信
+18:47:cleamoon: alpako现充教授羽立现充
+18:47:cleamoon: hope1, 球推荐信
+18:47:varna: hope1: 可爱怎么不提升好感度！
+18:48:varna: cleamoon: 现充谁玩舰娘
+18:48:hysw: hope1: 你自己写推荐信吧...
+18:48:hysw: 可怕的滑铁卢大学...
+18:49:hope1: varna, 当然想提升好感度的啊！
+18:49:cleamoon: varna, 你的几个前女友都怎么样了
+18:49:cleamoon: hope1, 推吧
+18:49:varna: cleamoon: 我哪有那么多
+18:49:cleamoon: 烧吧
+18:49:varna: hope1: 你先得一起行动才能提升好感度啊！
+18:50:hysw: hope1:注意：不要成为伪学霸
+18:50:hysw: 成为真学霸和真学渣都比伪学霸要好
+18:51:hope1: 可惜我这人太不文艺而且略逗，经常搞砸
+18:51:varna: 你这是朴实
+18:52:varna: 朴实的人比我这种逗比强多了
+18:52:xxxxxxxx: 好多线虫
+18:53:hysw: 我是一个伪学霸...
+18:53:cleamoon: @bigman945：如果你老婆真的是被我强暴的话，你应该接受这一事实，然而我希望真实的情况不是这样。你只需要相信，这样的一种行为，必然是有逻辑的，它围绕着我们彼此根本利益制定并运转，不论什么原因，你以及你方家属不妨顺其自然，人生本是艰难，这个故事又算得了什么。 #环球时报体
+18:53:iyzsong: fire in the hole
+18:53:varna: 不对
+18:53:hope1: hysw, 已经靠吃英语老本当了一个学期了
+18:53:varna: 我意识到了一个问题
+18:53:cleamoon: 不需要文艺，那种大多只会成为喧嚣的风
+18:53:varna: 海棠开后宫！
+18:53:cleamoon: 你刚意识到？
+18:53:varna: 自称文艺的人大多连的地得都分不清
+18:54:hysw: 昨天看完三体... 还是看论文比较有意思...
+18:54:hysw: hope1:不要成为伪学霸
+18:54:hope1: varna, 表现的太不有趣也不行啊！
+18:54:varna: hope1: 正常地有趣就行了
+18:55:varna: 跟妹子聊逻辑正常的话题是一件很困难的事，这个我理解
+18:55:xxxxxxxx: 正常的有趣肯定不行啊 正常的有趣口味太重了
+18:55:varna: xxxxxxxx: 爆
+18:55:Plough: 我是真学渣
+18:56:cleamoon: hope1, 没事没事，天然也好
+18:56:hysw: Plough: 真学渣比伪学霸要好
+18:56:varna: 我觉得天然反而靠谱
+18:57:Plough: varna: 话说你用过DBI吗
+18:57:varna: 像我这种人，如果以前妹子问我她和我老母一起掉水里只能救一人会救谁，我果断回答救老母让她死；现在我可以安心救老母去了，因为我妹子标排1680t
+18:57:varna: Plough: DBI::MySQL用过
+18:57:Plough: 如何
+18:57:varna: 可以
+18:58:Plough: 了解
+18:58:cleamoon: 标排2333
+18:58:xxxxxxxx: 游 泳羊驼
+18:58:varna: 满排1900+t的特三型哦
+18:58:cleamoon: 不过妹子问我这个我一般的回答是“我能现在把你弄死吗”
+18:59:varna: 这回答也不错
+18:59:Plough: 23333
+18:59:hope1: 会问这种问题的妹子我会忽略
+18:59:varna: 敢问这弱智问题就可以忽略了
+18:59:Plough: 忽略+
+18:59:varna: 但问题是现在我是条舰狗
+18:59:cleamoon: ex游泳国家二级运动员，老妈神奇的不会沉的漂浮运动，让我一个不会游泳的去救？
+19:00:cleamoon: 哪里才能找到妹子呀呀呀呀
+19:00:varna: 你会被uuz吃掉
+19:01:cleamoon: uuz软妹多好呀
+19:01:varna: 我觉得话题歪了
+19:01:varna: 我们现在该审议ho棠开后宫的问题
+19:02:xxxxxxxx: 话题又回归线虫间的讨论了
+19:02:varna: xxxxxxxx: 爆
+19:02:cleamoon: 这有什么可讨论的
+19:03:cleamoon: 不是肯定有罪吗
+19:03:varna: 问题是怎么处理
+19:03:cleamoon: 烧
+19:03:varna: 烧
+19:03:hysw: 烧这种处理方式太肤浅了
+19:04:varna: 嗯，我觉得该肛了寒云
+19:04:cleamoon: 肛了寒云+
+19:05:sismvg: hysw:烤更加入味
+19:05:varna: 来，大家排单纵阵
+19:05:varna: hysw: 爆
+19:05:hope1: 我哪有说这种事情的立场啊！能维持不进黑名单就不错了
+19:06:cleamoon: hysw: 爆
+19:06:varna: 你看看你，很快你就是左拥右爆的现充了
+19:06:cleamoon: FFF团的黑名单吗
+19:06:cleamoon: 放心吧，你已经进了
+19:06:sismvg: 然后发觉啪啪啪的时候没有感觉。
+19:06:sismvg: 原来是个梦
+19:06:varna: sismvg: 那是你屌小
+19:07:sismvg: 人没增加1公斤 cock减少1cm
+19:08:sismvg: 我讨厌元旦。又到了新番停播的时候
+19:08:sismvg: 21点凭物语4集连播
+19:09:cleamoon: 我追的最新的番应该是clannad
+19:09:sismvg: 噗
+19:10:sismvg: shinne 披着宅的皮去泡妹子
+19:10:xxxxxxxx: 帝球的丁丁还好么
+19:12:cleamoon: 其实正太可以找几个亲戚去劫妹子，然后他挺身出现，一套洪拳打倒敌人，然后推到妹子
+19:12:cleamoon: 打输了也没事，可以当热血天然
+19:13:sismvg: 天真。。
+19:13:xxxxxxxx: 然后实际情况是亲戚被妹子追着打
+19:13:sismvg: 现实世界打输了就是渣渣
+19:13:sismvg: 打赢了被警察叫去喝茶。。
+19:13:cleamoon: 2333
+19:13:xxxxxxxx: sismvg 给 今天的药
+19:14:cleamoon: 叫城管的亲戚呗
+19:14:sismvg: 快吃500
+19:14:hope1: 那一点意思也没有
+19:15:lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/main/player/protocol_base.cpp#L14
+19:18:cleamoon: 那就你去劫你的亲戚，让妹子救你亲戚
+19:19:xxxxxxxx: 怎么好像自己反过来变成歹徒了...
+19:19:hope1: 233
+19:20:sismvg: 什么是屌丝？屌丝就是幻想英雄救美，然后抱得美人归的人..
+19:22:hope1: 一般被称为x丝的群体以外的人也会这样幻想吧
+19:23:cleamoon: 我想让美救，然后抱得美人归
+19:23:sismvg: http://tieba.baidu.com/p/3498678733 十本漫画，9个妹子封面
+19:23:sismvg: cleamoon:王二喜？
+19:24:cleamoon: 那是谁
+19:24:sismvg: baidu去
+19:24:xxxxxxxx: cleamoon: 你为什么不实施就地推倒啪完跑路的作战计划?
+19:25:sismvg: 那就是QJ吧》。
+19:25:sismvg: http://i-ab.com/wp/2014-12/87702/
+19:25:sismvg: NSFW的游戏,还不错
+19:26:cleamoon: 因为目标是多p
+19:26:code_new joined channel
+19:32:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+19:36:lh_mouse: 三俗滚出
+19:37:Plough: http://pasteboard.co/sc35Pt.png 刚把镇守府装修了下
+19:39:cleamoon: 生活在韩国的脱北者准备利用气球将喜剧片《The Interview》送到朝鲜。活动人士朴相鹤周三宣布，最早2015年一月晚些时候将开始用气球向朝鲜"空投"10万份《The Interview》的DVD和U 盘  #你确定他们有电脑？
+19:47:code_new: 一堆壕物……
+19:47:hope1: 233
+19:48:Plough: 哪壕了
+19:49:Plough: 所有新买的加起来也就6k家具币
+19:50:cleamoon: 相当于多少人民币？
+19:50:code_new: 上万家具币的不说，职人的就一堆……
+19:50:Plough: 职人氪了四个
+19:50:code_new: Orz
+19:50:cleamoon: 只能看到面条了...
+19:50:Plough: 主要是原来账户里留着200点用不掉
+19:50:cleamoon: orz
+19:50:cleamoon: 壕旗
+19:50:Plough: 干脆氪1k买四个职人用完……
+19:50:Plough: 哪土豪了
+19:50:code_new: 就是这么任性
+19:51:Plough: 就1k日元
+19:51:Plough: 我这里面值钱的也就一个武藏模型，还是攒到下架前一天才买的
+19:54:cleamoon: 1k日元已经超过我所有游戏的价格了
+19:54:code_new: 我买的貌似加起来就一武藏……
+19:55:Plough: 你才玩多久
+19:55:lh_mouse: 有个问题啊
+19:55:lh_mouse: git submodule add 失败了怎么办呢
+19:56:xxxxxxxx: 有人玩robocraft么?
+19:57:iyzsong: I don't know.
+19:57:hope1 quit:Ping timeout: 265 seconds
+19:58:code_new: http://picpaste.com/ad-nE19XtBz.jpg #圣诞节的一套，估计一段时间换不了了
+20:00:cleamoon: 这个号
+20:00:cleamoon: 好
+20:00:cleamoon: 右边那个是怎么回事
+20:01:code_new: 那个是事后的哈酱
+20:01:xxxxxxxx: 脚骨折了?
+20:02:code_new: = =袜子比较厚
+20:02:code_new: 不要在意那些细节
+20:06:cleamoon: 这个好
+20:06:cleamoon: 哪里可以找到事后的其他妹子
+20:06:hope1 joined channel
+20:06:xxxxxxxx: 幼女又在好什么... 还是穿越了?
+20:06:Stevearzh quit:Quit: Quit...
+20:07:code_new: 直接来玩就行了
+20:08:iyzsong: play what?
+20:08:code_new: iyzsong, kancore
+20:09:code_new: 应该是kankore
+20:09:cleamoon: 就是codenew的妹子
+20:09:cleamoon: 弄不到号
+20:10:iyzsong: /o/
+20:10:code_new: /o//
+20:10:code_new: //o//
+20:11:lh_mouse: geordi, { foo(1, 2.0, '3'); } template<typename ...T> void foo(T ...){ (cout <<TYPE<T>, ...); }
+20:11:geordi: error: expected primary-expression before '...' token
+20:11:lh_mouse: geordi, { foo(1, 2.0, '3'); } template<typename ...T> void foo(T ...){ ((cout <<TYPE<T>), ...); }
+20:11:geordi: Same error.
+20:11:code_new: 今天北京时间七点半刚放了一次号……
+20:11:lh_mouse: geordi, { foo(1, 2.0, '3'); } template<typename ...T> void foo(T ...){ (!!(cout <<TYPE<T>) + ...); }
+20:11:geordi: Still same error.
+20:12:lh_mouse: geordi, { foo(1, 2.0, '3'); } template<typename ...T> void foo(T ...){ cout <<(... + !!(cout <<TYPE<T>)); }
+20:12:geordi: Again, same error.
+20:14:Plough: 绅士想入坑？
+20:17:code_new: 绅士一直想入坑，但是不好跳
+20:18:lh_mouse: 绅士是谁
+20:18:code_new: @cleamoon 
+20:19:lh_mouse: 我也要妹子
+20:20:code_new: 快来玩舰娘o.o
+20:21:lh_mouse quit:Read error: Connection reset by peer
+20:22:Stevearzh joined channel
+20:23:hope1_ joined channel
+20:24:iyzsong: 8.8
+20:25:code_new: 3.3
+20:26:xxxxxxxx: 4.4
+20:29:cleamoon: 0.0
+20:31:iyzsong: who need a shell to my VPS? It's 200G/mon, Tokyo, NixOS. I use little x.x
+20:36:cleamoon: iyzsong, 免费？
+20:36:iyzsong: cleamoon: OC, not..
+20:37:iyzsong: I payed
+20:37:cleamoon: 多少钱？
+20:37:code_new: paid
+20:37:iyzsong: 7$/M
+20:38:iyzsong: x.x
+20:38:cleamoon: 233
+20:38:cleamoon: 速度如
+20:38:cleamoon: 如何
+20:39:iyzsong: I can't judge ..  never use one before
+20:39:iyzsong: cleamoon: do you want to try?
+20:39:iyzsong: give my your id_rsa.pub
+20:39:iyzsong: give me
+20:41:Petrus07 joined channel
+20:41:cleamoon: i wanna buy one...
+20:41:iyzsong: I use mosh/tmux/weechat to keep IRC :-
+20:41:iyzsong: cleamoon: I use vultr.
+20:42:cleamoon: 和你的本子比多快？
+20:43:iyzsong: how to compare..
+20:43:cleamoon: 感觉...
+20:43:iyzsong: network latency..
+20:44:cleamoon: 话说mosh over ssh能utf-8？
+20:44:cleamoon: ...
+20:44:iyzsong: yes
+20:44:iyzsong: weechat work fine
+20:45:iyzsong: cleamoon: you should try my first.
+20:45:hope1_: mine
+20:45:iyzsong: - -b
+20:46:iyzsong: hope1_: wanna try?
+20:46:cleamoon: alpako might want to try
+20:46:hope1_: 我没什么需求，翻墙也能直接GAE
+20:49:cleamoon: 我也还有学校...
+20:50:iyzsong: o.o ok
+20:51:cleamoon: 给我几个妹子吧
+20:52:iyzsong: I have played various GALGAMEs recently..
+20:54:xxxxxxxx: 肛robocraft中
+20:55:cleamoon: gal有很多种吗
+20:56:iyzsong: 0.0
+20:57:cleamoon: 也许你的意思是 played several GALGAMEs...
+20:58:xxxxxxxx: 也许是NTR SM这样的种类
+21:00:cleamoon: soga
+21:00:iyzsong: my English is poor :(
+21:03:hoxily joined channel
+21:05:FrankHB: various: 21X 18X 15X 12X 8X
+21:07:hoxily_ joined channel
+21:07:xxxxxxxx: 8x什么鬼
+21:07:GODDOG joined channel
+21:08:iyzsong: 2333
+21:09:FrankHB: 貌似东方正作就是8X。
+21:11:hoxily quit:Ping timeout: 258 seconds
+21:12:cleamoon: 2333
+21:13:cleamoon: 21X是什么
+21:15:FrankHB: 重口味的。
+21:16:cleamoon: soga
+21:16:FrankHB quit:Read error: Connection reset by peer
+21:32:varna: 药娘都哪去了
+21:37:cleamoon: 都买药去了
+21:38:varna: 哦哦！大淀明石POI要有新年立绘！
+21:39:varna: 结果今天岚月酱也没去排号？
+21:39:Plough: varna: 我把镇守府装修了一下
+21:39:varna: 我翻翻
+21:40:Plough: http://pasteboard.co/sc35Pt.png
+21:41:cleamoon: 我都不知道...
+21:41:varna: http://picpaste.com/DCXCgJq3.png
+21:43:Plough: 0 0你还是没买大淀挂轴？
+21:43:varna: 今年最后的资源：25.3k/27.3k/23.8k/19.4k+646/90/62
+21:43:varna: 没买
+21:44:varna: 虽然大淀的字很好看，但挂轴本身不好看
+21:44:Plough: 我买了……
+21:44:Plough: 字好看就成
+21:45:varna: 这资源量下个月打5-5很难啊
+21:45:hope1 quit:Ping timeout: 272 seconds
+21:45:Plough: 等做完今天的出击我看看还剩多少
+21:46:Plough: 深海击沉保护系列
+21:46:Plough: CI一撸一个1血
+21:46:Plough: 连着给我来了三只……
+21:47:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=e3509b22c8ef76093c0b99971edca301/2203ac24b899a901a3acc4891e950a7b0308f5ac.jpg 视力表
+21:48:Plough: 2333333
+21:49:varna: 雾岛：（装饰）
+21:50:lh_mouse joined channel
+21:52:varna: 说起来，下个月就没有继承战果了啊
+21:52:varna: 似乎得适当地周回5-4了
+21:53:varna: 或者说明年战神就告别我们了
+21:53:Plough: 一天30轮？
+21:53:varna: 太多了
+21:53:varna: 即使确保战果，一天十盘也够多了
+21:53:varna: 5-4周回胜利大约是2战果
+21:54:cleamoon: http://i2.xiaohua.fd.zol-img.com.cn/t_s600x5000/g3/M07/0B/0F/Cg-4WFJWIC2IaClFAAFLESmEXqwAAMY6wFl3hMAAUsp298.jpg
+21:54:Plough: 那只够500线吧
+21:54:varna: cleamoon: 为何我找到九个差别
+21:54:Plough: 要往前冲我觉得还是不够……
+21:54:varna: Plough: 你还想刷100？
+21:54:Plough: 我不打算刷
+21:54:varna: 如果想刷100可以考虑周末一天20盘
+21:55:Plough: 毕竟下个月我还没放假，而我在幌筵……
+21:55:cleamoon: v撸多
+21:55:varna: 图片右下角不一样的
+21:55:varna: 加上那八个腿
+21:55:varna: 如果下个月5-5可行，明年我就保500
+21:56:lh_mouse: 我现在看见羊驼的时候有 80% 的时间是在说舰女人
+21:57:varna: 我总不能80%时间说MCF
+21:57:lh_mouse: 剩下 20% 的时间在宣传 perl
+21:57:varna: 当然你可以掏钱让我广告
+21:57:varna: 或者给一个不掏钱的版本，80%时间我黑MCF
+21:58:lh_mouse: 这几天我补点文档
+21:58:hope1 joined channel
+21:58:lh_mouse: poseidon 严重缺文档   以至于前两个星期有人邮件问我有没有文档我都拿不出手
+21:58:Plough: 2333333
+21:59:varna: 其实我还是说这个鬼畜例子
+21:59:varna: rec fg = rec f = \x.(proj22 fg) x, g = \y. add y ((proj21 fg) y) in pair f g end in fg end
+21:59:varna: 这里proj21 fg的合一始终不对，虽然我直接把整个嵌套letrec压平了
+22:00:cleamoon: 这里在标题里有但是基本不讨论的就是mcf了
+22:00:varna: 实际上我推断rec fg = pair f g, f = \x.(proj22 fg) x, g = \x.add x ((proj21 fg) x ) in fg end是对的
+22:01:lh_mouse: MCF 的定位问题
+22:01:varna: MCF定位给自居聪明但自居不如MCF作者聪明的听话孩子用
+22:01:varna: 其中但是短路的
+22:02:cleamoon: +
+22:02:cleamoon: 现在发现haskell的好了
+22:02:cleamoon: 比如能写出自己看不懂的东西
+22:02:varna: haskell大部分时候坑
+22:02:Plough: perl也能
+22:02:varna: 尤其在ghci下面eval, haskell超坑
+22:02:Plough: 而且明显perl更擅长
+22:03:varna: 你会发现自己喂给eval和编译器的haskell程序可能大不相同
+22:03:varna: 但是我觉得僵硬的FP风格文法比单纯的S-expr好看点
+22:03:varna: 至于Perl...
+22:03:varna: 我强烈推荐诸君用HOI::Match
+22:03:Plough: 好看+
+22:04:Plough: 要不你以后80%的时间给ほい做广告？
+22:04:lh_mouse: 今天幻想了个格式化语法
+22:04:varna: 当然最新的版本需要打过补丁的Alias-2.32，所以我没发布到CPAN
+22:04:varna: ほい系列就是写写玩的，我真大量用的就是HOI::Match
+22:04:varna: HOI::Comprehension就是个hack...
+22:05:lh_mouse: format<s, w<d, 5, '0'>, d<7, 2>>("foo", 12, 34.567);
+22:05:cleamoon: s-expr还是适合当中间语言
+22:05:varna: 难看
+22:06:varna: 不是不能用，只是难看
+22:06:Plough: S-expr倒是比较好解析
+22:06:Plough: 而且我觉得比XML系好多了
+22:06:varna: S-expr的解析顺手就能弄出一个来
+22:06:varna: 但是纯粹的S-expr有个问题
+22:06:lh_mouse: 昨天改了下 m-notation  支持匿名的包了
+22:06:varna: lambda abstraction不是S-expr的语法
+22:06:lh_mouse: 于是看起来越来越像 json
+22:07:varna: 相应地，没法语法制导地给出语义动作
+22:07:varna: 而假如给出一个lambda原语，那么实际上一个原语具有超乎语义的语法制导
+22:07:varna: 这闹哪样
+22:07:varna: S-expr实际上只有application, 一部分应有的意义被隐藏在primitive里面蒙混过去
+22:08:varna: 这真不如规定一个更僵硬的语法，提供明确的语法知道
+22:08:varna: 制导*
+22:08:varna: 不然还有另一个作死的选择：提供用户介入的形式语义变更
+22:09:varna: 但这对语言提出了更多的要求：至少应当在能介入的部分明确出指称语义和操作语义的界限
+22:09:cleamoon: 更僵硬的语法+
+22:09:varna: 这事情我一直在想，但我一直没找到我自己满意的办法
+22:09:hope1_: 不能认为原语是语法的一部分吗
+22:09:varna: 不能
+22:09:Plough: 去找yinwang研究下
+22:09:varna: 这正是我反对的部分
+22:09:varna: 原语可以具有意义（比如+&）
+22:10:Plough: 大鸟离下一级还有30k经验
+22:10:Plough: 先停
+22:10:lh_mouse: 无法访问此网页
+22:10:lh_mouse: 与 irclogs.benihata.org 的连接已中断。
+22:10:Plough: 噗
+22:10:Plough: 那珂酱
+22:10:varna: 但原语是被语义制辖的东西——更直白地说，语义单方面地决定原语
+22:10:hope1_: 寒云的一直可以上
+22:10:varna: 如果一个lambda () ()影响了语义，那么原语实际上下克上了
+22:10:varna: 我非常不喜欢这个lambda
+22:10:Plough: lh_mouse: 我这正常……
+22:11:varna: 一个理由是它搞反了，另一个理由是它直接影响PASS
+22:11:varna: 比如现在有人想做一个typed-racket-like crap
+22:11:varna: 那么原语意义需要先于类型推论判明
+22:11:varna: 这简直闹
+22:12:varna: 编译器还是做成一趟一趟顺次接起来的好
+22:12:hope1_: 那不看成原语，直接看成语法的一部分呢
+22:12:varna: 我建议检讨这个语法
+22:12:varna: 比如说'(lambda (x) (+ x x))
+22:12:varna: 这不是'(op arg arg_)
+22:13:varna: 这不如回归lc, 然后从lc出发重新组织语法
+22:13:hope1_: 就是说容易造成混淆？
+22:13:varna: 即使得到ML或者hs都比这个强吧
+22:13:varna: 不是混淆
+22:13:varna: 没人会混淆这个，但它让编译器的PASS浑浊
+22:13:varna: 一个语法对应一套语法制导，这是理想的状态
+22:14:varna: 但是这里其实有个代价
+22:14:varna: 单纯理论上的代价
+22:14:hope1_: 反正编译器怎么都得特殊对待abstraction这个东西
+22:14:varna: 你失去了运行时构造函数的可能
+22:15:T2: = =
+22:15:cleamoon: 还是需要新的理论
+22:15:varna: 但另一方面，假定有需要原语的意义先于某些语义判明的语言
+22:15:varna: 那么运行时构造函数也近乎不能
+22:15:T2: cleamoon, 跟神棍学霸云去研究M理论吧
+22:16:varna: 也即，语言丧失了自己eval自己的能力
+22:16:varna: 但我现在不是特别看重这个能力
+22:16:Plough: 果然又TM进Boss
+22:16:Plough: 果然又TM是轮形
+22:16:varna: 比起这种东西和自欺欺人的现行元编程实践，我希望的是别的东西
+22:16:T2: 果然抖M要比S强
+22:16:GODDOG quit:Quit: leaving
+22:17:hope1_: (lambda (arg) (body))也可以用(op arg arg_)来处理吧
+22:17:varna: 差一个问题
+22:17:varna: 假设这里要推定类型，那么需要几趟？
+22:17:varna: 或者问一个更黑暗的问题
+22:17:varna: 能证明这里能推断类型么？
+22:18:T2: = =
+22:18:iyzsong: w.w
+22:18:varna: 如果以一般性的S-expr处理定型语义，那么类型系统附庸于语言
+22:18:varna: 也即“在能推断的场合推断”
+22:18:varna: 这闹什么，还不如Perl
+22:19:lh_mouse: Opera 无法载入网页，因为 irclogs.benihata.org 响应时间过长。 网站可能关闭，或者网络连接出现了问题。
+22:19:hope1_: 但是这里还涉及一个变量绑定问题
+22:19:cleamoon: M又不是很难
+22:19:varna: ff和chrome都没问题
+22:19:hope1_: 不引入lambda或类似原语如何绑定变量？
+22:19:cleamoon: 物理问题一向没有数学那么坑
+22:19:hope1_: 难道用 point-free style 吗
+22:19:varna: hope1_: 对一切函数施行lambda提升
+22:19:hope1_: 那是什么？
+22:19:varna: 或者as-if实现
+22:19:cleamoon: 自己eval自己没太大意义
+22:20:varna: 原文lambda lifting
+22:20:varna: 可以维基
+22:20:hope1_: 我看看
+22:20:varna: 这是消去函数里自由变量的办法之一
+22:20:varna: 当然你也可以换一个想法
+22:21:varna: 保持一切函数语义直到实现，此时挂一个薄运行时上去实现成带capture的functor
+22:21:varna: as-if之
+22:21:varna: 这是理论上比较轻松的办法
+22:21:T2: cleamoon, 这个绝对比数学坑，至少现有数学工具解决不了，这是幻想乡。
+22:22:GODDOG joined channel
+22:22:varna: T2: 解释下为何解决不了
+22:22:T2: Welcome to silent hill
+22:22:T2: Tn紧致会出现问题
+22:22:varna: 我想听听技术细节
+22:22:T2: 没有细节好吧
+22:22:T2: 这不是技术
+22:22:varna: 什么问题因为哪个理论的哪种缺陷不能解决
+22:22:GODDOG quit:Client Quit
+22:23:varna: 是公理化的问题还是单纯的可计算性问题
+22:23:T2: 公理化假设还没完成，可计算性无工具。
+22:23:cleamoon: 没什么解决不了的
+22:23:varna: T2: 你说了跟没说一样……
+22:24:T2: 这东西本来说了就跟没说一样。
+22:24:Plough: 我操！！！！！！！！！
+22:24:varna: 这么说吧，如果你能理解涉及到的数学，能不能给个解释
+22:24:varna: 如果不能的话，为什么你这么有自信
+22:24:T2: 矩阵很难？
+22:24:Plough: varna: 我刚才大建了一发，没看时间切走了
+22:24:varna: 我不管难不难
+22:24:Plough: 然后回来卡立绘了
+22:24:varna: 大和？
+22:24:Plough: 不是
+22:24:Plough: 五小时的
+22:24:varna: 恭喜
+22:25:varna: 准备图吧
+22:25:Plough: 哈哈哈哈哈哈哈哈哈
+22:25:Plough: 我觉得我的2015充满了光明
+22:25:varna: T2: 问题是你什么都没说，这说服不了任何人
+22:25:T2: 问题就是它本身就是个什么都没说的玩意。
+22:25:Plough: 2014年的最后一天我终于逃回了土耳其
+22:25:cleamoon: M理论现有理论够用，但是没法测试
+22:26:varna: T2: 你看过相关的论文么？
+22:26:Plough: 锁锁锁
+22:26:varna: 还是说你算过？
+22:26:Plough: 两张图已备好
+22:26:varna: 我最烦提理论而不自己算的神棍
+22:26:varna: 我陪你造一发
+22:26:T2: 好吧
+22:26:varna: 记住别人说有别人的依据
+22:27:varna: 结果我问你的时候你横竖连个参考文献都拿不出来
+22:27:varna: 武藏
+22:27:varna: 4672 20
+22:27:varna: 伙计们赌吧
+22:28:T2: 依据...
+22:28:varna: 哦操
+22:28:dantmnf: 出货了？
+22:28:varna: 爱谁谁
+22:28:varna: 明天拆了还有几十钢
+22:28:dantmnf: 我也赌一发
+22:29:hope1 quit:Ping timeout: 240 seconds
+22:29:varna: 再来一发4662
+22:29:varna: 欧根走起
+22:30:varna: 我操五小时
+22:30:varna: 喷
+22:30:Plough: 喷喷喷！
+22:30:varna: 哈哈哈
+22:30:varna: 哈哈哈哈哈哈啊哈哈
+22:30:varna: 长门！
+22:30:Plough: 恭喜
+22:30:varna: 老子有长门了！
+22:30:Plough: 这说明2015将是充满光明的一年
+22:31:code_new: 恭喜
+22:31:varna: 一月的5-5不打了
+22:31:code_new: 再过半小时我也来一发
+22:31:dantmnf: .........................
+22:31:dantmnf: 半个大和
+22:31:varna: 再来一发
+22:31:varna: 再来就出货
+22:32:varna: 你看我就剩一万钢了
+22:32:GODDOG joined channel
+22:32:dantmnf: 没资源了 10k/8k/7.2k/5.2k/145/1
+22:33:dantmnf: 最近有点大赌...
+22:33:varna: 嗯，有大凤的都是HOMO
+22:33:hope1 joined channel
+22:34:varna: 现在HOMO还是肛旗和code_新世纪
+22:34:Plough: 有大和级的是HOMO
+22:35:code_new: ++
+22:36:varna: 先算大凤，其余短路
+22:36:varna: 你们有大凤我没有
+22:36:Plough: 先算大和级
+22:36:Plough: 大和级在前面
+22:36:varna: BSM比长门厉害，先算BSM
+22:36:dantmnf: 10/10/10/11 都给我开发成功两回...
+22:36:Plough: BSM就没写进条件里
+22:36:varna: 要因地制宜
+22:36:lh_mouse quit:Read error: Connection timed out
+22:37:cleamoon: 要是真没事干就撸逻辑学，那才是深坑
+22:37:varna: 说起逻辑学，我打算在新项目里加一点基于本体的溯因推理
+22:37:lh_mouse joined channel
+22:37:varna: 比如拿到一个自然语言的句子S, 分词作成向量v
+22:37:cleamoon: 那只是逻辑学应用，基础逻辑学超坑
+22:38:varna: 然后这个v的各单词可以拿到释义，但能溯因到什么程度值得设计一个算法
+22:38:varna: 我只学过一点数理逻辑……
+22:39:Plough: varna: 话说这样的话你前100图鉴是不是也齐了？
+22:39:varna: 差些千岁改造什么的吧
+22:39:varna: 总之船都见过了
+22:40:Plough: Soga
+22:40:Plough: 我为了填满前100图鉴专门把千岁级改了……
+22:40:varna: 我不是收集派，不过长门毕竟是IJN的象征啊
+22:41:Plough: 铁相我打算先在3-2练到1改然后拉去5-4
+22:41:Plough: 顺便捕鲸
+22:42:varna: 对了，我提个数学问题吧
+22:42:varna: 看看能不能头脑风暴一下
+22:42:varna: 假定现在有n个用户，每个用户u1经过一个算法计算得出对另一个非自己的用户u2的一对参数(b1, b2)
+22:43:varna: b1和b2都是0~1之间的数
+22:43:varna: 现在要把n个用户分成若干个聚类（或者类似/相似的簇）
+22:44:varna: 要求每个聚类内的用户u1'对本聚类内用户u2'的b1参数都取尽可能大
+22:44:varna: 同时已知b1大的话b2就会相应地小
+22:44:varna: 问题有二
+22:44:varna: 其一，如何确定这聚类的数目？其二，不考虑聚类的数目如何确定，如何确定聚类本身？
+22:47:T2: 其二，按b1，包
+22:47:varna: 哦对，聚类可以重叠也可以不重叠，推荐不重叠
+22:47:varna: T2: 你在说什么……
+22:47:T2: b2的差值
+22:47:T2: 其二，按b1，b2的差值确定
+22:47:cleamoon: 看不懂...
+22:47:varna: 算了我挑明吧
+22:48:Plough: 看不懂+
+22:48:varna: u1经过算法得到对u2的参数有二，其一是信任因数，其二是不信任因数
+22:48:varna: 我希望形成若干社区
+22:48:varna: 社区内用户的互信任程度尽量高
+22:48:hope1_: b1和b2有什么直接的关系？
+22:48:T2: b1 - b2
+22:48:cleamoon: soga
+22:49:varna: T2: 你如何保证能形成聚类？
+22:49:cleamoon: 用不用不信任因数尽量低？
+22:49:varna: 不用
+22:49:varna: 哦对，n>180k
+22:49:T2: varna, 同时已知b1大的话b2就会相应地小
+22:49:varna: 大约180k附近吧
+22:49:varna: T2: 你预估一个聚类能有多大
+22:50:hope1_: 这个算法成本很高吗
+22:50:T2: 正太分布
+22:50:varna: 什么理由
+22:50:varna: hope1_: 这个算法其实有别的问题，我放宽了条件
+22:51:varna: 实际上信任和不信任可能有信息不足的情况（至少我的旧实验指出了一部分预测结果是这样的），所以可能还有些乱七八糟的信息论方法
+22:52:varna: T2: 哦对，如果可能的话指出你的方法比单纯的KNN或者K-means或者马尔可夫随机游走的优势……
+22:52:varna: 重点关注后面的马尔可夫过程，这个办法其实除了慢之外还是满好的
+22:52:cleamoon: a信任b不代表b信任a吧
+22:52:T2: 要看信任什么，但是同一个社区人群的基本状况（智力，收入，环境，教育水平）大多服从正态分布。
+22:52:varna: cleamoon: 对，不是确认的
+22:52:varna: cleamoon: 对，不是对称的
+22:53:T2: 哦
+22:53:T2: 这个意思啊
+22:53:cleamoon: 我的方法180k太慢了
+22:53:hope1_: 一般做这种聚类是随机取样还是什么，不可能确认每一对f(u1, u2)的值吧
+22:54:varna: hope1_: 这也是坑点
+22:56:T2: varna, 我就不会KNN
+22:56:varna: 马尔可夫随机游走呢
+22:56:varna: 哦，统计下用户可能没那么多
+22:56:T2: 也不知道马尔可夫
+22:56:varna: 130k吧
+22:57:hope1_: 那有兴趣就查查，没兴趣就算了嘛
+22:58:varna: 马尔可夫模型上比较好看，就是收敛起来慢
+22:58:varna: KNN/K-means糙而快，但我没法保证形成的社区很靠谱
+22:59:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:00:varna: 实际上这个数据集如果构图的话意外地大
+23:00:varna: 但是因为质量不错所以我打算用
+23:00:varna: 有效的顶点数大约85k+吧
+23:02:varna: 总之要是能想出一个这方面还算靠谱的算法，就能弄个不错的论文出来
+23:02:T2: orz
+23:02:varna: 所以我把这个算法的质量都赌在形成社区的质量上了
+23:02:hope1_: 只在高中教材上见过马尔可夫型决策，似乎是用来求某种不动点的
+23:02:code_new: 卧槽，我出武藏了
+23:03:T2: hope1_, 你那是什么高中教材？
+23:03:hope1_: 人教版选修
+23:03:T2: soga
+23:04:Plough: code_new: 噗
+23:04:Plough: 你们这群HOMO
+23:04:code_new: Plough, 赶紧赌……
+23:04:Plough: 赌了我明天不用练大凤了
+23:04:code_new: 旗舰78金刚
+23:04:code_new: 公式4662+20
+23:04:varna: 我操
+23:05:varna: 今晚都怎么了
+23:05:varna: 我那武藏是4762+20野分……
+23:05:varna: 不对
+23:05:varna: 4672
+23:05:T2: 其实我没太懂具体要干嘛。
+23:05:code_new: 哦哦
+23:05:varna: 不懂就对了
+23:05:Plough: 榛名
+23:05:Plough: 拆了换钢
+23:05:varna: 毕竟我略掉前后的其他算法
+23:06:code_new: = =
+23:06:T2: = =
+23:06:varna: 那些你不该知道
+23:06:hope1_: 233
+23:06:T2: = =
+23:06:hope1_: 毕竟论文还没发
+23:06:varna: 这毕竟不是业余的研究……
+23:07:T2: 好吧好吧
+23:07:code_new: 然后我连赌两发马路油……
+23:07:Plough: 整个频道就我最非
+23:07:Plough: 一只大和级都没有
+23:07:varna: 你是HOMO
+23:07:varna: 走了
+23:07:cleamoon: 不过刚才那个语言问题，至少我用的东西都用不着那个水平的抽象
+23:07:Plough: 你是HOMO
+23:07:code_new: +
+23:07:varna: 明天是公历新年，诸君不要忘记打战果
+23:07:cleamoon: <Plough> 你是HOMO
+23:07:cleamoon: <code_new> +
+23:07:varna quit:Quit: leaving
+23:08:Plough: 碎叫
+23:08:Plough quit:Quit: 碎叫
+23:09:code_new: 资源光了，放假前囤资源
+23:11:hope1_: ... the eta reduction used in lambda lifting is the step that introduces cardinality problems into the lambda calculus, because it removes the value from the variable, without first checking that there is only one value that satisfies the conditions on the variable (see Curry's paradox).
+23:11:hope1_: 这句话没能理解
+23:15:hoxily_ quit:Quit: Leaving
+23:19:hope1_: 从变量移除值指什么，后面的变量约束又指什么，以及这为什么会导致问题
+23:20:hope1_: Curry's paradox 条目里没找到直接的解释
+23:21:hope1_: \u, hysw, varna, ...
+23:25:T2: hope1_, 碎叫吧
+23:27:T2: minna桑腋间愉快
+23:27:T2 quit:Quit: Leaving
+23:28:hope1_: 晚安
+23:40:hysw: ...
+23:42:hysw: 见鬼的火警系统测试... 吵死了...
+23:43:cleamoon: 赶紧去点火
+23:44:whocares_2_ joined channel
+23:44:\u: hope1_: 不懂……
+23:45:\u: hope1_: 似乎是說解的數目？
+23:45:hope1_: 来自维基条目 Lambda lifting ...
+23:45:\u: hope1_: 這些理論都沒學過
+23:45:hysw: 我先学图论去算了
+23:45:\u: hope1_: 我是實踐黨
+23:46:whocares_2 quit:Ping timeout: 258 seconds
+23:46:hope1_: Lambda lifting 一般有什么用途？
+23:51:\u: Implementing\ functional\ languages:\ a\ tutorial 有一章讲 lambda lifting 还没实现，只粗略翻了一遍
+23:52:hope1_: thx
+23:52:\u: 能实现一些嵌套函数
+23:53:hysw: 我是学渣...
+23:53:\u: 但是以函数为返回值　感觉实现不了
+23:59:hope1_: 新年快乐

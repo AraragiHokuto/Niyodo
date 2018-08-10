@@ -1,0 +1,141 @@
+00:02 Sasasu quit:Quit: WeeChat 1.0.1
+00:04 varna: 算了大不了先不用hint, 基础的栈分配器也够用了
+00:05 varna: 短生用户态线程的生存时间可以用RT和TPS估算
+00:51 yimis quit:Quit: yimis
+01:14 lh_mouse quit:Ping timeout: 265 seconds
+01:15 Mokou: 睡觉
+01:15 Mokou: 诸君武运
+01:15 Mokou quit:Quit: 睡觉
+01:26 varna quit:Quit: leaving
+03:28 Youmu quit:Quit: Connection closed for inactivity
+06:55 Mokou joined channel
+06:56 Sasasu joined channel
+07:58 perr joined channel
+07:58 perr quit:Changing host
+07:58 perr joined channel
+08:23 mork joined channel
+08:29 cc joined channel
+08:29 cc: 早
+08:47 iyzsong-xx joined channel
+08:47 iyzsong-xx: = =
+09:05 yimis joined channel
+09:06 lh_mouse joined channel
+09:39 Youmu joined channel
+09:53 perr quit:Quit: Leaving
+09:57 lhanjian: varna RBT可以直接从ngx复制过来，简单好用
+10:23 lh_mouse: geordi, { multimap<int, string> m; m.emplace(1, "first"); m.emplace_hint(m.begin(), 1, "second"); m.emplace_hint(m.end(), 1, "third"); }
+10:23 geordi: <no output>
+10:23 lh_mouse: geordi, { multimap<int, string> m; m.emplace(1, "first"); m.emplace_hint(m.begin(), 1, "second"); m.emplace_hint(m.end(), 1, "third"); cout <<m; }
+10:23 geordi: {{1, "second"}, {1, "first"}, {1, "third"}}
+10:47 xxxxxxxx joined channel
+10:47 xxxxxxxx: http://wenshu.court.gov.cn/content/content?DocID=05f49f37-bb65-4994-8e0d-6c60affe86bd&KeyWord=%E5%94%90%E7%BA%B3|%E6%B3%A8%E5%86%8C%E5%95%86%E6%A0%87
+10:47 xxxxxxxx: 惊了 这判决书到底是不是真的233
+11:17 lh_mouse: xxxxxxxx, https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=trump%20商标&rsv_pq=a2affff900018261&rsv_t=ee06%2FHKVm0PADuwN12JBcYdyhK0cpg6rZksJ1kmlvUouFHcFmR9AI6oF0IU&rqlang=cn&rsv_enter=1&rsv_sug3=27&rsv_sug1=18&rsv_sug7=100&rsv_sug2=0&inputT=7532&rsv_sug4=7532
+11:17 lh_mouse: 八成是真的。
+11:47 cc: 这个链接好长。。。。。
+11:55 Youmu: 川普，听起来好像一个火锅的名字
+12:38 iyzsong-xx: - -
+14:00 rapiz joined channel
+14:07 xxxxxxxx: https://www.baidu.com/s?wd=trump%20%E5%95%86%E6%A0%87 这样就短了
+14:10 rapiz quit:Ping timeout: 240 seconds
+14:12 lh_mouse: geordi, << __SSE2__
+14:12 geordi: 1
+14:12 lh_mouse: geordi, << __SSE4__
+14:12 geordi: error: '__SSE4__' was not declared in this scope
+14:12 lh_mouse: geordi, << __SSE41__
+14:12 geordi: error: '__SSE41__' was not declared in this scope
+14:12 lh_mouse: geordi, << __SSE4_1__
+14:12 geordi: error: '__SSE4_1__' was not declared in this scope
+14:12 lh_mouse: geordi, << __SSSE3__
+14:12 geordi: error: '__SSSE3__' was not declared in this scope
+14:40 jin7 joined channel
+15:14 xxxxxxxx quit:Quit: Leaving...
+15:46 jin7 quit:Remote host closed the connection
+15:47 jin7 joined channel
+15:48 jin7 quit:Client Quit
+16:02 perr joined channel
+16:02 perr quit:Changing host
+16:02 perr joined channel
+16:09 CyrusYzGTt joined channel
+16:29 CyrusYzGTt quit:Ping timeout: 268 seconds
+16:38 xxxxxxxx joined channel
+16:39 xxxxxxxx: lhanjian: http://ent.qianzhan.com/yc/detail/161115-dd9c6618.html 最后一段愣是把我看乐了
+16:40 lhanjian: 我小学时代的绰号
+16:41 xxxxxxxx: 噗
+16:42 xxxxxxxx: 老红军从小就是个坚强的人233
+16:43 Meow-J quit:Remote host closed the connection
+16:43 Meow-J joined channel
+16:57 CyrusYzGTt joined channel
+17:05 lh_mouse: geordi, { foo f; f = { 1,2,3 }; } struct foo { int a; long b; char c; };
+17:05 geordi: <no output>
+17:05 lh_mouse: geordi, -2011 { foo f; f = { 1,2,3 }; } struct foo { int a; long b; char c; };
+17:05 geordi: error: expected unqualified-id before '-' token
+17:06 lh_mouse: geordi, --2011 { foo f; f = { 1,2,3 }; } struct foo { int a; long b; char c; };
+17:06 geordi: Compile: Alarm clock
+17:06 lh_mouse: geordi, --clang --2011 { foo f; f = { 1,2,3 }; } struct foo { int a; long b; char c; };
+17:06 geordi: <no output>
+17:24 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+17:39 perr quit:Quit: Leaving
+18:03 iyzsong-xx quit:Read error: Connection reset by peer
+18:29 yimis quit:Quit: yimis
+18:42 iyzsong joined channel
+18:42 iyzsong: (┙>∧<)┙へ┻┻
+18:44 iyzsong: 整天都是写/封装/调用getter和setter，好烦啊 = =
+18:58 perr joined channel
+18:58 perr quit:Changing host
+18:58 perr joined channel
+19:15 yimis joined channel
+19:29 tutu_wind joined channel
+19:50 Sasasu quit:Quit: WeeChat 1.0.1
+19:52 Sasasu joined channel
+20:14 tutu_wind quit:Ping timeout: 260 seconds
+20:27 tutu_wind joined channel
+20:45 mork quit:Quit: Lost terminal
+20:55 whocares_2_ quit:Ping timeout: 258 seconds
+21:00 whocares_2 joined channel
+21:04 lh_mouse: 谁整天写 setter ？
+21:05 tutu_wind: 喵？
+21:05 iyzsong: 我... 
+21:25 yimis quit:Quit: yimis
+21:26 tutu_wind quit:Ping timeout: 265 seconds
+21:56 hoxily joined channel
+22:11 Crazier joined channel
+22:13 Crazier: 大家好呀
+22:14 iyzsong: 你吼
+22:14 Crazier: 哇哦 IRC还是有人常驻的嘛
+22:24 lh_mouse: 13 叔！
+22:24 lh_mouse: 哦不是十三叔呀。
+22:32 perr quit:Remote host closed the connection
+22:47 lh_mouse quit:Ping timeout: 265 seconds
+22:59 varna joined channel
+23:00 varna: _(:з」∠)_其实我十点半就下班了
+23:07 iyzsong: _(:з」∠)_
+23:08 Mokou: 今天发现我一个初中同学居然成了HOMO
+23:09 varna: 卧槽！？
+23:09 varna: 真的变成HOMO了？
+23:09 Mokou: 我看他QQ签名写了个人间之屑
+23:10 varna: ...
+23:10 Mokou: 一问，他自谦只是小鬼
+23:10 varna: 他的意思是，比起你来他只是后辈
+23:11 iyzsong: 2333
+23:11 Mokou: HOMO都是骗子
+23:12 varna: 红旗：H O M O は……嘘つき…嘘つき嘘つき嘘つき…っ！
+23:13 varna: 届かないぽいをしていても 映しだす日がくるかな
+23:13 * varna 播放《Answer》
+23:14 varna: ^ 因地制宜、简单易懂的现代白魔法
+23:14 Mokou: 申白N
+23:14 varna: o
+23:14 Mokou: 我对白学没有兴趣，不要再来了！（辱骂）
+23:15 varna: 打错终端了
+23:15 varna: \SETSUNARN/
+23:20 * varna 现在能熟练地播放《Answer》
+23:20 * varna 高练度虐菜
+23:38 Mokou: http://tieba.baidu.com/p/4860838378
+23:38 tutu_wind joined channel
+23:38 varna: ...
+23:39 varna: 膝跳反射草
+23:44 tutu joined channel
+23:44 StardustX: http://i.imgur.com/nqQvAiI.png 这软件好棒_(:3 」∠)_
+23:44 Mokou: http://www.bilibili.com/video/av7024647/
+23:45 tutu_wind quit:Ping timeout: 245 seconds
+23:50 hoxily quit:Quit: Leaving

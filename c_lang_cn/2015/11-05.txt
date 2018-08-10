@@ -1,0 +1,308 @@
+00:07 yzld2002 quit:Remote host closed the connection
+00:17 lh_mouse quit:Read error: Connection reset by peer
+00:39 cleamoon_ joined channel
+00:43 cleamoon quit:Ping timeout: 246 seconds
+00:50 cleamoon_ quit:Ping timeout: 246 seconds
+01:56 cleamoon joined channel
+03:10 boosure joined channel
+04:54 OO_after quit:Ping timeout: 255 seconds
+04:56 OO_after joined channel
+05:41 xxxxxxxx quit:Quit: Leaving...
+07:51 FrankHB quit:Ping timeout: 265 seconds
+08:20 Xilzzerts joined channel
+08:35 FrankHB joined channel
+09:08 Xilzzerts: 如果在一个循环里面定义一个栈变量，行为应该是每次循环都会分配一块栈空间吧？
+09:13 FrankHB: 栈变量是什么鬼。
+09:17 Xilzzerts: 就是栈上分配的变量嘛
+09:18 FrankHB: 什么栈上分配的变量，哪个语言？
+09:20 Xilzzerts: C
+09:21 lh_mouse joined channel
+09:23 FrankHB: C管你什么栈。
+09:23 FrankHB: 什么时候自动对象保证是什么“栈变量”了。
+09:23 FrankHB: 就是用栈，sb实现才会没事艹栈指针。
+09:26 Xilzzerts: 现在是遇到了SIGBUS了，怀疑是爆栈了。。。
+09:27 FrankHB: 爆栈？
+09:27 FrankHB: 先检查有艹了什么奇怪地址的指针。
+09:27 FrankHB: 没对齐可能炸。
+09:29 Xilzzerts: BUS_ADRALN是对齐问题，报的是BUS_ADRERR
+09:29 Xilzzerts: 最后崩的是calloc内部
+09:34 FrankHB: 就算是栈爆了也不太可能是循环的问题。基本上现在的实现都会直接复用循环内自动对象的空间。先检查是不是有太大的自动对象和递归调用。
+09:38 Stevearzh quit:Ping timeout: 260 seconds
+09:42 whatofor_1 joined channel
+09:42 whatofor quit:Read error: Connection reset by peer
+09:47 Mokou joined channel
+09:48 RivDo joined channel
+09:55 lhanjian joined channel
+10:08 sismvg joined channel
+10:09 sismvg: http://www.ithome.com/html/it/186624.htm
+10:10 sismvg: 全村住户喜迎涨房租
+10:11 lhanjian: 黑宽带适合搞黑产的人用
+10:12 lhanjian: 难以查询网络历史信息
+10:28 lh_mouse: \帝球爆啦/
+10:42 Mokou: 轮形
+10:42 Mokou: 一个桶
+10:43 cleamoon quit:Ping timeout: 260 seconds
+10:49 Stevearzh joined channel
+11:06 tutu_wind joined channel
+11:21 Flandre joined channel
+11:30 lhanjian: 调用者自行控制自己不传NULL 还是 由被调用者检查指针是否为NULL？
+11:38 Flandre1 joined channel
+11:39 Flandre quit:Read error: Connection reset by peer
+11:40 Flandre2 joined channel
+11:41 suisuijiang joined channel
+11:42 suisuijiang: 窝又路过~~
+11:43 Flandre1 quit:Ping timeout: 255 seconds
+11:44 sismvg: 自己干比较安全
+11:54 yzld2002 joined channel
+12:08 Flandre2 quit:Ping timeout: 272 seconds
+12:15 suisuijiang quit:Ping timeout: 246 seconds
+12:21 Flandre2 joined channel
+12:24 sismvg: 3女性嫌疑犯--掌心向着自己的胸膛，手指分开呈碗状，寓意是女性的胸部。
+12:24 sismvg: 太直白了。。
+12:28 RivDo quit:Remote host closed the connection
+12:29 Flandre3 joined channel
+12:32 Flandre2 quit:Ping timeout: 264 seconds
+12:45 sismvg: too much poor guy 还是too many poor guy?
+12:54 Flandre3 quit:Read error: Connection reset by peer
+12:54 Flandre3 joined channel
+13:00 FrankHB: 贫乳嫌疑犯怎么办……
+13:06 sismvg: 双手在胸前上下直线摆动
+13:15 sismvg: http://tieba.baidu.com/p/4115810922
+13:16 sismvg: 流言终结者将迎来最后一季
+13:23 Flandre1 joined channel
+13:26 Flandre quit:Ping timeout: 255 seconds
+13:30 tutu_wind quit:Ping timeout: 246 seconds
+13:43 sismvg: 。。
+13:46 xxxxxxxx joined channel
+13:59 sismvg: http://us.blizzard.com/en-us/company/careers/posting.html?id=150009S
+13:59 sismvg: The Mac team is looking for an accomplished, skilled developer to participate in the porting and optimization of games for the Apple OS X platform. This position will encompass work across multiple titles, including World of Warcraft, StarCraft II, Diablo III, and future titles.
+14:04 Stevearzh quit:Ping timeout: 246 seconds
+14:04 etby joined channel
+14:08 Mokou: 4-5斩了
+14:18 whatofor_1 quit:Ping timeout: 250 seconds
+15:00 garfunkle_ joined channel
+15:01 garfunkle quit:Ping timeout: 244 seconds
+15:05 sismvg quit:Read error: Connection reset by peer
+15:06 sismvg joined channel
+15:12 sismvg quit:Read error: Connection reset by peer
+15:13 sismvg joined channel
+15:17 FrankHB quit:Ping timeout: 272 seconds
+15:26 FrankHB joined channel
+15:31 xiongmao86 joined channel
+15:32 Stevearzh joined channel
+15:36 Stevearz1 joined channel
+15:38 Stevearzh quit:Ping timeout: 260 seconds
+15:47 cleamoon joined channel
+15:51 whocares_2 quit:Ping timeout: 244 seconds
+15:52 whocares_2 joined channel
+16:12 xiongmao86 quit:Ping timeout: 265 seconds
+16:15 cleamoon quit:Ping timeout: 246 seconds
+16:16 sismvg quit:Read error: Connection timed out
+16:17 sismvg joined channel
+16:28 sismvg quit:Read error: Connection reset by peer
+16:28 sismvg joined channel
+16:28 sismvg: 怎么老师reset
+16:28 sismvg: 老是
+16:36 sismvg: 出口开始疯狂丢包
+16:44 Dove joined channel
+16:50 Stevearzh joined channel
+16:50 Stevearzh quit:Changing host
+16:50 Stevearzh joined channel
+16:54 Stevearzh quit:Client Quit
+16:57 cleamoon joined channel
+17:00 cleamoon: 全国网络诈骗“产业”从业人数至少160万人】今年1-9月，共接到全国网民举报网络诈骗案件20086起，涉案金额高达8901万元，人均损失4431元。初步统计，网络诈骗产业的从业人数至少有160万人，“年产值”超过1100亿元。http://
+17:00 RivDo joined channel
+17:01 sismvg: 追回量呢
+17:01 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.2/20151014143721]
+17:02 lhanjian: steam出人民币帐号结果价格更低了？？？？
+17:02 lh_mouse: [11:29:22] <lhanjian> 调用者自行控制自己不传NULL 还是 由被调用者检查指针是否为NULL？  // if(!p) system("rm -rf /usr");
+17:03 lhanjian: 让调用者去死的节奏？
+17:03 lh_mouse: 写文档里  如果你不能用引用的话
+17:05 lhanjian: soga
+17:06 xiongmao_ joined channel
+17:07 * lh_mouse slaps xiongmao_ around a bit with a large trout
+17:07 * xiongmao_ kick lh_mouse's ass
+17:08 xiongmao_: 咦，为什么我没有高亮，名字还不对
+17:09 cleamoon: @二他姐姐 今天各种翻墙又全挂了。记几个谷歌镜像地址： https://safesearch.avira.com/ https://search.disconnect.me/ http://home.tb.ask.com/ http://suche.web.de/
+17:10 xiongmao_: shadowsocks已死，谁来继承。
+17:12 RivDo quit:Ping timeout: 260 seconds
+17:13 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/2b/47_106869.jpg
+17:15 xiongmao_: 在阳台种菜啊
+17:15 xiongmao_: 不用肥吗
+17:16 cleamoon: 不建厕所就好了
+17:18 xiongmao_: 每次内急都要跑楼顶
+17:19 xiongmao_: me kick @lh_mouse
+17:22 cleamoon: 哈哈哈，一个演习的提督说弃坑准备中
+17:25 RivDo joined channel
+17:29 * lh_mouse has kicked xiongmao_ from #c_lang_cn (meow)
+17:29 xiongmao_: ？？
+17:29 xiongmao_: lh_mouse: ??
+17:29 lh_mouse: xiongmao_, 捏
+17:29 lh_mouse: 爆照   
+17:30 xiongmao_: .. 老大，我上次爆过了
+17:30 * FrankHB lh_mouse fault (吱verflow)
+17:30 lh_mouse: xiongmao_, 你那个文件发不过来的
+17:30 lh_mouse: http://img.vim-cn.com/
+17:31 lh_mouse: http://postimage.org/
+17:31 * lh_mouse slaps FrankHB around a bit with a large trout
+17:31 cleamoon: 胸毛桑的照片
+17:31 xiongmao_: cleamoon: 不是胸毛，是熊猫，熊猫色的86.。。
+17:32 xiongmao_: 话说为什么我的id也变了？
+17:32 lhanjian: 好像因为WTO的原因，电影进口配额又要放宽了
+17:33 cleamoon: 胸毛色的86，好污呀
+17:33 cleamoon: WTO要求的又没做到几样，后来的也无所谓了吧
+17:34 xiongmao_: 。。。污者见污
+17:34 xiongmao_: lh_mouse: 什么文件？
+17:34 Dove quit:Ping timeout: 252 seconds
+17:34 FrankHB quit:Ping timeout: 252 seconds
+17:35 cleamoon: avi文件
+17:38 lh_mouse: xiongmao_, 爆照啦
+17:38 xiongmao86 joined channel
+17:38 xiongmao86: 终于变过来了
+17:39 lh_mouse: xiongmao86, 爆照啦
+17:39 xiongmao86: lh_mouse: 本猿上次不是爆过了
+17:39 lh_mouse: IP地址: 116.23.140.218广东省广州市 电信
+17:39 lh_mouse: 没！看！到！
+17:39 xiongmao_ quit:Ping timeout: 252 seconds
+17:39 xiongmao86: 上次就是报给你的
+17:40 xiongmao86: lh_mouse: 上次就是爆给你的。
+17:40 xiongmao86: 话说爆了的照怎么看？
+17:49 clcn_logbot joined channel
+17:50 cleamoon: 这照片好，可以拿去吓唬人
+17:50 cleamoon: PS一下活脱hentai hacker
+17:50 xiongmao86: hoho，不过是黑了一点
+17:50 Stevearz1 quit:Ping timeout: 244 seconds
+17:51 Dove joined channel
+17:52 xiongmao86: cleamoon: hentai这词从绅士口中说出来还真是没有说服力。
+17:52 Stevearz1 joined channel
+17:54 cleamoon: 怎么知道我是绅士，不像是新人呀
+17:54 xiongmao86: cleamoon: 我都说我爆过照了
+17:54 xiongmao86: 只是有一段时间没来
+17:55 xiongmao86: 本部是什么地方？
+17:56 xiongmao86: 这个irc用起来不太方便
+17:56 xiongmao86: irc client
+17:56 xiongmao86: 大家都用什么client？
+17:57 cleamoon: hexchat
+17:57 cleamoon: 本部是nerv
+17:59 xiongmao86: cleamoon: nerv是什么地方，我只记得eva有。
+18:00 cleamoon: 是的，我们都是打算做新世纪后宫战士的人
+18:00 lhanjian: ChromeWebAPP CIRC
+18:00 cleamoon: circ好用吗
+18:01 xiongmao86: cleamoon: 问题是最后只剩下两个人，如何后宫？
+18:01 cleamoon: 父爱如山
+18:01 Stevearz1 quit:Ping timeout: 246 seconds
+18:03 FrankHB joined channel
+18:03 xiongmao86: lhanjian: 话说chrome app store还可以在中国访问啊，大部分google服务都墙掉了。
+18:04 lhanjian: 我从来都是挂代理的
+18:05 xiongmao86: cleamoon: 最后可是明日香活着，不是老爸呀。
+18:06 cleamoon: 你竟然想要老爸活着，实在太污了
+18:06 xiongmao86: lhanjian: http代理？不是不能用吗？
+18:07 lhanjian: 有什么不能用？
+18:08 cleamoon: 代理其实挺亏的。不仅要花vpn钱还得自己买茶叶
+18:08 xiongmao86: lhanjian: 不是说墙会减慢你的速度吗？话说好像ssh翻墙方式好像就是这样。
+18:08 lhanjian: 你买个地方好点的VPS就行了
+18:08 sismvg joined channel
+18:09 Xilzzerts: 公司自搭建ss
+18:09 xiongmao86: lhanjian: 我用的是shadowsocks，vpn代理好像据说墙能识别。
+18:09 Xilzzerts: 网关部署
+18:09 xiongmao86: Xilzzerts: 装在路由里？
+18:10 Xilzzerts: 不知道他们怎么弄的，不过最近成功率下降了
+18:10 lhanjian: xiongmao86, 不可能全面封杀shadowsocks，学习协议需要耗费大量的计算资源
+18:10 lhanjian: 一般时期用ss没问题
+18:11 lhanjian: 敏感时期我就用自己写的SSL proxy了
+18:11 lhanjian: 他总不能全面干掉SSL吧？
+18:13 sismvg: 可惜，校长就是不缺计算资源
+18:13 cleamoon: 为什么不能，都用明文多好
+18:15 xiongmao86: lhanjian: 我不太懂网络协议，不过据说是因为技术上干不过ss，所以才请人家去喝茶。
+18:15 lhanjian: sismvg, 想多了，否则天天给你享受6月待遇，你IRC也不用上了
+18:15 lhanjian: xiongmao86, 不是干不过，而是代价太大
+18:16 xiongmao86: lhanjian: 但是好像vpn就这样干了？
+18:16 sismvg: vpn要简单多了
+18:16 lhanjian: xiongmao86, 那个协议特征太明显了
+18:16 lhanjian: 没有混淆协议内容本身
+18:17 lhanjian: 回家
+18:17 xiongmao86: lhanjian: 88
+18:18 sismvg: 6月发生了什么？
+18:18 sismvg: lhanjian:wait
+18:18 lh_mouse: https://github.com/lhmouse/poseidon-medusa/blob/master/src/encryption.cpp?ts=2
+18:19 xiongmao86: 机房为什么有时候要跑路啊？建机房有可能犯法？
+18:20 xiongmao86: lh_mouse: 波塞冬和美杜莎？
+18:20 lhanjian quit:Remote host closed the connection
+18:20 xiongmao86: lh_mouse:  有什么特别含义吗？
+18:20 cleamoon: 下一个写哈迪斯？
+18:20 lh_mouse: 下一个写 cleamoon
+18:21 lh_mouse: xiongmao86, 代号而已
+18:21 xiongmao86: 波塞冬和美杜莎和lh_mouse不可不说的故事。
+18:21 lh_mouse: xiongmao86, 你知道的太多了
+18:21 cleamoon: 都写好了后耻球写个奎托斯
+18:22 sismvg: http://tieba.baidu.com/p/4142038087?pn=1
+18:23 sismvg: 时髦蓄力中
+18:24 xiongmao86: sismvg: 这漫画是日翻英的吗？
+18:24 sismvg: 国外源来的早
+18:24 cleamoon_ joined channel
+18:25 xiongmao86: 啊？日本不是有什么share的软件吗？
+18:25 xiongmao86: Ishare?
+18:26 xiongmao86: sismvg: shareme?
+18:26 xiongmao86: 我以前想要用来下日文小说
+18:27 sismvg: 米国字幕组拿到了漫画的源然后翻译，天朝人拿过来先看，然后再翻译成中文
+18:27 xiongmao86: 结果nat不行。。。
+18:27 xiongmao86: sismvg: 三道贩子，这样的翻译读起来大丈夫？
+18:28 cleamoon quit:Ping timeout: 264 seconds
+18:29 sismvg: 天朝翻译组也有日文源的，只不过英文大家凑合都能看，认识日文的却不多，所以先拿英文的垫垫饥
+18:31 sismvg: 啊， hentaiverse吧被爆了
+18:32 xiongmao86 quit:Ping timeout: 250 seconds
+18:33 xiongmao_ joined channel
+18:33 xiongmao_: lh_mouse: 好像挺复杂的呀。
+18:36 xiongmao86: lh_mouse: 据说ss也能配置成非http的用法？
+18:48 xxxxxxxx: http://dkwingsmt.github.io/haha/
+18:53 xiongmao86 quit:Remote host closed the connection
+18:53 cleamoon_: 这个好  2333
+18:55 boosure quit:Quit: Get your hand off of it
+18:56 Dove quit:Ping timeout: 246 seconds
+18:57 code_new joined channel
+18:59 sismvg quit:Read error: Connection reset by peer
+19:10 cleamoon_ quit:Ping timeout: 246 seconds
+19:15 xiongmao86 joined channel
+19:16 Dove joined channel
+19:17 StardustX joined channel
+19:18 onion__ joined channel
+19:23 onion__ left channel:"Konversation terminated!"
+19:24 RivDo quit:Remote host closed the connection
+19:53 sismvg joined channel
+19:59 cleamoon_ joined channel
+20:13 Flandre1 quit:Ping timeout: 255 seconds
+20:31 xiongmao86 quit:Ping timeout: 252 seconds
+20:34 wlemuel joined channel
+20:43 Flandre1 joined channel
+21:12 cleamoon_ quit:Ping timeout: 244 seconds
+21:14 cleamoon_ joined channel
+21:14 xiongmao_ joined channel
+21:24 electron_ joined channel
+21:25 electron_ quit:Client Quit
+21:26 xiongmao_ quit:Ping timeout: 250 seconds
+21:28 cleamoon_ quit:Ping timeout: 265 seconds
+21:33 sismvg quit:Read error: Connection reset by peer
+21:34 sismvg joined channel
+21:42 etby quit:Quit: 离开
+21:44 libhanjian joined channel
+21:52 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.2/20151014143721]
+22:00 yzld2002 quit:Ping timeout: 264 seconds
+22:01 yzld2002 joined channel
+22:10 code_new quit:Ping timeout: 240 seconds
+22:10 code_new joined channel
+22:13 Mokou: 睡觉
+22:13 Mokou: 诸君武运
+22:13 Mokou quit:Quit: 睡觉
+22:34 Stevearzh joined channel
+22:34 Stevearzh quit:Changing host
+22:34 Stevearzh joined channel
+22:45 Flandre quit:Ping timeout: 250 seconds
+22:53 Flandre joined channel
+23:15 libhanjian quit:Remote host closed the connection
+23:16 RivDo joined channel
+23:20 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151103081951]
+23:25 yzld2002 quit:Ping timeout: 244 seconds
+23:44 xxxxxxxx quit:Quit: Leaving...
+23:45 Dove quit:Read error: Connection reset by peer
+23:54 RivDo joined channel
+23:57 cleamoon_ joined channel

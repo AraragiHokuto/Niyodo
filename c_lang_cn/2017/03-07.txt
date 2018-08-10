@@ -1,0 +1,235 @@
+00:03 Mokou quit:Remote host closed the connection
+00:46 lh_mouse quit:Ping timeout: 264 seconds
+01:07 lh_cat joined channel
+03:11 lh_cat quit:Quit: Connection closed for inactivity
+04:15 Meow-J joined channel
+06:37 ShiinaMashiro joined channel
+08:09 Youmu quit:Quit: Connection closed for inactivity
+08:27 iyzsong-m quit:Ping timeout: 246 seconds
+08:53 ShiinaMashiro quit:Quit: Connection closed for inactivity
+08:56 rivdo joined channel
+09:02 lh_mouse joined channel
+09:02 iyzsong-w joined channel
+09:07 rapiz joined channel
+09:12 rapiz quit:Quit: Konversation terminated!
+09:12 yimis joined channel
+09:35 Youmu joined channel
+09:37 yimis quit:Quit: yimis
+10:39 iyzsong-w quit:Ping timeout: 268 seconds
+11:05 \s joined channel
+11:07 iyzsong-w joined channel
+11:15 iyzsong-w quit:Ping timeout: 260 seconds
+11:20 iyzsong-w joined channel
+11:26 iyzsong-w quit:Ping timeout: 240 seconds
+11:29 whatofor quit:Read error: Connection reset by peer
+11:29 whatofor joined channel
+12:07 rapiz joined channel
+12:07 iyzsong-w joined channel
+12:21 iyzsong-w quit:Ping timeout: 240 seconds
+12:46 yimis joined channel
+12:46 yimis quit:Client Quit
+12:48 iyzsong-m joined channel
+12:53 iyzsong-m quit:Read error: Connection reset by peer
+13:07 rapiz quit:Ping timeout: 240 seconds
+13:17 iyzsong-w joined channel
+13:22 iyzsong-w quit:Ping timeout: 264 seconds
+13:53 melonpi joined channel
+13:56 Funami joined channel
+13:57 lh_mouse: Funami, 爆。
+13:57 Funami: ？？？？
+13:59 Funami quit:Client Quit
+13:59 Funami joined channel
+14:12 iyzsong-w joined channel
+14:21 Funami quit:Quit: Leaving
+14:32 LRX joined channel
+15:33 melonpi quit:Remote host closed the connection
+15:33 melonpi joined channel
+16:34 rapiz joined channel
+17:26 whocares_2 quit:Ping timeout: 240 seconds
+17:26 whocares_2 joined channel
+17:29 Mokou joined channel
+17:29 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/pt/kr_202088.jpg@596w_1l.jpg
+17:44 rivdo quit:Ping timeout: 240 seconds
+18:32 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:34 melonpi quit:Remote host closed the connection
+18:35 melonpi joined channel
+18:41 iyzsong-m joined channel
+18:42 iyzsong-m: (；・∀・)
+18:45 lh_mouse: geordi, { weak_ptr<int> p; w.reset(make_shared<int>()); }
+18:45 geordi: error: 'w' was not declared in this scope
+18:45 lh_mouse: geordi, { weak_ptr<int> w; w.reset(make_shared<int>()); }
+18:45 geordi: error: no matching function for call to 'weak_ptr<int>::reset(shared_ptr<int>)'
+18:47 rapiz quit:Quit: Konversation terminated!
+19:07 sottd joined channel
+19:10 iyzsong-m: ( ･ั﹏･ั) 又要通宵了
+19:11 cleamooon: 工作？
+19:16 Youmu: iyzsong-m: 宋哥哥辛苦了
+19:16 iyzsong-m: 嗯 (#･∀･)
+19:18 iyzsong-m: 2333
+19:20 sottd: 你们辛苦什么
+19:20 sottd: 我们接入sdk的程序员走了，现在都要我来接入了，十几个渠道。我头上还有一大堆开发工作
+19:20 sottd: 还TMD的要这周完成
+19:27 iyzsong-m: orz
+19:28 grey05 joined channel
+19:30 cupltest joined channel
+19:32 Dove joined channel
+19:38 iyzsong joined channel
+20:00 grey05 quit:Quit: This computer has gone to sleep
+20:01 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:12 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 51.0.1/20170125094131]
+20:31 melonpi: 10几个..
+20:36 grey05 joined channel
+20:47 varna joined channel
+20:47 varna: _(:з」∠)_卧槽sten酱居然有胸
+20:47 varna: 太假了
+20:48 varna: Mokou: 运气不好的话我周末至少有一天加班
+20:48 varna: 而我怀疑我运气没那么好
+20:58 cleamooon: 羊驼子好忙
+20:58 varna: 最近累得闲下来的时间都砸进老滚了……
+20:59 varna: 然后想起最近少前有小活动，攒够了积分有sten酱婚纱，就戒了老滚
+21:00 varna: 对了发个广告
+21:01 varna: 最近有希望来月饼厂实习的18年毕业应届生，请联系我 sceneviper at hotmail.com 可转发
+21:01 varna: 我可联系内推
+21:01 cleamooon: orz
+21:02 cleamooon: 那我负责后入
+21:02 varna: 18年毕业的应届生基本没有幼女，所以这里一点都不色色的
+21:03 cleamooon: 可以18年毕业，08年生人呀
+21:03 varna: 十岁幼女！有你两倍大！
+21:04 cleamooon: 长JJ的小姐姐
+21:04 varna: 我驲磁盘又被打爆了
+21:05 cleamooon: 我最近又回到gba游戏了
+21:06 varna: 其实我是一直懒得做机器……
+21:06 varna: 昨天刚把整个$HOME备份出来，慢慢地迁移
+21:06 varna: xfce4-terminal还背叛革命了
+21:07 varna: 这混球儿投奔了gtk3
+21:07 varna: 幸好aur上有个gtk2的
+21:07 cleamooon: lxterminal多好
+21:08 cleamooon: 或者用fish？
+21:08 varna: 我查查lxterminal
+21:08 varna: 我差点以为这不是lxde套件……
+21:09 varna: 只有block/underline光标啊，不吼
+21:09 varna: 我喜欢竖线光标
+21:10 cleamooon: 我用sakura，不过那个经常抽风
+21:11 varna: sakura不兹瓷屏蔽bold, 需要改源码
+21:12 varna: http://www.bilibili.com/video/av8628848/?zw 物理引擎
+21:13 varna: 我驲了POI怎么线上磁盘还在抱井……
+21:20 cleamooon: 真 物理引擎
+21:21 varna: 小时候玩过一个adv, 叫The Neverhood, 就是这么拍的演出
+21:21 varna: 那游戏超赞，想玩的话可以搞个win98虚拟机
+21:24 cleamooon: 只能win98略蛋疼
+21:26 varna: 游戏太古久
+21:26 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+21:26 varna: 似乎现在有些新的花样，我看英文维基上说它甚至能在现代Linux上运行了
+21:27 iyzsong quit:Quit: bye.
+21:29 varna: 说起来，我本来是冲着少女去玩老滚的
+21:30 varna: 结果开了游戏一会儿之后才发现我喜欢的build都不适合带随从……
+21:31 cleamooon: 可以带少女随从？可以啪吗？
+21:32 varna: 不少可结婚，加了动作脚本应该也可以啪
+21:32 varna: 老滚的色情度被开发得很高
+21:32 varna: 然而我意外老实地玩了个注孤生的build
+21:33 varna: 主修潜行和幻术，单人潜入+一刀暗杀，带AI就会穿帮那种
+21:33 iyzsong-w joined channel
+21:36 cleamooon: 233333333
+21:36 varna: _(:з」∠)_结果完全没有少女登场的份儿
+21:36 cleamooon: 可以玩莽夫build吗
+21:36 varna: 后来想着这样搞不行，玩个弓箭手吧
+21:36 varna: 结果发现弓箭手潜行也很好玩
+21:36 cleamooon: .......
+21:36 varna: 然后就又注孤生
+21:36 varna: 莽夫可以
+21:36 varna: 战士很厉害的
+21:37 cleamooon: 羊驼子喜欢正义的背刺
+21:37 cleamooon: 我去弄一个来玩
+21:37 varna: 潜行练满之后都是正面背刺的……
+21:37 iyzsong-w quit:Client Quit
+21:38 varna: 隐形状态下只要敌人没有警觉，捅正了就是一刀三十倍，通常都爆死了
+21:38 iyzsong-w joined channel
+21:39 varna: 战士也能玩很炫
+21:39 varna: 比如说练个双持，冲到敌人面前甩一个子弹时间的威能，然后一顿乱舞
+21:39 varna: 砍完注意拔腿就跑一般不会死很惨
+21:41 cleamooon: 有没有近战法师
+21:42 varna: 可以有，不过我怀疑高难度不好混
+21:42 varna: 不猥琐的近战大致两种打法，防反或者手工走位
+21:43 varna: 近战法师输出不如双持，控制不如剑盾，又不能拿双手武器……
+21:43 cleamooon: 远程法师能用小姐姐吗
+21:44 varna: 能啊，搞个近战小姐姐
+21:44 varna: 我也试过法师
+21:44 varna: 练了个幻术+召唤，仍然不要小姐姐……
+21:44 varna: _(:з」∠)_这游戏就不让我用喜欢的build带小姐姐玩儿
+21:45 cleamooon: 带着小姐姐就留着用呗
+21:45 varna: _(:з」∠)_抬手空降两个魔人大君，比等级不够能力不足的小姐姐厉害多了
+21:45 varna: 我就在后面控场拍巴福看风景
+21:45 varna: 然后觉得很正义
+21:47 varna: 攻击系的法术都太难练了，幻术咒法都好练，所以断念
+21:48 cleamooon: 小姐姐就留着啪呗
+21:48 cleamooon: 能不能带一群小姐姐
+21:48 varna: (｡･ω･)我正义地没装色色的脚本
+21:48 varna: 有mod可以带一群
+21:49 varna: 现在的老滚基本就是18X游戏，只要你去淘就能搞到一堆少女
+21:49 varna: 当然正义地玩玩也不错
+21:49 cleamooon: 好的，我 去 了
+21:49 NewOne joined channel
+21:51 varna: ^ 这幼女丢了
+21:53 cleamooon: uccu
+21:53 varna: btw steam创意工坊的少女度严重不足
+21:54 varna: nexus的很好
+21:54 varna: 国内的话3dm有更多过激内容，但太多都是汉化版，用不来……
+21:54 varna: nexus上有个叫Recorder的小姐姐看起来很像时雨
+21:55 varna: 还有全套配音台词
+21:58 cleamooon: 汉化版不好吗
+21:59 varna: 我买的是sbeam的英文版，装了汉化mod文本会出错
+21:59 cleamooon: soga
+22:00 varna: btw 有个叫Salt & Sanctuary的2D横版魂系arpg不错
+22:00 varna: 中世纪题材，难度高，玩法类似恶魔城
+22:01 varna: 美术我觉得不错
+22:01 varna: 兹瓷Linux
+22:05 cleamooon: 这个还真听过，画风觉得不错
+22:06 varna: 我入了，感觉不错，只不过我超级不擅长2D横版……
+22:06 varna: 从魂斗罗开始就是不及格
+22:08 cleamooon: 魂斗罗太难了，恶魔城也很恶心
+22:08 cleamooon: 你用i wanna练习一下吧
+22:08 varna: 国产的那个icey都虐我一脸血……
+22:12 cleamooon: 看起来就是很难的那种游戏...
+22:13 varna: 上来就是一个难赢的boss战
+22:15 cleamooon: @黑魂
+22:16 varna: 就是这个意思……
+22:16 varna: 然而黑魂毕竟是3D的好歹还会玩一点，2D的我直接懵比
+22:17 LouisLIU joined channel
+22:18 cleamooon: 2D比较好，3D会晕
+22:18 cleamooon: 而且我现在觉得就游戏性而言，画面不行的那个年代的游戏才是最吼的
+22:18 varna: +
+22:19 varna: 不过以后我想试试黑魂3……
+22:19 LouisLIU quit:Client Quit
+22:20 cleamooon: 开直播
+22:20 varna: 目测死成狗
+22:23 cleamooon: 多好
+22:23 cleamooon: 这类游戏就应该看别人受苦
+22:24 varna: +
+22:24 varna: 就是去吃瘪的……
+22:26 varna: http://www.bilibili.com/video/av4513697/ The Neverhood的演示
+22:26 varna: 即使现在看来也是完全不落俗套的游戏
+22:27 cleamooon: up主：我的心愿~就是每天被小萝莉用颜面骑乘叫起床~
+22:28 varna: 我想被死库水少女的耻丘夹死 by洗吧福 我附议
+22:29 cleamooon: 那我就忍耐睡在欧派上吧
+22:31 Stevearzh quit:Read error: Connection reset by peer
+22:32 Stevearzh joined channel
+22:35 melonpi_ joined channel
+22:38 melonpi quit:Ping timeout: 256 seconds
+22:55 varna: 想起来，二十世纪末的欧美解谜游戏有一大堆佳作
+22:56 varna: Myst系列，Dark Seed系列都很赞
+22:57 cleamooon: 古代游戏收藏家羊驼子
+22:57 varna: 小时候玩过这些的
+22:57 varna: Neverhood是我玩的第一个解谜游戏
+22:58 cleamooon: orz
+22:58 varna: Myst的世界设定很有趣
+22:58 varna: Dark Seed则是气氛好
+23:00 cleamooon: 推荐Tormentum - Dark Sorrow
+23:02 varna: 美术不太喜欢
+23:04 cleamooon: 对画质要求好高
+23:04 varna: 是美术不是画质
+23:05 cleamooon: 差不多
+23:19 NewOne quit:Ping timeout: 258 seconds
+23:41 grey05_ joined channel
+23:43 Airtnp joined channel
+23:44 grey05 quit:Ping timeout: 260 seconds
+23:46 LRX quit:Ping timeout: 256 seconds

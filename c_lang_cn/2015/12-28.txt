@@ -1,0 +1,569 @@
+01:10 cleamoon joined channel
+01:20 StardustX quit:Ping timeout: 260 seconds
+03:05 cleamoon quit:Ping timeout: 276 seconds
+03:28 cleamoon joined channel
+03:43 linearain joined channel
+03:43 linearain: hi
+04:14 Youmu quit:Quit: Connection closed for inactivity
+04:14 linearain quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+04:30 FrankHB joined channel
+04:33 cleamoon quit:Ping timeout: 255 seconds
+05:49 whocares_2 joined channel
+05:51 whocares_2_ quit:Ping timeout: 272 seconds
+06:31 xxxxxxxx quit:Quit: Leaving...
+06:58 cleamoon joined channel
+07:07 cleamoon quit:Read error: Connection reset by peer
+07:07 cleamoon joined channel
+07:17 cleamoon quit:Read error: Connection reset by peer
+07:17 cleamoon joined channel
+07:25 cleamoon quit:Read error: Connection reset by peer
+07:26 cleamoon joined channel
+07:35 cleamoon quit:Read error: Connection reset by peer
+07:35 cleamoon_ joined channel
+07:44 cleamoon_ quit:Read error: Connection reset by peer
+07:44 cleamoon__ joined channel
+07:53 cleamoon__ quit:Read error: Connection reset by peer
+07:54 cleamoon__ joined channel
+08:03 cleamoon_ joined channel
+08:03 cleamoon__ quit:Read error: Connection reset by peer
+08:11 cleamoon_ quit:Read error: Connection reset by peer
+08:11 cleamoon_ joined channel
+08:17 tutu_wind joined channel
+08:20 cleamoon__ joined channel
+08:20 cleamoon_ quit:Read error: Connection reset by peer
+08:29 cleamoon__ quit:Read error: Connection reset by peer
+08:29 cleamoon__ joined channel
+08:36 tutu_wind quit:Ping timeout: 240 seconds
+08:38 cleamoon__ quit:Read error: Connection reset by peer
+08:39 cleamoon__ joined channel
+08:48 cleamoon_ joined channel
+08:48 cleamoon__ quit:Read error: Connection reset by peer
+08:56 cleamoon__ joined channel
+08:56 cleamoon_ quit:Read error: Connection reset by peer
+09:05 cleamoon__ quit:Read error: Connection reset by peer
+09:06 cleamoon__ joined channel
+09:11 cleamoon__ quit:Ping timeout: 276 seconds
+09:33 lh_mouse joined channel
+09:35 hatelis_ joined channel
+09:36 hatelis_ is now known as hateles
+09:36 hateles is now known as hatelis
+10:07 Stevearzh_ quit:Quit: Be back later...
+10:16 jin7boy joined channel
+10:25 ASenR joined channel
+10:40 jin7boy quit:Quit: Leaving.
+11:35 Stevearzh_ joined channel
+11:50 jin7boy joined channel
+11:54 etby joined channel
+12:05 ASenR quit:Ping timeout: 246 seconds
+12:05 tutu joined channel
+12:18 Youmu joined channel
+12:19 Stevearzh_ quit:Ping timeout: 276 seconds
+12:27 tutu quit:Ping timeout: 255 seconds
+12:34 hatelis quit:Remote host closed the connection
+12:35 hatelis joined channel
+12:44 tutu joined channel
+12:48 ASenR joined channel
+13:16 xxxxxxxx joined channel
+13:17 StardustX joined channel
+13:25 xxxxxxxxx joined channel
+13:27 xxxxxxxx quit:Ping timeout: 260 seconds
+13:31 jin7boy quit:Quit: Leaving.
+13:32 jin7boy joined channel
+13:33 hoxily1 quit:Ping timeout: 272 seconds
+13:34 Stevearzh joined channel
+13:34 Stevearzh quit:Changing host
+13:34 Stevearzh joined channel
+13:52 StardustX quit:Remote host closed the connection
+14:05 StardustX joined channel
+14:16 varna joined channel
+14:24 hoxily joined channel
+14:25 varna: lhanjian: 稍微变化了一下send的接口和内部报文，另外现在p7_recv加了一个带超时的版本（毫秒参数）
+14:25 hoxily quit:Client Quit
+14:25 hoxily joined channel
+14:29 varna_ joined channel
+14:29 varna quit:Disconnected by services
+14:29 randomclown joined channel
+14:29 varna_ is now known as varna
+14:30 varna: 路由器宕机……这个6
+14:30 hatelis: varna, 给那个留言我一般不会看的哦
+14:30 hatelis: 还好我恰好存活
+14:30 varna: 哦，现在用这个nick啊
+14:30 varna: 记得了
+14:32 varna: 刚才我正要打开几个网页，然后路由器就上不去了
+14:32 varna: 估计是太久没重启，旧货撑不住
+14:38 hatelis: 新货也都这鸟性，用着用着就得重启路由，不然各种掉包延迟
+14:39 varna: TPLink的东西总觉得没有DLink好，何况我这还是TPLink很古的玩意
+14:39 hatelis: +    msgbuf.immpack_uintptr[1] = (uintptr_t) self_view->sched_info.running;
+14:39 hatelis: varna, TPLink的东西便宜
+14:40 hatelis: 这行的意思是什么？
+14:40 varna: 之前在内部报文里，我忘留发端的指针了
+14:42 hoxily_ joined channel
+14:42 varna: 现在的两个指针打包里，0是收端1是发端
+14:43 hatelis: 话说协程内channel能不能作成不用syscall的？
+14:43 varna: 你的意思是？
+14:43 varna: 另外这其实并非chan
+14:45 hatelis:        pipe(carrier->iomon_info.condpipe);
+14:45 hatelis: 就是不用pipe(2)
+14:46 varna: 我看看
+14:46 varna: 不是不行
+14:47 varna: 然而我不想拼这个效率了
+14:47 hatelis: 麻烦点 在哪里？
+14:47 varna: 这个检查其实可以提前到epoll的超时值设置
+14:48 varna: 然而我觉得它不好看，因为对n个线程，我需要检查所有的双缓冲和本地信箱
+14:48 varna: 这样反而可能让内部报文吃一个大延迟
+14:48 varna: 所以索性先把内部报文做到管道上
+14:49 varna: 这样确实走系统调用，但响应相对真实
+14:49 hatelis: 其实完全在用户态实现这个condpipe，相当于把内核的RBT搬到用户态了对么
+14:50 varna: 不，这里的麻烦是epoll
+14:50 varna: 举例来说，线程A上暂时没有可调度协程，然后某个协程突然收到了来自其它协程的报文，从而不阻塞了
+14:50 varna: 这里必须正确响应
+14:53 varna: 目前内部报文主要用来唤醒epoll, 两个（看上去）需要如此做的地方是协程创建请求和内部通信
+14:54 hatelis: 比如说我实现个小根堆，有消息发过去，就把这回事放在堆顶，等到发送者让出执行权的时候，由调度器取出堆顶的消息，然后切到收者去。从而避开write/epoll_wait这两个系统调用？
+14:54 varna: 避不开，因为你要IO
+14:55 hatelis: 哪个IO？
+14:55 varna: 用户要求的阻塞IO
+14:55 hoxily quit:Quit: WeeChat 1.3
+14:55 hoxily_ quit:Quit: Leaving
+14:55 varna: 这里epoll的第一用途是挂阻塞IO
+14:55 varna: 当然你可以换个写法
+14:56 varna: 我以前其实是调度循环和IO监管分开的
+14:56 hoxily joined channel
+14:56 varna: 但这样可能有TLS问题，后来就写一起了
+14:57 hatelis: 羊驼子的写IO不是无阻塞的么？
+14:57 hatelis: 我有点混乱……
+14:58 varna: 不是
+14:58 varna: 我把这个选择完全交给用户
+14:58 varna: 如果用户要求fd上非阻塞，那么我会额外附加一个ET
+14:58 varna: 也可以要求阻塞LT, 不过无所谓
+14:59 varna: 所有的IO产生一个停止续延（这是个旧物，实际上应该用阻塞队列的）
+14:59 varna: 然后IO被挂上epoll, 用reactor的风格管理
+14:59 varna: 决定epoll超时值的代码在ln438-447
+15:00 hatelis: 记得之前羊驼子的p7_send_by_name是需要手工yield的，然而p7_recv是默认阻塞的
+15:00 varna: 不需要
+15:00 varna: 它从来也不需要，我那么写只是因为确定单线程顺序
+15:02 varna: p7_send_by_name是对p7_send_by_entity的包裹
+15:02 varna: 后者用目标协程确定需要中继报文的对端内核线程（因为协程可能突然就不存在了，但内核线程总是存在而可以通知的）
+15:03 varna: 然后走一次双缓冲投递到对端线程
+15:03 varna: 同时试着写一次唤醒报文
+15:05 ASenR quit:Ping timeout: 276 seconds
+15:05 varna: 实际上你可以把整个协程的调度循环当一个经典的reactor服务器看
+15:06 varna: 它管很多杂事，偶尔切一次调度
+15:06 hatelis: varna, 这我知道。不过看起来羊驼子的唤醒报文和这次发送的消息是两样东西
+15:06 varna: 对
+15:06 hatelis: 我以为协程间要发送的消息和唤醒报文都走的pipe
+15:06 varna: 协程间消息是直接走用户态内存的
+15:06 varna: 往对端线程的双缓冲上一挂了事
+15:07 hatelis: 把唤醒报文也搞到用户态会加大调度的复杂度？
+15:07 hatelis: 是不是
+15:07 varna: 不，可能会醒不过来
+15:08 varna: 15:49 <+varna> 不，这里的麻烦是epoll
+15:08 varna: 15:50 <+varna> 举例来说，线程A上暂时没有可调度协程，然后某个协程突然收到了来自其它协程的报文，从而不阻塞了
+15:08 FrankHB quit:Remote host closed the connection
+15:08 FrankHB joined channel
+15:08 varna: 所有协程都阻塞（IO、锁、内部通信），而且没有创建请求的时候，线程是直接堵在epoll上的
+15:09 varna: 但在线程阻塞的时间里，线程之外的原因可能导致协程就绪，从而线程要醒过来
+15:09 hatelis: timer也有这个问题，不过显然可以通过epoll的timeout设置回避吧
+15:09 hatelis: 或者直接不允许epoll阻塞，它要循环就循环好了
+15:10 varna: 不能回避一切，但你让线程占着CPU疯跑么……
+15:10 hatelis: 哦，不对，这样导致CPU虚高。。。
+15:10 varna: 那简直神妙
+15:10 varna: 如果把IO和调度分开，倒是可以
+15:10 varna: 我以前就那么写的
+15:11 varna: 实际上如果你用空间去换锁，也可以做到
+15:11 hatelis: 终于知道python gevent monkey那个为什么性能有问题了，好像就是timeout设置的太低了
+15:11 varna: 或者干脆一锁了之，也行
+15:11 varna: 不过那么改的话要把肠子都卸出来，我就不改了
+15:12 varna: 实际上reactor服务器的timeout还该细致些
+15:12 hatelis: 看起来用eventfd代替pipe似乎更好些
+15:12 jin7boy: http://paste.ubuntu.com/14239427/
+15:12 varna: 你看ngx, 他的timeout是有底限的
+15:12 hatelis: dui 
+15:13 varna: 比底限更少的timeout不唤醒，但这不适合p7, 因为有调度要做
+15:13 hatelis: 对，是根据timer上最快将醒来的时间计算的
+15:13 varna: 我的超时也是用那个算的，但我不设下限
+15:13 varna: 提高一点响应能力
+15:13 hatelis: 其实ngx为了resulution也可以干掉那个下限
+15:13 varna: 哦，学习了
+15:14 varna: jin7boy: 写for条件里
+15:15 varna: 调度循环ln440-446就是做真·超时值计算的
+15:15 varna: 这里的peek是对数时间，比堆差
+15:18 xxxxxxxxx: 羊驼线虫回来了?
+15:18 varna: 我之前感冒了
+15:18 varna: 妹子倒是想要跑回来的样子，然而似乎又被我气跑了
+15:18 FrankHB: 哪个。
+15:18 xxxxxxxxx: 哪个?
+15:19 varna: FrankHB: 我哪有那么多妹子，又不是舰C...
+15:19 varna: 感冒难受的时候就整理下论文，然后玩玩骑砍，非常悲催地过了周末
+15:21 varna: hatelis: 对了你说py那个是怎么回事
+15:21 hatelis: http://www.gevent.org/gevent.monkey.html
+15:22 hatelis: 这玩意儿的性能比golang差不少
+15:22 hatelis: 还没弄明白是怎么搞的
+15:23 varna: 咦，我看他挂了libev啊
+15:23 varna: 不该很惨的
+15:24 varna: 噫，我突然觉得py可以是个挺好看的语言
+15:24 varna: 然而他们瞎j*抛异常……
+15:26 hatelis: 解释器有一坨GIL，并发量大到一定程度全是futex(2)
+15:27 varna: # Except for that method, we could almost replace Connection with gevent.fileobject.SocketAdapter, plus a trivial patch to os.pipe (below). Sigh, so close.
+15:27 FrankHB: pypy呢。
+15:28 varna: 巫女巫女
+15:28 varna: 我总觉得这里他们搞糙了
+15:33 hatelis: 这种东西，哪个角落糙了就拖累全局了
+15:34 varna: 过两天去吱坛水一帖p7，正好他开了个外语言板块
+15:34 varna: 其实这东西要是锁得细致，糙点也没关系
+15:34 varna: 就怕一共那么几把锁+糙超时，然后就是连转带堵……
+15:34 hatelis: 可惜，叫GIL，就是大锁了一把了
+15:34 varna: 现在p7的坑处也是锁粒度恶劣
+15:35 varna: 锁很少，但确实在竞争
+15:35 hatelis: 那也是个大坑
+15:35 varna: 所以后来的代码我都懒得想了，可能的场合都直接用空间换锁
+15:36 varna: 目前运行时用到的锁应该就是协程请求队列的锁
+15:36 varna: 这个锁会导致所有试图在同一非自身线程上创建协程的线程竞争
+15:37 varna: 接受请求的线程在检查epoll超时的时候也可能参与这个竞争
+15:39 varna: 剩下多数地方都是成吨的双缓冲
+15:40 varna: 像不要钱的POI皮膏药一样贴上去的
+15:58 jin7boy quit:Ping timeout: 245 seconds
+16:30 tutu quit:Ping timeout: 260 seconds
+16:49 etby quit:Quit: 离开
+16:55 lh_mouse: hatelis, 你可以用两个 nick 注册给同一个账号。
+16:56 hatelis: lh_mouse, 我知道。不过耗子恶心lhanjian卖萌，那还是不注册算了。
+16:56 hatelis: 给我点装疯卖傻的空间
+16:58 lh_mouse: hatelis, 开玩笑的。
+16:58 lh_mouse: ニ这么软啊。
+16:58 * hatelis 当真了
+16:59 * lh_mouse slaps hatelis around a bit with a large trout
+17:34 Youmu quit:Quit: Connection closed for inactivity
+17:38 condy: 唉，羡慕可以自己造轮子的（QAQ
+17:39 hatelis: condy, 没懂。。。
+17:39 condy: O.O
+17:39 varna: hatelis: 他要转〇轮
+17:39 hatelis: varna, 今天我们在长江里抓到一只制造洪水的大黄蛤！
+17:40 varna: 我今天看新闻，说电信老总被干了
+17:40 hatelis: 据说是X派的亲信
+17:40 varna: 太惨
+17:40 hatelis: 以前联通不就是X的儿子掌舵的么
+17:41 hatelis: 后来联通老总调到电信，然后就……
+17:41 varna: 然而我还是先祈祷下哪天马云站错队吧
+17:41 hatelis: 从股份来看，老马已经站错队了
+17:41 condy: 为何这样说？
+17:41 hatelis: 当年A厂上市的时候，就提到了蛤的儿子
+17:41 hatelis: 有1-2%的股份
+17:41 hatelis: 这个应该是可信的
+17:42 hatelis: 哦，0.55%
+17:42 varna: 原始股？
+17:42 hatelis: varna, 上市之前就有的，应该是。
+17:42 varna: 哦瘊瘊
+17:47 pocmon joined channel
+18:06 hatelis: varna, 没关系。前几天某长老（应该是包子或者中堂？）还在去世界局域网大会的时候去了一趟A厂，
+18:07 hatelis: 老马烷不了
+18:07 varna: 然而我还是希望他烷的
+18:07 hatelis: 为啥？
+18:07 condy: 乙烷
+18:07 condy: 还是药丸啊
+18:07 hatelis: condy, 啊？
+18:08 lh_mouse: ヲ看药丸。
+18:08 hatelis: 其实大厂都烷了挺好的，业界就焕然一新
+18:08 hatelis: 了
+18:09 varna: 看马云蛋疼
+18:09 lh_mouse: ヲ看未必。
+18:09 lh_mouse: 中国社会主义民风不是大厂不大厂所导致的。
+18:09 lh_mouse: 一个大厂死了肯定还有大厂会出来。
+18:10 hatelis: 那倒是。没有阻止垄断的手段啊
+18:14 lh_mouse: 坏人毕竟是少数，聪明人也是少数。
+18:15 lh_mouse: 所以多数人是，说好听的，不聪明的老好人，说难听的，就是待宰的羔羊。
+18:15 lh_mouse: 第一等人是聪明的坏人，第二等人是聪明的好人，第三等人是不聪明的坏人，第四等人是不聪明的好人。
+18:16 hatelis: nice is worse
+18:19 varna: 然而毕竟不管是什么样的人，头上挨了一锤子搞不好都会变成一个只会傻笑流口水的悲剧……
+18:19 varna: 所以在意太多就没意思了
+18:20 hatelis: .
+18:20 varna: 好坏么，就我个人见到的事情来说，其实也不容易分明确
+18:20 varna: 当然我没太见过在中央做事的人就是了
+18:20 lh_mouse: 为己的就是坏人，不为己的就是好人。
+18:20 lh_mouse: 聪明的坏人 => 贾诩，聪明的好人 => 诸葛亮，不聪明的坏人 => 吕布，不聪明的好人 => 刘璋。
+18:21 varna: 这个……看着总觉得缺乏区分度
+18:21 hatelis: 刘禅
+18:21 hatelis: 算哪种？
+18:21 varna: 至少就我见过的官员来说，这个区分显得太苍白了
+18:21 varna: 你能做什么、去做什么和你的大方向如何，往往不那么一致，也不容易归纳
+18:21 tutu joined channel
+18:22 varna: 不如慢慢地观察
+18:22 hatelis: 下班
+18:23 varna: 人往往复杂，不过如果我见到有观点而不那么复杂的人，一般来说我会倾向认为这人还不错
+18:24 hatelis quit:Remote host closed the connection
+18:39 Mokou joined channel
+18:42 varna: Mokou: p7 pull一下，接口有变化
+18:43 tutu quit:Quit: WeeChat 1.2
+19:09 ASenR joined channel
+19:11 code_new joined channel
+19:14 varna: 码新来了，爆他
+19:14 varna: 对了最近有人捞那个田中花圈么
+19:14 varna: 捞够三十二个间宫赠品就能换一个的田中花圈哦
+19:15 code_new: varna: 爆
+19:15 code_new: 并没有
+19:16 code_new: 日常炸鱼去1-5出了两个
+19:16 varna: 看着任务太坑，我就不捞了
+19:16 code_new: 这奖励太温暖了……
+19:17 varna: 挺好的，那一定是田中花圈，不是间宫花圈
+19:18 varna: 看着就想起春江花月夜
+19:19 varna: 所谓「斜阳鹤沉藏海雾 锡兰楚克无限路 不得秋月几人归 照月含盐丙章渡」
+19:19 varna: 舰狗一事，唐朝早已有之啊
+19:20 code_new: 这湿写得妙
+19:21 varna: 第一句的neta是苍蓝活动的大疑案，虽说现在没人管了
+19:21 varna: 说是翔鹤满血被超重力炮一发送下去了
+19:22 code_new: 沉了？
+19:22 varna: 沉了
+19:23 code_new: ……
+19:23 varna: 当时翔鹤也少，没现在这么方便在5-4周回的办法
+19:23 varna: 5-4虽说翔鹤掉落就那么回事，但是周个几百回说不定有一个
+19:26 Mokou: 三菱黑科技到了
+19:26 * Mokou 卖肾买铅笔
+19:26 varna: 今天还有一个中岛家的汽车在我后面威武地响喇叭
+19:26 Mokou: 对了，前几天我才知道三菱铅笔和三菱财阀没关系……
+19:27 varna: 前几天感冒的时候把骑砍那个悲剧的资源包拯救了一下
+19:27 Mokou: 然而他们两家的名字和logo都是一样的
+19:27 varna: 打包的那伙计不知道中了什么邪，在资源包里甩了三十多个shader引用
+19:27 Mokou: ……‘
+19:27 varna: 然而只是引用，进游戏之后找不到shader, 还比缺省的优先用，结果就挂掉了
+19:28 varna: 然后终于不崩溃了，拿到盔甲一看，好家伙，葡萄美酒夜光杯……
+19:28 Mokou: ……
+19:28 varna: 大半夜的闪亮闪亮
+19:28 varna: 那是个外面有罩袍的锁子甲，当然其实也不是镜面反射
+19:29 varna: 回资源包一看，打包那哥们把盔甲材质的着色层全弄错了，换了个缺省没光照的，参数也删掉
+19:29 varna: 于是手工调出一个，总算能看了
+19:30 Mokou: 太6
+19:30 Mokou: 谁打的包
+19:30 varna: 骑砍中文站上一个帖子的打包，然而并不算很古旧
+19:31 varna: 似乎是从某个mod里拆出来的，不知道他用了什么奇怪的姿势
+19:31 varna: 还有些模型会出现精妙的天线
+19:32 varna: 不过不是那个包里的
+19:32 Stevearzh quit:Quit: Be back later...
+19:32 varna: 所谓天线，是看起来像一个顶点的东西飞到了场景很远的地方，扯出一些很长的三角面
+19:32 varna: 效果挺震撼的，尤其如果天线戳到镜头里面，感觉像是戳我鼻子一样
+19:32 tutu_wind joined channel
+19:33 varna: 估计是顶点权重出了问题，然而我不会绑骨骼，所以也修不好……
+19:33 Mokou: ……
+19:33 Mokou: 听起来好坑
+19:33 varna: 极少数吧，一般的盔甲武器还好
+19:34 Mokou: 这黑科技确实会转，然而似乎稍微需要点练习……
+19:34 varna: modder坑总比游戏系统坑好
+19:35 Mokou: 比如说在游戏里搞一堆硬编码，让你在编辑的时候被坑淹没不知所措？
+19:35 varna: +
+19:35 varna: 铁血联盟就是典型
+19:35 tutu_wind: geordi: {double c = 2.333333 ; cout << static_cast<int>(c) ;  }
+19:35 geordi: 2
+19:35 varna: 救不得
+19:35 Mokou: 噗
+19:35 varna: 让我搞美工活儿，勉强做得来；然而引擎爆炸就不是所有时候都能修的了……
+19:35 Mokou: 这笔后面还带了一块小小的橡皮
+19:36 Mokou: 然而我怎么可能舍得用
+19:36 varna: 用来捅鼻孔
+19:36 Mokou: uccu
+19:36 Mokou: 这可是我的肾
+19:36 varna: 肾和鼻孔同出你身
+19:36 varna: 捅捅无妨
+19:36 Mokou: 哦，我懂了
+19:37 Mokou: 平时你一般用丁丁？
+19:37 varna: 一般用手
+19:37 Mokou: 用手拿丁丁
+19:37 varna: 这药娘的丁丁是可拆的么……
+19:38 Mokou: 然而我并不是药娘
+19:38 Mokou: quote `
+19:38 Mokou: 话说日本产的铅笔芯都和国内不同
+19:38 Mokou: 日本产的用的是铅 国产是粘土+石墨
+19:38 Mokou: 之前一网友做过磁场悬浮实验 日本芯可以 国产不行
+19:38 Mokou: `
+19:38 Mokou: 这不是钓鱼？
+19:38 varna: 钓得直白
+19:38 varna: 有人上钩么
+19:39 Mokou: 13年的，并没有人理
+19:39 varna: 13年的好帖，我就记得剪炸弹电线那位
+19:39 Mokou: 我抄个承召必谨
+19:40 hatelis joined channel
+19:40 varna: 噗，骑砍中文站什么奇趣玩意儿都有
+19:40 varna: 有人问modder要一个凹凸馒的模型……
+19:42 varna: _(:з」∠)_吃点东西去
+19:51 hatelis: 空调玩坏了，只能缩房间里了- -
+20:18 tutu_wind: 好忧伤～
+20:20 Mokou: WOCAO
+20:20 Mokou: varna: 王已经在推特上证实了，木吉嗑药过度，已经去世……
+20:25 condy: 。。。
+20:25 condy: 默哀
+20:29 hatelis: 木吉 是谁？
+20:30 condy: hatelis: 和王对prpr的那位
+20:30 hatelis: condy, 哲学王？
+20:30 condy: hatelis: 不是木下秀吉哟
+20:30 condy: hatelis: 是啊（
+20:30 condy: hatelis: 来炒饭！
+20:30 hatelis: 哦，那个 王的男人 啊
+20:31 hatelis: condy, 不搞基！要做没有妹子的可爱的直男！
+20:31 tutu_wind: ....
+20:31 tutu_wind: 完全听不懂喵～～～
+20:31 FrankHB: http://tieba.baidu.com/p/4238154016
+20:32 tutu_wind: 看来我刚才看的贴是对的
+20:34 varna: 噗
+20:34 varna: 木吉跪了！？
+20:34 Mokou: 嗑药过度
+20:34 Mokou: 真跪了
+20:34 yzld2002 joined channel
+20:35 varna: 这简直
+20:35 varna: 鬼步失传了……
+20:35 Mokou: http://ww4.sinaimg.cn/bmiddle/005E6x6Ojw1ezfmj9yi5uj30qo1bedn3.jpg
+20:35 Mokou: http://ww1.sinaimg.cn/bmiddle/005E6x6Ojw1ezfmjamzrhj30qo1bewl5.jpg
+20:36 varna: th15自机是谁来着，灵梦魔理沙铃仙？
+20:36 Mokou: 似乎是
+20:36 varna: 咲夜自机丧失……
+20:37 Mokou: 都是神主的锅
+20:40 varna: 吓得我鼠标手发作
+20:40 varna: 右手屈张困难
+20:40 Mokou: 快用左手来一发
+20:41 varna: 我今天整理了驱逐舰胖次的全系列
+20:42 condy: 是从下往上看的那种吗？
+20:42 varna: 我发一个例子
+20:42 Mokou: http://ww4.sinaimg.cn/bmiddle/ea1431aajw1ezfn378r7zj20qo0zkgtp.jpg 我的肾
+20:42 varna: 自动笔啊
+20:42 varna: condy: http://picpaste.com/JQoz9RZS.jpg
+20:42 Youmu joined channel
+20:43 varna: 虽然不环保，但我还是喜欢用木杆铅笔
+20:43 condy: wow 果然
+20:43 Mokou: 木杆铅笔削起来麻烦，尤其是要大量书写的时候
+20:44 varna: 准备六支
+20:44 varna: 字别写太小
+20:44 Mokou: 所以这次我只要了一盒9800
+20:44 Mokou: 不过木杆铅笔没啥不环保的吧
+20:44 Mokou: 那种木头似乎几年就长出来了
+20:44 Mokou: SAT要求全部用铅笔写
+20:44 Youmu: https://usercontent.irccloud-cdn.com/file/VMYQ5BES/%2Fstorage%2Femulated%2F0%2Fsina%2Fweibo%2Fweibo%2Fimg-2c21b03ac41cd4de6d27f3e60fd6d6dc.jpg
+20:44 condy: 这个也不错（
+20:45 varna: http://seiga.nicovideo.jp/user/illust/12128756 胖次系列，作者没投P站
+20:45 condy: O.O
+20:45 varna: 改白露级都很帅
+20:45 Mokou: 不过这样我的笔就实现全部三菱化了……
+20:45 condy: 好棒！
+20:45 condy: 收下了（
+20:46 varna: 其实我入坑之后，对Y D K R的第六驱逐队人设不那么感冒
+20:46 varna: 看久了还是洗吧福最赞
+20:48 Mokou: 然而你并不能靠近洗吧福村
+20:49 varna: 我可以冼吧福
+20:49 varna: 现在我母港正摆着绫波呢
+20:49 Stevearzh joined channel
+20:49 Mokou: 母港摆着准备出击的我鹤
+20:50 varna: 对了今天我输了三场演习
+20:50 Mokou: 上了金刚大井，输了一场
+20:50 varna: 6dd的四带二真搞不过这些少将
+20:50 varna: 然后我想着“下一场就能赢”，怒输三场
+20:51 Stevearzh quit:Client Quit
+20:51 pocmon quit:Quit: 闪...
+20:53 Stevearzh joined channel
+20:53 Stevearzh quit:Changing host
+20:53 Stevearzh joined channel
+20:54 varna: 手一歪，点到米空脸上去了……
+20:54 Mokou: uccu
+20:54 varna: 平时我都点鼻头
+20:55 code_new: http://liyuwiki.com/189689.html
+20:55 varna: 我驲，舰C终于卡了
+20:58 hatelis: 看来一种说法，  finalizer 和 weak reference 是 同构的
+20:58 hatelis: （Isomorphic）
+20:58 varna: (HOMOrphic)
+21:00 varna: 每次改小灯都碰上青叶管事的日子……
+21:00 varna: 幸好我留了一个青叶
+21:00 varna: 总之小灯+6改好了，明天开始继续收拾主炮
+21:01 varna: 这种细致的事情我总是后知后觉，也怪麻烦
+21:03 FrankHB: https://www.reddit.com/r/datgap ...
+21:05 hatelis: FrankHB, 耻球为啥突然发屁股版
+21:06 varna: wow...
+21:06 varna: 恥球也看这个？
+21:07 FrankHB: 顺手转的逼乎老司机。
+21:07 varna: 真羞耻啊
+21:08 FrankHB: 好像也没啥好看的……
+21:08 varna: 这球
+21:08 varna: +
+21:08 varna: 毕竟欧美货
+21:08 iyzsong:  什么鬼
+21:08 tutu_wind: +
+21:08 varna: PIGU
+21:09 FrankHB: https://www.reddit.com/r/curls 会不会导致curl风评被害……
+21:10 varna: 不会吧
+21:10 varna: 反倒会增加好评
+21:10 tutu_wind quit:Read error: Connection reset by peer
+21:10 varna: 平心而论，这东西比libcurl更坏么……
+21:10 tutu_wind joined channel
+21:11 hatelis: 这比libcurl好多了，libcurl是大毒草
+21:14 hatelis: varna, 发现逃逸检测会导致制造出内存泄露的协程没法在它被干掉的时候让出内存……
+21:14 varna: 逃逸检测？
+21:14 varna: 谁的，什么时候发生，做什么
+21:14 hatelis: golang的
+21:15 varna: 它做什么？
+21:15 hatelis: int *foo () {int a = 1;  return &a;}
+21:15 hatelis: 这样子在C里是UB吧
+21:15 hatelis: 但是在golang里是合法的
+21:15 varna: 这里会检测引用数么
+21:16 varna: 如果做了这件事，那么为什么会漏
+21:16 varna: foo(); // 这行被检测之后的结论是什么
+21:16 varna: val := foo(); // 这行呢
+21:17 hatelis: 啊，不对，会被GC掉……
+21:18 varna: 你是不是裤子穿得有点厚，阻碍〇虫上脑了……
+21:18 hatelis: 而fd之类的对象，就算是放在栈上也无法通过干掉协程让它回收……
+21:19 hatelis: varna, 羊驼子怎么猜到我刚穿上了秋裤
+21:19 varna: 空调坏了不是？
+21:20 hatelis: 嗯
+21:21 varna: 写了几个字，手稍微好一些了
+21:21 varna: 似乎现在右手受冷的话麻得厉害一些
+21:29 Mokou: 又有两门九四式飞出去了
+21:29 Mokou: 我的心在滴血
+21:29 varna: (｡･ω･)ﾉ欧洲人改主炮啦！
+21:29 Mokou: 然而只到+2
+21:30 varna: 然而是欧洲人
+21:31 Mokou: 然而没有齐柏林
+21:31 varna: 下次度个假就出
+21:32 varna: 明天维护结束，就给霞炸鱼去
+21:36 varna: hatelis: 说起来，你能编译上次rust那几个实现么
+21:37 varna: cio什么的
+21:37 hatelis: varna, 没自己测……
+21:37 varna: 嘛
+21:37 varna: 算了，等我想简单bench的时候用go吧
+21:38 varna: 虽说go部署起来怪蛋疼的
+21:45 hoxily quit:Quit: Leaving
+21:49 ring joined channel
+21:50 varna: http://picpaste.com/uol0YTiz.jpg 对了有人看过这个很赞的欠雪么
+22:08 ring quit:Quit: Bye
+22:12 hatelis quit:Remote host closed the connection
+22:14 hatelis joined channel
+22:18 condy quit:Ping timeout: 240 seconds
+22:19 cleamoon__ joined channel
+22:24 condy joined channel
+22:27 cleamoon_ joined channel
+22:27 cleamoon__ quit:Read error: Connection reset by peer
+22:31 yzld2002 quit:Remote host closed the connection
+22:36 cleamoon__ joined channel
+22:36 cleamoon_ quit:Read error: Connection reset by peer
+22:38 Mokou: 睡觉
+22:38 Mokou: 诸君武运
+22:38 Mokou quit:Quit: 睡觉
+22:38 lh_mouse quit:Read error: Connection reset by peer
+22:46 cleamoon_ joined channel
+22:46 cleamoon__ quit:Read error: Connection reset by peer
+22:50 varna: 武运
+22:50 varna quit:Quit: leaving
+22:54 cleamoon_ quit:Read error: Connection reset by peer
+22:54 cleamoon_ joined channel
+22:59 MaryJane joined channel
+23:00 MaryJane quit:Changing host
+23:00 MaryJane joined channel
+23:03 cleamoon__ joined channel
+23:03 cleamoon_ quit:Read error: Connection reset by peer
+23:08 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 43.0.2/20151221130713]
+23:09 tutu_wind: 睡了 ～ 
+23:09 tutu_wind quit:Quit: good night
+23:11 cleamoon__ quit:Read error: Connection reset by peer
+23:11 cleamoon__ joined channel
+23:20 cleamoon__ quit:Read error: Connection reset by peer
+23:20 cleamoon__ joined channel
+23:28 cleamoon__ quit:Read error: Connection reset by peer
+23:29 cleamoon__ joined channel
+23:36 ASenR quit:Ping timeout: 276 seconds
+23:37 cleamoon__ quit:Read error: Connection reset by peer
+23:37 cleamoon__ joined channel
+23:38 MaryJane quit:Quit: Leaving
+23:46 cleamoon__ quit:Read error: Connection reset by peer
+23:46 cleamoon__ joined channel
+23:54 cleamoon__ quit:Read error: Connection reset by peer
+23:55 cleamoon__ joined channel

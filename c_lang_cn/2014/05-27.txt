@@ -1,0 +1,690 @@
+0:4 condy_:geordi: replace foo with foo {}
+0:4 geordi:error: String `foo` occurs multiple times.
+0:4 condy_:geordi: replace last foo with foo{}
+0:4 geordi:<no output>
+0:4 condy_:geordi: show
+0:4 geordi:{ map<int, foo> x; } struct foo{};
+0:4 condy_:geordi: run
+0:4 geordi:<no output>
+0:15 lh_mouse:geordi, <<TYPE<decltype(a)>; int a[128];
+0:15 geordi:int [128]
+0:15 lh_mouse:geordi, <<TYPE(b); int a[128]; decltype(a) b;
+0:15 geordi:lvalue int [128]
+0:43 hysw:varna: 把智商交出来
+0:45 varna:hysw: 我才不给你这种天天showing off的现充呢，你先给我些可爱的幼女
+0:52 MOokeN joined channel
+0:53 lh_mouse:geordi, <<noexcept(copy(begin(a), end(a), a + 1)); char a[10];
+0:53 geordi:false
+0:56 varna:啊咧
+0:56 varna:来了被客户端缺省命名的新人么？
+0:59 condy_:原来c++11有begin,end啊，好方便的东西。
+0:59 condy_:geordi: {int a[10]; cout << begin(a) - a, end(a) - a;}
+0:59 geordi:0, 10
+0:59 MOokeN joined channel
+1:2 mntcdrom joined channel
+1:2 varna:啊，似乎来了不少新人呢？
+1:2 varna:欢迎
+1:3 varna:这里是百度c语言吧（或许和c++吧联合的）irc频道 #touhou-lambda-hentai-news-cn
+1:3 MOokeN:我会告诉你都是我的小号么
+1:4 GuEsT10086 joined channel
+1:4 varna:爆
+1:4 varna:噗，寒云出现了
+1:4 GuEsT10086:varna: 烧
+1:4 varna:GuEsT10086: 你主机暴露了
+1:4 GuEsT10086:varna: 知道...
+1:5 GuEsT10086:从来就没准备换hostname
+1:5 condy_:peter...
+1:5 *GuEsT10086 /set varna --onfire
+1:5 varna:2333
+1:5 *GuEsT10086 /set condy_ --onfire
+1:5 varna:你应该念 ignize
+1:6 varna:而且你这种现充就应该跑滑铁卢去找妹子
+1:6 condy_:Unknown setting
+1:6 varna:在频道里要智商是没用的
+1:7 hysw:varna: 当年被Waterloo拒了...
+1:8 varna:又不是你被妹子拒了
+1:9 mntcdrom joined channel
+1:10 hysw:varna: 没智商...
+1:11 *hysw 好希望能有一只没有学霸属性的可爱的同时具有数学娘和文学娘属性的计算姬来帮我写作业...
+1:11 varna:别指望了
+1:11 varna:找个巫女吧
+1:12 xxxxxxxxx:哪有巫女?
+1:12 xxxxxxxxx:我擦 家又被人炸了
+1:13 varna:2333
+1:13 varna:果然这个点服务器速度就好多了
+1:14 zzzzzzzz:w
+1:14 zzzzzzzz:你们在玩儿啥
+1:14 varna:zzzzzzzz: 我在玩舰娘
+1:14 zzzzzzzz:那是什么
+1:15 varna:zzzzzzzz: 军国主义黄赌毒游戏
+1:15 zzzzzzzz:为什么不是觉酱
+1:15 varna:zzzzzzzz: http://zh.moegirl.org/%E8%88%B0%E9%98%9FCollection
+1:15 zzzzzzzz:O.o
+1:16 *varna 提督Lv30，正在筹备攻略2-4海域的战力
+1:18 xxxxxxxxx:http://puu.sh/92aTx.jpg 机枪塔就剩一个 太阳能爆了一个  
+1:20 xxxxxxxxx:强盗 + 电器失灵真是恶心
+1:21 varna:岛风！
+1:21 varna:入手了岛风！
+1:22 xxxxxxxxx:终于要好快了
+1:22 varna:噗噗
+1:23 varna:只是参数看上去很好，可以加入将来的3-2战力和（可能的话）东京急行战力
+1:23 varna:岛风怎么说也是珍稀物
+1:23 varna:入坑一周就刷出来算是RP不错
+1:24 xxxxxxxxx:想来想去自己防强盗还是不现实....
+1:31 varna:雷装不错，回避很高，刚刚入手修起来容易，以后跟着反潜队撸潜艇吧
+1:36 varna:如果到时候能入手晓酱的话就决定是六驱+岛风+看着选一只培养
+1:38 varna:啊哈哈哈哈哈哈哈20/20/10/110一发彩云
+1:44 condy joined channel
+1:46 hysw:varna: 把智商交出来
+1:46 *hysw 好希望能有一只没有学霸属性的可爱的同时具有数学娘和文学娘属性的计算姬来帮我写作业...
+1:50 *varna 的人品大概奇妙地被岛风和彩云吸走了
+2:1 varna:啊噗，更新的五场演习里有两个提督是下午的……
+2:1 varna:提督平均等级都比我高二十左右，适当地打打好心人提供的舰队吧……
+2:4 varna:还有一个叫做phyti的Lv52提督，这怎么看都是国人吧……
+3:52 varna:试着攻略了2-4
+3:54 varna:总体来说如果不被罗盘娘坑的话应该是可以通关的，不过最后走到Boss点门口被坑了，而且敌人居然也有泡澡WO酱
+3:54 varna:此后恐怕可以减少出击多进行近代化改修
+3:55 varna:super北上大人和飞鹰两只是弱点
+5:18 cleamoon:alpako要来呕洲遛穴
+5:18 varna:去欧洲干嘛呢
+5:19 varna:难道是说去了欧洲我就可以变成欧洲提督，一发大和再一发大凤？
+5:19 cleamoon:感觉你在i倒时差
+5:19 varna:早倒过来了……
+5:20 varna:要是倒时差能变成欧洲提督也可以，但现在的悲惨状况是我在通关2-4之前肯定是没心思赌船了
+5:20 varna:一次完整的出击就得花掉数百燃料，虽说效果不错
+5:23 varna:最后的结果就是轰烂ev14之后写的新东西已经放弃把自己称作框架了
+5:24 varna:连事件驱动也不是，就是单纯的多路复用封装
+5:24 varna:啊，口水
+5:26 cleamoon:你在题犊的道路上越走越远了
+5:27 varna:我倒是觉得单纯的多路复用看起来越来越顺眼了
+5:27 varna:libevent式的回调虽说确实是在写状态机，但怎么写都是把整个逻辑切碎了扔出去，散乱得吓人
+5:28 varna:都走到服务器的传输层前端了，倒不如相信用户
+5:28 cleamoon:对s-c类的知识完全无爱
+5:28 varna:而且就提督来说，高中时候那个两百多斤的银兽比我早两天着任，昨天已经攻下2-4了，虽然这货脸好捞出个潜艇
+5:29 cleamoon:这没办法，基王玩d2还被我3小时从0追到大菠萝呢
+5:30 varna:我接下来就看脸了
+5:31 varna:罗盘别太坑的话应该能赢
+5:31 varna:再坑我个十回出击不进Boss那也是没办法的事……
+5:32 varna:cleamoon: 说起来岚月酱试用过二郎没
+5:32 cleamoon:如此看脸的玩意
+5:32 cleamoon:怎么可能昨天说了今天就用....
+5:32 cleamoon:我的TODO前边还有大量物体呢...
+5:32 varna:2333
+5:33 varna:罗盘比较看脸，少数图有固定攻略法；今天我就是三战连胜之后走到一个岔路口，然后就走歪了
+5:33 cleamoon:如果有固定就刷呗
+5:33 varna:固定那个是出潜艇的，现在不急
+5:34 cleamoon:能卖吗
+5:34 varna:不能卖，出了潜艇可以组队到2-3刷资源，效率会高点
+5:35 cleamoon:略坑
+5:35 varna:但是现阶段我的反潜消耗也不少，尽量早攻下2-4到三面，方便解任务开放第四舰队，这样可以多一队日常打捞资源的
+5:35 varna:反潜队也不用临时征用一个打捞队了
+5:36 cleamoon:其实我觉得狠多问题与其想怎么优化服务器，不如想想怎么能不用服务器端完成....
+5:36 varna:不用服务器端？
+5:36 varna:举个例子看看
+5:36 cleamoon:这种游戏呀，略麻烦
+5:37 cleamoon:我见过的某sb把用户密码明文发到服务器端然后md5比较
+5:37 varna:噗
+5:37 varna:两边非对称啊
+5:38 cleamoon:是啊...
+5:38 cleamoon:我就是觉得很多玩意在客户端解决比较好...
+5:39 varna:非对称这个例子不太好说，毕竟算法就是一边做一次的
+5:39 varna:js是典型负担被推到客户端的例子，不过反方向的考虑就是node.js了
+5:39 cleamoon:那比如买火车票的那个，能不能在客户端排队？
+5:39 varna:不能
+5:40 cleamoon:js做的还好吧
+5:40 varna:这个绝对不可以，业务数据在客户那里高度不可信
+5:40 cleamoon:不能加密数据吗
+5:40 varna:不能
+5:41 varna:客户端最后用的一定是解密的数据，知道这个就行了
+5:41 varna:如果不用解密数据，相当于客户端仍然什么都不知道，那也就没效率了
+5:41 varna:只要客户端知道的东西就都会被破解
+5:43 cleamoon:如果做成p2p，然后每人以身份证号为标识分享一个小数据，由ratio标识轮到谁了
+5:43 varna:我猜你会这么说……但是这样就可以通过操作p2p拓扑来解决问题了
+5:43 cleamoon:那是什么...
+5:43 varna:比如在p2p拓扑发现的时候直接给报文捣鬼
+5:43 varna:当然一个解决方案是servant-client
+5:44 cleamoon:如果总考虑捣鬼就很麻烦了....
+5:44 varna:也就是要求小区域的自组织p2p网络具有一个监管servant
+5:44 cleamoon:那不也可以捣鬼....
+5:45 varna:但是这又回到了一开始的server-client问题，因为没有经费部署那么多servant, 而自组织网络的servant一律都不可信
+5:45 varna:悲哀的是在于篡改报文很简单
+5:45 cleamoon:我觉得悲哀的是买票的那个瓶颈在前端...
+5:45 varna:所以我倾向于这种业务发自服务器、请求发自客户端的东西把压力放在服务器端，毕竟失败的代价比业务错误的代价小
+5:46 varna:而且买票系统的悲剧似乎在于他们投标的时候找了个逗比公司
+5:46 varna:你见到国内哪个购物网站在业务量大的时候成天崩溃的
+5:46 cleamoon:他们机器多？
+5:47 varna:如果公司能做到，政府为什么做不到……
+5:47 varna:而且到了那个级别，单纯的机器多不能解决问题
+5:47 varna:同步开销会开始上涨，备份策略如果做砸了也会继续危害效果
+5:48 cleamoon:如果前端是瓶颈，能不能多做几个前端呢？比如 beijing_mai_piao.com, shanghai_mai_piao.com
+5:49 cleamoon:因为大部分人会在当地买离开当地的往返票
+5:49 varna:这是惯用解决方案之一，传说中花数百万买了负载均衡设备就能解决不少问题之一
+5:49 varna:但我不确认他们是否这么做了
+5:50 varna:服务器端在前面做负载均衡应该是个套路了
+5:51 varna:不过舰娘的问题我怀疑是运营方因为要同时运营很多产品，根本没法投入大力度运行专门的主机，不排除多量用虚拟化的可能
+5:51 varna:毕竟现在的玩家也就两百万，这对网游来说不是个承担起来每每困难的数目
+5:51 cleamoon:能不能让服务器每次开一个特殊端口，找个地方公布一个数据，用这个数据和每个人的身份证号可计算出是否轮到，而且轮到用哪个端口
+5:51 varna:不可以
+5:51 cleamoon:除此之外一律不受理
+5:51 cleamoon:......
+5:52 varna:这个做法肯定会有，但我觉得肯定会是传输层以上的业务逻辑
+5:52 varna:按令牌排队之类的东西
+5:52 cleamoon:就是按令牌排队
+5:52 varna:但绝对不是端口，因为端口太少了，而且即使用了也不解决任何问题
+5:52 varna:我觉得这个应该会有，可能是他们没做好
+5:53 cleamoon:端口只是举个例子... 我对tcp/ip不熟
+5:53 cleamoon:总之就是没轮到就完全没法访问
+5:53 varna:比如数据库那边怎么更新，业务提交多少，缓存加哪加多少，这样的琐碎事情
+5:53 cleamoon:减少前端需求
+5:53 varna:你拦不住的
+5:54 cleamoon:不知道哪里开放就没法访问呀
+5:54 varna:浏览器全灭
+5:54 varna:你怎么在一个广域网上连对端端点都不知道就对进程发起连接呢
+5:54 varna:不是不可以做，做了之后效率直接尿崩
+5:55 varna:而且我不认为12306的问题是前端tcp服务器的问题，现在tcp服务器实现的质量不差
+5:55 cleamoon:不用浏览器，弄一个专用的软件，管电信要一堆ip号，算出哪个用哪个
+5:55 varna:那个太逗比了
+5:55 cleamoon:能用就行
+5:55 varna:直觉上主要的坑爹部分应该从数据库开始
+5:55 varna:而不是从tcp开始
+5:56 varna:淘宝前端也不过就是弄些nginx
+5:56 cleamoon:数据库哪里很难吗... 最多只有1亿申请呀...
+5:56 varna:一堆事务扔进去之后就很慢
+5:56 varna:查选删增什么的，前端后端一堆
+5:57 varna:然后还有乌七八糟的用户业务控制，比如某处应当缓存而不提交，某处提交不回滚但应当提供日志，诸如此类
+5:58 varna:也不排除现行的铁道数据库有效率差的地方
+5:59 varna:就我看到taobao他们介绍经验的部分，这样程度的业务对数据库确实有要求
+6:0 cleamoon:能不能给所有人分配一个int，然后就是排序...
+6:0 varna:...
+6:0 varna:我觉得到抽选应该都不会很坑
+6:1 varna:毕竟再怎么搞就是小小的计算，感觉上不会比业务和事务死得更惨
+6:1 varna:但是再多说下去我也没谱了所以不能确定
+6:2 cleamoon:你做一个就知道了
+6:2 varna:这种事情跟着做确实知道，但是我一个人的话连压力测试都做不了那么大的
+6:3 varna:所以我目前还是在传输层上蹲着做中等程度并发
+6:4 cleamoon:架在一个笨2的拨号链接上测试就行了
+6:4 varna:不一样
+6:4 varna:一百个低速连接和一百个并发短链接还有一百个并发长连接都不一样的
+6:5 varna:而数目再大还会有差别，不然其实按逻辑想想的话这些问题都不需要解决
+6:5 cleamoon:那域名劫持了google就能测试了
+6:5 varna:我一个人就能赶出来的话，公司都倒闭算了
+6:6 cleamoon:撸码这种除了人工没成本的货自己能试就试
+6:6 varna:运维和经验不是现在我需要的事情
+6:6 cleamoon:你要什么
+6:7 cleamoon:药娘？
+6:7 varna:谁知道呢
+6:7 varna:但是折腾一坨服务器系统不止撸码是肯定的
+6:7 cleamoon:soga
+6:8 varna:很多是经验的事情，自己花力气去试还不准，不如实用的时候跟着别人学
+6:9 varna:我自己能准备个三四成就可以了
+6:9 cleamoon:soga
+6:9 varna:可能三四成都是高估
+6:9 cleamoon:我还是喜欢自撸自撸
+6:9 cleamoon:能自撸就多撸撸
+6:9 varna:这原则没问题
+6:10 varna:一点都不写肯定一点都不会
+6:10 cleamoon:所以暑假我打算做一架直升机
+6:10 varna:多大尺寸的
+6:10 varna:一般市售UAV那么大？
+6:11 cleamoon:我住的地方都放不下...
+6:11 varna:...
+6:11 varna:反正你那里造潜艇的都有，倒是不奇怪……
+6:11 cleamoon:我得看价格，没那么壕，而且工具也不全
+6:12 cleamoon:造潜艇是学校出钱....
+6:12 varna:我想起八几年传说中一个设计师和一坨工人在车间里手敲了一个强击机
+6:12 cleamoon:如果发动机我自己做就能便宜点，但是重量就极大限制了
+6:12 varna:你会做发动机的啊……
+6:12 cleamoon:...怎么做到的
+6:13 cleamoon:不会
+6:13 cleamoon:吓做呗
+6:13 varna:我也不知道，不过那设计师应该是国内搞强击机比较先驱的
+6:13 varna:居然能飞
+6:13 cleamoon:目标是能装下一个摄像机
+6:13 cleamoon:不能飞叫什么....
+6:14 varna:手敲不能飞太正常了吧……
+6:14 cleamoon:用木板磨完了用手掷都能飞...
+6:14 varna:那个不算，得能空战机动安定的……
+6:15 cleamoon:如果价格太贵我就造学校正在研究的那个超诡异飞机
+6:15 cleamoon:那是很困难
+6:15 varna:虽说强击机不会像歼击机那么花哨
+6:15 varna:啊？研究什么飞机的
+6:15 cleamoon:发动机怎么解决的
+6:15 varna:不知道
+6:15 varna:国产发动机似乎一直是悲剧
+6:15 cleamoon:软体扇翅膀飞机
+6:15 varna:多大？
+6:16 varna:翼展三四米？
+6:16 cleamoon:我看到的成品比蝙蝠还小
+6:17 varna:这个倒好理解，不然扇翅膀的频率会极低，还是得继续弄那套空气动力学
+6:17 cleamoon:那些玩意很难弄
+6:18 varna:@一航战郝彬
+6:18 cleamoon:模拟的可能性接近0
+6:18 varna:不是有风洞么，做精确了现在不也不错
+6:18 cleamoon:目前弄一个超级机模拟只能模拟非常简单得飞机模型
+6:18 cleamoon:我说电脑模拟....
+6:18 varna:用计算机硬算就北了
+6:18 cleamoon:只能用风洞
+6:19 *varna 修了个缓冲
+6:20 cleamoon:我以前以为买几台电脑就完了，都不用做实验了，现在发现电脑用在模拟时几乎没任何发展...
+6:21 cleamoon:5年前模拟空气动力学还只能模拟一个三角形呢...
+6:21 varna:都是基佬的错
+6:21 varna:……似乎发展得还不错，过了五年就能模拟超简单飞机了不是……
+6:22 cleamoon:从三角形到一个细头圆柱加两个三角形
+6:22 varna:噗
+6:22 varna:原来是这样啊2333
+6:22 cleamoon:我表示现在战机都几千的平面，几十种材料，模拟个屁...
+6:23 varna:可以模拟印度战机
+6:23 varna:开发几十年都快黄摊了还没开发出能用的东西来
+6:24 cleamoon:我说怎么航空不学计算机
+6:24 varna:之前被科普印度战机和主战坦克的资料，尿了一地
+6:24 varna:2333333333
+6:25 cleamoon:不算发动机造一个战斗机不难吧
+6:25 varna:阿三擅长布朗运动，不擅长开发
+6:26 cleamoon:不学计算机但是学数值运算，难道让我们手算吗...
+6:26 varna:最后连武装都带不动的战机啊
+6:26 cleamoon:真能做到布朗就nb了...
+6:26 cleamoon:那是发动机问题
+6:26 varna:不要小瞧三爷
+6:27 cleamoon:学航空航天也不错
+6:27 cleamoon:在空中炸点什么比天天烧东西好玩
+6:28 varna:+
+6:29 varna:KFC空中炸鸡腿堡，现已加入Github午餐，合并分支即可得九折优惠
+6:30 varna:看漫画不看作者的下场 http://img2.dmzj.com/k/Kankore%20%E2%98%86%20Waha/%E5%85%A8%E4%B8%80%E8%AF%9D/a%20%286%29.jpg
+6:30 varna:我说怎么画风熟悉，原来是可乐提督……
+6:31 varna:评论：司令官在上旗舰奇怪么
+6:31 cleamoon:system engineering是毛...
+6:31 varna:不清楚
+6:32 varna:总有人提，我总懒得查
+6:32 cleamoon:涵盖课程：优化，control theory，优化control theory........
+6:33 cleamoon:感觉和没说一样...
+6:33 varna:难道是讲一堆最优化方法的
+6:33 cleamoon:可能是...
+6:34 cleamoon:擦，看到一课，载人航天，满心欢喜的打开，原来是讲历史和给航天员配给什么食物的.......
+6:35 varna:233333
+6:35 varna:毅碗热翔
+6:36 varna:（可以直接从太空服倒灌）
+6:36 cleamoon:全球定位卫星系统，内容：历史介绍，应用介绍，怎么算他在哪介绍
+6:37 varna:2333
+6:37 cleamoon:我表示这种课能不能就别用这高大上的名字了
+6:37 varna:大概是只下了绪论章？
+6:38 cleamoon:都是绪论
+6:38 varna:噗
+6:38 cleamoon:我旁听的所有烟酒僧的课都可以用一句话总结：我是教授，我研究的东西很nb，很有用，这里是考试范围，你自己去看吧
+6:39 cleamoon:每节课都tm是这些
+6:40 varna:……我这里教授好歹还正经讲课
+6:41 cleamoon:他们也在正经的吹牛
+6:41 cleamoon:所有幻灯片都有好几页重的，他们就讲那些，然后正经内容让回家看
+6:42 varna:可以不去上课只考试么
+6:42 cleamoon:图形学基本和课业有关的就一句，找篇论文去实现吧
+6:42 cleamoon:可以
+6:42 varna:那还好
+6:43 cleamoon:我图形学上了4节课，屁都没懂，就懂了第五节课教授说实验应该完成了，该开始大作业了
+6:43 cleamoon:我表示asjfkljafiwejwileaf 
+6:43 varna:2333
+6:43 varna:嚓，手机闹钟
+6:44 cleamoon:连一个源码，甚至连用那些技术都还没讲呢
+6:44 varna:不过是研究生课不是
+6:44 varna:应该是面向有基础的人
+6:44 cleamoon:就老说，opengl坑，sdl也坑，还有maya之类的可用，省下你们自己试吧
+6:45 cleamoon:算是研究生课
+6:45 cleamoon:教授第一节课开始就不断重复这句
+6:45 varna:疼，不过研究生一般也就是方向差不多的才会去选这种课所以应该没问题
+6:46 cleamoon:似乎90+是必修才去的...
+6:46 cleamoon:我这种抖M就一个
+6:46 varna:所以说么
+6:47 varna:啊，岚月酱是抖M, 这个重要的知识记下来了
+6:47 cleamoon:.....
+6:47 cleamoon:明年必修65分，我自己选了90+分...
+6:48 cleamoon:其中40+是等于白送的，另一个学校的我已经学过的网上数学课
+6:48 varna:学分好多……
+6:49 cleamoon:因为想上好玩的课学校总以学分不够推脱，我就给他们弄个学分高的
+6:49 varna:你们评定奖学金看什么的
+6:49 cleamoon:没有奖学金
+6:49 *varna 突然觉得各种作品里幼女都聪明是有道理的
+6:49 cleamoon:是隔壁学校的微积分入门，我们6分，他们30分，于是我选了...
+6:49 varna:噗
+6:49 cleamoon:y？
+6:49 varna:GJ
+6:50 varna:大概是这种幼女娇化之后反差萌效果极好
+6:50 cleamoon:还有个线性，9分
+6:50 cleamoon:+
+6:50 cleamoon:最近发现很多都用反差萌
+6:51 varna:灵梦这种平板萌的不太容易卖出去
+6:51 cleamoon:没有固有属性的设定，所以不好找反差
+6:51 cleamoon:只能是邋遢的没节操之类的
+6:52 varna:那些都是二设了
+6:52 varna:一设的灵梦看上去只是对各种事情都提不起兴趣的冷感类型
+6:52 xxxxxxxxx:不在服务端完成: DNF
+6:52 cleamoon:一设还有超级神运
+6:52 varna:+
+6:52 varna:xxxxxxxxx: 黑得漂亮
+6:53 varna:看几页漫画吃饭去
+6:53 cleamoon:啊，还真有奖学金，做环境友好的产品并公布可能能得到4k的奖学金...
+6:54 xxxxxxxxx:M3黑色之钢 <- 黑肛
+6:54 varna:DARK rider Reimu
+6:58 cleamoon:好东西   http://photo1.fanfou.com/n0/0a/p5/x5_223891.jpg
+7:0 varna:看着不好吃
+7:1 cleamoon:+
+7:1 cleamoon:反正不是我的
+7:1 cleamoon:网上看到的
+7:1 varna:李煌老师又暴走了 http://tieba.baidu.com/p/3063966215
+7:1 varna:重点看二三页
+7:2 cleamoon:orz   @avb001：【北京晚报】北京特警随身配发的子弹已经增加一倍，根据公安部指令，面对正在实施暴力活动的恐怖分子，无需“亮明身份、鸣枪示警”等一系列警告程序，可直接开枪。直……接……开……枪！
+7:2 cleamoon:不能回去了
+7:3 cleamoon:@张压定理
+7:4 xxxxxxxxx:要是电影演员被当场击毙就屌了
+7:4 varna:http://beta.wikiversity.org/wiki/School:%E6%9D%8E%E7%85%8C%E6%95%B8%E5%AD%B8%E7%A0%94%E7%A9%B6%E9%99%A2
+7:4 varna:otl
+7:4 cleamoon:@财新网：【31个省份高考新政出炉 京浙川品德分可加20】此轮大规模调整主要集中在体育、奥赛等缩减项目及降低分值。多地奥赛获奖者剔出保送行列，甚至加分名单；与此形成强烈反差的是，13个省份加分项目中提及思想品德及见义勇为，北京、浙江、四川三省市甚至奖励加20分（法制晚报）
+7:4 cleamoon:那有什么屌的
+7:5 cleamoon:orz
+7:5 varna:还好我高考过了
+7:5 cleamoon:http://beta.wikiversity.org/wiki/%E8%B2%BB%E7%88%BE%E9%A6%AC%E5%A4%A7%E5%AE%9A%E7%90%86%E4%B9%8B%E7%A0%94%E7%A9%B6
+7:6 varna:回去了
+7:7 varna:大家记得提醒药娘吃药
+7:7 varna:日间愉快
+7:7 xxxxxxxxx:日间... 间是谁
+7:7 cleamoon:orz   http://beta.wikiversity.org/wiki/%E6%9D%8E%E7%85%8C-%E6%AD%90%E6%8B%89-%E5%A1%94%E7%88%BE%E5%A1%94%E5%A1%94%E5%88%A9%E4%BA%9E%E8%A7%A3
+7:8 cleamoon:门中一个日，就是关上门就能啪啪啪的意思，以alpako的情况，离他那么近的只有糖果
+7:10 cleamoon:睡觉
+7:10 cleamoon:satori
+7:42 condy joined channel
+8:23 boosure joined channel
+8:40 xxxxxxxx_ joined channel
+9:15 lh_mouse joined channel
+9:32 whatofor joined channel
+9:45 sismvg joined channel
+10:7 iyzsong joined channel
+10:14 code_new joined channel
+10:28 silencly07 joined channel
+10:37 lh_mouse:geordi, <<is_trivial<foo>::value; struct foo { int i; double d; private: foo() = delete; };
+10:37 geordi:true
+10:38 lh_mouse:geordi, replace delete with default
+10:38 geordi:true
+10:38 lh_mouse:geordi, replace = default with { }
+10:38 geordi:false
+10:38 lh_mouse:geordi, prepend constexpr before foo() and append noexcept after foo()
+10:38 geordi:error: ISO C++ forbids declaration of 'constexprfoo' with no type
+10:38 lh_mouse:geordi, show
+10:38 geordi:<<is_trivial<foo>::value; struct foo { int i; double d; private: constexprfoo()noexcept { }; };
+10:38 lh_mouse:geordi, replace constexprfoo with constexpr foo
+10:38 geordi:error: uninitialized member 'foo::i' in 'constexpr' constructor
+10:38 lh_mouse:geo append :i(0), d(2.0) after noexcept 
+10:39 lh_mouse:geordi, append :i(0), d(2.0) after noexcept 
+10:39 geordi:false
+10:39 lh_mouse:geordi, show
+10:39 geordi:<<is_trivial<foo>::value; struct foo { int i; double d; private: constexpr foo()noexcept :i(0), d(2.0){ }; };
+10:53 lh_mouse:geordi, { foo f; cout <<f.a; } struct foo { int a[5]; foo() = default; };
+10:53 geordi:{4222848, 0, 4206384, 0, -1912332448}
+10:54 lh_mouse:geordi, { foo f{ }; cout <<f.a; } struct foo { int a[5]; foo() = default; };
+10:54 geordi:{0, 0, 0, 0, 0}
+11:26 condy_1 joined channel
+11:26 condy_1:geordi, << { foo f{}; cout << f.a;} struct foo{ int a[4]; foo(){cout<<}}
+11:26 geordi:error: expected primary-expression before '{' token
+11:27 condy_1:geordi, << { foo f{}; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";}}
+11:27 geordi:Same error.
+11:27 condy_1:geordi, << { foo f{}; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";}};
+11:27 geordi:Same error.
+11:27 condy_1:geordi, << { foo f; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";}};
+11:27 geordi:Same error.
+11:27 condy_1:geordi, << { foo f; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";}; }
+11:27 geordi:Same error.
+11:27 condy_1:geordi, << { foo f; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";}; };
+11:27 geordi:Same error.
+11:28 condy_1:geordi, << { foo f; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";} };
+11:28 geordi:Same error.
+11:28 condy_1:geordi, { foo f; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";} };
+11:28 geordi:hello{4222864, 0, 4206384, 0}
+11:28 condy_1:geordi, { foo f{}; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";} };
+11:28 geordi:No change in output.
+11:28 condy_1:geordi, -w { foo f{}; cout << f.a;} struct foo{ int a[4]; foo(){cout<<"hello";} };
+11:28 geordi:No change in output.
+11:29 condy_1:geordi,  { foo f{}; cout << f.a;} struct foo{ int a[4]; foo()=default; };
+11:29 geordi:{0, 0, 0, 0}
+11:29 condy_1:geordi,  { foo f; cout << f.a;} struct foo{ int a[4]; foo()=default; };
+11:29 geordi:{4222848, 0, 4206384, 0}
+11:29 condy_1:geordi,  { foo f{1,2,3,4}; cout << f.a;} struct foo{ int a[4]; foo()=default; };
+11:29 geordi:{1, 2, 3, 4}
+11:35 condy_2 joined channel
+11:46 condy_2:在知乎看到了个HOPE，还以为是hope1
+11:46 condy_2:.
+12:25 sismvg:No.39
+12:26 sismvg:当场上没有No.39的时候condy_2可以当作两个condy来使用，我用condy和condy叠加召唤No.39 hope1
+12:37 condy_ joined channel
+12:40 condy_:geordi: {A a = f();} A f(){return A();} struct A{A(){} A(const A&){cout<<"copy";} A operator=(const A&){cout<<"=";} A operator=(const A&&){cout<<"r-ref";} A(const A&&){cout<<"r-copy";}};
+12:40 geordi:error: 'A' does not name a type
+12:43 condy_:geordi:  {A a = f();} A f(){return A();} struct A{ A(){} A(const A&){cout<<"copy";} A operator=(const A&){cout<<"=";return *this;} A operator=(const A&&){cout<<"r-ref";return *this;} A(const A&&){cout<<"r-copy";} };
+12:43 geordi:Same error.
+12:43 condy_:geordi:  {A a = f();} A f(){return A();} class A{ public:A(){} A(const A&){cout<<"copy";} A operator=(const A&){cout<<"=";return *this;} A operator=(const A&&){cout<<"r-ref";return *this;} A(const A&&){cout<<"r-copy";} };
+12:43 geordi:Same error.
+12:44 condy_:geordi:  {A a = f();}  A{ A(){} A(const A&){cout<<"copy";} A operator=(const A&){cout<<"=";return *this;} A operator=(const A&&){cout<<"r-ref";return *this;} A(const A&&){cout<<"r-copy";} }; A f(){return A();}
+12:44 geordi:Same error.
+12:46 condy_:geordi: struct A {A(){} A(const A&){cout<<"copy constructor";}A operator=(const A&){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref\n";return *this;}A(const A&&){cout<<"right copy constructor\n";}}; A f(){return A();} int main(){A a=f();}
+12:46 geordi:warning: variable 'a' set but not used
+12:46 condy_:geordi: -w
+12:46 geordi:Success
+12:47 condy_:geordi: run
+12:47 geordi:Success
+12:47 condy_:geordi: show
+12:47 geordi:-w
+12:47 condy_:geordi: -w struct A {A(){} A(const A&){cout<<"copy constructor";}A operator=(const A&){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref\n";return *this;}A(const A&&){cout<<"right copy constructor\n";}}; A f(){return A();} int main(){A a=f();}
+12:47 geordi:right copy constructor [+ 1 discarded line]
+12:47 condy_:geordi: -w struct A {A(){} A(const A&){cout<<"copy constructor";}A operator=(const A&){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref";return *this;}A(const A&&){cout<<"right copy constructor";}}; A f(){return A();} int main(){A a=f();}
+12:47 geordi:right copy constructorright copy constructor
+12:50 condy_:^上面代码为啥在本机上无显示？
+12:52 condy_:geordi: -w struct A {A(){} A(const A){cout<<"copy ";}A operator=(const A&){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref";return *this;}A(const A&&){cout<<"right copy constructor";}}; A f(){return A();} int main(){A a=f();}
+12:52 geordi:error: invalid constructor; you probably meant 'A (const A&)'
+12:54 condy_:geordi: -w struct A {A(){} A(const A&){cout<<"copy ";}A operator=(A){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref";return *this;}A(const A&&){cout<<"right copy constructor";}}; A f(){return A();} int main(){A a=f();}
+12:54 geordi:right copy constructorright copy constructor
+12:54 condy_:geordi: -w struct A {A(){} A(const A&){cout<<"copy ";}A operator=(A){cout<<"operator="; return *this;}A operator=(const A&&){cout<<"right ref";return *this;} }; A f(){return A();} int main(){A a=f();}
+12:54 geordi:copy copy 
+12:59 condy_:geordi: -w struct A{A(){} A(const A&){BARK;}}; A f(){return A();} int main(){A a=f();}
+12:59 geordi:A::A(const A&) A::A(const A&)
+13:0 condy_:geordi: -w struct A{A(){} A(const A&){BARK;}}; A f(){return A();} int main(){A a=f();A b=a;}
+13:0 geordi:A::A(const A&) A::A(const A&) A::A(const A&)
+13:0 condy_:geordi: -w struct A{A(){} A(const A&){BARK;} A operator=(const A&){BARK;}}; A f(){return A();} int main(){A a=f();A b=a;}
+13:0 geordi:No change in output.
+13:6 condy_:geordi: -w struct A{A(){} A(const A&){BARK;} A& operator=(const A&){BARK;}}; A f(){return A();} int main(){A a=f();A b=a;}
+13:6 geordi:No change in output.
+13:11 Zirx joined channel
+13:14 xxxxxxxx_: 
+13:14 xxxxxxxx_:'
+13:15 condy_:geordi: -w struct A{A(){} A& operator=(const A&){BARK;}}; A f(){return A();} int main(){A a=f();A b=a;}
+13:15 geordi:<no output>
+13:16 condy_:geordi: -w struct A{A(){} A& operator=(const A&){BARK;}}; A f(){return A();} int main(){A a=f();A b; b = a;}
+13:16 geordi:A::operator=(const A&)
+13:16 Zirx joined channel
+13:16 condy_:终于明白一些了。。。gcc不会把这些给优化掉了吧。。。
+13:21 code_new joined channel
+13:22 condy_:geordi: struct A{A(){} A(const A&){BARK;} }; A f(){return A();} int main(){A a=f(); A b=a;}
+13:22 geordi:warning: variable 'b' set but not used
+13:22 condy_:geordi: prepend -w
+13:22 geordi:A::A(const A&) A::A(const A&) A::A(const A&)
+13:23 condy_:geordi: show
+13:23 geordi:-w struct A{A(){} A(const A&){BARK;} }; A f(){return A();} int main(){A a=f(); A b=a;}
+13:25 condy_:geordi: append A(const A&&){BARK;} after A(){}
+13:25 geordi:A::A(const A&&) A::A(const A&&) A::A(const A&)
+13:26 condy_:geordi: show
+13:26 geordi:-w struct A{A(){}A(const A&&){BARK;} A(const A&){BARK;} }; A f(){return A();} int main(){A a=f(); A b=a;}
+13:44 lh_mouse:geordi, <<noexcept(memmove(0,0,0));
+13:44 geordi:warning: null argument where non-null required (argument 2)
+13:44 lh_mouse:geordi, prepend -w
+13:44 geordi:true
+13:55 whatofor joined channel
+14:1 zzzzzzzz joined channel
+14:6 whocares_2_ joined channel
+14:6 condy_ joined channel
+14:9 lh_mouse:geordi, <<is_trivially_copyable<volatile int>();
+14:9 geordi:error: 'is_trivially_copyable' was not declared in this scope
+14:10 lh_mouse:geordi, <<is_trivially_copyable<volatile int>::value;
+14:10 geordi:Same error.
+14:10 lh_mouse:geordi, prepend std:: before is
+14:10 geordi:error: 'is_trivially_copyable' is not a member of 'std'
+14:10 lh_mouse:geordi, replace std with boost
+14:10 geordi:error: 'is_trivially_copyable' is not a member of 'boost'
+14:25 lh_mouse:geordi, << sizeof(unique_ptr<int>);
+14:25 geordi:8
+14:25 lh_mouse:geordi, << sizeof(unique_ptr<int, void (*)()>);
+14:25 geordi:16
+14:26 lh_mouse:geordi, << sizeof(unique_ptr<int, function<void()>>);
+14:26 geordi:40
+15:2 cuihao joined channel
+15:14 code_new joined channel
+16:18 zzzzzzz joined channel
+16:34 cleamoon_ joined channel
+16:56 xxxxxxxx_:哈哈哈哈
+16:56 xxxxxxxx_:路人给力
+17:1 xxxxxxxx_:四五个强盗过来 正准备袭击的时候 五六个路人过来观光 然后顺路帮我防守了kb袭击
+17:3 T2 joined channel
+17:5 richselian joined channel
+18:20 boosure joined channel
+18:34 richselian:teng
+18:34 richselian:teng
+18:41 cuihao joined channel
+18:46 xxxxxxxx_:十四人口打我八人口.....
+18:59 iyzsong:0.0
+19:4 Plough joined channel
+19:12 hope1 joined channel
+19:18 cuihao_ joined channel
+19:24 Plough:http://imgsrc.baidu.com/forum/w%3D580/sign=6a84fba3718da9774e2f86238050f872/632762d0f703918f80f8055a533d269759eec470.jpg
+19:29 richselian:teng
+19:30 Zirconi joined channel
+19:31 hope1:疼的连字都打不出了？
+19:43 T2:hope1, 我TM给gfw跪了。
+19:43 hope1:怎么
+19:43 T2:真的是TM连字都打不出了。
+19:43 T2:求个ssh
+19:43 hope1:？
+19:43 hope1:你在干嘛
+19:44 T2:翻不了墙了。
+19:44 xxxxxxxx_:goagent?
+19:44 T2:就查下man什么的
+19:44 T2:xxxxxxxx_, 我得先翻出去才能用那个。
+19:44 T2:自举不能。
+19:44 hope1:反正我这能用
+19:45 xxxxxxxx_:https://github.com/goagent/goagent
+19:45 hope1:man到处都有，何必翻墙
+19:45 T2:我不是新装了系统么。
+19:45 xxxxxxxx_:github墙了?
+19:45 T2:hope1, 索引的东西打不开。
+19:45 hope1:community/goagent
+19:45 T2:google都打不开。
+19:45 xxxxxxxx_:我经常新装系统.
+19:45 hope1:打不开不一定是墙… 虽然google估计是
+19:45 T2:绝对是墙。
+19:46 T2:2333
+19:46 hope1:T2, arch?
+19:46 T2:嗯
+19:46 hope1:pacman -S goagent
+19:46 T2:ok
+19:47 T2:hope1, 主要我没有application
+19:48 *hope1 is away
+19:48 T2:然后我这儿注册那玩意的玩意被墙了。
+19:48 T2:2333
+19:49 xxxxxxxx_:@杀马特梯子
+19:51 xxxxxxxx_:http://puu.sh/93hmE.jpg 
+19:51 xxxxxxxx_:rimworld
+19:52 T2:好吧，goagent拖不下来也。
+19:52 T2:全都是404
+19:52 T2:算了先忍
+20:8 condy_ joined channel
+20:12 richselian:teng
+20:20 zzzzzzzz:buteng
+20:21 zzzzzzzz:可以用改hosts的办法试试？
+20:28 condy1 joined channel
+20:31 richselian:teng teng
+20:32 zzzzzzzz:→_→
+20:32 code_new joined channel
+20:33 condy1:→_→
+20:33 condy1:↑↑
+20:33 condy1:⇧_⇧
+20:41 richselian:teng
+20:47 T2:= =
+21:0 T2:O_CLOEXEC 表示不可执行是么？
+21:1 T2:好吧
+21:4 T2:只是执行后关闭。
+21:14 hope1 joined channel
+21:37 hope1 joined channel
+21:51 T2:改羊驼子的代码真的疼orz
+21:52 sismvg:驼峰？
+21:54 T2:sismvg, 揉程
+21:55 sismvg:你都改了多少天了
+21:56 T2:sismvg, 我肛接手的时候连TM信号量是什么+fork()怎么用都不知道卧槽。
+21:56 Plough:fork不是man一下就成了么
+21:56 T2:sismvg, 赶鸭子上架求不逗。
+21:56 *Plough 赶鸭子上架耍Perl
+21:57 T2:Plough, 我理解了半天，sigaction 至今没理解。
+21:57 Plough:我去man一下
+21:57 Plough:sig我也没玩过
+21:58 T2:Plough, 这会儿好歹知道各种锁文件pipe和epoll乱七八糟的玩意是干嘛的了。
+21:59 T2:还顺便科普了下上下文233
+22:0 Plough:T2: 刚才man signal了一下，似乎没啥不好理解的啊
+22:2 T2:Plough, 还没man那个。
+22:2 T2:Plough, 用到再说
+22:2 T2:Plough, 是sigaction
+22:2 Plough:T2: 在看
+22:3 Plough:T2: 似乎是用来注册信号处理器的？
+22:3 T2:Plough, 好像是。
+22:3 Plough:哪有啥不好理解的
+22:5 Plough:我觉得Signal有点像中断
+22:5 T2:本来就是软中断
+22:5 T2:概念我清楚
+22:5 T2:没用过
+22:5 Plough:那哪里不理解
+22:5 T2:没不理解就是没man
+22:6 Plough:……
+22:6 Plough:嘛
+22:9 T2:IO是挺疼的。
+22:11 Zirconi:啊，学校要我滚蛋了
+22:12 T2:Zirconi, ？
+22:12 T2:毕业？
+22:12 T2:烧！！
+22:14 Zirconi:答辩什么的完全形式主义了。。
+22:14 Zirconi:讲了五分钟拿个优
+22:17 T2:Zirconi, 去你妹吧，劳资读了四年的大二也没拿过优。
+22:17 T2:= =
+22:18 T2:没事，高中已经拿得蛋疼了。
+22:19 T2:连会考似乎都没有良。
+22:23 FrankHB joined channel
+22:26 iyzsong joined channel
+22:36 zzzzzzzz joined channel
+22:46 xxxxxxxx_:形式主义到底是啥?
+22:52 T2:xxxxxxxx_, 就是走个形式。
+22:55 T2:xxxxxxxx_, 羊驼子的码处处是坑。
+22:55 condy1:http://www.acfun.com/a/ac1196812 ....
+22:59 hope1:@ varna
+23:0 T2:hope1, 你叫他也没用
+23:0 T2:真的处处是坑。
+23:0 lh_mouse:geordi, { vector<int> v{ 1, 2, 3, 4, }; cout << v.size(); }
+23:0 geordi:4
+23:0 xxxxxxxx_:与外星人的对话
+23:0 hope1:T2, condy 的链接。
+23:1 T2:我估计改完怎么都得上千。
+23:1 T2:hope1, 你看死羊驼子就知道了。
+23:2 T2:hentai
+23:2 xxxxxxxx_:评论才是重点....
+23:2 iyzsong:- -
+23:2 xxxxxxxx_:谁有ac的账号快去转发个500条
+23:3 hope1:噗噗噗
+23:5 FrankHB:http://tieba.baidu.com/p/2416279403 。。。
+23:6 T2:xxxxxxxx_, 这战斗力比羊驼子差远了好吧。
+23:6 iyzsong:orz
+23:6 hope1:不过羊驼应该没有这些玩具吧？
+23:7 T2:hope1, 他有钱估计会先买瞄具。
+23:7 T2:xxxxxxxx_, 羊驼子可是真 FA师
+23:8 T2:“真 FA 师”
+23:8 T2:“看看这个揉程你就懂了。”
+23:9 T2:hope1, 保守估计行数要翻个一倍。
+23:9 hope1:跟我说干嘛...
+23:10 T2:“惨不忍睹啊卧槽。”
+23:12 xxxxxxxx_:所以说这个""是什么意思?
+23:13 T2:xxxxxxxx_, 着重号打不出来。
+23:13 iyzsong joined channel
+23:13 hope1:着重号？
+23:14 T2:hope1, 嗯
+23:14 T2:“我想把timer相关砍掉。”
+23:23 hope1:别用引号啊……
+23:25 zzzzzzzz:FA == Full Alchemist?
+23:39 T2:|我想把timer砍掉|
+23:39 T2:^ 这样可以了吧。
+23:40 T2:睡觉。

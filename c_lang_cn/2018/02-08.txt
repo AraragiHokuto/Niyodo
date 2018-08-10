@@ -1,0 +1,181 @@
+00:25 matchray: mmx原来当年也是有好处的。好像延迟和资源消耗比sse少
+00:51 matchray: github release tarball 不包含 git submodule，怎么解
+01:37 CyrusYzGTt quit:Ping timeout: 240 seconds
+01:49 CyrusYzGTt joined channel
+02:41 GoBzzzt quit:Ping timeout: 240 seconds
+02:41 GoBzzzt joined channel
+03:28 matchray: git name-rev --name-only HEAD; git symbolic-ref --short HEAD; git rev-parse --abbrev-ref HEAD
+03:40 cleamoon_ quit:Quit: Connection closed for inactivity
+04:31 hanjian_l: m a
+04:31 hanjian_l: matchray: matchray 呜
+04:33 matchray: awk -vRS='[' -F'\n' '$2{gsub("url = ","",$3); gsub("path = ","",$2); print "git clone "$3 $2}' .gitmodules
+04:34 hanjian_l: 快播CEO出来了
+04:35 hanjian_l: release包里真的应该有submodule吗
+04:35 matchray: 没有
+04:36 matchray: 有些人会去下载tarball 然后抱怨没有third_party https://github.com/cquery-project/cquery/issues/433
+04:36 hanjian_l: 如果需要这个，应该另外来一个release分支，而不是发布release
+04:36 hanjian_l: 或者docker！
+04:36 hanjian_l: 容器大法好！
+04:36 hanjian_l: 一步到位
+04:42 hanjian_l: matchray: 安装过程很讨厌，可以考虑提供一步到位的用具
+04:43 hanjian_l: “准ide”安装
+04:48 matchray: release分支放什麼
+04:48 matchray: 弄了release分支會導致 git clone 非 --single-branch 變慢
+05:18 hanjian_l: 应当clone single
+05:18 hanjian_l: 让用户确切的知道他们需要什么
+05:19 hanjian_l: release可以放docker file和makefile组合编译安装版本
+05:20 hanjian_l: 里面还有的sunmodule，依赖的so的源文件都该有
+05:20 hanjian_l: 尽量达到installer的效果
+06:30 hanjian_l: mr酱对于win vs code用户可以出传统的Windows msi捆绑包，直接大集成
+06:31 hanjian_l: “一键安装
+06:31 hanjian_l: ”
+06:57 hanjian_l: 那个用户也提及一个问题，configure没有检测rapidjson依赖
+07:02 matchray: Windows msi做不来啊
+07:02 matchray: 以及我没有mac osx和win
+07:02 matchray: release是github自动生成的，没有submodules
+07:02 matchray: 我不知道如何让source code不要出现
+08:30 Youmu quit:Quit: Connection closed for inactivity
+08:45 yonka joined channel
+08:49 yonka quit:Ping timeout: 240 seconds
+09:11 yonka joined channel
+09:16 yonka quit:Ping timeout: 260 seconds
+09:19 yonka joined channel
+09:24 yonka quit:Ping timeout: 256 seconds
+09:31 lh_mouse joined channel
+09:36 Stevearzh quit:Read error: Connection reset by peer
+09:38 Stevearzh joined channel
+09:42 yonka joined channel
+09:58 ksqsf joined channel
+10:06 L-ios quit:Quit: L-ios
+10:10 L-ios joined channel
+10:42 Youmu joined channel
+10:43 lh_mouse: geordi, -c { delete nullptr; }
+10:43 geordi: error: type 'nullptr_t' argument given to 'delete', expected pointer
+10:45 marc_pango joined channel
+10:51 L-ios quit:Ping timeout: 256 seconds
+11:10 L-ios joined channel
+11:24 marc_pango quit:
+11:30 hanjian_l: matchray: 不，我的意思是你开一个分支叫release，让用户自己git clone
+11:33 L-ios1 joined channel
+11:34 L-ios quit:Ping timeout: 240 seconds
+11:34 L-ios1 is now known as L-ios
+11:49 matchray: release裏有submodules?
+11:49 matchray: 有什麼不同
+11:57 hanjian_l: 你弄个makefile
+11:57 hanjian_l: makefile里写
+11:57 hanjian_l: git submodule init
+11:57 hanjian_l: git submodule add ssh://gitlab@gitlab.widget-inc.com:65422/consumers/go-sdk.git vendor/upsdk
+11:57 hanjian_l: 链接什么的名字什么的你自己改
+11:58 hanjian_l: git submodule的拉取当然只能是写在脚本里喽
+11:58 hanjian_l: 还是说我从头到尾没搞清楚那个issue伙计的需求？
+11:59 hanjian_l: 当然，也可以不伺候他们，“你们不会编译动态库？你们怎么不去用windows？"
+12:32 matchray: 你们喜欢用aggregate initialization吗
+12:36 matchray: hanjian_l: 有例子吗
+12:37 matchray: 写个wiki伺候他们 https://github.com/cquery-project/cquery/wiki/Build 
+13:04 matchray:   QueryFuncRef(QueryLocation loc, QueryFuncId id, SymbolRole role)
+13:04 matchray:     : loc(loc), id_(id), role(role) {}
+13:04 matchray: au CursorMoved call LanguageClient_textDocument_signatureHelp()
+13:04 matchray: 这行导致 Press enter to ...
+13:14 lh_mouse: [12:32:13] <matchray> 你们喜欢用aggregate initialization吗  // 当然啦。
+13:14 lh_mouse: 吼哇。
+13:15 matchray: 我司style 好像不鼓励aggregate initialization
+13:17 lh_mouse: 扩展不方便。
+13:17 lh_mouse: 以前窝也是那么想的。
+13:17 lh_mouse: 不过，隐式 value initialization 真的好用。
+13:18 matchray: 扩展？
+13:18 matchray: 因为顺序要求？
+13:18 lh_mouse: struct foo { unsigned a; std::string b; char c[10]; double d; };        void use(){ foo f = { 1 }; }
+13:18 lh_mouse: 对。
+13:18 matchray: 如果不考虑顺序要求的副作用呢？
+13:18 matchray: 如果不考虑顺序要求的缺点呢？
+13:19 matchray: 比 direct initialization 好？
+13:20 lh_mouse: 没啥缺点，该用就用。
+13:21 lh_mouse: matchray, https://github.com/lhmouse/poseidon/blob/master/src/singletons/epoll_daemon.cpp#L340
+13:21 matchray: 老鼠这么说，吾往矣
+13:22 matchray: 这些constructors我看着烦 https://github.com/cquery-project/cquery/blob/master/src/indexer.h#L96
+13:22 lh_mouse: 0.0
+13:22 lh_mouse: that's it.
+13:24 lh_mouse: having to write a constructor that initializes everything memberwise for every struct is both boring and terrifying.
+13:24 matchray: sure
+13:27 matchray: epoll 不就是你们昨天抨击的
+13:31 lh_mouse: It wasn't I that blamed epoll.  /w\
+13:32 matchray: C++11 aggregate initialization 不能用 no default member initializers，C++14 才可以
+13:32 matchray: 我有一个 scoped enum 成员。。
+13:34 lh_mouse: hmm, you just have to have the envisioned 'default' enumerator have a value of zero.
+13:35 lh_mouse: but if you want to have an integer with a default value of 42... you are out of luck.
+13:35 matchray: Let me read about zero initialization
+13:37 lh_mouse: in the case of aggregate initialization, members without initializers are value-initialized.
+13:38 matchray: scoped enum is a non-class type, and thus zero initialized?
+13:38 lh_mouse: For scalar types this is effectively zero-initialized. For class types with default constructors, the default constructors are called.
+13:38 matchray: during the value-initialization
+13:38 matchray: ?
+13:38 matchray: great
+13:38 lh_mouse: yes it is initialized to have a value of zero.
+13:39 matchray: struct QueryLocation { Range range; QueryFileId path; SymbolRole role; } // where SymbolRole is a scoped num
+13:39 matchray: Ok, i don't need to worry `role` sill be unspecified
+13:39 lh_mouse: See [dcl.init]-6.
+13:40 lh_mouse: In this case, an enumeration is initialized as if it were an integer of its underlying type.
+13:42 lh_mouse: 诶，窝发现自己词汇量真的不行。
+13:43 matchray: this example makes a lot of sense to me. C++ is awesome
+13:44 lh_mouse: Τήν ἀρχαῖαν ἑλληνικήν you read and ηύρες that this γλῶττα is very χαλεπή, because you did not εγίγνωσκον the λόγους ελληνικούς.Being κακοδαίμων, you έζητεις a άλλην ῥαδιέτερην γλῶτταν, and English εφαίνε good.  You οὖν read some ποιήματα in English, but not μάθων it well, you cannot εὖ καταλαμβ
+13:44 lh_mouse: άνειν them πάντως.
+13:44 lh_mouse: 作者：ICARUS
+13:44 lh_mouse: 链接：https://www.zhihu.com/question/29896121/answer/45969212
+13:44 lh_mouse: 来源：知乎
+13:44 lh_mouse: 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+13:45 lh_mouse: 窝傻傻分不清 awesome 和 awful 。  XD
+13:45 lh_mouse: awe-some   aw-ful 
+13:45 matchray: 我也不懂
+13:45 lh_mouse: ADJ An awesome person or thing is very impressive and often frightening. 
+13:46 lh_mouse: ADJ If you say that someone or something is awful, you dislike that person or thing or you think that they are not very good.
+14:29 lh_mouse: geordi, { auto && fn = get_fn(); cout <<TYPE<decltype(fn)>; } auto get_fn() -> int (&&)(const char *)  { return std::puts; }
+14:29 geordi: int (&)(const char*)
+14:43 L-ios quit:Ping timeout: 260 seconds
+14:43 L-ios1 joined channel
+14:45 L-ios1 is now known as L-ios
+14:51 L-ios1 joined channel
+14:52 L-ios quit:Ping timeout: 256 seconds
+14:52 L-ios1 is now known as L-ios
+15:11 ksqsf_ joined channel
+15:14 ksqsf quit:Ping timeout: 260 seconds
+15:14 condy quit:Ping timeout: 260 seconds
+15:16 condy joined channel
+18:01 mucsh joined channel
+18:02 mucsh: 分享个有趣的bug.同一款游戏，有两个不同的版本，A,B . 有一天版本B爆出玩家更新后会卡死10秒的问题。查了2天。
+18:03 mucsh: 查到想哭
+18:03 mucsh: 最后发现，是因为版本B有一段代码是链接到版本A的
+18:03 mucsh: 结果版本A上个月和渠道闹翻，停服了。
+18:03 mucsh: 这段代码就这么卡着了
+18:32 ksqsf_ quit:Remote host closed the connection
+18:47 mucsh quit:Quit: Page closed
+19:34 Youmu: 0.0
+19:34 Youmu: 现在还有 reference to function 了吗。。
+19:35 Youmu: geordi: { int (&fr)(const char*) = std::puts; }
+19:35 geordi: <no output>
+19:36 Youmu: geordi: { int (&fr)(const char*) = std::puts; fr("123"); }
+19:36 geordi: 123
+19:36 hanjian_l: 我来啦
+19:38 hanjian_l: 例子在公司代码库我明天上班找给你
+19:38 Youmu: geordi: use --2011
+19:38 geordi: 123
+19:38 Youmu: 0.0
+19:38 hanjian_l: ＠maskray
+19:39 hanjian_l: matchray: 
+19:43 hanjian_l: Aldrich: 突？
+19:43 Aldrich: 羊驼子呢
+19:44 hanjian_l: 在问
+19:44 hanjian_l: 0k他存个盘就来
+19:44 Aldrich: OK，稍等
+19:44 hanjian_l: P5找存盘点
+19:45 hanjian_l: （新买的手写笔用起来不错
+19:47 hanjian_l: 不过其实打字更快
+19:47 hanjian_l: 我日，1.8GiB更新，ETA30min
+19:48 * Aldrich 用 yoga 自带 wacom 笔
+19:55 \s quit:Quit: \s
+20:18 cleamoon_ joined channel
+21:59 Stevearzh quit:Quit: Quit...
+22:21 lh_mouse: http://news.ynet.com/2018/02/08/935781t70.html
+23:04 iyzsong joined channel
+23:10 condy quit:Ping timeout: 260 seconds
+23:11 condy joined channel
+23:31 lh_mouse quit:Ping timeout: 268 seconds

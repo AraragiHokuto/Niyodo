@@ -1,0 +1,598 @@
+00:02 Mokou: 握日
+00:02 Mokou: 我今天在1-5打没一万油弹……
+00:02 axmmisaka: 欧皇
+00:02 axmmisaka: 甘地
+00:04 Mokou: 肝个屁
+00:04 Mokou: 1-5打起来根本不累
+00:07 yimis joined channel
+00:09 axmmisaka quit:Quit: Leaving
+00:15 wchen quit:Quit: Leaving
+00:27 wolfpython quit:Remote host closed the connection
+00:49 lh_mouse quit:Read error: Connection reset by peer
+00:51 lh_mouse joined channel
+00:51 yimis quit:Quit: yimis
+00:59 lh_mouse quit:Read error: Connection reset by peer
+01:01 lh_mouse joined channel
+01:05 Mokou: 睡觉
+01:05 Mokou: 诸君武运
+01:05 Mokou quit:Quit: 睡觉
+01:08 condy quit:Ping timeout: 244 seconds
+01:11 condy joined channel
+01:21 wlemuel quit:Ping timeout: 252 seconds
+01:21 wlemuel_ quit:Ping timeout: 250 seconds
+01:57 yimis joined channel
+02:23 lh_mouse quit:Read error: Connection reset by peer
+02:27 yimis quit:Quit: yimis
+03:01 iyzsong quit:Remote host closed the connection
+05:06 yimis joined channel
+05:45 yimis quit:Quit: yimis
+06:24 wlemuel joined channel
+06:24 wlemuel_ joined channel
+08:07 hope1 joined channel
+08:29 cleamooon quit:Ping timeout: 260 seconds
+08:37 cleamooon joined channel
+09:40 varna joined channel
+09:45 varna: 我突然想起一个坑：accept这东西挂epoll上的时候，极限的恶劣情况会造成轮转
+09:46 varna: 有人会为accept失败后仍然半打开的连接预留fd么？
+09:47 hope1 quit:Ping timeout: 265 seconds
+09:49 varna: rebooting
+09:49 varna quit:Quit: leaving
+09:54 varna joined channel
+09:54 varna: (｡･ω･)
+10:10 endle joined channel
+10:20 iyzsong joined channel
+10:24 Mokou joined channel
+10:25 Mokou: 羊驼子冒出来了
+10:26 cleamooon: 羊驼子还活着
+10:27 varna: 今天给p7来一个大整容
+10:28 varna: 我稍微调了下rtl8192ce模块的设置，间歇性arp不那么凶了，不过还是有点残
+10:28 cleamooon: orz
+10:29 cleamooon: 话说，工作时是自己写东西多还是用别人的库多
+10:29 varna: 看场合
+10:29 varna: 不过多数要争取时间的时候都在搭积木就是了
+10:29 varna: 因为没人跟你讲究，工艺层面上的lowb也很多
+10:29 cleamooon: soga
+10:29 varna: 昨天我还听说一个骇人的故事
+10:30 iyzsong: _(:з」∠)_
+10:30 varna: 我旁边的哥们原来在某二手电器网商站做后端，他们的服务器内存用量飙升不降
+10:30 varna: 后来发现是一个逗比写了个缓存，然而没过期时间也没总数限制
+10:30 varna: 就那么一直缓存着
+10:31 iyzsong: 2333
+10:31 cleamooon: ........
+10:33 Mokou: 缓存这东西为啥不用现成的
+10:34 varna: 对象缓存
+10:34 Mokou: 没有泛型物？
+10:34 varna: 是泛型的
+10:34 varna: 不过我算是见识了Java那个粪泛型
+10:34 varna: 很多时候都在添乱
+10:35 Mokou: 昨天去1-5刷了一天
+10:35 Mokou: 结论：
+10:35 endle quit:Quit: Leaving
+10:35 Mokou: 1、必须一带五
+10:35 varna: 结论：五十铃很可爱啊
+10:35 Mokou: 2、不算省资源
+10:35 Mokou: 改二一个大潮消耗一万油弹二十三桶
+10:35 varna: 可以了
+10:35 varna: 4-3还要费一些
+10:35 Mokou: 比80级前的1-5还是差点
+10:36 varna: 1-5适合4-3疲劳恢复
+10:36 Mokou: 不过桶倒是比较省，毕竟miss了顶多也就扔一个
+10:36 Mokou: 啊，疲劳是不会恢复的
+10:36 cleamooon: 3-2多好
+10:36 varna: 是说提督疲劳和4-3陪练疲劳
+10:36 Mokou: 但是旗舰疲劳了炸不中人
+10:36 varna: 刷闪砸桶
+10:36 Mokou: 烧
+10:36 varna: 不虚，这是幼女
+10:36 varna: 为了幼女都值得
+10:36 Mokou: 不如直接1-5，还快
+10:37 Mokou: 我的建议是直接无限1-5算了
+10:37 varna: 昨天开了显卡2的post-human warrior, 感觉很健康
+10:37 varna: 至少没有imba的狩猎弓，有些场合是要强行现身突击的
+10:38 varna: 不过这系列游戏似乎在告诉我们一个道理：一个超人类战士，对付人类只需要打手枪
+10:38 iyzsong quit:Changing host
+10:38 iyzsong joined channel
+10:38 Mokou: 手 枪
+10:38 cleamooon: 弄了台二手电脑，以后我也是有8G内存的人了（然而并没有什么卵用
+10:38 * Mokou 16G
+10:38 cleamooon: orz
+10:39 Mokou: 贼船的DDR4 16G只需要六百大洋一条
+10:39 varna: 消音手枪开火不怎么费能量，摸好了位置爆头的话人类士兵都是随便杀的
+10:39 cleamooon: 只要orz
+10:39 Mokou: 过几天我换台式机的时候就打算这么来
+10:39 varna: 异形比较麻烦，得规划好战术；毕竟超人类战士只要当面吃一点火力就会health critical...
+10:39 Mokou: 只插一条16G，留出空间给以后升级
+10:40 varna: 可怕的壕
+10:40 cleamooon: 插一条64G的
+10:40 Mokou: 壕个屁
+10:40 Mokou: 这才3k
+10:41 varna: ^ 才3k
+10:41 Mokou: cleamooon: 你出钱我就插
+10:41 cleamooon: ^ 才3k
+10:41 Mokou: 你那本子比我机器贵
+10:41 cleamooon: <Mokou> cleamooon: 你出钱我就插X
+10:41 cleamooon: 我的本子3k
+10:41 Mokou: 3kUSD？
+10:41 Mokou: 真可怕
+10:41 cleamooon: 噗
+10:42 cleamooon: 果然壕和援交的都是用米元结算的
+10:43 Mokou: 不过显卡我打算先等等看
+10:43 Mokou: RX480非公迟迟不出，并不知道什么鬼
+10:44 cleamooon: 壕如黑旗弄两个980插上就好了
+10:45 Mokou: 那我为什么不弄两个480……
+10:45 Mokou: 980现在谁买谁二逼
+10:45 varna: 我昨天又被屁股天梯坑掉一分
+10:46 varna: 单排定级53已经成功掉到46
+10:46 Mokou: 噫
+10:46 cleamooon: 980都不行了？
+10:46 Mokou: cleamooon: 1060都干翻980了
+10:46 varna: 下个赛季我似乎该打完定级就停手继续单排快速比赛去
+10:46 cleamooon: 怎么那么多玩屁股的
+10:46 Mokou: 1060价格2k，980接近4k
+10:47 cleamooon: 然而我还在用610
+10:47 cleamooon: 噗
+10:47 Mokou: ……
+10:47 Mokou: 610啊
+10:47 Mokou: 拔掉显卡以提升性能
+10:47 cleamooon: 还是610M
+10:47 cleamooon: 23333
+10:47 varna: 现在挺难找到不三俗的竞技FPS了，鬼服太多
+10:47 Mokou: 拆掉dGPU以提升性能
+10:47 cleamooon: 确实，610和intel的区别差不多2倍，如果不出现bug的话
+10:47 Mokou: TF2还有人玩么
+10:48 varna: TF2估计没人了，玩家群都被屁股抢走
+10:48 Mokou: 那玩意现在倒是免费了
+10:48 cleamooon: TF》
+10:48 cleamooon: ？
+10:48 Mokou: 或者说老早之前就免费了……
+10:48 Mokou: 军团要塞2
+10:48 varna: 基本上屁股就是简易化的TF2
+10:48 Mokou: 阀门的FPS之一，注重协作
+10:49 varna: 强调的地方是坑队友和屁股
+10:49 cleamooon: .........
+10:49 Mokou: 我看到PIGU的时候第一反应“这不是TF2么”……
+10:49 varna: +
+10:50 varna: 我纯粹是因为打的人多去玩的，鬼服游戏比较麻烦
+10:50 cleamooon: 我现在的主要娱乐除了撸就是桥林了
+10:50 varna: 剩下来的不是挂就是真鬼畜
+10:50 varna: 显卡3似乎就这个状况
+10:50 Mokou: 哦对了
+10:50 Mokou: 前几天小粉红开挂在PMG里把靖国神社打下来了
+10:51 cleamooon: 我在想，以后屁股会不会加入地图编辑器
+10:51 Mokou: 威 名 远 扬
+10:51 varna: ...
+10:51 varna: 屁股不会的，竞技游戏对地图平衡性有严格要求
+10:51 varna: 目前还处于比较失衡的状态
+10:51 Mokou: +
+10:51 varna: 或者说对团队合作要求很高，执行力不足就容易山崩
+10:52 Mokou: Portal2倒是自带一个傻瓜地图编辑器
+10:52 varna: 然而多数时候地图劣势一方的执行力都……那感觉就像11上打刀塔被甩进天灾，三路一起崩
+10:52 Mokou: 因为那玩意显然不是竞技向
+10:52 Mokou: 大锤全场最佳系列
+10:53 cleamooon: 不一定要是竞技向吧
+10:53 cleamooon: 可以改成娱 乐 向
+10:53 varna: 全场最佳仍然是个笑话
+10:53 varna: 这种游戏娱乐向就会变成骂街向的
+10:53 varna: 太容易崩盘了
+10:53 Mokou: 除非开黑？
+10:53 cleamooon: 多好
+10:53 varna: 但路人很多不讲究配合，只认套路
+10:53 cleamooon: 比如改成足球游戏
+10:54 hope1 joined channel
+10:54 varna: 之前花村进攻B点，我手76跟一大锤冲进去被交叉火力，大锤死了还在语音里怪我
+10:54 varna: 光知道套路，脑子都不转转
+10:55 Mokou: 亚服wows还有我走直线被队友雷死然后被大骂呢
+10:55 cleamooon: 没问候全家已经很有素质了
+10:55 Mokou: 去你大爷的离我3km防雷我躲个JB
+10:55 Mokou: 放雷*
+10:55 varna: 昨天还有一个神指挥
+10:55 Mokou: 总之呜十铃大胜利
+10:56 Mokou: 昨天我呜十铃直接怒飙31级
+10:56 varna: 「76注意后面」「76盯一下死神」「76重点关注法鸡」
+10:56 Mokou: 2333333333
+10:56 varna: 我感觉那个76很憋屈啊，尤其这次武器准头被nerf了
+10:56 cleamooon: 如果是dota，这个时候把对话一关，去送20次人头，完成
+10:56 Mokou: 掉胜率吧
+10:57 varna: 这种游戏别跟胜率过不去，单排匹配会很麻烦的
+10:57 varna: 输赢各半就可以了
+10:58 varna: 总体来说屁股还是开黑比较好
+10:58 Mokou: 我觉得团队协作游戏都是开黑比较好……
+10:58 varna: 不然崩盘之后容易组织不起攻势，大家分头送
+10:59 varna: 刀塔还凑合，不过也是后来路人水平上升了
+11:00 Mokou: Iowa的立绘看着真是各种不爽……
+11:01 varna: 哪天我回快速比赛练练tracer...好歹也要用一个招牌屁股
+11:01 Mokou: 南海这事情一出社交网络真是各种喜感
+11:01 hope1 quit:Ping timeout: 265 seconds
+11:01 varna: 小将又冒出来了？
+11:02 Mokou: 铺天盖地
+11:02 cleamooon: 今天重新打开了舰娘，然后没动力任何肝了
+11:02 Mokou: 前几天二三线城市和杭州不还抵制KFC么
+11:02 varna: 我就知道最近杭州一直坚持39度不动摇
+11:02 cleamooon: 不是只是唐山抵制吗
+11:02 Mokou: 碍国倒无所谓，不过为什么神仙打架在他们眼里跟街边小混混斗殴一样……
+11:03 cleamooon: 我就知道帝都又能坐在家里看瀑布了
+11:03 varna: 我还受得了，然而我的显卡可能有点压力，所以最后还是找人把空调修了
+11:03 Mokou: 你需要水冷底座
+11:03 cleamooon: 让显卡喝一杯就好了
+11:03 varna: 现在还可以了，最高也就77度
+11:03 Mokou: 岛城这几天各种闷
+11:03 Mokou: 我半夜写程序都出一身汗
+11:04 varna: 你那是把妹出的前〇腺液
+11:04 cleamooon: 不开电扇？
+11:04 Mokou: 并没有妹
+11:04 Mokou: 开了，卵
+11:04 cleamooon: orz
+11:04 cleamooon: 你果然是高〇了
+11:04 Mokou: 晚上我房间最凉快的地方三十度
+11:05 varna: 你抽一口马三角
+11:05 varna: 7.6的专辑不错的
+11:05 Mokou: 等会我试试
+11:05 varna: 《AXIA/爱恨交加》、《我们的战场》都有收录
+11:05 Mokou: 虽说我最近写程序的时候用的BGM是键盘敲击声……
+11:06 Mokou: MX 2.0的敲击声听起来还是很爽的
+11:06 varna: 这旗喜欢听啪啪的撞击声，现充真可怕
+11:06 Mokou: 说起来你在阿里用什么写的程序，自带本子还是？
+11:07 varna: 大公司都会发工作用品
+11:07 varna: 员工有保管和保密义务
+11:07 Mokou: _(:з」∠)_
+11:07 varna: 入职之前问我要mac还是windoze, 我想了想就要了后者
+11:08 varna: 于是给我发了个斑驳的TP
+11:08 Mokou: ……
+11:08 Mokou: 斑驳的什么鬼
+11:08 Mokou: N手么
+11:08 cleamooon: why noy mac
+11:08 varna: 字面意思，电源灯都坏了
+11:08 Mokou: ……
+11:08 varna: 因为我憎恨mac
+11:09 Mokou: 你说你要装Gentoo，要求一个W系列
+11:09 Mokou: 咦我哪来这么多三式水听
+11:10 varna: 你居然养小卷
+11:10 cleamooon: 你说帮公司开发游戏，要个外星人
+11:10 Mokou: 没，昨天我就改了一只
+11:10 Mokou: 你说帮公司研究未来的发展方向，要求一台量子计算机当PC
+11:10 varna: “就改了一只”
+11:11 Mokou: 噗
+11:11 varna: 我还记得之前顶级赛的时候遇到马云三战皆北的事情，没被扣工资已经很好了
+11:11 Mokou: 16个……
+11:11 varna: 定级*
+11:11 Mokou: 爆雷才7个
+11:11 Mokou: 谁改二给爆雷来着
+11:11 varna: 马总说打赢就给我加5k工资
+11:11 Mokou: 改*
+11:11 varna: 五十铃
+11:11 Mokou: 只有呜十铃？
+11:11 varna: 爆雷不记得了，估计某霜
+11:12 Mokou: 朝潮还剩1028场
+11:12 Mokou: 练个JB系列
+11:12 cleamooon: 然后公司给了一台最多能分解15的量子计算机
+11:12 varna: 你要相信朝潮
+11:12 varna: 我看看我之前那位搬砖搬到多少了……
+11:12 Mokou: 我没资源
+11:13 varna: Lv73
+11:13 Mokou: 昨天那一万油弹对应480场
+11:13 Mokou: 婚天津风需要2155场
+11:14 Mokou: 婚个屁啊等死吧……
+11:14 varna: 4-3吧，挺住
+11:14 Mokou: 啊事故了
+11:14 varna: 我还记得14年七月，我肝得息子都白了
+11:14 Mokou: 1-5事故率还是不低
+11:14 Mokou: 4-3打起来太窝火
+11:14 Mokou: 而且慢
+11:15 Mokou: 全婚联合舰队遥遥无期
+11:15 varna: 最近藤川的画作似乎又进步些，希望以后能画出更好的大淀
+11:15 Mokou: 算了我不屯资源了
+11:15 cleamooon: 话说，wfz之前是职业选手吗？
+11:15 Mokou: 反正低保打个中规模应该没问题
+11:16 Mokou: 打咸还要资源？
+11:16 varna: wfz不知道
+11:17 cleamooon: 没名吗？感觉现在还挺有名的
+11:17 varna: 田中又拿海外舰钓人，我觉得我删号是对的
+11:17 Mokou: 是敌舰就拆
+11:17 varna: 以前没印象有这id, 估计不很出名但基础可以
+11:17 cleamooon: 什么时候加入辽宁号
+11:17 Mokou: Iowa那英语我至今都印象深刻
+11:18 varna: 我国凤翔桑是不可能的
+11:18 Mokou: 说起来现在有多少人意识到航妈是在敌舰舰炮射程以外动作的
+11:19 Mokou: 我总感觉各种游戏都在灌输相反的观点……
+11:19 varna: 遛尕、哇噶敵喔……
+11:19 cleamooon: 话说电磁炮普及之后会不会又回到大舰巨炮时代
+11:19 Mokou: @110 有人吸毒
+11:19 varna: 不会
+11:20 varna: 大舰巨炮是这样一个时代：火力投送效率低下，协同作战困难，数据链路不畅通，作战半径有限
+11:20 varna: 现代战争还是希望更精确地协调投送强大火力吧
+11:21 Mokou: 想想以前在3-2练个大凤都嫌累的我
+11:22 varna: 突然发现一个问题
+11:22 Mokou: 垃圾田中毁我青春
+11:22 varna: cod:mw系列是一个+1s系列
+11:22 cleamooon: 说起投送，关公说事里那个眼镜侦探的事务所里有一个飘柔用多了的在电脑打字的女人，她，能瞬移......
+11:22 varna: 里面各种赛艇，而且最后TF141的命都续到了一两个elder身上
+11:22 Mokou: uccu
+11:23 varna: 总设计师麦克米兰和长者钱队
+11:23 cleamooon: 法师kaodao
+11:23 Mokou: 所以我的吧主申请为什么还没被驳回
+11:23 cleamooon: 法师看到什么都膜
+11:23 varna: BO系列我就不膜
+11:23 varna: MW系列实在很直白
+11:26 Mokou: 60楼. 小明买了一个RX 480，高高兴兴的回家，结果过桥时手滑，显卡掉到了河里，小明哇哇大哭。不一会儿，上来一个老人，自称是河神，拿着一个Fury X和一个R9 390X问：“小朋友，哪个是你的啊？”小明摇了摇头：“都不是，我的是RX 
+11:26 Mokou: 480”河神笑了：“真是个诚实的孩子，这两个烤火炉你也一并拿去吧。”小明回村后给村里人讲了这件事，小华听了非常眼红，就拿了一块GTX1080跑到桥上，假装摔了一跤“噗通！”。只听一声巨响，湖中泛起蓝光，一朵蘑菇云升起，河水一滴不剩，隐约看见河神的骨灰……
+11:30 Mokou: http://ww4.sinaimg.cn/mw690/6325111dgw1f64q8zuwl3j20qo0zk11o.jpg 上海龙阳路地铁站
+11:30 Mokou: 上海已绿
+11:30 varna: SUNSHINE!
+11:31 Mokou: 总感觉上海警方现在威望已经掉到0了
+11:33 cleamooon: 这很清真
+11:36 varna: 有人看最新的小姐姐么？
+11:36 Mokou: 水团没看
+11:36 Mokou: 我听到的评价是太套路了
+11:37 varna: 有没有色色的福利？
+11:37 Mokou: 不知道
+11:37 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=4eb2267cc095d143da76e42b43f08296/869729160924ab189b3e2b483dfae6cd7a890b93.jpg ...
+11:38 Mokou: http://www.bilibili.com/video/av5371126/ 我才发现这个的作者和之前那个康熙鬼畜的作者是同一个……
+11:49 varna: 说起来应该找个时间去ZJU紫金港校区转转
+11:49 varna: lhj说那里妹子多
+11:50 cleamooon: orz
+11:52 varna: 我看看屑站有没有新款小姐姐动画
+11:53 varna: 有！
+11:53 Mokou: 关弹幕
+11:53 Mokou: 大坨缪斯林
+11:54 varna: 就是来看缪斯林的
+11:54 Mokou: 噫
+11:54 Mokou: 口味清奇
+11:54 varna: 第一话作画好平凡？
+11:55 Mokou: 优酷上的大萌1566清晰度好惨
+11:56 varna: 这次不知道有没有我出场咧？
+11:58 varna: 噫，第一话上来就有素人海报
+12:03 varna: 果然是套路
+12:04 varna: 而且还有赛艇
+12:07 varna: 这简直就是把缪斯按生理特征拆开之后随机重组的……
+12:21 varna: puuuu, 最后还加播官方广告
+12:21 varna: 太节操了这个
+12:36 varna: http://www.bilibili.com/video/av5465011/ 守望先锋/双龙 三俗注意
+12:51 yimis joined channel
+12:57 Youmu joined channel
+13:03 yimis quit:Remote host closed the connection
+13:04 yimis joined channel
+13:20 condy quit:Ping timeout: 244 seconds
+13:21 condy joined channel
+13:29 l0nGYear_BOT joined channel
+13:32 cleamooon quit:Ping timeout: 260 seconds
+13:38 yimis quit:Quit: yimis
+14:09 iyzsong quit:Ping timeout: 276 seconds
+14:11 iyzsong joined channel
+14:53 yimis joined channel
+15:03 lh_mouse joined channel
+15:06 wlemuel_ quit:Ping timeout: 244 seconds
+15:07 wlemuel_ joined channel
+15:09 Mokou: http://ww1.sinaimg.cn/mw690/6dd57921jw1f64zrkhvxgj20zk140gzm.jpg 强行绝对领域
+15:10 yimis quit:Quit: yimis
+15:11 Mokou: http://ww3.sinaimg.cn/mw690/6285b398gw1f64uxofw5uj20dr0dvq5n.jpg
+15:18 condy quit:Ping timeout: 244 seconds
+15:20 lh_mouse quit:Read error: Connection reset by peer
+15:21 lh_mouse joined channel
+15:22 condy joined channel
+15:27 Youmu quit:Quit: Connection closed for inactivity
+15:32 condy quit:Quit: Airi
+15:33 condy joined channel
+15:43 cleamooon joined channel
+16:00 slowcoach joined channel
+16:11 yimis joined channel
+16:13 Xhumin joined channel
+16:28 Xhumin quit:Quit: Xhumin
+16:37 lh_mouse: http://t.cn/Rt2bFQO
+16:37 yimis quit:Quit: yimis
+16:43 Taggnostr joined channel
+16:46 lh_mouse: http://t.cn/RtyfryV
+16:57 lh_mouse quit:Read error: Connection reset by peer
+17:04 Mokou: 出去趟
+17:07 lh_mouse joined channel
+17:19 lhanjian: varna: 确实妹子多哦
+17:20 varna: 哦瘊瘊
+17:20 lhanjian: 羊驼子出来啦～
+17:20 varna: 下周，今天我在给一些代码整容
+17:20 lh_mouse: varna, http://github.lhmouse.com/
+17:20 lh_mouse: QAQ
+17:22 iyzsong: _(:з」∠)_
+17:22 iyzsong: it's not only XXX 有 XXX = true 的意思吧
+17:23 varna: being pedantic and misanthropic?
+17:23 lhanjian: 小耗的个人主页（这么讲应该没错吧）这么快就更新到这样了
+17:23 lh_mouse: iyzsong, 对。
+17:23 lh_mouse: varna, ?
+17:23 lh_mouse: 吱吱吱。
+17:23 varna: 我倒觉得吱是being practical
+17:23 lh_mouse: XD
+17:24 lh_mouse: na, 自嘲。
+17:24 varna: 毕竟多数议题——如同标题所说——是C艹 stuff
+17:24 varna: 语言靠边站，focus on C艹 & its usage
+17:26 varna: 今天还看到C语言吧有人胡帖单子，我想了想还是去宣传endofunctor了
+17:26 * varna is pedantic
+17:30 Mokou: 【监控视频：野生动物园老虎袭人致1死1伤】昨天下午，几名游客自驾进北京八达岭野生动物园，一女性中途下车，被身后一老虎拖走，随后同车两人追上去也被老虎攻击。事件造成1死1伤。据了解，当事游客签订过相关责任书，其中明确规定自驾入园要锁好车门窗，严禁下车。目前动物园暂停营业。
+17:30 iyzsong: orz
+17:31 Mokou: http://ww2.sinaimg.cn/mw690/9e6b7fdbjw1f64s7pfabfj20zk0u00wz.jpg
+17:33 cleamooon: 我都不知道帝都还有野生动物园
+17:33 varna: 说起来我要是写小耗那样的主页，估计在上面摆上一句Yet Another Perlmonk就足够了……
+17:34 Mokou: The only alpako
+17:34 Mokou: 女装羊驼很少见的
+17:34 varna: 是alpacius
+17:35 Mokou: 是alpako
+17:35 varna: 羊驼夫子
+17:35 Mokou: 百家早就飞了，你又不是儒学大湿
+17:35 Mokou: 也不清真
+17:36 varna: 我看小姐姐
+17:36 Mokou: 你不缪斯林
+17:36 varna: 小姐姐中出了一个素人
+17:38 varna: (｡･ω･)下周日不加班的话就去找lhj, 紫金港看妹子去
+17:38 varna: lhanjian: ^
+17:38 lhanjian: good
+17:38 lhanjian: OK
+17:38 varna: OK, 之后联系
+17:39 lhanjian: 嗯
+17:39 Mokou: lhanjian: 记得给羊驼子准备一套jk制服
+17:39 varna: 这旗没救了
+17:39 lhanjian: 想起来我还真有一套女装，自己没穿的
+17:40 Mokou: (｡･ω･)你们俩合出一个
+17:40 Mokou: http://picpaste.com/uUMMKlS9.gif
+17:40 Mokou: ^墨菲定律
+17:40 lh_mouse: 这天太热。
+17:40 lh_mouse: varna, 十一去哪玩。
+17:41 varna: 十一不知道咧，去上海玩也不错
+17:41 varna: 九月份G20估计还有点假期
+17:41 Mokou: 我倒是在考虑从香港考试回来以后直接从妖都一路北上玩一圈
+17:41 varna: 我看到北上了
+17:42 Mokou: 没救了
+17:42 lh_mouse: 现充旗。
+17:42 lh_mouse: Mokou, 爆。
+17:42 Mokou: 我没妹子。
+17:42 Mokou: lh_mouse: 虎揉
+17:42 Mokou: http://ww4.sinaimg.cn/mw690/dc183f59jw1f63w04t1vej20g40lhq4g.jpg 你都有哪些意舰
+17:42 varna: 六点钟出去理发
+17:43 varna: 这鬼天，还39度
+17:43 Mokou: 今天岛城超级闷
+17:43 varna: 而且谁说杭州美女多啊！
+17:43 Mokou: 怪不得鞑清皇帝都去承德……
+17:43 varna: 我多摩在大内就没看见几个……
+17:47 Mokou: 咦
+17:47 Mokou: LIfe is strange第一章免费了
+17:47 Mokou: 立即够买
+17:47 Mokou: 购买*
+18:20 varna quit:Read error: Connection reset by peer
+18:27 AutoGavy joined channel
+18:28 AutoGavy: 看我的nicknane
+18:28 AutoGavy: 看我的nickname
+18:28 AutoGavy: 是register过的！！！！
+18:29 lh_mouse: 卵用。
+18:29 lh_mouse: AutoGavy, 爆。
+18:30 AutoGavy: ⇐ AutoGavy quit (uid162610@gateway/web/irccloud.com/x-fkwbsyykwnkkvxgm) Quit: Connection closed for inactivity
+18:31 lh_mouse: AutoGavy, 爆。
+18:31 AutoGavy: 不给爆
+18:31 lh_mouse: AutoGavy, 快把裤子脱了。
+18:32 AutoGavy: 脱了妳妳也看不见
+18:32 iyzsong: 又要上班啦 (┙>∧<)┙へ┻┻
+18:35 hope1 joined channel
+18:35 iyzsong: hope1: 觉酱晚上好 (｢・ω・)｢
+18:39 hope1 quit:Ping timeout: 240 seconds
+18:41 tonymiaofa joined channel
+18:43 l0nGYear_BOT quit:Quit: Konversation terminated!
+18:45 cleamooon: https://www.zhihu.com/question/48412358/answer/112028505
+18:46 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/vh/y7_480205.jpg@596w_1l.jpg
+19:04 lh_mouse: http://v.youku.com/v_show/id_XMjUxODY3ODcy.html
+19:04 lh_mouse: 哦昨天发过了。
+19:06 tonymiaofa quit:Quit: leaving
+19:13 lh_mouse: http://v.youku.com/v_show/id_XNjM3NzQzMzQ4.html
+19:28 l0nGYear joined channel
+19:46 varna joined channel
+19:47 varna: 把频道换到13看看能不能少点噪音
+19:47 varna: 另外杭州这边理发居然还只是￥15
+19:47 lh_mouse: 您查询的IP:125.120.225.127
+19:47 lh_mouse: 本站数据：浙江省杭州市 电信
+19:47 varna: 果然滨江这种鬼地方才刚开始涨
+19:52 Kresnt joined channel
+19:52 varna: (｡･ω･)ﾉ似乎来新人了
+19:59 lh_mouse: varna, 装好 Windows 没。
+19:59 varna: lh_mouse: 之前试了，失败了；联想提供的win7驱动是一堆粪
+19:59 lh_mouse: 0 0
+20:00 lh_mouse: 叫你买联想……
+20:00 varna: 以后买联想只弄便宜的玩意儿
+20:00 varna: 倒不是不能用，但升级也好维护也好都是一堆傻逼
+20:01 varna: 公司那个斑驳的TP倒是win7顺畅，然而毕竟是公司的东西
+20:01 varna: 以后买那款式或者类似的应该ok
+20:03 lhanjian: 阿里的那个本子就是tp x1 carbon吧
+20:04 varna: 似乎是
+20:04 varna: 发给我的时候里面还有一个附赠的白芝麻
+20:04 Mokou: x1 carbon？
+20:04 Mokou: 那玩意不是出了名的耐艹么……
+20:04 varna: 薄薄的一个本，上面都是划痕，电源灯和硬盘灯（？）都废了
+20:05 Mokou: ……
+20:05 Mokou: 666666
+20:05 varna: 不过那种本子我还满中意的
+20:05 Mokou: 我看那玩意的评价，他们说如果你平时经常上战场的话推荐入一个
+20:05 Mokou: 关键时刻可以扔出去当手雷防身
+20:05 iyzsong: 2333
+20:05 Mokou: 我之前考虑过入carbon，不过后来还是决定换yoga
+20:06 varna: (｡･ω･)我就喜欢这种战场向的东西
+20:06 Mokou: 那东西看起来挺攒的
+20:06 Mokou: 赞*
+20:06 varna: 简单粗陋耐操
+20:06 Mokou: 所以我很好奇那本子以前经历了什么……
+20:06 varna: 至少经历了一个汉堡
+20:06 Mokou: 233333
+20:07 varna: 滨江这边麦乐送很快的，没几站地方就有麦记
+20:07 Mokou: BGK呢
+20:07 varna: 没
+20:07 Mokou: ……
+20:07 Mokou: 哦对了，之前有人在BGK吉大店吃薯条吃出了虫子
+20:07 varna: 园区里有个星法克，不过我都买饮料机里的便宜咖啡
+20:07 varna: 虫子而已，把它吃了，继续
+20:08 Mokou: 后来他去算账，那帮人找了个经理过来，对他一通威胁
+20:08 Mokou: 中间还透露出他们人肉了他，直到他是大三的
+20:08 Mokou: 完美的危机公关直接搞了个大性闻
+20:08 Mokou: 知道*
+20:09 lhanjian: 我记得x1 carbon是很轻薄的
+20:09 varna: 这些二逼
+20:09 varna: 是很轻薄
+20:09 varna: 看着很可爱的一个本子
+20:09 Mokou: +
+20:09 Mokou: 不过你那个carbon是不是2016款？
+20:09 Mokou: 还是早一些的版本
+20:09 lhanjian: 阿里的那个应该是15年版
+20:09 varna: 不知道，懒得拿出来看了
+20:10 varna: 应该是旧货
+20:10 Mokou: _(:з」∠)_
+20:10 Mokou: 16款我记得有NVMe SSD
+20:10 lhanjian: 有些批评，有些批次质量不太过硬
+20:10 lhanjian: 阿里那个
+20:11 varna: 用用再说
+20:11 lhanjian: 不过主要是辣鸡厂意外地通过了我给老本子申请的补贴，于是就不用买新本子
+20:12 Kresnt quit:Remote host closed the connection
+20:29 lh_mouse: lhanjian, 现在在哪里高就。
+20:30 lhanjian: lh_mouse: upyun.com
+20:30 lhanjian: 杭州
+20:30 lh_mouse: 0.0
+20:31 lhanjian: =.=
+20:36 hope1 joined channel
+20:37 whocares_2 quit:Ping timeout: 264 seconds
+20:40 hope1 quit:Ping timeout: 240 seconds
+20:42 whocares_2 joined channel
+20:45 Mokou: 噗
+20:45 Mokou: 情怀厂是又拍云？
+20:49 lh_mouse: 情怀厂？
+20:52 AutoGavy quit:Quit: Connection closed for inactivity
+21:19 l0nGYear quit:Ping timeout: 264 seconds
+21:19 l0nGYear joined channel
+21:27 Mokou quit:Ping timeout: 250 seconds
+21:27 Mokou joined channel
+21:37 AutoGavy joined channel
+21:38 condy quit:Ping timeout: 244 seconds
+21:40 condy joined channel
+21:43 hope1 joined channel
+21:47 CyrusYzGTt joined channel
+21:48 hope1 quit:Ping timeout: 276 seconds
+22:02 lhanjian: Mokou: ？好像羊驼子这么说过来着
+22:02 \f: 好厉害
+22:03 Mokou: 之前我考虑过要不要给学派上个又拍云来着……
+22:05 lhanjian: Mokou: 境外网站不要考虑，体验很差
+22:05 Mokou: 是考虑到这个问题，其二现在学派用不上
+22:05 lhanjian: 但是拿来存图片等相对独立的静态文件倒还不错的
+22:06 lhanjian: 尤其管理工具很有趣
+22:06 lh_mouse: CDN ?
+22:06 lhanjian: https://github.com/polym/upx
+22:06 lhanjian: lh_mouse: +
+22:06 lh_mouse: 这么点 pv 上毛的 CDN……
+22:06 Mokou: 就是考虑到这个
+22:06 lh_mouse: 八八年看不到活人。、
+22:06 lh_mouse: s/八/百/2
+22:26 Mokou: （轉）中国这两天成功的完成了两件大事：北方实现了南水北调，南方实现了集中供热。。。
+22:27 cleamooon: 什么时候搞个西气东输
+22:29 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+22:31 cleamooon: 俄罗斯田径之前被判定不能参加里约奥运会， 而现在又传来更惊人的消息，据《每日邮报》报道，国际奥林匹克委员会准备对整个俄罗斯代表团实行禁赛，代表团387名运动员将无法出战里约奥运会。这场争论涉及到俄罗斯总统普京的体育部发放类固醇混合物以及在2012年伦敦奥运会前掩盖污染的尿液样本。
+22:35 wlemuel_ quit:Ping timeout: 258 seconds
+22:35 wlemuel quit:Ping timeout: 258 seconds
+22:35 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/vj/vk_160465.jpg@596w_1l.jpg
+22:38 cleamooon: https://www.zhihu.com/question/48039845
+22:46 varna quit:Quit: leaving
+23:21 yimis joined channel
+23:49 lh_mouse: geordi, << TYPE_DESC(a); bool (*const (a[]))(void);
+23:49 geordi: error: uninitialized const 'a'
+23:50 lh_mouse: geordi, << TYPE_DESC(a); bool (*const (a[]))(void) = { };
+23:50 geordi: error: zero-size array 'a'
+23:50 lh_mouse: geordi, << TYPE_DESC(a); bool (*const (a[]))(void) = { 0 };
+23:50 geordi: lvalue array of 1 constant pointer to a nullary function returning a boolean
+23:53 l0nGYear quit:Quit: Konversation terminated!

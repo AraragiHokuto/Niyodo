@@ -1,0 +1,608 @@
+00:04 lolisa joined channel
+00:07 WaterA quit:Quit: 睡觉
+00:12 cleamoon quit:Remote host closed the connection
+00:13 cleamoon joined channel
+00:14 lh_cat quit:Quit: Connection closed for inactivity
+00:31 izmntuk quit:Ping timeout: 244 seconds
+00:34 izmntuk joined channel
+00:38 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150420225811]
+01:18 geordi quit:Remote host closed the connection
+01:19 geordi joined channel
+01:24 Matsune quit:Read error: Connection reset by peer
+01:27 izmntuk quit:Remote host closed the connection
+01:35 lh_mouse: geordi, << strcmp("a", "\xFF");
+01:35 geordi: -1
+01:42 izmntuk joined channel
+01:45 lh_mouse: geordi, --version
+01:45 geordi: g++ (GCC) 6.0.0 20150506 (experimental)
+01:47 izmntuk quit:Client Quit
+01:57 lh_mouse quit:Read error: Connection reset by peer
+02:05 xxxxxxxx quit:Quit: Leaving...
+02:28 OO_after quit:Ping timeout: 244 seconds
+02:30 OO_after joined channel
+03:57 cleamoon quit:Ping timeout: 256 seconds
+03:58 cleamoon joined channel
+04:28 cleamoon quit:Ping timeout: 244 seconds
+04:30 cleamoon joined channel
+04:45 boosure joined channel
+06:10 lolisa quit:Ping timeout: 245 seconds
+06:10 FrankHB quit:Ping timeout: 272 seconds
+06:11 lolisa joined channel
+08:52 lhjkkk joined channel
+08:53 lhjkkk quit:Client Quit
+09:03 lh_mouse joined channel
+09:07 lhjkk quit:Remote host closed the connection
+09:08 lhjkk joined channel
+09:36 Xilzzerts joined channel
+09:36 cleamoon__ quit:Read error: Connection reset by peer
+09:37 cleamoon__ joined channel
+09:38 cleamoon quit:Ping timeout: 244 seconds
+09:39 cleamoon joined channel
+09:46 lhjkk quit:Remote host closed the connection
+09:47 lhjkk joined channel
+09:59 varna joined channel
+10:01 varna: 19:28 hope1: 我准备看这个昆雅语教程 http://folk.uib.no/hnohf/qcourse.htm
+10:02 varna: 昆雅语以前我看过一点，不过全忘光了……
+10:04 lhjkk quit:Remote host closed the connection
+10:06 lh_cat joined channel
+10:09 lh_mouse quit:Ping timeout: 245 seconds
+10:11 lhjkk joined channel
+10:12 lhjkk quit:Remote host closed the connection
+10:13 lhjkk joined channel
+10:14 lhjkk quit:Remote host closed the connection
+10:16 lhjkk joined channel
+10:29 lhjkk quit:Remote host closed the connection
+10:31 lhjkk joined channel
+10:55 lh_cat quit:Read error: Connection timed out
+10:57 lh_cat joined channel
+11:14 lh_not_bot: lhjkk: ?
+11:15 lh_cat quit:Read error: Connection timed out
+11:15 lh_not_bot: geordi: { int i = 2; auto fn = bind(&inc, i); fn(); fn(); cout <<i; } void inc(int i){ cout << ++i; }
+11:15 geordi: 332
+11:18 cleamoon quit:Ping timeout: 244 seconds
+11:19 cleamoon joined channel
+11:23 cleamoon__ quit:Ping timeout: 272 seconds
+11:31 lhjkk quit:Quit: Leaving
+11:34 lhanjian joined channel
+11:47 cleamoon quit:Ping timeout: 252 seconds
+11:48 cleamoon joined channel
+11:53 lhanjian: http://ww1.sinaimg.cn/bmiddle/6106a4f0jw1es13vcwqh1j20hr09nab8.jpg
+11:53 lhanjian: 梦幻西游公告：扫地大妈误将服务器插头拔下导致服务器瘫痪
+11:53 varna: P的？
+11:53 lhanjian: 我找找来源
+11:54 lhanjian: 官网上没了，不知道是删了/改了，还是P的。
+11:54 lhanjian: http://my.163.com/news/news/2015/5/12/16741_521409.html
+11:55 varna: 估计是下载网页之后改了一下
+11:55 lhanjian: 但是网易的有几个产品的微博也在卖萌……
+11:56 varna: 扫地大妈也不容易的……
+11:56 lhanjian: 有说运维做死的，有说被打的，还有模拟电影场景的……
+11:58 varna: 他们一定没有女朋友
+12:10 xxxxxxxx joined channel
+12:10 varna: xxxxxxxx: 爆
+12:11 xxxxxxxx: 昨天kancolle更新了什么东西么?
+12:12 xxxxxxxx: http://puu.sh/hKdxk/c63339466c.jpg 昨天就一直卡这个画面 卡到现在了
+12:13 varna: 没有
+12:14 varna: 去掉缓存重新下载呢
+12:16 xxxxxxxx: 我再等几分钟不过我觉得应该没啥差别...
+12:16 whatofor_1 joined channel
+12:19 whatofor quit:Ping timeout: 240 seconds
+12:19 WaterA joined channel
+12:24 xxxxxxxx: 依然没什么卵用
+12:34 lh_not_bot: 然而并没有什么琴梨用
+12:37 xxxxxxxx: varna另外agar似乎是用了特定的名字就会有特定的皮肤
+13:07 WaterA quit:Quit: Lost terminal
+13:20 xxxxxxxx: 果然还是活动开始之后又有东西更新过了
+13:23 xxxxxxxx quit:Read error: Connection reset by peer
+13:24 xxxxxxxx joined channel
+13:41 lolisa quit:Quit: meow
+14:09 hysw_logbot quit:Ping timeout: 264 seconds
+14:10 lhanjian quit:Excess Flood
+14:10 lhanjian joined channel
+14:33 WaterA joined channel
+14:51 cleamoon quit:Ping timeout: 252 seconds
+14:53 cleamoon joined channel
+15:23 izmntuk joined channel
+16:09 izmntuk quit:Quit: leaving
+16:15 WaterA quit:Quit: Lost terminal
+16:19 WaterA joined channel
+16:19 WaterA quit:Client Quit
+16:35 cleamoon quit:Ping timeout: 272 seconds
+16:36 cleamoon joined channel
+17:22 izmntuk joined channel
+17:43 cleamoon quit:Ping timeout: 255 seconds
+17:44 cleamoon joined channel
+17:48 izmntuk quit:Quit: pd
+17:48 izmntuk joined channel
+17:51 boosure quit:Quit: Get your hand off of it
+18:16 lhjkk joined channel
+18:19 lhjkkk joined channel
+18:19 lhjkk quit:Read error: Connection reset by peer
+18:21 cleamoon quit:Ping timeout: 256 seconds
+18:22 cleamoon joined channel
+18:26 whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:30 WaterA joined channel
+18:32 WaterA quit:Client Quit
+18:43 lhjkkk quit:Ping timeout: 244 seconds
+18:44 Plough joined channel
+18:44 varna: 药娘终于来了
+18:46 Plough: 然而并没有药娘
+18:47 Plough: 另外，我看了下PT服务器的视频，似乎战舰的装甲终于有点卯月了
+18:47 varna: 那么你变成药娘，拯救即将被废止的舰政本部吧
+18:47 Plough: 蒙大拿不太能肛动大姐姐
+18:47 Plough: 然而我并不能变成药娘
+18:48 varna: 观众们从药娘身上得到的是梦幻般的时光，为了这个你得努力二航二航二
+18:48 Plough: 为了这个我得努力往里月工里塞钢管
+18:48 Plough: 你*
+18:49 varna: 19:45 <+Plough> 为了这个我得努力往里月工里塞钢管
+18:49 varna: 喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔哦哦
+18:49 Plough: 为了这个我得努力往你月工里塞钢管
+18:49 varna: 蹭了蹭了
+18:49 Plough: 你并不敢不揪着别人的错字不放
+18:49 varna: 我更想揪着你的裤子……
+18:50 Plough: 就知道裤子，看不起你
+18:50 varna: 另外作为休闲游戏我还是推荐空母决战的
+18:50 varna: 打了五面，感觉还可以
+18:50 Plough: 航空战感觉太麻烦了……
+18:51 Plough: 我还是先玩鱼雷世界
+18:51 Plough: 另外，似乎北上大人同样并没卵用
+18:51 varna: 啊？
+18:51 Plough: 你看着那四十门鱼雷发射管很霸气
+18:51 Plough: 然而毛子把鱼雷的射程搓到了10km……
+18:52 Plough: 以北上大人的纸装甲冲进10km简直是梦
+18:52 varna: 10km最大射程……
+18:52 varna: 算了其实这也是决战训令的一部分
+18:52 varna: 然而有人掩护么
+18:53 Plough: 有dd的烟幕掩护倒不是没希望
+18:53 Plough: 然而鱼雷世界里面dd各种横冲直撞，能掩护你的早就自己拿人头了……
+18:53 varna: 给他们带桶
+18:53 Plough: 下一个版本似乎毛子打算给北上大人加上烟幕
+18:54 Plough: 可能存活率能高点
+18:54 varna: CL有烟幕弹是常理吧
+18:54 Plough: 然而毛子并不这么认为
+18:54 Plough: 目前为止没有一条巡洋舰有烟幕的
+18:55 varna: 毛子没法理解水雷战队这种脑洞直冲云霄的东西
+18:55 Plough: 另外我转扶桑了
+18:55 varna: 肥桑姐赞么
+18:56 Plough: 本来我以为我会坚守傻级不动摇的，直到我用扶桑姐的第一场战斗就轰沉了对方三条大战舰一条海域强袭压制舰
+18:56 Plough: 还活下来了
+18:56 varna: ...
+18:56 Plough: 简直逆了天
+18:56 varna: 对面都是些什么怪物，见到你不开炮么……
+18:56 Plough: 他们炮术太渣
+18:56 varna: 看来亚服很舒适啊……有点眼馋了不过算了
+18:57 Plough: 那三条大战舰里两条是长萌一条是肥桑
+18:57 Plough: 对面还在水漂呢，我15km外一轮齐射直接把他送去喂鱼了……
+18:57 varna: ...
+18:57 varna: 他们在运动吧
+18:58 Plough: 在动
+18:58 Plough: 不过大战舰的机动能力……
+18:58 Plough: 不过也有20km外打个照面直接给你一轮跨射的
+18:58 varna: 反正同航跟不动是一样的……
+18:59 Plough: 主要原因似乎是自动瞄准插件现在太猖狂了
+18:59 varna: 但是如果你第一轮射偏，他们不作回避机动么……
+18:59 Plough: 他们会试图靠信仰在第一轮就轰沉你……
+18:59 varna: Faithful Double-Line...
+19:00 Plough: 不过其实20km外看见对面开火动不动都行
+19:00 Plough: 那个距离上的命中基本上不靠打，靠接
+19:00 varna: 20km上战舰主炮应该有一定命中了
+19:01 Plough: 什么开着天城在26km外看见大姐姐齐射了立马打舵，然后瞬间失掉2/3血……
+19:01 Plough: 扶桑和傻级的主炮最大射程21km
+19:01 varna: ...
+19:01 varna: 第一轮其实可以不打舵，靠信仰
+19:01 Plough: 你不要试图和毛子讲科学，他们听不懂的
+19:01 varna: 如果没死再修正就来得及
+19:02 Plough: 我的经验是主要看距离
+19:02 Plough: 遇到鶸另轮，15km上基本都可以首轮命中
+19:02 varna: ...
+19:03 Plough: 20km上就纯看脸了，我吃过好几次强行跨射……
+19:03 varna: 不过也差不多
+19:03 varna: 大家对提前量都熟了吧
+19:03 Plough: +
+19:03 Plough: 不过下一个版本扶桑姐的优势可能就没那么大了
+19:04 Plough: 毕竟现在装甲卯月，而且扶桑六门炮
+19:04 Plough: 12门*
+19:04 Plough: http://picpaste.com/ycWFV2uq.PNG 真・大 战 舰
+19:04 varna: 可以自己涂装的啊
+19:05 Plough: 可以mod的
+19:05 varna: 那还好
+19:05 Plough: 不光涂装，还有辅助工具类
+19:05 Plough: 能力可以达到作弊级别
+19:05 varna: 把舰桥打开打一波，不怂
+19:05 Plough: 比如之前提到的自动瞄准
+19:05 varna: ...
+19:05 Plough: 还有卫星视角的炮击界面
+19:05 varna: 这都什么鬼
+19:05 Plough: 不过这几个马上就要被毛子干掉了
+19:06 varna: 吃点东西去
+19:10 xxxxxxxx: agar贴吧看到一个chrome的扩展可以选择连接的服务器 哪天大家去开黑吧
+19:13 cleamoon quit:Ping timeout: 256 seconds
+19:14 cleamoon joined channel
+19:26 xiaoxi joined channel
+19:40 lh_mouse joined channel
+19:45 xiaoxi quit:Quit: 离开
+19:53 cleamoon__ joined channel
+19:55 FrankHB joined channel
+20:05 lhanjian_ joined channel
+20:07 lhanjian_ quit:Client Quit
+20:07 lhanjian quit:Remote host closed the connection
+20:07 lhanjian joined channel
+20:09 whocares_2 quit:Ping timeout: 250 seconds
+20:13 FrankHB quit:Remote host closed the connection
+20:13 FrankHB joined channel
+20:15 Plough: 卧槽这盘什么鬼
+20:15 Plough: 我见到北上大人了……
+20:21 cleamoon quit:Ping timeout: 256 seconds
+20:22 cleamoon joined channel
+20:55 cleamoon quit:Ping timeout: 240 seconds
+20:57 cleamoon joined channel
+21:06 * lh_mouse slaps boeufcafe around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+21:09 xxxxxxxx: 噢噢噢捞打大腚了
+21:14 xeirrr joined channel
+21:14 xeirrr: varna: 爆
+21:15 xeirrr: varna: 基佬是什么专业的？
+21:26 varna: xeirrr: 其一我不是gay, 其二专业是cs
+21:27 xxxxxxxx: varna: 其一有人信么?
+21:29 cleamoon__ quit:Read error: Connection reset by peer
+21:29 Plough: 3.1版的新科技树：
+21:29 lh_mouse: varna, linger 设为 1, 0   没有数据待发送   直接 close   貌似是正常关闭的？
+21:30 Plough: 美帝 http://img.nga.178.com/attachments/mon_201505/12/441_5551633a2e957.jpg
+21:30 Plough: 皇国 http://img.nga.178.com/attachments/mon_201505/12/441_5551633b62cfb.jpg
+21:30 hope1 joined channel
+21:30 varna: lh_mouse: 应该是
+21:30 lh_mouse: varna, 没法直接弄个 RST 出来？
+21:31 varna: lh_mouse: ……这个真没试过
+21:33 lhanjian: lh_mouse, 浏览器好像在收到FIN的时候，也会显示connection reset
+21:34 lh_mouse: lhanjian, 前提是收到的回复不完整
+21:34 lhanjian: soga……
+21:36 Plough: varna, 对了，我跟你讲一个很科学的事
+21:36 Plough: 长门的射程比扶桑短
+21:36 varna: 我现在悲痛欲绝
+21:37 lh_mouse: lhanjian, https://github.com/lhmouse/poseidon-medusa/blob/master/src/fetch_session.cpp?ts=4#L244
+21:37 Plough: 啥情况
+21:37 varna: 看到话题帖三个武藏两个B子一个大和，我也来了一发
+21:37 varna: 4:00
+21:37 Plough: ……
+21:37 Plough: 我陪你一发
+21:37 varna: 翔空卡大和107发的都在第108发上出了……
+21:38 Plough: 待我拆几个96
+21:38 hope1: varna, 昆雅语那个r到底该怎么发音……
+21:39 Plough: 那是什么，齿龈颤音？
+21:39 hope1: "trilled r"
+21:39 Plough: 我查查
+21:39 varna: hope1: 不知道……我看那点都忘光了，现在跟没有一样
+21:40 Plough: 果然是齿龈颤音啊
+21:40 Plough: 这个得慢慢练
+21:40 hope1: cleamoon, 我前几天在北京吃的
+21:40 Plough: 发音方法就是舌尖放松，舌两边抵住齿龈，然后往外送气
+21:40 varna: Plough: 我有个速成法
+21:40 hope1: Plough, 很鬼畜的样子，就是西班牙语那种？
+21:41 Plough: hope1, 是
+21:41 Plough: varna, 求详，虽然我已经会了
+21:41 varna: Plough: 做舌根切除手术……
+21:41 Plough: 噗
+21:41 varna: 局座就做了
+21:41 hope1: 舌尖放松是什么意思……
+21:41 Plough: 说起来小舌颤音你会吗
+21:41 Plough: hope1, 这个我觉得你得自己体会……
+21:41 varna: 颤音我一律没练习过……
+21:41 hope1: 不会
+21:42 Plough: 你先找几个视频然后照着吹吹看吧
+21:42 varna: 对了
+21:42 Plough: 别管要用多大气流，也别管前面带不带d，总之先吹起来
+21:42 Plough: 这是我的建议
+21:43 varna: 除了wps之外有没有推荐的rtf阅读器
+21:43 Plough: 不读rtf……
+21:43 hope1: 只会英语发音(大概能交流的程度，肯定不标准咯)
+21:43 hope1: 周末回家试试……
+21:44 Plough: 齿龈颤音是我以前中二想学撸西亚文所以练的
+21:44 Plough: 结果颤音会了，撸西亚文坑了
+21:44 hope1: amazon提供把rtf转成kindle格式的服务，效果还不错
+21:45 Plough: 然而羊驼子似乎没把家里的kindle偷走？
+21:45 hope1: 路西亚文是啥
+21:45 Plough: 俄文的“俄文”音如“撸西亚”
+21:45 Plough: “撸”的辅音就是齿龈颤音
+21:45 lhanjian: hope1, 11区把Russia翻译为露西亚
+21:46 varna: Plough: 那个我平时也不用
+21:46 hope1: 应该说纯文字效果比pdf好不少
+21:46 Plough: 啊不对，俄文的“俄罗斯”
+21:46 hope1: 原来如此
+21:46 varna: 我要不要拼一发6572……
+21:46 Plough: “俄文”音如“撸司机”
+21:46 Plough: 赌赌赌
+21:46 Plough: 不过我赌4662
+21:47 hope1: 14122
+21:47 Plough: 双大武俾召唤阵，旗舰老婆
+21:47 Plough: 公式4662+1
+21:47 Plough: 噗哈哈哈哈哈
+21:48 Plough: 最近什么鬼
+21:48 cleamoon: 我赌日向
+21:48 cleamoon: 资源都超10000了，去斩E6
+21:48 Plough: 羊驼子呢
+21:49 varna: 我
+21:49 varna: 怎么，你出401了？
+21:49 Plough: 其实我已经造完了
+21:49 Plough: 你猜是啥
+21:50 varna: 401
+21:50 Plough: 我跟你们讲
+21:50 Plough: 我现在可以带着三个大发跑远征了
+21:50 varna: ...
+21:51 Plough: 果然是马鹿地狱
+21:51 varna: 4:00
+21:52 Plough: ……
+21:52 Plough: 太惨
+21:53 varna: 1536/12/27456/1281
+21:54 Plough: 弹药真放亖
+21:54 Plough: 怪不得你出不来……
+21:54 varna: 我可以彻底封港了
+21:54 cleamoon: 大发？
+21:54 varna: 活动结束之前再来一发肯定没问题
+21:55 Plough: cleamoon, 秋津丸
+21:56 varna: 我看看还有多少后备队带闪
+21:56 varna: 正好
+21:56 varna: 2cl4dd
+21:57 varna: 用1cl3dd替换北鼠，1cl替换东急，其余3dd就地刷闪
+21:57 Plough: 我突然想到一件事
+21:57 cleamoon: ...
+21:58 Plough: 我给那两门嗑改加星的时候好像从来没用过确保……
+21:58 Plough: 然而并没有失败过
+21:58 varna: 脸消耗太多
+21:58 lh_cat joined channel
+21:58 Plough: 我看看到时候的最后一星会不会失败
+21:58 Plough: 反正我只打算弄两门+9
+21:59 varna: 我开始弄46
+21:59 varna: 今天赌出一个，周五可以用
+21:59 Plough: Orz
+22:00 varna: 还赌出一个32……
+22:00 Plough: OTL
+22:00 varna: 明天开始半悠闲屯资
+22:00 Plough: 此之谓欧非差距也
+22:01 varna: 欧洲人是有BSM的
+22:02 varna: 我这次活动赌了六发BSM全跪了
+22:02 Plough: 你有两条欧洲BB
+22:02 varna: 你也有
+22:02 Plough: 然而我并不能赌出32
+22:04 varna: 然而你并不需要32，欧洲人的命中都是脸
+22:04 varna: 有一张英俊的脸就顶一山土鳖的铝
+22:05 Plough: 然而我的支援往往是6个miss
+22:06 varna: 看起来欧洲人是不需要支援的，昼战一队清场……
+22:06 Plough: 然而我的一队只会对着理事长蹭血
+22:06 Plough: 另外我听说理事长的回避是0？
+22:06 cleamoon quit:Remote host closed the connection
+22:06 varna: 是
+22:06 Plough: ……
+22:06 varna: miss都是彻甲
+22:07 cleamoon joined channel
+22:07 Plough: 也就是说冬活我总是随机到高甲……
+22:07 Plough: 真可怕
+22:07 lhanjian quit:Remote host closed the connection
+22:08 varna: 我突然想到明天我没弹药练战舰了
+22:08 Plough: ……
+22:08 Plough: 大丈夫，课2000弹药先打打演习
+22:09 varna: 4dd2clt
+22:09 xeirrr quit:Quit: sleep
+22:09 Plough: 说起来我突然想点个毛嘎米出来玩玩
+22:09 varna: 用我活动前的最高规格欢迎这群日德兰坑货好了
+22:09 Plough: 十五门炮呢
+22:09 varna: 毛噶米不是挺强的么，连长门都能干死
+22:09 Plough: 下个版本大概就不行了
+22:09 Plough: 萌大拿在15km上干不穿大和
+22:10 Plough: 不过这么多炮用来打DD很爽
+22:10 varna: 明天早上把那个四小时拆了
+22:10 Plough: 不像战舰肛DD，蛋疼得要死
+22:11 Plough: ……拿弹药么
+22:11 varna: 好歹能凑一场演习出来
+22:11 varna: +
+22:11 varna: 不过我跑的是北鼠和东一
+22:11 varna: 弹药应该至少够上午用的
+22:11 Plough: 我挂的也是东急一
+22:11 varna: 先把电酱修好
+22:12 varna: 明天没空保驱逐王了，先保胜场
+22:12 Plough: 等等，毛嘎米舰首没菊花的？
+22:12 varna: 没印象有
+22:12 Plough: 为何这么可怜……
+22:13 Plough: CL也算军舰的吧
+22:13 varna: CL确实是一军舰……
+22:14 varna: 不对
+22:14 varna: 毛子搞砸了
+22:14 Plough: 连WAREAOBA都有
+22:14 varna: 开战时的CA都有
+22:14 Plough: ……
+22:14 varna: 跟经验人数没关系
+22:14 Plough: 果然毛子该杀
+22:17 Plough: 另外，毛子把饺子削成九级了，美帝十级CV现在空缺
+22:17 Plough: 据卫星，他们似乎准备上中间栖姬级……
+22:18 varna: 中间！？
+22:18 Plough: +
+22:18 varna: Essex以上，美军二战还有什么厉害航母么
+22:18 Plough: 似乎没了吧
+22:19 lh_cat: 会大舌音的路过
+22:19 Plough: 中间我觉得已经可以算战后了……
+22:19 lh_cat: 练了一个月
+22:19 varna: consTRUction complete
+22:20 Plough: 所以白龙上了陆风
+22:20 Plough: 不然十一区真没法打
+22:20 varna: 十一区本来也没法打
+22:20 Plough: 然而毛子表示“我们的游戏很平衡”
+22:20 varna: 052有三个型号：甲、乙、砖
+22:21 Plough: 砖233333
+22:21 hope1 quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+22:21 lh_cat: 我还真见过日语有人把 r 读成大舌间的。
+22:21 varna: ...
+22:22 Plough: ra行发齿龈颤音的不少吧
+22:22 Plough: 尤其小混混
+22:23 varna: 小混混没那么大舌头……
+22:23 Plough: 不少A片里都能听到吧
+22:24 Plough: 这个读法一般认为比较粗鲁
+22:24 varna: 不用A片
+22:24 varna: 动画里杂鱼也很多
+22:24 Plough: +
+22:24 varna: 不过其实日语也属于一般人念起来很难听的语言
+22:24 WaterA joined channel
+22:25 varna: 听演员配音或者朗诵很好，然而看到政要采访的时候总觉得难听
+22:25 Plough: @林间的清风
+22:25 lh_cat: 跟俄语比呢？
+22:26 varna: 俄语我已经不在乎了
+22:26 varna: 普京说话倒是比较好听
+22:26 Plough: 汉语呢
+22:26 lh_cat: 日语辅音元音比例比较优美
+22:26 varna: 汉语当然最赞
+22:27 varna: 在我见过的语言当中，仍然最喜欢汉语
+22:27 lh_cat: 普通话没有入声  不过声调是老大难
+22:28 cleamoon: 原语多好，本身是什么就是什么
+22:29 Plough: 不过说到汉语，我总觉得现行的简体字很多不如繁体好看……
+22:29 varna: 忧郁的……
+22:29 cleamoon: 乌龟...
+22:29 iyzsong: 爆炸吧!
+22:29 Plough: 写起来蛋疼是另一回事，单论美观程度我还是喜欢繁体
+22:30 Plough: 不过这可能只是因为陌生
+22:30 varna: 繁体不方便写小字
+22:30 varna: 我个人的观点是接受汉字简化的，毕竟中国自古以来就在简化汉字……
+22:30 varna: 哈哈哈哈我弹药回到三位数了
+22:31 Plough: 我也接受简化，只不过不太喜欢现行方案的某些简化法
+22:31 lh_mouse: 例如  团
+22:32 varna: 团（clique）
+22:32 lh_mouse: 本来的形声字 应该简化为国字框里面加一个专
+22:32 cleamoon__ joined channel
+22:32 varna: 说起来团这个字在日文里也有个讹写的简化
+22:32 varna: 到底是谁跟谁……
+22:32 varna: 団
+22:33 lh_mouse: 日语的简化算谬误（專尃）  不过好歹有点形似
+22:33 lh_mouse: 现在的简化完全是不伦不类
+22:33 lh_mouse: 國国   形声字简化成会意字
+22:34 lh_cat: 二简字  卩
+22:35 varna: 二简还是算了
+22:35 code_new joined channel
+22:35 varna: code_new: 快赌！
+22:35 code_new: 0.0
+22:35 code_new: 你们又出什么了
+22:35 lh_cat: 还有 青里面的月改为々
+22:35 Plough: 二简还是算了+
+22:35 varna: code_new: 两个半藏一个大发
+22:35 cleamoon: 改为々？
+22:36 lh_cat: 岚々酱
+22:36 code_new: 稍等，还没开游戏= =
+22:36 varna: 蓝蓝酱……
+22:36 Plough: 23333
+22:36 cleamoon: 壹变成一这类我赞同，其他的没太大必要
+22:37 cleamoon: 々这个确定不是日语？
+22:37 lh_cat: 当然只是青字改了  晴睛依样
+22:37 lh_cat: 左边变成竖的月
+22:37 varna: 变成肉了
+22:37 cleamoon__: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/m4/bt_330200.jpg
+22:38 cleamoon__: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/m4/bt_330200.jpg
+22:38 cleamoon__: http://photo31.bababian.com/upload7/20150511/B34C76E0B2AEE3FFF74EDEAF3C812964_500.jpg
+22:38 cleamoon__: http://photo31.bababian.com/upload7/20150511/803E87062B96CB7893F7947C40FEC255_500.jpg
+22:38 lh_cat: 现在还有五十岁左右的人在手写里用二简字
+22:38 varna: 我老妈就写祘而不是算……
+22:38 cleamoon: 二简不是取消了吗
+22:39 lh_cat: 我自己写字也用々
+22:39 varna: 我不用々
+22:39 varna: 觉得破坏结构
+22:39 lh_cat: 除了一个   炖
+22:39 code_new: 学日语前我一直不知道々是什么……
+22:39 varna: 还有一个 烫
+22:39 lh_cat: 壹本来就不是一
+22:40 izmntuk quit:Remote host closed the connection
+22:40 lh_cat: 壹当一用是借用  这个字本不是数目字
+22:40 cleamoon: ...
+22:40 cleamoon: 々到底是什么... 月吗？
+22:40 lh_cat: 在记帐上用壹是为了防止篡改
+22:41 cleamoon: soga
+22:41 varna: 大写数字都是求麻烦的
+22:41 lh_cat: 在二简字里青字里的月作々
+22:41 cleamoon: ...
+22:42 cleamoon: 于是感觉简化字的意义越来越小了...
+22:42 varna: 毕竟现在不识字的人数量和建国的时候那数量差别还是很大的
+22:44 Plough: 其实很多我不太喜欢的都是把两个字简化成同一个了
+22:44 lh_cat: 壹贰叁肆伍陆柒捌玖拾
+22:44 Plough: 比如说现在有多少人知道厂读“han”?
+22:44 lh_cat: 陆本意是陆地  今音已变成录了
+22:45 cleamoon: 我就不知道...
+22:45 varna: 跟我一起念：连沟汉队
+22:45 lh_cat: 繁体的廠是广上旁
+22:45 cleamoon: soga...
+22:45 Plough: 结果给简化成山崖了
+22:45 lh_cat: 日本汉字的庁  保留了这个
+22:46 lh_cat: 繁体的廳同样是形声字
+22:46 lh_cat: 聽  听
+22:47 code_new: 求个旗舰和公式……
+22:47 cleamoon: 形声字挺好
+22:47 varna: code_new: 你赌什么，大和还是俾斯麦
+22:47 lh_cat: 汉字多数是形声字
+22:47 code_new: varna: 大和
+22:47 lh_cat: 日本不懂这个
+22:47 varna: code_new: z1 4662+20
+22:47 Plough: 武藏吧
+22:47 Plough: 哦对Z1
+22:47 code_new: ok
+22:48 lh_cat: 话说  大和武藏长门都是战国国名
+22:48 varna: 是
+22:48 varna: 正统的战舰是国名
+22:48 varna: 不过未必战国，年代乱七八糟
+22:48 code_new: 傻级get
+22:48 varna: ...
+22:48 varna: 继续，别怂
+22:49 lh_cat: 金刚是哪国
+22:49 code_new: 还能赌一发……
+22:49 cleamoon: 用z1没问题吗
+22:49 Plough: 准确地说是令制国国名吧
+22:49 code_new: 肛旗来一个吧
+22:49 varna: lh_cat: 金刚是巡洋战舰，用山名
+22:49 varna: 巡洋战舰和一等巡洋舰的命名是一样的
+22:49 lh_cat: 0.0
+22:49 Plough: code_new, 我赌过了
+22:49 Plough: 天城赤城爱宕高雄也是
+22:49 code_new: 你给我提供个公式和旗舰
+22:49 varna: 天城是没救了
+22:49 Plough: Z1 6572+20
+22:50 varna: 祥瑞飞禽飞兽都变成火鸡，还敢提鸟么
+22:50 Plough: 我指的是八八舰队
+22:50 code_new: 傻级get
+22:51 varna: 哦
+22:51 Plough: 不过其实我挺喜欢土佐这个名字的
+22:51 Plough: 可惜龙骨跪了
+22:51 varna: 土佐总给我感觉是明治维新时候乱七八糟的地方
+22:51 code_new: 偷渡失败，我回索马里了……
+22:51 varna: 该说大部分日本的国名地名我都没好感
+22:51 varna: 还是驱逐舰起名比较好
+22:52 Plough: 陌生化陌生化
+22:52 cleamoon: 除了yamata，都不喜欢...
+22:52 Plough: yamata是啥
+22:52 Plough: 我知道yamato
+22:52 lh_mouse: 金刚级四艘全是英国造？
+22:52 Plough: 金刚是不列颠造
+22:52 cleamoon: 邪马台不是写作yamata吗...
+22:52 lh_mouse: 岛国貌似不会造这种定位奇怪的战舰的
+22:52 Plough: 比睿是海军工厂造
+22:52 lh_mouse: 即使是大和号
+22:53 Plough: 榛名是川崎造
+22:53 lh_mouse: 大和号即使是以 380 的防御力在太平洋上也够用了
+22:53 Plough: 雾岛是三菱造
+22:53 Plough: 如果我没记错的话
+22:53 lh_mouse: 0.0
+22:53 Plough: 比叡*
+22:54 varna: 比叡的图纸是腐国人提供的（战巡版本）
+22:54 lh_mouse: 腐国？
+22:54 varna: 英国
+22:55 Plough: 另外琊马台不是令制国吧
+22:55 varna: 至于日本自己造的战舰是个什么熊样，看扶桑和伊势
+22:55 Plough: 似乎有一种说法是琊马台就是yamato的音译
+22:55 varna: 有这么个说法
+22:56 lh_mouse: 20150512新闻今日谈 朝鲜前高官曝金正恩2014年已下令毒死亲姑
+22:57 varna: 今天是512纪念日啊
+22:57 Plough: 我先操心
+22:57 Plough: 诸君武运
+22:57 Plough quit:Quit: 操心去
+22:57 cleamoon: 512都不提了
+22:58 varna: 不过四川应该还在纪念
+22:58 varna: 有人提到外面拉警报的
+23:01 cleamoon: 兲朝脂肪太追求没人骂，结果反而招骂
+23:02 varna: 回去了，祝岚月酱斩杀
+23:02 varna quit:Quit: leaving
+23:25 izmntuk joined channel
+23:28 lh_mouse quit:Read error: Connection timed out
+23:29 whocares_2 joined channel
+23:29 lh_mouse joined channel
+23:30 lhjkk joined channel
+23:48 Xilzzerts quit:Ping timeout: 272 seconds
+23:54 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150420225811]

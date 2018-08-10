@@ -1,0 +1,281 @@
+00:30 linearain: hello
+00:30 linearain: hello
+03:30 linearain: hey
+10:41 iyzsong: 0 0
+10:50 lh_mouse: geordi, -c using T = enum class { T1, T2 };
+10:50 geordi: error: anonymous scoped enum is not allowed
+14:59 hoxily1 is now known as hoxily
+15:22 lh_mouse: geordi, -c { auto l1 = [](int){ }; auto l2 = [](int){ }; auto p = true ? l1 : l2; }
+15:22 geordi: Success
+15:22 lh_mouse: geordi, replace all [] with [&]
+15:22 geordi: Success
+15:22 lh_mouse: geordi, insert  cout <<TYPE(p); after last ;
+15:22 geordi: Success
+15:22 lh_mouse: geordi, erase -c 
+15:22 geordi: lvalue void (*)(int)
+15:22 lh_mouse: geordi, show
+15:22 geordi: { auto l1 = [&](int){ }; auto l2 = [&](int){ }; auto p = true ? l1 : l2; cout <<TYPE(p); }
+15:23 lh_mouse: geordi, insert  p = l1; after last ;
+15:23 geordi: lvalue void (*)(int)
+15:23 lh_mouse: geordi, { auto l1 = [&](int){ }; void (*p)(int) = l1; }
+15:23 geordi: <no output>
+15:24 lh_mouse: geordi, -c { int k = 123; auto l1 = [](int){ cout <<'1' <<k; }; auto l2 = [](int){ cout <<'2' <<k; }; auto p = true ? l1 : l2; }
+15:24 geordi: error: 'k' is not captured
+15:24 lh_mouse: geordi, replace all [] with [&]
+15:24 geordi: error: operands to ?: have different types 'main(int, char**)::<lambda(int)>' and 'main(int, char**)::<lambda(int)>'
+15:25 lh_mouse: geordi, undo and insert static  before first int
+15:25 geordi: Success
+15:25 lh_mouse: geordi, --clang { auto l1 = [&](int){ }; void (*p)(int) = l1; }
+15:25 geordi: error: no viable conversion from '(lambda at 0:7:46)' to 'void (*)(int)'
+15:28 varna: _(:з」∠)_睡眠不足
+15:30 libhanjian: varna, 爆炸！
+15:33 iyzsong:  _(:з」∠)_睡的太久
+15:35 lh_mouse: 羊驼子明年过来么。
+15:36 varna: 明年过去
+15:36 varna: 这两天导师让我写一个有关定性推理工作的综述补充
+15:36 varna: 结果我就对着一车论文凹啊凹，强行凹出七页纸……
+15:38 varna: 有人想看的话也行，虽说是内部用的文档，不过没什么特别的东西，都是总结性的
+15:41 iyzsong: 定性推理是什么啊？  可以给我看看 :o
+15:42 varna: 主要的关键词是Qualitative Probabilistic/Bayesian Networks (QPN/QBN)
+15:42 iyzsong: s/看/看么?/
+15:42 varna: 我等下msg你吧，虽说发了不过尽量别外传了
+15:43 iyzsong: 中文的么 英文肯定看不懂 = =
+15:44 varna: 我写的是中文，参考文献是英文的
+15:45 varna: 有关QPN/QBN的主题，国内的文献老实说不怎么样
+15:45 varna: 有些出口转内销的英文论文都比多数投国内期刊的中文论文好
+15:46 varna: 另外这个方法主要用来改进经典贝叶斯网络死也不收敛、跟数据绕到崩溃的效率问题
+15:47 varna: 至于我自己提的方案里面其实也有天坑，不得已而为之的东西……
+15:49 varna: iyzsong: 已发
+15:50 iyzsong: thx 增长见闻中..
+15:51 varna: 参考文献中Qualitative Bayesian Networks一文极其鬼畜，不读也行
+15:52 varna: 让人见识到了教授们写个算法都能煮出一锅田中味儿的面条
+15:53 iyzsong: 2333
+16:14 varna: 啊啊啊
+16:15 varna: 奸笑社出了最上粘土，好可爱啊
+16:15 varna: http://ww3.sinaimg.cn/mw1024/69193b3bgw1ez1ri1hkzpj20lb0p0diy.jpg
+16:18 libhanjian: http://news.163.com/15/1217/10/BB1HOFO700014SEH.html
+16:18 varna: FB要是不能开展业务，习主席不妨倒过来念……
+16:20 libhanjian: FB要是能开展业务，李总理不妨倒过来念……
+16:22 varna: 黑太狠
+16:22 varna: 我押五个NKC, FB要是能进来，宣传三退的傻逼轮子一准又要分裂了
+16:23 iyzsong: 不明觉历 0 0
+16:23 varna: iyzsong: 现充！噫噫噫！
+16:24 varna: 总之还是祈祷安倍酱赶快进三当天皇，刚才那个最上粘土比先前的欠雪粘土还好
+16:28 libhanjian: http://money.163.com/15/1217/12/BB1P2F6M00253G87.html
+16:28 libhanjian: M$还是想回来了
+16:29 varna: 微软：我司CEO决定向中国政府机关部门出售挂票，围观群众情绪稳定
+16:30 libhanjian: 挂票233
+16:31 StardustX: http://ww1.sinaimg.cn/mw690/69ece168gw1ez2qfkqqwij20bx0hvtaq.jpg 习习势不可挡
+16:32 varna: 噗
+16:32 varna: 大纪元……
+16:36 varna: 今天怎么没人修法？
+16:36 varna: (｡･ω･)ﾉ来个法师
+16:53 libhanjian: varna, http://www.ycyfzx.com/uploadfile/jpg/2010-9/201099141943693.jpg
+16:54 libhanjian: 某蛤玩乒乓的照片还不少
+16:55 varna: 瞬间就掉了
+16:55 varna: 我觉得有人突入lhj工位把他制服了
+16:56 varna: 他司员工情绪稳定
+16:57 libhanjian: varna, http://www.ycyfzx.com/uploadfile/jpg/2010-9/201099141943693.jpg
+16:58 varna: 咦，你没被有关部门控制啊
+16:58 varna: 17:55 -!- libhanjian [~lhj@47.89.26.155] has quit [Remote host closed the connection]
+16:58 varna: 17:55 <+varna> 瞬间就掉了
+16:58 varna: 17:55 <+varna> 我觉得有人突入lhj工位把他制服了
+16:58 varna: 17:55 <+varna> 他司员工情绪稳定
+16:59 libhanjian: 秩序良好
+16:59 iyzsong: = =
+17:01 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=608096f744166d223877159c76230945/3417ee18972bd4070081c2c17c899e510fb3097e.jpg
+17:04 iyzsong: 道德沦丧啊 没人管管她么
+17:05 varna: 这是伪娘
+17:08 iyzsong: 无论什么性别，都要按照基本法来 :o
+17:08 varna: 暴不取
+17:09 libhanjian: 这个爱丽丝伪娘团最近好火的样子
+17:10 libhanjian: 然而这个伪娘依然口口声声说自己是直男，真是一派胡言！
+17:10 varna: 爱丽丝药娘团一直很火
+17:11 varna: 什么时候频道药娘团队能在他们过期之前超越他们的耻度就好了
+17:13 libhanjian: varna, 我觉得他们这样化妆能伪娘到50岁
+17:14 varna: 不会的，他们在四十岁之前就会被觉悟的强X犯侵犯四小时……
+17:15 libhanjian: varna, 谁能4个小时啊！
+17:17 varna: 曾经有个色魔以为自己强暴了女孩子，发现是可爱的男孩子之后觉醒了，搞了那男孩子四小时，还上了报纸
+17:17 iyzsong: 2333
+17:18 StardustX: 从11月1日起，《刑法修正案九》将猥亵犯罪对象由“妇女”改为“他人”
+17:26 libhanjian: StardustX, 干基佬也是犯罪！
+17:27 StardustX: 一个时代结束了（雾 O.O
+17:27 varna: StardustX: 爆
+17:28 StardustX: 噫...
+17:28 iyzsong: 我要优雅 你们太污了
+17:36 libhanjian: iyzsong, 要污
+18:38 varna: Mokou: 致命亮了
+18:38 Mokou: 什么情况
+18:38 varna: http://tieba.baidu.com/p/4151301796?see_lz=1
+18:38 varna: 玩火自焚，偶像出道
+18:38 Mokou: 23333333
+18:40 Mokou: 虽说我发现我在夏活前也立过一个FLAG
+18:40 varna: 快穿女装
+18:40 Mokou: 14:28 Mokou: 我竖什么呢
+18:40 Mokou: 14:28 varna: 别竖了
+18:40 Mokou: 14:28 varna: 打吧
+18:40 Mokou: 14:29 Mokou: 这次活动过不了甲Izumo改用Qt写
+18:40 varna: 噗
+18:40 Mokou: ^我去学qt……
+18:40 varna: 噗哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+18:40 varna: 啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+18:40 varna: 你犯了一个致命的错误
+18:41 Mokou: 致命的错误
+18:41 Mokou: 这个双关语好
+18:41 varna: 我鹤还有二十二盘，打完我想回去补补觉
+18:41 Mokou: OTL
+18:41 Mokou: 今天开始练我鹤
+18:41 varna: 昨天从十一点半开始动笔写资料，写完的时候已经早上七点半了
+18:41 varna: 然后睡了似乎有四五个小时
+18:42 Mokou: http://ww4.sinaimg.cn/bmiddle/006fYzlSgw1ez2ttjr5etg30ak0744qp.gif 出水量
+18:42 varna: WU
+18:43 varna: 这是U艇那个电影里的？
+18:43 Mokou: 不确定
+18:43 Mokou: 然而演习的旗舰换谁呢……
+18:43 varna: 霞
+18:43 Mokou: 那就不用赢了
+18:43 varna: 找一些大姐姐陪着
+18:44 Mokou: 那需要多撤下来一个
+18:44 varna: 慢慢来
+18:44 Mokou: 我先换大傻……
+18:45 Mokou: 昨天5-4连续劝退，直接把棒各劝婚了
+18:45 Mokou: 最后我一个戒指砸过去，然后出动了我家的超精锐直接碾了过去……
+18:45 varna: 是在下返祖了
+18:45 * Mokou 乌黑浓密
+18:46 Mokou: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=c30183d0b1fd5266a72b3c1c9b23962b/cefc1e178a82b901085a4c08748da9773912ef12.jpg 
+18:46 varna: 我鹤之后是十六万钢，然后剩下的战神由赤城煮好，然后多出来的一个戒指就发给赤城了
+18:46 Mokou: 是在下浓密了
+18:47 varna: 赤城毕竟经历过我军最惨烈的几种战役
+18:48 varna: 而且看着一边的加贺桑满血大破
+18:48 Mokou: 自己嚼嚼捏？
+18:48 varna: 回避率很好的
+18:48 Mokou: 我家赤城出场率还是相当低……
+18:48 varna: 大凤毕竟没去过5-5
+18:48 Mokou: 大凤身经百战了，见得多了
+18:49 varna: 暴不取
+18:49 Mokou: 我日
+18:49 Mokou: 我才发现大井打不出开幕雷……
+18:49 Mokou: 都两场演习了
+18:50 Mokou: 强行A胜
+18:58 varna: 巨基来了
+19:01 Mokou: 噗
+19:01 Mokou: 什么鬼
+19:01 Mokou: 赌电探出水观
+19:02 varna: 欧洲人
+19:02 Mokou: 欧个球
+19:02 Mokou: 我几个月没出过32了
+19:03 varna: 我都大半年没出过水观了
+19:03 Mokou: 赌了几发
+19:04 varna: 只有两千铝左右？
+19:05 Mokou: 两万五千铝，感觉差不多……
+19:08 Mokou: 这大河剧把秀吉打朝鲜的锅完美地推给了三成……
+19:08 varna: (｡･ω･)ﾉ秀吉也是幻魔！
+19:09 Mokou: 先去吃饭
+19:34 xxxxxxxx: http://news.xinhuanet.com/science/2015-12/17/c_134919536.htm
+19:35 varna: 咦，六代姬了
+19:36 varna: 然而F35...
+19:37 xxxxxxxx: http://finance.qq.com/a/20151215/040284.htm
+19:38 xxxxxxxx: 毕竟穷也不能穷山东
+19:43 xxxxxxxx: http://www.bilibili.com/video/av3399872/ 原来同一个键可以用不同的手指敲啊...
+19:50 varna: ok, 最后一盘
+19:52 Mokou: OTL
+19:52 varna: 日，UI又卡住了
+19:53 varna: F5重来
+19:54 varna: 还卡着……
+19:57 varna: 这次干脆就进不去了，各种等加载，一屏一屏的1515B分组
+20:00 varna: 终于ok
+20:01 varna: 好事多磨，我鹤+6
+20:02 Mokou: OTL
+20:02 varna: 造些电探庆祝一下
+20:03 varna: MI打黄了之后，我鹤是要加装电探的
+20:03 Mokou: 我有点想用下がり藤和五七桐做几面旗……
+20:03 varna: 你似乎可以试试平家蟹？
+20:03 Mokou: uccu
+20:03 xxxxxxxx: google首页今天有个游戏的样子
+20:04 varna: xxxxxxxx: 爆
+20:05 Mokou: 平家蟹不好看啊
+20:05 Mokou: 这玩意画旗上简直土爆了……
+20:05 xxxxxxxx: 墨西哥5名毒贩被绑街头挂牌示众 不知何人所为
+20:05 varna: 你可以画一个抬着钳子的PIGU
+20:05 xxxxxxxx: 蝙蝠侠？
+20:06 Mokou: uccu
+20:06 xxxxxxxx: 尴尬！90后男子报班学催乳 女同学拒绝同其实操练习
+20:07 xxxxxxxx: 同其 实操 练习
+20:07 Mokou: 实操
+20:09 varna: 第一发电探得一个12cm单装炮
+20:10 varna: 第二发得中PAD
+20:10 varna: 卡一下彩底，我还以为14探呢
+20:10 Mokou: 结果是32
+20:10 varna: 连装企鹅
+20:10 varna: 再补六发
+20:12 varna: 企鹅 鱼雷 企鹅 企鹅 企鹅 12cm
+20:12 varna: 跟五发
+20:13 varna: 企鹅 鱼雷 企鹅 企鹅 33
+20:13 varna: 赤城玄学
+20:13 varna: 再来十发
+20:15 varna: 12.7 企鹅 企鹅 企鹅 短十酱
+20:17 varna: 12.7 企鹅 021 企鹅 21 ...
+20:17 varna: 补两发
+20:17 varna: 企鹅 021
+20:17 varna: 我觉得这是个模式，接着补四发
+20:18 varna: 零侦 企鹅 企鹅 21
+20:19 varna: 这还真是个模式……我不赌了
+20:20 varna: 最后只出了一个33，也还凑合
+20:21 Mokou: OTL
+20:21 varna: 32发出来好歹有一个货
+20:57 xxxxxxxx: 声称学校困难需捐款 少年网上筹得两万多善款后给自己买苹果手机
+20:57 xxxxxxxx: 少年用善款买手机，获刑6个月，罚款1000元。去年10月，浙江温州17岁少年小向在微信发起募捐，称某学校需要帮助，购买教学设备，几个月下来，小向筹得2.62万元善款，然而，小向却没有上交善款，而是用善款买了手机等数码产品。今年3月，小向主动向公安机关投案自首。小向最终被判6个月徒刑，并罚款1000元。
+20:58 varna: 浙江温州最大皮革厂……
+20:59 xxxxxxxx: 之后经过调查统计，共有6名爱心人士捐款合计2.62万元，然而令人没有想到的是，小向之后并没将善款捐给学校，而是给自己买了一部苹果手机以及一台笔记本电脑和一部数码相机等物品。
+21:01 varna: 今天看看能不能造38改
+21:01 varna: 两发确实化走起
+21:02 varna: 卧槽要两个41？
+21:02 varna: 赌，不虚
+21:05 Mokou: 赌赌赌
+21:05 xxxxxxxx: http://2chcn.com/57072 我总觉得11区这个三观不太正啊
+21:05 varna: 换大和继续赌
+21:06 varna: 我驲
+21:06 varna: 这都什么跟什么
+21:06 varna: 我日
+21:06 varna: 46连发……
+21:06 Mokou: 这就叫欧洲人
+21:06 Mokou: 另外我现在看见Mac的感想就是买NMB
+21:07 xxxxxxxx: 羊驼今年是不是拜过什么寺庙
+21:07 varna: 356，口径上升了
+21:07 varna: 单调不减
+21:07 xxxxxxxx: macは開発 <- 开发给果物?
+21:08 varna: 不行就是没41……
+21:08 varna: 弹药下一万了
+21:08 xxxxxxxx: 对了 我把搞网页的那群人给忘了
+21:08 varna: 赌到九千
+21:09 xxxxxxxx: 他们用果物大概不意外
+21:09 varna: 赌到八千……
+21:09 varna: 山崩一样的356
+21:09 xxxxxxxx: varna: 一会你就赌成光屁股了
+21:09 varna: 不会的，我还得留弹药煮战神
+21:10 varna: 不赌了
+21:10 varna: 46留着明天用
+21:10 varna: 正好这样就凑足四个+4了
+21:10 varna: 明天给远征队补一些闪
+21:11 varna: 十六万钢还差26k，三天演习应该差不多了
+21:14 varna: 下次活动的时候敌方大头目就要面临更多决战派水雷屋的狂轰滥炸了，想想也不错
+21:14 varna: 能+4就不亏
+21:18 varna: 回去了，然而走之前我看到一个神论
+21:18 varna: “现代子弹的杀伤力主要来自爆炸”
+21:20 xxxxxxxx: 他在玩泰拉瑞亚吧....
+21:20 xxxxxxxx: 泰拉瑞亚里我倒是挺喜欢爆炸的子弹....
+21:22 Mokou: 爆炸23333
+21:22 varna: 要么是逗比要么是壕
+21:22 Mokou: AP弹么
+21:22 varna: 壕家里的承包商都用XM25压制敌人
+21:23 varna: AP反而连炸子儿都不算，比如我军惯用的钢芯穿甲弹
+21:23 Mokou: 九一式步枪弹（笑）
+21:23 varna: 大口径倒真有穿甲爆破和穿甲燃烧，然而全世界一年打出的12.7/.50cal步枪弹有多少呢……
+21:24 Mokou: 噗
+21:25 Mokou: 煮人的锅也丢给三成背了
+21:26 xxxxxxxx: 　报道称，依据预测所言，中国将成为继美国之后全球第二个拥有“第五代”隐形战斗机部队的国家。虽然首批歼-20可能不像F-22那么快(但会和F-35一样快)，但它们仍具备隐形的特点、拥有先进的雷达、红外传感器和远程导弹，为在新的军备竞赛中主导天空提供了新的竞争力。
+21:29 varna: 秋山澪倒是隐形战机没完呢提
+21:29 varna: 没问题
+21:29 varna: 然而我觉得这个新闻的亮点仍然是无穷无尽被黑的深海爪黄肥电陆战
+22:49 Mokou: 睡觉
+22:49 Mokou: 诸君武运

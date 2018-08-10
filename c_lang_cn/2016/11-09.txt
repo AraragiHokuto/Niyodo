@@ -1,0 +1,119 @@
+00:12 LastAvengers quit:Quit: 膜拜陈老师
+00:17 tutu_wind quit:Ping timeout: 250 seconds
+00:19 tutu_wind joined channel
+00:31 tutu_wind quit:Ping timeout: 260 seconds
+02:49 T-J-M quit:Quit: WeeChat 1.6
+03:47 Meow-J quit:Remote host closed the connection
+03:47 Meow-J joined channel
+03:52 Mokou quit:Remote host closed the connection
+04:42 T-J-M joined channel
+05:01 tutu_wind joined channel
+05:06 tutu_wind quit:Ping timeout: 258 seconds
+06:57 Youmu quit:Quit: Connection closed for inactivity
+07:25 T-J-M quit:Quit: 上课去
+07:56 Sasasu joined channel
+08:33 Sasasu quit:Ping timeout: 260 seconds
+08:49 iyzsong-xx: = =
+08:51 sn0rt_afk quit:Ping timeout: 260 seconds
+08:53 FrankHB joined channel
+09:04 Sasasu joined channel
+09:05 xxxxxxxx joined channel
+09:05 yimis joined channel
+09:11 lh_mouse joined channel
+09:31 LastAvengers joined channel
+09:44 Youmu joined channel
+10:16 xxxxxxxx quit:Quit: Leaving...
+10:24 Rivdo joined channel
+10:59 LastAvengers quit:Ping timeout: 260 seconds
+11:24 LastAvengers joined channel
+11:54 lh_mouse: geordi, { int a = 1, b = 2; auto x = { (a < b) ? a : b, 3 }; cout << TYPE(x); }
+11:55 geordi: lvalue initializer_list<int>
+11:55 lh_mouse: geordi, --2011 { int a = 1, b = 2; auto x = { (a < b) ? a : b, 3 }; cout << TYPE(x); }
+11:55 geordi: internal compiler error: Segmentation fault
+12:13 iyzsong-xxx joined channel
+12:16 iyzsong-xx quit:Ping timeout: 252 seconds
+12:22 yimis quit:Remote host closed the connection
+12:22 yimis joined channel
+13:20 LastAvengers quit:Quit: Srain0.05-git@0.379.58c5a5d close.
+13:56 yimis quit:Remote host closed the connection
+13:58 iyzsong-xx joined channel
+13:58 iyzsong-xxx quit:Ping timeout: 268 seconds
+14:03 yimis joined channel
+14:17 lh_mouse: geordi, { int a, b; tie(a,b) = array<int, 2>{{3,4}}; cout <<a, b; }
+14:17 geordi: error: no match for 'operator=' in 'tie(_Elements& ...) [with _Elements = {int, int}](b) = array<int, 2ul>{__array_traits<int, 2ul>::_Type{3, 4}}' (operand types are 'tuple<int&, int&>' and 'array<int, 2ul>')
+14:18 lh_mouse: geordi, { int a, b; tie(a,b) = tuple<int, int>{{3,4}}; cout <<a, b; }
+14:18 geordi: error: no matching function for call to 'tuple<int, int>::tuple(<brace-enclosed initializer list>)'
+14:18 lh_mouse: geordi, { int a, b; tie(a,b) = tuple<int, int>{3,4}; cout <<a, b; }
+14:18 geordi: 3, 4
+14:25 yimis quit:Remote host closed the connection
+14:32 yimis joined channel
+14:35 T-J-M joined channel
+14:35 yimis quit:Remote host closed the connection
+14:38 yimis joined channel
+14:45 yimis quit:Remote host closed the connection
+14:45 yimis joined channel
+14:50 Mokou_ joined channel
+14:51 Mokou joined channel
+14:51 Mokou quit:Client Quit
+15:03 yimis quit:Remote host closed the connection
+15:20 lh_mouse quit:Read error: Connection reset by peer
+15:24 yimis joined channel
+15:27 lh_mouse joined channel
+15:28 yimis quit:Remote host closed the connection
+15:30 yimis joined channel
+16:46 CyrusYzGTt joined channel
+17:24 cleamoon joined channel
+17:25 cleamoon: 哈哈，川普赢了
+17:25 cleamoon: 米国药丸
+17:30 iyzsong-xx: - -
+17:35 Rivdo: 别人有钱。
+17:43 Rivdo quit:Quit: Leaving
+17:44 cleamoon: ??
+17:47 yimis quit:Quit: yimis
+18:04 CyrusYzGTt quit:Ping timeout: 256 seconds
+18:05 iyzsong-xx quit:Read error: Connection reset by peer
+18:10 Mokou_: http://ww1.sinaimg.cn/large/005OsBdBjw1f9lzg1u4rbj30aw0923yz.jpg\
+18:10 Mokou_ is now known as Mokou
+18:19 CyrusYzGTt joined channel
+18:30 cleamoon quit:Read error: Connection reset by peer
+18:30 FrankHB quit:Ping timeout: 248 seconds
+18:35 yimis joined channel
+18:44 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+18:50 cleamoon joined channel
+18:53 cleamoon: 哈哈哈，加拿大移民局的网站真的挤爆了
+18:57 FrankHB joined channel
+19:02 iyzsong joined channel
+19:10 yimis quit:Quit: yimis
+19:11 cleamoon quit:Ping timeout: 240 seconds
+19:34 Matsune joined channel
+20:02 cleamooon quit:Ping timeout: 260 seconds
+20:11 iyzsong quit:Read error: Connection reset by peer
+20:23 iyzsong joined channel
+20:28 iyzsong quit:Ping timeout: 250 seconds
+20:38 iyzsong joined channel
+20:45 iyzsong quit:Read error: Connection reset by peer
+20:46 whocares_2_ quit:Ping timeout: 260 seconds
+20:52 whocares_2 joined channel
+21:11 iyzsong joined channel
+21:25 cleamoon joined channel
+21:38 cleamoon quit:Ping timeout: 240 seconds
+21:55 LastAvengers joined channel
+21:58 LastAvengers quit:Client Quit
+21:58 LastAvengers joined channel
+21:58 LastAvengers quit:Client Quit
+21:59 LastAvengers joined channel
+22:38 iyzsong quit:Ping timeout: 260 seconds
+22:39 Matsune quit:Read error: Connection reset by peer
+22:45 iyzsong joined channel
+22:49 iyzsong quit:Read error: Connection reset by peer
+22:55 lh_mouse: #美国大选#【这不是段子，是比段子还狗血的life！】这不是段子，是比段子还狗血的life！美国首位女司法部长（克林顿任期）Janet Reno曾说，"Trump将永远不会在我的有生之年当总统"。可是她竟然在11月7日(昨天)去世了。
+22:55 hoxily joined channel
+23:04 tutu_wind joined channel
+23:20 whocares_2_ joined channel
+23:21 whocares_2 quit:Ping timeout: 260 seconds
+23:23 hoxily quit:Quit: Leaving
+23:24 tutu_wind quit:Ping timeout: 248 seconds
+23:26 tutu_wind joined channel
+23:32 Sasasu quit:Quit: WeeChat 1.0.1
+23:39 yimis joined channel
+23:39 yimis quit:Client Quit

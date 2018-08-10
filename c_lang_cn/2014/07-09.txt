@@ -1,0 +1,257 @@
+00:09: OO_after quit:Ping timeout: 264 seconds
+00:46: hope1 quit:Quit: Lost terminal
+00:54: windforce: 碎觉了嗯。
+00:54: windforce quit:Quit: Leaving
+01:03: candy76041820: 直播八发装备。1 企鹅
+01:03: candy76041820: 2 企鹅
+01:03: candy76041820: （秘书加贺）3 紫电改二
+01:04: candy76041820: （面向地板）4 企鹅
+01:04: candy76041820: 5 零战 52
+01:04: candy76041820: 6 彗星
+01:05: candy76041820: 7 零战 52
+01:05: candy76041820: 8 瑞云
+01:06: candy76041820: 追加 流星！
+01:08: hope1 joined channel
+01:09: hope1: 原来是这样……
+01:09: varna: hope1: HO?
+01:09: hope1: export WMII_TERM='mate-terminal --disable-factory'
+01:09: varna: disable factory?
+01:10: hope1: 不然所有后续打开的term都会在同一个工作区·
+01:10: varna: 我的不会……
+01:10: hope1: 我以前加了/${WMII_TERM}/ -> sel的tagrule
+01:10: varna: soga
+01:11: hope1: 换wmii-hg之后就没法用了…… 最后发现根本原因是这个
+01:11: hope1: 你也是mate-terminal？
+01:11: varna: +
+01:12: hope1: 奇怪…… 我这里默认的gnome/mate/xfce4-terminal都会这样，xterm就没问题
+01:12: varna: 你撸多
+01:13: hope1: 直接Mod-p mate-terminal也会在原来的工作区打开
+01:14: hope1: 开一个xterm再mate-terminal也是……
+01:16: hope1: 似乎是dbus的问题，xfce4-terminal加上--disable-server解决
+01:17: varna: 我觉得主要是你撸多
+01:18: xxxxxxxx: 羊驼竟然不困
+01:18: varna: xxxxxxxx: 爆
+01:18: hope1: ... 刚开始用wmii的时候就有这问题
+01:18: varna: 你撸得太多了
+01:18: hope1: ?
+01:19: varna: 之前就撸多，后来一直产生幻觉
+01:19: xxxxxxxx: 正太把自己撸的一塌糊涂的样子
+01:19: varna: 是海棠
+01:20: hope1: ... 你试试Mod-9 Mod-p mate-terminal Mod-8 Mod-p mate-terminal
+01:21: varna: hope1: 大丈夫
+01:22: hope1: 我这里会在9上面堆两个term，现在也能复现
+01:22: varna: hope1: 我这里正确地生成了
+01:22: varna: 你是不是开desktop了
+01:23: hope1: desktop?
+01:23: varna: 你的xinitrc里启动任何桌面环境了么
+01:23: hope1: 没有，只有默认+输入法+exec wmii
+01:23: varna: ...
+01:24: hope1: https://pastebin.mozilla.org/5534099
+01:24: varna: ...
+01:25: xxxxxxxx: 不用wmii
+01:26: varna: xxxxxxxx: 爆
+01:26: xxxxxxxx: 至少暂时
+01:26: varna: xxxxxxxx: 爆
+01:26: hope1: mate-terminal应该没动过配置，不知道会不会读取原来的gnome3残留
+01:26: OO_after joined channel
+01:28: * xxxxxxxx 用terminator和terminology
+01:28: * varna 爆xxxxxxxx
+01:30: hope1: terminology倒是没这问题
+01:30: xxxxxxxx: 输入法能用么?
+01:31: hope1: 可用
+01:32: xxxxxxxx: tyls之类的东西我觉得挺实用的
+01:32: OO_after quit:Remote host closed the connection
+01:32: hope1: mate-terminal还没文档是吧……
+01:36: OO_after joined channel
+01:41: xxxxxxxx: 困 睡 安
+01:41: xxxxxxxx quit:Quit: Leaving...
+01:45: hope1: 换urxvt
+01:48: hope1 quit:Quit: Lost terminal
+01:51: zzzzzzzz joined channel
+01:52: varna: zzzzzzzz: 爆
+01:53: hope1 joined channel
+01:56: zzzzzzzz: varna, →_→
+01:57: hope1 quit:Client Quit
+01:57: hope1 joined channel
+01:58: zzzzzzzz quit:Read error: Connection reset by peer
+01:59: zzzzzzzz joined channel
+02:00: varna: zzzzzzzz: 爆
+02:00: zzzzzzzz: 。。。。
+02:00: zzzzzzzz: 羊驼寂寞了
+02:01: candy76041820: 爆。
+02:02: zzzzzzzz: 。。。。
+02:05: hope1 quit:Quit: leaving
+02:05: hope1 joined channel
+02:10: hope1 quit:Client Quit
+02:11: hope1 joined channel
+02:30: candy76041820 quit:Quit: Page closed
+02:43: hope1 quit:Remote host closed the connection
+02:45: hope1 joined channel
+03:47: lh_cat quit:Read error: Connection reset by peer
+05:05: cleamoon joined channel
+06:05: cleamoon: alpako又在
+06:13: varna: .
+06:15: cleamoon: @留几手：男人喜欢性格好的女人中最漂亮的那个，女人欣赏有才华的男人中最有钱的那个。
+06:18: cleamoon: ff弄走我3g+的内存后崩了...
+06:22: cleamoon: 巴西vs德国 => 1：7
+06:22: varna: cleamoon: 爆
+06:23: cleamoon: 23333 A: What’s the score? B: 1-0 A: Wh-? B: 2-0 A: I thought you jus- B: 3-0 A: How can i- B: 4-0 A: Be ser- B: 5-0 A: I give up B: So has Brazil
+06:28: cleamoon: varna, 回爆
+06:34: cleamoon: varna, 我们有个挺好玩的题目，就是节能的算法，你可以看看
+06:36: varna: 节能？
+06:37: cleamoon: http://cacm.acm.org/magazines/2010/5/87271-energy-efficient-algorithms/fulltext
+06:39: varna: 已下
+06:41: cleamoon: 下？这不是个网上的文章吗...
+06:42: varna: pdf version
+06:45: cleamoon: soga
+06:47: zzzzzzzz quit:Ping timeout: 255 seconds
+06:56: varna quit:Quit: leaving
+07:36: biergaizi joined channel
+08:17: FrankHB quit:Ping timeout: 240 seconds
+08:30: condy joined channel
+08:39: PloughPhone joined channel
+08:39: biergaizi_AFK quit:Remote host closed the connection
+08:40: biergaizi_AFK joined channel
+08:45: sismvg joined channel
+09:06: xxxxxxxx joined channel
+09:08: FrankHB joined channel
+09:12: Plough joined channel
+09:23: FrankHB: 开封菜的早餐真贵。。
+09:23: sismvg: 快减肥
+09:23: sismvg: 稀粥+黄瓜一个月，包你掉10斤
+09:24: xxxxxxxx: 萝卜+黄瓜
+09:29: sismvg: 萝卜吃多了容易口臭
+09:33: whatofor joined channel
+09:36: FrankHB: 已经掉了差不多10斤了恢复点质量无所谓。
+09:36: FrankHB: 真不经吃。。。￥76.5一下子就剩下俩法风烧饼了。。。
+09:40: whatofor: ..
+09:41: whatofor: 地球去吃烤全羊吧
+09:45: sismvg: 有钱淫，70块是我一个星期的饭钱。。
+09:52: sismvg: 又走到了乱交线。。擦
+09:52: whatofor quit:Ping timeout: 240 seconds
+10:00: sismvg: lovelive首卷bd销售量突破10Ｗ。。物语被爆了。。
+10:15: iyzsong joined channel
+11:04: sismvg: http://www.ithome.com/html/it/93312.htm
+11:05: sismvg: 广电的领导到底SB到何种程度。。所有TV盒子强制安装TVOS系统。。
+11:12: whatofor joined channel
+12:09: Plough quit:Remote host closed the connection
+12:14: PloughPhone quit:Ping timeout: 240 seconds
+12:37: PloughPhone joined channel
+12:42: hope1 quit:Ping timeout: 240 seconds
+12:53: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+12:55: hope1 joined channel
+13:03: cleamoon quit:Ping timeout: 255 seconds
+13:11: cleamoon joined channel
+13:15: cleamoon quit:Ping timeout: 255 seconds
+13:17: PloughPhone quit:Ping timeout: 240 seconds
+14:03: sismvg joined channel
+14:14: iyzsong: o.o
+14:21: sismvg: 小飒属性发动-》与钱无缘
+14:36: windforce joined channel
+14:38: sismvg: 不能理解那些妹控游戏为什么要先攻略某一个其他角色以后才能攻略妹妹
+14:38: sismvg: 应该直接可攻略才对
+14:39: xxxxxxxx: 不让妹妹感受到自己的哥哥被别的妹子抢走了就不能攻略？
+14:39: Plough joined channel
+14:40: windforce: 应该是这样了。
+14:42: windforce: 老老实实刷港口仓库吧。
+14:42: windforce: 酒吧下面的洞打不过。
+14:43: sismvg: 金发幼女攻略成功，班长攻略成功，姐姐攻略成功，黑长直2名攻略成功
+14:43: sismvg: 5P后宫攻略成功，现在就差双胞胎幼女线了
+14:45: windforce: 0 0
+15:19: JQK joined channel
+15:33: byco joined channel
+15:43: sismvg: 冲绳萝莉岛
+15:56: byco quit:Quit: 离开
+16:03: whocares_2 quit:Remote host closed the connection
+16:14: whocares_2 joined channel
+16:21: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+16:58: GODDOG joined channel
+17:18: windforce quit:Quit: Leaving
+17:31: randomclown joined channel
+17:32: randomclown: 有没有人有exetools帐号?
+17:54: windforce joined channel
+18:03: iyzsong quit:Quit: poweroff
+18:07: xxxxxxxx: 没有
+18:11: GODDOG: 有没有高效点的ping一个网段的方法啊？
+18:16: GODDOG: 谢谢
+18:17: GODDOG: 那是什么？
+18:18: GODDOG: 没有fping这个命令啊
+18:20: GODDOG: 已下载 谢谢
+18:42: endle joined channel
+18:44: GODDOG quit:Quit: Lost terminal
+18:47: hope1 quit:Ping timeout: 255 seconds
+18:48: hope1 joined channel
+19:09: varna joined channel
+19:09: varna: Plough: 爆
+19:11: xxxxxxxx: 羊驼子睡醒了?
+19:11: varna: 爆
+19:13: varna: 我去看看战报
+19:14: xxxxxxxx: 战爆
+19:25: randomclown: 7-1
+19:25: randomclown: 7-1
+19:25: randomclown: 7 (seven) - 1 (one)
+19:25: varna: ?
+19:26: randomclown: Germany vs Brazil
+19:26: varna: 这个今天凌晨就知道了……
+19:27: randomclown: hue hue hue
+19:29: varna: 啊噗，演习败给一个欧洲人
+19:32: Plough: 就捡到一个符文长袍
+19:32: Plough: 法力回复+1
+19:33: varna: 不错了
+19:34: Plough: 升火箭术稍微有点缺钱
+19:34: Plough: 经验应该再打一轮就够了
+19:34: Plough: 先吃饭
+19:34: varna: 先吃红旗酱
+19:35: ghlin joined channel
+19:36: varna: 啊，来了新面孔，虽说之前也见到过
+19:38: ghlin: = =
+19:39: lh_mouse joined channel
+19:44: varna: 早上遇到一个猫头，结果没模到鼻子
+19:45: cuihao joined channel
+19:49: hope1 quit:Ping timeout: 245 seconds
+19:51: lh_mouse: 羊驼看过这个么
+19:51: lh_mouse: http://d.pcs.baidu.com/thumbnail/4541270e5cc7ae43b1e0ce3e89abda05?fid=1225332332-250528-474228033289304&time=1404903600&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-6d8i%2BnDfm8W0dGC%2FPItVm3wEA8A%3D&expires=8h&prisign=RK9dhfZlTqVgRd4DZge5fdvYdGTBHXjh3lHk5sJixd1+XDsEuZpjhBFQCeiRxTOWchfsFVN71Tp8bB9wxhreE7xz09eVNxBcB9b2EoIoXoI5Q2eQPP0qbAVdJCcyRAxqlRYSzmPiwHb9dM2ZGljSlY7CHZbb8Zm+Xk5BMFsPElw=&chkv=0&chkbd=0&size=c10000_u10000
+19:52: varna: 这个帽子是什么？
+19:55: xxxxxxxx: 抽屉里有个照片
+19:56: lh_mouse: varna, 我的
+19:57: varna: 你好这样的帽子啊
+19:57: varna: 一股高富帅味道
+20:03: xxxxxxxx: http://puu.sh/a3wQ4/90d2eb9a96.jpg 单机果然没那么坑
+20:07: lh_mouse: varna, :P
+20:08: varna: lh_mouse: 我自己的帽子限于防寒样式的线帽
+20:08: lh_mouse: varna, 噗噗噗
+20:10: varna: 夏天戴起来热，冬天戴个运动用的线帽倒是可以挡风
+20:21: hope1 joined channel
+20:21: varna: Hotatata
+20:24: condy: geordi: << sizeof(bitset<20>) 
+20:24: geordi: 8
+20:30: whocares_2 quit:Ping timeout: 256 seconds
+20:56: lh_mouse: geordi, replace 20 with 32
+20:56: geordi: 8
+20:56: lh_mouse: geordi, replace 20 with 64
+20:56: geordi: error: String `20` does not occur.
+20:57: lh_mouse: geordi, replace 32 with 64
+20:57: geordi: 8
+20:57: lh_mouse: geordi, replace 64 with 65
+20:57: geordi: 16
+21:06: ghlin quit:Quit: leaving
+21:25: condy quit:Quit: leaving
+21:48: varna quit:*.net *.split
+21:48: JQK quit:*.net *.split
+21:48: xxxxxxxx quit:*.net *.split
+21:48: OO_after quit:*.net *.split
+21:48: FrankHB quit:*.net *.split
+21:48: hope1 quit:*.net *.split
+21:48: cuihao quit:*.net *.split
+21:48: endle quit:*.net *.split
+21:48: lh_mouse quit:*.net *.split
+21:48: geordi quit:*.net *.split
+21:48: hysw quit:*.net *.split
+21:48: T3rm1n4t0r quit:*.net *.split
+21:48: hoxily quit:*.net *.split
+21:48: randomclown quit:*.net *.split
+21:48: ChanServ quit:*.net *.split
+21:48: windforce quit:*.net *.split
+21:48: Plough quit:*.net *.split
+21:48: whatofor quit:*.net *.split
+21:48: biergaizi quit:*.net *.split

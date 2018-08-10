@@ -1,0 +1,300 @@
+00:20 cleamoon_: 前两天有个人在中文推特圈里发了个调查，最后发现用 emacs 的比用 nano 的还少
+00:24 varna: 试了下2B小姐姐的弹反，意外有意思
+00:24 varna: 就是死得快
+00:27 hanjian_l: varna: 安拉胡阿克巴
+00:28 varna: 有点像但丁或者贝奥兰迪
+00:28 varna: 操作简化成向敌人方向推左摇杆
+00:33 cleamoon_: 贝 奥 兰 迪
+00:33 Stevearzh quit:Ping timeout: 246 seconds
+00:43 matchray: cleamoon_: nano不是他们的主力编辑器吧
+00:43 matchray: 但用emacs的人应该是主力用emacs的
+00:43 cleamoon_: matchray: 问的是主力编辑器..... 
+00:44 hanjian_l: https://usercontent.irccloud-cdn.com/file/MMBWTmUV/1521045835289.jpg
+00:45 Taggnostr quit:Read error: Connection reset by peer
+00:47 cleamoon_: 233333
+00:48 matchray: nano有什么功能？
+00:49 cleamoon_: 代码高亮等高级功能
+00:50 cleamoon_: varna: 我看到一个说法，说贝叶斯概率是基于假设的，并不是基于最传统的抽样式的概率，所以哲 学上是个问题，你“如何看待这个问题”
+00:50 Taggnostr joined channel
+00:51 hanjian_l: varna: 天朝 cleanrr
+00:51 hanjian_l: https://usercontent.irccloud-cdn.com/file/VXv6ocqj/mmexport1521046269681.webp
+00:52 cleamoon_: 这啥... 
+00:52 yonka quit:Remote host closed the connection
+00:52 varna: cleamoon_: 概率本来只是测度衍生出来的东西，我觉得在哲学上这个问题就不成立
+00:52 yonka joined channel
+00:52 varna: 烧点水冲碗芝麻糊
+00:55 varna: 或者这么说吧，没人需要概率一定描述直观意义上的可能性
+00:55 cleamoon_: varna: 主要是有哲 学 家用无 根的理由来反对贝叶斯
+00:55 cleamoon_: 这些哲 学 家认为概率是确实存在的物体
+00:55 cleamoon_: http://wx3.sinaimg.cn/large/6d87a7f4gy1fpcsbltc2tg20b4086e8c.gif
+00:56 varna: 鸡尾酒会哲学家……
+00:57 yonka quit:Remote host closed the connection
+00:58 cleamoon_: 可能是
+00:59 hanjian_l: grw又加了新枪
+01:00 hanjian_l: 把dlc的枪加入主线了
+01:00 varna: 这次新枪是什么
+01:05 Stevearzh joined channel
+01:05 varna: shenmegui update里面只看到成吨的bugfix和ghost war
+01:06 hanjian_l: 好多
+01:07 varna: 2B的弹反居然可以在连段里用出来……
+01:08 varna: 好好练习的话会很有意思
+01:10 varna: 之前不知道被等级压制的时候伤害极低，打得很辛苦
+01:11 Stevearzh quit:Ping timeout: 240 seconds
+01:14 Stevearzh joined channel
+01:14 matchray: WordStar: A writer’s word processor
+01:20 varna: 那个好古老的windoze字处理器么
+01:38 varna quit:Ping timeout: 256 seconds
+01:41 Stevearzh quit:Ping timeout: 240 seconds
+02:11 Stevearzh joined channel
+02:25 CyrusYzGTt quit:Ping timeout: 260 seconds
+02:25 CyrusYzGTt joined channel
+02:40 Stevearzh quit:Ping timeout: 276 seconds
+04:40 cleamoon_ quit:Quit: Connection closed for inactivity
+04:45 Taggnostr quit:Ping timeout: 264 seconds
+04:48 Taggnostr joined channel
+08:44 lh_mouse joined channel
+09:17 oneapple joined channel
+09:32 oneapple quit:Read error: Connection reset by peer
+09:43 CyrusYzGTt quit:Ping timeout: 240 seconds
+09:44 lh_ideapad joined channel
+09:53 yonka joined channel
+09:58 CyrusYzGTt joined channel
+10:14 lh_ideapad quit:Remote host closed the connection
+10:16 lh_ideapad joined channel
+10:17 shanghai_ joined channel
+10:29 lh_ideapad quit:Remote host closed the connection
+10:30 lh_ideapad joined channel
+10:34 shanghai_ quit:Quit: Leaving
+10:35 lh_ideapad: geordi, -c <<sizeof(eval()); template<typename T> T & eval(){ static_assert((T *)0); return declval<T &>(); }
+10:35 geordi: error: no matching function for call to 'eval()'
+10:35 lh_ideapad: geordi, -c <<sizeof(eval<int>()); template<typename T> T & eval(){ static_assert((T *)0); return declval<T &>(); }
+10:35 geordi: Success
+10:35 lh_ideapad: geordi, -c <<sizeof(auto{ eval<int>() }); template<typename T> T & eval(){ static_assert((T *)0); return declval<T &>(); }
+10:35 geordi: error: invalid use of 'auto'
+10:35 lh_ideapad: geordi, -c <<sizeof(int{ eval<int>() }); template<typename T> T & eval(){ static_assert((T *)0); return declval<T &>(); }
+10:35 geordi: Success
+10:36 lh_ideapad: geordi, -c <<int{ eval<int>() }; template<typename T> T & eval(){ static_assert((T *)0); return declval<T &>(); }
+10:36 geordi: error: static assertion failed
+10:37 hanjian_l: Mokou: 我们鼓动羊驼子当药娘吧，他体型合适
+10:40 Mokou: 这个可以有(赞许)
+10:47 hanjian_l: Mokou: 羊驼子试图用40米长度阻止我的安利
+10:47 hanjian_l: 40米长刀
+10:48 Mokou: 用咖喱棒
+11:09 hanjian_l: Mokou: 用EX咖喱棒阻止40米长刀的羊驼子
+11:48 oneapple joined channel
+11:48 oneapple quit:Read error: Connection reset by peer
+13:49 lh_ideapad: https://github.com/lhmouse/poseidon/blob/master/configure.ac#L17
+13:49 lh_ideapad: 本特首开始写 autoconf 了。
+13:52 ccra joined channel
+13:52 ccra: THIS IS A FREENODE BREAKING NEWS ALERT!! Hitechcg AND opal ARE GOING AT IT RIGHT NOW WITH A LOT OF FIGHTING AND ARGUING WOW YOU DON'T WANT TO MISS THIS!! TYPE /JOIN ## TO SEE THE ACTION...AGAIN TYPE /JOIN ## TO SEE THE ACTION!!
+13:52 ccra: lh_ideapad CyrusYzGTt yonka lh_mouse Taggnostr whocares_2 NebulaMoe condy \s jingjinghack Youmu GoBzzzt_ hanjian_l lh_not_bot ariwaranosai infinite dantmnf Meow-J_ Mokou Oyodo Kaimaris matchray geordi Sasasu bordeaux_facile_ erhandsome gauge
+13:52 ccra quit:Client Quit
+13:55 matchray: lh_ideapad: 已經2018年了
+13:55 lh_ideapad: no.
+13:55 lh_ideapad: nobody is ever going to use anything else.
+13:57 matchray: wget https://melpa.org/download_counts.json
+13:57 matchray: jq '[to_entries[]]|sort_by(.value)|.[]|.key' < download_counts.json
+13:57 lh_ideapad: rua
+13:57 matchray: 有沒有更好的命令
+13:57 lh_ideapad: lmcc
+14:00 lh_ideapad: JSON ...
+14:01 lh_ideapad: no idea.
+14:20 matchray: lh_ideapad: configure 能 symlink install 嗎
+14:20 matchray: 需要反覆編譯的專案
+14:20 lh_ideapad: “Some cause happiness wherever they go; others, whenever they go.” - Oscar Wilde
+14:22 lh_ideapad: matchray, autoconf 调用 /usr/bin/install 的。
+14:22 lh_ideapad: 具体怎么回事窝不清楚。
+14:22 matchray: install 是 copy
+14:23 matchray: 沒救了
+14:23 matchray: radare2 有 make symstall
+14:23 matchray: 只安裝symlinks
+14:23 matchray: lh_ideapad: 再推薦點曲子和耳機
+14:23 lh_ideapad: 有啥意义。
+14:26 matchray: git pull; make 後不需要重新安裝
+14:26 matchray: 很多程式executable path是有影響的
+14:34 lh_ideapad: git pull 之后 umount 了怎么办。
+14:36 matchray: .........
+15:28 lh_ideapad: “If you live long enough, you'll see that every victory turns into a defeat.” - Simone de Beauvoir
+17:01 lh_ideapad quit:Remote host closed the connection
+17:03 lh_ideapad joined channel
+17:24 lh_mouse: 有人学 perl 吗？
+18:20 hanjian_l: 谁学perl？我打断他的腿
+18:43 NebulaMoe: 想学 one-liner 魔法
+19:15 yonka quit:Remote host closed the connection
+19:21 whocares_2_ joined channel
+19:26 yonka joined channel
+19:28 whocares_2 quit:Ping timeout: 260 seconds
+19:28 CyrusYzGTt quit:Ping timeout: 260 seconds
+19:31 yonka quit:Ping timeout: 276 seconds
+20:07 iyzsong joined channel
+20:24 iyzsong quit:Ping timeout: 252 seconds
+20:38 varna joined channel
+20:55 varna: 土豆怕是熟透了
+21:13 lh_ideapad quit:Remote host closed the connection
+21:16 CyrusYzGTt joined channel
+21:24 iyzsong joined channel
+21:29 cleamoon_ joined channel
+21:38 root_ joined channel
+21:39 root_: hello
+21:41 NebulaMoe: 来了个管理员
+21:42 varna: root
+21:42 root_: 我想办法改改名字
+21:44 hanjian_l: uccu每次root都把人家吓跑，说不定是个小姐姐呢
+21:45 varna: 刚才在暗区又是一阵秦王绕柱
+21:45 varna: 估计是个没毕业的卫哨手枪盾，来抢我东西
+21:49 root_ joined channel
+21:50 root_: 我好像改不了
+21:50 yonka joined channel
+21:54 yonka quit:Ping timeout: 240 seconds
+22:11 Null_hth joined channel
+22:12 Null_hth: 终于注册好名字了
+22:12 Null_hth: 大家好
+22:16 yonka joined channel
+22:19 varna: (｡･ω･)ﾉ你好
+22:20 Stevearzh joined channel
+22:20 yonka quit:Ping timeout: 260 seconds
+22:22 Null_hth: 问一下为什么我执行斜杠list没有反应
+22:23 varna: list命令产生的输出太长，客户端说不定会拦住你
+22:23 CyrusYzGTt quit:Ping timeout: 240 seconds
+22:24 Null_hth: 可能是把
+22:24 Null_hth: 谢谢
+22:24 yonka joined channel
+22:25 whocares_2_ quit:Ping timeout: 240 seconds
+22:25 CyrusYzGTt joined channel
+22:25 hanjian_l: varna: 药丸药丸
+22:26 varna: 啊？
+22:27 whocares_2 joined channel
+22:28 lh_mouse: \
+22:28 lh_mouse: Null_hth, irssi 请看第 0 个页面。 （Meta-0）
+22:29 varna: alt-1
+22:29 Null_hth: 冒味问问这位<lh_mouse>是机器人吗?
+22:30 lh_mouse: Null_hth, 是。
+22:30 lh_mouse: varna, 记错了。
+22:30 Null_hth: 6
+22:30 varna: 是机器鼠
+22:30 lh_mouse: C 写多了。
+22:30 varna: 属于四害
+22:30 lh_mouse: varna, 窝想学 perl 。
+22:30 varna: 呀？
+22:30 varna: 陶冶情操么
+22:32 hanjian_l: varna: 怕不是想妹子了
+22:32 lh_mouse: 不，只是扩展业务。
+22:32 varna: 为什么不是lua呢
+22:32 lh_mouse: NebulaMoe, 泥是水呀？
+22:33 NebulaMoe: lh_mouse: aka StardustX
+22:33 lh_mouse: varna, 下标从一开始太 ZZ 了。
+22:33 * lh_mouse slaps NebulaMoe around a bit with a large trout
+22:33 varna: 从星尘变成了星云（
+22:33 lh_mouse: 找了一圏， php 没有 .so 能做 binding 的。
+22:33 lh_mouse: php 好像只能做 CGI 和 FPM 两种接口。
+22:34 lh_mouse: 第一选择本来是 PHP。
+22:34 lh_mouse: JavaScript 的命名太 SB 了，而且不适合二进制处理。
+22:35 lh_mouse: perl 好像看着挺好玩。
+22:35 Null_hth: 看怕不是机械鼠
+22:35 lh_mouse: ？？
+22:35 varna: 正经说的话，慎重
+22:35 lh_mouse: 噢。
+22:35 varna: Perl的C binding维护性极差
+22:35 lh_mouse: 内个。
+22:35 lh_mouse: 窝。
+22:35 lh_mouse: 窝会写 autoconf 了。
+22:36 varna: wow puuuuu
+22:36 lh_mouse: varna, 推荐一个呗。
+22:36 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/configure.ac#L17  今天写的。
+22:36 NebulaMoe: lh_mouse: 要不 Py（斜眼 
+22:36 lh_mouse: 2B PY.
+22:37 lh_mouse: 窝说个笑话： a = (0); b = (0,); c = {0}; d = {0,}; 四个类型不一样。
+22:37 varna: py太傻了，Perl很旧，lua更多人能接受
+22:37 lh_mouse: 窝再说个 JS 的笑话：  console.log([]+{} == {}+[]); 
+22:37 varna: Perl本身没什么问题，但他的xs binding搞出来，是有一个ABI版本号的
+22:38 varna: 这个ABI版本号和编译时的Perl版本挂钩，一旦变化，就会匹配失败
+22:38 lh_mouse: 原来如此。
+22:38 varna: 生产环境下就别用这种玩意了
+22:38 NebulaMoe: lh_mouse: c = {0}; d = {0,}; 这俩类型一样，都是 set
+22:41 lh_mouse: 那就是 {} 和 {0} 。
+22:41 cleamoon_: ruby呗
+22:42 varna: 你不会希望专门写一个转生服务去复活那个应用的
+22:42 cleamoon_: 说起星云，想起昨天看到的，原来银河系并不是冲水马桶里水的形状，银河系中间有一个横着的棒 状 物，现在还不知道是什么，怎么形成的
+22:42 varna: 以前不是猜想有一个巨大黑洞，现在觉得不是了？
+22:42 varna: 这还挺有趣的……
+22:43 cleamoon_: 巨大黑洞外面
+22:43 NebulaMoe: lh_mouse: 要不你把 lua fork 出来，魔改一下，下标改成 0
+22:43 cleamoon_: 长度27000光年的棒 状 物
+22:43 lh_mouse: NebulaMoe, 不使用 {} 初始化即可。
+22:43 varna: NebulaMoe: 造成生态的隔离，整个业务死了……
+22:43 varna: 27k光年……惊恐
+22:43 gauge: 横着是说和旋臂在同一个平面?
+22:44 lh_mouse: 这来回运动一次要多少年……
+22:44 * Null_hth 
+22:44 cleamoon_: 对
+22:44 cleamoon_: 同一个平面
+22:44 cleamoon_: 不是竖着插 进银河里，是嵌在银河里
+22:45 Null_hth: 可能是在甩动
+22:45 gauge: 噫
+22:46 lh_mouse: varna, lua 那 . : 看着好谜。
+22:46 lh_mouse: 比谜姬还谜。
+22:46 varna: 流行的东西里面总有些奇怪玩意儿
+22:47 lh_mouse: varna, 之前，窝一起做毕设那哥，
+22:47 lh_mouse: 说想来上海，
+22:47 varna: 那个搞硬件的犇啊
+22:47 varna: 但是去上海做什么呢
+22:47 lh_mouse: 网易开搞春风的时候，他们发了个东西。
+22:47 lh_mouse: 网易春风的安全套。
+22:47 lh_mouse: 不知道。窝只知道他们之前做什么。
+22:48 cleamoon_: 还有个神奇的，整个宇宙星系的分布其实是有规律的，只不过规律非常迷。所有银河都是围着一个一个巨大的泡泡形状的空洞连起来的，就像煮汤沸腾后周围的浮渣那样。为什么这样不知道，泡泡里什么都观测不到
+22:48 varna: (｡･ω･)ﾉ
+22:48 varna: cleamoon_: cool, 最近的新文章？
+22:48 cleamoon_: 安全套什么鬼
+22:48 NebulaMoe: 物联网安全套？（惊恐
+22:48 cleamoon_: 不是很新，都10年左右了
+22:48 lh_mouse: 他们做 minecraft 被农药和吃鸡搞得完全抬不起头。
+22:48 lh_mouse: cleamoon_, 百度 网易春风 有真相。
+22:49 lh_mouse: 现在 126 登录页面经常能看见/。
+22:49 Null_hth: 不过音乐播放器做的还不错
+22:50 cleamoon_: 新东西里有一个惊恐的，前段时间有人做了个星际观测，发现光速，普朗克常数，真空磁导率中至少有一个叛变了革命(划)，不是常数
+22:50 cleamoon_: 噗，还买这些东西
+22:51 lh_mouse: 我没买过！
+22:51 lh_mouse: 重复一遍，广告是网易自己推的，我没买过！
+22:51 varna: 是啊，人类尺寸的康多姆可以装一个耗进去，买了也没用……
+22:52 cleamoon_: 2333333
+22:52 lh_mouse: 我终于能把云服上没用的 lib{mysql,mongoc-1.0}-dev 干掉了。
+22:53 lh_mouse: ./configure --disable-mongodb --disable-mysql && make -j$(nproc) && sudo ./makedeb
+22:53 lh_mouse: 另外。
+22:53 lh_mouse: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=892985
+22:53 cleamoon_: 实在不幸，自己写一个脚本语言？我觉得直接在lua上扩展不很麻烦
+22:53 varna: 生态
+22:54 varna: 扩展业务的话，还是需要让别人的东西能动
+22:54 lh_mouse: binding 多了保不齐会变成 node.js 一类的妖孽。
+22:55 cleamoon_: 哦，那也只能用那几个了
+22:55 lh_mouse: 窝还没想好怎么利用脚本语言。
+22:55 lh_mouse: 普世的东西不好弄。
+22:59 * lh_mouse 用 SHELL 写业务怎么样呢？
+23:00 cleamoon_: 会被水淹没，不知所措
+23:00 lh_mouse: 哪来的水。
+23:01 varna: 地 狱 绘 卷
+23:07 yonka quit:Remote host closed the connection
+23:07 cleamoon_: 研究发现女性生孩子越多牙齿掉得越多
+23:08 cleamoon_: 微软研究团队报告它的 AI 在新闻中文翻译英文的质量和准确性上媲美人类。  #写论文的有救了
+23:08 cleamoon_: 对了，用ocaml如何
+23:09 cleamoon_: 天文学家发现，不论大小或质量，所有圆盘星系每十亿年旋转一次
+23:10 cleamoon_: https://help.gnome.org/misc/release-notes/3.28/   #代号什么鬼
+23:12 whocares_2 quit:Ping timeout: 240 seconds
+23:15 NebulaMoe: 好像是因为在重庆开了个会
+23:16 whocares_2 joined channel
+23:16 cleamoon_: ......
+23:16 varna: 一派胡言 一派胡言
+23:19 cleamoon_: 很希望能造出来的东西之一就是实时口译耳塞
+23:20 cleamoon_: 顺便加一个实时口译口球
+23:24 varna: 口球2333
+23:27 Null_hth: wuwuwu
+23:28 hanjian_l: 钳口球
+23:36 cleamoon_: 还有个乐的，爱因斯坦不是说自己为了解释一些现象而没根据的加上的宇宙学常数是他一生最大的错误吗，现在一般公认的结果是，把宇宙常数删了才是他一生最大的错误...... 不用宇宙常数无法解释宇宙为什么加速膨胀.....
+23:39 hanjian_l: 重庆还行
+23:40 gauge: wow 周期一样有点神奇
+23:42 hanjian_l: 打夜战有什么特别的好处吗
+23:42 cleamoon_: 爽
+23:43 varna: 社保了 谢谢茄子
+23:43 hanjian_l: varna: 
+23:44 varna: 活动也有夜战，逃不掉的
+23:49 iyzsong: orz
+23:58 Null_hth quit:Ping timeout: 240 seconds

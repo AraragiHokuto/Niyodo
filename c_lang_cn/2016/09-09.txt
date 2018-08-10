@@ -1,0 +1,107 @@
+00:11 lh_mouse: geordi, << setprecision(30) << fmal(1.234567890123456789l, 9.876543210987654321l, -12.19326311370217952l)
+00:11 geordi: 2.4543333774901028904077564839e-18
+00:27 Youmu quit:Quit: Connection closed for inactivity
+00:42 lh_mouse quit:Ping timeout: 250 seconds
+01:01 Mokou: 睡觉
+01:01 Mokou: 诸君武运
+01:01 Mokou quit:Quit: 睡觉
+01:16 cleamoon quit:Ping timeout: 240 seconds
+02:15 linearain joined channel
+02:21 linearain: hi
+02:47 linearain: hello
+03:21 linearain quit:Quit: Leaving
+07:31 cleamoon joined channel
+09:10 lh_mouse joined channel
+09:27 Youmu joined channel
+09:37 Shion joined channel
+11:23 hope1 joined channel
+11:35 hope1_ joined channel
+11:39 hope1 quit:Ping timeout: 276 seconds
+11:39 lh_mouse: 65590DB4                      | 66 25 FF 7F                  | and     ax, 7FFF                                                             |
+11:39 lh_mouse: 65590DB8                      | 66 25 FF 7F                  | and     ax, 7FFF                                                             |
+11:39 lh_mouse: FUCK GCC.
+11:40 hope1_ quit:Ping timeout: 276 seconds
+11:40 hope1_ joined channel
+11:41 iyzsong-xx: = =
+11:42 sou joined channel
+12:04 hope1_: 牙髓炎…… 要钻开什么的感觉好可怕
+12:36 iyzsong-xx: orz
+12:53 hope1_: 所以说小朋友一定要每天刷两次牙
+12:57 lh_mouse: geordi, { printf("my_fmal(x,y,z) = %.30La\n", fmal(1.0l + 0x3p-40l, 1.0l + 0x5p-40l, -(1.0l + 0x8p-40l))); }
+12:57 geordi: my_fmal(x,y,z) = 0xf.000000000000000000000000000000p-80
+13:33 Mokou joined channel
+13:39 Mokou: 你们知道苹果极简主义设计的主要特点是什么吗？
+13:39 Mokou: 随身携带各种转换接头。
+13:39 Mokou: ——felixding 
+14:00 sou quit:Remote host closed the connection
+14:55 iyzsong-xx: - -
+15:17 cleamooon joined channel
+15:25 hope1_: 卧槽再也不去牙医了
+15:27 cleamooon: 被侵犯了？
+15:28 hope1_: 宁愿被侵犯
+15:28 cleamooon: orz
+15:28 cleamooon: 你被弄了什么新鲜玩法
+15:28 hope1_: 根管
+15:29 hope1_: 然后补了六颗牙
+15:30 cleamooon: 一次做这么多？
+15:30 hope1_: 但还是根管比较厉害
+15:31 cleamooon: 不会没做麻醉吧...
+15:31 hope1_: 做了，然而并没有卵用
+15:32 hope1_: 好吧没做我就不会在这说话了
+15:32 hope1_: 我应该先吞一坨止痛药再来的
+15:33 cleamooon: 那玩意不做麻醉的话，确实不如被几十人侵犯
+15:34 cleamooon: 不过这麻醉效果过去的也太快了
+15:35 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/19/nz_220873.gif@596w_1l.gif  凌波微步
+15:37 hope1_: 然而下周还要再去，生无可恋
+15:37 cleamooon: 还做根管？
+15:37 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/19/89_68134.jpg@596w_1l.jpg  233333
+15:38 hope1_: 根管只做了第一部分
+15:39 hope1_: 更可怕的是还有另一颗牙说可能也要做
+15:41 cleamooon: orz
+15:41 cleamooon: 这玩意分几次做是要死人呀
+15:42 hope1_: 我已经死过了，然而还要再死几次
+15:45 cleamooon: 看来确实很恐怖，几百岁的天狗都不行了
+16:52 StardustX joined channel
+18:02 hope1_ quit:Ping timeout: 276 seconds
+18:20 cleamoon quit:Ping timeout: 244 seconds
+18:20 cleamooon quit:Ping timeout: 244 seconds
+18:56 iyzsong joined channel
+18:58 iyzsong quit:Changing host
+18:58 iyzsong joined channel
+18:58 iyzsong: (´・ω・｀) 晚上吼
+19:16 iyzsong-xx quit:Ping timeout: 244 seconds
+19:17 iyzsong-xx joined channel
+19:34 cleamoon joined channel
+20:35 lh_mouse: 什么什么，海棠姬被人侵犯了？
+20:39 cleamoon: 海棠姬牙上的洞被人插了，还灌入了奇 怪的东西
+20:40 cleamoon: 如果把牙字〇掉就漂亮了
+20:43 hope1_ joined channel
+20:45 cleamoon quit:Read error: Connection reset by peer
+20:46 cleamoon joined channel
+21:11 cleamoon quit:Ping timeout: 255 seconds
+21:25 CyrusYzGTt joined channel
+21:26 guowang joined channel
+21:27 guowang: =_=
+21:59 StardustX quit:Ping timeout: 250 seconds
+22:00 Mokou: 【三星“祸不单行” 日本也禁止在飞机上为Note 7充电】据日本共同社报道，日本国土交通省9日要求国内各航空公司，不要让乘客在飞机内使用电池存在隐患的韩国三星电子公司新型手机“盖乐世Note7”。此前美国相关部门和澳大利亚航空公司已采取了相同举措。
+22:03 guowang left channel:"ERC (IRC client for Emacs 24.5.1)"
+22:14 lh_mouse quit:Quit: For the Red Army!
+22:15 lh_mouse joined channel
+22:16 StardustX joined channel
+22:40 cleamoon joined channel
+22:45 cleamoon quit:Ping timeout: 250 seconds
+22:47 cleamoon joined channel
+22:59 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+23:02 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/1c/xw_136014.jpg@596w_1l.jpg
+23:03 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/1c/5w_217288.jpg@596w_1l.jpg
+23:09 Mokou: http://ww4.sinaimg.cn/mw690/9472e2a9jw1f7necalyhtj20dg07m0wj.jpg
+23:11 cleamoon: 23333
+23:13 gauge is now known as gaugebot
+23:14 gaugebot is now known as gauge
+23:16 lh_mouse: geordi, << 0x1.fp-8
+23:16 geordi: 0.00756836
+23:16 lh_mouse: geordi, << (1+15.0/16)*pow(2,-8)
+23:16 geordi: 0.00756836
+23:17 StardustX quit:Remote host closed the connection
+23:39 lh_mouse quit:Ping timeout: 264 seconds
+23:57 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in

@@ -1,0 +1,3148 @@
+00:00 lhanjian: FrankHB, 是的。我想了半天，大概又是重新发现了某个programming language的概念……
+00:01 lhanjian: FrankHB, 现有的实现为何不流行？（或者我只是没注意到？）
+00:01 FrankHB: 根本就没有可移植的第一类实现。
+00:02 lhanjian: FrankHB, 哪怕是先
+00:02 FrankHB: 连ucontext都给扔了。
+00:02 lh_mouse: 这意义上又回归协程了么
+00:02 FrankHB: 你非得用就是自己造个Scheme的实现。
+00:02 lh_mouse: 于是你必须定义什么叫“状态”
+00:03 lh_mouse: 依赖机器“状态”就 ucontext 或者 sjlj
+00:04 lhanjian: 生产中，我们并不需要像理论上那么严刻地复制所有状态，找到需要的那些，就能妥协实现的难度和性能了吧。也就是定义状态
+00:04 lhanjian: 严苛
+00:04 lh_mouse: C++ 异常提供了一套可移植状态——位于 try 外部的局部变量构成了这个“状态”   要么你就自己造 DSL
+00:04 FrankHB: 看起来反倒不是某个状态而是任意状态。
+00:04 lh_mouse: 但是必须约定清楚 什么是可恢复的  什么不是可恢复的
+00:05 FrankHB: 这个问题太普遍，造DSL绕不过去。
+00:05 lh_mouse: 可以 别叫用户艹寄存器即可
+00:05 lhanjian: FrankHB, 说错了，应该是某个状态变量。当然部分状态变量也因为变量的集合无限大而组成无限的状态
+00:05 lh_mouse: 或者可以艹  后果自负
+00:06 FrankHB: 所以不就是任意状态么。
+00:06 Stevearzh quit:Ping timeout: 246 seconds
+00:06 FrankHB: 还得知道啥寄存器，疼不。
+00:06 FrankHB: 又体系结构相关了。
+00:06 lhanjian: FrankHB, 嗯。比如刚才那个情况，只要保留那个数组，保留指针指向数组的某个item，保留当前例程执行到某条汇编指令就好。
+00:07 lhanjian: FrankHB, 生产中妥协于体系结构很正常吧
+00:07 FrankHB: 正常地享受残废设计么。
+00:07 FrankHB: 嘛，随便了。
+00:07 lh_mouse: 看你的需要   用刚才的 HTTP 例子来说   我所定义的“状态”就是  FIRST_HEADER  HEADER  CONTENTS
+00:08 Stevearzh joined channel
+00:08 lh_mouse: 前两个状态就是“一行”
+00:08 lh_mouse: 所谓的可恢复的状态就是只恢复这一行  而不是恢复到任意字节
+00:09 hoxily quit:Quit: Leaving
+00:09 lh_mouse: 实际上解析也只是针对一行  如果队列中的字节无法构成一行就 return
+00:09 lhanjian: 实际上nginx是恢复到任意字节，哪怕一个\r\n也没出现，他也会先解析了这点儿再说
+00:09 FrankHB: 这是改需求了。
+00:09 lh_mouse: 我没看出有什么好处
+00:10 lh_mouse: 你的需求是什么
+00:10 lh_mouse: “逐字节解析”就是需求？
+00:10 FrankHB: 就是要把一行拆掉么。不过HTTP是没什么意思。
+00:10 lhanjian: 没好处。但这只是个例子，还是想实现那个残废地call/cc
+00:10 lh_mouse: 这需求很无厘头
+00:10 FrankHB: 代码提示什么的吧。
+00:10 FrankHB: 用户输入什么玩意儿就得更新状态。
+00:11 lh_mouse: 这不是同一种东西
+00:11 FrankHB: 广义上是同一种，都艹状态机。
+00:11 lhanjian: FrankHB, 对。就是状态机，一个个字符处理的状态机
+00:12 lh_mouse: 有点远  说状态机没错  不过没什么建设性
+00:12 FrankHB: 要啥建设性，自己撸语言？
+00:12 lh_mouse: 但是你既然讲“恢复到某状态”就必须定义什么是“状态”
+00:12 lhanjian: 我自认为的建设性应该在，怎么样构建出一个一些人能舒服地上手的残废call/cc
+00:13 lh_mouse: 我觉得这东西丢给用户自己设计比较好
+00:13 lhanjian: lh_mouse, 嗯，现在问题已经推进到怎么定义“状态”了
+00:13 FrankHB: 用户能决定什么哪些是需要恢复的状态。
+00:13 lh_mouse: 比如我就塞个回调叫 read_avail(const void *data, size_t size);
+00:13 lh_mouse: “状态”交给用户去定义
+00:13 FrankHB: call/cc是当前点到top level。实用点的应该是shift/reset这类delimited continuations。
+00:14 FrankHB: 回调太绕。
+00:14 lhanjian: 我想把call/cc从编程语言的特性，降格为某种特定领域的小编程框架。
+00:14 lh_mouse: 回调是偏向于底层的封装  当然这就是我的目的
+00:14 FrankHB: 实际上说白了就是在代码的两个位置上穿洞而已。
+00:14 lh_mouse: 因为 IO 是异步的
+00:14 FrankHB: 这玩意儿库不太好搞。
+00:15 lh_mouse: 弄个回调 然后文档写明“用户自行处理数据，并且自行实现可任意位置中断并继续”
+00:15 lhanjian: 如果诸君的入门语言都是lisp，自然我的想法是没有任何意义的。问题是入门语言多是C系/Java/Python这类语言设计者自己语义都未必能搞明白的残废……
+00:16 FrankHB: 回调仍然不够底层。
+00:16 lh_mouse: 这不能划等号
+00:16 FrankHB: 回调运行的时候自己就对活动记录做了手脚然后改变了状态。
+00:17 lhanjian: 而且，就算是大家都像上个世纪一样那个靠lisp入门，也没法要求Intel抛弃X86汇编改行造LISP Machine
+00:17 lh_mouse: 我觉得指令式语言能否把用户从艹语法和资源回收这种吃力不讨好的脏活中解放出来算是衡量语言进步的标准之一
+00:17 FrankHB: :isp也没多少意义，Scheme的时候才撸的。
+00:17 lh_mouse: lisp 不是基于有穷自动机理论的
+00:17 lhanjian: 我是说lisp/scheme之类的可以比较自然地实现call/cc
+00:19 lhanjian: 现在我总算理解为什么羊驼子总是日复一日的和stack/register/perl鬼畜做斗争了
+00:19 lhanjian: 的->地
+00:19 Nangcr joined channel
+00:19 FrankHB: 这个不是大问题，大把玩意儿能抄，看你有没有空。
+00:20 lh_mouse: 函数式编程毕竟反人类
+00:20 FrankHB: 问题是大部分人根本就想不出这种浅显的问题。
+00:20 FrankHB: 指令式明显更反人类。
+00:20 lh_mouse: 你可以认为人脑是个 NFA
+00:20 lhanjian: 函数式反教育体制。
+00:20 FrankHB: 你平时吱吱都是嗟来食么。
+00:20 Nangcr: 函数式不挺好的
+00:21 Nangcr: 哪里反人类了
+00:21 FrankHB: 把需求编译成祈使句的序列就得消耗葡萄糖。
+00:21 lh_mouse: 人脑毕竟接近 NFA
+00:21 FrankHB: 问题不接近也白搭。
+00:21 lh_mouse: 目今指令式虽然实际上是基于 DFA 的
+00:21 lhanjian: 不知道哪国代码教育是先上函数式/LISP系语言的……
+00:21 lh_mouse: 没跟你讨论你的问题
+00:22 lh_mouse: 这里的问题是解决问题
+00:22 FrankHB: 解决问题的方法就是这种破事能扔给程序的就扔了。
+00:22 lh_mouse: 图灵机就是个 DFA  虽然这里还有两种模型 但是实际上等价
+00:23 FrankHB: 图灵机和现实机器差远了。
+00:23 FrankHB: 似乎用图灵机的解法连王 根都能找出槽点，有这么烂么。
+00:24 FrankHB: 得了，智商问题最终不会是什么问题。拙计的就自然选择掉了。
+00:24 FrankHB: 现在还有个问题就是实现烂。
+00:25 Nangcr quit:Remote host closed the connection
+00:25 FrankHB: 差不多所有能用的语言实现都是直接砍成几段做translation倒腾IL，就没个靠谱点的metacompilation system。
+00:26 lh_mouse: 造个语言吧
+00:26 FrankHB: 不是语言问题。
+00:26 FrankHB: 虽然语言也会是问题。
+00:26 Plough: 碎叫
+00:26 Plough quit:Quit: 碎叫
+00:26 FrankHB: 因为这样撸看来不方便利用现成品所以会有额外的成本。比如汇编器能用多少都是问题。
+00:27 FrankHB: 算了这种问题不用我来救，我还是先YSLib大法好吧。有空模拟个delimited continuation到DSL里。
+00:27 lh_mouse: 我最开始的想法是用 C 编译器做后盾
+00:28 FrankHB: 没用。
+00:28 lh_mouse: s,后盾,后端,
+00:28 lh_mouse: 有好处
+00:28 FrankHB: 还不如C--。
+00:28 lh_mouse: 很多库可以复用现成的
+00:28 lh_mouse: c-- 搞毛 没 RAII？
+00:28 FrankHB: 要高级没高级，要底层没底层，跟专业IL差远了。
+00:28 cleamoon__: 这不是语言的问题是什么的
+00:28 lh_mouse: 你那个叫 ++--C
+00:28 FrankHB: C--是Haskell的IL，实际上比C高级。
+00:29 lh_mouse: 没法复用现成的库没多少前途的  最多就能算是玩具
+00:29 FrankHB: 现成的东西从原理上来说都是玩具。
+00:29 lh_mouse: 毕竟很多库直接搬来头文件和 .a 就能用
+00:29 FrankHB: 维护者挂了有个bug你怎么对付.a。
+00:30 FrankHB: 二进制不兼容怎么办。
+00:30 lh_mouse: 你把高级语言翻译成 C 怎么会出二进制问题
+00:30 FrankHB: .a有C么。
+00:30 FrankHB: 而且C未必就不会有ABI问题。
+00:30 lh_mouse: 那是 C 编译器的问题
+00:31 FrankHB: C的代码就不保证可移植性。
+00:31 lh_mouse: 那不是我的问题
+00:31 FrankHB: 你生成可移植的代码也就只是用一个子集。
+00:31 FrankHB: 一个pack就够吐了。
+00:32 lh_mouse: 既然是作为 IL 使用当然可以决定子集里有什么
+00:32 lh_mouse: 当然也可以开洞允许用户直接操作 IL   后果自负就是
+00:32 FrankHB: 考虑到祈祷维护者长命百岁并且一直保持兴趣更不现实，想终极地解决这种问题，要么就是FSF一桶浆糊，要么就是全扔了。
+00:33 FrankHB: 所谓轮子安全性。总是有全栈的储备轮子。
+00:33 hope1` joined channel
+00:35 FrankHB: 就是.o都不喜欢自觉的你就别指望自觉发布IL了。也就是多了个源码外推诿的选择罢了。
+00:35 FrankHB: Sun：你看我们bytecode可移植多好blahblahblah……
+00:35 FrankHB: 真是没品笑话。
+00:36 xxxxxxxx: 笑话的品是啥...老听别人这么说
+00:36 lhanjian: 看来我的想法最终还是得用sjlj实现（虽然需要保存的寄存器更多）
+00:36 FrankHB: 大概算是一种表情的函数。
+00:36 hope1 quit:Ping timeout: 255 seconds
+00:36 lhanjian: 好在sjlj的实现一点不复杂，用内联汇编揉一个是小事
+00:37 FrankHB: 考虑受众，任何IL都没有码农直接接触的东西有建制。与其制造规范问题，还不如就地消灭DSL。
+00:37 FrankHB: 直接不用引入实质上的DSL，源码变换一下就当IL，最后自举生成二进制代码。
+00:37 lhanjian: IL全称是什么？
+00:38 FrankHB: intermediate language
+00:38 FrankHB: 只是要这样，源语言语义规则必须非常经凑，而且也不能总是太高级，所以最后也就剩Lisp/Forth之类的非主流了。
+00:39 FrankHB: 剩下的通通不顶用。
+00:40 FrankHB: 而且就这些语言来说也不是专门为这个优化的，所以也有一些拙计的地方。这也是刚才我提到语言会是问题的原因。
+00:42 FrankHB: 撸完这个首先直观的好处就是不用专门去撸什么JIT什么AOT乱duang了，根本就不用加特技pass，直接扩充库能达到相当于操作和翻译原有IL的效果。
+00:43 FrankHB: 其次，更重要地，趁着整个工具栈洗牌的情形有机会让现有的一些包袱彻底滚粗。
+00:44 FrankHB: ……体系结构自己滚不粗暂时没办法。
+00:44 lh_mouse: 对函数式编程我继续保留意见  不过照搬 LISP 语法造指令式我还是有一些兴趣的
+00:44 FrankHB: 造成GCC RTL这坨逗玩意儿么。
+00:45 FrankHB: 从体系结构的复杂程度来看也许指令式是适合汇编以下一般码农没法碰的层面了。
+00:46 lh_mouse: 汇编本身就是指令式的
+00:47 FrankHB: 这年头C艹的top level都变成一坨declaration了，C也妹类似。所以名义上还是declarative主流。至于FP，啥时候爱玩啥时候玩，只是不可能甩掉。
+00:47 lh_mouse: HDL 好歹不算很指令式
+00:47 lh_mouse: 组合逻辑电路不管怎么说都更像 FP
+00:47 lh_mouse: 比如移位操作
+00:47 FrankHB: 汇编不一定就是机翻机器码，不一定要直接造成指令式。
+00:48 lh_mouse: 你的意思是做成 HDL 那样？
+00:48 FrankHB: 体系结构的接口本身倒是指令式为主。
+00:48 FrankHB: HDL算是一种了。
+00:49 lh_mouse: 如果做成函数式高级语言虽然破事可能少点  但是不见得不如指令式麻烦
+00:49 lh_mouse: 外部负责语义上的“状态”导致接口膨胀  其余略
+00:49 FrankHB: 有的是会麻烦，因为硬件只公开指令式的接口。
+00:49 FrankHB: 比如I/O寄存器就得用volatile艹。
+00:50 FrankHB: 这点膨胀不在话下了。
+00:50 lh_mouse: 硬件上干掉时序还不现实
+00:50 FrankHB: 硬件以上能干掉就行了。
+00:50 lh_mouse: 尤其是考虑门电路的延迟时间  本身晶体管就是不能无视时序的
+00:50 lh_mouse: 于是怎么在时序电路上实现组合式的逻辑……
+00:51 lh_mouse: 反过来问题依然存在
+00:51 FrankHB: 体系结构以上的问题简化成“顺序”了，不过还是麻烦。
+00:51 lh_mouse: 时序电路上指令式破事比函数式少
+00:52 lh_mouse: 之前某人评价函数式编程  除了便于分布式以外确实没什么优势
+00:52 lh_mouse: 毕竟脱离现在的实现  而且难以掌握（当然这是被指令式洗脑的结果）
+00:52 FrankHB: 这是所谓纯FP么。
+00:52 lh_mouse: 我不知道是不是说纯 FP
+00:53 FrankHB: 不允许修改状态？
+00:53 lh_mouse: 约定数据是不变量   因此理论上是无限并发也不会有 data race
+00:53 FrankHB: 扯分布式上FP的估计就是。
+00:53 lh_mouse: erlang?
+00:53 FrankHB: Erlang不是，不过总的还是避免可变状态。
+00:54 FrankHB: 避免共享可变状态。
+00:55 FrankHB: 历史倒是真像王 根说的，纯FP是后面炒起来的，不过效果比OO险恶多了。纯OO也没厨到取代OO的地步（虽然OO本来流派和概念都混乱）。
+00:55 lh_mouse: 谷狗的搜索后端是什么语言写的
+00:55 FrankHB: C艹+py么。
+00:55 lh_mouse: 还是指令式
+00:55 lh_mouse: 纯 FP 怎么写 server
+00:55 hope1_ quit:Ping timeout: 256 seconds
+00:55 FrankHB: 你需要状态可以包装出state monad什么各种乱七八糟的。
+00:56 FrankHB: 我是没兴趣。
+00:56 lh_mouse: PY 是谁发明的  最开始算 DSL 么
+00:57 FrankHB: 某奇葩品味的G老头，似乎之前还有试作品abc。
+00:57 FrankHB: 看起来很早就标榜要通用了。
+00:58 lh_mouse: py 我倒是没用过
+00:58 cleamoon__: haskell对于数学系来说还不错
+00:58 lh_mouse: 不过我想问下有没有数组和结构形参默认传引用这种逗比设定
+00:58 FrankHB: 你要享受一下空格么。
+00:58 lh_mouse: 我就是问问
+00:59 FrankHB: http://www.douban.com/note/226827597/ 呵呵。
+00:59 lh_mouse: 这不还是和 JS 一样傻逼
+00:59 lh_mouse: （我见过的脚本语言都如此）
+01:00 lh_mouse: PHP 后来就算加了引用也没敢干掉数组缺省传引用这种逗比设定
+01:00 lh_mouse: 而且照抄了 C++ 的 syntax   越看越是四不像
+01:00 lh_mouse: 比如 function & foo(){ }
+01:00 FrankHB: 你要传值？那还真是Scheme大法好了。
+01:00 FrankHB: 不过甩不掉GC的玩意儿不会在严肃场合用。
+01:01 FrankHB: 拍黄片没兴趣。
+01:01 lh_mouse: 不是  没那么麻烦吧
+01:01 lh_mouse: 这地方不是 copy-on-write 不就完了么
+01:01 lh_mouse: 参考 __cxx1998::basic_string
+01:02 FrankHB: sigil问题和Perl以及某些早期的BASIC一样看着眼疼，这算是我个人原因。剩下的就是觉得C厨风格太浓烈不想糟蹋智商。
+01:03 lhanjian: C厨路过
+01:03 lh_mouse: 你说数组传引用那个么
+01:03 lhanjian: PHP？
+01:04 lhanjian: 想到数组传引用，就想起坑爹的poll(struct pollfd *fds, ...);
+01:04 lh_mouse: lhanjian, js 也是这样的
+01:04 lh_mouse: C 里没有引用
+01:04 lhanjian: 只有一个*让人错以为只传了一个结构体
+01:04 lh_mouse: 那是语法逗比  不是语义问题
+01:04 lhanjian: 按说不该是用**显得更有引用数组的意味么
+01:04 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.1/20150305221847]
+01:05 lhanjian: 比如说getaddrinfo的最后一个参数
+01:05 lh_mouse: 这地方不得不扯点别的破事    数组本来就不是作为一等公民存在的  在 C 里面连可修改左值都不是
+01:06 lhanjian: 碎叫
+01:06 lhanjian quit:Quit: Leaving
+01:06 lh_mouse: 我也睡了
+01:06 lh_mouse: 帝球吃鱼不
+01:07 FrankHB: 不吃。
+01:07 lh_mouse quit:Read error: Connection reset by peer
+01:25 cleamoon__: 耻球赶紧设计你的语言吧
+01:44 hope1_ joined channel
+02:19 hope1_ quit:Ping timeout: 256 seconds
+03:43 xxxxxxxx quit:Quit: Leaving...
+08:09 cleamoon__ quit:Read error: Connection reset by peer
+08:09 cleamoon quit:Read error: Connection reset by peer
+08:25 cleamoon joined channel
+08:33 Sleepwalking joined channel
+08:44 hope1 joined channel
+08:49 cleamoon quit:Read error: Connection reset by peer
+09:05 cleamoon joined channel
+09:13 lh_mouse joined channel
+09:16 Stevearzh quit:Remote host closed the connection
+09:19 Stevearzh joined channel
+09:32 marisa__ joined channel
+09:35 whatofor joined channel
+10:10 * lh_bot slaps marisa__ around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+10:17 marisa__: 好烦啊= =卡在纯语言问题上几天了，一直不知道怎么解= =
+10:17 * lh_bot slaps marisa__ around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+10:22 hope1: 什么问题？
+10:23 marisa__: Coq的。。。在stackoverflow上爬，有1Khit。。。
+10:24 marisa__: 简单的说就是 Coq 没有#include "../blablabla/whatever", 所以当我的Coq代码分布在不同的directory的时候就用起来很麻烦。。。
+10:27 lh_bot: 函数式语言吹了这么多年还是被指令式分分钟打脸
+10:27 lh_bot: 雷声大雨点小
+10:28 marisa__: Coq不是Yet Another函数式语言，Coq是为了证明各种定理的proof assistant，别搞混了= =
+10:28 lh_bot: 没兴趣
+10:35 marisa__: 我真是笨死了ORZ。。。看一下别人项目的Coq Code是怎么分在不同dir上面的就可以了，竟然傻傻的去爬1.2K个result。。。
+10:45 hope1: 没兴趣就别说什么打脸了
+10:48 marisa__: 另外顺带一提C++本身就可以当FPL用。首先FPL本身就没有明确定义，然后First class function, Expressive type system, Optional referential transparency, dependent type C++都有（别给我说只有pure的才是FPL，OCaml都不是Pure的，haskell之流还能FFI extension绕过去）,美中不足的就是type inference上的伤。
+10:49 hoxily joined channel
+11:07 hope1 quit:Ping timeout: 256 seconds
+11:10 marisa__: 噗，其他人竟然是把所有文件放同一dir然后手动搬运compile出来的东西
+11:10 Administrator joined channel
+11:10 Administrator quit:Client Quit
+11:14 whatofor: 手动好评
+11:18 lh_bot: hope1 搞不好和 marisa__ 一个学校的
+11:18 marisa__: 可能有引入make之类的script，不过太麻烦，我不想。。。烦死了，一个#include就C++完事的东西竟然要这么烦
+11:18 marisa__: hope1也是成外的啊？
+11:19 lh_bot: geordi: << mk('a'); int mk(char c){ return (c >> 6) | (c & 0x0F); }
+11:19 geordi: 1
+11:19 lh_bot: geordi: replace 'a' with '5'
+11:19 geordi: 5
+11:19 lh_bot: geordi: << mk('a'); int mk(char c){ return (c >> 4) | (c & 0x0F); }
+11:19 geordi: 7
+11:20 lh_bot: geordi: << mk('a'); int mk(char c){ return (c >> 3) | (c & 0x0F); }
+11:20 geordi: 13
+11:20 lh_bot: geordi: << mk('A'); int mk(char c){ return (c >> 3) | (c & 0x0F); }
+11:20 geordi: 9
+11:29 lhanjian joined channel
+11:35 * lh_bot slaps lhanjian around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+11:36 lhanjian: lh_bot, 早～
+11:36 lh_bot: lhanjian: ヲヲヲヲヲヲヲヲヲヲヲ
+11:38 lhanjian: 是m[0] == c0 && m[1] == c1 && m[2] == c2 && m[3] == c3比较快
+11:39 lhanjian: 还是把char 的 c0c1c2c3全部拼起来再m == c_int 比较快？
+11:39 lh_bot: lhanjian: __builtin_memcmp
+11:44 lhanjian: lh_bot, gcc文档里没仔细讲他的实现……
+11:44 lh_bot: lhanjian: 管它实现干啥
+11:47 cleamoon__ joined channel
+11:58 xxxxxxxx joined channel
+12:00 whatofor_1 joined channel
+12:03 whatofor quit:Ping timeout: 256 seconds
+12:11 whatofor_1 quit:Read error: Connection reset by peer
+12:13 whatofor_1 joined channel
+12:13 hope1 joined channel
+12:17 lhanjian quit:Ping timeout: 250 seconds
+12:22 lhanjian joined channel
+12:28 sismvg joined channel
+12:29 * sismvg ORC ORC oRc
+12:29 sismvg: 竟然算错了一元二次方程
+12:29 lh_bot: geordi: << is_trivial<foo>::value; struct foo { virtual ~bark(){ } };
+12:29 geordi: error: expected class-name before '(' token
+12:30 lh_bot: geordi: << is_trivial<foo>::value; struct foo { virtual void bark(){ } };
+12:30 geordi: false
+12:30 lh_bot: geordi: replace is_trivial with is_trivially_destructible
+12:30 geordi: true
+12:34 lhanjian: xmm寄存器有必要保存么？
+12:35 Plough joined channel
+12:39 lh_bot: 看 ABI
+12:40 lh_bot: linux 我不知道
+12:40 sismvg: 昨天面试的时候出了一道生日悖论的题目
+12:41 sismvg: 问的是同时有5个人生日相同时，一个房间里至少要多少人
+12:41 lhanjian: 不过LK的setjmp是没保存xmm之类的，只有r头的寄存器
+12:42 lh_bot: 看实现是否要求如此
+12:42 lh_bot: 如果所有的 xmm registers 都是 caller-saved 就不需要
+12:43 sismvg: 然后当场我就懵了
+12:43 sismvg: 我不会解一元五次方程啊。。
+12:44 lh_bot: longjmp 本身是函数调用  理论上来说可以无视 callee saved
+12:45 Plough: 同时有五个人生日相同时房间里不是最少五个人就够了么
+12:45 Plough: 五个生日相同的
+12:46 lhanjian: 感觉我想错了，sjlj已经可以保存足够的寄存器了。问题应该不在这里。
+12:46 lh_bot: lhanjian: 我还是建议你直接用 sjlj  别撸汇编
+12:46 lhanjian: 嗯
+12:46 sismvg: 不要歪了啊
+12:46 lhanjian: 我刚想打出上面那行呢……
+12:46 lhanjian: 问题还是和实现协程一样，怎么对付栈
+12:47 sismvg: 好吧，要有多少人在房间内才能让房间内的人有高概率5个人生日相同
+12:47 lh_bot: 你所谓的对付是什么意思
+12:47 Plough: 高概率是多高
+12:49 sismvg: C(k,5)1/365^4=1 <-这就是公式，但是我不会解..
+12:49 lhanjian: 可能还是想错了，用longjmp调走以后，是不会对栈上的内容做修改……
+12:49 sismvg: 少了个5!
+12:50 lh_bot: 外面看不出来就行
+12:51 lh_bot: geordi: -c using swap_int = std::swap<int>;
+12:51 geordi: error: 'swap<int>' in namespace 'std' does not name a type
+12:52 lh_bot: geordi: -c template<typename T> using swap_vector = std::swap<std::vector<T>>;
+12:52 geordi: error: 'swap<vector<_RealType> >' in namespace 'std' does not name a type
+12:52 lh_bot: geordi: -c template<typename T, typename U> void foo(T &, U &); template<typename T> using bar = foo<T, int>;
+12:52 geordi: error: 'foo<T, int>' does not name a type
+12:54 lhanjian: 我这么干和协程也没本质的区别……无非是把events[n].data.ptr指向jmp_buf罢了……
+12:54 sismvg: 一元n次方程原来在笛卡尔坐标系上可以画出个正n边形啊
+12:55 lh_bot: 作死的味道
+12:55 lh_bot: 用 C 无所谓了   C++ 一不小心就写错了
+12:55 lh_bot: 所以我单弄了个容器    存放 fd 和 session 的映射
+12:56 lhanjian: 看来还是和协程实现的问题一样，得保护好自己那块子栈……
+12:56 lhanjian: 还是耻球说的对，试图舒服地享受残废
+12:57 lh_bot: longjmp 只能保证 sp 和 ip 是对的
+12:57 lhanjian: 嗯。
+12:57 lh_bot: 实际上 ISO C 就说非 volatile 限定的自动变量的值是 indeterminate
+12:58 lh_bot: 解决方案不是没有  把 longjmp 用一个函数包起来即可
+12:59 lh_bot: 这样可以保证 callee saved 没事    caller saved 就算被覆写了一般也没多大问题
+12:59 lhanjian: longjmp只保存了8个寄存器。
+12:59 lh_bot: Windows x86 要求保存 ebx, ebp, esi, edi
+13:00 lh_bot: Windows x64 要求保存 rbx rbp rsi rdi r12-r15 xmm6-xmm15
+13:00 lh_bot: 虽然 longjmp 保存起来貌似没多大意思
+13:01 lh_bot: 反正没人保证一定可移植
+13:01 lhanjian: LK setjmp保存了rbx,rsp,rbp,12,13,14,15,si。（rax应该不需要保存）剩下的就是di,si,dx,cx,r8,r9,r10,r11
+13:03 lh_bot: rax 怎么保存
+13:03 lh_bot: rax 是 setjmp 的返回值
+13:04 lh_bot: linux 的 ABI 里面貌似 si di 都是参数
+13:04 lhanjian: 对的
+13:04 lhanjian: di应该用不着保存。setjmp的caller已经保存了
+13:04 lh_bot: 估计是当年为了寻址方便
+13:05 lh_bot: setjmp 不是函数
+13:05 lh_bot: 哪来的 caller
+13:05 lhanjian: setjmp怎么会不是函数？
+13:05 lh_bot: setjmp 可以被［实现］为函数
+13:05 lh_bot: setjmp 是个宏
+13:05 lhanjian: 哦，我这里不管。我假定是GCC LK x86_64实现
+13:06 lhanjian: 反正也没指望着用了setjmp还能跨平台
+13:06 lh_bot: 我的意思就是说你别指望 setjmp 会乖 乖保存 caller saved
+13:06 lhanjian: 所以还是得自己手写汇编造一个？
+13:06 lhanjian: http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/arch/um/sys-x86_64/setjmp.S
+13:06 lh_bot: 不是那个意思
+13:07 lh_bot: setjmp 之后就别指望局部变量嫩用
+13:07 lh_bot: 要用就 volatile   或者干脆把 setjmp 用函数包起来
+13:07 lh_bot: 这地方有点坑
+13:07 lhanjian: 包起来是个好主意。
+13:08 lhanjian: user_function() {setjmp_wrapper(jmp_buf) {setjmp(jmp_buf))} ?
+13:08 lh_bot: WG14 N1570 7.13.1.1 The setjmp macro
+13:09 lh_bot: 大概这样：   void coro_interruptable_point(struct coro_t *coro){ if(setjmp(coro->buf_top) == 0){ longjmp(coro->buf_bottom); } }
+13:10 lh_bot: -e s,top,ret, -e s,bottom,call,
+13:11 lhanjian: 嗯，这个是正当的做法。哦，对，忘说了，setjmp之后，本来就是要直接跳走的，不能继续往下执行……
+13:12 lhanjian: 所以我的做法和协程也没多大区别……无非就是把epoll_wait塞进去当coro调度器了
+13:12 lh_bot: 这个地方可以叫做纤程
+13:12 lh_bot: 确实没多大区别
+13:12 lh_bot: 不过这个地方真的很坑  慎入
+13:13 lhanjian: 不过如果性能比reactor损失不大，也许真能舒服点享受残废……
+13:13 lh_bot: 那么问题来了  什么性能
+13:13 lh_bot: 处理器性能   还是数据库性能   还是网络性能
+13:14 lh_bot: 多协程对于处理其性能只会起副作用
+13:14 lhanjian: 我就是说处理器性能……
+13:14 lh_bot: s,副,负,
+13:14 lh_bot: 哦艹
+13:14 lh_bot: 这就是我之前提到过的问题
+13:15 lh_bot: 我说  两千万家在线  CPU 利用率恒定在 30% - 40% 无法提高
+13:16 lh_bot: 这是我之前遇到过的实际问题  他们写数据库是直接把玩家数据拼接成 SQL 然后同步写入的   玩家每更新一个字段都会写一次   所以绝大部分处理器时间都浪费在了 IO 上
+13:16 lhanjian: 可是理想的状况不就是让软中断（IO）用满CPU么
+13:16 lh_bot: 这种问题才需要多协程  当然 根本问题还是数据库那个地方他们写得烂
+13:16 lh_bot: CPU 等 IO 的时候是睡眠的
+13:16 lhanjian: 在大多数系统，数据库本来就是瓶颈……
+13:17 lh_bot: 不一定  写烂了当然是瓶颈
+13:17 lh_bot: 多协程是用来解决网络负载问题的   
+13:17 lhanjian: 哦，对。只有IO不断有响应，减少睡眠时间，这样才能让软中断撑满CPU。如果睡过去没反映，就上不去了
+13:17 lh_bot: 数据库那个地方  简单优化一下就是延迟写入 + 写入合并
+13:18 lh_bot: 五秒钟之内玩家数据修改一百次  只写入一次数据库
+13:18 lhanjian: 数据库中间层之必要性……
+13:18 lh_bot: 这几个问题里面处理器性能瓶颈反而是最容易解决的
+13:19 lh_bot: 你说 memcache 这东西么？
+13:19 lh_bot: 数据库操作写烂了  神 cache 也没用
+13:19 lhanjian: 应该有好多种中间层
+13:19 lh_bot: 本来他们写的就烂  倒不是我说他们  
+13:20 lhanjian: 主要就是让开发水平不济的伙计，能无脑地做他们想要的naive的写入操作
+13:20 lh_bot: 加了中间层就能解决问题？
+13:20 lh_bot: 加了中间层  所以写烂了就没关系了？
+13:20 lh_bot: 让写烂东西那伙计滚出才是硬道理。
+13:21 lh_bot: 接口上为什么要提供 SQL？写错了，注入了，谁来负责？
+13:21 lh_bot: 而且为什么改一个字段就写一次数据库？
+13:21 lhanjian: 据说很大公司就是这么“解决”（缓解？）问题的。naive的操作让中间层的伙计去头疼。毕竟像耗子这样的coder太难找，太难请。倒不如两三个靠谱的耗子家搞中间层+后台，一对不靠谱的脑残继续他们的naive同步写
+13:21 lhanjian: 一堆
+13:21 lh_bot: 难道不解决这些问题，指望一个 memcache 啥啥啥，就能解决问题？
+13:22 lhanjian: lh_bot, 不能解决，但可以缓解。
+13:22 lh_bot: 于是变成鸵鸟战术。
+13:22 lh_bot: 我认为原来那种接口应该砍掉，弄成 poseidon 那样。
+13:23 lh_bot: 用个什么 DSL 生成一个结构，提供异步写入的接口。
+13:23 lhanjian: lh_bot, 也不算鸵鸟，中间层往往可以这么干。脑残们继续他们的SQL同步写。你在中间层解析掉SQL的语义，拒绝安全威胁明显的语句，性能垃圾的给他们自动化合并或者怎么怎么队列，然后最后写给数据库。
+13:23 lh_bot: 比如  auto obj = make_shared<my_mysql_object>(); obj->set_foo("foo"); obj->set_bar("bar");
+13:23 lh_bot: 于是中间层还得造一个 SQL 解释器么。
+13:23 lhanjian: 你这样也是解决方案(workaround)的一种吧。
+13:24 lhanjian: lh_bot, 这是我的设想。不过实践中确实很多SQL防火墙（？）。
+13:24 lh_bot: lhanjian: 上面两个 set 但是最后只会写入一次
+13:25 lh_bot: 最近几年因为 prepared statement 的流行，貌似没怎么挺过 SQL 注入攻击了
+13:25 lh_bot: 不过 PHP 嘛……大概十几年前还会有。
+13:25 lh_bot: 手动拼接 SQL 的我又不是没见过，那伙计真逗。
+13:25 lhanjian: 嗯，不过道高一尺魔高一丈。毕竟SQL还是在，还是有办法绕过各种限制的。
+13:25 lh_bot: SQL 烧饼。
+13:25 lhanjian: SQL SB++
+13:26 hope1 quit:Ping timeout: 256 seconds
+13:26 lh_bot: SQL 这里也可以仿照 socket 那样弄异步
+13:26 lhanjian: ++
+13:30 hope1 joined channel
+13:30 lh_bot: hope1: 摸头
+13:31 lhanjian: hope1, 揉
+13:32 varna joined channel
+13:32 varna: Plough: 肛
+13:32 varna: xxxxxxxx: 爆
+13:32 Plough: varna: 爆
+13:32 lh_bot: 羊来了
+13:32 varna: Sleepwalking: 掘
+13:33 varna: Youmu: 撬
+13:33 lhanjian: varna, 炸！
+13:33 lhanjian: varna, 哈哈哈，羊驼子没发现我
+13:33 Plough: 漆已经开始派送了
+13:33 Plough: 武藏还在广州到青岛的路上……
+13:33 xxxxxxxx: 350 30 400 401 这个公式有人试过么...
+13:33 varna: lhanjian: 你不是今天值班么
+13:33 varna: xxxxxxxx: 这造什么的
+13:33 xxxxxxxx: 飞龙
+13:33 varna: ...
+13:34 lhanjian: varna, 话说把epoll.data.ptr->setjmp_buf怎么样
+13:34 varna: 我普建就没造出过正航
+13:34 varna: lhanjian: 为何要这么逗
+13:34 Plough: 我出过
+13:34 xxxxxxxx: 我造出了50铃
+13:34 Plough: 那天发疯太太十连赌
+13:34 varna: 首先如果是Linux, SJLJ不如ucontext
+13:34 Plough: 最后一发出了加贺
+13:34 varna: 然后我不明白你要搞什么
+13:34 lhanjian: varna, ucontext连手册都没了……
+13:34 varna: 彻底废弃了？
+13:35 varna: 还真TM没了……
+13:35 lhanjian: varna, 总之man ucontext 和 man ucontext.h都没了。
+13:35 varna: 我升内核之后没查过……
+13:35 varna: 那就别SJLJ了，手写个吧……
+13:35 Plough: 废了干嘛啊……
+13:35 varna: ucontext确实是废弃API中的一种
+13:35 varna: 看来现在彻底被砍了
+13:36 Plough: 是废弃API我倒是知道
+13:36 Plough: 不过为啥废弃，懒得维护？
+13:36 xxxxxxxx: 今天试了3发那个公式 结果出了神通 五十铃 飞鹰
+13:36 lhanjian: varna, 用epoll_wait搭配setjmp，不是又能发挥比较好的性能，又能不用蛋疼地撸func(void *arg)了么
+13:37 varna: 你要干什么
+13:37 lh_bot: 看起来是 proactor
+13:38 varna: proactor老实回调去
+13:38 lh_bot: lhj 说是 reactor
+13:38 varna: reactor的事件回调无所谓，但我看不出来为什么要强行SJLJ
+13:38 varna: 然后翻了下log, 槽点太多，懒得吐了……
+13:38 lhanjian: 好吧……
+13:39 lhanjian: 惨……
+13:39 lhanjian: varna, 还有昨晚的log……你也看看？
+13:39 yzld2002 joined channel
+13:39 lh_bot: yzld2002: 揉揉
+13:39 varna: 我不是说你们那些
+13:40 varna: 主要说PLT的部分
+13:40 varna: 至于你的“完全恢复到某个状态”，我不明白你为什么要如此提
+13:41 varna: 而call/cc, 那东西不是什么恢复状态，而是改变未来
+13:41 varna: 一个狭义的前提是“未来是一等的”
+13:42 varna: ……为何这士力架一股尿味……
+13:42 xxxxxxxx: varna 你果然是舔过内裤...
+13:42 varna: 肛旗原味
+13:43 varna: 演习对手长门底下放一个雪风，动画neta好顶赞
+13:45 varna: 00:12 lhanjian: 我自认为的建设性应该在，怎么样构建出一个一些人能舒服地上手的残废call/cc
+13:45 varna: ^ 问题是你要的真是call/cc么？
+13:46 lhanjian: varna,  显然我错了
+13:46 lhanjian: 我误解了耻球的意思
+13:46 varna: 如果你想降格call/cc, 实际上可以以CPS公式代替一等call/cc
+13:46 varna: 但看上去这不是你要的
+13:47 lhanjian: 我想我只是要epoll_wait+coroutine罢了。
+13:47 varna: 以我的理解，你似乎要一个串行化的迫真异步框架
+13:47 lhanjian: varna, 嗯……
+13:47 varna: 我的建议是这里如果如此考虑，还是彻底异步为好
+13:47 hope1 quit:Ping timeout: 246 seconds
+13:48 lhanjian: 为啥……
+13:48 varna: epoll返回之后切一个协程和调一个回调的差别，你认为是什么
+13:48 varna: 我就说个事情
+13:49 varna: epoll毕竟是notification, 不是IOCP
+13:49 varna: 那么你需要从IO部分拿一些缓冲出来
+13:49 varna: 然后把这些缓冲交付业务
+13:49 varna: 也就是说，这里你需要一个彻底的多入口
+13:49 lhanjian: 嗯
+13:50 varna: 带参数带返回值的resume和yield
+13:50 lhanjian: 如果缩小一点适用范围，也许不能那么彻底……
+13:50 varna: 但为何不用一个按状态迁移的状态机框架？
+13:50 varna: 一个回调或者闭包（如果你支持如此做）就够了
+13:50 varna: 而这里毕竟是C（我假设你用C）
+13:51 varna: 你如何给出原型不定的resume和yield?
+13:51 lhanjian: 因为状态机的event_handler = xxx_foo. event_handler_args = xxx_args;然后到处都是这种东西。并且xxx_foo里面还得各种状态判断
+13:51 varna: 然后你就把整个状态机压在一个coro里面么
+13:51 lhanjian: 大概是这个意思。
+13:51 varna: 每一个yield上其实还有一个判断
+13:51 varna: 你只是君子远庖厨了
+13:53 lhanjian: 没懂……
+13:53 varna: 你节省下了更新当前事件处理回调的判断步骤
+13:53 varna: 但只要一个DFA节点上的出度不止1，那个判断还是要写进coro的
+13:54 varna: 而你鼓励一个协程在框架无法管理的地方膨胀
+13:54 varna: 这是否好，我没法说
+13:54 lhanjian: 什么是“框架无法管理的地方”？
+13:54 lhanjian: 出度是啥意思……
+13:54 varna: 比如说这个状态机有k个状态
+13:55 varna: 先前这k个状态以k'个回调的形式为框架所知
+13:55 lh_bot: 出度是有向图上给定节点向外指的路径数量
+13:55 varna: 在改写成coro版本之后，框架知道的就是resume那个协程
+13:55 varna: s/路径/边/
+13:55 lhanjian: lh_bot, Tks
+13:55 lh_bot: 哦好的   边
+13:56 varna: 路径可能因为分叉而变多
+13:56 varna: 说实话你的想法其实挺有诱惑力
+13:56 varna: 不过我不太确认把一个老大不小的coro就这么塞过去是否真好
+13:56 varna: 而且还有一个问题
+13:57 varna: 考虑整个会话处理结束的时候
+13:57 varna: 你的框架如何知道结束了？
+13:57 varna: 你是否需要约定特别的返回值？
+13:57 lhanjian: 什么是整个会话结束？
+13:57 lhanjian: 给个具体的情景吧…………
+13:58 varna: 我觉得这够具体了
+13:58 varna: 比如业务逻辑决定自己的工作结束了
+13:58 varna: 此时应当通知框架进行一系列注销工作
+13:58 varna: 比如清理fd、定时器、杂七杂八
+13:58 lhanjian: 让框架给出一个接口吧
+13:58 varna: 这跟没说一样
+13:58 varna: 再仔细一点
+13:59 lhanjian: 假定是http response 完毕，羊驼你来提出难点在哪儿吧……
+13:59 varna: 我说了
+13:59 varna: 现在显然是框架有个resume
+13:59 varna: 那么如何从这个resume上判断业务结束
+13:59 varna: 你是否需要注册一个元信息？
+14:00 lhanjian: 我对 resume/元信息 理解不够……求解释……
+14:00 varna: 你知道你的多入口多出口协程如何使用吧
+14:01 lhanjian: 嗯……
+14:01 varna: 那么为何对resume有疑问
+14:01 varna: 我觉得这里咱俩的理解有差别
+14:01 xxxxxxxx: 我看到的是后面的六个点
+14:01 varna: 你撸多了
+14:02 lhanjian: parse: rv = parse(input),if (rv == need_more_data_from_client) Read();goto parse;);
+14:02 lhanjian: Read()应当由框架提供。
+14:02 varna: 这什么鬼
+14:03 varna: 为什么混入了goto...
+14:04 lhanjian: 只是这么举个例子……这个是user自己的逻辑，不是框架的一部分……
+14:04 varna: 我只说框架
+14:04 varna: 框架里IO通知到达时的业务逻辑应该类似retval = resume( coro, blah blah blah )
+14:05 varna: 而coro没有权限撤销自己占有的资源，比如定时器和其他元数据
+14:05 varna: 但它需要通知框架整个业务逻辑结束
+14:05 varna: 这样框架可以关fd、回收资源
+14:05 lh_bot: 看着好疼
+14:06 varna: 毕竟你这个是串行化的
+14:06 lh_bot: 我说有 goto 那个
+14:06 varna: goto那个是作死
+14:06 varna: 如果这种东西出现在了epoll上的业务逻辑里，那就真乐了
+14:06 Plough_ joined channel
+14:07 lh_bot: Plough_: 摸头
+14:07 varna: 一个托管在框架上的DFA居然自己开始问框架要数据，不管这里是否真读了
+14:07 Plough quit:Read error: Connection reset by peer
+14:07 lh_bot: Plough: 摸头
+14:08 varna: 这里应该有一个显式状态迁移才对（或者退一步，这里是NFA, 而有一个eps转移）
+14:08 Plough: lh_bot: 捏
+14:08 lh_bot: （开心）
+14:08 varna: 我也捏耗鼻
+14:08 lh_bot: >.<
+14:09 Plough: 我觉得我必须得找找键盘抽风的原因了
+14:09 Plough: 没事来这么一下简直要命
+14:09 varna: 你外接的键盘？
+14:09 lhanjian: varna, 我想实现的就是“问框架要数据”的异步实现（？），同步多线程的时候，如果数据没到，然后直接上read么(假设是个简单的ECHO SERVER，对方还没发出 EOF）
+14:09 varna: 同步多线程是怎么回事
+14:10 lhanjian: 多线程那几个字拿掉吧
+14:10 Plough: 内置
+14:10 varna: 为何一个同步的reactor框架上的逻辑会问框架要数据
+14:10 Plough: 我觉得是软件问题
+14:10 varna: 为何不是数据经过filter流到逻辑
+14:10 Plough: 因为windows下从来没问题，Arch就两三天来一次……
+14:10 varna: 如果不够就等下一次数据
+14:10 varna: 你的状态转移应当支持这一点
+14:11 varna: 同步reactor的基本是数据从IO多路复用流下去，如果你这时候倒打一耙，我认为是没有正视自己的前提
+14:11 lhanjian: 假定这个简单的Server是为了完成如下任务CLIENT: HELLO!END SERVER: HI!END
+14:12 varna: 我不说你的具体问题
+14:12 Plough: 我开个watch dmesg好了
+14:12 varna: 你太沉迷于这个具体的步骤，以至于忘掉了自己的设计
+14:12 varna: 为何你要用reactor, 能说出来么
+14:12 lh_bot: 刚我就说 lhj 那个怎么看怎么像 proactor  但是自己说是 reactor
+14:12 varna: 对
+14:12 varna: 他在要完成的数据
+14:12 lhanjian: 我想，我混淆了reactor和epoll_wait……
+14:13 Plough: 先更新下内核看看
+14:13 lhanjian: 昨晚也犯了这个错误
+14:13 lh_bot: 如果 epoll_wait 调度协程就是标准的 proactor
+14:13 lh_bot: 这里的关键区别就是谁来执行 read() 
+14:14 lhanjian: 如果真的是这样，那我就只是脑洞出了一个轮子……
+14:16 varna: 00:25 FrankHB: 差不多所有能用的语言实现都是直接砍成几段做translation倒腾IL，就没个靠谱点的metacompilation system。
+14:16 varna: ^ metacompilation还是对meta而非first-class的妥协啊……
+14:22 sismvg quit:Ping timeout: 272 seconds
+14:23 lhanjian: 烦闷……
+14:23 Plough: 喔
+14:23 varna: WO
+14:23 Plough: 田宫有航巡版毛嘎米……
+14:23 varna: 哦哦哦
+14:23 varna: 这个好
+14:24 varna: MOGAMINKO!
+14:24 Plough: 1:350 价格554
+14:24 varna: 价格在1:350里似乎算可以的
+14:24 Plough: +
+14:24 varna: 虽然这个比例就是贵
+14:24 lhanjian: 我滚去把asio的echo_server再看看……
+14:24 Plough: 350的和700的价格能差出十倍……
+14:25 varna: 至于今天凌晨小耗有关C做IL的例子，我举一个：Vala
+14:25 Plough: 富士美700扶桑只要1200
+14:25 Plough: 350的得1.4k……
+14:25 varna: Vala是个仿C#语言，实现成C
+14:25 Plough: 120，打错
+14:25 varna: 提供一种叫vapi的机制，允许用户介入IL引入C库
+14:26 varna: 这方面我跟小耗持类似的观点，也即这种半吊子的ABI/高级语言方言兼容性带来的灵活是可以接受的
+14:26 varna: 这确实不长久，但有多少东西是长久的呢
+14:26 Plough: 这个是田宫的新350
+14:27 Plough: 里面有底板和船底，可以自选做成水线或完整版
+14:27 Plough: 也送蚀刻片
+14:27 varna: 做水线太坑，不过看起来很良心啊
+14:27 Plough: 良心+
+14:27 varna: 蚀刻片都有
+14:27 Plough: 毕竟一分钱一分货
+14:27 varna: 对着这个撸常夏舰队的话……
+14:28 Plough: 老版350就没有蚀刻片……
+14:28 varna: 神最上！最上位！
+14:28 Plough: 你要不要考虑攒攒钱……
+14:29 varna: 其实我只是一直不在这种事情上动用存款
+14:29 Plough: http://img.vim-cn.com/be/10e14cda4a151eef8b884e4df6eb82e4e8682f.jpg
+14:29 varna: 过段时间再说吧，说不定会降价（梦）
+14:29 Plough: 233333
+14:29 Plough: 毛嘎米似乎轻巡重巡航巡都有
+14:29 varna: 噗？最上能带这么多飞机的？
+14:29 Plough: 隈隈子我只看到过轻巡版
+14:30 Plough: 我查查
+14:31 varna: 11机/2弹射器……
+14:31 Plough: ……
+14:31 varna: 日本人的笑话有时候比意大利人的难懂，但好笑程度明显高一个档次……
+14:32 varna: 不过这个看着真的很不错啊
+14:32 Plough: 比如“我给你讲个笑话，IJN的损管”？
+14:33 varna: 过段时间
+14:33 varna: 等有心情了再说吧
+14:33 Plough: 飞机我不确定送不送
+14:33 Plough: 可能得单独买
+14:33 varna: 我赌五毛不送
+14:33 Plough: 噗
+14:33 Plough: 富士美的瑞云三架就要73……
+14:34 Plough: 零水侦两架96
+14:34 Plough: 这什么鬼价钱
+14:34 varna: 我摆几个蜜柑箱子在上面写个“瑞云 from HYUGA”算了
+14:34 Plough: 23333333
+14:35 varna: 450空
+14:36 varna: 而且这个要的颜料种类似乎不多啊（虽说多的大概就是航母？）
+14:37 Plough: 我看看
+14:37 Plough: 15种，我建议你找下涂装图纸看看哪些可以不要……
+14:38 Plough: 大概细节上要的比较多，大片的应该就那么几种
+14:38 varna: ……其实我前段时间才知道各种地方用的军舰色不一样
+14:38 varna: http://waterline.fanweb.jp/gunkanshoku.html
+14:38 Plough: 我要是入的话得买瓶佐世保工厂色
+14:39 xxxxxxxx: 瑞云 from HYUGA?
+14:39 Plough: 另外上网查了下开箱，板件里面有飞机……
+14:39 varna: 啊，有飞机就好
+14:39 varna: 那就是大良心作
+14:39 Plough: http://www.moxing.net/uploadfile/2010/0902/mogami/32e4ce41ebd1462172f05d24.jpg
+14:39 Plough: 403的话我重传下
+14:39 varna: 没403
+14:39 Plough: 那就中
+14:39 varna: 给涂个450空……
+14:40 Plough: 233333
+14:40 lh_bot: 塑胶的哇。
+14:40 varna: 毛嘎敏没有金属模型的吧
+14:40 Plough: 没有舷外电路，这个得自己买
+14:40 lh_bot: 塑膠。
+14:40 varna: 重巡装备消磁电路么？
+14:40 Plough: 这种船金属的一般质量都比较悲剧的吧……
+14:40 varna: 我记得除了战舰，只有后期造的巡洋舰才有那东西的？
+14:41 Plough: 我查查
+14:43 varna: 10:48 marisa__: 另外顺带一提C++本身就可以当FPL用。首先FPL本身就没有明确定义，然后First class function, Expressive type system, Optional referential transparency, dependent type C++都有（别给我说只有pure的才是FPL，OCaml都不是Pure的，haskell之流还能FFI extension绕过去）,美中不足的就是type inference上的伤。
+14:43 Plough: 似乎没找到，大概是开箱的那位搞错了？
+14:43 varna: ^ C++哪里有参考透明性
+14:44 varna: 然后Lambda是一等函数？类型跟函数都不一样，逗我？
+14:45 varna: 然后连value究竟该是什么都说不清楚，这伙计是跟近年FP的风跟晕了么
+14:45 varna: 还type inference...
+14:45 varna: Type Inference自己都解决不好自己，我觉得暂时忘掉它也没什么不好
+14:45 varna: FP未必静态未必强类型
+14:45 lh_bot: lambda 是一等不是函数
+14:45 varna: 对啊
+14:46 varna: C艹的Lambda和函数不是一个东西
+14:46 lh_bot: 不过我觉得把引用和模板掰扯明白是啥更重要
+14:46 varna: 我觉得这么强行FP简直是跟风跟迷糊了
+14:46 varna: 多读点书少读点知乎比较有救
+14:46 lh_bot: 而且 C++ 缺乏函数式编程的“函数”的概念   我不知道 __attribute__((__pure__)) 能不能指望的上
+14:47 varna: FP未必拒绝副作用
+14:47 lh_bot: 之前有人问为什么 cmath 的很多东西都没法做到 constexpr
+14:47 lh_bot: 比如 fabs pow sin
+14:47 varna: constexpr毕竟是个受限的partial eval
+14:47 lh_bot: 答案就是 这些函数要求在输入 NaN 啥啥的时候设置 errno   我去他大爷的
+14:48 varna: errno只要一上，partial eval算法立即失效
+14:48 varna: 那些算法的能力其实比C艹的规定要强，只不过还是静态的
+14:48 lh_bot: 好像没有 fabs 
+14:49 lhanjian quit:Ping timeout: 264 seconds
+14:51 varna: 怎么说呢……现在的FP追捧者简直跟听滥大街的流行歌曲一样，做的事情近乎争论陈××和周××哪个更犀利
+14:51 varna: 这是我看了比较愤怒的地方
+14:51 Plough: 果然
+14:51 Plough: 田宫的2013版武藏只有一个板件是2013的
+14:51 Plough: 其他都来自1979……
+14:52 xxxxxxxx: 陈冠希和周永康?
+14:52 varna: 他们不在意算子，不在意算律，不在乎值，不在乎从（副作用的）语义到（代数的）语义的翻译方式，而最后只剩下了空洞的口号
+14:53 varna: 这样没法操作事物的FP有什么趣味呢……
+14:53 lh_bot: 突然觉得放糖的咖啡好难喝
+14:53 varna: 你该买点豆
+14:54 varna: 咖啡还是苦的好
+14:54 lh_bot: 不是豆   罐装黑咖啡
+14:54 lh_bot: 只有咖啡
+14:55 varna: 口味如何
+14:55 varna: 发酸不
+14:55 lh_bot: 不酸
+14:55 varna: 那还好
+14:55 lh_bot: 水多了会酸
+14:55 varna: 不过大概有人喜欢喝酸一点的
+14:55 lh_bot: 麦斯威尔不容易酸  鸟窝容易酸
+14:55 hoxily quit:Read error: Connection reset by peer
+14:55 varna: 有些逼格高的咖啡会标明苦和酸的程度
+14:55 varna: 鸟窝的大概就是偏酸的口味，他们的都那样
+14:56 hoxily joined channel
+14:56 lh_bot: 是的  不过我无所谓的
+14:56 varna: 后来速溶的我更喜欢麦斯威尔一些
+14:56 lh_bot: 速溶的鸟窝能喝？
+14:57 lh_bot: 七毛五和一块多的能比么
+14:57 whatofor_1: 以前去网吧通宵 就靠速溶的雀巢
+14:57 varna: 我在速溶鸟窝的某个口味里成功喝出尿味
+14:57 lh_bot: プ
+14:57 lh_bot: 羊驼是不是胖次闻多了
+14:57 xxxxxxxx: varna 你成功从两种食品里品尝出尿味了..
+14:58 varna: 那个咖啡伴侣里绝对有尿味……
+14:58 lh_bot: @陈良乔
+14:58 varna: 我去年去北京的时候曾经有个悲剧的故事
+14:59 varna: 坐动车快下车了，我左边一对母子（小孩估计一岁多点），右边一个妹子
+14:59 lh_bot: 妹子
+14:59 varna: 妹子的行李放地板上
+14:59 varna: 然后小孩尿了，车一拐弯，尿流过去，都没来得及提起来……
+14:59 varna: 就这么辟邪了
+14:59 xxxxxxxx: 结果呢?
+14:59 lhanjian joined channel
+15:00 varna: 结果我还是个处男
+15:00 xxxxxxxx: 没有 "我跟你什么仇什么怨" 么...
+15:00 FrankHB: varna: first-class靠语言设计就能搞定，没什么大不了的。meta一直是问题。
+15:01 Plough: 最近富士美的700系列似乎还可以
+15:01 varna: FrankHB: 问题是只要依赖meta就意味着语言有语义无法解决的要求，而在这时放弃了语义构造转向meta——我认为这跟没解决问题一样
+15:01 Plough: 而且富士美的新预涂装大和是板件预上色
+15:01 varna: 喔喔喔喔
+15:01 varna: 1:700预上色大和！？
+15:02 FrankHB: marisa__: C艹的那个include也是impl-def。自己艹实现。
+15:02 Plough: 据说是玩具向
+15:02 varna: ...
+15:02 varna: 为何省力的东西都是坑呢
+15:03 Plough: 免胶预上色，你想想细节能好到哪去……
+15:03 varna: 就这尿性我还不如做3D模型玩去，至少成本少……
+15:04 Plough: http://imgsrc.baidu.com/forum/pic/item/faa47051f3deb48ff893a1f4f41f3a292cf57884.jpg
+15:04 Plough: http://imgsrc.baidu.com/forum/pic/item/d6576cde9c82d158f357eca2840a19d8bd3e42ae.jpg
+15:05 xxxxxxxx: 改造成宇宙战舰兄贵号 
+15:05 varna: 看着好悲剧
+15:05 Plough: 我查查价钱
+15:05 varna: 而且为何预上色不涂密封帆布……
+15:05 varna: 糊弄人的啊……
+15:06 Plough: 150
+15:06 varna: 看来就是坑人的
+15:06 Plough: 大概是面向打算在两天以内搞个大和出来的初中生？
+15:06 varna: 但是如果有些颜料能把它伺候得再好点（何必呢）
+15:06 Plough: 23333
+15:06 xxxxxxxx: 面向6岁以上的吧
+15:06 Plough: 有些颜料的话不如买富士美之前的大和
+15:07 Plough: 据说富士美的考据比田宫好些
+15:07 Plough: 缺点是装起来比田宫还麻烦，各种拆分……
+15:07 varna: H.B.Flankoi 爱风自可撩碧池。转@清水桃香 清风何必扰清池?
+15:07 Plough: 噗
+15:07 Plough: 富士美有超大和……
+15:07 varna: 水雷战队才是男性的浪漫啊
+15:08 xxxxxxxx: 超大和是啥宇宙战舰么...
+15:08 Plough: 51cm炮三基六门
+15:08 varna: 设计装备试制51的超战舰
+15:08 Plough: 要我说的话，都开始脑洞了不如脑洞个五基十门前三后二……
+15:08 xxxxxxxx: varna 我觉得你只是喜欢鱼雷的形状
+15:08 varna: 会翻船的
+15:08 Plough: 造大点就可以了
+15:09 varna: 我估计他们处理不了那么大的工程
+15:09 Plough: 反正是脑洞
+15:09 varna: 实际上46都造不好的
+15:09 Plough: 超大和现在没有多少资料吧
+15:09 varna: 所以51三连装更是不可能的事情
+15:09 Plough: 我这是连装版，不然就不用五基了
+15:09 varna: 然后再考虑动力……我觉得日本做不到这程度
+15:10 varna: 美国大概可以吧
+15:10 Plough: 十门51一轮齐射轰Iowa头上，简直爽翻
+15:10 FrankHB: varna: C长久过头了。
+15:10 Plough: 美国人是16in神教徒……
+15:10 varna: 美国人相信命中
+15:10 varna: 毕竟46的散布是1km
+15:10 varna: 加了HOI似乎是800m
+15:11 Plough: 要相信天闹黑卡的神力
+15:11 varna: 天闹黑嘎对虾虎有特别的理解
+15:11 xxxxxxxx: 我想到robocraft里面如何建造一个靠谱的T10载具 首先造个大方块 驾驶员在最中间 然后选择武器的位置 剩下的位置摆满推进器 然后就稳了
+15:11 varna: 他还发过论文的
+15:11 Plough: ……什么鬼
+15:12 Plough: 富士美似乎喜欢玩合体
+15:12 Plough: 扶桑山城连装啊
+15:12 varna: 明仁天皇是研究生物学的
+15:12 FrankHB: varna: 无法解决当然就扔给用户了。解决多了也没意义。
+15:12 Plough: 比叡雾岛所罗门连装啊
+15:12 Plough: 长门陆奥连装啊
+15:12 Plough: 武大连装啊……
+15:13 Plough: ……现在的天皇怎么这么不正经
+15:13 lhanjian: varna, 搞错了，ucontext应该没干掉。XXXcontext那几个函数的手册还在。当然POSXI2001就把他remove了
+15:13 varna: FrankHB: 我倒觉得试图让语义驱逐meta有其意义所在，虽然现行难度太大
+15:14 varna: 我用ucontext的时候已经是废弃API了
+15:14 lh_bot: geordi: << auto(foo); int foo = 1;
+15:14 geordi: error: invalid use of 'auto'
+15:14 lhanjian: 不过POSIX推荐使用posix thread真是牛头不对马嘴
+15:15 FrankHB: varna: 王根那时候所谓的one language么。
+15:15 FrankHB: 改实现就够疼了。
+15:15 lh_bot: POSIX crap.
+15:15 FrankHB: posix呵呵呵。
+15:16 lh_bot: linux 蛋疼过
+15:17 varna: FrankHB: 他的onelang只是lisp而已，对语义并无改进
+15:18 xxxxxxxx: 我觉得刚才那个大和造更大更大口径炮的想法很符合robocraft中实用的设计理念 只要又大又硬 射起来猛就行了
+15:18 varna: 或者说yinwang只是试图认为被阉掉了abstraction的utlc可以藉由语义自举实现unity, 然而他忽略了这个模型的诸多问题
+15:18 varna: 比如不得不以原语偷渡语义，从而在实质上进行了语义的进一步引入
+15:18 xxxxxxxx: 基本可以当作自己在设计一根屌
+15:18 varna: 以及求值模型的不确定性（虽然其实极难形式化求值模型）
+15:18 sismvg joined channel
+15:19 lh_bot: 再大再硬被一发铝热反装甲航弹丢脑袋上什么结果？
+15:20 varna: 说起铝热自然是三式弹（笑）
+15:20 varna: 我并不追求one language, 但我希望看到一个更富于表现力的语义系统
+15:21 varna: 同时我猜想这样的语义系统其实会引起比用户运用元编程时更大的混乱
+15:21 lh_bot: 正所谓功夫再高 也怕菜刀
+15:21 xxxxxxxx: lh_bot: robocraft里面有奶妈 只要武器在往前顶就行了
+15:22 xxxxxxxx: 两队配置基本上都差不多
+15:22 Plough: 噗什么鬼
+15:22 Plough: 富士美还出了北上回天母舰？
+15:23 varna: 我见过
+15:23 xxxxxxxx: 只要能顶住 开战位置能让队友排开输出就稳了
+15:23 varna: robocraft这游戏为何如此邀击
+15:24 xxxxxxxx: varna 因为队友这样配合最简单
+15:24 varna: ...
+15:25 varna: 另外听说鱼雷世界最近的雷击问题有所改善了？
+15:25 Plough: 没关注……
+15:25 varna: 据说用战舰的玩家们开始懂得先打幼女/孙子
+15:25 varna: 如果是这样的话，实在太北上了
+15:26 varna: 强行先打驱逐舰
+15:26 varna: Term: Kitakamical
+15:27 xxxxxxxx: T10一队带一只TX-1的就是要先打孙子
+15:27 Plough: 2333333
+15:27 xxxxxxxx: TX-1硬到你根本不可能秒掉他
+15:27 varna: 我觉得我哪天应该借学手工之名去肛了肛旗
+15:27 varna: 生米煮成熟饭之后就各种方便
+15:29 xxxxxxxx: T10的输出不高但是只要能集火对面的T10是瞬间秒的 然后输出的小弟被清掉了 大哥只能被骑脸
+15:30 xxxxxxxx: 然而之前我在玩的时候大家都在打TX-1的肉盾
+15:32 xxxxxxxx: 而且最可怕的是队友不知道先点武器
+15:32 Plough: 别做梦
+15:33 Plough: 我手肯定比你残，这点想都不用想
+15:34 xxxxxxxx: Plough: 最大输出最高的武器 大小和一个低级小车一样大
+15:35 varna: 我手比较僵硬，不像肛旗揉软的小手
+15:35 varna: 妙高这MVP太危险了……
+15:36 varna: 虽说只掉了一次，但手法实在奇妙诡异
+15:36 varna: 摩耶的模爬衮打还让人看到希望，妙高总让我觉得要飞了
+15:36 varna: 还好练到七十级就够
+15:37 lhanjian: 又淡定地坐了一下午
+15:38 lh_bot: 东西南
+15:38 varna: 请允北
+15:39 lh_bot: 没有北
+15:39 varna: 你不老实，夹你
+15:40 * lh_bot slaps var	 around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+15:41 xxxxxxxx: 六门TX-1和六门T10的对比就像战舰和轻巡 完全不是一个级别 感觉两门TX-1一门T10火力上基本可以和六门T10对抗
+15:42 varna: 是啊，伊势和神通完全不是一个级别……
+15:47 sismvg quit:Remote host closed the connection
+15:49 lhanjian: varna, 突然想起来，羊驼说不要用朴素的多出入口的例程去毒害服务器是怎么回事
+15:50 varna: 我认为这可以变成一个状态机，而未必要去用并不安定的SJLJ类似物
+15:52 varna: 但是我习于玩火自焚
+15:52 varna: 所以其实这只是我对别人的建议
+15:53 lh_bot quit:Ping timeout: 250 seconds
+15:54 lhanjian: varna, 可是有啥不能变成状态机呢……
+15:54 lh_bot joined channel
+15:55 varna: lhanjian: 不是那个意思
+15:55 varna: 另外我举一个例子
+15:56 varna: \x.\y.(x y) (u v) 这就不能
+15:56 varna: 你可以用一个状态机对其求值，但你只得到了一个求值路径而已
+15:56 xxxxxxxx: varna 不是伊势和神通那种... TX-1伤害 7182 自带二连 T10 4253
+15:57 varna: 我只是很奇怪你为何执念于协程，而不是一个状态机接口
+15:58 lhanjian: 有些伙计确实应付不来回调不是么……
+15:59 lh_bot: 不会写回调的拖出去打死
+15:59 lhanjian: 我自己当然是没什么特别的困难感。就算有，也是两年前的事情了。
+15:59 varna: 把自己列入用户列祖列宗的感觉一定不错
+15:59 lh_bot: 用不稳定实现兼容智商就是自己捉急了
+15:59 lhanjian: varna, ………………
+15:59 varna: 一个不稳定的实现应当追求更奇妙的目的
+15:59 varna: 而不是兼容用户的程度
+16:00 lh_bot: 如果实现足够稳定并且简化语法，我滋瓷你。
+16:00 lh_bot: 这我可以明确告诉你。
+16:00 varna: 问题是C coro照样会有大坨的参数打包
+16:00 lhanjian: lh_bot, 突然念起M$的好了。至少这些东西早就有了，而且还可用。
+16:00 varna: 而且你很难拿出合适的resume-yield
+16:00 varna: fiber不是coro
+16:00 varna: 你想清楚
+16:01 lh_bot: 我就说一点  m$ 的 fiber 很疼
+16:01 lhanjian: varna, 是没有多出入对吧……
+16:01 varna: 微软的fiber同样不提供resume-yield语义
+16:01 varna: lhanjian: fiber是近乎用户线程的东西
+16:01 lhanjian: 嗯……
+16:01 varna: 难道你以为那玩意会让你方便地做一个一函数状态机？
+16:01 varna: 我觉得难……
+16:02 lhanjian: 至少在最需要（？）的地方（read block/connect block/write block)……
+16:02 lh_bot: 理想的 coro 只有两个接口 resume 和 yield
+16:02 varna: 你搞错了
+16:02 varna: 如果你需要这个，你应该适配epoll使它变成proactor接口
+16:02 lh_bot: yield 是把控制权丢给调度器——但是你想 M$ 的接口，丢给谁？
+16:02 varna: 或者你需要伪fork-on-connection, 那么你要的是goroutine
+16:03 varna: 如果你都不要这些，那么你需要的就是resume-yield
+16:03 iyzsong: 你们玩的是delimited continuation么? 怎么听起来和racket的web server差不多
+16:03 lhanjian: +-+
+16:03 varna: iyzsong: 只是讨论下一般的用法，我觉得引入delimited continuation作为一等控制流在C里不合适
+16:04 iyzsong: C怎么引..
+16:04 varna: 如果你强行艹汇编的话能得到一个受限的接口
+16:04 varna: 可能还有至少16B的返回值
+16:05 varna: 附赠目测够用的整数和浮点参数
+16:06 varna: 而lhj的困惑，窃以为主要在于他一方面习于epoll和reactor, 一方面又觉得用户逻辑应当有资格IO
+16:06 varna: 同时他又后天地拒绝fork-on-connection的变体
+16:06 iyzsong: 感觉做serialiation好复杂
+16:06 varna: -ize + ation
+16:06 varna: 这个词多用于序列化而非串行化
+16:07 lhanjian: varna, 羊驼子说的一点没错……
+16:07 iyzsong: typo  序列和串行不是一个意思？
+16:07 varna: 当然这里并非真正的串行化——一个本格的串行化是一个通信顺序进程的求值结果
+16:07 varna: 序列化是处理对象使之便于传输的
+16:07 varna: 串行化这个术语则用于描述处理并发工序的方法
+16:09 iyzsong: OK~
+16:09 iyzsong: 明白了 thx
+16:11 marisa__: varna, 说的一等函数当然是template + functor, referential transparency const constexpr啊= =
+16:12 varna: 你搞混了一点
+16:12 iyzsong: marisa__: 跪模板元编程狂魔
+16:12 varna: 哦不对
+16:12 varna: 你搞混了三点
+16:12 varna: 我倒着说吧
+16:12 iyzsong: 2333
+16:12 varna: 首先是参考透明性
+16:12 varna: 一个constexpr是部分求值（partial evaluation）的结果
+16:12 varna: 大概你读过这方面的论文，我就不介绍了
+16:13 lh_bot: template 这种逗比东西什么时候有资格算一等了
+16:13 varna: 换言之，constexpr不具有任何意味的constness
+16:13 varna: 仅仅是它可以静态求值，但这无关语义
+16:13 varna: 第二点
+16:13 varna: 参考透明性意味着名字和值的等同
+16:13 varna: 在一个明确引入副作用的语言里，这做不到
+16:13 varna: 至于一等函数
+16:14 varna: 当函数、函子、L表达式具有同样类型的时候再跟我说这个吧
+16:14 varna: 而当你说到模板的时候，注意模板是一个因为用户介入而半可计算的System I
+16:14 varna: 但另一方面，模板同时也具有类型构造子的语义
+16:15 varna: 它并不解决函数、函子、L表达式类型的同一性
+16:15 varna: 只引入了残缺的代数类型和一个必须实例化的System F实现
+16:15 varna: （System I是黑yinwang, 别太在意）
+16:15 marisa__: 一等函数说的只是"可以当参数，返回，做变量的东西"，这为什么需要consistency？
+16:16 varna: 那么问题来了
+16:16 varna: 你的FP中没有“值”的概念
+16:16 varna: 还是说，你的函数定义允许异于函数的函数？
+16:16 varna: 或者说，你希望函数类型能够退化为指针类型？
+16:17 varna: 另一个可能，你甚至不定义变量、值、名字三者的差异？
+16:17 marisa__: 异于函数的函数指的是？
+16:17 varna: 一等这个术语的基础是值
+16:17 varna: 比起函数这一术语的同一性或者唯一性
+16:17 varna: 我更在意为何同样的事物在具有不同值的情况下被强行同一
+16:18 varna: 当你指出“xx、yy、zz的东西”的时候，你的语言中失去了值
+16:18 varna: 失去了值则失去了本愿的求值
+16:18 varna: 而失去了求值，为何要探讨calculus或者computation?
+16:19 varna: 同样此时为何要引入一个已经不存在的Functional?
+16:19 varna: 意义可以经由类型偷渡，但值可以么？
+16:19 marisa__: OK,但是各种type erasion  不行没？ std::function<>早就在标准库了啊
+16:20 varna: 这跟type erasion不同
+16:20 varna: 或者说，你的所有程序都可以由std::function写成（这可以）——但你无法抹杀类型系统的污点
+16:20 varna: 存在被转换的raw/implementation-based function
+16:21 varna: 而最后，何谓value仍然暧昧不清
+16:21 varna: 这并非对于pattern的探讨——calculus高于pattern
+16:21 varna: 我觉得大概这是你我对于FP观点的根本差别
+16:23 varna: 当然说实话，这其实是个观点差别，而我也只是对我不赞同的观点提反对意见而已
+16:23 varna: 不是所有人都在意把东西翻译成（不是变成）代数的
+16:23 marisa__: varna, system I是什么？我search result没有relevant的
+16:23 varna: marisa__: 这是在黑yinwang
+16:24 marisa__: whatever, 反正不是什么需要去查的资料啊？
+16:24 varna: 他的所谓System I实际上是忽视了System F的let polymorphism引入之后的H-M
+16:24 varna: 未必
+16:24 varna: 这里我黑了yinwang和两个类型系统
+16:25 varna: 当然我估计type inference的爱好者们大多都抱着远观而不亵玩的态度所以你可以不管
+16:26 lhanjian quit:Quit: Leaving
+16:26 varna: 这就跟monadic approach的爱好者们自己不少从来没手算过单子基本性质一样
+16:26 marisa__: 是yinwang内篇自称找到了let-polymorphism的坑的内篇？
+16:26 varna: 当然他们可以用（偷渡了名字的）参考透明性来偷渡单子的一个性质——即bind和return互逆
+16:26 varna: 是
+16:26 varna: 那个坑人人都知道存在
+16:27 varna: 但是只要他把全称量词提前，这就是System F
+16:27 varna: 而System F意味着什么，大概你知道
+16:28 varna: 当然其实rank-2多态是可以的，不过欲壑难填啊
+16:28 marisa__: 你说的是Girard Paradox?
+16:28 varna: 我说的是System F的类型推论不可判定
+16:28 marisa__: 好吧。。。
+16:29 varna: 实际上参考透明性这个说法也是或多或少被偷渡了的
+16:29 varna: 这涉及到语言如何看待变量、名字和值三者的关系
+16:30 varna: 一个典型的强行补天的例子就是haskell
+16:31 varna: 注意对单子M的算子return和bind
+16:31 varna: 应有 bind f return = f
+16:31 varna: 对一个典型的代数来说，这没问题
+16:31 varna: 变量、名字、值是同一的
+16:31 varna: 但对一个程序来说这就未必了
+16:32 varna: 当用名字偷渡参考透明性的时候，单子性质不能完全满足
+16:32 xxxxxxxx: 每天来到云南瑞丽国门前的游客，都会发现一个身穿红色长裙的缅甸变性人“阿桔”。“阿桔”今年28岁，五年来几乎天天来瑞丽，没人教就已经学会了汉语，每个游客跟她合影需付费10元人民币。当节日游客很多时，她一天能挣到1500元以上。不过，她一个人要养一个大家庭，他们远在仰光。
+16:32 xxxxxxxx: ^我还以为只有泰国兴这个...
+16:32 varna: 不过其实这不是一个很悲剧的问题，因为大部分人便会忽略这里
+16:33 marisa__: 说的是所有monad都不能完全满足还是部分monad有这个坑？我Coq里面照样实现了maybe，List，这个law手动证明了符合了啊
+16:33 FrankHB: varna: referential transparency本义只是针对expression（更确切地，redex）来说的，让RT针对整个语言似乎还就是纯FP厨的陷阱，这里是你搞反了。
+16:34 marisa__: FrankHB, C艹的那个include也是impl-def。自己艹实现。自己艹实现是什么意思。。。
+16:34 varna: marisa__: monad处理副作用
+16:34 varna: FrankHB: 问题是单单f一字是否一个expression? 我这里不打算取redex
+16:35 marisa__: IO?
+16:35 varna: 主要是IO
+16:35 varna: 或者对haskell来说主要如此
+16:36 iyzsong: 还有保存状态、串行化操作 o.o
+16:37 FrankHB: marisa__: 对于C艹来说你非得要加特技可以自己duang的意思。
+16:37 varna: 至于Maybe和Either, 其实还算是不错的单子示例了
+16:37 FrankHB: 严格来说，不保证到处能用。只不过普遍能用所以习惯了罢了。
+16:37 varna: 大概我从味道上比较喜欢的单子就是Maybe
+16:38 FrankHB: varna: 毫无疑问，当然是expression。
+16:38 marisa__: HB,没读懂特技只的是什么
+16:38 iyzsong: Maybe I'm a Just X.X
+16:38 varna: FrankHB: 所以这里其实会被偷渡一个有状态的表达式进去
+16:38 FrankHB: marisa__: 实现预处理器，在遇到#include的时候可以任意夹带私货。
+16:39 varna: 比如对一切f保持bind f return = f, 此时取f是getLine, 其中getLine :: M String
+16:39 marisa__: 。。。卧槽
+16:40 varna: 这里只有workaround, 没有正面的解决之道了
+16:41 varna: 不过我并不是purify的坚定支持者，只是觉得如果能在更多的地方引入更多的代数会比较有趣味而已
+16:42 xxxxxxxx: 卧槽轮形竟然没有大破我 我要转运了?
+16:43 varna: 黏连不绝五腋雨 急湍最润扶她川
+16:43 xxxxxxxx: 扶她? 川?
+16:44 Plough: 一天演习下来两千三百多弹药飞了出去
+16:44 Plough: 简直爽
+16:45 varna: 原译文：绵延不绝五月雨 急湍甚润最上川
+16:45 varna: 松尾芭蕉的
+16:46 xxxxxxxx: 那扶她怎么回事...
+16:46 varna: 最上毕竟穿裤子
+16:46 marisa__: varna, 那const呢？
+16:46 iyzsong: 就知道futa >.<
+16:46 * Plough 正在研究从零造船模
+16:46 xxxxxxxx: 红旗平时也穿裤子
+16:47 Plough: xxxxxxxx: 但是扶他是你不是我
+16:47 xxxxxxxx: ^大概
+16:47 iyzsong: Plough: 你还需要一些'一'
+16:47 varna: marisa__: 首先constexpr非const, 其次const不能推广为value, 而在lvalue rvalue xvalue都混杂的情况下，我不知道你如何解释变量、名字、值以及参考透明性（这是否必要另论）
+16:48 varna: 而实际上我们可以如此推广
+16:48 varna: 令单子类型构造子C构造const类型
+16:48 xxxxxxxx: Plough: 我没说你是扶她 我的意思是最上应该也不是扶她
+16:48 Plough: 我和毛嘎米性别又不一样
+16:48 varna: 从而C可以在使用C的表达式中传染真正的constness
+16:48 varna: 但这并没多少意义
+16:49 FrankHB: 重新回顾了上下文，RT和一等没关系，这个没问题。问题有两点：constexpr因为有一些强制性要求还就是能RT；以及RT并不要求到处purify。
+16:49 varna: 第一个问题还是不存在
+16:49 varna: constexpr是被强行提升成语义的体系无关优化
+16:49 FrankHB: C艹这里是没法在f里塞进去状态的，违反的下场大概是no diagnostics required（233）。
+16:50 FrankHB: 体系无关优化提升为语义也无所谓。
+16:50 varna: 于是语义变成了试图排除怪物的杂烩，这方法论太惨
+16:51 FrankHB: 否则语义应该是什么呢。
+16:51 varna: 谁知道呢，所以我只攻击这个方法论
+16:51 lh_bot: 帝球现在也每句都加一个句号了。
+16:51 lh_bot: 真像我。
+16:51 FrankHB: 噗。
+16:51 varna: C艹用户习于语义之法典，我不那么看好这种虚假的建设性
+16:51 FrankHB: 你自己挖10年前的贴子看看谁像谁。
+16:52 varna: 像我。
+16:52 FrankHB: ……哪个号有10年来这。
+16:52 varna: 我加了特技。
+16:52 FrankHB: C艹就没什么干净的语义。
+16:53 Plough: 反正不像我
+16:53 FrankHB: 对于C艹，在实现（修订成文标准这个行为，不是指语言的实现）以外这种方法论大概没什么可取的地方，这个是真的。
+16:53 FrankHB: 原因是C艹的东西太乱了。
+16:54 Plough: 我的习惯是长贴里加句号，楼中楼最后一句不加句号，IM不加句号
+16:54 varna: 你的习惯是不穿裤子
+16:54 FrankHB: 这不表示它和选择哪些东西作为语义合理或不合理有直接关系。
+16:54 Plough: 你的习惯是不闭合肛门
+16:54 FrankHB: 腔肠动物门泥嚎……
+16:54 varna: 我觉得这是在为无限引入语义辩护
+16:55 FrankHB: 首先我是明确反对无限引入语义的，不过主要原因是上面所谓的实现。
+16:55 varna: 无论引入语义背后的需求，首先实用此类方法论构建出来的语言本身就不具有适当的核心（谁有呢）
+16:55 whocares_2 quit:Ping timeout: 272 seconds
+16:55 varna: 不过这个问题的起源是语言最初并不期望此类系统，而狂信者们希望从各种角度对这一行为进行适当的粉饰
+16:56 FrankHB: 有两个。1.已经有的历史包袱。2.方法论本身。这两个是靠引入再多语义也一下子改变不了的。
+16:56 xxxxxxxx: 卧槽 通常不都是说谁儿子像谁占便宜的么 你们两个怎么说帝球像自己...
+16:56 varna: xxxxxxxx: 爆
+16:57 varna: 把这两个（后一个甚至是meta的）作为核心，我觉得是混淆了理论核心和实践关注点的界限
+16:57 FrankHB: 不管是引入语义还是发明什么黑科技，正确姿势之一是能取代的旧货就砸烂。很遗憾，C艹在这里太寒碜了。
+16:57 varna: 不过这么说下去比较神棍了，所以我率先打住
+16:58 FrankHB: 神棍又不新鲜……https://en.wikipedia.org/wiki/Metasystem_transition
+16:58 whocares_2 joined channel
+16:59 lh_bot: 我懒得加句号只是因为没有按空格方便     但是英文句子本来空格就多  所以还是加句号
+16:59 varna: 此类神棍方法不导致领域内可见的结果之结果论的改进（说着我撸了几下）
+16:59 * lh_bot 手指头太长
+16:59 FrankHB: 历史包袱是无敌的。
+17:00 * lh_bot 一把抓住 Plough 粘乎乎的小手就咬了一口
+17:00 FrankHB: 管你神棍不神棍。
+17:00 FrankHB: 顺便，智商环境算是历史包袱之一。
+17:00 varna: 所以最后这还是成功从一个哲学问题回到了一个工程问题
+17:00 varna: CS的悲剧
+17:00 sawfish joined channel
+17:01 sawfish: 求不烦
+17:01 sawfish: 你们无论如何打不赢我的
+17:01 xxxxxxxx: 为何粘糊糊?
+17:01 varna: xxxxxxxx: 上面有我的米青
+17:01 Sleepwalking quit:Read error: Connection reset by peer
+17:01 FrankHB: 把正太黏出去了？
+17:01 varna: 米尻酱是药娘
+17:02 marisa__: 话说xym是不是来过这？
+17:02 varna: 是
+17:02 sawfish quit:Client Quit
+17:02 varna: T2怎么了……
+17:02 marisa__: 好吧，just curious
+17:02 xxxxxxxx: 然后就像T2一样发现似乎没人理自己就跑了
+17:02 FrankHB: 我记得ban过吧。
+17:02 Plough: 噗
+17:02 Plough: 这干什么
+17:03 iyzsong: 0 0
+17:03 marisa__: T2 是sawfish？
+17:03 varna: 是
+17:03 xxxxxxxx: 最近也不知道T2怎么回事.....
+17:03 Plough: T2看不看log的
+17:04 varna: 不知道
+17:04 varna: 但是看不看log, 最近提到他也只在他出现前后……
+17:05 varna: 妙高走神中
+17:05 Plough: 我才发现我没登录
+17:05 xxxxxxxx: 这样每天上来说些谁都听不懂的话不谈论也难...
+17:06 varna: 而且现在被弹范围扩大了啊
+17:06 varna: 一开始只是针对我的不是
+17:07 Plough: 我看看哪天他能烧到我头上
+17:07 xxxxxxxx: 安拉胡阿克巴 我是自己人
+17:07 Plough: 先说好，我他妈不是圣母玛利亚
+17:07 Plough: 我懒得管他受了什么刺激
+17:07 FrankHB: 什么情况。
+17:07 Plough: 惹到我头上直接ban
+17:07 iyzsong: 不明围观中 - -
+17:07 varna: 现在都直接用“你们”了
+17:08 Plough: 我就看看他明天放什么屁
+17:08 Sleepwalking joined channel
+17:08 FrankHB: ……没关键字，人肉扫log也没注意。
+17:08 varna: Sleepwalking: 爆
+17:08 FrankHB: 爆
+17:08 Plough: 爆
+17:08 varna: FrankHB: 你是用肚子上的肉扫log的么……
+17:08 marisa__: SW你被什么录了？
+17:09 xxxxxxxx: 我比较介意这一句 17:39 sawfish: 就是安利，能放我妹子们一马么？
+17:09 xxxxxxxx: T2 现在妹子也有们了...
+17:10 whatofor_1 joined channel
+17:11 varna: 我对这种现象的唯一解释是他在玩舰娘
+17:12 Plough: 2333333333
+17:12 Plough: 所以你上了他妹子么
+17:12 marisa__: 所以你们打不赢他指的是演习没。
+17:12 whatofor quit:Ping timeout: 246 seconds
+17:12 Plough: 然后他日常赌那珂老出长门太太小姨子所以受不了了？
+17:12 xxxxxxxx: marisa__: 难道你也是舰队狗....
+17:13 marisa__: 不，我是东方厨
+17:13 FrankHB: 好吧，大概是我中间掉了不知道剧情。。。
+17:13 varna: 频道好久没开展东方活动了
+17:13 marisa__: 那有舰队狗会自称雾雨魔理沙的
+17:13 varna: marisa__: 要不你来个yyc e攻封低封……
+17:13 marisa__: 但是我朋友全是舰队狗，老是给我看演习= =所以到现在都知道舰队是干啥的了
+17:14 xxxxxxxx: 我似乎见过演习里面有东方厨
+17:14 varna: 我攻封试过低封试过，但两个合起来只到过四面……
+17:14 marisa__: 手癌，就过了yyc e 
+17:14 Plough: 你朋友演习用的什么配置
+17:14 varna: 你朋友演习用的什么配置
+17:14 Plough: 是不是天天都是刚造出来的不值钱的大和？
+17:14 marisa__: 很久以前看的了，都忘了
+17:14 varna: 我觉得是
+17:15 marisa__: 就记得有一个吹雪有一个二傻有一个二改有点正太样的名字不知道是什么的
+17:15 Plough: 我试过低封中避阿波罗，只能避Easy
+17:15 Plough: Z3？
+17:15 varna: 果然欧皇
+17:16 Plough: 正太样，二改，Z系没跑了
+17:16 varna: 太可怕了
+17:16 marisa__: 不知道，我又不玩怎么可能记得清嘛，问他好了
+17:16 Plough: 果然可怕
+17:16 varna: 你也玩就好了
+17:16 Plough: 跳跳跳
+17:16 Plough: 舰娘大法好
+17:16 varna: 不妨碍你每天早上起来练习弹幕
+17:16 marisa__: = =不好意思我身体不好，肝不了游戏
+17:16 Plough: 那就休闲地大建
+17:16 Plough: 我跟你讲，大建很好玩的
+17:17 Plough: 你进去随便点一发，然后就能看见八个小时了
+17:17 marisa__: 我也一年左右没打东方了= =早就变成本子厨
+17:17 varna: ...
+17:17 xxxxxxxx: 然而我不看船本
+17:17 varna: 现在的东方厨真是……
+17:17 varna: 不过说起来，th15还是遥遥无期吧
+17:18 marisa__: 。。。没时间啊= =我自己不知道为什么就开了40个programming坑，每一个都可以填N千行
+17:18 Plough: 神主肯定偷偷入了舰娘坑
+17:18 marisa__: hhhhh
+17:18 varna: 四十个？
+17:18 marisa__: 是
+17:18 varna: wow, 我是不是该膜拜大神呢……
+17:18 Plough: Orz
+17:18 Plough: 涂料明明早上就开始派送了，结果现在都没影……
+17:18 marisa__: 。。。坑王属性，每个完成度都几%...
+17:18 varna: 我还是该膜拜一下
+17:19 * Plough 扑咚
+17:19 xxxxxxxx: 窜稀一般 脱肛而出 身后都是坑 orz
+17:19 varna: 在阁下的面前，我觉得我毕生所学有如吃了所多玛核弹一击的盐巴纷纷落下
+17:19 varna: 以至于我身上的咸鱼味道都淡了很多
+17:19 marisa__: ...完成度这么低有什么好稀罕的orz
+17:19 varna: 这是在黑你
+17:20 marisa__: 我知道= =
+17:20 Plough: 原来你当了咸鱼是因为回头看了一眼罪恶的大建船坞？
+17:20 varna: 不，是我回头看了一眼5-5
+17:20 Plough: 5-5又没吃核弹
+17:20 Plough: 不然为什么我会被劝退
+17:20 varna: 我一直懒得开坑
+17:21 varna: 想法归想法，很多想法还是太不成熟
+17:21 varna: 这两个月我能把QPN和Subjective Bayesian的理论坑挖出来就不错了……
+17:22 varna: 好歹用正经的充分性和必要性对脆弱的贝叶斯网络上对称关系打个脸
+17:22 marisa__: 。。。我的坑最坑的都是各种书的Coq证明。。。Coq基本库东西太小，导致要写什么都是要先证一推sequence/hlist/blablabla的东西才能开干。。。
+17:22 varna: 当作个沽名钓誉的谈资什么的
+17:23 varna: 说起来你在做ATP啊，最近有什么有趣的论文没
+17:23 marisa__: 没有，最近一年中半年都在学Coq
+17:23 varna: 前几天楼下有个语义学会议，去看了下标题还是坑人
+17:24 varna: marisa__: 没人发ATP方面的论文了么……
+17:24 marisa__: 。。。不知道，但是ATP不是很久以前就冷了没，这么鬼的复杂度
+17:24 varna: ATP一直有人做
+17:24 varna: 实际上基础方法的研究一直都很冷
+17:25 varna: 举例来说，说ML热的基本都是胡乱拿个算法用了的……
+17:25 Plough: 我发个疯
+17:25 Plough: 401公式一发
+17:25 marisa__: 还以为你说的是formal method= =好吧
+17:26 varna: 你可以试试真格地研究一下，写写论文什么的
+17:26 Plough: 3:20
+17:26 marisa__: thx,出去吃饭了。
+17:26 Plough: 再加一小时
+17:26 marisa__: varna,你什么大学的？
+17:27 varna: 羊腿大（Lambda Univ）
+17:27 xxxxxxxx: 专业大概是羊鱼养殖与咸鱼制作
+17:28 Plough quit:Quit: Lost terminal
+17:28 xxxxxxxx: Plough quit (Quit: Lost terminal)
+17:28 xxxxxxxx: 红旗的arch大概又炸了
+17:28 marisa__ quit:Quit: Leaving
+17:32 varna: 应该把这个摩罗沙腌制成药娘
+17:32 varna: 他看起来很受
+17:34 xxxxxxxx: 驱逐到底会改谁呢...
+17:34 xxxxxxxx: 有人猜改从云
+17:35 Plough joined channel
+17:35 varna: 希望是矶波，不过我猜是白雪
+17:35 Sleepwalking: http://us.tdk-lambda.com/lp/about/university.htm
+17:35 Plough: dmesg里什么也看不出来
+17:35 varna: 噗，还真有……
+17:35 Sleepwalking: varna: 是个造电源的公司
+17:36 varna: 为何不是TDN-Lambda
+17:36 Sleepwalking: 1948年的时候有TDN？
+17:37 xxxxxxxx: 因为白雪好看么?
+17:37 Plough: 总之上次出事前内核已经更新了
+17:37 Plough: 我看看这次还抽不抽
+17:37 varna: 白雪大概是四月份吧
+17:37 xxxxxxxx: Plough: Arch炸了?
+17:37 Plough: 炸了
+17:37 varna: Sleepwalking: 不要质疑Van, 他从古日暮里的石井时代开始就存在了
+17:37 Sleepwalking quit:Read error: Connection reset by peer
+17:38 Plough: 停在CPU里好好的，突然咣当一下
+17:38 Plough: 第三个模组扶摇直上三千里
+17:39 xxxxxxxx: 贝多VAN
+17:40 varna: VAN诺伊曼
+17:50 Plough: 涂料到了
+17:54 Plough: 卖家还送了一管强力胶……
+17:54 xxxxxxxx: 多余的你可以用来给羊驼治疗局部问题
+17:55 varna: xxxxxxxx: 爆
+17:55 Plough: X-20A水性漆稀释剂
+17:55 Plough: 6mm遮盖带
+17:55 Plough: 10mm遮盖带
+17:56 Plough: 牙膏补土，盒子扁了……
+17:56 varna: 还有不到四十场的样子
+17:56 varna: 今天打得很悠闲啊
+17:56 Plough: 送了一大张1500号砂纸
+17:57 Plough: XF-10
+17:57 Plough: XF-9
+17:57 varna: XM8
+17:57 Plough: XF-2
+17:57 Plough: XF-11
+17:57 varna: M224
+17:57 Plough: XF-12
+17:58 Plough: XF-25
+17:58 varna: XM29
+17:58 Plough: XF-56
+17:58 Plough: XF-78
+17:58 Plough: XF-63
+17:59 Plough: X-12
+17:59 Plough: X-5
+17:59 Plough: X-2
+17:59 xxxxxxxx: ZGMF-X10A
+17:59 Plough: X-10
+17:59 Plough: XF-1
+17:59 Plough: X-7
+18:00 Plough: 以及七只笔
+18:00 Plough: 啊，还有两瓶
+18:01 Plough: XF-53
+18:01 Plough: XF-75
+18:05 lhanjian joined channel
+18:06 xxxxxxxx: http://puu.sh/gJfSw/9ce1cbd042.jpg 太无情了...
+18:08 Plough: 少买了一瓶X-11……
+18:08 Plough: 等武藏到了我再看看要不要补
+18:20 xxxxxxxx: 然而今天南西四连进boss之后最后一次又死活不让我进了...
+18:23 xxxxxxxx: 然后我又进去了哈哈哈奶的真是好
+18:47 sawfish joined channel
+18:48 sawfish quit:Client Quit
+18:54 Nangcr joined channel
+18:55 varna: Nangcr: 爆
+18:55 Nangcr: =A=
+18:55 Nangcr: @varna 你有大建产物吗
+18:57 varna: 有几个
+18:57 varna: 怎么想起问这种事了
+18:57 whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:57 varna: 难道你决定验血统了？
+18:58 Nangcr: 因为开了东急。。准备大建了
+18:58 Nangcr: 我提督等级都87了
+18:58 Nangcr: 感觉有点虚高。。
+18:58 varna: 别说虚高
+18:58 xxxxxxxx: 没关系我肯定比你虚高
+18:58 varna: 问题是你知道什么是虚么……
+18:58 varna: 我操，妙高飞了
+18:59 varna: 这是怎么做到的
+18:59 lh_cat quit:Ping timeout: 256 seconds
+18:59 Nangcr: 我船练度都不行啊，航巡都没有
+18:59 Nangcr: 战舰长门就是捞不到
+18:59 Nangcr: 空母飞龙才二十级不到
+19:00 varna: 长门？
+19:00 xxxxxxxx: 你这个欧洲人吃我一矛
+19:00 varna: 你入坑几个月来着……？
+19:00 Nangcr: 一个月啊怎么了
+19:00 Nangcr: 大凤前几天才出的，现在五十多级
+19:00 varna: 你觉得没长门不正常么……
+19:01 varna: *才*
+19:01 xxxxxxxx: 吃我一矛
+19:01 varna: 伙计，我的长门是入坑七个月之后的事了
+19:01 Nangcr: 。。我前一百图鉴就缺长门
+19:01 varna: 当我推完6-2的时候武大大哔一个都没有
+19:01 varna: 当我打完浑作战的时候还是没有
+19:01 varna: 欧洲人不要问，造就对了
+19:01 Nangcr: 好吧，我CA练度低4-4都推不过
+19:01 varna: 如果没资源就刷点闪保大成功
+19:02 varna: 4-4有一改CA就够了吧
+19:02 varna: 我那时候有三十多的高雄和二十多的摩耶
+19:02 lh_cat joined channel
+19:02 Nangcr: 感觉好虚啊
+19:02 varna: 别虚
+19:03 Nangcr: 雪风前几天3-3才捞到
+19:03 varna: 下一次说不定还是自选难度
+19:03 Nangcr: 才20级
+19:03 varna: 3-3？
+19:03 varna: 伙计，浑作战的时候我雪风三十多级……
+19:03 varna: 连搬砖队的等级都不如
+19:03 Nangcr: 3-3boss点
+19:03 Nangcr: 我去捞长门的，然后捞到了雪风
+19:03 xxxxxxxx: 卧槽难道你那边就不会有家具城么...
+19:03 varna: 这游戏没有什么是必需品，或者说你要的大部分必需品都不需要脸
+19:04 Nangcr: 我想要波斯猫，但是Z1远征还没跑
+19:04 varna: 比脸没用，如果玩家们的造船捞船运都跟我一样惨的话，大概他们中的八成人都会提早弃坑
+19:04 Nangcr: 估计春活前很难拿到波斯猫了
+19:05 Nangcr: 我现在婚船只有时雨
+19:05 varna: 你看你够肝了
+19:05 varna: 我一个月的时候婚舰也只有电浆
+19:05 Nangcr: 然后dd和cl练度普遍在60多
+19:05 varna: 那你还要什么
+19:05 Nangcr: 神通都没练，只有川内
+19:05 Nangcr: 大淀也还没改
+19:05 varna: 如果你觉得虚，3-2 4-3 5-4都可以
+19:05 xxxxxxxx: 你们这些欧洲人和甘地
+19:06 varna: 没改赶快去改，说话又不会让你改造
+19:06 Nangcr: 山城利根改二遥遥无期
+19:06 varna: 没时间就放下
+19:06 varna: 没必要说半吊子的肝病
+19:06 Nangcr: 我怕春活锁船啊
+19:06 Nangcr: 那我就SB了
+19:06 varna: 怕就练
+19:06 varna: 练不了就认输
+19:06 varna: 拿不起放不下，何必呢
+19:06 Nangcr: =A=有道理
+19:07 varna: 我的AL就是认输的
+19:07 varna: 我有八九十级的主力，但我没有二线
+19:07 varna: 如果你问什么是不虚，我直白地告诉你，我虚
+19:07 varna: 等级排序
+19:07 Nangcr: 我感觉春活不会有欧根秋月和香取
+19:07 varna: 第一页122-94
+19:07 varna: 第二页94-84
+19:07 varna: 第三页83-80
+19:07 xxxxxxxx: 我连大屁股都没有
+19:07 varna: 第四页80-75
+19:08 varna: 第五页73-65
+19:08 varna: 第六页第一名是Lv64大和
+19:08 Nangcr: 这练度还虚？！
+19:08 Nangcr: 我第二页都没你第五页高
+19:08 varna: 所以你没必要说什么虚不虚
+19:08 varna: 打得过就打，打不过就咸，咸都不过就输，没什么大不了的
+19:08 lh_cat quit:Ping timeout: 252 seconds
+19:09 varna: 第六页开始因为是搬砖队所以就略掉了
+19:09 Nangcr: 我怕资源不够，现在在攒桶
+19:09 Nangcr: 一个活动大概要多少桶？
+19:09 varna: 如果是自选难度，你要打全程甲么
+19:10 Nangcr: E1甲 E2-E4看情况 E5咸鱼
+19:10 Nangcr: E7这种打不打看资源剩多少
+19:10 varna: 你现在有多少桶，400-700之间？
+19:10 Nangcr: 。。。100
+19:11 varna: 先准备五百垫底吧，这个数目肯定够咸，应该还有余
+19:11 Nangcr: 我大概一个月能攒200桶。如果不肝远征2
+19:11 varna: 至于锁船，正论是每个舰种都准备三两个能打的
+19:11 Nangcr: 我利根要不练到70然后不改
+19:11 sawfish joined channel
+19:11 Nangcr: 活动开了要CA就上，要CAV再改
+19:11 varna: 一个月两百是比较休闲的数目，差不多够一般用了，不必特意攒
+19:11 varna: 不必
+19:12 varna: 你有羽黑么
+19:12 Nangcr: 30级
+19:12 varna: 练到二改
+19:12 varna: 十八万经验，很快的
+19:12 xxxxxxxx: 为何不是妙高?
+19:12 Nangcr: 3-2A我肝四傻改二估计能把羽黑也改二了
+19:12 varna: 妙高七十级改
+19:12 varna: 羽黑六十五
+19:12 Nangcr: 秒高的脸我遭不住
+19:13 varna: 如果你想应付锁船，那么我给你估算一下曾经的最糟糕数目
+19:13 varna: 第一阶段6
+19:13 Nangcr: 高雄级呢？不练吗
+19:13 varna: 第二阶段12
+19:13 varna: 第三阶段6
+19:13 varna: 没说不练
+19:13 varna: 能练的自己看着办
+19:13 Nangcr: 因为我要改二四傻，所以飞龙改二肯定能改
+19:13 varna: 参考数据是这些：
+19:13 varna: 驱逐姬护甲110
+19:13 Nangcr: 还能带两艘CA改二的样子
+19:14 varna: 轻巡姬护甲170
+19:14 varna: 院长护甲160
+19:14 varna: 教授护甲190
+19:14 varna: 理事长护甲200
+19:14 Nangcr: 院长王干掉过一次，感觉没那么难啊
+19:14 varna: 咸鱼吧
+19:14 Nangcr: 我s/王/我/
+19:14 varna: 咸鱼是168甲
+19:14 Nangcr: 嗯
+19:14 varna: 我当时把全部资源拿去大建，然后剩下八百钢
+19:15 varna: 之后我没劝退，八个出击拿下咸鱼
+19:15 Nangcr: 院长我是昼战炮击掉的
+19:15 varna: 你小看院长了
+19:15 varna: 虽说咸鱼不会遇到理事长+2院长的阵容
+19:15 sawfish: 必须不会
+19:16 varna: 或者在被锁掉十八艘主力之后6v6打双院长
+19:16 Nangcr: 昨天去3-5找北方玩了一下
+19:16 Nangcr: 好像发现了3-5上路新打法
+19:16 varna: 一百级之前别说3-5
+19:16 varna: 即使你带潜艇
+19:16 Nangcr: wo改很可怕吗
+19:16 varna: 喔改挡枪的
+19:16 marisa__ joined channel
+19:16 varna: 但你以为你不会大破？
+19:16 sawfish: 其实还是编译比较有意思
+19:16 varna: 还是说你没见过地狱猫……
+19:16 varna: 这么说吧，3-5上路你能准备出多少舰战
+19:17 Nangcr: 我现在日常赌飞机，建造all30
+19:17 varna: 能给2cv全都罚站烈风么
+19:17 Nangcr: 放弃制空
+19:17 varna: 你逗我
+19:17 Nangcr: 不逗你，昨天就这么打的
+19:17 Nangcr: 稳如poi
+19:17 varna: 你相信我好了
+19:17 varna: 3-5出的当天我直接拿下
+19:17 varna: 当时是lv99，次高难度
+19:17 varna: 现在我是lv103，最高难度
+19:18 varna: 如果你没有制空，你就会被爆
+19:18 Nangcr: 1clt3bb1cl1dd
+19:18 varna: 请不要逗我
+19:18 xxxxxxxx: 等等第三十驱逐队第一次 出击任务是要打3-2....
+19:18 varna: 我有lv120的雷巡
+19:18 varna: 有lv110+的战舰
+19:18 Nangcr: 真的是这么打的。。
+19:18 varna: 有武大
+19:18 varna: 你知道你打的不是最高难度么
+19:18 Nangcr: 我提督等级87，和你不是一个难度的3-5吧
+19:18 varna: 另外你听说过3-5的一式弹任务吧
+19:19 varna: 所以你的打法其实意义不大
+19:19 Nangcr: 那是啥，一式徹甲蛋？
+19:19 varna: 对
+19:19 xxxxxxxx: Nangcr: 那样过了?
+19:19 varna: 1cvl2bb其余随意的编成打3-5
+19:19 Nangcr: 我只有91蛋
+19:19 Nangcr: 过了
+19:19 varna: 我没别的办法了，只能用401
+19:20 varna: 顺便我给你算算按你的编成我能出动平均等级多少的队伍吧
+19:20 Nangcr: 1cc加贺全震电改二也夺取不了制空吧
+19:20 varna: 你那是紫电
+19:20 varna: 难道你没烈风么
+19:20 Nangcr: 震电，不是紫电
+19:20 varna: 震电只有改
+19:20 Nangcr: 那个远古活动的飞机
+19:20 Nangcr: 我口胡了
+19:21 varna: 那个东西是局地战改舰战的脑洞
+19:21 varna: 你可以拿空优
+19:21 Nangcr: 我现在有3烈风1紫电改二
+19:21 varna: 所以你为何跟我宣传你的打法……
+19:22 Nangcr: 。。我没考虑到你提督等级。。
+19:22 varna: 如果按你的编成，我可以出动的最高平均等级的队伍是Lv105
+19:22 varna: 最高122最低84
+19:22 varna: 然而我毫不怀疑我会被第二点空战劝退
+19:22 Nangcr: 要不你试试？
+19:22 Nangcr: clt 甲标 155炮*2
+19:22 Nangcr: 战舰 41*2 340 水侦
+19:22 Nangcr: 战舰同上
+19:22 Nangcr: 战舰同上(可换航战A点制空确保)
+19:22 Nangcr: cl 10对空炮架*2 电探
+19:22 Nangcr: dd 12对空炮*2 电探
+19:22 Nangcr: 全程单纵
+19:22 varna: 你弱爆了
+19:23 Nangcr: 我没秋月炮。。不然更稳
+19:23 varna: 我的过法是下路1cl5dd, 斩杀1cav3cl2dd
+19:23 varna: 别吹
+19:23 varna: 求别吹
+19:23 Nangcr: 我找图床去。
+19:23 varna: 不必
+19:23 varna: 你去打五十次就行
+19:23 Nangcr: http://img.vim-cn.com/ca/380783a3e5667dae011a8d5bfde3c0557808b1.png
+19:23 Nangcr: 这是上路斩杀
+19:24 varna: 不不
+19:24 varna: 为何你总拿你的难度说事……
+19:24 varna: 这么说吧，你去找个一百级以上的志愿者
+19:24 varna: 让他拿这个阵容上路走五十次
+19:25 Nangcr: 。。。因为我春活前肯定卡99
+19:25 Nangcr: =A=1/3概率见wo改
+19:25 Nangcr: 不见应该没事吧
+19:25 varna: wo改不是问题
+19:25 varna: 问题是地狱猫，那个一定有
+19:25 varna: 而且你以为开幕没人大破？
+19:25 Nangcr: 好吧，北方那个爆战啊
+19:25 varna: 其实到去年为止的三个月我都在走上路
+19:25 sawfish: 你们在说什么？所以说为什么要玩这玩意。
+19:25 Nangcr: 地狱猫啥？
+19:26 varna: 我记得3-5是九月份出的，总之我当天直接打通，走的上路
+19:26 Nangcr: 不是深海猫舰战和深海复仇舰攻吗
+19:26 varna: Wildcat还是Hellcat待考
+19:26 varna: 我倾向认为是Hellcat, 那个数值绝对不止F4F...
+19:26 xxxxxxxx: sawfish: 然而你可以忍一忍 我们每天都不知道你在说什么
+19:26 varna: xxxxxxxx: 何必多说
+19:27 varna: 觉得自己有能力说话，就拿出能力来
+19:27 Nangcr: OAO我安心当好咸鱼就行了。能肝就肝肝
+19:27 sawfish: 我不知道你们在说什么吖？
+19:27 varna: Nangcr: 你已经够肝了，但如果你以为这点肝就可以出来说事的话……
+19:27 Nangcr: 因为周一到周五只能收远征
+19:27 xxxxxxxx: 我们也真不知道你在说什么呀
+19:28 Nangcr: 我只有周末能推推图刷刷3-2A 之类的
+19:28 varna: 这么说吧，看你的说法，我觉得你认为自己的实力已经不错了
+19:28 varna: 那你没必要担心
+19:28 sawfish: 我说真的
+19:28 Nangcr: 平时周一到周五南西都打不了
+19:28 sawfish: 你们似乎想歪了。
+19:28 varna: 如果你担心，那你没必要说什么战力问题，直接算算数直接安排个练级计划行了
+19:28 Nangcr: 我知道我只能当咸鱼
+19:28 sawfish: 你们真的想歪了。
+19:28 varna: 咸鱼没什么不好
+19:28 xxxxxxxx: 我觉得更可能是你先想歪然后到频道里放了几天炮
+19:29 varna: 我就拿着甲等的攻略队直接去打了E5咸，因为我过年懒得跟活动过不去
+19:29 sawfish: 我TM想到脑子都爆炸了，最后发现这是个坑。
+19:29 Nangcr: 我没觉得自己实力怎么样，毕竟才入坑一个月
+19:29 marisa__: 咸鱼是？
+19:29 xxxxxxxx: 几次了 都不知道怎么回事爆发一通 什么都没说清楚就走人了
+19:29 varna: 很多事情跟实力无关
+19:29 Nangcr: 而且这不是个休闲养成游戏吗。。
+19:30 sawfish: 你们不信的我有什么办法
+19:30 varna: 练度也好，刷闪也好，很多事情只能降低你被劝退的概率
+19:30 varna: 悠闲一点就好了
+19:30 sawfish: 劳资的课似乎都停了。
+19:30 xxxxxxxx: Nangcr: 然而我觉得你不用太担心等级问题 我担心比较靠谱 毕竟我不喜欢练级...
+19:30 varna: 我自己的总出击数也不到一万二
+19:30 Nangcr quit:Quit: -a- Connection Timed Out
+19:30 varna: 而我是相当烦练级的，能不练则不练
+19:31 varna: 所以何必跟我说肝功如何……
+19:31 Nangcr joined channel
+19:31 sawfish: 不不不不，我只是突然意识到这个问题。
+19:31 Nangcr: 我总出击数也就5000
+19:31 varna: 我入坑十个月，伙计
+19:31 Nangcr: 诶？！你出击数不到12k？！
+19:31 xxxxxxxx: varna 你看这才叫怪物
+19:31 Nangcr: 那练度怎么那么高！
+19:31 sawfish: 真的，不信你们慢慢挖。
+19:32 sawfish: 我操
+19:32 varna: 我演习
+19:32 sawfish: 因为你们的教育傻逼啊
+19:32 Nangcr: 好吧，那你玩的也算比较休闲的了
+19:32 Plough: T2什么时候上来的
+19:32 sawfish: 逻辑鸟呢我操。
+19:32 Plough: 现在在说什么
+19:32 Plough: 我很好奇
+19:32 varna: Nangcr: 至今我装备也挺惨的
+19:32 sawfish: 我只是发现我的课都停了。
+19:33 Nangcr: 我发现我只能看懂varna和xxxxxxxx在说什么
+19:33 sawfish: 然后意识到了点什么。
+19:33 varna: 大根20 烈风18或者19 32不到一页 33半页多点
+19:33 xxxxxxxx: 现在就是T2觉得他并不能听懂我们在说什么 我们也听不懂他在说什么
+19:33 varna: 这游戏不需要你爆肝，没意义
+19:33 sawfish: 我听的懂
+19:33 Nangcr: 我46炮一个没有
+19:33 varna: 我只是给你看下休闲玩家的状况
+19:34 sawfish: 你妹夫不停挖坑还让劳资不爆肝。
+19:34 varna: 别怕输，当你决定休闲的时候你就很可能输
+19:34 Nangcr: 确实算休闲了，十个月103级
+19:34 xxxxxxxx: Nangcr: 你出击那么多次还能搞出46就真是甘地+土豪了
+19:34 sawfish: 不信你们慢慢挖，劳资刚好放个假。
+19:34 Nangcr: 为啥出击多没有46炮？
+19:34 sawfish: 所以说凡人啊。
+19:34 xxxxxxxx: 吃弹药
+19:34 varna: 如果你怕输，我有个办法
+19:34 Nangcr: 好吧，我感觉出击不是很消耗资源啊
+19:34 varna: 你攒一户愚吕
+19:35 xxxxxxxx: 造那个弹药消耗快的要死
+19:35 sawfish: 不是我说真的。
+19:35 cleamoon: 出击数1300
+19:35 xxxxxxxx: 练级也吃弹药
+19:35 sawfish: 不信你们慢慢挖。
+19:35 cleamoon: 我估计基王出击4k了
+19:35 xxxxxxxx: cleamoon: 那边有5K的
+19:35 sawfish quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:36 varna: 我觉得一个月四五千出击不算休闲玩家
+19:36 Nangcr: 我2.9入坑
+19:36 varna: 我差不多是一个月推完当时的全常规图（到5-4）
+19:36 varna: 但是我出击似乎也不到三千
+19:36 Nangcr: 在varna的带领下
+19:36 varna: 我从不推荐人爆肝……
+19:37 cleamoon: xxxxxxxx, 你刚入坑几天呀...
+19:37 Nangcr: 我1-5A练时雨就将近2000场
+19:37 xxxxxxxx: 一个多月啊
+19:37 varna: 我家电酱的最后一级是在4-3打的
+19:37 varna: 这是我唯一后悔的事
+19:37 cleamoon: 4-3打了快30躺了，没见到boss
+19:37 xxxxxxxx: 一个月多10天
+19:37 varna: cleamoon: 2ca带到门神
+19:37 xxxxxxxx: cleamoon: 没关系我也这样....
+19:37 Nangcr: 主要是冬活
+19:37 Nangcr: 我e1捞船捞的等级虚高了
+19:38 varna: 你都不知道虚，不用在意高
+19:38 varna: 打不过就打丙，再打不过再努力下，实在打不过，那就是失败了
+19:38 Nangcr: 4-3我一次过，但是现在婚船任务4-3就进不了boss了
+19:38 cleamoon: varna, 门神我有没有ca都能到，25/30的概率，就是不进boss......
+19:38 Nangcr: 4-3婚船任务真要命啊
+19:38 varna: 3-3 3-4 4-2 4-3我都是一次过的
+19:38 varna: 没用
+19:38 Nangcr: 劝退倒是没有，就是沟
+19:38 xxxxxxxx: varna你这个欧洲人
+19:39 Nangcr: 4-1和4-2我只是补给了下，修船都没修
+19:39 Nangcr: 都是一次过
+19:39 varna: 这个没意义
+19:39 xxxxxxxx: 然而羊驼的罗盘娘是欧洲来的
+19:39 lhanjian: xxxxxxxx, 我们并不能听懂T2在说什么
+19:39 xxxxxxxx: 我家罗盘娘是蒙古来的
+19:39 varna: 4-1 4-2是做东方的地方，你要是损失大了说明你北上……
+19:39 varna: 4-3我倒是经常去几趟
+19:39 sawfish joined channel
+19:39 varna: 毕竟有婚舰任务和精锐二航战捞铝
+19:40 varna: 这么说吧
+19:40 varna: 敌人想劝退你，很多时候你没办法
+19:40 varna: 资源和毅力有时候更重要，可惜我两样都没有
+19:40 sawfish: 我了个艹
+19:40 Nangcr: 我4-3没被劝退过呢
+19:40 xxxxxxxx: 办法只有一个 那就是交出桶
+19:40 varna: 4-3是练级的地方……
+19:40 sawfish: 所以说有色眼镜是多么可怕的东西。
+19:40 xxxxxxxx: 然后再来一次
+19:40 sawfish: 你们的逻辑鸟呢？
+19:41 varna: Nangcr: 4-3你打过多少次
+19:41 sawfish: 你们的逻辑鸟呢？
+19:41 sawfish: 你们的逻辑鸟呢？
+19:41 Nangcr: 十几二十次吧
+19:41 Plough quit:Read error: Connection reset by peer
+19:41 varna: 打几百次再说
+19:41 xxxxxxxx: 所以说逻辑鸟是啥玩艺
+19:41 Plough joined channel
+19:41 varna: 4-3毕竟做日常和赶工驱逐舰都会去
+19:41 Plough: sawfish: 问你个事
+19:41 Nangcr: 推图两次还是三次，婚船任务十来次
+19:41 sawfish: 啥事说。
+19:41 Plough: 你现在是不是看见有人说话就觉得那人是在跟你说话？
+19:41 sawfish: 不是
+19:41 varna: Nangcr: 我只说一个问题，我去4-3的基本都是二线反潜队伍
+19:42 Nangcr: 哦，4-3炸鱼啊，我还没开始呢
+19:42 Plough: 哦
+19:42 varna: 不是开始
+19:42 Plough: 没了
+19:42 Plough: 继续吧
+19:42 varna: 每天一趟而已
+19:42 varna: 脸是脸
+19:42 sawfish: 劳资只是耐心比较差
+19:42 varna: 但是即使Lv120的北上大人，偶尔也会被嗒酱一发中破
+19:42 Nangcr: 我4-3炸鱼就去过一次，那次没劝退
+19:43 varna: Lv86的隼鹰，甚至会被FCL一炮大破
+19:43 sawfish: 103算个鸟啊
+19:43 xxxxxxxx: 我们就在说舰娘 你说看不懂 然后就不停开始什么"逻辑鸟" 看不懂我们在说什么  我们也确实看不懂你在说些啥 什么我们又要不"放过你妹子们"
+19:43 varna: sawfish: 你觉得自己很犀利么
+19:43 sawfish: 你去吃两年文拉法辛试试
+19:43 Nangcr: ta姐命中率我感觉好感人啊
+19:43 sawfish: 吃了再说
+19:43 varna: Nangcr: 我觉得你太把自己的脸当回事了
+19:43 sawfish: 再不停坑
+19:43 Plough: 我下场
+19:43 varna: sawfish: 你试图把别人拉到你的层次上？
+19:43 Plough: 交给羊驼子了
+19:43 Nangcr: 我为什么突然看不懂你们的交流了
+19:43 Nangcr: 你们再说什么。
+19:44 varna: 你自己北上，怪别人么
+19:44 sawfish: 不是，我只是试图降低层次。
+19:44 Plough: Nangcr: 其实我也不懂
+19:44 varna: Nangcr: 跟你无关，我也不懂
+19:44 cleamoon: Nangcr, 放心吧，我也不懂
+19:44 xxxxxxxx: Nangcr: T2来的时候看不懂比较常见 我们大家经常都搞不懂他在说什么
+19:44 varna: Nangcr: 我的练度我仍然虚，因为我见过各种花式劝退花式摔
+19:44 xxxxxxxx: 比如这句sawfish>103算个鸟啊
+19:44 sawfish: 你TM让我思考的啊
+19:44 varna: 如果你脸好，请珍惜
+19:45 varna: sawfish: 我没让你思考，是你自以为别人让你如何如何
+19:45 sawfish: 我懂的吖我操
+19:45 Nangcr: 我相信统计学
+19:45 cleamoon: #我是有雄心壮志的 小鸽子  咯咯咯咯咯
+19:45 sawfish: 你自己说的不要放弃思考。
+19:45 Plough: 接下来换XF-78
+19:45 varna: Nangcr: 那么请相信我，还有海色镇守府诸君的统计吧
+19:45 Nangcr: 统计学告诉我ta姐的命中率确实就那个样子
+19:45 varna: 你跟嗒酱打过多少场
+19:45 Nangcr: 嗯。。毕竟我打得少
+19:45 cleamoon: 擦，ff崩了
+19:46 lhanjian: sawfish, T2在纠结什么？
+19:46 Nangcr: ta姐我见过四十次吧，各个图里
+19:46 varna: 太少了
+19:46 Nangcr: 好像就大破过我两次
+19:46 varna: 你的统计学不及格么
+19:46 sawfish: 这下我要背个间谍罪了。
+19:46 varna: 知道为什么只是中破么
+19:46 Nangcr: 为什么？
+19:46 sawfish: 你们慢慢查，查完再肛我。
+19:46 varna: 火力溢出是会保护的
+19:46 xxxxxxxx: 间谍罪又是怎么回事 为何你说的东西我老是看不懂
+19:46 Nangcr: 不过金撸倒是经常劝退我
+19:47 Nangcr: ta姐感觉没什么战斗力，感觉上
+19:47 sawfish: 因为某个傻逼让我写内核。
+19:47 varna: 你逗我
+19:47 xxxxxxxx: 不是你自己要写得么
+19:47 cleamoon: 我擦，3-2练级不小心进击了
+19:47 varna: 如果你觉得嗒酱的命中率就是那么回事，或者因为你的阵容不错所以你能打过
+19:47 varna: cleamoon: F5
+19:47 xxxxxxxx: F5
+19:47 varna: 如果你这么想，告诉我你的编成
+19:47 Nangcr: 金撸打我小船经常一发入魂，ta姐和金wo总是miss或者擦蛋
+19:47 cleamoon: F5有用吗... 都进击了...
+19:47 varna: 有用
+19:47 varna: 战斗结算在选阵型之后
+19:47 cleamoon: soga
+19:47 Nangcr: 有，不选阵型就行
+19:47 cleamoon: soga
+19:47 varna: 我可以拿出比你更高的等级，比你更好的装备
+19:48 varna: 然而我还是被劝退过
+19:48 varna: 我还记得5-3 5-4 AL 浑作战
+19:48 Nangcr: 反正我知道一个，不管练度再高，该摔的还是会摔的
+19:48 sawfish: 不是，我也是后来才意识到那个意思的，你觉得我那个撸码水平能分分钟搞出个内核还带个隐喻？
+19:48 cleamoon: 差点又全军入渠
+19:48 varna: 即使是5-4那么水的地方，我也大破过
+19:48 sawfish: 随意。
+19:48 sawfish: 别的水平不提。
+19:49 varna: sawfish: 别人让你吃翔，你不会吃；只有当你没有自知之明的时候，你才会以为你能做到
+19:49 Nangcr: 我1-1刷个闪都能事故
+19:49 varna: 如果你自己很聪明，那么你该知道很多事情
+19:49 Nangcr: 不过也很少
+19:49 varna: Nangcr: 我觉得你有点矛盾
+19:49 sawfish: 我觉得这TM又是个坑。
+19:49 sawfish: 以后说话容我想想看。
+19:49 varna: Nangcr: 如果你的脸很好，你该去争取甲等，而不是打那个我用八百钢都能随意碾压的咸鱼
+19:49 Nangcr: 1-1刷闪战舰两轮炮击打对面白板驱逐都miss
+19:49 sismvg joined channel
+19:49 cleamoon: 下了个真三4，听说不错
+19:50 cleamoon: sismvg, 爆
+19:50 Nangcr: 甲和丙的差距到底在什么，练度装备还是脸
+19:50 varna: 真三都7了吧？
+19:50 lhanjian: cleamoon, 怎么感觉去年我们就在讨论真三4
+19:50 varna: Nangcr: 都有
+19:50 sawfish: 我可以给出除了那个内核以外所有结论的出处。
+19:50 cleamoon: sismvg, 366×4+1就行了
+19:50 sismvg: 今天测试了6个抽烟者，在他们把没有灭掉的烟头全部丢在地上的时候，我对他们这么说：把烟头灭掉
+19:50 varna: sawfish: 你不上道地理解不到位，伙计
+19:50 cleamoon: lhanjian, 我怎么连昨天讨论了什么都不记得
+19:51 sismvg: 不出意外，全部骂了我一句：他妈的管你鸟事
+19:51 varna: sawfish: 当别人告诉我去挑战我做不到的事情的时候，我有些时候做到了；然而你没做到，那么很简单——你不必做
+19:51 sawfish: 恐怕是到位的。
+19:51 sismvg: http://blog.sina.com.cn/s/blog_405bc9050100blev.html
+19:51 sismvg: 这就叫乱扯
+19:51 varna: sawfish: 到位的话，你的程度应该跟我一样
+19:51 varna: Nangcr: 这么说吧
+19:51 sawfish: 差不多了吧应该。
+19:51 sismvg: http://tieba.baidu.com/p/3650197004
+19:51 sismvg: 土狼比例
+19:51 varna: sawfish: 你觉得程度差不多了么
+19:51 Nangcr: 我应该找一个好一点的IRC客户端，这样就不会像现在这样完全分不清哪句话是谁说的
+19:52 sawfish: 具体不知道
+19:52 varna: Nangcr: 甲和丙除掉资源的差距，大概就是你和我阵容和装备的差距
+19:52 varna: Nangcr: 当然这里没考虑锁船
+19:52 sawfish: 大概能猜出是个什么玩意的程度。
+19:52 cleamoon: Nangcr, xchat系可以加颜色
+19:52 sismvg: cleamoon:什么366*4+1...
+19:52 varna: sawfish: 你什么意思
+19:52 Plough: 其实要是按我体感，甲和丙绝对不光是阵容的差距
+19:52 cleamoon: sismvg, 保证至少5个相同生日
+19:52 varna: sawfish: 这么说吧，我做的事情，你能做到多少
+19:53 Plough: 丙级敌方的命中率和暴击率我感觉都远低于甲级
+19:53 varna: Plough: 甲烧资源，而且要相当脸
+19:53 varna: 丙级敌人太温柔了
+19:53 varna: 主任打人一发才中破
+19:53 sawfish: 有些可能比你强
+19:53 cleamoon: sismvg, 你还是准备鞭炮烟吧，或者往里面加点剧毒
+19:53 sismvg: 不是那么算的
+19:53 varna: 还有miss
+19:53 marisa__ quit:Ping timeout: 252 seconds
+19:53 Plough: +
+19:53 varna: sawfish: 比如
+19:53 sawfish: 比如挖坑
+19:53 Plough: 甲级我就没见主任给我打出中破来
+19:53 varna: 你逗我？
+19:53 Nangcr: 可是我看冬活E5甲的视频，感觉他们练度也不高啊，都是能打的
+19:53 varna: sawfish: 你逗我？
+19:53 Plough: 要么刚好不触发保护要么一个暴击
+19:53 varna: Nangcr: 你打了么
+19:53 Plough: Nangcr: 我打了
+19:53 xxxxxxxx: 挖坑埋自己你确实强....
+19:54 Nangcr: 我没打到E5，资源不够
+19:54 Plough: 我打了
+19:54 sawfish: 劳资不是没挖过坑么。
+19:54 Plough: 我知道E5什么样
+19:54 varna: 那么你不知道有多惨
+19:54 varna: sawfish: 认真说话
+19:54 sawfish: 说毛啊，我不知道具体的人说个J8。
+19:54 varna: sawfish: 那么你觉得你的程度跟我差不多么
+19:54 sawfish: 我只知道肯定有那样的人。
+19:54 Nangcr: 西村舰队平均练度70，e5甲磨血30把磨到斩杀
+19:55 varna: Nangcr: 西村那个我知道
+19:55 sawfish: 然后怎么查我肯定比你弱但是不会太弱。
+19:55 varna: Nangcr: 但问题是给你，你能么
+19:55 varna: sawfish: 是么
+19:55 Plough: Nangcr: 你知道有种东西叫脸吧
+19:55 Nangcr: 明白了
+19:55 sismvg: 我买不到剧毒。我也不会调配
+19:55 sawfish: 劳资毕竟泡了几年贴吧呢。
+19:55 varna: sawfish: 我直白地告诉你，你比这频道的大部分人差太远
+19:55 sismvg: 让他们死胎便宜他们了
+19:55 * Plough 只会玩舰娘
+19:55 varna: 你以为泡贴吧是在学东西么
+19:56 sawfish: 没有啊
+19:56 xxxxxxxx: Nangcr: 就像人家说3-3能捞出长门一样....
+19:56 Nangcr: 我这边出门了，网络断了，大家再见
+19:56 varna: bye
+19:56 varna: 祝武运
+19:56 sawfish: 8
+19:56 Plough: 祝武运
+19:56 Nangcr: 拜拜
+19:56 Nangcr quit:Quit: -a- Android IRC 2.1.3
+19:56 sawfish: 总之，你们慢慢挖。
+19:56 sawfish: 。假了
+19:56 varna: sawfish: 那么你在贴吧学到了什么
+19:56 xxxxxxxx: 我们又挖什么了?
+19:57 varna: 别太把自己当回事了
+19:57 sawfish: 很当回事
+19:57 sawfish: 慢慢挖傻逼们
+19:57 xxxxxxxx: 挖什么了?
+19:57 sawfish: 你们能凭空造出点东西么？
+19:57 xxxxxxxx: 人话会说不 说得清不?
+19:58 sawfish: 挖我埋伏下的雷，保命用的。
+19:58 varna: 能别把自己当个人物么
+19:58 sawfish: 是你把劳资当个人物。
+19:58 varna: 我可没有
+19:58 sawfish: 哦，你干的事情可看不出来。
+19:58 xxxxxxxx: 谁有兴趣把你当人物了? 你过来好好说人话 说说就说说
+19:58 Plough: 你先把牙刷了
+19:58 varna: 哦
+19:58 varna: 这么说就方便了
+19:58 cleamoon: sismvg, 肉桂粉加到烟里也有效，恶心死
+19:58 Plough: 别一口一个傻逼
+19:59 sawfish: 忽悠劳资一路，最后反咬我，我骂他怎么了？
+19:59 varna: 忽悠？
+19:59 varna: 反咬？
+19:59 sawfish: 不忽悠啊
+19:59 varna: 你太把自己当回事了吧
+19:59 xxxxxxxx: 天天冒出来就开始放炮 放炮然后被人点了又觉得别人打压自己?
+19:59 sawfish: 不是忽悠啊
+19:59 varna: 你自己学不好，怪我对吧
+20:00 varna: 不说因果关系
+20:00 varna: 首先你没学好
+20:00 varna: 其次你怪我
+20:00 sawfish: 哈
+20:00 varna: 对不对？
+20:00 Plough: 频道新成句：“都是羊驼的错”
+20:00 varna: 还是说你觉得自己足够犀利了？
+20:00 Plough: 另外
+20:00 cleamoon: 自己要学，羊驼不推荐，自己偏要学，羊驼给指南，自己学不会，骂羊驼不要脸，真乃壮士也
+20:00 sawfish: 我比一般大学生犀利多了。
+20:00 Plough: 先不说你该不该骂羊驼子
+20:00 varna: 犀利得连自己的程序都没时间写，考试还考不到八十？
+20:00 varna: 一般大学生的程度太差了
+20:00 Plough: 你把“傻逼”后面的“们”字去掉
+20:00 sawfish: 好，去掉。
+20:01 varna: 觉得自己很厉害，那么做点像样的事
+20:01 sawfish: 为什么那么差呢？
+20:01 sawfish: 为什么那么差呢？
+20:01 sawfish: 为什么那么差呢？
+20:01 xxxxxxxx: 因为您这样的太多了
+20:01 varna: 挣钱也好，读研也好，自己干点和程序无关的事情也好，做人做得差不多点
+20:01 varna: 这话我极少跟别人说
+20:01 sawfish: 我做人怎么了？
+20:02 varna: 没说人格
+20:02 varna: 你正经事做好过一样么
+20:02 sawfish: 差不多点就是说别人浪费你时间你就看着。
+20:02 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.3/20150319201009]
+20:02 Plough: 哟呵
+20:02 Plough: 别人浪费你时间？
+20:02 lh_cat joined channel
+20:02 varna: 那么你别浪费自己就行
+20:03 xxxxxxxx: 你别整天放炮浪费自己就不错了
+20:03 varna: 觉得自己有能力，就把自己的工作弄得像样点
+20:03 Plough: 有人把你绑到电线杆子上往你嘴里塞大屌么？
+20:03 varna: 人可以不优秀，但一个不优秀的人也足以用他的小聪明糊弄一船人
+20:03 Plough: 字面意义，别跟我来比喻
+20:03 varna: 你呢
+20:03 varna: 然后你现在说是我的错，我觉得无所谓
+20:03 xxxxxxxx: 每天觉得自己好像特别有能力 出来一通吹 然后被人按在地上比划哪里错了 好玩么?
+20:03 varna: 毕竟别人指责我，应该有他的理由
+20:04 varna: 但我希望你把道理讲差不多点
+20:04 cleamoon: 突然发现带一个ss演习不错...
+20:04 sawfish: 你自己教育逗比，我找个贴吧自学有错？
+20:04 sawfish: 你自己找我来的有错？
+20:04 varna: 我教育过别人么
+20:04 varna: 我和各种人聊天
+20:04 lh_bot: 哇
+20:04 Plough: 你在想什么
+20:04 Plough: 我很好奇
+20:04 sawfish: 我啥都不知道聊天有错？
+20:04 Plough: 因为我看不懂你的思维回路
+20:05 xxxxxxxx: 你觉得我们有责任教育你? 我又不是你爸爸
+20:05 Plough: 有人这么说了么？
+20:05 cleamoon: Plough, 看懂了就麻烦了
+20:05 varna: 游戏、技术、生活、工作，我什么都说
+20:05 varna: 然而你觉得自己在受对端有责任的教育？
+20:05 Plough: 你聊天没错
+20:05 Plough: 你自己都说错了
+20:05 varna: 别跑题
+20:05 Plough: 然后“就一个贝叶斯老子还能骗你”
+20:05 sawfish: 他自己让我来的
+20:05 Plough: 你没错？
+20:05 varna: 很多地方能容忍侃大山
+20:05 Plough: 他让你给他解释
+20:05 Plough: 他让你误导他了么
+20:05 sawfish: 是不是吧？
+20:06 cleamoon: 你想让我们翻log吗
+20:06 varna: 但我不容忍公然把技术错误拿出来误导别人
+20:06 cleamoon: 你说的要撸内核
+20:06 Plough: 你要是觉得自己没能力解释
+20:06 Plough: 你就别解释
+20:06 varna: 而我的做法是，让这种误导人的人当众出丑
+20:06 xxxxxxxx: 你不是自己要学让后让羊驼给你找个教程么 什么时候就顺竿爬到让羊驼教育你了?
+20:06 sawfish: 我TM没写内核？
+20:06 varna: 你觉得自己有能力写？
+20:06 Plough: 你说话敢有点逻辑么？
+20:06 varna: 我告诉你你有这个能力了么？
+20:06 cleamoon: 没逻辑+
+20:06 varna: 你自己都不知道自己几斤几两，怪别人么？
+20:06 sawfish: 你让我写的是不是？
+20:06 lh_cat quit:Ping timeout: 252 seconds
+20:06 sawfish: 是不是吧？
+20:06 varna: 我强迫你写了？
+20:06 Plough: 我不要你逻辑多严谨，你前后两句能至少有点关系么？
+20:07 cleamoon: 思维方式太奇葩，我还是去撸真三吧
+20:07 sawfish: 我写了么？
+20:07 xxxxxxxx: 你爱写不写
+20:07 sawfish: 写了吧
+20:07 Plough: 哦，我懂了
+20:07 sawfish: 写错了么？
+20:07 sawfish: 没错吧
+20:07 varna: 我建议过你写，对吧？
+20:07 Plough: 羊驼绑了你全家
+20:07 sawfish: 对呀
+20:07 varna: 然后你为什么写？
+20:07 varna: 我强迫你写？
+20:07 varna: 你觉得自己有能力写？
+20:07 Plough: 告诉你“不写内核我立马让他们全死光”
+20:07 Plough: 是不是？
+20:07 sawfish: 你说的，写个内核吧。
+20:07 Plough: 是不是？
+20:07 xxxxxxxx: 我现在建议你吃键盘你吃不吃?
+20:07 varna: 然后你就写？
+20:07 Plough: 你告诉我是不是这样？
+20:07 sawfish: 我说迟早要写
+20:07 cleamoon: 羊驼建议的事多了
+20:07 varna: 我让EA基佬写个内核，他能不能写？
+20:07 Plough: 羊驼子是不是绑了你全家逼着你写了？
+20:07 lh_cat joined channel
+20:07 sawfish: 半吊子总是不爽对吧。
+20:07 Plough: 你回答我是不是？
+20:07 Plough: 你回答我是不是？
+20:07 Plough: 你回答我是不是？
+20:07 Plough: 你回答我是不是？
+20:07 Plough: 你回答我是不是？
+20:08 Plough: 你回答我是不是？
+20:08 sawfish: 你说谁都是半吊子
+20:08 varna: 你自己觉得自己能写对吧？
+20:08 Plough: 你回答我是不是？
+20:08 varna: sawfish: 你告诉我你知道不知道你能力不足
+20:08 xxxxxxxx: 我反正不写 看上去没那么有意思 而且似乎破事为主
+20:08 varna: sawfish: 我现在让你来给我写一篇SCI论文，你能写么
+20:08 varna: 我告诉你我这种人也能在论文上挂自然基金
+20:08 varna: 挂各种基金
+20:09 varna: 而我是个半吊子
+20:09 xxxxxxxx: 我也不觉得写个玩具出来我好像就变屌了
+20:09 varna: 你对自己有评价么
+20:09 lh_bot: 19:31 <+Plough> 我很好奇
+20:09 sawfish: 信息屏蔽的评价么？
+20:09 sawfish: 满点啊
+20:09 varna: 我就问你，你觉得自己能干这行么
+20:10 varna: 不要跟我耍嘴皮子
+20:10 sawfish: 能啊卧槽
+20:10 cleamoon: 我怀疑T2完全没在听你说什么
+20:10 varna: 觉得能干就该考研考研，该写码写码
+20:10 xxxxxxxx: 能那你自己干部就好了 为啥被指出问题之后反反复复上来放炮?
+20:10 varna: 我技术不行，如果你比我还水然而看过的东西写过的东西比我少，你觉得你能做什么
+20:11 sawfish: xxxxxxxx: 我再说一遍，是他拉我来的。
+20:11 varna: 我拉你？
+20:11 Plough: xxxxxxxx: 因为他认为有错的是指出错误的人
+20:11 varna: 我给你推荐个技术，你就去学？
+20:11 Plough: 不是犯下错误的人
+20:11 Plough: 所以我犯了错
+20:11 xxxxxxxx: 谁?
+20:11 Plough: 你们全家都要死
+20:11 xxxxxxxx: 我们要求你每天过来?
+20:11 Plough: 我犯了错，你们凭什么指出来？
+20:11 Plough: 你们指出来，你们就该受惩罚
+20:11 varna: 我给别人推荐技术的时候，为何别人会告诉我他们不感兴趣，或者他们觉得这技术不好？
+20:11 Plough: 犯下错误的人是不必受惩罚的
+20:12 varna: 你的能力，这时候都跑哪去了？
+20:12 Plough: 因为没有人指出来这点我就不会意识到我犯错了
+20:12 Plough: 我没意识到我犯错，我就没有错
+20:12 Plough: 所以都是你们的错
+20:12 Plough: 你们让我犯错了
+20:12 Plough: sawfish: 我说的对不对？
+20:12 Plough: 回答我，对不对？
+20:12 sawfish: 我没说过那个好。
+20:12 varna: 为何lhj也跟我们讨论问题，但他就能选择自己感兴趣的话题，也拿出来反问我们？
+20:13 varna: 我的协程代码也给lhj看过
+20:13 sawfish: 我也没说我对那玩意有兴趣
+20:13 varna: 而你看看他所提的问题跟你的差距
+20:13 Plough: 那你他妈到底为什么要写？
+20:13 varna: 那你写什么
+20:13 xxxxxxxx: sawfish: 我们这里并没有任何的 "你要爱国爱这个频道" 的说法对吧 你愿意来的时候可以来 不来也没啥事情
+20:13 xxxxxxxx: 为什么你说是别人拉你过来的?
+20:13 cleamoon: 你不觉得好，不觉得有兴趣，那你写什么？
+20:14 varna: 不感兴趣的东西要不是为了钱啊学位啊谁去写
+20:14 sawfish: 卧槽我说的是计算机内核
+20:14 varna: 又没利益又没兴趣，然后你写了，怪我么
+20:14 Plough: 你自己他妈不想写还非得写
+20:14 sawfish: 我写的是计算机内核
+20:14 Plough: 然后你烦了
+20:14 Plough: 然后你他妈就把屎盆子扣我们头上？！
+20:14 cleamoon: 没铝了，我擦
+20:14 varna: cleamoon: 你怎么作的死……
+20:14 Plough: 赌大凤？
+20:15 xxxxxxxx: cleamoon: 你也造飞机了?
+20:15 cleamoon: varna, 5航1ss演习+3-2
+20:15 varna: sawfish: 没人强迫你去做什么，没人的建议你必须执行，我觉得这是成人考虑问题的基本
+20:15 cleamoon: 一次补给700铝
+20:15 varna: 我不是你的老板或者上司，你不写我也没权力把你退学
+20:15 sawfish: 我TM能听懂你在说什么啊。
+20:15 varna: 你能听懂么
+20:15 sawfish: 现在能了
+20:15 varna: 才怪
+20:16 xxxxxxxx: sawfish: 你为啥需要听懂? 为啥确定自己听懂?
+20:16 varna: 伙计，你的心理年龄还是个刚上高中的少年吧
+20:16 sawfish: 我觉得关系不错，仅此而已。
+20:16 varna: 长大点吧
+20:16 cleamoon: xxxxxxxx, 我上高中时没这么2
+20:16 sawfish: 我觉得我已经大得不行了，103呢我日。
+20:16 varna: 然而你还在怪别人的建议
+20:17 varna: 你的自主能力呢
+20:17 varna: 自己的事情自己说了算，出了事首先自己担
+20:17 sismvg joined channel
+20:17 varna: 人可以后悔，但后悔之后记得那是你自己的决定
+20:17 sawfish: 我跟你说了，显然的事情我本来不想说。
+20:17 * sismvg 获得成就-想要说“为什么这么热“的时候竟然下意识说日语了..
+20:18 varna: 我没看出你在说什么
+20:18 sawfish: 死基佬说我不能咽下去。
+20:18 sawfish: 我就说了。
+20:18 sawfish: 然后打发无聊的人。
+20:18 sismvg: 咽下去什么.
+20:18 sawfish: 我说了几次无聊？
+20:18 sawfish: 我说了几次无聊？
+20:18 sawfish: 我说了几次无聊？
+20:18 varna: 你的无聊跟我们无关，但我们可以随意评论
+20:18 varna: 这个评论你听不听随意
+20:18 varna: 但是如果你当真了，那是你自己的事
+20:19 varna: 你并不懂得何谓成长
+20:19 sawfish: 所以说拿爱国当真了就是自己的事。
+20:19 varna: 我也无意解释
+20:20 sawfish: 就算我说了无数遍无聊。
+20:20 varna: 你说了无聊，我们需要为你做什么吗
+20:20 sawfish: 想想自己是用什么眼光看人。
+20:21 sawfish: 就这点够了。
+20:21 varna: 在说别人如何看人之前，先看看自己
+20:21 sismvg: 所有吸烟者都是垃圾，不能相信
+20:21 sismvg: ^我看人的方法
+20:21 sawfish: 我TM怎么了？
+20:21 varna: EA基佬极少跟我们说技术问题，然而我们一样跟他一起找乐子
+20:21 cleamoon: 我们很知道怎么看人
+20:21 varna: sawfish: 其一，你误导别人
+20:22 sawfish: 是你非要往别的地方理解。
+20:22 xxxxxxxx: sawfish: 我的说法是你不要说了一半再憋回去
+20:22 varna: 当有人在这里误导别人而我能看出来的时候，我会直接让他当众秀
+20:22 varna: 无论你是真心的还是别的
+20:22 xxxxxxxx: 就是说要么说 要么不说
+20:22 xxxxxxxx: 说不说都是你自己选择的
+20:22 varna: 我不在乎发言者的初衷，我只在意他们对待学术和技术的态度
+20:22 xxxxxxxx: 和我并没有什么关系
+20:22 varna: 在贴吧就是这样
+20:22 varna: 好心？好心有什么用
+20:23 varna: 一个好心的错误不如一顿劈头盖脸的痛骂
+20:23 cleamoon: +
+20:23 sawfish: 好逻辑。
+20:23 Plough: 这当然是号逻辑
+20:23 Plough: 好*
+20:24 varna: 我们尊重我们做的事情，并且相信别人也会持如此态度
+20:24 Plough: 要不然这是什么？
+20:24 cleamoon: 就是好逻辑
+20:24 Plough: 这是谬误？
+20:24 varna: 这样，我们互相尊重
+20:24 Plough: 哪里有谬误？
+20:24 cleamoon: 逻辑完全没问题
+20:24 xxxxxxxx: 好心的误导和合理的痛骂是有区别的 但是就知识和经验 的角度看 还是合理更重要
+20:24 varna: 不能容忍我们的人，可以在别的温和的地方找到正确的回答
+20:24 lh_bot: 20:04 <+Plough> 我很好奇
+20:24 varna: 尽管这可能会绕远一点，也可能不会，但至少我不是这样的
+20:25 sawfish: 这下可以容忍了，我能听懂你们在说什么了。
+20:25 cleamoon: <+Plough> 我很好骑
+20:25 Plough: varna: 话说我要不要像舰娘里面一样把防波盾前面涂成白的
+20:25 varna: 你可以说我提供的材料不好，那是正常的
+20:25 varna: 我的水平很有限
+20:25 sawfish: 我还能绕回去啊
+20:25 varna: 但是我仍然有我做事情的基本态度
+20:25 xxxxxxxx: 至于说对别人的心理造成什么样的影响着并不能怪罪别人 心理问题说白了还是自己的事情
+20:25 varna: Plough: 我觉得你该涂一下
+20:25 Plough: 中，涂之
+20:26 varna: Plough: 如果可能的话，连装炮的帆布也涂一下
+20:26 varna: 那样炮塔看了比较真
+20:26 sawfish: DOTA那事儿恐怕是真的。
+20:26 sawfish: 贴子我找不到了。
+20:26 Plough: 帆布已经涂了，不过因为是事后诸葛所以不小心涂到炮身上了……
+20:26 Plough: 我打算等会上砂纸处理下
+20:26 varna: 弄点军舰色再涂回来可能么
+20:26 sawfish: 剩下的以我目前的程度什么都不知道。
+20:26 varna: 这么说吧
+20:26 Plough: 那得涂全身，而且我没买佐世保工厂色……
+20:27 sawfish: ？
+20:27 varna: 我不在意你如何看待我
+20:27 varna: 但是你首先该把这些劳什子自我意识都放下，继续学你的课业
+20:27 sawfish: 好
+20:27 varna: Plough: 那只能磨掉了，不然你弄个小刀刮刮
+20:28 cleamoon: varna, 我估计你以后又要遭中
+20:28 varna: 我无所谓
+20:28 xxxxxxxx: 至于你说的什么挖你自己埋的雷 如果你指键盘(我非常不确定你是不是在说这个) 你当是赌吃键盘的时候我就从旁边提醒了 还是讨论一下吃键盘的细节问题吧 到后来我问羊驼的时候也是先问 "键盘保住了?" 
+20:28 cleamoon: 比如“学位有个毛用，你让我学的”，等等
+20:28 xxxxxxxx: 当时
+20:28 whocares_2 quit:Ping timeout: 246 seconds
+20:28 sawfish: cleamoon: 不，真是被他拉过来的。
+20:28 varna: 我做我想到的事，而这很多事是我觉得可以光明正大地谈论的
+20:29 varna: 逗
+20:29 cleamoon: 逗
+20:29 varna: 我跟这里的多少伙计说过技术
+20:29 varna: 我跟他们安利perl对吧
+20:29 xxxxxxxx: 你那时候冷静一下说"还是算了吧 说过了" 找个台阶下 多好
+20:29 varna: 还给他们看黑魔法
+20:29 cleamoon: 羊驼推荐我做的事数不胜数，我基本一件也没做
+20:29 varna: 然后大家就笑笑
+20:29 cleamoon: perl都没撸
+20:29 varna: 我做的事，别人干嘛学着做
+20:30 xxxxxxxx: 我坚信perl不是给人读的
+20:30 sawfish: perl我也没撸啊
+20:30 varna: 当你认为好、认为有利益的时候，你自己选择去做
+20:30 varna: 决定权在你
+20:31 varna: 我以同样的口气给这里的其他人展示过类似的东西
+20:31 xxxxxxxx: sawfish: 那此处为何不是羊驼拉你搞perl你就要怪他?
+20:31 varna: 然而他们也就是看了乐一乐
+20:31 sawfish: 我TM都103了，怎么都得骑虎难下了吧。
+20:31 varna: 拿不起放不下可不是爷们所为
+20:31 lh_bot: 在公司看吵架
+20:31 xxxxxxxx: 你不要因为骑虎难下就放弃治疗比较好
+20:31 varna: lh_bot: 你不老实，快吃羊味素
+20:32 varna: 所以说妙高都被吓飞了
+20:32 xxxxxxxx: 你这段时间上来说的都不像是一个理智的人说出来的
+20:32 sawfish: 我TM肝都碎了。
+20:32 varna: 卧槽没补给，不过80%燃弹倒是没问题
+20:32 iyzsong: 这是激烈的情感交流?
+20:32 sawfish: 被羊驼肝的。
+20:32 varna: sawfish: 记住一点，在学业方面，你花的力气比我小很多
+20:32 Plough: 你敢不敢有点担当？
+20:32 xxxxxxxx: 没有任何解释 开始哭不幸 骂人 结束开溜
+20:33 xxxxxxxx: 这TM人干事?
+20:33 Plough: 你自己的选择
+20:33 Plough: 你为什么就是不敢承担后过呢？
+20:33 Plough: 后果*
+20:33 varna: 如果这就觉得累了，没什么可抱怨的
+20:33 sawfish: 所以说还是放弃治疗了。
+20:33 sawfish: 继续肝
+20:33 Plough: 放弃治疗了就别哭
+20:33 sawfish: 你们先查。
+20:34 varna: 别把自己当个人物
+20:34 sawfish: 我先补学业去。
+20:34 varna: 我们对你没什么敌意，不过既然你有如此言论，我就稍微回应一下
+20:34 sawfish: 世界有多大我不清楚也能猜到。
+20:34 sawfish: 好吧
+20:34 Plough quit:Read error: Connection reset by peer
+20:34 varna: 你不是世界的中心，如果你/part了，我们就该聊什么聊什么
+20:34 Plough joined channel
+20:35 iyzsong: sawfish: 这也没啥 有空约?
+20:35 Plough: 我输了
+20:35 Plough: Arch大 胜 利
+20:35 varna: 噗
+20:35 varna: 基佬
+20:35 Plough: 等会我去把/home备份一下
+20:35 varna: Plough: 你要换发行版了？
+20:35 iyzsong: Plough: 去吧
+20:35 cleamoon__: 滚挂了？
+20:35 Plough: 我换烧兔
+20:35 varna: arch bbs上怎么说的
+20:35 sawfish: 我再说一遍，真的103了。
+20:35 Plough: 不行的话就换BSD
+20:35 varna: cleamoon__: 他键盘总卡
+20:35 cleamoon__: ……
+20:35 sawfish: 我先去撸码。
+20:35 cleamoon__: 这什么鬼
+20:36 iyzsong: sawfish: 103是啥 学校的？
+20:36 Plough: 就是你打字
+20:36 varna: 不知道
+20:36 Plough: 打着打着顿一下
+20:36 varna: iyzsong: 103是我提督等级
+20:36 cleamoon__: tablet用lin是作死极限吧
+20:36 Plough: 然后你刚才按下的那个键就像卡住了一样
+20:36 iyzsong: varna: 哦
+20:36 varna: cleamoon__: 一般不至于
+20:36 varna: cleamoon__: 而且那个词不是laptop么
+20:36 Plough: 其他一切都正常
+20:36 Plough: 但是键盘没有人能救
+20:36 cleamoon__: varna: 不是没正经应用吗
+20:37 cleamoon__: 不是，就是tablet
+20:37 cleamoon__: 平板
+20:37 varna: cleamoon__: 平板啊
+20:37 cleamoon__: 不是笔记本
+20:37 Plough: 平板不都用安卓么
+20:37 varna: 他是笔记本跪
+20:37 cleamoon__: 又拿到一个悲伤
+20:37 cleamoon__: 考虑入一个能工作的平板
+20:37 sawfish: 说话还是说清楚点会比较好。
+20:37 varna: 平板能工作么
+20:37 sawfish: 对正常人来说。
+20:37 varna: 还是得用一般的机器才行吧
+20:38 cleamoon__: 带键盘的win板
+20:38 varna: 不如买笔记本呢
+20:38 varna: 要是说携带问题的话，我觉得一般男性的体格都能背动主流的尺寸吧
+20:38 cleamoon__: 同档的除了硬盘小但是是SSD比笔记本便宜……
+20:39 varna: SSD...你是不是想在上面做个btrfs然后再死一次……
+20:39 cleamoon__: 不是不是…… 还没那么作死
+20:39 varna: 卧槽两个远征没出去
+20:39 sawfish: 难道103不能撸码么？
+20:39 xxxxxxxx: sawfish: 你在说什么...
+20:39 sawfish: 不科学吧
+20:39 xxxxxxxx: 103是啥?
+20:39 varna: xxxxxxxx: 我提督等级
+20:40 varna: 我还有240k经验到104
+20:40 cleamoon__: 就是同档的笔记本硬盘略大，cpu频率略大，剩下都还不如这个板呢……
+20:40 sawfish: 我对某些事儿不感兴趣而已。
+20:40 xxxxxxxx: varna你说显然是等级 T2不玩舰娘
+20:40 lh_cat quit:Ping timeout: 252 seconds
+20:40 xxxxxxxx: 那他说的103不能撸码 是啥?
+20:40 varna: 我不知道啊
+20:41 sawfish: 就是说我还是能做写代码的工作吧？字面意思。
+20:41 varna: 我不知道啊
+20:41 xxxxxxxx: 然而T2肯定确信他知道103是啥
+20:41 varna: 你得自己评价自己
+20:41 varna: 如果你都不知道，那么最后的结论只能留给招聘你的人去做
+20:41 xxxxxxxx: sawfish: 你觉得累得要死大概就不太适合
+20:41 varna: 我觉得这个道理挺明显的
+20:41 sawfish: 身体差了别的干不了。
+20:41 varna: xxxxxxxx: 哪有不累的
+20:42 xxxxxxxx: varna心累
+20:42 varna: 身体差了你写不了程序的
+20:42 xxxxxxxx: 感觉就要放弃治疗处于一种奇妙的心理状态 那个叫累
+20:42 sawfish: 不是，我就是肝成这样的。
+20:42 varna: 身体差是有钱人的特权
+20:42 sawfish: 那还是跑腿吧
+20:43 varna: 头晕眼疼不能好好干活，那就太悲剧了
+20:43 sawfish: 头晕眼疼是真的，不至于影响干活。
+20:43 varna: 未必
+20:44 varna: 手头的活未必是1+1
+20:44 varna: 而当你整个脑袋都要炸开的时候，可能你还在赶deadline
+20:44 sawfish: 你觉得1+1能肝出103是么？
+20:44 sawfish: 是么？是么？
+20:44 sawfish: 还是凭空造出来的。
+20:44 varna: 我觉得你处理过的问题没有多少真正难的
+20:45 xxxxxxxx: sawfish: 103是什么?
+20:45 varna: 而困难的问题你并没能解决
+20:45 sawfish: the one and the only
+20:45 sawfish: 103
+20:45 varna: 你常说去写码，结果回来一看你的程度还不如不写码的人
+20:45 varna: 没人知道你写了什么，于是我的判断是你的水平实在略惨
+20:46 sawfish: 你以为结论都是凭空变的？
+20:46 cleamoon: 1+1是什么？2？
+20:46 sawfish: 除了那个内核。
+20:46 varna: 你的结论么？
+20:46 sawfish: 恩
+20:46 varna: 你的谬论我已经给出过多少吐槽了
+20:47 varna: 大家说说吧
+20:47 xxxxxxxx: sawfish: 你的结论我觉得经常是凭空变的...
+20:47 cleamoon: 平板换os死过几回，估计不会换了，win工作也没什么不行的
+20:47 varna: win工作挺好的啊
+20:47 varna: 至少各样软件都有
+20:47 cleamoon: 等内存便宜了，把2G换成4G就挺好的了
+20:47 cleamoon: +
+20:47 varna: 瑞典一条4G多少RMB
+20:47 sawfish: 所以说
+20:47 xxxxxxxx: win是挺好的 尤其玩得时候
+20:47 cleamoon: 笔记本的500
+20:47 varna: 好贵
+20:48 cleamoon: 贵+
+20:48 varna: 我现在这条就一百六……
+20:48 cleamoon: ....
+20:48 cleamoon: 为什么笔记本有最高内存的限制？
+20:48 varna: 本子和内存都是亚马逊买的，一共三千多点
+20:48 varna: 笔记本？
+20:48 sawfish: xxxxxxxx: 所以说你只是创造力差了点。
+20:48 sismvg: 说起来我一直以为证明1+1是关于公理什么的。结果是证明素数相关的
+20:48 cleamoon: 那个就当笔记本用
+20:49 sismvg: 我的ping是多少...
+20:49 sawfish: 或者说想象力。
+20:49 cleamoon: 卖的网站说最高支持4G
+20:49 varna: 唬人的吧？
+20:49 cleamoon: 是不是因为是32的系统...
+20:49 varna: 32位开PAE都不止
+20:49 cleamoon: 是呀...
+20:49 varna: 32位只有4GB地址空间，但PAE物理内存还要多
+20:49 sismvg: 只支持4G就可以死了
+20:49 cleamoon: 总之应该以后换个8G的也无所谓吧
+20:49 varna: 一定是他们不懂，瞎写的
+20:49 xxxxxxxx: 然而通过想象为主决定结论你不觉得一开始就不是特别靠谱么
+20:49 cleamoon: ......
+20:50 Plough: 芯片组问题？
+20:50 varna: 卖东西的人不懂正常吧
+20:50 varna: Plough: 现在不至于买到不支持PAE的CPU吧……
+20:50 xxxxxxxx: 不懂正常+
+20:50 varna: 哦，我还有块赛扬433
+20:50 sawfish: 所以说我还是搞点学术技术比较适。我
+20:50 sawfish: 所以说我还是搞点学术技术比较适合我
+20:50 varna: 放在我家里的某个抽屉里
+20:50 varna: 学术？
+20:50 varna: 学术的第一要务是态度
+20:51 cleamoon: 一般cpu速度看什么能看出来
+20:51 varna: 看参数
+20:51 cleamoon: ....什么参数
+20:51 sismvg: 查了下，内存又开始掉价了
+20:51 sismvg: 赞
+20:51 varna: 比如主频，支持的指令集，缓存
+20:51 Plough: 不过现在没有那么老的芯片组了吧
+20:51 Plough: 我也觉得
+20:51 Plough: Orz
+20:51 Plough: 我有个拆自一台比我还老的笔记本上的内存条
+20:51 sismvg: cleamoon:图拉丁万岁
+20:51 xxxxxxxx: 你先能保证 你确信你知道的东西是对的 并且能用人话说出来 剩下的再说....
+20:52 sawfish: 我觉得你们的cpu速度快到眼光都不同了。
+20:52 cleamoon: http://ark.intel.com/products/80274/Intel-Atom-Processor-Z3735F-2M-Cache-up-to-1_83-GHz  Max Memory Size  2 GB  什么鬼
+20:52 sismvg: 手机用个？
+20:52 varna: 移动处理器？
+20:52 cleamoon: 应该算吧
+20:53 lh_bot: sawfish: 如果你保持说别人听不懂的词   基本就不会受人待见
+20:53 varna: 总线接少了吧
+20:53 varna: 那可能还真是2GB
+20:53 varna: 买了未必合适
+20:53 sawfish: 我觉得这句话恐怕只有你没看懂
+20:53 varna: 是么
+20:53 Plough: 错
+20:53 varna: 我也没看懂
+20:53 Plough: 我也没听懂
+20:54 varna: cleamoon: 那说不定真是个64位指令集的经济型号，地址线就那么点……
+20:54 * lh_bot 躺了
+20:54 sawfish: xxxxxxxx: 我用人话说出来的结论都是对的。
+20:54 cleamoon: 他写了dependent on memory type，但是底下写了DDR3L-RS 1333
+20:54 varna: 卧槽
+20:54 sawfish: 这点我确定。
+20:54 Plough: 哦，那我就懂了
+20:54 Plough: 你没说过人话
+20:54 xxxxxxxx: 对 我承认 你经常不说人话...
+20:54 varna: 一瞬间我领悟了第八感大宇宙……
+20:54 cleamoon: 23333
+20:55 lh_bot: @xym
+20:55 varna: 大宇宙力量啊
+20:55 iyzsong: - -b
+20:55 sawfish: 所以说我还是先搞学业。
+20:55 xxxxxxxx: 那有人敢说我说过的都是对的这种话
+20:55 varna: xxxxxxxx: 金将军
+20:56 xxxxxxxx: 将军我错了
+20:56 xxxxxxxx: 不对我没错 将军早就超出人类了
+20:56 varna: 将军只是不排便而已
+20:56 lh_bot: 金貔貅
+20:56 varna: 2333
+20:56 lh_bot: 貔貅金
+20:56 xxxxxxxx: 你竟然把将军和我们这些人类混为一谈太可恶了
+20:57 lh_bot: @国貅金
+20:57 varna: 将军领导的水雷战队战无不胜
+20:57 xxxxxxxx: 以后羊驼每天值班 大家说好不好
+20:57 xxxxxxxx: 好!
+20:57 lh_bot: 吼啊
+20:57 varna: 将军手扔一枚鱼雷，就轰沉了李明博奸党的军舰
+20:57 varna: 不要起哄
+20:57 varna: 今天谁值班
+20:57 sawfish: 那是蒙的
+20:57 lh_bot: 鲜
+20:57 xxxxxxxx: 羊驼
+20:57 cleamoon: 2G内存是不是略少...
+20:57 varna: 你们这些叛党
+20:57 lhanjian: sawfish, T2搞不出内核怪羊驼子？
+20:57 cleamoon: 不过我的平板才700M...
+20:57 varna: 看我给小耗喂羊味素
+20:57 marisa__ joined channel
+20:58 varna: cleamoon: 我觉得你该再等等
+20:58 xxxxxxxx: cleamoon: 台式机肯定少
+20:58 cleamoon: varna, 等什么
+20:58 xxxxxxxx: 移动设备不知道
+20:58 varna: 这种机器过段时间说不定能便宜收呢？
+20:58 varna: 买过时的机器总还是经济点
+20:58 sawfish: 卧槽所以这就是传中的骑虎难下。
+20:58 lh_bot: 16GiB 微笑路过 ￥190 威刚 DDR3 x4
+20:59 sawfish: 算你狠好不好
+20:59 varna: lh_bot: 然而你该用这些钱去找个女朋友……
+20:59 cleamoon: 我觉得只能过段时间不卖了...
+20:59 varna: 不至于那么快下架吧
+20:59 lh_bot: 这些钱泡妞都不够
+20:59 varna: 是不够
+20:59 lh_bot: 拿出一半 三百八
+20:59 xxxxxxxx: cleamoon: 你是买回来收藏的么...
+20:59 sawfish: 不卖了我就挂了吖
+20:59 sawfish: 103103
+20:59 varna: 不过好歹算个启动的启动资金
+20:59 cleamoon: 下架极快。我们这里稍微过期就不卖了
+20:59 varna: 噗
+21:00 varna: 你那里电子产品如此糟糕的啊
+21:00 xxxxxxxx: 你们看这就是欧洲人
+21:00 cleamoon: 不过本子本身才2400...
+21:00 cleamoon: 就是为了不让人等着买便宜的...
+21:00 varna: 在我朝想省钱又想要牌子最好还是买旧式东西
+21:00 varna: 结果瑞典奸商识破了这个观点
+21:00 varna: 资本主义真可怕
+21:00 lh_bot: 本子主义
+21:00 xxxxxxxx: 太可怕了
+21:01 cleamoon: 手机价格永远5000+，就只是升级
+21:01 Plough: 资本主义真可怕+
+21:01 Plough: varna: 另外我找到不用砂纸的办法了
+21:01 varna: 用什么弄掉那个白色
+21:01 cleamoon: Plough, 用屁股？
+21:01 Plough: 卫生纸裹成球，沾点溶剂
+21:01 Plough: 然后一通猛擦
+21:01 varna: 哦，用男汁啊
+21:01 sawfish: 总之我先去写计算机代码
+21:01 sawfish: 你们慢慢查
+21:02 Plough: 男汁只能变得更白
+21:02 varna: 我们只会慢慢逻
+21:02 * varna 逻
+21:02 sawfish: 我已经不知道用多么直白的语言可以表述单纯的事情了。
+21:03 xxxxxxxx: 世界毁灭了 然后XYM大婶醒来 怒喊一声逻
+21:03 xxxxxxxx: 然后我们就跟在后头一起逻
+21:03 xxxxxxxx: 在然后整个世界都逻了
+21:03 cleamoon: 10寸工作确实有点小
+21:03 varna: 逻者不死，得大宇宙力量，当圣逗士
+21:03 varna: 圣逗士哦
+21:04 varna: lhanjian: 爆
+21:04 sawfish: 所以说凡人
+21:04 lhanjian: varna, 炸
+21:04 varna: 你这基佬
+21:04 Plough: 顺天者食大便，逆天者大保健
+21:04 cleamoon: +
+21:04 xxxxxxxx: 圣斗士不会被同样的招数打倒两次 圣逗士只能躲过第一次
+21:04 varna: 这不是坦白从宽牢底坐穿……
+21:04 sawfish: 只能说你没有逆天的实力
+21:04 varna: 看来你有了
+21:05 varna: 求打一套天马流星拳……
+21:05 iyzsong: orz
+21:05 sawfish: 再说一遍，没兴趣。
+21:05 lh_bot: OJTZ
+21:05 sawfish: 这次横竖是被绑了。
+21:05 xxxxxxxx: 注意你的学术
+21:06 sawfish: 嗯嗯
+21:06 varna: 发展型：天马流星拳 -> 天马彗星拳 -> 天马彗星拳一二甲型 -> 天马流改拳 -> 江草神拳
+21:06 sawfish: 103
+21:06 lh_bot: 又来
+21:06 xxxxxxxx: 学术需要你能打出来了再说能..
+21:06 lh_bot: sawfish: 你能说点我们能看懂的东西么
+21:06 lhanjian: sawfish, 103是什么？
+21:06 varna: 我始终对文文dalao的江草支援一发轰翻门神撸改印象深刻
+21:06 iyzsong: lhanjian: 提督等级
+21:07 varna: 真的一发打沉了啊，我武藏观测射击都没做到
+21:07 lhanjian: iyzsong, 哦
+21:08 sawfish: 所以说别干无聊的事情
+21:08 Plough: 近看惨不忍睹
+21:08 Plough: 不过先这样吧……
+21:08 varna: sawfish: 你建议别人么……
+21:08 xxxxxxxx: 你别一出来就干奇怪的事情就靠谱了
+21:08 sawfish: 算了，我已经莫名其妙地干了那就这样吧。
+21:08 iyzsong: 求不无聊的事情! >.<
+21:08 varna: Plough: 溶剂把别的东西弄花了？
+21:09 varna: iyzsong: 跟妹子ox好玩
+21:09 lh_bot: iyzsong: 来写个 proxy server
+21:09 xxxxxxxx: iyzsong: 每天做南西可好玩了
+21:09 iyzsong: varna: 哪里有
+21:09 varna: iyzsong: eee
+21:09 iyzsong: lh_bot: 没意思
+21:09 varna: iyzsong: 你不是告白了么
+21:09 iyzsong: xxxxxxxx: 玩不动
+21:09 xxxxxxxx: 你永远不知道下一次会不会沟 会不会大破 会不会中破
+21:09 sawfish: 算了我不说话，这里说话太危险。
+21:09 iyzsong: varna: 不理我啊 ～
+21:09 Plough: varna: 甲板没涂匀
+21:09 varna: iyzsong: 你去找她啊
+21:10 Plough: 主要原因是1
+21:10 sawfish: xxxxxxxx: 你有过那个经验么？
+21:10 Plough: 主要原因是1. 我手残 2. 这是马后炮……
+21:10 sawfish: 没有就别说。
+21:10 xxxxxxxx: 你在问我做南西么?
+21:10 lh_bot: 人类为何要互相伤害
+21:10 iyzsong: varna: 都不知道是谁.. 去哪找
+21:10 varna: 那个颜料是水性的么？
+21:10 varna: iyzsong: 名字都没告诉你么！
+21:10 iyzsong: varna: 嗯 >.<
+21:10 xxxxxxxx: 然而我提督等级被南西祸害的已经到95了
+21:11 varna: 在我所掌握的奥义中，其中一条就是LEEE的本名啊……
+21:11 varna: 一辈子的珍宝
+21:11 iyzsong: varna: 烧
+21:11 marisa__: '逻'是？EA也在这吗？
+21:11 iyzsong: marisa__: xxxxxxxx 
+21:11 lh_bot: 等羊驼有妹子就不这么想了
+21:11 varna: marisa__: 逻是xym大神的真言，我们也不知道什么意思
+21:11 lh_bot: 那个是 EAgleLeo
+21:11 xxxxxxxx: 逻不是我 我只是学逻的
+21:11 lh_bot: 不是 EAirPeter
+21:12 varna: 总之就跟僧人念经的“唵”一样，念就对了
+21:12 iyzsong: 不是三体里的罗辑?
+21:12 sismvg quit:Ping timeout: 244 seconds
+21:12 marisa__: whatever，逻着逻着就会懂了吧。
+21:12 lhanjian: iyzsong, 好象是xym的逻
+21:12 varna: Luoji不是GJK么
+21:12 lh_bot: marisa__: 吃螺
+21:12 varna: lhanjian: 是xym
+21:12 varna: marisa__: 吃螺
+21:12 marisa__: 。。。就是药娘吃的？
+21:12 lhanjian: Luoji1995不是犇么
+21:12 varna: marisa__: 是
+21:12 xxxxxxxx: 逻着逻着就吃螺?
+21:12 varna: lhanjian: 他挺厉害的啊
+21:12 lh_bot: 酯还是脂
+21:13 xxxxxxxx: 中间有个_
+21:13 varna: 酯
+21:13 lhanjian: 我以为我把MR酱搞混了
+21:13 varna: 不是MR
+21:13 lhanjian: 嗯
+21:13 lh_bot: marisa__: 吃螺
+21:13 varna: GJK的邮箱签名曾经被人拿出来过
+21:13 varna: 我们看了一眼：Gee Law
+21:13 varna: 然后就愣住了
+21:14 xxxxxxxx: 我没看到过...
+21:14 sawfish: 另外，我的妹子们。
+21:14 varna: 念着就带感
+21:14 sawfish: 算了，我大概已经不会有妹子了。
+21:14 sawfish: 赔了夫人又折兵
+21:15 lh_bot: 我认为我应该再次强调一下那句话
+21:15 lh_bot: 不会说话可以不说
+21:15 xxxxxxxx: 谁猜T2是感情问题的 肯定是个毒奶
+21:15 varna: 南云吧
+21:15 sawfish: 我就说的感情问题。
+21:15 varna: 说起毒奶就是南云忠一了
+21:15 lhanjian: T2说的妹子们是舰娘吧
+21:16 lh_bot: marisa__: 吃螺不
+21:16 varna: marisa__: 吃螺不
+21:16 xxxxxxxx: lhanjian: 他要是玩舰娘我估计也不会天天说103
+21:16 varna: 提督等级过百以后升级很慢的
+21:17 lhanjian: xxxxxxxx, ……
+21:17 sawfish: 所以补内存。
+21:17 Plough quit:Read error: Connection reset by peer
+21:17 marisa__: 怎么会吃啊= =我可是帅气可爱的魔理沙
+21:17 xxxxxxxx: varna上次看了
+21:17 varna: marisa__: 可爱的男孩子自然要吃螺
+21:17 sawfish: 算了，我先补计算机代码。
+21:17 marisa__: 另外毒奶又是什么鬼
+21:17 xxxxxxxx: 就是奶谁谁死那种
+21:17 varna: marisa__: 一开始是黑星际解说黄旭东的梗
+21:18 varna: 飞龙骑脸怎么苏？
+21:18 xxxxxxxx: 然后毒奶疫情就扩散了
+21:18 varna: 问题是飞龙骑脸这个说法在MI实在太形象了
+21:18 lh_bot: marisa__: 爆照 or 吃药
+21:19 xxxxxxxx: 出现了一拨拨的毒奶 他们看中谁谁就倒霉
+21:19 varna: 我可不是毒奶
+21:19 varna: 我给肛旗加buff之后他就出大和蚯蚓
+21:19 varna: 我才发现fcitx能打出“矧”来
+21:19 Plough joined channel
+21:20 lh_bot: 矧
+21:20 varna: 雷爷时间！
+21:20 Plough: 有人出矢矧了？
+21:20 varna: 没
+21:20 varna: 我只是用你的例子说明我不是毒奶
+21:20 Plough: 2333333
+21:21 Plough: 我看眼log
+21:21 varna: 妙高飞了
+21:21 xxxxxxxx: 我觉得我不是 至于我是不是我不知道
+21:21 cleamoon: 肛旗不是有矢矧了吗
+21:21 Plough: 肯定是你又忘了+26的命中
+21:21 * lh_bot returns
+21:21 varna: 2hp!
+21:21 varna: 没打空！
+21:22 xxxxxxxx: 哎呀卧槽 刷完闪忘记把装备拆下来了...
+21:22 xxxxxxxx: 只能吃桶了
+21:23 varna: 改造了～
+21:24 sawfish: 另外我发现一个人
+21:25 varna: 哈哈哈哈22改四
+21:25 sawfish: http://www.cnblogs.com/lfsblack/archive/2012/09/08/2676787.html 
+21:25 varna: 给POI
+21:25 xxxxxxxx: 22改四是啥?
+21:25 sawfish: 这伙计应该很有意思。
+21:25 lh_cat joined channel
+21:25 varna: xxxxxxxx: 22电探改四，妙高任务送
+21:26 xxxxxxxx: 听上去好像很厉害
+21:26 Plough quit:Read error: Connection reset by peer
+21:26 varna: 命中方面最上位的驱逐舰可用的水上电探
+21:26 Plough joined channel
+21:26 varna: 33探是命中5索敌7，22改四是命中8索敌5对潜2
+21:27 varna: 这一下子就是32水准啊
+21:27 xxxxxxxx: 命中8orz
+21:27 varna: 32探也就是命中8索敌10
+21:27 varna: 当然深海水上电探是命中24
+21:27 xxxxxxxx: 然而我并没有足够的铝资源收入去搞电碳...
+21:28 varna: 少喷点就行了
+21:28 xxxxxxxx: 还有每天还得造飞机...
+21:28 varna: 跑铝太费了，我都不专门跑
+21:28 sawfish: 跟你说了，不是什么都能凭空造出来的。
+21:28 Plough: 说到奶
+21:28 Plough: 我曾经在群里连着给别人奶出三隈大凤
+21:28 varna: 我去5-4把补给打了
+21:28 sawfish: 要我再说一遍么？
+21:29 xxxxxxxx: 前段时间我刷闪拉铝去了
+21:29 xxxxxxxx: sawfish: 谁要求你凭空做出东西来了么?
+21:29 sawfish: 我没凭空造过东西，除了内核实现。
+21:30 varna: xxxxxxxx: 那个太累了，我跑过
+21:30 xxxxxxxx: varna 拉到铝2W够造飞机就改远征5了
+21:30 cleamoon: Plough, 赶紧给我们奶一奶
+21:31 varna: 基头四太拼了
+21:31 xxxxxxxx: 幼女继续烧资源中....
+21:32 xxxxxxxx: varna 主要因为其他资源当时都2w多 铝不到1w看上去实在不好看....
+21:32 varna: 今天妙高60->70，丢了三回MVP
+21:33 varna: 虽然练得惊险，但还是挺安定的
+21:34 varna: 铝的自然增长量本来就是别的1/3啊
+21:34 varna: 正常情况下做不到差不多吧
+21:34 xxxxxxxx: 但是看着不舒服啊...
+21:35 varna: 你这基佬
+21:35 cleamoon: 我连钢都不到2W
+21:35 varna: 我钢刚21k
+21:36 varna: 按惯例5-4强行制空
+21:36 xxxxxxxx: 还有比如傻级别人都75改 光把那位搞到80级多不爽 但是练到79 演习蹭蹭经验大家都80 多好看
+21:37 varna: 练到八十很麻烦的啊……
+21:37 varna: 你们真是太肝
+21:37 xxxxxxxx: 战舰练起来最简单了
+21:37 cleamoon: 只是基王肝
+21:37 varna: 但是需要的经验数很多
+21:38 varna: 对了我5-4上路居然掉过沟
+21:38 xxxxxxxx: 感觉不算太多 感觉上10把一级
+21:39 varna: ...
+21:39 xxxxxxxx: 外加不容易丢MVP稳的要死
+21:39 varna: 十盘差不多一级，这个没问题
+21:39 varna: 但是我除了肥城和隼鹰之外没有特意练过80的……
+21:39 xxxxxxxx: 所以我只练到79
+21:39 varna: 小天使推出二改的时候已经在5-4周到84或者类似的数目了……
+21:40 Plough: 毕竟dalao……
+21:40 varna: 那时候我天天作死
+21:40 Plough: 那貌似是我人生中第一次经历维护
+21:40 varna: 不然至少能过E3吧
+21:40 Plough: 整个MI就是送的吧
+21:40 Plough: 只要有资源
+21:40 varna: 当时咱们谁有几个烈风啊
+21:41 varna: 连铝都没多少的样子
+21:41 Plough: ……倒也是
+21:41 varna: 现在看来就是白送
+21:41 varna: 最多一个索敌随机沟
+21:41 cleamoon: 羊驼试过高分辨率的本子吗
+21:41 Plough: 航空战有命中？
+21:41 Plough: 本子指什么
+21:41 Plough: 这个比较重要
+21:41 varna: cleamoon: 我没有搞分辨率的笔记本
+21:41 varna: 高
+21:41 cleamoon: laptop...
+21:42 cleamoon: 试过吗？
+21:42 varna: 我第一反应是我真有高分辨率舰娘本，不过删了
+21:42 varna: 没试过
+21:42 xxxxxxxx: 卧槽我第一眼一位是和谐物....
+21:42 Plough: 秋活的事后我差点就换了高分屏
+21:42 varna: 这5-4打的，道中凉风习习……
+21:42 Plough: 不过我去问了下
+21:42 Plough: Acer你算计我……
+21:42 xxxxxxxx: 以为
+21:42 code_new_ joined channel
+21:42 Plough: V3-551G的排线似乎被修改过
+21:42 xxxxxxxx: 我感觉我要猫了
+21:43 varna: 啊？
+21:43 Plough: 装高分会直接黑掉
+21:43 cleamoon: 啊？
+21:43 varna: 改排线作死干嘛
+21:43 varna: code_new_: 爆
+21:43 xxxxxxxx: 实力自奶没打完就不猫了
+21:43 Plough: 571G就可以正常的上高分屏……
+21:43 Plough: varna: 大概是人为制造配置差异
+21:43 code_new_: varna: 爆爆
+21:43 varna: 不中破！不大破！不小破！
+21:43 varna: 撸爷饶命！
+21:43 Plough: 逼你买高端
+21:43 varna: 啊操
+21:43 varna: 北上大人
+21:43 Plough: 5-4带什么北上大人……
+21:44 Plough: U酱中破
+21:44 varna: 低耗啊……
+21:44 Plough: 一库中破
+21:44 lhanjian: code_new, 柔
+21:44 varna: 我这可是Lv120的北上大人
+21:44 varna: 我日
+21:44 Plough: 我也去5-4
+21:44 code_new: lhanjian: 捏jianjian
+21:44 cleamoon: 话说，上次神奇了一次，我靠纯防空弄到了制空确保...
+21:44 varna: 昼战没打掉
+21:44 varna: cleamoon: 那不是神奇
+21:44 Plough: cleamoon: 那是因为对面制空为0
+21:44 varna: cleamoon: 对方制空力0自动确保
+21:44 varna: 防空不打舰战
+21:44 varna: 基本上那么确保的都是3-2队
+21:45 varna: 他们的飞机没制空
+21:45 varna: 阿贺野……
+21:45 Plough: 我练大凤的事后会带江草隆繁……
+21:45 Plough: 时候*
+21:45 varna: 事后
+21:45 Plough: 那是因为我前面敲了几次事后诸葛
+21:46 varna: 继续周
+21:46 cleamoon: ....
+21:47 varna: 利根一桶砸死一个孙子
+21:47 varna: 连装三日月
+21:47 Plough: 我家利根能用桶砸死撸爷
+21:47 Plough: 那次我都看傻了
+21:48 varna: 我巡洋舰等级还是不够啊
+21:48 varna: 鬼鬼喔……
+21:48 varna: 怎么总是如此鬼畜
+21:48 Plough: 哎，还有其他配置的么（眼神死）
+21:48 varna: KTKM中破
+21:48 varna: 挡枪鬼有时候挺聪明的
+21:49 Plough: 毕竟16in
+21:49 varna: 捞个棒各
+21:49 varna: 16in连装炮……
+21:49 varna: 哦日
+21:49 varna: 嗒酱
+21:50 xxxxxxxx: 我昨天练苍龙剩一个金皮轻巡 夜战 羽黑直接一个200 100的二连怒收MVP
+21:50 varna: 这下亏大了
+21:50 varna: 练航母为何夜战
+21:50 Plough: 算了，去什么5-4
+21:50 xxxxxxxx: 我觉得红色疲劳最多擦弹 但是擦一下那个金皮就死了
+21:50 Plough: 4-3周期
+21:50 Plough: 走起
+21:50 varna: 我了个大槽
+21:51 varna: 昼战打剩三个什么鬼
+21:51 xxxxxxxx: 结果还不如不夜战...
+21:51 varna: 卧槽
+21:51 varna: 出事了
+21:51 Plough: 废话……
+21:51 varna: 金补给
+21:51 varna: 啊啊啊啊啊啊
+21:51 Plough: 航母夜战又不能攻击
+21:51 Plough: 其他人打了就是MVP
+21:51 varna: 大傻被一发大破……
+21:51 Plough: 没打中你夜战又没意义
+21:51 varna: 得个头锤
+21:52 varna: 这太妖异了
+21:52 varna: 我知道金补给可以大破航母，不知道会大破战舰啊
+21:52 Plough: ……这是出了大和以后的反噬么
+21:52 xxxxxxxx: 飞龙开幕造成了不少伤害 要是普通来一下60 70什么的估计还能收人头
+21:52 Plough: varna: 当年补给船平A大破过我欧根呢
+21:52 varna: xxxxxxxx: 夜战少有那种
+21:52 varna: 这绝对是暴击了
+21:53 varna: 还剩三个小破，如果没出事的话今晚挂明石吧
+21:53 varna: 但鬼知道会不会出事
+21:54 varna: 像Nangcr那种以为自己很稳的，还是在安逸的地方打得太久了啊
+21:55 xxxxxxxx: 安逸的地方太久.. 倒地而亡 
+21:55 marisa__: 话说各位，什么轴写程序会舒服点？以前就用过绿轴。。。
+21:55 varna: 我就用自带键盘
+21:55 Plough: 轴是什么，我这种穷人怎么不知道Orz
+21:55 marisa__: 自带键盘进水了。。。
+21:56 varna: 那就买个便宜的
+21:56 xxxxxxxx: 便宜的+
+21:56 varna: 按着舒服就行
+21:56 marisa__: 打C会出xa，打e会出tab。。。好吧
+21:56 varna: 要不你送修一下
+21:56 Plough: marisa__: 话说你以前那个绿轴是啥
+21:56 xxxxxxxx: 然而土豪们开始说机械好 后来说电容好
+21:56 FrankHB: http://www.zhihu.com/question/28938138
+21:56 marisa__: 不知道，好像是ak什么的，我查查
+21:56 varna: 噗
+21:56 varna: 这个打油诗
+21:57 varna: 终于遇到三喔
+21:57 sawfish: 我能给羊驼跑腿么？
+21:57 Plough: 膜蛤也是要按照基本法
+21:57 sawfish: 我擦类
+21:58 xxxxxxxx: 太作死
+21:58 Plough: 第一次就掉沟
+21:58 varna: 求不中破不大破
+21:58 varna: 我晚上挂明石
+21:58 varna: 撸爷饶命
+21:59 Plough: 撸酱微微一笑：“你觉得可能么”
+21:59 sawfish: 一句话，不是我不太擅长方面的夜战。
+21:59 varna: 操，中破了……
+21:59 Plough: 你看
+21:59 sawfish: 想让我吃键盘有点难。
+21:59 Plough: 我是身经百战啦，见得多啦
+21:59 varna: 连续三回昼战没打掉……
+21:59 varna: 这5-4打了些什么啊
+22:00 varna: 按顺序打！
+22:00 varna: 好！
+22:00 Plough: 欧rz
+22:00 Plough: 我家只有两种情况
+22:00 varna: 不愧是在瓜岛拯救我于水深火热之中的柴刀小天使
+22:00 Plough: 按顺序miss和按倒序暴击
+22:00 varna: 卡立绘了哦哦哦
+22:00 varna: 噗
+22:00 varna: 长波……
+22:00 Plough: 噗
+22:00 varna: 我要瑞鹤啊
+22:00 hope1 joined channel
+22:01 varna: 长波都拆过两个了……
+22:01 Plough: 再捞
+22:01 Plough: 下一发救出
+22:01 Plough: 就出*
+22:01 varna: 不去了
+22:01 Plough: 我看看22->35是多少经验
+22:02 marisa__: 查到了，就叫ak47= =好奇怪的键盘名
+22:02 varna: 明石搓澡，收工
+22:02 varna: ak47...
+22:02 xxxxxxxx: 卧槽
+22:02 varna: 大口径手指专用么
+22:02 xxxxxxxx: 你的键盘台布和谐才坏的吧...
+22:02 xxxxxxxx: 太不
+22:02 marisa__: 不是啊= =不知道为什么叫这。。。
+22:02 varna: 要是改叫56c就不坏
+22:03 varna: 五六冲远销海外，受到第三世界国家人民的一致好评
+22:03 Plough: 后来那块键盘怎么样了
+22:03 marisa__: 我laptop键盘进水了。。。
+22:03 marisa__: 丢了。。。
+22:03 Plough: ……壕
+22:03 Plough: 我在考虑收个二手机械键盘
+22:04 Plough: 虽说现在看来得过会
+22:04 Plough: 刚败的800还有500在路上呢
+22:04 cleamoon: 我去，已经等很久了，我刚查到，我想入的平板是13年中旬出的...
+22:04 marisa__: 我连手机都没有啊，要个键盘不过分啊= =
+22:04 Plough: 要个键盘不过分
+22:04 Plough: 机械键盘居然丢了……
+22:04 varna: 有钱人
+22:05 cleamoon: 壕
+22:05 xxxxxxxx: 欧洲人
+22:05 marisa__: 性格问题。。。我也不想掉啊orz
+22:05 cleamoon: 给我吧
+22:05 whocares_2 joined channel
+22:05 Plough: 现在淘宝上卖400
+22:05 xxxxxxxx: cleamoon: 你想说保证不丢是不是...
+22:06 Plough: 壕气可见一斑
+22:06 varna: 是保证给你操怀
+22:06 varna: 坏，不是怀……
+22:06 marisa__: 。。。不是800没
+22:06 * varna 面壁
+22:06 Plough: 你看看你
+22:06 xxxxxxxx: 为何面壁?
+22:06 lh_cat: FrankHB: 404
+22:06 varna: 你这基佬
+22:07 varna: lh_cat: 刚刚被删了
+22:07 lh_cat: 啥问题
+22:07 xxxxxxxx: 啥删了?
+22:07 cleamoon: xxxxxxxx, 什么保证不丢？
+22:07 cleamoon: 操怀好评
+22:08 xxxxxxxx: cleamoon: 你不是让他把键盘给你么?
+22:08 cleamoon: xxxxxxxx, 我为什么要丢
+22:08 varna: lh_cat: “为什么有人喜欢蛤蛤”，里面有个作死的打油诗
+22:09 Plough: 我还开着页面
+22:09 xxxxxxxx: 你要图片的话我这里有
+22:09 Plough: 噗
+22:09 xxxxxxxx: 但是太不和谐....
+22:09 Plough: 我才发现回答者叫华莱士
+22:09 varna: 噗
+22:09 varna: 太作死
+22:10 cleamoon__: 233333
+22:10 sawfish: 肝得蛋疼，我先睡一会儿去。
+22:11 sawfish quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:11 varna: http://zh.wikipedia.org/zh/%E8%BF%88%E5%85%8B%C2%B7%E5%8D%8E%E8%8E%B1%E5%A3%AB
+22:11 varna: http://tieba.baidu.com/p/3538041960
+22:12 varna: ^ 找死っぽい
+22:13 Plough: 233333
+22:14 condy: 分析得好透彻.
+22:14 xxxxxxxx: 蛤蛤多有亲和力啊，谈笑风生，多才多艺。
+22:14 lhanjian: code_new, 捏
+22:14 xxxxxxxx: 而且我说一个小细节，蛤和鹏还一起上过春晚祝全国人民新年快乐，这个网上视频可以看一看或者问问爸爸妈妈都是知道的。而现在，可能有这样其乐融融的景象吗？
+22:14 xxxxxxxx: 而且香港澳门回归，日本和欧美动画片的引进，都是蛤蛤时期的。
+22:14 xxxxxxxx: 反观维尼，啥也不会，只会吃吃肉包子，秀秀恩爱。
+22:15 marisa__: 维尼->习？
+22:15 xxxxxxxx: 反观维尼，啥也不会，只会吃吃肉包子，秀秀恩爱。 吃肉包子和秀恩爱放一起...
+22:15 Plough: 明显是包帝
+22:16 cleamoon: 为什么是维尼
+22:16 xxxxxxxx: 不知道...
+22:16 varna: 大家不要作死
+22:17 varna: 这里的言论都会被logger记录并且公开供查阅
+22:17 varna: 还是只谈风月为好
+22:17 xxxxxxxx: 我在用正义的眼光看那个把吃肉包和秀恩爱放一起的评论
+22:17 code_new: lhanjian: 揉
+22:17 varna: 我在用银邪的眼光看你的屁股
+22:19 hope1 quit:Ping timeout: 256 seconds
+22:19 varna: 这样吧，我给大家找点乐子
+22:19 xxxxxxxx: 我用17级冥思的眼光放骨墙挡住你的眼光
+22:19 varna: 推荐个旗舰，我来发低保
+22:19 xxxxxxxx: 飞鹰
+22:19 varna: 还有呢
+22:20 xxxxxxxx: 专注被忽略30年
+22:20 varna: 这次我把所有的意见拿出来随机决定
+22:20 varna: 没意见就飞鹰了
+22:20 code_new: 初霜
+22:20 varna: 初霜没留
+22:20 code_new: ……
+22:20 Plough: 矢矧
+22:20 lh_cat quit:Ping timeout: 244 seconds
+22:21 varna: 没有了么
+22:21 code_new: 那珂
+22:21 varna: 三个意见
+22:21 varna: 我生成0-8的随机整数，按顺序划分成飞鹰、那珂、矢矧
+22:21 varna: 0 飞鹰
+22:22 varna: Lv86飞鹰，走起
+22:22 varna: 猜出货吧
+22:22 xxxxxxxx: 金刚
+22:22 Plough: 长门
+22:22 varna: 我点了
+22:22 code_new: 马路油
+22:22 varna: ok
+22:22 varna: 基佬猜中了时间
+22:22 varna: 我就不喷了，再来一发
+22:23 Plough: 这次用矢矧吧
+22:23 varna: 哦操
+22:23 xxxxxxxx: 大傻和三傻肯定的!
+22:23 varna: 你他妈的毒奶！
+22:23 varna: 合计八小时
+22:23 code_new: ……
+22:23 Plough: 哈哈哈哈哈哈哈
+22:23 varna: 简直太赞
+22:23 varna: 下周开始屯资
+22:23 code_new: 正常
+22:24 varna: 这才是我的大建
+22:24 varna: 然后四月的战果我放弃
+22:24 xxxxxxxx: 低保嘛...
+22:24 varna: 仍然只打前三个五图
+22:24 condy: http://www.zhihu.com/question/28939304
+22:25 Plough: 中将的演习也蛋疼
+22:25 varna: 我能勉强大将
+22:25 Plough: ……岩川就是好
+22:25 varna: 虽然我已经掉到五千名了
+22:25 Plough: 你们那边500线现在是多少
+22:25 xxxxxxxx: 大酱稳如poi
+22:25 varna: 977
+22:25 varna: 岩川终于恢复风平浪静了
+22:26 xxxxxxxx: varna 这种事情要到月末才知道...
+22:26 varna: 第一名5148 第十名2724
+22:26 lhanjian: optimized insertion sort 真是蛋疼……
+22:26 varna: xxxxxxxx: 战果炮不会在五百线上放很多的
+22:26 varna: 比如月末一天三十盘5-4，这差不多是六十战果
+22:26 xxxxxxxx: 第一名3108 第二名2367
+22:26 Plough quit:Read error: Connection reset by peer
+22:27 xxxxxxxx: 我觉得咸鱼湾要掀起血雨腥风了
+22:27 Plough joined channel
+22:27 Plough: 幌筵现在是1014
+22:27 marisa__: http://zh.wikipedia.org/wiki/%E5%9B%BE%E6%A0%B7%E5%9B%BE%E6%A3%AE%E7%A0%B4 23333一上去就被GFW拉下来了
+22:27 xxxxxxxx: 第一名一看就是甘帝来放的嘲讽
+22:28 xxxxxxxx: 等等我好像看到了什么奇怪的东西....
+22:28 xxxxxxxx: 第七名叫山本五十六....
+22:30 cleamoon: 上台拿衣服2333
+22:31 Plough: 三连沟
+22:31 Plough: 塔酱
+22:32 varna: 到春活之前停止一切大建，包括赌战神
+22:32 Plough: 我再赌赌401
+22:33 varna: 这样下去我只能更费力
+22:33 Plough: 艹
+22:33 Plough: 手滑夜战了
+22:33 xxxxxxxx: 重巡也3-2练?
+22:33 Plough: 我可以，你不一定
+22:33 varna: 你危险
+22:33 xxxxxxxx: 我也觉得危险
+22:33 varna: 重巡需要高档电探才能保证命中
+22:33 lh_mouse: http://anohito.tw/poi/  
+22:34 varna: lh_mouse: 我有个连发POI循环
+22:34 lh_cat joined channel
+22:34 lh_mouse: 不！要！死！宅！
+22:35 Plough: 春活我想让矢矧跟着大和出去
+22:36 cleamoon__: 失身很强吗
+22:36 Plough: 一改轻巡里面算不错的了
+22:36 varna: 神通很强
+22:37 Plough: 神通是魔改
+22:37 varna: 这是所有轻巡的悲哀
+22:37 Plough: 全体啊嘿颜：“运营你TM算计我”
+22:37 varna: 神通的夜战火力直达天边，所以轻巡练谁其实已经不是问题了
+22:37 Plough: 四连沟
+22:37 varna: 但即使如此，阿贺野级也是能力值很好的
+22:37 Guest84249 quit:Remote host closed the connection
+22:37 Plough: 塔酱又见面了
+22:38 xxxxxxxx: 夕张呢
+22:38 varna: 没搭载
+22:38 hope1 joined channel
+22:38 Plough: 蜜瓜只是有四个格子而已
+22:38 Plough: 鸟海中破
+22:38 varna: 没搭载的巡洋舰目前只适合特种任务
+22:38 Plough: 隼鹰中破
+22:39 Plough: 阿贺野级历史上是悲剧，游戏里也是悲剧
+22:39 Plough: 真惨
+22:40 varna: 阿贺野级纸面上很好看的
+22:40 varna: 对舰火力强大，后来还有电探
+22:40 varna: 可惜巡洋舰干这个脑洞有点大
+22:41 Plough: 对舰火力和亚特兰大酱比呢……
+22:41 xxxxxxxx: 问题就是我没有大屁股 只有夕张有四个格子我是练上来等大屁股还是开了图鉴直接扔掉...
+22:41 varna: 亚特兰大口径不足
+22:41 varna: xxxxxxxx: 练蜜瓜
+22:41 Plough: BSP里亚特兰大酱各种秒重巡
+22:41 varna: 别等大淀
+22:41 varna: BS系列里口径都是梦话
+22:41 varna: 但亚特兰大的DP炮是驱逐舰程度的口径
+22:41 Plough: 我记得大淀的夜战火力不如蜜瓜
+22:42 varna: 大淀的夜战火力完爆睦月级
+22:42 Plough: ……所以全身都是主炮也没用么
+22:42 varna: 还暴虐香取
+22:42 Plough: 233333
+22:42 varna: 毕竟那个是DP炮，当护卫舰打飞机和驱逐舰都很好的
+22:42 xxxxxxxx: 虐的对象不对...
+22:42 Plough: 香取的配置只有四损管吧
+22:42 varna: 是
+22:43 varna: 香取（4人）
+22:43 Plough: 2333333
+22:43 Plough: 恋爱练习舰
+22:44 Plough: 五连沟
+22:44 Plough: 艹
+22:44 Plough: 我点单横了……
+22:44 varna: 脸过去
+22:45 Plough: 轮型莉酱
+22:45 Plough: 开幕被小破两个
+22:45 Plough: 同航，爽了
+22:46 Plough: 过了
+22:50 varna: 回去了
+22:50 varna: 今天的大建货可以拿去改修妙高
+22:50 varna: 诸君武运
+22:50 varna quit:Quit: leaving
+22:53 lh_mouse: geordi, << (c>>6)*9 + (c&15); constexpr char c = 'a'
+22:53 geordi: error: expected ',' or ';' before 'int'
+22:53 lh_mouse: geordi, << (c>>6)*9 + (c&15); constexpr char c = 'a';
+22:53 geordi: 10
+22:53 lh_mouse: geordi, << (c>>6)*9 + (c&15); constexpr char c = 'A';
+22:53 geordi: 10
+22:53 lh_mouse: geordi, << (c>>6)*9 + (c&15); constexpr char c = '9';
+22:53 geordi: 9
+22:57 marisa__: "Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration." � Stan Kelly-Bootle ROFL
+22:58 lhanjian quit:Quit: Leaving
+23:01 Plough: 六连沟
+23:13 Plough: 七连沟
+23:13 nonono joined channel
+23:13 Plough: 统计学告诉我七连沟的概率只有千分之七
+23:13 Plough: 之前相信统计学的那位呢
+23:13 cleamoon__: 那是基王的概率
+23:13 nonono: 在这里聊天会被定位吗
+23:14 lh_mouse: 会
+23:14 lh_mouse: IP地址: 117.88.216.224江苏省南京市 电信
+23:15 nonono: 有没有人会用tor的？我用vadalia，显示tor已连接，但怎么感觉没用呢
+23:15 lh_mouse: 没研究过
+23:16 nonono: torchat里面聊天会被定位吗，
+23:16 lh_mouse: 自觉
+23:16 nonono: ？
+23:16 cleamoon__: 怎么作死都能被定位
+23:17 nonono: 你的Ip怎么隐藏的呀，。。
+23:17 lh_mouse: 不作死就不会死
+23:18 nonono: 换句话说真正的隐藏就只有靠蹭别人的无线网喽？？、
+23:18 nonono: 我的这个ip是我家楼上的，嘿嘿
+23:19 lh_mouse: nonono, http://freenode.net/faq.shtml#cloaks
+23:19 xxxxxxxx: 真正的隐藏就是不要作死
+23:20 supermelody90: ，
+23:28 supermelody90 quit:Quit: 离开
+23:28 supermelody90 joined channel
+23:29 supermelody90: f
+23:29 cleamoon: 韩国政府终于开始采取行动淘汰早已过时的ActiveX控件。此前韩国法律强制要求在线交易必须验证身份，而验证身份必须安装IE的ActiveX控件
+23:41 tutu joined channel
+23:42 supermelody90 quit:Quit: 离开
+23:47 supermelody90 joined channel
+23:47 supermelody90: k
+23:51 hope1_ joined channel
+23:55 hope1 quit:Ping timeout: 256 seconds
+23:58 marisa__: Example A: In the classroom, talking about a test.
+23:58 marisa__: Student A "Wow, that's really hard!"
+23:58 marisa__: Student B "That's what she said!"
+23:58 marisa__: Example B: Talking about a fragile object
+23:58 marisa__: Man A "Pull it out slowly."
+23:58 marisa__: Man B "That's what she said!"
+23:58 marisa__: Example C: At a hotel, describing the room key
+23:58 marisa__: Clerk "Put it in, then take it out fast."
+23:58 marisa__: Man "That's what she said!" 23333

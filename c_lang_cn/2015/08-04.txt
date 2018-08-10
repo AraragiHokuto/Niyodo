@@ -1,0 +1,588 @@
+00:00 hope1_ joined channel
+00:01 hope1_: hysw, Computational Neuroscience... 感觉很厉害的样子
+00:03 hope1 quit:Quit: Lost terminal
+00:04 hope1_: 主要是构造模型来模拟生物神经网络还是什么?
+00:05 hope1_: 于是现在寒云已经开始发paper了? 大二?
+00:12 Mokou: 睡觉
+00:12 Mokou: 诸君武运
+00:12 Mokou quit:Quit: 睡觉
+00:24 molikto quit:Remote host closed the connection
+00:25 molikto joined channel
+00:49 lh_mouse quit:Read error: Connection reset by peer
+00:56 lh_cat quit:Quit: Connection closed for inactivity
+02:18 xxxxxxxx quit:Quit: Leaving...
+02:20 molikto quit:Remote host closed the connection
+02:24 OwenJia joined channel
+02:24 OwenJia quit:Changing host
+02:24 OwenJia joined channel
+05:39 boosure joined channel
+08:19 hoxily joined channel
+08:22 * hoxily 刚 tutu_wind 
+08:22 * hoxily 抚摸 clcn_logbot 
+08:23 * hoxily 抚摸 cleamoon 
+08:23 * hoxily 推开 clcn_logbot 
+08:44 tutu_wind: morning ~
+08:44 tutu_wind: hoxily: 刚来 ～ 
+08:44 tutu_wind: cleamoon: morning ~
+08:46 cleamoon_ joined channel
+08:46 cleamoon quit:Read error: Connection reset by peer
+08:52 tutu_wind quit:Quit: WeeChat 1.0.1
+09:03 tutu_wind joined channel
+09:08 lh_mouse joined channel
+09:08 tutu_wind: lh_mouse: 摸摸头
+09:20 hoxily quit:Quit: Leaving
+09:21 hoxily joined channel
+09:22 hoxily quit:Client Quit
+09:23 hoxily joined channel
+09:36 cleamoon_ quit:Ping timeout: 246 seconds
+09:41 cleamoon_ joined channel
+09:48 hoxily quit:Quit: Leaving
+09:49 hoxily joined channel
+09:54 Yoooooooumu joined channel
+09:54 Ivan97 joined channel
+10:10 whatofor joined channel
+10:13 whatofor_1 quit:Ping timeout: 256 seconds
+10:17 Mokou joined channel
+10:17 whatofor_1 joined channel
+10:20 whatofor quit:Ping timeout: 265 seconds
+10:23 kulala joined channel
+10:28 kulala: intrusive_ptr哪里有更好的性能啊
+10:40 whatofor joined channel
+10:42 whatofor_1 quit:Ping timeout: 246 seconds
+10:43 endle joined channel
+10:47 hoxily quit:Ping timeout: 272 seconds
+10:48 hoxily_ joined channel
+10:48 molikto joined channel
+11:03 lh_not_bot: 艹  mysql 转义写错了
+11:12 molikto quit:Remote host closed the connection
+11:22 whatofor_1 joined channel
+11:24 tutu_wind quit:Quit: WeeChat 1.2
+11:25 whatofor quit:Ping timeout: 252 seconds
+11:27 hoxily_ quit:Quit: Leaving
+11:36 molikto joined channel
+11:49 molikto quit:Remote host closed the connection
+11:50 molikto joined channel
+12:00 whatofor joined channel
+12:02 whatofor_1 quit:Ping timeout: 244 seconds
+12:07 Ivan97 quit:Quit: Connection closed for inactivity
+12:17 whatofor quit:Read error: Connection reset by peer
+12:17 whatofor joined channel
+12:24 endle quit:Quit: Leaving
+12:26 kulala: bing对图片的筛选能力比百度还差..
+12:40 hope1_ quit:Ping timeout: 260 seconds
+12:43 Mokou quit:Ping timeout: 250 seconds
+12:45 Mokou joined channel
+12:53 * kulala 我已经是一般社员了,能娶到声优吗
+12:55 whatofor_1 joined channel
+12:58 whatofor quit:Ping timeout: 265 seconds
+13:06 hoxily joined channel
+13:07 hoxily quit:Client Quit
+13:09 hoxily joined channel
+13:11 lh_mouse quit:Read error: Connection timed out
+13:12 lh_mouse joined channel
+13:15 hoxily quit:Quit: Leaving
+13:16 hoxily joined channel
+13:21 molikto quit:Remote host closed the connection
+13:37 varna joined channel
+13:37 varna: 出门忘拿手机
+13:37 Mokou: ……
+13:38 varna: 打完演习我跑回去拿一趟……
+13:38 Mokou: 另外我发现认识主角大概是因为星球有原型
+13:38 Mokou: 有个机器人不认识我……
+13:38 varna: 那基本是乱搞的
+13:38 Mokou: 绿色的恒星确实不会烧死人，然而有一个问题
+13:38 varna: 你看info会发现基本介绍都是隼鹰的
+13:39 varna: 什么问题
+13:39 varna: 会撞一下么
+13:39 Mokou: 那颗星球离虫洞200K
+13:39 Mokou: 并没有什么Trade Lane
+13:40 varna: 对，所以唯一的麻烦就是道中的海鲜
+13:40 Mokou: 我倒是可以直接开F2过去……
+13:40 varna: 基本化外那几个地方都没商路，虽说现在我似乎已经搞臭了
+13:40 Mokou: 撞一下似乎是因为到边界了
+13:41 varna: 不，我在tau-37撞过恒星的中心
+13:41 Mokou: ……
+13:41 Mokou: 我往下飞了一会，似乎还是会撞
+13:41 varna: tau-37的Medium Yellow不会死人，我就飞进去了
+13:42 varna: 然后那个太阳直接给了我狗头一下
+13:42 Mokou: 23333
+13:42 varna: 也没什么伤害，离数百m的时候会提醒你进入太阳引力范围
+13:42 Mokou: 绿色的那东西也是
+13:43 varna: 不过后来乱逛的时候比较乐，找到samura的空间站，然后一窝hawk就过来了
+13:43 Mokou: ……
+13:43 varna: 想了想，既来之则安之
+13:43 varna: 于是把他们的运输队和护卫队都砸了
+13:43 Mokou: 233333
+13:44 varna: 后来还来了腐国警察，也打我
+13:44 varna: 找个自由港检查一下，才发现杀赏金猎人杀得Red Hessian的好感度都差一格多点友好了
+13:45 varna: 以前在腐国被刷钱刷到见我就眼红的Gaian干脆直接友好
+13:45 Mokou: http://ww3.sinaimg.cn/mw1024/e17e66f5gw1euphvd4ohej20u106gdis.jpg
+13:45 varna: Xeno也是
+13:45 varna: 整个人都空贼了
+13:45 varna: 噗
+13:45 Mokou: 哦对了，今天我看见赏金猎人灭了三个Titan……
+13:46 varna: 海盗对泰坦的运用简直就是逗
+13:47 varna: OG那里的巡逻队都是泰坦，然而居然还会死人
+13:47 varna: 干脆他们星系改名叫OGC算了
+13:47 Mokou: 23333
+13:47 varna: Omicron Gamma Circus
+13:47 varna: 简直耍猴
+13:48 varna: 不过现在有个好处，以前走tau和sigma总能遇到敌军
+13:48 varna: 现在进门有不少时候都是友军了
+13:48 varna: 不至于两秒钟动画之后吃电池俯冲
+13:48 Mokou: 毕竟赏金猎人仇恨太高
+13:49 varna: tau-37那地方还有双髻鲛来日常
+13:49 kulala: http://baike.baidu.com/link?url=gf5UGSghOesY_5_qrzxtdv7sto9h9fZ_jiYxyBX1ycAs_zmVt3B9Tfu4-vlPhBJL
+13:49 kulala: 突然响起了这个
+13:49 kulala: 想
+13:49 varna: 那里打起来各种好看，迫真的蓝天白云
+13:51 Mokou: http://ww4.sinaimg.cn/bmiddle/5d379f5fgw1eb0p85ft13j20c867k18v.jpg
+13:51 varna: 视频网站23333
+13:53 varna: 另外写2038问题的那伙计在逗乐么
+13:53 varna: 他们需要的不是IBN5100而是升级内核
+13:53 Mokou: 2038跟硬件有什么鸟关系么……
+13:54 kulala: 兴许配置太复杂,还是穿越时空比较容易(斜眼)
+13:54 varna: 而且说得好像现在就不用epoch一样
+13:56 varna: pixiv邮件推送，人气作品上来就看见一个妮可
+13:56 varna: 妮可下面有个主任
+13:56 varna: 太不祥
+13:58 Mokou: ……
+13:58 Mokou: E2机动部队
+13:58 varna: 噗 http://tieba.baidu.com/p/3945055020
+13:58 Mokou: 对面来个主任当Boss
+13:58 varna: 昨天那哥们还真看到菊座了
+13:59 Mokou: 噗
+14:00 varna: 以后在帝都坐地铁得随身带本子和笔，万一火了呢
+14:01 varna: 要个菊座签名，说不定可以保活动通关
+14:04 kulala: 黄仁勋的更好
+14:04 Mokou: 俾斯麦这船是个刀枪不入的东西
+14:04 kulala: 上次在上海看到了N卡的活动,没进去
+14:04 Mokou: 大和强行被抢MVP
+14:06 Mokou: 我操
+14:06 Mokou: 又抢
+14:06 Mokou: 田中你他妈脑子被驴踢成肉酱了？
+14:06 Mokou: 三门九四式白天打出来的伤害不如几门203
+14:06 Mokou: 吃屎呢？
+14:10 Mokou: 田中我操你妈了个逼
+14:10 Mokou: 田中我操你妈了个逼
+14:10 Mokou: 田中我操你妈了个逼
+14:10 Mokou: 田中我操你妈了个逼
+14:10 Mokou: 田中我操你妈了个逼
+14:16 whatofor joined channel
+14:19 whatofor_1 quit:Ping timeout: 272 seconds
+14:22 molikto joined channel
+14:24 kulala: 用着C的风格写C#真叼
+14:30 varna: 继续演习
+14:30 Mokou: 我在3-2
+14:30 Mokou: 强行留下七千经验
+14:30 varna: 这天好热
+14:30 varna: 求个药娘解解暑
+14:31 Mokou: 3-2我打一场田中死一个亲属
+14:34 varna: 下午这些演习真麻烦
+14:37 varna: Mokou: 说起来，似乎有些mod设置猴子星卖海鲜，你要不要也学着恶搞下
+14:37 Mokou: 我试试
+14:37 varna: 正好他们清单都是空的
+14:38 Mokou: 卖啥，程序猿炮？
+14:38 whocares_2 quit:Ping timeout: 256 seconds
+14:38 varna: 能卖海鲜大战舰不……
+14:38 varna: 不过估计bug会挺多
+14:38 molikto quit:Ping timeout: 244 seconds
+14:38 Mokou: 我不知道怎么让大战舰能开……
+14:38 varna: 我印象大舰似乎都不能走docking ring
+14:38 varna: 那就疼了，估计海鲜战斗机也问题多多
+14:39 Mokou: 海鲜战斗机没护盾……
+14:39 Mokou: 那酸爽
+14:39 varna: 我昨天的感觉是用轻战打海鲜反而舒服
+14:39 varna: 简直逗鱼
+14:39 whocares_2 joined channel
+14:40 varna: 这武藏是会玩的
+14:40 varna: 上来就打大井
+14:41 Mokou: 演习对手的船哪有不会玩的
+14:41 varna: 还有个锁一血的山城
+14:41 Mokou: 那是别人家的船，不是你家船
+14:41 varna: 卧槽，陆奥没二连
+14:41 varna: 少见
+14:41 varna: 然而大井没打死，挥手把武藏爆了
+14:42 varna: 还有两个带潜艇的，单纵赌
+14:44 Mokou: 说起来，不回重传是不是因为他们的四层负载均衡做砸了……
+14:44 Mokou: 不然不应该啊
+14:44 Mokou: 这些又不用他们管
+14:44 varna: 应该是
+14:45 varna: 时雨暴走中
+14:46 varna: 时雨爆炸中
+14:46 varna: 然而这铝酱被我单纵不带反潜炸掉了……
+14:47 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=05ee0b0a0c55b3199cf9827d73928326/6f061d950a7b0208d1d978ea64d9f2d3572cc8ad.jpg R18 R18 R18
+14:48 Mokou: 233333
+14:49 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=cd3ebc2a748b4710ce2ffdc4f3f5c2fd/d043ad4bd11373f0f59d2b94a20f4bfbfbed041e.jpg
+14:49 varna: 第二弹
+14:50 Mokou: 23333
+14:50 hoxily: 口交算命法
+14:51 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=e93acc0e35fa828bd1239debcd1f41cd/66868cea15ce36d3803dcb3b3cf33a87e950b1b7.jpg 表情：普惊
+14:54 Mokou: 大和Lv99达成
+14:55 varna: shioism...
+14:56 varna: 铁底之音综合症23333
+14:56 varna: 夜战恐惧症么
+14:56 whatofor_1 joined channel
+14:57 Mokou: 大和Lv100达成
+14:57 varna: OTL
+14:57 Mokou: 不过我感觉是BGM恐惧症……
+14:57 Mokou: 就像我听到冬E5道中的时候一样
+14:58 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=ffdd6a1717dfa9ecfd2e561f52ebf703/500fd9f9d72a60592823e9112e34349b033bba8d.jpg 没救了
+14:58 molikto joined channel
+14:59 kulala: 总是把peer当成pee
+14:59 whatofor quit:Ping timeout: 240 seconds
+14:59 kulala: 的确没救了啊
+14:59 varna: 自卫队都这么热心了，画师还是出面换个改造立绘吧
+14:59 Mokou: 运18……
+15:00 Mokou: 大和原来运多少来着
+15:00 varna: 13
+15:00 varna: +5还行
+15:02 Mokou: 大凤+4大和+5
+15:02 Mokou: 非洲人玩什么舰C
+15:03 Mokou: 1100桶达成
+15:06 varna: 867
+15:09 Mokou: 不过其实我现在觉得大和的舰体也挺好看的
+15:09 Mokou: 主要是大和坡
+15:09 Mokou: 那曲线多漂亮
+15:10 varna: 欠雪好看
+15:12 Mokou: 说起来我在考虑要不要去3-2把两只理想的舰队航母提到Lv80
+15:12 varna: 建议如此
+15:12 varna: 正航太少了
+15:14 Mokou: 那我去练一下
+15:14 Mokou: 带上赤城一起
+15:15 Mokou: ……然而我得先等红脸恢复……
+15:16 Mokou: 之前GMD似乎有人试图磕安眠药自杀
+15:16 whatofor joined channel
+15:17 Mokou: 哦，高考失利……
+15:17 varna: ...
+15:18 Mokou: 在GMD问有没有人能搞到安眠药
+15:18 Mokou: 然后被人劝回来了
+15:19 whatofor_1 quit:Ping timeout: 244 seconds
+15:19 Mokou: http://www.zhihu.com/question/31935383 看到这么个问题……
+15:28 hoxily left channel:"Leaving"
+15:44 whatofor_1 joined channel
+15:46 whatofor quit:Ping timeout: 252 seconds
+15:48 lh_mouse quit:Read error: Connection timed out
+15:50 lh_mouse joined channel
+15:50 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=af573b095a6034a829e2b889fb284854/3ac79f3df8dcd1008cd34a29748b4710b9122f6e.jpg
+15:55 Mokou: http://ww3.sinaimg.cn/bmiddle/820f43e8jw1euqjjcr48jj20yi0ejdij.jpg
+15:55 varna: 不是太熟
+15:56 Mokou: Lv30 -> Lv80
+15:56 Mokou: 感觉任务好艰巨……
+15:57 varna: 二羽鹤么……
+15:57 Mokou: +
+15:59 kulala: gmd是啥
+16:00 Mokou: 大约300场
+16:00 Mokou: 真heap
+16:00 Mokou: 真可怕
+16:04 whatofor joined channel
+16:07 whatofor_1 quit:Ping timeout: 252 seconds
+16:30 whatofor quit:Ping timeout: 252 seconds
+16:33 whatofor_1 joined channel
+16:52 whatofor joined channel
+16:54 hoxily joined channel
+16:55 whatofor_1 quit:Ping timeout: 240 seconds
+17:06 whatofor quit:Ping timeout: 250 seconds
+17:09 kulala: 经验----------一定要让C程序员把缩写的变量名打上注释
+17:09 kulala: d_c_rmt_f <-谁能猜到这个名字是什么意思?
+17:13 hoxily: 我搜搜看
+17:15 lh_mouse quit:Ping timeout: 252 seconds
+17:15 hoxily: 没找到
+17:15 hoxily: rmt可能是remote的缩写
+17:24 tutu_wind joined channel
+17:42 boosure quit:Quit: Get your hand off of it
+18:00 cafebeef quit:Ping timeout: 272 seconds
+18:01 cafebeef joined channel
+18:06 cleamoon_: http://www.solidot.org/story?sid=45008
+18:06 molikto quit:Remote host closed the connection
+18:08 varna: 我居然羞耻地用了_Generic
+18:15 Mokou: ……
+18:15 Mokou: #define GENERIC _Generic
+18:15 Mokou: 这样多好
+18:15 varna: 我不太喜欢大写，所以基本会用小写；不过实际上包起来了
+18:16 kulala quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+18:16 varna: #define p8_alloc_from(model_, arg_, ...) _Generic(arg_, void *: (model_).allocator_.plain_ptr_, size_t: (model_).allocator_.closure_)((arg_), ##__VA_ARGS__)
+18:17 Mokou: 喔喔p8了
+18:17 varna: p8没什么实用性，就是玩玩，总之先胡乱写写看
+18:18 varna: 少写个括号
+18:18 varna: 虽说一般也不至于如此
+18:20 tutu_wind: 如果数据可以持续积累在一个buffer，然后生成一个packet，那么它就是块设备，如果数据来一个就生成一个packet，那就是字符设备。
+18:21 tutu_wind: 好高深...
+18:21 varna: 这说法太……
+18:22 varna: 实际上可以简单地说，块设备和字符设备的差别单纯就是缓冲与否
+18:23 tutu_wind: http://blog.csdn.net/dog250/article/details/21303679
+18:24 varna: 这文章也没讲什么特别的啊……
+18:25 tutu_wind: ... 这么快啊
+18:25 tutu_wind: varna: 我在很仔细看 ~
+18:25 varna: 不如仔细看点书
+18:25 varna: 你仔细看了，最后无非也就知道几件事
+18:25 varna: 第一，网络IO被单独处理
+18:25 varna: 第二，CORK
+18:25 varna: 第三，作者自己都没说清楚何时该开Nagle
+18:26 varna: 至于block device/character device, 那些你之前应该知道了
+18:27 tutu_wind: 现在还搞不明白,write 后,数据是留在发送缓冲区,等到一个上线再发,还是直接发给了对端
+18:32 varna quit:Ping timeout: 260 seconds
+18:36 molikto joined channel
+18:47 Yoooooooumu quit:Ping timeout: 250 seconds
+18:51 Yoooooooumu joined channel
+18:52 varna joined channel
+18:52 varna: 路由器崩溃……
+18:58 varna: tutu_wind: 如果是TCP的话，基本不会给你立即发的
+19:23 OwenJia quit:Quit: Konversation terminated!
+19:25 molikto quit:Remote host closed the connection
+19:37 Mokou: http://picpaste.com/QEHVw3vI.png 天机遭泄漏
+19:38 Yoooooooumu quit:Ping timeout: 256 seconds
+19:42 Yoooooooumu joined channel
+19:42 molikto joined channel
+19:44 Yoooooooumu: 刚刚听了个关于 structural hole spanner的分享，简直了，40分钟结束了！
+20:01 molikto quit:Remote host closed the connection
+20:02 Mokou: 【男子拿田鸡到华莱士餐厅要求加工 店员无奈报警】4日，福建晋江英林派出所接到华莱士餐厅报警称，一名男子要求店员帮他加工田鸡，还要跟黄金脆皮鸡一样干脆，店员称无此服务，男子竟然耍起了无赖，在店内不离开。了解情况后，民警对其进行批评教育，该男子表示不会再到该店捣乱。
+20:03 Mokou: 要求加工也要按造基本法
+20:10 molikto joined channel
+20:10 Ivan97 joined channel
+20:32 Mokou: http://imgsrc.baidu.com/forum/pic/item/cf2cfb096b63f624be60e7088144ebf81a4ca3b4.jpg?ssitoken_1438691355576_ 驱逐舰
+20:37 hoxily_ joined channel
+20:41 hoxily quit:Ping timeout: 272 seconds
+20:44 varna: 卧槽这哪门子驱逐舰
+20:45 Mokou: Hornet号驱逐舰
+20:45 Mokou: 你怕不怕
+20:45 Mokou: 3-2带上这么一个
+20:45 Mokou: 比带RJ靠谱多了
+20:45 varna: 1/1
+20:46 Mokou: 话说海自的旭日旗似乎比IJN的旭日旗更亮一些
+20:46 varna: 看不出来差别
+20:46 Mokou: 这个是规范还是单纯因为染料不同？
+20:47 Mokou: Wikipedia上似乎是分开的……
+20:47 varna: 我觉得微妙的差别有可能，但欲盖弥彰……
+20:47 Mokou: https://en.wikipedia.org/wiki/File:Naval_ensign_of_the_Empire_of_Japan.svg
+20:47 varna: 不管这些货多么努力，爱宕已经不是之前那个爱宕了
+20:47 Mokou: https://en.wikipedia.org/wiki/File:Naval_Ensign_of_Japan.svg
+20:47 Mokou: 2333
+20:48 Mokou: 主要是战报上我该挂哪面旗
+20:48 Mokou: 我更喜欢海自这个颜色，不过如果是规定的话用海自旗就是误用了
+20:49 varna: 我的推荐是不挂旗，低调
+20:49 Mokou: 不挂旗不好看
+20:49 varna: 那就用IJN那个
+20:49 Mokou: 成
+20:49 Mokou: 低调这个问题我考虑过
+20:50 Mokou: 不过IJN就是IJN，这个我觉得没必要非得回避
+20:50 varna: 道理上是如此
+20:50 Mokou: 而且肯定USN旗也是会挂出来的
+20:50 varna: 但人事不是道理，不过这种事情随你决定了
+20:51 Mokou: 碍国小将非得搞个大性闻的话怎么样都能喷的
+20:51 Mokou: “凭什么IJN赢？”
+20:51 varna: 这问题问得好
+20:51 Mokou: 所以无视他们就好
+20:51 varna: 然而我们得等田中的家人落地……
+20:51 Mokou: 23333
+20:51 sismvg joined channel
+20:52 Mokou: GMD的诸君肯定不会在乎这点破事
+20:52 varna: 我翻遍了整个天狼星天区也没找到一个长得像田中的胖子
+20:52 Mokou: 碍国小将聚集地我也不打算去发
+20:52 Mokou: ……
+20:52 Mokou: 快mod
+20:52 varna: 把Tekagi换成田中么……
+20:52 Mokou: +
+20:52 varna: 那货的手下打得我生不如死
+20:53 Mokou: 毕竟田中参谋坐镇
+20:53 varna: 等我撤退的时候，两个脉冲炮和两个鳍都没有了
+20:53 Mokou: 你永远也不会成功
+20:53 sismvg: 我这里有几台网关服务器和一个client,那么网关服务器带负载均衡的能力，当自己connect的人数满了的时候告诉client去别的服务器,那么客户端该怎么链接到网关?
+20:53 Mokou: 这些机会不是属于你的
+20:53 varna: sismvg: 你需要一个列表
+20:53 sismvg: ?
+20:54 varna: 现在你的情况不是假定gateway都是独立的么
+20:54 varna: 如果真是完全独立的，那么只能给客户端一个当时看来可用的gateway列表
+20:54 sismvg: 等等。我好像傻了
+20:55 hoxily quit:Quit: Leaving
+20:55 varna: Mokou: 你战报打算发哪里
+20:56 hoxily joined channel
+20:56 Mokou: GMD和学派
+20:56 varna: 哦
+20:56 Mokou: 啊，USN要用老旗……
+20:56 Mokou: 新旗是1959年才用上的
+20:56 varna: 发的时候注明一下，裁判忘了判定CAP Vectoring, 将错就错了
+20:57 Mokou: 了解
+20:59 varna: http://tieba.baidu.com/p/3946037055 熟悉的画风……
+21:00 Mokou: ……
+21:00 hope1 joined channel
+21:02 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+21:03 Yoooooooumu quit:Quit: Leaving
+21:03 varna: 玖条脸我倒不想吐槽
+21:03 varna: 然而穷胸极饿全A王为何长出了胸部
+21:03 varna: 这尺寸跟POI完 全 一 致
+21:04 Mokou: 算了，我不统计飞机损失了……
+21:04 Mokou: 好乱
+21:05 varna: 无所谓了
+21:05 Mokou: 虽说光写舰船损失的话美军太惨了
+21:06 varna: 我有个鬼畜办法
+21:06 Mokou: ?
+21:06 Mokou: 我总不能用正则扒出来
+21:06 varna: 你把每轮的飞机损失一边看log一边用一个统一语法写出来
+21:06 varna: 然后parse一遍
+21:06 Mokou: ……
+21:06 Mokou: 感觉差不多
+21:07 varna: 2333
+21:08 Mokou: 另外美帝的船名前面加不加USS的
+21:09 Mokou: 啊，似乎要加……
+21:09 Mokou: The names of commissioned ships of the United States Navy all start with USS, meaning 'United States Ship'.
+21:09 varna: 加
+21:10 varna: 我今天认识到了一个事情
+21:10 varna: 不做南西我心里很难过，但通体畅快
+21:10 varna: 这周的南西我不做了
+21:10 Mokou: 23333
+21:10 Mokou: 做什么南西
+21:10 Mokou: 你看我就不做
+21:11 varna: 不做南西我缺桶
+21:11 Mokou: 远征2
+21:12 varna: 我2基本不断
+21:12 varna: 但桶的增长还是不显著
+21:12 Mokou: ……老不出桶么
+21:12 tutu_wind: varna:羊陀前辈, 发一个字节(TCP)会要等待么?
+21:12 Mokou: 我这边远征2倒还行
+21:12 varna: 还行，一半一半
+21:12 varna: tutu_wind: 你还记得Nagle算法吧
+21:13 Mokou: 那大概是因为我跑得比你多
+21:13 varna: tutu_wind: 如果你不禁用那个算法，那么TCP会一次尽可能多发
+21:13 Mokou: 要不然以后上午我伪装UA直连帮你挂下
+21:13 varna: 不用
+21:13 varna: 我总得想一些不花很多时间的打法
+21:14 tutu_wind: varna: 哦哦. 上次面试被问到了
+21:14 varna: 这个你学网络的时候应该接触过吧……
+21:15 * Mokou 没学过网络
+21:15 tutu_wind: 恩呢,接触过. 不过当时也没说到点子上,只想到了放在缓冲区里
+21:15 Mokou: 我一直只会在七层上跳……
+21:15 varna: 无所谓了，很少有人会去传输层本体上折腾
+21:16 Mokou: 弄个用户态TCP栈出来扛AoS
+21:16 varna: p8就是个wrapper作死
+21:16 Mokou: 同时拒绝回复重传
+21:16 varna: 问题是你7层上看不到重传
+21:16 Mokou: 所以得跑去四层跳
+21:16 varna: 这个阻碍了你再现舰C
+21:17 Mokou: 开raw强行再现……
+21:18 tutu_wind: 需要root
+21:18 tutu_wind: 舰娘在Linux下也能玩么?
+21:18 Mokou: 用Pepperflash可以
+21:19 tutu_wind: 哇,好赞!
+21:23 varna: flash毕竟满世界都是
+21:23 varna: 目前UA不是问题，问题主要是你得用心吃瘪
+21:26 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=3be5479acb11728b302d8c2af8c7c2ce/c995d143ad4bd11399157f395cafa40f4afb05e5.jpg 终于……
+21:32 Mokou: ……
+21:32 Mokou: 想一想，不氪金你会变得更强吗
+21:34 varna: 似乎没什么好玩的家具买
+21:35 tutu_wind: ✿varna,羊陀前辈,网页云课堂里有把妹的课 , 有兴趣可以看看呢
+21:35 varna: 然而把妹的要点是你心里要想着去把妹
+21:35 tutu_wind: varna: 嘛, 他们是专业的 .~
+21:35 tutu_wind: varna: 有经验
+21:35 varna: 那就更没用了
+21:36 tutu_wind: 然而那节课还是在清华录的好像
+21:37 varna: 然而别人拿一个名头就能唬住你么
+21:37 varna: 在清华看的热闹和大街上的热闹有什么质的区别，求指教
+21:38 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=b5640673d71373f0f53f6f9794344afb/b21c8701a18b87d643583517010828381f30fda4.jpg 这人误解巨大……
+21:38 tutu_wind: 我看了几十分钟 , 他们分析的 , 有一定条理的说
+21:39 tutu_wind: varna: 不是那个意思 ~ 单身汗哪里都有 ~ 
+21:39 varna: 所以你该考虑你自己是什么样的人，然后再说
+21:40 tutu_wind: (╥_╥) 我去面壁 ~
+21:40 varna: 把妹如同造俾斯麦，近乎必经之路然而对我来说着急也没用
+21:41 varna: 我自己看着自己还算过得去就好
+21:41 wlemuel joined channel
+21:42 tutu_wind: 没有啦,这些事大家心里都有谱...以后我不乱说了 ~
+21:42 varna: 说说无妨
+21:42 varna: 只是我觉得这种东西对我来说没什么意思……
+21:43 tutu_wind: 嗯,领会到了~
+21:43 varna: 未必
+21:43 tutu_wind: 表面意思
+21:43 varna: 你比我更接近有人情味的样子
+21:43 varna: 所以考虑的角度可能还是不一样
+21:43 tutu_wind: 我还太幼稚 ... 真的~
+21:43 varna: 不不
+21:44 varna: 你们都该比我熟练些
+21:44 varna: 我比较书呆子
+21:44 * Mokou is a nerd
+21:44 varna: 你是看板药娘
+21:44 Mokou: 然而并不是药娘
+21:45 Mokou: 宽450的海军旗似乎不仅太放亖还太大了
+21:45 tutu_wind: 羊陀前辈应该并不只是看技术类书籍吧
+21:45 Mokou: 220px的话又有点空……
+21:45 varna: tutu_wind: 我也看小说和历史书，还有美术什么的
+21:46 tutu_wind: 恩,那就好喽,心里有美,向善~ 我觉得就挺好的
+21:46 * Mokou 心里并没有美
+21:46 varna: 我心里有……千万头羊驼奔驰而过
+21:46 varna: 故乡宽广的戈壁在我面前展开
+21:46 varna: 我以头抢地
+21:46 Mokou: 醒醒，青岛并没有什么戈壁
+21:47 varna: 好歹有沙子口
+21:47 Mokou: 那能算宽广么……
+21:47 varna: 可以“扑通”、“扑通”进去——稀欧一这么说
+21:47 tutu_wind: 只是表达自己的想法 ~ 忽略啊 
+21:48 tutu_wind: 书和人总是会有些联系的 ~ 
+21:48 Mokou: 欧洲人才会联想到稀欧一
+21:48 Mokou: 我这种非洲人完全想不到
+21:49 varna: 你也有稀欧一
+21:49 Mokou: 我并不能联想到
+21:49 Mokou: 本质上还是个勇士
+21:49 Mokou: 单纵反潜中破一库
+21:49 varna: 看着你家俾斯麦再说这话
+21:49 Mokou: 最强一战战舰有什么好看的
+21:50 varna: tutu_wind: 我的观点倒相反……书是死的，人是活的
+21:50 Mokou: 你看我有龙凤吗
+21:50 varna: 哦瘊瘊？
+21:50 varna: 龙凤是谁来着
+21:50 Mokou: 是欧洲人才有的船
+21:51 * varna 看着EA基佬
+21:51 Mokou: 频我不欧
+21:51 Mokou: 另外B子肯定早就去过你那边了
+21:51 Mokou: 只是看到铝酱以后被吓跑了而已
+21:52 tutu_wind: 人的行为从大脑来,大脑有阅读能力,阅读书上的内容,然而人也有记忆能力.行为或多或少会有书里的印记.不知可不可以这样理解哈
+21:52 varna: 人是综合的
+21:52 tutu_wind: 综合是由各种因素合起来的
+21:52 varna: 综合不是总和，注意这一点
+21:53 hoxily quit:Quit: Leaving
+21:53 varna: 如果你没体会，那么回想一下你大学至今学过的东西
+21:53 varna: 如果它们还是大纲式的什么知识网络，那就没煮熟
+21:53 tutu_wind: 那该是何物?
+21:53 varna: 或者你试着找一门基础课（比如高级语言），构思一下如果你来讲会如何讲
+21:53 * Mokou 从来不记知识网络
+21:54 varna: 这个例子更好
+21:54 varna: 因为你会自然地牵扯到你学过的很多东西
+21:55 tutu_wind: 羊陀前辈的意思是,可以用一棵树串起来学到的知识么?
+21:55 varna: 你不用强行串
+21:55 varna: 那些东西就在那里
+21:55 varna: 提一个头，当闲聊一样就可以扯开
+21:55 hoxily joined channel
+21:56 varna: 当然细节可能有些会忘掉，但至少可以提醒自己忘掉了
+21:57 tutu_wind: 羊陀前辈的综合是弱化了知识网里的每个点.更强调了整个知识网的形成
+21:57 tutu_wind: 不知理解对不
+21:57 varna: 你还是太僵硬了
+21:57 Mokou: 喔喔喔喔
+21:57 Mokou: 烈凤
+21:57 Mokou: 烈风
+21:57 tutu_wind: 喔
+21:57 varna: 不用自然会忘
+21:58 Mokou: 十架烈风两架601
+21:58 varna: 至于为何不用，那得你自己回答了
+21:58 Mokou: 应该够用了
+21:58 tutu_wind: 千寻为啥可以想起来白龙呢?
+21:59 varna: 简单来说，现在很多学生学得太僵硬
+21:59 tutu_wind: +
+21:59 varna: 书上说什么就是什么，最后自己也不考虑“假如这件事我来做，我该如何做”
+21:59 varna: 平时程序也不写
+21:59 varna: 最后自以为学了知识，然而念的是课本上的话，对错也不管
+22:01 hoxily quit:Ping timeout: 250 seconds
+22:01 varna: 这么说吧，应试教育没错，被应试教育坑了的人只能说换一个路子也会被坑
+22:03 varna: 撤了，诸君武运……
+22:03 endle joined channel
+22:03 varna: 下周就活动了啊……
+22:03 varna quit:Quit: leaving
+22:05 tutu_wind: 遇见这里. 值!
+22:05 tutu_wind left channel:"回宿舍了 ~"
+22:14 wlemuel quit:Quit: Lost terminal
+22:17 Ivan97 quit:Quit: Connection closed for inactivity
+23:10 Ivan97 joined channel
+23:15 Mokou: 睡觉
+23:15 Mokou: 诸君武运
+23:15 Mokou quit:Quit: 睡觉
+23:36 endle quit:Quit: Leaving
+23:46 hope1: 啊啊啊啊啊啊
+23:46 hope1: 502粘手上了
+23:46 hope1: 还有指甲缝里

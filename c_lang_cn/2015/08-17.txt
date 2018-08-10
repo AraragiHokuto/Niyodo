@@ -1,0 +1,944 @@
+00:24 libhanjian: hope1, 海棠可以试试Intel VT-d
+00:28 hope1: 那是啥
+00:29 libhanjian: 虚拟化——直接化I/O
+00:29 libhanjian: 可以虚拟机直接访问PCI硬件
+00:29 libhanjian: 基本上可以达到原生的显卡性能
+00:42 hope1 quit:Ping timeout: 244 seconds
+00:50 libhanjian quit:Quit: Leaving
+01:09 Mokou: 睡觉
+01:09 Mokou: 诸君武运
+01:09 Mokou quit:Quit: 睡觉
+01:10 lh_mouse quit:Read error: Connection reset by peer
+01:18 sleepwalking quit:Ping timeout: 250 seconds
+01:34 MagicalLife joined channel
+02:14 MagicalLife quit:Read error: Connection reset by peer
+03:48 sleepwalking joined channel
+04:24 nihong joined channel
+04:25 nihong quit:Client Quit
+05:30 whocares_2 quit:Read error: Connection reset by peer
+06:09 cleamoon_ joined channel
+06:58 hope1 joined channel
+07:20 hope1 quit:Ping timeout: 240 seconds
+07:25 cleamoon quit:Ping timeout: 250 seconds
+07:27 cleamoon joined channel
+07:39 sleepwalking quit:Ping timeout: 250 seconds
+07:42 OO_after quit:Ping timeout: 250 seconds
+07:47 OO_after joined channel
+08:25 wlemuel joined channel
+08:25 wlemuel quit:Client Quit
+08:26 wlemuel joined channel
+08:31 hope1 joined channel
+08:45 wlemuel quit:Quit: Lost terminal
+09:08 Youmu` joined channel
+09:09 lh_mouse joined channel
+09:43 whatofor joined channel
+09:50 FrankHB joined channel
+10:26 hope1 quit:Ping timeout: 250 seconds
+10:27 lh_mouse quit:Ping timeout: 252 seconds
+10:29 lh_mouse joined channel
+10:32 hope1 joined channel
+10:39 whatofor_1 joined channel
+10:41 whatofor quit:Ping timeout: 244 seconds
+10:41 hope1 quit:Ping timeout: 250 seconds
+10:59 whatofor joined channel
+11:01 whatofor_1 quit:Ping timeout: 265 seconds
+11:05 cleamoon_ quit:Ping timeout: 246 seconds
+11:14 whatofor_1 joined channel
+11:16 whatofor quit:Ping timeout: 260 seconds
+11:22 FrankHB quit:Ping timeout: 255 seconds
+11:22 whatofor joined channel
+11:24 whatofor_1 quit:Ping timeout: 244 seconds
+11:27 whatofor_1 joined channel
+11:29 whatofor quit:Ping timeout: 256 seconds
+11:34 Mokou joined channel
+11:37 whatofor_1 quit:Ping timeout: 240 seconds
+11:40 hope1 joined channel
+11:59 hope1 quit:Ping timeout: 240 seconds
+12:04 Mokou: OS对i7和Xeon用的调度算法是不同的？
+12:04 varna joined channel
+12:05 Mokou: varna: OS对i7和Xeon用的调度算法是不同的？
+12:05 varna: 噗？
+12:05 Mokou: 我看到这么个说法，原帖提到了apache/nginx，有可能是unix系
+12:05 Mokou: lh_not_bot: 
+12:05 Mokou: 对这个区别我怎么没印象……
+12:05 varna: 果然是929/2k...哈哈哈哈哈哈哈哈
+12:06 Dove joined channel
+12:07 Mokou: 贴子被炸了
+12:08 varna: 看到你at我了
+12:08 Mokou: 另外两条8G 渣士顿条子已入，现在在路上
+12:08 varna: 谁在用JB弹奏一曲图森破
+12:08 Mokou: 233333
+12:09 Mokou: 另外我找到中口径主炮的弹道数据了，来自okun
+12:09 Mokou: 用拉格郎日/牛顿插出来的结果不太靠谱……
+12:18 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=8625f5b982cb39dbc1c0675ee01709a7/69d473d12f2eb938c0b1eba1d6628535e4dd6fbc.jpg'
+12:18 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=8625f5b982cb39dbc1c0675ee01709a7/69d473d12f2eb938c0b1eba1d6628535e4dd6fbc.jpg
+12:18 Mokou: 另外我才知道美国人的8in最早能打出3k的出膛速度……
+12:21 varna: 我油下低保了
+12:27 Dove|2 joined channel
+12:30 hope1 joined channel
+12:30 Dove quit:Ping timeout: 246 seconds
+12:30 Mokou: 对手签名：“辣条专门店12条450”
+12:32 varna: 我挂的签名还是甲喰い
+12:35 Mokou: E5开了
+12:37 varna: 村田君和友永君从大波的陈思里面出来了
+12:37 Mokou: X太屌
+12:37 Mokou: 现在不显示鼠标指针了
+12:37 Mokou: 然而鼠标确实存在
+12:37 Mokou: 哦，又出来了……
+12:37 sleepwalking joined channel
+12:37 varna: 米尻！
+12:39 varna: sleepwalking: 听说你把那珂酱弄丢了
+12:39 sleepwalking: 是
+12:39 sleepwalking: 大概是在O'Hare机场丢的
+12:39 Mokou: E5我用长陆呢还是长意呢……
+12:40 Mokou: 还是陆意
+12:40 varna: 都行
+12:40 varna: sleepwalking: 可恶的欧洲人
+12:41 Mokou: 陆意吧
+12:41 Mokou: 毕竟九星嗑改
+12:41 sleepwalking: 是美洲
+12:41 varna: 把裤子脱了
+12:42 varna: 啊，昨天那个S胜击杀掉的是山城……
+12:46 varna: C点天灯队出击
+12:46 varna: 米空出马一个顶俩
+12:48 Mokou: 35群里有人用少女高秒了丙级防空姬，斩了
+12:48 Mokou: 平静的脸色犹如胸口般平静的洋面波澜不惊
+12:48 Mokou: 又黑北上大人的甲板胸
+12:49 xxxxxxxx: 今天我觉得我应该听爬网线之歌
+12:50 Mokou: 什么叫败北
+12:50 Mokou: 这叫大捷
+12:52 xxxxxxxx: 正名叫奇迹再现 某凹凸man的朝内版片头曲 随意改几个网线 听上去就很带感
+12:53 varna: C点天灯结束，开始K点
+12:53 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=e94b0ae9cb11728b302d8c2af8fdc3b3/b7026d09c93d70cf038c2f75fedcd100baa12b14.jpg
+12:54 varna: 23333
+12:55 Mokou: 对了，能帮个忙吗
+12:55 Mokou: 帮我算一下你那几队的防空因数
+12:55 Mokou: 美国那边的队算起来有点麻烦
+12:56 varna: 你不急的话我先点个灯
+12:56 Mokou: 不急
+12:56 varna: ok
+12:56 varna: K点打完我算一下
+12:58 Mokou: thx
+12:58 Mokou: navypedia还在爆炸……
+13:00 varna: 流601全员失忆
+13:00 Mokou: ……
+13:02 hope1 quit:Ping timeout: 272 seconds
+13:06 Xilzzerts joined channel
+13:08 Xilzzert joined channel
+13:10 varna: 卧槽
+13:10 varna: 雾岛被爆了六十血
+13:10 sleepwalking quit:Ping timeout: 250 seconds
+13:11 tutu_wind joined channel
+13:11 Xilzzerts quit:Ping timeout: 240 seconds
+13:12 * tutu_wind Meow ~
+13:14 varna: 点灯失败
+13:16 tutu_wind: varna: 还有活动呢?
+13:17 varna: 卧槽，出门劝退
+13:17 varna: 出门劝退
+13:18 varna: tutu_wind: 别跟我提活动了
+13:18 tutu_wind: 喔喔 , sorry ~ 
+13:18 varna: 我的惨烈程度你理解不聊
+13:18 varna: 了*
+13:18 tutu_wind: 节哀 ~ 
+13:20 varna: K点一次没打掉一次出门劝退一次出门S
+13:24 varna: 萌新的世界我不懂
+13:27 Mokou: 萌新用北大木打E2
+13:28 varna: 绫波被炮击中破
+13:28 varna: 88
+13:28 varna: 还好他雷了雾岛
+13:29 varna: 绫波挺住！
+13:29 varna: 宁大保佑我！
+13:30 varna: T不利
+13:30 varna: 挺过去了
+13:31 varna: 太惨
+13:31 varna: 航空战只打掉一个
+13:32 varna: 夜战全员智商命中兼备，收拾了
+13:35 varna: 我算一下AAF
+13:44 hoxily joined channel
+14:00 hoxily left channel:"Leaving"
+14:02 hope1 joined channel
+14:07 xxxxxxxx quit:Quit: Leaving...
+14:11 hope1 quit:Ping timeout: 255 seconds
+14:23 tutu_wind: varna: write 写sockfd 返回了,并不意味着数据就发到对端了,对吧
+14:23 varna: 是这样，但你不能期待更多了
+14:23 varna: 另外不建议用write-read
+14:24 varna: 尽量用send-recv, 因为你可以加flag
+14:24 hope1 joined channel
+14:24 tutu_wind: varna: 嗯嗯, 也就意味着 , 你得不到数据是否真的到达的信息了
+14:25 varna: ACK客观有，但TCP不会给你看这个
+14:25 tutu_wind: varna: 喔 , 假设包丢了 , 你也不知道了 
+14:26 varna: 你没法绝对正确地判定丢包
+14:26 varna: TCP只知道对端有回应（意味着确实到达了）和对端不回应（鬼知道出了什么事）
+14:28 tutu_wind: soga , 我在一本书上看到 , write 有延迟写的情况 , 意味着 , 写一个sockfd , write 很快返回, 但是就不知道包到底发了没 , 不知道理解的对不
+14:29 Mokou: 太太那个NTR本看完了
+14:29 Mokou: 我没觉得有什么啊……
+14:29 varna: TCP保证你的数据段一定进窗口了
+14:29 varna: 那是个正常的牛头人本
+14:29 varna: 但翔鹤给大家的印象毕竟太好了
+14:30 Mokou: 那里面的翔鹤也不错啊，你看第一部
+14:30 varna: 第一部我已经不忍直视
+14:30 varna: 活动之后的总计第十一个戒指是欠雪，第十二个就是翔鹤
+14:30 varna: 欠雪马上就要变成大人了哦瘊瘊
+14:31 tutu_wind: varna: 哦 , 那 , 就不知道有木有收到对端的ACK 了
+14:31 Mokou: 除了一句为了营造气氛的“请啪我”以外都没啥
+14:31 Mokou: 基本上就是圣奥古斯丁所谓“只有一个人犯下奸淫罪”
+14:31 varna: tutu_wind: 为何你会在意这个
+14:31 varna: 第二次巨乳报复性打击部队、发进
+14:31 tutu_wind: varna: 不确定包是否会被收到
+14:31 varna: 你光在绕这个
+14:32 varna: 客户端可以等，服务器端可以超时
+14:32 varna: 客户端还可以来一个稍长时间的超时
+14:32 tutu_wind: write阻塞?
+14:32 varna: 我不觉得这里你需要吊死在一个严格的判别上
+14:32 varna: 阻塞不阻塞你都有办法
+14:32 varna: 而且办法还不止一种
+14:33 varna: 干，高雄被爆了……
+14:33 Mokou: 我觉得确实地判别包到底收没收到的办法只有一种
+14:33 Mokou: 你把两端都放在自己身边
+14:33 varna: 卧槽绫波也被爆了
+14:34 Mokou: 接上显示器
+14:34 varna: 还好是中破
+14:34 varna: 电酱拖人去
+14:34 Mokou: 然后你写几行代码，收到包就print个debug出来
+14:34 Mokou: 只要客户端硬件不出问题而且你输出部分没bug
+14:34 varna: 二队拖人就这个好处，选阵型的时候能看出来……
+14:34 Mokou: 你就能确实地判定到底收没收到包了
+14:35 varna: 咦，棒各爆炸了
+14:36 varna: 3v3
+14:36 varna: 7/380 2/88 107/130
+14:36 varna: 鸟海再一次无人能挡……
+14:37 Mokou: E6用得上罗马吗
+14:37 varna: 用得上
+14:37 varna: 哦E6啊
+14:37 Mokou: 那我带意大利
+14:37 varna: 这个你看着办
+14:37 varna: E6我推荐全程武大碾压
+14:37 varna: 但你可以先用别人试一次水
+14:37 Mokou: E6我准备上武大了
+14:37 Mokou: 能上武大我一般不省……
+14:37 varna: 那没有别人的余地了
+14:38 Mokou: 那我带罗马
+14:38 varna: 二队你看着来
+14:38 varna: 俾斯麦最好
+14:39 Mokou: 哦对了，我还得练天城……
+14:39 Mokou: 算了，我先算完美军的AAF
+14:41 varna: 第三次报复性打击部队
+14:42 lh_mouse: tutu_wind, 你自己在会话层实现 ack
+14:42 lh_mouse: 或者表示层实现
+14:43 tutu_wind: lh_mouse: 手动发ack ?
+14:43 varna: 你自己确认业务
+14:44 tutu_wind: 今天看到write的延迟写 , 想到了这个问题 ~
+14:44 varna: 想少了
+14:45 varna: ……这鸟海今天手操了四个陆基
+14:45 varna: 简直军神下凡
+14:47 Mokou: 想当年我家鸟海爆艹M姬
+14:48 varna: 总之今天湾子打了三次，离岛打了一次，运输点和航空点都是S胜
+14:48 lh_mouse: tutu_wind, 避免 write write read 这种写法
+14:48 varna: 订个外卖歇会儿
+14:51 tutu_wind: lh_mouse: 嗯 , 一般都是 write read 这样吧 ~ 
+14:53 lh_mouse: tutu_wind, https://github.com/lhmouse/poseidon/blob/master/src/tcp_session_base.cpp?ts=4#L210
+14:53 nihong joined channel
+14:55 lh_mouse: nihong, 新人爆照
+14:55 lh_mouse: IP地址: 183.195.98.87上海市 移动
+14:55 varna: 小耗快出击爆了新人
+14:55 varna: 虽然这其实不是新人
+14:55 nihong: ...
+14:55 tutu_wind: 一血
+14:58 whatofor_1 joined channel
+15:02 Mokou: nihong是谁
+15:03 varna: 以前来过的人
+15:03 whatofor joined channel
+15:04 nihong: 只是昨晚上来看了看而已
+15:04 lh_mouse: nihong, 爆照
+15:05 nihong: 这么想爆照啊？然而我是男的
+15:05 whocares_2 joined channel
+15:05 lh_mouse: nihong, 爆照
+15:05 nihong: 所以就算了
+15:05 whatofor_1 quit:Ping timeout: 246 seconds
+15:05 lh_mouse: nihong, 吃药
+15:06 nihong: 已吃过药了
+15:06 lh_mouse: 吃过药爆照
+15:06 varna: 螺内酯？
+15:07 nihong: ＊_*
+15:07 nihong: 为什么你这么想爆照...
+15:07 nihong: 然而这个IRC工具我还不怎么会操作
+15:08 nihong: 就算会也不会爆照的
+15:08 whatofor quit:Ping timeout: 260 seconds
+15:08 lh_mouse: 居然不响应  VERSION      快踢了
+15:09 nihong: 不懂啊
+15:09 nihong: 真＊小白一只
+15:09 lh_mouse: 所以你还是爆照吧
+15:09 whatofor joined channel
+15:10 nihong: 你的精神还真是令人敬佩，然而你是不是把这种精神用错方向了
+15:11 lh_mouse: 你看看人家 condy 都爆照了
+15:11 iyzsong:  <_<
+15:11 lh_mouse: 哦对了 还是 iyzsong 
+15:11 lh_mouse: s,还是,还有,
+15:11 varna: 求LEEE玉照
+15:15 lh_not_bot: sb end
+15:15 lh_not_bot: -- 
+15:16 whatofor quit:Ping timeout: 244 seconds
+15:17 whatofor joined channel
+15:20 whatofor_1 joined channel
+15:20 tutu_wind quit:Quit: WeeChat 1.2
+15:21 nihong quit:Quit: 离开
+15:23 whatofor|2 joined channel
+15:23 whatofor quit:Ping timeout: 272 seconds
+15:25 whatofor_1 quit:Ping timeout: 250 seconds
+15:47 lh_mouse: geordi, << TYPE(BARK)
+15:47 geordi: rvalue int
+15:48 lh_not_bot: geordi: << EXPAND(BARK); \ #define EXPAND(...) # __VA_ARGS__
+15:48 geordi: BARK
+15:48 lh_not_bot: geordi: << EXPAND(BARK); \ #define EXPAND_(...) # __VA_ARGS__ \ #define EXPAND(...) # EXPAND_(__VA_ARGS__)
+15:48 geordi: error: '#' is not followed by a macro parameter
+15:48 lh_not_bot: geordi: << EXPAND(BARK); \ #define EXPAND_(...) # __VA_ARGS__ \ #define EXPAND(...) EXPAND_(__VA_ARGS__)
+15:48 geordi: (printf("%s%s%s", ::geordi::parsep, ::bark_detail::bark(__PRETTY_FUNCTION__, __func__).c_str(), ::geordi::parsep), fflush(stdout))
+15:50 hope1: 数值估计原来这么烦……
+15:52 whatofor joined channel
+15:55 whatofor_1 joined channel
+15:57 whatofor quit:Ping timeout: 250 seconds
+16:00 whatofor joined channel
+16:03 whatofor_1 quit:Ping timeout: 265 seconds
+16:12 whatofor_1 joined channel
+16:13 whatofor quit:Ping timeout: 244 seconds
+16:17 whatofor joined channel
+16:19 whatofor_1 quit:Ping timeout: 252 seconds
+16:27 whatofor_1 joined channel
+16:29 whatofor quit:Ping timeout: 244 seconds
+16:30 Mokou: 出去趟
+16:38 whatofor joined channel
+16:39 lixz joined channel
+16:40 whatofor_1 quit:Ping timeout: 255 seconds
+16:45 whatofor_1 joined channel
+16:48 whatofor quit:Ping timeout: 272 seconds
+16:53 whatofor joined channel
+16:55 whatofor_1 quit:Ping timeout: 260 seconds
+17:01 whatofor_1 joined channel
+17:04 whatofor quit:Ping timeout: 250 seconds
+17:19 lh_mouse quit:Read error: Connection timed out
+17:21 lh_mouse joined channel
+17:33 yzld2002 joined channel
+17:35 Xilzzerts joined channel
+17:37 Xilzzert quit:Ping timeout: 240 seconds
+17:37 hope1 quit:Ping timeout: 255 seconds
+17:38 Mokou: http://ww4.sinaimg.cn/bmiddle/afdc790bgw1ev4u4gtzmkj21kw4hahdt.jpg
+17:40 Mokou: 紧急通知！ DMM将于本次夏活结束后给予全任务甲等难度通关的提督稀有驱逐舰-ハ。 据可靠消息旗舰为ハ时可以触发“见得多了”--带路。可以装备甲标的进行“谈笑风生”--开幕雷击。中破后会“excited”--运上升150%。击沉后会触发“续命”--自动复活一次。 祝各位提督武运昌隆。
+17:42 varna: ハハ
+17:43 varna: 圣GAY王赐予我敌苛烈之责罚 AMWEN
+17:43 boosure quit:Read error: Connection reset by peer
+17:44 varna: 开幕轰沉4
+17:44 varna: 压制了
+17:47 varna: 第二点
+17:47 varna: CI
+17:47 varna: 轰沉2
+17:48 varna: 雷击pass
+17:48 varna: 走M
+17:49 varna: CI
+17:49 varna: 绫波……大破
+17:50 varna: 压制了
+17:51 varna: 小和拖人
+17:51 hope1 joined channel
+17:51 varna: 已经几乎不可能击破了
+17:52 varna: 支援划水
+17:52 varna: POI中破
+17:52 varna: 大破
+17:53 varna: 这打的……
+17:53 varna: 3v3
+17:54 Mokou: ……
+17:54 varna: 我日
+17:54 varna: 欧根被准确地爆了
+17:54 varna: 旗舰一下也没碰到……
+17:55 varna: 闪还要重新刷
+17:56 varna: 唉
+17:56 Mokou: 死鱼卡已打
+17:57 varna: 这可能是最差的结局了
+17:57 varna: 进去各种划水，灭了下面五个
+17:59 Mokou: http://tieba.baidu.com/p/3978972949 疑似大性闻？
+18:00 varna: 卧槽
+18:00 varna: 重巡大元帅死人了？
+18:00 Mokou: Lv131爱宕
+18:00 varna: 新系统信不得
+18:01 Mokou: 果然临时工
+18:01 Mokou: 好在之后没必要用了 
+18:01 varna: 我总觉得这防空姬是聪明的
+18:01 Mokou: 不是聪明
+18:01 Mokou: 是田中手操
+18:01 varna: 欧根基本就没活着进夜战过
+18:02 Mokou: http://tieba.baidu.com/p/3979228806
+18:02 Mokou: 临时工为何这么屌
+18:03 Mokou: http://tieba.baidu.com/p/3979030412
+18:03 Mokou: 来自官方的嘲讽
+18:03 whatofor joined channel
+18:03 varna: 他妈的大本营发表吧
+18:04 Mokou: 中途岛大捷
+18:04 Mokou: http://imgsrc.baidu.com/forum/pic/item/943209086e061d95e304b2447df40ad163d9cac4.jpg 底下这张图太应景
+18:06 varna: 23333333
+18:06 whatofor_1 quit:Ping timeout: 272 seconds
+18:07 varna: 卧槽我出门掉沟了
+18:07 Mokou: http://tieba.baidu.com/p/3976632462
+18:08 varna: 我TM好难过啊
+18:10 Mokou: 我建议不刷闪
+18:10 Mokou: 刷闪是最精污的
+18:10 Mokou: 实际上现在想想，如果不刷闪的话
+18:10 Mokou: 特鲁克我大概也就斩掉了……
+18:11 varna: 不刷闪的话CI发动率低下
+18:11 Mokou: 不刷闪可以多出击很多次
+18:11 Mokou: 喔喔
+18:11 Mokou: navypedia恢复了
+18:18 whatofor_1 joined channel
+18:20 whatofor quit:Ping timeout: 252 seconds
+18:22 hope1_ joined channel
+18:22 hope1 quit:Ping timeout: 256 seconds
+18:26 FrankHB joined channel
+18:49 Youmu` joined channel
+18:58 yzld2002 quit:Quit: yzld2002
+19:01 FrankHB quit:Read error: Connection reset by peer
+19:04 cleamoon_ joined channel
+19:19 whatofor joined channel
+19:22 whatofor_1 quit:Ping timeout: 246 seconds
+19:26 xxxxxxxx joined channel
+19:33 xxxxxxxx: 15:11 varna: 求LEEE玉照 <- 你难道不想要彩梦MM的玉照么?
+19:35 hope1_: 同求
+19:36 Xilzzert joined channel
+19:39 xxxxxxxx: 部落大酋長: 回复 阝灬蓝泪丶 :上了损管就是你大破进击的理由？ <- 看来这是一位氪女神的有钱人...
+19:39 Xilzzerts quit:Ping timeout: 244 seconds
+19:43 Mokou: 这他妈是个纯种傻逼
+19:47 xxxxxxxx: 真是 他为何不想想为何会出损管这个道具呢...
+19:50 lh_mouse: 收钱？
+19:52 hope1_: http://zhi.hu/lCP2
+19:53 wlemuel joined channel
+19:53 lh_not_bot: geordi: -c enum class a { }; struct b : a { };
+19:53 geordi: error: expected class-name before '{' token
+19:53 lh_not_bot: geordi: -c enum class { }; struct b : a { };
+19:53 geordi: error: anonymous scoped enum is not allowed
+20:01 whatofor_1 joined channel
+20:03 whatofor quit:Ping timeout: 250 seconds
+20:07 varna: 现在的损管确实是骗钱的
+20:07 varna: 至少这次活动
+20:07 varna: 以前损管虽然有限，但需要死人的任务更有限
+20:09 varna: 圣GAY王、亚顿、腿毛的蓝大
+20:09 varna: 请引导我
+20:09 Mokou: 还是没找到弹道信息的插值方法
+20:09 varna: 宁大抱着绫波的小手
+20:09 varna: 米空在天，世间安好
+20:10 varna: 阿月工门
+20:10 varna: 掉沟里……
+20:11 whatofor joined channel
+20:11 xxxxxxxx: 在新的EULA中，微软写道，我们会主动检查用户的系统，查看用户是否安装了“playing counterfeit games, or using unauthorized hardware peripheral devices”，翻译过来就是盗版游戏或是未经授权的硬件外设。
+20:12 varna: 继续刷闪
+20:12 varna: 那些说机动CKXY击破确保出门走E方向的都是骗人的
+20:12 varna: 沟率已经一半了
+20:13 cleamoon_: 羊陀子打到哪里了
+20:13 whatofor_1 quit:Ping timeout: 255 seconds
+20:13 varna: E7 456/2000
+20:13 xxxxxxxx: 甲？
+20:14 cleamoon_: 我了个大槽，演习第一的101级拿了个64级照月
+20:14 cleamoon_: 真tm肝
+20:14 varna: 甲
+20:14 varna: 这次打的都是甲
+20:14 Mokou: 我试试样条插值
+20:14 xxxxxxxx: 预计多久能打通?
+20:14 varna: 不知道
+20:15 varna: 但应该能打通
+20:15 cleamoon_: 对了，莫抠说多项式怎么怎么不准，你在算什么？
+20:15 varna: 打到现在，已经烧了十万
+20:15 Mokou: 似乎三次样条插值就够了
+20:15 xxxxxxxx: 不用咸?
+20:15 Mokou: cleamoon_: 中口径主炮的弹道数据
+20:15 varna: 不用咸，我有击杀的希望
+20:15 varna: 前哨战我拿下过两个完整的击杀
+20:15 varna: 还有两三次不错的刁民
+20:16 cleamoon_: Mokou, 是模型不准还是数值方法不准？
+20:16 Mokou: 插出来的结果不准
+20:16 cleamoon_: 那个削弱大法？
+20:16 cleamoon_: ......
+20:16 cleamoon_: 那应该是数值方法不好
+20:16 Mokou: +
+20:16 Mokou: 拉格郎日/牛顿大概不适合干这事
+20:16 xxxxxxxx: 浙江女大学生2万元卖“初夜” 反遭骗色劫财
+20:17 cleamoon_: 在暂停了7天之后，上海电信氮气瓶官网悄然恢复，早先，因为上海电信用户访问国外网站困难，上海电信正式上线了一款名为“国际氮气瓶”的国际带宽加速产品，价格较为昂贵，该网站在愤怒用户们的一片骂声中紧急下线。
+20:17 Mokou: 我记得插出来的结果在一万米上差了0.3度
+20:17 cleamoon_: 那还好吧...
+20:17 Youmu` joined channel
+20:17 Mokou: 存速还低了35fps
+20:17 varna: 你要精确到多少位
+20:17 varna: 最好估一下误差项
+20:17 Mokou: 小数点后0
+20:17 Mokou: 小数点后0.1位
+20:17 varna: 十分位应该够了
+20:18 Mokou: 而且接近最大射程的时候已经不是不准了
+20:18 Mokou: 是不对
+20:18 varna: 插错了啊……
+20:18 varna: 你那个错的插值用的什么方法？
+20:18 Mokou: 我用蝗国的二号炮举个例子
+20:18 Mokou: 拉格郎日
+20:19 varna: 拉格朗日有点粗暴了
+20:19 Mokou: +
+20:19 Mokou: 不过其他方法我没找到现成的程序……
+20:19 varna: 你的采样点有多少个？
+20:19 Mokou: navweaps只有六个点可用
+20:20 varna: 六次啊，那搞不好会插扭了
+20:20 cleamoon_: 噗，天 津领 导不去现场，发的照片是PS的... 阴影方向不对...
+20:20 Mokou: 扭了
+20:20 varna: 你有没有试着用octave画出函数图象
+20:20 varna: 看看那到底是个什么鬼畜玩意
+20:20 Mokou: 没用octave，wfa插出来的结果也是扭的……
+20:20 Mokou: 扭了这点可以看出来
+20:20 varna: 边缘数据上扭了？
+20:20 Mokou: +
+20:20 varna: 估计那一点导数不对……
+20:21 varna: 拉格朗日的话我还真不会处理这个
+20:21 varna: 岚月酱会弄么
+20:22 cleamoon_: http://lvv2.com/t/273014/
+20:22 cleamoon_: 什么样的式子？
+20:22 varna: 打不开
+20:22 varna: 目前是有六个弹道数据，用拉格朗日插一个多项式
+20:22 Mokou: https://pastebin.mozilla.org/8842940 这是拉格郎日的结果
+20:23 cleamoon_: lvv2也打不开了？
+20:23 varna: 这式子在测试的边缘数据上表现不好
+20:23 Mokou: https://pastebin.mozilla.org/8842939 这是okun的数据
+20:23 Mokou: 这已经不是不好了
+20:23 xxxxxxxx: 给孩子找好的学位是许多父母的心头之痛，茂名信宜市一名老师利用家长要给孩子找好学位的心理，竟要求家长用性交换学位。此事在当地论坛发酵后，引起社会一片哗然。14日下午，信宜市官方通报称，该市教师某某的确向家长发出一些不雅信息，不过未达成目的。目前，该教师被撤销教师资格，5年内不得从事教育工作。
+20:23 xxxxxxxx: orz
+20:23 Mokou: 差了200+fps
+20:23 varna: orz
+20:23 Mokou: Orz
+20:23 cleamoon_: orz
+20:23 varna: 这教师是不是曹丞相后人……
+20:23 varna: 我觉得那些曹操后人可以歇歇啊
+20:24 cleamoon_: 如果那个家长是男 人.......
+20:24 cleamoon_: 那就是刘大耳后人了
+20:24 varna: 你们跟EA基佬混太旧了，都变基了
+20:24 cleamoon_: 哦，有多个点，求一个多项式吗？
+20:25 varna: 对
+20:25 Mokou: 12000 8.8 1553
+20:25 Mokou: 这是插值的结果
+20:25 Mokou: 12000 9.5 1589
+20:25 Mokou: 这是okun的数据
+20:25 varna: 误差好打
+20:25 cleamoon_: 东东枪空调不制冷，和咸鱼有什么分别？
+20:25 varna: 好大
+20:26 Mokou: 相当大
+20:26 cleamoon_: 这个点略少呀...
+20:26 varna: 估计是拉格朗日法的能力所限
+20:26 varna: 你现在一共有多少数据
+20:26 varna: 包括测试集和训练集
+20:26 cleamoon_: 直接least square？  https://en.wikipedia.org/wiki/Least_squares
+20:27 varna: 最小二乘没问题么……
+20:27 Mokou: 训练集是navweaps上那六个点
+20:27 cleamoon_: 一般不都是从这个开始...
+20:27 Mokou: 测试集是okun的表
+20:27 cleamoon_: 六个点略少了...
+20:27 Mokou: 从0到32000，间距2000
+20:27 varna: 我觉得六点拟合不好的
+20:27 varna: 不如强行插值
+20:27 Mokou: navweaps上只给我这么多……
+20:28 varna: 对了
+20:28 cleamoon_: 把测试集全都用到训练上
+20:28 Mokou: 我要是能拿到蝗国的炮表倒是方便
+20:28 varna: 有没有先验结论说弹道曲线像几次函数
+20:28 Mokou: 没找到
+20:28 cleamoon_: IBM周一宣布发布运行Linux系统的大型机LinuxONE。Linux基金会同时宣布了开放大型机项目。LinuxONE包括了面向大型企业的LinuxONE Emperor和面向中型企业的Rockhopper。LinuxONE Emperor支持最多8000个虚拟机或数千个容器。LinuxONE Emperor系统是基于IBM的z13大型机，支持Apache Spark、Mari、 Posture和 Chef等软件。IBM还将与Canonical合作，在LinuxONE和z系统发
+20:28 cleamoon_: 行Ubuntu开源软件。
+20:28 varna: 疼，樱与锚也没有啊
+20:29 varna: 这问题倒是很有趣，可惜我数值方法学得太粗浅……
+20:29 cleamoon_: 一般弹道这类的应该不是多项式而是幕式吧...
+20:29 Mokou: 昨天找到的弹道学资料基本上都是很浅显的介绍……
+20:29 cleamoon_: 粗浅+
+20:29 cleamoon_: 我只学了点入门...
+20:30 varna: 问题是数值方法做出来的东西，还是多项式好吧？
+20:30 Mokou: 等等
+20:30 hope1_ quit:Read error: Connection reset by peer
+20:30 Mokou: https://en.wikipedia.org/wiki/Trajectory_of_a_projectile 我看看这个有没有用
+20:30 hope1_ joined channel
+20:30 xxxxxxxx: LinuxONE Emperor系统是基于IBM的z13大型机
+20:30 xxxxxxxx: 装B大型机233
+20:31 varna: 这基佬……
+20:31 xxxxxxxx: 红旗要做工具算弹道?
+20:32 Mokou: 我要弄张表出来
+20:32 Mokou: 现在已经有了，不过我还是打算研究下……
+20:32 cleamoon_:  这基佬……
+20:32 Mokou: 有一个说法是弹道数据可以用三次样条插值算
+20:32 cleamoon_: 如果本身就打算弄成幕式，那么也可以，只不过幕式不好猜
+20:33 varna: 样条我学过，然后就忘光了
+20:33 varna: 现在让我插值多项式，只会拉格朗日……
+20:33 Mokou: ……
+20:33 varna: 似乎插值、解方程、定积分，我一样剩下一个办法
+20:34 varna: 其余的都随风而去了
+20:35 Mokou: 我这几天看看样条插值
+20:35 Mokou: 总之数据还是少了些
+20:35 xxxxxxxx: http://y2.ifengimg.com/a/2015_34/ca730db8472e440.jpg
+20:35 Mokou: 算炮表的时候一般会试射8~20次
+20:35 xxxxxxxx: 飞机没起飞 不要担心
+20:36 varna: 卧槽？
+20:36 cleamoon_: 我们是伟大的一样只学了一种.....
+20:36 cleamoon_: 嘛，明年有数值课，我好好看看呗...
+20:36 Mokou: 空气阻力挺麻烦的
+20:37 varna: 现在才觉得工程上这些数值方法超有用
+20:37 Mokou: 硬推弹道曲线估计够呛
+20:37 varna: 典型值很多，要是能拿出数值解来就是好猫
+20:37 cleamoon_: 空气阻力如果不是太强的话可以算作多项式
+20:37 varna: 对了有没有想假期补习次男道的
+20:37 cleamoon_: 噗
+20:37 cleamoon_: 你这基佬
+20:38 varna: 我只是问问
+20:38 varna: 看EA基佬最近很基，似乎他该练练
+20:38 Mokou: 对于炮弹来说空气阻力不太强
+20:38 cleamoon_: 他明显已经练完了
+20:38 Mokou: 真空里飞150km加上空气阻力也就掉到42km……
+20:38 varna: 他被四个基佬不眠不休侮辱三个月？
+20:39 varna: 另外其实基佬这个事情，从海虎I就开始了……
+20:39 cleamoon_: 对了，明年我弄了个CG课，全课内容都是教授吹笔，然后自己撸大作业，有什么合适的作业题目推荐吗？
+20:39 varna: 只不过海虎本人不想受辱，把基佬先打死，自己逃出去了
+20:39 varna: CG我真不知道
+20:39 xxxxxxxx: 卧槽为何这个新闻的baidu相关搜索是小女孩大便视频...
+20:40 varna: 那课是我CS里所有课中学得最差的
+20:40 cleamoon_: 因为baidu是中国最大的色 情网站呀
+20:40 cleamoon_: 最差的：99分
+20:40 varna: 什么都没学会
+20:40 varna: 就知道几个算法名字
+20:41 cleamoon_: 说说算法也好呀... 教授吹笔算什么课呀...
+20:41 varna: 而且本科实验课里我就CG一个得了良好
+20:42 varna: 那些MCF我平时也不去弄，最后算法似乎也写错了一点，有个视图搞错了
+20:42 varna: MFC
+20:42 cleamoon_: 卧槽，看了课程表我才发现我tm果然是疯了... 原来2门课，我强行报到8门外加一个cs双休... 我可能毕不了业........
+20:42 varna: 打错了
+20:42 varna: ...
+20:42 cleamoon_: 噗，你被小耗同化了
+20:42 varna: 鼠上头
+20:43 Mokou: wfa插值中
+20:43 varna: 糟
+20:43 varna: T有利
+20:43 Mokou: wfa算不出来中
+20:44 varna: 挺过去了
+20:44 cleamoon_: wolfram alpha？
+20:44 Mokou: +
+20:44 Mokou: interpolate[{0, 2756}, {5470, 2133}, {10940, 1634}, {16400, 1299}, {21870, 1194}, {27340, 1247}, Method -> "Spline"]
+20:44 cleamoon_: 有时只有mathematica能算...
+20:44 Mokou: 我这一直在跑
+20:44 cleamoon_: 那估计废了
+20:44 varna: wolframalpha真是个天才的东西
+20:44 cleamoon_: +
+20:44 Mokou: +
+20:45 varna: 我导师一直想弄个类似的能搜知识而不是条目的玩意
+20:45 varna: T不利
+20:45 cleamoon_: https://www.wolframalpha.com/input/?i=who%27s+your+daddy
+20:46 varna: 绫波中破……
+20:46 cleamoon_: https://www.wolframalpha.com/input/?i=black+sheep+wall
+20:46 cleamoon_: 我觉得这根本是黑科技
+20:46 xxxxxxxx: 所以说那个到底怎么做出来的?
+20:46 varna: 需要一些ontology吧
+20:47 varna: 绫波中破了怎么办啊……
+20:47 Mokou: 用鸽子把请求传给被关在一个房间里的苦逼员工
+20:47 varna: 我要打掉201血才行
+20:47 cleamoon_: 2333
+20:47 Mokou: 那个员工处理完了以后再用格子把结果发回来
+20:47 Mokou: 鸽子
+20:47 varna: 这些混帐一定是找可爱的打
+20:48 xxxxxxxx: 问问wolframalpha 中破了怎么办
+20:48 varna: 中破不能彻甲……
+20:48 varna: 算了脸接
+20:49 varna: 开幕中破1击沉1 T有利
+20:49 Mokou: wfa还在插值
+20:49 Mokou: 估计跪了
+20:49 cleamoon_: 中破英文是什么
+20:49 varna: 欧根大破……
+20:49 cleamoon_: 应该跪了，一般wfa算几秒就放弃了
+20:49 Mokou: juuha
+20:50 varna: moderately damaged
+20:50 varna: 大和爆炸
+20:50 varna: 院长爆了大凤
+20:50 Mokou: 一定是三式弹的锅
+20:50 varna: 夜战四打一
+20:50 varna: 敌人先手
+20:50 varna: 照明弹、触接
+20:50 varna: 打了大破的欧根
+20:51 varna: 105/255
+20:51 varna: 失败了
+20:53 varna: 支援还有闪，再来
+20:54 varna: 再打掉105以上就可以了
+20:54 varna: 掉沟
+20:55 varna: 咦，搞错了
+20:55 varna: 306/2000
+20:55 varna: 摸到51血就是斩杀
+20:58 hope1_ quit:Ping timeout: 252 seconds
+20:58 cleamoon_: orz
+20:59 biergaizi quit:Read error: Connection reset by peer
+20:59 biergaizi joined channel
+21:00 varna: 等到斩杀，就是防空姬+双院长……
+21:00 hope1_ joined channel
+21:00 varna: 最糟糕的是，这样的敌阵容要用机动部队去打
+21:02 lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCF/Thread/Atomic.hpp?ts=4
+21:03 cleamoon_: ...机动...那不是让二队去送死吗
+21:03 varna: 是
+21:04 varna: 而且不能用雷巡
+21:04 cleamoon_: ......
+21:04 cleamoon_: 那怎么斩
+21:04 varna: 这需要二队能活下来
+21:04 Mokou: 说起来A8 7650k如何
+21:04 Mokou: 台式机爆炸了，可能得换
+21:05 cleamoon_: 壕rz...
+21:05 varna: _(:з」∠)_
+21:05 Mokou: 壕个屁
+21:05 Mokou: 我总不能徒手造主板
+21:06 cleamoon_: 我想起了一个笑话，之前一个朋友，磁铁刷硬盘出动画，然后出国了...
+21:07 Mokou: 总之换的话我在考虑APU
+21:07 varna: wow!
+21:07 varna: 刷闪出欠雪了！
+21:07 Mokou: I+独显太贵了
+21:07 Mokou: 欧rz
+21:08 cleamoon_: ...
+21:08 Mokou: 有没有必要上A10
+21:08 Mokou: 那台电脑基本上只有我老妈用
+21:08 cleamoon_: 其实贵一点好...
+21:08 Mokou: 你给我钱我就买
+21:08 cleamoon_: 你可以vnc呀
+21:09 Mokou: vnc干嘛
+21:09 cleamoon_: vnc那台电脑用呀
+21:09 cleamoon_: 这样快一点有意义
+21:09 Mokou: 我用那台电脑干嘛
+21:09 libhanjian joined channel
+21:10 cleamoon_: 撸舰娘呀
+21:10 Mokou: 我为什么要VNC到那台电脑上肝船
+21:10 hope1 joined channel
+21:12 cleamoon_: 这样你就可以不关那台电脑，24小时肝船了
+21:12 Mokou: 我怎么可能不关那台电脑……
+21:12 varna: 迟早ban
+21:13 varna: E7这地方的沟太鬼畜了
+21:14 varna: 出击
+21:14 varna: 操……
+21:14 Mokou: ……
+21:14 varna: 又掉进去了
+21:15 cleamoon_: 我就完全不关电脑...
+21:15 Mokou: 那是你
+21:15 Mokou: 不是我妈
+21:18 varna: 开幕轰沉4大破1
+21:18 varna: 压制住了
+21:19 varna: 支援没来
+21:20 varna: 二队生还
+21:20 varna: 通过
+21:20 varna: 糟了
+21:20 varna: 我还接着阿号
+21:20 Mokou: ……
+21:20 Mokou: 节哀
+21:20 varna: 门神
+21:21 varna: T有利……
+21:22 varna: 欧根中破
+21:22 hope1 quit:Ping timeout: 250 seconds
+21:22 varna: 通过
+21:23 varna: 拼了
+21:24 varna: T不利
+21:24 varna: 十六万中破，羽黑中破
+21:24 varna: 十六万被害
+21:25 varna: ok, 我进斩杀了
+21:25 varna: 118/255 203/400 夜战
+21:26 varna: 五打二
+21:26 varna: 照明弹+触接
+21:26 varna: 小和爆炸
+21:26 varna: 133 击杀
+21:27 cleamoon_: orz
+21:27 cleamoon_: orz
+21:27 cleamoon_: orz
+21:28 varna: 目前进度 51/2000
+21:29 Mokou: OTL
+21:30 varna: 燃料掉下一万
+21:30 cleamoon_: 依旧orz
+21:30 varna: 支援还有闪，我拼一把
+21:30 varna: 先给二队补闪
+21:31 cleamoon_: 出门
+21:31 cleamoon_ quit:Quit: Leaving
+21:33 varna: 我不想换阵容了
+21:33 varna: 雪风会摔出翔的
+21:33 hope1_ quit:Ping timeout: 264 seconds
+21:34 varna: 这个道中强度还是太高
+21:34 Mokou: http://tieba.baidu.com/p/3979761634 哈哈哈被婊了
+21:34 Mokou: 大快人心
+21:35 varna: 7L有亮点
+21:36 Mokou: 签名？
+21:36 varna: +
+21:36 varna: 不过我细思恐极
+21:36 varna: 刚才我绫波是完好的三雷CI
+21:36 varna: 133
+21:36 Mokou: 挺好的啊
+21:37 varna: 目前水面舰能吃绫波三座五连+6 CI还活着的人……
+21:37 Mokou: 削甲之前就是1
+21:37 varna: 削甲之前是哈里发的世界
+21:37 whatofor_1 joined channel
+21:39 varna: 我已经没法提供最大程度的火力了
+21:39 varna: 只要我用神通，那么就可能多一个雷击威胁
+21:39 whatofor quit:Ping timeout: 240 seconds
+21:39 varna: 用雪风，我都能看到拉人的样子
+21:40 cleamoon: 舰娘大幸与不幸的转换：沟进BOSS--没斩，场场大胜--刷闪，大建出货--金刚，还剩一击--没钱
+21:40 varna: 然而我相信绫波
+21:40 varna: 这次基本不可能斩杀
+21:40 varna: 但是总有一次会的
+21:40 varna: 毕竟敌人太强了……
+21:43 Mokou: 别无选择
+21:44 xxxxxxxx: 把损管和女神都拆了orz
+21:45 varna: 看看这次我的运气吧
+21:45 xxxxxxxx: 这个13我给5分
+21:45 varna: 对了，刚才击杀A胜掉八万钢
+21:45 Mokou: 查了一下
+21:46 Mokou: Iowa的电子计算机能处理转向似乎不是因为计算机本身算法牛逼
+21:46 Mokou: 而是因为那个计算机能自动从测距仪等等地方获得输入，不需要手动敲……
+21:46 varna: 本来就得那么做吧
+21:46 varna: 决战部队，出击
+21:46 Mokou: 机动以后命中诸元飞掉主要就坑在这
+21:46 Mokou: 你得重新输
+21:47 xxxxxxxx: 原来需要手敲...
+21:47 Mokou: 我记得九八式也是人工输入的
+21:47 varna: 开幕压制
+21:47 varna: 轰沉4大破2
+21:47 varna: 搞定
+21:48 Mokou: 不过Iowa有个致命缺陷
+21:48 Mokou: 最大战速下主炮不能开火
+21:48 xxxxxxxx: 开火会翻?
+21:48 Mokou: 船体震颤
+21:48 varna: 武藏小破……
+21:48 Mokou: 射击平台稳定不下来，你没法瞄准
+21:48 varna: 开幕轰沉3
+21:49 varna: 二队生还
+21:49 Mokou: 其实北卡似乎也有这个问题
+21:49 Mokou: 不过后来改修的时候好像解决了
+21:49 varna: 压制
+21:49 xxxxxxxx: 这又是为了满足什么奇葩要求带来的副作用么?
+21:49 varna: 门神
+21:50 varna: 支援水漂
+21:50 Mokou: 高速
+21:50 varna: 复纵反航，开幕轰沉2
+21:50 Mokou: 这要求真心不奇葩
+21:51 varna: 欧根中破
+21:51 varna: 通过
+21:51 xxxxxxxx: 那不应该是比较普遍的缺陷么?
+21:51 varna: 大凤42/70
+21:51 varna: 武藏50/97
+21:51 varna: 但是我似乎已经不可能斩杀了
+21:52 varna: 米空居于天，诸事安稳
+21:52 hope1_ joined channel
+21:52 code_new joined channel
+21:52 varna: 双院长
+21:52 varna: 哈哈哈哈
+21:53 varna: 开幕小破1大破1轰沉2 T有利
+21:53 varna: 羽黑爆炸
+21:53 varna: 小和被害
+21:53 varna: 绫波大破……
+21:53 Mokou: 似乎只有美系高速BB有这个毛病
+21:53 varna: 奇迹都救不了我
+21:54 varna: 武藏大破
+21:54 hope1_ quit:Read error: Connection reset by peer
+21:54 hope1_ joined channel
+21:54 varna: 拼了！
+21:54 Mokou: 而且即使不考虑震颤，高速下Iowa的稳定性也不行
+21:54 Mokou: 船体太细了
+21:54 varna: 已经没有希望了
+21:54 code_new: 不要怂。相信奇迹
+21:54 varna: 火力已经不够了
+21:55 varna: 卧槽
+21:55 varna: 斩了
+21:55 Mokou: OTL
+21:55 varna: 十六万
+21:55 code_new: Orz
+21:55 varna: 十六万！
+21:55 code_new: congrat
+21:55 Mokou: 一次斩
+21:55 Mokou: 太可怕
+21:55 varna: 哈哈哈哈哈哈
+21:55 varna: 我出院了
+21:55 Mokou: 恭喜频道里第一个真正的甲鱼诞生
+21:56 code_new: 给甲鱼跪了Orz
+21:56 Mokou: 然而我依然在苦逼地查美帝的对空火控
+21:56 hope1 joined channel
+21:57 code_new: 肛旗到哪了
+21:58 Mokou: E5还没开始
+21:58 Mokou: 明天我得先把天城练出来
+21:58 code_new: 哦哦
+21:58 Mokou: 另外建议把称呼里的排遗器官去掉，感觉有点奇怪……
+21:58 varna: 我现在叫红旗了
+21:58 hope1_ quit:Read error: Connection reset by peer
+21:59 code_new: 0.0
+21:59 code_new: 之前发生了什么
+21:59 hope1_ joined channel
+21:59 Mokou: 没什么，只是我一直觉得称呼里带着排遗器官感觉有点奇怪……
+21:59 varna: 没什么，我也觉得他这个建议合理
+22:00 Mokou: 40mm高炮该不该乘MT的1.2？
+22:01 Stevearzh joined channel
+22:01 Stevearzh quit:Changing host
+22:01 Stevearzh joined channel
+22:01 varna: 不该
+22:01 varna: 等等
+22:01 varna: 美军的40mm高炮？
+22:01 Mokou: +
+22:01 varna: 如果是那个，我不确认
+22:01 Mokou: 不对
+22:01 Mokou: 28mm
+22:01 varna: 28mm不用
+22:01 varna: 那已经是枪弹了
+22:01 Mokou: 了解
+22:02 Mokou: 啊啊啊美军的驱逐舰好麻烦
+22:02 Mokou: 然而并没有人能帮我算
+22:03 Mokou: varna: 下次推演的时候我这边的防空参数给我算吧
+22:03 Mokou: 不然太麻烦了
+22:04 Mokou: 啊，还好wiki比较良心
+22:04 Mokou:  	As built:
+22:04 Mokou: 1 x Mk33 Gun Fire Control System,
+22:04 hope1 quit:Ping timeout: 250 seconds
+22:04 varna: ok
+22:05 varna: AAF这个事情其实无所谓，商量好就行
+22:05 varna: 因为真的太麻烦了
+22:05 Mokou: 40mm博福斯呢
+22:05 Mokou: 我没查到这玩意的引信问题……
+22:06 Mokou: 我先不乘MT
+22:06 varna: 操
+22:06 varna: 哈哈哈哈
+22:06 varna: 我回不去了……
+22:06 Mokou: ……
+22:07 code_new: What happened
+22:07 Mokou: 他那边关门了
+22:07 xxxxxxxx: 被锁在楼里了
+22:07 Mokou: 刚才我想问他来着，不过我以为他看到了……
+22:07 code_new: ……才4分钟
+22:07 xxxxxxxx: 毕竟到点了
+22:07 Mokou: 无所谓了
+22:07 Mokou: 反正你斩了E7
+22:07 varna: 我先回去看看
+22:08 xxxxxxxx: 已经斩掉了?
+22:08 Mokou: 斩了
+22:08 xxxxxxxx: 开始不是说要吃翔么?
+22:08 varna quit:Quit: leaving
+22:08 code_new: 欧皇的实力
+22:10 hope1 joined channel
+22:10 hope1_ quit:Read error: Connection reset by peer
+22:10 Mokou: 羊驼子突破成功
+22:11 hope1_ joined channel
+22:30 hope1_ quit:Read error: Connection reset by peer
+22:35 hope1_ joined channel
+22:37 Mokou: 美帝这防空依然日狗
+22:37 hope1_ quit:Read error: Connection reset by peer
+22:37 hope1_ joined channel
+22:37 Mokou: 虽说日军的几个编队我要重新算一下
+22:38 hope1 quit:Ping timeout: 252 seconds
+22:41 Mokou: 我操……
+22:41 hope1_ quit:Read error: Connection reset by peer
+22:41 Mokou: 太可怕了
+22:41 Mokou: 不上VT都这么恐怖
+22:43 hope1 joined channel
+22:44 hope1_ joined channel
+22:44 hope1 quit:Read error: Connection reset by peer
+22:45 hope1_: 有人知道装逼一词的来源吗
+22:46 hope1_ quit:Read error: Connection reset by peer
+22:46 hope1_ joined channel
+22:46 Mokou: 太平洋战争这游戏能玩？
+22:49 xxxxxxxx: 不清楚不过装逼之前我先听到的是牛逼这样的词
+22:58 Mokou: 麻烦了
+23:00 Mokou: 算了，还是十八机
+23:00 hope1_ quit:Read error: Connection reset by peer
+23:00 hope1_ joined channel
+23:04 lh_mouse: 装逼不是东北话么
+23:04 hope1_ quit:Read error: Connection reset by peer
+23:04 lh_mouse: 纯正一点的说法是装犊子
+23:05 hope1 joined channel
+23:08 lh_mouse quit:Read error: Connection timed out
+23:08 lh_mouse joined channel
+23:11 yzld2002 joined channel
+23:36 code_new quit:Quit: bye
+23:39 yzld2002 quit:Quit: yzld2002

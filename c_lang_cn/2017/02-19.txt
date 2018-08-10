@@ -1,0 +1,339 @@
+00:12 iyzsong-w: x.x 
+00:12 B005ter: 按照 Google Coding Style 自动美化后：
+00:12 B005ter: a = b * c + e * f;
+00:12 B005ter: a = E;
+00:12 B005ter: a = E | F | G;
+00:13 B005ter: 行宽 80 自动换行
+00:13 B005ter: 当然不同语言也有差异
+00:13 B005ter: 记得 Java 好像比 80 多
+00:13 cleamooon: 这是在说什么
+00:14 varna: 然而为什么要按照Google的风格来
+00:15 varna: 是你自己觉得好看，还是你单纯地需要一个标准，而Google看起来比较厉害？
+00:15 cc quit:Quit: xc:www.chnxc.net
+00:16 varna: 或者举例来说，你为什么要选80列折行？
+00:16 varna: 你是否有很多80x24的终端？
+00:16 iyzsong-w: 噗，这 2400+ 多邮件。。 一台交换机的端口一直在跳就发了1300+多 0.0
+00:16 * Mokou 无视80限制
+00:16 Mokou: 现在是2017年
+00:17 varna: 如果代码风格让你的代码变得必须一行一行拆碎了读，这显然是违反可读性的
+00:17 varna: 而另一方面，这未必是代码的锅
+00:17 Mokou: +
+00:18 cleamooon: 然而一行写很长的也讨厌
+00:18 varna: 或者说，你在办公室里那台1920x1080的显示器也需要八十列折行么
+00:18 varna: 因为你在使用某种瓦片式wm, 而非惯用手侧是一些测试/调试/文档用的窗口？
+00:18 varna: 总有个理由吧……
+00:19 B005ter: 按照规范来嘛~
+00:19 varna: 规范是人定的，不是让人死遵守的
+00:19 B005ter: 优化可读性。 毕竟每个人有每个人的喜好
+00:19 varna: 然而我好奇的是八十列折行哪里来的可读性
+00:19 Mokou: 所以你到底是在遵守规范还是在优化可读性
+00:20 Mokou: 这两件事是不一样的
+00:20 B005ter: 对啊，我就是用插件在优化的时候自动美化。
+00:20 varna: 再举个例子
+00:20 B005ter: 我 MBP 半屏设置的正好 80 宽
+00:20 varna: event_fd = eventfd(0, EFD_CLOEXEC
+00:20 varna: event_fd = eventfd(0, EFD_CLOEXEC|EFD_NONBLOCK);
+00:21 varna: 分开写空了一大堆东西
+00:23 varna: http://img.vim-cn.com/0e/3b434f736412a56fbfa6b0212032e2475ce8fb.png  // 自家本子的截图
+00:23 Mokou: 毕竟你小
+00:24 B005ter: 对于我个人而言，我承认我有自己的习惯。为了给自己所有的代码保持一个整齐的模式（说不定自己的习惯那天就变了），所以找了这个不小众而且至少对于我很舒服的规范。 Voilà
+00:24 varna: (｡･ω･)在下受语言所迫，需要记住各种对象的死活情况，用大字看不过来
+00:25 B005ter: 我的字号应该是 11
+00:25 varna: 个人意见，代码风格不太奇葩的话，能否看懂就看程序本身了
+00:26 Mokou: 我不遵守80限制是因为我不觉得人类有必要被尧舜时代的传统吊死
+00:26 Mokou: 我是现代人
+00:26 varna: 总有些奇葩程序，说什么提供这个那个扩展点，实际上是需求估计错误
+00:26 varna: 或者边界不清
+00:26 cleamooon: 背景挡住字了，而且字好小...
+00:26 B005ter: Dock 放侧面，剩下的对半分，正好一半一半。  你说的这点我同意。 我们就是在讨论代码本身一样，只是格式上的美化。
+00:26 varna: 律己即可
+00:26 varna: 我原来用wmii的时候差不多是六四开
+00:27 varna: 左手侧编辑器
+00:27 varna: 后来懒了，换openbox写码的时候直接把irc终端卷起来
+00:28 varna: 格式这个东西只要不是团队规范，我基本只采律己态度
+00:28 B005ter: 我现在的屏幕自动分块很尴尬，貌似是 48% 和 52%
+00:28 B005ter: 50% YouTube 不能占满半屏
+00:28 varna: 没用过mac的系统，你能换个wm或者调调参数么
+00:28 iyzsong-w: 我现在都是全屏一个 Emacs ...
+00:28 Mokou: 我现在是主屏幕在右侧，主帧在左侧
+00:28 Mokou: 全屏emacs+
+00:29 B005ter: 我现在把 Emacs 的快捷键设置成壁纸了…… 正在熟练 ing……
+00:29 varna: openbox我还打算用一段时间
+00:29 Mokou: 一般我用一个emacs开两个窗口四个帧
+00:29 varna: 虽说瓦片式wm的手感好，但他们的窗口边框大多太难看了
+00:29 varna: btw Mac开发者？你做平台无关的东西么
+00:29 varna: 还是做客户端开发
+00:30 Mokou: 主屏幕左边是实现，右边是实现对应的头文件，左侧屏幕放被用到的头文件
+00:30 iyzsong-w: Mac 并不能换 WM..
+00:30 varna: ……不能换wm不是太蛋碎了
+00:30 Mokou: windoze也不能
+00:31 varna: 所以他也蛋碎啊……
+00:31 Mokou: 不过反正windoze对我来说只是个游戏平台……
+00:31 Mokou: wayland到现在都没几个能用的wm
+00:32 Mokou: 结果这么多年过去了，我还是只能用X
+00:32 Mokou: 噫吁嚱
+00:32 varna: wayland我信不过，他们似乎进度有点慢
+00:32 varna: 怪可惜
+00:32 B005ter quit:Quit: See y0u :D
+00:32 varna: XLib也好XCB也好用起来都很麻烦，要是有点更方便的库就好了
+00:32 Mokou: +
+00:33 varna: 刚才本来想把栈分配器剥出去的，结果想起少前夜战似乎有几个图可以打打了，于是……
+00:33 Mokou: 233333
+00:33 Mokou: 我刷光AP了，FGO暂停
+00:33 varna: 我估计等下就可以把一图夜战先过了
+00:33 Mokou: 今天唯一的进度就是刷了不到1200个棱镜，从星团级本毕业了
+00:34 Mokou: _(:з」∠)_FGO活动真麻烦
+00:34 varna: _(:з」∠)_来舔416吧
+00:34 Mokou: _(:з」∠)_造不出来
+00:34 varna: _(:з」∠)_你太欧
+00:34 varna: _(:з」∠)_非洲人都有416的
+00:34 Mokou: _(:з」∠)_哪个欧洲人一堆三星
+00:34 B005ter joined channel
+00:35 varna: _(:з」∠)_五星多到随便拆的欧洲人养FNC玩儿
+00:35 Mokou: _(:з」∠)_五星就那么点
+00:35 yimis joined channel
+00:35 varna: _(:з」∠)_五星里还有NKC呢
+00:35 Mokou: _(:з」∠)_求不提NKC，这次活动我S胜掉了一堆
+00:35 varna: 你存一些，能转运
+00:36 Mokou: 没船位，全部批量处理掉了
+00:36 iyzsong-w: 啊啊啊 我要坐到 8 点 x.x
+00:36 B005ter quit:Remote host closed the connection
+00:36 varna: _(:з」∠)_辛苦
+00:37 B005ter joined channel
+00:37 yimis quit:Client Quit
+00:37 varna: Mokou: 最后我觉得，p7r如果引入分段栈的话，我就不把uthread元信息放栈上了
+00:39 Mokou: varna: _(:з」∠)_然后改动太大了？
+00:39 varna: p7r_stack_metamark这个东西其实可以单独用
+00:40 varna: 因为他里面记录了真实的栈基址，对自带分配器来说这个基址在元页和红页之后
+00:40 varna: 但对分段栈来说，直接记gcc给我的指针就可以
+00:40 varna: uthread元数据仍然放在栈常规数据之后，反正FLA
+00:41 varna: 无非就是吃一堆malloc...
+00:41 Mokou: 可以有
+00:41 varna: 接口我也不做了，直接编译时决定
+00:41 Mokou: 说起来
+00:41 varna: 这种东西做成运行时决定的反而不合适
+00:41 Mokou: 这次活动完以后我还没大建呢
+00:41 B005ter quit:Ping timeout: 268 seconds
+00:42 varna: 造造造
+00:43 Mokou: 三发战舰一发7777
+00:44 Mokou: 双大武俾召唤阵，B打头
+00:44 varna: 可怕的欧洲人
+00:44 Mokou: 第一发已点
+00:44 Mokou: 7777100
+00:44 varna: 桑
+00:45 Mokou: 我等等群里的
+00:47 Mokou: 加贺
+00:47 Mokou: 第二发 4662+20
+00:49 Mokou: 山城
+00:49 Mokou: 第三发3
+00:49 Mokou: 第三发
+00:50 Mokou: 战神
+00:50 Mokou: 最后一发
+00:50 varna: _(:з」∠)_
+00:50 varna: _(:з」∠)_玛德夜战1-3没有装甲单位……RF队被人坑了
+00:50 varna: _(:з」∠)_慢心诱爆，上主力
+00:50 Mokou: 麦克
+00:51 Mokou: 附赠的一发7777100出了苍龙
+00:51 varna: 可怕，这人要养舰爆
+00:51 Mokou: 不养，喂掉_(:з」∠)_
+00:52 varna: _(:з」∠)_玛德，在下不带夜战装备照样把一图的常规敌人按着揉
+00:57 Mokou: http://wx3.sinaimg.cn/mw690/821fc02egy1fcmwqce7zaj20a502r742.jpg 逸种见解
+00:57 varna: 2333333333333333333333
+00:58 varna: _(:з」∠)_卧槽差点慢心诱爆，原来夜战的高闪避机械兵这么能T...
+00:58 varna: _(:з」∠)_四连装UMP9直接被打成连装的
+01:00 xhe quit:Quit: leaving
+01:26 varna: _(:з」∠)_被夜战1-4打回去了
+01:28 varna: 先睡，健斗
+01:36 wlemuel quit:Ping timeout: 268 seconds
+02:03 iyzsong-w: -.-
+02:29 Mokou quit:Remote host closed the connection
+02:59 B005ter joined channel
+04:36 lh_mouse quit:Ping timeout: 260 seconds
+06:21 iyzsong-w: x.x
+07:25 cleamooon: o.o
+07:56 iyzsong-w: = =
+07:57 iyzsong-w: 看了好多集石头门..
+07:59 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+08:23 iyzsong-m joined channel
+08:37 wlemuel joined channel
+10:10 doublehou joined channel
+10:15 doublehou quit:Client Quit
+10:16 tutu joined channel
+10:53 tutu quit:Ping timeout: 260 seconds
+11:10 wlemuel quit:Ping timeout: 240 seconds
+11:11 wlemuel joined channel
+11:16 wlemuel quit:Ping timeout: 255 seconds
+11:16 wlemuel joined channel
+11:51 yimis joined channel
+11:52 tutu joined channel
+11:56 tutu quit:Ping timeout: 260 seconds
+12:03 rapiz joined channel
+12:05 B005ter quit:Remote host closed the connection
+12:05 B005ter joined channel
+12:06 B005ter quit:Remote host closed the connection
+12:06 B005ter joined channel
+12:06 B005ter quit:Remote host closed the connection
+12:07 B005ter joined channel
+12:07 yimis quit:Read error: Connection reset by peer
+12:07 B005ter quit:Remote host closed the connection
+12:08 B005ter joined channel
+12:08 yimis joined channel
+12:08 B005ter quit:Remote host closed the connection
+12:08 B005ter joined channel
+12:09 B005ter quit:Remote host closed the connection
+12:09 B005ter joined channel
+12:10 B005ter quit:Remote host closed the connection
+12:10 B005ter joined channel
+12:10 B005ter quit:Remote host closed the connection
+12:11 B005ter joined channel
+12:11 B005ter quit:Remote host closed the connection
+12:28 yimis quit:Quit: yimis
+12:28 yimis joined channel
+12:50 lhanjian: varna: ！
+12:50 lhanjian: lh_not_bot:
+12:53 xhe joined channel
+13:26 iyzsong-m: m(_ _;)m
+13:27 varna: (｡･ω･)ﾉ
+13:27 varna: lhanjian: !
+13:28 yimis quit:Quit: yimis
+13:28 varna: (｡･ω･)果然给侧舷做阴影和雨痕还是要直接用颜料兑一下，再拿棉签蘸稀释液晕开
+13:28 yimis joined channel
+13:28 lhanjian: (•̀ω•́)✧
+13:31 varna: (｡･ω･)ﾉ下午好啊
+13:33 IRCFrEAK joined channel
+13:37 lhanjian: 中午饭还没吃，被上海的公共交通系统绕晕了
+13:39 varna: _(:з」∠)_呜呼呼
+13:42 cc joined channel
+13:42 iyzsong-m: 我得起来去吃饭了
+13:54 varna: 幼女幼女平坦的胸口
+14:03 iyzsong-m quit:Ping timeout: 240 seconds
+14:07 iyzsong-m joined channel
+14:07 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+14:28 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+14:31 iyzsong joined channel
+14:58 yimis quit:Quit: yimis
+15:10 varna: _(:з」∠)_
+15:11 dantmnf quit:Remote host closed the connection
+15:12 dantmnf joined channel
+15:13 dantmnf quit:Client Quit
+15:15 dantmnf joined channel
+15:19 varna: dantmnf: 爆
+15:25 rapiz quit:Ping timeout: 240 seconds
+15:25 rapiz joined channel
+15:28 xhe quit:Quit: leaving
+15:28 iyzsong: (┙>∧<)┙へ┻┻
+15:28 xhe joined channel
+16:00 bloom joined channel
+16:10 varna: (｡･ω･)ﾉ
+16:48 Mokou joined channel
+16:56 varna: (｡･ω･)ﾉ
+17:15 lhanjian: 在蛤大玩了两个小时就得继续赶地铁了(￣□￣；)
+17:16 varna: 蛤大有幼女么？
+17:16 iyzsong: _(:з」∠)_
+17:18 Mokou: 这驼满脑子幼女
+17:18 varna: (｡･ω･)当然了
+17:20 varna: 订了几支玻璃滴管
+17:21 varna: 塑料的清理起来太难
+17:21 Mokou: 埃尔梅罗二世事件簿5还没熟_(:з」∠)_
+17:29 whocares_2_ joined channel
+17:29 whocares_2 quit:Ping timeout: 268 seconds
+17:37 iyzsong quit:Quit: bye
+17:44 iyzsong-m joined channel
+17:46 varna: 啊，我居然忘了在之前的测试里开O2...
+17:46 varna: 疑似栈帧失衡炸死了
+17:51 iyzsong-m: 好恍惚啊，出来走走 ('・ω・') 
+18:19 varna quit:Ping timeout: 260 seconds
+18:21 varna joined channel
+18:44 zwindl joined channel
+18:45 iyzsong-m: 等公交回去 (#･∀･)
+18:49 lh_mouse joined channel
+18:56 iyzsong-m: 这破频道为什么一个妹子都没有 ε≡≡ﾍ( ´Д`)ﾉ
+18:56 Mokou: varna: <- 这个是
+18:56 varna: 我是羊驼
+18:58 iyzsong-m: 谁去诱拐几个来啊 (*ﾟ∀ﾟ)
+19:01 iyzsong-m: 公交还没等到 (°ー°〃)
+19:33 iyzsong joined channel
+20:36 lh_mouse: 新买了个床单。 OwO
+20:55 iyzsong: (｢・ω・)｢ 啥色儿的
+21:00 iyzsong-m quit:Ping timeout: 268 seconds
+21:02 iyzsong: 我买了本舞蹈教程 _(:з」∠)_
+21:23 Mokou: https://imgs.xkcd.com/comics/sad.png
+21:25 iyzsong: 2333
+21:31 varna: 我X他大爷
+21:31 varna: gcc给我生成了一个jmp...一个jmp...
+21:31 varna: jmp p7r_mcontext_x64_switch
+21:31 Mokou: ……
+21:31 Mokou: 什么鬼
+21:32 varna: 这当然TMD是错的
+21:32 Mokou: 哪里的代码
+21:33 varna: 咦，是p7r_yield
+21:33 varna: 没人用这个？
+21:33 varna: 哦不对
+21:33 varna: 创建在本地的时候会yield一下，让子协程先走
+21:34 varna: 然后就炸了
+21:34 varna: p7r_mcontext_x64_switch的下降部分是按call写的……赣
+21:35 varna: 这里应该是个TCO
+21:36 varna: 不对眼滑了
+21:36 varna: p7r_uthread_lifespan
+21:37 varna: 非转生的废止性返回
+21:38 varna: 一共两处jmp, 看起来都是TCO
+21:38 varna: 这就有点尴尬了……
+21:39 varna: 最坏的情况，我需要按照ucontext的搞法，把get_context和set_context分开写
+21:39 varna: 这样get_context在敏感的调用场景下不会是个TC
+21:39 varna: 尼达耶……
+21:39 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/mz/55_387883.jpg@596w_1l.jpg
+21:39 Mokou: 现在是啥情况
+21:40 Mokou: 为啥TCO会搞出问题
+21:40 varna: TCO生成一个jmp, 而我在p7r_mcontext_x64_switch的上下文保存部分会pop返回地址
+21:41 Mokou: POP的返回地址用来？
+21:41 varna: 存住，下次切回来push到栈上然后ret掉
+21:41 varna: 但这里的问题是，call进来的时候栈帧是平衡的
+21:41 Mokou: 为啥要这么搞
+21:41 varna: 所以意味着jmp进来的时候是不平衡的
+21:42 varna: 这里或者pop出来，或者去上溯rsp
+21:42 varna: 危险程度是一样的
+21:43 Mokou: 等我看下你的上下文切换
+21:44 varna: p7r里面那个唯一的.S
+21:45 Mokou: 为什么要手工处理返回地址
+21:46 varna: ?
+21:47 varna: 奇怪
+21:48 Mokou: 我没看懂你的意图
+21:48 Mokou: 不是切栈了么，为何要手工压新的返回地址
+21:48 varna: 初态对端我没压返回地址，这里强行手工平衡的
+21:49 Mokou: ……
+21:49 Mokou: 我觉得还是压一个吧
+21:49 Mokou: 这样一个jmp就坑了
+21:58 * iyzsong 躺床上看电视去 (｢・ω・)｢
+21:59 iyzsong quit:Quit: bye.
+22:00 iyzsong-m joined channel
+22:02 cc joined channel
+22:03 varna: 狂炸不止……
+22:08 varna: 而且炸点变奇怪了
+22:08 varna: 这里我得稍微想想
+22:20 Mokou: http://www.bilibili.com/video/av614254/ 救世主化的先辈
+22:29 Mokou: n站弹幕：“便乘仏教”
+22:41 bloom quit:Quit: bloom
+22:45 wlemuel quit:Ping timeout: 240 seconds
+22:54 rapiz quit:Quit: Konversation terminated!
+23:05 aeromax joined channel
+23:13 cc quit:Quit: xc:www.chnxc.net
+23:16 varna: _(:з」∠)_田宫的速干胶比救世主502有一点好：可以直接上手
+23:16 varna: 完全不会有手皮残留
+23:16 varna: 而且一般用量沾到手上也不会填平指纹
+23:20 Mokou: 毕竟田宫
+23:20 varna: 喷笔还是没想好选哪家的
+23:21 varna: 似乎有郡士的懒人套装，不必特意搭配，不知道效果如何
+23:26 xhe quit:Quit: leaving
+23:29 Mokou: http://ww4.sinaimg.cn/mw690/e2b71cdegw1fbkoaws6dmj216a0gytd2.jpg
+23:29 cleamooon: 2333
+23:30 varna: 2333
+23:30 varna: 换个笑法
+23:30 varna: 3955
+23:33 whocares_2_ quit:Read error: Connection reset by peer
+23:33 whocares_2 joined channel
+23:42 tutu joined channel
+23:43 varna: (｡･ω･)ﾉ
+23:46 tutu quit:Ping timeout: 240 seconds
+23:55 tutu joined channel
+23:57 Mokou: http://wx1.sinaimg.cn/mw690/483e728fgy1fct6cdejzkj20g00a7abs.jpg
+23:58 varna: OTL

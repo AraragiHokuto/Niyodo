@@ -1,0 +1,165 @@
+00:13 perr quit:Quit: Leaving
+00:28 xanthu joined channel
+04:08 jingjing- joined channel
+04:08 jingjinghack quit:Quit: ZNC 1.7.0 - https://znc.in
+07:07 zhangoke joined channel
+09:22 wlemuel joined channel
+09:32 lh_mouse joined channel
+09:58 lh_ideapad joined channel
+10:28 perr joined channel
+10:46 \s joined channel
+11:05 perr quit:Remote host closed the connection
+11:15 perr joined channel
+11:32 wlemuel quit:Read error: Connection reset by peer
+12:09 perr quit:Remote host closed the connection
+12:36 lhanjian_: matchray: 喵睿
+12:37 cleamoon_ quit:Quit: Connection closed for inactivity
+12:47 matchray: lhanjian_: ccls换成更多clang c++后撞到一个 clang RAIIObjectsForParse.h 的heap-use-after-free bug
+12:47 lhanjian_: 吼哦
+13:50 lh_ideapad: 喵睿。
+14:01 perr joined channel
+14:01 perr quit:Changing host
+14:01 perr joined channel
+14:54 cleamoon_ joined channel
+15:09 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/v1/n3_4060.jpg@596w_1l.jpg
+15:12 lhanjian_: cleamoon_: why?
+15:14 cleamoon_: lhanjian_: 巨硬宣布收购gayhub
+15:15 lhanjian_: cleamoon_: 我知道。就是看不明白图
+15:15 matchray: asan之後發現可能是deduction guide實現的bug，#include <sstream> template <typename T> class Meow {}; #include <functional> 能觸發
+15:15 cleamoon_: 今天一大堆gayhub用户涌入gaylab了
+16:02 leemeng joined channel
+16:09 lhanjian_: cleamoon_: 啊？
+16:09 cleamoon_: lhanjian_: 啊
+16:09 lhanjian_: cleamoon_: gitlab也能有用户？？
+16:12 cleamoon_: lhanjian_: 昨天开始有了
+16:13 lhanjian_: 嗯
+16:23 Mokou: rm -rf
+16:24 lhanjian_: Mokou: sad command
+17:09 koppa joined channel
+17:16 T2 joined channel
+17:21 koppa quit:Ping timeout: 276 seconds
+17:22 koppa joined channel
+17:42 zhangoke quit:Quit: zhangoke
+17:43 koppa quit:Remote host closed the connection
+18:19 condy_ joined channel
+18:20 hope1 quit:*.net *.split
+18:20 condy quit:*.net *.split
+18:20 condy_ is now known as condy
+18:52 T2: 我正在试图拉一个美女主播来频道玩
+19:01 leemeng: 主播来了irc
+19:01 hope1 joined channel
+19:01 T2: 我只是尝试一下
+19:02 T2: 频道缺妹子啊
+19:02 cleamoon_: 海棠姬来了
+19:03 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:04 T2 joined channel
+19:05 leemeng: 那位是海棠姬？
+19:05 T2: 海棠现在美国？
+19:05 T2: hope
+19:06 T2: 羊驼子不来，就没人说话的样子。
+19:06 leemeng quit:Quit: leaving
+19:10 cleamoon_: 不知道呀，海棠姬都不说话
+19:11 T2: 哎，我估计妹子来了也呆不住。
+19:25 iyzsong joined channel
+19:29 iyzsong: 0.0
+19:30 tiimmm joined channel
+19:33 T2: iyzsong: 捏
+19:43 iyzsong quit:Ping timeout: 248 seconds
+19:53 lhanjian_: t2来了
+19:54 T2: lhanjian_: 可惜我叫的妹子还没来
+19:54 T2: 来了大家欢迎一下哈
+19:54 T2: 真的美女哦
+19:55 lhanjian_: 怕不是不会来
+19:55 T2: 不知道啊
+19:56 T2: 她说下了kvirc，正要重启
+19:59 T2: 论irc离一个正常人有多远
+19:59 gauge: 用网页版嘛
+20:00 iyzsong joined channel
+20:00 T2: 她要是连一个客户端都搞不定，我还叫她来干嘛。
+20:01 iyzsong: orz
+20:01 T2: 劳资可是刷了火箭的
+20:01 iyzsong: - -b
+20:04 T2: 交友也要起码的智商吧
+20:04 T2: 一个大四学生搞不定一个irc客户端
+20:05 T2: 我把她拉进来丢人现眼么
+20:05 iyzsong: 你也是拼了。。。
+20:06 T2: 长得真好看，外加玩wow，刷点礼物就刷了。
+20:07 lhanjian_: 一个火箭，多少钱？
+20:07 T2: 500
+20:07 T2: 还有200红包
+20:07 iyzsong: 大佬啊
+20:08 T2: 别骂我啊
+20:08 T2: 我是无业游民
+20:08 T2: 我不相信斗鱼能玩明白，搞不定一个irc
+20:09 T2: 话说是该找个工作了，没有收入了。，
+20:10 iyzsong: _(:з」∠)_
+20:10 T2: 是这样的，我爸妈封锁了我所有的收入来源
+20:10 T2: 得，我去当网管。
+20:14 Youmu: 。。。
+20:15 T2: 哎，生活嘛。
+20:15 Youmu: 有700不如自己买几个游戏
+20:15 Youmu: 可以玩1年
+20:16 T2: 家里不让玩
+20:17 whocares_2_ quit:Ping timeout: 265 seconds
+20:18 whocares_2 joined channel
+20:22 iyzsong: 可怕
+20:23 T2: 反正挺蛋疼的
+20:23 T2: 生活嘛
+20:42 iyzsong: 没有小姐姐 ╮(￣▽￣)╭
+20:43 T2: 哎
+20:47 T2: 我好浮躁啊
+20:49 iyzsong: o.O
+20:51 T2: 又到了欢乐的没钱时间，又要去找工作啦。
+20:52 iyzsong: 工作难干啊
+20:52 T2: 没钱花了，那怎么办嘛。
+20:53 T2: 玩得也无聊了。。
+20:55 iyzsong: 快来成都带我玩啊 _(:з」∠)_
+20:55 T2: 今年之内应该就来了
+20:55 T2: 我就玩玩游戏
+20:56 T2: 现实世界中就是渣渣
+20:56 T2: 到时候我们去撸串
+20:56 T2: 还有火锅
+20:57 iyzsong: 我需要多走走，刚才跑了一公里就很累 - -b
+20:57 T2: 我现在走都走不了一公里
+20:57 T2: 还跑呢
+20:57 T2: 已经是个废人啦
+20:58 iyzsong: 这么惨 _(:з」∠)_
+20:59 T2: 我吃的那个药比较坑爹
+20:59 T2: 加上我懒
+20:59 T2: 不过一公里还是能走得
+20:59 T2: 就是很虚很弱很胖
+20:59 T2: 受不了
+21:02 lhanjian_: Youmu: LP
+21:12 T2: 啊哈，浮躁得连小说都看不进去。
+21:14 T2: iyzsong: 你现在在哪工作？
+21:14 lh_ideapad quit:Remote host closed the connection
+21:16 iyzsong: T2: 在高新区世纪城地铁口
+21:16 T2: iyzsong: soga，不错不错。
+21:17 iyzsong: 走路上班，房租贵的一批...
+21:18 iyzsong: 职位是运维开发，现在天天去写前端vue，一整天也就实现个对话框。。
+21:21 T2: 好吧，你来住我家，不要房租、
+21:22 T2: 就是远了点
+21:22 iyzsong: _(:з」∠)_ 远啊，我还得上班混口饭吃。。
+21:23 T2: 有地铁的咯
+21:23 iyzsong: 地铁我都懒得坐。。
+21:23 T2: 好吧，随你。
+21:24 T2: 我现在也得上班混口饭吃了。
+21:24 T2: 不知道能找个什么工作呢
+21:25 GODDOG joined channel
+21:26 GODDOG quit:Client Quit
+21:26 iyzsong: 我前公司的一个运维伙计高中毕业，都有房有车还有个漂亮的教师老婆～
+21:29 T2: 哎
+21:29 T2: 又能如何？
+21:30 iyzsong: 励志啊 _(:з」∠)_
+21:30 T2: 励志不如去睡觉
+21:31 T2: 窃以为人活一世，逍遥自在最重要。
+21:32 cleamoon_ quit:Quit: Connection closed for inactivity
+21:36 T2: 哎呀睡觉去了，妹子是不会来了。
+21:37 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:53 iyzsong quit:Ping timeout: 276 seconds
+22:07 condy quit:Ping timeout: 268 seconds
+22:09 condy joined channel
+22:46 perr quit:Quit: Leaving
+23:32 lh_mouse: https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/
+23:32 lh_mouse: https://blog.github.com/2018-06-04-github-microsoft/
+23:33 cleamoon_ joined channel

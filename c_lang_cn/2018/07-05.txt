@@ -1,0 +1,132 @@
+00:01 cirno__ joined channel
+00:02 cirno_ quit:Remote host closed the connection
+00:02 cirno__ quit:Remote host closed the connection
+00:02 cirno__ joined channel
+00:07 lh_mouse quit:Ping timeout: 240 seconds
+00:32 cirno__ quit:Remote host closed the connection
+00:32 cirno__ joined channel
+00:45 meowray: 放假兩天，只能staycation坑Soylent了
+00:49 varna: 变成猫娘了！
+00:49 varna: NEKOPARA!（失控
+01:02 cirno__ quit:Remote host closed the connection
+01:03 cirno__ joined channel
+01:14 cirno__ quit:Quit: WeeChat 2.1
+01:39 iyzsong quit:Read error: Connection reset by peer
+02:39 varna quit:Ping timeout: 260 seconds
+03:22 Mokou: @柠子
+03:56 meowray: https://github.com/realgud/realgud
+03:56 meowray: 可愛的🐭
+05:54 cleamoon_: emacs大法好
+06:38 zhangoke joined channel
+08:35 FrankHB quit:Ping timeout: 255 seconds
+09:00 FrankHB joined channel
+09:02 blackberry9900 joined channel
+09:17 blackberry9900 quit:Read error: Connection reset by peer
+09:17 blackberry9900 joined channel
+09:23 blackberry9900 quit:Ping timeout: 240 seconds
+09:24 blackberry9900 joined channel
+09:38 BlackBerry9999 joined channel
+09:41 blackberry9900 quit:Ping timeout: 260 seconds
+09:44 BlackBerry9999 quit:Ping timeout: 260 seconds
+09:45 lh_mouse joined channel
+09:56 BlackBerry9999 joined channel
+10:15 FrankHB quit:Ping timeout: 256 seconds
+10:29 FrankHB joined channel
+10:37 zhangoke quit:Quit: zhangoke
+10:40 BlackBerry9999 quit:Ping timeout: 240 seconds
+10:48 lh_ideapad joined channel
+10:50 BlackBerry9999 joined channel
+11:43 BlackBerry9999 quit:Ping timeout: 260 seconds
+11:49 BlackBerry9999 joined channel
+11:54 BlackBerry9999 quit:Ping timeout: 264 seconds
+11:54 BlackBerry9999 joined channel
+11:54 BlackBerry9999 quit:Remote host closed the connection
+12:35 lh_ideapad: meowray, 
+12:35 lh_ideapad: ./configure --enable-debug-logs CXX='clang++-5.0' CPPFLAGS='-D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC' CXXFLAGS='-O0 -g3 -stdlib=libc++ -Wno-unknown-warning-option -fsanitize=address -fsanitize=undefined' LIBS='-lasan -lubsan'
+12:35 lh_ideapad: This results in the following error:
+12:35 lh_ideapad:  85 configure:2583: clang++-5.0 -o conftest -O0 -g3 -stdlib=libc++ -Wno-unknown-warning-option -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC  conftest.cpp -lasan -lubsan >&5
+12:35 lh_ideapad:  86 configure:2587: $? = 0
+12:35 lh_ideapad:  87 configure:2594: ./conftest
+12:35 lh_ideapad:  88 ==11436==Your application is linked against incompatible ASan runtimes.
+12:36 lh_ideapad: wtf happened ?
+12:40 FrankHB quit:Read error: error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac
+12:56 meowray: https://github.com/llvm-mirror/compiler-rt/tree/master/lib/asan/asan_linux.cc#L204
+12:56 meowray: 加 -fPIC ?
+13:02 meowray: 去掉 -lasan -lubsan 呢？
+13:05 meowray: 比如clang的话链接的库是 libclang_rt.asan_cxx-x86_64.a
+13:05 meowray:  libasan.so.3 之类可能是gcc用的
+13:08 meowray: https://github.com/llvm-mirror/clang/tree/master/lib/Driver/ToolChains/CommonArgs.cpp#L594
+13:24 meowray: ~/Dev/llvm/release/lib/clang/7.0.0/lib/linux/libclang_rt.asan-x86_64.a 5M
+13:26 meowray: strip -g 后 3M
+13:27 lh_ideapad: meowray, 不加 -l 会 undefined reference 。
+13:29 meowray: LINK.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+13:29 meowray: 链接时有CXXFLAGS (-fsanitize=address,undefined)
+13:30 meowray: 我刚才调试了一下，-fsanitize=address,undefined 会导致 --whole-archive libclang_rt.asan-x86_64.a --no-whole-archive 和 libclang_rt.asan_cxx-x86_64.a 链接
+13:30 meowray: 如果你的CXXFLAGS古怪，那么LDFLAGS+=-fsanitize=address,undefined
+13:31 lh_ideapad: 和 libtool 不兼容？
+13:31 lh_ideapad: 用 libtool 链接。
+13:31 lh_ideapad: libtool --mode=link --tag=CXX   clang++ foo.o -o bar.so -shared
+13:35 meowray: clang++ -v 看看是什么
+13:35 meowray: 不懂libtool
+13:35 lh_ideapad: lh_mouse@lhmouse-ideapad ~/GitHub/asteria $ clang-5.0 -v
+13:35 lh_ideapad: clang version 5.0.0-3~16.04.1 (tags/RELEASE_500/final)
+13:36 lh_ideapad: Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+13:36 lh_ideapad: Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+13:36 meowray: 我不知道你的CXXFLAGS为什么没被传到 libtool --mode=link --tag=CXX   clang++ 
+13:37 meowray: clang++ a.o -fsanitize=address,undefined  -o a
+13:38 * meowray 要好好學習compiler-rt啦
+13:48 meowray: 你如果不想用 libclang_rt.asan-x86_64.a 的話，我想知道 -Wl,-dn -lasan -lubsan -Wl,-dy 能不能用
+13:49 lh_ideapad: meowray, libtool 好像会加 -nostdlib
+13:50 lh_ideapad: 我用 clang 只是因为 libstdc++ 的 unordered_map 不支持 incomplete mapped type 。
+13:50 meowray: libtool太愚蠢了……
+13:50 meowray: clang driver已經做了很多事情了
+13:50 lh_ideapad: 等 cow_unordered_map 写完就把 clang 扔了换回 gcc 。
+13:50 meowray: libtool 還要再套一層
+13:52 meowray: clang比gcc好玩很多啊
+13:52 FrankHB joined channel
+13:57 meowray: 我注意到GNU hackers用emacs多而llvm用vim多
+15:26 lh_mouse: lmao
+15:26 lh_mouse: 然而窝既不用 emacs 也不用 vim 。
+15:30 chennd_sdfsldkjo quit:Ping timeout: 264 seconds
+15:37 chennd_sdfsldkjo joined channel
+15:54 sadwefwwe83klsd8 joined channel
+15:54 chennd_sdfsldkjo quit:Read error: Connection reset by peer
+16:08 byc joined channel
+16:11 byc quit:Client Quit
+16:15 sadwefwwe83klsd8 quit:Remote host closed the connection
+16:15 sadwefwwe83klsd8 joined channel
+17:04 FrankHB quit:Ping timeout: 248 seconds
+17:13 sadwefwwe83klsd8 quit:Remote host closed the connection
+17:14 sadwefwwe83klsd8 joined channel
+17:27 geordi quit:Remote host closed the connection
+17:37 geordi joined channel
+17:42 FrankHB joined channel
+18:06 FrankHB quit:Ping timeout: 255 seconds
+18:13 FrankHB joined channel
+18:21 FrankHB quit:Ping timeout: 276 seconds
+18:22 condy quit:Ping timeout: 268 seconds
+18:23 condy joined channel
+18:59 wenfeng quit:Read error: Connection reset by peer
+19:07 wenfeng joined channel
+19:11 wenfeng quit:Read error: Connection reset by peer
+19:38 FrankHB joined channel
+20:10 sadwefwwe83klsd8 quit:Remote host closed the connection
+20:10 sadwefwwe83klsd8 joined channel
+20:40 lh_ideapad: meowray, 
+20:40 lh_ideapad: asteria/src/rocket/cow_string.hpp:98:19: error: zero size arrays are an extension [-Werror,-Wzero-length-array]
+20:40 lh_ideapad: 加 __extension__ 没用。
+20:40 lh_ideapad: 但是 gcc 是可以如此。
+20:42 whocares_2 joined channel
+20:42 whocares_2_ quit:Ping timeout: 255 seconds
+20:48 iyzsong joined channel
+21:26 Vassis joined channel
+21:41 Vassis quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:42 lh_ideapad quit:Remote host closed the connection
+22:13 FrankHB quit:Ping timeout: 240 seconds
+22:17 FrankHB joined channel
+22:31 FrankHB quit:Ping timeout: 260 seconds
+22:32 zhangoke joined channel
+22:32 zhangoke quit:Client Quit
+22:52 FrankHB joined channel
+22:57 sadwefwwe83klsd8 quit:Ping timeout: 248 seconds
+23:47 lh_ideapad joined channel

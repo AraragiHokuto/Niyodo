@@ -1,0 +1,985 @@
+0:9 T2:羊驼子的代码直接根本看不懂节奏.
+0:10 T2:麻痹比STL还叼.
+0:10 T2:我艹艹艹艹艹
+0:13 hope1:比如？
+0:13 hope1:建议你去看boooost
+0:18 T2:hope1, 等下哈
+0:19 T2:hope1, http://pastebin.mozilla.org/5012493 http://pastebin.mozilla.org/5012492 我盯着这个内存池看了一晚上了.
+0:20 T2:准确说是呆了一晚上.
+0:22 T2:大概看懂了什么个意思
+0:23 lhanjian:先找找内存池的文档或者相关解释性文章。
+0:23 lhanjian:对着代码硬猜，恐怕未必能理解这些玩意儿的深意吧
+0:24 T2:lhanjian, 硬猜了一晚上，大概思路有点明白了。
+0:25 T2:小的就丢现有池，大的就现开一个。
+0:25 T2:具体细节我是看不懂了艹，明天吧。
+0:27 T2:lhanjian, 解决固定长度池不足以应对特大号需求的状况。
+0:28 lhanjian:这些都差不多对的样子。
+0:30 T2:lhanjian, 蛋疼得紧，我还是自己撸一个试试吧。
+0:34 T2:lhanjian, #define _tt_container_of(p, pm, t) ((t *)((char *)(p) - _tt_offset_of(t, pm))) 这样能用么？
+0:34 T2:羊驼似乎是用方言做了个赋值强转然后偏移，意味不明。
+0:35 hope1:这哪有方言
+0:36 T2:hope1, 这是我写的，等我给你看羊驼的。
+0:37 hope1:羊驼是用了gnu statement expression
+0:37 T2:hope1, #define    container_of(ptr, type, member) ({ \
+0:37 T2:     const typeof(((type *) 0)->member) *__mptr = ptr; \
+0:37 T2:     (type *) ((char *) __mptr - offset_of(type, member)); })
+0:37 hope1:还有typeof
+0:37 T2:hope1, 为毛要这么做？
+0:38 hope1:那你要怎么做？
+0:38 T2:似乎直接 #define _tt_container_of(p, pm, t) ((t *)((char *)(p) - _tt_offset_of(t, pm))) 就行。
+0:40 hope1:强制cast没有类型检查
+0:40 T2:额，原来如此。
+0:41 T2:应该没事吧囧。
+0:41 hope1:https://pastebin.mozilla.org/5020210
+0:41 hope1:噗 Nov 16 21:18:49 <varna>	这里是不用__mptr的，不过我就不改了
+0:42 T2:好吧。
+0:43 hope1:不过怎么都是ub，因为解引用了0
+0:43 T2:嗯。
+0:44 T2:#define _tt_container_of(p, pm, t) \
+0:44 T2:        ((t *)((char *)(p) - _tt_offset_of(t, pm)))
+0:44 T2:#define _tt_member_of(p, pm, t, m) \
+0:44 T2:        (&(_tt_container_of(p, pm, t)->m))
+0:44 T2:就是说我写成酱紫也不会死呗。
+0:45 T2:不死就行。
+0:46 hope1:offsetof可以用标准库啊
+0:47 T2:hope1, 多写一句可以少include一个头文件。
+0:47 T2:那里面别的似乎也用不上。
+0:49 T2:hope1, 哦，还有NULL我晕。
+0:49 T2:那是我蛋疼了。
+0:49 hope1:<stddef.h> ...
+0:50 T2:⊙﹏⊙b汗，我一直就include一个stdlib
+0:50 T2:不知道它include了什么。
+0:56 T2:碎觉，腋间愉快。
+1:12 lh_mouse:geordi, { S<char> s; } struct S { template<int> S(){ BARK; } template<char> S() : S<int>() { } };
+1:12 geordi:error: 'struct S S::S' is not a non-static data member of 'S'
+1:13 lh_mouse:geordi, { S<char> s; } struct S { template<int> S(){ BARK; } template<char> S() { BARK; } };
+1:13 geordi:error: 'S' is not a template
+1:13 lh_mouse:geordi, { S s; } struct S { template<int> S(){ BARK; } template<char> S() { BARK; } };
+1:13 geordi:error: no matching function for call to 'S::S()'
+1:13 FrankHB:geordi, template<class>struct S{static_assert(((S*)0)->~S, "");};S<int> b;
+1:13 geordi:internal compiler error: Segmentation fault
+1:13 FrankHB:233
+1:13 lh_mouse:FrankHB, 这个地方怎么办？
+1:14 lh_mouse:geordi, { S s; } struct S { template<int> S(){ BARK; } template<char> S() { BARK; } };
+1:14 geordi:error: no matching function for call to 'S::S()'
+1:14 lh_mouse:不对
+1:16 lh_mouse:geordi, { S s; } struct S { template<bool B> S(typename enable_if<B, int>::type = 0){ BARK; } template<bool B> S(typename enable_if<!B, int>::type = 0){ BARK; } };
+1:16 geordi:Same error.
+1:19 lh_mouse:geordi, { S s; } struct S { template<typename> S(){ BARK; } S() : S<int>() { } };
+1:19 geordi:error: 'struct S S::S' is not a non-static data member of 'S'
+1:21 xxxxxxxx_ joined channel
+1:24 xxxxxxxx_:http://imagebin.org/308369 wmfs除了键位基本配好了
+1:28 xxxxxxxx_:不过wmfs似乎没自动启动的设定 可能要把一些东西塞进xinit里 这点不爽
+1:34 lh_mouse: 2 > cc1plus.exe: out of memory allocating 65536 bytes
+1:34 lh_mouse:fuck
+1:35 hope1:http://static.acfun.com/dotnet/artemis/u/cms/www/201404/19070431vctw.jpg
+1:49 lh_mouse:geordi, << ~true;
+1:49 geordi:-2
+1:49 lh_mouse:geordi, << b; bool b = true; b = ~b;
+1:49 geordi:error: 'b' does not name a type
+1:49 lh_mouse:geordi, { bool b = true; b = ~b; cout << b; } 
+1:49 geordi:true
+1:49 lh_mouse:geordi, { bool b = true; b ^= -1; cout << b; }
+1:49 geordi:true
+1:58 zzzzzzzz joined channel
+2:37 Ver1tas joined channel
+4:32 tsuki joined channel
+4:38 Ver1tas joined channel
+5:19 Ver1tas joined channel
+6:8 Ver1tas joined channel
+7:6 Ver1tas joined channel
+7:30 GODDOG joined channel
+7:50 Sleepwalking joined channel
+8:38 xxxxxxxx_ joined channel
+8:38 endle joined channel
+8:45 iyzsong joined channel
+8:52 sismvg joined channel
+8:59 Ver1tas joined channel
+9:32 sismvg joined channel
+9:34 sismvg:linux 想装个中文输入法麻烦死了...
+9:34 sismvg:好不容易装好了fcitx..结果一重启整个fcitx配置界面完全没有了输入法列表
+9:34 xxxxxxxx_:让你用centos
+9:34 sismvg:debian
+9:35 phone_lhanjian joined channel
+9:35 sismvg:右上角能看到输入法提示。。结果就是打不出中文来..
+9:35 phone_lhanjian:作死就会死(^V^)
+9:35 boosure joined channel
+9:35 moehuster joined channel
+9:36 phone_lhanjian:sismvg: 你有各种环境变量需要设置
+9:36 xxxxxxxx_:哪有各种 不久3条么
+9:36 sismvg:f很早就就按照教程里的设置过了，locale什么的,LC_CTYPE什么的
+9:38 sismvg:准备删掉所有关于fcitx的配置。。重装
+9:38 xxxxxxxx_:https://fcitx-im.org/wiki/Install_(Debian) https://fcitx-im.org/wiki/Configure_(Debian)
+9:40 xxxxxxxx_:各种博客里的教程是没办法才去看得东西 你根本不能保证他之后会跟进版本
+9:40 xxxxxxxx_:虽然自带的文档很多也这样 不过比博客可靠多了
+9:41 sismvg:There is currently no text in this page. You can search for this page title in other pages, or search the related logs. 
+9:41 sismvg:English Chinese  all same
+9:43 iyzsong:2333
+9:43 xxxxxxxx_:你仔细看看你的链接肯定漏了个)
+9:45 PloughPhone joined channel
+9:46 sismvg:首选项里的Fcitx配置页打不开了。。
+9:47 xxxxxxxx_:首选项是说啥?
+9:47 sismvg:Preferences
+9:51 *hysw 竟然挂科了...
+9:53 sismvg joined channel
+9:53 sismvg:Ok ... give up 
+9:53 xxxxxxxx_:fcitx-configtool?
+9:54 sismvg:yes
+9:54 xxxxxxxx_:实在不行你拆掉fcitx-configtool手工编辑配置也行的
+9:55 sismvg:Trying
+9:57 phone_lhanjian:而且还有很多包需要装
+9:58 xxxxxxxx_:另 你要装什么包之前先搜索一下相关的估摸一下要装哪些比较靠谱
+10:1 sismvg:都搜索过了，原本安装好了有一段时间可以用，但是一重启就没了。。
+10:3 sismvg:http://v1.freep.cn/3tb_140501100316nya1512293.png
+10:3 sismvg:Crying..
+10:7 xxxxxxxx_:点下面那个+啊....
+10:7 iyzsong:orz
+10:8 xxxxxxxx_:不过什么都没有是什么情况 至少有个关闭状态的吧
+10:11 sismvg joined channel
+10:11 xxxxxxxx_:sismvg: 点下面个+呢?
+10:14 sismvg joined channel
+10:14 code_new joined channel
+10:14 sismvg:又换回了ibus...
+10:15 sismvg:下面那个+里面什么都没有..
+10:17 sismvg joined channel
+10:17 sismvg:信IBUS得永生
+10:19 xxxxxxxx_:fcitx党表示当初就是ibus傻逼我才用fcitx的
+10:19 iyzsong:其实都差不多..
+10:21 sismvg:换个词库就好啦
+10:21 phone_lhanjian joined channel
+10:22 xxxxxxxx_ joined channel
+10:30 phone_lhanjian:人多的连网都上不了
+10:31 sismvg joined channel
+10:35 sismvg:不知道ibus能不能用云
+10:35 sismvg:还有输入好卡
+10:38 PloughP79 joined channel
+10:39 Plough joined channel
+10:52 zzzzzzzz:FIrefox 29.0给我一种亮瞎了的感觉....
+10:52 xxxxxxxx_:那不是chrome么....
+10:53 zzzzzzzz:xxxxxxxx_, 乃可以更新下试试
+10:54 xxxxxxxx_:在用28.0
+10:54 zzzzzzzz:应该是今天或者昨天更新的
+10:54 zzzzzzzz:拿快递去...
+11:15 phone_lhanjian joined channel
+11:16 T3rmin4t0r:thvideo.tv
+11:21 sismvg:cp bilibili.tv thvideo.tv
+11:27 iyzsong:$.$
+11:28 phone_lhanjian:acfun.com
+11:32 sismvg:class bilibili.tv :prviate acfun.com
+11:43 condy joined channel
+12:45 condy joined channel
+13:10 sismvg:http://www.bilibili.tv/video/av145839/
+13:11 sismvg:@炮姐
+13:14 Plough:http://imgs.xkcd.com/comics/urgent_mission.png
+13:16 sismvg:E文苦手
+13:24 TXuanone joined channel
+13:33 Zirx joined channel
+13:36 Plough:http://imgs.xkcd.com/comics/new_car.png
+13:46 cuihao joined channel
+13:51 hope1 joined channel
+14:0 JQK joined channel
+14:1 phone_lhanjian joined channel
+14:6 phone_lhanjian:在看漫展，感觉我要买买买买了
+14:7 phone_lhanjian:结果是穷穷穷穷
+14:9 phone_lhanjian:不过动画周边基本都归台湾木棉花/曼迪了。乐视等视频网站只能给动画大大广告
+14:10 hope1:这些都好贵...
+14:10 phone_lhanjian:嗯，我就买了两幅贴纸，香港某企业代理的，30人民币
+14:10 sismvg:去cmoic买
+14:10 sismvg:comic
+14:12 phone_lhanjian:没有，我来看漫展顺便买买，上网买没那感觉
+14:14 phone_lhanjian:木棉花有一半都是sao*
+14:15 phone_lhanjian:今天看到了大号的中号的中小的小的狂三cos.......知我个别两个能看◑▂◐
+14:16 sismvg:cos都是碴
+14:18 phone_lhanjian:我还是买海报和贴纸吧◑▂◐
+14:21 phone_lhanjian:炮姐的版权真复杂，已经看到三四家都是正版了……天闻角川木棉花曼迪……
+14:21 sismvg:乱*
+14:31 phone_lhanjian joined channel
+14:32 phone_lhanjian:可惜GC没有钟意的货
+14:33 T2 joined channel
+14:34 phone_lhanjian:曼迪连石头门的周边都不卖
+14:37 phone_lhanjian:天闻角川卖龙傲天似乎不太成功的样子233333
+14:37 phone_lhanjian:约炮的轻小说似乎依然没有上架
+14:38 phone_lhanjian:本子娜的手办600软妹币
+14:39 phone_lhanjian:jumpshop的排队真长
+14:39 phone_lhanjian:国产游戏基本都是网游，真糟糕
+14:41 condy:吾王呢？
+14:41 phone_lhanjian:有。
+14:42 phone_lhanjian:不是特别多
+14:42 condy:快上快上呀.
+14:42 phone_lhanjian:人家才不是王厨
+14:42 phone_lhanjian:没有看到凛酱的呢
+14:44 condy:这么说肯定有樱酱的啦.
+14:46 phone_lhanjian:傻哭啦没看到呢
+14:47 phone_lhanjian:好后悔啊，没买和纱的杯子，这是哪个白学病人在和我抢
+14:47 phone_lhanjian:东方厨好多啊
+14:49 Plough:http://jianshu.io/p/598f718b98c0
+14:51 hope1:233
+14:53 phone_lhanjian:东方应该是没有正版授权。所以之外澳门的一家店看到了，那家澳门的几乎什么都卖
+14:53 _root joined channel
+14:53 phone_lhanjian:腿抽筋了，站不起来
+14:53 phone_lhanjian:sao厨好多都是妹纸
+14:54 sismvg:为了保持纯洁性，鼓励近亲繁殖 
+14:55 sismvg:其实这只是妹控的一盘棋罢了
+14:56 phone_lhanjian:妹控的一盘棋+
+14:57 phone_lhanjian:没找到物语系列，好奇怪
+14:58 phone_lhanjian:现场还有不少SWAT
+15:2 phone_lhanjian:原来是因为普威尔没参会么……
+15:3 phone_lhanjian:gc厨真舍得，100块钱的手提袋
+15:5 FrankHB:gc厨
+15:5 phone_lhanjian:怎么中小学生就这么喜欢买sao的武器……
+15:6 phone_lhanjian:啊哈
+15:34 phone_lhanjian joined channel
+15:34 T2:我刚刚从某NTR展上入了一堆垃圾.
+15:34 phone_lhanjian:手办只能就流口水了
+15:34 phone_lhanjian:T2: 啊？
+15:35 T2:手办什么的压根没有, 成本不到6块的杯子卖60.
+15:35 T2:我TM居然还买了.
+15:35 T2:还有T恤什么的.
+15:35 T2:orz
+15:35 T2:抖M漫展促销会.
+15:36 phone_lhanjian:如果是正版也没什么
+15:36 T2:正毛
+15:36 T2:随便的塑料杯子.
+15:36 phone_lhanjian:文化产品就是这样，算材料成本完全无意义。
+15:37 phone_lhanjian:说句不好听的，算材料成本，码农都得去吃屎
+15:37 T2:关键那玩意压根算不上文化产品, 带着初中的表妹去的.
+15:37 T2:然后你懂了卧槽.
+15:37 phone_lhanjian:你就是喜欢嘛，有爱就不要谈价钱
+15:37 T2:我喜欢个毛.
+15:38 T2:我小姨的娃我能怎样.
+15:38 phone_lhanjian:这没办法，以后千万不要带孩子逛玩具店动漫展，带不起
+15:39 T2:算了我继续socket
+15:39 phone_lhanjian:熊孩子和不懂行的大人，得罪不起
+15:39 phone_lhanjian:condy: 找到了一只凛酱手办
+15:39 T2:关键我身边都是熊孩子和不懂行的打人.
+15:39 T2:大人
+15:40 T2:啊麻痹
+15:40 T2:回来还给我训了一顿,人参啊.
+15:41 condy:phone_lhanjian: 吾王和樱酱才是正宫(｡♥‿♥｡)
+15:42 phone_lhanjian:condy: 哎，没找到傻哭啦的存在确实奇怪
+15:42 phone_lhanjian:黑化王倒是找到了
+15:43 phone_lhanjian:T2: 钱打了水漂
+15:43 T2:还被训成狗
+15:43 T2:我TM为什么要活在一群傻逼中间呢.
+15:44 phone_lhanjian:喜欢eva那几块墓碑的真是奇怪
+15:44 T2:太弱了, 真是拙计.
+15:45 T2:跪求毕业卧槽.
+15:45 phone_lhanjian:T2: 你就当是表妹养成计划，说不定可以培养出一个能干的小表妹
+15:45 T2:卧槽, 你还是杀了我吧.
+15:47 phone_lhanjian:你瞧瞧你，有个傲娇的小表妹哪里不好
+15:48 T2:2333
+15:48 T2:吐槽无力，我还是撸socket
+15:49 T2:你给我那个真是不错，一共就7页，我就喜欢这种。
+15:49 phone_lhanjian:哎，国产动画的人设比起国产单机网游的真是差远了
+15:50 phone_lhanjian:T2: 喜欢就好。最早是233song推荐的
+15:51 T2:人生苦短。
+15:53 phone_lhanjian:一看到贴纸壁纸挂画卡贴就想掏钱•﹏•
+15:54 _root joined channel
+15:55 phone_lhanjian:岂可修，一个妹子竟然喜欢本子娜的卖肉鼠标垫
+15:56 T2: "Also, in the beginning, when there were only a few computers and
+15:56 T2:everyone thought a billion was an impossibly large number, some big
+15:56 T2:organizations were generously allocated millions of IP addresses for
+15:56 T2:their own use. (Such as Xerox, MIT, Ford, HP, IBM, GE, AT&T, and
+15:56 T2:some little company called Apple, to name a few.)" 
+15:56 phone_lhanjian:condy: 找到了一张有三女主的鼠标垫
+15:56 T2:莫名喜感
+15:58 phone_lhanjian:一个coser对我笑，我差点……吐出来了
+15:58 condy:phone_lhanjian: (;´༎ຶД༎ຶ`)终于有了修罗场，不容易啊。
+16:0 phone_lhanjian:可是人家还是买了一张明日香的垫子当挂画
+16:0 condy:没有买女神的，差评！
+16:2 phone_lhanjian:对的，我再找找女神的挂画
+16:3 Plough:http://imgs.xkcd.com/comics/candy_button_paper.png
+16:6 Plough:http://imgs.xkcd.com/comics/regular_expressions.png
+16:6 phone_lhanjian:condy: 买了两张鼠标垫，我的脑子一定是坏掉了，就怪condy〒_〒
+16:8 condy:phone_lhanjian: 不是女神的挂画吗？
+16:9 phone_lhanjian:鼠标垫啊〒_〒人家说了用鼠标垫代替挂画的
+16:10 phone_lhanjian:不买了，不买了！再买就砍手！
+16:11 condy:残忍的人类啊，竟然把女神压在手下。(ง •̀_•́)ง
+16:11 T2:0.0
+16:11 phone_lhanjian:没有啊，我是拿来婊起来的！
+16:12 phone_lhanjian:晕啊，原来福袋是集合的大礼包啊！
+16:12 *phone_lhanjian 完全变成萌豚了
+16:12 phone_lhanjian:早知道就不买别的，买个福袋了！
+16:20 phone_lhanjian:雷霆的战斗力，能让中年人也停步看游戏
+16:21 phone_lhanjian:FF厨战斗力甚巨
+16:22 phone_lhanjian:靠，保安都在看
+16:22 phone_lhanjian:SE大胜利
+16:25 condy:肯定是在看雷霆姐。(。・_・。)
+16:25 condy:眼花了，没有看到前文。。。233
+16:28 phone_lhanjian:condy 大 失 败
+16:29 phone_lhanjian:看到一些不错的国产漫画评选
+16:29 phone_lhanjian:『金猴奖』……
+16:30 phone_lhanjian:啥时候我朝动画可以无条件漫改了，动画产业也大胜利了
+16:30 iyzsong:2333
+16:31 sismvg joined channel
+16:39 phone_lhanjian:iyzsong: 抱
+16:44 phone_lhanjian:清场了！！！
+16:44 phone_lhanjian:SWAT!
+16:44 T2:2333
+16:45 phone_lhanjian:魂淡，今天最伤心的就是怎么这么多线虫！
+16:50 hoxily joined channel
+16:56 biergaizi joined channel
+16:56 phone_lhanjian2 joined channel
+16:58 tsuki joined channel
+17:15 biergaizi_ joined channel
+17:29 sismvg:铁线虫?
+17:35 sismvg:http://www.bilibili.tv/video/av1095070/
+17:35 sismvg:似乎很屌
+17:52 xxxxxxxx_ joined channel
+17:52 xxxxxxxx_:yaourt -Syu中 看看会不会死
+17:55 iyzsong:...
+17:56 sismvg:终于 知道为什么抄袭叫做fork了。。
+17:56 xxxxxxxx_:为啥?
+17:57 xxxxxxxx_:一直以为fork和抄袭是两回事....
+17:57 sismvg:fork产生父进程的一份copy啊。。
+17:58 iyzsong:= =
+17:58 xxxxxxxx_:抄袭不一定要一样啊
+17:58 iyzsong:yaourt还没挂么 你应该用aura w.w
+17:58 sismvg:fork以后应该也可以改吧.
+18:0 xxxxxxxx_:但是fork不会有人喷你啊
+18:0 xxxxxxxx_:抄袭说不定会被告的
+18:3 xxxxxxxx_:yaourt -Syu完了我的机器不会炸掉吧?
+18:3 xxxxxxxx_:有没有谁有经验的?
+18:3 Plough:xxxxxxxx_: 有可能
+18:4 Plough:amule还能烧房子呢
+18:5 xxxxxxxx_:orzzzz
+18:8 xxxxxxxx_:不知道明天早晨之前能不能结束....
+18:9 iyzsong:都有啥
+18:9 xxxxxxxx_:一巨堆
+18:10 condy:为啥用yaourt会挂啊？
+18:10 xxxxxxxx_:有的时候aur里的东西并不一定好用....
+18:12 boosure joined channel
+18:15 xxxxxxxx_: webkitgtk 还有chromium 还有qt 还有python 还有一堆xf86-input
+18:15 phone_lhanjian2:aur依赖又时候与标准库冲突
+18:15 iyzsong:phone_lhanjian2: 烧
+18:15 xxxxxxxx_:我已经准备好liveusb了
+18:16 iyzsong:2333
+18:16 phone_lhanjian2:iyzsong: 烧什么嘛，今天被一堆线虫闪瞎眼
+18:19 *iyzsong 去吃个饭 -o-
+18:38 lh_mouse joined channel
+18:41 xxxxxxxx_:好像大多数更新都是官方源里的 真是幸运
+18:42 xxxxxxxx_:吓得我连liveusb都准备好了
+18:42 xxxxxxxx_:另 firefox这怎么看都是chrome clone了啊...
+18:45 xxxxxxxx_:噗 bilibili service unavailable了?
+18:45 condy:aur里装了128个包，看起来还可以。
+18:46 tsuki:官方源才容易挂...
+18:48 xxxxxxxx_:好歹也是aur里混过的才能进官方源 你这么一黑aur都被黑死了
+18:49 tsuki:aur里没多少能出事的东西呀
+18:50 xxxxxxxx_:https://aur.archlinux.org/packages/glibc-git/ 比如这个?
+18:51 condy joined channel
+18:51 tsuki:噗，装这个干什么
+18:52 xxxxxxxx_:我反正不敢作死....
+18:52 tsuki:这是纯作死
+18:54 xxxxxxxx_:今天网络似乎抽风了
+18:56 condy:ff29变了好多啊。。。
+18:56 xxxxxxxx_:http://imagebin.org/308460 <- 上面的时间需要按键刷新你说我的想法屌不屌
+18:57 xxxxxxxx_:condy: 我怀疑那是chrome...
+18:59 condy:难得用一下xfce,竟然给我崩溃。fuck.
+18:59 xxxxxxxx_:从来没遇到过xfce崩....
+19:0 condy joined channel
+19:2 phone_lhanjian2:说起来昨天喝酒差点毁掉了
+19:3 xxxxxxxx_:乱性?
+19:4 phone_lhanjian2:上厕所的时候晕过去了一瞬间
+19:5 xxxxxxxx_:晕过去?
+19:6 phone_lhanjian2:撒尿，撒完了以后开始做梦，然后醒过来发现自己跪在地上
+19:6 phone_lhanjian2:但是时间非常短
+19:6 phone_lhanjian2:以后不敢喝酒
+19:6 iyzsong:ORZ
+19:6 phone_lhanjian2:貌似是脑袋缺血缺氧？
+19:7 xxxxxxxx_:确定是撒完了开始做的么?
+19:7 xxxxxxxx_:纯属喝醉了
+19:7 phone_lhanjian2:不知道，反正吓尿了。醒过来以后心跳的很厉害，虽然并不快
+19:8 phone_lhanjian2:我可不想这么早就挂掉
+19:8 xxxxxxxx_:phone_lhanjian2: 要是我肯定一睡就在厕所里睡半天了
+19:9 phone_lhanjian2:当时我不敢睡，怕一睡就回不过来了
+19:9 iyzsong:无法直视
+19:10 *phone_lhanjian2 觉得自己很怕死
+19:10 *lh_mouse 早就不怕死了
+19:10 iyzsong:我怕鬼..
+19:10 phone_lhanjian2:it
+19:11 phone_lhanjian2:iyzsong: Songer回头，我在看你
+19:11 iyzsong:还怕狗~~
+19:11 xxxxxxxx_:不怕鬼 不怕死 怕肚饿
+19:11 iyzsong:phone_lhanjian2: 在哪?
+19:11 *phone_lhanjian2 召唤出了一只汪酱
+19:12 phone_lhanjian2:iyzsong: 什么在哪儿？
+19:12 *xxxxxxxx_ 试图抓住汪酱
+19:12 iyzsong:-.-
+19:12 lh_mouse:meow
+19:14 hope1 joined channel
+19:14 tsuki:来亨鸡被人催眠爆了吧
+19:15 *phone_lhanjian2 抚摸了一下自己的菊花，一切良好。
+19:15 phone_lhanjian2:hope1: 海棠来了
+19:16 tsuki:口爆
+19:16 xxxxxxxx_:19:15  * phone_lhanjian2 抚摸了一下自己的菊花，一切良好。
+19:16 xxxxxxxx_:19:15 < phone_lhanjian2> hope1: 海棠来了
+19:16 xxxxxxxx_:为啥我觉得有点意思...
+19:16 tsuki:而且铝合金的菊花有处男膜？
+19:16 phone_lhanjian2:xxxxxxxx_: 你需要治疗
+19:16 phone_lhanjian2:tsuki: .菊花没有裂开
+19:16 xxxxxxxx_:tsuki: 屎怎么办?
+19:17 tsuki:那处女膜怎么办
+19:18 tsuki:原来氯化钾的菊花一直是合上的
+19:19 phone_lhanjian2:(>﹏<)
+19:19 xxxxxxxx_:^一副被爆菊的表情
+19:19 phone_lhanjian2:边上又坐了一个余弦，今天看到的余弦比一辈子还多
+19:21 tsuki:大叔cos的？
+19:21 T2 joined channel
+19:21 phone_lhanjian2:是个妹子，但是抬头杀
+19:23 phone_lhanjian2:今天看到的长的周正的余弦真是一只手都数的过来
+19:23 phone_lhanjian2:光顾着刷频道结果连可乐都忘拿了
+19:24 tsuki:长得周正的不拉过来啪啪啪一下
+19:24 xxxxxxxx_:会长酱?
+19:25 sismvg joined channel
+19:26 phone_lhanjian2:有一个祈妹不错，还有一个秦时明月的女主不错……(⊙o⊙)哦，记得起来的只有两个
+19:26 xxxxxxxx_:没图你说个丁丁
+19:27 phone_lhanjian2:回去发图。马上到寝室。可惜拍到的基本很少
+19:27 phone_lhanjian2:爪机照相不太好
+19:28 tsuki:都是透明人？
+19:28 tsuki:怪不得长得不好看
+19:29 phone_lhanjian2:看什么看，淑女绅士也是透明人
+19:29 tsuki:哦哦哦，太好了
+19:30 tsuki:透明人是男人共同的愿望
+19:30 phone_lhanjian2:你又不是蓝人
+19:30 tsuki:我擦，ff怎么了，我是不是开错了
+19:30 xxxxxxxx_:那是chrome
+19:31 tsuki:+
+19:32 phone_lhanjian2:firome
+19:33 tsuki:没关系，看我更新pentadactyl，更完了管他什么都一个样
+19:33 sismvg:种子列表 loli 
+19:33 tsuki:我擦，还真不一样
+19:34 sismvg:xxxxxxxx_:黏着系男子，somethingforloli
+19:34 sismvg:截图删掉一些东西的重要性
+19:35 xxxxxxxx_:这有啥可删的
+19:36 xxxxxxxx_:http://blog.livedoor.jp/pramo/ <- 河蟹物就放在这里嘛
+19:36 sismvg:一般情况下种子列表 loli 这种东西都是搜三次元的
+19:36 tsuki:这个好，全站爬下来
+19:37 sismvg:第二天你的ip就上不去了
+19:37 tsuki:代理
+19:37 xxxxxxxx_:里番种子也有的吧
+19:37 sismvg:以我的经验是没有的
+19:37 sismvg:我的70~2012的里番种子里几乎没有loli这个字样
+19:38 xxxxxxxx_:http://bt.orzx.im/list.php?BoardID=2&ItemID=17
+19:38 lhanjian joined channel
+19:39 xxxxxxxx_:自己看嘛
+19:39 sismvg:这个是按照tag搜的？
+19:39 xxxxxxxx_:动漫里的loli分类全都是里番发布吧
+19:41 sismvg: 我的都是离线的压缩包+光速搜索..
+19:41 xxxxxxxx_:光速搜索是啥?
+19:42 sismvg:百度一下你就知道。。
+19:42 sismvg:总之就是超高速搜索文件
+19:42 xxxxxxxx_:异教物 除了这个没啥相关的东西
+19:42 xxxxxxxx_:另外google的自定义搜索你可以弄个专门搜种子的设定
+19:43 condy:http://imagebin.org/308464 大家的ff也是这个样子的吗？
+19:43 xxxxxxxx_:http://turbogalaxy.org/ <-比如这个
+19:43 sismvg:condy:白色的
+19:44 sismvg:search:pthc
+19:44 condy:sismvg: 主题没有配好，gtk2/gtk3 主题不一样。。
+19:45 xxxxxxxx_:Pre-Teen Hard Core?
+19:52 sismvg:已经患上了巨乳恐惧症。。
+19:52 hope1:http://imagebin.org/308465
+19:53 xxxxxxxx_:hope1: 29之后你就不需要chrome了
+19:54 hope1:怎么回事
+19:54 hope1:extra里还是28
+19:54 sismvg:ff29=metorIE+chome
+19:54 sismvg:metro
+19:54 hope1:噗，又改UI了
+19:55 xxxxxxxx_:hope1: 不是改 不是偷 是窃!!!
+19:55 hope1:不能选择保留旧UI?
+19:57 xxxxxxxx_:https://addons.mozilla.org/zh-cn/firefox/addon/classicthemerestorer/
+19:59 iyzsong:我也来下个firefox-29 o.o
+20:3 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> void baz(); }; }; template<typename... Tx> template<typename... Ty> void baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:3 geordi:error: too many template-parameter-lists
+20:3 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> void baz(); }; }; template<typename... Tx> template<typename... Ty> void foo<Tx...>::bar::baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:3 geordi:error: cannot call member function 'void foo<Tx>::bar::baz() [with Ty = {char, double}; Tx = {int}]' without object
+20:4 lh_mouse:geordi, prepend static  before first void
+20:4 geordi:foo<Tx>::bar::baz() [with Ty = {char, double}; Tx = {int}]
+20:7 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> void baz(); }; }; template<typename... Tx> template<class... Ty> static void baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:7 geordi:error: too many template-parameter-lists
+20:7 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> void baz(); }; }; template<typename... Tx> template<typename... Ty> void foo<Tx...>::bar::baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:7 geordi:error: cannot call member function 'void foo<Tx>::bar::baz() [with Ty = {char, double}; Tx = {int}]' without object
+20:7 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> void baz(); }; }; template<typename... Tx> template<class... Ty> static void foo<Tx...>::bar::baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:7 geordi:error: cannot declare member function 'void foo<Tx>::bar::baz()' to have static linkage
+20:7 lh_mouse:geordi, template<typename... Tx> struct foo { struct bar { template<typename... Ty> static void baz(); }; }; template<typename... Tx> template<class... Ty> void foo<Tx...>::bar::baz(){ BARK; } int main(){ foo<int>::bar::baz<char, double>(); }
+20:7 geordi:foo<Tx>::bar::baz() [with Ty = {char, double}; Tx = {int}]
+20:21 lhanjian:我也来做个死，bin32-firefox 29
+20:24 condy:geordi: { int a = 10, b = 20; (a > 0 ? a : b) = 0xff; cout << a, b; }
+20:24 geordi:255, 20
+20:27 iyzsong:已入firefox好顶赞 => http://imagebin.org/308460
+20:28 xxxxxxxx_:29看上去真心差劲
+20:29 iyzsong:很好啊..
+20:29 xxxxxxxx_:显示的那个是chrome
+20:30 T2:...
+20:30 T2:这桌面配色略叼.
+20:30 iyzsong:使用XIM输入法 菜单无效的问题也解决了~
+20:31 xxxxxxxx_:http://wmfs.info/ <- 这个配色才屌呢
+20:32 T2:好吧
+20:33 xxxxxxxx_:wmfs有xft支持的 wmfs2却不支持了....
+20:34 T2:撸下socket就再衮回arch做实验.
+20:34 T2:先把内存池的坑填了.
+20:35 iyzsong:抛弃标题栏、panel就好了..
+20:38 T2:主要stardict用着不如有道爽.
+20:38 T2:就这个疼.
+20:38 xxxxxxxx_:... 我通常用google翻译...
+20:39 iyzsong:我就用下ydcv
+20:39 T2:xxxxxxxx_, 短的可以
+20:39 T2:一本书没取词太疼了.
+20:39 xxxxxxxx_:什么短的?
+20:39 T2:论文什么的无所谓了.
+20:39 T2:不超过10页的那种无所谓.
+20:43 JQK joined channel
+20:44 hope1:iyzsong, 标题乱码？
+20:44 xxxxxxxx_:确实乱 而且不知道为啥我换不了字体
+20:44 iyzsong:=.=
+20:46 iyzsong:(wmii党)你们为啥不试试i3
+20:47 xxxxxxxx_:试过了 然后拆掉了
+20:47 lh_mouse:geordi, { vector<string> v; stringstream ss; ss.str("damn you all bakas"); copy(istreamiterator(ss), istreamiterator(), back_inserter(v)); cout << v; }
+20:47 geordi:error: 'istreamiterator' was not declared in this scope
+20:49 lh_mouse:geordi, replace all istreamiterator with istream_iterator
+20:49 GODDOG joined channel
+20:49 geordi:error: missing template arguments before '(' token
+20:49 lhanjian:我这里好像firefox 29没什么问题的样子
+20:50 lh_mouse:geordi, { vector<string> v; stringstream ss; ss.str("damn you all bakas"); copy(istream_iterator<string>(ss), istream_iterator<string>(), back_inserter(v)); cout << v; }
+20:50 geordi:{"damn", "you", "all", "bakas"}
+20:50 xxxxxxxx_:不像chrome?
+20:50 lhanjian:xxxxxxxx_, 像。
+20:50 lhanjian:还挺好看
+20:50 iyzsong:+
+20:50 xxxxxxxx_:非当前的标签也之间是竖线还是chrome那样的?
+20:51 lhanjian:竖线
+20:51 lhanjian:不知道。
+20:51 lhanjian:我截张图
+20:51 xxxxxxxx_:鼠标放上去呢?
+20:51 lhanjian:我截张图
+20:51 xxxxxxxx_:我这里反正鼠标不放上去就是竖线 放上去就变成chrome那种 2的要死
+20:52 Plough:2的要死+
+20:52 iyzsong:就是这种设计..
+20:52 lhanjian:我觉得很赞
+20:52 lhanjian:很清新的感觉。
+20:52 xxxxxxxx_:至少保持一致吧
+20:52 lhanjian:原来好凸……
+20:53 T2:lh_mouse, "Damn u 口支"
+20:53 T2:baka 口支
+20:53 lh_mouse:/kick t2
+20:53 T2:我靠.
+20:54 xxxxxxxx_:而且谁告诉我怎么把后退和刷新的那俩个弄成普通的图标好好放着?
+20:54 T2:lh_mouse, MCF还是看不懂啊疼.
+20:54 lh_mouse:T2, 有毛好看的
+20:54 T2:lh_mouse, 互斥和信号量.
+20:56 lhanjian:Fxxk 29。core dumped!
+20:56 T2:算了，我自己慢慢撸来试试。
+20:56 lhanjian:xxxxxxxx_, 看个图就给我崩溃了
+20:56 iyzsong:2333
+20:56 xxxxxxxx_:说好看的早晚遭报应
+20:56 T2:lhanjian, 2333
+20:57 lh_mouse:T2, 那个不就是 win 的东西简单包装了一下么
+20:57 T2:lh_mouse, 所以看不懂吖。
+20:57 lhanjian:xxxxxxxx_, http://ww1.sinaimg.cn/woriginal/005yJiZJjw1efz2j1jfcjj318g0p0ad2.jpg
+20:58 T2:麻痹，没事，反正怠工结束了，补起应该能比较快。
+20:58 T2:就是疼。
+20:58 xxxxxxxx_:所以说标签页做的太傻 要直线就直线好了
+20:58 lh_mouse:T2, 和 win 的一样
+20:58 xxxxxxxx_:弄得乱七八糟的
+20:59 T2:lh_mouse, 嗯
+20:59 lhanjian:Syu 1032MiB……
+21:1 hope1:还好有刚刚那个插件
+21:1 lhanjian:hope1, 什么插件？
+21:1 hope1:https://addons.mozilla.org/zh-cn/firefox/addon/classicthemerestorer/
+21:1 T2:rbt 添加线索化之后需要做什么维护？ 似乎左右旋转并不需要维护？
+21:2 T2:就跟普通二叉树一样？
+21:6 GODDOG joined channel
+21:7 T2:就当一样吧2333.
+21:7 condy:刚才在同学那边试了一下wmfs，速度倒是挺快的，似乎是awesome差不多啊。。
+21:7 condy:似乎和。
+21:8 xxxxxxxx_:键位呢?
+21:8 xxxxxxxx_:不觉得疼么?
+21:9 iyzsong:不是都可以改么
+21:9 condy:+
+21:9 xxxxxxxx_:说实话不太好安排
+21:9 condy:平铺样式不会只有一种吧？
+21:9 xxxxxxxx_:样式?
+21:10 xxxxxxxx_:那是啥?
+21:10 condy:layouts.
+21:10 xxxxxxxx_:awesome那种平铺疼得蛋都碎了
+21:10 xxxxxxxx_:各种神奇体位
+21:11 T2:0.0
+21:11 lhanjian:xxxxxxxx_, 哪有。体味多才开心
+21:11 *iyzsong 力推herbstluftwm..
+21:11 lhanjian:iyzsong, 名字太长不喜欢
+21:11 condy:iyzsong: show一下。
+21:12 xxxxxxxx_:另我的终端是terminator分的 所以和wm无关
+21:12 lhanjian:看来我得把cuda干掉，太特么大了。
+21:12 Plough:wmii路过
+21:12 condy:terminator只能均分的吧。
+21:13 lhanjian:WM，稳定压倒一切。
+21:13 xxxxxxxx_:wmfs和wmii感觉倒挺接近的
+21:13 xxxxxxxx_:你用鼠标可以拖的 我现在键位都没搞定 果断鼠标
+21:14 iyzsong:http://puu.sh/8uJUp.png
+21:14 Plough:herbstluftwm有啥特性
+21:14 iyzsong:手动平铺  每个frame单独布局
+21:14 Plough:手动平铺？
+21:15 Plough:大妙
+21:15 lhanjian:xxxxxxxx_, http://r.photo.store.qq.com/psb?/V12c0pWT3noKIi/fUWzHFacapR4JUDfcqL8SFSeNUiB9q8cGBvNLH.Qm6g!/o/dEx9IqV.JQAA&bo=gAJyBEAGHgsBAIA!&rf=viewer_311
+21:15 Plough:虽然看你的截图感觉略丑……
+21:15 xxxxxxxx_:fcitx的图表之类的放在哪里了?
+21:15 iyzsong:我不用那个..
+21:15 iyzsong:你可以自己开个tint2
+21:16 xxxxxxxx_:我不想开那个呀....
+21:16 T2:inet_pton 会转换 Big-Endian 么?
+21:16 iyzsong:2333
+21:16 xxxxxxxx_:妹子腿短?
+21:17 T2:噗, 坑了劳资一早上你还发.
+21:18 xxxxxxxx_:你们早上约炮了?
+21:18 xxxxxxxx_:那个妹子是t2cos的?
+21:18 iyzsong:官方..
+21:19 T2:xxxxxxxx_, 尼玛注意口德.
+21:19 iyzsong:- -b
+21:19 T2:不行了，这个位面已经崩坏了。
+21:20 xxxxxxxx_:看上去就没wmfs官方的图好看...
+21:20 T2:我曾经以为我是个绅士，直到我看到真正的绅♂士们。
+21:20 GODDOG:终于 搞定neobundle
+21:21 iyzsong:xxxxxxxx_: http://dotshare.it/public/images/uploads/712.png
+21:21 iyzsong:http://dotshare.it/dots/712/
+21:22 *xxxxxxxx_ 向来不喜欢紫色....
+21:22 T2:iyzsong, 看起来不错的样子。
+21:22 xxxxxxxx_:另外文字或者图片dock的话wmfs也能搞 但是我不喜欢...
+21:23 T2:字体不喜。
+21:23 T2:别的还好。
+21:24 xxxxxxxx_:用紫色和粉色的都是基佬
+21:24 iyzsong:...
+21:24 T2:蓝色的撸过。
+21:24 xxxxxxxx_:abc党
+21:25 T2:其实是蓝灰黑
+21:28 *xxxxxxxx_ 喜用abc附近的颜色 配色黄绿黑白 坚决不用粉色紫色
+21:29 xxxxxxxx_:青龙的翻译原来是azure dragon.....
+21:29 T2:好吧。
+21:30 T2:xxxxxxxx_, 还好啦。
+21:31 lhanjian:哎，感觉还有些展位没看好。可惜明天不想再起来了。
+21:32 lhanjian:忘记去找山新求个签名了……
+21:33 T2:。。。
+21:33 T2:没事明天再去。
+21:33 GODDOG:这个北京不错啊
+21:34 lhanjian:明天起不来了，不去了。
+21:34 lhanjian:GODDOG, ?
+21:35 lhanjian:GODDOG, ……
+21:37 phone_lhanjian joined channel
+21:38 xxxxxxxx_:wmfs can be compiled from source on HURD <- 有hurd党么?
+21:38 GODDOG:iy发的截图
+21:38 lh_mouse:安倍称不会效仿德国就二战历史问题道歉
+21:38 GODDOG:lhanjian: 
+21:39 iyzsong:|x\x|
+21:39 sismvg joined channel
+21:40 sismvg:撸了半天vim ide ,结果才发现UNIX网络编程前120页几乎不用写代码。。
+21:40 lhanjian:GODDOG, iy?
+21:40 lh_mouse:20140430总编辑时间 四川5·12地震救灾物资霉变 涉事官员被停职
+21:41 ZzHiyori joined channel
+21:41 T2:sismvg, 2333
+21:41 GODDOG:lhanjian:  iyzsong 的截图
+21:41 iyzsong:GODDOG: 怎么了
+21:41 GODDOG:iyzsong: 你北京挺好看的
+21:42 iyzsong:我去..
+21:42 GODDOG:iyzsong: 我上一张截图让我弄丢了
+21:42 iyzsong:GODDOG: dotshare上的不是我的
+21:42 GODDOG:iyzsong: 现在是纯黑背景
+21:42 iyzsong:我目前是xsetroot -solid darkgreen...
+21:43 lhanjian:GODDOG, 哦
+21:43 GODDOG:不明白
+21:43 GODDOG:lhanjian: 回家了？
+21:43 iyzsong:darkred也挺好看..
+21:43 lhanjian:GODDOG, 我今天在萧山看漫展。当然不回家
+21:43 xxxxxxxx_:nitrogen <- 虽然不知道从哪里来的(没管过)但是似乎可以用
+21:43 GODDOG:lhanjian: 今天看漫展啊
+21:43 iyzsong:lhanjian: 烧..
+21:43 lhanjian:GODDOG, 嗯。
+21:43 xxxxxxxx_:萧山?
+21:43 lhanjian:iyzsong, 啊？
+21:44 xxxxxxxx_:有女子中学么?
+21:44 GODDOG:lhanjian: 3号去收 货
+21:44 Plough: xxxxxxxx_ nitrogen是啥
+21:44 lhanjian:xxxxxxxx_, 不知道。据说有。有
+21:44 lhanjian:GODDOG, 货？
+21:44 xxxxxxxx_:nitrogen - X11 background previewer and setter
+21:44 GODDOG:lhanjian: 收个短袖
+21:44 Plough:Soga
+21:44 lhanjian:GODDOG, soga
+21:45 xxxxxxxx_:Soga
+21:45 Plough:.w soga
+21:45 lhanjian:本来准备买轻小说的，结果天闻角川的都是封好了的。然后想想国内版的肯定有河蟹，索性不买。
+21:45 xxxxxxxx_:^队形党的本能
+21:45 lhanjian:结果连天闻角川卖的壁纸也没买
+21:45 Plough:啊对那玩意掉了
+21:45 Plough:不管了
+21:47 condy:geordi: {void f1(){cout<<"f1";} void f2(){cout<<"f2";} int main(){ int a = 10; (a > 0 ? f1 : f2)();}
+21:47 geordi:error: Unexpected end of request. Expected '}' or balanced code.
+21:47 condy:geordi: {void f1(){cout<<"f1";} void f2(){cout<<"f2";} int main(){ int a = 10; (a > 0 ? f1 : f2)();}}
+21:47 geordi:error: a function-definition is not allowed here before '{' token
+21:47 condy:不会用了。。。
+21:48 lhanjian:看起来DateALive的国内版依然没有恢复上架
+21:49 GODDOG:lhanjian: 天闻角川的原包是不会和谐的
+21:50 lhanjian:GODDOG, 原包？
+21:50 GODDOG:lhanjian: 未拆包的
+21:50 GODDOG:天闻角川来自台湾
+21:50 lhanjian:你那是台湾角川。
+21:50 GODDOG:太贵了 今年有个朋友台湾交换生
+21:51 lhanjian:天闻角川是湘美（控股）和日本角川合资的。
+21:51 xxxxxxxx_:台湾有茶叶蛋么?
+21:51 GODDOG:全世界就一家授权吧
+21:51 GODDOG:好吧
+21:52 GODDOG:是我搞错了
+21:52 condy:geordi: void f1(){cout<<"f1";} void f2(){cout<<"f2";} int main(){ int a = 10; (a > 0 ? f1 : f2)(); }
+21:52 geordi:f1
+21:53 lhanjian:GODDOG, 我们学校有台湾交换生了……？
+21:54 condy:呆湾文学妹子好棒。(。・_・。)
+21:54 ZzHiyori:有我棒吗
+21:54 xxxxxxxx_:有茶叶蛋妹子么?
+21:54 iyzsong:没有!
+21:54 lhanjian:ZzHiyori, 音酱来了
+21:54 Plough joined channel
+21:55 xxxxxxxx_:音音子嫉妒了?
+21:55 ZzHiyori:最近好头疼
+21:55 condy:geordi: void foo() {http://www.baidu.coom int bar = 4} 
+21:55 geordi:error: Unexpected end of request. Expected '}' or balanced code.
+21:56 ZzHiyori:需要找个妹纸来温暖我的心灵
+21:57 lhanjian:ZzHiyori, 音酱今天干什么了？
+21:57 ZzHiyori:今天没干啥
+21:57 T2:ZzHiyori, 你不是带着4个木耳呢么？
+21:57 xxxxxxxx_:确定不是需要找个丁丁填补后庭么....
+21:58 ZzHiyori:T2: 那简直是蛋疼啊
+21:58 T2:ZzHiyori, 2333
+21:58 T2:可以调♂教
+21:58 ZzHiyori:这又不是玩GAL
+21:59 xxxxxxxx_:你就当成gal好了
+21:59 condy:The most famous of "hidden" feature of C++ is template metaprogramming...原来是这样的。
+22:1 lhanjian:重启
+22:1 T2:ZzHiyori, 显然这就是。
+22:1 T2:ZzHiyori, 你最好就这么想。
+22:2 xxxxxxxx_:大概是品质上不允许?
+22:2 ZzHiyori:一定是品质上不允许
+22:3 ZzHiyori:有三个是那种性格粗犷型的
+22:3 ZzHiyori:还有一个比较内敛
+22:3 T2:orz
+22:3 xxxxxxxx_:内敛?
+22:3 T2:好吧不用解释了。
+22:3 lh_mouse:geordi, { foo<foo<int>>().bar(); } template<typename Ty> struct foo { void barBARK; } }; template<typename Ty> using foo<foo<Ty>> = foo<Ty>;
+22:3 geordi:error: Unexpected `}` after `barBARK; } `. Expected '/', balanced code, or end of request.
+22:3 lh_mouse:geordi, { foo<foo<int>>().bar(); } template<typename Ty> struct foo { void bar(){ BARK; } }; template<typename Ty> using foo<foo<Ty>> = foo<Ty>;
+22:3 geordi:error: expected '=' before '<' token
+22:3 lh_mouse:geordi, { foo<foo<int>>().bar(); } template<typename Ty> struct foo { void bar(){ BARK; } }; template<typename Ty> struct foo<foo<Ty>> : foo<Ty> { };
+22:3 geordi:foo<int>::bar()
+22:4 T2:这是什么语法？
+22:4 T2:卧槽
+22:5 lh_mouse:geordi, replace first int with foo<int>
+22:5 geordi:foo<int>::bar()
+22:5 lh_mouse:geordi, replace first int with foo<int>
+22:5 geordi:foo<int>::bar()
+22:5 lh_mouse:geordi, replace first int with foo<int>
+22:5 geordi:foo<int>::bar()
+22:5 lh_mouse:geordi, show
+22:5 geordi:{ foo<foo<foo<foo<foo<int>>>>>().bar(); } template<typename Ty> struct foo { void bar(){ BARK; } }; template<typename Ty> struct foo<foo<Ty>> : foo<Ty> { };
+22:5 xxxxxxxx_:foo<foo<foo<foo<foo<int>>>>>
+22:5 T2:().bar() 这什么玩意?
+22:6 lh_mouse:T2, (foo<int>()).bar
+22:6 T2:初始化?
+22:7 phone_lhanjian:最近的音酱很惆怅呢
+22:7 T2:调用默认构造函数?
+22:7 ZzHiyori:一定是睡的太多了
+22:7 T2:{ foo<foo<foo<foo<foo<int>>>>>().bar(); } template<typename Ty> struct foo { void bar(){ cout << "BAKA"; } }; template<typename Ty> struct foo<foo<Ty>> : foo<Ty> { };
+22:8 T2:geordi, { foo<foo<foo<foo<foo<int>>>>>().bar(); } template<typename Ty> struct foo { void bar(){ cout << "BAKA"; } }; template<typename Ty> struct foo<foo<Ty>> : foo<Ty> { };
+22:8 phone_lhanjian:睡的太多✔
+22:8 geordi:BAKA
+22:8 ZzHiyori:假期第一天就睡到了十二点
+22:8 T2:毕竟四个.
+22:8 T2:可以理解
+22:8 xxxxxxxx_:睡前的活动太多了
+22:9 xxxxxxxx_:注意节制
+22:10 phone_lhanjian:你们这些人哪，经验人士，烧掉
+22:10 ZzHiyori:们这些人哪，经验人士，烧掉
+22:10 T2:那什么, 有什么好看的电影什么的么?
+22:10 GODDOG:问个问题 github上的Applications的设置
+22:11 GODDOG:我这个有个软件访问github 但是有速率限制
+22:11 ZzHiyori:我最近都只追新番推GAL了
+22:11 iyzsong:以前都干了啥!
+22:11 xxxxxxxx_:我是在说撸管 想歪的都是想叛变的
+22:11 T2:GODDOG, 你可以问lh_mouse,别跟他提git就行.
+22:12 iyzsong:Applications?
+22:12 iyzsong:github上没什么可设置的吧
+22:12 T2:似乎没什么设置+
+22:12 T2:虽然我就没用过
+22:13 T2:phone_lhanjian, 烧自己吧~
+22:13 phone_lhanjian:xxxxxxxx_: 线虫，想冒充丧尸是没有前途的
+22:13 T2:丧尸撸过.
+22:13 GODDOG:http://imagebin.org/308481
+22:13 phone_lhanjian:我又没有妹子，过去现在未◑▂◐来？
+22:14 GODDOG:应该是设置这个
+22:14 xxxxxxxx_:论为何真相无法获得
+22:14 iyzsong:没用过这个..
+22:15 GODDOG:好吧
+22:15 T2:同没用过
+22:15 T2:估计揉牛知道
+22:19 lhanjian joined channel
+22:19 T2:socket撸不动了，来点好玩的？
+22:19 T2:接口各种多名字还奇葩。
+22:20 lhanjian:xxxxxxxx_, FF29不崩了，一开始是用的aur/bin32-firefox
+22:20 lhanjian:现在用的官方源就没事了
+22:20 Plough:T2: 撸个正则？
+22:20 iyzsong:快去写editor/browser/wm/de..
+22:21 T2:Plough, 我这会儿连神马是正则都不知道呢，搞定socket语法和内存池之后吧。
+22:21 Plough:撸个带补全的nano
+22:21 Plough:T2: 10分钟入门然后开撸
+22:21 ZzHiyori:JB为什么不出个editor
+22:21 iyzsong:JB是谁
+22:21 T2:Plough, 总得一个个来吧。
+22:21 xxxxxxxx_:T2 把wmfs加个xft吧
+22:21 ZzHiyori:JetBrains
+22:21 xxxxxxxx_:dio?
+22:21 Plough:T2: 我是开坑不填党2333
+22:22 T2:Plough, 好吧叼。
+22:22 Plough:T2: 这有啥吊的
+22:22 iyzsong:idea看起来还行
+22:22 T2:xxxxxxxx_, 干脆给plan⑨配一套驱动吧。
+22:23 T2:Plough, 我是懒得开坑+开了不填党。
+22:23 ZzHiyori:我用过rubymine 很不错
+22:23 xxxxxxxx_:T2 wmfs本来是有xft的
+22:24 T2:xxxxxxxx_, 我都不知道这玩意是什么。
+22:24 xxxxxxxx_:结果该死的开发者搞什么极简主义给拆了
+22:25 xxxxxxxx_:http://wmfs.info/ <- 就这个
+22:25 T2:我就用过wmii
+22:25 T2:我看看
+22:28 T2:xxxxxxxx_, 卧槽有一张效果很叼啊。
+22:28 T2:可惜我没那么大的显示器。
+22:28 condy joined channel
+22:28 T2:http://wmfs.info/images/wmfs2_thmb_01.png
+22:30 hope1:21:14 <@iyzsong> http://puu.sh/8uJUp.png
+22:30 xxxxxxxx_:http://dotshare.it/category/wms/wmfs/ <- 普遍看上去比较好
+22:30 hope1:iyzsong, 这浏览器是？
+22:30 iyzsong:conkeror
+22:31 *xxxxxxxx_ 完全放弃了什么轻量级浏览器
+22:31 iyzsong:webkit和xul没一个轻量级的...
+22:31 hope1:只要不崩溃就好说
+22:32 hope1:uzbl不能忍，点个图片就崩……
+22:32 xxxxxxxx_:没有插件就是作死
+22:32 xxxxxxxx_:https://linuxtoy.org/archives/conkeror.html
+22:32 T2:xxxxxxxx_, 卧槽爽。
+22:32 xxxxxxxx_:看了标题就不想看下去了
+22:32 T2:我决定投靠这个了。
+22:32 iyzsong:2333
+22:33 xxxxxxxx_:T2 慎重啊
+22:33 T2:不过wmii似乎也能调教出这个效果?
+22:33 xxxxxxxx_:wmii至少键位舒服
+22:33 hope1:C-x M-c M-butterfly
+22:33 xxxxxxxx_:不清楚 没怎么配过wmii 默认的也听舒服的了
+22:33 T2:我抄羊驼子的
+22:33 iyzsong:conkeror能调用emacs编辑网页内的文本框~
+22:34 hope1:我就抄了个配色
+22:34 T2:emacs内部倒是很舒服.
+22:35 lhanjian:我跟你说，Firefox用Hiragino Sans GB，赞！
+22:35 xxxxxxxx_:有inspect element么?
+22:36 T2:我去试试
+22:36 xxxxxxxx_:没有就没什么好谈的了
+22:36 iyzsong:没有..
+22:37 *iyzsong 是果黑
+22:37 lhanjian:iyzsong, 抓到一只果黑
+22:37 lhanjian:苹果的颜色很糟糕，不过我觉得Hiragino还行
+22:37 iyzsong:苹果就是坑啊..
+22:38 T2:那玩意我都懒得黑.
+22:38 T2:好吧,也许我是乡下人不会玩.
+22:38 xxxxxxxx_:苹果我吃过
+22:39 T2:我也吃过.
+22:39 xxxxxxxx_:红富士还是黄元帅
+22:39 T2:我跟你讲, 劳资连茶叶蛋都吃过.
+22:39 T2:必须富士, 嘎嘣脆.
+22:39 iyzsong:我几年才吃一次茶叶蛋
+22:40 T2:卧槽给壕跪了.
+22:40 iyzsong:orz
+22:40 T2:otl
+22:40 xxxxxxxx_:@烂苹果 
+22:42 T2:那什么,碎叫去了.
+22:42 T2:大家腋间愉快.
+22:42 iyzsong:GB
+22:43 lhanjian:https://2.gy/183.129.79.119
+22:43 hope1:冬青黑体？
+22:43 iyzsong:能.
+22:43 lhanjian:hope1, 嗯
+22:43 iyzsong:实时的?
+22:44 iyzsong:略卡..
+22:44 iyzsong:我为啥不能输入
+22:44 lhanjian:https://2.gy/
+22:44 lhanjian:Enter Chat Mode
+22:45 lhanjian:貌似只能对话不能
+22:45 iyzsong:2333
+22:45 xxxxxxxx_:The same public IP will be recognized as the SAME user.
+22:46 iyzsong:退了
+22:46 lhanjian:xxxxxxxx_, 大 失 败
+22:49 xxxxxxxx_:而且似乎网页里面有 var myIP这样的东西 改了就能冒充别人了么?
+22:50 hope1:噗，自招科目改了，一个把英语改成了语文，另一个直接把英语去掉了...
+22:50 xxxxxxxx_:真是悲剧
+22:50 lhanjian:真是悲剧
+22:51 hope1:不过最好的一个还是没变科目
+22:51 hope1:万恶的政治正确
+23:0 rootforlio joined channel
+23:3 GODDOG:homebrew 真凶残
+23:3 GODDOG:两个配置文件都没有所有设置直接设置环境变量
+23:6 xxxxxxxx_:改变之后可以即时生效的意思?
+23:6 hope1:所以是homebrew
+23:8 GODDOG:ai
+23:10 GODDOG:伤心
+23:12 xxxxxxxx_:https://github.com/Homebrew/linuxbrew <- 看了一下features 然后感觉似乎没啥必要....
+23:13 iyzsong:osx也可以用nix..
+23:14 xxxxxxxx_:难道osx不能编译东西么...
+23:14 iyzsong:@xcode
+23:15 iyzsong:linuxbrew好像没啥用..
+23:15 xxxxxxxx_:完全是不该存在的东西....
+23:16 endle joined channel
+23:16 xxxxxxxx_:还是说苹果物只能用自家的东西?
+23:17 lh_mouse:geordi, { foo<1> f1; foo<2> f2(f1); } template<size_t N> struct foo { template<size_t X> foo(const foo<X> &){ BARK; } };
+23:17 geordi:error: no matching function for call to 'foo<1ul>::foo()'
+23:17 lh_mouse:geordi, { foo<1> f1; foo<2> f2(f1); } template<size_t N> struct foo { foo() = default; template<size_t X> foo(const foo<X> &){ BARK; } };
+23:17 geordi:foo<N>::foo(const foo<X>&) [with long unsigned int X = 1ul; long unsigned int N = 2ul]
+23:17 iyzsong:homebrew不就是给苹果玩编译的
+23:17 lh_mouse:geordi, { foo<1> f1; auto f2(f1); } template<size_t N> struct foo { foo() = default; template<size_t X> foo(const foo<X> &){ BARK; } };
+23:17 geordi:<no output>
+23:17 lh_mouse:geordi, { foo<1> f1; auto f2(f1); } template<size_t N> struct foo { foo() = default; template<size_t X> foo(const foo<X> &){ BARK; } foo(const foo &) = delete; };
+23:17 geordi:error: use of deleted function 'foo<N>::foo(const foo<N>&) [with long unsigned int N = 1ul]'
+23:17 xxxxxxxx_:iyzsong: 不明白的就是为啥需要那个东西编译....
+23:18 iyzsong:就像是AUR一样的东西
+23:19 iyzsong:更像gentoo(软件包管理器叫啥?)的portage
+23:20 hope1:WPS linux版看起来很不错嘛
+23:20 xxxxxxxx_:我也很喜欢Homebrow，它体现了在配置管理上的一些新潮流。使用Ruby可以更加快速的开发新功能，用C开发的包管理器很难跟上它的开发步伐。自身用Git管理版本和发布，有点Infrastructure as code 的意思。
+23:20 iyzsong:噗..
+23:20 xxxxxxxx_:^配置管理新潮流是说啥?
+23:22 xxxxxxxx_:不过超喜欢Homebrew，我贡献了不少Formula，可以很方便地在一台新的Mac上恢复计算环境，如果linuxbrew做成熟的话还是很有好的，因为linux自身的包管理器都太多保守，里面软件也旧落上一层厚灰。
+23:22 xxxxxxxx_:^滚的不够勤快的意思?
+23:24 iyzsong:果粉无法直视
+23:24 FrankHB:没啥意思，有nix么。
+23:24 lh_mouse:geordi, { foo<1> f1; auto f2(f1); } template<size_t N> struct foo { foo() = default; template<size_t X> foo(const foo<X> &){ BARK; } };
+23:24 geordi:<no output>
+23:26 xxxxxxxx_:苹果物上可以用wm么?
+23:28 iyzsong:http://hydra.nixos.org/eval/1104491?compare=1104363&filter=x86_64-darwin&full=1#tabs-still-succeed
+23:28 iyzsong:^ nixpkgs for darwin
+23:28 iyzsong:我看到了dwm啥的..
+23:28 hope1:http://stackoverflow.com/questions/7076507/osx-tiling-window-managers
+23:31 xxxxxxxx_: Spectacle那个明显只是调整位置和大小吧.....
+23:31 xxxxxxxx_:也算平铺?
+23:31 xxxxxxxx_:还有36个赞?
+23:32 endle:我看有人建议，把开发环境放到 docker里
+23:33 iyzsong:VS怎么放 0.0
+23:33 GODDOG:xxxxxxxx_: 大神 我都不知道formula到底该怎么翻译
+23:33 GODDOG:好像是那个下载东西的脚本吧
+23:34 xxxxxxxx_:我有点没搞清开发环境放进docker里是在说啥...
+23:36 xxxxxxxx_:github的wiki上把Formula 解释为The package definition
+23:36 tsuki joined channel
+23:39 xxxxxxxx_:Specifying other formulae as dependencies <- typo?
+23:40 hope1:哪里typo了？
+23:40 xxxxxxxx_:formulae 
+23:40 hope1:复数形式
+23:40 xxxxxxxx_:原来如此
+23:41 hope1:The plural of formula can be spelled either as formulas or formulae (from the original Latin).[1]
+23:41 xxxxxxxx_:orzzzz 果然文青
+23:43 condy1 joined channel
+23:52 lhanjian:baidu把大量版权资源取消了分享，蛋疼
+23:53 xxxxxxxx_:我觉得以后我们提到百度就跟提到了呵呵一样...
+23:55 hope1:+ 不过这里倒没法怪百度……
+23:56 condy1:geordi: { if (int x = 12) cout << x; }
+23:56 geordi:12
+23:59 hope1:geordi, {if(string a("candy")) a[1]='o', cout<<a;}
+23:59 geordi:error: expected primary-expression before 'a'

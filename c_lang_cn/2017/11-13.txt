@@ -1,0 +1,494 @@
+00:00 lhanjian: 阿富汗战争，我共与西方坚守对抗老毛
+00:01 lhanjian: 仔细想想，对这次cod14我的评价算是中上
+00:03 lh_mouse quit:Ping timeout: 248 seconds
+00:04 lhanjian: 不过我确实对西欧现场没什么认识
+00:04 lhanjian: 战场
+00:05 lhanjian: 游戏里没有仔细交代战役/战局的背景的资料，基本上围绕主角那个班的经历在走
+00:11 Youmu quit:Quit: Connection closed for inactivity
+00:12 lhanjian: 回顾一下这一代cod
+00:12 lhanjian: 海涛登陆
+00:12 lhanjian: 坦克巷战
+00:13 lhanjian: 空军狗斗
+00:13 varna: puuu
+00:13 lhanjian: 攻陷高地
+00:13 lhanjian: 火烧坦克
+00:13 lhanjian: 背包炸堡
+00:14 lhanjian: 空中支援
+00:17 lhanjian: 还有存在感不强的潜入
+00:18 lhanjian: 你还可以跟NPC对话
+00:21 Izumo joined channel
+00:23 whocares_2_ joined channel
+00:23 whocares_2 quit:Ping timeout: 260 seconds
+00:26 Mokou: 惊了，在邮箱里发现了一个信封
+00:27 Izumo: https://usercontent.irccloud-cdn.com/file/G1OlCinh/irccloudcapture-1365103496.jpg
+00:27 cleamoon_: 2333333
+00:27 varna: 2333333
+00:28 Mokou: 里面是广告和调查问卷，问我滋不滋瓷禁核啊，修宪啊之类的事情
+00:30 lhanjian: 把你当日本人了！
+00:30 cleamoon_: @Akipopopopoo  暴走大事件1~5季全下架了
+00:35 cleamoon_: @nishuang  美国纽约大都会交通运输局（MTA），今日宣布将取消使用“女士们，先生们”这句经典开场白，原因是乘客之中或包括变性或者中性者，继续使用上述的称谓，可能会对他们造成伤害 #加上扶她们，伪娘们之类的就好了
+00:36 Mokou: 你国直接用お客様
+00:41 cleamoon_: 似乎是暴走报了某书院的事然后最后说了句“饭糠呀，胖友”，然后就免费得到了茶水
+00:50 lhanjian: varna: 话说游魂质变幽邃质变是怎么算的
+00:50 varna: (｡･ω･)ﾉ不会算！
+00:55 cleamoon_: 2017天猫双11正式落下帷幕，最终交易额定格在1682亿，无线成交占比90%。
+00:55 iyzsong quit:Ping timeout: 248 seconds
+01:05 Mokou: https://www.bilibili.com/video/av7867760/ 黑魂3速通退款教程
+01:05 Mokou: ^ 如何免费玩游戏
+01:09 cleamoon_: ..........
+01:29 lhanjian: varna: 兽丸这个东西使血源和黑魂相当不同了
+02:19 varna quit:Ping timeout: 258 seconds
+03:44 N00d1e5_Bot quit:Read error: Connection reset by peer
+03:44 N00d1e5_Bot joined channel
+04:24 Mokou quit:Remote host closed the connection
+04:27 Taiho quit:Ping timeout: 260 seconds
+08:41 lh_mouse joined channel
+09:02 MameYang joined channel
+09:05 L-ios joined channel
+09:17 zb111 joined channel
+09:19 zb111 quit:Remote host closed the connection
+09:20 zb111 joined channel
+09:28 L-ios quit:Quit: L-ios
+09:31 L-ios joined channel
+09:43 lh_mouse: geordi, { char a[100]; __builtin_setjmp(a); }
+09:43 geordi: <no output>
+09:49 lh_mouse: geordi, -c { char a[100]; if(__builtin_setjmp(a) == 0){ cout <<"begin"; __builtin_longjmp(a, 1); } else { cout <<" end"; } }
+09:49 geordi: Success
+09:49 lh_mouse: geordi, { char a[100]; if(__builtin_setjmp(a) == 0){ cout <<"begin"; __builtin_longjmp(a, 1); } else { cout <<" end"; } }
+09:49 geordi: begin end
+09:49 lh_mouse: geordi, use --clang
+09:49 geordi: error: cannot initialize a parameter of type 'void **' with an lvalue of type 'char [100]'
+09:50 lh_mouse: geordi, { char a[100]; if(__builtin_setjmp(a) == 0){ cout <<"begin"; __builtin_longjmp(a, 2); } else { cout <<" end"; } }
+09:50 geordi: error: '__builtin_longjmp' second argument must be 1
+09:50 lh_mouse: geordi, use --clang
+09:50 geordi: error: cannot initialize a parameter of type 'void **' with an lvalue of type 'char [100]'
+09:51 lh_mouse: geordi, insert (void **) before a) == 0
+09:51 geordi: Same error.
+09:51 Youmu joined channel
+09:51 lh_mouse: geordi, show 
+09:51 geordi: --clang { char a[100]; if(__builtin_setjmp((void **)a) == 0){ cout <<"begin"; __builtin_longjmp(a, 2); } else { cout <<" end"; } }
+09:51 lh_mouse: geordi, insert (void **) before a, 2
+09:51 geordi: error: argument to __builtin_longjmp must be a constant 1
+10:06 Dove joined channel
+10:15 Dove quit:Read error: Connection reset by peer
+10:28 CyrusYzGTt quit:Ping timeout: 240 seconds
+10:36 L-ios quit:Ping timeout: 248 seconds
+10:40 CyrusYzGTt joined channel
+10:41 L-ios joined channel
+10:53 \s joined channel
+10:53 \s quit:Changing host
+10:53 \s joined channel
+11:03 MameYang quit:Remote host closed the connection
+11:03 MameYang joined channel
+11:04 MameYang quit:Remote host closed the connection
+11:05 MameYang joined channel
+11:05 lh_mouse: geordi, << (1 | 2 != 0)
+11:05 geordi: warning: suggest parentheses around comparison in operand of '|'
+11:05 lh_mouse: geordi, -c
+11:05 geordi: Success
+11:05 lh_mouse: geordi, -w << (1 | 2 != 0)
+11:05 geordi: 1
+11:05 lh_mouse: geordi, -w << (3 | 2 != 0)
+11:05 geordi: 3
+11:06 MameYang quit:Remote host closed the connection
+11:07 MameYang joined channel
+11:08 MameYang quit:Read error: Connection reset by peer
+11:08 Mame joined channel
+11:11 Mame quit:Client Quit
+11:12 MameYang joined channel
+11:27 L-ios1 joined channel
+11:27 L-ios quit:Ping timeout: 258 seconds
+11:27 L-ios1 is now known as L-ios
+11:45 zb111 quit:Quit: No Ping reply in 180 seconds.
+11:47 zb111 joined channel
+11:52 zb111 quit:Client Quit
+11:53 zb111 joined channel
+12:07 StardustX joined channel
+12:15 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:17 \s joined channel
+12:17 \s quit:Changing host
+12:17 \s joined channel
+12:32 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:32 \s joined channel
+12:32 \s quit:Changing host
+12:32 \s joined channel
+13:10 L-ios1 joined channel
+13:10 L-ios quit:Ping timeout: 248 seconds
+13:10 L-ios1 is now known as L-ios
+13:18 zb111 quit:Quit: No Ping reply in 180 seconds.
+13:26 zb111 joined channel
+13:34 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+13:57 L-ios1 joined channel
+13:57 L-ios quit:Ping timeout: 268 seconds
+13:57 L-ios1 is now known as L-ios
+14:26 zb111 quit:Quit: No Ping reply in 180 seconds.
+14:28 zb111 joined channel
+14:30 lh_mouse quit:Quit: For the Red Army!
+14:31 lh_mouse joined channel
+14:37 zb111 quit:Quit: No Ping reply in 180 seconds.
+14:41 zb111 joined channel
+14:44 lhanjian: lh_mouse: 小耗又在尝试可能死也没法好好用的set/long jmp？
+14:49 lh_mouse: lhanjian, 你看见了？
+14:50 lhanjian: lh_mouse: 看见什么？
+14:50 lh_mouse: longjmp
+14:50 lhanjian: 小耗不是在反复尝试__builtin_longjmp/__builtin_setjmp吗？
+14:50 lhanjian: 我看了下irclog
+14:51 lh_mouse: lhanjian, 有可能用得上。
+14:51 lhanjian: 嗯
+14:51 lhanjian: 成功了务必分享下坑在哪里
+14:51 lhanjian: GoodLuck
+14:51 lh_mouse: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59039
+14:52 lh_mouse: lhanjian, ^^^
+15:07 CyrusYzGTt joined channel
+15:08 lhanjian: 看起来他们在代码里留了个坑，还糊不上了
+15:19 lh_mouse: lhanjian, https://github.com/lhmouse/MCF/blob/master/MCFCRT/src/env/xsetjmp.h   可能有用吧。
+15:27 zb111 quit:Quit: No Ping reply in 180 seconds.
+15:32 zb111 joined channel
+15:35 Mokou joined channel
+15:37 whocares_2_ quit:Remote host closed the connection
+15:37 L-ios1 joined channel
+15:38 whocares_2 joined channel
+15:38 L-ios quit:Ping timeout: 240 seconds
+15:38 L-ios1 is now known as L-ios
+15:42 zb111 quit:Quit: No Ping reply in 180 seconds.
+15:43 zb111 joined channel
+15:43 cleamoon_: https://www.zhihu.com/question/67923820/answer/258182977
+16:01 lhanjian: cleamoon_: 应该@羊驼子啊
+16:15 cleamoon_: 然而羊驼子正在撸觉
+16:25 lhanjian: cleamoon_: 应该在上班吧
+16:26 cleamoon_: 今天不休息吗.... 万恶的阿里
+16:26 lhanjian: cleamoon_: 今天是中国时间的星期一
+16:27 cleamoon_: lhanjian: 前两天不是双11吗...
+16:34 lhanjian: cleamoon_: 又没有调休
+16:42 cleamoon_: 万恶的资本主义
+16:42 Mokou: 你不要作死
+16:42 Mokou: 这是中国特色社会主义
+16:43 cleamoon_: orz
+16:48 lhanjian: Mokou: 准确地说，应该叫XJP新时代中国特色射惠主义
+16:48 StardustX: 作死的点不在于姓资姓社，而是“万恶”
+16:48 StardustX: “不要争论姓资姓社，大胆地试，一争论就复杂了，把时间都争掉了，什么也干不成”。
+16:50 Mokou: https://wx3.sinaimg.cn/mw690/d63ab74bly1flg6xnzk8xj20gn0mejyy.jpg https://wx4.sinaimg.cn/mw690/d63ab74bly1flg6xnwkpfj20p31hbwi1.jpg 中日交流的崭新模式
+16:54 Mokou: 据悉，通车不到一年的沪昆高铁贵州段多处隧道存在偷工减料与施工质量问题，原设计时速300km/h的中国高铁最大跨度桥梁——北盘江特大桥两侧隧道渗水严重，动车至此须限速至70km/h低速通过；此前，沪昆高铁湖南段也曾被媒体曝光大量使用不合格设备材料，后被上级部门勒令进行整改。 ​​​ ​​​​
+16:54 cleamoon_: 啥鬼
+16:56 lhanjian: StardustX: 政策不讨论姓资姓社，但是四项基本原则不能动！你这是篡改Shopping理论
+16:57 lhanjian: Mokou: 笔谈的现代版？
+16:57 StardustX: 感觉是重新发明文言文
+16:58 StardustX: 只不过是以日语为主体
+16:58 Mokou: 伪中国语
+16:58 Mokou: 和文言文没什么关系
+16:58 lhanjian: 如果两朝人民都能看懂都能用，也颇有趣
+16:58 lhanjian: 可以向朝越人民推广嘛233
+17:00 cleamoon_: 关键是竟然能看懂
+17:00 StardustX: 我只是觉得像文言文而已，用字和现代汉语相比比较生疏，一些训读汉字甚至还有几分古韵
+17:00 lhanjian: Mokou: 想念昭和日语啊
+17:01 lhanjian: StardustX: 其言叶甘——这句话超有感觉的
+17:01 lhanjian: St
+17:02 lhanjian: StardustX: 你看帝国的终战诏书日文版，完全的文言文
+17:03 StardustX: 那是汉文训读体，还是不太一样的
+17:05 StardustX: 欧美学术界会拉丁文的也越来越少了，时代的车轮终究是要滚滚向前的
+17:05 lhanjian: StardustX: 这个 车轮滚滚向前 用词颇有韵味啊
+17:06 cleamoon_: 拉丁文又不好听....
+17:08 StardustX: 本来就是死语言，怎么听
+17:10 cleamoon_: 谁说了不就听了嘛
+17:10 Mokou: 拉丁文发音没人知道吧
+17:11 StardustX: 拉丁文还行，好歹是字母文字。至于文言文，先秦的发音真是没人知道了。
+17:12 gauge: google translate 有发音哦
+17:13 Mokou: gauge: 确定是原始发音而不是后来用意大利文/英文逆推的版本么
+17:13 Mokou: 我记得原始发音已经失传了
+17:14 gauge: 咱没考证过它是不是靠谱就是了...
+17:15 cleamoon_: 似乎有不同时期的区别，是不是正确就不知道了
+17:20 lhanjian: 应该不存在所谓的 标准拉丁发音 吧？
+17:20 lhanjian: 现在的西班牙语是？
+17:20 Mokou: 我记得原始发音已经失传了，不知道有没有靠谱的逆推
+17:21 Mokou: 直接套用现代语言发音肯定是不行的
+17:21 lhanjian: 所谓的 罗马共和国规范语言文字（笑
+17:22 lhanjian: 鼓励搞拉丁语言文字规范化的都是 大罗马民族主义者
+17:29 Mokou: https://wx1.sinaimg.cn/mw690/6c76df51gy1flgkuqu4yjj21120rtkjl.jpg
+17:30 zb111 quit:Ping timeout: 246 seconds
+17:31 cleamoon_: .......我这智商以后连报纸都看不懂了
+17:35 lhanjian: cleamoon_: 没啥看不懂的。可能只有 女闺蜜曾经是男的， 这一点比较费解吧
+17:36 cleamoon_: 我的想法是，女闺蜜现在还是男的
+18:18 cleamoon_: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/w7/y0_373527.jpg@596w_1l.jpg
+18:26 Dove joined channel
+18:31 StardustX quit:Quit: leaving
+18:33 Dove: python官网是被墙了么？
+18:34 Dove: 好了，打开了。
+18:47 Dove: 龟速下载，我是比较服的。
+18:54 Dove: 我家电脑虽然破，初步玩玩还是可以的。
+18:54 Taiho joined channel
+18:55 lh_mouse:  https://www.viestintavirasto.fi/en/cybersecurity/vulnerabilities/2017/haavoittuvuus-2017-037.html
+19:16 iyzsong joined channel
+19:17 lh_mouse: [16:50:45] <Mokou> https://wx3.sinaimg.cn/mw690/d63ab74bly1flg6xnzk8xj20gn0mejyy.jpg https://wx4.sinaimg.cn/mw690/d63ab74bly1flg6xnwkpfj20p31hbwi1.jpg 中日交流的崭新模式  // 日文的逗号在中文是顿号，
+19:32 Dove: lh_mouse: 推荐个windows下的命令行环境呗，cmd不太好用。
+19:32 Youmu: msys2
+19:33 Dove: 好的
+19:35 cleamoon_: 现在觉得 wsl 也还好
+19:36 Dove: 我就随便用一下，比cmd那种最大化都不行的玩意好用就行。
+19:36 lh_mouse: cmd 一船舶。
+19:36 lh_mouse: 一般般。  *
+19:39 Dove: 今天配置一下python环境，下个vim和msys啥的就行了。
+19:41 Dove: 只要能输出hello，world，我就去练字。
+19:42 Taiho: print("hello, world")
+19:43 whocares_2 quit:Read error: Connection reset by peer
+19:43 Taiho: https://wx1.sinaimg.cn/mw690/e2f99469ly1flgm1uaj0hj20qn1k5wjw.jpg https://wx4.sinaimg.cn/mw690/e2f99469ly1flgm1tl219j20qn1khaes.jpg https://wx3.sinaimg.cn/mw690/e2f99469ly1flgm1v4ldqj20qn1kbn21.jpg
+19:43 Taiho: 华为客服
+19:43 whocares_2 joined channel
+19:44 cleamoon_: ........
+19:47 lh_mouse: 用什么傻逼 vim 。
+19:47 Sasasu quit:Ping timeout: 252 seconds
+19:48 lh_mouse: geordi, { int a; __builtin_setjmp(a); }
+19:48 geordi: error: invalid conversion from 'int' to 'void*'
+19:48 lh_mouse: geordi, use --clang
+19:48 geordi: error: cannot initialize a parameter of type 'void **' with an lvalue of type 'int'
+19:48 iyzsong: _(:з」∠)_
+19:53 Dove: lh_mouse: vim就行其实。
+19:54 lh_mouse: 掉智商的东西……
+19:54 Dove: 2333
+19:54 Dove: msys我装在哪儿找不到了。
+19:55 Dove: 找到了 C盘根目录下
+19:58 Dove: 这玩意的默认根目录路径是在哪？
+19:59 lh_mouse: msys2 不是 msys 。
+19:59 Dove: 我去读一下readme之类的东西
+20:00 Dove: 打了个ls也没反应，贼嗨。
+20:03 Dove: 打python也是未找到命令。对我这只鸡打击很大。
+20:14 Sasasu joined channel
+20:37 iyzsong: 2333
+20:42 CyrusYzGTt quit:Ping timeout: 240 seconds
+20:45 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:45 \s joined channel
+20:45 \s quit:Changing host
+20:45 \s joined channel
+20:46 varna joined channel
+20:47 varna: 啊啊
+20:47 varna: 想舔幼女
+20:48 Dove: 羊驼子揉
+20:48 varna: (｡･ω･)
+20:48 Dove: 练字去了，msys2暂时搞不定，先放放。
+20:49 varna: ...
+20:49 varna: 搞不定就直接搞定啊……
+20:50 Dove: 下了个python玩，想在win下装个环境，结果下了个msys2，根本不知道目录是怎么回事，打ls没反应然后打python就是 -bash: python: 未找到命令
+20:50 lhanjian: varna: 我军在南苏丹牺牲的战士所属连队和cod14这个美国陆军第一师是死对头啊
+20:51 Dove: 然后用cmd的话，vim写的中文似乎并不是utf-8
+20:51 iyzsong: 你需要 pacman -S python ...
+20:52 varna: lhanjian: (｡･ω･)这里不是Outer Heaven, 请保持政治觉悟
+20:52 Dove: 所以.py文件运行可以正常输出Hello, world!，但并不能识别你好，世界！
+20:52 Dove: 我打算先练字去了，明天读读msys的手册。
+20:52 Youmu: 。。。
+20:52 varna: ...
+20:53 Dove: 九点了，练字也不能放下不管啊。
+20:53 Dove: 慢慢来，这次我吸取点经验教训。
+20:54 iyzsong: 羡慕啊
+20:54 Youmu: 明日复明日
+20:54 iyzsong: 我现在都不会写字了 _(:з」∠)_
+20:55 varna: 明日复明日
+20:55 Dove: 不会这样的，我会每天抽出两个小时学编程，剩下时间练字。
+20:55 varna: 明日何其香
+20:55 Dove: 细水长流
+20:56 * varna 不评论
+20:56 Dove: 练字去了，诸君愉快。
+20:56 iyzsong: (｢・ω・)｢
+21:00 lhanjian: varna: 牺牲的那个战士所在连队是以一个朝战特级战斗英雄命名的，那个战斗英雄将自己的身体作为了阻挡美陆军第一师进攻的最后一颗炸弹
+21:00 varna: (｡･ω･)兄弟，你要有政治觉悟
+21:01 lhanjian: 解放军万岁！
+21:01 lhanjian: 95式万岁！
+21:01 lhanjian: 打倒美帝国主义！
+21:02 varna: (｡･ω･)你这是在宣扬对朵英贤同志的个人崇拜
+21:02 varna: (｡･ω･)我们自然是兹瓷朵同志的，但你不能这么捧杀他
+21:02 lhanjian: 那是谁
+21:02 varna: 95姐的老爸
+21:03 lhanjian: 那是谁
+21:03 lhanjian: 我擦
+21:03 lhanjian: 他不是身体一直健康吗
+21:04 varna: (｡･ω･)95姐那么色情都是他造的
+21:07 varna: 震惊！玻利维亚惊现资本主义走苟，破坏古柯田只为种土豆
+21:09 lhanjian: 啊？
+21:09 varna: 正在休闲地玩幽灵行动荒野
+21:09 lhanjian: 能稳定联机？
+21:09 varna: 刚掉线
+21:10 Mokou: 233333333
+21:10 lhanjian: 动视通常只会告诉我服务器不可用
+21:10 lhanjian: varna: 我们还是血源吧
+21:10 varna: (｡･ω･)最近重拾幽灵行动了
+21:11 varna: 你现在开始磕兽丸了？
+21:11 lhanjian: 刚用完
+21:11 varna: 磕兽丸力荐锯刀
+21:12 lhanjian: 上周目打奶妈是用兽丸莽死的
+21:12 Mokou: varna: 对了，法兰大剑对付持盾的怪怎么处理比较好
+21:12 Mokou: 有办法直接破盾么
+21:12 lhanjian: 联机否？@mokou @varna 
+21:12 varna: Mokou: 不用，把匕首打点错开
+21:12 varna: 横扫会扫到身后的
+21:12 Mokou: なるほど
+21:12 varna: (｡･ω･)ﾉ我先不联了
+21:12 Mokou: _(:з」∠)_困
+21:12 Mokou: 今天CS期中
+21:13 lhanjian: Mokou: 破个啥，直接L1街舞转死他啊
+21:13 Mokou: 悬崖边上呢
+21:13 Mokou: 我怕跳下去……
+21:13 varna: 地形不要太烂
+21:13 varna: 宁可不打
+21:14 Taiho: 了解
+21:14 lhanjian: 别告诉我你在转猎龙铠甲……
+21:14 Taiho: 感觉法兰大剑其实挺吃地形啊
+21:14 varna: 不吃地形
+21:14 varna: 多数地形都够用了
+21:14 Taiho: 没，我还没打过不死队呢
+21:14 Taiho: 毕竟还是没有阔剑无脑R1泛用性强
+21:15 varna: 我驲，捅马蜂窝了
+21:15 varna: 打一波迫击炮就跑
+21:19 varna quit:Quit: Reconnecting
+21:19 varna joined channel
+21:27 varna: 我居然又一次使出了从天际省学来的走壁技术
+21:28 varna: (｡･ω･)ﾉ徒步降落三百米，没用伞没用直升机
+21:30 Dove quit:Ping timeout: 248 seconds
+21:31 lhanjian: 信仰之跃？
+21:31 varna: 不，直接贴着墙让脚下一直有判定，不算跌落
+21:32 varna: 我估计本来任务是让我劫直升机的
+21:32 varna: 但我随手抢了辆车，看着倒计时就慌张跑出去，再回头来不及了
+21:36 Mokou: ana card居然还附赠一张银联卡
+21:39 Mokou: 话说港服PSN能用海外的VISA卡么
+21:39 varna: (｡･ω･)我 无产者 打钱
+21:40 lhanjian: 不能
+21:40 lhanjian: 各地区都是限定的
+21:40 Mokou: 疼
+21:41 lhanjian: 淘宝吧
+21:41 lhanjian: 你也可以银联或者支付宝
+21:42 lhanjian: 这个鸭爪骑士竟然会处决？！
+21:44 richard0day joined channel
+21:45 varna: (｡･ω･)ﾉ缉毒暖暖
+21:47 Dove joined channel
+21:48 Dove: 字练完了，我来看一下msys2是怎么玩的。
+21:50 CyrusYzGTt joined channel
+21:53 lhanjian: varna: dlc的鸦人骑士比小姐姐难对付多了
+21:54 iyzsong: 好冷 坐床上玩 _(:з」∠)_
+21:54 MameYang quit:Quit: Konversation terminated!
+21:54 varna: +
+21:56 lhanjian: 他不讲道理，就是追着跟你拼刀
+21:56 lhanjian: 射飞刀那个更恶心，飞刀伤害比刺剑还高
+21:57 iyzsong: wine 又崩了 2333
+22:00 Mokou: _(:з」∠)_买不了
+22:00 Mokou: 算了
+22:03 lhanjian: Mokou: 为什么买不了？
+22:04 Taiho: 没可用的付款方式
+22:06 Mokou: https://wx1.sinaimg.cn/mw690/60819384gy1flgs63q42qj20k00fbdgh.jpg 极为缺德
+22:07 Dove: msys2是不是要搞个下载包的地址，错误：无法从 repo.msys2.org : xxxxxx
+22:08 Dove: 有没有别的镜像站点什么的可以添加。
+22:08 * varna 成功击毙友军
+22:09 Dove: 666
+22:09 Dove: 这个更新速度只能说勉强可以忍受的程度。
+22:09 lhanjian: varna Mokou  ps4可以安装Dmm应用
+22:10 varna: 不肝舰之后dmm对我来说毫无意义
+22:10 varna: (｡･ω･)来操枪吧
+22:12 Taiho: 说起来羊驼子有办法通过海外信用卡收钱么
+22:12 varna: 没
+22:12 Taiho: 唉唉
+22:13 Taiho: 另外我发觉ANA这个银联卡并无卵用
+22:13 Taiho: 银联网上付款根本不支持……
+22:13 lhanjian: Taiho: 需要帮忙么
+22:14 Taiho: 暂时不用了
+22:14 Dove: 看来是有镜像站点的，我研究一下顺序。
+22:14 Dove: 前几个都很慢
+22:14 Taiho: 最后我上淘宝搞了一张80港币的点卡
+22:15 Dove: 什么游戏的点卡
+22:15 Taiho: PSN
+22:15 Dove: 没玩过
+22:16 CyrusYzGTt quit:Read error: Connection timed out
+22:17 Dove: 它会默认先从 repo.msys2.org 和 downloads.sourceforge.net 站点下东西，然而并下不下来。
+22:17 CyrusYzGTt joined channel
+22:17 Taiho: SF现在还被墙着么
+22:18 Dove: 应该是，根本下不下来。
+22:18 Dove: 我就是不知道这个镜像站点的顺序怎么调，待我研究一下。
+22:24 lh_mouse: Taiho, 没有。
+22:24 lh_mouse: 最近是所有的境外都慢。
+22:25 Dove: pacman-5.0.1-4-i686 根本下不下来
+22:25 Dove: 我再试试
+22:28 Dove: pacman怎么用我也忘了，我去查查看
+22:28 cleamoon_: 无法帮忙, 电脑卡成手绘了
+22:31 Dove: 没事，这点小事我都搞不定我还是种地去吧。
+22:33 CyrusYzGTt quit:Ping timeout: 248 seconds
+22:33 varna: 手机电池不行了
+22:34 Dove: 壕，换个手机呗。
+22:35 lhanjian: varna: 换个新安卓机，便宜的很啊
+22:35 lhanjian: 话说八周目，如果用上各种buff，难度还是太低了
+22:35 Dove: 我TM在想我一个2M大的东西下这么半天，我下别的不是要出人命？
+22:35 varna: lhanjian: 装公司的应用嫌麻烦
+22:36 lhanjian: 那就换个iPhone？
+22:36 Taiho:  你确定要让羊驼子用苹果么
+22:36 varna: 我会砸了那几千元的
+22:37 Dove: iPhoneX不错哦
+22:38 lhanjian: varna: 买5s，2000不到就能搞定
+22:38 lhanjian: 我用的两台就是古旧的5s
+22:38 lhanjian: 依然靠谱
+22:38 varna: lhanjian: 我的意思是，为什么要花钱买一块砖头呢
+22:39 varna: 而且这块砖头还喋喋不休地跟我说他才是对的
+22:40 lhanjian: ……
+22:41 cleamoon_: 买一个3ds
+22:43 lhanjian: 苹果现在主要的优点就是，没那么狗日的后台
+22:44 Dove: pacman下好了，但是这个更新太不靠谱了，得想个办法。
+22:44 Dove: 速度基本不上1kb/s，我下个东西不把自己下死。
+22:45 Dove: 还经常失败
+22:48 Mokou: https://wx4.sinaimg.cn/mw1024/006vnw1Ogy1flgt49nfixj31hc0u076u.jpg
+22:49 Mokou: 买大法哈
+22:49 Mokou: 买大法啊
+22:49 Mokou: 能下水
+22:54 lh_mouse quit:Ping timeout: 260 seconds
+22:58 Mokou: 之前看某2D横版游戏制作人在微博上说要和盗版者打官司，然后我就顺手入了一下这个游戏
+22:58 Mokou: 对比一下才感觉出宫崎老贼的好……
+22:59 CyrusYzGTt joined channel
+23:02 cleamoon_: 排泄物一般的操作感？
+23:03 Mokou: 我觉得敌人动作设计就差了一大截
+23:03 Mokou: 投技提示直接是一个简单粗暴的叹号图标……
+23:05 cleamoon_: ......
+23:06 cleamoon_: 国内游戏认真做的太少了，不少起点还好，但是太着急了
+23:06 Dove: 我不折腾了，窝草我滚回去用cmd。
+23:07 Dove: 这下载速度，我玩个python要下到明年去。
+23:07 Dove: cmd设置了一下，勉强能用了。
+23:09 Dove: 睡觉去了，诸君晚安，夜间愉快。
+23:09 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:10 varna: (｡･ω･)ﾉ
+23:10 Taiho: 结果我第一节正经上的CS课是midterm
+23:10 Taiho: 简直66666666
+23:11 cleamoon_: midterm?
+23:11 Taiho: =期中考试
+23:12 cleamoon_: ......
+23:14 Taiho: varna: 说起来粪坑里那几个tfboys你一般怎么处理
+23:14 Taiho: 底下全是烂泥，滚不动……
+23:15 richard0day quit:Ping timeout: 248 seconds
+23:15 lh_not_bot quit:Quit: leaving
+23:16 lhanjian: Taiho 匕首对付
+23:16 lh_not_bot joined channel
+23:16 lhanjian: 滑行不受影响
+23:17 lh_not_bot: 喵。
+23:17 Taiho: 法兰大剑的匕首？
+23:18 lhanjian: Taiho: 也可以，不过我说的是 名为匕首的的短剑的战技
+23:19 Taiho: 阔剑以外的武器都没升级
+23:19 lhanjian: 这个战技主要是用来移动的
+23:19 Taiho: なるほど
+23:19 lhanjian: 而且法兰粪坑可以拿到筑梦者骨灰了
+23:20 lhanjian: 小碎片可以无限买了
+23:21 Taiho: _(:з」∠)_我先用阔剑再试试
+23:24 varna: Taiho: 哦，你说那几个拔粪宝啊
+23:24 Taiho: +
+23:24 varna: 必经之路上的两个直接跑酷
+23:24 varna: 守着东西的三个弓箭屈死
+23:25 Taiho: 下次试试
+23:25 Taiho: 另外弓箭各用什么
+23:25 varna: 长弓，法里斯黑弓，最后我用的是猎龙大弓
+23:26 varna: 哦还有我waifu的长弓，虽然基本是个花瓶
+23:29 Taiho: 箭用火箭还是？
+23:29 varna: 普通的箭
+23:29 Taiho: OK
+23:38 lhanjian: 对于拔粪包，拿到东西就好，不必歼灭三个
+23:38 Taiho: tfboys守的是个什么玩意来着
+23:40 lhanjian: 那三个守得东西，我记得值得一拿
+23:40 lhanjian: 另外有两个拔粪包掉法莉丝全套
+23:40 varna: 法里斯黑弓
+23:40 Taiho: なるほど
+23:40 Taiho: 那大概打完不死队回来再拿也行？
+23:40 varna: 不拿都行
+23:41 Taiho: 那就先不管_(:з」∠)_
+23:43 cleamoon_: 旗酱也是用四小姐玩的?
+23:43 Taiho: +
+23:48 cleamoon_: 嗯, 看来还是应该买个PSP
+23:58 Mokou: https://wx3.sinaimg.cn/mw690/7d253a75ly1flg4rpsofwj20k00iatah.jpg https://wx2.sinaimg.cn/mw690/7d253a75ly1flg4rq43s7j2094084t8y.jpg https://wx1.sinaimg.cn/mw690/7d253a75ly1flg4rqkr3mj20ju0j4tao.jpg https://wx1.sinaimg.cn/mw690/7d253a75ly1flg4rr1e1oj20k00f0taf.jpg
+23:58 Mokou: ^ 国际鄙视链

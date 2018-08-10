@@ -1,0 +1,1025 @@
+00:02 cleamoon_ quit:Ping timeout: 264 seconds
+00:03 cleamoon_ joined channel
+00:12 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150404130542]
+00:12 yzld2002 quit:Quit: yzld2002
+00:13 cleamoon__ quit:Ping timeout: 252 seconds
+00:13 cleamoon_ quit:Ping timeout: 250 seconds
+00:15 lhjkkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+00:16 cleamoon_ joined channel
+00:23 lh_cat quit:Quit: Connection closed for inactivity
+00:25 cleamoon_ quit:Ping timeout: 250 seconds
+00:26 cleamoon_ joined channel
+00:38 hoxily quit:Quit: WeeChat 1.1.1
+00:50 Matsune quit:Ping timeout: 256 seconds
+01:14 cleamoon joined channel
+01:35 lh_mouse quit:Read error: Connection reset by peer
+02:07 hope1 quit:Ping timeout: 245 seconds
+02:39 cleamoon quit:Ping timeout: 250 seconds
+02:48 xxxxxxxx: http://picture.youth.cn/qtdb/201504/t20150420_6589240.htm 这环境 真不会出事么...
+03:17 dara_andr quit:Ping timeout: 252 seconds
+03:17 dara_andr joined channel
+05:02 boosure joined channel
+07:29 cleamoon_ quit:Ping timeout: 250 seconds
+07:33 dara_andr quit:Remote host closed the connection
+08:03 hope1 joined channel
+08:18 cleamoon joined channel
+09:10 lh_mouse joined channel
+09:33 cleamoon quit:Read error: Connection reset by peer
+09:33 cleamoon joined channel
+09:38 Xilzzerts joined channel
+09:43 Plough joined channel
+09:44 lh_cat joined channel
+09:49 boosure quit:Quit: Get your hand off of it
+09:55 lhanjian joined channel
+09:58 lhanjian: 早
+10:08 lh_not_bot: lhanjian: 捏捏
+10:11 lhanjian: lh_not_bot, 不给捏
+10:14 cui_inspur joined channel
+10:16 cuishy joined channel
+10:16 cuishy quit:Client Quit
+10:18 lhanjian quit:Quit: Leaving
+10:36 pocmon joined channel
+11:01 xxxxxxxx quit:Quit: Leaving...
+11:03 lh_not_bot: ##C++-general 里有个人的 nick 叫做 poi_dog
+11:05 Plough: 世界完了
+11:05 whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+11:08 lh_not_bot: geordi: template<typename T> struct my_queue { void push(T){ } void ice(){ trav([&](auto &&v){ push(v); }); } template<typename F> void trav(F &&f){ f(T()); } }; template class my_queue<int>;
+11:08 geordi: internal compiler error: Segmentation fault
+11:08 Plough: ……
+11:08 Plough: 漂亮
+11:10 lh_mouse: 这个是旧货
+11:10 lh_mouse: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=64382
+11:15 hoxily joined channel
+11:22 FrankHB quit:Read error: Connection reset by peer
+11:35 lh_not_bot: Plough: 捏捏
+11:45 izmntuk joined channel
+11:53 lh_cat quit:Quit: Connection closed for inactivity
+11:59 varna joined channel
+11:59 varna: 噗，肛旗今天又痛经
+11:59 Plough: 你TM才痛经
+11:59 varna: 那是月经失调？
+12:00 Plough: 是为了给你打药让你萌化
+12:00 varna: 然而我上午跟前面负责NLP搞数据的伙计谈完之后被官推吓尿了
+12:00 varna: 睦月如月我都没留啊
+12:00 Plough: 今天无意中看到一个“哪条战舰能和大和单挑？”的贴
+12:01 Plough: 进去一看，果然大量俾吹
+12:01 varna: 武藏
+12:01 varna: ...
+12:01 Plough: “俾斯麦一轮齐射”
+12:01 varna: 俾斯麦一轮齐射仍然不能彻甲
+12:01 Plough: “大和炮大有什么用，根本就打不中，俾斯麦有雷达”
+12:02 varna: 问题是都进入俾斯麦合适的效力射射程了，谁还管那些……
+12:03 varna: 反正这种定性嘴炮说多了都是口胡
+12:03 Plough: 然而被打脸以后俾吹依然能吹
+12:03 varna: 然而俾吹大概并不愿意查数据算算
+12:03 varna: 我觉得对俾吹最好的办法是别管他们
+12:04 Plough: “船的性能可以靠水兵素质来弥补，德国水兵的素质肯定比小鬼子好，所以俾斯麦肯定能赢” <- 看到这句吓得我直接对白平原打了个跨射
+12:04 varna: 之前战列舰论坛有个伙计跟我介绍说，在那里想要刷经验就开俾斯麦帖
+12:04 varna: 据说刷刷来
+12:04 Plough: 23333
+12:05 varna: 这大上午的，两个单舰U党，还有一大堆大和
+12:05 varna: 岩川越来越不好混了
+12:05 Plough: 然而俾斯麦一炮爆了胡德却没人能击沉她
+12:05 Plough: 俾斯麦是自沉，要知道我大科技之国的通海阀技术世界第一
+12:05 varna: 说起来我有点想弄个基斯岛撤退的剧本了
+12:06 Plough: ……日军给野分美帝给Iowa？
+12:06 Plough: @首轮跨射
+12:06 varna: 但是平衡很麻烦
+12:06 Plough: 给日军带舰c版损管
+12:07 varna: 这次主要想强调天气和海况因素
+12:07 varna: 之前为了方便玩家，都选择了适宜的天气
+12:07 Plough: 另外那帖子里还有俾吹说大和甲板防护弱鸡俾斯麦一炮砸穿的
+12:07 varna: 但在大风大浪大雾里看幼女上下颠簸简直啊撸撸撸
+12:07 varna: ...
+12:07 varna: 俾吹的脑子都掉胃里了么
+12:08 varna: 是不是用垂直彻甲的参数算的甲板穿透
+12:08 Plough: 估计是
+12:08 Plough: 那个俾吹应该根本没算，直接脑补了大和就一层木头
+12:09 varna: ...
+12:09 Plough: 后面有人用装甲数据打脸，他表示“大和甲板有些地方没铺装甲，俾斯麦打中以后直接就殉爆”
+12:10 varna: 他怎么不说俾斯麦半夜突入特鲁克，打爆了第一炮塔附近的小卖部，前来领杂务的军官直接阵亡，指挥系统崩溃
+12:11 Plough: 然而“你看罗德尼都贴脸了俾斯麦弹药库都没炸”
+12:11 varna: ...
+12:11 Plough: 屁话那时候弹药库都灌满水了炸个球啊……
+12:11 varna: 你可以强行往弹药库里扔几吨爆雷
+12:11 varna: 大凤在水下还炸了两次呢
+12:12 varna: 这俾吹也是够丢脸了，我觉得该给这种人开个蜡像馆
+12:12 Plough: 该挂城墙
+12:13 varna: 搞不好再往下这帮人会发展到二战德国海航天下无双
+12:13 Plough: 不早就有了么
+12:13 varna: 然后告诉你雅利安人手工飞控喷气机毫无压力
+12:13 varna: 根本不用现代的电子计算机
+12:13 Plough: “都是戈胖子傻逼，不然Me262上舰直接天下无双”
+12:13 varna: ...
+12:13 Plough: 然而Me262一发动甲板瞬间陷入火海
+12:14 varna: 世界真可怕
+12:14 Plough: 另外还有德棍喊德国人可以用V2炸大和
+12:14 varna: 无制导弹道飞弹……
+12:15 Plough: 当即有人表示“你让大和级摆个30x30的方阵看V2能打中不”
+12:15 varna: AK吹都比德棍有建设性
+12:16 Plough: 其实看看德棍强行吹逼挺有意思的
+12:17 Plough: 之前舰C吧还有德棍脑补齐柏林呢
+12:17 Plough: 三改以后搭载近90，送Me262改
+12:17 varna: 那帖我没敢点进去
+12:17 lh_not_bot: Plough: 捏捏
+12:18 Plough: 我进去了，底下是啪啪啪打脸大戏
+12:18 Plough: lh_not_bot: 摸鼻
+12:18 varna: 二战科技力我觉得吹吹美国也就算了
+12:18 varna: 至少他们发明了几种有战果的实用技术
+12:18 lh_not_bot: 11:58:56 <+Plough> 今天无意中看到一个“哪条战舰能和大和单挑？”的贴 // 俾斯麦 15 寸炮在大和面前毛都不是
+12:19 varna: lh_not_bot: 所以说俾斯麦根本打不穿大部分位置
+12:19 varna: 在大和的合适射程之内，主装的防御能力应该是46炮……
+12:19 lh_not_bot: 俾斯麦击沉胡德是有原因的  俾斯麦是战列  胡德是战巡
+12:20 lh_not_bot: 换句话说  俾斯麦能抗 15 寸炮  胡德是巡洋的装甲
+12:20 Plough: 然而俾吹表示德国雷达天下第一能让舰炮在最大射程上打弹药库百发百中
+12:20 varna: 毕竟这是旧式战列舰的基本原则
+12:20 varna: 战列舰应当能防御自己的主炮
+12:20 lh_not_bot: 俾斯麦碰上大和被 46 公分炮打 15 寸的装甲是什么结果
+12:20 sismvg joined channel
+12:21 lh_not_bot: 简直跟锤子砸核桃一样
+12:21 Plough: 推演结果俾斯麦轰沉
+12:21 varna: 德棍最后的褌大概是HOI后散布一千米和雅利安水兵优越性
+12:21 sismvg: mysql有提供字符串转换的库吗
+12:21 Plough: 然后俾吹：“46炮那破散布，打不中的”
+12:21 Plough: 变成小破了
+12:21 varna: 2333
+12:21 lh_not_bot: 11:58:56 <+Plough> 今天无意中看到一个“哪条战舰能和大和单挑？”的贴 // 数不胜数  随便哪个正规航母揪出来都完爆
+12:22 varna: 然而作为手黑的三轮炎上爱好者，联合舰队参谋长要改判我也没话说啊
+12:22 varna: 我好想再来个三轮炎上全舰爆沉
+12:22 lh_not_bot: 12:19:30 <+Plough> 然后俾吹：“46炮那破散布，打不中的” // 15 寸炮就算你发发命中大和  还是跟挠痒痒一样
+12:22 lh_not_bot: 三千米五百磅航弹都不是事
+12:23 varna: 不说挠痒
+12:23 varna: 就算把俾斯麦的炮弹都算成水中弹也不好使……
+12:24 varna: 先喝两千吨水压压鲸
+12:24 lh_not_bot: 换成核弹呢
+12:24 varna: 这时候就是东方厨出场的时候了
+12:24 varna: 他们对每个核弹的判定都烂熟
+12:25 Plough: 然而德国人算错数了
+12:25 varna: 突然想起来我该试着找个《鬼子进村》当BGM
+12:25 varna: 估计挺逗
+12:25 Plough: 2333
+12:26 varna: 不过旧电影里的鬼子进村似乎就是君之代？
+12:26 Plough: ……没了解
+12:26 varna: 「我皇祖宗传千代 一撸传到八千代 吓得小恋变小石 小石鼻孔生青苔」
+12:27 varna: 歌词倒是通俗
+12:27 Plough: 啊，th14下完了
+12:27 Plough: 我看看效果
+12:27 sismvg: cannot convert const char* to va_list..
+12:28 varna: 你在折腾什么
+12:29 sismvg: 和mysql作斗争
+12:30 varna: 然而为何const char *会变成va_list
+12:30 sismvg: vsprintf_s
+12:30 Plough: 说起来T530的新品现在似乎只能上淘宝买了
+12:30 Plough: 真遗憾……
+12:30 sismvg: vsprintf_s(buffer,size,format_str,cstr)
+12:30 varna: 青岛我还榛名看过合适的实体店
+12:30 xeirrr joined channel
+12:30 varna: 真没*
+12:31 varna: 我反省一下，以后我不该打长句子
+12:31 varna: 以一词或者一短语确认输入一次为宜
+12:31 Plough: 233333
+12:31 Plough: 主要是我想在上大学以后换台T系列
+12:32 Plough: 然而买现售的T系列明显不划算
+12:32 varna: 哦
+12:32 varna: 哦操
+12:32 varna: 强行不打反潜
+12:33 varna: 强行打剩一个运输船
+12:33 Plough: ……日常
+12:33 varna: 提督决定强行不打了，反正凑足三个
+12:36 varna: 今天应该能凑足九万多油
+12:36 sismvg: http://bbs.soul-plus.org/read.php?tid=134195
+12:36 sismvg: 维护网络国家主权。。
+12:37 sismvg: 维护国家网络空间主权
+12:37 lh_not_bot: 12:28:43 < sismvg> vsprintf_s(buffer,size,format_str,cstr) // 人才也
+12:37 lh_not_bot: 你搞清楚 vsprintf 是啥没
+12:37 varna: lh_not_bot: 这种时候不吐槽就好
+12:37 lh_not_bot: 那是你   我看见眼高手低的问题必然要骂
+12:37 Plough: 这久违的60fps……
+12:37 sismvg: 不是格式化输入，然后输出到buffer吗
+12:38 varna: Plough: 帧率终于对了啊
+12:38 Plough: +
+12:38 Plough: 果然还是Intel大法好
+12:38 Plough: 我查过，这事似乎是radeon驱动的问题
+12:38 Plough: 然而他们一直没解决
+12:38 varna: 英猥达也不行
+12:39 lh_not_bot: 我觉得药元四不懂那个 v 是什么意思
+12:39 varna: 我开bbb的时候直接140帧
+12:39 sismvg: 那要怎么弄
+12:39 Plough: nouveau的性能似乎还不如闭源驱动的一半
+12:39 varna: 他估计没考虑过转发valist
+12:39 Plough: 不过n卡似乎有个好处
+12:39 Plough: 可以在bios里关掉独显
+12:39 varna: 然而我觉得这个看手册就明白了
+12:39 varna: 是
+12:39 lh_not_bot: 我觉得不看手册是罪过
+12:39 varna: 我现在就没开过独显
+12:39 Plough: A卡没这选项%……
+12:40 Plough: 我现在这个独显是A卡
+12:40 varna: ...
+12:40 varna: 看来还是optimus好点
+12:40 Plough: +
+12:40 Plough: 不过windows下A卡可以和APU交火
+12:42 Plough: 或者以后买个X250似乎也不错
+12:42 Plough: 就是屏幕小点了……
+12:44 varna: 我倒不喜欢屏幕太大的
+12:44 izmntuk quit:Quit: leaving
+12:45 Plough: 我没那么多外接显示器
+12:45 Plough: 不然其实无所谓
+12:45 Plough: 而且15.6in的有小键盘
+12:46 varna: 我倒不太在意小键盘
+12:46 Plough: 我重度依赖小键盘……
+12:46 Plough: 噗
+12:46 Plough: 联想不愧是美帝良心企业
+12:47 Plough: T550在美帝只卖800刀
+12:47 hope1: 最重要的是键盘没有三键锁定
+12:47 Plough: 按键冲突问题么
+12:47 hope1: 不过这个除非实体店好像也没法测……
+12:47 Plough: 我以前那个本子也冲突，所以我两年没玩东方 ……
+12:48 cleamoon: 弄个外接吧
+12:48 varna: 外接太麻烦
+12:50 hope1: 麻烦+
+12:50 hope1: 不方便携带
+12:50 varna: 你们天狗不要紧
+12:50 varna: 反正都是飞的
+12:50 Plough: 弄个X系列吧
+12:50 Plough: 12.5in的屏幕玩东方倒是够了
+12:51 Plough: 不过Ctrl_L放在低行第二列的设计我还是没习惯过来……
+12:51 cleamoon: 10寸都够
+12:51 Plough: 底行*
+12:52 varna: X太贵了吧
+12:52 Plough: 和T系列基本一个价
+12:52 Plough: 而且似乎续航长很多
+12:52 Plough: 我听说T系列的续航极其悲剧……
+12:53 varna: 电池容量我基本不考虑
+12:53 xeirrr: 多少軟妹幣
+12:53 Plough: 京东上最便宜的X240是4739
+12:53 cleamoon: 大博弈再现中亚。中国和巴基斯坦周一宣布了2800亿人民币（460亿美元）的能源及基础建设项目计划。被称为中巴经济走廊的计划将连接巴基斯坦南部濒临阿拉伯海的瓜达尔港与中国新疆地区，总长度3000公里。这项计划将让美国过去10年来在巴基斯坦的投资相形见绌，同时也是中国为连结中东和欧洲市场而打造陆地和海上“丝路
+12:53 cleamoon: ”的一部分。中巴经济走廊包括公路网、铁路和管线，将经过巴基斯坦较贫穷的俾路支省。该省的分离主义武装份子常引发骚乱，军方曾誓言加以镇压。但这种形势令外界质疑经济走廊落实的可行性。巴基斯坦称，中国将提供高达370亿美元的投资用于发电项目，装机容量达16,400 MW。优惠贷款将用于近100亿美元的基础设施项目。
+12:53 Plough: 不过要是我就等X250降价……
+12:54 cleamoon: 考虑续航买平板
+12:54 varna: 4739不合适了
+12:54 lolisa joined channel
+12:54 hope1: varna, 拿手上多难看……
+12:54 varna: hope1: ?
+12:54 xeirrr: lolisa: 爆
+12:55 Plough: 然而美帝版X250只要750刀
+12:55 hope1: cleamoon, 就是考虑续航才忍了这薄膜键盘
+12:55 Plough: 美帝良心企业联想
+12:55 varna: 五千元之内的话能买更好的台式机
+12:55 varna: 而我对笔记本性能的要求其实很低
+12:56 Plough: 其实有可能的话我想找人去美帝帮忙代购
+12:56 cleamoon: 妇联通知 写道 "4月19日，《三体》作者刘慈欣在水木社区发文说《三体2》英文版修改工作已经完成。本次修改篇幅较大，由于编辑为女权主义者，因此小说中用“善良”、“纯洁”、“天使般”等形容词均被视为歧视，要限制使用次数。此外用美女来形容女性联合国秘书长也被认为是歧视，另一项最终没有修改但被认为涉嫌歧
+12:56 cleamoon: 视的内容是四位面壁者均为男性。"
+12:56 varna: 然而国际邮费多少钱
+12:56 Plough: 天朝版这什么鬼价钱……
+12:56 Plough: 所以咯
+12:56 xeirrr: 750美元和4739差不太多
+12:56 iyzsong: - -b
+12:56 Plough: xeirrr: 注意750刀是X250
+12:56 cleamoon: 薄膜键盘只能按三个键？那略坑
+12:56 Plough: 4739是X240
+12:56 Plough: 差了一代呢
+12:56 varna: 不过有个问题啊
+12:56 varna: 三体里是不是有个叫大凤的
+12:56 Plough: ……不清楚
+12:57 iyzsong: 没印象
+12:58 hope1: amazon.com 上面买二手或者翻新的似乎特别便宜？
+12:59 varna: 然而笔记本还是别买二手的吧……
+12:59 Plough: 我倒想弄个便宜的二手玩玩
+12:59 Plough: 然而没钱
+13:00 varna: 你卖尻给我ry
+13:00 hope1: 看来源，厂商自己的翻新通常没问题……
+13:00 Plough: Amazon上二手T530只要400刀
+13:00 Plough: 翻新的有550和600
+13:00 Plough: (刀)
+13:02 pocmon1 joined channel
+13:04 varna: 啊啊啊好想侵犯药娘啊
+13:04 varna: 药娘请排队出来
+13:04 sismvg: n位的二进制能最多能表示多长的十进制数？
+13:04 pocmon quit:Ping timeout: 264 seconds
+13:04 varna: sismvg: nlg2
+13:04 varna: sismvg: 你可以用这个快速估算
+13:05 Plough: 噗
+13:05 Plough: 有人用电锯切肾6……
+13:07 lolisa: 各位, linear algebra的书那本不错？我上网搜了找到好多不一样的
+13:07 varna: 槽点太多不知从哪黑起
+13:07 varna: lolisa: 多做题就行了
+13:07 lolisa: K thx
+13:08 Plough: 我在想他就这么锯电池真的大丈夫么
+13:08 lolisa quit:Quit: Leaving
+13:09 xeirrr: lolisa不是高中生麼？怎麼去學現代了？
+13:09 varna: 他是药娘
+13:13 lh_mouse: 药元四问来问去的问题呀 都图森破 上台拿衣服
+13:14 varna: 午后撤离中
+13:15 lh_not_bot: 羊驼卖萌中
+13:16 cleamoon quit:Ping timeout: 256 seconds
+13:17 sismvg: 中国移动再次提醒，您的手机使用异常 blahblah
+13:17 xeirrr: 4G麼？
+13:20 lh_cat joined channel
+13:20 lh_cat quit:Changing host
+13:20 lh_cat joined channel
+13:20 lh_cat quit:Changing host
+13:20 lh_cat joined channel
+13:21 sismvg: 骗子电话啦
+13:21 lh_cat quit:Client Quit
+13:22 xeirrr: ...
+13:23 lh_cat joined channel
+13:30 lh_cat: https://usercontent.irccloud-cdn.com/file/MGb2vGXy/IMG_0079.PNG
+13:33 xeirrr quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+13:48 sismvg: 和mysql的lib做斗争真头疼
+13:49 sismvg: 死活连不上Lib..
+13:53 sismvg: 64位的问题..
+13:59 Plough: 花式抱B撞……
+14:00 Plough: 而且果然我已经底力全无了啊
+14:00 Plough: 二面就撞我怎么遭得住
+14:02 FrankHB joined channel
+14:02 Plough: 触球来了
+14:07 izmntuk joined channel
+14:09 hope1 quit:Read error: Connection reset by peer
+14:11 sismvg: mysql_query(db_ptr,"use database")以后怎么判断有这个数据库
+14:12 Plough: 噗？
+14:12 Plough: 那珂酱什么时候Lv59的……
+14:21 cleamoon joined channel
+14:26 lhjkk joined channel
+14:26 izmntuk quit:Quit: leaving
+14:30 lhjkk quit:Client Quit
+14:34 FrankHB quit:Ping timeout: 244 seconds
+14:36 lh_not_bot: 我一直就觉得吧  药元四问的问题根本就不是问题
+14:37 lh_not_bot: 看起来完全就不是一个神志清醒的人应该问的
+14:37 lh_not_bot: 比如  没事闲的 use database 这是什么鬼
+14:41 hoxily` joined channel
+14:42 FrankHB joined channel
+14:44 hoxily quit:Ping timeout: 252 seconds
+14:46 pocmon1 quit:Remote host closed the connection
+14:50 sismvg: 1:不能从mysql_real_connect里指定数据库，那么只能mysql_query里用usele 
+14:50 sismvg: 了
+14:50 sismvg: 2:哪里不是问题了呢，我又不是天天弄mysql
+14:50 sismvg: 3:安静点
+14:57 cleamoon: 喜闻乐见
+14:57 lh_not_bot: sismvg: 你第一个就错了
+14:57 lh_not_bot: 我是不是该说 RTFM
+14:57 lh_not_bot: if(!::mysql_real_connect(m_mysql.get(), serverAddr, userName,
+14:57 lh_not_bot:     password, schema, serverPort, NULLPTR, useSsl ? CLIENT_SSL : 0))
+14:58 lh_not_bot: 那么大一个 schema 你看不见？
+14:58 lh_not_bot: 别说你不不知道 SCHEMA 就是 DATABASE
+14:58 lh_not_bot: s,不,,
+14:58 cleamoon: 不知道也不奇怪吧
+14:58 lh_not_bot: 第一 你为什么不知道
+14:59 lh_not_bot: 第二 即使你不知道  你难道没发现 MySQL 里面没有 SCHEMA
+14:59 lh_not_bot: （实际上 SCHEMA 和 DATABASE 只是两个名字的关系）
+14:59 lh_not_bot: 于是你就不肯花点时间想想所谓的 SCHEMA 是什么
+15:00 cleamoon: 然后药元四想了个workaround就被喷了
+15:01 lh_not_bot: cleamoon: 那叫 workaround？
+15:01 lh_not_bot: 有点智商好吗
+15:01 lh_not_bot: 你知不知道对于一个合格的数据库服务器，普通用户根本是不能切换 schema 的
+15:01 lh_not_bot: 你能 use？你 use 一个我看看？
+15:02 sismvg: 1:我知道可以指定，但是我需要在没有数据库的时候创建
+15:02 sismvg: 2：你和我说合格数据库服务器也没用。我没弄过
+15:02 lh_not_bot: CREATE DATABASE `foo` IF NOT EXISTS;
+15:02 lh_not_bot: 那你 USE 做毛
+15:02 cleamoon: 你知不知道对于一个没那么多经验的人想出来的解决办法不完美，没有喷其不思考的理由呀
+15:03 lh_not_bot: cleamoon: 哦  那我说个笑话好了   有人说在 VC 中遇到 assert failure    关掉 debug 就可以解决
+15:03 lh_not_bot: 我不知道你怎么看  我觉得这种家伙被喷死最好
+15:03 lh_not_bot: 免得写东西坑人
+15:04 sismvg: 看来我需要攒点经验再撸
+15:04 cleamoon: 药元四又没坑人
+15:04 sismvg: 顺带我不认为我在重构一次前会把垃圾东西乱扔
+15:04 lh_not_bot: 今天不坑人明天也会坑人
+15:05 lh_not_bot: 我见识不够  所以我还真没发现几个不坑人的
+15:05 cleamoon: 哦，那基本小耗的意思就是我觉得你sb，那我就可以喷死你，无论你是不是真sb
+15:06 sismvg: boost.format 和sprintf的抉择
+15:06 lh_not_bot: 当然要喷
+15:07 lh_not_bot: 你在用 sprintf  拼 SQL？
+15:07 sismvg: 我觉得太愚蠢了，所以我用boost.format
+15:07 lh_not_bot: 嗯  有前途  和我之前那个做服务端的老伙计一样
+15:07 lh_not_bot: 没本质区别
+15:07 sismvg: 但是又担心编译速度
+15:07 lh_not_bot: SQL 注入笑看
+15:07 lh_not_bot: 编译速度算个球啊
+15:08 sismvg: 树莓派上编译会死人
+15:09 lh_not_bot: 15:03:54 < cleamoon> 哦，那基本小耗的意思就是我觉得你sb，那我就可以喷死你，无论你是不是真sb // 弱者为何要战斗
+15:09 lh_not_bot: 弱者就该被消灭掉
+15:10 cleamoon: 那么小耗做初学者的时候问什么没死去呀
+15:10 lh_not_bot: 问文档啊
+15:10 FrankHB: 初学者又不都叒。
+15:10 lh_not_bot: 比如 vsprintf 为什么最后一个参数不是 const char *
+15:10 Plough: 耻球出现啦！
+15:10 lh_not_bot: 怎么在 mysql_real_connect 中指定 schema
+15:11 cleamoon: FrankHB, 那字念什么...
+15:11 FrankHB: 弱
+15:11 FrankHB: sb msvcr70
+15:11 lh_not_bot: ^ 上面这两个问题到底应不应该 RTFM    cleamoon  你自己拿良心说
+15:11 sismvg: 啊...好吧我看了文档才知道vsprintf怎么用
+15:11 cleamoon: 文档应该写不会看源码的死去
+15:11 FrankHB: VC艹 2005前没redistributable package？
+15:11 cleamoon: 我不懂，所以没法说
+15:11 lh_not_bot: FrankHB: 哪里有 MSVCR70
+15:11 lh_not_bot: MSVCR70 就是 MSVCRT
+15:12 FrankHB: 无法启动此程序，因为计算机中丢失MSVCR70.dll，日了够了。
+15:12 FrankHB: 还少mfc70.dll。
+15:12 lh_not_bot: 系统目录下那个东西复制个改名
+15:12 lh_not_bot: 你也可以考虑用高版本改名成低版本的
+15:14 FrankHB: 尼玛不兼容。
+15:14 FrankHB: 我另外找个dll下载好了。
+15:14 FrankHB: 看来是VC艹.net的东西。
+15:15 lh_not_bot: 可能是
+15:15 FrankHB: 这玩意儿分发都靠自觉？
+15:15 lh_not_bot: DLL？
+15:15 FrankHB: 嗯。
+15:15 FrankHB: M$没打包么。
+15:15 lh_not_bot: 单独分发 DLL 貌似是违反 EULA 的
+15:15 FrankHB: 奇怪我之前是可以用这个玩意儿来着没报少dll。
+15:15 lh_not_bot: 只能分发那个 vcredist.exe
+15:15 FrankHB: 问题是我没找到VC艹.net对应的vcredist。
+15:15 lh_not_bot: manifest?
+15:16 FrankHB: 没。
+15:16 FrankHB: 是在之后某个版本的vcredist里包含了么。
+15:17 lh_not_bot: bing 上没有
+15:17 FrankHB: 这特么查起来也麻烦。。。先不管了。
+15:22 lh_not_bot: 微软的专门的 redist 下载页也没有
+15:22 lh_not_bot: https://support.microsoft.com/kb/2977003/en-us
+15:25 cleamoon quit:Ping timeout: 256 seconds
+15:25 varna: 为何我回来就看到拼sql查询语句的
+15:25 varna: 不怕被爆么
+15:26 varna: 这里prepare应该是唯一正解，忘掉格式化字串然后一个query过去吧
+15:30 lh_not_bot: 我记得 C 的 connector 没有 prepare 
+15:30 lh_not_bot: C艹那个也是残疾货  只能拼参数  不能拼表名
+15:30 Plough: 我才知道德梅因为啥外号爸爸级
+15:31 Plough: 那主炮简直可怕
+15:31 varna: lh_not_bot: 哪里没有了……
+15:32 varna: mysql的c绑定有prepare啊
+15:32 lh_not_bot: varna: 我就看到个 mysql_real_query
+15:33 varna: mysql_stmt_prepare
+15:33 lh_cat quit:Quit: Connection closed for inactivity
+15:33 lh_not_bot: 哦 stmt 下面的
+15:33 lh_not_bot: 我说怎么从来没见过
+15:34 cleamoon joined channel
+15:34 lh_not_bot: prepare 比直接写字符串安全   而且大量格式相同的操作比如 INSERT 效率更高
+15:34 lh_not_bot: 不过我现在还是拼成字符串的  但是这个地方写个东西手工转义一下
+15:34 varna: 我说个笑话
+15:35 varna: 去年我拿到一些数据集要做实验
+15:35 varna: 然后看那个数据集里提供了直接转mysql数据库的脚本，我想着试试吧
+15:35 varna: 半天没转出来
+15:35 varna: 然后我看了看那个硕大的脚本，发现里面整齐的大波insert
+15:36 varna: 吓得我直接把csv扔进数据库了
+15:36 lh_not_bot: 直接开 workbench 吧
+15:36 varna: 他们自己傻
+15:36 varna: 用文件按分隔符导入就快多了
+15:36 varna: 当然最逗的乐子不在这里
+15:37 varna: 而在于那些数据完全可以塞进内存
+15:37 lh_not_bot: 多少
+15:38 varna: 以分隔符分割的每行一记录，本地文本文件合计不超过五百兆
+15:39 lh_not_bot: 0.0
+15:39 varna: 开心吧
+15:39 varna: 教授们有时候富有童趣
+15:39 varna: 最后我仍然给要用数据的伙计们提供了sql dump, 同时指出能不用就不用了
+15:48 sismvg: 嗯..每次调试完程序以后，用cmd开的mysql就不见了...
+15:52 cleamoon: @陈宗鹤先生 微博曝河北衡水二中教学楼，阳台用铁栅栏封死，励志横幅贴满墙，一股浓浓的非人性味儿扑面。有网友称“大衡水中学为了不让学生跳楼，真是下血本了 ”
+15:52 varna: ...
+15:52 varna: 哦对
+15:52 varna: 4.23在线维护
+15:53 pocmon joined channel
+15:53 varna: 如果看到你的部队里有人改名叫nashi了，或者有人化身陆基了，不要奇怪
+15:53 Plough: 23333
+15:53 Plough: 不过这次貌似是0点
+15:54 varna: 结果睦月如月我一个都没留
+15:54 Plough: 睦月留了，不过和没留没啥区别
+15:54 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=0ddb752b0cf79052ef1f47363cf3d738/dbfe3e899e510fb3225b71afdc33c895d1430c7e.jpg 新图
+15:55 varna: http://tieba.baidu.com/p/3714765201 警告：这贴间接指涉了令人不快的R18内容
+15:56 varna: 如果你点进去了并且尝试考察其内容，不要抱怨
+15:56 sismvg: 隐语：快点打开
+15:57 varna: 不过如果睦月如月立绘不错的话，活动后就留着蹭演习
+15:57 varna: 我可没那么隐晦
+15:57 varna: 我只是警告读者此帖指涉的内容确实令人不快
+15:57 varna: 在知悉此前提下阅读了相关内容并且甩锅给我的读者都是傻逼
+15:57 varna: 仅此而已
+15:57 sismvg: 在开与不开中挣扎 
+15:59 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=257fd4378294a4c20a23e7233ecf1ad5/024f78f0f736afc38ac60a5db619ebc4b745123b.jpg 大鲸
+16:00 sismvg: http://www.yangtse.com/guoji/2015-04-21/503947.html
+16:00 sismvg: 大鲇鱼
+16:00 sismvg: 还有纳粹军官的尸骨
+16:01 varna: 2333
+16:02 varna: 我猜是死掉之后被鱼吃了
+16:02 cleamoon quit:Ping timeout: 256 seconds
+16:05 sismvg: 我觉得重点应该是鲇鱼是否太大了
+16:06 varna: 还真不知道鲇鱼能长多大
+16:07 cleamoon joined channel
+16:08 sismvg: 最大鲇鱼:293KG 2.7m
+16:13 lh_not_bot: geordi: { istringstream iss("1,2,"); string str; while(getline(iss, str)){ cout, str.size(); } }
+16:13 geordi: , 4
+16:13 lh_not_bot: geordi: { istringstream iss("1,2,"); string str; while(getline(iss, str, ',')){ cout, str.size(); } }
+16:13 geordi: , 1, 1
+16:13 lh_not_bot: geordi: replace ," with , "
+16:13 geordi: , 1, 1, 1
+16:14 lh_not_bot: geordi: undo and replace ," with ,,"
+16:14 geordi: , 1, 1, 0
+16:18 cleamoon__ joined channel
+16:20 varna: cleamoon__: 睦月和另一个月级后天要二改了
+16:22 cleamoon quit:Ping timeout: 272 seconds
+16:23 cleamoon__ quit:Read error: Connection reset by peer
+16:23 cleamoon joined channel
+16:23 xeirrr joined channel
+16:23 cleamoon: 坐等立绘
+16:24 varna: 我觉得应该有情人节期间立绘的水准
+16:24 cleamoon: 那就没必要练了
+16:24 varna: 那立绘不是挺好的么
+16:24 varna: 朴实可爱
+16:25 Plough: B站大婶真莉害
+16:25 cleamoon: 至少也要是颜艺级的实力呀
+16:25 Plough: 大建狂想曲里说尼米兹能带将近90架飞机
+16:25 varna: cleamoon: 噗
+16:25 Plough: 弹幕：“也就加贺老师水平”
+16:26 varna: 妙高羽黑是旧日军夜战战队的顶点啊
+16:26 varna: ...
+16:26 varna: 他们还真信田中那个搭载了？
+16:26 Plough: 估计是
+16:26 cleamoon: 或者二改成大凤
+16:26 Plough: 而且这TM是尼米兹啊
+16:27 Plough: 她带的不是二战那堆电风扇啊……
+16:28 varna: 没事
+16:28 varna: F35B也有电风扇
+16:28 Plough: 233333
+16:28 varna: cleamoon: 大凤搭载少
+16:28 Plough: 大凤我记得是64架
+16:28 varna: 不过大凤的60+是按流星和烈风算的
+16:28 varna: 所以其实机库不小
+16:28 varna: 然而信浓只有一层机库……
+16:29 Plough: 顶着八万吨排水带48架飞机
+16:29 cleamoon: 大凤立绘好
+16:30 Plough: 岛田老变态的立绘我都挺喜欢
+16:30 varna: 毕竟临时改造
+16:30 Plough: 看看维内托归不归他
+16:30 Plough: 归的话我大概会娶了维内托
+16:30 varna: 巡洋舰舰体就算了，连超战舰舰体都拖出来当航母……
+16:31 varna: 我希望shibafu画维内托……
+16:31 Plough: ……shibafu那包子脸简直坑爹
+16:33 varna: 包子多好
+16:34 cleamoon: 羊陀子喜欢土 妹子
+16:34 varna: 北上就土气可爱
+16:35 Plough: 包子级战舰明显没气势
+16:36 cleamoon: 于是羊陀子==大井
+16:36 varna: 下面由我军水上机研究专员、常夏的毛嘎敏主持开发
+16:38 Plough: 噗？
+16:38 Plough: 原来我家睦夫人有Lv31啊……
+16:41 Plough: 下面由我军舰攻研究专员、塔威的大凤主持开发
+16:41 Plough: 052
+16:41 varna: 总之还是没造出水观
+16:42 varna: 今天的目标是92k油
+16:42 Plough: Orz
+16:42 varna: 目前89.7k
+16:42 Plough: 频我不壕
+16:42 Plough: 96
+16:42 varna: 频我不欧
+16:42 Plough: 频我不欧
+16:42 Plough: 天山
+16:43 Plough: 这都什么鬼
+16:43 Plough: 彗星，终于正常了
+16:49 varna: 原来主任攻击语音说的是敌机直上急降下……
+16:54 Plough: 强行打码？
+16:55 varna: 最近强行打码现象越发严重
+16:56 varna: 以前指名道姓ABDACOM的气势呢
+16:56 varna: 敌航母就三个，非得弄出个太太水鬼
+16:57 Plough: 2333
+16:58 cleamoon: 不明白说了又能如何
+16:59 varna: 一样的，只是萌豚们会吵得凶，硬说这不是军国主义作品
+16:59 cleamoon: .....
+16:59 varna: 然而己方是日军的战略战术，敌方是美军的战略，多一个太太水鬼有任何差别么
+17:00 varna: 把爱宕换成宙斯盾，日本人还是日本人
+17:04 varna: 我日
+17:04 varna: 伸个懒腰，胸口抽筋了
+17:04 varna: 疼
+17:05 Plough: 于是在大建狂想曲里甲板装甲的鼻祖变成了中途岛……
+17:05 Plough: 我要开着大凤去讨说法
+17:10 lh_not_bot: 利根的立绘很有柊镜的风格啊
+17:11 varna: 不过利根比较不软
+17:11 lh_not_bot: 柊镜也不软
+17:11 varna: 幸运星画风看起来都很有捏性
+17:11 lh_not_bot: 柊镜应该除外
+17:11 varna: 我是说面部肌肉的揉软程度
+17:11 lh_not_bot: 面部都一样……
+17:11 lh_not_bot: 好像还被人吐槽过
+17:12 varna: 其实槽点挺多
+17:12 cleamoon: http://www.solidot.org/story?sid=43779
+17:12 xeirrr quit:Quit: Leaving
+17:13 varna: 康威……
+17:13 varna: 然而这文章是什么意思……
+17:13 cleamoon: 评论有一条解释
+17:14 varna: Can n2 + 1 unit equilateral triangles cover an equilateral triangle of side > n, say n + ε?
+17:14 varna: 噗
+17:15 cleamoon: 这确实不需要太多解释
+17:17 cleamoon: 而我可以写一篇更短的 题目：what is the real root of equation x-1=0 ，正文：1
+17:17 varna: 然后审稿意见三个reject
+17:21 cleamoon: 发表了就能发新闻，有小杂志会发的
+17:26 lh_not_bot: lh_mouse@lhmouse-dev:~/nano-2.4.1$ nano --ver GNU nano, version 2.4.1
+17:27 varna: 2.2.6
+17:30 lh_not_bot: varna: 上个月 MSYS2 已经更新 2.4.0
+17:31 lh_not_bot: 2.4.0 已经是 stable
+17:31 varna: 我已经四个月没滚系统了……
+17:31 lh_not_bot: http://www.nano-editor.org/dist/v2.4/nano-2.4.1.tar.gz
+17:31 varna: 春活之后吧
+17:31 lh_not_bot: CFLAGS='-O3' ./configure  --disable-justify --disable-libmagic --enable-utf8 --disable-speller --prefix=
+17:31 varna: nano我是跟pacman装的，没特别情况就不编译了
+17:32 lh_not_bot: 噢  我是日常用
+17:32 varna: 估计五月份Syu又是一堆破事
+17:34 cleamoon quit:Ping timeout: 252 seconds
+17:36 cleamoon joined channel
+17:55 cui_inspur quit:Quit: 离开
+18:01 xeirrr joined channel
+18:02 hope1 joined channel
+18:02 varna: hotatata
+18:05 hope1: 各种走错路… 过了一个街区才发现走反了orz
+18:06 varna: 居然不是飞的！
+18:06 OO_after quit:Ping timeout: 240 seconds
+18:08 hope1: 城市里飞很危险啊
+18:08 condy quit:Ping timeout: 256 seconds
+18:08 iyzsong quit:Ping timeout: 256 seconds
+18:10 iyzsong joined channel
+18:10 cleamoon: 容易暴露裙底？
+18:11 condy joined channel
+18:11 condy quit:Changing host
+18:11 condy joined channel
+18:12 varna: +
+18:13 OO_after joined channel
+18:14 izmntuk joined channel
+18:14 cleamoon: 整理完磁盘碎片空间没了11个G，fa
+18:19 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=a581ae38ec24b899de3c79305e3d1c95/0df3d7ca7bcb0a467fa60f016e63f6246b60af06.jpg
+18:22 cleamoon: 233333
+18:24 whatofor joined channel
+18:29 xeirrr: e康拿的是啥？
+18:30 varna: 大建图表
+18:30 varna: 图标
+18:32 xeirrr: 23333
+18:32 cleamoon: 还认识尔康
+18:35 xeirrr: 當然
+18:35 Plough: 战列舰论坛在研究爸爸和沙恩对肛会怎样
+18:36 Plough: 所以其实美帝重巡已经被当成战舰了么……
+18:36 varna: 我觉得只是美帝重巡的死活和他们有没有鼻子并无直接关系的缘故
+18:37 Plough: 然而美帝重巡连鱼雷都没有
+18:37 varna: 我竟无言以对
+18:38 Plough: 原帖问的是三条爸爸对一条沙恩
+18:38 Plough: 大家一致得出结论：沙恩的甲板会被瞬间洗干净
+18:38 Plough: 现在他们在研究单挑……
+18:39 varna: ……
+18:39 varna: 对了，如果我出一个基斯卡岛撤退战的剧本有人打么
+18:40 varna: 长距离巡航作战+天气/海况+可能的航空战（单方面）
+18:40 lhanjian joined channel
+18:41 iyzsong: lhanjian: 晚上好
+18:41 cleamoon: 单方面？
+18:41 cleamoon: 那不是碾压呀...
+18:41 lhanjian joined channel
+18:41 lhanjian: iyzsong, 晚上好
+18:42 varna: 没有制空的航空战难道不是虐杀么
+18:42 varna: 春雨就是这么被直接打断腿的
+18:42 varna: 但是航空战有天气和海况的需求
+18:42 cleamoon: 没制空的航空战？
+18:42 varna: 如果运气不好的话是不能出动飞机的
+18:42 cleamoon: 哦
+18:42 varna: 就是一方连战斗机都没有，没法拦截敌机的情况
+18:42 cleamoon: 考虑这个呀
+18:43 varna: 对合成风力、可见度之类的都有要求
+18:44 Plough quit:Quit: Reconnecting
+18:44 cleamoon: 航母轻母重巡潜艇驱逐航战，这是干什么用的队伍...
+18:44 cleamoon: 那值得一看
+18:44 varna: 3-2
+18:45 varna: 不过前提是有人想打
+18:45 varna: 先出去了
+18:45 cleamoon: 你和肛旗打
+18:45 Plough joined channel
+18:47 sismvg: 真是好玩..4月10号叫我做网络笔试，15号告诉我错了重发，今天才告诉我面试。。
+18:53 cleamoon quit:Ping timeout: 276 seconds
+18:56 hope1 quit:Ping timeout: 265 seconds
+18:57 hope1 joined channel
+19:03 cleamoon joined channel
+19:10 sleepwalking joined channel
+19:11 sleepwalking: varna, 我拿UCI的几个数据库试了下IB3，准确率和CART差不多
+19:12 sleepwalking: varna, 但问题是它的instance库随着数据增加，膨胀得很快，样本一多就慢成狗了
+19:13 sleepwalking: 另外，决策树的训练至少是O(n^2)吧？
+19:19 cleamoon quit:Ping timeout: 272 seconds
+19:22 cleamoon joined channel
+19:25 Plough quit:Remote host closed the connection
+19:27 lh_not_bot: sleepwalking: 捏捏
+19:27 Plough joined channel
+19:35 Plough quit:Ping timeout: 244 seconds
+19:36 Plough joined channel
+19:38 lh_not_bot: lhanjian: 昨天咋了
+19:39 xeirrr: Varna: 爆
+19:40 gauge: w 8
+19:40 xeirrr: 在fluxbox下，我不想用gksudo或者sudo來關機和重啟，有沒有別的辦法？
+19:40 lh_not_bot: 按电源
+19:40 lh_not_bot: （其实我虽厉）
+19:40 xeirrr: 開玩笑吧！
+19:41 Matsune joined channel
+19:41 lh_not_bot: 是的！
+19:41 xeirrr: ....
+19:45 xiaoxi joined channel
+19:49 lolisa joined channel
+19:52 xiaoxi quit:Remote host closed the connection
+19:52 hope1_ joined channel
+19:58 whocares_2_ joined channel
+19:59 hope1_ quit:Ping timeout: 244 seconds
+20:00 whocares_2 quit:Ping timeout: 264 seconds
+20:02 lolisa: 看到hope1了。。。没想象中的受= =
+20:03 tutu_wind joined channel
+20:03 tutu_wind: 好久没来了 ... 大家都还好么
+20:03 hope1` joined channel
+20:04 hope1_ joined channel
+20:05 cleamoon quit:Ping timeout: 245 seconds
+20:06 hope1 quit:Ping timeout: 256 seconds
+20:07 iyzsong: o.o
+20:07 hope1 joined channel
+20:12 hope1` joined channel
+20:13 tutu_wind: 么么 ~ 
+20:14 izmntuk quit:Remote host closed the connection
+20:15 hope1 quit:Ping timeout: 256 seconds
+20:17 cleamoon joined channel
+20:19 iyzsong: 呼呼
+20:21 hope1 joined channel
+20:23 lolisa quit:Read error: Connection timed out
+20:24 sismvg: http://fanyi.baidu.com/#auto/zh/
+20:24 sismvg: 强奸用户新方法
+20:24 lolisa joined channel
+20:27 xxxxxxxx joined channel
+20:27 xeirrr: lolisa: ~~~
+20:30 cleamoon quit:Ping timeout: 256 seconds
+20:38 hope1: sismvg, 国内厂商惯用手法
+20:39 cleamoon joined channel
+20:40 hoxily joined channel
+20:41 sleepwalking quit:Quit: Ex-Chat
+20:42 izmntuk joined channel
+20:43 cleamoon quit:Ping timeout: 256 seconds
+20:44 Petrus07 joined channel
+20:47 xeirrr quit:Remote host closed the connection
+20:48 xeirrr joined channel
+20:59 lhanjian quit:Excess Flood
+20:59 lhanjian joined channel
+21:03 lh_not_bot: 哇大湿
+21:04 lh_not_bot: tutu_wind: 揪兔耳朵
+21:04 xxxxxxxx: 挖大屎
+21:04 tutu_wind: lh_not_bot: 小耗 ~ 么么 ~ 
+21:04 lh_not_bot: =w=
+21:05 iyzsong: 挖挖挖
+21:07 izmntuk quit:Quit: leaving
+21:07 xeirrr: iyzsong: 你也會賣萌
+21:07 izmntuk joined channel
+21:08 hope1 quit:Ping timeout: 256 seconds
+21:08 iyzsong: xeirrr: 我啥都不会。。
+21:09 xeirrr: iyzsong: 自謙了，大神
+21:09 iyzsong: - -b
+21:12 xxxxxxxx: http://www.bilibili.com/video/av2216404/
+21:13 xxxxxxxx: 容我说一句卧槽
+21:19 sismvg: 海尔公司用海尔兄弟反应了群众的贫苦的生活，决心走和贫苦大众一条战线的战略发展
+21:20 sismvg: 广告的最高境界，拿一部200集的动画做广告
+21:22 iyzsong: 2333
+21:26 hope1_ quit:Ping timeout: 276 seconds
+21:31 lhanjian: sismvg, 很多动画其实就是卖周边才赚钱的吧，比如巴拉拉小魔仙
+21:32 gauge: .w 2
+21:32 sismvg: 但是一个公司这么做就
+21:32 lhanjian: sismvg, 海尔没亏，不是么。
+21:32 varna: LBB小魔仙……
+21:32 abc_ joined channel
+21:32 abc_ quit:Changing host
+21:32 abc_ joined channel
+21:32 sismvg: 真要比预算的话海尔动画没多少
+21:34 lhanjian: 是了，这么算，这笔投资恐怕更成功……
+21:34 * lhanjian 吃了包辣条，好爽～～～～～～～～～～～
+21:36 sismvg: http://tieba.baidu.com/p/3715368071
+21:36 sismvg: 柯南被称为犯罪教科书
+21:37 sismvg: 那么战争片和婆媳片就被称为杀人教科书和阶级斗争教科书
+21:40 Xilzzerts quit:Ping timeout: 250 seconds
+21:41 lhanjian: 吃辣条的时候千万不要喝杀精水……不然只会辣的更疼，呜呜呜呜……
+21:42 iyzsong:  ...
+21:42 xeirrr: 為了身體健康，請遠離拉條
+21:43 abc_ quit:Quit: reset
+21:43 abc_ joined channel
+21:43 abc_ quit:Changing host
+21:43 abc_ joined channel
+21:46 varna: 另外广告招收推演双方
+21:46 sleepwalking joined channel
+21:46 sismvg: 可以选择喝牛奶或者类似物品解除辣味
+21:46 varna: 这次的剧本预定是基斯卡岛撤退战
+21:47 sleepwalking: varna: 求解决策树和IBL对付大量样本怎么办
+21:47 varna: sleepwalking: IBL我觉得按他那个随机验证第i相似会死的
+21:47 sleepwalking: 这边一万个样本就炸了
+21:47 varna: 那个随机验证可能会造成CD暴涨
+21:48 varna: 最后CD会变得意义全无……
+21:48 varna: 决策树你是怎么炸的
+21:48 lhanjian: xeirrr, 辣条大法好，选好牌子问题不大。虽然对肠、胃、舌头刺激性挺强
+21:48 Plough: 这场我继续围观吧
+21:48 sleepwalking: varna: 我仔细读了下，发现IB3的随机验证只在已经读取的样本很少以至于confidence level低的时候才会启用
+21:48 varna: Plough: 那我找双方吧
+21:49 varna: sleepwalking: 其实我更关注你决策树里有多少个要验的属性
+21:49 xeirrr: lhanjian: 今晚兒你等著拉稀吧。
+21:49 Plough: xxxxxxxx: 巨基不来试试么
+21:49 xxxxxxxx: 不来...
+21:49 varna: 刷闪刷错了……
+21:49 sleepwalking: 如果抛开存储空间和速度问题，IB3还是不错的。回归树是训练太缓慢
+21:49 varna: sleepwalking: 你的决策树用什么算法训练的
+21:49 lhanjian: xeirrr, 放心，拉稀不至于。
+21:49 sleepwalking: 回归-＞决策
+21:49 xxxxxxxx: 话说1-6能练级么?
+21:50 varna: xxxxxxxx: 不能，基础经验太差，红脸太快，敌方有开幕
+21:50 sleepwalking: 我随便从网上找了个CART实现
+21:50 Plough: 怎么战列舰吧满地德棍……
+21:50 Plough: 刚才还看到一个骂本子猪队友的
+21:50 varna: sleepwalking: 多少属性节点
+21:50 sleepwalking: 5个
+21:50 xxxxxxxx: varna 那1-6送什么?
+21:50 lhanjian: Plough, 零式战机，点击就送～
+21:51 varna: xxxxxxxx: 1-6 B点据说有大淀（极低确率，不确证），然后就是攻略过程中的资源，最后是完全不费桶的每日反潜
+21:51 sleepwalking: 我比较了下时间，它的训练用时和样本数量是平方关系的
+21:51 xxxxxxxx: 不是有开幕么....
+21:51 varna: xxxxxxxx: 我都用没改+喂满的驱逐队，让蜜瓜带着去
+21:52 varna: 梯形开幕大破我一个照样带他们走
+21:52 varna: 然而4-3我需要能搞死嗒酱的护航
+21:52 xxxxxxxx: 我有上将F5
+21:52 sleepwalking: 看到有人把训练样本拆成N份分别训练N个小决策树然后合并
+21:53 sleepwalking: 我更关心的是IBL怎么办
+21:53 varna: IBL我觉得最大的坑点是那个随机第i相似
+21:53 Plough: 角川有上将运营，可封你号
+21:53 sleepwalking: sleepwalking  varna: 我仔细读了下，发现IB3的随机验证只在已经读取的样本很少以至于confidence level低的时候才会启用
+21:54 abc_ quit:Quit: relogin
+21:54 sleepwalking: 也就是当S里一个acceptable的instance都没有的时候就随机挑一个instance
+21:54 varna: sleepwalking: 但是如果没有那个确证，IB3实际上也很麻烦
+21:55 varna: 另外你训练一次，决策树用的时间多长
+21:55 sismvg: http://www.ithome.com/html/game/143134.htm
+21:55 sismvg: dlc
+21:55 varna: 以小时或者天计都行
+21:55 sleepwalking: 决策树没耐心跑完。。。这还是只用了1/50的数据。。。
+21:56 xxxxxxxx: 另外说一下2Drop不适合用来开图....
+21:56 sleepwalking: IBL跑1/10的数据花了两分钟
+21:56 xeirrr quit:Ping timeout: 244 seconds
+21:56 varna: sleepwalking: 到你耐心耗尽为止用了多长时间
+21:56 varna: 超过十小时了么
+21:56 * sleepwalking 用了javascript实现
+21:56 Plough: JS什么鬼
+21:56 xxxxxxxx: 噩梦A姐门口有冰箭 外加一个很肉的僵尸(不确定是不是固定的)
+21:57 varna: 现在我的容忍时间是12h
+21:57 sleepwalking: 你想说没超过10h就别改了吗。。
+21:57 varna: 对……
+21:57 xxxxxxxx: 45级NEC强行被打回去
+21:57 varna: 米尻酱冰雪葱明
+21:57 sleepwalking: 问题是IBL在测试时跑的时间和S的大小呈正比。。
+21:58 sleepwalking: 这样用起来也巨不爽
+21:58 varna: 要不我有几天写论文的时候都快吃睡在实验室了……
+21:58 tutu_wind: varna: 好辛苦啊 ~ 
+21:59 varna: 不过最后我预计算了一批数据，强行把一次9:1的十折压到了半小时
+21:59 xxxxxxxx: 吃睡实验室 撸怎么办?
+22:00 varna: 攒着
+22:00 varna: 当时还没入坑，不然我直接杀进3-2
+22:00 * sleepwalking ...
+22:00 hope1 joined channel
+22:00 xxxxxxxx: 说起攒着我就想到丁丁变白....
+22:00 sismvg: xxxxxxxx:解刨实验室应该能解决
+22:01 sismvg: windows只有dokan啊..
+22:02 sleepwalking: 我不知道那个作者为什么放了个EM+IBL*2+HMM的组合技，然后把实现的p事扔给practitioner了
+22:02 varna: 你得明白都是这样
+22:02 varna: 教授们不屑实现，而他们的研究生有时候就得承担解决数据的任务……
+22:02 sleepwalking: 引用明明还100+
+22:03 xxxxxxxx: 发现A5地上原来是有兔子的...
+22:04 varna: 引用有一些是因为他的工作比较早期，有对比价值吧……
+22:04 sleepwalking: 所以羊驼也没应对IBL训练耗时问题的办法吗
+22:04 sleepwalking: 明明是2007的论文。。
+22:04 varna: 如果你的忍耐时间是以分钟计的，我估计深度学习能让你哭出来
+22:04 hope1 quit:Read error: Connection reset by peer
+22:05 sleepwalking: 我已经感到了，暑假准备课金租服务器
+22:05 varna: 如果能租学校的计算服务就最好了
+22:05 xxxxxxxx: 真线虫
+22:05 hope1 joined channel
+22:06 lolisa: 线虫，果然ML是线虫才能玩的游戏
+22:06 varna: 之前我屋里有个做深度学习文本分类的
+22:06 varna: 他那个RBM迭代到收敛得8h
+22:06 sleepwalking: 那还算好。。
+22:06 varna: 然后有天我没来实验室，听说一个节电先锋给他关了
+22:06 varna: 问题是他还在试验算法阶段……
+22:06 varna: 一天一两个迭代
+22:07 varna: 跟挂远征似的
+22:07 varna: 之前我也有一次被节电先锋坑的……
+22:07 sleepwalking: google最近搞了个语音合成，33h语音（还是单人发音），一天半训练
+22:07 varna: 一天半能训练出来不错了吧……
+22:07 Plough: http://tieba.baidu.com/p/3715502295 ……我该做什么表情
+22:07 sismvg: 8h... 用cpu处理的？
+22:08 sleepwalking: 如果有高速计算桶。。。（大雾
+22:08 varna: sismvg: 你给我买显卡我就学着上GPU
+22:08 sismvg: nvida人人都有的吧。。
+22:08 varna: 但是有那个时间我宁可跟老板谈谈用超算中心
+22:08 sleepwalking: I卡路过
+22:08 sismvg: amd的流处理单元也比n多
+22:08 varna: sismvg: 实验室机器没有A/N卡，正如你未必有脑子
+22:08 Plough: 2333
+22:09 xxxxxxxx: 毕竟药娘四是挖过矿的几个显卡肯定还是有的
+22:09 sismvg: 没有A/N卡的机器。。。职校老机器都有1G的N卡
+22:09 sismvg: 我用的是矿机。退役后拆了
+22:09 sleepwalking: 用FPGA训练什么的可行吧
+22:09 Plough: 我怎么感觉药娘四完全是在炫耀
+22:10 varna: 还是那话，如果我感觉训练时间真的太长了，直接跟老板串通好了去超算中心……
+22:10 varna: 我在四楼，超算机房就在二楼
+22:10 varna: 虽说其实跟物理位置无关
+22:11 varna: 而超算机房的最大特点是严重干扰手机信号
+22:11 sismvg: ..
+22:11 Plough: 就像我那天看见有人在别人大建直播贴里喊：“俾斯麦还用赌？Z3旗舰Z1二号位不就一发的事？”
+22:11 sleepwalking: 话说我家出门一公里就是上海超算中心。。
+22:11 varna: 所以混论文最好的方法其实还是好好学数学写理论文
+22:12 sleepwalking: 但那个课金太猛了。。。我还是多勾搭那个会FPGA的机油比较靠谱。。
+22:12 varna: 跟实验拼时间比大半夜顶着院长斩杀还累
+22:12 varna: sleepwalking: 别课啊，你大学不是有服务么？
+22:12 varna: sleepwalking: 还是那个服务超贵的
+22:13 sleepwalking: 不知道大一学生能不能申请上，我还没看
+22:13 xxxxxxxx: 我觉得羊驼大概会说留着课戒指
+22:13 varna: 我课戒指的钱是每月实验室补助和研究生补助剩下的……
+22:13 sleepwalking: 啊啊啊IBL怎么办啊
+22:13 Plough: http://imgsrc.baidu.com/forum/w%3D580/sign=6231f2dc1b30e924cfa49c397c096e66/43e8b91c8701a18be2effd9b9a2f07082938fe9f.jpg……
+22:13 varna: sleepwalking: 我的观点是特定领域的学习需要大量hack...
+22:13 * sleepwalking 只要电酱！！
+22:14 * varna 电酱Lv123，目前还是最高
+22:14 varna: Plough: 23333
+22:14 * Plough 电酱Lv56
+22:14 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=8a6390da522c11dfded1bf2b531c63d0/1b4c510fd9f9d72a88e34724d12a2834349bbb00.jpg 妙高飞了
+22:14 sleepwalking: 我的电酱正好是羊驼的-100。。。
+22:14 hoxily quit:Quit: Leaving
+22:14 Plough: 不对现在60了……
+22:14 * xxxxxxxx 没有电
+22:16 Plough: ……
+22:17 Plough: 妙高姐又#4了
+22:17 varna: 我好想来个三轮炎上啊
+22:17 varna: 好过瘾啊
+22:17 clcn_sk4bot joined channel
+22:17 Plough: sk4 d10*3
+22:17 clcn_sk4bot: Roll d10 3 time(s):0 6 0 
+22:17 Plough: 不对
+22:18 Plough: sk4 d100*3
+22:18 clcn_sk4bot: Roll d100 3 time(s):24 53 75 
+22:18 Plough: 啊，没飞
+22:20 sleepwalking: 干脆按照一个最主要的属性，拆成几百份数据训练一堆小决策树好了
+22:21 sleepwalking: varna: 决策树怎么对付重叠分类，在训练样本一对一的情况下
+22:22 varna: 重叠分类不推荐决策树
+22:22 sleepwalking: 那我用啥比较好
+22:22 varna: 我有个同级的哥们研究过多标签分类方法，那个似乎是重叠的
+22:22 varna: 当然我以前也见到过一个聚类算法
+22:23 varna: 叫DClustR
+22:23 varna: 你可以搜下overlapped clustering
+22:23 sleepwalking: 为什么我感觉这个问题不适合聚类，属性全是binary的
+22:23 varna: 毕竟一般经典决策树建立的过程很可能是按熵最优的，重叠太难
+22:24 varna: binary...
+22:24 lhanjian quit:Ping timeout: 264 seconds
+22:24 yzld2002 joined channel
+22:24 varna: 那就不是我容易处理的了
+22:24 varna: 多标签分类我毫无了解，只是他在写那样的论文所以有所耳闻
+22:24 sleepwalking: 鬼畜的作者。。
+22:27 sleepwalking: 如果我用FFNN对付150个binary输入，500个binary输出，50万哥样本，训练时间会爆炸且严重掉坑吧。。
+22:27 sleepwalking: 个
+22:27 varna: 噗
+22:28 varna: 我总感觉你的隐层会爆炸，然后如何就不知道了
+22:28 varna: 毕竟ANN都是黑盒，理论性能无法评估……
+22:28 sleepwalking: 看上去还真只有IBL能用，万恶的语言建模问题
+22:28 varna: 你搜搜有没有领域相关的方法吧……
+22:28 varna: 我觉得不该这么吊死
+22:29 hope1 quit:Ping timeout: 265 seconds
+22:29 sleepwalking: 我没搜到IBL对付大数据的办法，只有一堆菜鸡的instance reduction，然而看上去对这么多数据还是无力
+22:29 varna: 我还有个想法
+22:30 sleepwalking: SVM？
+22:30 varna: 不是
+22:30 varna: 样本可能预处理么
+22:30 sleepwalking: 比如？
+22:30 varna: 哦，不太可能
+22:30 varna: 150个二元输入
+22:30 varna: 样本只有五十万
+22:30 varna: 相似的估计也不多吧
+22:32 hope1 joined channel
+22:33 varna: sleepwalking: 不过我建议这样，你试着按散列冲突统计一下样本的重复程度
+22:33 varna: 如果冲突显著（=重复率高），分别均匀抽1/100或者1/10样快速训练
+22:33 varna: 然后看训练成果差异
+22:34 sleepwalking quit:Ping timeout: 246 seconds
+22:34 varna: ...
+22:35 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+22:38 pocmon quit:Remote host closed the connection
+22:40 sleepwalking joined channel
+22:41 sleepwalking: 掉了
+22:41 varna: 23:30 <+varna> sleepwalking: 不过我建议这样，你试着按散列冲突统计一下样本的重复程度
+22:42 varna: 23:31 <+varna> 如果冲突显著（=重复率高），分别均匀抽1/100或者1/10样快速训练
+22:42 varna: 23:31 <+varna> 然后看训练成果差异
+22:42 varna: 虽然这是徒劳的抵抗，不过看看数据也好（迫真）
+22:42 sleepwalking: 好
+22:44 xxxxxxxx: 然而3个潜艇似乎不稳...
+22:44 varna: xxxxxxxx: 不太稳，轮型可能吃败
+22:45 Plough: 听别人说要多睡觉少操心，所以我睡觉去了
+22:45 Plough: 诸君武运
+22:45 Plough quit:Quit: 睡觉
+22:46 xxxxxxxx: 红旗去睡美容觉了
+22:46 * hoxily 爆 varna
+22:46 varna: 撤了，诸君武运
+22:46 varna quit:Quit: leaving
+22:46 clcn_sk4bot quit:Remote host closed the connection
+22:48 xxxxxxxx: 卧槽怎么到处都有那个放电的家伙...
+22:49 sleepwalking: 数据重复一小半，27925/59581，羊驼记得看log
+22:49 xxxxxxxx: sleepwalking: 他已经跑掉了
+22:50 sleepwalking: 正好我也要写作业了。。
+22:51 sleepwalking: 然而剔除重复对IBL并没什么用
+22:54 sleepwalking quit:Quit: Leaving
+23:15 hope1 quit:Ping timeout: 272 seconds
+23:23 tutu_wind: lh_mouse: 小耗安 ~ 碎觉了 ~
+23:23 tutu_wind quit:Quit: 大家晚安 ~
+23:29 lolisa quit:Quit: Leaving
+23:38 cleamoon joined channel
+23:39 cleamoon__ joined channel
+23:43 cleamoon quit:Ping timeout: 272 seconds
+23:55 cleamoon__ quit:Ping timeout: 252 seconds

@@ -1,0 +1,134 @@
+00:02 lh_mouse joined channel
+00:23 Mokou quit:Remote host closed the connection
+00:27 pluto quit:Quit: Leaving
+00:56 lh_mouse quit:Read error: Connection reset by peer
+01:29 CyrusYzGTt quit:Ping timeout: 268 seconds
+01:38 Icy joined channel
+01:45 CyrusYzGTt joined channel
+01:53 Mesopotamian joined channel
+02:04 Mesopotamian quit:
+02:35 Mesopota_ joined channel
+02:35 Mesopota_ quit:Client Quit
+02:45 Mesopotamian joined channel
+03:44 yonka quit:Remote host closed the connection
+04:40 Taggnostr2 joined channel
+04:42 Taggnostr quit:Ping timeout: 268 seconds
+04:45 Taggnostr2 quit:Ping timeout: 248 seconds
+04:48 Taggnostr joined channel
+04:53 Youmu quit:Quit: Connection closed for inactivity
+07:13 Mesopotamian quit:Ping timeout: 255 seconds
+08:36 StardustX joined channel
+08:49 OwenJia joined channel
+08:49 OwenJia quit:Changing host
+08:49 OwenJia joined channel
+09:16 yimis joined channel
+09:18 yimis quit:Client Quit
+09:19 lh_mouse joined channel
+09:33 yonka joined channel
+09:33 Youmu joined channel
+09:39 StardustX quit:Remote host closed the connection
+09:39 StardustX_ joined channel
+09:40 StardustX_ quit:Client Quit
+09:40 StardustX joined channel
+10:07 StardustX quit:Quit: 去 coding
+11:03 Mokou joined channel
+11:12 kozmers joined channel
+11:32 StardustX joined channel
+12:33 Stevearzh quit:Quit: ZZZzzz…
+12:41 kinosang joined channel
+13:31 B005ter joined channel
+13:54 kozmers joined channel
+13:56 kozmers quit:Quit: leaving
+15:10 kozmers joined channel
+15:13 OwenJia quit:Remote host closed the connection
+15:14 OwenJia joined channel
+15:14 OwenJia quit:Changing host
+15:14 OwenJia joined channel
+15:16 B005ter_ joined channel
+15:17 B005ter quit:Ping timeout: 276 seconds
+15:19 lh_mouse: geordi, -c const char (&str)[] = "hello";
+15:19 geordi: Success
+15:19 lh_mouse: geordi, -c struct foo { const char (&str)[]; };
+15:19 geordi: Success
+15:20 lh_mouse: geordi, --clang -c struct foo { const char (&str)[]; };
+15:20 geordi: Success
+15:20 owen joined channel
+15:20 kozmers quit:Remote host closed the connection
+15:21 OwenJia quit:Remote host closed the connection
+15:23 koz joined channel
+15:25 B005ter_ quit:Remote host closed the connection
+15:27 yimis joined channel
+15:32 yimis quit:Client Quit
+15:32 yimis joined channel
+15:33 yimis quit:Client Quit
+15:33 B005ter joined channel
+15:36 owen quit:Remote host closed the connection
+15:37 koz quit:Ping timeout: 240 seconds
+15:38 owen joined channel
+15:39 B005ter quit:Ping timeout: 276 seconds
+15:45 yimis joined channel
+15:49 Koz joined channel
+15:53 Stevearzh joined channel
+16:03 yimis quit:Quit: yimis
+16:10 owen quit:Remote host closed the connection
+16:10 OwenJia joined channel
+16:10 OwenJia quit:Changing host
+16:10 OwenJia joined channel
+16:37 B005ter joined channel
+16:38 keyboardman joined channel
+16:39 keyboardman quit:Client Quit
+16:50 keyboardman joined channel
+16:51 Taggnostr quit:Remote host closed the connection
+16:51 Taggnostr joined channel
+17:27 Mesopotamian joined channel
+17:39 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+17:42 keyboardman joined channel
+18:24 Mokou quit:Ping timeout: 248 seconds
+18:25 Mokou joined channel
+18:33 OwenJia quit:Ping timeout: 258 seconds
+18:44 iyzsong joined channel
+18:52 kinosang quit:Ping timeout: 260 seconds
+18:55 B005ter quit:Remote host closed the connection
+19:08 Mesopotamian quit:Ping timeout: 240 seconds
+19:13 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+19:19 B005ter joined channel
+19:23 B005ter_ joined channel
+19:27 B005ter quit:Ping timeout: 255 seconds
+19:35 B005ter joined channel
+19:37 B005ter__ joined channel
+19:37 StardustX quit:Quit: Leaving
+19:37 B005ter__ quit:Remote host closed the connection
+19:37 B005ter quit:Read error: Connection reset by peer
+19:37 B005ter_ quit:Read error: Connection reset by peer
+19:37 B005ter_ joined channel
+19:37 B005ter_ quit:Remote host closed the connection
+19:38 B005ter_ joined channel
+19:39 B005ter__ joined channel
+19:39 B005ter_ quit:Read error: Connection reset by peer
+19:40 B005ter_ joined channel
+19:41 B005te___ joined channel
+19:41 B005ter_ quit:Read error: Connection reset by peer
+19:41 B005ter__ quit:Read error: Connection reset by peer
+19:41 B005ter_ joined channel
+19:42 B005ter_ quit:Read error: Connection reset by peer
+19:42 B005ter_ joined channel
+19:45 B005te___ quit:Ping timeout: 260 seconds
+19:47 B005ter_ quit:Ping timeout: 255 seconds
+19:56 keyboardman joined channel
+20:18 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:38 iyzsong: (┙>∧<)┙へ┻┻
+20:43 B005ter joined channel
+20:48 B005ter quit:Ping timeout: 260 seconds
+21:55 lh_cat joined channel
+22:46 B005ter joined channel
+22:52 B005ter quit:Ping timeout: 260 seconds
+23:10 lh_mouse: geordi, << is_trivially_copyable<bitset<1>>::value
+23:10 geordi: true
+23:26 keyboardman joined channel
+23:37 Mokou quit:Quit: Lost terminal
+23:42 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+23:44 keyboardman joined channel
+23:46 keyboardman quit:Client Quit
+23:51 keyboardman joined channel
+23:51 keyboardman quit:Client Quit
+23:57 keyboardman joined channel

@@ -1,0 +1,155 @@
+00:05 lh_mouse quit:Quit: For the Red Army!
+00:16 stardustx: 淘宝为什么会给我推荐白学T恤。。我明明不是白学家
+00:17 EAirPeter: 说明你有潜力
+00:17 cleamoooon: 说明你很熟练
+00:24 EAirPeter: 你为何这么熟练
+00:27 cleamoooon: 因为我先来的姿势水平高呀
+00:27 EAirPeter: 不是很懂你们白膜法师
+00:37 cleamoooon: 我才不是白膜法师，我既没玩过wa也没有把长者的教诲当成bgm
+01:33 Youmu quit:Quit: Connection closed for inactivity
+02:08 Izumo quit:Quit: Connection closed for inactivity
+02:36 cleamooon joined channel
+02:36 cleamoooon quit:Read error: Connection reset by peer
+06:16 cleamoooon joined channel
+06:19 cleamooon quit:Ping timeout: 240 seconds
+06:23 cleamooon joined channel
+06:23 cleamoooon quit:Read error: Connection reset by peer
+07:00 cleamoooon joined channel
+07:03 cleamooon quit:Ping timeout: 240 seconds
+08:15 FrankHB quit:Ping timeout: 252 seconds
+08:48 FrankHB joined channel
+09:00 lh_mouse joined channel
+09:07 iyzsong-xx joined channel
+09:10 cc joined channel
+09:16 FrankHB quit:Ping timeout: 240 seconds
+09:16 cleamoooon quit:Read error: Connection reset by peer
+09:17 cleamoooon joined channel
+09:17 iyzsong-xx quit:Read error: Connection reset by peer
+10:27 sottd joined channel
+10:34 Youmu joined channel
+10:46 sottd quit:Ping timeout: 260 seconds
+11:35 amy116 joined channel
+11:52 wysaid joined channel
+11:53 wysaid: Hey gays! I'm coming!
+12:16 wysaid quit:Ping timeout: 246 seconds
+12:40 wysaid joined channel
+12:41 stardustx is now known as stardust
+12:43 lh_cat joined channel
+12:57 wysaid quit:Ping timeout: 240 seconds
+13:05 wysaid joined channel
+13:32 lbb joined channel
+14:14 CyrusYzGTt joined channel
+14:17 sottd joined channel
+14:17 sottd: 求技术支援,有谁做过mht文件的解析?
+14:46 lh_cat quit:Quit: Connection closed for inactivity
+15:09 sottd: sqrt(-1) love you! 
+15:10 sottd: 有人说是 i love you ,但是仔细想想,复数是人造出来的
+15:10 sottd: 也就是说。。。唉
+15:31 Mokou joined channel
+15:54 sottd: 还有200个文件要合并》。
+16:03 lh_mouse: geordi, -c int foo __asm__("bar");
+16:03 geordi: Success
+16:03 lh_mouse: geordi, -c int foo __asm__("bar") (int);
+16:03 geordi: error: expected primary-expression before 'int'
+16:18 sottd: geordi, -c int foo __asm__("mov ebx,10 add eax,ebx");
+16:18 geordi: Success
+16:19 sottd: geordi, -c int foo __asm__("mov ebx,10 add eax,ebx int 10");
+16:19 geordi: Success
+16:19 sottd: 我也许能造个不用带引号的内嵌汇编
+16:23 EAirPeter: 什么鬼。。。
+16:24 sottd: boost.gil很慢吗,我有需求可能要处理3k以上的文件
+16:24 sottd: 3k个
+16:26 cleamoooon quit:Read error: Connection reset by peer
+16:26 cleamoooon joined channel
+16:32 CyrusYzGTt quit:Ping timeout: 246 seconds
+17:10 varna joined channel
+17:10 varna: servcraft的根分配器生成部分有一个更新
+17:10 varna: 小变化，暂时不pull也可以
+17:11 EAirPeter: servcraft是？
+17:11 varna: EAirPeter: https://github.com/Akvelog/servcraft
+17:13 sottd: 求技术支援,有谁做过mht文件的解析?
+17:14 varna: mht没做过……
+17:15 sottd: 爬虫竟然用mht保存..手机上看起来麻烦死了..连目录结构都没复制下来
+17:15 varna: ...
+17:16 sottd: 还好，能看的只是图片,做个解析然后dump出来好了..
+17:16 sottd: 图片处理库,那个好? 
+17:17 sottd: 大概3K个500KB的图片要从base64到png
+17:17 varna: 你只是要base64解码吧？
+17:17 sottd: 不太清楚他们有没有保存文件头，如果保存了那就只要base64了
+17:18 varna: 如果只要解码的话从gayhub上扒个星数多的吧
+17:20 sottd: 求推荐
+17:21 varna: 试试 https://github.com/aklomp/base64 这个？
+17:21 varna: 这是个C库
+17:22 sottd: 先用用好了,希望它不会因为输入数据错误而崩溃..
+17:31 varna: 小修一下rbt
+17:34 varna: 一百三十万请求下来看着没什么问题
+17:35 varna: pushed
+17:38 cc quit:Remote host closed the connection
+17:51 varna: http://imgsrc.baidu.com/forum/pic/item/e0459701a18b87d65de4a83a040828381e30fdce.jpg?v=tbs 纳米生化服
+18:10 Mokou quit:Quit: leaving
+18:10 sottd: 真纳米..
+18:12 Izumo joined channel
+18:45 * sottd 痛苦
+18:53 * EAirPeter 同样感到痛苦
+18:55 sottd: 你怎么可能会有我痛苦，我要为一个我没有接触过的项目合并一个我没有接触过的项目的另一个分支
+18:55 sottd: 代码2k行有余
+18:56 * EAirPeter 正在准备明早的考试，然而这课我一学期都没听过
+18:57 hoxily joined channel
+18:58 sottd: ...
+19:05 iyzsong joined channel
+19:09 iyzsong quit:Changing host
+19:09 iyzsong joined channel
+19:11 iyzsong: _(:з」∠)_
+19:12 iyzsong: 今天找了个ORM 建了几个空表 就混过去了 = =
+19:29 sottd: 各种概念看着很厉害，其实都是他们写的让人难懂..
+19:30 sottd: 我找了半天测试工具上 “集成服务地址”这个按钮到底是要填写什么，最后才知道只是个exe的路径..
+19:35 iyzsong: ╮(￣▽￣)╭
+19:44 amy116 quit:Ping timeout: 260 seconds
+19:50 lbb quit:Read error: Connection reset by peer
+19:52 amy116 joined channel
+19:54 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+20:02 amy116 quit:Ping timeout: 240 seconds
+20:11 amy116 joined channel
+20:31 Matsune joined channel
+20:32 cleamoooon: 中国互联网最高审查机构网信办发起了网站跟帖评论专项整治活动。网信办称，“跟帖评论乱象扰乱信息传播秩序、破坏网络舆论生态，人民群众深恶痛绝，必须下大力气整治。”主要网站被要求清理政府认为的违法违规有害信息，开展“阳光跟帖”行动。环球网、腾讯、网易纷纷表示会按照政府要求的做。
+20:36 cleamoooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/qx/g6_190145.jpg@596w_1l.jpg
+20:38 iyzsong: (´・ω・｀)
+20:40 Matsune: (´・ω・｀)
+20:45 lh_mouse quit:Quit: For the Red Army!
+20:46 lh_mouse joined channel
+21:08 Mokou joined channel
+21:14 Mokou: 啊媽澤法克
+21:14 Mokou: FF又打不開了
+21:24 Mokou: 噫，firefox-gtk2-bin飛了
+21:24 Mokou: 算了我換ESR
+21:45 lh_mouse: Mokou, Motou.
+21:45 lh_mouse: Mokou, Niebi.
+21:47 iyzsong: lh_mouse: 膜拜帅哥 _(:з」∠)_
+21:48 lh_mouse: iyzsong, 不敢当。
+21:48 varna: 呜呼呼哦瘊瘊
+21:51 condy: iyzsong: 你看到照片了？
+21:52 condy: iyzsong: 膜拜帅哥 _(:з」∠)_
+21:52 condy: 如此文质彬彬
+21:55 iyzsong: ლ(╹◡╹ლ)
+21:59 lh_mouse: http://114.215.147.2/meow.mp3
+22:02 iyzsong: _(:з」∠)_
+22:03 condy: 这是本人唱的吗(
+22:03 lh_mouse: 是。
+22:08 condy: _(:з」∠)_
+22:09 lh_mouse: _(:з」∠)_
+22:10 stardust: 这是《翼をください》？
+22:12 lh_mouse: 是。
+22:12 stardust: _(:з」∠)_
+22:14 cleamoooon: _(:з」∠)_
+22:15 AutoGavy joined channel
+22:23 hoxily quit:Quit: Leaving
+22:30 CyrusYzGTt joined channel
+22:58 Izumo quit:Quit: Connection closed for inactivity
+23:06 iyzsong quit:Quit: bye.
+23:14 varna quit:Quit: leaving
+23:15 lhanjian1ssh joined channel
+23:16 lhanjian_ssh quit:Ping timeout: 244 seconds
+23:27 Mokou quit:Ping timeout: 244 seconds
+23:27 amy116 quit:Ping timeout: 246 seconds
+23:28 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+23:47 Mokou joined channel

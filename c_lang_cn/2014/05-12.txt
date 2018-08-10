@@ -1,0 +1,626 @@
+1:44 cleamoon:海棠还不睡
+1:45 whocares_2 joined channel
+3:17 _root joined channel
+3:20 cleamoon_ joined channel
+7:8 condy joined channel
+7:46 condy:geordi, {cout<<sizeof(f());} double f(){}
+7:46 geordi:warning: no return statement in function returning non-void
+7:46 condy:geordi, {cout<<sizeof(f());} double f(){return 1.0;}
+7:46 geordi:8
+7:47 condy:geordi, {cout<<sizeof(f);} double f(){return 1.0;}
+7:47 geordi:error: ISO C++ forbids applying 'sizeof' to an expression of function type
+8:30 lh_mouse joined channel
+9:24 zzzzzzzz joined channel
+9:30 candy76041820 joined channel
+9:42 T2 joined channel
+9:48 lh_cat joined channel
+9:49 T3rmin4t0r joined channel
+9:58 OO_after joined channel
+10:1 silencly07 joined channel
+10:8 Guest66476 joined channel
+10:21 hiusyx joined channel
+10:23 hiusyx left channel
+10:31 whatofor joined channel
+10:33 whatofor joined channel
+11:3 condy joined channel
+11:6 condy:geordi, {auto f=[&](){};cout<<sizeof(f);}
+11:6 geordi:1
+11:6 condy:geordi, <<10
+11:6 condy:还以为是我掉线了，原来不是啊！
+11:6 condy:geordi, int a
+11:6 condy:geordi, int a;
+11:6 geordi:10
+11:6 geordi:error: expected initializer at end of input
+11:6 geordi:Success
+11:11 condy joined channel
+11:15 condy:geordi, <<6
+11:15 geordi:6
+11:22 *hysw /set condy --offline
+11:31 *condy online
+11:31 condy:geordi, <<10
+11:31 geordi:10
+12:3 lh_cat:https://github.com/lhmouse/MCF/blob/master/MCF/Core/Utilities.hpp#L226
+12:11 xxxxxxxxx joined channel
+12:21 moehuster joined channel
+12:30 richselian joined channel
+12:31 Zirx joined channel
+13:21 xxxxxxxxx:http://www.bilibili.tv/video/av1117222/
+13:24 code_new joined channel
+14:0 T2 joined channel
+14:20 lh_cat:geordi, { try { function<void () noexcept> fn(foo); fn(); } catch(...){ cout <<"exception caught"; } } void foo(){ throw 123; } 
+14:20 geordi:exception caught
+14:20 lh_cat:geordi, { try { function<void () noexcept> fn(foo); fn(); } catch(...){ cout <<"exception caught"; } } void foo() neoxcept { throw 123; } 
+14:20 geordi:error: expected initializer before 'neoxcept'
+14:20 lh_cat:geordi, replace neoxcept with noexcept
+14:20 geordi:terminated by exception: 123
+14:22 hoxily joined channel
+14:24 hoxily joined channel
+14:36 Zirx joined channel
+14:40 hysw:http://tieba.baidu.com/p/3038369026 < 看起来明年我会死无葬生之地的...
+14:47 xxxxxxxxx:然后炮姐围观了
+14:47 xxxxxxxxx:然后炮姐表示啪啪啪
+14:52 lh_cat:geordi, struct foo { void bar(); }; template<typename T, void(T::*FN)()> struct baz { }; template class baz<foo, &foo::bar>;
+14:53 geordi:Success
+14:53 lh_cat:geordi, struct foo { void bar(); }; template<typename T, void(T::*FN)()> struct baz { }; template<typename T> struct baz<T, nullptr> { }; template class baz<foo, &foo::bar>;
+14:53 geordi:error: type 'void (T::*)()' of template argument 'nullptr' depends on a template parameter
+15:3 hoxily joined channel
+15:3 hysw:T2: 把智商全交出来
+15:3 T2:2333
+15:3 T2:喜闻乐见
+15:3 T2:2333
+15:4 T2:hysw, 祝挂东南枝
+15:4 hysw:会死人... 真会死人...
+15:4 T2:哈哈哈哈和
+15:4 T2:卧槽太逗乐了
+15:4 hysw:会死人的原因是：T2被烧死了
+15:4 T2:噗～
+15:5 T2:超神还是死亡？
+15:5 T2:hysw, 人类，你选择哪一边？
+15:6 *hysw 已被坑死
+15:13 T2:hysw, 问羊驼要吧。
+15:13 T2:智商什么的。
+15:15 Zirx:生化六我看来还是不错的……剧情够长
+15:17 T2:Zirx, 是滴
+15:17 T2:hysw, 美帝也不是那么好当滴。
+15:19 Zirx:就是Leon剧情那BOSS比较无语，又变马，又变恐龙，又变苍蝇，最后却被雷劈死了……
+15:20 hoxily joined channel
+15:29 T2:Zirx, 2333
+15:29 T2:hysw, 赶紧睡吧，傻逼阶敌，天要亮了哦。
+15:30 T2:吾辈怎么就这么开心呢2333
+15:30 xxxxxxxxx:因为你2
+15:30 T2:干，我去撸编译2333
+15:30 T2:xxxxxxxxx, 嗯
+15:30 Nubies joined channel
+15:31 T2:xxxxxxxxx, 显然的事情就不要跟我提了。
+15:31 xxxxxxxxx:学霸云明显又是在装学渣
+15:31 T2:我配合下呗。
+15:31 T2:他爱装我有什么办法吖？
+15:31 T2:2333
+15:33 T2:喜 闻 乐 见
+15:34 T2:赶紧去干编译。
+15:34 T2:不然又要被这逗比和萌糖鄙视了。
+15:34 T2:2333
+15:34 T2:我表示还是很开心吖。
+15:35 T2:等我有了钱，就去美利坚跟羊驼玩编译，顺便天天爆萌糖。
+15:35 T2:2333
+15:37 T2:2333，我♂要♂干♂死♂她～
+15:39 T2 joined channel
+15:45 T3rmin4t0r:https://xvmlabs.com/
+15:46 T2:T3rmin4t0r, 这个不错啊
+15:46 xxxxxxxxx:orzzzz
+15:49 endle joined channel
+16:17 Nubies joined channel
+16:28 Lord_V joined channel
+16:31 condy joined channel
+17:3 code_new joined channel
+17:18 zzzzzzzz joined channel
+17:41 whocares_2 joined channel
+17:49 xxxxxxxx_ joined channel
+17:57 lh_cat:艹  花了一下午思考为什么 condition variable 要先加锁再 wait
+18:4 hysw:话说这不难理解吧...
+18:18 xxxxxxxx_:噗 百度网盘挂了?
+18:21 condy joined channel
+18:34 Plough joined channel
+18:57 zzzzzzzz joined channel
+19:11 iyzsong joined channel
+19:13 xxxxxxxxx joined channel
+19:13 xxxxxxxxx:我这里百度网盘被墙了....
+19:15 xxxxxxxxx:要不就是我被百度网盘的服务器ban ip了 难道是因为在百度的问卷里填了好多傻逼度娘的原因...
+19:16 iyzsong:- -b
+19:24 condy:-_-
+19:38 code_new:- -|
+19:51 T2:23333
+19:51 T2:笑抽了
+19:57 Zirconi joined channel
+20:52 Plough:ff29经常会卡顿是我的错觉么
+20:53 T2:socket很疼是我的错觉么？
+20:54 T2:这是觉大人的错～
+20:55 richselian joined channel
+20:57 xxxxxxxxx:Plough: 我感觉ff29确实比以前卡
+21:0 Plough:xxxxxxxxx: 经常卡的整个网页动不了
+21:4 xxxxxxxxx:我经常看见ff29和chrome比谁占用高 谁更卡
+21:5 xxxxxxxxx:以前chrome卡的话到ff里看视频就行了 现在两边都和逗比一样
+21:17 xxxxxxxxx:百度网盘继续连不上
+21:20 xxxxxxxxx:http://tieba.baidu.com/p/3038916193 <- 2楼受害者
+21:26 varna joined channel
+21:27 varna:红旗酱
+21:27 varna:爆
+21:27 xxxxxxxxx:不是快吃药么?
+21:27 varna:红旗酱应该吃过药了
+21:31 Plough:没吃
+21:31 Plough:在边听Sky is the limit边翻译东西
+21:32 varna:快吃药
+21:32 xxxxxxxxx:对了 健全基逗士那个被和谐惨了
+21:32 varna:我把ev14炸了
+21:32 varna:没法看
+21:32 T2:0.0
+21:33 T2:nginx和libevent看哪个？
+21:33 varna:如果不用一个API生成器给它生成业务框架，连小耗都会噗死它
+21:33 T2:我TM终于写出人参中第一个“服务端”了。
+21:33 varna:T2: 随便
+21:33 whatofor:T2 看这么快..
+21:33 T2:内牛满面。
+21:34 T2:whatofor, 已经很慢了。
+21:34 whatofor:刚刚快把apue unp tcp/ip详解差不多过完.. 整整2个月..
+21:34 whatofor:2个多..
+21:34 T2:whatofor, 给客户端回显Hello world而已。
+21:34 varna:其实我觉得如果你嫌烦可以看看云风的mread (@ github)，简单粗糙烦人但很短
+21:34 T2:whatofor, beej.us
+21:35 T2:看UNP你是有多抖M？
+21:35 whatofor:过一遍api
+21:35 T2:http://beej.us
+21:35 whatofor:其实内容很少的
+21:35 varna:UNPv1太厚了
+21:35 varna:Stevens一贯稀烂地讲每个调用，所以前面几十章都可以当手册用……
+21:36 T2:进程间+网络一共就十几页
+21:36 varna:指望看书没用
+21:36 T2:而且比较新。
+21:36 varna:看看实际用的程序比较好
+21:36 whatofor:这倒是. 我开始以为unp会很多内容的. 结果, 就简单的api讲解和一些网络知识
+21:36 T2:再慢些可能我就要被萌糖吃掉了。
+21:37 whatofor:尤其unp2. 就2个章节左右的内容
+21:37 varna:whatofor: stevens的书总是那个风格
+21:37 xxxxxxxxx:稀烂稀烂
+21:37 varna:揉软的手册
+21:37 T2:whatofor, 网络知识你还不如去看那个计算姬网络系统方法。
+21:37 varna:T2: 其实我推荐脑补
+21:37 whatofor:表示看过tcp/ip详解和部分用tc[
+21:38 varna:TCP/IP Illustrated v1太沉重，v2太旧
+21:38 T2:varna, 那个可以当厕上极品。
+21:38 whatofor:tcp/ip进行国际互联. 剩下路由器相关的内容还没理解. 其他的估计差不多了
+21:38 varna:Comer v1绝赞
+21:38 T2:连词典都不需要。
+21:38 varna:但也就是原理性的东西，v2 XINU可以无视（除非自己做内核），v3完全无视
+21:38 whatofor:我现在就想看点代码了
+21:39 T2:whatofor, http://beej.us
+21:39 whatofor:然后找工作, 找不到就投奔windows.
+21:39 varna:到最后不看代码还是不知道怎么写靠谱
+21:39 T2:233song推荐给jianjian
+21:39 varna:T2: wtf的程度不需要看那些了吧
+21:39 T2:jianjian推荐给我的。
+21:39 whatofor:我看看目录. 还不知道有啥
+21:39 T2:varna, 关键他那么搞太慢了。
+21:39 whatofor:刚刚的网站打开了
+21:39 varna:T2: 读一两个程序就明白了
+21:40 varna:T2: 你自己觉得搞得快，其实也跟没搞一样
+21:40 T2:varna, 我打算API主要会用，最后还得自己做一遍，不然看了也不见得懂。
+21:40 whatofor:这个网站感觉和8pm的那个风格类似. 
+21:40 xxxxxxxxx:去github上随便找个东西然后自己man 比看那些书爽多了
+21:41 varna:T2: 什么叫会用
+21:41 T2:除了头疼些san值流失多些。
+21:41 varna:int send(int, const void *, size_t, int);
+21:41 T2:varna, 知道干嘛的，什么参数，返回什么，调用顺序乱七八糟。
+21:41 varna:^ 如果是知道基本功能，看一遍就知道
+21:42 T2:是啊
+21:42 varna:所以没用
+21:42 xxxxxxxxx:你看看名字 看完名字自己yy一下 man一下 最后再google一下
+21:42 whatofor:T2: 刚刚那个网站的你推荐重点在哪儿?
+21:42 T2:xxxxxxxxx, 你不会知道顺序的。
+21:42 T2:xxxxxxxxx, 这个man不出来的。
+21:42 varna:噗
+21:42 xxxxxxxxx:反正我一点也不想啃那些大砖头了
+21:43 T2:whatofor, http://beej.us/guide/
+21:43 whatofor:我已经差不多结束了.  
+21:43 T2:第一个是网络
+21:43 T2:第二个是进程间。
+21:43 varna:我觉得如果你TCP/IP稍微入门的话就没必要折腾什么循序渐进的事情
+21:43 varna:骗自己
+21:43 T2:这倒是
+21:43 varna:反正你看书也看不出窗口大小怎么定、缓冲区习惯开多少解决吞吐量问题之类的细节
+21:44 varna:说不定看书党自己还会忽略掉Nagle算法这个小问题
+21:44 T2:耗子说做socket不用上读写锁
+21:44 varna:或者一厢情愿地相信高带宽延时网络上TCP的丢包问题
+21:44 T2:我表示没懂。
+21:44 whatofor:相比win32 api. linux相关api感觉实在是太幸福了. 
+21:44 varna:T2: 给个上下文
+21:44 varna:whatofor: X相关的不如win
+21:44 zzzzzzzz joined channel
+21:44 T2:我问他实现socket需要读写锁么
+21:44 T2:他说不用
+21:44 varna:不需要
+21:45 varna:但是你在说什么呢
+21:45 varna:什么叫实现socket
+21:45 T2:那玩意毕竟是个文件描述符
+21:45 varna:如果你说内核，那么可能有自旋，可能有细粒度的内核锁，可能有互斥
+21:45 varna:socket不是一个fd
+21:46 varna:你拿到的是fd, 但那是vfs之上的结果
+21:46 whatofor:真是, 我现在就处于过了一遍, 知道有啥的时候. 
+21:46 T2:圆来乳此
+21:46 varna:每个fd都会关联到具体的对象是常识，别忘掉
+21:46 varna:fd只是索引
+21:46 whatofor:其他还真没了. 
+21:46 varna:如果你需要一个简明易懂的解释，可以简单扫几页TCPv2
+21:46 T2:whatofor, 所以你等于花了两个月干了一个十几页的教程。
+21:47 varna:不过TCP/IP协议栈我自己也没做全过
+21:47 varna:实际上我写的功能多于五成的部分也就到ARP...
+21:47 T2:varna, 打出来有空瞄一眼
+21:47 varna:别打了
+21:47 T2:放厕所嗯。
+21:47 varna:科普下就行
+21:47 T2:嗯
+21:48 T2:主要先干编译原理
+21:48 T2:那本似乎得整个吃下去...
+21:48 T2:有点疼。
+21:48 T2:完全科普。
+21:48 varna:噗
+21:49 varna:你拿的什么书
+21:49 T2:龙书啊
+21:49 T2:刚开始。
+21:49 varna:我建议你翻一遍目录，然后知道一个编译器都有什么/要什么，然后决定哪些部分偷懒
+21:50 varna:难道你看书都没有看前言和目录的习惯么……
+21:50 T2:有的
+21:50 T2:我就是看了遍目录觉得还是都看下吧。
+21:50 varna:那你就知道哪些部分没必要看，哪些部分看了也没用
+21:50 whatofor:我貌似网络不好.. 半天一堆内容. 要么啥都没.
+21:50 T2:细节各种多似乎
+21:50 varna:你目录看得不科学
+21:50 varna:s/科学/魔法/
+21:50 T2:那本书上能写出来的可能都是凤毛麟角。
+21:51 varna:噗
+21:51 varna:反了，教材都是粗吱大腋的，你能看出个条理就行了
+21:51 T2:圆来乳此
+21:52 varna:又不是背过了考政治
+21:52 T2:毕竟编译
+21:52 T2:不通吃似乎说不过去。
+21:52 varna:哈哈哈哈
+21:53 T2:本来就没多少内容
+21:53 T2:还挑着看。
+21:53 whatofor:我怎么感觉编译原理内容好多..
+21:53 varna:词法不看，语法不看，语义靠脑补，运行时靠经验，后端看龙书没意思……
+21:53 T2:whatofor, 前端 讲的多。
+21:54 varna:体系无关优化你要是有心思学可以学，但不如专门找点程序分析的资料看
+21:54 varna:毕竟如果会数据流的话能弄会不少东西
+21:54 T2:关键我连正则都不会写，自动机都没脑补过。
+21:54 varna:正则好办
+21:54 T2:你确定词法不看，语法不看？
+21:54 varna:正则常用，你现在不会将来也会了
+21:55 varna:词法那东西你不会编译也能写出来一样好的
+21:55 varna:语法知道大体算法，算过几遍之后一律用生成器
+21:55 T2:嗯，大概过一遍吧。
+21:55 varna:都是机械化的东西，除非你对证明有兴趣不然何必呢
+21:55 T2:至少补下自动姬
+21:55 varna:个人经验，每个算法都算一两个小例子花不了几课时
+21:56 varna:自动机没必要
+21:56 T2:好吧...
+21:56 varna:NFA知道eps转移，会转DFA会优化算法就差不多了
+21:56 T2:嗯
+21:56 varna:反正实际正则在两捕获以上的情况下没法编译成DFA
+21:56 varna:据说有论文实现了两捕获，re2似乎实现了一捕获
+21:57 T2:varna, 替我谢谢糖果噗醒。
+21:57 T2:另外为了表达我的谢意，我♂要♂干♂死♂她～
+21:57 varna:都是路人，我就不转达了
+21:57 varna:其实你没明白糖果的意思
+21:57 varna:他说得拐弯，我没说
+21:57 xxxxxxxxx:糖球和T2怎么了?
+21:58 T2:varna, 那不关我事
+21:58 varna:至于像寒云那种自己写GLR gen的他纯粹是缺妹子
+21:58 T2:他什么意思跟我有什么关系。
+21:58 varna:你看我对着觉酱撸管，就不去写那个
+21:58 T2:反正效果不错就是了。
+21:58 *varna 今天又撸出来了
+21:58 whatofor:不明觉厉
+21:58 varna:whatofor: 谷歌「古明地觉」
+21:59 T2:我决定了“等我有了钱，就去美利坚跟羊驼玩编译，顺便天天爆萌糖。”
+21:59 T2:2333
+22:0 whatofor:"易推倒"
+22:0 varna:whatofor: 不太容易……
+22:0 T2:whatofor, 很难
+22:0 varna:觉酱会平地摔，但是如果凹山寨sc的话还是很可怕的
+22:0 varna:文花帖DS里凹出了金阁寺，听说比文花帖简单点但是……
+22:1 T2:xxxxxxxxx, 被鄙视了哦腋
+22:1 whatofor:.. 好高深. 我只是看很柔弱的感觉
+22:1 T2:xxxxxxxxx, 其实是我作死去噗了她一下，然后就没然后了。
+22:1 whatofor:http://www.google.com/imgres?imgurl=http%3A%2F%2Ffs0.139js.com%2Ffile%2Fs_jpg_d0d3baf7tw1e8vgv35prsj21kw11x495.jpg&imgrefurl=http%3A%2F%2Fweibo.10086.cn%2Ft%2Fdetail.php%3Fk%3D%25E5%258F%25A4%25E6%2598%258E%25E5%259C%25B0%25E8%25A7%2589&h=1365&w=2048&tbnid=jx3sTDTaOYVvDM%3A&zoom=1&docid=t0UcJaxlCgQMAM&ei=ONRwU_-1FM3r8AWAhICwAg&tbm=isch&ved=0CKgBEDMoSDBI&iact=rc&uact=3&dur=238&page=3&start=48&ndsp=
+22:2 xxxxxxxxx:快够了 再修图就变成充气娃娃了
+22:2 varna:hope1^: 后来打了没……
+22:2 varna:噗
+22:3 varna:简直毫无PS痕迹
+22:3 varna:拿一设来！
+22:3 hoxily:羊驼晚上好。
+22:3 varna:不能对着一设撸出来的都是对觉酱爱不够！
+22:3 varna:hoxily: 晚上好，可以和我行炒饭之事恶魔
+22:3 varna:hoxily: 晚上好，可以和我行炒饭之事么
+22:3 varna:whatofor: http://a.hiphotos.baidu.com/baike/w%3D268/sign=57c06eedaf345982c58ae29434f5310b/9c16fdfaaf51f3de749243fd96eef01f3a297903.jpg
+22:3 varna:^ 这是游戏立绘
+22:4 hoxily:炒饭之事？
+22:4 xxxxxxxxx:就是摔 跤
+22:4 varna:hoxily: 炒 饭之事
+22:4 varna:xxxxxxxxx: 不是
+22:4 whatofor:varna: 这个怎么感觉像无知少女
+22:4 varna:xxxxxxxxx: 是摔完之后的掘肛
+22:4 varna:whatofor: 噗呼呼
+22:4 xxxxxxxxx:你没看到那个表情么...
+22:5 varna:啊，昨天漆黑子弹的OP发售了
+22:5 whatofor:hoxily: 怎么感觉不认识?
+22:5 varna:http://imgsrc.baidu.com/forum/pic/item/272eae5494eef01fc3d9cb42e2fe9925be317d8e.jpg
+22:6 varna:whatofor: rox后辈
+22:6 xxxxxxxxx:肉小牛?
+22:6 whatofor:varna: 华科的?
+22:6 T2:嗯
+22:7 varna:whatofor: 我记得是
+22:7 whatofor:varna: 了解
+22:8 varna:操
+22:8 varna:下午有个快递我没收到短信……
+22:9 xxxxxxxxx:天朝人民发来贺电
+22:9 varna:《现代体系的优化编译器》
+22:10 T2:靠，你真要搞编译？
+22:11 varna:明天去看吧
+22:11 varna:就是买本书而已
+22:11 varna:还好不是《丹特丽安的书架》
+22:12 candy76401820 joined channel
+22:13 varna:嚓嚓嚓，早知道我下午不去上什么形式语义学，在宿舍打非想天则就好了
+22:13 varna:至少能看到短信
+22:14 *varna 拿起红旗酱的丝袜就是一顿摩擦
+22:15 varna:啊，掉下去了
+22:15 candy76401820:> NT2 你先变成这耗子样再寻思爆我吧：http://imagebin.org/310444 http://imagebin.org/310445
+22:15 *varna 夯了……
+22:15 varna:2333
+22:15 varna:啊，今天那个揉软的小耗
+22:16 candy76401820:>驼 话说今天鼠辈很有先见之明地没顶着 mouse 的 nick 啊？
+22:17 varna:candy76401820: 他一直声称自己是猫科，常用这个
+22:17 xxxxxxxxx:糖球和羊驼整天都在一起么...
+22:17 candy76401820:>EA 一下午。
+22:18 varna:http://www.4shared-china.com/mp3/i1FQMDYrba/01_black_bullet.htm
+22:18 varna:我忘账户了……
+22:18 candy76401820:>驼 觉大人是虚幻。
+22:18 varna:啊不用账户的？
+22:18 varna:不对
+22:19 candy76401820:>驼 http://usepremium.blinkweb.com/ 从后面找能用的中转站。
+22:19 varna:试出来了
+22:19 varna:啊我看到了WO酱
+22:19 *varna 撸撸
+22:19 varna:试了两个邮箱四个密码就好用了
+22:20 varna:试听
+22:21 xxxxxxxxx:一下午都在炒 饭之类的?
+22:21 varna:44kHz 324kbps
+22:21 varna:不过mocp我不知道怎么调均衡……
+22:21 candy76401820:>EA 都在吃饭。
+22:21 varna:操
+22:22 varna:没内建均衡器？
+22:22 candy76401820:噗。
+22:22 varna:我还指望着在mp3参数的基础上微调下呢
+22:22 candy76401820:表示均衡器什么的都是越调越烂。
+22:23 varna:现在mp3的状况我还算满意
+22:23 *xxxxxxxxx 喜欢加速听奇怪的声音
+22:23 varna:爆
+22:24 varna:噗，中间吉他伪solo的部分好奇怪……
+22:25 varna:啊噗，找到了
+22:27 varna:有一个狗日的EBNF而且没优化
+22:27 varna:我想爆了这些作者
+22:30 varna:而且南条爱乃调过之后应该没走音，但是为什么我产生了走音的错觉
+22:30 candy76401820:惯性。
+22:31 varna:最后我听到了「この凹」之类的词……
+22:32 xxxxxxxxx:你们喜欢足球么?
+22:32 varna:我喜欢恋恋，恋恋喜欢足球
+22:32 xxxxxxxxx:http://tieba.baidu.com/p/3039001010
+22:32 varna:至于百度太平间吧发生的事情我什么都不知道
+22:34 varna:あかく～もえる～——加上波浪线就变得奇怪了
+22:36 varna:然后我自觉地填了友军进去
+22:44 candy76401820:在 dynasty 上大战中。现在战争主题：翻译漫画是手艺不是工业，所以官方授权的翻译版就是翔。
+22:45 lh_cat:あかく 是 RED ？
+22:45 varna:是
+22:46 varna:candy76401820: 明明是工业
+22:46 varna:赤く 燃える
+22:47 varna:但是想起是描写十岁幼女作战的作品，明明就是「赤く 萌える」
+22:47 lh_cat:百度渣渣
+22:47 varna:幼女的腋部好美味啊舔舔
+22:47 lh_cat:aoi siroi kuroi
+22:47 *xxxxxxxxx 在百度的问卷里填了不少度娘傻逼然后今天网盘连不上了
+22:48 candy76401820:> 驼 扯，工业需要的是施像搅拌那样大规模标准化一致性的操作于原材料之上，翻译那么做你是想机翻不成。
+22:48 varna:MLGBD度盘客户端又没速度了
+22:48 iyzsong:2333
+22:48 varna:candy76401820: 软件都可以叫工业
+22:48 varna:虽然我觉得软件还是作坊
+22:49 candy76401820:>驼 所以说不该叫工业。那只会产出翔。
+22:49 *hoxily 哇靠，百度太平间吧怎么没有被净网行动干掉。
+22:49 varna:但是既然业界把自己叫做industry所以漫画也可以
+22:49 varna:手艺迟早得一点点灭亡
+22:49 *hoxily 好多尸体图片……
+22:49 candy76401820:> 驼 事实上我就是拿软件工业举的例。
+22:50 lh_cat:软件工业就是拿画刷把魔方六面涂成一样的的颜色
+22:50 varna:而且我对着工业品撸的快感多点
+22:50 varna:画刷暴露
+22:50 candy76401820:> 驼 你那不叫看漫画。你那只是对着幼女撸。
+22:50 varna:我记得就是异教徒喜欢说画刷（brush）这词
+22:50 lh_cat:varna, PS 的翻译
+22:50 varna:candy76401820: anime本来就是这样的
+22:50 lh_cat:PS 里面 brush 就叫画刷
+22:51 varna:lh_cat: PS我没用过中文的……
+22:51 varna:说到PS必须黑GIMP
+22:51 varna:什么破手感/UI/滤镜
+22:51 varna:搞个液化不如PS, 还没提供抽出，细致抠图全都得手工补像素
+22:52 xxxxxxxxx:所以你就搞点简单点的图片多好
+22:53 varna:壁纸是胡乱抠的
+22:53 xxxxxxxxx:比如正六边形平铺的壁纸
+22:53 candy76401820:>驼 所以说你那只是对着幼女撸。
+22:53 varna:基本就是选区去色一次曲线然后直接上wand开羽化，4~10px橡皮修边
+22:54 varna:另外没有调整层实在差评
+22:54 varna:candy76401820: 也对着萝莉和少女撸过
+22:54 varna:哦对，还看过北斗神拳……
+22:54 xxxxxxxxx:对着和善的眼神撸过?
+22:54 candy76401820:> 驼 总之你就是个撸。
+22:54 varna:另外PS的wand早就区分连续和不连续区域，GIMP连这个都不做
+22:55 xxxxxxxxx:在用win
+22:55 varna:有一部分场合我甚至被迫手绘套索
+22:55 xxxxxxxxx:单色的正六边形 目测你们要说重口的
+22:55 varna:candy76401820: 还有揉和舔
+22:55 xxxxxxxxx:揉舔撸驼
+22:55 varna:揉脸舔腋撸管
+22:56 candy76401820:> 驼 一回事。
+22:56 varna:这是我的揉舔撸之道
+22:56 varna:candy76401820: 两回事，舔屏幕不会视物模糊，这三天撸下来我真模糊了
+22:56 varna:梵高已退出禽兽行列
+22:56 xxxxxxxxx:hope1^: 我觉得这是对揉牛的侮辱
+22:56 varna:他唵了
+22:57 candy76401820:> 驼 舔会导致屏幕模糊所以一样。
+22:57 varna:hope1^: HOHOHO^
+22:57 varna:candy76401820: 不会的，你看我屏幕上面最多的是可乐渍
+22:58 candy76401820:没舔干净！
+22:58 varna:那里没腋
+22:58 varna:要不要我再发一次恋恋照片，大家跟我一起舔
+22:58 xxxxxxxxx:不用了...
+22:58 varna:恋恋腋形可爱
+22:59 varna:xxxxxxxxx: N O N K E
+22:59 candy76401820:该说那里曾经有腋。
+23:0 varna:所以说你们就是不知道腋的可爱之处
+23:1 varna:腋的法线反向是肩部，沿腋行进则是侧乳
+23:1 varna:位于这连接处的腋部简直就是幻想的十字路口
+23:1 xxxxxxxxx:汗臭味
+23:1 varna:虽然没有露出任何过激的部分，但延伸出来的感觉简直难以名状
+23:2 varna:少女的活泼处就是腋的跃（说）动啊
+23:3 varna:虽然其他部分被洋装遮住，但展露在外的腋部完全就是春夏之交时候女孩子的可爱邀请函
+23:3 xxxxxxxxx:http://www.sc.xinhuanet.com/content/2014-05/12/c_1110644188.htm <- 腋
+23:3 varna:噗
+23:3 varna:木耳退散
+23:3 cleamoon:233333  http://photo1.fanfou.com/n0/0a/mq/vn_109609.jpg
+23:4 varna:hope1^: 以实例来说就是这个 http://www.douban.com/photos/photo/2144863455/
+23:5 varna:仔细体会海棠的腋部吧舔舔
+23:5 candy76401820:↑腋の传教。
+23:6 varna:肩部的小巧构成和腋部的延伸感
+23:6 cleamoon:23333 美国一家上诉法院上周五推翻了一位联邦法官作出的Java API不受版权保护的裁决。Google的Android拷贝了Java API代码，甲骨文起诉Google侵犯版权，联邦法官William Alsup在2012年裁决Java API不受版权保护。但上周五联邦巡回上诉法院裁决，Java API是受版权保护的。Google对此表示，该裁决在计算机科学和软件开发中树立了一个破坏性的
+23:6 cleamoon:先例。甲骨文则表示，这一裁决是依靠版权保护促进创新的软件行业的一次胜利。甲骨文扫描了1500万行Android代码，发现了9行代码是拷贝自Java，这些代码目前已经移除。
+23:6 varna:简直不能再赞啊，画册入手之后就直接开撸了
+23:6 varna:9loc2333
+23:6 candy76401820:9 行里包不包括 public static 什么玩意 main？
+23:7 varna:这时候不该黑ydiff么？
+23:7 candy76401820:没用过所以。
+23:8 varna:王垠必须黑
+23:8 cleamoon:我怀疑包括 }
+23:9 varna:hope1^: 那个Hotate怎么样
+23:10 varna:啊或者说我其实是冲着Hotate和衣玖还有秦223入Black Album 4的
+23:12 xxxxxxxxx:应该不包括吧 不然怎么移除?
+23:12 candy76401820:http://www.acfun.com/v/ac1175008 Linux 高级程序设计
+23:12 candy76401820:↑目测可噗？
+23:13 varna:我看到了cp实现，我笑了
+23:13 xxxxxxxxx:祸害苍生
+23:13 varna:海棠认为画得不如自己可爱……
+23:13 varna:海棠求足浴！海棠捏小手！
+23:13 varna:Hatatatatatatata
+23:14 varna:我就提两个要求
+23:14 varna:其一，cp应当试图考虑空洞
+23:14 varna:其二，大文件别tm崩溃……
+23:15 xxxxxxxxx:解决空洞是某本书的题目来着...
+23:15 varna:上次拼死把那个7.xGB的RA3映像拷来结果还安不上，疼死我了
+23:15 varna:噗，糖果说宿舍停电了
+23:15 varna:hope1^: 没读过
+23:16 varna:我来的时候就三个宿舍没停电，基本都是研狗的
+23:16 varna:结果现在研狗的也停电了2333
+23:17 varna:MCF多少
+23:19 xxxxxxxxx:竟然用M$ Word讲课....
+23:19 varna:\q: https://github.com/lhmouse/MCF
+23:19 xxxxxxxxx:这个队形不太好的样子我就不发了
+23:20 varna:比较鬼畜但可用的实现，除去某些不合我口味的notation
+23:21 varna:另外今天MR神上神犇居然冒泡了，我先拜几下
+23:21 varna:求神犇神通力保我论文收录……
+23:23 xxxxxxxxx:http://www.ecice06.com/CN/article/downloadArticleFile.do?attachType=PDF&id=13818 说到论文我就想到这个
+23:25 varna:\q: 总之容我怒拜一记
+23:26 xxxxxxxxx:http://zh.wikipedia.org/zh-cn/%E6%97%A5%E6%9C%AC%E6%88%90%E4%BA%BA%E9%81%8A%E6%88%B2%E5%BB%A0%E5%95%86%E5%88%97%E8%A1%A8 <- 竟然还有这种页面...
+23:26 T2:sigaction 《 这玩意的初始化能丢进一个函数里么？
+23:26 varna:xxxxxxxxx: 你怎么不看司波达也的页面……
+23:26 varna:T2: 你就是要替几个信号处理函数不是
+23:27 T2:varna, 写在main里丑
+23:27 varna:xxxxxxxxx: 底下一堆「怒草xxx」
+23:27 varna:T2: 没人拦你啊
+23:27 varna:而且写在main里也不丑
+23:27 varna:至少我上来就能看见你踢了哪些默认的处理
+23:27 T2:丢进一个函数哩的话行为依然正常吧？并发完全不懂。
+23:28 xxxxxxxxx:丰功伟业(转自百度) <- 谁编辑的
+23:28 varna:你开始并发了么……
+23:28 T2:不是
+23:28 varna:xxxxxxxxx: 不知道，总之超赞
+23:28 varna:你就执行个函数，不会有什么特别的……想想就知道的
+23:29 T2:https://pastebin.mozilla.org/5139378 差不多这么个意思。
+23:29 xxxxxxxxx:怒草中国战略级魔法师刘云德（这货肯定是刘备X关羽的产物）<- orzzz
+23:29 T2:我终于知道闭包意味着什么了。
+23:29 varna:xxxxxxxxx: 其实根本就没照面
+23:30 xxxxxxxxx:八百里?
+23:30 T2:那我扔进init里可以么？
+23:30 varna:xxxxxxxxx: 小说/横滨事件篇，一发material burst直接连基地八百里了
+23:30 varna:T2: connecting
+23:30 varna:T2: 你说呢
+23:31 T2:\q, API不懂囧。
+23:32 T2:varna, 我觉得不行所以扔进main里了，但是又觉得丑。
+23:32 T2:所以就弄成这样了。
+23:32 varna:你为什么觉得不行
+23:33 varna:另，斩舰向小心别吃SIGPIPE
+23:33 T2:不懂。
+23:33 varna:如果你不替掉SIGPIPE处理也要求syscall忽略
+23:34 T2:我先补下API囧。
+23:34 T2:疼疼疼。
+23:34 varna:你又把自己搞乱了……
+23:34 varna:觉得不行总得给个不行的理由说服自己吧
+23:35 T2:我不确定那玩意是干嘛或者怎么用的。
+23:35 T2:随便抄了个来回收子进程。
+23:36 T2:man了下没看太懂
+23:36 varna:噗
+23:37 T2:我再看看去。
+23:38 varna:你可以认为是比较细致安全的signal
+23:38 T2:嗯
+23:38 varna:典型的改进是信号排队/指定屏蔽
+23:39 T2:完全不懂啊略疼。
+23:39 varna:signal可能丢信号的
+23:39 varna:吐不出来，不过我觉得目前其实不必管SIGCHLD
+23:39 T2:hope1^, 吐核倒没。
+23:39 varna:不会死得很惨，也可能不会死
+23:40 T2:varna, 不管的已经跑成功了所以在改。
+23:40 varna:改改别的地方
+23:40 varna:并发的处理，内存分配，会话层抽象之类的
+23:40 varna:或者索性试用下libev/libevent
+23:40 xxxxxxxxx:http://www.bilibili.tv/video/av1120597/ <- 最近好多撸爆蛋
+23:41 T2:全扔进main里也成功了，所以打算把它扔进某个函数里但是我不确定能不能这么搞就问了。
+23:42 varna:所以你想想为什么会不成功
+23:42 varna:或者说哪里构成差别
+23:42 T2:不可见了。
+23:42 T2:结构体变量本身。
+23:43 T2:虽然大概知道是sigaction(SIGCHLD, &sa, NULL)起作用但是不确认超出生存期会怎样。
+23:43 hope1 joined channel
+23:43 varna:那么我说个如果你真的不知道该怎么办那么相似的情况怎么办的情况
+23:44 varna:sigprocmask(3P)
+23:45 T2:我去看看。
+23:46 varna:另外其实这时候可以诡诈下
+23:46 varna:一个单纯是要求参数打包成结构的API要求参数包持久生存是无理的
+23:47 T2:也对
+23:47 T2:这倒是能想到
+23:47 xxxxxxxxx:最近总觉得键盘有点不好用 或者我手更不协调了....
+23:47 varna:xxxxxxxxx: 你撸多
+23:47 T2:但是什么信号集之类完全没概念所以疼了。
+23:48 T2:先睡了2333
+23:49 varna:HOHOHO^
+23:49 cleamoon:alpako今天下的晚
+23:50 varna:我九点钟才来
+23:50 varna:宿舍现在还在间歇停电中
+23:50 xxxxxxxxx:terrafirmacraft那个mod挺有意思的
+23:50 xxxxxxxxx:比minecraft原版有意思
+23:52 varna:爆
+23:52 xxxxxxxxx:羊驼把正太爆掉了
+23:52 varna:是海棠
+23:52 varna:himeKAITOU HOTate
+23:53 varna:23:12 <@varna> hope1^: 那个Hotate怎么样
+23:53 varna:23:15 <@hope1^> 不如一设
+23:53 xxxxxxxxx:.....
+23:53 varna:^ 对自己的可爱程度超有自信的海棠
+23:53 xxxxxxxxx:难道还有比一设更可怕的设定?
+23:54 varna:明明是海棠照了照镜子
+23:54 varna:看到自己美妙的容姿之后噗了画师
+23:58 xxxxxxxxx:撸爆蛋不看画面 不管他唱了什么还挺好听的....
+23:58 varna:爆

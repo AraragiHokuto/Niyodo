@@ -1,0 +1,87 @@
+01:18 lh_mouse quit:Ping timeout: 264 seconds
+06:34 zhangoke joined channel
+06:39 zhangoke quit:Quit: zhangoke
+08:40 cleamoon__ quit:Quit: Connection closed for inactivity
+09:09 infinite quit:Ping timeout: 256 seconds
+09:12 infinite joined channel
+09:34 lh_mouse joined channel
+10:26 lh_ideapad joined channel
+12:34 lh_ideapad quit:Remote host closed the connection
+12:40 lh_ideapad joined channel
+12:42 lh_not_bot quit:Quit: Lost terminal
+13:05 \s_ quit:Read error: No route to host
+13:07 \s joined channel
+13:31 EZ_Shaw joined channel
+13:56 lh_not_bot joined channel
+14:08 EZ_Shaw quit:Quit: Leaving
+14:18 xhe joined channel
+14:26 \s_ joined channel
+14:28 \s_ quit:Remote host closed the connection
+14:29 \s quit:Read error: No route to host
+14:29 \s__ joined channel
+14:30 \s__ quit:Read error: Connection reset by peer
+14:31 \s joined channel
+14:35 \s quit:Ping timeout: 256 seconds
+14:36 \s_ joined channel
+14:43 \s_ quit:Read error: Connection reset by peer
+14:43 \s joined channel
+14:54 \s quit:Read error: Connection reset by peer
+14:54 \s joined channel
+15:07 \s is now known as \s_
+15:07 xyh joined channel
+15:07 xyh: hi
+15:10 infinite quit:Ping timeout: 240 seconds
+15:11 xyh: 大家说我只写了两周 c++ 唯一的 c++ 代码就是 https://xieyuheng.github.io/jojo/jojo
+15:11 xyh: 现在找 c++ 的工作 靠谱吗?
+15:13 xyh: 哈哈哈 https://www.chikyuuschool.com/thread/view/85789B72A48811E4873468942386B149
+15:14 meowray: No GNU
+15:15 xyh: 代码风格可以改的
+15:15 infinite joined channel
+15:16 meowray: box_map_t 明顯unique_ptr
+15:17 meowray: _t is reserved for POSIX types
+15:18 meowray: http://pubs.opengroup.org/onlinepubs/9699919799/functions/V2_chap02.html
+15:18 meowray: 不過POSIX也不用太當回事的，今天拜訪的一位德高望重FreeBSD committer如是說
+15:18 meowray: (不對，我好像篡改了原文😿
+15:20 meowray: 感覺有種Emacs風味
+15:20 meowray: GNU風格寫Lisp
+15:22 meowray: jojo_repr undefined behavior when empty
+15:22 meowray: jojo_print trailing space難看
+15:23 meowray: cout << "- fatal error : applying non applicable object" << "\n"; // cerr ?
+15:25 meowray: string_o::print -> std::quoted
+15:26 meowray: jojo_t::~jojo_t // delete jo_ptr ????????
+15:27 xyh: >_<
+15:28 xyh: 我改
+15:28 xyh: 宋教授看一眼就这么多问题 >_<
+15:28 xyh: 唉
+15:28 xyh: 我确实还差很远
+15:29 xyh: 但是, 大家有什么 c 和 c++ 的工作推荐吗, 很低的工资 intern 也可以, 我可以睡公司的桌子或者地板.
+15:29 xyh: python, nodejs, elixir 后端也可以
+15:29 xyh: 就快没钱了 T_T
+15:42 xyh: meowray: jojo_t::~jojo_t 里面这么些不对吗?
+15:42 xyh: 因为我定义了额 
+15:42 xyh: using jo_vector_t = vector <jo_t *>;
+15:42 xyh: jojo_t 里面就是保存了一个 jo_vector_t
+15:53 meowray: 施主Lisp業障深重
+15:55 meowray: 之前上海有個clyce也是寫Clojure
+15:56 meowray: 佛在王舍國靈鳥山中，與大弟子衆千二百五十人，菩薩七十二那術，比丘尼五百人，清信士七千人，清信女五百人，欲天子八十萬，色天子七十萬，徧淨天子六十那術，梵天一億，皆隨佛住。神通飛化弟子，名曰知本際賢者、馬師賢者、大力賢者、安詳賢者、能賛賢者、滿願臂賢者、無塵賢者、氏聚迦葉賢者
+15:56 meowray: 、牛呞賢者、上時迦葉賢者、治恆迦葉賢者、金杇坦迦葉賢者、舍利弗賢者、大目揵連賢者、大迦葉賢者、大迦旃延賢者、多睡賢者、大賈師賢者、大瘦短賢者、盈辨子賢者、不爭有無賢者、知宿命賢者、了深定賢者、善來賢者、離越賢者、癡王賢者、氏戒聚賢者、類親賢者、氏梵經賢者、多欲賢者、王宮生
+15:56 meowray: 賢者、告來賢者、氏黑山賢者、經剎利賢者、博聞賢者、仁吉賢者。
+16:18 xyh: 这个人吗 https://github.com/clyce
+16:23 xyh: 我已经绝望了 ...
+16:23 xyh quit:Remote host closed the connection
+16:39 ZhangShurong joined channel
+17:20 geordi quit:Remote host closed the connection
+17:34 geordi joined channel
+17:55 lh_mouse: 看来 meowray 已经快成仙了。
+18:12 FrankHB quit:Remote host closed the connection
+18:13 FrankHB joined channel
+20:32 iyzsong-m joined channel
+20:33 iyzsong-m: _(:з」∠)_
+20:34 whocares_2 joined channel
+20:35 whocares_2_ quit:Ping timeout: 240 seconds
+20:48 zhangoke joined channel
+21:38 lh_ideapad quit:Remote host closed the connection
+21:58 ZhangShurong quit:Quit: Konversation terminated!
+22:11 zhangoke quit:Quit: zhangoke
+23:08 iyzsong-m quit:Remote host closed the connection
+23:39 lh_mouse quit:Ping timeout: 244 seconds

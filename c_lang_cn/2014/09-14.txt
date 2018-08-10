@@ -1,0 +1,318 @@
+00:00:hysw joined channel
+00:11:whocares[1]: wysaid: 问个问题fragment shader输入gl_FragCoord的z和w是怎么算的
+00:33:Helloguy quit:Ping timeout: 246 seconds
+00:34:lhjkkkk quit:Ping timeout: 245 seconds
+00:36:wysaid: 刚才在看动漫
+00:36:cleamoon_: hope1, 这个相当于 |无限集| >= |自然数集|
+00:36:wysaid: 还在么
+00:36:wysaid: whocreas: z就是z值
+00:36:wysaid: w是缩放值
+00:38:lhjkkkk joined channel
+00:39:cleamoon_: hope1, 证明还真没那么容易...
+00:39:wysaid: whocreas[1]: w一般为1.0， z在fragCoord里面为0，突然想起这个： http://www.opengl.org/discussion_boards/showthread.php/164089
+00:41:cleamoon_: 我想的就是构造法，弄一个空集O，从无限集A里随便选一个，再选一个，然后继续，因为A永远选不完，O是可列的，所以O是可列集
+00:42:Helloguy joined channel
+00:43:lhjkkkk quit:Ping timeout: 245 seconds
+00:44:sismvg joined channel
+00:44:sismvg: fork
+00:45:sismvg: 停水了。。没法洗澡
+00:45:code_new quit:Remote host closed the connection
+00:45:jKluolin joined channel
+00:46:cleamoon_: 撸管吧
+00:46:jKluolin quit:Client Quit
+00:49:hysw: -_- 昨天走道里的蒸汽管道漏了
+00:52:lhjkkkk joined channel
+00:53:sismvg: 睡觉都没法睡了
+00:53:Petrus07 quit:Quit: Leaving.
+01:03:lhjkkkk quit:Ping timeout: 240 seconds
+01:04:wysaid quit:Remote host closed the connection
+01:04:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+01:07:whocares[1]: ...
+01:07:whocares[1]: wysaid: 标准里写了xyz都是window coordinates w是clip coordinate  rasterization规则里只找到了xy的 没找到z和w的 chrome的软件实现和A卡测试结果都是线性插值
+01:07:whocares[1] left channel:
+01:15:Plough quit:Quit: 碎叫
+01:18:zzzzzzzzz quit:Quit: Leaving
+01:19:Helloguy quit:Quit: ChatZilla 0.9.90.1 [Firefox 31.0/20140716183446]
+01:20:jKluolin joined channel
+01:24:jKluolin quit:Client Quit
+01:39:whocares_2 quit:Ping timeout: 260 seconds
+03:06:lh_mouse quit:Read error: Connection reset by peer
+03:20:whocares_2 joined channel
+06:11:hope1` joined channel
+06:14:hope1 quit:Remote host closed the connection
+06:20:biergaizi_ joined channel
+06:27:biergaizi quit:*.net *.split
+06:53:cleamoon_ quit:Ping timeout: 246 seconds
+06:53:cleamoon_ joined channel
+08:55:hope1 joined channel
+09:21:sismvg joined channel
+09:27:sismvg: 幸运E发动
+09:27:hope1: cleamoon_, 选择公理？
+09:27:sismvg: 狗币硬分叉，升级不成功
+09:27:sismvg: 19Wdoge丢失。。
+09:27:hope1: 相当于多少RMB?
+09:27:sismvg: 300
+09:32:sismvg: 留了就找不回来啊。。
+09:47:code_new joined channel
+10:12:code_new: 啊啊啊.. 6级的那柯被击沉了
+10:15:hysw: rm -rf *
+10:16:code_new: cd /home/hysw
+10:38:lhjkk joined channel
+10:46:MoeIcenowy joined channel
+11:38:sismvg: 查了block纪录，还好是错误币。。
+11:49:Plough joined channel
+12:15:tth1996 joined channel
+12:16:tth1996 quit:Client Quit
+12:20:hysw: Sleepwalking是个大学霸
+12:21:hope1: 两个现充
+12:21:hysw: Sleepwalking2014-09-14 00:17:21
+12:21:hysw: IB的数学 很大程度和大一重叠的
+12:22:hope1: 非数学系的话差不多吧
+12:22:hysw: Sleepwalking2014-09-14 00:16:05 @学渣-寒雲似雾 是IBDP
+12:58:lhjkk: 两个大线虫
+13:07:lhjkk quit:Ping timeout: 250 seconds
+13:07:lhjkk joined channel
+13:08:lhanjian joined channel
+13:08:lhjkk quit:Read error: Connection reset by peer
+13:13:hope1 quit:Remote host closed the connection
+13:32:libhanjian joined channel
+13:35:lhanjian quit:Ping timeout: 245 seconds
+13:43:FrankHB joined channel
+13:53:Petrus07 joined channel
+14:01:FrankHB quit:Remote host closed the connection
+14:01:FrankHB joined channel
+14:23:hysw quit:Ping timeout: 250 seconds
+14:28:whocares_2_ joined channel
+14:28:FrankHB quit:Read error: Connection reset by peer
+14:29:whocares_2 quit:Ping timeout: 240 seconds
+14:31:FrankHB joined channel
+15:01:MoeIcenowy quit:Ping timeout: 245 seconds
+15:16:MoeIcenowy joined channel
+15:16:MoeIcenowy quit:Read error: Connection reset by peer
+15:45:GODDOG joined channel
+15:50:JQK quit:Remote host closed the connection
+15:50:GODDOG: libhanjian: 闪讯换了光猫 有什么想法没？ 
+15:53:libhanjian: GODDOG, 我没有闪训
+15:57:GODDOG quit:Ping timeout: 246 seconds
+15:59:GODDOG joined channel
+16:01:libhanjian quit:Ping timeout: 272 seconds
+16:01:libhanjian joined channel
+16:01:Petrus07 quit:Ping timeout: 272 seconds
+16:02:Petrus07 joined channel
+16:05:GODDOG quit:Ping timeout: 272 seconds
+16:05:GODDOG_ joined channel
+16:13:SoftRUN joined channel
+16:18:libhanjian quit:Ping timeout: 246 seconds
+16:21:GODDOG_ quit:Quit: leaving
+16:21:code_new quit:Quit: Leaving
+16:23:libhanjian joined channel
+16:28:libhanjian quit:Quit: 风光冉冉东西陌
+16:33:FrankHB quit:Remote host closed the connection
+16:34:FrankHB joined channel
+16:48:GODDOG joined channel
+16:50:blackskygg joined channel
+16:50:blackskygg: 上一次猫一次
+16:50:Plough: 啥浏览器
+16:51:blackskygg: chrome
+16:51:blackskygg: firefox
+16:51:Plough: 用chrome
+16:51:blackskygg: 都这样
+16:52:Plough: 清下缓存
+16:53:blackskygg: 正在尝试
+16:53:blackskygg: 不行
+16:54:Plough: 系统时间对么
+16:54:blackskygg: 不对
+16:54:Plough: 调回去
+16:54:blackskygg: JST吗
+16:54:Plough: 嗯
+16:55:Plough: 然后把时间校准
+16:56:blackskygg: 可以了
+16:56:blackskygg: 谢谢
+16:56:Plough: 没事
+17:04:code_new joined channel
+17:05:code_new: Plough, 我今天沉了两条轻巡..
+17:06:Plough: 什么情况……
+17:06:code_new: 我两次大破出击..
+17:06:Plough: 为啥要大破出击啊
+17:07:code_new: 结果都出事了..
+17:07:Plough: 废话
+17:07:code_new: 因为马上就BOSS了.. 
+17:07:Plough: 然后你就作死了么
+17:07:Plough: 劝退是日常
+17:08:code_new: ><
+17:08:code_new: 明天想再抢一次>《
+17:08:Plough: 玩舰娘千万别对自己的脸太有自信
+17:09:code_new: 看见演习5级的都有航母了..
+17:09:blackskygg quit:Ping timeout: 272 seconds
+17:09:code_new: 最差的是6条重巡》。
+17:09:code_new: 再看看我的..实在太差了
+17:09:Plough: 捞或者赌
+17:09:code_new: 而且我都7级了
+17:10:Plough: 准备好舰队再去
+17:10:Plough: 才7级……
+17:10:code_new: 第一个演习任务我都还没做..
+17:10:Plough: 急什么
+17:11:Plough: 慢慢来
+17:11:Plough: 别作死
+17:11:code_new: 赌船没资源= =
+17:11:blackskygg joined channel
+17:11:code_new: 尤其是燃料
+17:11:Plough: 远征
+17:11:code_new: 远征失败率50%了= =
+17:11:Plough: 资源啥时候都缺，我现在就顶着700油练级呢
+17:11:Plough: ……
+17:11:Plough: 你配置不对吧
+17:12:code_new: 如何配置
+17:12:Plough: 贴吧置顶里有
+17:12:Plough: wiki也有
+17:12:code_new: 好吧..我再去看看
+17:13:code_new: 只注意到他们说满血满燃料弹药
+17:13:GODDOG: Plough 舰娘？
+17:13:Plough: +
+17:13:Plough: 每个远征都有不同的配置要求
+17:14:Plough: 满血我倒不清楚
+17:14:Plough: 我的远征队一般没破我就不修
+17:15:code_new: 前面的倒是都不会破
+17:15:code_new: 一般就消耗弹药燃料
+17:15:Plough: 燃料弹药不满会失败这个我倒是试过
+17:15:code_new: 嗯
+17:27:lh_mouse joined channel
+17:27:blackskygg: 不是说2-4是拿来刷级的吗
+17:27:blackskygg: 怎么个刷法
+17:28:lh_mouse: 哇
+17:29:blackskygg: 擦，夕立被poi成大破了
+17:30:blackskygg: 咦？varna怎么不见了
+17:31:lh_mouse: 被我吃了
+17:31:blackskygg: soga
+17:31:Plough: 北上
+17:31:Plough: 拆
+17:31:lh_mouse: Plough, 揉
+17:32:Plough: lh_mouse: 捏
+17:32:code_new: 1-4还是个坎
+17:32:Plough: 1-4我貌似是三只重巡炸过去的
+17:32:code_new: 2重巡4轻巡不够用
+17:33:code_new: 然后在1-4沉了两条轻巡..
+17:33:Plough: 叫你作死
+17:33:code_new: ><
+17:33:blackskygg: 我记得当时是靠着隼鹰和羽黑，高雄，摩耶过去的
+17:33:Plough: 你是欧洲人不一样
+17:34:Plough: 那时候我就一个水母
+17:34:blackskygg: 水母其实究竟是什么来的
+17:34:blackskygg: 我说的是现实生活着
+17:34:blackskygg: 中
+17:34:blackskygg: 水母是拿来干嘛用的
+17:35:GODDOG quit:Ping timeout: 246 seconds
+17:35:Plough: http://zh.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E6%B0%B4%E4%B8%8A%E9%A3%9B%E6%A9%9F%E6%AF%8D%E8%89%A6
+17:36:blackskygg: soga
+17:36:blackskygg: 原来这才是它的全名
+17:36:Plough: IJN似乎就叫水上机母舰
+17:37:blackskygg: 有需要时可考虑改装成航空母舰
+17:37:blackskygg: 我擦，死定了
+17:37:blackskygg: 迟到了
+17:37:blackskygg: 祝诸君武运昌隆
+17:37:blackskygg: 我先撤了
+17:38:blackskygg quit:Quit: Leaving.
+17:44:SoftRUN quit:Quit: 离开
+17:48:GODDOG joined channel
+17:53:condy joined channel
+18:17:condy: geordi: { cout << __builtin_clz(0x1); }
+18:17:geordi: 31
+18:17:condy: geordi: { cout << __builtin_clz(0); }
+18:17:geordi: 32
+18:18:condy: geordi: { cout << __builtin_clz(0x7fffffff); }
+18:18:geordi: 1
+18:23:lh_mouse: clz(0) 是 UB
+18:23:iyzsong joined channel
+18:27:condy: 刚看到。。。
+18:27:condy: geordi: << __builtin_ctz(0x7ffffff0)
+18:27:geordi: 4
+18:31:biergaizi quit:Quit: Konversation terminated!
+18:53:whocares_2 joined channel
+18:54:whocares_2_ quit:Ping timeout: 246 seconds
+19:13:ZedFire joined channel
+19:17:ZedFire quit:Client Quit
+19:25:whocares_2_ joined channel
+19:26:whocares_2 quit:Ping timeout: 245 seconds
+19:28:zzzzzzzz joined channel
+19:29:ZedFire_ joined channel
+19:40:SoftRUN joined channel
+19:42:iyzsong quit:Remote host closed the connection
+19:44:SoftRUN quit:Client Quit
+19:58:whocares_2_ quit:Ping timeout: 245 seconds
+19:59:whocares_2 joined channel
+20:07:lh_mouse: geordi, { } unique_ptr<struct undefined> p;
+20:07:geordi: error: invalid application of 'sizeof' to incomplete type 'undefined'
+20:07:lh_mouse: geordi, { } vector<struct undefined> p;
+20:07:geordi: error: invalid use of incomplete type 'struct undefined'
+20:07:lh_mouse: geordi, { } extern unique_ptr<struct undefined> p;
+20:07:geordi: <no output>
+20:07:lh_mouse: geordi, { } vector<typename undefined> p;
+20:07:geordi: error: template argument 1 is invalid
+20:07:lh_mouse: geordi, { } extern unique_ptr<struct undefined> p;
+20:07:geordi: <no output>
+20:07:lh_mouse: geordi, { } extern unique_ptr<typename undefined> p;
+20:07:geordi: error: template argument 1 is invalid
+20:11:lh_mouse: geordi, << (********************************foo)(); int foo(){ return 1234; }
+20:11:geordi: 1234
+20:13:blackskygg joined channel
+20:40:lh_mouse: 0 0
+20:46:sismvg: http://www.ithome.com/html/it/103300.htm
+20:46:sismvg: 。。他们有想过看简历的人是中国人的问题吗？
+20:48:sismvg: http://item.taobao.com/item.htm?spm=a230r.1.1997525049.3.OX6Bem&id=16550564037
+20:48:sismvg: 快看评论！
+20:48:sismvg: 太刁了
+20:49:hoxily` joined channel
+21:00:condy: ...
+21:00:blackskygg: 什么心态
+21:00:condy: sismvg: 无亮点。。
+21:00:blackskygg: 你是怎么发现的
+21:01:Petrus07 quit:Ping timeout: 245 seconds
+21:01:sismvg: 我想看到这个评论能活到什么时候
+21:01:Plough: 链接NSFW注意
+21:01:sismvg: a ..忘打了。。sorry
+21:04:lh_mouse: 这频道越来越奇怪了
+21:04:lh_mouse: 而且我对 sismvg 的×取向严重关切
+21:04:sismvg: http://i-ab.com/2432/
+21:04:lh_mouse: 关切（guan wo pi shi）
+21:07:sismvg: http://i-ab.com/434/
+21:07:sismvg: 高中生的时间
+21:11:condy: geordi: { auto fn = f<int>(10); cout << fn(10) } template<typename T> auto f() { return [](T x) { return x + x; }; }
+21:11:geordi: error: no matching function for call to 'f(int)'
+21:11:condy: geordi: { auto fn = f<int>(10); cout << fn(10) } template<typename T> auto f(T) { return [](T x) { return x + x; }; }
+21:11:geordi: error: expected ';' before '}' token
+21:11:condy: geordi: { auto fn = f<int>(10); cout << fn(10); } template<typename T> auto f(T) { return [](T x) { return x + x; }; }
+21:11:geordi: 20
+21:12:condy: geordi: erase <int>
+21:12:geordi: 20
+21:23:blackskygg quit:Quit: Bye
+21:30:admshanshuo joined channel
+21:32:hoxily_ joined channel
+21:34:admshanshuo quit:Quit: leaving
+21:36:admshanshuo joined channel
+21:38:hoxily_ quit:Ping timeout: 245 seconds
+21:40:hoxily_ joined channel
+21:51:admshanshuo quit:Quit: Lost terminal
+22:08:Petrus07 joined channel
+22:16:hoxily_ quit:Ping timeout: 250 seconds
+22:17:hoxily` joined channel
+22:23:w15tp joined channel
+22:25:condy quit:Ping timeout: 272 seconds
+22:37:w15tp: 这么晚了。
+22:41:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+22:46:condy joined channel
+22:51:w15tp quit:Quit: w15tp
+22:55:Plough quit:Remote host closed the connection
+23:06:condy quit:Ping timeout: 260 seconds
+23:08:condy joined channel
+23:17:hoxily_ joined channel
+23:19:cleamoon__ joined channel
+23:24:cleamoon_ quit:Ping timeout: 246 seconds
+23:24:FrankHB quit:Ping timeout: 246 seconds
+23:24:code_new quit:Ping timeout: 246 seconds
+23:31:wysaid joined channel
+23:32:MoeIcenowy joined channel
+23:33:MoeIcenowy quit:Read error: Connection reset by peer
+23:33:MoeIcenowy joined channel
+23:39:GODDOG quit:Remote host closed the connection
+23:39:FrankHB joined channel
+23:44:wysaid quit:Remote host closed the connection

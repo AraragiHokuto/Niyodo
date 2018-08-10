@@ -1,0 +1,178 @@
+00:31 varna: 看到一个签名： throw table_exception("(ノ ゜Д゜)ノ ︵ ┻━┻"); 
+00:32 cleamoon: 23333333
+00:33 Mokou: 2333333
+00:33 Mokou: 不该是throw table么
+00:33 varna: throw ]                                       
+00:33 varna: [#c_lang_cn] throw 
+00:33 Mokou: 或者 exception_type table; throw table;
+00:33 varna: 噫
+00:34 varna: throw （ノ゜Д゜）ノ︵┻━┻;
+00:34 varna: 这个应该是可以的？
+00:34 cleamoon: 不可以吧...
+00:34 Mokou: 编译器兹慈的话应该就可以？
+00:34 Mokou: #define throw （ノ゜Д゜）ノ
+00:34 varna: 不太清楚C艹的标识符怎么限制的
+00:35 Mokou: （ノ゜Д゜）ノ︵┻━┻;
+00:35 Mokou: 啊，反过来
+00:35 varna: ^ 这人稀里糊涂的
+00:35 yimis joined channel
+00:35 varna: 测一坨_Generic就睡觉
+00:35 Mokou: 粪标准爆破，请
+00:37 yimis quit:Client Quit
+00:47 varna quit:Quit: leaving
+01:04 hoxily joined channel
+01:05 hoxily quit:Client Quit
+01:17 cleamoon quit:Ping timeout: 244 seconds
+01:27 \f quit:*.net *.split
+01:27 condy quit:*.net *.split
+01:31 condy joined channel
+01:35 Mokou quit:Quit: Lost terminal
+01:35 cleamoon joined channel
+01:48 \f joined channel
+01:48 \f is now known as Guest50978
+01:54 Guest50978 quit:Changing host
+01:54 Guest50978 joined channel
+01:55 Guest50978 is now known as Flandre
+01:55 Flandre is now known as Flandre_
+02:18 StardustX quit:Quit: Leaving
+02:26 Meow-J quit:Ping timeout: 244 seconds
+03:23 condy quit:Ping timeout: 250 seconds
+03:24 condy joined channel
+03:27 cleamoon quit:Ping timeout: 272 seconds
+04:01 cleamoon joined channel
+05:04 Taggnostr quit:Ping timeout: 265 seconds
+05:06 Taggnostr joined channel
+06:51 cleamoon quit:Ping timeout: 244 seconds
+07:59 FrankHB quit:Ping timeout: 272 seconds
+08:08 Youmu quit:Quit: Connection closed for inactivity
+08:27 Mokou joined channel
+08:31 cnbleu` joined channel
+08:32 cnbleu` is now known as cnbleu
+08:33 cnbleu: 太阳当空照，花儿对我笑。
+08:39 iyzsong-xx joined channel
+08:41 FrankHB joined channel
+08:43 cnbleu` joined channel
+08:45 cnbleu quit:Ping timeout: 255 seconds
+08:49 iyzsong-xx: - -
+08:54 lh_mouse joined channel
+09:07 Mokou: geordi: << sizeof(std::atomic<uint32_t>)
+09:07 geordi: 4
+09:15 cnbleu`` joined channel
+09:15 cnbleu`` is now known as cnbleu
+09:16 cnbleu: :)
+09:16 cnbleu` quit:Ping timeout: 240 seconds
+09:35 Mokou: http://ww3.sinaimg.cn/mw690/ab83f60djw1f7xyx4rjb5j20dw0iigni.jpg
+10:44 lh_mouse quit:Read error: Connection reset by peer
+10:44 lh_mouse joined channel
+10:47 lh_mouse: geordi: << sizeof(std::atomic<long double>)
+10:47 geordi: 16
+10:48 lh_mouse: geordi: << sizeof(std::atomic<k>); struct k { char [20]; }
+10:48 geordi: error: expected unqualified-id before '[' token
+10:48 lh_mouse: geordi: << sizeof(std::atomic<k>); struct k { char [20]; };
+10:48 geordi: Same error.
+10:48 lh_mouse: geordi: << sizeof(std::atomic<k>); struct k { char a[20]; };
+10:48 geordi: 20
+10:48 lh_mouse: geordi: << sizeof(std::atomic<k>); struct k { char a[40]; };
+10:48 geordi: 40
+11:11 Taggnostr quit:Ping timeout: 244 seconds
+11:14 xiaojunyu joined channel
+11:24 iyzsong-xx: = =
+11:48 cnbleu quit:Ping timeout: 276 seconds
+12:05 cnbleu joined channel
+12:09 cnbleu: 发生了什么事情？
+12:09 lh_mouse: 没事情。
+12:11 cnbleu: lh_mouse: 你好
+12:11 cnbleu: :)
+12:12 cnbleu: geordi: << sizeof(std::atomic<k>); struct k { char a[100]; };
+12:12 geordi: 100
+12:12 cnbleu: wow~
+12:12 * lh_mouse slaps cnbleu around a bit with a large trout
+12:13 cnbleu: 额。。
+12:27 cnbleu quit:Ping timeout: 265 seconds
+12:40 iyzsong-xx: x.x
+13:07 cnbleu joined channel
+13:49 xiaojunyu quit:Ping timeout: 250 seconds
+13:50 xiaojunyu joined channel
+13:50 xiaojunyu is now known as Guest70718
+13:56 l0nGYear_Sync joined channel
+13:56 l0nGYear_Sync quit:Remote host closed the connection
+13:57 StardustX joined channel
+14:00 burncode joined channel
+14:01 LastAvengers joined channel
+14:10 burncode quit:Remote host closed the connection
+14:16 Taggnostr joined channel
+15:27 cnbleu quit:Ping timeout: 255 seconds
+15:49 cleamoon joined channel
+16:06 cleamoon quit:Ping timeout: 244 seconds
+16:07 cleamoon joined channel
+16:07 cnbleu joined channel
+16:14 geordi quit:Ping timeout: 244 seconds
+16:16 geordi joined channel
+16:21 cnbleu quit:Ping timeout: 272 seconds
+16:24 cnbleu joined channel
+16:44 cnbleu quit:Ping timeout: 265 seconds
+16:45 cnbleu joined channel
+17:04 Guest70718 quit:Quit: leaving
+17:47 cleamoon quit:Ping timeout: 264 seconds
+17:48 cnbleu quit:Ping timeout: 240 seconds
+17:56 geordi quit:Ping timeout: 244 seconds
+17:57 geordi joined channel
+17:58 cleamoon joined channel
+17:58 LastAvengers quit:Quit: Srain0.05-git@0.361.1ef7703 close.
+18:01 iyzsong-xx quit:Read error: Connection reset by peer
+18:16 cnbleu joined channel
+18:19 lh_mouse: geordi, << (void *)__CTOR_LIST__; extern char __CTOR_LIST__[];
+18:19 geordi: 0x5d1100
+18:19 lh_mouse: geordi, << (void *)__CTOR_LIST__; extern char __CTOR_LIST__[];
+18:19 geordi: 0x5d1100
+18:19 lh_mouse: geordi, << (void *)__DTOR_LIST__; extern char __CTOR_LIST__[];
+18:19 geordi: error: '__DTOR_LIST__' was not declared in this scope
+18:19 lh_mouse: geordi, << (void *)__DTOR_LIST__; extern char __DTOR_LIST__[];
+18:19 geordi: 0x5d1110
+18:28 LastAvengers joined channel
+18:43 cleamooon joined channel
+18:44 cleamoon quit:Ping timeout: 260 seconds
+18:55 FrankHB quit:Ping timeout: 260 seconds
+19:00 cnbleu quit:Ping timeout: 244 seconds
+19:05 hoxily joined channel
+19:06 cnbleu joined channel
+19:11 iyzsong joined channel
+19:12 cnbleu quit:Ping timeout: 248 seconds
+19:13 iyzsong quit:Changing host
+19:13 iyzsong joined channel
+19:15 iyzsong: (┙>∧<)┙へ┻┻
+19:21 FrankHB joined channel
+19:21 hoxily quit:Quit: Leaving
+19:23 cleamooon quit:Read error: Connection reset by peer
+19:37 lh_cat joined channel
+19:41 iyzsong quit:Ping timeout: 244 seconds
+19:44 LastAvengers quit:Quit: Srain0.05-git@0.361.1ef7703 close.
+19:45 LastAvengers joined channel
+19:46 iyzsong joined channel
+19:53 iyzsong quit:Ping timeout: 255 seconds
+19:53 whocares_2_ quit:Ping timeout: 244 seconds
+19:53 whocares_2 joined channel
+19:58 iyzsong joined channel
+20:32 iyzsong quit:Read error: Connection reset by peer
+20:40 iyzsong joined channel
+20:46 LastAvengers quit:Quit: Srain0.05-git@0.361.1ef7703 close.
+20:46 LastAvengers joined channel
+20:52 yimis joined channel
+20:54 lh_not_bot quit:Ping timeout: 244 seconds
+20:55 lh_not_bot joined channel
+21:00 cnbleu joined channel
+21:03 iyzsong: 啊 -
+21:08 cleamoon joined channel
+21:09 cleamoon: letscorp: 在华盛顿军缩谈判时，山本五十六给咖啡加很多糖，同行者问：“你很爱吃甜食吗？”，他回答：“我要尽可能消耗（敌国）美国的物资”。 #开水龙头抗日的精神祖宗
+21:12 yimis quit:Quit: yimis
+21:20 LastAvengers quit:Quit: Srain0.05-git@0.361.1ef7703 close.
+21:22 iyzsong: (｢・ω・)｢
+21:34 Youmu joined channel
+21:50 cnbleu quit:Read error: Connection reset by peer
+22:26 LastAvengers joined channel
+22:55 LastAvengers quit:Ping timeout: 240 seconds
+22:55 iyzsong quit:Ping timeout: 244 seconds
+22:56 LastAvengers joined channel
+23:01 iyzsong joined channel
+23:18 iyzsong quit:Quit: bye.
+23:42 lh_cat quit:Quit: Connection closed for inactivity

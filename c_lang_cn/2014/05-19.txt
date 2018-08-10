@@ -1,0 +1,707 @@
+0:0 cleamoon:刚什么用中文菜单
+0:2 cleamoon:干什么
+0:4 T3rmin4t0r_ joined channel
+0:5 cleamoon:......
+0:10 lh_cat:geordi, { foo f; int (foo::*p1) = &f.i; } struct foo { int i; double d; };
+0:10 geordi:error: cannot convert 'int*' to 'int foo::*' in initialization
+0:10 lh_cat:geordi, { int (foo::*p1) = &foo::i; } struct foo { int i; double d; };
+0:10 geordi:warning: unused variable 'p1'
+0:10 lh_cat:geordi, -w { void (foo::*p1) = &foo::i; } struct foo { int i; double d; };
+0:10 geordi:error: cannot declare pointer to 'void' member
+0:11 lh_cat:geordi, -w { auto p = (char foo::*)&foo::i; } struct foo { int i; double d; };
+0:11 geordi:<no output>
+0:12 lh_cat:geordi, { bar foo::*p = &foo::bar; } struct foo { int i; }; struct bar : foo { double d; };
+0:12 geordi:error: 'bar' is not a member of 'foo'
+0:12 lh_cat:geordi, { bar foo::*p = &foo::bar; } struct bar { int i; }; struct foo : bar { double d; };
+0:12 geordi:error: expected primary-expression before ';' token
+0:13 lh_cat:geordi, {  } struct bar { int i; }; struct foo : bar { double d; };
+0:13 geordi:<no output>
+0:13 lh_cat:geordi, { auto p = (bar foo::*)&foo::bar; } struct bar { int i; }; struct foo : bar { double d; };
+0:13 geordi:error: expected primary-expression before ';' token
+0:33 xxxxxxxxx:http://imgsrc.baidu.com/forum/pic/item/56f6e6cd7b899e515c3021e640a7d933c9950d95.jpg
+0:34 T2:先睡了嗯，晚安minna酱。
+0:54 xxxxxxxxx:http://tieba.baidu.com/p/3050929132 7L高能
+0:55 xxxxxxxxx:9L继续刚能
+0:55 xxxxxxxxx:高能
+1:4 boosure joined channel
+1:6 T3rmin4t0r_ joined channel
+1:33 T3rmin4t0r_ joined channel
+1:59 cleamoon:基王也要加入炒 饭爱丽丝药娘团吗
+2:0 hoxily joined channel
+2:0 zzzzzzzz joined channel
+2:12 *xxxxxxxxx 不讨厌络腮胡子 对药物之类的也没什么好感...
+2:20 hysw joined channel
+2:27 hysw joined channel
+2:28 hysw:奇怪的ethernet
+2:29 hysw:Electrical Shutdown < 靠...
+2:59 boosure joined channel
+2:59 boosure joined channel
+3:33 cleamoon:喜闻乐见
+3:33 hysw:In order for the contractor to remove existing cable and install new breaker and cable at the main 600V switchboard of UC substation for the Field Hockey lighting...
+3:33 hysw:被坑了...
+3:42 boosure joined channel
+3:47 cleamoon:233
+4:0 xxxxxxxxx:http://demo.benihata.org/ <- 现在这个安排你们不觉得很好么
+4:2 boosure joined channel
+4:20 cleamoon:css都没了...
+4:21 hysw:那群家伙还没有重启交换机么...
+4:56 hysw:ruby连个可用的标准文档都没有....
+5:11 cleamoon:我估计是rtfsc？
+5:12 hysw:我才懒得rtfsc某个语言...
+5:15 cleamoon:ruby其实会了block，其他的随便写就好了
+5:16 hysw:block就是个坑
+5:16 cleamoon:反正我觉得你不会拿这个写超大程序
+5:16 cleamoon:坑+
+5:16 hysw:貌似就是大型的...
+5:17 cleamoon:...你要干什么
+5:17 hysw:http://www.markusproject.org/ < 这货
+5:18 cleamoon:...作业？
+5:19 hysw:拿来玩玩...
+5:20 hysw:计算机系参与的某个project
+5:24 boosure joined channel
+5:24 boosure joined channel
+6:2 cleamoon:你不能说我自己拿c艹写一个...
+6:6 hysw joined channel
+6:19 randomclown joined channel
+6:33 boosure joined channel
+6:39 beefcafe joined channel
+8:8 condy joined channel
+8:27 boosure joined channel
+8:48 boosure joined channel
+9:5 boosure joined channel
+9:7 lh_mouse joined channel
+9:42 lh_mouse:geordi, <<typeid(foo::i).name(); struct foo { int i; };
+9:42 geordi:error: invalid use of non-static data member 'foo::i'
+9:42 lh_mouse:geordi, <<typeid(decltype(foo::i)).name(); struct foo { int i; };
+9:42 geordi:int
+9:49 lh_mouse:geordi, { foo().bar(); } struct foo { int i; void bar(){ cout << typeid(decltype(i)).name(); } };
+9:49 geordi:int
+9:56 silencly07 joined channel
+10:5 richselian joined channel
+10:10 hysw:richselian: 把智商交出来
+10:11 hope1 joined channel
+10:11 hysw:hope1: 把智商交出来
+10:13 richselian:hysw: 噗
+10:14 hysw:richselian: 把智商交出来
+10:19 slowcoach joined channel
+10:34 xxxxxxxx joined channel
+10:39 T2 joined channel
+10:49 hysw joined channel
+11:8 code_new joined channel
+11:15 iyzsong joined channel
+11:22 hysw:为什么认识一大堆去IOI的家伙
+11:22 hysw:我太弱了...
+11:23 iyzsong:-o-
+11:24 hysw:http://tieba.baidu.com/home/main/?un=zzh8829 < 这家伙...
+11:30 xxxxxxxx:你直接发id不就好了....
+11:31 hysw:对大部分人而言不是脸熟党...
+11:32 hysw:网络突然断了一下... 什么情况...
+11:34 slowcoach:= =
+11:35 beefcafe:hysw: 没情况
+11:35 xxxxxxxx:google首页....
+11:35 condy joined channel
+11:35 beefcafe:首页怎么了
+11:35 beefcafe:没动静啊
+11:36 xxxxxxxx:http://news.mydrivers.com/1/305/305013.htm
+11:37 xxxxxxxx:吗的！还让不让人活了，当官的都找真人干了，还不让屌丝看！还特么有没有王法了！ <- 好逗乐啊
+11:37 beefcafe:我怎么没有
+11:38 beefcafe:哦，要。hk的阿
+11:38 xxxxxxxx:uk也是啊
+11:39 xxxxxxxx:http://news.mydrivers.com/1/304/304849.htm 哈哈哈哈
+11:39 beefcafe:.com还没有
+11:40 beefcafe:国产？哪个？
+11:40 beefcafe:lol
+11:43 xxxxxxxx:2012年共发现111个微软操作系统的漏洞，涉及到“XP”、“Win7”、“Win8”分别为84、94、54个。由此可见，“Win7”的脆弱性比“XP”还弱
+11:44 beefcafe:发现0个国产漏洞
+11:44 beefcafe:因为压根没人关心
+11:45 xxxxxxxx:http://www.most.gov.cn/ztzl/863cj/863cjxxjs/200612/t20061229_39308.htm <- 银河麒麟
+11:46 code_new:8据说XP是史上做得最出色的操作系统
+11:46 beefcafe:麒麟不是linux核心么
+11:46 beefcafe:换个皮也算国产？
+11:46 xxxxxxxx:^该系统已通过了自由标准组织（Free Standards Group）Linux标准基（Linux Standard Base）认证，同时在国内率先通过了公安部等有关部门的安全认证。
+11:46 xxxxxxxx:beefcafe: 你不能说不算国产只能说他们吹过了
+11:47 xxxxxxxx:“银河麒麟”操作系统由自主研发的基本内核层和基于FreeBSD改造的系统服务层组成，是一个拥有层次式内核、安全等级达到结构化保护级、能支持多种微处理器和多种计算机体系结构，并与Linux目标代码兼容的国产服务器操作系统。 <- bsd党的耻辱23333
+11:47 beefcafe:那我自己编译的，我还自产呢
+11:48 xxxxxxxx:所以其实天朝做的只是系统部件 但是总是要说自己产系统了
+11:48 beefcafe:再说软件国产，那硬件呢
+11:48 beefcafe:别说mips核心的龙芯也算
+11:48 xxxxxxxx:不过发行版级别的话也能说是天朝产的发行版之类的
+11:49 beefcafe:老外的系统不放心啊，谁知道x86实际制造时有没有后门
+11:49 xxxxxxxx:造了又能怎么样...
+11:49 beefcafe:会造成纸牌成绩泄露！
+11:53 hysw:那群家伙还不如去用L4Linux呢...
+12:3 hysw:貌似明天放假...
+12:3 hysw:悲剧了...
+12:5 xxxxxxxx:我觉得还是媒体烦人 直接拿来改也不是什么坏主意
+12:36 hope1 joined channel
+12:37 xxxxxxxx:https://lh3.googleusercontent.com/-nTFxCosW3yU/U3leXEwAXaI/AAAAAAAAFUA/FRNpY2KsHGM/w1024-h768-no/Screenshot+from+2014-05-19+09%253A27%253A13.png 不科学
+12:46 hope1 joined channel
+12:46 hysw:Ubuntu的稳定性...
+12:46 xxxxxxxx:arch的稳定性
+12:46 hysw:Debian stable的落后程度...
+12:47 code_new:中枪。。
+12:47 hysw:貌似Arch比Ubuntu稳定性好不少...
+12:47 xxxxxxxx:怎么比的?
+12:48 hysw:Ubuntu user的各种悲剧...
+12:48 hysw:大概敢用Arch的都还有点修电脑的能力...
+13:6 zzzzzzzz joined channel
+13:9 Zirx joined channel
+13:9 xxxxxxxx:这不是说明arch用户更容易遇到问题么...
+13:10 hysw:ubuntu用户遇到问题之后就没法解决了...
+13:10 zzzzzzzz:1在2讨3论4什5么6？
+13:11 xxxxxxxx:https://lh3.googleusercontent.com/-nTFxCosW3yU/U3leXEwAXaI/AAAAAAAAFUA/FRNpY2KsHGM/w1024-h768-no/Screenshot+from+2014-05-19+09%253A27%253A13.png <- 这个图
+13:11 xxxxxxxx:用arch当服务器的作死党
+13:12 zzzzzzzz:7=.=
+13:12 xxxxxxxx:另外参与的群众对gentoo还是很理智的
+13:13 hysw:04-_-
+13:14 zzzzzzzz:8理0.9智
+13:15 hysw:00-_- 15-_- 14-_- 01-_-
+13:16 xxxxxxxx:程序员 并不能算了不起的 撑死了是个翻译器而已 如果没有做硬件 那群人干出来 基本上就没有突破
+13:16 xxxxxxxx:^orz
+13:17 hysw:'做'硬件的...
+13:17 hysw:那群家伙不就是把逻辑翻译成电路么...
+13:18 zzzzzzzz:程序员，硬件....
+13:22 hysw:绝对不能相信被软工淘汰的家伙...
+13:29 xxxxxxxx:https://github.com/exvim/main
+13:49 iyzsong:(\(-_-)/)
+13:56 lh_mouse:geordi, { foo<string>::bark(); } template<typename C, typename B = void> struct foo { static void bark(){ cout <<"doesn't begin()!"; } }; template<typename C> struct foo<C, decltype(begin(declval<C>())> { static void bark(){ cout <<"has begin()!"; } };
+13:56 geordi:error: Unexpected end of request. Expected ')' or balanced code.
+13:56 lh_mouse:geordi, { foo<string>::bark(); } template<typename C, typename B = void> struct foo { static void bark(){ cout <<"doesn't begin()!"; } }; template<typename C> struct foo<C, decltype(begin(declval<C>()))> { static void bark(){ cout <<"has begin()!"; } };
+13:56 geordi:doesn't begin()!
+13:57 lh_mouse:geordi, remove = void
+13:57 geordi:error: wrong number of template arguments (1, should be 2)
+13:58 wsyh joined channel
+14:1 wsyh joined channel
+14:2 hysw:为什么ethernet还是没法用...
+14:14 slowcoach joined channel
+14:17 hysw:rsync这种奇葩...
+14:21 condy:一直用rsync当cp用。
+14:34 condy:iyzsong又增加了一个表情。(\(-_-)/)
+14:34 condy:23333
+14:34 hysw:...
+14:35 hysw:重新整理一下文件树，然后rsync一下...
+14:39 condy:文件都在本地存着。。
+14:40 hysw:两台电脑间冗余备份...
+14:40 condy:土豪。
+14:41 zzzzzzzz:壕
+14:42 condy:壕 >>> 这个字读音是什么啊！？？
+14:42 hysw:总不至于每天拿这一台4年以前重的要死的笔记本去上课吧...
+14:43 xxxxxxxx:壕沟
+14:51 zzzzzzzz:战壕
+14:52 condy:战5渣本来了。
+14:53 condy:玩个辉针城风扇直转。
+14:54 sheyu joined channel
+15:2 wsyh joined channel
+15:44 T2 joined channel
+15:45 hysw:lag: 4s...
+15:51 T3rmin4t0r_:Lag: 0.37 Last checked 0 mins 25secs ago
+15:55 T3rmin4t0r_:Mistakenly believing one of them to be gay, two homophobes attack each other on Rustaveli Ave..
+16:3 hysw:lag: 89ms...
+16:18 hysw:http://tieba.baidu.com/p/3053083850 < 差点想让这家伙到早稻田去...
+16:18 code_new joined channel
+16:18 hysw:code_new: 把智商交出来
+16:19 code_new:hysw, 智商已为负
+16:32 lh_mouse joined channel
+16:39 lh_mouse:geordi, << TYPE((void)s.resize()); std::string s;
+16:39 geordi:error: no matching function for call to 'string::resize()'
+16:39 lh_mouse:geordi, << TYPE((void)s.resize(0)); std::string s;
+16:39 geordi:rvalue void
+17:3 endle joined channel
+17:12 khysw joined channel
+17:45 richselian joined channel
+17:48 cleamoon joined channel
+17:50 richselian:疼
+18:40 Plough joined channel
+18:42 FrankHB joined channel
+18:47 T2:geordi, << TYPE((void *)0)
+18:48 geordi:rvalue void*
+18:49 cleamoon:TYPE是什么操作符？
+18:49 T2:decltype?
+18:49 cleamoon:自带的？
+18:49 T2:c艹11自带
+18:50 T2:c的话gcc有扩展typeof()
+18:50 T2:不过似乎功能不太一样。
+18:50 T2:跟这个TYOE
+18:50 T2:TYPE
+18:54 hope1:geordi自带的吧
+18:55 T2:hope1, 似乎是。
+18:57 T2:贴吧果然无法兼容orz
+18:59 sismvg joined channel
+19:4 zzzzzzzz joined channel
+19:6 FrankHB:自带？估计也就是当参数重载了调用typeid cxxabi __demangle之类的。
+19:10 T2:FrankHB, 这倒不知道
+19:13 T2:不过似乎暂时没需求，除了写调试器可能会用也想不出别的需求了。
+19:13 cleamoon:耻球把g艹的代码看了一遍？
+19:14 T2:cleamoon, 他不一定能干出什么变态事情，毕竟是耻球。
+19:14 lh_mouse:google libdemangle
+19:16 T2:lh_mouse, 3Q
+19:16 cleamoon: libdemangle: This library is used for demangling C++ mangled names.
+19:20 T2:我还是先去看点书撸一下揉程2333
+19:27 condy1 joined channel
+19:28 T2:似乎不看点汇编没法玩下去了。
+19:28 T2:lh_mouse, 特权指令是什么概念？
+19:29 T2:Privilege instructions
+19:32 lh_mouse:T2, 就是当前特权及不允许执行的指令   例如 RING3 访问 Io
+19:33 lh_mouse:https://github.com/lhmouse/MCF/blob/master/Projects/Test2/main.cpp  太难看了
+19:33 T2:lh_mouse, soga
+19:34 T2:PSW 里的 Instruction address 和 PC 的内容一样么？
+19:35 T2:wiki上看来似乎是一样的。
+19:35 T2:然后意义不明
+19:36 T2:hope1, wiki 上的 program status word 好短。
+19:37 T2:Although certain fields within the PSW may be tested or set by using non-privileged instructions, testing or setting the remaining fields may only be accomplished by using privileged instructions.
+19:37 T2:In the present instances of the architecture (z/Architecture), the instruction address is 64 bits and the PSW itself is 128 bits.
+19:38 T2:然后 instruction address 直接 redirect 到了 pc 寄存器上。
+19:39 T2:疼，我去补汇编卧槽槽槽槽
+19:40 T2:主要那玩意实在疼
+19:40 T2:有那么多有趣的事情可以干。
+19:40 T2:干嘛跟体系结构过不去。
+19:40 T2:我这不是正在干么。
+19:41 T2:干又到汇编上了。
+19:41 T2:擦类TMD
+19:41 T2:似乎是绕不开了。
+19:42 T2:先撸个揉程。
+19:42 T2:撸不下去再议
+19:42 xxxxxxxx:上次那啥呢?
+19:43 T2:xxxxxxxx, 撸完了。
+19:44 T2:xxxxxxxx,  https://pastebin.mozilla.org/5183630   https://pastebin.mozilla.org/5184218   https://pastebin.mozilla.org/5183635   https://pastebin.mozilla.org/5183637 
+19:45 T2:gcc 4.9 & clang 3.4 均编译通过，valgrind 3.9 检测通过，逻辑似乎也没什么槽点，行为也很确定。
+19:45 lh_mouse:hope1, 不一定
+19:46 lh_mouse:PC 又不一定按字节寻址   等长指令的通常就不这么干
+19:47 T2: lh_mouse 圆来乳此
+19:49 T2:我去艹了罗云斌
+19:54 T2:Interrupt mask 居然能 redirect 到 interrupt 上，我特么对 wiki 已经失去信心了。
+19:57 sismvg:终于拿到offer了。。
+19:58 sismvg:结果要学历证书，这时我才发现我还差半年毕业。。。
+19:58 sismvg:某手游公司
+19:58 T2:卧槽，你们谁有CSDN积分？
+19:59 sismvg:不过要是这周百度实习生一面来了肿么办
+19:59 T2:http://download.csdn.net/download/litomboy/2678358?ticket=ST-11111-fuaZcU2MkoidhyYJ7HMb-passport.csdn.net 求个这。
+19:59 sismvg:上谷歌不就好了
+19:59 T2:注册居然不给下载积分卧槽他妈
+20:0 endle:T2, 留邮箱
+20:0 sismvg:删帖
+20:0 T2:listprocessor@sina.com
+20:0 T2:endle, 好人一生平安 2333
+20:2 T2:hope1, 疼啊疼
+20:2 endle:正在上传
+20:2 endle:附件好大
+20:2 sismvg:想要面试的时候不来，然后准备专心撸AI了以后一大堆面试来了。。。
+20:2 T2:endle, 3Q么么哒
+20:2 T2:sismvg, 又是一年毕业季
+20:3 sismvg:我以为我毕业了，结果还差八年
+20:3 sismvg:半年
+20:3 sismvg:我该怎么和老板说呢
+20:3 T2:我以为我毕不了业呢艹
+20:3 T2:实话说呗
+20:3 T2:初中学历要来干嘛？
+20:3 T2:逗我么
+20:3 endle:差半年是什么情况？
+20:3 sismvg:谁说我初中了。。
+20:4 sismvg:我忘了3年级是两个学期实习了。。
+20:4 T2:sismvg, 我擦，你不是四元x么？
+20:4 code_new joined channel
+20:4 sismvg:？
+20:4 T2:圆来乳此，我一直搞错对象了。
+20:4 T2:我把你当成贴吧某个中二少年了。
+20:4 sismvg:我是四**，但我不是初中啊
+20:4 endle:T2, 已发
+20:5 T2:挖哩哇哩
+20:5 sismvg:放学后不要走
+20:5 T2:endle, 3Q
+20:5 endle:回复我个种子吧
+20:5 T2:sismvg, 你不是不能上高中么。
+20:5 xxxxxxxx:啥种子?
+20:5 endle:葫芦娃就行
+20:5 T2:endle, 我这儿没种子2333
+20:5 endle:我回头买个花盆
+20:5 sismvg:迅雷：您的资源已被举报
+20:6 sismvg:T2:不能上高中不还有职校呢嘛
+20:6 T2:噗
+20:6 T2:好吧
+20:6 T2:那等于没有
+20:6 T2:没事的
+20:6 endle:sismvg, 被举报纯属发布的作死
+20:6 T2:9年义务教育完了就行
+20:6 endle:他们应该学会取正确的名字
+20:6 sismvg:的确
+20:7 sismvg:我们都是取：“社会主义下如何学习生物学”
+20:7 sismvg:“高考放松资料”之类的
+20:7 T2:endle, 谢谢
+20:7 T2:rar...
+20:8 T2:我顿时听到蛋碎的声音。
+20:8 sismvg:linux?
+20:8 T2:嗯
+20:8 xxxxxxxx:[140502][AniMan]艶美.mp4.torrent  [魅瑚字幕组][2014年4月新作合集][MP4].torrent 这种东西我就放在Download里了不行么
+20:9 sismvg:硬盘是硬盘，网盘是网盘
+20:10 xxxxxxxx:~/Download里面 或者win上相应位置或者扔桌面
+20:10 xxxxxxxx:藏来藏去最后自己都找不到多不爽
+20:12 sismvg:光速搜索就OK
+20:12 xxxxxxxx:网盘不分享的话也没什么可藏的
+20:13 sismvg:章鱼搜索
+20:13 xxxxxxxx:搜索啥?
+20:13 sismvg:看了下微软社会招聘的要求。。。15年开发经验。。
+20:13 sismvg:某搜索软件
+20:14 T2:W??win32G?.rar 
+20:14 T2:这怎么破？
+20:14 xxxxxxxx:什么怎么破...
+20:14 sismvg:不有解压的东西嘛
+20:14 T2:补全都没用
+20:15 T2:字符编码坑了。
+20:16 slowcoach joined channel
+20:16 xxxxxxxx:后来fm你没装?
+20:16 T2:好吧，rename似乎就可以了。
+20:16 silencly07 joined channel
+20:17 silencly07 joined channel
+20:19 T2:不行，解压不了
+20:20 T2:Cannot create ???win32??.chm
+20:20 T2:2333
+20:23 sismvg:MS的职位搜索好渣。。
+20:23 silencly07 joined channel
+20:27 silencly07 joined channel
+20:28 condy:http://codepad.org/g8A2sfXA 看了好久，终于看懂了。。233
+20:28 T2:))))))))))))))))))))))))
+20:29 condy:果然the little schemeer不像HTDP那样无脑。
+20:32 T2:...
+20:34 sismvg:括号还是太多了
+20:34 sismvg:)
+20:34 sismvg:(:
+20:34 sismvg:原来还可以这么用
+20:36 sismvg:以为把unix网络编程啃完了就Ok了，结果发现还有两卷。。。
+20:39 ZzHiyori joined channel
+20:40 slowcoach:发现野生的音音子
+20:42 slowcoach:ZzHiyori: hi
+20:42 lh_mouse:geordi, << sizeof(char foo::*); struct foo;
+20:42 geordi:8
+20:42 ZzHiyori:今天看起来挺冷清啊
+20:43 lh_mouse:geordi, << static_cast<void *>(&foo::c); struct foo { int i; double d; char c; };
+20:43 geordi:error: invalid static_cast from type 'char foo::*' to type 'void*'
+20:43 lh_mouse:geordi, << static_cast<intptr_t>(&foo::c); struct foo { int i; double d; char c; };
+20:43 geordi:error: invalid static_cast from type 'char foo::*' to type 'intptr_t {aka long int}'
+20:43 lh_mouse:geordi, << reinterpret_cast<intptr_t>(&foo::c); struct foo { int i; double d; char c; };
+20:43 lh_mouse:geordi, << (intptr_t)(&foo::c); struct foo { int i; double d; char c; };
+20:43 geordi:Same error.
+20:44 lh_mouse:geordi, { printf("%p", &foo::c); struct foo { int i; double d; char c; };
+20:44 geordi:error: Unexpected end of request. Expected '}' or balanced code.
+20:44 lh_mouse:geordi, -w { printf("%p", &foo::c); } struct foo { int i; double d; char c; };
+20:44 geordi:0x10
+21:2 lh_mouse:_(:3JL)_
+21:9 code_new:_(:3JL)_请教一下用sed怎么将<html><head><title>Hello World</title>的标签删除
+21:11 code_new:regexz渣渣。sed 's/<.*>//g' file 会把整行删除_(:3JL)_
+21:16 code_new:hope1`, 谢正太摸摸大
+21:23 tsuki joined channel
+21:35 T2:zz
+21:35 T2:ZzHiyori, 我找噗的话就不冷清了。
+21:36 T2:2333
+21:36 T2:ZzHiyori, 你也可以试试
+21:40 lh_mouse:code_new, <.*?>
+21:45 code_new:lh_mouse, sed 's/<.*?>//g'？
+21:46 code_new:表示没有匹配项..
+21:48 Plough joined channel
+21:48 code_new:lh_mouse, 正太的是正解。<[^>]*>or<[^<]*>
+21:48 Plough:code_new: <.*?>也对吧
+21:49 Plough:不过听说这样会慢些
+21:49 code_new:Plough, sed 's/<.*?>//g' html
+21:49 code_new:<html><head><title>Hello World</title>
+21:50 code_new:<body>Welcome to the world of regexp!</body></html>
+21:50 sismvg:直接提取字符串不就好了
+21:51 code_new:目的其实是删除标签。用sed试一下
+21:51 sismvg:删掉反而慢。。
+21:51 Plough:code_new: [redflag@localhost Fujiwara]$ echo '<html><head><title>Hello World</title>' | perl -ne 's/<.*?>//g;print;'
+21:52 Plough:Hello World
+21:52 code_new:Plough, 好吧。。这样来的
+21:53 Plough:不知道sed是怎么实现的
+21:53 Plough:perl没问题……
+21:53 xxxxxxxx:为啥要删掉标签....
+21:54 code_new:perl里面'?'是什么意思
+21:54 code_new:xxxxxxxx, 因为要完成某些蛋疼的需求..
+21:55 xxxxxxxx:文字资料之类的东西?
+21:55 code_new:大致是这样的
+21:58 lh_mouse:code_new, ? 是最短匹配。不加 ? 是贪婪匹配。
+21:59 code_new:lh_mouse, 哦哦, 明白了
+22:2 FrankHB joined channel
+22:3 sismvg:这么晚球帝还跑出来
+22:6 slowcoach:这么晚球帝还跑出来
+22:6 T2:hope1`, 为毛不能？
+22:6 T2:whocares[0], 为毛不能
+22:6 T2:hope1`, 发错了
+22:7 code_new:whocares[0], 确实。。这种也要处理
+22:8 sismvg:正则+replace
+22:8 T2:HTML5...
+22:8 sismvg:能艹死flash最好
+22:8 sismvg:我被flash给坑的想哭
+22:8 code_new:同坑
+22:8 T2:没玩过不知道
+22:9 code_new:开多卡出翔
+22:9 T2:我不想找噗
+22:9 code_new:T2, 驼兄不在2333
+22:9 T2:code_new, 我找噗他就在了。
+22:9 sismvg:我的火狐就是被flash给搞死的。。
+22:9 xxxxxxxx:试试看
+22:9 sismvg:直接脚本无响应
+22:10 T2:xxxxxxxx, 这个不用试，死的是我。
+22:10 T2:除了王爽那本，有没有不带OS的不太古老的汇编教材？
+22:11 T2:王爽那个实在太入门向了
+22:11 sismvg:无
+22:11 sismvg:网上找了半天什么都没。。
+22:11 T2:MB调用API
+22:11 sismvg:国外的教材也找不到。。最后还是撸手册了。。
+22:11 T2:还用汇编显得B格高？
+22:11 T2:不能忍
+22:12 T2:似乎是得上手册了。
+22:12 sismvg:汇编可是好东西
+22:12 sismvg:风骚指直线上升
+22:12 slowcoach:不带os的不太古老的会编教材？
+22:12 T2:能讲好的书太少，要不就太古老。
+22:13 slowcoach:...请搜索 单片机 (逃
+22:13 T2:我TM一个instruction address纠结了一下午。
+22:13 slowcoach:压根就没有os 绝对满足你...
+22:13 T2:不玩那个
+22:14 sismvg:逃不掉的
+22:14 T2:这种体系相关的玩意不足为外人道是么。
+22:14 T2:好吧我上手册卧槽他妈的。
+22:14 tsuki:体系相关怎么写书，直接看intel的手册好了
+22:14 sismvg:其实撸好了intel 汇编的话AT&T的也不难啊
+22:14 T2:sismvg, 我不是为了撸汇编。
+22:15 sismvg:何？
+22:15 T2:我只想知道一些寄存器的内容，然后特权指令什么什么的玩意。
+22:15 hoxily joined channel
+22:16 sismvg:A,B,C,D X ,C,S D ,SB I
+22:16 T2:随便找个x86的手册吧。
+22:16 sismvg:SB P
+22:16 T2:我只对PSW什么的感性趣。
+22:16 sismvg:反正我是这么背寄存器的
+22:17 T2:背那个还不如先记标志位真的。
+22:17 sismvg:那个也好记
+22:17 sismvg:字母顺序+F
+22:18 T2:那就用到查好了。
+22:18 T2:寄存器要是有上百个你还打算背？
+22:18 sismvg:我撸汇编就是为了写线程context而已
+22:18 sismvg:结果到现在还不会。。
+22:18 T2:ucontext.h
+22:19 T2:异教自行圆润吧。
+22:19 sismvg:已经尝试过了。。不知道为何一点用处都没。。撸不出纤程
+22:20 T2:姿势
+22:20 slowcoach:psw...
+22:21 sismvg:SPW...
+22:21 T2:program status word
+22:21 T2:别想歪了
+22:22 slowcoach:是否溢出啦 上一次计算结果是否为0啦
+22:22 slowcoach:好多位不是么
+22:22 sismvg:某解说员而已啊
+22:22 sismvg:没有歪
+22:22 T2:你就告诉我那玩意里面的instruction address和pc有何不同就是了。
+22:23 T2:wiki上没有
+22:23 T2:书上没有
+22:24 slowcoach:pc？
+22:24 slowcoach:听起来好熟悉的感觉
+22:24 T2:耗子说是PC 不一定按字节寻址   等长指令的通常就不这么干
+22:25 T2:slowcoach, program counter
+22:25 slowcoach:=-=  我只知道pc是啥 你说的完全没明白是什么情境
+22:25 T2:我去艹手册艹
+22:28 slowcoach:你说的应该属于cisc吧？
+22:28 slowcoach:risc没有这个问题吧？
+22:29 slowcoach:T2
+22:29 T2:slowcoach, ？
+22:29 T2:这跟指令集有什么关系啊
+22:30 slowcoach:什么叫 不一定按字节寻址？
+22:30 T2:比方说有一些寻址方式是寻址偶数字节。
+22:30 T2:要寻址奇数就得分两次
+22:30 slowcoach:是char 还是 short 还是 int 这样？
+22:30 T2:先寻偶数再偏移一个字节。
+22:31 T2:不清楚，乱说要被噗。
+22:31 slowcoach:寻得什么址 内存中的数据还是指令。。。
+22:31 T2:指令
+22:32 T2:体系结构不明，寻址方式不明，两者区别不明，总之就是不名。
+22:32 T2:明。
+22:32 xxxxxxxx:T2不是表示过王爽的汇编书好么...
+22:32 slowcoach:我只接触过risc 我的印象中(当然也可能是错的) 如果是32位的话基本就是4个字节。。。
+22:32 T2:xxxxxxxx, 我说简单容易懂。
+22:32 slowcoach:当然也有个别的 缩减的
+22:33 T2:不代表看了那玩意能干OS
+22:33 FrankHB joined channel
+22:33 T2:xxxxxxxx, 一般向科普涨姿势够了。
+22:33 slowcoach:=-= 感觉你的东西好复杂 T2
+22:33 T2:slowcoach, 0.0
+22:34 xxxxxxxx:和os又有什么关系?
+22:34 slowcoach:你问帝球吧
+22:34 T2:slowcoach, 那是你没见过羊驼的东西。
+22:34 slowcoach:羊驼写了啥
+22:34 T2:xxxxxxxx, 正在读OS
+22:34 slowcoach:一坨汇编咩
+22:34 lh_mouse:http://web.sanguosha.com/220/play.html?rac=MDM1ODJlZTIwYTE3MTVkZTA2YTMwZjJiZDAyNTcxMWU=&rid=ODgzOQ==
+22:34 T2:slowcoach, 比方说内核？
+22:34 FrankHB:一直在掉线。
+22:34 slowcoach:恐龙书？
+22:34 slowcoach:内核里面汇编也不是很多啊感觉。。。
+22:35 xxxxxxxx:T2: 读啥os?
+22:35 T2:slowcoach, 书要能救世界世界就和谐了。
+22:35 T2:xxxxxxxx, 随便捡了一本，就是重修并发意味。
+22:35 slowcoach:T2: 我只是猜测你在看哪本书
+22:35 lh_mouse:ax cx dx bx bp sp si di
+22:35 T2:slowcoach, 天朝教材
+22:35 T2:slowcoach, 汤某人写的。
+22:36 slowcoach:T2: 感觉你在自残 虽然我没看过(逃
+22:36 T2:slowcoach, 我只是读到了就构思一下而已。
+22:36 slowcoach:三国杀...
+22:37 lh_mouse:sp 在 bp 前面
+22:39 T2:slowcoach, 书里提到上下文切换要保存PSW
+22:39 T2:我就去搜了下PSW的内容
+22:39 T2:然后各种不明。
+22:39 slowcoach:then？
+22:40 slowcoach:只是不明为何这么做么 T2
+22:40 T2:不是
+22:40 slowcoach:那么是...
+22:40 T2:只是不明白一个instruction address为什么要存两次罢了。
+22:40 slowcoach:=-= 总觉得你想到了什么高大上的东西
+22:40 slowcoach:话说你应该@帝球啊
+22:41 slowcoach:现成的大佬
+22:41 T2:保存状态信息是正当的。
+22:41 T2:slowcoach, ball对内核似乎不感冒。
+22:42 slowcoach:为何说instruction address存了2次？
+22:43 slowcoach:哪2次呢(我在抛砖引玉
+22:43 slowcoach:(话说感觉这不属于内核的范畴吧？
+22:43 T2:pc里一次
+22:43 T2:psw里一次
+22:44 slowcoach:=-= psw里面还有指令地址吗...
+22:44 condy joined channel
+22:44 T2:调度的时候要保存的内容包括这俩。
+22:44 lh_mouse:psw 里没有指令地址
+22:45 slowcoach:你是说 为何pc和psw都存？
+22:45 T2:嗯
+22:45 slowcoach:...必须存啊
+22:46 slowcoach:要切换的时候可能你正在执行某一条指令 ... 不保存下计算的结果什么的 你切换回来怎么知道最近一次的计算结果如果当时是要存在psw里 而切换前psw的值是多少呢...
+22:47 T2:lh_mouse, http://en.wikipedia.org/wiki/Program_status_word
+22:47 slowcoach:=-= 话说我说了条理不清的东西？(抛砖引玉啊 反正我不一定是对的
+22:47 slowcoach:看看乃的链接先
+22:47 T2:slowcoach, 我只是没懂psw里为什么再存一遍pc里就有的东西，难道它们不一样？
+22:48 slowcoach:pc里肿么会有psw的东西呢...
+22:48 slowcoach:pc
+22:48 lh_mouse:T2, 第一句不是说的很清楚了
+22:48 lh_mouse:IBM 360 里没有 PC
+22:48 lh_mouse:PSW 就有 PC 的作用
+22:49 slowcoach:...IBM
+22:50 T2:lh_mouse, IBM的倒是知道，x86的话psw里没有指令地址吧。
+22:50 lh_mouse:没有
+22:50 T2:体系结构真TM疼。
+22:50 T2:那就明白了。
+22:50 T2:蛋疼
+22:51 T2:slowcoach, 被x86洗脑的表示不清楚psw里有什么，好奇罢了。
+22:51 lh_mouse:geordi, { register void *rfl __asm__("rflags"); printf("%p", rfl); }
+22:51 geordi:error: invalid register name for 'rfl'
+22:51 lh_mouse:geordi, { register void *rfl __asm__("eflags"); printf("%p", rfl); }
+22:51 geordi:Same error.
+22:51 lh_mouse:geordi, { register void *rfl __asm__("efl"); printf("%p", rfl); }
+22:51 geordi:Same error.
+22:51 slowcoach:=-= 感谢T2 涨姿势了
+22:52 slowcoach:原来瓦纳在搞这么恐怖的东西吗
+22:52 T2:slowcoach, 他大二就写了一个出来了。
+22:53 slowcoach:=-= 干嘛用的
+22:53 T2:微内核
+22:53 slowcoach:微内核... 宏内核微内核混合内核神马的完全不懂
+22:54 T2:微内核大体上就是只提供机制不提供策略，策略由服务进程提供这么个东西。
+22:56 slowcoach:QAQ 好深奥
+22:56 lh_mouse:geordi, { void *rfl; __asm__("pushq %%rflags; popq %%rax; " : "=a"(rfl)); printf("%p", rfl); }
+22:56 geordi:error: bad register name `%rflags'
+22:56 T2:所以提高了扩展性、可靠性、可移植性和分布式支持，但是由于策略由服务进程提供所以切换核心/用户态的次数会增加，导致速度慢。
+22:56 lh_mouse:geordi, { void *rfl; __asm__("pushq %%eflags; popq %%rax; " : "=a"(rfl)); printf("%p", rfl); }
+22:56 geordi:error: bad register name `%eflags'
+22:57 lh_mouse:geordi, { void *rfl; __asm__("pushfq; popq %%rax; " : "=a"(rfl)); printf("%p", rfl); }
+22:57 geordi:0x246
+22:57 lh_mouse:2B 了
+22:57 T2:别的不知道，再说要被噗。
+22:58 ZzHiyori:我下学期要学巫女语了
+22:58 T2:ZzHiyori, 2333, 恭喜恭喜。
+22:58 lh_mouse:巫女语是啥
+22:58 T2:java
+22:58 ZzHiyori:Java
+22:58 slowcoach:啥是巫女语 音音子
+22:59 slowcoach:...音音子加油 祝你降伏巫女
+22:59 *ZzHiyori 不喜欢巫女语
+22:59 slowcoach:为何是巫女语呢
+22:59 T2:因为数学系
+22:59 ZzHiyori:不晓得 学校之前都教C++
+22:59 ZzHiyori:今年换成了Java
+22:59 T2:“表示学校还是别教C++比较好。”
+22:59 ZzHiyori:明明那帮博士都是耍蛇的...
+23:0 slowcoach:是啊 不是耍蛇吗
+23:0 T2:教育机构什么的有点自知之明不会死。
+23:1 slowcoach:T2好腻害 内核什么的能说出这么多
+23:1 T2:slowcoach, 你逗我吧...
+23:1 ZzHiyori:说起来最近学计组 画那个CPU和存储器的连接图真是太蛋疼了
+23:1 T2:zz
+23:2 slowcoach:T2: 我说真的QAQ
+23:2 T2:ZzHiyori, 数学系学那干嘛
+23:2 slowcoach:ZzHiyori, 数学系学那干嘛
+23:2 ZzHiyori:我们信息有个方向是通讯编码什么的
+23:2 T2:slowcoach, 这儿至少一半人觉得我说了一堆废话。
+23:3 slowcoach:虽不明但觉厉
+23:3 slowcoach:QAQ 我这么渣会不会被T
+23:3 lh_mouse:会
+23:3 T2:slowcoach, 有我垫底你怕毛。
+23:3 ZzHiyori:口支
+23:4 slowcoach:orz
+23:4 lh_mouse:口苗
+23:4 slowcoach:口敖
+23:7 ZzHiyori:说起来四个木耳对写码爱理不理 似乎也不用我去教了
+23:7 slowcoach:四个木耳？
+23:8 T2:ZzHiyori, 2333
+23:8 T2:烧
+23:8 T2:slowcoach, 某人要教4个傻木耳写代码2333
+23:8 slowcoach:4个！
+23:9 slowcoach:这是后宫剧情！
+23:9 slowcoach:我仿佛明白了什么！
+23:9 ZzHiyori:太坑了 连C都不会 然后这周似乎是要写dijkstra和prim
+23:9 T2:ZzHiyori, 话说这我也不会，dijkstra倒是看过。
+23:10 T2:prim只是听说的程度。
+23:10 slowcoach:=-= 到时候一定会邀请你去她们宿舍连夜教写代码的
+23:10 ZzHiyori:反正这周末要交来着 她们不来找我我也装作不知道算了...
+23:10 *ZzHiyori 好机智
+23:10 T2:ZzHiyori, 悠着点，精尽人亡就不好了。
+23:11 lh_mouse:有人要私吞？
+23:11 slowcoach:ZzHiyori, 悠着点，精尽人亡就不好了。
+23:11 slowcoach:=v= 1V4哦 搞不好还有额外的福利
+23:11 *ZzHiyori 觉得四个都不怎么对胃口
+23:12 slowcoach:tsuki 终于看不下去离开了
+23:12 lh_mouse:四四四四四四四四个！
+23:12 T2:话说我就没交过作业
+23:12 T2:slowcoach, 他只是掉了你想多了。
+23:12 T2:slowcoach, 这个频道没有比他重口的了。
+23:12 slowcoach:T2: 这你都知道 好可怕
+23:12 ZzHiyori:第一绅士
+23:12 ZzHiyori:岚月酱
+23:12 lh_mouse:dijkstra 是啥
+23:13 T2:lh_mouse, 单源最短路径
+23:13 ZzHiyori:求单源最短路的那个
+23:13 lh_mouse:看到这东西就头疼
+23:13 T2:表示图直接脑补了。
+23:13 T2:图论？呵呵。
+23:13 slowcoach:好吧
+23:13 slowcoach:绅...士？
+23:13 slowcoach:一个奇怪名字的算法
+23:14 T2:我似乎很卡？
+23:14 ZzHiyori:绅士(hentai)
+23:14 lh_mouse:没看出卡
+23:14 FrankHB:https://www.codehunt.com
+23:14 T2 joined channel
+23:15 lh_mouse:帝球吱吱叫
+23:15 T2:绅士（丧失）
+23:15 T2:丧尸
+23:15 ZzHiyori:只有Java和C#差评
+23:15 lh_mouse:Please choose your preferred coding language. 
+23:15 lh_mouse:Java
+23:15 lh_mouse:C#
+23:15 lh_mouse:Cancel
+23:16 lh_mouse:滚出
+23:16 T2:ZzHiyori, 数学姬你还玩C，吾辈苦逼猿怎么活？
+23:16 ZzHiyori:T2: 快要去写MATLAB了
+23:16 T2:ZzHiyori, 好评如潮
+23:16 iyzsong:2333
+23:17 ZzHiyori:MATLAB那么丑...
+23:17 T2:ZzHiyori, lisp拯救你。
+23:17 T2:2333
+23:17 ZzHiyori:下学期数值分析似乎就全是MATLAB了
+23:18 T2:ZzHiyori, 别跟我提那玩意求你了。
+23:18 *ZzHiyori 捂住了自己的脸
+23:20 iyzsong:碎觉去 @-_-@
+23:21 T2:碎叫，晚安。
+23:24 slowcoach:=-= 我也碎了 晚安

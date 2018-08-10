@@ -1,0 +1,1160 @@
+1:38 hope1 joined channel
+2:49 whocares_2 joined channel
+2:51 hope1 joined channel
+3:12 cleamoon:23333  @永恒之约：官富二代喝花酒，人妻坐床头，屌丝相亲尽出糗，爹娘家里愁；剩女宅家里，萝莉嫁老头，女神丈夫绿了头，妹妹在青楼。
+4:39 hope1 joined channel
+5:30 tsuki joined channel
+6:15 hope1 joined channel
+7:53 lhanjian joined channel
+8:38 silencly07 joined channel
+9:5 xia joined channel
+9:7 lh_mouse joined channel
+9:45 xxxxxxxx_ joined channel
+10:5 richselian joined channel
+10:7 iyzsong joined channel
+10:17 code_new joined channel
+10:35 lhanjian joined channel
+10:54 lh_mouse:geordi, { set<int, cmp> s{4, 2, 6, 5, 1}; s.insert(3); } struct cmp { bool operator()(int l, int r) const noexcept { cout <<"cmp called!"; return l < r; } 
+10:54 geordi:error: Unexpected end of request. Expected '}', '/', or balanced code.
+10:54 lh_mouse:geordi, { set<int, cmp> s{4, 2, 6, 5, 1}; s.insert(3); } struct cmp { bool operator()(int l, int r) const noexcept { cout <<"cmp called!"; return l < r; } };
+10:54 geordi:cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!cmp called!
+10:54 lh_mouse:geordi, { set<int, cmp> s{4, 2, 6, 5, 1}; verbose = true; s.insert(3); } bool verbose = false; struct cmp { bool operator()(int l, int r) const noexcept { if(verbose){ cout <<"cmp "; } return l < r; } };
+10:54 geordi:cmp cmp cmp cmp 
+11:9 lhanjian:等QuartusII编译真特么疼
+11:49 iyzsong joined channel
+12:9 xxxxxxxx_:【4月】魔法科高校的劣等生 05【华盟x澄空】<- 入侵学校的家伙能掏出RPG是什么情况...
+12:9 iyzsong:0.0
+12:11 lhanjian:RPG神教万岁！
+12:13 hysw:回头CSC258的时候可以去实现个log n时间的FFT...
+12:21 condy joined channel
+13:0 lhanjian joined channel
+13:6 hysw:lhanjian: 考虑回头去写个常数时间的1024点FFT...
+13:35 iyzsong:啊!
+13:35 iyzsong:下午好..
+13:35 hysw:iyzsong: 把智商交出来
+13:36 iyzsong:hysw: 我本来就智商低 >.<
+13:53 iyzsong joined channel
+13:53 hysw:已经删了某个家伙5个帖子了... 这是什么情况...
+14:11 xxxxxxxx_:油腻的师姐升级了...
+14:19 iyzsong:2333
+14:27 Guest4979 joined channel
+14:56 cuihao joined channel
+15:38 whatofor joined channel
+15:40 PloughPhone joined channel
+15:54 lh_mouse:geordi, { basic_string<char, alloc> s; s = "meow"; cout << s; } struct alloc { typedef char value_type; void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p) noexcept { ::operator delete(p); } };
+15:54 geordi:error: no type named 'char_type' in 'struct alloc'
+15:55 lh_mouse:geordi, { basic_string<char, alloc> s; s = "meow"; cout << s; } struct alloc { typedef char value_type; typedef char char_type;  void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p) noexcept { ::operator delete(p); } };
+15:55 geordi:error: 'length' is not a member of 'basic_string<char, alloc>::traits_type {aka alloc}'
+15:57 lh_mouse:geordi, { basic_string<char, alloc> s; s = "meow"; cout << s; } struct alloc { typedef char value_type; void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p, size_t) noexcept { ::operator delete(p); } };
+15:57 geordi:error: no type named 'char_type' in 'struct alloc'
+15:58 lh_mouse:geordi, { vector<char, alloc> v; v.assign("meow", 5); cout << v; } struct alloc { typedef char value_type; void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p, size_t) noexcept { ::operator delete(p); } };
+15:58 geordi:error: invalid use of incomplete type 'struct __alloctr_rebind<alloc, char, false>'
+15:58 lh_mouse:geordi, { vector<char, alloc> v; v.assign("meow", 5); cout << v; } struct alloc { typedef char value_type; template<typename U> struct rebind { typedef alloc<U> type; }; void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p, size_t) noexcept { ::operator delete(p); } };
+15:58 geordi:error: 'alloc' is not a template
+15:58 iyzsong joined channel
+15:59 lh_mouse:geordi, { vector<char, alloc> v; v.assign("meow", 5); cout << v; } struct alloc { typedef char value_type; template<typename U> struct rebind { typedef alloc other; }; void *allocate(size_t n){ return ::operator new(n); } void deallocate(void *p, size_t) noexcept { ::operator delete(p); } };
+15:59 geordi:error: no matching function for call to 'vector<char, alloc>::assign(const char [5], int)'
+16:43 xxxxxxxx_:http://tieba.baidu.com/p/3021409779
+16:44 varna joined channel
+16:45 iyzsong:...
+16:45 varna:昨天ISP果然抽风
+16:45 varna:各种国外服务器都连不上
+16:45 varna:而且有一部分是dns能出来的
+16:46 xxxxxxxx_:于是在贴吧提醒了miku酱
+16:46 varna:另外昨天红旗酱和米库酱按时吃药了没？
+16:46 varna:果然除了我之外还有热心基佬关心频道爱丽丝药娘团建设
+16:47 xxxxxxxx_:那是你的错觉
+16:47 varna:是我的觉，不是觉的错
+17:2 cleamoon:昨天miku拼命引仇恨，我们已经一致决定要把它药娘化了
+17:2 varna:我看看log
+17:3 varna:22:34 sleepwalking:明天晚上去学校爆C酱--这么一想似乎上学变成愉快的事了
+17:3 varna:22:37 sleepwalking:话说她「以前」老是说如果自己是男的多好- -b
+17:4 varna:2333
+17:4 varna:有谁反对给米库酱灌药的？
+17:5 xxxxxxxx_:反对!
+17:6 cleamoon:基王自己吃药吃的不清醒
+17:6 cleamoon:或者说基王想自己爆miku？
+17:6 varna:EA基佬在修炼次男道
+17:6 varna:yinwang: (我是 基头 四)
+17:7 varna:repl => 强而有力、强而有力呀！
+17:7 varna:H.B.Flankoi 世界有文学，少女多丰臀。学者贪权位，君子爱美人。饱读诗书后，埋入诗书坟。我等坟头上，猪猡秀美臀。
+17:7 varna:23333
+17:7 varna:恋恋舔舔
+17:7 xxxxxxxx_:次男道是啥?
+17:8 varna:你还记得白次男么
+17:9 xxxxxxxx_:那是啥?
+17:9 varna:就是海虎2里被基头四凌辱一个月的男主
+17:10 varna:首先学习白次男生平，达到倒背如流的程度
+17:10 varna:期间修炼武功，达到五万匹力量
+17:10 varna:然后自断左臂，被四个基佬凌辱三个月
+17:11 varna:此后接上机械臂，达到二十万匹力量
+17:11 varna:这就是所谓次男道
+17:12 cleamoon:20W之后回去被凌辱？
+17:12 varna:凌辱之后才能达到二十万啊
+17:14 cleamoon:继续不就80W了
+17:14 varna:一般人修炼不到那程度
+17:14 varna:而且次男道在幻想乡一般被称作BOY NEXT DOOR
+17:15 cleamoon:噗
+17:17 xxxxxxxx_:我还以为是说801呢
+17:18 varna:http://hiphotos.baidu.com/_%B4%F3%D5%BD%B9%D1%B8%BE%B4%E5/pic/item/20d2663c80d89137baa16736.jpg
+17:18 cleamoon:就是801
+17:19 varna:我觉得可以给米库酱两条路
+17:19 varna:一条是吃药，一条是修炼次男道
+17:20 xxxxxxxx_:cleamoon: 这种东西真的存在么....
+17:21 varna:xxxxxxxx_: 快自断一臂
+17:21 xxxxxxxx_:为啥....
+17:22 varna:练次男道啊
+17:23 xxxxxxxx_:没兴趣....
+17:23 varna:爆
+17:23 varna:没关系，白次男一开始也没兴趣
+17:24 cleamoon:基王要先探求其存在的根源，以此得到更深的基道
+17:26 varna:四元飒怎么现在开始学帕琪了
+17:26 varna:http://tieba.baidu.com/p/3021114569
+17:30 cleamoon:香草？
+17:30 varna:Go
+17:35 PloughPhone joined channel
+17:35 cleamoon:....
+17:36 varna:红旗酱来了
+17:36 varna:快吃要
+17:36 varna:药
+17:40 varna:H.B.Flankoi 出去逛了半天没发现有地方卖邮票。
+17:40 varna:^ 恋恋！
+17:53 cleamoon:K.N.Flankoi 如果我非要到邮局才能买到邮票，那还要邮筒干什么……
+17:53 varna:哈，怎么我每次出来都能遇到计算机系的逗比
+17:53 varna:cleamoon: 是H.B.Flankoi
+17:54 lhanjian joined channel
+17:54 cleamoon:磁带存储器并未过时。索尼研究人员研发出新的磁带材料，能将数据储存密度提升到每英寸148Gb，是目前商用磁带储存密度的74倍——最新一代的 LTO-6 (Linear Tape-Open)磁带存储器储存密度为每英寸2Gb，磁带盒容量2.5 TB，新的技术可以将容量提升到185 TB。索尼使用了名叫溅射淀积的真空薄膜成形技术制造新的材料。相比机械硬盘，
+17:55 cleamoon:磁带存储在连续读写速度上仍然具有优势。
+17:55 varna:@恋恋
+17:59 _root joined channel
+18:0 varna:噗
+18:0 varna:岚月酱的根部露出来了
+18:0 cleamoon:加尾巴了
+18:1 varna:JB
+18:1 varna:楼上两个撸瑟在谈论自己考研考不上没面子的问题……
+18:1 Plough joined channel
+18:1 varna:红旗酱！吃药！
+18:1 Plough:不吃
+18:1 varna:吃吧吃吧
+18:1 varna:米库酱都吃了
+18:1 Plough:没意思
+18:2 Plough:就不吃
+18:2 cleamoon:红旗估计已经吃完了
+18:2 varna:吃完了+
+18:2 cleamoon:有意思呀
+18:2 Plough:噗
+18:2 Plough:有啥意思
+18:2 varna:会长出欧派
+18:2 varna:会长出欧派
+18:2 Plough:都伪娘了还欧派干嘛
+18:2 varna:软啊
+18:2 Plough:不好玩
+18:3 varna:很快你就觉得好玩了
+18:3 Plough:不会的
+18:3 Plough:我可是坚定的贫乳党
+18:4 varna:Plough: 只长出来一点点
+18:4 Plough:varna: 那也不要
+18:4 varna:药娘多可爱
+18:5 Plough:所以alpako变药娘我来欣赏就好了
+18:5 varna:我喜爆药娘
+18:6 Plough:找
+18:6 Plough:找miku酱去
+18:6 varna:红旗酱磕巴了！
+18:6 varna:「找、找米库酱去……」
+18:6 Plough:噗，那是手滑了
+18:6 cleamoon:xmonad不错
+18:6 varna:超可爱！
+18:6 varna:xmonad不好
+18:6 Plough:xmonad没有wmii一样的标题栏，差评
+18:7 cleamoon:就是不想要标题栏
+18:7 Plough:没标题栏不好就
+18:7 Plough:不好看
+18:7 *varna 顶了红旗酱
+18:7 cleamoon:红旗吃药后口吃
+18:7 Plough:噗
+18:7 varna:口吃明明是娇了
+18:8 Plough:k键没按下去而已
+18:8 varna:手都软了
+18:8 varna:揉软药娘红旗酱
+18:8 Plough:噗噗噗
+18:8 Plough:那是写数学期中卷子写的
+18:8 varna:海棠捏小手系列
+18:9 varna:HOHOHO! HOTate!
+18:10 Plough:好神奇
+18:10 Plough:换了耳机以后听蓬莱人形有了一种很奇特的感觉
+18:11 varna:那是吃药的效果
+18:11 Plough:才不是
+18:11 varna:娇了娇了撸撸
+18:11 Plough:射一裤衩
+18:11 cleamoon:噗
+18:11 cleamoon:吃药还遗精a呀
+18:12 Plough:射一裤衩的是alpako
+18:12 Plough:而且我也没吃药啊
+18:12 varna:不对啊
+18:12 varna:一定是吃错药了，螺内酯会抑制射精的
+18:12 varna:红旗酱把药包装发来看看
+18:12 Plough:不
+18:12 Plough:是因为没吃药
+18:12 varna:那快吃药吧
+18:12 Plough:不吃
+18:13 varna:药娘不吃药不行的
+18:13 Plough:我又不是药娘
+18:13 varna:频道看板药娘啊
+18:13 Plough:那是miku酱
+18:14 varna:两个呢
+18:14 varna:黑袜米库酱和白丝红旗酱
+18:14 Plough:噗
+18:14 varna:上合之光
+18:14 Plough:我伪娘都不是
+18:15 varna:明明是女装的男孩子
+18:15 Plough:是男装的男孩子
+18:15 varna:可爱的男孩子
+18:15 cleamoon:你是男装的女孩子
+18:15 varna:2333
+18:15 Plough:可爱不可爱另说
+18:15 *varna 兽性大FA
+18:15 varna:你看你看
+18:15 Plough:我要是女孩子那就太棒了
+18:16 Plough:可惜不是啊
+18:16 varna:Plough: 是啊，我立刻买张机票回去推你
+18:16 Plough:varna: 过来你就失望了
+18:16 cleamoon:好的，红旗已经成为第二个要成为女孩子的了
+18:16 cleamoon:快给他药
+18:16 varna:Plough: 进去我就不失望了
+18:16 Plough:我只是对自己不是女孩子表达惋惜
+18:16 Plough:没有要变成女孩子
+18:17 Plough:varna: 你进不来
+18:17 Plough:varna: Permission denied
+18:17 varna:那就彦页身寸
+18:17 cleamoon:sudo in && out
+18:18 varna:总结起来就是红旗酱也顺利娇化了
+18:18 varna:药娘团建设顺利进行中
+18:18 Plough:cleamoon: User is not in sudoers file.This incident will be reported.
+18:18 Plough:明显是alpako被我调戏了
+18:19 varna:我只是硬了而已
+18:19 Plough:varna: 于是你又软下去了
+18:19 *varna 被红旗酱调戏硬了
+18:19 varna:我又不是提督
+18:19 *Plough 又把alpako调戏软了
+18:19 xxxxxxxx_:其实可以用tint2
+18:19 varna:tint2一般
+18:19 varna:以前用过一回
+18:20 cleamoon:Plough, 我用的livecd
+18:20 xxxxxxxx_:比起来我还是喜欢自带支持的
+18:20 varna:自带支持+
+18:20 Plough:cleamoon: 我又不在livecd里
+18:21 condy joined channel
+18:22 cleamoon:mount /dev/plough /mnt; sudo in /mnt && out /mnt
+18:23 varna:骑 /开发/红旗酱
+18:23 Plough:cleamoon: Unknown filesystem
+18:25 cleamoon:mount -t alpako /dev/plough /mnt
+18:25 Plough:cleamoon: Unknown filesystem type "alpako"
+18:26 varna:我啊我啊（早苗样
+18:27 cleamoon:module add alpako
+18:27 *xxxxxxxx_ 用过赶上去东西最少的是耗子药 但是按键是GNU Screen那种糟糕口味... 
+18:27 *varna 被加进来了
+18:27 xxxxxxxx_:看抽成赶了...
+18:28 Plough:@musca
+18:28 Plough:以前很喜欢来着
+18:28 varna:musca据说擅长崩溃？
+18:29 Plough:varna: 有点
+18:29 Plough:varna: 不过印象中也不是很频繁
+18:29 xxxxxxxx_:翻到过几次这个东西 最后忘记因为什么原因始终没选...
+18:29 varna:嚓，楼上一堆撸瑟男女似乎打算商议交配之事
+18:30 Plough:http://imgs.xkcd.com/comics/branding.png
+18:30 xxxxxxxx_:大吼一声 发情请去宾馆/酒吧?
+18:30 cleamoon:alpako去爆了他们
+18:30 varna:没药娘
+18:31 varna:23333
+18:32 xxxxxxxx_:还是保存一段动物世界的录音好....
+18:32 varna:雨季到了，又是一个交配的季节
+18:32 varna:SM 96.8 交配之声，陪你看雨舔恋恋，听交配的声音
+18:34 varna:怎么就没有悠闲的女仆咖啡厅呢
+18:34 varna:可以勾搭一个女仆陪我一起敏捷
+18:34 cleamoon:漫展水平的女仆？
+18:35 varna:有几个还算可爱的，就两三个
+18:35 varna:其余的……神奇的大脸
+18:35 varna:啊噗，楼上一堆本科生怎么长得比我都老……
+18:35 Plough:http://imgs.xkcd.com/comics/every_majors_terrible.png
+18:35 cleamoon:撸多
+18:36 *varna 再次感慨当年玉面淫魔的称号似乎还配得上
+18:36 xxxxxxxx_:兼职鉴黄师 你也可以这么老成啦
+18:36 varna:我是制黄师
+18:37 xxxxxxxx_:警察叔叔 就是这个人!
+18:37 varna:擅长斩舰刀制造维护，核动力航母帖万金油，统计用户隐私并推销广告
+18:37 varna:爱好幼女
+18:37 varna:对灵梦cos普遍有胸感到高度不满
+18:38 varna:人称玉面淫魔
+18:38 varna:以上
+18:38 Plough:我暗恋的那个妹子据说欧派和男孩子差不多
+18:38 varna:我喜欢的两个药娘都没长欧派
+18:38 Plough:等我追到手看看能不能让她余弦一下
+18:38 lhanjian:红旗酱暗恋的妹子！
+18:39 cleamoon:为什么没有妹子cos变猿又恢复后的赛亚人呢
+18:39 varna:你先吃药
+18:39 varna:cleamoon: 战斗力不足
+18:39 Plough:不吃
+18:39 varna:宇宙中能打败赛亚人的种族只有两种
+18:39 varna:撸西亚人和巨魔
+18:39 lhanjian:xxxxxxxx_, 最近羊驼子也开始秀线虫和温拿的人生了。我是不想火了
+18:39 varna:我哪里秀了
+18:39 varna:我现在是坚定的团员
+18:39 cleamoon:烧
+18:40 varna:上个月刚投稿还不知道能不能中A区
+18:40 lhanjian:没考上研->卢瑟。（羊驼子保上了研->？？）
+18:40 cleamoon:撸sir
+18:40 varna:没考上研不是问题，毛都不会自然是撸瑟
+18:40 varna:我自己考也未必能考上
+18:41 varna:H.B.Flankoi 如果中二病人所说的话都是真的，那他还中二吗？
+18:41 varna:^ 中二
+18:41 cleamoon:不是被爆上得吗
+18:41 varna:吾人中二方为原初之庄严
+18:42 varna:啊恋恋舔舔、轮椅舔舔，恋恋请穿上传教用小拖鞋让我舔舔
+18:42 varna:唵、小五小五、小拖鞋
+18:42 *varna 写了一大堆case
+18:42 xxxxxxxx_:我就说一句上次那个don't starve的linux版本的压缩包的百度网盘分享是可以用的
+18:43 silencly07 joined channel
+18:43 varna:似乎来了沉默的伙计
+18:43 varna:我们该不该也劝他吃药呢
+18:43 varna:或者投入次男道
+18:45 varna:楼上开始吹什么没头的直升机，难道不知道该有数据链么
+18:45 varna:数据链才是重点啊你们这些二战遗老遗少
+18:46 cleamoon:没头的直升机？
+18:46 varna:院子里挖条战壕把自己埋了吧，拿个莫辛纳甘殉葬
+18:46 varna:偶然听到的几个单字
+18:46 *varna 雨天听小伞。啪～啪～
+18:47 hope1 joined channel
+18:47 varna:HOHOHO!
+18:47 varna:Hatatatatatata
+18:49 varna:噗，果然是在讨论交配之事
+18:49 varna:2333333333
+18:49 varna:我突然想放炒饭
+18:51 varna:啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+18:51 cleamoon:alpako的炒饭视频吗？
+18:52 varna:http://shop.melonbooks.co.jp/shop/detail/213001015327
+18:52 varna:大好評を博した古明地姉妹のダブル添い寝が、究極進化を遂げて帰ってきた!
+18:52 varna:今回は、「バイノーラル収録」を採用し、驚異の臨場感を実現。
+18:52 varna:EXの名を冠した添い寝界のリーサルウェポンをその耳で確かめろ!  
+18:52 varna:啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+18:54 varna:要不行了啊上次蕾米芙兰的那张「バイノーラル収録」就超好评
+18:54 FrankHB:【抖S】18R♂Neopa(1826553622)  18:49:59
+18:54 FrankHB:你说，_Graft是个扁平臀。
+18:54 FrankHB:然后经验哗哗的
+18:54 richselian:疼
+18:54 varna:FrankHB: 噗
+18:54 varna:FrankHB: 是_Gayraft
+18:55 varna:richselian: 你这非处男跑出来说什么
+18:55 varna:我每天只有左酱右酱觉酱
+18:55 varna:rox每天回去揉舔撸推
+18:56 xxxxxxxx_:啪啪啪
+18:58 varna:http://shop.melonbooks.co.jp/shop/detail/213001015327
+18:58 varna:很重要所以再发一遍
+18:58 varna:封面超可爱！
+18:59 varna:觉酱！睡发！小恋敞胸装！衣衫零乱！
+19:0 varna:啊撸撸撸撸撸撸撸撸撸
+19:0 endle joined channel
+19:0 iyzsong:只看到了 究極進化
+19:2 varna:没有听过蕾米芙兰那张的一定去听听，耳边效果绝赞
+19:2 varna:这次居然推出了小拖鞋dokidoki don disc ex
+19:2 varna:简直好评如潮
+19:2 xxxxxxxx_:http://tieba.baidu.com/p/3022632407
+19:5 Plough:http://imgs.xkcd.com/comics/old_timers.png
+19:7 lhanjian joined channel
+19:8 hope1:“你是18岁或以上（我只是高中生） [是] [否]” -- Google translate
+19:8 varna:点「是」
+19:8 varna:里面没有过激内容
+19:8 varna:dokidoki都是全年龄的
+19:11 xxxxxxxx_:基头四是全年龄么?
+19:11 silencly07 joined channel
+19:12 varna:R15
+19:12 varna:猪头三是全年龄
+19:13 varna:HOHOHO! Hatatatatata
+19:15 xxxxxxxx_:http://www.bilibili.tv/video/av1102379/
+19:16 code_new joined channel
+19:16 iyzsong:- -b
+19:16 varna:hope1`: Hatate念起来有节奏感的样子
+19:17 varna:例：～地飞来一个天狗，市松裙子看起来类似海棠。
+19:17 cleamoon:擦，爱问都不能搜索了
+19:17 varna:(谁是? 基头 四)
+19:18 varna:顶之座__赫卡特: 回复 _craftG :整天撸，已经和梵高没两样了。 
+19:18 varna:^ 亚夜花命在关心我哦撸撸撸
+19:21 cleamoon:alpako有没有maple的linux版下载？
+19:21 varna:maple?
+19:22 cleamoon:maple
+19:22 varna:那个有linux移植么
+19:22 cleamoon:有呀...
+19:22 varna:aur没有……我自己没试过
+19:22 xxxxxxxx_ joined channel
+19:22 varna:community/sage-mathematics 这个呢
+19:23 cleamoon:估计不行...
+19:23 varna:果然不行
+19:23 cleamoon:不行我就用win版吧，反正不是用来数值运算
+19:24 varna:搜了下有移植，官网没下载？
+19:24 cleamoon:要钱
+19:24 varna:学生版也要？
+19:25 cleamoon:找不到学生版的下载点
+19:25 cleamoon:而且一年一更太麻烦...
+19:26 varna:一年一更该上医院了
+19:26 cleamoon:比起matlab还是这玩意适合我
+19:27 varna:不过matlab的工具包比较多吧
+19:28 cleamoon:干嘛用的包？
+19:28 varna:比如乌七八糟的机器学习算法
+19:28 varna:虽然实现质量未必高，但是我为了凑合论文搞的实现质量也未必高
+19:28 cleamoon:那种玩意不是都自己写吗...
+19:28 varna:我反正是自己写
+19:29 varna:xxxxxxxx_: 你看，亚腋花没否认
+19:30 varna:太极的巫女大人、可爱的宅女神大人关爱信徒
+19:30 cleamoon:所以，用maple算公式就好了，数值留给自己写的c艹库
+19:31 varna:啊，砂糖加多了
+19:33 condy joined channel
+19:33 varna:condy来了
+19:33 varna:爆
+19:33 condy:刚刚dns挂了。。。
+19:34 condy:我是基佬我怕谁！基佬是无敌的。
+19:35 varna:(你是 基头 四)
+19:35 varna:struct e14_event *ev = flow->events[flow->sceneref->edges[flow->current_state]->to[flow->current_cond]];
+19:35 varna:^ 自作孽不可活
+19:35 varna:hope1`: C啊
+19:37 cleamoon:这什么玩意
+19:38 varna:2333
+19:38 windforce joined channel
+19:38 varna:cleamoon: 新式斩舰刀里面驱动用户定义状态机的东西
+19:38 xxxxxxxx_:.... @3cm
+19:39 windforce:卧槽，syu一下有三个G的东西要更新。
+19:39 T2:叼炸了。
+19:40 varna:2333
+19:40 iyzsong:orz
+19:40 T2:另外我似乎翻出来了一个无线路由
+19:40 T2:2333
+19:40 hoxily joined channel
+19:41 T2:wmii和emacs怎么用我已经基本忘光。
+19:41 varna:怎么又冒出新教徒了
+19:41 varna:安拉胡阿克巴！
+19:41 varna:安拉胡阿克巴！
+19:41 varna:安拉胡阿克巴！
+19:41 T2:说我么？
+19:41 T2:我不是新教徒吧。
+19:41 varna:你信基督教？
+19:42 varna:我是说本格的新教徒
+19:42 T2:不信，不过我觉得上帝是存在的。
+19:42 xxxxxxxx_:本 格的新教徒
+19:42 T2:仅此而已
+19:42 varna:我也觉得存在
+19:42 varna:小耗总噗他，应该是存在的
+19:42 T2:谈不上信与不信
+19:43 varna:不存在的东西小耗应该不会噗
+19:43 varna:噗吱噗吱的
+19:43 T2:与其侮辱信仰来着还不如围观姿态
+19:43 xxxxxxxx_:赤城郝斌
+19:43 varna:赤城郝斌
+19:44 xxxxxxxx_:打错了是诚
+19:44 varna:想对着桌面上那个魔理沙撸管……
+19:44 T2:MB我比某些“赤诚”的教徒像教徒多了。
+19:44 T2:黑我有意思么。
+19:44 varna:hope1`: 那个魔理沙不是很可爱么
+19:45 T2:hope1`, 哇呀呀呀呀
+19:45 T2:btw，firefox的菜单栏似乎不能用了。
+19:45 varna:因为海棠有文文和会长酱
+19:45 varna:T2: 啊？
+19:45 T2:另外无线网卡驱动似乎是渣。
+19:45 T2:随便捡了个。
+19:45 varna:现在内核固件的无线网卡不错啊
+19:46 varna:我这个rtl8188ce终于驱动起来了，效果还很好
+19:46 T2:varna, 我的本子很烂很烂。
+19:46 varna:本子烂不是went
+19:46 varna:问题
+19:46 varna:……怎么补出英文来了
+19:46 Plough:因为你吃药了
+19:46 T2:基本就是在拖，看能拖多久，我再入个本子又得重装。
+19:46 varna:Plough: 红旗酱快吃药，我要和你行炒饭之事
+19:47 Plough:varna: 你吃
+19:47 T2:就是重装疼，调教麻烦。
+19:47 varna:Plough: 你吃吧，我爆你
+19:47 T2:能不能把我这上面的配置和软件直接搬过去？
+19:47 Plough:varna: 不吃
+19:47 Plough:varna: 决定了，就你吃
+19:48 T2:好吧，你们还是死吧。
+19:48 varna:Plough: 不行
+19:48 varna:Plough: 你是频道药娘
+19:48 varna:T2: 搬什么？
+19:48 Plough:varna: 那是miku酱
+19:48 Plough:varna: 我又没承认
+19:49 varna:Plough: 药娘要有两个，一黑一白
+19:49 varna:红旗酱是白的，米库酱是黑的
+19:49 Plough:varna: 白的就你了
+19:49 iyzsong:miki酱是绿的
+19:49 T2:varna, 各种软件和配置，不然光emacs和各种驱动重新调教就要死人的。
+19:49 xxxxxxxx_:羊驼子是条纹的
+19:49 varna:iyzsong: 米库酱的高统袜是黑的
+19:49 varna:xxxxxxxx_: 来信爆
+19:49 varna:T2: 你直接把配置搬过去就是了
+19:49 varna:对拷我不知道成不成
+19:49 T2:还有wmii，疼啊疼。
+19:50 varna:wmii直接帖个配置就成了啊
+19:50 xxxxxxxx_:wmii默认键位也不是那么难记吧
+19:50 xxxxxxxx_:忘了再看看就想起来了...
+19:50 T2:我在考虑裸机怎么搞无线网驱动，没玩过，我这个是pppoe上来然后上了wicd
+19:51 iyzsong:我发现wm把边框设成0不错..
+19:51 varna:边框0不好
+19:51 T2:xxxxxxxx_, 我就记得个win+p
+19:51 varna:T2: 按文档来
+19:51 T2 left channel
+19:51 T2 joined channel
+19:51 T2:varna, 好
+19:52 xxxxxxxx_:1234这样的也不记得么...
+19:52 T2:xxxxxxxx_, 不过还是活过来了。
+19:52 iyzsong:用鼠标指针来标识当前窗口 切换时鼠标跟随
+19:52 T2:xxxxxxxx_, 一个syu更新3个G的东西你懂了。
+19:52 varna:iyzsong: 我觉得主要问题在于边框产生构成感
+19:52 varna:12342234手个衣玖再来一次
+19:53 varna:@瑞典海岸发现巨型大带鱼
+19:53 T2:xxxxxxxx_, 我TM怀疑我这整个机子里有没有3个G的东西。
+19:53 xxxxxxxx_:不喜欢无边框...
+19:53 T2:firefox的菜单栏还是用不了orz
+19:53 xxxxxxxx_:@chrome
+19:53 T2:逼劳资换chrome
+19:53 hoxily joined channel
+19:54 varna:菜单栏怎么了
+19:54 varna:点开就崩溃？
+19:54 xxxxxxxx_:换不换看起来都一样
+19:54 iyzsong:我觉得很好 @.@ => http://puu.sh/8yHb9.png
+19:54 varna:如果是菜单崩溃的话，关掉输入法的内嵌输入
+19:55 varna:iyzsong: 还不错，不过跟我的桌面风格不搭
+19:55 T2:varna, 直接点不开，别的地方还好。
+19:55 iyzsong:我这里29以前菜单会崩
+19:55 iyzsong:用的是XIM
+19:55 T2:我的很久没更新了。
+19:56 T2:半年以上
+19:56 xxxxxxxx_:不喜欢无边框
+19:56 T2:正在更新完了看。
+19:56 T2:varna, 切掉输入法也没用。
+19:56 richselian:疼
+19:56 T2:richselian, 2333
+19:56 varna:我是早期跟fcitx的内嵌输入矛盾
+19:56 iyzsong:richselian: 烧..
+19:57 varna:操
+19:57 varna:constructing calls完全没用啊
+19:57 xxxxxxxx_:像terminator这种大小整行列数的东西 下面会补上一个条的吧
+19:58 varna:还要给size
+19:58 varna:怎么就不能编译时直接转发，多简单
+19:58 xxxxxxxx_:就一处有一条看着就不爽了
+19:58 varna:因为会想起大雕……
+19:59 varna:算了，既然知道函数原型也无所谓了
+19:59 varna:手写一层闭包+constructing calls
+19:59 varna:可以拯救一下需要引入用户线程模型的地方
+20:1 T2:我忘了我下的那个可视化的文件管理软件叫什么了。
+20:1 varna:一层的话是正确的
+20:1 varna:T2: 哪个DE的，还是独立的
+20:2 T2:varna, 独立的。
+20:2 varna:GUI的文件浏览器我推荐thunar
+20:2 varna:虽然是xfce4套件但用起来相当好
+20:2 T2:嗯
+20:2 varna:而且高度支持gtk2
+20:2 T2:好我去看看
+20:2 varna:自定义文件关联和命令也很实用
+20:2 T2:我先把我下的那个翻出来。
+20:2 cleamoon:rox多好
+20:2 T2:叫V什么似乎。
+20:2 varna:rox也行
+20:3 varna:不过名字丧气
+20:3 T2:hope1`, 你用的文件浏览器是什么？
+20:4 varna:Hatatata
+20:4 T2:hope1`, 好像是你推荐给我的，以前用过别的么？
+20:4 varna:KDE党用dolphin似乎不错
+20:4 varna:nautilusucks
+20:4 T2:啊对
+20:4 T2:就是这个
+20:4 silencly07 joined channel
+20:4 varna:nautilusucks
+20:5 T2:没事我就把它干掉
+20:5 varna:它会直接给你开一个de session
+20:5 varna:然后你的壁纸能不能活就两说了
+20:6 varna:雨音crossroad track3 逆らい背くレジスタンス 「不知何时摆出了姿势/这可都是为了人家自己阿鲁」
+20:6 varna:^ 伪·小拖鞋的弱气可爱词
+20:6 varna:@鬼人肚疼中
+20:6 T2:更新失败2333
+20:7 T2:我退了X试试
+20:7 T2:2333
+20:7 varna:跟X无关
+20:7 xxxxxxxx_:spacefm
+20:7 T2:ERROR OCCURED 别的啥都没说
+20:7 varna:另外我是怎么听出otoko no oushili的……
+20:8 varna:果然东方同人会唤起人对男尻的执念？
+20:8 varna:oushiri
+20:8 xxxxxxxx_:摩罗沙
+20:8 varna:突然冒出了糖果式罗马字
+20:8 varna:终于有人想起摩罗沙了
+20:9 varna:@伊卡略奥特·贝奥兰迪
+20:10 Sleepwalking joined channel
+20:10 varna:药娘！
+20:10 varna:爆！
+20:10 Sleepwalking:妈蛋
+20:10 Sleepwalking:今天中午被啊了
+20:10 iyzsong:...
+20:10 varna:米库酱今天也按时吃药了吧！
+20:11 Sleepwalking:吃了！！
+20:11 varna:腋！
+20:11 cleamoon:赶快发欧派图
+20:11 varna:hope1`: 被喂食
+20:11 varna:hope1`: C酱拿个勺，说「啊」，米库酱就张嘴吃了
+20:11 varna:估计是这样的
+20:11 Sleepwalking:阿鲁吧……
+20:12 iyzsong:*.*
+20:12 varna:噗
+20:12 varna:原来是阿鲁巴……
+20:12 iyzsong:这又是啥
+20:12 varna:高中时候有个哥们天天晚上被我们两个班联合阿鲁巴
+20:13 Sleepwalking:这辈子第一次被阿……
+20:13 varna:iyzsong: 把受害者抬起来，双腿分开，把他的生殖器撞在门上
+20:13 *iyzsong 已google到..
+20:13 varna:23333
+20:13 Sleepwalking:“miku酱抬起来好轻啊”
+20:13 lhanjian:nautilus大失败 pcmanfm大胜利
+20:14 varna:米库酱爆起来豪爽啊！
+20:14 varna:好爽啊！
+20:14 xxxxxxxx_:miku酱内八了?
+20:14 varna:捏起来好软啊！
+20:14 Sleepwalking:今天中午我他妈就是给C酱讲数学都会被啊
+20:14 Sleepwalking:lhanjian, +1
+20:14 varna:舔起来好香啊！
+20:14 Sleepwalking:撸作业去
+20:14 varna:Sleepwalking: 你发表牛头人宣言就不会了
+20:14 Sleepwalking:varna, 那是啥
+20:14 varna:就是因为你这么犹豫才会被阿鲁巴
+20:15 varna:你下次请C酱跟你一起去看春晚
+20:15 xxxxxxxx_:不用pcmanfm
+20:15 varna:thunar
+20:15 xxxxxxxx_:+
+20:16 lhanjian:thunar 在我这里有过崩溃的历史记录
+20:16 varna:从未崩溃
+20:16 xxxxxxxx_:不经常打开....
+20:16 varna:看离线动画的时候开
+20:17 varna:配置了个mplayer加载字幕的命令
+20:18 condy:mplayer字幕一直乱码，还是vlc好。
+20:18 varna:你没配置gbk转码？
+20:18 iyzsong:基本不用fm.. dolphin用来上ftp
+20:18 condy:我是直接将编码改成了cp936了。
+20:19 varna:ftp反倒是命令行或者浏览器……
+20:19 xxxxxxxx_:只有chromium下完东西之后会用
+20:20 windforce joined channel
+20:20 varna:说起来突然发现个问题
+20:20 varna:14.3标题里完全没有东方啊
+20:20 windforce:varna, 是要重启么？
+20:20 windforce:我重启了反正。
+20:20 varna:windforce: ?
+20:21 windforce:好像真是
+20:21 varna:如果你更新了LK最好重启下
+20:21 windforce:varna, 更新
+20:21 varna:不然无所谓
+20:21 windforce:确实
+20:21 windforce:是更新了。
+20:21 varna:旧版本的build hook需要引导时执行，不过LK 3.14的时候没看见
+20:22 windforce:error: failed to commit transaction (conflicting files)
+20:22 windforce:filesystem: /bin exists in filesystem
+20:22 windforce:filesystem: /sbin exists in filesystem
+20:22 windforce:filesystem: /usr/sbin exists in filesystem
+20:22 windforce:Errors occurred, no packages were upgraded.
+20:22 varna:噗
+20:22 varna:血染了
+20:22 windforce:这是重装的节奏？
+20:22 varna:windforce: 手工备份/bin /sbin /usr/sbin里的所有内容到/usr/bin
+20:23 varna:windforce: 然后手工移除这三个目录，重新安装filesystem
+20:23 windforce:varna, 然后删掉
+20:23 varna:hope1`: 估计他两年前没更新了
+20:23 windforce:好吧
+20:23 varna:血染六月之后你就没更新过啊
+20:23 windforce:卧槽似乎没两年那么夸张吧。
+20:23 iyzsong:2333
+20:24 cleamoon:噗，你多少年没更新了
+20:25 iyzsong:重装吧..
+20:25 windforce:cleamoon, 似乎只有半年？
+20:25 varna:不要重启
+20:25 varna:重启的话你只能用livecd手工引导进去了
+20:25 varna:因为你连bash都不会剩
+20:25 varna:我当时是livecd进去之后临时做一个bash, 然后chroot进去重装filesystem
+20:25 varna_ joined channel
+20:26 varna:网络震荡
+20:26 windforce:varna, filesystem要怎么重装？
+20:26 varna:pacman -S
+20:26 windforce:好吧
+20:26 varna:这个错误是安装filesystem包失败了
+20:26 windforce:了解了。
+20:26 varna:不要重启
+20:26 windforce:1
+20:26 varna:不然你就用手机回来吧
+20:26 iyzsong:https://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required-1/
+20:27 varna:残念了
+20:27 varna:nadesico19君刚从大阪走人……
+20:28 iyzsong:= =
+20:28 varna:认识的十一区人里似乎没有能去例大祭的了
+20:28 windforce:卧槽
+20:28 windforce:mb我为毛总是这么被
+20:28 varna:windforce: 用arch要看新闻
+20:28 windforce:varna, 好吧
+20:28 varna:至少保证你在Su之前看一下
+20:28 varna:我是在那个升级之后把arch首页pin到ff上的
+20:29 varna:^ 国学大师来打我啊
+20:29 Plough:http://imgs.xkcd.com/comics/plastic_bags.png
+20:30 varna:Here you Patchouli--
+20:30 windforce:varna, 那个似乎只能 sudo mv /bin /usr/bin 这么移？
+20:30 windforce:连nautilus都不能用orz
+20:31 sheyu joined channel
+20:31 varna:windforce: 移东西，别移目录
+20:31 windforce:varna, 好
+20:32 varna:目录干掉，以后会重建的，里面似乎是往systemctl的链接
+20:32 iyzsong:目测要挂 o.O
+20:32 varna:sheyu: nickserv2333
+20:32 varna:iyzsong: 基本会挂
+20:32 varna:windforce: 记得先留个bash
+20:32 windforce:varna, 我尽量233
+20:32 varna:windforce: 如果你搞不明白怎么弄，就按说明来
+20:32 varna:我当时是全灭了才直接上手搞的
+20:33 varna:雷比掉了
+20:36 windforce:卧槽
+20:36 Plough:http://imgs.xkcd.com/comics/swiftkey.png
+20:37 varna:为什么我又听见了imouto no hikari...
+20:38 windforce:varna, 表示还不让复制槽，必须上sudo。
+20:38 iyzsong:- -b
+20:38 sheyu:进入离开消息可以去掉么？
+20:38 iyzsong:大概可以设为空
+20:38 varna:这东西是客户端管吧
+20:39 lhanjian:hope1`, 。
+20:39 varna:Hatatatata
+20:39 varna:对了会长酱呢？
+20:43 varna:screen-4.2.0 cannot reattach older instances
+20:44 varna:screen-4.2.1 cannot reattach older instances either
+20:44 varna:2333
+20:44 cleamoon:不是前几天刚更新吗
+20:44 varna:screen还是去死吧
+20:45 cleamoon:时隔六年的
+20:45 varna:噗？
+20:45 varna:GNU养了多少百足虫啊
+20:45 varna:Lightning也是，搞了半天出个更新，然后不能编译
+20:45 cleamoon:2333
+20:46 varna:GNU's Not Usable
+20:46 cleamoon:23333
+20:46 varna:GNU's Not Updating
+20:46 varna:上面那堆交配男女还没走……
+20:49 sheyu:varna 谢了，确是客户端管的
+20:51 varna:http://imgsrc.baidu.com/forum/w%3D580%3B/sign=06c1848fb4003af34dbadc680511c75c/55e736d12f2eb938ab421e74d7628535e5dd6f0c.jpg
+20:51 varna:^ 映姬小五
+20:53 varna:五四
+20:53 varna:小五×四季
+20:53 cleamoon:五四不是敏感词吗
+20:53 varna:那是六四
+20:53 varna:五四幼女节！
+20:53 T2 joined channel
+20:53 cleamoon:不是，我记得五四也是
+20:53 varna:幼女幼女山田，幼女幼女小拖鞋
+20:53 varna:幼女舔舔觉酱推推
+20:54 varna:撸撸撸
+20:54 T2:那什么 我把文件夹移过去了怎么展开?
+20:54 varna:五四明明是幼女
+20:54 varna:T2: 叫你把文件都扔进去
+20:54 cleamoon:因为现在不允许再弄一个五四了
+20:54 varna:mv xxx/* yyy
+20:54 T2:OK
+20:54 varna:五四精神不是雷声大雨点小么
+20:55 cleamoon:我也听过这个词
+20:55 varna:hope1`: 会长酱呢
+20:56 T2:mv command not found
+20:56 T2:欧耶
+20:57 varna:显式指定路径
+20:57 T2:喜闻乐见2333
+20:57 T2:显式子制定了
+20:57 varna:跟你说了如果不知道怎么搞就看说明
+20:57 T2:显式指定了
+20:57 varna:现在你把mv扔/usr/bin/bin底下了？
+20:57 varna:然后bash也没有了吧
+20:57 T2:yes
+20:58 xxxxxxxx_:真是作死....
+20:58 varna:我提醒过你了
+20:58 T2:nice
+20:58 hoxily:varna: 五一节过得快乐不?
+20:58 varna:为什么你就是不仔细看呢……
+20:58 varna:hoxily: 还行，撸了一管
+20:58 T2:orz 现在怎么办呢?
+20:58 T2:ls 都没了卧槽
+20:59 varna:T2: 用livecd引导起来，用那个系统的coreutils重建/bin/bash
+20:59 T2:啊好吧
+20:59 varna:总之基本你得上livecd了
+20:59 varna:保证你的pacman能动起来
+20:59 T2:那干脆重装吧233
+20:59 varna:也行
+21:0 varna:我只是很奇怪你为什么不看说明
+21:0 xxxxxxxx_:和在原来的系统重新装一下感觉差别也不大
+21:0 iyzsong:从cd启动后 mount /dev/sdaX /mnt/arch; pacman -Sy --force base -r /mnt/arch 估计就差不多了..
+21:0 T2:pacman已经漫天的error了
+21:0 varna:force是作死……
+21:0 varna:我当时就是一爪子force然后就没然后了
+21:0 xxxxxxxx_:羊驼爪
+21:0 T2:我去官网下个镜像
+21:1 *varna 其实是Gastrea
+21:1 T2:233
+21:1 iyzsong:不如来装NixOS..
+21:1 T2:iyzsong, 2333
+21:1 iyzsong:这个提议怎么样 o.O
+21:1 T2:我想转投某"稳定版"
+21:1 xxxxxxxx_:http://bedrocklinux.org/ T2干脆装这个吧
+21:2 iyzsong:石床 2333
+21:2 T2:arch伤不起卧槽
+21:2 varna:那个太黑暗了
+21:2 varna:还不如手工chroot呢
+21:2 varna:不止是不看新闻
+21:2 T2:hope1`, 我TM很多年没用了
+21:2 varna:已经提示你迷糊的话就照做官方解法了
+21:3 varna:结果你还是在mv自灭
+21:3 T2:varna, 我已经mv过去了你提示了
+21:3 varna:T2: 我告诉过你是如果你迷糊就按官方解法
+21:3 T2:啊咧
+21:3 varna:你觉得你很清楚该怎么干么
+21:3 xxxxxxxx_:所以应该在自家里准备一个bash么?
+21:3 varna:bash的事情也说过了，似乎你选择性无视了
+21:3 iyzsong:他就是在诱导你自杀 我们都是旁观者 -.-
+21:3 T2:那会儿我已经mv过去了orz
+21:4 varna:急什么……
+21:4 varna:你该知道coreutils动了地方是会全灭的
+21:4 T2:没事重装orz
+21:4 xxxxxxxx_:https://github.com/Homebrew/linuxbrew <- 突然发现了这个东西存在的价值2333
+21:4 varna:都不清楚的话就照抄新闻上的指导
+21:4 varna:其实lvm比较好
+21:4 varna:不过我没做
+21:4 sheyu left channel
+21:5 *varna 开始大量用不定参造伪泛型
+21:6 T2:呦西,成功地干掉了arch
+21:6 varna:「 各位都是因为喜欢小五所以才来到本吧的吧，然而工口物的存在使小五变得污秽，使我们愤怒（至少是我） ，它的存在对本吧并无好处。」
+21:6 T2:2333
+21:6 varna:^ 去他大爷的
+21:7 xxxxxxxx_:工口可爱也是可爱
+21:8 cleamoon:新版： 只须局长纳妾不许屁民撸管
+21:8 varna:我突然想留个邮箱
+21:8 iyzsong:...
+21:8 T2:卧槽现在还有安装脚本了腋
+21:9 lhanjian:hope1`, 
+21:9 iyzsong:lhanjian: 摸头
+21:9 varna:http://tieba.baidu.com/p/2899434184?pn=2
+21:9 lhanjian:iyzsong, 揉捏蹭
+21:9 varna:已留邮箱
+21:9 varna:噗
+21:10 varna:是坟……
+21:10 Plough:哈哈哈哈哈
+21:10 T2:Current Release: 2014.05.01
+21:11 T2:这么勤奋呢
+21:11 varna:安装脚本？
+21:11 T2:不是
+21:11 varna:arch不就是连上网配配locale和时间，然后把base和base-devel安上，chroot进去，结束了……
+21:11 T2:iso
+21:12 T2:前提是 连上网
+21:12 varna:没以太网？
+21:12 T2:没
+21:12 T2:只有wifi
+21:12 varna:wifi还是一般802.11
+21:12 varna:我记得802.11未必要求无线高保真
+21:12 condy:目测CMCC，要跪。
+21:13 varna:cmcc搞什么arch
+21:13 varna:uccu还差不多
+21:13 xxxxxxxx_:用其他livecd编译个pacman
+21:13 varna:不如直接做好分区之后拷livecd
+21:13 varna:hope1`: 带各种东西
+21:13 varna:不过我忘了当时我用什么带起wlan的了
+21:14 varna:cmcc主要是不稳
+21:14 T2:不至于
+21:14 T2:中国电信
+21:14 T2:欧耶
+21:14 xxxxxxxx_:所以我就说 好好做个安装盘又不会死....
+21:15 iyzsong:求本竟然留cpan的邮箱..
+21:15 xxxxxxxx_:我就装了个manjaro 然后换arch源了
+21:15 iyzsong:2333
+21:16 varna:反正cpan的邮箱是转发
+21:17 T2:weathering @ cpan.org
+21:17 T2:这个
+21:17 varna:withering at cpan.org
+21:17 T2:好吧
+21:17 varna:哪有什么「我在被M at cpan.org」
+21:17 varna:@总领娘（发育中）的天、天、天气预报！
+21:18 T2:那个安装脚本是拿来干嘛的?
+21:18 varna:不知道
+21:18 varna:livecd里不就一个初始系统么
+21:18 T2:算了我看看,应该能不用吧.
+21:18 T2:没CD, 我还得去弄个usb来.
+21:18 T2:这回不用wmii了
+21:18 varna:没CD?
+21:18 T2:换个
+21:19 T2:一直没A 
+21:19 varna:噗
+21:19 T2:都是liveusb
+21:19 varna:所以说不配CD的都是异端
+21:19 varna:你喝口水，一抬手揉盘就飞出去了
+21:19 T2:现下现用
+21:19 *xxxxxxxx_ 玩别挨饿的时候把家放在冬天会出怪的地方了 于是整个被怪追着啃
+21:19 T2:我连光驱都没你告诉我怎么用?
+21:19 varna:叫你买没光驱的本
+21:20 T2:本来是有的
+21:20 varna:引导介质越多越好
+21:20 xxxxxxxx_:我用liveusb
+21:20 T2:拆了之后忘了装.
+21:20 T2:orz
+21:20 cleamoon:我的也没有
+21:20 T2:懒得再拆开了
+21:20 xxxxxxxx_:从来没搞光盘
+21:20 T2:就没了
+21:20 varna:你们手劲揉软
+21:20 varna:自觉吃药
+21:20 T2:2333
+21:20 varna:或者练次男道增强臂力
+21:21 xxxxxxxx_:羊驼子增强比利
+21:21 Plough:http://imgs.xkcd.com/comics/weekend.png
+21:21 T2:用什么好呢?awesome?
+21:21 varna:wmii
+21:21 varna:wmfs
+21:21 xxxxxxxx_:wmfs 或者wmii
+21:21 varna:ion3
+21:21 Plough:dwm
+21:21 varna:都比awesome好
+21:22 T2:那还是wmii吧.
+21:22 varna:你写了个awesome配置，下一次升级他们换APIL 
+21:22 varna:了
+21:22 varna:而且语义全变，数据结构都不一样了
+21:22 varna:QTMD
+21:22 T2:你用的什么,把你的配置给我抄一下.
+21:22 iyzsong:哪有那么严重..
+21:22 varna:iyzsong: 我以前3.4到3.5的时候状态栏图标就是
+21:23 xxxxxxxx_:这属于脸好
+21:23 varna:T2: 各种乱 https://pastebin.mozilla.org/5059740
+21:23 T2:卧槽居然这么快就下完了
+21:23 xxxxxxxx_:就和我碰上kde就倒霉一样
+21:25 T2:varna, 我去跟教程做斗争
+21:25 varna:教程？
+21:25 varna:照着beginners' guide做一遍不就行了
+21:29 varna:oif
+21:29 varna:噗
+21:29 xxxxxxxx_:Key $MODKEY-F2 perl $HOME/customtools/executable/timetips_149.pl 金刚改二 &
+21:29 varna:舰娘报时
+21:30 xxxxxxxx_:为啥弄个按键....
+21:30 iyzsong:orz
+21:30 varna:因为可能随时想听
+21:30 varna:按一下就知道几点了
+21:30 xxxxxxxx_:.......
+21:30 T2:我上一个liveusb用的是手机...
+21:31 T2:这次用什么呢卧槽...
+21:31 varna:买个揉盘
+21:31 T2:这是个问题
+21:31 T2:额
+21:32 *varna 工厂中
+21:33 varna:H.B.Flankoi 上厕所时张着嘴。转@水水水弹弹 一个马桶一个洗手池 转@炮好烦 一个卫生间俩马桶。转@傅小司 家里两个卫生间不是起码么？难道上厕所排队么？
+21:36 T2:叼了,还是手机吧CAO
+21:36 T2:无语凝噎中
+21:37 varna:眼滑看成了CAD
+21:37 varna:@大黑屌也
+21:37 T2:无线网卡驱动怎么搞?
+21:37 varna:live自带固件，内核自带固件
+21:37 T2:那就行艹
+21:37 varna:一般够用
+21:37 xxxxxxxx_:袭击学校的家伙为啥会用RPG?
+21:37 T2:嗯
+21:37 varna:因为他们不知道一〇七炮有多好
+21:38 varna:也买不到六〇迫
+21:38 varna:所以只好买了比较容易入手的RPG
+21:38 xxxxxxxx_:不 怎么带过去的....
+21:38 varna:在哪袭击的
+21:39 xxxxxxxx_:学校的一个会议礼堂(?)外头
+21:39 varna:我就指出一点
+21:39 varna:我曾经带一把小刀过了机场安检
+21:39 xxxxxxxx_:水果刀?
+21:39 varna:那时候快十二点了，根本就没人
+21:39 varna:瑞士军刀
+21:39 varna:就是丢在漫展的那把
+21:40 T2:我擦, live进去我的配置居然还在
+21:40 T2:现在怎么办>
+21:40 varna:没有挂
+21:40 varna:我都是扔包里
+21:40 varna:他们胡乱扫扫就把包给我了
+21:40 varna:不过折叠的匕首确实没过火车站
+21:42 cleamoon:一把小刀根本没什么用...
+21:42 varna:T2: live进去了？
+21:42 T2:varna, 嗯
+21:42 varna:T2: 现在打开beginners' guide, 照着上面的步骤做一遍
+21:43 T2:varna, 那就是重装咯.
+21:43 T2:好吧
+21:43 varna:cleamoon: 比如有几个哥们大半夜趁工作人员犯懒，把RPG拆了带进去
+21:43 cleamoon:我的意思是用不着
+21:44 varna:我觉得安保原则是宁可误杀一百
+21:44 varna:实际上对于这种刀具的要求是送安检之后托运
+21:44 cleamoon:我知道
+21:44 xxxxxxxx_:varna 关键是怎么学校跟战场一样...
+21:45 varna:xxxxxxxx_: 你什么时候产生了学生不是战力的错觉
+21:45 varna:@大黑屌爷
+21:45 varna:@大黑屌也
+21:45 lhanjian:学校作为据点还是很好的吧
+21:45 varna:不好
+21:45 lhanjian:建筑牢固
+21:45 cleamoon:那会老爸的基友的上司是民航局局长，老爸出国允许带二十几个箱子，都没安检
+21:45 varna:lhanjian: 北川
+21:45 varna:所以说安全问题一直是问题
+21:46 cleamoon:+
+21:46 varna:而且大黑屌也会质量爆散
+21:46 cleamoon:所以老爸秉承一家子不一起坐飞机的原则
+21:46 T2:# mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+21:46 T2:这个表示 does not exist
+21:46 varna:走了
+21:46 varna:大家腋间愉快
+21:46 T2:88
+21:47 cleamoon:t2在装什么
+21:47 lhanjian:T2, 说明你不是UEFI。直接BIOS就行了
+21:47 T2:好吧 
+21:47 T2:我已经忘了我是不是了
+21:48 T2:cleamoon, 重装逗比的arch
+21:48 cleamoon:不记得有这些步骤...
+21:48 Plough:http://imgs.xkcd.com/comics/home_organization.png
+21:48 lhanjian:等你用图形界面装笨兔的时候，才知道，该死的玩意儿根本不判定UEFI
+21:49 T2:hope1`, 好的
+21:49 lhanjian:不管这个会死的很惨的吧
+21:50 xxxxxxxx_:死了再说
+21:50 lhanjian:上次给组织装笨兔的时候。一帮伙计无脑GUI安装，死在UEFI上
+21:50 lhanjian:+
+21:51 cleamoon:关efi不是在装机之前弄吗
+21:51 Plough:笨兔是啥
+21:51 lhanjian:ubuntu
+21:52 Plough:Soga
+21:52 xxxxxxxx_:想起自己似乎黑过T2
+21:52 lhanjian:<xxxxxxxx> http://www.iqeq.com.cn/img/gesheng2.gif
+21:52 lhanjian:<xxxxxxxx> ^怒黑T2
+21:53 *lhanjian 热衷于挖黑历史
+21:53 cleamoon:T2在哪里？
+21:53 lhanjian:T2, 
+21:54 T2:咳咳
+21:54 T2:我是傻逼
+21:54 T2:别的没什么了艹
+21:54 xxxxxxxx_:其实我出生地也在青海
+21:54 T2:xxxxxxxx_, orz
+21:54 GODDOG joined channel
+21:55 Plough:山东路过
+21:55 T2:语言有必要把GB18030什么的选了么?
+21:55 cleamoon:反正我不信帝都那么高
+21:55 lhanjian:T2, 全选不坏事。
+21:55 T2:OK
+21:56 xxxxxxxx_:cleamoon 红色是人数
+21:56 Plough:cleamoon: 你看这那长长一条，其实那是测试人数
+21:56 Plough:我也被忽悠了
+21:56 xxxxxxxx_:平均痔疮北京不是最高的
+21:56 cleamoon:蓝色有区别吗...
+21:57 xxxxxxxx_:下面的表格里能看到细微的区别
+21:57 lhanjian:全国才101-108的差别
+21:58 Plough:http://imgs.xkcd.com/comics/geeks_and_nerds.png
+21:58 xxxxxxxx_:看上去似乎上海人比北京人痔疮更高一点
+21:59 Plough:21:56 < xxxxxxxx_> 下面的表格里能看到细微的区别
+21:59 Plough:http://imgs.xkcd.com/comics/book_burning.png
+21:59 Plough:上面一句是复制错了
+22:0 xxxxxxxx_:不过这些低分难道是幼儿园的刷出来的么....
+22:2 cleamoon:想试试最高很难，想试试最低很容易
+22:6 T2:iw dev 没反应是说无线网死了么?
+22:6 xxxxxxxx_:试也不该从101-108左右试出70分一下的吧....
+22:6 T2:好吧疼
+22:11 GODDOG:验证码真蛋疼
+22:13 lhanjian:《黄河绝恋》这片，搞起来和使命召唤一样
+22:17 T2:我决定先换笨兔orz
+22:17 T2:给跪了卧槽
+22:18 T2:hope1`, 等我换个电脑吧orz
+22:18 lhanjian:T2, You give up your soul
+22:18 T2:好吧好吧
+22:18 lhanjian:You devote yourself to Lucifer
+22:18 T2:那我继续跟网卡驱动斗争
+22:19 lhanjian:lspci搞清楚你的网卡型号。
+22:19 T2:嗯
+22:19 iyzsong:XXX/Linux基本都一个样 我用exherbo+nix ^.^
+22:20 lhanjian:iyzsong, 冒头了，打下去
+22:20 cleamoon:exherbo？
+22:20 T2:我擦黑屏重启了.
+22:20 T2:卧槽白干了
+22:21 iyzsong:cleamoon: pkg管理器是paludis，其他和gentoo差不多
+22:21 cleamoon:有什么优点？
+22:21 iyzsong:不知道..
+22:21 cleamoon:......
+22:22 T2:BCM4312
+22:22 iyzsong:内核不支持么?
+22:22 T2:我看看
+22:23 T2:这基本要扔的破机子装毛的arch啊真是
+22:25 hoxily:T2: LENOVO G450?
+22:25 hoxily:T2: 俺这老机器正是Broadcom 4312 Wireless Card
+22:25 T2:hoxily, 不是, 某要扔的HP.
+22:26 T2:本来都不打算开了.
+22:26 xxxxxxxx_:iyzsong: exherbo有安装光盘么?
+22:26 cleamoon:给我呀
+22:26 T2:羊驼子非要让我去草API
+22:27 iyzsong:xxxxxxxx_: 没有..  一个xz直接解压 自己加个内核就启动了
+22:27 T2:cleamoon, 这种垃圾你也要?
+22:27 Plough:http://imgs.xkcd.com/comics/ineffective_sorts.png
+22:27 Plough:我要
+22:27 T2:调教半天最后还得扔
+22:27 cleamoon:要，我缺
+22:27 iyzsong:我的笔记本也废了..
+22:28 xxxxxxxx_:iyzsong: 噗 这是什么设定.....
+22:28 T2:给个地址我邮给你.
+22:28 Plough:拿来跑Plan Baka
+22:28 iyzsong:xxxxxxxx_: http://www.exherbo.org/docs/install-guide.html
+22:29 iyzsong:^ 能安装成功 当时我都震惊了
+22:29 Plough:http://imgs.xkcd.com/comics/aspect_ratio.png
+22:29 iyzsong:You can customise the process any way you like 2333
+22:30 condy:这么短。。
+22:31 cleamoon:啊，这货当自己是lfs呀？
+22:31 wlemuel joined channel
+22:32 lhanjian:cleamoon, 全家坐同一辆飞机挺好的。一起死了，了无牵挂
+22:32 cleamoon:噗
+22:33 xxxxxxxx_:我只能说 他们脑洞太大
+22:33 cleamoon:如果不是全家都去一个地方呢
+22:33 iyzsong:你们一起去做飞机吧
+22:34 xxxxxxxx_:如果你只有一台新买的还没装系统的机器.......
+22:34 randomclown:cross entroy
+22:34 condy joined channel
+22:34 cleamoon:我在想是不是应该给nexus 7装个linux...
+22:35 randomclown:cross entropy* 中文叫啥?
+22:36 xxxxxxxx_:http://fanyi.baidu.com/#en/zh/cross%20entropy
+22:36 cleamoon:互交熵？
+22:37 xxxxxxxx_:我们需要一个国学大师
+22:41 T2:xxxxxxxx_, 新买的机器都装了win
+22:41 cleamoon:太慢
+22:41 T2:或者ios
+22:42 xxxxxxxx_:1os....
+22:42 cleamoon:壕无人性
+22:42 wlemuel joined channel
+22:42 T2:麻痹线虫们你们就不要卖萌了.
+22:42 randomclown:中国有没有像math.stackexchange.com的网站?
+22:42 xxxxxxxx_:我好想吧i打成了1
+22:42 xxxxxxxx_:不清楚
+22:42 T2:不清楚+
+22:44 cleamoon:T2都用能用ios的电脑了
+22:46 xxxxxxxx_:cleamoon http://puu.sh/8yR8v.png 幼女妹子喜欢这样的设定?
+22:47 cleamoon:喜欢这样的：  http://acme.cat-v.org/_imgs/obsd_acme.png
+22:47 randomclown:wmfs...
+22:50 xxxxxxxx_:cleamoon: 又不是再说编辑器....
+22:50 cleamoon:我说的就是那样的风格呀...
+22:51 randomclown:我在用dwm
+22:51 iyzsong:YOO 我会用acme
+22:52 xxxxxxxx_:修改配置就重新编译么?
+22:52 hoxily joined channel
+22:53 iyzsong:wm的配置不会频繁改的说
+22:53 randomclown:xxxxxxxx_: 一般都不改
+22:53 randomclown:c挺好写的
+22:54 xxxxxxxx_:https://github.com/0mark/dwm-fork-experiMental
+22:55 randomclown:https://i.imgur.com/rN4y8en.png
+22:56 randomclown:xxxxxxxx_: 
+22:57 randomclown:xxxxxxxx_: 吧trayer加进去
+22:58 randomclown:还有自动隐藏没有窗口的workspace
+22:59 xxxxxxxx_:习惯不隐藏
+22:59 randomclown:xmonad的习惯
+23:2 silencly07 joined channel
+23:2 PloughPhone joined channel
+23:3 wlemuel joined channel
+23:3 xxxxxxxx_:印象中wmfs据说有支持动态创建 但是我还是喜欢固定0-9
+23:3 xxxxxxxx_:就没找该怎么设置
+23:21 PloughP60 joined channel
+23:32 xxxxxxxx_:擦 百度网盘至于么....
+23:33 xxxxxxxx_:http://www.bilibili.tv/video/av889604/ 这种东西的分享都挂了
+23:44 lhanjian:丧病的自我审查
+23:53 lhanjian:估计是
+23:53 cleamoon:不是好久之前新加坡媒体爆料说是机组人员截机用来和公司商讨工资问题之类的，但是公司不打算讨论，告诉马来西亚政府排战斗机把飞机打下来了
+23:56 netbar_ joined channel
+23:56 netbar_:da
+23:57 cleamoon:......
+23:57 netbar_lhanjian joined channel
+23:59 netbar_lhanjian:绅士不是不信阴谋论的么……

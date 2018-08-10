@@ -1,0 +1,1306 @@
+00:02:code_new quit:Quit: Leaving
+01:12:lh_mouse: cqwrteur 到底是谁
+01:25:lh_mouse quit:Ping timeout: 245 seconds
+01:43:erhandsome quit:Ping timeout: 240 seconds
+01:52:hope1 quit:Read error: Connection reset by peer
+04:17:xxxxxxxx joined channel
+04:24:hoxily` joined channel
+04:26:hoxily quit:Ping timeout: 255 seconds
+05:26:boosure quit:Ping timeout: 255 seconds
+06:31:boosure joined channel
+07:13:cleamoon quit:Ping timeout: 256 seconds
+07:16:boosure quit:Ping timeout: 255 seconds
+07:27:cleamoon joined channel
+07:36:cleamoon quit:Ping timeout: 240 seconds
+07:51:cleamoon joined channel
+07:52:izmntuk quit:Ping timeout: 258 seconds
+08:00:boosure joined channel
+08:17:izmntuk joined channel
+08:42:hoxily` joined channel
+08:44:Sleepwalking joined channel
+09:16:lh_mouse joined channel
+09:30:hope1 joined channel
+09:44:whatofor joined channel
+10:13:izmntuk quit:Remote host closed the connection
+10:20:boosure quit:Ping timeout: 265 seconds
+10:29:yzld2002 joined channel
+10:46:boosure joined channel
+10:48:izmntuk joined channel
+10:55:xxxxxxxx quit:Quit: Leaving...
+10:58:erhandsome joined channel
+11:13:lhanjian joined channel
+11:19:lhanjian: 原来编译perl5.20是要这么久的……
+11:25:hoxily` joined channel
+11:27:hoxily quit:Ping timeout: 255 seconds
+11:29:lhanjian: geordi, << TYPE(*p)
+11:29:geordi: error: 'p' was not declared in this scope
+11:30:lhanjian: geordi, << {int p[2]; TYPE(*p)}
+11:30:geordi: error: expected primary-expression before '{' token
+11:30:lhanjian: geordi, << {int p[2];}
+11:30:geordi: Same error.
+11:30:lhanjian: geordi, << int p[2];
+11:30:geordi: error: expected primary-expression before 'int'
+11:30:lhanjian: geordi, int p[2];
+11:30:geordi: Success
+11:30:lhanjian: geordi, int p[2]; cout <<{TYPE(p[0])}
+11:30:geordi: error: 'cout' does not name a type
+11:30:lhanjian: geordi, int p[2]; <<{TYPE(p[0])};
+11:30:geordi: error: expected unqualified-id before '<<' token
+11:31:lhanjian: geordi, int p[2]; cout << {TYPE(p[0])};
+11:31:geordi: error: 'cout' does not name a type
+11:31:lhanjian: geordi, int p[2]; {TYPE(p[0])};
+11:31:geordi: error: expected unqualified-id before '{' token
+11:31:lhanjian: geordi, {TYPE(p[0])};
+11:31:geordi: error: extra ';'
+11:31:lhanjian: geordi, {TYPE(p[0]);};
+11:31:geordi: error: extra ';'
+11:31:lhanjian: geordi, {TYPE(p[0]);}
+11:31:geordi: error: 'p' was not declared in this scope
+11:31:lhanjian: geordi, {int p[2]; TYPE(p[0]);}
+11:31:geordi: <no output>
+11:31:lhanjian: geordi, {int p[2]; << TYPE(p[0]);}
+11:31:geordi: error: expected primary-expression before '<<' token
+11:31:lhanjian: geordi, {int p[2]; count << TYPE(p[0]);}
+11:31:lhanjian: geordi, {int p[2]; cout << TYPE(p[0]);}
+11:31:lhanjian: geordi, {int p[2]; cout << TYPE(p[0]);}
+11:31:geordi: error: no match for 'operator<<' (operand types are '<unresolved overloaded function type>' and 'string')
+11:31:geordi: lvalue int
+11:31:geordi: lvalue int
+11:32:lhanjian: geordi, {int p[2]; cout << TYPE(p[0]) << TYPE(*p);}
+11:32:geordi: lvalue intlvalue int
+11:35:hoxily`: geordi: { cout << TYPE(stdin);}
+11:35:geordi: lvalue _IO_FILE*
+11:35:lhanjian: geordi, {int p[2], c[2]; cout << TYPE(p[0]) << TYPE(*p); p = c;}
+11:35:geordi: error: invalid array assignment
+11:36:hoxily: geordi: { cout << TYPE(TYPE);}
+11:36:geordi: error: no context to resolve type of 'TYPE'
+11:36:hoxily: geordi: { cout << TYPE(printf);}
+11:36:geordi: lvalue int (char const*, ...)
+11:36:hoxily: geordi: { cout << TYPE(TYPE(printf));}
+11:36:geordi: rvalue string
+11:37:hoxily: geordi: { cout << TYPE("");}
+11:37:geordi: lvalue char const [1]
+11:37:hoxily: geordi: { cout << TYPE(string(""));}
+11:37:geordi: rvalue string
+11:39:lh_cat quit:Ping timeout: 245 seconds
+11:41:Petrus07 joined channel
+11:45:erhandsome quit:Ping timeout: 240 seconds
+11:47:lh_mouse: C++ 渣渣
+11:47:lh_mouse: geordi, << TYPE(i), TYPE((i)); int i;
+11:47:geordi: lvalue int, lvalue int
+11:48:lh_mouse: geordi, << TYPE<decltype(i)>, TYPE<decltype((i))>; int i;
+11:48:geordi: int, int&
+11:56:Sleepwalking: http://www.women.cs.cmu.edu/Who/Photos/TechNights/Spring2014_Signal1/ <- 计算姬？
+11:56:lh_mouse: Sleepwalking, 捏脸
+12:02:lhanjian: lh_mouse, 揉
+12:03:lhanjian: 揉错了
+12:03:lhanjian: 捏耗鼻
+12:04:lh_mouse: lhanjian, 不给捏
+12:07:lhanjian quit:Quit: 风光冉冉东西陌
+12:08:hysw: 话说机械键盘还是不错的玩意
+12:23:erhandsome joined channel
+12:28:hope1: Sleepwalking, 为什么我看到了Doge
+12:34:tutu_wind joined channel
+12:56:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+12:59:lh_mouse: hope1, 因为你没捏他
+13:03:krfantasy joined channel
+13:05:tutu_wind quit:Ping timeout: 258 seconds
+13:05:krfantasy quit:Remote host closed the connection
+13:08:Plough joined channel
+13:11:Plough: 终于把武藏买了
+13:17:xxxxxxxx joined channel
+13:21:boosure quit:Ping timeout: 255 seconds
+13:49:varna joined channel
+13:49:varna: Plough: 爆
+13:50:varna: Sleepwalking: 爆
+13:50:varna: xxxxxxxx: 爆
+13:50:varna: 噗
+13:50:varna: Plough: 肛
+13:50:hoxily quit:Ping timeout: 265 seconds
+13:51:hoxily joined channel
+14:03:FrankHB quit:Quit: Konversation terminated!
+14:07:Plough: varna: 自爆去
+14:12:varna: 快让我爆
+14:14:lh_cat joined channel
+14:19:FrankHB joined channel
+14:37:whocares_2_ quit:*.net *.split
+14:39:hysw quit:Remote host closed the connection
+14:41:hysw joined channel
+14:43:Plough quit:Ping timeout: 265 seconds
+14:56:Plough joined channel
+15:00:varna: Plough: 肛
+15:00:Plough: 自肛去
+15:03:Sleepwalking quit:Ping timeout: 264 seconds
+15:06:varna: 南西开始沟了
+15:06:varna: 看看肝雪光环和NKC的祝福能不能拯救我
+15:10:Sleepwalking joined channel
+15:35:blackskygg joined channel
+15:36:varna: blackskygg: yooo
+15:36:blackskygg: yaaa
+15:37:blackskygg: 我研究了一个月的通俗文化
+15:37:varna: 结论如何
+15:38:blackskygg: 说是研究，只是在看别人的论述而已
+15:38:varna: 哦瘊瘊
+15:40:varna: 活动如何
+15:40:blackskygg: 要说我自己的想法，我还是现在英国传统的精英主义那边
+15:40:blackskygg: 活动？
+15:40:blackskygg: 你是说我们学校的艺术节？
+15:41:blackskygg: 一堆山寨cosplay
+15:41:blackskygg: 不过双马尾倒是很不错
+15:42:varna: 是说秋活的浑作战
+15:42:varna: 还有肝癌诸岛冲迎击战
+15:42:blackskygg: 我已经一个月没玩了，不过正在开电脑中
+15:43:blackskygg: 前段时间一直作业多的跟狗一样
+15:43:varna: 哦，说不定你还能冲刺一下
+15:43:varna: 周一活动结束
+15:43:blackskygg: 但是得先改密码
+15:43:blackskygg: 麻烦
+15:44:blackskygg: 密码0还是密码1，我已经搞不清楚了
+15:44:blackskygg: 只好试一下
+15:57:lh_mouse quit:Read error: Connection timed out
+15:58:lh_mouse joined channel
+16:01:Plough quit:Quit: Reconnecting
+16:02:Plough joined channel
+16:23:lhanjian joined channel
+16:27:lhanjian: 今天竟然被echo的0A给坑了
+16:27:lhanjian: varna, 炸
+16:28:NoxTy joined channel
+16:28:varna: lhanjian: 你看看你这基佬
+16:29:blackskygg quit:Ping timeout: 264 seconds
+16:34:FrankHB quit:Read error: Connection reset by peer
+16:40:whocares_2 joined channel
+16:42:NoxTy quit:Remote host closed the connection
+16:44:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=0a75d6aca0cc7cd9fa2d34d109002104/533558950a7b0208dd2ef2a061d9f2d3562cc844.jpg
+16:48:NoxTy joined channel
+16:55:lh_cat quit:Ping timeout: 245 seconds
+17:03:Stevearzh quit:Quit: Lingo: www.lingoirc.com
+17:08:condy joined channel
+17:11:blackskygg joined channel
+17:12:blackskygg: varna, 怎么搞那个什么水上打击联合部队
+17:12:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=b67c7428cfbf6c81f7372ce08c3fb1d7/5d6a602dd42a28341e65a64b58b5c9ea14cebf66.jpg
+17:12:varna: blackskygg: cv[l] <= 2 bb >= 2
+17:13:varna: 二队跟夏活的二队类似，但可以有僵尸丸
+17:13:blackskygg: 要两个战舰？
+17:13:varna: 编成建议参考下wiki, 这次E1E2和E3的出击阵容不通用
+17:13:varna: 编成建议参考下wiki, 这次E1E2和E3的出击阵容不通用
+17:13:varna: 编成建议参考下wiki, 这次E1E2和E3的出击阵容不通用
+17:13:lhanjian quit:Quit: 风光冉冉东西陌
+17:13:varna: 我慎重地指出这一点
+17:13:varna: 装备和支援无所谓，但出击还是要帖条的
+17:15:blackskygg: 二舰队，轻巡+水母+4驱逐行吗
+17:16:varna: 推荐1cl5dd
+17:16:varna: 理由有二
+17:16:varna: 其一E2也要用，其二水母有E3带路
+17:16:varna: 当然E3你未必要带上路
+17:17:blackskygg: 一队必须有两个战舰吗
+17:18:varna: 不确认，但你打算上什么
+17:19:varna: bbv也行
+17:19:blackskygg: 航母轻母4重郁闷
+17:19:blackskygg: 4重巡
+17:19:varna: 你能打动么
+17:20:varna: 而且E3放弃？
+17:20:lh_cat joined channel
+17:21:varna: 另外E1的带路应该是cvl<2，有cv系的话道中多一战（嗒酱/嗒级）
+17:21:varna: cvl<=2
+17:22:blackskygg: 你是怎么遍
+17:22:varna: 我看看
+17:22:blackskygg: 编
+17:23:varna: 2bbv2cvl2ca 1cl5dd
+17:24:varna: 扶桑（80）伊势（65）飞鹰（84）千代田（68）高雄（61）摩耶（57）
+17:24:varna: 神通（73）POI（83）雷（49）凉风（44）朝潮（42）欠雪（31）
+17:24:blackskygg: 好纠结，我能拿出手的东西并不多
+17:25:varna: E2我直接上了这个编成的二队，全程双支援；E1只上单支援
+17:25:varna: 制空要求很低，实际上不该用cvl
+17:25:varna: 我是因为估计错误，把主力的驱逐队基本都扔在后面，后来发现后面根本不要那么多
+17:26:NoxTy quit:Ping timeout: 264 seconds
+17:26:FrankHB joined channel
+17:26:varna: 另外你的难度可能会低很多，看看wiki吧；我的编成基本是花式作死
+17:26:blackskygg: 我去，为什么还是灰色的
+17:27:varna: 你编成联合舰队了？
+17:27:blackskygg: 哦，忘了
+17:28:varna: 编成界面里查看二队的时候把图标2拖到图标1上
+17:28:blackskygg: 输了会怎么样
+17:28:varna: 出击硬指标要求胜率不少于75%、空船位和装备位分别至少5个和20个
+17:28:varna: 跟你平常打的没什么差别
+17:28:blackskygg: 会死人吗
+17:29:varna: 四个阵型里第一序列对潜，第二序列回避，第三序列轮型，第四序列攻击
+17:29:varna: 不会
+17:29:varna: 别大破进击就行
+17:30:varna: 水上打击部队的攻击顺序是先一队出手炮击，然后二队出手炮雷；夜战只有二队
+17:30:varna: 虽然这次没有报告但仍然要提醒你一点
+17:30:Guest81807 quit:Ping timeout: 245 seconds
+17:31:varna: 如果有和战果不相称的战斗评价（比如估计是A胜的场合得了B胜），立刻撤退
+17:31:blackskygg: 为何
+17:31:Plough: Bug
+17:31:Plough: 夏季活动的时候出过受了伤害不显示的Bug
+17:31:varna: bug, 血量没刷新，实际上可能已经有人大破了
+17:32:varna: 这次没有报告，大体上可以安心，但是别松懈
+17:32:blackskygg: 没得换人的？
+17:32:varna: 会死人
+17:34:blackskygg: 死了，才打了一场就有三个中破
+17:34:hope1 quit:Ping timeout: 256 seconds
+17:34:blackskygg: 果然我的小学生太弱了
+17:34:varna: 大丈夫，你应该有弹性
+17:35:piaolaingxiaoyu joined channel
+17:35:varna: 另外如果觉得打不过就上支援
+17:35:varna: 攻略活动期间可以考虑把远征都停了换去支援
+17:36:blackskygg: 我决定了
+17:36:blackskygg: 放弃e3
+17:37:varna: 上主力啊
+17:37:Plough: 话说你道中用的啥阵型
+17:37:blackskygg: 反正我明天下午又得上学去了
+17:37:varna: 道中二就行吧
+17:37:Plough: 道中二+
+17:37:Plough: 不过一场三个中破……
+17:37:varna: 要不是二队搬砖，道中我就四了……
+17:38:Plough: 道中四我觉得意义不大，除非撸主任
+17:38:Plough: 对了，这次有人看命中太惨就给傻级上了356
+17:38:varna: 这个处理跟3-5上路怎么过类似
+17:38:varna: 噗
+17:38:Plough: 据说效果拔群
+17:38:varna: 没用的
+17:38:varna: 大和都打不中
+17:39:varna: 356能打动谁啊
+17:39:Plough: 我看dalao的大和基本能保证75%的命中……
+17:39:varna: 捞船的时候再看
+17:39:Plough: 大概是用了徹甲弹？
+17:39:Plough: *356的那位
+17:40:varna: 还是那句话，我家金刚级用46能打动雷爷
+17:40:Plough: 46+试制41呢
+17:40:varna: 火力不够
+17:40:Plough: 白天区别不大吧
+17:41:varna: 航向和阵型在cap前
+17:41:Plough: 哪天我算算
+17:41:varna: 而且联合舰队应该有火力补正
+17:42:Plough: 雾岛46+41+140+水观 面板火力161
+17:42:Plough: 试制41
+17:42:varna: 我仍然坚持旧观点：金刚级双46确实下修命中，但统计上看来可以被等级玄学弥补
+17:42:lh_mouse: geordi, << TYPE(endl);
+17:42:geordi: error: no context to resolve type of 'endl'
+17:42:varna: 什么时候我常规图都打不中了再考虑改装
+17:43:Plough: 46+试制356+140+水观 面板火力157
+17:43:varna: 如果你这么看面板火力，问题就来了
+17:44:varna: 神通出门上155还是三号炮
+17:44:Plough: 一般我不指望神通的火力……
+17:44:NoxTy joined channel
+17:44:varna: 解决命中问题除了观测、电探这两个办法之外，还有海军甲日程
+17:45:varna: 周一到周六训练，周日猛训练……
+17:45:Plough: 2333
+17:45:piaolaingxiaoyu quit:Quit: Leaving
+17:45:varna: 反正这事没法说，人各有脸
+17:46:varna: 有人家的大傻就是打不中，那只能想办法……
+17:46:varna: 再说你们这些HOMO都有长门，说什么都是在忽悠黑鬼
+17:46:Plough: 一般来说打不中不是问题吧
+17:46:Plough: 问题是打谁
+17:46:varna: 打那个爷爷
+17:46:Plough: 你个HOMO还有武藏呢
+17:46:hoxily` joined channel
+17:46:Plough: 活动完我可是跪了六发啊
+17:46:varna: 你看错了，那个是两个半藏拼一起的
+17:47:varna: 我跪了十发
+17:47:Plough: 我的四个半藏还拆开给我了呢
+17:47:Plough: “教父！我出金刚和比叡了！”
+17:47:varna: 今天收了建造，得个连装山城
+17:47:Plough: 你出货了
+17:47:varna: 全喂尸了
+17:47:varna: 昨天低保剩的两个全是山城
+17:48:Plough: 昨天我一口气出了两个雾岛
+17:48:Plough: 总之明天晚上再大建一次
+17:48:Plough: 我看看维护前玄学能不能救我
+17:48:hoxily quit:Ping timeout: 240 seconds
+17:49:Plough: 我先去把3-5推了
+17:49:varna: 我昨天去贴吧问了问，感觉如果真造了我就可以仰面四十五度念“人生二十年”了
+17:49:varna: 留点资源下个月周常磨5-5好了
+17:50:Plough: 5-5再说，大建才是首要任务
+17:50:Plough: 我看看经过秋活历练的队伍能不能推掉3-5
+17:50:varna: 秋活给人个错觉：她打不中我……
+17:51:Plough: 233333
+17:51:varna: 我反正去3-5照样被轰隆隆地劝退
+17:51:varna: 最狠的一回可能是四连劝
+17:51:Plough: 这次空母集体烈风罚战试试
+17:51:varna: 都是嗒酱
+17:51:Plough: 叫你单纵
+17:51:varna: 你去看矶风报时
+17:52:Plough: 所以矶风沉了
+17:52:varna: “要和强力的敌人对战了，阵型当然是单纵阵。什么？轮型阵？提督你不懂、你不懂啊！”
+17:52:varna: 驱逐王都这么说
+17:52:lhanjian joined channel
+17:52:Plough: 小学生而已
+17:52:varna: 只要能过一轮炮击就是我方莞尔一笑还好没打偏的时间
+17:52:varna: 小学生哪有那么赞的乳型
+17:52:Plough: 准确命中那个伊级还好没打偏
+17:53:varna: 打爷爷没办法，但是昨天5-5的金皮驱逐抗了四个炮击战攻击
+17:53:Plough: 毕竟5-5
+17:53:varna: 雷爷都死了，他还在那wuha
+17:53:varna: 最后雾岛奋力一击把他搞死
+17:53:varna: 那就是最后了
+17:54:Plough: 我是带79级的飞龙还是带74级的卡嘎呢……
+17:54:varna: 喔改飞机都放不出来了，潜艇还在底下蹲着，中间四个都死了
+17:54:varna: Such a Type-A Ministory
+17:54:Plough: 233333
+17:54:varna: 卡噶
+17:54:Plough: 我怕她给我来个一航战的演技
+17:55:varna: 一航战再演也比妮可笑眯眯搭载多
+17:55:varna: 当然加贺桑的演技绝对拔群
+17:55:varna: 我跟你说，E4赤城没摔过
+17:56:Plough: 那是在挡子弹吧
+17:56:varna: 我得出一个结论
+17:56:varna: 赤翔鹤大法好
+17:57:Plough: 首先我得有太太
+17:57:varna: 对面那个根本不鸟赤城
+17:57:varna: 拼死追打加贺，夜战了就打棒各
+17:57:Plough: 我觉得我大概可以达成百级无太太成就了
+17:57:varna: 还好我不用拼耶稣
+17:58:Plough: 我拼安拉胡阿克巴
+17:58:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=74a15a4c6409c93d07f20effaf06f9dc/34fae6cd7b899e51b2052a5641a7d933c9950dec.jpg 别人家的
+17:58:varna: 我家也有高级的金刚级，也有大根和彻甲弹还有水观，高档飞机也有，就是不行……
+17:59:NoxTy quit:Ping timeout: 245 seconds
+18:01:hysw: 哪天去写个键盘驱动去...
+18:02:NoxTy joined channel
+18:03:varna: 最近突然发现绫波挺好，适合抱着舔
+18:03:varna: 有没有同好
+18:07:varna: Plough: 对了问你个事
+18:07:hysw: 这个世界还是拿scheme来写config算了...
+18:08:Plough: ?
+18:08:varna: 你今天胖次什么颜色的
+18:08:blackskygg quit:Quit: Bye
+18:09:Plough: 噗
+18:09:Plough: 不告诉你
+18:09:varna: 娇羞了
+18:09:blackskygg joined channel
+18:09:NoxTy quit:Ping timeout: 265 seconds
+18:15:varna: 呜，想要防晒霜
+18:15:varna: 哪有防晒霜的
+18:16:Plough: 船么
+18:16:varna: E3有没有
+18:16:Plough: 貌似有
+18:16:varna: E2也有吧
+18:16:Plough: E1清霜E2早霜
+18:16:Plough: 我捞朝云捞出了两个早霜
+18:17:varna: 哈哈哈哈哈哈哈哈
+18:17:varna: 伙计们上班
+18:17:varna: 四十分钟后出击
+18:17:Plough: 先把3-5推掉，然后去捞明石
+18:17:varna: 我忍不住了
+18:17:NoxTy joined channel
+18:17:Plough: 我昨天一口气把弹药赌没了
+18:17:varna: 大不了下个月的排位我也不打了封港一个月
+18:18:Plough: 11808/5815/17679/17672+117/187
+18:18:varna: 打到没油或者八十桶
+18:18:varna: 四百桶我还可以接受
+18:19:Plough: 不过看这资源回复速度我怎么觉得假期我可以日常大建了……
+18:19:varna: 这是个错觉
+18:19:varna: 你得闪6
+18:19:Plough: 倒也是
+18:20:varna: 低保线下两三天就能搞出一万资源来
+18:20:varna: 但铝始终是问题
+18:21:varna: 贴吧：少女们的情怀就是在海上被对面压着打，在镇守府里被提督按着干
+18:21:Plough: 233333
+18:22:Plough: 哦对了，我还得赶紧把欧根练起来
+18:22:varna: 操
+18:22:varna: E2不好打……
+18:22:Plough: 上boss支援吧
+18:22:Plough: 道中脸过去
+18:22:varna: 不是
+18:22:varna: 我主力锁E3了……
+18:22:Plough: ……
+18:22:Plough: 我把时雨和响爷留下了，所以还好
+18:22:varna: 只剩个POI和神通，还有电酱
+18:22:Plough: 或者你用2CL配置？
+18:22:varna: 2cl掉沟吧
+18:22:Plough: 不掉沟，但是固定三战
+18:23:varna: 第一战对潜？
+18:23:Plough: 随机
+18:23:varna: 算了
+18:23:Plough: 有可能对潜也有可能打完红tsu上去见莉爷……
+18:23:varna: 我看看这事该怎么办
+18:24:Plough: 算了，还是先给大凤带个江草
+18:24:NoxTy quit:Ping timeout: 240 seconds
+18:24:Plough: 白天只有四个火力点感觉有点虚
+18:24:varna: 雪风、POI、神通、电酱、秋月、朝潮
+18:24:varna: 双支援走起
+18:24:varna: 等远征回来
+18:25:Plough: 你秋月现在多少级
+18:25:varna: 四十多
+18:25:Plough: soga
+18:25:Plough: 我家的现在Lv11……
+18:25:varna: 基本不能打，秋月就是凑数的
+18:25:Plough: 不过秋月似乎除了对空以外都很一般？
+18:26:Plough: 雷巡打狗队系列
+18:26:varna: 火力57雷装54装甲53耐久37
+18:26:Plough: 而且没打中
+18:26:varna: 关键时刻还是得靠POI
+18:26:Plough: 稳如POI系列
+18:27:Plough: 轻巡我准备先把阿贺野练出来
+18:27:varna: 我有上酱那珂
+18:27:Plough: 噗
+18:27:Plough: 喔点制空确保了
+18:27:varna: 估计今天这么一糟蹋，下个月的5-5也没戏
+18:28:varna: 把绫波雪风欧根和啊嘿颜的两位收拾下吧
+18:28:Plough: 北上大人居然对着喔酱撸出了27点伤害
+18:28:varna: 你也买个粘土
+18:28:Plough: 没钱了
+18:28:Plough: 刚买了块屏幕
+18:29:varna: 北上粘土超可爱的
+18:29:Plough: 幼女求饶命
+18:29:Plough: 利根中破
+18:30:Plough: Lv70还是不太行啊
+18:30:Plough: 回家了
+18:30:varna: 先给支援刷些闪
+18:30:Plough: 我跟你说，幼女的智商，赞！
+18:30:varna: 3-5上路我开始给战舰带三式弹
+18:30:varna: 反正敌人也不经打
+18:30:Plough: 我试试
+18:31:varna: 昼战有次智商上线直接S胜
+18:31:Plough: 对了，貌似事实上古鹰改二装了重巡用91弹来着？
+18:31:Plough: 掉了只鬼怒
+18:31:varna: 不会吧
+18:31:varna: 91族不是大口径炮弹么
+18:32:Plough: 我去查查
+18:32:varna: ok, 凑合着现在的几个大战舰的闪先打打看
+18:37:Plough: 有给203炮用的91
+18:37:Plough: 九一式徹甲弾（きゅういちしきてっこうだん）は、大日本帝国海軍が戦艦・巡洋艦用に開発した徹甲弾である。
+18:37:Plough: http://ja.wikipedia.org/wiki/%E4%B9%9D%E4%B8%80%E5%BC%8F%E5%BE%B9%E7%94%B2%E5%BC%BE
+18:37:varna: 啊，巡洋舰可以用啊
+18:37:varna: 看来值得关注
+18:38:varna: 大家来猜猜我会出点什么吧
+18:38:Plough: 真有的话我就该庆幸没拆古鹰了……
+18:38:varna: 时雨？粉条？大腚？赤城？
+18:38:Plough: 大和
+18:38:varna: 大和也行
+18:38:Plough: 0.0000000000000001%\的隐藏掉落
+18:38:varna: 是
+18:39:varna: 玩sc1随机可能随机出魔兽的人族，反正都是人族
+18:39:varna: 还有一万三油、一万五弹，不知道能打几回
+18:39:varna: 这个杂牌军怎么想都未必能干过爷爷
+18:41:varna: NKC! 肝雪dalao! L射！
+18:41:varna: 远征回来了，洗脸组队开干
+18:41:Plough: 貌似91弹最小有155炮版的
+18:43:Plough: 北上大人智商上线
+18:43:Plough: 然后没打中
+18:43:Plough: 然后他就死了
+18:43:Plough: 她
+18:44:Plough: 哎呦，中破了还撸掉一只爷爷
+18:44:Plough: 不错不错
+18:44:cleamoon: 10个0-1随机数的积是怎么分配的？
+18:45:Plough: 轮形，反航
+18:45:Plough: 但是为啥我看着塔姐还是觉得那么可怕呢
+18:46:varna: 平均分布？
+18:46:varna: 而且每个积都是小概率
+18:46:Plough: 我觉得北上大人会被补刀
+18:46:Plough: 你觉得呢
+18:46:varna: 我觉得该想个办法干他一炮
+18:46:Plough: 幼女求饶命
+18:47:Plough: 我有烈风，我跟你换好不好
+18:47:Plough: 同航……
+18:47:cleamoon: 肯定不是平均，试的结果类似三角形的分步
+18:47:varna: 噗？
+18:47:Plough: 雾岛中破，不过算是放人了
+18:48:Plough: 另外确认没彩云也能冲进Boss
+18:48:Plough: 这次我是七个烈风一个江草
+18:48:Plough: 对面对空CI了……
+18:49:Plough: 哦哦哦哦哦北上大人干的漂亮
+18:49:Plough: 二血GET
+18:49:Plough: 这局诸位的智商都奇高啊
+18:49:varna: 没主炮了……上试制41
+18:52:varna: 出击
+18:54:varna: 拼一下夜战
+18:55:varna: 无伤
+18:55:Plough: 雷巡打狗队系列
+18:55:varna: 对面打狗两次都失败了
+18:55:Plough: 不过雾岛随手一炮把塔姐拍死了
+18:55:varna: 春雨我来了
+18:56:Plough: 对了
+18:56:Plough: 算上改造超 战 舰给几根46
+18:56:varna: 我啊
+18:56:varna: 14
+18:57:varna: 噗
+18:57:varna: 中破爷爷强行擦弹
+18:57:Plough: 我是指只算超战舰给的……
+18:57:varna: 2
+18:57:Plough: 爷爷有沉船保护，就算一血也擦给你看
+18:57:varna: 大丈夫
+18:58:Plough: 不愧是我未婚妻，一下就灭了塔姐
+18:58:varna: 哪有以成功为前提的捞船
+18:58:Plough: 雾岛要Lv90了……
+18:58:Plough: 我想把大凤当战舰用了
+18:59:Plough: 噗，五个泡芙
+18:59:Plough: 我操空优1？
+18:59:Plough: 原来可以拿到空优的！？
+18:59:varna: 可以啊
+18:59:varna: 你敢罚站就有空优
+18:59:Plough: 加贺罚战
+19:00:Plough: 赌一把，夜战
+19:00:Plough: 没出事
+19:00:Plough: 然后什么也没掉
+19:01:varna: 噗，神通忘修了
+19:01:varna: 还剩39hp, 希望能熬过夜战
+19:01:Plough: 塔姐大破加贺
+19:01:Plough: 不过大丈夫，加贺是烈风母舰
+19:01:Plough: 噗，红tsu灭了满血妙高……
+19:01:varna: 夜战求智商
+19:02:Plough: 夜战求智商
+19:02:varna: POI三十一血触发保护……
+19:02:varna: 这还真是
+19:02:Plough: 北上大人智商上线
+19:02:Plough: 三血GET
+19:02:varna: 支援的大战舰，谁帮我糊了那个粉条啊！
+19:02:Plough: 58……
+19:03:varna: 支援话说了
+19:03:Plough: 不对劲啊，这个月怎么打的这么舒服
+19:03:varna: 划水
+19:03:varna: 这下要出事
+19:04:varna: 打不掉了
+19:04:Plough: 航向？
+19:04:varna: 3v5
+19:04:Plough: ……
+19:04:Plough: 要不你试试航空支援？
+19:04:varna: 理论上夜战也没用，但我还是要打打看
+19:04:varna: 无所谓
+19:05:varna: 航空支援的话，对面的对空足够高了
+19:07:blackskygg quit:Quit: Bye
+19:07:varna: 继续
+19:08:varna: 支援没来，无伤冲过去
+19:09:erhandsome quit:Ping timeout: 265 seconds
+19:09:krfantasy joined channel
+19:09:blackskygg joined channel
+19:09:varna: 夜战被蹭4hp
+19:10:Plough: 卡战斗开始了……
+19:10:lh_cat joined channel
+19:11:varna: 4v1
+19:11:Guest45781 quit:Client Quit
+19:11:varna: 实质上的2v1
+19:11:varna: 一发320
+19:11:lh_cat joined channel
+19:12:varna: 哇
+19:12:Plough: 出货了？
+19:12:varna: 接着捞不能停
+19:12:Plough: ……
+19:12:varna: 噗，电酱疲劳
+19:13:varna: 正好，支援补闪
+19:13:Plough: 好久没赌大根了，今天来四发
+19:13:Plough: 356
+19:15:Plough: 155主炮
+19:15:Plough: 41
+19:15:Plough: 企鹅
+19:16:varna: 哇
+19:16:varna: 刷闪得个欠雪
+19:16:Plough: ……
+19:16:Plough: 竟然掉主角了，你个HOMO
+19:17:varna: 我准备给驱逐姬来个大新闻
+19:17:varna: 这回上超 支 援
+19:17:Plough: 噗
+19:17:Plough: 消耗大丈夫？
+19:17:varna: 大丈夫，游戏不就是图个乐子么
+19:18:Plough: 坐等dalao式支援
+19:18:varna: 然后夜战劝退就是杰作
+19:19:varna: 道中没人来打潜艇，大概下一场就来了
+19:19:varna: 下一场没来我就是毒奶
+19:20:varna: 毒奶……
+19:20:Plough: 我记得推E2的时候我家道中支援是雪亲王带队
+19:20:Plough: 次次来
+19:20:varna: 秋月被蹭7hp
+19:20:lhanjian quit:Quit: 风光冉冉东西陌
+19:21:varna: 夜战求过
+19:21:varna: JESUS!
+19:21:varna: Fool Poi...
+19:21:varna: 中破了不好打啊
+19:22:varna: This is it
+19:22:varna: I know that caz they even changed formation
+19:22:varna: FIRE IT UP FIRE IT UP
+19:22:lhanjian joined channel
+19:23:varna: MU SA SHI! MU SA SHI!
+19:23:varna: We need power of JESUS!
+19:24:Plough: 我刚复习了一遍那个视频……
+19:24:varna: 击杀失败
+19:24:Plough: 斩杀换哈撸那吧
+19:24:varna: Pyon~
+19:25:varna: 如果POI没中破大概就是完爆
+19:25:Plough: HA RU NA!HA RU NA!HA RU NA!
+19:25:varna: 不是六打一毕竟不稳啊
+19:26:Plough: 话说五航的两位和大凤谁更适合当烈风母舰
+19:26:varna: 五航
+19:26:varna: 大凤尽量带攻击队吧
+19:26:Plough: 中，过段时间把小姨子练出来
+19:27:varna: 支援没来
+19:27:Plough: 道中？
+19:27:varna: POI中破……
+19:27:varna: 夜战别闹事就行
+19:28:Plough: 夜战那个金CL还是有点可怕
+19:28:varna: 有人碰POI一下基本就得走人
+19:28:varna: POI居然闪开了，秋月中破不过无所谓
+19:29:Plough: 啊咧
+19:29:Plough: 原来新编一航罚战以后制空都是一样的？
+19:29:varna: 那种格子很适合罚站
+19:29:varna: 卧槽
+19:29:varna: 神啊
+19:29:Plough: 不过五航现在火力似乎比较悲剧
+19:30:varna: 没救了
+19:30:Plough: POI跪了么……
+19:30:varna: 支援没来，我夜战只是不想输，然后我输了
+19:31:Plough: ……
+19:31:Plough: 喔改
+19:31:Plough: 空优
+19:31:varna: 两闪的决战支援不来是闹什么……
+19:32:Plough: ヲヲヲヲヲヲヲ
+19:32:varna: 这情况下的昼间战其实打得已经不错了
+19:32:Plough: 大凤今天各种暴种啊
+19:32:Plough: 是因为要结婚了吗
+19:33:varna: 大丈夫，诸君辛苦了，继续
+19:33:Plough: 回家了
+19:34:lhanjian: asfrqegeqfsdfdasdf
+19:34:varna: 噗？
+19:34:Plough: 妙高好不容易爆发一次结果利根被泡芙补刀了
+19:34:Plough: 蹭了两点血，大破
+19:34:Plough: 啊啊啊啊啊啊啊啊啊泡芙我日你妈啊
+19:34:Plough: 夜战日掉了
+19:35:Plough: 砸几个桶接着来
+19:35:lhanjian quit:Quit: 风光冉冉东西陌
+19:35:Plough: 为啥lhj滚了一趟键盘就撤退了……
+19:35:varna: 夜战无伤
+19:35:varna: 他是被滚了
+19:36:varna: 失足少女hshsprpr
+19:36:varna: 好，虽然只轰沉一个，但那是tsu级
+19:36:Plough: 罚战情况下火鸡制空比赤城高
+19:36:Plough: 说好的一航战荣耀呢……
+19:37:Plough: 回家了
+19:37:Plough: 看这伤害目测是吃了个T有利，然后塔姐一炮糊利根脸上了
+19:37:varna: 火鸡的搭载就是比赤城高，然后考虑到正相关和均值取最大，火鸡制空比较有优势
+19:37:varna: 而且怎么说火鸡两舰也是IJN中途岛前最新锐的航母
+19:38:Plough: 火鸡那火力……
+19:38:varna: 实际上大凤还不是很比火鸡优越，毕竟装甲很厚，机库要相应缩水
+19:39:Plough: 游戏里的大鸟貌似其实是G15?
+19:39:varna: 考虑搭载十七试舰战和不太会飞的急降下爆击可能舰上攻击机还有三试舰侦，搭载数大约60
+19:39:varna: 游戏没法说，因为机库都魔改过
+19:39:varna: 拆散的备用机按常备算，机体尺寸按99算
+19:39:Plough: 貌似有人提过大鸟改是照着G15来的
+19:39:varna: 哇
+19:39:varna: 掉了个很厉害的东西
+19:40:Plough: 噗
+19:40:Plough: 是wiki编辑者手滑了还是娇喘恶意了
+19:40:Plough: 为啥写着太太改的初始火力是5……
+19:40:varna: 不是么
+19:41:Plough: 这也太可怕了吧
+19:41:varna: 这不太好办啊，今天一天我就把僵尸丸对空之外都喂满了
+19:41:Plough: 僵尸还没练
+19:42:varna: 刚掉了某御召舰
+19:42:Plough: “教父我出比叡了”么
+19:42:varna: 想到甲板上说不定有天闹黑嘎的鼻毛，我泪流满面
+19:42:varna: 我不禁三呼万岁，撸了一管
+19:43:Plough: 不带这么黑火鸡的啊，初始火力比睦月还低闹哪样……
+19:43:varna: tsu级击沉
+19:43:varna: 我给你讲个笑话吧
+19:43:varna: 整个活动我的支援旗舰都没闪，有闪的都在底下
+19:44:Plough: ……
+19:44:varna: 这快能跟94爆雷一拼了
+19:44:varna: 夜战无伤
+19:44:Plough: 先去吃饭
+19:45:krfantasy quit:Quit: krfantasy
+19:45:varna: 划水了
+19:46:varna: 五打一
+19:46:varna: 瞬杀
+19:46:varna: 啊啊啊，啊啊
+19:47:* varna 哭
+19:49:varna: 那么帅气的击杀
+19:49:varna: 就给我妙高
+19:53:boosure joined channel
+19:54:varna: 夕云……
+19:54:lh_mouse: [19:47:20] * varna 哭
+19:55:varna: 继续
+19:57:hoxily quit:Quit: WeeChat 1.0.1
+19:59:varna: 击杀失败
+19:59:varna: T不利没办法
+19:59:hoxily joined channel
+20:00:Plough: 我操
+20:00:Plough: 反航利根一个二连把塔姐撸掉了
+20:00:Plough: 欧根炮绝对有黑科技
+20:01:varna: 支援补闪
+20:01:Plough: 另外我捞朝云的时候有80%的时间都是T不利
+20:01:varna: 其实最后打得不错了
+20:01:Plough: 喔改求放人
+20:01:Plough: 不放
+20:01:varna: 夜战五打二，只不过脸黑了一下
+20:01:Plough: 空优情况下北上大人被开幕灭了
+20:02:varna: 雪风二择择错、POI两炮打偏，神通中破没伤害
+20:02:varna: 如果有一个环节对了还是可以一战的
+20:02:Plough: 2333
+20:03:varna: 这回支援让棒各带
+20:03:varna: 超 支 援太烧了
+20:03:Plough: 吃了个C败，回家
+20:03:varna: 一次512弹
+20:03:Plough: ……
+20:03:Plough: 毕竟决战兵器
+20:03:varna: 好过瘾啊
+20:04:varna: 冲这过瘾劲就值了
+20:04:Plough: 出击
+20:04:blackskygg quit:Quit: Bye
+20:04:blackskygg joined channel
+20:05:Plough: 利根平时一般都是中破的
+20:05:Plough: 这几次没中破才发现原来这么凶
+20:06:varna: 有好装备的重巡很不错的
+20:07:Plough: 北上大人中破……
+20:07:varna: 要不2-5我怎么敢用重巡打
+20:07:Plough: 我觉得幼女会补刀，你说呢
+20:07:varna: 相信北上大人
+20:07:varna: 雷击方为决战之根本
+20:08:Plough: 去见幼女
+20:08:Plough: 反FLAG生效了
+20:08:Plough: 幼女没补北上大人，直接开幕灭了大凤
+20:09:varna: 我有个想法
+20:09:Plough: 哦还是补了的
+20:09:varna: 你给雷巡带个防空CI如何
+20:09:Plough: 我试试
+20:09:Plough: 浦风炮+高射装置？
+20:09:varna: 这个看着不错
+20:10:Plough: D败走人
+20:10:varna: 切，支援又打潜艇了
+20:11:varna: 道中T有利还真是凶险
+20:11:varna: 噗，道中来个长波
+20:12:varna: 这是什么flag
+20:12:varna: 三战完胜
+20:13:Plough: 哦对了我还有个秋月炮
+20:13:varna: HA RU NA!
+20:13:Plough: 浦风炮+秋月炮吧
+20:13:varna: 不行
+20:13:Plough: 不CI还是？
+20:14:varna: 没电探和高射瞄准仪的情况只有秋月能CI
+20:14:varna: 雪风中破神通大破，五打一
+20:14:varna: 看脸吧
+20:14:Plough: 秋月炮不行么
+20:14:varna: 不行
+20:14:Plough: ……蛋疼\
+20:14:varna: 这个主要是说秋月炮
+20:14:varna: 毛嘎敏～
+20:17:varna: 继续
+20:18:varna: 支援没来，朝潮中破，夜战拼脸
+20:19:varna: 脸还不错，夜战无伤
+20:19:varna: This is IT
+20:19:varna: I BELIEVE
+20:20:varna: FIRE IT UP FIRE IT UP!
+20:20:varna: HA RU NA! HA RU NA!
+20:20:Plough: 利根中破，进不去了
+20:20:varna: 榛名怒草tsu级
+20:20:Plough: 16点血，幼女开幕就能秒了……
+20:20:varna: 完好的五打一
+20:21:varna: 一发瞬杀
+20:21:Plough: 不行的话我去试试水雷战队好了
+20:21:varna: 别
+20:21:varna: 我拿下一血之后摔成狗
+20:21:Plough: 我拿下一血就行
+20:21:varna: 喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔哦哦
+20:21:varna: 出货了
+20:21:varna: 扶桑
+20:21:Plough: 一口气两个中破一个小破
+20:21:Plough: ……
+20:21:Plough: T有利！
+20:21:Plough: T有利！
+20:21:Plough: T有利！
+20:22:Plough: 再见了这个世界
+20:22:Plough: 哎呦反FLAG生效了
+20:22:Plough: 不过三个中破进去……
+20:22:varna: 足够了
+20:22:varna: 支援补个闪
+20:22:varna: 斩杀我强烈不推荐下路
+20:23:varna: 你得考虑到下路门神有个金苍蝇
+20:23:Plough: 正好给我试试对空CI
+20:23:varna: 这是什么节奏呢，大概就是对面二连你小船的节奏……
+20:23:Plough: 主要是Bug被修复了，不然对空CI分分种罚战啊
+20:23:varna: cav编成我下个月试试
+20:23:Plough: 嗯，这次对面CI了
+20:23:Plough: 妙高已跪
+20:23:Plough: 北上跪了
+20:24:varna: 还有大井，没关系！
+20:24:Plough: 两个火力点进夜战，对面六只
+20:24:Plough: 你猜能不能打掉
+20:24:varna: OOOOOOOOOOOOOOOOOOOOOOOOOOOI!
+20:24:Plough: 哪有大井……
+20:24:varna: 噗
+20:24:varna: 你就带一个雷巡的啊
+20:24:varna: 没戏了
+20:24:varna: 拼吧
+20:24:Plough: 带大井我就别想进去了
+20:24:varna: 你得相信大井
+20:24:Plough: 2vs5
+20:24:varna: 想想鬼佬
+20:24:Plough: 我相信过不知道多少次了
+20:24:Plough: 那是别人家的大井
+20:25:varna: 要不你也来两嗓子
+20:25:Plough: 没打掉
+20:25:Plough: 别人家的大井能进Boss
+20:25:Plough: 我家的不行
+20:25:varna: 啊，电酱119了
+20:25:Plough: 哈哈哈哈哈哈哈哈哈哈
+20:25:Plough: 那珂酱
+20:25:Plough: 那珂酱啊
+20:25:varna: 下次就打掉了
+20:25:varna: 见到NKC的时候一般都是转运了
+20:26:Plough: 果然我已经被踹回南非了么
+20:26:Plough: 我昨天见到那珂酱然后出了三个傻级一个陆奥
+20:26:varna: 糟蹋资源的感觉真爽快啊
+20:26:varna: 十二月继续封港，不作大动作了
+20:27:Plough: 我已经用了30桶了
+20:27:varna: 这是期望之内
+20:27:varna: 我觉得五十桶之内能搞定就可以，四十桶是预期
+20:27:varna: 噗
+20:27:Plough: 问题是现在完全不像能斩掉的样子……
+20:27:varna: 僵尸丸喂满了
+20:27:Plough: ……
+20:27:Plough: 拆吧
+20:27:varna: 我是不是该来波E3烈风拳
+20:27:Plough: 50+钢呢
+20:28:Plough: 快去殴打院长
+20:28:varna: 算了
+20:28:varna: E2就是烧点油，我省省钢吧
+20:28:varna: 半个月我糟蹋掉五万三呢
+20:29:Plough: 超 战 舰吃的么
+20:29:Plough: 听说大破一次2k钢？
+20:29:varna: 毕竟大建很多发，然后又打5-5、棒各、西村、轻航母出击
+20:29:varna: 不到
+20:29:varna: 就1k多吧
+20:30:Plough: soga
+20:30:Plough: T不利，蛋疼了
+20:30:varna: 小破五百
+20:30:Plough: 果然回家了
+20:31:Plough: 算了，报个仇
+20:31:varna: 神通被蹭11血，夜战希望别出事
+20:31:Plough: 我真心觉得我进不去Boss……
+20:31:varna: 不行就明天斩
+20:32:varna: 夜战无伤
+20:32:varna: 这不对啊
+20:32:varna: 我攻略的时候怎么没这么爽快的
+20:32:Plough: 你是攻略脸黑捞船脸白
+20:32:Plough: 我是反过来
+20:33:varna: 我攻略只学会三条：单纵、用桶堆、用力堆
+20:33:Plough: 80%的T不利不是开玩笑的
+20:33:varna: 打沉两个爷爷，还行
+20:33:Plough: 雷巡打狗队系列
+20:34:Plough: 北上大人中破
+20:34:varna: 电酱被害担当，实质的3v2
+20:34:varna: 雪风看你了！
+20:34:Plough: 打了这么长时间3-5我就学到一个事
+20:34:Plough: 对面只有T有利一种航向
+20:34:varna: 打是打对了，没CI...
+20:34:Plough: 233333
+20:34:varna: POI两炮全空，神通打掉tsu级
+20:35:varna: 出个帕秋莉
+20:35:Plough: 又T不利
+20:35:Plough: 目测又得回家
+20:36:varna: 接着烧
+20:37:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=3318d1f0d258ccbf1bbcb53229e3bd3e/9345d688d43f87942404306cd11b0ef41ad53afc.jpg
+20:37:FrankHB quit:Read error: Connection reset by peer
+20:37:cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/6k/gv_254199.gif
+20:37:Plough: 我就说回家了吧
+20:37:varna: 支援操翻四个，神通一炮大破tsu级
+20:37:varna: 这个多帅气
+20:38:varna: 夜战别出事
+20:39:varna: 两个不太要紧的中破
+20:40:varna: tsu级爆掉
+20:40:varna: 还剩一个，有点麻烦
+20:41:varna: 惊险地打掉了
+20:41:varna: 舞风……
+20:44:Plough: ……
+20:44:Plough: 我又被晒了
+20:44:varna: 舞风3-3出过
+20:46:varna: 说起来，这次我怎么感觉只有CI的祥瑞和夜战火力压倒性强大的神通能爆掉粉条呢
+20:46:varna: POI也有172的夜战火力啊，难道粉条每次都随机到高甲……
+20:47:varna: 还是说游戏跟我一开始相信的一样有口径方面的考虑
+20:49:Plough: 岛风倒是能撸动粉条
+20:49:Plough: 不过爆不掉
+20:49:varna: 支援没来，自力更生，夜战拼脸……
+20:49:varna: 岛风应该不到170
+20:50:Plough: 不过伤害可观
+20:50:varna: 我觉得是我脸黑
+20:50:Plough: 二连能重伤粉条
+20:50:varna: POI这火力绝对够了，斩杀的时候也是POI爆掉的
+20:50:Plough: 就跟我进去80%T不利一样么
+20:50:lh_mouse: 我要妹子
+20:51:varna: 乱七八糟谁也打不中谁的夜战
+20:51:varna: 这样就挺好
+20:51:varna: tsu级撸掉
+20:52:varna: 神通一迷糊照着粉条来了一下子
+20:52:varna: 五打一
+20:52:varna: 神通安定地拯救世界
+20:53:Plough: 不该是神通安定的打出了总共四点伤害么
+20:53:varna: 華の命は移り逝く 闘う鬼百合となり 闘う鬼百合となり hshs
+20:53:varna: 舞风*2
+20:54:varna: 咱家鬼百合一出手必有不幸
+20:54:varna: 不过看起来是转运了
+20:54:Plough: 233333
+20:54:Plough: 反正我被晒了
+20:54:varna: 没事，还有更花哨的没出过呢
+20:55:varna: 春雨啊，大淀啊，赤城啊
+20:55:Petrus07 quit:Quit: Leaving.
+20:55:varna: 还剩三千多弹，捞不了几回了
+20:55:varna: 这就是我这次最后跟粉条的交 流啊，要好好珍惜
+20:55:varna: 不对
+20:55:varna: 要好好枕席
+20:56:Sleepwalking quit:Ping timeout: 264 seconds
+20:56:varna: 补最后一次闪
+20:56:varna: 应该不会论到下一次决战支援补闪了
+20:56:Plough: 制空确保然后我被开幕大破了
+20:56:varna: 想想主任
+20:56:Plough: 这是两只喔酱啊
+20:57:Plough: 两只主任我就认了，两只喔酱啊！！！！！
+20:57:Plough: 喔改都没有啊
+20:58:varna: 喔酱发疯不是两三天
+20:58:varna: 是不是糊你熊脸都看心情
+20:59:varna: 打到一千五弹左右我就收手
+21:01:varna: 一群人糊个潜艇没糊掉，最后基本靠狗（笑）
+21:01:blackskygg quit:Quit: Bye
+21:02:lh_mouse: 羊驼还在实验室包宿？
+21:02:varna: 没有啊
+21:02:varna: 最近我都是正常衮回去睡觉的
+21:02:lh_mouse: 我就说今天
+21:03:blackskygg joined channel
+21:03:lh_mouse: 你最近干吗去了
+21:03:lh_mouse: 一直都不在呀
+21:03:varna: 前几天被攻击了
+21:03:varna: 最近都不会通宵
+21:03:lh_mouse: 为何呢
+21:03:lh_mouse: 后院起火了？
+21:03:varna: 没什么特别的事情就不蹲实验室
+21:03:Plough: 妙高中排，还是要回家
+21:03:Plough: 中破
+21:03:varna: 我通宵的时候你都会在irc上看到我的
+21:04:lh_mouse: 羊驼不泡实验室必然是处理后院去了
+21:04:lh_mouse: 上两个星期是咋回事
+21:04:varna: 实验室没网就跟寝室没差别，反正我寝室也没办网
+21:04:varna: 之前活动，白天网络巨差只好晚上出没
+21:05:lh_mouse: 寝室没网……
+21:05:varna: 不值
+21:05:varna: 实验室大部分时间都正常的话，没必要花两百块办寝室的网
+21:05:Plough: 噗，进去了
+21:05:Plough: 不过估计打不掉
+21:05:varna: 而且那个客户端不支持我的ifconfig
+21:05:lh_mouse: 妈蛋  为什么这么多语言都是分隔符比元素数量少一个
+21:05:varna: 分隔符不应该允许x, y, z, 么
+21:06:Plough: 卧槽北上大人Lv90了
+21:06:lh_mouse: 应该那样
+21:06:varna: 不然自动生成得疼死
+21:06:lh_mouse: REPLACE INTO `table` SET `foo` = 1, `bar` = 2, `baz` = 3
+21:06:lh_mouse: 现在也不是啥大麻烦  但是就是疼
+21:06:varna: 没戏了
+21:07:varna: 卧槽
+21:07:varna: POI...
+21:07:Plough: 哇哈哈哈哈哈哈蛤
+21:07:Plough: 本月的噩梦终于结束了
+21:07:varna: \PANPAKAPAN/
+21:07:varna: 难得POI爆发一回
+21:08:Plough: 结论：我迫切需要一只能用的重巡
+21:08:lh_mouse: 回去了
+21:08:varna: 我刚捡个爱宕看着不错，你要不
+21:08:varna: 我觉得这个能用
+21:08:Plough: 3k油5k钢弹50桶
+21:09:Plough: 会宕掉
+21:09:varna: 当你懂的去享受这个过程ry
+21:09:varna: 懂得*
+21:09:blackskygg: 被打残了
+21:09:varna: 没事我陪你残
+21:10:Plough: 没事我陪你残
+21:10:blackskygg: 还死了两个小学生
+21:10:varna: 我见底的资源快打完了
+21:10:varna: 噗
+21:10:varna: 你在干什么
+21:10:Plough: 噗
+21:10:Plough: 沉了？
+21:10:blackskygg: 沉了
+21:10:varna: 快土下座
+21:10:Plough: 什么情况
+21:10:varna: 你不会是知道大破然后进击了吧
+21:10:blackskygg: 嗯
+21:10:varna: 我E1的四十级搬砖队都是上损管才准备往死里打的啊
+21:10:Plough: 可怕
+21:11:varna: 觉得要死人还得往死里打就损管
+21:11:varna: 以后如果你还试图推广这种战术，我就五个字：你索敌不够……
+21:12:code_new joined channel
+21:12:varna: 噗，电酱被小红鱼爆了个小破
+21:12:varna: 电酱炸他
+21:13:blackskygg: 我好好反省去
+21:13:varna: 我觉得比起反省你更需要上支援
+21:14:Sleepwalking joined channel
+21:14:varna: 沉了的事是一回事，打不打下去是另一回事
+21:14:blackskygg: 可是我已经把能上的都上了
+21:15:varna: 报一下配置吧
+21:15:varna: picpaste.com贴一下图也行
+21:15:blackskygg: 因为事实上我只有一个舰队是可以打的
+21:15:varna: 大丈夫
+21:15:blackskygg: 你等等
+21:15:erhandsome joined channel
+21:16:varna: 差别不过是六十级弹性的人用二十级搬砖队，一百级的人用四十级搬砖队
+21:16:varna: 实力低的难度也相应低，所以应该能想想办法
+21:17:varna: 麻烦了
+21:17:varna: JESUS!
+21:17:varna: 爆了！
+21:17:varna: 哈哈哈哈
+21:18:erhandsome quit:Client Quit
+21:18:varna: 所以说雪风不可能一直不知道打谁，偶尔也是能打对的
+21:18:varna: 卡立绘了
+21:18:varna: 初风……
+21:18:varna: 我该说什么好呢
+21:19:varna: 1.5k弹，不打了
+21:19:varna: 诸君辛苦
+21:19:varna: 这一顿捞船，水雷战队简直表现神勇，超乎想像
+21:19:varna: 道中和夜战从未劝退，半数以上都能全灭敌人
+21:19:varna: 超过瘾啊
+21:20:blackskygg1 joined channel
+21:20:blackskygg1: http://picpaste.com/QQ______20141129221756-AGOPN82c.png
+21:20:blackskygg1: http://picpaste.com/QQ______20141129221807-Y82qpjYG.png
+21:21:blackskygg: 别笑出声来
+21:21:varna: 这没什么可笑的
+21:22:varna: 没谁在有办法的情况下会搞成这样
+21:22:varna: 你还有驱逐舰么
+21:23:blackskygg1: 全是1级的
+21:23:varna: 放弃吧
+21:23:blackskygg1: 我也是这样想的
+21:23:blackskygg1: 显然已经是没办法的了
+21:24:code_new: 这是在打哪个图……
+21:24:Plough: 应该是E1
+21:24:varna: E1
+21:24:varna: 要是有人有兴趣代打的话其实相当有戏
+21:24:code_new: 这阵容去打略凶残……
+21:24:varna: 不过我没兴趣
+21:25:blackskygg1: 但是我对你那句话很有兴趣
+21:25:blackskygg1: “要是有人有兴趣代打的话其实相当有戏”
+21:26:Plough: 冲去1-5现肝一堆DD么
+21:26:varna: 你还剩多少资源
+21:26:blackskygg1: 四个4800
+21:26:varna: 凑合
+21:26:varna: 但是给你代打那人要付出巨大的精神污染
+21:27:code_new: 2333
+21:27:varna: 如果一切顺利的话，更新之前也许能打掉E2，也许不能
+21:27:varna: 举例来说，先随便捞几个dd在1-5一顿狠肝
+21:27:blackskygg1: 额
+21:27:varna: 然后掏出北上大人在1-5一顿狠肝
+21:27:varna: 然后掏出航战在1-5一顿狠肝
+21:27:blackskygg1: 肝的话，就算了
+21:27:varna: 睡三小时，然后周日开工
+21:28:varna: 期间演习刷闪肝重巡
+21:28:varna: 这说不定能拼下来，看你剩多少桶
+21:28:blackskygg1: 20桶
+21:28:varna: 哦
+21:28:varna: 我突然只会说一个字了
+21:28:Plough: 20桶就希望不大了……
+21:28:varna: 不是希望不大
+21:29:blackskygg1: 没有希望吧
+21:29:varna: 这个希望在于四次进击支援直接干爆捏级
+21:29:Plough: 有
+21:29:varna: 我觉得找个欧皇还是可以的
+21:29:Plough: 氪氪氪
+21:29:varna: 得特别皇的那种
+21:29:varna: 然后再氪桶、氪八八套
+21:29:blackskygg1: 不过，算了吧
+21:29:varna: 黑鬼拿着20桶即使祭出大发动肝也没法打，所以只能放弃
+21:29:Plough: 算了吧+
+21:29:varna: 现在说只是说说
+21:30:lh_cat: 改了两天 poseidon  明天看看同事  开 mcf 
+21:30:varna: mcf...
+21:30:blackskygg1: 我洗澡去了
+21:30:blackskygg1: 洗完澡我就把活动给忘了
+21:30:blackskygg quit:Quit: Bye
+21:31:blackskygg1: 话说周国平这个人，还真不赖
+21:31:lh_cat: 羊羊羊
+21:31:varna: 哦瘊瘊？
+21:31:blackskygg1: bye
+21:31:blackskygg1: 各位
+21:32:varna: bye
+21:32:blackskygg1 left channel:
+21:32:Plough: 我强烈要求实装舰娘交换系统
+21:32:Plough: 然后用早霜换朝云
+21:32:varna: 唔，有这个我就跟你换
+21:33:varna: 还可以跟没初风的dalao换大和
+21:33:Plough: 第二只我现在还留着呢……
+21:33:varna: 反正他们都中YNB
+21:33:Plough: 初风我也有，搬砖中
+21:33:varna: 难得捞到了就留着好了
+21:33:Plough: 我终于可以用阳炎级搬砖了
+21:34:lhanjian joined channel
+21:34:Plough: 但是我还是只能在出错的时候见到猫娘
+21:34:varna: 明天搬砖队换一次血，把阳炎级和特型撤下来换睦月级
+21:34:varna: 之前的搬砖队有一些可以正式升上二线
+21:34:Plough: 你准备做拜月神教出击了？
+21:34:varna: 3-2出击我不作
+21:34:varna: 不做
+21:34:varna: 我没留如月
+21:34:Plough: 我打算找时间清下出击任务
+21:34:Plough: 五页太可怕了
+21:35:varna: 出击任务啊，我先弄个长门来再说
+21:35:Plough: 我先弄个大和来再说
+21:35:varna: 现在我也开始喜欢捞船了，十二月多攒点吧
+21:35:Plough: 十二月我得穷死……
+21:35:varna: 反正就是挂着攒资源，也省心
+21:35:varna: 但是大前提是我得有条件捞
+21:35:Plough: 跟大凤说好了活动完就娶她的，不能食言
+21:36:varna: 别下次来个比较难的活动，我勉强能通关或者不能通关
+21:36:varna: 不能通关说不定还会去捞，勉强通关了估计就没余地
+21:36:Plough: 我需要大和和信仰
+21:36:Plough: 不然又是双院长会诊我就蛋疼了
+21:36:varna: 那个得靠北上
+21:37:varna: 你也买粘土吧
+21:37:Plough: 北上得躲在大破的武藏背后
+21:37:varna: 粘土北上超可爱的
+21:37:Plough: 不然就是“打哪个院长？算了，打狗吧”
+21:37:varna: 得有爱
+21:37:Plough: 靠爱的话我会去找小学生
+21:37:varna: 理论上有可接受确率打掉的东西，只要用资源堆就可以打掉
+21:38:Plough: 比如tenga tenga还有tenga
+21:38:varna: 所以击杀失败不是主力的错
+21:38:Plough: 我现在手机壁纸就是tenga
+21:38:Plough: 我现在也不骂舰娘了
+21:38:Plough: 只骂田中……
+21:38:varna: 我觉得还行
+21:39:varna: 一个去掉了接敌和索敌的海战游戏剩下的东西不就是单纵和脸么
+21:39:varna: 我找个别人玩海战的战报给你看
+21:39:Plough: 哪有造船看脸的……
+21:39:varna: http://www.toaw.org/bbs/thread-11634-1-1.html
+21:39:varna: 造船不看脸，看血统
+21:40:varna: 藤本已死，平贺不让，今上又只懂得虾虎
+21:41:Plough: 不过平贺让不是也提过金刚代舰么
+21:41:Plough: 我记得46连装的那个提案是他的
+21:41:varna: 现在的改二我基本认为是平贺方案
+21:42:Plough: 现在的改二是41连装……
+21:42:varna: 藤本方案一般会比较激进
+21:42:varna: 而且胸大
+21:42:varna: 高雄爱宕就是他搞的
+21:42:Plough: 胸大2333
+21:42:Plough: 摩耶是平贺让的么
+21:42:varna: 应该都不是
+21:42:varna: 高雄级设计的时候，平贺大概在英国
+21:42:Plough: Soga
+21:43:varna: 反正后来两股神风把藤本干翻了
+21:44:Stevearzh joined channel
+21:44:Plough: 看了下，发现我记错了
+21:44:Plough: 三连16in和连装46都是藤本提的
+21:45:Plough: 平贺案是16in连装2基三连2基共10门
+21:45:lh_cat: 对面俩棒子。
+21:45:Plough: 不过反正也有三连16in所以快给我送啦
+21:46:Plough: 说起来这个炮的配置我怎么感觉这么像扶桑级改二……
+21:46:varna: 这个趋势一直都有
+21:47:varna: 从蜜瓜开始，以下是特型和第一次近代化大改造，之后是阳炎级、丙驱和啊嘿颜……
+21:47:varna: 总之就是拼死往上塞，但打压三连装方案
+21:47:varna: 同时用力黑背负炮塔
+21:49:varna: 哦对，平贺可能还有一个重大爱好
+21:50:varna: 在中线上布置武装增加舷侧火力……
+21:50:Plough: ……
+21:50:varna: 当然大 战 舰不可能这么搞，所以往往这个设计被体现在巡洋舰上
+21:53:varna: 我数数这次烧掉了多少
+21:53:varna: 大约烧了九千油一万四千弹，桶六十四
+21:59:Plough: 果然Mono还是屎
+22:00:Plough: 换成dotnet20就安稳的把造船软件wine起来了
+22:00:hoxily quit:Ping timeout: 240 seconds
+22:01:hoxily joined channel
+22:02:varna: dotnet20可以啊
+22:02:varna: Mono实在太惨
+22:03:iyzsong joined channel
+22:12:lh_mouse: geordi, << is_destructible<foo>::value; struct foo { private: ~foo() = default; };
+22:12:geordi: false
+22:14:condy: geordi: erase private:
+22:14:geordi: true
+22:21:Plough: http://imgsrc.baidu.com/forum/pic/item/3417ee18972bd40719f7d7bf78899e510fb30976.jpg
+22:21:Plough: HOLY FUCK IT'S A TREE
+22:23:varna: 噗
+22:24:Plough: 糖果还弄了个中文翻译
+22:24:Plough: http://tieba.baidu.com/p/3438620582 25L
+22:26:Plough: 妙高：MAKES THE SAME FACE DURING ANAL
+22:26:varna: 北上应该是懒散乡下碧池
+22:28:Plough: PEDOPHILIA STARTER PACK
+22:28:varna: 总结起来今天还是觉得超级爽快
+22:28:lh_mouse: geordi, << is_pointer<shared_ptr<int>>::value;
+22:28:geordi: false
+22:28:varna: 进夜战就是轰轰地把对面打掉，己方奇妙闪避，要么就是吃个保护
+22:29:varna: 14号晚上我都被劝迷糊了
+22:29:Plough: 3-5我换配置前都不怎么爽快……
+22:29:varna: 斩杀都斩了四次
+22:29:varna: 这次对着斩杀难度一顿乱打
+22:30:varna: 管他捞出来什么，总之泄一口恶气
+22:30:Plough: 233333
+22:30:varna: 还上了超 支 援，超赞的
+22:30:varna: 跟HA RU NA支援没看出什么差别来，毕竟对面装甲纸糊的
+22:30:varna: 可能一个主要的差别是超 支 援能糊掉粉条61hp
+22:33:Plough: 上了NI**ER?
+22:33:varna: 旗舰
+22:33:varna: 带着不知道多少天的演习闪
+22:33:Plough: 23333
+22:33:Plough: 不是有dalao的支援直接灭全队么
+22:33:Plough: 轰隆一下六个击沉，粉条都跪了
+22:34:varna: 绝对有武大B
+22:34:varna: 要么就是大大武
+22:34:Plough: 欧洲套？
+22:34:varna: 轰爆粉条150火力都不够用的
+22:34:whocares_2 quit:Ping timeout: 264 seconds
+22:34:Plough: 或者是航空？
+22:35:lh_mouse: 艹  又开始 lag
+22:35:varna: 航空可能性小
+22:35:Plough: 一堆流改呜呜飞过去
+22:35:varna: tsu级的对空很好，我不觉得一个开幕能开掉他们
+22:35:lh_mouse quit:Quit: Meow
+22:36:Plough: 但是炮击怎么看都不像能打掉的样子
+22:36:Plough: 毕竟六条船全死了……
+22:36:varna: 粉条好可爱啊hshsprpr
+22:36:condy quit:Ping timeout: 265 seconds
+22:36:varna: 就这么告别了稍稍舍不得
+22:36:varna: 打沉了还有告白
+22:42:Sleepwalking quit:Ping timeout: 250 seconds
+22:42:varna: 哦噗
+22:42:varna: 粉条究竟是八十运还是一百运
+22:42:varna: 虽说没差别
+22:43:lh_mouse joined channel
+22:43:Plough: 貌似有区别
+22:43:varna: 炮雷CI耍得那么溜的敌人至今只见过两种
+22:43:varna: 一种是莉酱，一种是粉条
+22:43:Plough: 一百运的CI率是100%……
+22:43:lh_mouse quit:Read error: Connection reset by peer
+22:43:varna: 粉条有不出CI的时候么……
+22:43:Plough: 有过
+22:43:varna: ...
+22:43:Plough: 随便点一炮撸死我
+22:43:varna: 还真有啊
+22:44:varna: 我都是怒吃CI直接被暴击的
+22:44:Plough: 当然中破了就是另一回事了
+22:44:varna: 连中破保护都没有，只能不沉
+22:44:Plough: 一个照明弹扔过去然后我吃了一发CI
+22:44:varna: 我放弃E2照明弹只带夜侦
+22:44:Plough: 当然时雨没CI
+22:45:Plough: 不过时雨的CI率貌似只有57.5%
+22:45:Plough: 50运还是鶸
+22:45:varna: 雪风是王道
+22:45:varna: 基本属性也漂亮，运还多10
+22:46:Plough: 亲王被贴条了
+22:46:varna: 当然时雨有一个最大的优势
+22:46:Plough: 要不我肯定上双祥瑞
+22:46:varna: 长相可爱
+22:46:Plough: 亲王也可爱啊
+22:46:Plough: 衣服还是透明了
+22:46:varna: 雪风打活动的时候lv4，今天捞完lv40
+22:46:varna: 不对，41
+22:47:Plough: 时雨60->71
+22:47:Plough: 在E2
+22:47:varna: 不过里面有三十多级都是打演习打的
+22:47:varna: 毕竟双支援烧得太感人，一次出击八百多弹药
+22:47:varna: 三队一起算
+22:49:varna: 噗，海雾有晴岚了
+22:49:hoxily quit:Remote host closed the connection
+22:50:hoxily joined channel
+22:50:biergaizi joined channel
+22:50:lh_mouse joined channel
+22:50:Plough: 找时间去把苍蓝补了
+22:51:lh_mouse quit:Client Quit
+22:52:whocares_2 joined channel
+22:53:lh_mouse joined channel
+22:56:varna: Plough: 比如明天？
+22:56:varna: 苍蓝漫画很少，看几下就看完了
+22:57:Petrus07 joined channel
+22:58:Plough: 明天看精神
+22:58:Plough: 精神好就接着去折腾学派
+22:58:Plough: 精神不好就去补番
+22:59:varna: 明天我看着把HOI::Comprehensions扔CPAN
+22:59:varna: 今天我又以身作则，告诉大家黑鬼不要想去外面找什么可爱的女孩子
+23:00:varna: 找不到的，这E2跟5-4没什么差别
+23:00:varna: 东山急行
+23:00:Plough: 2333333
+23:00:Plough: 我不怎么掉东山
+23:00:Plough: 全是扶桑
+23:00:varna: 走了，诸君武运，明天见
+23:00:varna quit:Quit: leaving
+23:22:lhanjian quit:Ping timeout: 256 seconds
+23:41:erhandsome joined channel
+23:45:Plough quit:Remote host closed the connection

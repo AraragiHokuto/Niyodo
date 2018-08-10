@@ -1,0 +1,533 @@
+00:02 yzld2002 quit:Remote host closed the connection
+00:04 RivDo quit:Quit: Leaving.
+01:27 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+01:28 Stevearzh joined channel
+02:33 libhanjian quit:Remote host closed the connection
+03:48 geordi quit:Remote host closed the connection
+03:49 geordi joined channel
+03:58 boosure joined channel
+04:20 ASenR quit:Remote host closed the connection
+06:40 sismvg joined channel
+06:41 sismvg quit:Client Quit
+08:00 sismvg joined channel
+08:02 sismvg: http://www.ithome.com/html/game/187110.htm
+08:02 sismvg: 魔兽电影，第一支预告片
+09:13 sismvg: 米国人会接受too young too simple这样的形式吗？
+09:28 lh_mouse joined channel
+10:09 tutu_wind joined channel
+10:10 tutu_wind: morning ~
+10:28 sismvg: http://v.youku.com/v_show/id_XMTM3OTYwNDkyNA==.html
+10:28 sismvg: 魔兽世界7.0资料片军团再临官方CG
+10:46 geordi quit:Ping timeout: 260 seconds
+11:11 wlemuel joined channel
+11:48 sismvg: 神回复：瓦里安国王失去记忆时去过部落当幽灵狼时跟希尔瓦娜斯有过一腿？
+11:57 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=04a5ad9c332ac65c6705667bcbf3b21d/f4d32e9759ee3d6d6bd9f63745166d224e4ade19.jpg
+12:09 varna joined channel
+12:10 varna: 好想侵犯妹子啊
+12:12 cleamoon: varna, 爆
+12:12 varna: 这幼女学坏了
+12:14 varna: https://pbs.twimg.com/media/CTLFThkVAAADoSg.jpg 口尼西最近的身体状况似乎比我还健康……
+12:15 cleamoon: 我发现一个问题
+12:15 cleamoon: 秋刀鱼季节已经过去了，村雨还在钓鱼......
+12:15 varna: 2333333
+12:15 varna: 秋刀鱼立绘应该会保留到下一次更新
+12:16 * varna 简单弥补了一下自己先前在读写自旋锁上的愚蠢之处
+12:18 cleamoon: c艹自带的string有快速的append函数吗？
+12:18 varna: 这得问小耗，C艹标准库我不熟
+12:19 cleamoon: 哦，如果自己写你会怎么写
+12:20 varna: 我不会让string类可变
+12:20 varna: 所以最后你拿到的是一个chain buffer, 它在必要的时候被展平
+12:21 cleamoon: 那需要 += 时不得疼死
+12:21 varna: 如果是个可变的string, namely string_buffer, 它仍然是个chain_buffer
+12:21 sismvg: 你想要多快的append?
+12:21 varna: string literal本来就不该频繁concat
+12:22 varna: 如果你要快速concat, 我仍然会对尺寸大的串做chain buffer
+12:22 yzld2002 joined channel
+12:23 varna: 不过也许string literal可以退一步
+12:23 MoeIcenowy quit:Ping timeout: 240 seconds
+12:23 varna: 因为它不可变，所以我真的会生成一个尾端COW的新副本……
+12:23 varna: 或者叫它COO, Copy on Operation
+12:25 sismvg: 或者也可以叫cod
+12:28 varna: 未必是析构时拷贝
+12:28 varna: 因为可以带一个引用计数
+12:28 varna: 或者那些聪明的指针
+12:28 cleamoon: 话说链表检索一遍为什么比数组检索一遍慢？
+12:28 varna: 如果你明显感觉到慢了，不排除是缓存杀
+12:28 varna: 但这个不是必然的，取决于你链表写法
+12:28 varna: 单纯考虑缓存杀和用量不大的链表节点（未必容器），节点本身是可以被扔进一个小尺寸数组来缓存的
+12:28 cleamoon: 就是最显然的 pointer->next
+12:28 varna: 那个也未必
+12:29 varna: 因为next域拿出来的东西未必离当前迭代器位置在主存里很远
+12:29 varna: 另外如果你真的担心那个性能，建议在迭代的时候要求编译器预取下一个元素
+12:30 varna: 我不确认gcc的builtin prefetch会不会造成缓存混乱
+12:30 varna: 慎用
+12:31 ASenR joined channel
+12:31 varna: 有传言说gcc单纯按等级开优化甚至不会去预取循环中的数组元素，虽说其实循环自然地会读到那里，看RP吧……
+12:31 cleamoon: 如果没什么特别的性能损失那为什么不用一个长链表替代字符串？
+12:32 varna: 一个字符串本来就可以是一个块链
+12:32 varna: 但实际上多数“字符串”不长，没必要那么折腾
+12:33 varna: 而类似编辑器那样频繁进行“一次在一个字符串中的一处进行插入”这样操作的场合，可以用gap buffer之类专门的缓冲区解决
+12:33 cleamoon: 就是说这么写也无所谓？
+12:33 varna: 有所谓
+12:34 varna: 如果你真的要求那个字符串持久生存，而你真的动手去开动态内存了，那么小心分配器的碎片和空间利用率
+12:34 varna: 块链的每个节点承载的数据也差不多是一个常见小串以上的程度了
+12:35 varna: 我日
+12:36 varna: 对面有cv, 我只有没带飞机的速吸和三隈
+12:36 varna: 然后我制空确保……
+12:36 cleamoon: 哦，这倒确实是个问题
+12:37 varna: 不过我猜对多数人来说不是大问题，因为我自己在动态内存用法和用量上有偏执
+12:41 sismvg: 搞到了一堆螃蟹和几只甲鱼。。
+12:41 varna: 甲鱼……
+12:41 varna: 这个好
+12:41 cleamoon: 这确实是个问题
+12:41 varna: 不过现在已经不是吃螃蟹的季节了吧？我印象螃蟹在八月底到十月初比较好
+12:42 sismvg: 不是买的。。
+12:42 varna: ...
+12:42 varna: 这可怕的欧洲人
+12:42 sismvg: 甲鱼不知道该怎么料理。吃了又怕晚上睡不着
+12:42 cleamoon: 据说生吃甲鱼能给巨根加一个嗜血效果，你试试不
+12:42 cleamoon: 这还能是钓的？
+12:42 xxxxxxxx: 睡不着你可以日床板啊
+12:43 sismvg: 家里人回老家带了一大堆 
+12:43 sismvg: http://home.meishichina.com/recipe-125540.html <-就这么烧了
+12:44 varna: 乱翻东西才发现gcc可以不用手艹调用约定就直接拿返回地址
+12:44 varna: 虽然初看上去没什么卵用就是了
+12:50 ASenR quit:Quit: leaving
+12:53 varna: cleamoon: 另外建议听听夕张的秋季母港语音，末尾高能
+12:55 Stevearzh quit:Ping timeout: 264 seconds
+12:56 Stevearzh joined channel
+12:58 Mokou joined channel
+12:59 xxxxxxxx: http://2chcn.com/55620/
+12:59 varna: xxxxxxxx: 这种以前就有，不过我想要个ddv款式的
+13:00 Stevearzh quit:Read error: Connection reset by peer
+13:00 xxxxxxxx: 视频里那种?
+13:00 Mokou: 1/1
+13:01 varna: xxxxxxxx: RJ鼠标垫
+13:01 varna: 今天先不FL了……有点感冒，扭不动了
+13:02 Mokou: 了解
+13:02 yzld2002 quit:Remote host closed the connection
+13:02 xxxxxxxx: http://ww3.sinaimg.cn/mw690/be6bdb92gw1exs7hvfnjfg20dc0dcx6t.gif
+13:02 lh_mouse: varna, dladdr 会用到
+13:03 varna: lh_mouse: 哦，多谢提醒……
+13:03 lh_mouse: (｡･ω･)ﾉ
+13:04 Stevearzh joined channel
+13:12 varna: 听茶太的Labryrinth, 副歌部分脑补填词“绿杖白牛/冲黑鸟/幻刺出了羊刀/蝴蝶冰女/跳刀敌法也风骚”
+13:12 varna: 感冒了就容易蛋疼
+13:12 sismvg: 你的nsfw呢！！！！！！
+13:13 Stevearzh quit:Ping timeout: 246 seconds
+13:13 Stevearzh joined channel
+13:15 varna: 反正提督也没有女朋友（矶波软式黑确信）
+13:16 lh_mouse: varna, 如果老板在旁边怎么办
+13:17 varna: lh_mouse: 所以我会选一个龙骧风格的鼠标垫，纯平
+13:18 xxxxxxxx quit:Quit: Leaving...
+13:20 cleamoon: 夕张那声是什么鬼.....
+13:20 varna: 因为见到好吃的所以口水流下来了
+13:23 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=5dd5a6fbe3dde711e7d243fe97eecef4/924ad11373f08202d21887c14dfbfbedaa641b42.jpg
+13:23 Stevearzh quit:Ping timeout: 255 seconds
+13:23 varna: 强行没对上系列
+13:23 varna: 今天正好换个topic, 慢慢地想一下
+13:23 lh_mouse: 羊驼：(｡･ω･)ﾉ 还不如我写的 
+13:24 varna: 小耗：(｡･ω･)ﾉ 还不如我教的
+13:24 lh_mouse: 羊驼军客气了
+13:25 lh_mouse: 哇哇哇
+13:25 lh_mouse: 这输入法
+13:25 varna: 不过其实也可以写成口支口支口支口支口支口支口支口支
+13:25 lh_mouse: 百万羊驼过大江
+13:25 wlemuel quit:Quit: Lost terminal
+13:25 varna: 「我叫群（Legion），因为我们人数众多」
+13:26 tutu_wind quit:Ping timeout: 260 seconds
+13:27 Stevearzh joined channel
+13:33 wlemuel joined channel
+13:40 Mokou: 强行六选一补成大破
+13:40 Mokou: 强行打不死
+14:00 varna: 秋活快到了，换个三次创作的神通主题
+14:17 tutu joined channel
+14:35 lh_mouse: 把头伸过来我给你加个祝福
+14:36 lh_mouse: 上海话说“拿锤子砸”是说“用榔头敲”
+14:36 varna: 我了割草，这神一样的命中发挥……
+14:36 lh_mouse: 听起来很萌的样子
+14:37 varna: 不过是一堆驱逐舰，昼战一个没打掉，夜战DP不够比例，吃C...
+14:39 varna: 我该考虑改修一下二号炮了，稍微缓解下命中问题
+14:43 Mokou: 二号炮的夜战命中……
+14:44 varna: 不指望了
+14:44 varna: 决战的重巡根本不会用二号炮的，直接上鱼雷
+14:52 lhanjian_ joined channel
+15:07 varna: 天气恶劣，顺手把南西也做了吧……
+15:15 cleamoon: 在一个10k*10k的平面上有100k个点，然后有20k个半径100的圆，球有多少点不在任何圆内，1G，5s，似乎暴力，描点，分割三个方法都不够快
+15:18 sismvg quit:Ping timeout: 244 seconds
+15:19 varna: 10k+10k的两次扫描线预处理呢
+15:19 varna: 预处理的结果是扫出中心在对应圆的圆心上、边长200范围内的点
+15:19 varna: 然后检查这些点是否在对应的圆内（也可以一并做）
+15:20 varna: 余下的就是要求的点
+15:20 cleamoon: 这个就是描点
+15:20 cleamoon: 差点，还是慢
+15:20 varna: 这个已经够快了吧？
+15:20 varna: 难道还会T掉
+15:20 cleamoon: 反证上次我们写的这方法不行
+15:20 cleamoon: 不过不是我写的，所以我不知道是不是写的有什么问题
+15:21 varna: 我觉得是写坏了，点都是整数坐标？
+15:21 cleamoon: +
+15:21 varna: 那应该是写坏了
+15:21 cleamoon: 哦，那我试试
+15:25 cleamoon: 羊驼子有什么好的计算图形学的入门文章之类的吗
+15:27 varna: 没有，我这方面几乎没看过资料（不论是解析几何还是计算几何）
+15:28 cleamoon: oi时怎么训练？
+15:29 varna: 几乎没练习这方面的题目_(:з」∠)_
+15:29 cleamoon: orz
+15:31 sismvg joined channel
+15:31 sismvg: 原以为csi只有12季，结果这只是一个篇章的量
+15:43 varna: 今天去黄历求签，发生了非常不吉利的事情
+15:43 varna: 编码和提交的签上居然都是一片空白
+15:44 Mokou: ……
+15:45 varna: 修bug是小凶，所以今天吃点好的压压鲸
+15:46 condy: varna: 哪里的老黄历？
+15:47 condy: 我一定每天一求。
+15:47 varna: condy: http://sandbox.runjs.cn/show/ydp3it7b
+15:48 condy: OuO
+15:50 cleamoon: 满屏兄贵不应该是好事吗
+15:51 whocares_2 quit:Ping timeout: 252 seconds
+15:51 whocares_2 joined channel
+15:52 varna: 这说明今天神都放弃考虑我该不该写程序这事了
+15:53 FrankHB quit:Read error: Connection reset by peer
+15:53 FrankHB joined channel
+15:54 Mokou: http://www.bilibili.com/video/av265412/ 蓝色的天空
+15:55 varna: \BANG/
+15:57 varna: 看着这个打南西似乎会加重上呼吸道感染
+15:57 Mokou: 233333
+15:57 sismvg: 昨天翻到了个琴魔的诸葛亮和王朗打情骂俏的鬼畜
+15:58 sismvg: 错了，是王司徒
+15:58 varna: 轮型两发
+15:58 varna: 漂亮地闪过去了
+16:02 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=7f7c2fdeb67eca80120539efa1229712/b3122da98226cffcd37a364fbf014a90f703ea57.jpg
+16:02 sismvg: prprpr
+16:03 sismvg: 画家：我先把角色的果体画好，然后再身体上上色当作衣服
+16:03 cleamoon: 这不是一拳超人里面那个老太太吗
+16:04 sismvg: 明明是合法萝莉
+16:05 cleamoon: 原来药四娘喜欢老太太
+16:05 varna: 看着像幽魂权杖巴拉森……
+16:11 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=15564815f4d3572c66e29cd4ba126352/0a2d71310a55b319f4439d8945a98226cdfc1785.jpg
+16:11 sismvg: fj的休刊率
+16:19 varna: http://tieba.baidu.com/f?ie=utf-8&kw=naive&fr=search
+16:20 cleamoon: 233333
+16:21 varna: http://tieba.baidu.com/f?ie=utf-8&kw=%E4%B8%80%E5%8F%A5%E8%AF%9D%E4%B8%8D%E8%AF%B4 这个幸存了
+16:21 sismvg: if you really want to do this <-如果你真的想这么做，对吗
+16:22 varna: 对
+16:22 Stevearzh quit:Ping timeout: 255 seconds
+16:24 varna: 疯狂掉沟，2-2收拾一下吧……
+16:25 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=8646c7fa5f82b2b7a79f39cc01accb0a/4aec61f1f736afc35e33609bb519ebc4b64512b0.jpg
+16:25 Stevearzh joined channel
+16:25 sismvg: 楼上的为二手贩子，楼下为真土豪。杠上了..
+16:25 tutu_wind: varna: 羊驼酱，x86的分段机制还在用么？
+16:26 varna: x86-64要求全地址空间展平，但cs、ds和一个TSS仍然要填
+16:26 varna: i386的分段则如你所知，用选择子来按照权限索引描述符
+16:27 varna: 但主流实现仍然在大部分场合保持平坦
+16:27 varna: 如果你说的分段模型是8086，我只能说，这个一句话不说也不好
+16:30 tutu_wind: 哦，那我是不是不应该花很多时间在这个上面，而应该多在分页和寻址优化上面？
+16:30 varna: 你要写内核么
+16:30 tutu_wind: 读进程相关的东东～
+16:30 varna: 如果是的话，建议展平地址空间，以后你要做TLS可以另外补LDT项
+16:30 varna: 什么叫“读进程相关的东西”
+16:31 tutu_wind: 内核的进程相关的部分，如do_fork ...
+16:31 varna: 另外虽然有点冒犯，不过我还是想确认一下，你确实知道你在说的是什么吧……
+16:32 tutu_wind: 想有一些硬件基础～
+16:32 varna: 如果说是背景知识的话，我觉得如果你能简单粗糙地想像一下典型而残缺的进程实现就ok了
+16:33 varna: 比如说地址空间怎么实现，映射可以怎么搞，上下文怎么切，在i386上这些要设置哪些东西来做地址变换
+16:33 varna: 优化什么的以后再说也不迟
+16:33 varna: 日，掉沟了……
+16:34 varna: 我从来没在2-2捡过5铝！
+16:34 varna: 这也是够丧
+16:34 varna: 沟里还搞一个大战舰出来
+16:34 varna: 瑞凤成功大破……
+16:36 varna: tutu_wind: 而且其实有时候那些基础没有其实也大丈夫
+16:37 varna: 2-2第二次沟……
+16:37 tutu_wind: varna: 恩，好哒，我会把握一下的，羊驼酱放心喵 ～
+16:37 varna: 我干嘛放心……
+16:38 Mokou: 木曾Lv80
+16:38 Mokou: 终于可以滚出演习队了
+16:38 tutu_wind: 不会像以前样死脑筋。
+16:38 Mokou: tutu_wind: 你误会了
+16:38 varna: ……这个我觉得红旗的解释就足够了
+16:39 varna: 今天2-2掉两回沟，一共得15铝0喷……
+16:39 varna: 不如把那两个轰沉的撸级拖一个回来解体了，说不定还有点钢
+16:40 varna: 又进沟了……
+16:40 varna: 太惨了
+16:40 Mokou: 开幕炸死我三只
+16:40 tutu_wind: 好 ～ 知道了 ～ 你们讨论吧 ～ ^o^ ~
+16:40 Mokou: 现在演习还能打？
+16:40 varna: 而且沟里都是大战舰
+16:42 varna: 打不过的演习就用精锐稍微保一下吧，好歹开幕拼掉对面一个，压力能小点
+16:42 sismvg: smiley avatars <-是什么意思？
+16:42 varna: 银笑的头像
+16:42 varna: 如果你不说上下文的话，我就只能提供这种程度的解释
+16:43 sismvg: 我在某个国外论坛的头像设置页面里看到的
+16:43 varna: 那就差不多了
+16:44 varna: 说avatar的时候未必是“化身”、“圣者”这样的高大上意思
+16:46 varna: 今天这2-2有点问题
+16:46 varna: 我换个BGM
+16:47 varna: 索敌队、发舰吔〇
+16:47 cleamoon: 我觉得药四娘其实可以多看看书
+16:48 varna: 要是这次进Boss出来之后发现没接任务，我就直接吃饭去……
+16:50 varna: 每次我赌上晚饭的南西都有用……
+16:53 cleamoon: 饿了
+16:55 Risitide joined channel
+16:55 Risitide: 基佬们好久不见
+16:56 varna: 这基佬
+16:56 varna: 赣他
+16:59 cleamoon: 这基佬
+16:59 cleamoon: Risitide, 爆
+17:01 varna: 重新听了一下去年的北酱BGM, 还是挺燃的
+17:12 lhanjian_: 这是哪个基佬
+17:14 Risitide quit:Ping timeout: 244 seconds
+17:28 varna quit:Ping timeout: 260 seconds
+17:28 Risitide joined channel
+17:47 geordi joined channel
+17:54 cleamoon: constexpr用过头了是个UB？
+17:55 ASenR joined channel
+17:58 cleamoon: 那么多少算是个限制呢
+17:59 tutu_wind quit:Ping timeout: 240 seconds
+18:02 sismvg: constexpr?
+18:02 sismvg: http://img.ithome.com/newsuploadfiles/2015/11/20151107_170736_188.jpg
+18:02 sismvg: vs2013表示不知道那是啥
+18:02 cleamoon: vs2013不支持c艹11？
+18:03 sismvg: 部分支持
+18:09 RivDo joined channel
+18:10 ASenR quit:Remote host closed the connection
+18:11 varna joined channel
+18:13 sismvg quit:Quit: cook
+18:38 clcn_logbot joined channel
+18:42 varna: 我觉得最近网络崩溃频繁，应该不是错觉
+18:47 code_new joined channel
+18:48 cleamoon: varna, constexpr用过头了是个UB？
+18:49 varna: 什么叫过头
+18:51 cleamoon: 我试图了一下10^15个计算
+18:51 cleamoon: 然后编译时爆warning了
+18:51 cleamoon: 如果只有1M左右就没问题
+18:51 varna: 10^15个计算是什么意思
+18:54 varna: 还是说你试图算一个越界的数，结果被编译器拦下来了？
+18:54 cleamoon: 不是，是打一个10^15的表
+18:55 varna: 爆的warning是什么
+18:57 cleamoon: 什么contain a loop，iteration xxxxxxxx may have an UB这种类似的
+18:58 varna: 你弄了个constexpr函数？
+19:00 varna: 另外确认下你编译器开的选项
+19:00 varna: 我印象constexpr函数在C艹14前后的要求不一样
+19:00 cleamoon: 函数+
+19:00 varna: 如果真的是一般函数，试着开14
+19:00 cleamoon: 是gnu++11
+19:00 varna: 看看还爆不爆
+19:01 varna: gnu++11我不确认能够实现现在的constexpr函数
+19:01 varna: 如果可能的话把标准开到14，开不出来的话就放弃吧……
+19:01 cleamoon: 这还经常变呀....
+19:02 varna: 这里有个分界点，14之前似乎非常残
+19:03 cleamoon: 14之后编译器的支持非常残吧
+19:03 varna: 毕竟现在还不到16年
+19:04 varna: 可以先揉揉脸等着……
+19:08 cleamoon: 希望能在20年前用上17
+19:08 FrankHB quit:Ping timeout: 244 seconds
+19:08 cleamoon: 我倒是很想看看标准图形库什么样
+19:09 RivDo quit:Quit: Leaving.
+19:10 * varna 想侵犯妹子
+19:11 Mokou: 然后你发现他们搞了个YSLib
+19:12 varna: 银兽库不可怕
+19:12 varna: 可怕的是他们加了个X-Powered-By
+19:12 Mokou: 233333
+19:12 Mokou: 你应该庆幸角川没用JSP
+19:13 varna: 红旗等下帮我下载个东西吧，我这里只能打开bing的缓存页了……
+19:13 Mokou: ……
+19:13 Mokou: 下啥
+19:13 varna: neverwinter vault上的一套骨骼，我上不去那个站了，等下我提供url
+19:13 Mokou: ok
+19:13 varna: thx
+19:14 varna: 最近我还是上不去知网，各种屌
+19:14 varna: 搞不好今年的秋活我还得通宵打
+19:14 varna: googleapi ajax还得等75s超时……真蛋疼
+19:17 varna: ……为何缓存页在给我连本站
+19:17 varna: 真他娘的神奇
+19:17 Mokou: ……
+19:17 Mokou: 要不你把关键字给我，我搜一下
+19:17 varna: 算了我放弃
+19:18 varna: 哪天我去外面找个wlan解决
+19:18 varna: 也不急着用
+19:18 Mokou: 我搜下试试吧
+19:18 varna: 不用
+19:18 varna: 说起来，今天我喝到一种没有尿味的咖啡
+19:19 Mokou: ……
+19:19 Mokou: 除了雀巢以外的咖啡也有尿味么
+19:19 varna: 麦克斯韦就有
+19:20 Mokou: 你喝的是哪个
+19:20 varna: 只不过麦克斯韦的海老臭比尿味大
+19:20 Mokou: 233333
+19:20 varna: 这回喝的是一个杂牌咖啡
+19:20 varna: 不是特浓，掺很多味道重的香精，不过尿味小
+19:21 Mokou: 听起来还是有点蛋疼
+19:21 varna: 以至于我开始觉得尿味才是速溶的正道，当然要当饮料喝的话还是煮豆比较好
+19:22 varna: 至少买豆子的时候还有余地选酸-苦这两个方向的大致口感
+19:23 varna: 早上喝一杯，不精神；晚上灌一壶，肝战果
+19:24 Mokou: 23333
+19:48 sismvg joined channel
+19:48 sismvg: http://bbs.north-plus.net/read.php?tid=178982&page=e&#a
+19:48 sismvg: nsfw
+19:48 sismvg: 赤月老师出新本啦
+19:57 varna: 突然想起来，我以前还追过这部动画 http://www.bilibili.com/video/av81643/
+19:58 varna: 现在看起来还是意外地在平均水准以上
+19:58 varna: 虽说商业动画难免弄些吸引观众的要素，没办法的事
+19:58 yzld2002 joined channel
+20:01 sismvg: 想起拿着钱当剑的镜头就好羞耻
+20:01 varna: 除掉战斗的镜头感很有趣
+20:02 varna: 战斗之外异世界的构成感也很有趣
+20:02 varna: 应该说这个份量的对比，比新房擅长的那种把现实世界的镜头变成构成画面的样子还好玩一点
+20:02 varna: 当然只是我个人的口味
+20:07 Risitide quit:Ping timeout: 255 seconds
+20:21 sismvg_ joined channel
+20:23 weihan joined channel
+20:23 sismvg quit:Ping timeout: 265 seconds
+20:27 weihan quit:Max SendQ exceeded
+20:28 weihan joined channel
+20:34 weihan quit:Read error: Connection reset by peer
+20:35 sismvg: 好慢啊
+20:35 sismvg: github上的download zip就像蜗牛一样
+20:37 weihan joined channel
+20:41 iyzsong: 终于回来啦
+20:42 * iyzsong 的逗逼之魂已不受控制
+20:43 lh_mouse: ヲ要妹子
+20:45 sismvg_ joined channel
+20:48 sismvg quit:Ping timeout: 265 seconds
+20:51 weihan quit:Read error: Connection timed out
+20:54 weihan joined channel
+20:55 weihan quit:Max SendQ exceeded
+20:59 weihan joined channel
+21:01 varna: 见鬼了
+21:01 varna: 最近内外都跟被攻击了一样
+21:02 wlemuel quit:Ping timeout: 260 seconds
+21:03 wlemuel joined channel
+21:12 sismvg: 草泥马GFW,我就想从github上弄个zip有那么危险啊
+21:14 Mokou: http://ww1.sinaimg.cn/bmiddle/53e2b340gw1exsjkyvuj4j20p018ggsk.jpg
+21:17 varna: 你们啊，对西方那一套理论非常熟悉
+21:17 varna: 不要想打了一千弹就回去，搞个大修
+21:22 varna: 今天这带宽简直感人，还有台发疯的主机在内网一直发现IPv6路由器
+21:23 varna: 我还看到了一个对360安全中心的DNS请求
+21:23 varna: 这些人脑子里装的都是猪油么
+21:25 Mokou: 233333333
+21:25 xxxxxxxx joined channel
+21:31 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 41.0.2/20151014143721]
+21:46 xxxxxxxx: http://2chcn.com/55648/3/
+21:48 ASenR joined channel
+21:52 Risitide joined channel
+21:53 varna: 换了一套wireshark-gtk2，UI看着顺眼一些了
+21:54 varna: 这样不至于在抓包的时候看着UI上火，本来火气就够大了
+21:54 Mokou: 23333
+21:54 Mokou: http://ww3.sinaimg.cn/bmiddle/7815f12dgw1exsqt6il5fj20eu21wqbv.jpg
+21:55 varna: 这个只是和当年印度一样
+21:56 varna: 我军占领了他们，以至于他们只好看报纸
+21:56 Mokou: 23333
+22:06 Mokou: http://ww4.sinaimg.cn/bmiddle/820f43e8gw1exj92ystajj20go0hcgo8.jpg “自从班上同学把喝水的杯子换成这个之后。。整个人的气质都变得高贵冷艳了起来。。”
+22:09 varna: 这可惜这哥们用杯子的姿势稍微误差了点……
+22:09 Mokou: 这叫装逼劣势
+22:10 varna: 高脚杯的装逼之处，在于尽可能避免手直接接触杯子，以免体温影响酒的口感
+22:10 varna: 这哥们就像是在搭载3的格子上扔了个白板烈改……
+22:10 Mokou: @Zak
+22:11 varna: gtk3风格强行不兼容gtk2也算是大刀阔斧，不过这么说的前提是gtk3真的能让我接受……
+22:12 Mokou: GTK3用了最好的样式语言CSS，你有什么不满么
+22:12 varna: 现在的wireshark-gtk2包还是archlinuxcn仓库的，估计没人管了
+22:12 varna: 就这一点来说老外还真淳朴，他们真的喜欢那个gtk3
+22:12 Mokou: 用CLI吧
+22:12 xxxxxxxx: 我觉得应该用脸盆
+22:12 xxxxxxxx: 显得豪放
+22:13 Mokou: 用运输桶
+22:13 varna: 咦，我装了cli啊
+22:13 varna: 居然没有
+22:14 varna: 看看它都有什么文件
+22:14 Mokou: tshark
+22:14 varna: 哦，tshark
+22:15 varna: UI一般
+22:15 varna: 它狂滚不止，还没有ncurses支持
+22:15 Mokou: 至少不用盯着gtk3……
+22:15 varna: 我现在可以盯着gtk2了
+22:15 varna: 反正这东西是tcpdump的前端，横竖应该能用一阵子
+22:16 xxxxxxxx: 肛他尻3
+22:16 Mokou: 这基佬
+22:16 varna: 这基佬
+22:17 Stevearzh quit:Ping timeout: 240 seconds
+22:18 Stevearzh joined channel
+22:18 varna: 虽说盯着gtk2 ui看到的也是大批重传
+22:19 varna: 而且在连接岩川服务器的时候，看到了至少一次的连接主动关闭和随后的主动打开
+22:19 StardustX joined channel
+22:19 varna: 舰C客户端在第二次长门飘啊飘的时候会顺序开不止一条连接？
+22:20 Mokou: 会
+22:20 StardustX quit:Remote host closed the connection
+22:20 Mokou: api_start2开始，api_port结束，中间会有slotitem啊useitem之类的各种乱七八糟api……
+22:20 varna: 第二条连接上的数据明显少，那个是api_port么
+22:20 varna: 果然
+22:20 Mokou: api_port是最后一个了
+22:21 Mokou: 开了gzip之后port的大小似乎是10k左右，以前大约100k
+22:21 varna: 一大票MTU大小的分组过去，我也懒得数
+22:21 varna: 然而一个MTU也有1.5K了，我看到的传输量不止十倍这个数
+22:21 Mokou: 舰C的api都是乱七八糟的
+22:21 varna: 前面还有一堆
+22:21 varna: 而且都在传，就是失序
+22:22 Mokou: 有些api负责特定动作，有些api传递特定数据，有些api干脆就是其他几个api合起来
+22:22 iyzsong: 主题不是什么大问题, gsettings schema的cache就是个坑 >.<
+22:22 Mokou: port是典型
+22:22 Mokou: 那里面的所有数据都是可以从其他api里请求道德
+22:22 Mokou: 到的*
+22:23 varna: 我觉得这只是后续的开发者不愿意改legacy了
+22:23 varna: 不然一些差分包就可以解决，现在换武装不就是么
+22:23 Mokou: +
+22:23 Mokou: 而且这么来主要是乱
+22:23 Mokou: 功能都重叠了
+22:24 varna: 蛋碎的日本临时工
+22:25 Mokou: 其实他们这么搞大概是想省掉每次http链接的时间
+22:25 xxxxxxxx: 他们肯定会说外包给中国/在日朝鲜人了
+22:25 Mokou: 然而你看看第二次黑船，这目的也没达到……
+22:25 varna: 然而HTTP传输率怎么都会省掉
+22:25 Mokou: Keep-Alive么
+22:26 varna: 不是
+22:26 varna: 第一次吃那个大包是不可以避免的
+22:26 varna: 但之后就都是差分包了，校验必须服务器来做所以无所谓
+22:27 Mokou: 我总感觉只传差分包的话客户端会写砸……
+22:27 Mokou: 突然找不到某条船之类的
+22:27 varna: 那不是船，是肥行场
+22:29 Risitide quit:Quit: Risitide
+22:29 Mokou: “据《コンプティーク2015年12月号》情报，秋活将有新海外大型舰娘登场！大家觉得会是哪艘舰娘喵？咱奶列太太[害羞][害羞][害羞]详情请戳【毒奶海色】”
+22:29 Mokou: 忽略后面几句
+22:29 varna: 不过舰C的客户端不也是假设缓存存在才做的么
+22:30 lhanjian_ quit:Remote host closed the connection
+22:30 lhanjian_ joined channel
+22:30 varna: 现在的功能看起来也在利用本地存储，不过其实这本来都是一堆笑话
+22:31 Mokou: 舰C的缓存都是浏览器处理的吧
+22:32 varna: 是
+22:32 varna: 不过反正到第二次SN作战之前，他们的客户端都在友好地向服务器发起DDoS
+22:32 Mokou: 23333
+22:33 varna: 所以再坏也坏不到哪去了
+22:33 Mokou: 本地存储指编成记录么
+22:33 varna: 对
+22:33 varna: 不过那个也得走校验吧
+22:33 Mokou: 不
+22:33 varna: 啊？
+22:33 Mokou: 那个全都是存在服务器上的
+22:34 Mokou: 记录的时候请求preset_register，提供要记录的舰队编号、舰队名称和格子编号
+22:34 varna: 我想想这个API怎么弄更好
+22:34 varna: 现在我们假定服务器上肯定有正确（迫真）的副本
+22:34 varna: 然后假设本地存储是不安全但多数时候可用的
+22:35 varna: 那么这里怎么做呢
+22:36 Mokou: 我还真想不出别的办法……
+22:36 Mokou: 因为槽是要氪金的
+22:36 varna: 算了，这种小包就随他去吧
+22:36 varna: 五个记录的东西也不大，没必要跟他过不去
+22:37 Mokou: 4日下午，宁夏银川公安在“扫黄”行动中抓获卖淫嫖娼人员25名。发现有多名外来男子让妻子接客，自己在外放风。而其中一名男子不但让自己的妻子卖淫，还胁迫年近60岁的母亲接客。
+22:37 varna: ...
+22:37 Mokou: 66666666
+22:50 xxxxxxxx: http://live.bilibili.com/46231 年轻Python魔法师的日常
+22:51 varna: 真糟糕
+22:54 varna: 撤退
+22:54 varna: 武运
+22:54 varna quit:Quit: leaving
+23:02 iyzsong: z.z
+23:05 weihan quit:Ping timeout: 240 seconds
+23:28 Mokou: 睡觉
+23:28 Mokou: 诸君武运
+23:28 Mokou quit:Quit: 睡觉
+23:29 StardustX joined channel
+23:29 cleamoon: 感觉环球屎报简直自黑高级猪队友
+23:32 RivDo joined channel
+23:45 FrankHB joined channel
+23:58 yzld2002 quit:Remote host closed the connection

@@ -1,0 +1,796 @@
+00:05 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150515071002]
+00:18 izmntuk quit:Ping timeout: 244 seconds
+00:21 izmntuk joined channel
+00:40 izmntuk quit:Ping timeout: 244 seconds
+00:43 izmntuk joined channel
+01:03 izmntuk quit:Quit: leaving
+01:04 cleamoon__ quit:Quit: Leaving
+01:24 ASenR quit:Quit: Lost terminal
+01:37 lh_mouse quit:Read error: Connection reset by peer
+01:58 LittleKey quit:Quit: Leaving.
+04:38 boosure joined channel
+04:57 xxxxxxxx quit:Quit: Leaving...
+06:17 hoxily_ joined channel
+06:20 hoxily quit:Ping timeout: 272 seconds
+06:21 k1mibk joined channel
+07:20 wlemuel quit:Ping timeout: 272 seconds
+08:16 wlemuel joined channel
+08:20 ASenR joined channel
+08:21 wlemuel quit:Ping timeout: 272 seconds
+08:43 ASenR quit:Quit: Lost terminal
+09:10 Xilzzerts joined channel
+09:11 lh_mouse joined channel
+09:17 wlemuel joined channel
+09:22 wlemuel quit:Ping timeout: 265 seconds
+10:02 boosure quit:Quit: Get your hand off of it
+10:20 lh_mouse: k1mibk, 新人？
+10:22 lh_mouse: geordi, -c { foo: extern int i; }
+10:22 geordi: warning: label 'foo' defined but not used
+10:23 lh_mouse: geordi, use -w
+10:23 geordi: Success
+10:23 lh_mouse: geordi, show
+10:23 geordi: -cw { foo: extern int i; }
+10:44 lh_not_bot: geordi: -c class foo { }; class bar { }; class my { friend foo, bar; };
+10:44 geordi: error: expected unqualified-id before ',' token
+11:06 wlemuel joined channel
+11:11 izmntuk joined channel
+11:11 wlemuel quit:Ping timeout: 272 seconds
+11:26 izmntuk quit:Ping timeout: 244 seconds
+11:53 k1mibk quit:Read error: Connection reset by peer
+11:56 izmntuk joined channel
+12:03 xxxxxxxx joined channel
+12:12 izmntuk quit:Ping timeout: 244 seconds
+12:25 ASenR joined channel
+12:30 lhanjian quit:Quit: Leaving
+12:31 lhanjian joined channel
+12:31 whatofor_1 joined channel
+12:34 whatofor quit:Ping timeout: 258 seconds
+12:36 wlemuel joined channel
+12:40 lh_cat joined channel
+12:42 wlemuel quit:Ping timeout: 258 seconds
+12:51 Stawidy joined channel
+13:21 lh_mouse quit:Read error: Connection reset by peer
+13:22 lh_mouse joined channel
+13:37 izmntuk joined channel
+13:46 izmntuk quit:Ping timeout: 244 seconds
+13:58 izmntuk joined channel
+14:01 lh_not_bot: geordi: -c struct base1 { virtual void foo(); }; struct base2 { virtual void foo(); }; struct derived : base1, base2 { void base1::foo(); };
+14:01 geordi: error: cannot declare member function 'base1::foo' within 'derived'
+14:03 lh_not_bot: ASenR: 捏
+14:03 lh_not_bot: rindfleischcafe: 你们家是卖咖啡的吗
+14:04 ASenR: lh_not_bot, 喵
+14:10 ASenR quit:Quit: Lost terminal
+14:20 lhanjian quit:Quit: Leaving
+14:24 izmntuk quit:Quit: leaving
+14:25 wlemuel joined channel
+14:28 varna joined channel
+14:30 wlemuel quit:Ping timeout: 272 seconds
+14:34 * lh_not_bot bites varna 
+14:38 * varna poies
+14:44 lh_cat quit:Quit: Connection closed for inactivity
+14:47 lh_not_bot: geordi: -h
+14:47 geordi: Mini-manual:  http://www.eelis.net/geordi/
+14:51 izmntuk joined channel
+14:54 lh_not_bot: geordi: -c template<struct T> void foo();
+14:54 geordi: error: 'struct T' is not a valid type for a template non-type parameter
+15:13 tutu_wind joined channel
+15:24 * lh_not_bot slaps tutu_wind around a bit with a large trout
+15:30 izmntuk quit:Quit: leaving
+15:38 tutu_wind: lh_mouse: 小耗 么么~ 
+15:40 varna: 卧槽基佬
+15:45 izmntuk joined channel
+15:50 izmntuk quit:Quit: leaving
+15:56 wlemuel joined channel
+15:56 ASenR joined channel
+16:01 FrankHB: 羊驼刚被菊座T了233
+16:01 wlemuel quit:Ping timeout: 252 seconds
+16:02 xxxxxxxx: FrankHB: 发生了什么?
+16:02 varna: 我webqq都上不去了……
+16:06 FrankHB: 貌似就是清理长期不说话的……
+16:14 varna: 今天的DNS怎么了……
+16:16 varna: http://www.picpaste.com/pics/fUy9jXzY.1432282338.png 试着把工作终端最大化了感觉还凑合
+16:16 rindfleischcafe: DNS有问题？
+16:16 varna: 我这里的一台DNS似乎在抽风
+16:17 varna: 偶尔来一下子
+16:17 rindfleischcafe: 自建的DNS？
+16:17 varna: 学校的
+16:18 rindfleischcafe: 这样真的好吗
+16:18 varna: 什么意思？
+16:18 rindfleischcafe: varna [~varna@59.72.63.8] requested CTCP VERSION from rindfleischcafe: 
+16:19 ASenR quit:Quit: Lost terminal
+16:19 varna: 如果你在意隐私，那么你应当有办法保护它
+16:19 rindfleischcafe: 学校DNS不好用就换喽
+16:20 varna: 真是朴实的实话，仿佛我想不到一样……
+16:20 rindfleischcafe: 那干嘛还抱怨
+16:21 varna: 你的意思是人应当省去没必要说的话么……？
+16:21 rindfleischcafe: 是的
+16:21 varna: 那么请闭嘴
+16:22 rindfleischcafe: lol
+16:22 varna: 毕竟对人对己两套标准看起来似乎有点不甚合式
+16:23 rindfleischcafe: suit yourself
+16:23 wlemuel joined channel
+16:24 varna: 跪求大牛教导我如何suit myself
+16:26 varna: 毕竟既然能堂堂正正地教导他人如何说话，想必有非凡之处
+16:26 varna: 烛火余光也好，还望施舍一二为盼
+16:35 hope1 joined channel
+16:41 ld-linux joined channel
+16:55 hope1 quit:Remote host closed the connection
+16:56 hope1 joined channel
+16:56 xxxxxxxx: 有大新闻?
+16:56 varna: 似乎没什么大性闻
+16:57 varna: 刚才速写了一点转译到perl, 给表达式a.f b c生成了sub { $f->($a, @_) }->($b)->($c)这样的代码
+16:57 hope1 quit:Read error: Connection reset by peer
+16:58 hope1 joined channel
+16:58 lhanjian joined channel
+17:03 ld-linux joined channel
+17:09 hope1 quit:Ping timeout: 258 seconds
+17:53 hope1 joined channel
+17:57 whatofor_1 quit:Read error: Connection reset by peer
+18:05 lhanjian: @ARGV:写周报的时候突然想到今天是5月22号，应该是Perl5 version 22理论上发布的日子。打开邮件一看，今早才perl5 v22 rc2，看来又要跳票几天。。。
+18:05 varna: 我手头还是5.20.2
+18:06 lhanjian: MeToo
+18:06 varna: 不过本周的Perl Weekly大头条其实是Rust 1发布……
+18:08 lhanjian: Monks们关心什么……
+18:09 lhanjian: 反正既没有Perl6，Ruby也不真的把自己当Perl6
+18:09 ASenR joined channel
+18:09 varna: YAPC::Europe 2015
+18:09 lhanjian: 一们语言能不能火（虽然这种火可能智商向下兼容比较厉害），还是看库好不好用
+18:09 lhanjian: 门
+18:09 varna: 还有些零碎CPAN报导
+18:29 Xilzzerts quit:Read error: Connection reset by peer
+18:40 Plough joined channel
+18:41 Plough: varna: 爆
+18:49 varna: you gay
+18:51 ld-linux joined channel
+18:51 Plough: 你说这话对得起良心吗
+18:51 varna: 我的良心早就和灵魂一起卖给撸西法了
+18:53 Plough: 噗，昨晚我把北鼠和东急二两队补给了却没放出去……
+18:53 varna: Plough: 对了，你用版本4内核有一段时间了吧，感觉比起3.14(?)开始文件系统的响应速度如何
+18:53 Plough: 没啥特别的感觉……&
+18:54 varna: 有点遗憾
+18:54 varna: 3.14开始对于初次读取的内容，总觉得可观察地变慢了
+18:54 varna: 和inode数应该没有关系，挺早的事情了
+18:55 Plough: 大概是因为我是SSD？
+18:57 varna: 可能
+18:57 varna: 不过SSD帮助不大
+18:57 varna: 毕竟这是一般现象，我主要的分区还是home
+18:58 Plough: 我把/home也扔SSD上了
+18:58 Plough: 然后把机械硬盘挂在/large上，里面建个plough
+18:58 Plough: 然后ln -s
+18:58 varna: 我该说这是机智么……
+18:59 lhanjian: 我的机械硬盘直接是独立挂载的……/mnt/xxxx
+19:00 varna: 不过我还是信任机械硬盘些
+19:00 varna: 读得慢死得晚
+19:00 Plough: 毕竟固定挂在，总感觉/mnt下有点掉价
+19:01 varna: 日向伏枥，毒瘤千里
+19:01 varna: 小泽暮年，寒心不已
+19:01 lhanjian: varna, 要是哪天看到开机发现内核在自动清理大量的无法通过目录树进入的inode节点。你就想砍死机械硬盘了
+19:01 varna: lhanjian: 我现在偶尔就有这个现象
+19:01 varna: 但是没慢到那么多
+19:01 varna: 至于*大量*的inode, 确实存在于我旁边那个跑实验的机器上
+19:02 lhanjian: 我有一个保存了大量PDF的目录消失了，于是重启以后，内核聪明地帮我把目录下的文件删了个干净
+19:02 varna: 哪天我把那机器杀了重做
+19:02 varna: 哦，你说清理啊……
+19:02 varna: 我以为回滚日志呢
+19:02 lhanjian: 然后我暴怒
+19:03 varna: 现在我存的pdf大多都是论文了……
+19:04 lhanjian: 反正我丝毫不觉得机械硬盘会比现代的SSD安稳
+19:05 varna: 先进的lhj
+19:08 varna: Plough: 对了，有没有礼品券氪金大成功的例子
+19:08 Plough: varna: 35群里那两个似乎用的就是礼品券
+19:09 Plough: 毕竟游戏中付款跟付款方式没啥关系……
+19:09 varna: 我下回试试二连氪
+19:14 lhanjian quit:Ping timeout: 255 seconds
+19:18 lhanjian joined channel
+19:18 varna: 我突然想到一个nick: lhjbbb
+19:18 lhjbbb:  
+19:19 varna: lhj爆爆爆
+19:19 lhjbbb: varna, 炸！
+19:20 * varna poies
+19:20 Plough: http://ww2.sinaimg.cn/large/a05e94bdgw1esb91e01qfj20c80p0tdd.jpg 诸葛亮的三大功绩
+19:21 lhjbbb: 诸葛蛤
+19:21 varna: 卧槽
+19:21 varna: 我的缺省浏览器变成opera了
+19:21 varna: 卸了它
+19:21 Plough: 噗
+19:21 Plough: 什么鬼
+19:22 varna: 噗
+19:22 varna: pacman数据库没升级
+19:23 varna: 好慢……
+19:23 varna: ok, 现在好了
+19:23 varna: 反正我也不用opera...
+19:26 Plough: 噗，毛子真牛逼
+19:26 Plough: 合着他们根本没实装装甲
+19:26 Plough: 有人用爸爸一发HE秒了满血大和……
+19:28 lhjbbb: 我说另请高明吧。我实在也不是谦虚，我一个隆中农民怎么到荆州来了呢？蛤
+19:35 whatofor joined channel
+19:37 varna: 一发HE满血大和什么鬼
+19:37 varna: 二战程度的水面炮击战怎么可能轰沉大和……
+19:39 Plough: 因为毛子蠢
+19:39 Plough: 还有人用克里夫兰一发HE穿了大和核心区
+19:39 Plough: 开了跟踪视角发现炮弹是从烟囱灌进去的……
+19:40 xxxxxxxx: 毕竟游戏
+19:40 Plough: 爸爸级那个似乎是穿了炮塔装甲
+19:40 Plough: 弹药库殉爆了
+19:40 Plough: 至于HE是怎么穿了大和的炮塔装甲的，你就当炮塔从炮管灌进去的好了……
+19:41 Plough: 炮弹*
+19:41 Plough: 总之现在这就是个巡洋舰世界
+19:41 Plough: DD干不过重巡，因为重巡看见鱼雷随便躲
+19:42 Plough: BB干不过重巡，因为会被HE一发秒
+19:42 Plough: CA干不过重巡，因为对空极其魔法
+19:42 Plough: CV*
+19:42 Plough: “我们的游戏十分平衡”
+19:43 varna: 大和的装甲根本不可能用那种程度的HE弹穿透
+19:43 varna: AP弹都打不动吧……
+19:43 Plough: AP确实打不动
+19:43 Plough: 这点游戏还原了……
+19:43 varna: ...
+19:44 Plough: 你说毛子莉害不莉害
+19:44 Plough: AP卵用系列
+19:44 varna: 毛子稀里糊涂的
+19:44 Plough: 另外，现在有人怀疑毛子设计美系BB的时候参考了《超级战舰》
+19:45 Plough: 所以美系BB现在整个一个翻船式转向……
+19:45 varna: ...
+19:45 varna: 那个漂移的战舰么
+19:45 Plough: +
+19:45 varna: 万一他们认真玩了舰娘，美系战舰是不是还可以发射主动诱饵
+19:45 varna: 用纳米物质创建的那种
+19:46 Plough: 那就彻底成巡洋舰世界了……
+19:47 Plough: 什么“为了平衡大 战 舰的战速，我们给高雄的超重力炮设定个五秒一发”
+19:47 varna: 高雄傻乎乎的
+19:47 varna: 给个抱枕就能打发
+19:47 Plough: 这也是平衡
+19:48 Plough: 不过有种说法是HE各种神穿甲其实是个Bug
+19:48 Plough: 下个版本会修复
+19:49 varna: bug是什么鬼
+19:49 Plough: 然而我怀疑他们还会搞出新Bug……
+19:49 Plough: 鬼知道，不过毛子之前就干过这事
+19:49 Plough: 3.0版本有一次更新就是
+19:49 Plough: 他们不小心把3.1的内容塞进来了，导致所有炮塔装甲全都为0……
+19:49 varna: ...
+19:50 Plough: 这次没准是类似的情况
+19:50 varna: 脚本的列表推导式不想单独实现了，原型阶段先用HOI::Comprehensions对付一下
+20:03 whatofor quit:Read error: Connection reset by peer
+20:06 lh_mouse: [19:18:20] <varna> 我的缺省浏览器变成opera了 // opera 哪里不好
+20:06 lhjbbb: 自从opera可以chrome://XXXX 之后，我就不用他了
+20:07 varna: opera看起来笨手笨脚的
+20:07 cleamoon: 那是什么鬼
+20:07 whatofor joined channel
+20:08 lhjbbb: cleamoon, 你看看top就知道opera变成什么鬼了。整个一国产浏览器Chromium改
+20:09 lh_mouse: 你说的是欧朋还是 opera
+20:09 lhjbbb: community/opera
+20:09 lhjbbb: 29
+20:10 lh_mouse: 版本：	29.0.1795.60 - Opera 为最新版本
+20:10 lhjbbb: opera 29.0.1795.60-1
+20:10 varna: opera已消失
+20:10 lh_mouse: opera 放弃 presto 之后节操就掉光了
+20:10 lhjbbb: 现在这个opera只是一个和国产浏览器一样套着层皮的Chromium
+20:11 lhjbbb: 原来opera可是比firefox还轻很多的神器
+20:11 lh_mouse: 12.10
+20:11 lh_mouse: 12.17 了
+20:11 varna: 我不太在乎轻重，只是不喜欢opera的UI布局
+20:12 ASenR quit:Quit: Lost terminal
+20:12 cleamoon: 那还不如直接用chromium呢...
+20:13 cleamoon: 我在乎轻重...
+20:13 lhjbbb: lh_mouse, 找到了你说的这个legacy了
+20:14 lhjbbb: 我的国产手机上自带的浏览器貌似就是这个分支的opera改
+20:15 wlemuel quit:Ping timeout: 272 seconds
+20:15 wlemuel joined channel
+20:16 cleamoon: ...
+20:16 cleamoon: 还有legacy
+20:16 cleamoon: 估计opera真自己做引擎什么的太贵了
+20:16 lh_not_bot: 扯
+20:17 lh_not_bot: presto 从 1994 年做到现在 说扔了就扔了？
+20:17 lh_not_bot: Netscape 都被 IE 干死了  opera 屹立不倒
+20:17 cleamoon: 没看到谁用presto呀
+20:17 lhjbbb: 估计opera也是败给了Webkit类似物
+20:17 iyzsong: 没听过..
+20:18 lh_not_bot: 在谷狗尾巴出现之前 presto 是最快的 JS  引擎
+20:18 lh_not_bot: 谷狗尾巴出现之后 opera 被批评没有什么进步  所以那帮傻逼换了 webkit
+20:19 varna: 不怕傻逼多，就怕傻逼中冒出一个聪明人——之后人民内部矛盾就变成了阶级斗争
+20:19 xeirrr joined channel
+20:19 lh_not_bot: 我保留意见
+20:19 lh_not_bot: 当然我认为阶级斗争没什么意义
+20:19 lh_not_bot: 暴 力 镇 压 才是王道
+20:20 lh_not_bot: 智商欠费的用户自觉滚出就是了
+20:20 varna: 龙门阵上的暴力镇压显得很美
+20:20 cleamoon: 龙门阵？
+20:20 varna: 然而用户当有自觉：任何时候、任何人都傻逼——而且最糟糕的问题是他们难以具体地意识到自己有多傻逼而短视
+20:21 lhjbbb: 终于在进城列表里面没有大坨的opera了
+20:21 varna: 一堆傻逼搞黄了一锅汤
+20:21 varna: 几个聪明人毁了一个语言
+20:21 cleamoon: 爆 力 真 压的缺点是谁赢了都能自称正义
+20:21 varna: 一样都是熊包
+20:21 varna: 我觉得这是优点
+20:21 cleamoon: 进城列表
+20:21 Plough quit:Ping timeout: 250 seconds
+20:21 cleamoon: 我觉得咱们已经要毁掉中文了
+20:22 varna: 因为能暴力镇压的人有权，而没权的人只能逞逞口舌之快
+20:22 Plough joined channel
+20:22 varna: 举例来说，就是地头蛇喜欢乍呼，而外交部喜欢装孙子
+20:22 cleamoon: 于是留下的不一定是聪明的，而是有圈的
+20:22 cleamoon: Plough, 爆 力 真 压
+20:22 varna: 聪明不聪明意义不很大
+20:23 cleamoon: 还是有意义的
+20:23 varna: 倒不如说自居聪明的人太多，使得我们所接触的工具里充满了不当的傲慢
+20:23 varna: 彼等机智犹如一层本应用来擦尻的窗户纸
+20:23 varna: 看看yinwang是怎么在妄想中改进H-M的
+20:23 cleamoon: 那是自机狙聪明
+20:23 varna: 那就是他们的所谓机智
+20:24 * lh_not_bot 才高 8 斗
+20:25 cleamoon: 这是有圈者觉得自己机直的方法
+20:25 endle joined channel
+20:25 varna: 该说当权者并非都是傻逼，不过地头蛇太多
+20:26 lh_not_bot: 明晚之前应该能把 medusa 完成
+20:26 varna: 而另一方面，有智识者则难免因为这种现象而陷入“我如何如何，因为我如此这般，故而如果我来做会如何如何”的意淫高潮中
+20:27 varna: 没办法的事，人就这样
+20:27 cleamoon: 意淫者让其意淫之
+20:28 varna: 而这比上不足比下有余、对人马列对己自由往往还显得理由充分
+20:28 varna: 我只是开个地图炮而已
+20:28 varna: 连自己一起轰了
+20:29 cleamoon: 大师写的论文我看懂了==我的水平和大师一样，我发现了大师的一个错误==我的水平超过了大师
+20:29 varna: 这还算好的
+20:29 cleamoon: 人马列对己自由的根本就是在胡说
+20:30 cleamoon: 当然，也包括了我自己...
+20:30 varna: 至少在和别人相近相同的领域里比较
+20:30 varna: 差的更差
+20:30 varna: 不过不说那些了，我们来肛旗
+20:30 varna: Plough: 爆
+20:30 cleamoon: Plough, 爆
+20:31 lh_not_bot: 我发现了 THQ 的一个错误
+20:31 varna: 逻辑错误
+20:32 varna: 常见的逻辑坑是忽略内涵后自然地扩大外延
+20:32 lhjbbb: 我感觉本频道是全freenode黑话最多的频道
+20:32 varna: 而后回头指出内涵并非严格地被定义了
+20:32 cleamoon: +
+20:32 cleamoon: 我觉得那肯定是freenode的git频道
+20:33 cleamoon: 其实性射还是性精根本不重要，治理摊腐才是最重要的
+20:34 lh_not_bot: < cleamoon> 其实性射还是性精根本不重要
+20:34 cleamoon: 可以性射精嘛
+20:35 lh_not_bot: 都怪你们我的心越来越不纯洁啦
+20:35 xeirrr: cleamoon: 爆
+20:35 varna: func (a, b) { + a b }; 被我生成了 sub { local $a = shift; sub { local $b = shift; $add2_c->($a)->($b)} }
+20:36 cleamoon: 无妨，堕落才是真理
+20:36 cleamoon: xeirrr, 汝这基佬
+20:37 varna: 而 func (a, b, c) { + a (+ b c) }; 则是 sub { local $a = shift; sub { local $b = shift; sub { local $c = shift; $add2_c->($a)->($add2_c->($b)->($c))} } }
+20:37 varna: 这里的求值序还真是normal order
+20:39 varna: 不过所有变量一律都实现成现代Perl不提倡的local
+20:40 varna: 作用域沿调用链而非词法作用域
+20:40 cleamoon: 作用域沿调用链而非词法作用域好评
+20:41 varna: 因为只是娱乐用的试作脚本所以敢这么做
+20:41 varna: 实际上这种人类视认般的捕获对程序并没有很多好处
+20:41 varna: 反倒是混淆更多
+20:41 lhjbbb: 用pre就必须得上空格了
+20:41 varna: 用前缀式主要是我写文法的时候懒
+20:42 lhjbbb: 那倒是
+20:42 varna: 不想再区分一般内建运算和函数调用
+20:42 varna: 一律左结合normal order分析
+20:43 cleamoon: 前缀多好
+20:43 varna: 我混了一点中缀糖
+20:43 varna: 比如object.method
+20:43 lhjbbb: 反正没有什么表达式的组合运算，其实前缀加上括号还是比较清晰了
+20:44 xeirrr quit:Quit: qicr for android: faster and better
+20:44 varna: 这个语法把object绑到method的第一个参数上，返回绑定后的函数
+20:44 varna: 在示例实现中它被实现成 sub { $method->($object, @_) }
+20:44 lhjbbb: +a+bc -> add()->a->(add()->b->c)这个我觉得挺优雅的
+20:45 lhjbbb: curry?
+20:45 varna: 注意无论它是否有参数，都不会被求值
+20:45 varna: 对
+20:45 varna: 我这里的全部函数都被curried
+20:45 Plough: 妙高轰沉……
+20:45 varna: 刚才的示例里能看出来，虽然写了多个函数，但实际上是一参一参展开的
+20:45 varna: Plough: 你用的谁？
+20:45 Plough: 虽然是海自的妙高
+20:46 Plough: varna: 我在看魔法战舰
+20:46 varna: 噗
+20:46 varna: 求直播影评
+20:46 Plough: 看了不到一半，感觉这就是USN的征兵宣传片
+20:46 Plough: 这外星人完全不是来打架的啊
+20:47 varna: 我拿到一个片子叫Invisible War, 讲深海军内部性侵问题的
+20:47 varna: 还没看
+20:47 Plough: 人家被激活以后就开了个力场护盾，不小心关了三条船进去而已……
+20:47 varna: 之前看了一个BBC谴责裕仁天皇的，虽说导向性感觉太重了些不过还不错
+20:48 Plough: 然后USN鸣笛示警
+20:48 varna: 等等，外星人为什么会来恥球的
+20:48 lhjbbb: varna, 我觉得偶尔两个点反常规挺好的。不过如果所有的东西都反常规。让我想起当时看lambda calc的恐惧
+20:48 Plough: 然后对面也吼了一嗓子，我方船玻璃全碎了
+20:48 varna: 他们来干什么，吃KFC么
+20:48 Plough: 开头有交代，人类发现了一个环境与地球类似的行星
+20:48 varna: lhjbbb: 我给糖果简单介绍过这个demo分析器，他说几乎处处都反常规
+20:48 Plough: 然后一通无线电波过去了
+20:49 cleamoon: 噗
+20:49 Plough: 然后对面就来科考了……
+20:49 varna: ...
+20:49 cleamoon: 标准作死法开课啦
+20:49 xxxxxxxx: 如月疑云意外的不难看
+20:49 lhjbbb: 当时看lambda calc的时候，我还以为他要从1+1=2开始给我用lambda expr把我十多年学的算术全都洗脑成lambda expr……
+20:49 Plough: 结果最后也是我方先开火（示警）
+20:49 cleamoon: 第一课，给敌军发信号
+20:49 Plough: 吓得对面直接轰沉了美国爸爸一条船
+20:50 luzhangjoke joined channel
+20:50 varna: 不过实际上我的构思只是希望提出一个看法：我觉得我自己的函数式语言应该像什么
+20:50 cleamoon: 噗
+20:50 varna: 233333
+20:50 cleamoon: 话说，有人玩dota吗
+20:50 varna: 不玩了
+20:50 varna: 我大二大三的时候玩dota来着
+20:50 cleamoon: 就是说玩过？
+20:50 varna: 玩过
+20:50 lhjbbb: 玩过
+20:50 Plough: 对面轰完以后也只是在那摆警戒阵型而已……
+20:50 cleamoon: 那么，dota到底是怎么玩的...
+20:50 * xxxxxxxx 只打AI
+20:50 iyzsong:   = =b
+20:50 varna: 一边五个英雄，守有防御塔防御的三路
+20:51 varna: 双方会自动产生小兵，击杀了敌人得经验和钱，可以买装备
+20:51 varna: 目标是拆掉敌人老家，或者把其余九人骂退
+20:51 Plough: 噗，对面真机智
+20:51 varna: 标准的3 corridors模式
+20:51 Plough: 直接断后援……
+20:51 varna: Plough: 这是曹丞相风格
+20:52 Plough: 外星战舰收到了母星的命令：“主角别动，其他全灭掉”
+20:52 varna: ...
+20:52 varna: 主角是谁，亨利沃克的孙子么
+20:52 Plough: 大概是
+20:53 varna: 还是那个在真珠湾舔矶风的唐纳德的后人
+20:53 xxxxxxxx: dota的玩法 看到残血的就A
+20:53 Plough: 主角被临时推上了舰长位置
+20:53 Plough: 大概是亨利沃克的后代……
+20:54 Plough: 然后外星人开始破坏公路了……
+20:54 varna: 舰长只会操舰可是不行的哦 ——总旗舰大和
+20:54 varna: 这外星人好懂行啊
+20:54 Plough: 这战略意识
+20:55 varna: xxxxxxxx: 不要忘记神级光法
+20:55 cleamoon: 我在war3里看过，感觉装备要不没用，要不没法买...
+20:55 cleamoon: 野怪是干什么用的？
+20:55 cleamoon: 练级？那去打敌人不好吗
+20:56 cleamoon: 骂退.......
+20:56 varna: 野怪练起来前期比杀小兵收益高
+20:56 varna: dota的装备还是可以的，需要合成
+20:56 cleamoon: 合成....
+20:56 varna: 而且一个英雄最多升到25级
+20:56 cleamoon: 那么多英雄，那么多合成....
+20:57 cleamoon: 不觉得麻烦吗....
+20:57 varna: 四个技能，6级出大招
+20:57 varna: 还可以点属性点
+20:57 varna: 其实比较套路
+20:58 varna: 根据装备的倾向性（伤害、攻速、打断、防御、辅助之类）和英雄的倾向性可以举一反三
+20:58 cleamoon: 套路不久更没意思了...
+20:58 varna: 比如巴拉森这种进展的英雄，可以给他出一个绿杖
+20:58 varna: 出了之后可以进入幽灵形态，原理跟白牛虚化一样的
+20:58 Plough: 主角猪突坑死妙高，然后被日本舰长骂了一通
+20:59 varna: 233333
+20:59 cleamoon: .....
+20:59 xxxxxxxx: 巴拉森看到SF就冲
+20:59 cleamoon: 白牛虚化...
+20:59 varna: 绿杖白牛冲黑鸟 隐形刺客出隐刀 蝴蝶冰女救世界 跳刀敌法也风骚
+20:59 varna: 船长出门补刀斧 毒球刺蛇心腹毒 六把狂战救世界 跳刀屠夫真心虎
+20:59 cleamoon: ........
+20:59 varna: 以前的打油诗是这么说的
+21:00 Plough: 噗，看身体形状外星人也是猿类后代……
+21:00 cleamoon: 那略没意思了
+21:00 varna: cleamoon: http://bbs.ngacn.cc/read.php?tid=4113951 你看这个帖
+21:01 varna: cleamoon: 我觉得趣味不如war3对战，但谐性不错
+21:01 iyzsong: 装备不要太好，主要是秀和浪
+21:01 varna: Plough: 外星猴子？ACER?
+21:01 Plough: ACER233333
+21:01 varna: AMERICA => I AM ACER
+21:01 xxxxxxxx: 巨魔战将出过一个bug可以带六个补刀斧打野
+21:01 varna: ...
+21:01 cleamoon: 趣味还不如war3对战？那为什么那么多人玩...
+21:02 varna: 因为好上手而且谐
+21:02 varna: 现在少有人有耐心玩w3对战了
+21:02 cleamoon: ...
+21:02 varna: 没看那么多lol的……
+21:03 cleamoon: lol和dota不是一模一样吗...
+21:04 lhjbbb: http://www.acfun.tv/a/ac1912798
+21:04 xxxxxxxx: lol有些更照顾新手的改动
+21:04 varna: lol很难控线吧
+21:04 Plough: 然后标准剧情：捞上来的外星人没死
+21:04 varna: Plough: 没死不关键，供了么
+21:04 Plough: 然后就被队友救走了……
+21:04 cleamoon: .....
+21:04 Plough: 没，外星人醒过来以后直接抓住主角的脸
+21:04 varna: ...
+21:05 Plough: 然后通过某种方式放了下自己母星被侵略的影像……
+21:05 cleamoon: ....
+21:06 varna: 什么鬼
+21:06 varna: 致远星战况如何了
+21:07 Plough: 鬼知道
+21:07 Plough: 主角感觉像是"We're gonna need a new planet"
+21:09 varna: Call 'im Masterchief
+21:09 Plough: 23333
+21:10 cleamoon: 这就诡异了，斯诺登离开米帝这么久，怎么还能天天出最新的监听消息？前几天爆出UC上传资料，这两天他就能知道UC的资料米帝在用了？
+21:10 xxxxxxxx: UC?
+21:11 varna: http://img.nga.178.com/attachments/mon_201103/18/321_4d82374d18b9b.jpg
+21:11 lhjbbb: cleamoon, 斯诺登手里还没公开的米帝黑材料多的是……
+21:12 cleamoon: 那也不能别人爆出什么的他就有什么呀...
+21:12 cleamoon: 太假了
+21:12 lhjbbb: uc被日又不算什么新闻……
+21:12 xxxxxxxx: 说好的60次给硬币枪
+21:12 cleamoon: 这个是bug？
+21:13 Plough: 留在舰上试图瘫痪引擎的外星人被舰炮干掉了
+21:13 Plough: 原因是被人骗到了甲板上……
+21:13 xxxxxxxx: 我现在肯定刷了不只60次了
+21:13 varna: 炮决！？
+21:13 varna: 这不是金将军……
+21:14 xxxxxxxx: 宇宙是棒子的
+21:14 cleamoon: 噗
+21:18 Plough: 之前嘬死的那个无线电站现在被外星人占领了
+21:18 Plough: 推测是准备打电话回家叫增援
+21:19 cleamoon: 这是电影吗，这么长
+21:19 cleamoon: 话说外星人自己没手机？
+21:20 varna: 是电影
+21:20 varna: 外星人大概正在跑水上机
+21:20 Plough: 他们的手机在飞过来的时候撞到了人造卫星上，挂了
+21:20 varna: 六小时五十分钟之后人大概就来了
+21:20 Plough: 拍到了香港，干掉了25K人
+21:20 varna: ...
+21:22 cleamoon: .....
+21:23 Stevearzh quit:Quit: Be back later...
+21:24 hope1_ joined channel
+21:27 hope1_: 周日要在机房讲一坨数论基础…… 然而发现自己根本就不会证
+21:27 hope1 quit:Ping timeout: 244 seconds
+21:27 cleamoon: 数论基础其实好说
+21:28 cleamoon: 基本只是见过还是没见过的区别
+21:28 lhjbbb quit:Quit: Leaving
+21:30 varna: hOTLtatata
+21:31 cleamoon: hOTLtatata
+21:31 Plough: 倒车躲炮弹
+21:32 Plough: 几千吨的玩意说倒就倒
+21:32 cleamoon__ joined channel
+21:33 xxxxxxxx: 日狗 猫了...
+21:35 Plough: 用导弹预判坐标干掉了两条战舰
+21:35 Plough: 然后外星人学乖了，开始风骚走位……
+21:35 xxxxxxxx: http://www.bilibili.com/video/av2335943/
+21:35 cleamoon: 人类是科技碾压，例如无视惯性引擎，对方笨到只有一个手机还四处甩
+21:36 Plough: 对面防御爆表攻击弱鸡
+21:37 xxxxxxxx: 乌龟?
+21:38 varna: 导弹预判！？
+21:38 cleamoon: 你等会就能发现对方血薄，一破甲就一击必了
+21:38 varna: 这是飞弹啊
+21:38 varna: 简直见鬼
+21:39 xxxxxxxx: cleamoon: 这么造难道是因为没预算?
+21:40 Plough: 就这么见鬼
+21:40 Plough: 另外那条走位风骚的也被干掉了
+21:40 cleamoon: 我只在龙珠和OP里看到过血厚的敌方boss
+21:40 Plough: 外星人怕阳光
+21:41 cleamoon: 噗
+21:41 Plough: 于是他们直接拿反器材干掉了舰桥的窗玻璃，晃瞎对面狗眼
+21:41 Plough: 然后开始齐射……
+21:41 Plough: 导弹齐射*
+21:42 Plough: 所以其实外星人战斗力和地球人差不多，就是飞得远点……
+21:42 cleamoon: ....
+21:42 varna: 怕阳光？
+21:43 varna: 快叫子日……
+21:43 Plough: 会瞎狗眼……
+21:43 varna: ...
+21:43 Plough: 然后之前破坏公路的那两个悠悠球来破坏舰桥了
+21:43 Plough: 现在正全员最上甲板
+21:43 wlemuel quit:Ping timeout: 255 seconds
+21:44 varna: 啊，我似乎发现了一个传闻：IJN夜战飞行员偶尔会磕冰毒……或者苯丙胺
+21:44 Plough: 这个我听说过……
+21:44 varna: 麻黄我知道
+21:44 cleamoon: ....
+21:44 varna: 但是冰毒还是第一次听说……
+21:44 varna: 这倒是可以解释为何战后夜战飞行员的下场大都很惨
+21:45 cleamoon: 不怕致幻效果？
+21:45 varna: 磕的是飞行员不是飞行长，所以……
+21:45 varna: 再说十个P51飞过来看成三个F6F我觉得有助于提高蝗军士气（迫真）
+21:45 cleamoon: ......
+21:46 Plough: 23333
+21:47 wlemuel joined channel
+21:50 xxxxxxxx: 此处可配友军之围
+21:50 Plough: 乐视卡了……
+21:52 wlemuel quit:Ping timeout: 250 seconds
+21:54 wlemuel joined channel
+21:57 cleamoon__: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/my/4v_338096.jpg
+21:58 cleamoon quit:Ping timeout: 256 seconds
+21:58 code_new joined channel
+21:59 code_new: Plough: 肛旗查到什么了吗Orz
+21:59 cleamoon joined channel
+21:59 Plough: 没，刚才我看超级战舰去了……
+21:59 code_new: = =
+21:59 varna: code_new: 快大建
+22:00 code_new: ……
+22:00 code_new: 我先开游戏
+22:01 Plough: code_new: 或者我ssh过去试试？
+22:01 code_new: Plough: 好的
+22:15 wlemuel quit:Ping timeout: 250 seconds
+22:15 wlemuel joined channel
+22:20 varna: 噗，BSM = Big Seven Mutsu...
+22:20 Plough: 233333
+22:21 Plough: 所以你已经有BSM了
+22:21 varna: 笼罩拉包尔的恐怖……
+22:21 code_new: 大七肉奥是shenmegui
+22:21 varna: 然而我那个BSM拒绝吃图，这里面一定有蹊跷
+22:22 Plough: 你那个BSM心疼提督的图纸
+22:22 varna: 还真是好人，然而提督到八月份为止也不会缺图纸……
+22:23 wlemuel quit:Ping timeout: 250 seconds
+22:23 * xxxxxxxx 缺图纸
+22:24 wlemuel joined channel
+22:24 varna: 这次活动可是把我半年左右的图纸都烧进去了……
+22:25 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=6e103d62aa51f3dec3b2b96ca4d5f11f/960a304e251f95ca22ce671ecc177f3e6709525b.jpg GIVE 'EM A D!
+22:27 cleamoon quit:Remote host closed the connection
+22:27 cleamoon joined channel
+22:28 cleamoon__: 这是什么阵型
+22:28 varna: 轮型阵
+22:31 wlemuel quit:Ping timeout: 252 seconds
+22:31 ASenR joined channel
+22:32 wlemuel joined channel
+22:32 cleamoon__: 轮形阵似乎很高级
+22:32 endle quit:Quit: Leaving
+22:32 varna: 美国人用起来挺好的
+22:32 varna: 鬼子还是算了吧
+22:33 code_new: 我来大建了……
+22:33 code_new: 欧皇给个公式吧
+22:33 varna: 卧槽大建了！
+22:33 varna: 肛旗是欧皇
+22:33 varna: 他就差花瓶401了
+22:33 code_new: 你们都是
+22:33 code_new: 我能来两发
+22:34 Plough: 我陪一发
+22:34 varna: 我先不陪了……
+22:34 code_new: 紫菜只有71了……
+22:34 code_new: 想当年还300+
+22:34 Plough: 资材386
+22:34 code_new: ……
+22:35 varna: 89
+22:35 Plough: 双大武俾召唤阵 4662
+22:35 varna: 春活至今我大建了十五发
+22:35 code_new: 旗舰是？
+22:35 Plough: 先来一发电探祭天
+22:35 varna: 肛旗给推荐个
+22:35 Plough: 我的是大和
+22:35 varna: 我这的旗舰都太丧了
+22:35 code_new: 给我推荐个旗舰和公式
+22:36 Plough: 你赌啥
+22:36 code_new: 随便。大和BSM大凤都行
+22:36 varna: BSM...
+22:36 Plough: Z1/Z3
+22:36 varna: 俾斯麦大和混赌的话我推荐Z1
+22:36 Plough: 我先点一发探探路
+22:36 code_new: 好的
+22:37 code_new: 话说1级靠谱吗
+22:37 Plough: BSM……
+22:37 wlemuel quit:Ping timeout: 276 seconds
+22:37 Plough: 跟等级应该没啥关系
+22:37 code_new: ok
+22:37 varna: 卧槽你出BSM二号机了？
+22:37 code_new: ……
+22:37 Plough: 确实是二号
+22:37 Plough: 然而我旗舰是大和
+22:37 varna: 联合舰队最强主炮38改
+22:37 varna: 噗？
+22:37 wlemuel joined channel
+22:37 varna: 欧皇太可怕
+22:37 Plough: 总之是一门41炮
+22:37 code_new: 欧rz
+22:38 varna: 你不考虑养38改么……
+22:38 varna: 频道的欧洲人太可怕了
+22:38 varna: 我来几发46压压鲸
+22:38 code_new: 除了我都是欧洲人……
+22:38 Plough: 我喷出来看看几号舰
+22:38 Plough: 有没有要猜的
+22:38 Plough: 不考虑
+22:38 Plough: 喷完了，猜猜几号舰吧
+22:38 Plough: 长还是BSM
+22:38 code_new: 我进鬼屋了
+22:38 varna: BSM
+22:39 code_new: BSM
+22:39 Plough: 都猜BSM啊
+22:39 Plough: 开奖
+22:39 Plough: ……我手上三条长门了
+22:39 code_new: ……
+22:39 Plough: 这什么鬼
+22:39 varna: 41GET
+22:39 code_new: 欧rz
+22:39 Plough: 我要那么多长门卵用……
+22:39 code_new: 欧皇之证
+22:39 varna: 我陪诸君来八发46吧
+22:40 Plough: 我赌电探
+22:40 varna: 前四发已经出去了，只有一个41
+22:40 varna: 今天赌过八发电探了，没出
+22:40 code_new: 4662+20 Z1
+22:40 code_new: 开赌
+22:40 varna: 八发没出
+22:40 Plough: ……
+22:41 code_new: 4.5h
+22:41 varna: ...
+22:41 Plough: ……今天这剧情真正常
+22:41 code_new: 401吗
+22:41 code_new: 0.0
+22:41 varna: 3:20是401
+22:41 code_new: = =
+22:41 Plough: 401是半凤
+22:41 varna: 4:30么……
+22:41 varna: 伊势日向哪里去 不如营里上吊去
+22:41 code_new: 哦哦，4.5是bbv
+22:41 Plough: 总不能是4:50
+22:41 code_new: Orz
+22:42 varna: 放肆
+22:42 Plough: 12:45:00
+22:42 varna: 4:50是欧根
+22:42 Plough: 说起来罗马何时才进大建呢……
+22:42 Plough: 不过嗑改应该没人养
+22:42 varna: 大概在一千年以后 磕改都变成了梦
+22:43 code_new: 再来一发
+22:43 xxxxxxxx: 说起来我啥时候能搞出硬币枪呢....
+22:43 varna: xxxxxxxx: 被我爆了之后
+22:43 varna: 下周不乱造东西了
+22:43 code_new: 4h……
+22:43 varna: ……
+22:43 Plough: ……
+22:43 * code_new 滚回索马里
+22:44 Plough: 算了，其实我也有过401了
+22:44 xxxxxxxx: 我今天挂了进20回海盗入侵了
+22:44 xxxxxxxx: 根本不掉硬币枪
+22:45 xxxxxxxx: 非洲人: 捞船根本捞不出来 打boss掉卷轴 变着花样不出货
+22:46 Plough: 第二门九星嗑改GET
+22:46 Plough: 另外全程没确保过
+22:46 Plough: 难道嗑改不会失败？
+22:46 varna: 是因为你有一张英俊的脸
+22:46 varna: 对了磕改吃什么的？
+22:46 Plough: 41
+22:46 Plough: 不然为何我原来那30门41现在全没了
+22:46 varna: 哦，那我多的41就给磕改吧
+22:46 Plough: 吃死你
+22:47 Plough: 另外，后期嗑改改一次要四颗螺丝
+22:47 varna: 正好很长一段时间我都得强化主炮
+22:47 varna: 无所谓
+22:47 varna: 我还剩113个
+22:47 varna: 跟丫拼了
+22:47 Plough: Orz
+22:47 Plough: 我还剩9个……
+22:47 varna: 不过前提是我得有炮给他们吃
+22:47 Plough: 不过我觉得嗑改确实值得改
+22:47 varna: +
+22:47 Plough: 九星嗑改的数据：
+22:48 Plough: 火力+25.5 对空不明 命中+2 回避-1
+22:48 cleamoon__: 我又大建很多几次，没出任何好东西
+22:48 Plough: 这火力已经接近46了……
+22:48 varna: 磕改给武大的效果不知如何
+22:48 Plough: 等验证看看
+22:48 varna: 总之我先预算磕改和46
+22:48 varna: 都改到+6
+22:48 varna: 啊不对
+22:48 varna: 46改到+4就行了
+22:48 Plough: 至于俾斯麦那个38改……17点火力救不了
+22:48 * xxxxxxxx 在改41和35.6
+22:49 varna: 38改是武大用的
+22:49 varna: 我推荐你试试
+22:49 varna: 当然得改修
+22:49 Plough: 不过不知道运营会不会一脑抽把38和381设定成不同对象的适型炮
+22:49 varna: 目前就是吧
+22:49 Plough: 口径差了1mm呢
+22:49 varna: 毕竟有炮塔和药的问题
+22:49 Plough: 我查查验证
+22:50 varna: 另外现在我面临一个糟糕的状况
+22:51 varna: 我弹药很少，但大和才76级
+22:51 varna: 如果按照1.5户来屯，那么我可能不容易准备出更高质量的战力
+22:51 varna: 毕竟小和米空绫波还要结婚……
+22:51 Plough: ……
+22:52 Plough: 先屯一户？
+22:52 varna: 六月份再说吧
+22:52 varna: 有没有俾斯麦我都不打5-5了
+22:52 Plough: 我家大和83，应该够用了
+22:52 varna: 图纸两个月两张安定
+22:52 Plough: 春活前冒着资源不够的风险演习出来的
+22:52 Plough: 好在赌对了……
+22:53 varna: 还是屯资为上
+22:53 varna: 七八十级的战力可以用资源堆着往上冲
+22:53 Plough: 我现在在把重巡往80上提
+22:53 varna: 不够也没办法，可以就地直接准备
+22:53 varna: 我现在继续往无尽的90后水雷战队里砸经验……
+22:53 Plough: 锁船以上，我发现重巡还是不太够用……
+22:53 Plough: 一上*
+22:54 varna: 即使我知道决战只用两个驱逐舰也还是在拼命砸演习
+22:54 varna: 先撤了，诸君武运
+22:54 varna quit:Quit: leaving
+23:21 wang1992 joined channel
+23:22 wang1992 quit:Client Quit
+23:22 wang1992 joined channel
+23:25 wang1992 quit:Remote host closed the connection
+23:45 hope1_ quit:Ping timeout: 258 seconds
+23:49 hope1_ joined channel
+23:58 hope1_ quit:Ping timeout: 272 seconds

@@ -1,0 +1,79 @@
+00:05 lh_mouse: geordi, << sizeof(__null?)
+00:05 geordi: error: expected primary-expression before ')' token
+00:05 lh_mouse: geordi, << sizeof(__null)
+00:05 geordi: 8
+00:05 lh_mouse: geordi, << TYPE(__null)
+00:05 geordi: prvalue long int
+00:13 lh_mouse: geordi, << TYPE<__INTPTR_TYPE_>
+00:13 geordi: error: '__INTPTR_TYPE_' was not declared in this scope
+00:13 lh_mouse: geordi, << TYPE<__INTPTR_TYPE__>
+00:13 geordi: long int
+00:33 LouisLIU quit:Quit: LouisLIU
+00:45 lh_cat joined channel
+00:46 lh_mouse quit:Ping timeout: 240 seconds
+00:49 lh_cat: geordi, << UINTPTR_C(0)
+00:49 geordi: error: 'UINTPTR_C' was not declared in this scope
+00:49 lh_cat: geordi, << INTPTR_C(0)
+00:49 geordi: error: 'INTPTR_C' was not declared in this scope
+00:49 lh_cat: geordi, << INT32_C(0)
+00:49 geordi: 0
+00:56 zwindl joined channel
+00:58 yimis quit:Quit: yimis
+01:06 xxxxxxxx joined channel
+01:42 lh_cat quit:Read error: Connection reset by peer
+02:17 Youmu quit:Quit: Connection closed for inactivity
+04:45 zwindl quit:Quit: Connection closed for inactivity
+05:17 cleamooon: 帮主胡子：一个韩国网友说，有一次看见妈妈在夸拉完屎的狗“真棒”，就忍不住说了句“这都能被夸奖，羡慕狗”，结果现在自己每次上完厕所从卫生间出来时全家都给他喝彩鼓掌……#听着听着我也快跟着哭了#
+06:13 xxxxxxxx: 233
+08:38 iyzsong-m joined channel
+09:22 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+09:33 iyzsong-w joined channel
+09:37 cleamooon quit:Quit: Connection closed for inactivity
+11:01 lhanjian: 毒赌撸~
+11:20 yimis joined channel
+12:02 lh_mouse joined channel
+12:11 Stevearzh joined channel
+12:24 yimis quit:Quit: yimis
+12:26 iyzsong-w quit:Ping timeout: 245 seconds
+13:07 iyzsong-w joined channel
+13:22 iyzsong-w quit:Ping timeout: 240 seconds
+13:23 iyzsong-w joined channel
+14:03 Stevearzh quit:Remote host closed the connection
+14:05 varna joined channel
+14:05 Stevearzh joined channel
+15:15 lh_mouse quit:Quit: For the Red Army!
+15:18 lh_mouse joined channel
+15:46 iyzsong-w quit:Ping timeout: 240 seconds
+15:46 iyzsong-w joined channel
+15:48 yimis joined channel
+16:09 FrankHB quit:Ping timeout: 245 seconds
+16:38 \f joined channel
+16:49 FrankHB joined channel
+17:12 xxxxxxxx quit:Quit: Leaving...
+17:20 \f quit:Remote host closed the connection
+17:36 varna quit:Ping timeout: 240 seconds
+17:36 varna joined channel
+17:50 Stevearzh quit:Remote host closed the connection
+17:52 Stevearzh joined channel
+18:21 LouisLIU joined channel
+18:21 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:38 LouisLIU quit:Ping timeout: 240 seconds
+18:41 LouisLIU joined channel
+18:46 wlemuel joined channel
+18:49 soul_ joined channel
+19:09 cleamooon joined channel
+19:15 cleamooon: http://www.gov.cn/install.log
+20:01 iyzsong-m joined channel
+20:02 iyzsong-m: (・へ・)
+20:04 LouisLIU quit:Ping timeout: 240 seconds
+20:24 FrankHB quit:Ping timeout: 245 seconds
+20:53 LouisLIU joined channel
+21:17 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+22:34 yimis quit:Read error: Connection reset by peer
+22:35 yimis joined channel
+23:27 zwindl joined channel
+23:38 Stevearzh quit:Ping timeout: 252 seconds
+23:41 Stevearzh joined channel
+23:46 varna quit:Quit: leaving
+23:48 wlemuel quit:Ping timeout: 260 seconds
+23:59 yimis quit:Quit: yimis

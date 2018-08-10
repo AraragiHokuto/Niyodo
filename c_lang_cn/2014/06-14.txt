@@ -1,0 +1,2147 @@
+00:00: windforce: 概念不清楚，我去看看。
+00:00: varna: 就是个管道
+00:00: varna: 可以读可以写，两端不固定，持有者随意操作
+00:00: windforce: 这样锁竞争会激烈啊。
+00:01: windforce: 可能会很慢。
+00:01: varna: 底下是futex
+00:01: varna: 用户态无竞态的时候没什么问题
+00:01: varna: 竞争如何取决于用户怎么用
+00:01: windforce: 我去看看
+00:02: varna: 如果你害怕竞态，可以提供无锁情况的环形队列
+00:02: varna: 算法现在也算是经典了，可以抄到
+00:02: windforce: 好
+00:02: varna: 但是不泛用
+00:02: varna: 没必要觉得自己无所不能地走进万恶之源
+00:03: windforce: 没事，总比数值分析好玩些。
+00:03: varna: 我的意思是觉得自己无所不能地提前优化是傻逼行为
+00:03: windforce: 原来如此
+00:03: windforce: 那就先上个锁
+00:08: varna: 另外这里别直接pthread读写锁
+00:08: varna: 你懂的
+00:09: mokoutan: 0 0
+00:09: varna: mokoutan: 捏捏
+00:09: mokoutan: ≥﹏≤
+00:09: windforce: varna, 这个知道。
+00:10: windforce: mokoutan, 揉揉
+00:10: mokoutan: ≥v≤
+00:11: mokoutan: 话说，打出名字之后就呼叫到对方了么
+00:11: varna: mokoutan: 只是约定俗成
+00:11: mokoutan: ≥﹏≤我要把沙沙炸出来
+00:11: varna: 一般的客户端会高亮典型的情况
+00:11: marisa_: 不
+00:11: varna: 炸出来了
+00:11: marisa_: 我这里会有记录
+00:11: varna: marisa_: 一般都有
+00:12: marisa_: chatzilla的话，,的话会自动@人
+00:12: marisa_: 好吧。。。
+00:12: mokoutan: marisa_ 炸呀炸
+00:12: varna: marisa_: 不少库里直接提供address选项的，但是这个不是硬性规定
+00:12: marisa_: 什么库？
+00:13: marisa_: 好吧，:,或者不带东西都能炸出来
+00:13: mokoutan: 好好玩，这里果然好有趣≥﹏≤
+00:13: marisa_: mokoutan, 试下在句子中间提到我
+00:13: mokoutan: 这里是 marisa_ 句子中间吗
+00:14: marisa_: 看来只要提及都可以
+00:14: mokoutan: ≥﹏≤ 好棒好棒
+00:14: marisa_: 蘑菇碳乖～
+00:15: varna: marisa_: irc库
+00:15: marisa_: varna, 好吧，明白了
+00:15: varna: 喔喔，药娘开始百合了
+00:15: mokoutan: ……
+00:16: xxxxxxxxx: 哪里有趣.....
+00:17: mokoutan: 0 0唔！新的触手出现了
+00:17: xxxxxxxxx: 对这一群丧失说有趣 将来必然是大丧失
+00:17: mokoutan: ……
+00:18: varna: mokoutan: 这个x{8-9}是本频道的强力基佬
+00:18: varna: mokoutan: 搞不好他就爆了你
+00:18: xxxxxxxxx: 爆你妹去
+00:18: mokoutan: 0 0好可怕
+00:19: varna: xxxxxxxxx: 只有表妹，现在估计还在美国
+00:19: marisa_: 蘑菇碳不要怕了，有我在
+00:19: mokoutan: 6,0这是什么……
+00:19: mokoutan: 4,1 颜色吗……为什么没有显示捏
+00:19: mokoutan: 诶诶诶出来了
+00:20: mokoutan: 好厉害 0 0
+00:20: mokoutan: marisa_ 沙沙这里真好玩≥﹏≤
+00:20: varna: 海棠呢！叫海棠来！新人活下来了！
+00:21: marisa_: 蘑菇碳，你是怎么弄颜色的？
+00:21: varna: 什么三分钟就跑一个
+00:21: xxxxxxxxx: 不可多得的大丧失
+00:21: mokoutan: 输入框旁边有一个颜色条一样的东西呢
+00:21: marisa_: 我的没有2333
+00:21: marisa_: 果然我是黑白的魔法使啊
+00:21: xxxxxxxxx: 客户端相关
+00:21: mokoutan: 诶0 0黑白的魔法使23333
+00:22: varna: 是尻法使
+00:22: mokoutan: ……
+00:22: tutu quit:Quit: WeeChat 0.4.3
+00:23: marisa_: 话说varna，你怎么知道同在二要的？我一直以为你基本上不混贴吧
+00:23: varna: marisa_: 我是良化
+00:23: marisa_: 我知道啊
+00:23: mokoutan: ……
+00:23: marisa_: 小号craftg嘛
+00:23: varna: 一直潜水，懒得刷等级
+00:24: marisa_: 好吧，还以为你根本不看2333
+00:24: xxxxxxxxx: @糖化肛里_
+00:24: varna: 前几天我还在c艹吧找米库酱求欢来着
+00:24: mokoutan: 一定是我呆萌呆萌的所以就被注意到了≥﹏≤
+00:24: varna: 和你撞头像的人太多了……
+00:24: mokoutan: ……
+00:25: xxxxxxxxx: http://www.bilibili.tv/video/av1195610/ 这配音.....
+00:25: mokoutan: 那个人不是换掉了么，虽然我现在看他还是那个头像
+00:25: varna: 后来就不知道了
+00:25: marisa_: 不行啊，我就快疯了
+00:25: varna: 因为你和森哥他们搞基才记得的
+00:25: marisa_: 一传vector的constructor就有问题
+00:26: mokoutan: 才……才不是搞基呢
+00:26: marisa_: 问题是我在外面无论如何copy一样好好工作的
+00:26: mokoutan: 大坏蛋
+00:27: xxxxxxxxx: @varna http://tieba.baidu.com/p/2497001808
+00:27: varna: xxxxxxxxx: H的广播剧不好玩
+00:28: varna: 睡前广播剧还是dokidoki那些好
+00:28: varna: 纯洁可爱
+00:29: mokoutan: ……
+00:29: windforce: 2333
+00:30: xxxxxxxxx: 总写好像侵犯楼主的羊驼竟然在说纯洁可爱!
+00:30: varna: 这个无误，dokidoki系列里我最喜欢映姬的那张
+00:30: mokoutan: ……
+00:32: xxxxxxxxx: 我一定是在做梦 .....
+00:33: varna: xxxxxxxxx: 爆
+00:33: xxxxxxxxx: 赶快去美帝爆你妹去吧
+00:33: varna: 我不会英文
+00:34: marisa_: xxx贴吧id是？
+00:34: varna: EAgleLeo
+00:35: marisa_: 这样说的话，贴吧里面一半常驻都在这里吧。。。
+00:35: mokoutan: 哦哦！
+00:35: xxxxxxxxx: 我不常驻贴吧了
+00:35: mokoutan: 又是一只在化学吧看到的0 0
+00:35: marisa_: 好吧
+00:36: varna: marisa_: 没那么多
+00:38: varna: xxxxxxxxx: 对啊，linux吧被托马斯啥德占领了么
+00:38: marisa_: 不行了。。。iterator copy by value传其他地方没问题，就是不能vector constructor
+00:38: marisa_: varna, linux吧他已经没爆了
+00:38: xxxxxxxxx: 没怎么去linux吧 那边快成2级linux吧了
+00:39: xxxxxxxxx: 到处都是稀里糊涂
+00:39: varna: 23333
+00:39: marisa_: 没有啊
+00:39: marisa_: 一直都是水吧啊，伸手数量没++吧多
+00:40: varna: 揉啊揉啊揉揉
+00:40: varna: 揉来揉去揉揉
+00:41: varna: 揉这揉那揉揉
+00:41: mokoutan: 0 0
+00:41: varna: mokoutan: 揉
+00:43: mokoutan: ≥w≤
+00:44: windforce: 调度循环似乎丢它128 * sizeof(void *)的栈就足够了。
+00:45: xxxxxxxxx: 新闻里提到什么xp和win8的时候 linux吧到处是问新人用哪个linux好啊这样的
+00:45: varna: 不会费太多
+00:45: GODDOG joined channel
+00:45: windforce: limbo 扔个 64 * sizeof(void *) 
+00:45: varna: 用DSB啊（笑）
+00:46: varna: windforce: 多给点吧
+00:46: windforce: 这样比较容易把一个 carrier 控制在 256 * sizeof(void *) 之内
+00:46: varna: windforce: 那点空间无所谓的
+00:46: windforce: 32位的话1m
+00:46: windforce: 好吧。
+00:47: windforce: 1K...
+00:47: windforce: 我已经2333了。
+00:51: windforce: 好吧给它2k
+00:51: xxxxxxxxx: http://tieba.baidu.com/p/3100857220 <- linux吧贴
+00:52: xxxxxxxxx: http://tieba.baidu.com/p/3100162646 <- mian函数
+00:52: windforce: 没网要电脑干J8
+00:52: windforce: 还不如去艹妹
+00:52: windforce: 简直搞笑
+00:52: xxxxxxxxx: windforce: 你这种线虫就该爆炸
+00:53: windforce: xxxxxxxxx, 我真不是。
+00:53: marisa_: 老木棉函数？
+00:53: xxxxxxxxx: 随随便便就有妹艹的 你说是不是线虫
+00:53: varna: 我看到一个小五头像
+00:53: varna: xxxxxxxxx+
+00:54: varna: 我为了结婚多么辛苦地肝船
+00:54: varna: 将来回港的时候电酱给我揉肩
+00:56: GODDOG: 你们不看世界杯？
+00:56: varna: 不喜足球
+00:56: xxxxxxxxx: http://tieba.baidu.com/p/3102418609 <- 这种文 外加2L:2 的那种沙比
+00:57: xxxxxxxxx: 我认为我和足球合不来....
+00:57: varna: 恋恋倒是在看
+00:57: marisa_: 不行了啊啊啊
+00:58: marisa_: 传list constructor可以，传vector 不可以
+00:58: marisa_: 你在逗我
+00:59: xxxxxxxxx: 小时候被拉去守门 然后连续几球正中脑袋 
+01:00: marisa_: 	  const size_type __n = std::distance(__first, __last);
+01:00: varna: 2333
+01:00: xxxxxxxxx: 关键是我没动!!!!
+01:00: marisa_: 好吧，一瞬间明白了
+01:00: varna: xxxxxxxxx: 你首级形状和常人无异？
+01:00: xxxxxxxxx: 我又不是羊驼有个长脖子
+01:01: marisa_: 这样说的话，vector不就不可以传boost::coroutine?
+01:01: varna: 那就奇怪了
+01:01: marisa_: 试一下。。。
+01:01: varna: 怎么站着不动还能中数球，难道你是枪兵
+01:02: xxxxxxxxx: 鬼知道
+01:02: xxxxxxxxx: 就算瞄准我踢球的也不一定能踢中我
+01:02: marisa_: 可能是他们瞄准你踢吧。。。
+01:02: varna: 那应该踢丁丁啊
+01:03: marisa_: 你朋友真♀坏
+01:07: windforce: GODDOG, 巴西逗比得没法看。
+01:08: GODDOG: windforce 昨天的事情了吧
+01:08: windforce: 简直打光了巴西足球的脸。
+01:08: xxxxxxxxx: 反正运气不好的时候什么事情都能遇到
+01:08: windforce: marisa_, 我说你快来侍寝。
+01:09: marisa_: 不对啊，coroutine直传vec可以，我type erasure不可以
+01:09: windforce: GODDOG, 我还是改揉程。
+01:09: windforce: 你传了什么？
+01:09: marisa_: 难不成重载了distance？但是这样怎么返回正确的结果。。。
+01:09: windforce: 我说，没码你说个图？
+01:09: marisa_: 我type erasure以后boost::coroutine不可传
+01:09: marisa_: 好的，等下
+01:10: windforce: booooooost
+01:10: marisa_: 				variable_proxy< bool > q;
+01:10: marisa_: 				stream< boost::variant< bool, fresh_variable< bool > > > ret = run( q, ( succeed< bool >( ), succeed< bool >( ) ) );
+01:10: marisa_: 				std::vector< boost::variant< bool, fresh_variable< bool > > > vec( ret.begin( ), ret.end( ) );
+01:10: marisa_: 				BOOST_REQUIRE( vec.size( ) == 1 );
+01:10: marisa_: 				BOOST_CHECK( boost::get< bool >( vec[0] ) );
+01:10: marisa_: 就是这样
+01:10: GODDOG: windforce 我下了个mcafee 安装时候让我输入密码 但是一直密码复杂度不够
+01:10: GODDOG: windforce 有什么解决办法么？ 
+01:11: windforce: GODDOG, 编个复杂点的密码？比方邮箱。
+01:11: GODDOG: windforce 不是
+01:11: marisa_: vector由于调用了std::distance，而iterator是forward iterator，于是第二次调用自然死掉
+01:11: xxxxxxxxx: 今天terraria钓鱼的时候就是连着钓到8次垃圾  除了段时间基本上钓10次能出一次垃圾差不多..
+01:11: varna: 雷酱带了家具箱子回来给我
+01:11: marisa_: 但是不科学的地方是boost::coroutine::iterator不会出错？
+01:11: xxxxxxxxx: 我都想去买彩票了
+01:11: GODDOG: windforce 安装包有问题了 我添满了输入框 大小写数字混合 一样不够复杂
+01:12: windforce: GODDOG, 没用过这种东西。
+01:12: windforce: marisa_, boooooost真的没什么办法。
+01:12: windforce: 完全不知道。
+01:14: marisa_: 我懂了
+01:14: marisa_: boost::coroutine::iterator是forwarditerator
+01:14: marisa_: 所以vector就避开了std::distance
+01:14: windforce: 我还在数那一堆<>
+01:15: xxxxxxxxx: 通常有大小写 数字 符号就不该说不够复杂了
+01:15: marisa_: 然后我这个因为type_erasure,所以没有指定为forwarditerator
+01:15: windforce: 表示想像不出coroutine::iterator该是个什么东西。
+01:15: marisa_: 然后就call了std::distance
+01:15: marisa_: yield()
+01:15: windforce: 懂了。
+01:15: windforce: 这得是有多奇葩。
+01:16: windforce: orz
+01:16: marisa_: 好吧，我艹一遍内存，把result存下来，变成random_access_iterator,只有这样办
+01:16: marisa_: orz,听起来真轻松（苦笑
+01:16: windforce: 嘛，我还是去撸揉程，你还是来侍寝吧。
+01:17: windforce: xxxxxxxxx, 你看这就有妹艹了。
+01:17: varna: 你这非处男
+01:17: windforce: 2333
+01:17: marisa_: struct stream_iterator : std::iterator< std::forward_iterator_tag, const T > 不对啊，我都给你说过是forward_iterator了啊
+01:17: windforce: varna, 非处男的疾苦你可知道。
+01:18: varna: 艹妹子不是很开心么……
+01:18: windforce: varna, 是么？
+01:18: marisa_: 要用input_iterator...真是的
+01:18: windforce: marisa_, 我说...你到底在造什么我都没看懂。
+01:18: windforce: 似乎是个奇葩轮子。
+01:18: marisa_: relational programming啊
+01:19: windforce: 算了。
+01:19: windforce: 你继续。
+01:19: marisa_: 现在第三个test_case过了噗噗噗
+01:19: windforce: 好的，来侍寝吧。
+01:20: windforce: 先碎叫去了，你们太能肝了。
+01:21: windforce: marisa_, 快去洗白白到床上来。
+01:22: xxxxxxxxx: http://tieba.baidu.com/p/3101825595 我有一种这一贴吧人都被一句话钓了的感觉....
+01:22: windforce: marisa_, 我们 relational ♀ programming 一下。
+01:22: varna: 噗，我才发现演习对面六个我只上了五个
+01:23: windforce: 2333
+01:23: varna: D败不可避
+01:25: marisa_: YADA！
+01:25: windforce: marisa_, 哎
+01:25: GODDOG quit:Ping timeout: 240 seconds
+01:25: marisa_: 还有100个test case的样子。。。还是不做魔法使简单
+01:25: varna: 自动生成的？
+01:26: windforce: 不 ♀ 可 ♀ 爱  ♀ 吖
+01:26: marisa_: 不啊
+01:26: windforce: varna, 似乎是。
+01:26: varna: 虽说数量客观但是先做一遍按行覆盖吧……
+01:26: varna: 可观
+01:26: windforce: marisa_, 手写？
+01:26: windforce: 100个？
+01:26: marisa_: 都得手打，但是boost可以自动帮我测试，报告
+01:26: marisa_: 目测。。。完全不想数
+01:26: varna: 所以说先行覆盖一次
+01:27: varna: 过了之后再考虑覆盖路径
+01:27: windforce: 「圆来计算姬也不好当」
+01:27: marisa_: 虽说数量客观但是先做一遍按行覆盖吧<-不明白
+01:27: mokoutan: 0 0
+01:28: mokoutan: 都看了快一个小时的视频了居然还没有解决么0 0
+01:28: marisa_: 好吧，完全低估了，光是一个chapter就有40个
+01:28: windforce: 0.0
+01:28: marisa_: 解决了亲爱的
+01:28: mokoutan: 个
+01:28: mokoutan: 果然好厉害
+01:29: mokoutan: 沙沙我去碎觉了
+01:29: marisa_: 才解决了一个。。。还有几百个2333
+01:29: mokoutan: 你也要注意休息呢
+01:29: windforce: mokoutan, 快来侍寝
+01:29: mokoutan: 4,1不按点睡觉的话就要触手play了哟
+01:29: mokoutan: 坏蛋
+01:30: varna: 一股恋爱喜剧的酸臭味
+01:30: xxxxxxxxx: 安同那个LGPL到底是咋想的......
+01:30: marisa_: 好了，知道了，蘑菇碳
+01:30: marisa_: 容我在写几个test case
+01:30: xxxxxxxxx: 他们的发行版里所有的软件都是LGPL?
+01:30: marisa_: LGPL怎么了？我就是LGPL啊
+01:31: varna: 他们没法保证仓库LGPL
+01:31: marisa_: 好吧，我以为你说的是他们自己的源代码LGPL。。。
+01:31: xxxxxxxxx: https://www.debian.org/legal/licenses/  <- 所以debian这里就这么写了
+01:32: mokoutan left channel:"退出消息"
+01:33: varna: xxxxxxxxx: 爆
+01:33: xxxxxxxxx: 安同那个所有基于他们的发行版都要以LGPL发布的想法是怎么来的....
+01:33: marisa_: 蘑菇碳晚安DAZE
+01:37: windforce: 碎叫去了，2333。
+01:38: windforce quit:Quit: Leaving
+01:38: marisa_: T2君也晚安
+01:39: marisa_: 一瞬间干掉了4个test_case,果然代码不能行计
+01:45: marisa_:  error: overloaded 'operator=' must be a non-static member function
+01:45: marisa_:                         friend goal< T > operator = ( const T & t, const variable & v ) { return }
+01:45: marisa_:                                          ^
+01:45: marisa_: 操蛋的C++
+01:45: varna: 其实我有个问题
+01:46: marisa_: relation就应该是=啊
+01:46: varna: 你修了一处之后，重新测试过其他的case了么
+01:46: marisa_: 测试了
+01:46: marisa_: 全部都过了
+01:46: varna: 那还好……
+01:47: marisa_: 9个了。。。
+01:47: varna: 覆盖率如何
+01:47: marisa_: 不明白。
+01:47: varna: 你的测试应当首先能够覆盖全部代码行
+01:48: marisa_: 哦，我是顺序输入测试的
+01:48: varna: 如果这样的话，就可以按照路径或者其他方式设计测试样例了
+01:48: varna: 多了也没用，就是累人
+01:48: marisa_: 但是写的时候是跳着写的，所以很多函数都没有test
+01:48: marisa_: 没事，这几个以后就有新的东西覆盖了。。。
+01:48: varna: 可以试试travis ci和coverage的组合
+01:49: varna: 这两个可以同步你的github仓库
+01:49: marisa_: travis我听说过。。。打算以后学
+01:49: marisa_: converage我等下看下吧
+01:49: marisa_: 写了
+01:49: varna: 加个travis.yml就行了，挺简单的
+01:49: marisa_: 主要是我的build都很奇葩。。。这才是我的担心所在
+01:50: varna: 奇葩的东西放弃算了，基本没救……
+01:50: marisa_: 话说刚刚肾好痛。。。不行了，赶紧再写几个睡觉去
+01:50: marisa_: 这个比较正常，应该还可以。。。
+01:50: varna: 肾疼是做爱过度
+01:51: marisa_: 。。。完全不符合
+01:51: varna: ……就是说你没做多少……
+01:51: marisa_: 我是熬夜肾就会有点疼
+01:51: marisa_: 熬通宵明天基本站不起来，双眼模糊。。。
+01:51: varna: 那还不如早起
+01:52: marisa_: 问题是我要很多时间进入状态的2333
+01:54: marisa_: 下面就是general_list了，我先睡了，羊驼晚安
+01:55: varna: 晚安
+01:55: marisa_: 今天竟然听了40专辑，2333
+02:00: marisa_ quit:Quit: ChatZilla 0.9.90.1 [Iceweasel 30.0/20140611003233]
+02:03: varna: HO`?
+02:04: xxxxxxxxx: 羊驼肾疼过么?
+02:04: varna: 没
+02:04: varna: 我难受的时候一般是头疼或者偏头疼
+02:05: xxxxxxxxx: 我都不知道熬夜会肾疼....
+02:06: hope1 quit:Ping timeout: 272 seconds
+02:44: zzzzzzzz: 熬习惯就没感觉了
+02:46: whocares_2 quit:Ping timeout: 244 seconds
+02:52: varna: zzzzzzzz: 论文后来如何了
+02:53: zzzzzzzz: 老板看了，现在还在改，明天下午继续找老板，周一就得提交了
+02:53: zzzzzzzz: 羊驼为啥也老熬夜
+02:53: varna: 我刚换个肝
+02:54: varna: zzzzzzzz: 提交？毕业论文还是发表的
+02:54: zzzzzzzz: 毕设啦，还是本科
+02:54: zzzzzzzz: 昨天老板逐字逐句给批了一遍...
+02:55: varna: 做的什么题目？
+02:55: zzzzzzzz: 聚丙烯成核
+02:55: varna: 化学啊……
+02:56: zzzzzzzz: 高分子材料，物理多一些
+02:56: zzzzzzzz: 聚丙烯⁄蛭石粉复合材料性能的研究
+02:56: varna: 操被喷铝了……
+02:57: zzzzzzzz: →_→
+02:58: varna: 揉脸
+02:58: varna: 看起来很厉害的样子
+02:59: varna: 演习似乎又遇到了国人……
+03:00: hysw: varna: 把智商交出来
+03:00: varna: hysw: 不给
+03:01: hysw: varna: 把计算姬交出来
+03:01: varna: hysw: 没有
+03:19: cleamoon: 到家了...
+03:19: cleamoon: zzzzzzzz, 这是好东西，这东西的韧性和硬度如何？
+03:21: zzzzzzzz: 硬度肯定达不到工业要求，工业要求的话得用芳烃类杂环。添加成核剂就是为了改善韧性和冲击强度
+03:21: varna: cleamoon: 这个能用来做什么？
+03:21: zzzzzzzz: 难道绅士也是搞材料的？？？
+03:22: cleamoon: 我不是搞材料的，但是材料工程很有用
+03:22: cleamoon: 我要搞航空航天的
+03:22: zzzzzzzz: ==现在搞材料的太多了，网上搜论文各种大学都有
+03:22: zzzzzzzz: 唔，我准备考北航的说
+03:23: zzzzzzzz: 航天材料用金属的多一些吧
+03:23: zzzzzzzz: 以及无机非金属材料，陶瓷一类的
+03:23: varna: 垫圈之类的也得用有机的吧
+03:23: varna: 密封的部分
+03:23: zzzzzzzz: 嗯，那个是橡胶
+03:23: cleamoon: 航空不是
+03:24: cleamoon: 还是铝和塑料多
+03:24: zzzzzzzz: 唔，我同学今年考北航的搞腐蚀方向
+03:25: cleamoon: 腐蚀呀，听起来真材料
+03:25: zzzzzzzz: 偏金属，电化学用的多一些
+03:26: cleamoon: 哦
+03:26: zzzzzzzz: 石油管道上，，，我们老师拿学校里的项目基本上是这方面的
+03:26: cleamoon: 最近那个什么碳丝怎么样了
+03:27: zzzzzzzz: 碳丝？
+03:27: cleamoon: 石油管道很容易腐蚀吗？那个除了长没什么问题了吧
+03:27: cleamoon: 忘了叫什么
+03:27: zzzzzzzz: 很容易腐蚀
+03:27: varna: 里面杂质的缘故？
+03:28: zzzzzzzz: 油气交接处的管道以及管道的弯曲处
+03:28: cleamoon: 用胶条从碳上粘下来卷成丝的那个
+03:28: varna: 哦对，前段时间千克单位换了一个硅做的恥球
+03:28: zzzzzzzz: 即使没有的话也会腐蚀，析氢腐蚀和吸氧腐蚀两种原理（...没选这个方向好多忘了）
+03:28: varna: zzzzzzzz: 原来是电池么……
+03:28: zzzzzzzz: 哦，那个听说过，碳纳米管
+03:28: zzzzzzzz: 好像是
+03:29: zzzzzzzz: 差不多，原电池分三种，腐蚀电池是最后一种
+03:29: cleamoon: nani？千克换了？
+03:29: varna: 原来的量器误差严重了
+03:29: zzzzzzzz: 腐蚀的原理其实就是离子的迁移
+03:30: zzzzzzzz: 那是啥羊驼
+03:30: varna: 现在希望通过原子数来定义千克
+03:31: varna: 就弄了个硅的恥球
+03:31: cleamoon: 那是元件，本身没法有误差吧
+03:31: varna: cleamoon: 有副本
+03:31: varna: cleamoon: 最后原件和副本的公差变化巨大，不知道哪些更靠谱了
+03:31: cleamoon: 副本算误差1
+03:31: varna: 未必
+03:32: varna: 假定一开始原件和副本一致，变化没法说明原件准确
+03:32: zzzzzzzz: 不是碳-12吗我记得
+03:32: cleamoon: 千克挺不好定义的
+03:32: varna: 要是原件不准被假定准了，千克就悲剧了
+03:34: cleamoon: 不一直都这么弄得
+03:35: varna: 所以按现在的观测技术，千克还得继续悲剧吧
+03:36: cleamoon: +
+03:36: cleamoon: 准确的都太小
+03:36: cleamoon: 大的都不准确
+03:36: varna: http://www.firearmsworld.net/russain/sr/svd/vs121.htm # 现代化的俄国货……
+03:37: zzzzzzzz: 那些法国计量局负责的？
+03:37: zzzzzzzz: 记得是..
+03:37: varna: 似乎是
+03:37: tsuki joined channel
+03:38: hysw: 千克不是快被摩尔常数取代了么？
+03:39: varna: 真能取代也好，不过似乎还没这一说吧
+03:39: varna: 这年头SVD都开始卖7.62x51mm NATO了……
+03:40: tsuki: 我觉得可以定义能把真空中的光弯k度的质量的n分之一定为1kg
+03:40: varna: 有点麻烦
+03:40: tsuki: 摩尔常数肯定没法取代
+03:40: varna: 这个计算涉及N, 然后就悲剧了
+03:41: tsuki: 我没算过具体要哪个数量级
+03:41: varna: 我的意思是要算力
+03:41: tsuki: n怎么了
+03:41: tsuki: 我的意思是很难实验...
+03:41: tsuki: 度数应该很小，难以测量
+03:41: varna: 算了，N倒是没问题
+03:41: varna: 就是实验应该没法做
+03:42: zzzzzzzz: 平时买白菜，给我来20mol?
+03:42: varna: 白菜是混合物
+03:42: zzzzzzzz: ==
+03:42: zzzzzzzz: 那就还是取代不了
+03:43: tsuki: 摩尔不行是没法准确
+03:43: hysw: The Avogadro Project? ...
+03:44: varna: 我觉得该先爆了寒云
+03:44: tsuki: 对，爆
+03:46: zzzzzzzz: 爆
+03:48: varna: 爆
+03:48: tsuki: 8z学的涉不涉及轻材料设计
+03:48: clcn_logbot quit:Ping timeout: 245 seconds
+03:53: clcn_logbot joined channel
+03:53: zzzzzzzz: 密度吗
+03:57: varna: 轻材料是什么，类似防弹衣或者头盔之类的么……
+03:57: zzzzzzzz: 哦，会涉及到
+03:57: zzzzzzzz: 比如超高密度聚乙烯？
+03:57: zzzzzzzz: 就是做防弹衣的材料
+03:57: varna: 真的在做防弹衣啊
+03:57: zzzzzzzz: 不过我们现在肯定不研究这个...
+03:57: tsuki: 各种纤维
+03:57: zzzzzzzz: 纤维我们老师没有搞的貌似
+03:57: tsuki: soga...
+03:57: zzzzzzzz: 做项目的比较多，搞研究的只要带我毕设的老板一个，我们高分子方向的话
+03:59: tsuki: 都什么项目
+03:59: varna: 石油管道？
+04:01: cleamoon: 看来不是很偏军工
+04:01: varna: 我这里的材料似乎也不太军工
+04:02: zzzzzzzz: 我们高分子最大的老板和军方合作过，潜艇项目
+04:02: varna: 喔喔
+04:02: varna: 死库水好评
+04:02: zzzzzzzz: 学校里是石油管道，基本上就是法兰上的密封圈
+04:02: zzzzzzzz: →_→
+04:02: varna: 潜艇不都是穿死库水的么？
+04:03: zzzzzzzz: 死库水是啥
+04:03: varna: school suit = 学校泳装
+04:03: cleamoon: 话说，不在乎价钱，最好的防腐材料是什么
+04:03: cleamoon: 防热呢
+04:04: zzzzzzzz: 防热的是钨了吧，防腐的是铂
+04:04: tsuki: ....这真是不在乎价格呀
+04:05: varna: 何等黑暗的回答……
+04:05: zzzzzzzz: 防腐有专门的表，氢标电位表（叫啥忘了...）
+04:05: varna: 复合材料呢
+04:05: zzzzzzzz: 燃料电池上不是会有铂电极吗
+04:05: zzzzzzzz: 复合材料基本上是以高分子材料为基体，然后往里混无机材料改性
+04:06: zzzzzzzz: 我毕设做的这个就可以算复合材料
+04:06: zzzzzzzz: 话说，一般不会有人对这些感兴趣的啊→_→
+04:07: varna: 其实我就好奇防弹衣之类
+04:07: tsuki: 现在高分子材料能做到什么程度？随便改性质还是一点一点实验
+04:07: varna: 我猜是有个大方向然后试错？
+04:10: zzzzzzzz: 基本上工程类的比较容易了，有固定的流程了
+04:10: zzzzzzzz: 高分子材料强度已经可以达到金属材料的水平甚至更好
+04:10: varna: 工程类的是什么意思
+04:10: zzzzzzzz: 羊驼说的差不多
+04:11: zzzzzzzz: 比如塑料钢？
+04:11: tsuki: soga
+04:11: zzzzzzzz: PMMA 聚甲基丙烯酸甲酯
+04:11: zzzzzzzz: 嘛，其实我也是刚入门的说..
+04:12: zzzzzzzz: 材料方面现在值得搞得就是微观机理这块了，进展不大，难
+04:12: zzzzzzzz: 但是老板说高分子方向研究生基本是搞项目的，聚合物加工一类...
+04:14: tsuki: ！ 听起来不错
+04:14: varna: 听起来比搞数据挖掘有前途多了
+04:15: tsuki: ....
+04:15: tsuki: 虽然确实
+04:15: varna: 现在这些玩意搞得我绝望不堪
+04:16: varna: 特别想爆几个药娘泄欲
+04:16: zzzzzzzz: 搞材料没有什么太大希望，比如搞几十年没搞出啥来...
+04:16: varna: 至少能做工程
+04:16: zzzzzzzz: 就是比较好玩儿
+04:16: tsuki: 至少能做项目....
+04:17: zzzzzzzz: 我其实不太喜欢工程...目的性太强了
+04:17: varna: 弄数据挖掘靠谱的是什么？贝叶斯，KNN, SVM, 决策树...老掉牙物
+04:17: varna: 新东西一律不靠谱
+04:17: zzzzzzzz: 搞IT的话不基本上是做项目吗
+04:17: varna: 我老板比较着重算法研究
+04:18: varna: 做项目的话我这里除了巫女舔舔就是异教徒
+04:18: varna: 根本做不起来
+04:18: tsuki: 而且几年就过时
+04:19: tsuki: 不学新东西就是死
+04:19: varna: 不至于
+04:19: varna: 很多旧物都很好用
+04:19: varna: 追新潮的不少都是前端洗剪吹
+04:20: tsuki: 等旧物所有人都会用就麻烦了
+04:20: varna: 我还是说node.js的例子
+04:20: varna: 一堆人跟风，他们自己也宣传自己的IO如何高效，其实就是个reactor
+04:21: varna: 旧物做不到所有人都会，不然他们去跟风学噱头干嘛
+04:21: zzzzzzzz: 一招C,吃遍天？
+04:21: varna: 这个夸大了
+04:22: varna: 但是事实上就是很多人写个缓冲区或者队列都写不好
+04:22: zzzzzzzz: 唔
+04:22: varna: 然后不少前端洗剪吹被人牵着鼻子走
+04:22: * hysw 缓冲区或者队列都写不好的路过
+04:22: * zzzzzzzz ....
+04:23: varna: 没发现总是接近GUI或者最终用户的部分花样变得快么
+04:23: varna: 寒云又出来了，我们爆他
+04:23: zzzzzzzz: @swift？
+04:23: tsuki: 爆
+04:23: varna: 比如html5
+04:23: zzzzzzzz: 爆
+04:23: varna: html变成什么样管我P事
+04:23: zzzzzzzz: html5不是正在逐步取代4吗，还有flash
+04:23: varna: 但是跟我没什么关系，我最多就是升级下浏览器
+04:24: zzzzzzzz: 唔，也是
+04:24: varna: 舰娘现在是flash
+04:24: hysw: pacman -Syu
+04:25: tsuki: 底力好当然管用
+04:25: varna: 我一个半月没Syu了，下周吧
+04:25: zzzzzzzz: 有网就Syu...
+04:25: hysw: 电脑从来开好几周的飘过
+04:26: zzzzzzzz: 见过好几个用了很久Arch转debian的大叔了，不知道我以后会怎么选择
+04:26: varna: 个人的话Arch比debian好用
+04:26: tsuki: +
+04:26: zzzzzzzz: 是个人，说是因为稳定性原因，Arch使用了5年转Debian了
+04:26: hysw: arch server...
+04:27: zzzzzzzz: arch server个人搞测试用的...
+04:27: varna: 估计那伙计的硬件有奇葩的
+04:27: tsuki: 不知道物理工程什么的底力在哪里
+04:27: zzzzzzzz: 2333
+04:27: hysw: 某表示准备用arch做server...
+04:27: varna: tsuki: 大概是吊长
+04:28: zzzzzzzz: 物理不是理论吗...
+04:28: * zzzzzzzz httpd已开...
+04:28: varna: wow
+04:29: tsuki: 我指的工程...
+04:29: varna: zzzzzzzz: 啊咧，上不去你80口啊
+04:29: varna: 难道开的是本地
+04:29: tsuki: 吊长没问题
+04:29: zzzzzzzz: 没挂公网
+04:29: zzzzzzzz: ...
+04:29: * hysw httpd已开...
+04:29: zzzzzzzz: 本来这学期准备拉人建PT站的....
+04:30: varna: PT?
+04:30: zzzzzzzz: 就是类似六维空间的那种资源共享网站
+04:30: zzzzzzzz: 寒云ip是多少
+04:31: varna: zzzzzzzz: 直接用他主机吧
+04:31: zzzzzzzz: 唔
+04:31: tsuki: 建一个吧
+04:31: varna: moha073.ucres.utoronto.ca
+04:31: zzzzzzzz: 建不起来，我们学校估计没戏了...
+04:33: tsuki: y?
+04:33: zzzzzzzz: music里有乱码→_→
+04:33: tsuki: ....
+04:33: hysw: wtf
+04:34: tsuki: 就因为这个？
+04:34: zzzzzzzz: 说来就话长了...本来这个主意不是我想到的，最早是一个学弟从别的一个PT站拉到我们学校来代理，我觉得这种东西自己做自己拉服务器会比较好，然后之前再网络服务小组认识的几个计算机的学长也有这个意思，我们就准备开搞
+04:35: hysw: 什么时候uoft的防火墙不栏:80了...
+04:35: zzzzzzzz: ..不是,乱码是寒云的
+04:35: zzzzzzzz: 另外寒云的照片我就不点开看了→_→
+04:35: varna: 照片里一大堆看起来是单反的raw文件
+04:36: zzzzzzzz: raw不是XRD的衍射照片吗...
+04:36: varna: 不是那个意思，就是raw的意思……
+04:36: zzzzzzzz: *.raw
+04:37: zzzzzzzz: 做X射线衍射最后的结果数据就是这个,，，
+04:38: varna: 只是说单反生肉而已
+04:39: zzzzzzzz: 然后继续说，寒假自己回去看了点php以及服务器搭建之类的，网上下了一堆源码，在自己电脑上搭服务器开始测试，那个学弟负责宣传一类的，因为他是地质专业的，大二，C都没学过，我让他先慢慢学，把C语言教材借他了（最后也没还我...），送他鸟哥私房菜啥的，然后学长因为以前是当教辅的，就是负责和网络中心的老师谈判
+04:40: varna: 你们几个人没搞基？
+04:40: zzzzzzzz: 然后开始的几周还会例行碰头一下商量商量，汇报下进展，结果最后发现都是我一个人在干，写策划，大服务器，找源码，建网站，遇到问题，解决，遇到问题，解决。。。全是我一个人
+04:41: tsuki: 必然搞了
+04:41: zzzzzzzz: varna: 必须没有
+04:41: tsuki: 多好的经验
+04:41: varna: zzzzzzzz: 一看这搞法就不靠谱……
+04:41: * hysw restarting httpd...
+04:41: zzzzzzzz: 然后最后他们两人例会都不会主动要求开了，是我找他们两个人，，，，最后就不了了之了
+04:41: varna: 开例会的业余开发一律不靠谱
+04:41: zzzzzzzz: 我一个非计算机专业的给他们搞这个......
+04:42: varna: 有时间做没时间扔，找个地方维护代码，这还勉强能搞一点吧
+04:42: tsuki: alpako怎么开发
+04:42: varna: 我自己撸
+04:42: tsuki: ....项目太大呢
+04:42: varna: 大项目顶上有人指定进度
+04:43: tsuki: soga
+04:43: * hysw stop httpd... 那群家伙的防火墙怎么搞的...
+04:43: zzzzzzzz: 然后我每次遇到问题想那个学长应该会，好歹也是快毕业的研究生，结果每次去找他都是研究半天没结果，随便发表下言论就糊弄过去了，最后还是我自己解决。。。。
+04:43: zzzzzzzz: hysw: 看archwiki
+04:43: zzzzzzzz: 上面讲的很详细
+04:43: zzzzzzzz: 英文的
+04:43: tsuki: alpako喜欢骑乘式
+04:43: varna: 岚月酱快脱裤上来
+04:43: varna: 我顶岚月酱
+04:43: hysw: zzzzzzzz: uoft的防火墙本来是拦外界的http端口的
+04:44: zzzzzzzz: 然后最后一起去找那个学长，结果学长连服务器也没搭起来，在虚拟机里捣鼓了半天，，，说好的给我们找时间见对这个项目感兴趣的老师，结果拖了半个月也没动静，然后我也不管了....
+04:45: zzzzzzzz: 还是缺人...
+04:45: varna: 不是缺人，是找了不靠谱的人
+04:45: zzzzzzzz: hysw: 不用防火墙，我记得是改配置文件就行
+04:45: zzzzzzzz: 那我们学校没靠谱的了
+04:45: varna: 你看红旗酱就知道了
+04:45: tsuki: 不靠谱+
+04:45: tsuki: 比如我就不靠谱
+04:45: varna: 红旗酱自己弄个论坛不也弄出来了
+04:45: hysw: zzzzzzzz: 懒得配置...
+04:46: varna: 岚月酱是因为没发育，胸还是平的
+04:46: zzzzzzzz: hysw: →_→
+04:46: hysw: 回头得把配置文件清理一遍...
+04:46: varna: 尻部也没多少肉
+04:46: zzzzzzzz: 论坛比PT好一些，PT还得加种子功能上去...上线后还会涉及侵权问题啥的
+04:46: zzzzzzzz: 不过能做起来挺不容易的
+04:47: varna: 你们只提供种子不就行了……
+04:47: varna: JLU的校内资源共享就这么搞的
+04:47: zzzzzzzz: 不是我们提供，网站只负责保存种子，没有任何资源在上面，全是用户共享的，一般PT都会有这些声明
+04:48: tsuki: 我想弄个pt站呢
+04:48: varna: 无良免责声明
+04:48: * varna 不喜欢p2p
+04:48: zzzzzzzz: 而且你看那些三天两头说是网站维护的，其实都是被法律问题搞了..
+04:48: zzzzzzzz: 我们学校因为视频点播系统还受到过法院传票
+04:48: zzzzzzzz: 可以不用p2p协议
+04:49: varna: 我这里有个视频点播，不过是谈好的项目
+04:49: zzzzzzzz: 之前学弟拉来那个PT网站还封p2p端口
+04:49: zzzzzzzz: =.=
+04:49: varna: 可以正经看视频和电视
+04:50: zzzzzzzz: 我没用过我们的，我们的点播系统只有Win客户端，不过我同学用过的说不错
+04:50: tsuki: 只有空间没vps能做pt吗
+04:51: varna: 空间是什么
+04:51: zzzzzzzz: 能被访问应该就可以
+04:51: zzzzzzzz: 硬盘空间？
+04:51: hysw: gstreamer...
+04:51: zzzzzzzz: 我没设计服务器，，，老师都没见到
+04:51: zzzzzzzz: 涉及
+04:52: tsuki: 就是租的网络空间
+04:52: zzzzzzzz: 嗯
+04:52: varna: 你有个公网ip就行
+04:52: zzzzzzzz: 只是内网人用的话不要公网ip也可以
+04:53: zzzzzzzz: 天朝挂公网还得去工信局备案...
+04:53: zzzzzzzz: 要不几天就会被封
+04:53: cleamoon: 如果网站做好了我有免费的空间可以放
+04:54: zzzzzzzz: 我这有差不多的，种子上传方面还有一点问题...
+04:54: zzzzzzzz: 开源的比较好的就是nexusphp还有xbtit了，可以在网上搜到
+04:54: * varna 肝疼
+04:55: zzzzzzzz: 羊驼是真动手术了？...
+04:55: zzzzzzzz: cleamoon: 可能还有别的，我试过的这两个比较好...
+04:56: varna: zzzzzzzz: 我没动，恋恋动了
+04:56: zzzzzzzz: =.=
+04:56: varna: 真换了肝我也可以等死去了
+04:56: zzzzzzzz: →.→
+04:56: cleamoon: 我只是想自己弄个地方放种子之类的
+04:56: zzzzzzzz: 肾都可以不要
+04:56: varna: 舰娘靠脸和肝
+04:56: varna: 肾是其次的
+04:56: cleamoon: 谁不是等死
+04:57: varna: 恋恋很快就死
+04:57: zzzzzzzz: cleamoon: 那就nexusphp吧，xbtit的gzip有点问题...
+04:57: cleamoon: 溥天同庆的事情
+04:57: zzzzzzzz: 不过现在就不知道了
+04:57: varna: 这个比较麻烦，说不定在我打听到恋恋住哪之前她就死了
+04:57: cleamoon: 直接问
+04:58: varna: 会被当作痴汉（虽然就是）
+04:58: zzzzzzzz: 舰娘邀请邮件还是没收到，广告手了不少→_→
+04:58: cleamoon: 一同学用php写了个网页的term
+04:58: zzzzzzzz: 收了
+04:58: zzzzzzzz: 我只是大概知道php是啥了，自己写还差得远呢..
+04:59: cleamoon: 然后被我玩坏了
+04:59: zzzzzzzz: 不过只是搭网站的话有源码就好
+04:59: zzzzzzzz: 噗...
+04:59: varna: cleamoon: fork?
+05:00: * hysw http://test.hysw.org/~hysw/index.html 开始无聊了...
+05:00: cleamoon: 注册个帐号就能用，但是能用的命令有限，可是规定哪些有限的那个程序谁都能访问......
+05:00: zzzzzzzz: 寒云哪里搞得域名....
+05:00: varna: 他在加拿大……
+05:01: cleamoon: 我也有， yj0.se
+05:01: * zzzzzzzz 羡慕嫉妒恨
+05:01: zzzzzzzz: 现在谷歌主页都上不了了...
+05:01: varna: zzzzzzzz: https://www.startpage.com/
+05:01: varna: 凑合用吧，我试了一下可以用谷歌学术
+05:01: zzzzzzzz: 啊这个看到了
+05:01: zzzzzzzz: 之前
+05:02: varna: 操
+05:02: zzzzzzzz: 谷歌学术得开代理
+05:02: varna: 一个桶捞出来之后又被一发大破，这年头的潜艇啊……
+05:02: zzzzzzzz: 说是全球所有谷歌服务器的443端口全被封了
+05:02: cleamoon: 233
+05:02: cleamoon: https://www.google.se/?gws_rd=ssl
+05:03: zzzzzzzz: 被GFW封，而且不是单纯的封，好像是有dns污染
+05:03: varna: dns投毒一直都有吧
+05:04: zzzzzzzz: 以前没这么厉害..
+05:04: zzzzzzzz: 现在这个太丧心病狂了
+05:04: cleamoon: fuck gfw
+05:06: cleamoon: 想我理工大的基友，用着他认为很快的360浏览器上baidu，都不知道google
+05:07: zzzzzzzz: 我学校很多...
+05:08: varna: 国内大批这情况吧
+05:08: hysw: 度娘威武，谷哥是什么？
+05:08: cleamoon: 他之前都不看动漫，一入坑就一年看了150部，完全成宅
+05:09: varna: 噗
+05:09: varna: 一天两部啊
+05:09: zzzzzzzz: 我同学有一个有这种潜质，不过没发展...
+05:09: varna: 一天看那么多，什么时候撸管？
+05:09: varna: 看了感动的作品总得对着撸吧
+05:10: cleamoon: 一年150部哪有一天两部...
+05:10: varna: 去掉60天
+05:10: cleamoon: key社都没看，我表示鄙视
+05:10: varna: key社我觉得不好看
+05:10: cleamoon: 两天一部
+05:10: zzzzzzzz: 好久没看动漫了...
+05:10: cleamoon: 但总要看
+05:10: varna: 噗，我逗比了
+05:10: cleamoon: 物语系列都看了两遍...
+05:11: * varna 从小学五年级开始算术成绩一路下滑
+05:11: varna: 物语看小说吧
+05:11: zzzzzzzz: 我同学给我推荐过化物语...
+05:11: zzzzzzzz: 还有永夜抄
+05:12: varna: 打永夜抄吧
+05:12: zzzzzzzz: 打了，各种被虐QAQ
+05:12: cleamoon: yyc+
+05:12: varna: E没问题的吧
+05:12: zzzzzzzz: 通关是可以，不过得续命才行
+05:12: varna: 续关不算
+05:13: zzzzzzzz: 那就不行了....角落
+05:13: * hysw 算数什么的不会
+05:14: varna: hysw: 听说你会代数？
+05:14: hysw: 不会
+05:14: varna: 揉
+05:14: hysw: 继续加上一堆css...
+05:15: zzzzzzzz: css..
+05:16: hysw: html/js/css 的坑爹组合
+05:16: zzzzzzzz: php多好
+05:21: hysw: 可计算性理论多好\
+05:22: varna: 那些理论似乎也研究不出新花样了？
+05:37: hysw: 没有可爱的计算姬
+05:37: varna: 你快去告白就有了
+05:38: varna: 总不能指望有人跑来倒贴吧
+05:42: cleamoon: 我ex就是倒贴的
+05:43: cleamoon: 科学计算好多东西都好麻烦
+05:43: varna: 我ex也是倒贴的
+05:44: varna: 现在不都变成ex了
+05:44: cleamoon: 你不是脱团了
+05:44: varna: 我在努力肝电酱
+05:46: cleamoon: 我想用scheme或sml写了... c艹写怎么都不够好看
+05:46: varna: 试试erlang吧
+05:46: varna: scheme和sml都不会让你很舒服的
+05:46: hysw: s m l
+05:47: cleamoon: erlang看了点，感觉极度偏大规模并行运算
+05:47: varna: +
+05:48: cleamoon: 我只是想写个mini matlab...
+05:48: varna: ...
+05:48: hysw: OTL
+05:50: cleamoon: 很mini，就只是支持运算
+05:50: cleamoon: 然后试试看mini maple
+05:50: hysw: minimatica
+05:50: cleamoon: 那个不喜
+05:55: cleamoon: 很多东西撸个mini的都有好处，比如印钞机什么的
+05:56: varna: mini-14
+05:56: hysw: minialpako
+05:57: cleamoon: mini five
+05:57: varna: prpr
+05:58: cleamoon: 平壤胖人
+05:58: cleamoon: alpako想要三胖了
+06:00: varna: 困
+06:00: varna: 等会去吃早饭然后睡觉
+06:02: cleamoon: 早饭又是炒 饭
+06:03: varna: +
+06:04: cleamoon: 和糖果？
+06:05: varna: 没
+06:07: cleamoon: 和柠子？
+06:07: varna: 自炒
+06:18: cleamoon: 自撸自撸桑
+06:21: hysw: 没有可爱的计算姬
+06:21: cleamoon: 自撸自撸
+06:36: zzzzzzzz: 想睡觉又不能睡好痛苦....
+06:36: zzzzzzzz: 一睡觉一早晨就浪费了QAQ
+06:37: hysw: zzzzzzzz: 竟敢睡可爱的觉酱
+06:37: zzzzzzzz: hysw: 爆
+06:38: varna: hysw: 爆
+06:38: varna: zzzzzzzz: http://www.bilibili.tv/video/av1189835/index_2.html
+06:39: zzzzzzzz: ==
+06:39: zzzzzzzz: 这几天都在说小苹果..
+06:39: cleamoon: 睡觉怎么了
+06:39: zzzzzzzz: 听听去
+06:39: zzzzzzzz: 论文改不完了...下午要给老板汇报了
+06:40: zzzzzzzz: 我擦，不忍直听...
+06:42: varna: 那听这个？ http://www.bilibili.tv/video/av717825/  # 军国主义黄赌毒
+06:44: zzzzzzzz: 瞬间不困了ヽ(￣︿￣　)—C
+06:45: varna: 每次看大帝国OP MAD都得暂停五次
+06:46: xxxxxxxxx quit:Quit: Leaving...
+06:46: zzzzzzzz: http://www.bilibili.tv/video/av1173235/ 传说中的小苹果
+06:47: zzzzzzzz: 舰娘出动漫了喵
+06:47: zzzzzzzz: 看来是自己做的
+06:49: varna: 动画确认要出，不过至少得十月
+06:49: zzzzzzzz: 唔，好评
+06:49: varna: 主角是主人公（笑），赤城也有出场，提督不露脸……
+06:50: varna: 没什么期望可抱的动画
+06:51: zzzzzzzz: 还不太熟悉，我希望赶紧抢到码→_→
+06:51: varna: 祝着任顺利
+06:52: varna: 现在似乎容易些了
+06:52: zzzzzzzz: http://www.bilibili.tv/video/av1189612/  <-- 一打开我还以为炮姐出来了
+06:52: zzzzzzzz: 那就好╮(╯▽╰)╭
+06:53: varna: zzzzzzzz: 还可以看这个漫画 http://manhua.dmzj.com/hancollegai/27478.shtml
+06:55: zzzzzzzz: 好评！
+06:56: varna: 多翻几页
+06:57: zzzzzzzz: .....
+06:57: hoxily quit:Ping timeout: 252 seconds
+06:58: varna: 这就是金刚级战列巡洋汉的破坏力口牙！
+06:59: zzzzzzzz: =.=
+06:59: cleamoon: 第一页好评
+07:00: cleamoon: 其他的忽略
+07:00: varna: 说起来在游戏里厉害的似乎不少都是没什么实绩的舰船
+07:00: varna: 比如金刚级和Hyper北上大人……
+07:01: varna: 而且己方的46cm三连装炮还是不如美军的16inch三连装炮
+07:02: cleamoon: 正常吧
+07:03: varna: 工艺问题各种问题，战术上也试图为水雷战队翻案
+07:03: varna: 明明美军后期的驱逐舰都有水上雷达了，怎么可能夜战被爆……
+07:04: cleamoon: 因为米军都在打夜战吧
+07:04: cleamoon: 没时间看雷达
+07:06: varna: 索敌在先，乱战时候出现疯狗POI倒是可以理解
+07:06: hoxily joined channel
+07:06: varna: 半夜开探照灯被轰得稀烂的日舰也有那么几种……
+07:06: varna: 说好听了是舍身，实际还是雷达不行……
+07:09: cleamoon: 技术没法很快赶上
+07:10: varna: 就是这问题了
+07:10: varna: 虽然在亚洲是一流，但还是落后些
+07:11: cleamoon: 不少呢
+07:12: varna: 能造出压码头也算是不错了，虽说观念就是错的但当时没法说
+07:12: cleamoon: 压码头？
+07:12: varna: 大和
+07:13: cleamoon: ...
+07:14: varna: 因为开不出去所以……
+07:14: cleamoon: 我对大和1的印象是被大机器人克制的厉害，大和火炮又不很实用
+07:14: cleamoon: .........
+07:15: varna: 大和炮么…… sc2我不知道，sc1就是渣
+07:15: varna: 其实这个漫画也不错 http://manhua.dmzj.com/nozanmaiden/24150.shtml
+07:17: cleamoon: 二里更渣
+07:18: varna: 一代造大和舰那些资源不如造机器人和坦克了
+07:19: varna: 对空不需要空军，对地更不需要空军，造大舰感觉比较亏
+07:19: cleamoon: 二大和是人v
+07:19: cleamoon: 人
+07:19: iyzsong joined channel
+07:19: cleamoon: 用的
+07:20: varna: 二代还能用到这个啊
+07:20: cleamoon: 用来做空军输出，毕竟一发大和炮死一架飞机
+07:20: varna: 噗
+07:20: cleamoon: 其他没什么大用
+07:20: iyzsong: 早..
+07:21: cleamoon: 感觉x超慢，wmii转页，打字，hexchat转频道都有很大延迟
+07:22: varna: 你撸多
+07:22: varna: 早
+07:22: varna: 回去了
+07:22: varna: 大家早晨愉快
+07:22: varna quit:Quit: leaving
+07:22: iyzsong: -.-
+07:24: hope1 joined channel
+07:32: zzzzzzzz: 不行了，我要去躺会儿.....
+07:32: iyzsong: w_w
+07:32: zzzzzzzz: iyzsong: 起得好早
+07:33: iyzsong: zzzzzzzz: 仅限这几天..
+07:33: zzzzzzzz: →_→
+07:46: boosure joined channel
+07:46: hope1: 一会考数学
+07:47: iyzsong: 呼呼呼~
+07:48: cleamoon: 中考？
+07:49: hope1: +
+07:51: cleamoon: soga，那我借你点rp
+07:54: hope1: thx
+08:10: boosure: 大家好
+08:28: condy quit:Remote host closed the connection
+08:28: condy joined channel
+08:44: whocares_2 joined channel
+08:46: marisa_ joined channel
+08:48: marisa_: 羊驼，你们说的恋恋是谁？
+09:04: AndroUser joined channel
+09:04: AndroUser: 各位早0 0
+09:27: marisa_: 蘑菇碳早～
+09:28: whatofor joined channel
+09:43: iyzsong: 文文加油，正太挺住 O.o
+09:47: mokoutan: 诶0 0！
+09:48: mokoutan: 这个名字好像见过呢0 0！
+09:57: iyzsong: mokoutan: 你好呀
+09:57: mokoutan: 你好0 0
+09:57: iyzsong: 你是哪里来的，要到哪里去..
+09:58: iyzsong: hope1: 完了?
+09:58: mokoutan: 我是幻想乡来的，要到幻想乡去
+09:58: iyzsong: #_# 带带我啊
+09:58: mokoutan: 哦哦！我想起来了！你是love2d吧的对不对0 0
+09:58: iyzsong: 嗯
+09:59: mokoutan: 哇哦0 0
+09:59: iyzsong: mokoutan: 高考(?)怎么样?
+10:00: hope1 quit:Ping timeout: 255 seconds
+10:00: mokoutan: 我还没参加高考的说0 0
+10:00: iyzsong: 额 你是谁。。
+10:00: mokoutan: 说起来，小正太是今年参加中考的么
+10:00: mokoutan: 你猜～☆
+10:01: iyzsong: 好像是
+10:01: iyzsong: 你是一头XX..
+10:01: mokoutan: 好久没有看到小正太了0 0
+10:01: mokoutan: ……
+10:01: mokoutan: 为什么感觉很不好的样子
+10:01: iyzsong: o.O
+10:02: mokoutan: 我是love2d吧里面第二个帖子的LZ 0 0
+10:03: iyzsong: 哦 哦
+10:03: mokoutan: 所以我是 mokoutan ～☆
+10:06: mokoutan: marisa_ 沙沙快出来陪我玩0 0
+10:06: mokoutan: 诶，这次怎么炸不出来了
+10:07: iyzsong: 有趣的MMORPG? => http://www.kingdomofloathing.com
+10:07: iyzsong: 只是英语捉急了 >.<
+10:08: mokoutan: 唔0 0
+10:24: Plough joined channel
+10:25: iyzsong: [KoL] You drink the vodka. In Russia, vodka drinks you!  2333
+10:40: xxxxxxxxx joined channel
+10:41: xxxxxxxxx: google 能用了!!!!!!
+11:09: marisa_: 蘑菇碳怎么了？
+11:09: marisa_: 我们来玩什么？
+11:10: marisa_: izysong, 这个的确不错
+11:10: marisa_: 一样可以玩的有一个clickcookie,clickciv,candycountry
+11:10: marisa_: 名字应该有误，可以google
+11:11: marisa_: mokutan, 怎么了？
+11:11: iyzsong: 喔
+11:11: mokoutan: 喵呜0 0～☆
+11:13: marisa_: http://dhmholley.co.uk/civclicker.html 这个不错
+11:13: marisa_: 蘑菇碳～
+11:17: mokoutan: 沙沙≥﹏≤
+11:18: marisa_: 蘑菇碳我们来玩不？
+11:21: mokoutan: 玩什么呢
+11:21: marisa_: 都依你
+11:22: xxxxxxxxx: 约炮?
+11:22: mokoutan: ……
+11:22: iyzsong: ...
+11:22: iyzsong: 我撤了 咳咳~
+11:22: xxxxxxxxx: 我先不看客户端 你们快点完事
+11:22: mokoutan: ………………
+11:23: * Plough 默默的用浏览器挡住了终端
+11:23: mokoutan: 卧槽这是什么梗
+11:23: mokoutan: 你们够了
+11:24: mokoutan: 沙沙他们欺负我●︿●
+11:25: marisa_: 不要理内写hentai了
+11:25: marisa_: 我们玩我们的
+11:25: mokoutan: 玩什么嘛……
+11:26: marisa_: 都依你嘛，你想玩什么
+11:26: marisa_: 我陪你就是了
+11:27: mokoutan: 可是感觉没有什么可玩的_(:з」∠)_
+11:27: marisa_: 卧槽，刚刚老爸叫我森森2333
+11:27: marisa_: 好糟糕的外号
+11:27: mokoutan: ……
+11:39: Zirconi joined channel
+11:48: FujiwaranoMokou joined channel
+11:48: FujiwaranoMokou: 唔……用电脑进来了
+11:50: FujiwaranoMokou: 0 0
+11:51: mokoutan quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+12:05: hysw: ...
+12:11: hysw: hope1`: 去CMU去把
+12:12: hysw: MIT也行
+12:13: marisa_: CMU？
+12:13: hysw: 能去UCB的话直接无视高中就行了
+12:13: xxxxxxxxx: 艹妈U?
+12:25: lhanjian joined channel
+12:30: marisa_ quit:Remote host closed the connection
+12:36: Sleepwalking joined channel
+12:37: Sleepwalking: GFW把rocaloid的maillist墙了。。。
+12:37: marisa_ joined channel
+12:37: FujiwaranoMokou: ……
+12:38: marisa_: 刚刚崩溃了2333
+12:43: geordi quit:Ping timeout: 240 seconds
+12:46: geordi joined channel
+12:55: hysw: Sleepwalking: 2333
+12:58: xxxxxxxxx: 噗google怎么又不能用了...
+12:58: FujiwaranoMokou: ……
+13:04: lhanjian: www.googlestable.com
+13:07: windforce joined channel
+13:15: hysw: windforce: 把智商交出来
+13:18: FujiwaranoMokou: 0 0
+13:21: windforce: hysw, 我说，我真的没智商了。
+13:22: marisa_: 每天回家都能看到T2君在卖弱
+13:25: FujiwaranoMokou: 简直是丧心病狂
+13:29: FujiwaranoMokou: marisa_ 沙沙
+13:29: marisa_: 是
+13:30: FujiwaranoMokou: 正则表达式有没有什么办法能够只替换第一个匹配的结果呢
+13:30: marisa_: 不会啊2333
+13:30: FujiwaranoMokou: regex_replace貌似是全替换
+13:30: FujiwaranoMokou: ……
+13:30: marisa_: 我技能是这里点得最歪的，完全不会正则2333
+13:31: FujiwaranoMokou: 好吧
+13:33: Sleepwalking: 不会正则+1.。。。
+13:34: FujiwaranoMokou: ………………
+13:34: Sleepwalking: 歪则233
+13:35: windforce: 可以问那个学霸云
+13:35: xxxxxxxxx: 八云歪?
+13:35: windforce: 他应该还没睡
+13:36: FujiwaranoMokou: …………
+13:36: T3rm1n4t0r_ quit:Read error: Connection reset by peer
+13:36: windforce: 木油用过C艹的正则吖。
+13:36: T3rm1n4t0r_ joined channel
+13:37: FujiwaranoMokou: C++的正则功能上貌似的确和内置正则的语言没法比……
+13:37: FujiwaranoMokou: 但是我是不会屈服的！
+13:38: windforce: 羊驼语「正则和std::thread之类的东西就不要指望了」
+13:38: xxxxxxxxx: http://superuser.com/questions/266732/matching-only-the-first-occurrence-in-a-line-with-regex
+13:39: condy: re默认不是只替换一次吗？
+13:39: windforce: 去买点可乐肝个读写锁。
+13:40: FujiwaranoMokou: cppreference给的示例是全替换掉了
+13:41: FujiwaranoMokou: 另外这网站写的啥……英语捉急了怎么办
+13:43: windforce: 有道吧...
+13:45: FujiwaranoMokou: 嗯，效果不错，我看到他们在互相感谢
+13:48: condy: geordi, {string s="there is a istring"; regex e="is"; cout<<regex_replace(s,e,"fvck-$2");
+13:48: geordi: error: Unexpected end of request. Expected '}' or balanced code.
+13:48: condy: geordi, append }
+13:48: geordi: error: 'regex' was not declared in this scope
+13:48: windforce quit:Ping timeout: 240 seconds
+13:48: condy: geordi, replace regex with std::regex
+13:48: geordi: error: String `regex` occurs multiple times.
+13:49: condy: geordi, show
+13:49: geordi: {string s="there is a istring"; regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+13:49: condy: geordi, replace first regex with std::regex
+13:49: geordi: error: 'regex' is not a member of 'std'
+13:49: condy: ??
+13:49: condy: geordi, show
+13:49: geordi: {string s="there is a istring"; std::regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+13:50: FujiwaranoMokou: std::basic_regex 貌似
+13:52: condy: geordi, replace e= with e(
+13:52: geordi: error: Unexpected `}` after `fvck-$2");`. Expected ')' or balanced code.
+13:52: condy: geordi, show
+13:52: geordi: {string s="there is a istring"; std::regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+13:53: condy: geordi, {string s="there is a istring"; std::regex e("is"); cout<<regex_replace(s,e,"fvck-$2");}
+13:53: geordi: error: 'regex' is not a member of 'std'
+13:53: marisa_: geordi << 1 << endl << 2 << endl;
+13:53: geordi: 1 [+ 1 discarded line]
+13:55: condy: FujiwaranoMokou, flags=format_first_only
+13:55: FujiwaranoMokou: ……
+13:55: marisa_: ...
+13:56: marisa_: geordi, flags=format_first_only
+13:56: geordi: error: 'flags' does not name a type
+13:56: FujiwaranoMokou: 哦哦 我明白了
+13:56: FujiwaranoMokou: 谢谢的说0 0
+14:01: Zirx joined channel
+14:05: Zirconi quit:Ping timeout: 272 seconds
+14:08: Plough: geordi: show
+14:08: geordi: flags=format_first_only
+14:08: Plough: {string s="there is a istring"; std::regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+14:08: Plough: geordi {string s="there is a istring"; std::regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+14:08: geordi: error: 'regex' is not a member of 'std'
+14:08: Plough: geordi: use std::basic_regex
+14:08: geordi: error: 'basic_regex' is not a member of 'std'
+14:08: condy: geordi, show
+14:08: geordi: {string s="there is a istring"; std::basic_regex e="is"; cout<<regex_replace(s,e,"fvck-$2");}
+14:09: Plough: geordi: show
+14:09: geordi: No change in output.
+14:09: FujiwaranoMokou: 好智能0 0……
+14:17: zzzzzzzzzzzzzzz joined channel
+14:22: windforce joined channel
+14:22: windforce: 居然掉了，惨不忍睹。
+14:23: marisa_: 刚刚下棋遇到走法被我克的对手
+14:24: marisa_: 明明实力相近，却被我连赢4盘，好爽
+14:24: xxxxxxxxx: 啥棋?
+14:24: marisa_: chess
+14:34: marisa_ quit:Remote host closed the connection
+14:35: windleaves joined channel
+14:35: marisa_ joined channel
+14:43: zzzzzzzzzzzzzzz quit:
+14:58: windleaves: 六级党加油～
+15:04: windforce: marisa_, 叼
+15:05: windforce: 吾辈从来不会下棋。
+15:17: FujiwaranoMokou: 0 0
+15:17: windforce: = = 真的
+15:17: FujiwaranoMokou: 拿走对方的国王然后你就赢啦！
+15:18: windforce: 额... 好吧，这种不算。
+15:43: gansteed joined channel
+16:46: xxxxxxxxx quit:Quit: Leaving...
+16:52: endle joined channel
+17:16: cleamoon: hope1`, 自招还没考怎么就不行了....
+17:24: cleamoon: 这没什么联系...
+17:24: cleamoon: 而且为什么觉得没考好？
+17:29: FujiwaranoMokou: regex_replace默认匹配所有……在最后加上format_first_only才能只匹配第一项……
+17:30: FujiwaranoMokou: 为什么现在的人这么高端……中考都这么在意……果然是大城市么= =
+17:35: varna joined channel
+17:35: varna: 啊！好多药娘！
+17:36: varna: 先爆米库酱呢还是先爆红旗酱呢
+17:36: Plough: 先自爆
+17:36: zzzzzzzzzzzzzzz joined channel
+17:37: Plough: 没否认不代表承认啊
+17:37: varna: hope1`: 数学如何
+17:39: Plough: 哪的题？
+17:39: varna: hope1`: 什么类型的题目，几何还是代数还是应用题
+17:39: varna: soga
+17:39: Plough: http://news.sina.com.cn/s/2014-06-13/171130355618.shtml
+17:39: Plough: "青岛学生中考考场外斗殴致1死3伤 原因不明"
+17:40: * varna 开始在晓的水fu平gu线gou上刻下胜利
+17:40: varna: 噗噗噗
+17:40: Plough: 居然Google出了这么牛逼的玩意
+17:40: varna: 打死的那伙计什么状况……
+17:40: varna: 莱西啊
+17:40: varna: 周边无视
+17:41: varna: 现在平度不都快/已经并入青岛了么
+17:41: FujiwaranoMokou: …………
+17:41: Plough: 应该是快并入
+17:41: varna: 我还以为是市里都开始斗殴了
+17:41: Plough: 市里应该不至于
+17:42: varna: 所以说么
+17:46: windforce: varna, 我擦类
+17:46: windforce: 只能做成你那样了。
+17:46: windforce: = =
+17:47: windforce: 你的目的达到了嗯，不过细节上可以改一下。
+17:48: varna: 我有什么目的……
+17:48: varna: 另外细节我全都没做
+17:48: Zirconi joined channel
+17:50: windforce: 「最后你们做出来的玩意也跟我一样」
+17:50: windforce: ^ 目的
+17:50: varna: ……
+17:50: condy quit:Ping timeout: 272 seconds
+17:50: varna: 我什么时候说过这话
+17:51: windforce: 其实一开始我是拒绝搞PLT的，因为不能你让我搞，我就马上去搞。第一我要试一下，因为我不愿意做完了以后再加一些优化上去，编译咣一下，很炫很屌。这样PM一定出来骂我，根本没有这样的IL, 就证明之前实现是假的。后来我也证实搞PLT确实是不错的，我搞了大概一个月左右，感觉很不错，不仅我自己搞，还让频道的药娘也一起搞，他们搞一
+17:51: windforce: 个我爆一个，因为我要让群众看到，我搞完之后是这样子，你们搞完之后也是这样子！
+17:51: windforce: 啊咧，不要太暴露好么。
+17:51: varna: 这纯逗乐
+17:51: windforce: 2333
+17:51: varna: 我可没兴趣去干预你写什么
+17:51: windforce: 不是，似乎只能这么搞。
+17:52: varna: 未必
+17:52: windforce: 我还没加入事件的需求。
+17:52: varna: 是因为你不会搞还在忽悠自己
+17:52: Zirx quit:Ping timeout: 252 seconds
+17:52: windforce: 另外就是把sched和mcf独立出来了。
+17:53: varna: 直白地说，你做这个的时候并没能确实地考虑问题
+17:53: windforce: 别的完全一样了，连coro_new的request都没法改。
+17:53: varna: 不然你应该能提出很多疑点
+17:53: varna: 比如说我这里的request
+17:54: varna: 为何我不实现golang式的work stealing而使用request?
+17:54: windforce: 我不是见识少么。
+17:54: varna: 我这边是我以前实现失败的结果，现在懒得做了，你完全可以去做
+17:54: windforce: 我看看去。
+17:54: varna: 没必要自己把自己架上去下不来，想不出的东西要么去想要么放弃算了
+17:55: windforce: 嗯
+17:55: varna: 自己不查资料而是拿着别人的低质量代码改改，不是在忽悠自己么
+17:55: windforce: = =
+17:55: windforce: 这个...好吧...
+17:56: varna: 按说如果你打算做的话，自己查一些资料的效果会更好的
+17:56: FujiwaranoMokou: ……0 0
+17:56: varna: FujiwaranoMokou: 爆
+17:56: windforce: 好吧。
+17:56: windforce: 我刚把你那个看懂点
+17:57: varna: 按顺序来就没意思了
+17:57: FujiwaranoMokou: >v<
+17:57: varna: 先搜一堆资料看看再说
+17:57: Zirconi: 中纪委驻院纪检组长：社科院受境外势力渗透
+17:57: FujiwaranoMokou: 不可以NTR沙沙哟
+17:57: varna: FujiwaranoMokou: 你们都是我的翅膀
+17:58: windforce: 不过request queue可以做成全局倒是想到了。
+17:59: varna: ...
+17:59: FujiwaranoMokou: ……
+17:59: varna: windforce: 做成全局干嘛
+18:00: windforce: varna, 如果有空闲的线程，它在调度循环里检查request queue。
+18:00: lhanjian quit:Ping timeout: 255 seconds
+18:00: varna: windforce: 如果有两个呢
+18:00: windforce: 不是有锁么。
+18:00: varna: 我就说这个问题
+18:00: windforce: 不阻塞就好了。
+18:01: varna: 我的request是强行负载均衡
+18:01: Zirconi: ..之前实习那家单位貌似就是，全局队列大概有十几个，下面二十几个线程取节点然后处理。。
+18:01: varna: 但是这个均衡策略明显很糙
+18:01: varna: 考虑几个情景：leader-follower和fork-on-connection
+18:01: windforce: 好吧，我去查个不太糙的。
+18:02: varna: 这两个情景在goroutine式的并发下都可行，但后者如果强行进行负载均衡就容易坑
+18:02: varna: windforce: ...
+18:02: varna: windforce: 为何不自己淡定点想想
+18:02: windforce: 这个显然想不出来啊囧。
+18:02: varna: 那是因为你其他的事情做少了……
+18:02: windforce: 我怎么能知道用户请求里干了什么。
+18:03: varna: 一个库不预期usage不太可能
+18:03: windforce: 好吧，我想想看。
+18:03: varna: 你做的时候就会预想用户用它做什么
+18:04: varna: 比如在前面讨论request的时候涉及到并发服务器模型的问题，典型的你做过了就知道
+18:04: varna: 全局队列的坏处是锁的冲突容易很严重
+18:04: windforce: 如果有几个coro要协作，用户希望它们在一个线程或者分开在某几个线程，这种东西用户不指定我怎么知道额。
+18:05: varna: 这种东西必须透明
+18:05: varna: 我记得你去看了golang的tutorial
+18:05: windforce: 没看过额，我去看看。
+18:05: varna: 不必了
+18:05: varna: 我说一个更简单的角度
+18:05: varna: 你学过操作系统，知道这些coro都在一个进程空间里
+18:05: varna: 这就足够了
+18:06: windforce: 嗯，这个知道。
+18:06: varna: 都说到这份上了，透明性显然
+18:06: windforce: 用户指定？
+18:06: varna: 用户就不该关心内核线程有多少
+18:06: varna: 你做的事情是提供新的并发模型，难道没意识到么
+18:07: windforce: = =
+18:07: windforce: 我想想看咯
+18:07: varna: 你的OS课上讲过Solaris式的lwp吧
+18:07: windforce: 噗，你开玩笑吧。
+18:08: Zirconi: 。。我估计没几个老师听说Solaris
+18:08: windforce: 我那个僵尸连哲学家进餐都讲不清楚
+18:08: varna: 一内核线程搭载多个用户线程的
+18:08: FujiwaranoMokou: 0 0
+18:08: FujiwaranoMokou: 僵尸！
+18:08: varna: 哲学家进餐的方式是摔 跤
+18:08: varna: 毫无信号量要素
+18:08: windforce: FujiwaranoMokou, 不逗，绝对李煌以下级别。
+18:09: windforce: varna, 这倒是想到过。
+18:09: Zirconi: OS课的锁讲得迷迷糊糊，都是后来自己写才弄明白一点
+18:09: varna: windforce: 把你学过的东西联系起来用就行了
+18:10: windforce: 好吧我试试看咯。
+18:10: varna: 啊，今天演习的第二批提督好人真多
+18:11: FujiwaranoMokou: 0 0？
+18:11: varna: 最近越来越多人响应了演习阵容放水的倡议（我是其中之一）
+18:11: windforce: FujiwaranoMokou, whu和qhu的都一路货色。
+18:11: FujiwaranoMokou: 0 0 0 0 ？这是什么意思
+18:11: windforce: 不过不是这路货色的话也不至于当僵尸吧。
+18:12: windforce: 如果连个叫兽都混不上的话，可想而知了。
+18:13: varna: 教授难混
+18:13: varna: 现在我这里评教授都要拼SCI了
+18:14: windforce: 反正就是个疼。
+18:16: windforce: 我先撸点数值分析，不然又得读大二艹。
+18:17: varna: 噗，第五场演习是个肝帝的主力部队，不打了……
+18:19: zzzzzzzzzzzzzzz quit:
+18:19: tsuki: 8z变长了
+18:19: FujiwaranoMokou: ……
+18:20: varna: FujiwaranoMokou: 阁下是尻法使的妹子？
+18:20: Zirconi: 硕士学位论文都是放网上的吧？
+18:20: varna: 药娘和药汉也算妹子
+18:20: varna: Zirconi: 知网可查
+18:21: varna: 硕博应该都是
+18:21: FujiwaranoMokou: ………………
+18:22: Zirconi: 像我们那教研室组长写的论文都是类似使用HTML5 Web Worker提高Web的应用性能研究
+18:22: Zirconi: 不过据我所知他不会CSS。。
+18:22: varna: ...
+18:23: varna: 那种论文发表在什么刊物上……
+18:23: Zirconi: 软件导刊
+18:23: varna: 我搜搜
+18:24: varna: 似乎不是EI检索，放弃……
+18:24: lhanjian joined channel
+18:25: varna: 啊，外面打雷
+18:26: zzzzzzzz quit:Ping timeout: 244 seconds
+18:27: zzzzzzzz joined channel
+18:27: FujiwaranoMokou: 打雷0 0
+18:27: varna: 8z变短了
+18:27: Zirconi: Saber在船舶电力推进系统仿真中的应用研究。。。
+18:27: varna: 啊，下雨了
+18:28: lhanjian: 啊，XXX
+18:28: lhanjian: 啊，XXX
+18:29: lhanjian: 自爆完毕
+18:30: condy joined channel
+18:30: FujiwaranoMokou: ……0 0
+18:31: condy_ joined channel
+18:31: varna: 我嚓，暴雨
+18:32: lhanjian: FujiwaranoMokou, 名字很长的你好
+18:32: FujiwaranoMokou: …………尼嚎
+18:33: varna: lhanjian: Fujiwara no Mokou
+18:33: varna: lhanjian: 似乎是药娘，可以爆
+18:33: FujiwaranoMokou: 我在手机上就变成Mokoutan了 0 0
+18:35: lhanjian: Mokou好熟悉的感觉……
+18:40: Plough: Mokou是我
+18:41: FujiwaranoMokou: 0 0？
+18:41: Sleepwalking_ joined channel
+18:42: Plough: 前段时间用过这个Nick
+18:43: lhanjian: soga。爆旗酱
+18:43: Plough: 噗，自爆去
+18:44: Sleepwalking quit:Ping timeout: 255 seconds
+18:44: gansteed quit:Quit: Leaving
+18:48: varna: Plough: 爆
+18:49: Plough: varna: 自爆去
+18:50: varna: Plough: 硬起来之后弯不过去
+18:52: FujiwaranoMokou: ……………………
+18:52: FujiwaranoMokou: 沙沙这里有坏人> <
+18:52: varna: 这里有人？
+18:52: Plough: varna: 我记得4chan上有教自爆的
+18:52: Plough: 查查去
+18:52: varna: Plough: 红旗酱果然研究过自己舒服的办法
+18:53: Plough: 无意中看到的而已
+18:53: lhanjian: FujiwaranoMokou, 沙沙是什么？
+18:53: FujiwaranoMokou: ……
+18:53: FujiwaranoMokou: marisa_ 
+18:54: lhanjian: [marisa_] is away (dating girlfriend)
+18:54: lhanjian: What the fxxk?
+18:54: varna: lhanjian: 左酱右酱觉酱电酱
+18:56: xxxxxxxxx joined channel
+18:56: xxxxxxxxx: varna 爆你妹去
+18:56: zzzzzzzz: xxxxxxxxx: 爆
+18:56: lhanjian: xxxxxxxxx 妹控驼？
+18:56: lhanjian: zzzzzzzz, 爆
+18:56: varna: xxxxxxxxx: 爆
+18:56: zzzzzzzz: lhanjian: 爆
+18:56: Plough: 被埋了，算了
+18:56: varna: Plough: 爆
+18:56: Plough: 应该是在/hc/里
+18:57: Plough: varna: 都说了让你自爆去
+18:57: varna: Plough: 爆
+18:57: Plough: 羊驼子把自己爆掉了
+18:57: Plough: 吃饭去
+18:57: * varna 下周还要换肝
+18:57: xxxxxxxxx: 红旗被埋胸了?
+18:58: varna: +
+18:58: Plough: 噗
+18:58: varna: 红旗酱贫乳舔舔
+18:58: Plough: 噗噗
+18:58: Plough: 你应该学会自 炒
+18:58: varna: 求红旗酱演示
+19:00: xxxxxxxxx: http://tieba.baidu.com/p/2955321564 orzzz
+19:03: FujiwaranoMokou: …………
+19:04: varna: http://tieba.baidu.com/home/main?un=KKJune6208204%EFKK&fr=pb # 看他关注的吧……
+19:04: xxxxxxxxx: orzzzz
+19:06: varna: 我tm全点进去看了一遍……
+19:08: varna: 百度查贴吧的时候怎么没查到这些
+19:09: varna: http://tieba.baidu.com/p/2897593704
+19:10: varna: ^ R18 R18 R18
+19:10: FujiwaranoMokou: ……
+19:11: varna: 我已经不知道该说什么好了
+19:11: sismvg joined channel
+19:11: xxxxxxxxx: 那个年级大点的之后成为医生了么....
+19:11: boosure quit:Ping timeout: 240 seconds
+19:12: varna: God knows...
+19:13: condy: ...
+19:13: condy: Orz
+19:13: varna: 百度贴吧果然藏污纳垢不能更多，黄网都弱爆了
+19:15: sismvg: 记得有几个吧很变态
+19:15: sismvg: 话说个人所得税+三险一金太可怕了
+19:15: xxxxxxxxx: 有几个羊驼那么变态?
+19:16: sismvg: 工资被拿掉了快一半。。
+19:16: condy quit:Quit: leaving
+19:17: whatofor: 工资好高
+19:17: sismvg: 不高啊。。
+19:17: varna: 现在个税起征是多少？
+19:17: sismvg: 3K附近吧
+19:18: varna: 三千还是五千？
+19:18: varna: ...
+19:18: sismvg: 话说我刚进公司第一个月发了400块，然后扣了500
+19:19: tsuki quit:Ping timeout: 264 seconds
+19:19: varna: 坑的是什么，住房公积金么……
+19:19: sismvg: 嗯
+19:19: varna: 别被黑去炒股炒房就行了
+19:20: sismvg: 能不交的话就能扛起我的电费了。。
+19:21: sismvg: 总之养老保险是拿不回来了。。我都不认为我能活到退休。。
+19:21: FujiwaranoMokou: 0 0
+19:22: varna: sismvg: 叫你不信春哥
+19:22: Zirconi: 现在能退休的猿都是五零后吧。。
+19:23: nyanyasama joined channel
+19:24: sismvg: 不叫的话能多买几个树莓派凑超算啊
+19:24: varna: 似乎又来了新人
+19:24: * nyanyasama meows
+19:25: varna: 这个说不定是小耗
+19:25: varna: 我们给他拴个气球，看他飞多远
+19:25: nyanyasama: 是的
+19:25: nyanyasama: 去！死！ 
+19:25: xxxxxxxxx: 怎么又说走就走的旅行了...
+19:25: FujiwaranoMokou: 0 0
+19:26: varna: 难道你们喜欢把小耗捆在凳子上，旁边帖个悔过书？
+19:27: sismvg: 4500-600-20-1000-600-300
+19:27: varna: 一抬眼以为是大建玄学配方
+19:27: * nyanyasama has kicked varna from #c_lang_cn (roll out)
+19:28: windforce: = =
+19:28: * varna oshiri hurts
+19:28: lhanjian quit:Ping timeout: 255 seconds
+19:28: windforce: 我觉得我想出怎么玩了嗯。
+19:28: windforce: 但是似乎很疼。
+19:29: sismvg: 每天晚上要过11点下班才能报销出租车。。
+19:29: varna: 噗
+19:29: windforce: IO的话全部封成（异步 + yield）
+19:30: nyanyasama: 有病
+19:30: windforce: 也不对，是接收和读。
+19:30: sismvg: nyanya-》七七七？
+19:30: varna: 没什么新花样啊……
+19:30: nyanyasama: ?
+19:31: varna: 是meowmeow
+19:31: windforce: 剩下的全部扔在一个线程里
+19:31: sismvg: nyanya sama
+19:31: Plough: 其实我是想搞lwp
+19:31: varna: windforce: 我那个就那么做的……
+19:31: Plough: coroutine还是疼
+19:31: varna: windforce: 单纯写多路复用+yield很简单
+19:31: windforce: = =
+19:31: nyanyasama: 我就觉得“封装”成异步有问题
+19:32: nyanyasama: 本来就应该是异步 
+19:32: nyanyasama: 异步封装成同步才是对的
+19:32: varna: 实际上就是异步伪装成同步
+19:32: sismvg: PM开始发疯了。。
+19:32: varna: 只不过不做IO完成，留给用户完成
+19:32: FujiwaranoMokou: 0 0
+19:32: nyanyasama: FujiwaranoMokou: 这是谁
+19:32: windforce: 妹纸
+19:32: FujiwaranoMokou: =w=
+19:32: nyanyasama: marisa?
+19:32: windforce: 另一个
+19:33: varna: nyanyasama: FujiwaranoMokou = 同在二要
+19:33: nyanyasama: FujiwaranoMokou: 快到碗里来
+19:33: sismvg: 宁愿把大约2M的模型用一次读一次，也不愿意在每次最多30个元素的排序上多浪费一次计算
+19:33: FujiwaranoMokou: …………
+19:33: xxxxxxxxx: 怎么看都不像妹子
+19:33: varna: ^ 基佬的直觉
+19:33: FujiwaranoMokou: 坏人
+19:33: nyanyasama: 据说   妹子都不会用动漫头像
+19:33: sismvg: 妹子都用福尔摩斯的
+19:33: nyanyasama: marisa_: 快到碗里来
+19:33: Plough: 我见过反例
+19:33: varna: 这个难说
+19:33: nyanyasama: FujiwaranoMokou: 快到碗里来
+19:33: sismvg: 用花生的是基佬
+19:34: FujiwaranoMokou: 不要> <
+19:34: varna: 不少傻妹子都用ACG头像的
+19:34: nyanyasama: FujiwaranoMokou: 快来
+19:34: windforce: 难道还有更好的办法？
+19:34: nyanyasama: 话说嗯 我已经习惯用 hu 不用 fu 了
+19:34: condy joined channel
+19:34: varna: windforce: 自己想，而且就这个办法本身也太糙
+19:34: FujiwaranoMokou: marisa_ 沙沙他们欺负我QAQ
+19:34: varna: nyanyasama: knife你怎么读
+19:35: nyanyasama: watasiga igen'ahureru nekosama!
+19:35: nyanyasama: varna: naif
+19:35: windforce: 剩下就只能用户手工指定了。
+19:35: varna: 所以说外来语的时候读hu难受
+19:35: sismvg: PM-》判断某一个角色的属性都要从包含200个角色的数组里遍历一次。。
+19:35: nyanyasama: varna: 我说日文
+19:35: varna: 我也是说日文
+19:35: nyanyasama: 训令式比较规整
+19:36: sismvg: nyanya是什么一次
+19:36: sismvg: 意思
+19:36: varna: 写无所谓了，读的时候规整意思不大
+19:36: * nyanyasama 认为 C 语言指针和函数的组合语法非常操蛋
+19:36: nyanyasama: sismvg: meow meow
+19:37: * Plough 半点霓虹语不会
+19:37: * nyanyasama 其实是一只三脚猫
+19:37: Plough: 不是三角耗么
+19:37: varna: 缺了哪两个脚
+19:37: Plough: s/角/脚/
+19:37: varna: Plough: 说耗子的时候是一只耳
+19:38: nyanyasama: 说猫的时候没有耳
+19:38: varna: 大脸
+19:38: xxxxxxxxx: 三角猫 这让我想到那个绿色的猫形红线
+19:38: nyanyasama: 猫耳被老鼠吃了
+19:38: varna: 黑猫警长我确实没看完……
+19:39: windforce: 开一个线程，只要有读请求就丢给那个线程然后自己yield()
+19:39: windforce: 那个线程丢个死循环。
+19:39: nyanyasama: 开你妹的线程……
+19:39: nyanyasama: 死循环你妹……
+19:40: varna: 直接调度做
+19:40: windforce: nyanyasama, 你是耗子？
+19:40: sismvg: 用代码对PM做了2次测验
+19:40: varna: 进调度的时候IO一次多路复用，更新就绪队列，重调度fire
+19:40: sismvg: 一次用了shared_ptr和strstream
+19:40: lh_mouse: windforce: 然后呢？
+19:40: windforce: 不像啊
+19:41: lh_mouse: 哦 
+19:41: sismvg: 理所当然的PM找我然后说了一大堆让我把代码改了
+19:41: lh_mouse: 然后呢
+19:41: sismvg: 一次用std::getline读行
+19:41: varna: IO的时候如果仔细封的话一次NOWAIT试作，失败的话注册+yield
+19:41: windforce: 你吃枪药啦？
+19:41: sismvg: PM叫我把他改成C风格的代码。。
+19:41: lh_mouse: windforce: no
+19:41: varna: sismvg: 你们不是用c艹么
+19:41: windforce: varna, 这些倒是可以。
+19:42: varna: 单开线程麻烦而没意义
+19:42: lh_mouse: 浪费资源
+19:42: FrankHB: C风格？艹Cstring？
+19:42: varna: 用已有的就可以了
+19:42: windforce: 好吧。
+19:42: lh_mouse: 帝球又开始吱吱叫了
+19:42: varna: 调度线程不可避，里面只挂一个调度循环太浪费了，直接epoll很直白
+19:43: lh_mouse: 硬件上 IO 就是异步的为何要模拟
+19:43: xxxxxxxxx: 帝球不是噗噗噗的叫么?
+19:43: varna: 异步这件事情没必要推得很低
+19:43: varna: 谈论同步和异步有意义的位置是用户程序
+19:43: lh_mouse: 那也无必要开线程
+19:43: varna: 对
+19:44: lh_mouse: 用户态写异步是坑
+19:44: windforce: 我想想
+19:44: lh_mouse: 我宁可接口用同步挂个回调
+19:44: varna: lh_mouse: 不过他现在是在做goroutine
+19:44: windforce: lh_mouse, 坑也得写啊。
+19:44: lh_mouse: windforce: 你参考下 Mordor
+19:44: windforce: lh_mouse, 好的。
+19:45: lh_mouse: 异步 IO 阻塞自己然后交出协程调度
+19:45: varna: 这不就是我之前说的
+19:45: lh_mouse: Mordor 也是多协程的
+19:45: varna: 只不过我提供可选的内核线程数，至少1
+19:45: lh_mouse: 但是它可没同步封装异步
+19:45: windforce: 嗯。
+19:46: windforce: 我就把它封死成2个算了。
+19:46: varna: epoll挂上去之后未必会真卡死
+19:46: varna: windforce: 那还不如不写
+19:46: windforce: 问题是用户不指定的话
+19:47: windforce: 我去查查看。
+19:47: varna: 还是典型的三种情况：没就绪直接阻塞等通知（包括新就绪），有就绪立即返回，有超时无就绪按超时来
+19:47: varna: go自己也提供调整内核线程的函数
+19:47: varna: 你试验下就看到了
+19:47: windforce: 嗯
+19:48: whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:49: lh_mouse: 为什么那么多人求助攻  没有求助受呢？求助攻不怕被爆×么？
+19:49: windforce: = =
+19:49: xxxxxxxxx: 老人生日的时候才祝寿
+19:51: varna: 小耗快趴我手上
+19:52: sismvg: 太奇葩了。。项目能不能正确读取文件全都依赖某个类的全局变量的初始化顺序
+19:52: varna: 把PM拉来打
+19:53: sismvg: 然后PM完全不知道对付这种情况的惯用手法
+19:53: varna: 打他
+19:53: lh_mouse: singleton
+19:54: lh_mouse: my_class &get_instance(){ static my_class c; return c; }
+19:54: FujiwaranoMokou: 0 0 0 0 0 0 0 0
+19:54: varna: ^ 非线程安全版
+19:54: varna: 虽说只是个get_instance也无所谓了
+19:55: lh_mouse: varna: 是线程安全的……
+19:55: varna: lh_mouse: 确实可以是的
+19:56: lh_mouse: varna: iso c++ requires that...
+19:56: * varna 贰
+19:56: * lh_mouse 三
+19:56: * varna barks
+19:56: FujiwaranoMokou: 0 0
+19:57: windforce: 吃饭吃饭
+19:59: lh_mouse: FujiwaranoMokou: 快到碗里来
+19:59: varna: 我有没有发过一个小耗抢兔子胡萝卜的视频
+19:59: FujiwaranoMokou: 才不要0 0
+19:59: lh_mouse: FujiwaranoMokou: 快到碗里来
+20:00: FujiwaranoMokou: 只有沙沙才可以做这样的事情> <
+20:00: lh_mouse: FujiwaranoMokou: 快到碗里来
+20:00: FujiwaranoMokou: ……
+20:00: varna: http://pan.baidu.com/s/1gdj7Hz9 # 全年龄
+20:01: lh_mouse: 度狗网盘差评
+20:02: sismvg: 这是琼瑶剧
+20:02: varna: 这时段速度快
+20:02: sismvg: 流言终结者的脑残粉真有钱
+20:02: sismvg: 给剧组送凯迪拉克。。
+20:02: varna: 噗
+20:04: Plough: 那个不是借的么
+20:04: Plough: 送的话早给炸了
+20:04: * varna 递出二螺
+20:04: sismvg: 以前好像也炸过类似价格的东西
+20:04: sismvg: 总之他们用的炸药比我吃的米的重量都多，。。
+20:04: * Plough 把二螺塞进了varna的菊花
+20:05: varna: 噗
+20:05: varna: 红旗酱果然知道是给他的
+20:06: Plough: 二螺从直肠能吸收吗?
+20:09: varna: Plough: 爆
+20:10: Plough: varna: 自 炒去
+20:10: sismvg: 贝爷知道
+20:12: varna: 贝爷连铁血战士都吃过
+20:18: lh_mouse quit:Ping timeout: 246 seconds
+20:31: hope1 joined channel
+20:34: hope1: 刚刚去广场转了一圈
+20:35: hope1: 全国各地的广场好像都区别不大啊
+20:35: xxxxxxxxx: 啥网盘好评?
+20:36: varna: hope1: 中间有个雕塑有个花坛，边上一些椅子？
+20:36: hope1: +
+20:36: varna: 看来果然差不多
+20:37: varna: hope1: 说起来你那个几何题大致是怎么说的
+20:37: hope1: 底下是广场舞，小吃，游乐园，开着熟悉的音乐的演唱会
+20:37: varna: 我去五四广场（青岛）的时候倒是没有这些
+20:37: hope1: 有序又混乱
+20:38: varna: 大概是在市政府对面的缘故
+20:38: hope1: varna, 估计不是什么难题，只是我自己不太熟练
+20:38: hope1: 我这也在区政府附近，大型超市边上
+20:39: varna: http://imgsrc.baidu.com/forum/pic/item/fefd86fdfc0392452e9a86538594a4c27d1e2576.jpg?v=tbs
+20:39: varna: ^ 巨大的恶意
+20:39: condy: ^ 恶意在哪里？
+20:41: hope1: 前几天那道最值题是构造三角形做的
+20:41: hope1: y = 2sqrt(x-1) + sqrt(2-x)这个
+20:41: hope1: 具体细节忘了，总之是两个直角三角形，然后不等式
+20:42: varna: 哦哦
+20:42: varna: Youmu: 非洲提督的登陆界面上全是那珂酱
+20:42: marisa_: 2411大法好
+20:42: hope1: 不过我还是不会，以后继续无脑求导
+20:43: varna: 我的那珂率已经降到了2/3
+20:43: Youmu: 就算是那珂酱，只要有爱都没有问题吧！
+20:44: varna: 现在天天麦克音量大丈夫，深陷切麦地狱不能自拔
+20:45: varna: 噗，手一抖五个近代化改修改错了……
+20:46: hope1: 五个？
+20:46: FujiwaranoMokou: 0 0
+20:46: marisa_: 蘑菇碳～
+20:46: varna: 一次喂了五个给岛风
+20:47: varna: 结果发觉喂的这个岛风是后来捡到，随手扔进远征队的……
+20:47: FujiwaranoMokou: 沙沙0w0
+20:47: varna: FujiwaranoMokou: 阁下要不要吃两片螺内酯
+20:47: varna: 噗噗噗噗噗我就不该说什么麦克音量大丈夫……
+20:48: marisa_: 今天第一个test case就出bug了，真是被上
+20:48: varna: 又捡到一个
+20:48: FujiwaranoMokou: 才不要> <
+20:48: varna: FujiwaranoMokou: 吃了会变可爱
+20:48: FujiwaranoMokou: 才不相信你呢> <你是欺负我的坏人
+20:48: Zirconi: Future Promise是啥？似乎没在哪见过？
+20:48: varna: Zirconi: c艹的新东西么
+20:49: marisa_: std库啊
+20:49: marisa_: 是的，++11
+20:49: marisa_: 跟线程什么的好像有关
+20:49: varna: http://en.cppreference.com/w/cpp/thread/future 貌似是异步
+20:49: marisa_: 好像是生产者消费者之劳的东西
+20:50: varna: marisa_: 爆
+20:50: varna: FujiwaranoMokou: 药娘都吃那个的
+20:50: FujiwaranoMokou: 我才不是药娘> <
+20:50: marisa_: 蘑菇碳才不是药娘
+20:50: marisa_: 这么可爱的
+20:51: Zirconi: 看到书里面进程通信范式里面介绍的，持锁共享内存，事务性内存，Future和消息传递。。
+20:51: FrankHB: http://en.wikipedia.org/wiki/Futures_and_promises
+20:51: marisa_: http://orteil.dashnet.org/cookieclicker/beta/ 丧病的游戏，为了造cookie毁灭宇宙
+20:52: windleaves quit:Remote host closed the connection
+20:52: tutu joined channel
+20:53: varna: abc-phone: 好久不见
+20:55: varna: marisa_: cookie 污 秽 不 堪 U D K 姐 贵 演 技 迫 真 下 北 泽 一 转 攻 势
+20:55: marisa_: 是正常向的cookie了，东方无关
+20:55: varna: ...
+20:55: varna: 面对淫梦居然如此淡定
+20:55: varna: 看来你也是淫梦厨
+20:55: marisa_: 不过为了造cookie竟然用反物质机械已经很不正常了2333
+20:55: FujiwaranoMokou: …………
+20:56: Plough: 我也在玩这玩意
+20:56: Plough: 太浪费人生了
+20:56: marisa_: 我之前打出了好多antimatter condenser
+20:56: Plough: 我现在就两个……
+20:56: FujiwaranoMokou: 0 0你们在说什么
+20:56: marisa_: 然后到顶了就没玩了。。。
+20:56: Plough: http://orteil.dashnet.org/cookieclicker/
+20:57: marisa_: 今天发现更了就重新玩，现在再过30分钟就有一个了
+20:57: Plough: 我都想直接开console改了
+20:57: marisa_: 那样的话不就没有游戏的意义了没。。。
+20:57: FujiwaranoMokou: 这个游戏吗……咱打不开的说
+20:57: * varna 肝脏爆碎
+20:57: Plough: 有啊
+20:57: Plough: 反正迟早都要打出来的
+20:57: Plough: 早点晚点不一样
+20:58: hoxily: http://en.cppreference.com/w/ 这是个啥网站？
+20:58: varna: 不一样，我估计我这辈子捞不着大鲸
+20:58: hope1: 查资料用的
+20:58: varna: hoxily: 是不好的网站，不要看
+20:58: marisa_: grandma简直精神污染啊。。。2333
+20:58: varna: hoxily: 看了之后你会口支口支地叫
+20:58: marisa_: varna, 怎么不好了？
+20:58: Zirconi: 感觉还是像锁。。
+20:58: varna: marisa_: 21:01 <@varna> hoxily: 看了之后你会口支口支地叫
+20:59: marisa_: 我经常看的啊，当我懒得查标准的时候。。。
+20:59: marisa_: 好吧
+21:00: hope1: 为什么人们会喜欢玩这种游戏呢？
+21:00: FujiwaranoMokou: 0 0
+21:00: marisa_: 不知道，反正我中毒了
+21:00: Plough: 当你视频看2秒卡10秒的时候你就喜欢玩了
+21:00: varna: 无限google api中，这个是什么游戏
+21:00: Sleepwalking__ joined channel
+21:01: varna: Sleepwalking__: 爆
+21:01: marisa_: 一个classical clicker game
+21:01: hope1: 我也在玩，但是为什么呢
+21:01: varna: clicker game是什么？
+21:01: * hoxily 吱吱吱～～～
+21:01: marisa_: 基本上就是超快速版的farmviell
+21:01: varna: soga
+21:01: marisa_: 好像拼错了，管他的
+21:01: Youmu: geordi: { future<bool> fut = async(is_prime, 444444443); chrono::milliseconds span(100); while(fut.wait_for(span)==future_status::timeout) cout<<'.'; cout<<" "; bool x = fut.get(); cout<<(x ? "yes" : "no"); } bool is_prime(int x){for(int i=2;i*i<=x;++i)if(x%i==0)return false; return true; }
+21:01: geordi: error: 'future' was not declared in this scope
+21:02: Youmu: geordi: --compile-flags
+21:02: geordi: error: No such option: --compile-flags
+21:02: Youmu: geordi: compile-flag
+21:02: geordi: error: 'compile' does not name a type
+21:02: Youmu: geordi: --compile-flag
+21:02: geordi: error: No such option: --compile-flag
+21:02: varna: geordi: show
+21:02: geordi: compile-flag
+21:02: varna: geordi: undo
+21:02: geordi: error: Unexpected end of request. Expected "and".
+21:02: Youmu: geordi: show
+21:02: geordi: compile-flag
+21:03: Youmu: geordi: --show-compile-flags
+21:03: geordi: -finput-charset=UTF-8 -O0 -std=c++1y -pedantic-errors -Wfatal-errors -Wall -Wextra -Wno-empty-body -Wno-missing-field-initializers -Wwrite-strings -Wno-deprecated -Wno-unused-parameter -Wno-unused-variable -Wno-non-virtual-dtor -Wno-variadic-macros -fno-diagnostics-show-option -fno-use-linker-plugin -fmessage-length=0 -ftemplate-depth-128 -fno-merg
+21:03: Youmu: geordi: { std::future<bool> fut = async(is_prime, 444444443); chrono::milliseconds span(100); while(fut.wait_for(span)==future_status::timeout) cout<<'.'; cout<<" "; bool x = fut.get(); cout<<(x ? "yes" : "no"); } bool is_prime(int x){for(int i=2;i*i<=x;++i)if(x%i==0)return false; return true; }
+21:03: geordi: error: 'future' is not a member of 'std'
+21:03: Youmu: geordi: { std::future<bool> fut = async(is_prime, 444444443); chrono::milliseconds span(100); while(fut.wait_for(span)==future_status::timeout) cout<<'.'; cout<<" "; bool x = fut.get(); cout<<(x ? "yes" : "no"); } bool is_prime(int x){for(int i=2;i*i<=x;++i)if(x%i==0)return false; return true; } #include <future>
+21:03: geordi: error: stray '#' in program
+21:03: varna: Youmu: msg吧
+21:04: varna: Youmu: 刷屏太狠了
+21:04: marisa_: msg?
+21:04: Youmu: 好。
+21:04: Sleepwalking_ quit:Ping timeout: 255 seconds
+21:04: varna: marisa_: /msg
+21:04: Youmu: /query
+21:05: FujiwaranoMokou: 0 0
+21:05: marisa_: 好吧，懂了
+21:11: xxxxxxxxx: http://www.bilibili.tv/video/av939685/
+21:12: varna: ...
+21:13: * varna 开始怀疑EA基佬的搜索关键词都是什么东西
+21:13: xxxxxxxxx: 首页上看到的
+21:13: varna: 噗
+21:13: Youmu: 原来男生也可以这么美！
+21:13: varna: Youmu: 爆
+21:14: Youmu: varna: 爆！
+21:15: varna: 大家看，condy也兴奋了
+21:15: Youmu: 人家是妖妖梦！
+21:16: FujiwaranoMokou: 0 0
+21:16: xxxxxxxxx: http://www.bilibili.tv/video/av1199755/
+21:16: windforce: 额，好吧又得重写了。
+21:16: Sleepwalking_ joined channel
+21:17: xxxxxxxxx: 你们也要在半夜喊东方么...
+21:17: varna: Sleepwalking_: 爆
+21:17: varna: xxxxxxxxx: 真有可能
+21:17: * varna 回想当时自己练yyc ex一百多遍
+21:19: FujiwaranoMokou: 好厉害0 0
+21:19: varna: FujiwaranoMokou: 给，这是二螺
+21:20: FujiwaranoMokou: 我才不是药娘> <能不能不要转到这个话题上来啊
+21:20: Sleepwalking__ quit:Ping timeout: 240 seconds
+21:20: xxxxxxxxx: 米库酱都被吓跑了
+21:20: varna: FujiwaranoMokou: 加强程序设计语言理论发展，推进频道高剂量药娘建设
+21:20: varna: xxxxxxxxx: 有个一下划线的米库酱呢
+21:20: iyzsong: - -b
+21:21: varna: 这么说吧：加强程序设计语言理论发展，推进频道高剂量药娘团队建设
+21:21: marisa_: 蘑菇碳又不学PLT。。。
+21:21: varna: 那就吃药好了……
+21:21: FujiwaranoMokou: PLT是什么 0 0
+21:21: marisa_: programming language theory
+21:22: FujiwaranoMokou: ……
+21:22: varna: Passionate Libidoness Theory
+21:22: FujiwaranoMokou: ………………
+21:22: xxxxxxxxx: 培养大量杰出的幼女控?
+21:22: varna: 这个目标也不错
+21:22: windforce: IO 把流和包结合一下好了，IO请求打包挂在自己carrier的队列上，调度线程每次循环检查每个carrier上的请求，然后往缓冲里读/写，这样锁竞争似乎也会小。
+21:22: varna: windforce: 噗
+21:22: marisa_: Libidoness是啥？
+21:22: varna: windforce: 循环检查是怎么回事
+21:23: windforce: 调度线程的每次循环中检查
+21:23: varna: marisa_: 似乎造错了
+21:23: varna: 好像该是libidinous
+21:23: windforce: 调度线程和工作线程分用结构体和调度循环。
+21:23: varna: windforce: 这开销
+21:24: marisa_: 受的理论？
+21:24: windforce: 反正调度线程闲着也是闲着。
+21:24: varna: windforce: 问题是你有承载coro的线程就够了，为什么还要开别的
+21:24: varna: coro上很多事情可以串行化
+21:25: windforce: rq也扔掉，调度线程直接new出coro根据某种分配挂在某个carrier的就绪队列上。
+21:25: varna: windforce: 知道我为什么用个rq么
+21:25: windforce: 没懂。
+21:26: windforce: 不是
+21:26: varna: windforce: 我为什么在处理就绪的时候写了个双缓冲
+21:26: windforce: 不是就绪队列
+21:26: windforce: 是请求队列，然后carrier自己的调度循环中把它取出挂在自己的就绪队列上。
+21:26: windforce: 这样就绪队列不用上锁。
+21:27: varna: 就绪队列本来也不用上锁
+21:27: varna: 424         list_ctl_t *p, *t, *h;                                                        
+21:27: varna: 425         pthread_mutex_lock(&(self->sched_info.mutex));                                
+21:27: varna: 426         self->sched_info.active_rq_queue = &(self->sched_info.rq_queues[idx_active = 1 - idx_active]);          
+21:27: varna: 427         self->sched_info.local_rq_queue = &(self->sched_info.rq_queues[1 - idx_active]);
+21:27: varna: 428         pthread_mutex_unlock(&(self->sched_info.mutex));                              
+21:27: varna: ^ 这是白写的么
+21:27: varna: 批量处理创建请求是常数时间
+21:28: varna: 至少不会在取的时候卡死别人
+21:28: windforce: 圆来乳此。
+21:30: varna: 双缓冲倒一次之后取的过程就不用锁了
+21:30: windforce: 我想想
+21:31: varna: ...
+21:31: windforce: 对的
+21:31: windforce: 我只是看一下能不能不走rq
+21:31: varna: 可以
+21:32: varna: 这里我只是防意外的TLS杀，多心成分居多
+21:32: varna: 没有做分布式的打算
+21:32: windforce: 好吧。
+21:34: ioada joined channel
+21:34: varna: io|ada?
+21:34: varna: i|o|a|da?
+21:34: windforce: 好多新人。
+21:34: ioada left channel:
+21:34: Sleepwalking__ joined channel
+21:35: windforce: 好吧这是最快的。
+21:35: zzzzzzzz: 新节操
+21:35: varna: 不是最快的
+21:35: varna: 这种很常见
+21:35: windforce: 好吧。
+21:38: FujiwaranoMokou quit:Quit: ChatZilla 0.9.90.1 [Firefox 29.0.1/20140506152807]
+21:38: Sleepwalking_ quit:Ping timeout: 245 seconds
+21:40: windforce: 我就没放超时什么的进去所以还好，2333。
+21:41: varna: 不放超时的话你的epoll基本就两个选择了
+21:41: varna: 没有就绪没有请求=-1，不然0
+21:42: varna: 然后记得处理epoll阻塞期间产生请求的唤醒
+21:42: windforce: 好的，我先记下。
+21:42: varna: ——前提是你在用epoll堵着调度
+21:42: varna: 不必记下
+21:42: varna: 你肯定会想起来，想不起来也就算了，比较自然的事情
+21:43: windforce: 嗯
+21:44: windforce: 不过监听时间似乎也就只能这么设。
+21:47: varna: 这都不是问题
+21:48: varna: 你会意识到问题在别的地方
+21:49: windforce: 嗯
+21:49: windforce: 做做看
+21:51: varna: 顺着想想就明白了
+21:53: windforce: 计时不好做。
+21:54: windforce: 别的还没想到。
+21:54: varna: 慢慢想吧
+21:54: varna: 这里没想清楚大概是因为你没能想出可能的执行流程来
+21:55: windforce: 嗯
+21:56: sismvg: H画师纷纷上海，好事还是坏事？
+21:56: varna: 好事
+21:56: sismvg: 40010能上海不
+21:56: varna: 要不你到哪里找可爱的妹子图，难道去看大小姐浴室的世纪末系列么
+21:57: sismvg: 。。。。我还是喜欢JOJO系列的大小姐
+21:57: varna: http://manhua.dmzj.com/tags/ojonoyokushitsu.shtml 我是说这位
+21:57: sismvg: 其实世纪末还是很带感的
+21:57: varna: 狗头！醉舞击！
+21:57: marisa_: JOJO系列那来的大小姐？
+21:58: frankbh joined channel
+21:58: sismvg: 记得以前看到过
+21:58: * varna 越来越相信HO级旗舰是呜十铃的怨念
+21:58: windforce: = =
+21:58: marisa_: 没有啊
+21:58: marisa_: 我JOJO补完了，完全没有大小姐
+21:58: varna: HO/fcl被大破之后仍然可以一发爆雷大破我lv31喂满的潜艇
+21:59: sismvg: 额。。。
+21:59: marisa_: 你说的是卖鱼强的女儿？
+21:59: FrankHB quit:Ping timeout: 240 seconds
+21:59: sismvg: 我说的是本子
+21:59: marisa_: 。。。
+21:59: sismvg: http://www.ithome.com/html/out/89758.htm
+22:00: sismvg: 秀恩爱得死
+22:01: marisa_: 学霸得死
+22:01: sismvg: 看mythbuster去
+22:01: varna: 我就揉脸，我不说话
+22:01: sismvg: 多几个学霸是好事
+22:01: varna: 你要明白，美国人的平均长度比较客观
+22:01: marisa_: 学霸不死，我这种学弱怎么活。。。
+22:01: varna: 可观
+22:01: varna: 不是客观
+22:02: sismvg: 学弱终究是学弱
+22:02: sismvg: 不会因为学霸不在而变成学霸
+22:02: marisa_: 战斗力都是相对的了
+22:02: varna: 当然顺便指出一点，所谓学习时相互监督是煞笔行为
+22:02: sismvg: 233
+22:02: sismvg: 为何
+22:03: sismvg: 总之我是没人会监督我。。。
+22:03: varna: 爱学不学，监督个什么啊
+22:03: varna: 学习时相互提督才是正道
+22:03: sismvg: 这只有搞基的时候才会成立
+22:03: varna: 「喂你远征六到点了」「哦谢了，我收拾下去跑个油轮护送」
+22:04: sismvg: hotmail也出问题了。。麻烦大了
+22:04: varna: hotmail上不去了？
+22:04: sismvg: 邮箱太慢了
+22:04: varna: 我这没问题啊
+22:04: marisa_: hentai mail
+22:05: sismvg: 也许是我客户端的问题。。
+22:05: sismvg: win8的邮箱客户端诡异
+22:05: varna: 我已放弃gmail转投hotmail
+22:06: marisa_: gay mail
+22:06: sismvg: 看到e洛盟上树莓派优惠，以为是有库存了，结果是卖别的东西才能给1个。。
+22:06: varna: marisa_: 爆
+22:06: marisa_: varna 你从良了
+22:07: varna: marisa_: 爆
+22:07: sismvg: 小麦好美
+22:08: windforce: whu 有学霸？2333。
+22:09: varna: 成绩好的人到处都有，不奇怪
+22:09: zzzzzzzz: gmail配邮件客户端可用
+22:09: windforce: 会考试的伙计不少是真的。
+22:10: varna: 这个倒是没问题，不过我找不到gtk2的evolution了
+22:10: zzzzzzzz: =.=
+22:10: varna: thunderbi又不喜欢，所以直接网页开邮箱了
+22:10: * varna 不用gtk3
+22:10: windforce: 但是读whu还能去cmu也算叼炸了。
+22:10: sismvg: 多长时间了，就是没库存。。树莓派只能说卖的太好了
+22:14: sismvg: 神经元网络很厉害吗
+22:14: varna: 不厉害
+22:15: sismvg:  弱到何种地步
+22:15: varna: 三层BP可以保证拟合多项式，但实际应用容易过拟合
+22:15: varna: 如果学习对象的特征比较散乱或者模糊，考虑用RBM或者CNN之类的深度方法会靠谱些
+22:16: varna: 训练时间略长（对于复杂问题来说）
+22:16: varna: 总体来说仍然是拟合分布，所以是实用而没前途的方法
+22:16: JQK quit:Read error: Connection reset by peer
+22:17: varna: 补充一下，如果希望在简单分类问题上实用的话，我更推荐SVM
+22:17: varna: 可控程度稍高
+22:18: JQK joined channel
+22:19: varna: 想起来的第二个补充
+22:19: varna: 如果希望为缺乏特征提取的模糊/不确定性推理方法提供证据，倒是可以试一下ANN
+22:19: varna: 我以前做过一回，效果还行
+22:20: varna: 一时能想起来的差不多就这些
+22:21: sismvg: 完全不知道说什么。。。。
+22:21: sismvg: 看来还很艰辛
+22:22: varna: 脖子疼，似乎落枕了
+22:23: frankbh quit:
+22:23: varna: frankbh23333
+22:24: sismvg: frankbl
+22:25: varna: @我真的不是狼魂
+22:25: FrankHB: 我是真货→.→
+22:25: xxxxxxxxx: FranBKB
+22:26: sismvg: FrakB
+22:26: sismvg: frAKB48
+22:26: marisa_: 真货不会卖萌用颜文字
+22:26: varna: FrankHB: 爆
+22:26: varna: FranBKB
+22:26: FrankHB: marisa_: 爆
+22:26: sismvg: 应该用保龄球
+22:26: FrankHB: varna: 爆
+22:26: xxxxxxxxx: 真货会说噗噗噗噗噗噗噗噗噗噗 
+22:26: varna: 这个是假货
+22:27: sismvg: 我想起了黑白熊
+22:27: FrankHB: xxxxxxxxx: 爆
+22:27: windforce: 上帝在编码时，女人肯定是个高科技。
+22:27: varna: 假的
+22:27: varna: 平时恥球用的是Konversion
+22:27: varna: 22:29 CTCP VERSION reply from FrankHB: Quassel IRC v0.10.0 (dist-575f27e)  (built on May 17 2014 17:11:46) -- http://www.quassel-irc.org
+22:27: varna: 22:29 -!- FrankHB [~zzzzzzzz@221.216.238.69]
+22:27: varna: 22:29 -!-  ircname  : zzzzzzzz
+22:27: varna: ^ whois
+22:27: sismvg: 只要问他我前天提了什么提案就知道饿了
+22:27: varna: 我就发几个命令，我不说话
+22:27: zzzzzzzz: 变回来了...
+22:28: varna: Konversation
+22:28: varna: 撸多了
+22:29: windforce: 武大的思想政治教育是全国一流的，我不知道这是否是个荣誉。
+22:29: * zzzzzzzz 也装Konversation了...
+22:29: varna: 是啊
+22:29: sismvg: 马克思理论？
+22:29: windforce: 面对我们这个大学，这个一流的衙门，你不能把它废掉只能它把你废掉；但是你可以去抗争，去呐喊。
+22:29: varna: 赤化之后你就会用五六冲、啊不对、AK了
+22:29: sismvg: 物种共产主义者理论
+22:29: varna: windforce: 被废了说明你弱
+22:30: windforce: 算了我已经看不下去了，又有回到被艹年代的感觉。
+22:30: windforce: http://tieba.baidu.com/p/2997897783?see_lz=1&pn=1
+22:30: windforce: 这话不是我说的。
+22:30: varna: 只能说不论哪里，废柴都有给自己找理由的倾向
+22:30: windforce: 嗯
+22:31: windforce: 这只是whu的叫兽们的日常言论集锦
+22:31: sismvg: 废柴老老实实吃死气丸子
+22:32: sismvg: 说不定能当上黑手党boss
+22:32: Youmu quit:Quit: WeeChat 0.4.3
+22:32: windforce: 不会做题？没关系，会做题，也没什么了不起。（头朝天，意味深长，语气突然加重）你们听懂我的话没有？？！！那个省长做题目也做不过我，是不是。。。
+22:32: windforce: ^ 2333
+22:32: iyzsong: =o=
+22:32: iyzsong quit:Quit: poweroff
+22:33: zzzzzzzzz joined channel
+22:33: varna: 认真你就输了
+22:33: sismvg: 我一直在想要用unicode的项目为什么不直接上wstring而上string呢。。
+22:34: sismvg: 虽然STL的fstream对unicode的文件处理有点诡异
+22:34: windforce: 现在的大学将老师当作宣传共产主义的战士，将学生当作共产主义的战士来培养。 << 我当然不认真了，认真的是叫兽们。
+22:35: varna: 共产主义战士有什么不好
+22:35: varna: 共产主义战士使用RPG-7和一〇七炮
+22:35: varna: 后者不用炮都可以发射
+22:35: xxxxxxxxx: gc主义战士不会八百里啊
+22:35: varna: 那没办法了……
+22:36: varna: 我们八百里了只能击毙鬼子的机枪手
+22:36: windforce: “宁可碗里没有菜，不可苦了下一代。”中国有必要把教育弄得这么悲壮吗？这个句子缺主语啊，谁碗里没有菜？ << 其实这才是槽点
+22:36: windforce: whu的哲学系确实全国第一，2333。
+22:37: windforce: 学霸什么的还是算了，虽然它一贯不要脸。
+22:37: varna: whu学生擅长摔 跤？
+22:38: sismvg: 百度贴吧是越来越坑了，自从出了个删帖过多身份验证以后删贴机就不能用了
+22:38: windforce: varna, 是的。
+22:39: varna: 这个好
+22:39: windforce: 大半还是DOTA vs三房以上选手
+22:39: hope1: 之前没签到，就被取消小吧了
+22:39: varna: 一直没签到
+22:39: Plough: http://imgs.xkcd.com/comics/addiction.png
+22:40: windforce: 至少男生是这样，女生么，杯具的才会住宿舍吧。
+22:40: sismvg: 签到什么的。。我也几乎不签了
+22:40: windforce: 所以擅长摔 跤也很正常
+22:40: sismvg: 总是会忘记，即时有一键签到
+22:40: Plough: http://imgs.xkcd.com/comics/porn.png
+22:40: hope1: https://pastebin.mozilla.org/5408200
+22:41: varna: 会打dota哪里不好了
+22:41: sismvg: 没有妹子。。
+22:41: sismvg: 宁子又跑到我的鞋子里睡觉了
+22:41: zzzzzzzzz quit:Quit: Konversation terminated!
+22:41: varna: sismvg: 叫你们不玩舰娘
+22:41: zzzzzzzzz joined channel
+22:42: windforce: 至于政治局扩大会议就不发了，2333。
+22:42: sismvg: 和舰娘有什么关系
+22:42: varna: 玩了就不抱怨妹子
+22:43: * varna 坚持认为大批FFF团员只是找不到妹子在酸葡萄
+22:43: varna: 说起来大概可以给Perl弄个future
+22:43: varna: 不过怎么看都会变成意义不明的东西
+22:43: hope1: 所以你不是3F团员
+22:43: sismvg: 我不这么认为
+22:44: varna: hope1: 我有左右觉电
+22:44: marisa_: 觉？
+22:44: sismvg: FFF团真团员的数量不多
+22:44: zzzzzzzzz: 发现konversation比quassel好用→_→
+22:44: varna: marisa_: 觉酱
+22:44: xxxxxxxxx: 好用是什么情况...
+22:44: marisa_: 舰队里的？
+22:44: marisa_: 还是小五？
+22:44: varna: marisa_: 小五啊
+22:44: windforce: 毛时代成功地做到了让全国人民都很穷，多么难得啊！没有人能做得像毛泽东那样登峰造极，那简直是高科技操作。 << 好吧，只发一句，实在戳中笑点。
+22:45: zzzzzzzzz: 就是看起来舒服，用着更顺手的意思
+22:45: marisa_: 不对啊，小五什么时候变成你的了》
+22:45: marisa_: 陪睡CD？
+22:45: varna: marisa_: 我有传教用小拖鞋
+22:45: hope1: 毛以前几十年的全国人民不穷么
+22:45: windforce: ^ 劳资活了20年就是为了接着去这种地方考试？2333。
+22:46: varna: 其实想起来，提督为了娶到电酱而组织起舰队成功杀出疯人院的故事不是很感人么
+22:46: varna: windforce: 去哪里跟你干什么有关系么
+22:46: xxxxxxxxx: T2你应该去G+上发这些
+22:46: zzzzzzzz quit:Read error: Connection reset by peer
+22:46: windforce: hope1, tieba.baidu.com/p/2997897783?see_lz=1&pn=1 亮点自寻。
+22:46: hope1: 我活了十几年就是为了今晚洗澡
+22:46: varna: windforce: 我觉得你才是亮点
+22:47: varna: 别人游戏玩得开心结果你坐不住了，怪时臣喽
+22:47: windforce: 不是这回事，只是呆在那里根本没有任何信息或者希望或者方向或者出路或者类似物可言罢了。
+22:48: varna: 那是你不行
+22:48: varna: 有教授可以给你机会，有网可以查东西，有时间可以学可以玩
+22:48: windforce: 不然个个玩命650+的伙计跑到那种地方就为了打DOTA？
+22:48: FrankBH joined channel
+22:48: varna: 自己找死怪不得别人
+22:49: zzzzzzzz joined channel
+22:49: windforce: 有些东西只是见怪不怪就不觉得可笑了。
+22:49: varna: 直白地说，这就跟你做程序的方式类似
+22:49: varna: 总是说自己姿势不足，但没看出你去查了多少资料
+22:49: varna: 噗，那珂酱……
+22:49: windforce: 好吧，确实。
+22:49: xxxxxxxxx: 天朝人民发来贺电
+22:50: zzzzzzzz quit:Client Quit
+22:50: varna: 那珂率又上升了一个小百分点
+22:50: varna: 说起来，假如有Scalar::Defer的话似乎真可以做个future
+22:50: endle quit:Quit: Leaving
+22:51: marisa_ quit:Ping timeout: 240 seconds
+22:53: Zirconi: 啊，看了半天书用Erlang写了个递归
+22:54: Plough: 很快你干啥都会递归的
+22:55: varna: 因为erlang自带TCO所以还好
+22:57: Plough: 不带TCO Erlang没法用吧
+22:57: sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+22:57: varna: +
+22:57: Sleepwalking__ quit:Ping timeout: 255 seconds
+22:57: varna: erlang服务的状态是靠递归传递下去的，所以必须TCO
+22:57: varna: MR神上神犇不太喜欢这个范式，不过我倒是挺喜欢
+22:58: Plough: 挺喜欢+
+22:58: Plough: 用Perl写DFA怎么写怎么蛋疼
+22:58: varna: 红旗酱我们来行炒 饭之事吧
+22:58: Plough: 去自 炒啦
+22:58: varna: Perl可以强行TCO
+22:59: Plough: 0 0可以TCO?
+22:59: varna: goto &NAME
+22:59: Plough: ……
+22:59: varna: perldoc -f goto &NAME
+22:59: varna: 噗
+22:59: varna: perldoc -f goto
+22:59: varna: 这个goto要求你准备@_之后抛弃当前帧调用NAME
+23:00: Plough: SOGA
+23:00: varna: 实际上不是goto了，文档里也有指出
+23:00: Plough: 读到了
+23:00: Plough: 虽说没有pattern match还是略疼
+23:00: Plough: given/when直接一堆警告
+23:00: varna: Plough: 用我的用我的
+23:01: varna: 叫什么来着……
+23:01: varna: HOI::Match
+23:01: Plough: 0 0
+23:01: Plough: 我去封装个DFA试试
+23:02: Zirconi: 似乎没人招Erlang和Perl的。。
+23:02: Plough: 貌似新浪微博里用了Erlang
+23:03: varna: Zirconi: 以前看云风的文章里好像提过他们用erlang
+23:03: varna: 忘了是哪一篇
+23:03: varna: 至于Perl, 业余用用吧……
+23:03: varna: POSIX用户总得有个打杂的语言，它不该是shell
+23:03: code_new joined channel
+23:04: Plough: @rcshell
+23:04: Plough: @cat-v
+23:04: varna: 而且说不定学了Perl可以护到生科娘
+23:04: Zirconi: 现在找个c的工作都难
+23:04: Plough: 想起cat-v用rcshell写cgi我就觉得疼
+23:04: varna: 社招就这样
+23:04: Plough: shell疼CGI更疼
+23:05: code_new: CMCC被艹了三天了。。
+23:05: varna: cmcc-edu呢
+23:05: marisa_ joined channel
+23:05: code_new: 同CMC吃系列
+23:05: Zirconi: 上次面试那人似乎还想问问CFS之类的调度的，后来想了想就没继续问了。。
+23:05: varna: CFS调度确实没读过
+23:06: code_new: 手机键盘各种疼。。
+23:08: varna: code_new: 爆
+23:08: Zirconi: 这年头还有手机有键盘？
+23:08: varna: 我的
+23:08: varna: 2G路过
+23:09: xxxxxxxxx: 我还是觉得实体键实在
+23:10: varna: 東亜重工 ““看今天范佩西的表现，我简直血脉喷张。从范巴斯滕，到范德萨、范尼斯特鲁伊，再到范佩西，我只能说这就是血统决定，这就是家族荣耀。”面对记者，范志毅激动地说。 ”
+23:10: code_new: 请教一下驼兄，write怎么输出int数组（盾牌防喷）
+23:10: varna: code_new: 自行序列化
+23:11: code_new: 意思是要转成字符串吗
+23:11: varna: 对对
+23:11: code_new: 好吧。。
+23:11: varna: 这个没办法了
+23:11: windforce: 22、你有本事大学4年不上课，见老师就喊王八蛋。
+23:11: windforce: 23、你看，这是马克思和恩格斯。。。典型的有问题。
+23:11: windforce: 还伟大的友谊？你相信吗？
+23:11: windforce: （旁边还有个图，是一男一女，似乎是毛泽东和某女）
+23:11: windforce: 你看，这边是异性恋，这边是友谊。
+23:12: windforce: 23333333
+23:12: Zirconi: cout<<中的'<<’是什么意思，不是向左移一位吧
+23:12: Zirconi: 这是命令提示符，可以理解成把后面的东西给cout这个对象输出
+23:13: windforce: 好像那个同态复仇就是我答的
+23:14: varna: Zirconi: 23333
+23:14: code_new: 顺便请教一下，AT&T纯汇编的话如何输出数字呢
+23:14: varna: 手写调用进去吧
+23:15: varna: 跟atnt没关系就是了
+23:15: varna: 如果不想折腾什么符号之类的，可以直接转好了字符串一个write出去
+23:15: code_new: 听起来好麻烦的样子
+23:15: varna: 按系统调用号来
+23:16: code_new: 这几天突然想把以前写过的简单C代码用纯汇编重写一遍=。=
+23:16: varna: 没意思
+23:16: varna: 不过写几个排序之类的也行
+23:17: Plough: 搞个httpd出来
+23:17: varna: 2333
+23:17: varna: @写个C库硬说是Perl
+23:17: Plough: 这是啥梗
+23:17: code_new: = =
+23:17: varna: Plough: 黑perlxs
+23:17: Plough: Soga
+23:18: Plough: 还是没勇气去碰XS
+23:18: Zirconi: 似乎见过ASM写的Httpd。。
+23:18: Zirconi: asmttpd 是一个完全使用 amd64 汇编开发的 Linux 下的 Web 服务器。
+23:18: Zirconi: 特性:
+23:18: Zirconi: 通过线程池支持多线程
+23:18: Zirconi: 无需第三方库支持，只需 64 位的 Linux
+23:18: Zirconi: 速度快
+23:19: code_new: 好的。这样问题就解决了。谢驼兄
+23:19: Plough: 怎么配置
+23:19: varna: 不客气
+23:19: Plough: 还是只能serve静态文件？
+23:19: code_new: 顺便吐槽一下mobile irc online真疼。。
+23:20: Zirconi: 难道我之前看到的一堆线程死循环取相应队列并处理的方式就叫线程池？
+23:21: varna: 差不多
+23:21: Zirconi: 。。。我还一直在想怎么让线程重新开始以不同的参数运行
+23:24: condy joined channel
+23:26: code_new quit:Ping timeout: 246 seconds
+23:26: Zirconi: 底层的c语言标准库，每个cpu厂家不做也得做，再不济，委托一家外部公司进行实现。
+23:26: varna: 2333
+23:27: varna: 大概他被发现是舰队狗
+23:30: Zirconi quit:Quit: halt
+23:30: xxxxxxxxx: 要是他半夜也喊东方就神作了
+23:46: windforce: 先睡了，腋间愉快。
+23:46: Plough quit:Quit: 碎叫
+23:47: windforce quit:Quit: Leaving
+23:50: varna: hope1`: 说起来，海棠考完了没？
+23:51: varna: 自招什么时候
+23:53: varna: ……还是只有一周啊
+23:54: varna: 噗
+23:54: varna: 听起来好厉害的样子
+23:54: varna: 单人的培训么？
+23:55: varna: 去培训的都有什么人……
+23:56: varna: 好厉害
+23:58: varna: 看起来大家都得去的样子

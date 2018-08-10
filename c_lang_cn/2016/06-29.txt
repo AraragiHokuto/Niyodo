@@ -1,0 +1,231 @@
+00:00 hope1 joined channel
+00:14 hope1 quit:Ping timeout: 240 seconds
+00:17 hope1 joined channel
+00:23 hope1 quit:Ping timeout: 260 seconds
+00:24 hope1 joined channel
+00:38 Izumo quit:Quit: Connection closed for inactivity
+00:41 hope1 quit:Ping timeout: 264 seconds
+00:43 cleamoon quit:Ping timeout: 260 seconds
+00:47 whocares_2 quit:Read error: Connection reset by peer
+00:49 whocares_2 joined channel
+00:52 hope1 joined channel
+01:02 hope1 quit:Ping timeout: 244 seconds
+01:03 hope1 joined channel
+01:13 hope1 quit:Ping timeout: 276 seconds
+02:16 cleamoon joined channel
+03:06 hope1 joined channel
+03:08 cleamoon quit:Ping timeout: 250 seconds
+03:17 hope1 quit:Ping timeout: 244 seconds
+03:24 hope1 joined channel
+03:45 IntPtr joined channel
+03:46 xxxxxxxx quit:Quit: Leaving...
+03:48 IntPtr quit:Remote host closed the connection
+03:55 cleamoon joined channel
+04:11 IntPtr joined channel
+04:12 hope1 quit:Ping timeout: 244 seconds
+04:24 hope1 joined channel
+04:30 IntPtr quit:Remote host closed the connection
+04:51 IntPtr joined channel
+04:54 IntPtr quit:Remote host closed the connection
+05:05 IntPtr joined channel
+05:09 hope1 quit:Ping timeout: 250 seconds
+05:11 IntPtr quit:Remote host closed the connection
+05:13 cleamoon quit:Ping timeout: 246 seconds
+05:16 hope1 joined channel
+05:31 IntPtr joined channel
+05:31 IntPtr quit:Remote host closed the connection
+05:31 FrankHB quit:Read error: Connection reset by peer
+05:32 FrankHB joined channel
+05:32 IntPtr joined channel
+06:29 hope1 quit:Ping timeout: 260 seconds
+06:41 cleamoon joined channel
+07:09 cleamooon joined channel
+07:13 cleamoon quit:Ping timeout: 260 seconds
+07:26 hoxily quit:Quit: Leaving
+08:19 kevingu joined channel
+08:24 kevingu quit:Remote host closed the connection
+08:25 kevingu joined channel
+08:25 kevingu quit:Read error: Connection reset by peer
+08:26 kevingu joined channel
+08:29 kevingu quit:Remote host closed the connection
+08:30 FrankHB quit:Ping timeout: 240 seconds
+08:30 kevingu joined channel
+08:34 kevingu quit:Ping timeout: 240 seconds
+09:14 cc joined channel
+09:16 lh_mouse joined channel
+09:25 hope1 joined channel
+09:31 hope1 quit:Ping timeout: 246 seconds
+10:05 lh_cat joined channel
+10:05 lh_cat: 昨天捉住了一只小耗。
+10:07 cleamooon: 小蚝捉小蚝
+10:15 Mokou joined channel
+10:30 Mokou quit:Remote host closed the connection
+10:37 hope1 joined channel
+10:46 FrankHB joined channel
+10:48 Izumo joined channel
+10:51 hope1 quit:Ping timeout: 252 seconds
+11:10 hope1 joined channel
+11:30 kevingu joined channel
+11:32 kevingu quit:Remote host closed the connection
+11:33 kevingu joined channel
+11:38 kevingu quit:Ping timeout: 276 seconds
+11:41 lh_mouse: E:\GitHub\nano-win>nano --version
+11:41 lh_mouse:  nano from git, commit b75646a (after 2.6.1)
+11:45 Youmu joined channel
+11:58 sottd joined channel
+12:07 lh_cat quit:Quit: Connection closed for inactivity
+12:07 kevingu joined channel
+12:08 lh_mouse: [19:57:53] <sottd> lh_not_bot:dynamic_cast<type*>(ptr) 如果type是多重继承过来的能否转换成功? // 看情况。
+12:08 lh_mouse: 如果是虚拟继承而来的，因为基类只有一个实例，如果是 public 继承就可以转换成功。
+12:09 sottd: tk
+12:09 lh_mouse: 如果不是虚拟继承会歧义。不提供转换路径的情况下带歧义的 cast 会失败。
+12:11 lh_mouse: dynamic_cast 不一定是基类向派生类转换，也可以反过来，或向 cv void 转换。
+12:15 iyzsong-xx joined channel
+12:15 iyzsong-xx: _(:з」∠)_
+12:15 hope1 quit:Ping timeout: 244 seconds
+12:16 condy: geordi: { dynamic_cast<void*>(new tracked::B); }
+12:16 geordi: new(B) B0* leaked: B0. Aborted
+12:19 AutoGavy joined channel
+12:20 AutoGavy: 有人玩robocraft的么
+12:23 lh_mouse: AutoGavy, 工口小冰箱爆照。
+12:24 cleamooon: 感觉c艹好orz
+12:25 lh_mouse: 垃圾 C艹。
+12:28 lh_cat joined channel
+12:30 sottd: fuck cocos
+12:31 sottd: 触摸机制写的啥啊，说要从CCTouchDelagate才行,结果有一大堆东西从别的地方接受触摸事件
+12:31 sottd: 这叫我怎么模拟呢..
+12:31 lh_mouse quit:Ping timeout: 260 seconds
+12:33 kevingu quit:Remote host closed the connection
+12:34 kevingu joined channel
+12:35 kevingu_ joined channel
+12:38 kevingu quit:Ping timeout: 244 seconds
+12:39 kevingu_ quit:Ping timeout: 264 seconds
+12:42 lh_cat is now known as lh_mouse
+13:00 kevingu joined channel
+13:06 sottd_ joined channel
+13:06 sottd quit:Read error: Connection reset by peer
+13:06 sottd_ is now known as sottd
+13:09 kevingu quit:Remote host closed the connection
+13:11 sottd quit:Read error: Connection reset by peer
+13:16 kevingu joined channel
+13:19 Mokou joined channel
+13:47 hope1 joined channel
+13:51 sottd joined channel
+13:51 sottd: 怎样让你的程序员朋友怀疑人生：把他代码里的分号换成希腊语的问号 。希腊语中的问号是类似于分号的“;”（U+037E），但和英语的分号“;”（U+003B）是不同的。简直血海深仇
+13:53 sottd: ; <-就是它
+13:53 hope1 quit:Ping timeout: 258 seconds
+13:55 sottd: http://www.fileformat.info/index.htm
+14:04 condy: Orz
+14:08 whocares_2 quit:Remote host closed the connection
+14:08 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+14:10 whocares_2 joined channel
+14:28 FrankHB quit:Read error: Connection reset by peer
+14:28 FrankHB joined channel
+14:34 Matsune joined channel
+14:35 kevingu_ joined channel
+14:38 kevingu quit:Ping timeout: 244 seconds
+14:48 AutoGavy quit:Quit: Connection closed for inactivity
+14:49 kevingu_ is now known as kevingu
+14:51 kevingu quit:
+14:57 cc quit:Remote host closed the connection
+14:57 cc joined channel
+15:18 Izumo quit:Quit: Connection closed for inactivity
+15:30 kevingu joined channel
+15:43 Youmu quit:Quit: Connection closed for inactivity
+15:56 Flandre` quit:Ping timeout: 260 seconds
+15:58 Flandre` joined channel
+15:59 Flandre` is now known as Guest24729
+16:01 Guest24729 quit:Changing host
+16:01 Guest24729 joined channel
+16:01 Guest24729 is now known as Flandre_
+16:05 AutoGavy joined channel
+16:09 Flandre_ quit:Quit: WeeChat 0.4.2
+16:10 Flandre`` joined channel
+16:25 hope1 joined channel
+16:29 Neo_Chen joined channel
+16:34 hope1 quit:Ping timeout: 260 seconds
+16:37 kevingu quit:Remote host closed the connection
+16:39 Neo_Chen quit:Ping timeout: 276 seconds
+16:42 Neo_Chen joined channel
+16:57 Mokou quit:Remote host closed the connection
+17:01 hope1 joined channel
+17:01 Neo_Chen quit:Read error: Connection reset by peer
+17:03 kevingu joined channel
+17:07 kevingu quit:Remote host closed the connection
+17:26 hope1 quit:Ping timeout: 240 seconds
+17:40 Izumo joined channel
+17:42 hope1 joined channel
+17:50 cc quit:Remote host closed the connection
+17:52 hope1 quit:Ping timeout: 264 seconds
+18:05 iyzsong-xx quit:Read error: Connection reset by peer
+18:08 AutoGavy quit:Quit: Connection closed for inactivity
+18:18 Mokou joined channel
+18:20 Mokou_ joined channel
+18:20 Mokou quit:Read error: Connection reset by peer
+18:24 FrankHB quit:Ping timeout: 246 seconds
+18:31 hope1 joined channel
+18:53 Matsune_ joined channel
+18:55 FrankHB joined channel
+18:57 Matsune quit:Ping timeout: 260 seconds
+18:58 FrankHB quit:Client Quit
+19:05 CyrusYzGTt quit:Ping timeout: 246 seconds
+19:06 iyzsong joined channel
+19:18 iyzsong quit:Changing host
+19:18 iyzsong joined channel
+19:26 hoxily joined channel
+19:35 Meow-J quit:Quit: Connection closed for inactivity
+19:42 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/rm/f9_208654.jpg@596w_1l.jpg
+19:42 iyzsong: _(:з」∠)_
+19:43 fowi joined channel
+20:07 Matsune_: リア充が立入禁止
+20:07 Matsune_ is now known as Matsune
+20:18 Izumo quit:Quit: Connection closed for inactivity
+20:40 lh_cat joined channel
+20:40 FrankHB joined channel
+20:43 lh_mouse quit:Ping timeout: 240 seconds
+20:43 xxxxxxxx joined channel
+21:19 lh_cat is now known as lh_mouse
+21:21 hope1 quit:Ping timeout: 264 seconds
+21:26 hope1 joined channel
+21:32 hope1 quit:Ping timeout: 244 seconds
+21:35 hope1 joined channel
+21:37 kevingu joined channel
+21:44 kevingu quit:Ping timeout: 272 seconds
+21:46 lhanjian: Matsune: (ˊo̶̶̷ᴗo̶̶̷`)
+21:47 iyzsong: (｢・ω・)｢
+21:50 Matsune: (๑• . •๑)
+21:51 cleamooon: _(:з」∠)_
+21:56 Mokou_ quit:Remote host closed the connection
+21:57 Izumo joined channel
+21:59 IntPtr: 冒泡防踢
+22:01 hope1: 没有踢这种说法吧……
+22:01 * hope1 刚错过了一个deadline
+22:03 * IntPtr 只是刷下存在感
+22:03 cleamooon: hope1, 和会长酱啪啪啪的deadline？
+22:04 fowi quit:Quit: Connection closed for inactivity
+22:45 hope1 quit:Ping timeout: 244 seconds
+22:51 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+22:52 hope1 joined channel
+23:07 lh_mouse: hope1, 长时间不说话会被 freenode 删号。
+23:08 * stdstx 吓得说了一句话
+23:08 Matsune quit:Read error: Connection reset by peer
+23:13 hope1 quit:Ping timeout: 244 seconds
+23:14 lh_mouse: geordi, << STR( a \ b \ c ); \ #define STR(...) #__VA_ARGS__
+23:14 geordi: a b c
+23:20 hope1 joined channel
+23:24 condy: geordi: -r << STR(hello /* something */ world); 
+23:24 geordi: hello world
+23:27 hope1 quit:Ping timeout: 244 seconds
+23:31 hope1 joined channel
+23:31 lh_mouse: geordi, -r << STR(condy) \ #define condy baka
+23:31 geordi: condy
+23:32 condy: geordi: append  \#define _T(x) STR(x) and replace first STR with _T
+23:32 geordi: condy
+23:32 condy: -。-
+23:32 condy: geordi: show
+23:32 geordi: << _T(condy) \ #define condy baka; \ #define STR(...) #__VA_ARGS__  \#define _T(x) STR(x)
+23:42 whatofor_1 quit:Ping timeout: 250 seconds
+23:42 whatofor_1 joined channel
+23:47 whatofor_1 quit:Ping timeout: 244 seconds
+23:48 hope1 quit:Ping timeout: 276 seconds
+23:52 hope1 joined channel

@@ -1,0 +1,1462 @@
+01:35 molikto quit:Remote host closed the connection
+01:36 molikto joined channel
+02:35 lh_mouse quit:Ping timeout: 268 seconds
+03:10 boosure joined channel
+03:39 molikto quit:Remote host closed the connection
+04:18 molikto joined channel
+04:27 molikto quit:Remote host closed the connection
+05:06 molikto joined channel
+05:16 molikto quit:Remote host closed the connection
+05:55 sleepwalking joined channel
+06:19 sleepwalking quit:Ping timeout: 252 seconds
+06:33 ahe quit:Quit: 离开
+06:38 sleepwalking joined channel
+06:52 xxxxxxxx quit:Quit: Leaving...
+07:17 sleepwalking quit:Ping timeout: 252 seconds
+07:51 hoxily joined channel
+08:01 sleepwalking joined channel
+08:55 sou_ joined channel
+08:56 Xilzzerts joined channel
+08:58 sou_ quit:Remote host closed the connection
+09:03 Youmu` joined channel
+09:10 molikto joined channel
+09:11 sou_ joined channel
+09:14 molikto quit:Ping timeout: 246 seconds
+09:26 cleamoon_ joined channel
+09:27 Xilzzerts: 客户反馈回来一堆code为SI_USER的崩溃。。。
+09:29 cleamoon quit:Ping timeout: 244 seconds
+09:32 xxxxxxxx joined channel
+09:37 cleamoon_ quit:Read error: Connection reset by peer
+09:38 cleamoon_ joined channel
+09:59 sleepwalking quit:Ping timeout: 252 seconds
+10:06 blackskygg joined channel
+10:06 blackskygg: 今天是面基之日
+10:07 blackskygg: 我要去hust报道了
+10:08 blackskygg: 报到*
+10:13 blackskygg quit:Read error: Connection reset by peer
+10:20 molikto joined channel
+10:45 molikto quit:Ping timeout: 264 seconds
+10:45 Stevearzh joined channel
+10:45 Stevearzh quit:Changing host
+10:45 Stevearzh joined channel
+10:48 lh_mouse joined channel
+10:55 libhanjian joined channel
+11:06 sleepwalking joined channel
+11:08 Youmu` joined channel
+11:32 ASenR joined channel
+11:49 ASenR quit:Ping timeout: 244 seconds
+11:51 molikto joined channel
+11:57 hoxily quit:Quit: Leaving
+12:29 ASenR joined channel
+12:34 sleepwalking quit:Ping timeout: 252 seconds
+12:34 sleepwalking joined channel
+12:55 ASenR quit:Remote host closed the connection
+12:58 sleepwalking quit:Ping timeout: 252 seconds
+13:10 cleamoon_ quit:Ping timeout: 244 seconds
+13:11 Xilzzert joined channel
+13:13 molikto quit:Remote host closed the connection
+13:14 Xilzzerts quit:Ping timeout: 264 seconds
+13:34 varna joined channel
+13:40 Xilzzert: 收到一堆code为SI_USER的SIGBUS的错误报告，怎么破
+13:43 varna: SIGBUS? 安卓么
+13:44 varna: 如果不是，那么考虑检查下有没有越过栈底的访问
+13:44 varna: 最后再考虑有没有对齐问题吧
+13:57 cleamoon joined channel
+13:58 cleamoon: E7斩了？
+13:59 lh_mouse: varna, 爆照
+14:02 Xilzzert: SI_USER的解释是用户进程调用了kill
+14:03 varna: 我不负责斩杀，而且上午我不打
+14:03 varna: 现在我只在天灯刁民
+14:04 cleamoon: ……不是都要结束了吗
+14:04 varna: 还有2.47杀，这离结束差多远，你可以体感胰腺癌
+14:04 varna: 一下*
+14:06 Xilzzert: 为什么都说是对齐问题？X86或者ARMv7都支持非对齐访问的啊，就是稍微慢点
+14:06 varna: 只是整数没问题
+14:06 varna: 我仍然怀疑是越过栈底而不是对齐
+14:07 varna: cleamoon: 这次的几个主要关卡基本都需要一些意志力爬过去，一杀还好说，将近2.5杀的血量恐怕得用五次以上进Boss换下来
+14:07 cleamoon: 刚和我妈聊王思聪他爸给他5亿然后他投资上市公司的事，我妈说如果她给我5亿我会怎么用，我说我会存银行存死期，这样每年都有上千万的利息…我妈遗憾的摇头：这就是我为什么不像他爸一样给你5亿的原因，你和王思聪差太多了……啊原来是这样，对不起妈妈，我以前居然还以为不给我5亿是因为咱家穷zt
+14:08 molikto joined channel
+14:08 cleamoon: 一天时间弄下2血，按这个速度还有两三天就斩了
+14:08 varna: 昨天太脸
+14:09 varna: 而且即使昨天那样，我也打掉了一万资源
+14:09 Xilzzert: 崩溃这里实际上是一个赋值
+14:09 Xilzzert: iFileMagic=aFileHeader->z_magic;
+14:09 varna: 而斩杀毕竟多了一个院长
+14:09 varna: Xilzzert: 确认过这里的变量都能访问么
+14:10 varna: 除去大和大凤两舰，我的支援和攻略队全面强于红旗，然而我中间甚至有连一点hp都没摸到的场合
+14:10 varna: 也有只打了一点点血的失败场合
+14:11 varna: 如果你E6断念了，可以切到甲等体验一下，那个道中比E7综合弱一点点
+14:11 Xilzzert: 都做出了足够的检查，不过aFileHeader是一个mmap映射块的指针
+14:11 varna: 你确认那个mmap合法？
+14:11 varna: valgrind怎么说的
+14:12 Xilzzert: 非必现
+14:12 cleamoon: 噗
+14:12 Xilzzert: 那是一整个文件的映射，如果不合法走不到这里
+14:12 cleamoon: E6甲不如放烟花
+14:13 varna: 去体感一下就好
+14:13 varna: Xilzzert: 这话没什么信服力
+14:14 varna: 体感一下，然后你就知道我在面对什么东西了
+14:14 Xilzzert: 现在就是怀疑这个阶段文件发生了什么变动
+14:14 Xilzzert: 或者访问到页边界了
+14:15 lh_mouse: 一定要 mmap？
+14:16 varna: 所以我还是建议参考下valgrind的意见（如果可能）
+14:16 cleamoon: 我看到图就喷了
+14:17 varna: 噗，下午四点钟的报时，那珂酱给瑞穗签名了……
+14:17 varna: 演艺事业蒸蒸日上
+14:18 cleamoon: 噗，什么鬼
+14:19 varna: 今天这见鬼的观测率
+14:19 varna: 要不是这些伙计的基础素质不错，早就打黄摊子了……
+14:21 varna: cleamoon: 瑞穗改了之后的报时，跟很多人都熟络（曾经参与救援作业的高雄和摩耶，以及发签名的那珂酱）
+14:21 cleamoon: ……
+14:21 cleamoon: 竟然还会发签名
+14:23 varna: 毕竟NKC的活跃度最近也提高了一点点
+14:23 varna: 《初恋！水雷战队》我自己在出击的时候也听
+14:23 varna: 名正言顺的官方刚果战歌
+14:25 cleamoon: ……
+14:26 varna: http://zh.moegirl.org/%E5%88%9D%E6%81%8B!%E6%B0%B4%E9%9B%B7%E6%88%98%E9%98%9F 这里是歌、词和翻译
+14:26 varna: 是很欢快的刚果民谣
+14:27 Xilzzerts joined channel
+14:30 Xilzzert quit:Ping timeout: 268 seconds
+14:30 cleamoon: 真不愧刚果民谣
+14:31 varna: 我了割草咧
+14:32 varna: 旗舰大破
+14:32 varna: 这也太失败了
+14:33 varna: 全都在平砍
+14:33 cleamoon: 不是全部miss就不错了
+14:33 varna: 那要求太低了
+14:34 cleamoon: 知足者常咸
+14:37 varna: 咸鱼难度不太需要考虑知足，我个人基本可以碾压（除了沼跃姬）
+14:39 cleamoon: 希望沼跃鱼可以3333
+14:39 varna: 可能性极小
+14:39 varna: 以前卵月3333有过几周，后来发现可能是数据设定失误，就取消了
+14:40 varna: 另一个被取消掉落的例子是3-2上路（沟）第一战的苍龙
+14:40 cleamoon: 嘛，这次的立绘我都不喜欢
+14:40 varna: 可能去年十月份之后就被取消
+14:40 cleamoon: 卵月被我不小心拆了……
+14:40 varna: 原因大概是肝帝增加，运营希望提高玩家的镇守府运营难度
+14:41 varna: 卵月有反潜的任务，不低于C败就行，打完得职人
+14:41 varna: 第三十驱逐队第二次编成-出击（1-5 头目不低于C）
+14:42 cleamoon: fa
+14:42 cleamoon: 那我还得去捞
+14:42 varna: 5-4大群
+14:43 varna: 捞的时候想着要出翔鹤应该就有了
+14:43 varna: 想着要卵月似乎会出比叡、雾岛、RJ
+14:43 cleamoon: 4-4还没淦……
+14:43 varna: 慢慢来
+14:43 varna: 每月的2-5也偶尔有
+14:44 varna: 不过我自己感觉2-5的明星是爱宕
+14:44 cleamoon: E3我出了4翔鹤2瑞鹤无数傻级……
+14:44 varna: 三万出货已经大胜利了
+14:44 varna: 我总觉得秋月下次就有
+14:44 varna: 不然真要一年
+14:46 cleamoon: 嘛，常咸就不在乎什么船了
+14:46 varna: 我日哦
+14:46 varna: 全在瞎打……
+14:47 varna: 一个挺好的局面，结果两发里面一发不彻甲，驱逐舰都打陆基……
+14:47 varna: 现在咸了才有船
+14:47 cleamoon: 噗
+14:47 cleamoon: 我觉得田中上线了
+14:48 varna: 这个观测率有点奇怪
+14:48 varna: 如果能连续打出这样的局面，不知道是不是其他的问题
+14:48 varna: 平砍命中也达到了除了38改之外基本没法看的程度
+14:49 cleamoon: 运营的恶意
+14:49 varna: 总觉得和主炮改修有一点关系
+14:49 varna: 水上部队用的41炮最好能改到+6
+14:49 varna: 但现在我来不及给红旗做这个改进了，毕竟41改一次就要吃一个白板41……
+14:50 cleamoon: ……
+14:52 whocares_2_ joined channel
+14:52 whocares_2 quit:Ping timeout: 244 seconds
+14:53 varna: 现在的甲等风景就是你吃着最大的瘪，拼着较低的掉率，击破之后因为难度真的很高所以捞船断念
+14:53 cleamoon: 根目录的定义…… 真是好问题……
+14:53 cleamoon: 所以为什么要做甲鱼
+14:53 varna: 好玩
+14:53 cleamoon: ……
+14:54 cleamoon: 我喜欢无双
+14:54 varna: 我有一些挺不错的部队，所以值得接受这挑战
+14:55 varna: 妙高退避，看看能不能拿下离岛
+14:56 varna: 给我个好点的航向
+14:56 varna: 反航太多了
+14:57 varna: 4v2
+14:57 varna: 双方交换了一个错误
+14:58 varna: 115/450...
+14:58 whocares_2_ quit:Ping timeout: 244 seconds
+14:58 varna: 最后一次，无论成败之后开始攻略战
+14:59 varna: 总觉得这问题可能不是脸
+15:00 varna: 但是90+的索敌和120+的索敌我不知道有多大差距……
+15:01 whocares_2 joined channel
+15:01 cleamoon: 战斗时重要的不是命中吗
+15:01 varna: 索敌可能会影响观测率
+15:02 varna: 只是猜测
+15:02 varna: 而发动昼战观测的时候，命中率好歹高一些
+15:04 varna: 湾子点昼战近乎无损压制+击破……
+15:04 varna: 红旗家这些人在下午三点以后比较厉害？
+15:05 cleamoon: 噗
+15:06 varna: 最后湾子是被彻甲弹观测射击活活打死的
+15:06 varna: 甚至不是三式弹
+15:06 cleamoon: ……
+15:07 varna: 卧槽俾斯麦在卖萌
+15:07 varna: 搞定，开始刷闪
+15:08 cleamoon: orz
+15:09 varna: 虽然波波折折，但也就打了三千油
+15:10 lh_not_bot: varna: 请教个问题
+15:11 varna: lh_not_bot: orz
+15:12 lh_not_bot: void foo(int * ptr, size_t cnt); // 明确 cnt 不为零时 ptr 不得为空，cnt 为零时 ptr 可以为空。问在类型系统上若存在指针，并且认为有必要区分可空指针，如何处理。
+15:12 varna: 这问题好难，我想一下
+15:13 cleamoon: orz
+15:14 varna: 那么需要一个细节的问题：cnt为零时，ptr仅仅是“可以”为空？
+15:16 lh_not_bot: 是
+15:17 varna: 那么我很难想像出这样一个仅仅靠指称语义就把cnt和ptr关联起来的契约……
+15:18 varna: 若cnt是零或非零的两方面要求都是必须的，那么这地方其实或许可以是个Maybe Pointer T
+15:24 cleamoon: 这是什么范畴的问题？
+15:24 varna: 这问题其实有点倾向公理语义
+15:25 varna: 但我不知道公理语义如何在语义分析时合宜地给出这样的断言，而非仅仅用一个nullable加上其他的语义糖凑合过去
+15:25 cleamoon: orz
+15:26 varna: 指称语义的类型系统则往往专注于“是什么”或是“T和T'能否合一地看待”这样的问题
+15:26 varna: 并不在意小耗这个明确的要求
+15:29 cleamoon: 对了，我在想，除了编译器这类的，一般软件真的需要那么高级的语义吗…
+15:31 varna: 有些时候好吃的糖能改进接口
+15:31 varna: 而一个C用户被迫学会大便炼糖，虽然最后他们的结局是学会了大口吃翔
+15:33 Xilzzerts: 既然kill可以给进程发什么SIGSEGV，SIGBUS之类的，那么我到处发这个当bug报上去会怎么样
+15:33 varna: (｡･ω･)ﾉ会弄出大新闻？
+15:35 varna: cleamoon: 对了，最近的航母炮击战估算伤害是这个： [55 + (火力 + [爆装×1.3] + 雷装)×1.5]
+15:36 varna: 新反潜估算则是 相乘补正 × ( 2 x √(素对潜) + 装备对潜 × 1.5 + 攻击模式补正 ) 
+15:36 varna: 配合这个估算式使用的阵型修正，复纵0.8 轮型1.2 单横1.3
+15:37 cleamoon: 咦，爆装渣渣了？
+15:38 varna: 是这样的感觉
+15:38 varna: 爆装系数下修了0.7，舰爆有点尴尬
+15:38 cleamoon: 那舰爆还有什么用
+15:38 varna: 只是比起高档舰攻来说，同档次舰爆意义下降
+15:38 varna: 支援方面还是舰爆好点
+15:39 libhanjian: 大便炼糖，C党的心酸之作啊
+15:39 cleamoon: 支援算法不同？
+15:42 varna: 炮击支援我印象是开幕算法
+15:42 varna: 另外高档舰爆的命中更好
+15:42 varna: 同时考虑到最高档的舰攻都上战场了，剩下的也就是高档舰爆
+15:43 varna: 操，左手似乎也有点劳损……
+15:44 cleamoon: 撸多了
+15:44 varna: 典型的鼠标手，应该是腕部的神经劳损
+15:44 varna: 主要问题应该是实验室的桌子
+15:45 cleamoon: 左手鼠标？
+15:45 varna: 只是这病的俗称
+15:45 varna: 因为发病比较多的是惯用鼠标的手，或者干脆说是惯用手
+15:46 varna: 现在我左手只有小指微微发麻
+15:46 cleamoon: 桌椅一直不舒服，所以在家经常躺着撸
+15:47 varna: 实验室来的新人全是些男生……
+15:47 varna: 别说可爱的妹子了，连妹子都没有
+15:47 cleamoon: 你可以调教药娘呀
+15:48 varna: 吃了药都是些药汉
+15:48 cleamoon: 噗
+15:48 cleamoon: 那吃的是伟哥吧
+15:49 varna: 支援补闪
+15:51 varna: 啊
+15:51 varna: cleamoon: 支援航母的火力是 55+(1.5×火力)+(1.5×雷装)+(2.0×爆装)
+15:52 varna: 所以综合命中和素火力，舰爆更好点
+15:52 cleamoon: soga
+15:52 cleamoon: 嘛，我尽量不支援的
+15:53 cleamoon: 不过为什么总改公式
+15:53 varna: 因为都是推算……
+15:53 varna: 而且加了新系统之后，可能一些奇异点就暴露出来了
+15:54 varna: 至于雷击支援，目前仍然认为处于不计算雷装值的未实装状态
+15:58 cleamoon: ……
+15:59 cleamoon: 估计真正公式太鬼畜，而数据太少了
+16:01 varna: 航空支援我用过一回
+16:01 varna: 效果极其糟糕，就没再试验
+16:02 varna: 估计打个敌水雷战队还凑合
+16:04 lh_mouse: [15:30:10] <varna> (｡･ω･)ﾉ会弄出大新闻
+16:06 cleamoon- joined channel
+16:06 cleamoon quit:Read error: Connection reset by peer
+16:06 varna: 这些暖气管子里的老鼠啊，有一个好处，就是跑得比谁都快
+16:11 lh_mouse: [15:30:10] <varna> (｡･ω･)ﾉ会弄出大新闻
+16:19 varna: 道中刷好了
+16:20 sou_1 joined channel
+16:20 sou_ quit:Read error: Connection reset by peer
+16:22 cleamoon joined channel
+16:22 cleamoon quit:Read error: Connection reset by peer
+16:22 cleamoon joined channel
+16:23 ahe joined channel
+16:25 cleamoon quit:Read error: Connection reset by peer
+16:25 cleamoon joined channel
+16:25 lh_mouse: [15:22:42] <varna> 指称语义的类型系统则往往专注于“是什么”或是“T和T'能否合一地看待”这样的问题  // 还不如提供可保证的参数语义相关性和 ABI 约定
+16:26 varna: 于是你提供的是一纸条令
+16:26 varna: 你看着高兴，和你有相同视角、不同观点的人仍然会认为这是一坨crap
+16:27 varna: 最后每个人都声嘶力竭
+16:27 lh_mouse: 我的问题是  允许在 cnt 等于零的时候传入一个乱指的 ptr 是否合法
+16:27 * varna 摊手
+16:27 varna: 我觉得这里应该合法
+16:27 lh_mouse: 不仅是是否空的问题
+16:28 varna: 以我的理解，这里需要合法指针的时候是所有非零的cnt, 和一个从1变到0的cnt?
+16:28 lh_mouse: 所以   即使明确必须非空  传入一个乱指的东西比如 (int *)0xdeadbeef 
+16:28 lh_mouse: “变到”何解
+16:29 varna: 这里似乎体现不出“变到”
+16:29 varna: 算了
+16:29 varna: 如果固定是你那个foo的写法，这里还是不该允许不好的指针
+16:30 lh_mouse: 如果传入乱指的东西（明确地，“恰好”空指针也可以算“乱指”的话）是合法的   又变成调用者自觉了
+16:30 lh_mouse: 于是就是现状
+16:32 cleamoon- joined channel
+16:32 cleamoon quit:Read error: Connection reset by peer
+16:38 cleamoon joined channel
+16:39 cleamoon- joined channel
+16:39 cleamoon quit:Read error: Connection reset by peer
+16:39 cleamoon joined channel
+16:48 cleamoon- joined channel
+16:48 cleamoon quit:Read error: Connection reset by peer
+16:50 cleamoon joined channel
+16:52 libhanjian quit:Remote host closed the connection
+16:58 varna: 拆船，准备出击
+17:00 cleamoon: 拆？
+17:01 varna: 刷闪得的驱逐舰太多了
+17:01 cleamoon: 都喂满了？
+17:01 xxxxxxxx quit:Quit: Leaving...
+17:02 varna: 雷装他自己解决吧
+17:02 varna: 我自己这边没喂满的只限于一些没改造到顶的
+17:05 varna: 真雪！保佑我！
+17:06 varna: 出击
+17:06 varna: 亚顿！亚顿！
+17:06 varna: 开幕合计4
+17:09 varna: 开幕合计2
+17:09 cleamoon quit:Read error: Connection reset by peer
+17:11 varna: 开幕中破1
+17:13 varna: 全员无破
+17:13 varna: 支援打成这熊样都全员无破
+17:13 varna: 太赞了
+17:15 varna: 开幕中破1轰沉1
+17:15 varna: 十六万爆炸 绫波中破
+17:16 varna: 残敌2
+17:16 varna: 115/255 175/400
+17:16 varna: 夜战
+17:17 varna: 俾斯麦炸了……
+17:17 varna: 232 击杀
+17:19 cleamoon joined channel
+17:21 cleamoon- joined channel
+17:21 cleamoon quit:Read error: Connection reset by peer
+17:21 varna: 红旗这个队简直太屌
+17:22 cleamoon-: 欧神附体？
+17:22 varna: 刚才一个顺理成章的S胜，雪风爆了232
+17:24 varna: 卧槽外面大暴雨
+17:24 cleamoon-: 噗
+17:24 varna: 中午来的时候该带点面包的……天气预报只说多云啊
+17:25 cleamoon-: 用面包种蘑菇吗
+17:25 varna: 我肚饿
+17:26 cleamoon-: 饿了吃键盘
+17:28 cleamoon-: 现在吃饭还早吧
+17:28 cleamoon joined channel
+17:28 sismvg joined channel
+17:29 sismvg: http://tieba.baidu.com/p/4014080279
+17:29 sismvg: 不好好做总统系列
+17:29 varna: 中午吃得有点少，就一碗拌饭+一个饼
+17:30 sismvg: 看来1W RMB的冲击不小
+17:31 varna: 卧槽，难以名状之大统领、微笑的黑人、千貌之神……
+17:32 varna: 下一次出击，目指超过0.5杀
+17:33 varna: 顺便把所有的补给船玄学都打开
+17:34 varna: 真雪保佑
+17:35 varna: 我军、和敌机动部队交战
+17:35 cleamoon- joined channel
+17:35 cleamoon quit:Read error: Connection reset by peer
+17:36 libhanjian joined channel
+17:37 cleamoon-: 如果想在饭上省钱就去食堂要剩饭做杂烩就好了
+17:37 varna: 功率不够
+17:37 varna: 亚顿！亚顿！
+17:37 varna: 击杀他们！
+17:40 sismvg: 突然想玩孤单枪手了
+17:42 sismvg: 孤胆2的 bad end明显可以做出孤胆3嘛
+17:44 cleamoon joined channel
+17:45 cleamoon: 去砍柴呀
+17:45 cleamoon: 或者去南西
+17:47 varna: 154/255 ...失败了
+17:47 cleamoon- joined channel
+17:48 cleamoon quit:Read error: Connection reset by peer
+17:48 cleamoon-: 到斩杀阶段了？
+17:48 varna: 再说一遍，我不斩杀
+17:48 varna: 而我还需要打1.07杀
+17:51 varna: 无妨，再打打看
+17:58 cleamoon-: 你就顺便斩了呗
+17:58 varna: 斩杀他来，毕竟是他的甲等
+17:58 varna: 而且斩杀的精神污染我也不想受太长时间
+17:59 varna: 我只保证攻略下合计不少于1191的血量，然后给他运营一天回回资源
+18:00 cleamoon-: 如果这不算爱
+18:01 varna: 帮人帮得像样子，这是我的看法
+18:01 varna: 要么我不做
+18:01 cleamoon joined channel
+18:01 boosure quit:Quit: Get your hand off of it
+18:01 varna: code_new的代打我就不敢接，全程丙都够累人的
+18:03 cleamoon quit:Read error: Connection reset by peer
+18:03 cleamoon- joined channel
+18:04 cleamoon joined channel
+18:05 cleamoon- joined channel
+18:05 cleamoon quit:Read error: Connection reset by peer
+18:06 sou_1 quit:Remote host closed the connection
+18:07 cleamoon joined channel
+18:12 cleamoon quit:Ping timeout: 255 seconds
+18:19 varna: 再打两盘，他油不太多了
+18:26 varna: 真雪保佑
+18:28 libhanjian quit:Remote host closed the connection
+18:28 varna: 雪风大破……
+18:28 varna: 我拖一下看看
+18:31 varna: 门神拼了
+18:32 varna: 门神劝退……
+18:33 varna: 太惨了
+18:36 cleamoon_ joined channel
+18:37 Youmu` joined channel
+18:37 cleamoon__ joined channel
+18:41 cleamoon_ quit:Ping timeout: 244 seconds
+18:43 varna: 挺好的一坨话： I admire programmers who take risks. They aren’t afraid to write dangerous or “crappy” code. If you worry too much about being clean and tidy, you can’t push the boundaries. I also admire programmers who refuse to stick with one idea about the “way the world is.”
+18:43 varna: 越是半吊子，越容易喜欢自己的傲慢和偏见，比如我……
+18:45 Mokou joined channel
+18:47 varna: Mokou: 目前530/2k, 予定刁民一，劝退一，击杀一，油一万四
+18:47 molikto quit:Remote host closed the connection
+18:48 Mokou: 了解
+18:48 Mokou: 我就跟你说了那是盗版雪亲王
+18:48 varna: 大部分时候都很好
+18:48 Mokou: 我体感时雨靠谱点
+18:49 varna: 劝退一次不算什么，劝退二十次也不算什么
+18:49 varna: 击杀都是做梦，能打掉血就行
+18:50 varna: 再打1.07杀我就收工，剩下的时间给你刷闪回点资源
+18:51 Mokou: thx
+18:51 Mokou: 我先去吃饭
+18:57 cleamoon__: 自己的傲慢和偏见和别人的不是一个版本吗
+18:59 varna: 每个人的破事总是很多的
+18:59 varna: 总有人觉得自己很聪明，然而其实蠢爆了
+19:00 cleamoon__: 然后发现其实要的都一样
+19:00 varna: 未必
+19:01 cleamoon__: 羊驼子除了药娘还要什么
+19:02 sismvg quit:Ping timeout: 260 seconds
+19:02 varna: 再打一次，目指0.07杀
+19:03 cleamoon__: ......
+19:03 varna: 进去并不容易
+19:04 varna: 比如这次
+19:04 cleamoon__: ........
+19:04 varna: 雷击要员都活着
+19:04 varna: 怎么打
+19:04 varna: 雪风直接中破
+19:05 varna: 你不会以为道中都是些金皮反潜轻巡那样的东西吧
+19:05 cleamoon__: 我只是认为打一次是指进一次boss......
+19:06 varna: 出门会掉沟，门前会掉沟
+19:06 varna: 我也不知道什么时候能进去
+19:07 varna: 支援没来……
+19:08 cleamoon__: 刷闪简直反人类
+19:08 varna: 一小破一中破通过
+19:09 Mokou: 太惨
+19:09 varna: 进去看看什么样的
+19:09 varna: 打掉三十血就行
+19:09 varna: 多打点更好
+19:09 varna: 谁知道下一盘是什么鬼样子
+19:10 varna: 开幕沉2中破1
+19:10 varna: 122/255
+19:10 varna: 绫波中破
+19:10 varna: CI火力点基本都废了
+19:10 varna: 欧根大破
+19:10 molikto joined channel
+19:11 varna: 100/255
+19:11 varna: 残敌4
+19:11 cleamoon__: 好多......
+19:11 varna: 残敌2
+19:11 varna: 院长瘫痪
+19:11 varna: 夜战
+19:11 varna: 92/255 97/400
+19:11 cleamoon__: orz
+19:11 varna: 俾斯麦中破
+19:12 Mokou: 田中手操系列
+19:12 varna: 智商都很好
+19:12 varna: 但是火力不够了，这次就这样
+19:12 Mokou: 就是打不动
+19:12 varna: 74/255 达成目的了
+19:12 Mokou: 田中我日你妈
+19:12 cleamoon__: 我有一种感觉，谁在舰队最后敌人就打谁...
+19:12 varna: 还有201血进斩杀
+19:13 varna: 不不，今天杀俾斯麦杀得那叫一个勤快……
+19:13 varna: 击杀都是雪风拿下的
+19:13 varna: 总体来说这次打得很赞，在没有支援的时候爆掉了门神
+19:13 Mokou: 是谁活着能击杀就打谁
+19:13 Mokou: 这次活动的敌人都是田中手操的
+19:13 Mokou: 道中谁血少打谁
+19:13 Mokou: Boss点谁还活着打谁
+19:13 cleamoon__: 我之前把dd放最后，经常劝退，改成bb之后可以硬来了
+19:14 cleamoon__: 噗
+19:14 Mokou: 那是丙级田中没功夫管你
+19:14 cleamoon__: 真弄成这种ai就只能寄刀片了
+19:14 varna: 丙级？
+19:14 varna: 丙级无所谓了
+19:14 cleamoon__: 丙级+
+19:14 varna: 支援上去应该能打死不少的
+19:14 Mokou: 不用想，就是
+19:14 Mokou: 你看爽哥
+19:15 varna: 我仍然自豪地说，我的支援可以直接打死撸改
+19:15 cleamoon__: 支援没命中，坚决不刷闪
+19:15 Mokou: 那感觉仿佛田中就坐在服务器前面盯着他
+19:15 varna: 不刷闪就不来
+19:15 Mokou: 最后没闪了要氪间宫，氪金系统立马爆炸了
+19:15 cleamoon__: 爽哥的视频哪有，我去看看
+19:15 Mokou: “这钱我不要了，我就想看你吃屎”
+19:15 Mokou: 直播
+19:15 Mokou: 现在已经过去了
+19:16 cleamoon__: 噗
+19:16 cleamoon__: 没有录像吗
+19:16 Mokou: 你去斗鱼找找
+19:16 varna: 爽哥录像不好看
+19:16 cleamoon__: 斗鱼呀，行
+19:16 varna: 他莽，你莽不起来
+19:16 cleamoon__: 我想看吃屎
+19:16 varna: 那看Zak
+19:16 varna: Zak欢乐
+19:17 varna: 爽哥道中大破有女神的
+19:17 cleamoon__: zak也在斗鱼？
+19:17 Mokou: 然而后来才知道打洞系统有bug
+19:17 Mokou: Zak在twitch
+19:17 varna: 而我这边，红旗那个打孔上损管的苍龙都被我把损管卸了
+19:17 cleamoon__: 女神壕伤不起
+19:17 Mokou: 那个是E4
+19:17 cleamoon__: twitch好评
+19:17 varna: 炸了我们就回去再来，反正无非就是提督受精神污染
+19:18 Mokou: 道中劝退劝烦了，我直接上了五个洞
+19:18 Mokou: 然而损管从来没触发过
+19:18 varna: 老实说我接手的这两天E7甲比我自己的顺
+19:18 varna: 也是我当时天灯姿势不对
+19:19 Mokou: 是你现在脸好
+19:19 Mokou: 你看我进去以后是什么效果……
+19:19 Mokou: 雪风CI从来不彻甲
+19:19 varna: 现在看来，K点和C点不必打
+19:19 cleamoon__: 别人家的船
+19:19 varna: 不彻甲没办法，要是十次里八次不彻甲那真是太黑
+19:20 varna: 三次里两次的话……这就是他娘的E7, 张嘴大口吃翔
+19:20 varna: 终于……
+19:21 varna: 二队补三个两层、两个一层，支援看看再说
+19:22 Mokou: 五次里五次呢
+19:22 varna: 再来五次
+19:22 Mokou: 晚上大家智商都很棒，对着防空姬一通糊
+19:22 Mokou: 然而金钟罩
+19:22 cleamoon__: 黑旗
+19:23 varna: 进去就是胜利，打多少算多少
+19:23 varna: 击杀？这种事情我从E3就断念了
+19:23 cleamoon__: 黑旗一户 资源没了
+19:23 Mokou: 委员长：“去亚服玩了几盘，最大的感觉就是为什么十级房里都是新手”
+19:23 varna: 刚才昼战俾斯麦抬手一发133我觉得已经完成任务了
+19:24 varna: 剩下人锦上添花也行，胡乱发挥也行
+19:24 varna: 卧槽？
+19:24 varna: 347/2k!?
+19:24 varna: 哈哈哈哈
+19:24 varna: 伙计们加油
+19:24 Mokou: 喔喔喔喔
+19:24 varna: 来来来刷闪
+19:24 varna: 你还有不到一万二的油
+19:25 varna: 我尽量今天花点力气，明天给你跑跑大成功的
+19:25 Mokou: 大丈夫，实在不行后天我砸甲章
+19:25 Mokou: thx
+19:25 varna: 这样你想打甲也行想打丙也行，进路退路都有
+19:25 cleamoon__: 噗
+19:25 Mokou: 这么看来我还是呆在亚服得了
+19:25 cleamoon__: 砸甲章换甲章
+19:26 Mokou: “我是说对面的各位，都是垃圾”
+19:26 varna: 甲章飞吧
+19:26 Mokou: 春活的甲章有什么好留的
+19:26 varna: 我现在一个甲章没有
+19:26 varna: 说不定还是个大佐
+19:26 varna: 月末就少将了
+19:26 varna: 这月我先看着杀回大将
+19:27 varna: 这几天就先造福下大佐区（幻想），给他们旗舰MVP两千多经验
+19:27 varna: Mokou: 你什么时候放假，9.3?
+19:28 Mokou: 9.3
+19:28 Mokou: 后天
+19:28 varna: 9.3上完课放？
+19:30 Mokou: 明天是最后一天上可
+19:30 Mokou: 上课
+19:30 varna: ok, 我给你刷好闪，远征挂到下午四点钟
+19:30 varna: 之后我会退出，然后清缓存cookie
+19:30 varna: 那之后你就可以登陆了
+19:30 cleamoon__: 黑旗以身相许吧
+19:31 Mokou: thx
+19:31 varna: 北京时间四点
+19:31 varna: 你应该没放学
+19:31 Mokou: 我6: 10离校
+19:31 varna: 大丈夫
+19:31 varna: 我中间空一些时间出来
+19:31 varna: 然后我去把3-5打了……
+19:31 Mokou: 233333
+19:31 Mokou: 这几天辛苦了
+19:31 varna: 还好
+19:32 varna: 你那些道中支援挺给力的
+19:32 Mokou: 委员长的总结：“萌大拿可以吊打大和以外的一切船，而大和可以吊打萌大拿，这就是这两个船的区别”
+19:32 varna: 打不死人的时间极少，第一点多数时候能打死人
+19:32 varna: 还有少数几次打哑了一个喔改
+19:33 varna: 可能两次
+19:33 Mokou: OTL
+19:33 varna: 至于摩耶
+19:34 varna: 这次我给摩耶作了个大死，也不知道有用没有，反正火力肯定是不行……
+19:34 varna: 90mm高角炮+25mm集中配置+14探+灯
+19:34 varna: 击坠推定8+夜战嘲讽
+19:34 varna: 根本就不嘲讽
+19:34 varna: 去他大爷的……
+19:36 Mokou: 你需要大灯
+19:38 varna: 我需要压缩一下开销，虽然这事我说了不算
+19:38 varna: 现在攻略队伍已经有几个人在升级了
+19:38 Mokou: ……
+19:38 varna: 具体来说，是十六万、俾斯麦、摩耶、雪风、绫波
+19:38 Mokou: E7就是张练级图
+19:41 varna: 不过我想起一个事啊
+19:41 varna: 这次关底还是延续了穷鬼机动部队和哈里发水上部队的传统
+19:41 Mokou: 然而我们用的都是武大机动部队
+19:42 varna: 有武大，但是你氪不起……
+19:42 varna: 浑作战的时候我给的划分是黑鬼机动部队和武大打击部队
+19:43 Mokou: 然后冬E5变成了武大机动部队
+19:43 varna: 这次也算是强行治疗我机动部队恐惧症的第一阶段
+19:43 varna: 只用喔改，让大家体验低强度的猛劝退
+19:43 varna: 下次就是副主任，斩杀变化主任
+19:44 varna: 不过我还是希望秋活简单点
+19:44 varna: 总确保装逼权，脸会长得像近海养殖的海产品
+19:45 Mokou: 下次是防空姬理事长理事长教授教授金雷
+19:45 Mokou: 然后沟里有飞行场 港湾 离岛 中间 院长 M姬
+19:45 varna: 真有那种活动，打完了我就去尸捞人那附近跟鲍鱼池合影
+19:45 Mokou: 每打掉一个点削掉一个护卫
+19:45 varna: 不仅我装逼，我身后一堆真鲍鱼
+19:45 Mokou: 同时零时迷子
+19:46 Mokou: 出门70%的几率掉沟，里面六个雷改
+19:46 Mokou: 门神90%概率掉沟，里面是单纵六SO改
+19:47 Mokou: 水打半路和双理事长夜战
+19:47 varna: 这次进门那个FS方面痴汉队再编成还是太猛了
+19:47 Mokou: 机动一路上三个三WO改，有概率掉沟
+19:47 varna: 上面三个雷击大师，又坚固又能打
+19:47 Mokou: 同时实装tsu改，原型是阿利伯克
+19:48 Mokou: 对空10000
+19:48 varna: 我有个预感，憋尿玄学要掉Y点……
+19:48 Mokou: ……
+19:48 * varna 去爆个花
+19:53 varna: 真雪指引我
+19:53 varna: E
+19:54 varna: 我日
+19:54 varna: fclt...他活着……
+19:55 varna: 幸好他雷了俾斯麦
+19:55 varna: 其他人根本接不住这一百三十多的一下……
+19:55 Mokou: ……
+19:55 Mokou: WoWS是个神奇的游戏
+19:56 varna: 开幕88就炸了
+19:56 Mokou: 开局萌大拿秒了对面中途岛
+19:56 varna: 然后FCA也炸了
+19:56 varna: 下面三个全死
+19:56 varna: 结果FCLT活着
+19:56 Mokou: 俾斯麦被害担当
+19:56 varna: 惊悚片
+19:56 varna: 第二点……小破1击沉2
+19:56 cleamoon__ quit:Ping timeout: 246 seconds
+19:57 varna: 摩耶中破俾斯麦小破，看雷击
+19:57 varna: 通过
+19:57 varna: 真雪！
+19:57 varna: 卧槽一队有个93的，是不是武藏……
+19:57 varna: 我日
+19:58 varna: 打
+19:58 Mokou: 93什么情况
+19:58 varna: 级
+19:59 varna: 无所谓了，现在已经掉沟里了
+19:59 Mokou: 哦，那大概是武藏……
+19:59 Mokou: ……
+19:59 varna: 糟
+19:59 varna: 我夜战一下看
+20:00 varna: 俾斯麦，抓住机会
+20:00 varna: 好
+20:00 varna: 干掉了
+20:00 Mokou: OTL
+20:00 varna: 撤
+20:01 varna: 操……
+20:01 varna: 补闪
+20:03 cleamoon__ joined channel
+20:04 varna: 现在油只有一万出头，弹两万二
+20:04 varna: 桶五百一二十的样子
+20:04 varna: 已经不能拼几回了
+20:06 molikto quit:Remote host closed the connection
+20:06 cleamoon__: 这次咸鱼包括E6乙15回左右和和捞船3天一共用了200桶
+20:07 cleamoon__: 果然咸鱼是正道
+20:08 varna: E6乙不再试一下么
+20:08 cleamoon__: 油弹都没了
+20:08 Mokou: 这次能拿下甲的话以后这种精污活动我就直接咸了
+20:08 varna: 还有多少血
+20:09 cleamoon__: 关键是15次进boss 5+次从没打超过旗舰半血过
+20:09 cleamoon__: 还有2/3+
+20:09 varna: ...
+20:09 varna: 怎么回事，二队中破也应该能杀动主任……
+20:09 cleamoon__: 我觉得斩杀无望
+20:09 cleamoon__: 中破就是好的时候
+20:10 varna: ...
+20:10 cleamoon__: 一般是二队除了一个全大破进夜战
+20:10 varna: 那真是跪了
+20:10 cleamoon__: +
+20:10 Mokou: 不过我其实有点想不明白田中为什么要在活动给弹射器
+20:10 cleamoon__: 支援不给力，本身又不强
+20:10 Mokou: 以后给弹射器的话活动卵用
+20:10 Mokou: 以后不给弹射器的话新人的五航怎么办
+20:10 cleamoon__: 所以等着赌弹射器了
+20:10 Mokou: 弹射器不是装备
+20:11 Mokou: 是道具
+20:11 cleamoon__: 不是装备呀...
+20:11 cleamoon__: 那估计又是东西换
+20:11 cleamoon__: 总不能拿礼物盒换吧
+20:11 cleamoon__: 1-6得的那个
+20:11 varna: 那个你吃了好了……
+20:11 varna: 北酱小礼盒就是消耗品
+20:12 varna: 这次实在太疼，萌娘百科上那些不刷闪都是屁话
+20:12 varna: 实际上是你顶着出门就要沟的压力给二队补闪
+20:13 cleamoon__: 当然是消耗品换弹射器... 还能四甲章换一个弹射器呀....
+20:13 varna: 小礼盒比较滥了
+20:13 varna: 虽说E6乙本身也不难
+20:13 varna: 也许以后会有一次性奖励吧
+20:13 cleamoon__: orz
+20:13 varna: 比如做任务先送一个
+20:13 varna: 其他的以后再考虑
+20:13 cleamoon__: 我希望是100个喷子换一个
+20:14 Mokou: 不过看了些录像，似乎欧服的情况确实比亚服好不少……
+20:14 Mokou: 直接抱团
+20:15 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+20:15 cleamoon__: 然后田中脑袋一抽：用大风换
+20:15 varna: 总觉得这次补好了闪，下次出击就走S
+20:15 Mokou: 田中脑子一抽，舰娘关服了
+20:16 cleamoon__: orz
+20:16 Mokou: 不是S，是走S
+20:16 Mokou: 出门沟
+20:16 varna: 今天还有个妹子说自己如何顶着每天的桶回复量捞海风，三天捞出来了
+20:16 varna: 考虑到是妹子，我没正面喷
+20:16 varna: 捞出来值得恭喜，然而这很辛苦？
+20:17 varna: 哈哈哈
+20:17 cleamoon__: 我其实希望舰娘做成塔防...
+20:17 cleamoon__: 海风很有用？
+20:17 varna: 没什么用，可以舔，长相可爱
+20:17 varna: 有如大鲸失色
+20:18 cleamoon__: 没正面喷 == 后爆
+20:18 Mokou: 那你可以去试试城P
+20:18 cleamoon__: ...
+20:18 Mokou: 可惜跑路了
+20:18 varna: 我不知道是不是我被虐到现在已经出道了，看到这种诉苦感觉只剩下三个字“弱爆了”
+20:18 cleamoon__: 城P看不懂
+20:18 Mokou: 羊驼子偶像出道啦！
+20:18 varna: 一直以为捞船都是以一百盘为单位的
+20:19 cleamoon__: 羊驼子偶像出道啦！
+20:19 varna: 怎么捞了几十个桶就有人觉得辛苦
+20:19 varna: 怕累可以学我啊，不捞
+20:19 varna: 瑞穗强力吧，然而我就是不捞
+20:19 cleamoon__: .....
+20:20 cleamoon__: E3据说甲很难？
+20:20 varna: 看着不难，但不知为何击破率就是很低
+20:22 varna: 总之越是难过，出门之前越得多看几眼
+20:22 varna: 死鱼比死人好
+20:23 Mokou: +
+20:23 varna: 糟了
+20:23 cleamoon__: 咸鱼比死鱼好
+20:23 varna: 单纵反航支援不来，开幕全miss
+20:23 varna: 咸鱼通关很难
+20:23 varna: 至少得准备几万
+20:24 varna: 不过好处是，咸鱼斩杀的头目比甲的磨血稍微容易点
+20:24 cleamoon__: 我的观点是，提督拿了甲章也是吃鳖
+20:24 varna: 我就是为了吃瘪而来的
+20:24 varna: 要看看开无双的样子，去5-4就好了
+20:24 varna: 六七成时间都是无双
+20:25 varna: 亚顿保佑
+20:25 varna: 希望道中别是闪不够用了，这个我没算……
+20:25 varna: 开幕合计3
+20:25 varna: 同航
+20:26 varna: 欧根中破
+20:26 varna: 危险地通过了
+20:26 varna: 哦操……
+20:27 varna: 这场我不打
+20:27 cleamoon__: 我到比较关注哪里能弄到欧根
+20:27 Mokou: ……
+20:27 Mokou: 你试试CVL？
+20:27 varna: 我补闪吧
+20:27 varna: 那程度的制空会让你二队爆炸的
+20:27 varna: 妈的
+20:28 varna: 我数数要补多少个
+20:28 Mokou: 我试着还可以
+20:28 Mokou: 不太劝退
+20:28 varna: 六个两层
+20:28 Mokou: ……
+20:28 varna: 然而我至今只劝退过一次
+20:28 cleamoon__: 刚出门三个dd中破还继续进击吗？
+20:28 Mokou: 我劝退过三次左右
+20:28 varna: 进击
+20:28 Mokou: 不过我没刷闪
+20:29 varna: 太惊险了
+20:29 varna: 我宁可掉沟
+20:29 varna: 而且隼鹰在支援
+20:31 varna: 如果你只是在意精神污染程度的话，掉沟其实不算什么
+20:32 varna: 但比起那点污染，我还是害怕敌人
+20:34 Mokou: 我考虑的主要是资源……
+20:35 Mokou: 花了一堆资源打完两点咣当一下掉沟里
+20:35 varna: 但是3cvl空优……
+20:35 varna: 谁来保证决战清杂鱼呢
+20:35 Mokou: 1CV2CVL
+20:35 varna: 2bb1cv2cvl1ca?
+20:35 Mokou: 我这用CV开幕也打院长，所以没区别……
+20:35 Mokou: +
+20:36 Mokou: BB + CV <= 3就可以
+20:36 varna: 这方案的攻击性谁来保证……
+20:36 varna: 支援么
+20:36 Mokou: BB
+20:36 Mokou: 加上支援
+20:36 varna: ...
+20:36 Mokou: 所以我双炮双探
+20:36 Mokou: 而且我一般带三个彩云
+20:36 varna: ...
+20:36 varna: 那道中的压力太大了啊
+20:37 Mokou: 还好，至少不掉闪
+20:37 Mokou: 大破可以退避，掉沟没法拐回去
+20:37 varna: 我是说第一点
+20:37 Mokou: 第一点啊
+20:37 Mokou: 哈哈哈
+20:37 varna: 我的考虑都是在第一点干死他们
+20:37 varna: 后面压制第二点的喔酱
+20:37 Mokou: 我这个配置能空袭+支援+开幕雷炸掉五个
+20:37 Mokou: 然后六炮全miss
+20:38 varna: 我还是再试一次4cv
+20:38 Mokou: 然后88爷闭幕个人秀
+20:38 cleamoon joined channel
+20:38 Mokou: 另外，我觉得不出弹着观测应该不是改修的问题
+20:38 Mokou: 两门10星炮改修够高了吧
+20:38 varna: 那个不是改修的问题
+20:38 Mokou: 全程平A
+20:38 varna: 但我更关注平砍命中
+20:38 Mokou: 38改
+20:39 Mokou: 而且水打就是打不中的……
+20:39 varna: 38改的表现挺好的
+20:39 Mokou: 38改和381改
+20:39 varna: 除掉38改的平砍都有明显差距
+20:39 Mokou: 那两门381呢
+20:39 varna: 至于水打，因为我个人这次的体感没那么惨，所以希望再现一下
+20:39 cleamoon__: 2ca2cv1cvl1bb行不行
+20:40 varna: 打哪
+20:40 varna: E6乙的话，你需要很好的舰战
+20:40 cleamoon__: 就你们刚说的
+20:40 Mokou: 为什么这么来
+20:40 Mokou: 2ca有什么鸟用么……
+20:40 varna: 重巡能打动谁
+20:40 varna: 院长？
+20:40 cleamoon__: 为了多一个cv呀...
+20:40 varna: 那没意义
+20:40 varna: 武大必须都上
+20:40 varna: 不然根本没有火力保证
+20:40 Mokou: 多一个CV少一个BB
+20:41 Mokou: 然后你就发现你不劝退了，只是完全打不动Boss而已
+20:41 lh_mouse: 004161A3  |.  BE 46004200                        mov     esi, 00420046
+20:41 lh_mouse: 004161A8  |.  81FE 47004200                      cmp     esi, 00420047
+20:41 lh_mouse: 004161AE  |.  74 0B                              je      short 004161BB
+20:41 varna: 对面有至少两人（斩杀三人）能够一炮大破任何战舰
+20:41 varna: 护甲是303或者160
+20:41 lh_not_bot: gcc 这啥 j8 优化
+20:41 Mokou: 333
+20:41 varna: 哪个重巡昼战能干翻这程度的人
+20:41 Mokou: 303是咸鱼
+20:41 varna: 哦对
+20:41 varna: 333
+20:41 cleamoon__: 各级党委宣传部门和教育部门要把『开学第一课』活动作为纪念中国人民抗日战争暨世界反法西斯战争胜利70周年的重要内容……把中国共产党中流砥柱作用和中国东方主战场作用作为一条红线，贯穿活动始终，唱响爱党爱国爱社会主义的时代主旋律。中宣部、教育部给所有学校下发通知
+20:42 lh_not_bot: varna: 你看到了没
+20:42 varna: 看到了，但我不确认究竟会发生什么
+20:42 varna: 那个cmp是垃圾，但是什么导致一个无用的cmp和一个无用的je
+20:43 lh_not_bot: GCC 傻逼呗
+20:43 varna: 上下文呢
+20:43 varna: 有没有别处因为这个愚蠢代码受益的
+20:43 varna: 另外对不傻逼的伙计们提个问题：什么算法能导致一切情况下这里不傻逼
+20:44 varna: 这段代码确实没意义，但是这到底是怎么回事
+20:44 lh_not_bot: varna: https://github.com/lhmouse/MCF/blob/master/Projects/Test/main.cpp#L13
+20:45 varna: 每个断言都被这么糟蹋了？
+20:45 varna: 还是说断言的某处有likely暗示？
+20:45 lh_not_bot: 应该不是断言
+20:46 lh_not_bot: 我开 NDEBUG 了
+20:46 lh_not_bot: varna: http://paste.ubuntu.com/12245122/
+20:46 varna: 看不出来这么杀流水线有任何好处
+20:47 lh_not_bot: 哪里
+20:47 varna: 生成的mov-cmp-je（失败）
+20:47 varna: 这里应该真是搞砸 了
+20:47 varna: s/ //
+20:47 lh_not_bot: 摊手
+20:48 varna: 但是怎么能搞出这么个破玩意的
+20:48 lh_not_bot: geordi: -c void *__restrict__ *p1; void **p2 = p1;
+20:48 geordi: error: invalid conversion from 'void* __restrict__*' to 'void**'
+20:48 lh_not_bot: geordi: -c void *__restrict__ *p1; void **p2 = const_cast<void **>(p1);
+20:48 geordi: Success
+20:48 lh_not_bot: varna: 手写的序列拷贝
+20:49 varna: 我是说gcc怎么能生成出这种东西……
+20:49 varna: 虽然我根本不知道这样的代码在emitted之前是个什么样子的
+20:49 lh_not_bot: varna: { while(src_begin != src_end){ *dst_begin = *src_begin; ++dst_begin; ++src_begin; } return dst_begin; }
+20:49 varna: 不是说你那个
+20:49 varna: 我是说中间代码->本地代码的gcc实现
+20:49 lh_not_bot: （叹气）喵
+20:50 sleepwalking joined channel
+20:51 varna: 本来以为能速攻的……结果这一下也到九点了
+20:53 Mokou: 这次夏活好不好玩啊
+20:53 varna: 我自己感觉其实还行
+20:53 varna: 虽然可能伤人，但除去333别的都不错
+20:53 varna: 333……纯粹恶心
+20:54 Mokou: +
+20:54 Mokou: E4蛋疼些
+20:54 Mokou: 其他都是正常水平
+20:54 varna: 我只能说一点，很多人怒吼田中飞母，但他们太low了
+20:54 varna: 意志力不足
+20:54 varna: 所以我憎恨萌新
+20:55 varna: 用我的阵容吃我吃过的瘪，然后再来放他妈的狗屁
+20:55 varna: 老子在3-5用双雷巡的时候，佐伯湾还不存在呢
+20:55 Mokou: 不过我还是觉得这次活动有点失败
+20:55 Mokou: 我这么玩的时候佐伯湾也不存在……
+20:55 varna: 那打法太信仰
+20:55 varna: 我自己都不用了
+20:56 varna: 总之把闪刷好再来一次，如果沟离岛太严重就不能再这么作死了
+20:56 Mokou: CVL么
+20:57 varna: 我尽力吧
+20:57 Mokou: 辛苦了
+20:57 varna: 我极度不信任那个编成的攻击能力
+20:57 varna: 你一般配多少舰攻
+20:57 varna: 另外第一点出来之后，有多少人还是完好的
+20:58 Mokou: 舰攻两到三个
+20:58 Mokou: 第一点一般两个结果
+20:58 Mokou: 二队两条船退避或者全员无伤
+20:58 varna: ...
+20:58 Mokou: 不过后者的概率很大
+20:58 Mokou: 至少有5/6
+20:59 varna: 我再赌一次4cv
+20:59 varna: 跪Y点的话就换
+20:59 varna: 劝退也换，资源不多了
+20:59 varna: 两万以上资源换了一千血左右
+20:59 varna: 还是有点那啥
+21:00 varna: 主要手头剩得比较拮据
+21:00 Mokou: +
+21:04 cleamoon: 20k换1k似乎没有想象的多
+21:04 varna: 现在彻甲的姿势比我自己用的好很多
+21:04 varna: K点S胜
+21:05 varna: 怎么打自己想……
+21:07 varna: 总之这次活动更坚定了我培育决战POI的想法
+21:08 cleamoon: 决战为什么不是雪亲王
+21:09 varna: 因为我不喜欢雪风的立绘
+21:09 varna: 这次活动雪风连条都没帖
+21:09 cleamoon__: ......
+21:09 varna: CI最大要员是绫波，52运
+21:09 varna: 次之欧根
+21:09 varna: POI的运九月份煮好了就能达到绫波初期水平
+21:10 varna: 然后我弄一些鱼雷来
+21:10 varna: 算算到底要多少火力
+21:10 Mokou: 五联MAX
+21:10 varna: 雪风三雷的面板是59+125
+21:10 varna: 但POI会更多
+21:11 varna: 五连max我没精力，但我会考虑做第四个五连
+21:12 varna: 对了我说个乐子 https://campus.alibaba.com/noticeDetail.htm?code=tmsItemData4
+21:12 varna: 我始终没搞明白那些把进什么大公司当梦想的上进伙计们是怎么想的
+21:13 varna: 天下乌鸦一般黑的意思不是它们都是灰的
+21:14 cleamoon__: 似乎对于大多数人 大公司 == 高工资 == 成功人士 == 后宫王
+21:15 varna: 开幕怎么样我已经不在乎了
+21:15 varna: 这航向要爆炸
+21:15 varna: 我撤退
+21:15 varna: 现在撤退我还能减少损失
+21:16 varna: 撤退之后补闪
+21:16 varna: 另外澄清一下，我刷的是两层
+21:17 Mokou: ……
+21:17 varna: CI要员和十六万钢掉闪之后我都补两层
+21:17 varna: 沟太狠的时候会在有闪的情况下补一层
+21:18 varna: 出门T有利，打得倒是不错，然而大破的人多了点
+21:18 varna: 我也没什么办法……
+21:20 Mokou: ……
+21:20 cleamoon__: 话说校招是不是就是毕业季去学校招聘？
+21:20 varna: 是
+21:22 lh_mouse: 比毕业早
+21:22 cleamoon__: 那多招一个少招一个有什么区别...有什么可抱歉的...
+21:22 varna: 将来如果我有孩子（难点一），这孩子还喜欢玩电子游戏（难点二），我会跟他讲讲他老爹的游戏史
+21:22 varna: 落到个人头上就有差别了
+21:22 cleamoon__: 第二个不是难点
+21:23 varna: 但是我总觉得这次出门要沟
+21:23 varna: 真雪保佑
+21:23 varna: Mokou: 另外我问一下，你确定还要打下去么
+21:23 Mokou: 打
+21:24 Mokou: 就差这么一点有点可惜
+21:24 cleamoon__: 没选上就是技不如人或者老爸不够李刚，有什么可抱怨的
+21:24 varna: 现在的进度是347/2k 油7.8k 弹19k
+21:24 varna: 桶512
+21:24 varna: 钢铝无所谓
+21:24 varna: 你确认的话我就继续打了
+21:24 Mokou: 打
+21:24 Mokou: 照月不要了
+21:24 varna: ok
+21:24 varna: 真雪保佑
+21:24 Mokou: 九月六号回来我截张图
+21:24 cleamoon__: 油略少
+21:24 varna: 消耗很可怕的
+21:24 Mokou: 以后告诉一下萌新们田中亲妈到底为什么飞了
+21:25 varna: Into the fights we LEAP
+21:25 varna: 来个反航不？
+21:25 varna: 复纵反航，大家都开心
+21:26 varna: 单纵反航，88和祖宗还有威胁
+21:26 varna: 祖宗下去了
+21:26 varna: 39/45 十六万
+21:27 varna: 诸君挺住
+21:27 varna: 亚顿和你们在一起
+21:27 varna: 亚顿保佑你们
+21:28 varna: 大和……
+21:28 Mokou: 下次我弄个舰C式剧本吧
+21:28 varna: 居然被裸凹了44血
+21:28 Mokou: 日军不能沉船，必须全灭对方
+21:28 varna: 绫波28/32
+21:28 cleamoon- joined channel
+21:28 cleamoon quit:Read error: Connection reset by peer
+21:29 varna: 门神
+21:29 varna: 亚顿！保佑我们！
+21:29 varna: 在卡拉中我们连为一体，在断掉的卡拉中我们化为漫天铝土！
+21:30 varna: 轮型反航 空母压制1
+21:30 varna: 雷1
+21:30 varna: 绫波safe
+21:30 varna: 压制
+21:31 varna: 太漂亮了
+21:31 varna: 目标是92hp
+21:32 varna: WEn Taro ADUN!
+21:32 varna: En Gayo ADUN!
+21:32 varna: mikonmikonmi
+21:32 varna: 飞机……似乎被打没了
+21:32 Mokou: ……
+21:32 varna: 开幕沉1中破1
+21:32 Mokou: 阿利伯克的威力
+21:32 varna: 十六万中破
+21:33 varna: 俾斯麦漂亮
+21:33 varna: 1雷
+21:33 varna: 哦不对
+21:33 varna: 2雷，雪风爆炸
+21:33 varna: 残敌3
+21:33 Mokou: 盗版祥瑞
+21:33 varna: 大和漂亮
+21:33 varna: 残敌2
+21:34 Mokou: 我现在希望武藏能对着旗舰爆一发
+21:34 varna: 没爆出来
+21:34 varna: 162 152
+21:34 varna: 二队十六万中破雪风瘫痪
+21:34 Mokou: ……
+21:34 varna: 弹+灯
+21:34 varna: 击杀
+21:34 varna: 294 欧根
+21:34 Mokou: OTL
+21:34 varna: 俾斯麦补刀，S
+21:34 varna: 搞定
+21:35 Mokou: 那斩杀还有点希望
+21:35 cleamoon__: orz
+21:35 varna: 剩下的时间，我给你的远征队刷闪
+21:35 Mokou: thx
+21:35 varna: 卧槽
+21:35 varna: 战神
+21:35 varna: 哈哈哈哈和
+21:35 varna: 出战神了
+21:35 varna: 赶快锁上
+21:35 cleamoon__: orz
+21:36 cleamoon__: 果然欧皇
+21:36 cleamoon__: 远征队掉闪一下掉3艘，刷太麻烦了
+21:36 varna: 进度92/2k 油7813 弹19245
+21:36 varna: 明天如果来得及，我只给你跑远征
+21:37 varna: 所有补给船的任务我不会做，留着当出击玄学
+21:37 Mokou: 了解
+21:37 varna: 刷掉了整整两万五的油
+21:37 varna: 我了个大槽咧
+21:37 varna: 各种好顶赞
+21:38 cleamoon__: 噗，这还有玄学
+21:38 varna: 门神那几个航母都发飙了
+21:38 varna: 炮击战一人一个喔改
+21:38 varna: 还是按顺序打的
+21:38 Mokou: 当年谁说低保进活动毫无压力来着？
+21:38 varna: 敌人飞机都没放出来
+21:38 varna: 那勇姿
+21:39 varna: 进去之后也各种犀利，知道往下打
+21:39 varna: 收拾完重巡之后就随意玩玩
+21:40 varna: 在我刷完闪之前——也就是现在——桶还有511
+21:40 varna: 等你打的时候可以用得浪费点了
+21:40 Mokou: 了解
+21:40 varna: 中间吃了一个伊良糊，还剩一个
+21:41 cleamoon__: 带个饭团多好
+21:41 Mokou: 吃吃吃
+21:41 Mokou: 饭团卵用
+21:41 Mokou: 随机吃
+21:41 Mokou: 退避了以后一样吃
+21:41 varna: 哦操我没补给
+21:42 varna: 瞬间不到两千资源飞了
+21:42 varna: 明天我得早点起……
+21:42 cleamoon__: 随机吃什么鬼
+21:43 Mokou: 带了饭团的船会在战斗之前随机触发吃掉
+21:43 varna: 进入战斗之后随机吃
+21:43 varna: 但是退避了也会吃
+21:43 varna: 有个响爷拖瑞凤的就是，响爷半路把饭团吃了
+21:43 varna: 提督哭笑不得
+21:44 Mokou: http://ww1.sinaimg.cn/bmiddle/68188fbfgw1evn8d3eyo4j20dc0dc0uq.jpg 天道轮回……
+21:44 varna: ...
+21:45 varna: 我感觉你家二队的鸡血程度相当高
+21:45 varna: 我打进去的时候很少有无破的
+21:46 cleamoon__: 大象确实很危险，猎手还能死证明其作死或者废
+21:46 Mokou: 是
+21:46 varna: 然而你的队伍恐怕有一半时间都是无破
+21:46 Mokou: 然而不彻甲
+21:46 varna: 打成什么样不论，这点至少就是优势……
+21:46 varna: 进去之后被干爆两个也还有几个能动的
+21:47 varna: 至于刚才那一仗
+21:47 varna: 俾斯麦和大姐姐各闪了防空姬一炮
+21:47 cleamoon__: 山云强吗
+21:48 varna: 不强
+21:48 varna: 送的装备也不好，只是单纯地很稀有
+21:48 varna: 目前已经实装了，在3-3有
+21:48 cleamoon__: 那就弄死
+21:48 varna: 比较姐控，是病娇百合
+21:48 varna: 相性合适的话留下无妨，我超喜欢山云那个打扮和作派
+21:49 cleamoon__: 酒勺留着装欧提
+21:49 Mokou: 我是留了
+21:49 Mokou: 暂时不缺船位
+21:49 cleamoon__: 能代有用吗
+21:49 Mokou: 不如神通
+21:49 varna: 我特意不留的几个：夕云 秋云 长波 初风
+21:49 varna: 能代是那珂改二程度的厉害
+21:49 Mokou: 初风什么情况
+21:50 varna: 但轻巡里神通和阿武隈是特别的
+21:50 varna: 初风一开始捞到的时候船位不够，查了资料之后就拆了，后来形成习惯
+21:50 cleamoon__: ...
+21:50 Mokou: ……
+21:51 varna: 她数数，我也数数
+21:51 Mokou: 老苏和三污倒是很喜欢夕云级
+21:51 varna: 我就怨念长波
+21:51 varna: 太颜艺了
+21:51 Mokou: 我似乎捞到过三个或者四个
+21:51 Mokou: +
+21:51 cleamoon__: 夕张呢
+21:51 varna: 不然为了武勋桶桶桶的那个情怀我就培养起来
+21:51 varna: 夕张是特别的，留下
+21:51 varna: 即使属性不如米空，你也没有第三个四格装备轻巡
+21:52 cleamoon__: 咦，我似乎也有夕云，不过不喜欢
+21:52 varna: 秋云比较逗
+21:53 Mokou: 手绘Hornet
+21:53 varna: 放在母港，效果很嘲讽
+21:53 varna: 一上线就看着秋云那个诡笑的脸盯着
+21:53 Mokou: http://ww1.sinaimg.cn/bmiddle/6a14bdb4gw1evn8m7wonbg20b407yx6p.gif 数学课上开小差
+21:54 varna: 另外因为是近期用+有点累，远征队的闪我就只补八个两层了
+21:54 varna: 北鼠+东二
+21:54 Mokou: 我都只刷一层……
+21:54 cleamoon__: Mokou, ++++++
+21:54 varna: 233333
+21:54 varna: 这图赞
+21:54 cleamoon__: 就tm这个感觉
+21:55 varna: 这图把我两天的怨气都笑出来了
+21:55 varna: 虽说没攒多少
+21:55 code_new joined channel
+21:55 Mokou: 2333
+21:56 varna: code_new又错过精彩的击杀场面了……
+21:56 code_new: 给跪了……
+21:56 Mokou: 当裁判吧
+21:56 cleamoon joined channel
+21:56 Mokou: SK4更精彩
+21:56 Mokou: 不过我总感觉你那边击杀率很高啊……
+21:56 varna: E7击杀率不低
+21:56 varna: 我给你做的彻甲也比我自己的多
+21:56 code_new: 我需要一段时间整理数据Orz
+21:56 varna: 所以正常
+21:57 * code_new 先看看log
+21:57 varna: 而且你家那些航母太TM威了……
+21:57 Mokou: 航妈什么情况 ……
+21:57 varna: 我带更多舰攻打不出那个效果，估计是第一点空确和空优的差别
+21:57 varna: 有命中有伤害有智力
+21:57 Mokou: 击坠数么……
+21:57 varna: 半数以上时候都在打杂鱼
+21:58 varna: 相当懂行
+21:58 Mokou: 到我打的时候就只有智力了
+21:58 Mokou: 照着八八爷过去了，正高兴呢
+21:58 Mokou: miss
+21:58 varna: 这次我给第一点配的是空确
+21:58 varna: 因为我感觉自己空优太惨了
+21:58 molikto joined channel
+21:58 varna: 结果有几个机组的练度甚至都保住了
+21:58 Mokou: ……
+21:58 varna: 我看一样
+21:58 varna: 眼*
+21:59 varna: 村田君失忆中，练度3
+21:59 varna: 流601一个机组刚才应该是团灭了
+21:59 cleamoon_ joined channel
+21:59 varna: 还有一个是\\\
+21:59 Mokou: 友永队长呢
+22:00 varna: 他满了
+22:00 Mokou: ……
+22:00 varna: 你就两个流601是吧
+22:00 Mokou: 是
+22:00 varna: 那就对
+22:00 cleamoon quit:Ping timeout: 246 seconds
+22:01 varna: 吐槽的话，这就是我和qh的差别吧
+22:01 varna: 他能空优死亡冲锋，我不能
+22:01 varna: 一开始我的攻略法基本是学他的
+22:02 sleepwalking: 爆
+22:02 varna: sleepwalking: 爆
+22:02 varna: 米尻酱把裤子脱了，我检阅下成果
+22:03 cleamoon__ quit:Ping timeout: 246 seconds
+22:03 cleamoon joined channel
+22:05 sleepwalking: 去上课了。。
+22:05 varna: sleepwalking: 爆
+22:06 cleamoon_: 这时间上课？
+22:06 varna: 他在深海国
+22:06 cleamoon_: orz
+22:06 sleepwalking: 深海国233
+22:07 varna: 卧槽谷风你不股两次不高兴是吧……
+22:07 varna: 好歹也是阳炎十八铜人，给我撑下来啊
+22:07 cleamoon_: 什么时候叛国投敌的，我怎么都不记得
+22:08 varna: 被我破掉处男膜之后的事了
+22:09 cleamoon_: 大和装怎么赌来得
+22:09 varna: 46炮？
+22:09 cleamoon_: 不是，打错了，就大和...
+22:09 code_new: 看完击杀，很期待明天的斩杀_(:3」∠)_
+22:09 varna: 我不斩杀
+22:10 varna: 斩杀是红旗的
+22:10 cleamoon_: 我手里的数据超古老
+22:10 code_new: 哦哦
+22:10 Mokou: 6572+100
+22:10 varna: 4662 4672 6572 1 20 100
+22:10 varna: 都有
+22:10 cleamoon_: 正常点的是4672？
+22:10 code_new: 好像我的武大都是在驼兄的鼓舞下出的_(:3」∠)_
+22:11 varna: 对，4672+1/+20
+22:11 varna: 可以考虑跟俾斯麦混赌
+22:11 varna: 有Z1就行
+22:11 varna: 4672+20 别信三千铝，包你航战天国，也别问为什么
+22:11 code_new: 德国船都能作旗舰赌BSM？
+22:12 varna: 俾斯麦不知道能不能出自己
+22:12 Mokou: 应该可以
+22:12 varna: 其余的德系都有记录，包括铝酱
+22:12 Mokou: 噗
+22:12 varna: 日货里面哈酱有传说，但我不建议这么搞
+22:12 Mokou: 有人遇到过这么个情况
+22:12 code_new: 哦哦
+22:12 cleamoon_: 没Z1，是不是应该先弄一下Z1远征
+22:12 Mokou: 对面双大和+白龙
+22:12 varna: cleamoon_: 哦，那东西差不多跑四五天
+22:13 Mokou: 这边爱宕带着两个一级内河炮艇进来了
+22:13 varna: ...
+22:13 varna: 这是浪漫
+22:13 Mokou: 开场两分钟队友看不下去，给了他们个痛快
+22:13 cleamoon_: 哈哈哈哈哈哈哈，战神
+22:14 varna: 噗
+22:14 varna: 欧皇
+22:14 cleamoon_: Z1Z3留吗
+22:14 Mokou: 欧皇
+22:14 cleamoon_: 欧皇个帽子，我赌的是大和
+22:14 Mokou: 那为什么我赌大和失败出的都是半和
+22:14 code_new: 欧皇
+22:14 cleamoon_: 我都三武藏了
+22:15 Mokou: 简直欧飞
+22:15 code_new: 欧皇……
+22:15 varna: Z1Z3...留着吧，虽说没卵用
+22:15 varna: 但你几乎不可能从别的渠道获得
+22:15 cleamoon_: 但是没卵用
+22:15 varna: 没卵用的东西有两种
+22:15 varna: 第一种是卵月
+22:15 varna: 安心拆
+22:16 varna: 这类的顶点就是初风了
+22:16 varna: 哦，现在还可以算上海风和风云
+22:16 varna: 第二种是Z1Z3, 毕竟海外舰，以后建造开发改修什么的……
+22:16 cleamoon_: 哦...
+22:16 code_new: 感觉Z1Z3是最不能拆的= =
+22:16 cleamoon_: 意大利萝莉呢？
+22:17 xxxxxxxx joined channel
+22:17 varna: 海外舰尽量留吧
+22:17 code_new: 其它都有别的途径获得，然后Z1Z2有且仅有各1只
+22:17 varna: 不行你考虑氪十个船位……
+22:17 Mokou: http://imgsrc.baidu.com/forum/pic/item/4a36acaf2edda3ccc9e2321d05e93901213f928d.jpg?v=tbs
+22:17 varna: code_new: Z1Z3其中一个可以打4-5上路
+22:17 varna: 应该是Z1
+22:17 code_new: 哦哦
+22:17 varna: 但是惨烈程度还是打捞群众自己体会吧
+22:18 varna: 2333333 这图
+22:18 sleepwalking quit:Ping timeout: 252 seconds
+22:18 code_new: ……然而3-5还并没有过
+22:19 varna: 3-5啊，明天我回自己帐号的时候文字直播一下
+22:19 cleamoon_: 2333333
+22:19 xxxxxxxx: cleamoon_: 幼女3-5过了么?
+22:19 varna: 他们可以劝退我，但他们并没法阻止我家水雷战队送他们见罗斯福
+22:20 xxxxxxxx: 次时代水雷战队?
+22:20 varna: 还是旧时代的，但领舰换成十六万钢
+22:20 varna: 下面是电酱、POI、绫波、小和、欠雪
+22:21 cleamoon_: 3-5过了
+22:21 code_new: varna: 这个配置消耗好低
+22:21 code_new: 劝退如何
+22:21 varna: 这是完全带路的
+22:21 varna: 劝退看脸看闪看练度
+22:21 cleamoon_: 3-5拼命就好
+22:22 varna: 1cl5dd以外的轻+驱沟率逐渐提高，但火力和防护自然是好
+22:22 code_new: _(:z」∠)_
+22:22 varna: 练度方面，欠雪应该还差十万经验结婚
+22:22 cleamoon_: 就当练级了
+22:22 varna: 小和123还是122来着，绫波也大致这等级，POI 126，电酱131
+22:22 varna: 当然得刷闪，虽说照样爆炸
+22:23 varna: 我自己的体感，前哨战劝退一半左右吧
+22:24 varna: 斩杀我用1cav3cl2dd打
+22:24 varna: 掉沟比较厉害
+22:26 cleamoon_: 我全用带cav的
+22:27 cleamoon_: 我的dd不够强
+22:27 varna: 以后瑞穗培养起来了，其实水母编成换瑞穗也很好
+22:27 cleamoon_: 是吗，没试过
+22:27 varna: 三格里面能同时凑出12*2搭载水爆和一个甲标的，装甲也好
+22:27 varna: 比千姐妹全面地厉害
+22:27 * xxxxxxxx 队伍里一个都不强....
+22:28 varna: 这欧洲肝帝
+22:28 Mokou: 这欧洲肝帝
+22:28 varna: 我不太会数数了
+22:28 varna: 可能有的舰刷的是三层
+22:29 Mokou: ……
+22:29 Mokou: 辛苦了
+22:29 Mokou: 我先睡了
+22:29 Mokou: 诸君武运
+22:29 varna: 武运
+22:29 Mokou quit:Quit: 睡觉
+22:31 xxxxxxxx: 然而并不欧洲的队伍就是不强 印象中各种船都勉强可以拉出去打架...
+22:32 varna: _(:з」∠)_
+22:32 varna: 太可怕了
+22:32 xxxxxxxx: http://www.bilibili.com/video/av2377756/
+22:32 xxxxxxxx: 这个厉害!
+22:33 varna: 卧槽？
+22:34 varna: 对了我手里有一套糖果以前给我的深海军教育片
+22:34 varna: 就是讲步枪动作原理的
+22:34 varna: 栓动、半自动、全自动都有介绍……
+22:35 cleamoon_: 这欧洲肝帝
+22:35 xxxxxxxx: 然而这个设计似乎不太好做成别的样子....
+22:37 xxxxxxxx: 而且子弹数量似乎受橡皮筋质量和长度限制比较严重...
+22:38 varna: 那些军教片我就不传了，省得落个口实说教唆人造武器什么的，虽说没那么严重
+22:39 xxxxxxxx: 我觉着这种东西应该已经有人传过了...
+22:39 varna: 希望如此
+22:44 cleamoon_: 我要学怎么做微冲
+22:44 varna: 东急北鼠水上机……都收拾干净了
+22:45 varna: 微冲的动作原理其实可以考虑把一部分有全自动-半自动单发功能的步枪缩小
+22:45 varna: 最典型的缩放例子应该就是MP5系列
+22:45 varna: 但这只是动作原理，机件如何就不知道了……
+22:53 code_new: http://www.zhihu.com/question/26630283
+22:54 cleamoon_: 不会又是码新问的吧
+22:55 code_new: = =明显不是
+22:56 libhanjian joined channel
+22:57 cleamoon_: 先定义什么是人，再定义什么是我，然后没了
+22:59 code_new: 我的疑惑是 为什么我是我，而不是其他带有感觉的生物
+23:00 xxxxxxxx: 你的问题说的好迷糊...
+23:00 xxxxxxxx: 我是我这句怎么看都是真的
+23:00 varna: 操，这几天的死鱼卡忘打了……
+23:00 cleamoon_: 为什么2是2而不是其他的什么数字
+23:00 cleamoon_: 因为2tm就是2
+23:01 varna: 诸君武运
+23:01 varna: code_new方面，我强烈建议你这几天先打几面丙
+23:01 varna: 打多少算多少
+23:02 varna quit:Quit: leaving
+23:02 code_new: 我的观点是 动物之所以能感觉到活着就是因为神经网络的存在
+23:03 xxxxxxxx: 然而说实话我并不能说出什么叫活着的感觉 因为我没死过...
+23:04 xxxxxxxx: 另外即使我死过 我也说不出死了的感觉 因为我觉着死了可能没感觉
+23:05 code_new: 整个神经网络所提供的感觉才是我们觉着我们是活着而并未死了
+23:05 code_new: 失去所有感觉后就是所谓的死亡了
+23:05 code_new: 然而也并不是真正的死亡
+23:05 cleamoon_: 子非鱼焉知咸鱼之乐
+23:06 xxxxxxxx: 那我也说不出死了是什么感觉...
+23:08 code_new: 总之还是在按照自然法则在运转
+23:09 code_new: 死了也就什么感觉都没有了
+23:09 xxxxxxxx: 我还是觉得生物是感觉不到活着的
+23:09 cleamoon_: 你先定义清楚什么是活着
+23:11 cleamoon_: +
+23:11 code_new: 我的观点是  活着就是存在神经支配的感觉
+23:11 code_new: 活着是对自身而言的
+23:11 code_new: 所以说植物并不能说是活着的
+23:11 cleamoon_: 我是机械唯物主义者，活着只是圣经系统的错觉
+23:12 cleamoon_: 神经系统
+23:12 xxxxxxxx: 然而我觉着植物确实是活着的... 
+23:12 cleamoon_: 什么是神经支配的感觉
+23:12 cleamoon_: 宿主吗
+23:12 cleamoon_: 还是脑虫
+23:12 xxxxxxxx: 该有的活动都能进行为何要算死了呢...
+23:13 code_new: 我在之前的提问中也表明是机械决定论者了
+23:13 cleamoon_: 我觉得有妹子是该有的活动之一
+23:13 code_new: 然而该有的活动都是自然的发展
+23:14 cleamoon_: 什么叫自然的发展
+23:14 cleamoon_: 还有，什么叫感觉
+23:14 code_new: 话说我们是在讨论哲学还是物理
+23:15 xxxxxxxx: 我假设一种设备能放在刚死的人身上代替神经指导全身继续工作(召唤骷髅?) 这样的死灵生物我觉着应该是活着的
+23:16 cleamoon_: 哲 学吧
+23:16 cleamoon_: 物理没什么可讨论的
+23:16 xxxxxxxx: 它确实具有我希望它能进行我希望它进行的活动 那就算活着吧
+23:17 code_new: 我反对。我的观点还是 是否活着是对自身而言，如果自身不能感觉到自己是活着那它就是死物
+23:17 xxxxxxxx: 等它整个都腐朽了 不能正常工作了 那就死了
+23:18 xxxxxxxx: 你能感到自己活着么?
+23:18 code_new: 能，因为我有基本的感觉
+23:19 cleamoon_: 还是那个问题，什么叫感觉
+23:19 code_new: 所谓神经冲动
+23:19 xxxxxxxx: 你能感到你的部分细胞在死亡么
+23:19 xxxxxxxx: 哦不 你觉得你的细胞都是死的而你是活的
+23:19 cleamoon_: 那么一根神经，我通上电，有冲 动了，算活着吗
+23:19 code_new: 我的部分细胞死亡并不会引起神经冲动
+23:20 cleamoon_: 不，算神经有感 觉吗
+23:20 code_new: 我的大脑皮层感知不到
+23:20 code_new: 不 应该说大脑
+23:20 xxxxxxxx: 另外如果我假设的那种设备具有智能能感到自己的存在但是没有肉体 只是个小盒子 也不能发表任何意见 他算活着么?
+23:21 cleamoon_: 那么感觉就是连到大脑皮层的神经冲动了？
+23:21 cleamoon_: 或者说大脑
+23:21 cleamoon_: 那么怎么定义完整的大脑
+23:21 xxxxxxxx: 脑细胞本身都感觉不到自己活着 然而人类的大脑却可以 
+23:22 xxxxxxxx: 生命又从哪边蹦出来的?
+23:22 code_new: xxxxxxxx: 那种设备是如何感觉到自己存在的
+23:22 cleamoon_: 一根神经肯定不算大脑，那多少才算大脑
+23:22 cleamoon_: 你是如何感觉的
+23:23 cleamoon_: 重要的是大脑的哪个部分
+23:23 cleamoon_: 把海马体换成机器可以吗，小脑呢
+23:24 cleamoon_: 把大脑切成两半呢  插几根管子呢
+23:24 xxxxxxxx: 它不停的在自己的"思想"中告诉自己我还活着
+23:25 xxxxxxxx: 比如你关在一个房子里谁都进不来 你告诉自己你还活着确保自己还活着一样
+23:25 code_new: 照这样理解的话，根本不存在任何一个定义
+23:25 cleamoon_: 我是支持兲朝大脑有智能的
+23:27 code_new: 比如说把我们之前的说的话中的每个名词拿出来都不能定义
+23:27 code_new: 本身物质就是不能完整定义的
+23:27 cleamoon_ quit:Quit: Leaving
+23:27 cleamoon_ joined channel
+23:27 cleamoon__ joined channel
+23:28 cleamoon_: 物质有什么不能定义的
+23:28 cleamoon__ quit:Client Quit
+23:28 xxxxxxxx: 能不能定义是一回事 你不给你想说的内容加上一些范围和描述 别人随意解释让你所说的概念无限被扩展 以至于脱离你的控制是另一回事
+23:29 ahe quit:Ping timeout: 250 seconds
+23:29 code_new: 怎么定义物质
+23:29 code_new: 怎么定义 “物质”
+23:30 cleamoon_: 有质量和位置的东西
+23:30 xxxxxxxx: 我反正不确信存在一个人能给出一个无懈可击的系统解释一切 然而我确信一个人需要并且能说清楚他想表示的意思 哪怕他使用排除各种怪物的手法
+23:31 xxxxxxxx: ^说明越多越能迫近原意
+23:32 cleamoon_: 纯机械唯物主义最能接近解释一切，只是人们不愿意接受
+23:32 code_new: 怎么定义 质量和位置
+23:32 code_new: xxxxxxxx: 然而语言表达能力有限
+23:33 code_new: 虽然脑内的话很多
+23:33 cleamoon_: 质量和位置的定义需要很多数学
+23:35 cleamoon_: 语言表达不了就类似于道不可道了，基本进入宗教了
+23:35 xxxxxxxx: cleamoon_: 纯机械唯物主义怎么判断死亡与活着?
+23:35 code_new: cleamoon_: 如果能达到以一种正确的观点搬上教科书程度的接受，那至少先需要解开人类大脑之谜
+23:36 cleamoon_: 所谓活着只是一部分物体的一部分特殊状态，随意怎么定义
+23:36 xxxxxxxx: 绝对准确的解释呢?
+23:36 cleamoon_: 教科书是另外的问题
+23:36 cleamoon_: 你想怎么定义都行，没什么不准确的
+23:37 xxxxxxxx: 那你这主义有什么卵用 剃掉
+23:37 cleamoon_: 哲学本身就卵用
+23:38 cleamoon_: 一般直接用生物学定义，有时用医学，还有时用法医学，没哪个比其他的更准确
+23:38 xxxxxxxx: 宣传一个美好的愿望我觉着还是让包帝去做
+23:40 code_new: 医学和法医学不在生物学的范畴之内吗
+23:41 cleamoon_: 很多人活着需要意义，需要永恒的原因，所以大多不接受纯机械
+23:41 cleamoon_: 不在
+23:41 cleamoon_: 定义并不相同
+23:43 code_new: 活着的意义就是完成一个物理规律
+23:43 xxxxxxxx: 台湾男子迷奸多名大陆男模致死1人 被判18年半
+23:43 xxxxxxxx: 弯弯
+23:43 xxxxxxxx: 不对是湾弯
+23:44 xxxxxxxx: 弯湾似乎也可以
+23:44 cleamoon_: 如果你的意思是机械的，那么那不是意义，因为你没法选择要不要活得有意义
+23:44 cleamoon_: 弯弯
+23:45 cleamoon_: 不过为什么判这么短
+23:45 xxxxxxxx: 杜嫌案发后潜逃回台，上午被移送时面对镜头低头啜泣，小声地说出“对不起”，甚至一度腿软想下跪。今年43岁的他是台日混血儿，在内地电子公司担任日文翻译，私下却自称是广告公司高层，专找白净、高帅的男模外拍，祭出高额筹劳还提供住宿机票，诱骗男模上钩再以安眠药或FM2加入饮料迷奸，犯案地点遍布内地广东、浙江等地，受害
+23:45 xxxxxxxx: 人超过10人以上，杜则坦承犯下7案。
+23:46 code_new: cleamoon_: 所以说根本没有意义，如果非要给他一个意义，那么只能说是物理规律
+23:46 cleamoon_: 就是没有意义呀，对于上帝来说
+23:47 code_new: 然而并没有上帝
+23:47 xxxxxxxx: 意义的话 直接说试图找到或者的意义不就好了
+23:47 cleamoon_: 上帝只是一个形容词
+23:47 code_new: 2333
+23:48 xxxxxxxx: 而且这样的话有钱的资本家线虫还能指着我这种胸无大志的家伙说 你这种投降派受到点挫折就退缩了
+23:48 xxxxxxxx: 充满了正能量
+23:48 code_new: 迷奸男模的新闻，印象中看到过好多次了
+23:49 * xxxxxxxx 实际上对这种评价也没啥感觉....
+23:50 xxxxxxxx: 遇害的内地男模穿着浴袍、笑得开朗，他身高超过180公分，年仅20出头，去年还获得cctv模特儿大赛亚军，不管是拍婚纱还是网拍都有他的身影，可说是经历丰富，没想到大好前程和性命都葬送在杜男手中。<-  卖面子的终被面子坑死 有啥可不平的嘛
+23:50 cleamoon_: 一个没法控制只能看的rpg渣作没意思，上帝不会喜欢看的，游戏人物的意义这个问题就没有意义，但是人物拿到高级物品时某一个代表高兴的数值会增长，这对上帝来说没区别，但是任务自己爽就好了
+23:51 xxxxxxxx: 其实上帝用一个自称人类的种族去演算东西233
+23:51 code_new: 然而上帝是不是物质
+23:52 cleamoon_: 那将是多么美好的假设呀
+23:52 xxxxxxxx: 其实上帝创造出人类的一刻就预知了一切 然后把人类扔进一片荒芜之地自生自灭去了
+23:52 cleamoon_: 按现在的定义，不是
+23:52 xxxxxxxx: 反正结果已经拿到了
+23:53 cleamoon_: 那么还创造什么
+23:54 xxxxxxxx: 然而就在扔出去的一刻上帝知道了自己最终会被人类报复性杀死 于是上帝又让人类陷入幻觉(矩阵一般的设定) 以为世界上没有上帝 
+23:54 cleamoon_: 所以看穿一切的沼跃鱼活着没意思
+23:55 cleamoon_: 这上帝好搓
+23:55 xxxxxxxx: 并且为所有幼女的内裤附着上了圣光
+23:55 cleamoon_: 弄死他
+23:55 cleamoon_: 回家
+23:55 code_new: 为什么是上帝而不是上皇或者上王
+23:57 xxxxxxxx: 因为人类愿意管他叫上帝
+23:58 cleamoon quit:Read error: Connection reset by peer
+23:58 cleamoon joined channel

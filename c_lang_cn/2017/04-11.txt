@@ -1,0 +1,93 @@
+00:03 lh_not_bot quit:Ping timeout: 240 seconds
+00:06 lh_not_bot joined channel
+00:06 DoctorLee joined channel
+00:07 Mokou quit:Remote host closed the connection
+00:10 Mokou joined channel
+00:10 DoctorLee quit:Remote host closed the connection
+00:54 varna quit:Ping timeout: 240 seconds
+00:55 DoctorLee joined channel
+00:59 DoctorVII joined channel
+01:13 lh_mouse: 0.0
+01:14 lh_mouse: 0,0
+01:38 lh_mouse quit:Read error: Connection reset by peer
+01:43 DoctorVII quit:Remote host closed the connection
+01:43 DoctorLee quit:Remote host closed the connection
+01:59 Izumo quit:Quit: Connection closed for inactivity
+03:21 cleamooon quit:Quit: Connection closed for inactivity
+03:30 Mokou quit:Remote host closed the connection
+07:26 perr joined channel
+07:26 perr quit:Changing host
+07:26 perr joined channel
+08:05 Youmu quit:Quit: Connection closed for inactivity
+08:48 DoctorLee joined channel
+09:09 yimis joined channel
+09:11 yimis quit:Client Quit
+09:21 lh_mouse joined channel
+09:54 Youmu joined channel
+10:31 perr quit:Ping timeout: 255 seconds
+10:48 perr joined channel
+11:54 DoctorLee quit:Ping timeout: 240 seconds
+13:16 kin3z joined channel
+14:56 whocares_2 joined channel
+14:58 whocares_2_ quit:Ping timeout: 255 seconds
+16:18 cleamooon joined channel
+16:18 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/va/gf_147963.jpg@596w_1l.jpg
+16:21 Dove joined channel
+16:54 lh_mouse: geordi, << bark; int bark = \ #if (unsigned)-1 > 0 \ 1 \ #else \ 0 \ #endif
+16:54 geordi: error: expected ',' or ';' before 'int'
+16:54 lh_mouse: geordi, << bark; int bark = \ #if (unsigned)-1 > 0 \ 1 \ #else \ 0 \ #endif \ ;
+16:54 geordi: 0
+17:05 blackskygg joined channel
+17:10 Mokou joined channel
+17:20 wnxd joined channel
+17:20 blackskygg: 有大佬参加过GSoC吗
+17:26 lh_mouse: blackskygg, 揉揉。
+17:26 lh_mouse: geordi, { char **p1 = 0; const *const char *p2 = p1; }
+17:26 geordi: error: expected unqualified-id before 'char'
+17:26 lh_mouse: geordi, { char **p1 = 0; char const *const *p2 = p1; }
+17:26 geordi: <no output>
+17:27 lh_mouse: geordi, { char **p1 char const *const *p2; p2 = p1; }
+17:27 geordi: error: expected initializer before 'char'
+17:27 wnxd: 这个怎么玩.
+17:27 lh_mouse: geordi, { char **p1; char const *const *p2; p2 = p1; }
+17:27 geordi: warning: 'p1' is used uninitialized in this function
+17:28 lh_mouse: wnxd, 新人？
+17:28 wnxd: 路人.
+17:29 lh_mouse: 路人怎么会跑到这里……
+17:30 lh_mouse: posix 说 C  里 char ** 不能赋值给 const char *const *
+17:30 blackskygg quit:Quit: blackskygg
+17:32 wnxd left channel:"Textual IRC Client: www.textualapp.com"
+17:34 blackskygg joined channel
+17:34 Sasasu is now known as \Sa
+17:34 \Sa is now known as Sasasu
+17:35 lh_mouse: blackskygg, 摸头。
+17:38 wnxd joined channel
+17:39 blackskygg quit:Ping timeout: 260 seconds
+18:01 wnxd joined channel
+18:02 wnxd quit:Client Quit
+18:02 wnxd joined channel
+18:14 kin3z quit:Quit: Leaving
+18:27 wnxd quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+19:30 \s quit:Quit: Textual IRC Client: www.textualapp.com
+19:30 \s joined channel
+19:38 \s quit:Changing host
+19:38 \s joined channel
+19:58 wnxd joined channel
+20:12 wnxd quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:36 blackskygg joined channel
+20:39 blackskygg: lh_mouse, 捏捏
+20:40 blackskygg: 最近变成线虫了
+20:40 lh_mouse quit:Ping timeout: 240 seconds
+20:45 blackskygg_ joined channel
+20:47 blackskygg quit:Ping timeout: 255 seconds
+21:08 blackskygg_ is now known as blackskygg
+22:07 * lh_not_bot slaps blackskygg around a bit with a large trout
+22:07 lh_not_bot: 这现充，居然艹妹。
+22:13 glock27uuu joined channel
+22:14 blackskygg: 你怎么知道我艹妹了？
+22:24 whatofor_1 joined channel
+22:24 whatofor quit:Read error: Connection reset by peer
+22:32 cleamooon: 烧烧烧
+22:45 Dove quit:Read error: Connection reset by peer
+22:59 perr quit:Quit: Leaving
+23:09 blackskygg quit:Ping timeout: 240 seconds

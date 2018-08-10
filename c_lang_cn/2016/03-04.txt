@@ -1,0 +1,1773 @@
+00:00 hatlist: 多线程编程确实是我的硬伤
+00:00 hatlist: 到现在为止都没写过什么东西
+00:01 lh_mouse: 那你应该学着用 poseidon。
+00:01 tutu_wind: hatlist: hj酱撸过Go的
+00:02 lh_mouse: poseidon 只有一个逻辑线程。
+00:02 tutu_wind: lh_mouse: 经常参考poseidon里的东东
+00:02 lh_mouse: O.O
+00:02 lh_mouse: tutu_wind, 谢谢。
+00:02 hatlist: tutu_wind: 写这类语言，都是尽可能不要用mutex之类的，用channel赛来塞去更有CSP style
+00:03 tutu_wind: hatlist:喵~ 也可以实现一个pool啊
+00:03 hatlist: lh_mouse: 用poseidon的阻力，主要还是C++和设计模式不熟，经常不明白做了什么
+00:04 tutu_wind: hatlist: 渣渣在努力学C艹中。。。
+00:05 cleamooon: 设计模式orz
+00:10 condy: 学习 AOP 中的我 Orz
+00:11 hatlist: condy: 先学php
+00:11 hatlist: condy: 面向“切面”编程到现在为止没懂是什么意思
+00:11 condy: hatlist: 是的呢
+00:15 cleamooon: 我只想面向钱编程
+00:22 hatlist: 随叫了
+00:22 hatlist: lh_mouse: 话说小耗一般加班到几点
+00:51 lh_cat quit:Quit: Connection closed for inactivity
+00:51 hope1 quit:Remote host closed the connection
+00:56 hope1 joined channel
+01:04 lh_mouse: hatlist, 不一定加班，也不一定加到几点。
+01:04 lh_mouse: 通常九点半之前，十一点多一两三点都有。
+01:05 cleamooon: orz
+01:06 lh_mouse: 睡觉。
+01:06 tutu_wind: lh_mouse: 晚安～
+01:06 lh_mouse: tutu_wind, 捏。
+01:06 lh_mouse quit:Read error: Connection reset by peer
+01:15 lh_cat joined channel
+01:23 Flandre` joined channel
+01:46 tutu_wind quit:Ping timeout: 244 seconds
+01:53 Sous-Titre quit:Ping timeout: 264 seconds
+02:02 cleamooon quit:Ping timeout: 268 seconds
+02:51 cleamooon joined channel
+02:57 Flandre` quit:Remote host closed the connection
+03:01 hope1 quit:Ping timeout: 244 seconds
+03:11 hatlist quit:Quit: Connection closed for inactivity
+03:18 ^yoyo quit:Remote host closed the connection
+03:21 lh_cat quit:Quit: Connection closed for inactivity
+04:35 cleamooon quit:Ping timeout: 240 seconds
+05:05 Youmu quit:Quit: Connection closed for inactivity
+05:21 cleamooon joined channel
+08:01 p131141 joined channel
+08:11 FrankHB quit:Ping timeout: 244 seconds
+08:17 hatlist joined channel
+08:37 p131141 quit:Ping timeout: 246 seconds
+08:46 hope1 joined channel
+08:51 Youmu joined channel
+08:55 FrankHB joined channel
+09:23 tutu_wind joined channel
+09:32 tutu_wind quit:Quit: WeeChat 1.2
+09:32 tutu1 joined channel
+09:32 tutu1 is now known as tutu_wind
+09:34 tutu_wind: morning ~
+09:40 hope1 quit:Read error: Connection reset by peer
+09:42 hatlist: irccloud我都想付费了。
+09:42 cleamooon: orz
+09:42 hatlist: cleamooon: 绅士来了！
+09:43 cleamooon: hatlist, 爆
+09:43 hatlist: 发现搞网游的晚上都好晚睡，昨晚9点发条微信，然后那伙计凌晨3点回的，都把我弄醒了
+09:43 hatlist: cleamooon: 基佬绅士
+09:43 cleamooon: orz
+09:52 PATIQ joined channel
+09:55 FrankHB quit:Ping timeout: 240 seconds
+09:57 Flandre` joined channel
+10:12 lh_mouse joined channel
+10:27 lh_cat joined channel
+11:45 Youmu quit:Quit: Connection closed for inactivity
+11:51 iyzsong: 质数筛选都没写过 (ㆀ˘･з･˘) 我去学习一个
+11:52 lh_mouse: (ㆀ˘･з･˘)
+11:55 hatlist: iyzsong: 续
+11:55 lh_mouse: hatlist, 揉。
+11:55 hatlist: lh_mouse: 捏
+11:56 iyzsong: 喝大力Σ(´∀｀；)
+12:32 Flandre` quit:Remote host closed the connection
+12:34 Youmu joined channel
+12:51 lh_cat quit:Quit: Connection closed for inactivity
+12:54 Flandre` joined channel
+13:06 Stevearzh quit:Quit: ZZZzzz…
+13:47 tutu_wind quit:Ping timeout: 246 seconds
+13:51 xxxxxxxx joined channel
+13:52 xxxxxxxx: 日 我发现了一件很糟糕的事情 我似乎忘记了google帐号的密码... 因为它总是自动记住登陆状态的
+13:52 hatlist: xxxxxxxx: 没事儿，肯定有奇奇怪怪的找回密码功能
+13:53 hatlist: xxxxxxxx: 巨基来了，爆一发
+13:53 xxxxxxxx: 不过后来展开挺逗了
+13:53 varna joined channel
+13:53 hatlist: varna: 爆炸！
+13:53 xxxxxxxx: 我发觉我当时的邮箱填错了
+13:53 xxxxxxxx: 密码找回用不了
+13:54 hatlist: varna: 高颜值线虫爆炸！
+13:54 varna: hatlist: 我稍微修了一下糖果那边服务器的日志实现
+13:54 varna: 啊？
+13:54 hatlist: 红旗酱说的！
+13:54 varna: 我驲，今天acgpower完全用不了
+13:54 xxxxxxxx: 然后我吓得把密码想起来了
+13:55 varna: 稻芳GO走起
+13:55 hatlist: varna: 药丸
+13:55 varna: hatlist: 好歹我本科时候也被称为玉面银魔来着，不过后来长残了
+13:55 xxxxxxxx: varna: 羊驼可以用欧洲go?
+13:55 varna: xxxxxxxx: 我用他们的https代理
+13:56 xxxxxxxx: 原来如此...
+13:56 varna: 读条强行卡住
+13:56 xxxxxxxx: 我还以为wine那么屌...
+13:56 varna: 我清一下浏览数据
+13:56 varna: 听说友军舰队被暂时换成安卓版先行体验了
+13:57 varna: hatlist: 另外我哪里现充了
+13:57 xxxxxxxx: 竟然有友军了?
+13:57 hatlist: 红旗酱说的
+13:57 varna: xxxxxxxx: 一直没有，灰的
+13:57 varna: 然而我并没有做出什么现充行为
+13:57 varna: 打个3-5都劝退了一半
+13:58 xxxxxxxx: 找了个女朋友还没下手的情况?
+13:58 hatlist: 小耗也线虫，羊驼也线虫，！！！
+13:58 varna: 可怕，现在读条彻底卡住了
+13:59 varna: 我可没女朋友
+14:00 * hatlist 蹦不动了
+14:00 xxxxxxxx: 同样的情况发生在了噫绅士...
+14:00 xxxxxxxx: 不过那边我连用户名都不记得了233
+14:01 varna: 卧槽wireshark自己卡死了
+14:02 varna: dumpcap自己defunct, 然后wireshark gui死在了上面……
+14:04 xxxxxxxx: 话说你们怎么处理好就不用输入的用户名和密码?
+14:04 xxxxxxxx: 好久
+14:10 varna: 忘掉……
+14:10 varna: 我的密码一般就十个左右，可以强行试
+14:12 xxxxxxxx: 强行试+ 然而有的地方密码要求太蛋疼用不了以前用的那些
+14:12 xxxxxxxx: 比如要求符号大小写数字全部包括
+14:14 varna: 那些容易吧
+14:14 xxxxxxxx: 五年以前我要用这样的密码我就觉得自己扭曲了
+14:14 varna: 只要在以前的密码里用首字母大写，单词之间用下划线连接，后缀一个常用的数字串（2411之类的）
+14:15 varna: 如果允许用叹号的话还可以在密码最后写一个叹号，显得像是说这个函数有副作用
+14:15 varna: 啊啊啊啊啊啊啊啊啊啊啊任务米空好可爱
+14:15 varna: 米空米空米！
+14:16 xxxxxxxx: 说起来是这样没错 然后因为许久不用输入我就忘了上次怎么造的了...
+14:18 varna: 用2411
+14:19 xxxxxxxx: http://www.tecmint.com/monitor-copy-backup-tar-progress-in-linux-using-pv-command/
+14:19 xxxxxxxx: ^On FreeBSD Linux
+14:19 xxxxxxxx: BSD党大概要打死这作者了
+14:20 varna: (｡･ω･)ﾉ打演习打演习
+14:23 xxxxxxxx: 后头有人提到 New version of coreutils (8.24) adding a status progress to dd tool
+14:23 xxxxxxxx: 给rm 也加一个吧
+14:23 varna: 233333
+14:23 varna: rmz
+14:23 varna: 哦不对
+14:23 varna: rm2
+14:23 varna: 这是个传统项目
+14:24 xxxxxxxx: 作死成功的时候就能假装看风景了
+14:27 varna: 我发现现在一身轻松，果然丙督的精神压力没那么大
+14:33 xxxxxxxx: 咸鱼就是力量
+14:34 varna: 五次活动拿了四个甲章，还有能跟萌新吹一年（大概）的防空姬，值了(｡･ω･)ﾉ
+14:37 tutu1 joined channel
+14:38 varna: xxxxxxxx: 巨基现在能上噫绅士么
+14:38 lh_mouse: 0.0
+14:38 varna: lh_mouse: 鼻来
+14:38 varna: xxxxxxxx: 能的话帮忙拖一下这个 http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAvyKLnjNVIUye69kjW2rL/V1pwnmK4625+HeG2jOFtpV7qF65K6JZ6E8Xa2MHAPGtMcBje1hdsjoNNyz5ZpEOX1jqYcRhIdDfBCo+B+jEDGxRY+mACaSHIKLkKdo4nGE8loFYbGthIdNIx0xWA1TaKrMDxm7iZ2BjQ=
+14:39 varna: 我日
+14:39 varna: xxxxxxxx: http://g.e-hentai.org/g/910576/59cfa849af/
+14:39 varna: 百度这个jump简直
+14:39 xxxxxxxx: 并不能 之前去ex看看结果发现登陆状态没了 而e被墙了...
+14:40 varna: _(:з」∠)_
+14:46 Stevearzh joined channel
+14:48 xxxxxxxx: varna: 弄到了种子
+14:48 varna: OTL
+14:49 xxxxxxxx: 我试试看黄du盘能不能给直接搞出来
+14:49 xxxxxxxx: 并不能
+14:50 xxxxxxxx: https://www.webproxy.online/ <- 这个我这里竟然没有墙
+14:52 varna: 好顶赞
+14:55 xxxxxxxx: http://pan.baidu.com/s/1dDTmBVr nted
+14:56 varna: thx
+14:59 tutu1: varna: 哇，羊驼酱许久没见了～
+14:59 tutu1 is now known as tutu_wind
+15:00 varna: tutu_wind: 最近有些东西要写，所以不太上线
+15:00 tutu_wind: 喔喔，原来酱紫
+15:05 Youmu quit:Quit: Connection closed for inactivity
+15:09 xxxxxxxx: http://music.163.com/#/song?id=28996505 这评论都是什么鬼
+15:11 varna: lmcc
+15:11 varna: 卧槽战起来了
+15:11 varna: 2333
+15:15 p131141 joined channel
+15:36 varna: http://tieba.baidu.com/p/3272407943 逗比百度删吧不炸帖……
+15:37 iyzsong: mom
+15:50 xxxxxxxx: http://cnews.chinadaily.com.cn/2016-03/02/content_23712126.htm 这样的新闻好像每年都有啊
+15:51 varna: 佳子内亲王（化妆版）完爆这些啊……
+16:00 p131141 quit:Ping timeout: 248 seconds
+16:02 xxxxxxxx: http://live.bilibili.com/66287有人在造土船
+16:02 xxxxxxxx: 忘记隔开链接了...
+16:08 tutu_wind quit:Ping timeout: 276 seconds
+16:11 xxxxxxxx: http://2chcn.com/67404/ <- 原来跟风搞大新闻不只是天朝人的习惯啊
+16:15 varna: LOL...
+16:15 varna: 本来就是脑残高发区
+16:15 xxxxxxxx: レベル5までやってみたけど日本人一人も見なかったんだが
+16:15 xxxxxxxx: 我玩到5级了，一个日本人也没看到
+16:16 iyzsong: 2333
+16:16 xxxxxxxx: 我都不知道他在说啥....
+16:16 varna: 而且在日本，这种竞技（迫真）游戏不流行吧
+16:16 varna: 即使LOL把战术性的部分砍掉了一大半
+16:17 xxxxxxxx: 听说并不流行+
+16:18 varna: 说起来，三四月份还有人玩L4D2么
+16:18 xxxxxxxx: 下面朝内人的评论: 小将们可找到路子了 结果还是自己人跟自己人打2333333
+16:18 varna: 我过几天把steam拉起来
+16:18 xxxxxxxx: 大概并没有?
+16:18 varna: lhj和红旗大概能周末玩
+16:21 xxxxxxxx: 武汉生物工程学院桃园餐厅推出了一道神级“黑暗料理”：橙子炒肉。这道菜的主料是橙子和鸡脯肉。同学品尝后表示，鸡肉里有橙子的清香，比较爽口，纷纷点赞。该校建筑工程学院大二学生刘思遥发现这道“神菜”后，立即拍照后发微博。“色泽好诱人，真想尝尝”，“味道很特别，你值得拥有”，不少网友转发和评论该微博。
+16:21 xxxxxxxx: http://n.sinaimg.cn/hainan/transform/20160304/Zfnp-fxqafha0351799.jpg
+16:21 xxxxxxxx: 然而并没有去皮...
+16:22 iyzsong: 我去..
+16:22 varna: 我觉得基佬大学的食堂水准完爆他们整个太平洋
+16:23 xxxxxxxx: 为啥这种奇妙的东西反倒总有人点赞...
+16:23 varna: 我觉得他们把鸡肉白煮了，然后提供酱油，都比这么糟蹋肉好吃
+16:24 xxxxxxxx: 我只是觉得这皮不知道该怎么办好...
+16:24 iyzsong: 说不定很美味呢 <_<
+16:24 varna: 橙皮其实大丈夫，然而看那汤我觉得很坑
+16:25 xxxxxxxx: 到底该吃掉还是该留下?
+16:25 iyzsong: 我是不会买..
+16:25 xxxxxxxx: 吃掉的话 那么大一块皮...
+16:25 varna: 这菜我狗呔，橙皮有农药啊
+16:26 iyzsong: 2333
+16:26 xxxxxxxx: 留下的话 橙皮也不是不能吃...
+16:26 xxxxxxxx: 就会有人搞新闻 XX浪费食物
+16:27 xxxxxxxx: 如果是把皮洗干净切碎配合果肉做成果酱 然后调味我觉得就能接受了
+16:28 varna: 橙皮其实可以拿去做巧克力，不过这不是食堂的搞法了
+16:29 xxxxxxxx: 一道不知道该怎么下嘴的菜...
+16:30 xxxxxxxx: 也许正确吃法是先吃掉肉 然后把橙子留下当水果吃
+16:31 varna: 这个想法颇有启发性
+16:31 xxxxxxxx: 丁师傅表示，现在人们都讲究饮食健康，橙子富含维生素C，鸡肉肉质细嫩，制作时他还特地保留了橙皮，可清肺化痰。在春季食用这道菜可以增强同学们的抵抗力，缓解呼吸道疾病。
+16:32 varna: 王提督表示他狗呔
+16:34 xxxxxxxx: 然而橙子炒过之后维生素C不会分解掉一些么...
+16:34 tutu_wind joined channel
+16:35 varna: 会吧
+16:37 xxxxxxxx: 还是直接炒肉和橙子分开吧 看着也正常些
+16:39 varna: 我只觉得这师傅糟蹋了鸡肉
+16:39 varna: 明明挺好的肉
+16:42 xxxxxxxx: 我觉得 鸡肉和橙汁说不定还行 橙汁就当代替糖了  炒肉稍微加些糖也不会特别坏的样子
+16:44 xxxxxxxx: 不过图片上那个看着已经不像是炒肉了...
+16:45 iyzsong: xxxxxxxx: 你已经看了20分钟了.. 实践是检验真理的唯一标准 去吧 O O
+16:46 xxxxxxxx: 柬埔寨警方3月3日发布消息称，中柬两国警察联合行动，在柬埔寨逮捕了38名涉嫌参与网络诈骗活动的中国公民。
+16:46 varna: 驴克思主义者在唬人吃饭了！
+16:47 tutu_wind quit:Ping timeout: 248 seconds
+16:48 tutu_wind joined channel
+16:48 xxxxxxxx: iyzsong: 我不想去搞这种创新啊 毕竟加热过的香蕉很难吃
+16:48 iyzsong: v.v
+16:48 varna: eee
+16:50 xxxxxxxx: http://m1.sinaimg.cn/maxwidth.640/m1.sinaimg.cn/e8d7895e01641c22cf465c404f4f698b_528_440.jpg 光绪的难处们
+16:50 varna: 哈哈哈哈
+16:50 varna: 右二什么鬼
+16:51 xxxxxxxx: 这个动作我熟悉 假装看风景
+16:52 iyzsong: 2333
+17:00 varna: 吃饭去
+17:03 tutu_wind: 这么早～
+17:22 lh_mouse: varna, 0 0
+17:49 iyzsong: lh_mouse: 烧
+17:53 lh_mouse: iyzsong, 一边去。
+17:54 iyzsong: T_T
+17:54 lh_mouse: iyzsong, 摸头。
+18:01 tutu_wind: iyzsong: 摸摸头～
+18:06 cleamooon: 日，葛存壮死了
+18:07 hope1 joined channel
+18:07 cleamooon: 玉面银魔羊驼子
+18:09 cleamooon: 噗，橘子鸡肉
+18:09 cleamooon: 想要健康的话，水煮鸡胸加柠檬酱多好
+18:11 cleamooon: 看着像是全年龄本，然后就不是了...
+18:11 varna: 哦瘊瘊
+18:11 varna: 我下好了，白雪工口本
+18:11 varna: 缺憾是胸大，优点是稀少的白雪本
+18:12 lh_mouse: 喵。
+18:12 lh_cat joined channel
+18:12 cleamooon: 白雪党太少
+18:12 varna: 白雪挺好的，我刷闪的时候要是捞出来就留一个
+18:13 cleamooon: orz
+18:13 lh_cat: 喵。
+18:13 lh_cat: PATIQ: 这位是新人？
+18:14 cleamooon: @哲别. 新来的马概老师大笔一挥写下了自己的QQ，验证消息是：“青春心向党，共筑中国梦，我爱马基概。”否则拒加。
+18:14 lh_cat: 累。
+18:15 iyzsong: 2333
+18:15 * iyzsong 废
+18:15 varna: 我就看到一个基字
+18:15 lh_cat: 喵。
+18:17 xxxxxxxx quit:Quit: Leaving...
+18:17 hope1: 明天去省医院看精神科……
+18:17 varna: 噗？
+18:17 iyzsong: orz
+18:17 iyzsong: 我都还没去看
+18:18 varna: 你们要是有精神缺陷，我早就因为深涉儿童色情不能自拔而进局子了
+18:18 hatlist: hope1: 精神科慎看……
+18:19 varna: lhj+
+18:19 iyzsong: 去国外再看不迟..
+18:19 hope1: 感觉有些抑郁症状，去看看需不需要吃药
+18:19 varna: 没病也能说出病来
+18:19 varna: 我建议你出去玩玩，有点抑郁没关系
+18:19 hope1: 我是觉得去年就该去了
+18:19 varna: 而且即使真的是抑郁也没关系
+18:20 varna: 你理智清楚的话，慢慢可以恢复心情
+18:20 iyzsong: 我绝对严重的多..
+18:20 varna: iyzsong: 你那是现充
+18:20 cleamooon: 没病也能说出病来+
+18:20 cleamooon: 很多人都有点抑郁的
+18:20 iyzsong: 我是废萌 o.@
+18:20 hope1: hatlist, 为何说慎看呢
+18:21 cleamooon: 也许还是压力大导致的超想妹子综合症呢
+18:21 hatlist: hope1: 先看心理咨询，再看精神科
+18:21 hope1: 没病也能看出病那是心理咨询吧
+18:21 cleamooon: 因为国内的太坑
+18:21 varna: 都一样
+18:21 cleamooon: 都一样+
+18:21 varna: 不影响你理智的抑郁不是问题
+18:21 varna: 你只需要一些自我调节或者鸵鸟方法
+18:22 iyzsong: hope1: 你也来看看 I'ok, you're ok ?  看完我就成废萌了..
+18:22 hope1: 感觉很影响生产力，整天浑浑噩噩的什么也不想干，似乎以前的很多东西也没什么兴趣了
+18:22 cleamooon: 我可了解这个，二大爷文蛤时疯了，于是祖辈认为全家会出很多疯子，于是各种扭送，于是各种花钱，于是各种不了了之
+18:22 * iyzsong 毫无生产力
+18:22 cleamooon: 那不是抑郁，那是颓废
+18:23 varna: hope1: 没事，你找些有兴趣的玩玩，学业正常处理就行
+18:23 varna: 考虑生产力的思考方法才是毫无建设性的
+18:23 iyzsong: 我今天project euler #47, 做了一天~
+18:23 hatlist: hope1: 我之前也这个状态，现在不还是回过来了？
+18:23 hope1: 除了上周听柴可夫斯基的悲怆，就不记得有过什么强烈的情感了。
+18:23 varna: hatlist: 你那是在裤子里憋久了
+18:23 varna: hope1: 我还成天扑克脸呢
+18:24 hope1: iyzsong, 这是啥，回去搜一下
+18:24 cleamooon: 喜欢柴可夫斯基呀
+18:24 varna: project euler是一大堆数学题吧
+18:24 hope1: cleamoon, 精神科又不是精神病院
+18:24 hatlist: hope1: 如果你被鉴定为精神病呢？
+18:25 cleamooon: hope1, 区别和饭馆客厅和饭馆的区别差不多
+18:25 hatlist: 应该是“在客厅吃饭的地方”和“饭厅”差不多
+18:25 cleamooon: Find the first four consecutive integers to have four distinct prime factors
+18:25 hatlist: 海棠还不如多来来频道丧失下，反而更轻松些
+18:26 cleamooon: 不，真的是饭厅和饭馆的区别...... 
+18:26 cleamooon: 中国的医院呀，不说了，不认识大夫就是去送死
+18:26 hope1: hatlist, 我家人不会同意的。他们挺高怎么都会支持我
+18:26 hope1: 应该
+18:27 varna: 所以你其实不需要通过影响神经功能来更正精神功能
+18:27 hatlist: hope1: 应付过高三，然后出去旅旅游啊，先线虫啊，把事情想明白，或者想不明白抛在脑后。
+18:27 hope1: 手机打字略慢
+18:27 iyzsong: hope1: 那本书是TA 心理模型(child, parenta adult)分析 (远古心理咨询畅销书，好像还是课本来着) 让我相信 大家都有问题..
+18:28 iyzsong: 结论是每个人都萌萌哒~
+18:28 cleamooon: http://www.zhihu.com/question/40977376
+18:28 lh_mouse: 先线虫的意思是，找个妹子糟蹋了？
+18:28 iyzsong: 2333
+18:29 cleamooon: hope1, 谁都会滋瓷你的呀，但是给你开一堆影响大脑发育的昂贵药物多蛋疼
+18:29 cleamooon: 找个妹子糟蹋了+
+18:29 hope1: cleamoon, 以前没听过什么音乐，一个同学推荐的。我听的时候感觉几乎能听到自己的尖叫
+18:29 cleamooon: 那什么倒霉音乐......
+18:30 varna: 大概是防空姬的BGM
+18:30 hatlist: 海棠的问题还是，过于纠结“要做正事”这件事了吧
+18:30 varna: 未必
+18:31 hatlist: 人生又不是升学， 每年每月每天每日都得“提高自己”
+18:31 iyzsong: 一般的音乐下载好麻烦..  我从modarchive下了些不明觉历的合集(就和FC游戏音乐差不多)，跑步(最近也没跑>.<)专用..
+18:31 hope1: varna, 但这不是最近才出现的情况，至少两三年了。持续或者间歇性地很难受，虽然内容没啥意义
+18:31 cleamooon: 之前老妈失眠，即从日本回国后无所事事，每天睡太多晚上睡不着了而已，去精神科开药，弄了一堆奋乃静，力量根本可以干死一头大象......
+18:31 varna: hope1: 我知道，这种人我见过，所以我才建议你别管
+18:32 varna: 在意就会蛋疼，顺其自然但别太郁闷就行
+18:32 cleamooon: 我也见过......不过还是不知道怎么管
+18:32 varna: cleamooon: 说起来，我才感觉去年春后半的道中BGM很赞
+18:32 varna: 比那个伴唱版的赞
+18:33 Mokou joined channel
+18:33 Mokou: 这梨花酱凭空污我清白
+18:33 hope1: 我觉得既然抑郁症是医学上确实存在的症状，药物治疗也的确证明了有效性，那就该试试才对，不如相信医生的判断
+18:33 Mokou: 我明明只说了羊驼子的头顶奕奕生辉
+18:34 * lh_mouse slaps Mokou around a bit with a large trout
+18:34 iyzsong: hope1: 去吧 我支持你~
+18:34 cleamooon: 我不开bgm
+18:34 varna: hope1: 你忽略了「有效性」三字的内涵是否是「抑制症状」
+18:34 * Mokou slaps lh_mouse around a bit with a large varna
+18:35 varna: 这就跟感冒特效药一样
+18:35 hope1: hatlist, 不认为心理治疗会有用。曾经有个可爱的妹子很努力地试过了，我也算很努力地试过了，可还是没用
+18:35 * lh_mouse has kicked Mokou from #c_lang_cn (gtfo)
+18:35 varna: 可爱的妹子！
+18:35 hatlist: Mokou:  难道不就是这个意思吗？闪的红旗都不敢睁眼了
+18:35 iyzsong: 0 0
+18:35 Mokou: hatlist: 是头顶
+18:35 cleamooon: 精神类药物大多副作用山大
+18:35 varna: +
+18:35 hatlist: hope1: 那就别去管了。精神药品更危险
+18:35 Mokou: 19:34 < Mokou> hatlist: 是头顶
+18:35 lh_mouse: 头顶长草？
+18:35 varna: 如果你相信「有效」，建议看看怎么叫有效
+18:35 Mokou: 19:34 <+varna> +
+18:35 cleamooon: 而且我全面不相信医生
+18:36 Mokou: 这肝帝
+18:36 varna: 我补两个两层把2-5斩了
+18:36 varna: 不过我发现一个问题
+18:36 iyzsong: hope1: 你有多严重? 有自残、自杀倾向么?
+18:36 Youmu joined channel
+18:37 varna: 春道中第二个BGM, 高潮段落的小提琴出来的时候，我总会脑补创价
+18:37 Mokou: \parn/
+18:37 varna: 我对宗教/没有兴趣/请不要再来一回了泥马
+18:37 cleamooon: 老爸为了快速，在中国看牙，本身是一个牙有洞，后来22天没补好，又在另外两个牙上钻了3个洞，一共花了4k+，最后只能托人换医院，于是3次看好
+18:37 varna: 你那还好了
+18:38 cleamooon: 还好了+
+18:38 varna: 我小时候被误诊心肌炎，直接扔进ICU两周+病房两周，护士都吐槽说这是骗钱
+18:38 cleamooon: 毕竟只是不危机生命的牙疼
+18:38 cleamooon: ............
+18:38 varna: 那次下来我只认识到一个问题
+18:38 varna: 打针还得护士长
+18:38 cleamooon: 打针还得护士长+
+18:38 cleamooon: 完全不疼
+18:38 cleamooon: 瞬间完成
+18:38 varna: 两手血管都瘪的时候，年轻可爱的小护士直接搞成肌肉注射不知所措，我被水淹没
+18:39 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/c9/40_79742.jpg
+18:39 iyzsong: - -b
+18:40 varna: 对了恋恋还活着么
+18:40 cleamooon: 海盗护士的病人太少，没法练手，于是打针超疼
+18:40 cleamooon: 还活着
+18:40 cleamooon: 不过最近吐翔少一些了
+18:40 Flandre` quit:Remote host closed the connection
+18:41 varna: 大概是体力不好吐不出来了
+18:41 hope1: iyzsong, 没有，还没有到这个程度
+18:41 cleamooon: 如果不是流离失所露宿街头了，就是找到新工作忙死了
+18:42 varna: 不过我后来去有些大医院，感觉那里的护士手法不错，抽血也不疼
+18:42 * Mokou 基本不去医院
+18:42 varna: 虽说以前抽血都是手指血，直接用小刀片划开了挤……
+18:43 Mokou: 去医院得半天时间，浪费五场演习
+18:43 hope1: iyzsong, 你有过这些情况吗？
+18:43 varna: 小时候医院常客
+18:43 varna: 基本上我比同龄人强到不知道哪里去的事情就是习惯打针……
+18:43 Mokou: 我基本靠硬撑
+18:43 iyzsong: hope1: 有想法 没那勇气..
+18:43 varna: iyzsong: 你要想着噫噫噫啊！
+18:43 cleamooon: 抽血简直是童年阴影，验血要求抽3管，抽完一管半，告诉伤口凝了，3管都重新抽... 3管都重新抽... 3管都重新抽........ 
+18:43 Mokou: 没那勇气+
+18:43 iyzsong: varna: 舔舔舔
+18:43 varna: 要不我给你介绍横镇女装子
+18:44 Mokou: 当然现在我也没那想法
+18:44 cleamooon: 后来一共抽了5管+之后还没完成，奶奶直接抱我走了...
+18:44 varna: 一月作战横镇第一名哦，还会女装
+18:44 hope1: iyzsong, 真的不去医院试试吗
+18:44 Mokou: 要紧的是我5-4又被蹭血了
+18:44 varna: 我今天被糊了一小破一中破
+18:44 Mokou: 这个月2-5劝退两次，全是夜战点金莉莉平A
+18:45 varna: FCL平打，那个驱逐我忘了会不会玩花样了……
+18:45 varna: 似乎不会，我被怒草的时候是5-3捞饼
+18:45 Mokou: 什么Lv100鸟海带着三层闪吃金莉莉平A一下，咣叽
+18:45 iyzsong: hope1: 不知道 不过如果我在家歇着的话 完全没问题
+18:45 Mokou: 结果斩杀的时候莉改一发CI糊脸愣是躲过去了……
+18:46 varna: 还有一层
+18:46 varna: 看看斩杀顺不顺
+18:46 Mokou: 噫，四条船被蹭血了
+18:46 varna: 可怕的欧洲人
+18:46 Mokou: 这打下去遭不住啊
+18:46 Mokou: 明天我得打掉几十桶的节奏……
+18:47 Mokou: 啊艹
+18:47 Mokou: 这几天怎么这么多羊踹玉兔……
+18:48 Mokou: 噗
+18:48 Mokou: 我忘把紫电换一下了
+18:49 Mokou: 虽说也不差这几场
+18:49 cleamooon: hope1, 海棠姬太希望找到逆天改命的稻草啦，其实呀，即使有稻草也是要自己制作纳豆的，于是不如先尝试自撸自撸，毕竟听起来不像是病理式的毛病
+18:49 varna: 刚才我还在料理店看一个伙计怒吃纳豆
+18:50 hope1: iyzsong, 工作压力诱发的？
+18:50 Mokou: varna: 另外我把雾岛的Mk7撤下来了，换成了五星嗑改
+18:50 cleamooon: 我还没吃过纳豆呢
+18:50 Mokou: 傻级似乎扛不住
+18:50 iyzsong: hope1: 对啊~
+18:50 Mokou: 之前雾岛各种弹着观测miss
+18:51 Mokou: 瑞鹤Lv113
+18:51 hope1: 我倒是在家里比较严重，在学校和同学一起自习会感觉好些。不过我本来也没什么压力就是了
+18:51 Mokou: 桶*1
+18:51 varna: 5-4我用俾斯麦刷的，等级高一点会方便
+18:51 cleamooon: 那么，我觉得是，寂寞外加对未来迷茫了... 
+18:51 varna: 主要想带带苍龙和葛城
+18:51 Mokou: 俾斯麦消耗大些，而且Lv122
+18:52 Mokou: 我不太想让别的战舰等级超过大和
+18:52 hope1: 地铁两趟都没挤上……
+18:52 iyzsong: 2333
+18:52 varna: ok, 斩杀走起
+18:52 Mokou: 大凤lv129
+18:52 cleamooon: 瘦小纤细的海棠姬，适合做药娘
+18:53 varna: OTL
+18:53 Mokou: 毕竟太太婚了，现在大凤是旗舰……
+18:53 Mokou: 升级很快的
+18:53 cleamooon: orz
+18:53 varna: 第一点终于没有fclt...
+18:53 varna: 2雷
+18:54 varna: 反正T不利就是瞎打，没什么大碍
+18:54 varna: 莉级，夜侦不触发
+18:54 varna: 这次一半一半
+18:55 varna: 神智商神回避
+18:55 Mokou: OTL
+18:55 varna: 无伤过
+18:55 Mokou: OTL
+18:56 Mokou: 噫，飞龙抢MVP了
+18:56 varna: 单纵看看，我感觉有个鲸
+18:56 Mokou: 鲸是什么船，我怎么不知道
+18:56 hope1: cleamoon, 我觉得自己试得挺多的了，这几年一直都在试
+18:56 hope1: cleamoon, 有这些，但毫无疑问不止这些。我倒是一直觉得自己很糟糕，糟糕得无可救药，虽然也说不出为什么。
+18:56 varna: hope1: 别管
+18:56 * Mokou so kitakami
+18:57 Stevearzh quit:Quit: ZZZzzz…
+18:57 varna: 人生几十年，活到头了就会死，高兴一点
+18:57 varna: 昼战神瞎打，夜战六打三……
+18:57 Mokou: 人生五十年～～～～
+18:57 varna: 伙计们你们这是打水反么
+18:58 Mokou: 噫，飞龙又抢MVP了
+18:58 varna: 六个大 巡 洋 舰在这连个超重力炮都凹不出来
+18:58 Mokou: 再打一场去吃饭
+18:58 Mokou: 啊，忘拆船了
+18:58 cleamooon: 说不出为什么就是不糟糕呀，你一不调戏萝莉，二不输出腐基，还想怎样 （大大脸
+18:58 varna: 我为什么会等着塔姐说台词
+18:58 Mokou: 23333333
+18:58 varna: 长良……
+18:59 iyzsong: hope1: 不如来跟我安心做个废萌~
+18:59 Mokou: 快弄来当旗舰和敌空母部队打夜战
+18:59 varna: 长良我留了一个
+18:59 Mokou: 噫，大凤连丢三场MVP
+18:59 Mokou: 掉个衣笠
+18:59 Mokou: 可惜我不养衣笠
+19:00 hope1: hatlist, 你说得对，的确有“没做正事”这种谴责，不过我最近在这点上算是想开了，开心就好
+19:00 varna: 今天我有点不想打3-5
+19:00 varna: 不过还是把闪补上吧
+19:00 Mokou: 3-5我留着
+19:00 varna: 先补五个两层
+19:00 hatlist: hope1: 那不就好了么
+19:00 Mokou: 等做完撸号我打周常1-5和海上护卫
+19:00 Mokou: 然后再打3-5做北方
+19:00 Flandre` joined channel
+19:01 Mokou: 雾岛Lv98
+19:02 Mokou: 雾岛：怂逼才观测
+19:02 varna: 可怕的肝帝欧洲人
+19:02 Mokou: 飞龙lv92
+19:02 Mokou: 先去吃饭
+19:02 Mokou: 今天还剩六场
+19:02 hope1: varna, 但是一点兴趣和感情都没有的话，不是活得很可惜吗，甚至自己也不开心
+19:03 hope1: iyzsong, 好啊～ 正想做个废萌
+19:03 varna: hope1: 不可惜，你可以花时间慢慢想什么是好玩的，期间学些东西开阔眼界
+19:03 iyzsong: 话说我昨天试了半小时哭，没哭出来.. 睡了一下午
+19:03 varna: iyzsong: 来，我们瞻仰下防空姬
+19:04 hope1: 地铁坐过站了……
+19:04 varna: 先刷两小时闪，再花半小时哭……
+19:04 iyzsong: 噗
+19:04 cleamooon: 本身有兴趣的东西就不好找的
+19:04 varna: +
+19:05 hatlist: +
+19:05 varna: 去找就行，目的意识强的人大多是现充，如果你不习惯就不要去习惯
+19:05 cleamooon: 我现在觉得所谓『有兴趣』很多情况都是自己比周围人『擅长』，然后良性循环
+19:05 varna: 不然为什么我至今也没想设计一个语言……就是因为我不知道我喜欢什么样的
+19:05 cleamooon: 而你太早接触到各种触了，于是觉得自己没有擅长的，于是
+19:05 varna: 金阁寺
+19:06 iyzsong: 我现在Computer已经很难提起劲来玩了
+19:06 varna: 试试练字？
+19:06 Flandre`: iyzsong: o.o
+19:06 iyzsong: 就是上irc看看你们~
+19:06 varna: 练练字，读些文章
+19:06 varna: 口胡，还有噫噫噫呢
+19:07 cleamooon: 东方这里没多少玩的呀.... 我也就刷西瓜....
+19:07 iyzsong: 她我看不到..
+19:07 varna: 你讨个玉照来
+19:07 iyzsong: 讨不来 = =
+19:07 hope1: hatlist, 但这只解决一部分问题，实际上也是这样才让我决定去医院。我觉得既然焦虑紧张不开心，去医院可能会好受些开心些，就可以试试
+19:07 varna: 那就试试
+19:07 varna: 当个办法的话也是个办法
+19:07 lh_mouse: 0.0 喵。
+19:07 hatlist: 如果是这样的话，那么应该试试
+19:08 varna: lh_mouse: 鼻来
+19:08 lh_mouse: iyzsong, 爆照。
+19:08 hope1: 不想变得目的意识很强+
+19:08 lh_mouse: varna, 不给！
+19:08 varna: 这耗不让我模，然而路边的猫头都熟练地让我模
+19:08 varna: 糖果还会玩猫吊
+19:08 Flandre`: ...
+19:08 iyzsong: 我双向情感障碍大概很久了~
+19:09 iyzsong: lh_mouse: 现在很严圈好重
+19:09 varna: cleamooon: 对了，将来猫娘要实装语音
+19:09 iyzsong: 黑眼圈
+19:09 varna: cleamooon: 以后你猫的时候说不定就能听到道歉音（棒读）了
+19:09 cleamooon: 噗
+19:09 cleamooon: 有毛用
+19:09 hatlist: 不过如果是药物治疗，还是谨慎些要紧
+19:09 cleamooon: 糖果是不是就是你的高中同学？
+19:10 varna: 不是
+19:10 varna: 大学同学
+19:10 hope1: 看看文章倒是真的。以前文章小说漫画电影都看得少，最近发现不少都挺有趣的
+19:10 cleamooon: 怎么感觉是你调 教的基佬
+19:10 iyzsong: ...
+19:10 varna: 看漫画有时候容易伤感，我还记得我打完夏活去看《欠雪加油》，都吓迷糊了
+19:10 cleamooon: 于是你还是有喜欢的呀... 只不过不是『能用』的
+19:10 varna: 作者说削了甲之后防空姬兔撸兔撸地就打掉了
+19:10 varna: 哦瘊瘊
+19:11 varna: 幼女+
+19:11 varna: 你看我就看了很多没什么卵用的东西
+19:11 cleamooon: 我天天在鬼畜
+19:12 iyzsong: 我快要饿死了 >.<
+19:13 varna: 面包会有的……
+19:14 hatlist: 妹纸也会有的。。。
+19:14 iyzsong: 吼~
+19:14 varna: 妹子难说
+19:14 varna: 我感觉我过五年就要当上大FA师
+19:15 cleamooon: 面包也难说
+19:15 iyzsong: 带上我..
+19:15 cleamooon: 我喜欢米饭和面条
+19:15 varna: 我喜欢米空
+19:16 varna: 新的任务米空立绘好赞
+19:16 hope1_ joined channel
+19:16 hope1_: hatlist, 我觉得副作用没有不治疗可怕，副作用是已知可控的，而且也会观察
+19:16 hope1 quit:Ping timeout: 248 seconds
+19:17 cleamooon: 已知可控：抑郁变成多动症
+19:17 hatlist: 用药可以改善症状，但是用了药就会有依赖，那么用还是不用呢
+19:18 hope1_: 其实能活得开心的话我宁愿吃一辈子药，也没什么
+19:18 iyzsong: 我倒是想吃药，但国内的不敢信。
+19:19 tutu_wind: 在讨论啥捏 ？
+19:19 iyzsong: 也没那么严重 最多也就是没有社会生产力而已
+19:20 hope1_: 感觉现在国内的医药状况应该比以前好些了？
+19:20 cleamooon: 高级广告  http://www.bilibili.com/video/av3066356/
+19:20 hatlist: 没吧，只是头痛治嘴
+19:20 cleamooon: 没吧
+19:20 hatlist: 脚痛也治嘴
+19:20 cleamooon: 至少我没感觉到
+19:20 varna: 螺？
+19:20 iyzsong: 不知道.. 我家穷 好也用不起
+19:21 hatlist: 叫不出痛，就强行不痛
+19:21 varna: 叫不出痛只好嚎一声POI...
+19:21 Mokou: 回来了，接着刷
+19:21 cleamooon: 有钱不如买点乳香
+19:21 hope1_: iyzsong, 尽量多地收集情报，说不定能有可承受比较靠谱的解决方案？
+19:21 varna: 可怕的欧洲人！
+19:21 cleamooon: 还能大家一起享受
+19:21 tutu_wind: wow
+19:21 Mokou: varna <- 可怕的欧洲人
+19:22 varna: 突然卡住了
+19:22 hope1_: 卧槽
+19:23 hope1_: 地铁坐反了
+19:23 hope1_: 我说怎么人少
+19:23 iyzsong: 噗..
+19:23 Mokou: 2333333
+19:23 varna: ...
+19:23 Mokou: HO棠在哪
+19:23 varna: 程度
+19:23 varna: 成都
+19:23 Mokou: 这次羊驼子还把我带反了
+19:23 varna: 那车站不靠谱
+19:24 Mokou: 结果我终于有机会参观了长春轻轨四号线的自动售票机
+19:24 Mokou: 那玩意现在都让我印象深刻
+19:24 iyzsong: 2333
+19:24 varna: 如果那个售票机可用，就有两个售票员卵用
+19:24 varna: 你要以人为本
+19:24 cleamooon: 天然海棠姬
+19:24 Mokou: 那两个售票员可以交给长春站
+19:25 Mokou: 你想想我们去的时候那队伍多长
+19:25 cleamooon: 腿软皇太极
+19:25 hope1_: 至少现在有座位了，无所谓
+19:25 Flandre`: 以人为本是看到别人就看到某本子的意思吗
+19:25 varna: 我很少见到那么长的队伍
+19:25 varna: Flandre`: 不，是明明面前有妹子却只会撸管
+19:25 varna: 形容死宅无能
+19:25 hope1_: 坐反了到终点站才意识到
+19:25 Flandre`: ...
+19:25 varna: 3-5出击
+19:25 Mokou: 另外岛城地铁的自动售票机是可用的
+19:25 Mokou: 不过不支持一块纸币
+19:26 varna: 十六万/电/狗/绫波/小和/ ;
+19:26 Mokou: 然后我咣叽一下扔了一元港币进去
+19:26 varna: 换个BGM
+19:27 varna: 民谣版，《草泥马之歌》
+19:27 Mokou: 补给船做完，也就是说还剩五场
+19:27 varna: 单纵同航……
+19:27 Mokou: _(:з」∠)_
+19:27 varna: 2雷
+19:27 varna: safe
+19:27 Mokou: OTL
+19:28 varna: 绫波23/37
+19:28 Mokou: 没关系，你绫波练度够
+19:28 hope1_: 现在的新规好像有药物唯一标识系统，虽然不知效果如何
+19:28 varna: 第二点复纵怂
+19:29 cleamooon: hope1_, 我觉得吧，与其吃不是妈富隆的药，还不如和我一起跳污理火坑
+19:29 varna: 3-5下路门神是我玩舰C至今极少几个会怂的点之一
+19:29 varna: 复纵同航
+19:29 * Mokou 从来不怂
+19:29 cleamooon: 3-5至今不知道怎么夯
+19:29 Mokou: 3CA3CVB
+19:29 varna: 3雷
+19:29 varna: safe
+19:29 Mokou: 然后等着被北酱一炮送回家
+19:29 varna: POI 32/36
+19:29 hope1_: cleamoon, 还是可以跳坑啊
+19:30 Mokou: 千代田Lv77
+19:30 varna: 可怕的肝帝……
+19:30 Mokou: 噫
+19:30 Mokou: 5-4刷起来多轻松
+19:30 Mokou: 比2-3强太多了
+19:30 varna: 累
+19:30 Mokou: 桶*2
+19:30 Mokou: _(:з」∠)_我这里2-3更雷
+19:30 varna: 2-3根本不动大脑，中破了就换人
+19:30 Mokou: 累*
+19:30 Mokou: 5-4中破了就丢桶
+19:30 varna: 看着动画开着双屏刷
+19:30 Mokou: 也不用大脑
+19:31 varna: 咦，他们说DMM新开一个战国娘的游戏缓存没压缩
+19:31 Mokou: 是
+19:31 varna: 估计超过3GB
+19:31 varna: 啊，绫波中招了……
+19:31 Mokou: 安卓端随便开一下1.6G没了
+19:31 varna: 卧槽POI一炮干了撸爷63……
+19:31 Mokou: OTL
+19:31 varna: 第二炮干了金补给105……
+19:31 hope1_: iyzsong, 我也哭不出来，只是有时候会想尖叫，也叫不出来……
+19:31 Mokou: 别人家的狗
+19:31 varna: 哦不对
+19:32 varna: 干了tsu爷105
+19:32 Mokou: OTL
+19:32 varna: 这是三雷啊
+19:32 varna: 哦不对，双雷一灯
+19:32 varna: 吓尿了
+19:32 varna: 这是一个久经考验的POI
+19:32 varna: 掉落疝城
+19:32 Mokou: 刷5-4的好处就是永远不缺356炮和对空
+19:33 varna: 我日
+19:33 varna: 阿号一天做完
+19:33 varna: 逗我
+19:33 Mokou: OTL
+19:33 varna: 明天把水反开了
+19:33 Mokou: 噗
+19:33 Mokou: 铝掉下一万了
+19:33 Mokou: 今晚我跑跑水上机或者MO
+19:34 varna: 都挂上
+19:34 Mokou: 也行
+19:34 varna: 晚上挂水上机有助于铝增长
+19:34 Mokou: 油弹白天跑
+19:34 varna: 不在意难度的话，三月份你油弹可以压低保
+19:34 varna: 我日
+19:34 Mokou: 已经低保以下了
+19:34 varna: 单纵拼死
+19:35 hope1_: 不过我倒是大二下才需要决定专业，这方面机会还多
+19:35 Mokou: 我担心的是周末那五十场能不能顶住
+19:35 varna: 1雷
+19:35 Mokou: 平时倒是基本能持平
+19:35 varna: POI 29/36
+19:35 varna: 这T有利打得有如神助
+19:35 varna: 几乎一炮一个
+19:35 Mokou: OTL
+19:35 varna: hope1_: HO棠想学数理之类？
+19:36 Mokou: 一手滑成千古恨，进了幌筵寺……
+19:36 hope1_: varna, 不一定了
+19:36 varna: 卧槽，那个战国娘连HCG都不压缩
+19:36 varna: 哈哈哈哈
+19:36 Mokou: 当时我抢完号应该发条短信问问你的
+19:36 varna: hope1_: 哦？
+19:36 Mokou: 6666666666
+19:36 varna: Mokou: 我不想玩那个
+19:36 varna: 哦，你说幌筵啊
+19:36 Mokou: +
+19:36 varna: 我当时也不知道哪个服比较秃
+19:36 hope1_: varna, 至少我想先学点历史语言文学之类的课
+19:36 varna: 当时给我的似乎有鹿屋和岩川
+19:36 iyzsong: hope1_: 你先去 估计我也快了
+19:36 varna: hope1_: 也不错
+19:37 Mokou: 没，我之后跟你说的时候你说了一句“似乎是肝服？”
+19:37 varna: 噗
+19:37 varna: 我再找个借口
+19:37 Mokou: 那时候你对幌筵应该已经有印象了……
+19:37 varna: 当时我不知道刷战果这么惨烈
+19:37 varna: 复纵反航
+19:37 Mokou: _(:з」∠)_
+19:37 Mokou: 总之我知道幌筵上个月有人打了1900战果
+19:37 Mokou: 结果直接被爆出五百线
+19:37 cleamooon: hope1_, 那就跳呗，跳了之后在抑郁也值得
+19:37 varna: 6v6雷击……
+19:37 varna: safe
+19:37 Mokou: 1900被爆出五百线
+19:38 Mokou: 桶*4
+19:38 varna: 还蹭了个B胜
+19:38 cleamooon: 海棠姬可以去爬山，然后叫一叫，最后在叫一叫鸡
+19:38 varna: 爬山很好
+19:38 cleamooon: 大二选专业？好晚
+19:38 varna: 我现在体质好些，就是假期爬山锻炼的
+19:39 iyzsong: 求带..
+19:39 Mokou: +
+19:39 varna: 对身体很友好出
+19:39 varna: 有好处
+19:39 hope1_: 前几天上文学课，发现Stephen Crane的诗特别赞，以前我可是从没对任何诗歌感兴趣过
+19:39 varna: 小和飞啦！
+19:39 cleamooon: 这正常
+19:39 varna: 五个雷灌死了塔姐……
+19:40 varna: 十六万夜战秀
+19:40 Mokou: 说到诗，我最近倒是突然发现商颂里那几篇相当霸气啊……
+19:40 varna: 开灯就是干，看看多少
+19:40 varna: CI 443
+19:40 varna: 哦瘊瘊
+19:40 Mokou: OTL
+19:40 cleamooon: 但是你打算做诗歌研究吗？『shakes biu 的 XXXX 诗的背景是 YYYY，当时人们 ZZZZ』
+19:40 varna: @啥是B呀
+19:40 Mokou: 2333333
+19:40 varna: 抱歉我口音不太好
+19:41 * lh_cat 开心。
+19:41 varna: 掉落十六万
+19:41 Mokou: 小耗一定找到妹子啦！
+19:41 varna: 现充混到妹子啦！
+19:41 varna: 好了下面是保留节目
+19:41 varna: ：再补五个两层闪……
+19:42 Mokou: _(:з」∠)_
+19:42 varna: 很久以前我也觉得刷闪破坏精神构造
+19:42 varna: 直到一个拥抱变化的夏天
+19:42 Mokou: 其实打完冬活以后我也淡定不少了
+19:42 Mokou: 不过还是觉得蹭血丢桶蛋疼
+19:43 iyzsong: lh_cat: 约了？
+19:43 varna: 刷闪的时候基本整个人都麻木，只心疼桶
+19:43 Mokou: +
+19:43 Mokou: 冬活让我练就了一边写Mizuho一边刷闪的技能
+19:43 Mokou: 开上两个屏幕刷刷刷点，不是事儿
+19:43 varna: 我不写程序，刷闪的时候写出来的都是屑
+19:44 varna: 还不如我关掉BGM本气地写一下午来得效率高……
+19:44 Mokou: 你也看到Mizuho里面什么样了
+19:44 Mokou: 那些体力活怎么样都好
+19:44 varna: 你那字体太大，我看着眼花
+19:44 Mokou: _(:з」∠)_
+19:44 Mokou: 你那字体我看不请……
+19:44 Mokou: 清*
+19:44 varna: 你趴上去看
+19:44 Mokou: 然后我就和你一个度数了
+19:44 varna: 不会，我小三的时候就三百度了
+19:45 varna: 高中毕业已经逼近八百
+19:45 Mokou: 等五分钟疲劳
+19:45 Mokou: 还剩两场
+19:45 Mokou: 噫
+19:45 Mokou: 我掉到两千名开外了
+19:45 varna: 说起来，我想黑一下那些说Perl是真·无类型的伙计
+19:45 Mokou: Perl不是鶸类型么
+19:46 varna: 之前我试了一下Perl的recv和read在套接字上的效果
+19:46 varna: 然后我把一个4B网络序整数从C程序发到Perl程序
+19:46 lh_cat: iyzsong: 约什么。
+19:46 varna: 从Perl里面读出来，然后输出它
+19:46 varna: 结果Perl告诉我，这是个/
+19:46 Mokou: _(:з」∠)_
+19:46 varna: 没错里面读出来的是个本格的pv
+19:47 iyzsong: lh_cat: 我哪里知道.. 我又没经验
+19:47 varna: 不是iv或者uv
+19:47 lh_cat: Mokou: 不算正式的。
+19:47 varna: 它需要一次手工unpack（perldoc -f unpack）换成整数
+19:47 Mokou: 噫
+19:47 Mokou: 现充真可怕
+19:47 varna: OTL
+19:47 varna: 小耗要现充了
+19:47 Mokou: 没关系，我有129级的大凤
+19:47 iyzsong: perl真神奇 0 0
+19:48 varna: Perl运行时是动态类型的，但不是无类型
+19:48 varna: 类型转换有时候好用有时候不好用
+19:48 lh_cat: 什么？
+19:48 lh_cat: ヲ现在依然是单身。
+19:48 varna: 好歹你还有希望……
+19:48 Mokou: Perl应该是弱类型吧
+19:49 varna: 是
+19:49 Mokou: 谁说这玩意是无类型的？
+19:49 varna: 动态弱类型而已
+19:49 Mokou: 有没有人说Py是无类型
+19:49 iyzsong: C/haskell运行的时候才能无类型吧
+19:49 varna: 运行不算
+19:49 varna: 你都做过有损翻译了
+19:49 iyzsong: perl又不编译..
+19:50 varna: 但你严重混淆了语义和实现
+19:50 Mokou: +
+19:50 iyzsong: m.m
+19:50 iyzsong: 我就说实现..
+19:50 lh_cat: 地铁信号好差。
+19:50 varna: 当你把程序按照仿若（as-if）正确的原则翻译走的时候，它就不是原来的语言了
+19:50 * hope1_ 脑洞不够大，不开心
+19:50 varna: 这时候谈语义没有意义
+19:50 Mokou: 但是无类型/弱类型/强类型修饰的不是语言么
+19:50 varna: 233song可能迷惑于运行时的存在
+19:51 varna: 但运行时这个东西如果写进语义，那么就有；否则可以没有，它只是实现
+19:51 Mokou: +
+19:51 hope1_: http://picpaste.com/pics/edc0HnYh.1457092177.jpg
+19:51 lh_cat: 比如 java 。
+19:51 varna: 巫女巫女铃爷
+19:51 cleamooon: 讨论运行时的话，那么所有语言都是汇编吧
+19:52 Mokou: 未必
+19:52 lh_cat: 扯。
+19:52 Mokou: Perl
+19:52 varna: 错
+19:52 varna: 首先你需要能够证明，编译可以完成
+19:52 hope1_: 但RTTI的情况下，运行时也需要和类型交互
+19:52 varna: 然后你需要对编译的有损程度作出约定
+19:52 Mokou: 啊，这场要输
+19:52 cleamooon: 哦... 对，还一堆没法编译的...
+19:53 varna: 所以这其实只是给定语言A和B, 讨论A和B的关系
+19:53 varna: 随意你指定A和B是什么
+19:53 lh_cat: 编译未必可完成。
+19:53 varna: 我觉得计算机教育的一个坑迷信在于告诉了大家编译的错误观念
+19:53 lh_cat: 比如模板无限递归。
+19:53 varna: 所谓编译只是应景翻译
+19:53 lh_cat: 以实现代替语义不是 C 厨么。
+19:54 varna: lh_cat: 类似这样的重写不收敛的东西都容易编译不能
+19:54 hope1_: 翻译+
+19:54 varna: 不过跟计算机科学的新生科普重写系统可能又难度太大
+19:54 varna: 结果就出来一堆迷信
+19:54 Mokou: 噗
+19:54 tutu_wind: 喵～
+19:54 Mokou: Lv12瑞穗二雷平A轰沉一个千代田……
+19:54 hope1_: 编译原理不是大二的课吗
+19:54 iyzsong: 不明觉历 我啥都不懂 = =
+19:54 lh_cat: 大概 C 厨也得抱汇编大腿。
+19:54 varna: hope1_: 未必，看学校；我这里是大三——不过怎么说都是坑
+19:55 lh_cat: tutu_wind: 摸头。
+19:55 varna: 我本科的编译课花了大半学期讲语法分析
+19:55 lh_cat: 同。
+19:55 varna: 我觉得这个观念太土了，落后了二十年吧
+19:56 tutu_wind: 渣渣就是这样洗礼过来的。。
+19:56 cleamooon: 我校的编译课就是语法分析
+19:56 cleamooon: 分析完了就没了
+19:56 hope1_: iyzsong, 无所谓啦，想知道就学，不然也不必苦恼
+19:56 cleamooon: 最后做一个c子集的编译器
+19:56 hope1_: 语法分析不是应该一节课讲完吗……
+19:56 varna: 所以其实学校的编译课很多安排得并不好，需要自己来
+19:56 varna: 我这里是弄一个pascal-like
+19:56 hope1_: 不然直接用lisp
+19:57 varna: 一节课讲完的话，学生负担太重，课堂课时和课后课时的比例也不容易调节
+19:57 cleamooon: pascal还真有人用呀
+19:57 hope1_: s/lisp/s-expr
+19:57 varna: 但是花太多时间我觉得不好
+19:57 varna: cleamooon: delphi现在还有少量用户吧
+19:57 varna: 比如亚夜花
+19:57 varna: 比如亚夜花
+19:57 varna: 比如亚夜花
+19:57 lh_cat: hope1_: 妳少了个 / 。
+19:57 varna: 重要的事情
+19:57 cleamooon: delphi......
+19:57 Mokou: 然后你弄了个Pascal-like，编译到Mizuho Bytecode，在算乘法的时候爆炸了
+19:58 varna: 亚夜花在用delphi, 我舔亚夜花
+19:58 Mokou: 啊
+19:58 Mokou: 第一点劝退
+19:58 hope1_: lh_cat, 对哦
+19:58 Mokou: _(:з」∠)_
+19:58 varna: 卧槽POI刷中破了
+19:58 varna: POI好样的
+19:58 cleamooon: 学校大概不愿意花时间讲很多前端后端优化之类的
+19:58 varna: cleamooon: 因为很多老师自己也不会……
+19:58 lh_cat: 海棠回ヲ了！
+19:58 lh_cat: 海棠回ヲ了！
+19:58 lh_cat: 海棠回ヲ了！
+19:58 Mokou: 莉酱一炮爆了9野
+19:59 cleamooon: 自己不会+
+19:59 Mokou: 然后HO棠被吓到了，以后不敢回小耗了
+19:59 cleamooon: 至少在海盗国，一流的懒人才留校...
+19:59 Mokou: _(:з」∠)_九分钟疲劳
+19:59 varna: 这课不好讲，因为后端的第一手经验不多；但可以安排一些课时介绍体系无关优化的基本
+20:00 lh_cat: ヲ们编译原理八节课。
+20:00 varna: 反正本科课程都是导论，讲古旧的算法就行，然后告诉大家哪些内容是落伍的
+20:00 cleamooon: 导论+
+20:00 lh_cat: 比如 VC6？
+20:00 cleamooon: 其实烁屎也是导论
+20:00 varna: 要是能说VC6落伍那简直谢天谢地
+20:00 varna: 然而我不知道ZJU教学情况如何
+20:01 varna: JLU推的确实是THQ和VC6
+20:01 hope1_: 编译原理不是可以做很好玩的project吗
+20:01 lh_cat: 羊驼已躺。
+20:01 varna: hope1_: 我就记得我一边玩东方小游戏一边写了一千多行语义动作
+20:01 lh_cat: 编译原理是考试的。
+20:01 varna: 考试+
+20:02 cleamooon: 考试+...
+20:02 varna: 然后我第二学期专门有个算学分的编译原理课设，十二周结束
+20:02 hope1_: http://matt.might.net/articles/c++-template-meta-programming-with-lambda-calculus/ 这种东西
+20:02 lh_cat: 语♂义♂动♂作。
+20:03 lh_cat: 地铁这有个小姑娘，背影腿都不错。
+20:03 lh_cat: 不过脸嘛。
+20:03 varna: 转过去看看！
+20:03 lh_cat: 不能看。
+20:04 lh_cat: ヲ要小姑娘啊。
+20:04 varna: 呜呜
+20:04 iyzsong: 窝过个十几年再来学CS吧..
+20:04 varna: 我也想要小姑娘
+20:05 lh_cat: varna: 什么时候来上海。
+20:05 varna: lh_cat: 准备好拥抱变化的时候
+20:05 cleamooon: 十几年后，量子计算机成功规模化，现在讨论的都成了扯淡...
+20:05 hope1_: iyzsong, 那现在做些什么？
+20:05 lh_cat: 19:59:54 <varna> JLU推的确实是THQ和VC6   // 一样。
+20:05 iyzsong: 想办法糊口..
+20:05 varna: 惨
+20:06 Flandre`: THQ 是什么？
+20:06 lh_cat: varna: 不来了？
+20:06 lh_cat: 谭。
+20:06 Flandre`: 原来是这个缩写
+20:06 * hope1_ 最大的梦想是移民欧洲吃救济
+20:06 cleamooon: 我校是java.....
+20:06 varna: lh_cat: 去还是要去的，但我不打算像刚分到B2B写C或者艹的时候那么早去实习了
+20:07 tutu_wind quit:Ping timeout: 246 seconds
+20:07 lh_cat: 什么时候来实习。
+20:07 varna: 我希望能推到四月中旬以后，那之前我先跟糖果一起把他们的事情收拾了
+20:08 lh_cat: 喵。
+20:08 varna: 糖果在弄office server什么的，最近客户端的工期又延了
+20:08 hope1_: 羊驼今年就硕士毕业了？
+20:08 lh_cat: M$ ？
+20:08 varna: 真要部署，我还得把他们那些2.6.26都换掉
+20:08 varna: lh_cat: 小公司
+20:08 varna: hope1_: 对
+20:09 varna: lh_cat: 他们想集成些office组件进去用而已
+20:09 hope1_: 我好像还能读十年学
+20:09 lh_cat: ヲ要小姑娘。
+20:10 iyzsong: lh_cat: 你不是有了么..
+20:10 lh_cat: 不算有。
+20:11 cleamooon: 小蚝有了
+20:11 lh_cat: 去去去，
+20:11 iyzsong: 不是我的
+20:11 cleamooon: 我如果还能什么都不考虑读十年书就好了
+20:11 varna: +1
+20:11 varna: 读书很好的
+20:12 cleamooon: 小蚝有了，不是我的
+20:12 lh_cat: 边儿拉儿去。
+20:13 lh_cat: 羊驼要四月之后才能来哇。
+20:14 cleamooon: 羊驼子要去给小蚝工作吗
+20:15 lh_cat: 羊驼不会来的。
+20:15 varna: 我水平低，估计直接被扫出门……
+20:15 varna: 如果以后有人厨C, 我就是被C毒害的反例
+20:15 varna: 根本不会好好写程序
+20:16 iyzsong: 我还没水平 没写过程序.
+20:16 hope1_ quit:Ping timeout: 246 seconds
+20:16 varna: 最后只能跟大酒神一样吹大菊观
+20:16 * Mokou 没水平
+20:16 varna: 我说个事，这旗适合女装
+20:16 Mokou: 我说个事，这驼适合女装
+20:16 varna: 卧槽绫波忘刷了
+20:17 Mokou: 我和code_new都能证明这点，二比一
+20:17 varna: 又是两趟
+20:17 Mokou: 你看
+20:17 Mokou: 叫你说谎
+20:17 varna: 你俩连学士学位都没拿到
+20:17 Mokou: 苍天饶过谁
+20:17 varna: 不算
+20:17 cleamooon: 你们一起女装
+20:17 Mokou: 这并不影响
+20:17 Mokou: cleamooon: 爆
+20:17 varna: 我这一副大叔长相
+20:17 varna: 现在都骗不了花痴小女孩
+20:17 Mokou: 你明明玉面银魔
+20:17 varna: 穿衣服还土气
+20:17 Mokou: 只是没头发而已，带个假发就好
+20:18 varna: 这年头小女孩都喜欢泽野弘之那样的大叔吧
+20:18 iyzsong: 2333
+20:18 Mokou: 你可以找小男孩
+20:18 Mokou: 喜欢大姐姐的那种
+20:18 varna: 唔，有道理
+20:18 varna: 但我大姐姐没婚
+20:18 Mokou: 21:17 < Mokou> 你可以找小男孩
+20:18 Mokou: 21:17 < Mokou> 喜欢大姐姐的那种
+20:18 Mokou: 21:17 <+varna> 唔，有道理
+20:18 Mokou: ^羊驼子要女装啦
+20:18 cleamooon: 羊驼子要女装啦
+20:18 varna: 女装是不可能的
+20:18 varna: 我得对得起我那条平角内裤
+20:19 cleamooon: 直接变女的
+20:19 Mokou: 你弄两个九一弹，把风帽摘下来
+20:19 varna: 小耗那样的长相估计还讨女孩子喜欢些，比较文气
+20:19 varna: 我看上去就阴沉
+20:19 iyzsong: 我看上去就逗逼..
+20:19 cleamooon: 我看上去就死宅
+20:20 varna: 你是五岁幼女
+20:20 Mokou: 肝物妹岚月酱
+20:20 cleamooon: 噗
+20:20 varna: 肝物妹23333
+20:20 cleamooon: 你见过边撸边吃饭的幼女吗
+20:20 lh_cat: 明天不穿衬衣啦。
+20:20 Mokou: 银乱幼女！
+20:21 varna: 小耗要买高档休闲装啦！
+20:21 iyzsong: 没穿过衬衣a-a
+20:22 cleamooon: 演戏看到一个菊月改，看成了菊花改
+20:22 varna: 2333
+20:25 Stevearzh joined channel
+20:26 Mokou: http://ww3.sinaimg.cn/bmiddle/7e948b4djw1f1iz8ophg6j20m80m8jtz.jpg 这将是一场改变历史的大选
+20:26 cleamooon: 最后一个23333
+20:27 cleamooon: 我选择狗带
+20:28 varna: 我选择雾岛
+20:28 varna: 第一点，单纵
+20:28 Mokou: 我选择裤子
+20:28 Mokou: 5-4结束
+20:29 varna: 卧槽雷击miss T有利
+20:29 varna: 拼了
+20:29 Mokou: ……
+20:29 varna: 1雷
+20:29 varna: 无伤过
+20:30 varna: 第二点复纵怂
+20:30 varna: 复纵反航
+20:31 varna: 6v5
+20:31 varna: 32/36 34/37 31/36 B
+20:32 varna: 伙计们，打完这盘就可以收工泡澡了，昼战一波推过去！
+20:32 varna: 复纵同航
+20:34 varna: 雷击搞定，A收工准备上路
+20:36 hope1 joined channel
+20:51 varna: 三巡三空母走起
+20:51 cleamooon: orz
+20:51 varna: 北酱我来也
+20:53 varna: 第二点在读立绘
+20:53 varna: 我觉得要出喔改
+20:53 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ca/fa_386887.jpg
+20:53 varna: 啊，不是
+20:53 varna: 233333
+20:53 Mokou: 2333333
+20:53 cleamooon: NFSW NFSW NFSW 诗雨  http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ca/pg_147648.jpg
+20:54 varna: 开幕轰沉4
+20:54 Mokou: 我仏瓷杯
+20:54 Mokou: 下次我要是再去找羊驼子送他一个
+20:54 cleamooon: 发错了，是　NFSW
+20:54 varna: 尻根被针对，57/63过
+20:54 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ca/pp_319330.jpg
+20:54 varna: 异议有莉，时雨的胸不是这个形状的
+20:55 varna: 北酱我来也
+20:55 varna: 放我过去，我们好好地说话！
+20:55 Mokou: 这是九一的风帽……
+20:55 Mokou: 但是驱逐舰不用九一
+20:55 varna: 大丈夫，毛子是不是认为驱逐舰可以用穿甲弹
+20:56 varna: 糟了战斗机配少了……
+20:56 varna: 尻根被针对，25/63
+20:56 Mokou: 毛子认为驱逐舰可以顶着主副炮的火力贴到航妈的脸上用AP弹打核心区
+20:56 varna: 大凤……13/70
+20:56 Mokou: ……
+20:56 Mokou: 信仰不够
+20:56 varna: 世事难料
+20:57 Mokou: 大凤再升一级我就可以把飞龙换到旗舰了
+20:57 cleamooon: 我至今玩过的游戏性最高的游戏，大多是 gb/gba 上的
+20:57 Mokou: 就剩四万经验
+20:57 cleamooon: orz
+20:57 varna: 不补闪了，再来
+20:58 Mokou: 我来几盘5-5试试
+20:58 cleamooon: orz
+20:58 varna: 基本上3-5还是恶心的
+20:58 Mokou: 迟早得打完
+20:58 Mokou: +
+20:59 varna: 这月已经打得不错了，水雷战一气呵成
+20:59 iyzsong: 我的室友一个都还没回来 0 0
+20:59 Mokou: 先给瑞鹤来三层闪
+20:59 varna: 第一点鸟海被针对，-6
+20:59 Mokou: 噫
+21:00 Mokou: 被蹭血了……
+21:00 varna: 四舰攻蹭血毕竟拦不住
+21:00 varna: 第二点没读立绘
+21:00 varna: 96, 哦瘊瘊
+21:00 varna: 残念，轰沉2
+21:01 varna: 蹭血pass
+21:01 varna: 太惊险了
+21:01 varna: 所有的攻击都选错了敌空母
+21:01 varna: 复纵怂
+21:02 varna: 我驲
+21:02 varna: 开幕大破
+21:02 varna: 伙计们这不和谐啊
+21:03 varna: 满船位昼战S...
+21:03 varna: 我都迷糊了
+21:03 Mokou: ……
+21:03 Mokou: 瑞鹤回避94
+21:03 Mokou: 应该够了，我先不刷第三层
+21:03 varna: 加一组战斗机吧
+21:03 varna: 我觉得这有点不和谐
+21:04 Mokou: 另外我终于把第二门51改到+4了
+21:04 Mokou: 现在就剩七门46……
+21:04 varna: 北酱这月有点不高兴
+21:04 varna: 得想办法伺候开心了才行
+21:05 varna: 第一点轰沉5
+21:05 varna: 你告诉我这叫T不利，我是不信的……
+21:05 hope1 quit:Ping timeout: 240 seconds
+21:05 T-J-M joined channel
+21:06 varna: 一波飞机之后就剩一个重巡傻傻地瞪着我了
+21:06 Mokou: 你想想我那堆开幕
+21:06 varna: 第二点读立绘……
+21:06 hope1 joined channel
+21:06 varna: 是福不是祸，是祸躲不过
+21:06 varna: 干
+21:06 Mokou: 各种一片miss然后同航T有利
+21:06 varna: 160
+21:06 varna: 喔改好久不见
+21:06 Mokou: 蛐蛐喔改，不怂
+21:07 varna: T有利
+21:07 varna: 压制2
+21:07 Mokou: 我差点手一滑点去5-4
+21:07 varna: safe
+21:07 hatelis joined channel
+21:07 hatelis quit:Client Quit
+21:07 varna: 这个太惊险
+21:07 varna: 不过其实只要塔姐开炮了就是惊险的
+21:08 Mokou: 开幕蹭了两个7血
+21:08 Mokou: +
+21:08 Mokou: 5/180
+21:08 varna: 二号位的我鹤还在向僚舰表示感激
+21:08 Mokou: 轰沉
+21:08 Mokou: 通过
+21:08 varna: 加油吧欠雪酱
+21:08 varna: 复纵怂
+21:08 varna: 北酱放我过去
+21:08 varna: 2小破……
+21:09 Mokou: 复纵喔
+21:09 varna: 18/63 可以的
+21:09 Mokou: 开幕轰沉旗舰喔
+21:09 Mokou: B子躲过塔酱一炮
+21:09 varna: 哑了
+21:09 lh_mouse: kal 
+21:09 lh_mouse: 喵。
+21:09 Mokou: 武大一人轰死一个苍蝇
+21:09 varna: 55/390 pass
+21:09 Mokou: 塔酱再见
+21:09 varna: 这月的3-5挺顺
+21:10 Mokou: 瑞鹤Lv114
+21:10 varna: OTL
+21:10 varna: 瑞鹤这个我还是挺羡慕的
+21:10 Mokou: 然而120以下升级飞快
+21:10 varna: 换回红白衣服之后瑞鹤显得不那么逗比了
+21:10 Mokou: 你挂5-4旗舰刷几天就成
+21:10 varna: 我现在就这思路
+21:10 varna: 挂5-4带葛城天城谁的练级
+21:10 Mokou: 单纵
+21:10 Mokou: 哈哈哈
+21:10 Mokou: 空袭大破俾斯麦
+21:10 varna: 一天三盘有益健康
+21:10 varna: ……
+21:10 varna: 传统节目
+21:11 Mokou: 开幕雷小破武藏
+21:11 Mokou: 炮击中破大和
+21:11 varna: 羽嘿又跪了
+21:11 varna: 我鹤突然智商上线
+21:11 Mokou: 中破大和直接怒艹雷级
+21:11 Mokou: 然并卵
+21:11 Mokou: 咦，MVP是大凤
+21:11 varna: 不错，今天这损害只要稍加修理就可以明天再打三盘5-4
+21:12 varna: 今天我试了试，发觉效果不错又节约时间
+21:12 Mokou: 594 + 855 + 750
+21:12 Mokou: 他娘的大战舰，烧我钢材
+21:12 varna: 另外我一个流改被针对了
+21:12 Mokou: ……
+21:12 varna: 直接打剩练度6
+21:13 Mokou: 第二次，打完今天先歇歇
+21:13 Mokou: 再打明天没钢了
+21:13 varna: 很遗憾今天得二兮兮鹤挂明石了
+21:14 Mokou: 昨天晚上我直接明石挂三条
+21:14 Mokou: 白雷再见
+21:15 varna: 这月月常还挺顺的，2-5和3-5一共就劝退刚才那两次
+21:15 Mokou: WOGAY
+21:15 Mokou: 武藏小破
+21:15 Mokou: T不利
+21:15 varna: 下周得申报答辩了
+21:15 varna: 虽说答辩其实在五月末……
+21:15 Mokou: 俾斯麦躲了一轮空袭
+21:16 Mokou: 大凤躲了二轮空袭，通过
+21:16 cleamooon: orz
+21:16 varna: 噫，试制连装子日
+21:16 varna: 这个好日
+21:16 Mokou: 门神
+21:16 varna: 过过过
+21:16 Mokou: 复纵
+21:17 varna: 给你加持一个米空巴福
+21:17 Mokou: 空袭大和-9
+21:17 Mokou: 瑞鹤闪了开幕雷，反航
+21:17 varna: OTL
+21:17 varna: 能打
+21:17 Mokou: 大凤闪了一炮
+21:17 Mokou: 闭幕雷封住了
+21:17 varna: 不错
+21:17 Mokou: 雷爷下去了
+21:17 Mokou: 通过
+21:17 Mokou: 然后估计掉沟里
+21:17 varna: 可怕的4200圆之力
+21:18 varna: 哦不对
+21:18 Mokou: 噫，进去了
+21:18 varna: 可怕的欧皇血脉
+21:18 Mokou: 以，然而94回避两层闪
+21:18 Mokou: 噫*
+21:18 Mokou: 开幕大破瑞鹤
+21:18 varna: 我那4200圆+过百回避两层闪被打成什么样你也见到了……
+21:18 Mokou: 开幕雷中破大凤
+21:18 Mokou: 这他妈轮形雷啊……
+21:19 varna: 排成一圈的单纵
+21:19 Mokou: 纵横家真可怕
+21:19 varna: cleamooon: 对了岚月酱玩过骑砍没
+21:19 Mokou: 武藏、俾斯麦：怂逼才观测
+21:19 cleamooon: 骑砍？
+21:19 Mokou: 3vs3
+21:19 cleamooon: ？
+21:19 Mokou: 漂亮
+21:19 Mokou: 不愧是大和
+21:20 Mokou: CI
+21:20 varna: cleamooon: Mount & Blade, 一个中世纪的角色扮演+动作游戏，国内土包子地译成“骑马与砍杀”
+21:20 Mokou: 瑞鹤-1
+21:20 varna: 哈哈哈
+21:20 varna: 夜战大黄鱼收钢失败了
+21:20 Mokou: 手一滑打了个2血的瑞鹤
+21:20 varna: 不对，前哨战是小红鱼？
+21:20 Mokou: 好象是黄的
+21:21 Mokou: 我确认下
+21:22 cleamooon: 第一人称无力，晕
+21:22 Mokou: 红的……
+21:23 varna: cleamooon: 是第三人称的，第一人称视角不好
+21:23 Mokou: 噫
+21:23 varna: 那个第一人称其实就是把相机放在模型头上，甚至会被游戏自带的模型挡住
+21:23 Mokou: 本来打算让大凤和瑞鹤好好泡个澡的
+21:23 Mokou: 结果还得丢桶
+21:24 * Mokou 还剩1176钢
+21:24 cleamooon: soga
+21:24 cleamooon: 好玩吗
+21:24 varna: 我挺喜欢的，战斗做得挺细致
+21:25 cleamooon: 又是夕云，每次2-5都是夕云
+21:25 varna: 基本上格斗战的攻击和格挡是鼠标手势控制的，弓箭需要体感抛物线和提前量
+21:25 Mokou: 欧洲人太可怕
+21:25 cleamooon: 我现在到想看一个bot玩arpg
+21:25 varna: 不过弓箭是神坑，因为受人物属性影响太严重了
+21:26 cleamooon: soga
+21:26 varna: 一开始我觉得骑马射箭超难，后来我明白了，初始属性站稳了射都是信仰……
+21:26 varna: 那散布如打砲
+21:26 cleamooon: 想起了流星蝴蝶剑
+21:26 varna: 流星蝴蝶剑我也挺喜欢，就是玩不好
+21:26 varna: 只会用匕首
+21:26 cleamooon: 匕首+
+21:27 cleamooon: 出门
+21:27 varna: 3333造出一个24min, 一口喷出一个黑潮
+21:27 varna: 意识模糊
+21:28 cleamooon: ......
+21:28 Mokou: http://ww3.sinaimg.cn/bmiddle/8faf3cccgw1f1jupgbtb6j20go0fi40d.jpg
+21:28 varna: 23333
+21:29 varna: 哪天我整理一个舰C转进简史出来，从13年铁底开始看看蝗军到底在太平洋上被打成了什么熊样
+21:29 Mokou: (｡･ω･)ﾉ写写写
+21:30 cleamooon: 写写写
+21:30 varna: 不过估计萌二会怒喷「现在lowa都实装了，你说盟军找抽啊」
+21:30 lh_mouse: 没看懂。
+21:30 Mokou: 去她娘的萌二
+21:30 varna: lh_mouse: 去年这时候田中发明了捞菱饼季节活动，玩家在决死作战之后拼死作战，痛不欲生
+21:31 varna: 今年象征性地每人送了一个菱饼道具
+21:31 lh_mouse: 0.0
+21:31 varna: http://www.bilibili.com/video/av3807496/ 开口跪
+21:31 varna: 非黄无三俗，内含铁血忠诚，剪辑恶劣
+21:32 varna: 说起来，我军阅兵的时候为了显得威武，95都上刺刀的啊……
+21:33 Mokou: ……什么鬼
+21:33 varna: 03也上刺刀
+21:33 varna: 大概是为了我军那个特色（？）的劈枪动作看着帅吧
+21:34 varna: 啊，有些没上刺刀的
+21:35 Mokou: 不过Soviet March是在黑吧
+21:35 varna: 是
+21:35 Mokou: 我记得RA系列一贯疯狂黑苏联……
+21:35 varna: Hell March还算威武，Soviet March就是在无脑黑
+21:35 lh_mouse: geordi, << &foo::a; struct foo { static constexpr int a = 1; };
+21:35 geordi: error: undefined reference to 'foo::a'
+21:35 varna: 现在我还留着HM2
+21:36 varna: HM感觉最赞的一作，RA3的版本没什么感觉……
+21:36 varna: 似乎主推蝗国了
+21:36 Mokou: +
+21:36 Mokou: 不过RA3的蝗国确实很猛啊
+21:37 Mokou: 中原是不是都被蝗国下了？
+21:37 cleamooon quit:Ping timeout: 248 seconds
+21:37 varna: 是，都打到撸西亚了
+21:37 varna: 哦不对
+21:37 varna: RA设定的苏联包括中国吧
+21:37 Mokou: 我看看
+21:37 lh_mouse: 不包括。
+21:38 varna: 咦，中国谜之缺席
+21:38 lh_mouse: RA95 苏联阵营中苏俄与中国为敌。
+21:38 varna: RA95...这个有说服力，我只玩过RA98，还不懂剧情
+21:39 Mokou: In the Great World War II, China was attacked by the USSR, in their Asian campaign to dominate the continent. The campaign was mostly successful, but with the Allied advances on the European front, the Soviet military eventually lost its might and had to retreat, leaving their spoils behind. On a map of Great World War II, China was coloured light blue meaning the Allies didn't support them quickly, but w
+21:39 Mokou: as invaded by the Soviets. 
+21:39 Mokou: n Great World War III, China joined later in the war to assist Russia in their invasion of America. Despite that in an alternated campaign, the Chinese supported European and American forces to crush Mongolia and Vietnam by strictly bombarding them and military aid brought to the motherland. 
+21:39 Mokou: It was unknown how China would be ruled during the War of the Three Powers, if the Empire of the Rising Sun would invade it. The Soviets and Allied Forces later controlled the Chinese people after a two-way battle at Tokyo and Mt. Fuji. 
+21:40 Mokou: 哦瘊瘊
+21:40 lh_mouse: RA98 的性质和共和国之辉一样。
+21:40 varna: 这么惨的？
+21:41 varna: 看来我的RA游戏经历扭曲了
+21:41 hope1 quit:Ping timeout: 244 seconds
+21:41 Mokou: 似乎是
+21:41 Mokou: 虽说我是直接上的RA2原版……
+21:41 varna: 我小时候跟朋友玩过RA/C&C, 后来才玩C&C2和RA2
+21:42 Mokou: http://vignette1.wikia.nocookie.net/cnc/images/f/fd/C%26C_World.png/revision/latest?cb=20110606000127 噫
+21:42 Mokou: 这图来自C&C wiki
+21:43 varna: 噫，南西GET
+21:43 lh_mouse: varna, https://www.youtube.com/watch?v=fx3fK5kve-M  20:40 开始。
+21:43 varna: 南方海域GET
+21:43 Mokou: 然而还是被反推了
+21:43 varna: 中部海域制海权GET
+21:43 varna: 我看看那个webproxy能不能代理油管子……
+21:43 lh_mouse: you will always stand by me.
+21:44 lh_mouse: when I regained the lands stolen by the Europeans and *Chinese* your were there.
+21:44 varna: 这样啊
+21:44 varna: 还真能代理，就是巨卡
+21:44 lh_mouse: varna, ヲ那个就能用。
+21:45 varna: (｡･ω･)ﾉ
+21:45 Mokou: 需要的话我用学派帮你拖一下
+21:45 varna: 说起来现在我还真找不到一个好的《铁血忠诚》mp3
+21:45 varna: 不用
+21:45 varna: 拿到的基本只有枪版音轨，前后杂乱，不行我只好自己加工一下
+21:46 lh_mouse: varna, 你浏览器改下设置就行。
+21:46 lh_mouse: 可以用，速度不错。
+21:46 varna: 大丈夫，平时我不太看油管子，找些东西凑合一下就行
+21:47 varna: 等到滚出学校之后重新整顿一次代理，出了教育网可能不少地方都不容易上去了
+21:47 hope1 joined channel
+21:50 lh_mouse: varna, 推销。（pia）
+21:50 FrankHB joined channel
+21:50 Flandre` quit:
+21:51 varna: 我看这广告者鼠目一转，估计有pitfall, 先验他鼻子
+21:54 varna: 也许明后天我清掉娄号可以打一次水反+霞出击
+21:54 Mokou: 噗
+21:54 varna: 不过这次得多带电探……
+21:54 Mokou: 百度贴吧协议 第20条
+21:54 Mokou: 用户在任何时间段在百度贴吧发表的任何内容的著作财产权，用户许可百度公司在全世界范围内免费地、永久性地、不可撤销地、可分许可地和非独家地使用的权利，包括但不限于：复制权、发行权、出租权、展览权、表演权、放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编权以及《著作
+21:54 Mokou: 权法》规定的由著作权人享有的其他著作财产权利。并且，用户许可百度公司有权利就任何主体侵权而单独提起诉讼，并获得全部赔偿。
+21:55 varna: 我驲暴雨
+21:55 Mokou: ……
+21:55 iyzsong: ...
+21:55 varna: 半夜下的暴雨叫什么，不是POI吧
+21:55 Mokou: 你日个暴雪
+21:55 varna: 已日，Lv115
+21:56 Mokou: @110
+21:56 hope1 quit:Remote host closed the connection
+21:56 varna: 欠雪很好的
+21:56 hope1 joined channel
+21:56 varna: 又土气又认真，不花哨
+21:57 varna: 土气的女孩子最赞
+21:58 varna: 总之幸好我在实验室扔了把伞
+21:58 Mokou: 你直接睡实验室吧
+21:59 Mokou: 顺便来个50盘5-4收了撸号
+21:59 varna: 头会炸开
+21:59 varna: 如果可能的话我也喜欢规律生活的
+21:59 varna: 但是都怪浑作战（棒读）
+21:59 Mokou: 脑浆炸裂羊驼
+22:00 varna: 娄号我会用三盘5-4和不知道多少盘2-3收掉
+22:00 Mokou: OTL
+22:00 varna: 我再也不想一天刷几十盘5-4了
+22:00 varna: 中途岛就是这么输掉的
+22:00 Mokou: 我倒觉得刷起来挺轻松的，就是资源蛋疼
+22:00 Mokou: 而且现在有丙了
+22:01 varna: 我得逐渐让自己习惯打丙
+22:01 varna: 没办法的事情，以后的甲会纯粹恶心人的
+22:01 Mokou: _(:з」∠)_
+22:01 * Mokou 水打一队平均只有118级
+22:01 varna: 好歹也让我指挥一下啊，让我索敌也好炮战也好，起码操作一下
+22:02 varna: 打偏了我还能练习
+22:02 Mokou: +
+22:03 Mokou: 不过靠谱的海战游戏也没有就是了……
+22:03 Mokou: 虽说真正炮战一打几个小时，大概没人受得了
+22:04 varna: 水面战估计是别想了
+22:04 varna: 潜水舰应该还可以玩猎杀潜航，虽然不知道最近的几代变成什么样了
+22:04 lh_mouse: Mokou, 才看见？
+22:05 Mokou: lh_mouse: _(:з」∠)_以前没注意
+22:07 hope1 quit:Ping timeout: 260 seconds
+22:10 varna: 今天也凑不齐人啊
+22:11 lh_mouse: geordi, << TYPE<initializer_list<int &&>::value_type>;
+22:11 geordi: error: forming pointer to reference type 'int&&'
+22:11 Mokou: L4D？
+22:11 varna: 钦定
+22:11 Mokou: _(:з」∠)_
+22:11 Mokou: 另外三月我大概没时间L4D
+22:11 Mokou: 周末得打五十场呢
+22:11 varna: 那正好，我拖下来胡乱单机练习下
+22:11 Mokou: OK
+22:11 Mokou: 虽说其实我也就乱打了几盘单机……
+22:11 varna: 乐就行
+22:12 varna: 团灭也是个乐
+22:12 Mokou: +
+22:12 Mokou: 还差二十九万提督经验到Lv108
+22:12 varna: 我看圣GAY王他们灭得挺乐的
+22:12 varna: 卧槽鹤了
+22:12 Mokou: OTL
+22:12 varna: 逗我
+22:12 Mokou: 欧洲人太可怕
+22:13 Mokou: 噫
+22:13 Mokou: 我胜率什么时候掉到97了
+22:13 Mokou: 19961/20499
+22:14 varna: 岩川7位是米空教徒！？？？
+22:14 varna: 签名：Mikkonnnnnnn
+22:14 Mokou: 噗噗噗？
+22:15 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=6d88254ebf99a9013b355b3e2d940a58/0e45b3ed2e738bd4c1a44b6ba68b87d6257ff9d2.jpg 图
+22:16 Mokou: ……
+22:17 varna: 作为米空教的一介信众，我感到很感动啊
+22:17 Mokou: 米空米空米
+22:17 Mokou: 刀剑安卓版出现BUG 导致PC版上的数据遭刪除
+22:18 Mokou: 跟你说个笑话：日本程序员
+22:18 cleamoon joined channel
+22:18 varna: 啊对，刀剑也坏档了
+22:18 varna: 我为什么要说也
+22:18 Mokou: 233333
+22:19 cleamoon: 什么鬼
+22:19 Mokou: 他们到底为什么干什么都能搞出Bug
+22:19 Mokou: 不测试的么……
+22:20 cleamoon: 不测
+22:20 cleamoon: 早上线一天早拿一天钱，可以早一天带黄鹤逃走
+22:20 Mokou: 吔屎啦
+22:21 Mokou: 安卓版舰C我还是先观望一下
+22:21 varna: 连玩家存档都能糟蹋的程序员简直不忍直视
+22:21 varna: 我觉得你要玩便携还是买个平板吧
+22:21 Mokou: +
+22:21 cleamoon: 也许程序员账号被封了
+22:21 cleamoon: 直接买个可以合体的电脑好了
+22:21 varna: 舰C已经维持了每次hotfix都bug的纪录
+22:21 Mokou: 不过苏菲破挺贵……
+22:22 varna: 多少钱？
+22:22 Mokou: 这次不hotfix也bug了
+22:22 varna: 米空立绘怎么了？
+22:22 varna: 我看现在正常了
+22:22 Mokou: 不是米空立绘，是任务娘，现在修复了
+22:22 Mokou: 啊，道具娘
+22:22 cleamoon: psv不是说不再做了吗
+22:22 Mokou: 明老板
+22:22 varna: 明石立绘？
+22:23 varna: PSV版已经出了，是屑
+22:23 Mokou: 之前明老板的新立绘是直接贴到旧立绘上的
+22:23 Mokou: 所以你能看到四只手
+22:23 cleamoon: 我说sony不是说不再生产psv
+22:23 cleamoon: 千手观音
+22:23 varna: 噗
+22:23 varna: PSV停产了？
+22:24 Mokou: 我查查
+22:24 cleamoon: 还是说psv之后的版本不再做了？
+22:25 Mokou: 停产是谣言
+22:25 cleamoon: soga
+22:26 Mokou: 不过PSV TV倒是停产了
+22:26 cleamoon: 那种东西，无所谓
+22:26 Mokou: +
+22:26 cleamoon: psv审美有问题，否则就入一个了
+22:27 varna: 来台舰C街机吧……
+22:27 varna: 我想在走廊上捏欠雪脸啊
+22:27 cleamoon: orz
+22:27 Mokou: 去尼碰
+22:27 Mokou: 你家应该够资格申请旅游签证了吧？
+22:27 cleamoon: 落地签
+22:28 Mokou: 苏菲破 二手东最便宜6688
+22:28 varna: 麻烦死了
+22:28 varna: 噗噗好贵
+22:28 Mokou: 别搞落地签
+22:28 Mokou: 会死
+22:28 cleamoon: 为什么
+22:28 varna: 去旅游玩街机太坑了
+22:28 Mokou: 只有七十二小时，活动范围限于东京市和千叶县
+22:28 Mokou: 而且到底发不发看移民官
+22:28 Mokou: 不发给你直接遣返
+22:29 Mokou: 成田的落地签现在似乎挺难搞的
+22:29 lh_mouse_ joined channel
+22:29 varna: 听起来只适合扌丁石包
+22:29 cleamoon: 海盗护照......
+22:29 lh_mouse quit:Disconnected by services
+22:29 lh_mouse_ is now known as lh_mouse
+22:29 cleamoon: 90天非商业落地签
+22:29 whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:29 Mokou: _(:з」∠)_
+22:30 Mokou: 我只能拿到大陆护照
+22:30 Mokou: 另外Shore Pass没有第二次
+22:30 Mokou: 拿了一次以后就别想拿了
+22:31 cleamoon: 然后海盗驻11区大使馆各种写地震台风海啸黑社会的
+22:31 cleamoon: shore pass是什么
+22:31 Mokou: 就是一般说的落地签
+22:31 Mokou: (日本落地签)
+22:31 cleamoon: soga
+22:31 Mokou: 当然海盗国护照那个特殊待遇不是这玩意
+22:31 cleamoon: 我看看海盗
+22:32 cleamoon: 海盗是一年最多两次90天
+22:32 Mokou: 海盗国护照这个应该算免签
+22:32 cleamoon: 免签应该没时限吧...
+22:32 Mokou: 可以有
+22:33 cleamoon: 看了一下，似乎的确算是免签...
+22:33 lh_mouse: 中国大陆对文莱新加坡日本是 15 天免签。
+22:34 Mokou: 你拿海盗国护照可以直接搞到在流资格，没签证什么事
+22:34 lh_mouse: 这个也宣称免签。
+22:34 Mokou: 在留*
+22:34 cleamoon: 我怎么不知道还能弄在留
+22:35 Mokou: 你拿着签证也是去弄在留资格
+22:35 cleamoon: https://upload.wikimedia.org/wikipedia/commons/f/fe/Visa_requirements_for_Swedish_citizens.png  似乎海盗护照还算好用？
+22:35 Mokou: 相当好用
+22:36 cleamoon: 11区护照似乎也挺好用的
+22:36 Mokou: HK护照也挺好用
+22:36 Mokou: http://www.channel8news.sg/news8/lifestyle/20150422-lif-passport/1800980.html
+22:37 cleamoon: https://upload.wikimedia.org/wikipedia/commons/8/85/Visa_requirements_for_Chinese_citizens_holding_ordinary_and_ordinary_passports_for_public_affairs_and_Two-way_and_Exit_%26_Entry_permits.png  大陆这个略渣
+22:37 cleamoon: 感觉好像还不如战斗民族的呢
+22:38 Mokou: 大陆护照不太行
+22:39 cleamoon: 老爸以为这些都是双边的呢
+22:40 Mokou: 然而天朝和日本……
+22:40 cleamoon: 噗，叙利亚护照还不如伊朗护照好用呢
+22:40 Mokou: 不过日本那边似乎是因为天朝黑户太多了
+22:40 Mokou: 之前Shore Pass也是随便搞的
+22:41 cleamoon: 哈哈哈，以色列有好几个禁止进入的国家
+22:41 Mokou: 结果一堆人拿了以后就黑下来了
+22:41 Mokou: 搞得现在成田机场的Shore Pass超难搞
+22:42 cleamoon: soga
+22:42 varna: 我们不输出革命（棒读）
+22:43 Mokou: _(:з」∠)_
+22:43 Mokou: 不过其实你拿着Shore Pass出了千叶县也没人管你
+22:43 cleamoon: 工作很麻烦吧
+22:43 cleamoon: 话说11区的人民对天朝人民一般什么看法
+22:43 Mokou: 找个工厂打打工
+22:44 Mokou: 这个我不清楚
+22:44 Mokou: 等我去了（如果能去）再看看……
+22:44 cleamoon: 现在不是在搞吗
+22:44 Mokou: 毕竟没过去
+22:45 cleamoon: 我记得京都大学读勃可以拿长居
+22:45 Mokou: 留学比较好办
+22:46 varna: 我估计两边对对方的看法都会逗比吧
+22:46 Mokou: +
+22:46 varna: 一边怒骂力本鬼子，一边怒骂滞纳豚
+22:47 cleamoon: 我不是问bilibili和2ch...
+22:47 Mokou: 毕竟ネトウヨ
+22:47 Mokou: 一般人大概是“关我鸟事”？
+22:47 lh_mouse quit:Read error: Connection reset by peer
+22:47 cleamoon: soga
+22:47 cleamoon: 找工作之类的呢？
+22:47 varna: 估计会麻烦吧
+22:48 varna: 我觉得各国都不会对单纯的外国人有什么好感
+22:48 Mokou: 都是亚洲面孔，所以对日语的要求一般不会低
+22:48 Mokou: 不过似乎倒不会太难找，前提是你文凭够
+22:49 varna: 其实屑站和@ch能代表相当人的观点吧
+22:49 Mokou: +
+22:49 cleamoon: 好感不重要，重要的是『你行你上』还是『你行也不让你上』
+22:49 varna: 估计后一个居多
+22:49 Mokou: 虽说屑站的不同点大概是“bilibili干杯”？
+22:50 Mokou: 后一个不用天朝人
+22:50 varna: 我觉得外国人同等条件下被拒是正常的
+22:50 Mokou: 日本人也是
+22:50 Mokou: 别说话，推锅就行
+22:50 cleamoon: 同等条件当然正常，不同还拒绝就不正常了
+22:50 varna: 现在我们就可以往角川游戏推销一些中国程序员
+22:50 varna: 然而并没有人要
+22:51 Mokou: 然后他们变成了日本程序员
+22:51 Mokou: 相信我
+22:51 Mokou: 不愿意担责任这点在日本企业里似乎特别严重
+22:51 cleamoon: 23333
+22:51 varna: 压力太大么
+22:51 varna: 但是事情做得也太差了
+22:51 Mokou: 估计是文化吧
+22:51 Mokou: 他们那边担责任的代价大概比较大？
+22:51 varna: 我觉得角川游戏这个主要是雇员的水平太差
+22:51 cleamoon: 文化吧
+22:51 varna: 连基本的事情都做不好
+22:52 varna: 比如口尼西那个震聋发聩的?
+22:52 Mokou: 先人水平太差，后人懒得担责任
+22:52 varna: 老板不会让你重写的，哪国都一样
+22:52 varna: 遇到逗比的话甚至懒得考虑重构开销
+22:53 Mokou: 当然“没有希望的国家”也是原因之一
+22:53 varna: 以为出东西能运行就可以了
+22:53 Mokou: 想想早稻田那个80%本科生
+22:53 cleamoon: 没有希望的国家什么鬼
+22:53 varna: 如果真是那样的话，世界上并不需要小耗这样的程序员
+22:53 Mokou: 玩四年舰C拿个文凭就进公司了
+22:53 varna: 写一堆屑就可以交付的世界，想想就可怕
+22:53 Mokou: 就是这样
+22:54 Mokou: 照着函数名都写好的文档码一堆屑，然后就没你事了
+22:54 varna: 撤退
+22:54 varna: 明天把一图收了，四五图不打
+22:54 varna: 武运
+22:54 varna quit:Quit: leaving
+22:54 cleamoon: 这个很多地方都一样吧
+22:55 cleamoon: 本身就是快速上线的游戏向
+22:55 Mokou: cleamoon: 尼碰尤甚
+22:56 cleamoon: 感觉和文化很有关系，老爸说11区人喜欢不着急也穿着西装小跑
+22:56 cleamoon: 海盗就很慢性子
+22:56 Mokou: 我觉得很大程度上是文化问题
+22:56 cleamoon: +
+22:56 Mokou: 承担责任的成本太高了
+22:57 Mokou: 你看JAL123
+22:57 cleamoon: JAL123？
+22:57 Mokou: 波音的锅，然后JAL管理层好几个自杀谢罪的
+22:57 cleamoon: .......
+22:57 Mokou: 刚事发的时候还有一堆人质问机长家属为何不自杀
+22:58 Mokou: 最后发现机长是英雄
+22:58 cleamoon: ...................
+22:58 cleamoon: 什么鬼
+22:58 Mokou: 文化就这样
+22:58 Mokou: 承担责任的成本太高了
+22:58 cleamoon: 这个应该叫什么，作死作习惯了？
+22:58 Mokou: 叫传统文化
+22:59 cleamoon: 穿桶文化
+22:59 Mokou: 所谓“没有希望的国家”也是这么回事
+23:00 Mokou: 你去创个业，跪了，然后这辈子你就带着撸瑟的标签活下去行了
+23:00 Mokou: 结果年轻人都不敢干点什么了，混完文凭找个公司带着完事
+23:00 Mokou: 呆着*
+23:01 cleamoon: 我查了一下，似乎该接的锅就不接了，搜救的问题至今不知道是谁黑
+23:01 Mokou: 搜救啊
+23:01 cleamoon: 跪了破产就好了呀...
+23:01 Mokou: 我跟你说个笑话，自慰队的搜救
+23:01 Mokou: cleamoon: 然而你会被人当成撸瑟一辈子
+23:02 Mokou: 管你干了什么，跪了我就看不起你
+23:02 Mokou: 我不行我也不上，你上我就BB
+23:02 cleamoon: 噗
+23:02 cleamoon: 什么鬼
+23:03 cleamoon: 感觉和bilibili很像
+23:03 Mokou: 所以破产了怎么办，跳楼咯
+23:03 cleamoon: 一个国家的萌二吗？
+23:03 Mokou: 反正神道里面没有地狱一说
+23:03 Mokou: 也不算萌二，就是看不起失败者
+23:03 Mokou: 即使这个失败者是敢吃螃蟹的人
+23:04 cleamoon: 破产又不是永久性的...
+23:04 Mokou: 看不起是永久性的
+23:05 cleamoon: .........
+23:05 cleamoon: 渣渣
+23:05 Mokou: 所以才说这国家完了
+23:06 lh_cat: 寂寞的时候你们干啥。
+23:06 cleamoon: 果然就如一个有钱人说的，日本是一个一年想去那里旅游24个月的国家，但是生活工作一天都不想
+23:06 Mokou: 就是这样
+23:06 cleamoon: 找能聊的地方聊
+23:06 cleamoon: qq一般人很多
+23:06 lh_cat: 聊什么，
+23:07 cleamoon: 瞎聊呗...
+23:07 lh_cat: 没话讲的时候呢。
+23:07 lh_cat: 和小姑娘呢。
+23:08 lh_cat: 冷场，
+23:08 cleamoon: http://www.yinwang.org/blog-cn/2016/01/18/java  羊驼子走早了
+23:08 cleamoon: 小姑娘需要找废话讲
+23:08 cleamoon: 即使明显对方明白也要说
+23:09 lh_cat: 问题是说什么。
+23:09 cleamoon: 多聊自己，不要像查户口一样一直问
+23:10 cleamoon: 比如说今天看到一个头顶发亮的羊驼正在舔一台形 状 奇 怪的街机
+23:10 condy: 0.0
+23:11 condy: lh_cat: 聊她感兴趣的(
+23:11 cleamoon: 如果知道感兴趣什么当然好
+23:11 condy: 比如啊，可以说说，最近有什么有趣的事情之类的（当然我没有经验，都是瞎说的（
+23:12 cleamoon: FrankHB, 耻球，开喷了  http://www.yinwang.org/blog-cn/2016/01/18/java
+23:13 lh_cat: condy: 她感兴趣的ヲ不感兴趣。xsk
+23:13 cleamoon: 有趣的：某天狗要去找师匠，遭众变态拦截
+23:13 condy: lh_cat: Orz
+23:13 cleamoon: 不用感兴趣，让她讲就好了
+23:14 condy: yes
+23:14 cleamoon: 混脸熟是很重要的，一天说个23小时废话她也归你了
+23:14 lh_cat: O.O
+23:15 lh_cat: 混脸熟干啥。
+23:16 cleamoon: 收呀
+23:16 cleamoon: 你不打算收吗
+23:16 lh_cat: 收是什么意思。
+23:16 FrankHB: 煋闻有什么好看的。
+23:17 lh_cat: 帝球肯定没♀朋友。
+23:17 cleamoon: 那个不是你想要的小姑娘吗
+23:18 cleamoon: 耻球不打算喷了？这是异变呀
+23:18 lh_cat: 然后呢。
+23:18 cleamoon: 然后要混脸熟呀
+23:18 hatlist: 晚
+23:19 lh_cat: 动态类型语言都是一丘之貉。
+23:19 lh_cat: 呃，混脸熟有什么用么？
+23:20 cleamoon: 有用的，熟到一定程度就可以拿下了
+23:20 cleamoon: 日 久 生 情
+23:20 lh_cat: 还是没懂拿下是什么意思。
+23:21 condy: 你侬我侬的那种程度
+23:21 lh_cat: 这可能是以后的事情。
+23:21 cleamoon: 拿下就是表白结婚生子放羊
+23:21 lh_cat: ヲ不喜欢那样。
+23:21 lh_cat: 表白过了，句点。
+23:22 cleamoon: .............
+23:22 lh_cat: 上个月的事情了。
+23:22 cleamoon: 我觉得需要火把了
+23:22 lh_cat: 所以现在就是不冷不热。
+23:22 cleamoon: 我们来帮你变热，上汽油
+23:22 lh_cat: 半推半就的状态。
+23:23 lh_cat: 别啊。
+23:23 cleamoon: 不都表白了吗...
+23:23 lh_cat: ヲ名义上还是单身啊。
+23:23 Mokou: 有备无患
+23:23 cleamoon: 什么鬼
+23:24 lh_cat: ヲ就是单身啊。
+23:24 Mokou: http://ww1.sinaimg.cn/mw1024/79a1797djw1f1l2lf4446j20g408076k.jpg 世界各国各自最大的进口国一览
+23:24 lh_cat: 这没疑问啊。
+23:25 cleamoon: 表白了怎么还算单身
+23:25 lh_cat: 可是ヲ们都没承认啊。
+23:25 cleamoon: 原来天朝经常从11区弄东西
+23:26 Mokou: 睡觉
+23:26 cleamoon: ...........
+23:26 Mokou: 诸君武运
+23:26 Mokou quit:Quit: 睡觉
+23:26 lh_cat: 不懂这也要焼。
+23:27 cleamoon: 根据FFF团的团规，表白和被表白都要烧
+23:27 lh_cat: 就只是相互有点喜欢而已。
+23:28 lh_cat: 别想太多。
+23:28 cleamoon: 为什么不出手呢？
+23:28 lh_cat: 还怎么出手。
+23:29 lh_cat: ヲ在等。
+23:29 cleamoon: soga
+23:29 condy: 不能等啊，得你自己去说啊(结婚过的同事对我这样说的(
+23:30 lh_cat: 说什么。
+23:30 cleamoon: 这时你需要表现自己的可靠+有前/钱途
+23:30 lh_cat: 无语。
+23:30 condy: 同不知道说什么
+23:31 cleamoon: 表白完了能说的就不多了... 
+23:31 lh_cat: 正确。
+23:31 lh_cat: 这就是问题。
+23:32 cleamoon: 那就努力工作吧
+23:32 lh_cat: 靠，就是这样才寂寞 。
+23:32 cleamoon: 表现成努力工作+无不良爱好
+23:32 cleamoon: 表白了的话，给妹子发短信呀...
+23:32 lh_cat: ヲ现在只会卖萌了，
+23:33 cleamoon: 『加班中，好寂寞，打个招呼，晚安』之类的
+23:33 lh_cat: 好像这些ヲ都发过诶。
+23:33 lh_cat: ヲ没笑。
+23:34 cleamoon: ...那就自己寂寞吧
+23:34 cleamoon: 没太多能做得了
+23:34 lh_cat: QAQ
+23:34 cleamoon: 可以出去屠杀开封菜
+23:34 cleamoon: 这似乎不算不良嗜好
+23:34 lh_cat: =a=
+23:38 lh_cat: 水水的。
+23:39 cleamoon: 开封菜水水的？
+23:39 lh_cat: 谢非处男指点，
+23:39 lh_cat: ヲ睡觉去了。
+23:39 cleamoon: 没中出就算处男

@@ -1,0 +1,1151 @@
+0:16 T2:睡觉
+1:28 zzzzzzzzz joined channel
+1:35 lh_mouse:geordi, << is_nothrow_assignable<string &>::value;
+1:35 geordi:error: wrong number of template arguments (1, should be 2)
+1:35 lh_mouse:geordi, << is_nothrow_assignable<string &, string &>::value;
+1:35 geordi:false
+1:43 condy:lh_mouse: 能不能像geordi一样支持对cout<<array这样的输出？
+1:43 condy:geordi: {int a[]={1,2,3};cout<<a;}
+1:43 geordi:{1, 2, 3}
+1:47 lh_mouse:condy, 自己重载操作符去
+1:48 lh_mouse:geordi, { foo("meow", 4); } template<typename... params_t> void foo(params_t... params){ string s(params...); cout <<s; }
+1:48 geordi:meow
+1:48 lh_mouse:geordi, { foo(); } template<typename... params_t> void foo(params_t... params){ string s(params...); cout <<s; }
+1:48 geordi:<no output>
+1:48 lh_mouse:geordi, remove params...
+1:48 geordi:undefined reference to `s()'
+1:52 condy:lh_mouse: operator<<(ostream& os, T (&a)[...]) <- ... 这个该怎么处理？
+2:4 condy:geordi: {ifstream ifs("Prelude.hpp"); string s; while (ifs>>s)cout<<s<<" ";}
+2:4 geordi:<no output>
+2:4 condy:geordi: {ifstream ifs(__FILE__); string s; while(ifs>>s)cout<<s<<" ";}
+2:4 geordi:#include "prelude.hpp" using namespace std; int main(int argc, char * argv[]){ifstream ifs(__FILE__); string s; while(ifs>>s)cout<<s<<" ";} 
+2:4 condy:geordi: {ifstream ifs("prelude.hpp"); string s; while (ifs>>s)cout<<s<<" ";}
+2:4 geordi:<no output>
+2:7 condy:geordi: << help
+2:7 geordi:Mini-manual:  http://www.eelis.net/geordi/
+2:10 condy:geordi: cout<<SHOW(x); int x=10;
+2:10 geordi:error: 'cout' does not name a type
+2:10 condy:geordi: {int x=10;cout<<SHOW(x);}
+2:10 geordi:x = 10
+2:25 aboutGod joined channel
+2:30 aboutGod left channel
+3:5 condy:原来要对char之类的特化啊。。。。
+3:13 condy:geordi: --show-compile-flags
+3:13 geordi:-finput-charset=UTF-8 -O0 -std=c++1y -pedantic-errors -Wfatal-errors -Wall -Wextra -Wno-empty-body -Wno-missing-field-initializers -Wwrite-strings -Wno-deprecated -Wno-unused-parameter -Wno-non-virtual-dtor -Wno-variadic-macros -fno-diagnostics-show-option -fno-use-linker-plugin -fmessage-length=0 -ftemplate-depth-128 -fno-merge-constants -fno-nona
+3:18 biergaizi_ joined channel
+3:40 JQK_Phone joined channel
+4:0 cleamoon joined channel
+4:3 cleamoon_ joined channel
+4:3 cleamoon__ joined channel
+4:15 JQK joined channel
+4:17 cleamoon_ joined channel
+4:25 cleamoon__ joined channel
+4:31 cleamoon_ joined channel
+4:45 cleamoon__ joined channel
+5:14 cleamoon_ joined channel
+5:19 biergaizi_ joined channel
+5:35 biergaizi_ joined channel
+6:11 biergaizi joined channel
+6:15 biergaizi joined channel
+7:7 biergaizi joined channel
+7:9 biergaizi joined channel
+7:13 biergaizi joined channel
+7:21 biergaizi joined channel
+7:21 hope1 joined channel
+7:21 slowcoach joined channel
+7:22 cleamoon_ joined channel
+7:35 biergaizi joined channel
+7:43 biergaizi joined channel
+7:49 biergaizi joined channel
+7:59 biergaizi_ joined channel
+8:5 biergaizi_ joined channel
+8:15 cleamoon__ joined channel
+8:17 biergaizi joined channel
+8:18 tsuki joined channel
+8:23 biergaizi joined channel
+8:31 biergaizi joined channel
+8:37 biergaizi joined channel
+9:31 condy:76条刷屏....
+9:48 endle joined channel
+9:50 hope1 joined channel
+9:58 richselian joined channel
+9:58 richselian:疼
+9:59 richselian:最近大神怎么越来越多了
+9:59 hysw:richselian: ?
+10:0 hysw:richselian: 把智商交出来就行了
+10:0 hysw:endle: 把智商交出来
+10:6 condy:hope1: http://203.208.46.145/ 用这个上google.
+10:6 hope1:.
+10:9 endle:"* hope1 正在" 这种是怎么打出来的？
+10:9 hope1:endle, /me
+10:9 endle:thx
+10:10 *endle 正在抵制 gmail
+10:10 richselian:GA似乎能解出来1000皇后了
+10:12 Plough joined channel
+10:13 whocares_2 joined channel
+10:27 xxxxxxxxx joined channel
+10:54 liuzhoou joined channel
+10:56 iyzsong joined channel
+11:6 condy:geordi: { int a=10;cout<<mysizeof(a);} #define mysizeof(var) (((typeof(var))*)0 + 1)
+11:6 geordi:error: 'typeof' was not declared in this scope
+11:6 condy:geordi: { int a=10;cout<<mysizeof(a);} #define mysizeof(var) (((typedecl(var))*)0 + 1)
+11:6 geordi:error: 'typedecl' was not declared in this scope
+11:8 hope1:richselian, GA?
+11:8 condy:geordi: { int a=10;cout<<mysizeof(a);} #define mysizeof(var) (((decltype(var))*)0 + 1)
+11:8 geordi:error: expected primary-expression before ')' token
+11:10 condy:geordi: { int a=10;cout<<mysizeof(a);} #define mysizeof(var) (((typeof(var))*)0 + 1)
+11:10 geordi:error: 'typeof' was not declared in this scope
+11:10 condy:geordi: { int a=10; typeof(a) b=20; cout<<a, b;
+11:10 geordi:error: Unexpected end of request. Expected '}' or balanced code.
+11:10 condy:geordi: { int a=10; typeof(a) b=20; cout<<a, b;}
+11:10 geordi:error: 'typeof' was not declared in this scope
+11:23 cuihao joined channel
+11:30 xxxxxxxxx:http://tieba.baidu.com/p/3078116925 <- 这是在提问啥?
+11:43 condy:endle: 竟然是fedora19用户。。。。
+11:52 endle:condy, 很诧异吗？
+11:56 condy:endle: 还以为channel里面都是arch.
+11:56 endle:condy, 懒得换。。。
+12:32 biergaizi joined channel
+12:53 condy:吃饭去啦！！！好开心哦！
+12:53 biergaizi_ joined channel
+12:55 richselian joined channel
+13:12 liuzhoou joined channel
+13:23 code_new joined channel
+13:32 xxxxxxxxx joined channel
+13:57 liuzhoou joined channel
+14:40 FrankHB:http://tieba.baidu.com/p/3078893090 233为啥不来这边推销呢。
+15:0 varna joined channel
+15:0 varna:噗，怎么冒出一个揉舔撸来
+15:1 zzzzzzzzz joined channel
+15:3 xxxxxxxxx:http://tieba.baidu.com/p/2945637557 
+15:3 endle:有人用过 BSTR 吗？
+15:4 varna:那是什么？
+15:6 T2 joined channel
+15:8 endle:微软封装的蛋疼的宽字符字符串
+15:8 endle:前两个字节存一个短整形
+15:8 endle:表示字符串长度
+15:9 endle:在末尾，有一个 Double '\0' 表示结尾
+15:9 varna:不用M$
+15:16 hoxily:endle: 微软不是用UTF-16吗？
+15:17 varna:hoxily: 现在还有用MBCS的吧
+15:17 endle:hoxily, BSTR 是一种存储的方式，跟编码无关
+15:17 hoxily:为什么不是 LPCWSTR WCHAR* ？
+15:18 hoxily:我总觉得UTF也是一个MBCS
+15:18 hoxily:UTF32好像是固定4字节长度。
+15:18 varna:2333
+15:18 endle:BSTR 是当作 WCHAR* 编译的
+15:19 hoxily:Win32 API 有A版与W版的区别。
+15:20 varna:操，cpan又上不去了
+15:20 hoxily:其中的W版，传入的字符串是 UTF-16编码的
+15:20 hoxily:A版，是 Windows 里面 各种 codepage 编码的字符串。
+15:20 Plough:varna: 试试metacpan？
+15:21 varna:Plough: 上去了
+15:21 hoxily:NT内核本身是
+15:21 hoxily:UTF-16
+15:21 varna:Plough: 这里是二螺
+15:21 Plough:varna: 不要
+15:22 hoxily:玩日文 galgame 会遇到问题。
+15:22 varna:locale转一下就可以了
+15:22 hoxily:日文galgame竟然不是用Unicode
+15:22 varna:你见过十一区那边多少用utf的……
+15:22 endle:好吧，我把问题简化了一点
+15:22 Plough:@ken_thompson
+15:23 endle:翻了别人的代码，完成了第一步
+15:23 *varna 继续在冲之岛海域培养幼女
+15:23 hoxily:GB、GBK、GB18030是个笑话吗？
+15:23 *Plough 在撸10p filesystem
+15:23 endle:现在的问题是，怎么把 wchar* 转化成 char *
+15:23 varna:说起来，今天过来的时候看到一个幼女的裙子掀起来了
+15:23 varna:底下的胖次是红的
+15:24 Plough:已报警
+15:24 hoxily:endle: 有个叫 multibytetowidechar 
+15:24 hoxily:widechartomultibyte
+15:24 endle:谢谢提醒
+15:24 hoxily:的API函数
+15:24 hoxily:我可能拼错了，但是大概是这样子
+15:24 varna:Plough: FS怎么弄
+15:25 Plough:varna: 想撸一个C/S的9p类似物
+15:25 varna:Plough: 直接分布化9p不行么
+15:25 varna:而且9p本来就是分布式的吧
+15:25 Plough:varna: 似乎也行
+15:26 Plough:varna: 玩而已
+15:26 Plough:varna: 看看能不能在上面架起个Google Code Search类似物
+15:26 varna:现在他们的code search提供什么服务的
+15:26 endle:话说最近网络真渣
+15:26 Plough:varna: 貌似关了？
+15:26 varna:似乎是
+15:26 varna:我只是好奇他们能干什么
+15:27 Plough:类似于对所有代码grep
+15:27 varna:用户提供什么输入
+15:27 Plough:正则
+15:27 varna:噗
+15:27 varna:真差劲
+15:28 Plough:实现是把正则转成Index查询指令
+15:28 Plough:然后trigram
+15:28 Plough:http://swtch.com/~rsc/regexp/regexp4.html
+15:28 Plough:在这看见的
+15:28 varna:thx, connecting
+15:29 varna:噗，re2是russ cox做的啊
+15:29 zzzzzzzzzz joined channel
+15:29 varna:自古unix出正则
+15:29 Plough:继续@ken_thompson
+15:30 Plough:貌似plan9也喜欢玩正则？
+15:30 varna:不过我觉得这个不好玩
+15:30 Plough:那在上面撸个DB出来？
+15:30 varna:只是增强型grep而已，而且扩大化之后毫无建设性
+15:30 varna:比如假想你试图在github上做了这么个东西，一搜之后出来了成山的垃圾
+15:31 Plough:233333
+15:31 varna:内部用还勉强
+15:31 varna:而且也就是google这样的公司内部需要这么搜搜
+15:31 Plough:那撸个啥
+15:32 Plough:还是弄个DB然后让Mongo滚蛋
+15:32 varna:去开发yin语言吧
+15:32 varna:到时候能爆了全世界所有的db
+15:32 Plough:没兴趣
+15:32 varna:日常黑yinwang而已
+15:32 Plough:嘛
+15:33 varna:yin语言现在也就是个lisp, 毫无看头
+15:33 varna:我一直认为yinwang不会做后端
+15:33 Plough:我倒是想把Perl简化下然后塞个JIT进去
+15:33 Plough:但是总觉得任务艰巨
+15:33 varna:23333
+15:33 varna:简化23333
+15:34 varna:Perl已经变成了怪物，我觉得你重写一个像Perl的东西然后为它生成jvm代码都比简化Perl容易
+15:34 Plough:差不多就这么打算的
+15:34 varna:比如叫它re.pl
+15:34 Plough:re.pl已经被占了
+15:34 varna:reee.pl
+15:34 Plough:weee.pl
+15:35 varna:这个是读作leee.pr的
+15:35 varna:就是LEEE舔舔的意思
+15:35 Plough:我本来想敲来着
+15:35 Plough:leee.pr
+15:35 endle:为啥重写 perl
+15:35 varna:We monks blah blah blah
+15:36 hysw:枣糕的拓扑学...
+15:36 Plough:不过jvm还是疼
+15:36 varna:噗，怎么我刚来两次出击就各种红脸，难道舰娘真的会来月经
+15:36 Plough:塞BEAM上？
+15:36 varna:谁去买间宫啊！
+15:36 hysw:eeevm
+15:36 varna:Plough: BEAM ABI我一窍不通
+15:36 Plough:varna: 译成Core Erlang
+15:37 varna:也行
+15:37 Plough:虽说BEAM差不多和Erlang绑死了
+15:38 varna:就是和erl绑死的
+15:38 sismvg joined channel
+15:38 Plough:总感觉没啥好用的VM……
+15:38 Plough:Parrot?
+15:38 *hysw 好希望能有一只没有学霸属性的可爱的同时具有数学娘和文学娘属性的计算姬来帮我写作业...
+15:39 varna:Plough: 我觉得jvm真可以
+15:39 Plough:varna: 我想要LWP……
+15:39 varna:那就译成erlang
+15:40 varna:其实lwp并不如想像的那么好
+15:40 varna:erlang是个特例，因为语用上几乎是推着你用lwp
+15:40 Plough:比较好偷懒
+15:40 varna:脱离erl之后就未必有那样的价值了
+15:40 Plough:直接 my $data = read();多好
+15:40 varna:有时候看着也不畅快
+15:41 Plough:嘛
+15:41 varna:我还是举MCF那个IO时异步一个计算的例子，那个就很不错
+15:41 varna:单纯推行lwp可能会失去这样的丰富东西
+15:41 hysw:04儿　09童　12节
+15:41 varna:hysw: 是萝莉节
+15:41 Plough:那先扔JVM上试试也成……
+15:41 varna:Plough: 先吃二螺
+15:42 Plough:不吃
+15:42 varna:吃啊吧
+15:42 varna:吃吧
+15:42 Plough:就不吃
+15:42 hysw:继续研究卢比...
+15:42 Plough:……
+15:42 Plough:咋去研究撸比了
+15:42 hysw:有用...
+15:43 varna:http://tieba.baidu.com/p/3079149832
+15:43 varna:^ 大家快去尿
+15:43 xxxxxxxxx:便器?
+15:43 varna:李煌老师让大家尿啊
+15:43 varna:我带头尿了
+15:44 hysw:难道不是elliptic curve...
+15:45 Plough:这几天老卡在Google的跳转页面上
+15:46 varna:+
+15:48 Plough:逼着我上Perl把URL提取出来……
+15:48 varna:我日
+15:48 varna:岛风泛滥成灾
+15:49 xxxxxxxxx:这暗示着羊驼就要好快了?
+15:49 varna:噗呼呼
+15:50 zzzzzzzzz joined channel
+15:50 varna:http://imgsrc.baidu.com/forum/w%3D580/sign=007731f2fadcd100cd9cf829428a47be/0f2442a7d933c895eaf30384d31373f0830200bb.jpg
+15:54 hysw:李煌老师的算法太OTL了... 任意大的随机正整数，平均位数是无限... 那么我就图方便取q=1,s=1算了... 反正是个加密算法...
+15:55 xxxxxxxxx:UnitedPirates: 会C的标准应该是能用C写出C的编译器。
+15:55 varna:hysw: 本部封禁理由加一条「脑残」吧
+15:55 Plough:准备对李煌下手了？
+15:55 varna:最近逗比太多
+15:55 xxxxxxxxx:脑残完全说不清情况吧....
+15:55 varna:不需要说清
+15:56 xxxxxxxxx:那就写我是你大爷
+15:56 varna:嚎一句封一次
+15:58 lh_mouse joined channel
+15:58 varna:对比图 http://imgsrc.baidu.com/forum/w%3D580%3B/sign=37ef6b7e0d2442a7ae0efdade178af4b/8718367adab44aed87cdef19b11c8701a08bfb48.jpg
+15:59 lh_mouse:varna, 为何要伤害我的眼睛
+15:59 varna:犬 走 椛 http://imgsrc.baidu.com/forum/w%3D580/sign=f296758bd488d43ff0a991fa4d1fd2aa/fbedab64034f78f0f9a3480d7b310a55b2191ca7.jpg
+15:59 varna:lh_mouse: 昨晚回宿舍的时候模到一个猫鼻子，那猫还上来蹭我
+16:0 lh_mouse:QAQ
+16:3 condy:http://tech.163.com/14/0601/13/9TLIH0PE000915BF.html 2333
+16:3 varna:噗，tech.163.com都上不去了
+16:3 T2:= =
+16:3 varna:傻逼ISP
+16:5 varna:操，各种都上不去了
+16:5 lh_mouse:关我屁事  我又不用微信
+16:6 lh_mouse:微软好歹比腾讯良心  虽然微软也不咋样
+16:6 lh_mouse:我宁可信微软
+16:6 varna:MLGBWC
+16:7 varna:还好客户端可以连cpan
+16:7 varna:微信不是用来交配的么
+16:7 hope1 joined channel
+16:8 hoxily:作为报复，微软表示以后的windos版本装不了马化腾的任何产品
+16:9 Plough:varna: DNS问题还是？
+16:9 varna:谁知道，波动中
+16:9 hoxily:微软（亚洲）互联网工程院
+16:9 hoxily:这是啥？
+16:10 condy:http://ww3.sinaimg.cn/large/6cbb8645gw1egn8tn4bxgg206t08c1ky.gif 原来这张图是这样来的...
+16:10 condy:^ http://www.zhihu.com/question/23870664
+16:10 varna:哦瘊瘊？
+16:11 varna:这个满有趣
+16:13 varna:今天第一舰队集体大姨妈啊……
+16:19 lh_mouse:李大湿那个什么非对称公钥加密水分多大？
+16:20 varna:不懂
+16:20 varna:H.B.Flankoi 孙子兵法共有36计，一：知己知彼。二：百战不殆…… 转@小离 孙子兵法共有36计…还真是第一次听说这说法
+16:20 hoxily:c++11是什么？
+16:21 varna:加密算法我都是抄了忘忘了抄
+16:21 lh_mouse:三十六计哪是那么回事啊
+16:21 varna:hoxily: 啊？
+16:23 varna:果然微软给office装备07以后格式就方便些了
+16:23 lh_mouse:建议以后改名为 c++H
+16:23 varna:Perl社区也放出了些分析office的封装物
+16:23 varna:H好
+16:24 varna:Beta版可以称为c艹HB
+16:25 xxxxxxxxx:田HB
+16:25 lh_mouse:THIS IS SPARTAN!!
+16:25 varna:疑为SPARTA
+16:26 varna:xxxxxxxxx: 看起来跟田螺似的
+16:26 lh_mouse:varna, This is Chinese  v.s. This is China.
+16:26 *varna 提出了术语：田二螺
+16:26 xxxxxxxxx:。。。。。
+16:27 varna:药娘吧还有一天十螺的呢
+16:28 varna:http://tieba.baidu.com/p/3027261093 # 逗比
+16:30 T2:一个月花2000的躺枪。
+16:30 lh_mouse:一般不超过 1k5
+16:31 varna:T2: 你租房子？
+16:31 T2:varna, whu的时候是的。
+16:31 T2:现在可能400
+16:32 varna:为何不住宿舍，学校宿舍便宜啊
+16:32 T2:我容易被环境影响。
+16:32 T2:你懂了。
+16:32 varna:我这里换算过来也就一个月一百，外面房子各种贵
+16:32 varna:23333，我是真不懂……
+16:32 lh_mouse:跟我们一样
+16:33 T2:varna, 你宿舍里的伙计靠谱？
+16:33 varna:T2: 游戏狗啊，不过比较公德，玩的时候戴耳机
+16:33 lh_mouse:你又不是为了你的伙计活着  在乎那么多干啥
+16:33 varna:生活习惯差不多就行
+16:34 T2:lh_mouse, 我跟着宿舍狗打了4年DOTA和wow
+16:35 T2:嘛，我这种不行。
+16:35 varna:同宿舍人只要没什么恶习别的大致好说
+16:35 T2:无所谓啦，反正现在在青海回家就好了。
+16:35 lh_mouse:除了红警和三国杀就没玩过别的
+16:35 varna:而且我那屋子背阴+尺寸小，不太有人愿意过来，反倒是原住民基本都搬出去了，挺清闲
+16:36 lh_mouse:羊驼求爆照
+16:36 varna:lh_mouse: 哪天糖果愿意爆了我就跟他合照一张
+16:36 varna:不然流出的照片只有那个扁平臀的
+16:36 lh_mouse:you have said that before.
+16:36 varna:ino
+16:36 lh_mouse:inode?
+16:37 varna:inode简直惨不忍睹
+16:37 lh_mouse:（大小姐吐舌头）
+16:37 varna:呜——
+16:38 richselian:minconflicts靠谱
+16:38 varna:richselian: 老湿那个算法是抄RSA的？
+16:38 lh_mouse:不像
+16:39 lh_mouse:RSA 用了幂模
+16:39 lh_mouse:还是叫模幂
+16:39 richselian:RSA的
+16:39 lh_mouse:RSA 我自己写过的所以印象很深
+16:39 richselian:应该有一点弱化
+16:40 richselian:10000皇后随机解只用10s左右的样子
+16:40 lh_mouse:不过倒是有一种理由
+16:40 varna:...
+16:40 T2:「我只想说我TM真的是报错学校了」
+16:40 lh_mouse:就是排版太烂上标被吃了……
+16:40 varna:richselian: 很多年前启发式修补就能在7.x秒内做几千皇后的样子
+16:40 lh_mouse:所以“幂”显示不出来了
+16:42 richselian:varna: 就是这个算法么
+16:42 varna:richselian: WO
+16:42 richselian:GA目测算子没写好
+16:43 varna:旁边一个哥们还在试着做多标签分类……
+16:44 richselian:羊驼不来实习么
+16:45 lh_mouse:monitor 在没有编译器内建支持的情况下好弄么
+16:45 varna:richselian: 研二看看，最近老板大概不会放
+16:45 richselian:疼
+16:45 varna:lh_mouse: 那种还是会弄出mutex模拟的吧
+16:46 lh_mouse:varna, monitor 不就是 mutex 包装的么
+16:46 varna:lh_mouse: 是的
+16:46 lh_mouse:最多支持下 condition variable
+16:46 varna:现在实装了monitor的应该也就java了吧
+16:47 lh_mouse:C++ 弄出来的话  我 YY 了下  应该不难
+16:47 lh_mouse:而且 非侵入的
+16:47 lh_mouse:就是做个 unique_ptr 类似物  重载 operator->  返回一个 mutex 持有者
+16:47 lh_mouse:不过这样没法支持 cond_wait
+16:48 lh_mouse:得艹调用栈拿回那个持有者
+16:48 varna:那样就疼了
+16:49 lh_mouse:总觉得现在这种设计有点蛋疼
+16:49 richselian:表示想不通为什么会有老湿这样的存在呢
+16:49 lh_mouse:锁持有者是公共接口类  两个方法 lock 和 unlock
+16:49 varna:richselian: 因为你不是处男了
+16:50 lh_mouse:可重入性是持有者实现的  锁不需要实现
+16:50 varna:这还好
+16:50 T2:varna, 我还是处男的时候也没想通。
+16:50 lh_mouse:cond_wait 在持有者上做的，首先放弃重入数量这么多的锁  然后 sleep
+16:51 lh_mouse:于是所有破事都得扯到持有者  但是管程还是看不见持有者的
+16:51 Plough joined channel
+16:53 hysw:靠... 夏天电脑积灰可不好玩...
+16:53 richselian:妹子似乎要带一些闺密来家里玩
+16:53 richselian:疼
+16:53 richselian:撤退
+16:53 varna:噗
+16:53 varna:NP
+16:54 lh_mouse:float fabsf(float x){ __asm__ __volatile__( "and byte ptr[%1 + 3], 0x7F \n"   (下略)
+16:55 lh_mouse:http://tieba.baidu.com/p/3079309675  有感而发  我好机智啊
+16:57 T2:lh_mouse, 他连stack长什么样都不知道还大小端
+16:57 cleamoon__:话说，耗子怎么拿nano编的橙，总不能是cmd吧...
+16:57 varna:机吱
+16:57 lh_mouse:cleamoon__, linux 哪里有 cmd
+16:57 varna:cleamoon__: ssh上去的时候吧
+16:57 T2:不是 Hello world
+16:57 lh_mouse:varna, 正解
+16:57 lh_mouse:windows 下编辑器一大把鬼才用 nano
+16:57 hysw:把风扇给拆开清理一下...
+16:57 varna:win下面n++很好
+16:58 varna:换我的话不太会考虑别的
+16:58 cleamoon__:soga，我以为耗子在win下用nano呢
+16:58 cleamoon__:varna, emacs？
+16:59 varna:那些没意思
+16:59 wsyh joined channel
+16:59 varna:我也用不着那么多功能
+16:59 T2:话说我确实要补一点数值计算了，快考试了。
+16:59 cleamoon__:我觉得win还是缺一个好用的term
+16:59 lh_mouse:SSE 的构造真是诡异
+17:0 lh_mouse:位运算有三种
+17:0 cleamoon__:明年开数值，那是讲什么的
+17:0 lh_mouse:打个比方  按位与
+17:0 T2:cleamoon__, 求近似解。
+17:0 T2:迭代拟合什么的。
+17:0 lh_mouse:packed 单精度  andps      packed 双精度  andpd    整数的  pand
+17:0 varna:cleamoon__: 给你个方程，解个能保证精度和误差的数出来
+17:0 lh_mouse:这三个从表面上看没任何区别 
+17:1 varna:cleamoon__: 也包括一部分微分方程
+17:1 cleamoon__:这个听说过，不用证明这些货吧
+17:1 cleamoon__:牛顿法的证明麻烦死
+17:2 varna:似乎是强调计算和误差的多
+17:2 cleamoon__:soga
+17:2 cleamoon__:那好说
+17:2 varna:算法都很经典所以证明不会很繁重
+17:4 varna:噗噗噗
+17:4 varna:三个NU酱
+17:4 cleamoon__:哪有那么一说...
+17:4 T2:cleamoon__, 连拟合程度都没，套公式插值的玩意。
+17:4 cleamoon__:那带小抄去考试就好了
+17:5 varna:还有RI酱flagship...
+17:5 T2:「表示不作弊」
+17:5 T2:cleamoon__, 目测计算器比小抄好使。
+17:6 varna:这要爆肝了
+17:6 cleamoon__:不让用吗
+17:7 varna:我考的时候全都一趟迭代收敛
+17:7 varna:然后我看漏一个大题，睡到收卷前发现了，没做完
+17:7 cleamoon__:2333
+17:7 varna:卷子一共就七个计算提
+17:7 T2:= =
+17:7 varna:题
+17:8 varna:最后考得八十多，直接坑了
+17:8 T2:「60万岁」
+17:10 cleamoon_ joined channel
+17:13 cleamoon__ joined channel
+17:13 cleamoon__:alpako在win上怎么用perl
+17:14 xxxxxxxxx:@草莓驼
+17:14 varna:cleamoon__: strawberry perl
+17:14 cleamoon__:噗，好神奇的名字...
+17:15 T2:@番茄驼
+17:15 cleamoon__:我以前还以为这玩意是个什么奇葩生物呢...
+17:15 T2:= =
+17:16 T2:儿童节了，老实复习备考吧。
+17:16 T2:san值有些发散了。
+17:19 cleamoon__:拼命黑haskell  http://queue.acm.org/detail.cfm?ref=rss&id=2611829
+17:19 xxxxxxxxx:突然发觉肉牛的帖子上写的是牛肉老师....
+17:20 lh_mouse:干完这票就回老家结婚
+17:22 varna:跑一趟鼠输送
+17:22 T2:lh_mouse, 2333
+17:23 varna:这个文似乎有点误解
+17:23 varna:lazy不是functional必要的，只是haskell抽风了
+17:24 zzzzzzzzz joined channel
+17:26 *varna 开始爆肝
+17:27 lh_mouse:geordi, << sizeof(long double)
+17:27 geordi:16
+17:27 cleamoon__:geordi, << sizeof(double)
+17:27 geordi:8
+17:27 cleamoon__:geordi, << sizeof(long long double)
+17:27 geordi:error: 'long long' invalid for 'type name'
+17:28 cleamoon__:原来没有llf呀...
+17:28 lh_mouse:geordi, { union { long double ld; unsigned char by[16] } u = { 1.0f }; for(auto by : u.by){ printf("%hhX ", by); } } 
+17:28 geordi:error: expected ';' at end of member declaration
+17:28 lh_mouse:geordi, { union { long double ld; unsigned char by[16]; } u = { 1.0f }; for(auto by : u.by){ printf("%hhX ", by); } } 
+17:28 geordi:0 0 0 0 0 0 0 80 FF 3F 0 0 0 0 0 0 
+17:28 varna:long long double is too long for gcc
+17:28 lh_mouse:geordi, long long double lllf;
+17:28 geordi:error: 'long long' invalid for 'lllf'
+17:28 lh_mouse:geordi, long long long lll;
+17:28 geordi:error: 'long long long' is too long for GCC
+17:29 cleamoon__:噗
+17:29 lh_mouse:geordi, { union { long double ld; unsigned char by[16]; } u = { 1.0f }; for(auto by : u.by){ printf("%02hhX ", by); } } 
+17:29 geordi:00 00 00 00 00 00 00 80 FF 3F 00 00 00 00 00 00 
+17:29 *varna doesn't know how to make love. Stopped.
+17:29 lh_mouse:可以看出 long long double 占了十六个字节  却有六个字节是没用的
+17:29 cleamoon__:不是因为数字太小了？
+17:30 lh_mouse:不是 
+17:30 cleamoon__:geordi, { union { long double ld; unsigned char by[16]; } u = { 1000000000.0f }; for(auto by : u.by){ printf("%02hhX ", by); } } 
+17:30 geordi:00 00 00 00 00 28 6B EE 1C 40 00 00 00 00 00 00 
+17:30 lh_mouse:因为硬件只支持十个字节
+17:30 varna:浮点中间值是10B吧
+17:30 cleamoon__:soga
+17:30 varna:应该没有再长的了
+17:30 lh_mouse:软件模拟的话可以做
+17:31 lh_mouse:原先的 fabs 被我写坏了
+17:32 lh_mouse:https://github.com/lhmouse/MCF/blob/master/MCFCRT/stdc/math/fabs.c  改了下
+17:32 lh_mouse:这东西好几个月没改过了
+17:33 lh_mouse:操蛋的 ABI
+17:33 lh_mouse:win64 ABI 就一奇葩
+17:33 varna:怎么弄的
+17:34 T2:lh_mouse, 浮点怎么模拟？
+17:34 lh_mouse:varna, m$ 网站上有
+17:35 lh_mouse:T2, 很难么？
+17:35 T2:lh_mouse, 我以为超高精度要求就上个整数大数模拟。
+17:35 varna:lh_mouse: 我大略见过，但没看出哪里特别操蛋
+17:35 lh_mouse:不是   比如 128 位浮点
+17:35 cleamoon__:网站ping得通可是连不上怎么回事...
+17:35 T2:想不出来怎么搞。
+17:36 lh_mouse:varna, 要求给栈上挖坑就操蛋
+17:36 varna:i686时代我还被金丝雀坑过几回
+17:36 lh_mouse:T2, 加减法：移位对齐然后相加  乘除法：阶码相加 尾数相乘
+17:36 lh_mouse:金丝雀是啥
+17:36 varna:栈保护子
+17:36 T2:lh_mouse, 我想想。
+17:37 varna:写栈的时候一下写上去了，然后就吐了
+17:37 lh_mouse:win x64 ABI 就是  不管函数几个参数 都得挖至少四个参数的坑  但是参数是寄存器丢进去的
+17:38 lh_mouse:param0 : rcx/xmm0  param1: rdx/xmm1  param2: r8/xmm2  param3: r9/xmm3  其余压栈
+17:38 T2:cleamoon_, 天朝用户表示这是再正常不过的现象。
+17:38 Plough joined channel
+17:38 lh_mouse:整数或指针用 ALU 寄存器   浮点用 XMM 寄存器
+17:39 lh_mouse:我就是不懂为什么非得给栈上挖坑  还得挖四个
+17:39 hysw joined channel
+17:40 varna:Linux这边就不用挖
+17:40 cleamoon__:关了bt就没问题了... shit...
+17:40 varna:只有O0强行写参数
+17:40 lh_mouse:linux 有个 red zone 吧
+17:40 lh_mouse:我觉得那个也是坑
+17:40 varna:就是那个栈保护子
+17:40 lh_mouse:多余 你不觉得么
+17:40 varna:就是多余
+17:40 lh_mouse:半斤八两
+17:41 varna:不知道是不是以前他们被蠕虫日怕了……
+17:41 T2:反正扩展双精度浮点一般都是80位的。
+17:41 lh_mouse:T2, x87 是 80 位而已
+17:41 lh_mouse:扩展精度很多  80 位只是随着 x87 普及了而已
+17:42 T2:似乎标准要求79位以上就行，所以实现都是80位。
+17:42 T2:128位没想过怎么做。
+17:42 lh_mouse:float  1 8 23   double  1 11 52   80b: 1 15 64
+17:42 lh_mouse:看 IEEE 文档啊
+17:43 T2:lh_mouse, 嗯
+17:43 T2:「要科普的东西似乎多了点」
+17:43 lh_mouse:ISO C 里提到四元精度浮点
+17:44 T2:先捡西瓜吧，弱，没饭吃就不好玩了。
+17:44 lh_mouse:float 就是单精度嘛  四元精度就是四个float 的宽度
+17:44 T2:浮点实在是坑了点。
+17:44 lh_mouse:大概是软件模拟的  不知道 gcc 是否有实现
+17:44 T2:我去搜搜看。
+17:46 T2:mb，google又上不去了2333
+17:46 T2:「天朝究竟何时才能停止作死」
+17:47 T2:不过似乎可以脑补过去
+17:47 lh_mouse:好像不是 ISO C 的 忘了哪里看到的
+17:48 T2:先脑补一下吧
+17:48 Plough:demo.benihata.org
+17:48 Plough:更新：显示分类&加上修改标题
+17:49 T2:Plough, FF 的最后回复不能正确显示。
+17:49 lh_mouse:It's running BACKWARD! 到底是什么梗
+17:49 Plough:T2: 球详
+17:49 T2:lh_mouse, Does it run backwards？
+17:50 T2:Plough, http://tieba.baidu.com/p/3079423629
+17:51 Plough:……
+17:51 Plough:大概是你窗口太小了？
+17:51 Plough:不对
+17:52 T2:Plough, 不是，放大缩小都一样
+17:52 Plough:为啥你那边字体那么大
+17:52 Plough:而且边距奇怪……
+17:52 T2:不知道
+17:52 Plough:列表应该是撑满整个页面的
+17:53 T2:现在的版本能正常显示
+17:53 T2:然后新版一直这样。
+17:56 Plough:T2: 现在呢
+17:58 T2:Plough, 能正确显示了，不过标题什么的字体还是很大。
+17:58 Plough:T2: 标题本来就应该大的……
+17:59 T2:Plough, http://tieba.baidu.com/p/3079438229
+18:0 Plough:没啥问题吧
+18:0 T2:Plough, 似乎是
+18:0 Plough:那就中
+18:1 Plough:帖子标题编辑球测试
+18:1 zzzzzzzzz joined channel
+18:2 T2:Plough, 我试试看
+18:3 T2:Plough, 似乎登录不能
+18:3 T2:Plough, 哦，可以
+18:4 zzzzzzzzz joined channel
+18:4 T2:Plough, New 无效。
+18:5 Plough:T2: 因为还没做
+18:5 T2:Plough, soga
+18:8 T2:去打球2333
+18:12 hope1 joined channel
+18:15 xxxxxxxxx:谁去把那个里黄老师炸了?
+18:17 hysw:"對大陸學術界冒充我名字攻擊維基百科并在數學百度貼吧使用壹些起我名字之賬號冒充我並詆毀我是民科之行為表示強烈之不滿与抗議！" <-_-
+18:17 xxxxxxxxx:http://www.bilibili.tv/video/av1147719/
+18:23 varna:2333
+18:29 xxxxxxxxx:http://www.bilibili.tv/video/av1145849/
+18:29 xxxxxxxxx:线虫的世界好难理解...
+18:30 varna:今天看来只能改出响酱了
+18:31 zzzzzzzzz joined channel
+18:34 lh_mouse:http://imagebin.org/312381
+18:35 varna:今天国外网站又开始上不去了
+18:38 cleamoon joined channel
+18:40 cleamoon:买个vpn吧
+18:40 varna:你出钱吧
+18:41 cleamoon:vpn一般多贵？
+18:41 varna:不知道
+18:41 xxxxxxxxx:cleamoon_: 你搭个吧
+18:41 cleamoon:...
+18:41 varna:vpn我都用免费的
+18:41 cleamoon:我又没有服务器
+18:41 varna:岚月酱手头有没有肉便器
+18:42 cleamoon:没有金发巨乳萝莉的
+18:42 varna:黑发的有没有
+18:42 cleamoon:有
+18:43 biergaizi_ joined channel
+18:43 xxxxxxxxx:幼女妹子一名
+18:44 varna:cleamoon: 是岚月酱么
+18:44 cleamoon:必然不是
+18:44 xxxxxxxxx:幼女妹子不是黑发....
+18:45 cleamoon:我是红发
+18:46 varna:下面也是红的？
+18:46 cleamoon:...必然不是
+18:47 cleamoon:alpako应该是扭曲白发
+18:50 cleamoon:出门找肉便器
+18:51 cleamoon:正好六一
+18:55 hope1 joined channel
+18:56 varna:HOHOHO
+18:58 xxxxxxxxx:http://www.bilibili.tv/video/av1163401/
+19:3 zzzzzzzzz joined channel
+19:13 Plough:283 requests in 5.05s, 14.17MB read
+19:13 Plough:  309 requests in 5.02s, 15.47MB read
+19:13 varna:谁和谁？
+19:14 Plough:上面是Redis Cache过的结果
+19:14 Plough:下面是直接Render
+19:14 Plough:为啥Cache过还慢了……
+19:14 varna:所以说帖缓存要测试
+19:14 Plough:这不科学啊……
+19:15 varna:帖缓存确实有变慢的可能，尤其是你renderer比缓存简单的时候……
+19:15 Plough:……
+19:15 Plough:Hoedown获胜了么……
+19:16 varna:eee
+19:16 Plough:还是Perl的Redis Driver太慢了？
+19:17 varna:可能
+19:18 varna:Plough: 我觉得你该先吃二螺再Profile
+19:18 Plough:不吃
+19:18 Plough:该吃饭了
+19:18 varna:药娘吧一天十螺的都有
+19:18 xxxxxxxxx:吃田二螺
+19:19 varna:青岛只有海螺
+19:19 varna:蘸些醋还是挺好吃的
+19:19 xxxxxxxxx:海二螺不一样么?
+19:20 varna:海二螺也行
+19:20 xxxxxxxxx:wasdcn.com <- 在某视频中看到这么一个站
+19:20 varna:噗，一上来就看到q3
+19:22 Plough:260 requests in 5.01s, 13.02MB read
+19:22 Plough:用Redis::Fast的结果
+19:22 Plough:这也太吓人了
+19:23 varna:2333
+19:23 Plough:比原来的Redis还慢
+19:23 varna:这里的fast是「捆住」的意思，其实你理解错了wwwww
+19:24 xxxxxxxxx:http://www.bilibili.tv/video/av60356/ <- 这个视频
+19:24 Plough:Orz
+19:24 Plough:先去吃饭
+19:25 xia joined channel
+19:25 xxxxxxxxx:用火箭把空中的人炸下来什么的.....
+19:33 ds1864 joined channel
+19:39 varna:蛋疼死了，窝里的岛风可以凑一桌桥牌，晓酱还是没有
+19:39 xxxxxxxxx:好快!
+19:39 varna:爆
+19:41 xxxxxxxxx:http://tieba.baidu.com/p/3078872175 谁把这货炸了?
+19:42 varna:xxxxxxxxx: 星月都入坑了，让他战吧
+19:59 Plough joined channel
+20:0 varna:白丝的红旗酱回来了
+20:0 Plough:刚才停电了一瞬间
+20:0 varna:就因为你没吃药
+20:1 Plough:噗
+20:3 mntcdrom_ joined channel
+20:5 varna:逗比 http://tieba.baidu.com/p/3047752160
+20:11 visionsmile joined channel
+20:11 visionsmile:有人在吗
+20:12 varna:http://tieba.baidu.com/p/3045627820
+20:13 varna:「有个卖盾和矛的楚国人，夸他的盾说：“我的盾坚固无比，任何锋利的东西都穿不透它。”又夸耀自己的矛说：“我的矛锋利极了，什么坚固的东西都能刺穿。”路人问他：“用您的矛来刺您的盾，结果会怎么样呢？”那人不知道怎么回答。就走到路人跟前一矛将其扎死，说道:就他妈你话多。」
+20:14 lh_mouse:没人
+20:14 varna:吱
+20:17 Plough:893 requests in 15.04s, 44.72MB read
+20:17 Plough:^Memcached
+20:17 Plough:半斤八两
+20:18 xxxxxxxxx:路人问他：“用您的屌来刺您的盾，结果会怎么样呢？”
+20:18 Plough:http://tieba.baidu.com/p/3078462093
+20:18 lh_mouse:Plough, 吃药
+20:18 Plough:看2L
+20:18 Plough:lh_mouse: 不吃
+20:19 varna:Memcached似乎好点
+20:19 T2 joined channel
+20:19 Plough:十个左右的差异
+20:19 Plough:基本没区别……
+20:19 varna:23333
+20:19 varna:这2L怎么比47哥还作死
+20:20 varna:Plough: http://tieba.baidu.com/p/3079060115
+20:22 Plough:varna: 看了4L我决定不吃药了
+20:23 xxxxxxxxx:本来打算吃的意思?
+20:23 Plough:本来也不打算吃
+20:23 Plough:现在更加坚定了
+20:24 varna:Plough: 这个不够大么，没关系
+20:24 Plough:噗
+20:24 Plough:去上厕所
+20:24 varna:Plough: 有个哥们已经溢乳了，现在正在到处找人啪啪啪
+20:24 varna:2333
+20:25 varna:再说小的也不是不好，我家电酱还不是分不出前胸后背的程度
+20:25 varna:这里还有个 http://tieba.baidu.com/p/3069236139
+20:26 varna:每次进药娘吧都能看到一山一山的笑话
+20:27 lh_mouse:你居然会去那种地方
+20:27 biergaizi__ joined channel
+20:27 varna:lh_mouse: 超逗的
+20:28 varna:以前看三俗笑话都去帝吧，现在发现药娘吧好玩
+20:28 lh_mouse:庸俗
+20:28 varna:人缺什么就要什么
+20:29 lh_mouse:我不缺药娘  我缺妹子
+20:29 varna:2333
+20:30 varna:物色下你们公司的HR看？
+20:31 xxxxxxxxx:没觉得药娘吧的有多好笑....
+20:32 T2:xxx
+20:32 T2:xxxxxxxxx, 那是因为你正常
+20:33 varna:EA基佬是在掩饰
+20:33 varna:他的吐槽功力不在于期望输出而在暴击上
+20:33 T2:= =
+20:33 xxxxxxxxx:完全不明白他们在想什么....
+20:34 T2:看来能明白它们在想什么的只有我了。
+20:34 varna:性向和心理问题这个没办法，不少是天生的
+20:34 varna:T2: 噗？你要模范带头么……
+20:34 T2:没没没
+20:34 biergaizi__ joined channel
+20:34 T2:只是前几年差不多就是那个状态了。
+20:35 varna:二螺？
+20:35 varna:不对啊，前几年你不是在现充地推妹子么
+20:35 xxxxxxxxx:卧槽你怎么恢复过来的?
+20:35 T2:没，就是“迷茫”
+20:35 T2:xxxxxxxxx, 羊驼跑了个“数据”
+20:36 lhanjian joined channel
+20:36 varna:最近没什么数据可跑了
+20:36 T2:varna, 嗯
+20:36 xxxxxxxxx:然后胸就缩回去了?
+20:36 T2:没事，最近先坑那什么。
+20:36 T2:坑目前够大。
+20:36 T2:xxxxxxxxx, 跟那个无关
+20:37 varna:本体方面的工作也没进展，虽说有个大致的调子但横想竖坑
+20:37 T2:我连大调子都没有，横想竖要科普。
+20:38 varna:总之是贝 叶 斯 不 可 避 一 转 攻 势 D S 厨 激 怒
+20:38 T2:xxxxxxxxx, 就是我能理解人为啥能闲成那样或者说他们在想什么。
+20:39 xxxxxxxxx:闲就要吃药么?
+20:39 T2:xxxxxxxxx, 闲出病是的。
+20:39 T2:xxxxxxxxx, 比方说我。
+20:39 xxxxxxxxx:你到底吃过没吃过.....
+20:40 varna:他要吃过还能推妹么
+20:40 T2:xxxxxxxxx, 文拉法辛帕罗西丁我都没少吃好么。
+20:40 xxxxxxxxx:光吃药不切不行么?
+20:40 T2:xxxxxxxxx, 那个倒是没。
+20:40 varna:那些不是抗雄的……
+20:41 T2:varna, 变个性迎合市场倒是没考虑过。
+20:41 varna:我突然想黑糖果
+20:41 xxxxxxxxx:糖球吃药了?
+20:41 varna:小萝卜新人: 雌性激素有这个功效？ ☆雪花啤酒☆: 回复 小萝卜新人 :螺和VB6有
+20:41 varna:亮点自寻
+20:41 T2:= =
+20:41 xxxxxxxxx:。。。
+20:41 xxxxxxxxx:糖球上次说自己多少年VB经验?
+20:42 varna:似乎是八年
+20:42 xxxxxxxxx:http://zhidao.baidu.com/question/288357194.html
+20:43 T2:xxxxxxxxx, 其实我要不是偶然手残点到C艹吧可能跟他们差不了多少。
+20:43 varna:噗
+20:43 xxxxxxxxx:T2知道药娘是什么意思么?
+20:43 T2:varna, 不是那种。
+20:43 T2:xxxxxxxxx, 我只是说想法。
+20:44 T2:不是说取向。
+20:44 varna:T2: 我是噗那个自慰十年的十二岁幼女
+20:44 T2:varna, 好吧。
+20:44 T2:xxxxxxxxx, 毫无方向的人参干出点什么都不奇怪。
+20:45 xxxxxxxxx:绝对奇怪
+20:45 T2:xxxxxxxxx, 人终究脱离不了自己的认知。
+20:46 xxxxxxxxx:决定吃药明显太有想法了 
+20:46 varna:http://zhidao.baidu.com/question/112827888.html?qbl=relate_question_3
+20:46 T2:xxxxxxxxx, 什么都不知道闲的只能胡思乱想。
+20:47 xxxxxxxxx:胡思乱想最多成为里黄老师
+20:47 T2:xxxxxxxxx, 嘛，不是每个人都有能考上大学的程度。
+20:47 xxxxxxxxx:所以才会变成里黄老师
+20:47 sismvg:可怜的小猫
+20:48 sismvg:跑到谁家门前不好偏偏跑我家的。。。这下不死不可能了啊。。
+20:48 T2:xxxxxxxxx, 李煌是hust毕业的。
+20:48 T2:xxxxxxxxx, 这点他比我强。
+20:48 varna:sismvg: 吃了不怕有寄生虫么
+20:49 xxxxxxxxx:我觉得他不是要吃.....
+20:49 varna:噗，小学一死党为了脱离部落来岩川了……
+20:49 sismvg:我指的是我姓养的宠物都死了。。
+20:49 varna:...
+20:49 varna:我以为你饿得要吃猫头
+20:49 xxxxxxxxx:我还以为是要爆。。。。
+20:49 T2:xxxxxxxxx, 虽然我一直好奇他们是如何毕业的。
+20:49 T2:理解不能。
+20:50 varna:生为非洲提督是改不了命的啊，来岩川也没用……
+20:50 T2:我只能说人各有所长。
+20:51 sismvg:基本都是6个月内死了。。
+20:51 varna:各 有 所 长
+20:51 varna:sismvg: 你怎么养死的，猫狗之类不容易啊……
+20:51 varna:养个乌龟小耗之类死了倒是有可能
+20:52 xxxxxxxxx:我只知道我养鱼会死....
+20:52 sismvg:狗还好，最长的7年。。
+20:52 sismvg:猫死了6只
+20:52 varna:七年还可以啊
+20:52 varna:噗噗
+20:52 sismvg:麻雀死了4只
+20:52 varna:xxxxxxxxx: 自来水死鱼正常吧
+20:52 varna:sismvg: 灭四害啊
+20:52 xxxxxxxxx:还养麻雀...
+20:52 sismvg:老鼠2只。。
+20:52 varna:死了两个小耗
+20:53 xxxxxxxxx:没事 人家一顿饭死好多耗子呢
+20:53 biergaizi__ joined channel
+20:53 varna:以前有个伙计养的小耗会爬笼子做特技动作
+20:53 T2:varna, 以我接受过的教育和接触过的大部分人群，如果我再傻逼点以为大学毕业就万事大吉然后毕业走个关系混底层学术圈那种没节操的地方可能也跟李煌差不多。
+20:54 varna:T2: 能走关系留校不是挺好的么
+20:54 xxxxxxxxx:家里长辈养过鸟 最后都放了 虽然一开始也是抓的...
+20:54 varna:虽说如果你成果不够就是被轮女女女的情况
+20:54 sismvg:要是猫早一个月来的话就好了
+20:54 sismvg:活过8周的猫基本都能存活
+20:55 T2:varna, 但是李老师那种就是另一码事了。
+20:55 T2:varna, 至少我初中老师还没李老师一半的程度。
+20:55 sismvg:现在找到了工作，每天8点走，11点回。。
+20:55 sismvg:晚上11
+20:55 xxxxxxxxx:三个小时么?
+20:55 varna:sismvg: 你养个小耗，放胖次里
+20:55 varna:T2: 李煌老师是傻逼
+20:56 xxxxxxxxx:不会咬到蛋么?
+20:56 T2:varna, 我初中那伙计是傻逼+败类。
+20:56 varna:看造化了
+20:56 varna:T2: 他推幼女？
+20:56 T2:跟我妈差不多吧。
+20:56 xxxxxxxxx:T2把自己家人黑惨了
+20:56 T2:底层的人渣，拿学生找平衡的伙计。
+20:57 T2:xxxxxxxxx, 他们不值得我黑。
+20:58 T2:xxxxxxxxx, 如果他们有李煌老师一半的程度，可能我至少能有点三观。
+20:58 xxxxxxxxx:说得一口好相声
+20:59 T2:xxxxxxxxx, 你没摊上这种事儿你理解不了。
+21:0 sismvg:看看能不能送出去吧，实在不行给宠物店好了（要是能要就好啦）
+21:0 T2:不管什么样的傻逼或者败类也是有生育能力的
+21:1 T2:包括李煌xym甚至药娘吧的伙计。
+21:1 T2:似乎你只是没考虑过这些。
+21:2 sismvg:牛顿岂不是太惨了
+21:2 T2:sismvg, 2333
+21:2 xxxxxxxxx:说得一口好相声
+21:3 sismvg:我应该研究以下真正的技术宅结婚生子后不杯具的有多少
+21:3 T2:要不是手贱点进C艹吧，我可能没有说相声的机会。
+21:3 varna:技术宅做的大多是外行人也能看到成果的东西
+21:3 varna:你搞编译的话甚至没人会叫你技术宅，因为他们不看
+21:3 xxxxxxxxx:比如做视频
+21:4 T2:算了不说这个。
+21:4 T2:技术宅什么的会画画就行了。
+21:4 T2:只要能看到那就是技术。
+21:5 biergaizi joined channel
+21:10 biergaizi_ joined channel
+21:11 T2:xxxxxxxxx, 你能在网上看到的逗比至少会上网，我家族的父辈没有一个人会。
+21:12 T2:xxxxxxxxx, 所以不管我在撸什么在他们眼里就是打游戏罢了。
+21:12 T2:xxxxxxxxx, 「我只是在说相声」
+21:13 T2:嘛，没事，还可以种地。
+21:13 T2:2333
+21:15 T2:「我爸会用word腋」
+21:16 biergaizi__ joined channel
+21:16 varna:噗，代理挂了？
+21:17 xxxxxxxxx:fsf....
+21:23 sismvg:猎人131冈叔帅爆
+21:23 varna:请求测试
+21:23 varna:www.acggate.net
+21:23 varna:^ 他们还活着们
+21:23 varna:么
+21:24 xxxxxxxxx:ac的匿名板上宣传都撤掉了 印象中以前好像是有的
+21:27 varna:我到刚才还在用的
+21:27 T2:varna, 似乎死了。
+21:27 varna:死了啊
+21:27 liuzhoou joined channel
+21:27 T2:varna, 嗯
+21:28 varna:麻烦
+21:28 lhanjian: 舰队POWER现已支持城姬! 
+21:28 lhanjian:哪里撤掉了
+21:28 varna:lhj能上？
+21:28 lhanjian:不能上。
+21:28 varna:那就是他们暂时死了
+21:28 varna:明天再看看，不行我就只好换代理了
+21:28 xxxxxxxxx:我猜不是暂时
+21:28 varna:Y
+21:29 xxxxxxxxx:21:24:24 xxxxxxxxx>ac的匿名板上宣传都撤掉了 印象中以前好像是有的
+21:29 xxxxxxxxx:没死撤广告干啥
+21:29 lhanjian:没撤广告。
+21:29 varna:但是死了搞城娘干嘛……
+21:30 varna:游戏版的广告不是还在么
+21:30 varna: 	無題 無名 2014/6/1 21:24:49 ID:rodx8c42 [举报] No.3496015
+21:30 varna:    玩的正欢就挂了，幸好没在推2-5
+21:30 varna:2333
+21:31 xxxxxxxxx: 昨天大概眼抽了
+21:31 Plough:每月捐我30，我把VPS换成樱花
+21:31 varna:看来是临时故障，不用换还好
+21:31 varna:acggate的代理良心而快速
+21:32 varna:Plough: 我捐你一百八十螺
+21:32 Plough:varna: 噗
+21:33 varna:無題 無名 2014/6/1 21:32:30 ID:admin [举报] No.3496106
+21:33 varna:服务器维护，要等到明早6点结束（日本时间）， 我也没有更多的钱准备备用服务器……没有办法，很抱歉！
+21:33 lh_mouse:（自言自语）吃药吃药
+21:34 Plough:小耗要吃药？
+21:34 lh_mouse:全场四个蜀  大嘴貂蝉一出  然后就没有然后了
+21:34 lh_mouse:牌太好 最后一下正好用完
+21:34 Plough:Firefox又Crash了
+21:35 Plough:我是不是该考虑迁到Chrome了
+21:35 varna:chrome去死
+21:35 lh_mouse:opera 万岁
+21:35 lh_mouse:永远的 opera 12
+21:35 varna:不喜opera
+21:35 Plough:不喜+
+21:36 lh_mouse:不喜 opera 的都滚去吃药！！！
+21:36 varna:小耗过来！
+21:36 xxxxxxxxx:喜欢的该吃才对
+21:38 lhanjian:找到一个可用的GAE节点，快的令人发指
+21:38 lh_mouse:自己搭啊
+21:39 varna:不行再自己搭
+21:39 varna:现在的速度不错，又不花钱
+21:39 lhanjian:自己搭就不用了。我有自用的VPN
+21:39 xxxxxxxxx:自己去11区搭?
+21:40 lh_mouse:GAE 本来就不要钱
+21:40 varna:租那边的主机再搭应该也可以的
+21:40 varna:GAE我一直不喜欢
+21:40 Plough:所以说每月捐我30我换个VPS多好
+21:40 biergaizi__ joined channel
+21:40 varna:Plough: 一百八
+21:40 Plough:varna: 不吃
+21:40 lh_mouse:速度还可以  油土鳖 480P 一点都不卡
+21:41 Plough:拿OpenShift试试？
+21:41 lh_mouse:阿里云没有那么便宜的 VPS
+21:41 lhanjian:720P也不卡啊！GAE上谷歌自家的玩意儿快的丧心病狂
+21:41 lh_mouse:我前两个星期在阿里云上物色了一下主机  还没买呢  先注册了个账号
+21:41 lh_mouse:结果那边直接一个电话打来了  被我发了个邮件狠狠骂了一顿
+21:42 Plough:懒得备案&准备顺带用来当梯子
+21:42 lh_mouse:好像就是“你快点花钱吧你快点花钱吧”
+21:42 varna:哈哈哈
+21:43 endle joined channel
+21:43 varna:你怎么写的邮件？吱吱吱吱吱 吱吱吱 吱吱 吱吱吱吱吱吱 这样？
+21:43 Plough:这啥，摩尔斯电码？
+21:44 varna:蘸醋
+21:44 xxxxxxxxx:口支口支口支吱口支口支口支口支口支吱
+21:44 Plough:那不是只口支一下么
+21:45 varna:小耗抵抗有效
+21:45 T2:完美的二进制
+21:45 T2:口支口支口支口支口支口支口支口支口支口支B
+21:46 xxxxxxxxx:口支B是啥?
+21:46 T2:说明这是二进制啊。
+21:46 T2:= =
+21:46 T2:1010101010101010B
+21:46 lh_mouse:geordi, <<hex <<0b10100101
+21:46 geordi:a5
+21:46 lh_mouse:geordi, <<hex <<0b1010'0101
+21:46 geordi:error: Unexpected end of request. Expected any symbol.
+21:46 lh_mouse:geordi, <<hex <<0b1010'0101'
+21:46 geordi:error: digit separator outside digit sequence
+21:47 lh_mouse:geordi, <<hex <<0b1010'0101'0
+21:47 geordi:14a
+21:47 libhanjian joined channel
+21:48 libhanjian:PING
+21:49 varna:傻逼度娘
+21:49 varna:头像不得小于240x240，这什么逗乐规定
+21:50 xxxxxxxxx:还好不是9600x9600
+21:50 varna:既然如此我就不换了
+21:51 xxxxxxxxx:http://tieba.baidu.com/p/3077506790 <- 快抓了这些反动派
+21:52 Plough:varna: 早就有了
+21:52 Plough:我第一次发现的时候把度娘全家问候了一遍
+21:53 T2:= =
+21:53 varna:键盘斗士傻逼+ 万一打人的是体制内+
+21:53 biergaizi__ joined channel
+21:53 xxxxxxxxx:羊驼应该趁乱爆他们
+21:54 varna:xxxxxxxxx: 爆
+21:55 T2:xxxxxxxxx, 这种文为什么不去基宋吧看？
+21:55 libhanjian:某地民警在微博上也说，普通民众没有底力不要指望着个人可以组织集体的暴力行为
+21:55 T2:或者正确吧。
+21:55 T2:基宋 -> 新宋
+21:56 T2:「没个PhD我还真不好意思进去混」
+21:56 T2:不过我被永久小黑屋了2333。
+21:57 T2:新宋吧那群淫家还是比较清醒的，但是不合我口味。
+21:58 T2:http://tieba.baidu.com/p/3079719808
+21:59 xxxxxxxxx:仔细想想还是高喊新疆话效果比较好
+21:59 T2:只是首页随便捡了个栗子。
+21:59 varna:安拉胡阿克巴！
+21:59 varna:安拉胡阿克巴！
+22:0 T2:http://tieba.baidu.com/p/3079662791 首页另一个。
+22:0 libhanjian:杀你们汉人就能上天堂，你信不信教都是死。
+22:0 varna:T2: 这是些酸葡萄么
+22:1 varna:libhanjian: 口胡！老子的舰队里可是有七十二处女的！
+22:1 T2:varna, 没有，既得利益者居多。
+22:2 varna:T2: 既得利益者不都在艹比么
+22:2 libhanjian:这些人最多是基层公务员，哪里有资格谈得上既得利益者
+22:2 T2:varna, http://tieba.baidu.com/p/3079542255
+22:2 T2:首页技术贴
+22:2 T2:至少比C艹吧靠谱
+22:3 varna:T2: 靠谱个屌
+22:3 varna:看到2L我就笑了
+22:3 T2:贴吧水平你们懂的。
+22:3 T2:水底下那群还可以的。
+22:3 varna:非得把自己向下看齐么
+22:3 libhanjian joined channel
+22:3 xxxxxxxxx:http://lol.duowan.com/1309/242487111116.html  看了这个我就不怕6打1了
+22:3 varna:有利益捞利益，没的话不必多说
+22:3 libhanjian:T2, 这些人最多是基层公务员，哪里有资格谈得上既得利益者
+22:4 varna:至于基层公务员，我只笑笑不说话
+22:4 T2:libhanjian, 不是，C艹吧大多数还都是傻逼呢。
+22:5 T2:「求大神求作业求过二级」
+22:5 libhanjian:完全没看懂你想说什么
+22:5 varna:省级干部会劝自己的孩子别参政，底下的伙计们还在路边开政治局扩大会议
+22:5 varna:还是那句话，缺什么就要什么
+22:5 varna:要不我总劝米库酱红旗酱吃药
+22:5 T2:也对
+22:6 xxxxxxxxx:所以羊驼总去药娘吧
+22:6 varna:还去兄贵吧
+22:6 varna:还舔亚夜花
+22:7 xxxxxxxxx:揉舔撸驼
+22:7 varna:我仍然在虔诚的向duizhe亚夜花祈lu祷guan给我一艘小天使
+22:8 lh_mouse:/s/tensi/rori/g
+22:10 varna:萝莉可遇不可求
+22:10 varna:过了3-2我再赌大凤不迟
+22:11 xxxxxxxxx:http://world.haiwainet.cn/n/2014/0601/c232591-20695550.html 
+22:12 xxxxxxxxx:这货还有啥说不出来?
+22:13 Plough:话说Perl有MathJax类似物吗
+22:13 Plough:有的话可以瞬间解决一堆问题
+22:14 biergaizi joined channel
+22:15 varna:Plough: 不知道
+22:15 varna:Plough: 去cpan查一下看看
+22:15 Plough:搜MathJax只搜到一个Acme::Pod::MathJax
+22:15 Plough:不知道那玩意是干啥用的
+22:15 Plough:我搜LaTex试试
+22:15 varna:搜到的只有那个
+22:15 varna:是个奇怪物
+22:16 varna:连usage都没写，真失格
+22:16 varna:噗噗，For now this isn't a module as such, but rather a way to test different pod-renderer's abilities to handle MathJax. The following examples are taken directly from MathJax's website.
+22:16 Plough:我看看LaTeXML行不行
+22:17 lh_mouse:LaaaaaaTeeeeeeX
+22:17 varna:ヲ瓜
+22:17 lh_mouse:オ
+22:21 varna:ヲ瓜： http://static.mengniang.org/common/f/f1/%E7%A9%BA%E6%AF%8DWO%E7%BA%A7.jpg
+22:22 T3rm1n4t0r:漫展返图：http://tieba.baidu.com/p/3079768033
+22:24 varna:这栞的死鱼眼……
+22:24 varna:@死鱼眼的汐宫栞
+22:24 lh_mouse:神黑
+22:24 varna:岛风还不如索契冬奥会上那个大叔
+22:24 xxxxxxxxx:http://imgsrc.baidu.com/forum/w%3D580/sign=297c2cf08594a4c20a23e7233ef61bac/034f78f0f736afc386c5f29ab119ebc4b6451200.jpg <- 旁边的两个质量最高
+22:25 varna:我擦，这灵梦……
+22:26 varna:还有后面那个形如大咧巴的脸请不要黑穹妹……
+22:26 varna:狂三和琴里已经不忍直视
+22:26 xxxxxxxxx:http://imgsrc.baidu.com/forum/pic/item/7333ae1ea8d3fd1ff83e97da324e251f94ca5f57.jpg 洗剪吹洗剪吹吹吹吹
+22:27 varna:后面楼主居然没认出祈妹
+22:27 varna:虽然我觉得看脸大概是认不出来的，但脸上打码大概没问题
+22:27 xxxxxxxxx:我眼光真是好....
+22:27 Plough:http://tieba.baidu.com/p/3079577532
+22:27 xxxxxxxxx:一眼就看出质量最高的两位
+22:28 varna:还有那个snake...
+22:28 varna:人家是Big Boss, 不是洗剪吹！你三天不洗头出来效果都比那个假发好！
+22:28 sismvg:好屌的E文翻译
+22:28 Plough:http://tieba.baidu.com/p/1874347338?pn=3
+22:28 Plough:close my fart matter
+22:30 xxxxxxxxx:不行我要保存一张
+22:33 varna:该怎么说呢，虽然我是个伪宅但我还是没法理解coser
+22:33 varna:妹子提出要玩巫女play另论，但是coser么……
+22:33 xxxxxxxxx:就和我没法理解药娘一样
+22:34 varna:而且如果被妹子提出玩巫女play的话，一定要预备得当
+22:34 varna:从包里掏出电脑，说「来，我这有花映冢和2P手柄！」
+22:34 xxxxxxxxx:@倒贴妹子
+22:34 zzzzzzzz joined channel
+22:34 varna:先大战三百回合花映冢再说
+22:36 zzzzzzzz joined channel
+22:43 T2:= =
+22:46 sismvg:http://www.ithome.com/html/it/87862.htm 羊驼转啊转
+22:46 libhanjian:甜党大法好
+22:48 sismvg:吃多了不喝水的话嘴里会很酸
+22:51 libhanjian:sismvg, 那是因为你爱不够！
+22:52 sismvg:好吃就ok
+22:57 lhanjian joined channel
+23:4 hope1 joined channel
+23:7 condy joined channel
+23:9 hope1 joined channel
+23:9 hope1 joined channel
+23:11 hope1 joined channel
+23:35 T2:睡了
+23:42 hope1:http://h.acfun.tv/t/3437673 好可怕……
+23:45 lhanjian:这不是A岛日常么
+23:47 lhanjian:hope1, 话说谷歌的节点还是非常多啊
+23:47 hope1:哦对，condy早上发了个节点…… 我试试看
+23:48 hope1:不过google.ru反正能用
+23:48 lhanjian:我现在用的这个节点也不错
+23:48 hope1:节点可以直接上啊……
+23:49 lhanjian:google.ru我这边啥也出不来……
+23:49 hope1:得先挂goagent
+23:49 lhanjian:嗯
+23:49 lhanjian:我现在好像用的是某日本节点
+23:50 hope1:hosts应该加哪些规则？
+23:50 lhanjian:goagent 的issue天天发
+23:50 lhanjian:不知道……
+23:50 lhanjian:反正挺乱的
+23:50 xxxxxxxxx:http://h.acfun.tv/t/3494257
+23:50 hope1:你怎么做的…… 手动？
+23:50 xxxxxxxxx:baidu除了不会墙还有什么优势?
+23:51 lhanjian:hope1, hosts我用的是smartladder提供的那些
+23:51 hope1:完全没有吧
+23:51 hope1:还有快
+23:51 hope1:lhanjian, 我搜一下
+23:52 lhanjian:hope1, https://code.google.com/p/smartladder/
+23:52 hope1:aur/smartladder
+23:52 lhanjian:百度搜国内人常搜的话题可能好点
+23:53 hope1:解压推荐使用 好压
+23:54 hope1:这是怎么回事……
+23:54 lhanjian:这个运维者收捐款的
+23:54 hope1:原来如此
+23:54 lhanjian:说不定还收广告费
+23:55 lhanjian:你要是舍得掏钱，他还提供了shadowsocks的收费节点
+23:56 hope1:这厂家在这种地方投广告没问题？
+23:57 xxxxxxxxx:我怎么知道国人到底搜什么多....
+23:57 lhanjian:为啥会有问题？
+23:57 lhanjian:为什么XXX
+23:57 lhanjian:然后下面给出的建议搜索可能比较有代表性
+23:57 hope1:确实
+23:58 lh_mouse:geordi, { foo<string> s { make_shared<string>("meow"); } s->append(" meow"); cout <<*s.p; } template<typename T> struct foo { shared_ptr<T> p; shared_ptr<T> operator->(){ return p; } };
+23:58 geordi:error: expected '}' before ';' token
+23:58 lhanjian:甜党（大法好）
+23:58 lh_mouse:geordi, { foo<string> s { make_shared<string>("meow"); }; s->append(" meow"); cout <<*s.p; } template<typename T> struct foo { shared_ptr<T> p; shared_ptr<T> operator->(){ return p; } };
+23:58 geordi:Same error.
+23:58 lh_mouse:geordi, { foo<string> s { make_shared<string>("meow") }; s->append(" meow"); cout <<*s.p; } template<typename T> struct foo { shared_ptr<T> p; shared_ptr<T> operator->(){ return p; } };
+23:58 geordi:meow meow
+23:58 xxxxxxxxx:http://h.acfun.tv/t/3492438

@@ -1,0 +1,196 @@
+00:07 pokk7 joined channel
+00:07 pokk7 quit:Remote host closed the connection
+00:45 ms78210 joined channel
+00:51 ms78210 quit:Ping timeout: 240 seconds
+01:32 NeddySeagoon3 joined channel
+01:32 NeddySeagoon3 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+02:41 \u: lhanjian: libunwind .eh_frame_hdr https://refspecs.linuxfoundation.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/libgcc-s.html#TBL-LIBGCC-S-UNWIN-INTS
+02:42 * \u 改過.eh_frame_hdr修過libunwind
+02:46 BlueShark6 joined channel
+02:46 BlueShark6 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+02:47 lostlabyrinth16 joined channel
+02:48 lostlabyrinth16 quit:Remote host closed the connection
+04:13 thomasb9511 joined channel
+04:13 thomasb9511 quit:Read error: Connection reset by peer
+04:32 Praise14 joined channel
+04:32 Praise14 quit:K-Lined
+05:40 lagbox1 joined channel
+05:41 lagbox1 quit:Killed (Sigyn (Spam is off topic on freenode.))
+06:06 channels joined channel
+06:07 channels quit:Killed (Sigyn (Spam is off topic on freenode.))
+06:20 jhutchins14 joined channel
+06:21 jhutchins14 quit:Remote host closed the connection
+09:10 Ryuzaki joined channel
+09:15 Ryuzaki quit:Ping timeout: 244 seconds
+09:22 mikedlr11 joined channel
+09:25 mikedlr11 quit:Remote host closed the connection
+09:30 wenfeng quit:Ping timeout: 244 seconds
+09:38 epic5 joined channel
+09:39 epic5 quit:Remote host closed the connection
+09:40 lh_mouse joined channel
+09:52 jueli joined channel
+09:55 jueli: ...
+09:55 jueli: 没人？
+09:59 jueli quit:Quit: WeeChat 2.0.1
+10:10 MuffinPimp joined channel
+10:16 wenfeng joined channel
+10:37 lh_ideapad joined channel
+11:23 yar11 joined channel
+11:23 yar11 quit:K-Lined
+11:32 msm28 joined channel
+11:32 msm28 quit:Killed (Sigyn (Spam is off topic on freenode.))
+11:53 Guest97794 joined channel
+11:53 Guest97794 quit:Killed (Sigyn (Spam is off topic on freenode.))
+12:11 vamiry joined channel
+12:11 vamiry quit:Remote host closed the connection
+12:21 zirconi__ quit:Remote host closed the connection
+12:27 phoe20 joined channel
+12:28 phoe20 quit:Remote host closed the connection
+13:05 tutu_wind joined channel
+14:57 wook_ joined channel
+14:57 wook_ quit:K-Lined
+15:21 slackjeff joined channel
+15:21 slackjeff quit:Remote host closed the connection
+15:34 NebulaMoe joined channel
+15:36 Random28 joined channel
+15:37 Random28 quit:Read error: Connection reset by peer
+15:43 MuffinPimp quit:Quit: Goodbye.
+15:57 MuffinPimp joined channel
+16:10 \s quit:Ping timeout: 244 seconds
+16:19 \s joined channel
+16:19 \s quit:Changing host
+16:19 \s joined channel
+16:20 frmus2 joined channel
+16:21 frmus2 quit:Remote host closed the connection
+16:27 wenfeng quit:Read error: Connection reset by peer
+16:28 wenfeng joined channel
+16:31 wenfeng quit:Read error: Connection reset by peer
+16:32 wenfeng joined channel
+16:35 lh_not_bot quit:Quit: Lost terminal
+16:36 lh_not_bot joined channel
+16:44 \s_ joined channel
+16:44 \s quit:Ping timeout: 256 seconds
+16:50 lh_ideapad quit:Remote host closed the connection
+16:50 zhangoke joined channel
+16:51 lh_ideapad joined channel
+16:53 lh_ideapad quit:Remote host closed the connection
+16:53 lh_ideapad joined channel
+16:55 NebulaMoe quit:Remote host closed the connection
+16:58 jeblair joined channel
+16:59 jeblair quit:Killed (Sigyn (Spam is off topic on freenode.))
+17:02 lh_mouse: geordi, << static_cast<int *>({})
+17:02 geordi: error: expected primary-expression before '{' token
+17:02 lh_mouse: geordi, << int({})
+17:02 geordi: error: list-initializer for non-class type must not be parenthesized
+17:02 lh_mouse: geordi, << string::pointer({})
+17:02 geordi: Same error.
+17:03 lh_mouse: geordi, << foo({}); struct foo { int x; foo(int y) : x(y) { } operator int () { return x; } };
+17:03 geordi: 0
+17:09 wenfeng quit:Read error: Connection reset by peer
+17:30 \s_ quit:Quit: ZZZzzz…
+18:01 zhangoke quit:Quit: zhangoke
+18:38 \s joined channel
+18:51 Guest89349 joined channel
+18:52 Guest89349 quit:K-Lined
+18:59 zhangoke joined channel
+19:11 iyzsong joined channel
+19:21 zhangoke quit:Quit: zhangoke
+19:28 zz_ka6sox joined channel
+19:28 zz_ka6sox quit:K-Lined
+20:01 whocares_2_ joined channel
+20:01 whocares_2 quit:Ping timeout: 240 seconds
+20:03 tutu joined channel
+20:04 tutu_wind quit:Ping timeout: 276 seconds
+20:07 Alucard4200 joined channel
+20:08 Alucard4200 quit:Killed (Sigyn (Spam is off topic on freenode.))
+20:21 Pici27 joined channel
+20:21 Pici27 quit:Killed (Sigyn (Spam is off topic on freenode.))
+20:24 Remco6 joined channel
+20:25 Remco6 quit:Remote host closed the connection
+20:38 lhanjian: \u: 喵睿爱你
+20:44 Fleet16 joined channel
+20:44 Fleet16 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+20:47 nikow16 joined channel
+20:49 nikow16 quit:Killed (Sigyn (Spam is off topic on freenode.))
+21:02 Dworf joined channel
+21:04 lh_ideapad: geordi, << alignof(foo::type); struct foo { using type = alignas(32) char [32]; };
+21:04 geordi: warning: attribute ignored
+21:04 lh_ideapad: geordi, use -w
+21:04 geordi: 1
+21:04 lh_ideapad: geordi, --clang << alignof(foo::type); struct foo { using type = alignas(32) char [32]; };
+21:04 geordi: error: an attribute list cannot appear here
+21:04 lh_ideapad: geordi, --clang << alignof(foo::type); struct foo { using type = char [32] alignas(32); };
+21:04 geordi: error: 'alignas' attribute cannot be applied to types
+21:05 lh_ideapad: geordi, << alignof(foo::type); struct foo { using type = __attribute__((__aligned__(32))) char [32]; };
+21:05 geordi: 32
+21:06 lh_ideapad: geordi, << TYPE<aligned_storage<42, 4>::type>
+21:06 geordi: aligned_storage<42, 4>::type
+21:06 lh_ideapad: geordi, << typeid(aligned_storage<42, 4>::type).name()
+21:06 geordi: aligned_storage<42ul, 4ul>::type
+21:06 lh_ideapad: geordi,  use --clang 
+21:06 geordi: NSt3__115aligned_storageILm42ELm4EE4typeE
+21:06 lh_ideapad: geordi, --clang  << TYPE<aligned_storage<42, 4>::type>
+21:06 geordi: aligned_storage<42, 4>::type
+21:06 lh_ideapad: FUCK YOU
+21:07 lh_ideapad: geordi, << alignof(foo), alignof(decltype(foo));  alignas(32) char foo[42];
+21:07 geordi: error: ISO C++ does not allow 'alignof' with a non-type
+21:08 lh_ideapad: geordi, << __alignof__(foo), __alignof__(decltype(foo));  alignas(32) char foo[42];
+21:08 geordi: 32, 1
+21:08 Dworf quit:Ping timeout: 256 seconds
+21:13 Jguy joined channel
+21:13 Jguy quit:K-Lined
+21:15 lh_ideapad: geordi, -c struct foo { static constexpr alignas(32) char str[] = "meow"; }
+21:15 geordi: error: expected ';' after struct definition (fix known)
+21:15 lh_ideapad: geordi, -c struct foo { static constexpr alignas(32) char str[] = "meow"; };
+21:15 geordi: warning: attribute ignored
+21:15 lh_ideapad: geordi, -c struct foo { static constexpr char alignas(32) str[] = "meow"; };
+21:15 geordi: Same warning.
+21:15 lh_ideapad: geordi, --clang -c struct foo { static constexpr alignas(32) char str[] = "meow"; };
+21:15 geordi: error: an attribute list cannot appear here
+21:15 lh_ideapad: geordi, --clang -c struct foo { static alignas(32) constexpr char str[] = "meow"; };
+21:15 geordi: Same error.
+21:15 lh_ideapad: geordi, --clang -c struct foo { alignas(32) static constexpr char str[] = "meow"; };
+21:15 geordi: Success
+21:15 lh_ideapad: geordi, remove --clang
+21:15 geordi: Success
+21:15 lh_ideapad: geordi, use --gcc
+21:15 geordi: Success
+21:15 lh_ideapad: geordi, show 
+21:15 geordi: -c --gcc struct foo { alignas(32) static constexpr char str[] = "meow"; };
+21:16 lh_ideapad: geordi, --clang -c struct foo { alignas(32) static constexpr char str[] = "meow"; using type = decltype(str); }; foo::type r; static_assert(alignof(r) == 32); 
+21:16 geordi: error: default initialization of an object of const type 'foo::type' (aka 'const char [5]')
+21:16 lh_ideapad: geordi, --clang -c struct foo { alignas(32) static constexpr char str[] = "meow"; using type = decltype(str); }; foo::type r = { } ; static_assert(alignof(r) == 32); 
+21:16 geordi: error: 'alignof' applied to an expression is a GNU extension
+21:17 lh_ideapad: geordi, use --gcc
+21:17 geordi: error: ISO C++ does not allow 'alignof' with a non-type
+21:17 lh_ideapad: geordi, --clang -c struct foo { alignas(32) static constexpr char str[] = "meow"; using type = decltype(str); }; foo::type r = { } ; static_assert(__alignof__(r) == 32); 
+21:17 geordi: error: static_assert failed
+21:17 lh_ideapad: geordi, -c struct foo { alignas(32) static char str[42]; using type = decltype(str); }; static_assert(alignof(foo::type) == 32); 
+21:17 geordi: error: static assertion failed
+21:18 lh_ideapad quit:Remote host closed the connection
+21:25 \s quit:Read error: Connection reset by peer
+21:29 \s joined channel
+21:36 SleePy12 joined channel
+21:36 SleePy12 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+21:42 agree joined channel
+21:43 agree quit:Remote host closed the connection
+21:45 tutu quit:Ping timeout: 248 seconds
+21:55 \s quit:Ping timeout: 240 seconds
+21:57 \s joined channel
+21:57 \s quit:Changing host
+21:57 \s joined channel
+22:06 eggy joined channel
+22:07 eggy quit:Killed (Sigyn (Spam is off topic on freenode.))
+22:13 lh_ideapad joined channel
+22:23 ketas13 joined channel
+22:23 ketas13 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+22:47 lh_ideapad quit:Remote host closed the connection
+22:50 \s quit:Ping timeout: 248 seconds
+22:51 lh_mouse quit:Ping timeout: 248 seconds
+22:52 \s joined channel
+22:59 \s quit:Ping timeout: 256 seconds
+23:11 \s joined channel
+23:26 sam15 joined channel
+23:27 sam15 quit:Remote host closed the connection
+23:48 marig joined channel
+23:48 marig quit:K-Lined

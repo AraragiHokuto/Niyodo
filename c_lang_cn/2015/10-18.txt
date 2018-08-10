@@ -1,0 +1,1503 @@
+00:07 Risitide joined channel
+00:08 Risitide quit:Client Quit
+00:08 Risitide joined channel
+00:26 lh_mouse: 莫言获诺贝尔奖 旧居院子里萝卜被游客拔光
+00:39 wlemuel joined channel
+00:46 cleamoon: 这什么鬼... 吃萝卜得诺奖吗
+01:04 yzld2002 quit:Remote host closed the connection
+01:06 Mokou: 睡觉
+01:06 Mokou: 诸君武运
+01:06 Mokou quit:Quit: 睡觉
+01:13 tutu_wind quit:Ping timeout: 264 seconds
+01:26 lh_mouse quit:Read error: Connection reset by peer
+01:43 StarDustX quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+01:46 wlemuel quit:Ping timeout: 240 seconds
+02:00 weihan quit:Ping timeout: 250 seconds
+03:38 cleamoon quit:Ping timeout: 246 seconds
+06:05 cleamoon joined channel
+06:52 FrankHB joined channel
+07:44 xxxxxxxx joined channel
+08:38 FrankHB quit:Ping timeout: 265 seconds
+08:55 weihan joined channel
+08:59 weihan quit:Max SendQ exceeded
+09:00 weihan joined channel
+09:02 weihan quit:Max SendQ exceeded
+09:03 weihan joined channel
+09:04 weihan quit:Read error: Connection reset by peer
+09:07 weihan joined channel
+09:35 yzld2002 joined channel
+09:37 wlemuel joined channel
+09:49 wlemuel quit:Ping timeout: 240 seconds
+10:03 lh_mouse joined channel
+10:24 pocmon joined channel
+10:28 tutu_wind joined channel
+10:28 refexchange joined channel
+10:34 refexchange: 试试能不能打中文
+10:40 iyzsong: 0 0
+10:51 refexchange: It works!Now let me try some emoji😚
+10:53 FrankHB joined channel
+11:00 weihan quit:Ping timeout: 260 seconds
+11:03 FrankHB quit:Read error: Connection reset by peer
+11:04 FrankHB joined channel
+11:09 FrankHB quit:Read error: Connection reset by peer
+11:09 FrankHB joined channel
+11:13 pocmon quit:Ping timeout: 268 seconds
+11:14 pocmon joined channel
+11:14 FrankHB quit:Read error: Connection reset by peer
+11:15 FrankHB joined channel
+11:22 wlemuel joined channel
+11:26 refexchange quit:Quit: leaving
+11:40 StarDustX joined channel
+11:47 FrankHB quit:Ping timeout: 265 seconds
+11:50 yzld2002 quit:Remote host closed the connection
+11:50 yzld2002 joined channel
+12:01 weihan joined channel
+12:03 Mokou joined channel
+12:06 StarDustX quit:Read error: Connection reset by peer
+12:25 pocmon quit:Quit: 闪...
+12:29 varna joined channel
+12:30 Mokou: 今天打了本月第一次演习
+12:30 varna: 登陆又卡成POI
+12:30 varna: 打打演习
+12:31 Mokou: varna: https://pastebin.mozilla.org/8849628 天城改
+12:31 Mokou: 舰体和轮机出力都是和天城一样的，变化了的是防护和武装
+12:32 varna: 这个主炮-护甲-标排的做法好扭曲……
+12:32 Mokou: 我得砸穿北卡……
+12:32 Mokou: 我总不能带着几门三年式去看跳蛋
+12:33 varna: 所以这个就是造船软件的蛋疼处，他们没有更多数据来做小计算
+12:33 Mokou: 另外我才发现平贺老贼的十三号舰长宽比只比朝日低一点
+12:33 varna: 比如改进下彻甲弹什么的
+12:33 Mokou: +
+12:33 Mokou: 不过弹道数据似乎也没几个人知道怎么算
+12:33 varna: 如果有41炮可以用的更好的彻甲弹，应该能在控制成本的基础上解决一系列问题
+12:34 Mokou: 给我41cm/50的弹道数据就成
+12:34 varna: 另外新的p7和K我push了
+12:34 Mokou: 我就知道能不能干穿北卡了
+12:34 Mokou: 了解，我去看看
+12:34 varna: 你原来那些sscanf被我改成了一个getopt
+12:35 Mokou: 毕竟只是个偷懒的测试代码 ……
+12:36 varna: 大部分偷懒的地方我没动，就是临时让它动起来
+12:36 varna: servcraft的全套头文件（迫真）也是先凑合加进去的
+12:36 varna: makefile简单改了一点
+12:37 Mokou: 十三号舰是278.3/31.07，扛八门46，标排47500t
+12:37 Mokou: 然后我发现我居然比平贺还保守……
+12:37 varna: 我觉得平贺估计也是没办法了只能去作死
+12:37 lhanjian__ joined channel
+12:37 Mokou: +
+12:37 varna: 在47kbrt的标排上提供对称的防御力，应该做不到吧
+12:38 varna: 还是个攻强守弱的方案
+12:38 Mokou: 基本不可能
+12:38 Mokou: 十三号舰的主装是330mm/15deg，甲板是127mm
+12:38 Mokou: 朝日是主装356mm/20deg，甲板200mm
+12:39 Mokou: 十三号舰这水平防护根本不够看……
+12:39 varna: 而田中参谋说，试46的炮重和46三连装是一样的
+12:39 Mokou: 田中参谋说战舰可以打到航妈
+12:40 Mokou: 不过其实没准是炮的问题
+12:40 varna: 然而最近地球附近不是发现了等离子管道状现象么
+12:40 varna: 说不定田中的家人很快就有消息了……
+12:40 Mokou: 十三号舰这个460不是九四式
+12:40 Mokou: 是当年和480一起测试的那门
+12:40 Mokou: 2333
+12:40 Mokou: 当年480弱装药表现很好，于是他们上了强装药试试看什么威力
+12:40 Mokou: duang
+12:41 Mokou: 然后他们就只敢给那门460用减装药模式了
+12:41 varna: 对了我说个笑话
+12:41 varna: 你看一眼kashiwara.c ln289-290
+12:42 varna: 那里的初始化有个非常糟糕的变化
+12:42 varna: p7_spinlock_preinit在p7_init之后调用
+12:43 varna: 而p7_spinlock_tlinit在p7_init上被注册了回调
+12:43 Mokou: ……
+12:43 varna: 看起来这里的preinit其实该叫postinit
+12:43 varna: 但它其实仍然发生在tlinit之前……
+12:43 Mokou: ……
+12:43 Mokou: 这什么情况
+12:43 varna: p7_init上注册那个回调在每个线程进调度循环的时候被调用
+12:44 varna: 所以你会看见我把两个初始化打了个wrapper扔进去
+12:45 Mokou: 我的感觉就是那个preinit看起来有点蛋疼，其他倒没啥……
+12:45 varna: ln273开始是servcraft系列的一般初始化做法，我把初始化分配器单态的全部责任扔给了客户程序
+12:45 StarDustX joined channel
+12:45 varna: 但p7强行要求单件/单态分配器，所以只支持closure_风格的接口
+12:46 varna: 示例程序用了malloc系列
+12:46 varna: 另外自旋锁其实你不初始化也一样
+12:47 varna: 那个功能是可选的，如果不用就不一定要初始化
+12:47 Mokou: 了解
+12:48 varna: 它的arena和元数据都是自己的内存，p7impl.c的所有功能都不依赖spin.c
+12:50 Mokou: 噗
+12:50 Mokou: combinedfleet似乎被地摊坑了
+12:50 Mokou: http://www.combinedfleet.com/b_armor.htm 你看大和那个General Quality
+12:50 varna: 啊？
+12:50 lh_mouse quit:Ping timeout: 272 seconds
+12:51 varna: inferior...
+12:51 Mokou: 大和地条钢神论早就被战后美帝测试打脸了……
+12:51 varna: Bisko: very good
+12:51 varna: KGV: BitW
+12:51 Mokou: 关键词：47%
+12:51 Mokou: 战后英国佬测试的结论是大和级的装甲钢和他们基本同等质量
+12:52 Mokou: 米帝的结论是大和的装甲钢质量至少不弱于他们的Class A
+12:52 varna: 德棍的结论是大和弱爆了
+12:53 Mokou: 德棍的结论是大和会被V2一发入魂
+12:53 varna: 我还是想进口一些德棍当活动时候用的炮弹
+12:53 Mokou: 说起来似乎大家都在猜新船是沙恩……
+12:53 varna: 因为岛田买了两个新画报
+12:53 Mokou: 然后田中给了个沙恩霍斯特号油轮
+12:54 varna: 邮轮我觉得有前途
+12:54 Mokou: 轴心船，叫沙恩，并没有什么问题
+12:54 varna: 这是哪个鹰来着
+12:54 Mokou: 忘了，我查查
+12:54 varna: 另外那个双缓冲的部分其实我还是做鬼畜了
+12:54 Mokou: 神鹰
+12:54 varna: 翻转的部分现在写成了 
+12:54 varna: h = &(self->sched_info.rq_queues[active_queue_at[__atomic_fetch_xor(&(self->sched_info.active_idx), (uint8_t) -1, __ATOMIC_SEQ_CST)]]);
+12:54 Mokou: ……
+12:54 varna: p7impl.c ln454
+12:54 Mokou: 有点吓人啊
+12:55 varna: 我没想出来怎么强行原地翻转1和0
+12:55 varna: 大概是撸太多了
+12:55 Mokou: 不过给我战巡沙恩我大概不太敢带出去
+12:55 Mokou: 太容易劝退了
+12:56 Mokou: 到时候出门后期爷一个爆雷给我炸回来
+12:56 varna: 昨晚我还在Omega系列星系发现一个叫kamo的星球
+12:56 Mokou: ……
+12:56 Mokou: 那上面是不是有大艇酱卖
+12:56 Mokou: 另外我发现一个怪事
+12:56 varna: 不能降落
+12:57 Mokou: 你看一下IONCROSS底下那个ships对应文件
+12:57 Mokou: 里面仍然有Shadow
+12:57 varna: 那个是旧的
+12:57 Mokou: 然后我把我的船改成了那个ID
+12:57 varna: 你会发现lost battlestar是temple of the damned
+12:57 varna: shadow的模型文件应该已经不存在了
+12:57 Mokou: ……
+12:57 Mokou: 对
+12:58 Mokou: 然后我发现我的船变成了Civ的货船……
+12:58 varna: 之前我仔细地检查过这个事，然后失望地衮蛋了
+12:58 varna: 当然后来我在486里试了试手感
+12:58 Mokou: 不过The Phantom的基地还在
+12:58 varna: 发觉他们的武器等级编制还是旧的，就没继续玩下去
+12:58 Mokou: 那两个庙
+12:58 varna: 渡鸦神殿我飞进去过
+12:58 varna: 只能用指令
+12:58 cleamoon_ joined channel
+12:59 varna: 对比486，辐射强度似乎下调了
+12:59 Mokou: 里面有修理船卖
+12:59 xxxxxxxx: 一日本人说日本当兵的死了无论生前善恶 都会放进他们那个鬼神社里...
+12:59 varna: 里面惨不忍睹
+12:59 Mokou: 等我吃完饭再PvP？
+12:59 varna: ok
+13:01 Mokou: 昨天一口气喷了大概70桶
+13:01 varna: 什么鬼
+13:01 varna: 把战果打了？
+13:03 Mokou: 3-5
+13:03 Mokou: 我打算等会去把4-5打了
+13:03 lh_not_b1t joined channel
+13:04 varna: 我这月没桶打更麻烦的
+13:04 varna: 现在我手头只有368
+13:04 Mokou: 570
+13:08 cleamoon quit:*.net *.split
+13:08 lh_not_bot quit:*.net *.split
+13:14 lh_mouse joined channel
+13:28 Mokou: varna: 现在来？
+13:28 Mokou: 我重启去开上服务器
+13:28 Mokou quit:Quit: reboot
+13:30 Plough joined channel
+13:31 refexchange joined channel
+13:32 varna: Plough: 服务器启动的话叫我一声
+13:33 Plough: varna, 起动了
+13:33 varna: 我现在启动
+13:35 refexchange quit:Quit: leaving
+13:54 xxxxxxxx: 是我掉线了还是怎么回事....
+13:54 * iyzsong 单击大法好
+13:54 iyzsong: 单机
+13:55 Plough: xxxxxxxx, 你掉线了
+13:56 StarDustX quit:Read error: Connection reset by peer
+14:00 xxxxxxxx: 卧槽什么鬼游戏崩溃了
+14:03 xxxxxxxx: 进去就炸....
+14:03 xxxxxxxx: 这一切都是为了什么
+14:09 StarDustX joined channel
+14:11 varna: 核雷……
+14:11 varna: 那东西在尻后面爆炸的危险性太高了啊
+14:12 Plough: 没办法
+14:12 Plough: 我根本转不过去……
+14:13 varna: 你是怎么转的……
+14:13 Plough: 鼠标指过去……
+14:13 varna: 那样转不过去的
+14:13 Plough: 求教
+14:14 varna: 鼠标转+移动是一个平滑的转弯
+14:14 Plough: z么
+14:14 varna: 但这时候你的机头和转弯的瞬时线速度方向一致
+14:14 Plough: 我用了
+14:14 varna: tab也用了？
+14:14 Plough: 离你700m的时候我z+tab
+14:14 Plough: 然后游戏卡住了
+14:14 varna: ……
+14:14 Plough: 然后等他回过来的时候只剩80+m
+14:15 varna: 每次都是？
+14:15 Plough: 距离太近我按Z护盾直接空掉……
+14:15 varna: 我自己在躲你机炮的时候有连续的三个动作
+14:16 varna: 鼠标卷动（顺时针或者逆时针），加力-停机-加力，重复EK Strafe两次到三次的时候左或右平移
+14:16 varna: 追尾的时候是两次到四次EK Strafe之间插入一个对应的平移
+14:17 varna: 相当于一个强行刹车变向
+14:17 varna: 交错越过对方之后的EK Strafe可能只有两次不加平移
+14:17 Plough: 下次我试试
+14:17 varna: 正面对冲的时候交错右-左平移，机炮准星往相反方向走
+14:18 varna: 俯冲和尾随的时候类似，100-200之间的侧向咬减少EK Strafe
+14:18 varna: 差不多我就这些习惯
+14:19 Plough: 了解
+14:19 varna: 不过你在甩核雷的时候，其实我在跟你赌命
+14:19 varna: 有好几次我直接被弹了，但我没磕电池
+14:19 xxxxxxxx: 你们俩在哪里?
+14:19 varna: xxxxxxxx: Malta附近
+14:19 varna: 我去买东西
+14:20 varna: 刚才红旗用VHF的时候我没太敢下手扫空雷
+14:20 varna: 但是他用轰炸机的时候我真的去刻意控制距离手工排雷了……
+14:21 xxxxxxxx: 不对啊我在那个星球附近没看到有人...
+14:21 xxxxxxxx: 我是不是又掉了？
+14:21 varna: xxxxxxxx: 你打开扫描仪
+14:22 varna: 现在你能看到我么
+14:22 varna: 我正取近道
+14:25 xxxxxxxx: 我又掉了
+14:25 varna: ...
+14:25 Plough: ...
+14:25 varna: 太惨
+14:26 Plough: 我说怎么跟打固定靶一样
+14:26 xxxxxxxx: 突然间红旗就开着火出现了然后我就炸了然后我就掉了
+14:26 varna: 估计你那里网络坑爹，我连红旗服务器的时候ping只有50+ms
+14:26 varna: 打固定靶的时候我一般都点到为止……
+14:26 varna: 而且我功率不够
+14:26 Plough: 我一共打了四轮
+14:26 varna: 刚才打红旗的时候我明显感觉到他比Lv19的BHG机师血多
+14:26 xxxxxxxx: ping只有57
+14:27 xxxxxxxx: 然而就是状况神奇...
+14:27 varna: 活见鬼
+14:27 varna: 另外我问个事
+14:27 varna: 红旗之前是不是在开巡航……
+14:27 Plough: 我跟你formation了
+14:27 varna: 我总感觉他中间有一击脱离整理姿态再对冲的想法
+14:28 varna: 不，我是说PvP的两盘
+14:28 Plough: 是
+14:28 Plough: 不然距离不够
+14:28 varna: 我一开始没反应过来
+14:28 varna: 后来我开始用CD...
+14:29 lh_mouse: varna, 
+14:29 varna: lh_mouse: .
+14:29 lh_mouse: https://msdn.microsoft.com/en-us/library/windows/desktop/hh706898(v=vs.85).aspx 
+14:29 lh_mouse: 本特首瞎了
+14:29 Plough: 看到那个放逐者大舰我好想打过去啊
+14:30 varna: 卧槽
+14:30 varna: windows也有了
+14:30 varna: 而且还好看些
+14:34 varna: xxxxxxxx: 你掉了么
+14:38 varna: Plough: 你最后卡了？
+14:38 Plough: 最后游戏界面上弹出了桌面的右键菜单
+14:38 varna: 果然悲剧了
+14:39 varna: 我跟巨基来一盘试试？
+14:39 Plough: OK
+14:39 Plough: 我感觉我已经来到了南极洲 的冰天雪地
+14:39 Plough: 引擎装置是我去The Shrine买的
+14:40 Plough: 隐形
+14:40 varna: 那里倒是有全套海鲜隐形
+14:40 varna: 唯一可惜的是单机的隐形工作总是不正确
+14:40 varna: 必须要服务器才行
+14:49 lh_mouse: http://news.cntv.cn/2015/10/17/VIDE1445074322145859.shtml?appinstall=0  1'30"
+15:09 Plough: varna, 还在么
+15:10 lh_mouse: 我以为这 futex 并不如那 signal 会等的 keyed event 好用
+15:11 lh_mouse: 不过能 inter process 了个优势
+15:11 varna: Plough: 在
+15:11 varna: 你现在在哪
+15:11 varna: 天堂之门？
+15:11 Plough: +
+15:12 varna: 我过去
+15:12 Plough: ku07_02_base
+15:12 varna: 嗯，我开着IONCROSS
+15:12 varna: 看看他们的货
+15:13 varna: 货不错，可惜声望不够，做做任务看
+15:13 varna: 声望不够……
+15:14 Plough:  Missions Offered
+15:14 Plough: : No missions offered here 
+15:14 varna: 噗
+15:14 varna: 我换个地方去一趟
+15:16 Plough: 另外你要声望的话直接.setrep varna <internal name> val
+15:17 lh_not_bot: meow
+15:19 varna: Plough: 天堂之门这里到底是谁的声望……
+15:19 Plough: 不是The Wild？
+15:19 varna: 卧槽怎么又红了
+15:20 Plough: 你停进基地再改呢
+15:20 varna: 大概是我刚才抬手杀了他们几个人……
+15:20 Plough: ……
+15:21 varna: 刚出基地的时候他们打我
+15:21 varna: 然后我就杀了他们小半组巡逻队
+15:21 * varna 见到活人容易手痒
+15:22 varna: 又红了
+15:22 varna: 这个指令有问题
+15:23 Plough: 你声望敲的多少
+15:23 varna: 0
+15:23 Plough: 你敲个0.9呢
+15:23 varna: 他是给我回到-0.9
+15:23 xxxxxxxx: 维修船是用来干啥的?
+15:24 varna: xxxxxxxx: 不知道
+15:24 xxxxxxxx: 轰炸机呢?
+15:24 varna: Plough: 我去棍国wild那里看看有没有任务
+15:24 xxxxxxxx: 只能带导弹?
+15:24 Plough: 等等
+15:24 Plough: 你挂的什么id
+15:24 varna: xxxxxxxx: 轰炸机可以带简单的机炮和重型反舰武器
+15:24 varna: freelancer
+15:24 varna: 我应该是各种地方都能去的啊
+15:24 Plough: 我看看设置……
+15:25 varna: 我日
+15:25 varna: wild又红了
+15:25 xxxxxxxx: 还有那个只有炮塔的飞船是怎么回事?
+15:25 varna: 我要不要买个人畜无害的新兵ID
+15:25 xxxxxxxx: 不知道该翻译成什么
+15:25 varna: xxxxxxxx: 那个是炮艇或者运输舰吧
+15:25 varna: freighter?
+15:25 xxxxxxxx: 大概是炮艇
+15:25 varna: freighter是运输舰
+15:26 varna: 炮艇会注明是gunboat
+15:26 Plough: 我关掉RepFix了
+15:26 Plough: 你再试试
+15:26 varna: 我再试试
+15:26 varna: 咦，这次没围剿我
+15:26 varna: 这就对了
+15:27 varna: 不然刚才我又杀了他们两个人……
+15:27 Plough: 那应该就是repfix的锅
+15:27 varna: wild的地方都没任务
+15:27 varna: 我换个地方
+15:27 xxxxxxxx: 炮艇比起普通船有什么区别么? 护甲更厚?
+15:27 Plough: 这么说吧
+15:27 varna: 炮艇是大舰里最轻的
+15:27 Plough: 我的BB可以吊打炮艇
+15:27 Plough: 炮艇可以吊打你
+15:28 varna: 简单地说，HF和VHF如果不加装对舰装备，用机炮打不动炮艇
+15:28 varna: 但一个加装了鱼雷的HF/VHF也许能伤到炮艇
+15:28 xxxxxxxx: 我(虫) 炮艇(鸡) 战舰(狗)?
+15:28 varna: 没法说
+15:28 varna: 因为在VHF和炮艇之间有一个轰炸机
+15:28 Plough: 而我的轰炸机可以炸死BB
+15:29 varna: 比如我自己单机玩的轰炸机配置是3机炮1前向炮塔1地狱火1反物质炮1实弹鱼雷
+15:29 varna: 这个火力足够轰死多数炮艇和小型主力舰
+15:30 varna: 大型主力舰的话我伤害不够，只能用反物质炮硬撑，而主机只能撑住一门
+15:30 varna: Plough: 海鲜有任务么
+15:30 Plough: 我去看看
+15:30 Plough: 并没有
+15:30 Plough: 对了，你现在在哪
+15:31 varna: 我在bw12_02_base
+15:31 varna: 德系海鲜舌头基地
+15:31 varna: 一点东西都没有，但棍国轰炸机真的很好
+15:31 Plough: 要不然去Red Hessian？
+15:31 varna: 当然看着是没有Thor帅的
+15:31 varna: 那行
+15:32 varna: 你先去吧，然后发个别名
+15:32 varna: 我跳过去
+15:32 Plough: OK
+15:32 xxxxxxxx: 有炮台比outcast gunship还要多的炮艇么?
+15:33 varna: xxxxxxxx: 我没研究过，他有几个炮台？
+15:33 xxxxxxxx: 似乎8个
+15:33 varna: 那就没见过了
+15:33 varna: 收个远征
+15:34 Plough: 我看看海鲜炮艇多少个
+15:34 varna: 海鲜炮艇太丑了
+15:34 varna: 那个大头
+15:35 Plough: 最多八个
+15:35 Plough: 放逐者 结社 海盗 海鲜舌头
+15:35 Plough: 这四个的炮艇
+15:35 varna: 舌头炮艇美不胜收
+15:36 varna: 我都不想多看那个scorpion一眼
+15:36 Plough: vogtland有Lv39的任务
+15:36 Plough: rh05_04_base
+15:36 varna: 我飞过去
+15:37 Plough: 另外咱现在在同一个组里吗
+15:37 varna: 不在，你那个邀请不知为何失效了
+15:37 varna: No mission available?
+15:38 varna: 奇怪
+15:38 varna: 这服务器上一共就三个玩家，怎么可能too many players
+15:38 Plough: xxxxxxxx, 接一下邀请
+15:39 varna: 我先在周围逛逛看看风景
+15:39 varna: 巨基买好了飞船过来？
+15:40 lh_mouse quit:Read error: Connection timed out
+15:40 varna: 另外红旗身上挂了一堆人类装备
+15:40 varna: 要不要去换成海鲜原装的
+15:40 varna: 那些没有额外的模型
+15:40 Plough: 不用
+15:40 lh_mouse joined channel
+15:40 Plough: 海鲜原装的我不太喜欢……
+15:41 varna: 你肠子里的推进器和护盾看得一清二楚
+15:41 Plough: 2333
+15:41 Plough: 对了
+15:41 Plough: 刚才你看我是哪个阵营的
+15:41 varna: 放逐者
+15:41 Plough: ……
+15:41 varna: 轰炸机帐号是盖亚主义者
+15:42 varna: 战舰帐号是海鲜
+15:42 xxxxxxxx: 一定是我带的装备消耗太大...
+15:42 xxxxxxxx: 不然这炮艇也太傻了...
+15:42 varna: 怎么搞的
+15:43 varna: 开炮艇的时候你就当开主力舰，用炮塔视角
+15:43 xxxxxxxx: 带了两种最贵的各四个
+15:43 xxxxxxxx: 点一下鼠标能量就没了
+15:43 varna: 那种是反物质炮吧？
+15:43 xxxxxxxx: 大概
+15:44 varna: 炮艇不是还有速射炮和一般的主炮么
+15:44 xxxxxxxx: 没装
+15:44 varna: ...
+15:44 varna: 反物质炮是肛大舰的
+15:47 xxxxxxxx: 算了不换了
+15:47 xxxxxxxx: 你们在哪里?
+15:48 Plough: ……
+15:48 Plough: 大舰……
+15:48 varna: 我打字的时候死了
+15:48 Plough: .beam 
+15:48 varna: 本来想一边机动一边把巨基拉过来的
+15:48 Plough: 本来我想叫你尽量躲的
+15:49 varna: 我躲得挺轻松
+15:49 varna: 但打字就不行了……
+15:49 Plough: 你不打字其实我们就做完了
+15:49 varna: ……
+15:50 Plough: 我换个装备再试试
+15:50 varna: 等下
+15:51 varna: 巨基那个炮艇能从小行星基地里活着出来么
+15:51 Plough: ……
+15:51 Plough: 炮艇试试吧
+15:51 varna: 我不敢传送他
+15:51 Plough: 我已经传了
+15:51 varna: 23333
+15:51 varna: 那好吧，我先头去看看状况
+15:55 wlemuel quit:Ping timeout: 240 seconds
+16:13 _Return joined channel
+16:18 Plough: 果然对付单个目标的时候不应该用炮塔模式……
+16:18 varna: 这次其实有一个坑点
+16:19 varna: 我开着hud, 把我和你战舰之间的距离控制在300之内，然后尽量找机会瞄准你……
+16:19 Plough: ……
+16:19 varna: 看起来我用轰炸机只能做得更差
+16:19 Plough: xxxxxxxx, 话说你要不要买个战舰来和我对肛
+16:19 varna: 轰炸机根本没这个机动力
+16:19 varna: 对了稍等我下
+16:20 varna: 我去买个轰炸机，不然根本没法跟你们做大任务
+16:20 Plough: OK
+16:20 Plough: 然而炮艇在我面前根本不够看……
+16:20 Plough: 噗
+16:20 Plough: 我捡了成吨的导弹
+16:22 Plough: 六十张信用卡……
+16:22 varna: 那是我掉的
+16:22 varna: 我在战场上模了好多信用卡
+16:22 Plough: 等会我扔给你
+16:22 varna: 不用
+16:22 varna: 六十万大元，还不如指令加的
+16:22 Plough: 233333
+16:23 varna: 隐形不用电池？
+16:23 Plough: 用
+16:23 varna: 那就不要他了
+16:24 xxxxxxxx: 我买不了炮
+16:25 xxxxxxxx: 声誉怎么调?
+16:25 varna: .setrep playername factionname value
+16:26 varna: factionname可以在你的IONCROSS里找到交叉参考
+16:26 varna: 我回来了
+16:29 lh_mouse: 毕福剑更新微博又删除 仍关注《星光大道》
+16:30 xxxxxxxx: IONCROSS?
+16:30 varna: xxxxxxxx: 在游戏根目录下应该有这么个目录
+16:30 varna: 给出了各种名字和游戏内部别名的交叉参考
+16:35 xxxxxxxx: 然而并没有什么效果?
+16:36 varna: 你要加哪个阵营的？
+16:36 StarDustX quit:Ping timeout: 244 seconds
+16:36 xxxxxxxx: 我用wild试验的 对应的是fc_wild
+16:36 xxxxxxxx: 但是我这里看状态还是敌对的
+16:36 varna: 我试试
+16:37 varna: 现在呢
+16:37 xxxxxxxx: 绿了
+16:37 xxxxxxxx: 羊驼用的啥?
+16:38 varna: xxxxxxxx: .setrep 飞翔的萝卜 fc_wild 0.8
+16:38 xxxxxxxx: 对了最后那个数值的范围是?
+16:39 varna: [-1, 1]
+16:39 xxxxxxxx: 我用的0结果还是红的
+16:39 varna: 显示ok了？
+16:40 varna: 卧槽红旗又去日天了
+16:40 varna: 我的扫描仪跟不上他了
+16:41 xxxxxxxx: 不过这个基地是哪个势力的red 啥的那个?
+16:41 varna: red hessian?
+16:41 varna: fc_rh_grp fc_rh_guardian
+16:42 xxxxxxxx: 不是任务是 red hessian放的 不过这个基地到底属于哪个势力我不知道....
+16:43 varna: 你在哪个基地
+16:43 varna: 报一下名字
+16:43 xxxxxxxx: vogtland
+16:43 varna: red hessian
+16:44 xxxxxxxx: 这里是友好的 而且不卖能用的武器....
+16:44 varna: 有啊
+16:44 varna: 这里有Zapper和Solaris炮塔什么的
+16:44 varna: 还有RH自己的炮塔
+16:45 xxxxxxxx: 巡洋舰的炮塔似乎没有
+16:46 varna: 你找个造船厂
+16:46 Plough: 海鲜大法好
+16:46 varna: 咦，这鬼地方是不是没有船厂……
+16:46 Plough: 我送你去altair？
+16:47 varna: altair只有海鲜货吧
+16:47 varna: 我看看RH的船厂有没有近的
+16:47 _Return quit:Remote host closed the connection
+16:48 varna: 蛋疼
+16:48 varna: 他这里似乎没有造船厂？
+16:48 varna: 去Altair吧
+16:49 xxxxxxxx: 卖船的地方不买武器也是厉害....
+16:49 StarDustX joined channel
+16:51 varna: 巨基买好武器没？
+16:52 xxxxxxxx: 并没有我在等你们把我扔过去....
+16:52 varna: 我来吧
+16:52 Plough: Lv43的任务
+16:52 Plough: 接不接
+16:52 varna: 接
+16:52 Plough: OK
+16:52 varna: 等巨基回来就开打
+16:52 varna: 我已经把他送走了
+16:54 lh_mouse: StarDustX, 爆照
+16:56 xxxxxxxx: 快把我扔回来 
+16:57 xxxxxxxx: 我一升空就遇到一群人揍我...
+16:58 pocmon joined channel
+16:59 varna: 巨基又卡了？
+17:04 xxxxxxxx: 不 我没看到前面有人直接挂在编队上来跟过来的
+17:06 xxxxxxxx: 怎么感觉之前还脆....
+17:07 varna: 我日咧
+17:07 varna: 按Q发鱼雷总发不出来
+17:07 varna: 不然我真的能打死一个战舰
+17:07 Plough: 我这边也卡
+17:07 Plough: 原因不明
+17:08 Plough: 看不到任务
+17:09 varna: 吔我重雷装
+17:10 Plough: 我卡在小行星带里被吊打……
+17:10 varna: 卧槽我捉到一个巡洋舰指挥官
+17:10 varna: 这货值四十五万大元
+17:10 Plough: 哪国的
+17:10 varna: 棍国
+17:10 Plough: 我身上原来有个美帝的
+17:11 varna: 哈哈哈人类已经阻止不了我了
+17:11 Plough: varna, 你找个任务
+17:11 varna: 连装超新星
+17:11 Plough: 你找个任务？
+17:11 varna: ok
+17:11 varna: 我买点东西
+17:11 Plough: ok
+17:12 varna: 只有Lv31的
+17:12 Plough: ……
+17:12 Plough: 将就下吧
+17:12 varna: 还有个炸武器平台的
+17:12 varna: 炸一下吧
+17:12 Plough: 炸武器平台也行
+17:12 varna: Lv32, 炸武器平台
+17:19 pocmon quit:Quit: 闪...
+17:20 varna: 坑死了
+17:20 varna: 一个31的击破任务，一个35的暗杀任务
+17:21 varna: Plough: Lv38的有大舰么
+17:22 Plough: varna, 应该有
+17:22 Plough: Lv37就有了不是
+17:22 varna: 有个38的歼灭和39的暗杀
+17:22 varna: 要哪个
+17:22 Plough: 来个39的作作死？
+17:22 varna: 我起飞了
+17:23 varna: 你们还在基地？
+17:23 Plough: 我们一直在天上
+17:31 varna: 233333
+17:32 varna: 我终于在跟大舰的决斗中自爆了
+17:32 Plough: 我把剩下的收拾了
+17:32 Plough: 我觉得巨基还是去弄个战列舰比较好
+17:32 Plough: 巡洋舰这不上不下……
+17:32 xxxxxxxx: 大船太傻了
+17:33 varna: 任务不好，我刷一次任务
+17:33 varna: 这轰炸机真心不错
+17:33 Plough: 修理费七位数
+17:33 xxxxxxxx: 尤其这个巡洋舰 
+17:33 Plough: 哈哈哈哈哈哈
+17:33 varna: 我钻到人堆里，他们都没能打死我
+17:33 varna: 但是导弹发射的问题特别严重
+17:34 varna: 现在是这样的，只要是导弹和鱼雷系的武器，用什么点都可能发射不出去
+17:34 xxxxxxxx: 我现在各种被炮艇骑脸
+17:34 varna: 我感觉可能是时间戳坑了
+17:34 Plough: ……
+17:34 varna: 你想像下，调整好雷击位置之后突然卡壳了……
+17:34 varna: 那感觉
+17:34 varna: Lv40拘捕
+17:34 varna: 干不干
+17:35 Plough: 我都敢干
+17:35 Plough: 看你们
+17:35 varna: 干
+17:35 varna: 巨基要换装备么
+17:35 varna: 不换我就接任务了
+17:35 xxxxxxxx: 轰炸机好玩不?
+17:35 xxxxxxxx: 不用导弹的话
+17:35 varna: 好玩是真好玩
+17:36 varna: 得用鱼雷，不然打不动大舰
+17:36 xxxxxxxx: 鱼雷....
+17:36 varna: 轰炸机的好玩处是你得钻到人堆里找位置开火
+17:36 Plough: 想我无数地狱火洗死放逐者BB
+17:36 varna: 感觉很刺激的
+17:36 varna: 我就120发地狱火
+17:36 varna: 还有70发超新星
+17:36 Plough: 我是999999999发
+17:37 * xxxxxxxx 已经被打傻了
+17:37 varna: 所以基本上我都是保持一个比较懒散的姿势，回头一次打一波鱼雷
+17:37 varna: 但是老实说，如果你怕死，就别用这个了……
+17:37 Plough: 对了
+17:37 varna: 舰攻死亡率太高
+17:37 Plough: varna, 下星期你有没有闲情逸致帮我做下撸号……
+17:38 varna: 娄号啊，没问题
+17:38 Plough: 我感觉这么下去我这辈子都拿不到第二个天山村田了
+17:38 Plough: thx
+17:38 Plough: 资源随便用
+17:38 Plough: 这次我低保进活动
+17:38 varna: 下周我找个时间给你处理下，2-2或者2-3
+17:38 Plough: OK
+17:38 Plough: thx
+17:38 varna: 我的考虑是派一坨航母出去每天洗洗地
+17:38 varna: 反正你不太差铝
+17:38 Plough: +
+17:38 Plough: 今天我试了下
+17:38 Plough: 3-3 6CV可行
+17:39 varna: 鱼我就不给你捞了，手续繁复
+17:39 Plough: +
+17:39 varna: 娄号我下周用两三天给你洗出来
+17:39 Plough: 鱼我自己去3-3处理下行了
+17:39 varna: 这样你周末可以收拾一批任务
+17:39 xxxxxxxx: 那个似乎是货船的东西 有10个炮塔?
+17:40 varna: 货船是渣渣，相信我
+17:40 Plough: 货船基本没有机动性可言吧
+17:40 varna: 买个大舰跟他们干吧，好歹抗揍
+17:40 Plough: 法鸡BB
+17:40 Plough: 你值得拥有
+17:40 xxxxxxxx: 我觉得我已经不够钱去买大战舰了...
+17:41 varna: 我现在不爽的两点，第一个是Q放不出鱼雷导弹，第二个是人多了卡
+17:41 Plough: xxxxxxxx, 够了
+17:41 varna: 红旗加点钱就行
+17:41 Plough: 其实三个人都有权限
+17:41 varna: 我先把任务接上吧
+17:41 Plough: 钱是setcash 
+17:41 Plough: http://svn.m0tah.com/88Flak/FLHook/trunk/readme.txt
+17:41 varna: 等巨基回来再打
+17:41 xxxxxxxx: 跳机场是?
+17:42 Plough: beam
+17:42 varna: .beam player location_alias
+17:42 varna: 联机还是轰战舰好玩，打战机那些我单机也能打
+17:42 xxxxxxxx: 不过我好像也不知道去哪里找大战舰...
+17:42 Plough: +
+17:42 Plough: Angers有卖法鸡大战舰
+17:43 varna: ga09_01_base
+17:43 varna: 用这个别名跳转
+17:43 varna: 显得很GAY
+17:43 Plough: 主炮推荐Heavy Mortar或者海鲜Annihilator
+17:43 Plough: 副炮和AA炮你随便挑几个就成
+17:43 varna: 副炮弄些防空炮
+17:44 varna: 另外刚才有个坑爹现象
+17:44 varna: 长程雷击偏航太厉害了
+17:44 Plough: ……
+17:44 lh_not_bot quit:Ping timeout: 250 seconds
+17:44 Plough: 什么情况
+17:44 varna: 只是我不习惯这个鱼雷性能吧
+17:44 Plough: 被Flak打歪了？
+17:44 varna: 最大的麻烦还是Q
+17:44 varna: 如果热键好用，我有很多漂亮的短程雷击
+17:45 varna: 包括最后把我自己处分的那一发
+17:45 Plough: ……
+17:45 lh_not_bot joined channel
+17:45 varna: 那发我没飞开，然后也没补盾
+17:45 varna: 直接炸死了
+17:46 Plough: ……
+17:46 varna: 正好，我中间出去换点装备
+17:46 Plough: 要不你也搞个炮艇
+17:47 varna: 我还是喜欢轰炸机
+17:47 varna: 就当练习一下
+17:47 varna: 反正你们都有大舰，我死了也不碍事
+17:47 xxxxxxxx: 卧槽难道不是在聊天里面直接输入命令把.换成/ ?
+17:47 Plough: 换成/干嘛……
+17:47 varna: 而且我认真不想死的时候不太容易死
+17:47 Plough: 比如前天跟我那个法鸡大战舰PvP的时候？
+17:48 xxxxxxxx: 我以为这是防止irc客户端吞掉才换的...
+17:48 xxxxxxxx: 我一直在用/xxxx
+17:50 varna: 奇怪
+17:50 varna: 隐形装置没有电池槽，但要用电池？
+17:50 Plough: +
+17:50 Plough: 你直接买电池就行
+17:51 varna: 人类隐形装置跟个痔疮似的……
+17:51 Plough: 2333
+17:51 Plough: 买海鲜的吧
+17:51 Plough: .beam varna shrine
+17:51 varna: 不用了
+17:51 varna: 我还是用全套人类装备
+17:52 xxxxxxxx: 话说港口的所属势力是从哪里看的?
+17:52 Plough: wiki
+17:52 varna: 下个FLC吧
+17:52 varna: wiki不准，他们不更新了
+17:52 Plough: ...
+17:52 varna: 卧槽我看不见自己了
+17:52 Plough: 看不见
+17:53 varna: 真见鬼
+17:53 Plough: 233333333
+17:53 varna: 隐形的时候用第一视角飞吧……
+17:53 Plough: 对了
+17:54 Plough: 我看了一下okun的炮表
+17:54 varna: 卧槽
+17:54 Plough: 似乎九四式用91弹的话在三万码上刚好能打穿KGV的主装……
+17:54 varna: 隐形一次要费那么多电池的？
+17:54 Plough: 挺多的
+17:54 varna: 我买了一千个，切一次状态就要八百个了
+17:55 varna: 这东西不好，我先不安
+17:55 Plough: 试着改了一下
+17:56 Plough: 你看看有没有效果
+17:56 varna: 哦操
+17:56 varna: 我掉了
+17:56 Plough: ……
+17:56 Plough: beam有一定概率踢玩家
+17:56 varna: 但我飞进基地了
+17:57 varna: 现在我看不到服务器
+17:57 Plough: ……
+17:58 varna: 互联网上的其他服务器都能看到，就是看不到你的
+17:58 Plough: 你退出重刷一下？
+17:59 varna: 正好回来两趟远征
+17:59 wlemuel joined channel
+18:00 varna: 不过好歹这次各种内容都玩到了，挺好
+18:00 varna: 也学会用轰炸机炸战舰
+18:00 varna: 不行，还是看不到
+18:01 Plough: ……
+18:01 Plough: 我重开一下
+18:01 varna: 等一下巨基
+18:01 varna: 他还在买东西吧
+18:02 Plough: 他还在法国
+18:03 varna: 等他买完吧
+18:03 Plough: OK
+18:03 xxxxxxxx: 我在一个一个试势力...
+18:03 xxxxxxxx: 我觉得还是该问问你们...
+18:03 Plough: ……
+18:03 Plough: 你看下数据
+18:03 Plough: 主炮推荐Heavy Mortar或者海鲜Annihilator
+18:04 Plough: 副炮的话我记得海盗的东西不错
+18:04 Plough: 防空炮用Gatling或者Solaris系列
+18:04 varna: 法国势力啊，你在IONCROSS里找找faction, 那里面把Galia相关的都调高
+18:05 varna: 我现在横竖都连不上服务器了
+18:05 Plough: ……
+18:05 Plough: 这情况太神奇
+18:05 varna: 巨基慢慢挑
+18:05 varna: 我去收拾下今天的任务
+18:06 Plough: windows下真蛋疼，也不能写程序……
+18:06 varna: 你可以找妹子舔两口
+18:06 Plough: 我用你的女装照撸一发吧
+18:07 Plough: 昨天你躲在宿舍里肯定是在偷偷女装
+18:07 varna: 现充空战的时候一只手抱着妹子
+18:07 Plough: 所以我是撸瑟
+18:07 varna: 我洗完衣服就练习轰炸机用法了
+18:07 Plough: 别废话，快发女装照
+18:07 Plough: 算了
+18:07 Plough: 我开SPS造条长门改
+18:08 varna: 没救了
+18:08 varna: 横须贺军乐队演奏二水战之航迹
+18:08 Plough: ……
+18:08 varna: 佐世保军乐队演奏飞龙的反击
+18:08 Plough: 这国家完了
+18:08 Plough: 对了
+18:08 Plough: 你不玩玩SPS么
+18:08 varna: 不玩
+18:09 Plough: 虽说轮机各种悲剧，不过还是挺有意思的
+18:09 varna: 我喜欢的都是小家伙和平板船
+18:09 Plough: 不对
+18:09 varna: 来月十一月中旬より、【「艦これ」秋イベント：期間限定海域】を展開予定です。作戦展開規模は中規模となる予定です。秋はそんなに大規模な作戦展開ではありませんが、同作戦への参加を予定されている提督方は、作戦開始前に各自艦隊の戦備及び資源備蓄の充実を図って頂けますと幸いです。
+18:09 Plough: 我可以改沙恩
+18:09 varna: “秋活不是那么大规模的作战展开了”
+18:09 Plough: 小家伙也可以造的
+18:09 Plough: 比这个规模稍微小一点么
+18:09 varna: 而且老实说我一点都不想弄出新武装来
+18:09 Plough: 七张图，E7道中少一个点
+18:09 varna: 历史上的阳炎我就挺喜欢
+18:10 Plough: windows下的sps比wine的不知快到哪里去了……
+18:10 varna: 也罢，十天里每天胡乱屯三千，到月底我也有八万
+18:10 varna: 十万资源打个中规模活动，应该能卡斩杀
+18:10 varna: 麻烦就是桶
+18:10 xxxxxxxx: 我干 Gallic开头的都试过了
+18:11 xxxxxxxx: 还是只买我5级的炮
+18:11 varna: ...
+18:11 Plough: 你飞起来再降回去呢
+18:11 varna: Council
+18:11 Plough: Council的Valor似乎被阉过
+18:11 varna: 你是不是正好停到法鸡国会的地盘了
+18:11 Plough: 少了一门前炮
+18:11 xxxxxxxx: 要起飞一次?
+18:11 Plough: 你试试
+18:12 varna: 一般不用
+18:12 varna: 只要你关掉购买界面，声望应该就会实时读取
+18:12 Plough: Angers应该是皇家海军的地盘
+18:12 varna: 法鸡太乱
+18:12 varna: 蝗国好歹是拖拉撕的斗争
+18:12 varna: 法鸡干脆内乱
+18:12 Plough: 我准备给沙恩上460
+18:12 varna: 还卖我坑爹激光炮
+18:13 Plough: 藤本君保佑
+18:13 varna: 那个坑爹的激光炮比蝗国的光子爆破炮不知道差到哪里去了
+18:13 varna: 比地狱火军团的激光炮也差好多
+18:14 varna: 对了，昨天我试了几个有印象的轰炸机
+18:14 varna: 首先是Thor
+18:14 varna: 那感觉，怎么说呢，大批古裂了
+18:14 Plough: 2333333
+18:14 varna: 感觉我要是冲进人堆了搞不好会被打残
+18:15 varna: 刚才被那些BHG的人盯着狂轰的时候我都不太磕电池的……
+18:15 varna: 然后是Orchid
+18:15 varna: 机体是有点大，不过只是一般轰炸机尺寸
+18:15 varna: 动作很灵活，屁股跟开花了一样
+18:15 varna: GC的飞机屁股都做成炸开的样子，不知道是什么意思
+18:16 varna: 农业者联合的Mamoru
+18:16 varna: 首先名字就很霸气（“护”）
+18:16 varna: 想着飞行员大吼“老子今日便要护了你口牙”俯冲过去
+18:16 varna: 估计也挺好的
+18:17 varna: 机动、防护、武装都是一流中的一流，唯一的缺点是难看
+18:18 varna: 之后是米畜的Upholder
+18:18 varna: 我不太理解为何wiki上那个轰炸机打分狂魔会给他8/10的高分
+18:19 varna: 最后就是我现在用的这台棍货
+18:19 varna: 它跟Phantom（以前的Banshee）差不多大……
+18:20 varna: 性能上唯一的缺点是防御力，这个我只能用鬼畜去补
+18:20 varna: 看着也还凑合，不好看，但也没多少让人感觉难看的地方
+18:20 varna: 我上维基查查还有没有别的好看的
+18:23 xxxxxxxx: 我放弃在这个基地买东西了
+18:24 xxxxxxxx: 强行不卖
+18:24 xxxxxxxx: 外面写的就是Royal Navy Base
+18:24 xxxxxxxx: 关系也是绿色
+18:24 xxxxxxxx: 就是不卖
+18:24 varna: 现在看到老外说Agility is okay
+18:24 varna: 我就把它读成Poor agility when facing a *lot* of enemies
+18:25 cleamoon_: kukule昨晚切肉的时候不小心划到了手，血滴在了猪肉上。我那二货弟弟说了句“你是在滴血认亲吗？”熊孩子，看我tm打死你。(zt)
+18:25 varna: 23333
+18:26 xxxxxxxx: 而且wiki的验证码一如往事的告诉我它刷不粗来
+18:26 xxxxxxxx: 往日
+18:27 varna: 我给你查查
+18:28 varna: Angers?
+18:28 varna: 确实是法鸡皇家海军
+18:29 xxxxxxxx: 然而他们就是不卖给我...
+18:29 varna: ...
+18:29 xxxxxxxx: 或者好感必须到1?
+18:30 varna: 你调到0.9
+18:30 xxxxxxxx: 卧槽还真是这样....
+18:30 varna: ...
+18:31 Plough: 哈哈哈哈哈哈
+18:32 Plough: https://pastebin.mozilla.org/8849635
+18:32 Plough: 已经没有人能阻止我了
+18:33 Plough: 参数和沙恩是一样的
+18:33 varna: 蛋疼，轰炸机的选择也太有限了
+18:33 Plough: varna, 我觉得到时候田中可以用我那个方案说明为何沙恩能上46
+18:34 varna: 这装甲……
+18:35 Plough: 这装甲只罩住弹药库
+18:35 Plough: 轮机部的伙计自求多福吧
+18:35 varna: 真麻烦，结社就不能出点轻型轰炸机么
+18:36 varna: 他们这辈子的杰作就只剩Onuris了
+18:36 varna: 最多加上Bastet Mk2
+18:36 Plough: 主炮是三基七门
+18:36 Plough: 我想上8门，不过做不到
+18:36 Plough: 除非完全没有装甲
+18:38 varna: 等会要是再上线，我先去趟米畜
+18:38 varna: 我再体验一下upholder
+18:38 varna: 刚才发现轰炸机打分狂魔居然给他9/10
+18:40 varna: 我试试2炮2地狱火2雷的丧尸配置
+18:40 varna: 虽然在自己打AI战机的时候从来不敢这么配，地狱火瞬间扫光了
+18:42 xxxxxxxx: battleship pointe turret <- 这个东西是怎么回事...
+18:43 varna: 这是什么炮塔？
+18:43 xxxxxxxx: 我搞不懂...
+18:43 varna: 看着像是干什么的
+18:44 xxxxxxxx: 像舞台上用的....
+18:45 varna: 卧槽upholder的实际过弯速度居然比棍国那个还快……
+18:46 xxxxxxxx: 威力不高但是弹药速度挺快
+18:46 varna: 防空炮啊
+18:46 varna: 用来对付我这种人的吧
+18:47 xxxxxxxx: 1100的本体伤害
+18:47 xxxxxxxx: 低的不行
+18:48 varna: 这个对战机来说很高了
+18:48 varna: 轰炸机的属性也就是比VHF硬一点
+18:48 xxxxxxxx: 炮艇那些的打上去应该都没啥反映?
+18:49 varna: 炮艇应该有
+18:49 varna: 但看起来像舰的东西应该就没戏了
+18:51 varna: http://tieba.baidu.com/p/3680209856 操舰技术
+18:52 varna: 这人应该是开炮塔视角，然后用键盘控制小扭
+18:52 lh_mouse: [18:46:14] <varna> http://tieba.baidu.com/p/3680209856 操舰技术  // 倒数第四个字读什么
+18:53 varna: cao1
+18:54 varna: 这个不是舰娘所以是操作的操
+18:57 cleamoon_: cao4 zuo1
+18:57 Plough: https://pastebin.mozilla.org/8849637 扶桑改
+18:57 Plough: 我总觉得SPS有哪里不对
+18:57 Plough: 不然为什么我的舰武装都比史实强那么多
+18:59 varna: 对了下周你的阿号怎么处理
+18:59 varna: 我是给你刷一圈闪呢，还是给你洗几个烈风出来呢
+18:59 Plough: 都行
+18:59 varna: 那就先刷闪，刷够八个三层之后剩下的洗地
+19:00 lh_mouse: 新人报道贴        乱峰迷茫
+19:00 lh_mouse:         我会c++程序，还算学的比较好。希望在这里能交到朋友！
+19:00 Plough: OK
+19:00 varna: lh_mouse: 调戏他一下？
+19:00 Plough: 虽说其实我现在只剩6k铝
+19:00 varna: 足够了
+19:00 Plough: 之前一发大凤赌掉了5.2k……
+19:00 varna: 搭配一些雷巡潜艇够用
+19:00 lh_mouse: 坐等
+19:00 lh_mouse: LH_Mouse_Ex   自称“算学的比较好”的能解释解释啥叫 argument dependent lookup 么。
+19:00 varna: 建造日常你晚上自己做吧
+19:00 Plough: ok
+19:01 Plough: thx
+19:01 varna: 不过这么反复登陆没问题么
+19:01 Plough: 封了田中死妈
+19:01 lh_mouse: varna, Windows 那个 futex 把我吓哭了
+19:01 Plough: 我白天去公司晚上回家玩凭什么封我
+19:01 varna: ok
+19:01 varna: lh_mouse: 怎么搞的
+19:01 lh_mouse: varna, 不是我弄的
+19:02 lh_mouse: 我给你讲个笑话   https://social.msdn.microsoft.com/Forums/en-US/1fc28a75-c778-4be6-ad89-448b5a403ced/whats-waitonaddress-for?forum=windowsgeneraldevelopmentissues 
+19:02 lh_mouse: 这帮人从来没听过啥叫 futex
+19:02 lh_mouse: 我就想起那个一万年以后有人挖出一块蜂窝煤然后一帮砖家猜这是啥
+19:02 lh_mouse: 结论是原始人的某个机器的零件
+19:03 varna: 这个讨论好精妙啊……
+19:03 lh_mouse: 不过这群人提到了一点
+19:03 lh_mouse: futex 确实比较像 condition variable
+19:04 lh_mouse: 但是如果用来实现 mutex 就得多考虑一点
+19:05 lh_mouse: 若发现改目录不在ld的搜索路径中,以下步骤可让libahttpd.so被ld找到:
+19:05 lh_mouse: 修改/etc/ld.so.conf, 加入一行/usr/local/lib
+19:05 lh_mouse: 执行sudo ldconfig更新配置
+19:06 lh_mouse: ^ 无责任转载
+19:06 lh_mouse: 我不得不说一句为什么自以为是的逗比这么多
+19:06 varna: 233333
+19:06 xxxxxxxx: varna: carrier bay是干啥的?
+19:06 lh_mouse: 默认 so 不搜索 /usr/local/lib 自然是有原因的
+19:06 varna: xxxxxxxx: 让你的主力舰可以和基地一样被停靠
+19:06 xxxxxxxx: 噗噗噗.....
+19:06 varna: xxxxxxxx: 我听说服务器上买大舰可以加各种功能模组
+19:07 Plough: 我记得好象是/dock
+19:07 StarDustX quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+19:07 varna: 我见过的包括停靠模组、超空间坑爹跳跃模组和超空间迫真扫描模组
+19:07 Plough: 23333
+19:08 xxxxxxxx: 还有 equipment type 1 又是要干啥的?
+19:08 varna: 那个会被自动塞进那些模组
+19:08 varna: 在管理员的天罚神殿（st04_03_base）可以买到
+19:08 xxxxxxxx: 如果战舰能停靠 里面可以修船么?
+19:08 Plough: 你用beam的话直接敲teahouse
+19:08 varna: 不知道，那些我没玩过
+19:09 varna: beam的别名我都不会……到现在我也全都打基地别名
+19:09 Plough: 别名是可以自己设置的
+19:09 Plough: 不过得在我这边设置
+19:09 xxxxxxxx: 红旗在哪里?
+19:10 xxxxxxxx: teahouse?
+19:10 varna: 你们先把任务打了吧
+19:10 Plough: 我在vogtland
+19:10 Plough: rh05_04_base
+19:10 varna: 我娄号还差不到20%
+19:10 Plough: ok
+19:10 varna: 再打几个补给船就好了
+19:11 varna: 两个大舰去轮那些货应该挺安稳的
+19:13 xxxxxxxx: 我想让红旗看看那个舞台上使用的防空炮...
+19:16 Plough: varna, 对了，docking module的internal name你能看到吗
+19:16 varna: 我看看
+19:17 varna: 日
+19:17 varna: 我不知道哪个是哪个……
+19:17 Plough: ……
+19:17 varna: 找到了
+19:17 varna: dsk_docking_module_1
+19:18 Plough: thx
+19:18 Plough: xxxxxxxx, 你停回基地再飞起来一次吧
+19:18 Plough: 那堆石头估计一时半会出不来
+19:21 varna: Plough: 打错了
+19:21 varna: s/dsk/dsy/
+19:22 varna: dsy = dIsCOVERy
+19:22 Plough: 巨基怎么爆炸了
+19:25 Plough: OK
+19:25 Plough: 做完了
+19:25 Plough: 我试试docking module，然后重启服务器
+19:25 xxxxxxxx: 我又忘记带强化的装甲了
+19:26 xxxxxxxx: 而且机器人和电池液没带....
+19:26 Plough: ……
+19:26 varna: 用力，别怕
+19:27 varna: 吃两斤玉子烧壮壮胆
+19:27 varna: 我吃点东西收拾下任务就来
+19:27 Plough: 不过我发现巨基简直神壕
+19:28 Plough: 上来一轮主炮出去了
+19:28 xxxxxxxx: 开小飞船的时候我就这作风....
+19:28 xxxxxxxx: 开战舰我感到不习惯....
+19:29 Plough: 然而BB主炮十秒一轮还会干掉你80%的能量槽……
+19:29 Plough: Server online
+19:30 Plough: 等会羊驼子可以试试能不能停我船上
+19:30 varna: 这个好
+19:32 StarDustX joined channel
+19:34 Plough: varna, http://discoverygc.com/forums/showthread.php?tid=83074
+19:35 lh_mouse: [19:24:32] <Plough> 等会羊驼子可以试试能不能停我船上 // 船代指什么
+19:35 Plough: 代指海鲜大战舰
+19:35 varna: 悲剧了，captcha突然跪了
+19:35 Plough: ……
+19:35 xxxxxxxx: 我的用的炮似乎没那么给力
+19:35 Plough: 你怎么用的
+19:35 xxxxxxxx: 一炮打出去才消耗大概四分之一的能量
+19:36 xxxxxxxx: 就是自带的炮
+19:36 Plough: 等会我扫下你装备
+19:36 Plough: varna, https://pastebin.mozilla.org/8849641
+19:36 varna: thx
+19:36 Plough: 我这有个Lv42的任务
+19:36 Plough: 等羊驼子上来我们接这个？
+19:37 xxxxxxxx: 另外我必须要展示一下那个谜一般的防空炮
+19:37 Plough: 我一般是这么来
+19:37 Plough: 大舰用副炮彻甲，然后主炮轰船体
+19:38 varna: 你们先打了吧
+19:38 Plough: 飞机2km以外用副炮，2km以内用防空炮，300m以内一起上
+19:38 varna: 别专门等我，我上去之后还想换套米畜飞机的
+19:38 Plough: 那我先打个简单点的
+19:38 Plough: Lv42基本上是BB对轰……
+19:40 Plough: 什么鬼
+19:40 Plough: 我扫不了巨基
+19:42 varna: 距离不够？
+19:42 varna: 战舰扫描仪能看多远
+19:46 varna: 各种一发大破
+19:46 varna: 我还是收拾下去2-2好了
+19:49 varna: 我日
+19:49 varna: 2-2也在进Boss...
+19:49 varna: 当提督真难
+19:50 cleamoon_: 2-3多好
+19:50 varna: 娄号差四个或者六个，南西已经打完了
+19:50 varna: 这时候我宁可赌2-2的沟里一次四个
+19:50 Plough: 死了
+19:50 varna: ...
+19:51 xxxxxxxx: 这射程为何这么近
+19:51 Plough: xxxxxxxx, 你用的什么装备
+19:51 Plough: 截个图，我扫不了你
+19:52 Plough: varna, 另外要不然你也搞条BB吧
+19:52 Plough: 两条扛不住
+19:52 varna: 敌人那么多BB?
+19:52 Plough: 无限多炮艇
+19:52 varna: ……
+19:52 varna: 然而我最受不了的就是开主力舰……
+19:52 Plough: 你可以试试放逐者的BB或者海盗的……
+19:52 varna: 我单机试过
+19:53 Plough: 你开轰炸机的话尽量帮我彻下甲？
+19:53 varna: 非常难受，感觉失去了生存的一样
+19:53 Plough: 不彻甲的话主炮没用
+19:53 varna: 彻甲啊
+19:53 varna: 我优先打炮艇？
+19:53 Plough: 也行
+19:53 code_new joined channel
+19:53 Plough: 有空的话我帮你处理掉战机
+19:53 varna: 战机不用担心
+19:53 Plough: 然后你彻甲，彻完甲我来一轮主炮
+19:54 varna: 我选的轰炸机都是在我手头可以跟Lv18-19敌机狗斗的……
+19:54 varna: 再打一场2-2
+19:54 varna: 要是沟了就不打了
+19:55 varna: 那我买彻甲鱼雷吧
+19:55 varna: 日
+19:55 varna: 娄号真麻烦，先不打了
+19:55 varna: 我马上登号
+19:56 xxxxxxxx: 全是卖船的地方的武器
+19:56 xxxxxxxx: http://puu.sh/kOxTS/bcf3d676b5.jpg
+19:56 Plough: 看了一下
+19:57 Plough: 我觉得除了那个前向炮塔以外全都可以扔……
+19:57 xxxxxxxx: http://puu.sh/kOxVA/5253e7fb89.jpg
+19:57 Plough: 我看看天罚神殿有没有Heavy Mortar卖
+19:57 Plough: 全扔吧
+19:57 Plough: 主炮用Heavy Mortar或者海鲜Annihilator
+19:57 varna: 不行
+19:57 Plough: 副炮用海鲜副炮或者海盗的玩意
+19:58 varna: 我还是看不到你的服务器
+19:58 Plough: ……
+19:58 Plough: 什么鬼
+19:58 xxxxxxxx: 所以海盗的是在哪里买的?
+19:58 Plough: 你直连呢
+19:58 Plough: crete
+19:58 Plough: 剩下的塞Gatling或者Solaris
+19:58 varna: 我先开dmz试一次
+19:58 Plough: 哦
+19:59 Plough: 跟DMZ没关系
+19:59 Plough: 我这和列表服务器之间的连接断了
+19:59 varna: ...
+19:59 Plough: Connecting to list server...
+19:59 Plough: Established connection to list server...
+19:59 Plough: Sending game information to list server...
+19:59 Plough: Lost connection to list server...
+19:59 Plough: Connecting to list server...
+19:59 Plough: 我重启下
+19:59 Plough: 或者你用-s直连？
+19:59 lh_mouse: Plough, 爆照
+19:59 varna: 你重启下吧
+19:59 Plough: 119.165.232.187:2302
+19:59 Plough: 也行
+20:01 Plough: varna, 连上了
+20:01 Plough: 你刷新下看看
+20:01 Plough: xxxxxxxx, 
+20:02 varna: 来了
+20:02 varna: 我先去买点东西
+20:02 Plough: 巨基似乎还没来
+20:02 Plough: OK
+20:03 varna: 神啊他们骗我
+20:03 varna: 密苏里不卖轰炸机
+20:03 Plough: ……
+20:03 boosure quit:Changing host
+20:03 boosure joined channel
+20:05 lh_mouse: Plough, 爆照
+20:05 Plough: 不给
+20:05 lh_mouse: Plough, 爆照
+20:08 varna: ok买好了
+20:10 varna: Plough: 停进来了
+20:10 Plough: 里面啥样
+20:11 varna: 跟Mactan的空间站一样
+20:11 wlemuel quit:Ping timeout: 252 seconds
+20:11 varna: 酒吧是Freeport 9那样的
+20:11 Plough: ……
+20:11 Plough: 等会我给巨基塞两个吧
+20:14 yzld2002 quit:Read error: Connection reset by peer
+20:14 yzld2002 joined channel
+20:15 _Return joined channel
+20:15 xxxxxxxx: 然而....
+20:15 xxxxxxxx: 海盗那边似乎没有卖战舰装备的...
+20:15 Plough: xxxxxxxx, 你现在什么情况……
+20:15 Plough: ……
+20:15 Plough: 我查查
+20:15 varna: Crete旁边有个船厂不是
+20:16 xxxxxxxx: 噗噗噗我在crete.....
+20:16 Plough: Corsair Battleship Turret
+20:16 varna: 你把基地编号加一看看
+20:17 Plough: Tripoli Shipyard
+20:17 Plough: 对
+20:17 Plough: +1
+20:17 Plough: hi02_02_base
+20:18 Plough: 天罚神殿似乎有Heavy Mortar
+20:19 varna: 奇怪
+20:19 varna: 这战舰表面有个粉刺
+20:20 Plough: 哪里？
+20:20 varna: 还不止一个
+20:20 varna: 舰首有，旁边的结构上也有
+20:20 Plough: ……
+20:20 Plough: 我这里完全看不清
+20:21 varna: 在我刚才开炮那个方向上就有一个
+20:23 xxxxxxxx: 感觉似乎卡的不对劲....
+20:23 xxxxxxxx: 买东西都要等几秒...
+20:23 varna: 出来应该就不卡了
+20:25 _Return quit:Remote host closed the connection
+20:26 varna: 巨基不动了？
+20:26 Plough: 似乎是
+20:27 Zale_Chestnuts joined channel
+20:27 varna: xxxxxxxx: 你卡了么……
+20:27 Zale_Chestnuts: 基佬们，有没有什么赚钱的门路
+20:28 condy: 可以看刑法上面的（
+20:28 condy: (大雾
+20:28 cleamoon_: 你把肾给我，回头我给你20
+20:29 varna: 我给40
+20:29 Zale_Chestnuts: 卧槽
+20:29 varna: xxxxxxxx: 掉线了
+20:29 Zale_Chestnuts: 学校附近没啥兼职，快穷死了
+20:29 xxxxxxxx: 不是卡在基地 是这不停在告诉我可能超时
+20:29 varna: Zale_Chestnuts: 奖学金
+20:30 xxxxxxxx: 卖屁股？
+20:30 varna: 这基佬真污
+20:30 varna: 就想着卖屁股
+20:30 cleamoon_: 不愧是基王
+20:30 Zale_Chestnuts: 才开学，没啥奖学金
+20:30 cleamoon_: 那还是卖肾吧
+20:30 Zale_Chestnuts: xxxxxxxx怎么卖(T_T)→_→
+20:31 Plough: xxxxxxxx, 对了，下次连上以后你把那两个停靠装置装上
+20:31 xxxxxxxx: 停靠装置?
+20:31 Plough: Docking Module
+20:31 varna: 轰炸机这个机炮的效果怎么看怎么难看
+20:32 xxxxxxxx: 漂亮 我现在连服务器列表都卡了
+20:33 Plough: ……
+20:41 Zale_Chestnuts: 哎哟
+20:42 cleamoon_: 我觉得我们应该把新人弄成药娘，这样就有钱了
+20:44 Zale_Chestnuts: 基佬不值钱吗
+20:45 varna: 基佬啊，这里有基头四了
+20:46 Zale_Chestnuts: 我们班有人卖流量，还有什么Good Idea
+20:46 varna: 卖春
+20:46 cleamoon_: 流 量
+20:47 Zale_Chestnuts: varna客官约吗
+20:47 Zale_Chestnuts: 卖笑怎么样
+20:52 xxxxxxxx: 让我一次掉个够
+20:52 varna: 23333
+20:53 * Zale_Chestnuts 你们干嘛？看你们玩的不要不要的。
+20:53 varna: 去他大爷的，为什么信用卡还占空间
+20:54 varna: 好了我鱼雷手工发射
+20:54 varna: 手工发射还不行么
+20:56 Plough: ……
+20:56 * Zale_Chestnuts 你们到底在干吗？
+20:56 varna: 你哭着对我说 俩炮塔都是骗人的 他俩不可能 都向前开火
+20:56 Plough: 2333333
+20:57 varna: 机头上那个挂点是假的
+20:57 varna: 根本就没有那样的挂点
+20:57 varna: Zale_Chestnuts: 在玩freelancer
+20:57 Plough: 或者我和巨基来一场PvP吧
+20:57 varna: 不对
+20:58 varna: 我再试验一下
+20:58 varna: 我看看到底出去几发鱼雷
+20:59 Zale_Chestnuts: windows？
+20:59 varna: linux/windows都有
+21:00 varna: Plough: 你们在哪？给我个地图坐标，我扫描不到
+21:00 Plough: 要打的话我建议去The Shrink附近
+21:01 Plough: Shrine
+21:01 Plough: 这旁边石头太多了
+21:01 varna: 那我去shrine等你们吧
+21:01 Plough: ok
+21:01 varna: 为什么只有不同种类的鱼雷能一起发射
+21:01 varna: 坑死了
+21:02 varna: Nova和EMP鱼雷的加速度不一样啊
+21:02 varna: 这两个甚至不该一起瞄准
+21:04 varna: xxxxxxxx: 卡了？
+21:10 wlemuel joined channel
+21:11 Plough: 实际上法鸡大战舰的理论火力比我的海鲜战舰高些
+21:11 Plough: 他多一门前炮
+21:11 varna: 日，推进器太贵了
+21:11 Plough: 不过我不确定五门一起用能量够不够……
+21:11 varna: 刚才蹲在外面看，花了我八十多万来修
+21:11 Plough: ……
+21:11 varna: 其中一大半都是推进器
+21:11 Plough: 要不然我们换去Malta附近？
+21:11 varna: 不用
+21:11 Plough: 战舰也不太好从Shrine出来
+21:11 varna: 这服务器上倒不差钱，你们方便就行
+21:12 varna: 全坏了就换着买
+21:15 cleamoon_: 8cm高角炮有用吗
+21:15 varna: 没什么用，但是开发不能，留着吧
+21:15 cleamoon_: 哦...
+21:29 Zale_Chestnuts quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+21:43 lh_mouse: 你们把新人吓跑蜡
+21:43 varna: Plough: bw02_01_base
+21:43 varna: Plough: 有Lv38任务
+21:44 Plough: 我刚才那个也是Lv38
+21:44 Plough: ew12_03_base
+21:44 varna: 我去你那吧
+21:44 Plough: 我已经来了
+21:44 cleamoon_: 舰娘怎么这么慢
+21:44 varna: ...
+21:44 varna: 我没接任务……
+21:44 varna: 回去
+21:44 Plough: ……
+21:44 varna: 去你那
+21:44 varna: 你俩在这能撞死
+21:44 Plough: 卧槽
+21:44 Plough: 周围好多石头
+21:45 varna: 我忘了这破事
+21:45 varna: cleamoon_: 更新之后变慢了
+21:46 Plough: 不过这附近也有个小行星带
+21:46 varna: 凑合来吧
+21:46 varna: 这里能打海盗
+21:46 Plough: 那我接那个Lv38？
+21:46 varna: 接
+21:47 varna: 巨基也来吧
+21:47 Plough: 哟西
+21:47 Plough: 去打海盗
+21:47 varna: xxxxxxxx: ew12_03_base
+21:49 varna: xxxxxxxx: 似乎你还在卡……
+21:50 xxxxxxxx: 我套在一个建筑上了
+21:50 xxxxxxxx: 没错 是套住了
+21:51 xxxxxxxx: 谁设计的舰型 不造个环就不开心
+21:53 Zale_Chestnuts joined channel
+21:54 Zale_Chestnuts quit:Remote host closed the connection
+22:02 Plough: 或者今天先这样？
+22:02 varna: 行
+22:02 Plough: 等下周看看巨基网络能不能好点
+22:03 Plough: ok
+22:03 Plough: 那我切回linux
+22:03 xxxxxxxx: 我觉得我还是不习惯战舰这样的东西....
+22:03 varna: 我降落
+22:04 varna: 我退出了
+22:04 xxxxxxxx: 也不知道怎么想的 战舰能套在建筑上
+22:04 varna: 巨基下回来跟我一起开轰炸机吧
+22:04 Plough: 服务器关了
+22:04 Plough quit:Quit: reboot
+22:04 varna: 轰炸机好玩
+22:04 varna: 超级刺激的
+22:04 xxxxxxxx: 然而我不会投鱼累
+22:04 varna: 瞄准了投
+22:05 varna: 做不到很好的命中，但你可以飞开再投一次
+22:05 Mokou joined channel
+22:05 varna: 感觉轰炸机真的超好玩啊
+22:05 Mokou: 地狱火多漂亮
+22:05 varna: 躲着敌人的炮火冲进去，拼死投一发鱼雷然后闪开
+22:06 Mokou: 不过单机玩不了轰炸机吧
+22:06 varna: 单机我只能做做梦
+22:06 varna: 我单机玩轰炸机都是跟敌人狗斗……
+22:06 Mokou: ……
+22:06 varna: 能逗死他们的，他们不太会过弯
+22:06 * Mokou 不会过弯
+22:06 Mokou: 我觉得我还是适合去开大战舰
+22:07 varna: 另外刚才那个任务，你看完地狱火秀之后我就没弹药了
+22:07 Mokou: ……
+22:07 xxxxxxxx: 大战舰是怎么开的?
+22:07 varna: 我特意打开hud检查了一下
+22:07 Mokou: 所以我把地狱火的量调高了
+22:07 varna: 我觉得120就好
+22:07 Mokou: 虽说大概得配合本地ini修改
+22:07 xxxxxxxx: 引擎停机然后减速?
+22:07 varna: 大战舰我看贴吧说要配合推进和键盘开
+22:07 varna: 那个我一点都不会
+22:08 Mokou: 大战舰的好处是一轮齐射过去谁都爆炸了
+22:08 varna: 120的地狱火数目够我干掉一两个炮艇的
+22:08 varna: 这足够了
+22:08 Mokou: 你看我轰那条放逐者BB的时候多爽
+22:08 varna: 然后我能为同伙的战舰提供点掩护，比如说他们要我放鱼雷，我就冲过去雷击
+22:08 varna: 或者用Nova吓吓人
+22:08 varna: 我觉得能这么玩就很高兴了
+22:08 Mokou: 你雷完了我直接一轮齐射过去
+22:08 Mokou: 咣
+22:09 varna: 比较下来，我觉得综合性能还是棍国那个轰炸机好
+22:09 varna: 他体积小
+22:09 varna: 然而我就是喜欢给自己找点不痛快
+22:09 Mokou: 抖m驼
+22:10 varna: 米畜那个轰炸机看着帅气
+22:10 varna: 而且在有友军的情况下我还是活下来了
+22:10 varna: 虽说鱼雷半数时间放不出来很郁闷
+22:11 varna: 以后我再研究下为何放不出来，说不定是我技术问题
+22:11 Mokou: http://tieba.baidu.com/p/4106975849
+22:11 Mokou: 看到Me262我就笑了
+22:12 code_new quit:Remote host closed the connection
+22:12 varna: Me262
+22:12 varna: 哦瘊瘊
+22:12 varna: 啊，不是装甲航母
+22:12 varna: 那么我们要这个航母有什么用呢
+22:12 Mokou: 120架jet(笑)
+22:12 varna: 而且非装甲甲板怎么可能起降喷气机？
+22:12 xxxxxxxx: 变身之后说不定能有装甲
+22:13 varna: 这个变身不得吃一个aww...
+22:13 Mokou: 用德棍的脸皮铺甲板
+22:13 varna: 你说得对
+22:13 Mokou: 别说喷气机，大满贯砸下来都砸不穿
+22:13 varna: 赤城直上、急降下！
+22:13 Mokou: 23333
+22:13 varna: 一个赤城从天而降掉下来，空投大量饭团
+22:14 varna: 今天怎么想都颇有趣，我第一次开舰攻开这么高兴
+22:14 varna: 真的是朝敌舰冲过去投雷，而且还能看到不是蚊子咬的效果
+22:15 Mokou: 你需要WT
+22:15 Mokou: 想我一发60kg航弹炸沉女儿
+22:15 varna: 你们都欺负瑞凤
+22:15 Mokou: 当时我练习着舰，随手扔了一个
+22:15 Mokou: 咣
+22:15 Mokou: 然后女儿就开始倾覆了
+22:15 varna: 练习着舰23333
+22:15 Mokou: 我直接看傻
+22:15 varna: 我记得我玩BS/M的时候着舰不及格
+22:16 varna: 后来玩FL, 学了些鬼畜的着舰姿势
+22:16 varna: 全都是开满速度朝着门或者塔冲过去
+22:16 varna: 在0-30距离的时候按F3
+22:16 Mokou: +
+22:16 varna: 然后就跳过动画直接降落……
+22:17 Mokou: 不过我觉得你可以练习一下把大战舰开进trade lane……
+22:17 varna: Mactan基地我还会一个专门的擦边降落
+22:17 varna: 我宁可把那些Lane轰了
+22:17 Mokou: 法鸡的棺材板我能开进去
+22:17 Mokou: 海鲜大战舰我到目前没成功过
+22:17 varna: 我走路都不老实走的
+22:17 xxxxxxxx: 我还以你要倒划进机库
+22:17 varna: 倒滑进去的事我干过
+22:17 varna: 被关进去了
+22:17 Mokou: ……
+22:18 varna: 就在Mactan, 他们不知道为什么提前开门了，然后我就进去了
+22:18 varna: 想玩个屁股着陆，结果6了
+22:18 varna: 我日哦
+22:18 varna: 2-2根本不进补给
+22:20 varna: xxxxxxxx: 巨基下回跟我一起轰炸吧，你也可以用机载反物质炮
+22:20 xxxxxxxx: 一炮就没能量?
+22:21 varna: 一炮费一半以上，你不会有连装炮的机会
+22:21 varna: 但轰炸机在对舰攻击的时候基本没有别的用能量的机会
+22:21 varna: 地狱火那点能量就比你平移推进多几倍而已……
+22:22 Mokou: 我接着当T？
+22:22 Mokou: 三个轰炸机过去做今天这种任务估计会爆炸
+22:22 xxxxxxxx: 你自然是当T 我开战舰都放弃走为直接炮塔突突突
+22:22 varna: 丧心病狂三舰攻我就不知道能活几个了
+22:22 varna: 你要是还想开战舰那就接着战舰
+22:23 Mokou: 那我接着开BB
+22:23 xxxxxxxx: 并不
+22:23 varna: 但是轰炸机我也欢迎，大不了一起爆炸
+22:23 Mokou: 我不擅长开飞机
+22:23 xxxxxxxx: 我觉得飞机直白些
+22:23 varna: 那至少我还知道我死了之后有人能接着炮轰
+22:23 varna: 也还安心
+22:23 Mokou: 我有点想写一个造船软件了……
+22:23 varna: 写
+22:23 Mokou: 然而我同样也不会算动力系统
+22:23 Mokou: 现在我有这么个想法
+22:24 Mokou: 我内置算法，但我不要求强行应用内置算法
+22:24 varna: xxxxxxxx: 下回你也买飞机
+22:24 varna: Mokou: 这是正道
+22:24 Mokou: 换句话说你觉得算出来的结果不科学你可以自己手敲
+22:24 Mokou: 成，那我弄一个试试
+22:24 varna: 这么说吧
+22:24 varna: 我建议的是你用算法生成一个参考清单
+22:25 varna: 这个清单提交给用户评定修改
+22:25 varna: 然后你再检验一次这个清单有没有出现明显非法的参数
+22:25 varna: 比如用户可能造出了宇宙战舰
+22:25 varna: 或者一个天生凹陷的飞行甲板
+22:25 Mokou: 有的话我在repo里写上“该舰可能装备了波动炮”？
+22:25 * varna 1/1
+22:26 Mokou: report
+22:26 varna: long long long is too long for gcc
+22:26 Mokou: 23333
+22:26 Mokou: 不过我还真不会造航妈
+22:26 Mokou: 航妈怎么来，算一下重心和机库面积之类的？
+22:26 cleamoon_: 23333
+22:26 xxxxxxxx: 你只要多放几层甲板就行了
+22:26 varna: 我不知道
+22:27 varna: 舰船构造什么的我一点资料都没看过，看资料的时候我只注意别人给它们设计了什么……
+22:27 varna: 我日哦！
+22:28 varna: 2-2根本进不去补给船
+22:28 varna: 哦，我知道了
+22:28 varna: 我不该带路的
+22:29 Mokou: http://tieba.baidu.com/p/3629172509  BB吧批斗会
+22:30 varna: 这楼主说的似乎是把从零到零的黑点列了一遍啊
+22:30 varna: 一股熟悉的味道
+22:30 varna: 至于渊田
+22:30 varna: 怎么说呢，好歹渊田是上过天拍过虎的
+22:32 Mokou: 不过战列舰吧天天各种婊……
+22:32 varna: 另外黑源田主义的时候，我觉得该提提李梅
+22:32 varna: 李梅往死里整重爆飞行员的时候怎么就没人婊呢
+22:33 cleamoon_: 分辨一个字符串是不是一个回文的置换难道不是看是不是除了一个字母剩下的都是不是偶数个吗？
+22:33 varna: cleamoon_: aabbccdde
+22:33 varna: 而且为了知道每个字母都是偶数个，你需要一个字母表
+22:33 cleamoon_: varna, 这个怎么了
+22:33 varna: 这个不是回文，但它符合你的要求
+22:33 cleamoon_: 是呀
+22:34 varna: 所以你那个提案错了……
+22:34 varna: 哦，回文的置换啊
+22:34 cleamoon_: +
+22:34 varna: 字母表多大？
+22:34 varna: 只是ascii?
+22:34 cleamoon_: a-z
+22:34 varna: 那就按你那么做
+22:35 varna: 不过加一条
+22:35 varna: 至多一个字母的出现次数是奇数
+22:35 cleamoon_: +
+22:36 cleamoon_: 这就是我说的呀... 难道我的表达能力已经突破天际了？
+22:36 varna: 哦，我撸多了
+22:36 varna: 所以说那些Lv75就觉得3-2稳如狗的伙计是怎么回事
+22:37 cleamoon_: 我刚撸完，玩一个叫淫荡勇者赛菲的游戏
+22:37 varna: 真把撸爷不当爷么
+22:37 varna: 刚才白板撸级一炮大破绫波，1/37...
+22:37 varna: 卧槽要做的事有点多
+22:37 varna: 我演习没打
+22:38 varna: 先打反潜
+22:39 cleamoon_: orz
+22:39 cleamoon_: 我还在刷闪
+22:41 varna: 先以资源为重
+22:41 varna: 演习来不及就不打了
+22:43 cleamoon_: 练度无所谓？
+22:44 cleamoon_: 哈哈哈，刷闪的船各种中破，当肉的船各种mvp
+22:46 varna: 练度啊
+22:46 varna: 反正不差那一点
+22:48 cleamoon_: 如果远征不消耗闪就好了
+22:48 varna: 沼跃现在反正也过六十了，可以打打二三线
+22:48 cleamoon_: orz
+22:48 varna: bisko不到九十，但也足够去一线血拼
+22:48 varna: 剩下的就是把kamo改了喂满，那个下周可以，再下周也可以
+22:48 cleamoon_: 1级晓怒抢81级岛风mvp
+22:49 varna: 出手顺序问题
+22:49 varna: Mokou: 你的帐号密码给我一下，我确认看看
+22:50 varna: 我把建造任务做完就登你的帐号
+22:50 Mokou: 稍等，我收个远征
+22:50 varna: ok
+22:50 cleamoon_: 岛风这感人的命中率
+22:51 cleamoon_: 我的电碳都在哭呀
+22:52 Mokou: http://tieba.baidu.com/p/4108631820 2L灵魂画师
+22:52 varna: 23333333
+22:53 varna: 现在你下帐号了么
+22:53 Mokou: 下了
+22:53 varna: ok
+22:56 Mokou: 另外我听说实际上火控的时候还是得用A型显示屏的
+22:56 Mokou: PPI据说误差比较大
+22:56 varna: ok, 能登陆
+22:56 Mokou: ok
+22:56 varna: 我先撤了
+22:56 varna: 明天我尽量给你先做完阿号，后天开始娄号
+22:57 Mokou: thx
+22:57 varna: 武运
+22:57 varna quit:Quit: leaving
+22:58 cleamoon_: 后天怎么做娄号，不应该结束了吗
+22:58 Mokou: 什么结束了
+22:59 StarDustX quit:Ping timeout: 265 seconds
+23:19 iyzsong: 晚 <_<
+23:19 * iyzsong AFK
+23:24 Mokou: 睡觉
+23:24 Mokou: 诸君武运
+23:24 Mokou quit:Quit: 睡觉
+23:52 wlemuel quit:Ping timeout: 250 seconds

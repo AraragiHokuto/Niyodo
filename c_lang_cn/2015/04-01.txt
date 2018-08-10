@@ -1,0 +1,1246 @@
+00:03 lh_mouse: FrankHB, ?
+00:13 FrankHB: atheme不管了？
+00:18 lh_mouse: FrankHB, 目测是
+00:18 lh_mouse: freenode 还在用
+00:27 lh_mouse quit:Read error: Connection reset by peer
+02:34 whocares_2 quit:Remote host closed the connection
+02:34 whocares_2 joined channel
+02:43 LittleKey quit:Quit: Leaving.
+03:31 whocares_2 quit:Remote host closed the connection
+03:32 lh_cat quit:Quit: Connection closed for inactivity
+03:43 cleamoon__ quit:Remote host closed the connection
+03:54 cleamoon joined channel
+04:04 cleamoon quit:Remote host closed the connection
+04:32 cleamoon joined channel
+04:53 lolisa quit:Ping timeout: 264 seconds
+04:57 whocares_2 joined channel
+05:06 whocares_2_ joined channel
+05:06 whocares_2 quit:Ping timeout: 255 seconds
+05:25 whocares_2 joined channel
+05:25 whocares_2_ quit:Ping timeout: 250 seconds
+05:31 whocares_2 quit:Ping timeout: 252 seconds
+05:32 whocares_2 joined channel
+05:37 xxxxxxxx quit:Quit: Leaving...
+06:05 izmntuk quit:Quit: leaving
+08:06 cleamoon__ joined channel
+08:39 hoxily joined channel
+08:42 Petrus07 quit:Quit: Leaving.
+09:10 lh_mouse joined channel
+09:19 Xilzzerts joined channel
+09:30 hoxily quit:Ping timeout: 272 seconds
+09:33 cleamoon__ quit:Ping timeout: 272 seconds
+09:51 cefkamcau joined channel
+09:55 eshiffob quit:Ping timeout: 256 seconds
+10:14 tutu_ joined channel
+10:15 tutu_: 早 ~
+10:33 * lh_not_bot slaps tutu_ around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+10:34 tutu_: lh_mouse,阿嘻，许久没来了
+11:07 tutu_ quit:Read error: Connection reset by peer
+11:09 tutu_ joined channel
+11:15 * lh_not_bot slaps tutu_ around a bit with a large trout
+11:26 lh_not_bot: geordi: << TYPE(pair<int, int>().first)
+11:26 geordi: rvalue int
+11:27 lh_not_bot: geordi: << TYPE<decltype(pair<int, int>().first)>
+11:27 geordi: int
+11:34 cleamoon__ joined channel
+11:40 whatofor joined channel
+11:46 varna joined channel
+11:46 varna: 四月份的3-5只掉了一次沟，没劝退……
+11:47 * lh_not_bot bites varna 
+11:47 varna: 你非常不老实
+11:47 varna: 我还是给你准备小红丸子吃
+11:47 sismvg joined channel
+11:47 sismvg: 某科学的铃科百合子动画化 有PV
+11:48 sismvg: http://www.tudou.com/programs/view/js6-WVHkNNU/?resourceId=60762585_06_02_99
+11:48 sismvg: Aha ha 
+11:49 lh_not_bot: 长连接分布式还是没想出怎么弄
+11:49 lh_not_bot: 不同机器之间的数据同步怎么弄呢
+11:51 varna: 没法强行减低不同机器之间的数据相关的话，是否可以考虑让中心维护一个黑板
+11:51 sismvg: 区块链
+11:51 varna: 这黑板上维护对非本地数据的请求，以及最近一次（或许是广播所得的）非本地数据应有的来源
+11:53 varna: 不过这样的坏处是粒度不好控制（除非场景特别）
+11:56 varna: 当然如果能强行减低相关的话，可以考虑在分配数据的时候就施行线性散列
+11:56 varna: 这样需要数据同步的主机数目会减少
+12:12 cleamoon__ quit:Ping timeout: 244 seconds
+12:23 sismvg: http://tieba.baidu.com/p/3672324018
+12:23 sismvg: 印度销毁3.3吨大麻，但是处理不当导致全城人吸High
+12:23 varna: ...
+12:25 varna: 2-5一劝退，也击破了
+12:26 varna: 本月的战果速攻简直大成功
+12:27 lh_cat joined channel
+12:34 tutu_wind joined channel
+12:36 xxxxxxxx joined channel
+12:39 varna: xxxxxxxx: 爆
+12:39 varna: tutu_wind: 捏
+12:39 tutu_wind: varna: 许久不见的说 ～～～ 
+12:40 varna: tutu_wind: 那就爆你二三十下
+12:40 xiaoxi joined channel
+12:40 tutu_wind: varna: 额，会坏掉的 。。。
+12:40 varna: 坏掉了就派去舰尾值班
+12:43 tutu_wind: varna: 阿嘻，渣渣得好生努力的说 ～ 
+12:44 xxxxxxxx: 写JS的那些人平时都怎么维护代码的... 先自动格式改完后再把换行之类的都去掉?
+12:46 varna: 电酱强行被爆
+12:46 varna: 还好是中破
+12:50 varna: 大淀大破……
+12:51 varna: 这要出事
+12:51 varna: 强行miss...
+12:51 varna: 逗我
+12:51 varna: 强行打不掉
+12:52 varna: 太过分了
+12:53 xxxxxxxx: 这演习打得和吃了屎一样...
+12:53 xxxxxxxx: 全员擦弹
+12:54 varna: 隼鹰强行小破
+12:56 sismvg: curses有必要学不
+12:57 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=7a42d324ad773912c4268569c8188675/242531dbb6fd52665c57a98daf18972bd507361d.jpg
+12:57 sismvg: 人妻纲手
+12:57 xxxxxxxx: 又是一个3-2带舰战的.....
+12:58 xiaoxi quit:Quit: 离开
+13:09 whatofor quit:Ping timeout: 256 seconds
+13:13 whatofor joined channel
+13:13 xxxxxxxx: 或者那个是3-2用爆战的?
+13:17 tutu_ quit:Remote host closed the connection
+13:18 whatofor_1 joined channel
+13:21 whatofor quit:Ping timeout: 264 seconds
+13:23 condy: sismvg: ncurses?
+13:24 sismvg: 差不多
+13:24 condy: - -
+13:24 hoxily joined channel
+13:27 condy: 用时再学吧。
+13:27 * condy 我是这样的
+13:27 xxxxxxxx: 啊啊啊啊我有衣笠了
+13:28 tutu_wind: ～～～ 午休时间到了 ～～～ 么么
+13:55 sawfish joined channel
+13:56 sawfish: 这是要我卖三年萌然后去山西挖煤的意思么？
+13:57 sawfish: 别 sorry, sorry 有用要 police 干什么。
+13:59 sawfish: varna: 好啦，死B，你可以活过来了。
+14:00 sawfish: 吃了你也补不回我俩妹子。
+14:00 lh_not_bot: varna: 
+14:00 sawfish: 何况你又不好吃
+14:02 sawfish: 从今天开始我负责卖萌你负责我俩妹子，你不是很想拉我的妹子来irc么。
+14:04 xxxxxxxx: 你还是闭上嘴自己负责自己的妹子比较好
+14:05 lh_not_bot: 键盘好吃
+14:09 sawfish: xxxxxxxx: 可以嘛？
+14:09 sawfish: thx
+14:11 sawfish: 那我找妹子聊天去了，诸君愉快。
+14:11 sawfish quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+14:18 sismvg: 擦，有人想要线虫
+14:19 sismvg: 不能忍
+14:19 xxxxxxxx: sismvg: 别谈论这事 多一事不如少一事
+14:19 sismvg: 事=n 多一事=n+1 少一事=n-1
+14:20 sismvg: 不对啊这
+14:20 lh_not_bot: unsigned 事 = -1;
+14:21 sismvg: linux内核哪家强？
+14:21 lh_not_bot: linux 内核就一家……
+14:21 lh_not_bot: @林逗比
+14:23 xxxxxxxx: 多一事为何不是+n而是+1....
+14:25 sismvg: 学
+14:41 lh_not_bot: v8 果然牛逼
+14:41 lh_not_bot: 我写了这么个东西   var str = new String; for(;;){ str += 'test '; }   执行完了直接 abort 了  没有任何机制报告这种异常
+14:46 FrankHB: 完了》
+14:46 FrankHB: ？
+14:47 condy: 一击男粗犷的画风，帅气的人物造型，掉渣天的设定，我给满分。 #44 http://www.acfun.tv/a/ac1813073
+14:47 lh_not_bot: 是的
+14:48 lh_not_bot: FrankHB: http://paste.ubuntu.com/10716767/
+14:50 xxxxxxxx: http://tieba.baidu.com/p/3672047797
+14:52 lh_cat quit:Quit: Connection closed for inactivity
+14:52 lhanjian joined channel
+14:52 condy: [Quit: Connection closed for inactivity]
+14:53 condy: lh_not_bot: 不用这个？ Colloquy
+14:53 condy: @dantmnf
+14:53 varna: 怎么又有人嘲讽我
+14:54 lh_not_bot: condy: 手机
+14:54 varna: 我战果还差两格血呢，刚回来
+14:54 condy: lh_not_bot: 是手机上的app。
+14:54 lh_not_bot: 羊驼你看着办吧
+14:54 xxxxxxxx: 2-5 还是3-5?
+14:54 varna: 1-5
+14:54 lh_not_bot: condy: 我看看
+14:54 xxxxxxxx: 噗噗噗....
+14:54 varna: 2-5有一次劝退，3-5有一次掉沟，合计十次出击搞定
+14:55 xxxxxxxx: 你最后打1-5?
+14:55 varna: 到现在为止花了27桶
+14:55 varna: 我是3-5 2-5 1-5这么打的
+14:56 xxxxxxxx: 我又捞出来一个19....
+14:56 sismvg: 买了包零食，发现了奖券
+14:57 sismvg: 有效期去年10月，刮开，二等奖
+14:57 varna: 我仍然没看懂T2在说什么
+14:57 xxxxxxxx: sismvg: 你应该看看保质期....
+14:58 sismvg: 促销品，还有2个月国企
+14:58 sismvg: 冰火下一季还有11天
+14:59 lh_not_bot: condy: 水果商店连不上
+14:59 varna: 其实我先打3-5的主要目的是先解3运输任务
+14:59 varna: 结果今天一犯困，任务都忘了
+15:01 condy: 0.0
+15:02 xxxxxxxx: varna 话说耳机的问题昨天查了一下 60左右的有个叫听哥G1的东西 据说比潜79好
+15:02 varna: 咦，六十块钱也有啊，多谢推荐
+15:03 xxxxxxxx: 还有个叫虫哥0088 IE80单元 的东西 30左右
+15:03 varna: 30就算了
+15:03 varna: 如果30的话我感觉还不如手机送的耳机程度？
+15:07 xxxxxxxx: 这个还真不清楚...
+15:10 varna: xxxxxxxx: 爆
+15:11 lh_not_bot: FrankHB: 作何评价
+15:11 lh_not_bot: FrankHB: 我还是想找个只用 C 写的 js 解释器
+15:12 lhanjian: https://weibo.cn/comment/Cbewob8yp?rl=0#cmtfrm
+15:13 varna: lhanjian: 不是所有人都有微博帐号……
+15:13 xxxxxxxx: http://ww2.sinaimg.cn/bmiddle/6207e350jw1eqpw2du7dej20hs1zgwrh.jpg
+15:14 varna: 粗浅的挖掘……
+15:15 varna: 滥用数据者比强调体感的蠢货更可怕
+15:15 sismvg: 中西医对骂
+15:17 xxxxxxxx: http://kancolle.wiki/ 卧槽这什么情况
+15:17 sismvg: 我不信
+15:17 sismvg: 今天4/1
+15:18 varna: xxxxxxxx: 4.1
+15:18 xxxxxxxx: 吓尿我了
+15:18 lhanjian: http://ww2.sinaimg.cn/large/6207e350jw1eqpw2du7dej20hs1zgwrh.jpg
+15:19 varna: lhanjian: 刚才EA基佬发了对应的图片
+15:19 lhanjian: 哦
+15:19 lhanjian: 刚才光顾着红字了
+15:20 varna: 我只是觉得滥用粗糙统计方法的人把数据挖掘对外行者的声望搞臭了不少
+15:21 varna: 相当的统计方法是对假设的检验，然而单纯假设无视上下文的假设检验，或是试图用分布去拟合本身并不存在于同一时期、无法控制变量的数据，最后最好的结果只是过拟合
+15:21 varna: 而相信这样的过拟合并非理性——恰好相反，是理性之于理性的缺失
+15:32 lhanjian: lh_not_bot, 只用C写的Js解释器，可能要等Nginx的作者了
+15:32 varna: 然而我赌五毛小耗受不了Igor老大漫天***的接口
+15:33 lhanjian: XXXX_handler = xxx_foo; XXXX_args = xxx_arg;
+15:33 lhanjian: xxx_foo(xxx_arg);
+15:39 xxxxxxxx: 话说侦察机没有飞回来是一直都有的设定么....
+15:39 varna: 从索敌机实装开始
+15:39 varna: 不过索敌机未归还和索敌机正常发现敌人的buff认为是一样的
+15:40 lh_not_bot: 于是对面的航母为什么没有护航的飞机呢
+15:40 varna: 有
+15:40 varna: 现在高强度的攻略战里，A7M的地位已经堕落成了史实的零战
+15:40 lh_not_bot: o_O
+15:41 lh_not_bot: 攻 略 战
+15:41 varna: 而且其实敌U人S的飞机比较厉害
+15:43 lhanjian: Chrome应该是准备正式支持HTTP2了
+15:44 lh_not_bot: 没多少必要支持
+15:45 lh_not_bot: IPv6 还没动静呢
+15:45 lhanjian: 这和IPV6有什么关联……
+15:45 lh_not_bot: 没多大关系  我想说的是  没人推广这东西
+15:46 lh_not_bot: 目前绝大多数应用还是 1.1 的
+15:46 lh_not_bot: 现行的应用不能放弃  搞个新东西没多大意义
+15:46 lhanjian: 应该不至于。毕竟HTTP2只要升级软件和硬件就够了。而且HTTP2有Upgrade选项。
+15:46 lhanjian: 这个新东西可以减少大量多余的RTT
+15:46 lhanjian: 说错了，只要升级软件就可以了
+15:47 lhanjian: HTTP2并不会导致没办法过渡。
+15:47 varna: 什么叫多余的RTT
+15:48 xxxxxxxx: 多余的乳头套
+15:48 lh_not_bot: 我现在认为有必要说明一个问题
+15:48 lhanjian: 本来可以一条TCP就搞定的事情，被强迫多条TCP了。
+15:48 lh_not_bot: 当你向客户推销产品的时候  你应该向他们说明这产品能带给他们什么  而不是这产品能带给业界或者你们什么
+15:48 varna: +
+15:49 lh_not_bot: HTTP/1.1 现在基本没什么不能做
+15:49 lh_not_bot: 无论是 1.2 还是 2.0 都没法说明优势    另一个显然的例子是 C
+15:49 xxxxxxxx: 或者你的客户是自己想要什么都没准的
+15:49 lh_not_bot: 而且换新的协议   旧的东西怎么办，服务器不支持怎么办
+15:50 lh_not_bot: 这些都是开发成本    所以假如我是你的客户  我只会认为你给我制造麻烦
+15:50 lhanjian: 我觉得某些网站应该是期待已久了，他们的开发者应该比我们急切的多。
+15:50 lh_not_bot: 这东西毕竟不像学校搞研究  没什么推广的阻力     真说拿出来商业化  估计还得个最少三五年
+15:51 varna: lhanjian: 我觉得这个文青观点值得质疑
+15:51 varna: 我个人更赞同小耗的制造麻烦四字
+15:51 lh_not_bot: 你得向开发者和最终用户解释清楚为什么需要 HTTP 2.0
+15:52 lh_not_bot: 如果增加新的机制却不移除旧的  在开发者看来  就是得实现两套东西
+15:52 lhanjian: 不用向最终用户解释，就不应该让他们意识到“哦，我的浏览器有HTTP2”
+15:52 lh_not_bot: 这没什么本质区别
+15:52 xxxxxxxx: 最终用户只知道 "啊 有个更新 装上他"
+15:52 lhanjian: xxxxxxxx+
+15:52 lh_not_bot: 可以  那么开发者呢
+15:52 lhanjian: 我不懂耗子是在考虑“全面使用HTTP2”，还是会有网站使用HTTP2
+15:53 lh_not_bot: 网站
+15:53 varna: 是你如何向运营网站服务的公司提议他们迁移到HTTP2
+15:53 lhanjian: 如果是前者，那么五年都未必有多高的比例
+15:53 xxxxxxxx: 开发者应该先使用flash以外的东西 哪怕HTML5去搞视频播放器
+15:53 lhanjian: 为什么要我来提议？
+15:53 lh_not_bot: 当然我觉得不会完全没人做  但是很可能和 ipv6 一样  小众化
+15:53 xxxxxxxx: 然而他们并没有
+15:53 varna: 那么问题来了：谁去提议
+15:54 lhanjian: 网站的维护者自己有减少TIMELINE的需求，就自然会考虑用上
+15:54 lh_not_bot: 支持 HTTP 2.0 需要服务端和客户端都支持
+15:54 lh_not_bot: 光服务端支持客户端不支持是白费的
+15:54 varna: 然而另一方面，我问个细节
+15:54 lhanjian: 客户端的问题已经解决了大半了，“哦，有个更新，我们装上”
+15:54 varna: 其一，何谓多余的RTT
+15:54 varna: 其二，HTTP2如何解决这问题的
+15:54 varna: 如果解决得不错，大概会有人喜欢的
+15:55 lhanjian: 能实际用上的PIPELINE
+15:55 varna: 你这话跟没说一样……
+15:55 lh_not_bot: HTTP 1.1 本来就支持 pipelining
+15:55 varna: 说些你我都懂的解释，而且pipeline不是新东西
+15:55 lhanjian: lh_not_bot, 那个有严重的头部阻塞问题。
+15:55 lh_not_bot: 有多严重
+15:56 lhanjian: HTTP1.1的PIPELINE，响应必须按照请求的顺序回复
+15:56 lh_not_bot: 这不是问题
+15:56 lhanjian: 类似于TCP在SACK以前的情况
+15:56 xxxxxxxx: 话说后来红旗的bot改了没?
+15:56 varna: 所以HTTP2只是试图继续扩大Nagle算法？
+15:56 lhanjian: 为什么不是问题，这个情况是导致PIPELINE没有被用上的一个重要原因
+15:56 lh_not_bot: 第一  TCP 本身就有同样的问题
+15:56 varna: 难道这个能真正减少RTT么，我觉得你乐观了
+15:56 lh_not_bot: 第二 我看还不如搞个新的协议
+15:57 lhanjian: varna, 没有PIPELINE，你就得为了请求同一个HOST下的多个资源而去打开多条TCP连接
+15:57 varna: lhanjian: 然而即使有了，你得到的是更大的TCP段
+15:57 lh_not_bot: 这有什么不好的地方呢
+15:57 varna: 我需要你解释这里的细节和RTT有什么关系
+15:57 lhanjian: 而HTTP1.1建议的一个客户端请求同一个HOST，只应该同时打开最多5条TCP连接
+15:58 lhanjian: 打开taobao.com,按下F12
+15:58 xxxxxxxx: 「第六戦隊」出撃せよ！ 这任务吓死我了
+15:58 lhanjian: 然后点击Network
+15:58 varna: 你把更多的责任推给了一个应用层封包
+15:58 xxxxxxxx: 描述上说要完全胜利...
+15:58 varna: 而这个尝试试图把多个请求压到一个段里
+15:58 lhanjian: HTTP2本就是希望解决这个问题啊……
+15:58 varna: 但是我觉得你忽略了很基本的问题
+15:58 varna: HTTP会话下面的连接质量如何
+15:59 lh_not_bot: lhanjian: http 1.1 2支持 pipelining
+15:59 varna: 你试图这么刷吞吐量
+15:59 varna: 然后这导致连接质量低劣时的重传质量低劣
+15:59 lhanjian: HTTP2
+15:59 lhanjian: 在连接质量恶劣的时候只会更好
+15:59 varna: 我不认为这是个很好的尝试
+15:59 varna: 哦？
+16:00 varna: 你逗我
+16:00 varna: 你是不是搞混了高带宽延时网络和链路质量恶劣的网络
+16:00 varna: 一个大段丢了，往下怎么办
+16:01 varna: 的确你不会有更多的小段拥塞
+16:01 varna: 然而客户端的网络上并无此类拥塞，他们看到的只是成吨的快启动ACK
+16:01 varna: 还有数个永远回不来的API结果以及一只猫
+16:01 lh_not_bot: 喵
+16:02 varna: lh_not_bot: 你吃小红丸子去
+16:02 varna: lh_not_bot: 今天我看到宿舍管理的大妈还弄了些新品
+16:02 lhanjian: 一个大段是指什么
+16:02 varna: lhanjian: 我印象没错的话HTTP2的pipelining是一个应用层的仿Nagle方法
+16:03 varna: 这样通过减少分组数减少拥塞
+16:03 varna: 同时避免为避免确认失序而造成的阻塞
+16:03 lh_not_bot: 题外话  我们为什么不用 SCTP 实现 HTTP 呢
+16:03 varna: 如果我理解没错的话，这种方法并非全能有效的
+16:04 lh_not_bot: 我不知道羊驼刚才是不是这个意思——为什么应用层要处理拥塞的问题
+16:04 varna: 我倒不是问为什么
+16:04 lh_not_bot: 解决拥塞本来就不是应用层的义务  为什么要应用层迁就？
+16:04 varna: 而是说，这个问题实际上跟传输层一样
+16:04 lh_not_bot: 既然 TCP 渣渣    我们就换 SCTP   这才是根本问题
+16:05 varna: 实际上即使应用层试图解决拥塞（我赞同小耗在这方面的观点），它的结果和传输层也是一样的
+16:06 varna: 也即，因为解决问题的方式牺牲了另一部分链路上的表现，不应认为这是解决之道
+16:06 varna: 而只是C-S双方可商议的workaround或者optional method
+16:06 varna: 当然这个问题最后实际上就是TCP本身的问题
+16:06 varna: HTTP现在也只是在针对情况workaround
+16:11 tutu_wind: varna: lhanjian 不见了
+16:11 varna: tutu_wind: 他修炼过奥义·定冈回旋，现在被反噬了
+16:12 lhanjian: 我在尝试从草案中验证羊驼子说的“应用层的仿Nagle方法”……
+16:12 varna: lhanjian: 他们不是把多个请求压到一段里么
+16:12 lhanjian: 段？
+16:13 varna: TCP Segment
+16:13 lhanjian: 哦
+16:13 varna: 我使用的译法：段=Segment 报=Datagram 分组=Packet
+16:13 lhanjian: 嗯
+16:13 varna: 所以其实这个只是应用层又来了一遍Nagle方法
+16:14 varna: 好处是服务器出口上的拥塞减小
+16:14 varna: 坏处是重传压力加大
+16:15 tutu_wind: 么么 ～ 渣渣静静地看着你们
+16:16 varna: tutu_wind: 你脱裤，我们爆你吧
+16:17 tutu_wind: varna: 回来看你们的log ～ 脱裤，还是不好吧
+16:17 varna: tutu_wind: 这里很多基佬，他们都很想找个人爆爆
+16:17 lh_not_bot: tutu 长得像我们同学
+16:18 varna: 比如 xxxxxxxx 他就是频道基头四之首
+16:18 tutu_wind: 。。。
+16:18 tutu_wind: log内容会跑偏的
+16:18 lhanjian: 为什么我记得只有HTTP2只有分帧……
+16:19 xxxxxxxx: tutu_wind: log从来就没直过....
+16:19 varna: 如果只是分的话，连拥塞都解决不了
+16:19 varna: 因为对TCP来说可见的内容是没差别的
+16:19 varna: 只有让TCP感觉到不同，才可能试图缓解拥塞，同时避开等ACK的问题
+16:20 lhanjian: 如果拥塞的情况下，多条TCP连接只会掉分组更厉害吧……
+16:20 izmntuk joined channel
+16:21 varna: 我现在说的不止是拥塞
+16:21 lh_not_bot: 个人感觉不一定
+16:21 varna: 而且真不一定
+16:21 varna: 现在如果你在一条连接上赌大段，那么重传粒度就小
+16:21 varna: 而且实时性可能会糟糕
+16:22 Xilzzerts: GFW在偷笑
+16:22 varna: 当远离服务器的某个道中节点附近质量不好的时候，服务器附近解决拥塞的办法可能起更糟糕的作用
+16:24 varna: 光一根筋地想着传输层虚拟的连接和物理链路附近的状况，我觉得会忽略一些问题
+16:25 lhanjian: 不过我在想羊驼子有没有忽略HTTP2是优化HTTP1.1存在的问题，而不是试图彻底解决传输层也解决不了的问题
+16:25 varna: 没有
+16:26 varna: 我指出的问题是这不是优化，而是workaround
+16:26 lhanjian: 这当然是Workaround
+16:26 varna: 这会牺牲相当一部分链路上的性能——比如说我用2MB出口和100MB出口玩舰娘的链路状况完全不同
+16:26 varna: 而我之前描述的恶劣链路就是那个2MB出口上观察到的例子
+16:27 FrankHB: 艹毛js。
+16:27 varna: 这不是什么优化，而只是一个可商议的选项；同时我不认为它可以适应很多常见而糟糕的网络接入点
+16:27 lhanjian: 然而HTTP2首要考虑的不是带宽的大小，而是减少延迟。或者应该这么说，HTTP2希望能充分利用大带宽，减少大带宽下的延迟
+16:27 varna: 问题是你需要多大的带宽
+16:27 varna: 而多少用户有这样的大带宽
+16:28 varna: 我已经受够透支未来给现在洗地的行文方式了
+16:28 * lh_not_bot slaps FrankHB around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+16:28 lhanjian: 这就是另外一个问题了吧
+16:28 varna: 这是摆在你面前的问题
+16:28 varna: 如果你用这样的管线实现舰娘，而我在那个2MB出口上，我只有弃坑
+16:28 lhanjian: 弃坑是对的。
+16:28 varna: 你的产品卖不出去
+16:29 varna: 别自己偷渡话题
+16:29 varna: 你在要求用户具有相应的条件，然而你并不确认你所指向的用户具有此等条件
+16:29 lhanjian: 产品卖不出去，产品仅在没有大带宽的时候卖不出去。
+16:29 lhanjian: 仅 字拿掉
+16:29 varna: 那么你给我一个说法吧——你的产品需要用户有多大的带宽
+16:30 lhanjian: 还没算过。
+16:30 varna: 惨
+16:30 lhanjian: 或许更需要 测过。
+16:30 varna: 所以我说这是透支未来为现在洗地
+16:30 lhanjian: 未来也没多久。
+16:30 varna: 然而未来会有新的问题
+16:30 lh_not_bot: ipv6 笑看
+16:30 varna: 你同样会透支未来
+16:30 lh_not_bot: ipv6 都吵吵多少年了
+16:30 xxxxxxxx: 在4chan上曾有人索要过一本名为 The Usual Play 的萝莉控漫画的无色情画面版本，而回复者将所有的色情画面都改为了 SICP 的内容截图，发送了一本称为 The Usual Lisp 的修改版。
+16:30 varna: 最后IPv6
+16:31 varna: 我不反对期望未来
+16:31 varna: 但我反对逃避现在
+16:31 lhanjian: ipv6有硬件设备升级的问题。我实在不觉得拿一个网络层协议和应用层协议类比有多大意义
+16:31 varna: 哦？
+16:31 lh_not_bot: 这里的问题没本质区别
+16:31 varna: 那么我首先抛开本质区别
+16:31 lh_not_bot: 你如何说服你的用户
+16:32 varna: 你如何说服那些只有2MB或者共用4MB出口的用户换用更大的带宽？
+16:32 lhanjian: 我的用户到底是谁？下一级开发者？还是“最终用户”？
+16:32 lh_not_bot: 你自己回答了这个问题了
+16:32 varna: 你在告诉我你在内网中部署一个需要考虑拥塞的基于HTTP的应用么
+16:32 lhanjian: varna, 那个不是我来说服的，是随着通信技术的发展而自然向上的。
+16:33 varna: 问题是你需要给出当前可用的解决方案
+16:33 varna: 除非你是个教授
+16:34 varna: 当然我知道在青岛办10MB的宽带比长春8MB的可能还便宜一百多元
+16:34 varna: 然而这并不是我们评论这个workaround进步程度的最主要依据
+16:35 varna: 我还是那句话——这东西即使真的部署，也需要C-S的一次商议
+16:35 lhanjian: 羊驼子觉得现在没有那么多大带宽的网络么，至少我觉得大带宽网络的用户不在未来。
+16:35 varna: 不是觉得
+16:35 varna: 我用过很好的，也用过很惨的
+16:36 varna: 但你试图以优势掩盖弱势，而非提出补足弱势的方案
+16:36 varna: 这是让我觉得很没底气的一点
+16:36 lhanjian: 我不觉得弱势总是能补足
+16:36 varna: 未必
+16:36 varna: 我说了，一个C-S会话可以选择鸵鸟
+16:36 lhanjian: 另外，那个弱势也不是哪个用户都都存在。
+16:36 varna: 别偷换两次
+16:36 varna: 量词*
+16:37 varna: 一个可以类比的问题是GC
+16:37 lhanjian: 我应该直接说，有的用户就是有可靠的大带宽，那么为什么要忍受为低带宽而做出的妥协呢。
+16:38 varna: 你转移问题了
+16:38 varna: 你试图指责批评HTTP2管线的评论者拒绝这一措施
+16:38 varna: 而非面对自己一开始对这一管线机制的全面优势的评价
+16:39 xxxxxxxx: 什么带着三个97的瑞鹤能抢MVP?
+16:39 varna: HTTP自己也不推荐在会话开始时直接启用管线，原因就在这里
+16:39 varna: xxxxxxxx: 带那么多干嘛
+16:39 xxxxxxxx: 确保
+16:39 lhanjian: 不，我从一开始就在说“某些网站”期待已久，而不是强调全面优势。
+16:39 varna: 那么是哪些呢
+16:40 varna: xxxxxxxx: 3-2的重点是压火力保MVP而不是强调开幕大规模击破吧……
+16:40 xxxxxxxx: 苍龙带的可是两个流改和一个一二甲
+16:40 xxxxxxxx: 这怎么抢到的...
+16:40 varna: 航母打瞎了都是一个瞎，你考虑换两组爆战试试？
+16:41 xxxxxxxx: 只有一个爆战
+16:41 varna: 两个流改和一个一二甲我忘了没改的苍龙是不是火力溢出了……
+16:41 varna: 大概不会溢出吧
+16:41 varna: xxxxxxxx: 要不你撤一组九七，换一个彩云上去
+16:41 lhanjian: 如果羊驼子给出的说法是对的，那么就应该是“带宽足够、链路稳定、不用考虑客户端实现，期待改善页面加载速度的网站运维开发者”
+16:42 varna: lhanjian: 这里的链路我需要补充一点——不止是出口链路
+16:42 varna: 而实际上这个管线解决的最主要问题其实也不是RTT, 而是拥塞
+16:42 xxxxxxxx: 通常都是能稳住的 这次不知为何切回来抢了MVP...
+16:42 varna: RTT是副产物
+16:42 varna: 因为RTT这事不在出口链路以内的范围上动手就能解决的
+16:43 varna: 你回忆下传输层存在方案时的解决方案，就会发现这是类似的
+16:44 lhanjian: 哦，不对，我感觉我彻底扭曲了某个观点，我得重考一下……先去吃个饭。晚上我再读下HTTP2的草案，在来说。
+16:46 lhanjian quit:Quit: Leaving
+16:47 xxxxxxxx: varna 现在这个编成还有个好处如果是等级高的潜艇有机会直接开幕把对面开没
+16:47 xxxxxxxx: 潜艇就能多用一轮
+16:47 varna: xxxxxxxx: 航母的话，我的潜艇大约是两到三轮换一次
+16:48 xxxxxxxx: 最好的情况是两个30级左右的潜艇可以一直刷上五六波
+16:49 varna: 那还好
+16:49 varna: 我最近不太用能开幕的潜艇了……
+16:50 xxxxxxxx: 最坏的情况是金皮无伤 然后潜艇一发大破
+16:56 varna: xxxxxxxx: 今天爆没爆你
+17:09 * sismvg 疼
+17:10 xxxxxxxx: 药元四被谁附体了
+17:11 varna: T2...
+17:11 xxxxxxxx: 明显是肉牛
+17:16 xxxxxxxx: 8级的潜艇竟然用了3轮了...
+17:19 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=cebd745e35adcbef01347e0e9c942fdd/2cf5e0fe9925bc31427f4c025adf8db1cb13700d.jpg # 长门顶个鸟用
+17:20 xxxxxxxx: http://www.bilibili.com/video/av2161698/
+17:20 Guest75182 joined channel
+17:43 sismvg quit:Read error: Connection reset by peer
+17:51 endle joined channel
+17:53 Guest75182 quit:Ping timeout: 256 seconds
+17:53 Guest75182 joined channel
+18:14 Sleepwalking joined channel
+18:14 Sleepwalking: 我要入舰娘坑了！
+18:15 Sleepwalking: 今晚7点和机油一块抢号
+18:15 condy: _( •́ ​ω •̀ 」∠)/_
+18:15 Sleepwalking: 电酱！！！
+18:15 varna: 哈哈哈哈
+18:15 varna: 米尻酱肝得漂亮
+18:16 varna: 总之提前祝武运，现在的号比较好拿；确认你的时区在东京
+18:16 Sleepwalking: 已调时区
+18:16 xxxxxxxx: 我去excite.co.jp 注册了一个邮箱用来抢号
+18:17 varna: 我用的hotmail邮箱
+18:19 Sleepwalking: ieee邮箱可以么
+18:22 varna: 随意
+18:22 varna: 不过我以前用的cpan, 没转发过去……
+18:22 varna: 建议用比较容易收到垃圾邮件的东西
+18:23 varna: 说起来ieee现在一年会费多少，能下多少东西
+18:26 Sleepwalking: 一年会费1k软妹
+18:26 Sleepwalking: 还不包括MDL妈妈的
+18:26 Sleepwalking: MDL一个月三十刀，25篇
+18:27 xxxxxxxx: 反正我听说用11区邮箱好 我就搞了个
+18:27 varna: 那么坑啊
+18:28 varna: 那样花钱的话CCF可能都比他们实惠点……
+18:28 xxxxxxxx: 啊 还有如果猫的话 记得过5分钟再刷新 
+18:28 lhjkk quit:Ping timeout: 244 seconds
+18:29 varna: 我自己排队的时候是一分钟一次
+18:29 varna: 不过还是遵照运营的说法五分钟一次比较安全
+18:29 Sleepwalking: 我就打算把MDL订到大学入学
+18:30 xxxxxxxx: 然而羊驼抢号的经历是最悲惨的...
+18:30 varna: 你们都比我好
+18:31 varna: 要是我第一次就抢到，现在起码有烈改
+18:31 varna: 啊，这次放七千人
+18:31 varna: 应该很容易了
+18:32 xxxxxxxx: 据说连续刷新直接排到最后面去..
+18:32 dantmnf: 其实我当时用的是 gmail
+18:32 Sleepwalking: 一般放多少啊
+18:32 xxxxxxxx: 然而我好久没登陆上gmail了
+18:33 xxxxxxxx: Sleepwalking: 最近放号都是7000 10000的放
+18:33 varna: 以前都是三千多
+18:33 xxxxxxxx: 基本上规矩来就有号
+18:33 varna: 现在各种人多
+18:33 varna: 别作死一般都有号
+18:34 xxxxxxxx: 有邮箱的玄学 天朝的QQ 新浪邮箱不推荐用
+18:35 varna: 大概是以前屯号黄牛的影响吧
+18:37 varna: 呜啊啊啊！
+18:37 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f95e1553d32a60595210e1121835342d/45c3b236afc37931a2047fb3efc4b74542a911eb.jpg PSV版这个特典真好啊……
+18:37 xxxxxxxx: 我这个4血的19坚持了3趟了...
+18:38 xxxxxxxx: 用手挡住了大井
+18:39 Plough joined channel
+18:39 Plough: varna: 肛
+18:39 Plough: clcn_logbot: 肛
+18:40 Plough: cleamoon: 肛
+18:40 Plough: Tab卖我……
+18:41 xxxxxxxx: 他肛了自己
+18:42 Plough: xxxxxxxx: 肛
+18:42 xxxxxxxx: (他肛了老爷调)
+18:43 varna: 肛旗肛了自己……
+18:43 varna: 太可怕
+18:43 Plough: varna: 你先把肛门合上再说话
+18:43 varna: 这叫自掘于人民
+18:43 Plough: 而且我哪里肛自己了
+18:44 varna: 你肛了自己的分 身……
+18:44 Plough: 那不是我的分 身
+18:44 Plough: 那是我的造物
+18:44 Plough: 天主肛自己的造物有什么不合适的么
+18:44 xxxxxxxx: 红旗造了一个飞机杯
+18:44 xxxxxxxx: 真是糟糕
+18:45 varna: 肛旗造了一个Dutch Wife...
+18:45 Plough: 我是天主，我创造了你们
+18:45 Plough: 所以你们都得被我肛
+18:45 varna: 我操
+18:45 varna: 大宇宙力量……
+18:45 varna: 吓得我赶紧反潜去了
+18:45 xxxxxxxx: 不可能 我们都是XYM大婶逻出来的
+18:45 varna: 现在5-3队只剩下刚刚98级的POI
+18:45 Plough: 指环王
+18:46 Plough: 又欧又壕又肝
+18:46 Plough: 真是太可怕了
+18:46 varna: 不欧不壕不肝
+18:46 xxxxxxxx: Plough: 你这个土豪早晚也是指环王
+18:46 Plough: 我怎么会是土壕
+18:46 Plough: 我都穷成狗了
+18:46 varna: 棒各毕竟历经血战
+18:46 Plough: 手上就剩700了
+18:46 varna: 各种大仗都去打
+18:47 Plough: 噗
+18:47 Plough: 米尻入坑了？
+18:47 varna: +
+18:47 xxxxxxxx: 我给大家讲个笑话 红旗说:"我怎么会是土壕" 
+18:47 Plough: 碉堡
+18:47 Plough: 今天一同学跟我说二班有个舰狗
+18:48 varna: ...
+18:48 varna: 他甲鱼？
+18:48 Plough: 说“他说什么花了八百造了个金刚”
+18:48 varna: 哈哈哈哈哈哈哈哈
+18:48 xxxxxxxx: 不是甲鱼是美洲提督....
+18:48 varna: 我出去锻炼三小时回来的资源也够造个金刚……
+18:48 Plough: 我让他帮忙问入坑时间和所在镇守府了，看看明天有没有后续……
+18:49 Plough: 另外我怀疑他说的是4885……
+18:49 Plough: 八百弹药/八百钢
+18:49 varna: 对啊
+18:49 xxxxxxxx: 我看看poi炮能不能拯救X月
+18:49 varna: POI拯救不了睦月级
+18:50 varna: 毕竟火力贫弱
+18:50 varna: 但是二改大概可以
+18:50 varna: 另外海外舰确定了
+18:50 varna: 意呆立的东西
+18:50 Plough: 维内托？
+18:50 xxxxxxxx: 厉害不?
+18:50 varna: 不知道
+18:50 Plough: 估计维内托了
+18:50 varna: 我对欧洲海军没什么了解
+18:51 xxxxxxxx: 至少第一把没丢MVP
+18:51 Plough: 意呆立的战舰也就只有维内托了吧
+18:51 Plough: 这次运营干得漂亮
+18:51 varna: 就看今天下午话题帖两个哥们为了战列舰论坛の誇り在争论纳尔逊和长门谁能吊打谁的问题
+18:51 Plough: 我就看看维内托给什么炮
+18:52 Plough: 和俾斯麦的38改谁更莉害
+18:52 xxxxxxxx: 我觉得长门会被吊打 长门肯定打小学生
+18:52 varna: 然而VV脸上赫然写着混乱二字
+18:52 Plough: 233333
+18:52 Plough: 演习打个损坏
+18:52 varna: 肥行场姬二代目
+18:53 Plough: 大破进击会变成中途岛姬么
+18:53 varna: 你得会颜艺
+18:53 Plough: 我有上将妙高
+18:53 varna: 今天2-5劝退就是妙高
+18:54 varna: 被强行补刀
+18:54 Plough: 哦对今天还得打战果
+18:54 Plough: 我先打3-5呢还是2-5呢
+18:54 varna: 3-5
+18:54 varna: 刺激
+18:55 Plough: 中
+18:55 Plough: 虽然我穷成狗了
+18:55 varna: 2-5更费，得修重巡
+18:55 lhjkk joined channel
+18:55 Plough: 7331/7304/30709/22395/
+18:55 Plough: 7331/7304/30709/22395+383/239
+18:56 xxxxxxxx: 2-5有什么消耗比较少的编成么?
+18:56 varna: 1cvl1clt2dd+2cav/2ca
+18:56 varna: 或者2cav4ca
+18:56 varna: 或者水上反击部队（笑）
+18:57 xxxxxxxx: 没有足够的cav 或者合适的DD
+18:57 varna: 驱逐舰用POI岛风就行了
+18:57 varna: 优先考虑火力靠谱的
+18:57 Plough: 其实我一直怕运营突然来个罗德尼或者胡德
+18:57 Plough: 给个英国船我拆还是不拆呢
+18:58 varna: 我也怕
+18:58 xxxxxxxx: 岛风50级...
+18:58 varna: 然而昨天看到NGA有个舅舅说HMS我直接放心了
+18:58 varna: 五十级应该可以一战
+18:58 varna: 反正让不让你过跟你关系不那么密切
+18:58 Plough: ……HMS为什么放心了
+18:58 varna: 主要是撸爷
+18:58 varna: NGA的舅舅靠谱过么
+18:58 Plough: 233333
+18:59 varna: 强行推背图
+18:59 Plough: 武藏还差一级就可以从演习队退休了
+19:00 Plough: 我打算用长门补
+19:00 varna: 武藏80了？
+19:00 varna: Orz
+19:00 Plough: 79
+19:00 Plough: 大和65
+19:00 xxxxxxxx: 重巡50级妙高可以么?
+19:00 lhjkk: https://com.google/
+19:01 xxxxxxxx: lhjkk: 打不开...
+19:01 lhjkk: oh……OutOfWall
+19:01 varna: 在我这打不开
+19:01 varna: 用 https://jinke.la 吧
+19:01 Plough: 我都是直接用google.com的
+19:01 varna: xxxxxxxx: 五六十级都行
+19:02 * lh_not_bot slaps lhjkk around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+19:02 varna: Plough: 我武藏是直接在E4被炸上八十的……
+19:02 Plough: ……
+19:02 lhjkk: varna, 不是。这个是把google的页面显示效果全部镜面翻转了……
+19:02 varna: lhjkk: ...
+19:02 xxxxxxxx: varna 你竟然有钢修...
+19:02 varna: lhjkk: 干得好……
+19:02 lhjkk: 有一种你在屏幕“里面”看着外面的感觉
+19:02 varna: xxxxxxxx: 我每天打到钢不够出击
+19:02 lhjkk: http://ww3.sinaimg.cn/large/45902a5fjw1eqq607uc8wj20r90je44x.jpg
+19:02 varna: 反正中破一次也就不到一千钢
+19:03 Plough: 啊，打开了
+19:03 Sleepwalking: 猫挠头
+19:03 Plough: 祝武运
+19:04 xxxxxxxx: 过5分钟之后刷新大概就能进了
+19:04 Plough: http://picpaste.com/X0XA27CB.png
+19:04 Plough: 大和中破
+19:05 Plough: 鸟海大破
+19:05 Plough: 这仗有点麻烦
+19:05 Plough: ……结果第二轮我这边突然暴走了
+19:05 Plough: 中破大和拿了个MVP什么鬼
+19:06 varna: 齁忒撸……
+19:06 Plough: Lv51大和Lv73武藏
+19:06 Plough: 来看看你家的大和级和我家的大和级谁更莉害
+19:07 Plough: 幼女们我就不撤了
+19:07 varna: 我有点不太想给大和打演习了
+19:07 Plough: 对面武藏被爆
+19:07 varna: 现在Lv73，应该凑合能打
+19:07 Plough: 对面大和被爆
+19:07 Plough: 对面一炮也没中……
+19:08 varna: 还是给POI多打打演习
+19:08 varna: 说不定能发戒指
+19:08 Plough: 有可能的话我还是想把大和弄上Lv80
+19:08 Plough: 毕竟联合舰队的命中……
+19:08 varna: 我宁可要点资源
+19:09 varna: 米尻酱拿到号了没？
+19:09 xxxxxxxx: 98级展望未来 100级之前我会有长门么
+19:09 Plough: 参考羊驼子
+19:10 varna: 拿起长矛，认真打猎，别想太多
+19:11 xxxxxxxx: 昨天刚在3-5被猎物追着打了105桶
+19:11 Plough: 叫你去3-5
+19:11 varna: 另外如果期间T2再来嘲讽我，诸君帮我建议他说人话
+19:11 Sleepwalking: 抢到了！
+19:11 varna: 我先away
+19:11 varna: 恭喜
+19:11 Plough: 恭喜
+19:12 Plough: sa
+19:12 xxxxxxxx: 佐伯湾?
+19:12 Plough: ……手滑了
+19:12 Sleepwalking: 是
+19:12 xxxxxxxx: 然而频道里佐伯湾的越来越多了
+19:13 Sleepwalking: 是不是因为是汉字所以都去选它
+19:13 xxxxxxxx: 因为是新区
+19:13 sawfish joined channel
+19:13 Sleepwalking: chromium大法好
+19:13 Plough: sawfish: 羊驼叫你说人话
+19:14 sawfish: 好好好
+19:15 sawfish: 能不偷窥我跟我老婆说话么？
+19:15 Plough: sawfish: 说人话
+19:16 FrankHB: 内存爆炸大法好？
+19:16 Plough: 我看不懂
+19:16 sawfish: 好吧
+19:16 Plough: 给POI换成22改四
+19:17 Plough: 准备3-5
+19:17 sawfish: 哎呦，开学之后都没写过代码也没看过书。
+19:17 Sleepwalking: chromium好歹还支持flash 16
+19:17 sawfish: 我先学习去了。
+19:18 Plough: 去吃饭
+19:18 xxxxxxxx: 还是加上+q
+19:18 FrankHB: ff也开始推广内存爆炸大法了……
+19:19 FrankHB: 问题是e10s勾着还是一个进程么。。。
+19:19 xxxxxxxx: FrankHB: 什么情况?
+19:20 FrankHB: 升级40.0就跳出来问要不要体验……
+19:20 sawfish: 哦，忘了人话。
+19:21 FrankHB: 之前被坑过不过这次手贱好像没感觉。
+19:21 sawfish: 多谢诸君
+19:23 sawfish: 另外，不好意思。
+19:23 sawfish: 今天是愚人节所以不要当真
+19:28 sawfish: 我的胡言乱语也请不要当真，我对造成的麻烦十分抱歉。
+19:29 sawfish: 另外，我的抑郁症早就治好了，请不必担心。
+19:30 sawfish: 十分抱歉，再次感谢诸君。
+19:30 sawfish: 我学习去了。
+19:31 sawfish quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:32 Sleepwalking: 电酱打破了TAT
+19:32 Sleepwalking: 大
+19:32 xxxxxxxx: 初始选的电么?
+19:35 Sleepwalking: 是
+19:36 xxxxxxxx: @varna 
+19:42 Petrus07 joined channel
+19:46 pocmon joined channel
+20:00 Plough: 3-5出击
+20:00 Plough: A
+20:00 Plough: 塔酱求放过
+20:01 Plough: 神通中破
+20:01 Plough: POI大破
+20:02 Plough: 回家
+20:03 Plough: A
+20:04 Plough: 川内大破
+20:06 Plough: A
+20:08 xxxxxxxx: baidu贴吧给自己的链接上了个 "抱歉，您要访问的网页包含大量恶意内容！"
+20:08 Plough: POI中破，不过过去了
+20:09 Plough: 第二点天津风大破
+20:12 Plough: A
+20:12 Plough: 利根中破
+20:13 Plough: 大淀中破
+20:13 Plough: 神通大破
+20:14 Plough: A
+20:16 Plough: B
+20:17 Plough: POI中破
+20:18 Plough: 沟
+20:18 Plough: 放弃3-5
+20:19 xxxxxxxx: 噗噗噗 放弃怎么回事...
+20:19 Plough: 24个桶扔下去一次Boss没进
+20:19 Plough: 我不放弃难道喷三百桶强打？
+20:19 xxxxxxxx: 105个就够
+20:20 Plough: 你难道觉得我的劝退率跟你差不多么
+20:22 cleamoon__ joined channel
+20:27 Plough: 2-5出击
+20:27 Plough: ……又往带桶了
+20:27 Plough: 忘*
+20:28 Plough: 夜战点
+20:29 Plough: 夜侦、探照灯
+20:29 Plough: CI
+20:29 Plough: 利根中破
+20:29 Plough: 不过过去了
+20:30 Plough: 妙高大破
+20:31 Plough: 羽黑中破
+20:31 Plough: 筑摩中破
+20:31 Plough: 对面的战舰还挺莉害嘛……
+20:32 Plough: 一血由鸟海拿下
+20:32 Plough: 浦风……
+20:32 Plough: 我要大鲸不要浦风啊
+20:34 Plough: 第二次出击
+20:34 hoxily quit:Quit: Leaving
+20:34 Plough: 噗噗噗我又忘带桶了……
+20:34 cleamoon__ quit:Ping timeout: 252 seconds
+20:35 Sleepwalking quit:Quit: Leaving
+20:36 Plough: Buff*3
+20:36 Plough: 过去了
+20:38 Plough: 羽黑大破
+20:38 Plough: 塔酱果然莉害
+20:38 Plough: 雷击战拿下二血
+20:38 xxxxxxxx: Plough: 难道比我还高么....
+20:39 Plough: 噗
+20:39 Plough: 起脸用船……
+20:39 Plough: 骑脸*
+20:39 Plough: xxxxxxxx: 你劝退率多高
+20:41 xxxxxxxx: 说不准 不过退的挺多的
+20:41 Plough: geordi: << 0.2*0.5*0.2 << "%"
+20:41 geordi: 0.02%
+20:41 Plough: geordi: << 0.2*0.5*0.2*100 << "%"
+20:41 geordi: 2%
+20:41 xxxxxxxx: 没出现过进boss打不赢 除了几次boss其他都是路上回家
+20:41 Plough: ^这大概是我的通过率
+20:42 Plough: 就算我和你劝退率一样
+20:42 Plough: 我现在只有375桶
+20:42 Plough: 我再喷105桶
+20:42 Plough: 那我还打不打春活了
+20:42 Plough: 夜战点
+20:43 Plough: Buff*3
+20:43 Plough: 通过
+20:45 Plough: 筑摩秒完红撸以后中破了……
+20:45 Plough: 三血由摩耶大人拿下
+20:46 Plough: 滨风……
+20:46 Plough: 今晚怎么这么多爆炸物
+20:47 Plough: 我等等间宫
+20:52 lh_not_bot: 度狗贴吧又在搞愚人节猜会员了
+20:52 lh_not_bot: 你丫的去年就搞了一通了今年能不能换一个
+20:53 Plough: 你跟畜牲计较什么……
+20:53 lh_not_bot: Plough: 简直是侮辱畜生
+20:59 lhjkk: http2的flow control内容真不少O=-
+20:59 lh_not_bot: 越俎代庖
+21:00 FrankHB: @richox
+21:00 lh_not_bot: 跪求干掉 TCP
+21:00 lh_not_bot: FrankHB: ？
+21:00 lhjkk: 在TCP连接上复用以实现HTTP并发
+21:00 FrankHB: 计较……
+21:00 lhjkk: 这种奇妙的既时感……
+21:00 Plough: Buff*3
+21:01 Plough: 过去了
+21:02 lh_not_bot: lhjkk: 相比较于 http 我更想说 TCP 滚出
+21:02 lhjkk: 顺带还用窗口控制解决了上下传速度不均等带来的问题……
+21:02 lhjkk: lh_not_bot, 可是没有够用的替代品了
+21:02 xeirrr joined channel
+21:02 Plough: 筑摩中破
+21:02 lh_not_bot: lhjkk: sctp
+21:02 Plough: 妙高中破
+21:03 lhjkk: 会把交换机们杀了的
+21:03 Plough: 最后一血由鸟海拿下
+21:03 Plough: 伊姆亚……
+21:03 xxxxxxxx: 花了多少桶?
+21:03 Plough: 不到20桶
+21:04 Plough: 2-5又不是个多难的图
+21:07 lhjkk: SCTP这么多年竟然还发展的有声有色的……
+21:07 lhjkk: 大概一两年能上个新的RFC
+21:08 lhjkk: lh_not_bot, 耗子讲讲看SCTP比TCP优越在哪儿吧
+21:12 lh_not_bot: lhjkk: SYN flood 知道是啥吧
+21:12 lhjkk: 嗯
+21:12 lhjkk: 因为SCTP有cookie所以可以减少SYN flood？
+21:12 lh_not_bot: SCTP 支持多播
+21:12 lh_not_bot: 基本是完全防止
+21:13 lh_not_bot: SCTP 是同时使用多条链路传输     TCP 只使用一条虚拟电路
+21:13 lh_not_bot: 于是什么样你自己看
+21:13 lh_not_bot: 不管是稳定性还是可靠(cao)性都强于 TCP
+21:13 lh_not_bot: 对了 SCTP 是帮你切帧的
+21:13 lh_not_bot: TCP 得自己切
+21:24 hoxily joined channel
+21:28 varna: 买了洗衣粉回来
+21:28 Plough: 人妻驼
+21:29 Plough: 1-5我留着这周的海上护卫再打
+21:29 varna: 没人替我洗衣服啊
+21:29 Plough: 3-5我放弃
+21:29 varna: 电酱只会捞人
+21:29 xxxxxxxx: 抱着一袋洗衣粉做出如月抱着桶的姿势
+21:29 varna: 卧槽要补闪
+21:29 varna: 啊啊啊啊
+21:29 Plough: 让她和响爷换一下
+21:30 varna: 三队要补两个闪……
+21:32 xxxxxxxx: 168(2)刷(-)闪(3)中
+21:32 varna: 米尻酱怎么不说话了
+21:32 lhjkk quit:Remote host closed the connection
+21:32 xxxxxxxx: 估计在啃电酱
+21:32 Plough: 他的电酱不是大破了么
+21:32 varna: 我潜心研究电学十个月
+21:32 varna: 啊？
+21:33 Plough: 20:30 < Sleepwalking> 电酱打破了TAT
+21:33 Plough: 20:30 < Sleepwalking> 大
+21:33 varna: 我看看log
+21:33 varna: 我这里没收到
+21:33 Plough: 我这是东京时区
+21:33 varna: 我也是
+21:33 xxxxxxxx: 我还@varna了
+21:34 varna: 哦，看到了
+21:34 Plough: 另外你刚走T2就来了
+21:34 varna: 我看到你短信了
+21:34 varna: 然而T2还在胡言乱语
+21:34 Plough: 不开嘲讽我就先不管他
+21:34 varna: 我首先声明，我跟他三次元并无联系
+21:35 varna: 所以他再给出类似言论不必当真
+21:35 Plough: 他现在是不是患上被害妄想症了
+21:35 Plough: 成天妹子妹子的
+21:35 Plough: 总之他别开嘲讽就成
+21:36 Plough: 再开嘲讽的话这就是他的最后一次嘲讽了
+21:36 xxxxxxxx: 我又有670桶了
+21:36 cleamoon: 被害妄想症+
+21:36 Plough: 我话撂这
+21:36 varna: 真是漂亮的三层闪，再刷一个吧
+21:36 varna: 我说个笑话
+21:36 Plough: ……
+21:36 varna: 今天打3-5我真的刷闪了
+21:36 Plough: 刷闪有卵用
+21:36 xxxxxxxx: 然后呢?
+21:36 Plough: Lv94的利根三层闪一发大破
+21:36 varna: 给八万钢刷三层之后还得给荒潮刷
+21:37 varna: 今天脸度爆发
+21:37 varna: 真没劝退
+21:37 varna: 斩杀沟了一次中路，F5了
+21:37 Plough: 2-4我倒是在Boss点只进了一次夜战
+21:37 Plough: 四次出击搞定
+21:37 xxxxxxxx: 刷闪大法好
+21:37 Plough: 至于3-5……
+21:37 varna: 2-5妙高被爆了一次
+21:37 Plough: 1CAV3CL2DD固定走A
+21:37 Plough: 劝退率80%
+21:37 varna: 本来只是中破的，结果第二个重巡智商上线了
+21:37 xxxxxxxx: 你们这些练度惊人的甘地
+21:38 Plough: 过去一后第二点劝退率50%，只有这么点是因为样本数太少
+21:38 varna: 我的练度是用时间堆的
+21:38 Plough: 最后
+21:38 Plough: “顶多掉沟里”
+21:38 varna: 只要拖很长时间，天天打演习，完全不费钢
+21:38 Plough: 24个桶换来了0血
+21:38 varna: 其实我现在在考虑这么个问题
+21:38 sismvg joined channel
+21:38 varna: 斩杀要不要1cl5dd走下去
+21:38 Plough: 所以不打了，要打也不是今天
+21:38 Plough: ……能打掉？
+21:38 varna: 以体现我玉足神教之威光
+21:38 Plough: Tsu级那回避
+21:38 varna: 进去应该没问题
+21:39 Plough: 关键是你得能打掉
+21:39 Plough: 塔酱白天灭你两只
+21:39 varna: 只是很麻烦，因为补给硬了不是一点两点
+21:39 Plough: 夜战再miss下
+21:39 Plough: 再来个智商下线
+21:39 varna: 我这里夜战倒是很少miss
+21:39 sismvg: 将x^n的N次方拆成 a^n,b^n, 且a+b=n ,怎样选择a,b可以使a^n+b^n最大？
+21:39 Plough: 我这里天天miss
+21:39 varna: 毕竟列装33和两个22改4
+21:39 Plough: 我告诉你我今天出击的配置
+21:39 sismvg: a,b,n皆为正整数
+21:40 cleamoon: sismvg, 什么叫拆
+21:40 varna: sismvg: 令x^n = a^n + b^n 且a + b = n?
+21:40 Plough: 利根：四星三号炮*2+瑞云12+HOMO雷达
+21:40 sismvg: x=a+b
+21:40 varna: x=a+b啊
+21:40 Plough: 神通：一星二号炮*2+夜侦
+21:40 cleamoon: x=a+b，a + b = n？
+21:40 Plough: 川内：欧根炮*2+水观
+21:40 cleamoon: 你确定明白问题了？
+21:40 sismvg: 我觉得是 (x-1)和1
+21:40 varna: (a+b)^(a+b)?
+21:40 Plough: 大淀：四星三号炮+三星三号炮+水观+32
+21:41 Plough: 天津风：POI炮*2+33
+21:41 varna: 你能重新写一下问题么
+21:41 Plough: 不对，22改四
+21:41 Plough: POI同天津风
+21:41 sismvg: a+b=x  让a^n+b^n>x^n
+21:41 varna: 做不到
+21:41 xxxxxxxx: 168疲劳85了....
+21:41 Plough: 这个配置在制空确保的情况下两轮炮击平均能干掉三只船
+21:41 Plough: A点
+21:41 varna: (a+b)^n > a^n + b>n 对正数a b n成立
+21:42 varna: n>1
+21:42 varna: 如果你不知道为什么，就展开x^n
+21:42 sismvg: a^n+b^n<c^n?
+21:42 varna: 你不是x=a+b么
+21:43 varna: 然后n>1 a, b>0 对比
+21:43 sismvg: 脑子乱了c=x
+21:43 varna: 对吧*
+21:43 varna: 然后你要求对一个典型的二项展开有a^n + b^n > (a+b)^n ?
+21:43 varna: 如果是的话你一定想错什么了
+21:44 xxxxxxxx: 然而药娘四吃药吃的意识模糊
+21:45 Plough: 另外我还是没有大鲸
+21:45 sismvg: 我想看看用乘方的增长速度证明费马大定理
+21:45 varna: Plough: 对了，我都忘了你为何前哨战不用1cl5dd了……雷击是吧
+21:45 Plough: 是
+21:45 xxxxxxxx: 我在想这几个星期的北方任务做不做...
+21:45 Plough: DD的炮击在我这可以直接认为不存在
+21:45 varna: sismvg: 跪
+21:45 xxxxxxxx: DD还有炮击?
+21:45 Plough: sismvg: Orz
+21:45 Plough: xxxxxxxx: 不知道，大概没有……
+21:46 sismvg: 洗澡时想出来的
+21:46 varna: 问题是你陈述的不是费马大定理所需的引理吧……
+21:46 sismvg: 头疼
+21:46 sismvg: 人家不懂啦
+21:46 varna: 那定理不是说对自然数n>2 x^n + y^n = z^n 无解么
+21:46 xxxxxxxx: 费马大腚里
+21:47 sismvg: 对啊，必然有x,y都小于z
+21:47 varna: 噗
+21:47 varna: 这引理就不成立吧
+21:47 cleamoon: 又一个陆奥，fa
+21:47 varna: 你为何否决了一变量小于z而另一变量大于z同时无解的情况
+21:47 varna: 此处需要讨论
+21:48 varna: 当然你可以把x y z约束到正数
+21:48 varna: 那么我们忽略这一讨论
+21:49 varna: 这应该是定理早期的情况
+21:49 cleamoon: 关键是 x+y != z
+21:49 sismvg: 它断言当整数n >2时，关于x, y, z的方程 x^n + y^n = z^n 没有正整数解
+21:49 varna: ……那是我记错了
+21:49 xxxxxxxx: 然而miku酱玩游戏显然也比我这种猹猹强的多 自己都能搞定....
+21:49 varna: 问题是即使你如此放缩
+21:50 varna: 你的放缩放过头了……
+21:50 sismvg: 费马大定理的描述
+21:50 * xxxxxxxx 感到又一次被线虫打败了
+21:50 varna: 这么说吧
+21:50 cleamoon: fa，忘记拆装备了
+21:50 sismvg: 不等于也可以啊
+21:50 xxxxxxxx: cleamoon: 你拆了两个41?
+21:50 varna: 拆分一个幂成两个幂的和，和拆分一个数把它变成两个数之和的幂，这是完全不一样的
+21:50 Plough: 日常拆那珂酱
+21:50 cleamoon: sismvg, 不等于还有什么意义
+21:50 varna: 而你选择了一个显然的放缩
+21:51 sismvg: 我太卡了
+21:51 varna: (a+b)^n 显然可以缩小到a^n+b^n
+21:51 cleamoon: xxxxxxxx, 喂了陆奥，忘了卸装备了
+21:51 cleamoon: varna, 正数不能
+21:51 varna: 但在x != a+b的情况下这不合适
+21:51 varna: cleamoon: 正数只要舍掉中间的项就行吧
+21:52 varna: 反正都是正的
+21:52 cleamoon: varna, 正数怎么舍
+21:52 varna: 我只是说(a+b)^n > a^n + b^n
+21:52 Plough: 第四门三星二号炮GET
+21:52 Plough: 四星三号炮……
+21:52 Plough: 这脑抽的
+21:53 varna: 而药元四根本没法论证x != a+b, 因为他放缩过头了……
+21:54 varna: 当然这里其实还有个龌龊问题
+21:55 varna: x y z都是自然数
+21:55 code_new joined channel
+21:56 cleamoon: (a+b)^n > a^n + b^n是对的
+21:56 xeirrr: 二项式展开一下
+21:57 varna: 而这实际上不说明方程是否真的存在解
+21:57 varna: 因为对自然数a b n, (a+b)^n比两个平方项之和大不少
+21:58 cleamoon: 药四娘的想法没错，但是证明了(a+b)^n > a^n + b^n对费马没太大意义
+21:58 varna: 我这里有一个证明，而这个证明因为我的终端太小所以写不下了
+21:58 xxxxxxxx: 话说从预告的时间来看这次的活动会难么?
+21:58 varna: xxxxxxxx: 正常的难度
+21:58 Plough: 正常（地打不过)的难度
+21:58 xeirrr: 啥活动？
+21:59 varna: 舰娘的活动
+21:59 xeirrr: 这还考数学？
+21:59 xeirrr: (果然博大精深
+21:59 varna: 跟数学没关系
+21:59 varna: 舰娘需要的主要是脸
+22:00 varna: code_new来了，我们爆他
+22:00 varna: code_new: 爆
+22:01 code_new: varna: 都来了五分钟了……
+22:01 Plough: code_new: 肛
+22:01 code_new: Plough: 爆
+22:01 code_new: varna: 爆
+22:01 xxxxxxxx: Plough: 不要内战 羊驼早晚会对这我们每个人说爆的
+22:02 varna: xxxxxxxx: 爆
+22:02 code_new: 2333
+22:02 varna: 说完他就被爆了
+22:02 Plough: 羊驼早就开始对我说爆了
+22:03 Plough: 可惜他并不能真的爆到我
+22:03 varna: 我回青岛再找你
+22:03 xxxxxxxx: 难道你又要提起羊驼没有丁丁之类的么...
+22:03 Plough: 另外，看Log看到了下午四点那段
+22:04 Plough: 青岛办10MB宽带可能确实便宜，但是我并不能办……
+22:04 varna: 我家应该是办了个
+22:04 varna: 捞云龙挺快的
+22:04 varna: 钢呼呼地下
+22:04 code_new: 我家去年才换了4M……
+22:04 Plough: 光纤上星期才牵过来，目前为止我们用的都是老旧铜缆
+22:05 varna: 换铝啊！
+22:05 Plough: 找联通试过强行4MB，直接拨不上号
+22:05 varna: 舰狗就该吃铝
+22:05 * varna 拿起一个易拉罐
+22:05 Plough: 然后吃了？
+22:05 varna: 舔了几口
+22:05 code_new: 2333
+22:05 Plough: 另外我又不是航妈&
+22:05 varna: 现在是航空战舰的时代了（迫真）
+22:06 code_new: 我的资源现在一直保持在每项30k+
+22:06 Plough: 然而说出这话的人是最差的战舰系
+22:06 cleamoon: 然而我还没有小姨子
+22:06 xxxxxxxx: orz
+22:06 varna: 我只有34k钢
+22:07 varna: 燃弹铝都没过低保
+22:07 xxxxxxxx: 我都没过低保....
+22:07 xxxxxxxx: 我昨天破产了
+22:07 code_new: 大概有两周没去远征了……
+22:07 varna: 然后我还有一万经验就104了
+22:07 cleamoon: 没过低保+
+22:07 Plough: 离低保还早
+22:08 xxxxxxxx: 我还有113666就99了
+22:09 code_new: 活动前你应该冲不到lv100
+22:10 xxxxxxxx: 然而我最作死的时候似乎一天却是能弄出3w以上的经验....
+22:10 xxxxxxxx: 确实
+22:14 varna: 问一个有关推演航空战的事
+22:15 xeirrr quit:Quit: Leaving
+22:15 varna: 诸君觉得被AA火力击落的飞机应该算作没能投弹，还是按比例划分一个数目，使得少量的被击落的飞机可以投弹
+22:15 varna: 也即在投弹后被击落
+22:15 Plough: 后者吧
+22:15 xxxxxxxx: 按比例吧
+22:15 varna: 后者在手册里给的比例是3:2
+22:16 varna: 这么搞下去也许会弄出个命运的四十五分钟
+22:16 Plough: 命运的一节课什么鬼
+22:16 code_new: 话说在这之前还有演示吗
+22:16 varna: 不过这样比较真一点，也鼓励双方奋勇进攻
+22:16 Plough: 这场就是演习吧
+22:16 varna: 如果你们要演示，我可以给出小场景
+22:16 code_new: 不过我完全不知道怎么下指令
+22:16 Plough: 那就给个演示？
+22:16 varna: 同时因为航空战确实比较麻烦，我会尽量给双方协助
+22:16 Plough: 如果你愿意的话
+22:16 varna: 可以
+22:17 hoxily_ joined channel
+22:17 Plough: 那周末先来个演示，之后再开战
+22:17 varna: 演示我会近几天找个周末时间给
+22:17 Plough: 中
+22:17 code_new: 好的
+22:17 whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:17 varna: 然后我会在实际推演的时候给两方提供我力所能及的参谋
+22:17 varna: 这包括讨论战术
+22:18 code_new: okay
+22:18 Plough: 了解
+22:18 xxxxxxxx: 我去1-1搞点钢回来
+22:18 varna: 噗
+22:18 varna: 你这是血汗工厂！
+22:19 code_new: 不如去3-2
+22:19 xxxxxxxx: 刷闪不算血汗工厂
+22:19 varna: 其实我感觉这次活动最容易通关的是code_new呢……
+22:19 varna: 现在我和肛旗都快穷迷糊了
+22:19 Plough: 我们找时间组个联合舰队去讨伐巨基吧
+22:19 code_new: 我不这么觉得
+22:19 varna: Plough: 我提供雷击支援
+22:19 code_new: 我可是索马里人
+22:20 varna: 你资源比我多不少
+22:20 varna: 等级也不错
+22:20 xxxxxxxx: code_new: 你存资源了吧?
+22:20 code_new: 不多啊……才30k+
+22:20 code_new: 没存……
+22:20 code_new: 最近一直没跑远征
+22:20 varna: 30k+再刷闪跑大半个月就不少了
+22:20 varna: 至少你没我那么奇异的消耗……
+22:20 code_new: 这段时间都没打开舰娘了
+22:21 code_new: 奇异……
+22:21 varna: 肝大和烧了一万多，捞小姨子烧了一万多……
+22:21 hoxily quit:Ping timeout: 272 seconds
+22:21 Plough: 我这才7千弹药
+22:21 xxxxxxxx: 然而我重巡轻巡雷巡驱逐都捉鸡
+22:21 Plough: 大和一万多，大凤一万多
+22:21 code_new: 卡小姨子的都是欧提
+22:22 Plough: 然而我所有船都着急
+22:22 xxxxxxxx: 航母还没练完...
+22:22 code_new: 这次活动的玩法有预告了吗
+22:22 sismvg: 舰娘当然考数学，赌博的成功的概率就是一门
+22:22 sismvg: 谁ping一下我
+22:22 Plough: 大和长门陆奥都才六十多级
+22:23 xxxxxxxx: 然而你家重巡比战舰靠谱....
+22:23 Plough: 未必
+22:23 varna: code_new: 没有
+22:23 Plough: 命中大概确实高些，但白天火力不太行
+22:23 code_new: 丛云要改二了0.0
+22:23 code_new: varna: 哦哦
+22:24 code_new: Multiple destroyers will get Kai Ni this Spring 
+22:24 xxxxxxxx: 真的是从云?
+22:25 varna: 是
+22:25 hoxily- joined channel
+22:25 varna: 4.10那个确定是丛云了
+22:25 code_new: April 10   Murakumo Kai Ni
+22:25 xxxxxxxx: 啊 ID1以后可以改二了 然而我一点都不开心,,,
+22:26 code_new: 丛云可是我的初始舰
+22:26 xxxxxxxx: code_new: 握爪
+22:26 code_new: varna: 握
+22:26 code_new: xxxxxxxx: 握
+22:26 code_new: 握错了……
+22:26 varna: code_new: 我是电学爱好者
+22:27 code_new: 虽然一直跑远征到30+
+22:28 hoxily_ quit:Ping timeout: 264 seconds
+22:29 xxxxxxxx: 从云只有24级
+22:29 xxxxxxxx: 要是出个装备能让驱逐在3-2拿到mvp就好了
+22:31 varna: 驱逐去4-3
+22:31 xxxxxxxx: 只能带一只有啥用....
+22:32 cleamoon__ joined channel
+22:32 Plough: 噗，打开amazon吓一跳
+22:32 varna: 速肝
+22:32 xxxxxxxx: 还没法连续出击
+22:32 Plough: 仔细一看April Fools
+22:35 dantmnf: 然而我大概没时间打活动...
+22:36 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.4/20150320202338]
+22:37 varna: 亚马逊怎么了？
+22:38 Plough: 你打开看看
+22:38 Plough: 页面变成上古版本的了
+22:38 xxxxxxxx: 页面风格穿越了
+22:38 varna: 哦……只是样式
+22:38 varna: 看到了
+22:38 varna: 然而我觉得很顺眼啊
+22:38 cleamoon__: 不用亚马逊都看不出来
+22:38 cleamoon__: 顺眼+
+22:39 varna: 亚马逊的好处是可以货到付款
+22:39 varna: 我记得买了书可以掏现金
+22:39 code_new: +
+22:39 Plough: 顺眼是顺眼，然而风格突然大变让我以为我被DNS污染了
+22:39 code_new: 我以前买书都是亚马逊
+22:39 Plough: 另外机动部队的英文名是From Pearl Harbor To Calvary么
+22:39 varna: 大概不是……
+22:40 Plough: 我考虑弄个kindle版过来，那个PDF一直没读……
+22:40 varna: 我搜搜看
+22:42 cleamoon__: google chrome的首页弄得好像一些电脑的出售页面似的...
+22:43 varna: 似乎就叫Task Force, 我再搜搜
+22:44 code_new: 肛旗买的哪一款kindle
+22:44 Plough: Paperwhite
+22:44 varna: 没有英译版
+22:44 code_new: 哦哦
+22:44 Plough: ……蛋疼
+22:45 varna: 有英译的只有《中途岛海战》
+22:45 varna: 然而渊田和奥宫写得一手好同人
+22:45 Plough: 2333333
+22:46 Plough: 命运的五(十)分钟
+22:46 Plough: 碎叫
+22:46 varna: 文风生动引入入胜，我生磕完了一整袋瓜子看他们的书，嘴里都烧起来了
+22:46 Plough: ……
+22:46 varna: 当然主要原因是我懒得动
+22:46 code_new: ……
+22:47 Plough: 我看看能不能把那个PDF塞到kindle上
+22:47 Plough: 诸君武运
+22:47 Plough quit:Quit: 碎叫
+22:47 tutu_wind: 晚安～ 
+22:47 varna: 我回去肛他了，诸君武运
+22:48 varna: 本月的月常也更新了，别忘了适当地打打拿螺丝
+22:48 varna quit:Quit: leaving
+22:51 lh_mouse: http://www.apesk.com/mbti/submit_email_date_zy.asp?code=101.228.121.244&user=5148922
+22:53 xxxxxxxx: 口支的结果?
+22:53 code_new: 小耗竟然如此内向
+22:54 xxxxxxxx: code_new: MBTI不太可靠 同一个人隔一段时间做结果可能不同
+22:54 code_new: 嗯，而且长度越短越容易变化
+22:54 code_new: 记着之前做过
+22:55 xxxxxxxx: 并且有人认为四种倾向选择的也不够好
+22:58 code_new: 可以试一下VIA-IS特长问卷
+23:05 tutu_wind: code_new: 小耗内向啊
+23:05 tutu_wind: 知道了
+23:06 code_new: tutu_wind: 揉
+23:07 tutu_wind: 么么
+23:10 tutu_wind: code_new: 一般大神都内向吧 ～～～ 
+23:10 code_new: 内向的人比较适合钻研
+23:13 xxxxxxxx: http://www.apesk.com/mmpi/ 据说这个靠谱不过大概是要找心理医生测得
+23:14 code_new: 567道题……确实给人一种很靠谱的感觉
+23:16 xxxxxxxx: MBTI为了让自己靠谱还出了个STEP 2
+23:17 xxxxxxxx: 然而分类和原来的版本没多大区别就是分的更细了....
+23:22 xxxxxxxx: MMPI 靠谱的地方在于它有关于被测者受否在装逼 伪装 以及大概有多可信
+23:24 lh_mouse: 陕西用户收到 10086 清明快乐短信
+23:25 condy: 没有收到。。
+23:27 lh_mouse: http://news.mydrivers.com/1/408/408305.htm
+23:34 tutu_wind quit:Ping timeout: 252 seconds
+23:35 condy: 0.0
+23:36 hoxily_ joined channel
+23:40 hoxily quit:Ping timeout: 244 seconds
+23:43 xxxxxxxx:  3月30日，百度视频在其官方微博上发布了又一重磅智能硬件产品百度“DuRing”戒指投影仪。通过微博内容可以看出，该款外型为戒指的智能硬件产品主打卖点为“世界上最小的高清投影仪”，新奇的产品创意一经发布即引来广泛关注。  以后要检查的东西越来越多了...
+23:45 xxxxxxxx: 曾任南京六合区交通局副局长的徐亚俊，玩网络游戏差钱时，工程老板赞助了他4万多元。他带妻子在海南购物钱不够，工程老板又转了两万“临时救急”。他给别人安排个工作，对方过节来送礼，羊肉袋子里“藏”了1万现金。昨日，徐亚俊因被指控受贿82万多元，在南京六合法院受审，庭审中他多次表示，社会风气就是这样，自己受贿也是被动
+23:45 xxxxxxxx: 的。
+23:45 code_new: #define Ri a
+23:46 xxxxxxxx: 卧槽4W一下子就变成战神了
+23:57 hoxily quit:Quit: Leaving

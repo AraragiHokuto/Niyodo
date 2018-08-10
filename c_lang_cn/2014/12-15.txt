@@ -1,0 +1,147 @@
+00:01:yzld2003 quit:Quit: yzld2003
+00:13:Petrus07 quit:Read error: Connection reset by peer
+00:32:cleamoon_: lh_mouse, 我有
+00:33:boosure|2 joined channel
+00:34:code_new quit:Quit: Leaving
+00:34:boosure quit:Ping timeout: 265 seconds
+00:44:LittleKey quit:Quit: Leaving.
+00:45:erhandsome quit:Quit: leaving
+00:59:lh_mouse: cleamoon_, https://gcc.gnu.org/bugzilla/show_bug.cgi?id=61189
+01:35:lh_mouse quit:Ping timeout: 245 seconds
+03:09:cleamoon_ quit:Quit: Leaving
+03:09:boosure quit:Ping timeout: 256 seconds
+03:13:cleamoon joined channel
+04:10:boosure joined channel
+04:44:boosure quit:Ping timeout: 240 seconds
+05:43:izmntuk quit:Quit: buh bye!
+05:51:boosure joined channel
+06:12:JQK quit:Remote host closed the connection
+06:51:xxxxxxxx quit:Quit: Leaving...
+08:37:erhandsome joined channel
+09:02:lh_mouse joined channel
+09:08:erhandsome quit:Ping timeout: 255 seconds
+09:11:lh_cat joined channel
+09:28:lh_cat quit:Ping timeout: 245 seconds
+09:33:lh_cat joined channel
+09:42:whatofor joined channel
+10:04:LittleKey joined channel
+10:08:lh_mouse quit:Read error: Connection timed out
+10:08:lh_cat quit:Ping timeout: 245 seconds
+10:12:lh_mouse joined channel
+10:13:lh_cat joined channel
+10:14:FrankHB quit:Remote host closed the connection
+10:15:FrankHB joined channel
+10:16:erhandsome joined channel
+10:21:boosure quit:Ping timeout: 265 seconds
+10:34:lh_mouse quit:Read error: Connection timed out
+10:35:lh_mouse joined channel
+10:46:boosure joined channel
+10:52:boosure quit:Ping timeout: 264 seconds
+10:54:lh_mouse quit:Read error: Connection timed out
+10:55:lh_mouse joined channel
+11:00:boosure joined channel
+11:08:lh_cat quit:Ping timeout: 245 seconds
+11:14:lh_cat joined channel
+11:37:boosure quit:Quit: Get your hand off of it
+12:15:yzld2002 joined channel
+12:24:yzld2002 quit:Remote host closed the connection
+12:24:yzld2002 joined channel
+12:30:xxxxxxxx joined channel
+12:38:dantmnf: lh_mouse: g++ (Debian 4.9.1-19) 4.9.1 正常
+12:39:MisakaMikoto|2 joined channel
+12:40:FrankHB quit:Read error: Connection reset by peer
+12:40:FrankHB joined channel
+12:57:Helloguy joined channel
+12:59:Helloguy quit:Client Quit
+14:59:lh_mouse: dantmnf, 能去回复一下么
+15:00:lh_mouse: dantmnf, -m32 -march=i686 么
+15:04:Stevearzh quit:Quit: Lingo: www.lingoirc.com
+15:05:Stevearzh joined channel
+15:44:whocares_2 quit:Ping timeout: 264 seconds
+16:18:slowcoach joined channel
+16:20:Xilzzerts joined channel
+16:28:slowcoach quit:Quit: Lingo: www.lingoirc.com
+16:31:endle joined channel
+16:57:condy joined channel
+17:07:erhandsome quit:Ping timeout: 260 seconds
+17:08:lh_cat quit:Ping timeout: 245 seconds
+17:13:lhanjian joined channel
+17:13:lhanjian: google竟然解封了
+17:13:erhandsome joined channel
+17:17:cleamoon_ joined channel
+17:19:lhanjian quit:Ping timeout: 240 seconds
+17:21:lh_cat joined channel
+17:29:FrankHB: btrfs mtime更新有bug么。
+17:32:cleamoon_: 耻球用btrfs？
+17:34:cleamoon_: lh_mouse: 昨天那个无报错，64位linux gcc 4.92
+17:36:lh_mouse: cleamoon_, -m32 -march=i686
+17:38:lh_mouse: 目测谷狗又挂了
+17:39:cleamoon_: 那个没试
+17:47:cleamoon__ joined channel
+17:47:cleamoon_ quit:Read error: Connection reset by peer
+18:04:whatofor_1 joined channel
+18:06:whatofor quit:Ping timeout: 265 seconds
+18:30:Plough joined channel
+18:34:dantmnf: lh_mouse: g++ a.cpp -std=c++14 -o a.o -c -m32 -march=i686 正常
+18:34:lh_mouse: ok
+18:36:lh_mouse: 目测 gcc 坑爹了
+18:39:condy: geordi: { foo(); } void foo() { []() noexcept { __builtin_return_address(0); }(); }
+18:39:geordi: <no output>
+18:45:erhandsome quit:Ping timeout: 255 seconds
+18:48:cleamoon_ joined channel
+18:48:cleamoon__ quit:Read error: Connection reset by peer
+18:50:izmntuk joined channel
+18:55:izmntuk quit:Ping timeout: 265 seconds
+19:09:cleamoon_ quit:Read error: Connection reset by peer
+19:15:cleamoon_ joined channel
+19:17:code_new joined channel
+19:28:cleamoon_ quit:Read error: Connection reset by peer
+19:29:cleamoon_ joined channel
+19:53:cleamoon_ quit:Read error: Connection reset by peer
+20:05:lh_cat quit:Ping timeout: 245 seconds
+20:07:Xilzzert joined channel
+20:09:LittleKey quit:Quit: Leaving.
+20:10:Xilzzerts quit:Ping timeout: 240 seconds
+20:14:hoxily joined channel
+20:18:erhandsome joined channel
+20:34:erhandsome quit:Ping timeout: 265 seconds
+20:35:erhandsome joined channel
+20:45:hysw: 考OS...
+20:45:hysw: 要郁闷了...
+20:50:lh_mouse quit:Read error: Connection timed out
+20:51:lh_mouse joined channel
+20:52:hoxily quit:Read error: Connection timed out
+20:59:lh_cat joined channel
+20:59:Petrus07 joined channel
+21:06:erhandsome quit:Remote host closed the connection
+21:11:condy: geordi: { asm volatile("int $129"); }
+21:11:geordi: Undefined behavior detected.
+21:11:yzld2002 quit:Remote host closed the connection
+21:11:erhandsome joined channel
+21:12:yzld2002 joined channel
+21:13:condy: geordi: replace 129 with 132
+21:13:geordi: Same output.
+21:17:FrankHB quit:Read error: Connection reset by peer
+21:34:FrankHB joined channel
+21:35:w15tp joined channel
+21:35:w15tp: 好久不见。
+21:37:lh_cat quit:Ping timeout: 245 seconds
+21:38:lh_cat joined channel
+21:40:w15tp quit:Quit: w15tp
+21:41:FrankHB quit:Remote host closed the connection
+21:58:FrankHB joined channel
+21:58:lh_cat: 度狗贴吧又地震了
+21:58:lh_cat: 垃圾百度
+22:04:FrankHB quit:Remote host closed the connection
+22:12:hoxily joined channel
+22:16:cleamoon quit:Quit: Leaving
+22:20:condy quit:Quit: Lost terminal
+22:20:condy joined channel
+22:20:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:28:Xilzzert quit:Ping timeout: 258 seconds
+22:35:hoxily quit:Read error: Connection timed out
+22:36:hoxily joined channel
+22:40:condy quit:Quit: leaving
+22:53:code_new quit:Quit: Leaving
+23:11:endle quit:Quit: Leaving
+23:11:Plough quit:Remote host closed the connection

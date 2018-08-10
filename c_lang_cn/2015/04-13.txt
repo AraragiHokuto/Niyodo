@@ -1,0 +1,363 @@
+00:11 lhjkk quit:Quit: Leaving
+00:13 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150404130542]
+00:17 hope1_ joined channel
+00:20 hope1 quit:Ping timeout: 252 seconds
+00:44 Matsune quit:Read error: Connection reset by peer
+00:44 Petrus07 quit:Quit: Leaving.
+00:45 whocares_2 joined channel
+01:18 hope1 joined channel
+01:22 lh_mouse quit:Read error: Connection reset by peer
+01:42 lh_cat joined channel
+01:54 cleamoon__: fa! 我说怎么这么多破破破的，3-2队忘了带潜艇了！
+03:45 hope1 quit:Ping timeout: 245 seconds
+03:46 xeirrr quit:Ping timeout: 256 seconds
+03:52 lh_cat quit:Quit: Connection closed for inactivity
+06:02 hope1 joined channel
+06:07 hope1 quit:Ping timeout: 252 seconds
+06:33 JQK quit:Remote host closed the connection
+08:13 hope1 joined channel
+08:14 cleamoon__ quit:Ping timeout: 252 seconds
+08:15 cleamoon joined channel
+08:16 hope1_ quit:Ping timeout: 246 seconds
+08:24 xxxxxxxx quit:Quit: Leaving...
+08:45 cleamoon__ joined channel
+08:48 cleamoon quit:Ping timeout: 244 seconds
+09:16 lhanjian joined channel
+09:29 lhanjian: linux拷贝文件到U盘最操蛋的一点就是，如果自己没有手工Sync（1），很可能根本没拷贝成功
+09:29 lhanjian: 在GUI文件管理器尤其容易发生
+09:32 hoxily: 不是有个 安全移除 的菜单项吗？
+09:34 lhanjian: hoxily, 你会发现安全移除失败。
+09:34 lhanjian: 然而你的文件管理器愚蠢地告诉你已经复制完成了，于是你就想直接拔U盘，然后就杯具了
+09:36 hoxily: 渣
+09:38 lhanjian: 渣+
+09:38 FrankHB quit:Read error: Connection reset by peer
+09:41 lhanjian: 当然，也许应该怀疑是不是文件管理器实现的太渣
+09:43 FrankHB joined channel
+09:43 lh_cat joined channel
+09:53 whatofor joined channel
+10:01 lh_cat: https://usercontent.irccloud-cdn.com/file/B8rqaKhT/IMG_0077.JPG
+10:02 lh_cat: 好大的狗
+10:02 cleamoon__ quit:Ping timeout: 246 seconds
+10:10 lhanjian: 不觉得特别大啊……
+10:21 cleamoon__ joined channel
+10:24 lhanjian: lh_cat, 在win上存在，文件管理器提示拷贝完毕，但是实际上并没有把dirtyPage写入外存的问题么……
+10:26 izmntuk joined channel
+10:28 lh_not_bot: lhanjian: 存在   但是可以关掉
+10:28 lhanjian: 可以关掉？
+10:28 lh_not_bot: 默认对于可移动磁盘  写缓冲是关闭的
+10:28 lh_not_bot: 固定磁盘是打开的  
+10:28 lh_not_bot: 如果你往这种磁盘里写东西  然后立即拔掉  会提示数据丢失
+10:29 lhanjian: 哦，对，这个我记得。
+10:29 lhanjian: 不过在有“添加删除可以磁盘”的情况下似乎关掉也没啥必要啊……
+10:30 lh_not_bot: 如果只使用安全删除  就没有必要关写缓冲
+10:31 lh_not_bot: 不过  不是所有磁盘都能安全删除 
+10:31 lh_not_bot: 例如使用 NTFS 很难安全删除
+10:31 lh_not_bot: NTFS 会不断写日志
+10:31 lhanjian: 怪不得在Linux上如果U盘用NTFS，总是在拷贝文件的时候出杯具……
+10:38 lh_not_bot: 可移动存储不要用 NTFS
+10:42 lhanjian: soga……
+10:42 lhanjian: 可是找不到舒服的大文件解决方案……
+10:47 lhanjian: http://www.morganstanley.com/profiles/bjarne-stroustrup-managing-director-technology/
+10:48 lh_not_bot: lhanjian: exFAT
+10:49 lhanjian: 啊，我一直以为Linux不支持，原来还是有utils
+10:49 lhanjian: 终于得到了救赎，渣渣Linux
+10:52 lh_not_bot: 救 赎
+10:56 lhanjian: 这让我想起我操蛋的安卓手机，在不支持exFAT的情况下，又非要使用FAT32格式化我的存储卡……
+11:07 lhanjian: 原来内核空间的exfat实现没被接纳到内核源码里面去……
+11:09 hope1` joined channel
+11:11 hope1 quit:Ping timeout: 245 seconds
+11:13 Xilzzerts joined channel
+11:21 hoxily quit:Quit: Leaving
+11:21 hoxily joined channel
+11:25 hope1 joined channel
+11:27 _pakchoi_ joined channel
+11:34 iyzsong: 这货的脑洞很大啊... automating programming => https://lists.gnu.org/archive/html/lightning/2014-09/msg00012.html
+11:38 iyzsong: 我大概看到: GNU toolchain不安全(或许已遭trusting-trust攻击)，要通过自动编程来构建semantics fix-point什么的
+11:44 lh_not_bot: x / 880 * (993 + 89 * x ^ 2) 这东西反函数怎么求
+11:46 lhanjian: (x/880)?
+11:46 lhanjian: 还是x/(880*(993+89*x^2)?
+11:46 lhanjian: )
+11:46 lh_not_bot: (x/880)
+11:48 lhanjian: 看起来是求解三元一次方程
+11:48 lh_not_bot: 暴力解决算了
+11:48 lhanjian: 三次一元……
+11:49 lhanjian: http://baike.baidu.com/view/1382952.htm
+11:55 lhanjian quit:Quit: Leaving
+12:04 izmntuk joined channel
+12:08 lh_not_bot: geordi: << tanh(1.0)
+12:08 geordi: 0.761594
+12:08 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); constexpr double x = 1.414;
+12:08 geordi: 0.920999
+12:09 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); constexpr double x = 0.2449;
+12:09 geordi: 0.269521
+12:11 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); constexpr double x = 0.3333;
+12:11 geordi: 0.359315
+12:11 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); constexpr double x = 0.3333 * 1.414;
+12:11 geordi: 0.486759
+12:11 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); const double x = 1.0 / 3 * sqrt(2);
+12:11 geordi: 0.48686
+12:12 lh_cat quit:Quit: Connection closed for inactivity
+12:21 xiaoxi joined channel
+12:22 whatofor_1 joined channel
+12:23 whatofor quit:Ping timeout: 252 seconds
+12:31 whatofor_1 quit:Ping timeout: 244 seconds
+12:34 whatofor_1 joined channel
+12:35 yzld2002 joined channel
+12:39 hope1 quit:Ping timeout: 245 seconds
+12:39 w15tp joined channel
+12:39 w15tp: 终于进来了
+12:40 condy: http://puu.sh/hbYSr.png 还是mma大法好。
+12:41 w15tp: 话说在厂子里工作竟然还能到郑州学习。幸运的机会
+12:41 w15tp: 第一次来郑州……
+12:42 condy: 0.0
+12:43 w15tp: 半夜还能出去玩。关键是这学习还有工资。好吧，我就是没见过世面的小屁孩。
+12:44 w15tp: 对了，前段时间某位说是回家结婚了。现在有孩子了没。
+12:46 w15tp joined channel
+12:47 w15tp: 能发过去？
+12:48 w15tp joined channel
+12:57 hope1 joined channel
+13:02 lhanjian joined channel
+13:11 xiaoxi quit:Quit: 离开
+13:11 lhanjian quit:Remote host closed the connection
+13:15 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); const double x = 1.0 / 3 * sqrt(2) / 2;
+13:15 geordi: 0.25987
+13:17 whatofor joined channel
+13:17 whatofor_1 quit:Read error: Connection reset by peer
+13:17 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); const double x = 1.0 / 3 * sqrt(2);
+13:17 geordi: 0.48686
+13:18 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) / 2;
+13:18 geordi: 0.379053
+13:18 lh_not_bot: geordi: << tanh(993.0/880 * x + 89 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) / 3;
+13:18 geordi: 0.25987
+13:20 _pakchoi_ quit:Remote host closed the connection
+13:22 lh_not_bot: 用这个函数拟合正态分布目测可以
+13:22 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) / 4;
+13:22 geordi: 0.197409
+13:22 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) / 3;
+13:22 geordi: 0.261104
+13:22 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 3 * sqrt(2);
+13:22 geordi: 0.494902
+13:23 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2);
+13:23 geordi: 0.682438
+13:24 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) / 2;
+13:24 geordi: 0.382874
+13:24 cleamoon__: 这是把正态分布给taylor分解了得出来的？
+13:24 lh_not_bot: geordi: << tanh(993.0/880 * x + 89.0 / 880 * x * x * x); const double x = 1.0 / 2 * sqrt(2) * 2;
+13:24 geordi: 0.954658
+13:24 lh_not_bot: 不是
+13:24 lh_not_bot: 我只是参考一篇文章  http://wenku.baidu.com/link?url=16SBVMbB3GCvbRwbY1G_dUMVp26h40GDNpxqEJHz3tXpVHXyQfsL80EEwOVhfJgRFZRSN2RjGCT_FflAFYytgs45AbQTM7E4jqL7T0QB5Wq
+13:27 cleamoon__: 好神奇
+13:28 cleamoon__: 不过还是taylor了，那么精确度应该有保证
+13:28 lh_not_bot: geordi: << (tanh(993.0/880 * x + 89.0 / 880 * x * x * x) + 1) / 2; constexpr n = 1; const double x = sqrt(2) * 2 * (-0.5 + 0.25);
+13:28 geordi: error: 'n' does not name a type
+13:28 lh_not_bot: geordi: << (tanh(993.0/880 * x + 89.0 / 880 * x * x * x) + 1) / 2; constexpr int n = 1; const double x = n * sqrt(2) * 2 * (-0.5 + 0.25);
+13:28 geordi: 0.158781
+13:29 lh_not_bot: 一定是使用姿势不对
+13:29 lh_not_bot: geordi: << (tanh(993.0/880 * x + 89.0 / 880 * x * x * x) + 1) / 2; const double x = sqrt(2) * (-0.5 + 0.25) * 1;
+13:29 geordi: 0.308563
+13:31 lhjkk joined channel
+13:46 cleamoon__ quit:Ping timeout: 255 seconds
+13:58 w15tp joined channel
+13:58 w15tp joined channel
+13:59 lh_mouse joined channel
+14:05 w15tp quit:Remote host closed the connection
+14:06 lhjkk quit:Ping timeout: 264 seconds
+14:18 lhjkk joined channel
+14:28 cleamoon joined channel
+14:30 Kanna joined channel
+14:34 * lh_mouse slaps Kanna around a bit with a large trout
+14:53 cleamoon__ joined channel
+14:54 Kanna quit:Read error: Connection reset by peer
+14:57 cleamoon quit:Ping timeout: 276 seconds
+15:05 cleamoon__ quit:Ping timeout: 256 seconds
+15:08 cleamoon__ joined channel
+15:15 cleamoon__ quit:Ping timeout: 256 seconds
+15:15 cleamoon__ joined channel
+15:49 hope1 quit:Ping timeout: 252 seconds
+15:49 izmntuk quit:Ping timeout: 244 seconds
+15:58 izmntuk joined channel
+16:12 cleamoon__ quit:Ping timeout: 256 seconds
+16:14 cleamoon__ joined channel
+16:25 pocmon joined channel
+16:31 yzld2002 quit:Remote host closed the connection
+16:45 yzld2002 joined channel
+16:48 yzld2002 quit:Read error: Connection reset by peer
+16:53 yzld2002 joined channel
+17:04 LittleKey joined channel
+17:20 cleamoon__ quit:Ping timeout: 265 seconds
+17:22 cleamoon__ joined channel
+17:27 cleamoon__ quit:Ping timeout: 265 seconds
+17:31 cleamoon__ joined channel
+17:36 cleamoon__ quit:Ping timeout: 256 seconds
+17:40 cleamoon__ joined channel
+17:42 xxxxxxxx joined channel
+17:51 LittleKey quit:Ping timeout: 248 seconds
+17:53 cleamoon__ quit:Ping timeout: 265 seconds
+17:53 LittleKey joined channel
+18:17 lhjkk: 当
+18:19 condy: 0.0
+18:20 yzld2002 quit:Remote host closed the connection
+18:21 yzld2002 joined channel
+18:36 lhjkk: condy, 揉
+18:36 condy: lhjkk: 捏！
+18:39 boosure quit:Read error: Connection reset by peer
+18:54 lhjkkk joined channel
+18:54 Matsune joined channel
+18:54 lhjkk quit:Quit: Leaving
+19:06 cleamoon joined channel
+19:07 sismvg joined channel
+19:07 sismvg: 哪里能找到vs和gcc对Cpp编译的不同点？
+19:08 cleamoon__ joined channel
+19:09 beefcafe quit:Remote host closed the connection
+19:10 beefcafe joined channel
+19:17 lhjkkkk joined channel
+19:18 lhjkkk quit:Remote host closed the connection
+19:26 lhjkkk joined channel
+19:26 lhjkkkk quit:Remote host closed the connection
+19:27 xiaojunyu joined channel
+19:50 FrankHB quit:Quit: Konversation terminated!
+19:58 whatofor_1 joined channel
+20:00 whatofor quit:Ping timeout: 245 seconds
+20:01 FrankHB joined channel
+20:03 lhjkkk: 到现在才理解耗子原来对我说的那个，“其实你这里总共才2种状态”……
+20:03 lh_not_bot: 哪个
+20:08 lhjkkk: 就是原来说 HTTP反向代理的时候，上下游之间HTTP事务转发的关系
+20:09 lh_not_bot: 忘了
+20:10 lhjkkk: 也确实有点久了
+20:10 lhjkkk: 我也就模模糊糊记得这回事
+20:10 lhjkkk: 今天在看龙书关于DFA和NFA的部分
+20:11 lh_not_bot: 贴吧真是不忍直视
+20:14 lh_not_bot: 啥东西值得手写状态……
+20:17 whatofor joined channel
+20:20 whatofor_1 quit:Ping timeout: 276 seconds
+20:22 Plough joined channel
+20:31 lhjkkk: 耗子写代码的时候会刻意思考状态机么？
+20:47 lh_not_bot: 尽量避免
+20:48 lh_not_bot: 主要问题是艹起来麻烦
+20:48 lh_not_bot: lhjkkk: 给你看个不用状态机写的 JSON 解析   https://github.com/lhmouse/poseidon/blob/master/src/main/json.cpp#L271
+20:48 lh_not_bot: 纯标准库实现的
+20:49 lh_not_bot: （当然说解析这地方）
+20:51 sismvg: 今天面试的告诉我我给他的代码编译不了。。然后我纠结了一个小时才发现是pair<type,vector<type>>...
+20:53 Petrus07 joined channel
+20:53 w15tp joined channel
+20:54 w15tp: 又是单机时刻，我话真的很多，
+20:55 lh_not_bot: w15tp: 所以呢
+20:55 sismvg: 你可以去当个演员
+20:55 lh_not_bot: 频道不是义务陪聊机  也不是有问必答机  如果你觉得你被单机了  最好想想为什么
+20:56 sismvg: georid.{cout<<"你好";}
+20:56 sismvg: http://shehui.firefox.163.com/15/0413/20/2VIUZSPJXWYR304N.html
+20:57 sismvg: georid,{cout<<"你好";}
+20:57 geordi: 你好
+20:57 w15tp: 没什么。这个房间可以让我问在网上搜不到的问题。
+20:57 sismvg: 听说win10可以找小娜陪聊
+20:58 w15tp: 啊～～那个建议不错。我的确可以去做小丑了。
+20:59 sismvg: 蝙蝠侠的小丑，还是游戏王的小丑
+21:00 w15tp: 绝大多数我说的话属于自言自语型。所以也没有感觉到什么。2333。
+21:01 w15tp: 不说了。吐槽完毕。
+21:04 w15tp quit:Remote host closed the connection
+21:10 Plough: 奈良、东京、松代，还有一个会是哪里呢……
+21:12 lhjkkk: 最近这些人都被T2
+21:12 lhjkkk: XX了么……
+21:12 Plough: 这位一直这样吧
+21:13 lhjkkk: 我知道……
+21:13 lhjkkk: Plough, 红旗的正片呢
+21:13 Plough: 坑了
+21:13 yzld2002 quit:Remote host closed the connection
+21:14 lhjkkk: 一定是缺个会PS的妹子
+21:14 cleamoon__: 什么正片？
+21:14 lhjkkk: cleamoon__, 白丝女装露臀绝对领域正片
+21:15 cleamoon__: 好评，赶紧放出来
+21:19 xxxxxxxx: 黑的也出一份吧
+21:28 cleamoon__: 权御天下大好评
+21:30 sismvg: http://bbs.soul-plus.org/read.php?tid-132797.html
+21:30 sismvg: 这本不错
+21:30 sismvg: nsfw
+21:30 sismvg: 权力的游戏第五季开播-OP还是那么赞
+21:36 sismvg: 上海似乎来台风了。。
+21:48 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+21:53 lhjkkkk joined channel
+21:53 lhjkkk quit:Remote host closed the connection
+22:00 lolisa joined channel
+22:04 code_new joined channel
+22:04 xiaojunyu quit:Ping timeout: 253 seconds
+22:07 code_new: 23rd April 2015    Mutsuki-class Destroyer Kai Ni  #拜月神教的福音
+22:08 cleamoon__: 噗
+22:08 cleamoon__: 我都拆了
+22:10 code_new: 我留了睦月/望月/如月
+22:10 cleamoon__: 如果会变得很强就拆了现在用的这批
+22:10 code_new: 还有弥生和卵月
+22:11 code_new: 应该不会变得很强
+22:11 code_new: 我倒是比较期待立绘
+22:12 cleamoon__: 万一是金底立绘不变...
+22:12 code_new: 毕竟睦月级的立绘还是画得很好的
+22:12 xxxxxxxx: 结果没有新立绘就是神作
+22:12 code_new: 应该不会……
+22:13 xxxxxxxx: 目测改二的X月还是没什么卵用
+22:14 cleamoon__: 或者让吹雪级画师画立绘
+22:14 xxxxxxxx: 画出一个吹雪脸
+22:14 Plough: shibafu那个包子脸……
+22:14 whatofor quit:Read error: Connection reset by peer
+22:14 cleamoon__: 或者艺颜级
+22:15 Plough: Bob现在很莉害的
+22:15 Plough: 而且那是颜艺级
+22:16 pocmon quit:Read error: Connection reset by peer
+22:17 pocmon joined channel
+22:17 cleamoon__: 让RJ的画师画吧
+22:17 pocmon quit:Client Quit
+22:18 hope1 joined channel
+22:19 sawfish joined channel
+22:19 sawfish: 大家好，我是中国青海省西宁市的张鑫，身份证号630103198908110014，欲杀我从速谢谢。
+22:20 sawfish quit:Client Quit
+22:21 cleamoon__: 精神病也是打119吧？
+22:21 xxxxxxxx: 120吧?
+22:21 cleamoon__: 120......
+22:23 Plough: 上来一个彩底我还当出了什么好货呢
+22:23 Plough: 流星……
+22:25 lhjkkkk quit:Ping timeout: 276 seconds
+22:25 Plough: 流星彩云Val彩云
+22:25 Plough: 这都什么鬼
+22:26 cleamoon__: 肛旗在赌什么
+22:26 Plough: 飞机
+22:27 cleamoon__: 不是活动前不应该赌吗
+22:27 Plough: 我总得做日常任务吧
+22:27 cleamoon__: 日常1111
+22:28 Plough: 浪费
+22:28 Plough: 我就十个烈风
+22:28 cleamoon__: 飞机什么公式
+22:28 Plough: 春活万一来个阿号作战我直接瞎了
+22:28 Plough: 26111/2611
+22:28 cleamoon__: 好贵
+22:28 Plough: 挺便宜的
+22:28 cleamoon__: 我现在缺弹药
+22:29 xxxxxxxx: 我这里从明天开始要停3天电 每天12小时
+22:29 Plough: 我也缺
+22:29 Plough: 不然我就赌大根了
+22:30 lolisa: 没电不能用岛风Poi没= =疾如岛风稳如Poi啊
+22:30 cleamoon__: 尔等欧皇
+22:30 Plough: 你TM呆在欧洲说我欧皇对得起良心吗？
+22:30 Plough: 而且欧皇怎么可能出Val这种垃圾
+22:31 cleamoon__: 我连运输桶都不出
+22:31 cleamoon__: 天天7.7mm机枪
+22:31 Plough: 运输桶我试过连赌100发
+22:31 Plough: 就出了一个
+22:31 hope1: T2怎么了……
+22:31 Plough: 一千各项资源加上几十紫菜就这么飞了出去
+22:32 cleamoon__: 我从开始基本一直1111，至今运输桶出了2个
+22:32 lolisa: 紫菜是？
+22:32 xxxxxxxx: 好好做任务运输桶就够了
+22:32 Plough: 开发资材
+22:32 Plough: +
+22:32 Plough: 我的运输桶都这么来的
+22:34 lolisa: 终于。。。我Coq一个卡了一个月的操作问题终于解决了，果然小众语言的疼啊，有问题都没人问orz
+22:44 xxxxxxxx: hope1: T2最近一直这样别管他
+22:44 hope1: 感觉很危险啊……
+22:44 cleamoon__: 最近估计什么药吃错了
+22:46 iyzsong: o.oorz
+22:51 Plough: 碎叫
+22:51 Plough quit:Quit: 碎叫
+22:56 hope1 quit:Quit: Leaving
+22:57 hope1 joined channel
+23:26 yzld2002 joined channel
+23:39 AliciaBraps9 joined channel
+23:48 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150404130542]
+23:50 AliciaBraps9 quit:

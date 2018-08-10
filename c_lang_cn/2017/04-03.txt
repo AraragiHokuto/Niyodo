@@ -1,0 +1,253 @@
+00:22 varna quit:Ping timeout: 260 seconds
+00:24 iyzsong-m quit:Ping timeout: 240 seconds
+00:33 xhe quit:Quit: leaving
+02:52 lh_mouse quit:Ping timeout: 240 seconds
+03:34 Izumo quit:Quit: Connection closed for inactivity
+08:45 xhe joined channel
+09:21 abel-abel joined channel
+11:49 slide1 joined channel
+12:07 slide1 joined channel
+13:18 varna joined channel
+13:20 varna: cleamooon: 重新试了试骑士开局，感觉之前直剑系不好用是因为我加点不慎
+14:30 cleamooon: 加点还重要？黑魂不是一级莽到底吗
+14:41 varna: 加点方便了，武器用起来更顺手些
+14:41 varna: 现在这个骑士号，打到风暴城堡boss都没被搞死过
+14:42 lh_mouse joined channel
+14:42 varna: 没被boss搞死过*
+14:42 varna: 太刀+盾，50%左右负重，翻滚也比较方便
+14:45 cleamooon: orz
+14:47 cleamooon: 那我一定要试试瞎丁日乱滚流
+14:47 varna: 翻滚我基本只用来走位
+14:48 varna: 主要防御手段还是架盾……
+14:50 cleamooon: boss有黑魂里那种想输出就肯定中招的攻击吗
+14:52 varna: 没见到会盾反的
+14:52 varna: 比较麻烦的比如大范围延迟斩骗翻滚，或者是快慢刀骗连段
+14:52 varna: 还有就是单纯的相性压制
+14:56 varna: 感觉前一个档的主要问题之一是耐力技能加得不够
+14:57 varna: 然后又穿很多重甲，走位就艰难
+15:03 lh_mouse quit:Read error: Connection reset by peer
+15:04 lh_mouse joined channel
+15:09 cleamooon: 血牛号呢
+15:09 varna: 不知道怎么算血牛，很容易就被小怪干死了……
+15:15 cleamooon: ……
+15:16 varna: 基本被几个人围攻就容易死
+15:22 cleamooon: 血牛是为了可以翻滚癌……
+15:25 varna: 那就不好办了，因为血是随着等级固定上升的
+15:26 cleamooon: 不能另外加吗
+15:27 varna: 不能
+15:27 cleamooon: 高血裸体莽多好玩
+15:27 varna: 这里基本属性也不能直接像黑魂一样点出来，必须靠点技能
+15:27 cleamooon: 淦
+15:27 varna: ……这种游戏怎么想都不会让你莽吧
+15:27 cleamooon: 对了，怎么技能这么多
+15:27 cleamooon: 打开技能表时吓了一跳
+15:28 varna: 技能其实就分两类：增加基本参数的，以及提升魔法/装备使用能力的
+15:29 varna: 基本参数比如力、敏、耐、负重、血瓶数，其余的都是提高使用装备和魔法的级别
+15:29 varna: 后者也会提供基本参数
+15:29 varna: 差不多能跟自己的打法搭配起来就好
+15:36 cleamooon: orz
+16:02 cleamooon: 我还是体感一下再说吧
+16:10 Dove joined channel
+16:11 Dove: varna: 我决定皈依基督教了，这里面有什么讲究么？
+16:14 varna: 没什么讲究，别玩魔法就行
+16:15 Dove: varna: 可惜了
+16:15 Dove: 我还挺想玩魔法的
+16:16 Dove: 我先去读一遍圣经
+16:16 Dove: 还没通读过
+16:18 Dove: 我记得我下过一本KJV，找不到了。
+16:18 cleamooon: 看到个好玩的空耳：ambulance - 俺不能死
+16:18 Dove: 2333
+16:24 cleamooon: 对了，有个问题，很多人为了性能编译内核，怎么不怎见为了性能编译libc的
+16:25 varna: 内核参数可调，libc可调的不多
+16:28 cleamooon: 做平台相关的优化呀
+16:28 varna: 那跟重新编译无关了
+16:29 cleamooon: 编译器自己做
+16:32 cleamooon: 意思是编译选项带 March=native
+16:34 varna: 玛德这什么邪教……
+16:34 varna: 血瓶喝了自带中毒
+16:34 cleamooon: 23333
+16:34 varna: 还好没叛教
+16:34 lh_mouse: geordi, -c template<typename T> constexpr foo(){ return 1; }
+16:34 geordi: error: ISO C++ forbids declaration of 'foo' with no type
+16:35 lh_mouse: geordi, -c --2014 template<typename T> constexpr foo(){ return 1; }
+16:35 geordi: Same error.
+16:35 lh_mouse: geordi, template<typename T> constexpr foo(){ return 1; }
+16:35 geordi: Still same error.
+16:35 lh_mouse: geordi, --clang template<typename T> constexpr foo(){ return 1; }
+16:35 geordi: error: C++ requires a type specifier for all declarations
+16:38 Dove: 2333
+16:51 lh_mouse: g++ 6.3 这个能过。
+16:51 lh_mouse: 看来是隐式 int 了。
+16:51 lh_mouse: 害得我找半天没找到原因。
+16:58 Mokou joined channel
+17:08 lh_mouse: Dove, 你已经不会魔法了。闭嘴。
+17:09 Dove: lh_mouse: 我似乎就没会过魔法。
+17:18 T2 joined channel
+17:22 Dove quit:Ping timeout: 260 seconds
+17:22 varna quit:Ping timeout: 240 seconds
+17:27 varna joined channel
+17:50 varna: _(:з」∠)_我就不该竖flag
+17:50 varna: 之前被Tree of Men击杀十次
+17:50 varna: 惨烈无比
+17:50 T2: 2333
+17:51 varna: 不过打法上改进了一下，这次我换用了更安逸的巨盾，再强化一些之后，说不定就能应付下一个Boss
+17:51 varna: (｡･ω･)在下就是持盾
+17:53 T2: = =，在下就是制杖。
+17:56 varna: 后面一个Boss的攻击有物理和火焰两个属性，削耐力也很重，估计用大盾会好点
+17:56 varna: 总之越往后越难……
+17:58 iyzsong-m joined channel
+18:13 cleamooon: 有带攻击力的盾吗
+18:15 lh_mouse: geordi, { using k = const string; k::size_type a = 1; cout <<TYPE(a); }
+18:15 geordi: lvalue long unsigned int
+18:15 lh_mouse: geordi, { using k = const string &; k::size_type a = 1; cout <<TYPE(a); }
+18:15 geordi: error: qualified-id in declaration before 'a'
+18:15 iyzsong-m quit:Ping timeout: 268 seconds
+18:16 iyzsong joined channel
+18:44 rapiz joined channel
+18:48 rapiz quit:Client Quit
+18:50 Mokou quit:Remote host closed the connection
+18:56 Izumo joined channel
+18:59 perr joined channel
+19:01 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/ta/by_474470.jpg@596w_1l.jpg
+19:02 iyzsong: _(:з」∠)_
+19:03 * iyzsong 今天 6 点才起来
+19:05 varna: _(:з」∠)_论大盾是怎么无脑怼过boss的……
+19:05 varna: 之前这个boss打我各种破盾出硬直，现在大盾一顶不掉血不掉耐不破防
+19:06 varna: 活生生地砍死了
+19:06 rapiz joined channel
+19:06 T2: orz，大盾这么叼。
+19:07 varna: 稍微针对了boss一下
+19:11 varna: 总之拿出对策之后简直就是天堂和地狱的差别
+19:14 lh_mouse: geordi, { throw bad_cast(); }
+19:14 geordi: terminated by bad_cast
+19:15 cleamooon: 不掉耐不破防?
+19:16 varna: 原本我用一个火抗中盾挡boss的手枪攻击，伤害全都能挡下来，但一次半管耐力，两发正好破盾
+19:16 varna: 现在我直接顶一个大盾，挡一发掉1点血，几乎没有击退，耗的耐力在原地站着就能迅速回满
+19:17 varna: 概括地说，就是boss所有的攻击我都能挡下来，每个都只掉1血……
+19:17 varna: 会按攻击键就能赢的战斗
+19:19 cleamooon: orz
+19:20 cleamooon: 大盾大法好
+19:20 varna: 刚看了一个UP, 大剑莽似乎也不错
+19:21 cleamooon: 不过我经常和敌人同时攻击...
+19:21 varna: 离远点
+19:21 varna: 大剑不亏的，基本两三下就一个杂兵
+19:21 cleamooon: 大盾+大剑？
+19:21 varna: 双手持大剑
+19:22 varna: 突出一个莽字
+19:22 varna: 武器面板上的两个伤害数目应该就是单手和双手的
+19:22 cleamooon: 等我拿到大剑再说
+19:22 varna: 大剑挺快的，应该在打第二个boss之前就能拿到
+19:24 cleamooon: 其实我有点期待谁能把war3和黑魂合体
+19:24 varna: war3的故事不够黑暗
+19:25 cleamooon: 我指的是玩法
+19:25 varna: 对魂系游戏来说，玩法和故事有一致化的趋势
+19:26 varna: 不然味道不够
+19:27 varna: 咸鱼避难所的故事没黑魂那么复杂，不过也有小亮点
+19:27 varna: 比如说一开始可以选择信的三神教，其实国王、法官和骑士三柱神明已经腐化了，你还可以打到他们三个
+19:27 cleamooon: b不过感觉黑魂本身并不很克苏鲁
+19:28 varna: 黑魂的故事很碎，基本都是小看点
+19:28 varna: 当然魂3看起来有一股恋爱的酸臭味
+19:28 cleamooon: 啊，没让我选哪个呀，就问了信不信他们
+19:28 varna: 选不信的话，会提示你其他教
+19:28 lh_mouse: geordi, struct foo { using k = int; }; int main(){ foo *p; using p = p->k; }
+19:28 geordi: error: 'p' does not name a type
+19:28 lh_mouse: geordi, struct foo { using k = int; }; int main(){ foo *p; using k2 = p->k; }
+19:28 geordi: Same error.
+19:28 cleamooon: 我还是蛮喜欢这种很碎的剧情的
+19:28 varna: 初始有三个教：三神，光之女神，钢铁（=唯物论）
+19:29 cleamooon: .......
+19:29 varna: 游戏过程中还能找到三个教：自然之怒，拜金，背叛者
+19:29 cleamooon: 我怕选不信直接给我来个boss或者永久debuff，就选了信...
+19:30 varna: 233333
+19:30 varna: 道中可以叛教
+19:30 varna: 叛教之后还想叛回去的话得找一个妹子（或者女神，我有点怀疑）赎罪
+19:31 cleamooon: 一开始选的种族有意义吗
+19:31 varna: 黑魂3似乎已经变成恋爱养成游戏，我看灭火结局的时候，不可燃垃圾给了小姐姐眼睛，BGM直接变成Secret Betrayal
+19:31 varna: 没有意义
+19:32 varna: 出身随便选
+19:32 cleamooon: 最后一个DLC结尾也是浓浓的恋爱味道
+19:32 varna: - Ashen one, hearest thou my voice still? - I hear ye. - Then get your dirty hands off my breasts!
+19:32 cleamooon: 妹子没法弄萌比较残念
+19:33 cleamooon: 2333333
+19:33 varna: DLC也好贵，昨天就只买了原版内容……
+19:34 cleamooon: 不从1开始玩？
+19:35 varna: 也许玩完3之后回去玩1
+19:35 varna: 毕竟论系统成熟度，应该是后面的作品比较高
+19:35 cleamooon: 感觉dlc内容都好少
+19:35 varna: 但是超级贵
+19:35 varna: ￥70+一个
+19:36 cleamooon: orz
+19:36 varna: 本体价格不降反升
+19:37 varna: Metro last light redux上周打折都打到十几块人民币的世界里，恋爱之魂3还是那么贵……
+19:38 cleamooon: 最新的是season pass？
+19:38 varna: season pass我没弄明白是什么意思，两个DLC都包括？
+19:38 cleamooon: 估计悬
+19:38 varna: 坑死了
+19:39 cleamooon: 果然，我这里本体60，season pass 25
+19:39 varna: 不过毕竟黑魂不会再有续作
+19:39 varna: ……
+19:39 cleamooon: 欧
+19:39 varna: 我这里本体260+，季票130+……
+19:40 varna: 欧区sbeam能买到COD吧
+19:41 cleamooon: COD 2?
+19:41 varna: MW系列
+19:41 cleamooon: 没听过
+19:43 varna: _(:з」∠)_
+19:46 Izumo: JIS这路径里的斜线转成￥的设定真蛋疼……
+19:47 lh_cat joined channel
+19:50 lh_cat: meow
+19:51 lh_cat: 0.0
+19:51 varna: 鼻来
+19:52 lh_cat: 今天去配了副黑框眼镜。
+19:53 varna: 这耗也换黑框了
+19:53 lh_mouse: 其实一直是。
+19:54 lh_mouse: 不过这次挑了个大的。
+19:55 T2 quit:Ping timeout: 246 seconds
+19:57 lh_mouse: varna, 有个好消息。
+19:57 lh_mouse: https://sourceforge.net/p/mingw-w64/bugs/597/#2183  
+19:58 lh_mouse: 这就是说  mingw-w64 基本被 mcfgthread 打死了，
+19:59 lh_mouse: 不过。
+19:59 lh_mouse: exit() 会把其它 sleep 在 cv 上的线程干掉这事情， varna 怎么看？
+20:04 varna: 老实说我不太在意这个差别
+20:13 yimis joined channel
+20:25 lh_mouse: 差别？
+20:32 yimis quit:Quit: yimis
+20:38 Izumo: 5h27m后学派服务器母机维护
+20:39 cleamooon: 学派母鸡是linode？
+20:39 Izumo: +
+20:47 iyzsong: ＿（：з」∠）＿
+20:49 lh_mouse_ joined channel
+20:52 lh_mouse quit:Ping timeout: 256 seconds
+20:58 lh_mouse_ is now known as lh_mouse
+20:59 varna: _(:з」∠)_我摔死了多少次，结果boss一条过
+20:59 varna: _(:з」∠)_跳台绝对是动作游戏最恶意的发明
+21:04 varna: 啊
+21:04 varna: 我驲
+21:05 varna: 22k魂蒸发了……
+21:05 varna: 算了以后再打回来吧
+21:05 cleamooon: orz
+21:06 varna: 啊
+21:06 lh_mouse: 特蕾莎梅这口英式英语听起来真高大上。
+21:06 varna: 又摔死了
+21:11 Meow-J quit:Read error: Connection reset by peer
+21:11 Meow-J joined channel
+21:21 xhe quit:Quit: leaving
+21:23 xhe joined channel
+21:30 varna quit:Ping timeout: 264 seconds
+21:32 varna joined channel
+21:36 xhe quit:Ping timeout: 260 seconds
+21:36 xhe joined channel
+21:37 varna: _(:з」∠)_啊，今天摔得简直太惨了
+21:37 varna: 摔死至少二十回
+21:44 varna: _(:з」∠)_我已经多长时间没在玩游戏的时候惨叫出声了
+21:46 cleamooon: 怪：乖乖站好。羊驼子：啊♂
+21:55 varna: 想换把厉害点的剑了，手里这把有点力不从心
+21:56 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+21:58 iyzsong-m joined channel
+22:02 lh_cat quit:Quit: Connection closed for inactivity
+22:09 rapiz quit:Quit: Konversation terminated!
+22:47 lh_mouse: geordi, `
+22:47 geordi: error: stray '`' in program
+22:49 perr quit:Quit: Leaving
+23:56 Izumo: https://usercontent.irccloud-cdn.com/file/yaJ2xeNd/QQ%E5%9B%BE%E7%89%8720170403234649.jpg
+23:58 cleamooon: 这名字还好，不很玛丽苏

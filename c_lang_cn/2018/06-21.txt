@@ -1,0 +1,76 @@
+00:19 iyzsong quit:Ping timeout: 245 seconds
+02:47 CyrusYzGTt quit:Ping timeout: 264 seconds
+02:59 CyrusYzGTt joined channel
+03:39 cleamoon_ quit:Quit: Connection closed for inactivity
+07:02 zhangoke joined channel
+07:30 sixand joined channel
+09:36 whocares_2 joined channel
+09:38 whocares_2_ quit:Ping timeout: 276 seconds
+09:45 lh_mouse joined channel
+10:10 lh_ideapad joined channel
+10:20 leemeng joined channel
+11:01 \s_ quit:Ping timeout: 260 seconds
+11:07 \s joined channel
+11:07 \s quit:Changing host
+11:07 \s joined channel
+11:16 robot002 joined channel
+11:53 chenstrace quit:Ping timeout: 260 seconds
+12:04 sixand quit:Quit: sixand
+12:05 leemeng quit:Remote host closed the connection
+12:29 matchray quit:Ping timeout: 256 seconds
+12:50 lh_ideapad quit:Remote host closed the connection
+12:51 lh_ideapad joined channel
+13:10 robot002 quit:Ping timeout: 260 seconds
+14:07 lh_ideapad: geordi, -c { switch(a){ case 1: static constexpr int foo = 42; case 2: break; } } int a;
+14:07 geordi: Success
+14:07 lh_ideapad: geordi, use --clang
+14:07 geordi: Success
+14:07 lh_ideapad: geordi, -c { switch(a){ case 1: static int foo = 42; case 2: break; } } int a;
+14:07 geordi: Success
+14:07 lh_ideapad: geordi, -c { switch(a){ case 1: int foo = 42; case 2: break; } } int a;
+14:07 geordi: error: jump to case label
+14:07 lh_ideapad: geordi, --clang -c { switch(a){ case 1: int foo = 42; case 2: break; } } int a;
+14:07 geordi: error: cannot jump from switch statement to this case label
+14:07 lh_ideapad: geordi, -c { switch(a){ case 1: static int foo = 42; case 2: break; } } int a;
+14:07 geordi: Success
+14:07 lh_ideapad: geordi, -c --clang { switch(a){ case 1: static int foo = 42; case 2: break; } } int a;
+14:07 geordi: Success
+14:08 lh_ideapad: geordi, -c { switch(a){ case 1: constexpr int foo = 42; case 2: break; } } int a;
+14:08 geordi: error: jump to case label
+14:08 lh_ideapad: geordi, use --clang
+14:08 geordi: error: cannot jump from switch statement to this case label
+14:08 lh_ideapad: geordi, -c --clang { switch(a){ case 1: static std::string foo = "hello"; case 2: break; } } int a;
+14:08 geordi: Success
+14:08 lh_ideapad: geordi, -c  { switch(a){ case 1: static std::string foo = "hello"; case 2: break; } } int a;
+14:08 geordi: Success
+14:08 lh_ideapad: geordi,   { switch(a){ case 1: static std::string foo = "hello"; case 2: cout <<foo; break; } } int a = 2;
+14:08 geordi: <no output>
+14:08 lh_ideapad: geordi, use --clang
+14:09 geordi: <no output>
+14:09 lh_ideapad: geordi,   { switch(a){ case 1: static std::string foo = "hello"; case 2: cout <<foo; break; } } int a = 1;
+14:09 geordi: hello
+14:12 genesisfrank joined channel
+14:14 wenfeng joined channel
+14:29 genesisfrank quit:Quit: Leaving
+14:45 \u joined channel
+14:45 \u quit:Changing host
+14:45 \u joined channel
+15:17 jingjinghack quit:Remote host closed the connection
+15:17 jingjinghack joined channel
+15:42 \u is now known as matchray
+16:35 lh_ideapad: I have six locks on my door all in a row. When I go out, I lock every other one. I figure no matter how long somebody stands there picking the locks, they are always locking three.
+16:35 lh_ideapad: Read more at: https://www.brainyquote.com/quotes/elayne_boosler_105980
+18:56 Lorenzo_QZ joined channel
+19:12 Lorenzo_QZ quit:
+19:57 zhangoke quit:Quit: zhangoke
+20:10 lh_cat joined channel
+20:12 lh_mouse quit:Ping timeout: 268 seconds
+20:19 iyzsong joined channel
+20:47 whocares_2_ joined channel
+20:48 whocares_2 quit:Ping timeout: 264 seconds
+21:15 Taggnostr3_ joined channel
+21:15 Taggnostr3 quit:Ping timeout: 240 seconds
+21:16 lh_ideapad quit:Remote host closed the connection
+21:44 cleamoon_ joined channel
+22:38 chenstrace joined channel
+22:40 chenstrace quit:Client Quit

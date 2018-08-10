@@ -1,0 +1,155 @@
+00:13 Matsune quit:Ping timeout: 258 seconds
+00:29 lh_mouse quit:Ping timeout: 276 seconds
+00:44 hope1 joined channel
+00:46 whocares_2_ joined channel
+00:47 whocares_2 quit:Ping timeout: 272 seconds
+00:49 hope1 quit:Ping timeout: 252 seconds
+00:59 hope1 joined channel
+01:00 yimis quit:Quit: yimis
+01:05 hope1 quit:Ping timeout: 250 seconds
+01:08 hope1 joined channel
+01:14 hope1 quit:Ping timeout: 264 seconds
+01:31 slowcoach quit:Quit: slowcoach
+01:37 hope1 joined channel
+02:41 Mokou: 睡覺
+02:41 Mokou: 諸君武運
+02:41 Mokou quit:Quit: 睡覺
+03:05 hope1 quit:Ping timeout: 246 seconds
+03:08 hope1 joined channel
+03:34 hope1 quit:Ping timeout: 276 seconds
+03:36 hope1 joined channel
+06:37 yimis joined channel
+06:40 hope1 quit:Ping timeout: 240 seconds
+06:44 hope1 joined channel
+07:15 Mokou joined channel
+07:42 hope1 quit:Ping timeout: 246 seconds
+07:43 hope1 joined channel
+08:23 hope1 quit:Ping timeout: 260 seconds
+08:38 iyzsong joined channel
+08:48 * iyzsong 来一包辣条 (｢・ω・)｢
+09:31 leo_song joined channel
+09:48 AutoGavy joined channel
+09:53 OO_after joined channel
+10:07 AutoGavy: 我们这里下了
+10:07 AutoGavy: 哗啦哗啦
+10:08 AutoGavy: geordi, << bark; \ #if true \ string bark = "good day"; \ #else \ int bark = ; \ # endif
+10:08 geordi: good day
+10:08 iyzsong: _(:з」∠)_
+10:09 AutoGavy: AutoGavy, << bark; \ #if true \ string bark = "hi"; \ #else \ int bark = ; \ # endif
+10:09 AutoGavy: hi
+10:13 OO_after quit:Remote host closed the connection
+10:14 OO_after joined channel
+10:32 slowcoach joined channel
+11:25 iyzsong: (┙>∧<)┙へ┻┻
+11:52 hope1 joined channel
+11:59 hope1 quit:Ping timeout: 244 seconds
+12:02 hope1 joined channel
+12:10 hope1 quit:Ping timeout: 252 seconds
+12:19 AutoGavy quit:Quit: Connection closed for inactivity
+13:06 condy quit:*.net *.split
+13:06 Flandre` quit:*.net *.split
+13:06 FrankHB quit:*.net *.split
+13:09 Flandre` joined channel
+13:16 condy joined channel
+13:42 yimis quit:Quit: yimis
+14:23 lh_mouse joined channel
+14:41 lh_mouse quit:Read error: Connection timed out
+14:42 lh_mouse joined channel
+14:42 lh_mouse quit:Client Quit
+14:42 lh_mouse joined channel
+14:42 Mokou quit:Remote host closed the connection
+14:47 varna joined channel
+14:47 Izumo joined channel
+14:56 OO_after quit:Remote host closed the connection
+15:18 lh_cat joined channel
+15:21 lh_mouse quit:Ping timeout: 244 seconds
+15:23 wlemuel joined channel
+15:29 wlemuel quit:Remote host closed the connection
+15:30 wlemuel joined channel
+15:32 wlemuel quit:Remote host closed the connection
+15:35 lh_cat is now known as lh_mouse
+15:49 Mokou joined channel
+16:21 lhanjian: 嗷呜
+16:27 lh_mouse quit:Read error: Connection reset by peer
+16:27 iyzsong: (┙>∧<)┙へ┻┻
+16:27 lh_mouse joined channel
+16:40 Mokou quit:Read error: Connection reset by peer
+16:41 Mokou joined channel
+17:19 whocares_2 joined channel
+17:21 whocares_2_ quit:Ping timeout: 276 seconds
+18:19 Izumo quit:Quit: Connection closed for inactivity
+19:07 hope1 joined channel
+19:11 hope1 quit:Ping timeout: 244 seconds
+19:36 FrankHB joined channel
+19:47 whocares_2 quit:Remote host closed the connection
+19:48 whocares_2 joined channel
+20:26 hoxily joined channel
+20:31 lh_mouse: varna, ping
+20:32 AutoGavy joined channel
+20:45 lh_mouse: AutoGay!
+20:48 lh_cat joined channel
+20:50 lh_mouse quit:Ping timeout: 244 seconds
+20:56 yimis joined channel
+21:07 hope1 joined channel
+21:08 lh_cat is now known as lh_mouse
+21:13 hope1 quit:Ping timeout: 276 seconds
+21:17 varna: lh_mouse: pong
+21:17 lh_mouse: varna, 打个比方。
+21:18 lh_mouse: 现在需要一次性创建一百个不相关的协程。
+21:18 lh_mouse: 那么你是如何处理栈的创建。
+21:18 lh_mouse: 创建协程时候分配栈还是首次调度时候分配栈。
+21:18 varna: 创建时分配，这里我没做惰性创建
+21:19 lh_mouse: 如果同时创建 1w 个呢……
+21:19 FrankHB: 打死用户。
+21:19 varna: BOOOOOOOOOOM, 如果每个协程都有1MB栈
+21:19 lh_mouse: 这是完全可能的。
+21:19 yimis quit:Quit: yimis
+21:19 lh_mouse: FrankHB, 你自己算算，这实际上并不多。
+21:19 varna: 不仅是完全可能的，而且是应当鼓励的
+21:19 varna: 耗这个提法有意义
+21:20 varna: 虽然10k * 64k这个范围我觉得还算可以接受，但也不少了
+21:20 varna: 而且stdio真的能把我的栈干穿
+21:22 * hoxily 爆 varna 
+21:23 lh_mouse: ヲ的栈是 256
+21:23 lh_mouse: k 的。
+21:24 yimis joined channel
+21:24 varna: 我的栈尺寸是用户定义的
+21:24 varna: 之前我作死，给一个router coroutine搞了数KB栈，然后就被sprintf干穿了
+21:25 lh_mouse: munmap 要长度……
+21:25 varna: 他会有长度的，大丈夫
+21:26 iyzsong: _(:з」∠)_
+21:26 Mokou_ joined channel
+21:26 Mokou quit:Disconnected by services
+21:26 Mokou_ is now known as Mokou
+22:11 cleamoon joined channel
+22:14 cleamoon: http://www.zhihu.com/question/47727905/answer/108099291
+22:17 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/sw/9n_170562.jpg@596w_1l.jpg
+22:39 AutoGavy quit:Quit: Connection closed for inactivity
+22:50 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+22:57 hope1 joined channel
+23:15 Mokou: http://www.bilibili.com/video/av5263217/
+23:29 cleamoon: 这个牛
+23:50 hoxily quit:Quit: Leaving
+23:52 Mokou: http://ww3.sinaimg.cn/mw690/696e967cgw1f5p2rp6pmfj20gn0brjs6.jpg 据说这是关东三大迷换乘之一 小田急足柄站到JR东海御殿场线的足柄站 JR东海：“本站可换乘小田急线 换乘的乘客请爬山” 徒步换乘需要340分钟
+23:53 varna: 啊，足丙
+23:53 varna: 好怀念的名字
+23:53 Mokou: 這艦狗
+23:53 * varna poies
+23:54 Mokou: http://ww3.sinaimg.cn/mw690/795383cfjw1f5p1rzu2oqj21kw23ue81.jpg 隔壁老王家
+23:54 varna: 23333
+23:56 varna: 说起来，朝潮改二丁的衣服很好看啊……
+23:56 varna: 唉唉高日德田中
+23:57 Mokou: 朝潮改二我都沒看
+23:57 varna: 超可爱
+23:57 stdstx quit:Remote host closed the connection
+23:57 varna: Lv70/Lv85
+23:57 stdstx joined channel
+23:57 varna: 我那只只能改二
+23:58 Mokou: 我都改二不了
+23:58 varna: 数值骇人，我觉得舰C药丸
+23:58 Mokou: 艦C乙烷
+23:58 Mokou: puuuuuuu
+23:58 Mokou: 68 + 92，你逗我
+23:59 varna: 让你明白POI不过是条狗
+23:59 Mokou: 真可怕
+23:59 varna: 以前田中还会情怀，现在干脆连情怀都扔了

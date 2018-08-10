@@ -1,0 +1,722 @@
+00:55 k1mibk quit:Remote host closed the connection
+01:16 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150827193320]
+01:35 ASenR quit:Ping timeout: 265 seconds
+02:19 lh_mouse quit:Read error: Connection reset by peer
+02:43 cleamoon joined channel
+02:50 boosure joined channel
+03:28 whatofor quit:Read error: Connection reset by peer
+08:31 hoxily joined channel
+08:43 sou_ joined channel
+09:12 FrankHB joined channel
+09:23 cleamoon quit:Ping timeout: 246 seconds
+09:24 lh_mouse joined channel
+09:48 x-iyzsong joined channel
+09:49 sou_ quit:Ping timeout: 256 seconds
+10:00 whatofor joined channel
+10:09 sou_ joined channel
+10:20 varna joined channel
+10:21 Stevearzh joined channel
+10:21 Stevearzh quit:Changing host
+10:21 Stevearzh joined channel
+10:35 hope1 joined channel
+10:43 lh_mouse: geordi, -c int k; int foo(){ if(k == 1){ return 0} }
+10:43 geordi: error: expected ';' before '}' token
+10:43 lh_mouse: geordi, -c int k; int foo(){ if(k == 1){ return 0; } }
+10:43 geordi: warning: control reaches end of non-void function
+10:43 lh_mouse: geordi, -c int k; int foo(){ if(k == 1){ return 0; } if(k != 1){ return 1; } }
+10:43 geordi: Same warning.
+10:51 hoxily joined channel
+10:53 hoxily quit:Client Quit
+11:27 ahe joined channel
+11:43 sou_ quit:Ping timeout: 246 seconds
+12:02 sou_ joined channel
+12:14 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=0ed4f859a08b87d65042ab1737092860/21a4462309f7905225ea0d560df3d7ca7acbd5e5.jpg?v=tbs 贪吃蛇
+12:20 hope1: 这个AI怎么写……
+12:21 varna: 这如果是AI的话，有点不好解释他的小扭……
+12:24 hope1: 然而不是AI的话，这个至少也得预先计算吧…… 丧心病狂
+12:24 varna: 我宁可相信这是个算力惊人的玩家
+12:24 varna: 不过我有个问题
+12:25 varna: 对贪吃蛇来说，是否存在这样的走法：1. 版面内有至少一格空地，则不会死；2. 有限充分多步内可以走过每一个格子
+12:27 hope1_ joined channel
+12:31 hope1_: 看起来似乎是可以的? 就是说这种正方形的贪吃蛇总是有解
+12:33 hope1_: 应该得通过预定轨迹阻止食物在某些位置生成才行
+12:33 varna: 需要阻止么？
+12:34 varna: 我给出的2就是希望能够不筛选食物生成点，如果位置不好，就走有限充分多步覆盖一次版面
+12:42 libhanjian joined channel
+12:43 varna: 对了，说个花边
+12:43 varna: 我稍稍统计了一下extended epinions数据集里的信任关系
+12:44 varna: 信任关系以(from, to, trust)这样的三元组给出，from和to是用户，trust是信任或者不信任的二元表示
+12:44 varna: 只考虑A->B->C A->C的有向三角形关系
+12:45 varna: 没有A->C, 也即关系压根不可能传递的场合大约是8/9
+12:45 varna: 而在1/9可能传递的场合中，还有千分之八的巧合：A->B->C A->C中的所有关系都是“不信任”
+12:46 varna: 社交网络的信任传递还真是可怜……
+12:47 x-iyzsong: 朋友的朋友毕竟还是陌生人呀
+12:47 varna: 这里还不完全是交友
+12:47 libhanjian: +
+12:47 varna: epinions是商品评论网络
+12:47 varna: 也即，用户可以参考内容
+12:50 varna: 笑话：明明是个富二代，我却自己上班挣钱，明明可以开豪车，我却每天挤公交，明明可以靠脸吃饭，而我自己努力着，这就是我和明明的区别。 
+12:50 x-iyzsong: 2333
+12:51 libhanjian quit:Remote host closed the connection
+12:55 varna: 去吃饭之前我看一眼正向传递究竟有多少
+12:56 varna: 超过90%
+12:57 varna: 9594233/10961993 这是在那1/9当中的比例
+12:57 varna: 总比例是9594233/95840323, 突破10%
+13:00 sismvg joined channel
+13:01 sismvg: 咳咳 nsfw
+13:01 sismvg: http://i3.tietuku.com/5672c53894f14928.jpg
+13:01 hoxily quit:Quit: Leaving
+13:06 libhanjian joined channel
+13:24 x-iyzsong joined channel
+13:43 xxxxxxxx joined channel
+13:47 xxxxxxxx: 贪吃蛇那个似乎确实是AI
+13:48 xxxxxxxx: 以前听人吹过
+13:51 xxxxxxxx: 正方形场地的话似乎总能给出一种分形的走法(如果长度够长)就占据整个场地 
+13:53 xxxxxxxx: 主要似乎就是不停把一直的边变成U型 已覆盖四个块 然后再对每小块分割 采取相同的做法 最后整个正方形都能铺满
+14:14 sismvg: 来个好玩点的吧，蛇每次吃掉一个方块以后会让自己的身体长度减去一，方块会不断的出现，尽可能让蛇获得久
+14:15 sismvg: iphone6s..每年都换个颜色和屏幕就拿出来卖..
+14:25 varna: xxxxxxxx: 分形的啊？
+14:30 varna_ joined channel
+14:31 varna quit:Disconnected by services
+14:33 cleamoon joined channel
+14:38 xxxxxxxx: varna: 不过分形的那个方式不太适合贪吃蛇 正好这里有个文http://www.matrix67.com/blog/archives/249
+14:39 varna: m67 orz
+14:40 varna: 原来是这样的原理么……
+14:41 xxxxxxxx: 估计不是这样的原理 贪吃蛇那个gif明显不采用这种怂比策略
+14:42 varna: xxxxxxxx: 爆
+14:42 ahe quit:Ping timeout: 250 seconds
+14:42 xxxxxxxx: 至少它是会直接往点那边跑的
+14:48 cleamoon: 贪吃蛇的自动程序吗，我都见过呀......
+14:51 xxxxxxxx: http://tieba.baidu.com/p/4020997384 基佬们开始幻想自己可以生孩子了
+14:54 hope1 quit:Ping timeout: 250 seconds
+14:54 xxxxxxxx: 膜法师 这个词好!
+14:58 varna: 233333
+15:00 xxxxxxxx: 恶喵的奶爸: 作为膜法师，我以为有个华莱士炸鸡已经很让人激动了，没想到广州市的荔湾区居然还有一家宝华面店！而且这家还做牛蛙。。。
+15:00 hope1 joined channel
+15:02 varna: ...
+15:03 xxxxxxxx: http://weibo.com/p/1001603865585485259500
+15:06 xxxxxxxx: http://ww2.sinaimg.cn/bmiddle/94900170gw1evvg0v3mt6j20hs5sq1a3.jpg
+15:06 varna: 作大死……
+15:07 cleamoon: .......
+15:09 varna: 噗，这月的4-5只劝退一次
+15:09 cleamoon: 论作死的自我修养
+15:10 varna: 掉个RJ...
+15:17 varna: 下周我试试洗地5-5
+15:18 varna: 这次简直都神了，用了最多六千弹药就打爆4-5
+15:18 sou_ quit:Ping timeout: 250 seconds
+15:20 xxxxxxxx: http://tieba.baidu.com/p/3937403564 41楼 帝球不光彩的历史系列
+15:24 hope1_: mogician
+15:24 varna: 我被sudo坑的时候是手一滑，sudo startx
+15:24 varna: x瞬间启动，等我意识到.Xauthority的权限和c o o k i e变化的时候已经晚了
+15:24 * sismvg 日常root
+15:24 varna: 那整条命令是这样的：sudo systemctl startx wicd.service
+15:25 varna: 居然执行了
+15:26 hope1 quit:Quit: Lost terminal
+15:27 sismvg: georid,{struct me{}; auto* miss=new m{}; delete miss;}
+15:27 geordi: error: 'm' does not name a type
+15:27 sismvg: georid,{struct me{}; auto* miss=new me{}; delete miss;}
+15:27 geordi: <no output>
+15:27 sismvg: georid,{struct me{}; auto* miss=new me{}; delete[] miss;}
+15:27 geordi: error: tried to delete[] pointer returned by non-array operator new. Aborted
+15:29 iyzsong quit:Ping timeout: 250 seconds
+15:30 cleamoon quit:Ping timeout: 246 seconds
+15:30 xxxxxxxx: 【印度政客称强奸案频发或因中国炒面】强奸案频发让印度国家形象受损，部分政客认为错不在印度，“罪魁祸首”从广告、肉到手机，中国炒面也不幸躺枪。有印度政客称， “据我了解，快餐会诱发强奸发生，炒面会导致激素失衡，进而唤醒一种沉溺于诸如强奸这类行为的冲动” 。你这么“博学”你妈知道吗？
+15:31 varna: 噗
+15:32 sismvg: 其实这是高端黑
+15:32 varna: 我是不是去吃点炒面，就能找到女朋友了？
+15:33 sismvg: 接印度的强奸问题来批评中国的食品安全问题
+15:33 sismvg: 借
+15:36 x-iyzsong: 说得好 我选择炒面
+15:38 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=5cfd2e20d71373f0f53f6f97940e4b8b/03b1742c11dfa9ec07ade04c64d0f703908fc149.jpg
+15:38 sismvg: 有谁也遇到了百度乱码吗
+15:39 xxxxxxxx: 英国政客数学不好 是否由于某些历史原因 对印度政客产生了不好的影响?
+15:40 varna: http://tieba.baidu.com/p/4032416983?see_lz=1 笑尿
+15:44 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=cfd6ab5aaaaf2eddd4f149e1bd110102/f12030c2d56285355c02077d96ef76c6a6ef6379.jpg
+15:44 sismvg: 这张不对啊，应该是要想办法变回船才对
+15:51 xxxxxxxx: 长门....
+15:52 varna: 长门简直乐
+15:53 sismvg: http://tieba.baidu.com/p/4032855400
+15:53 sismvg: 亚人动画化决定,2016 春季
+15:53 varna: 另外昨天发现一个悲剧
+15:53 varna: 下了个博德之门2 Enhanced Edition
+15:54 varna: 结果只有中文，字体做得巨难看，翻译恶劣，还换不掉字体……
+15:54 varna: PLAY强行变成“播放”，他们一准没做UI的校对
+15:55 varna: 我严重怀疑那是游侠的伙计们干的
+15:57 sismvg: play怎么能翻译成播放呢。。
+16:00 varna: 因为不知道是什么按钮上的东西
+16:00 varna: 游侠的杰作我至今印象深刻
+16:01 varna: "Lightning 1-1, you are clear to engage."
+16:01 varna: “闪电1-1，很显然你是被雇佣的”
+16:01 varna: 都吓迷糊了
+16:02 xxxxxxxx: @连这句话都不删就转了
+16:05 sismvg: 那原来是什么意思呢?
+16:07 varna: you are clear to engage -> 允许接敌
+16:07 sismvg: be clear to do> 
+16:10 hope1_: 23333
+16:12 xxxxxxxx: 所以暗黑3国服的难度到底是怎么设计的啦，困难都没有Torchlight 2的普通难（ <- 球证实
+16:13 cleamoon joined channel
+16:14 sismvg: 说到难度。。有谁在暗黑之魂的第一关的时候不上楼就杀死第一boss的吗
+16:23 libhanjian quit:Remote host closed the connection
+16:26 cleamoon: 还是iwanna好玩
+16:26 cleamoon: 顺便推荐super meat boy
+16:27 FrankHB quit:Remote host closed the connection
+16:28 FrankHB joined channel
+16:28 FrankHB quit:Read error: Connection reset by peer
+16:29 FrankHB joined channel
+16:31 FrankHB quit:Read error: Connection reset by peer
+16:31 FrankHB joined channel
+16:45 sou_ joined channel
+16:48 libhanjian joined channel
+16:49 x-iyzsong: 下午好~
+16:50 libhanjian: 下午好
+16:50 cleamoon: x-iyzsong: 爆
+16:51 x-iyzsong: cleamoon: 你就是受虐狂魔啊
+16:51 varna: x-iyzsong: 爆
+16:52 x-iyzsong: 好无聊啊 <_<
+16:52 libhanjian quit:Remote host closed the connection
+16:54 xxxxxxxx: x-iyzsong指出 varna的爆都难以给他造成什么感觉
+16:54 cleamoon: 两个人爆都已经无感了
+16:54 varna: 还得出动基头四才行
+16:54 varna: xxxxxxxx 就是你了！
+16:54 cleamoon: 去吧，基王，就决定是你了
+16:57 x-iyzsong: >.<
+17:00 xxxxxxxx: http://tieba.baidu.com/p/4033118301 谜一般的课程
+17:00 cleamoon: 不愧是基王，上了就有效果
+17:03 cleamoon: 今天看到一个很醉的广告，两个兄贵面对面蹲举举重，然后就亲上了，广告是卖内裤的………
+17:05 cleamoon: 我觉得人类前景很不好，大家都不要做人了
+17:08 varna_ joined channel
+17:08 varna quit:Disconnected by services
+17:08 varna_ quit:Client Quit
+17:09 varna joined channel
+17:18 cleamoon quit:Ping timeout: 246 seconds
+17:20 FrankHB quit:Read error: Connection reset by peer
+17:26 sou_ quit:Remote host closed the connection
+17:48 cleamoon joined channel
+18:04 boosure quit:Quit: Get your hand off of it
+18:05 hope1 joined channel
+18:11 cleamoon quit:Ping timeout: 246 seconds
+18:13 xxxxxxxx: http://www.bilibili.com/video/av757850/ 我觉着 这个可以当BGM用
+18:14 varna: xxxxxxxx: 爆
+18:15 sismvg: QAQ-1 23333
+18:15 xxxxxxxx: 建议优先空降1P 3:33
+18:26 cleamoon joined channel
+18:28 cleamoon: 9月9日，沈阳一广场上一家火锅店员工跪地磕头，高喊“感谢老总，给我工作!” 引起围观市民反感、愤怒。律师认为，这是践踏劳动者权益涉嫌违法
+18:29 varna: 那喊什么，“拥抱变化”？
+18:31 cleamoon: 喊 田中飞妈
+18:33 varna: 爽命由爽不由田 田若灭爽爽代田
+18:33 xxxxxxxx: http://bbs.3dmgame.com/thread-3643403-1-1.html
+18:34 cleamoon: 爽是谁？
+18:34 sismvg: 这位仁兄叼
+18:34 sismvg: 能弄到C4材料？
+18:37 cleamoon: 一硝二黄三木炭，四脑五胆六有钱
+18:38 sismvg: 还要化学实验室
+18:38 cleamoon: 那真不需要
+18:39 sismvg: 这个年纪能买到雷管？
+18:39 varna: cleamoon: 爽是爽哥，就是夏活打了几天意识模糊撞桌角、胸口骨裂的那位十二试炼哈里发
+18:39 varna: sismvg: 一硝二磺三木炭要什么雷管……
+18:39 cleamoon: .........
+18:40 sismvg: c4他用什么引爆..
+18:40 varna: 别逗
+18:40 varna: 这不是C4
+18:40 varna: 这混合物跟化肥的爆炸力不知道哪个强点
+18:40 cleamoon: 那是屎弹粒
+18:41 cleamoon: 似乎还是这个强
+18:41 varna: C4破事很多，现在不说雷管了，你根本找不到制备三硝基甲苯的中间体
+18:41 Mokou joined channel
+18:42 cleamoon: 上哪买硫磺倒真是问题，至少在帝都是问题
+18:42 varna: 至于实验室流程也很麻烦，催化剂估计也不好买；那些都买不到，有机反应变成什么破样子自己看着办
+18:42 cleamoon: 所以还不如几桶汽油好用
+18:46 hope1 quit:Ping timeout: 264 seconds
+18:47 xxxxxxxx: 汽油怎么炸?
+18:47 varna: 正常的物理爆炸
+18:47 varna: 不是释放化学能的猛烈爆炸
+18:49 xxxxxxxx: 那是个怎么炸法...
+18:49 cleamoon: 但是屎内有大量汽油很危险
+18:50 cleamoon: 其实最好弄的，带几麻袋面粉......
+18:51 sismvg: 等汽油散发够了以后放点粉笔灰，一点
+18:51 varna: xxxxxxxx: 小空间内点燃
+18:52 cleamoon: 或者越来越好用的，带一堆现充
+18:52 xxxxxxxx: 汽油直接点燃不会炸的 似乎
+18:52 sismvg: 线充才不和你走..
+18:52 cleamoon: 但是会燃烧，蒸发了很多的话小空间会炸
+18:53 sismvg: 突然想起来最近看到几个人在加油站里抽烟，吓得我赶快跑远了。。
+18:55 cleamoon: 是的，竟然敢抽烟，太不注意肺部健康了
+18:55 xxxxxxxx: 加油站应该也不至于汽油泄露到爆炸的程度吧...
+18:55 varna: 不至于，但万一死神来了……
+18:56 FrankHB joined channel
+18:56 cleamoon: 你可以故意往出喷呀
+18:56 cleamoon: 比如看到现充了
+18:56 varna: 我觉得，这里需要更多的高能瓦斯
+18:57 xxxxxxxx: 然而只是往外喷的话 点燃大概也就像喷火器一样...
+18:57 * sismvg 烧菜
+18:57 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+18:57 cleamoon: 看到高能瓦斯我就觉得是水藻
+18:58 xxxxxxxx: 是埋藏在地下的没洗的臭袜子
+18:58 cleamoon: 不至于，喷的太慢，基本是烧自己
+18:58 varna: 算了到此为止……流改应该够用了，剩下的几组不刷了
+18:58 cleamoon: 话说，在月饼之后失忆之前讨论这么和谐正义安全稳定的事物好吗
+18:59 varna: 不好，我们该讨论些别的，把巨基爆了吧
+18:59 cleamoon: xxxxxxxx, 爆
+18:59 xxxxxxxx: 我觉着汽油危险八成是在拍电影
+18:59 varna: xxxxxxxx: 爆
+19:01 cleamoon: 咱们可以讨论更加安全的话题，比如怎么制造燃烧瓶
+19:01 cleamoon: 首先需要一个火系法师
+19:03 varna: 这个好找
+19:03 xxxxxxxx: http://mil.news.sina.com.cn/p/2009-02-27/1037543736.html
+19:03 varna: 我们甚至可以找到一个火老鼠，把他关到瓶子里
+19:04 cleamoon: 火山驼
+19:04 xxxxxxxx: 然而并没有提怎么做 不过我印象中似乎是塞块布堵住瓶口点着了扔就行了
+19:04 cleamoon: 我怎么看这瓶子是作死呀
+19:04 cleamoon: http://www.pokemon.name/w/index.php?title=%E7%81%AB%E5%B1%B1%E9%A9%BC&redirect=no
+19:05 varna: 卧槽
+19:05 xxxxxxxx: http://v.163.com/zixun/V7M3CBCH5/V82V3T4RE.html
+19:05 hope1_ quit:Ping timeout: 244 seconds
+19:05 xxxxxxxx: 卧槽 这个是玩真的!
+19:07 hope1 joined channel
+19:07 hope1 quit:Client Quit
+19:07 hope1 joined channel
+19:09 xxxxxxxx: 喷火驼 巨沼怪你怕不怕
+19:11 cleamoon: 沼跃鱼你怕不怕
+19:11 varna: 妮可妮可妮怕不怕
+19:11 xxxxxxxx: 羊驼子又在妮可妮可妮了
+19:11 varna: 我仍然坚持认为，巨基应该对屏幕表演妮可妮可妮
+19:13 cleamoon: 饥渴饥渴基
+19:15 iyzsong joined channel
+19:15 iyzsong quit:Changing host
+19:15 iyzsong joined channel
+19:16 iyzsong: VPS崩了 >.<
+19:16 cleamoon: iyzsong, 爆
+19:21 xxxxxxxx: varna: 羊驼快看! http://live.bilibili.com/22361
+19:23 cleamoon- joined channel
+19:25 cleamoon quit:Ping timeout: 264 seconds
+19:26 varna: 马勒戈壁……
+19:26 varna: 目害了
+19:26 cleamoon-: 室友被爆五年发现是妹子？
+19:28 iyzsong: 什么鬼
+19:28 hope1 quit:Quit: Lost terminal
+19:29 varna: 下一次远征回来的时候，我稍微试点花样
+19:30 varna: 还剩3.2k弹药，应该能打几盘
+19:30 ASenR joined channel
+19:30 cleamoon-: 我还有600弹药
+19:32 varna: 我试试2bb4cv 5-5
+19:32 varna: 算了，现在就试试
+19:33 varna: 算一下制空力
+19:34 varna: 435
+19:34 varna: 七组战斗机就可以达到435……
+19:35 cleamoon-: ……
+19:36 varna: 2bb4cv全队高速
+19:36 Mokou: 吾儿，当你出生的那一天，整个伦敦的森林都在低语着这个名字 “查尔斯”， 真正的胜利，是活得比别人更久， 我告诉你这些，是因为，总有一天，你的生命将走到尽头，而我，将继续为王
+19:37 varna: 233333333
+19:37 varna: 今天女王是不是变成了世界上在位时间最长的国家元首？
+19:38 Mokou: 从昨天开始
+19:38 varna: 为女王举杯！
+19:38 Mokou: 昭和天皇在位多久来着
+19:38 varna: 不知道……
+19:38 xxxxxxxx: 女王?
+19:39 varna: 现任的，伊丽莎白二世
+19:40 Mokou: 啊，似乎只是英国在位时间最长的君主……
+19:40 Mokou: 路易十四在位72年
+19:40 xxxxxxxx: 72年....
+19:40 Mokou: 英法真是什么事都能掐上……
+19:40 varna: 我先续一秒
+19:41 varna: 大家都续续，威廉王子就有前途了
+19:41 varna: 查尔斯可以储一辈子
+19:41 cleamoon-: 2333333
+19:42 varna: 太可怕了，这一点点战机就可以凑出比以前还多的制空力……
+19:43 Mokou: 毕竟四架飞机就100制空……
+19:43 varna: 算了我加一点制空
+19:43 varna: 504出门
+19:43 cleamoon-: 女王再干三十年
+19:44 varna: 恥球保佑女王
+19:44 varna: 出击
+19:45 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+19:45 varna: 开幕只炸沉2……
+19:45 varna: 算了，好歹是通过了
+19:46 varna: 第二点，看看是喔改还是喔酱
+19:46 varna: 估计是喔改
+19:46 varna: 果然
+19:47 varna: 看看门神
+19:48 varna: 复纵
+19:48 varna: 赤城……
+19:48 cleamoon-: orz
+19:48 varna: 不行，还是吃雷大破了
+19:49 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=5e3f52b2afec8a13141a57e8c7039157/baa7e1c27d1ed21b07e758b8ab6eddc451da3f77.jpg
+19:50 varna: 修一下再打打看
+19:51 varna: 5-5总是这么辛苦
+19:52 varna: 哦才
+19:52 varna: 哦操
+19:52 varna: 出门劝退……
+19:52 varna: 太干脆了
+19:52 varna: 飞龙被一炮爆了
+19:53 Mokou: 想我制空确保大破俾斯麦
+19:54 varna: 这盘不太正常，开幕全miss我还以为是航向不好
+19:54 Mokou: 总感觉秋水很可爱啊……
+19:55 varna: 残念，反正我总得用比别人好很多的阵容去对付敌人才行
+19:55 varna: 这次是榛名小破，挺住没问题的
+19:56 Mokou: 似乎邪教徒们开始判教了……
+19:56 varna: 怎么回事
+19:56 Mokou: 似乎是因为没法玩
+19:56 Mokou: 至于为什么没法玩
+19:57 varna: 门神safe
+19:57 varna: 哦不对
+19:57 varna: 第二点safe
+19:57 Mokou: 你看看《仙剑奇侠传：泰坦陨落》
+19:57 varna: LL能出什么事……
+19:57 varna: 哦操
+19:57 varna: 单纵
+19:57 varna: 糟了
+19:57 varna: 大家挺住
+19:57 varna: ……日，太准了
+19:58 Mokou: 玩个卡牌收集手游，玩完以后手机可以顺便当炉子使
+19:58 Mokou: 你怎么办……
+19:58 cleamoon-: 想慢怎么都能慢
+19:58 varna: 为了让我断念，还专门炮击送大凤上路……
+19:58 Mokou: ……
+19:58 Mokou: 大凤必须刷闪
+19:58 cleamoon-: 想快
+19:58 Mokou: 不可能
+19:59 ahe joined channel
+19:59 varna: 在那之前，还有加贺桑直接满血一雷大破的标准剧情……
+19:59 Mokou: 正版加贺
+19:59 Mokou: 说起来，Zak这次会不会弃坑啊……
+19:59 Mokou: 另外Zak似乎并没有说chinese get out
+19:59 Mokou: 而是有个天朝人在twitch用中文骂他
+20:00 cleamoon-: 噗
+20:00 Mokou: 然后他说有意见用英文骂，别拿语言当挡箭牌，不然滚蛋
+20:00 varna: 再来
+20:00 Mokou: 然后似乎有人只听懂chinese和get out……
+20:00 varna: 被雷爷打爆是正常的
+20:01 varna: 反正我也不缺图纸，慢慢探讨
+20:01 cleamoon-: 我觉得现在兲朝的种族主义水平和元首差不多
+20:01 varna: 哦操
+20:01 varna: T有利……
+20:01 cleamoon-: 不缺图纸orz
+20:01 varna: 这道中太魔性了
+20:01 Mokou: 我觉得重要的其实是肉食者怎么想
+20:01 varna: 啊
+20:02 varna: 他娘的……
+20:02 cleamoon-: 肉食者表示好久没吃涮羊肉了
+20:02 varna: 打成这样可不太好
+20:03 cleamoon-: 话说东北有涮羊肉吗
+20:03 varna: 全员补闪
+20:03 varna: 没去吃过
+20:03 varna: 出门劝退率太高了啊
+20:04 varna: 2/3的概率抽到一个航母，然后一炮打上去
+20:04 varna: 这只能补点闪了
+20:04 Mokou: 航妈当然要刷闪
+20:04 Mokou: 毕竟铁皮棺材
+20:04 Mokou: 你看看WoWS
+20:05 Mokou: 我家大凤现在不过63点回避……
+20:05 varna: 这样再打下去近乎鲁莽
+20:06 varna: 如果刷过闪之后的出门损害还是很糟糕，大概5-5我还是没法压低消耗
+20:06 Mokou: 太太这语音……
+20:06 Mokou: 居然开始悲秋了
+20:07 varna: 对5-5的态度，现在我更多是取乐的
+20:07 varna: 那两百点战果给我，我还是当个大将
+20:07 Mokou: 我要勋章……
+20:07 Mokou: “秋天，是呢瑞鹤，秋天总是给人一种有点寂寞的感觉呢。嗯，现在没事了哦。 ”
+20:09 varna: 现在4-5的形势比5-5好了
+20:09 varna: 至少有一点提升：可以空确
+20:09 varna: 这就能提高己方攻击能力
+20:09 varna: 爆炸之前多带走一个也好
+20:11 Mokou: 轮形中破金撸大破大尻
+20:13 varna: 希望刷了闪之后能够有一次看上去靠谱的通过
+20:14 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=e868306e978fa0ec7fc764051696594a/26e6e86eddc451da0b73feb6b0fd5266d116329d.jpg
+20:15 varna: 连爷爷都不放过……
+20:15 Mokou: 开幕炸了喔酱270+伤害……
+20:16 varna: 哦我知道为什么吃瘪了
+20:16 varna: 刚才不吃瘪我也得掉沟里
+20:16 Mokou: ……
+20:18 Mokou: 噗
+20:18 Mokou: 掉了个太太
+20:20 varna: 欧rz
+20:20 cleamoon-: orz
+20:20 Mokou: 当年我刷了多久
+20:20 cleamoon-: 活动时我才捞了6个太太
+20:21 Mokou: 我想把这个欧皇踢出去
+20:21 varna: 我继续刷闪
+20:21 cleamoon-: 谁让你不捞av
+20:21 Mokou: 你去E3甲捞一个呗？
+20:21 varna: 捞不动
+20:22 cleamoon-: 我才不打甲
+20:22 varna: E3丙我连考虑都不考虑，然而E3甲……消耗太大了
+20:22 varna: 这事我只能说我不后悔
+20:22 cleamoon-: 丙我能做到三斩杀不修船
+20:23 varna: 现在看来，我还是需要更强的部队
+20:23 varna: 甲等终归会越来越难的，我可以延长一下我苟延残喘的时间
+20:23 cleamoon-: 你需要三套武大北井
+20:24 Mokou: 三套武大有什么用么
+20:24 cleamoon-: 比这次难？
+20:24 Mokou: 就那这次说吧
+20:24 Mokou: 有什么用么
+20:24 cleamoon-: 省得锁船
+20:24 varna: 不必
+20:24 varna: 我不害怕锁船
+20:24 Mokou: 所以你觉得我打不过甲的问题出在锁船上？
+20:25 varna: 我甚至可以直接把长陆程度的战舰两只一组甩到E5
+20:25 cleamoon-: 黑旗需要多洗脸
+20:25 varna: 这事我不太担心，毕竟如果我被锁死了，那不会有多少人幸存
+20:25 cleamoon-: 洗掉几层皮就都一样了
+20:25 varna: 真发生那种事了，战术丙就好
+20:26 varna: 我还是需要一批不错的二线
+20:26 varna: 要有重巡、轻母和驱逐舰
+20:26 Mokou: 友永君、村田君、江草君都恢复记忆了
+20:26 varna: 然后让稻芳带着他们去打打前面的关卡
+20:27 Mokou: 轻母、DD+
+20:27 Mokou: 不过我还是先练正航
+20:27 varna: 轻母我完全没动过的就是千岁航了
+20:27 hope1 joined channel
+20:27 varna: 连留都没留
+20:27 cleamoon-: 我估计以后简单的活动船打谁都能选，难的活动，呵呵，指名船队
+20:28 varna: 那种不至于，但点名彩蛋应该总会有的
+20:28 varna: 这次也有
+20:28 cleamoon-: 有吗
+20:28 varna: E3的带路是可以点名也可以按舰种的
+20:28 Mokou: E6
+20:28 varna: E6是点名带沟
+20:29 Mokou: 带进死路
+20:29 Mokou quit:Quit: 重启去win
+20:29 cleamoon-: 那算什么，以后弄几个不带文月不给你斩
+20:30 varna: 那只是单纯的不动大脑而已
+20:30 varna: 我觉得作出这种企划的人自己都会觉得侮辱了自己的智力水平
+20:31 varna: 说起文月，我手头似乎有一个五十多还不是六十多的……
+20:31 xxxxxxxx: cleamoon-: 我觉着天朝小将们的种族观念和元首是差不多的
+20:31 Plough joined channel
+20:31 varna: 不如元首
+20:31 cleamoon-: 我觉得提督管不了自己的船做什么已经够侮辱智力的了
+20:31 varna: 没办法，营销
+20:32 varna: 战略游戏永远卖不大
+20:32 Plough: 猴头连苍蝇都不能打
+20:32 Xilzzert joined channel
+20:33 varna: 燃弹钢各剩三千多
+20:33 cleamoon-: 如果是我就加入双睦月带路
+20:33 varna: 看看我能走多远
+20:33 varna: 我军、与敌……管他是什么部队交战
+20:33 varna: 对了，5-5头目S胜有初风
+20:34 cleamoon-: 不是带路，是不带绝对不进boss，带了不绝对进
+20:34 varna: 这不就是3-2么，没意思
+20:34 cleamoon-: 为了恶心人而已
+20:34 Plough: 我不去捞
+20:34 Plough: Nangcr大概会有兴趣
+20:35 varna: 不过这个5-5阵容如果能走通，有两个好处
+20:35 varna: 其一，刷闪容易；其二，消耗少
+20:35 Xilzzerts quit:Ping timeout: 246 seconds
+20:35 varna: 航母出去暴虐1-1两圈还是很娱乐的
+20:36 varna: 啊，喔改……
+20:36 varna: 看看门神
+20:36 Xilzzerts joined channel
+20:36 varna: 我操
+20:37 varna: 又忘了阿号……
+20:37 varna: 我感觉要中奥义啊
+20:37 Xilzzert quit:Ping timeout: 264 seconds
+20:37 xxxxxxxx: 羊驼要被人舔胸?
+20:37 varna: 奥义「顶多掉沟里」
+20:37 varna: 日……
+20:37 varna: 这次是飞龙
+20:38 varna: 单纵T有利，我认了……下次再来
+20:38 lh_mouse: Plough, 爆
+20:38 lh_mouse: cleamoon-, 
+20:38 lh_mouse: clcn_logbot, 
+20:38 lh_mouse: clcn_logbot, 爆
+20:38 varna: 这真是太惨了，不管多少血都是大破
+20:38 cleamoon-: 混乱耗
+20:39 varna: 最可怕的是全都暴击了，不然不会一发大破的
+20:40 Mokou joined channel
+20:40 Plough quit:Disconnected by services
+20:40 varna: 门神我复纵怂一下看看
+20:41 varna: 5-5本来零碎损害就很多，没法保证真的触发修正之后还能不大破
+20:43 varna: 但是至少这次我看到了一个不错的现象
+20:43 lh_cat joined channel
+20:43 varna: 如果全机组满练度，那么可以在目前的常规攻略里同时维持制空力和攻击力
+20:44 lh_mouse quit:Disconnected by services
+20:44 cleamoon-: orz
+20:44 cleamoon-: 灰机会掉……
+20:44 varna: orz, 还是单纵
+20:44 varna: 加贺中破
+20:44 varna: 大凤也中破了
+20:44 varna: 但我看到了希望
+20:45 varna: 啊
+20:45 varna: 希望破灭了……
+20:45 varna: 这一炮大破给得太精准
+20:45 cleamoon-: ……
+20:46 varna: 我不再试了
+20:46 varna: 意义不算很大
+20:47 varna: 被爆的飞龙是航母里唯一一个带闪的……反正总是这样，也习惯了
+20:47 ahe quit:Ping timeout: 240 seconds
+20:47 varna: 等到我有余裕了再来和这个丧心病狂的鱼雷斗争吧
+20:48 varna: 航母能打成这样也不错了
+20:49 varna: 但是这时候我有另一个问题可以问了——6-1邀击月常能打成什么样？
+20:51 varna: 咦
+20:51 varna: 这个好玩！
+20:51 varna: 我来试试空母机动部队北方海域进发
+20:52 varna: 先刷闪，然后算制空力
+20:57 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=e29f2364cf3d70cf4cfaaa05c8ddd1ba/ae20f57eca8065389176d54e91dda144ac348286.jpg
+20:57 ahe joined channel
+20:59 cleamoon-: 2333333333
+21:00 varna: 23333
+21:00 Mokou: 来盘WoWS
+21:01 xxxxxxxx: 【颜控之福音·声控之天堂】乙女恋爱手游《梦王国与沉睡的100王子》今日上线！ 
+21:01 xxxxxxxx: 101位日本当红声优加盟，137位王子立绘颜值爆表！日本恋爱乙女手游《梦王国与沉睡的100王子》今日（9月10日）不删档开放测试啦！
+21:02 cleamoon-: 噗噗噗噗噗
+21:02 xxxxxxxx: ^bilibili用系统通知给用户发广告 你们怕不怕
+21:02 cleamoon-: 阿里都这样
+21:03 xxxxxxxx: 而且 怎么想都是恋爱痴女手游
+21:04 xxxxxxxx: 对了羊驼后来看那个cos船的直播间了么?
+21:08 code_new joined channel
+21:11 varna: xxxxxxxx: 我看不下去了
+21:12 varna: 我试试3cv3ca走一次3-5
+21:20 xxxxxxxx: http://www.bilibili.com/video/av2803520/ 非凡哥战斗力还是高
+21:24 cleamoon joined channel
+21:25 cleamoon: 话说100个王子，记得住谁是谁吗
+21:25 xxxxxxxx: cleamoon: 那么多船你还不是记住了233
+21:26 cleamoon: 我真没记住…… 最多20个
+21:26 cleamoon: 全脱了最多10个
+21:32 hope1: 其实还好，至少还是内容相关、非侵入式、喜闻乐见的广告
+21:34 varna: 把制空算好了，出去看看
+21:35 varna: 出门441，不带三式弹
+21:35 cleamoon: 那么让人难受的就是搜索种子时，面前直接蹦出一个全屏ol无码公开，然后点开一看，一个大妈问：要安利吗
+21:35 xxxxxxxx: 你竟然会点开
+21:37 cleamoon: 右上角画个勾，左上角画个笑脸，左下角才是关闭，而且需要20s
+21:37 varna: 我接没接任务？
+21:37 varna: 不管了，往下打
+21:38 varna: 北酱饶命！
+21:38 varna: 圣GAY王保佑
+21:38 varna: 果然，750制空线……
+21:39 varna: 加贺桑中破，好样的
+21:39 varna: S胜通过
+21:40 varna: T有利，好
+21:41 varna: 昼战打了一轮半收工
+21:42 varna: 搞定，这飞机碉堡了啊！
+21:45 varna: 3ca3cv强行打了3-5上路斩杀难度，连战舰都没带……
+21:47 cleamoon: orz
+21:47 cleamoon: 这才是殴皇呀
+21:49 varna: 出门制空3cv 441，7组战5组攻，练度全满
+21:50 varna: 不论劝退和损害情况，至少伤害真的很好，现在开幕比以前好太多了
+21:50 varna: 而且北酱点不带bb有个好处：少一轮炮击
+21:51 varna: 赌一炮的回避总比赌两炮都回避容易
+21:51 cleamoon: 回去试试攻
+21:51 varna: 练度要够，现在一个满练度舰战应该是无视机种提供推定至少24.6的对空值
+21:51 varna: s/对空/制空/
+21:52 varna: 但是战斗机的练度方便
+21:53 cleamoon: 练度不是不能掉下来吗
+21:53 Mokou: 战斗机的练度没那么容易掉
+21:53 cleamoon: 就是说以后飞机也得刷闪
+21:54 varna: 战斗机的话，你只要拿到至少空优，一般练度只增不减
+21:54 varna: 攻击队方面，老实说随意了
+21:55 varna: 你看着平时攻略战都挺威的，那是因为他们没有部署对空390的实心怪物
+21:55 varna: 平时就是做十出击的时候让轻母带着飞机出去打五趟1-1全程，两个月下来怎么也都满了
+21:55 varna: 然后拿来打打月常打打任务，练度不会掉得很严重
+21:57 varna: http://www.kancolle-calc.net/aircrafts.html 另外推荐这个舰载机计算器，因为有UI所以比自己写的脚本方便点
+21:57 Mokou: 我一直都用这个的……&
+21:58 varna: 其实七月份之前我一直手算
+21:58 varna: 似乎大家都用这个
+21:59 varna: 然后三个新任务都做了一遍，发觉坑死了
+21:59 varna: 就是打着爽快，给的都是饭团子
+22:02 cleamoon: 3—2顺便练级
+22:03 cleamoon: 噗，都给饭团？
+22:03 varna: 那更好
+22:03 varna: 给一点点螺丝，还有油、钢
+22:03 varna: 都给三五百，如果能一次搞定就有赚
+22:03 cleamoon: 弹射器不会是饭团欢的吧唧
+22:04 varna: 新任务还行，不刁难人
+22:04 varna: 第一个要一天内演习7胜，第二个是1-5头目四次至少A（？），第三个是cv旗舰3-5头目S胜
+22:05 cleamoon: 一天7胜没刷新
+22:08 varna: 似乎会和每天的演习3次一起刷新，如果你先前没做的话
+22:08 varna: wikia上现在应该有precondition了
+22:09 cleamoon: 加几个运粮食的远征，就是带饭团出去，奖励
+22:09 cleamoon: 弹射器之类的
+22:10 varna: 现在我挺尴尬的，谁知道以后的活动我会不会采取极端手段，比如打孔吃饭团
+22:10 varna: 但现在我手里屯了二十二个饭团、十一个补给，用不掉
+22:10 cleamoon: ………
+22:11 cleamoon: 拆46炮，给饭团留地方
+22:11 varna: 我才不上当
+22:11 varna: 我宁可哪天刷飞机的时候请赤城吃了
+22:12 Mokou: 但是饭团真的有什么鸟用么
+22:13 varna: 撤退的时候可以……
+22:13 varna: 而且你也看到了，饭团是有用的
+22:13 varna: 好歹留四个
+22:18 condy joined channel
+22:21 Mokou: L4D2下完
+22:22 varna: 我终于找到一个英文版的博德2增强版
+22:22 varna: 游侠那个中文字体太傻了
+22:22 varna: 而且最坑的是，他们去掉了原来的英文语言包……
+22:23 Mokou: ……
+22:24 cleamoon: ……
+22:24 cleamoon: 我会说我出国前不知道红警有剧情吗
+22:25 varna: ...
+22:25 varna: 幸好我RA2玩的是个完整版本，什么都有
+22:25 Mokou: 完整版+
+22:25 Mokou: 我用的是原版的ISO
+22:26 cleamoon: 我还和同学脑补出了整个剧情，不带两个时间线的
+22:27 varna: ……
+22:27 varna: 这个脑补力赞
+22:27 Mokou: ……
+22:27 varna: 至少你们得把字幕都看一遍
+22:27 Mokou: 角色选电浆
+22:27 cleamoon: 哪有字幕，语音都没有，只有任务页的介绍
+22:27 Mokou: L4D2初见开始
+22:27 lh_mouse: 红警2 英文版是没有字幕的
+22:29 cleamoon: 盟军第三关我们讨论了很久为什么完成后总统站了很久才走，谁tm知道那里有剧情呀……
+22:29 varna: 一般砍掉动画的都是中文版吧
+22:29 cleamoon: +
+22:29 cleamoon: 动画，音乐，语音都没有
+22:30 cleamoon: 幸亏还有音效
+22:30 varna: 其实博德之门这样的游戏，要么做汉化的人知道自己在做什么，要么就别做
+22:30 varna: 文本量太大，而且规则麻烦，jargon太多
+22:30 cleamoon: 大作的话海盗湾多好
+22:30 varna: 一个DND玩家能轻易崩出来的jargon, 翻译人员未必知道
+22:31 varna: 其实大作最好GOG.com
+22:31 Mokou: 他们才不管那么多
+22:31 Mokou: 随便糊弄完
+22:31 Mokou: 塞个起动器
+22:31 Mokou: 里面放上广告
+22:31 Mokou: 万事大吉
+22:31 cleamoon: gog？
+22:31 varna: 而博德那个骇人的文本量，一般的翻译组会疯的
+22:31 cleamoon: 启动器+
+22:31 varna: GOG = Good Old Games
+22:31 cleamoon: 随便下？
+22:32 varna: 花钱，但是有质量保证，类似二手游戏交易
+22:32 cleamoon: 而且那是老游戏？
+22:32 cleamoon: ……
+22:32 varna: 就是给怀旧党的二手市场
+22:32 varna: 游戏都很干净
+22:32 varna: 我拿到过几个被流出来的版本，都是原来的游戏，没打什么补丁
+22:33 cleamoon: 非常干净，光盘都是空的
+22:33 varna: 而且因为是欧美站点，所以不会有字体乱七八糟的汉化组插手
+22:33 varna: 至少英文游戏保证是原版
+22:33 lh_mouse: 一缸一缸一缸
+22:33 cleamoon: 装了个蒸汽，然后发现我没有想买的游戏……
+22:34 cleamoon: iwanna赛高
+22:34 varna: 对了，Steam上其实能买到Linux版的博德之门和冰风谷重制版
+22:35 cleamoon: ……
+22:35 Mokou: 买买买
+22:35 cleamoon: 我的linux火炬没法玩，只能wine着玩…… 还wine得很完美……
+22:36 varna: 但我下了三个免费版本
+22:36 varna: 当然，都是盗版，但是博德1和冰风谷的语言包幸存了
+22:36 varna: 冰风谷的翻译是个奇迹
+22:36 varna: 你会发现所有的UI都翻译了，所有的文本都变成了没有空格的英文
+22:38 cleamoon: 噗
+22:38 cleamoon: 口袋绿宝石前后用了五年才出了完美版
+22:38 cleamoon: 那时黑白都出了
+22:39 cleamoon: 就是每句话，每个招数，每个名字都是官译的版本
+22:40 cleamoon: 黑白比绿宝石高三代……
+22:43 cleamoon: 很多文本多的东西，汉化组接不接都麻烦
+22:44 hoxily joined channel
+22:47 hope1: 买买买
+22:48 * lh_mouse slaps hope1 around a bit with a large trout
+22:49 varna: 博德之门其实有高中程度的英文就能读了
+22:50 varna: 撤退，诸君武运
+22:50 varna quit:Quit: leaving
+22:52 cleamoon quit:Ping timeout: 246 seconds
+23:08 Mokou: 睡觉
+23:08 Mokou: 诸君武运
+23:08 Mokou quit:Quit: 睡觉
+23:10 hoxily quit:Quit: Leaving
+23:15 hope1: dnd背景的游戏似乎都文本量挺多的
+23:17 lh_mouse: hope1, 摸头
+23:21 hope1: 无视
+23:24 * lh_mouse slaps hope1 around a bit with a large trout
+23:43 ahe quit:Quit: 离开
+23:49 code_new quit:Quit: bye
+23:57 ASenR quit:Ping timeout: 252 seconds

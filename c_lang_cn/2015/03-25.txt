@@ -1,0 +1,1188 @@
+00:04 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.4/20150321212544]
+00:04 cleamoon quit:Ping timeout: 246 seconds
+00:12 yzld2002 quit:Quit: yzld2002
+00:14 hoxily_ quit:Quit: Leaving
+00:17 cleamoon joined channel
+00:25 cleamoon quit:Read error: Connection reset by peer
+00:31 lh_mouse quit:Read error: Connection reset by peer
+00:42 cleamoon joined channel
+00:53 cleamoon quit:Read error: Connection reset by peer
+01:10 cleamoon joined channel
+01:19 Petrus07 quit:Quit: Leaving.
+01:22 cleamoon quit:Read error: Connection reset by peer
+01:39 cleamoon joined channel
+01:42 hoxily1 joined channel
+01:56 cleamoon quit:Read error: Connection reset by peer
+02:09 lolisa quit:Ping timeout: 265 seconds
+02:13 cleamoon joined channel
+02:22 lolisa joined channel
+02:38 cleamoon quit:Read error: Connection reset by peer
+02:55 cleamoon joined channel
+03:05 cleamoon quit:Read error: Connection reset by peer
+03:23 cleamoon joined channel
+03:31 xxxxxxxx quit:Quit: Leaving...
+03:32 cleamoon quit:Read error: Connection reset by peer
+03:50 cleamoon joined channel
+03:53 lolisa quit:Ping timeout: 246 seconds
+03:54 lolisa joined channel
+03:58 cleamoon quit:Read error: Connection reset by peer
+04:14 cleamoon joined channel
+05:02 cleamoon quit:Remote host closed the connection
+05:04 cleamoon joined channel
+05:08 cleamoon quit:Read error: Connection reset by peer
+05:26 cleamoon joined channel
+05:44 cleamoon__ joined channel
+05:58 lolisa quit:Quit: Leaving
+06:25 lolisa joined channel
+06:58 lolisa quit:Quit: Leaving
+07:13 cleamoon quit:Read error: Connection reset by peer
+07:33 cleamoon joined channel
+08:04 hoxily1 quit:Quit: Bye
+08:09 Nangcr joined channel
+08:10 Nangcr quit:Client Quit
+09:03 lh_mouse joined channel
+09:28 cleamoon__ quit:Read error: Connection reset by peer
+09:28 cleamoon quit:Read error: Connection reset by peer
+09:39 lh_cat: meow
+09:41 Xilzzerts joined channel
+09:45 cleamoon joined channel
+09:47 lhjkk joined channel
+09:48 whatofor joined channel
+09:49 whatofor_1 quit:Ping timeout: 246 seconds
+09:50 lhjkkk joined channel
+09:50 lhjkk quit:Read error: Connection reset by peer
+09:54 cleamoon quit:Read error: Connection reset by peer
+09:54 lh_mouse: geordi, << TYPE<typeof(foo())>; const int & foo();
+09:54 geordi: error: 'typeof' was not declared in this scope
+09:54 lh_mouse: geordi, use __typeof__
+09:54 geordi: int const
+09:55 lhjkkk quit:Remote host closed the connection
+09:55 lhjkkk joined channel
+09:56 lh_mouse: lhjkkk, 你在哪里上学啊
+09:56 lhjkkk: 杭州。
+09:56 lhjkkk: 杭电
+09:57 lh_mouse: 你比我前年刚出来之后知道得多
+09:58 lh_mouse: s,之后,时候m
+09:58 * lh_bot slaps lh_mouse around a bit with a large trout
+09:59 lhjkkk: 也只是知道一点，窝的代码质量和速度都比耗子差
+10:00 lh_bot: 喔很懒的
+10:02 lh_bot: lhjkkk: 你去阿里了？
+10:02 lh_bot: 什么部门？
+10:02 lhjkkk: 还没面完，总共四轮。
+10:03 lhjkkk: 阿里云飞天什么部cdn开发的。
+10:03 lhjkkk: 微博上那个 淘叔度 面的我
+10:03 lh_bot: 不上微博
+10:04 lh_bot: 你的水平应该也比很多 zju 的应届生强了
+10:04 lhjkkk: 比本科生的average强是应该的。。。
+10:04 lhjkk joined channel
+10:05 lh_bot: 是 CDN 么   也没说大概的方向？
+10:06 lhjkk: C服务端开发。
+10:06 lhjkk: 可能会和tengine有关
+10:06 lhjkk: http://www.zhihu.com/people/shudu/answers
+10:06 lhjkk: lh_bot, 应该就是开发CDN
+10:10 lh_bot: 大概看了下  看不出什么噗点或者亮点
+10:10 lhjkk: 嗯，没有长篇大论
+10:10 lh_bot: 私以为出来干活的   观念比水平重要
+10:11 lhjkk: 他的博客又挂掉了
+10:11 cleamoon joined channel
+10:12 lhjkk: http://www.infoq.com/cn/presentations/alibaba-cloud-cdn-technology-evolution
+10:13 lh_bot: 这种宣传性质的东西我一般是不怎么看的   有这时间还不如找点书看
+10:14 lh_bot: 这里的书不局限于纸质书
+10:14 lhjkk: 我也没看
+10:14 lhjkk: 蛤蛤
+10:15 whatofor_1 joined channel
+10:15 lh_bot: CDN 方向我没了解过   我也不评论
+10:17 whatofor quit:Ping timeout: 256 seconds
+10:18 cleamoon quit:Read error: Connection reset by peer
+10:18 lh_bot: Tony Liu，C/c++ 服务端开发
+10:18 lh_bot: 用c++的各位，没必要强烈鄙视c，在全球语言使用排行榜，C语言一直位居第一
+10:19 lh_bot: 这是多不要脸才会睁眼睛说这么没品的瞎话……
+10:20 lhjkk: 在那个榜上，C一直都只是前三
+10:20 lh_bot: http://www.zhihu.com/question/24969227  这个我看了下  我只感觉大家思考问题的角度有问题
+10:21 lh_bot: 前三跟第一是一回事吗
+10:21 lhjkk: 当然不是
+10:21 lh_bot: 第一的明摆着是 java  好几年了
+10:22 lhjkk: 现在应该不是了
+10:22 lhjkk: 现在又变成C了
+10:22 lhjkk: http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+10:23 lhjkk: 十多年来，java的大体形式是往下走的
+10:23 lhjkk: C++也是掉的很厉害……
+10:23 lh_bot: 回来了？去年我看的时候第一是 java
+10:23 lhjkk: 比较恐怖的是ObjC
+10:23 lh_bot: 我去年看的八成是前年的
+10:23 Xilzzerts: sudo
+10:24 lhjkk: 蛤蛤蛤
+10:25 lhjkk: 其实反倒是C的使用率比较稳定
+10:25 lh_bot: 脑残粉多  没辙
+10:25 lh_bot: 我之前说过 C 有可取之处
+10:25 lhjkk: 其实是换不掉吧
+10:25 lh_bot: 不是   
+10:26 Xilzzerts: 主要是C++学习周期长吧。。。
+10:26 lhjkk: java不知道。耗子看看自己身边那些C++用户，耗子宁可他们不用C++吧……
+10:26 xxxxxxxx joined channel
+10:26 lh_bot: 我认为除了我之外宣称自己懂 c++ 的都是傻逼
+10:26 Xilzzerts: 记得谁说过比C低级的抽象都不够直观，比C高级的抽象都能用C实现
+10:26 lh_bot: 但是这个不是主要矛盾
+10:27 lh_bot: 我之前发的代码你们应该看过  那个才是主要矛盾
+10:27 lh_bot: Xilzzerts: 本末倒置
+10:27 lhjkk: Xilzzerts, 多hack两次的那种C实现和没有也差不多。
+10:27 lh_bot: C 是图灵完全的   所以什么东西都能用 C 实现
+10:27 lh_bot: Xilzzerts: 我也照样可以说任何东西都能用 java 实现
+10:27 lhjkk: lh_bot, C风格（？）的C++代码。内存泄漏的一塌糊涂？
+10:28 lh_bot: lhjkk: 完全就不懂设计  为了写类而写类   职责一塌糊涂
+10:28 lhjkk: ……
+10:28 lh_bot: 你没看过啊
+10:28 lhjkk: xxx()->xxxx()->xxxxxxx()
+10:29 lhjkk: 我就记得这个
+10:29 lhjkk: 吱说在中间这环没用智能指针是重大失误
+10:30 lh_bot: 那个是 mysql 的官方（？）的
+10:30 lh_bot: 我不确定是不是官方   但是肯定是官方网站上的
+10:30 lh_bot: 如果说正统  应该只有 C    xx connector 不晓得有没有官方支持
+10:31 lh_bot: lhjkk: http://paste.ubuntu.com/10602924/  你就看 426 后面就行了
+10:37 xxxxxxxx: lh_bot>我认为除了我之外宣称自己懂 c++ 的都是傻逼 @FrankHB
+10:37 cleamoon joined channel
+10:39 lhjkk: xxxxxxxx, 愚蠢的人（巨）类（基），为什么总是重复悲（战）剧（争）！
+10:40 lh_bot: xxxxxxxx: 你把上面那句话连起来
+10:40 lh_bot: 别断章取义
+10:40 xxxxxxxx: 这是噗吱噗吱 不是战争
+10:41 lh_bot: 我觉得部分人一边强调开发效率一边又不懂什么才能提升开发效率
+10:41 lh_bot: 于是被 C 这种残废语言艹也就习惯了
+10:42 * lhjkk 也是C的RBQ
+10:42 lh_bot: 而另一部分人则是认为 C 才是正统的原教旨主义
+10:42 xxxxxxxx: 肉便器?
+10:42 lh_bot: 本特首也是不言语
+10:43 lh_bot: 我跟你们说个笑话   我们之前做页游的时候  那帮人貌似很强调运行效率
+10:44 lh_bot: 他们在 code review 的时候会指出你哪个地方多分配了一次内存
+10:44 cleamoon quit:Read error: Connection reset by peer
+10:44 lh_bot: 但是我觉得好好笑哦  连代码内嵌的 profiler 都没有   居然敢动手优化
+10:45 lh_bot: 换一种说法   连程序的性能瓶颈在哪里都不知道就动手优化？
+10:45 lh_bot: 而且他们原来的手动填写数据包字段还得手动判断越界的真是恶心死我了
+10:46 lhjkk: 手动判断越界？
+10:48 lh_bot: 我找个例子给你们看看好了
+10:49 lh_bot: lhjkk: http://paste.ubuntu.com/10674523/
+10:50 lh_bot: 你看看 12 行那个东西
+10:50 lh_bot: 再看看 29 42 那个东西
+10:52 lh_bot: 啥东西都人肉写  自己不拿自己当人看
+10:55 lh_bot: 对 C 而言封装往往降低效率——因为语言无能   最臭名昭著的是指向函数的指针  能静态绑定的东西为什么还要弄个回调函数出来
+10:56 lh_bot: 而且人肉清理资源本身就是逗比行为   缺乏带分支的控制流抽象还得反过来依赖 SJLJ 这种投机取巧的行为   而且比异常还不可控
+10:58 lh_bot: 于是不好好设计接口就有了个堂而皇之的借口——（所谓的）运行效率   当然很多 C 厨是无法意识到这一点的   于是被艹是理所当然——自轻自贱又有什么办法救赎
+10:58 lh_bot: EOF
+11:01 cleamoon joined channel
+11:11 cleamoon quit:Read error: Connection reset by peer
+11:13 sismvg joined channel
+11:21 sismvg: 隔壁安徽人整天大叫烦死了
+11:29 cleamoon joined channel
+11:36 cleamoon quit:Read error: Connection reset by peer
+11:42 lh_bot: geordi: -v
+11:42 geordi: g++ (GCC) 5.0.0 20150301 (experimental)
+11:45 lhjkk quit:Ping timeout: 256 seconds
+11:46 sismvg: geordi:{unsigned long long cnt=-1;int x=0; while(cnt--){ if(cnt%2!=0) ++x; else x<<=1;} cout<<x<<endl;}
+11:46 geordi: CPU time limit exceeded
+11:46 sismvg: geordi:{unsigned long long cnt=65536;int x=0; while(cnt--){ if(cnt%2!=0) ++x; else x<<=1;} cout<<x<<endl;}
+11:46 geordi: -2
+11:48 sismvg: geordi:{int ring=10; ring<<=1; cout<<ring<<endl;}
+11:48 geordi: 20
+11:50 sismvg: geordi:{int ring=10; ring=(ring>>(sizeof(int)*8-1))|(ring>>1); cout<<ring<<endl;}
+11:50 geordi: 5
+11:50 sismvg: 果然
+11:50 sismvg: 具体数学太神奇了
+11:51 whatofor joined channel
+11:52 condy: sismvg: 你涉猎的真广.. Or2
+11:52 sismvg: 只是数学而已。。
+11:52 * sismvg 的数学非常差，努力补
+11:53 cleamoon joined channel
+11:53 whatofor_1 quit:Ping timeout: 246 seconds
+11:54 lhjkkk quit:Ping timeout: 245 seconds
+11:55 sismvg: 遇到最坑爹的一次情况是，花了40分钟终于理出了公式，然后不断的展开。直到最后答案告诉我这题要用某些奇怪的公式来解
+12:01 cleamoon quit:Read error: Connection reset by peer
+12:17 cleamoon joined channel
+12:20 FrankHB: 吱？
+12:21 * lh_bot slaps FrankHB around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+12:21 FrankHB: 没个活人懂C艹，遇到活吱throw domain_error就行了。
+12:21 lh_bot: 10:25 < lhjkk> java不知道。耗子看看自己身边那些C++用户，耗子宁可他们不用C++吧……
+12:21 lh_bot: 10:25 <+lh_bot> 我认为除了我之外宣称自己懂 c++ 的都是傻逼
+12:22 lh_bot: 10:36 < xxxxxxxx> lh_bot>我认为除了我之外宣称自己懂 c++ 的都是傻逼 @FrankHB
+12:22 lh_bot: FrankHB: #pragma GCC poison domain_error
+12:22 lh_bot: 帝球又不是我身边的
+12:22 lh_bot: 帝球要是我身边的我天天爆他
+12:29 hoxily joined channel
+12:30 cleamoon quit:Read error: Connection reset by peer
+12:36 xxxxxxxx: 我是正好在这一句话之前进频道 只看到这句话 
+12:39 lhjkkk joined channel
+12:39 yunfan joined channel
+12:39 yunfan: 这里人就不多了 
+12:40 sismvg: 但是变态多了
+12:41 yunfan: 变态多好  变态发育
+12:41 yunfan: 发育完了叔叔又有得玩了
+12:41 FrankHB quit:Ping timeout: 255 seconds
+12:42 yunfan: OO_after: 想不到你也在 
+12:42 * sismvg 扔手榴弹
+12:43 dantmnf: 赌 BSM 出武藏了...
+12:43 xxxxxxxx: 你这个欧洲人
+12:43 xxxxxxxx: 吃我一矛
+12:44 dantmnf: 都中 MNB 了还怎么欧（
+12:44 sismvg: 嘴里一股肥皂味
+12:44 * yunfan 吃俺老孙一棒子
+12:46 cleamoon joined channel
+12:47 xxxxxxxx: cleamoon: dantmnf出武藏了
+12:54 * lh_bot slaps yunfan around a bit with a large trout
+12:54 * yunfan 伸出舌头 舔了你一脸
+12:55 * lh_bot has kicked yunfan from #c_lang_cn (no reason)
+12:55 yunfan: xx
+12:55 yunfan: 骗子好多  诶 
+12:56 lh_bot: 骗子！
+12:56 lh_bot: 猜猜看呐
+12:56 cleamoon quit:Read error: Connection reset by peer
+13:13 cleamoon joined channel
+13:14 lolisa joined channel
+13:16 lh_mouse quit:Read error: Connection reset by peer
+13:16 lolisa: 各位，我有一个project 各个文件相互依赖，现在是不是用forward declaration file（iosfwd之类的）的时候？
+13:18 whocares_2 quit:Remote host closed the connection
+13:18 whocares_2 joined channel
+13:21 niksun joined channel
+13:23 cleamoon quit:Read error: Connection reset by peer
+13:25 lolisa quit:Quit: Leaving
+13:39 cleamoon joined channel
+13:49 cleamoon quit:Read error: Connection reset by peer
+13:52 lh_mouse joined channel
+14:04 whocares_2 quit:Ping timeout: 252 seconds
+14:06 cleamoon joined channel
+14:15 lhanjian joined channel
+14:17 cleamoon quit:Read error: Connection reset by peer
+14:33 cleamoon joined channel
+14:42 cleamoon quit:Read error: Connection reset by peer
+14:59 cleamoon joined channel
+15:10 cleamoon__ joined channel
+15:12 cleamoon quit:Read error: Connection reset by peer
+15:12 xeirrr joined channel
+15:12 xeirrr: .sm iyzsong 
+15:14 xeirrr: iyzsong: Hi, I am curious about NixOS now 
+15:19 lh_bot: 死基佬
+15:20 hope1 joined channel
+15:22 xeirrr: .pia lh_bot 
+15:23 * lh_bot slaps xeirrr around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+15:28 cleamoon joined channel
+15:32 lhanjian: hope1, 揉
+15:33 hope1: 咳
+15:34 cleamoon__: 海棠只让文文摸
+15:34 lh_bot: hope1: 摸头
+15:37 varna joined channel
+15:37 varna: 终于把讲义折腾完了
+15:37 varna: 结果上午的演习也没打，昨天大破的潜艇也没修
+15:38 cleamoon quit:Read error: Connection reset by peer
+15:39 cleamoon__: 演习没打经常的
+15:39 cleamoon__: 今天我打了，因为闹肚子，5点就醒了……
+15:39 varna: 顺便提一句
+15:39 varna: 昨天的净亏五桶是包含5-5在内的……
+15:40 varna: 打南西系列亏五桶我还不如不打
+15:40 varna: 补个log吐槽
+15:40 varna: 图灵完备可以实现什么，建议参考下一般的normal form
+15:41 varna: 两者之间有矛盾，所以单纯的图灵完备并不说明一切问题
+15:41 varna: 最后讲义定的是两个题目
+15:41 varna: 第一个是Symbolic Method for Qualitative Bayesian Network
+15:42 varna: 第二个是Integration of Multiple Qualitative Probability Networks
+15:43 varna: 前一个题目稍微涉及到 en.wikipedia.org/wiki/Łukasiewicz_logic 这个逻辑
+15:44 lh_bot: varna: 那个只针对“其他语言可以用 C 实现”
+15:44 varna: 然后今天的南西停一天……
+15:44 lh_bot: 同样的结论是“C 也可以用 Java 实现”进而得出“任何语言都可以用 Java 实现”   以此证明“其他语言可以用 C 实现”之荒谬
+15:45 cleamoon__: c也可以用bf实现…… 
+15:45 lh_bot: 无误
+15:45 lh_bot: BF 同样是图灵完备的
+15:46 varna: lh_bot: 我就是说语言
+15:46 varna: 当然这里其实有个比较黑暗的背景
+15:46 lh_bot: 但是有人认为“其他语言可以用 C 实现”于是 C 就飞到天上去了
+15:47 varna: 考虑一个具有范式化属性（normalization property）的语言
+15:47 varna: 这语言很可能并非图灵完备的
+15:47 cleamoon__: 电脑里所有东西都能直接写机器码实现…… 
+15:47 lh_bot: 在用户智商需求上 C 远低于 C艹   这我没意见  但是以此为荣 不行
+15:47 cleamoon__: 我倒是比较喜欢这点……
+15:48 lh_bot: one way in one way out
+15:48 varna: BF是图灵完备无误，但BF是图灵机的直译
+15:48 varna: 实际上你可以用一个0-1字母表上的单头单带（不必要，有等价模型）图灵机翻译之
+15:49 varna: 至于xx实现xx, 一律谬论，懒得反驳
+15:49 lh_bot: varna: 我重复一下我的观点吧   其他语言用 C 实现只能证明 C 图灵完全  跟 C 是否牛逼、运行效率是否高任何关系都没有
+15:50 varna: 这观点就没问题了
+15:51 lh_bot: 毕竟汇编是亲爹  这跟 bytecode 亲爹养的还是有杂种优势的
+15:51 varna: 12:43 dantmnf: 赌 BSM 出武藏了...
+15:51 varna: ^ 频道哪来那么多武藏……
+15:52 lh_bot: xeirrr: 羊驼来了
+15:53 xeirrr: 昨晚他已然被爆
+15:53 varna: 虽然那是昨晚你的意银结论
+15:53 varna: L吧基佬长度无限接近3cm, 然而这个长度里包括蛋的直径
+15:54 varna: 所以其实剩下的那个充分小量是吊长
+15:55 cleamoon joined channel
+15:56 * lh_bot slaps xeirrr around a bit with 鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜鲜
+15:56 cleamoon__: 包括蛋的周长吧
+15:56 varna: 缩阳入腹么……
+15:57 varna: NSFW NSFW NSFW www.ashemaletube.com/videos/54310/dick-hiding.html
+15:57 xeirrr: ..............................
+15:59 varna: 卧槽我演习不是打到警视厅那哥们了吧……
+16:00 lhanjian quit:Quit: Leaving
+16:00 cleamoon__: 演习经验怎么算的？不是前三艘船的平均等级算吗？
+16:00 varna: 前两舰
+16:01 varna: 似乎是旗舰等级所需经验下限/100和二号位等级所需经验下限/300
+16:01 cleamoon__: 难道前两艘不是等级最高的前两艘而是排在前边的前两艘？
+16:02 varna: 是最前面的两个
+16:02 cleamoon__: fa
+16:02 xeirrr left channel:"Leaving"
+16:03 cleamoon__: 昨天演习一货前两个1级，后面1个武藏改，3个正航全制空，铝又大破，还tm没经验……
+16:04 varna: 这不就是典型报社么
+16:04 varna: 非得上飞机是你的个人失策……
+16:04 cleamoon__: 我在练主力部队……
+16:04 varna: 演习上航母大部分时候都是喷
+16:04 cleamoon__: 我以为是等级最高的船算呢……
+16:05 cleamoon__: 隼鹰改了，没什么太大感觉……
+16:05 cleamoon quit:Read error: Connection reset by peer
+16:06 varna: 隼鹰啊
+16:06 varna: 要感觉得八十二改
+16:06 varna: 八十级二改
+16:06 cleamoon__: 顺便，为什么X月改没有独立立绘……
+16:06 cleamoon__: ………
+16:06 varna: 大部分一改是不换立绘的
+16:06 varna: 但卵月的中破立绘换了
+16:06 cleamoon__: 我连北上还没二改呢
+16:06 cleamoon__: 错了，独立图鉴
+16:07 varna: 不换立绘的应该都没有单独的图鉴编号
+16:07 cleamoon__: 远征到全体改没图鉴
+16:07 varna: 不过如果说是图鉴槽的话，只有特别的二改会有
+16:07 hope1 quit:Ping timeout: 246 seconds
+16:08 varna: 这里的改造主要是neta日军的近代化大改造，以及友鹤事件和第四舰队事件之后的其余改修
+16:08 varna: 当然也包括阿武隈被KTKM一尻断头之后的补前发事件
+16:09 cleamoon joined channel
+16:12 cleamoon__ quit:Ping timeout: 265 seconds
+16:12 varna: 要是春季的特型改二是矶波就好了
+16:14 cleamoon: 舰娘用移动设备在不同的地方玩不会被封号吧
+16:15 varna: 不会
+16:15 varna: 很多用平板的
+16:15 cleamoon: 你刚才发的那个hide dick视频旁边都是gv广告………
+16:15 varna: ...
+16:18 cleamoon__ joined channel
+16:18 cleamoon quit:Read error: Connection reset by peer
+16:22 cleamoon joined channel
+16:23 cleamoon__: 转@东东枪 家住朝阳区的郝先生苦练咖啡打奶泡技术数月之后终于发现想打出高质量的奶泡来核心技巧无非是三个字——碰运气。
+16:24 varna: 2333
+16:24 varna: 等等
+16:25 varna: 奶炮……
+16:25 * varna 自觉面壁
+16:25 cleamoon__: 就是咖啡用奶打出大量泡沫充数
+16:26 cleamoon__: 啊，咖啡做多了，都没法想歪
+16:26 varna: 运输船居然两次出击就搞定了
+16:27 cleamoon__: 烧欧皇
+16:27 xxxxxxxx: 难道今天的运输船要做完了?
+16:28 cleamoon__: 我出击一天都不一定击沉三个
+16:28 xxxxxxxx: 我进了5次boss了
+16:28 lh_bot: 纯咖啡打不出来
+16:28 lh_bot: 得加添加剂   卡布奇诺里面专门加有起泡剂
+16:29 cleamoon__: 不是打咖啡，是打奶……
+16:29 varna: 打乳掌！
+16:29 lh_bot: 乳ゆ
+16:29 cleamoon__: 用蒸汽喷嘴谐向打奶
+16:29 cleamoon__: 离面越近沫子越多
+16:30 cleamoon__: 但最后还是拼运气……
+16:30 lh_bot: 嗝
+16:30 varna: 啮齿类会打嗝？
+16:30 lh_bot: varna: QAQ 打你！
+16:31 cleamoon__: 弄只喂几斤大豆试试
+16:31 varna: 果然不会打嗝
+16:31 varna: 几斤大豆撑不死的都是硕鼠
+16:31 xxxxxxxx: 吃豆不是放屁么
+16:31 varna: 腔肠鼠……
+16:32 cleamoon quit:Read error: Connection reset by peer
+16:32 lh_bot: 你们太讨厌啦！QAQ
+16:32 cleamoon__: 我记得非洲老鼠挺大的，大概吃的不少
+16:32 varna: 舰娘动画的专辑听着还可以
+16:33 varna: 二羽鹤很赞，虽然我很努力地区分翔鹤瑞鹤究竟分别唱了哪些段落
+16:33 cleamoon__: 基本动画弃坑…
+16:33 izmntuk joined channel
+16:33 cleamoon__: 太没意思……
+16:33 xxxxxxxx: 动画我就没看....
+16:33 cleamoon__: 昨天发现丛云立绘胸型很好
+16:34 varna: 动画我就当fans向了，出一话看一话，看完吐一阵子
+16:34 varna: 丛云啊，那个胸大概是垫出来的
+16:34 cleamoon__: 不大，但是形状不错
+16:34 cleamoon__: ……
+16:34 varna: 丛云比较真的是腿型
+16:34 cleamoon__: 91弹？
+16:34 xxxxxxxx: 因为是假的
+16:34 varna: 91弹没有小口径的
+16:34 xxxxxxxx: 是胸垫的特技
+16:34 varna: 但是这里有胸垫的成分
+16:35 xxxxxxxx: 是胸垫的成分 是特技的胸垫
+16:35 varna: 有关真胸假胸，贴吧dalao qhdasd比较了解，他有完全体丛云
+16:35 xxxxxxxx: duang~
+16:35 cleamoon__: ……
+16:36 xxxxxxxx: 完全体是啥?
+16:36 varna: Lv150喂满运（49）
+16:36 cleamoon__: 三月份了，发情，正在下十几个av，弄得家里那台电脑不断进进出出享受快感
+16:37 xxxxxxxx: 有人把初霜喂满运的么?
+16:37 cleamoon__: ………
+16:37 varna: 初霜的夜战火力没法看
+16:37 izmntuk quit:Client Quit
+16:37 varna: 所以大概没有
+16:37 cleamoon__: 顺便推荐MUM开头的编号的av
+16:38 xxxxxxxx: varna 上限看上去高
+16:38 xxxxxxxx: 运的上限
+16:38 varna: 但是首先运的触发阈值，雪风足够了
+16:38 varna: 然后初霜的夜战火力比雪风少9……
+16:39 varna: 个人感觉与其喂初霜不如强行POI
+16:40 varna: 如果有POI完全体的话，三雷攻坚或者双雷见张都可以的
+16:42 xxxxxxxx: 另外问一下3-3北方任务大概要多少桶算正常
+16:42 cleamoon__: 两主炮两水侦似乎没有那种看起来十分高大上的攻击？
+16:43 cleamoon__: 打北方干什么…… 那是亏的……
+16:43 xxxxxxxx: 我今天大概用掉十几个桶了... 还没做完
+16:44 cleamoon__: ………
+16:44 cleamoon__: 我记得是5次boss胜？
+16:44 xxxxxxxx: 是啊
+16:44 cleamoon__: 不做，太亏
+16:44 varna: 北方是赚螺丝的
+16:44 xxxxxxxx: 我觉得妙高 大井 北上在讨论怎么演比较真实
+16:45 varna: 双主炮双水上机只有二连，昼战CI在追求火力的时候建议战舰带彻甲弹
+16:45 varna: 其余的主副CI大多是练级保命中用的
+16:47 xxxxxxxx: 然而上次北方任务并没有用那么多桶
+16:48 varna: 北方任务还是每天三四次比较好
+16:48 varna: 可以换阵容换打法各打一两次
+16:48 cleamoon joined channel
+16:48 cleamoon__: 没有车架弹
+16:49 cleamoon__: 螺丝没用，除非大建狂魔
+16:49 varna: 二连是两发1.2倍，主副是一次1.2倍（辅助电探）或者1.1倍（辅助副炮）
+16:49 cleamoon__: 7777100党
+16:49 varna: 螺丝改修用
+16:49 varna: 不是建造资材，是改修资材
+16:50 cleamoon__: 改修什么？
+16:50 varna: 41炮、五连鱼雷、91弹什么的
+16:51 cleamoon__: 没明石，以后再说
+16:52 cleamoon__: 据说明石可以修船？
+16:52 xxxxxxxx: 是可以修
+16:52 varna: 明石就是修船的……
+16:55 cleamoon__: 那我去找找弄个
+16:58 varna: 如果没有的话，2-5头目有掉落
+16:59 cleamoon quit:Read error: Connection reset by peer
+17:00 cleamoon__: 没那个脸
+17:01 varna: 其他地方更糟糕
+17:01 varna: 6-2头目大概是有掉落的
+17:02 cleamoon__: 那基本算了……
+17:03 xxxxxxxx: 苍龙大破 3-3又是一个桶...
+17:03 Xilzzert joined channel
+17:03 cleamoon__: 实现一个作业水平的shell大概多麻烦？
+17:05 Xilzzerts quit:Ping timeout: 244 seconds
+17:06 lh_bot: 作业？
+17:06 lh_bot: 拿啥东西写
+17:06 varna: 拿perl写
+17:06 varna: perl -d -e 1
+17:08 lh_bot: “有判断和循环的函数，编译器很多时候都不会把它们当做inline”
+17:09 lh_bot: “而至于递归，更不会”
+17:09 lh_bot: 兵库南
+17:09 cleamoon__ quit:Ping timeout: 250 seconds
+17:09 lh_bot: 这战斗力也太低了吧   怎么想出来现眼的
+17:10 varna: 哪里的逗比
+17:11 lh_bot: http://tieba.baidu.com/p/3646276651   29 楼
+17:12 varna: 150个建议……
+17:12 varna: 为何不是450个
+17:12 lhjkkk quit:Remote host closed the connection
+17:12 lh_bot: 一个十块钱
+17:12 varna: 少一点12个，一般的450个，要不一个十块70w个
+17:12 lh_bot: 我把 MCF 那个五六十行的 inline 直接糊他脸上
+17:13 lh_bot: 那个函数有个回调参数   丢个立即数进去 -O3 之后的汇编比 C 还少
+17:13 lh_bot: 笑看
+17:13 lh_bot: varna: 你算错了  那样是七百万了
+17:13 varna: 70w确实是舰吧人数
+17:14 varna: 哦不对
+17:14 varna: 脑残了
+17:14 lh_bot: 七万吧
+17:14 varna: 7w刷到13w
+17:14 varna: 我这辈子对不起的人当中有我小学的所有数学老师
+17:16 cleamoon joined channel
+17:16 cleamoon__ joined channel
+17:16 varna: 我学了各种奇怪的数学，然而我的算术还在及格线上振动
+17:18 cleamoon__: 那c写……
+17:18 cleamoon__: 拿
+17:18 cleamoon__: 算数是什么？好吃吗
+17:19 xxxxxxxx: 家具城 我又来了
+17:20 xxxxxxxx: 我这种非洲人 怎么可能有脸进家具城呢
+17:20 cleamoon__: os课作业是写shell… 坑爹…
+17:20 xxxxxxxx: 自奶一口
+17:22 xxxxxxxx: 什么鬼面对大破的航母六人集体miss
+17:23 cleamoon__: 正常
+17:23 xxxxxxxx: 我把自己奶进boss了 这是好事
+17:24 xxxxxxxx: 卧槽陆奥北上智商上线打战舰 然后两个miss
+17:25 varna: 狂沟不止
+17:25 xxxxxxxx: 好又是3个桶....
+17:26 xxxxxxxx: 噗噗噗捞出一个赤城
+17:26 cleamoon__: 欧皇
+17:29 xxxxxxxx: cleamoon__: 你这个欧洲人吃我一矛
+17:29 cleamoon__: 我才没捞出过彩底的东西呢
+17:30 xxxxxxxx: 你的意思是你的都是造出来的是不是....
+17:30 cleamoon__: 赤诚是当然任务给的
+17:30 cleamoon quit:Read error: Connection reset by peer
+17:41 cleamoon__: fa，现代物理越来越奇怪了，完全不明白
+17:43 lh_bot: 理帝2: 回复 乐天派的小耗子 :具体的例子是没意义的 请看我在这楼给另一个朋友的回复
+17:43 lh_bot: 原来贴了干货打脸的结果就是“具体的例子是没意义的”  哦艹  这智商被狗吃了
+17:43 varna: 2333
+17:44 varna: 逻辑不通
+17:44 cleamoon__: 不要什么都喂给狗，会拉肚子的
+17:44 varna: 我的建议是不解释直接炸了全楼
+17:44 varna: 再喷再炸
+17:44 lh_bot: 这帖子不是他发的
+17:44 lh_bot: 虽然这帖子本身就神奇
+17:44 varna: 那就截图之后直接封了
+17:44 cleamoon__: 什么帖子
+17:45 lh_bot: 贴了个六十行的 inline  直被接“没意义”了
+17:45 lh_bot: http://tieba.baidu.com/p/3646276651
+17:45 lh_bot: 29 楼
+17:45 cleamoon__: 哦，那个……
+17:45 cleamoon__: 你还真去看……
+17:45 lh_bot: 我等帝球呢
+17:46 cleamoon__: 耻球去打猎了吧
+17:48 FrankHB joined channel
+17:48 cleamoon joined channel
+17:48 cleamoon__: ……被打出来了
+17:54 whocares_2 joined channel
+18:01 cleamoon__: 全部150个都喷完就脱水了
+18:01 cleamoon quit:Read error: Connection reset by peer
+18:07 Sawfish joined channel
+18:07 cleamoon__: 如果我写建议，第一条就是少看贴吧……第二条是烧了谭书……
+18:08 Sawfish: 不好意思，贷款我慢慢还。
+18:08 varna: 如果我写的话，我会建议读者吃螺内酯
+18:08 cleamoon__: 那是第三条
+18:08 Sawfish: 实在很抱歉，说了很多我自己都没听懂的话。
+18:09 cleamoon__: T2治愈有望了
+18:09 Sawfish: 我已经治愈了啦
+18:09 * varna 笑
+18:10 Sawfish: 你笑妹啊，不是为了你啊。
+18:10 varna: 我可没把自己看那么大
+18:10 varna: 这点我和你不一样
+18:11 Sawfish: 然后就50万啊我日
+18:11 varna: 你在说什么
+18:12 Sawfish: 没什么，最近借了笔贷款。
+18:12 Sawfish: 因为听说某只羊驼要挂了
+18:12 Sawfish: 没挂就好
+18:13 xxxxxxxx: T2似乎已经出现幻觉了....
+18:13 cleamoon__: 原来是梦到要治愈了
+18:13 Sawfish: 是么？好吧。
+18:14 varna: 你们谁去6-1给他挂个号
+18:14 Sawfish: 不是，只是幻觉了。
+18:14 varna: 别故作高深了
+18:15 Sawfish: 我哪里故作高深了？
+18:15 Sawfish: 我这么浅薄的人。
+18:15 Sawfish: 还是读书毕业吧。
+18:17 xxxxxxxx: 今天造出来一个爆战
+18:17 cleamoon joined channel
+18:18 varna: 爆战用处不大
+18:18 cleamoon__: 6-1是什么
+18:18 varna: 6-1第一次索敌失败的沟里有主任
+18:18 cleamoon__: ………
+18:19 xxxxxxxx: 数值上看得出来
+18:19 xxxxxxxx: 但是它给我一种明天我能造出舰爆的错觉..
+18:20 lh_bot: FrankHB: 
+18:22 varna: 零战62型加爆装的一部分原因是后期机动部队的正规航母不足，彗星部署困难
+18:23 varna: 当然也有特攻方面的需求
+18:24 cleamoon__: 需要特攻养一只宝石海星
+18:24 xxxxxxxx: 一只41级的潜艇单舰 这是在打哪里...
+18:24 varna: 所谓特攻是说日军有组织的自杀攻击
+18:25 varna: lv41说不定在刷闪
+18:25 xxxxxxxx: 潜艇刷闪....
+18:25 Sawfish: 看书去了
+18:25 cleamoon quit:Ping timeout: 264 seconds
+18:25 Sawfish quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:26 varna: 不知道十几连沟了
+18:30 cleamoon__: 我觉得T2已经在某条路上越走越远了
+18:30 varna: 什么路
+18:30 cleamoon__: 不知道，反正是我不想去的路
+18:32 cleamoon__: 电脑画类似函数图的东西有什么好办法吗
+18:33 FrankHB: ?
+18:35 varna: octave?
+18:35 varna: 配合gnuplot
+18:35 xxxxxxxx: http://irc.chikyuuschool.com/ 24日的log你们那边是跳出下载还是直接打开?
+18:35 cleamoon__: 不是画函数图像，是画图像，不知道函数的情况下……
+18:36 lh_cat: Frankhb: 快去咬人
+18:37 varna: 不知道函数的时候不是直接画点么
+18:37 varna: xxxxxxxx: 直接打开
+18:37 cleamoon joined channel
+18:37 xxxxxxxx: 卧槽 我这里为啥就24号的要下载....
+18:38 varna: 如果你有坐标的话，可以用gnuplot画
+18:38 cleamoon__: 不是，我的意思是比如我看到一个图，想画下来，怎么做最方便……
+18:40 varna: ……gimp
+18:40 xxxxxxxx: 右键
+18:40 cleamoon__: ……
+18:40 varna: 比拼手上功夫的时候到了……
+18:40 xxxxxxxx: 现实中的么?
+18:40 varna: gimp拿钢笔描……
+18:40 xxxxxxxx: 拍下来啊......
+18:41 cleamoon__: 我曾经用gimp花了一只uuz，看起来像是uuz馒头
+18:42 cleamoon__: 我看看能不能设计一个用方向键画图的
+18:43 xxxxxxxx: 听上去好奇怪....
+18:44 Plough joined channel
+18:44 cleamoon__: Plough: 爆
+18:44 Plough: 听说有人出武藏了？
+18:45 Plough: 果然这段时间武藏玄学
+18:45 xxxxxxxx: http://hiphotos.baidu.com/%B2%CB%C4%F1%CC%F0%B9%CF%BF%B3%B4%F3%B5%B6/pic/item/4e81a6bf0f2442a7be8ec10cd143ad4bd31302f7.jpg
+18:45 Stevearzh quit:Remote host closed the connection
+18:45 cleamoon__: dan什么的出了
+18:45 Plough: 另外6-2的明石在门神点
+18:45 Plough: boss点似乎没有
+18:45 cleamoon__: 我出金刚了
+18:49 cleamoon quit:Read error: Connection reset by peer
+18:49 Stevearzh joined channel
+18:50 xxxxxxxx: 南西帮我控饭点
+18:51 Plough: 噗
+18:51 Plough: 昨天给大和上了三炮配置忘换了
+18:51 Plough: 然后今天演习夜战直接一个CI……
+18:53 Plough: ……CI*2
+18:56 niksun quit:Ping timeout: 245 seconds
+18:57 hoxily quit:Read error: Connection reset by peer
+18:57 niksun joined channel
+18:58 hoxily joined channel
+19:02 izmntuk joined channel
+19:05 cleamoon joined channel
+19:06 cleamoon__ quit:Ping timeout: 272 seconds
+19:06 Plough: http://ww1.sinaimg.cn/large/e4beb8aegw1eqhyyy7z47j20aj0ee762.jpg 年度巨作
+19:15 lh_bot: niksun: 这是新人么
+19:18 cleamoon quit:Read error: Connection reset by peer
+19:19 lh_bot: IP地址: 124.207.158.58北京市 鹏博士宽带
+19:28 Stevearzh quit:Quit: Quit...
+19:30 lh_bot: FrankHB: 快去喷
+19:31 Stevearzh joined channel
+19:31 niksun: 我是新人
+19:32 niksun: 你看到我IP了，啊啊好可怕
+19:34 cleamoon joined channel
+19:35 lh_bot: niksun: 爆性别爆三围爆照
+19:36 niksun: 我是一个性别不明的塞贝尔曲线
+19:36 * lh_bot slaps niksun around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+19:36 niksun: ...
+19:37 niksun: ~sm CQMYG
+19:37 lh_bot: geordi: { atomic<int> a; cout <<a; }
+19:37 geordi: 1688876960
+19:38 lh_bot: geordi: insert <<hex after cout
+19:38 geordi: 46f900
+19:38 lh_bot: geordi: again
+19:38 geordi: 46f900
+19:38 condy: geordi: again
+19:38 geordi: 46f900
+19:38 lh_bot: 帝球踩过这坑
+19:39 condy: 默认magic number?
+19:39 condy: geordi: again
+19:39 geordi: 46f900
+19:39 lh_bot: 默认是不初始化
+19:39 niksun: geordi: << 1+1
+19:39 geordi: 2
+19:39 niksun: geordi: << 100000000000000^100
+19:39 geordi: error: no match for 'operator^' (operand types are 'ostream::__ostream_type {aka ostream}' and 'int')
+19:40 condy: geordi: { int _; atomic<int> a; cout << hex << a; }
+19:40 geordi: 46f900
+19:40 lh_bot: geordi: { int buf = 0xdeadbeef; auto ptr = new(&buf) atomic<int>; cout <<hex <<*ptr; }
+19:41 geordi: deadbeef
+19:41 lh_bot: 这地方最坑的是……
+19:41 niksun: geordi: CQMYG
+19:41 geordi: error: 'CQMYG' does not name a type
+19:41 lh_bot: geordi: undo and insert() after <int>
+19:41 geordi: error: Unexpected `(` after ` insert`.
+19:41 lh_bot: geordi: { int buf = 0xdeadbeef; auto ptr = new(&buf) atomic<int>(); cout <<hex <<*ptr; }
+19:41 geordi: 0
+19:41 lh_bot: 哦艹
+19:42 lh_bot: niksun: 爆性别爆三围爆照
+19:42 lh_bot: varna: 给新人吃药
+19:42 cleamoon__ joined channel
+19:44 cleamoon quit:Read error: Connection reset by peer
+19:47 LittleKey joined channel
+20:00 Petrus07 joined channel
+20:00 hoxily: geordi: { cout << (const char*)0x40000 << endl; }
+20:00 geordi: Undefined behavior detected.
+20:00 hoxily: geordi: { cout << (char*)0x40000 << endl; }
+20:01 geordi: Same output.
+20:01 hoxily: geordi: { void* ptr = (void*)0x40000; cout << (char*)ptr << endl; }
+20:01 geordi: Still same output.
+20:02 cleamoon joined channel
+20:02 condy: geordi: use 0x400000
+20:02 geordi: ELF
+20:02 hoxily: geordi: { void* ptr = (void*)0x400000; cout << (char*)ptr << endl; }
+20:02 geordi: ELF
+20:02 hoxily: 原来是少了一个0
+20:03 sismvg: 林子聪的广告恶心死了
+20:03 sismvg: 整天屠龙刀，兄弟，balabala
+20:05 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x100; i++){cout<< *ptr;} }
+20:05 geordi: <no output>
+20:05 condy: 屠龙宝刀，点击就送！
+20:05 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x100; i++){cout<< ptr[i];} }
+20:05 geordi: ELF> n@@��@8@@@@@@��@@@@���� ����i
+20:06 sismvg: 然后出现个男人乳头
+20:06 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x100; i++){printf("%02x", ptr[i]);} }
+20:06 geordi: 7f454c4602010103000000000000000002003e0001000000206e4000000000004000000000000000fffffff8ffffffae0900000000000000000040003800080040001e001b000600000005000000400000000000000040004000000000004000400000000000ffffffc001000000000000ffffffc001000000000000080000000000000003000000040000000002000000000000000240000000000000024000000000001c000000000000001c0000
+20:07 sismvg: 最近的广告很恶俗，但广告商却当成有新意
+20:07 xxxxxxxx: 卧槽什么鬼 我一切回来 就看到药娘四在说乳头...
+20:07 sismvg: 噗
+20:07 lh_bot: uccu
+20:07 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x100; i++){printf("%c", ptr[i]);} }
+20:07 geordi: ELF>pn@@8�@8@@@@@@��@@@@���� ����i
+20:07 lh_bot: 我什么都看见了  就没看见那两个字
+20:08 xxxxxxxx: sismvg>然后出现个男人乳头
+20:08 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x100; i++){if(ptr[i] >= 0x20)printf("%c", ptr[i]);} }
+20:08 geordi: ELF>pn@@X@8@@@@@@@@@@ i
+20:08 lh_bot: 最后两个字看不清
+20:08 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x200; i++){if(ptr[i] >= 0x20)printf("%c", ptr[i]);} }
+20:08 geordi: ELF>pn@@X@8@@@@@@@@@@ ii@ @@i@i@@  Ptd{{G{GccQtd
+20:09 xxxxxxxx: 快戴上眼镜
+20:09 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x300; i++){if(ptr[i] >= 0x20)printf("%c", ptr[i]);} }
+20:09 geordi: ELF>pn@@X@8@@@@@@@@@@ ii@ @@i@i@@  Ptd{{G{GccQtd/lib64/ld-linux-x86-64.so.2GNU,jq
+20:09 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x400; i++){if(ptr[i] >= 0x20)printf("%c", ptr[i]);} }
+20:09 geordi: ELF>pn@@X@8@@@@@@@@@@ ii@ @@i@i@@  Ptd{{G{GccQtd/lib64/ld-linux-x86-64.so.2GNU,jq-)nUv$z{L
+20:09 hoxily: geordi: { char* ptr = (char*)0x400000; for(int i = 0; i < 0x800; i++){if(ptr[i] >= 0x20)printf("%c", ptr[i]);} }
+20:09 geordi: ELF>pn@@X@8@@@@@@@@@@ ii@ @@i@i@@  Ptd{{G{GccQtd/lib64/ld-linux-x86-64.so.2GNU,jq-)nUv$z{Le0c[m\x@;>9]TWk8! &*"AH437.B:^I%XJC#Q'`yNG?ZsEVFr<hfo
+20:10 cleamoon__: 噗
+20:10 cleamoon__: 怎么回事
+20:10 hoxily was kicked by :use the fvcking /msg
+20:10 sismvg: geordi:{int val=0xbeefcafe; val=(val>>(sizeof(int)*8-1)|(val>>1));cout<<val<<endl;}
+20:10 geordi: -1
+20:10 hoxily joined channel
+20:10 hoxily: 在打印ELF Image啦
+20:11 sismvg: geordi:{unsigned int val=0xbeefcafe; val=(val>>(sizeof(int)*8-1)|(val>>1));cout<<val<<endl;}
+20:11 geordi: 1601693055
+20:11 lh_bot: hoxily: 你可以去 #geordi 刷  或者 /msg   别在频道里刷乱码
+20:11 hoxily: OK
+20:11 condy: geordi: << 0xbeefcafe/2
+20:11 geordi: 1601693055
+20:12 condy: sismvg: val=(val>>(sizeof(int)*8-1)|(val>>1) 作用是什么？
+20:12 cleamoon__: 我还以为bot防止了这种用法呢
+20:12 sismvg: 循环左移、
+20:12 cleamoon quit:Read error: Connection reset by peer
+20:12 sismvg: 真是奇怪
+20:12 lh_bot: 这是毛的循环左移
+20:13 sismvg: http://www.cnblogs.com/alex4814/archive/2011/09/08/2171862.html
+20:13 sismvg: geordi:{unsigned int val=10; val=(val>>(sizeof(int)*8-1)|(val>>1));cout<<val<<endl;}
+20:13 geordi: 5
+20:13 sismvg: 所以对的
+20:13 lh_bot: 循环左移n (a >> (N - n)) | (a >> n)  // 这智商  艾玛
+20:13 lh_bot: 循环左移是  (a >> (N - n)) | (a << n)
+20:14 lh_bot: 数学老师都哭死了   
+20:14 sismvg: 验证错了吗
+20:14 cleamoon__: 这什么诡异写法……
+20:14 sismvg: geordi:{unsigned int val=15; val=(val>>(sizeof(int)*8-1)|(val>>1));cout<<val<<endl;}
+20:14 geordi: 7
+20:15 sismvg: 啊。。偏偏10是对的
+20:15 sismvg: geordi:{unsigned int val=0xbeefcafe; val=(val>>(sizeof(int)*8-1)|(val<<1));cout<<val<<endl;}
+20:15 geordi: 2111804925
+20:16 lh_bot: geordi: insert <<hex after cout
+20:16 geordi: 7ddf95fd
+20:16 lh_bot: beefcafe !
+20:16 lh_bot: cafebeef !
+20:17 sismvg: 本来想找个词典，然后看看到底有多少魔数的
+20:17 sismvg: 结果发现这样的词典数据库太难找了
+20:19 sismvg: 我现在知道的- 0xad ,0xbeefcafe,0xbee,0xcab
+20:20 lh_bot: beefcafe 是啥
+20:20 sismvg: 我记得是烂牛肉还是啥
+20:21 lh_bot: beefcafe: 有人叫你
+20:21 sismvg: http://en.wikipedia.org/wiki/Beef
+20:21 FrankHB: deadbeef
+20:22 sismvg: dea
+20:24 sismvg: 1989年版本的蝙蝠侠扮演者的演技好烂
+20:24 sismvg: 还是诺兰的版本的赞
+20:28 lh_bot: FrankHB: 帮我喷人去
+20:29 cleamoon joined channel
+20:39 cleamoon quit:Read error: Connection reset by peer
+20:40 lhanjian joined channel
+20:42 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 36.0.4/20150320202338]
+20:48 FrankHB: 哪里。
+20:50 lh_bot: FrankHB: 我 @ 你了
+20:51 hoxily quit:Quit: Leaving
+20:52 hoxily joined channel
+20:54 FrankHB: 那个刚才遍历过了。
+20:54 xxxxxxxx: http://www.bilibili.com/video/av2141929/  19条关于色情网站不知廉耻的自白
+20:54 FrankHB: 虽然没什么战斗力。
+20:56 cleamoon joined channel
+21:03 hope1 joined channel
+21:04 varna: 有新人？
+21:04 varna: 让他去舰尾
+21:05 hope1: rolling hash怎么译，滚动散列？
+21:06 varna: rolling山城！
+21:06 varna: 卷动比较好吧
+21:08 hope1: 卷更偏向scroll吧
+21:08 varna: 但这里没看出滚动来
+21:08 FrankHB: 滚动条为啥不叫卷动条……
+21:09 varna: 而且有老滚
+21:09 varna: FrankHB: 恥球今天也没穿胖次？
+21:09 cleamoon quit:Read error: Connection reset by peer
+21:09 varna: 真羞耻
+21:12 lhanjian: St.Wall的书怎么样？
+21:12 lhanjian: varna, 
+21:14 FrankHB: 最炫羊驼风？
+21:14 varna: lhanjian: 他写了什么？
+21:15 lhanjian: Programming Perl
+21:15 lhanjian: 骆驼书啊
+21:15 Plough: 一开始我也没反应过来……
+21:15 xxxxxxxx: 羊驼解决完法国佬相关了?
+21:16 varna: 我下午三点多就做完讲义了
+21:16 condy: 原来是larry wall..
+21:16 Plough: 感受到法语的浪漫了么（笑）
+21:16 varna: Programming Perl我没读过
+21:16 hope1: rolling hash主要强调的是"hashing through a rolling window", 经过一个移动的定长（当然不一定）区域, 这个可以类比scroll bar
+21:16 varna: 我感受到了那个法国人无论在理论还是在实操方面都是逗比
+21:17 Plough: 23333
+21:17 varna: 他对Lxxxxxxxxxxx那个M值逻辑的理解没有其他的人深刻
+21:17 varna: 别人用同样的理论提出了更好的算符定义
+21:17 lhanjian: 有比编译原理更好的书么
+21:17 lhanjian: 在编译上
+21:17 varna: 比如法国佬用了十行的公式，别人弄了只包含三个变量的公式
+21:17 varna: 一句话而已
+21:17 xxxxxxxx: 然而比别人制造了更多麻烦?
+21:18 Plough: 一句话不够漂亮
+21:18 varna: 差不多
+21:18 varna: lhanjian: 龙书算是intro吧，我觉得编译要搞还是多看后端
+21:18 Plough: 他那十个公式的布局肯定经过精心设计
+21:18 varna: 问题是法国佬还有个逗比
+21:18 Plough: 尔等不懂法语的人是理解不了他所写下的公式的美感的
+21:19 varna: 不确定性的符号系统上有四则运算
+21:19 varna: 法国佬只定义了三个，然后在他的附录里提到他用了没定义的减法
+21:19 Plough: 2333333
+21:19 Plough: 轮型
+21:19 lhanjian: 原来羊驼说在写什么游戏脚本的时候用过Lua来着？
+21:20 varna: 我看云风用
+21:20 Plough: 不是awesome么
+21:20 varna: 我自己跟lua的接触咸鱼awesome
+21:20 varna: 限于*
+21:20 * varna 输入法暴露
+21:20 Plough: 23333
+21:20 cleamoon__: 23333
+21:20 varna: 总之还好我大致学会了那些乌七八糟的符号方法
+21:21 Plough: 南西2/5
+21:21 varna: 虽然如果要理解得更好，得学那个Lxxxxxxx的M值逻辑
+21:21 cleamoon__: war3用lua
+21:21 hope1: …… 怎么什么网站都要用到 font.googleapis.com
+21:21 Plough: 大概是bootstrap
+21:21 cleamoon__: lua+c写的opengl
+21:21 Plough: 老版的学派半年打不开也是这个原因
+21:22 Plough: 不知道哪里就用上googleapis.com了……
+21:22 varna: 我今天南西沟成POI
+21:22 Plough: 我今天闲着没事
+21:22 varna: 现在还没做完，虽说今天基本没登舰娘，连演习都只打了五场
+21:22 varna: 没事？
+21:22 hope1: 似乎roll强调一个定长"窗口"的移动，而scroll强调自一段开始的展开
+21:22 varna: 你又痛经了？
+21:22 Plough: 你才痛经
+21:22 xxxxxxxx: 然而50运输船做了一半了南西还没一半
+21:22 varna: hope1: 你该去找社长酱
+21:22 hope1: 一端
+21:23 Plough: 只是打算今天先歇歇，明天再继续漆武藏
+21:23 hope1: varna, 停课六周
+21:23 Plough: ……什么情况
+21:23 lhanjian: 停课六周？！
+21:23 hope1: 省选
+21:23 varna: hope1: 我不是说你……竞赛党想不上课集训很容易吧
+21:23 varna: 估计他要训练
+21:23 Plough: Orz
+21:23 varna: 都是这样，以前到了季节我也是排一个逃课单子交给班主任签字……
+21:24 * Plough 没刷过竞赛
+21:24 hope1: varna, 不是这个意思啦…… 最重要的是停课在另一个校区（本部），所以……
+21:25 varna: hope1: 所以你可以跟会长酱、社长酱、有意思酱、主任、教授、院长、理事长、粉条姬、轻巡姬等数万人……
+21:25 varna: 轻巡姬还有两个版本的……
+21:25 varna: 想想就可怕
+21:26 hope1: 地铁往返大概一个半小时，也就是说基本上没法回去
+21:26 varna: 我日
+21:26 Plough: HO棠是深海提督么……
+21:26 varna: 原来我做完讲义之后三个小时只进了一次！？
+21:26 Plough: ……
+21:26 varna: 刚才又进了一次，还不到50%
+21:26 Plough: 这毕竟是南西
+21:26 varna: 一血大破的哈酱都修好了
+21:26 Plough: 而且南西进Boss的概率不是1/4么
+21:27 Plough: 出门一个分叉门口一个分叉
+21:27 cleamoon joined channel
+21:27 varna: 今天什么日？NENOHIDAYO-
+21:27 xxxxxxxx: 我接任务之后进了boss大概五次了 然而我南西一半都没做好
+21:28 varna: 今天晚上就完结了，然而我没法在实验室熬夜看
+21:28 varna: 如果长时间不睡觉的话估计讲完讨论班我脑袋就要炸了
+21:28 Plough: 脑浆炸裂羊驼
+21:28 xxxxxxxx: 终于轮形没有大破也没有中破
+21:29 varna: 有次肝响爷就是
+21:29 varna: 我上午十点钟实在撑不住了，倒下睡了一个小时
+21:29 xxxxxxxx: 还捞飞龙 捞个毛线
+21:29 varna: 做梦的时候我脸上数个部位都出现了不同的疼法
+21:29 lolisa joined channel
+21:29 Plough: ……做啥梦了
+21:29 varna: 有闷着疼的、要炸开的、针扎一样的
+21:29 varna: 忘了，一言以蔽之：哈拉韶
+21:29 Plough: 2333333
+21:30 varna: 最惨的是起来之后更疼
+21:30 varna: 下午还有项目讨论
+21:30 Plough: 我最困的时候大概是试验多相睡眠的那天
+21:30 varna: 女孩子不要折腾
+21:30 xxxxxxxx: 大概是哈喇子干在脸上冻住了
+21:30 Plough: 第二天中午睡下去，下午五点才醒来
+21:31 Plough: 你又不是女孩子
+21:31 varna: 按照米空的提法，我大概可以自行合成夜战素
+21:31 varna: 有夜战素（Sendaium）就可以持续夜战
+21:31 Plough: 说起来小学的时候我还去梦吧逛过来着
+21:32 Plough: 当时看了一堆别人的梦，结果晚上睡不着觉
+21:32 hoxily quit:Quit: WeeChat 1.1.1
+21:32 varna: 小学幼女肛旗hshsprpr
+21:32 Plough: 你才幼女
+21:32 cleamoon__ quit:Ping timeout: 265 seconds
+21:32 varna: 嘛，看看我明天能讲趴下几个
+21:33 xxxxxxxx: 那个不是川内素么...
+21:33 varna: 反正老板在前排，后面的人倒下了他也看不见
+21:33 lolisa: jiangshenmo?
+21:34 Plough: 另外问个问题
+21:34 Plough: 你们活的开心么
+21:34 Plough: 得*
+21:35 varna: Plough: 我撸得昏天黑地，不知道
+21:35 Plough: 在使吧europeanparty吧突然看到这么个问题
+21:36 varna: lolisa: 讲一点定型贝叶斯网络（Qualitative Bayesian Networks, QBN/QPN）上的符号方法，以及多个QPN的合成方法
+21:36 varna: 应该说我还是挺开心的
+21:36 varna: 至少我还神志清楚、体力尚可，而且还有两万钢
+21:37 Plough: 其实这个问题我感觉我不太能回答上来
+21:37 lolisa: ok... sorry for not using chinese, but fcitx goes down. (mind if I type eng or pinyin?
+21:37 hope1: 不太能回答+
+21:38 Plough: 因为我不打算追求开心，所以我不在乎自己开不开心……
+21:38 varna: lolisa: typing your typing first
+21:38 varna: 我倒是觉得人很多时候其实是开心的
+21:38 lolisa: My life is good in most aspect... except horrible relationship with other people and not so good 
+21:38 lolisa: varna, don't get it
+21:38 hope1` joined channel
+21:39 varna: 当你绝望的时候，你会想死的
+21:39 xxxxxxxx: 我刚才特别开心
+21:39 varna: 这不是个调侃
+21:39 varna: 当然，我估计大部分人生顺利的伙计们不会有这个感受
+21:39 Plough: +
+21:39 xxxxxxxx: @王垠
+21:39 Plough: 不过不开心也未必就绝望吧
+21:39 lolisa: append health...
+21:40 varna: 没经历过痛苦的人不会珍惜自己的健康和天赋，同时把它们视为应有之物
+21:40 cleamoon quit:Read error: Connection reset by peer
+21:40 varna: 至于所谓的不开心，我的态度是人疼了就会喊疼，但这不算什么
+21:41 varna: 别在意这种问题活下去就行了
+21:41 Plough: 其实我大概只是缺乏安定感
+21:41 hope1`: 的确如此，我应该算是一个。然而人的诉求不止健康和能力的存在吧
+21:41 varna: hope1: 看开点
+21:41 xxxxxxxx: 然而为何这一段似乎搞的有人曾经炸了似的...
+21:42 varna: 我确实不是调侃
+21:42 Plough: 因为我什么都不知道
+21:42 varna: 大部分人和死这个字打照面或者去目睹接近此类事情的机会不多
+21:42 varna: 这挺幸运的，所以忘掉这种劳什子问题去好好玩舰娘就对了
+21:42 varna: 人的诉求，对我来说至少还有个南西
+21:43 varna: 求奶一口让我进Boss
+21:43 varna: ……日，掉沟了
+21:43 Plough: 2333333
+21:43 varna: 当提督真不容易
+21:43 xxxxxxxx: 稳 猫了
+21:43 Plough: 和死打照面怎么算
+21:43 varna: 别管了
+21:43 Plough: 被车撞飞出去算吗？
+21:43 varna: 另外我说个数理逻辑方法 Łukasiewicz logic
+21:44 varna: 一次两次无所谓
+21:44 Plough: 这倒是
+21:44 varna: 人不怕万一，就怕一个东西悬你脑袋上
+21:44 varna: 比如过一个月要活动了
+21:44 varna: 你攒不攒钢
+21:44 Plough: 我咸
+21:44 hope1`: 的确在生存面前这些都是奢谈，但不需要因此就放弃精神诉求，至少在有足够条件的情况下没必要这样。
+21:44 hope1 quit:Ping timeout: 246 seconds
+21:44 varna: hope1: 你理解得太差
+21:44 xxxxxxxx: 我觉得大多数人不太容易和死打照面 如果打照面了 估计想谈也晚了
+21:45 varna: 这事我不多说，趣味不大；我只希望大部分人没必要有这种感受就行
+21:45 varna: 虽说这事我说了不算，得拼JESUS
+21:47 whatofor_1 joined channel
+21:48 hope1`: 是，毕竟我确实没有这类经历。我已经纠结这种形而上的问题好几年了，虽然还是没看到什么方向
+21:48 varna: 我的建议是忘掉这种问题
+21:48 varna: 没用的，这是个经验积累之后的个人结论
+21:49 xxxxxxxx: hope1`: 只要别放弃治疗通常不会自己抽风干掉自己的 放心
+21:49 Plough: ……什么样的经验
+21:49 xxxxxxxx: Plough: 我从刚才就想问来着 没问出来
+21:50 varna: 别问我
+21:50 varna: 很多经验是没必要有的，有了人只能变沉重
+21:50 varna: 你们要的是练度，啊，练度
+21:50 whatofor quit:Ping timeout: 272 seconds
+21:50 varna: 五月就活动了
+21:50 xxxxxxxx: 为何不分享一些人生的经验
+21:50 varna: 那东西没用
+21:51 varna: 别人灌的是鸡汤，我灌的是金汤
+21:52 hope1`: 很多东西都没用，这个无所谓，听故事而已
+21:52 Xilzzert quit:Ping timeout: 264 seconds
+21:53 hope1`: 当然这是观众的态度
+21:53 code_new joined channel
+21:53 xxxxxxxx: 听故事+
+21:54 varna: 听故事不如你们奶我几口，我要进Boss
+21:54 xxxxxxxx: 轮形 稳了
+21:55 xxxxxxxx: 已奶
+21:55 xxxxxxxx: http://www.youba.com/wjmt2/79266/1.htm 卧槽这是啥....
+21:56 lhanjian quit:Ping timeout: 256 seconds
+21:58 cleamoon joined channel
+21:58 varna: 你毒奶
+21:58 varna: 我掉沟了
+21:58 xxxxxxxx: 我自己都猫了 难道我真是毒奶....
+22:00 hope1`: 事实上我一直都为此感到焦虑，虽然最开始或许是因为太闲了，但是现在也没解决
+22:01 varna: 忘掉这种事
+22:01 varna: 五十年之后，你不想体会都难
+22:01 xxxxxxxx: 为啥?
+22:02 lolisa: howto奶?
+22:02 varna: lolisa: 把上衣脱下去，我吸你几口
+22:03 xxxxxxxx: lolisa: 你发自真心的祝福一句 或者假意诅咒一下 看最后效果
+22:03 lolisa: OK, godspeed
+22:03 Plough: 20补给做完
+22:03 xxxxxxxx: varna>lolisa: 把上衣脱下去，我吸你几口  lolisa>OK, godspeed
+22:03 Plough: 南西2/5
+22:04 lolisa: pu, nimen zhequn hentai
+22:05 hope1`: 大致给个描述或分类吧。不想体会都难指的是什么性质的事情/感受？
+22:05 xxxxxxxx: 我觉得是便秘
+22:06 varna: hope1`: 别指望我开口
+22:06 xxxxxxxx: 那么不想提大概也不是说出来大家能乐呵的事情 不打听也是好事
+22:07 xxxxxxxx: 又猫...
+22:07 xxxxxxxx: 我先拜拜lh_cat 说不定就好了
+22:07 xxxxxxxx: lh_cat 拜
+22:08 Plough: 伊号做完，南西2/5
+22:09 lh_cat: 叫我干啥
+22:10 varna: lh_cat: 给你灌羊味素
+22:10 cleamoon__ joined channel
+22:10 xxxxxxxx: 拜猫神化身
+22:10 lh_cat: 去去去
+22:10 hope1`: 没指望，算是好奇一下吧，那就算了
+22:10 lh_cat: 谁好奇？
+22:11 hope1`: 拜老鼠除猫？
+22:11 cleamoon__: 为什么烟酒僧的科目都是1/4好玩的课加3/4恶心的课呢……
+22:11 hope1`: 我自己
+22:11 hope1`: cleamoon_, 不管哪个学位都这样吧
+22:11 cleamoon quit:Read error: Connection reset by peer
+22:12 lhanjian joined channel
+22:12 xxxxxxxx: cleamoon__: 捆绑销售
+22:12 cleamoon__: 捆绑销售+
+22:12 cleamoon__: 课不能自选太可惜了
+22:14 hope1`: 研究生不能自选？
+22:14 lolisa: BTW who wrote the poem on title?
+22:14 varna: lolisa: 我
+22:14 varna: lolisa: 需要neta解说么
+22:14 lolisa: ...wenchu varna, IDK but is it from ship collections?
+22:15 cleamoon__: 必修一大片
+22:15 varna: lolisa: fleet collection
+22:15 cleamoon__: 能选的课时很少
+22:15 lolisa: OK, thx
+22:15 hope1`: 讲一下neta吧，su
+22:15 endle joined channel
+22:15 lolisa: +
+22:15 hope1`: ... 虽然大概舰娘的梗听不明白
+22:16 varna: 长波 = 长波，碎浪 = 矶波，IJN驱逐舰（长波是相对极先进的型号，而矶波则是相对落后的）
+22:16 cleamoon__: 蚊雏羊驼？就是说是孑孓咯？
+22:16 varna: 七型鹫 = A7M（只有A7M1 A7M2，后者换用了三菱的发动机），十七试舰战“烈风”
+22:16 lh_cat: 喵
+22:17 varna: 五吋鱼是emacs用户用来打倒vim用户的装备，但我写这个联的时候正好是冬活
+22:17 varna: 冬活划分了三档难度，以最低难度打最终面的玩家被称为咸鱼
+22:17 xxxxxxxx: 猫神化身一喵 我又猫了...
+22:17 varna: 下联基本neta这个
+22:17 cleamoon__: 噗，教授：c给你很大的自由，其他大多语言不给的，不断犯错的自由……
+22:17 varna: 当然五吋是IJN驱逐舰对水面主炮的主要口径
+22:17 varna: 准确的数据是12.7cm口径
+22:18 endle quit:Client Quit
+22:18 endle joined channel
+22:19 varna: 另外“长波一卷七型鹫”是个历史谣传neta
+22:20 varna: 仅有的烈风十机在战后应当移交美国，然而据说负责移交的军官在途中把战机销毁了
+22:20 varna: 可信度不高，就当个故事好了
+22:20 hope1`: cleamoon__, 犯错的自由挺重要的，虽然C多的是无意义的坑
+22:21 cleamoon__: 你生活快乐吗基本和你打星际快乐吗一样，问者为了呵呵，答者回答呵呵
+22:22 cleamoon__: 海棠在纠结什么问题
+22:23 varna: cleamoon__: 他跟啊呀呀呀过了三百多年日子，现在有点悠闲了
+22:23 hope1`: 在社会场合的确如此，流行至今
+22:23 varna: 我嚓轮型
+22:23 varna: 幸好没潜母
+22:23 lolisa: 啊呀呀呀?
+22:23 endle quit:Client Quit
+22:23 varna: lolisa: 文文
+22:23 lolisa: K, thx
+22:23 cleamoon__: 在社会场合和啊呀啪啪啪了三百多年至今？
+22:23 endle joined channel
+22:23 xxxxxxxx: 哈哈哈 终于不只我一个撞轮形了
+22:23 cleamoon__: 太高段了
+22:24 xxxxxxxx: 然而看到别人撞轮形真开心
+22:24 varna: 然而我有三队换着来的潜艇……
+22:25 cleamoon__: 然而我还没得到任何新的潜艇
+22:25 xxxxxxxx: varna 别担心 你大概会撞两三次 撞破一大堆
+22:25 varna: 这一次修17min/30min, 然后换些别的上来
+22:25 cleamoon__: 最近一段时间都没有新的船
+22:25 endle quit:Read error: Connection reset by peer
+22:25 varna: 一般来说我每天的南西撞两三次轮型，中破两三格
+22:25 varna: 个*
+22:26 xxxxxxxx: 我大破的今天都不止两三个了.....
+22:26 cleamoon__: 感觉简单的玩意拿c写比先学c艹快多了……
+22:27 hope1`: cleamoon__, 有一部分是徒劳的寻找高阶motivation, 还有一些是自卑心理吧
+22:27 endle joined channel
+22:28 varna: hope1`: 一个高阶的实体应当具有自由变量
+22:28 cleamoon__: 高阶motivation：想吃好东西，自卑用不着，报纸卖不过文文无所谓，反正她的也没人读jxhdbxhsjxvhxjs
+22:29 varna: 你找死
+22:29 varna: 吓得我都沟了
+22:29 lolisa: hhhhhh
+22:29 cleamoon__: 平流层好冷
+22:29 varna: 2333
+22:29 cleamoon joined channel
+22:29 varna: 慢点回来，不然你就烧成灰了
+22:30 cleamoon__: 靠大气层撸
+22:30 xxxxxxxx: 撑开胖次你能落的慢点
+22:31 varna: 这建议好
+22:31 hope1`: varna, 有道理
+22:31 varna: 然而岚月酱大概没穿
+22:31 varna: hope1`: 我是在黑没有local作用域的自居高阶语言的语言
+22:31 hope1`: 不过未必要自洽嘛
+22:31 cleamoon__: memory bandwitch有很大意义吗
+22:31 cleamoon__: 我当然没穿
+22:32 phpBloke joined channel
+22:32 lolisa: varna, dynamic scope?
+22:32 varna: lolisa: \x.y
+22:32 hope1`: varna, 比如？
+22:32 varna: hope1`: 我赌五毛py没有
+22:33 cleamoon__: py似乎有个local关键字…
+22:33 lolisa: varna, does UTLC with De Brujin Index count as "having no local scope"?
+22:34 varna: lolisa: utlc是有自由变量的
+22:34 varna: 你甚至不用De Brujin索引记法
+22:34 varna: 但是如果你用了
+22:34 varna: 那么你追求的恐怕就是closed term
+22:34 varna: 一个例子是blc
+22:34 lolisa: binary LC?
+22:34 varna: 对
+22:34 varna: blc的完备是在closed term基础上的
+22:35 varna: tromp的论文里提到了这一点
+22:36 hope1`: 也就是说允许延迟name resolving?
+22:36 varna: 对
+22:36 varna: 卧槽轮型
+22:36 varna: 今天中破三个
+22:37 varna: 之前两个，这把一个
+22:37 xxxxxxxx: 你还有大概一两回轮形要撞
+22:37 varna: 我做完了
+22:38 xxxxxxxx: 卧槽.......
+22:38 cleamoon__: ………毒奶
+22:39 hope1`: 这就要求能把程序结构化/符号化的在语言内部表示出来吧
+22:39 phpBloke left channel:"Leaving"
+22:39 lh_mouse: [22:31:06] <cleamoon__> 我当然没穿
+22:40 cleamoon_ joined channel
+22:40 cleamoon__ quit:Read error: Connection reset by peer
+22:40 beefcafe: lh_mouse: 叫我？
+22:40 xxxxxxxx: 除了伊8两只 其他三种潜艇都有三只 然而两只伊8在水池里聊天今天已经发生了三回
+22:40 varna: 然而轮型一发爆雷糊在铝酱脸上什么事都没有
+22:40 lh_mouse: beefcafe, 别人叫你
+22:41 cleamoon_: 在苹果公司如日中天的今天，很少有开发者会公开批评苹果，不是因为他们认为苹果公司的软件硬件以及服务都完美无缺，而是因为他们不敢说出来，他们担心公开的批评会破坏与苹果的关系和招致报复。他们恐惧苹果。 Marco Arment今年初发表了一篇文章批评苹果的软件，引发广泛关注后他开始后怕起来，表示后悔公开发表了这
+22:41 izmntuk quit:Quit: leaving
+22:41 beefcafe: 叫我做啥
+22:41 varna: 做爱做的事
+22:41 lh_mouse: [20:10:15] <sismvg> geordi:{unsigned int val=0xbeefcafe; val=(val>>(sizeof(int)*8-1)|(val>>1));cout<<val<<endl;}
+22:41 cleamoon_: 我估计乱码了
+22:41 xxxxxxxx: 如日 中天
+22:42 cleamoon_: 在苹果公司如日中天的今天，很少有开发者会公开批评苹果，不是因为他们认为苹果公司的软件硬件以及服务都完美无缺，而是因为他们不敢说出来，他们担心公开的批评会破坏与苹果的关系和招致报复。他们恐惧苹果
+22:42 varna: 中天：我就是要出狂战斧
+22:43 cleamoon quit:Read error: Connection reset by peer
+22:43 beefcafe: lh_mouse: 我不认识他啊
+22:44 cleamoon_: 还是叫曹操曹仁曹真曹爽好
+22:44 xxxxxxxx: 不是这个 我是想到以前有个叫啥中天的 好像在ccav搞讲座的
+22:46 varna: 易中天
+22:47 xxxxxxxx: 操仁真爽....
+22:48 cleamoon_: linux没有什么软件能给电脑加上类似nas的功能吗
+22:48 endle quit:Quit: Leaving
+22:49 varna: 打完反潜改个41准备撤退
+22:52 varna: 撤退
+22:52 varna: 诸君武运
+22:52 varna quit:Quit: leaving
+22:56 Plough: 碎叫
+22:56 Plough quit:Quit: 碎叫
+22:58 cleamoon_: 肛旗去找羊驼睡觉了
+22:59 cleamoon joined channel
+23:04 lh_mouse: \1,4\7,4\4,7\8,7\7,8\0,8\8,0\0,0-15,0\0,15\14,15\15,14\1,14\14,1\1,1-0,1 0,146@dj_nextlevel1,1-14,1/1,14/15,14/14,15/0,15/1)
+23:07 lhanjian: 好鬼畜
+23:09 cleamoon_ quit:Ping timeout: 256 seconds
+23:13 cleamoon quit:Read error: Connection reset by peer
+23:30 cleamoon joined channel
+23:44 cleamoon quit:Read error: Connection reset by peer
+23:48 lhanjian quit:Ping timeout: 272 seconds
+23:58 code_new quit:Ping timeout: 252 seconds
+23:59 lh_mouse quit:Read error: Connection reset by peer

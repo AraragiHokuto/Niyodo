@@ -1,0 +1,64 @@
+00:00 Mokou: 下午我发的链接就是这个
+00:26 ShiinaMashiro joined channel
+01:15 Mokou quit:Remote host closed the connection
+02:51 ShiinaMashiro quit:Quit: Connection closed for inactivity
+03:48 Youmu quit:Quit: Connection closed for inactivity
+04:45 zwindl quit:Quit: Connection closed for inactivity
+04:52 H0P_ joined channel
+08:33 hoxily joined channel
+10:30 hoxily left channel:"Leaving"
+12:23 Youmu joined channel
+12:40 ShiinaMashiro joined channel
+12:41 H0P_ quit:Ping timeout: 255 seconds
+14:16 gauge quit:Ping timeout: 264 seconds
+14:21 gauge joined channel
+14:31 randomclown_ quit:Remote host closed the connection
+14:31 randomclown_ joined channel
+14:32 ShiinaMashiro: ?
+15:09 H0P_ joined channel
+15:16 zwindl joined channel
+15:28 Youmu quit:Quit: Connection closed for inactivity
+15:43 Mokou joined channel
+16:33 randomclown_ quit:Remote host closed the connection
+16:34 randomclown joined channel
+17:01 ShiinaMashiro quit:Quit: Connection closed for inactivity
+18:09 cleamoon joined channel
+18:10 cleamoon quit:Remote host closed the connection
+18:11 cleamoon joined channel
+18:11 cleamoon quit:Remote host closed the connection
+18:12 H0P_ quit:Quit: WeeChat 1.7
+18:12 H0P joined channel
+18:18 cleamoon joined channel
+18:45 randomclown quit:Quit: Leaving
+18:51 StardustX is now known as nebulax
+19:34 H0P quit:Ping timeout: 240 seconds
+19:40 lh_mouse joined channel
+19:47 lh_mouse: meow
+20:19 cleamoon quit:Ping timeout: 256 seconds
+20:34 H0P joined channel
+21:17 cleamoon joined channel
+21:38 lh_cat joined channel
+21:40 lh_mouse quit:Ping timeout: 248 seconds
+22:45 lh_not_bot: 17:11 < Mokou> 如果我不做类型转换直接delete这个指针，算UB吗 // 算。
+22:45 zwindl quit:Quit: Connection closed for inactivity
+22:46 lh_not_bot: 注意 C艹 没有 compatible type。
+22:50 lh_cat is now known as lh_mouse
+22:50 lh_mouse: geordi, <<is_pod_v<foo>; struct foo { void *operator new(size_t n){ throw bad_alloc(); } };
+22:50 geordi: true
+22:50 lh_mouse: Mokou, ^ 就是这个原因了。
+22:58 Mokou: 噫
+22:58 Mokou: 那就蛋疼了
+22:59 Mokou: 有办法让unique_ptr在调用free的同时不占用多余的空间么
+23:09 H0P quit:Ping timeout: 255 seconds
+23:21 lh_mouse: 自己写个 deleter 不就完了。
+23:22 lh_mouse: geordi, << sizeof(unique_ptr<int, my_deleter>); struct my_deleter { void operator()(void *p) noexcept { return ::operator delete(p); } };
+23:22 geordi: 8
+23:22 lh_mouse: Mokou, ^
+23:32 lh_cat joined channel
+23:34 lh_mouse quit:Ping timeout: 264 seconds
+23:36 pipapa joined channel
+23:38 pipapa left channel:"Leaving"
+23:44 cleamoon quit:Ping timeout: 240 seconds
+23:45 lh_cat is now known as lh_mouse
+23:49 H0P joined channel
+23:51 Youmu joined channel

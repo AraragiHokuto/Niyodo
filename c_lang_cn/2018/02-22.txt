@@ -1,0 +1,245 @@
+00:17 Lanact joined channel
+00:18 Lanact left channel:"WeeChat 2.0.1"
+01:10 Youmu quit:Quit: Connection closed for inactivity
+02:39 varna quit:Ping timeout: 268 seconds
+03:03 cirno_ quit:Remote host closed the connection
+04:08 cleamoon_ quit:Quit: Connection closed for inactivity
+05:10 cleamoon_ joined channel
+08:17 cc joined channel
+09:21 yonka joined channel
+09:39 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+09:50 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:28 Youmu joined channel
+10:32 \s joined channel
+10:34 \s quit:Remote host closed the connection
+10:34 \s_ joined channel
+10:37 \s_ quit:Remote host closed the connection
+10:38 \s joined channel
+10:39 \s quit:Remote host closed the connection
+10:40 \s joined channel
+10:44 \s quit:Remote host closed the connection
+10:44 \s joined channel
+10:44 \s quit:Changing host
+10:44 \s joined channel
+10:49 yiltoncent joined channel
+10:56 \s quit:Remote host closed the connection
+10:56 \s joined channel
+11:04 cc joined channel
+11:10 \s quit:Remote host closed the connection
+11:11 \s joined channel
+11:11 \s quit:Changing host
+11:11 \s joined channel
+11:16 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+11:31 cc joined channel
+12:14 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+12:16 runwei joined channel
+12:17 runwei quit:Client Quit
+13:56 cc joined channel
+13:56 cc quit:Remote host closed the connection
+14:21 iyzsong joined channel
+14:38 chengguyun joined channel
+14:42 varna joined channel
+14:44 chengguyun quit:Ping timeout: 260 seconds
+14:45 chengguyun joined channel
+15:05 lhanjian: varna: 我拿起巨乳小姐姐就是一阵突突突打得羊驼子被火力压制到爆
+15:06 varna: 我在单刷挑战级副本
+15:06 lhanjian: 我在上班（摸鱼）
+15:06 varna: 敌人全是金怪，把我射爆了
+15:07 lhanjian: 你需要一把M60通机带穿甲弹的
+15:09 lhanjian: varna: 咱们的货大概初九初十能到一批
+15:09 varna: (｡･ω･)ﾉ
+15:09 varna: 敌人都是铁打的
+15:10 lhanjian: 你的火焰喷射器呢
+15:10 varna: 我现在DPS十万，伤害问题不大，但14.9k的韧性扛不住围剿
+15:11 varna: 哦不对
+15:11 varna: 149k
+15:12 matchray: struct list_node { void *payload; struct list_node *next; };  怎么悲剧了
+15:12 matchray: 浪费空间？
+15:12 matchray: one more indirection?
+15:12 matchray: C intrusive困难啊
+15:12 matchray: no CRTP
+15:12 varna: 碎片化
+15:13 matchray: 刚巧用了一次CRTP https://github.com/cquery-project/cquery/commit/84889023b9980cb17fc92730434568e6b42b6cc2#diff-fc95b024f6269b5f3ab6dd7555b1f1bcR136
+15:15 lhanjian: varna: 你已经是筛子了
+15:16 varna: 子弹不是太大问题
+15:16 varna: 问题是手榴弹+狙击手+游击
+15:16 varna: 哦还有四个或者五个近战一起RUA我……
+15:18 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+15:19 iyzsong joined channel
+15:22 lhanjian: varna: RUA!
+15:22 varna: RUA我也不是最大问题，问题是友军
+15:22 varna: 死了就失败
+15:25 chengguyun quit:Read error: Connection reset by peer
+16:08 iyzsong quit:Ping timeout: 276 seconds
+16:15 lhanjian: varna: 缺钻，缺人性契约
+16:24 varna: lhanjian: 课！
+16:24 lhanjian: varna: 没钱
+16:24 varna: (｡･ω･)不课金你怎么变强
+16:24 lhanjian: 肝！也可以变强！
+16:24 * lhanjian 肝也肝不动
+16:25 varna: 单刷了一次挑战难度的林肯通道检查点，感觉中间的防御桥段还是挺难的
+16:25 varna: 跪了至少有十次
+16:25 lhanjian: 如果当时没手贱新开什么修复栏位，就有白嫖的够用了
+16:26 lhanjian: 300+钻啊！！！
+16:26 varna: ...
+16:28 varna: btw GS够T2世界等级之后，副本真的会爆绿装
+16:28 lhanjian: 绿装？
+16:29 varna: 跟暗黑一样的，套装
+16:29 varna: 商店也会开始卖
+16:29 lhanjian: 哦，衣服啊
+16:29 lhanjian: 我还以为是装备
+16:30 varna: 是装备
+16:30 varna: 加属性的那种
+16:30 lhanjian: 哦，整套的装备？
+16:31 varna: +，凑齐会有套装加成
+16:31 varna: 比如连续十发命中会奖励一个50%于前面十发的出血伤害
+16:32 lhanjian: 嗯
+16:32 lhanjian: 羊驼子的三个中心升满了没？
+16:33 varna: 没，我欠了不少点数
+16:33 varna: 应该一共还差四个设施
+17:19 lhanjian: 还可以通过战役失败来获得成就以拿到人性契约
+17:29 varna: 强行结束战役也算失败，一般早期练级点会刷出一些相关成就
+17:31 lhanjian: varna: 哇酱是傲娇啊
+17:32 varna: 教科书一样
+17:32 varna: 立绘也明显
+17:37 lhanjian: 四星以上的人型造了也舍不得练
+17:37 lhanjian: 没核心
+17:37 lhanjian: 没复制品
+17:41 lhanjian: 大号没资源，小号没契约
+17:41 varna: 每天完成日常任务会有一些核心
+17:42 varna: 攒下来就能扩
+17:42 lhanjian: 日常是啥
+17:42 varna: 出击·改修·建造·演习
+17:42 lhanjian: 哦，日常成就
+17:42 varna: 还有周常的200击破系列
+17:42 lhanjian: 这些都干了，依然不够
+17:43 varna: 总会够的
+17:43 lhanjian: 5星15核心，4星9核心，一天都不见得有10个核心
+17:43 varna: 我这种刷图只出二星的非洲人都挺过来了
+17:43 lhanjian: 刷图我也只出过两三次三星
+17:44 lhanjian: 多余的2星小姐姐我都是用来强化的，所以胶囊缺的时候倒不多
+17:44 lhanjian: al
+17:44 lhanjian: 3星看着拆一些
+17:44 lhanjian: 虽然造出3星也不容易
+17:45 lhanjian: 如果是冲锋枪和机枪我也就拿来练哦
+17:45 lhanjian: 了
+17:46 lhanjian: 机枪其实2星也不容易出
+17:47 varna: 二星机枪太烂了……
+17:47 lhanjian: 我觉得还好啊
+17:48 lhanjian: 作战的2星基本上是机枪
+17:48 varna: 命中不行，火力其实用AR都可以取代，换弹硬伤
+17:49 varna: 另一个麻烦是没法装激光瞄准具，夜战命中更没救了
+17:50 lhanjian: 夜战我都不打
+17:50 lhanjian: 只能说是情怀了
+17:50 lhanjian: AR好无趣
+17:51 varna: 这种游戏拿情怀当战力吃需要恐怖的肝力
+17:51 lhanjian: 肝
+17:51 lhanjian: 所以你看我上班摸鱼也肝
+17:52 varna: ...
+17:53 cirno_ joined channel
+17:53 lhanjian: 其实肝不懂
+17:53 lhanjian: 动
+17:57 varna: (｡･ω･)附近的小店应该也差不多开了，晚上去买点东西
+18:08 yiltoncent quit:Remote host closed the connection
+18:09 yiltoncent joined channel
+18:17 yiltoncent quit:Ping timeout: 255 seconds
+18:23 yonka quit:Remote host closed the connection
+18:25 yonka joined channel
+18:30 yonka quit:Ping timeout: 256 seconds
+18:40 iyzsong joined channel
+18:41 cirno_ quit:Ping timeout: 255 seconds
+18:48 jingjinghack: 乃萌聊的什么游戏呀
+18:48 cleamoon_: 现在只玩得动 TD 游戏了
+18:48 cleamoon_: 他们似乎在开车
+18:48 jingjinghack: 吃鸡吗
+18:49 jingjinghack: 开
+18:49 cleamoon_: 似乎是全境掉线，大概不吃鸡
+18:49 jingjinghack: 开车？
+18:49 jingjinghack: emmm k
+18:49 cleamoon_: 土豆，不，UB的游戏
+18:50 varna: 刚才其实也有窑子前线
+18:51 varna: jingjinghack: 今天有没有想变成小姐姐呢
+18:52 jingjinghack: 没…没有！
+18:52 varna: _(:з」∠)_
+18:54 yonka joined channel
+18:55 lhanjian: jingjinghack: 犹豫了一下！
+18:56 varna: 这是在变得可爱的征象
+18:56 varna: 很快就会变成小姐姐
+18:57 varna: (｡･ω･)ﾉ暗月祝福长伴你身
+18:58 yonka quit:Ping timeout: 256 seconds
+19:02 cleamoon_: 窑子前线好玩吗
+19:03 varna: 一部分立绘好看
+19:03 varna: 游戏性一般
+19:05 cleamoon_: 那不玩了
+19:08 cirno_ joined channel
+19:12 varna: 同一个本，困难难度的配置好弱……
+19:28 varna: 顶着几秒的延迟碾压……
+19:30 cleamoon_: ......
+19:30 cleamoon_: 游戏平衡性真难弄
+19:31 varna: 主线的困难其实是给满级前的玩家快速冲级用的
+19:31 varna: 但挑战就是满级后刷装备做任务的
+19:32 varna: 举个例子，同样要掩护NPC友军，困难的第一波配置全杂兵小boss级别，六个近战兵冲脸，配一个机枪手掩护
+19:32 varna: 后面会上投弹兵侧翼压制
+19:32 varna: 哦不对，这是挑战
+19:33 varna: 困难的话，几个冲锋枪兵，后面慢吞吞跟一个机枪手……
+19:33 varna: 而且冲锋枪兵只有精英级别
+19:34 varna: 后面有场强袭战也是，挑战难度上来四五个投弹兵冲脸压制，后面四个机枪手掩护
+19:38 cleamoon_: 这怎么打
+19:40 varna: 上来先用燃烧/爆炸/烟雾效果控场，子弹最好也用特种弹，把投弹兵打退之后蚕食掉
+19:40 varna: 机枪手和狙击手这种站桩的敌人反倒好解决
+19:41 yiltoncent joined channel
+19:41 yiltoncent quit:Client Quit
+19:41 cleamoon_: 果然团控还是很重要
+19:43 varna: 悲剧了，我接了一个击杀HVT的任务，然而换个服连接之后消失了
+19:44 lhanjian: 吼吼吼
+19:45 varna: 幸好还可以接回来
+19:45 varna: 打打看是个什么感觉
+19:45 lhanjian: 出了个3小时40分
+19:45 lhanjian: 不知道是哪位小姐姐
+19:46 lhanjian: 日，M14.。。
+19:46 varna: sv98
+19:46 varna: ...
+19:47 lhanjian: sv98也没强到哪儿去啊
+19:47 varna: 直接给我卡出一个大……
+19:47 varna: 已经不是延迟的问题了，直接丢包
+19:48 varna: 然后还要回总部重新接任务
+19:48 varna: 蛋疼死了
+19:49 varna: 算了不接任务了，直接刷一个困难本
+19:50 lhanjian: 我日，吃了敌人八百里外一发延迟蛋
+19:51 cleamoon_: 感觉以后玻璃渣改行做网络外包比较好
+19:55 lhanjian: cleamoon_:  ubi，不是blz
+19:58 cleamoon_: 玻璃渣网络做得好呀，所以ubi应该用玻璃渣的网络
+20:13 Stevearzh quit:Quit: Quit...
+20:26 Stevearzh joined channel
+20:50 CyrusYzGTt joined channel
+20:54 \s quit:Ping timeout: 240 seconds
+20:56 \s joined channel
+20:56 \s quit:Changing host
+20:56 \s joined channel
+21:09 varna: 吨吨吨吨吨
+21:09 lh_not_bot: 噗。
+21:10 lh_cat joined channel
+21:13 varna: http://tb.himg.baidu.com/sys/portrait/item/2db0e6adbbe9aa91e998bfe9878ce5b883e8bebe0d24 熟悉的面孔
+21:19 cleamoon_: 谁有时间帮忙看看能不能链接这个地址？我不知道是网掉了还是我被屏蔽了  http://simserver.now.im:8081/robot_frontend.html
+21:19 CyrusYzGTt quit:Read error: Connection reset by peer
+21:20 varna: lmcc
+21:20 varna: 连不上这个口
+21:20 varna: DNS没问题
+21:21 cleamoon_: ok
+21:33 lhanjian: varna 打银牌完全不用我的主力作战
+21:34 varna: (｡･ω･)银（梦）牌
+21:48 condy quit:Ping timeout: 256 seconds
+21:53 condy joined channel
+21:58 cleamoon_ quit:Ping timeout: 240 seconds
+22:01 cleamoon_ joined channel
+22:02 Meow-J_ quit:Ping timeout: 255 seconds
+22:05 Meow-J_ joined channel
+22:07 iyzsong quit:Ping timeout: 276 seconds
+22:28 lh_cat: 噫。
+22:50 varna quit:Ping timeout: 268 seconds
+23:00 cc joined channel
+23:21 cc quit:Quit: xc:www.chnxc.net
+23:38 Yamamoto_Nozomi joined channel
+23:44 Yamamoto_Nozomi quit:
+23:44 Yamamoto_Nozomi joined channel
+23:45 Yamamoto_Nozomi quit:Client Quit

@@ -1,0 +1,549 @@
+00:07:Petrus071 quit:Quit: Leaving.
+00:15:xxxxxxxx quit:Read error: Connection reset by peer
+00:58:lh_cat quit:Ping timeout: 240 seconds
+00:58:lh_cat joined channel
+01:00:lh_mouse quit:Read error: Connection reset by peer
+01:18:khysw joined channel
+02:48:cleamoon_ quit:Ping timeout: 240 seconds
+02:48:cleamoon quit:Ping timeout: 244 seconds
+03:00:cleamoon joined channel
+03:00:cleamoon_ joined channel
+03:05:boosure joined channel
+03:43:boosure quit:Ping timeout: 265 seconds
+05:10:boosure joined channel
+05:12:cleamoon_ quit:Remote host closed the connection
+05:58:boosure quit:Ping timeout: 265 seconds
+06:48:boosure joined channel
+08:15:sismvg joined channel
+08:22:sou_ joined channel
+08:28:lhanjian joined channel
+08:30:sismvg: exists exit...
+08:45:xxxxxxxx joined channel
+08:46:sismvg: i.e.是什么意思啊
+08:46:xxxxxxxx: Internet Explorer
+08:49:BBI-094 joined channel
+08:52:lh_mouse joined channel
+08:55:sismvg: ,,,肯定不是这个。
+09:07:BBI-094 joined channel
+09:28:whatofor joined channel
+09:31:lhanjian: wtf兄来了
+09:31:lhanjian quit:Quit: 风光冉冉东西陌
+09:39:BBI-094 joined channel
+09:49:xxxxxxxx: 委托方来了
+09:50:boosure quit:Quit: Get your hand off of it
+09:54:whatofor: 早
+10:04:lh_mouse: wtf
+10:07:lhanjian joined channel
+10:09:BBI-094 joined channel
+10:09:sismvg: 都中午了。
+10:34:cleamoon quit:Ping timeout: 250 seconds
+10:44:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+10:46:cleamoon joined channel
+10:46:khysw: 智商
+10:50:sismvg joined channel
+10:55:sismvg: khysw:你的学校有类似快速阅读之类的课程吗？
+10:55:khysw: 那种玩意一般不会成为课程
+10:57:BBI-094 joined channel
+10:58:sismvg: soga
+10:58:sismvg: Emoji 日本人的胜利
+11:03:whocares_2 quit:Ping timeout: 255 seconds
+11:07:condy joined channel
+11:09:condy: geordi, { int i=0; foo(i=1); } template<typename T> void foo(T&& val) { BARK; }
+11:09:geordi: foo(T&&) [with T = int&]
+11:10:sismvg: 亚伯拉罕魂斗罗。。2333
+11:15:condy quit:Ping timeout: 245 seconds
+11:16:condy joined channel
+11:20:condy quit:Ping timeout: 245 seconds
+11:22:condy joined channel
+11:22:condy: geordi, { int i=0; const int ci=0; g(i); g(ci); g(i*ci); } template<typename T> void g(T) { BARK; }
+11:22:geordi: g(int) g(int) g(int)
+11:23:condy: geordi, insert && after last T
+11:23:geordi: g(T&&) [with T = int&] g(T&&) [with T = const int&] g(T&&) [with T = int]
+11:24:condy: geordi, undo and replace last T with const T&
+11:24:geordi: g(const int&) g(const int&) g(const int&)
+11:29:condy quit:Ping timeout: 245 seconds
+11:34:lhanjian quit:Ping timeout: 255 seconds
+11:35:lh_mouse quit:Read error: Connection reset by peer
+11:36:lh_mouse joined channel
+11:43:BBI-094 joined channel
+12:01:condy joined channel
+12:08:BBI-094 joined channel
+12:16:BBI-094 joined channel
+12:19:whocares_2 joined channel
+12:28:khysw: geordi: 1+1
+12:28:geordi: error: expected unqualified-id before numeric constant
+12:28:khysw: geordi: -_-
+12:28:geordi: error: expected unqualified-id before '-' token
+12:28:* khysw -_-
+12:32:lhanjian joined channel
+12:40:condy quit:Remote host closed the connection
+13:17:sismvg: 太久没说中文。。导致问菜价的时候来了句：“これはいくらですか"
+13:18:khysw: 总是在中文里混英文的飘过
+13:19:sismvg: ,你把钱放where呢？
+13:19:sismvg: 收不收carsh
+13:19:sismvg: cash
+13:20:khysw: -_- < 这是what奇葩
+13:26:BBI-094 joined channel
+13:37:lh_mouse: 大胆假设 小心求证 ：  四元不是中国人
+13:37:khysw: -_-
+13:37:khysw: 四元不是汪星人么？
+13:44:sismvg: ?
+13:51:BBI-094 joined channel
+13:55:sismvg: 每天听日文的和英文的量是中文的几何倍。。
+13:56:sismvg: http://tieba.baidu.com/p/3376673650
+13:56:sismvg: 还是老老实实做正统游戏吧
+13:56:sismvg: 这种搞周边的游戏一般都会坑
+14:00:lh_mouse: 就这样能变成英文渣也是人才
+14:07:Xilzzerts joined channel
+14:15:BBI-094 joined channel
+14:34:BBI-094 joined channel
+14:45:varna joined channel
+14:46:lh_mouse: varna, 两个服务器同步数据开一个连接和开两个连接有啥区别么
+14:49:varna: lh_mouse: 感觉没区别
+14:49:varna: 考虑到瓶颈应该不在连接的窗口上
+14:50:lh_mouse: FTP 开两个连接我不知道为啥
+14:50:lh_mouse: 之前学网络设计老师也说有需要就开两个
+14:50:lh_mouse: 不过我忘了具体场合了
+14:55:lh_mouse: 羊驼跑了
+14:56:Xilzzerts: 一个数据一个命令
+14:56:varna: lh_mouse: 刚才查论文去了
+14:56:varna: FTP是一个数据一个命令无误
+14:57:varna: 个人观点，如果连接上的窗口比实际的发送能力更大，那么多连接的意思不大
+14:57:varna: 反过来的情况倒是可以试着榨一下带宽
+14:58:BBI-094 joined channel
+15:01:sismvg: http://www.ithome.com/html/out/109718.htm
+15:01:sismvg: 让我想起了佐助的邪神手办》。
+15:02:sismvg: georid<<sizeof(dword);
+15:02:geordi: error: 'dword' was not declared in this scope
+15:02:sismvg: georid<<sizeof(char);
+15:02:geordi: 1
+15:02:varna: <<sizeof(char)
+15:03:varna: geord<<sizeof(char)
+15:03:varna: geordi<<sizeof(char)
+15:03:geordi: 1
+15:03:varna: georid<<sizeof(char)
+15:03:geordi: 1
+15:03:varna: 噗
+15:03:varna: 这是怎么回事
+15:03:sismvg: georid<<sizeof(std::size_t);
+15:03:geordi: 8
+15:03:varna: 为什么geordi会响应georid的
+15:04:sismvg: 也许有人给他加了拟合用户操作的功能。。
+15:05:sismvg: 混蛋剧透狗
+15:05:sismvg: 又被剧透了
+15:09:sismvg: tolove guidebook还是没人扫图
+15:12:condy joined channel
+15:12:sismvg: 2500JP的日历 跪
+15:15:varna: 怎么跟实验室这些人说话感觉就像对着东北大妈讲理论一样费劲……
+15:19:sismvg: bit byte 傻傻分不清楚
+15:20:lhanjian: 上课去。
+15:20:FrankHB: varna: georid早就试过了。。。
+15:20:FrankHB: 是限制曼哈顿距离么。
+15:20:varna: FrankHB: 爆
+15:21:BBI-094 joined channel
+15:21:lhjkk joined channel
+15:24:condy: georid: << sizeof(size_t)
+15:24:geordi: 8
+15:24:condy: geordi: << sizeof(size_t)
+15:24:geordi: 8
+15:26:FrankHB: geord: << sizeof(int)
+15:26:FrankHB: geori: << sizeof(int)
+15:31:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+15:34:lhjkk quit:Read error: Connection reset by peer
+15:35:lhjkk joined channel
+15:47:BBI-094 joined channel
+16:10:lh_mouse: geordi, { weak_ptr<int> wp; { shared_ptr<int> sp(new int); wp = sp; } cout <<(wp == weak_ptr<int>()); }
+16:10:geordi: error: no match for 'operator==' (operand types are 'weak_ptr<int>' and 'weak_ptr<int>')
+16:10:lh_mouse: geordi, { weak_ptr<int> wp; { shared_ptr<int> sp(new int); wp = sp; } cout <<(wp < weak_ptr<int>() || wp > weak_ptr<int>()); }
+16:10:geordi: error: no match for 'operator<' (operand types are 'weak_ptr<int>' and 'weak_ptr<int>')
+16:11:lh_mouse: geordi, { weak_ptr<int> wp; { shared_ptr<int> sp(new int); wp = sp; } cout <<(wp.owner_before(weak_ptr<int>()) || weak_ptr<int>().owner_before(wp)); }
+16:11:geordi: true
+16:11:lh_mouse: geordi, { weak_ptr<int> wp, wp2; { shared_ptr<int> sp(new int); wp2 = sp; } wp = wp2; cout <<(wp.owner_before(weak_ptr<int>()) || weak_ptr<int>().owner_before(wp)); }
+16:11:geordi: true
+16:11:lh_mouse: geordi, erase wp = wp2;
+16:11:geordi: false
+16:12:lh_mouse: geordi, << "FrankHB: 爆"
+16:12:geordi: FrankHB: 爆
+16:12:condy: geordi: { int *p = 0; void* p = 0xffff; p = auto(p); }
+16:12:geordi: error: conflicting declaration 'void* p'
+16:12:condy: geordi: { int *p = 0; void* px = 0xffff; p = auto(px); }
+16:12:geordi: error: invalid conversion from 'int' to 'void*'
+16:13:condy: geordi: replace auto with (auto)
+16:13:geordi: Same error.
+16:16:BBI-094 joined channel
+16:17:varna: 好想侵犯药娘啊快拿药娘来
+16:26:wysaid joined channel
+16:32:shui_code joined channel
+16:39:lh_mouse: varna, 给（把 condy 递出去）
+16:40:BBI-094 joined channel
+16:41:lh_mouse: geordi, -c char *p1; int *p2 = static_cast<int *>(p1);
+16:41:geordi: error: invalid static_cast from type 'char*' to type 'int*'
+16:41:condy: QAQ
+16:41:lh_mouse: geordi, replace char with void
+16:41:geordi: Success
+16:41:condy: geordi: show
+16:41:geordi: -c void *p1; int *p2 = static_cast<int *>(p1);
+16:43:lh_mouse: geordi, -c { yangtuo().feed(condy()); } struct yaoniang { }; struct condy : yaoniang { }; struct yangtuo { template<typename T> void feed(enable_if_t<is_base_of<yaoniang, T> &&); };
+16:43:geordi: error: template argument 1 is invalid
+16:44:lh_mouse: geordi, insert , T> after last >
+16:44:geordi: error: type/value mismatch at argument 1 in template parameter list for 'template<bool _Cond, class _Tp> using enable_if_t = enable_if::type'
+16:44:lh_mouse: geordi, show
+16:44:geordi: -c { yangtuo().feed(condy()); } struct yaoniang { }; struct condy : yaoniang { }; struct yangtuo { template<typename T> void feed(enable_if_t<is_base_of<yaoniang, T>, T> &&); };
+16:44:lh_mouse: geordi, replace T>, with T>::value,
+16:44:geordi: error: no matching function for call to 'yangtuo::feed(condy)'
+16:45:lh_mouse: o fvck
+16:46:lh_mouse: geordi, erase &&
+16:46:geordi: Same error.
+16:46:lh_mouse: “所谓的”类型推导
+16:48:varna: 好了晚上准备一下键盘斗士的工作，不过我得先做完南西
+16:49:sismvg joined channel
+16:50:sismvg: ->为何一名即将饿死的乞丐拒绝了谷歌的CEO职位邀请？
+16:51:wysaid: 为何
+16:51:sismvg: 因为乞丐知道自己没那个能力。。
+16:52:wysaid: 九旬老太为何裸死街头？数百头母驴为何半夜惨叫？小卖部安全套为何屡遭黑手？女生宿舍内裤为何频频失窃？连环强奸母猪案，究竟是何人所为？老尼姑的门夜夜被敲，究竟是人是鬼？数百只小母狗意外身亡的背后又隐藏着什么？这一切的背后，是人性的扭曲还是道德的沦丧？是性的爆发还是饥渴的�
+16:52:wysaid: ��奈？敬请关注今晚X点CCAV10年度巨献《楼主的不归之路》让我们跟随着镜头走进楼主变态的内心世界。
+16:52:sismvg: 最近的新闻标题的标题党味道太重了
+16:52:wysaid: nonono， 你不是那个乞丐，你怎么知道人家没那个能力
+16:52:sismvg: 我只是在吐槽而已
+16:52:sismvg: 某某拒绝了某某大企业的某某邀请
+16:53:wysaid: 好吧，最近我的反射弧越来越弱了
+16:53:sismvg: 一般TX黑谷歌就是这种手法
+16:53:varna: 为何一名乞丐拒绝了CEO邀请？
+16:53:varna: 你看看你，多明显的理由
+16:54:varna: 他要屯资攒桶打秋活
+16:54:varna: 活动过了他还要屯资造大和
+16:55:sismvg: 乞丐：出售3000铝
+16:55:varna: 多少钱
+16:55:sismvg: 一个包子
+16:55:varna: 这个好
+16:55:varna: 一个包子就三千铝啊，大赚
+16:55:sismvg: 要王二娘做的包子
+16:56:sismvg: 错了，是孙二娘
+16:56:xxxxxxxx: 乞丐: 我的钞票都氪光了
+16:56:sismvg: 乞丐：汇率和物价太坑了。
+16:57:lh_mouse: 的�
+16:57:lh_mouse: 16:52:wysaid: ��奈？敬请关
+16:57:xxxxxxxx: 乞丐: 老子是欧提
+16:57:lh_mouse: 我的客户端乱码了
+16:57:lh_mouse: 因为你的客户端拆了一个码点
+16:58:sismvg: 乞丐：但我为什么是希腊人
+17:00:condy: geordi: show
+17:00:geordi: -c { yangtuo().feed(condy()); } struct yaoniang { }; struct condy : yaoniang { }; struct yangtuo { template<typename T> void feed(enable_if_t<is_base_of<yaoniang, T>::value, T> ); };
+17:00:sismvg: 给bitmap撸个iterator真不容易
+17:01:lhjkkk joined channel
+17:02:lhjkk quit:Read error: Connection reset by peer
+17:06:lhjkkk quit:Ping timeout: 265 seconds
+17:21:lhjkkk joined channel
+17:29:BBI-094 joined channel
+17:36:sou_ quit:Remote host closed the connection
+17:48:khysw quit:Ping timeout: 255 seconds
+17:49:BBI-094 joined channel
+17:56:varna: 又是一下午的草泥马之歌，我都出幻听了
+17:57:xxxxxxxx: 球翻唱
+17:59:xxxxxxxx quit:Quit: Leaving...
+18:18:lhjkkk quit:Ping timeout: 244 seconds
+18:30:code_new joined channel
+18:41:Plough joined channel
+18:45:lhjkkk joined channel
+18:45:Xilzzerts quit:Quit: Leaving
+18:57:code_new quit:Ping timeout: 244 seconds
+18:57:code_new joined channel
+19:00:condy: 多用了1个int真不爽，终于也要艹页表了!(。・_・。)
+19:27:Plough: 彗星泛滥成灾
+19:27:Plough: 这时候我大概该去捞明石？
+19:37:hoxily joined channel
+19:45:finalbos joined channel
+19:47:finalbos quit:Client Quit
+19:55:sou_ joined channel
+19:56:hoxily quit:Ping timeout: 260 seconds
+19:56:hoxily joined channel
+20:01:xxxxxxxx joined channel
+20:38:varna: .
+20:38:varna: 我日
+20:39:varna: 怎么实验室那些傻大姐傻大个每天都能给我弄出点网络故障
+20:40:Plough: ……
+20:40:varna: 脑子跟肛门连一起了么
+20:40:varna: 一拍脑门突然就高兴了，然后就刺激到射精中枢了，然后就tm射了一集线器
+20:40:Plough: 什么情况
+20:41:varna: 旁边一台机器本来准备爬点数据的，结果网又给弄掉了
+20:41:Plough: 为什么网会掉……
+20:41:sismvg: 集线器被pia飞了
+20:41:varna: 因为线掉了
+20:41:Plough: ……
+20:41:Plough: 踢着了么
+20:42:varna: 放桌子上的
+20:42:Plough: 撸管撞着了么
+20:42:varna: 鬼知道
+20:43:sismvg: 一张20M的png,被CImage装到内存里就变了100M。。
+20:44:varna: 夜战夜战
+20:46:varna: 等大淀修好了就开始肝时雨
+20:46:condy: varna: 怎么那个页表项的hack看起来有点问题。
+20:46:condy: 怎么用了PRESENT位了呀。。
+20:47:sismvg quit:Quit: poor eye
+20:51:varna: condy: 啊？
+20:51:varna: condy: 那个是巨大脑洞
+20:51:varna: 一共是4K到4M的按幂增长，表示order需要四位
+20:51:condy: 不是PRESENT位为0时代表映射已经建立，但是物理页面不在内在中的吗..
+20:52:varna: present表示物理页面不存在
+20:52:condy: s/内在/内存。。
+20:52:varna: 但是只是在这个页表内不存在
+20:52:varna: 实际上整个root process的用户区都被用作分配Low Zone（=低3GB）内存
+20:53:varna: 所以我只要手工保证那里不会出访存错误就行了
+20:53:varna: 只要页面被分配出去，present位是什么都无所谓——因为那个trunk不会再被访问了，直到它被归还
+20:53:varna: 而没分配的页面则有不存在的order（=15）
+20:54:condy: Soga.
+20:54:condy: (。・_・。)
+20:56:varna: 这个优势在64位机器上可能更明显，因为首先目前只有48位地址，其次硬件也不会插那么多内存
+20:56:varna: 所以可能单靠一个进程就能解决不少问题
+21:00:Plough: 噗
+21:01:Plough: 这dalao的5-5配置略奇葩啊
+21:01:Plough: 神通大和羽黑北上卡嘎时雨
+21:02:varna: 练级队再编成
+21:02:varna: 先肝出来再赶开题报告和文献阅读
+21:02:wysaid quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140410211157]
+21:05:varna: 大约需要九万经验，折合四十五场以上
+21:05:varna: 稍微有点麻烦
+21:05:Plough: 4-3?
+21:05:varna: 是
+21:05:Plough: Soga
+21:05:varna: 1-5可以打，但没价值
+21:06:Plough: 在肝哪只
+21:06:varna: 时雨
+21:06:sou_ quit:Remote host closed the connection
+21:06:varna: 再这么悠闲演习会来不及
+21:06:Plough: 大淀->时雨->阿贺野 我打算先按这个顺序来
+21:06:Plough: 时雨现在大概Lv40
+21:06:varna: 先试试水
+21:06:varna: 沟了
+21:07:Plough: dalao的北上吃了金鱼一发CI跪了
+21:07:varna: 哦操
+21:07:varna: 嗒酱还好开幕中破
+21:07:varna: 当然如果中雷就未必是中破了（笑）
+21:08:Plough: 对面还剩一只喔酱
+21:08:Plough: 夜战
+21:08:varna: 这次采用了消耗稍高但确保对潜MVP的阵容
+21:09:Plough: 啥阵容
+21:09:varna: 反潜轻巡去掉换成0谷
+21:09:Plough: Soga
+21:09:Plough: 周末我试试看
+21:09:varna: 未必真好
+21:10:varna: 丢MVP可能可以确保疲劳度平均
+21:10:Plough: 另外我总算想起来我还有个小号了……
+21:10:varna: 哦日
+21:10:varna: 别用这个阵容
+21:10:Plough: ……带路？
+21:10:varna: 带路了
+21:10:Plough: ……
+21:10:varna: 打
+21:11:varna: F5了也是疲劳
+21:11:Plough: 我记得貌似是航巡的问题
+21:11:Plough: 你换个重巡试试？
+21:11:Plough: 不确定是不是4-3，反正有个图有一天我莫名其妙沟了
+21:11:Plough: 然后发现是利根改二了
+21:12:varna: 一阵狂轰滥炸之后肚子小破，其余稍稍蹭血，击沉四个大破一个
+21:12:varna: 两喔一鱼
+21:13:Plough: 似乎还好
+21:13:varna: 这已经很感人了
+21:13:varna: 航战我用的就是个伊势，还是试制356+155DP...
+21:13:Plough: Soga
+21:13:Plough: 反正没大破……
+21:13:Plough: 哦对练苍龙的时候我可以用试制356了
+21:14:Plough: 周末试试效果如何
+21:14:varna: 航空战只有均势
+21:14:varna: 算了，大淀来打个酱油吧
+21:15:lh_mouse: win64 的地址只有 44 位
+21:15:varna: 哦
+21:15:lh_mouse: 否则就是 40  记不得了
+21:17:lhanjian: 反正应该都够用吧……
+21:17:varna: 够了
+21:18:varna: 噗，两发miss?
+21:18:varna: 这概率实在不高啊
+21:19:Plough: 小号也卡那珂酱
+21:19:varna: 然后沟了，希望别太惨
+21:20:Plough: 又不给我出大和，光把脸浪费在这种地方……
+21:20:lhjkkk quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+21:22:varna: 果然大淀带两个炮胡乱打打就行了，虽然还是不确保MVP
+21:22:Plough: 噗
+21:23:Plough: dalao带着大破的401冲进门神了
+21:23:varna: 啊！？
+21:23:varna: 他有损管？
+21:23:Plough: 不知道……
+21:23:Plough: 等会看看
+21:23:varna: 潜艇虽说没人出过事，但也不至于这么赌……
+21:23:Plough: 有损管
+21:23:varna: 噗，北上大人喜感地中破了
+21:23:Plough: 不知道上了几个
+21:24:Plough: 我在想有几个新米会带着两个重巡三个轻巡冲进1-1
+21:24:Plough: 这就是我现在在干的事……
+21:24:varna: 这么快就交一桶实在不太好
+21:24:Plough: 撤了，貌似只带了一个损管
+21:26:varna: 扶桑喂满了
+21:28:Plough: 啊啊，我有多久没听过电酱的ハワワワ了呢……
+21:29:varna: 我也好久没听过了，现在都是揉肩
+21:30:Plough: ……你也把一库摆旗舰么
+21:30:varna: 电酱结婚之后的揉肩语音
+21:30:Plough: soga
+21:30:varna: 重巡单纵……凶险
+21:31:varna: 怎么会闪避这么高的……
+21:31:varna: 还是被雷击蹭了一点血
+21:32:Plough: 啊咧！？
+21:32:Plough: 我操这还是个南极洲小号……
+21:32:varna: 怎么，1-1出现爷爷了么
+21:32:Plough: 没
+21:32:Plough: 日常三只建造完了
+21:32:Plough: 我一领任务，出现了完成50%的拆船任务……
+21:32:varna: ...
+21:32:Plough: 因为只拆了一只船就完成了所以不是显示错误
+21:33:Plough: 虽说这是个良心Bug我怎么觉得1-2Boss点会有院长呢
+21:33:varna: 练级开始不顺了
+21:33:varna: 所以说4-3还是麻烦
+21:34:Plough: 一天把大淀练到60级现实么
+21:34:Plough: 现在28
+21:34:varna: 现实
+21:35:Plough: 周末我试试
+21:35:varna: 但是看你怎么定义一天
+21:35:Plough: 周六
+21:35:varna: 那就够了
+21:35:Plough: 那就中
+21:35:Plough: 1-2罗盘娘挺给面子
+21:36:varna: 六十级只要不到十九万经验
+21:36:varna: 只是有点残念，燃弹很快就屯上五万了，还是要预先蒸发一些
+21:36:Plough: ……78->80的程度么
+21:36:Plough: 三个重巡三个轻巡打1-2是不是略豪华了
+21:36:varna: 看重巡是谁了2333
+21:37:Plough: 羽黑足柄高雄
+21:37:varna: 要是弄些妙高羽黑之类的也就还是勇士……
+21:37:varna: 果然还是勇士
+21:37:Plough: 要是小号出铃熊了我就郁闷了
+21:37:Plough: 因为这明显是用大号的大和换得
+21:38:Plough: 果然又开始川内地狱了
+21:38:varna: ……被蹭了三个小破
+21:38:Plough: 我想从大号拿只那珂酱成么
+21:38:varna: 隼鹰那个还是从1-5带过来的
+21:38:Plough: ……
+21:39:varna: 然后惯例四潜的MVP不保
+21:39:varna: 改进也不是、不改进也不是的悲剧，主要是我桶不够
+21:39:Plough: 重巡修起来比潜艇还快，这样的日子真幸福……
+21:39:varna: 潜艇大破两小时简直大块人心，还好今天没大破
+21:40:Plough: 求下路啊求下路
+21:40:Plough: (回到大号做补给船了
+21:41:Plough: 你们一群潜艇是怎么跟重巡结上仇的提督我很纳闷啊……
+21:41:varna: 肛大船有战功
+21:41:Plough: 漂亮，下路
+21:42:varna: BS: Midway的潜艇挑战第二关就是伊十五单挑三个驱逐舰、一个重巡和一个战舰
+21:42:Plough: ……
+21:42:varna: 鱼雷前后合计四十发，前四管后两管
+21:42:varna: 难度其实不大，因为敌人太弱智了
+21:43:Plough: 鱼雷绕着轻巡走
+21:43:varna: 最后一个挑战至今没通
+21:43:Plough: 不过夜战连着给我来了三个CI……
+21:43:varna: 伊二十五和伊二十六偷袭Big E
+21:44:Plough: ……这任务能做？
+21:44:varna: 敌人有反潜飞机和鱼雷艇，还有驱逐舰
+21:44:varna: 总之挺难的
+21:44:Plough: 大E:老子是幸运E，幸运E你怕不怕？
+21:44:varna: 潜航航速只有25节容易被鱼雷艇怒草，浮上去地方不好又会被舰炮打
+21:46:varna: 第一个潜艇挑战是独角鲸识任并击沉对方两个随机指定的运输船
+21:46:varna: 护航的部分有夕雾和一个忘了是谁的驱逐舰，轻巡北上和重巡最上，还有两个日军鱼雷艇
+21:47:varna: 只过关很简单，但达成隐藏目标很麻烦，日军鱼雷艇那小炮轰得我整个人都咕嘿了
+21:47:Plough: 我还是没下那玩意
+21:47:varna: 挺好玩的
+21:48:varna: 舰船挑战第一关就是扶桑山城二打十九
+21:48:Plough: 话说这游戏有玄学吗
+21:48:Plough: 大E运70鱼雷绕着走啥的
+21:48:varna: 后面敌舰会出芝加哥、北安普顿、纽约、反击和威尔士亲王
+21:48:varna: 游戏的最大玄学是电脑的鱼雷机投弹
+21:49:varna: 我简直想把他们拉到佐世保让二十个基佬排队干
+21:49:Plough: 真压韵……
+21:49:varna: 那个投弹简直帅气
+21:49:Plough: 啥情况
+21:50:varna: 走的方向和第一投法刚好是反着的，敌人随便打弯或者倒着开就能躲
+21:50:Plough: ……
+21:50:lh_cat: 时雨運多少
+21:50:varna: 52?
+21:50:varna: 第一投法要求鱼雷机从侧后方沿敌舰航向接近敌舰，从估算的射角远射鱼雷
+21:51:varna: 结果他们从斜前方来了个怎么算都能躲开的……
+21:51:lh_cat: 野分呢
+21:51:Plough: 野分还没装吧
+21:51:varna: 目前没实装，说不定这次活动就有了
+21:51:varna: 雪风时雨野分，这几个运都低不了的……
+21:51:lh_cat: 雪风  时雨  这输入法都有
+21:51:Plough: 我看看这次有没有欧根亲王
+21:52:varna: 另外Midway的官方扩展包里加了一个舰船挑战，算是还原得还可以的特鲁克岛突袭
+21:52:varna: 敌舰有那珂酱以上以下若干
+21:56:Plough: 摩耶
+21:57:Plough: 我去趟1-3试试
+21:57:varna: 所以说4-3队伍兼顾MVP效率和生存力实在麻烦
+21:59:Plough: 进Boss了
+21:59:Plough: 看看能不能撸掉
+22:00:Plough: 对面已经沉了四只了，应该没问题了……
+22:00:lh_cat: “吴港雪风，佐世保时雨”——顺带一提，吴港属广岛县，佐世保属长崎县
+22:00:varna: 一丧到底
+22:01:Plough: A胜
+22:01:varna: 雪风从二战一路克上去，最后克死委员长
+22:05:Plough: http://tieba.baidu.com/p/3377651224
+22:06:varna: 想想Idol F@ster
+22:06:varna: 再想想EVA
+22:07:varna: 军舰命名的人物很多，天气和地名命名的军舰也大坨，所以其实就那么回事了
+22:11:Plough: http://www.bilibili.com/video/av1075508/ <-上古时代的脸帝
+22:12:varna: 嗒酱健在
+22:12:varna: 旗舰中破……
+22:12:varna: 必须撤了
+22:12:lh_cat quit:Ping timeout: 240 seconds
+22:16:lhanjian quit:Quit: 风光冉冉东西陌
+22:16:varna: 又是嗒酱
+22:16:varna: 劝退了
+22:17:varna: 唉唉
+22:18:varna: 饶了我吧
+22:18:varna: 打成这样也根本没法练了
+22:20:Plough: ……我还是先去3-2蹭蹭经验吧
+22:20:Plough: 先下了
+22:20:Plough: 祝武运长久
+22:20:Plough quit:Quit: 碎叫
+22:20:varna: 捞明石去
+22:22:BBI-094 joined channel
+22:25:varna: BBI-094: HELO
+22:26:code_new quit:Remote host closed the connection
+22:28:condy: 不爆不舒服斯基。
+22:29:lh_mouse: condy, 爆照
+22:29:condy: 不是这个爆呀。。
+22:29:lh_mouse: condy, 爆照
+22:29:shui_code quit:Quit: WeeChat 0.4.2
+22:29:condy: 0.0
+22:29:varna: condy: 爆照
+22:29:lh_mouse: condy, 爆照
+22:29:condy: QAQ
+22:31:sou_ joined channel
+22:31:condy: 走了，大家腋间愉快！
+22:31:condy quit:Quit: leaving
+22:37:BBI-094: 晚上好
+22:38:BBI-094: 我终于快下班了 哈哈哈哈哈哈哈哈
+22:43:whatofor quit:Read error: Connection reset by peer
+22:49:varna: BBI-094: 酒店值班是怎么分的？
+22:55:hoxily quit:Ping timeout: 255 seconds
+22:59:wlemuel quit:Ping timeout: 245 seconds
+23:00:wlemuel joined channel
+23:02:hoxily joined channel
+23:08:sou_ quit:Remote host closed the connection
+23:08:lh_cat joined channel
+23:12:ring joined channel
+23:12:ring quit:Changing host
+23:12:ring joined channel
+23:15:ring quit:Read error: Connection reset by peer
+23:15:ring joined channel
+23:20:ring quit:Read error: Connection reset by peer
+23:22:ring joined channel
+23:22:ring quit:Changing host
+23:22:ring joined channel
+23:24:lh_cat quit:Ping timeout: 244 seconds
+23:36:BBI-094 joined channel
+23:39:varna: 我快不行了
+23:42:varna: 1-5能出的除了明石大概我都出过了
+23:44:BBI-094: 3班倒
+23:47:varna: soga
+23:48:lhanjian joined channel
+23:48:ring quit:Quit: Bye
+23:54:varna: lhanjian: YO
+23:54:lhanjian: 羊驼子夜战？
+23:58:varna: 夜战
+23:59:lh_cat joined channel

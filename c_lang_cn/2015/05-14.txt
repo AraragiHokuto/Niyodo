@@ -1,0 +1,315 @@
+00:09 xxxxxxxx: 我真是服了这些家伙了 挖出个2012年的坟 还要给我科普一下GTK用啥语言写的
+00:14 lh_cat quit:Quit: Connection closed for inactivity
+00:21 cleamoon quit:Ping timeout: 265 seconds
+00:22 cleamoon joined channel
+00:23 cleamoon__ quit:Ping timeout: 244 seconds
+00:37 cleamoon quit:Ping timeout: 245 seconds
+00:38 cleamoon joined channel
+00:40 cleamoon__ joined channel
+01:01 cleamoon quit:Ping timeout: 245 seconds
+01:02 cleamoon__ quit:Ping timeout: 258 seconds
+01:03 cleamoon joined channel
+01:03 izmntuk quit:Remote host closed the connection
+01:08 cleamoon__ joined channel
+01:17 cleamoon__ quit:Quit: Leaving
+01:28 canyesd joined channel
+02:02 lh_mouse quit:Read error: Connection reset by peer
+02:46 WaterA quit:Quit: Lost terminal
+02:59 iyzsong quit:Ping timeout: 276 seconds
+02:59 condy quit:Ping timeout: 265 seconds
+03:15 xxxxxxxx quit:Quit: Leaving...
+03:45 cleamoon quit:Ping timeout: 245 seconds
+03:47 cleamoon joined channel
+04:16 cleamoon quit:Ping timeout: 256 seconds
+04:18 cleamoon joined channel
+04:24 cleamoon quit:Ping timeout: 256 seconds
+04:25 cleamoon joined channel
+05:12 OO_after quit:Ping timeout: 250 seconds
+05:12 Stevearzh quit:Ping timeout: 250 seconds
+05:13 OO_after joined channel
+05:20 cleamoon quit:Ping timeout: 256 seconds
+05:21 cleamoon joined channel
+06:17 boosure joined channel
+07:00 cleamoon__ joined channel
+07:07 cleamoon quit:Ping timeout: 256 seconds
+07:08 cleamoon joined channel
+07:19 cleamoon quit:Ping timeout: 256 seconds
+07:20 cleamoon joined channel
+07:42 cleamoon__ quit:Ping timeout: 244 seconds
+07:43 cleamoon__ joined channel
+08:55 lh_mouse joined channel
+09:09 Xilzzerts joined channel
+09:13 cleamoon quit:Ping timeout: 265 seconds
+09:14 cleamoon joined channel
+09:29 lh_cat joined channel
+09:29 lh_cat: 刚才看见一只白丝幼女
+09:31 boosure quit:Quit: Get your hand off of it
+09:38 Stevearzh joined channel
+09:53 whatofor joined channel
+10:01 iyzsong joined channel
+10:04 sismvg joined channel
+10:06 Xilzzerts quit:Read error: Connection reset by peer
+10:07 lh_not_bot: find src -name '*.?pp' | xargs -i bash -c 'if [ -z "$(head -n 1 {} | grep -F //)" ]; then echo {}; fi'
+10:07 lh_not_bot: BASH
+10:09 sismvg: 怎么判断const char***..blah是const的?
+10:20 cleamoon quit:Ping timeout: 264 seconds
+10:21 cleamoon joined channel
+10:21 lh_mouse: geordi, << is_const_v<remove_pointer_t<const char *>>; // sismvg 
+10:21 geordi: true
+10:23 sismvg: geordi,<<is_const_v<remove_pointer_t<const char**>>;
+10:23 geordi: false
+10:23 sismvg: 写了个remove_all_pointer,但不知为啥还是错的
+10:34 sanpi_ joined channel
+10:34 sanpi_ quit:Client Quit
+10:48 WaterA joined channel
+11:15 izmntuk joined channel
+11:15 Xilzzerts joined channel
+11:19 * sismvg 被重载坑了
+11:31 lhanjian: 李克强主持召开国务院常务会议
+11:31 lhanjian: 会议确定，一是鼓励电信企业尽快发布提速降费方案计划，实施宽带免费提速，使城市平均宽带接入速率提升40%以上，降低资费水平，推出流量不清零、流量转赠等服务。
+11:31 lhanjian: 支持互联网国际出入口带宽扩容。
+11:31 lhanjian: http://www.gov.cn/guowuyuan/2015-05/13/content_2861461.htm
+11:36 xxxxxxxx joined channel
+11:39 sismvg: 出入口带宽。
+11:39 sismvg: GFW怎么办
+11:54 lh_cat quit:Quit: Connection closed for inactivity
+11:57 WaterA quit:Quit: Lost terminal
+12:11 whatofor_1 joined channel
+12:13 whatofor quit:Ping timeout: 265 seconds
+12:39 FrankHB: 你们现在用什么肛gfw？
+12:40 lhanjian: 付费Shadowsocks
+12:40 lhanjian: 多节点
+12:45 varna joined channel
+12:55 sismvg: 免费赛风3..
+12:55 lhanjian: sismvg, 坑爹的轮子货……
+12:55 sismvg: 好在免费啊。。。
+12:56 WaterA joined channel
+13:01 sismvg: http://tieba.baidu.com/p/3762659216
+13:01 sismvg: 银魂这是最终章的节奏啊
+13:05 lhanjian: cleamoon__, 经济：“旧的还在去，新的还没来”
+13:12 WaterA quit:Quit: Lost terminal
+13:33 izmntuk quit:Quit: leaving
+13:34 izmntuk joined channel
+14:10 momoka joined channel
+14:12 condy joined channel
+14:31 momoka quit:Ping timeout: 256 seconds
+14:31 momoka joined channel
+15:00 varna quit:Read error: Connection reset by peer
+15:01 varna joined channel
+15:32 FrankHB quit:Remote host closed the connection
+15:33 FrankHB joined channel
+15:39 FrankHB quit:Remote host closed the connection
+15:40 FrankHB joined channel
+15:51 izmntuk quit:Ping timeout: 244 seconds
+15:51 izmntuk joined channel
+15:52 izmntuk quit:Client Quit
+15:53 izmntuk joined channel
+16:16 whocares_2 quit:Read error: Connection reset by peer
+16:17 whocares_2 joined channel
+16:19 WaterA joined channel
+16:21 izmntuk quit:Ping timeout: 244 seconds
+16:29 krfantasy joined channel
+16:50 krfantasy quit:Quit: krfantasy
+17:27 cleamoon quit:Ping timeout: 245 seconds
+17:29 cleamoon joined channel
+17:57 cleamoon quit:Ping timeout: 256 seconds
+17:59 cleamoon joined channel
+18:05 varna: http://static.mengniang.org/common/6/60/Large_s66S_37ec0000048d118c.jpg
+18:10 iyzsong: 2333
+18:13 izmntuk joined channel
+18:24 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=3c932ff107087bf47dec57e1c2d2575e/0e8a0b4f78f0f7368ec55cbb0f55b319eac413ba.jpg
+18:25 sismvg: 已经证实，只要吃了恶魔果实的人无法行动后，果实可以随意夺取
+18:36 xxxxxxxx: 手势那个实用
+18:42 lhanjian quit:Quit: Leaving
+18:45 Plough joined channel
+19:02 Plough: 羊驼子今天上线一来就一直没说话啊……
+19:02 Plough: 以来*
+19:26 cleamoon__: 你脱裤他就说话了
+19:26 FrankHB: http://www.weibo.com/1576218000/ChOoh3PWM?type=comment 23333
+19:30 cleamoon__: http://ww2.sinaimg.cn/large/88cdcdcdjw1es2is9opujj20f00ultcs.jpg   nsfw  nsfw  nfsw  星巴克
+19:32 cleamoon__: http://sojo.im/?#  完美的前端
+19:36 WaterA: 似乎是因为被 hack 了吧
+20:00 Stevearzh quit:Read error: Connection reset by peer
+20:01 Stevearzh joined channel
+20:24 lh_cat joined channel
+20:24 sismvg: 各种bug
+20:27 lh_mouse quit:Ping timeout: 240 seconds
+20:38 sismvg: 莫女子结婚一年后发现丈夫是女儿身
+21:09 krfantasy joined channel
+21:17 izmntuk quit:Ping timeout: 244 seconds
+21:23 varna: 药娘么
+21:23 varna: 药娘呢
+21:23 izmntuk joined channel
+21:24 varna: 药娘都哪去了
+21:25 Plough: 哪有药娘
+21:25 Plough: 另外我查了一下
+21:25 Plough: WOWS里的出云其实是A140-J2
+21:26 Plough: 大和级的早期设计案之一
+21:26 varna: 这个是什么方案的
+21:26 varna: 噗
+21:26 Plough: 特点是40cm/50主炮三基九门，前方集中配备
+21:27 Plough: 虽说第三门炮塔是向后指的，所以T不利还是没法发挥全部火力……
+21:27 varna: 背负式炮塔还是见鬼去吧
+21:27 Plough: 这么搞似乎是为了省装甲
+21:27 Plough: 这玩意能跑30kt呢
+21:28 Plough: 另外我有点想搞个700的船放桌子上拿着玩了……
+21:28 varna: ...
+21:29 Plough: 还有就是重巡线似乎有些调整
+21:29 Plough: 妙高和毛嘎米的顺序交换了，现在是妙高8级，毛嘎米九级
+21:29 varna: 这到底是什么思路
+21:30 Plough: 大概是毛子觉得毛嘎米更莉害……
+21:30 varna: 迫真轻巡为何会比决战用的重巡还厉害
+21:30 Plough: 因为迫真轻巡15门炮？
+21:30 Plough: 另外，仙杖改名叫藏王了，听说有加强……
+21:31 varna: 毛子的思路让人没法理解
+21:32 Plough: 毛子的建模倒还不错
+21:32 Plough: 虽说出云一股纳尔逊既视感
+21:32 Plough: http://item.taobao.com/item.htm?spm=a230r.1.14.298.pL8hhL&id=44299956853&ns=1&abbucket=11#detail 富士美真能玩……
+21:33 varna: 卧槽
+21:33 Plough: 还有对应的武藏
+21:33 varna: 大和级本来就够短粗了
+21:34 varna: 另外昨天晚上我试了一下莱特湾，被军令部坑了
+21:34 Plough: ……什么情况
+21:34 varna: 要求是拿下莱特湾登陆舰队
+21:35 varna: 结果我以志摩队全灭（和登陆舰队并没有关系，只是尼米兹心情不好）、机动部队航母小破一中破一的代价干掉了全部登陆舰和TF77
+21:35 varna: 直接2星吃败
+21:35 Plough: ……
+21:36 Plough: 话说你在哪下的游戏
+21:36 Plough: 我Google了下，没找到……
+21:37 varna: 你有115么
+21:37 Plough: 以前好像有一个
+21:37 varna: 没有的话我试着传一下度盘
+21:37 Plough: 你先把115给我看看吧
+21:37 Plough: 我应该还能想起来
+21:39 lhjkk joined channel
+21:39 varna: 稍等
+21:39 varna: Plough: http://115.com/file/blq3xrrt
+21:40 Plough: Danke
+21:40 varna: 要是你能想起来的话就用这个下吧
+21:41 varna: 毕竟这游戏三观不正，我不太想在度盘上留……
+21:42 Plough: ……700M啊
+21:42 Plough: 明天下
+21:44 Plough: 另外最近的德棍似乎越来越可怕了
+21:44 Plough: 前段时间我见到一个真以为俾斯麦通海阀超牛逼的……
+21:45 varna: ...
+21:46 Plough: 他表示之所以要19分钟才下去是因为要给船员留出时间逃生
+21:46 Plough: 这时间刚刚好，所以俾斯麦通海阀果然世界第一
+21:46 Plough: 合着通海阀纯粹就是用来自沉的……
+21:49 Xilzzerts quit:Ping timeout: 250 seconds
+21:49 * sismvg 心力憔悴中
+21:53 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=0113bdc025a446237ecaa56aa8237246/23f63e7adab44aed4242795eb61c8701a08bfb6f.jpg
+21:53 sismvg: 萝莉三胖
+21:53 sismvg: 日本已完蛋
+21:57 whocares_2_ joined channel
+21:59 whocares_2 quit:Ping timeout: 272 seconds
+22:06 varna: 空母决战里居然有列噗
+22:06 varna: 然而据打通战役的伙计说，只是实装了数据和演出，并没有出场
+22:07 Plough: ……
+22:07 Plough: 有陆风么
+22:07 varna: 月光雷电大艇酱，想要的都有
+22:07 varna: A8M都有名字了！？
+22:07 Plough: 毛子的起名能力天下第一
+22:08 lhjkkk joined channel
+22:08 varna: 陆风是什么鬼
+22:08 varna: 为何不叫抽风
+22:08 Plough: 抽风他们自己永乐额
+22:08 lhjkk quit:Ping timeout: 246 seconds
+22:08 Plough: 用了*
+22:08 varna: ...
+22:09 Plough: WG正式改名抽风
+22:09 Plough: 另外
+22:09 Plough: 据说他们准备实装Iowa改装空母……
+22:09 varna: 目前有9.7k油、10k弹、4.5k铝了，下周应该可以参加聚赌
+22:09 varna: ……
+22:10 Plough: 啊不对
+22:10 Plough: 那玩意叫福岛……
+22:10 Plough: 我用这玩意特攻的话是不是能灭对面一个航母战斗群
+22:10 code_new joined channel
+22:11 varna: 这名字太不祥
+22:12 varna: 就像我以前也不知道彩云国物语这五个字有多沉重一样
+22:12 Plough: 具体地是A8M R2Y1-B J5N1（福岛/景云/天雷）
+22:12 varna: R是什么飞机，我查查
+22:12 Plough: 烈噗给了翔鹤
+22:13 Plough: 大凤给震电
+22:13 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.2/20150415140819]
+22:13 varna: 陆基侦察机
+22:13 Plough: 然而记得WT里的流星制空么
+22:13 momoka quit:Quit: Lord I'm doing all I can. To be a better man.
+22:13 varna: 景云……传说中的十八试陆侦？
+22:13 Plough: 另外我试了下，WT做得似乎还不错
+22:13 Plough: 应该是……
+22:14 Plough: 着舰的时候是有阻拦索的
+22:14 Plough: 而且那玩意确实会拦你
+22:17 varna: 哈哈哈哈空母决战的SBD不如99
+22:17 varna: 不如99你信么
+22:17 Plough: ……
+22:17 Plough: 为何这么可怕
+22:17 varna: 99那破玩意
+22:18 Plough: http://ja.wikipedia.org/wiki/%E6%99%AF%E9%9B%B2_%28%E8%88%AA%E7%A9%BA%E6%A9%9F%29 景云
+22:18 izmntuk quit:Ping timeout: 244 seconds
+22:19 Plough: 就是十八试陆侦
+22:19 cleamoon quit:Ping timeout: 272 seconds
+22:19 varna: 我听说战雷里这东西可以用来当战斗机？
+22:19 Plough: 似乎是……
+22:19 varna: such a kitakamical story
+22:20 cleamoon joined channel
+22:20 Plough: http://ja.wikipedia.org/wiki/%E5%A4%A9%E9%9B%B7_%28%E8%88%AA%E7%A9%BA%E6%A9%9F%29 天雷
+22:20 Plough: 这玩意两挺20mm两挺30mm……
+22:22 varna: 日军的机载30mm基本都是试作
+22:22 izmntuk joined channel
+22:23 Plough: 据说是用来拦B-17的
+22:23 Plough: 也有说法是B-29
+22:24 varna: 日军发明了很多用来拦B-17的东西，直到他们发现B-29
+22:24 Plough: 233333
+22:24 varna: 然后他们指出，如果菲律宾都丢了，那鬼东西肯定把他们炸个稀烂
+22:24 varna: 果不其然
+22:24 Plough: 23333
+22:25 Plough: 另外美帝上了F2H
+22:25 varna: H!?
+22:25 Plough: H
+22:25 Plough: 喷气机来了……
+22:26 krfantasy quit:Ping timeout: 265 seconds
+22:26 varna: 而且F2H是什么鬼
+22:26 Plough: http://en.wikipedia.org/wiki/McDonnell_F2H_Banshee
+22:28 varna: 居然是麦道
+22:28 varna: 1948...
+22:28 varna: 共和国都快成立了
+22:28 Plough: 中途岛都来了，这个怕啥……
+22:28 varna: 我要五九
+22:29 Plough: 59估计以后会是氪金船
+22:29 lhjkkk quit:Ping timeout: 264 seconds
+22:29 Plough: 59式坦克改装航空母舰，搭载59式坦克改装舰载战斗机、59式坦克改装舰载攻击机、59式坦克改装舰载爆击机
+22:30 varna: 三连装59式轻战车（集中配置）
+22:30 Plough: 23333
+22:30 Plough: 一炮爆大和
+22:31 varna: 枪炮中士摩耶的嘉年华时间
+22:32 varna: 今天给空母决战打了补丁
+22:32 varna: 战果存档倒都能用，就是场景选择界面的评分都没了
+22:32 Plough: ……
+22:32 varna: 多了两个有练度设定的战役
+22:32 Plough: 真坑
+22:32 varna: 说是可以继承编成和练度
+22:32 varna: 什么三代一航战怒爆莱特湾
+22:33 Plough: ……真·农药
+22:33 varna: 这中国队勇夺世界杯的精神还在田中之上
+22:33 Plough: 23333
+22:33 varna: 田中就会弄些切糕让大家吃，吃完发见张
+22:33 Plough: 然后改装各种送
+22:33 Plough: 捞饼开心吗
+22:33 varna: 然后改造直接送两个，同时仍然没卵用
+22:34 Plough: 据说那玩意的效果和30运差不多……
+22:34 Plough: 先碎叫
+22:34 Plough: 明天家长会，早点回来下空母决战
+22:34 Plough: 诸君武运
+22:34 Plough quit:Quit: 碎叫
+22:37 lh_cat_ joined channel
+22:37 lh_cat_: 一乞丐在地铁上接手机   太不敬业了
+22:38 lh_cat quit:Disconnected by services
+22:38 lh_mouse_ joined channel
+22:48 cleamoon quit:Ping timeout: 272 seconds
+22:53 cleamoon joined channel
+22:55 varna: 先回去了
+22:55 varna: 诸君武运
+22:56 varna quit:Quit: leaving
+23:09 cleamoon__ quit:Quit: Leaving
+23:31 whocares_2_ quit:Ping timeout: 265 seconds

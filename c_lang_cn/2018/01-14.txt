@@ -1,0 +1,295 @@
+00:10 varna quit:Ping timeout: 276 seconds
+00:32 iyzsong quit:Ping timeout: 255 seconds
+00:46 lh_mouse quit:Ping timeout: 256 seconds
+01:00 N00d1e5 quit:Quit: Leaving.
+01:25 matchray: serialize 要加更友好的錯誤信息
+01:49 hanjian_l: Lh_mouse. Swap可以在系统盘以文件形式存在啊
+01:52 matchray: mouse好像不見了
+01:54 hanjian_l: https://render.alipay.com/p/f/fd-j6lzqrgm/guiderofmklvtvw.html?shareId=2088512298348723&campStr=p1j%2BdzkZl018zOczaHT4Z5CLdPVCgrEXq89JsWOx1gdt05SIDMPg3PTxZbdPw9dL&sign=JdWFA5xWhRQBNvgrCtg7M9i4hshv4vKGE2xh%2FXQkQRc%3D&scene=offlinePaymentNewSns
+01:54 hanjian_l: https://render.alipay.com/p/f/fd-j6lzqrgm/guiderofmklvtvw.html?shareId=2088512298348723&campStr=p1j%2BdzkZl018zOczaHT4Z5CLdPVCgrEXq89JsWOx1gdt05SIDMPg3PTxZbdPw9dL&sign=JdWFA5xWhRQBNvgrCtg7M9i4hshv4vKGE2xh%2FXQkQRc%3D&scene=offlinePaymentNewSns
+01:56 matchray: The offsets are based on a UTF-16 string representation
+01:56 matchray: https://microsoft.github.io/language-server-protocol/specification
+03:06 hanjian_l: matchray: I hate M$UTF-16
+03:10 hanjian_l: matchray: 这个值得看一看？
+03:25 matchray: 是
+03:26 matchray: https://github.com/jacobdufault/cquery/blob/master/src/lex_utils.cc#L19
+03:26 matchray: 我是这样糊过去的
+03:26 matchray: https://github.com/Microsoft/language-server-protocol/issues/376
+04:14 Aldrich: 噫
+04:14 Aldrich: 刚好和羊驼子错开了
+08:37 uzzrroOOOO joined channel
+09:18 hanjian_l: Aldrich: me  too
+09:43 iyzsong joined channel
+09:47 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+09:49 iyzsong: hello sunday.
+11:59 Stevearzh quit:Remote host closed the connection
+12:02 Stevearzh joined channel
+12:08 earl__ joined channel
+12:18 earl__ left channel:"Leaving"
+12:22 varna joined channel
+12:23 varna: (｡･ω･)ﾉ下午有人开车么
+12:23 varna: Aldrich: 
+12:23 varna: hanjian_l: 
+12:23 Aldrich: 我
+12:23 Aldrich: varna: 你耳麦到了么
+12:24 varna: 到了，聊胜于无，之前和lhj玩过一次了
+12:25 Aldrich: hanjian_l: 
+12:25 varna: 昨天我单人车开到一半被叫去公司了
+12:25 varna: 回来看到lhj找我数次……
+12:25 Aldrich: 233333333
+12:26 hanjian_l: 我来咯
+12:27 hanjian_l: varna:  Aldrich 
+12:27 varna: 下午下午
+12:27 varna: 稍等我把龙之信条一个任务结了
+12:27 hanjian_l: 下午到我这儿来吧
+12:27 Aldrich: OK
+12:28 varna: hanjian_l: 我现在还得oncall
+12:28 hanjian_l: varna: 。
+12:28 hanjian_l: 遥远的滨江
+12:28 varna: 估计另一个哥们没法自行处理项目问题
+12:28 matchray: 求一个diff algorithm
+12:28 Aldrich: 你杭州需要东京级别的铁路网
+12:28 varna: 昨天已经修了一批bug但还是小心点
+12:28 Aldrich: 话说下午是几点以后
+12:28 varna: _(:з」∠)_MR神上神犇求算法……
+12:29 varna: 一点半？我吔点东西
+12:29 Aldrich: OK
+12:29 Aldrich: (｡･ω･)我们这里已经是下午了
+12:29 hanjian_l: OK
+12:29 matchray: a.cc 有两个版本A和B。A索引过，每个symbol带一些交叉引用信息；B由A修改了而来(未保存的件)，给出B上的一个光标位置，找出对应的A上的symbol。
+12:29 matchray: 从而利用A的交叉引用信息进行跳转
+12:29 hanjian_l: 下次来我这，带上你的破pc，修一下子
+12:30 hanjian_l: 一点半我睡会儿
+12:30 hanjian_l: 一点半叫我
+12:30 varna: OK
+12:30 hanjian_l: QQ，或者直接电话
+12:30 varna: (｡･ω･)ﾉ
+12:32 varna: matchray: 这种已经没法保证正确了吧，比如经过正确的重构之后，只用带交叉引用的索引会看不到一个被重命名的符号
+12:33 matchray: varna: 如果你能识别出这个符号被重命名了，那么返回原始符号就是最好的。做不到一点是可以理解的。
+12:33 matchray: “正确”是肯定没法保证的，就希望改善用户体验
+12:34 matchray: 比如说 clang completion 的原理是之 parse 文件开头到光标处，后面的内容全部删掉
+12:34 matchray: 因为已经没法保证编译通过了
+12:35 varna: 仍然觉得做到这种程度的符号参考需要AST
+12:36 varna: 让本编译单元内的引用有一个图的关系，然后diff图
+12:37 matchray: 版本B parse 不了的……
+12:38 varna: 到光标为止都不行的话就只好放弃了
+12:38 matchray: 比如说 word diff / line diff 都是可行的启发方案
+12:39 varna: 体验上我个人口味是宁缺毋滥，word/line diff造成困扰的话也很麻烦
+12:40 matchray: 对于不能编译通过的状态，用户多半是 recall > precision 的
+12:40 matchray: (因为cquery现在的状态是如果行的内容发生改变，就是不能跳转
+13:06 Aldrich: 热兵器的优越性 https://usercontent.irccloud-cdn.com/file/hIvGijpw/out.jpg
+13:08 Aldrich: 血源广告 https://usercontent.irccloud-cdn.com/file/mV2Vn9U0/78495f11ly1fnf2mw2s59g208605rqv6.gif
+13:43 Dove joined channel
+13:44 Dove: varna: Hello
+13:45 varna: (｡･ω･)ﾉ
+13:46 Dove: 感冒啦，本来感觉要死了。
+13:46 Dove: 现在好点了
+13:47 varna: 最近感冒注意并发症
+13:47 Dove: 我们老板听说我小姨要走，给她提了销售额的一个点，也就是30W一年左右。
+13:48 Dove: 所以她就不走了
+13:48 Dove: 我就可以继续混了
+13:49 Dove: 伙计一年的销售额大概在三四千万，所以我小姨就舍不得这活了。
+13:49 Dove: 不过真心累得要死。
+13:54 Dove: 明天她还要带我妹妹去北京复查，我TMD又得一个人顶着了。
+13:56 Dove: 不过顶就顶着吧，西宁这个鬼地方，30W一年基本上是天文数字了。
+13:59 varna: _(:з」∠)_顶住
+13:59 varna: 销售额倒是不错
+13:59 Dove: 青海的经销商做成这样就算到头了
+14:00 varna: 卖什么的
+14:00 Dove: 摄像头，录像机什么的。
+14:00 Dove: 其实电子设备都卖。
+14:00 varna: 哦哦
+14:00 Dove: 主要是海康威视
+14:01 Dove: 你要发票不？我可以给你开几张，2333。
+14:01 Dove: 反正进项用不完。
+14:01 Dove: 免费的2333。
+14:01 varna: _(:з」∠)_不要
+14:02 Dove: 真的忙成狗
+14:02 Dove: 因为销售这个乱七八糟的东西很多很杂很乱。
+14:06 Dove: 不过我就混混，大头的活都是小姨在干。
+14:06 Dove: 我就干点杂事。
+14:07 iyzsong: orz
+14:08 Dove: iyzsong: 抓住，捏。
+14:40 Dove: 再听加州旅馆，我感觉我堕落得1B。
+14:41 Dove: 算了，let it be。
+14:45 Dove: 知其白，守其黑，2333。
+14:53 Dove: 尘归尘，土归土，放松放松，2333。
+14:55 lh_mouse joined channel
+15:14 lh_mouse: 鞋子干了呢。
+15:35 matchray: 我用了这个 https://github.com/jacobdufault/cquery/commit/9d56f261e26a6741e8a8cbb654a97c06ef500064#diff-be493e9ce4d0b88a9acc0331983628f6R31    USR缩短后llvm省了一半空间；笔记本加载只需要17喵
+15:36 matchray: 接下来要上 Paul Heckel's Diff 
+15:37 varna: wow
+15:41 lh_mouse: 窝在想、要不要造个 mq 玩玩。 (>w<)
+15:41 matchray: 那一行 k[] 是个 hex speak
+15:41 lh_mouse: hex squeak    XD
+15:41 Dove: 你们都好厉害啊，我这种无能的猪也TM要加油了。
+15:42 matchray: Doe5 ... ea7 ca7 f00d
+15:42 lh_mouse: HashUSR 是某个 hash algorithm ？
+15:42 matchray: siphash 64-bit
+15:42 lh_mouse: 依赖特定的算法或公开的 spec 吗？
+15:44 matchray: 找的一个pseudorandom function，不是cryptographic，但比一般hash强；用在这里缩短USR(可能是很长的字符串，如果C++好几个scope嵌套)
+15:46 lh_mouse: FNV-1a  <_<
+15:46 matchray: 怎么了
+15:47 lh_mouse: 没怎么。 <_<
+15:48 lh_mouse: mr 大犇怎么开始用简体了/。
+15:48 matchray: 这个没关系吗
+15:51 varna: <_<
+15:56 Dove: 我去睡一会，诸君武运。
+15:56 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+15:58 matchray: 可能还是需要 word diff
+16:09 hanjian_l: varna: 回来了
+16:09 hanjian_l: Aldrich: 
+16:09 hanjian_l: mr用简体了，一下子轻松多了
+16:09 varna: hanjian_l: 维拉维尔德B
+16:17 iyzsong: 2333
+16:26 dszg joined channel
+17:20 varna: 太制杖了
+17:20 varna: 死机还行
+17:22 Aldrich: 毕竟育碧
+17:23 varna: 都能说话就感觉好多了
+17:31 varna: Aldrich: btw 窑子前线8-4e的回忆剧情似乎是小公主还没被改造成人偶之前用不可名状的代价跟轻浮大叔换了把手枪
+17:33 Aldrich: ……
+17:33 Aldrich: 玩家没炎上？
+17:33 varna: 小公主造型不那么骚气所以人气一般
+17:33 varna: 大家都喜欢FAL和G41那样的
+17:34 varna: 还有95姐
+17:34 Aldrich: 噫吁嚱
+17:36 varna: _(:з」∠)_晚上先不开车了，单机歇会儿
+17:38 matchray: 希望没写错 https://github.com/jacobdufault/cquery/commit/e555361dd99fe71d26327682742379f2132206ec
+17:38 Aldrich: https://wx2.sinaimg.cn/mw690/0069QWQ5gy1fnf07o28zzj30lj0hdtp5.jpg
+17:54 hanjian_l: 回来了
+17:54 hanjian_l: M7 baynonet到了
+17:56 hanjian_l: https://usercontent.irccloud-cdn.com/file/00wahDhM/irccloudcapture1767305024.jpg
+17:57 Aldrich: 你发的每一张图片都有可能成为呈堂罪供
+17:59 hanjian_l: 行政处罚而已
+17:59 Aldrich: #联播头条#中共中央政治局1月12日召开会议，研究修改宪法部分内容的建议。中共中央总书记习近平主持会议。
+17:59 varna: 友爱
+18:00 varna: 基本的法
+18:01 varna: hanjian_l: 对了，最近有哥们试着把钉钉签名改成无可奉告，被软件拒绝
+18:01 Aldrich: 你这样censor，会不会给人一种钦定的感觉
+18:02 varna: 不是说钦定了，没有一点这样的意思
+18:08 hanjian_l: 你连头像都不能戴眼镜
+18:09 Aldrich: https://wx3.sinaimg.cn/mw690/6dd57921ly1fng652lefaj20jk040glt.jpg 睿智
+18:14 Aldrich: 饭后运动下，去趟浅草寺
+18:15 hanjian_l: M7刺刀，看着很朴素啊
+18:27 hanjian_l: 很锋利要命的武器
+18:28 varna: 公然玩弄管制刀娘
+18:28 hanjian_l: M7刀娘。m4 m16老死机专用RBQ
+18:29 varna: 你还是草猫吧……
+18:31 hanjian_l: 让我家猫学阿尔特留斯的狼，叼着刀
+18:33 uzzrroOOOO quit:Read error: Connection reset by peer
+18:45 hanjian_l: varna: Aldrich continue？
+18:46 hanjian_l: 联机游戏还是太少
+18:46 varna: 单机休闲了
+18:46 Aldrich: 我已经出门了
+18:56 hanjian_l: 没有游戏玩哪
+19:03 StardustX: 可以玩管♂制刀具
+19:04 hanjian_l: StardustX: 那个管不管 制
+19:05 StardustX: 我曾经很长一段时间都以为管制刀具是管子制成的刀具。
+19:05 varna: 2333
+19:05 hanjian_l: 2333
+19:13 condy: StardustX: -.- 我的switch 好友申请你还没有通过
+19:14 StardustX: 最近在肝考期，抱歉
+19:15 condy: O.O
+19:23 hanjian_l: matchray: 看了一点这个https://microsoft.github.io/language-server-protocol/specification 决定放弃参与开发cquery相关插件的可能性，当个纯最终用户伸手党了
+19:24 hanjian_l: 不过我至少理解了一点，似乎很多语言都能用这套东西，用不着加上各种插件堆满我的vimrc了
+19:24 hanjian_l: condy: StardustX: Stevearzh: 买PS4，来开车
+19:32 hanjian_l: matchray: 特别是我这种混乱于Golang C Lua Python2/3的杂食码农
+19:33 condy: hanjian_l: QuQ
+19:35 cleamoon_: 我也以为是管子做的刀.....
+19:37 cleamoon_: hanjian_l: 这刀不错
+19:37 hanjian_l: cleamoon_: M16/M4下挂的M7刺刀
+19:37 hanjian_l: cleamoon_: 一刀下去一个绅士
+19:38 cleamoon_: 哦哦，开刃的吗
+19:38 StardustX: hanjian_l: NS 已经把我的预算用完了QAQ，PS4要等等了。
+19:39 cleamoon_: NS？
+19:39 hanjian_l: StardustX: 我按京东价借你分期，不收利息
+19:39 hanjian_l: cleamoon_: 真刀。当然是开刃的
+19:40 cleamoon_: 哦哦哦，多少钱，以后我也弄些
+19:41 hanjian_l: cleamoon_: 你那边如果有合法渠道，几十美元就行了吧。国内是非法的，所以过K RMB了
+19:44 Aldrich: 你日是不用指望了
+19:45 Aldrich: 枪刀法在那
+19:50 lh_mouse: 这破玩意居然有人 fork ，还不止一个：  https://github.com/lhmouse/git-workflow-zh  
+19:54 cleamoon_: orz
+20:05 Aldrich: varna: 悲报：fgo学会锁船了
+20:08 varna: ...
+20:09 cleamoon_: ......
+20:14 hanjian_l: matchray: vim8用户真的是一点人权都没有
+20:20 lh_mouse: sudo ln -sf /dev/null /usr/bin/vim
+20:24 cleamoon_: 回归我大emacs神教吧
+20:24 hanjian_l: 垃圾cquery彻底不可用了
+20:29 hanjian_l: matchray: 没救了
+20:32 hanjian_l: 已经完全不可用了
+20:36 lh_mouse: 入我 nano 神教，仙福永享，寿与天齐！
+20:38 CyrusYzGTt joined channel
+20:41 Aldrich: https://wx3.sinaimg.cn/mw690/6dd57921ly1fngbosiy7gj20k00zk45q.jpg
+20:41 hanjian_l: lh_mouse: 我家猫这么说我都不信！
+20:41 cleamoon_: 卧槽
+20:42 lh_mouse: 0.0
+20:44 Aldrich: 噗
+20:44 Aldrich: 出32了
+20:44 Aldrich: 噗
+20:44 Aldrich: 水观
+20:46 varna: orz
+20:49 Aldrich: varna: 对了，我才知道每天那个螺丝是可以骗到手的
+20:49 Aldrich: 改修饭团子不需要螺丝
+20:50 hanjian_l: 弃了，去TMD reference
+20:51 hanjian_l: grep / vim -t / Ctrl - ] T 足够了
+20:51 hanjian_l: matchray: sorry，我退坑了
+20:57 Aldrich: varna: https://wx3.sinaimg.cn/mw690/6db206c1gy1fngdyhm1rxj20gh04zaah.jpg
+20:57 Aldrich: ^ 0资材提督圆寂了……
+20:58 varna: ...
+20:58 varna: 这位提督也去遥远的世界旅cao行qiang了
+20:59 Aldrich: 话说你现在还玩窑子么
+21:00 Aldrich: 我有点想入坑试试
+21:00 varna: 肝不动了，偶尔上线看看
+21:00 Aldrich: 或者说重入坑
+21:00 varna: 强烈不推荐
+21:00 Aldrich: OK
+21:00 varna: 窑子前线的系统对肝力要求太高了
+21:00 varna: 赌不出东西刷不出货
+21:00 Aldrich: 不如当咸鱼提督么
+21:00 varna: +
+21:00 Aldrich: なるほど
+21:02 Aldrich: http://img.vim-cn.com/a4/351456e7c7eac45c2089d58f41e9f5eeeaf8d3.png 配图
+21:09 hanjian_l: Aldrich: varna: 同志们，我们开车吧
+21:10 Aldrich: 我听羊驼子的
+21:10 varna: _(:з」∠)_开不动了
+21:11 Aldrich: 要不我们把那个任务做完
+21:11 hanjian_l: varna: 你射击摸鱼
+21:11 hanjian_l: 我来开独架
+21:11 hanjian_l: 驾
+21:12 varna: _(:з」∠)_真开不动了，我先把龙之信条的一周目通掉
+21:12 Aldrich: 那就算了
+21:13 Aldrich: varna: 无夜之国2总共能刷多少周目？
+21:13 Aldrich: 能一直刷下去么
+21:13 varna: _(:з」∠)_不知道，大概可以
+21:13 Aldrich: 那我就瞎丁日打了
+21:21 \s quit:Read error: No route to host
+21:22 \s joined channel
+21:30 hanjian_l: 能玩的游戏太少了
+21:38 Aldrich: 困了，等会准备睡了
+21:52 hanjian_l: 大菠萝2亮点何在？怎么感觉像传奇似的
+21:53 Aldrich: 睡了
+21:53 Aldrich: 诸君武运
+21:54 varna: 亮点得玩了才能体会到
+21:54 varna: 剧情/气氛/音乐/美术
+21:54 varna: 再加上二十世纪末出类拔萃的游戏性
+21:55 hanjian_l: 可是我记得我玩大菠萝2那会儿，丝毫没感觉到它有啥剧情……
+21:55 hanjian_l: 只记得一路探索图腿图打怪刷装备……
+21:56 hanjian_l: 它职业多玩法多还可以联机这个我倒是很清晰
+21:56 varna: 多看看动画和跟人说话，剧情未必只是故事
+21:56 varna: 至少我对2B小姐姐那种过分填充的剧情超不感冒
+22:00 hanjian_l: nier的世界浸入感还不错
+22:00 hanjian_l: 我对欧美RPG的要求：这个人是我。DAO/ME基本上满足这点
+22:01 hanjian_l: 对亚洲RPG的要求：我是这个人。基本上日系RPG都这个味道，只是游戏性可能枯燥/重复
+22:05 hanjian_l: 可能我应该回去玩海岛大亨
+22:11 cleamoon_: 其实d3有一点卖粉
+22:11 varna: 但d2那个孤独落寞的感觉一点都不剩了
+22:18 hanjian_l: 我玩 皿煮制度3 吧
+22:18 hanjian_l: 建设新时代中国社会主义非洲共和国
+22:48 cleamoon_: 我估计我的本子运行不了d3，要不还是应该试试的
+22:57 hanjian_l: 冷枪冷炮运动
+23:02 hanjian_l: 细胞分裂blacklist是什么
+23:15 iyzsong quit:Ping timeout: 265 seconds
+23:30 varna quit:Ping timeout: 256 seconds

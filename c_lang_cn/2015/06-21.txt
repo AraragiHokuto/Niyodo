@@ -1,0 +1,1335 @@
+00:24 lolisa joined channel
+00:43 lhanjian quit:Ping timeout: 250 seconds
+01:20 molikto quit:Remote host closed the connection
+01:22 lh_mouse: geordi, { string s; bar *fn = &string::push_back; (s.*fn)('a'); cout <<s; } using foo = void (char) const; using bar = string::foo; 
+01:22 geordi: error: 'foo' in '__cxx11::string {aka class __cxx11::string}' does not name a type
+01:23 lh_mouse: geordi, { string s; bar string::*fn = &string::push_back; (s.*fn)('a'); cout <<s; } using foo = void (char) const; 
+01:23 geordi: error: 'bar' was not declared in this scope
+01:23 lh_mouse: geordi, { string s; void string::*fn = &string::push_back; (s.*fn)('a'); cout <<s; } using foo = void (char) const; 
+01:23 geordi: error: cannot declare pointer to 'void' member
+01:23 lh_mouse: geordi, { string s; foo string::*fn = &string::push_back; (s.*fn)('a'); cout <<s; } using foo = void (char) const; 
+01:23 geordi: error: cannot convert 'void (__cxx11::string::*)(char)' to 'void (__cxx11::string::*)(char) const' in initialization
+01:23 lh_mouse: geordi, { string s; foo string::*fn = &string::push_back; (s.*fn)('a'); cout <<s; } using foo = void (char); 
+01:23 geordi: a
+01:24 lh_mouse: geordi, { string s; foo string::*fn = &string::empty; cout <<"is empty? " <<(s.*fn)(); } using foo = bool () const; 
+01:24 geordi: is empty? true
+01:26 lh_mouse: geordi, { foo f; } using foo = void (char); 
+01:26 geordi: <no output>
+01:26 lh_mouse: geordi, { foo f; } using foo = void (char) const; 
+01:26 geordi: error: non-member function 'void f(char)' cannot have cv-qualifier
+01:38 Plough quit:Ping timeout: 276 seconds
+01:42 xxxxxxxx: 卧槽怎么好像能上google了
+01:42 molikto joined channel
+01:43 lh_mouse: 错觉
+01:46 xxxxxxxx: 刚才脸上一回 然后就不行了...
+01:46 lh_mouse: 我之前发过测试代理   给你你不用
+01:50 lolisa quit:Ping timeout: 276 seconds
+01:52 lolisa joined channel
+01:59 lolisa quit:Ping timeout: 250 seconds
+02:06 molikto quit:Remote host closed the connection
+02:19 LittleKey joined channel
+02:20 lolisa joined channel
+02:23 xxxxxxxx quit:Quit: Leaving...
+02:40 lolisa quit:Ping timeout: 264 seconds
+02:50 hope1 quit:Read error: Connection reset by peer
+02:50 hope1_ joined channel
+02:58 ASenR quit:Quit: Lost terminal
+03:47 lh_mouse quit:Remote host closed the connection
+04:05 whocares_2_ joined channel
+04:11 dantznc joined channel
+04:15 whocares_2 quit:*.net *.split
+04:15 dantmnf quit:*.net *.split
+04:28 dantznc joined channel
+04:28 condy_ joined channel
+04:30 dantmnf quit:*.net *.split
+04:30 LittleKey quit:*.net *.split
+04:30 condy quit:*.net *.split
+04:53 JQK quit:Ping timeout: 255 seconds
+04:54 xxxxxxxx joined channel
+05:00 wsyh joined channel
+05:02 FrankHB quit:Ping timeout: 244 seconds
+05:02 hysw quit:Ping timeout: 244 seconds
+05:05 cleamoon quit:Ping timeout: 265 seconds
+05:20 geordi quit:Ping timeout: 264 seconds
+05:21 geordi joined channel
+05:48 whocares_2 joined channel
+05:48 whocares_2_ quit:Ping timeout: 246 seconds
+07:20 cleamoon joined channel
+07:22 Dove joined channel
+07:24 Dove: Mina桑很抱歉，最近得了精神分裂脑袋不太清楚。
+07:25 Dove: 我是T2，去南京住院一个月刚刚回来。
+07:32 wsyh: -_-
+07:33 Dove: = =
+07:33 xxxxxxxxx joined channel
+07:33 xxxxxxxxx quit:Client Quit
+07:33 wsyh: 没有妹纸什么的才是最让脑袋不清楚的事...
+07:33 Dove: 闲着没事看编译原理发现完全看不懂
+07:34 wsyh: 把智商交出来!!!!
+07:34 Dove: 已透支
+07:34 Dove: 从自动姬开始就透支了
+07:35 xxxxxxxx quit:Ping timeout: 264 seconds
+07:35 Dove: 等到第四章就完全放弃抵抗了。
+07:36 wsyh: 可惜智商对于妹纸完全没有吸引力...
+07:37 Dove: 有哒有哒，不要灰心。
+07:37 Dove: 这种事情多交点学费就好了。
+07:38 * wsyh let it go... (我还是改一下歌词算了...)
+07:38 wsyh: Dove: 学费？
+07:38 Dove: 这也是要学习的
+07:38 wsyh: 学费是什么鬼？
+07:39 Dove: 把妹神马的你就当是门课学好了。
+07:39 wsyh: 那明显是4+门课级别上的...
+07:39 wsyh: 另外学费究竟是什么情况？
+07:40 Dove: 好吧我是被骗很多次啦
+07:40 wsyh: 骗？
+07:41 Dove: 不过别人不见得像我这么笨就是了。
+07:41 Dove: 嗯
+07:41 wsyh: 这有什么好骗的？
+07:41 Dove: 说多了都是眼泪，别提了。
+07:42 wsyh: -_- 
+07:42 Dove: = =
+07:43 Dove: 我都被逼进非正常人类研究中心去了。
+07:43 wsyh: OTL
+07:46 Dove: - -
+07:46 Dove: 没事现在清醒点了
+07:46 wsyh: 木有妹纸是悲剧...
+07:47 wsyh: 有妹纸就会被烧...
+07:47 Dove: = =
+07:47 wsyh: 这世界本来就是悲剧...
+07:47 Dove: 好啦不扯淡了，我先看点书去。
+07:49 Dove: 不管懂不懂，先把龙书过一遍，不然鸟毛都不会。
+07:50 wsyh: 编译器课完全是水课,,,
+07:51 Dove: 我这儿不是没课上么
+07:51 wsyh: Coursera
+07:51 Dove: 只能自己撸了
+07:52 Dove: 哦，这倒是也可以。
+07:52 Dove: 先补交上个月的膝盖
+07:53 wsyh: OTL...
+07:53 wsyh: 上课完全没有找妹纸重要...
+07:55 Dove: 还是上课重要
+07:55 wsyh: 上课基本上打瞌睡...
+07:56 _pakchoi_ joined channel
+07:56 Dove: = =
+07:58 wsyh: 出去逛逛......
+08:04 cleamoon: - -
+08:05 cleamoon: T2酱去找火云邪神了？
+08:17 Dove: cleamoon: 你别说，还真有个蛮像的。
+08:18 cleamoon: ...
+08:18 cleamoon: Dove, 现在没事了？
+08:18 Dove: cleamoon: 大概没事了吧，要吃几年药。
+08:19 Dove: 药很多还不太适应，有点难受。
+08:20 cleamoon: Dove, 那没事，对于家里有去找火云邪神的我来说，基本就是药别停，但也别多吃
+08:20 cleamoon: 难受你可以问问大夫，可能剂量不对
+08:20 Dove: 嗯，第一次所以开了很多。
+08:21 Dove: 慢慢减的，也不是特别难受了现在。
+08:21 cleamoon: 你都吃了？
+08:21 Dove: 嗯
+08:21 cleamoon: .......
+08:21 cleamoon: 还是照医嘱慢慢吃
+08:22 Dove: 是照医嘱吃的
+08:22 cleamoon: 那就好
+08:22 Dove: 刚开始很多，后面会减少。
+08:22 Dove: 嗯嗯
+08:22 cleamoon: 你可以多开点，有人会想要的，你可以赚点差价
+08:23 cleamoon: 几个处方安眠药卖的挺好的
+08:23 Dove: 还是算了，不差那点钱。
+08:23 Dove: 搞出麻烦就不好了。
+08:23 cleamoon: soga
+08:23 Dove: 努力几年尽量混去度娘或者阿里
+08:23 cleamoon: 那挺好
+08:24 cleamoon: 加油吧
+08:24 Dove: 嗯
+08:24 Dove: thx
+08:24 cleamoon: 之前老妈在药房给人弄了60+瓶安眠药(好多人)，然后院长请喝茶说别想不开......
+08:25 Dove: 2333
+08:25 cleamoon: 你现在打算弄哪个方向的
+08:25 Dove: 还是数据挖掘吧
+08:25 Dove: 跟羊驼混了
+08:26 Dove: 不过现在不急先玩点编译
+08:26 Dove: 再把内核那坨搞搞本科也就差不多了。
+08:26 cleamoon: 数挖不错
+08:26 Dove: 最多再摸一下nginx
+08:26 cleamoon: 本科大多做不到写一个内核吧...
+08:27 Dove: 本科大多也读不了我这么久吧
+08:27 cleamoon: ...也是
+08:27 cleamoon: 嘛，多学点总有用
+08:27 Dove: 出来混总是要还的
+08:27 Dove: = =
+08:28 cleamoon: 你打算炸学校？
+08:28 Dove: 不炸了
+08:28 cleamoon: ...
+08:28 Dove: 2333
+08:28 cleamoon: 数挖似乎需要很多数学？
+08:29 xxxxxxxx joined channel
+08:29 cleamoon: 话说你大概什么时候开始撸数挖？
+08:29 cleamoon: xxxxxxxx, 爆
+08:29 Dove: 似乎是要一些概率方向的。
+08:29 cleamoon: +
+08:30 Dove: 没计划，把手上的这点撸个差不多也就是了。
+08:30 cleamoon: 你自穴？
+08:31 Dove: 嗯
+08:31 Dove: 要考研的
+08:32 cleamoon: soga
+08:32 Dove: 成都买了套房子，就去成电算了。
+08:32 cleamoon: 你先撸，撸玩了我看你的码
+08:32 cleamoon: ...壕
+08:32 Dove: 好
+08:33 Dove: 毛，成都房子又不贵，我爸妈找个地方养老。
+08:34 cleamoon: 成都不贵吗？大概多少一米
+08:35 Dove: 我买的地方不贵
+08:35 Dove: 4000+吧
+08:35 cleamoon: ......好便宜
+08:36 Dove: 是的啊
+08:36 cleamoon: 别去帝都，至今还是30k+
+08:36 Dove: 肯定不去
+08:38 Dove: 房价一时半会儿也掉不下来，我估摸着大概是不会掉了。
+08:38 cleamoon: 其实数挖可以直接让羊驼子列个书单，然后你边看书边准备尻噬
+08:38 cleamoon: 这是掉完了的
+08:38 Dove: = =
+08:38 cleamoon: 好的地方100k+呢
+08:38 Dove: = =
+08:38 cleamoon: 就是学区房
+08:38 Dove: 惨不忍睹
+08:38 cleamoon: 惨不忍睹+
+08:39 Dove: 我这辈子搞不到帝都的房了
+08:55 clcn_logbot quit:Ping timeout: 943 seconds
+08:55 clcn_logbot joined channel
+08:56 cleamoon: 王根不是做过一个吗，你找找
+08:57 xxxxxxxx: 主要是我是要找个能方便一点查看的东西 王根那个是做比较用的....
+08:59 cleamoon: 自己撸一个
+08:59 xxxxxxxx: 那我还不如麻烦点多翻几次....
+09:00 cleamoon: 似乎github win版就能看
+09:02 xxxxxxxx: 我去找找有没有vim插件
+09:16 cleamoon: emacs更有可能
+09:22 xxxxxxxx: 并没有在win上装EEEmacs
+09:25 cleamoon: win用npp
+09:25 cleamoon: 先去睡satori了
+09:25 tutu_wind joined channel
+09:25 tutu_wind: morning ~ 
+09:50 xxxxxxxx quit:Quit: Leaving...
+09:55 ASenR joined channel
+09:57 cleamoon quit:Read error: Connection reset by peer
+10:05 tutu1 joined channel
+10:08 tutu_wind quit:Ping timeout: 252 seconds
+10:09 Plough joined channel
+10:15 cleamoon joined channel
+10:15 _pakchoi_ quit:Remote host closed the connection
+10:15 tutu2 joined channel
+10:18 tutu1 quit:Ping timeout: 252 seconds
+10:29 htredleaf joined channel
+10:30 wsyh: 智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商智商
+10:30 wsyh: 香港中文大学 OTL
+10:32 htredleaf: ( ⊙ o ⊙ )
+10:33 htredleaf: 然并卵
+10:33 wsyh: OTL OTL OTL
+10:36 htredleaf: 多伦多？
+10:36 wsyh: -_-
+10:36 wsyh: 作死中...
+10:37 wsyh: 多伦多就是一个水校...
+10:37 htredleaf: 学什么呢？
+10:37 wsyh: 计算机科学 -_-
+10:39 wsyh: htredleaf: 你不会是生命科学的吧-_-
+10:39 htredleaf: 那也很厉害啊
+10:39 htredleaf: ... 不是
+10:41 htredleaf: 统计狗一只🐶
+10:41 wsyh: OTL
+10:41 wsyh: 统计学这种可怕的学科我还是滚一边去了
+10:42 htredleaf: 我们学校的统计很水笔的
+10:42 wsyh: 天天上课睡觉 ZzzZzzZzzZzzZzzzzzzz...
+10:43 iyzsong: n.n
+10:44 htredleaf: 说得我都困了 
+10:45 wsyh: let it go =_= mark is stupid
+10:46 htredleaf: 已经放假好久了  
+10:46 wsyh: 继续上经济学的白痴课...
+10:46 wsyh: MC vs MR vs P 讲了好几个星期了...
+10:47 htredleaf: 都是什么鬼？
+10:47 tutu_wind: wsyh: 今天还有课啊 ~ 
+10:47 wsyh: marginal cost & marginal revenue & price
+10:47 wsyh: tutu_wind: ?
+10:48 tutu_wind: wsyh: 10:45:56      wsyh | 继续上经济学的白痴课...
+10:48 wsyh: tutu_wind: 今天没课，平时上课基本上都是上到一半直接走人
+10:48 tutu_wind: wsyh: 喔喔 ~ 
+10:49 wsyh: tutu_wind: 交出智商！！！！
+10:49 tutu_wind: wsyh: -0.1111111110
+10:49 tutu_wind: 不能再低了 ... 
+10:49 wsyh: 顺便还需要情商...
+10:51 tutu_wind: wsyh: condy 智商较高 ~ 
+10:55 wsyh: -_- My Heart Will Go On < 这是奇葩么？
+10:55 molikto joined channel
+11:11 htredleaf quit:Quit: Textual IRC Client: www.textualapp.com
+11:58 ASenR quit:Quit: Lost terminal
+12:09 lhanjian joined channel
+12:31 Plough quit:Read error: Connection reset by peer
+12:32 Plough joined channel
+12:34 ASenR joined channel
+12:50 lhanjian quit:Remote host closed the connection
+12:56 iyzsong: T2好萌啊 我选择死亡 >_>
+12:58 wsyh: iyzsong: 没有妹纸和死亡没什么区别...
+13:02 lhanjian joined channel
+13:03 wsyh: lhanjian: 给智商
+13:09 Plough: 怎么突然说起T2了
+13:09 wsyh: Plough: T2又出现了...
+13:10 wsyh: >> <Dove> 我是T2，去南京住院一个月刚刚回来。
+13:10 wsyh: >> <Dove> Mina桑很抱歉，最近得了精神分裂脑袋不太清楚。
+13:10 Plough: 精神分裂啊，果然
+13:10 ASenR quit:Quit: Lost terminal
+13:11 lhanjian: 如果是真的，那么T2确实有点麻烦了
+13:11 Plough: 看他之前毫无逻辑的胡言乱语确实有点像
+13:13 lhanjian: 没错。而且自己好像意识不到自己在说什么
+13:14 wsyh: lhanjian: 抑郁症发作中...
+13:14 lhanjian: wsyh, 你是确诊了抑郁症？
+13:15 wsyh: 以前有接近抑郁症的情况.../
+13:15 Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=21a1e9177c310a55c424defc877e41a9/4d086e061d950a7bd49f3d200fd162d9f3d3c9a8.jpg
+13:15 lhanjian: 抑郁倾向和抑郁症确诊了还是有点差距的
+13:15 lhanjian: 我还自残过呢……
+13:16 wsyh: lhanjian: 十一年级有点轻度的抑郁症...
+13:16 lhanjian: soga……
+13:17 wsyh: 现在抑郁症完全是由于没有妹纸造成的...
+13:17 lhanjian: 。。。
+13:19 wsyh: 暑假连可观赏的都没有...
+13:27 wsyh: 人生就是悲剧...
+13:27 wsyh: 根本没必要读那些悲剧的小说...
+13:28 lh_mouse joined channel
+13:29 lh_mouse quit:Remote host closed the connection
+13:29 wsyh: 耗子掉了...
+13:29 lh_mouse joined channel
+13:29 wsyh: 哪里有猫？
+13:32 varna joined channel
+13:33 wsyh: varna: T2出现过了-_-
+13:33 varna: 肛旗跟我说了
+13:34 varna: 嘛，到月底之前我都试着赌一下低保看吧
+13:34 varna: 下个月的战果看情况决定怂不怂
+13:34 wsyh: 注孤生的悲惨人生...
+13:36 varna: 另外我说个悲惨的故事，物理枪ama就是找死
+13:36 varna: 那东西没个Titan's Revenge连N都带不动
+13:36 Plough: 去PT服玩了一会，变化主要是这么几个
+13:37 varna: 然而单机手头档的Titan'r Revenge是用陷阱刺客KB出来的……
+13:37 Plough: 水上飞机现在有两种了，一种是水战，可以用来拦截攻击机
+13:37 varna: 噗噗
+13:37 Plough: 另一种是观测机
+13:37 Plough: 水战是重巡和战舰都可以带的，水观只有战舰能带
+13:37 varna: 这不太科学
+13:37 varna: 其实弹着观测机的尺寸比侦察机还小
+13:37 Plough: 水观在空中的时候可以提供弹着观测
+13:38 Plough: 效果有二
+13:38 Plough: 一是增加主炮射程，二是提供鹰眼视角
+13:38 varna: 听着还好
+13:38 varna: 怎么拦截观测机
+13:38 Plough: 所以毛子没让重巡带水观
+13:38 Plough: 用舰战就可以
+13:39 Plough: 当然AA也能打下来
+13:39 varna: 我以为追尾的时候会自动选择回避AA的高度
+13:39 * wsyh 果然还是学习比较带感，难度恐怖，每天头痛
+13:39 Plough: 水观是AI控制的，没有追尾一说……
+13:39 Plough: HE弹的伤害似乎被削了，但是点火率还是一样恐怖
+13:40 Plough: 空母系的主要变化则是手动投弹变成技能，以及中间栖姬加入
+13:40 lhanjian: 换了个肾机，感觉手机一下子清爽多了……
+13:40 varna: 我看qh群里说自动投弹提高了玩家的命中率
+13:40 wsyh: lhanjian: Nexus5路过
+13:41 Plough: 中间现在作为一个十级航妈连八级的翔鹤都有希望压制住
+13:41 Plough: 莉害吧
+13:41 lhanjian: wsyh, 那也是个坑爹货
+13:41 wsyh: lhanjian: ?
+13:41 varna: 翔鹤长相可爱
+13:41 Plough: 自动投弹比较无脑
+13:41 varna: 而且浪费马力
+13:41 Plough: 手动技术好的话效果会比自动好很多，前提是技术号
+13:41 Plough: 好*
+13:41 lhanjian: wsyh, 总是Andro的软件生态就是个悲剧
+13:41 Plough: 总之中间遇上大凤有压力，遇上白龙被吊打
+13:41 varna: 这些设计者稀里糊涂的
+13:42 wsyh: lhanjian: 权限比较乱来...
+13:42 wsyh: lhanjian: 其他还好
+13:42 varna: 海战游戏都快变成拼时髦值的了
+13:42 Plough: 电风扇的震电最大航速174kt，喷气的女妖最大航速180kt
+13:42 wsyh: 等Android M算了...
+13:42 lhanjian: wsyh, 就是权限乱来坑爹啊……
+13:42 Plough: 而且舰战输出比较悲剧，打白龙的攻击队根本打不动……
+13:42 varna: 很多人觉得震电很厉害的
+13:42 lhanjian: wsyh, 还有一堆搞不明白的后台/Service……
+13:42 wsyh: lhanjian: 我基本上也没太多应用...
+13:42 varna: 舰战输出不是问题，问题其实是空战形态
+13:42 lhanjian: wsyh, 那还好
+13:43 varna: 要是无脑「呜——」一下飞过去开始傻乎乎追打，那没救了
+13:43 Plough: 就是这么来的
+13:43 wsyh: lhanjian: 最不可信的就是疼训
+13:43 varna: ...
+13:43 varna: 这些设计者真的不是日裔么
+13:43 Plough: 「呜--」一下飞过去然后两架飞机（代表两队）相对静止
+13:43 Plough: 很有可能也相对海面静止了
+13:43 varna: 怎么判定空战结束
+13:43 lhanjian: wsyh, 明明是Ali系的，互相唤醒。不过你在国外，估计是用不上
+13:44 varna: 攻击队难道都不突进么
+13:44 Plough: 攻击队会突进的，直到被打光
+13:44 Plough: 舰战狗斗就直接相对海面静止了……
+13:44 varna: 这倒可以理解
+13:44 varna: 不过能派遣舰战先头压制敌人么
+13:45 wsyh: lhanjian: Nexus系的原生Google的玩意差不多够用了...
+13:45 Plough: 可以是可以，前提是你能压制住
+13:45 varna: 这话好熟悉
+13:45 varna: 我玩武大决战的时候也是这么想的
+13:45 Plough: 你像白龙八个小队233配置
+13:45 wsyh: 反正手机从来就没法当电脑用
+13:45 Plough: 两组A8M直接撸死女妖
+13:45 varna: ...
+13:45 wsyh: 台式的处理能力比手机好多了
+13:46 Plough: 然后你的攻击队好不容易顶着防空火力投了一组被躲掉的鱼雷以后，你发现你身边出现了三组鱼雷机
+13:46 Plough: 旁边还有一组舰爆等着收人头
+13:47 varna: 卧槽碉堡了，两发鱼雷过去两个神闪避，然后我方2大破……
+13:47 Plough: ……
+13:47 varna: 三个了
+13:47 Plough: 果然田中也开始玩WOWS了
+13:47 varna: 要是闭幕收不掉人我就出事了
+13:47 Plough: 另外爱宕是金币船
+13:47 varna: 出事了
+13:47 Plough: 我在PT服上买了，感觉打打妙高应该没啥问题
+13:47 varna: 看智商吧
+13:48 lhanjian: wsyh, 那倒是
+13:48 Plough: 遇见毛嘎米就只能叫爸爸了
+13:48 varna: 跪了……
+13:48 varna: 这TM...
+13:48 Plough: ……
+13:48 wsyh: lhanjian: boinc实在恐怖...
+13:49 hope1_: T2回来了呀
+13:49 Plough: 另外有点改动
+13:49 Plough: 金刚和扶桑现在默认形态是最初的船体了
+13:49 Plough: 也就是说你会看到两个巨大的三角桅
+13:49 varna: 太惨
+13:49 wsyh: hope1_: >> <Dove> Mina桑很抱歉，最近得了精神分裂脑袋不太清楚。
+13:49 Plough: 好在升级以后危楼还能回来……
+13:50 varna: 卧槽
+13:50 varna: 米空一炮爆了肥桑姐64
+13:50 Plough: 妙义据说是要加危楼
+13:50 varna: 没制空
+13:50 lhanjian: hope1_, 看起来T2现在基本恢复正常了……
+13:50 Plough: 不过现在的PT服上还是没有
+13:50 varna: 这些毛子的爱好太奇特了
+13:51 wsyh: lhanjian, hope1_: 看起来现在有病的是我了...
+13:51 lhanjian: wsyh, 有病得看，没病别吓自己
+13:51 hope1_: 暑假约了心理医生，希望能不水
+13:51 hope1_: wsyh, 看到了
+13:51 hope1_: lhanjian, 但是得一直吃药
+13:51 varna: 我觉得寒云心理挺健康的啊……
+13:51 lhanjian: hope1_, 没办法……
+13:51 wsyh: varna: 
+13:51 wsyh: varna: ?
+13:52 varna: 一直在有意识地晒，怎么看都不是心理问题
+13:52 Plough: 香取老师被撤掉了
+13:52 wsyh: -_- 暑假连可观赏的妹纸都没有...
+13:52 varna: 卧槽POI单横被爆
+13:53 Plough: 因为白毛子觉得即使砍掉鱼雷香取老师也太牛逼了，当不了一级船
+13:53 Plough: 现在日系的一级船是桥立
+13:53 hope1_: wsyh, 没确诊就不要用这种言论抱怨啊，尤其这里有确实的患者
+13:53 Plough: 白毛子还放出预告：我们要加三笠！
+13:54 varna: 卧槽二连的女武神
+13:54 wsyh: hope1_: 肯定有强迫症的路过...
+13:54 varna: 要不是电酱徒手搓了一个炮雷出来……
+13:56 varna: 我对日本二战前的澡盆们一点好感都没有
+13:56 varna: 名字又土气，样子也土气
+13:57 Plough: 我也不喜欢
+13:57 Plough: 不过三笠是惟一的二级BB
+13:57 Plough: 我估计主要用途会是用HE屠杀一级船……
+13:57 Plough: 另外三笠是氪金船
+13:58 varna: 这游戏弄的
+13:58 Plough: 另外现在开炮的时候会有气流冲击水面的效果了
+13:58 Plough: 然而拉线依然会变成虚线
+13:58 varna: 要不哪天做个基于SK4规则的结算器，谁来补个前端和电邮/irc接口做个开源战略游戏算了
+13:59 Plough: 也成啊
+13:59 Plough: 七月似乎要开公测
+13:59 varna: 这游戏开了公测会变成公厕的
+13:59 Plough: 那时候我去美服试试
+13:59 Plough: 现在似乎美服环境比较好
+13:59 Plough: 技术差脾气好
+14:00 Plough: 俄服全是猪突党
+14:00 varna: 美服lag如何
+14:00 Plough: 亚服一个比一个精
+14:00 Plough: 估计比较高……
+14:00 Plough: 不过PT服在欧洲我也一样玩下来了
+14:02 hope1_ quit:Ping timeout: 265 seconds
+14:02 varna: 演习时间
+14:03 hope1_ joined channel
+14:04 varna: 卧槽米空被爱宕爆了
+14:04 varna: 格差社会
+14:06 Plough: 桶数终于过700了
+14:07 varna: 580
+14:13 lh_mouse quit:Remote host closed the connection
+14:14 lh_mouse joined channel
+14:14 varna: POI Lv120达成
+14:14 Plough: 肝rz
+14:15 varna: 接下来就是喂狗大业
+14:21 lh_mouse quit:Remote host closed the connection
+14:21 lh_mouse joined channel
+14:24 lh_mouse quit:Remote host closed the connection
+14:24 lh_mouse joined channel
+14:25 hope1_ quit:Ping timeout: 246 seconds
+14:27 lh_mouse quit:Remote host closed the connection
+14:27 lh_mouse joined channel
+14:29 varna: 三发低保两个4:20一个4:30
+14:45 Plough: 另外螺丝上限是3k已经被壕确认了
+14:46 Plough: 我也摆上人格鉴定窗
+14:46 molikto quit:Remote host closed the connection
+14:47 varna: 这三发低保输了，月底再见
+14:48 Plough: 我陪你来一发
+14:49 Plough: 大和 第四槽 低保
+14:49 Plough: 4:20
+14:49 varna: ...
+14:49 varna: 今天不宜低保
+14:50 varna: 不对啊，黄历说今天宜大建
+14:50 Plough: 所以我刚才如果用BB公式就能出大和了……
+14:50 Plough: 然而低保并没有什么大和
+14:53 molikto joined channel
+14:54 blackskygg joined channel
+14:56 lhanjian quit:Remote host closed the connection
+14:58 varna: 卧槽，大现充blackskygg来了
+14:59 lh_mouse quit:Remote host closed the connection
+14:59 lh_mouse joined channel
+15:01 wsyh: blackskygg: 线虫把智商交出来!!!!!!
+15:06 lh_mouse: blackskygg, 捏
+15:07 lh_mouse quit:Remote host closed the connection
+15:09 lh_mouse joined channel
+15:15 blackskygg: lh_mouse: 揉
+15:16 blackskygg: wsyh: 没有智商怎么破
+15:16 blackskygg: 我现在已经回到废柴状态了
+15:16 blackskygg: 毕竟高考过后
+15:17 blackskygg: 暂时仍未走出被妹子甩掉的阴影
+15:17 varna: 快活动了，来打活动吧
+15:17 blackskygg: 什么时候活动
+15:17 varna: 让深海军的狂轰滥炸帮你洗洗脑
+15:17 wsyh: blackskygg: -_- 你竟然有妹纸 (°Д°)
+15:17 varna: 估计八月初吧
+15:17 varna: 而且现在开4-5了哦
+15:17 blackskygg: 我的号约有2个多月没有碰过了
+15:18 Plough: 毕竟线虫
+15:18 blackskygg: 倒是被我拉入坑的同学现在屌得飞起
+15:18 varna: 他不会拿了奖励的烈改吧
+15:18 blackskygg: 不知道
+15:19 blackskygg: 我们明天全班一起去毕业游
+15:19 varna: 哦，不抓紧时间来一发么
+15:19 blackskygg: 但是我完全没有心情
+15:19 blackskygg: 纯粹是被拉扯着去的
+15:19 varna: 去啊
+15:20 varna: 带好夜战套
+15:20 blackskygg: 而且该死的填报志愿就要来了
+15:20 Plough: 夜战套2333
+15:20 varna: 你们是先出分还是先志愿
+15:20 blackskygg: 卧槽，填志愿这玩意儿比大建刺激多了
+15:20 wsyh: blackskygg: 去滑铁卢大学吧...
+15:20 blackskygg: 没钱
+15:20 blackskygg: 穷屌一个
+15:20 varna: 寒云又开始暴力晒了
+15:20 Plough: 寒云又开始暴力晒了
+15:20 blackskygg: 毕竟学霸云
+15:21 blackskygg: 我们是先出分数
+15:21 varna: 那还好
+15:21 blackskygg: 有意愿去基科大学信安
+15:21 wsyh: 滑铁卢大学的比例据说是一对情侣两对基
+15:23 varna: 我换个BGM
+15:23 blackskygg: varna: 你之前说的基科大的学长为什么好像没有出现过
+15:23 varna: 这BGM太魔性了
+15:23 blackskygg: 你在听 全然不知道 吗？
+15:23 varna: blackskygg: 华科？rox早就现充去了
+15:23 varna: 我在听长者rap
+15:23 wsyh: blackskygg: 还是你准备去斯坦福弄全奖？
+15:23 Plough: 又嘬死
+15:24 wsyh: ROX w. HR < -_-
+15:24 blackskygg: 长者rap是什么玩意儿
+15:24 varna: 你看寒云让别人干什么就知道他自己要干什么了
+15:24 blackskygg: soga
+15:24 Plough: 你们给我搞的这个rap啊，excited
+15:24 varna: blackskygg: 字面意思
+15:25 wsyh: varna: 貌似读grad school 没什么意义
+15:25 blackskygg: 发个链接，我也瞧瞧
+15:26 varna: blackskygg: 我不作死，然而那源站挂了
+15:26 blackskygg: 大概了解了其中深意
+15:27 blackskygg: hasi怎么了
+15:27 blackskygg: 为什么不给注册
+15:28 varna: 不是蛤丝
+15:28 varna: 是长者网
+15:28 blackskygg: 我知道
+15:28 wsyh: ATLAS@home 的一个任务的最后0.03%已经运行了6个小时了...
+15:28 blackskygg: 我刚刚想注册hasi，结果发现不能注册
+15:29 lh_mouse: fly蓝色月下: 你有点啰嗦，痛快点，你直接说那个什么球的水平能拿月薪多少吧
+15:29 lh_mouse: \那个什么球/
+15:30 blackskygg: 长者网是当掉了吗
+15:30 varna: 给月薪党跪了
+15:30 varna: 是
+15:31 wsyh: 下学期继续每个月少于$500的工作算了...
+15:31 lh_mouse: 壕
+15:32 blackskygg: 事实上，基科大的信安专业在全国处于什么地位
+15:32 varna: 不知道
+15:33 blackskygg: 为什么渣渣华南理工的分数好像还比较高
+15:33 wsyh: JLU < 基佬University?
+15:33 blackskygg: 吉林U
+15:33 varna: 看排名意义不大
+15:33 lh_mouse: geordi, -c { test({}); } struct foo { explicit foo(){ } }; void test(foo &&){ }
+15:33 geordi: Success
+15:33 varna: 差不多就行了
+15:33 blackskygg: 所以我应该看什么呢
+15:33 lh_mouse: geordi, -c { test({}); } struct foo { explicit foo(){ } }; void test(foo){ }
+15:33 geordi: Success
+15:34 wsyh: varna: 看排名意义不大 +infty
+15:34 varna: 看学校录取线和大体的名气就行了
+15:34 lh_mouse: 学校排名有什么意义（笑）
+15:34 blackskygg: 辛辛苦苦考了个分，总不想浪费啊
+15:34 varna: 排名都是现充看的
+15:34 lh_mouse: 有本事的还是有本事  没本事的还是没本事
+15:34 lh_mouse: 除非是帝球那样的
+15:34 blackskygg: 那我就直接去基科大了
+15:34 wsyh: blackskygg: 你会发现在大学上课完全没自学有意义
+15:34 blackskygg: 前几天去看了一下
+15:34 lh_mouse: 据说帝球是 f2d
+15:35 blackskygg: 感觉还是挺喜欢
+15:35 blackskygg: 毕竟基佬多
+15:35 lh_mouse: [15:34:38] <blackskygg> 感觉还是挺喜欢
+15:35 lh_mouse: [15:34:44] <blackskygg> 毕竟基佬多
+15:35 Plough: 16:34 < blackskygg> 感觉还是挺喜欢
+15:35 Plough: 16:34 < blackskygg> 毕竟基佬多
+15:35 varna: 16:33 < blackskygg> 感觉还是挺喜欢
+15:35 varna: 16:33 < blackskygg> 毕竟基佬多
+15:35 lh_mouse: \快 log/
+15:35 blackskygg: ......
+15:35 wsyh: 自动log的...
+15:35 varna: 我跟你说，都是那些不知道自己学什么的人去看排名
+15:35 * lh_mouse slaps clcn_logbot around a bit with a large trout
+15:37 blackskygg: 有 道 理
+15:37 wsyh: 排名就是个废话... 
+15:39 blackskygg: 我们事实上现在还没有出分数
+15:39 blackskygg: 所以我去读了蓝翔也不是没可能的事
+15:39 wsyh: 某个Sheridan学院的Animation, Arts & Design可以秒掉基本所有大学 (包括各种世界一流的大学)
+15:40 varna: 然而我觉得Arts和Design这东西太吃天赋
+15:40 wsyh: 同意
+15:41 varna: 计算机这种理工科好歹像我这种蠢货学学还能学到点三脚猫功夫
+15:42 lh_mouse: 适合搞艺 术的还是 ISFP
+15:43 * wsyh 我这种蠢货连点计算机这种理工科的三脚猫功夫都学不了
+15:43 varna: 相信那个测试你就输了
+15:44 lh_mouse: 为何？
+15:44 varna: 提问略粗暴
+15:45 varna: 人的侧面很多，而单细胞的伙计永远理解不了这一点
+15:46 wsyh: 偏ISTJ路过///
+15:47 wsyh: 虽说日常情况下一般拿INFP当原则...
+15:49 blackskygg: 我得去翻翻我的测试记录
+15:50 blackskygg: 问一下，你们所谈论的是MBTI测试吗
+15:50 wsyh: 貌似是的...
+15:50 blackskygg: INTJ
+15:51 varna: 我试试那个93题的
+15:51 blackskygg: 两年前测的
+15:51 blackskygg: 现在不知道会不会有所改变
+15:51 wsyh: varna: link?
+15:52 blackskygg: 同求
+15:54 varna: http://www.apesk.com/mbti
+15:55 varna: 这个测试比较愚蠢
+15:55 condy: o.o
+15:56 varna: 他们的问题中，可以感觉到刻意划分的感性派和理性派
+15:56 varna: 而不幸地，我同时是很多问题中的两者
+15:57 varna: 虽然评价是I90 N68 T83 P68
+16:01 wsyh: ESFP-T -_- E22 S14 F16 P22 T13 wtf...
+16:01 varna: 寒云的评价不该是shine么
+16:01 varna: 满满都是阳光，一阵暴晒……
+16:04 Plough: 我去玩几盘PBT
+16:04 Plough quit:Quit: reboot
+16:06 Plough joined channel
+16:07 condy: I90 N64 T87 J60 Orz
+16:07 Plough: 来盘女儿
+16:08 blackskygg: 两年过后
+16:08 blackskygg: 我从INTJ变成了INTP
+16:11 wsyh: ESFP & INTP < 喂，测试结果没这么不靠谱的...
+16:13 wsyh: 我果然是偏的值都比较低...
+16:18 lhanjian joined channel
+16:19 wsyh: lh_mouse: 爆MBTI
+16:19 wsyh: lhanjian:  爆MBTI
+16:19 lhanjian: MBTI?
+16:20 wsyh: lhanjian: https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator
+16:20 lhanjian: .
+16:20 lh_mouse: 我是 INTP
+16:21 varna: 为何我跟小耗是一个类型的
+16:21 lhanjian: 上次我的测试结果是啥来着……
+16:21 wsyh: varna: 我都不知道我是啥类型的了..
+16:21 lhanjian: wsyh, http://www.welefen.com/lab/mbti/
+16:22 blackskygg: 我为什么会从INTJ变成了INTP
+16:22 wsyh: lhanjian: 不同的测试有不同的结果...
+16:22 lh_mouse: 才储分析：您的性格类型倾向为“ INTP ”(内向 直觉 思维 知觉 倾向度： I75 N72 T87 P68  不假思索指数：24)
+16:22 blackskygg: 这东西是会动态发展的吗
+16:22 * lh_mouse slaps wsyh around a bit with lhanjian 
+16:23 varna: 我的不假思索指数比小耗高一些，似乎三十多
+16:23 lh_mouse: 我！是！猫！
+16:23 varna: 鼻！头！来！
+16:24 lhanjian: ISTJ
+16:25 lh_mouse: 我觉得还挺准的啊
+16:25 varna: 我不喜欢他们的问题
+16:25 lhanjian: http://ww2.sinaimg.cn/large/a5e96d5fgw1etbshma1wmj20n209mmyk.jpg
+16:26 varna: 有一些问题对我来说是按场景五五开，根本没法选
+16:26 lhanjian: varna, 上次我们也讨论过他们的问题不好的原因……
+16:26 varna: 还有些问题是根本选不出来，因为根本不会那么做
+16:26 lhanjian: 但其实就是要强迫你做选择。当然，“没有妹子”的不能选
+16:26 varna: 我只能在微妙差别里选出最像的
+16:26 lh_mouse: 答案里面说了很多 INTP 根本做不完题
+16:26 varna: 对
+16:27 varna: 但有些时候并非场景差异
+16:27 lh_mouse: 当然这种东西我就是瞎蒙了一个
+16:27 varna: 而是问题的表现力不足
+16:27 lh_mouse: 他们应该使用 S-expr 改写题目
+16:27 lh_mouse: 以期解决表现力不足的问题
+16:28 wsyh: -_- http://postimg.org/image/g5h7viugv/
+16:28 varna: 唔，有道理))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+16:28 varna: 我想想能不能换个topic
+16:28 lhanjian: 寒云也是INTP……
+16:28 lh_mouse: 人择原理
+16:28 lhanjian: 看来本频道INTP最多……
+16:28 lh_mouse: 在频道里混的基本都是 I 的
+16:28 wsyh: lhanjian: 不是
+16:28 lh_mouse: E 的都出去把妹了
+16:29 varna: 人择+
+16:29 lhanjian: wsyh, ?
+16:29 lhanjian: wsyh, 寒云发来的图不是INTP么
+16:29 lh_not_bot: 什么眼睛
+16:30 lhanjian: 什么什么鬼……
+16:30 wsyh: lhanjian: http://postimg.org/image/89eins1ob/ < 这是另一个
+16:30 lh_not_bot: 那是他的么？ 0.0
+16:31 lhanjian: wsyh, 这个还是INTP啊
+16:31 Plough: 2vs5三杀翻盘
+16:31 wsyh: lhanjian: 另一个测试是 ESFP-T -_- E22 S14 F16 P22 T13
+16:31 lhanjian: wsyh, ……线虫云
+16:31 Plough: 海航就是莉害……
+16:31 lh_mouse: 线虫云
+16:33 lhanjian: wsyh, 93的那个？
+16:33 wsyh: 另外网站的...
+16:35 wsyh: *NFP对我而言是原则性问题 
+16:35 wsyh: 虽说正常情况下偏ISTJ
+16:37 wsyh: 原则问题上理性是没什么用的...
+16:37 lh_mouse: 原则就是理性
+16:38 lhanjian: 换了93题版的，一下子INTJ了
+16:38 varna: 我的原则看情况
+16:38 lh_mouse: 虽然实际上对我而言原则低于使命和荣誉
+16:38 varna: 理性是工具性的，全盘相信理性我做不到
+16:38 lh_mouse: 帝球肯定是很理性的
+16:39 lh_mouse: 我嘛   /me 非理法权天
+16:39 lhanjian: http://ww1.sinaimg.cn/large/a5e96d5fgw1etbsvf6ekaj20n209m3zy.jpg+
+16:39 varna: 有人鼓吹数理逻辑的理性，我没法完全相信；自然，一般论的理性我也不那么看重
+16:39 varna: 得有个办法推理，仅此而已
+16:39 lh_mouse: 你这个倾向太弱了
+16:39 varna: 而且有些人把理性和零和兽性混同
+16:40 varna: 举例来说，他们推定利己原则是单纯理性的背景
+16:40 lh_mouse: 兽 性
+16:40 varna: 然而这正是缺乏理性的表现
+16:40 varna: 理性要求明确推理前提
+16:40 varna: 而这些伙计的推理前提居然是默认的或者强加的
+16:40 lhanjian: 人择 是什么？
+16:40 lh_mouse: 利己原则是生物学的理性
+16:40 varna: 简单来说，他们不区分推理的前提
+16:40 lh_mouse: lhanjian, 百度
+16:41 varna: 这我觉得是伪理性，比一脑子浆糊还恶心
+16:41 lhanjian: 百度完毕，然而并不能理解他们说的
+16:41 lh_mouse: lhanjian, 如果 XXX 不是 YYY 你就不可能在问为什么 XXX 不是 YYY
+16:42 lhanjian: ……
+16:42 lh_mouse: s,不,,3
+16:42 lhanjian: 为什么感觉这是一句废话啊……
+16:43 lh_mouse: 套上上面那个例子就是   本频道很多 I  因为如果有人是 E 他就不会在这里问这个问题
+16:43 varna: lhanjian: 简单来说，人择是直觉的——若不匹配，则系统难以存在
+16:44 lhanjian: 那么可以做假设，没问问题的可能是I以外的？
+16:44 lh_mouse: 我说了 E 都出去把妹了
+16:44 varna: 实际上我可以假设，E倾向容易受不了这个频道
+16:44 * wsyh 靠直觉做物理和数学题的路过
+16:44 varna: 这里更相容I
+16:45 lhanjian: 那么直白地说，本频道的氛围起到了人工选择的作用。
+16:45 varna: 太单纯
+16:45 lh_mouse: 我倾向于以为不是氛围问题
+16:45 wsyh: lh_mouse: 反对
+16:45 lh_mouse: 是这个东西自身的性质决定的
+16:45 varna: 我觉得是这东西本身一大堆I
+16:45 lh_mouse: 只要还是个频道   具体氛围无关
+16:46 * lh_mouse slaps wsyh around a bit with a large trout
+16:46 varna: E的人，如同小耗所说，他们会出去社交
+16:46 varna: 少数人会留下晒，另论
+16:46 wsyh: 作为一个经常在E和I之间变化的表示E什么的也没法把妹用
+16:46 varna: 你那是在EI和SCI之间变化
+16:46 varna: 不是在E和I之间变化
+16:46 lhanjian: 哈哈哈哈
+16:47 wsyh: 木有妹纸就是悲剧-_-
+16:49 lh_not_bot: 测过好几次都是 INTP
+16:49 lh_not_bot: 所以我觉得还准  一方面是倾向比较强
+16:49 lh_not_bot: 另一方面是据说 INTP 产高智商
+16:50 varna: 看来我拖了INTP的后腿
+16:50 wsyh: -_- 作为只有在学术问题上用INTP的路过...
+16:51 varna: 那样忽略不计
+16:51 varna: 我倾向认为人在面对领域问题的时候容易作专业思考
+16:51 varna: 然而如果他们在其他问题上不沿用这个思考方式，他们的INTP倾向值得怀疑
+16:52 wsyh: 除学术问题外ISTJ
+16:52 wsyh: 虽说原则问题还是得INFP
+16:53 lh_not_bot: 嘛  真有人说受不了我思考问题的方式的
+16:53 lhanjian: varna+
+16:53 lh_not_bot: 因为我总是试图找到理论解释
+16:53 wsyh: 奇葩组合...
+16:53 wsyh: lh_not_bot: OTL
+16:53 lhanjian: 我常常试图把某种现象进行脑补和假设推广到更大的范围
+16:53 lh_not_bot: ¼»
+16:53 wsyh: 经常想象悲惨的未来
+16:54 lh_not_bot: ¼½¼»¼½¼»
+16:55 varna: 理论解释……嘛，我确认我拿出的是理论的时候，我开始意识到这理论会被狂喷
+16:55 varna: 至于脑补么
+16:55 varna: 我就说一个问题，很多新技术有些支持者
+16:55 varna: 然而这些支持者并没有vision, 他们只有伊柳申
+16:56 * lh_mouse 非理法权天（法权天是谁？）
+16:59 xxxxxxxx joined channel
+17:00 wsyh: xxxxxxxx: 爆MBTI
+17:00 xxxxxxxx: wsyh: ?
+17:00 wsyh: https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator
+17:02 xxxxxxxx: 学霸云怎么又在玩这个...
+17:02 xxxxxxxx: 不过学霸云为啥要爆它 感觉好可怜
+17:03 wsyh: [03:42] <lh_mouse> 适合搞艺 术的还是 ISFP
+17:03 * lh_mouse slaps wsyh around a bit with a large MBTI
+17:07 molikto quit:Remote host closed the connection
+17:13 lh_not_bot: 关于 T2 诈尸的事情你们怎么看
+17:13 varna: 我不知道，情报不足
+17:13 xxxxxxxx: 我不说话我就看看
+17:13 wsyh: 没妹纸，没分析的必要
+17:17 xxxxxxxx: 翻了翻log 关于MBTI我不想再去测了 以前玩过两次 得到过INFP和INTP的结果 说到底看心情
+17:24 lhanjian quit:Ping timeout: 246 seconds
+17:29 xxxxxxxx: http://www.bilibili.com/video/av2453634/ 哈哈哈哈
+17:30 varna: 基佬真可怕
+17:38 xxxxxxxx: varna 有人说alsa比asio4all和coreaudio差 真的么?
+17:40 varna: 后面两个我没试过
+17:40 varna: 我一直无脑alsa
+17:40 xxxxxxxx: 后面两个是win党和果物
+17:40 Plough: 我用大傻秒了Big Seven……
+17:41 lh_mouse: XX 管理系统
+17:42 Plough: 看见对面是个大峡谷的时候我是打算学邓世昌的
+17:42 Plough: 然而差一点没撞上
+17:42 Plough: 于是我直接掉头，1.4km上照着弹药库一轮AP齐射
+17:42 Plough: 大峡谷轰沉
+17:45 biergaizi joined channel
+17:45 xxxxxxxx: http://tieba.baidu.com/p/3840806867 哈哈哈
+17:57 varna: http://www.bilibili.com/video/av30908/index_8.html 开口跪
+17:59 lhanjian joined channel
+18:13 xxxxxxxx: 卧槽这是谁唱的....
+18:17 xxxxxxxx: 央广网北京6月21日消息 据经济之声《天下财经》报道，中纪委开通手机一键通举报，平均1分半钟接到一条举报信息。 <- 举报狗都去那边玩了么...
+18:18 xxxxxxxx: 幼女被拐4个月后找回 不认亲生父母 监控记录两幼女被拐走过程
+19:02 endle joined channel
+19:10 varna: 啊哈哈
+19:10 varna: 原来i386的nested function用的ecx
+19:10 varna:    0:	b9 84 d7 ff ff       	mov    $0xffffd784,%ecx
+19:10 varna:    5:	e9 65 ac 04 08       	jmp    0x804ac6f
+19:20 hope1 joined channel
+19:22 xxxxxxxx: shazhouke: 回复 天皇圣尊 ：我说的会也就是仅限于知道语法，偶尔用过的程度。我大学毕业找工作写简历，把过的语言列了一下，随便就十几种了。光课程设计用到的就五六门。 <- 听上去好厉害 
+19:23 varna: 我至今只敢写两种，其一是C其二是Perl
+19:24 iyzsong: java, bash, makefile, cmake, qmake, nix...
+19:24 varna: bash我都不敢写
+19:25 iyzsong: 那就换成sh >_>
+19:25 varna: 一律不敢写
+19:25 varna: 我sh工作基本都perl代劳
+19:26 iyzsong: 也是
+19:28 xxxxxxxx: fly蓝色月下: 回复 幻の上帝 :我发现你有个缺点，就是喜欢在别人的话里鸡蛋挑骨头不顾别人的面子指出错误，这样做显得你自己很牛逼，是不是？这种炫耀方法过时了，有本事上你五位数的月薪条啊，月薪不到五位数就不算牛逼 <- 嘲讽帝球真作死
+19:29 varna: 贴吧傻逼最后的办法是眼不见为净
+19:31 xxxxxxxx: 然后我就想到那个"其实只有自己在装B别人都是真牛B"的话
+19:32 Plough quit:Read error: Connection reset by peer
+19:33 Plough joined channel
+19:33 Plough: 又大了几盘高雄
+19:33 Plough: 感觉高雄的主要优势在于AP比最上强
+19:33 Plough: 瞄准弹药库一打一个轰沉
+19:36 xxxxxxxx: fly蓝色月下: 回复 幻の上帝 :你的技术这么吊是吧 那你来盗我的号吧 能盗得到算你牛逼
+19:37 xxxxxxxx: 水平爆炸
+19:41 Plough quit:Ping timeout: 264 seconds
+19:44 libhanjian joined channel
+19:47 lhanjian quit:Read error: Connection reset by peer
+19:48 biergaizi_ joined channel
+19:48 biergaizi quit:Ping timeout: 264 seconds
+19:58 xxxxxxxx: KUB_改革: 语言其实没啥意思，千篇一律打套路就可以了，但是算法永远是基本功。算法是实，语言是形。fly蓝色月下: 从这句算是实，语言是形可以看出，就算你不是高手也是个经验很丰富的软件工程师了
+19:59 xxxxxxxx: 这眼光哈哈哈哈
+19:59 varna: 哈哈哈哈
+19:59 molikto joined channel
+20:00 Plough joined channel
+20:02 Plough: http://imgsrc.baidu.com/forum/w%3D580/sign=fb1c3a0c881001e94e3c1407880c7b06/94ff374c510fd9f98ffa268c202dd42a2934a469.jpg
+20:03 molikto quit:Remote host closed the connection
+20:04 molikto joined channel
+20:05 r joined channel
+20:06 xxxxxxxx: 这个r是新人还是肉牛?
+20:07 Guest64683: robot
+20:09 Plough: bot啊，踹之
+20:10 varna: 赌点46
+20:11 xxxxxxxx: 看到踹 我想到羊踹玉兔 穿穴干女
+20:12 varna: 卧槽出了
+20:12 Plough: 欧rz
+20:13 varna: ok, 搞出两台+4了
+20:14 Plough: 壕rz
+20:14 Plough: 我只有两门+1
+20:14 varna: 下周还可以先搞两个41+4
+20:16 Plough: 然而41吃光了
+20:16 Plough: 另外按照现在的验证，似乎嗑药系列只有维内托级有加成
+20:17 Plough: +2%
+20:17 varna: 哈哈哈哈
+20:18 varna: 我用跟64位相仿的手法去骇32位闭包，结果吐了……
+20:18 Plough: ……
+20:20 cleamoon: 为什么MBTI那么出名可是更准确一些的大五型没人弄...
+20:20 varna: 大五型似乎学术界用的多
+20:20 varna: 我听说有些SNS上的算法试图评估这个
+20:21 varna: cleamoon: 对了，我把物理枪打到NM了，打得恶心
+20:21 cleamoon: 这怎么评估
+20:21 cleamoon: ......
+20:21 varna: 我就说几个方面
+20:21 cleamoon: 大菠萝怎么弄死的
+20:21 xxxxxxxx: 我在baidu搜羊踹玉兔 穿穴干女想找找哪里先用这个说法的结果baidu相关搜索说 玉兔姐姐的儿子干妈妈
+20:21 varna: 加点主要是Jab和暴击，其余的来不及
+20:21 varna: Fend我点了一些
+20:22 varna: 配装方面，早期我用的双手长矛
+20:22 varna: 后来换了个飞矛，配盾到格挡75
+20:22 varna: 然而坑点出来了
+20:22 xxxxxxxx: 好像扔电标枪的ama挺厉害的样子
+20:22 varna: 不论Jab还是Fend, 触发Dodge Avoid Evade或格挡，后续连段一律不命中
+20:23 xxxxxxxx: 那个好玩么?
+20:23 varna: 原理和狼德的Fury一样
+20:23 varna: 电枪ama主要是KC的吧
+20:23 cleamoon: .......
+20:23 varna: 打大菠萝好说
+20:23 varna: 把火电抗堆够，冲上去跟他Jab
+20:23 cleamoon: 你这个完全进不了HE呀
+20:23 xxxxxxxx: 不知道上次看到一个人在NM刷a3的商场升级 感觉好厉害
+20:24 cleamoon: 火电怎么堆够....
+20:24 varna: 拼命上装备
+20:24 cleamoon: ......
+20:24 varna: 即使这样
+20:24 varna: 即使这样
+20:24 varna: 我也用了大箱子
+20:24 cleamoon: 你这还不如陷阱ass呢
+20:24 cleamoon: .......
+20:24 varna: 然后真·坑点来了
+20:24 cleamoon: 物理ama根本没法打
+20:24 varna: 飞矛没好的，长枪抗不够攻速不够
+20:25 varna: Jab还需要4%-7%的吸魔保证续行
+20:25 varna: EK都不够用的，因为格挡和命中问题
+20:25 cleamoon: 这是很大的坑点
+20:25 varna: 而吸魔导致的物品等级升高比吸血多
+20:26 varna: 结果我硬是被冰河里的红牛干死了
+20:26 varna: 还干死了两回
+20:26 varna: 第一回是被Frenzy秒杀，第二回是跑尸的时候喝水慢心死
+20:27 varna: 我的结论是这样的
+20:27 varna: 物理枪需要一个Titan's Revenge
+20:27 varna: 然而有这东西的话谁练物理枪啊
+20:27 varna: 而且这东西不算特别难开，即使是本格的单机玩家也可以练个陷阱刺客去KB
+20:28 cleamoon: 哦，那个牛挺容易弄死人的
+20:28 varna: 问题主要是输出不够
+20:28 xxxxxxxx: 牛？
+20:28 varna: 必须有好枪，但是有好枪的话给物理枪纯是浪费
+20:28 cleamoon: d2要求敌人瞬间爆炸，要不就必须几乎无限的血和防
+20:29 varna: 要么瞬间爆炸，要么无限续行
+20:29 varna: 穷鬼Zealdin可以走后一个路线，然后看着3bb让自己瞬间爆炸
+20:29 cleamoon: 电法就是无限续航的
+20:30 xxxxxxxx: 电法....
+20:30 cleamoon: 其实有个诡异练法，火焰加强物理法....
+20:30 xxxxxxxx: 强化法师?
+20:30 varna: 那个可以找个nec一起玩
+20:31 xxxxxxxx: 似乎说火墙有过改动 之后火法就不厉害了
+20:31 cleamoon: 强化+
+20:31 cleamoon: 多放几个就行了
+20:31 cleamoon__ joined channel
+20:31 xxxxxxxx: 而且火焰强化似乎有符文给米山
+20:32 varna: 火法我觉得还是找个nec女并头吧
+20:32 cleamoon: 纯肉搏似乎只能野蛮人，但不很好玩
+20:32 xxxxxxxx: 不要野蛮人
+20:32 xxxxxxxx: 把野蛮人赶出去
+20:33 varna: 专心野蛮人（笑）
+20:33 cleamoon__: 我练过...
+20:34 varna: 我们亲眼看着巨基那个专心蛮子怎么吃瘪的
+20:34 cleamoon__: 复仇din，武学ass
+20:35 varna: 那练的还不如一个穷鬼Zealdin...
+20:35 Plough: 哈哈哈哈
+20:36 Plough: WoWS里美帝127DP炮对空射程5km，对海射程4km
+20:36 cleamoon__: 野蛮人也就frenzy能用，旋风各种没虚曲
+20:36 varna: Pal练复仇得超级壕吧
+20:36 varna: 不然要伤害没伤害、要攻速没攻速
+20:36 varna: 最后就是个会圣盾的鸡……
+20:36 biergaizi_ quit:Ping timeout: 264 seconds
+20:37 cleamoon__: 慢慢打，伤害挺高的，就是没攻速
+20:37 varna: 没攻速是问题呀
+20:37 cleamoon__: 其实你可以试试炖鸡，挺厉害的...
+20:37 varna: 你还得有定罪光环
+20:37 varna: 盾击不好玩
+20:37 varna: 我喜欢用刀剑的
+20:37 cleamoon__: 当武学用
+20:38 varna: ...
+20:38 Dove joined channel
+20:38 lhanjian: T2来了
+20:38 varna: 但是不管怎么说我得有定罪光环，单机我可搞不到那玩意
+20:38 Dove: Hi
+20:38 varna: HELO
+20:38 Dove: hello
+20:38 cleamoon__: hola
+20:38 Jeguan: wocao
+20:38 Dove: 前一阵子是精神分裂了，对不住诸君。
+20:39 varna: 然后你说弄个电枪ama去单机KC, 那简直太有情调，我不忍直视
+20:40 cleamoon__: 我记得分裂一般是从rna复制然后产生细胞核开始的
+20:40 Dove: 有生之年系列。
+20:40 varna: 巨基现在还在anhei3 shanghai么？
+20:40 cleamoon__: 电枪还好，至少攻击力够高
+20:40 varna: 电枪有杀伤有命中
+20:40 varna: 物理枪什么都没有
+20:40 Dove: 话说我看编译原理感觉硬啃好难
+20:40 varna: 你看到什么章节
+20:40 Dove: 第四章
+20:41 varna: ……内容呢
+20:41 Dove: 语法分析
+20:41 cleamoon__: 似乎羊驼子不推荐直接撸龙书
+20:41 xxxxxxxx: 挺少玩d2
+20:41 varna: xxxxxxxx: 他们删你档没
+20:41 varna: 龙书无所谓
+20:41 xxxxxxxx: 应该没有
+20:41 varna: 我觉得龙书前面讲得太多了，适合做教材不适合当参考书
+20:42 varna: 要是岚月酱不卡就好了
+20:42 Dove: 问题我就是当教材看的。
+20:42 Dove: 还是看不懂节奏
+20:42 Plough: 说起来想要折腾编译器的话羊驼子推荐怎么走
+20:42 varna: 他玩个nec, 其他人随便跟着耍耍
+20:42 xxxxxxxx: 昨天去另一个号的nec玩了一会nm被冥河娃娃各种炸
+20:43 varna: 我推荐多找些讲后端的书看看，前端就那么回事了
+20:43 Plough: 拿Wraith撸个POD Parser出来作为入门作？
+20:43 varna: Wraith别用
+20:43 libhanjian joined channel
+20:43 varna: 那东西是无限前瞻的
+20:43 varna: 用yapp吧
+20:43 Plough: ……Yapp撸POD大丈夫？
+20:43 xxxxxxxx: 我记得我还有个减抗光环的帕拉丁
+20:43 Dove: 嗯
+20:43 varna: 至少用保证出唯一结果的东西
+20:43 Dove: 我先把那点弄清楚些。
+20:43 Plough: 我想手写，但是总感觉会蛋疼
+20:43 varna: 不过前端什么的，你会用工具就无所谓了
+20:44 varna: 我自己还是后端弱
+20:44 Dove: lhanjian: 爆
+20:44 * Plough 都鶸
+20:44 Dove: 都不会
+20:44 lhanjian: Dove, 炸
+20:44 cleamoon: 我过两天试试win卡不卡
+20:44 varna: 问题是岚月酱上个大教堂都卡崩……
+20:44 varna: 估计是网络问题
+20:45 varna: 毕竟是国内服务器
+20:45 xxxxxxxx: cleamoon__: 你找个国内的vpn之类的?
+20:45 Dove: = =
+20:45 Dove: 没用的吧
+20:45 cleamoon: 过两天我再试试，我记得我自己玩的时候没那么恶心... 为什么人一多就麻烦了...
+20:46 cleamoon: 关键是打算怎么打
+20:46 varna: 人多了好打
+20:46 xxxxxxxx: 人多了乱点都能冲脸
+20:46 varna: 一个人打什么都得照顾着
+20:46 lhanjian: 绅士应该试试北欧走哪条链路到国内快
+20:46 cleamoon: 走b站的线路...
+20:47 varna: 233333
+20:47 Guest80260 quit:Ping timeout: 264 seconds
+20:47 varna: 我本以为你是北欧有识之士，没想到还是在B站看粗鄙之语
+20:48 cleamoon: 一个武学ass+一个专心野蛮+一个物理枪，你觉得能走到哪里
+20:48 lh_mouse: http://v.ifeng.com/news/society/201506/015cd72b-df3e-4240-9c5a-36746757259d.shtml
+20:48 cleamoon: b站神奇的比youku快，即使是看youku的视频
+20:48 xxxxxxxx: 专心野蛮人挺难死的
+20:48 xxxxxxxx: http://puu.sh/ix9El/9ee1726ee9.jpg
+20:48 Dove: 2333
+20:49 xxxxxxxx: 除了难死 也就没什么特点了....
+20:49 Dove: 卧槽这PAL
+20:49 xxxxxxxx: 这是个神奇的加点
+20:50 cleamoon: 有没有什么不常见的打法
+20:50 Dove: 壕
+20:50 cleamoon: 虽然有个召唤nec什么都好说
+20:50 varna: 这PAL我已经那啥了
+20:50 varna: 不常见的打法啊
+20:50 xxxxxxxx: Dove: 那是技能点出来的
+20:50 varna: 你要不要试试匕首男
+20:50 Dove: xxxxxxxx: 我看出来了。
+20:51 cleamoon: 纯毒太耗膀胱
+20:51 varna: 纯毒不如纯骨耗膀胱
+20:52 varna: 匕首男还可以拼吸魔的
+20:52 varna: 非主流一点，弄个窃取骷髅什么的戴着
+20:52 varna: 当然其实CB比较好
+20:52 cleamoon: 我还是炮轰吧，我的单机炮轰在地狱三步一死，没法打...
+20:53 cleamoon: 就是掉率我估计得到地狱才能有好弓...
+20:53 xxxxxxxx: 然后那个pal的米山带着个遵从 然而似乎还是没有什么卯月
+20:54 varna: 要是真玩的话我可以玩召唤
+20:54 cleamoon: 德鲁伊召唤？
+20:54 xxxxxxxx: 德鲁伊哈哈哈
+20:54 varna: nec
+20:55 cleamoon: 基王要来试试吗
+20:55 varna: 我再也不想玩德鲁伊了
+20:55 cleamoon: nec就是太拖速度
+20:55 cleamoon: 不能跑快了
+20:55 varna: 要不来个群扑菜刀队
+20:55 cleamoon: 那是什么....
+20:55 varna: 专心蛮子 Zealdin 物理枪 匕首男 武学刺客
+20:56 cleamoon: ......
+20:56 varna: 上去之后全死，连个开门拖尸的都没有
+20:56 xxxxxxxx: 概括 一群沙比
+20:56 Dove: 武学刺客2333
+20:56 Dove: 匕首男都可以忍
+20:57 varna: 匕首男好歹会尸爆
+20:57 Dove: 对呀
+20:57 varna: 哦对，还差个暴力狼
+20:58 varna: 他最强，因为要死两次
+20:58 Dove: 2333
+20:58 xxxxxxxx: 我在用那个PAL熟悉一下米山是主力的节奏
+20:59 cleamoon: anhei2论坛都上不去了...
+20:59 Dove: = =
+20:59 varna: 轻音部：米山是配菜
+21:00 Dove: 补番去了
+21:01 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:02 lh_mouse: rongxian, 爆照
+21:02 gauge_ joined channel
+21:03 cleamoon: web qq没一个能用的
+21:04 tutu1 joined channel
+21:04 JQK1 joined channel
+21:05 xxxxxxxx: 产生了米山才是玩家的错觉
+21:05 varna: 没错吧
+21:05 varna: 和尚拯救无冬城 米山打倒罪恶之首
+21:06 varna: 要是没有米山，谁给那个肉都没几斤的奈非天搞骷髅去，土魔么
+21:08 xxxxxxxx: NEC: 找个米山提供光环 这个蛋疼PAL: 找个米山提供输出
+21:08 molikto quit:*.net *.split
+21:08 tutu_wind quit:*.net *.split
+21:08 gauge quit:*.net *.split
+21:08 JQK quit:*.net *.split
+21:08 lhanjian quit:Quit: Leaving
+21:09 varna: 今日击坠1
+21:10 cleamoon: 看看能不能凑成真龙与地下城队
+21:10 cleamoon: 剑士，刺客，法师，枪手，群疗
+21:10 varna: 真dnd队其实需要一些平衡
+21:11 varna: 比如需要一个处理环境因素的人（诗人或者贼）
+21:11 cleamoon: 于是，zealdin，武学ass，强化法师，炮轰，治疗din
+21:11 varna: 需要一个能挑大梁的人（比如神棍）
+21:11 cleamoon: 我觉得这是作死队
+21:11 varna: 需要一个看起来能跳大梁的人（比如战士）
+21:11 cleamoon: ......
+21:11 xxxxxxxx: 专心野蛮人2333
+21:11 varna: 还需要个Lv3之前可能纯踢门会拖后腿的（比如法师）
+21:12 varna: Lv3之后开Ghost Visage再开爆火玩烤地精的法爷另论
+21:12 cleamoon: 其实可以一个召唤nec，然后3-4个光环din...
+21:12 cleamoon: 虐杀全场，就是没什么可玩的
+21:13 varna: 人多了还是玩点奇葩的
+21:13 varna: 不过如果需要传统练法，我可以顶上去
+21:13 cleamoon: 奇葩的，风德？
+21:14 cleamoon: 电枪吧，相对奇葩
+21:14 varna: 风德电枪都不奇葩吧
+21:14 cleamoon: 相对
+21:14 cleamoon: 太奇葩了不好打
+21:14 varna: 电枪KC还是很流行的
+21:14 varna: 我觉得有前途
+21:14 xxxxxxxx: 我觉得我这个pal没前途....
+21:14 cleamoon: 审判炖鸡
+21:14 varna: ...
+21:15 cleamoon: 如果不很卡基王玩吗
+21:15 molikto joined channel
+21:15 varna: 估计他能玩吧
+21:15 xxxxxxxx: 有人一起玩我就玩
+21:15 cleamoon: 那么至少3人
+21:16 Plough: 啥时候玩 
+21:16 cleamoon: 陷阱ass也不算少见
+21:16 varna: 不知道呢
+21:16 varna: 陷阱刺客我以前和肛旗巨基打到过Hell
+21:16 Plough: 暑假的话我大概能玩
+21:16 varna: 有人处理抗电的话陷阱刺客其实相当不错
+21:16 varna: 有伤害能尸爆
+21:16 cleamoon: 肛旗什么时候放假？
+21:17 varna: 而且不要什么装备，加技能就好了
+21:17 Plough: 7月10号左右
+21:17 cleamoon: 好晚
+21:17 xxxxxxxx: 我这个米山 不pal就能处理电抗
+21:18 cleamoon: 先出门，想想可以有什么奇葩打法
+21:18 cleamoon: 你们可以定下自己怎么打...
+21:18 varna: 我随意，陷阱刺客或者纯招毒招都能打，也可以根据你们的来
+21:19 cleamoon: 我也随意...
+21:19 varna: 那没特别的我还是陷阱刺客吧，不那么吃装备
+21:19 varna: 符文什么都可以你们先用着
+21:19 lhjkkk joined channel
+21:19 varna: root!
+21:19 cleamoon: root！
+21:19 lhjkkk: test
+21:19 varna: 有人搞他没
+21:20 xxxxxxxx: 聚气的16级暴风雪 那这个给那个神奇的pal有用么?
+21:20 varna: 没用
+21:20 varna: 等级太低了，修聚气又麻烦
+21:20 cleamoon: 陷阱攻击不错了，就是和nec抢尸体
+21:20 lhjkkk: 这感觉真奇妙
+21:21 varna: nec要尸体，我可以不放亡者
+21:21 varna: 只放电就行了
+21:21 xxxxxxxx: 这里还有一把巫师之刺
+21:21 xxxxxxxx: ^这东西有啥用？
+21:21 cleamoon: 只放电陷阱不好用...
+21:21 tutu1 quit:Ping timeout: 265 seconds
+21:22 varna: 没用
+21:22 varna: cleamoon: 有nec就让他来炸
+21:22 varna: 没有的话再用亡者
+21:22 cleamoon: 但是，有人要玩nec吗...
+21:22 xxxxxxxx: 还有个六个孔的幻化之刃
+21:22 varna: xxxxxxxx: 这个的最好用法是给PK玩家的副手
+21:22 xxxxxxxx: 有人需要么 笑
+21:23 varna: 比如他们要追求TP+的FCR档次
+21:23 varna: 这个时候切副手TP
+21:23 varna: 主手堆FCR的压力会小
+21:23 varna: PVC的话不需要那么多FCR
+21:23 cleamoon: 其实可以毒nec + 冰sor + 电ama + 火dru
+21:23 cleamoon: + 审判din
+21:23 varna: 2333333
+21:23 varna: 火德太坑
+21:24 varna: 德的元素系还是只有风系能看吧
+21:24 cleamoon: 传说中的看老子法死你
+21:24 xxxxxxxx: 火法师多好
+21:24 cleamoon: 没有火系好的
+21:24 xxxxxxxx: 圣火
+21:24 varna: 火法也比火德强
+21:25 cleamoon: 先出门了，基王快撅腚
+21:25 varna: 我文字直播一盘空母决战吧，有人看么
+21:25 xxxxxxxx: ?
+21:26 varna: 场景是MO作战，目标5.9 1900之前把上路舰队掩护到莫尔兹比港
+21:27 varna: 可用的基地仍然是拉包尔、帝汶、图拉基
+21:28 Plough: 我边折腾学派边看
+21:28 lh_mouse: rongxian, 爆照
+21:28 varna: 上路舰队是南遣舰队和六水战小部
+21:28 varna: 上陆
+21:28 rongxian: ni xian
+21:29 varna: 攻略队是祥凤/KTKR/第六战队
+21:30 varna: 机动部队则是二习习鹤
+21:30 xxxxxxxx: 如果让我打酱油我就作死搞个20尸爆 20伤害加深的nec 召唤不点
+21:30 varna: 我觉得可以有
+21:30 varna: 就一个字：爆
+21:30 varna: 大风起兮去他娘……祥凤这攻击队毛用没有
+21:31 Plough: 23333
+21:31 xxxxxxxx: 然后再胡乱点些诅咒啥的 看到尸体我就爆
+21:31 varna: 六机九七
+21:31 varna: xxxxxxxx: 你可以点Dim Vision
+21:32 tutu1 joined channel
+21:32 varna: 上陆部队预定在1520到达莫尔兹比以东几百公里懒得数的地方
+21:32 varna: 2250到达帝汶附近
+21:32 molikto quit:Remote host closed the connection
+21:33 varna: 祥凤队脱离敌方作战半径提供掩护
+21:33 xxxxxxxx: nec那个吸引好用不
+21:33 varna: 凑合 
+21:34 xxxxxxxx: 降低怪物视野有啥效果?
+21:34 rongxian: xxxxxxxx: 
+21:34 varna: 他们就傻乎乎地不打你了
+21:34 varna: 0720
+21:35 varna: 在机动部队以东两百公里的洋面上发现奇特的敌舰队
+21:35 varna: 我赌三个偶像，这不是敌机动部队
+21:35 varna: 0730 我输了三个偶像
+21:36 xxxxxxxx: 除了诅咒就是尸爆 这不就是嘴炮到对面爆炸的套路么...
+21:36 varna: 0740 拉包尔攻击队换装完了，对莫尔兹比进行轰炸
+21:37 varna: 卧槽图拉基的这个侦察机是大艇酱！
+21:37 varna: 0755 遭到第一波攻击（无损）
+21:38 varna: 0800 遭到第二波攻击（无损）
+21:39 varna: 0815 图拉基基地的大艇酱被干下来了
+21:40 varna: 0820 敌航母击沉1小破1 我方无损
+21:41 varna: 0820 路线变更
+21:42 rongxian: /?
+21:42 varna: 攻击队尚余战15攻4爆6
+21:42 varna: 真见鬼
+21:43 varna: 1000 敌攻击队来袭
+21:44 varna: 1005 空袭，无损
+21:45 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:46 varna: 1055 莫尔兹比基地被毁
+21:46 JQK1 quit:Read error: Connection timed out
+21:46 varna: 这样就安全了
+21:47 varna: 1110 敌舰爆队来袭，全灭
+21:47 varna: 1135 敌直掩机撤退
+21:48 varna: 1200 攻击队发进
+21:49 varna: 1210 敌航母中破，没卵用
+21:50 JQK joined channel
+21:50 varna: 1255 敌方又排出1机雷击队来送死
+21:51 varna: 1315 敌军不知道从哪里掏出了十六个SBD, 被拦截全灭
+21:51 varna: 1320 攻击队发进
+21:52 varna: 1325 敌航母击沉
+21:53 rongxian: I'm using ERC Version 5.3 with GNU Emacs 24.4.1 (x86_64-pc-linux-gnu, GTK+ Version 3.14.9, multi-tty) of 2015-03-21.
+21:53 ASenR joined channel
+21:54 varna: 敌残存巡洋舰战力包括：Astoria, Portland, New Orleans, Chester
+21:54 varna: 1450 攻击队发进
+21:55 varna: Astoria大破
+21:55 sismvg joined channel
+21:55 molikto joined channel
+21:56 sismvg: http://tieba.baidu.com/p/3841378027?fr=frs tolove 梦梦等身婚纱手办!
+21:56 varna: 1555 攻击队发进
+21:56 sismvg: 说是3d打印做出来的。
+21:57 varna: 1715 攻击队发进
+21:58 varna: 1800 祥凤攻击队发进
+21:58 varna: 夜战从2000开始
+21:58 condy: prpr
+21:58 varna: 1820 继续攻击
+21:58 * lh_mouse slaps condy around a bit with a large trout
+21:58 condy: o.o
+21:58 * condy 梦梦美如画
+21:59 varna: 1930 昼间最后一次攻击
+21:59 hope1 joined channel
+21:59 * lh_mouse slaps condy around a bit with a large trout
+21:59 lh_mouse: hope1, 揉
+22:00 varna: 1940 Portland轰沉
+22:00 hope1 quit:Client Quit
+22:00 varna: 1950 第一次炮雷击战（机动部队 vs 美军残余）
+22:01 varna: 魔性的鱼，魔性地大破了
+22:01 varna: 2020 Chester击沉
+22:02 rongxian quit:Quit: ERC Version 5.3 (IRC client for Emacs)
+22:02 varna: 2120 夕暮大破
+22:02 Plough: 这错误我看不懂
+22:03 Plough:  Can't call method "run" on an undefined value
+22:03 varna: 2200 我军潜水哨戒线咣叽砸了敌驱逐舰一个中破，耻辱不堪
+22:03 varna: Plough: 对象是undef
+22:03 Plough: 然而这sub应该根本不会被调用
+22:03 varna: ...
+22:03 Plough: 为何编译时他就能判定这玩意是undef
+22:03 Plough: 我都还没请求呢
+22:03 varna: 有没有begin块
+22:03 Plough: 没有
+22:04 varna: 如果是库里的呢
+22:04 Plough: 这个undef是$mysql
+22:04 varna: ...
+22:04 Plough: 这个sub是在请求的时候用来生成主页的
+22:04 Plough: 为何我一启动就报错……
+22:04 varna: 2250 至此的炮雷击战都是乱打，增援在0415赶到
+22:04 varna: 哦不对
+22:04 varna: 增援赶不到了
+22:05 hope1 joined channel
+22:06 varna: 0050 除了一艘小破的驱逐舰外，敌残存全员大破
+22:07 varna: 0120 削减了敌方驱逐舰的数目，敌全员大破
+22:07 hope1: 考完试推一遍d2
+22:07 varna: hope1: HO棠来和我们一起玩啊？
+22:07 hope1: 好啊
+22:07 Plough: 噗，知道了
+22:08 varna: 到时候应该能凑好几个人联机
+22:08 Plough: 我改了Router，然而我忘记perl里取sub的引用要加\&了……
+22:08 varna: ...
+22:08 varna: 0250 发现了奇怪的敌舰队
+22:08 xxxxxxxx: 吼啊吼啊 我当然滋瓷啊
+22:08 varna: 总觉得是TF 16.7
+22:08 hope1: 下个星期应该就完了
+22:09 varna: 0515 确认那不是TF 16.7而是敌巡洋舰队
+22:10 varna: 发现了TF 16.7，正以一艘驱逐舰的勇姿向我第六战队猪突中
+22:10 varna: 0550 TF 16.7消灭
+22:11 varna: 0600 昼战
+22:11 varna: 0605 攻击队发进
+22:13 varna: 0620 TF17 全灭
+22:14 varna: 0725 开始压榨攻击队，只要没被全灭就坚决扑上去炸那个巡洋舰队
+22:17 lh_mouse: hope1, 揉
+22:18 lhjkkk: 爆
+22:19 varna: 1715 在近乎十个小时并无战果的航空战之后，机动部队终于追上了敌人
+22:21 varna: 2010 夜战
+22:21 JQK quit:Ping timeout: 246 seconds
+22:21 varna: 2015 敌军水面和基地兵力全灭
+22:21 xxxxxxxx: http://www.bilibili.com/video/av1954618/ 不朽尸王又被顶上来了
+22:22 varna: 上陆部队预计在5.9 1445到达莫尔兹比港'
+22:23 varna: 结束了
+22:28 varna: 结果看来，我的攻击队在第一次攻击结束之后就被打了个稀里哗啦
+22:28 varna: 二羽鹤这个习气不好啊
+22:28 varna: 天天被人打火鸡
+22:28 varna: 最后整个航空队打得几乎只剩下战斗机，还不能换战斗轰炸装备
+22:39 JQK joined channel
+22:49 xxxxxxxx: 然而嘲讽帝球那位看上去真捉鸡
+22:50 varna: 他怎么还活着
+22:52 xxxxxxxx: 因为他嘲讽的不是口支
+22:55 varna: 撤退
+22:55 varna: 诸君武运
+22:55 varna quit:Quit: leaving
+22:57 lh_mouse: 地球太 软
+23:11 cleamoon-- joined channel
+23:13 lh_mouse quit:Disconnected by services
+23:14 cleamoon--: 我想好了，我打火
+23:14 lh_mouse joined channel
+23:14 cleamoon--: 火法
+23:19 boosure joined channel
+23:28 xxxxxxxx: 火法遇到火焰免疫你干啥?
+23:30 blackskygg quit:Quit: Leaving.
+23:35 xxxxxxxx: 幼女来个20静电场多好
+23:35 endle quit:Quit: Leaving
+23:45 lh_mouse: BigFive测试结果
+23:45 lh_mouse: 外倾性
+23:45 lh_mouse: 　　您的得分高于平均水平，属于高外向性。
+23:45 lh_mouse: 笑趴
+23:53 xxxxxxxx: 闷骚的口支
+23:58 cleamoon--: 闷骚＋
+23:58 cleamoon--: 火免有羊驼子呢
+23:59 cleamoon--: 基王打什么

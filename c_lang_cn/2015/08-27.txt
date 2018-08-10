@@ -1,0 +1,1355 @@
+00:03 code_new quit:Quit: bye
+00:07 yzld2002 quit:Remote host closed the connection
+00:08 lh_cat quit:Quit: Connection closed for inactivity
+00:17 Mokou: 睡觉
+00:17 Mokou: 诸君武运
+00:17 Mokou quit:Quit: 睡觉
+00:30 hoxily quit:Read error: Connection reset by peer
+00:30 hoxily joined channel
+00:52 molikto: 我看了一下舰娘. 然后发现我不会日语. 像我这样的putong宅男还是不要玩了...
+01:17 lh_mouse quit:Quit: good night >w<
+01:20 xxxxxxxx: 会不会日语不太要紧 主要考察你愿不愿意吃翔
+01:21 libhanjian quit:Quit: Leaving
+01:22 cleamoon: +
+01:23 cleamoon: 我连日文字母都不会读不是照样玩
+01:29 boosure joined channel
+02:19 whocares_2 quit:Remote host closed the connection
+02:20 whocares_2 joined channel
+02:41 molikto quit:Remote host closed the connection
+03:12 FrankHB quit:Ping timeout: 265 seconds
+03:47 FrankHB joined channel
+05:37 wsyh joined channel
+05:38 hysw quit:Ping timeout: 244 seconds
+07:04 whocares_2 quit:Remote host closed the connection
+07:05 whocares_2 joined channel
+07:46 FrankHB quit:Read error: Connection reset by peer
+07:49 xxxxxxxx quit:Quit: Leaving...
+07:52 hausir joined channel
+08:18 whocares_2 quit:Remote host closed the connection
+08:19 whocares_2 joined channel
+08:42 sou_ joined channel
+08:59 yzld2002 joined channel
+09:14 lh_mouse joined channel
+09:31 Youmu` joined channel
+09:43 x-iyzsong joined channel
+09:56 clonesig joined channel
+10:12 clonesig quit:Ping timeout: 265 seconds
+10:15 clonesig joined channel
+10:21 Stevearzh joined channel
+10:21 Stevearzh quit:Changing host
+10:21 Stevearzh joined channel
+10:29 lh_not_bot: clonesig: 爆照
+10:30 lh_not_bot: IP地址: 60.171.124.67安徽省马鞍山市 电信
+10:30 tutu_wind joined channel
+10:30 tutu_wind: meow ~
+10:31 * lh_mouse slaps tutu_wind around a bit with a large trout
+10:32 tutu_wind: lh_mouse: 小耗,波塞冬里的多线程写日志是肿么做的啊 ,想模仿一下
+10:35 tutu_wind: 在每个需要写日志的函数里都读写文件总不是个办法 ... 
+10:44 clonesig left channel:"Leaving"
+10:58 yzld2002 quit:Quit: yzld2002
+11:00 sismvg joined channel
+11:00 sismvg: 看到一句话：人生苦短，证明就免了吧  23333
+11:11 lh_mouse: tutu_wind, 就是那么做的
+11:15 tutu_wind: lh_mouse: 写的时候用原子操作么,还是加锁了呢?
+11:16 lh_mouse: tutu_wind, https://github.com/lhmouse/poseidon/blob/master/src/log.cpp?ts=2#L162
+11:16 tutu_wind: lh_mouse: ok ~ 
+11:21 lh_not_bot: tutu_wind: 注意下如果你把 log 屏蔽掉这部分代码是根本不执行的
+11:22 tutu_wind: lh_not_bot: 日志是可选项啊 , 一般的服务器都会打开日志功能吧 ~ 
+11:25 lh_mouse: debug 可以不开
+11:25 lh_mouse: info 什么的一般是开的
+11:25 lh_mouse: 不过只是些个人观点
+11:26 tutu_wind: lh_mouse: ok ~ get
+11:29 tutu_wind: lh_mouse: 小耗 , C 和 C++ 的内存模型该是相似的吧 ~ 
+11:35 molikto joined channel
+11:38 Mokou joined channel
+11:41 lh_mouse: 现在看来有一点区别
+11:41 lh_mouse: 比如 register
+11:42 lh_mouse: 虽然 C艹 一开始就装作看风景了
+11:45 lh_not_bot: 严格来讲   寄存器属于“内存”    C 明确 register 描述的对象不能被取地址  C艹干脆就无视 register 了
+11:46 tutu_wind: lh_mouse: 那 ... 在用原子操作的时候 , 要不要阻止编译器优化重排序呢?
+11:46 wsyh quit:Read error: Connection reset by peer
+11:46 lh_not_bot: 所以 register 完全被 C艹存储模型无视了  （虽然比如 GNU 方言还是会鸟   看来 deprecated 也没什么人敢随便扔掉）  
+11:47 hysw joined channel
+11:47 lh_not_bot: 你以为 memory order 是干啥的
+11:47 Mokou quit:Ping timeout: 244 seconds
+11:48 Mokou joined channel
+11:51 tutu_wind: lh_not_bot: 哦 , 阿嘻 . 有relax ,  strong 没明白什么意思呢 ...
+11:55 lh_not_bot: foo = 1; bar = 2; atomic_store(flag, true, memory_order_relaxed);
+11:55 cleamoon quit:Ping timeout: 252 seconds
+11:56 lh_not_bot: 手贱 写错了
+11:56 lh_not_bot: foo = 1; bar = 2; atomic_store(flag, true, memory_order_release);
+11:56 lh_not_bot: if(atomic_load(flag, memory_order_acquire)){ use_foo(foo); use_bar(bar); }
+11:56 lh_not_bot: 如果就一个变量可以改成这样
+11:56 lh_not_bot: foo = 1; foo *flag = nullptr; atomic_store(flag, &foo, memory_order_release);
+11:57 lh_not_bot: if(foo *ptr = atomic_load(flag, memory_order_consume)){ use_foo(*ptr); }
+12:01 tutu_wind: 阿嘞 , 哦 , 我想一时半会理解不了 ~ 我再找博客文档 . 有问题再来 ~ 阿里嘎多 小耗 ~
+12:03 endle joined channel
+12:12 sou_ quit:Remote host closed the connection
+12:22 hoxily` joined channel
+12:25 hoxily quit:Ping timeout: 272 seconds
+13:10 Xilzzert joined channel
+13:11 whatofor joined channel
+13:13 Xilzzerts quit:Ping timeout: 250 seconds
+13:13 whatofor_1 quit:Ping timeout: 250 seconds
+13:36 x-iyzsong joined channel
+13:49 varna joined channel
+13:50 varna: ……老板真是好人，把待审论文转给一个他的新米博士（原先我梯队的）了
+13:50 Mokou: 2333
+13:50 varna: 他以为我工作的事情还在谈
+13:51 varna: 虽说我继续谈薪什么的也得九月份
+13:51 Mokou: 一月两万？
+13:52 varna: 到不了
+13:52 Mokou: 一万五将就下？
+13:52 varna: 硕士毕业应该是阿里的P5级别吧，印象是13k~18k的样子？
+13:52 varna: 总之有个工作就好
+13:52 Mokou: OTL
+13:52 Mokou: 简直壕
+13:53 varna: 哦不对
+13:53 hausir quit:Read error: Connection reset by peer
+13:53 varna: 也有传言说是13k-
+13:54 varna: 13k+应该是P6了
+13:54 Mokou: OTL
+13:54 Mokou: 我总觉得等我以后5k都到不了
+13:54 varna: 不至于
+13:54 Mokou: 那就5001
+13:54 varna: 不过你要是留校的话就是工资少、其他安定了
+13:56 varna: 总之既然论文审阅的事情没有了，我可以试试译一下横空的那篇机动部队战术操典
+13:56 Mokou: OTL
+13:56 Mokou: 其实我还是有点想肉身翻墙的
+13:56 varna: 那篇的扫描质量跟拿米青喷的一样
+13:57 Mokou: 只不过有几个问题比较麻烦
+13:57 varna: 出国好
+13:57 Mokou: 先不谈语言问题和经济实力问题
+13:57 varna: 不过你现在大概来不及了
+13:57 varna: 得研究生再说吧
+13:57 Mokou: 我对欧美妹子几乎一点兴趣都没有……
+13:57 varna: 你可以去日本啊
+13:58 Mokou: 我老爹属于路边政治局会议水平
+13:58 lh_mouse: 来亨鸡不就是 p5 么
+13:58 varna: 虽说我坚持认为妹子还是我国的最好
+13:58 varna: lhj应该是P5
+13:58 Mokou: 而且万一我留校没成功
+13:58 lh_mouse: 羊羊羊要来杭州么
+13:58 Mokou: 日企那加班……
+13:58 varna: 目前定的是杭州
+13:58 varna: Mokou: 你有根性
+13:59 varna: 拿出outrange的气势来
+13:59 Mokou: 让我去大凤的舰岛里甲板，我就给他们拿出outrange的气势来
+13:59 Mokou: 加班*
+14:00 varna: 又是差一个A胜……
+14:00 varna: 这货的一队我完全看不懂
+14:00 varna: 一点制空都没有
+14:01 Xilzzert quit:Ping timeout: 260 seconds
+14:02 Xilzzert joined channel
+14:02 lh_not_bot: varna: 啥时候来
+14:02 lh_not_bot: 我找你玩
+14:02 varna: lh_not_bot: 还没定时间呢，定了就告诉你
+14:02 lh_not_bot: QwQ
+14:03 varna: 现在正好是校招期间，估计其他的事情得等这波过去了再谈
+14:03 Mokou: 出云级二号舰还真叫加贺老师了啊
+14:03 varna: 这意图太明显了
+14:04 lh_not_bot: 校招不要去网易  不要去腾讯
+14:04 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=6ae1d2a6c5cec3fd8b3ea77de689d4b6/31c774adcbef760998c5b6f528dda3cc7dd99e45.jpg
+14:04 varna: 网易和狗日的疼迅有什么坑点？
+14:04 lh_not_bot: 不待见校招的
+14:04 varna: 哦
+14:05 varna: 也正常吧
+14:05 Mokou: http://ww2.sinaimg.cn/bmiddle/6f82140fgw1evh4hnzlb8j20fj0qo3zp.jpg 碎屏险意义
+14:06 varna: 爆炸……
+14:08 varna: 啊，下午的第一个元帅在捞E5
+14:11 endle quit:Ping timeout: 255 seconds
+14:12 tutu_wind: varna: 工作了还经常上IRC 么?
+14:13 varna: 你看lhj
+14:16 varna: 我突然发觉，我每天的演习都近乎在打3-2门神
+14:23 Xilzzert: 现在几个面试都是连项目经验都看不懂了。。。
+14:23 varna: 什么状况……
+14:24 Xilzzert: 都是什么国家某某计划重大专项
+14:24 endle joined channel
+14:25 Mokou: 我突然想把windows升级一下
+14:25 Mokou: 重启
+14:25 Mokou quit:Quit: reboot
+14:25 varna: Xilzzert: 那种一般是实验室项目吧，问问还是有价值的
+14:26 Xilzzert: 主要是看不懂，要不就是其他领域的东西
+14:26 Plough joined channel
+14:27 varna: 都做什么的？
+14:27 Xilzzert: SDN
+14:28 varna: 然而你不是做杀毒的么？
+14:28 Xilzzert: 所以我不会这方面。。
+14:29 varna: ...
+14:29 varna: 那你问的什么，偏基础的问题么
+14:30 Xilzzert: 由基础到难吧，一般是根据简历里面的技能来的
+14:30 Xilzzert: 上次就是那个四年Linux下开发经验的没听说过软硬连接
+14:30 varna: 效果呢，总比那个不知道软硬链接的哥们好吧
+14:31 Xilzzert: 还没开始，等会面
+14:31 varna: (｡･ω･)ﾉ
+14:32 Xilzzert: 既然熟练掌握c/cpp了，应该还是有不少可问的
+14:33 varna: 我在自己简历上写的是“较常在Linux下使用C和Perl”……
+14:34 Xilzzert: 。。。
+14:34 Xilzzert: 感觉Perl处可加分
+14:34 varna: 不提练度，练度太差
+14:38 Xilzzert: 基于协议重封装的路由协议网关
+14:40 varna: 唔，这软件网关会自己折腾下选路的？
+14:46 hausir joined channel
+14:48 tutu_wind quit:Ping timeout: 260 seconds
+14:52 Plough: 结果前世的加贺老师比现世的重了两万吨
+14:52 varna: 自卫队有总吨位限制不是
+14:53 Plough: 然而他们依然试图搞个大性闻
+14:53 Plough: 出云是不是令制国来着？
+14:53 varna: 周常不打了，村田君和友永大尉终于想起自己怎么开飞机了
+14:53 varna: 出云应该是
+14:54 Plough: 还真是
+14:54 hausir quit:
+14:55 Plough: 似乎只有扶桑不是令制国？
+14:55 varna: 航天战舰不是战舰
+14:56 varna: 就跟防空炮台不是航母一样
+14:56 Plough: 然而历史上的扶桑并非航天战舰
+14:56 Plough: 田中参谋的魔改能算数么
+14:56 varna: “练战”
+14:59 varna: 对了，你一套工具要多少大洋来着？
+15:00 Plough: 我算算
+15:00 Plough: 你准备弄个毛神？
+15:00 varna: 毛神或者绫波
+15:01 varna: 不过现在我手头没钱
+15:01 Plough: 绫波似乎只有700
+15:01 varna: 得等学院发钱
+15:01 varna: 700可以接受
+15:01 Plough: 问题不是做完以后看起来怎么样
+15:01 Plough: 问题是做的时候眼会瞎
+15:01 varna: 就当右手复健
+15:01 Plough: 真准备做的话建议搞个放大镜
+15:01 varna: 我右手感觉到明显比左手沉重已经有两个月至少
+15:02 Plough: 台式的那种
+15:02 varna: 350的那种我觉得不适合拿来上手
+15:02 Plough: 350太贵了
+15:02 varna: 至少自己有信心了之后才能入手
+15:02 varna: 我算算这个绫波多长
+15:03 Plough: 或者你弄个700的水线，放在桌子上当镇纸……
+15:03 Plough: 你打不打算上色
+15:03 varna: 上色
+15:03 varna: 噗，这绫波最多16cm长？
+15:03 varna: 特型应该不会超过120m...
+15:04 Plough: 噗
+15:04 Plough: 绫波有350
+15:04 Plough: 不过不是静冈四社的
+15:04 varna: 那还是700吧
+15:04 Plough: 700有田宫的水线
+15:05 varna: 只有水线？
+15:05 Plough: 只有水线
+15:05 varna: 唔
+15:05 varna: 太残念了
+15:05 Plough: 田宫的老水线系列
+15:05 varna: 不过还是先考虑工具钱吧，你加上几种颜料的工具要多少？
+15:06 Plough: 镊子两种，16
+15:06 Plough: 斜口剪58
+15:06 Plough: 雕刻垫12
+15:06 Plough: 这些基本是国产货
+15:07 Plough: 田宫的锉刀套装36
+15:07 varna: 锉刀要不要买俄国的？
+15:07 Plough: 两把田宫笔刀，41 + 43
+15:07 Plough: 不推荐俄国货，容易直接把整条船锉没
+15:08 Plough: 田宫蚀刻片用钳子100
+15:08 varna: 我打出“军极密”三个字之后感觉这译文一下就上档次了
+15:08 Plough: 要是你买的没有蚀刻片这个可以先放一放……
+15:09 Plough: OTL
+15:09 varna: 不用蚀刻片吧，那不是高端技巧么？
+15:09 Plough: 号手的画笔套装32
+15:09 Plough: 田宫新的350很多自带蚀刻片
+15:09 varna: 哦哦
+15:09 Plough: 田宫水性漆一瓶8块到10块
+15:10 varna: 多少瓶合适？
+15:10 Plough: 稀释剂一瓶35，容量250ml
+15:10 Plough: 这个看你需要多少种颜色
+15:11 Plough: 一瓶10ml，配合稀释剂的话船体色涂一条武藏没问题
+15:11 Plough: 虽然我打算把武藏的船体色擦掉……
+15:11 varna: 那更小的模型也没问题了
+15:11 Plough: 我现在用的工具基本上就这些
+15:12 Plough: 你可以考虑换点便宜些的，不过别便宜过头……
+15:12 Plough: 比如说弄个2块钱的镊子
+15:12 Plough: 然后零件各种飞
+15:13 varna: 用你的版本吧，去掉蚀刻片签字看着还行
+15:13 varna: 钳子*
+15:13 Plough: 蚀刻片钳子还是别买田宫的
+15:13 Plough: 太坑
+15:13 Plough: 质量没问题，就是贵……
+15:13 Plough: 另外还有些耗材
+15:14 Plough: 遮盖胶带从6mm宽到18mm宽，价格从17到23递增，间隔3块钱
+15:15 Plough: 国产圣多美AB补土一盒18
+15:15 Plough: 胶水一瓶20左右
+15:15 varna: 我嚓咧
+15:16 varna: 第一章的扫描质量……
+15:16 Plough: ……
+15:16 varna: 然后谷歌一下，第一个条目就是我的度盘分享
+15:17 Plough: 水贴软化剂一瓶12
+15:17 Plough: 剩下的就没啥了
+15:18 Plough: 牙膏补土那玩意你弄一管也行，不过用处不很大……
+15:18 varna: 看着还好
+15:18 Plough: 虽说配合郡士的硝基漆溶剂有奇效
+15:19 Plough: 牙膏补土有一种用法是用溶剂稀释，之后用笔涂
+15:19 Plough: 填缝很好用
+15:19 Plough: 另外船底我还是建议用喷罐
+15:20 Plough: 一瓶大约30
+15:20 Plough: 100ml
+15:20 varna: 哦哦
+15:21 Plough: 看了下，田宫的700基本都是水线……
+15:21 varna: 呜啊啊
+15:21 varna: 绫波啊
+15:21 Plough: 毛神也是
+15:22 Plough: 建议留到以后做350航巡……
+15:22 varna: 真惨
+15:22 varna: 我还是想先来个驱逐舰，毕竟水雷战队是浪漫
+15:22 Plough: 或者你干脆搞个坑死美的扶桑
+15:22 Plough: 700带船底
+15:22 varna: 那个700扶桑倒是有所耳闻
+15:22 varna: 不过总之先考察一下
+15:22 Plough: 就是那舰桥做起来似乎很麻烦……
+15:23 varna: 要是效果好的话，水线绫波也可以接受
+15:23 Plough: 其实我挺想弄个富士美的大凤的
+15:23 Plough: 不过我听说组合度悲剧……
+15:24 Plough: 而且贵
+15:24 Plough: 700的船卖298
+15:25 Plough: 啊
+15:25 Plough: 富士美有凉风海风
+15:26 Plough: 噗
+15:26 Plough: 还是水线……
+15:28 varna: "Elements of a carrier fleet may be advanced separately, avoiding vulnerable concentration" 这句
+15:29 varna: 找词的时候想译成
+15:29 varna: “构成空母编队的各元素可以分头前进，以避免群摔”
+15:31 Plough: 233333
+15:31 Plough: 舰 狗 确 定
+15:32 varna: 这他娘的……
+15:32 varna: 我真的在瞪大眼睛贴上去看这文档
+15:33 Plough: ……你要不要试试截图锐化一下
+15:33 Plough: 啊 ，wows里的三笠出了……
+15:34 varna: 不是模糊的问题
+15:34 varna: 是印刷的时候上面很多地方发白没墨
+15:34 Plough: ……
+15:34 varna: 不然我也不会想着去译这个文档
+15:35 varna: 这个应该是深海军缴获之后翻译的
+15:35 biergaizi quit:Quit: Konversation terminated!
+15:35 varna: 英文资料随便看就是了
+15:35 Plough: 我总感觉深海军以前的文档很多印刷质量都很差……
+15:35 varna: 这个已经差到无与伦比
+15:36 varna: 其他的至少字都能看清
+15:39 sismvg: too weak and too poor to buy good equipment <-又穷有弱以至于买不起好的装备 。 这么些对不对啊
+15:39 sismvg: 写
+15:40 varna: 对
+15:40 varna: equipments
+15:40 varna: 如果这里你说的是泛泛的装备范畴，那么用不可数名词的复数
+15:41 sismvg: tk
+15:41 varna: 如果只是说零碎装备，那么用弹数
+15:41 varna: 单数*
+15:42 endle quit:Ping timeout: 246 seconds
+15:44 hoxily` joined channel
+15:46 varna: 有时候译起来也得加点东西
+15:46 varna: "Modern carriers have been disabled by a few direct hits by 250 kg (550 pound) bombs."
+15:47 hoxily quit:Ping timeout: 244 seconds
+15:47 varna: 这话我只能加点油盐译成“回顾迄今为止的战例，现代航空母舰遭受数枚250千克（合550磅）炸弹的直击，就会失去作战能力。”
+15:48 varna: 深海鬼畜在译这个文的时候强行来了个完成时
+15:50 sismvg: http://img.ithome.com/newsuploadfiles/2015/8/20150827_144207_856.jpg
+15:50 sismvg: nsfw
+15:51 Plough: ……
+15:54 biergaizi joined channel
+15:55 varna: 哈哈哈哈和
+15:55 varna: 日军乐死了
+15:56 varna: Despite present and future plans to strengthen AA, carriers cannot be safeguarded against the attack unless some epochal AA equipments and its appearence.
+15:59 varna: 战神GET
+16:02 lh_not_bot: geordi: { auto ptr = get_ptr(); } unique_ptr<int> get_ptr(){ if(puts("")){ return nullptr; } unique_ptr<int> ptr(new int); puts(""); return ptr; }
+16:02 geordi: <no output>
+16:02 lh_not_bot: geordi: { auto ptr = get_ptr(); cout <<ptr; } unique_ptr<int> get_ptr(){ if(puts("")){ return nullptr; } unique_ptr<int> ptr(new int); puts(""); return ptr; }
+16:02 geordi: error: no match for 'operator<<' in 'cout << ptr' (operand types are 'ostream {aka ostream}' and 'unique_ptr<int>')
+16:02 lh_not_bot: geordi: { auto ptr = get_ptr(); cout <<ptr.get(); } unique_ptr<int> get_ptr(){ if(puts("")){ return nullptr; } unique_ptr<int> ptr(new int); puts(""); return ptr; }
+16:02 geordi: 0
+16:02 lh_not_bot: geordi: { auto ptr = get_ptr(); cout <<ptr.get(); } unique_ptr<int> get_ptr(){ if(puts("") == 0){ return nullptr; } unique_ptr<int> ptr(new int); puts(""); return ptr; }
+16:03 geordi: 0x6b6650
+16:03 lh_not_bot: geordi: { auto ptr = get_ptr(); cout <<ptr.get(); } unique_ptr<int> get_ptr(){ if(puts("") == 0){ return nullptr; } unique_ptr<int> ptr(new int); if(puts("")) return ptr; return nullptr; }
+16:03 geordi: 0x12fc650
+16:07 Youmu`: geordi, << puts("")
+16:07 geordi: 1
+16:14 sismvg: http://manhua.dmzj.com/pettymax/
+16:14 sismvg: 这漫画太刁了
+16:14 sismvg: 为了100W日元你能做到成什么程度！（有伪娘挑战）
+16:19 varna: Plans for the destruction of the enemy's units on every occasion in which the appear are vital when viewed in the light of his great military expansion.
+16:19 varna: ^ 这话也好意思说……
+16:22 Plough: 23333
+16:23 varna: 还有个伙计以为带雷巡能进Boss
+16:23 varna: 结果一看，他退避了
+16:23 Plough: ……
+16:23 varna: 然后防空姬现在就有拔本了……
+16:23 varna: 一点都不想看
+16:25 Plough: 口味如何
+16:25 varna: 没看
+16:25 varna: 绪论C节的第二句话我已经看不清了
+16:25 Plough: ……
+16:26 varna: 反色也看不清
+16:28 varna: 我盯着读了半天，认出一个completely
+16:29 varna: 后面的词又认不出来了
+16:30 Plough: ……
+16:34 biergaizi quit:Quit: Konversation terminated!
+16:39 varna: 认出来了，是annihilated
+16:43 varna: 这两句话我整整盯了十几分钟
+16:45 varna: When he is not completely annihilated, the comparative cure and speed of his recuperative powers is apparent from successive battle experiences.
+16:45 varna: 噗
+16:45 varna: お帰りなさい、「加贺」さん。よろしくお愿いします、DDH184「かが」さん。 本日午后、全通甲板を持つ护卫舰「かが」が进水しました。 镇守府ジュークボックス実装済みの【加贺岬】、次々回メンテまで家具コイン无しで再生可能です。
+16:45 varna: 作大死
+16:48 sismvg: http://tieba.baidu.com/p/4002982470
+16:48 sismvg: LL邪教入侵美国
+16:48 varna: @日真姬得梅毒
+16:52 sismvg: 今天天气预报说今天和后3天上海天天阵雨
+16:53 sismvg: 可以开始洗被单晒被子了
+16:58 lh_not_bot: geordi: { foo f(1); cout <<f.i; } struct foo { int i; foo(int){ } };
+16:58 geordi: -2025355552
+16:58 lh_not_bot: geordi: { foo f(1); cout <<f.i; } struct foo { int i; foo(int) : foo() { } };
+16:58 geordi: error: no matching function for call to 'foo::foo()'
+16:58 lh_not_bot: geordi: { foo f(1); cout <<f.i; } struct foo { int i; foo(int) : foo{ } { } };
+16:58 geordi: error: no matching function for call to 'foo::foo(<brace-enclosed initializer list>)'
+16:59 lh_not_bot: geordi: { foo f{1}; cout <<f.i; } struct foo { int i; foo(int){ } };
+16:59 geordi: -1548307904
+16:59 lh_not_bot: geordi: { foo f{1}; cout <<f.i; } class foo { int i; public: foo(int){ } };
+16:59 geordi: error: 'int foo::i' is private within this context
+16:59 lh_not_bot: geordi: { foo f{1l}; cout <<f.i; } class foo { int i; public: foo(long){ } };
+16:59 geordi: Same error.
+17:15 lh_not_bot: hoxily: 摸头
+17:16 hoxily: 为什么摸我头呀？
+17:24 lh_not_bot: 0 0
+17:25 hoxily: 0 0
+17:26 lh_not_bot: 0 0
+17:29 sismvg: http://tieba.baidu.com/p/3995043165
+17:29 sismvg: 行尸走肉衍生剧第一集
+17:58 varna: https://pastebin.mozilla.org/8844072 译文草稿的绪论部分
+17:59 varna: https://pastebin.mozilla.org/8844073 啊，少删了三字
+18:05 Plough: 买了条亚特兰大
+18:05 varna: OTL
+18:05 Plough: 只是想试试洗甲板神教
+18:06 varna: 从第二章开始，文字就好认多了
+18:08 xxxxxxxx joined channel
+18:09 xxxxxxxx: namoamitofoo [广东省广州市网友]
+18:09 xxxxxxxx: 科学不是人类的真理，科学只是人类探索真理的一种方法，所以迷信科学一样是愚蠢行为，科学今天说这样，明天又出来个科学家说是那样，天天像盲人摸象一样说来说去的，为什么呢，因为科学本质上是在心外求法，科学妄想通过物质世界的探索搞清楚宇宙人生真相，这完全是愚痴的表现，真要对宇宙人生真相有兴趣不如直接去学佛法，，
+18:09 xxxxxxxx: ，，，，，，
+18:09 xxxxxxxx: 推荐 23 /  回复 2015-08-27 11:05
+18:09 xxxxxxxx: 这评论竟然还有推荐....
+18:12 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=caf16880818ba61edfeec827713597cc/e25485efce1b9d16863ef42bf0deb48f8d546415.jpg
+18:12 sismvg: nsfw
+18:12 xxxxxxxx: 2015年8月26日消息，深圳，一小区保安员离婚后频频通过某社交软件认识女孩，用自己不顺利的感情生活引起女孩同情心并进一步开房约会。凌晨趁女孩熟睡时盗窃物品后逃离。深圳福田警方发现，犯罪嫌疑人开房记录遍及全市多个区，高达90次。25日凌晨，警方在福田区某宾馆将嫌疑人抓获，现场缴获赃物手机3部。
+18:12 sismvg: nsfw
+18:13 xxxxxxxx: sismvg: 你口味太重了...
+18:14 sismvg: 佛法高深,成佛者多，亦有甚者，以窃市井女子亵衣入佛
+18:15 sismvg: http://acg.17173.com/news/08252015/183817294.shtml
+18:15 hoxily quit:Ping timeout: 246 seconds
+18:17 hoxily joined channel
+18:19 Plough: 亚特兰大这用起来简直就是无脑突突突……
+18:25 Youmu` joined channel
+18:31 molikto quit:Remote host closed the connection
+18:44 boosure quit:Quit: Get your hand off of it
+18:56 molikto joined channel
+18:59 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 39.0.3/20150806001005]
+19:00 FrankHB joined channel
+19:07 molikto_ joined channel
+19:07 molikto quit:Ping timeout: 246 seconds
+19:18 varna: 回来了
+19:26 iyzsong: 哒 哒 哒
+19:26 whatofor quit:Read error: Connection reset by peer
+19:26 whatofor joined channel
+19:28 Youmu`: 啪啪啪
+19:31 Plough: 亚特兰大太可怕
+19:31 simpleirc1 joined channel
+19:31 Plough: varna, 我用亚特兰大直接洗死一条长门你信么
+19:31 varna: 什么鬼
+19:32 Plough: WoWS
+19:32 simpleirc1: 郁闷
+19:32 Plough: 十六门炮
+19:32 varna: 23333，今天我看到一个新词
+19:32 Plough: 五秒一轮
+19:32 varna: “斜纵”
+19:32 simpleirc1: 刚刚三天是最惊险的一天
+19:32 Plough: 23333
+19:32 simpleirc1: 三天 打错
+19:32 varna: 我终于理解了什么叫纵横家
+19:32 simpleirc1: 昨天台风来了
+19:32 varna: 这跟猎杀潜航是一个意思
+19:33 simpleirc1: 结果大晚不上 在家跟爹妈抗议的时候误了作业
+19:33 simpleirc1: 于是今天被赶出学校
+19:33 simpleirc1: 于是明天放假
+19:35 simpleirc1: 于是别人放3天我被放假4天
+19:36 simpleirc1: 话说你们这三天有推演吗 想观战。。
+19:36 xxxxxxxx: 于是我并不明白讲了些什么...
+19:36 varna: 我们一直缺玩家
+19:37 xxxxxxxx: 观众从来都不缺
+19:37 simpleirc1: ......
+19:37 simpleirc1: 我看戏
+19:37 varna: 这几天我的娱乐是翻译不到四十页的文献，如果可能的话就补上插图
+19:37 varna: 扫描质量实在太差，所以还算有点价值
+19:37 simpleirc1: 台风刮到我这也是福气（？）
+19:38 simpleirc1: 但愿冬天再来几场雪吧.....
+19:39 simpleirc1 quit:Remote host closed the connection
+19:40 Stevearzh quit:Ping timeout: 240 seconds
+19:41 varna: 这战术条令总觉得是个海航万能论者写的
+19:41 varna: "We realize that we have now stumbled upon the anticipated revolution in the art of war."
+19:42 Plough: “我在战列舰吧庄严宣誓”么
+19:42 varna: 第二章上来第一段的译文：
+19:42 varna: “自大东亚战争伊始，数场海战已经暗示了洋上战争中将会出现的革命性变化。昔日的海战——那些斗争双方奋力勇战、集中兵力在双方视界内拼尽一切炮术水雷术，可谓“决一雌雄”的海战——对如今的用兵艺术来说恐怕已经落伍了。新的海战理论则将航空母舰视为一种主力舰用以部署，并遵循第一章中提
+19:42 varna: 出的诸多考量；这样的理论所采用的方法，则较之海战更近似陆战。我们意识到，当下我军在预期发生的战争艺术之变革中已经确实地失策了。”
+19:43 simpleirc1 joined channel
+19:43 Plough: 实力接雷了
+19:44 Plough: 总之玩了几盘亚特兰大，我感觉我都要叛变了……
+19:44 simpleirc1: wows配置要求是？
+19:44 Plough: 你上官网查下
+19:44 varna: 我是怎么把“抉择”看成“快摔”的&
+19:44 Plough: 总之我这配置都能带起来
+19:44 varna: ……
+19:44 Plough: 舰 狗 确 定
+19:44 simpleirc1: 什么配置。。
+19:45 Plough: i3
+19:45 Plough: 4005U
+19:45 simpleirc1: .....
+19:47 Plough: 这CPU换起来太麻烦了
+19:47 Plough: 我现在的打算是以后换台T系列
+19:47 sismvg joined channel
+19:47 sismvg: http://finance.gucheng.com/201508/3110048.shtml
+19:47 sismvg: 助学达人性侵女童,与幼女玩4P打野战拍摄不雅视频。最近,记者暗访到一个名叫“百色助学网”的网站,发现助学达人王杰表面是在做助学,背后却隐藏了惊人的
+19:47 sismvg: 秘密
+19:48 sismvg: 太可怕了
+19:48 Plough: 独立GPU是R7 M265
+19:53 varna: 哈哈哈哈
+19:53 varna: 这锅甩的
+19:54 varna: "but we lost our chance to seize the initiative in attack because of an unfortunate mistake made by a reconnaissance seaplane in the identification of a large tanker as a CV."
+19:56 xxxxxxxx: 则较之海战更近似陆战 59下山了
+20:02 simpleirc1 quit:Read error: Connection reset by peer
+20:02 simpleirc1 joined channel
+20:02 simpleirc1: m265配低压u。。
+20:03 simpleirc1: 话说这又是北斗新nick？
+20:03 varna: 其实Plough这个nick总让我想起消化器管
+20:03 varna: 器官*
+20:03 simpleirc1: ..
+20:04 simpleirc1: 肠炎也不言语
+20:05 sismvg: 啊..单挑两个boss,结果两个积累了10个回合的可以秒杀boss的大技能全给miss了.
+20:05 Plough: Plough和消化器官有啥关系
+20:05 Plough: 而且这不是个老nick了么
+20:06 simpleirc1: 我就一asuka
+20:06 varna: Mokou: 我总想起钢门……
+20:07 Mokou: varna, 那是你自己新鞋
+20:07 varna: 哈哈哈，他们对MI的总结就一句话
+20:07 varna: “1942年6月5日，在中途岛海战中，当我军正被来自中途岛的敌方攻击兵力阻拦时，我军遭到来自侧翼的敌军舰队的先制攻击（参见表2，中途岛海战）。”
+20:07 sismvg: 文字游戏坑人啊
+20:08 varna: 这锅直接甩到了大洋彼岸
+20:08 molikto_ quit:Remote host closed the connection
+20:08 varna: “机动部队尽力了，但我们的战术落后，好好想了就可以的”
+20:08 varna: 这紧抓一个中心两个基本模式的思路简直漂亮
+20:09 varna: 横须贺dalao就是不一样
+20:09 sismvg: 我们的战术虽然领先，但奈何共军有高达
+20:10 Mokou: http://picpaste.com/IXcKQ3aD.jpg 总觉得旁边的胖子有点眼熟
+20:10 varna: 卧槽
+20:10 varna: 田中染发了？
+20:10 Mokou: 很有可能
+20:10 simpleirc1: ，。
+20:11 Mokou: 这图出来以后有人专门去研究了官推上加贺的照片……
+20:12 simpleirc1: 谁能预知 这cvl是不是下一个企业呢
+20:12 varna: 艹
+20:12 molikto joined channel
+20:12 varna: 看走眼了
+20:12 varna: “1942年6月5日，在中途岛海战中，当我军正进行对中途岛的攻击时，遭到来自侧翼的敌军舰队的先制攻击（参见表2，中途岛海战）。”
+20:13 varna: 这锅比刚才那个看走眼的版本还黑
+20:13 varna: 机动部队的执行力也没有错
+20:13 varna: 那么错的是谁呢（吃水馒头）
+20:13 hoxily: 水馒头很漂亮呢
+20:14 hoxily: 晶莹剔透的
+20:14 hoxily: 果冰状
+20:14 Mokou: 是世界
+20:14 hoxily: 果冻
+20:15 molikto_ joined channel
+20:15 simpleirc1: 话说ddh有弹射改装的可能性吗
+20:15 simpleirc1: 技术上
+20:15 varna: 这个技术就不知道了
+20:16 simpleirc1: 以及裤子/001a
+20:16 molikto quit:Read error: Connection reset by peer
+20:18 simpleirc1: 脑洞又来了 假如二次太平洋战争爆发 又急需cv
+20:19 simpleirc1: 两栖攻击舰加装弹射器的话
+20:21 varna: 什么情况会导致急需cv呢
+20:21 simpleirc1: 之前脑补的设定里有这个。。结果和高达的1年战争如出一辙
+20:21 varna: 举例来说，假如要制定预案，那么这种情况的pre和post是什么
+20:22 varna: 和这个局部战场对应的大环境预想从好到坏有几种
+20:22 varna: 最后评估，真正需要cv的场合是哪些
+20:22 varna: 毕竟事情不可能凭空来、徒手解决……
+20:22 simpleirc1: 脑补方是某朝 cv3个全灭
+20:23 varna: 其实我觉得最大的重点，是跟这个局部战场对应的大环境
+20:23 simpleirc1: 靠着一个两栖攻击舰全灭
+20:23 varna: 毕竟即使现在，海军的建设也是存在的
+20:23 varna: 注意是存在的
+20:23 simpleirc1: 打错 撑场面
+20:24 varna: 所以除去存在的舰队，其他的东西呢
+20:24 Mokou: お帰りなさい、「加賀」さん。よろしくお願いします、DDH184「かが」さん。 本日午後、全通甲板を持つ護衛艦「かが」が進水しました。 鎮守府ジュークボックス実装済みの【加賀岬】、次々回メンテまで家具コイン無しで再生可能です。 #艦これ 
+20:24 varna: a fleet is NOT a navy
+20:24 varna: 大家总黑一航战，然而为何没人黑十一航舰呢
+20:25 varna: 就是这么件事情
+20:25 simpleirc1: 其实我想一个问题
+20:27 simpleirc1: 本子战略究竟需不需要真正的cv
+20:27 Mokou: 切回大波Arch
+20:27 Mokou quit:Quit: Reboot
+20:27 cleamoon joined channel
+20:27 varna: simpleirc1: 你会发现考虑这件事情已经超过了你手头的情报能考虑——甚至figure out的了
+20:28 Mokou joined channel
+20:28 Mokou: 有个比较蛋疼的问题
+20:28 simpleirc1: 毕竟海域比较近的话
+20:28 varna: 我只说一个角度：你根据多少方面、多少数据来确定一个外交战略？
+20:28 Mokou: windows下和linux下的鼠标速度不一样快……
+20:28 varna: 你的目的不是要作战或者什么的
+20:29 varna: 而是如何把军事力量翻译成外交力量
+20:29 simpleirc1: 飞机场能否够到
+20:29 varna: 至于基地
+20:29 simpleirc1: 需不需要cv
+20:29 varna: 至于其他的事情
+20:29 Mokou: 我等军国主义者的目标可是把外交力量翻译成军事力量
+20:29 varna: 很直白——现在日本仍然被占领
+20:30 varna: 你现在有什么不是问题，问题是你顺着规划的路走下去能有什么得失
+20:30 varna: 不可能对付一时算一时，那是小孩子的打仗游戏……
+20:30 tutu_wind joined channel
+20:30 varna: 换个角度说，没有情报和分析，你决定不了任何事情
+20:31 Mokou: 对付一时算一时，那不是昭和初期的日本么
+20:31 varna: 而情报可不止是你有几个基地、假想敌有几个
+20:31 Mokou: 至少是NHK说的昭和初期的日本
+20:31 cleamoon: 但是根据我得到的情报，我还是不明白为什么兲朝要庇护三胖
+20:32 varna: 现在的态度似乎也不那么好？
+20:32 cleamoon: 不算太好，但是至少还在给东西
+20:32 varna: 不过我的看法是，比起朝鲜，我们似乎可以关注一下韩国的态度
+20:32 varna: 如果韩国不那么亲华，那么怎么办呢
+20:32 Mokou: 现在三胖表示“任何‘克制’的老调都无济于事”
+20:32 Mokou: 然后签了个协议
+20:34 cleamoon: 韩国也不算太亲华吧
+20:34 cleamoon: 只是一种敌人的敌人就是朋友的感觉
+20:34 varna: 哈哈哈哈哈哈，这些人太能……吹
+20:34 varna: （译文）“1942年10月26日，在南太平洋海战中，敌军派出一支战舰战队前往所罗门群岛以南以吸引我军注意力，意图发动奇袭。然而实际上敌军反而被我方的机动部队前卫吸引住，落得惨败的下场。”
+20:34 varna: 《发表》战无不胜
+20:35 Mokou: 大本营发表童叟无欺
+20:35 varna: 不转不是日本人
+20:36 varna: 都内部文献了，还在吹南太平洋
+20:36 varna: 当官儿真难
+20:36 Mokou: 胜利转进东京湾，虎踞东京只待降
+20:36 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 39.0.3/20150806001005]
+20:36 varna: 估计得罪了机动部队、司令部、军令部、大本营的dalao们，搞这文档的人也别想好过
+20:36 varna: 结果南太平洋在战术条令里都变成了大胜
+20:37 simpleirc1: 天朝啊
+20:37 simpleirc1: 对朝寒的态度不矛盾吧
+20:37 simpleirc1: 毕竟韩国主观上也不想统一
+20:37 cleamoon: 不过当时的dalao们到底知不知道外面怎么回事？
+20:37 whatofor_1 joined channel
+20:38 varna: 知道
+20:38 varna: 他们甚至也知道那个著名的太平洋战争评估
+20:38 varna: 结论是打一年就会开始转进
+20:38 simpleirc1: 不过韩国人恨天朝胜过美日倒是可以的..
+20:39 cleamoon: 噗
+20:39 simpleirc1: 毕竟一个殖民几十年 一个殖民上千年..
+20:39 Mokou: 大丈夫，转进是胜利转进的意思
+20:39 Mokou: 绝对不是战败
+20:39 cleamoon: 脑子让菊座踢了
+20:40 whatofor quit:Ping timeout: 252 seconds
+20:40 simpleirc1: 我想知道本土决战的时候该怎么吹 ....
+20:40 varna: 怎么说呢，有点骑虎难下了吧
+20:40 varna: 本土决战的时候不用吹
+20:40 varna: 都饿疯了
+20:40 simpleirc1: 这吹牛功夫和马来有一拼
+20:42 varna: 吹逼的最巅峰还是台湾冲吧
+20:42 varna: bb19 cv4 陆海一体勇战大胜
+20:42 varna: 简直已经达到舰吧平均水平
+20:42 simpleirc1: 隐约想起了2w18th马来和500藏和大爷打仗
+20:43 varna: 感觉整个深海的战舰战队都被送下了台湾海峡，然而骇人的机动部队即使在大本营发表里也吹少了一大堆……
+20:43 simpleirc1: 18军马来在付出了数千伤亡后 终于杀伤了几十个皇国人
+20:44 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/wq/e7_340708.jpg
+20:44 varna: 至于武大吊打19cv的勇姿，只能在游戏里复现了
+20:44 Mokou: 然而舰C里武大并不能吊打19cv
+20:44 varna: 你翻开空母决战
+20:44 cleamoon: 在游戏里也没实现过吧...
+20:44 cleamoon: 哦...
+20:44 simpleirc1: 卧槽 刚刚就在播亮剑
+20:44 Mokou: 所以田中参谋政治不正确
+20:45 varna: 我的战果录像都给红旗了，离大本营发表还有一定差距，不过好歹大胜
+20:45 Mokou: 天才参谋梁烨中二
+20:45 Mokou: 梁桦*
+20:46 varna: 那游戏的数值太奇妙
+20:46 varna: 同样的攻击队去打敌人，浮动巨大
+20:46 varna: 你觉得虎虎虎了，对面可能就小破几个驱逐舰……
+20:46 simpleirc1: 皇国三流师团被炮军三流中流砥柱的精锐独立团吊打
+20:47 varna: 毕竟有他娘的意大利炮
+20:47 Mokou: 然而为何炸DD
+20:47 varna: 随机决定的
+20:47 varna: 海鹫们就都去炸dd了
+20:48 Mokou: 所以其实问题在于为何随机决定
+20:48 varna: 因为长机是学校出来的关系户
+20:48 Mokou: 2333
+20:49 Mokou: 不过我还没见哪个游戏能复现主动鱼雷防御武器的……
+20:50 varna: freelancer
+20:50 varna: 还好我用的是starkiller不是sunslayer
+20:50 varna: 虽说都是一死
+20:53 simpleirc1: .cod bf4笑了
+20:54 simpleirc1: 再牛逼的海军
+20:54 simpleirc1: 都是被登舰部队干烂
+20:54 varna: cod的登舰部队会喘气回血
+20:54 cleamoon: +
+20:54 simpleirc1: 比如潜艇被sf夺取扔导弹。。
+20:55 varna: 那个作战近乎逗乐
+20:55 cleamoon: 看了一下使命召唤的视频，觉得确实不错，但是纯粹游戏性并不比i wanna高...
+20:55 varna: 外围阵线没确保，旗舰、上陆部队、NY作战支援部队、对空部队本队都挤在一起
+20:55 varna: 然后还遇到几个会喘气回血的深海军
+20:55 simpleirc1: 再比如两栖攻击舰被两栖登陆。。
+20:56 simpleirc1: 这次是tc
+20:56 varna: simpleirc1: 所以问题是，你的作战方案里为什么没有确保前沿阵地的方案……
+20:56 varna: 各自为战就等着集体吃瘪吧
+20:57 varna: cleamoon: cod联机毫不错，而且难度开高点跟着班长往前冲也是个乐趣
+20:57 simpleirc1: 也就开天启的t组有点良知。。
+20:59 varna: https://pastebin.mozilla.org/8844091 第二章
+20:59 varna: 没错，这就是横空对战例的分析……
+20:59 varna: 至少是写出来给上级看的部分
+20:59 simpleirc1: 航母不是被登陆死的 不是被1发df21砸死的 更不是被登舰打成半残后被上帝之杖砸死的。。
+20:59 varna: 翻译完这页之后，我感觉他们掖着不说的事情一定很多
+21:00 molikto_ quit:Remote host closed the connection
+21:00 varna: 每个人的回忆录里都怨气巨大
+21:00 simpleirc1 quit:Remote host closed the connection
+21:00 molikto joined channel
+21:00 varna: 但军极密的文献里居然就这么几句分析
+21:01 simpleirc1 joined channel
+21:03 simpleirc1: 话说8bb+8ca+6cv是个很重的负担吗
+21:04 simpleirc1: 对于法爹和蛊撒英来说
+21:04 varna: 极重
+21:04 varna: 不过看你往下的维护计划、技术储备和假想敌了
+21:04 varna: 这几件事情有时候更能决定往下怎么办
+21:05 varna: 君不见尴尬的长门
+21:06 simpleirc1: 退役了本子卖给满洲国2333
+21:07 cleamoon: 为什么军事机密还不写清楚点
+21:07 cleamoon: 反正大家都知道
+21:08 varna: 估计要表现出对长官的尊敬
+21:08 varna: 实在不能再说他们怎么怎么搞错了多少东西
+21:08 cleamoon: 又不会在每句报告前面都加一句 你SB呀
+21:08 varna: 已经有几个背锅侠了
+21:09 varna: 首先是南云忠一
+21:09 varna: 43年的时候他已经收拾东西去某航空舰队
+21:09 simpleirc1: 感觉本子这报告。。
+21:09 varna: 然后是田中赖三
+21:09 simpleirc1: 体现本子办事很差劲啊
+21:09 varna: 搞沉了沼跃，搞砸了鼠输送，直接滚蛋
+21:09 varna: 后来是侠之大者小泽治三郎
+21:09 simpleirc1: 总感觉和炮党和我兔有一拼
+21:10 varna: 联合舰队要黄了，这锅他背
+21:10 varna: 侠之大者，接猫接狗接矢矧
+21:11 simpleirc1: 不过现代国家怎么处理军种内斗的？
+21:11 varna: 跟处理所有内斗一样，不知道或是不管
+21:11 simpleirc1: 本子蛊萨英棍国
+21:11 varna: 另外这个文档的重点其实是三四章，不过今天我不想译了
+21:12 varna: 后面的两章详细描述了用机动部队进行舰队决战的办法
+21:12 simpleirc1: 都有军种内斗...炮和我兔就不说了
+21:12 varna: 第四章的战术讲了二十多页
+21:12 varna: 搞的还是挺仔细的
+21:12 cleamoon: 我发现一个好用的东西，把下载的电影动画什么的都上传到有土鳖，然后当然会因为版权都被禁掉，但我自己还是能看，于是免费的视频分享了...
+21:12 varna: cleamoon: 只是你有缓存吧
+21:13 cleamoon: varna, 不，都能看
+21:14 varna: ...
+21:14 cleamoon: 就是我还不知道怎么弄字幕，但并无所谓
+21:14 simpleirc1: 过去ijn的军费逼疯了本子 今天只用1百分就能和欧洲一个水平甚至更猛
+21:15 simpleirc1: 当然排除那些战略武器和攻击性武器。。
+21:15 cleamoon: 我找找哪里可以放我的漫画让我快速浏览，那么我的电脑就不用放东西了
+21:15 simpleirc1: 这本子过去的经济得多黄
+21:16 varna: cleamoon: 你刻点DVD?
+21:16 cleamoon: varna, 没光驱...
+21:17 Mokou: 我这鼠标用了两年才拆开清理一次……
+21:17 varna: ...
+21:17 simpleirc1: 我2年换3个
+21:17 simpleirc1: 其中一个至今好使
+21:17 simpleirc1: 刚换完鼠标就修完了。。
+21:17 cleamoon: 我都不知道怎么拆...
+21:18 simpleirc1: 然后换了回去。。
+21:18 Mokou: 我这个倒是一直没坏
+21:18 simpleirc1: 网上9大洋批发价的鼠标 尸体店40
+21:19 simpleirc1: 坑惨
+21:19 simpleirc1: 不过玩真实女友的时候有的用了 双鼠标
+21:19 simpleirc1: 摸起来有手感
+21:20 Mokou: 我现在用的是个Abyssus
+21:20 Mokou: 虽说在我手里完全是浪费
+21:21 varna: 我手头是个罗技的便宜货
+21:21 simpleirc1: 山寨路过
+21:21 Mokou: 我这个应该也不很贵……
+21:21 Mokou: 不过有个好处，3500DPI在linux下的表现就是移动速度飞快 
+21:21 Mokou: 比较省力
+21:21 cleamoon: 我用的是捡到的游戏鼠标，在linux下速度极快...
+21:21 simpleirc1: 其实需要鼠标的地方
+21:22 Mokou: 你那个多少DPI
+21:22 simpleirc1: 也就cf了。。
+21:22 cleamoon: 怎么看DPI
+21:22 simpleirc1: 那手感跟抹了凡士林似的
+21:22 Mokou: 你看看背面写没写
+21:22 varna: cf什么鬼
+21:23 cleamoon: 似乎没有
+21:23 Mokou: 我有一种要开始撕逼的预感
+21:23 cleamoon: 我查查
+21:23 cleamoon: 4000.......
+21:23 Mokou: ……
+21:23 simpleirc1: 这也是我讨厌cf的原因
+21:23 Mokou: 4000没用过
+21:23 cleamoon: 怪不得我连舰娘都点不准
+21:23 Mokou: 3500我用得倒挺习惯
+21:24 cleamoon: 能不能弄慢点，我的话比最慢快一点就行
+21:24 simpleirc1: 只要不是滚轮就能用惯的路过
+21:24 Mokou: https://bbs.archlinux.org/viewtopic.php?id=104742 你看看这个
+21:24 simpleirc1: 不需要太高 太低了也受不了
+21:25 Mokou: 不过其实Razor的鼠标很多都带个开关
+21:25 Mokou: 我这个可以调到一个很放亖的DPI
+21:26 cleamoon: 我试了，不知道为什么没起效
+21:26 Mokou: ……
+21:26 Mokou: 你拆开看看？
+21:26 simpleirc1: 这就是个人倾向cs玩艹cf的原因 我的手还没沾上精夜
+21:27 varna: 现在实验室里常来的都是女生，没人跟我打cs了……
+21:27 cleamoon: ......
+21:27 Mokou: 烧
+21:27 cleamoon: 烧
+21:27 Mokou: 或者找时间我们连一下？
+21:27 simpleirc1: 打css？
+21:27 cleamoon: 我cs玩的超烂，平均3h能杀1人
+21:27 cleamoon: 对手是同学的情况下
+21:27 Mokou: 1.6 s 沟
+21:27 Mokou: 都可以
+21:28 simpleirc1: 直接约个滑翔服233
+21:28 simpleirc1: srgames的滑翔简直反人类
+21:29 varna: 我不知道自己水平如何，不过感觉我实验室的水平都比较烂……
+21:29 Mokou: 臭水沟现在也就7.5美刀
+21:29 * Mokou 只会打Bot
+21:29 simpleirc1: 还是喜欢起源
+21:29 Mokou: 而且有linux版
+21:29 Mokou: 起源的linux版会爆炸
+21:29 Mokou: 原因不明
+21:30 simpleirc1: steam os
+21:30 cleamoon: Bot都能吊打我... 
+21:30 varna: bot有几个厉害的
+21:30 simpleirc1: 正常
+21:30 simpleirc1: bot会透视吧
+21:31 cleamoon: 之前玩一直是一个超小图，两边隔一个坑互射的，图大了会迷路，而且那个图Bot会自己跳下坑摔死....
+21:31 Mokou: 我试试Intel强大的集显能不能带起来全特效……
+21:31 simpleirc1: 几个eu？
+21:32 simpleirc1: 不过i显那驱动。。
+21:32 cleamoon: ...
+21:32 Mokou: intel的驱动是最好的吧
+21:32 varna: intel集显不错
+21:32 libhanjian joined channel
+21:32 Mokou: Catalyst各种爆炸
+21:32 Mokou: N卡那个傻逼一般的驱动
+21:32 simpleirc1: 72eu的i显至今没露面
+21:32 cleamoon: 全特效的前提是驱动要好
+21:32 varna: nouveau是不是死了？
+21:32 Mokou: 当年在BSD下差点没整死我
+21:33 Mokou: nouveau大概没死，不过没法指望
+21:33 varna: 我还记得那个140fps辉针城
+21:33 Mokou: 反向工程产物……
+21:33 cleamoon: 应该没死，还在发 rm -rf /usr /bin
+21:33 varna: HO棠是180fps
+21:33 simpleirc1: 话说a卡那个omega上linux了？
+21:33 Mokou: omega是啥
+21:33 simpleirc1: 驱动
+21:33 Mokou: 独立GPU我现在用不了
+21:33 Mokou: 没编译DRI3
+21:34 simpleirc1: 据说能强开4k
+21:34 simpleirc1: 屏幕1080p的情况下
+21:34 simpleirc1: 不过285 290 fury才能享用。。
+21:35 libhanjian: 倒不如看看CPU支不支持VT-d，直接虚拟机开Native GPU
+21:35 varna: 虚拟机2333333
+21:35 cleamoon: 噗
+21:35 simpleirc1: 老黄还被linus艹妈？？？？？
+21:36 Mokou: 居然能带起来……
+21:36 simpleirc1: 也正常
+21:36 simpleirc1: 性能没问题 就怕撞墙
+21:37 simpleirc1: 撞了功耗墙 原本最强的核显能给你撞成幻灯片
+21:38 varna: 我没写过那方面的优化，求解释
+21:38 varna: 什么地方变成瓶颈了
+21:38 cleamoon: 话说这个sim是谁？药四娘吗
+21:39 varna: simsvg是药元四
+21:39 varna: simpleirc1是先前的美军提督
+21:39 cleamoon: soga
+21:39 simpleirc1: 980解了功耗墙 性能功耗都是第一。。
+21:39 cleamoon: 深海提督不是明日香吗
+21:40 simpleirc1: 我就是asuka
+21:40 simpleirc1: 你可以理解为北斗这么多id那样。。
+21:41 varna: simpleirc1: 问题不是这个，是实际编程的时候为什么会影响性能
+21:41 varna: 如果是功耗的问题，是否牵扯到调度
+21:41 varna: 这个我确实不了解
+21:41 varna: 也不确认是否是内核模组就可以绕开的东西
+21:41 simpleirc1: 的确功耗
+21:41 varna: 求细节
+21:41 varna: 别说大框……
+21:42 simpleirc1: 频率
+21:42 varna: 我现在越来越不敢信游戏党的宣传，所以最好能看到问题所在
+21:42 simpleirc1: 有频率实测的
+21:42 varna: 这么说吧，不是测试的问题
+21:42 Mokou: 降频么
+21:43 varna: 我的意思是，假如你是开发者，你编写的什么东西会受到影响
+21:43 simpleirc1: 是
+21:43 varna: 这个我真不熟，所以需要介绍……
+21:43 Mokou: varna: 处理器执行指令的速度
+21:43 simpleirc1: 4600跑分和游戏两个区别
+21:43 varna: 降到什么程度
+21:43 Mokou: 因为时钟周期变了
+21:43 cleamoon: 新av真不好捞
+21:43 simpleirc1: 经过实测 频率波动很大
+21:43 Mokou: 降到什么程度应该是看具体的处理器？
+21:43 varna: 因为跟CPU共用能源？
+21:43 simpleirc1: 300-1000什么频率都有
+21:43 Mokou: 这个似乎是编程式的调节
+21:43 varna: 可调啊
+21:44 varna: 结果最糟的情况是，引擎hack那边把周期boost上去，结果跪了？
+21:44 varna: 这方面有没有datash*t参考的……
+21:44 Mokou: 我找找
+21:44 Mokou: 这个我也只是稍微听说过一点……
+21:44 simpleirc1: 不过来说
+21:45 simpleirc1: 14nm之后 这个问题应该小了
+21:45 varna: 现在各种常见的鼓吹优化里，GPU相关的优化是我最不懂的
+21:45 varna: 压根没写过……
+21:45 simpleirc1: 至少brd的那个核显没得黑
+21:45 Mokou: Dynamic frequency scaling (also known as CPU throttling) is a technique in computer architecture whereby the frequency of a microprocessor can be automatically adjusted "on the fly," either to conserve power or to reduce the amount of heat generated by the chip.
+21:45 Mokou: 这个跟写游戏的猴子们应该没关系
+21:45 simpleirc1: 就是cpu规格太高 价格太高
+21:46 varna: 结果只是因为他们撞到了低规格的机器么
+21:46 Mokou: https://en.wikipedia.org/wiki/Dynamic_frequency_scaling
+21:46 simpleirc1: 不能理解i的策略
+21:47 varna: 老实说，世界不是绕着游戏党打转的，所以无妨……
+21:47 varna: 反正你给他们吹个参数，弄个唬人的打分软件，他们就信了
+21:47 simpleirc1: 缩成两个核心 加上48/72eu
+21:47 varna: 至于说优化多少、怎么优化、为什么优化，反正他们也不知道
+21:48 libhanjian: 与其跑分，还不如拿某新3A大作，选定几个主要场景，看FPS算了
+21:48 varna: 他们一不高兴了就会嚷嚷优化
+21:48 cleamoon: 我怀疑游戏党的人数都没有音乐视频制作党多
+21:48 Mokou: 非游戏党都能说出Xeon与i7的区别在于调度算法不同
+21:48 varna: 然而你让他们去优化一个strcpy和memcpy, 可能他们都说不出差别
+21:48 simpleirc1: 其瞎传不服
+21:48 varna: 不服请写码
+21:48 varna: 我的做法很简单暴力
+21:49 cleamoon: 直接传指针？
+21:49 varna: strcpy/memcpy这种就行
+21:49 varna: 我估计肯定有人给前一个搞循环展开和地址对齐搞错的
+21:49 simpleirc1: 显卡齐瞎传的优化是什么鬼
+21:49 Mokou: 这叫情怀
+21:49 Mokou: 情怀你懂么？
+21:49 varna: 那真的是优化么
+21:49 Mokou: varna: 这是黑
+21:49 varna: 我知道
+21:50 varna: 但是我更想黑游戏党
+21:50 varna: 他们根本不知道什么是优化，什么是debug...
+21:50 Mokou: 仙6那个四路Titan跑不动的成绩……
+21:50 simpleirc1: 加个x
+21:50 varna: 一堆渣渣喷一个渣产品
+21:50 varna: 两边都渣
+21:50 varna: 但我更能理解粗制滥造的码农而非外行的渣渣
+21:51 cleamoon: 我怀疑那只是没好好写程序...
+21:51 libhanjian: 北软不肯支出足够的工资去请几个靠谱的伙计花时间做优化，做烂了，仅此而已。
+21:51 simpleirc1: 其实游戏党希望出现一个吓人的巨型单核
+21:51 xxxxxxxx: 只是骗点工资
+21:51 varna: 其实游戏党，我仍然这么说，没文化
+21:51 Mokou: 然而出不来
+21:51 varna: 请补习一下基本的计算机科学
+21:52 cleamoon: 我和小岛秀夫谈笑风生
+21:52 xxxxxxxx: 舰队狗算游戏党么?
+21:52 * Mokou 是游戏党
+21:52 simpleirc1: “单核秒全家 单核就是爹”
+21:52 cleamoon: 宫本茂比你们高到不知道哪里去了
+21:52 varna: 舰狗里不是一堆连hosts都不知道是干什么的人吗……
+21:52 simpleirc1: 不过游戏够有的黑也有道理吧
+21:53 Mokou: hosts不是用来上dmm的么
+21:53 simpleirc1: 比如ps4跑不动的ac4
+21:53 varna: 我只觉得他们经常谈论自己一点谱都没有的东西
+21:53 simpleirc1: 以及不平衡的an成绩。。
+21:53 varna: 最后他们知道的事情只有一件：够不够快（帧数是多少都不知道）
+21:53 xxxxxxxx: 这样那些舰队狗就可以指着羊驼说 不要笑 你也是舰队狗
+21:53 varna: 这种黑法太缺大脑了
+21:53 varna: 来点稍微精致的黑或者自觉安静都不麻烦
+21:54 simpleirc1: 还有认针做爹的
+21:54 cleamoon: 但是不够快的东西确实不够快...
+21:54 varna: 骂两句无妨
+21:54 xxxxxxxx: @提督好快
+21:54 simpleirc1: 多1针就是吊打 2针秒杀
+21:54 varna: 但你也看到了，总有人觉得自己懂的比这还多
+21:54 varna: 结果自己没做过电路、没写过程序，开始吹逼……
+21:54 varna: 何必呢
+21:55 simpleirc1: @usg石....
+21:55 * xxxxxxxx 觉得羊驼现在需要个妹子
+21:55 simpleirc1: 需要个毛妹子
+21:55 simpleirc1: 手电即可
+21:56 simpleirc1: 话说手电这种东西
+21:56 varna: 而不幸我一直喜欢强行打脸
+21:56 simpleirc1: 真的能骗爹妈吗
+21:56 varna: 你可以不露脸，但如果非得确保装逼权，那么露出来的我会直接打
+21:57 varna: 好歹我也骗xym大神说出ICMP使用端口这件事
+21:57 * Mokou 才高8斗学富5车
+21:58 xxxxxxxx: 肛容3石
+21:58 Mokou: 你这基佬居然肛容3石
+21:59 simpleirc1: 比吞榴莲
+21:59 tutu_wind: ...
+21:59 iyzsong: 什么鬼 <_<
+22:00 tutu_wind: 还好群里没妹子 ...
+22:00 Mokou: http://www.zhihu.com/question/35064628
+22:00 varna: 他的意思是“石”读dan4
+22:00 simpleirc1 quit:Remote host closed the connection
+22:00 varna: ...
+22:00 varna: 怎么还有人挺权限位
+22:00 varna: 我给最上面的答案点个赞
+22:01 simpleirc1 joined channel
+22:01 Mokou: 给第四个也点个赞吧
+22:01 Mokou: 叶安歌那个
+22:01 simpleirc1: 其实太吧有一个快30的妹子挺浪的
+22:01 simpleirc1: 声称
+22:01 simpleirc1: 只有西门庆才有女人爱
+22:02 libhanjian: SELinux蛋疼到我都不知道该怎么配
+22:02 varna: SELinux我很久以前用RHEL Server的时候见过
+22:02 libhanjian: 某厂的服务器上到现在我还没看到过用SELinux的
+22:02 simpleirc1: 以及向汪填海学习
+22:02 tutu_wind: 国内用的很少了
+22:02 varna: 当时我想了好几个三十秒，然后把它关了
+22:02 libhanjian: （应该有，但是我没在我的生产线上看见）
+22:03 libhanjian: SELinux应该一直都是内核标配
+22:03 varna: 不是
+22:03 libhanjian: 只是默认不用吧
+22:03 iyzsong: 喷的多 @suse
+22:03 varna: 默认不用倒是
+22:03 tutu_wind: 硬件防火墙一层基本上是 ~
+22:03 varna: suse我没用过，只知道L吧很多人在黑玛格丽特苏
+22:03 libhanjian: 哦，arch没编译
+22:04 simpleirc1: 软狗每发布一次系统都被骂一次算啥
+22:04 varna: simpleirc1: 你得看内核更新列表
+22:04 w15tp joined channel
+22:04 * iyzsong 现在是deepin售前 <_<
+22:04 w15tp: 纳尼。。
+22:04 varna: 我看一下Syu
+22:04 xxxxxxxx: 然而xx苏总是喜欢放炮...
+22:04 iyzsong: 我出去散散步~
+22:04 libhanjian: https://wiki.archlinux.org/index.php/SELinux#Current_status_in_Arch_Linux
+22:04 varna: 现在是北京时间晚上十点
+22:05 varna: 我试着来一把
+22:05 xxxxxxxx: 好像全世界就只剩他们社区了一般...
+22:05 cleamoon: 噗
+22:05 simpleirc1: 每发布一次就是一次忆苦会
+22:05 varna: 问题是你看不到重点
+22:05 simpleirc1: win7算下场最好的？？
+22:05 varna: 不不
+22:05 w15tp: 现在电脑还真是便宜。2700RMB就买了 i5电脑。我在想再过十年 i7是不是就烂白菜了
+22:05 varna: 你给我找几个像样的黑点出来
+22:05 xxxxxxxx: 羊驼不用和老大爷赛跑了?
+22:05 varna: 开学十一点
+22:05 code_new joined channel
+22:06 varna: 我很少见windows用户黑API的啊
+22:06 simpleirc1: i7不会降多少价
+22:06 tutu_wind: w15tp: 擦 2700 i5 
+22:06 varna: 但是糖果给我举过例子
+22:06 Mokou: windows用户有多少个知道API是什么的
+22:06 w15tp: 不带显卡。
+22:06 varna: 他自己的项目里，win7和XP就因为API差距导致项目变得很恶心
+22:06 w15tp: API不是接口的意思？
+22:06 varna: 然后客户还要求兼容XP
+22:06 varna: 但是我很少看到黑windows release的人去看MSDN
+22:06 varna: 这是个什么心态呢
+22:06 xxxxxxxx: 现在还有人为XP开发东西么...
+22:06 simpleirc1: 这几年i7很少降的..
+22:07 tutu_wind: 360 不是护航xp么
+22:07 w15tp: i5纯主机不带显卡。
+22:07 simpleirc1: 之前的2600k 2000 现在的6700k也是这价。。
+22:07 varna: 我开始Su了
+22:07 w15tp: i7`土豪，，
+22:08 simpleirc1: 游戏性能 挤了历代牙膏好了些
+22:08 tutu_wind: w15tp: 哦 , 以为是笔记本 ~
+22:08 w15tp: ～～。。
+22:08 simpleirc1: i5倒是还行
+22:08 w15tp: 笔记本。 3000的笔记本能用么，本来打算买，一看配置。
+22:08 simpleirc1: 现在据说800能入一个i5
+22:08 varna: 啊，linux-4.1.6-1-x86_64
+22:08 cleamoon: 我只黑win占用空间太大
+22:08 w15tp: 什么型号？逆天了
+22:08 tutu_wind: w15tp: 渣渣用的i3
+22:08 simpleirc1: 从2300到现在性能提升幅度倒也很大
+22:09 w15tp: 我家的用amd 200多的。
+22:09 w15tp: 貌似组装机没什么难度。
+22:09 simpleirc1: 还就是amd不给力才这么贵吧...
+22:09 varna: 干，163镜像又挂了……
+22:09 w15tp: 跟上边反映自己留了一个月工资才买得起。
+22:09 varna: pacman也有升级，我只希望能活下来
+22:10 simpleirc1: 明年年底之前就别指望cup跳水了
+22:10 w15tp: 挣个钱不容易。每次都上交一般。
+22:10 w15tp: 显卡倒是快乐。
+22:10 simpleirc1: 当然前提是ppt没撒谎。。
+22:10 libhanjian: varna, 没问题。
+22:10 libhanjian: uname -a
+22:10 libhanjian: Linux lhj14r 4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 08:52:28 CEST 2015 x86_64 GNU/Linux
+22:10 Mokou: Linux localhost 4.1.5-1-ARCH #1 SMP PREEMPT Tue Aug 11 15:41:14 CEST 2015 x86_64 GNU/Linux
+22:11 simpleirc1: 显卡现在a卡新品价格不敢恭维 反倒老黄挺厚道。。
+22:11 w15tp: 听说有快出新显卡了。弱弱的问句。你们觉得那种显卡有必要么。单击大作--大作
+22:11 code_new: Linux Arch 4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 08:52:28 CEST 2015 x86_64 GNU/Linux
+22:11 simpleirc1: 新卡？
+22:11 w15tp: 老黄？ 什么。
+22:11 w15tp: 不可靠的消息。
+22:11 simpleirc1: 只有fury nano吧
+22:11 w15tp: 百度一下，你就知道
+22:11 varna: 我上次更新是第十一号作战之后了
+22:12 simpleirc1: 而且价格死贵 1080p下970-980的性能
+22:12 varna: 现在基本上我是每一次活动Syu一次……
+22:12 w15tp: 话说我妈要是知道我把一个月工资拿来买电脑会打死我的。我得做好准备
+22:12 w15tp: 最后一个问题syu什么意思
+22:12 libhanjian: w15tp, 量力而为
+22:12 simpleirc1: 不组装htpc就别nano
+22:12 varna: pacman的命令选项
+22:13 varna: S = 安装系 y = 同步 u = 全面升级
+22:13 simpleirc1: 乖乖970 280x 280
+22:13 w15tp: o.O
+22:13 simpleirc1: 270x 750ti 260x
+22:13 varna: firefox-40.0.2-1-x86_64
+22:13 simpleirc1: 有性价比的貌似就这些了
+22:13 w15tp: 嘛，趁着才20（更喜欢说19）且单身，能玩就玩吧。
+22:14 Mokou: 我也在Syu
+22:14 varna: libflashplugin也更新了，然并卵……
+22:14 w15tp: 话说就我这悲观趋向也难过了。
+22:14 Mokou: 然而这龟速什么鬼
+22:14 varna: 现在我发现三个月一次更新不错
+22:14 varna: 刚好打完活动来一发烟花
+22:14 Mokou: 我还是想到就Syu
+22:14 simpleirc1: 据说明年q1有新卡
+22:14 Mokou: 反正我买不起
+22:14 Mokou: 跟我鸟关系
+22:14 varna: 血染的六月把我吓着了
+22:14 simpleirc1: 拖到年中年末也不一定。。
+22:14 w15tp: 每天干啊干啊干的。死干活干的。为了什么？、
+22:14 xxxxxxxx: 鸟关系+2
+22:14 varna: 至今我每次Syu的时候都抱有敬畏之心……
+22:15 Mokou: 大丈夫，要敢于赴死
+22:15 varna: 当时我拿着一个liveCD把这系统拖起来的
+22:15 simpleirc1: 一个170e晶体管的怪物 出来了下面的卡都得降价。
+22:15 Mokou: 想想5月6号上午11点那些九九舰爆里的勇士
+22:15 libhanjian: varna, 我已经改用PPAPI Flash了
+22:15 varna: 现在我把liveCD弄丢了，要拖还得重新刻
+22:15 varna: libhanjian: 玩舰娘的flash我用chrome
+22:15 varna: 那几个是真勇士
+22:15 w15tp: 工资倒是涨了，级别成师傅级别。一般是2500左右。可是，这么努力工作为了什么。为了我妈。等我妈挂了，我这么努力的活着是为了什么。
+22:15 cleamoon: 我都用chrome了，内存没那么可怕
+22:15 Mokou: 我倒是可以直接启动到windows下搞个liveusb……
+22:16 xxxxxxxx: libhanjian: 我已经被chrome强迫用PPAPI了
+22:16 varna: 一个熊包长官和六个熊包飞行员
+22:16 simpleirc1: 2500...
+22:16 varna: 相得益彰
+22:16 Mokou: 23333
+22:16 w15tp: 好吧，又刷屏了，先面壁四过去。
+22:16 libhanjian: xxxxxxxx, 没错。虽然Chromium还可以强行导入NPAPI
+22:16 w15tp: 这里的工资水平表示都这样。
+22:16 w15tp: 化工厂3000+
+22:16 simpleirc1: 能买房吗
+22:16 varna: mariadb更新了
+22:16 w15tp: 不过顶底也就5000
+22:16 w15tp: 买过房子了
+22:16 varna: 不过我以前不知道搞坏了什么元数据，一直起不来
+22:16 w15tp: 农村人还用买房？2333
+22:17 xxxxxxxx: 有房orz
+22:17 varna: 似乎是以前清掉一个数据库的时候搞坏的
+22:17 w15tp: 家里的地被征用占了几十万。买房子，装修下。还剩十几万。
+22:17 w15tp: 我妈是这么说的。
+22:18 simpleirc1: 个人以后闯压力很大的说 
+22:18 w15tp: ==。你们没房子 o.O.
+22:18 simpleirc1: 大城市房子贵 而且关键问题是
+22:18 varna: 我作为一个丧志青年得租多少年房子还不知道呢
+22:18 w15tp: 同意，就我这样基本就死靠这工厂了。
+22:18 w15tp: OTL
+22:18 simpleirc1: 怕我出门那一天经济来一轮大洪水。。
+22:18 w15tp: 你也是人才。
+22:18 varna: 吃地沟油的命，何必操中南海的心……
+22:18 libhanjian: cleamoon, 
+22:19 xxxxxxxx: varna: 你可以指望32年的房屋贷款
+22:19 Mokou: 操读几声？
+22:19 simpleirc1: 我一高中屁民。。
+22:19 cleamoon: libhanjian, ？
+22:19 w15tp: 房奴。。2333
+22:19 varna: 肉食者鄙，不过我见到更多饿肚子的人更鄙
+22:19 cleamoon: +
+22:19 w15tp: 饿了，所以卑鄙。
+22:19 varna: xf86-video-intel
+22:19 simpleirc1: 经济奔5奔4了怕失业机会更高。。
+22:19 libhanjian: cleamoon, 瑞典的每平方米房价和收入比例是多少，税重么
+22:19 varna: 这个也升级了啊
+22:19 Mokou: 卑鄙233333
+22:20 varna: _(:з」∠)_
+22:20 w15tp quit:Remote host closed the connection
+22:20 Mokou: 虽然可以强行解释成卑和鄙
+22:20 varna: 咦，我什么时候安了zeromq
+22:20 Mokou: 不过我还是想笑
+22:20 cleamoon: libhanjian, 什么税？
+22:20 simpleirc1: 不过据说日本经济洪水那一年毁了一代青年。。。？
+22:20 cleamoon: 每个城市差的很远呀...
+22:20 libhanjian: cleamoon, 房地产的各类税收
+22:20 w15tp joined channel
+22:21 xxxxxxxx: 公婆骑着摩的
+22:21 varna: simpleirc1: 怎么说呢，人越怂，破事越多……
+22:21 w15tp: 认真的。学C语言什么的还可以做什么好玩的？
+22:21 simpleirc1: 有
+22:21 varna: 现在找工作不是照样恶心么
+22:21 cleamoon: 房地产似乎没有什么税吧...
+22:21 simpleirc1: 人工少女
+22:21 w15tp: 看得书上的那些范例。
+22:22 varna: w15tp: 你用putchar写个printf看
+22:22 hoxily quit:Read error: Connection reset by peer
+22:22 varna: 别着急
+22:22 libhanjian: cleamoon, 感觉绅士不太了解瑞典的相关政策
+22:22 xxxxxxxx: varna: 我觉着你在说肛检
+22:22 varna: xxxxxxxx: 你这基佬
+22:22 varna: 频道里被肛检的不是只有lhj么
+22:22 simpleirc1: 话说瑞典禁gun吗
+22:22 libhanjian: cleamoon, 不过也实在是天朝逼着人去了解相关政策
+22:23 cleamoon: libhanjian, 不过确实没听说要交什么税呀
+22:23 varna: 操，我还安了racket...
+22:23 xxxxxxxx: 羊驼是自愿的?
+22:23 simpleirc1: 想知道自由world里治安比较好的一个
+22:23 varna: 我还不知道肛不肛呢
+22:24 simpleirc1: 直肠好恶心
+22:24 xxxxxxxx: 原来如此...
+22:24 w15tp quit:Remote host closed the connection
+22:24 simpleirc1: 据说直肠不会gc？
+22:24 xxxxxxxx: simpleirc1: 你这样也能连次男道么
+22:24 cleamoon: libhanjian, 撕都，年收入 248700，一平米 50000
+22:25 simpleirc1: 而且 那些妹子一般对此玩法很讨厌
+22:25 cleamoon: 瑞典买房都是买居住权，所以没有你需要考虑的税费
+22:25 xxxxxxxx: 怎么办我觉得说不定我们这里混进了一个真线虫
+22:25 varna: 赣嗒僻衍
+22:25 cleamoon: 烧之
+22:25 libhanjian: cleamoon, 还是挺贵的……一年只能买5平方米不到……
+22:26 simpleirc1: 去西伯利亚买房不就得了。。。
+22:26 varna: 终于到multilibs了
+22:26 cleamoon: libhanjian, 撕都房子贵，全国平均只有不到25000
+22:26 simpleirc1: 以前只有劳改才能有机会去的光荣地方
+22:26 varna: wine-1.7.49-1-x86_64
+22:26 simpleirc1: 西伯利亚 不二选择
+22:26 libhanjian: cleamoon, 瑞典经济是向首都集中？
+22:27 cleamoon: libhanjian, 首都占全国经济的1/3+
+22:27 libhanjian: varna, 据说Direct3D 11 wine 1.7.4拿出了解决方案
+22:27 varna: 虽然我一直对wine开发者非常敬佩，但他们总能搞出几个大新闻……
+22:27 libhanjian: cleamoon, 可怕
+22:27 simpleirc1: 面积占多少
+22:27 varna: libhanjian: 可是d3d11的游戏我基本模拟不动
+22:27 simpleirc1: 人口多少。。
+22:27 cleamoon: 挺小的...
+22:27 libhanjian: varna, 那倒是……
+22:27 cleamoon: 肉口1M
+22:27 cleamoon: 人口
+22:27 varna: 我日
+22:27 Mokou: wine的d3d9现在怎么样了
+22:28 varna: keyring服务器又……
+22:28 Mokou: 还需要重新编译吗
+22:28 molikto quit:Remote host closed the connection
+22:28 cleamoon: 瑞典北方提督控制的太空城房价只有8000左右
+22:28 simpleirc1: 瑞典谋杀率高吗
+22:28 varna: 看看软件包校验
+22:28 simpleirc1: 准确说犯罪率
+22:28 cleamoon: 如果你能忍受六月份有时下雪的话
+22:28 xxxxxxxx: 瑞典北方提督？
+22:28 varna: checksum pass
+22:29 libhanjian: cleamoon, 6月下雪……
+22:29 simpleirc1: 下雪多好。。
+22:29 xxxxxxxx: 我竟然能看漏p
+22:29 Mokou: “你整天玩kancolle能有文化么？”“你考考我？”“那我说上句你能对出下句么？”“尽管来。”“高山流水？”“深海栖舰。”“十年树木？”“百级结婚。”“人有悲欢离合？”“船分小中大破。”“两个黄鹂鸣翠柳？”“一队潜艇捞黑油。”“舌战群儒，当面铜锣对面鼓？”“炮击众鬼，开幕飞机闭幕
+22:29 Mokou: 雷。”
+22:29 simpleirc1: 只要既有夏天又有冬天就行
+22:30 varna: 一队潜艇捞黑油23333
+22:30 cleamoon: 我也不知道算是高还是低...
+22:30 cleamoon: 噗
+22:30 varna: 我觉得只要考一个词就行
+22:30 varna: 稳如（）
+22:30 Mokou: poi
+22:30 cleamoon: 炮击众鬼好评
+22:30 xxxxxxxx: POI
+22:30 cleamoon: Poi
+22:30 cleamoon: 出门
+22:31 simpleirc1: 两个黄li鸣翠柳
+22:31 cleamoon: 第二大城市哥德堡经济都不到撕都的一半，各种玩意太过集中了
+22:31 varna: gpg终于没闹事
+22:31 cleamoon: 撕都一个小地方it公司数量直逼硅谷
+22:31 simpleirc1: 一行田中上青天
+22:31 cleamoon: 真 出门
+22:31 varna: 密钥环总抽风
+22:32 xxxxxxxx: 那东西有不抽的时候？
+22:32 varna: 幸好现在mate死活管我卵事
+22:33 varna: 我还留着dogexygen...
+22:33 libhanjian: cleamoon, 人口是10M，而不是1M吧
+22:34 simpleirc1: 再集中
+22:34 simpleirc1: 比不过香港耶路和李家坡三个城邦吧...
+22:34 varna: 卧槽
+22:34 varna: gvim更新失败了？
+22:35 varna: 等会再来一次
+22:36 simpleirc1 quit:Remote host closed the connection
+22:36 xxxxxxxx: 然而我也不知为何 对香港人的印象似乎越来越差...
+22:37 varna: 惯例，wd719x和aci94xx的固件报警告
+22:37 varna: aic94xx
+22:38 varna: 一共407项更新_(:з」∠)_
+22:38 varna: sudo还升级了
+22:39 code_new: 话说为何要用gvim_(:з」∠)_
+22:39 xxxxxxxx: 预计炸否?
+22:39 Mokou: WoWS读盘中
+22:39 Mokou: 我看看这次能不能启动起来
+22:39 varna: gvim的包里有vim
+22:40 varna: 我不用gvim, 但印象那个包里的东西比vim包省事
+22:40 varna: 等更新完我手工处理下gvim包的事
+22:41 varna: 最可怕的是这次haskell全体没爆炸
+22:41 varna: 不知道什么鬼
+22:41 varna: reinstalled
+22:41 varna: all systems down / reboot
+22:41 varna: 祝我武运
+22:41 varna quit:Quit: leaving
+22:44 varna joined channel
+22:45 code_new: Congrat
+22:45 varna: 我日
+22:45 varna: 欠雪爆炸了……
+22:45 code_new: 不是欠雷吗
+22:46 varna: 我嚓咧
+22:46 Mokou: 我打一盘试试
+22:46 varna: api全灭
+22:46 varna: massive rebuild不可避……
+22:47 Mokou: 那个命令你看看能不能想起来
+22:47 Mokou: 想不起来我可能真得rm -rf……
+22:49 varna: https://lists.archlinux.org/pipermail/arch-dev-public/2015-June/027236.html
+22:49 varna: 我检测一下
+22:50 Mokou: fps个位数
+22:50 Mokou: 不过这不重要
+22:51 Mokou: 重要的是居然真的能跑起来……
+22:51 Mokou: 我开DRI3试试
+22:51 varna: 哈哈哈哈
+22:51 varna: 我操他大爷的
+22:51 varna: cpan挂了
+22:51 varna: 你已经不可能通过cpan module来重新编译了
+22:52 Mokou: ……
+22:52 Mokou: 我这里cpan似乎还活着
+22:53 varna: 哈哈哈哈
+22:53 varna: 没救了
+22:53 varna: perl Makefile.PL都会死……
+22:53 Mokou: ……
+22:53 Mokou: 屌
+22:53 Mokou: 我重启一下
+22:53 Mokou quit:Quit: reboot
+22:54 Mokou joined channel
+22:55 varna: 我挂掉的模组是Cwd
+22:56 Mokou: 我挂掉的大概不少……
+22:57 varna: 不不，那个Cwd影响我一切问题
+22:58 FrankHB quit:Ping timeout: 246 seconds
+23:00 Mokou: 我有点想调一下WoWS的nice
+23:00 Mokou: 但是我感觉这是在嘬死
+23:01 varna: 拼了
+23:01 Mokou: 23:58
+23:01 varna: 马勒戈壁……
+23:01 Mokou: 来得及吗……
+23:01 varna: 来得及
+23:02 Mokou: 亚特兰大没回来，我拿桥立打一局
+23:02 varna: 然而我现在一点办法都没有了
+23:02 varna: 根本不可能编译
+23:02 FrankHB joined channel
+23:02 Mokou: 噗，三级房
+23:02 Mokou: 我们一起rm -rf吧
+23:02 lh_not_bot: geordi: cout <<hex <<18446744073709551614;
+23:02 geordi: error: integer constant is so large that it is unsigned
+23:02 lh_not_bot: geordi: use -w
+23:02 geordi: error: 'cout' does not name a type
+23:02 lh_not_bot: geordi: erase cout
+23:02 geordi: error: ambiguous overload for 'operator<<' in 'cout.basic_ostream<_CharT, _Traits>::operator<< <char, char_traits<char> >(hex) << 18446744073709551614I128' (operand types are 'ostream::__ostream_type {aka ostream}' and '__int128')
+23:03 lh_not_bot: geordi: <<hex <<(unsigned long long)18446744073709551614;
+23:03 geordi: error: integer constant is so large that it is unsigned
+23:03 lh_not_bot: geordi: -w <<hex <<(unsigned long long)18446744073709551614
+23:03 geordi: fffffffffffffffe
+23:03 varna: 他妈的……
+23:04 varna: 根本不可能编译成功……
+23:04 varna: 明天再说
+23:04 varna quit:Quit: leaving
+23:20 Mokou quit:Quit:  reboot
+23:22 Mokou joined channel
+23:22 xxxxxxxx: 回来一看羊驼果然炸了
+23:33 libhanjian quit:Quit: Leaving
+23:35 lh_mouse: 222.161.201.82吉林省吉林市 联通
+23:50 code_new quit:Quit: bye

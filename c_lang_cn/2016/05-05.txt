@@ -1,0 +1,934 @@
+00:02 xxxxxxxx: 趴 大概我耳朵也该带个助听器了233
+00:08 code_new: 我也有耳鸣……
+00:08 code_new: 一般睡觉时间超过8h就会耳鸣，而且会持续几天
+00:08 code_new: 感觉跟熬夜有关系
+00:12 code_new quit:Quit: 睡觉
+00:21 xxxxxxxx quit:Quit: Leaving...
+00:22 SilverElf joined channel
+00:29 wlemuel joined channel
+00:46 lh_not_bot quit:Ping timeout: 276 seconds
+00:47 lh_not_bot joined channel
+00:59 Youmu quit:Quit: Connection closed for inactivity
+01:13 lh_mouse quit:Read error: Connection reset by peer
+01:15 SilverElf quit:Read error: Connection reset by peer
+01:31 wlemuel quit:Ping timeout: 260 seconds
+01:42 Youmu joined channel
+01:44 T-J-M quit:Quit: 吾去矣
+01:45 T-J-M joined channel
+01:57 cyrushmh joined channel
+02:01 CyrusYzGTt quit:Ping timeout: 276 seconds
+02:27 CyrusYzGTt joined channel
+02:31 cyrushmh quit:Ping timeout: 260 seconds
+02:34 lhanjian quit:Quit: Connection closed for inactivity
+03:00 condy quit:Ping timeout: 250 seconds
+03:02 condy joined channel
+03:04 stardust quit:Quit: Connection closed for inactivity
+04:09 Youmu quit:Quit: Connection closed for inactivity
+07:01 Stevearzh quit:Remote host closed the connection
+07:03 Stevearzh joined channel
+07:29 xxxxxxxx joined channel
+07:50 wlemuel joined channel
+08:09 FrankHB quit:Ping timeout: 240 seconds
+08:44 wlemuel quit:Ping timeout: 260 seconds
+08:52 FrankHB joined channel
+09:03 wlemuel joined channel
+09:07 wlemuel quit:Ping timeout: 240 seconds
+09:09 lh_mouse joined channel
+09:14 FrankHB quit:Ping timeout: 244 seconds
+09:29 xxxxxxxx quit:Quit: Leaving...
+09:48 CyrusYzGTt quit:Ping timeout: 265 seconds
+10:14 stardust joined channel
+10:20 cc joined channel
+10:23 iyzsong: (・.・;)
+10:28 cc: 早
+10:29 * lh_mouse slaps iyzsong around a bit with a large trout
+10:56 Youmu joined channel
+11:04 iyzsong: ( ；∀；)
+11:38 iyzsong: stupid!
+11:39 Matsune joined channel
+12:24 stardust quit:Quit: Connection closed for inactivity
+12:47 varna joined channel
+12:48 varna: p7更新了一点超时定时器方面的细节
+12:48 varna: 昨天写wiki页面草稿的时候觉得蛋疼，索性把原来定时器检测的毒瘤拔掉
+12:48 varna: 等糖果爆炸完了我再测一波……
+12:54 iyzsong: otz
+12:56 varna: 如果测好了，p7以后的超时定时器都可以正常地自理生活了
+12:56 varna: 以前的做法太扭曲
+13:18 Dove joined channel
+13:19 Dove: 意识到自己只是一个普通人真是难以言表的感受
+13:19 Dove: At least, I wanna do things better.
+13:22 Dove: 毕竟我坚持认为是人的经历造就一个人，所以不算坏。
+13:24 iyzsong: (´・ω・｀)啥东西
+13:27 varna: pushed, 同时更新了一点维基页面
+13:28 iyzsong: 吼啊
+13:28 Dove: 求wiki。
+13:28 varna: https://github.com/Akvelog/servcraft/wiki/p7-introduction---%E4%B8%AD%E6%96%87%E9%A1%B5%E9%9D%A2
+13:31 varna: 这次更新的部分是用户不友好的
+13:32 varna: 如果没有胆量，就不要参考第三节的任何内容
+13:34 iyzsong: (・・;)
+13:35 lh_mouse: varna, 妳的 coroutine 滋瓷 coroutine local storage 么？
+13:36 varna: 不兹瓷，文件作用域上的东西仍然是pthread的TLS
+13:37 lh_mouse: 其实这样残废了不少。
+13:37 varna: 举个例子，我看看是不是要加
+13:37 lh_mouse: 妳可以 #pragma GCC poison __thread thread_local 什么的。
+13:37 lh_mouse: varna, ヲ提一个实际一点的东西。
+13:37 varna: 其实问题在于用法，目前我没想到什么地方要用线程本地存储风格的local storage
+13:38 lh_mouse: ヲ需要一种机制，这个机制实现一个非常简单的功能：它记录每一个函数的执行时间。
+13:38 varna: 明白了
+13:38 lh_mouse: 这个都给你洗妳应该听ヲ说过。
+13:38 Dove: varna: thx
+13:38 varna: 简单来说，PROFILE_ME
+13:39 varna: 是这样吧
+13:39 lh_mouse: 对。但是那个东西依赖 C艹。
+13:39 lh_mouse: 用 GNU C 也可以写一样的东西。
+13:39 varna: GNU C的话我会选择做一个nested function
+13:39 varna: 但是挺扭的
+13:39 lh_mouse: 于是这里的问题只剩下一个，如何记录 caller 的执行时间并从中减掉 callee 的执行时间。
+13:40 lh_mouse: 当一个 callee 返回的时候它将计算自己的执行时间并把这个时间从 caller 的 profile element  里减掉。
+13:41 Dove: 从招聘数量来看，Java，python，php还是比较占优势，另外什么是TLS?
+13:41 lh_mouse: 每个函数的 profile element 除了记录函数名、源文件、行号以外，包含两个时间：当前函数的累计执行时间，以及去掉子函数的累计执行时间。
+13:41 lh_mouse: 而且 yield 之后这个时间怎么算。
+13:41 varna: 其实主要问题是yield
+13:42 lh_mouse: 这里实际上需要通用的 coroutine local storage 它可以存储指向调用栈顶部的 profiler 。
+13:42 lh_mouse: 这么一个指针。
+13:42 lh_mouse: 而且要保证它能随着协程切换。
+13:42 varna: 那么这东西就得跟carrier相关了
+13:43 lh_mouse: 至于调度策略只是一个可以 hack 的东西——你只要指定一些 cls_key 是 reserved 就行了。
+13:43 varna: 内核线程好说，然而coro这东西只要yield, 就必须让profiler知道
+13:43 lh_mouse: 是。
+13:43 lh_mouse: ヲ这里弄了一个 __thread 事实上必须在协程切换前后做一些处理，否则就会炸。
+13:43 varna: 所以最后问题其实变成了是否需要yield hook
+13:43 varna: 在yield的时候可能有些事情要处理
+13:44 lh_mouse: 一开始的需求非常简单而明确，如果是做产品这个应该是比较重要。
+13:44 varna: 这个我会想想怎么办，确实要做一下
+13:45 Dove: 好吧，什么是TLS？
+13:45 lh_mouse: 第二个问题。
+13:45 lh_mouse: p7_root_alloc_get_allocator()  这个后面的三行，ヲ觉得其实是不太好的设计。
+13:46 varna: 好的设计看起来是什么样的？
+13:46 lh_mouse: 和 C艹 允许重载 operator new 是一个问题。
+13:46 xxxxxxxx joined channel
+13:46 lh_mouse: varna, 内存分配器未必是全局的。
+13:46 lh_mouse: “全局”的只是一个非全局的实例，只是 scope 不同。
+13:46 varna: 确实，所以实际上allocator结构不假定自己全局
+13:47 varna: 只是p7假定如此
+13:47 lh_mouse: 这是没问题，于是问题来了。
+13:47 lh_mouse: malloc 这种函数的原型不滋瓷非全局。
+13:47 varna: 所以我说过，“只是p7假定如此”
+13:48 varna: 提供一个全局化的wrapper给p7使用是理所应当的
+13:48 varna: 但allocator本身并不在乎这件事
+13:48 lh_mouse: ヲ个人想象的是这样子  void * (*malloc_callback(void * context, size_t size);
+13:48 varna: 对，我提供了这样的成员
+13:48 lh_mouse: 其实这不是坠吼的……
+13:48 varna: https://github.com/Akvelog/servcraft/blob/master/include/model_alloc.h#L8 这其实是个挺无奈的事情
+13:48 lh_mouse: void * (magic)( void * context, size_t size, size_t min_alignment, const void * ret_addr);
+13:49 varna: 我让closure_成员兼容C标准库
+13:49 lh_mouse: /w\
+13:49 varna: 同时提供plain_ptr_成员，用户可以提供一个void *context
+13:49 varna: 但另一方面，不怕死的用户可以直接在closure_上绑我那个lambda
+13:49 lh_mouse: 有个很无耻的办法。
+13:50 lh_mouse: 理论上应该不会炸，不过看看作死的程度。
+13:50 varna: 怎么说呢
+13:51 lh_mouse: 给定分配器的原型就是 void * (*callback)(size_t, void *context);
+13:51 lh_mouse: 然后把 malloc 强转丢上去。
+13:51 lh_mouse: 实际的结果是你假定分配器接受两个参数却调用了 malloc 。
+13:52 varna: 我就不重复你说过的话了，完全同感
+13:52 lh_mouse: 稍微不那么作死的是 void *(*)(size_t, ...)。
+13:52 varna: 我倒觉得这是稍微作死的
+13:52 lh_mouse: 只要 malloc 里面别弄出个 ret 4 什么的应该就没事。
+13:53 lh_mouse: 这里就假定不是调用者清栈。
+13:53 varna: +
+13:53 varna: 但caller清栈（如果有栈参数）是cdecl常态
+13:53 lh_mouse: 即使是 (...) 也可能有调用者清一部分被调用者清另一部分。
+13:53 lh_mouse: 这并不有什么原则性错误。
+13:55 varna: 我以前写这里的时候忘了有没有考虑gcc那个apply args的事情，不过大概最后也没用，而采取了比较蠢的形式
+13:57 varna: 今天的CPAN推荐： https://metacpan.org/pod/distribution/Inline-Struct/lib/Inline/Struct.pod
+13:57 varna: Dove: TLS = Thread Local Storage
+13:57 lh_mouse: void p7_spinlock_init(struct p7_spinlock *spin, uint32_t spintime);   // 最后一个参数建议改成次数。时间比较反直觉。
+13:57 varna: 糖果那边似乎winAPI出现了相当程度的自爆现象……
+13:58 Dove: varna: thx，我只能搜到Transport Layer Security，这个显然不是。
+13:58 varna: lh_mouse: 你提醒我了，我写错文档了
+13:58 varna: 我确认一下，基本应该是写错了
+13:58 varna: ok我改文档
+13:59 varna: 已改
+14:00 lh_mouse: void p7_blocking_point_self(void);  // 目前有 APC 类似物？
+14:00 lh_mouse: asynchronous procedure call 
+14:00 varna: 不，这个东西是很糟糕的，基本限于我自己在不想重新编译库，但又想造API的时候用
+14:01 lh_mouse: 这个洞给你洗本来可以不糟糕。
+14:01 lh_mouse: 这个东西  ///
+14:01 varna: 这个东西不是对一般用户有意义的
+14:01 varna: 基本只对我自己有用
+14:01 lh_mouse: APC 是 Windows NT 内核的一种机制。在内核完成异步 I/O 等操作后给发起异步请求的线程丢一个 APC 回调。
+14:02 varna: 但真正把它提出来，是因为我想在观念上（而非步骤上）给定时器补个缺
+14:02 varna: 所有不在第二节里列出来的东西，单独用一律不保证正确
+14:03 lh_mouse: ヲ觉得扩展一下。
+14:03 varna: 目前我这里的异步，应当是自己约定一个参数包，打成消息send, 然后recv阻塞（可超时），收到回包之后继续执行
+14:03 varna: 不过这里你提到了我还没做的一个事
+14:04 varna: 要说APC的话，确实得有，不然是残废的
+14:04 lh_mouse: varna, github 的 commit message 里可以用 @   。
+14:04 varna: 哦，下回@人
+14:04 lh_mouse: spintime 太 obscure 。
+14:04 lh_mouse: uint32_t max_spin_count 
+14:05 lh_mouse: 如果是一大堆这样的东西堆在一起ヲ会把形容词丢在后面。
+14:05 lh_mouse: unsigned count_spinned, count_to_spin, count_spin_max;
+14:05 lh_mouse: 还有什么 size_t bytes_to_read, bytes_read, bytes_total;
+14:06 varna: max_spin_count略误导，我保留spintime这个没什么意义的名字
+14:06 lh_mouse: 怎么误导？
+14:06 varna: bytes_to_read现在我也这么用
+14:07 varna: 不提怎么误导，如果用的话，其实spin_count更好
+14:07 lh_mouse: void p7_spinlock_init(struct p7_spinlock *spin, uint32_t spintime);  // 没有 P7_SPINLOCK_INITIALIZER ？
+14:08 varna: 没有，我补一个吧
+14:08 varna: rwspin同
+14:08 lh_mouse: {0} ?
+14:08 varna: {0}就可以
+14:08 lh_mouse: 其实也可以写 {0} 这样就省得到处 #include 
+14:09 varna: 无妨，扔头文件里显得对称
+14:09 lh_mouse: 实际上不好。
+14:09 varna: 原因呢
+14:09 lh_mouse: 如果 FOO_INITIALIZER 和 {0} 等价前者自然无必要存在。
+14:09 lh_mouse: 如果不等价，就是要求用户按文档使用前者，后者又没有存在意义了。
+14:10 lh_mouse: 这里ヲ的做法就是显式要求用户使用 {0} 比国内且就不提供前者。
+14:10 lh_mouse: s/比国内/并/
+14:10 varna: 想了一下可能的实现，用{0}吧
+14:11 lh_mouse: {0} 可以丢 bss 。
+14:11 lh_mouse: 这里你就看出 C 傻逼的地方了。
+14:12 lh_mouse: 对于一个有一百个成员的结构，C艹可以用 {} 直接填零，C 就必须 {0}。
+14:12 varna: 等下，脑抽——不能{0}也不能缺省initializer
+14:12 varna: spintime是每个锁一份的
+14:12 lh_mouse: O O ?
+14:12 lh_mouse: 0 就给个默认值。
+14:12 varna: (｡･ω･)ﾉ不高兴给，不给了；用户自己搞明白
+14:12 lh_mouse: 你这个做法没错，ヲ也那么做。
+14:13 varna: 先吃饭去，糖果放弃了
+14:13 lh_mouse: 但是这点有区别。
+14:13 lh_mouse: ヲ的 spin count 参数是写在 mutex_lock
+14:13 lh_mouse: 你这里是写在 mutex_init 。
+14:14 lh_mouse: 锁本身没有 spin count 但是这个可以简单封装达到同样的效果。
+14:17 lh_mouse: 另外妳可以试着实现 condition variable 或者 semaphore 。
+14:47 code_new joined channel
+14:53 stardust joined channel
+15:06 wysaid joined channel
+15:06 wysaid: Hello every body
+15:07 wysaid: 我好想找到了新世界大门： http://www.twfun.info/html/2015/05/58108.html
+15:07 wysaid: 😋
+15:09 lh_mouse: 妹子。
+15:09 whocares_2_ quit:Remote host closed the connection
+15:10 whocares_2 joined channel
+15:18 wysaid: 乞丐张这一篇H看完整个人感觉都不一样了
+15:18 wysaid: 隐隐然有一种想犯罪的冲动
+15:18 wysaid: 啧啧啧
+15:18 wysaid: 肿么办
+15:18 wysaid: 嗷嗷嗷
+15:18 varna: 小春大法好
+15:19 Youmu quit:Quit: Connection closed for inactivity
+15:19 wysaid: Global Info: wysaid 抓住 varna 就是一顿揉捏……一库~ 泻火完毕
+15:21 lh_mouse: 妹子。
+15:22 wysaid: @_@ 好吧， 这里有妹子哇
+15:22 lh_mouse: there used to be.
+15:22 wysaid: there will be...
+15:28 varna: 求投入数个妹子
+15:29 varna: 大家分一分各自捞一个妹子交往
+15:29 varna: 多好的
+15:31 wysaid: 说起来， 长一点的， 我都认识你们五六年了
+15:31 wysaid: 啧啧啧
+15:31 wysaid: 时间过得真快
+15:31 varna: 长一点的
+15:33 varna: 菊花老怪果然出言不凡……
+15:33 wysaid: 😏 手动斜眼
+15:34 varna: 就当封口费，介绍妹子给我们吧
+15:35 wysaid: 新手司机没驾照， 不敢在irc里面发车
+15:36 wysaid: 😋😋😋
+15:36 varna: 这里拒绝公开发车
+15:36 wysaid: 娘化也毕业了吧， 毕业去哪呢
+15:37 varna: 姑且签了个阿里
+15:37 wysaid: 啧啧啧， 土豪， 赶紧再irc里面发个支付宝红包口令
+15:38 wysaid: 月入几狗了？
+15:38 varna: 穷鬼
+15:38 varna: 我七月份才毕业呢
+15:38 varna: 硕士三年制
+15:38 wysaid: so, offer 几狗了
+15:38 varna: 懒得去拿offer, 所以内推阿里之后就没管别的
+15:38 wysaid: 😋😋😋
+15:39 wysaid: 😂😂😂
+15:39 wysaid: 所以， 毕业时去杭州咯
+15:39 varna: 可能
+15:39 wysaid: 还是读书好， 我都想考研了
+15:40 varna: 现在干一些时间去读研的也有
+15:41 wysaid: 然而读书没钱啊。。。
+15:41 wysaid: @_@
+15:41 wysaid: 纠结
+15:41 varna: 读研得有奖学金才行
+15:41 varna: 不然一年一万……
+15:41 lh_mouse: 一年一万是教育部最低水平吧。
+15:42 varna: 是，我这里的研究生学费就是这个价
+15:42 wysaid: @_@ 要考也要考个不交费的啊。。。
+15:42 wysaid: 不是说读研没学费么
+15:42 varna: 没学费是因为奖学金都解决了
+15:43 varna: 住宿费的话，我基本用学院补助+实验室补助剩下的钱就行，JLU住宿费1.2k/年
+15:43 wysaid: @_@
+15:44 wysaid: 今年25， 就算今年开始考， 也得2017年下半年才能入学， 读完都赶上 2020了
+15:44 wysaid: 直接奔三
+15:44 wysaid: 嗷嗷嗷
+15:45 wysaid: 人森呐
+15:46 varna: 你要想，你去了之后可以侵犯学妹
+15:46 varna: 不去的话最多业余时间艹pis
+15:47 wysaid: @_@
+15:47 wysaid: 😂😂😂
+15:47 wysaid: 😋😋我已经找到真爱
+15:48 varna: 可怕的现充
+15:48 varna: 我们把现充吊起来打
+15:50 wysaid: 皮厚， 求艹
+15:50 wysaid: 嗷嗷
+15:50 varna: lh_mouse: ^
+15:51 wysaid: 对哦， 说起来， 我想问个问题
+15:51 wysaid: 我组织下语言
+15:54 suisuijiang joined channel
+15:55 suisuijiang: hi~
+15:55 varna: suisuijiang: 爆
+15:55 suisuijiang: (｡･ω･)ﾉ
+15:55 suisuijiang: 羊驼君去阿里了啊
+15:55 suisuijiang: 内推啊
+15:56 varna: 去年的事了
+15:56 suisuijiang: 还有哪个厕所没人管吗
+15:56 suisuijiang: 我可以的
+15:56 whatofor: 现在管厕所一般要求 女性
+15:57 suisuijiang: 我可以管女厕所嘛
+15:57 suisuijiang: 男厕所交给女性就好了
+16:00 varna: 你去管GAY厕所
+16:03 suisuijiang quit:Ping timeout: 250 seconds
+16:19 lh_mouse: wysaid, 妳好像以前介绍一个妹子来过？
+16:19 wysaid: 是啊
+16:19 lh_mouse: varna, 你看。
+16:19 wysaid: 被你们吓走啦
+16:20 varna: lh_mouse: 那是他自家的妹子吧，唬人的！
+16:23 wysaid: https://www.facebook.com/crystal.chen.391082?ref=ts&fref=ts
+16:23 wysaid: 不是啊
+16:23 wysaid: 自己勾搭去
+16:23 wysaid: 在美帝呢
+16:23 wysaid quit:Remote host closed the connection
+16:24 wysaid joined channel
+16:24 wysaid: 怎么发完就掉线了
+16:24 wysaid: https://www.facebook.com/crystal.chen.391082?ref=ts&fref=ts
+16:24 wysaid: here
+16:25 wysaid: 还必须登录
+16:25 iyzsong: ( ；∀；)
+16:25 suisuijiang joined channel
+16:30 suisuijiang quit:Ping timeout: 250 seconds
+16:32 Dove: 有墙看不到。
+16:34 varna: Dove: wiki稍微修正了下，如果想要试试手感的话，凭那些文档应该可以了
+16:34 varna: 往下要加的东西，我首先考虑APC, 因为是我挺久的怨念了
+16:35 wysaid: 你们在说啥
+16:36 varna: wysaid: https://github.com/Akvelog/servcraft/wiki/p7-introduction---%E4%B8%AD%E6%96%87%E9%A1%B5%E9%9D%A2
+16:38 wysaid: 不明觉厉
+16:39 varna: 简单来说，goroutine in C
+16:56 guowang joined channel
+16:59 Dove quit:Read error: Connection reset by peer
+17:10 lh_mouse: struct p7_msg *p7_mailbox_extract(void);  // p7_mailbox_try_recv()
+17:10 lh_mouse: 而且为什么不  typedef struct p7_msg p7_msg;
+17:10 varna: 所有struct都让人看起来像struct
+17:10 varna: 另外其实这里并不是真的要try
+17:11 lh_mouse: ヲ认为这没什么实际意义，反而看起来像是 UNIX 厨。
+17:11 wysaid quit:Ping timeout: 276 seconds
+17:11 varna: extract单纯适用的场合有两个：第一，IO+fd监听的时候返回了通信就绪；第二，coro退出的时候有意向自行清理邮箱
+17:12 varna: 看起来像是UNIX厨没什么关系
+17:12 varna: 我不喜欢含混不清的类型
+17:14 varna: s/IO+fd/通信+fd/
+17:15 varna: http://tieba.baidu.com/home/main?un=%E6%B1%9F%E6%B2%A2%E8%AB%8F%E8%A8%AA%E5%AD%90&ie=utf-8&fr=pb
+17:16 wysaid joined channel
+17:29 varna: wysaid: http://can-am.com/
+17:33 iyzsong: (・・;)
+17:37 cc quit:Remote host closed the connection
+17:40 code_new quit:Remote host closed the connection
+17:42 varna: (｡･ω･)敲碗等看红旗打活动
+18:03 wysaid quit:Ping timeout: 246 seconds
+18:04 lh_mouse: (｡･ω･)敲碗等看洋沱穿女装。
+18:05 varna: (｡･ω･)我是偶蹄类动物，自己会长毛，怎么可能穿人类的衣服
+18:07 lh_mouse: 敲碗，敲碗，敲碗。
+18:07 varna: (｡･ω･)ﾉ上——醋——
+18:10 lh_mouse: ヲ之前信口开河胡诌了一句“semaphore 在线程同步中的地位好比 nand 在逻辑代数中的地位”。
+18:12 varna: 然而我猜想你会被big mutex党挂上牌子游街……
+18:14 lh_mouse: 这倒是。
+18:14 lh_mouse: nand 非常便宜，但是和 futex 比起来 semaphore 显然太叒了。
+18:20 wysaid joined channel
+18:30 varna: http://picpaste.com/BNeh09Yo.png 百度为何觉得我会喜欢这些？
+18:31 T_O_W joined channel
+18:32 T_O_W: 话说如何玩透导数
+18:32 varna: 你不会是说高中数学吧
+18:32 T_O_W: 指的是高中司马题
+18:32 T_O_W: 是的
+18:32 varna: 什么叫玩透
+18:32 T_O_W: 改词吧。。掌握
+18:32 varna: 高考函数题遇事不明求个导？
+18:33 T_O_W: 那求的可多了。。
+18:33 T_O_W: 整体思路
+18:33 varna: 顺着感觉来
+18:33 varna: 感觉不足就做题去
+18:33 varna: 做题还不会就认命
+18:33 T_O_W: 果然。。。
+18:33 varna: 没什么一定之规
+18:34 T_O_W: 前3天强行把3-4光学电磁相对论初步给刷题带走
+18:34 T_O_W: 感觉还行
+18:34 varna: 3-4不是北方海域舰队决战么(｡･ω･)
+18:35 T_O_W: 我3-1和3-2全灭怎么办？。。。。
+18:35 varna: （认真地）3-2现在可以1cl5dd了，3-1上主力
+18:35 T_O_W: 定是输入了金手指
+18:36 varna: 等等，物理选修3-1是电学吧？
+18:37 varna: 3-1和3-2不是必考压轴题么
+18:37 T_O_W: 是的
+18:37 T_O_W: 全灭
+18:37 T_O_W: 大不了再用之前的把戏恶补
+18:38 varna: 不太了解现在的情况，在我的年代感觉全国各种真题喜欢做的事情差不多是坐标系+分段曲线+动能定理/做功和能量转化分析
+18:38 T_O_W: 三个下午半本3-4 我觉着静下心的话恶补这些也不难
+18:38 varna: 五三、王后雄、天利……
+18:39 varna: 这些教辅做做还是挺有效的
+18:39 Mokou joined channel
+18:39 varna: 龙门专题系列也可以，就是分册太多了
+18:39 T_O_W: 打算再买2本
+18:39 T_O_W: 王后雄
+18:39 varna: Mokou: pull一下p7，有关键更新
+18:39 varna: 不缺钱的话王后雄就无脑买下来呗……不做是一回事，但想做的时候随手就有
+18:40 T_O_W: 不过我买了几本竞赛的书准备做着玩。。。
+18:40 lh_mouse: varna, 管程写过么。
+18:40 varna: lh_mouse: 管程从没写过
+18:41 varna: T_O_W: 先做几套模拟题打打分吧……
+18:41 T_O_W: 玩不起
+18:41 T_O_W: 一轮还没全开呢
+18:42 varna: T_O_W: 跟学校进度的话就没意义了
+18:42 T_O_W: 抽个时间把手里册子做完先。。
+18:42 T_O_W: 比如把学校发的册子超进度写完。。
+18:42 varna: lh_mouse: 总觉得管程的要求太严了
+18:43 Mokou: 了解
+18:43 T_O_W: 不过我不确认能抽出多少空 在学校上课不敢明目张胆
+18:43 T_O_W: 现在倒是希望有个请假的理由。。。
+18:44 varna: T_O_W: 你晚上睡觉的时间不是和你进度的紧张程度直接相关么……如果你的进度很紧张，按说也不该拿出时间来上网
+18:45 T_O_W: 查题间隙
+18:46 code_new joined channel
+18:46 varna: Mokou: 对了你有没有开了coda的存档……cc我实在不想走小春之外的路线了
+18:47 Mokou: 等會我找找
+18:47 varna: thx
+18:48 Mokou: 活動我等週末再打，這兩天不想動了
+18:48 varna: 今天田中巴福了一波，爽哥倒是过去了
+18:49 varna: 不过说起来，我想起个事啊
+18:49 varna: 学派现在帖子排版用的什么格式？
+18:49 varna: 最终输出成HTML?
+18:49 Mokou: Markdown或者Plain text
+18:49 Mokou: 對
+18:50 varna: MD太麻烦了，我正在考虑能不能换个自定义的简易排版法，方便草稿和版式分离
+18:50 varna: 不过本质上做不到
+18:50 Mokou: 大丈夫，render可以隨便加
+18:50 varna: 强求高大全，最后就是TeX
+18:50 Mokou: renderer*
+18:51 Mokou: 大不了弄上幾十個renderer擺在那，然後看看哪些沒人用
+18:51 varna: 呜呼呼
+18:51 varna: 开一下文件服务器跑个测试……
+18:52 Mokou: 我直接把存檔目錄打個包發給你？
+18:54 varna: ok
+18:59 Mokou: 我寫個water-mark物理內存分配器
+18:59 Mokou: http://pan.baidu.com/s/1hsfM8mw
+19:00 Mokou: varna: ^
+19:00 varna: thx
+19:00 varna: 已下
+19:00 Mokou: coda讓我成了堅定的雪菜黨
+19:03 T_O_W quit:Remote host closed the connection
+19:03 varna: 小春大法好
+19:10 varna: 现在我继续看coda只是为了看完剧情
+19:22 Mokou: 去吔飯
+19:24 code_new: E5咸鱼通关……
+19:24 code_new: 心好累
+19:32 dantmnf: _(:з」∠)_ dalao们都打到哪了
+19:33 code_new: 准备去E6精污_(:з」∠)_
+19:34 cc joined channel
+19:35 dantmnf: _(:з」∠)_ 我这种休闲玩家还是等攻略出来再打吧
+19:35 varna: 日，我刚修的bug怎么本地仓库比github仓库落后了一个版本，而且pull还提示我already up-to-date
+19:36 varna: 刚才定时器一阵疯狂抽搐，我想上午都修好了啊，一看代码才吓迷糊
+19:39 Mokou: ……
+19:42 Mokou: bochs能不能看調用棧的？
+19:42 varna: 忘了
+19:44 varna: 修好了
+19:44 varna: 也是够奇葩
+19:45 varna: 估计我改哪个配置文件的时候手一滑就:wa了
+19:46 Mokou: ……
+19:50 T_O_W joined channel
+19:50 Mokou: puuuuuuuuuu
+19:50 Mokou: GIMP導出的圖像好像不是RGB0順序……
+19:53 Mokou: http://picpaste.com/TEI7Hir9.png 猴慘
+19:54 T_O_W: 话说繁体什么鬼
+19:55 Mokou: 懶得切回來了
+19:55 T_O_W: .......
+20:00 T_O_W quit:Remote host closed the connection
+20:02 T_O_W joined channel
+20:07 cc: 现在vpn都被下架了，AppStore里。。。
+20:07 cc: 完全搜不到了
+20:13 wysaid quit:Remote host closed the connection
+20:14 Mokou: 噫，中間多了兩道東西……
+20:14 Mokou: http://picpaste.com/RDd6mCZM.png
+20:15 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+20:15 xxxxxxxx: 回来一看log里面有飙车的有开飞基的
+20:19 Mokou: 哦，不應該開trigraph……
+20:20 T_O_W quit:Ping timeout: 260 seconds
+20:25 iyzsong: (・・;) 去医院做了个测试，癔症+变态+哀弱指数大于两个标准差
+20:26 iyzsong: 可以去学lisp了..
+20:27 xxxxxxxx: 癔症 是不是无病呻吟的意思233
+20:34 iyzsong: http://www.apesk.com/mmpi/index_m.asp
+20:35 iyzsong: 就这个.. 
+20:37 Dove joined channel
+20:40 whocares_2 quit:Ping timeout: 276 seconds
+20:44 Mokou: http://ww1.sinaimg.cn/mw690/7caa3db9gw1f3kqyxa1t6j20fl0jr75e.jpg 田中我再信你一次
+20:44 xxxxxxxx: 什么鬼
+20:45 varna: 这个我也见到过
+20:45 xxxxxxxx: 这打到什么地方能这么高上伤害?
+20:45 varna: 打准了会瞬杀
+20:45 varna: 陆基航空队+航空支援
+20:45 varna: 对面是九百血的中枢姬
+20:45 Mokou: 我聽說E6沒有陸基航空隊？
+20:46 varna: 那就是航空支援
+20:46 varna: 有一些人说了这个事情
+20:46 varna: 也有认为舰爆比较好的
+20:46 Mokou: 我上個十六艦爆道中試試
+20:47 Mokou: 屎總得有人吔
+20:47 code_new: 感觉这是P图呢……
+20:47 Mokou: 不是
+20:48 code_new: boss左边的血条都没空
+20:48 Mokou: 回來之前我就在貼吧裏看到一個傷害八百多的
+20:48 Mokou: code_new: 但是中樞姬不是一直九百血麼
+20:48 whocares_2 joined channel
+20:49 code_new: 然而显示血量的数字右边还有红色的血条
+20:49 code_new: 按说炸死应该就直接变白了
+20:49 Mokou: ?
+20:49 Mokou: 爲什麼
+20:49 varna: 那不是斩杀
+20:50 cleamoon_: 卧操，1k+的伤害？
+20:50 Mokou: 這不是個前哨配置麼
+20:50 Mokou: 斬殺是480姬吧
+20:50 cleamoon_: 不过，除了这种情况，基本没法斩吧
+20:51 code_new: http://picpaste.com/2016-05-05-204624_98x74_scrot-iwbzg3XT.png
+20:51 varna: 基本上
+20:51 Mokou: 我配個航空道中支援
+20:51 code_new: 我说的这个
+20:51 varna: code_new: 那是演出中
+20:51 Mokou: code_new: 這不是動畫中麼
+20:51 varna: 血条不是一下扣完的
+20:51 code_new: 好吧
+20:52 Mokou: ……你平時不太看遊戲界面的？
+20:52 code_new: 没太注意演出中的血量变化……
+20:57 Mokou:  andy 邀请你回答 怎样对待那些可以跟你没有关系的人？ 
+20:57 Mokou: 這TM都是什麼……
+20:59 Mokou: “去喝酒路上看见有人过马路举着手机直播，然后被车挂倒了,起来还对镜头“谢谢大家！我没事！这是杂技！刷个礼物吧！”……”
+21:00 Mokou: http://ww4.sinaimg.cn/mw690/8faf3cccjw1f3kjr4sk9bj20hj2q57b9.jpg
+21:09 varna: Mokou: 对了，p7 wiki更新了第三节目前我能想到的部分
+21:10 wlemuel joined channel
+21:12 Mokou: 了解
+21:13 varna: 这部分也许对你有帮助，不过前提是你有闲心，而且五月份你没战死在北太平洋
+21:13 Mokou: _(:з」∠)_
+21:13 varna: 你的桶还够么
+21:13 Mokou: 六百三十七桶
+21:13 varna: 虽说我不可能帮你跑桶了
+21:13 Mokou: 我打打看
+21:14 Mokou: 嘛，接下來我有時間跑桶
+21:14 varna: 这回你打死的话就是真打死了，我帮不上你
+21:14 varna: 不过往下你闲的时间多，反正你不高考了？
+21:14 Mokou: +
+21:14 Mokou: 明天是我最後一天去學校
+21:15 varna: 跑了一下二十进程下载，感觉还不错；下行速度12MBps应该是我这个网卡的极限左右了
+21:15 xxxxxxxx: 5月3日，记者从遂宁市大英县警方获悉，一名青年男子为成“网络红人”，竟将聚会时的吸毒照片发到微信朋友圈中，以吸引朋友们点赞。此事被大英县公安局民警发现，并顺藤摸瓜抓获6名吸毒人员。目前，已有5人被警方处以行政拘留，另有一人因容留他人吸毒被处刑事拘留处罚。
+21:16 Mokou: 不過這次活動要是能打過的話，我覺得我該練一下江草神拳……
+21:16 iyzsong: (*´∀｀)
+21:16 varna: 江草神拳基本是高段位玩家的必需品
+21:16 varna: 不然我们讲道理，你怎么干88爷和撸改
+21:17 Mokou: 之前那個圖應該是十五隊江草
+21:17 varna: 99江草的好处是兼顾爆装和命中
+21:17 xxxxxxxx: 用大X?
+21:17 Mokou: 擼爺有大炮
+21:17 varna: 火力突破可以，但即使我自己的支援也没法说能把撸改干成什么样子
+21:17 varna: 打残和擦边一半一半吧
+21:18 Mokou: 然而卵用
+21:18 Mokou: 出門那一堆脆皮都炸不死……
+21:18 Mokou: 另外我說個笑話
+21:18 Mokou: 神風和睦月一個消耗
+21:19 varna: 说起来我问个经验性的事啊
+21:20 varna: 随处可见的廉价LAN配置上，百兆网卡的实际带宽能到多少呢
+21:20 * Mokou 只有wifi用
+21:20 varna: 啊我撸多了
+21:20 varna: 100Mbps
+21:20 varna: 那我应该差不多把速度榨出来了
+21:20 Mokou: OTL
+21:21 Mokou: 航空支援這完全卵用啊
+21:21 Mokou: buff個咭咭
+21:21 varna: 内存用量似乎是安定的，刷了几波20并发55+MB的下载，虚拟空间从80.6MB涨到了81.4MB
+21:21 varna: 物理大约翻了一番，1.3MB到2.5MB
+21:22 cleamoon_: orz
+21:22 varna: 峰值感觉如RJ
+21:22 Mokou: 那珂醬
+21:22 Mokou: 群爹好
+21:23 cleamoon_: 难道实际都要这么微调吗
+21:23 varna: 看起来还可以，我不用换Plan B
+21:23 Mokou: 炸群爹效果倒是不錯
+21:23 Mokou: 毛神用瑞雲幹掉一個，航空支援幹掉三個
+21:23 varna: cleamoon_: 即使我用libevent这种现成的东西，我也不用这么测试；然而我现在用的是p7...
+21:24 cleamoon_: orz
+21:24 varna: 测试客户端用C写的，因为在本地运行，为了减少干扰，只读进内存、不写硬盘（写硬盘的测试单独做了）
+21:24 Mokou: 我突然有個腦洞
+21:24 Mokou: position-independent stack
+21:24 varna: 中转前端是p7，每连接一个agent, 同时维持一个全局的agent用作上游路由
+21:24 varna: 后端是FastDFS
+21:25 cleamoon_: orz
+21:25 varna: 目前运行在一台开了512MB的CentOS 6.7上
+21:25 varna: 512MB主存
+21:25 varna: 至于为何是512，这个其实是糖果下午调完之后我懒得改了
+21:25 varna: 原来是4GB
+21:26 cleamoon_: orz
+21:26 varna: cleamoon_: 另外广告 https://github.com/Akvelog/servcraft/wiki/p7-introduction---%E4%B8%AD%E6%96%87%E9%A1%B5%E9%9D%A2
+21:27 varna: 岚月酱也可以试着耍耍
+21:27 cleamoon_: 关键是，我用在哪里....
+21:28 varna: 科学计算用不上这种倒是确实的
+21:28 Mokou: http://picpaste.com/cicw9bC6.jpg 說好的核彈呢
+21:28 cleamoon_: 不会用是真的
+21:29 varna: 这东西是看起来让并发变得简便易行的用户级线程实现，当你用它编写网络服务器之后就会觉得事件驱动框架是多么[哔]美好
+21:29 Mokou: 噗
+21:29 Mokou: 潛艇點我點了單縱
+21:29 varna: 再见……
+21:29 Mokou: T有利……
+21:29 Mokou: 打個雞巴
+21:29 varna: 要黄了
+21:29 varna: 摆明吃雷节奏，祈祷吧
+21:29 Mokou: 兩發
+21:30 Mokou: 閃過去了
+21:30 cleamoon_: 天朝写很多服务器吗？
+21:30 Mokou: kurimanko好樣的
+21:30 varna: 不多，更多的岗位是要求后端业务开发
+21:30 varna: 跟数据库之类的东西打交道，实现业务逻辑这些
+21:31 varna: 真正开发到这个层次要冒风险
+21:31 cleamoon_: soga
+21:31 varna: 所以现在不少搞后端的人给的钱其实比前端少
+21:32 varna: 因为前端开发的需求量更大
+21:32 varna: 诚然学前端的人很多，但是渣太多了
+21:32 Mokou: 莉醬一發送回家
+21:32 cleamoon_: @日本程序员
+21:32 varna: 至于角川程序员
+21:32 varna: 我不客气地说，太烂了
+21:32 varna: 他们给游戏添加活动数据都能把数据库搞坏
+21:33 varna: 5.2晚上他们是在进行数据还原作业
+21:34 cleamoon_: 噗
+21:34 cleamoon_: 这怎么做到的
+21:35 varna: 不知道
+21:35 varna: 他们总能弄坏数据库
+21:35 Mokou: 今天晚上就這樣，我刷點閃
+21:35 varna: 以前发小礼盒，最后其实也没弄对
+21:36 varna: 不过田中似乎终于把数值设定转过弯来了，他设定了一个对空值一个迎击值
+21:36 varna: 也就是说，他开始区分制空战斗机和截击机
+21:36 varna: 我觉得这个思路可以引入SK4，不过数值不知道怎么做好
+21:37 varna: 现在SK4的攻性计算基本是权衡空速和2G扭转的
+21:37 Mokou: 要不然你找點歷史資料擬合一下？
+21:37 varna: 最近我蛋碎，总之有机会就留心一下
+21:38 Mokou: 不過知乎上似乎也有伸手黨啊
+21:38 Mokou: https://www.zhihu.com/question/44963319 比如這個
+21:38 varna: 这个比装逼党清新多了
+21:38 cleamoon_: 这么改了不更难了
+21:39 varna: 这些都不是问题
+21:39 varna: 问题是(｡･ω･)姬姬姬姬姬姬。
+21:39 varna: 即使这回我没弃坑、拼死打过去了，觉得很武勋，还有下次呢
+21:40 varna: 一年四个甲作战，我的肝脏会缩得比胆囊还小
+21:40 varna: 提前十年去舰马克思都可能
+21:41 hoxily joined channel
+21:41 varna: 而且往下打也无非是米鬼的英畜的什么东西……随他去吧
+21:41 CyrusYzGTt joined channel
+21:41 cleamoon_: 是姬比较厉害还是鬼比较厉害
+21:42 Mokou: 看是什麼鬼
+21:42 varna: 完全的同类舰都是鬼<姬
+21:42 cleamoon_: 万一出现了脑畜的呢
+21:42 cleamoon_: soga
+21:42 varna: 不过水鬼不是鬼
+21:42 Mokou: +
+21:42 Mokou: 我就是說這個
+21:42 cleamoon_: soga
+21:43 varna: 念起来都一样吧？这里的鬼应该不念oni
+21:43 hoxily quit:Client Quit
+21:43 varna: cleamoon_: 不虚，佛莱彻级几百舰呢，田中要续命可以拼命续
+21:43 varna: 米畜打仗打出优势之后做的事情就是爆军备……
+21:44 Mokou: 念き
+21:44 Mokou: 水鬼->すいき
+21:44 varna: ki的话就是一样了，姬也是吧
+21:44 wlemuel quit:Ping timeout: 240 seconds
+21:45 cleamoon_: 不应该优势换家吗
+21:45 varna: 只是把老家厂顺手开到日本了而已
+21:45 Mokou: 姬也是
+21:45 varna: 本格地乱矿
+21:45 hoxily joined channel
+21:45 Mokou: 美帝還需要換家麼
+21:46 Mokou: 直接十個MCV拍下來
+21:46 varna: 今天中午复习了一个古老的视频：鼠大王教你艹pis
+21:46 Mokou: 你打個咭咭
+21:46 cleamoon_: 对了，毒奶之前去参加一个线下国宗见面会，拿着笔记本用人族干了三天，一场没输...... 我对中国星际基本已经放弃了
+21:46 varna: 跟单车武士被杀崩一样好玩
+21:46 varna: ……宗师不是很厉害么？
+21:46 varna: 为何国手后继无人了
+21:49 cleamoon_: 现在似乎就一个15岁的小将了
+21:49 varna: ...
+21:49 cleamoon_: 但是年纪太小，没谱之后会怎么样
+21:49 varna: 十五岁的年轻人，现在谁去拼死搞电竞啊
+21:49 varna: 又不是以前sky他们那个年代的人
+21:50 cleamoon_: 现在就一个嘛
+21:50 varna: 即使那时候的电竞选手，也是一山废柴里出一个sky
+21:50 cleamoon_: +
+21:50 varna: 根本混不出道
+21:50 varna: 而且混不出就死了
+21:50 varna: 电竞半职业正常，但毒奶杀翻一片宗师简直……
+21:50 cleamoon_: 毒奶人族都打不过有点过了
+21:51 cleamoon_: 于是想起91的话，中国电竞圈练习最刻苦的，就是毒奶了....
+21:56 cc joined channel
+22:00 hoxily quit:Quit: Leaving
+22:02 Mokou: 說起來你們怎麼寫“武”字的
+22:03 hoxily joined channel
+22:04 Mokou: http://ww4.sinaimg.cn/mw690/68186f49gw1f3kmpw48cqj207o06vt9o.jpg 
+22:04 Mokou: “Ｅ６确认吊打模式 支援舰队 ４航母２ＤＤ 全部红飞机”
+22:04 varna: 武……外->内、左->右的典型笔顺
+22:05 varna: Mokou: 这位我记得刁了
+22:05 varna: 下午我听说一个支援826刁了的，不知是不是他
+22:05 Mokou: 刁了
+22:05 Mokou: 應該就是他
+22:05 varna: 哈哈哈
+22:05 Mokou: 不過至少有點希望了
+22:05 Mokou: 之前那張圖你跟我講能打，我是不信的
+22:05 varna: 恶心透顶，所以至今我不后悔
+22:06 Mokou: 所以你看以前拆野分的時候我勸你半天，這次我一句話都沒說
+22:06 Mokou: 要不是信濃我會比你提前一天刪號
+22:06 varna: 野分也怪可怜，最后Lv35
+22:07 Mokou: 野分遠征到了五十多級……
+22:10 wlemuel joined channel
+22:11 Mokou: 進Boss了
+22:11 Mokou: 結論：E2必須刷閃
+22:12 Mokou: 啊，長者……
+22:12 Mokou: 米空一發115
+22:12 varna: E2是长者/小炮随机？
+22:12 Mokou: +
+22:12 varna: 麻烦
+22:12 varna: 不如都打长者
+22:13 Mokou: 對
+22:13 varna: 一次还多点血
+22:13 Mokou: 所以都祈禱長者
+22:13 Mokou: 長者兩次進斬殺，小炮十二次
+22:13 varna: 233333333333333333
+22:13 Mokou: 米空一個二連秒了四百血的長者……
+22:13 Mokou: 進斬殺了
+22:14 varna: 长者六百血都能被直接崩飞的，相信米空
+22:14 Mokou: 米空威武
+22:14 Mokou: 米空米空米
+22:14 * varna 多么痛的领悟
+22:14 Mokou: 今天到此爲止
+22:14 Mokou: 明天給支援刷刷閃再上
+22:14 varna: 感觉你这次能跑桶就有戏
+22:15 varna: 虽然可能打得弹尽粮绝
+22:15 Mokou: +
+22:15 Mokou: 當然再來個金鐘罩我也沒辦法……
+22:15 varna: 那就认了
+22:15 varna: 现在的舰C已经不是以前川内都能搞死院长的时代
+22:16 varna: 应该说不允许玩家指挥作战和对战的游戏肯定会无限制膨胀的……
+22:16 Mokou: 之前老蘇跟我說他發現這次就是BSP美軍最後一關……
+22:16 varna: DMM最近那个战国姬就比较聪明，每天定时安排玩家对战，这样容易让人找点乐趣
+22:16 Mokou: 一個艦隊打三個陸基，打完肛大和
+22:17 varna: 那关大和出现的时候基本会被轮的
+22:17 Mokou: 神姬也比較聰明，定時幹玩家
+22:17 varna: 战舰摆对位置，照着往死里打
+22:17 varna: BSP还有自动瞄准呢，手软都不虚
+22:17 Mokou: 他跟我說完以後我就一句話：那你倒是讓我選打誰啊
+22:17 varna: 不像BSM, 大和一出场先废了第一炮塔
+22:17 Mokou: 我四條一百二十級的大戰艦還轟不死麼
+22:18 varna: 对面十几个舰攻舰爆呜呜过来，我扭得意识模糊
+22:18 varna: 所以将来有空先把SK4脚本做一下，现在有关水面战-航空战的联动问题，我有点打算让裁判指定依赖
+22:19 Mokou: 你把那玩意扔mizuho上吧
+22:19 varna: 我还没想好，但航空回合是可以插进炮雷击战回合的，然后按照eta结算就行
+22:19 varna: 不过其实麻烦的都不是这里
+22:19 varna: 是可通行地形的问题
+22:20 Mokou: 你弄個bitmap？
+22:20 varna: 也许要求提供一个bitmap或者alpha通道
+22:20 Mokou: 比如說寫個gimp插件，將選區作爲可通行區域導出到一個單獨的bitmap文件
+22:20 varna: 总之我也不提供任何意义上的选路
+22:20 varna: 不，我以后不打算用gimp了
+22:21 varna: 最好能渲染出简单的图标和地图来
+22:21 Mokou: gimp只是生成數據文件用的
+22:21 Mokou: 換別的或者自己寫都行
+22:21 varna: 那应该都不用
+22:21 varna: 直接导出图形格式，然后看怎么解析
+22:21 Mokou: 處理圖形容易扯着蛋
+22:21 Mokou: 這幾天我就這感想
+22:21 varna: 那也不用插件了
+22:21 varna: 直接手工二值化……
+22:22 varna: 好歹我也有把AV女优的脸安到别人脖子上程度的能力
+22:23 lh_mouse: [22:18:56] <varna> 好歹我也有把AV女优的脸安到别人脖子上程度的能力
+22:23 Mokou: OTL
+22:23 Mokou: 畢竟羊駝，非人哉
+22:24 Mokou: 二摸我還作了個超級大死
+22:24 varna: 你在答题卡上涂了一个SB？
+22:24 Mokou: 我寫了八百字文言文，交上去了
+22:24 stardust quit:Quit: Connection closed for inactivity
+22:24 cleamoon_: orz
+22:25 varna: 推 荐 资 格 取 消 教 导 主 任 激 怒 一 转 攻 势 雷 霆 万 钧 小 春 大 法 不 可 避
+22:25 Mokou: 白 學 混 入 污 穢 不 堪 風 評 被 害 一 轉 攻 勢 被 打 死 不 可 避
+22:26 varna: 对了我偷个懒，WA2存档在哪
+22:26 varna: pwd?
+22:26 Mokou: 你看看home下有沒有個Leaf/
+22:26 varna: pwd/save 这里吧
+22:26 varna: 哦不对
+22:26 varna: 那是我建的
+22:26 Mokou: 233333
+22:27 varna: 有
+22:27 varna: 看到存档了
+22:27 Mokou: 就那裏面
+22:27 varna: 重要的是Sys.sav?
+22:27 varna: 其余只是单纯的进度吧
+22:27 Mokou: 應該是，不過我建議你備份下
+22:27 varna: ok
+22:27 Mokou: 我沒打其他線，CG可能會丟
+22:27 varna: CG我不在乎
+22:27 varna: IC和CC小春线我会看很多次的
+22:28 Mokou: @桶子
+22:28 varna: 简直太赞
+22:28 Mokou: 我還是喜歡coda雪菜
+22:28 varna: 完全不桶，现在我穿上外出的衣服加上鞋也就61+kg...
+22:29 varna: 并不理解他们为何说CC雪菜心机
+22:29 Mokou: 不，我是說桶子每次斷電都想幹掉岡倫……
+22:29 Mokou: 不理解+
+22:29 varna: 雪菜想那些事情还挺诚实的
+22:29 Mokou: http://picpaste.com/GZgd9HW5.jpg 武字我現在這麼寫
+22:29 varna: 只不过多数人意识不到
+22:29 Mokou: 桌子不平，將就着看吧……
+22:31 Mokou: http://ww2.sinaimg.cn/mw690/75a833f4jw1f3kt4qwipyj20dc0nqt95.jpg
+22:31 Mokou: http://ww3.sinaimg.cn/mw690/75a833f4jw1f3kt4r5x1gj20n90n9q8m.jpg http://ww3.sinaimg.cn/mw690/75a833f4jw1f3kt4rcl53j20hm0hnjsp.jpg 續
+22:31 cc: varna 实在叫我么
+22:32 cc: 我怎么雪菜心机了。。。
+22:32 * cc 委屈
+22:32 Mokou: 哈哈哈哈哈
+22:32 Mokou: 強行對號入座
+22:32 cc: \(^o^)/~
+22:33 varna: http://picpaste.com/1Ba30Yl6.jpg 字小像素渣……
+22:34 Mokou: 沒看清，你的戈勾穿不穿過最上面的一橫的？
+22:36 varna: 不穿过
+22:36 Mokou: 我現在換了個裝逼的寫法
+22:36 varna: 我那一横写得像点
+22:36 Mokou: 武字直接隸定過來其實是應該穿過的
+22:36 varna: 不过写实的时候我会写得像実
+22:37 varna: 两点会长些
+22:37 Mokou: 上面是個戈
+22:37 Mokou: _(:з」∠)_實我用標準寫法
+22:38 Mokou: 噫
+22:38 Mokou: 微米黑這都糊成一片了
+22:38 cleamoon_: orz
+22:38 cleamoon_: 写字真好看
+22:38 Mokou: 羊駝子畢竟文青
+22:38 varna: 多数我写简体字，应该只有两个例外：魚因为写四点底好写，遊在不涉及游泳的时候用走之
+22:39 cleamoon_: orz
+22:39 Mokou: 簡體字+
+22:39 cleamoon_: 23333
+22:39 varna: 游泳的话，毕竟可能不知所措、被水淹没、不断提前强制掉练度
+22:39 Mokou: 我現在打繁體主要是想熟悉一下那些被簡體合併掉的字
+22:40 varna: 现在我的观点是有些合并算是钦定通假了
+22:40 varna: 比如面
+22:40 Mokou: +
+22:40 varna: 而中国人通假的水平毕竟比日本人好
+22:40 varna: “连合舰队”——看上去就土包子
+22:40 Mokou: 不過有些沒道理啊
+22:41 Mokou: 比如鬱
+22:41 varna: 所以电令里都只好装逼写成GF = Grand Fleet
+22:41 varna: 忧郁的……
+22:41 varna: 大丈夫，你想中国人写了多长时间的龙颜大说
+22:41 Mokou: 鬱被繁化了，你把金文隸定過來沒這麼恐怖
+22:43 Mokou: 聖人攻七圖首戰即捷龍顏大說
+22:43 varna: 仿佛看见了天国的……马桶圈
+22:44 Mokou: 後三中道而返，遂崩
+22:44 lh_mouse: http://img.vim-cn.com/d2/34ff79e3955f0f8977003c659decc896fd00e2.png
+22:44 lh_mouse: varna, ^
+22:44 varna: “后道中返而走者三，崩”
+22:45 varna: 而去掉也行
+22:45 varna: 耗以前帖自己手写的时候感觉圆鼓鼓……
+22:46 varna: 这个瘦些
+22:46 Mokou: 看了感覺真可憐
+22:46 Mokou: 我準備先練小篆
+22:46 varna: 我准备先舔小春
+22:46 Mokou: 似乎有人建議從小篆練起
+22:46 varna: 小春是白学的唯一救赎
+22:46 Mokou: 理由是小篆更吃功底
+22:46 stardust joined channel
+22:46 Mokou: 你這叛徒
+22:46 Mokou: 快讓我中出
+22:47 varna: 其实我至今功底不行
+22:47 * Mokou 功底太渣
+22:47 varna: 小春中间那个电话粥桥段太真，我整个人都惊悚了
+22:47 Mokou: 小篆要求線條均勻轉角平穩
+22:47 Mokou: 容錯性比楷書低太多
+22:47 varna: +
+22:48 cleamoon_: 练楷体呀
+22:48 varna: 所以练楷书的人上来会被教导说写大字
+22:48 varna: 楷书字大才见缺点
+22:48 Mokou: 所以我打算先把小篆練到能裝逼的程度再去學楷書……
+22:48 cleamoon_: soga
+22:48 cleamoon_: 装比写草书
+22:48 varna: 但我是描红未半中道衮粗那种
+22:48 cleamoon_: 就说毛体
+22:49 varna: 毛体是个体，真不好练的……
+22:49 Mokou: 草書是用來寫草書的
+22:49 Mokou: 不容易被人偷看
+22:50 varna: 书是谁？
+22:50 Mokou: 你找一個
+22:50 varna: 找不到，我也想再找个JK啊！
+22:51 Mokou: 你再去上個廁所
+22:51 varna: 也许哪天我真写了北原为一、城岛和纱、小木村雪菜的故事，就能骗到少女心了
+22:51 cleamoon_: 换成女装
+22:51 Mokou: http://picpaste.com/Fbl0HsJ1.jpg 唐人的武字就是我現在這寫法
+22:51 Mokou: 寫寫寫
+22:51 varna: 你这胡人
+22:51 Mokou: 對了我有個腦洞
+22:52 Mokou: 大夏艦隊
+22:52 varna: ...
+22:52 cleamoon_: 噗
+22:52 varna: 不过看到这些书家的东西，总觉得现在的书法有点走偏
+22:52 cleamoon_: 竹筏吗
+22:52 Mokou: varna: 別說，按照姓氏看我家祖還真是胡人……
+22:52 varna: 你看以前好的字，多数都是先有文章，写下来才成了名帖
+22:53 varna: 结果现在书法为了求生存只好变成偶像……
+22:53 Mokou: 現在光寫字而無視了內容麼
+22:53 varna: 现在没办法
+22:53 cleamoon_: 都是偶像
+22:53 cleamoon_: 姓氏可以推断祖先吗？
+22:53 varna: 以前是硬性要求，字怂估计考试都会被一棍子打死吧
+22:53 Mokou: 估計是
+22:53 varna: 现在无所谓了，书法也就没多少生存余地了
+22:53 Mokou: cleamoon_: 姓氏和祖籍
+22:54 varna: 先撤
+22:54 varna: 武运
+22:54 cleamoon_: soga
+22:54 varna quit:Quit: leaving
+22:54 cleamoon_: 写字好看还是有用的
+22:55 Mokou: 自己看着舒服
+22:56 cleamoon_: +
+22:56 cleamoon_: 不过我还是更希望写的快
+22:56 Mokou: 寫得快和寫得好其實不矛盾吧
+22:56 Mokou: 不過功夫要求高就是了……
+22:57 cleamoon_: 非常快的话就矛盾了，比如接近思考速度的写字
+22:57 Mokou: _(:з」∠)_
+22:57 Mokou: 寫完再抄一遍
+23:00 cleamoon_: .......
+23:00 cleamoon_: 我倒是很想用速记的方法
+23:01 cleamoon_: 不过不知道会不会占用太多大脑
+23:02 Mokou: 速記是記音吧
+23:03 cleamoon_: 不知道
+23:03 cleamoon_: 我看到过很多鬼画符一样的东西
+23:03 Mokou: _(:з」∠)_
+23:04 cleamoon_: 就类似这种的.......
+23:05 Mokou: 我記得速記應該是以記音爲主
+23:05 cleamoon_: soga
+23:05 cleamoon_: 那难道不会更慢吗
+23:06 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+23:06 Mokou: 記音才快吧
+23:07 Mokou: 不然你還要花時間確定是哪個字
+23:17 Youmu joined channel
+23:20 guowang quit:Ping timeout: 276 seconds
+23:25 cleamoon_: 也是
+23:25 cleamoon_: 不过，记音不快的，记者才快呢
+23:26 Mokou: 但記者還需要學習一個
+23:39 cleamoon_: 学习闷声跑得快
+23:39 Dove quit:Read error: Connection reset by peer
+23:44 Mokou: 先睡
+23:44 Mokou: 諸君武運
+23:44 Mokou quit:Quit: 睡覺
+23:52 T_O_W joined channel
+23:52 T_O_W quit:Remote host closed the connection
+23:55 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160503215307]

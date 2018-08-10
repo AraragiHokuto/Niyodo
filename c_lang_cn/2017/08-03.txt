@@ -1,0 +1,121 @@
+00:00 lhanjian: 近战无名被秒杀
+00:05 xhe quit:Quit: leaving
+00:09 whocares_2 quit:Ping timeout: 268 seconds
+00:10 whocares_2 joined channel
+00:10 varna: 试试把加斯科因切了
+00:13 varna: P2无限失误……
+00:13 varna: 真鸡儿丢人
+00:13 varna: 不到两分钟切了
+00:19 lh_mouse quit:Ping timeout: 248 seconds
+01:44 varna quit:Ping timeout: 240 seconds
+02:31 Mokou quit:Remote host closed the connection
+04:16 Youmu quit:Quit: Connection closed for inactivity
+07:18 Mokou joined channel
+07:54 FrankHB joined channel
+08:15 FrankHB quit:Ping timeout: 240 seconds
+08:35 FrankHB joined channel
+09:12 http_GK1wmSU joined channel
+09:19 yimis joined channel
+09:19 yimis quit:Client Quit
+09:42 Youmu joined channel
+09:50 xhe joined channel
+09:50 cleamooooon joined channel
+09:50 Mokou quit:Ping timeout: 240 seconds
+09:56 blind_one quit:Quit: WeeChat 1.9
+09:59 xhe quit:Ping timeout: 240 seconds
+10:01 xhe joined channel
+10:06 xhe quit:Ping timeout: 276 seconds
+10:46 lh_mouse joined channel
+11:03 lh_mouse: geordi, { int a = 3; cout <<sizeof(int [a]); }
+11:03 geordi: error: ISO C++ forbids variable length array
+11:03 lh_mouse: geordi, { int a = 3; cout <<sizeof(__extension__ int [a]); }
+11:03 geordi: error: expected primary-expression before 'int'
+11:03 lh_mouse: geordi, { int a = 3; cout <<__extension__ sizeof(int [a]); }
+11:03 geordi: 12
+11:42 ptheus joined channel
+11:47 lh_mouse quit:Read error: Connection reset by peer
+11:58 jack_ joined channel
+12:02 jack_: nihao
+12:03 cleamooooon: hello
+12:12 lh_mouse joined channel
+12:16 jack_: 有人吗
+13:08 Guest37802 joined channel
+13:11 dsj4oi32 joined channel
+13:25 jingjinghack joined channel
+13:27 dsj4oi32 joined channel
+13:28 dsj4oi32: :)
+13:31 Guest37802 quit:Quit: Guest37802
+13:32 Guest37802 joined channel
+13:46 Guest37802 quit:Quit: Guest37802
+13:46 Guest37802 joined channel
+13:48 ptheus quit:Quit: Konversation terminated!
+13:55 FrankHB quit:Read error: Connection reset by peer
+13:56 FrankHB joined channel
+14:00 qwertylevel3 joined channel
+14:05 blind_one joined channel
+14:19 abcad joined channel
+14:24 abcad quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+14:32 Guest37802 quit:Quit: Guest37802
+14:32 Guest37802 joined channel
+14:36 StardustX joined channel
+15:09 lh_mouse: geordi, { foo f; cout <<use(f); } class foo { int a = 1; }; void use(foo &f){ return f.a; }
+15:09 geordi: error: 'int foo::a' is private within this context
+15:09 lh_mouse: geordi, { foo f; cout <<use(f); } class foo { int a = 1; }; template<typename T> void use(T &f){ return f.a; }
+15:09 geordi: error: no match for 'operator<<' in 'cout << use<foo>(f)' (operand types are 'ostream {aka ostream}' and 'void')
+15:09 lh_mouse: geordi, { foo f; cout <<use(f); } class foo { int a = 1; }; template<typename T> int use(T &f){ return f.a; }
+15:09 geordi: error: 'int foo::a' is private within this context
+15:10 lh_mouse: geordi, --clang { foo f; cout <<use(f); } class foo { int a = 1; }; template<typename T> int use(T &f){ return f.a; }
+15:10 geordi: error: 'a' is a private member of 'foo'
+15:31 Guest37802 quit:Quit: Guest37802
+15:32 Guest37802 joined channel
+15:34 B005ter joined channel
+15:46 Guest37802 quit:Quit: Guest37802
+15:46 Guest37802 joined channel
+15:46 B005ter_ joined channel
+15:47 B005ter quit:Read error: Connection reset by peer
+15:49 B005ter_ quit:Read error: Connection reset by peer
+15:50 B005ter_ joined channel
+15:57 B005ter_ quit:Ping timeout: 276 seconds
+16:05 dsj4oi32 quit:Quit: Leaving.
+16:46 Guest37802 quit:Quit: Guest37802
+16:46 Guest37802 joined channel
+17:00 pottery joined channel
+17:02 yinlenc joined channel
+17:03 yinlenc quit:Client Quit
+17:05 pottery quit:Quit: pottery
+17:07 jack_ quit:Ping timeout: 255 seconds
+17:20 jack_ joined channel
+17:36 Stevearzh quit:Read error: Connection reset by peer
+17:37 Stevearzh joined channel
+18:08 FrankHB quit:Ping timeout: 240 seconds
+18:23 Guest37802 quit:Ping timeout: 240 seconds
+18:24 l0nGYear joined channel
+19:07 FrankHB joined channel
+19:30 iyzsong joined channel
+20:06 l0nGYear quit:Read error: Connection reset by peer
+20:06 l0ngyear joined channel
+20:10 l0ngyear quit:Client Quit
+20:17 iyzsong: (┙>∧<)┙へ┻┻
+20:22 dnha123 joined channel
+20:25 iyzsong quit:Read error: Connection reset by peer
+20:27 iyzsong joined channel
+21:12 Mokou joined channel
+21:26 skgdjkdfjsk joined channel
+21:28 skgdjkdfjsk is now known as farkerbiong
+21:32 FrankHB quit:Ping timeout: 240 seconds
+21:39 StardustX quit:Quit: Leaving.
+21:41 jingjinghack quit:Remote host closed the connection
+21:58 farkerbiong is now known as fakerbiong
+22:31 dnha123 quit:Quit: Connection closed for inactivity
+22:49 iyzsong quit:Ping timeout: 240 seconds
+22:50 thinkpad_ joined channel
+22:52 thinkpad_ is now known as l0nGYear
+22:59 jin7boy joined channel
+23:01 io__ joined channel
+23:02 jin7boy quit:Client Quit
+23:02 jin7boy joined channel
+23:04 l0nGYear quit:Quit: l0nGYear
+23:07 l0n joined channel
+23:09 l0n is now known as l0nGYear
+23:34 cleamooooon quit:Quit: Connection closed for inactivity
+23:59 jin7boy quit:Remote host closed the connection

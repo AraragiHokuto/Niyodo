@@ -1,0 +1,881 @@
+00:13 lh_mouse quit:Read error: Connection reset by peer
+00:24 ianma joined channel
+00:25 Meow-J joined channel
+00:26 hatelis joined channel
+00:38 blackskygg_ quit:Quit: blackskygg_
+00:50 ianma quit:Remote host closed the connection
+01:13 hatlist joined channel
+01:15 hatlist: cleamoon_: 这个点绅士肯定在
+01:15 cleamoon_: hatlist, 爆
+01:15 hatlist: 这绅士，迟早变基佬
+01:18 cleamoon_: 爆伪娘的不是基佬
+01:20 hatlist: 那是啥
+01:24 cleamoon_: 是绅士
+01:24 cleamoon_: 而且都不否定伪娘了，赶紧吃药吧
+01:28 hatlist: 不吃药我也能当伪娘！
+01:29 hatlist: 话说绅士还有其他社交网络么，感觉迟早药丸。telegram什么的
+01:31 cleamoon_ quit:Ping timeout: 245 seconds
+01:32 cleamoon_ joined channel
+01:34 cleamoon__ joined channel
+01:37 cleamoon_ quit:Ping timeout: 245 seconds
+01:41 FrankHB quit:Ping timeout: 276 seconds
+01:43 yzld2002 quit:Ping timeout: 240 seconds
+01:46 yzld2002 joined channel
+01:50 hatelis quit:Quit: Leaving
+01:50 cleamoon__ quit:Ping timeout: 245 seconds
+01:59 whatofor_1 quit:Read error: Connection reset by peer
+02:00 whatofor_1 joined channel
+02:02 xxxxxxxx joined channel
+02:20 Youmu joined channel
+03:10 xxxxxxxx quit:Ping timeout: 260 seconds
+03:31 hoxily quit:Read error: Connection reset by peer
+03:51 ianma joined channel
+03:56 ianma quit:Ping timeout: 264 seconds
+04:11 hatlist quit:Quit: Connection closed for inactivity
+05:16 Youmu quit:Quit: Connection closed for inactivity
+05:46 Meow-J quit:Quit: Connection closed for inactivity
+06:40 ianma joined channel
+06:41 ianma quit:Remote host closed the connection
+07:02 ianma joined channel
+07:51 hoxily joined channel
+08:05 ianma quit:Ping timeout: 260 seconds
+08:05 ianma_ joined channel
+08:08 ianma_ quit:Remote host closed the connection
+08:59 tutu joined channel
+08:59 tutu is now known as tutu_wind
+09:00 tutu_wind: morning ~
+09:00 iyzsong: M M
+09:01 tutu_wind: iyzsong: 今天起来迟了。。。
+09:02 iyzsong: 支持一个 :o
+09:03 tutu_wind: 喵～
+09:16 hatlist joined channel
+09:18 tutu_wind: hatlist: 摸摸头～
+09:18 hatlist: 早
+09:19 tutu_wind: ^o^
+09:21 lh_mouse joined channel
+09:46 orzwty joined channel
+10:03 hatelis joined channel
+10:27 orzwty joined channel
+10:57 lh_mouse: geordi, << sizeof(aligned_union<123,char,double,long>)
+10:57 geordi: 1
+10:58 lh_mouse: geordi, replace union with union_t
+10:58 geordi: 128
+10:58 lh_mouse: geordi, s/_t//
+10:58 geordi: error: 's' does not name a type
+11:04 hatelis: lh_mouse, 话说skiplist比较适合什么场景？
+11:06 lh_mouse: hatelis, 不熟。
+11:06 hatelis: 嗯
+11:06 tutu_wind: hatelis: http://www.tuicool.com/articles/J7rQRb
+11:08 hatelis: tutu_wind, 这类算法的描述不太能回答我的问题。
+11:08 tutu_wind: 额，适用场景啊。。。 这个是介绍skiplist的
+11:08 tutu_wind: hatelis: 请无视 。。。
+11:28 tutu_wind: lh_mouse: 小耗，波塞冬的日志量应该不是很大吧喵？
+11:34 lh_mouse: ？
+11:35 tutu_wind: lh_mouse:  日志类就是 log.hpp 和 log.cpp 两个文件 ？
+11:38 xxxxxxxx joined channel
+11:38 lh_mouse: tutu_wind, 你试试就知道了。
+11:40 tutu_wind: 喵～
+11:45 Mokou joined channel
+11:51 hatlist quit:Quit: Connection closed for inactivity
+11:53 orzwty quit:Quit: -a- Android IRC 2.1.3
+11:56 iyzsong: hatelis: skiplist略难懂啊，快去formalize一下 :o
+11:56 hatelis: iyzsong, formalize?
+11:59 iyzsong: 用coq之类的形式化一下复杂度..
+11:59 hatelis quit:Quit: Leaving
+11:59 * iyzsong 去造点饭来吃 - -
+12:00 hatelis joined channel
+12:00 hatelis: iyzsong, -_-
+12:37 ring joined channel
+12:41 ring quit:Remote host closed the connection
+12:42 ring joined channel
+12:44 ring quit:Remote host closed the connection
+12:45 ring joined channel
+12:52 ring quit:Quit: Bye
+13:14 Nickname_ joined channel
+14:09 hoxily quit:Quit: WeeChat 1.3
+14:16 varna joined channel
+14:19 varna: (｡･ω･)ﾉ复活啦
+14:21 hatelis: varna, 这基佬
+14:21 hatelis: varna, 不对，这线虫
+14:22 varna: 完全不现充
+14:24 iyzsong: ^和丧失
+14:24 varna: 那几个研一的伙计比我现充多了
+14:25 varna: “师兄没去开会啊，嗯其实我也没去，就听说他们有一些人留在实验室写申请书，写到29号”
+14:25 varna: “对，我现在就留在这里写”
+14:25 varna: ^ 我那天打电话的乐子
+14:25 iyzsong: 2333
+14:25 hatelis: 没看懂……
+14:26 varna: 被我电话找到的伙计已经回家玩儿去了
+14:26 varna: 然后告诉我“有人写呢，放心”
+14:27 iyzsong: 今天就29号了呀
+14:28 varna: 我交稿其实是27号
+14:28 varna: 这次我不负责审稿+统稿，轻松一些
+14:28 varna: 而且今天其实是导师那边要初稿的deadline
+14:29 varna: 我看了看一个跑路的伙计写的项目研究意义，太差了，肯定要重写的
+14:29 iyzsong: orz
+14:29 varna: 其他人交上去了多少我也不清楚，总之我3号上午走
+14:29 varna: 然后看看没特别情况就早点回来，有需要我的场合就顶上去帮帮
+14:30 iyzsong: 真是劳模师兄  拜一个~
+14:30 tutu_wind: varna: 羊驼子也会去那么晚～
+14:31 tutu_wind: s/会/回/
+14:31 varna: 我读研究生之后一般按两周到三周给自己安排假期
+14:31 hatelis: 羊驼子感觉好早以前就顶大梁了
+14:31 varna: 反正我回家除了跟家里人聊天是乐事、去海边转悠比较享受之外，跟平时没差别
+14:32 hatelis: 羊驼子还有回家爬山吧
+14:32 varna: 最近偷懒了，不过多少强迫自己爬一些
+14:32 varna: 锻炼总归好
+14:32 tutu_wind: +
+14:33 varna: 我干的都是写扯犊子而不出成果的活儿
+14:33 varna: 不扯犊子的时候要么自己做事情去了，要么做点科普工作
+14:34 iyzsong: 这不是老板的感脚么
+14:34 iyzsong: o o
+14:34 varna: 不，是消防屋
+14:35 varna: 专门救火，自己的论文只够毕业
+14:35 varna: 隔壁实验室有个研二的哥们儿决定保送我导师的博士了，那人比较积极，应该是以后的主力
+14:38 varna: 去年的项目书还有个更悲惨的乐子
+14:39 varna: 当时分得比较细致，人员也多些，我分得一个妹子
+14:39 varna: 想着既然是妹子，就不能太不客气，要有风度，于是我交文献总结之前的一天问了下
+14:40 varna: 妹子简单说了一点，看来没怎么看文献，于是我表示那这个给我写吧
+14:40 varna: 妹子高兴地回家跟BF（大概）玩去了
+14:40 varna: 然后去年冬天我吃了让我至今沦为丙督不能翻身的大败仗
+14:41 hy joined channel
+14:41 hy: 世界是坑的...
+14:42 hy: 喵是方的...
+14:42 hy: 存在是不存在的...
+14:42 hy: 当一阵风吹过后一切都是虚无的
+14:44 StardustX: (￣.￣)
+14:44 hatelis quit:Quit: Leaving
+14:47 hy: 注定孤独一生的程序和无知的猿，不知人工智能只是无能
+14:47 varna: 这伪文艺腔
+14:47 hy: 只是在发疯
+14:47 varna: 我觉得该罚寒云抄点好文章，就《从文自传》吧
+14:48 hy: 竟然还记得...
+14:48 hy: 下回去弄个md5版的用户名
+14:49 varna: 看你说话不用看用户名的
+14:50 hy: Hello, what is this weird channel
+14:50 iyzsong: 醉了
+14:50 hatelis joined channel
+14:50 hy: Is there any non existence homosapians?
+14:51 hatelis: 学霸云？
+14:51 hatelis: hatelis, 
+14:51 hatelis: hy
+14:52 hy: -_-
+14:52 hatelis: hy, 学霸云挂科太多被学校开除了？
+14:52 hy: 没挂...
+14:52 hy: 去年某门课弄了个满分...
+14:53 varna: 诸君，最近Arch有没有大新闻
+14:53 hatelis: hy, 给跪下了。。。。ORZ
+14:53 hy: 然后现在开始装大神...
+14:53 hatelis: varna, 好久没更新了
+14:53 StardustX: Orz
+14:53 hatelis: hy, 学霸云准备何处高就？辣鸡谷歌，辣鸡微软，还是辣鸡什么FLAG？
+14:53 lh_mouse: 这说话风格好像 T2。
+14:53 lh_mouse: 吓得本特首差点直接动手踢了。
+14:53 hatelis: lh_mouse, 我也是。我以为学霸云受刺激了
+14:54 varna: 补完闪我Syu一次
+14:54 hy: 没offer...
+14:54 hatelis: hy, 好像学霸云也还没到毕业的时候啊
+14:55 hy: 大三找实习呢...
+14:55 iyzsong: 继续读多好 :o
+14:55 varna: +1
+14:55 hatelis: hy, 哦，加拿大的辣鸡游戏厂也挺多的吧
+14:55 hatelis: 什么Bioware之类的
+14:55 varna: 学校赞的话往下直接读博士更好的
+14:55 varna: Bioware从nwn1之后就彻底堕落了
+14:56 varna: 后面也沦为跟风厂
+14:56 hy: =w= 算了吧...
+14:56 hatelis: 我觉得质量效应 龙腾世纪 最近的新作都还过得去啊
+14:56 varna: ME和DA我都觉得不算是佳作了
+14:56 hatelis: hy, 看起来学霸云只是在纠结有选择如何选的问题了
+14:56 varna: 算是跟风作里的上乘
+14:57 hatelis: varna, 没法子。被EA收购以后，就只能博个赚钱做里相对好的了。
+14:57 hatelis: 情怀没了
+14:57 hy: 注定孤独一生，我还是写人工智能去了
+14:57 varna: Bioware早期的情怀其实是黑岛的
+14:58 hatelis: hy, 难道是被妹子甩了？
+14:58 varna: 黑岛黄掉的同期，Bioware最后的鼎力作品就是无冬之夜初代
+14:58 hy: 一直都在烧别人...
+14:58 varna: 后来被EA买下那就……
+14:58 hatelis: varna, 多好的厂，就因为商业策略失误，被EA偷了
+14:59 hy: 不过貌似虐狗的人越来越多了...
+14:59 varna: 从Bioware出去的黑曜石工作室做了nwn2，然而细节真的差太远了
+14:59 varna: hatelis: 我觉得其实这是他们最好的出路，新时代的玩家大多不买情怀的
+14:59 hatelis: varna, 可以不用妥协这么多的。
+14:59 varna: 你看看从暴雪北方出去的人里，有多少最后能坚持下去的
+15:00 hatelis: 而且EA还时不时给Bioware抽血
+15:00 varna: 毁灭之王是暴雪北方还完整的时候最后的作品吧
+15:00 varna: 然后出去了不少人呢
+15:00 varna: 《火炬之光》算是成功的，失败的比如《黑暗武士》，估计都没几个人知道
+15:00 varna: 我以前甚至都没能在菜市场和大学门口的盗版店里淘到
+15:01 hatelis: 。。。
+15:01 varna: 比起情怀，还是得先弄点$吃饭，没办法的
+15:01 varna: 做大型游戏本来就辛苦得要死
+15:01 hatelis: 我也是被现在的画面养刁了，老的游戏无力再玩了
+15:01 hatelis: 是啊
+15:02 lh_mouse: ニ们看看红色警戒吧的置顶。
+15:02 lh_mouse: 李彦宏亲妈又飞了。
+15:02 varna: 我看看
+15:02 varna: yooo
+15:03 varna: 共和国之辉，用这名字不怕遭人鄙视么
+15:03 varna: http://tieba.baidu.com/p/4328823944 我看看这贴
+15:04 hy: 该睡了... 然后消失...
+15:04 varna: 喂这插画是谁画的……
+15:04 varna: 这货不知道M4A1尺寸多大么
+15:05 varna: 而且为何苏军用米国货
+15:08 iyzsong: 2333
+15:08 varna: 而且为何我一眨眼就在红警吧看到一条舰狗
+15:09 Mokou: 233333
+15:11 Mokou: 女王还敢对我指手画脚
+15:11 Mokou: 然而这是公元470，而我已经完成了曼哈顿工程
+15:11 hy: -_- 求智商...
+15:12 Mokou: 这什么鬼
+15:12 Mokou: 奥斯曼在我脸上拍了个城
+15:12 hatelis: hy, 话说枫叶国是几点
+15:12 hy: 2am
+15:14 hatelis: hy, 总感觉学霸云哪里不对。
+15:14 varna: 诸君，我要Su了
+15:14 varna: ignorepkg怎么写来着……
+15:14 varna: 查查
+15:15 hy: 最近在发疯...
+15:15 whatofor joined channel
+15:15 hatelis: varna, IgnorePkg   = eclipse eclipse-cdt
+15:15 varna: 蛋疼
+15:15 hatelis: vim /etc/pacman.conf
+15:15 hy: WTF
+15:15 varna: 算了我直接写IgnorePkg吧
+15:15 varna: 不然每次都要--ignore
+15:16 varna: 对了
+15:16 varna: 我先问下，wine 1.9.2有改进么
+15:17 varna: 如果还是个历史倒车我就不管了
+15:17 varna: Mokou: ^
+15:18 whatofor_1 quit:Ping timeout: 256 seconds
+15:19 varna: perl-5.22.1-1-x86_64
+15:19 varna: 小版本升级还好……
+15:19 Mokou: 还没试……
+15:19 varna: 总之我已经把wine写进IgnorePkg
+15:20 varna: 历史倒车开得我想吐
+15:20 hatelis: varna, 加啊
+15:20 hatelis: 如果用的东西相对固定，就应该加
+15:21 hy: 大学只是学习感觉好无聊...
+15:22 varna: hatelis: 只是玩老游戏的时候新版本掉帧，我的原则是自己用的本子不必恒定生产环境
+15:22 xxxxxxxx quit:Quit: Leaving...
+15:23 hatelis: hy, 那就少选点课，弄点有意思的东西？
+15:23 hy: :( 反正1080P+4K显示器然后xorg一直有问题...
+15:23 varna: hatelis: 你让寒云安静地确保一下制空
+15:23 hy: hatelis, 没选多少课，但是蹭了一大坨
+15:24 hatelis: varna, ？
+15:24 varna: 我向你保证，如果他一学期选了三门专业课，其中两门处于按百分制可能达不到六成分数的状态，他不会来感慨的
+15:24 hatelis: varna, 。。。
+15:25 varna: 饱暖才吃肉糜嘛
+15:25 hy: 最近在学  心  理  学
+15:25 hatelis: varna, 我知道。之前也知道寒云上了很多课。
+15:25 varna: 所以说他其实不需要建议
+15:25 hatelis: 。
+15:25 varna: 我不觉得寒云在这种事情上头脑不清楚
+15:25 hatelis: 。
+15:26 varna: 驲，外面刷油漆……
+15:27 varna: linux-4.3.3-3-x86_64
+15:27 varna: 不知道ext4的初启动大延迟解决没有……
+15:27 varna: 也不知道写某些块设备的内核缓冲罢工解决没有
+15:27 * hy 哪天RAID一下SSD... 或者弄一块NVMe的玩玩...
+15:27 varna: 我怎么都不觉得写USB卡死是cp这种用户程序的锅
+15:29 Mokou: 以前我查过，那个似乎是因为内核的分页机制坑了……
+15:29 varna: 噫，pacman有升级
+15:29 varna: 求别搞死我
+15:29 varna: 每次遇到pacman和密钥环就要出事
+15:29 * hy 我还是去研究AI吧... System不适合我...
+15:29 Mokou: 去研究outrange
+15:32 varna: 我到底从哪里扯出来这么多奇怪的依赖
+15:33 varna: 不过算了
+15:33 varna: 随他去吧
+15:33 Mokou: 波兰和夏威夷人打得不亦乐乎
+15:33 Mokou: 等我干完英国去插一脚……
+15:34 varna: libass
+15:34 varna: 噫
+15:35 varna: 我什么时候安了b00st?
+15:36 hy: 哪天去织几片杯垫去...
+15:37 varna: 女装子！
+15:37 varna: 女装子！
+15:38 Mokou: 一回合秒伦敦
+15:38 hy: -_-
+15:39 varna: 我为什么没卸掉emacs
+15:39 varna: 每次Su都让我陷入哲学的思考
+15:39 Mokou: 说明你还有救
+15:39 Mokou: 早日抛弃vim，早日获得新生
+15:39 varna: 这大概是用来纪念我死去的爱情用的
+15:40 varna: 噫噫噫
+15:40 varna: 这油漆味熏得我胸闷……
+15:41 varna: protobuf
+15:41 varna: 我这里什么东西用到了protobuf, 难道是chrome
+15:41 varna: 我没记得有这个依赖
+15:43 varna: 居然还有ocaml
+15:43 varna: 哦瘊瘊
+15:43 varna: 安上之后一次也没用过的R
+15:45 varna: 还安了撸比
+15:46 varna: 我有印象什么东西是用撸比的，但脑子褶太浅写不下
+15:49 Stevearzh quit:Disconnected by services
+15:50 varna: 桑嘚儿逼～
+15:58 hatelis: asdfafregqergqerfgadsf
+15:59 varna: 这法师被抓了
+15:59 Stevearzh joined channel
+16:00 varna: 噫
+16:00 varna: 我连zmq都装了？
+16:03 hatelis: 这班上的过于轻松了
+16:03 hatelis: 迟早要失业
+16:04 randomclown joined channel
+16:05 condy: ruby 就用过  Time.at 功能。。
+16:05 hatelis: condy, prpr
+16:05 varna: hatelis: 来撸开源吧
+16:05 condy: hatelis: 'prpr
+16:05 hatelis: varna, 现在没情绪。
+16:06 varna: 那就找个女朋友
+16:06 hatelis: varna, 你知道我找不到的
+16:06 varna: 这个我不知道咧
+16:06 varna: 你又不玩舰C
+16:06 hatelis: 也不能撸，最近撸太多
+16:07 varna: 找些轻松的歌听听？国内也有不错但不那么大众的歌手，比如曹方
+16:07 condy: 左手鹿岛，右手小五，不愧是 varna.
+16:08 hatelis: 还行，最近听听GTA的Radio
+16:08 varna: condy: 鹿岛我甚至没改造呢
+16:08 varna: Lv8，按等级排下来第十五页第一个……
+16:09 varna: 果然大胸在我府不怎么受待见
+16:09 condy: O.O
+16:09 hy: "找个女朋友" < 线虫羊驼
+16:09 varna: hy: 这是我美好的愿望
+16:10 varna: 开始拖mate系列了，估计拖差不多
+16:16 varna: 对了condy有没有在学校里认识可爱的妹子
+16:16 varna: (｡･ω･)ﾉ妹子妹子
+16:17 condy: Orz
+16:17 hatelis: varna, 说回来，羊驼子“撸开源”是指什么
+16:19 hy: 感觉越高版本的课里的妹子比例越低...
+16:19 varna: hatelis: 把你以前开的坑拿个出来慢慢写
+16:20 hatelis: varna, 我只想把坑踢了，再开一个= =
+16:20 varna: 那就再开一个
+16:20 varna: 要不做个有work stealing的coro?
+16:22 hatelis: varna, 羊驼子要加入这个http://supertech.csail.mit.edu/papers/steal.pdf？
+16:23 hatelis: varna, 其实想来还是饭票的问题，饭票没到手，就不敢展开干活
+16:24 Mokou: http://ww2.sinaimg.cn/bmiddle/7e948b4djw1f0gfi4h0d0j20sg0sg77k.jpg 图解医疗资源
+16:24 varna: hatelis: 文章不错，我先留下
+16:25 hatelis: 这个就是work stealing 算法的原始论文吧？
+16:25 varna: 不，go那个很粗暴的
+16:25 varna: 直接搂一半
+16:30 varna: hatelis: 可以慢慢干，有兴趣不
+16:31 hatelis: varna, 当然有。我也不说“有空”这空话了，等饭票的事儿确定以后，我就一定弄个破烂货出来。
+16:31 varna: 敲碗等
+16:31 iyzsong: orz
+16:32 varna: 这Su超过一小时了
+16:33 hy: 不是3分钟就够的事情么？
+16:33 varna: hy: 把你网给我用啊
+16:33 hatelis: 这线虫云又开始炫网速了
+16:34 varna: 我觉得人不至于蠢到不知道不是所有学校的所有实验室都能普及到不错的出口带宽吧
+16:34 hatelis: Total Download Size:    815.07 MiB
+16:34 hatelis: Total Installed Size:  3346.88 MiB
+16:34 hatelis: Net Upgrade Size:        22.48 MiB
+16:34 hy: 几个小时前一个core router还出了20分钟的问题...
+16:34 varna: 你怎么不跟中国人民说为什么不人人用一个公网IP呢，最好是A类的
+16:34 hatelis: varna, 羊驼子可以找找教育网内的镜像
+16:35 varna: hatelis: 我这里平均速度差不多几百KB吧，三个月升级一次的话其实无所谓
+16:35 varna: 我不频繁衮的
+16:35 hatelis: 其实频繁滚的话，摊销下来，反而不让人等的那么痛苦吧，而且容易发现是啥东西出问题
+16:36 varna: 频繁衮意思不大
+16:36 varna: 我只是把这个当作比刷鞋更不频繁的事情做
+16:36 varna: 大概就像过季节晾被子
+16:36 hy: AI的玩意还是得经常update...
+16:36 varna: ok, 拖好了
+16:36 varna: 643个包
+16:37 iyzsong: 这货是在骗人吧(P=NP) http://cognitivelogic.org/
+16:37 varna: 噫
+16:37 varna: 两个签名损坏
+16:38 varna: 重新检查完整性，看看能不能绕过去
+16:38 condy: 先装  archlinux-keyring 试试
+16:38 varna: P=NP这么不正式，基本是骗人吧
+16:39 varna: condy: 不行就只好这样，每次都是
+16:39 varna: 算了，更新密钥环吧
+16:40 varna: ok, 果然是keyring过期
+16:40 varna: condy: 爆
+16:40 condy: _( •́ ​ω •̀ 」∠)/_
+16:41 varna: 啊
+16:41 iyzsong: - -b
+16:41 varna: ghc抽风了
+16:44 varna: 手工移除掉ghc的文档试试
+16:45 varna: 更新开始
+16:46 varna: 幸好我备份了bash和ncurses
+16:46 hatelis: 突然有个巨大的脑洞，让地球人发明多处理器是不是外星人对地球人科技的干扰手段
+16:46 varna: 23333
+16:47 varna: 现在我先保证有一个终端能用
+16:47 varna: 然后看看更新完的话bash ncurses和readline是不是没挂
+16:47 varna: 米空米空米
+16:52 hatelis: 得重启下吧，不然有些奇奇怪怪的东西会出毛病
+16:52 varna: 一般都重启
+16:53 varna: 不过我先确保睡着之后能醒过来
+16:53 varna: haskell疯狂报错
+16:53 varna: 算了每次都是这样
+16:54 varna: lib32系雷刷屏
+16:54 varna: 系列*
+16:55 varna: 咦，我没看见bash更新
+16:56 varna: 终于轮到更新linux了
+16:57 varna: build hooks没挂，fallback映像创建好了，看上去像是成功了
+16:57 hatelis: reboot
+16:57 hatelis quit:Remote host closed the connection
+17:00 hatelis joined channel
+17:00 hatelis: 把我awesome的壁纸弄没了
+17:01 varna: texlive开始刷屏……
+17:01 varna: awesome常干这事
+17:01 varna: 我后来给他气得不用了是有原因的
+17:02 varna: 最后的更新，x系列
+17:03 varna: 更新完了
+17:03 varna: 终端能用，欠雪能用
+17:03 varna: reboot
+17:03 varna quit:Quit: leaving
+17:08 varna joined channel
+17:08 varna: 傻逼火狐
+17:09 Mokou: 恭喜活着回来
+17:09 varna: 改用gtk3还禁用我扩展
+17:09 hatelis: 看来awesome我也加到ignore里吧
+17:09 varna: 我要砍了火狐
+17:14 varna: 我日
+17:14 varna: 火狐的依赖挂了
+17:18 varna: 脚本降级火狐
+17:18 varna: 不行，依赖降不下去……
+17:19 iyzsong: 2333
+17:20 varna: 傻逼gtk3
+17:20 varna: 为什么要缺省打开
+17:22 Mokou: 因为傻逼
+17:23 varna: 我试试firefox-gtk2
+17:24 varna: 慢得要死……
+17:24 StardustX: 用chrome吧
+17:24 varna: StardustX: 求别逗
+17:25 varna: chrome在我这里只有开舰C一个用处
+17:25 varna: 而且我很烦chrome的UI
+17:25 StardustX: 为什么--
+17:25 varna: 因为我觉得那个UI很傻
+17:26 StardustX: 大概是口味问题
+17:26 varna: 不然为什么我会一直用gtk2
+17:26 hy: Plasma5路过...
+17:26 Mokou: 用Qt!
+17:27 varna: 我试试把gtk3爆破了
+17:27 varna: 残念，爆破失败
+17:28 varna: firefox直接要求gtk3
+17:28 varna: 他们的脑子呢
+17:28 * StardustX 受不了ff的flash一天崩三次
+17:29 varna: 我这里基本不崩
+17:29 varna: 并不知道你在上什么奇怪的站
+17:29 Mokou: 换用freshplayer之前我基本上是一天崩十多次
+17:29 StardustX: _(:3 」∠)_
+17:30 varna: 好蛋疼，手工降级的话ffmpeg都得连根拔了
+17:31 varna: 下载速度被掐什么鬼
+17:32 varna: 总之弄下来看看，不过我感觉很危险啊
+17:33 varna: banlist一开居然飙到1MBps
+17:34 varna: 然而我感觉这玩意要编译啊
+17:36 varna: FS#47408 - Disable GTK3 in Firefox 43 until Firefox 45  # 哪个gtk3傻逼把这玩意当bug汇报的
+17:40 varna: 果然开始编译
+17:40 varna: 哦瘊瘊
+17:40 varna: 神啊
+17:45 varna: 诸君，有没有兼容ff的浏览器推荐
+17:45 varna: 能导入书签最好
+17:45 Mokou: 暂时没有……
+17:45 iyzsong: 就从了gtk3吧 :o
+17:45 varna: 不可能
+17:46 varna: 我怎么可能用gtk3那种傻屌玩意
+17:46 Mokou: midori是gtk几来着
+17:46 iyzsong: olz
+17:46 varna: 用什么样式都那么难看
+17:46 varna: 还天天跟IM过不去
+17:46 Mokou: gtk2和gtk3都有
+17:46 Mokou: 要不然你试试midori-gtk2？
+17:46 varna: 我试试
+17:46 Mokou: 虽说是webkit
+17:56 varna: 这东西看着……有点差劲
+17:57 Mokou: _(:з」∠)_
+17:57 Mokou: 所以我一直没换过去
+18:01 varna: 大丈夫，我继续开编译
+18:02 varna: 噫，似乎有什么卡住了？
+18:02 varna: 哦，只是一般地慢……
+18:05 hatelis quit:Quit: Leaving
+18:06 lh_mouse: varna, 捏鼻头。
+18:06 varna: 这耗趁我悲剧的时候捏我
+18:12 varna: 看着手边悲惨的编译过程，我已经做好了跟GTK3斗争下去的心理准备
+18:12 varna: 这是我四年来不超过第二十次觉得应该买台更好的机器
+18:14 varna: midori其实挺赞的
+18:14 varna: 不过有一个缺点：做事做一半
+18:15 * iyzsong 也想换个本 好穷啊 >.<
+18:15 varna: 糖果那的头儿倒是问过我要不要换个本
+18:15 varna: 不过我想着事情还没给人做出来就要钱要东西太伤阴德
+18:16 iyzsong: WebKitGTK+早就不维护对gtk2的支持了
+18:16 iyzsong: 吼啊 
+18:16 varna: 大丈夫，能用就行
+18:16 varna: 等到不能用的日子再想办法
+18:16 varna: GTK3实在是太傻逼了
+18:16 varna: 不是我不喜欢新花样的库
+18:17 varna: 如果GTK3兼容GTK2样式，我现在做的事情可能也就是确认下IM能工作，然后迁移一次样式配置
+18:18 varna: 然而这群傻逼觉得他们自己的东西好看到我能认为以前我挑出来的货都是垃圾
+18:27 hatlist joined channel
+18:31 varna: return gaystack
+18:31 varna: return gaystack;
+18:31 varna: 我是不是看错了什么？
+18:32 Mokou: 233333
+18:33 varna: Opera在自定义样式和样式兼容性方面怎么样？
+18:34 condy: wow
+18:34 varna: condy: 爆
+18:34 condy: vivaldi 还是不错的
+18:35 condy: 虽然跟 chrome 还是差不多(
+18:35 condy: O.O
+18:35 varna: 那就算了
+18:35 varna: 我还是不喜欢chrome那个样子
+18:35 varna: 不然现在我也不在意ff是什么熊样
+18:38 varna: 我驲
+18:38 varna: 东急跑错了
+18:38 varna: 肯定是编译的时候卡了一下光标
+18:48 code_new joined channel
+18:48 Mokou: 噗
+18:48 Mokou: 匈人和奥斯曼掐起来了……
+18:48 Mokou: 奥斯曼这药丸
+18:55 varna: _(:з」∠)_还在编译
+19:01 tutu_wind quit:Ping timeout: 260 seconds
+19:03 varna: 吃饭去
+19:04 varna: 以防万一，我找了一些看着还凑合的gtk3主题准备在我深知世界大势汉队现状、迫于敌所使用之残虐样式表不得不五体投地的时候用
+19:15 Mokou: 去吃饭
+19:18 ianma joined channel
+19:21 ianma quit:Remote host closed the connection
+19:24 ianma joined channel
+19:25 hy quit:Quit: Page closed
+19:52 FrankHB joined channel
+19:53 varna: 卧槽
+19:53 varna: 哈哈哈哈哈哈
+19:53 varna: N
+19:53 varna: 构建失败：设备上没有空间……
+19:53 Mokou: 6666666
+19:54 varna: /我没给够……
+19:54 iyzsong: 2333
+19:56 varna: 朕深ク世界ノ大势ト帝国ノ现状トニ鉴ミ、非常ノ措置ヲ以テ时局ヲ收拾セムト欲シ、兹ニ忠良ナル尔臣民ニ告ク make[6]: *** [Mikon] Error 1
+19:58 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=a9cf33451a950a7b75354ecc3ad0625c/67ed7e01a18b87d6c2b8c36c000828381e30fd3a.jpg
+19:59 varna: 好了我投降，看看gtk3的gtkrc怎么写
+19:59 varna: 船沉了，七十年后又是一条好汉！
+20:00 varna: 然而gtk3这个搜索对话框是哪里来的傻逼做的
+20:00 varna: 动态更新尼达耶
+20:00 varna: 还不会按目录和文件类型分类
+20:00 varna: 什么傻逼玩意？
+20:01 Mokou: 233333
+20:04 varna: 这些开历史倒车的傻逼
+20:07 varna: 啊，在右键菜单里找到一个选项
+20:07 varna: 我觉得这些货已经没救了，但是我目前也没有别的办法
+20:07 varna: 部署个主题看看
+20:09 Mokou: http://ww4.sinaimg.cn/large/d2b97cf6jw1f0ggj4xzpkj20ov0kuwio.jpg
+20:17 varna: 我要赣死这个做主题的渣渣
+20:17 varna: 原先我以为用css就能把颜色调过来
+20:17 varna: 看来我还是太天真了
+20:18 Mokou: 233333
+20:20 varna: 有什么能编辑svg图形的……我看看
+20:20 Mokou: inkscape？
+20:21 varna: 那个似乎很难用，我试试
+20:21 varna: 高日德，这浏览器吃枣药丸
+20:22 varna: gtk3那个文件浏览对话框简直傻逼到了极点
+20:22 varna: 你相信么，他居然会给你无限制地搜索你敲进去的关键字
+20:24 Mokou: ……
+20:26 Mokou: 能代Lv80
+20:26 varna: 我驲
+20:26 varna: inkscape不能直接编辑svg?
+20:27 Mokou: 噗？
+20:27 Mokou: 我记得能啊
+20:27 Mokou: 可以
+20:27 varna: 哦我知道了
+20:27 varna: 似乎有点问题，他不知道自己该怎么看图（笑）
+20:27 Mokou: ……
+20:29 varna: 算了我狗呔
+20:29 varna: 我换个风格看看，这个实在太难改了
+20:30 varna: gtk3这群傻逼
+20:31 varna: 他们脑子里难道只剩下了“把东西的样子做得像Mac一样”这个念头么
+20:33 yzld2003 joined channel
+20:33 yzld2002 quit:Ping timeout: 265 seconds
+20:33 yzld2003 is now known as yzld2002
+20:38 Taggnostr quit:Remote host closed the connection
+20:39 Taggnostr joined channel
+20:41 varna: 换了个风格（arch-frost-light），手工修正了背景色，凑合用吧
+20:42 varna: 然而我并不明白gtk3的设计者是怎么达成这个神奇的结果的
+20:42 varna: 原本土气但很可用的UI, 现在变得慢、不可用、功能走形，而且像个Big MAX
+20:42 varna: 原本土气但很可用的UI, 现在变得慢、不可用、功能走形，而且像个Big MAC
+20:43 Mokou: 这叫现代化
+20:43 varna: 哦对我讲个笑话
+20:44 varna: [varna@shiki ~]$ pacman -Sc
+20:44 varna: 错误：非 root (根用户) 无法执行指定操作。
+20:44 varna: [varna@shiki ~]$ sudo pacman -Sc
+20:44 varna: [sudo] varna 的密码：
+20:44 varna: blah
+20:44 varna: 缓存目录：/home/varna/paccache/
+20:44 varna: :: 您想从缓存中删除所有其他的软件包吗？ [Y/n] 
+20:44 varna: 我都傻了
+20:44 Mokou: ……
+20:44 Mokou: /home什么鬼
+20:44 varna: 正常的
+20:45 varna: 我变更了pacman的缓存路径
+20:45 varna: 然而为什么我自己有权限的目录要sudo
+20:45 Mokou: 然后你需要让root插进你的home
+20:45 Mokou: 帽子的颜色越发地鲜艳了
+20:45 varna: 我都意识模糊，这混球就是按选项检查权限的吧
+20:46 Mokou: 大概就是
+20:46 varna: 写程序还真是省心啊！
+20:46 Mokou: 等等
+20:46 Mokou: 他不会在你的/home下弄了一堆属于root的文件吧
+20:46 varna: 不会
+20:47 ianma quit:Remote host closed the connection
+20:47 varna: 我从cache里拷出来的东西都是rw-r--r--
+20:47 Mokou: 毕竟Syu的时候是以root身份下载的……
+20:47 ianma joined channel
+20:47 varna: owner也都是我
+20:47 Mokou: 那还好
+20:47 varna: 等等
+20:47 varna: 不对那是拷出来的
+20:47 Mokou: 但是那是cp
+20:47 varna: 你可能说对了
+20:47 Mokou: 你快ls一下
+20:47 varna: 来不及了
+20:48 varna: 我不想硬恢复文件
+20:48 Mokou: ……
+20:48 varna: 那些命令我记不得，每次都要查
+20:48 Mokou: 没关系下次装东西的时候你看看
+20:48 varna: 我刚补了一个-Scc
+20:48 varna: 全飞了
+20:48 Mokou: ……
+20:48 ianma quit:Remote host closed the connection
+20:49 Mokou: 总之你帽子的颜色越发地鲜艳了
+20:49 varna: 我都傻了
+20:49 Mokou: 太可怕
+20:49 varna: pacman在这种事情上永远逗比
+20:49 Mokou: 我还是不改了……
+20:49 varna: 比如密钥环，比如自己升级，比如cache
+20:50 varna: 一般不改为好，然而我/地方不够……
+20:50 Mokou: /var我只给了20G
+20:50 varna: 我依稀记得这个分区是买机器时候那个内部错误的分区表
+20:50 varna: 我仅仅做了三个格式化
+20:51 Mokou: ……
+20:51 Mokou: 真的勇士，敢于用内部错误的分区表
+20:51 varna: 老子再也不信联想的逗比了
+20:51 varna: 以后拿来本子自己二分
+20:51 Mokou: 还好，我这机器买回来是个win8
+20:51 varna: 一个/一个/boot
+20:51 hatlist quit:Quit: Connection closed for inactivity
+20:51 Mokou: 现在被我换成了win10用来玩wows
+20:52 * Mokou 两块硬盘
+20:52 varna: 我再也不做这种个人本子单开/home的蠢蛋事情
+20:52 varna: 正经的人类用户就我一个，干嘛分那么多
+20:53 Mokou: 你还得分个D盘
+20:53 varna: .wine/drive_d
+20:53 varna: 不怂
+20:53 varna: 我现在把杂牌游戏都安在D盘呢
+20:53 varna: 比如FL和骑砍
+20:53 Mokou: 不是应该放H图么
+20:53 varna: 骑砍有一些H模组，不过我觉得不好玩就没加
+20:54 Mokou: 硬盘还是好贵……
+20:54 Mokou: 1T的盘现在也要三百多
+20:54 varna: 现在我还在走正经的胡服骑射路线，已经统一大半个大陆了，然而可汗觉得封给我城不合算，就都封给别人
+20:54 Mokou: ……
+20:54 varna: 最后一次玩的时候有个混球把我辛苦打下的城弄丢了
+20:54 varna: 总之稳妥地打回去吧，虽说估计还不会封给我
+20:55 Mokou: 来玩野蛮5吧
+20:55 Mokou: 打下来的都是你的
+20:55 Mokou: 只要别点那个没见过的选项
+20:55 varna: 骑砍蛋疼的主要是当雇佣兵不太合算，一辈子穷死（还原历史）
+20:55 Mokou: 这盘要劝退
+20:56 Mokou: 第一点T不利给我来个中破
+20:56 varna: 哦对，还有个乐的
+20:56 varna: 我现在打开gtk3的file chooser dialog, 会先黑一下
+20:56 Mokou: ……
+20:56 varna: 黑的时间大约半秒
+20:56 Mokou: 什么鬼
+20:56 varna: 并不知道
+20:56 varna: 那个对话框似乎不太愿意被渲染
+20:57 Mokou: 666666
+20:57 varna: 以后有精力的话还是买个好的机器用针兔吧
+20:57 varna: 火狐这种破事完全是Arch上游的锅
+20:57 varna: 等我有精神了看看能不能用pkgbuild手工解决
+20:57 Mokou: 针兔的FF换没换GTK3来着额
+20:57 Mokou: 针兔的FF换没换GTK3来着
+20:57 Mokou: 我查查
+20:58 varna: FF现在是gtk2和gtk3都可以的
+20:58 varna: 然而Arch上游发布了被污染的二进制
+20:58 Mokou: 针兔给FF提供二进制包的，因为太难编译
+20:58 varna: 哈哈哈哈哈哈哈哈哈哈哈哈哈
+20:58 Mokou: 我不知道他们那个二进制包怎么编译的
+20:58 varna: 我觉得我们该集合一些有志之士占领ABS机房
+20:58 Mokou: 组一个连沟汉队？
+20:59 varna: 那必须的
+20:59 varna: BGM就用MI的道中
+20:59 Mokou: 然后门口冒出个主任
+20:59 varna: 喜闻乐见……
+21:00 lh_mouse: 今天貌似勾搭了一个小姑娘。
+21:00 varna: OTL
+21:00 varna: 长得可爱不
+21:00 lh_mouse: 还可以。
+21:00 varna: OTL
+21:00 varna: 这耗要走上现充道路了
+21:00 lh_mouse: 还没呢。
+21:00 Mokou: RDEPEND="....
+21:00 Mokou: >=x11-libs/gtk+-2.18:2
+21:00 Mokou: 针兔万岁
+21:01 varna: 很快我们就会看到这样的传教：老子这么写程序有房有妹子，有种你可以不学
+21:02 varna: Arch以前的ff都优先用gtk2
+21:02 varna: 我不知道现在出了什么逗比状况
+21:02 Mokou: 阿彻：总有刁民想害朕
+21:02 Mokou: 风评被害系列
+21:03 Mokou: 不过今天的5-5总体还行
+21:03 Mokou: 只用了两个桶
+21:03 Mokou: 5-4
+21:03 varna: 这真是风评被害，我查一下firefox包里都有什么软件
+21:06 varna: 针兔的二进制包展开之后可以手工安装么？
+21:06 Mokou: ebuild基本就是个shell脚本，你试试手动来一下？
+21:07 varna: 求传一下那个包，应该是数十-数百MB的程度吧？
+21:07 Mokou: amd64?
+21:07 varna: +
+21:07 varna: 还是我可以直接在线获得
+21:08 Mokou: 网易源的文件列表差点灭了我的ff
+21:08 Mokou: https://gitweb.gentoo.org/repo/gentoo.git/diff/www-client/firefox-bin/firefox-bin-44.0.ebuild?id=71b12d933fb8e39a4713da7550c0213183970bf0 这是ebuild
+21:08 Mokou: 源文件等会我给你发，你就别开网易源了，FF会炸的……
+21:09 varna: 有点麻烦
+21:09 varna: 我试着手工替换吧
+21:10 Mokou: 或者等会我来个pkgbuild
+21:10 varna: 不用了
+21:10 varna: 我想手工替掉一些可执行文件
+21:10 varna: 其余的构建过程应该是标准的
+21:10 varna: Lv134若叶……
+21:11 varna: 米空请保佑这位绅士
+21:12 Mokou: 噗呜呜呜呜呜呜呜
+21:12 Mokou: 我说怎么网易源上找不到
+21:12 Mokou: 合着gentoo那个包是直接从mozilla服务器上拖下来的……
+21:12 varna: ...
+21:14 varna: 清霜的性格也很好啊_(:з」∠)_将来要是有机会的话，也编入我精锐的水雷战队吧
+21:15 Mokou: http://archive.mozilla.org/pub/firefox/releases/44.0/linux-x86_64/zh-CN/firefox-44.0.tar.bz2 你试试这个
+21:15 Mokou: 我不确认是源码还是二进制包
+21:16 varna: lmcc
+21:16 Mokou: 47M
+21:16 varna: 压得这么狠，我总觉得是源码包
+21:17 varna: 先弄下来看看
+21:17 varna: 似乎不是
+21:18 Mokou: ……
+21:19 varna: 好了，按图索骥时间
+21:19 varna: /usr/bin/firefox是一个软链接
+21:20 varna: /usr/lib/firefox/firefox-bin是一个软链接
+21:20 varna: 走你！
+21:20 varna: 先备份一次
+21:21 varna: 噫
+21:21 varna: 爆炸了
+21:21 Mokou: ……
+21:21 Mokou: DLL地狱了？
+21:21 varna: 不知道
+21:21 varna: 命令行上直接提示吐了
+21:21 Mokou: 奇妙
+21:21 Mokou: 我试试
+21:22 varna: 我只替掉了单独的
+21:22 Mokou: 龟速下载中
+21:22 varna: 算了
+21:22 varna: 不要下
+21:22 varna: 你的包可以用
+21:23 Mokou: “但是”？
+21:23 varna: 没关系，我就当pacman那个不存在
+21:23 varna: 我重新做一次菜单
+21:23 Mokou: ……
+21:24 Mokou: 下次Syu之前我弄一个
+21:24 Mokou: 打个pkgbuild，叫firefox-screwyouarch-44.0
+21:24 Mokou: 800桶
+21:25 randomclown quit:Quit: Leaving
+21:25 Mokou: http://ww1.sinaimg.cn/bmiddle/005yJ0LEgw1f0goibv7alj315n0xkjyp.jpg http://ww4.sinaimg.cn/bmiddle/005yJ0LEgw1f0goi6z1mhj314q10tn64.jpg 现在的小粉红啊，连长者都不认识
+21:26 varna: 哈哈哈哈
+21:26 varna: 红旗救我一命
+21:27 Mokou: (｡･ω･)ﾉ
+21:28 varna: 583桶
+21:28 varna: 我感觉冬活我很悬
+21:28 Mokou: 没关系，你用头顶当探照灯吸引火力
+21:28 varna: 既然我没法拯救pacman那个包，那就只好用现成的二进制了
+21:29 varna: standalone release总还是可以用的
+21:29 varna: 明天我打算洗完澡去理发
+21:29 varna: 头发太长了，全都卷起来
+21:29 Mokou: 理zhi发fa
+21:30 Mokou: 最近演习懒得放福利了_(:з」∠)_
+21:30 Mokou: 每天都给大凤换装备太累
+21:30 Mokou: 怎么不出个装备记录
+21:31 varna: http://picpaste.com/qGUMAamH.png 卷得类似这个尖儿
+21:31 Mokou: 神通？
+21:31 varna: +
+21:31 Mokou: 正好，头顶探照灯
+21:33 varna: 之前我手机充电的时候导师来了个短信，似乎他没精神仔细看我写的那些公式了，让我解释下特点和优势……
+21:34 Mokou: 孟子谓齐宣王曰：“王之臣，有托其妻子于其友而之楚游者。比其反也，则冻馁其妻子，则如之何？”王曰：“没听到过这个说法。” 曰：“士师不能治士，则如之何？” 王曰：“你们千万要注意，不要见得风使得雨，接到这个消息你们本身也要判断,倘使无中生有的东西，你再帮他说一遍等于你也有责任嗬
+21:34 varna: 啊，这个是做好了中文语言包的
+21:34 Mokou: 。“ 
+21:34 varna: 233333333333333333
+21:34 FrankHB quit:Ping timeout: 256 seconds
+21:35 varna: http://kancolle.aemedia.org/thread-27229-1-1.html
+21:35 Mokou: 233333
+21:35 varna: 不过我先说一句，感觉这大师像圣GAY王
+21:35 Mokou: 会秃头
+21:35 varna: 现在他天天找人玩L4F
+21:36 varna: 现在他天天找人玩L4D
+21:36 varna: 手一滑就出个.4F
+21:36 Mokou: 啊，7L那个L4D2的模型包我也用了
+21:37 Mokou: 可惜语音没改
+21:37 varna: L4D我看他们玩起来似乎是联机好玩？
+21:37 Mokou: +
+21:37 Mokou: AI挺傻的
+21:37 varna: 残念
+21:37 varna: 今天我还看原来的话题帖群里拉出来的人们玩得不亦乐乎
+21:38 Mokou: 我们连一场？
+21:38 varna: 我估计带不动
+21:38 Mokou: 有原生linux版
+21:38 varna: steam版么
+21:38 Mokou: 我用Intel勉强能开最高特效
+21:38 Mokou: +
+21:38 varna: steam算了，我现在没有国际支付
+21:38 varna: 哦还有个乐子
+21:38 Mokou: 可以用支付宝和银联
+21:38 varna: 中行的支付宝接口改了
+21:39 varna: 我有一次订KFC想在线付款
+21:39 varna: 点着点着看见一行小字，告诉我“用IE”
+21:39 Mokou: 233333333
+21:39 varna: 我愤怒地出去吃了一碗牛肉面
+21:55 varna: 撤退
+21:55 varna: 武运
+21:55 varna quit:Quit: leaving
+21:59 Mokou: 去煮点战神
+21:59 Mokou: 懒得等了
+22:03 ianma joined channel
+22:05 cleamoon joined channel
+22:08 ianma quit:Remote host closed the connection
+22:08 ianma joined channel
+22:10 ianma quit:Read error: Connection reset by peer
+22:19 hatelis joined channel
+22:31 lh_mouse: Mokou, Motou.
+22:49 code_new_ joined channel
+22:51 FrankHB joined channel
+22:51 code_new quit:Ping timeout: 260 seconds
+22:52 code_new_ is now known as code_new
+22:57 Taggnostr quit:Remote host closed the connection
+22:58 Taggnostr joined channel
+23:02 code_new_ joined channel
+23:02 code_new quit:Read error: Connection reset by peer
+23:03 code_new_ is now known as code_new
+23:03 hatelis: code_new, 揉
+23:04 code_new: hatelis: 捏jianjian
+23:06 cleamoon: hatelis, code_new 爆
+23:06 hatelis: cleamoon, 这绅士
+23:06 code_new: cleamoon: 肛
+23:06 hatelis: cleamoon, 金发巨乳搞不到，基佬倒是要速成 了
+23:07 code_new: 21天变成基佬
+23:08 hatelis: code_new, 取名好评
+23:08 code_new: (｡･ω･)ﾉ
+23:11 cleamoon: 尔等基佬
+23:15 hatelis: FrankHB, 
+23:15 hatelis: 3句BSD许可是不是意味着，我再发行的时候，不能用原版本的产品名称了
+23:37 code_new quit:Ping timeout: 265 seconds
+23:42 hatelis: cleamoon, https://www.zhihu.com/question/39943665
+23:42 hatelis: cleamoon, 饭否用户必看
+23:45 cleamoon: http://tieba.baidu.com/p/4327509868
+23:47 cleamoon: hatelis, 看点在哪？这人是谁？
+23:48 hatelis: cleamoon, 张小龙 微信创始人
+23:48 hatelis: 最近爆出来的他的不公开的饭否
+23:49 cleamoon: 哦
+23:50 cleamoon: 于是呢
+23:50 cleamoon: 关注他给我钱吗
+23:53 hatelis: cleamoon, 好玩啊。没啥
+23:54 cleamoon: 哦
+23:54 cleamoon: hatelis, 那还不如爆你
+23:54 cleamoon: hatelis, 爆
+23:54 hatelis: cleamoon, 炸
+23:54 hatelis: 不对，你这基佬绅士

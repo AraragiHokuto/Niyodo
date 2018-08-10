@@ -1,0 +1,1392 @@
+00:22 lh_cat joined channel
+00:22 lh_cat: 小姑娘。
+00:52 tutu_wind quit:Ping timeout: 264 seconds
+01:56 Flandre` joined channel
+01:59 Flandre` quit:Read error: Connection reset by peer
+02:00 Flandre` joined channel
+02:02 Flandre`_ joined channel
+02:03 miao233_ quit:Quit: Leaving.
+02:04 Flandre` quit:Ping timeout: 264 seconds
+02:26 xxxxxxxx joined channel
+02:31 lh_cat quit:Quit: Connection closed for inactivity
+02:35 Sous-Titre joined channel
+02:36 Sous-Titre: 路由器相关问题求助
+02:36 Sous-Titre: 我新家是无线覆盖
+02:37 Sous-Titre: 想用的话，要打开网页登录
+02:37 Sous-Titre: 然后我有个监控防盗摄像头
+02:37 Sous-Titre: 我要怎么让它联网呢……
+02:40 Flandre`_: 登录唄
+02:40 Flandre`_ quit:Remote host closed the connection
+02:40 Flandre` joined channel
+02:46 Sous-Titre: 摄像头没办法登录啊……
+02:47 Sous-Titre: 新家网络应该属于 802.11x 网页认证
+02:47 Sous-Titre: 我带出来的路由器貌似也不支持
+02:56 T-J-M_ joined channel
+02:58 T-J-M quit:Ping timeout: 240 seconds
+03:10 Flandre`: 0.0
+03:12 Flandre` quit:
+04:13 xxxxxxxx quit:Quit: Leaving...
+05:25 Youmu quit:Quit: Connection closed for inactivity
+06:30 Stevearzh quit:Excess Flood
+06:31 Stevearzh joined channel
+07:46 cleamoon joined channel
+07:58 ianma quit:Quit: Leaving...
+08:11 iyzsong: 0 0
+08:50 Meow-J quit:Ping timeout: 248 seconds
+08:51 Meow-J_ joined channel
+08:52 xxxxxxxx joined channel
+08:55 Meow-J_ is now known as Meow-J
+08:57 lh_mouse joined channel
+08:58 iyzsong: lh_mouse: 舔~
+09:12 Rivdo joined channel
+09:21 Rivdo: .
+09:21 iyzsong: ..
+09:26 lhanjian: cleamoon: 早
+09:28 iyzsong: 膜 = =
+09:28 cleamoon: lhanjian,  爆
+09:29 Rivdo joined channel
+09:30 lhanjian: iyzsong: 续
+09:31 tutu_wind joined channel
+09:32 tutu_wind: morning ~
+09:33 iyzsong: tutu_wind: 舔
+09:33 tutu_wind: iyzsong: 摸~
+09:41 Youmu joined channel
+09:44 Rivdo quit:Quit: Leaving.
+09:45 Rivdo joined channel
+09:50 lhanjian: lh_mouse: 摸耗鼻
+09:55 tutu_wind: lh_mouse: 捏耗耳～
+09:58 lhanjian: cleamoon: 药丸。CPI结束了连续5个月的“1”时代，其中鲜菜价格环比上涨29.9%，创2008年3月以来最高涨幅。[思考][思考][思考]
+09:58 lhanjian: PPI不涨，CPI涨起来了、
+09:58 lhanjian: cleamoon: 我该囤积什么物资？
+10:01 cleamoon: lhanjian, 命
+10:01 cleamoon: 每10000分续一条命
+10:01 lhanjian: git 好可怕
+10:01 cleamoon: ide大法好
+10:03 lhanjian: cleamoon: 我在用git rebase -i的时候，把所有的pick 改成了squash,结果失败。然后 所 有 的 commit 从 这 条 分 支 上 消 失 了 ！ ！ ！ ！ ！
+10:03 lhanjian: 还好我可以再pull回来
+10:04 cleamoon: 噗
+10:04 cleamoon: 什么鬼
+10:05 * lh_mouse slaps lhanjian around a bit with tutu_wind 
+10:05 Flandre` joined channel
+10:05 xxxxxxxx: 鲜菜是因为之前下雪么?
+10:07 lhanjian: xxxxxxxx: 不知道。1、2月份有春节因素在，恐怕还是要看3月份的数据才知道物价是不是要开始炒起来了
+10:07 lhanjian: 但是1、2月份的 广义货币发行量 确实是同比上升了不少
+10:14 lhanjian: Flandre`: 又迟到了
+10:19 Flandre`: lhanjian: 这算早的（
+10:19 lhanjian: Flandre`: （
+10:19 lhanjian: （
+10:19 lhanjian: （
+10:19 lhanjian: （
+10:19 lhanjian: （
+10:19 lhanjian: （
+10:20 lh_mouse: lhanjian, 进行危险操作的时候先开个分支进行备份。
+10:20 lh_mouse: git branch backup && git rebase -i HEAD~10
+10:21 lhanjian: 其实直接复制整个目录来备份还更简单些，而且不用和万恶的git作斗争
+10:21 lh_mouse: 效率辣鸡。
+10:21 lhanjian: 本地还是很快的吧，反正是ssd
+10:21 lh_mouse: SSD 每一块写入 7000 次呵呵呵。
+10:22 lh_mouse: lhanjian, git 暴力复制整个分支的命令是 git reset --hard
+10:22 lh_mouse: 比如你想丢弃所有更改直接 一个  git reset --hard backup 就天下太平了。
+10:22 lhanjian: 嗯
+10:26 lh_mouse: iyzsong, 你舔ヲ做啥？QwQ
+10:26 cleamoon: 我看一个文章科普是7000次全盘？
+10:28 lh_mouse: 每一块。
+10:28 lh_mouse: 这个ヲ记得是 4K。
+10:28 lh_mouse: 对 4K 中的任何一个字节写入会导致整个块重写。
+10:29 cleamoon: 噗
+10:29 lh_mouse: 固态硬盘的主控芯片会将写入请求分散到各个区域，所以基本不需要考虑损耗问题。但是存储卡不行。
+10:29 cleamoon: 也就是说一个程序在一个地方写7000次硬盘就完了？
+10:29 cleamoon: soga
+10:29 lh_mouse: 没那么简单。
+10:30 lh_mouse: 硬件都有容错机制的。一块坏掉，以后就不会用这一块，整体性能会下降，但是不是不能用。
+10:30 lhanjian: 是啊
+10:30 lh_mouse: 几乎所有的硬件都是这样的，包括 CPU 和内存。
+10:30 lhanjian: 这方面其实机械硬盘的坏道更讨厌
+10:31 cleamoon: orz
+10:31 lhanjian: 一旦OS启动要用的那部分出问题了，它也不挂，但是因为读取时间大幅下降导致性能剧烈下降
+10:31 lhanjian: 读取时间大幅飙升
+10:31 lh_mouse: 所以固态硬盘越小坏得越快。
+10:32 lhanjian: 我的512GiB……
+10:32 lh_mouse: ヲ三年前的机器，128 的。
+10:32 lh_mouse: 但是ヲ program files 放在机械盘上。
+10:32 lhanjian: 哦，弄错了，512GiB那个是Win的区，Linux这个只有128GiB
+10:32 lh_mouse: 操作系统和编译器什么的放在固态上。
+10:33 lh_mouse: 读是没什么大问题的，不要经常写。
+10:33 lhanjian: 嗯
+10:33 lh_mouse: ヲ所有文档都放在机械盘上。
+10:33 lhanjian: 这倒是无所谓，我没有任何重要的存档。如果说有，无非就是攒的PDF，那个就备份到外置硬盘上了
+10:34 cleamoon: 如果不写就无所谓？
+10:34 cleamoon: 视频缓存也是写吧...
+10:36 lh_mouse: 是。
+10:36 iyzsong: ('・ω・') 没钱买
+10:37 * lh_mouse slaps iyzsong around a bit with one $
+10:38 Rivdo quit:Ping timeout: 240 seconds
+10:38 Rivdo joined channel
+10:40 lhanjian: lh_mouse: 话说老板要搞VR，如果是强调单机基本没网络的话，小耗岂不是要失业？
+10:41 lh_mouse: lhanjian, 什么。
+10:41 cleamoon: 单机也要c艹吧
+10:41 lhanjian: lh_mouse: 没什么，上次小耗说老板要搞VR
+10:41 lh_mouse: lhanjian, ヲ是股东ヲ会失业吗。
+10:41 lhanjian: 小耗不是主搞服务端的么
+10:41 lhanjian: lh_mouse: 啊蛤，原来小耗已经是资本家了
+10:42 lh_mouse: 仅仅如此吗。
+10:42 lh_mouse: 技术股。
+10:42 lhanjian: 那也是资本家嘛，股本都有了
+10:42 lh_mouse: 求不黑。
+10:42 lhanjian: lh_mouse: 是空中楼阁的期权，还是到手的股份？
+10:42 lh_mouse: 怎么讲。
+10:42 iyzsong: 上市了没
+10:43 Rivdo quit:Ping timeout: 260 seconds
+10:43 lh_mouse: 没有。小地方。
+10:43 lhanjian: lh_mouse: “等我们公司上市了，你手里的期权就可以变现啦，快来跟我干”。“这公司股份我7你3，成败大家一起扛”
+10:43 lhanjian: 哪种？
+10:44 lh_mouse: 哪有那么多。
+10:44 tutu_wind: lh_mouse: wow
+10:44 lh_mouse: 按规定公司技术股不能超过 25% 你知道的吧。
+10:44 cleamoon: 噗，凭什么
+10:44 lh_mouse: 规定。
+10:44 lhanjian: lh_mouse: 嗯，比例不是关键。主要是股权的性质
+10:45 lhanjian: 期权属于画大饼，股份的话就实在一些，虽然小耗也未必能转手就是。
+10:45 lh_mouse: 我目前不指望变现。就是这样。
+10:45 lh_mouse: 小地方，别指望太多。
+10:45 lhanjian: 嗯
+10:46 lhanjian: 毕竟是创业嘛
+10:46 cleamoon: orz
+10:46 lh_mouse: 干活去了。
+10:46 iyzsong: ʕ•ٹ•ʔ玩游戏去了
+10:48 cleamoon: 不过技术如果单一，如果不是足够高科技，还是会渐渐不吃香的
+10:52 cleamoon: lhanjian, 梨花酱觉得大公司好还是小公司好？
+10:53 lhanjian: cleamoon: 你喜欢风险大回报大，就小公司；你希望让职业经历变好看和稍微好些的技术环境，那就大公司
+10:53 lhanjian: 当然不是一概而论的
+10:54 cleamoon: 风险x回报的话，小公司还没有大公司好吧？
+10:54 cleamoon: 而且，论起回报，自己开公司才是正确解法
+10:54 lhanjian: cleamoon: 是啊。如果你在2012年进的淘宝，那也能分不少钱了
+10:55 cleamoon: @xueshudi   
+10:55 cleamoon: 根据昨天李世石的表现，我预测今天他会打出451阵型加强防守，并在开局早期进行王车换位给炮让出位置，以便炸掉对方军长，随即听牌，当然攀科技的速度一定不要慢，科技点也要谨慎。当然，最重要的是早饭豆腐脑一定要吃咸的，午饭不要加香菜，否则骰不出来足够多的6，以上计划将会全部打乱。
+10:56 cleamoon: 12年进淘宝到现在能分1M吗？
+10:56 lhanjian: cleamoon: 据说最少也有3000股。现在一股60$
+10:58 cleamoon: 按200rmb算，3000股，600 000
+10:58 cleamoon: 渣渣
+10:58 lhanjian: 200rmb？
+10:58 cleamoon: 还tm没炒房多呢
+10:59 lhanjian: 扣掉税？
+10:59 cleamoon: 哦，想错了
+10:59 cleamoon: 400rmb
+10:59 cleamoon: 1.2M
+10:59 lhanjian: cleamoon: 问题在于炒房需要资本
+10:59 cleamoon: 也不多呀
+10:59 lhanjian: 绅士何不食肉糜啊
+11:00 cleamoon: 有资本的时候当然考虑有资本的花法
+11:00 lhanjian: 是啊
+11:00 cleamoon: 4年1.2M确实不多呀....
+11:00 lhanjian: cleamoon: 不是4年，2年前股价是120$……
+11:00 cleamoon: 一年300k，一个月30k，和工资差不多
+11:01 cleamoon: 哦，现在呢？
+11:01 lhanjian: 60啊
+11:01 cleamoon: 而且，会允许卖吗？
+11:01 lhanjian: 辣鸡阿里
+11:01 lhanjian: cleamoon: 不记得了。可以卖是肯定的
+11:01 cleamoon: soga
+11:01 cleamoon: 还是自己开公司吧
+11:02 cleamoon: 码农什么的，雇来就好了
+11:02 lhanjian: 绅士真是何不食肉糜啊……
+11:02 lhanjian: 不说了
+11:02 lhanjian: 我看看书
+11:03 cleamoon: https://www.zhihu.com/question/41138168/answer/89904762?utm_campaign=webshare&utm_source=weibo&utm_medium=zhihu   暴力膜蛤
+11:03 Flandre`: lhanjian: 羡慕可以看书的（
+11:04 lhanjian: Flandre`: 搞不好明天就失业，还看个冒险书
+11:04 cleamoon: 不是食不食，关键是最单纯的互联网/IT公司并不是技术导向的，还是主意导向的
+11:04 Flandre`: lhanjian: wow
+11:04 cleamoon: 毕竟不是高科技企业
+11:05 cleamoon: 走火入膜
+11:24 tutu_wind: wow
+11:25 Flandre`: wow
+11:27 mushan joined channel
+11:48 guowang joined channel
+12:00 cleamoon quit:Ping timeout: 260 seconds
+12:08 mushan quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+12:12 iyzsong: (≧▽≦)吃饭
+12:18 Flandre`: iyzsong: 好棒！
+12:25 Youmu quit:Quit: Connection closed for inactivity
+12:36 Youmu joined channel
+12:37 tutu_wind: lhanjian: 又开始了～
+12:38 lhanjian: 硅基生命吊打碳基生命
+12:38 lhanjian: ？
+12:39 tutu_wind: 喵～
+12:39 tutu_wind: lhanjian: 未来估计就是量子的天下了。。。
+12:51 Flandre` quit:Remote host closed the connection
+12:54 Sous-Titre quit:Ping timeout: 240 seconds
+12:57 lhanjian: tutu_wind: 直播链接？
+12:58 tutu_wind: lhanjian: live.bilibili.com/1
+13:03 lhanjian: tutu_wind: 我还是看腾讯的，我这个外行也能看看热闹
+13:06 Flandre` joined channel
+13:06 lhanjian: Flandre`: = = - - ` `
+13:12 Flandre`: lhanjian: - -
+13:12 Flandre`: lhanjian: 打鱼一天
+13:12 lhanjian: Flandre`: 外行看热闹
+13:12 Flandre`: lhanjian: 上班玩手机
+13:12 Flandre`: lhanjian: 好爽
+13:12 lhanjian: Flandre`: 我也是。“今天上线吗”“不”“……”，果断摸鱼
+13:13 Flandre`: O.O
+13:13 Flandre`: 然而明天是deadline ...
+13:13 lhanjian: Flandre`: C++看不明白，我觉得我一定是辣鸡
+13:13 Flandre`: 药丸
+13:13 lhanjian: Flandre`: 我已經不知道怎么“学写代码”这件事了
+13:13 Flandre`: O.O
+13:13 Flandre`: Orz
+13:16 lhanjian: Flandre`: 我是不是到了要决定“再也不写代码”这个阶段了么
+13:16 Flandre`: O.O
+13:16 Flandre`: lhanjian: :o
+13:17 Flandre`: lhanjian: 这么年轻就有这个想法，Orz
+13:17 lhanjian: Flandre`: 心态老了有什么用，要是经验就先老了才有用。
+13:17 lhanjian: 世事洞明做不到，人情练达皆扯淡
+13:18 Flandre`: - -
+13:19 tutu_wind: 喵～
+13:19 lhanjian: tutu_wind: 这里有喵，不能喵。这里有吱，不能吱
+13:20 lhanjian: Flandre`: 其实我就是怂，怕失败
+13:20 Stevearzh quit:Quit: ZZZzzz…
+13:21 Flandre`: lhanjian: 肛一下就好（
+13:21 lhanjian: Flandre`: （（（给谁肛
+13:21 Flandre`: lh_mouse: ^
+13:22 mushan joined channel
+13:23 Flandre`: O.O
+13:24 mushan quit:Client Quit
+13:27 lhanjian: Flandre`: 小耗会打你
+13:28 Flandre`: :'(
+13:31 tutu_wind: lhanjian: wow ~ 
+13:35 lh_mouse: Flandre`, ヲ对菊花没兴趣。
+13:35 Flandre`: :o
+13:35 xxxxxxxx quit:Quit: Leaving...
+13:36 lhanjian: Flandre`: 你看，就说吧。小耗是典型的 恐同/反（感） 者
+13:38 Flandre`: - -
+13:42 lh_mouse: lhanjian, 不至于，但是ヲ心里会抵触。
+13:43 lhanjian: lh_mouse: 这个也是 恐同/反同 的一种
+13:43 lhanjian: 当然，这个外延大了以后，这个词也没什么用了
+13:45 lh_mouse: lhanjian, 病理性的ヲ没意见，但是拿来当玩笑ヲ会有意见。
+13:45 lhanjian: 嗯
+13:45 lh_mouse: 当然和这个本身没关系，ヲ有意见的是这类玩笑本身。
+13:45 lh_mouse: 非常庸俗。
+13:47 lhanjian: 确实是
+13:47 lhanjian: 某些腐女根本就不理解那个群体，却特别热衷于拉什么男男CP，相当反感
+13:47 lhanjian: 还以为自己是支持LGBT的政治正确
+13:48 lhanjian: 岂止庸俗啊
+13:49 Guest10808 joined channel
+13:49 lh_mouse: 这谁。
+13:49 lh_mouse: Guest10808, 
+13:50 Guest10808: 我路过的
+13:50 lhanjian: Guest10808: 欢迎
+13:50 Guest10808: 在熟悉irc，没用过
+13:50 Guest10808: 感觉很新奇
+13:50 lhanjian: 这里是freenode最活跃（不是人数最多）的中文频道
+13:50 Guest10808: 抱歉没打扰到你们吧
+13:51 lhanjian: Guest10808: 不不不，并没有打扰
+13:51 lh_mouse: Guest10808, 换一个 nick 。
+13:51 Guest10808: 我没有注册过，这个是自动获取的，还不懂怎么更改
+13:52 Guest10808: 我进频道的时候有提示是么？
+13:52 lh_mouse: Guest10808, 在输入框里输入 /nick your_nick 回车。
+13:52 lhanjian: Guest10808: /nick YourNick
+13:52 tutu_wind: lh_mouse: 不知道你们刚才在说啥～～～
+13:52 lhanjian: 我和小耗的命名风格完全相反了233
+13:52 guowang quit:Ping timeout: 244 seconds
+13:53 lh_mouse: lhanjian, https://github.com/lhmouse/intrusive_ptr/blob/master/intrusive_ptr.hpp?ts=4
+13:54 Guest10808 is now known as archer
+13:54 archer is now known as ARCHER
+13:54 ARCHER is now known as Guest41850
+14:04 varna joined channel
+14:04 varna: 啊啊，现在进频道就觉得一片惨淡，没有妹子
+14:04 varna: 谁能担当大任，邀请1d4个妹子来呢
+14:08 lhanjian: iyzsong: 把L3E邀来
+14:08 lh_mouse: l3e 差评。
+14:09 lhanjian: varna: 别又搞出“道不同不相与谋”来了
+14:10 varna: lhanjian: 道当然不同，平时爆的时候都走后面的
+14:11 lhanjian: varna: 顶座来了又走，好像是这么评论的来着？当时好象是hy在晒作业？
+14:11 lhanjian: 搞不好RM2觉得我们就是一帮恶心的死宅呢（本来也是
+14:11 varna: 不，亚夜花是觉得太低俗了
+14:11 lhanjian: varna: 当时是半夜吧，不记得谁发的截图来着
+14:11 iyzsong: 噫
+14:11 varna: 半夜就不低俗了么（笑）
+14:12 lhanjian: varna: 半夜我们都不在，怎么低俗啊
+14:12 varna: 而且我说句公道话，亚夜花本人超可爱啊
+14:12 varna: 淑女风的美女啊
+14:12 lhanjian: 不过无所谓了，与其让我无休止地自我审查，还不如让我当个恶心的死宅算了
+14:13 varna: 神啊6-4是对陆作战……
+14:14 lh_mouse: 真没腔调。
+14:14 varna: 毕竟腔调自然才算是上品高雅，否则只算附庸风雅
+14:15 varna: 豆瓣文艺青年无法理解的东西有两种：其一文笔，其二味道
+14:20 lhanjian: 没上过豆瓣看文艺青年……
+14:21 varna: 我还看过豆瓣上的艾滋青年
+14:22 lhanjian: 羊驼子真可怕
+14:22 varna: 有五个伙计都跟一个妹子纟勺石包来着，结果都被传染了，故事非常悲惨
+14:22 lhanjian: 哦，我忘了，羊驼子以前也是文艺青年来着
+14:22 lhanjian: （强行
+14:22 varna: 我现在也是
+14:22 varna: 只不过我的文艺比较不那么如人掏粪冷暖自知
+14:22 lhanjian: 不知道是不是羊驼子，我好想还社工出羊驼子的豆瓣发言来着
+14:22 lhanjian: 好像
+14:23 varna: 我有豆瓣帐号，不过我记得发言限于一两个osdev方面的小组
+14:23 iyzsong: 2333
+14:24 lhanjian: iyzsong: 这么一想，233song反而很优雅呢
+14:24 lhanjian: https://usercontent.irccloud-cdn.com/file/QdexO0Ns/QQ%E6%88%AA%E5%9B%BE20160310142055.png
+14:24 lhanjian: @cleamoon
+14:25 varna: 昨天我最后校了一遍学位论文初稿，强行在里面加入了一些POI
+14:25 lhanjian: 这把瑞典人黑的
+14:30 mushan joined channel
+14:45 Stevearzh joined channel
+15:01 guowang joined channel
+15:02 lhanjian: .
+15:04 lhanjian: varna: 原来不确定性问题在ML里属于这么难的问题啊……
+15:05 varna: ?
+15:08 lhanjian: varna: “不过因为我自己研究的东西主要是不确定性推理”
+15:09 varna: 因为确定规则的推理太老旧了
+15:09 varna: 只适合作为核心理论，不适合直接拿出来用
+15:11 varna: 不确定性推理最后仍然被期望得出确定结论，但毕竟先验和信念都可能是不确定的，所以我觉得「以过强的条件为核心，传播模糊边界进行推理」这种想法算是个可用的方法
+15:12 lhanjian: “每个字都认识，每个词都知道，连起来就一点也不明白了”
+15:12 lhanjian: 当然也可能是并不知道每个词的定义
+15:15 varna: 举个不那么麻烦但有实感的例子的话，可以去查查Rough Sets
+15:15 varna: 国内通用译法=模糊集
+15:15 varna: 撸多
+15:15 varna: 国内通用译法=粗糙集
+15:15 varna: 模糊集是Fuzzy Sets
+15:16 varna: 这个东西我觉得通俗解释容易搞扭，不如看具体理论
+15:17 Flandre`: O.O
+15:17 varna: Flandre`: 爆
+15:17 lhanjian: varna: 通俗解释只能举举栗子，然而可能搞不懂任何问题吧？
+15:17 Flandre`: 学习了
+15:18 varna: lhanjian: 我觉得反倒容易让读者产生难以名状的误解，那样就不合适了
+15:18 lhanjian: 是啊
+15:20 lh_mouse: geordi, << uncaught_exceptions()
+15:20 geordi: 0
+15:25 Youmu quit:Quit: Connection closed for inactivity
+15:33 guowang quit:Remote host closed the connection
+15:33 Stevearzh quit:Disconnected by services
+15:34 Stevearzh joined channel
+15:35 guowang joined channel
+15:35 lhanjian: varna: 不过科普还是很难的，可是有的东西又不能不让公众知道
+15:35 tutu_wind: lhanjian: 估计又得跪啊
+15:35 lhanjian: tutu_wind: 是啊。碳奸 又要胜利了
+15:36 Flandre`: lol
+15:36 tutu_wind: lol
+15:36 lhanjian: lol
+15:36 lhanjian: 看来还是先研究AR吧，给人类加点算力省电记忆力
+15:36 lhanjian: 点
+15:40 mushan quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+15:44 varna: lhanjian: 可公众多数时候拒绝接受知识
+15:44 lhanjian: varna: 是啊，拒绝接受知识，同时却要参与决策。别说公众，有的负责人一样这样
+15:45 lhanjian: http://www.is.pku.edu.cn/~qzy/books.htm
+15:45 varna: 你弄得他们有挫折感了，他们就不听了
+15:45 varna: 所以科普超麻烦
+15:46 lhanjian: 啊，我也有时候这样，“听不懂，不听不听”。
+15:47 lhanjian: 裘宗燕的翻译名词虽然蛋疼些，不过翻译的质量和趣味都还不错的感觉
+15:50 Flandre`: 老红军在看什么呀？
+15:50 lhanjian: Flandre`: TC++PL
+15:50 Flandre`: lhanjian: OuO
+15:51 lhanjian: Flandre`: 看得脑袋严重缺氧，脑袋里充满了y y y y y y y y y y ?
+15:52 Flandre`: wow
+15:52 varna: 傻逼度娘掐我下载
+15:53 lhanjian: varna: 羊驼子骂这个好多次了，可以用axel 开个16条线程。这样断两条无伤大局
+15:53 lhanjian: 虽然总的速度并不会提升多少
+15:54 varna: 十六线程按说应该被掐掉十四条？
+15:54 varna: HTTP服务器有权拒绝超过两条的连接吧
+15:55 lhanjian: varna: 不会拒绝那么多吧，下次我再看看。不过用了axel以后，确实不用担心连接干掉了
+15:55 varna: 下回我试试
+15:57 lhanjian: varna: 我这边一条都不会断，速度直接上4MiB/s了……
+15:57 Flandre`: O.O
+15:57 varna: ...
+15:57 varna: 本格的百度傻逼
+15:57 lhanjian: varna: 总之试试axel
+15:57 Flandre`: 这么多，用 aria2c 开5个连接，从来都只剩下1个（
+15:58 lhanjian: Flandre`: axel好些
+15:58 lhanjian: aria2c 之前觉得它并不太靠谱。
+15:59 lhanjian: Flandre`: 随手测了下，aria2c连2MiB/s都稳定不了……
+16:00 lhanjian: 渣渣
+16:00 Flandre`: :'(
+16:01 tutu_wind: 。。。
+16:01 tutu_wind: lhanjian: 妹子说 李世石 已然快跪了。。。
+16:01 lhanjian: 对啊。
+16:02 lhanjian: 我觉得挂顶了
+16:02 lhanjian: 而且我发现围棋界人士似乎都会高估李的形势
+16:02 varna: 妹子！？
+16:02 tutu_wind: lhanjian: 阿西，不知道
+16:02 tutu_wind: varna: bilibili的直播
+16:02 varna: 石仏跟我没半毛钱关系，然而妹子
+16:03 lhanjian: Flandre`: aria2c 貌似自己限定了不会超过5条线程，过于自我审查了
+16:03 varna: 啊，屑站妹子……
+16:03 Flandre`: o.o
+16:03 lhanjian: 以前用FlashGet ，加线程数加到OOM了
+16:03 lhanjian: axel应该也是这个作风
+16:04 lhanjian: tutu_wind: 柯洁的我没看。但是我感觉古力常昊绝对是高估了李的形势
+16:05 lhanjian: 李开复一脸懵逼“怎么ago这么牛逼”
+16:06 lhanjian: 刚才古力稀里糊涂算出来ago领先16（减掉7目也大胜了）……
+16:06 varna: 为何这个胜负如此坑
+16:07 varna: 现代CJK哪有这么奇妙的大胜，还是我煋了……
+16:08 lhanjian: varna: 神经网络的 策略网络和价值网络 是什么
+16:09 varna: 那是usage
+16:09 varna: 对ago来说，前一个是一次广度剪枝，后一个是一次迭代加深
+16:09 lhanjian: 嗯
+16:09 varna: 所有的特征抽取和近似特征归并应该都交给CNN了
+16:09 varna: 不然特征过分庞大，没法实现
+16:10 lhanjian: 嗯
+16:10 varna: 实际上这正是DL系NN擅长的事情
+16:10 varna: 本来这类方法的应用就是图像音频之类有特征但难以名状的数据
+16:11 varna: 但ago的策略和价值只是他们自己发明的东西
+16:11 varna: 这两个方向性的名词本身没什么特别理论
+16:11 lhanjian: 看起来ago这次有不少针对围棋的具体优化？
+16:12 lhanjian: 不过这也没法知道就是
+16:13 varna: 如果不教启发式的话，人类和机器都没法下棋，这没什么
+16:13 varna: 但我需要加一点强调：机器学习限于发现重言式
+16:14 tutu_wind: lhanjian: wow
+16:14 Flandre`: wow
+16:14 varna: _(:з」∠)_总之我感觉这几天我该退避下，省得脑残言论太多，我还总想解释些正经事情
+16:15 varna: 这次能冒出来一大堆听得风就是雨的废物
+16:15 varna: 我赌三个NKC
+16:16 * lhanjian 听不听风都不会下雨，更惨
+16:16 varna: 也许你可以吃点三金片……
+16:16 lhanjian: varna: 那个是治脑残的吧，虽然我记得本体并不是
+16:16 varna: 利尿的吧？
+16:17 lhanjian: varna: 泌尿系统的好像
+16:17 lhanjian: 乱七八糟的中成药
+16:18 varna: 脑残片广告在我高中时候很流行
+16:18 varna: 当时杀马特还颇多
+16:19 lhanjian: 好像围棋界的伙计已经绝望了
+16:20 lh_mouse: geordi, { using T = int; int a; a.~T(); }
+16:20 lhanjian: “你前面领先再多，后面也赢不了”
+16:20 geordi: <no output>
+16:20 lh_mouse: geordi, { using T = int; int a; a.~long(); }
+16:20 geordi: error: expected identifier before 'long'
+16:20 lh_mouse: geordi, { using T = long; int a; a.~T(); }
+16:20 geordi: error: 'a' is not of type 'T {aka long int}'
+16:20 varna: 这个目数差太多了吧
+16:20 varna: 我一直印象现在围棋高端比赛，胜负就差一点点
+16:20 lhanjian: varna: 对啊。而且还算不清了，没几下，差的目数就更夸张了
+16:21 varna: 赢个一目半目的比赛突然冒出十六目
+16:21 varna: 全都懵了……
+16:21 lhanjian: 对啊
+16:21 varna: 算力差距么
+16:21 varna: 现代围棋毕竟讲究算的
+16:22 lhanjian: varna: 围棋界有一点共识，“在后期/局部需要精确算的时候，人的差距太大了”
+16:22 varna: 我见过一般训练题目，死活题都在很小的局面上做
+16:22 varna: 因为大了太不好算
+16:22 varna: 要不石仏以前好用无理手涮人……
+16:23 lhanjian: 围棋界觉得“计算机缺乏大局观、直觉”，不过从ML的角度来说，恐怕未必吧？
+16:23 varna: 肯定是缺的，但你得看这个大局观是用来干什么的
+16:23 lhanjian: 嗯
+16:23 varna: 如果你能算十手，那么五十手上的直觉就是大局
+16:23 lhanjian: 嗯
+16:23 varna: 但如果你不幸能算五十手……
+16:24 varna: 所以我对AI Approach究竟是成就还是进步的区别，不在于它能做什么，而在于它如何启示基础研究者
+16:24 lhanjian: 上一局有个有意思的事情，右下那一片，本来古力说李已经占优势了，控制住了，结果等到右上那一片连到右下的时候，一下子反过来了
+16:25 varna: 古力已经是世界级的能算了，然而……
+16:25 lhanjian: varna: 嗯，我觉得对围棋界恐怕很有些启迪。
+16:25 varna: lhanjian: 我觉得主要是对AI研究者来说，ago没有提出变化
+16:25 lhanjian: 不知道ML理论界/工业界怎么看
+16:25 lhanjian: nature上那篇羊驼子看了没？
+16:25 varna: 没看，求url
+16:26 varna: http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html 这个么
+16:28 varna: 如果是的话，我觉得这个短文确实验证了我的观点：成就巨大，没有变化
+16:28 lhanjian: 嗯
+16:28 lhanjian: 羊驼子毕竟半业内人士
+16:28 varna: 他们确实给出了围棋问题的漂亮解法，而方法论也是很好的：向围棋选手展示，围棋是可以计算的，同时提出可接受的计算模型
+16:28 lhanjian: 李正式认输了。
+16:28 lhanjian: tutu_wind: 
+16:28 tutu_wind: get
+16:29 varna: 而这说明了一点——舆论仅仅是高估了围棋而已……
+16:29 tutu_wind: lhanjian: 唉
+16:29 varna: 因为它对于人类头脑来说计算量太大了
+16:29 varna: 但你看这篇短文的说法
+16:30 varna: 首先是监督学习，然后是两个网络上的误差调整
+16:30 varna: highly practical
+16:31 varna: 打个比方的话，就是把成熟的鱼雷换成了初代原子弹……
+16:31 varna: 做法还是把爆炸物糊到危险问题脸上
+16:31 lhanjian: 这我就不能理解了……
+16:32 varna: 这么说吧，它仍然是NN方法
+16:32 varna: 难以名状，基于激活和反馈，期待「模拟」「知识运行的过程」
+16:32 lhanjian: 嗯，着我知道
+16:32 lhanjian: 激活 反馈 ……？
+16:32 varna: 我有点相信这样一个信念：在NN模型中，知识确实存在，但没法表述
+16:33 varna: 只有当信号被输入NN实例的时候，经由知识得到的某些东西（具体来说，网络拓扑和权）开始运作，得到一个结论
+16:33 lhanjian: 有些人就怕这个，可能已经搞出「学习」和「知识」了，只是研究者反而不知道而已……
+16:33 varna: 不，这近乎经由运动观察时间的物理实验法
+16:34 lhanjian: 嗯
+16:34 varna: 看上去很自然，但经由运动观察时间这个实验方案本身就值得讨论
+16:34 varna: 但它是个不错的方法，也并非全盘摒弃知识，只是需要继续探讨
+16:35 varna: 至于激活和反馈，这是NN运作的基础了，有兴趣的话看看经典结构的算法就行；上来就看DL也许会觉得烦躁
+16:36 hatelis joined channel
+16:36 hatelis: varna, irccloud突然挂了
+16:37 lhanjian: 回来了
+16:37 hatelis quit:Client Quit
+16:37 varna: (｡･ω･)ﾉ
+16:37 lhanjian: varna: ~ ~
+16:37 Meow-J quit:Ping timeout: 250 seconds
+16:38 varna: 这么想下来，其实本科可以开一门机器学习导论课？
+16:38 lhanjian: varna: 我一直觉得早就该开
+16:38 varna: 讲给二/三年级的本科生是合适的
+16:38 varna: 以后机器学习方法不论其观念如何，估计会用得更多
+16:38 varna: 虽然它们一个比一个不靠谱
+16:38 lhanjian: varna: 会写代码的/会基本的线性代数的，都可以教
+16:39 varna: 差不多，先修数学和数据结构就差不多了
+16:39 lhanjian: 嗯当时我就是大二看的，只是没坚持下来
+16:40 lhanjian: 目的达到大家能大致地调参数我觉得就够了
+16:40 lhanjian: 这是吴恩达的意见
+16:41 lhanjian: 据说谷歌的下一个计划是 星际争霸1
+16:41 varna: 这个比围棋稍容易吧？
+16:41 lhanjian: 不知道
+16:42 varna: 开局+侦查特征提取+战术重点认知+小战场局面评估指导微操
+16:42 lhanjian: 就微操这点就很大差距了吧
+16:42 varna: sc1的APM我听说极限是600+
+16:42 lhanjian: 星际1是如此的依赖微操
+16:43 varna: 但人类选手在不受限的AI面前拼操作……
+16:43 lhanjian: 电脑可以全屏微操
+16:43 lhanjian: 人根本连看都看不过来
+16:43 varna: 而且那位600+选手的操作犀利点在于他能打六线
+16:44 varna: 应该是个Z
+16:45 lhanjian: 应该已经没有了什么更抽象的游戏可以玩了吧。。。
+16:46 Meow-J joined channel
+16:50 xxxxxxxx joined channel
+17:03 varna: xxxxxxxx: 爆
+17:05 varna: 人还是不齐
+17:07 lhanjian: 很难了吧
+17:07 varna: +, 我们该培养些新的法师？
+17:08 lhanjian: 在总人数毕竟也没多少
+17:08 varna: 有没有人来个Introduction to Frcane Arts
+17:09 lhanjian: Introduction to Mogica 才对吧
+17:09 varna: Arcane Arts
+17:10 varna: 说起魔法，我比较喜欢用Arcane Arts / Arcanum这词来概括
+17:10 lhanjian: 233
+17:10 varna: 小家子气或者走偏的用Sorcery
+17:10 varna: 中古写实风的说Wizardry
+17:11 varna: Enchantment, Charm, Conjuration这几个词我因为受DND毒害所以总觉得是专门学科
+17:15 whatofor joined channel
+17:16 iyzsong: - -
+17:17 whatofor_1 quit:Ping timeout: 244 seconds
+17:19 Youmu joined channel
+17:20 T-J-M_ quit:Ping timeout: 244 seconds
+17:29 lhanjian: varna: 续命续命
+17:31 lhanjian: Flandre`: ！
+17:31 Flandre`: lhanjian: !
+17:31 * varna -1s
+17:31 xxxxxxxx: minecraft1.9出了个盾牌...
+17:32 Flandre`: lhanjian: +1s
+17:32 lhanjian: varna: 为什么要牺牲自己1s
+17:32 lhanjian: Flandre`: 划了一天水
+17:33 lhanjian: 感觉已经没有希望了，药丸
+17:33 Flandre`: lhanjian: 玩手机玩了一天
+17:33 varna: 证明我不是机器人
+17:33 Flandre`: lhanjian: 今天就玩 githug 了 =-=
+17:33 lhanjian: varna: 不，我只庆幸羊驼子没有刻意隐瞒自己是机器人这回事
+17:33 lhanjian: Flandre`: hub
+17:33 lhanjian: Flandre`: hug
+17:33 lhanjian: Flandre`: gitbao
+17:33 lhanjian: Flandre`: bao
+17:33 Flandre`: lhanjian: 是 githug，一个 git 的游戏 =-=
+17:34 lhanjian: Flandre`: 看了下，还是算了吧，还不如打游戏呢。不要老是用“寓教于乐”欺骗自己，你又不是小学生
+17:34 varna: gayhug?
+17:34 varna: 好可怕
+17:34 Flandre`: lhanjian: -.-
+17:35 Flandre`: lhanjian: 感觉还不错中
+17:35 Flandre`: lhanjian: 感觉还不错啊
+17:35 Flandre`: lhanjian: 有点ctf的意思(
+17:35 lhanjian: Flandre`: 嗯，也许是个 实战式的github教程？
+17:35 xxxxxxxx: 羊驼子是姬器人
+17:35 lhanjian: xxxxxxxx: 是基器人
+17:35 lhanjian: 头好痛啊
+17:36 varna: 这些给一
+17:36 xxxxxxxx: 你说羊驼子是基你就受惩罚了233
+17:36 varna: 基头四内讧啦
+17:37 lhanjian: xxxxxxxx: 什么鬼？
+17:37 xxxxxxxx: 羊驼是基器人 羊驼子是姬器人
+17:38 lhanjian: xxxxxxxx: 不懂
+17:47 cleamoon joined channel
+17:47 varna: cleamoon: 明天维护6-4打离岛
+17:49 lhanjian: 不知道这次到底是ML的“估值修复、牛市启动”，还是比特币似的“利好出尽，达到最后的高点”……
+17:50 varna: 你想多了
+17:50 varna: DL被吹了这么多年，成果全都远离大众，ago酝酿了一段时间冒出来，你就把它当个大新闻
+17:51 varna: 这跑得太快了！
+17:51 varna: 基础研究该怎么搞还得怎么搞
+17:52 lhanjian: varna: 我知道研究当然不会有什么飞速的进展（不过如果考虑人才的流入也难说）。我是谈市场价值……
+17:52 lhanjian: 大众其实不知道什么DL的，他们能知道AI/ML这两个词就不错了
+17:52 varna: 市场价值？现在用ML的东西满地都是，比起这个新闻，多数业内的伙计更明白他们要什么
+17:53 varna: 如果有一个新闻，那么在这新闻跑到你鼻子底下彰显存在感之前，一定有一大堆铺垫
+17:53 varna: 请别选择性目盲
+17:54 lhanjian: varna: 羊驼子知道，投资人大多都是脑残。业内的伙计大都知道这次没有太多技术意义。不过投资人可不见得不会重新考虑“人工智能概念股”的估值
+17:55 varna: 不不，投资人我觉得也就2/3脑残
+17:55 lhanjian: 算了，其实过几天再看看谷歌的股价就知道
+17:55 varna: 而且脑残人士不会影响大局
+17:55 lhanjian: 昨晚GOOG的股价仅仅涨了1.62%
+17:55 varna: 不然你我现在都得在街头挂个「我会写程序」的牌子乞讨
+17:55 lhanjian: 蛤蛤蛤
+17:55 varna: 我觉得手里有钱的人不少脑子里都有东西
+17:56 lhanjian: 是啊
+17:56 varna: 暴发户另论
+17:56 lhanjian: 国内的接近暴发户的就更多
+17:56 varna: 毕竟国内还是穷
+17:56 lhanjian: 不然不会有前两年的互联网泡沫
+17:56 lhanjian: 我记得 SE 宣布 FF7RE 的那天，SE的日股瞬间暴涨15%……
+17:56 varna: ...
+17:57 lhanjian: 收盘也上涨了几个百分点
+17:57 Izumo: @Lawson
+17:57 varna: 想想最近的lawson和那个牛井店，叫什么来着……
+17:57 varna: 牛井各种爆棚啊，套餐送卡片的
+17:57 varna: 而且发疯一样出RJ
+17:57 varna: 那感觉就是一日三餐跟去了三趟5-4一样
+17:57 Izumo: RJ实用
+17:57 lhanjian: varna: 说错了，是暴涨4%，然后收盘回落到涨2.9%
+17:58 Izumo: 可以当各种垫
+17:59 varna: 其实我觉得现在ML虽然绝望，但业内可以做的研究仍然有，只是门槛高
+17:59 lhanjian: 看起来发达国家的投资者确实脑子清醒些
+17:59 lhanjian: varna: 嗯
+17:59 varna: 但公众不了解啊，所以就弄个大新闻
+17:59 varna: 来不来钱两说
+17:59 varna: 我觉得就这个造势的方法，不像能很来钱
+18:00 lhanjian: 确实，不然昨天晚上GOOG应该多涨点
+18:00 varna: 围棋倒是个热点，但你看他们下一步的选题
+18:00 varna: sc1，这是个硬核玩家才会关注的东西
+18:00 lhanjian: 搞笑的是，国内的几个勉强沾点边股，还涨停了
+18:00 lhanjian: http://stock.jrj.com.cn/hotstock/2016/03/10011920667720.shtml
+18:01 varna: 新世纪的年轻人恐怕都不知道这是什么玩意了
+18:01 iyzsong: 他们刚开始不是玩atari的么..
+18:01 varna: 给我感觉是这个项目组很有兴趣，但他们的兴趣更多地在于“这系统能做什么”上
+18:01 lhanjian: varna: 不过我看了个视频，其实全屏幕超级微操的AI已经有了，感觉如果不限制它的APM，这样的实验意义不大
+18:01 Izumo: 该选lol
+18:01 varna: 我被超级AI怒草过
+18:02 varna: 那是个war3 AI, 1.20版
+18:02 varna: 那天我说出了人生最绝望的话：出不出巫妖呢？算了，码个塔吧
+18:02 lhanjian: 233
+18:02 varna: 然后来了一大票狼骑和火油投石车
+18:03 varna: 那个AI会把疯狂难度的奖励资金都花掉，所有造兵设施都出三个
+18:03 varna: 根本打不过
+18:03 lhanjian: varna: 233
+18:04 lhanjian: 所以我不太懂为什么谷歌要选星际1
+18:04 varna: 我也不太懂，这不算是个很有价值的题目，虽然很有趣
+18:04 varna: 但这太geeky了
+18:04 lhanjian: “星际争霸的玩家除了视觉观察之外还需要理解一些其他问题，AlphaGo需要面对一些其他问题”，“这样的挑战是和围棋在不同层面的”
+18:04 varna: 我觉得这走偏了
+18:05 varna: 虽然我说这话的观点可能代表了相当学院派的ML研究风格
+18:06 lhanjian: 看起来他们确实是在研究 能干什么
+18:06 varna: 这稍稍有点不太像研究……
+18:07 varna: 当然只是稍稍
+18:07 varna: 你懂我在说什么
+18:07 lhanjian: 嗯
+18:08 varna: 星际争霸的玩家爱除了视觉观察之外还需要理解一些其他问题 # 比如玩家的老爹可能希望他去学医，而玩家自己的水平可能真的不像自己想像的那么好
+18:09 varna: ^ 李〇凤
+18:09 varna: ^ 李〇峰
+18:09 lhanjian: 李晓峰不是打War3
+18:09 lhanjian: 的么
+18:09 varna: 他出道之前打sc1打得不好
+18:09 varna: 转型成功了
+18:10 lhanjian: 。。。
+18:11 varna: (｡･ω･)下楼买点东西姬姬姬姬。
+18:15 lhanjian: 今天太无聊，强行提前下班了。。。
+18:16 iyzsong: 谷歌将他的AI接入各种网络游戏，由于人们根本打不过AI，判断出来就T，AI在此过程中不断学习如何避免被T...
+18:16 lhanjian: iyzsong: 如果把它被T 等同于 失败，恐怕它真的可能会伪装失败啊……
+18:17 lhanjian: 既不能太强到被T，又不能太弱到打不过……
+18:17 iyzsong: 判断是通过对话的吧 = =
+18:17 lhanjian: ？
+18:18 lhanjian: 现在的AI还没这么多事情吧
+18:19 lhanjian: BillGates开始考虑 帝国时代 的新作了……
+18:19 varna: 哦对！我应该下一个帝国2！
+18:20 lhanjian: varna: Steam上有超级便宜的正版 HD重制版 了
+18:20 lhanjian: 官中
+18:21 varna: Linux可用？
+18:21 lhanjian: varna: 想多了。
+18:21 varna: 那就不玩了
+18:21 varna: 目前我也暂时不想弄信用卡，之前那个L4D2是红旗买来给我，我用支付宝打给他钱的
+18:22 lhanjian: varna: 不需要的，现在可以直接用 银联， 储蓄卡就行
+18:22 lhanjian: 羊驼子不可能没有国内银行卡吧
+18:22 varna: 银联就行？
+18:22 lhanjian: varna: 对啊
+18:22 lhanjian: 支付宝已经不能用了，银联没问题
+18:22 iyzsong: steam好像可以支付宝?  paypal填个卡号就行了..
+18:22 varna: 那还是不行，中行网银要IE...
+18:22 iyzsong: paypal不用验证..
+18:22 lhanjian: varna: 不是的，他走的银联接口，不是网银
+18:23 lhanjian: varna: 总之试试
+18:23 varna: 以后试试
+18:23 varna: Linux不能玩的我就不买正版了
+18:24 lhanjian: wine的话，好像可以，除了游戏启动的那段CG？
+18:24 lhanjian: 总之随意了，反正就是还个债。很多游戏买了steam，我也是玩盗版的
+18:25 lhanjian: 毕竟不是每个都有官中
+18:26 varna: 中文版我不在乎
+18:26 varna: 而且多数中文版的贡献在于换了一堆渣字体上去
+18:27 varna: 主要是能不能在Linux下原生运行matters
+18:27 xxxxxxxx: 啥 google要打SC1?
+18:27 xxxxxxxx: 那最后找谁对打?
+18:28 xxxxxxxx: 李永菜?
+18:28 varna: 智障也有春天
+18:29 xxxxxxxx: 我真的很想知道到底要和谁打SC1能显示出实力
+18:31 xxxxxxxx: 教主和菜东现在出来大概都没啥说服力 毕竟SC2 这两个人挺惨的
+18:33 varna: 其实我觉得两台AI对杀能精彩点就行
+18:34 Mokou joined channel
+18:35 Flandre` quit:Remote host closed the connection
+18:35 xxxxxxxx: 结果AI无数线的操作吓尿了所有人
+18:35 Mokou: 银联可以用，有Linux控件
+18:35 Mokou: 手机验证下就成
+18:36 varna: 不急，反正这个AOE2还得wine
+18:37 Mokou: 噫，铝要不够
+18:37 Mokou: 今晚放弃东急全力跑铝
+18:38 xxxxxxxx: AI APM不限制的话 四处两三个枪兵风车地刺
+18:38 Mokou: 我感觉我这一摸药丸啊
+18:38 Mokou: 托福考完就剩下一星期了
+18:39 varna: 你这是一膜
+18:39 Mokou: +1s
+18:39 varna: xxxxxxxx: 必须风车
+18:40 xxxxxxxx: 还什么 小狗散成一朵花咬爆一堆坦克
+18:40 xxxxxxxx: 运输机过去农民全被电死
+18:40 Mokou: 来个RA3
+18:40 varna: 所以我觉得可以加一个限制器，比如限定不超过500APM/sc1？
+18:40 Mokou: 天狗再也不会中弹了
+18:40 xxxxxxxx: 我觉得大概是必须的
+18:40 xxxxxxxx: 不然人类都看不懂
+18:41 varna: +1
+18:41 Mokou: 消灭人类暴政
+18:41 Mokou: 今天一摸作文题目都是刘慈欣
+18:42 varna: 什么破题目……
+18:42 Mokou: 高考题目你懂得
+18:42 varna: 一膜不是青岛市统一出题么
+18:42 Mokou: 都是卵
+18:42 Mokou: 是
+18:42 varna: 傻……
+18:42 Mokou: 毕竟语文还是山东卷
+18:42 xxxxxxxx: 不限制apm 自杀机都和村特一样
+18:42 Mokou: SAT的题目倒是比他们不知高到哪里去了，但是SAT的时间只够胡说八道……
+18:43 xxxxxxxx: 真吓人
+18:43 varna: 不限制APM的自杀机……
+18:43 varna: 不敢想会有什么恐怖战术
+18:44 Mokou: 不过这几天钢的回复倒还不错
+18:44 Mokou: 上10K了
+18:44 xxxxxxxx: 唯一没多少变化的大概就是核弹
+18:44 varna: 明天我通宵表演6-4，如果没恶心带路的话
+18:45 Mokou: 明天我打5-4
+18:45 Mokou: 5-5
+18:45 Mokou: 总得拿下最后一血
+18:47 varna: 6-4会很恶心的
+18:47 varna: 这次打离岛栖姬
+18:47 varna: (｡･ω･)姬
+18:47 Mokou: (｡･ω･)离岛没胸
+18:47 Mokou: 离岛我不怕，我就怕带路
+18:48 Mokou: 来个什么水雷战队限定
+18:49 varna: 水雷火箭弹，我狗呔
+18:49 xxxxxxxx: 然后羊驼子大欢喜
+18:49 varna: 打个卵
+18:49 varna: 火箭弹没法打的
+18:49 varna: 我宁可大舰轰
+18:50 varna: 水雷战队走一路得炸一半……
+18:50 varna: 然后对面还空袭，得有小和；制空没有，被二连；不能用支援
+18:50 varna: 这得多惨
+18:51 Sous-Titre joined channel
+18:51 Mokou: 羊驼子只会大悲摧
+18:51 Mokou: 捶床便大怒
+18:51 Mokou: realtek你妈输卵管又断了
+18:51 varna: 啊，空出槽来了
+18:52 varna: 今天把1-6打通算了
+18:52 Mokou: OTL
+18:52 varna: 之前只打一趟，还差六趟
+18:52 Flandre` joined channel
+18:52 Mokou: 1-6 7/7
+18:52 Mokou: 5-4 1/10
+18:52 Mokou: 但我还是在大将区
+18:53 varna: 转服吧
+18:53 varna: 破区乙烷
+18:53 Mokou: http://ww1.sinaimg.cn/bmiddle/aac5fc13jw1f1rxi9qy97j20qo1bg10w.jpg “这是我非常熟悉的一个记者朋友在现场问的，为什么不敢正面回答？这说明了什么？请充分发挥想象力写一篇不低于600字的命题作文[doge]顺便盗个图[doge]” ——柯洁
+18:53 Mokou: 我要转横镇
+18:54 varna: 横镇很肝的
+18:54 Mokou: 佐世保什么的也行
+18:54 varna: 现在躺尸基本是佐镇和吴港
+18:54 Mokou: 吴港算了，大建容易出棒各
+18:54 xxxxxxxx: 关爱头发
+18:54 varna: 舞鹤一堆肝帝，大凑我不太了解
+18:55 Mokou: 大凑前段时间是不是涌入了一堆肝帝？
+18:55 varna: 亚顿是舞鹤的，M囧大凑之耻
+18:55 varna: 哦对
+18:55 varna: M囧浑作战有事没打，欠了一年多的小和尻根
+18:55 Mokou: 乙烷
+18:55 varna: 人称大凑之耻
+18:55 Mokou: 我去佐镇吧
+18:55 Mokou: _(:з」∠)_
+18:55 Mokou: 连欧根和小和都没有的新米
+18:56 varna: 航空点夜战走起
+18:56 Mokou: 【小学生放学遭绑架 机智喊路人“爸爸”躲过一劫】7日放学后，东莞五年级学生小明在回家途中，一男子上前问他要不要吃棒棒糖，遭拒绝后男子将他抱住并佯装家长对其又打又骂：“你这个不孝子！”小明停止了叫喊。男子抱着孩子走，小明见到一名男士，大喊“爸爸”，男子见状逃走了。
+18:56 varna: 卧槽我带灯了
+18:56 varna: 神啊POI拯救世界
+18:57 varna: 不然我得生吃一个二连
+18:57 varna: 而且搞不好就是POI吃
+18:57 Mokou: _(:з」∠)_
+18:57 Mokou: #辟谣# 【又见熊孩子！网传南城一小学生被绑架？真相是…】近日，一则“东莞市南城一小学生被绑架后成功脱逃”的消息在网络上广为传播，弄得家长们人心惶惶。今天，警方对此事进行了辟谣，原来是因去同学家里玩，晚了回家怕被家长批评，编出其被陌生男子抱走又放了的谎言。
+18:57 varna: CI 623 一发带走
+18:57 xxxxxxxx: 233
+18:57 Mokou: ^一声巨响
+18:58 varna: 熊孩子23333
+18:58 Mokou: 噗
+18:58 Mokou: 飞龙就剩两万经验了……
+18:59 Mokou: 买不起戒指，我先不多婚了
+18:59 xxxxxxxx: 遭拒绝后男子将他抱住并佯装家长对其又打又骂：“你这个不孝子！”小明停止了叫喊。男子抱着孩子走，小明见到一名男士，大喊“爸爸”，男子将他抱住并佯装家长对其又打又骂：“你这个不孝子！”
+18:59 Mokou: 之后换大凤
+18:59 xxxxxxxx: 这样才是神作
+18:59 varna: 23333333
+18:59 iyzsong: = =
+19:00 varna: 第二趟五百油，还不错
+19:04 varna: 啊驲，到十六号之前我还得去开一份未出版论文的录用证明
+19:05 varna: 这些破会议坑死我也
+19:06 Sous-Titre: exit
+19:06 Sous-Titre quit:Quit: WeeChat 1.4
+19:07 guowang quit:Ping timeout: 250 seconds
+19:08 Mokou: 噗
+19:08 Mokou: 大凤还剩正好一万经验
+19:08 Mokou: 先去吃饭
+19:26 endle joined channel
+19:26 Stevearzh quit:Quit: ZZZzzz…
+19:32 cleamoon quit:Ping timeout: 244 seconds
+19:56 Mokou: http://ww3.sinaimg.cn/bmiddle/aac5fc13jw1f1s09vlxotj20qo1bg48a.jpg “如翔在喉” ——柯洁
+19:59 varna: 还不错，前面捞了些油
+19:59 varna: 最后固定一千油没什么好期待了
+20:03 Mokou: 劝退了
+20:06 varna: 脸接二连
+20:06 varna: 超惊险
+20:06 Mokou: http://ww4.sinaimg.cn/bmiddle/78f59db5jw1f1s0iohddcj20a70qt0yi.jpg http://ww1.sinaimg.cn/bmiddle/78f59db5jw1f1s0ip2xvqj20a90r8tdk.jpg 
+20:06 Mokou: ^冬活真相
+20:10 varna: 惯例的米空讲解……
+20:12 Mokou: 【TFBOYS拍戏引围观 导演发声求不打扰】TFBOYS在厦门拍摄网剧《超少年密码》。三只的超高人气吸引了大量粉丝围观，甚至有粉丝冒险爬墙。@焦雄屏 微博发声，称快门声、尖叫声严重影响收音，导致一再重拍镜头。不少粉丝自觉遵守秩序，不过今日再次出现状况，导演无奈发博呼吁。
+20:13 varna: 红衣童子三人众啊
+20:13 varna: exciting!
+20:13 Mokou: +3s
+20:15 varna: 不过我真的推荐看看《青春修炼手册》（是叫这名吧）的MV
+20:15 varna: 超喜感
+20:15 varna: 那神一样的英文
+20:16 varna: 我记得有个什么grate
+20:17 Mokou: 我去围观下
+20:18 lhanjian: 哈哈哈哈
+20:18 varna: 嚼点口香糖
+20:18 varna: 你可能会想吐
+20:23 guowang joined channel
+20:23 Mokou: 噫，屑站上只有一堆现场
+20:23 Mokou: 我上网易看看
+20:23 Mokou: 啊，有
+20:25 Mokou: Grate2333333
+20:25 Mokou: The elderly...
+20:26 varna: 233333
+20:27 Mokou: use the Superpower in correct
+20:27 Mokou: 我托福只有95分，你为什么要骗我
+20:30 Mokou: 飞龙Lv99
+20:30 varna: OTL
+20:30 Mokou: 哦对了
+20:31 Mokou: 托福的考试程序是用Java写的 
+20:31 varna: ...
+20:31 Mokou: 我口语只拿了14分一定是因为受到了惊吓
+20:32 Mokou: 另外CET大概什么难度？
+20:32 Mokou: 六级
+20:32 varna: 说不清，作文时间很充裕，阅读词汇量不大，请祈祷你的考场是自带耳机的
+20:32 Mokou: ……
+20:33 varna: 应该比所有出国向的英语考试都简单
+20:33 Mokou: 不带耳机怎么办，大喇叭？
+20:33 varna: 在阶梯教室的讲台上摆一个磁带录音机
+20:33 Mokou: 噗
+20:33 varna: 然后大本营发表
+20:34 varna: 我记得CET系列都是先发笔答题，包括作文和翻译句子
+20:34 varna: 到时限统一收卷，发选择题
+20:34 varna: 然后做听力阅读那些
+20:35 Mokou: なるほど
+20:35 Mokou: 托福的好处倒是时间比较自由
+20:35 Mokou: 十分钟休息时间我就没休息，直接接着考了
+20:35 Mokou: 然后我做到口语第五题他们才开始第一题
+20:35 varna: CET基本算是国内高校通用的英语考试，所以形式也古旧
+20:36 Mokou: 我听说雅思也是笔试，而且听力比较可怕
+20:36 tutu_wind: wow
+20:36 varna: 我看成绩，中国考生主要是口语坑
+20:36 Mokou: +
+20:36 Mokou: 比如我那个口语14分
+20:36 Mokou: 一半不到……
+20:37 Mokou: 不过雅思的听力有个问题
+20:37 Mokou: 它是70%的标准英音
+20:38 Mokou: 剩下的吧……
+20:38 varna: 你想听爱荷华念？
+20:38 Mokou: Iowa挺好的
+20:38 Mokou: 雅思真的有阿三音
+20:38 varna: 还是我们进口点巨魔考官，一张口：ASDINGO!
+20:38 varna: 你都分不清那是AS还是DAS还是TAS
+20:39 Mokou: _(:з」∠)_
+20:39 Mokou: 大凤Lv132
+20:39 varna: 可怕的肾雄
+20:39 Mokou: 肾雄是真的
+20:39 Mokou: 只是不肝
+20:40 varna: Lv132
+20:40 Mokou: 总之托福的听力基本上是我可以边吃零食边听的程度
+20:40 varna: 望尘莫及
+20:40 Mokou: 比各种生肉容易多了
+20:40 Mokou: 然而你家Lv130+的一大把
+20:41 varna: 就四个
+20:41 Mokou: 我这就一个
+20:41 Mokou: 比叡Lv92
+20:42 varna: 最近我想压压消耗
+20:42 Mokou: 还行
+20:42 varna: 武大俾我应该原则上都不会发戒指
+20:42 Mokou: 我一天十场勉强可以保持资源增长
+20:42 varna: 所以5-4阵容就主要关注空母练级
+20:42 Mokou: 4CV1BB1CAV？
+20:42 varna: (｡･ω･)ﾉ我要又稳又快增长资源
+20:43 Mokou: 鸟海Lv116
+20:43 varna: 我是3cv1bb1ca1cl
+20:43 Mokou: 4CV是我之前的配置
+20:43 varna: 因为羽嘿要发戒指
+20:43 Mokou: 我习惯把BB换CA
+20:43 Mokou: 不过你家CV的命中有点惨啊
+20:43 varna: 习惯就好
+20:43 varna: http://www.bilibili.com/video/av3924290/ 人类掏粪
+20:44 Mokou: _(:з」∠)_我这边飞机飞过去基本就是爆炸，习惯了
+20:44 varna: 我打这些大场面基本都靠信仰
+20:45 varna: 但是飞机在我手里变成什么样，舰C也好推演也好——都不怎么样
+20:46 Mokou: _(:з」∠)_
+20:47 varna: 今天我打了三趟，整整四个T不利
+20:47 varna: 我感觉伙计们都该戴个安全帽出去，写着“安全第一”的那种
+20:47 Stevearzh joined channel
+20:48 Mokou: “进入装逼现场 必须佩戴安全帽” “进入白学现场 看到一个打死一个”
+20:48 lhanjian: 你怎么这么熟练啊
+20:48 lhanjian: “去听音乐会”
+20:48 varna: 进入施工现场 必须戴安全帽 戴不上者除外
+20:49 lhanjian: 就算主人为了其他抛弃了忠犬，然而忠犬眼里也只有唯一的主人啊
+20:50 Mokou: 这有个白学家，建议打死
+20:50 varna: 所以WA剧情到底如何？
+20:50 Mokou: 我还没试
+20:50 iyzsong: 我只看了动漫
+20:51 lhanjian: 最好的galgame
+20:51 varna: 要不哪天出个GAL叫《白目》（White Observers）
+20:51 varna: 简称WO
+20:51 varna: 有F2F F4F F4U F6F各种版本
+20:51 varna: 配套SBC SBD SB2C/TBD TB[MF]
+20:51 lhanjian: 终极风暴4 最后这段太多了
+20:52 lhanjian: 搞得都没法连续玩下去
+20:53 Mokou: 你到底和提督吻过多少次啊
+20:53 varna: 啊，那个练度梗
+20:53 varna: 究竟谁练度高系列
+20:53 wlemuel joined channel
+20:55 varna: 不过按照前段时间的流行趋势，不是该用灯泡照亮白学界么？
+20:55 Mokou: 你可以用头顶
+20:55 tutu_wind quit:Read error: Connection reset by peer
+20:56 varna: 虽然我可以选择变成鬼教官，但我头发浓密
+20:56 Mokou: 说明假发质量上佳
+20:56 varna: 这次1-6打下来强行吃了八个桶
+20:56 guowang quit:Ping timeout: 244 seconds
+20:56 Mokou: _(:з」∠)_
+20:56 Mokou: 我5-4吃的桶比这少
+20:56 varna: 夜战七次拯救了六次，最后一次POI强行闪过
+20:57 Mokou: 不过我不夜战
+20:57 varna: 5-4我还是按照不费桶的原则刷
+20:57 varna: 不然真亏惨了
+20:57 Mokou: 不过之后我确实得想想办法练练驱逐舰了
+20:58 varna: 每天抱着舔！
+20:58 Mokou: 依然不够熟练
+20:58 Mokou: 初月对空CI后大破
+20:58 varna: 你对未成年小女孩的爱不足
+20:59 Mokou: 北政所也是未成年小女孩
+20:59 varna: 那就是你对长良鱼雷管的爱不足
+20:59 Mokou: 上长良要背锅的
+21:00 Mokou: Lag: 2.33
+21:00 lhanjian: 逗逼极品飞车搞毛全程联网，脑子坏了
+21:00 varna: 噗
+21:00 Mokou: 什么鬼
+21:00 Mokou: 没有离线模式？
+21:01 lhanjian: 单人也要联机
+21:01 varna: 毫无救赎
+21:01 Mokou: 为什么EA是全美最烂的游戏公司？
+21:01 lhanjian: 还好连上了
+21:02 varna: 对了我查查L4D2的配置
+21:02 varna: 又造出NKC了
+21:02 Mokou: 应该没问题
+21:02 Mokou: 以前我用一台04年的机器跑过HL2
+21:02 Mokou: 真的能跑起来
+21:02 varna: 看着还可以
+21:03 varna: 不过游戏好大啊
+21:03 lhanjian: 是可以啊
+21:03 varna: 明天晚上我看着拖一下
+21:03 Mokou: 我记得差不多10G？
+21:03 lhanjian: 半条命2 优化的一塌糊涂了
+21:03 varna: 我看说13G+
+21:03 Mokou: _(:з」∠)_
+21:03 Mokou: 那大概是因为我先装了HL2
+21:03 Mokou: 这次失策了，本来我可以直接传给你的
+21:03 varna: 无所谓了，我晚上拖
+21:05 varna: 人类为何要互相伤害
+21:05 tutu1 joined channel
+21:05 tutu1 is now known as tutu_wind
+21:05 Youmu quit:Quit: Connection closed for inactivity
+21:06 Mokou: http://ww3.sinaimg.cn/bmiddle/e3a6dd5egw1f1rusg4dtcj20c10b7763.jpg
+21:09 varna: 今天钓鱼大失败，基本没上什么鱼
+21:09 lh_mouse: Mokou, 摸头/
+21:09 Mokou: 钓鱼什么情况
+21:09 Mokou: lh_mouse: 捏鼻
+21:09 lh_mouse: Mokou, 快女装。
+21:10 Mokou: lh_mouse: 频道看板女装子是羊驼子
+21:10 lh_mouse: Mokou, 快女装。
+21:10 Mokou: 这耗
+21:10 lh_mouse: 不嘛不嘛。
+21:10 varna: 我去舰吧钓了个鱼
+21:10 Mokou: varna: 快女装满足一下小耗
+21:10 varna: 结果基本没上钩的
+21:10 Mokou: 求围观
+21:11 varna: http://tieba.baidu.com/p/4403695419
+21:14 Flandre` quit:Remote host closed the connection
+21:15 Flandre` joined channel
+21:20 CyrusYzGTt quit:Read error: Connection timed out
+21:21 CyrusYzGTt joined channel
+21:22 Mokou: 噫
+21:22 Mokou: 羊驼子卖屁股了
+21:23 Mokou: 你这ID一看就是dalao
+21:23 Mokou: 钓不起来的
+21:23 Stardust left channel:"undefined"
+21:24 StardustX joined channel
+21:24 varna: 舰吧应该没几个人记得我这号才对
+21:24 Mokou: 飞龙Lv100，省下一槽
+21:24 Mokou: 等级
+21:24 varna: 认识我的人基本都匿了，甚至海色也不剩多少
+21:24 Mokou: Lv10的dalao呢
+21:25 Mokou: 你看我才Lv7
+21:25 varna: 我是怎么升到Lv10的
+21:25 Mokou: 我来一个试试
+21:26 Mokou: 雾岛Lv100
+21:26 varna: 可怕
+21:27 Mokou: 雾岛是好几天前的了
+21:27 guowang joined channel
+21:27 * varna 肝败下风
+21:30 Mokou: http://tieba.baidu.com/p/4404159583
+21:30 Mokou: ^我如此诚实
+21:33 guowang` joined channel
+21:33 endle quit:Quit: Leaving
+21:34 StardustX is now known as Stardust
+21:35 Stardust quit:Quit: leaving
+21:36 Stardust joined channel
+21:36 varna: 看了看，有个3.9才打穿6-3的dalao在指点江山
+21:36 varna: 舰吧群众现在也算不畏死
+21:36 guowang quit:Ping timeout: 244 seconds
+21:36 Mokou: 毕竟我驱逐舰练度低
+21:37 Mokou: “等你到了一百多级就再也不会担心这个问题了”
+21:37 Mokou: 你看我就钓上鱼了
+21:37 varna: 刷闪蹭伤一小时，并不担心(｡･ω･)ﾉ
+21:37 Mokou: (｡･ω･)ﾉ十小时
+21:38 varna: 其实现在联合舰队蹭伤一小时我就不砸桶了
+21:38 varna: 决战刷闪两小时呢……
+21:39 Mokou: 白咖啡°: 回复 土耳其海军司令 ：演习旗舰 3-2老板 4-3旗舰 甚至可以活动捞船的时候升级 方法不少的
+21:39 Mokou: 我看看能不能进一步
+21:40 varna: 我个人的感受是活动不用捞船也能蹭蹭升级
+21:40 Mokou: +
+21:40 Mokou: 比如这次code_new一口毒奶
+21:41 varna: 可能的话我下次还想拼一下
+21:42 Mokou: 说起来3.9打穿6-3的是哪位？
+21:42 Mokou: 我围观一下
+21:42 varna: 6L
+21:42 Mokou: 毕竟我现在还没打穿呢（迫真）
+21:42 varna: 6-3我总之觉得不好打
+21:42 Mokou: 噫，11级dalao
+21:42 varna: 需要刷闪基础上的双方演技
+21:42 Mokou: 安利poi浏览器，用着方便
+21:42 Mokou: dalao我内存不够啊
+21:43 Mokou: 啊，看到了
+21:43 varna: 其实说虚高扔进历史垃圾堆的一大堆人都没经历过虚高的年代吧
+21:43 Mokou: 大概是
+21:43 varna: 浑作战那么福利，对虚高有点感受性的人都至少能拿到欧根才对
+21:43 varna: 野分反正也没人管
+21:45 Mokou: 没找到他平均练度
+21:45 Mokou: 我看看能不能问问
+21:46 varna: 我猜是肝帝
+21:46 varna: 现在新人都长了连装肝
+21:46 Mokou: 所以才能这么快打过6.3么
+21:46 Mokou: 你看我这种乌黑浓密的到现在没过
+21:47 varna: 每到水雷战队吃瘪的时候我都很兴奋
+21:48 varna: 我记得当时斩到意识模糊就过了
+21:48 Mokou: _(:з」∠)_
+21:48 * Mokou <- 绫波练度不够
+21:48 varna: 绫波真的超好，各种武勋
+21:48 Mokou: 是
+21:48 Mokou: 我那三血有两血都是绫波拿下的
+21:49 varna: 能定点清除，能援护，能拉人，脸还圆圆的
+21:49 Mokou: 然而4-3我实在是不想去
+21:49 Mokou: 太恶心了
+21:49 varna: 80之后我一律都不去4-3
+21:49 varna: 太烧
+21:49 Mokou: +
+21:49 varna: 4-3只练到改造
+21:49 varna: 其余随缘
+21:49 Mokou: 平均接近100级的队伍开进去六七成劝退
+21:49 Mokou: 打个卵
+21:50 varna: 以前我打4-3是因为没有1-6
+21:50 varna: 顺带就把潜艇收拾了
+21:54 Youmu joined channel
+21:54 Flandre` quit:
+21:56 Mokou: 路过的somebody: 回复 土耳其海军司令 :那得看实装哪一级难度的离岛- -。。。最低级的还好，450血150甲，装备跟磨血港湾一样但是每格搭载高10，最高级的450血185甲而且全是泡芙机，单舰队打会挺吃力的- -
+21:57 Mokou: 我激他一下看看
+21:57 guowang` left channel:"ERC (IRC client for Emacs 24.5.1)"
+21:57 varna: 185泡芙已经很难处理了，上次的DJ姬用了B24才让水上反击部队趁虚而入
+21:58 Mokou: 没关系
+21:58 Mokou: 飞行场500/190
+21:58 xxxxxxxx: 下次活动红旗和羊驼还要家么?
+21:58 varna: (｡･ω･)姬姬姬。
+21:58 varna: 我尽量
+21:58 xxxxxxxx: 甲
+21:58 Mokou: 我看资源
+21:58 varna: 这样我正好能打满两年的活动
+21:58 varna: 六胜二败也还算可以了
+21:59 * Mokou 四胜四部分胜利
+21:59 Mokou: 噫，最高级的非婚舰竟然是58
+21:59 Mokou: 药丸
+21:59 Mokou: 虚高了
+22:00 varna: http://www.dnd-wiki.org/wiki/Memento_Mori_%283.5e_Spell%29 无产阶级之杀意
+22:02 Mokou: ……
+22:02 Mokou: 咦，没上钩
+22:02 Mokou: 路过的somebody: 回复 土耳其海军司令 :你要这么说那也没什么不对的（飞机场哪里好打了啦！）。。。还是看道中和僚舰情况吧
+22:02 varna: 很久以前我玩无冬之夜1扩展包的时候，制作者善意地把Memento Mori提到Epic Spells里面，就是个高豁免即死
+22:02 varna: 当时我还年轻，直到我看到3.5e规则书
+22:03 Izumo quit:Quit: Connection closed for inactivity
+22:03 varna: 后来我才明白这是「我觉悟了」这样的诅咒
+22:04 tutu_wind quit:Ping timeout: 252 seconds
+22:05 varna: 有这种东西的话，只要找个愿意一命换一命的人对着伏地膜来一发，然后在24h内干掉他……
+22:05 Mokou: 我突然想起个事
+22:06 Mokou: 这几位其实翻翻我记录就能翻到我那个E2击破贴……
+22:06 varna: 夏活嘛
+22:06 varna: 现在舰吧更多人不知道中途岛的
+22:06 Mokou: 也是，都夏活入坑新米了还翻啥
+22:07 Mokou: 啊，那时候我大凤还只有Lv125
+22:07 Mokou: 然而现在我家大凤面板回避还是只有67
+22:08 varna: 我现在才发现SRD不要求被死亡一指击杀的目标复活不能了……
+22:08 varna: 唉唉2e的美好世界
+22:13 lhanjian: 呼，回来了
+22:13 lhanjian: PING
+22:13 Mokou: \PARN/
+22:13 cleamoon joined channel
+22:13 lhanjian: Tks
+22:13 lhanjian: 我看到chrome左下角一直在Connecting，以为掉了
+22:13 Mokou: _(:з」∠)_
+22:14 cleamoon: lhanjian, 爆
+22:14 Mokou: 有电脑的时候我还是用irssi
+22:14 lhanjian: Mokou: 全都用irccloud有助于同步，而且可以持续在线
+22:14 lhanjian: cleamoon: 欧洲央行又宽松了。感觉地球经济药丸
+22:14 Mokou: lhanjian: 懒得持续在线，我只想找一个安卓能用的不那么坑的irc客户端
+22:15 Mokou: 而且irccloud那个网页不如irssi好用
+22:15 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=fdd6b45565d0f703e6b295d438fb5148/ef284bf41bd5ad6eaa0186a886cb39dbb7fd3caf.jpg
+22:15 Mokou: 偶像出道！
+22:15 lhanjian: Mokou: 哦，以前我都用yaaic，但是自从直连不稳定以后也不得不弃了，相对来说，有irccloud的话，即便是掉了一下子，也不担心丢消息
+22:15 Mokou: 我本来也不担心丢消息
+22:15 Mokou: 米空帮我记着
+22:15 * Mokou 自己动手
+22:15 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cy/ey_126406.jpg@596w_1l.jpg
+22:16 lhanjian: mikumiku
+22:16 Mokou: 是Mikon
+22:16 cleamoon: irccloud免费版阉了什么？
+22:16 lhanjian: cleamoon: 结果他有妹妹了么
+22:16 cleamoon: 噗  http://imgsrc.baidu.com/forum/w%3D580/sign=fdd6b45565d0f703e6b295d438fb5148/ef284bf41bd5ad6eaa0186a886cb39dbb7fd3caf.jpg
+22:16 wlemuel quit:Ping timeout: 252 seconds
+22:16 cleamoon: 至少上东大了
+22:17 Mokou: 666666666
+22:17 cleamoon: 3月10日，谷歌人工智能AlphaGo与韩国棋手李世石的第二局比赛在韩国首尔四季酒店举行，在此次较量中双方互换黑白，由AlphaGo执黑对战李世石。最终，AlphaGo再下一城，以总比分2:0领先李世石。   这渣渣
+22:18 Mokou: 柯洁表示阿发狗下不过他
+22:19 varna: _(:з」∠)_我解释累了，有兴趣的话大家看log
+22:19 cleamoon: 人机围棋对决第二局李世石又输了，目前比分为0：2，在整场比赛里，AlphaGo走出的新下法令人惊叹，很多地方，围棋专家第一眼看上去是俗手，但如果推演几十步再看，可能就是妙手，人类实际上并不能立刻了解到AlphaGo每步棋的目的和作用，AlphaGO总有一些出其不意的走法，而人们在短时间内却无法算清哪步才是最佳应对，我们
+22:19 cleamoon: 人类认为下的招很对，但是经过一些反推来看可能未必，而我们人类所看不到的一些招数，AlphaGo却可以很快计算出来。越到后半盘，AlphaGo计算的越精确，官子阶段更是滴水不漏。
+22:19 lhanjian: Mokou: 看他牛逼成功还是装逼失败。不过最大的可能性是没机会一试
+22:19 cleamoon: 至少证明google很厉害
+22:19 varna: _(:з」∠)_今天和昨天都有些论述
+22:19 lhanjian: cleamoon: varna: 看羊驼子的 批判
+22:19 cleamoon: 看过了
+22:20 cleamoon: 我只想知道什么时候肛柯洁
+22:20 cleamoon: 然后什么时候能自动写程序
+22:20 varna: @智障也有春天
+22:20 Mokou: weibo.com/3837704366/DluIumW0F 海上自卫队在为护卫舰DDH-184「かが」征集logo的设计
+22:20 lhanjian: cleamoon: 从某种意义上说，生成判定函数就可以说是在自动写程序了吧
+22:21 varna: 我觉得这完全是多余的征集
+22:21 varna: 他们问角川游戏和洗吧福要权利就可以了
+22:21 cleamoon: 面对计算机的挑战，围棋选手可以用更大的棋盘（目前使用的是19x19格的棋盘）推迟计算机的统治，或者像象棋选手那样与计算机合作。 #更大的棋盘什么鬼
+22:22 cleamoon: 被阿里巴巴收购的香港媒体《南华早报》在中国遭遇了全面封杀：中文版网站被封，微博微信账号全被删除。
+22:22 cleamoon: http://www.solidot.org/story?sid=47447
+22:22 lhanjian: 我不觉得更大的棋盘能拖延多久。毕竟人的想法也不一样了
+22:22 varna: 233333333
+22:22 varna: 壮哉A厂
+22:23 cleamoon: 赛后聂卫平在接受专访时表示，电脑很厉害，李世石难求一胜，对电脑刮目相看，非常赞赏电脑，同时为李世石支招，希望李世石至少要赢下一局挽回人类尊严。   #看看聂老是不是毒奶
+22:23 lhanjian: cleamoon: 好事，至少证明阿里没伸手内容生成？不过微博微信被干掉，纯粹是因为新 出版规定 的要求。所有外国机构都不能在境内出版任何信息。
+22:23 cleamoon: 这时香港变成境外了？
+22:23 lhanjian: cleamoon: 香港一直都是境外
+22:23 lhanjian: 国外/境外/海外
+22:23 lhanjian: 后两者是同一个意思
+22:24 varna: HK问题从伍豪同志还是总理的时候就定性了吧
+22:24 varna: 国内+境外
+22:24 lhanjian: 原来还是求同存异兄定的性
+22:25 cleamoon: 国内+境外......
+22:25 cleamoon: 感觉类似于国情+特色
+22:25 cleamoon: 说白了就是老子说了算
+22:25 varna: 大调子是伍豪同志定的，我印象他当时主持了很多对港积极政策
+22:25 varna: 然后是总设计师
+22:26 cleamoon: 孑雨雨：李世石的心情我完全能体会到，不会做的高数题丢给 Wolfram|Alpha 马上就能出答案，然后看着答案干瞪眼。
+22:26 lhanjian: 233
+22:26 varna: 算力碾压23333
+22:26 Mokou: 233333
+22:26 cleamoon: 我会说付费版有计算过程吗
+22:26 varna: 卧槽？
+22:26 varna: 多少钱就可以
+22:27 Mokou: 有
+22:27 lhanjian: 说好的牛顿迭代呢213212恶3「·无人」‘
+22:27 varna: 牛顿迭代只有数值解啊
+22:27 varna: wa可以做符号的
+22:27 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cy/d2_62112.gif@596w_1l.gif
+22:28 varna: 对了我有个好奇点
+22:28 varna: 如果我们把一般形式的一元六次方程扔给wa解，会输出什么
+22:28 cleamoon: 多少钱不知道，但是imo后那公司送了我一个mathematica，用那个附带的账号登陆的话就有过程了
+22:28 varna: ax^6 + bx^5 + cx^4 + dx^3 + ex^2 + fx^1 + g = 0
+22:28 cleamoon: 虽然经常是用奇怪的算法算的
+22:28 varna: 让它解这个
+22:29 cleamoon: 返回还是这个
+22:29 varna: 也不抱怨？
+22:29 cleamoon: 这个没通解，你指望什么
+22:29 varna: 对啊
+22:29 varna: 我就是等它抱怨没有通解
+22:29 cleamoon: 抱怨：F@CK U
+22:29 varna: long long long is too long for gcc
+22:29 varna: 类似这种
+22:29 cleamoon: 2333333
+22:29 lhanjian: 233333
+22:29 Mokou: 233333
+22:30 lhanjian: they said it is a macro, let it be.
+22:30 lhanjian: #define stdio stdio
+22:30 varna: 膝跳反射笑尿
+22:30 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cy/gt_127114.jpg@596w_1l.jpg  微重口百合
+22:31 cleamoon: https://www.wolframalpha.com/input/?i=a*x%5E6+%2B+b*x%5E5+%2B+c*x%5E4+%2B+d*x%5E3+%2B+e*x%5E2+%2B+f*x+%2B+g+%3D+0  给出了一大堆然并卵的东西
+22:31 Mokou: http://picpaste.com/Sokt5cq1.png
+22:31 Mokou: varna: ^
+22:32 varna: 逗我
+22:32 varna: 这东西怎么可能算出结果
+22:32 Mokou: 限定了a = 0或者a = 0 and b = 0或者blahblahblah
+22:32 varna: 我刚才试了一下，没做出那些奇妙的解
+22:32 varna: 神啊
+22:33 Mokou: 你懂
+22:33 varna: a = 0他也没解
+22:33 Mokou: 强行降次
+22:33 varna: 必须a = 0 b = 0
+22:33 Mokou: +
+22:33 varna: 某初中生早就证明了苏君的五次解法是错误的……
+22:34 varna: 然而知道降到四次简直机吱
+22:34 varna: 虽然很可能这东西能认出一元方程
+22:34 varna: 然后回答我
+22:35 varna: Eventually we got 6 solution expressions. Ask Gauss peacefully in his grave. Ramen.
+22:35 Mokou: 233333
+22:38 whocares_2 quit:Remote host closed the connection
+22:39 Mokou: OTO+9达成一门
+22:39 whocares_2 joined channel
+22:39 varna: 我想想这个回答如何能更跩一点
+22:41 cleamooon joined channel
+22:43 cleamoon quit:Ping timeout: 268 seconds
+22:45 lhanjian: 中流砥柱
+22:46 varna: Six solutions will thou get; in the Gaussian Tomb would ye meet. Arith marches and realities burn, altogether with His ash urn. Answers only liches know that one seeks - always lies with lichen above ye geeks. The Storm approaches... WA speaks no more CR LF
+22:46 varna: ^ 憋了一个装逼的答案出来
+22:46 Mokou: 6666666
+22:46 cleamooon: 66666666
+22:47 varna: 再来个很6的引文出处：Legacy of Gauss, the demilich - Yet Another Bard's Tale
+22:48 Stardust quit:Remote host closed the connection
+22:48 varna: 蹩脚吟游诗人在反基督故事里总会有一席之地的(｡･ω･)ﾉ
+22:48 cleamooon: today, we will take back our lagacy. en taro tassada
+22:49 varna: tassadar
+22:49 * cleamooon 至今没通过一次sc1
+22:49 varna: 而且其实这里可以装个逼
+22:49 varna: Tassadar Toridas
+22:49 lhanjian: “陆军动辄把自己大肆吹嘘成什么‘皇国的中流砥柱’，事实上，正是陆军……最终把日本拖入了灾难。所谓的‘中流砥柱’，就是中国的黄河上有几块挺立在河中、顽固阻挡潮流前进的顽石。从这个意思去理解的话，陆军也不愧是真正的‘中流砥柱’啊！”
+22:49 varna: 显得你比时代更先进几百年地把自己的神经束割了
+22:50 varna: lhanjian: 这是哪个追晋大将说的来着
+22:50 lhanjian: varna: 井上成美
+22:50 varna: 哦对
+22:51 varna: 力挺56的那位
+22:51 lhanjian: 话说中流砥柱是这个意思吗？
+22:51 varna: 不知道
+22:51 varna: 我就记得这位上过鹿岛
+22:51 lhanjian: 233
+22:51 Mokou: Kashima is a good girl POZHEN
+22:51 lhanjian: 我记得我党一直自称是“抗战的中流砥柱”
+22:51 varna: 现在超人气大流行哦
+22:51 varna: 撤了
+22:51 varna: 明天大决战武运
+22:51 varna quit:Quit: leaving
+22:52 Mokou quit:Quit: 睡觉
+22:52 cleamooon: 抗(国)战
+23:02 liuzhoou joined channel
+23:03 liuzhoou: /?
+23:03 cleamooon: ？
+23:03 liuzhoou: 打错了
+23:16 cleamooon: http://news.ifeng.com/a/20160310/47780535_0.shtml
+23:18 liuzhoou left channel:"ERC (IRC client for Emacs 24.5.1)"
+23:25 lhanjian: lh_mouse: 投降了。最终还是把medusa 马克
+23:26 lhanjian: make install到系统目录了
+23:26 cleamooon: orz
+23:26 lhanjian: 好在能跑起来
+23:27 lhanjian: lh_mouse: 给小耗两个建议。“不建议 sudo make install”还是不要建议。提醒下都逼用户启动mysql
+23:28 lh_mouse: lhanjian, 不建议什么。
+23:28 lhanjian: 就是把“不建议sudo make install”这句话删掉
+23:29 lh_mouse: lhanjian, 'sudo checkinstall' 就是用 fakeroot 调用 make install。
+23:30 lhanjian: 这玩意儿有些发行版并不标配
+23:30 lhanjian: 算了，小耗自己衡量吧……反正我是没用checkinstall
+23:31 lh_mouse: lhanjian, checkinstall 是 debian 的。
+23:31 lhanjian: 我知道……
+23:31 lh_mouse: 不管什么发行版，都用对应的包管理器安装。
+23:31 lh_mouse: 不用包管理器把系统文件覆盖炸妈了后果自负。
+23:31 lhanjian: 后果自负+1
+23:31 lhanjian: 我就自负了
+23:31 lhanjian: 只不过我会先把prefix弄到一个目录里，先看看生成什么文件，再改回来
+23:32 lh_mouse: 包管理器会避免这情况。
+23:32 lh_mouse: checkinstall 遇到文件冲突会失败。
+23:32 lhanjian: 我并不想折腾arch的aur啊
+23:34 lh_mouse: 今天弄了个很污的东西。
+23:34 lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCF/Utilities/Defer.hpp#L35
+23:35 lhanjian: 我的水平还不足以看懂这种程度的C艹代码，呜呜呜
+23:36 lhanjian: 小耗的poseidon还缺啥？
+23:37 cleamooon: 我估计是缺跨平台
+23:38 lh_mouse: 缺 UDP server 和 WebSocket client 。
+23:38 lh_mouse: 跨平台去死。
+23:39 cleamooon: 不打算跨平台？
+23:39 lh_mouse: never.
+23:39 cleamooon: orz
+23:40 tutu1 joined channel
+23:40 tutu1 is now known as tutu_wind
+23:40 lhanjian: lh_mouse: 我试试看吧。不过我估计我还没写到一半，小耗就补完了
+23:41 lh_mouse: lhanjian, 实现不难，难的是如何定义接口。
+23:41 lh_mouse: 实现是个人就会写。
+23:41 lhanjian: 作为一个C艹初心者，人与人的速度也是大有差异
+23:42 lh_mouse: 真正能看出程序员水平的是接口的 design，这个地方考虑的是性能、安全性和可扩展性。
+23:42 lhanjian: 嗯
+23:42 cleamooon: 然而根据小蚝的定义，我不是人
+23:42 lh_mouse: 你是 rbq 。
+23:43 lhanjian: 从小耗的tcp_server_base来看，还要支持SSL？
+23:43 lh_mouse: lhanjian, UDP 怎么支持 SSL。
+23:43 cleamooon: 弱爆球
+23:43 lh_mouse: SSL 是面向连接的。
+23:43 lhanjian: DTLS啊
+23:44 lh_mouse: 无必要支持。
+23:44 lhanjian: 嗯
+23:45 lhanjian: 不管了，明天再说吧，眼睛都要爆炸了
+23:45 cleamooon: 似乎没有好的介绍接口设计的书吧？
+23:45 lh_mouse: 你可以试着写 websocket client。
+23:45 lh_mouse: cleamooon, 这个吃经验。
+23:46 cleamooon: soga
+23:46 lh_mouse: 反正本特首认为除了本特首钦(yìn)点的接口都是傻逼。
+23:46 cleamooon: 23333
+23:48 miao233_ joined channel
+23:49 lh_mouse: 理论上 medusa 的加密传输可以用 UDP 实现。
+23:51 lhanjian: 小耗有没有什么舒服的工具，可以跨文件在class之间跳来跳去的
+23:51 lhanjian: 否则也太辛苦了
+23:52 lh_mouse: ... poseidon 是怎么写出来的你知道吗。
+23:52 condy: nano 大法吼啊！
+23:52 lh_mouse: poseidon/src 里面的每一个字都是 nano 写出来的。
+23:53 lhanjian: 所以什么也没有……
+23:53 lhanjian: 给小耗的脑力跪了
+23:53 lh_mouse: 你要什么……
+23:54 cleamooon: 梨花酱自己写一个editor呗，这又不是什么非常难实现的功能
+23:55 lhanjian: cleamooon: 一个基本的editor能写出来，但是只是一个能编辑的工具意义并不大吧，而且和终端作斗争完全是在和逗比的终端API作斗争
+23:55 cleamooon: 你要什么功能... 自动debug吗
+23:55 lh_mouse: ヲ开始写 poseidon 的时候撤销都有 bug 。
+23:56 lh_mouse: 那时候 nano 撤销会有一定概率炸妈。
+23:56 cleamooon: 而且也没规定必须在终端写吧...
+23:56 lhanjian: cleamooon: 如果是GUI就更麻烦了
+23:56 cleamooon: nano似乎除了基本功能就没特殊功能了？
+23:57 lh_mouse: 要什么自行车。
+23:58 lhanjian: nano就是个滑板车
+23:58 lh_mouse: 能打开关闭选中剪切复制删除撤销重做就够了。
+23:58 lh_mouse: Win 党可以试试这个 https://github.com/lhmouse/nano-win 。 
+23:58 cleamooon: 搜索和替换还是有用的
+23:59 cleamooon: win党用记事本呗
+23:59 lh_mouse: 哦对，搜索替换。
+23:59 lh_mouse: 正则和区分大小写的搜索替换。代码高亮。
+23:59 lh_mouse: 自动缩进，区块缩进。
+23:59 cleamooon: 其他的也就是行号了
+23:59 cleamooon: 缩进+
+23:59 lh_mouse: nano 没有常驻行号。
+23:59 cleamooon: 仔细想想还不少...

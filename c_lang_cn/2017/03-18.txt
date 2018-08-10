@@ -1,0 +1,153 @@
+00:02 lh_mouse: 有没有 centos 或者 arch 的。
+00:03 Mokou: 我是arch
+00:04 lh_mouse: Mokou, 爆。
+00:04 lh_mouse: Mokou, man nano 看看 AUTHOR 是啥。
+00:04 lh_mouse: AUTHOR
+00:04 lh_mouse:        Chris Allegretta and others (see the files AUTHORS and THANKS for details).  This manual page was originally written by Jordi Mallach for the Debian system (but may be used by others).
+00:04 lh_mouse: ... for the Debian system ...
+00:10 Mokou:        Chris Allegretta and others (see  the  files  AUTHORS  and  THANKS  for
+00:10 Mokou:        details).  This manual page was originally written by Jordi Mallach for
+00:10 Mokou:        the Debian system (but may be used by others).
+00:10 Mokou: 一样的
+00:14 lh_mouse: Mokou, 谢谢。
+00:20 root joined channel
+00:20 Mokou: (｡･ω･)ﾉ
+00:21 root is now known as Guest68847
+00:24 Guest68847 quit:Client Quit
+00:31 lh_cat quit:Quit: Connection closed for inactivity
+00:40 Silent_DXX_ joined channel
+00:41 Silent_DXX_: hello
+00:42 Silent_DXX_ quit:Client Quit
+00:46 lh_mouse: geordi,  --clang { } int foo(); int foo() noexcept { return 1; }
+00:46 geordi: error: exception specification in declaration does not match previous declaration
+00:47 lh_mouse: geordi,  --clang --2014{ } int foo(); int foo() noexcept { return 1; }
+00:47 geordi: Same error.
+01:03 lh_mouse quit:Ping timeout: 260 seconds
+01:16 Mokou: 睡觉
+01:16 Mokou: 诸君武运
+01:16 Mokou quit:Quit: 睡觉
+01:59 iyzsong-w: :<
+02:45 xhe quit:Quit: leaving
+08:04 iyzsong-w: x.x
+08:28 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+09:12 iyzsong-w joined channel
+10:05 iyzsong-w quit:Ping timeout: 246 seconds
+10:09 iyzsong-w joined channel
+10:14 iyzsong-w quit:Ping timeout: 264 seconds
+10:16 iyzsong-w joined channel
+10:27 lh_mouse joined channel
+10:29 iyzsong-w quit:Ping timeout: 240 seconds
+10:39 wlemuel joined channel
+10:41 wlemuel quit:Client Quit
+10:57 geordi_ joined channel
+10:58 geordi quit:Ping timeout: 260 seconds
+11:00 tutu_wind joined channel
+11:03 iyzsong-w joined channel
+11:22 iyzsong-w quit:Ping timeout: 240 seconds
+11:24 iyzsong-w joined channel
+11:28 xhe joined channel
+11:32 iyzsong-w quit:Ping timeout: 264 seconds
+11:36 iyzsong-m joined channel
+11:51 iyzsong-m: (#･∀･)
+12:11 Dove joined channel
+12:12 yimis joined channel
+12:13 yimis quit:Client Quit
+12:21 iyzsong-mm joined channel
+12:22 iyzsong-m quit:Ping timeout: 240 seconds
+12:23 tutu_wind quit:Ping timeout: 258 seconds
+12:45 cleamooon quit:Quit: Connection closed for inactivity
+13:02 Dove quit:Ping timeout: 260 seconds
+13:04 Dove joined channel
+14:12 iyzsong-mm: (ーー゛)
+14:25 Dove: = =
+14:46 geordi_ quit:Remote host closed the connection
+14:47 geordi joined channel
+15:00 Mokou joined channel
+15:05 Mokou quit:Ping timeout: 268 seconds
+15:06 Mokou joined channel
+15:08 Dove quit:Read error: Connection reset by peer
+15:30 iyzsong-mm quit:Ping timeout: 246 seconds
+15:31 iyzsong-m joined channel
+15:36 Mokou_ joined channel
+15:39 Mokou quit:Ping timeout: 240 seconds
+15:45 varna: 好想侵犯幼女啊
+15:52 Mokou_: 你今天没加班？
+15:52 Mokou_ is now known as Mokou
+15:53 varna: 今天不加班了
+15:57 Mokou: http://www.bilibili.com/video/av7801474/
+15:57 iyzsong-m: 2333
+15:58 iyzsong-m: 我又躺床上看了一天电视剧 (#･∀･)
+16:20 varna: _(:з」∠)_啊，好冷啊
+16:21 Mokou: 找个幼女取暖
+16:22 varna: 岚月酱不在？
+16:22 Mokou: 似乎不在
+16:23 varna: _(:з」∠)_啊，好冷啊
+16:23 * Mokou 肝报废
+16:23 Mokou: 啊，日服AP越打越多……
+16:24 varna: 早上推了少前0图三个，0-4吓尿
+16:25 varna: 昼转夜+50k效能门神
+16:25 Mokou: 6666666666
+16:25 varna: 目测得混关
+16:30 Mokou_ joined channel
+16:31 Mokou quit:Disconnected by services
+16:31 Mokou_ is now known as Mokou
+16:43 iyzsong-m quit:Ping timeout: 268 seconds
+17:02 february joined channel
+17:02 xhe quit:Quit: leaving
+17:12 february quit:Quit: Leaving
+17:12 february joined channel
+17:15 february quit:Client Quit
+17:15 varna: _(:з」∠)_
+17:23 Mokou: varna: 刚才微博上看到的
+17:23 Mokou: 我国对青年的定义是19~24岁，这以上算中年
+17:26 varna: 呜呼？
+17:27 varna: 我已经是钦定的大叔了？
+17:29 xhe joined channel
+17:29 lh_mouse: 馹。
+17:29 StardustX: 共青团是按28岁算的
+17:30 lh_mouse: JsonResponse
+17:30 lh_mouse: 发错
+17:30 lh_mouse: https://github.com/lhmouse/poseidon/commit/e6331361af64b3358b173d7f34c37f4e573f8810
+17:30 lh_mouse: https://github.com/lhmouse/poseidon/commit/9612556f62b5ab8139f86bab0c22ce2ed3280ae3
+18:00 lh_mouse: https://github.com/web-flow
+18:31 iyzsong-m joined channel
+18:34 rapiz joined channel
+18:40 iyzsong-m quit:Ping timeout: 240 seconds
+19:04 varna: (｡･ω･)ﾉ
+20:25 Mokou: 这次素材兑换界面的BGM不错
+20:25 rapiz quit:Quit: Konversation terminated!
+20:26 xhe quit:Quit: leaving
+20:27 xhe joined channel
+20:37 Dove joined channel
+20:49 varna: (｡･ω･)ﾉ
+20:50 cleamooon joined channel
+20:52 Dove: varna: 你对玄学有研究么？周易我看不懂，只能学到点做人的道理，我正在找邵伟华的书看。
+20:54 Dove: 至于脉轮练习，体感上像气功的感觉，昨天中午比较顺畅，到晚上就不行了，今天也不行，只能把练习改静坐了，大概是我没掌握要领。
+20:57 Mokou: http://wx2.sinaimg.cn/mw690/00677OoNly1fdra7opujgj30dq0ebq5j.jpg
+21:00 Dove: 2333
+21:04 varna: 玄学我会一些
+21:04 varna: 比如说造舰攻要用瑞凤
+21:05 varna: 造战神也要用瑞凤
+21:05 varna: 造三隈还是要用瑞凤
+21:05 varna: \玉子烧/
+21:05 Mokou: 造舰攻用大凤
+21:11 Dove: varna: 2333
+21:14 rapiz joined channel
+21:33 lh_mouse: 抗日神剧：日本这个国家的钢材产量也不富裕，他们的枪基本上是半自动化。
+21:33 lh_mouse: ‘：对，日本钢材不富裕，只能用铝造大和。那时候铝比黄金都贵（迫真）。
+21:33 lh_mouse: ヲ太有才了。
+21:37 Mokou: http://wx3.sinaimg.cn/mw690/6dd57921ly1fdrbgjify6j20ct096n29.jpg
+21:42 liteIRC joined channel
+21:48 xhe quit:Quit: leaving
+21:52 Dove: 睡觉去了，诸君晚安，夜间愉快。
+21:52 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:56 xhe joined channel
+21:58 liteIRC: ==
+22:03 cleamooon: 上海高考的录取细则变动，总分相同的情况先看语+数，再看语/数，最后看英语  #那是不是数学考0分可以得个爆表的？
+22:05 liteIRC quit:Remote host closed the connection
+22:18 f0ry joined channel
+22:19 f0ry: ( ´-ω-)σman
+22:21 f0ry quit:Client Quit
+23:34 rapiz quit:Quit: Konversation terminated!
+23:43 varna: 幼女幼女平坦的胸口
+23:57 Mokou: http://wx2.sinaimg.cn/mw690/9bd522c1gy1fdqkuhkykaj20f407wglw.jpg “这几天两会开完了，感觉UC也要完了。 ​​​​”

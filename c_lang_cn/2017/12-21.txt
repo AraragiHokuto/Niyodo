@@ -1,0 +1,95 @@
+00:33 Aldrich: 感觉95适合无脑突突突啊
+00:33 NebulaMoe quit:Quit: Connection closed for inactivity
+01:03 cleamoon_ joined channel
+01:46 NebulaMoe joined channel
+03:17 N00d1e5 joined channel
+03:53 NebulaMoe quit:Quit: Connection closed for inactivity
+04:03 cleamoon_ quit:Quit: Connection closed for inactivity
+05:32 nooooone_ quit:Read error: Connection reset by peer
+05:33 nooooone_ joined channel
+08:55 lh_mouse joined channel
+09:16 jiuye quit:Quit: Going offline, see ya! (www.adiirc.com)
+09:50 lhanjian: Aldrich: 95火力猛，精度一般，适合中前期突突突
+10:04 YangMame joined channel
+10:05 ininkf joined channel
+10:12 johnny_ joined channel
+10:43 johnny_ is now known as joohnny
+10:49 joohnny quit:Quit: leaving
+10:58 yimis joined channel
+10:58 yimis quit:Client Quit
+11:23 NebulaMoe joined channel
+11:29 ininkf quit:Read error: Connection reset by peer
+11:39 ininkf joined channel
+12:43 zb111 joined channel
+13:05 N00d1e51 joined channel
+13:08 N00d1e5 quit:Ping timeout: 248 seconds
+13:29 whocares_2_ joined channel
+13:29 whocares_2 quit:Ping timeout: 256 seconds
+13:33 NebulaMoe quit:Quit: Connection closed for inactivity
+14:02 N00d1e51 quit:Quit: Leaving.
+14:06 condy quit:Ping timeout: 248 seconds
+14:09 condy joined channel
+15:10 lh_mouse: geordi, { function<int (int, int)> fn(plus<int>()); cout <<fn(123,456); }
+15:10 geordi: error: invalid conversion from 'int' to 'plus<int> (*)()'
+15:10 lh_mouse: geordi, { auto fn = function<int (int, int)>(plus<int>()); cout <<fn(123,456); }
+15:10 geordi: 579
+15:18 lhanjian: lh_mouse: 小耗你打出这样的代码说明已经入魔了
+15:23 lh_mouse: ?
+15:24 * lhanjian lh_mouse: 这么function-like的代码
+15:24 * lh_mouse slaps lhanjian around a bit with a large trout
+15:24 lhanjian: lh_mouse: 这是C++14还是C++11
+15:24 lhanjian: 别是C++17吧？
+15:25 lh_mouse: geordi, use --2011
+15:25 geordi: 579
+15:26 lhanjian: geordi, use --2003
+15:26 geordi: error: 'fn' does not name a type; did you mean 'yn'? (fix known)
+15:26 lhanjian: C++11啊
+15:41 lh_mouse: geordi,{ using kk = const foo; cout <<kk::a; } struct foo { static int a; }; int foo::a = 42;
+15:41 geordi: 42
+15:51 ininkf quit:
+16:11 NebulaMoe joined channel
+16:16 lh_mouse: geordi, -c auto f = &(string::push_back)
+16:16 geordi: error: invalid use of non-static member function 'void basic_string<_CharT, _Traits, _Alloc>::push_back(_CharT) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]'
+16:16 lh_mouse: geordi, -c auto f = &(string::push_back);
+16:16 geordi: Same error.
+16:16 lh_mouse: geordi, remove ( and )
+16:16 geordi: Success
+16:18 ininkf joined channel
+16:39 nooooone joined channel
+16:42 nooooone_ quit:Ping timeout: 256 seconds
+16:44 ininkf quit:
+16:49 ininkf joined channel
+16:58 ininkf quit:
+17:42 zb111 quit:Ping timeout: 264 seconds
+19:00 iyzsong joined channel
+19:07 FUKA joined channel
+19:07 FUKA: 二货火狐，强制更新把irc插件全干掉了
+19:07 FUKA: http://news.sina.com.cn/s/wh/2017-12-21/doc-ifypvuqe6634391.shtml
+19:07 FUKA: 我觉得可以放弃了
+19:49 NebulaMoe quit:Quit: Connection closed for inactivity
+20:52 Dove joined channel
+21:00 N00d1e5_Bot quit:Ping timeout: 264 seconds
+21:07 N00d1e5_Bot joined channel
+21:11 hitman-usa joined channel
+21:19 hitman-usa quit:Remote host closed the connection
+21:20 hitman-usa joined channel
+21:31 hitman-usa quit:Ping timeout: 272 seconds
+21:32 Guest34543 joined channel
+21:33 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:33 N00d1e5 joined channel
+21:35 N00d1e5 quit:Client Quit
+21:46 YangMame quit:Quit: Konversation terminated!
+21:57 N00d1e5 joined channel
+22:07 N00d1e5 quit:Ping timeout: 240 seconds
+22:07 N00d1e5 joined channel
+22:10 Guest34543 quit:Ping timeout: 246 seconds
+22:23 iyzsong quit:Ping timeout: 252 seconds
+22:40 nooooone quit:Ping timeout: 246 seconds
+22:44 nooooone joined channel
+22:47 FUKA quit:Ping timeout: 260 seconds
+22:50 nooooone quit:Ping timeout: 256 seconds
+22:59 zh1990 joined channel
+23:00 zh1990 left channel:"ERC (IRC client for Emacs 25.3.1)"
+23:33 cleamoon_ joined channel
+23:35 NebulaMoe joined channel
+23:42 lh_mouse: 渣渣。

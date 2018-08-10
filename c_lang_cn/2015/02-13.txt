@@ -1,0 +1,1413 @@
+00:01 isecLuck joined channel
+00:01 isecLuck: Chromium在Ubuntu 12.04下使用flash
+00:02 isecLuck: */etc/chromium-browser/default下 添加: CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-version=11.4.31.203"
+00:02 isecLuck: 这个什么用？
+00:02 isecLuck: 原址是 http://blog.sina.com.cn/s/blog_858820890102v7ks.html
+00:03 isecLuck: 官方给的建议就是在 /etc/chromium-browser/default下 末尾新建一行添加 . /usr/lib/pepflashplugin-installer/pepflashplayer.sh，我可以理解为是告诉游览其  pepflash的地址在哪里。 那么前面用户说的 这个什么意思？
+00:03 lh_mouse: 不知道
+00:04 lh_mouse: 据称 flash 已经不再更新 linux 版本
+00:04 isecLuck: 这个是谷歌游览其自己开发的， 替代flash的。
+00:04 hoxily1 joined channel
+00:05 isecLuck: 我特好奇 那个用户给的这个建议有什么用，
+00:05 isecLuck: ？
+00:05 condy: 都把自动op给去掉了..
+00:05 isecLuck: ！OTL
+00:06 isecLuck: set flags -O+Aeotv on Aksainn
+00:06 isecLuck: 设置标志，
+00:07 isecLuck: CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-version=11.4.31.203"意为 “游览其的标志中  -ppapi-flash的版本是 11.4.31.203”
+00:07 isecLuck: ？
+00:08 isecLuck: lh_mouse 求解
+00:08 lh_mouse: 收拾收拾过几天回家了
+00:08 isecLuck: 回家结婚？
+00:08 lh_mouse: isecLuck, 你知道的太多啦
+00:08 isecLuck: 。。
+00:09 isecLuck: 还是老问题。伙计，刚刚我解释的对不？
+00:09 isecLuck: 看英语还需要翻译，说白话？
+00:10 lh_bot: 没研究过 flash
+00:11 isecLuck: CHROMIUM_FLAGS="--ppapi-flash-path=/usr/lib/chromium-browser/libpepflashplayer.so --ppapi-flash-version=11.4.31.203"
+00:11 isecLuck: 这个算是语法问题吧。
+00:11 isecLuck: 貌似就是设置游览其里 pepflashplayer的版本标志
+00:11 isecLuck: 纯粹猜想，所以来求证。
+00:12 lh_bot: 这不就是个环境变量么
+00:12 isecLuck: 如果你有时间可以说下具体？
+00:13 lh_bot: isecLuck: FOO='meow' echo $FOO
+00:13 isecLuck: 当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到哪些目录下去寻找
+00:13 lh_bot: 最后加一个分号
+00:14 isecLuck: OTL
+00:14 lh_bot: 跟当前目录什么关系
+00:14 lh_bot: 你自己 ./ 了才是当前目录
+00:14 lh_bot: 默认的 PATH 里没当前目录的
+00:14 isecLuck: 你刚刚打得FOO='meow' echo $FOO 什么意思？
+00:14 lh_bot: 你自己试试去不就完了
+00:15 isecLuck: 怎么试～～ 
+00:15 isecLuck: 我也是醉了
+00:16 xxxxxxxx: 醉了就睡 别发酒疯
+00:16 isecLuck: 好吧
+00:16 isecLuck: 最后一个问题。这个语句是什么语言？
+00:16 lh_mouse quit:Quit: Meow
+00:16 lh_bot: bash
+00:17 lh_mouse joined channel
+00:17 isecLuck: goodby
+00:17 isecLuck quit:Quit: isecLuck
+00:20 isecLuck joined channel
+00:22 isecLuck: 懂了。
+00:22 isecLuck: thaks.
+00:22 isecLuck quit:Client Quit
+00:23 lh_bot: meow
+00:24 Nangcr quit:Remote host closed the connection
+00:27 Plough quit:Remote host closed the connection
+00:46 Petrus07 quit:Quit: Leaving.
+01:03 code_new_ quit:Quit: Leaving
+01:45 lh_mouse quit:Read error: Connection reset by peer
+02:31 xxxxxxxx quit:Quit: Leaving...
+02:50 condy quit:Quit: leaving
+03:21 hoxily2 joined channel
+03:21 hoxily1 quit:Read error: Connection reset by peer
+04:01 boosure joined channel
+04:21 hoxily1 joined channel
+04:21 hoxily2 quit:Read error: Connection reset by peer
+05:14 hope1 quit:Ping timeout: 252 seconds
+07:08 cleamoon_ joined channel
+07:11 cleamoon_ quit:Client Quit
+07:50 tutu joined channel
+07:50 tutu: morning ~
+07:57 tutu quit:Ping timeout: 245 seconds
+08:21 hoxily2 joined channel
+08:23 hoxily1 quit:Ping timeout: 250 seconds
+09:12 lh_mouse joined channel
+09:12 cleamoon_ joined channel
+09:12 cleamoon_ quit:Client Quit
+09:20 hoxily2 quit:Read error: Connection reset by peer
+09:21 hoxily1 joined channel
+09:27 lh_cat quit:Read error: Connection reset by peer
+09:32 lh_cat joined channel
+09:49 hoxily1 quit:Quit: Bye
+09:59 whatofor joined channel
+10:02 varna joined channel
+10:07 lh_mouse: 哦羊驼来了
+10:07 lh_mouse: 我说个事情吧   我把原来的 AOP 全换成voi auto voice 了
+10:07 varna: 看到了
+10:07 varna: 这样挺好的
+10:08 lh_mouse: 哦 我照着另一个频道弄得
+10:12 varna: 今天人好少
+10:12 varna: 光见禽兽说话
+10:25 whatofor: 禽在哪儿
+10:30 lh_cat: 手撕了
+10:31 varna: 手撕的不都是鬼子么
+10:33 varna: Travis CI无限排队中……什么鬼
+10:38 xxxxxxxx joined channel
+10:40 xxxxxxxx: 4小时出了个榛名
+10:40 varna: 勇士
+10:44 xxxxxxxx: 请给我川内 请务必给我川内
+10:44 varna: 我已经排了好长时间队了，今天Travis一定有点迷糊
+10:47 varna: 啊，终于排到了
+10:49 lh_bot: varna: 手撕前女友
+10:51 varna: 我可不像rox, 现在我还是法师
+10:57 varna: No output has been received in the last 10 minutes, this potentially indicates a stalled build or something wrong with the build itself. # 我$^&^(*&)
+11:00 varna: 5.18的测试在十六秒之内完成
+11:01 varna: 低版本测试则是无限卡住
+11:01 varna: 这都什么鬼
+11:02 varna: t/HOI-Comprehensions.t .. 1/?  # 不能探测测试数目的样子
+11:06 xxxxxxxx: 造造造 不造不是人
+11:07 xxxxxxxx: 然后又是一小时 请给我重巡
+11:11 varna: 再推一次
+11:14 varna: 估计低版本要全灭了
+11:22 tutu joined channel
+11:22 tutu: lunch time ~ 
+11:23 varna: 刚才急着排队还弄错了一个版本，欲速则不达
+11:25 varna: 等一下44d95db的提交
+11:31 tutu_ joined channel
+11:32 tutu quit:Ping timeout: 250 seconds
+11:33 varna: 看看build #3的5.16反应如何
+11:35 tutu_ quit:Ping timeout: 265 seconds
+11:36 varna: 挂
+11:36 varna: 我怀疑这跟旧式的算符重载有关
+11:36 tutu joined channel
+11:37 lh_bot: tutu: 好几天没捏兔耳朵了
+11:38 varna: 旧式的<>重载说不定只能回标量
+11:38 varna: 不过按说也不应该……
+11:41 tutu quit:Ping timeout: 250 seconds
+11:41 FrankHB joined channel
+11:42 sismvg joined channel
+11:42 xxxxxxxx: 木曾 不是川内...
+11:42 sismvg: 卧槽，一管理员一片黑
+11:47 tutu joined channel
+11:51 varna: 果然是旧式算符重载
+11:54 varna: 再扔一个build
+11:54 tutu quit:Read error: Connection reset by peer
+11:54 varna: 要是好用的话就可以试着发布了
+11:59 tutu joined channel
+12:01 lh_bot: 法师是啥意思
+12:02 varna: lh_bot: 处男
+12:03 lh_bot: O.O
+12:03 lh_bot: 过几天回老家结婚去 >.<
+12:04 tutu quit:Ping timeout: 255 seconds
+12:04 varna: 第二个issue在我刚修复还没发布的时候出现了……
+12:06 varna: 噗，敲错两个字
+12:07 lh_bot: >.<
+12:09 varna: cpan issue的管理界面还没法订正，就这样吧
+12:09 varna: 下午应该就能看到一些测试机的说法了
+12:10 xxxxxxxx: 捞出来了一个川内 太棒了!
+12:10 varna: 好
+12:11 tutu joined channel
+12:12 tutu_ joined channel
+12:13 xxxxxxxx: 第三舰队解锁了
+12:13 varna: 应该还有解锁大建的系列任务，能得资源
+12:13 tutu_: 好几天没好好写代码了
+12:14 varna: tutu_: 最新版 https://github.com/Akvelog/HOI-Comprehensions 欢迎试用
+12:14 varna: 现在我牺牲了一点接口，让它能兼容低版本perl了
+12:16 tutu quit:Ping timeout: 265 seconds
+12:19 lh_bot: BOBO 拜
+12:19 lh_bot: 卧槽 看成 compression 了
+12:20 tutu_: rwby  更新啦
+12:23 tutu_: RWBY 更新啦
+12:23 tutu_: 单身狗情人节有的看了
+12:25 xxxxxxxx: 建造出来的也是川内... 虽然是按照我说的发生了....
+12:25 tutu_: lh_bot,捏耗耳
+12:25 tutu_: 羊驼前辈，那时什么啊？
+12:25 tutu_: s,时,是
+12:25 varna: 推导式，不是压缩……
+12:26 varna: tutu_: 列表推导式，类似 { x+y | x belongs to X, y belongs to Y, P(x), Q(y) }之类的集合记法
+12:27 varna: 不过产生的是列表而非集合，也即不去重
+12:27 varna: 使用示例比如 my $list = HOI::Comprehensions::comp( sub { $x + $y + $z + $w }, x => [ 1, 2, 3 ], y => [ 4, 5, 6 ], w => HOI::Comprehensions::comp( sub { $u }, u => [ 1, 2, 3 ] )->(), z => sub { (2, 1) } )->( sub { $x > 1 } );
+12:29 varna: 注意我允许generators对应的变量不加声明、定义地在计算式和谓词里使用
+12:29 lh_bot: geordi: -c typedef (int) (k);
+12:29 geordi: error: expected unqualified-id before 'int'
+12:31 lh_bot: 12:25 < tutu_> s,时,是   // 你少了个逗号
+12:32 tutu_ quit:Quit: -a- Connection Timed Out
+12:33 varna: 3333又一个瓜
+12:33 Nangcr joined channel
+12:33 Nangcr: 喵
+12:34 * lh_bot slaps Nangcr around a bit with a large trout
+12:34 Nangcr: ←_←
+12:34 varna: slaps Nangcr around a bit with a larger trout
+12:34 * varna slaps Nangcr around a bit with a larger trout
+12:34 * lh_bot slaps Nangcr around a lot with a large train
+12:34 Nangcr: 时津风怎么样
+12:34 Nangcr: 刚才e1捞了个
+12:35 varna: 极稀有，去年夏E4奖励
+12:35 varna: 留着吧
+12:35 Nangcr: 练吗？
+12:35 varna: 随意
+12:35 Nangcr: 岛风练否
+12:35 varna: 属性在驱逐舰里只是一般阳炎级水平
+12:35 varna: 岛风则是最高水平之一
+12:35 varna: 不过练不练第一看爱，第二看数据
+12:35 Nangcr: OAO嗷嗷
+12:36 Nangcr: kuma我挺喜欢的，而且为什么改造后是金底
+12:37 tutu joined channel
+12:37 Nangcr_ joined channel
+12:38 varna: 改造之后会有rarity变化
+12:38 * dantmnf slaps Nangcr_ around a lot with a large Plough
+12:38 varna: 底色大约有几种
+12:38 xxxxxxxx: 大建任务做完了 我觉得我又可以造战舰了
+12:38 varna: 浅蓝色最低，淡青色一般是低稀有度同级首舰
+12:38 dantmnf: 先肝 POI 还是先去做 RO 号？
+12:39 varna: 银黑色的稀有度比较欺诈，没法说
+12:39 Nangcr_: =A=
+12:39 varna: 金色的稀有度同样高低不一
+12:39 varna: 柔和的彩底是比较稀有的
+12:39 varna: 有放射状花纹的彩底是极其稀有的
+12:39 varna: 樱色底高度稀有，但基本都是改造过的
+12:40 Nangcr_: OAO
+12:40 Nangcr_: 日向如何呢
+12:40 varna: dantmnf: RO号还有两天呢
+12:40 Nangcr_: 和山城比
+12:40 xxxxxxxx: 1.5h 这回连战舰都不是 还多加70弹药
+12:40 varna: 目前用途不同
+12:40 dantmnf: 两天都不知道能不能做完
+12:40 varna: 航战火力低，所以在中后期压火力的场合比较好
+12:40 Nangcr quit:Ping timeout: 256 seconds
+12:41 varna: 但扶桑级lv80可以烧图二改
+12:41 xxxxxxxx: 现在我好像缺钢了...
+12:41 varna: 改了究竟有多好见仁见智，对新玩家来说，我建议不要扔这个图（前提是你真的练了八十级）
+12:41 dantmnf: 目测要沟
+12:42 Plough joined channel
+12:42 tutu quit:Ping timeout: 245 seconds
+12:43 varna: Plough: 掘
+12:43 dantmnf: 果然沟了
+12:43 Plough: varna: 你大象OOA了
+12:43 varna: 你接上南西
+12:43 varna: 先去5-4玩三圈把补给船收拾了
+12:44 dantmnf: 各种肌肉记忆...
+12:44 Plough: 这次给的螺丝真TM少……
+12:45 Plough: 秋活一口气给十多个
+12:45 varna: 我只剩79螺丝
+12:45 dantmnf: 潜艇队打 1-5，南西打完前面就跑...
+12:45 Plough: 只剩36
+12:45 varna: 而且螺丝的大头是在E5甲吧
+12:45 Plough: 8个
+12:45 Plough: 秋活E4我记得给了10个来着？
+12:46 varna: 是
+12:46 Plough: 坑死了
+12:46 varna: 秋活下来二十多个
+12:46 varna: 那叫一个爽快
+12:46 varna: 胡吃海喝乱打
+12:46 varna: 这次勋章也没给多少啊
+12:46 Nangcr_ quit:Ping timeout: 264 seconds
+12:46 Plough: 除了甲级战犯勋章E5也就给两个普通的
+12:46 dantmnf: 又沟
+12:47 Plough: 还TM难成够……
+12:47 Plough: 狗*
+12:47 Plough: 再拆几个家具箱压压鲸
+12:47 dantmnf: （是不是接了 RO 号就开始沟沟沟
+12:48 varna: 是
+12:48 Plough: 我是买飞行甲板呢还是买床之间呢……
+12:48 varna: 我曾经为了南西一天沟完RO号
+12:48 varna: Plough: 推荐飞行甲板
+12:48 Plough: 飞行甲板主要蛋疼在只挡一半
+12:48 varna: 如果你不确认，就去改二badge生成器那里搭配一下
+12:48 varna: 现在他们的家具部分实现得挺好了
+12:49 Plough: 那里我用的是某个樱花地板，现在没上架
+12:49 varna: 那个是旧货，我一直想要
+12:49 Plough: 想要+
+12:49 varna: 好多人都有
+12:49 varna: 估计今年春就有了
+12:49 Plough: 算了，先把飞行甲板败回来
+12:49 Plough: 职人没啦～
+12:50 Plough: 其实现在这个地板还行
+12:50 Plough: 白地毯那个
+12:50 Plough: 就是有个问题
+12:50 Plough: 我截张图
+12:51 varna: 0.042还是没有进测试矩阵
+12:51 varna: CPAN的资源应该不输Travis啊……
+12:52 xxxxxxxx: 潜艇好烦...
+12:52 Plough: varna: 你那边能上picpaste吗
+12:52 Plough: 潜艇点多好，劝退率低
+12:52 Plough: 要不对面直接来个撸酱塔酱什么的
+12:52 Plough: 呵呵一笑你回家乐
+12:52 Plough: 了*
+12:52 Plough: 怎么老是给我打成“回家乐”……
+12:53 varna: Plough: 试试看吧
+12:53 varna: 我现在连Travis CI都能用
+12:54 dantmnf: Plough: 我的 log 里总共有九个
+12:54 Plough: http://picpaste.com/j6zhUXLl.png
+12:54 izmntuk joined channel
+12:55 varna: 看来不行
+12:55 varna: 请求度盘图床
+12:56 xxxxxxxx: 潜艇打不动怎么破?
+12:56 Plough: http://pan.baidu.com/s/1bn0GH7h
+12:56 Plough: xxxxxxxx: 赌反潜
+12:56 Plough: 另外你在打1-5?
+12:56 xxxxxxxx: 对
+12:56 Plough: 急着打1-5干啥
+12:57 xxxxxxxx: 消耗一下做任务
+12:57 varna: 消耗……
+12:58 xxxxxxxx: 卧槽我忘记领任务还2x一样点了好多次补给...
+12:58 varna: xxxxxxxx: 反潜公式里装备按乘二算、属性按除五算
+12:58 varna: DC-声呐基本奖励火力25 反潜机基本奖励10
+12:58 varna: DC-声呐同时存在的话，调整前火力1.15倍
+12:59 Plough: 喔喔
+12:59 varna: 改修计入CAP后
+12:59 varna: Plough: 打掉了？
+12:59 Plough: 空出来的部分正好被被炉挡住了
+12:59 Plough: 能看到的部分只有甲板
+12:59 varna: Z旗暖炉……我一直都不喜欢那个
+12:59 Plough: varna: 打掉了就不是“喔喔”是“我操”了
+12:59 varna: 还有十天
+12:59 Plough: 武藏看腻了
+13:00 Plough: 时间不多了……
+13:00 Plough: 蛋疼
+13:03 varna: 割了就不疼
+13:03 xxxxxxxx: 满地都是五十铃
+13:09 sismvg: yes lord flash
+13:10 sismvg: 谁FF35的，最近有没有flash总提示版本不对的状况?
+13:11 Plough: 有
+13:12 dantmnf: http://www.zhihu.com/question/27687145/answer/39498953
+13:12 dantmnf: 终于不沟了
+13:14 sismvg: Plough:然后更新了还是提示？
+13:14 Plough: linux上的flash还有新版本么
+13:14 dantmnf: Chrome 自带的
+13:14 sismvg: 我是win
+13:14 sismvg: 最近flash天天无响应
+13:15 izmntuk quit:Quit: leaving
+13:15 sismvg: 吓得我跪下了
+13:15 xxxxxxxx: win的话我在用ff玩船 暂时没跪过
+13:15 dantmnf: 又沟
+13:16 dantmnf: 还给我来个大破
+13:36 sismvg: 刚才碰到了香喷喷的幼女3只。。
+13:36 lh_bot: http://imgsrc.baidu.com/forum/w%3D580/sign=87b301f7a686c91708035231f93c70c6/4b5b01738bd4b31c957871b486d6277f9f2ff8ab.jpg?v=tbs
+13:37 Plough: http://tieba.baidu.com/p/3583738707
+13:37 Plough: Bug 再 临
+13:42 izmntuk joined channel
+13:45 xxxxxxxx: 一直挂远征会不会提督等级升太快了？
+13:53 Plough: http://imgsrc.baidu.com/forum/pic/item/35c9143d269759eedb789dd9b6fb43166d22dfa8.jpg
+13:56 varna: xxxxxxxx: 不会
+13:57 varna: xxxxxxxx: 应该说很少有人不是一直挂远征的
+13:57 varna: 忙了就挂长的，不忙就挂短的
+13:58 xxxxxxxx: 不会啊 那我再建造一下
+13:59 lh_bot: geordi: << TYPE<common_type_t<string, const char *>>;
+13:59 geordi: string
+13:59 lh_bot: geordi: -c (true ? "abc" : string()) = "def";
+13:59 geordi: error: cannot convert '__cxx11::string {aka __cxx11::string}' to 'const char*' for argument '1' to 'int printf(const char*, ...)'
+13:59 lh_bot: geordi: wrap everything with { }
+13:59 geordi: error: 'wrap' does not name a type
+13:59 xxxxxxxx: 卧槽又是四小时...
+13:59 lh_bot: geordi: -c { (true ? "abc" : string()) = "def"; }
+13:59 geordi: Success
+13:59 lh_bot: fvck
+14:00 varna: xxxxxxxx: 标准勇士
+14:00 xxxxxxxx: 希望不要重复...
+14:02 xxxxxxxx: 难道400 30 600 30是专门四小时的么...
+14:03 varna: 不是
+14:03 varna: 只是你脸黑而已
+14:03 xxxxxxxx: 我每次用这个公式都是4小时
+14:03 varna: 别多说了，跟我去打猎吧
+14:11 Plough: 羊驼子终于找到了一只真·非提么
+14:11 varna: 我是真勇士
+14:12 Plough: 你是涂了夜间迷彩的欧洲人
+14:12 Plough: 听说欧洲人涂上夜间迷彩就会在出大和前出武藏
+14:12 varna: 我都造多少发大和了
+14:12 Plough: 我也造了不少啊
+14:12 varna: 后来欧皇可怜我赏我个武藏
+14:12 varna: 现在我还在北非当他们的星期五
+14:12 Plough: 欧皇认为你在非洲长期卧底劳苦功高赐你个武藏
+14:13 varna: 晚上想周几下5-4了
+14:13 varna: 不过意义不大
+14:13 Plough: 我也想
+14:13 Plough: 但是我要打E5
+14:13 varna: 打不下5-5就周5-4一点意思没有
+14:14 varna: 我也没法保证自己能放战果炮
+14:14 varna: 现在5-5我倒是能打，就是底气不太足
+14:16 varna: 而且都两个小时了，CPAN Testers不至于一点反应都没有……
+14:18 varna: 我低估僧院了
+14:18 varna: 确实是一点反应都没有
+14:18 Plough: 233333
+14:18 varna: 明明今天排在我前面的模组只有八个
+14:18 varna: 往常几十个的时候也没问题啊……
+14:19 dantmnf: 这是今天的猫神
+14:20 varna: 阵型当然是单纵阵
+14:23 varna: C败……
+14:23 xxxxxxxx: 1.5h出了个筑摩
+14:23 varna: 任务泡汤了（慢心
+14:24 dantmnf: 再次肌肉记忆..
+14:24 varna: 可恶的欧洲人
+14:24 varna: 6dd打3-2队还是有困难的
+14:25 xxxxxxxx: 什么时候才能造个扶桑和山城啊...
+14:25 varna: 这些殖民者动不动就在shi里面掺流改
+14:25 varna: xxxxxxxx: 2-2头目有，要不你练级的时候顺便去趟
+14:26 dantmnf: 编成任务不用刻意去做吧
+14:27 varna: 早期的编成一定要做，但刻意了也没用
+14:29 dantmnf: 潜艇队的智商...
+14:29 varna: 靠数量补！
+14:29 varna: 四个就好多了
+14:29 Plough: 四合一攻击
+14:30 Plough: 多管齐下
+14:30 varna: 打个重巡
+14:30 Plough: +
+14:30 varna: 效果拔群
+14:30 varna: 然后两个中破，你都不好意思撤退
+14:30 varna: 聪明的U酱火力不行，火力行的胸太大
+14:31 varna: 等到U酱火力行了，估计脑瓜也被晒傻
+14:31 dantmnf: 然后给我个肥桑
+14:32 dantmnf: 还黄脸了
+14:32 varna: 换人
+14:32 varna: 潜艇常备三队就能轮换过来
+14:32 dantmnf: 进澡堂了
+14:33 varna: 南西拉动一切建设，包括出击、修理、改修
+14:33 varna: 不过你的精神可能会留下一点小缺憾
+14:35 Stevearzh quit:Ping timeout: 256 seconds
+14:38 whocares_2_ quit:Remote host closed the connection
+14:42 xxxxxxxx: 2-1捞出一那珂..
+14:43 varna: 还会有很多的
+14:43 varna: 那珂酱今天也在火热的最前线火热地演出
+14:43 dantmnf: 一天不捞出一个都不好意思去见人
+14:44 Plough: E5我连着捞了四个那珂酱
+14:45 varna: E5最后理事长（衣衫整洁）给我沧桑了一下
+14:45 varna: 天若有情天亦老，丸咸作战捞雾岛
+14:45 Plough: 果然难度越低掉落越好
+14:46 varna: E4甲有失身
+14:46 Plough: 我没有
+14:46 varna: 我可是一晚上打了四面，这是辛苦奖
+14:47 Plough: 我一晚上打了十多次E5
+14:47 Plough: 辛苦奖是那珂酱
+14:47 varna: 你穿着裤子打的
+14:47 Plough: 你没大象
+14:47 varna: 我听说机动部队矶风率高
+14:47 varna: 不知真假
+14:50 Plough: 反正都跟我没关系……
+14:52 varna: 我还不如睡个下午觉
+14:52 varna: CPAN快把我耍迷糊了
+14:52 varna: 今天Travis CI排队就将近半小时，CPAN干脆一动不动……
+14:53 Plough: 风扇狂转中
+14:54 varna: 你快脱裤凉快凉快
+14:55 varna: 我准备迷糊一会去，刚才测试矩阵在我眼前出现了阳炎一样的扭曲
+14:55 varna: 排版引擎抽了或者我抽了的可能性都有
+15:01 varna quit:Quit: leaving
+15:05 whocares_2 joined channel
+15:05 sismvg: 卡成狗
+15:05 sismvg: 磁盘1mb/s读取就99%l额
+15:36 Nangcr joined channel
+15:36 Nangcr: 喵
+15:40 * dantmnf slaps Nangcr  a bit around with a large trout
+15:45 Nangcr quit:Quit: -a- Connection Timed Out
+15:51 sismvg: 又从QT里抓到bugl额
+15:58 MoeIcenowy joined channel
+16:09 Moe_Icenowy joined channel
+16:09 MoeIcenowy quit:Read error: Connection reset by peer
+16:13 MoeIcenowy quit:Client Quit
+16:13 lh_bot: 本频道御用打脸工具   大鳟鱼
+16:16 xxxxxxxx: 大鳟鱼是啥?
+16:22 * lh_bot slaps xxxxxxxx around a bit with a large trout
+16:22 xxxxxxxx: ....
+16:29 Guest32744 joined channel
+16:29 Guest32744: hello
+16:29 Guest32744: Excuse me, is anyone here?
+16:31 lh_bot: ?
+16:33 sismvg: root 和node的类型不同真烦人
+16:33 Guest32744: :-D
+16:33 sismvg: 哪怕root是node的子类都好啊
+16:33 Guest32744: Finally have the one I
+16:33 whatofor: qt那个? 纠结的东西
+16:34 sismvg: 嗯
+16:34 sismvg: QStandardItemModel QStandardItem
+16:34 whatofor: 我只能说 习惯就好 
+16:34 Guest32744: 你们在干嘛呢？
+16:36 sismvg: 我需要template lambda
+16:38 sismvg: 树形结构真是个悲剧的故事，一个节点必须要让他父亲来杀掉他
+16:43 Guest32744: 他父亲？
+16:44 cleamoon: kukule 因列车上乘务员态度不好，然后我建了个wifi热点，名字叫：免费wifi，密码问乘务员。目前为止已经有三个人跟她吵架了。。。(zt)
+16:45 Guest32744: :-D哈哈
+16:53 condy joined channel
+16:56 MisakaMikoto: 噗
+17:37 whocares_2_ joined channel
+17:38 whocares_2 quit:Ping timeout: 252 seconds
+17:53 varna joined channel
+17:56 xxxxxxxx: 那个四小时的东西快出货了.... 希望不要是重复的
+18:00 xxxxxxxx: 重复啦重复啦 给自己一封贺电 来趟说走就走的远征
+18:03 Plough: 突然想玩红警3了
+18:11 varna: 噗哈哈哈通过了
+18:12 varna: Plough: 玩起义时刻吧
+18:12 varna: 指挥官挑战还挺好玩的
+18:12 Plough: 起义我以前就玩了百合子战役
+18:12 Plough: 其他的都是开修改器刷过去的……
+18:12 varna: 起义好玩的就是指挥官挑战
+18:13 varna: 单人战役太短了，每个就四关
+18:13 varna: 情节小补完意味
+18:13 Plough: 我想打对战
+18:13 Plough: 看看能不能哪天找几个同学欺负下
+18:14 varna: ...
+18:14 smokeink joined channel
+18:16 varna: ok, 两个issue搞定
+18:17 varna: 对了哪里弄云龙方便
+18:18 cleamoon: 欺负下？莫非肛旗有完胜他们的实力
+18:18 varna: cleamoon: 肛旗脱裤诱惑同学，同学血往下流，作战不能
+18:18 Plough: 先练到有那实力再说
+18:18 Plough: varna: 你大象都没了哪来那么多妄想
+18:19 Plough: 云龙的话只有E4吧
+18:19 varna: 那是你口胡的
+18:19 varna: E4啊
+18:19 Plough: 那是我推演的
+18:19 xxxxxxxx: 大象没了是什么情况?
+18:19 cleamoon: 羊驼自己也吃药了？
+18:19 Plough: 被萌大拿酱一轮齐射击毁了
+18:19 varna: 肛旗自己哭着撒娇说我大象没了
+18:19 varna: 其实没变化，还是有的
+18:20 Plough: 你要学会面对现实
+18:20 varna: 当你学会享受被肛这个过程
+18:20 varna: 哦对
+18:20 varna: HOI::Comprehensions修复了
+18:20 Plough: 当你学会面对现实，你就会发现你的大象没有了
+18:20 varna: 欢迎诸君作死
+18:20 Plough: perl516编译失败
+18:20 varna: Plough: 0.042改好了
+18:20 Plough: 等我有心情再折腾……
+18:20 Plough: Soga
+18:20 varna: 问题是旧版本的<>不能正常返回一个列表
+18:21 Plough: 我是指Perl 5.16解释器编译失败
+18:21 varna: 知道
+18:21 varna: 不必折腾了，以后我还是用Travis
+18:21 Plough: 了解
+18:21 varna: 排一小会儿队就可以弄六七个样例，还不错
+18:21 varna: 而且他们的报错信息比较好
+18:22 varna: 收一下远征准备打捞
+18:24 varna: 看来确实是E4, 2bb2cv2dd加决战支援走起
+18:27 varna: 噗
+18:27 varna: E4可以夜战战队走起？
+18:27 varna: cl 4dd clt
+18:28 varna: 我觉得这是找死，算了
+18:28 ep0 joined channel
+18:31 ep0 quit:Client Quit
+18:33 ep0 joined channel
+18:33 ep0 quit:Client Quit
+18:33 ep0 joined channel
+18:36 varna: 出击
+18:42 ep0 quit:Quit: leaving
+18:44 varna: 掉落很北上
+18:44 boosure quit:Quit: Get your hand off of it
+18:45 Plough: 噗
+18:46 Plough: http://imgsrc.baidu.com/forum/pic/item/0819835c1038534305816d339713b07eca80880e.jpg
+18:46 Plough: ^天城的正确用法
+18:46 varna: 噗哈哈哈
+18:46 xxxxxxxx: 我现在都不敢建造战舰了...
+18:47 varna: 我总感觉哔藏和撸祖宗有仇
+18:47 varna: 进去之后照着祖宗糊脸一炮弄个大破
+18:49 cleamoon: 秦名还是没有
+18:49 varna: 而且这次KG姬很配合的只怒爆我航母
+18:49 cleamoon: 似乎快速建造留着没什么用...
+18:49 varna: 有
+18:50 varna: 十个喷灯能喷一个大建
+18:50 xxxxxxxx: 我还没用过快速建造和修理
+18:51 varna: 桶是用来连续作战的
+18:51 varna: 毕竟大舰大破修一天多是常事，根本来不及
+18:52 cleamoon: 昨天大建了一次，一本满足
+18:52 cleamoon: 出了个战神
+18:52 varna: 好
+18:52 cleamoon: 应该80级前不会建了
+18:52 varna: 战神任何时候都有用
+18:53 varna: 未必
+18:53 varna: 要是能造出来一个都很好的
+18:53 varna: 长门陆奥也很好
+18:53 cleamoon: 金刚
+18:53 cleamoon: 擦
+18:53 cleamoon: 我想要秦名...
+18:53 xxxxxxxx: 要是能换船就好了
+18:53 cleamoon: 陆奥普建都行
+18:53 varna: 棒各不好出
+18:53 varna: 长陆普建出率太低
+18:54 whatofor_1 joined channel
+18:54 dantmnf: 今天肝力不够...
+18:54 xxxxxxxx: 榛名不好出么?
+18:54 varna: 不好出
+18:54 varna: 很多人卡，我是其中之一
+18:55 cleamoon: 我可以拿金刚雾岛山城扶桑换一个秦名...
+18:55 cleamoon: 赌出一个3h的
+18:55 varna: 隼鹰
+18:55 varna: 哔藏中破……
+18:56 varna: 有仇系列
+18:56 cleamoon: 隼鹰有了...
+18:56 whatofor quit:Ping timeout: 245 seconds
+18:56 xxxxxxxx: 我到底还造不造战舰
+18:56 xxxxxxxx: 我又动摇了
+18:56 cleamoon: 喷吧喷吧，我有60个呢
+18:57 cleamoon: 擦，真是隼鹰
+18:57 varna: 不管破没破都照着祖宗一发CI
+18:57 varna: 这精神太赞了
+18:57 cleamoon: 好吧，我又成功的让油变成了2，出门
+18:57 varna: 三小时我都不想猜飞鹰，总感觉隼鹰多……
+18:57 varna: 噗
+18:58 xxxxxxxx: 油761钢678
+18:58 varna: 掉个58，我该说什么好
+18:59 xxxxxxxx: 我到底建不建战舰呢...
+18:59 varna: 你推图到哪里了
+18:59 cleamoon: 我要58...
+18:59 varna: 2-2过了没？
+18:59 xxxxxxxx: 没 2-1都没过...
+18:59 varna: 我觉得你可以试试最近先把2-3过了
+19:00 varna: 然后再慢慢来
+19:00 varna: 前三图只要你有一些战舰，改修一下就可以过的
+19:02 Plough: 我可以拿十只大傻换一只舞风
+19:02 varna: 我可以跟你换
+19:02 Plough: 但是没法换
+19:02 varna: 为了跟野分凑一对，我留了舞风
+19:03 xxxxxxxx: 我手里只有榛名 比叡两战舰 比叡重了一只
+19:03 varna: 不然怪可怜
+19:03 Plough: 我就是想跟野分凑一对……
+19:03 Plough: 结果两次活动一只舞风都没有
+19:03 xxxxxxxx: 25级才能改
+19:03 Plough: 初风我都出了三只
+19:04 varna: 噗，天城的飞机好悲剧啊
+19:04 varna: 全都用不上
+19:04 Plough: 改了以后似乎有彗星601？
+19:04 Plough: 扔支援吧
+19:05 varna: 支援都用12甲
+19:05 Plough: 我就四个一二甲
+19:05 varna: 彗601爆装只有10……
+19:05 sismvg: http://bbs.soul-plus.net/read.php?tid-122287.html
+19:05 sismvg: nsfw
+19:05 Plough: 现在江草都被我扔去支援了
+19:05 sismvg: 还算不错的白
+19:05 Plough: 一二甲不也是10么……
+19:05 varna: 江草支援+
+19:05 varna: 噗？
+19:05 varna: 记错了
+19:06 varna: 果然，那就是不错的支援机
+19:06 varna: 不过到活动结束之前，我打算目指云龙
+19:06 Plough: 强行有用系列2333
+19:06 varna: 矶风就不叽了
+19:08 varna: 而且E4我还是不敢用水雷战队
+19:10 varna: 这难度简直操蛋……如果我机智一点就该卡E4咸1cl4dd1clt捞云龙
+19:10 varna: 捞出来之后顺手把E4甲切了
+19:10 xxxxxxxx: 造造造 不造是人?
+19:11 xxxxxxxx: 一小时...
+19:11 varna: NKC
+19:28 w15tp joined channel
+19:31 randomclown joined channel
+19:31 randomclown quit:Client Quit
+19:35 lh_cat quit:Ping timeout: 252 seconds
+19:39 izmntuk quit:Quit: leaving
+19:40 randomclown joined channel
+19:42 xxxxxxxx: 镇守府海域的远征真是良心
+19:56 Petrus07 joined channel
+19:58 lh_bot: varna: 你是否知道 debian 支持高分辨率终端的是哪个包
+19:58 lh_bot: 默认装好之后物理显示器只支持 640x480
+20:05 Plough: 终端调分辨率不是kms的事么
+20:05 Plough: 装开源驱动？
+20:07 lh_bot: 上次不知道装了啥突然能用了
+20:07 lh_bot: linux 这种渣渣系统
+20:07 lh_bot: linux 系列都渣渣
+20:07 xxxxxxxx: 啥系列?
+20:08 lh_bot: debian
+20:11 xxxxxxxx: 为啥又折腾tty? 以前不是ssh进去的么?
+20:14 Plough: A卡还是N卡还是I卡
+20:14 w15tp: 度娘 里的  萧羽奕
+20:15 w15tp: 有这个名字但是找不到详细资料。
+20:15 FrankHB: *NIX都渣，Linux在这里还没单独一提的存在感。
+20:15 Plough: 耻球出现了！
+20:17 lh_bot: 耻球出现了！
+20:21 w15tp: 耻球 到底是什么？求解
+20:21 lh_bot: 耻球是一种球
+20:22 w15tp: 耻球 = 地球  出自银魂。
+20:25 lh_bot: 日文里面的“地球”读作ちきゅう   平文式罗马字转写作 chikyuu （第一个音拍读其）
+20:28 cleamoon__ joined channel
+20:31 cleamoon__ quit:Read error: Connection reset by peer
+20:33 varna: lh_bot: 回来了，我装Linux都能自动识别分辨率……估计跟X底下挂的驱动有关
+20:34 lh_cat joined channel
+20:34 lh_bot: 0 0
+20:35 varna: 刚才在吃饭聊天刷碗
+20:40 xxxxxxxx: 卧槽 1小时又出来一个川内 这个请求的延迟有点大...
+20:41 Plough: 川内的建造时间不就是一小时么
+20:41 varna: NKC
+20:41 Stevearzh joined channel
+20:42 xxxxxxxx: 川内比那珂多
+20:44 varna: NKC
+20:44 varna: 经上记着说，你要当那珂酱的粉丝
+20:44 cleamoon__ joined channel
+20:47 Plough: 然后巨基一发大建“武藏？我赌的不是大和吗？武藏是什么船好不好用啊？”
+20:48 w15tp: lh_bot 你用的什么系统？
+20:48 lh_bot: w15tp: debian
+20:48 w15tp: 或者说你们用的大部分是什么系统？
+20:48 varna: 不好用，太费资源了，建议拆
+20:48 varna: w15tp: archlinux
+20:49 w15tp: OK。我去查查和ubuntu的区别OTL。
+20:49 cleamoon__: 太费资源+ 拆
+20:49 Plough: archlinux
+20:49 Plough: 拆+
+20:49 varna: ubuntu用户的智力水平很难保证
+20:50 cleamoon__: arch
+20:50 w15tp: like me
+20:50 xxxxxxxx: Plough: 我今天都没怎么捞船 就建造了几次 起来的时候还没有川内 现在有三个了
+20:50 Plough: 我入坑卡了三天那珂酱
+20:50 Plough: 你看我现在还是没有大和
+20:50 Plough: 逃不掉的
+20:50 cleamoon__: ubuntu的好处是一堆要钱的软件默认支持
+20:50 xxxxxxxx: 那是你脸太好
+20:50 w15tp: 不觉的。
+20:51 Plough: 好个屁
+20:51 Plough: E5我连着捞了四个那珂酱你跟我说脸好
+20:51 xxxxxxxx: 那时候你脸好又不代表一直好 欧洲人也是能晒黑的
+20:52 cleamoon__: 从现在的情况看基王是欧皇
+20:52 varna: 欧洲人是晒不黑的
+20:52 varna: 我只知道很多勇士以为自己是欧洲人，最后死在了工厂门口，连油都烧不起
+20:53 cleamoon__: 为了秦名我又开始赌战舰了，我看是秦名先出还是长门先出
+20:54 varna: 榛名我捞了不到八十盘，长门我卡了七个月
+20:54 xxxxxxxx: 看来建造靠谱
+20:55 cleamoon__: 不靠谱
+20:55 Plough: 棒各我几发普建就出了
+20:55 cleamoon__: 一开始什么都没有时行，我现在都是建什么都是重的
+20:55 xxxxxxxx: 你看红旗都这么说了
+20:56 varna: 不到八十盘的意思是捞靠谱
+20:56 Plough: 另外榛(zhen)
+20:56 cleamoon__: 现在缺装备，赌不出来
+20:56 Plough: 不是秦名
+20:57 Plough: 给我去抄一百遍
+20:57 cleamoon__: 我以为就叫秦名呢……
+20:57 xxxxxxxx: 还没怎么造过装备。。。
+20:57 Plough: 哦，看错了啊
+20:57 Plough: 二百遍
+20:57 cleamoon__: 榛名*
+20:57 cleamoon__: 233
+20:58 varna: HA RU NA! HA RU NA! Ooooooh Fool POI
+20:59 cleamoon__: 现在旗舰是潮，等待二改中
+20:59 Plough: 你个异端
+20:59 Plough: 烧
+20:59 cleamoon__: 萝莉巨乳呀
+20:59 varna: 魔性的潮是六十级二改吧
+20:59 Plough: 所以是异端
+21:00 Plough: 忘了，60还是70来着？
+21:00 varna: 潮不算异端，我特别网开一面
+21:00 varna: 那就是六十
+21:00 cleamoon__: 反正小学生除了X月只有潮和雷可看
+21:00 varna: 七十的就是欠雪和响爷吧
+21:00 Plough: 电酱不能看？
+21:00 varna: 你这是找死
+21:00 cleamoon__: 电一般般
+21:00 Plough: 你知道吗
+21:00 xxxxxxxx: 没有电...
+21:00 varna: 我要NANODEATH了你
+21:00 Plough: 你的生命只剩下三秒了
+21:01 cleamoon__: 不喜欢脑袋软但身体不软的
+21:01 varna: xxxxxxxx: 你电学修为不足啊
+21:01 varna: 我可是电学lv121的中上等
+21:01 Plough: 哦对了，我突然想起个事
+21:01 Plough: 我在这里立下誓言
+21:01 cleamoon__: 121……
+21:02 Plough: 谁打掉理事长，第二个戒指我就给谁
+21:02 cleamoon__: 你要和羊驼子结合？
+21:02 cleamoon__: ………
+21:02 xxxxxxxx: 我有雷 但是没有电
+21:02 Plough: 虽说这样的话估计就是两个魔王互相抢了，但我还是把话撂这
+21:02 cleamoon__: 岛风中破不刺激
+21:03 cleamoon__: 雪风不破看起来太2
+21:03 varna: 岛风肚脐很好
+21:03 varna: 矶风乳量不错
+21:03 varna: 滨风是冒充小学生的援力战士
+21:03 Plough: 还是我大TENGA风可爱
+21:03 cleamoon__: 岛风破的地方太少了
+21:04 cleamoon__: 本命目标还是伊8
+21:04 varna: Plough: 魔王当然一次一对，哪有只送一个戒指的
+21:04 Plough: 哈酱是战犯
+21:04 cleamoon__: 金发巨乳萝莉眼睛娘
+21:04 Plough: 谁打掉先给谁
+21:04 varna: 估计OOI
+21:04 Plough: 第二个等我哪天突发气象再说
+21:04 cleamoon__: 第一个给谁了
+21:04 varna: 你需要怒吼FIRE IT UP
+21:04 Plough: 我家OOI大概也就能在北上大人拿到戒指以后打我打得准
+21:04 xxxxxxxx: 然后送了两个戒指 然后两个人愉快的去搞姬
+21:05 varna: xxxxxxxx: 我送了两个，没搞姬
+21:05 Plough: 航母不会和雷巡搞到一块的
+21:05 varna: 参考本子《大好きな人》
+21:06 endle joined channel
+21:06 cleamoon__: 我总是没法想象吃喝是一航，吃拿的太早，总觉得是航母配驱逐
+21:08 varna: 吃喝、苍龙飞龙的舰岛都是对称的
+21:08 Plough: 然后各种事故
+21:08 cleamoon__: 昨天我喂了潮三个潮
+21:08 Plough: 所以双鹤是正道
+21:08 varna: 而在旧式的军队训示里，一个航空战队一般以一贫一巨两个航母组成
+21:08 cleamoon__: 没有瑞鹤
+21:08 varna: 不过似乎这个规定从没有得到重视
+21:08 Plough: 没有瑞鹤！？
+21:08 Plough: 没有瑞鹤！？
+21:08 Plough: 没有瑞鹤！？
+21:08 Plough: 有太太！？
+21:09 cleamoon__: 3366全是小学生不敢赌了
+21:09 varna: 这简直了
+21:09 varna: 我自发下跪
+21:09 Plough: 你有太太！？
+21:09 varna: 我周了一百多次5-4才得翔鹤
+21:09 cleamoon__: 我都喂两个翔鹤了
+21:09 Plough: 快告诉我这部是真的
+21:09 varna: 噗
+21:09 Plough: 我操
+21:09 xxxxxxxx: 30 30 60 60?
+21:09 varna: 欧皇
+21:09 varna: xxxxxxxx: 百
+21:09 cleamoon__: 难道瑞鹤好出？
+21:09 varna: 鬼
+21:09 cleamoon__: 我去……
+21:09 varna: 我至今没瑞鹤
+21:09 cleamoon__: 那不就得了……
+21:10 Plough: 你猜我出第一个太太的时候多少级
+21:10 xxxxxxxx: 卧槽上百都能出小学生?
+21:10 Plough: 全999还有那珂酱呢
+21:10 varna: xxxxxxxx: 小学生不多，NKC多
+21:10 varna: 我直播个E4玩吧
+21:10 varna: E4甲捞老李
+21:10 Plough: cleamoon__: 你要知道土耳其人的怒火是很可怕的
+21:10 varna: 决战支援两闪：电浆 POI 飞龙 苍龙 树 肥桑
+21:11 varna: 本队：雪风 哔—— 长门 秋月 喝 吃
+21:11 cleamoon__: 等等，我拿的不是翔凤吧……
+21:11 varna: 祥凤不是翔鹤
+21:11 Plough: 迟早我要用九四式舰炮轰平君士坦丁堡，以此为据点向西欧进军
+21:12 Plough: 你快确认下
+21:12 Plough: 这关系到我什么时候轰死你
+21:12 cleamoon__: 祥凤………
+21:12 Plough: 哦
+21:13 Plough: 那你大建之前我还不用急着轰你
+21:13 cleamoon__: 看到翔就大翔了
+21:13 Plough: 不然今晚的月亮你都来不及看
+21:13 varna: 祥凤是机动部队的一血
+21:13 varna: 被找错地方的美国人怒草，沉在珊瑚海
+21:14 dantmnf: 现在 POI 还差 80 次 1-5-A
+21:14 varna: 软式嗒酱
+21:14 cleamoon__: 我好像还是有一只翔鹤………… 
+21:14 Plough: cleamoon__: 再见
+21:14 Plough: 相信我，地狱里只有那珂酱
+21:14 cleamoon__: 没注意，埋没掉了
+21:14 varna: 雪风中破……
+21:14 cleamoon__: 强吗
+21:14 Plough: 不是强不强
+21:14 Plough: 你猜我出第一个太太的时候提督多少级
+21:14 varna: 小和大破
+21:15 cleamoon__: 早上刚弄两个那柯
+21:15 varna: 回去了
+21:15 xxxxxxxx: 120?
+21:15 cleamoon__: 我估计50级？
+21:15 Plough: 120是满级dalao
+21:15 varna: 怎么就莫名其妙地大破了
+21:15 Plough: cleamoon__: 99
+21:15 varna: 五十？
+21:15 Plough: 50是新米
+21:15 varna: 五十的时候我带着一堆黑鬼推图呢
+21:15 cleamoon__: …………
+21:15 cleamoon__: 我刚37
+21:15 Plough: 50的时候我连大凤都没出呢
+21:15 varna: 太惨了，小和怎么就一发大破
+21:16 Plough: 而且你要知道99->100的经验和49->50的经验完全不是一个概念
+21:16 Plough: varna: 换祥瑞吧
+21:16 varna: 99->100的经验差不多就是南西填满的
+21:16 cleamoon__: 我也没有大凤呀…
+21:16 Plough: 空袭什么的脸过去
+21:16 varna: Plough: 我只要对空射击
+21:16 Plough: 我不做南西
+21:16 varna: 不需要第二个CI
+21:16 Plough: 主要是回避
+21:17 varna: 回避83……
+21:17 varna: 小和lv80
+21:17 Plough: ……那没辙
+21:17 Plough: 毕竟你有武藏
+21:17 Plough: 啊啊啊啊啊好想大建
+21:17 Plough: 我忍
+21:17 cleamoon__: 建吧
+21:17 dantmnf: 不是 毕竟你没大和 吗
+21:17 cleamoon__: 留着干什么
+21:17 varna: 他要通关
+21:17 Plough: 大建一发我E5不用打了
+21:18 cleamoon__: ……
+21:18 Plough: E5什么消耗那天你也看到了
+21:18 varna: E5甲就是烧
+21:18 varna: 有东西烧就能赌智商，毫无技巧性
+21:18 varna: 虐你玩的
+21:18 Plough: 我再试试24闪，这次手动来
+21:18 Plough: 现在我发现Boss支援我一刷闪就劝退
+21:19 Plough: 不刷闪的就是支援过来轰隆一下六个miss
+21:19 varna: 噗，长门还自己弄个闪出来
+21:19 Plough: 要么撸掉副院长100多点然后五个miss
+21:19 varna: 也好，省得花摔
+21:19 Plough: 我那长门也自己弄了个闪出来……
+21:19 Plough: 不知道为啥
+21:19 varna: 机智的总旗舰
+21:20 Plough: ＠长门司令
+21:20 xxxxxxxx: 我再造一次战舰吧
+21:20 varna: 加贺被爆了20
+21:20 xxxxxxxx: 还是说留到明天再凑任务造好?
+21:20 varna: 都行
+21:20 Plough: 我觉得随便吧
+21:20 varna: 别那么计较
+21:21 Plough: 新人时期睡一觉就有资源了
+21:21 xxxxxxxx: 紫菜也涨么?
+21:21 Plough: 紫菜不涨
+21:21 Plough: 你要是缺紫菜就省着点
+21:22 cleamoon__: 我就是每天睡醒都是赌赌赌，结果稀有舰不少，但是一整周都没怎么推图
+21:22 varna: 我是推图派
+21:22 xxxxxxxx: 我现在根本不想推图 就想远征建造 连连小船
+21:22 Plough: 我是大建派
+21:22 cleamoon__: 我要全收集
+21:22 Plough: 准备氪金吧
+21:23 cleamoon__: 为什么
+21:23 dantmnf: 氪金+
+21:23 Plough: 船位
+21:23 varna: 全图鉴必须氪
+21:23 xxxxxxxx: 包不够大
+21:23 cleamoon__: 图鉴全……
+21:23 cleamoon__: 船位早满了
+21:23 endle quit:Ping timeout: 255 seconds
+21:24 Plough: 全图鉴慢慢玩吧
+21:24 Plough: 普建能赌的就那么些，最后你还得捞
+21:24 cleamoon__: 我所有X潮和大量重巡都喂了
+21:24 cleamoon__: 慢慢捞
+21:24 xxxxxxxx: 我缺重巡开任务
+21:25 cleamoon__: 之前没有千姐妹，现在一天出三个
+21:25 dantmnf: 后面好像有个任务要四个潮级
+21:25 cleamoon__: 3333赌就好了
+21:25 varna: 十八驱吧
+21:25 Plough: 朝潮级
+21:25 xxxxxxxx: 3333任务再说吧
+21:25 varna: 加贺道中弄个中破
+21:25 xxxxxxxx: 虽然任务也不一定开3333
+21:26 xxxxxxxx: 总之我先造战舰
+21:26 varna: 简直乱七八糟
+21:26 cleamoon__: 3366出潜艇吗
+21:26 varna: 不出
+21:26 w15tp quit:Read error: Connection reset by peer
+21:26 dantmnf: 1-5 出来的一堆雷装狗粮没地方喂...
+21:26 Plough: 啥时候来个十六驱编成
+21:27 cleamoon__: …坑
+21:27 Plough: 我现在倒是可以做十六驱编成了
+21:27 varna: 长门！
+21:27 xxxxxxxx: 果然还是忍不住想建造
+21:27 varna: 撸爷还没死呢你摔什么
+21:27 cleamoon__: 黄赌毒嘛
+21:28 varna: 卧槽还好有哔藏
+21:29 varna: 雪风一发CI打了131……
+21:29 varna: 喔喔喔喔喔掉航母了
+21:29 varna: 吃撑
+21:29 * varna 哭
+21:29 Plough: 至少是航母了
+21:29 varna: 不要吃撑了啊，捞到很多了啊
+21:29 Plough: 欧
+21:30 Plough: 我这次就没掉过吃撑
+21:30 varna: 不是这次
+21:30 varna: 是南西
+21:30 Plough: ……
+21:30 cleamoon__: 今早演习岛风打出一个200伤害，吓尿
+21:30 JQK quit:Remote host closed the connection
+21:31 Plough: 毕竟五连装鱼雷发射管
+21:31 varna: 今天先到这里
+21:31 varna: 打得不错，就劝退一回
+21:31 varna: 其余都顺利打掉了
+21:31 JQK joined channel
+21:31 varna: 特别指出武藏精神可嘉，进Boss只有一回打了驱逐，剩下都打祖宗
+21:32 xxxxxxxx: 1.333h
+21:32 varna: 期间我还订了个Perl周报
+21:32 dantmnf: 妙高型
+21:32 cleamoon__: 秒高+
+21:33 xxxxxxxx: 这个知道 但是不知道出什么
+21:33 cleamoon__: 我现在一小时左右的都喷，太碍眼，只有4+小时我才慢慢等着建
+21:33 xxxxxxxx: 反了吧...
+21:34 cleamoon__: 不反
+21:34 Plough: 颜艺级
+21:34 cleamoon__: 大和才8h，翔鹤才6h，完全可以等
+21:34 Plough: 毕竟欧洲人
+21:34 Plough: 都开始考虑等不等大和了
+21:34 dantmnf: 现在我日常普建都喷（反正没资源大建
+21:35 cleamoon__: 我暂时不会大建了
+21:35 Plough: 像我这样的大建之前一般都考虑喂给谁
+21:35 dantmnf: 233
+21:35 Plough: 是留着等重巡改二喂火力呢还是直接给小和+1对空呢
+21:35 xxxxxxxx: 留着 存狗粮
+21:35 Plough: 占地
+21:36 varna: 改修的话去一趟南西行了
+21:36 cleamoon__: 第一次大建是战神，下次能建时希望是大凤
+21:36 Plough: 懒得做南西
+21:36 varna: 妙高RJ 点击就送
+21:36 Plough: 你看，都开始想大凤了
+21:36 varna: 精神污染不多，你看我现在还挺正常的
+21:36 Plough: 我不正常了
+21:36 cleamoon__: 航母有了吃喝大凤就够了吧？
+21:36 Plough: E5连着给我掉了四个那珂酱
+21:36 Plough: 不够
+21:36 cleamoon__: ……还需要别的？
+21:36 varna: cleamoon__: 航母很麻烦
+21:36 endle joined channel
+21:36 Plough: 支援
+21:37 varna: 首先你需要四个，保证极限情况下的出击阵容
+21:37 Plough: 以及江草友永你不要了么
+21:37 varna: 然后道中支援和决战支援都要两个，不够的话也用高火力cvl
+21:37 varna: 所以一般人至少有吃喝双龙
+21:37 varna: 然后看情况
+21:37 varna: 航母和战舰一样，来一个练一个，因为没几个
+21:38 cleamoon__: 我有苍龙翔鹤祥凤，这也够其他用处了
+21:38 varna: 不够
+21:38 cleamoon__: 没战舰好赌
+21:38 Plough: 不够
+21:38 varna: 祥凤可以忽略不计
+21:38 cleamoon__: ……
+21:38 varna: 实战可用的cvl按我的优先程度排：
+21:39 varna: 隼鹰 飞鹰 千代田/千岁 RJ
+21:39 varna: 其余暂时不考虑
+21:39 Plough: 不成，我还得改几个四连氧气鱼雷
+21:39 varna: 瑞凤可爱，所以放着宠，逗到91级
+21:39 Plough: 不然一有出击任务潜艇就没鱼雷了
+21:40 Plough: 结果我把RJ放到了第一位……
+21:40 cleamoon__: 我好像没有瑞凤
+21:40 xxxxxxxx: 似乎不算这次的妙高级再出另外三个妙高级 再给我金刚和雾岛的话 我就有第四舰队了
+21:40 Plough: 你都有太太嗯
+21:40 Plough: 了*
+21:40 varna: RJ火力很好，其余都不够看，所以我一般优先沙鹰系列
+21:40 Plough: RJ主要是立绘问题
+21:40 cleamoon__: RJ二改多好
+21:41 Plough: 一改立绘拍扁了，所以我想尽快改二
+21:41 varna: RJ活动后就会二改了
+21:41 xxxxxxxx: 400 30 600 30 这个似乎还是挺靠谱的
+21:41 cleamoon__: 航母型驱逐舰
+21:41 varna: 我要稍微3-2一下
+21:41 cleamoon__: 4363？
+21:41 varna: 到时候会用瑞凤和RJ
+21:41 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 35.0.1/20150122214805]
+21:41 Plough: 我以前用的公式是400/999/730/50
+21:41 Plough: 六发齐四傻
+21:41 varna: 如果需要更多cvl就龙凤
+21:41 xxxxxxxx: 999花不起
+21:42 Plough: 噗
+21:42 Plough: 我忘收三次远征了……
+21:42 xxxxxxxx: 仔细想想似乎这个公式出来的都是任务船
+21:42 Plough: 蛋疼，这都跑一天了
+21:42 cleamoon__: 我有一万弹药，10油……
+21:43 xxxxxxxx: 大建的人闭嘴 你大建一次够我建造好多次了大概
+21:43 cleamoon__: 没有… 基础大建…
+21:43 Plough: 低保没啥意思吧
+21:43 Plough: 还是说你是一发出三隈的那种
+21:43 cleamoon__: 15 15 20 15，似乎是这个
+21:43 Plough: 嗯，一定是这样
+21:43 varna: 一个半小时：从高峰到WAGAHAI
+21:44 Plough: 你对弹射器有什么不满吗
+21:44 lh_cat quit:Remote host closed the connection
+21:44 varna: 大丈夫，大家都苦逼过，现在也仍然都苦逼
+21:44 varna: 我的资源未必就比你们多……
+21:44 dantmnf: 低保好像会出大和
+21:44 varna: dantmnf: 小数点后一位至少
+21:45 Plough: 和3333出哈酱一样
+21:45 lh_cat joined channel
+21:45 cleamoon__: 我就出了个最上……
+21:45 Plough: 那你大概是准备按顺序出
+21:45 varna: MOGAMINKO!
+21:45 Plough: 回到180桶了
+21:45 cleamoon__: 不按顺序，我有三个最上
+21:45 Plough: 哦艹复纵
+21:46 cleamoon__: 最后一个今早出的
+21:46 Plough: 还好，没掉太多血
+21:46 Plough: 接下来就是三个三隈
+21:46 Plough: 三号炮牧场
+21:46 cleamoon__: …有什么用
+21:46 varna: 我连北上大人的炮都得临时抽调，我穷
+21:46 MisakaMikoto quit:Remote host closed the connection
+21:47 Plough: varna: 去改二妙高级吧
+21:47 * varna 呜呜哭
+21:47 Plough: 足三炮一次三门
+21:47 varna: 重巡练起来麻烦死了
+21:47 Plough: 你看我就不缺二号炮
+21:47 Plough: 演习
+21:47 varna: 演习演到40的只有妙高一个
+21:47 varna: 其他都不够格
+21:47 Plough: 我能演到65
+21:47 cleamoon__: 我把所有人的装备都扒掉了，每次换人都要放装备
+21:47 varna: 我也是
+21:47 Plough: 我也是
+21:47 varna: 但你总不能让北上大人拿着155副炮去打总头目吧？
+21:47 cleamoon__: 无数的12cm炮
+21:48 Plough: U酱都被我喂满了
+21:48 varna: 重巡我完全没心情伺候，要练的话就是演习到40之后拉去3-2，演习期间喂满火力
+21:48 Plough: 蛋疼
+21:49 Plough: 重巡有炮
+21:49 Plough: 我数数我现在几门二号炮
+21:49 varna: 二十万经验也就两百场吧
+21:49 varna: 找个悠闲的时候还是没问题的
+21:49 Plough: 2+2+3+2=9
+21:49 Plough: 九门二号炮三门三号炮
+21:49 Plough: 多爽
+21:49 Plough: 哦，还有两门欧根炮
+21:50 varna: 我感觉我的主炮都两极分化了
+21:50 Plough: 我想多要几门试制41
+21:50 Plough: 经过这次E5我发现口径玄学还是很明显的
+21:50 varna: 我的感觉倒是相反
+21:51 varna: lv100+的大傻出去带46效果很好，lv93的雾岛也是
+21:51 cleamoon__: 为什么日本船不能学学人家科技世界第一的德国船，一样不穿裙子呢
+21:51 Plough: Lv93的雾岛还是水漂
+21:51 Plough: 效果一点也不好
+21:51 Plough: 麻将桌都掀不掉
+21:51 varna: 你的爱不够
+21:51 varna: 我试水甲的时候强行掀过一次双撸双嗒
+21:52 Plough: 但是我换小口径以后次次掀
+21:52 varna: 平均等级问题么
+21:52 Plough: 不知道
+21:52 varna: 而且这个里面说不定真有索敌玄学在
+21:52 Plough: 这是撤了32以后
+21:52 varna: 虽然我都没上淀探
+21:52 varna: 等级
+21:52 endle quit:Quit: Leaving
+21:52 Plough: 大概是
+21:52 Plough: 总之我还得靠小口径炮
+21:53 Plough: 伤害不减，命中大幅增加
+21:53 varna: 人各有脸
+21:53 varna: 我总觉得你命中一直脸黑
+21:53 Plough: +
+21:53 varna: 现在已经达到了必须强行补正的程度……
+21:53 Plough: 我也没办法……
+21:54 varna: 都是不脱裤子害的
+21:54 varna: 大家说对吧
+21:54 Plough: 都是你天天脑补害的
+21:54 varna: 我就想舒服舒服
+21:54 cleamoon__: 肛旗习惯细一点的管
+21:54 Plough: 你想逃避现实
+21:54 cleamoon__: 调教的不够
+21:54 varna: 岚月酱说得好
+21:55 Plough: 改喂初风
+21:55 varna: 欧
+21:55 varna: 初风只见过一个
+21:55 Plough: 我指喂给初风
+21:55 Plough: 一个个拆太麻烦了
+21:55 Plough: ……小和远征中
+21:56 Plough: 航母先留着
+21:56 Plough: 毕竟我家小和的对空只喂到103
+21:56 varna: 突然发现明石没改满
+21:56 Plough: 啊，我又开始出神通了
+21:56 Plough: 明石没喂
+21:56 Plough: 我倒是有把明石带出去的欲望
+21:57 varna: 最近反正也没得改修，给明石喂个对空
+21:57 Plough: 壕
+21:57 MisakaMikoto joined channel
+21:57 varna: 现在已经改到28了
+21:57 varna: 这是坚持南西的成效
+21:57 varna: 有很多RJ和隼鹰的
+21:57 Plough: 我今晚试试南西
+21:58 varna: 我觉得你也可以试试凡士林
+21:58 Plough: 凡士林用来润滑炮弹进入你菊花？
+21:58 varna: 你看看你，真工口
+21:58 lh_cat: 0 0
+21:58 Plough: 开发反潜卡立绘了
+21:59 Plough: 啊，卡完了
+21:59 varna: 97
+21:59 varna: 现在我1112日常就是九十七的光辉、九十九的梦想、轮回的零……
+21:59 Plough: A6m
+21:59 varna: 电浆不知为何开始研究航空术，卓有成效
+21:59 Plough: 不过是五二型
+21:59 cleamoon__: 我见过小本里进菊花最大的东西是消防栓
+21:59 varna: 小本子不算数
+22:00 Plough: 小本子扩张成什么样都有可能
+22:00 varna: 天城那个零战要是对空10就好了
+22:00 Plough: 今天也出了好多飞机呢
+22:00 varna: 对空9太可惜
+22:00 Plough: 紫电水平么……
+22:00 varna: 一下子沦落成锁着玩的装备
+22:00 varna: +
+22:00 cleamoon__: 是个比消防栓高半头的萝莉
+22:00 Plough: 再来个机种转换？
+22:01 xxxxxxxx: 我不要T有利啊啊啊
+22:01 varna: 拆零战拆紫电我倒不介意
+22:01 Plough: T有利多好
+22:01 Plough: 拿S滚
+22:01 varna: 要是真捞到老李，我就预定只剩十四列噗了
+22:01 xxxxxxxx: 回家还得修 我就是为了做个任务 至于那么拼么
+22:02 cleamoon__: 可以不修
+22:02 varna: 一航战的荣耀 二水战的演技 第三战队的命中 第九战队的连击
+22:02 varna: 都是神话
+22:03 xxxxxxxx: 一个T有利三个大破 还好是小船
+22:04 varna: 往下的制空估计不会有多少变化了，烈改估计也没戏了
+22:04 varna: 这次倒是送战斗机，也就是11对空……
+22:05 Plough: 来个夜间起降雷达
+22:06 varna: 然后那一天我们体会到了VT信管的可怖
+22:06 varna: 伪称可变时引爆信管的无线电近炸信管打个火鸡之类
+22:07 Plough: 机动部队全夜战图首次实装
+22:07 Plough: 只有第一队夜战，对面大量泡芙
+22:07 varna: 机动部队史实上倒还没有被夜战吊打过
+22:07 varna: 航空舰队倒是被怒草了
+22:07 Plough: 脑洞一场
+22:07 varna: 一个基地一晚上被掀翻
+22:07 Plough: 那是哪场？
+22:07 varna: 忘了
+22:08 varna: 似乎挺零碎，炸了一两百个飞机
+22:08 Plough: ……
+22:08 Plough: 一千吕啊
+22:08 Plough: 铝*
+22:09 varna: 明天继续捞老李
+22:09 Plough: ……我掉到少将了
+22:09 Plough: 明天打E5
+22:09 varna: 噗，有人放战果炮了？
+22:09 Plough: 大概是
+22:09 Plough: 噗
+22:09 varna: 这么早……
+22:10 Plough: 前十有四个不是甲级战犯
+22:10 varna: 岩川是三个
+22:10 Plough: 估计他们直接咸鱼然后继续周5-4去了……
+22:10 lh_cat quit:Ping timeout: 255 seconds
+22:10 Plough: 剩下的就是把甲鱼当咸鱼一样打了然后周5-4去了
+22:10 varna: 24位还在坚持黄旭东不削星际必亡
+22:11 varna: 我记得他以前还不是这样
+22:11 Plough: 500线是563
+22:11 varna: 只说“干死黄旭东、iku能对空”
+22:11 Plough: ……
+22:11 varna: 五百线挺正常……
+22:11 Plough: 第一名1711
+22:12 cleamoon__: @戊戌六君子
+22:12 Plough: 第十名1312
+22:12 varna: 岩川2704 2357 1815 1662 1572 - 1226
+22:12 xxxxxxxx: @黄太后
+22:12 varna: 简直疯了都
+22:12 Plough: 岩川开始变身肝服了么……
+22:12 varna: 五百线531
+22:13 varna: 从去年十二月起他们就跟吃了肝药一样
+22:13 varna: 一堆联邦的怪物
+22:13 Plough: 不过其实也正常
+22:13 Plough: 毕竟我2-5都没打
+22:14 lh_cat joined channel
+22:14 varna: 我好歹月初拿下基本战果
+22:14 dantmnf: 文莱前十只有两个不是甲级战犯
+22:15 dantmnf: 500 线 602
+22:15 varna: 文莱对黄旭东看法如何
+22:15 dantmnf: 这是啥
+22:15 varna: 著名解说
+22:15 varna: 干死他就对了
+22:16 dantmnf: 然后我后面有一个甲级战犯
+22:16 varna: 正常
+22:16 varna: 甲级有人三万，有人一户愚吕
+22:16 xxxxxxxx: 听上去好厉害....
+22:16 FrankHB quit:Remote host closed the connection
+22:16 varna: 我觉得五万能拿下的都是脸帝
+22:16 dantmnf: 然后第一名好像去当咸鱼了
+22:16 varna: 噗
+22:17 Plough: 我大概一户愚吕都拿不下
+22:17 cleamoon__: 一户愚吕是多少
+22:17 varna: 第一名当咸鱼这个太霸气
+22:17 varna: cleamoon__: 十万
+22:17 xxxxxxxx: 你后面那个肯定是一位肝帝的小号
+22:17 cleamoon__: ……为什么
+22:17 varna: 曾经有过著名的户愚吕提督吊打浦饭的漫画
+22:17 varna: 当时是铁底
+22:17 Plough: 不，是脸帝
+22:17 varna: 户愚吕提督指出自己不造长门，攒了十万怒打活动
+22:17 cleamoon__: ……
+22:18 varna: 明天开始，演习旗舰换成魔性的潮
+22:19 FrankHB joined channel
+22:19 cleamoon__: 两个潜艇其中一个是战神打不了2-3吧
+22:20 varna: 没有什么不可以，但有很多不容易……
+22:20 varna: 想想绫爱会用单绫波突破3-2、校长6dd吊打3-4就释然了
+22:20 Plough: 拼智商咯
+22:20 varna: 拼拼拼
+22:20 cleamoon__: 我只是想捞资源做任务…
+22:20 varna: 哦，那算了
+22:20 Plough: 那个主角一百多级的校长么
+22:21 varna: Plough: 贴吧dalao太刀弑光
+22:21 varna: 旧舰C吧连载舰娘梗的
+22:21 Plough: 哦，看来不是……
+22:22 dantmnf: 猫 神 再 临
+22:22 cleamoon__: haskell用得全身舒爽
+22:22 cleamoon__: 虽然没做正事
+22:22 Plough: 出现了一只Haskell邪教徒
+22:22 varna: haskell干正事凑合
+22:22 cleamoon__: 撸数学的当然用haskell
+22:23 varna: 他们的最大缺点是文档不能用差来形容
+22:23 cleamoon__: 不过怎么arch的haskell包都装不上？
+22:23 varna: 那文档是傻逼
+22:23 cleamoon__: ……
+22:23 Plough: 2333333
+22:23 varna: cleamoon__: 鬼知道，编译各种出错
+22:23 varna: 我先不说写文档的人是不是脑进雷
+22:23 varna: 就说那个离线文档
+22:23 varna: TMD给我定位到在线搜索上去了
+22:24 cleamoon__: 最近连打印机驱动都装不上了
+22:24 cleamoon__: 脑袋进潮了
+22:25 dantmnf: KancolleWidget 十次有三次是这样的 http://img.vim-cn.com/e4/8aedd278f1483e8dc592fedefa78ff8b20324e.png 
+22:26 cleamoon__: kancolle也装不上，boinc都打不开，装sublime也出错
+22:27 varna: 明天改写下HOI::Match看
+22:27 xxxxxxxx: cleamoon__: 拆了吧
+22:27 cleamoon__: ……怎么拆
+22:27 lh_cat: 七十万事件现况好体 
+22:28 lh_cat: s,好体,如何,
+22:28 varna: 冷掉不少时间了
+22:28 Plough: 贴吧现在回来了
+22:28 Plough: 接下来什么发展我接着围观
+22:28 lh_cat: 回来？
+22:28 varna: 谁管着，南风叔么
+22:28 Plough: +
+22:28 varna: 果然
+22:29 Plough: 那天就南风叔一个上位了
+22:29 varna: 南风叔 L mahoshi
+22:29 Plough: 其他人是南风叔批上去的
+22:29 varna: 旧吧务基本走光
+22:29 cleamoon__: 国服怎么样了
+22:29 varna: 水母王和R大都走了，其余熟人也差不多都蹲在群里和海色
+22:29 Plough: 目前跪了，据说现在准备换个名字接着来
+22:29 varna: 又是一批换血
+22:30 dantmnf: http://cdn.moejn.com/kcs/mainD2test.swf
+22:30 Plough: 反正我还是“关我P事”
+22:30 Plough: 孙狗当道我都不管
+22:31 cleamoon__: 等待墙掉全部vpn中
+22:35 izmntuk joined channel
+22:45 cleamoon__: 羊驼子看恋恋翻译的那个小说了吗
+22:47 izmntuk quit:Quit: pd
+22:47 varna: 没
+22:47 varna: 看着巨无聊
+22:47 Plough: 二连进Boss
+22:48 cleamoon__: 看了个开头，总之就是我死了
+22:48 blackskygg joined channel
+22:49 xxxxxxxx: 建造出了足柄...
+22:49 blackskygg: 2G网络真是爽啊，20k每秒封顶
+22:49 varna: 麻烦死了
+22:49 varna: 小改一下出错了
+22:50 blackskygg: varna，有问题问你
+22:50 cleamoon__: 蓝翔
+22:50 blackskygg: double **p跟double (*p)[]
+22:51 blackskygg: 一样吗
+22:51 varna: 不一样
+22:52 varna: 数组不是指针
+22:53 blackskygg: 区分一下，计作p0和p1吧
+22:54 blackskygg: 那么p0[0][0] 是不能得到p1[0][0]的值吗
+22:54 varna: 传参么
+22:54 blackskygg: 在等号右边
+22:54 varna: 在适当的场合下，数组类型会被转换到指针类型
+22:55 blackskygg: 求值上下文
+22:55 varna: 这个场合跟没说一样
+22:55 varna: 难道p0[1][2411]存在么
+22:56 varna: 而一个数组在求值的场合中被转换成指针，那么想想[]算符的类型
+22:57 blackskygg: 其实[]究竟是什么意思
+22:57 varna: []算符的参数是一个指针和一个整数
+22:57 whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:58 blackskygg: 也就是说，计算p0[0][0]的时候，p[0]已经被转换成一个指针了？
+22:59 varna: c11 6.5.2.1
+22:59 varna: Semantics 2
+22:59 varna: 手头有标准的话可以看一眼
+23:00 varna: The definition of the subscript operator []
+23:00 varna: is that E1[E2] is identical to (*((E1)+(E2))) 
+23:00 varna: 如果不想看，那么简略地看看这句
+23:00 cleamoon__: 谁手头备本标准呀……
+23:00 blackskygg: ok
+23:00 blackskygg: 我现在只有这个2G网络
+23:00 varna: cleamoon__: C标准不长
+23:00 varna: 至少翻阅起来还好
+23:00 blackskygg: 而且有时还不能用
+23:00 cleamoon__: 打印一本？
+23:01 varna: 701页呢
+23:01 cleamoon__: ………
+23:01 varna: 不过要集中查的东西没那么多就是了
+23:01 varna: 留个pdf行了
+23:01 blackskygg: 好像可以邮购的
+23:02 varna: 现在我在HOI::Match里玩一个类似的alias trick, 失败了……
+23:03 lh_mouse: geordi, -c double (*p)[] = 0; // blackskygg 
+23:03 geordi: Success
+23:03 lh_mouse: geordi, << is_same<double **, double (*p)[]>::value; // blackskygg 
+23:03 geordi: error: 'p' was not declared in this scope
+23:03 lh_mouse: geordi, erase last p
+23:03 geordi: false
+23:03 blackskygg: []的定义解决了我所有的疑问
+23:04 lh_mouse: geordi, -c { double (*p)[] = 0; ++p; }
+23:04 geordi: error: cannot increment a pointer to incomplete type 'double []'
+23:05 blackskygg: 对了，varna，还有一个问题
+23:05 varna: .
+23:06 cleamoon__: 羊驼子用vim写haskell？
+23:07 lh_mouse: vim 滚出
+23:07 varna: cleamoon__: 写的时候是，不过我不写了
+23:07 blackskygg: Linear regression,    使用 Gradient Descent， 单变量， 只有一次项系数在动，而常数项几乎不动是怎么回事
+23:07 varna: blackskygg: 你确认没摔到极值里么
+23:07 blackskygg: 没有
+23:08 varna: 那么常数项是否确实正确收敛了，能评估么
+23:08 blackskygg: 绝对没有，我用的数据是在一条直线上的
+23:08 lh_mouse: 白天的时候   用 ssh 运行了一下 service network restart
+23:08 cleamoon__: emacs有个功能不错，就是有点问题，就是写haskell时那些<-和elem之类的会被转换成←和∈显示，就是有时会真的替换……
+23:08 blackskygg: 我捏造的数据，我知道它没有收敛
+23:08 varna: blackskygg: 那么一个递归下降没有摔到极值里还没收敛，最后还拟合不上，什么鬼
+23:09 varna: 你用其他的现成库做对比实验了么
+23:09 lh_mouse: 你猜怎么样
+23:09 blackskygg: 没有
+23:09 lh_mouse: 你们猜猜发生了啥吧
+23:09 varna: 先来一个对比实验
+23:09 varna: 能打log最好
+23:09 lh_mouse: service 先把网络停掉了
+23:10 varna: s/递归/梯度/
+23:10 lh_mouse: 然后 ssh 断了   然后 bash 被干掉了   然后网络就连不上了
+23:10 blackskygg: 我回去再试试吧，太诡异了
+23:10 lh_mouse: SIGHUP 我去年买了个大金表
+23:12 varna: 我有点迷糊
+23:12 blackskygg: 我还把常数项的learning rate调到比一次系数的大很多，虽然动了，但还是无济于事
+23:13 varna: 不是迷糊你那个……
+23:13 lh_mouse: 羊驼想药娘了
+23:14 blackskygg: 按理说偏微分没有错，因为一次系数每次都不偏不倚地掉到了极值点
+23:14 varna: 不是
+23:14 varna: 你有没有误导性质的极值点
+23:15 blackskygg: 何为误导性质的极值点
+23:15 varna: 极值不是最值，这个明白吧
+23:15 blackskygg: 局部吗
+23:15 varna: 有没有那样糟糕的点把常数坑了
+23:16 varna: 我试着运行时生成代码，结果把自己灭了
+23:16 blackskygg: 可是cost function是个碗
+23:16 varna: 那个eval在HOI::Comprehensions里工作得很好啊……
+23:16 varna: blackskygg: ...
+23:16 varna: blackskygg: 没办法了，强烈推荐先上一组对比
+23:16 varna: 看一下数据有没有问题
+23:16 blackskygg: 好吧
+23:16 varna: 如果没有，大概是你程序写错了
+23:17 blackskygg: 极有可能
+23:17 varna: 无脑手滑之类的
+23:18 blackskygg: 用C写的，因为我没有Octave也用不起Matlab
+23:18 blackskygg: 那么祝武运昌隆，我先撤了
+23:19 varna: bye
+23:19 blackskygg: bye
+23:19 blackskygg left channel:"Leaving"
+23:23 varna quit:Quit: leaving
+23:23 Plough: 三连Boss
+23:23 cleamoon__ quit:Read error: Connection reset by peer
+23:27 cleamoon__ joined channel
+23:36 smokeink joined channel
+23:57 cleamoon_ joined channel
+23:58 cleamoon__: 中国最高互联网审查机构在首都互联网协会主办的“2015网络媒体春节大联欢”上合唱了半官方会歌《网信精神》。这首歌由北京奥运会主题曲创作者王平久作词，《小苹果》的赵佳霖作曲。歌曲仿照歌颂祖国的革命歌曲，其歌词包括“网络强国 网在哪光荣梦想在哪 网络强国 从遥远的宇宙到思念的家 网络强国 告诉世界中国梦

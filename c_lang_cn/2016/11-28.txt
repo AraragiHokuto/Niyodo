@@ -1,0 +1,88 @@
+00:03 lh_mouse: geordi, << std::chrono::milliseconds(1)
+00:03 geordi: 1 ms
+00:15 lh_mouse: https://github.com/lhmouse/mcfgthread/blob/master/test/ping_pong.cpp
+00:21 varna quit:Quit: leaving
+00:25 cleamooon quit:Read error: Connection reset by peer
+01:22 Mokou: 睡觉
+01:22 Mokou: 诸君武运
+01:22 Mokou quit:Quit: 睡觉
+01:22 lh_mouse quit:Ping timeout: 250 seconds
+01:35 Youmu quit:Quit: Connection closed for inactivity
+02:07 iyzsong quit:Quit: bye.
+03:35 xxxxxxxxx joined channel
+03:37 xxxxxxxx quit:Ping timeout: 265 seconds
+04:42 xxxxxxxxx quit:Quit: Leaving...
+06:50 linearain joined channel
+07:33 Sasasu joined channel
+08:14 FrankHB quit:Ping timeout: 240 seconds
+08:45 linearain quit:Quit: Leaving
+08:48 FrankHB joined channel
+08:49 iyzsong-xx joined channel
+08:59 perr joined channel
+09:28 lh_mouse joined channel
+09:35 iyzsong-xx: x.x
+09:37 * lh_mouse slaps iyzsong-xx around a bit with a large trout
+09:43 FrankHB quit:Read error: Connection reset by peer
+09:43 FrankHB joined channel
+09:50 T-J-M quit:Quit: WeeChat 1.6
+09:52 Youmu joined channel
+10:28 perr quit:Ping timeout: 252 seconds
+10:39 Sasasu[D] joined channel
+11:18 cleamoon quit:Ping timeout: 248 seconds
+11:24 Sasasu quit:Ping timeout: 260 seconds
+11:24 lh_mouse: geordi, { foo f; bark(f); } struct foo { }; void bark(const foo &){ BARK; } void bark(foo &&){ BARK; } template<typename ...T> void bark(T &&...){ BARK; }
+11:24 geordi: bark(T&& ...) [with T = {foo&}]
+11:26 lh_mouse: geordi, { foo f; bark(f); } struct foo { }; void bark(foo){ BARK; } template<typename ...T> void bark(T &&...){ BARK; }
+11:26 geordi: bark(foo)
+11:34 lh_mouse: geordi, template std::vector<volatile int>;
+11:34 geordi: error: expected unqualified-id before ';' token
+11:34 lh_mouse: geordi, template class std::vector<volatile int>;
+11:34 geordi: error: invalid conversion from 'volatile void*' to 'void*'
+11:34 lh_mouse: geordi, template class std::deque<volatile int>;
+11:34 geordi: Same error.
+11:35 lh_mouse: geordi, template class std::list<volatile int>;
+11:35 geordi: Success
+11:35 lh_mouse: geordi, --clang template class std::vector<volatile int>;
+11:35 geordi: error: cannot initialize a parameter of type 'const void *' with an rvalue of type 'const value_type *' (aka 'const volatile int *')
+11:35 lh_mouse: geordi, --clang template class std::list<volatile int>;
+11:35 geordi: Success
+11:40 whatofor quit:Ping timeout: 268 seconds
+11:40 whatofor_1 joined channel
+11:45 Sasasu[D] quit:Quit: WeeChat 1.6
+11:51 Sasasu joined channel
+12:28 Sasasu quit:Ping timeout: 268 seconds
+12:55 Sasasu joined channel
+13:28 Mokou joined channel
+14:33 CyrusYzGTt joined channel
+14:51 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+15:22 lh_mouse: geordi, { crtp<base>; d.bark(); } struct base { int a; }; template<typename T> struct crtp : T { void bark(){ this->a = 1; } };
+15:22 geordi: error: declaration does not declare anything
+15:22 lh_mouse: geordi, use --clang
+15:22 geordi: Same error.
+15:22 lh_mouse: geordi, { crtp<base> d; d.bark(); } struct base { int a; }; template<typename T> struct crtp : T { void bark(){ this->a = 1; } };
+15:22 geordi: <no output>
+18:02 iyzsong-xx quit:Read error: Connection reset by peer
+18:13 T-J-M joined channel
+18:23 FrankHB quit:Ping timeout: 260 seconds
+18:40 Sasasu quit:Quit: WeeChat 1.0.1
+18:43 Sasasu joined channel
+18:48 iyzsong joined channel
+18:52 FrankHB joined channel
+18:52 cleamoon joined channel
+19:19 yimis joined channel
+19:22 yimis1 joined channel
+19:24 yimis quit:Ping timeout: 260 seconds
+19:24 yimis1 is now known as yimis
+19:31 yimis quit:Quit: yimis
+19:36 hoxily joined channel
+20:47 FrankHB quit:Remote host closed the connection
+20:48 FrankHB joined channel
+21:13 m0cha joined channel
+21:32 m0cha quit:Ping timeout: 260 seconds
+21:45 Youmu quit:Quit: Connection closed for inactivity
+21:51 m0cha joined channel
+22:00 Youmu joined channel
+22:08 cleamooon joined channel
+23:02 cleamooon quit:Read error: Connection reset by peer
+23:31 hoxily quit:Quit: Leaving
+23:59 Sasasu quit:Quit: WeeChat 1.0.1

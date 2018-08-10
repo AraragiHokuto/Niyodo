@@ -1,0 +1,115 @@
+00:10 poppy quit:Ping timeout: 240 seconds
+00:10 _30N107E: sudo chmod 000 /
+00:17 lh_mouse: geordi, << __LONG_SIZE__
+00:17 geordi: error: '__LONG_SIZE__' was not declared in this scope
+00:17 lh_mouse: geordi, << __LONG_BITS__
+00:17 geordi: error: '__LONG_BITS__' was not declared in this scope
+00:17 lh_mouse: geordi, << __LONG_BIT__
+00:17 geordi: error: '__LONG_BIT__' was not declared in this scope
+00:18 lh_mouse: geordi, << __LONG_WIDTH__
+00:18 geordi: 64
+00:18 lh_mouse: geordi, << __LONG_WIDTH__ / __CHAR_BIT__
+00:18 geordi: 8
+01:25 lh_mouse quit:Ping timeout: 246 seconds
+02:23 CyrusYzGTt quit:Ping timeout: 248 seconds
+02:35 CyrusYzGTt joined channel
+03:20 cleamoon_ quit:Quit: Connection closed for inactivity
+03:34 Youmu quit:Quit: Connection closed for inactivity
+04:01 Plough quit:Ping timeout: 252 seconds
+04:28 cleamoon_ joined channel
+05:21 CyrusYzGTt quit:Ping timeout: 240 seconds
+05:21 CyrusYzGTt joined channel
+08:28 StardustX joined channel
+09:45 Plough joined channel
+09:58 Youmu joined channel
+10:22 jacktoy joined channel
+10:22 jacktoy quit:Client Quit
+10:29 jackwolf joined channel
+10:34 Mokou joined channel
+10:34 Plough quit:Read error: Connection reset by peer
+10:41 jackwolf quit:
+10:48 Mokou quit:Ping timeout: 248 seconds
+12:31 StardustX quit:Remote host closed the connection
+12:34 StardustX joined channel
+13:13 hoxily1 joined channel
+13:29 StardustX_ joined channel
+13:31 StardustX quit:Ping timeout: 240 seconds
+13:31 StardustX_ quit:Remote host closed the connection
+14:25 StardustX_ joined channel
+14:44 StardustX_ quit:Remote host closed the connection
+14:52 Plough joined channel
+14:58 LouisLIU joined channel
+15:09 LouisLIU quit:Ping timeout: 240 seconds
+15:24 Mokou joined channel
+15:24 Plough quit:Read error: Connection reset by peer
+15:28 lh_mouse joined channel
+16:20 Mokou_ joined channel
+16:20 Mokou quit:Read error: Connection reset by peer
+16:30 whocares_2 quit:Ping timeout: 240 seconds
+16:30 whocares_2_ joined channel
+18:22 lh_mouse: geordi, { std::pair<double, int> p1(NAN, 1), p2(NAN, 2); std::cout << (p1 < p2); }
+18:22 geordi: true
+18:23 lh_mouse: geordi, { std::pair<double, int> p1(NAN, 1), p2(NAN, 2); std::cout << (p1 > p2); }
+18:23 geordi: false
+18:23 lh_mouse: geordi, { std::pair<double, int> p1(NAN, 1), p2(NAN, 2); std::cout << (p2 < p1); }
+18:23 geordi: false
+18:41 FR13_NDS joined channel
+18:44 Mokou_ is now known as Mokou
+19:13 whocares_2_ quit:Read error: Connection reset by peer
+19:14 whocares_2 joined channel
+20:05 iyzsong joined channel
+20:34 iyzsong: _(:з」∠)_
+20:59 pp_ joined channel
+21:00 pp_: 有活人吗
+21:02 hoxily1 quit:Quit: Connection closed for inactivity
+21:29 whatofor quit:Read error: Connection reset by peer
+21:29 whatofor joined channel
+21:30 iyzsong: 没有
+21:32 varna joined channel
+21:32 varna: _(:з」∠)_
+21:34 Mokou: 一只羊驼子冒了出来
+21:35 Mokou: varna, 我发现我校图书馆碉堡了
+21:35 Mokou: 里面有迅哥儿译得毁灭，1973印制
+21:35 Mokou: 的
+21:36 varna: OTL
+21:37 Mokou: 骆驼祥子是60年代香港的版本
+21:37 varna: 最近跑西溪加班有点狠，昨晚又攻略噬神者解放重生到三点钟
+21:37 Mokou: 简直六飞……
+21:37 varna: 这 个 可 以 有
+21:39 varna: 最近unikernel邪教又借着稻壳儿死灰复燃了？
+21:40 varna: 前几天看到些给大量使用内核线程辩护的言论
+21:40 Mokou: 66666
+22:01 varna: btw 前几天在网易云音乐上看到一个恐怖的评论
+22:01 varna: 据说宇宙双马尾伊碧塔丝都有本子
+22:02 varna: http://tv04.tgbusdata.cn/v2/thumb/jpg/NkRCNSw1ODAsMTAwLDQsMywxLC0xLDAscms1MCw2MS4xNTIuMjQyLjE=/u/ps4.tgbus.com/UploadFiles/201504/20150403175752620.jpg ——长得这个样子
+22:06 erhandsome quit:Quit: ZNC 1.6.5+deb1 - http://znc.in
+22:08 Mokou: 想想克苏鲁都有本……
+22:08 varna: 那个本已经扭曲了，但伊碧塔丝本我在哪里都没找到
+22:08 varna: 怕是没萌化的……
+22:09 varna: 毕竟伊碧塔丝把脸掼在地上那个动作简直超可爱
+22:09 varna: 一瞬令我dokidoki
+22:10 erhandsome joined channel
+22:10 varna: 总觉得自己有什么地方变得不对了
+22:11 erhandsome quit:Client Quit
+22:15 lh_mouse: geordi, <<+'\xfe'
+22:15 geordi: -2
+22:17 erhandsome joined channel
+22:17 erhandsome quit:Remote host closed the connection
+22:18 erhandsome joined channel
+22:19 erhandsome quit:Client Quit
+22:20 cleamoon_ quit:Quit: Connection closed for inactivity
+22:21 erhandsome joined channel
+22:25 erhandsome quit:Client Quit
+22:26 erhandsome joined channel
+22:30 StardustX joined channel
+22:32 varna: _(:з」∠)_幼女幼女平坦的胸口
+22:53 StardustX quit:Quit: 告辭
+22:59 Mokou: 另，我发现T520键盘的手感是比现在的好
+22:59 Mokou: 我校机房清一色T520……
+23:03 iyzsong quit:Ping timeout: 252 seconds
+23:15 hoxily1 joined channel
+23:19 FR13_NDS quit:Quit: Textual IRC Client: www.textualapp.com
+23:25 Youmu: O.O
+23:25 Youmu: 看了下，感觉T520不错啊，就是11年出的，本着电子产品买新不买旧的原则 =-=
+23:30 cleamoon_ joined channel
+23:48 varna quit:Ping timeout: 260 seconds

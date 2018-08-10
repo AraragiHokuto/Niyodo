@@ -1,0 +1,1285 @@
+00:00 Mokou: 1-5斩杀完毕
+00:02 lh_mouse: 2022 北京 \(^o^)/
+00:06 Mokou: 神通永远不会躲
+00:11 hope1: 炉石可以wine出来啊……
+00:50 molikto quit:Remote host closed the connection
+00:54 lh_mouse quit:Read error: Connection reset by peer
+00:55 lh_mouse joined channel
+00:56 Mokou: 2-5斩杀
+00:57 Mokou: 3-5明天打
+01:08 Mokou: 睡觉 
+01:08 Mokou: 诸君武运
+01:08 Mokou quit:Quit: 睡觉
+01:17 lh_mouse quit:Read error: Connection reset by peer
+01:37 Ivan97 quit:Quit: Connection closed for inactivity
+02:26 cleamoon joined channel
+02:40 whatofor_1 joined channel
+02:43 whatofor quit:Ping timeout: 265 seconds
+03:05 LittleKey joined channel
+04:56 LittleKey quit:Ping timeout: 252 seconds
+05:02 cleamoon quit:Read error: Connection reset by peer
+05:02 cleamoon joined channel
+05:21 molikto joined channel
+05:26 molikto quit:Ping timeout: 256 seconds
+06:07 molikto joined channel
+06:12 molikto quit:Ping timeout: 246 seconds
+07:18 molikto joined channel
+07:50 FrankHB joined channel
+08:08 hoxily joined channel
+08:22 Mokou joined channel
+08:24 tutu_wind: morning ~
+08:25 Mokou: 早
+08:26 Mokou: 果然是元帅了
+08:28 hoxily quit:Ping timeout: 272 seconds
+08:30 Ivan97 joined channel
+08:37 tutu_wind: .
+08:41 tutu_wind: Mokou: 啥意思啊？
+08:41 Mokou: 舰C
+08:44 tutu_wind: Mokou: 喔喔 ～ 原来如此。 我去干活喽 ～ 'mua Mokou 
+08:47 cleamoon: X旗成为元帅了？
+08:48 Mokou: 半天元帅
+09:12 tutu_wind: 刚吃吃包子 ， 已然酸爽 。。。 以后只有酸包子了 。。。
+09:39 whatofor joined channel
+09:41 whatofor_1 quit:Ping timeout: 244 seconds
+09:41 tutu_wind: Mokou: 北斗酱 ～
+09:42 Mokou: ?
+09:43 tutu_wind: Mokou: 北斗酱在操作任务队列的时候是肿么做互斥哒？
+09:43 Mokou: 不做
+09:44 tutu_wind: cas ？
+09:44 Mokou: 我不用线程……
+09:44 tutu_wind: 为啥啊。。。
+09:44 Mokou: 为啥要用线程
+09:45 tutu_wind: Mokou: 很low的回答：要并发 。。。
+09:45 Mokou: 并发为啥非得用线程……
+09:45 tutu_wind: Mokou: 那临界资源也需要互斥吧 ～
+09:46 Mokou: 然而现在并没有什么临界资源
+09:46 tutu_wind: 纳尼
+09:46 Mokou: Izumo里哪里有临界资源
+09:47 tutu_wind: Mokou: 那么，北斗酱是一个进程一个逻辑？
+09:47 FrankHB quit:Ping timeout: 265 seconds
+09:47 Mokou: 每个进程是完全独立的
+09:48 Mokou: 和你手动起四个单进程实例没去别
+09:48 Mokou: 区别*
+09:48 tutu_wind: Mokou: 木有看过你的Izumo ... 在github？
+09:48 Mokou: 嗯
+09:48 Mokou: 现在那是个测试代码
+09:48 Mokou: 互斥什么的等我开始折腾log之类再说
+09:48 tutu_wind: 喔喔，这样啊 ～
+09:49 tutu_wind: 好的 ～
+09:52 Mokou: 3-5二血拿下
+09:57 tutu_wind: https://github.com/AbrahamHokuto/Izumo
+09:58 tutu_wind: Mokou: this ? ^
+09:59 Mokou: +
+09:59 tutu_wind: 刚才瞻仰了一下～
+10:00 Mokou: 瞻仰太过了
+10:00 Mokou: 我这种鶸写不出啥好代码……
+10:02 tutu_wind: 你们都是渣渣学习的对象 ～ 
+10:02 tutu_wind: 去撸了 ～
+10:17 molikto quit:Remote host closed the connection
+10:22 molikto joined channel
+10:26 whatofor_1 joined channel
+10:27 molikto quit:Ping timeout: 272 seconds
+10:27 varna joined channel
+10:29 whatofor quit:Ping timeout: 272 seconds
+10:29 Mokou: 回匹兹堡的时候被人拦截，死了三次……
+10:30 Mokou: 然后我换上新护盾，带上五十发导弹冲出去
+10:30 Mokou: 然后他们不见了
+10:30 varna: 你用的什么飞机……
+10:30 Mokou: 初始送的那个
+10:30 varna: 换个Patriot吧
+10:30 Mokou: 就剩一千块钱了，等我做几个任务
+10:30 varna: Starflier唯一的优势是转弯好
+10:31 varna: 一开始其实机炮用Justice系列也没啥，但是Starflier/tracker少一个炮……
+10:32 varna: 或者你还有个选择
+10:32 varna: 攒点小钱，去战舰密苏里买defender
+10:32 varna: 那个是重战，武器位置多
+10:33 Mokou: 大概多少钱
+10:33 varna: 忘了，我查查
+10:33 Mokou: 主要是密苏里在我这里显示一堆机密……
+10:33 varna: 一万二
+10:33 Mokou: ……好贵
+10:34 varna: 这个钱数其实要去掉你当前的飞机售价
+10:34 varna: 而且主线中间会有些时间让你强制做支线升级赚钱
+10:35 varna: 要是觉得贵，可以买Patriot
+10:35 varna: 7.6k就能拿下
+10:35 Mokou: 总之我先攒点钱
+10:35 Mokou: 导弹用得太狂，就剩1k了
+10:36 varna: 你用的哪种导弹……标枪还是尾行者
+10:36 Mokou: 尾行者
+10:36 varna: 那确实烧点……
+10:36 Mokou: 我现在带着五十发尾行者到处晃悠……
+10:37 varna: 喜欢导弹的话其实比较舒服，选择多
+10:37 Mokou: 先去趟3-5
+10:37 varna: 毕竟轻战的武器位置基本很难满足你需求
+10:37 Mokou: 我看看能不能在元帅位置上呆久点
+10:38 varna: 所以弄个重战呼呼地轰杀敌人也不错
+10:38 varna: ……我米空忘带炮了
+10:38 Mokou: 那我攒攒钱试试
+10:38 Mokou: ……
+10:38 Mokou: 我没上米空
+10:38 varna: 初期其实无所谓
+10:38 Mokou: 这个倒是感觉出来了
+10:38 Mokou: 拿着两门justice各种呼呼呼……
+10:39 Mokou: 雷巡没封住
+10:39 varna: 其实主线后期也无所谓，但我个人觉得用起来舒服的重战如果你不特别处理跟流氓团伙的关系，就得等到日本
+10:39 Mokou: 还好
+10:39 Mokou: 有亚码头吗
+10:39 varna: 日本那里的命名超奇葩
+10:39 varna: Battleship Myoko/Nagumo
+10:40 Mokou: ……
+10:40 varna: Reppu Bender, Raiden Bender
+10:40 varna: 还有个采矿的行星叫Junyo
+10:40 Mokou: 我是不是得考虑下鱼雷和炸弹带哪个
+10:40 varna: 不用考虑
+10:40 varna: 鱼雷超慢的，只能攻坚
+10:40 varna: 当然手法好的重战可以用鱼雷对头轰
+10:41 Mokou: ……历史么
+10:41 Mokou: 神通中破
+10:41 Mokou: 总之过去了就好……
+10:41 varna: 典型的做法是你接敌前开巡航引擎，在2.xK能锁到敌人的时候锁定，同时引擎紧急停车（缺省Z键）
+10:41 varna: 这时候你会惯性减速
+10:41 varna: 趁着速度还高冲过去炮雷全开
+10:43 varna: 116老板娘……
+10:43 Mokou: 三血拿下
+10:43 Mokou: 不进夜战了
+10:43 Mokou: ……
+10:43 Mokou: 绫波换小和
+10:43 Mokou: 晴岚换瑞云12
+10:43 varna: 另外还有个前期可以用的轻战
+10:44 varna: dagger, 这个在美国/纽约星系的Buffalo基地有卖
+10:45 Mokou: 小和中破
+10:46 varna: 演习都什么鬼
+10:46 varna: 一人刷几趟闪，我去3-5
+10:47 Dove_T2 joined channel
+10:50 Mokou quit:Ping timeout: 244 seconds
+10:50 hoxily joined channel
+10:50 varna: 米空刷闪被打伤……
+10:51 Mokou joined channel
+10:52 lh_not_bot: tutu_wind: 队列互斥用 mutex 加个 condition variable 就行
+10:52 lh_not_bot: mutex 开销没你可能想象的那么大
+10:53 lh_not_bot: 用 cas 实现单向链表容易  双向的就没那么好艹了
+10:55 Mokou: 到科罗拉多了
+10:56 varna: 查了一下资料
+10:57 varna: 科罗拉多和底特律有卖debilitator系列机炮
+10:57 Mokou: 等会我去看看
+10:57 varna: 似乎两万多一挺
+10:57 varna: Lv7武器……
+10:57 Mokou: ……
+10:57 varna: 我的drake似乎都用不了这个
+10:58 varna: 看看有没有Lv6版本，这游戏的轻战太尴尬了
+10:58 varna: 我日
+10:58 varna: Lv6只有炮塔版……
+10:59 Mokou: ……蛋疼
+10:59 varna: 蛋碎一地
+10:59 varna: 完全不想用德棍的banshee
+11:00 varna: drake的转向率是1.66rad/s, banshee只有1.2rad/s
+11:01 Mokou: 因为被一发鱼雷坏了舵？
+11:01 varna: 轻战其实大多1.2
+11:01 varna: 能上1.6的只有starflier, startracker, patriot, drake
+11:01 Mokou: なるほど
+11:02 varna: 如果只是1.2的转向率，完全可以用重战barracuda或者falcon代替
+11:02 varna: 尤其是falcon, 可以加载最多Lv8武器，转向率也有1.34
+11:03 varna: 当然如果单纯说1.34的话，最强的可能还是超重战eagle...不过目前我也没够等级买那个
+11:04 whatofor joined channel
+11:06 whatofor_1 quit:Ping timeout: 255 seconds
+11:10 varna: 见鬼……
+11:10 varna: 好一点的轻战脉冲机炮之内去找海盗买
+11:11 varna: 然而我那个鬼打法跟海盗结的梁子搞不好得把用他们人头换的赏钱都砸进去
+11:12 Mokou: 2333
+11:13 varna: 七千多一挺的Lv5脉冲机炮，护盾伤害300+
+11:13 Mokou: 真可怕
+11:13 varna: 不如debilitator但也不错，只可惜四个出售点都是海盗的
+11:13 varna: 这些熊孩子还搞了个行星，兼卖最强超重战之一……
+11:16 Mokou: ……
+11:17 varna: 政府军真是太无能了
+11:17 varna: 好装备全是黑道的，他们到底怎么活下来的……靠垄断生活必需品么
+11:18 Mokou: 靠设定
+11:18 Mokou: 回纽约了
+11:18 molikto joined channel
+11:19 varna: 似乎可以调整一下策略
+11:19 varna: 比如在德系的地盘打击一下第一产业死硬派，然后用他们的人头钱去贿赂黑道
+11:20 varna: 之后就只能在环境糟糕、名字还都是希腊字编号的星系混了っぽい……
+11:23 Mokou: ……
+11:23 Mokou: 800紫菜达成
+11:24 varna: 运气最残的时候是在tau-多少的某个星系，跟人狗斗上头，结果边上有个半死的恒星
+11:24 Mokou: ……炸了？
+11:24 varna: 我听着一声danger, 还没反应过来是怎么回事就直接高速撞过去
+11:24 Mokou: ……
+11:24 Mokou: 被日了啊
+11:24 varna: 大概在那个白矮星的危险区里了
+11:24 varna: 直接掉血
+11:25 varna: 当时开的是Anubis, 可能三秒钟左右死了
+11:25 Mokou: ……
+11:25 Mokou: 啊，主线让我去找密苏里了
+11:27 varna: 哦，到主线任务二了
+11:27 Mokou: 喔
+11:27 Mokou: 我买得起defender了……
+11:27 varna: 不对，似乎还要靠后
+11:28 varna: defender还是挺好的，不过这游戏里的美式装备不知为何总是被黑
+11:28 Mokou: 这个似乎是毛国人的游戏？
+11:28 varna: 微软的
+11:28 Mokou: ……
+11:29 Mokou: 那大概是破解的原因？
+11:29 Mokou: 我这边安装只有毛文和英文
+11:29 varna: 大概是
+11:29 varna: 政府军的线路大致是美-英-日-德
+11:29 molikto quit:Remote host closed the connection
+11:29 varna: 市售武器的高档程度也大致上升
+11:29 varna: 当然任务奖励也是
+11:30 varna: 结果我现在虽然不太高兴，但用来致死的机炮还是德棍的stealthblade mk1...
+11:30 Mokou: ……
+11:30 Mokou: 德棍M$
+11:31 varna: 其实用通关之前近乎白送的死亡之手mk1也可以，但那东西充其量也就是跟所有Lv6速射炮一样高档
+11:31 varna: 射速比德棍好，射程和威力略有不足
+11:31 Mokou: なるほど
+11:34 varna: 3-5出击一趟看
+11:35 varna: 啊，有个150棒各
+11:37 varna: Barrager Mk3... 这个炮似乎也不错
+11:39 varna: 2雷
+11:39 varna: 电酱出门中破
+11:40 varna: 4雷
+11:41 varna: POI中破
+11:42 molikto joined channel
+11:42 varna: 3大破……
+11:43 varna: 这把很疼啊
+11:44 varna: 而且从昼战到夜战，正好从六号位杀到一号位收工……
+11:44 Mokou: ……
+11:45 Mokou: 我也出击一次
+11:45 varna: 不补闪了，二血出击
+11:46 varna: 3雷
+11:46 varna: 米空和小和瞬间中破
+11:46 Mokou: 阿嘿颜小破
+11:46 varna: 感觉门神要过不去
+11:47 Mokou: 小和不CI，被小破
+11:47 varna: 欠雪也中破了
+11:47 varna: 4雷
+11:47 varna: 3中破过门神
+11:47 Mokou: 六选一强行把小和补成大破
+11:48 Mokou: 金苍蝇我日你十八代祖宗
+11:48 varna: 这次是塔姐了
+11:48 varna: 绫波中破……
+11:48 Mokou: 金苍蝇强行躲夜战二连
+11:48 Mokou: 这游戏我不会玩
+11:49 varna: 雷击收工，夜战一下看看有没有意外斩获
+11:49 varna: 电酱你逗我……
+11:50 varna: 这要不是四打三就拿A滚了
+11:50 Mokou: 最近我发现这游戏我越来越不会玩了……
+11:50 varna: 打完出个毛神，也算意外
+11:50 varna: 我根本没想到会出毛神
+11:50 Mokou: Lv40加贺连躲夜战五发
+11:50 Mokou: 平均30的舰队强行把我最低Lv67的舰队打个C败
+11:51 varna: 这事我见过
+11:51 Mokou: 注意那场是制空均势
+11:51 varna: 仍然不补闪，第三血看看劝退不
+11:51 Mokou: 均势
+11:51 varna: ...
+11:51 whatofor_1 joined channel
+11:51 Mokou: 没有什么狗屁二连和航空校射
+11:52 Mokou: 就是平A，Lv30一炮一个准，Lv98打不中
+11:52 varna: 糟，电酱忘修了
+11:52 varna: 31/35凑合打打
+11:52 varna: 3雷
+11:52 varna: 小和……
+11:53 varna: 补闪
+11:54 varna: 小和好歹也120了
+11:54 varna: 还是摔
+11:54 varna: 我就当看看屁股……
+11:54 whatofor quit:Ping timeout: 256 seconds
+11:56 varna: 欠雪下去换时雨历练历练
+12:19 varna: 又对比了下资料才发现Sigma 13的矿工也卖速射炮……
+12:19 varna: 贵乱
+12:20 Mokou: ……
+12:20 Mokou: 果然这次被拦就没啥问题了
+12:21 Mokou: 三只来拦我，打个照面直接被我秒一只……
+12:21 varna: 时雨出门大破
+12:21 varna: 刚刷的闪
+12:21 Mokou: 深海的命中率是100%
+12:21 wlemuel joined channel
+12:22 Mokou: 美军炮术三百倍于蝗军
+12:22 varna: 继续
+12:22 varna: 三连劝也正常，毕竟1cl5dd
+12:23 varna: 电酱中破
+12:23 varna: 完全没人打后期爷啊
+12:24 varna: 复纵T不利
+12:24 varna: 2小破通过
+12:25 Mokou: 出击
+12:25 Mokou: 我赌五毛这次要拐中路
+12:26 varna: 绫波中破
+12:26 Mokou: 两条鱼雷
+12:26 Mokou: POI大破
+12:26 varna: 塔姐吃错药了
+12:26 varna: 一炮都不中
+12:26 varna: 雷击收工
+12:27 varna: 船位满了，我走
+12:27 varna: 换阵容
+12:28 hoxily quit:Quit: Leaving
+12:28 varna: ...代理挂了
+12:28 varna: 现在如果我F5就是一死
+12:28 Mokou: ……
+12:29 hoxily_HIRC joined channel
+12:29 varna: 为何这种时候来个破事
+12:30 Mokou: "你永远也不会成功"
+12:32 varna: 那我就不F5了
+12:33 varna: 吔我十六万钢！
+12:34 varna: ...出门N
+12:34 Dove|T2 joined channel
+12:35 varna: 神通1/49...
+12:35 varna: 1/50
+12:35 varna: 太屌
+12:35 Mokou: ……
+12:35 Mokou: 这些机会不是属于你的
+12:36 varna: 还带着闪……
+12:36 varna: 这太黑
+12:36 Mokou: N
+12:36 molikto quit:Remote host closed the connection
+12:37 Mokou: 矢矧大破
+12:37 varna: E
+12:37 Dove_T2 quit:Ping timeout: 272 seconds
+12:37 varna: 开幕开掉一个
+12:37 Mokou: 一个点干掉我三个桶
+12:37 varna: 小和直接22/42
+12:38 varna: NE
+12:38 varna: 复纵怂
+12:39 varna: 小和中破
+12:39 varna: 通过
+12:40 varna: T有利，好
+12:41 varna: 搞定
+12:41 varna: 甚至没进雷击战
+12:41 Mokou: Orz
+12:41 tutu_wind: 吃饭啦 ～ varna Mokou 
+12:41 varna: 十六万钢的初阵还不错，挺漂亮的
+12:44 varna: 干他大爷的……
+12:44 varna: 双大武哔北大
+12:45 Mokou: ……
+12:45 varna: 怠慢不得
+12:45 varna: 1cl3dd2clt
+12:45 varna: 看看我能弄死几个
+12:46 varna: 日，T不利……
+12:46 varna: 这把要初始
+12:46 varna: 出事
+12:47 varna: 2大破2中破
+12:47 varna: 雷击之后2大破3中破
+12:47 varna: 赌！
+12:48 varna: 六选一选错……
+12:48 varna: 果然我的水雷战队还是不够强
+12:48 Dove|T2 joined channel
+12:48 varna: 打不过这个六婚舰晒比
+12:49 Mokou: 其实我觉得这个未必是晒
+12:49 Mokou: 我在贴吧里见过一伙人专门放难打的配置
+12:49 Mokou: 理由是“没有免费的经验”
+12:50 varna: ……还真当自己大爷了
+12:50 varna: 大丈夫，我输就输了
+12:50 Mokou: 撸瑟往往想在游戏中找点优越感
+12:50 Mokou: 你要体谅
+12:50 varna: 主要是对面的阵容不难打
+12:51 varna: 跟他决战就行
+12:51 varna: 而我用的是十六万钢、电酱、北大、POI、绫波
+12:51 varna: 最后赌输了
+12:51 Mokou: 水雷战队要在晚上才能发挥威力……
+12:51 varna: 晚上还有四个能动的
+12:52 varna: 可惜对面智商稍微正常了点
+12:54 varna: 当然不论这些弱子怎么想，我一直都是免费经验提供者
+12:54 varna: 休闲玩家需要高效练级，而那些匹配到我的伙计至少有非常大的自由度选择编成
+12:55 cleamoon quit:Ping timeout: 250 seconds
+12:56 Mokou: +
+12:56 cleamoon joined channel
+12:57 hope1 quit:Ping timeout: 252 seconds
+12:58 Mokou: POI中破
+12:58 Mokou: 六选一强行补成大破
+12:58 Mokou: 六选一强行补成大破
+12:58 Mokou: 六选一强行补成大破
+12:58 Mokou: POI中破
+12:58 Mokou: 六选一强行补成大破
+12:58 Mokou: 今天这是第几次
+12:58 Mokou: 我都数不过来了
+12:59 Mokou: 怎么深海船智商都这么高，我家船一个个都跟弱智似的呢
+12:59 Mokou: 这游戏我实在不会玩
+12:59 varna: 换人
+13:00 Mokou: 我换谁去
+13:00 varna: 等级低的也没事
+13:00 varna: 换张脸
+13:00 Mokou: 没用
+13:00 varna: 3-5下路门神的六选一水平很高
+13:00 Mokou: 昨天1-5 2-5全是这样
+13:00 Mokou: 而且这是第一点
+13:00 varna: ……
+13:00 Mokou: 就那么一颗鱼雷
+13:00 Mokou: 就剩下一颗鱼雷
+13:01 varna: 我印象最深的就是小和在门神狂摔
+13:01 Mokou: 就冲着唯一一个掉血的去了
+13:01 varna: 空袭之后被轰炸补刀
+13:01 Mokou: 你说这不是田中手操我都不信
+13:01 varna: 操，代理还在包扎和
+13:01 varna: 爆炸
+13:02 varna: 上网真难啊……
+13:09 whatofor joined channel
+13:09 varna: 我等到下午看看情况
+13:10 Mokou: 似乎科罗拉多的任务奖励多些？
+13:10 varna: 等级越高，奖励越好
+13:10 varna: 所以只要跟着主线走就行
+13:10 Mokou: 不过主线要隔一段时间才能出现……
+13:10 varna: 嗯，所以尽量蹲在主线靠前的位置
+13:11 varna: 纽约星系应该是最差的
+13:11 Mokou: 了解
+13:12 whatofor_1 quit:Ping timeout: 260 seconds
+13:13 varna: 蛋疼
+13:13 varna: 挺好的代理，结果一崩溃就是大性闻
+13:13 varna: 还没人管
+13:19 Mokou: N
+13:20 Mokou: 矢矧中破
+13:20 Mokou: POI大破
+13:29 varna: 要是到下午演习还不行，我就先换岛风狗的代理
+13:30 Mokou: N
+13:31 Mokou: 阿嘿颜中破
+13:32 Mokou: 我觉得我已经不用往前走了
+13:33 Mokou: 六选一强行补成大破
+13:35 Mokou: 话说捡到的武器除了卖出去再买回来以外能不能直接装上
+13:38 varna: 能
+13:38 varna: 挂载的装备左上角有个小图标
+13:38 varna: 点了就能卸下
+13:39 whatofor_1 joined channel
+13:39 varna: 能挂载的空闲装备也用那个图标
+13:39 Mokou: 等回纽约我试试
+13:41 whatofor quit:Ping timeout: 250 seconds
+13:45 Mokou: N
+13:48 Mokou: 矢矧中破
+13:49 Mokou: 轮形怂
+13:49 Mokou: 小和不CI
+13:49 Mokou: 六选一强行补成大破
+13:51 varna: ...
+13:52 Mokou: 现在3-5进Boss的概率比南西低几倍
+13:55 Mokou: N
+13:56 varna: 太惨了
+13:56 Mokou: 我觉得我这十万资源已经可以用来大建马战神了
+13:58 Mokou: 不过现在看见科罗拉多我老想到大七最弱怎么破……
+13:58 Mokou: 轮 形 怂
+13:59 Mokou: 阿嘿颜中破
+13:59 LittleKey joined channel
+14:00 Mokou: 过去了
+14:00 varna: @请不要忘了如月
+14:00 hoxily_HIRC quit:Ping timeout: 272 seconds
+14:00 Mokou: @西湖大师
+14:01 Mokou: 塔酱见了我家舰队两眼放光
+14:01 Mokou: 当场中破小和
+14:01 Mokou: 我赌五毛斩不掉
+14:01 varna: 西湖大师成名的那帖我当时看到了
+14:02 shui joined channel
+14:02 Mokou: 4vs5
+14:02 varna: 然而一时没看懂，后来才发现他是喝大了
+14:02 varna: 第二天他发了个帖子解释
+14:02 varna: 不过其实西湖大师的贡献主要不是西湖
+14:02 Mokou: tsu爷分毫未伤
+14:02 varna: 而是每晚的福利……
+14:02 varna: ...
+14:02 Mokou: T不利骑脸怎么苏
+14:03 sismvg joined channel
+14:03 Mokou: E
+14:04 varna: 我头像
+14:04 varna: 我投降
+14:04 Mokou: 矢矧被秒
+14:04 varna: 我买岛风狗去……
+14:04 Mokou: 闭幕雷两个桶
+14:05 Mokou: 我现在在想田中心理是不是有点问题
+14:05 Mokou: 把一张图搞成这个屎样对游戏到底有什么好处
+14:06 Mokou: 一个斩杀打了快五个小时没斩掉
+14:06 sismvg: 发个新闻：吹矢健太郎老湿再婚了
+14:06 Mokou: N
+14:06 sismvg: 被NTR了也不灰心啊
+14:07 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=eb2bce11ad18972ba33a00c2d6cd7b9d/26091830e924b899923c8b3d68061d950a7bf660.jpg
+14:08 varna: 我回来了
+14:09 varna: 稻芳目前还好用
+14:09 Mokou: 总有一炮大破你
+14:09 varna: 太黑暗
+14:11 Mokou: 马上就要达成50桶斩杀失败了
+14:11 varna: 活动前我先试用着稻芳吧
+14:14 varna: 啊！十六万钢开幕爆掉了对面绫波！
+14:15 whatofor joined channel
+14:15 Mokou: 去加州
+14:17 varna: 我印象小加利福尼亚卖的战机挺差……对了你之前缴到了什么武器
+14:17 varna: Drail?
+14:18 whatofor_1 quit:Ping timeout: 272 seconds
+14:19 Mokou: Drail和Scorpion
+14:19 Mokou: 半路上被一群人拦了……
+14:20 varna: Drail感觉跟正义系列差不多，Scorpion忘了……
+14:20 varna: 不过流氓的速射炮名字都比较拉风，各种天使
+14:20 Mokou: 描述是耗能多些威力强些……
+14:20 varna: 耗能多一点点，威力强一点点，都是一点点
+14:21 FrankHB joined channel
+14:21 varna: 今天的南西有点不想做了
+14:22 Mokou: 去2-5做？
+14:22 varna: 2-5打下来怎么也得两千资源
+14:23 varna: 我做南西毕竟还是要赚一点的，不赚的话也可以不做……
+14:23 varna: 2bb2ca2cv...这是在打什么
+14:23 varna: 战舰居然还出动了伊势
+14:23 varna: 我下意识地认为这不是4-5
+14:23 Mokou: ……5-4？
+14:24 varna: 没人搬桶
+14:24 Mokou: ……
+14:24 varna: 水上打击部队也不是这么做的
+14:24 varna: 非要猜的话，我猜东方系的任务吧
+14:25 Mokou: E
+14:25 cleamoon quit:Ping timeout: 240 seconds
+14:25 varna: 1cl5dd跟那个伊势带队的拼了
+14:26 Mokou: POI小破
+14:26 Mokou: 我赌五毛门神六选一
+14:26 shui quit:Read error: Connection reset by peer
+14:27 cleamoon joined channel
+14:27 varna: 说起来，我七月和八月的门神都吃二连了
+14:27 Mokou: 我一直吃二连啊……
+14:27 varna: 我了个大槽
+14:27 Mokou: 田中祭出了杀手锏
+14:28 varna: 昼战结束，十六万钢健在，余下三大破二中破
+14:28 Mokou: “什么你居然走E？你居然还过去了？看我猫死你”
+14:28 varna: 啊，日
+14:28 varna: 这伊势太机智
+14:28 varna: 看时雨了
+14:28 varna: 啊，duang错了……
+14:29 varna: 我的水雷战队还是不够强
+14:33 Mokou: 去Magellan
+14:34 varna: 那里再往西（姑且说西）走就是腐国了
+14:34 Mokou: なるほど
+14:34 varna: 在腐国的行星能看到一个逗乐的新闻
+14:35 varna: 某公司把狗粮混在工人口粮里，被曝光
+14:35 whatofor_1 joined channel
+14:35 Mokou: ……
+14:35 varna: 曝光之后公司的某发言人指出，“反正工人们在这地方呼吸三年空气之后根本分不出来”
+14:35 Mokou: 2333333
+14:37 whatofor quit:Ping timeout: 244 seconds
+14:42 Mokou: 卡成狗
+14:42 varna: 做完日常我去试着弄点机炮
+14:45 LittleKey quit:Ping timeout: 272 seconds
+14:46 Mokou: N
+14:47 varna: ...
+14:47 Mokou: 猫
+14:47 Mokou: 猫
+14:49 Mokou: 恭喜田中获得了胜利
+14:49 Mokou: 我放弃
+14:55 whatofor joined channel
+14:57 Mokou: 我操加州这任务能做？
+14:57 Mokou: 直接被秒啊
+14:58 whatofor_1 quit:Ping timeout: 256 seconds
+14:59 varna: 什么任务
+14:59 Mokou: 去小加里福利亚半路被拦那里
+15:00 Mokou: 过场动画一结束护盾直接被三条船集火打没
+15:00 varna: 没事
+15:00 whatofor_1 joined channel
+15:00 Mokou: 然后我就死了
+15:00 varna: 电池走起，如果让你跑路点就开巡航
+15:00 Mokou: 就剩一个电池了
+15:00 varna: 挺过四秒钟就是胜利
+15:01 varna: 电池最好多买点
+15:01 varna: 我印象那里敌人似乎不会放很多巡航干扰弹
+15:02 varna: 护盾被集火打没其实会发生的，比如你从折跃门出来
+15:02 whatofor quit:Ping timeout: 240 seconds
+15:02 varna: 突然一波强人冲过来，护盾直接没了
+15:02 Mokou: ……终于解决了
+15:03 Mokou: 这次过场动画结束我直接开巡航掉头跑
+15:03 varna: 说起巡航，以后有钱了可以考虑准备一点Wasp导弹
+15:03 varna: 有时候任务会让你击杀特定目标，但是他们可能逃走
+15:04 varna: 看着人尻部发光的时候直接来一发……
+15:04 Mokou: 23333
+15:04 varna: 绿林好汉们经常干这个
+15:04 varna: 我正跑路，咣叽就中了一个
+15:05 Mokou: 网络好点了，我再试一次
+15:05 wlemuel quit:Ping timeout: 255 seconds
+15:06 Mokou: E
+15:06 Mokou: 我赌五毛转中路
+15:07 Mokou: 小和中破
+15:07 Mokou: 不转中路也是个六选一
+15:07 varna: 这把过了
+15:08 Mokou: 轮 形 怂
+15:08 Mokou: 小和拒绝放屁
+15:08 Mokou: T有利
+15:08 Mokou: 矢矧大破
+15:08 varna: ...
+15:08 varna: 太惨了
+15:09 varna: 你换一些等级更高的轻巡呢……
+15:09 Mokou: 在远征
+15:09 varna: 哦
+15:09 Mokou: 一次出击五个桶没了
+15:10 varna: 我去跑点路，看看能不能买一套Sunblast A回来
+15:10 Mokou: N
+15:11 wlemuel joined channel
+15:12 Mokou: 小和中破
+15:12 Mokou: 历史总是惊人地相似
+15:13 Mokou: 六选一补小和，可惜没中
+15:13 varna: 从德棍的第一产业闹事区跑到sigma 13...
+15:13 Mokou: ……
+15:14 Mokou: 小和放屁后POI小破
+15:14 Mokou: 六选一强行补成大破
+15:15 Mokou: 猫
+15:15 varna: 他娘的……
+15:15 varna: 一堆第一产业鬼畜来报复了
+15:15 Mokou: 夏活我放弃，我就看看十万资源能不能过了这个3-5
+15:18 sismvg quit:Read error: Connection reset by peer
+15:18 sismvg joined channel
+15:21 varna: 一堆水货重战
+15:22 Mokou: E
+15:22 Mokou: 肯定转中路
+15:22 Mokou: 这么多次都没转，这次不转不可能
+15:23 FrankHB quit:Remote host closed the connection
+15:23 Mokou: 没转
+15:23 FrankHB joined channel
+15:23 Mokou: 轮 形 怂
+15:24 Mokou: 我看看这次会是什么奇异现象
+15:25 Mokou: 并没有奇异现象
+15:25 Mokou: 那么Boss点肯定是T不利了
+15:25 Mokou: 或者是直接猫掉
+15:26 Mokou: 同航
+15:26 Mokou: 三个中破了
+15:26 sismvg: http://tieba.baidu.com/p/3372848819?pn=2
+15:27 Mokou: POI大破了
+15:27 Mokou: 闭幕雷灭掉了tsu爷
+15:27 Mokou: 不夜战了，撤退
+15:28 varna: 又来一伙第一产业强人……
+15:28 varna: 还混了几个Hessian
+15:28 Mokou: 演习
+15:29 varna: 然而一坨重战跑来跟我狗斗……
+15:29 Mokou: ……
+15:29 varna: 六七个人的火力全浪费在狗斗上了
+15:30 whatofor joined channel
+15:31 varna: 不过现在这些做没本生意的学聪明了
+15:31 varna: 不带电池……
+15:31 Mokou: ……
+15:32 varna: 看了一下，带的都是药品
+15:33 whatofor_1 quit:Ping timeout: 246 seconds
+15:33 Mokou: 演习之前换个装备猫了两次
+15:34 varna: 跑了两个星系被打劫了四次
+15:34 Mokou: 然后他们死了
+15:34 varna: 最乐的一伙人在空间站附近打劫
+15:35 Mokou: 演习白天骑脸了
+15:35 Mokou: 一点夜战猫了
+15:35 Mokou: 田中我日你妈了个臭逼
+15:36 Mokou: 日德兰
+15:37 whatofor_1 joined channel
+15:38 varna: 无视第五次打劫，直接停泊……
+15:38 Mokou: 猫
+15:39 Mokou: 我日你妈了个逼拿服务器烤鱼呢？
+15:39 varna: 我了个去
+15:39 Mokou: 猫
+15:39 varna: 这鬼地方卖Lv9的速射炮
+15:40 varna: Sunblast B, Hull/244 Shield/122 ROF/8.33 Range/600 Speed/700
+15:40 whatofor quit:Ping timeout: 255 seconds
+15:41 Guest70819 quit:Ping timeout: 240 seconds
+15:41 molikto joined channel
+15:42 Mokou: 猫
+15:42 Mokou: 猫
+15:42 varna: 出去找几个人祭祭新炮
+15:42 Mokou: 这炮去纽约打杂鱼是不是一点就爆了……
+15:43 varna: 那速射炮一炮61能量
+15:43 Mokou: ……
+15:43 varna: 重战大概还是能带动的
+15:43 Mokou: 弄六门
+15:43 MeIvan97 joined channel
+15:43 varna: 找个暗杀工作试试
+15:44 Mokou: 大和还剩六万两千经验
+15:44 Mokou: 如果第一个演习没猫的话应该还剩六万经验
+15:45 Mokou: 田中不死民愤难平
+15:49 varna: 果然利器
+15:50 varna: 又是一场一打七
+15:50 whatofor joined channel
+15:51 varna: 打完之后来了两个孝敬电池的伙计……
+15:52 Mokou: ……
+15:52 varna: 此地不可久留
+15:52 whatofor_1 quit:Ping timeout: 256 seconds
+15:52 varna: 打多了海盗的好感度麻烦
+15:58 varna: 不过这些光子爆破炮打起来就是带感……Pride of the WORKING class
+16:04 varna: 啊，似乎有不花钱就能提高海盗好感度的办法
+16:08 varna: 燃弹一户
+16:09 Mokou: Orz
+16:11 whatofor quit:Ping timeout: 246 seconds
+16:11 varna: 你攒得比我多……
+16:11 varna: 而且桶数来说，就算今天你损失惨重也比我多两百左右吧
+16:11 Mokou: 1044
+16:11 varna: 843
+16:12 Mokou: 你脸比我好
+16:12 varna: 平常打ex图我脸比你好太多，然而活动……
+16:12 Mokou: 然而我并不能斩掉冬E5……
+16:12 varna: 现在你阵容强多了
+16:13 Mokou: 然并卵
+16:13 varna: 我去试试跟海盗曲线建交一下
+16:13 varna: 白道根本混不开……
+16:13 varna: 他们穷得只剩钱
+16:13 Mokou: 2333
+16:14 Mokou: 我先去把货舱里的东西卖一下
+16:16 Mokou: 强行无视打劫的
+16:22 cleamoon quit:Ping timeout: 240 seconds
+16:23 cleamoon joined channel
+16:24 varna: LWB这帮人是推销金坷垃失败了么……
+16:25 varna: 我在德棍地方的时候天天打劫哦我
+16:25 Mokou: ……
+16:26 Mokou: 出去趟
+16:26 varna: 高日德
+16:26 varna: 全都是炸武器平台的任务……
+16:26 varna: 算了我也干
+16:29 sismvg: 显卡72度...
+16:30 sismvg: 内置风扇坏了，用电风扇吹..
+16:32 tutu_wind: ...
+16:32 tutu_wind: 玩啥游戏呢，这么热！ 还是看无码？
+16:35 varna: 我了个大槽
+16:35 varna: 算了算似乎端掉了六七个战机，不知道四个还是五个武器平台，还有一个空间站
+16:35 varna: 太蛋疼
+16:35 sismvg: 内置风扇坏了
+16:36 tutu_wind: 换一个大概90左右
+16:36 tutu_wind: 西安的价
+16:42 * sismvg 卡里还剩下50
+16:44 hoxily joined channel
+16:45 sismvg: 上海雷电预警了
+16:48 FrankHB quit:Ping timeout: 244 seconds
+16:49 hoxily_ joined channel
+16:49 biergaizi joined channel
+16:49 FrankHB joined channel
+16:50 hoxily- joined channel
+16:51 hoxily quit:Ping timeout: 272 seconds
+16:53 hoxily_ quit:Ping timeout: 272 seconds
+16:54 sismvg: http://tieba.baidu.com/p/3937246370
+16:54 sismvg: tpp交涉成功，同人不受“非亲告”影响
+16:56 FrankHB quit:Ping timeout: 260 seconds
+16:58 Mokou: http://imgsrc.baidu.com/forum/pic/item/114bd51f3a292df56e4bc312ba315c6035a87356.jpg
+17:01 varna: 新炮用来拆少数几个武器平台也不错
+17:02 varna: 然而这个曲线建交似乎要建相当长时间……
+17:02 Mokou: ……
+17:03 varna: 做了三四个歼灭Hessian的任务，海盗对我的恶感下降了一格
+17:03 Mokou: ……花钱吧
+17:03 varna: 花钱我似乎得跑到什么什么星系的自由港-9去
+17:04 varna: 还好没跟那些人交恶
+17:04 varna: 不过反正我也得升级，多弄点人头钱
+17:05 Mokou: 噗，传送门能被打坏的啊
+17:06 varna: 卧槽这厮弄了两个炮台
+17:07 beefcafe quit:Ping timeout: 250 seconds
+17:09 beefcafe joined channel
+17:10 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+17:11 varna: 有时候那些人会打tradeway...
+17:11 varna: 结果跑到一半就摔出来被打劫
+17:12 Mokou: 我进去的时候闲着没事打了几发，然后我发现我进不去了……
+17:12 varna: 23333
+17:14 varna: 现在海盗对我似乎不那么仇恨了
+17:15 varna: 虽说还是仇恨，以前拿他们刷了些炮钱……
+17:16 Mokou: 233333
+17:17 varna: 被刷得惨的还有个叫金菊花的日本女权主义组织
+17:17 varna: 因为名字太嘲讽了所以我就刷他们
+17:17 Mokou: 23333
+17:17 Mokou: 这名字
+17:17 varna: 而且他们非常高尚，乐意和你狗斗
+17:17 varna: 最后全斗死了
+17:17 Mokou: 2333
+17:17 Mokou: “看来你不懂得生命的可贵”
+17:18 hoxily_ joined channel
+17:18 varna: 有时候跑路还能听见一句口音奇异的all systems failed, looooooooosing power
+17:18 Mokou: 2333
+17:18 Mokou: 这个我听见过
+17:24 varna: http://tieba.baidu.com/p/3937407510 R18
+17:27 varna: 实验室隔壁有人在唱印度神曲《一个大JB》……
+17:28 Mokou: ……
+17:29 varna: 假期欢乐多
+17:31 varna: ……轻战机现在要去搞什么空间站了……
+17:31 varna: 这些德国条子的口味越来越重
+17:31 varna: 以土豆来比喻，就是生芽了
+17:32 tutu_wind: 舰C是全球性的游戏啊
+17:32 varna: 不是
+17:32 tutu_wind: 阿嘞
+17:32 varna: 但因为很出名所以玩家不止日本人
+17:32 tutu_wind: 喔喔，这样子啊 ～
+17:34 cleamoon_ joined channel
+17:46 cleamoon: http://video.sina.com.cn/p/news/c/v/2015-08-01/091565046561.html  谁看看
+18:15 molikto quit:Remote host closed the connection
+18:17 molikto joined channel
+18:19 molikto quit:Remote host closed the connection
+18:21 molikto joined channel
+18:28 hoxily- joined channel
+18:31 hoxily_ quit:Ping timeout: 272 seconds
+18:36 molikto quit:Remote host closed the connection
+18:49 Mokou: 到腐国了
+18:50 cleamoon_: orz
+18:50 Mokou: 这有什么好跪的……
+18:50 cleamoon_: X旗去旅游？
+18:50 Mokou: 主线跟着走就到了啊
+18:50 Mokou: Freelancer
+18:50 cleamoon_: .....
+18:50 Mokou: Freelance
+18:51 cleamoon_: 什么类的游戏
+18:51 Mokou: 星际战争
+18:51 cleamoon_: ........
+18:53 varna: cleamoon_: 大致是空战
+18:53 Mokou: 我要不要换条船呢……
+18:53 cleamoon: 太空战？
+18:53 varna: 主线到腐国之后给你些钱，可以换个战机了
+18:53 varna: cleamoon_: +, 太空的空战
+18:53 Mokou: 哪个比较好
+18:53 Mokou: Cavalier Clydesdale Piranha
+18:54 varna: Piranha不推荐
+18:54 varna: Cavalier性能平庸，我暂时也用着
+18:54 cleamoon: 太空战到腐国有什么好说的.....
+18:54 Mokou: 那我弄个Cavalier
+18:54 varna: 不急
+18:54 varna: 你现在用的是defender吧
+18:54 Mokou: 是
+18:54 Mokou: 接着用就成？
+18:54 varna: cleamoon: 只是按照各国来命名，设定是别的星系
+18:55 varna: 随意
+18:55 varna: 我个人的意见是，Cavalier唯一的优点在于我看着比defender好看
+18:55 Mokou: 装甲似乎厚不少
+18:55 varna: 仍然说过弯的话，Cavalier是1.2rad/s, Defender是1.25rad/s...
+18:56 Mokou: ……
+18:56 varna: 不过如果你要用Lv5武器，可以换
+18:56 varna: 毕竟Defender只到Lv4
+18:56 cleamoon: ......
+18:57 Mokou: 没看到Lv5的速射炮……算了
+18:57 varna: 可以试试Ripper
+18:57 varna: 那个炮在腐国做任务，我感觉还行
+18:57 whocares_2 quit:Remote host closed the connection
+18:57 varna: 正义系列毕竟火力有点那啥
+18:58 Mokou: 我手上现在有个Vengeance
+18:58 varna: 哦，复仇不错
+18:58 Mokou: 然而只有一台……
+18:58 Mokou: 应该在科罗拉多多来几台的
+18:59 varna: 如果你能挺住的话，defender其实也凑合，护盾什么的当时我没太在意（可能也没多少钱去在意）
+18:59 varna: 能用下去的机体，可以到了kusari再考虑
+18:59 varna: 轻战drake, 重战falcon都不错
+19:01 Mokou: 那我先拿着defender
+19:01 varna: 看情况吧
+19:01 varna: 毕竟剧情急转直下，往后还有恶战
+19:06 whocares_2 joined channel
+19:20 varna: 啊，突然发觉不对
+19:20 varna: 通关前根本拿不到falcon...
+19:20 varna: 替代品可以用barracuda, 初到kusari就能买
+19:27 Mokou: 了解
+19:32 varna: falcon那鬼东西不到二十六万一台，然而只有Lv8武器五个和炮塔一个
+19:32 Mokou: ……
+19:32 varna: 总觉得打到那时候还买就亏了……
+19:32 varna: 不如努力攒钱买更好的
+19:33 Mokou: 说起来这游戏能开BB吗
+19:34 varna: Mod里有bb
+19:34 varna: 我不是战舰爱好者所以没下，不过流行的几个Mod大多提供多样的战舰炮艇什么的
+19:37 Mokou: なるほど
+19:39 varna: 不过大丈夫
+19:39 varna: 即使不加mod, 后面也会强迫你体验打战舰的……
+19:39 Mokou: ……
+19:40 varna: 我们不妨称之为太空反击部队
+19:41 varna: 当然腐国还有个便利处，离海盗比较近
+19:42 varna: 路线应该是剑桥->Omega 5->Omega 41->Omicron Gamma
+19:43 varna: 总觉得腐国又被黑了
+19:44 Mokou: 23333
+19:45 Mokou: Wasp无解的？
+19:45 varna: 导弹都可以扔flare
+19:45 Mokou: flare没用啊……
+19:45 varna: 但是扔的时候最好伴随着助推和急过弯
+19:46 Mokou: Incoming Missle响起立马就中了
+19:46 varna: 不过老实说，Wasp基本没什么解法
+19:46 varna: 因为你被打的时候不是在巡航就是在开巡航，根本推不起来
+19:50 varna: 另外那东西的速度其实和比较快的能量武器差不了多少
+19:51 varna: 理想的速射炮速度750, Wasp速度700……
+19:52 Mokou: ……
+19:52 Mokou: 话说武器怎么编组？
+19:52 varna: 没有缺省热键，你需要在操作/用户界面里添加
+19:53 Mokou: 热键加了，但是所有武器全在1组……
+19:53 varna: 编队的感觉类似RTS
+19:53 varna: 你开启的武器在你要求指派编组之后会在一组上
+19:53 varna: 比如我这里是alt-1/2/3编组
+19:54 varna: 那么我选中两门炮按alt-2，就会在2组上了
+19:54 Mokou: なるほど
+19:54 varna: 现在我的做法是去掉了默认的1、2、3开火
+19:54 varna: 这三个键用来启用编组
+19:54 cleamoon quit:Ping timeout: 264 seconds
+19:54 varna: shift-1~0还是用来激活/禁用武器
+19:55 varna: 另外怀疑有点bug
+19:55 cleamoon joined channel
+19:55 varna: 编组可能会乱
+19:56 varna: 建议dock的时候切到1组
+19:56 varna: 有时候autosave和复活也会弄乱，可能也和缺省1组有关
+19:56 varna: 并不知道为什么会出这种鬼问题
+19:56 Mokou: ……
+19:56 varna: 所以起飞之后最好检查一下你的编组是对的
+19:56 varna: s/是/是不是/
+19:57 Mokou: 了解
+20:08 cleamoon: 这是航天版战舰世界？
+20:10 varna: 只是空战而已……
+20:11 cleamoon: rts？
+20:11 varna: 动作向的
+20:11 Mokou: 哈哈哈伦敦在下雨
+20:11 varna: 然而没记错的话东京也是……
+20:12 Mokou: ……
+20:17 hoxily joined channel
+20:20 cleamoon: 装win10简直一波三折... 被360糟蹋了的8.1没法自己升级到10，于是我格了重装，然后很美丽的，我的8.1序列号没法用在win10上...... 搜索无果，决定装回8.1，试试看能不能用原来的序列号，不能就只能盗版了，结果装的时候直接同步了原来的序列号，然后裸系统升级到了10.......
+20:20 varna: 真绝望
+20:20 cleamoon: 啊，freelancer看起来不错，是弹幕向还是一般飞机向？
+20:20 varna: 飞机向
+20:21 hoxily: kms-pico 很好用
+20:21 varna: 可以自己搭配武器装备，买各种飞机
+20:21 cleamoon: 大吗？
+20:21 varna: 不大，很旧的游戏了
+20:21 cleamoon: 好的，我去弄一个
+20:21 varna: 我知道freelancer是因为看了大软的攻略
+20:21 cleamoon: 还是喜欢旧游戏
+20:22 cleamoon: 新的总感觉华丽有余，诚意不足，玩完了除了眼睛疼剩不下什么
+20:22 varna: +
+20:22 varna: 新游戏里最大的代表之一就是孤岛危机系列
+20:23 varna: 看着超帅，然而谁有兴趣把单人战役玩三遍么……
+20:23 cleamoon: 然而很多dos游戏至今还有人在日常
+20:24 varna: 嘛，一代玩家有一代玩家的口味……
+20:24 varna: 很多人看着画面不新潮就没兴趣也正常
+20:25 cleamoon: 只要画面不是nethack那种就行...
+20:27 cleamoon: 我觉得一般好游戏的必要条件之一是玩的姿 势要多
+20:27 varna: +
+20:28 cleamoon: 只有一个姿 势怎么都会疲劳
+20:28 varna: 有想像力，或者有发挥余地，都行
+20:28 molikto joined channel
+20:28 varna: 不过现在制作组喜欢让大家直接对战去……
+20:28 cleamoon: 估计是姿 势多的游戏不好写
+20:29 varna: 不好设计，时间长了又容易赶不上档期……
+20:29 cleamoon: war3那种卖地图编辑器附送游戏的我觉得挺难设计的
+20:29 varna: 地图编辑器好说
+20:29 cleamoon: 那个水平的不好说
+20:29 varna: 实际上把给脚本程序员和关卡设计师的工具开放给玩家的话，还是有余地的
+20:30 varna: 然而war3的数值设计……
+20:30 cleamoon: @红警
+20:30 cleamoon: 红警的地图编辑器就是直接开放掉，一点修饰都没有，超级难上手
+20:30 varna: 倒也是
+20:30 varna: 不过像无冬之夜系列的就很好
+20:31 cleamoon: 没玩过...
+20:31 varna: 图形界面，预置对象，脚本引擎
+20:31 cleamoon: 哦
+20:31 varna: 还可以兼容玩家扩展
+20:31 varna: 各种好东西
+20:31 cleamoon: 比如，想象一下，d2加上地图/人物/技能编辑器
+20:31 varna: 那样就好多了
+20:32 cleamoon: 有一个完整的游戏机制和内容，再加上好用的编辑，这样肯定至少能卖
+20:32 molikto quit:Ping timeout: 246 seconds
+20:33 cleamoon: 连rpgmaker都卖的很好
+20:33 varna: 但是现实是喜欢玩弄mod的玩家比较少
+20:33 varna: 我接触比较多的是无冬之夜社区，他们的很多玩家，无论国内国外，有时候自己弄扩展都别扭
+20:33 Mokou: 最近的游戏用处不都是帮助硬件厂商么
+20:33 varna: modder是少数
+20:33 varna: 红旗正解
+20:33 varna: 卖核弹嘛……
+20:33 cleamoon: modder不重要，但是modder做出来的东西大家都能玩
+20:34 Mokou: 不然普通用户谁闲着没事换硬件……
+20:34 cleamoon: 最早war3的编辑器我记得地图是没锁的，别人的地图下来玩，哪里不满意直接改
+20:34 varna: 不过也有商业化的问题
+20:35 varna: 有些游戏的官方mod确实有加密
+20:35 varna: 防止修改后再分发射么的
+20:35 cleamoon: 就好像真能阻止似的
+20:36 cleamoon: 管得了的地方一封律师信就完事，管不了的地方本身做什么也管不了
+20:36 varna: 省点办公成本
+20:36 varna: 至少这样减少了付出办公成本的可能
+20:36 cleamoon: 减少收入
+20:36 varna: 当然被人爆破了之后再分发，技不如人认栽吧
+20:37 cleamoon: 老滚5就是好例子
+20:38 varna: 老滚都被玩坏得突破天际了，不过至少有一个好处
+20:38 varna: 我没见到老滚有扶她R18模型
+20:38 cleamoon: 就连超级玛丽如果开放关卡编辑器(如果做得到)，都能玩很久
+20:38 cleamoon: .......
+20:39 cleamoon: 我还没玩老滚，只知道卖的不错
+20:39 varna: 我也没玩，不过我确实没见到扶她
+20:39 cleamoon: R18的程度高吗？还是暗夜精灵级别的
+20:39 varna: 然而nwvault（现在部分搬到了neverwinter vault）上确实有
+20:39 varna: 直接做出器官是毫无疑问的R18吧……
+20:40 varna: 我本来就是翻翻模型列表找几个好看装备，结果看到什么fetish就点进去了
+20:40 varna: 然后就是扶她
+20:40 varna: 相当目害
+20:40 cleamoon: 扶她也有好的，虽然大部分略猎奇
+20:41 cleamoon: R18也有能不能撸的区别...
+20:41 varna: 日本的还行，欧美的只是奇美拉
+20:41 varna: 他们就是把器官不加修饰地放到一起，还做了好几个版本
+20:41 varna: 比如茶叶棒竖起来的和歪下去的
+20:41 varna: 还有打环的和没打环的……
+20:41 cleamoon: .......男人的谁要
+20:42 cleamoon: 满城都是裸妹子才是王道
+20:42 varna: 鬼知道
+20:42 varna: 还有人做了一套男女啪啪啪的动作
+20:42 varna: 本来有个demo, 结果下载跪了
+20:42 cleamoon: .......
+20:43 varna: 我手贱给他写了个demo模组……
+20:43 cleamoon: ...............
+20:43 varna: 然后就把那东西扔了
+20:45 cleamoon: 姿 势最多，最难玩，玩上就容易上瘾的游戏应该是c艹了...
+20:45 varna: C艹的好处是与人逗其乐无穷……
+20:45 varna: 我不是在黑用户（迫真）
+20:46 varna: 但是娱乐向我觉得还是Perl最好
+20:46 cleamoon: 多人线上线下APRG，真人模式，可以氪金还能挣钱，完全创造模式，逼格极高
+20:47 cleamoon: 娱乐向就拿prolog刷euler project
+20:48 varna: euler...
+20:48 cleamoon: 估计每年能完成一题
+20:53 cleamoon: 我没仔细研究过引擎，不过现在自己撸一个3D游戏引擎的难度基本已经达到自己撸os的水平了吧
+20:53 varna: 我觉得不至于吧
+20:54 varna: 一个能用的3D引擎demo比一个能用的OS demo简单一些——就我学过的一点图形学来看
+20:54 cleamoon: 不是能用的，是新的虚幻和新的win比
+20:54 varna: 哦，那后者复杂太多了
+20:56 cleamoon: 真的？
+20:56 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=623b66b4d758ccbf1bbcb53229d9bcd4/ea192559252dd42af9d1cead053b5bb5c8eab894.jpg http://imgsrc.baidu.com/forum/w%3D580/sign=8c4383070c55b3199cf9827d73a88286/34109854564e9258f28949e89a82d158ccbf4e2e.jpg
+20:56 varna: ^ 巨型食人鱼
+20:56 varna: 这是我的观点
+20:56 cleamoon: 不知道能不能吃
+20:57 cleamoon: 感觉win需要的东西其实很少...
+20:57 varna: 其实挺多的
+20:58 varna: 尤其当你考虑多处理器的时候，事情就更多了
+20:58 varna: 当然基础设施也是……比如内核用的allocator啊，或者上面的crt啊，loader啊
+20:58 varna: windows应该还有些LPC
+20:58 varna: 然后就是大波驱动
+20:58 varna: 虽说驱动不是责任，但至少得有内核固件……
+20:59 cleamoon: 哦，win还有多处理器的版本...
+20:59 cleamoon: 那么新的linux呢
+20:59 varna: 去掉LPC
+20:59 varna: 把crt换成libc...
+21:00 varna: 然后扩大多处理器的允许数目
+21:00 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=ebb4ef659e22720e7bcee2f24bcb0a3a/a3624ab30f2442a73b70b7a2d743ad4bd113026a.jpg 欠雪尺
+21:00 varna: 实际上我们可以从一个现象来推断谁更麻烦
+21:00 varna: LKML一天的邮件量单位是百
+21:00 varna: 各种patch讨论
+21:01 varna: 不对，这画风我好熟悉
+21:01 varna: 画尺子的是不是眼镜那位今勇二提督……
+21:02 Mokou: 乎是
+21:02 Mokou: 似乎是
+21:02 Mokou: 昨天我也感觉很熟悉……
+21:02 cleamoon: 噗
+21:02 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=b11365fa7d899e51788e3a1c72a6d990/4bf5e2efce1b9d1679132c66f5deb48f8d546490.jpg C88
+21:02 varna: 继丝妲琳和伟大而无慈悲的平壤镇守府之后……
+21:02 cleamoon: 噗
+21:02 cleamoon: 人做死就会死
+21:02 hoxily quit:Quit: Leaving
+21:03 varna: 作者是日本人，死不了的
+21:03 varna: 而且还专门在“毛”上面注明了MAO（读出来就是魔王）
+21:04 Mokou: 少个长音……
+21:04 varna: 用力读
+21:04 varna: 果然这作者和〇会主义有仇
+21:04 Mokou: 打完3-5以后没力气用了
+21:05 cleamoon: 噗
+21:05 Mokou: 才发现我还剩一个演习没打……
+21:05 Mokou: 1BB2BBV2CA1CL
+21:05 Mokou: 这是打哪
+21:05 cleamoon: 魔王时期是〇惨主义吧
+21:06 Mokou: 共产主义已经实现了！？
+21:06 cleamoon: 对了，都说英无3最好玩，不玩1和2能玩懂吗？
+21:07 varna: 我觉得每一代都算独立吧，如果只说系统
+21:07 cleamoon: 连共惨都没实现
+21:07 varna: 当然即使你突入故事也没关系
+21:07 cleamoon: 剧情没大影响就行
+21:07 varna: 虽然知道了前代的故事会更有趣一点
+21:07 varna: 但战役不会出现奇怪的让新玩家看不懂的东西
+21:08 Mokou: 铃谷强行抢MVP
+21:08 varna: 1bb2bbv2ca1cl?
+21:08 cleamoon: war3这种就行，知道人兽干过，其他的不很影响
+21:08 varna: 是不是水反
+21:08 varna: 哦，那没问题
+21:08 Mokou: ……有可能
+21:08 Mokou: 真可怜
+21:08 varna: 说错了
+21:08 varna: 水打5-1
+21:08 Mokou: 总之做了两个小时还没做完
+21:08 cleamoon: 正在搜集老游戏
+21:08 varna: 正常
+21:08 Mokou: 惨
+21:08 varna: 5-1出门有一半可能单纵鱼
+21:08 varna: 然后还可能掉沟
+21:08 Mokou: 所以我真怀疑田中心理有点问题
+21:09 varna: 日本游戏的难处很多都很变态
+21:09 varna: 他们的玩家习惯了，然而玩习惯美国游戏的玩家可不那么中意……
+21:10 cleamoon: @超级马里奥兄弟2
+21:11 Mokou: 毛子游戏的难度则在于还原历史？
+21:12 Mokou: 不过我听说最近版本的wows好些了
+21:12 varna: 毛子游戏的难度有二
+21:12 varna: 第一，去当兵很难
+21:12 Mokou: 对肛基本没人肛得过BB
+21:12 varna: 第二，喝防冻液很难
+21:12 Mokou: 23333
+21:12 tutu_wind: 2333
+21:12 varna: SerB似乎有个儿子愤而去当兵了
+21:12 Mokou: ……
+21:12 Mokou: 毛子的军队里不是各种SM么
+21:14 varna: 我就知道爆艹小浣熊被咬掉甲标
+21:14 Mokou: 之前那位骂人的方丈居然没说是被盗号
+21:14 biergaizi quit:Quit: Konversation terminated!
+21:14 cleamoon: 噗
+21:15 Mokou: “你们能骂我，我们和尚就不能还几句嘴？”
+21:15 varna: 那位方丈不是承认自己在骂仗么
+21:15 varna: 然而和尚确实不能骂脏话还嘴吧……
+21:15 Mokou: 他表示自己是在向广大网民传授一些人生的经验
+21:15 varna: 他可能可以放一个自己吃兰州烧饼的图，不过大概也不算得有道……
+21:16 varna: 今天他不是作为一个和尚，而是作为一个长者
+21:16 Mokou: http://weibo.com/p/1001603870391541089455
+21:16 varna: 我觉得他这么说就跟少林寺撇开一点距离了
+21:16 Mokou: 2333
+21:16 varna: 然而离中南海不知为何近了一点
+21:17 varna: 另外他骂人该参考庄圆大师
+21:17 varna: 修身养“性” 23333
+21:17 Mokou: 23333
+21:18 Mokou: 上午203名下午就994名了
+21:18 Mokou: 幌筵太可怕
+21:18 varna: 958
+21:19 Mokou: ……
+21:19 varna: 元帅区都差不多
+21:19 Mokou: 你们那五百线现在是多少
+21:19 varna: 263
+21:19 Mokou: 281
+21:19 varna: 差了18点继承啊
+21:19 Mokou: 太可怕
+21:19 varna: 也不少了
+21:19 cleamoon: 我感觉网 评 员简直是新时代的红 卫 兵
+21:20 cleamoon: 还能拿工资的
+21:21 cleamoon: 为珠峰所用的暴 民
+21:21 varna: @油豆滑跌小地狱
+21:22 varna: 噗，又是五个武器平台
+21:22 varna: 这些劫匪哪来那么多资金……
+21:23 cleamoon: 油豆滑跌小地狱是什么
+21:23 varna: 鲁迅梗
+21:23 varna: 《智识即罪恶》，似乎是这名字
+21:23 Mokou: 我查查
+21:23 Mokou: 这个我没印象……
+21:24 cleamoon: http://www.zhihu.com/question/27284451  答案很乐
+21:24 Mokou: 哦，热风啊
+21:24 Mokou: 怪不得我没读过
+21:25 cleamoon: 杂文粪太多，没法看
+21:25 Mokou: 连北方都做完了
+21:26 Mokou: 这周是不是肝得太莉害了
+21:27 varna: 肝败下风
+21:27 cleamoon: 肝败下风
+21:27 cleamoon: 虽然我也做完了
+21:27 cleamoon: 刷3-5时做的...
+21:30 varna: 我了个去
+21:30 varna: 整整五个武器平台在用导弹轰我
+21:30 varna: 还好都是些烂货
+21:30 varna: 不然早轰死了……
+21:31 Mokou: 黑反智主义啊
+21:31 varna: 那时候给年轻人的良药估计就跟现在教大家学程序的大牛一样五花八门
+21:32 Mokou: 来，干了这碗鸡汤
+21:32 varna: 把汤去了
+21:32 cleamoon: 五花八门没关系，因为良药不像科学一样有绝对的对错
+21:32 cleamoon: 那就是干了这只鸡了
+21:33 varna: 现在我似乎偶尔能捡到敌人一个鼻子……
+21:35 Mokou: ……
+21:36 varna: 他们有个炮塔，偶尔掉下来
+21:36 varna: Natter系列，Lv6
+21:38 biergaizi joined channel
+21:41 Mokou: 啊，深海指挥官的ID被永封了
+21:41 varna: 噗？
+21:41 Mokou: http://tieba.baidu.com/p/3937525676
+21:43 varna: 擦边球毕竟也是作死
+21:43 Mokou: 他的擦边球比较少
+21:44 varna: ...
+21:44 Mokou: 你懂得
+21:44 Mokou: 所以我说他是中二
+21:44 varna: 似懂非懂，不过我就不深究了……
+21:45 Mokou: 曾经有两个不同的人在谈论到他时跟我说“你别打扰他，他可是优秀的政治评论家，以后长大了要去参政呢”
+21:45 Mokou: 这是他的特色
+21:45 varna: ...
+21:45 varna: 何必呢……
+21:45 Mokou: 而且那两人跟他跟我关系都很不错
+21:46 Mokou: 其实我觉得他的问题就在于他中二得太标准
+21:46 varna: 但是怎么算不标准呢
+21:46 cleamoon: 噗
+21:46 Mokou: 一瓶子不满
+21:47 Mokou: 前天他在贴吧问我要不要考虑给兵棋里来个H45
+21:47 cleamoon: 一瓶子不满不是中二标准状态吗
+21:47 Mokou: 是啊
+21:47 Mokou: 我说他一瓶子不满
+21:47 Mokou: 可怕的是他不自觉
+21:47 Mokou: 啥事都要评论一下，来表示自己早已看穿了一切
+21:48 varna: 大批德棍以增援之名行扰我狗斗之实……
+21:48 Mokou: ……
+21:48 varna: 我看到那个细溜溜的绿光就觉得不对
+21:48 Mokou: 把H45搬过去
+21:48 Mokou: 说起来那里面有没有俾斯麦号战列舰
+21:48 varna: 果然大批德棍来围殴两个敌机
+21:48 cleamoon: 那只是表示自己是沼跃鱼
+21:48 varna: 没有俾斯麦，但有胡德
+21:48 Mokou: ……
+21:48 varna: 你会见到的，主线里有
+21:48 Mokou: 因为加了俾斯麦就不能有胡德了么
+21:48 varna: 胡德那个星系里还有Essex
+21:48 Mokou: 噗
+21:49 Mokou: 饺子怎么被老绅士拐走了
+21:49 Mokou: 而且为什么不叫光辉，多好听
+21:50 MeIvan97 quit:Ping timeout: 240 seconds
+21:51 varna: 我了个大槽
+21:51 varna: 一个好好的暗杀任务给这堆德棍搞成烟花大会……
+21:52 Mokou: ……
+21:52 Mokou: http://tieba.baidu.com/p/3938034046
+21:53 varna: 祝他们吃一辈子土豆
+21:53 Mokou: 我操
+21:53 Mokou: 田中你还我第一次演习
+21:53 Mokou: 你还我第一次演习
+21:53 Mokou: 【幌筵泊地サーバ所属の提督の皆さんへ】 本日夕刻より【幌筵泊地サーバ】への負荷が一部極端に高くなっています。現在状況の確認と同対策を進めています。ご迷惑お掛けして申し訳ありません。予断は許しませんが、徐々に接続環境は安定してまいります。
+21:54 varna: 幌筵爆炸了啊
+21:54 Mokou: 【幌筵泊地サーバ所属の提督の皆さんへ】 本日夕刻より【幌筵泊地サーバ】への負荷が一部極端に高くなっていましたが、現在同対策は完了致しました。お手数をお掛けして申し訳ありません。接続が不安定な場合は、お使いのブラウザのキャッシュを削除して、再接続して頂けますと幸いです。
+21:54 Mokou: 五小时前
+21:54 Mokou: 我说我怎么猫得那么狂
+21:54 MeIvan97 joined channel
+21:54 Mokou: 猫掉三次3-5一次演习
+21:54 varna: 还真是烤鱼了
+21:54 Mokou: 会不会写程序啊
+21:54 Mokou: 不会写把Izumo搬过去，我不要你钱
+21:55 varna: 我总觉得是运维的锅
+21:55 varna: 从佐伯湾开服以来，他们就成天弄负载均衡，但经验估计又不那么足
+21:55 Mokou: ……
+21:56 Mokou: 丢给大咪咪多好
+21:56 varna: 大咪咪估计更做不了
+21:56 Mokou: 买ngx plus
+21:56 varna: 日本其他的页游有这样的用户数么……
+21:56 Mokou: 找淘宝
+21:56 varna: 舰C到现在，DAU即使只说三成也有九十万吧
+21:56 Mokou: 淘宝的用户数绝对比舰C多……
+21:56 varna: 虽说并发量未必那么大
+21:56 varna: +
+21:57 varna: 所以说不定对他们来说也是摸着狗头过河的事情
+21:57 Mokou: 这么一说，天朝网站的运维似乎压力尤其大啊
+21:57 varna: 门户倒不至于
+21:58 varna: 不过不是有个嘲讽马云的段子么
+21:58 varna: 一个成功的男人背后有一个坚强的女人，马云的背后有千万个败家娘们……
+21:58 Mokou: 23333
+21:58 varna: 另一个嘲讽马云的段子是把丛云改二P成半人马
+21:58 varna: 称为马云
+21:59 Mokou: 2333
+21:59 cleamoon: 噗
+21:59 cleamoon: 千万个败家娘们是什么梗
+22:00 Mokou: 不过舰C这种似乎直接用ngx弄个七层负载均衡就可以？
+22:00 Mokou: 四层有必要吗
+22:00 varna: 不知道
+22:00 varna: 我现在仍然觉得舰C的服务器是确实没做虚拟化的
+22:00 Mokou: 我怀疑后端是php
+22:00 cleamoon: 写个程序渣渣，但是好玩的游戏，然后说谁能给我改好我就给谁设成rmb玩家
+22:01 Mokou: 理由：你看响应头
+22:01 Mokou: X-Powered-By:PHP/5.3.3
+22:01 varna: ...
+22:01 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=11f7f3eaa5cc7cd9fa2d34d1093a203f/5fdf8db1cb134954b47b0063504e9258d1094a54.jpg 注意20位
+22:01 Mokou: 我怎么有一种不祥的感觉
+22:01 varna: 新子憧可以理解
+22:01 varna: 妮可也正常
+22:01 Mokou: php挂前面，所有状态存储全扔给mysql
+22:02 varna: 九条可怜是被害
+22:02 Mokou: 真这么来就莉害了
+22:02 varna: 金刚顺带被害
+22:02 varna: 然而欠雪……
+22:02 varna: Mokou: 我突然觉得你的猜想是有可能的……
+22:02 Mokou: 是吧……
+22:03 cleamoon: 对了，长 者 续 命还在吗
+22:03 Mokou: 早就被续了
+22:03 Mokou: 暴力膜蛤不可取
+22:04 varna: 膜蛤也要按照……
+22:04 varna quit:Quit: leaving
+22:04 Mokou: 然后羊驼子被续了
+22:06 cleamoon: 23333
+22:08 Mokou: 噗
+22:08 Mokou: Server:Apache
+22:08 Mokou: 别告诉我他前端没挂ngx……
+22:08 cleamoon: 有可能的
+22:08 Mokou: 羊驼子：“光看欠雪援交，差点没出去……”
+22:09 cleamoon: ..........
+22:09 cleamoon: 没出去就撸一晚呗
+22:11 Mokou: 我倒是希望他们只是写了个proxy_pass_header Server
+22:11 Mokou: 真要把Apache扔前面……
+22:12 cleamoon: 下限是很多的，能用就行了
+22:20 Mokou: 完了
+22:20 Mokou: 我试探了下，前端真是Apache
+22:22 cleamoon: 2333333
+22:22 beefcafe quit:Ping timeout: 250 seconds
+22:22 Mokou: 这是2015年啊……
+22:23 beefcafe joined channel
+22:24 cleamoon: 喜闻乐见
+22:25 cleamoon: 2510年都能用apache
+22:40 molikto joined channel
+22:47 tutu_wind: 欠雪 。？
+23:06 molikto quit:Remote host closed the connection
+23:12 molikto joined channel
+23:31 biergaizi quit:Remote host closed the connection
+23:32 biergaizi joined channel
+23:54 cleamoon_ quit:Ping timeout: 246 seconds

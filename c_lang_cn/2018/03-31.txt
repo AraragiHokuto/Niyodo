@@ -1,0 +1,177 @@
+00:02 hanjian_l: 狙击枪还是scarh用着有感觉
+00:02 hanjian_l: 射速杀伤都比较平衡
+00:03 hanjian_l: 得到一把奇特 艾尔
+00:06 varna: 女武神套组的smg9
+00:22 varna quit:Ping timeout: 268 seconds
+00:29 cleamoon_ joined channel
+00:46 cirno_ quit:Quit: WeeChat 2.1
+01:23 jingjinghack quit:Remote host closed the connection
+01:24 jingjinghack joined channel
+02:06 lh_mouse quit:Ping timeout: 264 seconds
+02:51 yonka joined channel
+02:56 yonka quit:Ping timeout: 268 seconds
+04:56 xuri joined channel
+04:56 xuri quit:Remote host closed the connection
+05:41 yonka joined channel
+05:46 yonka quit:Ping timeout: 268 seconds
+07:48 cc joined channel
+07:51 iyzsong-m joined channel
+07:59 iyzsong-m quit:Ping timeout: 276 seconds
+08:02 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+09:47 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:02 cirno_ joined channel
+10:25 zcdy joined channel
+10:32 iyzsong-m joined channel
+10:41 iyzsong-m: (￣ー￣)
+11:00 NebulaMoe quit:Quit: leaving
+12:08 iyzsong-m: (*ﾟ∀ﾟ)
+12:21 condy: ~\(≧▽≦)/~
+12:22 iyzsong-m: (´д⊂)‥ﾊｩ
+12:23 condy: _( •́ ​ω •̀ 」∠)/_
+12:24 iyzsong-m: 你的小姐姐呢？
+12:25 condy: iyzsong-m: 哪里有小姐姐
+12:26 iyzsong-m: ٩(๑òωó๑)۶
+12:42 cc joined channel
+13:31 cirno_ quit:Ping timeout: 268 seconds
+13:37 cirno_ joined channel
+13:54 varna joined channel
+14:09 iyzsong-m quit:Ping timeout: 276 seconds
+14:10 cirno_ quit:Remote host closed the connection
+14:11 cirno_ joined channel
+14:27 matchray: 不知道怎么招租。。
+14:27 matchray: 同租的人要搬出去了
+14:27 matchray: 需要找接盘的
+14:28 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+14:37 cleamoon_ quit:Quit: Connection closed for inactivity
+14:50 hanjian_l:  varna svd设计图，没得卖了。。。
+14:58 hanjian_l: varna: pvp？
+14:58 hanjian_l: ds3
+14:59 varna: 懒得
+14:59 varna: ps4上的翻滚延迟能差出可辨别的帧数
+14:59 varna: 没什么玩头
+15:00 hanjian_l: .
+15:00 hanjian_l: 我觉得我翻车的原因是小姐姐太吃藕了
+15:00 matchray: fork了https://github.com/MaskRay/ccls
+15:10 varna: 掉帧掉得反应和判定总是差出去一两帧
+15:10 varna: 太难受
+15:19 varna: 古达子偷懒了，直接弹死
+15:43 varna quit:Ping timeout: 240 seconds
+15:49 varna joined channel
+15:57 lh_mouse joined channel
+16:28 lxinyu joined channel
+16:30 lxinyu quit:Client Quit
+16:45 iyzsong-m joined channel
+16:46 lh_ideapad joined channel
+16:47 cirno_ quit:Remote host closed the connection
+17:02 lh_ideapad: geordi, -c int a[][];
+17:02 geordi: error: declaration of 'a' as multidimensional array must have bounds for all dimensions except the first
+17:02 lh_ideapad: geordi, -c int (*a)[];
+17:02 geordi: Success
+17:02 lh_ideapad: geordi, -c int (*a)[]; void foo(){ ++a; }
+17:02 geordi: error: cannot increment a pointer to incomplete type 'int []'
+17:02 lh_ideapad: geordi, -c int (&a)[];
+17:02 geordi: error: 'a' declared as reference but not initialized
+17:03 lh_ideapad: geordi, -c extern int (&a)[];
+17:03 geordi: Success
+17:18 iyzsong-m quit:Ping timeout: 264 seconds
+17:30 lh_ideapad quit:Ping timeout: 264 seconds
+17:43 lh_ideapad joined channel
+18:08 lh_ideapad: geordi, { int i = 42; ++i++; cout <<i; }
+18:08 geordi: error: lvalue required as increment operand
+18:08 lh_ideapad: geordi, { int i = 42; ++(i++); cout <<i; }
+18:08 geordi: Same error.
+18:08 lh_ideapad: geordi, { int i = 42; (++i)++; cout <<i; }
+18:08 geordi: 44
+18:38 hanjian_l: varna: 怎么刷凤凰点啊
+18:56 b6017b9d joined channel
+19:01 lh_ideapad: 您查询的IP:125.120.173.10
+19:01 lh_ideapad: 本站数据：浙江省杭州市 电信
+19:03 b6017b9d quit:Quit: Leaving
+19:04 b6017b9d joined channel
+19:06 cc joined channel
+19:06 b6017b9d quit:Client Quit
+19:07 b6017b9d joined channel
+19:09 varna: hanjian_l: HVT 挑战
+19:24 iyzsong-m joined channel
+19:34 lh_ideapad quit:Remote host closed the connection
+19:35 hanjian_l: 目标情报不好拿啊
+19:35 lh_ideapad joined channel
+19:36 varna: 搜杀/暗区/路人
+19:36 varna: 就当散步
+19:36 varna: 当然最好刷的日常还是迫真太太活动中心
+19:45 lh_ideapad: geordi, << value;  enum Value : unsigned { value = 42 };
+19:45 geordi: 42
+19:49 lh_ideapad: geordi, { int a = 4, b = 6; a += a + b += b; cout <<a, b; }
+19:49 geordi: error: lvalue required as left operand of assignment
+19:49 lh_ideapad: geordi, { int a = 4, b = 6; a += a + (b += b); cout <<a, b; }
+19:49 geordi: 20, 12
+19:50 varna quit:Ping timeout: 240 seconds
+19:53 varna joined channel
+19:54 iyzsong-m: (´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)
+20:07 varna: (｡･ω･)ﾉ 曩莫加特林菩萨 六根清净贫铀弹 一息三千六百转 灭尽灭相度世人
+20:22 varna: https://www.bilibili.com/video/av18411544 野兽先辈·修罗道至高天说
+20:23 varna: 一 转 攻 势 即 刻 流 出 神 座 爆 破 欢 喜 学 习 不 可 避
+20:23 lh_ideapad quit:Remote host closed the connection
+20:36 cleamoon_ joined channel
+20:37 hanjian_l: varna: mg5图纸还是ak图纸
+20:38 varna: 实用就mg5吧
+20:38 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+20:46 cleamoon_: 玩了euphoria之后，我发现我作为绅士还是图样图森破了，还是踏踏实实做个正直之士吧
+20:51 Dove joined channel
+20:55 iyzsong-m: (・へ・)
+20:55 CyrusYzGTt joined channel
+21:02 iyzsong-m: Σ(ﾟДﾟ)
+21:03 hanjian_l: varna: MG5基本上可以照着冲锋枪的思路拿属性吧
+21:03 hanjian_l: 高射速低后座机枪
+21:03 hanjian_l: 横向散步小，易于压枪
+21:04 varna: 不踏实，机枪pve思路足够了
+21:04 varna: smg一般pvp
+21:06 lh_mouse: 双击查看原图双击查看原图双击查看原图双击查看原图
+21:06 lh_mouse: 双击查看原图双击查看原图双击查看原图
+21:06 lh_mouse: 双击查看原图双击查看原图双击查看原图
+21:06 lh_mouse: 双击查看原图双击查看原图
+21:06 hanjian_l: 这次好像还有AUG冲锋枪设计图，不过不是256的
+21:06 lh_mouse: cnmb
+21:06 lh_cat joined channel
+21:07 lh_cat:  👇👇👇😡
+21:07 lh_cat: 👆👆😡
+21:07 lh_cat: 👈👇😡
+21:07 lh_cat: 🍚😁
+21:08 varna: pve强力党反正就破甲精英伤爆头爆伤
+21:08 varna: 其他讲究了没用
+21:09 lh_mouse: 表达式计算，两天，毫无头绪。
+21:09 lh_mouse: syntax 改来改去。
+21:09 lh_mouse: https://github.com/lhmouse/asteria/commits/master
+21:10 lh_mouse: 直到刚刚发现 ternary operator 的优先级比 assignment operator 低。
+21:10 lh_mouse: 于是 assignment 被从 infix 里拆出来了。
+21:14 hanjian_l: varna: 爆伤有时候不如10米/好用
+21:15 hanjian_l: varna: 搞到一把碳纤维700，抵肩瞄准有没有用?
+21:18 varna: 没用
+21:18 hanjian_l: 看来又是一把废了的大拴
+21:18 hanjian_l: 不过大栓太难搞了
+21:19 hanjian_l: 只有碳纤维m700的配件是最全的
+21:28 Dove quit:Read error: Connection reset by peer
+21:35 b6017b9d quit:Remote host closed the connection
+21:35 b6017b9d joined channel
+22:02 b6017b9d quit:Quit: Leaving
+22:02 b6017b9d joined channel
+22:15 hanjian_l: Tf的工具看起来似乎并不那么“直观”
+22:26 varna: _(:з」∠)_好想啪小姐姐啊
+22:27 FrankHB: 什么婊达式计算。
+22:27 varna: 口支搞了个强行三型的文法
+22:27 varna: （迫真
+22:28 lh_mouse: FrankHB, 
+22:28 lh_mouse: https://github.com/lhmouse/asteria/blob/master/src/expression.hpp
+22:29 lh_mouse: https://github.com/lhmouse/asteria/blob/master/doc/syntax.txt#L103   重新整理了一番。  移除 += -= 等等的定义，这样这些都是可以复用 infix operator 的。
+22:30 lh_mouse: 整理成单独的类型。
+22:31 lh_mouse: 结合性  postfix > prefix > infix > ternary > assignment 。
+22:31 lh_mouse: 没有 comma expression 。
+22:35 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+22:38 lh_mouse quit:Read error: Connection reset by peer
+22:39 FrankHB: aji infix
+22:40 FrankHB: $def! $sequence ($lambda (cenv) ($lambda #ignore $vaue cenv body env $if (null? body) inert (eval (cons $aux body) env)) ($set! cenv $aux $vaue (weaken-environment cenv) (head .tail) env $if (null? tail) (eval head env) (($vau (t) e ($lambda #ignore (eval t e)) (eval head env)) (eval (cons $aux tail) env)))) (make-environment (() get-current-environment));
+22:40 FrankHB: mmp，分号实现还有bug……
+23:16 lh_cat quit:Quit: Connection closed for inactivity
+23:19 cc joined channel
+23:46 aebe2ba4 joined channel
+23:51 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…

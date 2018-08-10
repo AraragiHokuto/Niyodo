@@ -1,0 +1,284 @@
+00:02 lh_mouse: https://github.com/lhmouse/lhmouse.github.io/blob/master/README.md  这个是 GitHub 的。
+00:03 lh_mouse: 另外一种写法应该也可以：   # Pleasee visit (my website)[http://github.lhmouse.com/].
+00:03 lh_mouse: 方括号和圆括号写反了……
+00:04 cleamoooon: 小耗竟然记得MD的语法...
+00:04 lh_mouse: ？
+00:04 lh_mouse: 写得多了自然就记住了。
+00:04 cleamoooon: 我记得你不是不用MD吗
+00:05 lh_mouse: 写邮件时候还是会照搬一些。
+00:05 lh_mouse: 后来发现纯文本山寨 MD 不如直接用 MD。
+00:06 ShiinaMashiro joined channel
+00:06 lh_mouse: 解析器难写就难写吧，关ヲ屁事。
+00:06 lh_mouse: 于是ヲ就念了两首诗。
+00:24 B005ter: 我现在去看看，都快被逼着写 table 了……
+00:30 xhe quit:Quit: leaving
+00:36 lh_mouse: geordi, { T t = T(); } struct T { T() = default; T(const T &) = delete; }
+00:36 geordi: error: expected ';' after struct definition (fix known)
+00:36 lh_mouse: geordi, { T t = T(); } struct T { T() = default; T(const T &) = delete; }
+00:36 geordi: Same error.
+00:36 lh_mouse: geordi, { T t = T(); } struct T { T() = default; T(const T &) = delete; };
+00:36 geordi: <no output>
+00:36 lh_mouse: geordi, --2014 { T t = T(); } struct T { T() = default; T(const T &) = delete; };
+00:36 geordi: error: use of deleted function 'T::T(const T&)'
+00:37 lh_mouse: geordi, --clang { T t = T(); } struct T { T() = default; T(const T &) = delete; };
+00:37 geordi: <no output>
+00:37 lh_mouse: geordi, --clang --2014 { T t = T(); } struct T { T() = default; T(const T &) = delete; };
+00:37 geordi: error: call to deleted constructor of 'T'
+00:57 lh_mouse quit:Ping timeout: 255 seconds
+01:13 B005ter: @lh_mouse
+01:13 B005ter: 不好意思打扰了
+01:13 B005ter: 看到你 GitHub 都是外部跳转
+01:13 B005ter: 我做的是同页面跳转
+01:14 B005ter: 这种情况下，我用的 html <a href=> 标签
+01:15 B005ter: 对应的就需要 <div id=>定义一下
+01:15 B005ter: 我目前才去就是才标题上面做一行空行…… 放 div id……
+01:15 B005ter: 不影响 markdown 的标题格式 ## xxxx
+01:16 B005ter: 不知道是否可以优化
+01:20 cleamoooon: 小耗都下了...
+01:22 B005ter: 怪不得，我在研究研究 ：D
+01:31 B005ter quit:Remote host closed the connection
+01:54 Mokou quit:Remote host closed the connection
+02:09 cleamoooon quit:Ping timeout: 240 seconds
+02:15 xxxxxxxx quit:Quit: Leaving...
+02:16 B005ter joined channel
+02:21 ShiinaMashiro quit:Quit: Connection closed for inactivity
+02:44 zwindl joined channel
+04:39 cleamoon joined channel
+04:50 B005ter quit:Remote host closed the connection
+05:06 zwindl quit:Quit: Connection closed for inactivity
+05:13 B005ter joined channel
+06:05 hope1_ joined channel
+06:07 hope1 quit:Ping timeout: 258 seconds
+06:34 hope1_ quit:Ping timeout: 248 seconds
+06:40 cleamoon quit:Remote host closed the connection
+07:10 cleamoon joined channel
+07:27 hope1 joined channel
+07:32 hope1 quit:Ping timeout: 240 seconds
+08:08 Youmu quit:Quit: Connection closed for inactivity
+09:17 iyzsong-w joined channel
+09:28 B005ter: 各位，早上好。 关于 “html 包裹 markdown” 和 “在 markdown 直接使用 html <img src>” 进行导入图片并调整大小均无效。 再不利用 css 的前提下还有什么办法么？
+09:28 B005ter: 我可以给大家我试验的几种代码 和 实际显示效果。
+09:28 B005ter: 在本地测试的时候，显示正常，部署到 GitHub Page 就不行了。 图片可以成功打入，但是不能限制大小。
+09:32 B005ter: 居中也看不出来，反正缩放是一定无效的……
+09:37 iyzsong-w: o.o
+09:40 B005ter: 我正在详细的描述~ 稍后发出来想起版本
+09:43 Youmu_ joined channel
+09:51 B005ter: 我重新描述
+09:51 B005ter: ---
+09:51 B005ter: 各位，由谁在用 Markdown 写博客，有个关于自定义图片尺寸的问题请教。
+09:51 B005ter: 由于 Markdown 不支持图片尺寸调整，故欲借助 html 实现。
+09:51 B005ter: 但尝试若干方法无果。
+09:52 B005ter: #1
+09:52 B005ter: <center> ![Pic](https://**) </center>
+09:52 B005ter: 实际显示效果：
+09:52 B005ter: ![Pic](https://**) （代码居中）
+09:52 B005ter: —---
+09:52 B005ter: #2
+09:52 B005ter: <div style="text-align: center;"> ![Pic](https://**) </div>
+09:52 B005ter: 实际显示效果：
+09:52 B005ter: ![Pic](https://**) （代码重心偏左，非居中，非左对齐，右侧有留白）
+09:52 B005ter: ---
+09:52 B005ter: # 3
+09:52 B005ter: <img src="https://**" width = "350px" align="center" />
+09:52 B005ter: 实际显示效果：
+09:52 B005ter: 图片 （铺满，是否居中未知，尺寸调整无效）
+09:52 B005ter: ---
+09:52 B005ter: # 4
+09:52 B005ter: <div width:40px;> <img src="https://**" align="center" /> </div>
+09:52 B005ter: 实际显示效果：
+09:52 B005ter: <div width:40px;>
+09:52 B005ter: 图片
+09:53 B005ter: </div> 
+09:53 B005ter: (铺满，是否居中未知，尺寸调整无效)
+09:53 B005ter: 个别本地测试正常，部署后出现异常。
+09:53 B005ter: 请问这个如何解决呢？
+09:53 B005ter: （尽量不使用 css :) ）
+09:53 B005ter: 以上，非常感谢。
+10:19 Youmu_ is now known as Youmu
+10:33 B005ter quit:Remote host closed the connection
+10:34 B005ter joined channel
+10:34 B005ter quit:Remote host closed the connection
+10:34 B005ter joined channel
+10:35 B005ter quit:Remote host closed the connection
+10:35 B005ter joined channel
+10:36 B005ter quit:Remote host closed the connection
+10:36 B005ter joined channel
+10:37 B005ter quit:Remote host closed the connection
+10:37 B005ter joined channel
+10:37 B005ter quit:Remote host closed the connection
+10:38 B005ter joined channel
+10:38 B005ter quit:Remote host closed the connection
+10:38 B005ter joined channel
+10:39 B005ter quit:Remote host closed the connection
+10:39 B005ter joined channel
+10:40 B005ter quit:Remote host closed the connection
+10:40 B005ter joined channel
+10:41 B005ter quit:Remote host closed the connection
+10:41 B005ter joined channel
+10:41 B005ter quit:Remote host closed the connection
+10:42 B005ter joined channel
+10:42 B005ter quit:Remote host closed the connection
+10:42 B005ter joined channel
+10:43 B005ter quit:Remote host closed the connection
+10:44 fy quit:Remote host closed the connection
+10:45 fy joined channel
+11:01 xhe joined channel
+11:07 lh_mouse joined channel
+11:27 ShiinaMashiro joined channel
+11:57 lh_mouse: geordi, << 0100
+11:58 geordi: 64
+12:22 iyzsong-w quit:Ping timeout: 260 seconds
+12:42 iyzsong-w joined channel
+12:44 iyzsong-w: z.z
+12:57 cleamoon quit:Remote host closed the connection
+13:37 iyzsong-w quit:Ping timeout: 240 seconds
+13:50 iyzsong-w joined channel
+14:16 Mokou joined channel
+14:45 spellsinger joined channel
+15:06 spellsinger quit:Read error: Connection reset by peer
+15:06 spellsinger joined channel
+15:10 spellsinger quit:Read error: Connection reset by peer
+15:11 spellsinger joined channel
+15:11 ShiinaMashiro quit:Quit: Connection closed for inactivity
+15:39 lh_mouse quit:Read error: Connection reset by peer
+15:40 lh_mouse joined channel
+15:47 B005ter joined channel
+15:52 B005ter quit:Ping timeout: 245 seconds
+15:57 hope1 joined channel
+15:58 lh_mouse quit:Read error: Connection reset by peer
+15:58 lh_mouse joined channel
+16:13 hope1 quit:Ping timeout: 240 seconds
+16:13 hope1_ joined channel
+16:34 leon_e joined channel
+16:46 B005ter joined channel
+16:49 B005ter: @lh_mouse 大神 
+16:50 B005ter: 昨天的 Markdown 图片调整问题实测如下（结论是未解决）
+16:50 B005ter: #1
+16:50 B005ter: <center> ![Pic](https://**) </center>
+16:50 B005ter: 实际显示效果：
+16:50 B005ter: ![Pic](https://**) （代码居中）
+16:51 lh_mouse: 你这个是谁家的 MD。
+16:51 B005ter: #2
+16:51 B005ter: <div style="text-align: center;"> ![Pic](https://**) </div>
+16:51 B005ter: 实际显示效果：
+16:51 B005ter: ![Pic](https://**) （代码重心偏左，非居中，非左对齐，右侧有留白）
+16:51 B005ter: # 3
+16:51 B005ter: <img src="https://**" width = "350px" align="center" />
+16:51 B005ter: 实际显示效果：
+16:51 B005ter: 图片 （铺满，是否居中未知，尺寸调整无效）
+16:51 B005ter: # 4
+16:51 B005ter: <div width:40px;> <img src="https://**" align="center" /> </div>
+16:51 B005ter: 实际显示效果：
+16:51 B005ter: <div width:40px;>
+16:51 B005ter: 图片
+16:51 B005ter: </div>
+16:51 B005ter: (铺满，是否居中未知，尺寸调整无效)
+16:51 B005ter: 个别本地测试正常，部署后出现异常。
+16:51 B005ter: 我在 GitHub Page 放的
+16:51 B005ter: 我给你我这个页面的链接
+16:51 B005ter: https://mrbowen.github.io/Personal_Site/moon-77theme-copy/
+16:52 lh_mouse: 你只要嵌入图片吗。
+16:52 B005ter: 目前是的，文字在后面，不影响
+16:52 B005ter: 图片现在太大了……
+16:53 B005ter: 想限制在宽度 350px，能找到的方法都无效……
+16:53 lh_mouse: MD 貌似没有这种东莞南溪。
+16:53 lh_mouse: s/东莞南溪/东西/
+16:53 lh_mouse: 你得自己改成适合的尺寸。
+16:53 B005ter: 直接把原文件改了么？
+16:54 B005ter: 你看我上面，试用了 img src 后面加参数， div 后面加参数，都不行……
+16:54 B005ter: 这就略尴尬
+16:55 lh_mouse: 不是所有 MD 都支持嵌入 HTML。
+16:56 lh_mouse: 你那个 <div> 看起来是 wiki markdown 。
+16:56 lh_mouse: GitHub 用的不是 wiki markdown 。
+16:56 lh_mouse: 哦不对。
+16:56 lh_mouse: 那个不叫 wiki markdown。
+16:56 lh_mouse: 那个叫 markup 。
+16:57 B005ter: GitHub 有个自家的是 GitHub Markdown 
+16:57 lh_mouse: GitHub 不支持内嵌 HTML 的。
+16:58 B005ter: 好吧…… 那我再研究下，谢谢啦~ 打扰啦~
+17:07 nebulax: 东莞南溪(｡･ω･)
+17:07 nebulax: 听上去是个好地方
+17:12 leon_e left channel:"Leaving"
+17:15 * lh_mouse slaps nebulax around a bit with a large trout
+17:16 nebulax: =.=
+17:16 nebulax: \slap lh_mouse
+17:16 * Slap_Bot slaps lh_mouse around a bit with 魱魲魳魴魵魶魷魸魹鮔魰.
+17:16 lh_mouse: \slap nebulax 
+17:16 * Slap_Bot slaps nebulax  around a bit with a large eel.
+17:16 lh_mouse: \slap nebulax 
+17:16 lh_mouse: \slap nebulax 
+17:17 * Slap_Bot slaps nebulax  around a bit with a large chimaera.
+17:17 * Slap_Bot slaps nebulax  around a bit with a large giant gourami.
+17:17 lh_mouse: \meow
+17:17 Slap_Bot: 喵~~~
+17:21 lh_mouse: geordi, << is_same<int (), int () noexcept>::value
+17:21 geordi: false
+17:21 lh_mouse: geordi, --2014 << is_same<int (), int () noexcept>::value
+17:21 geordi: true
+17:21 lh_mouse: geordi, --clang --2017 << is_same<int (), int () noexcept>::value
+17:21 geordi: error: No such option: --2017
+17:21 lh_mouse: geordi, --clang << is_same<int (), int () noexcept>::value
+17:21 geordi: 0
+17:21 lh_mouse: geordi, --clang --2014 << is_same<int (), int () noexcept>::value
+17:21 geordi: 1
+17:36 ShiinaMashiro joined channel
+17:41 B005ter_ joined channel
+17:42 spellsinger quit:Quit: Leaving
+17:46 StardustX joined channel
+17:49 B005ter quit:*.net *.split
+17:49 Stevearzh quit:*.net *.split
+17:49 nebulax quit:*.net *.split
+17:49 fy quit:Remote host closed the connection
+17:50 fy joined channel
+17:50 Stevearzh joined channel
+18:07 hope1_ quit:Quit: leaving
+18:07 iyzsong-w quit:Ping timeout: 240 seconds
+18:13 iyzsong-w joined channel
+18:24 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:28 Mokou: condy: 
+18:28 Mokou: 按错
+18:29 Mokou: http://wx4.sinaimg.cn/mw1024/9e6b7fdbly1fcj8gte7pdj20tb0ibwhi.jpg
+18:29 Youmu: 厉害
+18:38 iyzsong-m joined channel
+18:38 iyzsong-m: ( ；∀；)
+18:52 wlemuel joined channel
+18:54 iyzsong-m: bus 好难等 (ーー;)
+19:00 iyzsong-m: 走回去 (°ー°〃)
+19:08 iyzsong-m: 再等一波 (・_・;)
+19:51 ShiinaMashiro quit:Quit: Connection closed for inactivity
+19:56 iyzsong-m quit:Ping timeout: 258 seconds
+20:05 iyzsong joined channel
+20:24 B005ter_: 欢迎提出意见或建议 https://mrbowen.github.io/Personal_Site/Reversi/
+20:25 iyzsong: _(:з」∠)_
+20:25 B005ter_: 顺便问一句，如果想让大陆地区顺利访问，有什么办法呢？ 没弄过域名服务器这些东西……
+20:26 iyzsong: 可以访问啊
+20:28 B005ter_: 你翻墙了吧？？？
+20:28 B005ter_: 我文件都是在 GitHub 的啊……
+20:29 iyzsong: 没有 block GitHub
+20:31 xhe quit:Ping timeout: 240 seconds
+20:34 xhe joined channel
+20:36 B005ter_: 惊讶…… 记着半年前在国内…… 无法访问 GitHub 的 https 链接，只能 http ……
+20:37 B005ter_ quit:Remote host closed the connection
+20:37 B005ter joined channel
+20:37 B005ter quit:Remote host closed the connection
+20:38 Sub_title joined channel
+20:38 B005ter joined channel
+20:40 Sub_title_ joined channel
+20:42 Sub_title_ quit:Client Quit
+20:42 B005ter quit:Ping timeout: 240 seconds
+20:42 Sub_title quit:Ping timeout: 255 seconds
+20:45 xhe quit:Quit: leaving
+21:02 yimis joined channel
+21:04 yimis quit:Client Quit
+21:05 xhe joined channel
+21:13 B005ter joined channel
+21:39 cleamoon joined channel
+21:56 lh_not_b1t is now known as lh_not_bot
+21:58 kin3z joined channel
+22:17 kin3z quit:Quit: Leaving
+22:40 xhe quit:Quit: leaving
+22:48 ShiinaMashiro joined channel
+23:04 wlemuel quit:Ping timeout: 240 seconds
+23:05 wlemuel joined channel
+23:36 iyzsong quit:Quit: bye
+23:54 wlemuel quit:Ping timeout: 260 seconds

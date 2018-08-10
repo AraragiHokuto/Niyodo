@@ -1,0 +1,1824 @@
+00:00 Plough: 我混的群现在不收人……
+00:00 lh_mouse: linux 的傻逼开发者就是喜欢搞些傻逼东西
+00:00 blackskygg: 不过我已经打算放弃了
+00:00 lh_mouse: Linus 就是最大的傻逼
+00:00 blackskygg: +1
+00:00 lh_mouse: 往下还有 vi bash
+00:00 w15tp: +1
+00:00 lh_mouse: automake
+00:00 lh_mouse: 各种傻逼东西
+00:00 blackskygg: 你说错了
+00:00 blackskygg: 是autocrap
+00:00 w15tp: 那我用 proxychains 下载的apt-get 的下载的URL怎么下载不了？
+00:01 w15tp: 我怀疑是proxychains 没有识别到  precise前面的哪个空格。
+00:01 Plough: 算了，我先看动画
+00:01 w15tp: 那你觉得什么系统好。233
+00:01 lh_mouse: 我还是那个问题
+00:02 blackskygg: minix,不谢
+00:02 lh_mouse: 一个命令用 $() 括起来结果有空格想当成整个参数怎么办
+00:02 blackskygg: shell吗
+00:02 lh_mouse: 是的
+00:02 dantmnf: apt-get --print-uris install balabalab
+00:02 lh_mouse: 之前什么问题我忘了  我记得不能用双引号
+00:02 lhanjian: $(cat\ text)
+00:02 blackskygg: 不可以直接来吗
+00:03 lh_mouse: 直接结果拿来不行  但是 | sed 's, ,\ ,g' 就完事了
+00:03 lh_mouse: bash 就是吠
+00:03 w15tp: lh
+00:03 blackskygg: backquote也是一样吗
+00:03 lh_mouse: bachquote 相当于一层的 $()
+00:03 w15tp: 懒得查了，minix能和ubuntu安装双系统不？
+00:03 blackskygg: 我也只是看过几眼bash觉得怪恶心的
+00:03 lh_mouse: s,h,k,
+00:04 blackskygg: 额
+00:04 lh_mouse: w15tp, 你能鼓捣明白 grub 就行
+00:04 blackskygg: 我开玩笑的
+00:04 blackskygg: 别用minix
+00:04 w15tp: 。。
+00:04 blackskygg: 真的
+00:04 blackskygg: 用Arch吧
+00:04 w15tp: MINIX是一种基于微内核架构的类UNIX计算机操作系统
+00:04 lh_mouse: arch 东西据说比较新
+00:04 blackskygg: 我力荐Arch
+00:04 blackskygg: 我一直用
+00:04 lh_mouse: 倒腾 minix 还不如滚去研究 freebsd
+00:05 lhanjian: Arch哪里新了
+00:05 blackskygg: minix现在，已经变成bsd了
+00:05 blackskygg: 不过是netbsd
+00:05 lhanjian: 也就是有个还算过得去的包管理系统
+00:05 lh_mouse: 反正挺多公司用 debian 的
+00:05 w15tp: 其实我打算有时间并且有能力的话研究下内核。
+00:05 blackskygg: fedora
+00:05 w15tp: 所以。。 好吧。
+00:05 lhanjian: 虽然还是依赖Archlinux.org的首页提示。没法做到无脑升级
+00:05 lh_mouse: debian 东西太旧了  我现在还不敢完全扔掉 c++98
+00:06 w15tp: OTL。12点了，，明天又该迟到了
+00:06 lh_mouse: 那就是问题
+00:06 T2: 别提了，我现在就一个硬盘，正在下笨兔，先凑合撸一下算了。
+00:06 blackskygg: 额，有人用过肛旗Linux吗
+00:06 lh_mouse: 次奥
+00:06 w15tp: wine 才下好，明天再玩eve >..
+00:06 lh_mouse: 那不就是个桌面版 linux
+00:06 blackskygg: 听说有个Line
+00:06 blackskygg: 跟Wine一样的
+00:06 lhanjian: 没事儿折腾什么wine
+00:07 lhanjian: 我都不用了
+00:07 blackskygg: 现在不知道怎么样了
+00:07 lh_mouse: 经过一年多的倒腾本人决定放弃桌面版 linux
+00:07 w15tp: ~~ GAME
+00:07 blackskygg: 放弃桌面？为何
+00:07 lhanjian: 耗子终于走上了正途
+00:07 lhanjian: w15tp, 用windows算了。
+00:07 dantmnf: Windows+
+00:07 lhanjian: wine那糟糕的IO性能只会让你高呼CPU温度不可战胜
+00:07 w15tp: 戒游戏 OTL
+00:08 w15tp: 渣渣电脑不心疼  07年的
+00:08 T2: lhanjian: 你的WM用的什么
+00:08 dantmnf: wine 性能还行吧...（反正我用 i7 去轰
+00:08 lhanjian: 问题是玩一会儿就高热了，不心疼也跑不好。
+00:08 lhanjian: T2, awesome
+00:08 T2: 果然
+00:08 lhanjian: dantmnf, 相对win而言。
+00:08 blackskygg: windows10
+00:08 w15tp: Dantmnf。。一看就知道是笔记本
+00:08 blackskygg: 哈哈哈
+00:08 dantmnf: 台式机
+00:09 lhanjian: dantmnf, 我用wine打过DAO/COD6、7、8。能玩。但是温度比在
+00:09 w15tp: ～～。
+00:09 lhanjian: win上高太多
+00:09 lh_mouse: 毕竟不是亲爹
+00:09 lhanjian: FPS损失近一半。
+00:09 blackskygg: slackware听说也挺不错
+00:09 lh_mouse: GCC 照样不是 windows 亲爹  一大堆问题
+00:09 w15tp: 你们不用上课？
+00:09 lh_mouse: s,不是,不认,
+00:09 blackskygg: .Net就是个笑话
+00:09 w15tp: 明天不上课？
+00:09 lh_mouse: 我小学毕业
+00:09 Plough: 动画放送开始了
+00:09 dantmnf: wine dx 还是比较有问题的
+00:09 w15tp: 。。无视
+00:09 blackskygg: C#是更大的一个笑话
+00:10 lh_mouse: C# 没 java 笑话
+00:10 dantmnf: +
+00:10 blackskygg: Java？
+00:10 w15tp: 如果源码统统开放～～ win的也开放，那。。。
+00:10 blackskygg: 你是在说那个岛吗？
+00:10 lhanjian: dantmnf, 能用啊
+00:10 * lh_mouse slaps blackskygg around a bit with a large trout
+00:11 w15tp: 再见。一群夜猫子。
+00:11 w15tp quit:Quit: w15tp
+00:11 blackskygg: Java the island or Java the dog-barking
+00:11 dantmnf: 能用和能看是两回事
+00:11 T2: Plough: 葛炮到底为什么那么火？
+00:11 lh_mouse: blackskygg, 咖啡的品种
+00:11 blackskygg: 因为他经典
+00:11 T2: 我TM一直没搞明白
+00:11 Plough: 我怎么知道……
+00:11 T2: 好嘛好嘛
+00:11 blackskygg: 哇，小朋友们
+00:11 T2: 接下来 就是精彩的动画片时间啦
+00:11 dantmnf: 人群之中突然钻出来一个 光头
+00:12 blackskygg: 肛门里，钻出来一个光头，我一把就把他爆了起来
+00:12 T2: 元首的死宅那个神作了
+00:12 T2: 简直必须给羊驼循环
+00:12 blackskygg: 专注鬼畜界多年
+00:13 * dantmnf 回头一看，小朋友们……人群之中，突然钻出来一个肛旗，我一把就把他爆了起来
+00:13 lh_mouse: 混熟了这是
+00:13 T2: 我讲个笑话吧，劳资下了个ubuntu-14.04.1-desktop-i386.iso
+00:13 blackskygg: 2333333333
+00:13 blackskygg: 果然好笑
+00:13 lh_mouse: 这是什么笑话
+00:13 lh_mouse: winrarsetup.rar
+00:14 blackskygg: 额
+00:14 T2: 然后跑了一下wubi，他正在给我下ubuntu-14.04.1-desktop-amd64.iso
+00:14 blackskygg: lh_mouse,这是真实的故事吗
+00:14 lh_mouse: blackskygg, no
+00:14 dantmnf: wubi 异端
+00:14 blackskygg: 好吧，我睡了
+00:14 lh_mouse: blackskygg, 揉揉
+00:14 lh_mouse: 晚安
+00:14 T2: 非得逼我装Arch么，我懒的捣鼓。
+00:14 blackskygg: lh_mouse,捏捏
+00:15 blackskygg: 祝诸位武运昌隆
+00:15 T2: 晚安
+00:15 T2: 夜间愉快
+00:16 T2: 算了，手上也没U盘，明天吧。
+00:17 T2: 好吧已经是今天了。
+00:19 Plough: 噗，喷火器做菜……
+00:23 Petrus07 quit:Quit: Leaving.
+00:24 Plough: 完了，比叡来了
+00:24 Plough: 死　亡　不　可　避
+00:25 Plough: 长门要沉了……
+00:30 T2: = =
+00:32 Plough: 啊，沉的是傻级前两只
+00:32 Plough: 长门负责黑哨
+00:35 lhanjian quit:Quit: Leaving
+00:41 code_new quit:Quit: Leaving
+00:43 Plough: 先去给天津风刷个闪
+00:43 whocares_2 quit:Ping timeout: 250 seconds
+00:44 Plough: 刷闪失败，重刷
+00:47 Plough: 失败，再重刷
+00:50 lh_mouse: 协议名改叫 cbpp 了
+00:50 lh_mouse: Compressed Binary Protocol for Poseidon
+00:51 Plough: 成功
+00:53 condy quit:Quit: leaving
+00:58 T2: Poseidon Binary Compression Protocol 不好么
+00:58 lh_mouse: 你在键盘上敲一下就明白了
+00:58 Plough: 出击
+00:59 T2: 没明白额
+00:59 lh_mouse: cbpp 显然比 pcbp 顺手
+00:59 T2: 好吧，原来是顺手。
+00:59 lh_mouse: 另外   为什么叫 compressed binary  
+01:00 lh_mouse: 你自己研究下 compression 是啥
+01:00 lh_mouse: 这东西又不是专门搞压缩的   中心语不一样
+01:00 T2: 好吧好吧
+01:02 Plough: 漩涡不回避
+01:03 Plough: 雾岛中破
+01:04 Plough: 雪风中破
+01:05 Plough: 门神G点
+01:06 Plough: 加贺中破
+01:06 Plough: 榛名中破
+01:06 Plough: 雾岛大破
+01:06 Plough: 回家乐
+01:06 Plough: 了*
+01:07 dantmnf: 你的输入法欠调教
+01:09 Plough: 本轮出击开始，只要遇到漩涡我就F5
+01:10 Plough: 长门大破，回家
+01:16 cleamoon_: Plough, 爆
+01:18 whocares_2 joined channel
+01:19 lh_mouse: 机器人呢
+01:19 lh_mouse: Plough: 爆
+01:19 lh_mouse: Plough: 爆
+01:19 lh_mouse: 咦
+01:19 lh_mouse: 机器人哑巴了
+01:19 lh_mouse: clcn_logbot, 爆
+01:21 cleamoon_: 肛旗应该还没下呀
+01:22 Plough: 我现在没啥心情
+01:22 Plough: 刚才那两次出击什么样你应该看到了
+01:25 T2: rebooting
+01:25 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+01:25 cleamoon_: 你在做什么
+01:25 cleamoon_: 东活？
+01:26 cleamoon_: 冬*
+01:26 Plough: 是
+01:26 whocares_2 quit:Ping timeout: 240 seconds
+01:26 whocares_2 joined channel
+01:28 Plough: 漩涡不回避
+01:29 cleamoon_: ....
+01:29 cleamoon_: 我早就放弃了
+01:30 Plough: 你可以，我不能
+01:31 Plough: 神通中破
+01:32 Plough: 陆奥中破
+01:33 Plough: 进Boss
+01:33 lh_mouse quit:Quit: night
+01:34 Plough: 支援六个Miss
+01:34 Plough: 大家开始了对院长的狂轰滥炸
+01:35 Plough: 北上中破
+01:35 Youmu: "I ask of you- Are you my husband?" "Of course. Saber. Of course." (via reddit)
+01:35 Plough: 5vs4
+01:36 Plough: 时雨大破
+01:36 Plough: 没打掉
+01:39 cleamoon_: 为什么你不能放弃？
+01:39 Plough: 哦
+01:39 Plough: 我烧了5万资源三百桶
+01:40 Plough: 熬夜忍了那么长时间精神污染
+01:40 cleamoon_: 现在是e4还是e5？
+01:40 Plough: 然后现在就差最后一次击杀了
+01:40 Plough: 然后我放弃
+01:40 Plough: e5
+01:40 cleamoon_: 哦....
+01:40 cleamoon_: 那就打吧...
+01:40 cleamoon_: 我烧了500油，一个桶都没用，e1都没过...
+01:41 Plough: 500油是我出击一次的量的四到五分之一
+01:41 Plough: 所以说你以后的路还长，现在这些不算啥
+01:44 lh_cat quit:Remote host closed the connection
+01:45 Plough: 算了，我带个58
+01:45 Plough: 打打铃谷
+01:48 cleamoon_: 这个游戏根本不是每天玩，而是每天弄两下，半年玩一次...
+01:55 Plough: 长门大破
+01:56 cleamoon_: e5不是需要大井北上大和武藏之类的吗...
+01:56 Plough: 你带四只船去打E5?
+01:58 Plough: 这次试验下四只傻级带路
+01:58 xxxxxxxx: 油 8
+01:58 Plough: 油18k
+01:58 Plough: 作为对比，三次出击前我的油是23k
+02:02 cleamoon_: ...
+02:03 izmntuk joined channel
+02:03 Plough: 哦不对
+02:03 Plough: 我还没补给支援舰队
+02:05 cleamoon_: 丙级e5？
+02:05 Plough: 甲
+02:05 Plough: 丙级我闭着眼都能打过去
+02:05 Plough: 你看羊驼子打得多舒服……
+02:08 cleamoon_: ......
+02:08 cleamoon_: 作死就会死
+02:10 xxxxxxxx: 甲鱼还是咸鱼
+02:17 Plough: 比叡中破
+02:17 Plough: 北上中破
+02:19 Plough: 进Boss
+02:19 Plough: T不利
+02:19 Plough: 白来
+02:21 Plough: 6vs5
+02:22 cleamoon_: ...
+02:22 cleamoon_: 坑
+02:22 Plough: D败
+02:27 cleamoon_: ......超坑
+02:31 xxxxxxxx quit:Quit: Leaving...
+02:38 Plough: 麻将点掉落那珂
+02:40 Plough: 雾岛中破
+02:40 Plough: 北上中破
+02:41 Plough: 进Boss
+02:43 cleamoon_: 新华社旗下的《财经国家周刊》发表了同一作者的两篇文章《国产软硬件：春天里的逆袭》和《国产操作系统：跳出死循环》。前者证实了中国启动的“去IOE（IBM、Oracle、EMC）行动，但硬件易换软件难换，文章引用浪潮公司高级副总裁王恩东的话说，国产主机天梭K1的推广，配套的数据库软件至关重要，但国外主流的基础软件
+02:43 cleamoon_: ，包括占据主流市场地位的美国数据库公司，甲骨文、IBM等，都不愿意给天梭K1提供支持，“技术上不存在什么大障碍，资金上也不需要巨大投入，几乎是举手之劳，但他们就是希望通过产业链优势来遏制你。”第二篇文章的主角是工程院院士倪光南，他的最新标签已经变成“中国智能终端操作系统推动人”。 文章称，“在最
+02:43 cleamoon_: 高决策层的推动下，政企用户市场已经破冰，横亘在国产操作系统面前的，是个人消费市场这座大山。”
+02:43 Plough: 北上大破
+02:43 Plough: 希望全无
+02:43 Plough: 妈了个逼
+02:43 Plough: 闭幕雷刷刷刷过去铃谷直接深海大破保护
+02:43 Plough: 神通二连接着保护
+02:44 Plough: 没打掉
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 去你妈了个逼的深海击沉保护
+02:44 Plough: 哈哈哈哈哈哈哈哈哈哈我操你妈
+02:44 Plough: 不打了
+02:45 cleamoon_: 那是什么
+02:45 Plough: 闭幕雷刷刷刷过去
+02:45 cleamoon_: 深海打不沉？
+02:45 Plough: 最后一个重巡剩1血
+02:45 cleamoon_: .......
+02:45 Plough: 然后夜战神通两炮过去直接两个miss
+02:45 cleamoon_: ..............
+02:45 Plough: 最后打完了还他妈给我个那珂
+02:45 Plough: 我TM玩个屁
+02:45 cleamoon_: .............................
+02:45 Plough: 玩个屁啊我操你妈
+02:45 cleamoon_: e5能给什么
+02:45 Plough: 打不掉就算了，掉个那珂诚心嘲讽老子？
+02:46 Plough: 妈的，不打了
+02:46 Plough: 睡觉去
+03:45 Plough: 这次试试把比叡换成俾斯麦
+03:48 cleamoon_: ....
+03:48 cleamoon_: 你不是睡觉去了吗
+03:52 Plough: 睡醒了
+03:52 cleamoon_: ......
+04:01 Plough: 我猜这次会劝退
+04:05 Plough: 我操
+04:05 Plough: 那珂
+04:06 Plough: 三连那珂啊我日你妈
+04:07 Plough: 棒各中破
+04:08 Plough: 进Boss
+04:09 Plough: 反航，白来
+04:10 Plough: 神通中破
+04:10 Plough: 6vs5
+04:11 Plough: 5vs5
+04:11 Plough: 没打掉
+04:13 boosure joined channel
+04:22 cleamoon_: Plough, 还在打？
+04:22 Plough: 是
+04:22 cleamoon_: ....
+04:22 cleamoon_: 等你打完我想知道你用了多少资源
+04:22 cleamoon_: 然后，你觉得，值吗...
+04:22 Plough: 现在E5一关是用了大约6万
+04:23 Plough: 至于值不值
+04:23 Plough: 六万资源我一个月就能攒回来
+04:23 Plough: 资源是最不值钱的东西
+04:23 cleamoon_: ......
+04:24 cleamoon_: 壕无人性
+04:24 whocares_2 quit:Ping timeout: 256 seconds
+04:25 whocares_2 joined channel
+04:25 Plough: 有一件事
+04:26 Plough: 活动给的东西，你未必会有第二次机会能拿
+04:26 Plough: 参考震电改
+04:26 Plough: 53舰首鱼雷也可以
+04:27 cleamoon_: 简直坑
+04:31 Plough: 我就知道这次要出事
+04:31 Plough: 估计进不去了
+04:32 Plough: 雪风带闪被一发大破
+04:32 Plough: 我直接F5
+04:32 cleamoon_: ...
+04:33 cleamoon_: 为什么打甲级
+04:33 Plough: 不为什么
+04:34 whocares_2 quit:Ping timeout: 264 seconds
+04:36 whocares_2 joined channel
+05:08 Plough: 加贺中破
+05:08 Plough: 进不去了
+05:10 Plough: ……进去了
+05:11 Plough: 不过反正进去了也斩不掉
+05:11 cleamoon_: 不是就还差一下了吗
+05:11 Plough: 但是我得能打掉
+05:12 Plough: 支援打错人
+05:12 Plough: 开幕一个没灭掉
+05:12 Plough: 雾岛大破
+05:13 Plough: http://picpaste.com/X5759Cz8.png 这是我面对的敌人
+05:13 Plough: 打不掉了
+05:14 Plough: 果然没打掉
+05:14 Plough: 妈了个逼你们白天照着院长打什么啊
+05:14 Plough: 打不掉的啊
+05:15 cleamoon_: HP500... 那都是毛呀...
+05:16 Plough: 500 400 400 96 88 88
+05:16 Plough: 从上到下
+05:16 Plough: 顺便说下
+05:16 Plough: 500血那位就是理事长
+05:16 Plough: 护甲200
+05:16 Plough: 装备两门20in连装炮
+05:16 Plough: 作为对比，大和级的主炮口径是18.1in
+05:16 cleamoon_: 那完全打不动呀...
+05:17 Plough: 是
+05:17 cleamoon_: ......坑
+05:17 Plough: 也就是说，他装备的是历史上从来没有存在过的超大主炮
+05:17 Plough: 火力242点
+05:17 Plough: 大和级常见的火力是199点
+05:17 cleamoon_: .............
+05:17 cleamoon_: 运营缺刀片了
+05:18 Plough: 这么个东西摆在我面前
+05:18 Plough: 底下还有两个400血180甲的怪物陪着他
+05:18 Plough: 她*
+05:18 cleamoon_: 这和那个谣言的也差不多了
+05:18 Plough: 我不知道你能不能想象出来
+05:18 cleamoon_: 那两个也轻易打不动...
+05:18 Plough: 那两个真出来也是在道中
+05:19 Plough: 效果就是没人能进Boss
+05:19 Plough: 所以是谣言
+05:19 cleamoon_: 我能想象6个驱逐去打6个重巡的感觉
+05:19 cleamoon_: .......
+05:19 Plough: 6dd打6ca?
+05:19 cleamoon_: +
+05:20 cleamoon_: 刚刚演习了两场这个
+05:20 Plough: 如果E5甲有这么个选项我绝对去选
+05:20 Plough: 相比之下太TM轻松了
+05:20 cleamoon_: .....
+05:20 Plough: 完全不是一个级别
+05:20 cleamoon_: 也是，堆装备拼脸就行了
+05:20 cleamoon_: 这个是除了大北打不动...
+05:21 Plough: 大北也难
+05:21 Plough: 大井一发二连过去勉强能打掉200多血
+05:21 cleamoon_: 大北至少有可能...
+05:21 cleamoon_: .....
+05:21 Plough: 得两个一起上，白天再蹭点
+05:21 Plough: 然后就是智商问题了
+05:21 cleamoon_: 大北加起来才能打沉一艘...
+05:21 Plough: 院长也打不掉
+05:22 cleamoon_: 还有两个变态和3个坑爹货...
+05:22 Plough: 三只船摆在这对妇妇面前，你觉得他们都选对的概率有多大
+05:22 Plough: 或者像我刚才那样，五只船
+05:23 cleamoon_: 有什么好处吗
+05:23 Plough: 一个甲级战犯勋章
+05:23 cleamoon_: ....
+05:25 cleamoon_: 这次的甲级活动难度在活动中算哪个级别的？
+05:25 Plough: 公认史上最难的是夏活E6
+05:26 Plough: 因为那里有两只院长
+05:26 Plough: 然后这次在两只院长上面加了一个理事长
+05:26 Plough: 你可以当作三点五个院长算
+05:26 cleamoon_: ..........那不就是说这次最难吗
+05:26 Plough: 这次是联合舰队，稍微好点
+05:27 Plough: 我觉得差不多，不过毕竟我没打过夏活E6
+05:27 cleamoon_: 哦，可以支援...
+05:27 Plough: 哪次都可以支援
+05:27 cleamoon_: 但至少可以进最难前三了
+05:27 Plough: 差不多
+05:28 cleamoon_: ...坑呀
+05:28 Plough: 还有一个有争议的大概是13年秋E4
+05:28 Plough: 门神夜战，夜战后面随机沟
+05:28 Plough: 这无所谓，但是那张图会回血
+05:28 cleamoon_: ........
+05:28 cleamoon_: 每天回？
+05:29 Plough: 也就是说你打到斩杀了，睡一觉，然后血条又满了
+05:29 cleamoon_: 还是每场...
+05:29 cleamoon_: ........
+05:29 Plough: 似乎是按时间回的
+05:29 Plough: 不过我也不清楚……
+05:30 cleamoon_: 可以选难度之后，我怀疑活动难度会越来越大...
+05:30 Plough: 那也没办法
+05:32 cleamoon_: 以后少作死就好了...
+05:33 Plough: 这不叫作死
+05:33 Plough: 我要是活动前直接十发大建，最后没资源打E5了，这叫作死
+05:33 cleamoon_: 这叫土壕
+05:33 Plough: 现在这样我没看出来哪里作死了
+05:34 Plough: 活动前我的资源还真够十发大和
+05:34 cleamoon_: ...
+05:34 Plough: 现在勉强够一发
+05:34 Plough: 等会大概就半发都不够了
+05:34 cleamoon_: 你耗尽前打的完吗
+05:34 Plough: 不知道
+05:35 cleamoon_: ...反正还一发，祝好脸
+05:37 cleamoon_: 现在人物基本认识了，重看一遍舰娘漫画
+05:40 cleamoon_: 敌方潜艇剩一滴血夜战有击沉的可能性吗？
+05:41 Plough: 似乎是没有
+05:41 Plough: 夜战反潜值强制乘0
+05:41 Plough: 除非是夜战点
+05:44 cleamoon_: soga
+05:57 cleamoon joined channel
+06:00 Plough: 我操
+06:00 Plough: 四个那珂了吧
+06:02 Plough: 大傻中破
+06:02 Plough: 神通大破，回家
+06:03 Plough: 操你妈我按F5还他妈没反应？
+06:05 cleamoon_: .......
+06:05 cleamoon_: 神了
+06:28 Plough: 这次进不去
+06:31 Plough: 果然没进去
+06:45 cleamoon: 对了，topic是什么，完全看不出来了
+06:53 Plough: 问羊驼子
+07:17 JQK quit:Read error: Connection reset by peer
+07:19 cleamoon quit:Remote host closed the connection
+07:46 JQK joined channel
+07:53 JQK quit:Ping timeout: 250 seconds
+08:15 JQK joined channel
+08:17 cleamoon_ quit:Remote host closed the connection
+08:19 cleamoon joined channel
+08:34 cleamoon quit:Read error: Connection reset by peer
+08:34 Sleepwalking joined channel
+08:41 hoxily quit:Quit: Leaving
+08:51 cleamoon joined channel
+09:06 cleamoon quit:Read error: Connection reset by peer
+09:13 lh_mouse joined channel
+09:21 lh_cat joined channel
+09:22 lh_cat: mew
+09:22 cleamoon joined channel
+09:34 lh_cat: 你们晚上都不睡的啊
+09:52 cleamoon quit:Read error: Connection reset by peer
+09:54 dantmnf: 想写个自动 1-5-A 的东西...
+09:59 Plough: Bot被BAN率基本是100%
+09:59 Plough: 而且有可能被摔锅
+09:59 Plough: 甩*
+10:02 whatofor joined channel
+10:03 * lh_bot slaps Plough around a bit with a large trout
+10:03 dantmnf: 我倒是比较好骑娇喘是怎么检测的
+10:03 lh_bot: 10:03 < dantmnf> 我倒是比较好骑
+10:03 dantmnf: 输入法调教过度
+10:04 Plough: Bot太有规律，能看出来
+10:04 Plough: 娇喘都是人工审核的
+10:04 dantmnf: 难道还记录点击位置
+10:05 Plough: 看下请求就知道了
+10:05 Plough: Bot比人精确地多
+10:05 Plough: 而且也确实有甘地被误判为Bot的情况
+10:06 dantmnf: 那就搞个“不怎么精确”的？
+10:07 lh_bot: 10:03 < dantmnf> 我倒是比较好骑
+10:07 dantmnf: 我之前写这种东西都是加随机等待和偏移的
+10:07 lh_bot: 10:03 < dantmnf> 我倒是比较好骑   ←_←
+10:07 Plough: 你可以试试，死了不管
+10:07 Plough: 顺便说一下，娇喘封号一般都是死缓
+10:08 Plough: 开挂了，没事，三个月以后突然死了
+10:08 cleamoon joined channel
+10:36 sismvg joined channel
+10:36 sismvg: 刚刚接到个奇葩笔试电话
+10:37 sismvg: 叫我带笔记本电脑，说研发部门不让进。我问他笔试不都是用纸和笔的吗？
+10:37 sismvg: 他说：这个念头谁还用笔啊。我们都没用过
+10:37 sismvg: 年头
+10:38 sismvg: 骗子指数-80%
+10:44 boosure quit:Quit: Get your hand off of it
+11:05 shout-user14 joined channel
+11:05 shout-user14: Hello
+11:07 tth1996 joined channel
+11:09 lh_bot: geordi: << setw(4), "hello"
+11:09 geordi:   , hello
+11:09 lh_bot: geordi: replace , with <<
+11:09 geordi: hello
+11:09 lh_bot: geordi: << setw(-4) << "hello"
+11:09 geordi: hello
+11:09 tth1996: hello
+11:11 tth1996 quit:Client Quit
+11:20 cleamoon quit:Read error: Connection reset by peer
+11:21 xxxxxxxx joined channel
+11:36 cleamoon joined channel
+11:37 dantmnf: 肌肉记忆了...刷闪点了撤退...
+11:43 xxxxxxxxx joined channel
+11:44 xxxxxxxx quit:Ping timeout: 245 seconds
+11:49 tutu joined channel
+11:50 tutu: 今天亲自
+11:50 tutu: 做饭，好激动
+11:50 condy joined channel
+11:54 Sleepwalking: 妈呀 舰队6居然是做咖喱的日常 好无赖
+11:54 Sleepwalking: 聊
+12:08 dantmnf: 下集又是一航和五航的撕逼大赛？
+12:17 varna joined channel
+12:17 varna: Plough: 肛
+12:17 varna: xxxxxxxxx: 掘
+12:17 varna: Youmu: 爆
+12:17 varna: dantmnf: 撬
+12:17 varna: Sleepwalking: 开苞
+12:18 dantmnf: varna: 自撬去
+12:19 tutu: ……
+12:20 varna: 另外附上这次的topic解说
+12:21 varna: neta有四，舰名有二
+12:21 Sleepwalking quit:Ping timeout: 245 seconds
+12:21 Youmu: o.o
+12:21 varna: 长波就是长波，碎浪=矶波
+12:24 Sleepwalking joined channel
+12:28 varna: 七型鹫=A7M, 从未量产的七式舰战（十七试）烈风
+12:28 varna: 最后连原型机都被推下海
+12:28 varna: 三分和鱼是neta这次的难度划分，像我这种打E5丙的一般被称为咸鱼
+12:29 varna: 至于五吋单装鱼一直也都是emacs用户用来击杀vim用户的标准装备
+12:29 varna: 众所周知在emacs启动期间，一个熟练的用户能用这鱼击倒五个vim用户
+12:29 varna: 差不多就是这样
+12:30 * dantmnf 不会用 Esc Meta Alt Ctrl Shift
+12:30 sismvg: 有O(n)的xml parse吗？
+12:31 varna: n是什么
+12:31 sismvg: 文档大小
+12:31 sismvg: 就是字符数量
+12:32 dantmnf: 不是节点数？
+12:33 varna: sismvg: 一个LALR(1)就不是线性的
+12:37 sismvg: 肾疼
+12:39 varna: 我现在想宰了那些CPAN测试机
+12:39 varna: No plan found in TAP output
+12:42 varna: 这完全不是内联代码的问题
+12:43 xxxxxxxxx: 一觉起来看到有了700多油 然后造船 然后我又该去睡觉了....
+12:43 varna: ...
+12:44 varna: 6dd对战舰航母重巡一大堆，拿B滚
+12:49 sismvg: 巧克力键盘的<|>在右手小拇指边上，普通键盘在右手右上角。。
+12:49 dantmnf: 竟然忘了大坨经验的演习...
+12:49 sismvg: 造成了大量
+12:49 sismvg: 又按错了
+12:52 varna: 6dd打了五个演习
+12:53 varna: 再改一次测试，这简直太笑话了
+12:53 tutu quit:Read error: Connection reset by peer
+12:54 tutu joined channel
+12:54 tutu quit:Remote host closed the connection
+12:56 dantmnf: 演习都是 dalao 在晒船...
+12:59 varna: 别怕
+12:59 varna: 我6dd刚吊打了一个有俾斯麦的阵容
+13:00 dantmnf: 等级低啊...
+13:15 lh_mouse quit:Read error: Connection reset by peer
+13:27 varna: 我干死那个TAP Parser
+13:27 varna: 文档：
+13:27 varna: <bullet> No Plan - Gotta have a plan!
+13:47 lh_bot: 喵
+13:57 whocares_2 quit:Remote host closed the connection
+13:58 whocares_2 joined channel
+13:58 Xilzzerts quit:Read error: Connection reset by peer
+14:00 sismvg: DomNode.nextShibe
+14:06 lh_mouse joined channel
+14:07 Plough: 我成功地再次把资源烧没了
+14:07 Plough: 14k蒸发
+14:11 Plough: 总之先去把动画看了
+14:11 Plough: 昨天看生放送我只看懂一半
+14:13 lh_bot: Plough: 爆！照！
+14:17 Plough: 就不给看
+14:17 Plough: varna: 另外
+14:17 Plough: 强烈推荐联合舰队模式下傻级用较小口径的主炮
+14:17 Plough: 昨天我换了以后确实效果拔群
+14:17 lh_bot: Plough: 爆！照！
+14:17 Plough: 各种掀翻麻将桌
+14:18 Plough: 我都能给利根配对空CI了
+14:21 varna: Plough: 我只认46
+14:21 Plough: varna: 46就是水漂打击部队
+14:21 varna: 大丈夫
+14:21 Plough: 至于火力问题，联合舰队一贯火力诡异……
+14:21 varna: 相信46
+14:22 varna: 为了丸咸作战，41我都拆十个了
+14:22 varna: 剩下的似乎不足一页
+14:22 Plough: 136的面板火力照着塔酱一发弹着观测200多点伤害
+14:22 Plough: 总之我还是这么建议
+14:22 Plough: 46毫无意义
+14:22 varna: let it be
+14:23 Plough: 总之我还是靠356和41
+14:23 Plough: 不然我进不去boss
+14:23 varna: 人各有体感
+14:23 Plough: varna: 话说动画第六话你看了没
+14:24 varna: 下了，准备攒了看，看到截图我明白了一点东西
+14:24 Plough: 两只金刚级帮长门挡抢最后轰沉
+14:24 varna: 幸好动画这货没有矶风
+14:24 varna: 不然全叽了
+14:24 Plough: 矶风估计也是自己先跪
+14:25 Plough: 总之正经地说，这几就是六小在卖萌
+14:25 Plough: 没屎，可以放心观看
+14:25 lh_bot: 14:25 < Plough> 没屎，可以放心观看
+14:25 varna: 我倒不在意谁沉了
+14:25 varna: 难得NKC上电视了，该高兴才是
+14:26 Plough: 我也不很在意
+14:26 Plough: 但是这沉得简直莫名其妙……
+14:26 varna: 不奇怪
+14:26 Plough: 突然一下转深沉，突然一下又转回来
+14:26 varna: 一个航弹塞鼻子里了
+14:26 Plough: 这干嘛
+14:26 varna: 然后单边鼻孔恢复不能，打开通海阀自沉
+14:27 varna: 我觉得这是挺正常的展开
+14:27 varna: 告诉大家不要总搞美容
+14:27 Plough: 我是说整个剧情的走向
+14:27 varna: 反正天天出去被打脸
+14:27 varna: 剧情压根不存在
+14:27 Plough: 对呀
+14:27 Plough: 所以莫名其妙
+14:27 varna: 所以我不是来看剧情的
+14:27 Plough: “你们到底想干嘛？”这种感觉
+14:27 varna: 渊田美津雄的剧情都比他们引人入胜
+14:27 Plough: 所以我想黑它
+14:28 Plough: 命运的五（十）分钟
+14:28 varna: 跟动画要趣味没用，找点乐趣
+14:28 Plough: 该看乐趣看乐趣
+14:28 varna: 对了，六话有没有NKC
+14:28 Plough: 但是黑动画这事，你问我兹瓷不兹瓷，我说兹瓷
+14:28 Plough: 有
+14:28 varna: 好！
+14:29 varna: 坚持偶像剧路线，这一点就该赞
+14:30 Plough: 另外，昨天看到一句话
+14:31 Plough: 吃撑：“听说有个新人叫铝500？”
+14:31 varna: 噗
+14:31 varna: 吃了
+14:31 Plough: 所以我还是先不改二了
+14:31 Plough: 省得哪天我没看好那只吃货……
+14:31 varna: 6dd vs 4bb2cvl
+14:32 varna: 三中破进夜战
+14:33 varna: 强行A胜，长门硬挺了小和两炮……
+14:33 xxxxxxxxx: 吕500好难看...
+14:33 varna: 某签名 E5OnProgess # 这八成是个日本人
+14:34 varna: 铝500为了北上大人必须改
+14:37 varna: 改了之后北上大人就有新花样的厉害鱼雷了
+14:37 dantmnf: 这是今天的那珂酱
+14:38 dantmnf: （1-5-A
+14:38 Plough: 158桶
+14:38 Plough: 伤了……
+14:38 Plough: 远征2又不能停了
+14:38 varna: 哦操
+14:39 varna: 对面有U酱，我点了个单纵
+14:39 varna: 看6dd的发挥吧
+14:39 varna: 炸不动……
+14:39 dantmnf: 北上肝完
+14:40 varna: 输了
+14:41 Plough: ……
+14:42 varna: 困了手滑点个单纵
+14:42 varna: 真打不过……
+14:42 varna: 复纵估计就赢了
+14:42 varna quit:Quit: leaving
+14:45 dantmnf: 没狗粮了...
+14:49 Plough: 看完了
+14:49 Plough: 跟我昨天理解的没啥差距……
+14:49 Plough: 就是有些细节没听懂
+15:12 cleamoon__ joined channel
+15:41 T2 joined channel
+15:59 T2: xxxxxxxxx: 你那儿能打开archwiki么？
+16:00 hysw quit:Quit: ~hysw();
+16:00 T2: 算了笨兔吧
+16:00 hysw joined channel
+16:00 sismvg: 啊。。湿着手浪费了一个电话
+16:02 sismvg: http://www.ithome.com/html/it/129507.htm
+16:04 xxxxxxxxx: 为啥不能？
+16:05 xxxxxxxxx: 另外造出了个战舰 看上去比驱逐舰能打不少
+16:07 T2: xxxxxxxxx: 我这儿似乎被墙了，官网和wiki都上不去。
+16:08 T2: 算了笨兔，反正也就随便撸点。
+16:08 T2: 我也懒得捣鼓
+16:11 hoxily1 joined channel
+16:13 xxxxxxxxx: 卧槽战舰修理要好多油....
+16:13 whocares_2_ joined channel
+16:15 whocares_2 quit:Ping timeout: 255 seconds
+16:15 T2: xxxxxxxxx: 你丫的也去搞舰女人
+16:16 T2: 妹的，还真不跟我说话，完了，这世界没救了。
+16:16 T2: 撤退，诸君愉快。
+16:16 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+16:17 cleamoon__: 基王来玩舰娘了？
+16:17 xxxxxxxxx: 资源逼我睡觉...
+16:18 cleamoon__: 正常
+16:18 cleamoon__: 我开了三队后才稍微好一点
+16:19 xxxxxxxxx: 油9 弹1970 钢930 铝1347
+16:19 xxxxxxxxx: 总之没有油
+16:21 xxxxxxxxx: 本日远征十回这是逗我吧....
+16:23 cleamoon__ quit:Read error: Connection reset by peer
+16:26 cleamoon__ joined channel
+16:26 cleamoon__: 周末我一天就远征30+次，而且还没四队
+16:27 xxxxxxxxx: 一次多久?
+16:27 cleamoon__: 每个远征不一样
+16:27 cleamoon__: 短的15min
+16:27 cleamoon__: 长的15h
+16:27 xxxxxxxxx: 暂时有油的1.5h
+16:28 cleamoon__: 那个要多做
+16:28 Plough: 长的有80h的
+16:28 cleamoon__: 最好一直做
+16:28 Plough: 四图基本全是长远征
+16:28 xxxxxxxxx: 是一直在做啊 但是油还是不够...
+16:30 cleamoon__: 肛旗他们都不够…
+16:33 cleamoon__: 肛旗成功了吗？
+16:37 Plough: 我没油了
+16:38 cleamoon__: 都没油了……
+16:38 cleamoon__: 活动还有几天吧
+16:38 Plough: 到23号
+16:39 cleamoon__: 那还可以攒攒再去肛
+16:43 cleamoon__: 肛旗估计我肝一下能过丙级e3吗
+16:43 cleamoon__: 我想要潜艇……
+16:43 cleamoon__: 我现在提督36级，最强金刚50级
+16:44 cleamoon__: 除了几个战舰剩下都是渣渣
+16:47 hoxily1 quit:Read error: Connection reset by peer
+16:47 hoxily1 joined channel
+16:55 code_new joined channel
+17:00 hoxily1 quit:Quit: Bye
+17:03 w15tp joined channel
+17:05 cleamoon__ quit:Read error: Connection reset by peer
+17:07 cleamoon__ joined channel
+17:08 Plough: E1怎么样了
+17:08 Plough: 或者说，现在打到哪了？
+17:09 Plough: cleamoon__: 
+17:10 cleamoon__: 现在还没见过e1的boss
+17:10 cleamoon__: 一次都没有
+17:10 Plough: ……反潜装备不够么
+17:10 Plough: 还是索敌不够进不了Boss
+17:11 cleamoon__: 我只有一个昨天拿到的水下窃听器……
+17:11 Plough: ……赌赌吧
+17:11 Plough: 现在的问题是你得能过E1
+17:11 cleamoon__: 是1112？
+17:11 Plough: 1112出声纳　1311出暴雷
+17:11 Plough: 1313两个一起
+17:11 cleamoon__: 难道e2e3不难？
+17:11 Plough: 丙难度应该不难，不过毕竟我没打过……
+17:11 cleamoon__: 雷暴多了有用吧
+17:11 Plough: 总之我建议你去试试
+17:12 Plough: 暴雷和声纳要搭配着用，有加成
+17:12 code_new: 肛旗斩了E5了吗
+17:12 Plough: 我没油了
+17:12 cleamoon__: soga
+17:12 cleamoon__: 那我赌吧
+17:12 Plough: 一般三个格子的DD是两个声纳一个暴雷
+17:12 cleamoon__: 就是开发材料不多，20个
+17:13 cleamoon__: 哦……
+17:13 Plough: ……够呛
+17:13 code_new: 赌反潜装备资源不是问题，主要是紫菜……
+17:13 cleamoon__: 每天任务给不少呢
+17:13 Plough: 九三九四还好，三式反潜的出率你可以参考活动前我和羊驼的聚赌
+17:13 cleamoon__: ………
+17:13 Plough: 他似乎是赌了100发，我赌了200发
+17:13 cleamoon__: ………………
+17:13 code_new: 紫菜是最难攒的
+17:14 Plough: 最后他好像一个没出，我出了四个
+17:14 code_new: 主要做任务还要花几个
+17:14 Plough: 每天做日常的话资材收益是正的
+17:14 Plough: 前提是你都做了不是光赌船
+17:14 code_new: 负的就麻烦了= =
+17:14 cleamoon__: 丙级应该不用那么高级吧…… 我基本带了水侦每次都能到boss门口……
+17:14 Plough: 你得能炸掉
+17:15 Plough: 不过93 94应该也能一战
+17:15 Plough: 另外，炸鱼一律单横阵
+17:15 Plough: 这个知道吧
+17:15 cleamoon__: 不过都带反潜遇到轻巡什么的怎么破…
+17:15 cleamoon__: 这个知道
+17:15 Plough: 无视
+17:15 cleamoon__: 我现在驱逐一律单横，无论打什么
+17:15 cleamoon__: ……
+17:16 cleamoon__: boss就是潜艇？
+17:16 Plough: 我记得E1只有右路门神有水面部队
+17:16 Plough: 是
+17:16 code_new: 话说走左路还是右路是不是跟索敌有关
+17:16 cleamoon__: 左路见不到boss……
+17:16 Plough: 我这边是一个金SO
+17:16 Plough: 应该是跟配置有关
+17:16 cleamoon__: 我记得就是一个挺弱的轻巡
+17:16 code_new: 我之前5个32，五次都走得左路
+17:16 Plough: 似乎有稳定走某一路的配置，不过羊驼子去的时候是左右随机
+17:16 Plough: 我倒是一直左路
+17:17 cleamoon__: e2我看就是快速舰队？
+17:18 Plough: E2忘了……
+17:18 Plough: 不过E2有喔改
+17:18 Plough: 三个难度都是
+17:18 cleamoon__: …
+17:18 code_new: E2很痛苦的……
+17:18 cleamoon__: ………
+17:18 code_new: 劝退率太高
+17:18 Plough: E2挺好的
+17:18 cleamoon__: 那怎么打
+17:18 Plough: E3我斩了两个小时
+17:18 code_new: 脸过去
+17:18 Plough: E5我斩了大概十多个小时，没斩掉
+17:18 cleamoon__: 我看e3有个一炮回家的？
+17:18 Plough: 一炮回家指？
+17:18 cleamoon__: 脸……
+17:19 cleamoon__: 一炮大破
+17:19 Plough: 哪里都能一炮大破
+17:19 cleamoon__: ……
+17:19 code_new: 你在E2会经常遇到
+17:19 Plough: 这是日常
+17:19 Plough: 不用E2，你去3-4和撸级们打打麻将就行了
+17:20 code_new: 3-4倒没劝退
+17:20 Plough: 虽然阵容比E5的麻将桌差了点，不过焦作人是足够了
+17:20 code_new: 就是沟了几次
+17:20 Plough: 3-4我也没太劝退
+17:20 Plough: 就是沟了一个月
+17:20 code_new: ��
+17:20 cleamoon__: ………
+17:20 Plough: 拆几个家具箱压压鲸
+17:21 Plough: 总之你先日常赌赌反潜吧
+17:21 cleamoon__: 行
+17:21 cleamoon__: 船练了不少了
+17:21 Plough: E3我不确定你能不能凑够12条船，不过毕竟有希望
+17:21 cleamoon__: 3
+17:21 code_new: 活动是到25号结束？
+17:21 cleamoon__: e1的够
+17:21 Plough: 23
+17:21 code_new: 哦哦
+17:21 cleamoon__: 12条船？
+17:21 Plough: 联合舰队
+17:21 code_new: 倒还早
+17:22 cleamoon__: 就是一半去远征？
+17:22 Plough: 不是
+17:22 Plough: 两个舰队拼起来
+17:22 cleamoon__: 就是一次出12条？
+17:22 Plough: 远征是支援舰队
+17:22 Plough: 是
+17:22 cleamoon__: 坑死………
+17:22 Plough: 联合舰队的特点就是打不中
+17:22 cleamoon__: 需要什么样的船？
+17:22 code_new: 也得看院长的脸色
+17:22 Plough: E3现在推荐的配置我也不确定，你去查查
+17:23 cleamoon__: 战舰我很有
+17:23 Plough: 机动部队最多两只战舰
+17:23 Plough: 水打似乎是最少两只
+17:23 cleamoon__: 除了大和级我只缺三傻
+17:23 cleamoon__: ………
+17:23 cleamoon__: fa
+17:23 Plough: 而且还有个问题
+17:24 Plough: 你能不能躲过院长那一炮……
+17:24 cleamoon__: 我这等级不至于吧
+17:24 Plough: 我出动的战舰一般至少80级
+17:24 code_new: 你有BSM了0.0
+17:24 Plough: 院长的劝退率大概7成
+17:24 cleamoon__: bsm不是大和级吗…
+17:24 code_new: 不是= =
+17:24 Plough: 俾斯麦是德国船……
+17:24 Plough: 俾斯麦级一号舰
+17:25 Plough: 这两只没啥相似之处
+17:25 cleamoon__: 嘛，和大和一样难拿
+17:25 Plough: 出率高不少
+17:25 Plough: 有4%呢
+17:25 code_new: ��
+17:25 cleamoon__: ……
+17:25 cleamoon__: 太小
+17:25 Plough: 大和的出率不到2%
+17:25 code_new: 4%也是欧洲人贡献的
+17:26 dantmnf: code_new: http://i.imgur.com/7AlL7kM.png
+17:27 code_new: dantmnf, 我发的跟下一条cleamoon发的一样
+17:27 cleamoon__: 哦，对，还缺长门……
+17:28 cleamoon__: 好久没赌战舰了
+17:28 cleamoon__: 都两天没赌了
+17:29 cleamoon__: 联合舰队的敌人也是联合舰队吧
+17:29 w15tp1 joined channel
+17:29 code_new: 不是，就六只船
+17:29 code_new: 你参与一次就知道了
+17:30 cleamoon__: ……难道非常强
+17:30 w15tp quit:Ping timeout: 245 seconds
+17:30 cleamoon__: 我先要过e1……
+17:30 dantmnf: 话说现在 3366 经常出白露级和阳炎级...
+17:30 Plough: 你那边不很强
+17:30 code_new: ……院长很强
+17:30 Plough: 我这边嘛，昨晚你看过了
+17:31 Plough: code_new: 脸过三发就可以
+17:31 Plough: 相比之下不算压力太大
+17:31 code_new: 三发啊……
+17:31 Plough: 你猜我要脸过多少发
+17:31 cleamoon__: 至少从舰队实力上看e1比1-5容易
+17:31 Plough: 容易不少
+17:31 code_new: 6发？
+17:31 Plough: 不掉沟以后我五次出击拿下
+17:32 Plough: code_new: 第一点有啊嘿颜和红tsu的鱼雷，你得先废掉
+17:32 Plough: code_new: 然后第二点随机一只塔酱三只撸酱或者两只塔酱两只撸酱，总之打麻将
+17:32 cleamoon__: 三面有捞潜艇的好地方吗
+17:32 Plough: 还是复纵
+17:32 cleamoon__: ……
+17:32 cleamoon__: 这是e3？
+17:32 code_new: 强制复纵吗……
+17:33 Plough: code_new: 对面是复纵
+17:33 Plough: 复纵很可能有命中加成
+17:33 code_new: 对面一定复纵？
+17:33 Plough: 是
+17:33 Plough: 第三点
+17:33 cleamoon__: 远征支援有用吗
+17:33 Plough: 主任肯定有；剩下的有可能是两只泡芙，有可能是祖宗+撸酱+莉改，有可能是双塔酱
+17:33 Plough: cleamoon__: 支援打不过就上
+17:34 code_new: 凶残
+17:34 Plough: cleamoon__: 打不过就上支援*
+17:34 cleamoon__: 哦…
+17:34 Plough: 然后Boss点的阵容你大概已经知道了
+17:34 Plough: 前面三只基本不可能在白天打掉
+17:34 cleamoon__: 坑就一个字，我说好多次
+17:34 code_new: 话说你在E5已经打了多少油钢了
+17:34 Plough: 效果就是夜战抬手给你废掉三只船再正常不过
+17:34 Plough: 油7万
+17:35 Plough: 钢没数
+17:35 code_new: 真多……
+17:35 Plough: 现在手上还有35k钢
+17:35 Plough: 问题不是油弹钢
+17:35 Plough: 是我没桶了
+17:35 code_new: 不知道到10万油能不能斩掉
+17:36 Plough: 够呛
+17:36 Plough: 我看不到希望
+17:36 cleamoon__: 三队一起远征捞桶一天就能攒几十个吧…
+17:36 code_new: 得赌全员智商了
+17:37 code_new: 跑远征2来桶确实很快
+17:37 Plough: 不够
+17:37 Plough: 一次出击平均十个桶
+17:37 cleamoon__: ………
+17:37 code_new: 我现在的桶量已经恢复到1030了
+17:38 cleamoon__: 我有70…
+17:38 hope1 joined channel
+17:38 Plough: 还剩159桶
+17:38 dantmnf: 这是今天的猫神
+17:39 * code_new 吃饭
+17:39 cleamoon__: e2和2-4比哪个难？
+17:40 cleamoon__: 2-4连续几次A点雾岛改被重巡一炮中破…
+17:41 dantmnf: E2 喔改教你做人
+17:42 hope1 quit:Ping timeout: 250 seconds
+17:42 cleamoon__: 一定会遇到吗… 麻烦死…
+17:43 Plough: 喔改是E2 Boss
+17:43 Plough: 2-4?你说那个随便就能打的图？
+17:43 hope1 joined channel
+17:44 hope1: 机房也有人玩舰娘…
+17:44 dantmnf: 道中有莉酱撸爷
+17:44 cleamoon__: ………
+17:44 cleamoon__: 我还是放弃吧
+17:47 Plough: 不用
+17:47 Plough: 丙级没莉酱
+17:47 Plough: 也没撸爷
+17:47 cleamoon__: 但是还是会有喔改吧…
+17:48 Plough: Boss点
+17:48 Plough: 道中只有轻母
+17:49 dantmnf: F 点有复纵撸爷
+17:49 dantmnf: （虽然是红色的
+17:49 cleamoon__: 战舰倒是不惧轻母，但是又是需要带路吧… 驱逐大破了也得回家
+17:50 Plough: 红撸算不上撸爷
+17:51 Plough: 白撸->红撸->撸爷/撸酱->撸祖宗
+17:52 cleamoon__: 撸祖宗………
+17:52 Plough: 撸改
+17:52 Plough: 手把手教你做人不含糊
+17:52 cleamoon__: 270/150/370/50，据说潜艇和稀有的玄学，谁试试
+17:53 Plough: 普建能出的我基本都出了
+17:54 dantmnf: 我试试
+17:54 cleamoon__: 没那么多建造资源可以浪费了，不敢试
+17:54 dantmnf: 筑摩
+17:54 cleamoon__: 伊8能普建出来吗
+17:54 cleamoon__: ………
+17:54 hope1 quit:Ping timeout: 250 seconds
+17:55 dantmnf: 3333 都能出
+17:55 dantmnf: 一切看脸
+17:55 cleamoon__: 筑摩
+17:55 cleamoon__: 渣渣
+17:55 cleamoon__: 3333不能吧……
+17:55 Plough: 都市传说
+17:55 Plough: 不确认
+17:56 dantmnf: http://unlockacgweb.galstars.net/Kancollewiki/viewCreateShipLog?sid=128 #一切看脸
+17:57 code_new_ joined channel
+17:57 code_new quit:Read error: Connection reset by peer
+18:00 hope1 joined channel
+18:01 cleamoon__: ……1%
+18:01 cleamoon__: 我还是去捞吧
+18:04 Sleepwalking quit:Ping timeout: 246 seconds
+18:11 varna joined channel
+18:11 varna: Plough: 掘
+18:11 varna: xxxxxxxxx: 爆
+18:11 varna: code_new_: 肛
+18:11 varna: dantmnf: 撬
+18:11 Sleepwalking joined channel
+18:12 varna: Sleepwalking: 入
+18:15 cleamoon__ quit:Read error: Connection reset by peer
+18:15 cleamoon_ joined channel
+18:16 varna: 17:54 cleamoon__: 伊8能普建出来吗
+18:16 varna: 普建潜艇公式可以，3333和卵月bug一样都是历史，忘掉吧
+18:17 varna: 伊号潜艇建造不能的是I-19
+18:17 Plough: 打完两个CL以后那と智ね已经快中破了……
+18:17 xxxxxxxxx: 战舰好厉害!
+18:18 varna: 我有点想5-5了
+18:18 Plough: 直播直播
+18:18 cleamoon_: 伊八太难建了
+18:19 cleamoon_: 而且为了拿正太需要四个潜艇
+18:20 cleamoon_: 羊驼子打甲级e5吧
+18:20 varna: cleamoon_: 我打不了甲级了
+18:20 cleamoon_: 打完了也不能改？
+18:21 Plough: 就是打完了才不能改
+18:21 varna: 打完就不能改，不打完都能
+18:21 cleamoon_: ……
+18:21 varna: 我日
+18:21 varna: bad plan...
+18:21 Plough: 那と智ね舰桥已经跪了
+18:21 varna: 这什么鬼
+18:21 Plough: 中破……
+18:23 cleamoon_: 顺便ex打算撸码为生了……
+18:24 varna: 送来我教她
+18:24 varna: 可以传授各种Perl奥义
+18:24 Plough: 然后又吓跑一个
+18:25 cleamoon_: 求本最坑最难的书好把她吓跑
+18:25 varna: 问我叫什么的话，请叫我无痛人
+18:25 cleamoon_: 无痛人？
+18:25 xxxxxxxxx: 我觉得我可以再建造一下
+18:25 cleamoon_: 直立不能？
+18:25 varna: 流派的名字就叫无痛人流
+18:25 cleamoon_: ……
+18:25 xxxxxxxxx: 虽然只有400油
+18:25 cleamoon_: 建吧
+18:25 varna: 太阁立志传neta
+18:25 cleamoon_: 弄全战舰
+18:25 varna: 里面似乎可以自己起名字，还可以创立流派
+18:26 varna: 有个人就自称无痛人
+18:26 varna: 到别的道场踢馆的时候对面严肃地来了句“无痛人流啊……”
+18:26 xxxxxxxxx: 挂上就发发远征 其他不点算了
+18:26 varna: 伙计们我直播一个5-5
+18:27 cleamoon_: 好的
+18:27 varna: 本队：隼鹰 哔—— 长门 雾岛 喝 吃
+18:27 cleamoon_: 敏感词是什么……
+18:27 dantmnf: 哔—— 是什么鬼
+18:27 varna: 大建货自觉打码
+18:27 cleamoon_: ………武藏
+18:28 dantmnf: 黑皮
+18:28 cleamoon_: 为什么不带加贺
+18:28 varna: 喝
+18:28 cleamoon_: 哦，带了……
+18:28 varna: 我最好的航母就是吃喝了
+18:28 cleamoon_: 隼鹰干什么用
+18:29 varna: 带路
+18:29 varna: 不然会进潜艇夜战点被吊打
+18:29 xxxxxxxxx: 一个小时 希望是重巡 这样就能交任务了
+18:29 cleamoon_: 轻巡带路呀……
+18:29 varna: 轻航
+18:29 cleamoon_: 轻航+
+18:30 varna: 如果全队高速的话就可以来三个航母
+18:30 cleamoon_: 那超级变变变的千岁多好
+18:30 varna: 隼鹰属性最好
+18:31 varna: 道中支援：棒各 肥桑 飞龙 苍龙 电酱 POI
+18:31 cleamoon_: soga…… 一直练RJ了……
+18:32 w15tp1: pepflashplugin 安装不了OTL
+18:32 varna: 没关系，隼鹰二改八十级呢
+18:32 w15tp1: 下载失败。可能是因为被墙的原因
+18:32 cleamoon_: ……
+18:33 varna: RJ的火力很好
+18:33 xxxxxxxxx: RJ?
+18:33 varna: Ryuujou = 龙骧
+18:33 w15tp1: pepflashplugin-installer: downloading https://dl-ssl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_40.0.2214.111-1_i386.deb
+18:33 varna: 日本人觉得汉字写起来太麻烦所以简称RJ
+18:34 w15tp1: 我试着在翻墙的环境下打开这个网址，但是 404. That’s an error.
+18:34 w15tp1: That’s all we know.
+18:34 w15tp1: 求解
+18:34 cleamoon_: 不知道航母的火力有什么用…… 而且航战直接只出飞机了…
+18:34 varna: 航母的火力参加伤害计算，因数1.5
+18:34 varna: 雷装一样
+18:35 cleamoon_: 我能下，翻墙下吧
+18:35 dantmnf: --2015-02-12 18:34:42--  https://dl-ssl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_40.0.2214.111-1_i386.deb
+18:35 dantmnf: 正在解析主机 dl-ssl.google.com (dl-ssl.google.com)... 173.194.72.91, 173.194.72.136, 173.194.72.190, ...
+18:35 dantmnf: 正在连接 dl-ssl.google.com (dl-ssl.google.com)|173.194.72.91|:443... 已连接。
+18:35 dantmnf: 已发出 HTTP 请求，正在等待回应... 200 OK
+18:35 cleamoon_: soga
+18:35 w15tp1: ？
+18:35 cleamoon_: 也就是有点用…
+18:35 varna: 很有用
+18:35 varna: 走起
+18:35 w15tp1: 无法建立 SSL 连接
+18:36 cleamoon_: google早就被墙了
+18:36 varna: 复纵雷爷
+18:36 varna: 支援到着
+18:36 varna: 雷爷大破
+18:36 cleamoon_: ……怎么上来就这么刺激
+18:36 varna: 结束了
+18:36 varna: 雷爷是被长门糊的
+18:37 varna: 第二点
+18:37 varna: 支援到着
+18:37 varna: 跟没打一样
+18:38 varna: 隼鹰大破……劝退
+18:38 varna: 简直逗
+18:38 varna: 嗒酱还是一如既往地聪明
+18:38 w15tp1: dantmnf 我应该换一个ssh?
+18:39 dantmnf: w15tp1: 我觉得你应该用 VPN
+18:40 varna: 继续
+18:40 dantmnf: 或者设置 http_proxy 环境变量
+18:40 w15tp1: 问题解决了。 ，在 sslocal -c /etc/shadowsocks.json 命令前加了sudo
+18:40 dantmnf: s/http/https/
+18:40 varna: 轮型雷爷
+18:41 varna: 剩个潜艇没办法了
+18:43 varna: 长门有点危险
+18:43 Plough: 长门按
+18:43 Plough: 啊*
+18:43 Plough: 我家长门大概是刚吃过咖喱
+18:43 Plough: 出门啊嘿颜一炮直接咣当一下
+18:43 varna: 复纵阵
+18:44 varna: 隼鹰保护
+18:44 varna: 赤城闪开了
+18:44 Plough: 话说midway里鱼雷发射提前量怎么估计
+18:44 varna: 长门大破
+18:44 Plough: 比如说用潜艇偷棒各那关
+18:45 varna: 哦，潜艇啊
+18:45 varna: 不算提前量
+18:45 Plough: ……直接打？
+18:45 Plough: 打不中啊
+18:45 varna: 不至于
+18:45 Plough: 还是贴脸放
+18:45 varna: 保证命中的话0.3
+18:45 varna: 长门大破简直那啥
+18:45 Plough: 收到，我去试试
+18:46 Plough: E5我改成全傻级了
+18:46 varna: 再来一次
+18:46 Plough: 长门总在奇怪的地方摔，陆奥喜欢第三炮塔扶摇直上九千里
+18:47 varna: 轮型
+18:48 varna: 我们瞬间告别了雷爷
+18:48 cleamoon_: …
+18:48 varna: 不过长门还是想办法把鼻子弄破了
+18:48 varna: -19hp
+18:49 varna: 嗒酱轰沉
+18:50 varna: 长门又弄了个小破……
+18:50 varna: 第一战队的脸都快让你丢光了
+18:51 cleamoon_: 一航还是吃喝呢……
+18:51 varna: 隼鹰中破
+18:51 varna: 一航战的演技
+18:51 varna: 雷爷中破
+18:51 varna: 隼鹰大破……
+18:51 varna: 被蹭1hp
+18:51 varna: 太赞了
+18:52 varna: 这都什么鬼
+18:52 varna: 支援还有闪，继续
+18:52 xxxxxxxxx: 北上改雷装好高....
+18:53 Plough: 你该看看改二
+18:53 varna: 139
+18:53 xxxxxxxxx: 改二太远...
+18:53 Plough: 改二一个下午
+18:53 cleamoon_: 这么快就改了？
+18:53 Plough: Lv50而已
+18:53 varna: 我都被演迷糊了
+18:53 cleamoon_: 基王玩的好快
+18:54 xxxxxxxxx: 10级就能改了
+18:54 cleamoon_: 好快
+18:54 cleamoon_: 虽然现在北上没用……
+18:54 varna: 雾岛小破危险
+18:56 varna: 喔改……
+18:56 varna: 支援没来
+18:56 sismvg: <tag>text<tag> text也算一个node吗？
+18:57 sismvg: 找到了
+18:58 varna: 求雷爷放过
+18:58 varna: 噗
+18:58 varna: 一航战的演技
+18:59 varna: 武藏被生蹭了个大破
+18:59 cleamoon_: haskell的gui只支持win32？
+18:59 cleamoon_: ………
+19:00 varna: 不打了
+19:00 varna: 明天看看钢的情况再说
+19:02 xxxxxxxxx: 五十铃12级就能改 这个也先改掉?
+19:03 varna: +
+19:06 varna: 5-5还是很麻烦，今天刚弄的钢一半多都没了
+19:07 cleamoon_ quit:Ping timeout: 246 seconds
+19:09 cleamoon__ joined channel
+19:09 sismvg: 又一次，我家另一个房间的门锁不见了，但是东西却没有被偷掉
+19:09 cleamoon__: ……
+19:09 sismvg: 地上没脚印，房间没有翻动。钥匙在我手上。锁是不锁上钥匙就拔不出来的那种
+19:10 cleamoon__: 盗锁狂魔
+19:10 xxxxxxxxx: 把北上改的鱼类拆下来换给驱逐怎么样?
+19:10 sismvg: 门上没有被撬的痕迹
+19:10 sismvg: 而且冰箱门都没被打开过
+19:11 sismvg: 难道我梦游？
+19:11 xxxxxxxxx: 为何要打开冰箱门...
+19:11 cleamoon__: 药元四惊异地发现，死的是我，我是我哥哥
+19:11 xxxxxxxxx: 而且那么注意冰箱门 难道里面有什么见不得人的东西?
+19:11 dantmnf: xxxxxxxxx: 你还需要把一个千岁级练到 12 级拿甲标
+19:12 dantmnf: 然后给北上装上
+19:12 xxxxxxxxx: 木有千岁级...
+19:13 dantmnf: 拿到之后就练（虽然很脆
+19:15 cleamoon__: 甲标为什么叫甲标的…
+19:15 xxxxxxxxx: 这下好像油和钢都没了...
+19:15 w15tp1: 看见了一个有意思的东西
+19:15 Plough: 甲型靶船
+19:15 sismvg: xxxxxxxxx:偷不到东西也能吃点什么
+19:15 cleamoon__: ………
+19:15 Plough: 忽悠深海用的名字
+19:15 w15tp1: 毛泽东不爱坐飞机，从北京到莫斯科要走一个星期。据孙维世的近亲说，在路上毛泽东老要孙维世到他的包厢里去介绍苏联情况。一天晚上，孙维世哭着跑出来去找周恩来，周马上明白发生了什么事，抚摸着她的头发连连说：
+19:15 w15tp1: 　　
+19:15 w15tp1: 　　　　“要顾全大局、要顾全大局……。”
+19:15 w15tp1: 　　
+19:15 w15tp1: 　　　　这个传闻是不可能验证的，但当时还是传得沸沸扬扬。
+19:16 sismvg: 我要找到我的锁，要不然就得看医生了
+19:16 dantmnf: 又要吃药了？
+19:16 xxxxxxxxx: 哪里的锁?
+19:16 sismvg: 那个房间的锁啊
+19:17 xxxxxxxxx: 我还以为贞操带...
+19:17 sismvg: 那个小偷会只偷锁的。。
+19:17 Plough: varna: 话说我俯冲轰炸还是容易撞……
+19:17 Plough: 投弹以后来不及拉起来
+19:18 cleamoon__: 螺内酯有至幻功能？
+19:19 xxxxxxxxx: http://7010fans.com/kancollection/kancolle-wiki.php 这个好
+19:22 dantmnf: 日语 Wiki 的镜像啊
+19:22 sismvg: 我也没什么生活压力啊
+19:23 dantmnf: 反正在我这里比 wikiwiki 慢
+19:23 xxxxxxxxx: 反正我这里wikiwiki总让我填验证 而且图片还要等半天
+19:23 dantmnf: 哦不对，wikiwiki 我这里会自动走梯子
+19:25 Plough: 我操，不让我投弹？
+19:25 cleamoon__: 药不够吃吧，羊驼赶紧给药元四寄点
+19:25 cleamoon__: wikia多好
+19:27 cleamoon__: geordi: << sizeof(a); struct a{};
+19:27 geordi: 1
+19:27 cleamoon__: geordi: <<sizeof(&a); struct a{};
+19:27 geordi: error: expected primary-expression before ')' token
+19:28 xxxxxxxxx: 果然是个重巡 这下可以交任务去了
+19:28 MisakaMikoto joined channel
+19:29 cleamoon__: geordi: <<sizeof(&b); struct a{}; a b;
+19:29 geordi: 8
+19:30 xxxxxxxxx: 过会远征回来又能建造一发 希望出川内 希望声控游戏
+19:30 Plough: 声控没用
+19:30 Plough: 这个游戏是读心游戏
+19:31 cleamoon__: 空结构填充1是哪个版本的标准加的？
+19:34 MisakaMikoto: https://plus.google.com/communities/103680008540979677071 窝是来做广告的
+19:40 cleamoon_ joined channel
+19:40 cleamoon__ quit:Read error: Connection reset by peer
+19:42 w15tp1: 话说刚建国的时候还会有学生游行罢课什么的，现在。。。
+19:45 cleamoon_: varna: topic是什么
+19:49 cleamoon_ quit:Read error: Connection reset by peer
+19:49 cleamoon__ joined channel
+19:50 cleamoon__: ex问学 长软工该学什么，学 长告诉她jsp………
+19:57 Stevearzh quit:Remote host closed the connection
+20:02 w15tp1 quit:Quit: w15tp1
+20:02 sismvg: 中国好学长
+20:03 sismvg: Misaka是来秀VPN的
+20:04 xxxxxxxxx: 算了 远征回来还是过段时间再建造吧
+20:04 Stevearzh joined channel
+20:07 cleamoon__: 我都不记得jsp淘汰几年了…
+20:14 lh_cat: cleamoon__: a complete object shall have a non-zero size 貌似是这样
+20:15 cleamoon__: lh_bot: 这是c98？
+20:15 lh_cat: 忘了
+20:16 cleamoon__: ……哦，那估计挺老的
+20:16 lh_cat: 研究这干啥
+20:18 lhanjian joined channel
+20:23 cleamoon__: 好奇而已…
+20:30 lhanjian: code_new_, 干杯～
+20:34 T2 joined channel
+20:35 T2: makefile里的%和*的区别是什么吖？
+20:36 T2: 好吧知道了。
+20:38 code_new_: lhanjian, 揉捏~
+20:38 dantmnf: 猫 神 再 临
+20:40 Sleepwalking: Viterbi算法真是太可爱了！
+20:41 IntPtr joined channel
+20:47 sismvg: 突然好可怜
+20:48 sismvg: 会说算法可爱。。但是更可怜的是我竟然理解>.
+20:49 T2: 干嘛不去找个可爱的妹子
+20:50 T2: 非要把自己搞那么可怜怪谁
+20:50 cleamoon__: viterbi怎么个可爱法
+20:51 sismvg: 可爱的都是男孩子。
+20:53 T2: 可爱的妹子是有的，你没碰到而已，急什么。
+20:53 T2: 男孩子也不见得都可爱，凭什么妹子都要可爱。
+20:53 Sleepwalking: ...
+20:54 sismvg: 你会发现萝莉脸，女神脸都一个样》。
+20:54 cleamoon__: 这里有很多可爱的男♀孩♀子
+20:54 Sleepwalking: 在各种论文里到处读到viterbi
+20:55 Sleepwalking: 语音识别用它 文语对齐用它 音高提取也用它
+20:55 Sleepwalking: 基元选择拼接合成也用它
+20:56 Sleepwalking: 然后申请大学还申了USC School of Viterbi...
+20:57 hope1: Sleepwalking, 干什么的，这么神奇…
+20:57 IntPtr: (来膜拜一下各位大神.
+20:57 cleamoon__: 对了，米尻到底去哪里上学
+20:57 Sleepwalking: cleamoon__: 目前就录了一个普渡，别的都要三月底才出来
+20:57 hope1: IntPtr, 好久不见
+20:58 cleamoon__: ……好玩
+20:58 cleamoon__: 普渡众生
+20:58 Sleepwalking: hope1: 从外部状态序列猜出内部状态序列
+20:58 cleamoon__: 好晚*
+20:58 Sleepwalking: Purdue
+20:58 cleamoon__: 没听过
+20:58 Sleepwalking: 排名55
+20:58 Sleepwalking: 保底
+20:58 izmntuk quit:Quit: reboot
+20:59 cleamoon__: 学霸尻
+20:59 Sleepwalking: 隔壁魔理莎也录了普渡CS…… 说不定要去面基了
+21:00 cleamoon__: 那是谁
+21:00 T2: 贴吧的那个吧
+21:02 hope1 quit:Quit: Bye
+21:02 cleamoon__: 普渡，感觉就是哈尔滨佛学院
+21:02 hope1 joined channel
+21:03 hope1: 又是dp…
+21:04 T2: hope1: http://hurley25.github.io/hurlex-doc/ 你能下到么？给我来一份。
+21:05 T2: 我这儿是什么都打不开了。
+21:07 IntPtr left channel:"WeeChat 1.0.1"
+21:08 sismvg: yes lord Api
+21:09 T2: hope1: 好吧，换了个浏览器，可以了。
+21:09 hope1: T2, 现在只有手机
+21:09 T2: 没事
+21:09 T2: 搞定
+21:09 T2: IE内核的问题
+21:10 IntPtr joined channel
+21:12 w15tp joined channel
+21:12 w15tp: 安装了ubuntu的A卡驱动
+21:12 w15tp: 结果开不开机了。OTL
+21:12 Sleepwalking: I卡大法好
+21:12 Petrus07 joined channel
+21:13 sismvg: http://www.ithome.com/html/it/129559.htm
+21:13 w15tp: 现在用的安装盘  上的系统，想把 那驱动卸载掉。但貌似我此时的操作没有作用的电脑里
+21:13 IntPtr: I卡++
+21:13 sismvg: 默秒GTX
+21:13 IntPtr: 话说 chrome 在 linux 下硬件加速的支持度简直残
+21:13 w15tp: 有没有解决办法？
+21:14 sismvg: 意思不明
+21:14 w15tp: 现在用的 ubuntu的安装盘 里的系统
+21:14 w15tp: 相当与pe.
+21:15 w15tp: 我想把 安装上去的那个A卡驱动卸下来，可是发现这时候我打得命令都是作用在 ubuntu的 “PE”系统里。
+21:15 sismvg: 想把pe里的驱动卸载掉？
+21:15 w15tp: 电脑里的OTL
+21:16 sismvg: 硬盘的里系统不能开机？
+21:16 w15tp: 把 安装在电脑里的系统  的 驱动卸载掉
+21:16 w15tp: 恩
+21:16 sismvg: 因为驱动问题？
+21:16 w15tp: 开机花屏 还带闪屏幕
+21:16 w15tp: 100%
+21:17 sismvg: 如果系统盘能读取的话你可以手动删掉驱动
+21:17 IntPtr: 系统开机进 tty 删去.
+21:17 sismvg: windows是有命令行恢复模式的啊
+21:17 w15tp: 正在查。 内核purge掉再重装就完事了，驱动属于内核的模块
+21:18 w15tp: OTL。 ubnutu系统，
+21:18 IntPtr: 反正能启动就能进 tty 应该, 只是显示出问题不影响.
+21:18 hope1 quit:Ping timeout: 252 seconds
+21:18 w15tp: tty?文本界面？
+21:18 w15tp: 不行。
+21:18 w15tp: ！
+21:19 IntPtr: tty 又用不倒 x.
+21:19 w15tp: 闪屏OTL。
+21:19 IntPtr: * 用不到
+21:19 w15tp: 鬼知道怎么回事。
+21:19 w15tp: 问题是 没法用
+21:19 IntPtr: tty 也闪屏么. 用不到 x 的话不会闪的吧.
+21:19 sismvg: 显卡松了吗？
+21:20 w15tp: 也许是我安装驱动后太激动了。关机的早了，因为在关机时我看见了一个选项，
+21:20 w15tp: 没。
+21:21 w15tp: 系统盘的系统 没法从终端里操作 电脑里的系统？
+21:21 w15tp: 干脆直接找到驱动文件删掉。
+21:21 sismvg: http://www.ithome.com/html/windowsphone/129554.htm
+21:21 sismvg: ORZ
+21:22 sismvg: 不过还不算只能。
+21:22 w15tp: 小冰？ 就 奶茶妹的那个？
+21:23 sismvg: 功能不错，头像恶心
+21:24 sismvg: 谁叫项目主管是线虫呢
+21:24 w15tp: 。。 
+21:24 w15tp: 可以换一个内核。
+21:25 sismvg: 没什么重要的东西直接重装嘛。反正30分钟而已
+21:25 endle joined channel
+21:26 cleamoon__: @mitivy: 西安储户杨女士在一家银行转存12万元后，查询时发现到账只有11万元，而其中一笔1万元进了为她办理业务的柜员个人账户。银行负责人解释，柜员将钱打入自己账户绝非故意行为，而是在操作其中一笔录入时，误用了自己的银行卡。
+21:26 sismvg: 嗯
+21:27 sismvg: 233
+21:32 endle quit:Quit: Leaving
+21:32 w15tp: 晕。想通过修改grub.cfg 来增加开机的选项，选择那个 老版本的内核。
+21:33 w15tp: 显卡驱动不会通用到 所有的内核里吧？
+21:34 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 35.0.1/20150122214805]
+21:35 varna: cleamoon__: topic解说之前发过了
+21:35 varna: cleamoon__: 我给你找一下
+21:35 lhanjian quit:Ping timeout: 265 seconds
+21:36 varna: 噗找不到了
+21:36 varna: Plough: 急降下爆击拉不起来是怎么回事
+21:37 w15tp: 在安装盘里的系统  查的内核版本，。有两个
+21:37 w15tp: linux-image-3.11.0-15-generic			install
+21:37 w15tp: linux-image-generic-lts-saucy			install
+21:37 w15tp: 下面的那个是安装盘里系统的  内核？》
+21:37 IntPtr: 下面那个是 meta package 吧.
+21:37 Plough: 13:21 <@varna> 长波就是长波，碎浪=矶波
+21:37 Plough: 13:24 -!- Sleepwalking [~sleepwalk@114.92.142.227] has joined #c_lang_cn
+21:37 Plough: 13:28 <@varna> 七型鹫=A7M, 从未量产的七式舰战（十七试）烈风
+21:37 Plough: 13:28 <@varna> 最后连原型机都被推下海
+21:37 Plough: 13:28 <@varna> 三分和鱼是neta这次的难度划分，像我这种打E5丙的一般被称为咸鱼
+21:37 Plough: 13:29 <@varna> 至于五吋单装鱼一直也都是emacs用户用来击杀vim用户的标准装备
+21:37 w15tp: 哦
+21:37 Plough: 13:29 <@varna> 众所周知在emacs启动期间，一个熟练的用户能用这鱼击倒五个vim用户
+21:37 Plough: 13:29 <@varna> 差不多就是这样
+21:37 varna: 另外我受够了
+21:38 Plough: varna: 冲下去，按投弹，咣当
+21:38 Plough: 两个一起偷下去了
+21:38 Plough: 投*
+21:38 varna: 我弄一个github仓库去开travis
+21:38 Plough: 一般我投完弹就来不及拉起来了……
+21:38 varna: Plough: 你是不是压太低了
+21:39 cleamoon__: …………我去，这个梗太多了
+21:39 varna: cleamoon__: 这梗很少的
+21:39 Plough: 大概是……
+21:39 Plough: 但是我总觉得高了瞄不准啊
+21:39 varna: Plough: 有两个解决方法
+21:39 varna: 第一个是你顺航向投
+21:39 varna: 不过可能不容易压制AA机枪
+21:39 tutu_wind joined channel
+21:39 cleamoon__: 五寸单装鱼是什么
+21:39 varna: cleamoon__: 两个neta: 咸鱼和emacs装备
+21:40 varna: 这次的口号是“当提督不打甲级，跟咸鱼有什么差别”
+21:40 Plough: 然后我就疯了
+21:40 varna: 而我这种战力足够的人打了丙级，就变成了咸鱼
+21:40 varna: 那真叫一个吊打啊
+21:40 cleamoon__: 咸鱼多好，好吃
+21:40 varna: 你看2.9 log就知道了，从头吊打到尾
+21:40 varna: 当然我是没有甲级战犯勋章的
+21:41 Plough: 其二是？
+21:41 varna: 其二比较麻烦
+21:41 varna: 投弹的时候你越过TS扭转
+21:41 cleamoon__: 肛旗在弄什么？
+21:41 cleamoon__: 航战？
+21:41 varna: 扭转的结果是你俯冲，这时候投弹
+21:41 Plough: 现在就是扭转
+21:41 varna: AI一般会用这个投弹动作
+21:42 varna: 你转向俯冲的时候是不是油门全开了
+21:42 Plough: 但是转下去我也来不及瞄准……
+21:42 Plough: 我收下油门？
+21:42 varna: 小半径转向可以先关油门，然后提到一半
+21:42 w15tp quit:Remote host closed the connection
+21:42 varna: 以不失速为标准试验一下
+21:42 Plough: 了解
+21:42 Plough: 等会我试试
+21:43 varna: 另外别真冲太低
+21:43 varna: 你不是江草大尉，而人家死了
+21:43 IntPtr quit:Quit: WeeChat 1.0.1
+21:43 varna: cleamoon__: Battlestations: Midway
+21:44 cleamoon__: 没玩过… 好玩吗
+21:44 varna: 还可以，我觉得不错
+21:44 varna: 很不历史但是游戏性可以
+21:44 varna: 另外我跟你说个笑话
+21:45 Plough: 那と智ね
+21:45 varna: 曾经我知道了第一投法，然后我用泡芙机试了试
+21:45 varna: 咕嘿一声衮水里玉碎了
+21:45 Plough: ……滚水里是什么情况
+21:45 varna: 飞得太低，航向没找对，调尾舵来不及
+21:46 varna: 我提前压到投弹高度了
+21:46 Plough: Soga
+21:46 varna: 后来我开舰攻都把那东西当流星
+21:46 Plough: 话说航空战相关知识有啥书籍推荐吗
+21:46 varna: 急降下爆击可能的舰上攻击机（迫真）
+21:46 varna: 没
+21:46 Plough: 我想系统地补一下……
+21:47 varna: 我印象有个国外研究者讲中途岛战役的书非常好，似乎叫shattered sword
+21:47 varna: 但是那个书至少得掏钱，很可能要亚马逊，我没有
+21:47 Plough: 我去查查
+21:47 cleamoon_ joined channel
+21:47 cleamoon__ quit:Read error: Connection reset by peer
+21:47 varna: Shattered Sword: The Untold Story of the Battle of Midway
+21:47 varna: 这书的分析似乎做得很不错
+21:48 lhanjian joined channel
+21:48 varna: 有闲钱了我会考虑买一本
+21:48 varna: 这个至少不是什么禁书，只是没人引进
+21:49 wtp joined channel
+21:49 wtp: 2333
+21:49 xxxxxxxxx: 为何我造战舰总是4小时....
+21:49 varna: xxxxxxxxx: 长矛，那好
+21:49 varna: 拿*
+21:49 varna: 你已经是合格的勇士了，和我们一起打兔子吧
+21:50 varna: 这世界上很残酷的一件事，不是入坑七个月之后造出长门
+21:50 varna: 而是入坑七个月造出的长门在练到将近八十级之后还花摔
+21:51 wtp: 我直接在BOOT下的 相关内核文件给删了。
+21:51 Plough: 噗？
+21:51 Plough: 这本有中文版？
+21:51 varna: 而且武藏那个大破你知道么，是被孙子打的……
+21:51 Plough: http://www.amazon.cn/%E6%96%AD%E5%89%91-%E4%B8%AD%E9%80%94%E5%B2%9B%E6%B5%B7%E6%88%98%E5%B0%9A%E4%B8%8D%E4%B8%BA%E4%BA%BA%E7%9F%A5%E7%9A%84%E7%9C%9F%E7%9B%B8-%E4%B9%94%E7%BA%B3%E6%A3%AE%C2%B7%E5%B8%95%E6%AD%87%E5%B0%94/dp/B00DY21W0I/ref=sr_1_2?ie=UTF8&qid=1423749049&sr=8-2&keywords=shattered+sword
+21:51 varna: Plough: 据说翻译堪忧
+21:51 wtp: 两个版本删了一个然后开机就自动进入了选择内核 的界面。
+21:51 Plough: 原版174，有点贵……
+21:52 varna: 我先收藏下
+21:52 wtp: 进去后发现  ，问题还是没有解决，驱动安装的不是安装到 当前使用的内核里？
+21:52 varna: 等到三月份补助发了我就入一本先看看
+21:52 lhanjian quit:Remote host closed the connection
+21:52 xxxxxxxxx: 我就想出两个任务船这么难么...
+21:52 varna: xxxxxxxxx: 谁
+21:52 lhanjian joined channel
+21:52 wtp: 我再直接下载一个新的内核试试。
+21:52 varna: 亚马逊的好处是货到付款
+21:52 lhanjian quit:Remote host closed the connection
+21:53 xxxxxxxxx: 扶桑 山城
+21:53 varna: 可以直接掏现金的吧
+21:53 varna: xxxxxxxxx: 噗
+21:53 varna: 你这不对啊，我感觉你是牙买加黑人
+21:53 varna: 肥桑肥城这两位试试4163
+21:53 lhanjian joined channel
+21:53 Plough: 扶桑是我出得最晚的一只非稀有战舰……
+21:54 varna: 我出最晚的是日向
+21:54 varna: 三图才有
+21:54 cleamoon_: 4163+
+21:54 cleamoon_: 我已经喂雪风两个扶桑了
+21:55 varna: 成吨扶桑，活动图都有的
+21:55 xxxxxxxxx: 第一次战舰造出来的是比叡... 第二次又是四小时
+21:55 cleamoon_: 和我一个水平的rp
+21:55 varna: 我第一次是疝城，第二次大傻
+21:55 cleamoon_: 我第一艘是金刚
+21:55 varna: 刚造出战舰觉得超厉害，干谁谁死
+21:55 cleamoon_: 大傻多萌
+21:55 varna: 拿到赤城也是
+21:55 varna: 现在他们天天花摔
+21:55 cleamoon_: 赤诚从拿到就觉得坑
+21:56 varna: 航母馅大皮薄
+21:56 Plough: 刚造出战舰觉得超厉害+
+21:56 Plough: 后来发现还是莉害
+21:56 varna: 对面火力足够了，航母就会拖你后腿，比如5-5
+21:56 Plough: 我家这些都不算啥
+21:56 cleamoon_: 我喜欢馅小皮大的
+21:56 varna: 我现在就信水雷战队
+21:56 lhanjian quit:Remote host closed the connection
+21:56 zhuiqiuxiansheng joined channel
+21:56 xxxxxxxxx: 希望不要重 至少不要重
+21:57 varna: 水雷战队花摔了又好看又不费资源
+21:57 cleamoon_: 有了潜艇我就只需要小学生和正太了
+21:57 varna: 咣一声你就看一两个狗头跪地上了
+21:57 xxxxxxxxx: 我现在油21 钢7
+21:57 varna: 还会露出下乳
+21:58 varna: 还有二水战玉足秀
+21:58 varna: 仔细想想，某鬼百合在联合舰队里摔得还少么
+21:59 xxxxxxxxx: 话说每周任务是哪天刷新 周日?
+21:59 varna: 周一，北京时间早四点
+22:00 varna: 任务刷新的基准都是这个时间
+22:00 varna: 因为IJN五点起床
+22:00 cleamoon_: 我早上起来正好刷新演习
+22:00 lh_cat: 喵
+22:00 danielsun joined channel
+22:00 cleamoon_: 就是打不过
+22:00 varna: lh_cat: 你鼻小，弄大点再说话
+22:00 cleamoon_: danielsun: 新人？
+22:01 xxxxxxxxx: 演习里面有个90多级的怎么可能打得过...
+22:01 varna: 打
+22:01 varna: 打不过经验也多
+22:01 xxxxxxxxx: 打了 然后就输了
+22:01 varna: 演习经验是由对方旗舰等级，还有两方提督的等级差决定的
+22:01 cleamoon_: 元帅经常赢，反而是同级的打不过……
+22:01 varna: 哦不对，前两舰等级
+22:02 varna: cleamoon_: 一般元帅和大将都会放福利
+22:02 varna: 我一般是电酱放置，肛旗似乎是塞满了舰侦和电探的大凤
+22:02 cleamoon_: 那种6战舰带武藏的40-级提督
+22:02 varna: ...
+22:03 hope1 joined channel
+22:03 varna: hotatata
+22:03 xxxxxxxxx: 还好我没那么高级....
+22:03 cleamoon_: 还有看到旗舰夕立之类的，欢天喜地的进去，大凤大和…… tm欧皇……
+22:03 varna: 你这欧洲人说什么啊
+22:03 zhuiqiuxiansheng quit:Ping timeout: 252 seconds
+22:03 cleamoon_: 我只有路奥
+22:04 varna: 我陆奥是九十多级的时候狂周5-4出的
+22:04 danielsun: 嗯，刚来的。
+22:04 varna: 都周迷糊了
+22:04 cleamoon_: 回家
+22:04 varna: 每天小破的进去中破的出来
+22:04 hope1: 集训到后天结束
+22:04 varna: 八月份活动一开，我桶就两位数
+22:05 varna: hope1: ho?
+22:05 varna: hope1: 集训有妹子么
+22:05 lh_cat: 这不就是那追球先生么
+22:05 wtp: 什么集训？
+22:05 lh_cat: 用户名都一样的
+22:05 hope1: 没有
+22:05 xxxxxxxxx: 我觉得我第三艘战舰肯定还是4小时 我先自奶 明天如果能凑到600钢 就来回收flag
+22:06 hope1: 哦，前两天来了一个
+22:06 varna: xxxxxxxxx: 每天1440
+22:06 varna: hope1: 可爱否
+22:06 wtp: hope1 ：什么集训（ 好奇。——）
+22:06 lh_cat: 干完这票  我就回老家结婚
+22:06 hope1: 没了解
+22:06 varna: 以前我出去集训，看到有个白嫩的可爱萝莉，怒流一票口水
+22:07 cleamoon_ quit:Read error: Connection reset by peer
+22:07 cleamoon__ joined channel
+22:07 lh_cat: wtp: 你很好骑？
+22:07 varna: 当时我还是个挺纯洁的高中生
+22:07 wtp: “当然”
+22:07 varna: 好了
+22:07 hope1: wtp, 信息竞赛
+22:07 varna: 伙计们排单纵阵
+22:07 varna: wtp: 骑
+22:07 cleamoon__: 制造基佬的纯洁的高中生
+22:07 cleamoon__: wtp: 骑
+22:07 lh_cat: 他说他很好骑！
+22:07 wtp: 。。
+22:08 cleamoon_ joined channel
+22:08 cleamoon__ quit:Read error: Connection reset by peer
+22:08 lh_cat: danielsun: 你不是追球先生吗？
+22:09 xxxxxxxxx: 我一眼看成daniersun
+22:10 hope1: 这几天考acm赛制，不能骗分好不爽
+22:10 varna: 一日齐国提督演习 田忌的船比不过齐王 孙膑提议道：用BB去打他CA 用CA打他DD 用DD去打他BB 可得B胜也，于是田忌的金刚开局就打了齐王的DD...卒
+22:11 varna: ^ 田鸡赛马
+22:11 wtp: 重点考察选手的算法和程序设计能力
+22:12 wtp: 还有气球。
+22:12 varna: ACM赛制扼杀了RP导论衍生的相当数量诡计
+22:13 lhanjian joined channel
+22:13 lhanjian quit:Remote host closed the connection
+22:14 wtp: 和你们聊天经常使用搜索引擎，关键是还搜不到OTL
+22:14 wtp: 还有比这更打击人的么。
+22:14 lhanjian joined channel
+22:14 T2: 啊哈哈哈，劳资就说了要艹回去就已经不能愉快滴玩耍了呢嗯，嘛，那就撸去了，诸君腋间愉快。
+22:15 T2: 想被爆那没问题啊
+22:15 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:15 xxxxxxxxx: 卧槽南云机动部队和三川舰队任务送好多油!
+22:15 xxxxxxxxx: 不过我啥时候能完成呢....
+22:17 lhanjian quit:Remote host closed the connection
+22:17 cleamoon_ quit:Ping timeout: 246 seconds
+22:18 lhanjian joined channel
+22:18 xxxxxxxxx: 或许明天我应该先试试看造川内出来做个任务
+22:18 wtp quit:Remote host closed the connection
+22:19 tutu_wind quit:Ping timeout: 245 seconds
+22:19 varna: 敲github帐号的时候第一反应居然是usaco gateway的旧帐号和密码……
+22:19 danielsun: <lh_cat>：你怎么知道？
+22:19 varna: xxxxxxxxx: 赤城人人都有，加贺都会有的
+22:20 varna: 不过你不如开第三舰队之后把大建功能开启的任务解了，我记得有八百油
+22:20 xxxxxxxxx: 八百油 我油最多的时候也就900
+22:21 xxxxxxxxx: 听上去好厉害!
+22:21 tutu joined channel
+22:21 lhanjian quit:Remote host closed the connection
+22:22 varna: 毕竟上来就是油荒，都是油荒……
+22:22 lhanjian joined channel
+22:22 varna: 哦操
+22:23 varna: Travis CI一片白茫茫……
+22:25 danielsun quit:Quit: Leaving
+22:25 Plough: 要不是油荒不会那么快就跟深海打起来把
+22:25 Plough: 吧*
+22:26 lhanjian quit:Remote host closed the connection
+22:26 zhuiqiuxiansheng joined channel
+22:26 varna: 马勒戈壁
+22:26 varna: 我弄好github仓库之后travis上不去了
+22:26 varna: 傻逼ISP
+22:27 Plough: 别激动，打打E5冷静下
+22:27 varna: 毕竟我是E5咸
+22:28 Plough: 等我斩掉倒是可以借你体验下
+22:28 Plough: 前提是我能斩掉
+22:28 varna: 不必了
+22:28 varna: 下次如果还有战犯勋章我再去弄一个吧
+22:28 Plough: 然后下次福利式活动
+22:28 xxxxxxxxx: 我! 要! 远! 征! 一! 万! 次!
+22:28 Plough: 同样甲级勋章
+22:29 Plough: 角　川　暴　破
+22:29 Plough: 爆*
+22:29 varna: 我再也不信什么中型活动
+22:29 varna: 所谓中型就是不三段锁船
+22:30 Plough: 下次“我不锁三段，我锁五段”
+22:30 varna: 六万油这次能打个鸟啊
+22:30 Plough: 能打鸟
+22:30 varna: 按这次的网络和练度，六万油够我秋活通关三次
+22:30 Plough: 光E5我已经喷出七八万了
+22:31 varna: 中型活动（迫真）
+22:31 varna: E5就得一户愚吕
+22:31 Plough: 还差两万
+22:31 varna: 除了智商你还能赌什么
+22:31 varna: 武大么
+22:31 Plough: 等明后天就喷出来了
+22:31 Plough: 智商啊
+22:31 Plough: 我家舰娘智商很搞的
+22:31 Plough: 高*
+22:31 Plough: 你看白天就把副院长打到29血了
+22:31 varna: 操，travis ci上不去了
+22:34 Plough: 说起来，昨天晚上我进Boss进了多少次来着
+22:34 Plough: 应该差不多有十次了
+22:35 Plough: 剧情无一例外都是正副院长大人气，白天根本没人鸟底下三只
+22:35 Plough: 至于晚上？晚上谁还管旗舰啊
+22:36 varna: 还是上不去
+22:36 varna: 我得找个代理……
+22:37 lh_cat quit:Ping timeout: 264 seconds
+22:39 lh_cat joined channel
+22:42 lhanjian joined channel
+22:43 zhuiqiuxiansheng quit:Ping timeout: 244 seconds
+22:44 whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:46 xxxxxxxx joined channel
+22:48 xxxxxxxxx quit:Ping timeout: 264 seconds
+22:48 hackmyd joined channel
+22:51 isecLuck joined channel
+22:52 varna: http://pan.baidu.com/s/1mgDp8ow
+22:52 varna: 突然发现改二进度差好多
+22:54 Nangcr joined channel
+22:54 Nangcr: 喵
+22:57 varna: Nangcr: 肛
+22:57 Nangcr: http://img.vim-cn.com/16/533147cab927e6f513ced29921da9c1ed00099.png
+22:58 Nangcr: 这是什么
+22:58 varna: 家里的ISP太拙计了
+22:58 varna: 域名解析不能
+22:59 Plough: 青岛联通的DNS似乎确实各种抽风
+22:59 Plough: 又不是污染，就是抽
+22:59 Nangcr: 工作舰 明石 get
+22:59 Plough: 欧洲人
+22:59 Plough: 打
+22:59 Nangcr: 明石是什么船啊？
+22:59 Nangcr: 很稀有？
+22:59 varna: 欧洲人
+22:59 varna: 肛
+23:00 varna: 你能上维基吧
+23:00 isecLuck quit:Remote host closed the connection
+23:00 Nangcr: 我查了啊，就是自动修船啊
+23:00 varna: 哦，知道就好办了
+23:00 Nangcr: 不还是要耗资源吗
+23:00 varna: 改修工厂也知道吧
+23:00 varna: 你可以不挂着修，没关系
+23:00 Nangcr: 那是啥？
+23:00 varna: 明石旗舰，鼠标悬停在工厂图表上几秒钟，有惊喜
+23:01 Nangcr: 我就e1想捞个傻级，结果什么伊势，苍龙全出来了
+23:01 Nangcr: 刚才才捞个大傻
+23:01 tutu quit:Ping timeout: 255 seconds
+23:01 Nangcr: OAO我看看
+23:01 varna: 另外有关明石修船，我就一个解释：你周5-4有用
+23:01 varna: 至于活动图捞金刚级简直是欧洲人所为
+23:01 Nangcr: 可是。。我手机怎么悬停鼠标
+23:02 varna: 自己研究下
+23:02 Nangcr: 我不想要金刚啊，榛名好可爱
+23:02 varna: 咱们说个问题
+23:02 Nangcr: 啥？
+23:02 varna: 第一战队：长陆 第二战队：航战天国 第三战队：四傻 超战舰：那俩
+23:02 varna: 这是日本二战期间全部的战列舰
+23:03 varna: 合计12
+23:03 Nangcr: OAO 那两是撑伞的大姐姐和武藏吗
+23:03 varna: 战力已经不足了，能入手的话一个也不能少
+23:03 varna: 是
+23:04 Nangcr: 可是金刚现在也是撑伞的大姐姐了
+23:04 Plough: 金刚撑伞什么情况
+23:04 varna: 墨迹出扶桑果断出金刚
+23:04 varna: Plough: 动画OP
+23:05 Plough: ……
+23:05 Plough: 哦对
+23:05 Plough: 撑闪也没用，他装的是356炮
+23:05 varna: 噗，Glade不能调窗口颜色
+23:07 Nangcr: OAO我继续e1炸鱼了
+23:07 hackmyd quit:
+23:07 varna: E1没什么捞的
+23:07 Nangcr: 出扶桑大姐姐或者傻级另外的就停
+23:07 Nangcr: e2我打得过才行啊。。
+23:07 varna: 就想要矶风，但是E5咸我都不想去
+23:09 Nangcr: e2怎么打，我九号才抢到的号
+23:10 varna: 你的战舰航母都多少级，有什么样的主炮、飞机、电探
+23:10 Nangcr: 在这四天里我凑了岛风，金刚，苍龙，伊势改，时雨改，夕立，五十铃改，飞龙，山城
+23:10 Nangcr: 电探只有五十铃改送的
+23:10 Nangcr: 战舰航母十来级
+23:10 varna: 放弃吧
+23:11 varna: 我看看E2丙的奖励
+23:11 Nangcr: 飞机有e1送的烈风，和一吨舰功舰爆
+23:11 Nangcr: 主要在练水雷战队
+23:11 Nangcr: 时雨和夕立实在太好看了
+23:11 Nangcr: 。
+23:12 Plough: Kate和Val么
+23:12 varna: DNS抽风
+23:12 Plough: http://picpaste.com/wExngnSA.png 比你多一个……
+23:12 Plough: varna: 另外你试试该8.8.8.8？
+23:12 Plough: 改*
+23:12 varna: 不试了
+23:12 varna: 间歇性抽风
+23:13 code_new_: 甲作戦: 流星(六〇一空)、試製51cm連装砲、改修資材x3
+23:13 code_new_: 乙作戦: 流星(六〇一空)、応急修理要員
+23:13 code_new_: 丙作戦: 天山(六〇一空)、応急修理要員
+23:13 varna: 我记得E2丙给的东西挺惨的，是个飞机？
+23:13 varna: 天山似乎
+23:13 varna: 果然
+23:13 code_new_: 差太多了
+23:13 varna: 你慎重考虑
+23:13 Nangcr: 我想捞船。。前期船什么都缺
+23:13 varna: 能乙尽量不丙，要丙坚决E3
+23:13 varna: 活动图捞船都是捞超稀有的
+23:13 Nangcr: 起码给我傻级凑齐
+23:13 varna: 不是捞一发大建就能出的
+23:14 Nangcr: 可是我四天前才创的号，趁着活动e那么简单
+23:14 Nangcr: 不然慢慢建造要到什么时候才能凑齐
+23:16 Plough: 说起来试制46到现在都是浮云啊……
+23:16 Nangcr: 明石真有那么好？
+23:16 Plough: 哦对了，有人想起个事
+23:16 Sleepwalking quit:Quit: Leaving.
+23:16 Plough: 以前田中放了个卫星，说要实装纪伊
+23:16 Plough: 于是这次有人发现卫星终于落地了……
+23:19 Plough: 只不过落错阵营了
+23:19 Plough: 两个补给船全都大破不沉
+23:20 Plough: 只打掉一个
+23:20 Nangcr: 给粮舰什么用？
+23:22 lh_mouse: geordi, { auto fn = bind([](int a){ cout <<++a <<' '; }, 1); fn(); fn(); fn(); }
+23:22 geordi: 2 2 2 
+23:23 lh_mouse: geordi, insert & after int
+23:23 geordi: 2 3 4 
+23:24 condy: geordi: show
+23:24 geordi: { auto fn = bind([](int& a){ cout <<++a <<' '; }, 1); fn(); fn(); fn(); }
+23:29 lhanjian quit:Quit: Leaving
+23:31 xxxxxxxx: E1有扶桑??
+23:32 lh_mouse: 这地方其实是个坑点
+23:32 lh_mouse: 如果函数是一等的   允许一个函数改自己怎么处理
+23:33 lh_mouse: 因为函数变成了左值
+23:33 lh_mouse: 哦  这地方说得不确切
+23:33 lh_mouse: 函数变成了对象左值
+23:39 Nangcr: 有扶桑
+23:40 lh_mouse: Nangcr, 揉揉
+23:44 varna: 看着一堆欧洲人在凑扶桑，我还真挺悲伤的
+23:48 varna: 另外继续征求Perl 5.16志愿者
+23:48 varna: HOI::Comprehensions最新的版本已经没有依赖了
+23:49 varna: 持续更新的最新版程序可以在这里 https://github.com/Akvelog/HOI-Comprehensions 获得
+23:50 dantmnf: 回来一看，发现一个欧洲人
+23:50 dantmnf: 悲伤的故事
+23:50 varna: 干死那些殖民者
+23:51 varna: 用赤炼瓦糊他们脑袋
+23:52 dantmnf: 红砖拍头说这么文艺干啥（
+23:52 varna: 江田岛兵学校的红砖好歹是英国进口
+23:53 varna: 撤退睡觉
+23:54 varna: 诸君武运
+23:54 varna quit:Quit: leaving

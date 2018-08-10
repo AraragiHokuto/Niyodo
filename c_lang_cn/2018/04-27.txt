@@ -1,0 +1,117 @@
+00:20 lh_mouse quit:Ping timeout: 240 seconds
+00:39 matchray: __int128_t 呢
+00:40 ifr0zen joined channel
+00:40 hashjian_l: matchray: mr酱来了
+00:53 matchray: geordi是誰的
+00:54 matchray: --precedence 是怎麼做的
+00:56 yonka quit:Remote host closed the connection
+03:01 yangwang1999 quit:Remote host closed the connection
+03:05 ifr0zen quit:
+03:26 \s quit:Ping timeout: 256 seconds
+03:30 Mokou: hashjian_l: 没有
+07:45 rvier_roit[IRC]2 quit:Remote host closed the connection
+08:21 chenliang joined channel
+08:31 sixand quit:Ping timeout: 256 seconds
+08:52 yonka joined channel
+08:55 jingjing- joined channel
+08:57 yonka quit:Ping timeout: 260 seconds
+08:59 jingjinghack quit:Ping timeout: 255 seconds
+09:04 cnbleu joined channel
+09:33 lh_mouse joined channel
+09:36 ifr0zen joined channel
+09:43 yonka joined channel
+09:45 yonka quit:Read error: Connection reset by peer
+09:45 yonka joined channel
+09:49 yonka quit:Ping timeout: 240 seconds
+09:56 yonka_ joined channel
+10:00 yonka_ quit:Ping timeout: 256 seconds
+10:03 yonka joined channel
+10:10 lh_ideapad joined channel
+10:51 Youmu: matchray: eelis 的
+10:51 Youmu: geordi_: help
+10:51 geordi_: Mini-manual:  http://www.eelis.net/geordi/
+10:52 Youmu: precedence 只是按照文法搞了一下吧
+10:55 \s joined channel
+10:55 \s quit:Changing host
+10:55 \s joined channel
+11:03 ifr0zen quit:
+11:05 ifr0zen joined channel
+11:17 ifr0zen quit:
+11:53 yonka quit:Remote host closed the connection
+12:00 chenliang quit:Read error: Connection reset by peer
+12:00 chenliang joined channel
+12:49 yonka joined channel
+12:54 yonka quit:Ping timeout: 264 seconds
+12:54 yonka joined channel
+13:00 jingjing- quit:Remote host closed the connection
+13:00 jingjinghack joined channel
+13:04 cleamoon_ quit:Quit: Connection closed for inactivity
+13:08 jingjinghack quit:Remote host closed the connection
+13:11 jingjinghack joined channel
+14:08 yonka quit:Remote host closed the connection
+14:10 yonka joined channel
+14:39 junckvegetable joined channel
+14:43 jingjinghack quit:Ping timeout: 255 seconds
+14:47 jingjinghack joined channel
+14:48 junckvegetable quit:Remote host closed the connection
+14:53 iyzsong joined channel
+15:02 lh_ideapad quit:Remote host closed the connection
+15:05 iyzsong quit:Ping timeout: 268 seconds
+15:16 lh_ideapad joined channel
+15:43 yonka quit:Remote host closed the connection
+15:52 yonka joined channel
+16:22 yonka quit:Remote host closed the connection
+16:23 blackskygg joined channel
+16:30 blackskygg quit:Quit: Page closed
+16:54 cnbleu` joined channel
+16:56 cnbleu quit:Ping timeout: 268 seconds
+17:03 yonka joined channel
+17:38 yonka quit:Remote host closed the connection
+18:02 cnbleu` quit:Ping timeout: 240 seconds
+18:03 hashjian_l: Mokou: 少前需要几种队？
+18:03 hashjian_l: AR/SMG队 RF/HG/SMG队 MG/SG队 还有？
+18:04 cnbleu`` joined channel
+18:22 chenliang quit:Read error: Connection reset by peer
+18:29 iyzsong joined channel
+18:55 yonka joined channel
+18:59 yonka quit:Remote host closed the connection
+19:00 yonka joined channel
+19:12 cnbleu`` quit:Remote host closed the connection
+19:13 cnbleu`` joined channel
+19:24 cleamoon_ joined channel
+19:28 \s quit:Read error: Connection reset by peer
+19:30 varna joined channel
+19:32 varna quit:Client Quit
+19:32 varna joined channel
+19:33 varna: 见鬼了，LAN震荡成这个样子
+19:39 \s joined channel
+19:39 \s quit:Changing host
+19:39 \s joined channel
+19:40 lh_ideapad: http://lists.gnu.org/archive/html/nano-devel/2018-04/msg00014.html
+19:48 iyzsong quit:Ping timeout: 240 seconds
+20:08 Mokou: https://wx1.sinaimg.cn/mw690/58693659gy1fqrg5tkq4ij20qo0zkjvs.jpg
+20:10 yonka quit:Remote host closed the connection
+20:10 varna: POI?
+20:13 Mokou: https://wx4.sinaimg.cn/mw1024/827855b1gy1fqrft5e3rzg208w0527wi.gif
+20:15 varna: POI!
+20:22 hashjian_l: varna: 卧槽
+20:23 varna: hashjian_l: 啊？你真的雷普小姐姐了？
+20:24 hashjian_l: 啊？
+20:24 varna: 不然你卧哪里的槽
+20:25 varna: 而且懂得雷普，你是屑吧（觉察）
+20:25 hashjian_l: SVD已经基本满扩了
+20:25 hashjian_l: 等经验书就行
+20:26 varna: 说起来，读研的时候偶尔听人说SVD，当时第一反应还奇怪一下
+20:26 varna: 后来想起来是奇异值分解
+20:28 varna: 啊啊，最近流行的menhera酱，不知道有没有本子呢
+20:29 varna: https://www.bilibili.com/video/av22450796?from=search&seid=3879366259990732350 MENhera酱
+20:47 hashjian_l: 不行了不行了
+20:52 hashjian_l: varna: 打不动土豆了
+20:54 varna: 土豆啊
+20:54 varna: 我现在就打算过节搞个突袭面具
+20:54 varna: 然后就胡乱抽点红枪箱子
+20:55 hashjian_l: 打不动打不动
+20:55 hashjian_l: 我还是看我大哥吧
+20:57 varna: 你大哥没有智力（
+20:58 iyzsong joined channel
+21:04 hashjian_l: 我也没有

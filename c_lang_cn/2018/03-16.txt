@@ -1,0 +1,361 @@
+00:04 Null_hth joined channel
+00:04 varna: root
+00:06 jimmylu2333-rpi3 joined channel
+00:07 cleamoon_: ´ ▽ ` )ﾉ
+00:07 varna: (｡･ω･)ﾉ
+00:10 hanjian_l: 格里芬用人形当士兵，一定有阴谋
+00:13 jimmylu2333-rpi3 quit:Quit: WeeChat 1.6
+00:14 jimmylu2333-rpi3 joined channel
+00:20 lh_mouse quit:Ping timeout: 264 seconds
+00:21 cleamoon_: 噗，我校某哲 学课考试最后一题：如果你觉得这个考试太难怎么办，标准答案：不考了，回家睡大觉，坑爹的是，这题tmd算分.......
+00:48 condy: 。。。
+00:49 iyzsong: 2333
+00:50 Null_hth quit:Remote host closed the connection
+00:53 iyzsong quit:Ping timeout: 240 seconds
+01:17 ariwaranosai quit:Quit: Connection closed for inactivity
+01:20 CyrusYzGTt quit:Ping timeout: 240 seconds
+01:34 jimmylu21 joined channel
+01:35 varna quit:Ping timeout: 256 seconds
+01:36 jimmylu21 quit:Client Quit
+01:36 jimmylu21 joined channel
+01:37 CyrusYzGTt joined channel
+01:39 jimmylu21 quit:Client Quit
+01:39 jimmylu21 joined channel
+01:40 jimmylu2333-rpi3 quit:Quit: WeeChat 1.6
+01:42 jimmylu21 quit:Client Quit
+01:42 jimmylu2333-sr joined channel
+01:43 jimmylu2333-sr quit:Client Quit
+01:44 jimmylu2333-sr joined channel
+02:15 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+02:15 jimmylu2333-sr joined channel
+02:29 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+02:29 jimmylu2333-sr joined channel
+02:33 jimmylu2333-sr quit:Client Quit
+02:33 jimmylu2333-sr joined channel
+02:39 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+02:39 jimmylu2333-sr joined channel
+02:43 jimmylu2333-sr quit:Client Quit
+02:44 jimmylu2333-sr joined channel
+02:52 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+02:52 jimmylu2333-sr joined channel
+02:57 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+02:58 jimmylu2333-sr joined channel
+02:59 jimmylu2333-sr quit:Client Quit
+02:59 jimmylu2333-sr joined channel
+03:02 jimmylu2333-sr quit:Client Quit
+03:02 jimmylu2333-sr joined channel
+03:04 CyrusYzGTt quit:Ping timeout: 246 seconds
+03:57 cleamoon_ quit:Quit: Connection closed for inactivity
+03:58 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+03:58 jimmylu2333-sr joined channel
+04:01 jimmylu2333-sr quit:Client Quit
+04:01 jimmylu2333-sr joined channel
+04:04 jimmylu2333-sr quit:Client Quit
+04:05 jimmylu2333-sr joined channel
+04:05 jimmylu2333-sr quit:Client Quit
+04:06 jimmylu2333-sr joined channel
+04:09 jimmylu2333-sr quit:Client Quit
+04:10 jimmylu2333-sr joined channel
+04:23 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+04:23 jimmylu2333-sr joined channel
+05:10 cleamoon_ joined channel
+08:23 FrankHB joined channel
+08:25 FrankHB quit:Client Quit
+08:46 lh_mouse joined channel
+08:55 Stevearzh quit:Ping timeout: 260 seconds
+08:57 Stevearzh joined channel
+09:36 lh_ideapad joined channel
+09:38 yonka joined channel
+09:40 yonka_ joined channel
+09:40 jimmylu2333-rpi3 joined channel
+09:43 yonka quit:Ping timeout: 260 seconds
+09:44 yonka_ quit:Ping timeout: 264 seconds
+09:47 yonka joined channel
+09:51 yonka quit:Ping timeout: 240 seconds
+09:52 jimmylu2333-rpi3 quit:Remote host closed the connection
+09:53 jimmylu2333-rpi3 joined channel
+09:53 jimmylu2333-rpi3 quit:Client Quit
+09:54 yonka joined channel
+10:18 jimmylu2333-sr quit:Quit: WeeChat 2.0.1
+10:18 jimmylu2333-sr joined channel
+10:21 root_ joined channel
+10:22 jimmylu2333-rpi3 joined channel
+10:22 jimmylu2333-rpi3 quit:Client Quit
+10:23 jimmylu2333-rpi3 joined channel
+10:26 jimmylu2333-rpi3 quit:Remote host closed the connection
+10:43 lh_ideapad: perl 唯一能让我感到欣慰的地方就是数组不是隐式 pass by reference 的。
+10:44 matchray: pass by value性能糟糕嗎
+10:45 lh_ideapad: matchray, 你忽略重点了。
+10:46 lh_ideapad: 数组是不能 pass by value 的。
+10:46 lh_ideapad: my @a = (0,1,2,3); foo(\@a); # pass by ref
+10:47 lh_ideapad: foo(@a);  # identical to `foo(0,1,2,3);` except that values are not copied back to the array upon the function's return.
+10:48 lh_ideapad: sub foo { $_[0] .= " world!"; } my $a = "hello"; foo($a);
+10:48 lh_ideapad: 结果 $a 是 "hello world!"。
+10:48 lh_ideapad: 也就是，标量是隐式 pass by ref 的。
+10:51 matchray: 我已经不会perl了
+10:51 matchray: 告诉我怎么捡起来
+10:51 lh_ideapad: 不对。
+10:51 lh_ideapad: 还是 pass by ref 。
+10:51 lh_ideapad: 窝才学第二天。
+10:51 lh_ideapad: matchray, 神犇教窝 perl ！
+10:52 lh_ideapad: 刚才写错了。
+10:53 lh_ideapad: sub foo { $_[0] .= $_[1]; } my @a = ("hello ","world!"); foo(@a); print("$a[0]\n$a[1]\n");
+10:53 lh_ideapad: lh_mouse@lhmouse-ideapad ~/Desktop $ ./test.pl 
+10:53 lh_ideapad: hello world!
+10:53 lh_ideapad: world!
+10:54 matchray: scalar pass by ref 对的吧
+10:55 lh_ideapad: 好像是的。
+10:55 lh_ideapad: 你们这群非主流语言。
+10:55 lh_ideapad: 语言实现全是私货。
+10:56 lh_ideapad: C C艹 一堆实现。Java 几家，JavaScript 几家，SQL 几家。
+10:56 lh_ideapad: PY Perl PHP 好像就只有一家的实现。
+10:58 matchray: py有多家
+10:58 matchray: perl可能只有一家
+10:58 matchray: ocaml只有一家
+10:58 matchray: haskell几乎只有一家
+10:58 matchray: rust几乎只有一家
+10:59 hanjian_l: python/php 都有很多家了
+11:02 lh_ideapad: “You don't elect politicians to commit crimes; you elect politicians to make your crimes legal.” - Matt Taibbi
+11:02 lh_ideapad: hanjian_l, 推荐一个能嵌入 c 的 php 引擎呗。
+11:03 hanjian_l: lh_ideapad: HHVM行不行？
+11:03 hanjian_l: php不是可以写C模块吗？内嵌不行吧？
+11:03 lh_ideapad: hanjian_l, 我需要的是 C 调用 php。
+11:04 hanjian_l: GG
+11:04 lh_ideapad: 不是传统 CGI 或 FastCGI 的工作模式。
+11:04 lh_ideapad: hanjian_l, 渣渣。
+11:04 hanjian_l: PHP渣渣
+11:06 hanjian_l: Facebook有个古董https://github.com/facebookarchive/phpembed
+11:20 root_ quit:Ping timeout: 240 seconds
+13:00 cleamoon_ quit:Quit: Connection closed for inactivity
+13:33 root joined channel
+13:33 root is now known as Guest91912
+13:39 Guest91912 quit:Ping timeout: 263 seconds
+14:32 Khazeus joined channel
+14:38 root joined channel
+14:39 root is now known as Guest90637
+14:42 lh_ideapad: perl 怎么连 interpreter 都这么 SB 的。  http://perldoc.perl.org/perlembed.html#Compiling-your-C-program
+14:45 FrankHB joined channel
+14:46 FrankHB: 夭寿啦吱居然撸perl了……
+14:47 FrankHB: 吱驼僧……
+14:51 * lh_ideapad slaps FrankHB around a bit with a large trout
+14:52 * lh_ideapad slaps FrankHB around a bit with a large varna
+14:52 * lh_ideapad 咸鱼突刺！
+14:52 lh_ideapad: “A specification that will not fit on one page of 8.5x11 inch paper cannot be understood.” - Mark Ardis
+15:01 FrankHB: 用了冠词毫无卵用。一个不够就再来一坨。
+15:02 lh_mouse quit:Read error: Connection reset by peer
+15:04 lh_mouse joined channel
+15:29 whocares_2_ joined channel
+15:29 whocares_2 quit:Ping timeout: 265 seconds
+15:43 matchray: 求改进 fuzzy matcher https://github.com/cquery-project/cquery/blob/master/src/fuzzy_match.cc
+15:44 matchray: lh_ideapad: 要比clangd好
+16:07 lh_mouse: 高深莫测，膝行跪拜。
+16:08 lh_mouse: 窝是算法白。
+16:15 Guest90637 quit:Quit: leaving
+16:34 hanjian_l: 喵
+16:39 CyrusYzGTt joined channel
+16:42 Khazeus quit:Quit: Connection closed for inactivity
+17:15 hanjian_l: matchray: 喵
+18:05 lh_ideapad: 谁家的野猫。
+18:05 lh_ideapad: 丢出去。
+18:05 lh_ideapad quit:Remote host closed the connection
+18:07 lh_ideapad joined channel
+18:15 hanjian_l: lh_mouse: 喵！！！喵呜！嗷呜！（咬，挠，扯三连击
+18:17 leechina joined channel
+18:26 FrankHB quit:Ping timeout: 246 seconds
+18:31 leechina quit:Ping timeout: 246 seconds
+18:46 yonka quit:Remote host closed the connection
+18:47 varna joined channel
+18:49 lh_ideapad: varna, 
+18:49 lh_ideapad: [14:42:05] <lh_ideapad> perl 怎么连 interpreter 都这么 SB 的。  http://perldoc.perl.org/perlembed.html#Compiling-your-C-program
+18:50 Mokou: 噫，这打得太准了
+18:50 Mokou: 刚好把我的火力点全废了……
+18:50 varna: Perlembed Perlxs 以及相关的internals，做得极丑
+18:51 varna: Perl语言本身挺幽默的，但实现又大又烂
+18:51 Mokou: 赌一把，反正还有霞妈在
+18:51 varna: 你问我他SB不SB，我说一个无可奉告，因为真的不好
+18:51 varna: Mokou: 高兴帝复活了 https://www.bilibili.com/video/av20814421/
+18:51 hanjian_l: varna: 竟然下班了
+18:52 varna: 三月份项目不紧，我手头目前就两个，后面暂时也只排了一个
+18:52 varna: 稍微有点时间整理下技术规划，不然再搞就太乱了——虽说我估计阻力也很大
+18:53 varna: 光说了业务目标，然而做系统的人没法分解出技术指标，那就是夏姬八推锅
+18:54 varna: 遇到问题一顿乱骂都骂不到点子上的事情也照样有
+18:54 Mokou: 135/390
+18:54 Mokou: 刁了
+18:54 varna: 吔点东西
+18:55 lh_ideapad: varna, 有第三方的实现么。
+18:56 varna: 没有，因为过分臃肿，跑UT都跑不完
+18:56 varna: 我的建议是，如果你不是来陶冶情操的，就放弃Perl吧
+18:56 lh_ideapad: 0.0
+18:58 varna: btw Perl有一个高度裁剪的核心实现，但那基本是面向Perl核心开发者，用来验证功能的，不能做业务
+18:59 hanjian_l: perl6吧
+18:59 varna: 不是6
+18:59 varna: 6的问题更大——他推不开……
+18:59 Mokou: Perl6是什么
+18:59 Mokou: 不是Ruby么
+18:59 varna: 不存在的
+18:59 varna: RUA
+18:59 Mokou: lua
+19:00 hanjian_l: lunar
+19:05 iyzsong joined channel
+19:07 lh_ideapad: 笑话： lua 里下标从 1 开始。
+19:07 varna: RUA
+19:07 lh_ideapad: 笑话： lua 里 0 是真。
+19:15 lh_ideapad: 好像没啥能用的脚本语言了。
+19:18 hanjian_l: 下班
+19:19 yonka joined channel
+19:20 varna: (｡･ω･)ﾉYO仙官
+19:24 yonka quit:Ping timeout: 248 seconds
+19:29 lh_ideapad: ?????????
+19:31 lh_ideapad quit:Remote host closed the connection
+19:35 lichun joined channel
+19:36 lichun: 大家好，今天开始也加入IRC，希望能和你们一起探讨程序。
+19:37 varna: 欢迎欢迎
+19:37 varna: 不过也请放松
+19:37 varna: 这里更多是茶馆，想聊什么聊什么
+19:38 lichun: 好的，不知道大家都从事什么方面的工作？
+19:38 varna: 严肃过头的话，恐怕也会很失望
+19:38 varna: 开发
+19:39 Stevearzh quit:Read error: Connection reset by peer
+19:40 Stevearzh joined channel
+19:41 varna: 还有些人是学生（震声）
+19:45 varna: lichun: 话说，阁下是从freenode上逛过来的，还是其他途径了解的呢
+19:49 lichun: 一直关注qemu的频道，今天上网搜了下我天朝有哪些频道，所以就加入了这个
+19:50 varna: soka
+19:50 varna: 欢迎
+19:50 hanjian_l: 烧酒前线
+19:50 hanjian_l: 欢迎萌新
+19:50 varna: 不过qemu我从来没正经用过……以前也最多就是用bochs
+19:51 Mokou: 其实我用qemu比较多
+19:51 lichun: 用bochs，你已暴露出了你的年纪
+19:51 Mokou: bochs每次都要弄一遍软盘镜像，太麻烦了
+19:52 lichun: Mokou好，我专注于qemu的block device子系统
+19:52 varna: cool
+19:53 varna: 如果有相关分享或者类似讲座，到时候还望不吝赐教
+19:53 hanjian_l: 原来是大佬
+19:53 varna: hanjian_l: uccu
+19:54 varna: 又不是小姐姐
+19:54 Mokou: 摩耶：摸了
+19:54 * Mokou 大破进击
+19:56 varna: hanjian_l: 说起来，我还是不太明白你们需要研究luajit哪个方面……还是说就先撸一遍有个了解？
+19:56 hanjian_l: 我们哪个方面都不需要研究
+19:56 varna: puuuuuuuuuuuuuu
+19:57 hanjian_l: 只要profile然后看看哪里需要提升性能
+19:57 hanjian_l: 改源码什么的以后再说
+19:57 lichun: 这个频道是讨论C语言技巧的吗
+19:57 varna: 什么语言都可以
+19:57 lichun: 那太没意思了
+19:57 Mokou: 115/390 刁
+19:57 varna: ho
+19:57 hanjian_l: 之前考虑要上gc64，结果也不合适
+19:58 varna: 这里之所以叫c_lang_cn，是因为组织者原本都是百度C语言吧的
+19:58 varna: 不过现在那里确实变成彻头彻尾的垃圾堆了
+20:00 varna: 所以说到底，这里其实更多地变成了一个小圈子，没什么营销，也不在意发展
+20:02 varna: btw bochs暴露年龄是什么状况
+20:05 lichun: bochs过时了吧
+20:05 varna: 是的
+20:06 varna: 而且本来bochs就是个过分粗糙的实现
+20:06 varna: 也不是什么vm
+20:08 * Mokou 大破进击
+20:11 Mokou: 斩了
+20:12 Mokou: 霞妈二选一强无敌
+20:13 hanjian_l: 喵喵喵
+20:13 varna: 今天早上起来发现一个悲剧
+20:13 hanjian_l: 梦遗了？
+20:14 varna: GPDP搜不到我外面的2.4GHz wlan了
+20:14 varna: 不可能的，讲道理，加班期间我一天至少一管，怎么可能梦遗……
+20:16 varna: 总之怀疑是蛆洞问题，明天修一下
+20:18 varna: 啊但是有点后悔……
+20:18 varna: Gemini PDA看起来更酷炫一些，虽说还没发售
+20:21 lh_ideapad joined channel
+20:23 hanjian_l: 蛆洞还行
+20:25 hanjian_l: 烧酒赞森
+20:25 varna: 小公主mod3……衣服挺帅的
+20:25 Mokou: 这都mod3了
+20:25 Mokou: 可怕
+20:26 hanjian_l: 大佬
+20:26 FrankHB joined channel
+20:26 varna: 恥球来了
+20:31 Mokou: 总之明天开始就要进E7了
+20:32 Mokou: 其实我在考虑E7要不要直接放弃甲等
+20:32 Mokou: 事情太多了
+20:32 varna: (｡･ω･)本格的酸和本格的臭 emmmmm
+20:33 iyzsong: orz
+20:35 YHQ604cHawk joined channel
+20:35 YHQ604cHawk quit:Remote host closed the connection
+20:39 hanjian_l: 突突突
+20:40 varna: 疲不幸 追突黑色高级车（念经
+20:41 Mokou: 僧だよ
+20:41 Mokou: 啊不对，嘘だよ
+20:45 Mokou: 有人给我发了张截图，告诉我E7甲只需要三万资源
+20:45 Mokou: 我还是莽一波试试看
+20:45 varna: 僧だよ（便乘）
+20:48 Mokou: 躺了，明天起来打E7
+20:48 Mokou: 武运
+20:50 hanjian_l: 我是变态我是变态我是变态
+21:02 varna: (｡･ω･)ﾉ点一份小姐姐的爱
+21:18 varna: 我驲，土豆又熟透了
+21:19 hanjian_l: 熟透了熟透了
+21:28 varna: MDZZ
+21:28 varna: 每天不骰个二十次，根本找不到像样的服
+21:39 varna: 二十分钟过去了，简直是……
+21:47 lh_ideapad quit:Remote host closed the connection
+21:50 varna: 我真是X了POI了
+21:53 hanjian_l: 路西法醒醒脑吧
+22:00 hanjian_l: https://usercontent.irccloud-cdn.com/file/GayTTfvu/Screenshot_2018-03-16-21-59-51-88.png
+22:00 hanjian_l: 原来美元可以定制的
+22:00 hanjian_l: 那么上图印的是谁还用说？
+22:00 varna: (｡･ω･)ﾉ他啊
+22:01 varna: 今天这服务器有毒
+22:02 hanjian_l: 他是谁啊？
+22:16 varna: 将近一个小时过去了……
+22:16 varna: 太智障
+22:18 varna: 放弃了，今天晚上就没一个服能用的
+22:19 varna: 十二点之后我再看看
+22:34 Rsplwe joined channel
+22:34 Rsplwe: .
+22:35 Rsplwe quit:Remote host closed the connection
+22:35 xhe joined channel
+22:36 varna: (｡･ω･)ﾉ
+22:36 hanjian_l: boss战直接把我卡掉线了
+22:36 varna: 去掉锁定之后，头一次感觉2B这么刺激……
+22:36 hanjian_l: 去你妹的育碧
+22:36 varna: 不愧神谷
+22:38 hanjian_l: 不用打了
+22:38 hanjian_l: 连不上啦
+22:40 hanjian_l: 我还是挖雷吧
+22:40 hanjian_l: varna: ps4还是应该老老实实玩单机为主的游戏
+22:41 varna: 育碧的问题
+22:42 runwei joined channel
+22:42 hanjian_l: 我还是看我老婆艾丽西亚吧
+22:42 runwei quit:Remote host closed the connection
+22:42 hanjian_l: 村姑大好
+22:42 varna: 你上一个老婆是不是叫蕾姆
+22:42 hanjian_l: 花姑娘大大的好
+22:42 hanjian_l: 我没有叫蕾姆的老师
+22:42 hanjian_l: 老婆
+22:43 runwei joined channel
+22:43 hanjian_l: 威尔金的中文名叫啥来着
+22:43 hanjian_l: 还有村姑的
+22:46 hanjian_l: 黄二斤
+22:50 runwei quit:Remote host closed the connection
+22:51 runwei joined channel
+23:00 varna quit:Ping timeout: 248 seconds
+23:03 varna joined channel
+23:17 FrankHB quit:Read error: Connection reset by peer
+23:18 FrankHB joined channel
+23:19 runwei quit:Remote host closed the connection
+23:19 runwei joined channel
+23:29 hanjian_l: varna: 虽然初代画面很渣，但是还不错啊
+23:30 yonka joined channel
+23:31 varna: 试了下之后觉得这个SLG的调调不太对口味
+23:32 hanjian_l: 射击比较嘎
+23:33 hanjian_l: 人民战争全民皆兵
+23:35 yonka quit:Ping timeout: 268 seconds
+23:35 varna: 啊啊，2B桑的PIGU...
+23:35 hanjian_l: 少尉，这是个排吧
+23:38 varna: sodayo（便乘）
+23:47 hanjian_l: 恶臭的梗
+23:48 hanjian_l: 他们的坦克长相奇葩啊
+23:52 iyzsong quit:Ping timeout: 240 seconds
+23:52 xhe quit:Quit: leaving
+23:55 \s_ joined channel

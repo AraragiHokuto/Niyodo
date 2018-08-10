@@ -1,0 +1,808 @@
+00:00 sleepwalking quit:Ping timeout: 246 seconds
+00:12 StardustX left channel:"undefined"
+00:14 tutu_wind joined channel
+00:48 lh_mouse quit:Read error: Connection reset by peer
+00:50 tutu_wind quit:Ping timeout: 260 seconds
+01:05 dantmnf quit:Quit: ZNC - http://znc.in
+01:19 dantmnf joined channel
+02:56 cleamoon_ quit:Ping timeout: 250 seconds
+04:02 cleamoon_ joined channel
+04:18 cleamoon_ quit:Ping timeout: 260 seconds
+04:26 cleamoon_ joined channel
+04:54 Youmu quit:Quit: Connection closed for inactivity
+05:22 cleamoon_ quit:Ping timeout: 265 seconds
+05:53 cleamoon_ joined channel
+07:04 cleamoon_ quit:Read error: Connection reset by peer
+07:05 cleamoon_ joined channel
+07:13 cleamoon_ quit:Read error: Connection reset by peer
+07:25 cleamoon_ joined channel
+07:33 cleamoon_ quit:Read error: Connection reset by peer
+07:34 cleamoon_ joined channel
+07:44 cleamoon__ joined channel
+07:44 cleamoon_ quit:Read error: Connection reset by peer
+07:47 whocares_2_ joined channel
+07:49 whocares_2 quit:Ping timeout: 272 seconds
+07:53 cleamoon__ quit:Read error: Connection reset by peer
+07:53 cleamoon__ joined channel
+08:01 cleamoon__ quit:Read error: Connection reset by peer
+08:02 cleamoon__ joined channel
+08:10 cleamoon__ quit:Read error: Connection reset by peer
+08:12 cleamoon__ joined channel
+08:20 cleamoon__ quit:Read error: Connection reset by peer
+08:21 cleamoon__ joined channel
+08:30 cleamoon__ quit:Read error: Connection reset by peer
+08:31 cleamoon__ joined channel
+08:41 cleamoon_ joined channel
+08:41 cleamoon__ quit:Read error: Connection reset by peer
+08:49 cleamoon_ quit:Read error: Connection reset by peer
+08:50 cleamoon_ joined channel
+08:58 cleamoon_ quit:Read error: Connection reset by peer
+08:59 cleamoon_ joined channel
+09:08 cleamoon_ quit:Read error: Connection reset by peer
+09:09 cleamoon_ joined channel
+09:17 cleamoon_ quit:Read error: Connection reset by peer
+09:18 cleamoon_ joined channel
+09:25 lh_mouse joined channel
+09:26 cleamoon_ quit:Read error: Connection reset by peer
+09:32 Stevearzh_ quit:Quit: Quit...
+09:34 hatelis joined channel
+09:34 iyzsong: 早~
+09:40 hatelis: 早～
+09:54 StardustX joined channel
+09:57 hoxily quit:Quit: Leaving
+10:12 Xilzzerts joined channel
+10:21 yzld2002 joined channel
+10:22 lh_mouse: [22:57:19] <hatelis> 话说send(std::move(buffer))为啥去掉std::move也能编译通过
+10:22 lh_mouse:   // pass by value 的接受左值会复制一个。
+10:23 lh_mouse: bool send(Buffer &&); // 这样就不接受左值了。
+10:24 hatelis: 其实是我二了，我脑补这个buffer是个unique了
+10:24 lh_mouse: 怎么会是。
+10:24 lh_mouse: 这个  buffer 其实是黑科技。
+11:03 Stevearzh joined channel
+11:03 Stevearzh quit:Changing host
+11:03 Stevearzh joined channel
+11:04 sleepwalking joined channel
+11:21 xxxxxxxx joined channel
+11:23 yzld2002 quit:Remote host closed the connection
+11:41 tutu joined channel
+11:42 tutu is now known as tutu_wind
+12:05 tutu_wind quit:Ping timeout: 260 seconds
+12:08 tutu_wind joined channel
+12:36 Youmu joined channel
+12:59 ASenR joined channel
+13:27 hatelis: 膜一下 Youmu
+13:27 MoBot: Youmu 好厉害
+13:27 hatelis: 膜一下 Youmu
+13:27 MoBot: 我告诉你们，我是身经百战了，见得多啦！ Youmu 的哪一个身体部位我没prpr过？
+13:37 iyzsong: 2333
+13:39 Youmu: iyzsong: prpr
+13:50 tutu_wind quit:Ping timeout: 240 seconds
+13:52 pocmon joined channel
+13:52 pocmon quit:Changing host
+13:52 pocmon joined channel
+13:58 tutu_wind joined channel
+13:59 Mokou joined channel
+14:25 pocmon quit:Quit: 闪...
+14:40 pocmon joined channel
+14:40 pocmon quit:Changing host
+14:40 pocmon joined channel
+15:02 lh_mouse: MoBot, Mo.
+15:02 lh_mouse: Mokou, Motou.
+15:04 hatelis: 膜一下 lh_mouse 
+15:04 MoBot: 你姿瓷 lh_mouse 吗？当然啦！
+15:04 hatelis: 连MoBot也滋瓷特首
+15:05 tutu_wind quit:Ping timeout: 260 seconds
+15:12 varna joined channel
+15:13 varna: lh_not_bot: 昨天多谢了，现在我的demo是这个样子 https://pastebin.mozilla.org/8855815
+15:13 varna: Mokou: ^
+15:13 varna: hatelis: ^
+15:14 hatelis: Got
+15:15 lh_mouse: exit(EXIT_FAILURE); 什么鬼。
+15:15 lh_mouse: abort() 多方便，短小精悍。
+15:15 varna: 我确实想过abort
+15:16 varna: 不过是胡写的demo的话这些事情我不太在意，这里strlen我都是滥用的
+15:17 lh_mouse: if (SSL_CTX_use_certificate_file(ctx, argv[4], SSL_FILETYPE_PEM) < 1) {  // 这个有点问题。
+15:17 lh_mouse:  if(::SSL_CTX_use_PrivateKey_file(ret.get(), private_key, SSL_FILETYPE_PEM) != 1){ DEBUG_THROW(Exception, sslit("::SSL_CTX_use_PrivateKey_file() failed")); }
+15:17 lh_mouse:  if(::SSL_CTX_use_certificate_file(ret.get(), cert, SSL_FILETYPE_PEM) != 1){
+15:17 lh_mouse: 这三个全是 != 1
+15:18 varna: 明白了
+15:18 varna: 我改一下，省得忘
+15:18 lh_mouse: ::OpenSSL_add_all_algorithms();
+15:18 lh_mouse: ::SSL_library_init();
+15:18 lh_mouse: std::atexit(&::EVP_cleanup);
+15:18 lh_mouse: ヲ这里用 pthread_once 初始化的。
+15:19 lh_mouse: 你看怎么方便怎么弄，丢 main 里未尝不可。
+15:19 varna: 真的是线程相关么？
+15:19 lh_mouse: 不是啊。
+15:19 varna: 哦，那就不管了
+15:19 varna: 这个demo的形式就是p7并发的用法，流程都是顺序走的
+15:19 lh_mouse: ヲ这里因为 client 的 context 偷懒写了个静态对象，它的构造函数位于 main 的第一个语句之前，所以就没法丢 main 里面。
+15:20 varna: 哦
+15:20 varna: thx for tips
+15:23 Xilzzerts: openssl的内存管理真心坑
+15:24 varna: 别的我不管了，幸好缓冲区是我自己出的
+15:24 varna: 那天lhj给的zmq仿制品连缓冲区都不让我自己弄
+15:25 lh_mouse: 你这里用的是 SSL_set_accept_state + SSL_read 对吧？
+15:26 varna: 对
+15:26 lh_mouse: ヲ用的是 SSL_accept + SSL_read。
+15:26 varna: SSL_accept会试图走完整个握手流程吧
+15:26 varna: 又读又写的
+15:26 lh_mouse: 是的。
+15:26 varna: 这里我需要读写分开，所以就试着吃他的错误码
+15:26 lh_mouse: 因为我用异步的这个地方区别不大。
+15:27 varna: 这里对我来说会造成挺大的差别，直接accept可能会监测不到
+15:34 lh_mouse: varna, 你这个做法还是干净点。
+15:34 lh_mouse: https://github.com/lhmouse/poseidon/commit/1de7fd1960c493e527d923c4d18736a4bc571850
+15:34 Stevearzh quit:Ping timeout: 250 seconds
+15:34 varna: _(:з」∠)_
+15:39 lh_mouse: 这个  set_errno_by_ssl_ret  是ヲ之前写好的，所以直接搬来用就是了。
+15:41 lh_mouse: int fd__ = (fd_), rdwr__ = (rdwr_); \  // 这个 reserved identifier 又是做啥。
+15:42 varna: 只有前缀_ __是reserved吧
+15:44 lh_mouse: 坑货。
+15:45 lh_mouse: 这里 C 和 C艹 不一样。
+15:45 condy: :o
+15:45 hatelis: :)
+15:46 varna: 突然出现了两个给一
+15:46 lh_mouse: C 里是如此，但是 C艹 是说只要带了连续两个下划线就是 reserved。
+15:46 varna: 突然就摔坑里……
+15:46 lh_mouse: 前缀 _ + 大写字母或者前缀 __ 都是 reserved。
+15:53 Stevearzh joined channel
+16:09 hoxily joined channel
+16:22 sleepwalking quit:Ping timeout: 246 seconds
+16:37 pocmon quit:Ping timeout: 256 seconds
+16:44 pocmon joined channel
+16:55 lh_mouse: 我是新华猎头的Neill（李合益），我是在github上面有看到您的一些信息！很高兴认识您！ 
+16:55 lh_mouse:      我目前呢有在帮几家比较好的互联网企业有在招一些技术这块的极客人才，所以也是给您来了份邮件。如果您这边这段时间或者不久后有考虑看新机会的话呢，您随时可以和我这边联系！ 我这边将会给您匹配到您相对应的企业职位！ 期待您的回信！
+16:56 hatelis: 耗子也有猎头找上门了
+16:56 condy: 即将变成人生赢家。
+16:57 lh_mouse: ヲ走不了。
+16:57 hatelis: lh_mouse, y?
+16:57 condy: 为了能和 varna 面个基？
+16:57 lh_mouse: 不为什么，不想走。
+17:00 hatelis: 耗子也快3年了吧
+17:10 tutu_wind joined channel
+17:13 lh_mouse: 一年多。
+17:14 lh_mouse: 一年五个月不到。
+17:14 hatelis: 还好，时间没我想象中走得快。
+17:15 lh_mouse: ?
+17:15 hatelis: 没啥。跟耗子没啥关系，我只觉得时间过得太快
+17:15 varna: 他在裤子里埋太久了，乃不知有汉，无论魏晋
+17:15 hatelis: varna, 乃不知有虎，无论包子
+17:15 varna: 赶快吃点肝
+17:16 hatelis: varna, 吃枣+药丸 就行
+17:16 varna: 这人CH3CH3
+17:16 lh_mouse: 谁啊。
+17:16 hatelis: varna, https://pdos.csail.mit.edu/6.824/
+17:16 * lh_mouse picks up a large frozen trout.
+17:17 varna: hatelis: 没看出梗来
+17:17 hatelis: varna, 啊，没什么梗啊
+17:17 varna: 哦
+17:18 hatelis: 现在发现我给某厂在github上挖的坑，没人填了，莫名暗爽
+17:18 lh_mouse: 快给 poseidon 写 example。
+17:18 * hatelis 把某厂的斩舰刀玩坏了，结果现在围观群众在提issue
+17:19 varna: 某厂啊，哦瘊瘊
+17:19 varna: 祝病魔战胜方校长之后早日侵攻马大变
+17:22 hatelis: varna, 马大变是什么梗
+17:22 varna: 拥抱变化的变
+17:23 varna: 因为没学会气功只好拥抱变化
+17:25 hatelis: varna, 蛤蛤蛤蛤蛤蛤
+17:25 hatelis: varna, 羊驼子也走上了业界流传的老路“出之前就准备黑，在某厂更要黑，离职绝对更要黑”
+17:25 hatelis: 出->去
+17:26 varna: 马某我是坚决要黑的，你看我很少黑马某某
+17:27 varna: 对了还有个乐子
+17:27 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=eb4639cf3e01213fcf334ed464e736f8/8d734bb7d0a20cf457fbf3c971094b36adaf99ab.jpg
+17:27 varna: ^ 这剧我没看过
+17:32 xxxxxxxx: 演员: 这个位置有些魔幻
+17:32 hatelis: 据说是字幕打错了？
+17:32 varna: 字幕啊
+17:34 hatelis: 哎，管他呢，反正是233
+17:35 Mokou: 北纬108 666
+17:35 Mokou: 航天战舰
+17:37 varna: 我桑又上天了？
+17:37 Mokou: 噗
+17:38 Mokou: 优酷直接在进度条上标出了“穿帮：北纬108度”
+17:38 varna: 23333333333333333
+17:38 Mokou: http://v.youku.com/v_show/id_XNzY0MTY1MjQw.html?from=y1.6-97.3.1.f5c8ddde0d9111e4a705
+17:38 hatelis: 蛤蛤蛤蛤蛤蛤
+17:38 Mokou: 不是字幕的锅
+17:38 varna: 现在我们作死都不用弄几个鬼子来撕了
+17:39 Mokou: 这太6了
+17:39 Mokou: 果然星辰大海
+17:40 Mokou: http://ww1.sinaimg.cn/bmiddle/c0788b86gw1ezor3usgqtj20go0ciwg5.jpg
+17:41 lh_mouse: hatelis, https://github.com/lhmouse/poseidon/tree/master/examples/https_client
+17:43 lh_mouse: 2016-01-05 17:42:19.745 00 [   D] DEBUG DNS lookup failure: host = github.com, gai_code = -2, err_msg = Name or service not known #src/singletons/dns_daemon.cpp:70
+17:43 lh_mouse: QNMLGBD 
+17:43 varna: 23333333
+17:44 hatelis: github解析不出来了？
+17:44 lh_mouse: 阿里的什么狗 DNS 。
+17:44 lh_mouse: ヲ换 114.114.114.114 了。
+17:44 hatelis: 223.5.5.5那玩意儿别用，坑爹的
+17:45 hatelis: 某厂的那个DNS因为没达到他们的目的（目的我忘了），应该是放弃的差不多了
+17:45 varna: 现在我的辅DNS就是114
+17:45 lh_mouse: hatelis, 默认 10 的。
+17:45 varna: 目的忘了，这个乐
+17:45 lh_mouse: hatelis, http://paste.ubuntu.com/14409476/
+17:45 varna: 我就印象他们搞过一个DNS防爆的东西，然而怎么DNS先黄了？
+17:47 hatelis: 只是说223.5.5.5这个服务。自己的DNS服务器是一直在使用并且持续开发中的
+17:47 varna: 哦
+17:48 Mokou: http://www.bilibili.com/video/av2982130/ 这视频里有人用古音读诗经……
+17:48 * hatelis 某人还留一份源码（可能不全）
+17:48 hatelis: 留了
+17:48 varna: 好
+17:48 varna: Mokou: 用古鹰读诗经？
+17:48 Mokou: uccu
+17:48 varna: 那不是很亮么
+17:55 varna: 说起来，今天这个demo似乎是我自己的程序第一次用起来让我自己觉得愉悦
+17:55 varna: “按顺序写事情真好啊”这样
+17:56 hatelis: varna, 自从我开始写Go
+17:57 varna: 我大四的时候写过Go, 然后我interface {}
+17:57 hatelis: ngx_lua起，按顺序写，写的智商都倒退了
+17:57 varna: 读作“面无表情”
+17:57 varna: 我觉得在这种时候难得糊涂
+17:57 hatelis: 让我撸个状态机，都好像戴错了长者眼镜的感觉
+17:58 varna: 因为服务器的主流是希腊悲剧风格的从半中说起
+17:58 xxxxxxxx: 卧槽 我开始还以为是求救的急糊涂了 结果后面一本正经的重复了一遍108度
+17:58 varna: ……
+17:58 varna: hatelis: 别那么严肃，自然点就好
+17:58 hatelis: varna, 不过确实省事多了。”集中精力于业务逻辑“
+17:58 varna: xxxxxxxx: 底下评论怎么说
+17:59 xxxxxxxx: 扔豆腐  我是传奇3限量徽章
+17:59 xxxxxxxx: 电视嘛又不是新闻，就算新闻都有搞错的时候！别较真 
+17:59 varna: hatelis: 所以说……其实p7也有这种废柴提督制造机的倾向
+17:59 hatelis: 当然，就算这样，现厂的故障依然保证保持能让使用群众 高潮迭起 的状态
+17:59 xxxxxxxx: 1海之舟1 
+17:59 xxxxxxxx: 可能是北纬10.8度，这才是亚丁湾附近的纬度。编剧搞错了。 
+17:59 xxxxxxxx: 原评论： 北纬108度你逗呢吧，你咋不360度呢
+17:59 varna: 然而我确实希望按照函数的顺序而非事件的顺序组织业务
+18:00 hatelis: varna, 我们进一步减少了自己的工作机会2333
+18:01 varna: 大丈夫
+18:01 varna: 没人用这破玩意的
+18:01 hatelis: 啊啊啊，又到了下班的点儿了
+18:01 varna: 至少在分段栈普及之前
+18:02 ASenR quit:Ping timeout: 272 seconds
+18:02 tutu_wind quit:Read error: Connection reset by peer
+18:02 hatelis: varna, 没啥，随口一说而已。
+18:02 xxxxxxxx: 另外海盗好弱啊
+18:02 tutu_wind joined channel
+18:03 xxxxxxxx: 几个快艇 每艘上面三四个人 这怕个毛
+18:03 varna: 或者这么说
+18:03 varna: 试图克服希腊悲剧的服务器落入了悲剧范畴
+18:03 varna: 这本身就是个希腊悲剧
+18:03 varna: 我在neta谁你们懂的
+18:03 * varna 下楼买点东西
+18:03 lh_mouse: 几个快艇 每艘上面三四个施瓦辛格
+18:11 randomclown joined channel
+18:12 varna: 这种时候就要对快艇使用老鼠，打几个洞出来……
+18:13 Mokou: 南北朝开始时候的弹幕：“疯狂盗号时代开始”
+18:14 lh_mouse: 夏商与西周，东周分两段。春秋和战国，一统秦两汉。三国两晋南北朝，隋唐五代传。宋辽金元明清后，王朝至此完。
+18:15 varna: 其实《通鉴直解》这书也还不错
+18:15 varna: 看看司马光x张居正
+18:15 xxxxxxxx: 你们这些文化人
+18:15 varna: 你这基佬
+18:15 Mokou: 你这基佬
+18:16 hatelis: 你这基老
+18:16 lh_mouse: 咬起来了。
+18:16 hatelis: 要是辽宁号 不叫 辽宁 叫 大连，那我是不是该收集瓶盖和垃圾了？
+18:16 * varna barks
+18:16 * Mokou poies
+18:16 varna: hatelis: 叫凤翔
+18:17 xxxxxxxx: 叫大虾
+18:17 hatelis: varna, 凤翔？
+18:17 varna: 凤翔桑好看
+18:17 tutu_wind quit:Ping timeout: 265 seconds
+18:17 hatelis: ”欢迎光临中共凤翔县委、凤翔县人民政府门户网!“
+18:17 varna: hatelis: https://en.wikipedia.org/wiki/Japanese_aircraft_carrier_H%C5%8Dsh%C5%8D
+18:17 hatelis: 现在谷歌搜”凤翔“已经全是舰娘了
+18:18 varna: 现在舰娘条目太多，建议英文搜
+18:18 varna: 不然漫天都是
+18:18 Mokou: hosho?
+18:18 varna: 比如搜IJN 张召忠 凤翔
+18:18 varna: dontaskmewhy
+18:18 Mokou: 然后着火了
+18:18 xxxxxxxx: 凤翔为啥我想到的是南斗
+18:18 varna: 这人高兴了
+18:20 varna: 现在说大虾，第一反应是第9区
+18:20 hatelis: 南尼喜麻斯嘎
+18:21 varna: 一部科幻电影，还凑合
+18:23 varna: 三补给+娄号，看我能被炸成什么POI样子
+18:25 hatelis quit:Remote host closed the connection
+18:31 Stevearzh quit:Read error: Connection reset by peer
+18:32 Stevearzh joined channel
+18:32 Stevearzh quit:Changing host
+18:32 Stevearzh joined channel
+19:10 varna: 出去了四十分钟，居然没猫
+19:11 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=e137d3ec0f23dd542173a760e108b3df/565349338744ebf83068cbb7dff9d72a6159a7d4.jpg?v=tbs
+19:17 pocmon quit:Quit: 闪...
+19:24 Mokou: 看到那个图我想起来个东西
+19:25 Mokou: http://ww3.sinaimg.cn/bmiddle/68267af6gw1eyqd0zdko2j20dw0afdgw.jpg
+19:25 Mokou: 4f
+19:41 Stevearzh quit:Quit: Be back later...
+19:45 varna: 读了读jsmn, 还挺赞的
+19:49 varna: 突然想起一个比较lowb的话题
+19:49 varna: 有多少人直接用syslog系列调用做服务器log的？
+19:51 condy: jsmn 就是这个喽？ https://github.com/zserge/jsmn
+19:51 varna: 对
+19:52 condy: 写得好简练。。
+19:53 varna: 而且在测评里的识别率似乎还不错
+19:54 varna: 内存也不自己出，显得清霜
+19:54 varna: 清爽
+19:54 varna: 输入法卖我
+19:56 Mokou: 舰 狗 暴 露
+19:57 varna: 今天恢复一些元气了
+19:57 varna: 咦，昨天造出一个欠雪！
+19:57 varna: 这个厉害
+20:05 varna: 这样的话，明天就能恢复到死磕4-5之前的状态了
+20:05 varna: 当然桶还是回不来的
+20:12 varna: http://news.hexun.com/2016-01-05/181611338_3.html 这个羊不错
+20:23 xxxxxxxx: 淫王.org更新了
+20:24 xxxxxxxx: 写书计划 和 给Las Vegas的差评
+20:25 xxxxxxxx: 到了Vegas，你不是被当成一个人，而是被当成了用来宰割的牛羊。天然条件恶劣的地方，人们一般都特别友好和温暖，乐于助人，然而Vegas是一个例外。它不但是自然界的沙漠，而且是人心的沙漠。你自己要到这沙漠里来，那么所有东西我们都要卖高价，因为你不得不买！
+20:26 varna: 来岩川啊
+20:26 varna: 今天我打了一百四五十级的香取、鹿岛、速吸、秋津洲四人组
+20:26 varna: 成吨经验从天而降
+20:27 xxxxxxxx: 看似高档的四星级酒店，连咖啡机这么基本的设施都没有。晚上又冷又干，却只能去售货机买$3一瓶的冷冻瓶装水。收了高达一天$30的所谓“Resort Fee”，去游泳池泡泡居然还要按天收费，每人每天$17。房间里缺少本来该有的设施，是为了逼迫你到外面去花钱。饿了出去找不到吃的，点个汉堡到房间，20美元！起床稍微晚了一点，回到酒店，发
+20:27 xxxxxxxx: 现房间都没有打扫，毛巾都没有换！
+20:27 varna: 卧槽
+20:28 varna: 这货在干什么
+20:28 varna: http://www.bilibili.com/video/av3505873/ 肥料杀手卫宫切丝悲惨的婚姻生活
+20:29 xxxxxxxx: 当然，如果你肯花大价钱去吃某轮胎公司给评了级的餐厅，巨大的盘子里放一勺子东西那种，就另当别论了。反正我是不会给这种谋暴利的人送钱去的，又不想排长队，所以最后发现只有Panda Express和Chipotle之类的快餐可以吃了。如果这些地方都关门了，那就只有到Walgreens里面买块三明治了。如果怕冷不想去Walgreens，那就在房间里吃泡面吧。哦
+20:29 xxxxxxxx: 对了，我告诉过你房间里是没有咖啡机的吧？所以也没有开水给你泡面了。sigh，来到Vegas就意味着营养不良……
+20:30 varna: 吃泡面的营养……
+20:31 varna: 而且他为什么要住四星级
+20:31 varna: 高档酒店不就是给花钱不伤感的人准备的么
+20:31 xxxxxxxx: 最开始的问题应该是他为什么要去Vegas
+20:31 varna: 大概想赌个大的？
+20:32 xxxxxxxx: 看他的口气他不像是去赌的
+20:32 varna: 那是去干什么，贩毒？爆破？挟持人质？
+20:32 varna: 还是去参加亚种圣杯战争
+20:32 xxxxxxxx: 如果他确实赌了 我猜测他输成光屁股才会这么大怨气...
+20:32 varna: 不会光PIGU的，估计会被肛
+20:33 iyzsong: 2333
+20:33 varna: 就yinwang的一贯作风，大概是去参加亚种圣杯战争的吧……
+20:33 xxxxxxxx: Las Vegas是卖淫合法化的地方，在这里找小姐是规范的，合法的。所以你就可以在大街上看到一些车，打着穿着暴露的美女照片和电话号码，招摇过市。路边也站着很多散发美女小卡片的丑陋男人。
+20:33 varna: 争夺万能的肛爆机
+20:33 xxxxxxxx: 看起来也不是找小姐去的
+20:34 varna: 那到底是干什么呢
+20:34 Mokou: 天然条件恶劣的地方，人们一般都特别友好和温暖，乐于助人，然而Vegas是一个例外。
+20:34 xxxxxxxx: 可是你有没有发现，这些常驻Vegas演show的，其实都不再是当红的明星？你有多少年没看过马戏表演了？你有十几年没见过大卫科波菲尔，Elton John，Britney Spears这些人了吧？能亲眼见到这些儿时崇拜的明星，是不是很激动呢？可惜，他们已经不再是当年的，英俊美丽的，唱歌不走调的他们了。你花了上百的票价，看到的竟是一些人老珠黄的二线
+20:34 xxxxxxxx: 明星，还真是自豪。
+20:34 Mokou: 穷山恶水，然后是啥来着？
+20:34 varna: 穷山恶水斩不掉
+20:34 xxxxxxxx: 出丁日
+20:34 Mokou: 23333
+20:35 varna: 不过肖特兰就很温暖，因为有米空
+20:35 xxxxxxxx: 看上去他也不是去看表演的
+20:35 varna: 我总觉得他似乎就是去这些的……
+20:35 varna: 住酒店，招小姐，看演出……
+20:35 varna: 最后还得检查梅毒
+20:35 xxxxxxxx: 这些所谓的名胜，让Vegas成为了一个类似国内“世界乐园”的地方。这些东西材料也不怎么好，所以看上去各种cheap。Caesar Palace门口那雕像，石头材料肯定不好，不然不会看起来那么脏那么旧。
+20:36 Mokou: Vegas不就这点东西么
+20:36 varna: 还有我墙角六号呢
+20:36 ASenR joined channel
+20:36 xxxxxxxx: 我怀着一个“朝圣”的心，结果自己颠覆了Vegas，这座很多中国人心目中的神庙。这是我第一次，也是最后一次，自愿地来到Las Vegas。
+20:36 Mokou: 看到他说服务业的问题，今天我到看到一条
+20:36 xxxxxxxx: 频道里有人想去朝圣不?
+20:37 varna: http://www.bilibili.com/video/av3492835/ 不错的填词
+20:37 varna: 我宁可去东莞
+20:38 varna: 现在他们推出了cos服务，有琴梨、稻芳什么的
+20:38 Mokou: http://ww1.sinaimg.cn/bmiddle/abcc3b80gw1ezoeski685j20ks1lrk18.jpg 请倒序阅读
+20:39 varna: 我觉得这个新闻有一个问题
+20:39 varna: 按常识来说，道歉不应该ry
+20:39 whocares_2_ quit:Ping timeout: 260 seconds
+20:39 Mokou: 然而很可能是男性
+20:40 varna: 没关系
+20:40 varna: 今天横须贺的N君也发了女装
+20:40 varna: 效果不错
+20:40 varna: 现在群众应该已经在赣他了
+20:40 Mokou: 所以你快女装
+20:40 varna: 我并不出女装
+20:40 Mokou: http://ww3.sinaimg.cn/bmiddle/709c4f1fjw1ezovp7t0jhj20fo0qoq3s.jpg
+20:41 Mokou: 你不出女装我们怎么赣你
+20:41 whocares_2 joined channel
+20:41 varna: 这药娘
+20:41 Mokou: 然而并不是药娘
+20:41 varna: 身边一堆妹子，还想搞基
+20:41 varna: 没救了
+20:41 Mokou: 妹子不给我啪
+20:41 varna: 你直接当一回演技迫真的人间之屑
+20:41 xxxxxxxx: 卧槽好难啊....
+20:42 xxxxxxxx: 不提够不够硬 保持平衡就很难
+20:42 Mokou: 基佬准备开始练习了
+20:42 varna: 你需要一个加了陀螺仪的哑铃
+20:43 varna: 卧槽秋云
+20:43 varna: 又出了大新闻啊
+20:43 xxxxxxxx: 谁给那个哑铃再加些表示绕丁丁旋转的线
+20:44 xxxxxxxx: 那就更难了
+20:45 varna: 基头四之首要使出奥义了……
+20:47 * hoxily 摸摸 varna 头
+20:47 varna: 这基佬
+20:47 hoxily: 我擦，摸一下又不会怀孕
+20:49 * Mokou 把明石喂满了
+20:49 varna: 然而这基佬沾了几亿半吊子冤魂的手伸过来，大冷天的简直无间大红莲
+20:49 varna: 君不见青海头，古来干精无人收
+20:51 hoxily: 我每天都有好好洗手的。
+20:52 varna: 我们回想一下今勇二提督是怎么评论摩耶改二的
+20:53 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=615a6039b751f819f1250342ea8f4bed/a1ec08fa513d269701a6ee4f52fbb2fb4316d8af.jpg 这还有个魔性的驱逐系
+20:53 Stevearzh joined channel
+20:53 Stevearzh quit:Changing host
+20:53 Stevearzh joined channel
+21:02 hope1_away joined channel
+21:05 varna: http://www.bilibili.com/video/av3436105/ 雷总/红日
+21:06 Mokou: http://ww1.sinaimg.cn/bmiddle/8a985258gw1eylpqm9shmj20f00qo41a.jpg 又来了
+21:07 varna: (｡･ω･)ﾉ这是当然的，不通共的话并没有什么前途可言！
+21:07 xxxxxxxx: 天下谁人不通共
+21:09 varna: 巨基不听听刚发那个红日么
+21:10 xxxxxxxx: you gay I gay we will very very healthy <- 什么鬼
+21:11 varna: DSSQ作品里也还是有不少能博人一笑的
+21:12 ASenR quit:Remote host closed the connection
+21:16 cleamoon_ joined channel
+21:17 hope1_away quit:Ping timeout: 255 seconds
+21:17 bica joined channel
+21:21 varna: http://www.bilibili.com/video/av3359338/ 已跪……
+21:25 cleamoon__ joined channel
+21:25 cleamoon_ quit:Read error: Connection reset by peer
+21:32 hope1_away joined channel
+21:33 cleamoon__ quit:Read error: Connection reset by peer
+21:33 hatelis joined channel
+21:34 hatelis: 膜一下 varna
+21:34 MoBot: varna ,(๑•̀ㅂ•́)و✧我跟他谈笑风生。
+21:34 cleamoon__ joined channel
+21:34 hatelis: 膜一下 cleamoon__ 
+21:34 MoBot: 接到这个消息，cleamoon__ 本身也要判断，明白意思吗？
+21:35 varna: 卧槽你们又把这个bot弄出来了
+21:35 hatelis: varna, 一直都没下啊
+21:35 Mokou: 你们不知道生命的可贵
+21:36 cleamoon__: 噗
+21:36 varna: 衣可塞艇
+21:36 cleamoon__: 膜一下
+21:36 MoBot: 续一秒
+21:36 StardustX: 咦，才发现原来是机器膜法
+21:37 hatelis: cleamoon__, 你这个膜法好
+21:37 varna: 吓得我念了两句诗：ぽ利国家生死い，岂因かも避趋之
+21:37 hatelis: 膜一下 cleamoon__ 
+21:37 MoBot: 所以说 cleamoon__ 呀还是要prpr，识得唔识得啊？唉，我也替你们着急啊，真的。
+21:39 cleamoon__: 法师的自动化
+21:39 varna: 膜一下 kamo
+21:39 MoBot: Orz kamo
+21:39 varna: 膜一下 poi
+21:39 MoBot: 刚才你问我啊，我可以回答你一句“无可奉告”，你们也不高兴，那怎么办？我讲的意思不是我钦点 poi
+21:39 varna: 233333333
+21:39 varna: 钦点っぽい
+21:40 varna: http://www.bilibili.com/video/av3334935/ 高能
+21:42 hope1_away: 很厉害的样子
+21:42 cleamoon__ quit:Read error: Connection reset by peer
+21:42 varna: HOtatata
+21:42 cleamoon__ joined channel
+21:42 hope1_away: 膜一下 iyzsong
+21:42 MoBot: 你姿瓷 iyzsong 吗？当然啦！
+21:43 hope1_away: 膜一下 condy
+21:43 MoBot: condy 好棒
+21:43 hope1_away: 膜一下 varna
+21:43 MoBot: 你姿瓷 varna 吗？当然啦！
+21:44 hope1_away: 之前那个也是长者梗吗……
+21:44 varna: hope1_away: 哪个？
+21:44 hope1_away: “好棒”
+21:44 varna: 好棒那个不是
+21:46 Mokou: http://ww1.sinaimg.cn/mw1024/006bm8Y7jw1ezouze3t5nj318g0utk1s.jpg
+21:46 varna: 不管中只管打 上曳光包酸爽
+21:46 varna: 一百二十发炮弹 总有一发适合你
+21:46 Mokou: 233333
+21:46 varna: 没信仰？喊一声天闹黑嘎板载！
+21:47 bica quit:Remote host closed the connection
+21:52 cleamoon_ joined channel
+21:52 cleamoon__ quit:Read error: Connection reset by peer
+21:53 hatelis: 膜一下 condy
+21:53 MoBot: 你姿瓷 condy 吗？当然啦！
+21:53 hatelis: 膜一下 condy
+21:53 MoBot: 刚才你问我啊，我可以回答你一句“无可奉告”，你们也不高兴，那怎么办？我讲的意思不是我钦点 condy
+21:54 hatelis: condy, Youmu, 一定是condy作弊了！为什么都是钦定和滋瓷！
+21:54 hatelis: 膜一下 hope1_away 
+21:54 MoBot: hope1_away 好厉害
+21:54 hatelis: 膜一下 hope1_away 
+21:54 MoBot: hope1_away 千万要记着，不要“见得风，是得雨”。
+21:54 hatelis: 2333
+21:54 condy: hatelis: 0.0
+21:54 varna: 膜一下 HO棠
+21:54 MoBot: 你们啊!!不要总想弄个大新闻，(・Д・)ノ说现在已经 HO棠 了，就把我批判一番。
+21:54 varna: 233333
+21:54 hatelis: 膜一下 condy
+21:54 varna: 膜一下 羽立
+21:54 MoBot: Orz condy
+21:54 MoBot: 接到这个消息，羽立 本身也要判断，明白意思吗？
+21:54 varna: 膜一下 扇贝
+21:54 MoBot: 刚才我很想啊，我每次碰到你们，我就讲开源界有一句话叫“prpr 扇贝”。
+21:54 hatelis: condy, 果然作弊了！
+21:55 varna: 膜一下 姬海棠
+21:55 MoBot: 姬海棠 ,(๑•̀ㅂ•́)و✧我跟他谈笑风生。
+21:55 varna: 膜一下 文文
+21:55 MoBot: 刚才我很想啊，我每次碰到你们，我就讲开源界有一句话叫“prpr 文文”。
+21:55 varna: 这bot
+21:56 Mokou: 这bot
+21:56 hatelis: 这bot
+21:56 varna: http://www.bilibili.com/video/av3284136/ 好汉歌！
+21:58 hope1_away: 这bot
+21:58 hatelis: hope1_away, 海棠几年级了
+21:59 hope1_away: 高二
+21:59 hatelis: hope1_away, 那就9月份高三了？
+22:00 hope1_away: 还有一天会考，正从头rush生物+文综
+22:00 hope1_away: 对
+22:00 hatelis: hope1_away, 米利坚还是天朝？
+22:00 cleamoon_ quit:Read error: Connection reset by peer
+22:00 hatelis: 去（
+22:00 hope1_away: 成都
+22:01 hatelis: 我是说future
+22:01 cleamoon_ joined channel
+22:01 hope1_away: 大概是美帝
+22:01 hatelis: 算了，问这问那的干啥。
+22:02 * hatelis 突然发现不用问句不会说话了
+22:02 hope1_away: 你是？
+22:03 varna: lhj
+22:03 hope1_away: 哦
+22:04 * hope1_away 从来不会说话
+22:04 hatelis: 能骗到妹就行
+22:05 cleamoon_: 海棠姬都高三了呀，时光飞逝呀
+22:05 hatelis: cleamoon_, 大龄大学生吃饱了没事干的歪国仁绅士
+22:06 cleamoon_: 老了呀，大叔我年轻的时候呀，吃了很多土呀
+22:06 hope1_away quit:Quit: leaving
+22:07 hope1 joined channel
+22:07 varna: 你才五岁大
+22:07 hope1: 九月份还有九个月呢
+22:07 hatelis: cleamoon_, 绅士多少岁了，大几了
+22:07 cleamoon_: 德国科隆市长紧急召集警官会晤，商讨应对除夕夜80名妇女举报受性侵和抢劫事件
+22:08 hatelis: hope1, 并不遥远，一会儿就到了
+22:08 cleamoon_: 24了，现在大三
+22:08 varna: 80名！
+22:08 hatelis: cleamoon, 我才22周岁不到，大四了。大龄绅士。
+22:09 varna: 嘛，野兽先辈也24岁，学生
+22:09 cleamoon_ quit:Read error: Connection reset by peer
+22:09 Mokou: 明明是战舰
+22:09 cleamoon_ joined channel
+22:10 Mokou: 24歳、戦艦です！
+22:10 cleamoon_: 似乎据说嫌疑犯有1k+
+22:10 varna: 噗
+22:11 Mokou: 难不成是因为德意志斯坦……
+22:11 cleamoon_: 哥斯达黎加的人均GDP不到美国的四分之一，但预期寿命却超过美国。哥斯达黎加大学和美国加州伯克利的研究人员在PNAS上发表论文，称他们找到了两国预期寿命存在差距的一个原因：在美国，死亡率与社会经济地位变化有着更强的相关性，死亡率之间的社会经济地位不平等在美国比哥斯达黎加更大。研究人员还观察到了社会经
+22:11 cleamoon_: 济地位和几个健康风险因素之间的相关性，美国的肺癌和心脏疾病的死亡率远高于哥斯达黎加，而社会经济地位与心脏疾病之间是相关的。
+22:11 cleamoon_: 德意志斯坦+
+22:11 cleamoon_: 国际天文学联合会（IAU）于2016年1月4日正式批准了嫦娥三号着陆区和三个陨石坑4项月球地理实体命名，分别是广寒宫、紫微、天市和太微。
+22:11 hope1: hatelis, 我倒是希望这一次能感觉长一些
+22:11 hope1: cleamoon_: 什么鬼
+22:12 hatelis: hope1, 哦？有什么好玩的？
+22:13 cleamoon_: 海棠姬想(chang2)一点
+22:13 Mokou: cleamoon_: 另外我听说海盗国强奸案剧增？
+22:13 cleamoon_: 我没注意
+22:14 hope1: hatelis: 也没什么，主线就是美帝申请，还有AP之类。竞赛打算冲一波省选虽然希望不大。主要还是想多学点东西吧
+22:14 cleamoon_: 家庭背景教育背景相似的人之间的结合通常被认为有利于建立幸福家庭，这种现象有一个术语叫同型婚配，或俗语是门当户对。但有研究者认为，同型婚配会扩大和固化已有的贫富差距。  #这研究结果不是会导致人们更想要门当户对吗
+22:15 Mokou: http://www.allenbwest.com/2015/10/mainstream-media-wont-tell-you-why-sweden-is-now-rape-capital-of-the-west/
+22:15 hatelis: hope1, 嗯。
+22:15 Mokou: 随便搜了一下sweden rape……
+22:15 cleamoon_: 中国外交部回应英国关切铜锣湾书店职工失踪案称，香港事务全属中国内政，外国无权干涉。 #此地无淫
+22:16 Mokou: @基本法
+22:16 hatelis: @基本法
+22:16 hatelis: 膜一下 天朝外交部
+22:16 MoBot: 你姿瓷 天朝外交部 吗？当然啦！
+22:17 hope1: hatelis: 突然对欧洲历史产生了浓厚的兴趣。又感觉去学物理也很棒。
+22:17 varna: Orz
+22:17 cleamoon_ quit:Read error: Connection reset by peer
+22:17 Mokou: OTL
+22:17 hatelis: 膜一下 hope1 
+22:17 MoBot: 刚才我很想啊，我每次碰到你们，我就讲开源界有一句话叫“prpr hope1”。
+22:17 hatelis: hope1, 欧罗巴斯坦历史！ 
+22:18 iyzsong: 舔 舔 舔~
+22:18 varna: (｡･ω･)ﾉ骑砍！不怂！
+22:18 cleamoon_ joined channel
+22:18 hatelis: 膜一下 iyzsong 
+22:18 MoBot: 所以说 iyzsong 呀还是要prpr，识得唔识得啊？唉，我也替你们着急啊，真的。
+22:19 iyzsong: 好着急呀~
+22:19 cleamoon_: 有很多性 趣是好事，但是要记住自己不是什么都能做的
+22:19 varna: 不过可以每样事都做不好，像我一样
+22:19 hatelis: cleamoon_, 绅士的物理学家进度条到几了？
+22:19 hope1: 然而目前对这两个也没什么很多的了解，于是想先多学一点…… 然而时间不多
+22:19 cleamoon_: NND，元帅太强了
+22:19 cleamoon_: hatelis, 卸载了
+22:20 hatelis: hope1, 为啥我想泼冷水……
+22:20 cleamoon_: 数学能力不够，不会搞理论物理了
+22:20 hope1: cleamoon_: 对啊，然后发现还有一年半就要选专业了感觉特别虚
+22:21 hope1: hatelis: 正需要泼凉水
+22:21 hatelis: hope1, 搞个寒云那种的大学学院，然后天天累死累活当学霸
+22:21 varna: 泼多了会被水淹没、不知所措、提前……
+22:21 hatelis: varna, 提前啥？
+22:21 cleamoon_: 你不是出国吗，选 物理/cs，这样phys，cs，maths都能一起学，历史什么的自己看就好了
+22:21 varna: 别问我了
+22:21 varna: 自己搜游泳教练陈茂蓬
+22:21 cleamoon_: 提前大破
+22:22 iyzsong: 论学习游泳的重要性
+22:22 hope1: cleamoon_: 我现在比较想选物理，然而对物理了解远少于cs
+22:22 hatelis: hope1, 什么都想搞，然后搞进去越来越发现不好玩，兴趣全无，最后又搞不好退不出来，弄成进退两难；或者搞进去后悔自己为啥没选当初的另外一样， 说不定 更好玩呢
+22:22 iyzsong: 物理好哇
+22:23 cleamoon_: 屋里好，野外也很刺激呀
+22:23 varna: 我的感觉其实是选一时喜欢的，不怂
+22:23 varna: HO棠数学又不差
+22:24 hatelis: hope1, 长者名言：人呐就都不知道，自己就不可以预料。一个人的命运啊，当然要靠自我奋斗，但是也要考虑到历史的行程，
+22:24 varna: 我觉得把这种事情当真地害怕，人就太没胆量了
+22:24 hope1: hatelis: 所以感觉佷需要预先多了解，比如现在就不是很想搞cs了
+22:25 varna: 有胆量进取很好，然而low需要更多勇气
+22:25 hatelis: hope1, 嗯。
+22:25 varna: 所以我比较反对lhj的说法
+22:25 hatelis: varna, 所以还是听羊驼子的，别听我这个进取不能，要怂不敢的家伙
+22:25 cleamoon_: 如果想搞学术，那选什么无所谓，选喜欢的就好
+22:25 varna: 只是个人意见
+22:25 hatelis: https://www.youtube.com/watch?v=7fAkPKa681Q 又发现一个长者的视频！
+22:25 hatelis: condy, condy condy condy 
+22:26 condy: 0.0
+22:26 cleamoon_ quit:Read error: Connection reset by peer
+22:26 hatelis: condy, 还有，快把“自我奋斗”那段话弄到bot里面去
+22:26 cleamoon_ joined channel
+22:26 condy: hatelis: ok
+22:26 varna: 不过我有个问题啊
+22:26 varna: 是不是不搞cs的话，妹子多一些？
+22:27 cleamoon_: 搞经济妹子多
+22:27 varna: 噫
+22:28 Mokou: 文科妹子多
+22:28 cleamoon_: 三装母三雷巡略弱
+22:28 varna: http://www.bilibili.com/video/av3155707/ 粮静茹
+22:28 Mokou: 理科“哦哈哟”
+22:29 hope1 quit:Ping timeout: 256 seconds
+22:29 hope1 joined channel
+22:29 hope1: 电梯
+22:30 iyzsong: o/z
+22:30 cleamoon_: 黑旗现在高三？
+22:31 Mokou: +
+22:31 varna: 然而他周围一群妹子
+22:31 Mokou: 然而并没有妹子
+22:31 varna: 我周围一堆电线
+22:31 Mokou: 你甩妹子
+22:32 cleamoon_: 我周围都是 纸
+22:32 varna: 是妹子甩我
+22:33 hope1: varna: 我其实比较倾向于这样，随意一些好，但感觉太没计划容易玩脱（比如到现在为止）……
+22:33 StardustX: sigh...
+22:33 varna: hope1: 别太离谱，对这种事我只能说胆大心细为好，没法多说了
+22:33 varna: 再说害人
+22:34 hope1: varna: cmu的cs系性别比40%+
+22:34 varna: 噫噫噫
+22:34 cleamoon_: 噫噫噫
+22:34 varna: 然而那些世界各国的妹子完全没有我国的好啊！
+22:34 varna: 先撤
+22:34 cleamoon_ quit:Read error: Connection reset by peer
+22:34 varna: 武运
+22:34 varna quit:Quit: leaving
+22:34 hope1: 说的不错
+22:35 cleamoon_ joined channel
+22:37 hope1: hatelis: 不虚，反正有饭吃，大不了搞不下去转cs（
+22:37 hatelis: hope1, （
+22:38 MoBot quit:Remote host closed the connection
+22:38 MoBot joined channel
+22:38 hope1: 膜一下 hatelis
+22:38 MoBot: 接到这个消息，hatelis 本身也要判断，明白意思吗？
+22:39 MoBot quit:Remote host closed the connection
+22:39 hatelis: MoBot, 可是……这个消息是羊驼子说的
+22:39 MoBot joined channel
+22:39 hatelis: 膜一下 varna
+22:39 MoBot: 但是你一定要问我对C先生姿不姿瓷，我们不姿瓷他？他现在是当varna，我们怎么能不姿瓷varna？对不对？
+22:39 Mokou: 睡觉
+22:39 iyzsong: 不知道窝今年可以去哪里混饭吃  感觉我已经不适合这个版本了 = =
+22:39 Mokou: 诸君武运
+22:39 Mokou quit:Quit: 睡觉
+22:39 hope1: 晚安
+22:39 iyzsong: 安
+22:40 MoBot quit:Remote host closed the connection
+22:40 MoBot joined channel
+22:40 cleamoon_: 海棠姬可以学海洋生物
+22:40 iyzsong: 膜一下 祖国
+22:41 iyzsong: 没反应啊..
+22:41 hatelis: 呐!做人呢，最重要就是开心。
+22:41 hatelis: 膜一下 天朝
+22:41 hatelis: condy, 坏掉惹
+22:41 cleamoon_: 2333333
+22:41 condy: hatelis: 0.0
+22:41 condy: Orz
+22:42 StardustX: 被玩坏了2333
+22:42 MoBot quit:Remote host closed the connection
+22:42 sleepwalking joined channel
+22:42 iyzsong: sleepwalking: 舔~
+22:44 cleamoon_: 这基佬
+22:44 iyzsong: xxxxxxxx: 有人叫你 :3
+22:44 cleamoon_ quit:Read error: Connection reset by peer
+22:44 hatelis: hope1, 海棠还是要轻松些～
+22:45 cleamoon_ joined channel
+22:46 hatelis: cleamoon_, 绅士以后准备去造飞机还是飞船？
+22:46 cleamoon_: 这有什么区别
+22:47 hatelis: cleamoon, 我竞无言以对
+22:47 MoMoBot joined channel
+22:48 condy: 膜一下
+22:48 MoMoBot: 天荒地老蛤不老，我为长者续一秒
+22:48 condy: 膜一下 hatelis 
+22:48 MoMoBot: 我很抱歉，我今天是作为一个[长者]跟你们讲。我不是想prpr，但是我见得太多了。我有这个必要好告诉你们一点hatelis的经验。
+22:48 cleamoon_: 2333333
+22:48 hatelis: 23333
+22:48 hope1: hatelis: 我说得很严肃然而其实并不……
+22:48 hatelis: 升级辣
+22:48 cleamoon_: 膜一下 长者
+22:48 MoMoBot: 我很抱歉，我今天是作为一个[长者]跟你们讲。我不是想prpr，但是我见得太多了。我有这个必要好告诉你们一点长者的经验。
+22:48 hope1: 膜一下 sleepwalking
+22:48 MoMoBot: sleepwalking 好棒
+22:48 cleamoon_: 233333333
+22:48 hatelis: hope1, 然而其实并不 这句话没看懂啊
+22:48 hatelis: 然而/其实/并 都有转折的意思吧
+22:49 cleamoon_: 三重转折
+22:49 sleepwalking: 暴力膜蛤不可取……
+22:49 cleamoon_: 续你一秒不可避
+22:49 hatelis: 再为长者续一秒，劝慰我蛤永不老！
+22:50 hope1: hatelis: 不会说话了…… “但实际上并非如此”？
+22:50 hatelis: hope1, 那就好
+22:51 hope1: 咦所以好棒并不是特判的，看来是我姿势水平不够
+22:51 cleamoon_: 什么并非如此？并没有几百万妹子？
+22:52 hatelis: hope1, "咦所以好棒并不是特判的"这是啥？
+22:52 iyzsong: 膜一下 hope1
+22:52 MoMoBot: 但是你一定要问我对C先生姿不姿瓷，我们不姿瓷他？他现在是当hope1，我们怎么能不姿瓷hope1？对不对？
+22:53 iyzsong: 膜一下 hatelis
+22:53 MoMoBot: 刚才我很想啊，我每次碰到你们，我就讲开源界有一句话叫“prpr hatelis”。
+22:53 iyzsong: 膜一下 condy 
+22:53 MoMoBot: 你们啊!!不要总想弄个大新闻，(・Д・)ノ说现在已经 condy 了，就把我批判一番。
+22:53 hope1: 完了，看来是真不会说话了……
+22:53 StardustX: 膜一下 MoMoBot
+22:53 MoMoBot: 还是按照MoMoBot的...按照prpr法 (・Д・)ノ
+22:53 hatelis: hope1, 没啥，把自己的逻辑理理，句子也能通顺了
+22:53 cleamoon_ quit:Read error: Connection reset by peer
+22:53 iyzsong: 不是很好理解么..
+22:54 hope1: hatelis: 我本来以为"condy 好棒"是彩蛋而不是长者语录
+22:54 cleamoon_ joined channel
+22:54 hatelis: hope1, 啊！我也以为这是condy的口头禅而不是长者语录
+22:54 lh_mouse: (|o|)
+22:55 hatelis: condy, 踹共！
+22:55 lh_mouse: 膜一下 geordi 
+22:55 MoMoBot: 你姿瓷 geordi 吗？当然啦！
+22:56 lh_mouse quit:Quit: Meow
+22:56 lh_mouse joined channel
+22:56 TommyJerryMairo: 膜一下
+22:56 MoMoBot: 续一秒
+22:57 hope1: cleamoon_: 一个也不会有了
+22:57 StardustX: 膜一下 香港记者
+22:57 MoMoBot: 刚才你问我啊，我可以回答你一句“无可奉告”，你们也不高兴，那怎么办？我讲的意思不是我钦点 香港记者
+22:58 hope1: 膜一下
+22:58 MoMoBot: 一颗赛艇
+23:00 iyzsong: 因却斯挺
+23:02 TommyJerryMairo: 膜一下 土狗
+23:02 MoMoBot: 土狗 ,(๑•̀ㅂ•́)و✧我跟他谈笑风生。
+23:02 cleamoon_ quit:Read error: Connection reset by peer
+23:02 TommyJerryMairo: 膜一下 MZX
+23:02 MoMoBot: 你们啊，我感觉你们开源界还要学习一个。你们非常熟悉MZX的这一套理论，你们毕竟还too young.明白我的意思吧？
+23:02 cleamoon_ joined channel
+23:03 iyzsong: 我还是这么年轻 0 0
+23:03 * lh_mouse slaps iyzsong around a bit with a large trout
+23:04 lh_mouse: MoMoBot, PING
+23:04 iyzsong: 好饿 晚上没吃饭..
+23:04 lh_mouse: 没有战略储备物资？
+23:04 iyzsong: 没有 = =
+23:04 hope1: 包里常备压缩饼干
+23:05 lh_mouse: hope1, 揉。
+23:05 iyzsong: 明天我要吃4顿 补回来
+23:05 hope1: 楼下超市提供小区内免费送货服务
+23:07 hope1: 通常把早上的一顿转移到晚上
+23:10 yzld2002 joined channel
+23:10 lh_mouse: [22:56:14] <ktietz> hi lh_mourse
+23:10 lh_mouse: [22:56:24] <lh_mouse> x.x
+23:10 lh_mouse: [22:56:25] <ktietz> aehm lh_mouse
+23:12 cleamoon__ joined channel
+23:12 cleamoon_ quit:Read error: Connection reset by peer
+23:13 * iyzsong AFK
+23:14 hatelis quit:Quit: Leaving
+23:15 Youmu: lol 萌萌萌
+23:16 lh_mouse: (|o|)
+23:21 cleamoon_ joined channel
+23:21 cleamoon__ quit:Read error: Connection reset by peer
+23:30 hope1 quit:Ping timeout: 272 seconds
+23:30 cleamoon_ quit:Read error: Connection reset by peer
+23:31 cleamoon_ joined channel
+23:32 hope1 joined channel
+23:36 hope1 quit:Client Quit
+23:36 hope1 joined channel
+23:40 cleamoon__ joined channel
+23:40 cleamoon_ quit:Read error: Connection reset by peer
+23:49 lh_mouse: geordi, -c { int (*p)[] = 0; p = &a; } extern int a[];
+23:49 cleamoon__ quit:Read error: Connection reset by peer
+23:49 geordi: Success
+23:49 lh_mouse: geordi, -c { int (*p)[] = 0; p = &a; } extern int a[3];
+23:49 geordi: error: cannot convert 'int (*)[3]' to 'int (*)[]' in assignment
+23:53 sleepwalking quit:Ping timeout: 246 seconds
+23:53 yzld2002 quit:Remote host closed the connection

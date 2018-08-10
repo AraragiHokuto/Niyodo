@@ -1,0 +1,311 @@
+00:44 varna quit:Ping timeout: 265 seconds
+00:53 lh_ideapad joined channel
+01:03 cyrushmh joined channel
+01:03 lh_ideapad quit:Remote host closed the connection
+01:06 ariwaranosai joined channel
+01:06 ariwaranosai_ joined channel
+01:06 94KAAEKCM joined channel
+01:06 7F1AAJYQ0 joined channel
+01:06 ariwaranosai__ joined channel
+01:06 ariwaranosai___ joined channel
+01:06 ariwaranosai____ joined channel
+01:17 lh_mouse quit:Ping timeout: 268 seconds
+02:43 jingjinghack quit:Remote host closed the connection
+02:43 jingjinghack joined channel
+07:17 yonka joined channel
+07:22 yonka quit:Ping timeout: 268 seconds
+07:58 ArukiNemu quit:Ping timeout: 265 seconds
+08:14 matchray: windows有没有copy relocation
+08:37 perr joined channel
+08:37 perr quit:Changing host
+08:37 perr joined channel
+09:50 lh_ideapad joined channel
+10:09 lh_ideapad quit:Remote host closed the connection
+10:10 ArukiNemu joined channel
+10:12 lh_ideapad joined channel
+10:14 yonka joined channel
+10:15 yonka quit:Remote host closed the connection
+10:15 yonka joined channel
+10:16 yonka quit:Remote host closed the connection
+10:17 yonka joined channel
+10:18 zb111 joined channel
+10:21 lh_ideapad quit:Remote host closed the connection
+10:22 L-ios quit:Ping timeout: 260 seconds
+10:22 yonka quit:Ping timeout: 268 seconds
+10:24 \s quit:Read error: Connection reset by peer
+10:24 lh_ideapad joined channel
+10:25 \s joined channel
+10:26 lh_ideapad quit:Client Quit
+10:29 yonka joined channel
+10:43 ArukiNemu quit:Ping timeout: 245 seconds
+10:51 lh_ideapad joined channel
+11:22 ArukiNemu joined channel
+11:27 lh_ideapad quit:Remote host closed the connection
+11:27 lh_ideapad joined channel
+12:06 lh_mouse joined channel
+12:28 ArukiNemu: 公开征询写作意见，谢谢阅览。https://arxiv.org/abs/1802.08370
+12:45 Stevearzh quit:Read error: Connection reset by peer
+12:48 Stevearzh joined channel
+13:07 lh_ideapad: ArukiNemu, 爆。
+13:31 ArukiNemu quit:Ping timeout: 248 seconds
+14:16 lh_ideapad: https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html
+14:16 lh_ideapad: 你家 GC 。/
+15:00 L-ios joined channel
+15:01 lh_ideapad: https://img.vim-cn.com/0f/dd38aa72bbbc0d77f2b396a5777977a5b6966c.png
+15:01 lh_ideapad: 当前电量比容量还高。
+15:04 L-ios1 joined channel
+15:05 L-ios quit:Read error: Connection reset by peer
+15:08 L-ios joined channel
+15:08 L-ios1 quit:Ping timeout: 240 seconds
+15:09 matchray: lhanjian: 我打算把 s ; x J r 等键献给更加有用的功能
+15:14 lhanjian: why？
+15:15 lh_ideapad: why? why? why? why? 
+15:16 bboysoul joined channel
+15:27 matchray: 正在调整我的布局
+15:29 matchray: 两个键的快捷键应该左右手
+15:30 matchray: 比如 xi ,c
+15:31 matchray: addr/read/write references 可以用 ,a ,r ,w
+15:31 matchray: caller hierarchy callee hierarchy 用 ,c ,C
+15:32 matchray: lhanjian在想(为什么你说的这些vim一个都没有
+15:32 matchray: 然后又精神胜利（这些都是我不需要的功能
+15:34 matchray: 从这里开始 https://github.com/MaskRay/Config/blob/master/home/.emacs.d/private/%2Bmy/my-code/packages.el#L113
+15:36 matchray: m 也可以干掉
+15:36 matchray: H L M
+15:48 matchray: 把 x 干掉后多了很多键
+15:48 L-ios quit:Ping timeout: 260 seconds
+16:04 cirno_ joined channel
+16:10 zb111_ joined channel
+16:12 zb111 quit:Ping timeout: 248 seconds
+16:12 zb111_ quit:Read error: Connection reset by peer
+16:14 zb111 joined channel
+16:20 zoe1997 joined channel
+16:31 lh_ideapad: https://pastebin.com/GNibNfq2
+16:31 lh_ideapad: lhanjian, 
+16:31 cirno_ quit:Remote host closed the connection
+16:32 cirno_ joined channel
+16:33 7F1AAJYQ0 was kicked by 
+16:33 94KAAEKCM was kicked by 
+16:33 ariwaranosai_ was kicked by 
+16:33 ariwaranosai__ was kicked by 
+16:33 ariwaranosai___ was kicked by 
+16:33 ariwaranosai____ was kicked by 
+16:37 cirno_ quit:Remote host closed the connection
+16:37 matchray: 这种猎头和自己投递简历差别多大
+16:38 cirno_ joined channel
+16:40 lh_ideapad: matchray, 这一看就是群发的。
+16:40 lh_ideapad: BCC 的。
+16:40 lh_ideapad: 看邮件不没有诚意，看抬头和开始的一两句话就知道了。
+16:40 lh_ideapad: 重点是，窝并不写 Java 。
+16:41 matchray: 至少也要写 "lh_ideapad同学 您好"
+16:42 lh_ideapad: 窝才不是什么同学。（理直气壮）
+16:42 lh_ideapad: 搞了一上午，终于把系统改成英文了。
+16:42 lh_ideapad: UI 语言是中文真是破事太多了。
+16:43 lh_ideapad: gufw 居然把 Home/Office/Public 翻译成 主页/办公室/公共的 。
+16:43 lh_ideapad: Allow/Deny/Reject 翻译成 允许/否认/拒绝。
+16:44 lh_ideapad: 五毛钱翻译吧。
+16:44 lh_ideapad: Allow/Deny/Reject 接受/丢弃/拒绝 
+16:45 lh_ideapad: 这不是最坑爹的，最坑爹的是，中文在终端里没法显示，全部是菱形方块。
+16:53 lh_ideapad quit:Remote host closed the connection
+16:55 matchray: vte
+16:56 matchray: 你的终端能显示multi-color emoji吗
+16:56 matchray: 🐭
+16:56 matchray: colorful or monochrome mouse
+17:01 lh_ideapad joined channel
+17:02 lhanjian: 快捷键太多我都记不住
+17:06 lh_ideapad: matchray, MATE terminal 可以，物理终端不行。
+17:06 lh_ideapad: 黑白的。
+17:07 lhanjian: Mokou: ps4 pro出超采样功能了，试了没
+17:36 zb111 quit:Ping timeout: 256 seconds
+17:41 zoe1997 quit:Remote host closed the connection
+18:00 yonka quit:Remote host closed the connection
+18:00 yonka joined channel
+18:05 yonka quit:Ping timeout: 260 seconds
+18:15 yonka joined channel
+18:19 yonka quit:Ping timeout: 240 seconds
+19:08 Mokou: lhanjian: 没试
+19:08 yanling joined channel
+19:15 Dove joined channel
+19:22 varna joined channel
+19:24 yanling quit:Quit: Mutter: www.mutterirc.com
+19:26 varna: _(:з」∠)_今天频道里也没有吃滑稽乐的漂亮小姐姐
+19:32 Dove: 那是谁啊
+19:33 Dove: 这里会有漂亮小姐姐？我怎么不太信呢？
+19:33 Dove: 只有尼玛的死基佬
+19:33 Dove: 就比方说我
+19:35 Dove: 其实我都不太受得了你们讨论的技术问题，我TM每次学编程都跑去玩游戏了，这尼玛根本就不是我能干的事情。
+19:37 Dove: 所以我这种弱子具体能干什么我也不太清楚其实
+19:39 Dove: 所以尼玛的你们竟然能搞计算姬，真的是厉害。
+19:40 * varna 想搞真姬
+19:40 Dove: 没人给你介绍么？
+19:41 Dove: 按理说应该有蛮多这样的。
+19:41 Dove: 什么七大姑八大姨然后爸妈的同学朋友
+19:42 varna: 没有，跟我沾边比较近的亲戚懒得干这类事
+19:42 Dove: 前两天就有人要给我介绍
+19:42 varna: 大家都懂并无卵用
+19:42 Dove: 然后我就很没出息地方了。
+19:42 varna: 让人自己发展去好了
+19:43 Dove: 这种事情我都不太懂
+19:43 Dove: 反正我没敢答应
+19:43 Dove: 明天晚上9点去成都
+19:43 Dove: 装修房子
+19:44 Dove: 我这种没工作的混子都有人介绍，按理来说给你介绍的应该不少。
+19:45 Dove: 还是你家都是得道高人？
+19:46 varna: 不用很得道
+19:46 Dove: 也对
+19:46 varna: 基本都会知道没必要干涉下一代的生活
+19:46 Dove: 我家就不行
+19:46 varna: 不知道的也不会很熟
+19:46 varna: 所以无所谓
+19:46 Dove: 我爸妈催得比较紧
+19:47 Dove: 虽然我尼玛的顺其自然了，但是在他们身上还看不到明显效果。
+19:51 Dove: 慢慢来吧
+19:51 Dove: 关键是干涉了也没什么卵用啊，这事老天爷说了算。
+19:51 Dove: 这他妈他们都看不出来么
+19:52 lhanjian: 我家也没人催
+19:52 lhanjian: 在外地也没亲戚催
+19:53 Dove: 大概是因为你们都在外地，而我就在家
+19:55 Dove: 我家人就比较喜欢干涉我的生活。
+19:55 Dove: 不过也还好
+20:06 varna: _(:з」∠)_有没有吃滑稽乐的漂亮小姐姐啊
+20:07 varna: _(:з」∠)_妻海那样的，枕头那样的
+20:10 varna: lhanjian: 刚才试了下，正如我猜想的，assault事件里哈德森难民营的单刷难度比迫真太太活动中心低一些
+20:19 Dove: 好吧，我仔细想想看的话，干涉一下还是有点卵用的。
+20:20 Dove: 具体有什么卵用还不清楚
+20:21 Dove: 毕竟无上正等正觉什么的我也只是摸个边。
+20:21 lh_ideapad quit:Remote host closed the connection
+20:21 varna: 故知般若磨铪吗多咒 是大明咒 是大神咒 是无上咒 是坠吼的咒 能除一切苦 真实不虚
+20:22 varna: 故说般若磨铪吗多咒 即说咒曰
+20:22 varna: 图样图样 图样图森破 图样图森破啊 桑太乃义务
+20:22 Dove: 2333
+20:41 iyzsong joined channel
+20:46 varna: MD...
+20:46 Dove: 咋了？
+20:46 varna: 两件机密都开歪了
+20:46 varna: 黑鬼
+20:46 Dove: 2333
+20:47 iyzsong: o.o
+20:47 cleamoon_: 啊，联合国抗贫穷小组又空运了2M刀给我，不过也太瞧不起我了，上次我中奖还中了4兆刀呢，怎么这次才2M
+20:52 Youmu: O.O
+20:53 Dove: 贪多必失
+20:54 Dove: 抗贫穷一下给200万刀的咯？
+20:55 cleamoon_: 而且是寄一个铁箱子的现金哦
+20:56 varna: 造出两把挺有前途的小公主，等有凤凰点了就去洗天赋
+20:56 varna: 应该很适合金装邪教
+20:57 varna: 可惜说到底，突击步枪只是PvE武器
+20:57 perr quit:Ping timeout: 240 seconds
+20:59 Dove: 你们那儿房子多少钱？
+20:59 varna: cleamoon_: 你提醒我了，我印象自己还有一箱军火和大洋在阿富汗没寄回来呢
+21:00 varna: 殡江现在开盘的差不多30k-40k一平吧
+21:00 Dove: 我是说海盗国
+21:00 Dove: 你有多少钱都没关系
+21:00 Dove: 你Hold得住
+21:01 cleamoon_: orz，为什么我只得到过现金，自行车和电视呢
+21:01 varna: 还有非洲娘说想偷渡欧洲呢，我回了个hey buddy you've got the wrong door, the leather club's 2 blocks down
+21:02 cleamoon_: 23333333
+21:02 varna: 我自己都深陷黑非不能自拔
+21:02 cleamoon_: 我的fb上每周都有一两个欲求不满的加
+21:02 varna: 怕是仙人跳
+21:03 cleamoon_: http://www.imdb.com/title/tt8081062/  厉害了，我的评分
+21:03 cleamoon_: 交友网站广告而已
+21:03 varna: github啊
+21:04 cleamoon_: gayhub+
+21:05 Dove: 我竟然想象不出600万刀怎么花。
+21:06 Dove: 幸好我没这么多钱。
+21:07 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/db/vj_259425.jpg@596w_1l.jpg
+21:08 Dove: 一个扶贫一下就扶200万刀的国家，大概给别人别人都用不着。
+21:08 Dove: 简直活见鬼
+21:08 varna: 你只需要申请一个可以接到国际垃圾邮件的邮箱，就能收到了
+21:09 Dove: 我不傻
+21:09 Dove: 我自己有手有脚
+21:09 Dove: 不愁吃喝
+21:09 iyzsong: 2333
+21:10 cleamoon_: 话说我确实中过奖，小时候玩抽抽乐，还剩最后一张我买掉了，花了2块，中了2块
+21:11 varna: 你现在也就五岁……
+21:12 cleamoon_: 紫妈也是永远的17sadfhjsdhfkjahkjbkab
+21:13 Dove: 我劝你少收点这样的东西
+21:14 Dove: 真的
+21:14 Dove: 200万刀，丧心病狂。
+21:16 cleamoon_: 上次拿到四兆美元之后，一切中奖都空虚了
+21:16 Dove: 拿去捐了就好了
+21:17 Dove: 少年我说真的
+21:19 varna quit:Ping timeout: 240 seconds
+21:24 lh_mouse quit:Read error: Connection reset by peer
+21:24 lh_mouse joined channel
+21:25 cleamoon_: 之前同学在学校比赛得奖了，获得了无偿去赤道几内亚挖一个月水井的奖励
+21:26 varna joined channel
+21:29 ArukiNemu joined channel
+21:31 Stevearzh quit:Read error: Connection reset by peer
+21:33 Dove: 这比赛举办者大概脑子有水？
+21:33 Stevearzh joined channel
+21:49 Dove: 哎，睡觉去了。
+21:49 Dove: 诸君晚安，夜间愉快。
+21:49 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:53 perr joined channel
+21:53 perr quit:Changing host
+21:53 perr joined channel
+22:21 lh_ideapad joined channel
+22:28 varna: 呜
+22:28 varna: 腹肌开始疼了
+22:42 cirno_ quit:Quit: WeeChat 2.0.1
+22:42 ArukiNemu quit:Quit: Leaving
+22:49 HelloZhKing joined channel
+22:51 xhe joined channel
+22:51 lhanjian: varna: 割以永治
+22:51 varna: 啊啊
+22:52 varna: 想啪小姐姐
+22:52 varna: 迫真的也行
+22:52 varna: 来点酱油冷静下
+22:52 lhanjian: 酱油？
+22:52 cleamoon_: varna: 想〇小JJ
+22:54 gauge: 酱油是小姐姐的替代品?
+22:54 varna: 生抽拯救中国人
+22:54 cleamoon_: 酱油瓶口大小的
+22:54 cleamoon_: 竟然是生抽
+22:55 lhanjian: 老抽也不错啊
+22:55 varna: 老抽还是用来上色的多
+22:55 cleamoon_: 十连抽
+22:56 gauge: 😂
+22:56 varna: 那是格里芬或者迦勒底的窑子
+22:58 lhanjian: 格里芬窑子好
+23:02 cleamoon_: 话说谁试过生鸡蛋拌饭，什么味道
+23:03 varna: 我试过，口感不错
+23:03 varna: 适当的粘稠和爽滑感
+23:03 Mokou: 粘稠爽滑
+23:03 Mokou: 还行
+23:04 lh_ideapad quit:Remote host closed the connection
+23:04 lh_ideapad joined channel
+23:05 varna: 这旗怕是回忆起了自己当小姐姐的时光
+23:05 HelloZhKing quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+23:05 cleamoon_: 粘稠还行
+23:05 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/dc/gv_254600.jpg@596w_1l.jpg
+23:10 lh_mouse quit:Read error: Connection reset by peer
+23:17 lh_ideapad quit:Remote host closed the connection
+23:21 cleamoon_: https://imgs.aftonbladet-cdn.se/v2/images/97949cd1-2072-43e4-8134-c591cdbda2a9?fit=crop&h=925&w=900&s=72d102a2599ffc9f99ba5bfbce62596c59e70a38  这个妹子失踪了，警察正在找，不过，你们猜猜她多大年纪
+23:22 varna: 24岁，是学生
+23:22 cleamoon_: 学生确实是学生，但不是24
+23:23 varna: 我只会回答这个的
+23:23 varna: 刻在DNA里了
+23:23 cleamoon_: 什么鬼
+23:23 cleamoon_: 身高是170公分，体重是74公斤吗
+23:23 varna: 看起来还蛮结实的
+23:24 cleamoon_: 其实是14岁
+23:25 varna: puuuuuuuuuuuuuuuuuuuuuu
+23:25 varna: 这是吃了多少激素
+23:25 varna: 萝莉之耻
+23:25 cleamoon_: 这样就明白为什么全国平均初夜15-岁了
+23:25 cleamoon_: 我在路上看到可爱的萝莉大多不到10岁
+23:25 varna: 可你才五岁
+23:26 cleamoon_: 有胸的十岁萝莉
+23:26 varna: ...
+23:26 varna: 地 狱 绘 图
+23:26 cleamoon_: 我确实竟然被人误会很年轻....
+23:27 varna: 然后被侵犯了？
+23:27 cleamoon_: 他们需要前凸后翘的
+23:28 varna: 幼女幼女平坦的胸口
+23:30 cleamoon_: 不知道这些小学长胸的怎么做到的
+23:31 cleamoon_: 顺便，这位是我大学（男，可能）同学  https://img.vim-cn.com/5f/da694492a1f9c543c30a6890c95a1c5b7fcbc9.jpg
+23:31 iyzsong: -.-
+23:35 varna: 不像小姐姐
+23:35 varna: 妻海那样的比较好
+23:36 perr quit:Quit: Leaving
+23:44 cleamoon_: 然而并不是小姐姐，是有妹的，还是11区妹子

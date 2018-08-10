@@ -1,0 +1,189 @@
+00:08 AutoGavy quit:Quit: Connection closed for inactivity
+00:27 stardust quit:Quit: Bye!
+00:36 lh_mouse quit:Read error: Connection reset by peer
+00:37 stdstx joined channel
+00:41 cleamooon quit:Read error: Connection reset by peer
+00:43 CyrusYzGTt joined channel
+00:59 stdstx quit:Quit: ZzZz
+01:24 cleamoon_ quit:Ping timeout: 258 seconds
+01:38 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+02:13 cleamoon joined channel
+03:22 xxxxxxxx quit:Quit: Leaving...
+04:14 Youmu joined channel
+04:27 varna quit:Quit: leaving
+04:33 Youmu quit:*.net *.split
+04:36 Youmu joined channel
+04:59 cleamoon quit:Ping timeout: 240 seconds
+05:35 cleamoon joined channel
+05:38 Izumo quit:Quit: Connection closed for inactivity
+06:23 Youmu quit:Quit: Connection closed for inactivity
+07:29 hoxily quit:Quit: Leaving
+07:53 cleamoon_ joined channel
+08:26 FrankHB quit:Ping timeout: 246 seconds
+09:11 FrankHB joined channel
+09:19 FrankHB quit:Ping timeout: 244 seconds
+09:21 lh_mouse joined channel
+09:46 xxxxxxxx joined channel
+09:50 cleamoon: lh_mouse, 我看一个stackoverflow说智能指针比jvm用的那种垃圾回收慢得多，是这样吗
+09:55 lh_mouse quit:Read error: Connection reset by peer
+09:56 lh_mouse joined channel
+11:07 stdstx joined channel
+12:31 FrankHB joined channel
+12:36 Matsune joined channel
+12:40 Youmu joined channel
+13:19 EAirPeter quit:Ping timeout: 250 seconds
+13:22 EAirPeter joined channel
+13:37 FrankHB quit:Ping timeout: 240 seconds
+13:59 sottd joined channel
+13:59 sottd: 刚才遇到了个bug,在插入树的时候插入是成功的，但是孩子却不是自己的
+14:00 * sottd 好污
+14:04 lh_mouse: 噫噫噫。
+14:04 Izumo joined channel
+14:09 * sottd fixed
+14:17 AutoGavy joined channel
+14:19 AutoGavy: 让我玩下机器人← ←
+14:20 AutoGavy: geordi, << bark; \ #if true \ string bark = "hi"; \ #else \ int bark = ; \ # endif
+14:20 geordi: hi
+14:21 AutoGavy: hi~
+14:22 AutoGavy: geordi, << bark; \ #if true \ string bark = "啦啦啦"; \ #else \ int bark = ; \ # endif
+14:22 geordi: 啦啦啦
+14:28 lh_mouse: AutoGavy, 不给玩。快爆照。
+14:31 sottd: geordi, << bark; \ #if true \ string bark = "ummmmmm"; \ #else \ int bark = ; \ # endif
+14:31 geordi: ummmmmm
+14:47 cleamoon_ quit:Ping timeout: 244 seconds
+15:16 lh_mouse: https://github.com/lhmouse/mcfgthread/issues/6
+16:08 varna joined channel
+16:09 varna: (｡･ω･)ﾉ来几个妹子！
+16:09 Izumo: 噫，525
+16:10 Izumo: 差一点
+16:10 varna: ^ 现充把妹影响成绩
+16:10 Izumo: 屁，考前太浪而已
+16:11 varna: ^ 太浪（把妹）
+16:13 Izumo: 并没有妹可以把
+16:15 Youmu: 可以把自己呀
+16:16 Izumo: Youmu: 你扮一个，我来把
+16:16 Youmu: Orz 这等事情我觉得 lhanjian 比较合适，他身材像女性
+16:16 Youmu: （真的
+16:19 Matsune quit:Ping timeout: 244 seconds
+16:21 Matsune joined channel
+16:27 lh_mouse: Youmu, 品尝过了？
+16:38 AutoGavy quit:Quit: Connection closed for inactivity
+16:38 Youmu: lh_mouse: 当然
+16:44 stdstx: 把妹 == 有把的妹子？
+16:46 sottd: 我把那伙计的工程整个复制过来了..
+17:01 Matsune quit:Read error: Connection reset by peer
+17:23 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+17:37 lhanjian: Youmu: 确实，我可以穿我妹子的衣服
+17:37 lhanjian: 而且我还有一套女装买来没穿
+17:38 lhanjian: 店主说我的腿毛比妹子还少
+17:44 varna: lhanjian: 我觉得我到杭州得爆你一把
+17:44 lhanjian: 来来来
+17:44 varna: (｡･ω･)ﾉ
+17:44 lhanjian: varna: 等羊驼子好久了
+17:44 varna: 七月份
+17:49 lhanjian: OK
+17:49 lhanjian: 七月份我应该从家回杭州咯
+17:50 varna: (｡･ω･)ﾉ哦瘊瘊
+17:58 sottd joined channel
+18:13 varna: 看了看这两天流行的裸持新闻，为何出来拍抵债裸照的女大学生都像鸡……
+18:14 lh_mouse: 卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽卧槽。
+18:14 lh_mouse: 你怎么污得那么熟练啊。
+18:15 varna: (｡･ω･)我都不好意思说我身经百战见得多了
+18:21 varna: 卡梅伦辞职了？
+18:21 varna: 啊，真的
+18:21 varna: 他说在十月保守党大会之前辞职
+18:22 AutoGavy joined channel
+18:25 EAirPeter quit:Quit: Page closed
+18:26 AutoGavy: geordi, << bark; \ #if true \ string bark = " geordi, << bark; \ #if true \ string bark = "umm"; \ #else \ int bark = ; \ # endif "; \ #else \ int bark = ; \ # endif
+18:26 geordi: error: unknown escape sequence: '\040'
+18:27 AutoGavy: geordi, << bark; \ #if true \ string bark = "good day"; \ #else \ int bark = ; \ # endif
+18:27 geordi: good day
+18:27 AutoGavy: good day
+18:27 AutoGavy: cya
+18:28 varna: dood gay
+18:28 AutoGavy: 谁会打彩色的字
+18:29 varna: lh_mouse: ^
+18:32 sottd: fuck cocos
+18:32 sottd: CCNode竟然不能处理键盘事件，自己加都不行
+18:32 * sottd 又要回到合并代码的地狱了
+18:34 varna: sottd: 求介绍妹子来侵犯
+18:34 sottd: 整个公司就我一只单身狗
+18:35 varna: 去吧！牛头人！
+18:35 varna: 雷霆崖上喜多村 英梨酋长赛凯恩 血蹄踏遍花开处 男女皆被牛头人
+18:43 wchen joined channel
+18:44 varna: (｡･ω･)ﾉ似乎来了新人
+18:45 wchen: 恩， 刚接触IRC，还不怎麼会用
+18:45 varna: (｡･ω･)ﾉ欢迎
+18:45 varna: 请参考一下topic（用/topic命令）里的帮助
+18:45 varna: 并且适当忽略topic里的军国主义黄赌毒内容
+18:48 varna: 频道比较活跃的时候可能是北京时间深夜到凌晨
+18:48 varna: 如果有感兴趣的话题可以自行发起
+18:48 lh_mouse: AutoGavy, 02工03口04小05冰06箱07爆08照09。
+18:49 wchen: 哦，好的
+18:49 lh_mouse: wchen, 爆照。
+18:49 varna: wchen: 爆曌
+18:50 lh_mouse: geordi, << "02工03口04小05冰06箱07爆08照09。"
+18:50 geordi: 工03口04小05冰06箱07爆08照09。
+18:50 lh_mouse: geordi, << "\x1B[0;30;4meow"
+18:50 geordi: [\ESC][0;30;4meow
+18:51 wchen: 。。不要啦， 我还是个学生， 不要毁我前途哦
+18:51 lh_mouse: wchen, 你是妹子么。
+18:51 wchen: 不是的
+18:51 varna: 最近不是正流行学生用手持身份证的裸照抵押的高息贷款么！
+18:51 varna: 来来来爆曌
+18:51 sottd: 你们害我不得不每分钟clear一次irc..
+18:52 varna: 留着就ok了
+18:53 varna: 就算缓冲区里有一本小说，也不到1MB
+18:53 lh_mouse: AutoGavy, 在有 +c 的频道是发不出带颜色的字的。
+18:53 wchen: 你们先聊吧，其实我明天有考试，还没好好复习。
+18:53 lh_mouse: 关于 channel flags 的帮助可以看 /quote help cmode 。
+18:53 sottd: acg.sugling.in
+18:53 sottd: wchen:11p
+18:56 wchen: llp 什么意思？
+18:57 varna: 揉啊揉啊揉揉
+18:57 varna: 揉来揉去揉揉
+18:57 varna: 揉这揉那揉揉
+18:59 wchen: 话说irc上怎么发图片？
+19:00 sottd: 百度搜索:vim 图片
+19:00 varna: 没有直白的发图办法，客户端也懒得统一
+19:00 varna: 像我这种用命令行客户端并且懒得看图的人，甚至看不到你们的图
+19:01 varna: 不过如果你愿意的话，可以试着抓一次MIME
+19:01 sottd: 大不列颠，及北爱尔兰联合王国脱欧了！脱欧了！王八蛋首相卡梅伦搬起石头砸自己的脚！带着他的内阁们跑路了！我们没有办法，只能拿着英镑抵工资！原价9.7 9.6 的英镑现在只要8.9！只要8.9！
+19:01 varna: 针对HTTP协议的图片链接显示图片，自己写还是可行的
+19:02 lh_mouse: wchen, http://img.vim-cn.com/
+19:03 iyzsong joined channel
+19:03 iyzsong quit:Changing host
+19:03 iyzsong joined channel
+19:04 wchen: vim 不是编辑器吗？ 是发连接吗？http://placekitten.com/500/500
+19:04 varna: 猫鼻子好
+19:07 iyzsong: _(:з」∠)_
+19:11 hoxily joined channel
+19:13 lh_mouse: https://github.com/lhmouse/mcfgthread/issues/6
+19:23 sottd: http://img.vim-cn.com/c6/15fd0df9c3b4247732b5a3b9142990b6f16d26.jpg 
+19:25 varna: 最后那个猫球……我四五年前见过
+19:37 sottd: 感谢StuartRussell 它让我的生活简单了许多，不用去想办法保存遍历树的状态了
+19:42 sottd: http://www.ithome.com/html/digi/236215.htm 
+19:43 sottd: 上次想要丢个矛到月球上失败了，这次能成功吗
+19:47 sottd: http://www.ithome.com/html/game/236137.htm
+19:47 sottd: 说着，甘地丢了颗核弹
+19:56 Izumo: 终于把Limbo通了
+20:00 Izumo: 等了几年了
+20:12 sottd: ..你等免费版吗..
+20:12 Izumo: 是，一直没买
+20:19 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+20:37 lh_mouse: http://v.ifeng.com/news/world/201606/01d15a54-1584-4eab-9786-4fe6b80cf92f.shtml
+20:46 cleamoon: https://www.zhihu.com/question/47736770
+20:58 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/r4/3k_284894.jpg@596w_1l.jpg
+20:59 cleamoon: limbo，我怎么觉得我在humble bundle买了的...
+21:14 iyzsong: (┙>∧<)┙へ┻┻
+21:20 cleamoon_ joined channel
+21:23 Youmu quit:Quit: Connection closed for inactivity
+21:28 wchen quit:Quit: Leaving
+21:38 AutoGavy quit:Quit: Connection closed for inactivity
+21:38 CyrusYzGTt joined channel
+22:04 lh_mouse: https://www.youtube.com/watch?v=HF-IlQ1bcQA
+22:18 stdstx: 历史上的今天：1989年6月24日，长者念了两句诗
+22:35 cyrushmh joined channel
+22:39 CyrusYzGTt quit:Ping timeout: 272 seconds
+22:56 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:50 T-J-M quit:Ping timeout: 240 seconds

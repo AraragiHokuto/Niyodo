@@ -1,0 +1,549 @@
+00:08 molikto quit:Remote host closed the connection
+00:09 molikto joined channel
+00:25 ASenR quit:Quit: Lost terminal
+00:31 whocares_2 joined channel
+00:43 hoxily joined channel
+01:00 ASenR joined channel
+01:02 ASenR quit:Client Quit
+01:02 ASenR_ joined channel
+01:03 ASenR_ quit:Client Quit
+01:03 ASenR joined channel
+01:19 lh_mouse quit:Read error: Connection reset by peer
+01:21 lh_mouse joined channel
+01:37 molikto quit:Remote host closed the connection
+01:54 lh_mouse quit:Read error: Connection reset by peer
+02:03 ASenR quit:Quit: leaving
+02:14 ASenR joined channel
+02:38 molikto joined channel
+02:41 ASenR___ quit:Quit: leaving
+02:42 lolisa joined channel
+02:49 ASenR_ joined channel
+02:49 molikto quit:Ping timeout: 244 seconds
+02:50 ASenR_ quit:Client Quit
+03:28 cleamoon quit:Ping timeout: 256 seconds
+03:56 molikto joined channel
+03:56 hysw: molikto: 爆智商
+04:10 molikto quit:Ping timeout: 252 seconds
+04:31 lolisa: 有人有羊陀的BF解释器吗？
+06:36 cleamoon__ quit:Ping timeout: 255 seconds
+06:47 cleamoon__ joined channel
+06:51 cleamoon joined channel
+07:01 molikto joined channel
+07:05 molikto quit:Ping timeout: 255 seconds
+08:12 lolisa quit:Quit: meow
+08:52 molikto joined channel
+09:02 molikto quit:Ping timeout: 252 seconds
+10:11 lh_mouse joined channel
+10:25 molikto joined channel
+10:35 molikto quit:Remote host closed the connection
+10:53 molikto joined channel
+10:54 molikto quit:Remote host closed the connection
+10:55 molikto joined channel
+10:58 molikto quit:Remote host closed the connection
+11:24 molikto joined channel
+11:24 molikto quit:Remote host closed the connection
+11:25 molikto joined channel
+12:31 cleamoon quit:Ping timeout: 264 seconds
+12:32 cleamoon joined channel
+13:34 molikto quit:Remote host closed the connection
+14:23 molikto joined channel
+14:28 molikto quit:Ping timeout: 255 seconds
+14:34 molikto joined channel
+15:23 molikto quit:Ping timeout: 246 seconds
+15:24 molikto joined channel
+15:47 w15tp joined channel
+15:50 w15tp1 joined channel
+15:52 w15tp quit:Ping timeout: 255 seconds
+15:55 w15tp1: 流行午休？
+15:57 * lh_mouse slaps w15tp1 around a bit with a large trout
+15:57 condy: 中午不睡，下午崩溃。
+15:57 w15tp1: 对于scanf()函数的返回值为 0 时，程序往往会陷入无限循环（起码我的是这样）。一般都是加个 判断条件来跳出这种错误。那么，怎么才能终止这种无限循环回到正常的程序运行中？
+15:57 w15tp1: 现在就是下午。o.O
+15:58 lh_mouse: 这“往往”是怎么脑补出来的
+15:58 lh_mouse: 我说个笑话   scanf
+15:58 w15tp1: 就是我现在的情况。
+15:58 lh_mouse: 我说另一个笑话 cin
+15:58 w15tp1: 不好笑。
+15:58 lh_mouse: 稍有常识的人都知道不要直接用 scanf
+15:58 lh_mouse: 正确姿势是 getline 然后 sscanf
+16:00 w15tp1: 继续这种错误。我只是想知道方法。
+16:00 w15tp1:  #include<stdio.h>
+16:00 w15tp1: int main(void)
+16:00 w15tp1: {
+16:00 w15tp1: int n;
+16:00 w15tp1: int scanfs;
+16:00 w15tp1: while(1)
+16:00 w15tp1: {
+16:00 w15tp1: loop: scanfs = scanf("%d",&n);
+16:00 w15tp1: printf("it's%d.\n",scanfs);
+16:00 w15tp1: if(scanf == 0)
+16:00 w15tp1: goto loop;
+16:00 w15tp1: }
+16:00 w15tp1: printf("yes,right! : %d\n",n);
+16:00 w15tp1: return 0;
+16:00 w15tp1: 代码分享的那个网站丢了，直接粘贴过来开。
+16:02 w15tp1: 好吧，这种貌似很无语，在贴吧里都没人回答。
+16:03 htredleaf joined channel
+16:04 lh_mouse: w15tp1, 我已经告诉你解决方案了
+16:06 w15tp1: 用scanf()不行？我只想知道在scanf()的时候怎么解决，
+16:06 htredleaf quit:Quit: Textual IRC Client: www.textualapp.com
+16:07 htredleaf joined channel
+16:07 w15tp1: 新函数以后再看。无语了。
+16:08 w15tp1 quit:Quit: w15tp1
+16:09 varna joined channel
+16:09 varna: 实验室妹子太多，被抓壮丁拉去拔河比赛了……
+16:10 varna: 结果加上国防生一共凑出九个男的，连替补都困难
+16:11 iyzsong: 拔河大赛
+16:11 varna: 学院的
+16:14 htredleaf: 那么幸福，让人羡慕死
+16:14 htredleaf: 周围都是男的
+16:14 lhanjian joined channel
+16:15 varna: 然而我并没有什么女朋友
+16:17 htredleaf: 然并卵
+16:18 * lh_not_bot slaps htredleaf around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+16:18 libhanjian joined channel
+16:18 htredleaf: lh_not_bo 是机器人吗？
+16:18 lh_not_bot: 是
+16:19 varna: 不是
+16:19 varna: 是机器鼠
+16:19 Guest59495 was kicked by :Guest59495
+16:19 lhanjian: Tks mouse
+16:19 lhanjian: 耗子是经过图灵测试的机器鼠
+16:20 htredleaf: 谁能告诉我在 irc 中如何 @ 人？
+16:20 lhanjian: 本频道赋予了他完全的鼠工只能
+16:20 varna: 跟客户端有关
+16:20 lhanjian: 智能
+16:20 lhanjian: htredleaf, 你是电脑的话，就Tab补全就好了
+16:21 htredleaf: lhanjian, 果然，好玩！
+16:21 lhanjian: 别乱玩
+16:21 lhanjian: 用多了给人造成困扰的
+16:21 lhanjian: 必要的时候用
+16:21 htredleaf: lh_not_bot, 老鼠，你怕猫么？
+16:21 varna: 人？
+16:22 varna: 哪里有人，站出来！
+16:22 lh_not_bot: 我就是猫
+16:22 htredleaf: 明白，谢谢啦！
+16:22 varna: 他那尺寸最多一个猫鼻子大
+16:22 varna: 连个全猫都不算的
+16:22 lhanjian: 摸耗鼻
+16:22 htredleaf: ( ⊙o⊙ )
+16:22 lhanjian: 才发现是新人
+16:24 xxxxxxxx joined channel
+16:24 * lh_not_bot slaps lhanjian around a bit with a large trout
+16:25 xxxxxxxx: varna 羊驼知道跳雷吗?
+16:25 lh_mouse: 羊驼只知道跳蛋
+16:25 xxxxxxxx: orz
+16:25 * lh_mouse 捂脸
+16:25 varna: 跳弹我知道
+16:25 varna: 跳雷是什么
+16:26 xxxxxxxx: 地雷
+16:26 xxxxxxxx: 触发了会跳起来再炸
+16:26 varna: 那种一下蹦起来的？
+16:26 varna: 听说过
+16:27 lh_mouse: 六九式反步兵地雷？
+16:27 xxxxxxxx: 别人说踩中那个伤残率100%真的假的?
+16:27 lh_mouse: 真的
+16:27 varna: 真的
+16:27 varna: 最好的结果是残疾
+16:28 htredleaf: 不是死才是最好的结果吗？
+16:28 htredleaf: 残疾了受罪一辈子... 那个惨
+16:28 varna: 不考虑哑弹，最好的结果是炸掉一个脚或者半条腿
+16:28 varna: 还是可以的
+16:28 lh_mouse: 所以才会有达姆弹这种东西
+16:29 lh_mouse: 打死人是次要的  吓唬人才是主要的
+16:29 xxxxxxxxx joined channel
+16:32 xxxxxxxx quit:Ping timeout: 252 seconds
+16:32 xxxxxxxxx: 然而我去baidu六九式反步兵地雷 结果出来了 六九式口交感受_百度知道
+16:32 varna: 老鼠过街
+16:32 lhanjian: 巨基的幻淫
+16:33 lh_not_bot: xxxxxxxxx: 自觉
+16:33 xxxxxxxxx: lhanjian: 你那边没有么?
+16:33 lhanjian: 美誉六九式口交技巧的三个翻新花样|口交|体位|花样_新浪时尚_新浪网
+16:33 varna: 今天还是改彻甲弹吧
+16:34 lh_not_bot: /lhanjian/d
+16:34 lhanjian: ？
+16:35 lh_not_bot: ？？
+16:35 lhanjian: <lh_not_bot> /lhanjian/d
+16:35 lh_not_bot: 这是 sed 的语法
+16:35 lhanjian: 我不用sed……
+16:36 lh_not_bot: s,,, 这就是 sed 的
+16:36 varna: 当全程perl
+16:37 lh_not_bot: 对于 Perl 表示智商不够理解不能
+16:39 lh_not_bot: 昨天还写了个 lowerCamelCase 转 snake_case 的命令
+16:39 lh_not_bot: sed -ri ':beg;s,(\b[a-z][a-z_]*)([A-Z][a-z]*),\1_\l\2,;t beg' `find template-src -name '*.?pp'`
+16:40 lh_not_bot: lh_mouse@lhmouse-dev:~/texas_server_project/texas_cluster$ echo 'lowerCamelCase' | sed -r ':beg;s,(\b[a-z][a-z_]*)([A-Z][a-z]*),\1_\l\2,;t beg' 
+16:40 lh_not_bot: lower_camel_case
+16:41 lh_not_bot: 我发现自己貌似中毒了
+16:41 lh_not_bot: 为什么自己会喜欢倒腾这种操蛋东西
+16:41 lhanjian: 耗子身上长了“Unix黑客”肿瘤
+16:41 * lh_not_bot slaps lhanjian around a bit with a large UNIX
+16:41 lhanjian:  varna 宁可全程perl +1
+16:42 xxxxxxxxx: 还有一种说法 踩中了压力触发的跳雷 直接别走让他在脚底下炸 这样受伤的只有脚底 这个也是真的么?
+16:43 varna: 不能确认
+16:43 varna: 有指出用钢盔盖住脚只废一脚的，然而我觉得太理想了
+16:43 varna: 深海军的战术建议触雷者优先后仰
+16:44 lh_not_bot: 29708 lh_mouse  20   0    5372   1800   1428 R  99.8  0.1   0:42.29 busybox
+16:44 lh_not_bot: busybox 有 bug
+16:44 lhanjian: busybox那个我宁可称他为 feature not implemented
+16:44 lh_not_bot: echo 'lowerCamelCase' | busybox sed -r ':beg;s,(\b[a-z][a-z_]*)([A-Z][a-z]*),\1_\l\2,;t beg'   # 死循环了
+16:44 xxxxxxxxx: 然而看上去跳雷爆炸之后弹片似乎就会往下飞
+16:45 lhanjian: GG
+16:45 lh_not_bot: 而且 busybox 不认识 \l
+16:45 lhanjian: 看来busybox还需要提高知识水平
+16:45 lh_not_bot: xxxxxxxxx: 空中开花
+16:46 lh_not_bot: lhanjian: 仿造 sed 也要按照 GNU 基本法   识得唔识得噶
+16:46 lhanjian: 可是，GNU会不会给人一种钦定的感觉？
+16:46 lhanjian: htredleaf, 听说最近HK又发生了几个大新闻，有没有什么可以批判一番的？
+16:46 lh_not_bot: GNU 没有说过要钦定  没有任何这个意思
+16:46 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=5e755291d409b3deebbfe460fc846d81/c2cec3fdfc039245deb314f68294a4c27c1e25c0.jpg
+16:47 lh_not_bot: 你们抱 GNU 大腿的   不要听得风 就是雨
+16:47 htredleaf: 。。。
+16:47 varna: HK...看到第一反应是造枪的
+16:47 htredleaf: 那个是 AK
+16:47 xxxxxxxxx: 胸好硬是什么鬼...
+16:47 htredleaf: 政改表决不通过，你们已经知道了...
+16:47 lh_not_bot: xxxxxxxxx: 假胸
+16:48 lh_not_bot: 大和破立绘能看到
+16:48 xxxxxxxxx: 并没有大和所以不知道
+16:48 varna: 胸是真胸，然而假的部分实在太假了
+16:48 lh_not_bot: 我这不玩的都知道了 你居然不知道
+16:49 htredleaf: 虽然是假的，但是依然好看
+16:49 xxxxxxxxx: 然而我并没有上去舔妹子的心态只是因为频道里玩的人比较多...
+16:49 varna: htredleaf: HK是个造枪的公司，名产品是MP5和G3，恶名远扬的产品是G36
+16:49 lhanjian: htredleaf, 他说的是 黑克勒科赫 那家厂
+16:49 htredleaf: 涨姿势了~
+16:49 htredleaf: 我发现这里原来是研究军火的
+16:49 lh_not_bot: me neither.
+16:50 varna: 这里主要是同性交友的
+16:50 htredleaf: 去拉点儿妹子来~
+16:50 varna: 这个好
+16:50 varna: 求拉些能交往的妹子来
+16:50 lh_not_bot: 妹子已经被吓跑两个了
+16:51 lhanjian: lh_not_bot, 那个妹子只是还没来吧
+16:51 lhanjian: 高考都考完了
+16:51 xxxxxxxxx: 还有羊驼和红旗说巡洋舰世界里的射程不科学问题 同样的问题会不会出现在以轻武器为主的FPS游戏里?
+16:51 varna: POPOBE大概有男友就不管我们了
+16:51 lh_not_bot: 高考前来了  闪退
+16:51 varna: xxxxxxxxx: 会
+16:51 lh_not_bot: 没事  要是真有 BF 了我们可以考虑 ban 掉
+16:51 varna: xxxxxxxxx: 典型的例子是百米、四百米、六百米上的散布
+16:52 varna: 还有狙击枪的瞄法
+16:52 lhanjian: 吃饭去
+16:52 lh_not_bot: 既然说到 FPS 我想起个笑话 
+16:52 varna: 狙击镜的密位和身高标尺什么的可不是摆着中二的……
+16:52 lh_not_bot: 不少人以为狙击枪的有效射程比轻机枪远
+16:52 varna: 这个没法说
+16:53 varna: 看弹种和枪管
+16:53 lh_not_bot: 而且问一般人手枪和轻机枪的有效射程差多少一般人也答不出
+16:53 lh_not_bot: varna: 狙击步枪普遍在 600 - 1200 m
+16:53 varna: 单纯论弹头飞行和杀伤，跟你枪上了什么瞄具什么脚架没有基础的关系
+16:53 varna: 一千二不适合中口径
+16:53 lh_not_bot: @巴雷特
+16:53 varna: 那个稍后说
+16:54 varna: 典型的.30-06中心发火，和常见的7.62 NATO比赛弹，这两种适合作战的射程比较适合限制在800m内
+16:54 lh_not_bot: 没错
+16:54 lh_not_bot: 巴雷特是点五零的
+16:54 varna: 如果打好500m表尺并且有观瞄手辅助标记、提示的话，能作出一个不错的狙击阵地
+16:55 lh_not_bot: 狙击枪还有点二二的
+16:55 varna: 至于巴雷特
+16:55 varna: .22 LR摸狗头的
+16:55 varna: SV99吧
+16:55 lhanjian quit:Remote host closed the connection
+16:55 varna: 巴雷特的最大优势是他们比AI更早更快抢到了深海军的订单
+16:55 lh_not_bot: 88式狙击步枪
+16:56 lh_not_bot: 5.8mm 大概是 点二三的样子
+16:56 lh_not_bot: 一般说的点二二是 5.56
+16:56 varna: 而LRSR这整个立项的目的是目指长程打击轻载具和薄掩体后敌军
+16:56 varna: 5.56一般说.223
+16:56 varna: 而且如果惯用.223的话，那个应该是旧式的M193弹
+16:56 varna: 而不是北约标准化的SS109
+16:56 lh_not_bot: 如果是一千米的射程仅仅和轻机枪平手而已
+16:57 varna: 至于5.56 NATO狙击枪，这个东西传言上的作用实际上更多是特种作战了
+16:57 varna: 典型的比如Mk12和各种变体
+16:57 varna: 一部分兼用的也可以考虑Mk17 LB（SCAR LB）
+16:57 varna: SCAR-L
+16:57 lh_not_bot: 0 0
+16:58 varna: 至于八八霰……前几天的新闻说我军9个班里，已经按1、4、7三个班的编制安排了狙击手
+16:58 varna: 其他班狙击手的位置用持95的步枪手代替
+16:58 xxxxxxxxx: 我觉得游戏里常见的环境似乎不太需要很长的射程
+16:59 varna: 班机有一个（应该是95重管+75发弹鼓）
+16:59 varna: 然后携带大量不占编制的火箭炮……
+16:59 varna: xxxxxxxxx: 现在射击游戏大多是CQB
+16:59 xxxxxxxxx: 火箭炮..
+16:59 varna: 不过也有Ghost Recon那样强调侦查的游戏
+17:01 varna: 我军弄了些新的云爆弹
+17:01 varna: 最近的新闻里应该有提及
+17:08 lh_not_bot: 云爆弹简直可以当战术核武来用
+17:08 lh_not_bot: 爆炸半径三四百米
+17:09 xxxxxxxxx: http://ol.tgbus.com/yxq/yxbg/201206/1056932.shtml 
+17:09 sismvg joined channel
+17:10 sismvg: HR:写个strcpy(char* dest,char* src)吧
+17:13 lh_not_bot: 渣
+17:13 sismvg: 我今天终于认识到为什么有的公司不让员工用模板了
+17:14 sismvg: 要是写模板的员工走了,谁来维护？
+17:14 iyzsong: ...
+17:15 lh_not_bot: 我今天终于认识到为什么有的公司不让员工用 C艹 了   要是写 C艹 的员工走了,谁来维护？
+17:15 lh_not_bot: 我今天终于认识到为什么有的公司不让员工用 Perl 了   要是写 Perl 的员工走了,谁来维护？
+17:15 xxxxxxxxx: 下面这个说的好
+17:15 sismvg: perl与SHA265
+17:16 iyzsong: perl不用维护..
+17:16 lh_not_bot: 围观 sha265
+17:17 sismvg: 256..
+17:18 * iyzsong 在用firefox(无flash)登移动端百度网盘上传东西 竟然没有进度···
+17:20 varna: 我刚去了趟楼下
+17:20 varna: 有个工艺广告，上面写着“节能减耗”
+17:22 sismvg: 节能减 耗
+17:23 varna: 公益
+17:23 qwebirc13183 joined channel
+17:24 xxxxxxxxx: lhj的ip
+17:25 * iyzsong 在看一个游戏编程视频教程(Handmade Hero)，他竟然在Windows上把Emacs/Krita啥的用的飞起···
+17:25 sismvg: 嗯》。有什么奇怪的吗
+17:26 varna: eee
+17:28 xxxxxxxxx: 水下步枪...看上去真神奇
+17:29 varna: ASM-DT之类的么
+17:30 xxxxxxxxx: QBS06
+17:31 varna: 轻-步-水……？
+17:31 varna: 这个看着好像旧式的APS...
+17:34 xxxxxxxxx: 这东西要什么时候拿出来用?
+17:34 varna: 基地周围的蛙人巡逻兵在对付敌方蛙人渗入的时候用
+17:35 xxxxxxxxx: 上岸了呢?
+17:35 varna: 由其他部队拦截，或者临时整备水上武器（例如把两栖突击步枪变化到水上模式，或者用预备的常规突击步枪）
+17:43 xxxxxxxxx: 不能在水面上用鱼叉之类的东西打蛙人么?
+17:44 varna: 一般敌人会在合适的距离开始潜水
+17:44 varna: 不容易探测到
+17:44 varna: 人类目标还是太小了
+17:45 lhanjian quit:Ping timeout: 246 seconds
+17:45 lolisa joined channel
+17:47 ASenR joined channel
+17:49 sismvg: ...淡水的话为什么不放电呢
+17:50 varna: 电酱的排水量大约有1.6kbrt
+17:50 varna: 不适合反潜、对空之类一切需要探查力的护卫作战
+17:51 varna: 至于通电，这个在各种因素上都不在考虑范围之内
+17:52 whocares_2_ joined channel
+17:54 whocares_2 quit:Ping timeout: 256 seconds
+17:54 sismvg: template<class... Arg> void dispath(Arg&... arg) void dispath_impl(size_t& v,int* ptr); size_t value=0;int var=0;dispath(value,&var);
+17:55 sismvg: ^死亡圆环
+17:55 varna: dispath -> dispatch?
+17:56 sismvg: 打错了
+17:57 sismvg: 上面的函数加入到类成员后就会出现问题，但是非成员函数却能通过编译
+17:58 htredleaf quit:Quit: My Mac has gone to sleep. ZZZzzz…
+18:12 ASenR quit:Quit: Lost terminal
+18:12 xxxxxxxxx: http://www.szhgh.com/Article/opinion/zatan/2014-04-21/49982.html 逗乐文
+18:12 ASenR joined channel
+18:13 varna: 这山炮
+18:14 iyzsong: = =
+18:17 xxxxxxxxx: WT0不平等条约，搞烦了可以退出；房地产泡沫，搞烦了也可以刺破。包括水务主权、金融和货币主权，等等，也可以夺回来。甚至包括转基因生物战争，立即扭转，适时恢复，也可以把种子和粮食战略安全的主权夺回来。
+18:18 varna: 还可以闭关锁国，等着第七舰队来敲门
+18:19 xxxxxxxxx: 只有废除维持今天殖民资本主义发展方式的人口生产力问题，转移到农业合作化或集体化经济建设中来，调整好工农业发展相互补充的矛盾，在保障国计民生和社会稳定的根本前提下，滞涨和通胀并存的危机，才会慢慢解决。
+18:20 varna: 23333333333333
+18:20 xxxxxxxxx: 说得太有道理了
+18:20 xxxxxxxxx: 根本无法反驳
+18:26 xxxxxxxxx: http://www.szhgh.com/Article/thirdworld/korea/2015-06-17/87985.html
+18:26 xxxxxxxxx: 金正恩认为开会时打瞌睡或开小差是比反对他的决定更为恶劣的行为。
+18:28 xxxxxxxxx: 草根萌芽2015-06-17 16:24:53
+18:28 xxxxxxxxx: “朝鲜人民武力部长玄永哲已被处决、玄永哲是因其在最高领导人金正恩出席的正式活动上打瞌睡” 好！支持金太阳金正恩！世界强人普 金才是真男人！对那些大搞宗派主义活动和藐视不作为的干部就得敢下手、否则你不打他他打你！
+18:28 xxxxxxxxx: 那全世界的大英雄毛主席被中国的纳粹梦毛被扒光 成了“落汤鸡”高层最大的走资派闷终踩在伟人头上向上爬欺负鱼肉奴隶了中国人又殖民中国的新老朋友、正在与殃丈夫争霸世界维持世界“新秩序”中国人民群众罹难30多年了、现在成为被专政对象这可怎么办？中国人民群众能借点阳光吗？真的很羡慕伟大的朝鲜人民在金正恩的领导下精神
+18:28 xxxxxxxxx: 不贫瘠！
+18:29 xxxxxxxxx: 这网站我绝对要收藏
+18:30 varna: 这网站为什么这么屌的
+18:38 Plough joined channel
+18:38 varna: Plough: 掘
+18:39 xxxxxxxxx: 这网站真是赞
+18:39 xxxxxxxxx: 根本看不懂是粉还是黑
+18:39 molikto quit:Remote host closed the connection
+18:39 Plough: varna: 肛
+18:41 Plough: 说起来，slashdot现在还是perl写的么
+18:46 varna: 没注意了
+19:05 molikto joined channel
+19:09 ASenR quit:Quit: leaving
+19:10 ASenR joined channel
+19:10 ASenR quit:Client Quit
+19:10 ASenR joined channel
+19:11 varna: 好想侵犯个谁啊
+19:16 molikto_ joined channel
+19:16 molikto quit:Read error: Connection reset by peer
+19:16 lolisa: 侵犯varna吧
+19:18 varna: lolisa: 爆
+19:35 cleamoon: http://www.solidot.org/story?sid=44481
+19:35 cleamoon: http://www.solidot.org/story?sid=44484
+19:35 molikto_ quit:Remote host closed the connection
+19:35 cleamoon: http://www.solidot.org/story?sid=44480
+19:37 varna: 卧槽
+19:37 varna: @金狼古十四
+19:37 cleamoon: 优质小学生  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/q5/xn_88006.jpg
+19:37 cleamoon: 金狼古十四是什么
+19:38 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/q5/se_229444.jpg
+19:38 lolisa: 是什么linux吧的html汇编玩笑没？
+19:38 cleamoon: https://github.com/nvbn/thefuck/issues/251
+19:38 molikto joined channel
+19:38 varna: Thinking in Java Assembly  Dr.Duan (God); Dr.Goblin (Big)
+19:40 varna: 另外我想起以前有这么个故事 http://tieba.baidu.com/p/2695709075
+19:41 lolisa: 话说varna你有lazy的实现的资料吗？我想学学。。。
+19:41 Plough: 上下文还有么
+19:41 varna: lolisa: 没有
+19:41 varna: Plough: 没了，原文交配应该是教派
+19:41 Plough: なるほど
+19:42 varna: 恥球自己打成交配
+19:43 molikto quit:Remote host closed the connection
+19:44 molikto joined channel
+19:44 cleamoon: 2333333
+19:47 lolisa: 2333
+19:47 * lh_not_bot slaps lolisa around a bit with a large trout
+19:47 * lh_not_bot slaps lolisa around a bit with 
+19:48 * lh_not_bot slaps lolisa around a bit with a large morisa
+19:48 * lolisa evade *3
+19:48 Plough: http://tieba.baidu.com/p/3835404887 现在的伸手党连代码都懒得放了么……
+19:48 varna: marasa（摩罗沙）
+19:55 lh_cat joined channel
+19:57 lh_mouse quit:Ping timeout: 245 seconds
+20:02 cleamoon__: http://www.bilibili.com/video/av2445994/
+20:16 Plough: firefox为何这么聪明
+20:16 molikto quit:Remote host closed the connection
+20:16 Plough: 我敲localhost:5000
+20:16 Plough: firefox聪明地发现我打错了，帮我把地址改成了www.localhost.com
+20:20 cleamoon__: .....
+20:22 lh_mouse quit:Read error: Connection reset by peer
+20:22 molikto joined channel
+20:22 lh_mouse joined channel
+20:23 cleamoon quit:Ping timeout: 245 seconds
+20:24 cleamoon__: 我擦，新x盒手柄那么多键
+20:24 cleamoon__: 人们都是怎么记住该按哪个的...
+20:25 cleamoon joined channel
+20:31 molikto quit:Remote host closed the connection
+20:31 molikto joined channel
+20:32 molikto quit:Client Quit
+20:35 molikto joined channel
+20:45 molikto quit:Remote host closed the connection
+20:51 molikto joined channel
+20:51 wlemuel joined channel
+20:52 molikto quit:Remote host closed the connection
+20:58 sismvg: ....
+21:00 sismvg: geordi,{template<class T> void test(T&){} vector<int> vec; test(vec.begin());}
+21:00 geordi: error: a template declaration cannot appear at block scope
+21:00 wlemuel quit:Ping timeout: 252 seconds
+21:00 sismvg: geordi,{template<class... T> void test(T...&){} vector<int> vec; test(vec.begin());}
+21:00 geordi: Same error.
+21:01 sismvg: geordi,{template<class T> void test_impl(T){} template<class... T> void test(T&... v){test_impl(v...);} vector<int> vec; test(vec.begin());}
+21:01 geordi: Still same error.
+21:06 lhanjian joined channel
+21:07 molikto joined channel
+21:08 molikto quit:Remote host closed the connection
+21:08 molikto joined channel
+21:09 libhanjian joined channel
+21:10 lhanjian quit:Remote host closed the connection
+21:13 lhjkkkk joined channel
+21:14 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.6/20150605094246]
+21:15 Guest75967 quit:Remote host closed the connection
+21:16 tutu_wind joined channel
+21:17 wlemuel joined channel
+21:20 tutu_wind quit:Ping timeout: 246 seconds
+21:21 Plough: http://irc_search.chikyuuschool.com/ 搞了这么个玩意
+21:21 lhjkkkk joined channel
+21:21 wlemuel quit:Remote host closed the connection
+21:22 cleamoon quit:Ping timeout: 252 seconds
+21:22 wlemuel joined channel
+21:23 lhanjian quit:Remote host closed the connection
+21:23 lhjkkkk quit:Remote host closed the connection
+21:24 cleamoon joined channel
+21:24 tutu1 joined channel
+21:30 lh_not_bot: http://irc_search.chikyuuschool.com/?regex=0
+21:31 lh_not_bot: Line 275: 13:56 user32:zzzzzzzz: 您可以教菲菲学习的哦，请按以下格式发送问：您的问题 答：教我的回答
+21:52 lh_cat joined channel
+22:01 lh_cat: meow
+22:02 tutu_wind: zhizhi ~ 
+22:03 lolisa quit:Quit: meow
+22:07 varna: Plough: 查找干得漂亮
+22:07 varna: Plough: 有个错误
+22:07 Plough: ?
+22:07 varna: Plough: 结果页输入框里的编码是不对的
+22:07 varna: 你检查一下
+22:11 Plough: ……似乎只在特定情况下会出现
+22:11 Plough: 我手动encode一下看看
+22:11 Lwxyz joined channel
+22:13 cleamoon__: 肛旗的vps是哪里的
+22:13 wlemuel quit:Ping timeout: 245 seconds
+22:13 Plough: Linode Tokyu
+22:13 Plough: Linode Tokyo
+22:13 cleamoon__: 没被墙？
+22:14 Plough: linode为什么会被墙&
+22:14 varna: Plough: 我简单试了试都是乱的
+22:14 cleamoon__: 1GB?
+22:14 Plough: +
+22:15 cleamoon__: 快吗
+22:15 varna: 今天南西不做了，太累……
+22:15 Plough: 如果补给船不是前置的话，今天的南西我已经做完了
+22:15 Plough: 然而我一条补给船都还没打
+22:16 varna: 不想打了
+22:16 varna: 明天再说
+22:17 FrankHB joined channel
+22:17 Lwxyz quit:Ping timeout: 246 seconds
+22:17 varna: 胡乱打几个出击了事
+22:18 varna: 今天给电浆装上炮雷，不过一次也没发动
+22:18 varna: 莉级都比我靠谱
+22:20 Plough: 现在呢
+22:20 varna: 我试试
+22:21 varna: search里面有一个无伤大雅的0
+22:21 varna: 你是不是没检查0返回值……
+22:21 varna: 编码是对的了
+22:21 Plough: ……不该返回0啊
+22:21 Plough: 求输入
+22:21 varna: 这次没有了
+22:21 varna: 我刚进去的时候看到一个0……
+22:21 Plough: ……
+22:22 varna: 哦我知道了
+22:22 varna: 你那个入口链接里有url参数
+22:23 varna: 实现是对的
+22:23 hoxily quit:Quit: WeeChat 1.1.1
+22:23 Plough: 你是说小耗的那个？
+22:24 varna: 操，我点成他那个了……
+22:24 Plough: 23333
+22:24 cleamoon__: .....
+22:24 varna: 今天累迷糊了
+22:25 xxxxxxxxx: 迷糊驼
+22:25 cleamoon__: 今天去啪啪啪了？
+22:25 varna: 今天被拉去拔河比赛了
+22:26 varna: http://www.perlmonks.org/?node_id=1130948 豆知识
+22:26 cleamoon__: 拔 河
+22:26 xxxxxxxxx: 拔河比赛: 菊花争抢双头龙的比赛
+22:26 cleamoon__: 人 肉 搭 桥
+22:26 varna: 生拔了三场，后面好歹来了些替补，我就下去了
+22:33 varna: ……算错数了，今天的修5船净赚1桶……
+22:33 Plough: ……
+22:33 varna: 先修机智英勇的肥桑姐
+22:33 varna: 武藏你自己看着办……
+22:33 varna: 反正小破
+22:35 Plough: 日常做完，睡觉
+22:35 varna: Plough: 爆
+22:35 Plough: 明天我把搜索界面弄漂亮点
+22:35 Plough: 诸君武运
+22:35 Plough: varna: 爆
+22:35 Plough quit:Quit: leaving
+22:37 endle joined channel
+22:38 cleamoon__: 肛旗拔出来就走了
+22:39 varna: 喝一点咖啡
+22:41 cleamoon__: 不睡觉了？
+22:42 varna: 睡
+22:42 varna: 但是咖啡毕竟多数时候促进我睡眠
+22:42 cleamoon__: .......
+22:42 cleamoon__: 奇葩体质
+22:42 cleamoon__: 我喝了咖啡就是完全不困
+22:44 varna: 我有个想法
+22:44 xxxxxxxxx: 我觉得咖啡并不能提神
+22:44 varna: 现在我有1013战果
+22:44 varna: 周400盘5-4能有一千八
+22:45 xxxxxxxxx: orz
+22:45 varna: 去他大爷的，不周了
+22:45 varna: 消耗太多，而且下个月五百名送大灯就哭笑不得
+22:45 xxxxxxxxx: 要是送的不是大灯呢?
+22:46 varna: 不管
+22:46 varna: 比起那些奖励，我还是踏实地打活动拿新装备奖励好了
+22:52 xxxxxxxxx: http://www.szhgh.com/Article/opinion/zatan/2015-06-17/87986.html 继续看一篇
+23:01 varna quit:Quit: leaving
+23:06 ASenR quit:Remote host closed the connection
+23:07 cleamoon__: 这是什么鬼
+23:12 ASenR joined channel
+23:29 lh_mouse: 四分之三否决
+23:30 lh_mouse: 好一个否决
+23:44 tutu1 joined channel
+23:47 tutu_wind quit:Ping timeout: 265 seconds
+23:55 endle quit:Quit: Leaving

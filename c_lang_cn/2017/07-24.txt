@@ -1,0 +1,162 @@
+00:14 xhe quit:Quit: leaving
+00:41 owen quit:Read error: Connection reset by peer
+00:42 owen joined channel
+00:46 owen quit:Read error: Connection reset by peer
+00:46 owen joined channel
+00:50 owen quit:Read error: Connection reset by peer
+00:54 owen joined channel
+00:59 owen quit:Read error: Connection reset by peer
+00:59 owen joined channel
+01:03 owen quit:Read error: Connection reset by peer
+01:10 owen joined channel
+01:20 owen quit:Read error: Connection reset by peer
+01:26 owen joined channel
+01:33 owen quit:Read error: Connection reset by peer
+01:34 owen joined channel
+01:38 owen quit:Read error: Connection reset by peer
+01:38 owen joined channel
+01:45 owen quit:Read error: Connection reset by peer
+01:46 owen joined channel
+01:50 owen quit:Read error: Connection reset by peer
+01:51 owen joined channel
+01:55 owen quit:Read error: Connection reset by peer
+01:55 owen joined channel
+01:59 owen quit:Read error: Connection reset by peer
+02:04 owen joined channel
+02:10 owen quit:Read error: Connection reset by peer
+02:11 owen joined channel
+02:16 Youmu quit:Quit: Connection closed for inactivity
+02:31 lh_mouse: geordi, { string s; s.assign('a','b'); cout <<s[0]; }
+02:31 geordi: b
+02:31 lh_mouse: geordi, { string s; s.assign('a'); cout <<s[0]; }
+02:31 geordi: error: no matching function for call to 'string::assign(char)'
+02:33 lh_mouse: geordi, { string s; s.resize(6); s.c_str()[0] = 'a'; cout <<s; }
+02:33 geordi: error: assignment of read-only location '* s.string::c_str()'
+02:33 lh_mouse: geordi, { string s; s.resize(6); s.data()[0] = 'a'; cout <<s; }
+02:33 geordi: a[\NUL][\NUL][\NUL][\NUL][\NUL]
+02:34 FrankHB: geordi << "吱"
+02:34 geordi: 吱
+02:34 lh_mouse: FrankHB, 别闹，忙着呢。
+02:34 lh_mouse: FrankHB, https://github.com/lhmouse/MCF/issues/7
+02:44 Mokou quit:Quit: Lost terminal
+02:53 lh_mouse quit:Read error: Connection reset by peer
+02:53 lh_mouse joined channel
+02:58 lh_mouse quit:Read error: Connection reset by peer
+03:00 lh_mouse joined channel
+03:01 owen quit:Remote host closed the connection
+03:04 owen joined channel
+03:08 lh_mouse: geordi, { int a = 0x1234; cout <<hex <<(a ^ (a - 1)); }
+03:08 geordi: 7
+03:09 lh_mouse: geordi, { int a = 0x1234; cout <<hex <<(a & (a - 1)); }
+03:09 geordi: 1230
+03:27 lh_mouse quit:Ping timeout: 240 seconds
+04:11 owen quit:Read error: Connection reset by peer
+04:11 owen joined channel
+04:31 owen quit:Read error: Connection reset by peer
+04:32 owen joined channel
+04:47 owen quit:Read error: Connection reset by peer
+04:47 owen joined channel
+06:57 home_ joined channel
+07:39 Mokou joined channel
+08:11 FrankHB quit:Ping timeout: 240 seconds
+08:40 owen quit:Read error: Connection reset by peer
+08:40 moshi joined channel
+08:45 moshi quit:Remote host closed the connection
+08:45 moshi joined channel
+08:53 moshi quit:Remote host closed the connection
+08:58 moshi joined channel
+08:59 FrankHB joined channel
+09:01 endle joined channel
+09:02 endle quit:Remote host closed the connection
+09:02 endle joined channel
+09:03 moshi_ joined channel
+09:06 owen joined channel
+09:07 moshi quit:Ping timeout: 276 seconds
+09:07 moshi_ quit:Remote host closed the connection
+09:08 moshi joined channel
+09:10 moshi quit:Remote host closed the connection
+09:11 moshi joined channel
+09:11 owen quit:Read error: Connection reset by peer
+09:12 owen joined channel
+09:13 moshi quit:Read error: Connection reset by peer
+09:28 yonka joined channel
+09:32 yonka quit:Ping timeout: 260 seconds
+09:45 Youmu joined channel
+09:51 FrankHB quit:Ping timeout: 255 seconds
+09:52 LouisLIU joined channel
+09:53 StardustX joined channel
+09:55 yonka joined channel
+09:55 yonka quit:Remote host closed the connection
+09:55 yonka joined channel
+10:06 moshi joined channel
+10:28 moshi quit:Read error: Connection reset by peer
+10:29 xhe joined channel
+10:49 AloveZ joined channel
+11:36 moshi joined channel
+11:37 moshi quit:Read error: Connection reset by peer
+11:42 moshi joined channel
+11:43 moshi quit:Remote host closed the connection
+12:11 AyersNeo joined channel
+12:20 iyzsong-m joined channel
+12:22 AyersNeo quit:Quit: Mutter: www.mutterirc.com
+12:23 CyrusYzGTt quit:Ping timeout: 240 seconds
+12:29 lh_mouse joined channel
+12:31 iyzsong-m quit:Ping timeout: 240 seconds
+12:39 owen quit:Read error: Connection reset by peer
+12:40 owen joined channel
+12:44 owen quit:Read error: Connection reset by peer
+12:45 owen joined channel
+12:50 owen quit:Read error: Connection reset by peer
+12:50 owen joined channel
+12:51 AyersNeo joined channel
+12:51 AyersNeo quit:Client Quit
+12:52 AyersNeo joined channel
+12:54 AyersNeo quit:Client Quit
+13:05 owen quit:Read error: Connection reset by peer
+13:05 owen joined channel
+13:46 FrankHB joined channel
+14:10 AiZ joined channel
+14:13 AloveZ quit:Ping timeout: 260 seconds
+14:20 LouisLIU quit:Quit: LouisLIU
+14:42 endle quit:Quit: Leaving
+15:13 CyrusYzGTt joined channel
+15:28 FrankHB quit:Ping timeout: 240 seconds
+15:34 AiZ quit:Quit: Leaving
+15:48 Mokou quit:Ping timeout: 240 seconds
+16:24 owen quit:Read error: Connection reset by peer
+16:24 owen joined channel
+16:51 whocares_2_ joined channel
+16:51 whocares_2 quit:Ping timeout: 260 seconds
+17:55 lh_mouse: geordi, << __AVX__
+17:55 geordi: 1
+17:56 lh_mouse: geordi, << __TZCNT__
+17:56 geordi: error: '__TZCNT__' was not declared in this scope
+17:56 lh_mouse: geordi, << __POPCNT__
+17:56 geordi: 1
+17:56 lh_mouse: geordi, << __LZCNT__
+17:56 geordi: 1
+17:56 lh_mouse: geordi, << __TZCOUNT__
+17:56 geordi: error: '__TZCOUNT__' was not declared in this scope
+18:15 lh_mouse: geordi, << __builtin_ia32_tzcnt(10);
+18:15 geordi: error: '__builtin_ia32_tzcnt' was not declared in this scope
+18:15 lh_mouse: geordi, << __builtin_tzcnt(10);
+18:15 geordi: error: '__builtin_tzcnt' was not declared in this scope
+18:16 lh_mouse: geordi, { int a; asm("xorl %%edx, %%edx; tzcntl %%edx, %%eax; " : "=a"(a) : : "dx"); cout <<a; }
+18:16 geordi: 32
+18:16 lh_mouse: geordi, { int a; asm("xorl %%edx, %%edx; bsfl %%edx, %%eax; " : "=a"(a) : : "dx"); cout <<a; }
+18:16 geordi: 0
+18:35 c__ joined channel
+18:39 owen quit:Read error: Connection reset by peer
+18:39 owen joined channel
+18:40 lh_mouse: geordi, { int a; asm("xorl %%edx, %%edx; movl $123, %%eax; bsfl %%edx, %%eax; " : "=a"(a) : : "dx"); cout <<a; }
+18:40 geordi: 123
+18:48 iyzsong joined channel
+19:49 xhe quit:Quit: leaving
+20:19 xhe joined channel
+20:52 owen quit:Ping timeout: 248 seconds
+20:56 yonka quit:Remote host closed the connection
+21:13 xhe quit:Ping timeout: 255 seconds
+21:14 xhe joined channel
+22:47 Mokou joined channel
+23:30 iyzsong quit:Ping timeout: 268 seconds
+23:47 StardustX quit:Quit: Connection closed for inactivity

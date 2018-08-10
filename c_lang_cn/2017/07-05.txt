@@ -1,0 +1,124 @@
+00:16 CyrusYzGTt quit:Ping timeout: 255 seconds
+00:33 CyrusYzGTt joined channel
+00:37 OwenJia quit:Ping timeout: 248 seconds
+00:39 OwenJia joined channel
+00:39 OwenJia quit:Changing host
+00:39 OwenJia joined channel
+00:47 CyrusYzGTt quit:Ping timeout: 248 seconds
+00:48 CyrusYzGTt joined channel
+01:32 lh_mouse quit:Ping timeout: 240 seconds
+02:18 Mokou quit:Remote host closed the connection
+02:56 B005ter quit:Remote host closed the connection
+02:56 B005ter joined channel
+02:57 B005ter quit:Remote host closed the connection
+02:58 B005ter_ joined channel
+02:58 B005ter_ quit:Remote host closed the connection
+02:59 B005ter_ joined channel
+02:59 B005ter_ quit:Remote host closed the connection
+02:59 B005ter_ joined channel
+03:00 B005ter_ quit:Remote host closed the connection
+03:00 B005ter_ joined channel
+03:00 OwenJia quit:Remote host closed the connection
+03:01 B005ter_ quit:Remote host closed the connection
+03:01 B005ter_ joined channel
+03:01 B005ter_ quit:Remote host closed the connection
+03:02 OwenJia joined channel
+03:02 OwenJia quit:Changing host
+03:02 OwenJia joined channel
+03:02 B005ter joined channel
+03:02 B005ter quit:Remote host closed the connection
+03:03 B005ter joined channel
+03:03 B005ter quit:Remote host closed the connection
+03:03 B005ter joined channel
+03:04 B005ter quit:Remote host closed the connection
+04:04 B005ter joined channel
+04:06 Taggnostr quit:Ping timeout: 276 seconds
+04:10 B005ter quit:Ping timeout: 255 seconds
+04:11 Taggnostr joined channel
+04:25 yonka joined channel
+04:29 yonka quit:Ping timeout: 240 seconds
+04:55 Taggnostr2 joined channel
+04:56 Taggnostr quit:Ping timeout: 248 seconds
+05:15 Taggnostr joined channel
+05:15 Taggnostr2 quit:Ping timeout: 260 seconds
+05:32 Youmu quit:Quit: Connection closed for inactivity
+05:54 CyrusYzGTt quit:Ping timeout: 260 seconds
+06:08 B005ter joined channel
+06:12 CyrusYzGTt joined channel
+06:13 B005ter quit:Ping timeout: 240 seconds
+08:02 Taggnostr quit:Ping timeout: 255 seconds
+08:05 Taggnostr joined channel
+08:48 B005ter joined channel
+09:08 lh_mouse joined channel
+09:09 yimis joined channel
+09:10 yimis quit:Client Quit
+09:17 Mokou joined channel
+09:28 yonka joined channel
+09:41 rayBH joined channel
+09:44 OwenJia quit:Remote host closed the connection
+09:53 OwenJia joined channel
+10:00 Youmu joined channel
+10:19 OwenJia quit:Ping timeout: 260 seconds
+11:38 B005ter quit:Remote host closed the connection
+11:41 pasv joined channel
+11:44 pasv quit:Quit: Ex-Chat
+11:55 B005ter joined channel
+12:03 CyrusYzGTt quit:Ping timeout: 255 seconds
+12:29 Mokou quit:Remote host closed the connection
+12:30 Stevearzh quit:Ping timeout: 248 seconds
+12:30 iyzsong-m joined channel
+12:31 iyzsong-m: (・・;)
+12:40 iyzsong-m quit:Ping timeout: 276 seconds
+13:25 OwenJia joined channel
+13:25 OwenJia quit:Changing host
+13:25 OwenJia joined channel
+13:32 Taggnostr quit:Remote host closed the connection
+13:39 OwenJia quit:Ping timeout: 240 seconds
+13:39 Taggnostr joined channel
+13:51 B005ter quit:Remote host closed the connection
+14:02 yonka_ joined channel
+14:05 yonka quit:Ping timeout: 255 seconds
+14:07 B005ter joined channel
+14:19 OwenJia joined channel
+14:27 OwenJia quit:Ping timeout: 240 seconds
+14:38 rayBH quit:Quit: Lost terminal
+14:42 OwenJia joined channel
+14:42 OwenJia quit:Changing host
+14:42 OwenJia joined channel
+14:49 Mokou joined channel
+14:57 StardustX quit:Ping timeout: 240 seconds
+15:02 StardustX joined channel
+15:21 CyrusYzGTt joined channel
+15:28 CyrusYzGTt quit:Ping timeout: 260 seconds
+15:37 CyrusYzGTt joined channel
+17:23 B005ter quit:Remote host closed the connection
+19:14 Taggnostr2 joined channel
+19:15 Taggnostr quit:Ping timeout: 260 seconds
+19:17 lh_mouse: geordi, { foo f; } struct foo { foo() try { throw 123; } catch(int e){ cout <<"caught " <<e; return; } };
+19:17 geordi: error: cannot return from a handler of a function-try-block of a constructor
+19:17 lh_mouse: geordi, { foo f; } struct foo { ~foo() try { throw 123; } catch(int e){ cout <<"caught " <<e; return; } };
+19:17 geordi: caught 123
+19:17 lh_mouse: geordi, { foo f; } struct foo { ~foo() try { throw 123; } catch(int e){ cout <<"caught " <<e; } };
+19:17 geordi: caught 123 terminated by exception: 123
+19:36 Taggnostr joined channel
+19:36 Taggnostr2 quit:Ping timeout: 248 seconds
+19:48 iyzsong joined channel
+20:14 Mokou quit:Remote host closed the connection
+22:13 B005ter joined channel
+22:33 lh_not_bot quit:Ping timeout: 260 seconds
+22:34 lh_not_bot joined channel
+23:01 iyzsong quit:Quit: bye.
+23:25 lh_mouse: geordi, --clang { } struct foo { foo() = delete; }; foo f = { };
+23:25 geordi: <no output>
+23:26 lh_mouse: geordi, --clang <<f.i;  struct foo { int i; foo() = delete; }; foo f = { };
+23:26 geordi: 0
+23:27 lh_mouse: geordi, --clang { auto ptr = new foo; cout <<ptr->i; }  struct foo { int i; foo() = delete; }; foo f = { };
+23:27 geordi: error: call to deleted constructor of 'foo'
+23:27 lh_mouse: geordi, --clang { auto ptr = new foo(); cout <<ptr->i; }  struct foo { int i; foo() = delete; }; foo f = { };
+23:27 geordi: Same error.
+23:27 lh_mouse: geordi, --clang { auto ptr = new foo{}; cout <<ptr->i; }  struct foo { int i; foo() = delete; }; foo f = { };
+23:27 geordi: warning: Potential leak of memory pointed to by 'ptr'
+23:27 lh_mouse: geordi, use -w
+23:27 geordi: 0
+23:28 lh_mouse: geordi, --clang { int i = 1; auto ptr = new(&i) foo{}; cout <<ptr->i; }  struct foo { int i; foo() = delete; }; foo f = { };
+23:28 geordi: 0

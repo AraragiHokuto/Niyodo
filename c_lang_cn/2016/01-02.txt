@@ -1,0 +1,1389 @@
+00:04 TommyJerryMairo: 窝就是想记忆化搜索啊
+00:05 TommyJerryMairo: vijos上有几组数据专门卡stl
+00:21 StardustX left channel:"Quit..."
+00:27 StardustX joined channel
+00:30 lh_mouse: geordi, -c constexpr void foo(int &a){ a = 1; }
+00:30 geordi: Success
+00:31 JQK_Phone quit:Quit: 氫氮氧氟氯，氦氖氬氪氙。
+00:31 lh_mouse: geordi, -c constexpr void foo(){ }
+00:31 geordi: Success
+00:31 lh_mouse: geordi, use --clang
+00:31 geordi: Success
+00:31 JQK_Phone joined channel
+00:32 cleamoon: TommyJerryMairo: 记忆化搜索是什么
+00:32 cleamoon: 什么叫卡stl
+00:33 iyzsong joined channel
+00:34 lh_mouse: i玉子烧来了。
+00:38 hatelis: lh_mouse, 233333
+00:38 hatelis: iyzsong, 爱 玉子 烧？
+00:49 lh_mouse: geordi, -c { uint64_t a = 1, b = 2; __asm__(".indel_syntax noprefix; movq mm0, mmword ptr[%0]; movq mm1, mmword ptr[%1]; xorq mm0, mm1; movq mmword ptr[%0], mm0; .att_syntax;" : : "r"(&a), "r"(&b)); }
+00:49 geordi: Success
+00:49 slowcoach: ＝－＝
+00:49 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".indel_syntax noprefix; movq mm0, mmword ptr[%0]; movq mm1, mmword ptr[%1]; xorq mm0, mm1; movq mmword ptr[%0], mm0; .att_syntax;" : : "r"(&a), "r"(&b)); cout <<a; }
+00:49 geordi: error: unknown pseudo-op: `.indel_syntax'
+00:49 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, mmword ptr[%0]; movq mm1, mmword ptr[%1]; xorq mm0, mm1; movq mmword ptr[%0], mm0; .att_syntax;" : : "r"(&a), "r"(&b)); cout <<a; }
+00:49 geordi: error: junk `ptr[%rax]' after expression
+00:50 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, mmword ptr[%rax]; movq mm1, mmword ptr[%rcx]; xorq mm0, mm1; movq mmword ptr[%0], mm0; .att_syntax;" : : "a"(&a), "c"(&b)); cout <<a; }
+00:50 geordi: error: invalid 'asm': operand number missing after %-letter
+00:50 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, mmword ptr[rax]; movq mm1, mmword ptr[rcx]; xorq mm0, mm1; movq mmword ptr[rax], mm0; .att_syntax;" : : "a"(&a), "c"(&b)); cout <<a; }
+00:50 geordi: error: junk `ptr[rax]' after expression
+00:50 lh_mouse: geordi, replace all mmword with qword
+00:50 geordi: error: operand type mismatch for `xor'
+00:51 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, mmword ptr[rcx]; movq mmword ptr[rax], mm0; .att_syntax;" : : "a"(&a), "c"(&b) : : "mm0" ); cout <<a; }
+00:51 geordi: error: expected ')' before ':' token
+00:51 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, mmword ptr[rcx]; movq mmword ptr[rax], mm0; .att_syntax;" : : "a"(&a), "c"(&b) : "mm0"); cout <<a; }
+00:51 geordi: error: junk `ptr[rcx]' after expression
+00:51 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movq mm0, qword ptr[rcx]; movq qword ptr[rax], mm0; .att_syntax;" : : "a"(&a), "c"(&b) : "mm0"); cout <<a; }
+00:51 geordi: 2
+00:52 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movdqa xmm0, dqword ptr[rcx]; movdqa dqword ptr[rax], xmm0; .att_syntax;" : : "a"(&a), "c"(&b) : "mm0"); cout <<a; }
+00:52 geordi: error: junk `ptr[rcx]' after expression
+00:52 lh_mouse: geordi, { uint64_t a = 1, b = 2; __asm__(".intel_syntax noprefix; movdqa xmm0, xmmword ptr[rcx]; movdqa xmmword ptr[rax], xmm0; .att_syntax;" : : "a"(&a), "c"(&b) : "xmm0"); cout <<a; }
+00:52 geordi: Undefined behavior detected.
+00:52 lh_mouse: geordi, { __int128 a = 1, b = 2; __asm__(".intel_syntax noprefix; movdqa xmm0, xmmword ptr[rcx]; movdqa xmmword ptr[rax], xmm0; .att_syntax;" : : "a"(&a), "c"(&b) : "xmm0"); cout <<a; }
+00:52 geordi: error: ISO C++ does not support '__int128' for 'a'
+00:52 lh_mouse: geordi, { __extension__ __int128 a = 1, b = 2; __asm__(".intel_syntax noprefix; movdqa xmm0, xmmword ptr[rcx]; movdqa xmmword ptr[rax], xmm0; .att_syntax;" : : "a"(&a), "c"(&b) : "xmm0"); cout <<a; }
+00:52 geordi: error: ambiguous overload for 'operator<<' in 'cout << a' (operand types are 'ostream {aka ostream}' and '__int128')
+00:53 lh_mouse: geordi, { __extension__ __int128 a = 1, b = 2; __asm__(".intel_syntax noprefix; movdqa xmm0, xmmword ptr[rcx]; movdqa xmmword ptr[rax], xmm0; .att_syntax;" : : "a"(&a), "c"(&b) : "xmm0"); cout <<(int)a; }
+00:53 geordi: 2
+00:53 lh_mouse: geordi, replace all xmmword with dqword
+00:53 geordi: error: junk `ptr[rcx]' after expression
+01:04 Mokou quit:Quit: 睡觉
+01:06 hatelis quit:Quit: Leaving
+01:22 ASenR joined channel
+01:55 ASenR quit:Remote host closed the connection
+01:56 lh_mouse quit:Read error: Connection reset by peer
+02:30 JQK_Phone quit:Quit: 氫氮氧氟氯，氦氖氬氪氙。
+03:44 Youmu quit:Quit: Connection closed for inactivity
+04:04 hoxily_ joined channel
+04:07 hoxily quit:Ping timeout: 272 seconds
+06:46 linearain joined channel
+06:46 linearain: hello
+07:07 linearain: hi
+07:28 cleamoon_ joined channel
+07:51 linearain quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+08:01 dantmnf quit:Ping timeout: 240 seconds
+08:02 dantmnf joined channel
+09:41 xxxxxxxx joined channel
+09:41 xxxxxxxx: cleamoon: 幼女试过了没 teeworlds?
+09:58 cleamoon_: xxxxxxxx, 还没，最近又开始玩d2了
+10:04 lh_mouse joined channel
+10:25 sleepwalking joined channel
+10:38 linearain joined channel
+10:38 linearain: hello
+10:42 lh_mouse: 0.0
+10:42 * lh_mouse slaps linearain around a bit with a large trout
+10:42 linearain: whats a trout?
+10:43 linearain: dictionary.com wait
+10:44 linearain: oh a fish u told me once
+10:44 lh_mouse: 0.0
+10:47 linearain: lh_mouse how was 2015 for you?
+10:48 lh_mouse: I wanted a girlfriend. That hasn't become true. /w\
+10:49 linearain: did you want a girlfriend or did you want love?
+10:51 iyzsong: why not both?
+10:52 linearain: some just want a girlfriend
+10:52 iyzsong: that's better than nothing :-
+10:53 linearain: it will cause lots of pain
+10:53 iyzsong: lol
+10:53 linearain: oh i thought i was still talking to mouse
+10:54 linearain: youre looking for a girlfriend too?
+10:54 linearain: what about that hacker girl from baidu forum?
+10:55 iyzsong: no clues.. i'm sad
+10:57 linearain: but isnt china big and a land of opportunities?
+10:59 iyzsong: well, i'm not prepared for them
+10:59 linearain: what you waiting for?
+10:59 iyzsong: too lazy :o
+11:00 linearain: eat a pot of rice drink a pot of tea and go outside to look for love!
+11:00 linearain: lol
+11:01 linearain: go to the west lake im sure theres many beautiful sad girls weeping waiting for love
+11:02 iyzsong: i can't give, only accept.  that's the problem.
+11:02 linearain: you dont have arms?
+11:02 linearain: sorry to hear about that
+11:02 iyzsong: dunno
+11:03 linearain: you can give
+11:03 linearain: you also seem smart so finding a girlfriend should be easy
+11:03 iyzsong: thank you
+11:05 linearain: do you know actress xun zhou?
+11:05 iyzsong: only aware the name, not know much. 
+11:06 linearain: great actress
+11:13 Youmu joined channel
+11:13 iyzsong: Youmu: 去哪玩啊？
+11:14 linearain: iyzsong ur from beijing?
+11:14 Youmu: iyzsong: 0.0
+11:14 iyzsong: linearain: yes, i'm still at beijing.
+11:14 Youmu: iyzsong: 我在学校啊。。
+11:14 linearain: youre gonna go somewhere else?
+11:14 iyzsong: yes will go home later and back after the Chinese New Year.
+11:15 linearain: where is home?
+11:15 iyzsong: Xuchang in Henan provice
+11:15 iyzsong: province
+11:16 iyzsong: Youmu: o/z
+11:19 hatelis joined channel
+11:30 linearain quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+11:35 slowcoach_ joined channel
+11:36 slowcoach quit:Ping timeout: 246 seconds
+11:36 slowcoach_ is now known as slowcoach
+11:39 sleepwalking quit:Ping timeout: 276 seconds
+12:02 xxxxxxxx: http://news.sina.com.cn/c/2015-12-31/doc-ifxncyar6097036.shtml
+12:02 xxxxxxxx: 如何撕裂的?
+12:03 StardustX: 扯蛋
+12:04 hatelis: 真“扯蛋”
+12:04 hatelis: StardustX, 勇士，修不修膜法？
+12:06 StardustX: hatelis, 今天膜力不足，需要续费
+12:08 hatelis: StardustX, http://news.xinhuanet.com/ziliao/2003-01/21/content_699933.htm 学习一下三个表的戴法
+12:12 cleamoon_: http://zhuangbi.me/question/787
+12:13 hatelis quit:Remote host closed the connection
+12:13 hatelis_ joined channel
+12:14 hatelis_: cleamoon_, 你们哪，总想搞个大新闻
+12:15 Stevearzh_ quit:Ping timeout: 240 seconds
+12:17 Mokou joined channel
+12:18 hatelis_: Mokou, 大膜法师来了
+12:33 cleamoon_ quit:Read error: Connection reset by peer
+12:52 cleamoon_ joined channel
+13:10 varna joined channel
+13:11 varna: p7小修，已推
+13:12 Mokou: fuck
+13:12 Mokou: 带错船了……
+13:12 varna: 打完今天的演习之后，我收拾3-5 4-5
+13:13 varna: cos会场感觉最不错的一位是个穿夜战迷彩的哥们，手里拿的应该是仿真M40A1，可惜消音器太短有点假
+13:16 varna: 余下就是成吨的LL...
+13:16 Mokou: 强行D败
+13:16 Mokou: 夜战所有二连全部不命中
+13:17 cleamoon_: 4-5 orz
+13:19 varna: 4-5我也不知道能不能打掉，不过姑且一试
+13:21 varna: 看我赌一个国运：单纵反潜
+13:22 Mokou: 噗，我说今天演习怎么这么难打
+13:22 varna: 打掉了，看夜战能不能赢
+13:22 Mokou: 元帅区……
+13:23 varna: 残念，被换掉了一个……A
+13:23 Mokou: 今天我也打4-5
+13:23 varna: 好久没打6dd的演习了
+13:24 Mokou: 日
+13:24 Mokou: 我说怎么老吃A败
+13:24 Mokou: 重巡没带炮
+13:25 cleamoon_: 前天我尝试6cv演习，前两场碾压，第三场遇到一个对空CI.......
+13:25 Mokou: 演习CV嘬大死
+13:25 Mokou: 你碰到个单小和直接爽飞了
+13:26 Stevearzh_ joined channel
+13:26 Mokou: 我在考虑要不要开始养殖衣笠……
+13:26 varna: 哦对，今天还见到个cos祈妹的，下乳真实可鉴
+13:27 Mokou: 有没有cos不朽尸王的
+13:27 varna: 我有个同学长得像尸王
+13:27 varna: dota旧版那个
+13:27 varna: 演习打太开心，忘交任务了……
+13:27 Mokou: 23333
+13:28 varna: 下午搞不好都得赢
+13:28 varna: 还差一场，6dd怒干敌水上部队
+13:28 Mokou: 昨天在逼乎上看到一个日本人，见过长者，都是自称，不知真假
+13:29 varna: 他不是西方记者，信不得
+13:29 varna: 噫，单纵T有利
+13:29 varna: 拼了
+13:29 Mokou: 5vs3
+13:29 Mokou: 我方旗舰大破四个中破
+13:29 varna: 安拉胡阿克巴POI!
+13:29 Mokou: 武藏！
+13:30 Mokou: 武藏机智地爆掉了旗舰
+13:30 Mokou: S了
+13:30 varna: 还行，三大破二中破
+13:30 Mokou: 以后我演习还是带个婚舰，不过只能练到120
+13:30 varna: 跟他们拼一下
+13:31 Mokou: 北政所123，我想保持北政所等级最高
+13:31 varna: 噫，选错了
+13:31 varna: 下午必须全力了
+13:32 Mokou: 另外4-5中路怎么走来着，2BB2CA2CV？
+13:32 varna: bb+cv<4
+13:32 varna: 余下可以用巡洋舰
+13:32 Mokou: 3CA啊
+13:32 Mokou: 我去试试
+13:32 cleamoon_: 对了，我连大和都二号机了，还是没有401......
+13:32 Mokou: OTL
+13:32 varna: 用力
+13:32 Mokou: 太欧
+13:33 Mokou: 稀欧一先去解决前两个出击任务
+13:34 cleamoon_: 用力资源配置不好，27k油，18k弹，18钢，7k铝
+13:34 varna: 挺好的，夯
+13:34 Mokou: 我在考虑我是配207还是414
+13:34 varna: 207
+13:35 Mokou: 41K油弹35K钢19K铝
+13:35 varna: 不过前哨我是无脑制空的
+13:35 cleamoon_: 对了，有土鳖上传电影会因为版权被要求删除，但是上传av没事......
+13:35 Mokou: 就是前哨，斩杀333就成
+13:35 Mokou: ……
+13:35 Mokou: 什么鬼
+13:35 Mokou: 算了，我先配个空优体感下
+13:35 cleamoon_: 设成私人，自己看
+13:35 Mokou: 电影私人呢
+13:37 varna: 子日吓我一跳
+13:38 Mokou: 祭出我无敌的鸟海和Lv106的利根
+13:38 cleamoon_: 电影私人也会被版权ban
+13:38 Mokou: ……
+13:38 cleamoon_: 我还不知道怎么解决
+13:39 cleamoon_: 动漫也还没测试
+13:39 Mokou: 我来个3CV看看
+13:39 Mokou: 不过先吃点东西
+13:39 varna: 刷点闪，先把3-5打了
+13:49 varna: (｡･ω･)ﾉ3-5走起，按惯例前哨战带下路
+13:49 varna: http://picpaste.com/wYURviPg.png 合影
+13:51 varna: 第一战无伤，然后我单横怂
+13:51 * Mokou 从来不怂
+13:51 varna: 这队伍不经打，我还是怂了
+13:51 xxxxxxxx: 我还以为羊驼和夜战迷彩那位合影
+13:52 varna: 3-5驱逐舰大破我见得多了_(:з」∠)_
+13:52 Mokou: 1CL5DD？
+13:52 varna: +
+13:52 varna: 就上面那个图
+13:52 varna: 哦操
+13:52 varna: 小和被一炮……
+13:52 Mokou: 我还是拼罗盘……
+13:52 Mokou: ……
+13:52 varna: 怪可怜
+13:52 Mokou: CL至少奈打点
+13:52 Mokou: 耐
+13:52 varna: 太惨了
+13:53 xxxxxxxx: http://ww2.sinaimg.cn/bmiddle/be6bdb92gw1ezk2hkzucoj20go0cimyw.jpg 真精神啊
+13:54 varna: 所以熊孩子们说练度的时候我从来不信
+13:54 Mokou: 那是因为你练度不够高而且数学不够好
+13:54 Mokou: 不然你就信了
+13:54 varna: 驱逐舰的小脾气必须用爱弥补，比如这把小和1/41
+13:54 varna: 哦不对，42
+13:54 xxxxxxxx: 人家拿出数学模型你就信了
+13:54 Mokou: 昨天我也被打了两个1血
+13:55 Mokou: 总有新米嘲讽朕
+13:55 Stevearzh_ quit:Ping timeout: 265 seconds
+13:56 varna: 这年头数学太廉价，我讲点入门数学都有人觉得高端
+13:56 varna: 卧槽这把要出事啊
+13:56 Mokou: 毕竟我朝高中数学天下第一难
+13:56 varna: 上来一小破一中破
+13:57 varna: 我复纵怂吧
+13:57 cleamoon_: 80级武藏都能被航空战打到1血，dd算什么练度
+13:57 Mokou: ……
+13:57 Mokou: 一百多的武藏也一样
+13:57 varna: 炮战只压住一个雷击
+13:57 varna: 然后五坨鱼雷就过来了
+13:57 Mokou: 太惨
+13:57 varna: 还好比较给力
+13:57 varna: 啊
+13:57 Mokou: 另外前段时间又出了一个神奇的bug
+13:57 varna: 欠雪吃炮大破了……
+13:58 cleamoon_: 高中数学只能算最烦，难到不难
+13:58 Mokou: 有人南西的时候出去上厕所，回来哈酱轰沉
+13:58 varna: 夜战拿个S吧
+13:58 cleamoon_: .......
+13:58 Mokou: 吓得他直接撤退了，进补给页面一看
+13:58 Mokou: 哈酱小破
+13:58 varna: 这3-5有点魔性
+14:00 StardustX joined channel
+14:00 varna: 出门绫波中破，挺住就好
+14:01 Stevearzh_ joined channel
+14:01 xxxxxxxx: http://news.sohu.com/20160101/n433247006.shtml
+14:01 xxxxxxxx: 胸牌
+14:01 xxxxxxxx: 我觉得火箭那个最难看...
+14:02 varna: pass
+14:02 varna: xxxxxxxx: +1
+14:02 varna: 三劝一进，这还算正常
+14:02 cleamoon_: 理论物理学家简直神棍，“微分方程有40种写法哦”
+14:03 varna: 看看第一杀效果如何
+14:03 Mokou: 如果算上等价形式可以有无数种吧
+14:03 varna: 打小和！打小和！
+14:03 varna: 昼战T不利，炮雷断念……
+14:03 Mokou: ……
+14:03 Mokou: 脸吧
+14:04 xxxxxxxx: http://photocdn.sohu.com/20151228/mp50860530_1451261240482_4.jpeg
+14:04 varna: 夜战看戏
+14:04 varna: 六打四
+14:04 cleamoon_: 噗，这胸牌简直了
+14:04 varna: CI
+14:04 varna: 446搞定
+14:04 cleamoon_: orz
+14:04 Mokou: OTL
+14:04 varna: 绫波和POI觉得平砍两下就可以了，胡乱把下面收掉
+14:05 varna: 旗舰由旗舰的十六万收走
+14:05 Mokou: 这种图我一般不CI
+14:05 Mokou: 反正火力够了……
+14:05 varna: 我懒得换装了
+14:05 Mokou: 不愧是方丈
+14:06 cleamoon_: 我每次都只能靠雪战神
+14:06 Mokou: 雪风大破了
+14:06 varna: 雪风已下岗
+14:06 xxxxxxxx: 会摔吧
+14:06 varna: 驱逐舰都摔的，雪风其实不差
+14:06 varna: 不补闪，继续
+14:07 Mokou: 雪风喜欢在关键时刻摔
+14:07 varna: 糟
+14:07 varna: 噫，挺住了
+14:08 varna: 好样的
+14:08 xxxxxxxx: 日媒：中国证实航母消息很可能因为即将完工
+14:08 varna: 继续复纵怂
+14:08 xxxxxxxx: 日本人都知道我朝什么作风了
+14:09 varna: 中破小破进
+14:10 cleamoon_: 难道不是因为少将张氪了一个喷子
+14:10 varna: 塔姐给面子
+14:10 StardustX quit:Remote host closed the connection
+14:11 varna: 雷击全歼
+14:11 xxxxxxxx: 他的耳朵听不见,可他妻子的礼物却让他泪奔了 <- 这标题我理解不了
+14:11 varna: 送了套陪睡CD吧
+14:11 varna: 上把是大巡洋舰，这把是大战舰……
+14:12 xxxxxxxx: http://news.163.com/16/0101/10/BC85NOBB000155K8.html
+14:12 StardustX joined channel
+14:12 xxxxxxxx: 最后说他是要当爸爸了
+14:12 varna: @岩川王提督
+14:12 xxxxxxxx: 这和耳朵听不见有个毛线关系 
+14:13 Mokou: 5vs6，我方一个中破
+14:14 cleamoon_: 我那天想的一个，如果把一个人眼睛捅瞎，耳朵捅聋，声带切掉，手脚神经切断，鼻子嗅觉和舌头味觉用酸烧掉，切了蛋，然后扔给医院让他活着，这样大概是最惨的？
+14:15 varna: 这个叫人彘，史记里有记载
+14:15 Mokou: 直接把脑子泡缸里
+14:15 xxxxxxxx: http://news.163.com/16/0102/11/BCAQL5J700014AEE.html
+14:15 varna: 或者叫即身佛
+14:15 xxxxxxxx: 这是操帝出国了?
+14:15 varna: 随你用哪个术语……
+14:15 varna: 233333
+14:16 varna: 不补闪，走起
+14:17 varna: 欠雪吃炮-24……
+14:17 varna: 被补成大破
+14:18 cleamoon_: 关键是古代没法让这个人活着吧，现在可以呀
+14:18 cleamoon_: 而且这样也没办法说出是谁弄的？
+14:18 varna: 敢用驱逐舰就得敢摔
+14:19 Mokou: 不是吕后干的么
+14:19 varna: 我驲
+14:19 varna: 单纵T有利
+14:19 varna: 小和上来结实地吃了一炮
+14:19 varna: 挺住，大丈夫
+14:20 xxxxxxxx: 为啥那么做就是最惨了?
+14:20 varna: 我驲？
+14:20 varna: 手滑点了个单纵，干起
+14:21 varna: 无伤过
+14:21 xxxxxxxx: 医院办元旦联欢 老人面前女子表演露脐热舞
+14:22 cleamoon_: 因为这个人完全没有输入输出了
+14:22 xxxxxxxx: 吃喝拉撒呢?
+14:22 varna: 雷击收工
+14:22 cleamoon_: 日，看错了，看成儿女面前老人表演肚脐舞了
+14:23 Mokou: uccu
+14:23 cleamoon_: 吃喝靠点滴葡萄糖，然后就尿就好了
+14:23 varna: 四劝三进，正常水平
+14:24 cleamoon_: 另外，最可持续发展的折磨方法除了水刑还有什么
+14:24 xxxxxxxx: 老人看这种东西会硬么?
+14:24 varna: cleamoon_: 戒撸
+14:24 Mokou: 戒撸不一定吧
+14:24 Mokou: 说不定是人家找到妹子了呢
+14:24 varna: 我就相信一次大凤吧
+14:24 Mokou: 大凤最靠谱了
+14:25 Mokou: 我给你代打的时候决战支援旗舰一直是大凤
+14:27 varna: 不算制空了，360制空走起
+14:28 xxxxxxxx: 广西90后小伙陈泽坤艳福不浅，一个婚礼出现两新娘，还同时怀着孩子争着要嫁给他。一个新娘拿了结婚证但没办喜酒！一个新娘办喜酒但没拿结婚证！面对这场闹剧，新郎说这都是他造成的是他脚踏两船，让两个女人前后相差一个月怀了孕。
+14:28 cleamoon_: orz
+14:29 varna: 噗噗
+14:29 cleamoon_: 3p吧
+14:29 varna: 都是翅膀系列
+14:29 xxxxxxxx: 羊驼好歹还能说自己赶跑了妹子作为退路 其他人呢
+14:29 StardustX: 这是重婚罪啊
+14:29 xxxxxxxx: 你们不觉得很羞愧么
+14:29 varna: 什么叫退路，就是妹子被我气跑
+14:30 varna: 3ca3cv上路走起
+14:31 cleamoon_: “你们”，莫非基王已经阅人无数了？
+14:31 varna: 速力即正义
+14:31 varna: cleamoon_: 他总被爆
+14:31 cleamoon_: 羊驼子很 快
+14:31 xxxxxxxx: 我厚颜无耻
+14:32 varna: 大凤救场成功
+14:32 varna: 一次轰炸搞掉嗒级
+14:32 varna: 出了个板儿
+14:33 varna: 双喔
+14:33 cleamoon_: 基司徒
+14:33 slyto joined channel
+14:33 varna: 一轮炮击收工
+14:33 varna: 北酱求给面子！求放过！
+14:35 varna: 尻根挺住！
+14:35 Mokou: 第一点通过
+14:36 varna: 北酱14/390，我要不要夜战……
+14:36 varna: 不贪刀了
+14:36 Mokou: 夜战也没问题吧
+14:36 varna: 北酱给我面子，我也不追击
+14:36 varna: 这是互利的
+14:36 varna: 为了一个战神伤和气，不值
+14:36 Mokou: 不愧是欧洲人，都知道会掉战神了
+14:37 varna: 北酱点我至今没出过一个战神
+14:37 Mokou: 门神
+14:37 varna: 单纵杀进去，这次可不是驱逐舰了（笑）
+14:37 cleamoon_: 对了，老师公式里总用模样类似的字母看不懂怎么办.....
+14:37 varna: cleamoon_: 撸三炮
+14:37 varna: 我鹤一发收工
+14:38 cleamoon_: 那么不类似的也看不懂了
+14:38 varna: 剩下就是打扫战场了
+14:38 Mokou: 鸟海小破，通过
+14:38 varna: 得日向
+14:39 varna: 这次大凤各种武勋救场
+14:39 Mokou: 开幕炸死三个
+14:39 Mokou: 所以我说大凤最靠谱了
+14:40 varna: 2bb2clt1ca1cv走起
+14:40 Mokou: 78/380
+14:40 varna: 287制空
+14:40 Mokou: 一血
+14:41 Mokou: 4-5？
+14:41 varna: +
+14:41 Mokou: 2CLT……
+14:41 varna: 4-5前哨我一直用雷巡的
+14:41 cleamoon_: 对了，1-6，1cl4dd1cav也能最近路.......
+14:41 varna: cleamoon_: 不是确定带路
+14:41 cleamoon_: 是吗
+14:41 varna: 当天就有人掉沟里
+14:41 cleamoon_: 我连续成功了6次呀
+14:41 varna: 正常
+14:41 Mokou: 1-6的非确定带路太多了
+14:42 varna: 1-6各种玄学带路
+14:42 Mokou: 我还2-3连进Boss十多次呢
+14:42 Mokou: 吃个全家桶
+14:43 varna: 前哨慢心一点，三组三式弹
+14:43 Mokou: 我还是3CA3CV
+14:43 varna: 我鹤制空
+14:43 varna: 擦伤不修了，看看效果
+14:44 Mokou: 妙 高 下 跪
+14:44 Mokou: 大凤还被打了个暴击
+14:44 Mokou: 通过，不过估计门神要劝退
+14:44 Mokou: 我开上BGM
+14:45 cleamoon_: 羊驼子搞ml时没学过的数学重要吗
+14:45 varna: 我觉得弄这个领域，数学技巧比数学知识重要
+14:45 Mokou: 潜艇点太太中破
+14:45 Mokou: 20/78
+14:45 varna: 所以你应该没什么问题
+14:45 varna: 遇到论文里有不懂的数学，可以就地科普
+14:46 varna: 昨天导师还问我能不能帮他探讨一个理论问题，我实在乏力，只能尝试……
+14:47 Mokou: 两个中破一个小破
+14:47 varna: 洗脸
+14:48 Mokou: 妙高大破
+14:48 Mokou: 瑞鹤大破
+14:48 Mokou: 103/380
+14:48 Mokou: 鸟海！
+14:49 Mokou: 二血
+14:49 cleamoon_: 我看量子，感觉就是物理学家数学太好了
+14:50 varna: (｡･ω･)ﾉ巨乳讨伐战队、发进
+14:50 Mokou: 噗
+14:50 Mokou: 12搭载的流改练度被清空了
+14:50 varna: 这红旗霜了？
+14:50 varna: 噗
+14:50 Mokou: 还好我机智，没在那里放个友永什么的
+14:51 varna: 第一战，血拼塔姐
+14:51 varna: 擦伤pass
+14:52 Mokou: 第一点T不利
+14:53 Mokou: 通过
+14:53 varna: 门神求轮型
+14:53 varna: 复纵实在太威
+14:53 varna: 啊，复纵
+14:54 varna: OOI中破
+14:54 varna: pass
+14:54 varna: 总体来说不错
+14:55 Mokou: 复纵
+14:55 Mokou: T不利
+14:55 Mokou: 药丸
+14:56 Mokou: 大凤威武
+14:56 Mokou: 通过
+14:56 varna: 逼优同航一球沉，羽嘿中破
+14:56 Mokou: 瑞鹤小破，其余无破
+14:56 varna: 羽嘿大破……
+14:56 Mokou: ……
+14:56 varna: 选错人就会出事了
+14:56 varna: 两次选择，请务必选对
+14:57 varna: 选错了，击杀失败
+14:57 Mokou: 开幕轰沉2
+14:57 Mokou: 妙高下跪
+14:57 Mokou: 利根下蹲
+14:57 varna: 这战法还是有点过激了
+14:58 varna: 调整下位置再打
+14:58 Mokou: 港湾：谁敢杀我？谁敢杀我？谁敢杀我？
+14:58 Mokou: 然后大凤嘿嘿一笑给港湾打了个大破，鸟海补掉
+14:59 Mokou: 这应该是三血
+14:59 Mokou: 掉了个很莉害的驱逐舰
+14:59 varna: 这年头，只要正经点的出击都搞得我心惊胆战的
+14:59 varna: 这些年一个人 横着劝竖着桶
+14:59 varna: 出门羽嘿大破，只好滚回去了
+15:00 Mokou: 要不你也试试我这个配置
+15:00 Mokou: 三装母
+15:00 varna: 3ca我遭不住
+15:00 Mokou: 3ca你应该能拿出来吧
+15:00 varna: 你让我信开幕，我是信不过的
+15:00 varna: 能，然而爆炸
+15:00 Mokou: 信大凤
+15:01 Mokou: 大凤一个炮击直接废掉港湾
+15:01 varna: 不是刚玩
+15:01 cleamoon_: orz
+15:01 varna: 港湾*
+15:01 varna: 我得能进去
+15:01 Mokou: 蹲着进去就行
+15:01 varna: 太危险了
+15:01 varna: 4-5大破也挺花哨的
+15:02 varna: 火力差不多就行，其余是运气了
+15:02 Mokou: 第一点通过，瑞鹤60/79
+15:02 varna: 只要对面战舰不排轮型，就都有危险
+15:02 Mokou: 我感觉开幕清杂鱼的效果还是可以的
+15:02 Mokou: 危险应该不会高过2CLT
+15:02 Mokou: 毕竟纸装甲
+15:02 varna: 一样的
+15:02 slyto quit:Quit: 离开
+15:03 varna: 我祈祷的是对面塔姐犯错
+15:03 varna: 其他不在我考虑范围
+15:03 Mokou: 我祈祷塔酱和88爷犯错……
+15:03 Mokou: 88爷容易暴击
+15:03 Mokou: 啊，复纵
+15:04 Mokou: T有利
+15:04 Mokou: 我准备回家了
+15:04 Mokou: 瑞鹤中破
+15:04 Mokou: 强 行 通 过
+15:04 Mokou: 大凤硬吃塔酱一炮，HP-22……
+15:04 cleamoon_: 对了，op的oyodo是谁
+15:05 varna: logbot
+15:05 Mokou: logbot
+15:05 Mokou: 那个Oyodo是注册在我的帐户上的
+15:05 Mokou: 所以给了个+v
+15:05 cleamoon_: soga
+15:05 cleamoon_: 那给他几个功能吧
+15:05 Mokou: 开幕轰沉3中破1，T有利
+15:05 Mokou: 翔鹤大破
+15:05 cleamoon_: 字典之类的
+15:06 Mokou: 懒得写了……
+15:06 varna: 还是复纵
+15:06 Mokou: 67/380 3vs1
+15:06 Mokou: 四血
+15:06 varna: ok, 勉强通过了
+15:07 Mokou: 海外舰
+15:07 Mokou: 我等等疲劳
+15:08 varna: T有利
+15:08 varna: 羽黑中破……这情节完全一样啊
+15:08 Mokou: ……
+15:08 Mokou: 拿错剧本系列
+15:08 varna: 武藏爆了
+15:08 Mokou: ……
+15:09 varna: 四打一，实质的二打一
+15:09 varna: 大和用力
+15:09 varna: 一炮灭
+15:09 Mokou: OTL
+15:09 varna: 然而我新春任务弄那些钢……
+15:09 Mokou: 算了，我也上BB试试
+15:09 varna: 飞呀！飞呀！
+15:10 Mokou: 双大武俾三装母
+15:10 Mokou: 我觉得我都可以打完直接去5-5
+15:10 varna: 5-5我还是不打
+15:10 Mokou: 我还是想要那四个螺丝的
+15:11 Mokou: 大和级带彻甲弹，B子带三式弹
+15:12 varna: 这出门几炮直接把我资源轰下低保
+15:14 varna: 单纵T不利，一阵瞎打，大和被占便宜
+15:15 Mokou: 从下往上打
+15:17 varna: 终于轮型
+15:17 hatelis_ is now known as hatelis
+15:17 hatelis: varna, 最近一次更新怎么那个cleaner只有接口没有实现啊
+15:18 varna: 因为那是用户的
+15:18 varna: 给你看个demo
+15:18 Mokou: 阿嘿颜
+15:18 varna: hatelis: https://pastebin.mozilla.org/8855680
+15:19 Mokou: B子小破，通过
+15:19 varna: 咦，撸级！
+15:19 varna: 胜机！
+15:20 varna: 居然不是撸改，太脸了
+15:20 varna: 我以为那是百级以下福利呢
+15:20 Mokou: Boss点么
+15:20 varna: +
+15:20 Mokou: 我这里是撸改，然后大凤被开幕大破了
+15:20 varna: 掉落了成吨的祥凤
+15:20 Mokou: 瑞鹤中破
+15:21 Mokou: 3vs2
+15:21 varna: hatelis: 另外这次更新改掉了以前一个脑残的地方
+15:21 Mokou: 看大和智商了
+15:21 Mokou: 选错
+15:21 Mokou: 港湾选错
+15:21 Mokou: 斩杀
+15:21 varna: 欧
+15:22 Mokou: 我怕港湾抬手一个二连秒掉B子……
+15:22 Mokou: 今天我打不打5-5呢
+15:23 varna: 别打了
+15:23 varna: 那一发雷，谁也吃不得
+15:23 Mokou: 也好，先休息下
+15:23 varna: 压线大破
+15:23 cleamoon_: 5-5 orz
+15:23 cleamoon_: 早晚弄一个 6-5 坑你们这群欧洲肝帝
+15:24 varna: 5-5一般怎么也得打十几次
+15:24 Mokou: 总共消耗3500油2000弹
+15:24 Mokou: 5000钢
+15:24 varna: 我一直认为那面是个设计失误
+15:24 Mokou: 那发开幕雷不讲道理
+15:24 Mokou: 不然雷爷就不会被BAN了
+15:25 Mokou: 甲：我们宿舍热得快炸了。
+15:25 Mokou: 乙：怎么会炸了呢？
+15:25 Mokou: 甲：它就是炸了。
+15:25 Mokou: 乙：到底是什么炸了？
+15:25 Mokou: 甲：热得快啊。
+15:25 varna: http://tieba.baidu.com/p/4205943822?see_lz=1 仏法
+15:25 cleamoon_: 6-5 给你弄6个群，让你知道什么叫肝
+15:26 Mokou: 群爹好办，选对一炮就死了
+15:26 cleamoon_: orz
+15:26 cleamoon_: 我怎么从来没这么痛快过
+15:26 hatelis: varna, 哪个脑残的地方？协程状态忘记规避竞态？
+15:26 varna: hatelis: https://github.com/Akvelog/servcraft/commit/d0a2fb0a535a40caecd64280347a37064bb11729
+15:26 Mokou: 噗，我犯了个错误
+15:26 varna: 创建时无脑yield
+15:26 Mokou: 大凤需要修30h，而我忘了拆飞机……
+15:27 varna: 桶
+15:27 Mokou: 丢了
+15:27 varna: 闭幕2雷，看看
+15:27 varna: 补羽嘿，不过幸好没补到
+15:28 varna: 现在p7的yield不是个便宜操作
+15:28 varna: 所以得稍微避开一下
+15:28 hatelis: varna, 因为不能保证创建成功，所以得做下判断？
+15:28 varna: 不
+15:29 varna: 只有在下一个协程落在本线程上的时候才切
+15:29 cleamoon_: 我又开始撸d2了，开荒太痛苦，生生把sor完成了小李飞刀
+15:29 varna: OOI中破
+15:29 varna: 总之通过了
+15:30 pocmon joined channel
+15:30 varna: 噫，果然还是撸改
+15:30 varna: KTKM和羽嘿都中破了，挺住
+15:31 varna: 好歹灌死一个球
+15:31 varna: 羽黑炸了……
+15:31 hatelis: 感觉yiela不便宜，这事儿有点坑啊
+15:31 hatelis: yield
+15:31 varna: 这把要智商了
+15:31 varna: 三打三，战力2
+15:32 varna: 全选错……
+15:32 varna: 所以说啊_(:з」∠)_
+15:32 varna: hatelis: yield本来就不该常用
+15:32 varna: 全选错也是乐
+15:32 Mokou: ……
+15:34 varna: 4-5就这样，说顺就顺，不顺就得准备过万
+15:36 varna: 出门一中破，祈祷挺住
+15:38 Mokou: http://ww4.sinaimg.cn/bmiddle/0069Geopgw1ezl6ju2vo0j30cs0dymxd.jpg “一张图看清2B影迷眼中的国内电影市场”
+15:39 varna: 怎么没人说爆米花
+15:39 varna: 我先不竖flag, 不过这月的4-5有一个奇特之处
+15:39 varna: 打完再说
+15:39 Mokou: http://ww1.sinaimg.cn/bmiddle/5f55e2ddgw1ezkvb2va9kj20m50v74bm.jpg 打伞的大姐姐
+15:40 varna: 噫，OOI开幕大破
+15:40 Mokou: id = 54468457
+15:40 varna: 昼战损害
+15:40 varna: 羽嘿中破，还能打
+15:40 varna: 四打三
+15:40 varna: 伙计们，拼了
+15:41 varna: 北上看不下去了，强行补正全队智商
+15:41 varna: (｡･ω･)ﾉ来个霜？
+15:41 varna: _(:з」∠)_没有
+15:43 Mokou: http://ww3.sinaimg.cn/bmiddle/891c9115jw1ezkc9y4os0j20jg26ttfo.jpg 牛排简易制作法
+15:44 varna: 肉汁丢了，差评
+15:44 varna: 卧槽
+15:44 Mokou: 简易嘛
+15:44 varna: 大和你……
+15:44 Mokou: 霜了？
+15:44 Mokou: ……
+15:44 varna: 跟我想的一样
+15:44 varna: 挺住，没关系_(:з」∠)_
+15:44 varna: 一炮糊掉71
+15:45 varna: 这情况我在4-5进门也见过
+15:46 varna: 我就当这是个大驱逐舰
+15:46 lh_mouse: yield 涉及到 context switch 。
+15:46 varna: 要用心援护
+15:46 lh_mouse: 它会打乱 CPU 整个的流程，包括 call stack。
+15:46 Mokou: 胸部那么小还需要彻甲弹，你一定是驱逐舰吧
+15:47 lh_mouse: Mokou, 吃药。
+15:47 varna: 北上吃炮了，坚持一下
+15:47 varna: 啊
+15:47 varna: 我料事如神……
+15:47 lh_mouse: 北斗吃炮了，坚持一下
+15:47 varna: 大和20/96
+15:48 Mokou: 北上大人还在乱入啊……
+15:48 varna: 最精妙的还是最后一个轰炸
+15:49 varna: 直接按比例蹭回大破，这个只要一下就可以了
+15:49 varna: 基本不能出错，然而容错率很低
+15:49 hatelis: lh_mouse, 捏
+15:50 varna: 这种事见多了，也就没什么火气了
+15:51 lh_mouse: hatelis, 反捏。
+15:51 * hatelis 鼻子塞住，HP -30%
+15:52 varna: 剩下就是看敌人能不能选中17DP的OOI
+15:52 lh_mouse: >.<
+15:53 ASenR joined channel
+15:53 varna: 选中了……
+15:55 Meow-J quit:Quit: Connection closed for inactivity
+15:55 varna: 算了，我烧一些资源吧
+15:58 varna: 5bb1cv看看效果
+15:58 lh_mouse: varna, 请教个问题。
+15:59 varna: _(:з」∠)_
+15:59 varna: ……这跟没带飞机一样的打法是怎么回事
+15:59 lh_mouse: 假设我们约定一种语言，该语言中允许两种表达式。
+15:59 varna: 四个高楼还带不动一个挫子么
+16:00 lh_mouse: f  ( 1  2  )  和  f(1 2)  （本质是有没有空格的关系）。
+16:00 varna: 空格的意味是？
+16:00 lh_mouse: 于是，针对这种结构写解析器，就有个情况。
+16:00 lh_mouse: 空格没有意义。
+16:00 varna: 哦
+16:00 lh_mouse: 第一种处理方式，增加状态表示 token 前后填充的空白。
+16:01 lh_mouse: 第二种处理方式，空白当作 token 解析，生成 token 以后删除前后的空白。
+16:01 lh_mouse: 你觉得哪种好一些？
+16:01 varna: 这里我有个疑问
+16:01 varna: tokenizer应该是个丑陋的DFA, 它有能力跳掉空格吧
+16:01 lh_mouse: 是的。
+16:01 varna: 有其他的顾虑么
+16:01 lh_mouse: 但是要加状态。
+16:01 lh_mouse: 会增加 DFA 设计的复杂度。
+16:02 varna: 你希望一次扫描直接出语义程度的解析么
+16:02 varna: 看起来你不想做一趟额外的语法了
+16:02 lh_mouse: 不希望。ヲ只在想改 S-expr。
+16:02 lh_mouse: 或者说，ヲ在造一个类似于 JSON 的东西。
+16:03 lh_mouse: 只有数据没有函数。
+16:03 lh_mouse: 只是语法上看起来像是函数。
+16:03 varna: 我选2
+16:03 varna: 空白可以在不得不分析的时候跳掉
+16:03 lh_mouse: ヲ也是这么想的。
+16:04 varna: _(:з」∠)_噫，5bb开进去一发空袭劝退
+16:04 lh_mouse quit:Read error: Connection reset by peer
+16:04 cleamoon_: 现在觉得lisp确实挺漂亮的
+16:05 varna: 黑鬼的4-5就是这样，什么花样都有……
+16:06 lh_mouse joined channel
+16:06 varna: 想起在这鬼地方捞霜的勇士，也是可敬
+16:07 varna: 进门打得还是跟没带飞机一样，运气有点差
+16:07 lh_mouse: 用第二种方式解析 f  (  1  ,  2  ) 会出来六个 token:   f  /(/  1  /,/  2  /)
+16:08 varna: 六个是正确的吧
+16:08 lh_mouse: 是的，ヲ是想说前后的空白。
+16:08 varna: 不过这里有个问题，就是空格token其实也可以直接丢弃
+16:09 lh_mouse: 不可以。
+16:09 lh_mouse: ,  ,   ->  ,/  /,
+16:09 lh_mouse: 允许空的 token，但是不等于没有 token。
+16:09 varna: 然而, ,和,,不是一样的么？
+16:09 lh_mouse: 理论上讲么…… ヲ希望一样，但是中间应有一个空 token，
+16:10 lh_mouse: 这个可以解析的时候硬塞一个。
+16:10 varna: 明白你的意思了
+16:10 lh_mouse: 或者怎么办。
+16:10 varna: 不然要多一个状态，我想想别的办法
+16:10 varna: 这里有个问题，你的tokenizer是否负责生成真实的数据？
+16:11 lh_mouse: 不太懂你的意思。你的“真实的数据”是消去空格的？
+16:11 varna: 举例来说，f后面的(1, 2)是否在一趟扫描之后立刻变成一个列表？
+16:11 lh_mouse: 应该是如此。
+16:11 varna: 那么(1, ,2)和(1, 2)对你来说是不一样的，因为' '是个占位？
+16:12 lh_mouse: 这里前者是一个含有三个元素的表，后者是两个。
+16:12 varna: 那就不能丢了
+16:12 lh_mouse: 这个表没有名字。
+16:12 varna: [1, nil, 2]和[1, 2]毕竟不一样
+16:13 lh_mouse: 是。
+16:13 hatelis: cleamoon, (((((((((((((((((((((((((([[[[[[[[[[[[[[[[[[[[[[[{{{{{{{{{{{{{{{{{{{{{{{{{{{{{[ ……
+16:14 varna: 5bb打成四打三……
+16:14 varna: 收掉
+16:15 varna: 这么血腥的打法都打得惊心动魄，就当为一月份祈福吧
+16:15 randomclown quit:Ping timeout: 255 seconds
+16:17 cleamoon_: hatelis, if(transport.vehicle.car.bmw.some_type.control.turn("right")) device.electronic.gps.backend.turn("right");
+16:17 hatelis: cleamoon, 黑的好！
+16:18 varna: 黑点可以避免
+16:18 varna: 然而)))))))不可避
+16:19 Mokou: http://ww4.sinaimg.cn/bmiddle/7e948b4djw1ezl7iu7v02j20hs0uvgnk.jpg
+16:19 varna: 八千油钢已经下去了
+16:19 varna: 不过4-5毕竟期望一万以上通过……
+16:19 cleamoon_: varna, ))))) 也能避免，函数写短点就好了
+16:20 cleamoon_: varna, 对了，zeal的pal雇佣兵用弓箭手可以吗？
+16:20 varna: 不可以
+16:20 hatelis: 如果lambda exp一行一行的写，那还叫lambda style吗？就该只有一个()套()写下去
+16:20 varna: 弓箭手没输出，不如米山
+16:20 varna: 米山傻乎乎的，但他有个光环
+16:21 varna: 如果你喜欢弓箭手，在地狱A5之前应该能勉强度日
+16:21 varna: A5我觉得真有点难
+16:22 cleamoon_: zeal在地狱本身就很难吧，弓箭手只是为了万一我弄出了两个dream呢...
+16:22 cleamoon_: 那就瞄准的米山？
+16:23 varna: 瞄准米山挺好
+16:23 varna: 反正老实说，穷鬼生存都是问题……
+16:23 varna: 我堆了好多LL+LM饰品
+16:23 Mokou: “南村群童欺我老无力，公然抱我入竹去… ”
+16:24 cleamoon_: 在有土鳖上上传了place to place，亲测证实私人放动画也可以... 
+16:24 varna: 2333333333333333
+16:24 cleamoon_: 电影放了个老爸看的保卫萨拉热窝没问题，不知道是因为太老了还是其它问题
+16:25 cleamoon_: 地狱炮轰都很容易死，别说近身了
+16:25 varna: 另外zealdin地狱我是开1pp的
+16:25 hatelis: cleamoon_, 这个要由版权方提出才会查你水表的吧
+16:25 varna: 高了我不敢打
+16:25 varna: 那个档没用别人接济
+16:26 cleamoon_: 至今我只知道召唤nec可以谈笑风生和sor可以跑的比谁都快
+16:26 cleamoon_: 我现在也是1pp，8pp开荒太痛苦了
+16:26 cleamoon_: sor为了打blood raven我扔了180把飞刀
+16:26 varna: 2333333
+16:27 varna: 8pp血乌鸦……
+16:27 varna: 一箭能射死你吧
+16:27 cleamoon_: hatelis, 上传电影会显示要求删除，不删帐号会上传不了新视频
+16:27 hatelis: cleamoon_, 哦
+16:27 varna: 进去了
+16:27 varna: 拼！
+16:27 cleamoon_: 一箭60%-80%血，但是会中毒
+16:27 varna: 233333
+16:28 cleamoon_: 这个还能拼，打普通难度diablo连续骷髅瞬间全灭11次
+16:29 cleamoon_: 前后召唤了16次骷髅，米山复活了18次
+16:29 cleamoon_: 打的都没钱了
+16:29 varna: 72/490
+16:29 varna: 斩杀失败……
+16:29 Mokou: ……
+16:31 cleamoon_: 开荒那种练法最好用呀
+16:31 varna: 都不好
+16:31 varna: 算了，黑鬼就是这样……继续
+16:32 cleamoon_: 召唤nec玩太多次了
+16:33 varna: 已烧一万二
+16:34 Mokou: https://pic4.zhimg.com/0196473296b9b9ba20c2fac0a776a85f_r.png?ssitoken_1451723630194_ 暴力
+16:37 cleamoon_: 噗
+16:38 varna: 2小破进
+16:38 varna: 拼了！
+16:38 varna: 2球……
+16:39 varna: 榛名打了一炮65之后爆炸了
+16:39 varna: 不错的昼战
+16:39 varna: 四打二
+16:39 varna: 拼了！
+16:40 varna: 彻甲弹斩杀
+16:40 varna: 耗资一万二
+16:40 varna: 也还凑合
+16:43 cleamoon_: orz
+16:44 varna: 4-5强度很高的，中下路道中的水面战全都有战舰，只有两点可能出轮型
+16:44 varna: 劝退不奇怪
+16:44 Mokou: 好惨烈
+16:44 varna: 想省就用肥桑
+16:44 varna: 可能辛苦点，但节约
+16:44 Mokou: 我这两次3CV都挺顺利的
+16:45 varna: 我挺害怕的
+16:45 varna: 很难生存，很少火力
+16:45 sleepwalking joined channel
+16:45 Mokou: CA和CV的火力都要强过BB
+16:45 varna: 异议，我这里CA的观测率不足
+16:45 Mokou: 我这里也不足
+16:45 varna: 战舰经常瞎打，但瞎打也能打中
+16:46 Mokou: 战舰容易刁民
+16:46 Mokou: CA基本能确保拍死港湾
+16:46 Mokou: 道中也就那样了
+16:46 varna: 道中太凶险
+16:46 cleamoon_: 山城的新年立绘很乐
+16:46 varna: 敌方开火的时候我手还在抖
+16:46 Mokou: 打谁
+16:47 varna: 随便
+16:47 varna: 大和我能放心点
+16:47 varna: 不过就算大和也出过两次事
+16:47 Mokou: 总之战舰的回避率在我这里太差……
+16:47 varna: 想想要省的话，我最好还是给巡洋舰补一些闪
+16:47 Mokou: 而且不容易触发保护
+16:47 varna: 今天懒了，直接用资源砸过去
+16:48 varna: 4-5差不多是15k-20k的事情吧
+16:48 Mokou: 我这次是3.5k+2k……
+16:48 varna: 我最顺的时候大约5k, 不过那么顺我不敢当真
+16:48 varna: 平均10k可以接受
+16:48 Mokou: 大和级太烧了
+16:49 varna: 难得我打一次4-5
+16:49 Mokou: 我觉得在这里性价比不如巡洋舰
+16:49 varna: 巡洋舰我仍然信不过
+16:49 varna: 太惨了
+16:49 varna: 而且前哨战其实挺玄的
+16:49 varna: 以前我都是1bb2cv
+16:50 varna: 照样糊
+16:50 varna: 所以随他吧，火力差不多就行
+16:50 Mokou: 前哨我是八个舰攻
+16:50 Mokou: 开幕基本能清掉两到三个
+16:50 varna: 那个不重要
+16:50 varna: 杂鱼基本不会威胁到我
+16:50 Mokou: 挺重要的
+16:50 Mokou: 不然白天的输出会被浪费在撸改上
+16:50 varna: 我不是说头目
+16:50 varna: 你得先让我进去
+16:51 Mokou: 第一发干掉塔酱的概率从1/6变成1/4或者1/3
+16:51 varna: 我这里大多是四选一选错
+16:51 varna: 挺残念的，只能刷闪
+16:51 Mokou: 选错那没办法，带个中破进去
+16:52 varna: 希望如此吧
+16:52 varna: 我只能跟每次一样说希望挺住
+16:52 varna: 夏活的时候被补刀我还不高兴，现在我倒是平和些了
+16:52 Mokou: 我觉得下个月你可以体感一下
+16:53 varna: 下个月我应该不会打4-5
+16:53 varna: 而且我真的害怕道中，太惨了
+16:53 varna: 三战中破进去是火力丧失，然而比被补成大破好太多
+16:53 varna: 你们比较勇敢些
+16:53 Mokou: 我的感觉是战舰的劝退会比巡洋舰高些
+16:53 Mokou: 反正命中了都是死……
+16:53 varna: 不
+16:54 Mokou: 或者是你家战舰的回避比较高？
+16:54 varna: 我战舰在中路劝退今天只有大和一次
+16:54 Mokou: 但是你没有空母压制对面杂鱼
+16:54 Mokou: 剩下的三只就麻烦了
+16:54 varna: 哦
+16:55 varna: 原来如此啊
+16:56 varna: 你觉得我会相信的话，可以尝试继续解说
+16:56 hatelis quit:Remote host closed the connection
+16:56 hatelis joined channel
+16:56 hatelis quit:Read error: error:1408F10B:SSL routines:SSL3_GET_RECORD:wrong version number
+16:56 Mokou: ……我只是说下我的想法
+16:57 hatelis joined channel
+16:57 varna: 对4-5我还是很害怕的
+16:57 varna: 吃瘪吃太多了
+16:57 varna: 随缘份随心情
+16:58 cleamoon_: 4672+20出僵尸你信吗
+16:58 varna: 出过
+16:58 Mokou: 信
+16:58 cleamoon_: 开5-3好麻烦
+16:59 varna: _(:з」∠)_总之我得个教训：以后我只谈带路，不安利阵容
+16:59 varna: 淮南淮北之事，古已有之
+17:01 cleamoon_: 3-5我记得wikia上的一个带路失效了，疯狂不进boss
+17:01 Mokou: 4-5打完了以后是保持斩杀还是？
+17:01 varna: 我看看
+17:03 varna: 下调杂鱼强度
+17:03 varna: 1球2红补给
+17:03 Mokou: ……
+17:03 Mokou: 算了，道中应该一样
+17:04 varna: 别烧了，省省
+17:04 varna: 为这种事不值得
+17:04 Mokou: 不是，我只是想确认下
+17:04 cleamoon_: 4-5捞船？
+17:04 varna: 捞霜
+17:04 varna: 很辛苦的
+17:05 cleamoon_: 放弃就好了
+17:05 varna: 我放弃了，随缘吧……
+17:05 varna: 可爱的驱逐舰那么多，练也练不过来
+17:06 varna: 演习看见一个3-2练级的，如果四盘打完我还能做任务的话，就跟他打航空战
+17:12 Mokou: 第五次出击
+17:12 Mokou: 第一点开幕轰沉4中破1
+17:13 varna: 想了想，值得一试
+17:13 Mokou: 我的测试结果这个月应该就能出来
+17:13 varna: 下个月我动用点精锐看看，就当是3-5强化第一点弱化第二点
+17:14 Mokou: 到时候你先参考下再决定也行
+17:14 varna: 别那么严肃，定性比一下行了
+17:14 varna: 我随意
+17:14 varna: 你看我什么时候信过攻略
+17:14 Mokou: 我想测试下看看
+17:14 varna: 我驲
+17:14 varna: 输了！
+17:14 Mokou: 就当做西方
+17:14 Mokou: ……
+17:14 varna: 还有一次机会拿下今天的任务
+17:14 varna: 来个花哨的
+17:15 cleamoon_: 人生不如意，八之九十
+17:15 varna: 不对
+17:15 varna: 怎么5胜任务显示50%+
+17:15 Mokou: 门神未劝退
+17:16 Mokou: T不利，开幕轰沉3
+17:16 Mokou: 大凤大破
+17:16 varna: 航空战队还能动的人出来！
+17:16 Mokou: 港湾发疯谁也挡不住……
+17:16 varna: 那个不算
+17:16 varna: 能进去就是胜利
+17:17 cleamoon_: 花哨的，援交队：潮，鹿岛，金刚，岛风，铃谷，19
+17:17 varna: 港湾开始甩乳了，只能抱着哭
+17:17 Mokou: GG
+17:17 varna: 进去就行
+17:17 Mokou: 港湾智商总是那么高
+17:17 varna: 打烦了可以切暴力配置
+17:18 Mokou: 我的计划是每天打五盘
+17:18 varna: 诸君，对面有个打3-2的
+17:18 Mokou: 两种配置各50次，20天就能测完
+17:18 varna: 我不想跟他反潜了
+17:18 cleamoon_: 话说你们没有父母之类的给找相亲之类的吗？我为什么总听到有人说一到大学就天天相亲
+17:18 varna: cleamoon_: 没
+17:18 Mokou: 没
+17:18 varna: 翔鹤瑞鹤飞龙苍龙天城葛城
+17:18 varna: 一起上淹死他们
+17:19 Mokou: 我拉六个CVL出来
+17:20 varna: 六舰攻制空应该够了吧
+17:20 varna: 其余的我塞流改
+17:20 varna: 似乎不够用
+17:20 Mokou: 4-5么
+17:20 varna: 啊不对，够了
+17:20 Mokou: 4-5我是4舰战空优
+17:20 varna: 不，演习……
+17:20 Mokou: ……
+17:20 varna: 我突然想跟那哥们来个炸比
+17:21 varna: 成天都是我被炸，我偶尔也炸一下对手
+17:21 Mokou: 对面什么配置
+17:21 varna: 3-2，有2轻母
+17:21 varna: 估计想跟欧根结婚
+17:21 Mokou: ……
+17:21 Mokou: 2CVL应该制空不会高
+17:21 cleamoon_: linode被屏蔽了
+17:21 varna: (｡･ω･)ﾉ爽爽
+17:22 Mokou: 要不你带个舰战？
+17:22 varna: 我正常地配了3cv
+17:22 varna: 然后塞了一些流改
+17:22 varna: 鹤鹤鹤！
+17:23 hatelis: cleamoon_, 海盗国屏蔽了linode？！
+17:23 cleamoon_: 不可能是海盗国吧...
+17:23 cleamoon_: 要不还怎么叫海盗国
+17:23 varna: 我犯了一个重大错误
+17:23 varna: 没人反潜
+17:23 Mokou: ……
+17:23 * varna A滚
+17:24 varna: 补给330铝
+17:24 varna: 这还挺过瘾的呢……
+17:25 Mokou: 我的炸逼配置基本都是实战的
+17:25 hatelis quit:Remote host closed the connection
+17:25 Mokou: 比如说3-3……
+17:25 cleamoon_: 大雪封山啦
+17:25 varna: 悲剧，任务没做完……
+17:26 cleamoon_: 反正只有50
+17:27 varna: 我记得有个资材
+17:27 varna: 改修也还是费一般资材的
+17:28 cleamoon_: 我之前改修电探，反应过来才发现...... 只剩下两个.......
+17:28 * Mokou 没有螺丝
+17:29 cleamoon_: 我还有100螺丝
+17:30 varna: 岚月酱平时都改什么
+17:31 cleamoon_: 我圣诞前刚弄到明石.......
+17:31 * Mokou 改主炮把螺丝改没了
+17:31 varna: ...
+17:31 varna: 我就不该不点那个确保
+17:31 varna: 太6了
+17:31 Mokou: 什么情况
+17:31 varna: 就那个38升级
+17:32 Mokou: ……
+17:32 varna: 明老板舌头一吐，跟我说改跪了
+17:32 varna: 然后我就点了十三螺丝的确保……
+17:32 varna: 不过38升级自动+3
+17:32 Mokou: 当年嗑药炮算计我一把，之后我升级就都直接确保了
+17:32 varna: 挺良心，再吃一个炮就好
+17:32 Mokou: 那次他坑掉了我仅剩的两个25mm机枪
+17:33 Mokou: 她
+17:33 varna: 那枪造半天也没一个
+17:33 Mokou: 直接导致我的升级计划延后了一星期
+17:33 Mokou: 可能还不止，螺丝和机枪都坑
+17:34 Mokou: 卧槽  
+17:34 Mokou: 3-3居然进Boss了
+17:34 varna: 哦对诸君，我说个事
+17:34 Mokou: 我感觉我没接任务……
+17:34 varna: 今早我去看cos展的时候，看见糖果真的勾到了cos妹子
+17:34 Mokou: ……
+17:34 Mokou: 三千！
+17:34 cleamoon_: ........
+17:34 varna: 不过妹子说太冷不出正片，就走了
+17:35 varna: 初二
+17:35 Mokou: 话说糖果不是有妹子么
+17:35 varna: 然而我一眼看上去都大二了……
+17:35 varna: 现在似乎也没了
+17:35 Mokou: ……
+17:35 Mokou: ……
+17:35 Mokou: 什么鬼
+17:35 Mokou: 我居然接了任务
+17:36 varna: 我驲
+17:36 varna: 你把我也带进boss了
+17:36 Mokou: ……
+17:36 varna: 我打补给船呢
+17:36 cleamoon_: 什么鬼
+17:36 varna: 今天怕劝退，我补给船任务都没接
+17:37 Mokou: 南西我就不做了
+17:37 Mokou: 做一下开发任务
+17:38 Mokou: 旗舰是玄学赤城
+17:38 Mokou: 果然出电探了
+17:38 Mokou: 然而22
+17:38 varna: 你出货了我就跟赌电探
+17:41 varna: 我驲哦
+17:41 varna: 这才是我熟悉的南西
+17:41 Mokou: 彩底电探
+17:41 varna: 别出轮型
+17:41 Mokou: 四发全灭
+17:41 varna: 还好单纵
+17:44 Mokou: 我吃个章
+17:44 cleamoon_: orz
+17:44 Mokou: 两个
+17:45 Mokou: 38改+3 GET
+17:46 varna: 咦，我打了几个运输船
+17:47 varna: 意识模糊了
+17:47 varna: 噗噗
+17:47 varna: 打了一个，手滑没夜战
+17:49 Mokou: http://zhihu.com/question/38993961/answer/79136460 论德国战败的原因
+17:50 varna: 德国之所以战败，是因为东乡长官没有送他们三千大元
+17:51 Mokou: 东乡送了数以亿计的有生力量
+17:52 varna: 吓得我直接进了Boss
+17:52 varna: 另外我是清白的
+17:52 varna: 我只推了邓尼茨
+17:52 Mokou: 然而推了
+17:52 varna: 校服PLAY很赞的
+17:53 cleamoon_: 我之前在zhihu发了个问题，2min就被删了
+17:53 varna: 你FA什么了
+17:54 cleamoon_: 为什么网上的舆论那么多人憎恨皿铸
+17:55 pocmon quit:Ping timeout: 260 seconds
+17:55 varna: 23333333333333333
+17:55 pocmon1 joined channel
+17:55 varna: 我告诉你为什么
+17:55 varna: 因为国内吃FKC太TM贵了
+17:56 cleamoon_: 不，我其实想掉神棍的
+17:57 varna: 补给船任务都做完的话就去吃天妇罗
+17:57 varna: 昨天晚上料理店过节聚餐，不营业……
+17:58 cleamoon_: zhihu有几个货，他们的理论是“为什么非洲南美穷：因为他们民主”，“为什么米帝欧洲富：因为他们独裁”，“为什么会战争：因为民主”，“怎么才能和平：需要独裁”，然后都有3k+的支持，于是我想请他们来玩玩
+17:58 cleamoon_: 我家也聚餐，不过营业
+17:59 varna: 然而我明明有会员卡，他们也不请我聚餐_(:з」∠)_
+17:59 cleamoon_: 你去肛了他们
+18:00 varna: 会被群爆
+18:00 cleamoon_: 也好
+18:00 varna: 这幼女太SAO
+18:01 cleamoon_: zhihu有个货签名是类似：支持独裁，支持种族歧视，支持战争，反对人权，反对自由，反对民主
+18:02 cleamoon_: 反正你去了one way or another肯定能吃 饱
+18:02 xxxxxxxx: 反对人权 自由 民主斗士
+18:03 Mokou: Q：如何更深入地学习 Linux？
+18:03 Mokou: A：
+18:03 Mokou: 1、装arch
+18:03 Mokou: 2、半年不更新
+18:03 Mokou: 3、pacman -Syu
+18:03 Mokou: 4、把系统修好
+18:03 cleamoon_: 这个货还发了个南美的评论，简单说就是因为民主化了，所以南美穷死了，5k+的赞
+18:03 cleamoon_: 更简单的：1. 装gentoo
+18:04 Mokou: 别说，装gentoo还真让我学到不少东西
+18:04 Mokou: 想我当年花三天时间才编译出一个能用的内核
+18:04 varna: 这次我先不更新
+18:04 varna: 等官推出活动通知了再更
+18:05 xxxxxxxx: 三天折腾了啥?
+18:05 varna: 风扇吧
+18:05 Mokou: SATA控制器
+18:05 Mokou: 认不到硬盘
+18:05 cleamoon_: 我至今没成功弄出过一个可用的gentoo系统来
+18:06 varna: 我机器不想清灰了，我狗殆……
+18:06 xxxxxxxx: 没怎么折腾gentoo
+18:06 Mokou: 23333
+18:07 cleamoon_: 话说gentoo真的能装win上...
+18:08 xxxxxxxx: 啥意思？ 装win上？
+18:09 cleamoon_: +
+18:09 cleamoon_: 似乎有个项目，类似cygwin那种的感觉
+18:10 cleamoon_: 不过是编译的，每一个包...
+18:10 xxxxxxxx: 让他们吃屎去吧
+18:16 xxxxxxxx: http://opinion.caixin.com/2016-01-02/100895209.html
+18:18 lh_mouse: 中国市场非常具有社会主义特色。
+18:18 lh_mouse: ヲ所谓社会主义特色，就是社会主义病态。
+18:19 lh_mouse: 垄断，笑贫不笑娼。
+18:19 xxxxxxxx: 这似乎和社会主义关系不大?
+18:21 lh_mouse: （那是黑）
+18:21 lh_mouse: 说社会主义，以前是大锅饭，现在是法不责众。
+18:22 xxxxxxxx: 法怎么责众?
+18:22 cleamoon_: 群P
+18:23 cleamoon_: 其他地方不知道，反正帝都的食品质量下降的奇快，这次父母带的小吃都超难吃...
+18:29 varna: 出去碰碰运气，希望今天料理店营业
+18:31 xxxxxxxx: http://ent.163.com/16/0102/00/BC9JRFBC00031H2L.html 大屁股裂了!
+18:31 cleamoon_: 讨论的是衣服质量有多差吗
+18:31 xxxxxxxx: 安倍休假专心享受高尔夫 成绩被当成国家机密 <- 至于么...
+18:32 cleamoon_: 可能是太丢人了吧
+18:32 cleamoon_: 18洞3k杆之类的
+18:34 lh_mouse: 蛋太大的结果。
+18:34 Youmu quit:Quit: Connection closed for inactivity
+18:35 cleamoon_: 蛋大如斗黄旭东
+18:36 cleamoon_: 现在我看到二奶都只能想到黄旭东和孙一峰了
+18:41 cleamoon_: http://pbs.twimg.com/media/CXr2vjeVAAAkKAM.jpg
+18:43 ASenR quit:Ping timeout: 264 seconds
+18:53 condy: http://t2.qpic.cn/mblogpic/05c070c0687bc45365e4/2000
+18:53 condy: 现在的小学生好厉害
+18:54 cleamoon_: 这个看起来岁数略大了§
+19:02 ASenR joined channel
+19:16 pocmon1 quit:Quit: 闪...
+19:45 cleamoon_ quit:Ping timeout: 245 seconds
+19:47 cleamoon_ joined channel
+19:48 whocares_2 quit:Ping timeout: 240 seconds
+19:48 whocares_2_ joined channel
+19:57 lh_mouse: varna, 如果采用方法二，解析 f(1,   ) 会抽。
+20:05 varna: (1, )和(1, ,)不一样吧
+20:06 varna: (1, )应该是(1)
+20:07 Mokou: https://pic2.zhimg.com/d3c3b0046320d015977e25caba863cfd_r.jpg 正统
+20:07 varna: 我看见一个耗
+20:09 varna: OverQMR出15了，178也有
+20:10 randomclown joined channel
+20:11 varna: 封面上一个大大的致命
+20:11 Mokou: 我去看看
+20:13 Mokou: 我听着The Dragon看Over QMR
+20:13 Mokou: 感觉好奇怪
+20:14 varna: 常去的那家日式拉面店，天妇罗实在不怎么样
+20:14 Mokou: 不过Over QMR里的北上大人真是超常的可爱……
+20:15 varna: 吃这个列入禁则事项
+20:15 Mokou: 2333
+20:15 Mokou: 避免德川老贼化
+20:16 Mokou: 噗
+20:16 varna: 幸好我在宿舍留了大半包瓜子
+20:16 Mokou: 提督蛋碎
+20:16 varna: 回去就点水把味道冲下去
+20:17 varna: 1上2隈5谷9野
+20:17 varna: 我看了之后就这感想
+20:18 Mokou: 23333
+20:18 Mokou: 我看到了59
+20:19 varna: 想起来了，今天输的那一场就是熊野高呼一声duang, 跟其他人一样选错了
+20:20 Mokou: ……
+20:20 varna: 跟中将也不能慢心啊
+20:20 * Mokou 跟元帅
+20:20 Mokou: 我现在是624位
+20:20 Mokou: 然后幌筵第一是1202
+20:21 varna: 咦，我升到6921了
+20:21 varna: 战果13
+20:21 Mokou: ……
+20:21 Mokou: 战果342
+20:25 varna: 十回出击还没做完，正好补补练度
+20:26 lh_mouse: varna, 正解。
+20:26 varna: (｡･ω･)ﾉ
+20:27 lh_mouse: 卖萌坍灶丝
+20:27 varna: 这是娱乐的表情，不是卖萌的表情
+20:31 lh_mouse: 测量10000个char[]以及string类的创建(new)，赋值(strcpy和=)以及比较(strcmp和==)。char[]用时0.00055，string类用时0.002246, 差了40倍。有兴趣的吧友亦可自己测量一下。
+20:31 lh_mouse: qinyue659: 回复 LH_Mouse_Ex :应该比较相对时间的大小。毕竟这只是测试，string的长度只为10，而且运算简单。实际应用中，这40倍的时间差不能忽视
+20:31 lh_mouse: qinyue659: 回复 LH_Mouse_Ex :拜托，您以为数据库里的string都是很短，数目很少吗？您以为建一个数据库就是运行一下赋值比较吗？如果你认为是，那么是在下输了
+20:31 lh_mouse: ^  某大神太监了。
+20:32 varna: 我似乎有印象有人问char *和string
+20:32 varna: 然而为什么长串要扔数据库
+20:32 lh_mouse: 大神表示提升字符串操作性能能提升数据库性能。（笑）
+20:33 lh_mouse: 大神发明：内存数据库。（笑）
+20:33 varna: 大神赶快把mysql灭了吧
+20:34 varna: 不过似乎先把下面接上比较好
+20:34 lh_mouse: 作为一个长者，ヲ有必要告诉你们一点，人生的经验。
+20:34 iyzsong: 膜 :o
+20:35 Mokou: you're angry
+20:35 lh_mouse: 你们写服务端应用的时候注意一下读写分离的扩展性。
+20:36 varna: 今天lhj是不是又没施法
+20:36 lh_mouse: 是！
+20:36 lh_mouse: 今天ヲ一个同事结婚。
+20:36 lh_mouse: 去吃喜酒了。
+20:36 xxxxxxxx quit:Quit: Leaving...
+20:37 varna: (｡･ω･)ﾉ
+20:41 Mokou: 真神：“地区经理累死累活几十年忠心不二一心一意只求壮大公司，怎奈公司总裁迷恋对手新秀竟派遣亲信获胜前夕反水暗算自己人。嗯我说的是苍钢最新一话”
+20:41 varna: 我看到了“水反”二字
+20:41 Mokou: 看了感觉真可怜
+20:41 varna: 然而后来发现不是“夕立”和“水反”
+20:41 Mokou: 这个月的水反我做不做呢
+20:41 cleamoon_: 按这个发展速度，全民膜法的时代，大膜法时代就要来临了
+20:41 varna: 做
+20:41 varna: 水反是浪漫
+20:42 Mokou: 然而要先做撸号
+20:43 cleamoon_: 真正的正统是单细胞生物，一个细胞就能做到所有事，这才是数学上最美的，我看谁有我繁殖的快
+20:43 varna: 苍蓝这雪风……
+20:44 varna: 噗，然后稀欧一掏出了汉载机
+20:44 varna: 神展开
+20:44 varna: 我已不忍直视
+20:46 hatelis joined channel
+20:48 hatelis: 早～
+20:49 varna: 裤子遮蔽了这人的天空
+20:50 hatelis: varna, 一派胡言！想搞我的大新闻！
+20:50 varna: 来，吃点肝
+20:52 varna: 啊啊啊啊啊啊啊啊没妹子
+20:52 varna: 求介绍可爱的妹子
+20:52 Mokou: 天皇酱很可爱
+20:52 varna: 要能推的
+20:52 Mokou: 我能推
+20:52 varna: 啪了能触犯我国刑法的那种
+20:52 Mokou: uccu
+20:53 Mokou: 果然是喜欢小孩子的犯罪边缘人士
+20:53 varna: 成年女性大多令人失望
+20:53 hatelis: 把这头陀牵到公安局备个案先
+20:53 varna: 今天会场也是，舞台下面妹子一张嘴，我直接退避
+20:53 Mokou: ……
+20:53 Mokou: 要不你去11区，据说那边的妹子不黏人
+20:54 varna: 说起公安，我寝室楼有个小案
+20:54 varna: 有个哥们的电话在寝室被偷走了，然而笔记本摄像头没关，全过程GET
+20:54 Mokou: ……
+20:54 Mokou: 为什么笔记本还在
+20:54 hatelis: 为什么摄像头没关
+20:54 cleamoon_: 看到了妹子一张下面的嘴
+20:55 varna: 那哥们老爹第二天动手术，着急要联系医生，于是帖了启事要那人还手机
+20:55 hatelis: 自己人作案？
+20:55 varna: 看起来窃贼强行不还，于是这几天第二个启事贴出来了，指出如果再不还就请那人去派出所喝茶
+20:56 varna: 启事上说最后的结论就是我那公寓楼里的人
+20:56 varna: 也不知道茶喝得如何了
+20:56 lh_mouse: [20:51:59] <varna> 要能推的
+20:56 lh_mouse: [20:52:04] <Mokou> 我能推
+20:56 varna: lh_mouse: Good Job
+20:57 Mokou: uccu
+20:57 Mokou: 你这叫断章取义
+20:58 cleamoon_: 我觉得啪了能触犯刑法不算高级，啪了能触犯宪法才高级
+20:58 varna: 宪法是基本法
+20:58 varna: 来，基本法
+20:58 cleamoon_: 这叫搞个大新闻
+20:58 varna: 你跟基本法对着干，这样是当不了法师的
+20:59 hatelis: 啪幼女也要违反基本法系列
+21:00 varna: 今天这一顿怒打直接让我回到解放前
+21:00 varna: 万恶的英军
+21:00 varna: 要不是长了那么污染环境的胸部，我也不会想着去专门讨伐
+21:02 varna: 然后我想到一个问题啊
+21:02 varna: 某不愿透露姓名的吴港坐沉小天使还要修17h
+21:03 varna: 这我明天也没法开工……
+21:03 Mokou: 我看看我渠里的
+21:03 varna: 一桶修好，鸟海扔进去
+21:03 Mokou: 4:03 6:30 11:32 5:01
+21:03 Mokou: 特别长的那个是大和
+21:04 varna: 这壕
+21:04 Mokou: 然而我戒指比你少
+21:04 varna: 你只是懒得总用那么几个阵容出去打
+21:04 Mokou: 毕竟我乌黑浓密
+21:05 varna: 我驲，ff自爆了
+21:05 Mokou: ……
+21:05 varna: mozilla的东西啊，哦瘊瘊
+21:06 Mokou: 我感觉你们Mozilla还是要学习一个
+21:08 varna: 对了，今天在会场还看到了超弩级米库
+21:08 Mokou: 超弩级什么情况
+21:08 varna: 膀大腰圆沟深脸月巴
+21:09 Mokou: 果然
+21:09 lh_mouse: geordi, -c { int a(1) __attribute__((__unused__)); }
+21:09 varna: 有几个中国风的coser倒端正
+21:09 geordi: warning: attributes after parenthesized initializer ignored
+21:09 lh_mouse: geordi, -c { int a __attribute__((__unused__)) (1); }
+21:09 geordi: Success
+21:10 varna: 还有一些肥希
+21:10 varna: 感觉肥的地方稍微有点错，不过不该要求那么多
+21:10 varna: 然而最可怕的是一个妮可
+21:11 varna: 你能想像比其他八个人都高的妮可么
+21:11 varna: 跟其他随便哪个人换一下会和谐一些……
+21:13 Mokou: ……
+21:13 Mokou: 胸呢
+21:13 varna: 稍微有
+21:13 varna: 总之比妮可应有的大一些
+21:13 varna: 不过如果是本人真的想要出妮可演出的话也就没办法了
+21:14 varna: 毕竟不是所有cos正片都以还原为要义
+21:14 hoxily_ is now known as hoxily
+21:16 varna: 看起来比较好的还有一个穿人民军军官制服的哥们
+21:16 varna: 很喜感
+21:17 Mokou: 说到军服，我又想起C89了
+21:17 varna: 233333
+21:17 Mokou: http://ww2.sinaimg.cn/bmiddle/9ce0ac6dgw1ezgkklecp0j20no0hswh0.jpg 大扶桑国近日景象
+21:18 varna: 没有掉时髦度的牛皮手枪套好评
+21:21 cleamoon_: 没有膜蛤的coser
+21:23 hatelis: 这个只是PLA军宅吧
+21:24 lh_mouse quit:Read error: Connection reset by peer
+21:25 lh_mouse joined channel
+21:35 cleamoon_: 火箭队  http://thegamelight.altervista.org/wp-content/uploads/2013/04/cosplayers-jessie-and-james-team-rocket-of-pokemon_large.jpg
+21:36 cleamoon_: 这个还原度不错 http://img10.deviantart.net/d5c0/i/2013/303/4/5/zangief_cosplayer_by_collioni69-d6scxs0.jpg
+21:37 hatelis quit:Remote host closed the connection
+21:38 hatelis joined channel
+21:38 varna: 桑吉尔夫不错+
+21:39 * hoxily 暴 varna 
+21:40 varna: 这基佬
+21:40 varna: 一点救都没有
+21:41 hoxily: 自从把联通的来电显示取消了，从此以后来电真的没有号码了！
+21:41 hoxily: 屌爆了
+21:42 varna: 22:40 < hoxily> 屌爆了
+21:42 hoxily: 联通屌爆了
+21:42 hatelis: 来电显示不是都是套餐附送的么
+21:42 * hoxily 为了不产生歧义，补充道
+21:43 hoxily: hatelis: 我升级到4g组合套餐了
+21:43 hoxily: 流量、语音、短信包等都可以由选择它提供的选项
+21:44 condy: 有点厉害啊
+21:44 hatelis: f
+21:44 cleamoon_: 4个1g组合起来的
+21:44 hatelis: 来电显示还是要的吧
+21:44 hoxily: 移动好像也这么干了
+21:44 hoxily: 之前是用的联通3G套餐
+21:44 condy: 我怎么记得就算取消了，月租还是照样扣。。
+21:45 hoxily: 没那么变态吧
+21:45 Meow-J joined channel
+21:45 hoxily: 按需消费不是么
+22:00 hatelis: 北京二炮总医院拆除门牌更名为火箭军总医院
+22:00 hatelis: 中二满满的名字啊
+22:00 hatelis: cleamoon_, 
+22:00 gauge: 2333
+22:01 Mokou: 23333
+22:01 hatelis: 老毛子的叫 战略火箭军
+22:01 hatelis: 现在天朝直接 战略 省了
+22:01 hatelis: 火箭军· ·
+22:05 varna: 想想我军不占编制的火箭炮
+22:06 varna: (｡･ω･)ﾉ云爆弹是战术的
+22:07 hatelis: varna, 雲爆弹就是能跟战术核武匹敌的那个？
+22:08 varna: 只是步兵用的武器而已
+22:08 varna: 不是大规模的温压弹
+22:08 varna: 这可是真正的战术武器
+22:12 hatelis: 不太懂啊，这种东西怎么又变成单兵火箭筒了
+22:13 varna: 这个其实就是高温高压+烧尽氧气
+22:13 varna: 看你给战斗部填多少了
+22:14 varna: 愿意的话，应该也可以把杀伤力换算成TNT当量？这个我不太懂
+22:14 hoxily quit:Quit: Leaving
+22:21 Mokou: 日本妹子虽然比较含蓄，那是对外人，熟了以后你会发现大部分日本妹子都挺毒舌的。比如我们班一个韩国男孩告白我们班另一个日本女孩（yuriko闺蜜） 但是被无情拒绝，理由是“韩国是个穷的要命还装逼的国家，我妈妈不会同意的”。
+22:21 Mokou: 233333333
+22:21 Mokou: 东亚这三国
+22:26 varna: 还装逼233333
+22:30 lh_cat joined channel
+22:31 hatelis quit:Remote host closed the connection
+22:31 Mokou: http://ww1.sinaimg.cn/bmiddle/9c6e324bjw1ezlin7yhpdj20hs0a10u6.jpg
+22:31 hatelis joined channel
+22:33 lh_mouse quit:Ping timeout: 256 seconds
+22:42 Youmu joined channel
+22:43 hatelis: Youmu, yooo
+22:44 Youmu: o.o
+22:46 lh_cat is now known as lh_mouse
+22:48 hatelis: Youmu, O.O
+22:49 Youmu: hatelis: lol
+22:49 hatelis: Youmu, :D
+22:51 varna: 撤退
+22:51 varna: 武运
+22:51 varna quit:Quit: leaving
+22:56 sleepwalking quit:Ping timeout: 276 seconds
+23:08 lh_mouse quit:Read error: Connection reset by peer
+23:21 hatelis quit:Ping timeout: 240 seconds
+23:41 FrankHB joined channel

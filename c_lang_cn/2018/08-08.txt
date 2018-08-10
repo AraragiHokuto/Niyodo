@@ -1,0 +1,152 @@
+00:39 \s_ quit:Ping timeout: 256 seconds
+00:41 \s joined channel
+01:14 zirconi quit:Remote host closed the connection
+01:15 zirconi joined channel
+01:49 zirconi_ joined channel
+01:51 zirconi quit:Ping timeout: 256 seconds
+02:04 rkta joined channel
+02:06 rkta quit:Remote host closed the connection
+02:17 FastLizard45 joined channel
+02:18 FastLizard45 quit:Remote host closed the connection
+02:31 anticrisis joined channel
+02:31 anticrisis quit:Killed (Unit193 (Spam is not permitted on freenode.))
+02:32 sixand quit:Quit: sixand
+02:47 VM_ joined channel
+02:51 VM_ quit:Remote host closed the connection
+02:53 CyrusYzGTt quit:Ping timeout: 248 seconds
+03:11 x49F joined channel
+03:11 x49F quit:Remote host closed the connection
+03:18 Guest43597 joined channel
+03:22 Guest43597 quit:Ping timeout: 244 seconds
+04:09 CyrusYzGTt joined channel
+04:36 macky joined channel
+04:38 macky quit:Remote host closed the connection
+04:38 Waggie11 joined channel
+04:38 Waggie11 quit:K-Lined
+04:46 KellerFuchs12 joined channel
+04:47 KellerFuchs12 quit:Remote host closed the connection
+04:58 baweaver6 joined channel
+05:02 baweaver6 quit:Ping timeout: 256 seconds
+05:24 cleamoon__ joined channel
+05:34 dh12821 joined channel
+05:35 dh12821 quit:Remote host closed the connection
+08:25 felco7 joined channel
+08:29 felco7 quit:Remote host closed the connection
+08:29 naos11 joined channel
+08:30 naos11 quit:Remote host closed the connection
+09:23 Loki11 joined channel
+09:25 Loki11 quit:Remote host closed the connection
+09:43 lh_mouse joined channel
+10:04 SuchWow5 joined channel
+10:05 SuchWow5 quit:Remote host closed the connection
+10:31 lh_ideapad joined channel
+10:59 We joined channel
+11:00 We quit:Remote host closed the connection
+11:21 NebulaMoe joined channel
+11:33 \u is now known as meowray
+12:31 atater joined channel
+12:35 ipv69 joined channel
+12:37 ipv69 quit:Remote host closed the connection
+12:40 timfi joined channel
+12:41 timfi quit:Killed (Sigyn (Spam is off topic on freenode.))
+12:46 tutu_wind joined channel
+13:37 Aprexer joined channel
+13:38 Aprexer quit:Remote host closed the connection
+13:54 cleamoon__ quit:Quit: Connection closed for inactivity
+14:03 zirconi_ quit:Ping timeout: 244 seconds
+14:04 Ritche10 joined channel
+14:05 Ritche10 quit:K-Lined
+14:15 SWAT13 joined channel
+14:16 SWAT13 quit:Remote host closed the connection
+14:17 Pyrotechno joined channel
+14:18 Pyrotechno quit:Remote host closed the connection
+14:50 keyboardman joined channel
+14:55 lh_mouse quit:Read error: Connection reset by peer
+14:55 lh_mouse joined channel
+15:25 memoryno- joined channel
+15:25 memoryno- quit:Remote host closed the connection
+15:28 \s is now known as \s_
+15:43 weido joined channel
+15:55 weido left channel:"Leaving"
+16:15 meowray: 白天去Las Vegas
+16:31 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+16:35 keyboardman joined channel
+16:36 Zombie20 joined channel
+16:36 keyboardman quit:Client Quit
+16:37 Zombie20 quit:Killed (Unit193 (Spam is not permitted on freenode.))
+16:41 gareth__11 joined channel
+16:43 gareth__11 quit:Remote host closed the connection
+16:51 keyboardman joined channel
+17:23 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+17:24 keyboardman joined channel
+17:28 lh_ideapad: geordi, -c << foo(42);  int foo(char){ return 1; } int foo(long){ return 2; }
+17:28 geordi: error: call of overloaded 'foo(int)' is ambiguous
+17:28 lh_ideapad: geordi, << foo::check(42);  struct foo { int check(char){ return 1; } int check(long){ return 2; } };
+17:28 geordi: error: call of overloaded 'check(int)' is ambiguous
+17:28 lh_ideapad: geordi, << foo::check(42);  struct foo { int check(char){ return 1; } template<typename enable_if<long, char>::value>::type * = 0> int check(long){ return 2; } };
+17:28 geordi: error: type/value mismatch at argument 1 in template parameter list for 'template<bool <anonymous>, class _Tp> struct enable_if'
+17:29 lh_ideapad: geordi, << foo::check(42);  struct foo { int check(char){ return 1; } template<typename enable_if<is_same<long, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: error: 'type' in 'struct enable_if<false, void>' does not name a type
+17:29 lh_ideapad: geordi, << foo<void>::check(42);  template<typename T> struct foo { int check(char){ return 1; } template<typename enable_if<is_same<long, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: Same error.
+17:29 lh_ideapad: geordi, << foo<void>::check(42);  template<typename T> struct foo { int check(char){ return 1; } template<typename enable_if<is_same<T, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: error: no type named 'type' in 'struct enable_if<false, void>'
+17:29 lh_ideapad: geordi, << foo<char>::check(42);  template<typename T> struct foo { int check(char){ return 1; } template<typename enable_if<is_same<T, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: error: cannot call member function 'int foo<T>::check(char) [with T = char]' without object
+17:29 lh_ideapad: geordi, << foo<char>().check(42);  template<typename T> struct foo { int check(char){ return 1; } template<typename enable_if<is_same<T, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: 1
+17:29 lh_ideapad: geordi, << foo<void>().check(42);  template<typename T> struct foo { int check(char){ return 1; } template<typename enable_if<is_same<T, char>::value>::type * = 0> int check(long){ return 2; } };
+17:29 geordi: error: no type named 'type' in 'struct enable_if<false, void>'
+17:29 zirconi joined channel
+17:34 xset joined channel
+17:39 xset quit:Remote host closed the connection
+17:41 adamg joined channel
+17:41 adamg quit:Remote host closed the connection
+17:59 NebulaMoe quit:Remote host closed the connection
+18:00 NebulaMoe joined channel
+18:03 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+18:20 Vassis joined channel
+18:25 zhangoke joined channel
+18:35 tutu_wind quit:Quit: WeeChat 2.1
+18:35 tutu_wind joined channel
+18:36 Vassis quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+18:59 NebulaMoe quit:Remote host closed the connection
+19:04 keyboardman joined channel
+19:15 blackberry9900 joined channel
+19:24 blackberry9900 quit:Remote host closed the connection
+19:25 blackberry9900 joined channel
+19:30 tutu_wind: 下班跑路
+19:35 lh_not_bot quit:Ping timeout: 245 seconds
+19:35 lh_not_bot joined channel
+19:46 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:00 iyzsong joined channel
+20:00 tutu_wind quit:Ping timeout: 256 seconds
+20:01 whocares_2_ quit:Ping timeout: 248 seconds
+20:01 whocares_2 joined channel
+20:04 Meow-J___ quit:Quit: Connection closed for inactivity
+20:05 duoi16 joined channel
+20:05 duoi16 quit:Remote host closed the connection
+20:09 blackberry9900 quit:Ping timeout: 248 seconds
+20:22 Vassis joined channel
+20:23 Vassis quit:Client Quit
+20:24 Vassis joined channel
+20:44 keyboardman joined channel
+20:46 cleamoon__ joined channel
+21:03 zhangoke quit:Quit: zhangoke
+21:21 lh_ideapad quit:Read error: Connection reset by peer
+21:23 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+21:39 fossxplorer7 joined channel
+21:41 fossxplorer7 quit:Remote host closed the connection
+21:59 Guest14992 joined channel
+22:04 Guest14992 quit:Ping timeout: 244 seconds
+22:10 cncr04s6 joined channel
+22:15 cncr04s6 quit:Ping timeout: 244 seconds
+22:36 iyzsong quit:Ping timeout: 240 seconds
+23:08 Vassis quit:Read error: Connection reset by peer
+23:17 lh_mouse quit:Ping timeout: 244 seconds
+23:25 cirno_ joined channel
+23:30 cirno_ quit:Remote host closed the connection
+23:42 cirno_ joined channel
+23:53 PityDaFool joined channel
+23:53 PityDaFool is now known as Guest90689
+23:54 Guest90689 quit:Killed (Unit193 (Spam is not permitted on freenode.))

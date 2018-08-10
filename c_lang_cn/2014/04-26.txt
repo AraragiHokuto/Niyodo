@@ -1,0 +1,929 @@
+0:4 biergaizi joined channel
+0:36 T3rmin4t0r joined channel
+2:9 T3rmin4t0r:_(:з」∠)_
+3:6 whocares_2 joined channel
+4:43 xxxxxxxx_ joined channel
+7:53 xxxxxxxx_ joined channel
+8:1 xxxxxxx__ joined channel
+8:25 boosure joined channel
+8:33 xxxxxxxx_ joined channel
+8:34 xxxxxxxx_:蓝屏的钙 好喝的钙
+9:9 hoxily joined channel
+9:30 hoxily joined channel
+9:39 condy joined channel
+9:46 silencly07 joined channel
+10:22 iyzsong joined channel
+10:40 sismvg joined channel
+10:46 Plough joined channel
+10:51 whocares_2 joined channel
+11:13 randomclown joined channel
+11:15 Vincent joined channel
+11:17 Lord_V joined channel
+11:23 Zirx joined channel
+11:43 sismvg:撸个vim的IDE好难..
+11:47 Zirx:不是有个Maximum Awesome吗？
+11:52 sismvg:我只是想自己撸..话说谁知道vim version 里的clientserver怎么支持
+12:4 sismvg joined channel
+12:4 xxxxxxxx_:那就慢慢撸呗
+12:7 sismvg:已经快 精尽人亡了
+12:11 hoxily:sismvg: 加油别放弃
+12:12 hope1 joined channel
+12:13 geordi joined channel
+12:14 sismvg:油的热量太高了，不能喝
+12:15 xxxxxxxx_:喝了通过撸消耗掉
+12:18 condy joined channel
+12:19 iyzsong:Hoooo~
+12:19 xxxxxxxx_:江苏苏州一金店遭抢 劫匪10秒内抢走金饰
+12:20 sismvg:太叼
+12:21 sismvg:去他的--with-features=huge 说好的clientserver呢
+12:28 hoxily joined channel
+12:32 condy:真约炮大作战。(。・_・。)
+12:33 iyzsong:可以弃了..
+12:34 Plough joined channel
+12:36 sismvg:就没有看第二季。。
+12:38 sismvg:话说夫妻成长日记竟然要TV化了。。不知道会不会有ATX呢
+12:40 geordi joined channel
+12:45 hoxily joined channel
+12:51 xia joined channel
+12:56 hoxily joined channel
+12:59 code_new joined channel
+13:34 hoxily joined channel
+13:51 hoxily joined channel
+13:59 lh_mouse joined channel
+14:10 hysw:目前CSC209的分数: 99.18% <- 这是坑爹么，我为什么要选这门课...
+14:21 hysw:iyzsong: 话说中国的大学课表是怎么算的？
+14:24 iyzsong:hysw: 不算..
+14:24 hysw:?
+14:25 *iyzsong 没算过..
+14:25 hysw:怎么看着那些课表总觉得课多的心寒...
+14:41 hoxily joined channel
+14:43 whocares_2 joined channel
+14:48 Plough:http://imgs.xkcd.com/comics/real_programmers.png <-壮哉我大Emacs
+14:51 hysw:http://tieba.baidu.com/p/3006740428 < ...
+15:4 xxxxxxxx_:作业本来就是自己该解决的事情吧
+15:5 hysw:xxxxxxxx_: 首页上一半以上看起来像那一类玩意...
+15:6 xxxxxxxx_:反正我一直认为该砍掉
+15:6 xxxxxxxx_:自己做出来了分享之类的欢迎 到处问人该怎么做题的砍掉算了
+15:8 xxxxxxxx_:专门搞个提问分吧 或者本部变成提问吧重新开个吧当主吧都比混在一起强
+15:9 hysw:对于重新开个吧什么的感觉无意义...
+15:11 hysw:xxxxxxxx_: 顺便提问分吧还不如直接让那群家伙去百度知道容易...
+15:13 Sleepwalking joined channel
+15:13 sismvg:你不知道百度知道会自动把一些提问发到与提问相关的贴吧嘛（偶尔还会发点奇怪的东西）
+15:13 xxxxxxxx_:百度知道有推送的呀
+15:13 sismvg:所以删掉是最好的
+15:14 xxxxxxxx_:用的人越多官方爆吧越厉害
+15:14 sismvg:我们还有删贴机
+15:14 Sleepwalking:http://imagebin.org/307550  哪里能买到这种帽子-> ->
+15:15 lh_mouse:geordi, template<typename Tx> struct S { template<typename Ty> struct T { static void foo(){ BARK; } }; }; int main(){ S<int>::T<char>::foo(); }
+15:15 geordi:S<Tx>::T<char; Tx = int>::foo()
+15:15 lh_mouse:geordi, template<typename Tx> struct S { template<typename Ty> struct T { static void foo(){ BARK; } void bar(){ T<char>::foo(); } }; }; int main(){ S<int> s; s.bar(); }
+15:15 geordi:error: 'struct S<int>' has no member named 'bar'
+15:15 sismvg:自己做
+15:15 iyzsong:+
+15:15 lh_mouse:geordi, template<typename Tx> struct S { template<typename Ty> struct T { static void foo(){ BARK; } }; void bar(){ T<char>::foo(); } }; int main(){ S<int> s; s.bar(); }
+15:15 geordi:S<Tx>::T<char; Tx = int>::foo()
+15:16 lh_mouse:geordi, -v
+15:16 geordi:g++ (GCC) 4.10.0 20140418 (experimental)
+15:16 lh_mouse:geordi, show
+15:16 geordi:template<typename Tx> struct S { template<typename Ty> struct T { static void foo(){ BARK; } }; void bar(){ T<char>::foo(); } }; int main(){ S<int> s; s.bar(); }
+15:17 lh_mouse:geordi, template<typename Tx> struct S { template<unsigned> struct T { static void foo(){ BARK; } }; void bar(){ T<2>::foo(); } }; int main(){ S<int> s; s.bar(); }
+15:17 geordi:S<Tx>::T<<anonymous> >::foo() [with unsigned int <anonymous> = 2u; Tx = int]
+15:17 lh_mouse:geordi, template<typename Tx> struct S { template<unsigned> struct T { static void foo(){ BARK; } }; }; int main(){ S<int>::T<2>::foo(); }
+15:17 geordi:No change in output.
+15:17 lh_mouse:geordi, append template  after second ::
+15:17 geordi:error: 'S<Tx>::T<<anonymous> >::foo() [with unsigned int <anonymous> = 2u; Tx = int]' is not a template
+15:18 lh_mouse:geordi, undo and append template  after first ::
+15:18 geordi:S<Tx>::T<<anonymous> >::foo() [with unsigned int <anonymous> = 2u; Tx = int]
+15:18 lh_mouse:geordi, show
+15:18 geordi:template<typename Tx> struct S { template<unsigned> struct T { static void foo(){ BARK; } }; }; int main(){ S<int>::template T<2>::foo(); }
+15:19 xxxxxxxx_:噗 米库酱终于要女装了么...
+15:19 Sleepwalking:xxxxxxxx_, C酱想戴
+15:20 xxxxxxxx_:另百度已经够和谐了 再弄个和谐的删贴机还是算了....
+15:20 hysw:Sleepwalking: 让C酱像你表白，然后你送出好人卡，然后把你给烧了
+15:21 hysw:Sleepwalking: 让C酱向你表白，然后你送出好人卡，然后把你给烧了
+15:21 Sleepwalking:hysw, 我已经收到好人卡了555
+15:21 sismvg:xxxxxxxx_:和谐是无止境的
+15:24 FrankHB joined channel
+15:25 xxxxxxxx_:http://cn.made-in-china.com/showroom/jodumhat/product-detailVoaQUiCKZIcB/%E6%97%B6%E5%B0%9A%E8%B4%9D%E9%9B%B7%E5%B8%BD.html 这样的?
+15:25 lh_mouse:翻艹帝球
+15:25 hysw:Sleepwalking: 金铂合金镶钻石做的好人卡？
+15:25 Sleepwalking:xxxxxxxx_, 噗。。。。
+15:26 xxxxxxxx_:噗吱噗吱
+15:26 Sleepwalking:hysw, “我喜欢你我们做朋友吧”
+15:26 hysw:Sleepwalking: 那哪里是好人卡？
+15:27 hysw:Sleepwalking: 这是现实，不是二次元...
+15:32 xxxxxxxx_:http://item.jd.com/1008136312.html <- 难道这个更类似?
+15:35 hysw:Sleepwalking: 另外你那句话的中间真的没空格？
+15:36 hysw:Sleepwalking: 顺便那是谁说的？
+15:39 xxxxxxxx_:c艹吧: 会员：绝对猝死共102399人
+15:40 lh_mouse:河南3名农民不满政府 自行组建“新政府”
+15:40 xxxxxxxx_:.....
+15:41 code_new joined channel
+15:55 sismvg:羊驼色。。。
+15:55 Sleepwalking:hysw, 为什么会有空格。。C酱说的啊
+15:56 hysw:Sleepwalking: 前四个字符是重点
+15:58 Sleepwalking:hysw, 这有啥拉。。
+16:0 iyzsong:https://github.com/Fuuzetsu/acme-cutegirl/blob/master/src/Acme/CuteGirl.hs
+16:0 *iyzsong 天真的去尝试了 2333
+16:1 hysw:Sleepwalking: 另外"我们做朋友吧" <-这明显不是好人卡的情况... 
+16:5 hysw:logging[ C酱 to Sleepwalking : “我喜欢你我们做朋友吧” ]
+16:5 Sleepwalking:= =
+16:5 hysw:[ C酱 to Sleepwalking : “我喜欢你我们做朋友吧” ]  |= [ burn Sleepwalking ]
+16:5 iyzsong:烧
+16:5 lh_mouse:焼！
+16:5 xxxxxxxx_:那叫朋友卡
+16:6 hysw:xxxxxxxx_: 明显不是朋友卡...
+16:6 iyzsong:百合卡
+16:6 hysw:xxxxxxxx_: 后面六个字明显是为了防止前四字太显眼
+16:6 Sleepwalking:http://item.taobao.com/item.htm?spm=a1z10.3.w4002-486035804.38.c6DX9g&id=18555002220  这是逗逼？
+16:7 xxxxxxxx_:这是装逼
+16:7 Sleepwalking:ID Separation Protocol...
+16:7 hysw:iyzsong: 回头把log扔给羊驼
+16:8 iyzsong:你们都是线虫..
+16:8 xxxxxxxx_:我不是
+16:9 iyzsong:xxxxxxxx_: U.U
+16:9 xxxxxxxx_:米库酱 羊驼 t2 他们才是现充
+16:28 sismvg joined channel
+16:29 xxxxxxxx_:http://www.bilibili.tv/video/av1071017/ 这种东西都需要出视频讲了
+16:29 Sleepwalking:给C酱买了这个www http://detail.tmall.com/item.htm?spm=a1z10.5.w4011-3241127485.83.Of50H2&id=38543998854&rn=2d1676c3c7541a4fb8b4d9aa8c5e5773
+16:30 xxxxxxxx_:关键是竟然还有人说学到了 而不是这你也拿出来骗精
+16:35 iyzsong:...
+16:37 sismvg:要用小白的眼睛看世界
+16:38 iyzsong:其实我也不知道 0.0
+16:41 whatofor joined channel
+16:50 code_new joined channel
+16:51 xxxxxxxx_:iyzsong http://www.googleguide.com/advanced_operators_reference.html <- 我记得正太发过类似这样的东西
+16:51 Zirx joined channel
+16:55 whatofor joined channel
+17:23 varna joined channel
+17:23 Sleepwalking:爆
+17:23 varna:爆
+17:23 varna:今天各种丧
+17:23 xxxxxxxx_:噗 你们两个是相爱相杀么...
+17:24 varna:去漫展路上手机欠费了，回来时候下雨了，冲进咖啡馆躲雨结果挨着电源的一桌被占了还TMD没人
+17:24 Sleepwalking:哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+17:24 varna:现在我只有60%的电还开着wlan
+17:24 varna:要么他们滚要么我滚，总之先吃点东西
+17:25 *varna 深深爱着米库酱的肉体
+17:25 Sleepwalking:可惜我喜欢的是C酱的心- -
+17:25 varna:今天鬼叔来嚎了大半场
+17:25 varna:Sleepwalking: 没关系，米库酱能让我舒服就行
+17:26 varna:后来似乎场馆管理方走了，直接开唱千本幼女
+17:27 *Plough required a page in haskell.org and left it in firefox for an hours and it's still blank
+17:27 *varna 作为一名幼女爱好者果断跟着嚎了
+17:28 varna:Plough: 这个还好，我曾经看haskell的某个离线文档，里面的链接居然指向互联网
+17:28 Plough:233333
+17:28 varna:哦，今天还有一样悲剧
+17:29 *Plough and it loadad in less than 10s after reopening the tab.
+17:29 varna:上午口袋空空地出去，咣了两圈摊子败完之后只剩下坐公交的钱了
+17:29 varna:然后发觉自己没机智地把昨天剩的三鲜伊面带来实在大失败
+17:29 xxxxxxxx_:咣了两圈
+17:30 iyzsong:orz
+17:30 varna:买了专辑一种，图册三种
+17:30 Plough:@支付宝
+17:30 varna:全是东方
+17:30 varna:Plough: 这个钱是从连着支付宝的银行卡里出的，下个月我已经只剩食堂开销了
+17:30 Plough:varna: ……
+17:31 Plough:论预算的重要性
+17:31 xxxxxxxx_:我又想贴那个图了
+17:31 varna:不过如果老板多发点钱还是可以吃点好的
+17:31 Plough:前几周班里妹子邀我去漫展上穿女装来着
+17:32 varna:主要是只打算用研狗补助+实验室补助折腾日用
+17:32 Plough:我怕羊驼子冲过去于是拒绝了
+17:32 varna:Plough: 快穿女装
+17:32 xxxxxxxx_:白丝红旗!
+17:32 varna:我会挥舞着笔记本在台下大喊红旗酱moemoechu的
+17:32 *Plough 看着众人的反应，发觉自己太TM机智了
+17:32 xxxxxxxx_:白丝药娘红旗酱
+17:32 varna:白丝药娘红旗酱
+17:32 Plough:才不是药娘
+17:32 varna:哦对，还有最后一个悲剧
+17:33 varna:现在我的桌子上面垫的是玻璃板，鼠标废了
+17:33 Plough:@鼠标垫
+17:33 Plough:鼠标垫怎么能不带呢
+17:33 *varna 不想用画册啊海报啊当鼠标垫，然后之前看到一个岛风鼠标垫还没买
+17:33 varna:没有
+17:33 Plough:……
+17:33 varna:实验室的是一叠草稿纸
+17:33 varna:宿舍不用
+17:34 Plough:喜大普奔
+17:34 varna:岛风鼠标垫有两款，一款太大了，还有一款的图片印的是镜像变换
+17:34 varna:字都是平移旋转毫无救赎的
+17:34 Plough:我这还有一个用不上的
+17:34 Plough:学校门前发的补习班鼠标垫
+17:34 varna:Plough: 连你人一起打包给我
+17:34 Plough:varna: 鼠标垫你自己出运费没问题，人就算了
+17:35 varna:交通费、妊娠保险和衣服费我都出
+17:35 Plough:varna: 人才不给
+17:35 varna:娇了娇了
+17:35 Plough:varna: 主要问题是最近某妹子那边似乎准备和她现任男友分手了
+17:35 Plough:于是我打算保留童贞
+17:35 varna:上午出门的时候看见幼女结果误了一班公交，然后还是去早了
+17:35 xxxxxxxx_:羊驼难道有女装?
+17:36 varna:Plough: 被爆不算童贞
+17:36 varna:xxxxxxxx_: 我现买
+17:36 Plough:varna: 在我眼里算
+17:36 varna:去了之后摊子其实也没几个，有东方/舰娘/军武的就更少
+17:36 xxxxxxxx_:咬算不算?
+17:36 varna:xxxxxxxx_: 次男道啊
+17:37 varna:买完东西看了画展也才十一点多
+17:37 code_new joined channel
+17:37 varna:二楼有妹抖咖啡店，我看了看兜里的钱果断衮一边给揉程上了一个压力测试
+17:37 varna:结果不开wlan的时候似乎效果超好
+17:38 Plough:为啥会跟wlan有关系
+17:38 xxxxxxxx_:今天win又蓝屏了
+17:38 *Plough 居家旅行常备500RMB
+17:38 varna:不知道，我猜是之前一边上网一边测结果吃调度了
+17:38 varna:噗
+17:38 *varna 兜里常年就十几大元
+17:39 varna:其实这个漫展摊子质量真心糟糕，自绘的本子少，都在卖周边或者代理
+17:39 xxxxxxxx_:兜里常年几个纸团
+17:39 varna:然后看到些本子都是一米六
+17:39 iyzsong:2333
+17:39 Plough:巨人到现在没看
+17:40 varna:东方本子就一种，里面巫女居然有胸，我没好意思跟摊主说巫女乳量超过A是异端所以不买
+17:40 Plough:233333
+17:40 xxxxxxxx_:巨人当时看了前几集 然后漫画看了点 然后没兴趣了
+17:40 varna:还有人在涂鸦墙上画了一个大大的乌鸦脑袋，下注啊呀呀呀
+17:41 varna:我代表海棠表示围观
+17:41 varna:晚上其实还有个米库全X演唱会
+17:42 varna:不过开到八点，我对米库作品又不熟，所以直接衮回来了
+17:42 xxxxxxxx_:全x?
+17:42 varna:鬼叔说是全裸
+17:42 varna:节目单上写着全息
+17:42 varna:所以我综合了一下
+17:43 xxxxxxxx_:我直接理解为全插了
+17:44 varna:电源GET DAZE!
+17:44 xxxxxxxx_:羊驼和那桌顾客摔 跤抢电源
+17:45 Plough:话说HTTP Parser的Lexer该咋写
+17:45 Plough:比如说GET哪个地方都有可能冒出来……
+17:46 varna:Plough: 直接按行读，lexer和parser混一起写成一个状态机
+17:46 varna:不然没救
+17:46 Plough:打算用Erlang码一个
+17:49 varna:我觉得这个不太好用
+17:49 varna:HTTP协议格式本身就很尿
+17:50 Plough:主要是我感觉把Erlang和C塞一块更疼……
+17:50 varna:所以说按行读
+17:50 Plough:嗯
+17:50 varna:erlang的FFI基本就是「你去死吧我不管了」
+17:51 varna:虽然这样确实有理由
+17:51 Plough:2333
+17:51 Plough:所以打算自己造个VM来着 
+17:51 varna:BEAM监视外源程序太困难
+17:51 Plough:问题是路漫漫其修远兮
+17:51 varna:主要是你搞的VM拦不住别人在你腋下开个pthread然后坠毁了
+17:52 Plough:嘛
+17:52 varna:如果是一个进程装载一个so, 那就坑飞
+17:52 varna:如果是轻进程，搞不好就连VM运行时一起全灭
+17:53 Plough:PyPy的CFFI如何
+17:54 Plough:写起来倒不算太坑，虽然我觉得把声明塞进str然后现Parse太贰逼了
+17:54 varna:没用过巫女巫女的c ffi
+17:54 varna:Plough: 那是找死
+17:54 Plough:varna: 他们确实是这么搞的
+17:54 varna:其实我觉得现在的POSIX世界里搞VM简直疼死
+17:54 Plough:23333
+17:55 varna:如果我是异教徒，现在我就去开发F$了
+17:55 varna:不对，如果我是异教徒就接下前几天那个M$RA的实习机会了……
+17:55 Plough:投奔L4大法？
+17:56 varna:老李都死了，x86-64地址空间都平面化了，没前途
+17:56 varna:老李从没承诺性能，他的性能是手操出来的
+17:57 varna:而老李跟小耗的差别是小耗做了x86-64优化
+17:57 varna:老李连有生之年都没了
+17:57 Plough:小耗是？
+17:58 varna:隔壁c艹吧的闺密小耗又瘦了二十八斤
+17:58 Plough:233333
+17:58 Plough:不是吱吱么
+17:58 varna:说起来，昨天那个要教别人c/c++的哥们呢，怎么整个帖都被炸了
+17:59 xxxxxxxx_:噗吱噗吱
+17:59 Plough:大概是被某个玩揉程的吓着了
+17:59 varna:他都没回我……
+17:59 Plough:回了还炸贴干嘛
+17:59 varna:其实他只需要回一句话
+17:59 varna:「都测测看」
+17:59 varna:这才是正解
+18:0 Plough:233333
+18:0 varna:这种破烂问题必须测，尤其是上了缓存
+18:0 varna:谁知道减不减速……
+18:1 xxxxxxxx_:我感觉我已经不会玩圣骑士了.....
+18:1 varna:你怎么玩的
+18:2 xxxxxxxx_:冲进了怪堆....
+18:2 varna:这是正解啊
+18:2 varna:Zeal的时候是有格挡而且没有格挡前后硬直的
+18:2 xxxxxxxx_:红药带少了...
+18:2 varna:开了圣盾出Zeal的Pal即使是吊丝都能砍翻一坨
+18:2 varna:……
+18:2 xxxxxxxx_:进去没药了
+18:2 varna:不作死就不会死，涅法雷姆人的主要优势就是膀胱大
+18:3 xxxxxxxx_:强退保命
+18:3 varna:又不是专家级，怕死干嘛
+18:3 xxxxxxxx_:不想死...
+18:3 varna:退了不还得坐waypoint飞回来
+18:3 varna:xxxxxxxx_: 你已经死了
+18:4 *Plough 接着召唤蝴蝶去读TCC的Assembler
+18:4 varna:噗
+18:4 varna:果然开始肛tcc了
+18:4 Plough:虽然有点疼
+18:4 Plough:void g(int c);
+18:4 Plough:void o(int c);
+18:4 varna:你去看看go运行时，一样的
+18:5 Plough:这啥？
+18:5 varna:巨庄严
+18:5 varna:这是帕琪啊
+18:5 varna:帕秋莉 走矣
+18:5 Plough:我说这函数命名……
+18:5 Plough:太疼了
+18:5 varna:这是帕琪命名法
+18:6 varna:顺便一提，日版专辑居然比国内发行（？）的版本贵五十大元
+18:8 Plough:噗
+18:8 Plough:居然进了意大利语维基百科
+18:8 varna:所以只买了一张yonder voice的雨音crossroad
+18:11 varna:rip下看看
+18:22 *varna ripping
+18:22 lh_mouse:http://pastebin.com/ehjkFBPE
+18:23 varna:gcc还在消灭你的代码啊……
+18:27 varna:東亜重工 转@墨滯 RT@Flora_星湖女王 【每逢雨季，西藏到尼泊尔的大平原上，成群结队的文艺女青年穿着花裙子，带着淡淡的忧伤，坚定而有秩序地列队向圣山进发，旅途中找到有wifi的咖啡馆就休息和自拍。路边有成群的活佛远远审视着猎物，偶尔看到落单的就呼啸而上掠走一只。】2333
+18:28 xxxxxxxx_:动物世界?
+18:28 varna:傻木耳其实应该露出前额磕长头过去
+18:28 varna:磕死丫的
+18:40 cuihao joined channel
+18:44 varna:似乎来了面熟的新节操
+18:52 code_new joined channel
+18:54 varna:啊，code_新世纪来了
+18:54 varna:爆他
+18:54 *varna 拿起code_new揉软的尻部就是一顿乱爆
+18:54 iyzsong:怎么见谁都爆..
+18:55 varna:啊，你这么一说才想起来没太爆你……
+18:55 *varna 打量iyzsong的尻部
+18:56 iyzsong:- -b
+18:58 xxxxxxxx_:iyzsong 是阿卡林的传人么?
+18:59 varna:xxxxxxxx_: 爆
+18:59 iyzsong:是呀Hoo
+18:59 xxxxxxxx_:为啥圣骑不能blink
+19:0 varna:因为有圣跑光环
+19:0 varna:虽然你未必有机会点它
+19:1 xxxxxxxx_:幼女妹子说的祝福锤倒是要点跑的那个光环 但是祝福锤太奇葩了
+19:1 varna:吊丝都是Zealdin
+19:2 xxxxxxxx_:祝福锤简直就像是外星科技...
+19:3 xxxxxxxx_:换成飞碟看起来比较正常
+19:3 varna:那个是把自己的吊扔出去转转
+19:3 varna:换成飞碟会无意识去开碟
+19:3 cleamoon:zealdin打得太慢
+19:4 xxxxxxxx_:法师快
+19:4 varna:穹啊
+19:4 varna:噗
+19:4 varna:穷啊
+19:4 xxxxxxxx_:羊驼暴露
+19:4 varna:今天没人卖小五靠枕
+19:4 varna:不然我果断败一个回去
+19:5 xxxxxxxx_:现在连拿马航开玩笑都要被喷了的样子....
+19:5 varna:尊重死者倒不是错，不过拿尊重死者装逼自己还置身事外就是二逼了
+19:6 xxxxxxxx_:那些被砍了的家伙多亏 大家都在拿那事情开玩笑
+19:7 varna:蛤蛤
+19:7 *varna 开了一个玩笑
+19:12 code_new joined channel
+19:12 cleamoon:前幾天新聞，馬航事件後馬航的公司又發生5起飛機故障
+19:13 code_new:varna, 变强后回来爆了驼兄~
+19:13 varna:code_new: 爆
+19:14 varna:噗，楼上有个傻大个表示自己成天跟代码打交道……
+19:14 code_new:马航的飞机都是纸糊的
+19:14 *varna 想冲上去爆了他
+19:14 code_new:2333
+19:15 lh_mouse:羊驼口味真重连飞机都不放过
+19:16 code_new:成天与飞机打交道
+19:17 varna:lh_mouse: 飞机我只撸CAC Mio
+19:23 code_new:话说命令中的 '-' 用英语应该怎么表示
+19:23 varna:-
+19:23 code_new:=。=
+19:24 code_new:发音是什么
+19:24 varna:dash我猜
+19:24 code_new:哦哦
+19:24 lh_mouse:minus
+19:24 silencly07 joined channel
+19:25 code_new:中文恨通俗得读作"杠"的
+19:25 *lh_mouse 不读杠
+19:25 *varna 不读杠
+19:26 code_new:lh_mouse, varna 求教
+19:26 code_new:最近纠结于各种符号和缩写的读法
+19:26 lh_mouse:rm -rf /   => RM 减 rf 杠
+19:26 xxxxxxxx_:肛?
+19:27 varna:(读 rm -rf) => (list r m r f)
+19:27 lh_mouse:Windows 版：  rd /s /q \  =>  RD 撇S 撇Q 杠
+19:28 varna:xxxxxxxx_: 肛
+19:28 lh_mouse:rd C:\Windows\System32  => RD C 盘下的 Windows 下的 System32
+19:28 varna:分隔符太多了
+19:28 *lh_mouse 仿佛看到了训读
+19:28 code_new:好的  了解了
+19:29 varna:人类会一点句读，所以不必要的时候我只用促音区分
+19:29 *lh_mouse 完全不懂长音和促音如何区分
+19:30 *varna 认为这是lh_mouse总是口支口支的缘故
+19:30 *code_new 只在日语里面有概念
+19:31 *varna 伸手捏lh_mouse的鼻头
+19:31 *lh_mouse 薅了一下 varna 的尾巴
+19:31 lh_mouse:薅尾巴
+19:32 xxxxxxxx_:http://en.wikipedia.org/wiki/En_dash#En_dash
+19:32 lh_mouse:nuts
+19:32 Plough:.w en_dash
+19:32 clcn_wikibot:Plough:Loading en_dash
+19:32 clcn_wikibot:Plough: A dash is a punctuation mark that is similar to a hyphen or minus sign but that differs from both of these symbols primarily in length and function. The most common versions of the dash are the en dash (–) and the em dash (—), named for the length of a typeface's lower-case n and upper-case M respectively.
+19:33 code_new:机智
+19:33 varna:Plough: 红旗酱快女装
+19:33 xxxxxxxx_:The en dash, n dash, n-rule, or "nut" (–) is traditionally half the width of an em dash.
+19:33 varna:Plough: 顺便如果去漫展的话帮我捎几个东方本子……这边的同人创作太贫乏了
+19:33 Plough:varna: 才不穿
+19:34 Plough:varna: 等下次我看看……
+19:34 Plough:.w hyphen
+19:34 clcn_wikibot:Plough:Loading hyphen
+19:34 clcn_wikibot:Plough: The hyphen (‐) is a punctuation mark used to join words and to separate syllables of a single word. The use of hyphens is called hyphenation. The hyphen should not be confused with dashes (‒, –, —, ―), which are longer and have different uses, or with the minus sign (−), which is also longer.
+19:34 JQK joined channel
+19:34 varna:hyphen应该是用来黏词的
+19:35 code_new:2-3-3-3
+19:35 Plough:.w hyphen-minus
+19:35 clcn_wikibot:Plough:Loading hyphen-minus
+19:35 clcn_wikibot:Plough: The hyphen-minus (-) is a character used in digital documents and computing to represent a hyphen (‐) or a minus sign (−).[1] It is present in Unicode as code point U+002D - hyphen-minus; it is also in ASCII with the same value.
+19:38 xxxxxxxx_:国学大家快来给我翻译啊
+19:39 code_new:<varna> (读 rm -rf) => (list r m r f) <-这里的list是指名里面有'-'吗
+19:39 varna:对了，今天入的画册里面有个海棠图
+19:39 varna:code_new: 顺序读出来自己加句读的意思
+19:40 lh_mouse:贴吧真是逗比云集
+19:40 lh_mouse:有些人说话能过脑子吗
+19:40 lh_mouse:http://tieba.baidu.com/p/1421785317
+19:40 code_new:varna, 不过像"rar e xx.rar"的话该怎么区分呢
+19:40 lh_mouse:mingw其实就是模拟liunx的环境，也就是说即使你使用的是windows操作系统，但是你可以试用liunx指令，包括你说的gcc g++指令。
+19:40 cleamoon:我們這裏的讀法偏向於直接讀"槓"
+19:40 varna:lh_mouse: 删他啊
+19:41 varna:code_new: 两种
+19:41 lh_mouse:varna, 删了有人给钱么
+19:41 xxxxxxxx_:这个不是老坟么...
+19:41 varna:code_new: 直接按句读读出来，或者告诉对方用rar解压xx.rar
+19:41 lh_mouse:挖坟还信口开河
+19:41 lh_mouse:varna, winrarsetup.rar
+19:41 varna:lh_mouse: 你自己看着不爽还不删，那就只好摆那了
+19:41 varna:cmbt
+19:42 lh_mouse:看着不爽没必要删
+19:42 lh_mouse:策马奔腾？
+19:42 varna:那就两说了
+19:42 code_new:varna, 哦哦, 明白了
+19:42 Zircx joined channel
+19:42 varna:close my bird thing
+19:42 lh_mouse:close me bird thing 吧
+19:42 xxxxxxxx_:缠绵病榻....
+19:42 varna:lh_mouse: 半吊子chinglish加了个物主代词
+19:43 cleamoon:觸摸變態...........
+19:43 xxxxxxxx_:bird是指鸟还是屌?
+19:43 varna:触摸板它
+19:43 *lh_mouse bites cleamoon very hard
+19:43 varna:谁模我？
+19:43 lh_mouse:childs
+19:43 xxxxxxxx_:板它你好
+19:43 lh_mouse:233
+19:43 cleamoon:噗，耗子咬我
+19:44 cleamoon:話說，嵌入式不算正經編程領域嗎
+19:44 code_new:mw
+19:44 lh_mouse:我是猫
+19:45 varna:猫鼻子伸来
+19:45 xxxxxxxx_:嵌入式算吧?
+19:45 lh_mouse:刚才回来看见楼下那两只猫
+19:45 lh_mouse:果断薅了两下尾巴
+19:45 cleamoon:貓是我的菜
+19:45 clcn_wikibot:hope1`:Loading CMBT
+19:45 clcn_wikibot:hope1`: The Chennai Mofussil Bus Terminus or CMBT is a modern bus terminus located in Chennai, India, providing outstation transportation services. Spread over an area of 37 acres (150,000 m2) in Koyambedu. It is one of the largest bus termini in Asia,[1] and is accredited with the ISO 9001:2000 quality certification for its quality management and excellence.[1] It is located on the 100 feet (30 m
+19:46 cleamoon:噗
+19:46 varna:噗
+19:46 xxxxxxxx_:尾巴我觉得应该用撸这个词...
+19:46 lh_mouse:薅尾巴薅尾巴
+19:47 code_new:撸尾巴就会被咬了
+19:47 code_new:撸出一些红色的液体
+19:47 varna:@妖精的X巴
+19:47 xxxxxxxx_:薅羊毛是把羊毛直接弄下来的动作吧?
+19:48 xxxxxxxx_:撸就没人把屌撸下来的
+19:48 code_new:2333
+19:48 code_new:那是拔
+19:48 code_new:拔管
+19:49 lh_mouse:东北话薅就是揪
+19:49 lh_mouse:没什么区别
+19:49 lh_mouse:不是拔
+19:50 varna:草薅京
+19:50 xxxxxxxx_:另外为啥你们遇到的喵都不躲人....
+19:51 lh_mouse:我们一楼有人养了只母猫
+19:51 lh_mouse:外面有一只公猫
+19:51 lh_mouse:这两只猫 XXXX 然后多了一只小猫
+19:51 xxxxxxxx_:我家楼下也有人养了只喵 每次看到都躲得老远
+19:51 varna:xxxxxxxx_: 那个猫怕你上他
+19:51 lh_mouse:问题是  养猫的那人把母猫用绳子锁起来了
+19:52 xxxxxxxx_:我又不是羊驼 没那么丧失
+19:52 code_new:驼兄好评
+19:52 lh_mouse:然后还把楼道的通风口用木板钉上了
+19:52 lh_mouse:于是那只公猫天天等有人进防盗门
+19:52 varna:结果母猫学会了揉道？
+19:52 lh_mouse:然后哧溜钻进来
+19:52 varna:噗
+19:52 lh_mouse:我就揪了下尾巴
+19:52 varna:23333
+19:52 *varna 最近还模过猫鼻子
+19:53 xxxxxxxx_:我也想摸喵鼻子可惜抓不到...
+19:54 varna joined channel
+19:54 cleamoon:用魚招呀
+19:55 varna:鱼太浪费了，我自己吃啊
+19:56 lh_mouse:鲍鱼么
+19:56 silencly07 joined channel
+19:56 cleamoon:對，讓檸子去勾引
+19:57 code_new:23333
+19:57 varna:鲍鱼好评
+19:58 *varna 已归团
+19:58 cleamoon:燒
+19:59 lh_mouse:吃鲍鱼的闭嘴
+19:59 lh_mouse:焼了
+19:59 xia joined channel
+19:59 varna:rox吃过
+20:0 endle joined channel
+20:0 xxxxxxxx_:幼女妹子趁着羊驼归团打算发动牛头人卡么?
+20:0 lh_mouse:人头牛
+20:0 varna:还是那句话，岚月酱把ex上了我都不奇怪
+20:1 xxxxxxxx_:varna 你也要看着牛头人漫撸出来么...
+20:1 varna:xxxxxxxx_: 我只是觉得ex太傻
+20:2 lh_mouse:人头羊
+20:2 varna:人头鼠
+20:2 *lh_mouse pooled varna 
+20:2 *varna was pooled
+20:3 cleamoon:我上的當然是ex... 還能是誰...
+20:3 lh_mouse:ex 是谁
+20:4 cleamoon:前女友
+20:4 lh_mouse:这是找焼么
+20:5 cleamoon:很久以前的事了
+20:5 lh_mouse:三秒钏以前？
+20:5 lh_mouse:钏 -> 钟
+20:5 cleamoon:噗
+20:5 cleamoon:都不只三年前了
+20:6 xxxxxxxx_:口支没看到过那个告白帖子么?
+20:6 varna:三秒钟之前的话岚月酱就是提督了
+20:6 lh_mouse:没
+20:6 varna:岛风：提～督～好快～啊～（棒读）
+20:6 lh_mouse:哪里有帖子？
+20:6 varna:噗，老板来联系了……
+20:7 lh_mouse:老♂板
+20:8 xxxxxxxx_:忘记标题了...
+20:8 xxxxxxxx_:去找好
+20:8 xxxxxxxx_:找
+20:9 newbie joined channel
+20:9 varna:wtf兄来了
+20:9 varna:爆
+20:11 varna:啊，新专辑里收了两首辉针城的曲子
+20:11 varna:五面关底和二面关底
+20:13 xxxxxxxx_:怎么搜不出来了... 被毁尸灭迹了么...
+20:14 xxxxxxxx_:http://tieba.baidu.com/p/1086191111
+20:14 xxxxxxxx_:找到了
+20:17 iyzsong:...
+20:17 varna:我突然想炸楼
+20:17 varna:而且倒贴系妹子危险这个三年前的断言果然正确
+20:19 xxxxxxxx_:良化纲领_: 此地基佬甚多……不要乱说话= =
+20:19 *varna 是平家BOY
+20:19 Plough:https://pastebin.mozilla.org/4961794
+20:20 Plough:码个能用的HTTP Parser也不算太麻烦
+20:20 Plough:虽然效率估计悲剧
+20:20 hope1:等等，三年前还只是高一？
+20:20 varna:对
+20:20 hope1:噗噗噗
+20:21 xxxxxxxx_:你看吧就说羊驼是变态
+20:21 varna:高一哪里变态
+20:21 hope1:果然是变态
+20:21 xxxxxxxx_:三年前收了个高一的妹抖
+20:21 Plough:果然是便太+
+20:21 varna:我曾经是萝莉控，现在更进一步地控幼女
+20:21 varna:而且占有了米库酱的肉体
+20:22 xxxxxxxx_:妹抖多好
+20:22 varna:Plough: 其实这个还行
+20:22 varna:xxxxxxxx_: 今天看了成吨的妹抖，麻木了
+20:22 varna:各种大胖脸
+20:22 Plough:varna: 我记得这种方法是跟Tornado学的
+20:22 xxxxxxxx_:妹妹+女仆
+20:22 Plough:虽然因为是Erlang所以代码短了不少
+20:24 varna:满不错的
+20:25 varna:虽然因为是Erlang所以短了不少
+20:25 varna:不过既然短了的话就吃螺内酯吧！
+20:27 varna:药娘吃的抗雄药
+20:28 xxxxxxxx_:噗 这是什么药...
+20:29 xxxxxxxx_:还会行走不协调
+20:29 xxxxxxxx_:邯郸学步是说药娘么?
+20:30 varna:袖中出诗本一束，掷素修前。素修视其签题曰《紫霞轩吟草》，下署“竹西谢春芬药娘着”。于是始知女字药娘。
+20:30 varna:总之我们快把红旗酱和米库酱炮 制成药娘吧
+20:32 varna:爆出来的
+20:32 varna:三点十四……
+20:33 varna:除去pi, 那时候我还在会场嚎千本幼女呢
+20:33 sismvg joined channel
+20:33 varna:四元飒来了
+20:33 varna:爆他
+20:34 varna:爆掉了
+20:34 code_new:2333
+20:34 varna:揉程！疾如岛风！
+20:35 varna:等等
+20:35 varna:P vs NP 问题是不可证的？
+20:35 varna:这个证明谁给过么？
+20:36 cleamoon:沒有
+20:36 varna:岚月酱出现了，舔舔
+20:38 varna:老板终于打算把本体论相关的工作拿出来搞搞了……
+20:38 cleamoon:你們研究僧論文太多了
+20:38 varna:这回说不定能搞个实用物出来
+20:40 hope1:没人证出来，也没人证出他不可证
+20:41 cleamoon:本體論是什麼玩意
+20:41 varna:跟老板讨论了将近一小时，似乎是打算往上爆类似的课题了
+20:41 varna:Ontology
+20:41 varna:一个本体（Ontology）是概念和概念之间的关联用
+20:41 varna:KRR向
+20:41 varna:典型的实用本体比如wordnet
+20:41 varna:hope1`: 我要做帕琪
+20:42 varna:因为是KRR所以是帕琪
+20:42 cleamoon:category theory
+20:42 varna:NLP=小五，KRR=帕琪，不确定性推理=小恋
+20:42 varna:不是范畴论
+20:42 varna:本体基本是个实用物
+20:43 cleamoon:看不出怎麼實用
+20:43 varna:比如说wordnet
+20:43 varna:拿到一个词，可以查它的同义词反义词，或许还有上下位概念
+20:43 varna:这样能知道它大致是什么不是什么，两个词对应的概念相似到何种程度
+20:44 varna:还有些NLP本体提供了词汇感情极性的判别
+20:44 varna:这样的话，搜debian和archlinux很可能可以关联到具有关键词linux的词条
+20:45 varna:hope1`: wordnet应该是人工的，现在有一部分半自动尝试
+20:45 varna:另外还可以用wiki作弊么
+20:46 varna:有视觉分块算法和NLP可以拿来唬人
+20:46 varna:之前老板似乎也有做语义爬虫的项目，这个应该可以拿来用
+20:47 varna:——至少如果只是理论评估的话可以复用，代码的话估计是巫女
+20:47 iyzsong:www.wikidata.org
+20:48 varna:bookmarked
+20:50 iyzsong:这个要怎么用..
+20:52 varna:不知道，先马克
+20:59 varna:还好晚上没看米库演唱会
+20:59 varna:不然老板估计又找不到我了……
+20:59 xxxxxxxx_:老板找到了miku酱
+21:0 varna:然后给米库酱灌了药
+21:0 varna:皆大欢喜
+21:0 varna:啊，忘了在留言板上宣传药娘
+21:1 varna:http://tieba.baidu.com/p/3007379489
+21:2 varna:http://tieba.baidu.com/p/3003706394
+21:4 xxxxxxxx_:难道他们连骨头都想换了...
+21:4 varna:请大家支持频道爱丽丝药娘团
+21:5 varna:有黑靴的米库酱和白丝的红旗酱
+21:5 Plough:噗噗噗
+21:5 varna:稀烂揉软一锅出
+21:5 T2 joined channel
+21:5 varna:雨音crossroad里逆らい背くレジスタンス这首不错
+21:5 xxxxxxxx_:@坚定的萌友
+21:5 varna:揉软的萌友应该是牛头人
+21:6 Sleepwalking:= =
+21:6 varna:啊，米库酱出现了
+21:6 varna:hope1`: 直觉（jue）
+21:6 Sleepwalking:我买了这件 http://detail.tmall.com/item.htm?_u=q5cgsn51181&id=18843009948
+21:7 varna:hope1`: 揉软的萌友似乎想牛头人我，但是又很有节操地不实作
+21:7 varna:Sleepwalking: 差评
+21:7 Sleepwalking:今天一下午在网上拼掉330块……买了四件衣服。。
+21:7 varna:Sleepwalking: 买这个啊 http://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.sRna71&id=36944529285&_u=quvb5rlf073&areaId=220100&user_id=1939668880&is_b=1&cat_id=2&q=miku+cos%B7%FE&rn=69f1082518702722c22fc2e2ae3ba49f
+21:7 varna:￥330四件衣服不错了
+21:7 Sleepwalking:varna, = =
+21:8 varna:米库酱当然应该穿米库的衣服
+21:8 xxxxxxxx_:http://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.14.onkDnl&id=37365527094&user_id=320865316&is_b=1&cat_id=51244024&q=t%D0%F4&rn=5e24b20f3a7400d6d7066fea87c62021 这个
+21:8 varna:然后摆出LAT式的小葱明脸
+21:8 Sleepwalking:还有件Github的T恤和卫衣
+21:8 Sleepwalking:Octocat
+21:8 xxxxxxxx_:羊驼认为萌友喜欢ex
+21:8 varna:hope1`: A牛头人B = A抢了B的妹子
+21:9 varna:这是寝取的正确用法
+21:9 varna:Sleepwalking: 要我的话就印王垠那个猪头三程序
+21:9 Sleepwalking:最开心的是给C酱买了件 http://detail.tmall.com/item.htm?_u=q5cgsn58223&id=38543998854 
+21:9 Sleepwalking:wwww
+21:9 Sleepwalking:wwwwwwww
+21:9 varna:(你是 基头 四)
+21:9 xxxxxxxx_:天线么...
+21:9 iyzsong:w.w
+21:9 varna:Sleepwalking: 你该给c酱买luka服
+21:10 varna:这样你们就可以搞姬了
+21:10 Sleepwalking:天线毛蛋是龙猫啊
+21:10 xxxxxxxx_:万一收到奇怪的电波怎么办...
+21:10 varna:龙猫是死亡的象征
+21:10 Sleepwalking:varna, why
+21:10 varna:hope1`: 中文没有过去式所以你混淆了
+21:10 varna:Sleepwalking: 被那么大的屁鼓一震不死才怪
+21:10 iyzsong:我买了这件 => http://detail.tmall.com/item.htm?_u=q1osncak0aaf&id=22574404508 ...
+21:10 varna:你敢坐龙猫公车啊
+21:11 *varna 入了一套《丹特丽安的书架》
+21:11 xxxxxxxx_:http://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.13.1jCSuN&id=14447861434&user_id=848874541&is_b=1&cat_id=51248014&q=t%D0%F4+%BA%F9%C2%AB%CD%DE&rn=6e1d5670033ab1f80ff948ec7530a8a7 你们敢穿这样的么
+21:11 Sleepwalking:varna, 问下
+21:11 *varna 的衣服一般都快干或（不互斥）放水
+21:11 Sleepwalking:IRC里* varna 入了一套《丹特丽安的书架》 <-这种效果是什么情况
+21:11 varna:Sleepwalking: /me
+21:11 *Sleepwalking 啦啦啦
+21:11 xxxxxxxx_:客户端相关
+21:11 varna:其实我该说/miku的……
+21:11 xxxxxxxx_:我这里只有颜色不同
+21:12 *Sleepwalking 最喜欢C酱了w
+21:12 lh_mouse:/kick Sleepwalking 
+21:12 *varna 夺走了米库酱的贞操
+21:12 Sleepwalking:噗。。
+21:12 iyzsong:多年前买过神的记事本 送人..
+21:12 varna:iyzsong: 现在有个术士的神的记事本卷六还在我手里……
+21:12 *Sleepwalking 讨厌羊驼这样的基佬属性的死现充
+21:12 lh_mouse:造 Texpr 中
+21:12 varna:Tex舔？
+21:12 *varna 喜欢米库酱
+21:13 Sleepwalking:艹。。。
+21:13 Sleepwalking:没法看了
+21:13 lh_mouse:mul(add(1 2 3) sub(9 6))
+21:13 xxxxxxxx_:光明正大当现充的没资格说
+21:13 varna:噗，T expr...
+21:13 varna:lh_mouse: 这个东西怎么提取算符，还是不提取
+21:13 lh_mouse:varna, 怎么讲？
+21:14 lh_mouse:就是 Sexpr    括号前面的东西(name)是第一个元素   quote 就是无名的一个表
+21:14 varna:lh_mouse: 比如我要做这个变换 [M N] = \k.[M] (\m.[N] (\n.(m n) (\a.k a)))  假定M和N是lambda term 
+21:14 lh_mouse:varna, 没想那么多
+21:14 lh_mouse:只是看起来不反人类而已
+21:14 varna:你这个只是看着像sexpr, 或者说是你用到的sexpr的部分
+21:14 varna:优势只是好分析吧
+21:14 lh_mouse:Sexpr 反人类
+21:14 varna:反你
+21:15 lh_mouse:不过这东西不像 C 
+21:15 xxxxxxxx_:人类真惨...
+21:15 lh_mouse:mul(1 2)  和 mul (1 2) 是不一样的
+21:15 varna:我觉得你只是招了个理由提取了sexpr中你用到的部分
+21:15 varna:这没错
+21:15 lh_mouse:挺好的
+21:15 varna:mul (1 2)是两个东西
+21:15 lh_mouse:是的
+21:15 lh_mouse:目测三个状态能搞定  而且能处理引号
+21:15 varna:对我来说，我可能希望sexpr本身被模式匹配，所以你的形式不够用
+21:16 varna:所以这东西对我来说的唯一优势就是好分析
+21:16 varna:用来写配置的？
+21:16 Sleepwalking:当初买了两只大号毛绒龙猫，一只送C酱生日礼物一只抱着睡觉w
+21:16 varna:Sleepwalking: 不许黑觉大人
+21:16 lh_mouse:写配置有更好的东西可以用
+21:17 varna:而且你万一射在龙猫身上怎么办
+21:17 varna:lh_mouse: 那干什么，EDSL么
+21:17 Sleepwalking:varna, 你怎么能这么黑纯洁的龙猫呢
+21:17 xxxxxxxx_:wikidata感觉似乎不太值得书签....
+21:17 lh_mouse:写着玩的
+21:17 FrankHB:……结果还不是NPLA的子集么。
+21:17 varna:Sleepwalking: 我不是黑龙猫，你总会遗精吧……
+21:17 varna:小耗就交给恥球了，我全力调教米库酱
+21:17 Sleepwalking:varna, 这两个事件还真没同时发生过。。
+21:18 varna:Sleepwalking: ...
+21:18 FrankHB:括号前面的东西(name)是第一个元素这个我现在也就这样用。
+21:18 xxxxxxxx_:噗吱噗吱
+21:18 lh_mouse:/kick FrankHB 
+21:18 varna:Sleepwalking: 难道你的遗精已经变成按月经周期来了……
+21:18 Sleepwalking:varna, 这么说好像还真差不多这个频率。。。。。
+21:18 varna:啊，楼上有个老美唱歌，挺不错
+21:19 varna:Sleepwalking: 快吃药，你有药娘天赋
+21:19 xxxxxxxx_:捂脸
+21:19 FrankHB: /kick 吱
+21:19 varna:然后我们交配
+21:19 *Sleepwalking 已经不相信这个世界了
+21:19 FrankHB: /kick 吱
+21:19 FrankHB:嗯，为什么会多个空？
+21:19 *varna 认为米库酱相信我就可以了
+21:19 lh_mouse:mcf notation 写配置文件倒是更像带层次的 ini  但是有三个问题
+21:19 xxxxxxxx_:世界又中枪了
+21:19 varna:FrankHB: 因为你腹太鼓
+21:20 FrankHB:  ...
+21:20 lh_mouse:第一它是无序的   第二不支持匿名   第三不允许重名
+21:20 varna:@卡B受
+21:20 lh_mouse:FrankHB, 打两个斜线
+21:20 varna:/kick FrankHB
+21:20 xxxxxxxx_:卡比兽很强的吧
+21:20 Sleepwalking:然后C酱说我是奇怪的制服控。。
+21:20 varna:恥球一肚子压下来你顶得住？
+21:20 cleamoon:@詛咒卡比
+21:21 varna:Sleepwalking: 话说你和C酱交往了么
+21:21 FrankHB:两个斜线知道，不过为啥只打空格一个会多出来几个……
+21:21 xxxxxxxx_:基本上就是交往的节奏
+21:21 Sleepwalking:varna, 你对交往的定义是什么。。
+21:21 FrankHB:/kick varna
+21:21 xxxxxxxx_:我认为
+21:21 varna:FrankHB: 因为你控制不住撸管手速
+21:21 FrankHB:噗。
+21:21 iyzsong:// / / \ \ \ 
+21:21 iyzsong:/kick
+21:21 varna:Sleepwalking: 两人互表白过，产生了一个双向依赖
+21:21 varna:\\\\
+21:21 Sleepwalking:varna, 你对表白的定义是什么
+21:21 xxxxxxxx_:噗吱驼
+21:21 iyzsong:/\\
+21:22 varna:Sleepwalking: 我就在这里说，都是六个字
+21:22 *lh_mouse has kicked FrankHB from 04#c_lang_cn(FrankHB)
+21:22 Sleepwalking:帝球滚走了。。？
+21:22 varna:小耗在玩
+21:22 varna:Sleepwalking: 这个意会吧，总之c酱不承认她异于你的男友了吧
+21:23 Sleepwalking:varna, 她明确觉得异于的
+21:23 *varna 认为警员家里有事有权吔屎的
+21:23 varna:Sleepwalking: 牛头狂魔
+21:24 xxxxxxxx_:为啥不买牛头人酋长的衣服
+21:24 Sleepwalking:varna, 但是人家现在没有男友而且认为高中不宜谈恋爱。。
+21:24 Sleepwalking:xxxxxxxx_, GNU？
+21:24 xxxxxxxx_:不是....
+21:24 xxxxxxxx_:就是牛头人酋长
+21:24 varna:http://tieba.baidu.com/p/3007478588
+21:24 varna:Sleepwalking: 满嘴借口
+21:24 Lord_V:Lord_V 123
+21:25 xxxxxxxx_:varna: 无误
+21:25 varna:这么点小事都找借口
+21:25 Lord_V:怎么弄成* 号是主语的呢
+21:25 lh_mouse:varna, 我是小猫
+21:25 varna:lh_mouse: 鼻来鼻来
+21:25 Sleepwalking:https://gobblin.se/u/megurineturilli/m/open-source-miku/
+21:25 *xxxxxxxx_ 不关心你们怎么描述你们之间的关系现充就是现充
+21:25 varna:要米库，不要开源米库
+21:26 Lord_V:上面第二句怎么实现的呢
+21:26 xxxxxxxx_:我用手遮住了右半
+21:26 varna:Lord_V: 第二句？
+21:26 xxxxxxxx_: /me
+21:26 *Lord_V haha
+21:26 Lord_V:soga
+21:26 varna:/VAN
+21:26 *Lord_V 已经成神了
+21:27 Sleepwalking:/BILL
+21:27 lh_mouse:/van : No such command.
+21:27 lh_mouse:aoi aoi anosora
+21:27 lh_mouse:siroi siroi anokumo
+21:27 lh_mouse:toui toui anokoe
+21:27 VArNa:碧碧的那穹妹啊
+21:27 lh_mouse:等等 貌似是 tooi
+21:27 VArNa:aoi aoi anosora
+21:28 varna:/kick uama
+21:29 lh_mouse:http://pan.baidu.com/share/link?shareid=367539&uk=2150970899
+21:29 lh_mouse:很 kawai 的一首歌
+21:29 lh_mouse:声线不错
+21:29 varna:http://www.billy-aniki.com/
+21:30 varna:^ 建成了！
+21:30 Sleepwalking:什么建成了！！
+21:30 Sleepwalking:这么快
+21:30 T2:lh_mouse, 3Q
+21:30 condy joined channel
+21:30 Plough:那是啥
+21:31 varna:王 之前在FB上说要弄的个人主页
+21:31 Plough:Sock
+21:31 Plough:Soga
+21:31 varna:红旗酱说了sock!
+21:31 lh_mouse:socket
+21:31 varna:快拿白丝来！
+21:31 iyzsong:为什么我只看到闪屏..
+21:31 Plough:因为刚才在敲IOStream
+21:31 amau:白丝红旗
+21:31 Plough:顺手了
+21:31 varna:iyzsong: 你撸多
+21:31 Plough:你撸多+
+21:32 lh_mouse:/clear
+21:32 amau:大概是因为太老和尚了
+21:32 lh_mouse:刚才那首歌怎么样
+21:32 varna:缓冲中
+21:32 iyzsong:听过至少30+..
+21:32 lh_mouse:说真的听过这么多日文歌我没听过几首押韵的
+21:33 amau:押韵....
+21:33 varna:日文词作我比较烦的是拆意群
+21:33 varna:一韵到底对于比绝句长的东西我觉得是作死
+21:33 varna:换韵倒是正解，不过似乎少见刻意换的
+21:34 lh_mouse:http://pan.baidu.com/share/link?shareid=356020&uk=406147603
+21:34 lh_mouse:傻逼百度
+21:34 lh_mouse:你不把繁体转成简体会死
+21:34 lh_mouse:声线都不错
+21:34 lh_mouse:不过这个我记得原版是男声的？
+21:34 varna:声线+
+21:35 lh_mouse:怀念下吧  坂井已经 over 了
+21:35 varna:听了一天的气接不上和pop木耳之后确实是好物
+21:36 lh_mouse:運命のルーレット廻して  ずっと  きみを見ていた
+21:36 amau:气接不上和pop木耳
+21:36 amau:?
+21:36 varna:不过这种曲风其实声线无所谓了，我还是喜听Tarja的伪花腔
+21:36 varna:amau: 今天的live, 各种唱歌上气不接下气，还有祈Inory
+21:37 amau:需要后期支援
+21:37 lh_mouse:http://pan.baidu.com/share/link?shareid=414745&uk=2117415778  这首歌我虽然收了  但是声线不怎么样
+21:37 varna:那是南条爱乃
+21:37 lh_mouse:这就是个反例
+21:37 varna:南条爱乃，黑崎真音，川田麻美
+21:37 varna:这三个必须使劲黑
+21:37 iyzsong:如果把人的嗓子比做乐器的话,声线就是人发声的音色。  这东西怎么评价
+21:37 varna:live现场还有人唱x-encounter的
+21:37 lh_mouse:iyzsong, 刺耳
+21:38 varna:简直不忍听
+21:38 lh_mouse:比翼の羽根   你自己去听听
+21:38 varna:那种歌只能后期
+21:38 lh_mouse:真的很刺耳
+21:38 varna:比翼の羽根太黑暗了
+21:38 varna:太黑暗了
+21:38 varna:道の先、空の向こう稍微好点
+21:39 lh_mouse:iyzsong, http://music.baidu.com/mv/55829541 高下立判
+21:39 varna:走了
+21:39 varna:大家晚间愉快
+21:40 iyzsong:觉得无差别 怎么破..
+21:40 lh_mouse:您的音乐细菌……
+21:40 lh_mouse:细胞*
+21:41 iyzsong:\./
+21:41 amau:毫无音乐细菌
+21:42 iyzsong:这不是真的!
+21:42 lh_mouse:ボクらの冒険 真的是很燃的一首歌
+21:43 iyzsong:棋魂..
+21:44 amau:卡翔
+21:44 lh_mouse:http://zhidao.baidu.com/link?url=EpWF29ZgK5fo617FTCyCcrnFNUrGT9eBn3LJr2PYw8Y0pWMaQYqF1nv5imWhZbHtDGPV9IcEcFU0RjlRCEi9iK
+21:58 lh_mouse:那两个 guest 是怎么回事
+21:58 lh_mouse:Guest27436, Guest66949 
+21:59 whatofor:lh_mouse:  断线了自动登录之后的名字. 
+21:59 lh_mouse:还有一个呢
+22:32 code_new joined channel
+23:21 code_new joined channel
+23:46 JQK_Phone joined channel
+23:58 iyzsong:http://code.google.com/p/plan9front/wiki/screenshots ...

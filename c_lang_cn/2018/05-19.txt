@@ -1,0 +1,220 @@
+00:00 sixand joined channel
+00:03 cirno_ joined channel
+00:08 sixand quit:Remote host closed the connection
+00:08 sixand joined channel
+00:17 matchray: meow
+00:27 sixand1 joined channel
+00:28 sixand quit:Ping timeout: 264 seconds
+00:28 sixand1 is now known as sixand
+00:30 cirno_ quit:Remote host closed the connection
+00:31 cirno_ joined channel
+00:41 sixand1 joined channel
+00:41 sixand quit:Ping timeout: 265 seconds
+00:45 sixand1 quit:Ping timeout: 240 seconds
+00:50 lhanjian_: cleamoon_: 是啊
+00:51 lhanjian_: 他还说那只白猫生了一串小猫
+00:51 lhanjian_: 不过太热闹了，于是送人了
+00:53 sixand joined channel
+00:57 sixand quit:Remote host closed the connection
+01:00 cirno_ quit:Remote host closed the connection
+01:00 cirno_ joined channel
+01:02 sixand joined channel
+01:22 cirno_ quit:Quit: WeeChat 2.1
+01:40 sixand quit:Remote host closed the connection
+01:42 yonka quit:Remote host closed the connection
+01:48 cleamoon_: lhanjian_: orz，我家也是耶，白猫四处公车，下了五只全不一样的小猫
+01:49 sixand joined channel
+01:53 sixand quit:Remote host closed the connection
+01:54 sixand joined channel
+01:56 NebulaMoe quit:Quit: Connection closed for inactivity
+01:56 sixand quit:Remote host closed the connection
+02:05 sixand joined channel
+02:13 sixand quit:Remote host closed the connection
+02:17 sixand joined channel
+02:20 sixand quit:Remote host closed the connection
+02:23 sixand joined channel
+02:30 sixand quit:Ping timeout: 260 seconds
+02:39 lhanjian_: cleamoon_: 你这儿233，百家cao
+02:42 yonka joined channel
+02:47 yonka quit:Ping timeout: 260 seconds
+05:06 cleamoon_: lhanjian_: 最后我还得养，简直接盘侠
+07:31 lhanjian_: cleamoon_: uccu
+07:32 lhanjian_: cleamoon_: 喜当（猫）爹
+08:02 lh_mouse joined channel
+08:14 yonka joined channel
+08:25 cleamoon_: lhanjian_: 猫粮给多少都不够吃，饿的母猫捉虫吃
+09:34 yonka quit:Remote host closed the connection
+09:39 lhanjian_: cleamoon_:猫粮又不贵
+09:39 lhanjian_: cleamoon_: 送走几只，留一两只啊，
+09:47 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:04 WindOA joined channel
+10:12 WindOA: 请用过lambda的举个手
+10:25 lh_ideapad joined channel
+10:34 yonka joined channel
+10:39 yonka quit:Ping timeout: 260 seconds
+10:49 lh_ideapad: geordi, << is_final<int>::value
+10:49 geordi: false
+11:12 cirno_ joined channel
+11:18 sixand joined channel
+11:30 cirno_ quit:Remote host closed the connection
+11:31 cirno_ joined channel
+11:37 sixand quit:Ping timeout: 264 seconds
+11:40 matchray: 喵嗚~明天和同學去San Mateo~
+12:00 cirno_ quit:Remote host closed the connection
+12:01 cirno_ joined channel
+12:19 iyzsong joined channel
+12:30 cirno_ quit:Remote host closed the connection
+12:31 cirno_ joined channel
+12:36 yonka joined channel
+12:41 yonka quit:Ping timeout: 255 seconds
+13:00 cirno_ quit:Remote host closed the connection
+13:00 cirno_ joined channel
+13:30 cirno_ quit:Remote host closed the connection
+13:31 cirno_ joined channel
+14:00 cirno_ quit:Remote host closed the connection
+14:01 cirno_ joined channel
+14:09 lh_mouse quit:Read error: Connection reset by peer
+14:10 lh_mouse joined channel
+14:11 varna joined channel
+14:13 varna: 这线是真姬儿不好走……根本黏不住
+14:30 cirno_ quit:Remote host closed the connection
+14:31 cirno_ joined channel
+15:00 cirno_ quit:Remote host closed the connection
+15:00 cirno_ joined channel
+15:10 varna: 不行就得买个锤子上墙了
+15:15 Taggnostr joined channel
+15:16 Taggnostr2 quit:Ping timeout: 264 seconds
+15:18 matchray: lh_ideapad: glibc經常搞些看不懂的發明創造
+15:19 matchray: .eh_frame最後必須有一個length爲0 CIE
+15:19 matchray: DT_TEXTREL不能與IFUNC一起用
+15:21 matchray: _DYNAMIC(RIP-relative address) - _GLOBAL_OFFSET_TABLE_[0]獲得ld.so load address；不老老實實(FreeBSD那樣)用_DYNAMIC@gotpcrel 彙編
+15:30 cirno_ quit:Remote host closed the connection
+15:31 cirno_ joined channel
+16:00 cirno_ quit:Remote host closed the connection
+16:01 cirno_ joined channel
+16:24 lh_ideapad: matchray, OwO
+16:24 lh_ideapad: geordi, { string str; cout << str.capacity(); }
+16:24 geordi: 15
+16:25 lh_ideapad: geordi, { string str; str.reserve(24); fill_n(back_inserter(str), str.capacity(), 'a'); cout <<str; }
+16:25 geordi: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+16:25 lh_ideapad: geordi, { string str; str.reserve(24); iota_n(back_inserter(str), str.capacity(), 'a'); cout <<str; }
+16:25 geordi: error: 'iota_n' was not declared in this scope
+16:26 lh_ideapad: geordi, { string str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str += 'a' | i % 26; cout <<str; }
+16:26 geordi: aacceeggiikkmmooqqssuuwwyyaacc
+16:26 lh_ideapad: geordi, { string str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str += 'a'+i%26; cout <<str; }
+16:26 geordi: abcdefghijklmnopqrstuvwxyzabcd
+16:27 lh_ideapad: geordi, { string str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str += 'a'+i%26; str.append(str.rbegin(), str.rend()); cout <<str; }
+16:27 geordi: abcdefghijklmnopqrstuvwxyzabcddcbazyxwvutsrqponmlkjihgfedcba
+16:27 lh_ideapad: geordi, use --clang
+16:27 geordi: abcdefghijklmnopqrstuvwxyzabcdeedcbazyxwvutsrqponmlkjihgfedcba
+16:30 sixand joined channel
+16:30 cirno_ quit:Remote host closed the connection
+16:31 cirno_ joined channel
+16:36 lh_mouse: geordi, { vector<char> str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str += 'a'+i%26; str.insert(str.end(), str.rbegin(), str.rend()); str.emplace_back(); cout <<str; }
+16:36 geordi: error: no match for 'operator+=' in 'str += (97 + (i % 26))' (operand types are 'vector<char>' and 'size_t' {aka 'long unsigned int'})
+16:36 lh_mouse: geordi, { vector<char> str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str.push_back('a'+i%26); str.insert(str.end(), str.rbegin(), str.rend()); str.emplace_back(); cout <<str; }
+16:36 geordi: /usr/local/include/c++/9.0.0/debug/vector:596: [+ 26 discarded lines]
+16:36 lh_mouse: geordi, { vector<char> str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str.push_back('a'+i%26); str.assign(str.rbegin(), str.rend()); str.emplace_back(); cout <<str; }
+16:36 geordi: {'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', '\0'}
+16:37 lh_mouse: geordi, { vector<char> str; str.reserve(24); for(size_t i = 0; i < str.capacity(); ++i) str.push_back('a'+i%26); str.assign(str.rbegin(), str.rend()); cout <<str; }
+16:37 geordi: {'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x'}
+16:37 lh_mouse: Aji.
+16:52 sixand quit:Quit: sixand
+17:00 cirno_ quit:Remote host closed the connection
+17:00 cirno__ joined channel
+17:20 iyzsong quit:Ping timeout: 265 seconds
+17:20 varna: 噗叽啪
+17:21 iyzsong joined channel
+17:29 varna: (｡･ω･)ﾉ
+17:30 cirno__ quit:Remote host closed the connection
+17:31 cirno__ joined channel
+17:37 lh_ideapad: geordi, << vector<char>("hello", "hello"+5);
+17:37 geordi: {'h', 'e', 'l', 'l', 'o'}
+17:37 lh_ideapad: geordi, { for(auto ch : "hello") cout <<+ch; }
+17:37 geordi: 1041011081081110
+17:37 lh_ideapad: geordi, { for(auto ch : "hello") cout <<+ch <<' '; }
+17:37 geordi: 104 101 108 108 111 0 
+18:00 cirno__ quit:Remote host closed the connection
+18:01 cirno__ joined channel
+18:23 lhanjian_: varna: 噗噗噗
+18:30 cirno__ quit:Remote host closed the connection
+18:31 cirno__ joined channel
+18:34 lhanjian_: 少前恶臭不堪
+18:34 lhanjian_: https://usercontent.irccloud-cdn.com/file/eq2HGr4q/Screenshot_2018-05-19-18-33-50-07.png
+18:34 lhanjian_: 仲夏夜什么的
+18:40 lh_ideapad: geordi, << ((operator+))("hello ", string("world!"));
+18:40 geordi: hello world!
+18:40 lh_ideapad: geordi, use --clang
+18:40 geordi: hello world!
+18:49 lh_ideapad quit:Remote host closed the connection
+18:56 varna: 噗叽啪
+19:00 cirno__ quit:Remote host closed the connection
+19:00 cirno__ joined channel
+19:08 lhanjian_: varna: 仲夏夜幻梦
+19:13 varna: 看到莎士比亚都能想到inm的人真是屑啊（无慈悲）
+19:20 lhanjian_: varna: 没有啊？哪有？
+19:30 cirno__ quit:Remote host closed the connection
+19:30 cirno__ joined channel
+19:33 lhanjian_: varna: 走，我们去刷白区boss
+19:38 varna: 我看看卡不卡
+19:45 varna: 卡得要死，不玩
+19:49 lhanjian_: 羊驼子这悲剧的网
+19:53 hong joined channel
+20:00 cirno__ quit:Remote host closed the connection
+20:01 cirno__ joined channel
+20:20 lh_ideapad joined channel
+20:28 lhanjian_: varna: 全息镜好用啊，刚到手的义乌货
+20:30 cirno__ quit:Remote host closed the connection
+20:30 cirno__ joined channel
+20:35 cleamoon_: lhanjian_: 后来搬家了就都送人了
+20:36 lhanjian_: cleamoon_: 送人还好
+20:36 lhanjian_: https://usercontent.irccloud-cdn.com/file/KoWnJxWV/IMG20180519203627.jpg
+20:37 cleamoon_: 如果不送人恐怕会各种德国猫骨科
+20:43 lhanjian_: 是啊
+20:46 cleamoon_: 这真不知道该不该算NSFW  https://usercontent.irccloud-cdn.com/file/UrWUkyiq/DdiEun7VQAAsEO-.jpg
+20:47 cirno__ quit:Ping timeout: 255 seconds
+20:49 cleamoon_: 位在北极圈内的斯瓦巴群岛是挪威最北国土，由于这里全年气温都在摄氏零下7度，人类遗体在下葬后难以腐坏，死者带原的病毒有可能会在数十年后重新出土；因此离岛中的隆雅市就立法成了全球唯一“禁止死亡的城市”。   #续命城
+20:54 CyrusYzGTt joined channel
+20:57 hong quit:Quit: hong
+20:58 cirno__ joined channel
+21:00 cirno__ quit:Remote host closed the connection
+21:01 cirno__ joined channel
+21:03 lhanjian_: http://www.imfdb.org/wiki/SEAL_Team_-_Season_1#M240B_Machine_Gun
+21:04 hong joined channel
+21:11 Mokou: https://github.com/Elbullazul/Longhorn-Collaboration 修了个主题
+21:12 varna: gnome的臭气挥之不去
+21:24 Mokou: 其实是mate的cinnamon
+21:24 Mokou: 主题来自longhorn
+21:24 varna: 窗口的形式靠主题也救不回来
+21:24 Mokou: 是这样
+21:24 Mokou: 不过没办法了
+21:24 Mokou: longhorn不支持sata……
+21:25 varna: windoze的风格比较收敛，其实不好模仿
+21:25 Mokou: 来，自己写一个（
+21:26 Dove|2 joined channel
+21:30 cirno__ quit:Remote host closed the connection
+21:31 cirno__ joined channel
+21:38 lhanjian_: 讲道理，水弹枪真不错
+21:49 cleamoon_: 弄个 win98 形状的gnome主题
+21:55 cleamoon_: varna: 驼没买战神？
+21:55 varna: cleamoon_: 没，我不喜欢这个当爹的奎爷
+21:57 cleamoon_: 战神是指儿子，奎爷只是战神的坐骑，增加难度用的
+22:00 cirno__ quit:Remote host closed the connection
+22:01 cirno__ joined channel
+22:12 hong quit:Quit: hong
+22:14 lhanjian_: Mokou: 肛旗活动准备选哪个枪娘啊，小狮子？
+22:22 lhanjian_: cleamoon_: 绅士最近在玩什么?
+22:30 cirno__ quit:Remote host closed the connection
+22:31 cirno__ joined channel
+22:31 Mokou: lhanjian_: 不打
+22:32 lhanjian_: 不是有7天签到送5星么
+22:37 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+22:48 Dove|2 quit:Read error: Connection reset by peer
+22:55 lhanjian_: 给小公主弄了个斜前握把
+23:00 whocares_2 quit:Read error: Connection reset by peer
+23:00 whocares_2 joined channel
+23:00 cirno__ quit:Remote host closed the connection
+23:01 cirno__ joined channel
+23:30 cirno__ quit:Remote host closed the connection
+23:31 cirno__ joined channel
+23:49 hong joined channel

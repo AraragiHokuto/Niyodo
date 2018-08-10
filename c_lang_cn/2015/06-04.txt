@@ -1,0 +1,338 @@
+00:12 lh_mouse quit:Read error: Connection reset by peer
+00:16 lh_cat joined channel
+00:22 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150515071002]
+00:36 cleamoon_ quit:Ping timeout: 244 seconds
+00:38 cleamoon_ joined channel
+00:48 cleamoon_ quit:Ping timeout: 265 seconds
+00:49 cleamoon_ joined channel
+01:19 Stevearzh quit:Quit: Be back later...
+01:19 Stevearzh joined channel
+01:24 Stevearzh quit:Ping timeout: 245 seconds
+02:25 lh_cat quit:Quit: Connection closed for inactivity
+02:31 cleamoon_ quit:Ping timeout: 265 seconds
+02:32 cleamoon_ joined channel
+02:37 cleamoon_ quit:Ping timeout: 256 seconds
+02:38 cleamoon_ joined channel
+02:44 Guest80875 quit:Quit: Lost terminal
+04:24 boosure joined channel
+07:37 lolisa quit:Quit: meow
+09:11 ASenR joined channel
+09:11 lh_mouse joined channel
+09:23 lh_cat joined channel
+09:24 cleamoon_ quit:Ping timeout: 256 seconds
+09:26 lh_cat quit:Changing host
+09:26 lh_cat joined channel
+09:30 molikto joined channel
+09:32 ASenR quit:Ping timeout: 272 seconds
+09:43 lh_cat: 喵
+09:49 boosure quit:Quit: Get your hand off of it
+10:03 Stevearzh joined channel
+10:04 lh_mouse: meow
+10:04 lh_mouse: meow
+10:05 lh_not_bot: 0.0
+10:22 hysw: pkill
+10:25 lh_mouse: pkill -9x hysw
+10:42 molikto quit:Remote host closed the connection
+10:45 hope1 joined channel
+10:47 hope1 quit:Client Quit
+10:47 hope1 joined channel
+10:47 molikto joined channel
+10:51 molikto quit:Remote host closed the connection
+10:54 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+10:54 hope1 joined channel
+11:06 ld-linux joined channel
+11:15 molikto joined channel
+11:17 lh_not_bot: molikto: 爆照
+11:18 molikto: lh_not_bot: .... lh是一个人么
+11:18 lh_not_bot: 是
+11:20 lh_not_bot: molikto: 爆照
+11:24 lh_mouse quit:Read error: Connection reset by peer
+11:27 lh_mouse joined channel
+11:27 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+11:47 ld-linux joined channel
+12:00 Stevearzh quit:Ping timeout: 256 seconds
+12:03 Stevearzh joined channel
+12:07 Stevearzh quit:Ping timeout: 255 seconds
+12:19 Stevearzh joined channel
+12:25 lh_cat quit:Quit: Connection closed for inactivity
+12:32 ld-linux joined channel
+12:40 ASenR joined channel
+12:57 ld-linux joined channel
+12:58 xxxxxxxx joined channel
+13:04 ASenR quit:Quit: Lost terminal
+14:02 sismvg joined channel
+14:08 ld-linux joined channel
+14:19 lh_mouse quit:Read error: Connection reset by peer
+14:23 lh_mouse joined channel
+14:24 lh_mouse quit:Read error: Connection reset by peer
+14:25 lh_mouse joined channel
+14:38 lh_mouse quit:Read error: Connection reset by peer
+14:39 lh_mouse joined channel
+14:50 lh_not_bot: geordi: -c int i = 1; int j = i = 2;
+14:50 geordi: Success
+14:50 lh_not_bot: geordi: -c int i = 1; int j = { i = 2 };
+14:50 geordi: Success
+14:51 ASenR joined channel
+15:10 sismvg: fvck winsock.h
+15:11 whatofor_1 joined channel
+15:13 sismvg: 无论怎么防都防不住。
+15:15 whatofor quit:Ping timeout: 264 seconds
+15:20 xxxxxxxx: 药娘四又在防走光?
+15:21 sismvg: redefine AF_IPX blah.. blah.
+15:24 lhanjian joined channel
+15:37 Stevearzh quit:Ping timeout: 258 seconds
+15:52 varna joined channel
+15:53 xxxxxxxx: 我的雪风一定是假货
+15:54 xxxxxxxx: 肯定都是特技
+15:54 varna: 你不是阳炎厨，所以你家雪风不给力
+15:56 varna: http://www.perlmonks.org/?node_id=1032749 新头像
+15:56 ld-linux joined channel
+15:57 xxxxxxxx: 这是鸡么...
+15:57 varna: 是瑞凤
+15:58 xxxxxxxx: 然而我家的POI是真的.....
+15:58 varna: POI摔了都是真摔
+15:58 xxxxxxxx: 被后期型的驱逐直接炸成大破
+15:59 varna: 爷爷雷装不错的
+16:01 sismvg: http://tieba.baidu.com/p/3805589085
+16:01 whatofor joined channel
+16:04 whatofor_1 quit:Ping timeout: 252 seconds
+16:11 Stevearzh joined channel
+16:36 lhanjian quit:Quit: Leaving
+16:47 varna: http://www.bilibili.com/video/av103603/ 旧物
+17:40 ld-linux joined channel
+17:46 lh_mouse: geordi, << function<void()>(foo())(); struct foo { void operator()(){ BARK; } void operator()() const { BARK; } };
+17:46 geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and 'void')
+17:46 lh_mouse: geordi, { function<void()>(foo())(); } struct foo { void operator()(){ BARK; } void operator()() const { BARK; } };
+17:46 geordi: error: 'foo' declared as function returning a function
+17:46 lh_mouse: geordi, { function<void()>(foo{})(); } struct foo { void operator()(){ BARK; } void operator()() const { BARK; } };
+17:46 geordi: foo::operator()()
+18:10 ASenR quit:Quit: Lost terminal
+18:15 sismvg: http://tieba.baidu.com/p/3806044497
+18:15 sismvg: 2333333333333
+18:15 sismvg: 两个强盗闯入了圆明园，一个叫英吉利，一个叫法西斯
+18:20 varna: 2劝1击杀拿下5-5第四血
+18:20 varna: 然后夺命大红鱼送大和一个大破，1100钢蒸发
+18:29 molikto quit:Remote host closed the connection
+18:30 ld-linux joined channel
+18:36 cleamoon joined channel
+18:37 cleamoon__ joined channel
+18:38 cleamoon__: 此前日本有一场预定在6月举办的《在地下城寻求邂逅是否搞错了什么》只招募到了3家同人社团参加，与主办方定下100家社团参展的目标差距过大，而现在一场预定在7月举办的地下城寻求邂逅专场Only打破了这个记录，最终只募集到一家同人社团参展，完全和地下城现在的人气不成正比。
+18:40 sismvg: 2333
+18:42 cleamoon__: DMM展开大规模封号行动，舰娘横须贺服务器第一提督账号被封
+18:44 Plough joined channel
+18:47 cleamoon__: http://www.baidu.com/s?wd=%E5%88%8A%E5%8F%B7%2044-1190%2FQ%201673-4092&rsv_spt=1&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_n=2&rsv_sug3=1   都用一个刊号呀？
+18:47 xxxxxxxx: 为啥 那家伙用脚本了?
+18:49 cleamoon__: 现在插件都封
+18:49 xxxxxxxx: 那我觉得前500得死光....
+18:52 cleamoon__: 前990死了60+个
+18:52 xxxxxxxx: 而且我觉得只要不自动xxx的插件大概都不会封
+18:53 xxxxxxxx: 用那些插件的氪金用户应该不少
+18:54 xxxxxxxx: 有了那些插件氪金用户才会更快的往里头扔钱
+18:55 xxxxxxxx: 自动跑资源远征的那些肯定会封掉
+18:57 xxxxxxxx: 卧槽我有长门了
+18:58 Plough: 欧rz
+18:59 xxxxxxxx: 长良低保出长门
+19:01 cleamoon__: 3333出长门？
+19:01 cleamoon__: 真 欧rz
+19:10 xxxxxxxx: 幼女快去看心理医生
+19:11 cleamoon__: 被欧提打击了
+19:13 cleamoon__: @左堂堂 非常喜欢这句话 “人啊，长了颗红楼梦的心，却生活在水浒的世界，想交些三国里的桃园弟兄，却总遇到些西游记里的妖魔鬼怪。”
+19:21 sismvg: 活在非洲却像成为欧洲人
+19:22 sismvg: 想
+19:22 cleamoon__: 今天的第二个那柯
+19:46 lh_not_bot: varna: 应该就是昨天起床着急了
+19:46 lh_not_bot: 今天没出症状
+20:12 Stevearzh quit:Ping timeout: 255 seconds
+20:36 lh_cat joined channel
+20:41 FrankHB quit:Read error: Connection reset by peer
+20:48 molikto joined channel
+20:54 Plough: 我到现在都没打开游戏
+20:54 lh_mouse: molikto, 爆照
+20:55 molikto: lh_mouse: 刚刚买的电吉他
+20:55 molikto: 哦也
+20:55 cleamoon__: 壕无人性
+20:55 lh_mouse: molikto, 爆照
+20:56 lh_not_bot: molikto, 爆照
+20:56 lh_cat: molikto, 爆照
+20:56 xxxxxxxx: 我也打不开了 六月确确实实的来了
+21:00 lh_not_bot: 啥家伙打不开了
+21:01 Plough quit:Quit: leaving
+21:02 Plough joined channel
+21:06 cleamoon quit:Ping timeout: 244 seconds
+21:06 FrankHB joined channel
+21:09 xxxxxxxx: 登上了
+21:09 xxxxxxxx: 红旗试试看?
+21:10 cleamoon joined channel
+21:11 sismvg: vs搞什么灰机。。每次我undo了以后生成就直接挂屌
+21:11 sismvg: 掉
+21:11 Plough: ERR_TIMED_OUT
+21:14 Plough: 上去了
+21:18 xxxxxxxx: 我靠不往北走行不行
+21:20 lh_mouse: Plough, 爆照
+21:20 Plough: 上不去了
+21:21 lh_mouse: Plough, 爆照
+21:25 varna: lh_mouse: 没出症状还好……再注意几天看？
+21:26 varna: 一般数据网估计被日了？
+21:26 Plough: 大概是
+21:26 varna: 我这里都能用
+21:27 Plough: 打了一场演习，又炸了
+21:28 Plough: 毁灭舰娘新的一话里作者已经玩梗玩疯了
+21:28 Plough: 吹雪酱和某提督决斗，方式是玩提督王
+21:29 xxxxxxxx: 我怎么也一股要猫的味道...
+21:29 xxxxxxxx: http://www.bilibili.com/video/av2362455/ 中国海军南海警告美机
+21:31 cleamoon: 我这里完全没有影响
+21:31 cleamoon: 感觉偏要今搞这些是撑的
+21:32 Plough: http://www.dmzx.com/manhua/21563/2000057686.html <-提督王
+21:34 xxxxxxxx: 卧槽进boss没打赢
+21:35 varna: xxxxxxxx: 打哪？
+21:36 Plough: varna: 你真的不考虑看看毁灭舰娘么
+21:36 Plough: 作者很会玩梗的
+21:36 xxxxxxxx: 3-5
+21:36 varna: 不打算……
+21:37 ASenR joined channel
+21:37 cleamoon: 下载的一个gal画质神奇，就是听不懂
+21:37 Plough: 而且他似乎喂了香取老师
+21:38 cleamoon: 一个flash galgame有9.8GB
+21:39 Plough: 还真是
+21:40 Plough: 毁灭舰娘的那个作者拿到香取以后忘记上锁
+21:40 Plough: 然后在改修界面看成名取了……
+21:41 cleamoon: 23333
+21:42 Plough: 所以65话吹雪酱的最后一张卡牌其实是他的亲身经历
+21:42 Plough: 这么一想真是北上
+21:47 molikto quit:Remote host closed the connection
+21:48 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.1/20150513174244]
+21:49 ld-linux joined channel
+21:49 molikto joined channel
+21:57 Plough quit:Quit: Reconnecting
+21:57 Plough joined channel
+22:03 varna: http://www.perlmonks.org/?node_id=1129033 广告
+22:12 varna: http://tieba.baidu.com/p/3806333182?pn=1 这TM脸帝……
+22:14 xxxxxxxx: 我只觉得这是肝帝....
+22:15 varna: 对5-5来说这配置就是脸帝了……
+22:15 varna: 当然整个5-5的难点只有一个：门神开幕
+22:17 xxxxxxxx: 非洲人常年赌不出烈风表示很困扰，46也只有一根，赌了10多发出的，只能用381改和41随便凑合下
+22:17 xxxxxxxx: 46也只有一根，赌了10多发出的
+22:19 cleamoon: 欧rz
+22:19 Plough: ……这连放亖制空值都没堆上啊
+22:19 Plough: 果然脸帝
+22:19 Plough: 十多发一根46更证明了这点
+22:19 Plough: 虽说我的第一门46似乎是五发出的……
+22:20 molikto quit:Remote host closed the connection
+22:20 xxxxxxxx: 我家的雪风绝对是假的
+22:21 varna: 5-5出门420就行
+22:21 varna: 不过我是除了加贺之外全罚站，加贺46舰攻
+22:22 varna: 微调制空的地方用熟练零战和零战601加回避（没卵用，有用我早斩了）
+22:22 varna: 出门制空大约460+
+22:23 xxxxxxxx: 然而每次羊驼能随便过的图 到我这里就发了疯一般劝退...
+22:23 Plough: 这周末我给俾斯麦换上嗑改试试
+22:24 varna: 5-5我可没能随便过
+22:24 Plough: 俾斯麦上46各种miss
+22:24 varna: 平均差不多3劝后1杀
+22:24 xxxxxxxx: 我又不打5-5
+22:24 varna: 所谓出门制空420是保证第一战确保……
+22:26 cleamoon: 3-5过不去
+22:26 varna: 岚月酱怎么打的
+22:26 Plough: http://i2.tietuku.com/e85572037e29f62c.jpg 这张图的预言在春活命中了50%
+22:27 Plough: 然而如果夏活也命中50%……
+22:27 xxxxxxxx: cleamoon: 没关系 我也过不去
+22:27 varna: 我之前说过这个问题
+22:27 varna: 所以我希望能够快速解决5-5……
+22:27 ASenR quit:Remote host closed the connection
+22:28 Plough: 秋活再命中50%……
+22:29 Plough: 直接三个理事长往那一拍，命中50%
+22:29 varna: 到时候你就看见咸川基地了
+22:29 Plough: 剩下的三个没命中，实际上是两个教授和一个金SO
+22:29 Plough: 打吧
+22:30 ASenR joined channel
+22:30 Plough: 这是乙等，丙等金SO换白板，甲等换潜水栖姬
+22:30 varna: 白板还好，至少我有自信单纵打掉
+22:31 Plough: 然后水打强制走道中夜战点，双院长双金雷双爷爷
+22:31 varna: 对了我今天买了人格鉴定窗
+22:31 Plough: 机动部队二队先手，教授的开幕+潜艇的开幕……
+22:31 Plough: 壕rz
+22:31 Plough: 我今天就没怎么打开游戏
+22:31 varna: 看看电酱喝什么
+22:32 varna: 没变化的？
+22:32 varna: 长门！
+22:32 varna: 也没变化？
+22:33 Plough: ……时间没到？
+22:33 Plough: 另外长门是果汁派
+22:33 Plough: 和小学生一样
+22:33 varna: 时间是几点的……
+22:34 varna: http://tieba.baidu.com/p/3806547499 ...
+22:34 Plough: 23333
+22:36 Plough: 长门似乎就是没变化
+22:36 Plough: 你换大姐姐看看？
+22:37 Plough: 啊，长门是早上五点到下午七点
+22:37 varna: 大姐姐被我在5-5生打到了80
+22:37 Plough: 肝rz
+22:37 varna: 今天还吃了一个夺命大红鱼
+22:37 varna: 78->80
+22:37 Plough: 肝rz
+22:37 Plough: 我是不是该把罗马拉过去
+22:37 varna: 出现了！
+22:37 varna: 雾岛……
+22:38 Plough: 23333
+22:38 varna: 雾岛也喝雾岛
+22:38 Plough: 大凤似乎是威士忌
+22:38 varna: 金刚中破挡住了……似乎是洋酒
+22:38 molikto joined channel
+22:38 Plough: 大傻应该也是威士忌
+22:39 varna: 大凤喝那智……
+22:39 varna: 那智也是那智
+22:39 Plough: 是
+22:39 varna: 瑞凤喝雾岛
+22:39 varna: 这堆酒鬼机动部队
+22:40 xxxxxxxx: 怪不得命中那么感人
+22:40 Plough: http://picpaste.com/RrmGu4fx.png
+22:40 varna: 大艇酱吧东西挡住了，不过秋津洲是粥+饭团……
+22:40 Plough: 战斗粮食
+22:40 Plough: 小和啊葛城啊时雨啊赤城啊这些也是
+22:40 varna: KTKM只看漫画不喝酒
+22:41 varna: 哦，那饭团边上有腌萝卜
+22:41 Plough: KTKM似乎在七点之后九点之前会喝啤酒？
+22:41 Plough: 其他全舰娘应该都是
+22:41 Plough: 先碎叫
+22:41 Plough: 诸君武运
+22:41 xxxxxxxx: http://puu.sh/icb5A/a434628b5e.png 你看看这昼战
+22:41 Plough quit:Quit: 睡觉
+22:41 varna: 绫波减肥中，晚上不吃饭……
+22:42 varna: 加贺也在喝，难怪摔得那叫一个狠
+22:43 xxxxxxxx: 筑摩智商上线 直接打了旗舰
+22:44 varna: http://tieba.baidu.com/p/3802104817
+22:44 xxxxxxxx: 我打完3-5啦
+22:45 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f2f942bb7a3e6709be0045f70bc69fb8/c6c1f7119313b07e9fffee9409d7912396dd8c9b.jpg
+22:45 varna: 恭喜
+22:45 xxxxxxxx: 然而我打3-5最重要的一支是脸和智商
+22:48 lh_mouse: [22:33:24] <varna> 今天还吃了一个夺命大红鱼
+22:48 * lh_mouse slaps varna around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+22:49 xxxxxxxx: 下一条船的ID是7275 我啥时候把长门取出来呢
+22:54 code_new joined channel
+22:55 varna: code_new: 爆
+22:55 varna quit:Quit: leaving
+22:55 code_new: QAQ爆完就跑
+22:55 lh_mouse: 爆照？
+22:56 code_new: 谁叫照
+22:56 molikto quit:Remote host closed the connection
+22:56 xxxxxxxx: code_new: 帮我挑比7274大的比较好的数
+22:57 code_new: xxxxxxxx: 7777?
+22:57 xxxxxxxx: 行
+22:58 code_new: 巨基在干嘛
+22:58 xxxxxxxx: 等ID取船
+22:58 code_new: = =
+22:59 lh_mouse: molikto, 爆照
+22:59 molikto joined channel
+22:59 lh_mouse: code_new, 爆照
+22:59 lh_mouse: code_new, 爆照
+22:59 lh_mouse: molikto, 爆照
+22:59 molikto: lh_mouse: 丧心病狂...
+22:59 lh_mouse: molikto, 爆照
+22:59 code_new: lh_mouse: 明明jianjian都一块爆了
+22:59 lh_mouse: code_new, 爆照
+23:00 code_new: = =谁叫照，我去爆她
+23:00 lh_mouse: code_new, 爆照
+23:04 ld-linux joined channel
+23:05 lh_cat quit:Quit: Connection closed for inactivity
+23:36 code_new quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.5/20150602115007]
+23:46 molikto quit:Remote host closed the connection
+23:47 molikto joined channel

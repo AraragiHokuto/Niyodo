@@ -1,0 +1,229 @@
+00:13 lh_mouse quit:Read error: Connection reset by peer
+00:23 cyrushmh quit:Ping timeout: 276 seconds
+00:38 cleamoon quit:Ping timeout: 264 seconds
+00:44 whocares_2_ joined channel
+00:45 whocares_2 quit:Ping timeout: 240 seconds
+01:56 cleamoon joined channel
+02:18 varna quit:Ping timeout: 268 seconds
+02:52 cleamoon quit:Ping timeout: 260 seconds
+03:05 Stang quit:Quit: Connection closed for inactivity
+04:54 jingjinghack quit:Remote host closed the connection
+04:54 jingjinghack joined channel
+05:07 cleamoon_ quit:Quit: Connection closed for inactivity
+06:37 cleamoon joined channel
+06:40 cleamoon1 joined channel
+06:41 cleamoon quit:Ping timeout: 240 seconds
+06:41 cleamoon1 is now known as cleamoon
+06:51 cleamoon1 joined channel
+06:55 cleamoon quit:Ping timeout: 264 seconds
+06:55 cleamoon1 is now known as cleamoon
+09:42 cleamoon1 joined channel
+09:44 cleamoon quit:Ping timeout: 265 seconds
+09:44 cleamoon1 is now known as cleamoon
+09:52 jack_7766 joined channel
+11:24 cleamoon quit:Ping timeout: 260 seconds
+11:33 cleamoon joined channel
+12:08 Stang joined channel
+12:11 Stang quit:Client Quit
+12:11 Stang joined channel
+12:37 matchray: https://codejam.withgoogle.com/2018/challenges/0000000000007883/scoreboard
+13:23 matchray: RMS Titanic 4月14日23:40撞击
+13:23 matchray: 是GMT吗？
+13:29 varna joined channel
+13:30 varna: cleamoon: 刚看瞧峰打战役笑死了，主基地冲出去换家
+13:40 hanjian_l: varna: ( •̀∀•́ )
+13:55 yangwang1999 joined channel
+14:56 jack_7766 quit:Quit: Leaving
+15:01 sam_nya joined channel
+15:13 varna_ joined channel
+15:14 varna quit:Disconnected by services
+15:14 varna_ is now known as varna
+15:14 varna is now known as varan
+15:14 varan is now known as varna
+15:44 yonka quit:Remote host closed the connection
+15:45 yonka joined channel
+15:49 yonka quit:Ping timeout: 256 seconds
+15:59 Stevearzh quit:Ping timeout: 240 seconds
+16:17 hanjian_l: \s: 买个可以语音的耳机啊
+16:18 \s quit:Ping timeout: 268 seconds
+16:27 yangwang1999 quit:Remote host closed the connection
+16:49 hanjian_l: 记忆碎片2300+了
+17:01 lh_mouse joined channel
+17:10 hanjian_l: 203核心
+17:13 Stevearzh joined channel
+17:22 Stevearzh quit:Ping timeout: 260 seconds
+17:47 varna: _(:з」∠)_
+17:47 varna: (｡･ω･)ﾉ频道征集迫真小姐姐
+18:02 Stevearzh joined channel
+18:10 Stevearzh quit:Ping timeout: 265 seconds
+18:17 hanjian_l: varna: uccu
+18:17 varna: lmcc
+18:18 Stevearzh joined channel
+18:21 hanjian_l: Stevearzh: ping
+18:22 Stevearzh quit:Ping timeout: 240 seconds
+18:43 lh_mouse: 表达式写完了下面开艹语句了。
+18:47 varna: 19:46 < lh_mouse> 吱吱吱吱吱吱吱吱吱吱吱吱吱。
+18:48 * lh_mouse slaps varna around a bit with a large trout
+18:48 * varna poies
+18:48 lh_mouse: 为什么负数左移位是 UB 。
+18:49 varna: 除非想彻底用实现强X语义
+18:49 varna: 或者说，位移这个东西就是「我蹭蹭，不进去」的代表
+18:51 lh_mouse: 开玩笑……
+18:51 lh_mouse: 负数左移位怎么就 UB 了。
+18:51 lh_mouse: 又不一定溢出。
+18:52 varna: 指称语义应该希望排除不良定义的部分
+18:52 varna: 当然说白了这里已经被实现侵入，所以随意
+18:52 varna: 无符号数仅仅显得更直观而
+18:52 varna: 而已*
+18:53 lh_mouse: 真是些虚无缥缈的东西，就跟 one's complement 一样。
+18:53 lh_mouse: 那帮人怎么还没死光。
+18:54 GreyHound joined channel
+18:54 lh_mouse: c艹14 已经不允许用 one's complement 表示 char 了， stdint 一坨就是要求 two's complement 。
+19:05 lh_mouse quit:Read error: Connection reset by peer
+19:05 lh_mouse joined channel
+19:07 lh_mouse: matchray, 你去搞开发？
+19:08 lh_ideapad joined channel
+19:18 Dove joined channel
+19:19 Dove: 星际2的画风还是挺喜欢的
+19:19 Dove: war3的有点看吐了，玩不下去。
+19:20 Dove: 实际上是没什么游戏玩得下去了
+19:21 lh_mouse: geordi, << sizeof(va_list)
+19:21 geordi: 24
+19:22 varna quit:Ping timeout: 256 seconds
+19:23 varna joined channel
+19:24 \s joined channel
+19:31 gauge: war4 不能再等
+19:33 Dove: 实际上剧情已经狗血到干到万神殿了
+19:34 Dove: 没有可供war4利用的剧情了
+19:34 Dove: 除非再来个平行世界，但是这种梗在德拉诺被证明是失败的。
+19:35 Dove: 而且星际2很好，只是RTS的时代过去了罢了。
+19:36 Dove: 星际2真的很好，只是我玩不动了而已。
+19:38 Dove: 偶尔打打战役，玩玩合作，感觉还行。
+19:40 Dove: 至于魔兽嘛，一群脚男路边捡把神器就去干了泰坦我觉得已经编不下去了。
+19:45 Dove: 最搞笑的是7.0的时候还在被苏拉玛大街上的吸毒老娘们按在水里揍
+19:46 Dove: 然后7.3摇身一变攻进燃烧军团大本营把寂灭者阿古斯摁在地上揍。
+19:46 Dove: 中间真的没有啥过度，龙傲天也不带这样的。
+19:47 \s quit:Ping timeout: 256 seconds
+19:48 Stevearzh joined channel
+19:52 gauge: 😂 重制之前的情节也成呀
+19:53 Dove: 那倒是可以
+19:54 Dove: 不过那就更鲜少有人买单了
+19:54 Dove: 看看惨淡的重制版星际
+19:57 gauge: 好歹得是 3d 的呀 只是高清化就太没诚意啦
+19:59 Dove: 我现在就上wow玩玩宠物对战
+20:00 Dove: 然后偶尔打一把星际合作。
+20:00 Dove: 上风暴暖暖收点礼物，剩下的游戏我连打开的欲望都没有。
+20:01 Dove: 炉石送的卡包我到现在还没收
+20:01 varna: (｡･ω･)ﾉ频道征集迫真小姐姐
+20:02 Dove: 我也想要小姐姐
+20:02 Dove: 哪里有小姐姐嘛
+20:03 varna: (｡･ω･)迫真小姐姐
+20:04 varna: 迫真的那种
+20:04 Dove: 迫真是哪种嘛
+20:04 varna: 有屌的
+20:04 Dove: 好嘛
+20:04 Stevearzh quit:Ping timeout: 256 seconds
+20:04 Dove: 你的口味果然比较奇葩
+20:10 iyzsong joined channel
+20:13 iyzsong: Dove: when will you come Chengdu?
+20:14 Dove: iyzsong: 快的话，年底吧。
+20:14 iyzsong: Dove: okay...
+20:14 Dove: 房子正在装修，装修好了晾几个月。
+20:14 iyzsong: orz
+20:14 Dove: 家里人的打算是在成都过年
+20:16 CyrusYzGTt joined channel
+20:16 Dove: 买了一套哈利波特，但是也没有太大的兴致读。
+20:17 Dove: 妹子推荐我银河帝国，但是我对科幻不太感冒。
+20:19 Dove: 现在主要是要减肥
+20:19 Dove: 稍微运动一下别整天睡觉，又虚又软，精神不振。
+20:21 iyzsong: agree, i need exercise badly..  i have read 银河帝国~
+20:21 Dove: 好看嘛？
+20:21 Dove: 妹子说好看
+20:21 Dove: 哈利波特小时候很爱看
+20:22 Dove: 于是买来重温一下
+20:22 Dove: 看阿西莫夫的名气，想必是好看的。
+20:23 iyzsong: yes, and another best is The Hitchhiker's Guide to the Galaxy.
+20:23 Dove: 我对科幻啊宇宙啊所有的憧憬都在星际争霸中被满足了
+20:25 Stevearzh joined channel
+20:26 Stevearzh: hanjian_l: pong
+20:42 varna: 幼女幼女平坦的胸口
+20:46 iyzsong quit:Ping timeout: 265 seconds
+20:46 Dove quit:Read error: Connection reset by peer
+20:47 hanjian_l: Stevearzh: 买个可以语音的耳麦就可以愉快地party了
+20:47 Stevearzh: _(:з」∠)_ 
+21:00 condy: ...
+21:00 condy: 110 
+21:00 condy: 这里有幼女控
+21:00 varna: (｡･ω･)ﾉ这里有幼女
+21:06 iyzsong joined channel
+21:09 hanjian_l: 全都捉走
+21:21 varna: (｡･ω･)ﾉ快抓幼女来
+21:28 cleamoon1 joined channel
+21:28 varna: (｡･ω･)ﾉ来了一个幼女
+21:32 cleamoon quit:Ping timeout: 260 seconds
+21:32 cleamoon1 is now known as cleamoon
+21:54 cleamoon1 joined channel
+21:58 cleamoon quit:Ping timeout: 256 seconds
+21:58 cleamoon1 is now known as cleamoon
+22:10 iyzsong quit:Ping timeout: 268 seconds
+22:15 cleamoon_ joined channel
+22:20 cleamoon: varna: 瞧峰又有新的战役了
+22:22 varna: cleamoon: 4.13?
+22:22 varna: 4.12的我看了
+22:22 cleamoon: 12的
+22:23 varna: 那就看完了
+22:23 varna: 特别丢人
+22:23 cleamoon: 瞧峰总在奇怪的地方翻车
+22:23 rapiz joined channel
+22:23 varna: 一阵疯狂、精确而毫无意义的操作
+22:23 cleamoon: 233333
+22:24 cleamoon: 冰封的任务太费底力，没太多取巧的办法
+22:25 varna: TFT的任务很多对二线有基本要求
+22:25 varna: 没思路只想憋一波A基本会输
+22:25 cleamoon: 所以有几关我只能问爹过
+22:29 yonka joined channel
+22:29 cleamoon: varna: 我试了一下狼德，确实蛮爽的
+22:32 cleamoon: 顺便看到一个土豪电枪ama的练法，一开始觉得没什么特别的，就是土豪，然后，他一枪捅死了地狱大菠萝.......
+22:32 cleamoon: 然后我就惊了.....
+22:32 varna: ...
+22:32 cleamoon: 传送到大菠萝身边，一枪，然后大菠萝就变成冰水了......
+22:33 yonka quit:Ping timeout: 256 seconds
+22:40 xhe joined channel
+22:50 hanjian_l: mk23也满扩了
+22:51 varna: 看了个「rm2也满扩了」
+22:52 hanjian_l: uccu
+22:52 hanjian_l: rm2好着呢
+22:52 hanjian_l: 现在我已经有两队满扩了
+22:53 hanjian_l: 最高战力破3W
+22:54 hanjian_l: https://usercontent.irccloud-cdn.com/file/pavogj53/Screenshot_2018-04-14-22-53-43-44.png
+22:56 hanjian_l: https://usercontent.irccloud-cdn.com/file/id2JXX73/Screenshot_2018-04-14-22-55-41-40.png
+22:56 cleamoon_: orz
+22:59 hanjian_l: 莫辛纳甘可以心智升级了，用起来
+23:03 varna: gayhub上开个新坑
+23:05 hanjian_l: 说rm2 rm2到
+23:08 q_xjfd joined channel
+23:10 q_xjfd: y
+23:11 q_xjfd quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+23:12 aaa85756 joined channel
+23:14 lh_mouse: varna, 
+23:14 lh_mouse: 咨询一下你的观点。
+23:15 lh_mouse: 在有 if/while 的情况下，在语言中内置 unless/until 是否有必要？
+23:16 varna: lh_mouse: 没有，增加二次开发和插件开发的成本
+23:16 varna: 而且不利于团队开发风格统一
+23:17 varna: 对有精神的个人开发者，这两个冗余有益无害
+23:17 varna: 但多数人我不想高估
+23:17 varna: hanjian_l: 哪里有rm2？
+23:18 lh_mouse: 0.0
+23:18 hanjian_l: 不告诉你
+23:18 hanjian_l: 能加到宁子，依然就能加到rm2 加到menma酱
+23:18 hanjian_l: 自然
+23:19 lh_mouse: 目前语句类型把 boost::variant 的 20 个参数用光了。
+23:19 lh_mouse: 如果再加语句只能升级 boost 了。
+23:19 varna: 噗
+23:20 varna: hanjian_l: (｡･ω･)你看我完全不会撩妹
+23:23 aaa85756: rm2是谁
+23:26 varna: 是妹子
+23:38 aaa85756 quit:Remote host closed the connection
+23:39 varna: _(:з」∠)_幼女幼女
+23:39 varna: _(:з」∠)_幼女
+23:44 rapiz quit:Quit: Konversation terminated!

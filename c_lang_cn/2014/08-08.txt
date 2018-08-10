@@ -1,0 +1,847 @@
+00:09:Plough quit:Remote host closed the connection
+01:00:lh_mouse quit:Ping timeout: 246 seconds
+04:57:cleamoon quit:Ping timeout: 250 seconds
+04:58:cleamoon joined channel
+07:04:sismvg joined channel
+07:13:sismvg: 我领教到了本子站的和谐模式的厉害。。。前5页全部都是音乐资源。。
+07:34:sismvg_ joined channel
+07:35:sismvg quit:Ping timeout: 240 seconds
+07:47:sismvg: lapophalf是什么意思啊
+08:38:xxxxxxxx joined channel
+08:51:iyzsong joined channel
+09:02:lh_mouse joined channel
+09:21:varna joined channel
+09:22:varna: POI-
+09:24:FrankHB quit:Ping timeout: 246 seconds
+09:25:lh_mouse: NYANPASU-
+09:28:varna: lh_mouse: 捏
+09:28:lh_mouse: QAQ
+09:29:varna: 叫你喵帕斯
+09:29:varna: 兹喵兹捏
+09:29:lh_mouse: ><
+09:36:sismvg: http://www.bilibili.com/video/av1379499/
+09:36:sismvg: 太可怜了
+09:38:whatofor joined channel
+09:49:xxxxxxxx: http://henan.sina.com.cn/shuma/bijiben/2014-08-06/101835210.html 太可怜了。
+09:49:varna: xxxxxxxx: 爆
+09:49:xxxxxxxx: 据说还有一个星期牙就能补起来了
+09:50:varna: ……
+09:51:lh_mouse: 瘟八还没占领市场呢就出瘟九？
+09:54:varna: 瘟八平板可以玩舰娘
+09:59:xxxxxxxx: 艹船狂魔羊驼子
+10:00:varna: 肝不补脸玄不救非
+10:01:sismvg: linux早就有的东西。。
+10:02:sismvg: nvida的显卡也能这么弄
+10:05:sismvg: 有什么好的数据集吗
+10:06:varna: 什么方面的数据集
+10:06:xxxxxxxx: 吃药方面?
+10:07:sismvg: 植物什么的
+10:07:varna: 只知道一个iris
+10:07:sismvg: 我在data.org上找到很多，但是都不知道如何用
+10:07:varna: 又是没文档的教授物么
+10:08:sismvg: 是类别的名字看不懂。。
+10:08:sismvg: LATracts10
+10:09:varna: 名字看不懂没关系吧，能对上号就行
+10:09:whatofor_1 joined channel
+10:09:sismvg: 那怎么选输出呢
+10:09:varna: 胡乱选啊
+10:09:sismvg: 。。。。。
+10:09:varna: ten-fold
+10:09:varna: 反正单表的数据集不都是一堆属性跟一个结论么
+10:10:sismvg: 尝试一下好了
+10:12:whatofor quit:Ping timeout: 260 seconds
+10:17:xxxxxxxx: 东京吃货更新了
+10:18:varna: 那个叫东京吔屎鬼
+10:18:xxxxxxxx: 舌尖上的东京
+10:19:varna: 屎尖上的东京……
+10:19:varna: 回家之后163源就不行了
+10:20:gilot joined channel
+10:20:varna: archlinuxcn也挂了
+10:20:gilot: 从贴吧看到介绍进来的
+10:20:varna: 还好是概率挂
+10:20:varna: gilot: 欢迎
+10:21:varna: gilot: 这里是#touhou_lambda_hentai_news_poi_cn
+10:21:gilot: varna: 谢谢～
+10:21:varna: 请自行丧失
+10:22:varna: 难得见到贴吧党
+10:22:varna: 咦，我居然没安graphviz
+10:23:gilot: 可以查看所有频道的吗？
+10:23:varna: gilot: 你不会想看这里所有频道的
+10:23:varna: 太多了
+10:23:gilot: 嗯，那可以搜索？
+10:23:varna: freenode会警告你一次，我曾经不听劝
+10:24:varna: 可以
+10:24:varna: http://elucidatedbinary.com/blog/2011/01/11/how-to-search-for-an-irc-channel-on-freenode/
+10:24:gilot: varna: thx!
+10:26:varna: 试着编译一下codeviz... O autocrap
+10:28:condy: 这个依赖特定版本的gcc吧。这样真的好吗。。
+10:29:varna: condy: ?
+10:29:condy: codevix依赖gcc-4.6.6.
+10:29:condy: viz.
+10:29:varna: 我这里是4.6.4的头……
+10:29:varna: 先用着
+10:29:condy: 4.6.4...看错了。
+10:30:varna: cflow没用过，似乎能从数据流抽出调用树
+10:30:lh_mouse: E:\GitHub\MCF>git commit -a -m Updates.
+10:30:lh_mouse: [master 53d6fac] Updates.
+10:30:lh_mouse:  7 files changed, 194 insertions(+), 100 deletions(-)
+10:30:varna: 算了我放弃
+10:31:lh_mouse: 如果更改原本的编译流程在链接之前加一个新的 phase（其实 LTO 已经那么干了）实现内存布局和头文件的分离并不难
+10:31:varna: 先弄个cflow来
+10:31:lh_mouse: 关于这个问题我有两种解决方案
+10:32:lh_mouse: 第一种是运行时获取结构尺寸 bp -> ptr_obj1, ptr_obj2
+10:32:varna: 内存布局和头文件的分离？
+10:32:lh_mouse: 直接改 sp 拿栈空间  缺点是有运行时开销 得二次寻址
+10:33:lh_mouse: varna, 把成员定义从 class 里拆出去
+10:33:varna: soga
+10:33:whatofor_1 quit:Read error: Connection reset by peer
+10:33:varna: 为什么这么做
+10:33:lh_mouse: 实际上还得复杂一些 比如虚函数 
+10:33:lh_mouse: varna, 隐藏实现和优化编译速度
+10:33:lh_mouse: 最理想情况就是头文件里只放 public 函数声明
+10:33:lh_mouse: private 都不要有
+10:33:gilot left channel:
+10:34:varna: private成员为什么会降低编译速度
+10:34:whatofor joined channel
+10:34:lh_mouse: 目前做法是搞代理类 就是内存碎片比较麻烦
+10:34:varna: 按说只是常见级别的数量，分析的惨烈程度不会很大
+10:34:lh_mouse: varna, class 里面塞了个模板类比如 map<int, string> 啥的于是 233 了
+10:35:lh_mouse: 一千个文件就会编译一千次 很麻烦的
+10:35:varna: 自作孽不可活
+10:35:varna: c++非得保持System F能力的模板而放弃一切推导的下场
+10:36:lh_mouse: 模板这东西暴露实现而且匹配很慢
+10:36:lh_mouse: 拿同样数量的 C++ 和 C 编译起来速度差了一个数量级
+10:36:varna: 倒是
+10:37:lh_mouse: 这种东西目前通用的解决方案就是预编译头   但是我不清楚里面怎么实现的
+10:37:lh_mouse: clang 是 Pre-Tokenized Header(PTH)
+10:38:lh_mouse: GCC 会比较底层一些
+10:38:lh_mouse: 但是和 VC 的预编译头比  GCC 那个预编译头就是渣渣
+10:40:candy76041820 joined channel
+10:40:lh_mouse: 目前如果不在头文件里塞类定义  想用的时候就得自己从堆上分配
+10:40:varna: candy76041820: 昨天的log看一下
+10:40:candy76041820: 看见了。
+10:40:varna: lh_mouse: 堆上太糟糕
+10:40:candy76041820: 我还找一圈没见耻丘呢。
+10:40:varna: 耻丘兴奋了就会鼓起来
+10:40:candy76041820: Because I’m Being Frank, Really by Unya Touhou Project Doujin released Dec 10 '12 Comedy Kanako x Sanae Kanako x Suwako Sanae x Suwako 
+10:40:candy76041820: ↑Dynasty
+10:41:lh_mouse: varna, 结构的 size 可以类似于 extern size_t 之类叫链接器去找
+10:41:lh_mouse: 不过传统的编译成二进制 .o 的方式将不能工作 因为不是立即数
+10:41:varna: lh_mouse: 那样的话不如扔个别的节去
+10:41:lh_mouse: 只能编译成某种中间形态 链接完成后一次性转化为二进制
+10:41:lh_mouse: 实际这就是 LTO 了
+10:42:varna: 那个无所谓
+10:43:varna: 啊啊麻烦死了，客户居然表示让我给他个exe
+10:43:varna: 去他大爷的exe
+10:43:candy76041820: 噗。exe。
+10:43:hysw: 用syslinux呢还是grub呢...
+10:43:varna: grub
+10:43:candy76041820: 爆学霸云。
+10:44:hysw: 跑memtest86中...
+10:44:varna: 从不跑那个
+10:44:varna: candy76041820: 据说这次的活动会奖励大淀
+10:44:varna: 看起来很可爱，但我肯定打不通E5
+10:45:candy76041820: 大淀终于要洗白了？
+10:45:hysw: 16GiB的内存... 貌似得跑不少时间...
+10:46:varna: candy76041820: 估计送高级电探
+10:46:candy76041820: 日军的雷达再怎么的不也就那样了。
+10:46:varna: 美军那种一下加十几点命中的我也想要啊
+10:47:candy76041820: 你该想要 F6F。
+10:47:varna: 水雷战队又用不着
+10:48:candy76041820: 抢制空然后弹着观测射击啊。
+10:48:varna: 水雷战队打不出那个
+10:49:varna: 如果换成水上打击部队的话可能还行
+10:49:candy76041820: 不是还有吃喝大傻压阵嘛。
+10:49:varna: 那个就变成任务部队本队了
+10:49:varna: 估计这次我也就是打打AL作战，应该是以CVL为主吧
+10:50:varna: 希望别点名让RJ和橿原丸带路
+10:50:varna: 轻航我至少还有出云MAN和瑞凤
+10:51:candy76041820: 点名 RJ 2333333。
+10:51:sismvg: RJ10583
+10:52:varna: 两轻航配合水上打击部队的话我还能勉强一战
+10:52:varna: 支援作战我也有，必要时候让吃喝二将带上大白腿系列和火鸡去
+10:53:varna: 或者大 战 舰和肉奥装上46炮过去
+10:53:candy76041820: 六航母？
+10:54:varna: 2dd基本，余下四个全战舰/航母
+10:54:varna: 四格里那个编成是确实按照游戏来的，不然也不会带欠雪
+10:56:candy76041820: 怎么又变欠雪了，不是欠雷？
+10:56:lh_mouse: 雷
+10:56:varna: 欠喷|雷雪随意搭配
+10:57:candy76041820: http://picpaste.com/____________-FVSCWa4k.jpg ←咱家大活跃呀～
+10:57:varna: 我现在发现libclang补全方面c接口最好的参考是LEEE的补全插件……
+10:57:varna: eee
+10:58:candy76041820: EEEEEEEEEEEEEEEEEEEEEEEEE
+10:58:lh_mouse: auto completion?
+10:58:condy: geordi: << string(32, 'e')
+10:58:geordi: eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+10:58:hysw: 回头那LK做编译测试...
+10:58:condy: 肯定是emacs-auto-complete-async..
+10:58:varna: lh_mouse: +
+10:58:varna: condy: +
+10:59:* lh_mouse 的编辑器只能补同一个文件的
+10:59:varna: libclang直接有补全用的函数，还比较好
+11:00:varna: 手工遍历AST再对着那些DOGExygen生成的破文档太蛋疼
+11:01:candy76041820: >sismvg 
+11:01:sismvg: ?
+11:01:candy76041820: 你那控件后来怎么办了？
+11:02:sismvg: 代码由于突然断电全部被干掉了
+11:02:sismvg: 没有备份
+11:02:candy76041820: 你没保存？？
+11:02:sismvg: 保存过了的
+11:02:sismvg: 但是在被编辑的时候停电。。而且断了3次。。
+11:02:hysw: SSD有分区的必要么?
+11:02:candy76041820: 然后盘坏了？1 
+11:02:sismvg: 文件坏了
+11:03:candy76041820: ……
+11:03:varna: hysw: 跟ssd什么关系
+11:03:* candy76041820 下次计划只分一个区。
+11:03:sismvg: 估计是编辑器在搞自动恢复的时候出的问题。。
+11:03:hysw: 直接把 / 挂上去算了...
+11:03:* varna 计划只分两个区/boot和/
+11:04:varna: 而且挂上lvm
+11:04:hysw:  /boot / /m$
+11:05:candy76041820: >sg 下次你可以考虑自绘控件。
+11:06:sismvg: vs自带的控件。。
+11:06:candy76041820: 你用的哪个？
+11:06:sismvg: list view
+11:07:sismvg: 不幸中的万幸-》代码被干掉以前生成了个debug版本，不过速度感人。。
+11:08:candy76041820: ……你真每一条都 insertitem 扔进控件里了？
+11:08:sismvg: 没有
+11:08:varna: listview怎么会慢的
+11:08:hysw: 3998MHz...
+11:08:varna: 难道里面塞了成吨东西
+11:08:sismvg: 我的数据处理的慢
+11:08:sismvg: debug->30s release->0.5s
+11:09:varna: 多大数据
+11:09:sismvg: 1.5g
+11:09:candy76041820: >v LV 本来就慢。
+11:09:sismvg: 就是那些磁力链接
+11:09:varna: 你要并发下载？
+11:09:sismvg: 单纯的过滤器而已
+11:10:sismvg: 百度:bitsnoop list
+11:10:varna: 用的正则还是手写的
+11:10:sismvg: 正则
+11:10:varna: ...
+11:10:sismvg: 原本有一个不用正则的功能
+11:10:sismvg: 但是在写好以前就挂了
+11:11:varna: 咕嘿？
+11:12:sismvg: ?
+11:13:sismvg: 连续3天雷暴天气，蓄电池放到了山里为什么还会收到雨的影响。。
+11:13:candy76041820: >v 别说 SG 那 1.5GB 的数据，就我这边 docview 一共 17236 条放 LV 里就慢得不行了。
+11:14:sismvg: 2333
+11:14:varna: 放那么多干嘛……
+11:14:sismvg: 光速搜索用的那个控件似乎不错
+11:14:sismvg: 30W有一点卡而已
+11:14:candy76041820: 顺带一提那 17236 条在上一个版本里他们是这么干的：后台开个线程，一次往里扔一千条。没用虚拟模式。
+11:15:varna: 不行就自绘吧
+11:15:candy76041820: 虚拟的速度其实就够，自绘主要是有点高级效果。
+11:15:sismvg: utf8文本太悲惨，
+11:15:varna: GJK GTK GTH
+11:16:candy76041820: 纯 Win 吧。
+11:16:varna: eee
+11:17:candy76041820: >sg LVN_GETDISPINFO 取一条转一条。
+11:18:varna: 啊啊啊啊没药娘
+11:19:sismvg: ..不怕慢吗
+11:20:sismvg: 吧那东西扔到贴吧教坏小孩子去
+11:20:candy76041820: 一共才屏幕上显示那几条。
+11:21:varna: 教坏的都给我，我爆他们
+11:22:xxxxxxxx: 构件块 铬铁矿 罐头盒
+11:22:candy76041820: B 站那个老妈 cos 阎王的视频又上来了。
+11:23:varna: 噗，AL作战就两图
+11:23:varna: 「北方阿留申海域进军」，「佯动作战！打击北方海湾」
+11:24:candy76041820: 两图 = 打到一半被强制劝退了。
+11:24:varna: 最后要打击“体型非常小”的“北方栖姬”（机场），主力是巡洋舰（没说一等二等）和轻航
+11:26:xxxxxxxx: http://www.bilibili.com/video/av1026103/ <- 传说中的CF
+11:26:richselian joined channel
+11:26:candy76041820: http://www.acfun.tv/v/ac1323281_2 腋。
+11:26:candy76041820: RTF 又来揉舔撸了？
+11:27:xxxxxxxx: http://www.bilibili.com/video/av1381537/
+11:27:xxxxxxxx: 卧槽
+11:27:varna: 确认AL作战结束后实装的舰娘：白露型·春雨，大淀型·大淀
+11:28:varna: AL作战主力不可用于MI作战——算是历史
+11:28:candy76041820: 噗，果然大淀上来了。
+11:28:Plough joined channel
+11:28:varna: 推荐着任时间较短的提督通关AL作战
+11:29:Plough: AL和MI舰队不通用……
+11:29:candy76041820: 然后成天摸大淀的鼻子？
+11:29:varna: MI作战需要完成第一舰队（机动部队本队）和第二舰队（伴随护卫舰队）的编成才可以出击
+11:29:varna: 这简直
+11:30:varna: 余下的详细情报今天维护升级之后继续放出
+11:30:varna: Plough: AL是cvl和巡洋舰，估计MI的编成会很吓人
+11:31:xxxxxxxx: http://www.bilibili.com/video/av1382282/ 还有教做猪排饭的
+11:31:varna: 比如吃喝大白腿带路，长门级支援，幼女护卫
+11:31:Plough: 4BB2CV至少4只大建限定么
+11:31:richselian quit:Quit: richselian
+11:31:varna: 4cv2dd可能
+11:31:Plough: 3cv的哭了
+11:31:varna: 我倒是有5cv, 不过后三个都不能看
+11:32:Plough: 我有一只昨天才建出来……
+11:32:varna: 二改前苍龙应该只是轻航最上等水准
+11:32:varna: 唯一优势是乳量
+11:32:Plough: ……
+11:32:candy76041820: http://static.acfun.mm111.net/dotnet/artemis/u/cms/www/201407/21122738uzvk.jpg http://static.acfun.mm111.net/dotnet/artemis/u/cms/www/201406/131701025tfy.jpg 相性。
+11:34:candy76041820: http://picpaste.com/ae________________________________-0JprgwUU.png 苍龙 beam。
+11:34:candy76041820: http://picpaste.com/____________ae______________________________________-9MmMWdo0.jpg 吹雪。
+11:45:xxxxxxxx: 【星际老男孩】8月5日 GPL2014 S1 32强 A组 
+11:45:xxxxxxxx: 似乎看到了什么东西
+11:46:lh_mouse: 人头牛来可能只是防止 nick 被系统干掉
+11:47:varna: lh_mouse: 他成天在家里ML, 来这干嘛
+11:47:candy76041820_ joined channel
+11:47:candy76041820 quit:Ping timeout: 246 seconds
+11:48:xxxxxxxx: 来这里和羊驼比谁老婆实用
+11:48:varna: candy76041820_: 第一眼我以为是白雪，后来发觉是欠雪
+11:48:varna: 当然是我家电酱实用
+11:48:varna: 这次AL作战估计电酱和POI还得出场至少一个
+11:48:candy76041820: 图上是初雪……
+11:49:varna: 捂脸那个
+11:49:varna: 不对是白雪……
+11:49:candy76041820: 是白雪啊？
+11:49:varna: 原来是三人
+11:49:varna: 初雪白雪喷雪
+11:50:varna: http://tieba.baidu.com/p/3216188688 # 我突然蛋疼了
+11:50:varna: qtmd猥大发明
+11:51:candy76041820: 隈大发明。
+11:51:varna: KUMARINKO!
+11:52:varna: 说起来AL作战似乎是羽黑妙高出阵？
+11:52:varna: 看一眼
+11:52:lh_mouse: varna, boost::preprocessor
+11:52:candy76041820: http://pan.baidu.com/s/1eQeRk2m 本子。
+11:53:lh_mouse: 虽然我认为倒腾 pre processor 纯粹是 2B
+11:53:varna: +
+11:53:lh_mouse: 那帮家伙居然用 pre processor 造 array  list
+11:53:varna: 但是既然LZ认为那发明那么厉害，我也就给他造一下
+11:53:lh_mouse: ( 3 (1 2 3) ) 啥的
+11:53:hysw: 明天再装系统...
+11:53:lh_mouse: 可以变成  (1) (2) (3)
+11:53:varna: candy76041820: 已转存
+11:54:varna: ...
+11:54:varna: 说起来这次的北方栖姬也该是幼女
+11:54:varna: 幼女幼女！
+11:54:* candy76041820 昨天大量喷铝，鱼雷机喷得只剩 8+9 架。
+11:54:varna: RJ, 隼鹰，高雄，摩耶
+11:54:* candy76041820 得出结论，鱼雷机的攻击效率也看脸。
+11:55:varna: 我的出阵恐怕得是飞鹰、瑞凤、铃谷、最上
+11:55:candy76041820: ↑↑是 B 站某人在评论里发的。
+11:55:varna: 高雄摩耶也行，但是练度低，恐怕会出事
+11:56:candy76041820: ↑然后开着 USS Houston 跑去击沉了二航战。
+11:56:varna: 余下两艘伴随舰如果可能的话尽量让Hyper北上大人出阵，不然有点担心能不能赢
+11:57:candy76041820: 2011年日本东北地方太平洋近海地震引起的海啸传播到中途岛时浪高约1.5m，海浪深入中途岛环礁东岛内地，约60%的陆地遭海水淹没。沙岛则有20%的陆地遭海水覆盖。珊瑚环礁内至少有一千只信天翁，与数千只其他鸟类遭海啸巨浪席卷死亡。[1]
+11:57:varna: 噗
+11:59:candy76041820: 有一些学者认为AF暗号说是美国为了掩盖真正的情报手段---间谍网而散布的，如半藤一利提到飞龙号被俘的军人相宗邦造曾在美军那看到刚服役的航母隼鹰的照片而仰天长叹。
+12:00:candy76041820: 由于日军错误低估了美军奇迹般的维修能力，日本海军自始至终都以为美军只有企业号及大黄蜂号两艘航母能投入战斗中。
+12:01:varna: 对了
+12:01:varna: 这次官推没说弹性2333
+12:02:Plough quit:Remote host closed the connection
+12:02:candy76041820: 噗。
+12:02:Plough joined channel
+12:03:candy76041820: 8时45分，利根4号机又报告进一步发现两条巡洋舰（发报时间15分钟前）之后请求返航。阿部少将的第八战队（筑摩，利根）一边起飞换班的侦察机，一边命令4号机继续侦察。这是因为从常理来说它的燃料还很足够。
+12:03:candy76041820: 南云在54分时为了进行无线测定方位命令4号机打开长波台，但是55分时4号机报告“有10架飞机向你方飞去”却没打开长波。[
+12:03:candy76041820: ↑听说侦察可以交给你？利根？
+12:06:varna: 噗，苍蓝出二傻了
+12:07:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=d27c55202b34349b74066e8df9d114ce/a2cc7cd98d1001e9ce50a035bb0e7bec54e79798.jpg # 这绝对是2-4开沟里了
+12:12:candy76041820 quit:Ping timeout: 246 seconds
+12:13:[nic] joined channel
+12:14:FrankHB joined channel
+12:29:sismvg: 混蛋松鼠。。把我所有的食物都吃光了。。然后连续N天下雨+太阳耀斑
+12:30:xxxxxxxx: 跟你说了外面种田不实际的
+12:30:sismvg: ..在我造肥料泵之前就吃完了。。
+12:31:sismvg: 水种植点力好麻烦
+12:31:xxxxxxxx: 研究室内栽培
+12:31:[[nic]] joined channel
+12:31:xxxxxxxx: 产量比室外田靠谱多了
+12:38:[nic] joined channel
+12:38:sismvg_ joined channel
+12:41:sismvg quit:Ping timeout: 240 seconds
+12:43:hope1 joined channel
+12:48:wsyh joined channel
+12:51:hysw quit:Ping timeout: 240 seconds
+13:04:varna: 好想侵犯红旗啊
+13:04:xxxxxxxx: 红旗不是船
+13:05:varna: 是药娘
+13:06:Plough: 不是药娘
+13:06:varna: 快吃药
+13:07:Plough: 不是药娘 不吃
+13:08:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=8a09ec48d588d43ff0a991fa4d1ed2aa/7605e9af2edda3cc0ad3f31d02e93901213f928f.jpg
+13:08:varna: ^ 航空兵
+13:12:lh_mouse: 〇（マル）
+13:18:varna: Plough: AL作战看起来应该要两个重巡
+13:18:Plough: 压力略大……
+13:19:varna: Plough: 历史上有高雄和摩耶，有的话可以考虑；最上属性也还可以
+13:19:Plough: 高雄摩耶都有
+13:19:varna: 如果只是4-4难度的话，大概不需要等级很高的
+13:19:sismvg: 写个神经元网络初始化真是个力气活。。
+13:19:Plough: 不过都没怎么练
+13:19:Plough: 高雄拿到手以后我就没用过……
+13:19:varna: 爱宕我六月底就拆了
+13:20:varna: 最烦爱宕本子
+13:20:sismvg: 在我知道有舰娘以前我以为高雄就是苍蓝里的高雄。。
+13:20:Plough: 233333
+13:20:varna: sismvg: 后来舰娘活动也有那个高雄
+13:20:varna: Plough: 摩耶比较方便，我记得lv19就改造了
+13:20:sismvg: 还有403能撸，本子能玩4p
+13:20:varna: 伊欧娜有好多分身，至少九个
+13:21:Plough: 那出来以后我肝一下摩耶
+13:21:sismvg: 分身有什么好的
+13:21:sismvg: 3姐妹才赞
+13:21:varna: sismvg: 可以用各种部分服侍各种部分
+13:21:sismvg: ):TL
+13:22:varna: 全方位体验，潜特型潜水栖姬·伊欧娜，你值得拥有
+13:22:varna: 现在购买还附赠试制晴岚一组
+13:22:sismvg: 现在购买还附送金刚一架
+13:22:sismvg: 一艘
+13:22:varna: 摩耶才可怕
+13:22:Plough: 重力炮么
+13:23:varna: 摩耶一炮击沉两个满血火鸡的光辉战绩已经载入史册
+13:23:varna: 大 巡 洋 舰
+13:23:sismvg: 3d做船太坑爹
+13:23:varna: 我觉得不错
+13:23:sismvg: 2d预算不够
+13:23:varna: 省钱，效果也还好
+13:23:sismvg: 3d效果还好就是违和感。。
+13:24:varna: 那二十二艘长i良su级zu一出，我整个人都二一号电探了
+13:24:sismvg: 和龙珠里马上要被炸掉的石头是一个感觉
+13:24:varna: 苍蓝的不违和啊
+13:24:varna: 你见过给金刚喂二十二个呜十铃的么
+13:24:sismvg: ...
+13:25:varna: 整整一千一百铃啊
+13:25:xxxxxxxx: SL SL SL SL
+13:25:sismvg: 我去看看销量，能不能过2季线
+13:25:varna: 没戏
+13:25:varna: 即使销量可以，剧情也全灭了
+13:26:varna: 摩耶，蛤撸娜，与太郎和大傻的情节都不对
+13:26:sismvg: 卷均1W
+13:26:sismvg: 可以和俺妹一个样子嘛
+13:26:sismvg: 第一季12本来是妹线，然后出个未放松直接接到第二季
+13:26:varna: 那样除了看大舰桥之外还有什么看点么
+13:27:xxxxxxxx: http://tieba.baidu.com/p/3214674517
+13:27:varna: xxxxxxxx: linux系统我记得也有些指标的？
+13:27:sismvg: pupupu
+13:27:varna: 不说LK
+13:27:varna: 至少coreutils是有标准的
+13:27:xxxxxxxx: LSB?
+13:28:sismvg: 安卓统一？随便改装一下又出个新手机
+13:28:varna: 应该是LSB
+13:28:xxxxxxxx: 和安卓统一简直是
+13:29:xxxxxxxx: 已经SL10次
+13:29:sismvg: 其实我在想苍蓝的制作商一定没有想到苍蓝卖这么好。。
+13:29:sismvg: 所以就。
+13:29:* varna 订了一个lumia 820
+13:29:xxxxxxxx: 劝降成功!
+13:29:varna: sismvg: 他们主要是去看高雄的
+13:29:condy: 土豪
+13:29:sismvg: 痴女？
+13:29:sismvg: lumia 820模型
+13:30:varna: condy: 我那个旧手机总计都用九年了，其中我爸用了四年
+13:30:condy: 9年...Orz...
+13:30:varna: sismvg: 有那钱我不如去买个驱逐舰巡洋舰什么的模型学着做
+13:30:varna: condy: 也可能是八年
+13:30:sismvg: 其实老手机有好处的
+13:31:xxxxxxxx: 为啥是lumia?
+13:31:sismvg: 手游公司就没有办法强迫你装他们的应用
+13:31:condy: 8年老手机，生命力好持久。
+13:31:sismvg: 因为你的手机带不动
+13:31:condy: 磁块看起来挺清爽的。 <- 一定是因为这个。
+13:32:varna: xxxxxxxx: 不喜欢安卓，想要个WP的，就挑了个看起来一般便宜的防弹插板
+13:32:sismvg: WP，苹果装个app太费劲，安卓又危险
+13:33:varna: 我不太用得着手机app
+13:33:xxxxxxxx: http://zhidao.baidu.com/link?url=I2kesCBSKCQmqFQJWIhSLZnrf3tdzH335Hf6xt4mF99plwKIClPfW0MJYUsdFOY2eZQNGqRlkfjRNiww5uBFIa 似乎没那么防弹...
+13:33:varna: 主要是去外地开会或者其他事情的话查地图会方便点
+13:33:sismvg: 看书->music->电话，这3个功能就够了。。
+13:33:sismvg: 跪
+13:33:varna: 音乐我单独用mp3
+13:33:sismvg: 不嫌烦吗。。
+13:33:condy: 专业mp3？
+13:33:varna: 不专业
+13:33:sismvg: 有钱人
+13:34:varna: 但是电量至少比手机大
+13:34:sismvg: 快点投资dogecoin
+13:34:varna: 人人都能赚到的钱里一定有陷阱
+13:34:wsyh: 算了... 回头弄到HDD之后再加swap...
+13:34:sismvg: 所以才减产
+13:35:sismvg: 5月份的时候每个区块25W个doge，现在只有6W个
+13:35:varna: nagecoin
+13:35:varna: wow so idol
+13:35:sismvg: nico ni~
+13:35:varna: 二（ni）航（co）二（ni）航（co）二（ni）
+13:36:sismvg: 羞耻
+13:36:varna: Vals incoming!
+13:36:sismvg: ?
+13:37:sismvg: winter is coming!
+13:37:varna: Val是盟军对九九式舰爆的编号
+13:37:wsyh: varna: 话说系统盘用啥fs比较好？
+13:37:varna: 如果摇晃苍龙的胸部就会掉出来
+13:37:varna: wsyh: 我都无脑ext4，鉴于你是壕，我建议你加入btrfs先锋队
+13:38:sismvg: 史塔克家族总是说winter is coming,但是他们的二boss却死在婚礼上
+13:38:sismvg: 简直讽刺..
+13:38:xxxxxxxx: 我反正死都不用btrfs了
+13:39:sismvg: 最近那个用热能做硬盘的项目怎么了
+13:39:varna: 我只学到一个教训：开lvm
+13:40:wsyh: 算了... ext4... 我还是等弄到HDD之后再用btrfs...
+13:41:sismvg: 有什么比vector<vector<int>>更加好的二维数组的选择吗
+13:41:varna: int m[2][4][11]
+13:41:sismvg: 。。。没办法动态调整啊。。
+13:41:varna: /* wow so nage */
+13:42:varna: vector<vector<int>>哪里不好了
+13:42:sismvg: 看起来不爽
+13:42:varna: 挺好的
+13:42:varna: 不行你造点糖
+13:45:xxxxxxxx: SL SL SL SL SL
+13:46:sismvg: 我受够了rimworld的AI
+13:46:sismvg: 挖掉个矿石又跑到地里去种东西。。
+13:47:hope1: 什么游戏的AI都这样
+13:47:sismvg: 这是猹
+13:47:xxxxxxxx: 明明都是按照优先级来的
+13:47:sismvg: 挖矿1，种地2
+13:48:sismvg: 前期电能是个问题
+13:48:xxxxxxxx: 不是问题
+13:48:sismvg: 地热和好地形的抉择
+13:48:varna: hope1: 舰娘好
+13:48:varna: hope1: 舰娘都是玄学，没AI
+13:48:sismvg: 太阳能容易烧掉，效率低
+13:48:xxxxxxxx: 除非你没事干非要用日光灯和机枪台
+13:48:sismvg: 日光能不用来种菜的嘛
+13:49:sismvg: 能字多打了
+13:49:sismvg: 今天奇迹般的刷出了烹饪123
+13:49:sismvg: 12
+13:49:xxxxxxxx: 但是一个种植间只要两个日光灯
+13:49:sismvg: 小人心情大好，然后没视频储备了。。
+13:49:sismvg: 食品
+13:50:xxxxxxxx: 视频储备暴露
+13:50:sismvg: U,too much know
+13:51:xxxxxxxx: 这绝对不科学要不是你在外头的田太小 要不就是室内种植没建
+13:51:[nic] joined channel
+13:51:sismvg: 被吃光了，被松鼠和爆炸鼠
+13:52:xxxxxxxx: 多打打猎
+13:52:sismvg: 如果你在墙上开一个门和一个洞海盗会走哪一个？
+13:52:xxxxxxxx: 没试过 我通常不考虑放他们进来
+13:53:sismvg: 不开的话他们不是会用迫击炮吗？
+13:53:xxxxxxxx: 炮击的和普通海盗是不同的
+13:53:xxxxxxxx: 普通海盗不会炮击你
+13:54:sismvg: soga
+13:54:sismvg: soge
+13:54:xxxxxxxx: doge
+13:54:varna: nage
+13:54:sismvg: 以及海盗会从什么地方出来？
+13:55:sismvg: magi
+13:55:xxxxxxxx: 反正通常不在地图中间出来
+13:56:xxxxxxxx: 你要不走到太靠边的地方 海盗一般不会落到你家里
+13:57:varna quit:Quit: leaving
+14:04:lizy__ joined channel
+14:06:lizy__ quit:Quit: 离开
+14:38:Xilzzerts joined channel
+14:42:cleamoon quit:Read error: Connection reset by peer
+14:43:cleamoon joined channel
+14:45:cleamoon quit:Read error: Connection reset by peer
+14:47:wsyh: efi...
+14:50:sismvg: win8&efi
+14:54:candy76041820 joined channel
+14:54:candy76041820: >HB Nope。
+14:58:candy76041820: >v 听说你订了个 Lumia 820？
+15:00:condy: 已证实。
+15:01:xxxxxxxx: 糖球怎么说?
+15:01:candy76041820 quit:Quit: Page closed
+15:01:xxxxxxxx: 噗噗噗糖球跑了
+15:03:hope1: http://www.csd.uwo.ca/~magi/personal/humour/Computer_Audience/Last%20night%20I%20dreamed%20that%20the%20Real%20World%20had%20adopted%20the%20UNIX%20Philosophy.html
+15:04:ring quit:Quit: Bye
+15:30:wsyh: 靠为啥有两个grub.cfg...
+15:39:condy: geordi: { static volatile int a = 10; cout<<a; }
+15:39:geordi: 10
+15:40:condy: geordi: { static const volatile int a = 10; cout<<a; }
+15:40:geordi: 10
+15:40:condy: geordi: { register static const volatile int a = 10; cout<<a; }
+15:40:geordi: error: conflicting specifiers in declaration of 'a'
+15:40:condy: geordi: { auto static const volatile int a = 10; cout<<a; }
+15:40:geordi: error: two or more data types in declaration of 'a'
+15:48:wsyh: 回头可以去编译Linux Kernel去了...
+15:53:lh_mouse: condy, C++11 里面 auto 是 type speciifier   以前（包括 C 里面）是 storage specifier
+15:55:ring joined channel
+16:02:condy: ...
+16:10:JQK quit:Remote host closed the connection
+16:11:JQK joined channel
+16:18:lh_mouse:  10 files changed, 14 insertions(+), 12063 deletions(-)
+16:20:lh_mouse: E:\MCF\MCFBuild 0.4 (incomplete)\.tmp-debug\MCFBuild>make
+16:20:lh_mouse: g++ -std=c++14 -Wall -Wextra -Wsign-conversion -Wsuggest-attribute=noreturn -pipe -mfpmath=sse,387 -march=core2 -masm=intel -Wnoexcept -D_GLIBCXX_DEBUG -O0 -g -Wall -Wextra -static -fwhole-program -nostdlib -Wl,-e__MCF_ExeStartup,--disable-runtime-pseudo-reloc,--disable-auto-import -Wl,--wrap=atexit,--wrap=malloc,--wrap=realloc,--wrap=calloc,--wrap=free,--wrap=__cxa_throw -O3 -o MCFBuild.exe src/ConsoleOutput.o src/DependencyDatabase.o 
+16:20:lh_mouse: src/FileSystem.o src/JobScheduler.o src/Localization.o src/MCFMain.o src/Model.o src/ProjectFile.o src/Shell.o src/Build.o -Lsrc -lmcflite -lstdc++ -lmingwex -lmingw32 -lgcc -lgcc_eh -lmcflite -lmsvcrt -lkernel32 -luser32
+16:20:lh_mouse: 吐
+16:24:cleamoon joined channel
+16:34:cleamoon: http://newpaper.dahe.cn/dhb/html/2014-08/08/content_1125617.htm?div=-1
+16:34:lh_mouse: FFF 确实容易吓坏小孩子
+16:35:cleamoon: http://www.zhihu.com/question/24765834
+16:35:wsyh: 8分钟...
+16:37:xxxxxxxx: 附近群众看到两人后无不神色慌张，迅速跑开，其中一名年轻女子还被吓得当场大哭。
+16:37:xxxxxxxx: ^异性恋当场大哭
+16:40:wsyh: 回头复制一下config就完事了...
+16:50:sismvg: yeap rain
+16:54:xxxxxxxx: 随机那个难度真坑
+17:08:iyzsong: = =
+17:15:sismvg: 随机我玩过啊。。
+17:15:sismvg: 不是太难，
+17:16:sismvg: 比普通要好点，起码不是整天下雨，日蚀
+17:23:hope1 quit:Ping timeout: 250 seconds
+17:34:iyzsong quit:Quit: poweroff
+17:36:xxxxxxxx: 普通简单的要死
+17:43:ring quit:Ping timeout: 272 seconds
+18:04:lh_mouse: geordi, <<is_same<p1, p2>::value; typedef void (*p1)(int) noexcept; typedef void (*p2)(int);
+18:04:geordi: error: 'p1' declared with an exception specification
+18:04:lh_mouse: geordi, <<is_same<p1, p2>::value; typedef void (*p1 noexcept)(int); typedef void (*p2)(int);
+18:04:geordi: error: expected ')' before 'noexcept'
+18:04:lh_mouse: geordi, <<is_same<p1, p2>::value; extern "C" { typedef void (*p1)(int); } typedef void (*p2)(int);
+18:04:geordi: 1
+18:23:JQK quit:Ping timeout: 245 seconds
+18:39:marisa__ joined channel
+18:47:condy: 大家在线听音乐用的哪个产品？
+18:47:lolisa: bilibili(死
+18:48:condy: ...这个真的大丈夫。。。
+18:48:lolisa: 同人音乐博物馆太大，爬不下来。。。
+18:49:condy: 所以才要在线呀。
+18:49:lolisa: 怕下来我估计我硬盘也装不了
+18:50:condy: 六维空间上有个touhou同人音乐1.3T....我的硬盘一共也才500G。。。
+18:50:lolisa: 我的200G QAQ
+18:50:condy: (。・_・。)
+18:50:condy: 咦哈哈哈哈。
+18:57:sismvg: condy:http://labrosa.ee.columbia.edu/millionsong/
+18:57:sismvg: 刚好塞满你的**
+18:57:Xilzzerts quit:Read error: Connection reset by peer
+19:04:condy: 有和谐。
+19:04:condy: sismvg: 
+19:07:varna joined channel
+19:08:varna: Plough: 爆
+19:11:lh_mouse: lolisa, 快到碗里来
+19:12:lhanjian joined channel
+19:14:biergaizi quit:Quit: Konversation terminated!
+19:16:biergaizi joined channel
+19:19:lolisa: yada!
+19:20:lolisa: 话说群里有MA*的资料没？我只找到SMA*的
+19:20:JQK_Phone joined channel
+19:26:endle joined channel
+19:26:varna: lolisa: 都没听说过
+19:29:* lh_mouse 继续吃冰淇淋
+19:30:varna: 小耗来吃奶酪
+19:42:hope1 joined channel
+19:44:lolisa: Memory Bounded A*...
+19:44:lolisa: Simplified MA*
+19:44:lolisa: 话说羊陀最近过得怎么样DAZE
+19:45:varna: lolisa: 首先疑问句不要用daze...
+19:46:varna: 最近我基本在养肝，出去运动运动，计划抽时间打AL作战
+19:46:varna: 正在看libclang弄个补全出来
+19:46:varna: 没有药娘爆，所以你来吧，我侵犯你
+19:46:condy: 哪个语言的补全呀？
+19:47:varna: libclang只能做c/艹/objc的，我希望实用化的也就是c/艹
+19:47:condy: 这算不算造轮子。。
+19:47:lolisa: yadaQAQ
+19:47:lolisa: 去爆药娘四去
+19:47:varna: condy: 算，但是我打算连编辑器的轮子都造一遍
+19:47:lh_mouse: lolisa, 快到碗里来
+19:48:varna: 吃饭
+19:48:lh_mouse: lolisa, 快到碗里来
+19:48:lolisa: QAQ
+19:49:condy: 写个IDE吗。。
+19:49:lh_mouse: lolisa, 快到碗里来
+19:53:lh_mouse: 我想建个标准 C++ 的企鹅群你们有兴趣吗
+19:56:lolisa: 有啊有啊
+19:58:lh_mouse: lolisa, 快！到！碗！里！来！
+20:01:Plough: Alpaco也准备去造编辑器了？
+20:02:sismvg: TXQQ-》一个聊天软件还给你加广告
+20:02:condy: GTalk不考虑一下吗。
+20:03:sismvg: 某手游公司员工：没有QQ怎么给项目组里的人发文件？
+20:07:endle: 我觉得 slack 挺适合讨论的
+20:15:sismvg: 现在瞎的晚上都不敢打开代码了。。
+20:15:sismvg: 吓
+20:25:Plough: 我怎么觉得维护结束又得推迟
+20:25:Plough: 现在还没好
+20:26:Plough: 果然又推了……
+20:41:sismvg: C++11,让代码更加的像方块
+20:51:ring joined channel
+20:51:lolisa: 吱吱，丧！心！病！狂！
+20:55:varna: lh_mouse: 企鹅没兴趣
+20:55:varna: Plough: 我一直想造，但是现在仍然没什么明确想法，所以先弄点砖头
+20:55:Plough: 新装备试制41炮
+20:56:Plough: 难不成是MI的奖励么……
+20:56:varna: 不会
+20:56:varna: 给这个的话群众会暴跳如雷
+20:57:Plough: 维护还没好
+20:57:Plough: 不会又跳吧
+20:57:varna: 无所谓了
+20:57:varna: 我又没有两页大发
+20:58:Plough: 远征啊
+20:59:Plough: 另外貌似这回支援舰队必须补给满了才能出去？
+21:00:varna: 本来也是
+21:00:varna: 只有第一次支援不耗资源
+21:00:varna: 远征不补满还是危险
+21:01:ring quit:Read error: Connection reset by peer
+21:02:Plough: 还没好
+21:02:Plough: 盯官推中
+21:04:Plough: 利根筑摩改二实装
+21:05:Plough: 追加ボイス実装
+21:05:Plough: 这个是啥
+21:05:Plough: Voice……
+21:05:varna: 利根筑摩改二早就实装了
+21:05:Plough: 追加语音实装
+21:06:varna: 而且这两个是lv70加图纸
+21:06:Plough: 还没好
+21:06:Plough: 真心感觉又要跳
+21:07:varna: 跳了又不影响
+21:07:varna: 我都两天没动远征了
+21:08:Plough: 远征……
+21:08:Plough: 我要大建
+21:08:varna: @户愚吕提督
+21:09:JQK joined channel
+21:10:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+21:11:sismvg: 又把output打成ouput了。。
+21:12:Plough: 到点了啊喂
+21:12:Plough: 咋还不开
+21:23:Plough: 开了
+21:28:Plough: 春雨看起来似乎不错
+21:29:lolisa quit:Ping timeout: 260 seconds
+21:33:varna: 我要大淀
+21:33:xxxxxxxx: 大丁丁?
+21:35:Plough: 大淀没啥感觉
+21:35:Plough: 只想要春雨
+21:35:Plough: 爆卡中
+21:41:lolisa joined channel
+21:42:lh_mouse: lolisa, 快！到！碗！里！来！
+21:43:lolisa: 吱吱不要QAQ
+21:43:lolisa: 我还在写代码QAQ
+21:43:sismvg: visual敢用内存不
+21:44:sismvg: visual studio
+21:44:lolisa: linuxer表示你说啥=w=
+21:44:sismvg: eplise
+21:44:xxxxxxxx: linuxer是啥好吃么?
+21:45:lolisa: yada QAQ hentai
+21:45:sismvg: eclipse..
+21:45:lolisa: lolisa不能吃QAQ
+21:48:sismvg: 百度的上传速度越来越慢
+21:50:lh_mouse: lolisa, 快！到！碗！里！来！
+21:52:lolisa: Y！A！D！A
+21:52:varna: 春雨这立绘……
+21:52:lh_mouse: lolisa, 快！到！碗！里！来！
+21:52:hope1: http://people.mozilla.org/~mverdi/lightspeed/lightspeed-standalone.pdf 噗
+21:52:lh_mouse: 睡觉了
+21:52:condy: 10点睡觉。。。真是早。
+21:53:lh_mouse quit:Read error: Connection reset by peer
+21:53:varna: 春雨这立绘是白露级的制服+猫娘的帽子+村雨的脸+运输桶……
+21:54:varna: 卧槽是舰队等级弹性？
+21:54:sismvg: 5M上传了10分钟。。
+21:55:Plough: 貌似是……
+21:55:varna: 春雨大淀时津风，阳炎级夕云级+云龙
+21:55:varna: 毫无诱惑力啊
+21:55:varna: 另，dmm我上不去了
+21:55:Plough: ……
+21:55:Plough: 我能上
+21:55:Plough: 刚才很卡，现在好多了
+21:56:varna: icmp可达
+21:56:varna: 今晚估计是没戏了
+21:56:Plough: 我打算试试能不能捞到春雨
+21:56:varna: 另外高练度队伍说不定会碰到撸酱，而且有道中夜战
+21:56:Plough: 捞不到该大建大建
+21:57:varna: 明天开始仔细考虑下攻略事项
+21:57:sismvg: 自从GFW屏蔽google以后百度就越来越嚣张了
+21:57:varna: 噗，发生错误？
+21:57:Plough: 502么
+21:57:hope1: 宁愿用bing
+21:57:Plough: 目测是ACGProxy的事
+21:57:sismvg: 300KB的数据就是传不上去
+21:58:Plough: 我刷出过几次
+21:58:varna: 哦，间歇抽风
+21:58:varna: 上去了
+21:58:varna: 今晚先睡觉，留个期待
+21:58:varna: 我要过AL
+21:59:Plough: 先日常开发建造
+21:59:Plough: 我要不要来三发巨根
+22:00:varna: 噗，第一点有反舰导弹！？
+22:01:varna: 机动部队本队编成要求航母至少二艘至多四艘
+22:01:varna: 同舰队可以编入最多两舰的战舰或者航战
+22:02:varna: 伴随护卫舰队以水雷战队编成为主
+22:02:varna: 考虑到火力和索敌，可以编入至多两舰的重巡或者航巡
+22:03:varna: ^ 索敌沟！？
+22:03:Plough: ……
+22:03:varna: 现在可以用第一舰队和第二舰队组成联合舰队
+22:03:Plough: 教练我没彩云啊
+22:03:xxxxxxxx: http://c.hiphotos.baidu.com/album/s%3D680%3Bq%3D90/sign=0c7d26120b7b020808c93ce952e283ee/5d6034a85edf8db1a96872d30823dd54574e74c6.jpg?v=tbs
+22:03:varna: 出击限定MI作战
+22:04:varna: 出击过活动的舰娘不可以进行支援
+22:04:Plough: 简直蛋碎
+22:04:varna: 熟练舰载机整备员 ——总觉得这次的作战会很可怕
+22:04:varna: 新系统·护卫退避，实装
+22:05:varna: 大破的舰娘可以由健在的一艘幼女护卫撤退
+22:05:varna: 以上
+22:05:varna: 变得好玩起来了，但MI作战对主力要求太可怕
+22:06:varna: 传统的日式水雷战队编成，是先导的轻巡和四艘一组的重武装驱逐舰
+22:06:varna: 这样的话基本会考虑川内级
+22:06:varna: 长良级也不错，但立绘问题练起来的人未必多
+22:07:varna: 而AL和MI恐怕总共需要五艘左右的驱逐舰出击，练度应该也有要求
+22:08:Plough: MI放弃
+22:08:endle quit:Quit: Leaving
+22:08:Petrus07 joined channel
+22:08:varna: 传统的阵容说不定会是雪风·时雨·岛风·夕立·天津风·Bep
+22:08:Plough: 用不起……
+22:08:Plough: 岛风天津风我只在萌娘百科上见到过
+22:08:varna: 这里面我练起来的只有岛风和POI
+22:08:varna: 岛风等级还不高
+22:08:Plough: 雪风在演习里见过
+22:08:varna: 岛风喂了加对空，前天我才知道
+22:08:Plough: Bep以后会见到
+22:09:Plough: ……岛风去哪捞
+22:09:sismvg: 粪饿鬼->臭小鬼。。。日文太变态了
+22:09:varna: 2-4 A
+22:10:varna: 而轻巡的方面，AL作战的夜战部分考虑投入一艘雷巡
+22:10:Plough: 来三发巨根
+22:10:Plough: 秘书二傻
+22:10:varna: 重巡带路几乎是在逼我放弃MI作战
+22:10:Plough: 12.7mm机枪
+22:11:Plough: 25mm连装机枪
+22:11:varna: ……
+22:11:Plough: 7.7mm机枪
+22:11:Plough: 我想骂人了
+22:11:varna: 哈哈哈哈
+22:11:varna: 顺便一提，25mm三连装机枪是不能齐射的
+22:12:varna: 极其熊包
+22:12:Plough: 25mm留下
+22:12:Plough: 其他两个当当当当当当当
+22:12:varna: 那么重新考虑编成
+22:12:lolisa quit:Ping timeout: 246 seconds
+22:13:Plough: 先让北上大人去1-5A吧
+22:13:varna: 如果我希望确保AL作战的话，就要出动飞鹰、瑞凤、北上、电酱、高雄和摩耶
+22:14:varna: 而MI作战的编成是赤城、加贺、翔鹤、大井、榛名、金刚
+22:14:sismvg: go to bed
+22:14:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+22:15:varna: 护航舰队的编成是呜十铃、岛风、夕立、雷、铃谷、最上
+22:16:varna: 决战援护（如果用）的战舰是雾岛、比叡、山城、陆奥
+22:16:Plough: 没有陆奥
+22:17:Plough: 目测我在大建几发就有不少了
+22:17:varna: 总结起来，46炮不够，烈风不够，但加上紫电改二还勉强
+22:17:varna: 如果真打会极其惨烈
+22:17:varna: 刚才似乎已经有人被核潜艇爆了
+22:18:varna: 考虑到弹性难度弹性掉落，主力必须上高等级
+22:18:Plough: 今天的前两发普建是初雪和雷
+22:18:varna: 同时这期间如果打MI, 我的东急队就瘫痪了
+22:18:Plough: 建完看看接下来是啥
+22:19:varna: 考虑到MI作战，AL的队伍其实很糟糕
+22:20:varna: 两个重巡等级太低（30附近），瑞凤主要优势是可爱不是能打（lv40），飞鹰低速（lv7x），电酱算是有玄学（lv115），北上大人不知道摔不摔（lv97）
+22:21:Plough: 我快到40级了……
+22:22:varna: 这回似乎是舰队等级弹性
+22:22:Plough: 1-5会弹吗
+22:22:Plough: 不会就不怕
+22:22:varna: lv40除第一点之外追加开幕雷击
+22:22:varna: lv80全潜水队追加开幕雷击
+22:22:Plough: 还能练级就成
+22:23:varna: lv80之前都没问题
+22:24:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f74971c0c0fdfc03e578e3b0e43e87a9/0c9e8eef76094b36931a9cd3a0cc7cd98d109d33.jpg
+22:24:varna: ^ 似乎是新阵型
+22:25:Plough: 看到了，好可怕的样子
+22:26:lolisa joined channel
+22:27:varna: E1似乎要索敌进门
+22:27:varna: 数值不确认
+22:27:varna: 先睡了
+22:27:varna quit:Quit: leaving
+22:29:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:41:xxxxxxxx: http://www.bilibili.com/video/av1386694/
+22:43:xxxxxxxx quit:Quit: Leaving...
+22:56:lhanjian quit:Ping timeout: 240 seconds
+23:22:lhanjian joined channel
+23:28:JQK quit:Remote host closed the connection
+23:31:lolisa quit:Ping timeout: 255 seconds
+23:33:hope1 quit:Ping timeout: 245 seconds
+23:39:JQK joined channel
+23:43:lolisa joined channel
+23:55:Plough: 哎呦我捞到谷风了

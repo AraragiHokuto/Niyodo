@@ -1,0 +1,172 @@
+00:06 find-nc quit:Ping timeout: 244 seconds
+00:06 find-nc joined channel
+00:09 find-nc quit:Client Quit
+00:10 find-nc joined channel
+00:14 AutoGavy joined channel
+00:19 find-nc quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+00:49 stardustx quit:Quit: ZzZz
+01:05 stardust joined channel
+01:05 cleamoon quit:Ping timeout: 240 seconds
+01:06 stardust is now known as stardustx
+01:38 Stevearzh joined channel
+01:38 iyzsong: - -b
+01:43 FrankHB joined channel
+01:56 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+02:25 CyrusYzGTt quit:Read error: Connection timed out
+02:33 CyrusYzGTt joined channel
+02:38 AutoGavy quit:Quit: Connection closed for inactivity
+02:51 lh_mouse quit:Ping timeout: 240 seconds
+03:00 stardustx quit:Ping timeout: 260 seconds
+05:12 Youmu quit:Quit: Connection closed for inactivity
+05:18 Youmu joined channel
+05:50 lhanjian joined channel
+07:08 lh_not_bot quit:Ping timeout: 276 seconds
+07:08 lh_not_bot joined channel
+07:32 Youmu quit:Quit: Connection closed for inactivity
+07:55 lhanjian quit:Quit: Connection closed for inactivity
+08:23 Meow-J quit:Ping timeout: 264 seconds
+08:31 Meow-J joined channel
+09:09 CyrusYzGTt quit:Ping timeout: 244 seconds
+09:30 xxxxxxxxx quit:Ping timeout: 244 seconds
+09:55 iyzsong joined channel
+09:55 iyzsong quit:Changing host
+09:55 iyzsong joined channel
+10:01 Stevearzh quit:Remote host closed the connection
+10:02 Stevearzh joined channel
+10:09 iyzsong: 早~
+10:18 iyzsong quit:Ping timeout: 246 seconds
+10:24 iyzsong joined channel
+10:26 Youmu joined channel
+10:31 hope1 joined channel
+10:32 hope1: 开了一日一片的左洛复
+10:33 iyzsong: orz
+10:35 hope1: iyzsong, 宋兄这里情况如何
+10:39 iyzsong quit:Ping timeout: 276 seconds
+10:42 condy: _(:з」∠)_
+10:43 iyzsong joined channel
+10:50 iyzsong quit:Ping timeout: 252 seconds
+10:56 iyzsong joined channel
+11:07 lhanjian joined channel
+11:15 hope1 quit:Ping timeout: 252 seconds
+11:32 iyzsong: -.-
+11:45 iyzsong quit:Read error: Connection reset by peer
+11:57 iyzsong joined channel
+12:07 stardustx joined channel
+12:16 hope1 joined channel
+13:15 lhanjian quit:Quit: Connection closed for inactivity
+14:12 Youmu quit:Quit: Connection closed for inactivity
+14:13 Mokou joined channel
+14:19 iyzsong quit:Ping timeout: 250 seconds
+14:25 iyzsong joined channel
+14:27 hope1 quit:Ping timeout: 276 seconds
+14:55 whocares_2 quit:Ping timeout: 276 seconds
+15:00 whocares_2 joined channel
+15:07 Youmu joined channel
+15:30 stardustx quit:Ping timeout: 250 seconds
+15:40 root joined channel
+15:41 lh_mouse joined channel
+15:41 root is now known as Guest69206
+15:43 Guest69206: ubuntu multi-arch 有了解的麼
+15:43 february quit:Remote host closed the connection
+15:44 Guest69206 quit:Client Quit
+15:57 stardustx joined channel
+16:35 madaossan joined channel
+16:36 madaossan quit:Client Quit
+16:40 stardustx is now known as stdstx
+16:55 Neo_Chen joined channel
+17:24 Neo_Chen quit:Quit: Leaving
+17:32 Youmu quit:Quit: Connection closed for inactivity
+17:36 lhanjian joined channel
+17:54 iyzsong: 烧~
+17:57 lh_mouse: 焼~
+18:19 Youmu joined channel
+18:25 hope1 joined channel
+18:28 lh_mouse: hope1, 摸头。
+19:02 hope1 quit:Remote host closed the connection
+19:03 hope1 joined channel
+19:06 lh_mouse: hope1, 摸头。
+19:10 hope1: hm
+19:10 lh_mouse: 0.0
+19:13 iyzsong: 吃饭去 = =
+19:26 AutoGavy joined channel
+19:45 lhanjian quit:Quit: Connection closed for inactivity
+19:57 OO_after joined channel
+19:58 hope1_ joined channel
+20:01 hope1 quit:Ping timeout: 272 seconds
+20:07 hope1_ quit:Ping timeout: 276 seconds
+20:12 jin7boy joined channel
+20:12 jin7boy: 发现switch 语句 case 0和case 000是不同的
+20:17 condy: geordi: { switch (0) { case 0: putchar('1');break; case 000: putchar('2'); break; } }
+20:17 geordi: error: duplicate case value
+20:18 stdstx: {int a = 0;switch(a){case 000: cout << "really?\n";}}
+20:18 stdstx: geordi, {int a = 0;switch(a){case 000: cout << "really?\n";}}
+20:18 geordi: really?
+20:19 jin7boy: 之前小程序里面写的是case 000 ,结果不对, 后来改成case 0就正常了. 不知道为啥.
+20:30 hope1 joined channel
+20:32 Youmu quit:Quit: Connection closed for inactivity
+20:33 lucid__ joined channel
+20:41 Youmu joined channel
+20:55 OO_after quit:Remote host closed the connection
+21:05 stardustx_ joined channel
+21:06 stdstx quit:Ping timeout: 250 seconds
+21:24 CyrusYzGTt joined channel
+21:36 lucid__ quit:Remote host closed the connection
+22:00 lh_mouse: geordi, { register int64_t ax __asm__(("rax")) = 123456789012345; cout <<ax; }
+22:00 geordi: error: expected string-literal before '(' token
+22:00 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 123456789012345; cout <<ax; }
+22:00 geordi: 123456789012345
+22:01 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 123456789012345; __asm__("xchg $eax, $eax;"); cout <<ax; }
+22:01 geordi: error: operand type mismatch for `xchg'
+22:01 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 123456789012345; __asm__("xchgl $eax, $eax;"); cout <<ax; }
+22:01 geordi: Same error.
+22:01 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 123456789012345; __asm__("xchgl %eax, %eax;"); cout <<ax; }
+22:01 geordi: 2249056121
+22:01 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 123456789012345; __asm__("xchgq %rax, %rax;"); cout <<ax; }
+22:01 geordi: 123456789012345
+22:01 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 0x0123456789ABCDEF; __asm__("xchgq %eax, %eax;"); cout <<hex <<ax; }
+22:01 geordi: error: incorrect register `%eax' used with `q' suffix
+22:02 lh_mouse: geordi, { register int64_t ax __asm__("rax") = 0x0123456789ABCDEF; __asm__("xchgl %eax, %eax;"); cout <<hex <<ax; }
+22:02 geordi: 89abcdef
+22:02 lh_mouse: geordi, { __asm__("foo: xchgl %eax, %eax; bar: nop;"); extern "C" char foo, bar; cout <<(&bar - &foo); }
+22:02 geordi: error: expected unqualified-id before string constant
+22:03 lh_mouse: geordi, { __asm__("foo: xchgl %eax, %eax; bar: nop;"); cout <<(&bar - &foo); } extern "C" char foo, bar;
+22:03 geordi: 2
+22:03 lh_mouse: geordi, { __asm__("foo: xchgl %ecx, %ecx; bar: nop;"); cout <<(&bar - &foo); } extern "C" char foo, bar;
+22:03 geordi: 2
+22:04 lh_mouse: geordi, { __asm__("foo: xchgl %eax, %ecx; bar: nop;"); cout <<(&bar - &foo); } extern "C" char foo, bar;
+22:04 geordi: 1
+22:04 lh_mouse: geordi, { __asm__("foo: xchgl %ecx, %eax; bar: nop;"); cout <<(&bar - &foo); } extern "C" char foo, bar;
+22:04 geordi: 1
+22:05 condy: 为啥 eax, ecx 交换指令长度就小了 =-=
+22:12 lh_mouse: condy, [xchg eax, r32] 有一个单字节的指令。
+22:12 lh_mouse: 并且 xchg eax, eax 是一个非常著名的指令，它编码之后的字节是 90h 。
+22:13 lh_mouse: 因为 x64 和 x86 二进制兼容，所以这里有个问题。
+22:14 lh_mouse: 在 x64 以前，xchg eax, eax 被普遍地当作 nop 使用，但是这个语义有违 x64 中对 eax 操作会将 rax 高位清零的设定。
+22:15 lh_mouse: 出于对兼容性的考量，在 x64 中 90h 依然是 nop，而 xchg eax, ecx 会将 rax 高位清零。原本 xchg eax, eax 的功能使用等价的双字节指令（类似 xchg ecx, ecx）。
+22:16 condy: :o 原来如此，这些都是从哪看来的，我也想学 (´・ω・｀)
+22:17 condy: 不会要把 intel 手册给艹完吧……
+22:17 lh_mouse: condy, 谷狗。
+22:17 condy: lh_mouse: (。・_・。)
+22:19 hope1_ joined channel
+22:21 condy: 以前在内网看到，一个人把一个非常朴素的算法一个个对照汇编修改，哪里生成的汇编差就改哪里，最后比其他人快了近20倍…… _(:з」∠)_
+22:22 lh_mouse: 只能说别人写得太烂。
+22:22 lh_mouse: 一般能快个三五倍就不错了，
+22:22 erhandsome quit:Quit: ZNC - http://znc.in
+22:22 iyzsong: orz
+22:22 condy: orz
+22:22 lh_mouse: MCF 那个 sha256 花了一个月优化也才快了一倍不到。
+22:23 hope1 quit:Ping timeout: 272 seconds
+22:23 hope1_ quit:Remote host closed the connection
+22:24 stardustx_ is now known as stdstx
+22:25 stdstx quit:Quit: Leaving
+22:25 stdstx joined channel
+22:26 hope1_ joined channel
+22:47 AutoGavy quit:Quit: Connection closed for inactivity
+22:51 hope1_ quit:Remote host closed the connection
+22:51 iyzsong: 睡~
+22:51 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+22:52 hope1_ joined channel
+22:56 hope1_ quit:Remote host closed the connection
+23:15 stdstx quit:Quit: Leaving
+23:43 Taggnostr joined channel
+23:55 AutoGavy joined channel

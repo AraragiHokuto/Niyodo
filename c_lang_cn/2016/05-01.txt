@@ -1,0 +1,807 @@
+00:17 hope1: https://pic2.zhimg.com/731b92f978527fef7fe240bcab754935_b.png
+00:17 hope1: 突然想定一份这个报纸了
+00:18 hope1: 订
+00:24 lhanjian quit:Quit: Connection closed for inactivity
+00:25 Matsune quit:Read error: Connection reset by peer
+00:25 cleamoon: 噗
+00:25 cleamoon: hope1, 海棠姬17了？
+00:26 cleamoon: 可以吃了呢
+00:28 xxxxxxxx: 山东性侵10岁女生老师曾撰文“情系留守儿童”
+00:33 Mokou: 日，ld往输出里填了2MB的0……
+00:34 T-J-M quit:Ping timeout: 244 seconds
+00:36 CyrusYzGTt joined channel
+00:39 cleamoon: orz
+00:39 cleamoon: 我也想情系呀
+00:46 geordi quit:Remote host closed the connection
+00:46 geordi joined channel
+00:46 lh_mouse: geordi, --version
+00:46 geordi: GCC 6.0.0 20151204 (experimental)
+00:46 T-J-M joined channel
+00:47 Mokou: 强制4K页面解决了
+00:51 xxxxxxxx: http://cnews.chinadaily.com.cn/2016-04/29/content_24958381.htm 这种事情应该很常见吧?
+00:56 cleamoon: 这个确定不是3ds的软文
+01:04 T-J-M quit:Ping timeout: 250 seconds
+01:33 FrankHB joined channel
+01:41 FrankHB quit:Ping timeout: 260 seconds
+02:28 lh_mouse quit:Read error: Connection reset by peer
+02:28 Youmu quit:Quit: Connection closed for inactivity
+02:44 Mokou: 睡觉
+02:44 Mokou: 朱军乌云
+02:44 Mokou: 诸君武运
+02:44 Mokou quit:Quit: 睡觉
+03:09 Youmu joined channel
+04:14 cleamooon quit:Read error: Connection reset by peer
+04:28 cleamooon joined channel
+05:28 Youmu quit:Quit: Connection closed for inactivity
+06:38 felixonmars quit:Ping timeout: 264 seconds
+06:46 felixonmars joined channel
+07:08 cleamoon quit:Ping timeout: 260 seconds
+07:26 cleamoon joined channel
+07:28 xxxxxxxx quit:Quit: Leaving...
+07:28 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+07:36 CyrusYzGTt joined channel
+08:28 felixonmars quit:Ping timeout: 276 seconds
+08:32 felixonmars joined channel
+08:43 CyrusYzGTt quit:Ping timeout: 246 seconds
+09:07 doublehou joined channel
+09:13 stardust_ joined channel
+09:26 hoxily joined channel
+09:26 stardust_ is now known as stardust
+09:54 doublehou quit:Quit: 离开
+10:13 lhanjian joined channel
+10:17 Youmu joined channel
+12:14 stardust quit:Quit: Connection closed for inactivity
+13:04 T-J-M joined channel
+13:05 iyzsong: (つд⊂)
+13:47 Mokou joined channel
+13:54 lhanjian quit:Quit: Connection closed for inactivity
+14:00 hope1: https://www.zhihu.com/question/44942468
+14:01 hope1: 如何看待《非我》引进大陆被翻译成《幻体：续命游戏》？
+14:08 iyzsong: (・∀・)
+14:28 xxxxxxxx joined channel
+14:37 lhanjian joined channel
+14:44 iyzsong: (*>_<*)下午好
+14:47 Dove joined channel
+14:59 varna joined channel
+15:00 varna: 哦瘊瘊
+15:01 varna: 早上睡着的时候忘了关wireshark, 结果工作集被爆了一地……
+15:01 Mokou: ……
+15:02 varna: 之前我给服务器的缓冲区搞了个ruin操作
+15:02 varna: 结果手滑写错，按still reachable的方式狂申请不释放
+15:03 varna: 本地测试看来p7在限定状况（上游链路速度远快于下游）下的二套接字上还能凑合工作
+15:03 varna: 不过我打算提供多fd监听了
+15:03 varna: btw, 愿意的话可以pull一下；现在blocking point接口开放了
+15:04 varna: 定时器的缺总算补上了（它本身不提供blocking point）
+15:04 Mokou: 所以这个index into到底是怎么算的
+15:04 varna: 目前多fd监听的打算是给waitk加一个activated域，用来识别epoll唤醒的准确结果
+15:05 Mokou: 为什么0x0找出来的PDPE地址成了0x10D003……
+15:05 varna: 但老实说，从epoll落实到这个所谓的多fd上，基本是select级别的效率降低
+15:05 varna: 不过我觉得应该没人疯狂到用这种破接口在一coro上监听超过一位十进制个fd
+15:05 varna: Mokou: 你在做什么？
+15:06 Mokou: varna: 在写一个加载ELF64内核的loader
+15:06 varna: 静态？
+15:06 Mokou: 然后怒吃PF
+15:06 Mokou: +
+15:06 varna: 我给你发一个以前我能工作的代码？
+15:06 Mokou: OK
+15:06 varna: 稍等我找找
+15:07 Mokou: 不过我不太明白为什么基址是0x10D000的PDP会被请求0x10D003
+15:07 Mokou: 0x0这个VMA拆出来的PDPE offset不应该是0么……
+15:07 varna: PDPE不该是对齐的么，为何多了3？
+15:08 Mokou: 不知道，bochs就这么给我显示的
+15:08 Mokou: 不然不该吃PF
+15:08 Mokou: <bochs:4> page 0x4
+15:08 Mokou: PML4: 0x000000000010d003    ps         a pcd pwt S W P
+15:08 Mokou: PDPE: 0x0000000000000000    ps         a pcd pwt S R p
+15:08 Mokou: 0x0也是这个输出
+15:08 varna: 糟了我忘了那目录叫什么
+15:08 varna: 这下6了
+15:09 Mokou: 而且这个3应该不是我的锅，PML4E里面没法填低12位不是
+15:09 xxxxxxxx: varna:  http://music.163.com/#/song?id=361133 这音乐算魔法么?
+15:09 varna: Mokou: 我忘了PDPE的结构，那东西底下有权限么
+15:09 Mokou: varna: 有
+15:09 Mokou: 不过寻址的时候跟那个没关系吧
+15:09 varna: 玛德
+15:10 Mokou: http://forum.osdev.org/viewtopic.php?f=1&t=27650 这个里面也是各种+3
+15:10 varna: 终于找到了
+15:10 varna: 我差点以为那些代码被我一高兴都rm -rf了
+15:10 Mokou: 2333333
+15:11 Mokou: 这次我准备直接把ELF64加载到higher half，所以写了一个到目前为止七百多行C代码的loader……
+15:12 varna: Mokou: 链接: http://pan.baidu.com/s/1nv3sIm9 密码: 3ne2
+15:12 Mokou: thx
+15:12 varna: 你检查下映像的符号表看看进没进higher half
+15:12 varna: 我写的链接脚本给的 . = 0xFFFF800000130000
+15:13 Mokou: 了解
+15:13 varna: 应该直接打进+0x130000的
+15:13 Mokou: 我这次的做法比较偷懒
+15:13 varna: 加载器在loader目录下
+15:13 Mokou: loader会被加载到1MB，于是我直接把内核镜像扔进2MB
+15:14 varna: 合计336L
+15:14 Mokou: 然后三张2MB页面映过去，两个等值一个Higher half
+15:14 varna: 感觉你比我勤快多了
+15:14 varna: 当时我应该直接照着ELF规范瞎写了一堆玩意
+15:14 Mokou: 我花了几百行代码写vga驱动……
+15:14 Mokou: 照着ELF规范瞎写+
+15:15 varna: vga multiboot和其他没写完的东西在kern里
+15:15 varna: 这东西应该是13年一时兴起的货了
+15:15 Mokou: 我没用initrd，kernel是用objcopy塞进loader的
+15:16 varna: 哦
+15:16 varna: 有时候我觉得initrd挺方便的
+15:16 varna: 不过我用的是grub legacy
+15:16 Mokou: 不然我怕GRUB把initrd塞到一个诡异的位置……
+15:16 varna: 一般不会太诡异
+15:17 Mokou: 难说，万一抽个风，毕竟我只有1MB内存可用
+15:17 varna: 两天没上线，桶还是677……
+15:17 varna: 看我今天拼一些桶出来
+15:17 Mokou: 之前我还想静态分配页表结构，结果一个align(4096)过去GCC直接把页表塞到了5MB+
+15:18 Mokou: 咣一个PF
+15:18 varna: 你直接用链接脚本作死呢
+15:18 Mokou: 折腾起来麻烦，我还是写了个alloca
+15:18 varna: 基本上静态映像里地址固定的东西都可以试着脚本解决，alloca以后麻烦
+15:19 Mokou: 大丈夫，loader写完基本不会改了
+15:19 varna: 不过链接脚本本身麻烦
+15:19 varna: 第一阶段瞎丁日写也没什么
+15:19 Mokou: arch的linux内核才4.3M呢，估计我这玩意这辈子都超不过2M
+15:19 varna: 反正内存管理都是残的，第一阶段引导基本可以瞎搞
+15:19 Mokou: +
+15:20 Mokou: 这次我准备搞个类似L4的玩意出来
+15:20 varna: 不行我有点方
+15:20 Mokou: 以后把服务器全换成某个VM
+15:20 varna: 明天就开活动了好慌啊
+15:21 Mokou: 方+
+15:21 varna: 对了我还有个问题
+15:22 varna: 按说劳动节你们现充不该出去把妹的么
+15:22 Mokou: 不是线虫不敢说话
+15:22 varna: ^ 
+15:23 varna: 现在我给下载服务做的每coro策略是优先等下游写就绪
+15:25 varna: 只有在一趟下游写完成+上游读失败时候才在上游单方面等读
+15:25 varna: 不过这么写下来，基本上p7旧的IO完成例程都废了
+15:26 Mokou: NHK纪录片这神字幕
+15:26 Mokou: 压力xx帕斯卡 => “压力xx公斤”
+15:37 hoxily quit:Quit: Leaving
+15:41 lh_mouse joined channel
+15:43 varna: 啊啊，打完这次的总力战我就可以回家当丙督了
+15:44 * Mokou 打不完了
+15:44 Mokou: 而且神他妈送神风级
+15:44 varna: 看看今天我能不能飙上七百桶
+15:44 Mokou: 驱逐舰都没得送了，这游戏药丸
+15:45 varna: 昨天亚顿奶我，说五百桶都未必
+15:45 varna: 我觉得优势很大
+15:45 Mokou: 233333
+15:46 varna: 送神风级的原因大概是洗吧福在局子里出不来了？
+15:46 Mokou: ……交给玖条
+15:46 varna: 毕竟「洗吧福是被神选中的神圣使徒，他说的话已经达到常人难以理解的境界」
+15:47 varna: niconico大百科这么评价洗吧福，下面给了「使徒语录」
+15:47 varna: 每一条都极其过激，不转了
+15:47 cc joined channel
+15:49 Mokou: 所以这个+3到底是什么贵
+15:49 Mokou: 鬼*
+15:49 Mokou: idx+1也不对啊，一个entry不是八字节长么
+15:52 varna: 他寻址的时候用+3的地址应该没错
+15:52 varna: 低4KB的地址被对齐掉了，问题应该出在其他地方
+15:52 Mokou: +
+15:53 Dove quit:Ping timeout: 250 seconds
+15:54 lh_mouse: varna, 五一去哪里。
+15:55 varna: lh_mouse: 蹲着……
+15:55 varna: 而且这次调休不是放假到明天为止么？
+15:58 varna: (｡･ω･)ﾉ不过放假了该弄点好吃的，等会去买盒德芙
+15:59 varna: 什么时候好时能降到德芙那个价位就好了（做梦）
+16:00 Mokou: 艹
+16:00 Mokou: pdpe里露了个3bit的AVL
+16:00 Mokou: 漏*
+16:01 Mokou: 我说怎么pdpe寻出来的地址这么诡异……
+16:01 lh_mouse: 好像 IM 上就中国人聊天不加句点。
+16:01 varna: 立陶宛那伙计加不加来着？
+16:01 xxxxxxxx: 大概只有中国人?
+16:01 varna: 懒得grep了
+16:01 Mokou: 这次对了
+16:02 xxxxxxxx: 话说羊驼听之前那个音乐了么233
+16:02 varna: 我自己做按条目的笔记时候多数不加句号，所以IM这种不太长的东西也就沿用了
+16:02 lh_mouse: 哦不对。
+16:02 Mokou: +
+16:02 varna: 没听，我听一下
+16:02 iyzsong: 2333
+16:02 Dove joined channel
+16:02 lh_mouse: 说英语的也有很多不加，但是加句点的比例高于说汉语的。
+16:02 varna: 噗噗噗
+16:02 varna: 这歌作大死
+16:03 xxxxxxxx: 233
+16:03 varna: 其实汉语IM用户的奇葩在于“、、、”、“，，，”和“。。。”之类
+16:03 Mokou: 这次对了
+16:03 Mokou: ，，，。。。。
+16:03 Mokou: 还有这样的呢
+16:03 Mokou: 不是很懂他们怎么输入省略号
+16:04 Dove: ...
+16:04 xxxxxxxx: ...
+16:04 Mokou: 哈哈哈哈
+16:04 Mokou: 这次吃GPF了
+16:04 xxxxxxxx: 然而我觉得、、、这个有些奇怪
+16:05 varna: 再搞十九个桶来
+16:05 Mokou: OTL
+16:06 varna: 我建造和修理的日常都没做
+16:06 varna: 不过三补给和反潜都做完了……刷点闪吧
+16:06 xxxxxxxx: 这肝帝 一开口就是十九个桶
+16:06 Mokou: 这肝帝
+16:07 varna: 我现在2 4 10全力跑桶呢
+16:08 Mokou: 咦，这个GPF不是吃在ljmp上……
+16:08 Mokou: 是写cr0
+16:08 varna: 明明是你先写进去的？
+16:09 Mokou: 会导致GPF的cr0，已经不需要了
+16:09 lh_mouse: 羊驼有兴趣看看 GCC 6.1 的 bug 么。
+16:10 xxxxxxxx: 如果放到100年前，英国人不会为这个东西头痛，现在却不得不为此头痛，早已失去制造大型龙门吊的能力。 <- 听上去英国人混的好惨
+16:10 Mokou: CPU is in ccopatibility mode (active)
+16:10 Mokou: 然后咣叽
+16:10 varna: lh_mouse: 我觉得自己可能没能力解决，不过那是什么地方的bug?
+16:10 Mokou: 噗，什么鬼
+16:10 Mokou: check_CR0(0xe0000010): attempt to set CR0.PG with CR0.PE cleared !
+16:11 lh_mouse: varna, ヲ大概跟你说个现象，如果你有 gcc 的 repo 可以帮忙看看。
+16:11 Mokou: 我塞的是80000001啊……
+16:11 lh_mouse: varna, https://gcc.gnu.org/ml/gcc-help/2016-04/msg00115.html
+16:12 lh_mouse: varna, http://paste.ubuntu.com/16165193/
+16:13 varna: 找头文件的故障啊……
+16:13 lh_mouse: varna, stdinc 的包含顺序错误。
+16:13 lh_mouse: 而且这个在 relocated 的情况下才发生。
+16:14 lh_mouse: 也就是说比如你把 gcc 安装在 /usr/local/，你直接把目录 mv 到另一个地方，就炸了。
+16:16 varna: 这个我只能狗呔，目前我的/tmp在编译的时候可能会挂掉……
+16:16 lh_mouse: varna, 不用编译……
+16:16 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+16:17 lh_mouse: ヲ也不想改点东西就重新编译。
+16:17 lh_mouse: 只是看看，能不能发现问题。
+16:17 lh_mouse: ヲ提一点，如果命令行指定了 -iprefix /a_dummy_directory 居然就正常了。
+16:19 Mokou: 噫
+16:19 Mokou: cr0不能两个bit一起设啊
+16:25 lh_mouse: https://github.com/Alexpux/MINGW-packages/issues/1374
+16:25 lh_mouse: 2333
+16:25 Mokou: varna: srk里似乎没调到内核entry？
+16:25 Mokou: 跳*
+16:28 varna: Mokou: 忘了，我看一眼
+16:30 varna: Mokou: 跳进去了
+16:31 Mokou: 位置在？
+16:31 varna: lh_mouse: -iprefix的路径有个单独判断，但其他的就疼了
+16:32 lh_mouse: varna, 加了 iprefix (这个目录不需要存在) 就可以导致 C++  目录在 C 目录之前。
+16:32 varna: Mokou: init2.c load_kern_mod
+16:32 lh_mouse: ヲ现在在整个 gcc 源码里面 grep 。
+16:33 Mokou: 这个只取得了entry的地址吧
+16:33 varna: lh_mouse: iprefix本身的处理在incpath.c add_standard_path里，但cpp_relocated就得grep了……
+16:33 lh_mouse: varna, 目前不确定 cpp_relocated 有效。
+16:33 varna: Mokou: init.s里有一系列鬼畜
+16:33 lh_mouse: ヲ知道那个函数在哪。
+16:33 varna: 疼
+16:33 Mokou: varna: 然后我走下来只看到jmp $……
+16:34 varna: 没进去？
+16:34 Mokou: 没，bochs中断也是jmp -2
+16:34 lh_mouse: varna, http://paste.ubuntu.com/16165498/ 最下面。
+16:34 lh_mouse: varna, 有空弄个 patch 或者 pull request 。
+16:34 lh_mouse: https://github.com/lhmouse/MINGW-packages
+16:35 varna: ...
+16:36 lh_mouse: GCC 源码真 TM 没治。
+16:36 lh_mouse:       if (!p->cplusplus || cxx_stdinc)
+16:36 lh_mouse: 	{
+16:36 lh_mouse:   直接把一个 for 循环体括起来。
+16:36 lh_mouse: 神经病。
+16:37 lh_mouse: if(p->cplusplus && !cxx_stdinc) continue; 
+16:37 lh_mouse: 这多好看。
+16:37 varna: Mokou: 那估计就是我没写完
+16:38 varna: 不过有点奇怪
+16:38 varna: 他没走到kern/kentry.s?
+16:38 Mokou: 似乎没，我就没看到jmp [entry]或者push/ret
+16:39 varna: 我手头没bochs, 所以只能推测了
+16:39 varna: init.s ln158
+16:39 varna: 这里有个取返回值的操作
+16:39 Mokou: ……我这里ln158是开PAE
+16:39 varna: 我发了什么鬼东西给你
+16:39 Mokou: call load_kern_mod是在ln179
+16:40 varna: 等下我再打一次包
+16:40 varna: Mokou: http://pan.baidu.com/s/1eSjop5C
+16:41 varna: 我对着源码看到一堆鬼畜，但既然是源码和包不对应……
+16:41 Mokou: thx
+16:42 Mokou: 啊，这次看到跳转了
+16:42 varna: 我看着有一连串奇葩的跳转
+16:43 varna: 玛德刷闪都不掉血了……
+16:43 Mokou: ……
+16:44 varna: 今天我一个船都没修呢
+16:44 TommyJerryMairo joined channel
+16:45 Dove quit:Ping timeout: 276 seconds
+16:47 T-J-M quit:Ping timeout: 246 seconds
+16:53 hope1: 折腾了一下Compose key
+16:53 varna: puuuu, 秋月在给街机版打广告
+16:53 varna: hotatata!
+16:54 xxxxxxxx: 秋月 是说船?
+16:54 varna: +
+16:54 varna: 三周年语音
+16:57 Mokou: 噫
+16:58 Mokou: 这次往内核一跳直接一个GPF
+16:59 varna: 我欠带闪出门刷掉八血
+17:00 varna: 这个倒是正常了……
+17:00 varna: 欠雪一贯化神奇为腐朽
+17:02 varna: https://metacpan.org/pod/Lingua::Translator::Microsoft 今日metacpan看点
+17:04 varna: http://picpaste.com/v2Sig2tW.png 噫噫噫
+17:06 xxxxxxxx: 然而 军舰也能租广告位?
+17:06 varna: 小和只算1/4军舰，大丈夫
+17:07 xxxxxxxx: 求说明 1/4
+17:07 xxxxxxxx: 圣人言论那个是啥?
+17:07 varna: 在编成战队的时候，一个驱逐队（合4dd）才算一艘军舰
+17:07 varna: 潜水舰也是一样
+17:07 varna: http://www.wall.org/~larry/pm.html 是这个
+17:08 TommyJerryMairo is now known as T-J-M
+17:09 xxxxxxxx: 我的意思是打广告这种事情自卫队是允许的?
+17:09 varna: 不不，不是现役的秋月……
+17:09 xxxxxxxx: 啊 那我理解错了...
+17:09 varna: 自卫队干过的最出格的事似乎也就是在爱宕旁边放了一个巨大的舰C爱宕海报
+17:11 lh_mouse: 特朗普要竞选总统。
+17:11 lh_mouse: ヲ说个笑话，柯文哲。
+17:12 xxxxxxxx: 要是他上台了怎么办?
+17:12 varna: 那安倍酱还可以搏一把天皇
+17:13 lh_mouse: 天皇没用。
+17:13 varna: 只是就历史性的意义而言
+17:14 varna: 现在日元似乎不会跌太狠，我挺遗憾的
+17:14 Seger joined channel
+17:14 varna: 咦，来了新人
+17:14 varna: (｡･ω･)ﾉ欢迎
+17:15 Seger: 这里有活人不？
+17:15 varna: 这里有很多丧失和一些活着的非灵长类
+17:15 xxxxxxxx: 死了一半的或者全死了的比较多
+17:16 Mokou: 好
+17:16 Mokou: 跳过去了
+17:16 Mokou: 写一个loader只用了两天半，现在我还是熟练了
+17:16 varna: 可怕的现充
+17:17 Mokou: ^ 可怕的现充
+17:17 hope1: dead_greek hack失败…… 得
+17:17 Seger: 一句话证明你不是机器人，现在开始
+17:17 varna: 说个乐子，你看到init.s里有一大坨注释掉的奇怪的东西，后来被换成了往内核入口的jmp对吧
+17:17 xxxxxxxx: 看到熟练得想是不是应该打死
+17:17 Seger: 我不是机器人，完毕
+17:18 varna: 原来那些代码是手写进去的跳转……
+17:18 xxxxxxxx: 话说爆之类的能不能证明不是机器人?
+17:18 varna: 大概不能
+17:18 varna: xxxxxxxx: 爆
+17:18 Mokou: ……
+17:18 * lh_mouse 把手放在了核弹按钮上。
+17:18 xxxxxxxx: 不能尼还说个啥...
+17:18 varna: 管他能不能呢
+17:18 varna: 你看，我自己就是xym大神制造的bot
+17:18 varna: 照样爆红旗
+17:19 Seger: 反正我不是机器人
+17:19 Mokou: varna: 爆
+17:19 Seger: 我是这个世界的主宰
+17:19 * Mokou 是提督
+17:19 varna: 噗？
+17:19 xxxxxxxx: 基器人
+17:19 varna: 好像有了不得的新人进来了
+17:19 Mokou: lh_mouse: ^主宰
+17:20 xxxxxxxx: 主宰你诞生多久了?
+17:20 varna: 主宰和特首，哪个大？
+17:20 xxxxxxxx: 当然是领路人大
+17:20 Seger: 话说freenode那边都不给我cloak
+17:20 Mokou: 我滋瓷特首
+17:20 varna: 还有总设计师呢
+17:20 Mokou: 他是特首，我怎么能不滋瓷？
+17:21 Seger: Error,please fix it
+17:22 Seger: 这里有活人不？
+17:22 Mokou: 不知道
+17:22 varna: Duplicated query: ignored
+17:23 Seger: 一句话证明你不是机器人，现在开始
+17:23 xxxxxxxx: http://www.zhihu.com/question/25499485 这也是特首
+17:23 Seger: 我不是机器人，完毕
+17:23 varna: Duplicated query: ignored
+17:23 varna: 请控制非后现代意味上的原文反复
+17:24 varna: 除非我们能确认你在等待戈多，不然恐怕会把你移出频道
+17:24 Seger: 哈哈哈哈，神翻译
+17:24 Seger: 啥？
+17:24 varna: 18:19 < Seger> 一句话证明你不是机器人，现在开始
+17:25 varna: 18:19 < Seger> 我不是机器人，完毕
+17:25 varna: 你在奇怪地重复
+17:25 Seger: 呢………我在模仿机器人重启而已
+17:25 varna: 还真是后现代……
+17:26 varna: 不过机器人重启之前似乎该吐点核？
+17:27 * Seger 卖萌
+17:28 varna: Seger: 从freenode频道列表里找到这的么？
+17:28 varna: 感觉C语言吧用irssi的人恐怕不多
+17:28 xxxxxxxx: 先吔屎
+17:29 varna: xxxxxxxx: 想吔屎快回坑啊，明天就活动了
+17:29 Seger: 你怎么知道我用的是irssi而不是xchat?
+17:29 varna: 我没法真正知道，ctcp version太傻了
+17:30 varna: 不过这种user agent信息无所谓了，即使是伪装过的，拿出来套句话也还算有用
+17:31 xxxxxxxx: 我说姬器人重启 不是自己我要吔...
+17:31 varna: 我知道
+17:31 varna: 但毕竟活动要开shi了
+17:31 hope1: 求推荐一款非等宽正文字体
+17:31 hope1: 现在电脑上只有DejaVu Sans……
+17:32 Meow-J quit:Quit: Connection closed for inactivity
+17:32 xxxxxxxx: 打活动容易怀疑人生
+17:32 Seger: 什么活动？
+17:32 varna: hope1: 文泉驿微米黑
+17:32 Seger: 我是新人，不懂
+17:32 varna: 英文不好
+17:33 varna: 不过在我这里Gtk2上，微米黑工作得还不错
+17:33 varna: libvte的微米黑效果极差，原因不明
+17:33 varna: 喜欢英文等宽的话考虑用fontforge混搭一下吧
+17:34 varna: Seger: 别在意，某军国主义黄赌毒页游的活动
+17:34 hope1: 是要非等宽的英文字体，中文倒是一直用着文泉驿正黑
+17:34 lhanjian quit:Quit: Connection closed for inactivity
+17:35 Seger: any anonops?
+17:35 varna: 正黑不好
+17:36 varna: 正黑字形奇异，而且渲染出来的时候可能发虚
+17:39 varna: 新人被吓跑了
+17:40 xxxxxxxx: 打活动我总觉得像去池塘里捞硬币 捞完还让把硬币交出来 然后当着你的面丢回去 以此比一次用力 然后再让你继续捞
+17:40 varna: 差不多
+17:41 varna: 要不我怎么打算16夏开始直接当丙督
+17:42 Seger joined channel
+17:43 Seger: 我又回来了
+17:45 varna: 吃饭去了
+17:53 cc joined channel
+18:00 Meow-J joined channel
+18:11 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+18:21 cc joined channel
+18:21 cc quit:Client Quit
+18:22 T-J-M quit:Ping timeout: 244 seconds
+18:33 FrankHB joined channel
+18:34 * varna 最后还是买了一小包好时
+18:40 T-J-M joined channel
+18:48 T-J-M quit:Ping timeout: 260 seconds
+18:54 stardust joined channel
+19:04 Mokou: varna: 我考虑了一下，打算还是写个混合内核算了
+19:04 varna: OTL
+19:04 Mokou: 微内核那上下文切起来……
+19:05 T-J-M joined channel
+19:06 varna: http://tieba.baidu.com/p/3765533524 脑残是病
+19:07 Mokou: 脑残是病，无药医也，治个毛啊回家等死吧
+19:09 varna: 再拼十桶出来
+19:09 varna: 十桶就好
+19:12 varna: 总觉得舰C让我变M了
+19:12 Mokou: OTL
+19:12 varna: 用了一个月的FastDFS, 我居然感觉这东西还不错
+19:13 Mokou: 药丸，之前我给你看tornado的时候你是不是还觉得Python挺漂亮的来着
+19:14 varna: py好好写的话样子不错，然而他抛异常
+19:14 Mokou: +
+19:15 varna: FastDFS的接口还凑合，协议很简单；不过麻烦是多方面的
+19:17 Mokou: 当然写成混合内核其实是我打算偷懒了
+19:17 Mokou: 这样驱动好处理
+19:18 xxxxxxxx: 那个帖子真神奇 我都怀疑楼主是钓鱼的233
+19:50 lh_mouse: varna, baka 羊驼，修 gcc 啦。
+19:51 varna: _(:з」∠)_只能先跪
+19:51 cleamooon: 中国个人网盘服务纷纷关闭
+19:52 cleamooon: 一位叫魏则西的患者因为过于信任百度搜索结果、CCTV和武警医院，耗费巨资在没有效果的医疗技术上，耽误了治疗而不幸去世，此时再次引发了对百度的批评。百度对魏则西去世事件作出回应：“正积极向发证单位及武警总部主管该院的相关部门递交审查申请函，希望相关部门能高度重视，立即展开调查，如果调查结果证实武
+19:52 cleamooon: 警二院有不当行为，我们全力支持则西家属通过法律途径维权。”
+19:53 varna: github wiki的编写真是傻乎乎的……
+19:53 lh_mouse: http://www.zhihu.com/question/32373308/answer/60347178
+19:53 varna: 为何这些人那么喜欢MD
+19:53 varna: 那东西真是蠢爆了
+19:53 Mokou: “现场的人真的是必死的想要把问题解决”
+19:54 Mokou: 字幕你到底懂不懂汉语啊
+19:55 varna: 看到这个知乎问题，我想起了一个悲惨的故事：软件开发者看《魔法科高校的劣等生》
+19:55 Mokou: 233333
+19:56 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/hz/t3_138924.jpg@596w_1l.jpg
+19:56 varna: 这似乎是个挺著名的面膜品牌
+19:58 cleamooon: 当面膜吗？
+19:58 varna: +
+19:58 varna: 所以很不容易，要当面膜
+19:59 varna: 这怎么说也得几百个教授一致通过吧？
+20:03 whocares_2_ quit:Remote host closed the connection
+20:03 cleamooon: “我今天身为一个记者，要教你们一点做人的道理，中国有句古话，叫比人跑得快，你们这些钦定的呀，就有一个优点，就是天天闷声发大财”
+20:06 varna: 你身为一个幼女
+20:07 whocares_2 joined channel
+20:08 Dove joined channel
+20:10 cleamooon: 一般电影下载 99% 就可以看了吧
+20:10 varna: 不太清楚，也许最后会有点解码错误？
+20:11 cleamooon: 电影一般最后无所谓吧
+20:11 varna: +
+20:22 lh_mouse: 阿塔尼斯大教主视察黄金舰队讲话
+20:22 lh_mouse:  我的经历就是到了艾尔，到了2499年年初的时候，我在想我估计也快要退役了，我想我应该混个执行官。于是我给阿尔达瑞斯写了一个报告。他说，欢迎你来，不过，这个Executor你要去做一个报告，我就做了一个《关于强化安缇奥克战略防御》，这个报告经过几百个执法官一致通过。那么在舰队当上执行官后我就做第二个报告《联
+20:22 lh_mouse: 合黑暗圣堂武器提升军队综合实力》这两个报告做完后我就被调到夏康拉斯去了
+20:22 lh_mouse:  神子啊就都不知道，自己不可以预料。一个神子的命运啊，当然要靠自我奋斗，但是也要考虑历史的行程。我绝不知道，一个圣堂武士，怎么成了大教主了。所以泽拉图同志同我讲话：“最高议会都决定了”，你当大教主。我说另请高明，我也实在也不是谦虚。我一个艾尔圣堂武士怎么到夏康拉斯来了呢？但是，泽拉图同志讲：
+20:22 lh_mouse: “大家已经研究决定了”后来我念了一句话叫“为艾尔而战。”
+20:22 lh_mouse:  自从上任我干了十几年，没有什么别的，大概三件事。第一个，确立了与其他部落的联盟；第二个，把“塔萨达精神”写入卡拉；第三个就是“三个种族”。如果说还有一点成绩就是星民一律不许伤人。这对人类命运有很大的关系。还有2500年抗虫也是很大的。但是这些都是次要的，我主要的就是这三件事情。很惭愧，做了一点
+20:22 varna: 23333333333
+20:22 lh_mouse: 微小的工作，谢谢大家。
+20:22 lh_mouse: 貌似火星了？
+20:22 varna: 想想当年那个连裤子都不穿的阿坦尼斯
+20:22 varna: 居然当上了大主教
+20:23 lh_mouse: varna, ヲ并看不懂这里的梗，除了这个段子本身的原型。
+20:23 varna: 星际争霸2的梗，但写的人对阿坦尼斯在星际争霸系列作品早期剧情里的表现涉及不多
+20:24 varna: 基本上可以理解成，阿坦尼斯算是Protoss政权中的少壮派，偏左
+20:24 stardust: 星灵剪辫子啦，大清国完啦
+20:24 varna: 在右派全面垮台之后，他借助两位左派领袖（塔萨达和泽拉图）的影响力完成了一系列皿煮化改革
+20:25 varna: 最终字面意义上地把全族人的辫子都剪了
+20:25 varna: 当然最重要的是他不穿裤子
+20:26 stardust: 西方普世价值在艾尔的全面胜利
+20:26 varna: +
+20:26 varna: 其实Khala这个理念挺赞的，然而被编剧强行剪辫子
+20:27 cleamooon: 23333333
+20:29 cleamooon: sc2的剧情太赶了
+20:29 cleamooon: 还是war3的剧情节奏好
+20:29 varna: sc2剧情完全不如sc1
+20:29 varna: sc1是个很丰满的故事，各种谋略战术，还有几个突出的主人公
+20:29 varna: sc2完全是大片
+20:30 Mokou: 有人给了我一个MC启动器，想让我帮忙看看帐号验证部分在哪
+20:30 Mokou: 我一看，Qt
+20:30 varna: war3剧情中规中矩，我最喜欢的战役是混乱之治人族和冰封王座血猹
+20:32 varna: lh_mouse: wikiquote那个我看过，被震了一下
+20:32 lh_mouse: 0.0
+20:32 varna: cleamooon: 而且把war3的RC人族、FT血猹、FT亡灵连起来看的话，基本就是The Frozen Album
+20:33 cleamooon: 混乱之治人族+
+20:33 cleamooon: 噗
+20:33 varna: 阿尔萨斯-吉安娜-凯尔萨斯
+20:33 cleamooon: 噗
+20:34 cleamooon: 资深白学家
+20:34 varna: 血猹王子痛哭流涕的“明明都是我先来的……可为什么我要把命运交给那个又老、又瞎、又残废的暗夜精灵杂种！？”
+20:34 Dove: 2333
+20:35 lh_mouse: varna, 有些确实没错。
+20:35 lh_mouse: 为什么还是被黑。
+20:35 varna: 哦不对，似乎是“又老、又瞎、又下贱的暗夜精灵杂种”
+20:35 varna: 刷白鸡时候王子的原话
+20:36 cleamooon: 噗
+20:36 lh_mouse: 修 GCC 啦。
+20:36 varna: 凹点wiki(｡･ω･)ﾉ
+20:36 cleamooon: 原来真有白学桥段
+20:37 varna: 而且伊利丹比凯尔大了至少一辈
+20:37 varna: 永恒之井出事的时候伊利丹风头正劲，而凯尔萨斯可能还不是液体
+20:38 cleamooon: 不止吧，一粒蛋被查水表都是一万年前了
+20:38 cleamooon: 王子不是新的吗？
+20:38 varna: war3精灵寿命近乎无限的吧
+20:38 varna: 是
+20:38 varna: 王子基本是小辈
+20:38 varna: 不管哪个王子
+20:38 varna: 结果伊利丹被各种王子坑了一辈子
+20:39 cleamooon: 2333
+20:39 cleamooon: 他哥应该也算王子
+20:40 varna: 玛法里奥的neta似乎都比较惨，多数认为他ED
+20:40 cleamooon: 劳头我记得过了NE任务就没出现过？
+20:40 cleamooon: 我觉得他确实ED
+20:41 varna: 毕竟牢头是FT新人物，不过TBC黑庙里出场了
+20:41 varna: 那里设定是远征军对伊利丹进行最后的讨伐，牢头手刃伊利丹之后作出了深情的告白，在场的玩家们十分感动，纷纷跳舞roll点
+20:42 cleamooon: 23333
+20:42 cleamooon: 是个病娇？
+20:43 varna: 是个S
+20:43 varna: 而且可能吃泰兰德的醋
+20:43 varna: NE几个高层的关系很乱
+20:43 cleamooon: war3的任务给人的感觉明明是M
+20:43 varna: 其实这里也挺白的
+20:46 cleamooon: FT的任务我觉得太慢了... 给人一种没正事的感觉
+20:46 varna: +
+20:46 varna: FT基本都是aftermath
+20:46 varna: 大战之后各种势力如何重整旗鼓，准备后续战略的故事
+20:46 varna: 最紧张的主线限于巫妖王
+20:47 cleamooon: 我最喜欢的反而是兽族战役....
+20:47 varna: 雷克萨完全是武勇传了……
+20:47 cleamooon: +
+20:47 iyzsong: (｡>﹏<｡)
+20:48 cleamooon: 话说，为什么在win下不用ide编程一定要这么疼
+20:48 varna: 你配置一下cmd的字体就会觉得好不少
+20:48 cleamooon: cmd本身就很疼....
+20:49 Dove: cygwin?
+20:49 cleamooon: 只能用cygwin这种半残
+20:50 Dove: 那就不在win下编程呗，win
+20:51 Dove: win也没除了游戏以外的开发者多大事了。
+20:51 varna: ^ 笑看
+20:51 * Mokou 不敢说话
+20:51 Dove: 好吧，又被笑看了。
+20:52 Dove: 不过招聘倒是很多招win下开发的，不知道是要干嘛。
+20:54 varna: 你可以问问
+20:55 Mokou: 吔我1GB Hugepage
+20:55 lhanjian joined channel
+20:55 Mokou: 内核态我偷个懒
+20:55 cleamooon: 我想问问怎么配置一个舒服的win下的撸c艹，py，perl码的环境
+20:55 varna: C艹可以，Perl基本做梦，py不知道
+20:56 Mokou: Py的话Sublime？
+20:56 varna: C艹的话，你可以给小耗当小白鼠；我估计这样的话，他应该会乐意简单告诉你怎么部署
+20:56 cleamooon: perl做梦？为什么
+20:56 Mokou: 没用过那玩意，不过似乎不少人用
+20:56 varna: windows下Perl我用过，总体来说感觉差透了
+20:56 cleamooon: 小耗现在ssh用nano...
+20:57 cleamooon: sublime就是个编辑器而已
+20:57 varna: 你在cmd下生成电子垃圾，浑身难受
+20:57 Mokou: Py也就需要个编辑器吧
+20:57 Mokou: 然后直接pyw.exe script
+20:57 cleamooon: 耻球用的似乎是类似cygwin的那个msys2
+20:57 Dove: 那个你下个mingw似乎自带
+20:58 cleamooon: perl是版本问题还是win的问题
+20:58 varna: 所以你用小耗的msys2
+20:58 varna: windows下用Perl不开心
+20:58 Mokou: 不高兴
+20:58 Mokou: \我好高兴啊/
+20:58 Dove: 不是传言说win10要支持linux命令行了么。
+20:59 varna: 没意义
+20:59 Dove: 没意义+
+20:59 cleamooon: 卵用
+21:00 cleamooon: perl当成计算器和数据处理呢？
+21:00 varna: 那可以
+21:00 varna: 胡乱写写就行，win下面有一些实现可用
+21:00 varna: cpan也有支持
+21:01 cleamooon: soga
+21:01 lh_mouse: 你只需要一个 notepad++，然后用它的 plugin manager 弄一个叫 explorer 的插件。看起来大概像是这样。
+21:01 lh_mouse: http://img.vim-cn.com/b9/e9cee43c53de5842ee199e2ead360d14239e8d.png
+21:01 Dove: 话说我一直觉得移动互联网是个没什么意义的方向
+21:01 cleamooon: 系统管理就算了，win没法管理
+21:01 varna: 移动互联网我不太了解，他们在做什么？
+21:01 Dove: 可能是因为我一直不怎么喜欢玩爪机。
+21:02 cleamooon: lh_mouse, 小耗不用msys？
+21:02 Dove: 我也不太了解，但是炒的很热。
+21:02 varna: 现在说起移动互联网，我就想到物联网
+21:02 varna: 类似的糟糕联想还有relocation
+21:02 varna: 下午小耗那个bug报告，我看到开头差点吓尿了，后来才发现是自己想错
+21:02 varna: 一眼看见relocation, 我以为是在生成PIC
+21:02 cleamooon: 我想到的是一个裸男抱着路由器四处跑
+21:03 Dove: 物联网要被炒成下一个方向了都
+21:03 Dove: 然并卵
+21:03 * Mokou 正在用PIC
+21:03 Mokou: PIC亏性能厉害么
+21:04 varna: 不厉害，现在的PIC都是做一个跳板吧
+21:04 * cleamooon 不知道什么是PIC
+21:04 lh_not_bot: cleamooon: MCF 显然就不需要。
+21:04 varna: cleamooon: 位置P无关I代码C
+21:04 lh_not_bot: 不过别的东西要艹 configure 什么的就没办法。
+21:04 Mokou: 不用PIC的话ld会尥蹶子
+21:04 varna: 典型的例子是共享库
+21:04 lh_mouse quit:Quit: Meow
+21:06 lh_mouse joined channel
+21:07 lh_mouse: 今年就业形势目测不好。
+21:08 Dove: 噫，我想黑进学校教务系统改成绩，然而不是校园网无法登陆。
+21:08 varna: ^
+21:08 cleamooon: lh_mouse, 小耗win下也用gcc？
+21:08 lh_mouse: 逗我呢。
+21:09 lh_mouse: cleamooon, http://img.vim-cn.com/27/6e07717fc5ce7150de02c4575c611a1bf2b365.png
+21:10 Dove: 反正我试着在win下用clang，然后悲剧了，那是它的路径还是硬编码，
+21:10 Dove: 那时
+21:10 Dove: 忘了是什么路径了。
+21:11 cleamooon: orz 自己编译的
+21:11 Matsune joined channel
+21:12 lh_mouse: 你应该看的是那个 thread model 。
+21:14 cleamooon: 啊，114级提督说，冬马小三
+21:16 lh_cat joined channel
+21:16 lh_cat quit:Remote host closed the connection
+21:18 cleamooon: @镜初音 天若有情天亦老，我为长者续一秒
+21:18 lh_mouse: 韩方：朝军向金正恩谎报成功发射导弹
+21:18 cleamooon: https://github.com/google/xi-editor
+21:19 lh_mouse: xcode 呵呵呵。
+21:20 cleamooon: http://tech.qq.com/a/20160501/019252.htm
+21:21 varna: 谎报23333
+21:32 varna: cleamooon: 这些医院原来这么厉害的？
+21:33 cleamooon: 1似乎是
+21:33 cleamooon: 之前老爸的一个蛀牙也变成了四个大洞
+21:34 varna: puuu
+21:34 cleamooon: 托人换一家医院之后人家都震惊了
+21:34 varna: ……北京市没有市立医院之类的地方么
+21:35 cleamooon: 虽然每次只花200左右
+21:35 cleamooon: 但是补一颗牙去了12次，连一半都没完成
+21:35 cleamooon: 北京友谊医院，三甲医院
+21:36 cleamooon: 换去的是一个小医院
+21:36 varna: ...
+21:37 cleamooon: 老爸本身想组织一下人，他牙被弄了四个洞，然后也打算给大夫身上来四个洞
+21:37 cleamooon: 然而
+21:37 cleamooon: 医院门口一大堆武警
+21:37 cleamooon: 但老爸的哥们一个个身体还没老爸好呢....
+21:40 Mokou: 你把雾大和开过去
+21:40 Mokou: 从云层里往下B
+21:40 cleamooon: 那么对方会有天元突破的
+21:40 cleamooon: 出门
+21:42 cc joined channel
+21:45 cleamooon quit:Ping timeout: 246 seconds
+22:01 xu0o0 quit:Quit: EliteBNC free bnc service - http://elitebnc.org - be a part of the Elite!
+22:03 xu0o0 joined channel
+22:03 xu0o0 is now known as Guest36187
+22:10 xxxxxxxx: http://www.zhihu.com/question/27905243 这个问题可以回答
+22:11 xxxxxxxx: 一定是名字的功劳啊
+22:11 varna: 无可奉告被折叠了2333
+22:16 varna: 696桶
+22:16 varna: 还差四个，加油加油
+22:18 varna: http://tieba.baidu.com/p/4518898886 屑站削除激寒
+22:22 lh_mouse: varna, 那什么东西。
+22:22 cc: 五一大家都没出去么
+22:23 cc: 人山人海
+22:23 lh_mouse: 明天出去。
+22:23 varna: lh_mouse: 御神木，由兄贵的背部和殿部组成
+22:24 lh_mouse: 不懂。
+22:24 varna: 基本过节的话，我只想去找点好吃的解解馋……
+22:24 FrankHB quit:Quit: Konversation terminated!
+22:32 FrankHB joined channel
+22:32 xxxxxxxx: http://puu.sh/oCq9J/19f8095719.png 哈哈哈
+22:49 hope1: 魏则西那个我一个月前看到过，还是没能治疗成功啊……
+22:50 hope1: varna, 用markdown大概是因为懒得配LaTeX，也没有好用的office软件？
+22:51 varna: MD看起来简单，但并不方便
+22:51 varna: 倒不如搞个简单的标记语言，类似Perlmonks用的那样
+22:51 varna: 或者干脆用S-表达式
+22:52 varna: 提供三个部分
+22:52 varna: 第一个部分是format section
+22:52 varna: 这个部分以S-expr给出全部布局
+22:52 varna: 第二个部分是declaration
+22:52 varna: 这里声明format section使用的符号
+22:52 varna: 第三个部分是正文
+22:53 varna: 这里给出全部正文，并且提供一点点元表示用来把declaraction和正文段落对应起来
+22:53 varna: 这样多简单
+22:53 varna: 而且语法也容易扩充
+22:53 varna: 想重新排版的话，修改前两个部分就可以了
+22:53 varna: 正文随意添加
+22:55 varna: 虽说这么弄完了之后恐怕只有软件开发者中的一部分怪胎愿意用了……
+22:55 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f2874bbc32fae6cd0cb4ab693fb20f9e/da22d5ef76c6a7efabb702adfafaaf51f2de665f.jpg 捞
+22:56 CyrusYzGTt joined channel
+22:56 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=740b36b11ed8bc3ec60806c2b28aa6c8/1507719b033b5bb5d160a37531d3d539b700bcbd.jpg 造
+22:57 Matsune: 我感觉latex日常随便打打也可以啊
+22:57 varna: latex写长文还得靠模板，公式倒是不错
+22:58 Matsune: 模板弄好了就可以一直复用
+22:59 varna: 因为投稿论文基本都那样
+22:59 varna: 但这不是最终的理由
+22:59 varna: 就跟我至今仍然看不惯libevent/libev一样
+23:00 Matsune: 日常用wps（逃
+23:01 varna: http://ww1.sinaimg.cn/large/a1abbb6dgw1f3ek1n5z9oj20k00qodif.jpg 卧槽
+23:01 Mokou: 噗
+23:01 Mokou: 街机？
+23:01 varna: 低保大建闭眼一堆，上街机之后两万元……
+23:01 Mokou: 6666666666
+23:02 Matsune: 20000可以援交一次了
+23:02 Matsune: 友情价
+23:02 Mokou: 玩个屁，这够我氪资源造出一个了
+23:02 Mokou: Matsune <- 经验丰富
+23:02 varna: 舰C街机1元1GP...
+23:02 varna: 战斗中应该是1GP=1秒
+23:02 varna: 换句话说你是在给田中续命
+23:02 Mokou: 我还不如给长者续命
+23:02 Mokou: 沟里国家生死以
+23:03 varna: 沟里2333
+23:03 Mokou: 我狗呔，不降价我还是不去玩了
+23:03 varna: 噗，中破金卡的榛名买128k元
+23:03 varna: 卖*
+23:03 Mokou: puuuuuuuuuuuu
+23:04 Mokou: 这是明抢啊
+23:04 Matsune: 所以说毒贩子赚得多啊
+23:04 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=550d1ca009f41bd5da53e8fc61db81a0/a67abe10b912c8fcebdd0d46fb039245d7882105.jpg ...
+23:07 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+23:08 varna: 698桶！
+23:08 varna: 还差两个，拼了拼了！
+23:08 Mokou: OTL
+23:20 varna quit:Quit: leaving
+23:23 CyrusYzGTt quit:Read error: Connection timed out
+23:24 cleamooon joined channel
+23:25 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:37 cleamooon: 西湖裸双233333
+23:40 hope1: varna, 所以markdown易于推广啊，受众比开发者广泛很多。不过你说的标记语言如果足够user-friendly，相对于LaTeX改模板对普通用户也完全可行，或许还是有潜力的？毕竟markdown不够解决问题，太简陋
+23:41 Mokou: hope1: 羊驼子已经跑了吧
+23:42 hope1: 不管，他一般要看log，看不到其实也无所谓
+23:42 cleamooon: 海棠姬飞得太快，因为相对论回到过去了
+23:42 hope1: 除非我能想到什么更有建设性的具体idea
+23:43 cleamooon: hope1, 我觉得 latex 改得默认一点，自带帮助和输出，普通用户就能用
+23:43 hope1: latex简直扭曲
+23:43 cleamooon: DSL 的 markup language
+23:43 cleamooon: 没觉得很扭曲呀
+23:45 hope1: 一出问题根本没救，基本只能从二十年前的旧mailing list里面翻未解决的issue和workaround
+23:45 cleamooon: orz
+23:45 cleamooon: 我还真没遇到过那么高级的问题
+23:46 Matsune: 写论文还好吧 我是写一段就会编译一段来着 感觉有问题很快就能发现然后去解决
+23:47 cleamooon: +
+23:48 cleamooon: latex 就是图片和表格疼，其他还好
+23:48 Matsune: 图片的排版挺烦的
+23:48 hope1: 除此之外设计本身就很扭曲…… 我可能需要从渲染原理、字体设计、专业排版、Unix哲 学全部刷一遍，来解决一个十分微小的问题
+23:49 Matsune: 不过我没用过微调相关的功能
+23:49 cleamooon: 不微调+
+23:49 cleamooon: 用学校模板就好了
+23:49 Matsune: 我觉得要写个特别完美的东西用tex也挺难的 但是其他的东西恐怕做都没法做到
+23:50 hope1: 除了我这种时间不值钱闲得无聊以折腾为乐的穷学生，还有养各种闲人体系完备的大公司，根本没人能afford这种代价
+23:51 hope1: 所以你看某些化学专业的就这么成为了字体和TeX专家……
+23:51 Matsune: 不过它的设计宗旨也不是为了日常用来着 毕竟当时也是为了排版TAOCP。。。日常用的东西一直没人出
+23:51 cleamooon: 工业的公司还是在用 office 的
+23:53 hope1: 之前我想搞一个不那么妥协的\divides，折腾了一整天也没搞出来最后不想管了。一个同余式有三种写法，然而没有一种是可以直接拿来用的，必须拿奇怪的workaround去掉多余的空格。还好这个比较常用可以搜到stackoverflow
+23:53 cleamooon: 其实吧，现在 office 做的就挺完美的
+23:54 cleamooon: hope1, 你想写什么...
+23:54 Matsune: stackexchange上也有latex的专门版块
+23:54 hope1: 然后是排版，我想知道怎么简单控制margin和对齐，然而搜出来的资料并不能看。除非我直接去啃1k页的鬼玩意……
+23:55 hope1: 还不如word呢
+23:56 cleamooon: word 现在很美很天真
+23:56 hope1: cleamooon, 就是写公式啊
+23:56 cleamooon: 公式 latex 不至于那么2吧
+23:56 Matsune: latex不就是强在写数学公式么。。。
+23:56 cleamooon: +
+23:57 Matsune: 不过我也不太清楚现在word要插几个公式是什么情况
+23:57 cleamooon: 其他的根本完蛋
+23:57 Matsune: 但我看我室友做的时候挺疼的
+23:57 cleamooon: word 现在插公式挺方便的呀
+23:57 cleamooon: 而且也挺漂亮的
+23:57 hope1: 你要是想打一个整除符号，基本包只有\mid可以用。要是想打不整除，那就麻烦了
+23:58 Matsune: 这个各种各样的包是挺烦的
+23:58 Matsune: 搞个页眉页脚也要个包 换个字体也要个包
+23:58 cleamooon: 在句子里插入就是行内的，新行插入就是置中的
+23:59 Matsune: 可以不置中
+23:59 cleamooon: 然后 word 的公式输入和 texmacs 那个差不多
+23:59 Matsune: 不过也得用个包来改23333
+23:59 Matsune: 我感觉要写几行公式 amsmath这包必不可少。。。
+23:59 cleamooon: 不整除不就是 \nmid 吗....
+23:59 hope1: 新版word好像有内置一个伪latex语法的编辑器，虽然实际用起来很烦……

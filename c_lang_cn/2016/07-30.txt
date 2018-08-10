@@ -1,0 +1,142 @@
+00:27 lh_mouse: geordi, -c int a; restrict p = &a;
+00:27 geordi: error: 'restrict' does not name a type
+00:27 lh_mouse: geordi, -c int a; restrict auto p = &a;
+00:27 geordi: Same error.
+00:27 lh_mouse: geordi, -c int a; __restrict__ auto p = &a;
+00:27 geordi: error: invalid use of 'restrict'
+00:27 lh_mouse: geordi, -c int a; auto __restrict__ p = &a;
+00:27 geordi: Same error.
+00:27 lh_mouse: geordi, -c int a; auto *__restrict__ p = &a;
+00:27 geordi: Success
+00:42 Mokou: 睡觉
+00:42 Mokou: 诸君武运
+00:42 Mokou quit:Quit: 睡觉
+01:12 cleamoon joined channel
+01:24 hope1 quit:Ping timeout: 276 seconds
+01:24 hope1 joined channel
+01:31 yimis joined channel
+01:33 yimis quit:Client Quit
+01:49 wlemuel joined channel
+02:23 hope1 quit:Ping timeout: 252 seconds
+02:49 cleamooon joined channel
+02:56 hope1 joined channel
+02:56 lh_mouse quit:Ping timeout: 240 seconds
+02:58 wlemuel quit:Ping timeout: 252 seconds
+03:07 cleamooon quit:Ping timeout: 244 seconds
+03:37 cleamooon joined channel
+04:00 hope1 quit:Ping timeout: 250 seconds
+04:41 cleamooon quit:Ping timeout: 276 seconds
+05:03 hope1 joined channel
+06:09 cleamoon quit:Read error: Connection reset by peer
+06:10 cleamoon joined channel
+07:57 hope1 quit:Ping timeout: 244 seconds
+08:45 hope1 joined channel
+09:46 wlemuel joined channel
+10:44 blazenur joined channel
+11:06 blazenur quit:Remote host closed the connection
+11:47 l0nGYear joined channel
+12:04 blazenur joined channel
+12:23 blazenur quit:Remote host closed the connection
+12:33 tonymiaofa joined channel
+12:52 tonymiaofa quit:Remote host closed the connection
+12:59 lh_mouse joined channel
+13:08 whocares_2 joined channel
+13:11 whocares_2_ quit:Ping timeout: 244 seconds
+14:15 T-J-M joined channel
+14:18 blazenur joined channel
+14:43 yimis joined channel
+14:44 yimis quit:Client Quit
+15:16 blazenur quit:Remote host closed the connection
+15:19 iyzsong joined channel
+15:27 Mokou joined channel
+15:48 lhanjian: condy: condy俺之嫁
+15:52 stdstx: 祝幸福(*ﾟ▽ﾟ*)
+15:54 perr joined channel
+16:06 condy: Orz
+16:10 perr quit:Ping timeout: 258 seconds
+16:12 perr joined channel
+16:13 perr quit:Changing host
+16:13 perr joined channel
+16:14 l0nGYear quit:Ping timeout: 265 seconds
+16:14 l0nGYear joined channel
+16:23 lh_mouse: lhanjian, 你这非处男闭嘴。
+16:29 hope1 quit:Ping timeout: 244 seconds
+16:37 iyzsong: (┙>∧<)┙へ┻┻
+16:50 iyzsong quit:Changing host
+16:50 iyzsong joined channel
+16:53 l0nGYear quit:Ping timeout: 258 seconds
+16:53 l0nGYear joined channel
+17:07 perr quit:Quit: Leaving
+17:11 T-J-M quit:Quit: 吾去矣
+17:15 l0nGYear quit:Quit: Konversation terminated!
+17:34 l0nGYear joined channel
+18:26 tonymiaofa joined channel
+18:34 l0nGYear_Sync_ joined channel
+18:35 l0nGYear_Sync_ quit:Remote host closed the connection
+18:37 l0nGYear_Sync_ joined channel
+18:38 perr joined channel
+18:38 perr quit:Changing host
+18:38 perr joined channel
+18:39 l0nGYear_Sync_ quit:Remote host closed the connection
+18:46 l0nGYear_Sync joined channel
+18:47 blazenur joined channel
+18:51 l0nGYear_Sync quit:Ping timeout: 264 seconds
+18:55 l0nGYear_Sync joined channel
+19:00 l0nGYear_Sync quit:Ping timeout: 244 seconds
+19:00 l0nGYear_BOT joined channel
+19:03 stdstx_ joined channel
+19:03 stdstx_ is now known as StardustX
+19:04 stdstx quit:Quit: Bye!
+19:22 l0nGYear_BOT quit:Remote host closed the connection
+19:50 iyzsong: (┙>∧<)┙へ┻┻
+19:54 perr quit:Quit: Leaving
+20:03 tonymiaofa quit:Quit: leaving
+20:11 CyrusYzGTt joined channel
+20:16 yimis joined channel
+20:17 yimis quit:Client Quit
+20:40 Dusk_Soul joined channel
+20:40 Dusk_Soul: hi
+20:40 Dusk_Soul: Anyone?
+20:43 Dusk_Soul joined channel
+20:47 Mokou quit:Remote host closed the connection
+21:11 blazenur quit:Remote host closed the connection
+21:26 hope1 joined channel
+21:29 CyrusYzGTt quit:Ping timeout: 276 seconds
+21:29 Mokou joined channel
+21:37 hope1 quit:Ping timeout: 276 seconds
+21:46 hope1 joined channel
+22:01 hope1 quit:Ping timeout: 276 seconds
+22:06 srainbot joined channel
+22:06 srainbot quit:Client Quit
+22:08 iyzsong quit:Ping timeout: 252 seconds
+22:19 iyzsong joined channel
+22:29 Mokou: 【外媒：巴西奥组委称奥运村问题或为IS蓄意破坏】巴西警方28日宣布逮捕1名与IS有关的黎巴嫩裔巴西男子，疑其在巴西招募恐怖分子。其曾在2014年世界杯期间因非法携带武器被捕。里约奥运主办方指出，漏水和马桶堵塞等影响代表团入住奥运村的一系列问题，有可能是蓄意破坏。
+22:29 Mokou: ^ “老大，又有恐怖袭击事件发生了！”“不管谁干的，我们先宣布负责！对了，是在哪里关于什么的？”“说我们潜入破坏人家的厕所。”“。。。。。。。(黑人问号脸”
+22:30 iyzsong: _(:з」∠)_
+22:35 hope1 joined channel
+22:42 T-J-M joined channel
+22:43 hope1 quit:Ping timeout: 258 seconds
+22:46 hope1 joined channel
+22:55 lhanjian: 😂
+22:55 lhanjian: 这到底是巴豆甩锅还是is
+22:56 lhanjian: 兄弟主动抢锅啊
+22:56 perr joined channel
+22:56 hope1 quit:Ping timeout: 260 seconds
+22:57 Mokou: 我觉得是甩锅……
+22:57 Mokou: IS故意破坏马桶盖么
+22:59 cleamoon: 赌了巴西的水管就能导致海平面上升，最终淹没米帝，这称为全球变绿现象
+23:00 cleamoon: @糗百 今天去医院，医生说：你有15年的烟龄，你要是不抽烟，攒的钱都够买宝马了。 哥们一听瞬间这暴脾气就上来了。我就问：医生，你抽烟吗？医生说:我不抽啊。 那特么你的宝马呢？ 医生说：在楼下停着呢，怎么啦？ 一脸懵逼的我说：没事，我就问问。
+23:00 Mokou: 233333333
+23:00 iyzsong: (┙>∧<)┙へ┻┻
+23:03 lhanjian: 蛤蛤蛤
+23:03 lhanjian: 医生买宝马确实很正常啊
+23:06 cleamoon: 海盗国的话，医生四个月工资而已
+23:08 hope1 joined channel
+23:09 cleamoon: 当然，也是因为我这里弼马温比较便宜，最便宜的200k就够了
+23:12 Mokou: 他娘的资本主义
+23:17 cleamoon: 天朝加上税，估计要300k了
+23:30 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:33 hope1 quit:Ping timeout: 244 seconds
+23:39 hope1 joined channel
+23:46 hope1 quit:Ping timeout: 244 seconds
+23:47 perr quit:Quit: Leaving

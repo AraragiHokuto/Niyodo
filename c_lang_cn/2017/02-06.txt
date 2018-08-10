@@ -1,0 +1,348 @@
+00:17 xxxxxxxxx quit:Quit: Leaving...
+01:09 memphisw joined channel
+01:32 memphisw_ joined channel
+01:45 lh_mouse quit:Read error: Connection reset by peer
+01:52 memphisw quit:Ping timeout: 240 seconds
+01:52 memphisw_ is now known as memphisw
+05:26 zwindl quit:Quit: Connection closed for inactivity
+06:10 Meow-J quit:Remote host closed the connection
+06:10 Meow-J joined channel
+08:08 Youmu quit:Quit: Connection closed for inactivity
+09:09 Youmu joined channel
+09:21 yimis joined channel
+09:21 yimis quit:Client Quit
+09:23 iyzsong-w joined channel
+09:52 lh_mouse joined channel
+10:22 H0P quit:Ping timeout: 248 seconds
+10:24 Dove joined channel
+10:30 T2 joined channel
+10:32 Dove quit:Ping timeout: 240 seconds
+10:46 ShiinaMashiro joined channel
+12:05 zwindl joined channel
+12:19 iyzsong-w quit:Ping timeout: 252 seconds
+12:24 lh_mouse: geordi, { string str; auto fn = [](const char *&& s){ str.append(s); }; auto b = bind(fn, "hello"); b(); cout <<str; }
+12:24 geordi: error: 'str' is not captured
+12:24 lh_mouse: geordi, { string str; auto fn = [&](const char *&& s){ str.append(s); }; auto b = bind(fn, "hello"); b(); cout <<str; }
+12:24 geordi: error: no match for call to '(_Bind<main(int, char**)::<lambda(const char*&&)>(const char*)>) ()'
+12:24 lh_mouse: geordi, --clang { string str; auto fn = [&](const char *&& s){ str.append(s); }; auto b = bind(fn, "hello"); b(); cout <<str; }
+12:24 geordi: error: no matching function for call to object of type '__bind<(lambda at 0:7:58) &, char const (&)[6]>'
+12:24 lh_mouse: geordi, { string str; auto fn = [&](const char *&& s){ str.append(s); }; auto b = bind(fn, +"hello"); b(); cout <<str; }
+12:24 geordi: error: no match for call to '(_Bind<main(int, char**)::<lambda(const char*&&)>(const char*)>) ()'
+12:24 lh_mouse: geordi, --clang { string str; auto fn = [&](const char *&& s){ str.append(s); }; auto b = bind(fn, +"hello"); b(); cout <<str; }
+12:24 geordi: error: no matching function for call to object of type '__bind<(lambda at 0:7:58) &, const char *>'
+12:24 lh_mouse: geordi, --clang { string str; auto fn = [&](const char * s){ str.append(s); }; auto b = bind(fn, +"hello"); b(); cout <<str; }
+12:24 geordi: hello
+12:39 lh_mouse: geordi, extern "C" { template<typename T> void foo(T); }
+12:39 geordi: error: template with C linkage
+12:59 iyzsong-w joined channel
+13:13 xhe joined channel
+13:14 xhe quit:Client Quit
+13:15 xhe joined channel
+13:17 xhe quit:Client Quit
+13:19 xhe joined channel
+13:19 xhe quit:Client Quit
+13:21 xhe joined channel
+13:46 iyzsong-w quit:Ping timeout: 245 seconds
+13:47 dakeweda joined channel
+13:52 lh_mouse: geordi, -c { function<int () const> fn; }
+13:52 geordi: error: aggregate 'function<int() const> fn' has incomplete type and cannot be defined
+13:57 iyzsong-w joined channel
+13:57 iyzsong-w: -.-
+13:58 xhe quit:Quit: leaving
+13:59 xhe joined channel
+13:59 dakeweda: =-=
+14:08 * lh_mouse slaps dakeweda around a bit with a large trout
+14:09 dakeweda quit:Quit: Leaving
+14:16 zwindl quit:Quit: Connection closed for inactivity
+14:34 xhe quit:Quit: leaving
+14:35 xhe joined channel
+14:35 whoami joined channel
+15:03 animalevip joined channel
+15:03 animalevip: 广告位招租
+16:06 xhe joined channel
+16:10 whoami quit:Ping timeout: 248 seconds
+16:17 whoami_ joined channel
+16:24 whoami_ quit:Ping timeout: 248 seconds
+17:00 sottd joined channel
+17:17 cleamoon joined channel
+17:18 cleamoon: https://pic3.zhimg.com/v2-780726667440093ff3edead0bfe556e6_b.jpg
+17:20 H0P joined channel
+17:30 H0P quit:Quit: WeeChat 1.7
+17:39 whoami_ joined channel
+17:40 sottd: 你们给我的我都没有用过!
+17:40 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 50.1.0/20161208153507]
+17:44 whoami_ quit:Ping timeout: 245 seconds
+18:17 cleamoon quit:Ping timeout: 260 seconds
+18:20 lh_mouse quit:Read error: Connection reset by peer
+18:20 lh_mouse joined channel
+18:23 lh_mouse: geordi, << is_base_of<int, int &>::value
+18:23 geordi: false
+18:23 lh_mouse: geordi, << is_base_of<int &, int>::value
+18:23 geordi: false
+18:24 lh_mouse: geordi, << is_base_of<int, int>::value
+18:24 geordi: false
+18:24 lh_mouse: geordi, << is_base_of<string &, string>::value
+18:24 geordi: false
+18:24 lh_mouse: geordi, << is_base_of<const string, string>::value
+18:24 geordi: true
+18:30 finder joined channel
+18:32 finder is now known as EvilFinder
+18:33 * lh_mouse slaps EvilFinder around a bit with a large trout
+18:36 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:49 iyzsong-m joined channel
+18:50 iyzsong-m: (#･∀･)
+18:51 iyzsong-m: sottd 和 T2 是两个人吗？
+18:51 lh_mouse: 是。
+18:51 lh_mouse: 前面那个是药元四。
+18:52 iyzsong-m: 2333
+18:52 T2: iyzsong-m: 是两个人
+18:52 iyzsong-m: (°ー°〃)
+18:53 T2: 你的无聊寂寞好点没？找个游戏玩玩吧。
+18:53 T2: 另外入职还是要入的
+18:54 iyzsong-m: 已入职 还沒体检...
+18:54 T2: 不要慌，体检而已，不会有问题的。
+18:55 yimis joined channel
+18:55 EvilFinder left channel:"Leaving"
+18:55 iyzsong-m: 等公交回窝 (ーー゛)
+18:56 T2: 哈哈
+18:59 T2 is now known as Dove
+19:10 yimis quit:Quit: yimis
+19:10 iyzsong-m: 43 inch 的AOC 明天到~
+19:16 Dove: 不错不错
+19:17 Dove: 还是台式好，本子不好用。
+19:18 iyzsong-m: 我要接移动送的盒子看电视 (；・∀・)
+19:26 Sub_title joined channel
+19:27 Dove: iyzsong-m: 好吧，我不看电视，比较无聊。
+19:28 Dove: 不是比较，是很无聊。
+19:31 Sub_title quit:Client Quit
+19:39 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+19:42 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:45 iyzsong joined channel
+20:01 ShiinaMashiro quit:Quit: Connection closed for inactivity
+20:07 cleamoon joined channel
+20:09 Stevearzh quit:Ping timeout: 258 seconds
+20:09 Stevearzh joined channel
+20:22 cleamoon: 23333  http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/ka/e6_157554.jpg@596w_1l.jpg
+20:28 H0P joined channel
+20:38 iyzsong: (┙>∧<)┙へ┻┻
+20:43 Youmu: iyzsong: 阿黑顔
+20:49 iyzsong: 什么东西
+20:50 varna joined channel
+20:50 varna: (｡･ω･)
+20:55 iyzsong: varna: LEEE说她找到真爱啦 _(:з」∠)_
+20:56 varna: iyzsong: 噫噫噫！
+20:56 varna: 噫噫噫噫噫噫！
+20:56 varna: 呜呼呼！
+20:56 varna: 啊啊啊啊啊
+20:56 varna: _(:з」∠)_
+20:56 iyzsong: 2333
+20:57 varna: 雷霆崖上喜多村 英梨酋长赛凯恩 血蹄踏遍花开处 男女皆被牛头人！
+21:03 * iyzsong 睡觉去 _(:з」∠)_
+21:03 iyzsong quit:Quit: bye.
+21:07 cleamoon: 著名Linux黑客胡正第25本佛法新书发布
+21:07 cleamoon: 可以进行ntr计划了
+21:07 varna: 啊，好想侵犯幼女啊
+21:08 cleamoon: 去玩生化7,有幼女可以侵犯
+21:09 varna: 最近试了一个叫strike suit zero的游戏，还不错
+21:17 varna: Macross式太空机战
+21:17 varna: 操作感意外地不错，可以作出一边滚转推进一边机炮开火、同时用导弹锁定敌机的动作
+21:20 varna: 变形成机甲还可以跟着girigiri爱打拍子
+21:22 varna: 另力荐一个地牢探险游戏Darkest Dungeon
+21:22 varna: 休闲、难度不错，画风音乐和画外音都有趣
+21:24 H0P quit:Quit: WeeChat 1.7
+21:24 H0P joined channel
+21:36 cleamoon: 回合制的？
+21:36 varna: 回合制
+21:38 cleamoon: 略蛋疼
+21:41 varna: 游戏里对压力的处理很有趣
+21:41 varna: 玩家的小队在探险时候会感到压力，压力爆棚的时候可能会发飙或者爆种
+21:46 xhe_ joined channel
+21:47 xhe is now known as Guest96279
+21:48 xhe_ is now known as xhe
+21:50 Guest96279 quit:Ping timeout: 255 seconds
+21:50 cleamoon: san值？
+21:50 cleamoon: 明明是地下城游戏
+21:52 varna: 但是很熟练
+21:53 varna: _(:з」∠)_少前这个活动好麻烦，作为一个萌新现在我只能打过E1...
+21:54 cleamoon: orz
+21:54 cleamoon: 是不是锁区
+21:55 varna: _(:з」∠)_每面都有四个小关，刚打进E1-4的斩杀
+21:55 varna: 不知道是不是锁区，欧洲买不到么？
+21:58 cleamoon: 我没找到这个
+22:00 cleamoon: 玩起来舒服吗？
+22:01 varna: 还不错
+22:04 cleamoon: 有没有天朝手游独特的坑爹属性
+22:04 varna: 哦你说少前？
+22:05 cleamoon: +
+22:05 varna: 还好吧，能买到的道具不多
+22:05 cleamoon: 地牢类我都是攒着慢慢玩
+22:05 varna: 关键耗材目前也买不到，所以看着还凑合
+22:06 cleamoon: 但是活动依旧打不过去？
+22:07 varna: 我练度不够强行混E1奖励
+22:07 varna: E1别人推荐一队Lv70主力打过去，我的主力只有Lv50+……
+22:11 cleamoon: orz
+22:11 cleamoon: 从舰娘的角度听起来略高
+22:13 varna: 不过出击的队伍数不止一个，所以如果不强求无损的话可以车轮战……
+22:16 cleamoon: 沉船流？
+22:16 varna: Boss战被击破也没有惩罚
+22:17 varna: 平时似乎也就掉掉好感度……
+22:17 cleamoon: soga，那还不错
+22:17 cleamoon: ... 那就随便肛了
+22:17 varna: 游戏里可以开大破自动撤离，但即使打开，Boss战也不会撤离，因为没必要
+22:17 cleamoon: 反正应该也没有里番内容？
+22:17 varna: 没有
+22:18 varna: 一般关卡我会去拿个无损限定回合数指定击破数的S胜评价，不过这种明显打不过去的活动就算了，直接击破B滚
+22:20 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/kc/yd_151927.jpg@596w_1l.jpg
+22:20 cleamoon: 没里番内容好感动有毛用
+22:21 varna: 可发戒指……
+22:21 varna: 估计加加属性吧
+22:25 cleamoon: 继前段时间sc2韩国人被米国人淦翻之后，这次毒奶请来的韩国一线底层又被中国人淦翻了
+22:26 varna: ...
+22:26 cleamoon: 被打的跑路了
+22:31 xhe quit:Quit: leaving
+22:32 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/kc/v7_448714.jpg@596w_1l.jpg
+22:34 cleamoon: 淦，海盗的某警察局长的车被炸了
+22:42 cleamoon: varna, 对了，自己写个很简单的mmorpg能提升底力吗
+22:44 varna: 能，因为mmorpg挺麻烦的，所以我其实不推荐上来就做
+22:45 cleamoon: varna, 上来就能做的基本是什么？im？
+22:46 varna: 可以试试
+22:46 varna: IM粗暴做的话不麻烦
+22:46 zwindl joined channel
+22:46 varna: 细致了也很恶心
+22:47 cleamoon: 我就是java粗暴搞了个，挺简单的...
+22:49 cleamoon: 我知道的项目都是需要很多数学，cs部分基本为0的
+22:49 cleamoon: 然而我不会数学
+22:51 LouisLIU joined channel
+22:52 LouisLIU quit:Client Quit
+22:54 varna: Java的话，试试SpringBoot也不坏
+22:55 varna: _(:з」∠)_斩杀一下
+22:56 cleamoon: java是作业顺势，主要想练c系的底力
+22:56 varna: 底力这个东西慢慢来，总有进步的余地
+22:58 varna: 要不试试写个简单框架，能处理一些IO的
+22:59 cleamoon: 类似什么的
+22:59 varna: 写个通用的玩意儿，目标是写好了之后能用他简单搭出一个echo server
+23:00 cleamoon: 我试试，总感觉这玩意超麻烦
+23:00 varna: 从简单的写起
+23:01 cleamoon: 用py写一个似乎挺容易，我人肉翻译一下py版本？
+23:01 varna: 习惯下系统调用，顺便慢慢体会IO密集和计算密集的差别、长短连接的差别、轮询和推送的适性，诸如此类
+23:02 varna: py的IO太渣，不过一开始随意……
+23:03 cleamoon: 轮询和推送都没听过...
+23:03 varna: 往下还可以试试甄别出目指可用性的防死/不防死措施
+23:03 varna: 轮询比较傻，就是隔一段时间发起一个询问
+23:04 varna: 推送更倾向于事件驱动
+23:04 cleamoon: ......
+23:04 varna: 至于怎么用，这里有时候是在权衡CPU用量、防死能力和压力/熔断适性
+23:04 cleamoon: 感觉三个月做出一个原型，有经验的3s就能让其死机
+23:05 varna: 压力大了什么鬼事儿都有
+23:05 cleamoon: 我先试试吧
+23:05 cleamoon: ml方向有类似的底力练习东西吗？
+23:05 varna: (｡･ω･)ﾉ高兴的话还可以试用下p7r，虽然我估计用起来比较麻烦
+23:06 varna: ML我水平糟，不知道怎么搞
+23:06 cleamoon: 我会看看p7的，前提是我看的懂
+23:06 cleamoon: orz
+23:07 cleamoon: 你不学的就是ml
+23:07 varna: p7已死，不过p7r现在还在建设中
+23:07 varna: 然而我没学好……
+23:07 varna: 舰倒肝得还好
+23:08 cleamoon: 学校一般要做些什么
+23:08 cleamoon: 除了给教授帮 忙
+23:08 varna: 没人管你……
+23:08 H0P quit:Ping timeout: 240 seconds
+23:08 cleamoon: .......
+23:08 varna: 都是直接上去就参加研究项目了
+23:10 cleamoon: 就不怕什么都不会？
+23:11 varna: 不怕，有人就是不会不管不问，混毕业了事
+23:12 cleamoon: ......
+23:12 cleamoon: 蛋疼
+23:13 cleamoon: ai方向也同？
+23:13 varna: AI/ML/DM目前可以混着来，很多做法都重叠了
+23:13 cleamoon: ...
+23:14 cleamoon: 那么有什么好玩的项目吗
+23:14 varna: 不知道，这方面我花的力气很少，缺体感
+23:14 cleamoon: 于是你其实是上了海军军校？
+23:15 varna: 还撸了很多奇怪的码
+23:16 varna: 现在的p7r就是当时的p7改，曾经的ROUtine改二
+23:16 cleamoon: 7是什么梗
+23:17 varna: 随便找了个数
+23:17 cleamoon: ....
+23:17 cleamoon: 那叫pg多好
+23:17 varna: 现在想想，用p这个字母政治不正确
+23:18 cleamoon: 为什么
+23:18 varna: 陆上战斗机用j，舰上战斗机用a；p是深海的陆上战斗机
+23:18 cleamoon: 2333333
+23:19 cleamoon: 那么你可以选择更名为 j8 或者 as
+23:19 varna: a留着，j就算了……
+23:20 cleamoon: 那就叫 ass 
+23:21 cleamoon: r +1 => s
+23:21 cleamoon: 顺便再 +1s
+23:21 varna: 用一些时代性的编号比较中二
+23:22 varna: A5=九六战，A6=零战（定型后的十二试舰战），A7=烈风（定型后的十七试舰战）
+23:22 cleamoon: A5 -> as
+23:22 cleamoon: 都变小一些
+23:23 varna: 呜呼呼，再补给一下就可以去斩杀了
+23:23 varna: 斩掉了能给个霰弹枪酱，也不知道厉害不厉害
+23:25 cleamoon: 听起来像 X吹酱
+23:27 cleamoon: 正在编译chromium，2h编译了1/5
+23:27 varna: ……
+23:27 varna: 2h该编译得差不多了才对啊……
+23:28 varna: (｡･ω･)ﾉ去斩啦！
+23:29 cleamoon: 穷，电脑太差
+23:30 cleamoon: 开atom 45s
+23:30 varna: 卧槽，我上去车轮战送死的那队把boss干死了……
+23:31 varna: 中间疑似出了bug, boss的大招连续四五次没打出伤害
+23:31 cleamoon: ......
+23:31 cleamoon: 这也行
+23:31 varna: 总之少砸几个桶是好事
+23:32 varna: 以游戏自带的作战效能来看，我主队有7.1k，打消耗战的二队有5.8k，boss有10+k...
+23:33 cleamoon: ...rp爆发
+23:34 cleamoon: 羊驼子公司吃得怎么样
+23:34 varna: 吃得挺好的，虽然据说对面网易更好
+23:36 varna: 我驲，E2是夜战图……我阵容打夜战困难，狗呔了
+23:38 cleamoon: 这也能夜战....
+23:39 varna: 夜战图需要在指定回合内全歼地图上的敌人，但视野有限，找错了容易尿
+23:39 varna: 全命中下削90%，而且似乎会搞出些重装甲敌人
+23:39 varna: 装备不好凹不动
+23:40 cleamoon: 也是无法控制的卡牌回合制？
+23:41 varna: 可以控制
+23:41 varna: 地图行走和战场上的站位都可以控制
+23:42 cleamoon: 哦？那很好呀
+23:42 varna: 玩法还可以的
+23:42 cleamoon: 如果是类似rts那么有个夜战解法，多边形站角阵
+23:43 cleamoon: 俗称菊 花阵
+23:43 varna: 不算是RTS, 我苦手的主要是对面重装兵，因为打不动
+23:43 varna: 这游戏的好多彻甲弹不许突击步枪酱装备，结果我被坑
+23:44 varna: 我练了一些又欧又厉害的突击步枪，进去之后打出的伤害都是个位数，被按着摩擦
+23:44 cleamoon: 三行我就看到了“欧”
+23:45 cleamoon: return of the outi
+23:45 varna: (｡･ω･)现在我至少算个亚洲人
+23:45 varna: (｡･ω･)ﾉ比肝舰那会儿欧多了
+23:46 varna: 卧槽似乎大建出货了
+23:46 varna: 喔哈哈哈哈！
+23:47 cleamoon: 大和？
+23:47 varna: 低保一发，出了很厉害的突击步枪
+23:47 cleamoon: orz
+23:47 varna: 当然是在游戏里设定很厉害，实际上G11这个枪是个悲剧……
+23:48 cleamoon: 于是这次的敌人是什么，被用 坏的枪的怨念吗
+23:49 varna: 设定是跟己方差不多的玩意儿，只不过失控了而已
+23:49 cleamoon: ...也是jk？
+23:49 varna: 各种各样的，不过似乎没幼女
+23:49 varna: 反正是休闲舔的游戏，我选择无视设定了
+23:51 varna: 尤其因为某些不可名状的原因，国产95/97都变成了很强力的角色
+23:51 cleamoon: .......
+23:52 varna: 幸好没神通那么情怀
+23:52 cleamoon: 对了，新的茨华仙揭示了灵梦为什么能被河取威慑，因为钱.... 果然十万巫女....
+23:53 varna: 而且97的配音请了佐仓绫音，就是配NKC那位，所以大概非洲提督是有救的
+23:53 varna: 噗
+23:53 cleamoon: 有日本枪吗
+23:53 varna: 2un已经放任二设侵入了？
+23:53 varna: 还真没有……我都没看见丰和89
+23:53 cleamoon: 不完全是，基本就是灵梦得靠河取之类的摆摊的摊位费生活
+23:54 varna: ………………………………
+23:54 varna: 难道不是靠吃草的？
+23:56 cleamoon: 也会吃小鱼之类的
+23:56 varna: 果然还得吃草
+23:56 cleamoon: 接 客用的衣服也蛮贵的
+23:57 varna: 巫女不穿衣服也可以的
+23:57 cleamoon: 河取一句“再没人来就不开摊位了”就弄得灵梦去工 作了
+23:58 cleamoon: 另外还揭示了，一个饿神就能淦翻灵梦，只不过幻 想 乡人们都是灵梦一头的，所以有帮忙的
+23:59 cleamoon: http://www.bilibili.com/video/av2859004/ 这个不错

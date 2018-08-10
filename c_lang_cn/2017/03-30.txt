@@ -1,0 +1,416 @@
+00:00 lh_mouse: varna, pthread_mutex_trylock 返回的是 errno 。
+00:00 lh_mouse: 不是 0 和 -1 。
+00:00 varna: pu?
+00:00 lh_mouse: 而且它返回 0 若成功。
+00:00 lh_mouse: 失败返回 EBUSY。
+00:00 varna: 啊，是这样
+00:01 varna: 那这就更蠢了……
+00:01 varna: 返回值的语义被砍掉，我看不出这里的合理性
+00:01 lh_mouse: 刚才一直在说这个问题。
+00:01 lh_mouse: 比如我写个函数返回 0 成功，就兼容 4.0 但是 trunk 的行为是相反的。
+00:02 lh_mouse: 返回 0 对于 trunk 等于返回 false 表示失败。
+00:02 varna: 没法想像为什么要这么做
+00:02 lh_mouse: 这帮傻逼能不能更蠢一点。
+00:03 lh_mouse: 有没有必要造个 mcfpthread 出来？不过 pthread_cancel 不好实现的样子。
+00:03 varna: 没必要了，mcfpthread等同于把你拉到历史惨剧的级别上
+00:03 lh_mouse: 是。
+00:04 Mokou: OK，FSN下完了
+00:08 lh_mouse: pthread_cancel 有人用么。
+00:09 lh_mouse: IP地址50.184.68.11 归属地查询 - 站长之家
+00:09 lh_mouse: IP归属地查询
+00:09 lh_mouse: 美国 新泽西州伯灵顿县月桂山乡Comcast有线通信控股股份有限公司
+00:09 varna: 不敢用
+00:10 lh_mouse: 访问时间	地域	来源	入口页面	搜索词	访问IP	访客标识码	访问时长	访问页数
+00:10 lh_mouse: 	 	3		2017/03/29 22:15:07	其他	直接访问	/gcc-mcf	--	50.184.68.11	8626037679864624491	6"	1
+00:12 lh_mouse: 睡觉。喵。
+00:12 lh_mouse quit:Read error: Connection reset by peer
+00:20 Mokou: https://img.vim-cn.com/a6/4b9c7eaab28cfdb89d9e3e7adb07ce6a76e1cb.png
+00:21 Silent_DXX joined channel
+00:23 Mokou: 第四枚五联鱼雷到手
+00:23 varna: 可怕
+00:23 Silent_DXX quit:Client Quit
+00:24 Mokou: fgo玩多了以后稀有物总是忘记上锁
+00:27 Mokou: http://wx1.sinaimg.cn/mw690/76c3a5c3gy1fe45l0g4k5j20k20fik1i.jpg
+00:28 cleamooon_: 2333333
+00:56 varna: 睡了 
+00:56 varna: (｢・ω・)｢今天被一个Boss虐死三回啊三回
+01:00 varna quit:Ping timeout: 246 seconds
+01:23 Mokou quit:Remote host closed the connection
+08:10 Haruna quit:Quit: Connection closed for inactivity
+08:15 hextpsc joined channel
+08:17 hextpsc: IRC有没有中文的关于讨论黑客技术的server和channel啊？求推荐啊！
+08:38 hextpsc quit:Ping timeout: 258 seconds
+09:18 yimis joined channel
+09:28 cleamooon quit:Remote host closed the connection
+09:28 cleamooon_ is now known as cleamooon
+09:28 cleamoooon joined channel
+09:56 hextpsc joined channel
+10:37 Haruna joined channel
+10:38 Haruna is now known as Guest30884
+10:38 Guest30884 quit:Changing host
+10:38 Guest30884 joined channel
+10:38 Guest30884 quit:Changing host
+10:38 Guest30884 joined channel
+10:38 Guest30884 is now known as Mikan
+11:01 lhanjian: hextpsc: 我所认识的，上来就玩cracker的伙计，基本上没有成就。
+11:03 lhanjian: http://blog.knownsec.com/Knownsec_RD_Checklist/v3.0.html#
+11:03 lhanjian: 就这么点东西，不过足够菜鸟学很久了
+11:38 Dove joined channel
+11:42 hextpsc quit:Remote host closed the connection
+11:42 Dove quit:Read error: Connection reset by peer
+12:09 lh_mouse joined channel
+12:49 yimis quit:Quit: yimis
+12:49 StardustX joined channel
+13:40 whatofor joined channel
+13:40 whatofor_1 quit:Read error: Connection reset by peer
+14:06 Dove joined channel
+14:37 whatofor_1 joined channel
+14:41 whatofor quit:Ping timeout: 268 seconds
+14:59 Dove quit:Ping timeout: 240 seconds
+15:19 Mokou joined channel
+15:30 StardustX quit:Quit: Leaving
+15:31 rapiz joined channel
+15:31 rapiz quit:Client Quit
+15:32 * cleamooon 上来就玩cracker的伙计膝盖早就被射烂了
+15:51 sottd joined channel
+15:51 sottd: ndk-r9d不支持codecvt 吐血。。
+16:28 Dove joined channel
+16:33 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 52.0.1/20170316213829]
+17:11 Dove quit:Ping timeout: 240 seconds
+17:37 Dove joined channel
+17:58 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+18:00 \s joined channel
+18:04 StardustX joined channel
+18:10 Dove quit:Ping timeout: 260 seconds
+18:16 Dove joined channel
+18:29 cleamooon: 哥德堡一高手开推土车撞金店抢劫，结果卡住只能等警察来救了……
+18:44 abel-abel joined channel
+18:52 Dove quit:Ping timeout: 264 seconds
+19:06 abel-abel quit:Quit: Leaving
+19:16 varna joined channel
+19:17 varna: _(:з」∠)_我居然下班了
+19:18 cleamooon: orz
+19:20 varna: 我驲，少前活动第一关就是夜战
+19:24 varna: 1-1 2k效能，拼了
+19:24 cleamooon: 小田一成: 我想起去年秋天的苹果发布会。我熬夜在咖啡馆看发布会，森哥找我来聊天。他一见面，就去买了包烟，又买了两瓶茶饮料。坐下以后，他跟我讲了一夜他做痔疮手术的故事，搞得我看着发布会上的菊花都感觉怪怪的。
+19:26 cleamooon: @死貓.鳝变型 : 看看窗外，天已大亮；再一看表，周一早上。——文明5
+19:26 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/sr/g7_361860.jpg@596w_1l.jpg
+19:39 varna: 1-1 clear
+19:40 varna: 幸好只是2k效能的夜战
+19:40 cleamooon: orz
+19:42 varna: 奖励了补正所有夜视惩罚的激光器
+19:42 varna: _(:з」∠)_卵用啊
+19:46 varna: 驲
+19:46 varna: 二面是昼战，又要重新配装备和队伍了
+19:47 varna: (｡･ω･)看在下怎么碾压这个4k效能的昼战
+19:47 cleamooon: 氪
+19:48 varna: 不，我前三队主力效能差不多16k/12k/13k
+19:48 cleamooon: orz
+19:51 varna: (｡･ω･)ﾉ走起
+19:53 varna: 等等，卧槽
+19:53 varna: 不对这个是夜战
+19:53 varna: 撤退重新配装配人……
+19:53 Mokou: 666666666
+19:53 varna: 夜战为什么会捞枪的
+19:53 varna: 不都是捞装备么
+19:57 Mokou: http://wx4.sinaimg.cn/mw690/005AMoDegy1fe4osebid9j30qo10wgud.jpg
+19:58 varna: 三队夜战效能9.6k/8.9k/10.3k
+19:58 varna: (｡･ω･)ﾉ走起
+19:59 varna: 5回合内头目击破……
+19:59 varna: 这怎么打
+19:59 Dove joined channel
+20:01 Dove: 咦，今天有空来聊天嘛？
+20:01 varna: 今天下班早
+20:01 Dove: 不错不错
+20:02 Dove: 你们都好辛苦，那么辛苦我做不了。
+20:03 Dove: 也许能做，只是没被逼到那个份上。
+20:04 varna: 这不算很逼，只是要费点时间
+20:04 Dove: 我这个人真是奇懒无比的。
+20:04 Dove: 耐心也不好，虽然我一直想培养这个，我觉得干会计对这个有好处。
+20:05 Dove: 我本身认为努力是个伪命题，不过做事就是要辛苦没错。
+20:06 varna: 费体力和做不到是两回事
+20:06 varna: 但没必要麻痹自己说我努力就能做到
+20:07 Dove: 哈哈，我还没那么傻到分不清。
+20:07 Dove: 每个人都不一样罢了
+20:08 Dove: 干技术这个就不太适合我，虽然我很想干。
+20:09 Dove: 做点简单的财会我还是能做到的，高端的决策啊管理啊可能不行。
+20:09 whatofor_1 quit:Read error: Connection reset by peer
+20:09 whatofor joined channel
+20:09 Dove: 但是混混生活还是可以。
+20:12 Dove: 我就是想成为一个正直善良有耐心和智慧的人，当然有点知识和能力的话更好。
+20:13 rapiz joined channel
+20:14 Mokou: http://wx3.sinaimg.cn/mw690/b13ed866ly1fe52qjunybj20qo119498.jpg 节奏榜上的孔明终于被拉下来了……
+20:17 Mokou: http://wx1.sinaimg.cn/mw690/67483d79ly1fe51avvxbkj20m10ldna1.jpg 
+20:18 varna: _(:з」∠)_玛德哪个混球发明了夜战找人的玩法
+20:20 varna: 5k效能的头目，第一杀
+20:20 varna: 看看什么效果
+20:20 varna: 己方9.5k二彻甲
+20:21 varna: _(:з」∠)_命中好高啊，得砸一个桶
+20:30 varna: (｡･ω･)二血
+20:32 lh_mouse: varna, 还真被你说着了。
+20:32 lh_mouse: All callers of `__libcpp_foo_trylock()` functions return bool so it made more sense to convert the return value to bool once inside the `__threading_support` interface rather than at each callsite. I'm not sure what incompatibility this causes since the callers should have been updated too.
+20:33 varna: 这就是贰
+20:35 lh_mouse: There is one version that I know of, but the expectation of external threading implementations is that they track trunk very closely. There is absolutely no guarantee of API compatibility in the external threading interface. It's not meant to be a stable interface.
+20:35 lh_mouse:  
+20:37 lh_mouse: 造了个 pseudo handle 
+20:37 lh_mouse: https://github.com/lhmouse/mcfgthread/blob/master/src/env/_mopthread.c#L293
+20:37 lh_mouse: 如果传入的 tid 是当前线程，就返回指向静态 pseudo handle 的指针（当然这个指针本身就是个 pseudo handle）。
+20:38 lh_mouse: 否则就从全局 map 里根据 tid 去查 handle 。
+20:38 lh_mouse: 不过看起来倒是效率蛮不错。
+20:42 lh_mouse: This is the mother of pthread.
+20:42 lh_mouse: MOPthread
+20:42 Dove: 为什么你总能搞出这样的名字
+20:43 Dove: orz
+20:44 varna: 1-2斩杀走起
+20:46 varna: 玛德点错了……
+20:46 lh_mouse: Dove, ?
+20:47 Dove: lh_mouse: 我只是惊叹于你的命名，从MCF就开始了。
+20:47 lh_mouse: Dove, no no no.
+20:47 lh_mouse: MOPthread 其实是 扫把 thread 。
+20:48 lh_mouse: 黑白的扫把。
+20:48 varna: Shirisame Marasa
+20:48 Dove: 你自己说是mother of pthread
+20:48 lh_mouse: MOP - What does MOP stand for? The Free Dictionary翻译此页
+20:48 lh_mouse: Acronym Definition; MOP: Modern Organic Products (hair/skin care company) MOP: Macau Pataca (ISO currency code) MOP: Mother of Pearl: MOP: Measure (s) Of Performance ...
+20:48 Mokou: RE厨特有联想
+20:49 lh_mouse: 馹，看成 Mother of Perl 。
+20:49 varna: 申淫N
+20:49 * lh_mouse ×虫上脑。
+20:49 varna: 同看成Perl
+20:49 Dove: 我也看成了perl
+20:49 Mokou: 申Perl厨N
+20:50 varna: 希望1-4敌战力别太高
+20:50 varna: 这次我也只想拿了奖励人形就走
+20:51 rapiz quit:Quit: Konversation terminated!
+20:51 Mokou: http://wx4.sinaimg.cn/mw690/65667e21gy1fe54o1p2j0j20yi1pcdqf.jpg 走出国门了
+20:52 varna: OK抓到了
+20:52 varna: 即 斩 杀
+20:53 varna: 歼 灭 号 令 核 弹 投 放
+20:55 varna: 得了一个看起来色色的幼女
+20:55 Dove: = =
+20:55 cleamooon: ?
+20:55 Dove: ^瑟瑟的幼女
+20:56 varna: 1-2斩了，看一眼1-3
+20:58 varna: 6k效能，看起来1-4不会太糟糕
+21:06 varna: 1-3一血，果然9a91还是比不上416啊
+21:12 varna: 二血抓到_(:з」∠)_
+21:13 varna: (｡･ω･)干这个小姐姐
+21:21 varna: 三血抓到
+21:22 varna: 我头一次见到敌人的属性上面写了两个：「强」「无敌」
+21:22 Dove: 我的搜狗浏览器经常打不开网页我真是服
+21:23 Dove: 这会儿B站点一个链接好费劲
+21:25 Dove: 我网断了？
+21:26 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:26 Dove joined channel
+21:26 Dove: 没断啊
+21:27 varna: 22:20 -!- Dove [~Dove@223.221.25.181] has quit [Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/]
+21:27 varna: 22:21 -!- Dove [~Dove@223.221.25.181] has joined #c_lang_cn
+21:27 Dove: 我关了客户端重开了一下
+21:28 Dove: 算了，这种比较灵异的事情我已经习惯了。
+21:29 Dove: 可能是B站出了点什么问题，上百度没问题。
+21:32 Dove: 算了，实在看不了就不看了。
+21:33 varna: (｡･ω･)ﾉ打完1-3就去补点蚀刻片
+21:33 Dove: 我看到字幕组除了通灵之战还更了通灵者正在调查，就想看一下。
+21:35 Dove: 反正看来是怎样都看不了，加载出来也是播到一点就不行了。
+21:35 Dove: 我去下个火狐
+21:35 varna: (｡･ω･)ﾉ哈，又抓到了
+21:35 varna: 手气不错
+21:36 Dove: 恭喜恭喜
+21:37 varna: 最近有点疲劳了，午睡起来的时候像头丧失一样
+21:37 Dove: 疲劳很不好的，多睡点好。
+21:38 varna: 早上醒得早，这个我也懒得管了
+21:38 varna: 清明三天假期休息下
+21:39 Dove: 我现在还是入睡比较困难一点
+21:39 Dove: 不过我没什么事做所以也不疲劳
+21:39 Dove: 所以还好
+21:43 varna: 换个老歌听
+21:43 varna: 《天马座幻想》
+21:45 Dove: 戴荃也唱这歌
+21:45 Dove: 然后你听了就懂了
+21:45 Dove: 我这儿各种缓冲，不知道什么鬼
+21:45 cleamooon: 丧尸不午睡
+21:46 Dove: 丧尸整天睡
+21:46 Dove: 比方说我
+21:46 Dove: 就是睡不着而已
+21:46 Dove: 原来竟然睡得着才可怕。
+21:47 Dove: 我有记录最长睡了三四十个小时吧连续
+21:47 varna: 差不多感觉是睡起来头疼嗓子疼意识模糊，只有脑子还是清楚的
+21:48 varna: OK进斩杀
+21:49 StardustX quit:Quit: Leaving
+21:49 cleamooon: 我若是这样需要起床大量喝水
+21:49 varna: +
+21:49 varna: 现在直接爬起来一罐可乐灌下去
+21:50 cleamooon: 那不更渴了……
+21:50 varna: 不然整个人只有逻辑性的部分在运转，好歹喝点凉的镇镇疼
+21:50 Mokou: +
+21:50 Mokou: 我出门的时候睡前至少留一瓶饮料
+21:51 varna: (｡･ω･)ﾉ抓小姐姐啦！
+21:51 Mokou: 虽说这次刚到杭州那天晚上其实我懒得出门了，没买饮料
+21:51 varna: 于是你叫了几个妹子来吃了一点汁
+21:52 Mokou: 于是我拉上你去膜球了
+21:52 cleamooon: 膜球是什么运动
+21:52 Mokou: 所以出来我问你先吃饭还是先去，不先去的话我就先搞瓶饮料……
+21:52 Mokou: 不先吃饭*
+21:52 varna: OK, 预定斩杀了
+21:52 varna: 9.2k打6.9k
+21:53 varna: clear
+21:54 cleamooon: 根据发表在《Molecular Psychiatry》期刊上的一项创伤后应激障碍康复研究，玩俄罗斯方块游戏的被试比不玩游戏的人有更少的痛苦回忆（flashbacks）。
+21:56 cleamooon: 为什么不让被试试试看玩黑魂呢
+21:56 varna: 黑魂3似乎友善很多了
+21:57 varna: 不尬舞的话有一些办法
+21:57 varna: 哦对我昨天被一个类似死人军团的Boss揉死了三次……
+21:57 cleamooon: 黑魂1
+21:57 varna: 得继续受苦才行
+21:57 cleamooon: 三次不多
+21:57 varna: 不多+
+21:58 varna: 不过都是地形杀，挺悲惨的
+21:58 varna: 他进入第二阶段之后会物理攻击我，有一个击退效果
+21:58 cleamooon: 滚不动还是不死人的膝盖
+21:58 varna: 战斗在高空的平台上发生，背向战斗场地被击飞出去的话一定摔死
+21:59 cleamooon: 被壁咚了？
+21:59 cleamooon: 23333
+21:59 varna: 然后我就被打飞了……
+22:00 varna: 问题之一是我单手持单手武器，攻击距离不够
+22:00 varna: 拖入持久战就容易失误了
+22:00 cleamooon: 没有长枪？
+22:00 varna: 拿的火抗盾物抗也不够，格挡没法兼顾也是个问题
+22:01 varna: 有一个大剑，但是我没怎么强化，就没装备上
+22:01 varna: 这次打算用大剑了
+22:01 cleamooon: 还是瞎丁日乱滚吧
+22:01 varna: 场地是上下跳类型的，滚容易出问题
+22:02 cleamooon: ……贼坑爹
+22:02 varna: 我再试试看，感觉十次之内应该能过
+22:02 cleamooon: 那就不亏
+22:02 cleamooon: 话说这名字正确该怎么翻译
+22:04 varna: 哪个
+22:04 Dove: 大剑ORZ
+22:05 Dove: 黑魂反正我是不会玩的，太自虐了。
+22:05 cleamooon: 你玩的这个2D叫盐什么的
+22:07 varna: 我驲
+22:07 varna: 盐与避难所
+22:07 varna: 又摔死了……
+22:07 cleamooon: 盐是什么鬼嘛
+22:07 cleamooon: 厨房战争吗
+22:08 varna: 就是说，你是个咸鱼
+22:09 cleamooon: ……
+22:09 cleamooon: 咸鱼还不如死鱼，因为生鱼忧患，死鱼安乐
+22:13 varna: 摔死了……
+22:13 varna: 长枪伤害太低
+22:15 cleamooon: 没有高的？
+22:15 cleamooon: 蛋疼
+22:15 cleamooon: 我不喜欢剑系
+22:15 varna: 我驲
+22:15 varna: 第一阶段被地形杀了
+22:16 cleamooon: 每次打boss也得跑酷？
+22:20 varna: 搞定
+22:20 varna: 有苟活
+22:20 varna: 有篝火
+22:21 varna: 我了个去，简直太惨了
+22:21 varna: 不过最后发现了打法
+22:21 cleamooon: orz
+22:21 cleamooon: 苟 岂
+22:21 varna: 武器长度不是问题，重点是要利用上下平台引他出空隙，然后空中连斩
+22:21 cleamooon: 想吃枸杞了
+22:21 cleamooon: orz
+22:21 cleamooon: 听起来好麻烦
+22:22 varna: 滞空的时候可以简单控制变向，滑回平台之后缓一下耐力，架盾顶住两遍的喷火地形，重复这个步骤
+22:22 varna: 总之就是权衡耐力，不断上下平台，穿尽量轻的盔甲减少跌落伤害
+22:23 cleamooon: orz
+22:23 cleamooon: 不愧是黑魂向
+22:24 varna: btw 就这样我还是被他打得严重受伤
+22:25 varna: 这游戏的血和耐力都会减上限
+22:25 Dove: 能过就很NB了好吧
+22:25 varna: 受伤越重扣上限越多，最多扣到一半
+22:26 Dove: 怎么看都是个自虐的游戏。
+22:26 varna: 总之死了不到十次，还算友好
+22:26 varna: 损失魂大约一两万吧……
+22:27 Dove: 前期要多打一点
+22:27 Dove: 不然后期没等级就更没法玩了
+22:27 cleamooon: 减上限什么鬼
+22:27 cleamooon: 越打越少？
+22:27 Dove: 就是吃药也没用
+22:27 cleamooon: 克苏鲁吗
+22:27 Dove: 这个意思
+22:27 varna: 伤害受多了就会减上限，越打越少
+22:27 varna: 同理，耐力被清空次数越多也会减上限
+22:28 cleamooon: 哦，超坑
+22:28 varna: 不过一般打的时候耐力相对容易控制，所以坑的还是血
+22:28 varna: 战况越不利，情况就越糟糕
+22:28 cleamooon: 不过这个设定有意思，抄了
+22:28 varna: 感觉这个设定还挺好的，逼人认真打
+22:28 Dove: 战况糟糕都没什么太多机会清空耐力槽我估计
+22:29 varna: 不，架盾之后挡住一个重招可能耐力就没了，顺便破盾大硬直
+22:29 Dove: soga
+22:29 varna: 刚才就这个状况，我的装备一般，没法安稳地挡下boss的普攻
+22:29 varna: 所有普攻全都得闪开，偶尔中一两招再被地形喷火阴到就得吃血
+22:30 Dove: 我看别人玩都是直接躲，都没打算硬挡。
+22:30 varna: 这个看情况
+22:30 varna: 不少boss是可以架盾走位的，能错开突进技，之后就可以快速连段
+22:30 Dove: spga
+22:31 Dove: soga
+22:31 varna: 反正死几次就明白了
+22:31 Mokou: http://zhihu.com/question/57777377/answer/154279559
+22:31 varna: 23333
+22:31 Dove: cleamooon: 我是觉得生鱼反正总会死的，不如看看能学到什么。
+22:31 varna: btw 刚才本来想走下一个地区的，结果遇到一个很强的怪
+22:32 varna: 怎么连段都打不出硬直，架盾能格下物理攻击但挡不住中毒，差点死在他手底下
+22:33 cleamooon: 不拿盾会被一击吗
+22:34 varna: 会被连段砍死，当时我身上没药了，血上限只有一半
+22:34 varna: 被他连上一定会死
+22:34 varna: 而且他会瞬移走位……
+22:34 cleamooon: 哦，看来还是不能莽
+22:34 Dove: 好像后面到处都是这样的怪
+22:34 cleamooon: ……
+22:34 varna: 可以莽，但是要熟练用大剑
+22:35 varna: 我不喜欢大剑，就不容易莽了
+22:35 Dove: 毕竟直剑之魂
+22:36 varna: 还有1min内增加50%攻击和全防御100的道具可以吃，但我直接把那个信仰对应的避难所改成自家信仰了
+22:36 varna: 本着不叛第二次教的原则，疯狂受苦
+22:36 Dove: 2333
+22:37 varna: 刷点经验，把身上的负担放放……
+22:38 varna: 这游戏的魂丢失机制和黑魂还不一样
+22:38 varna: 被杀掉的话，魂就会被怪抢走，必须回去击杀掉
+22:38 varna: 自然死亡的话会生成一个怪，也要杀掉
+22:38 varna: 如果过程中死了，就再也找不回来了
+22:39 Dove: orz，死都不能死的。
+22:39 varna: 花了升级就好
+22:40 cleamooon: 叛教才是日常
+22:40 cleamooon: 而且为什么我打 叛教 能打出 滥交
+22:40 Dove: 叛教哪里有那么容易，除非是白痴。
+22:40 varna: 因为你染上了银乱的恶习
+22:41 varna: 一般大剑党打到我这个进度都会叛教
+22:41 varna: 毕竟道具很好用
+22:41 cleamooon: 卧槽，还有怪抢负担？那太蛋疼了
+22:41 varna: Boss的话大约打掉1/4-1/5左右的血就可以抢回来
+22:42 Dove: 我觉得信教就很难，这里看一点，那里赞同一点。
+22:43 varna: 卧槽
+22:43 varna: 跑路被小怪搞死了
+22:43 varna: 忘了有个阴谋
+22:44 Dove: 小怪啦，杀了魂就回来了
+22:45 varna: 卧槽地形杀
+22:46 Dove: 2333
+22:46 Dove: 不行先睡吧，搞太累了。
+22:47 Dove: 我先去睡了，虽然我今天很奇怪地不困。
+22:49 cleamooon: 阴谋是什么，类似人性的东西？
+22:51 varna: 我驲
+22:51 varna: 又摔死了
+22:51 Dove: 这两者的类似之处大概就是我都不懂。
+22:51 varna: 阴谋就类似宫崎英高的阴谋
+22:52 cleamooon: 哦
+22:53 Dove: 阴暗的幼女
+22:54 Dove: 我先睡觉去了
+22:54 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:58 varna: 不过这游戏里弹反还挺好玩的
+22:58 cleamooon: 现在觉得war3 2v2很好看
+22:58 varna: 卧槽我被击飞差点摔死
+22:58 varna: 幸好穿了轻甲
+22:59 cleamooon: 我至今没在任何一款游戏中使出过弹反
+23:13 varna: 卧槽又被小怪……
+23:19 lh_mouse: http://music.163.com/#/artist?id=17634&_hash=songlist-22725434  太吓人了。
+23:29 Mokou: “路边社消息，七月一日，中国标准动车组将在京沪高铁上正式上线运营，年底由标准动车组执行，京沪高铁恢复时速350公里。正式消息请以铁路总公司公告为准 ​​​​”
+23:34 cleamooon: 修好了？
+23:35 Mokou: 啥修好
+23:39 cleamooon: 记得之前不是不能全速开吗
+23:42 Mokou: 一直都能啊，只是不开而已
+23:48 cleamooon: soga
+23:56 varna quit:Ping timeout: 268 seconds

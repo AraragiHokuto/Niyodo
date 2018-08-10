@@ -1,0 +1,1027 @@
+0:30 zzzzzzzz joined channel
+0:38 hope1:http://staticbbs.acfun.tv/Images/Upload2/Th/2014-05-21/657684c0-614f-4501-b45e-30bf6e2cbbb2.jpg
+1:22 tsuki joined channel
+1:34 xxxxxxxx_:这图我这里看不清怎么破...
+1:55 cleamoon_:2333
+1:57 xxxxxxxx_:还自己给自己保存记录,,,,
+1:57 xxxxxxxx_:真是屌
+1:59 cleamoon:所以以后上传什么的还是吾等来吧，尔等乖乖下载便是
+1:59 condy:2333
+2:50 zzzzzzzz:7冒8泡
+6:40 zzzzzzzz joined channel
+7:26 geordi joined channel
+9:1 T3rm1n4t0r:至
+9:11 hope1 joined channel
+9:31 sismvg joined channel
+9:36 lh_mouse joined channel
+9:36 lh_mouse:geordi, { function<void ()> fn = foo; cout <<!!fn; } void foo(){ }
+9:36 geordi:true
+9:37 lh_mouse:geordi, replace first foo with nullptr
+9:37 geordi:false
+9:37 lh_mouse:geordi, replace nullptr with 0
+9:37 geordi:false
+9:40 condy joined channel
+9:48 T2 joined channel
+10:6 T2:hysw, 递归锁要怎么写？
+10:6 T2:不阻塞就行？
+10:11 lh_mouse:T2, tid_t locker = 0; size_t lock_count = 0; void lock(){ if(atomic_load(locker) != current_thread()){ do_lock(); locker = current_thread(); } ++lock_count; } void unlock(){ if(--lock_count == 0){ locker = 0; do_unlock(); } }
+10:13 T2:lh_mouse, 3Q
+10:13 T2:并发也是个神坑啊。
+10:14 T2:memory model 还没看懂 orz
+10:16 lh_mouse:那东西我一开始也没看懂
+10:16 lh_mouse:https://github.com/lhmouse/MCF/blob/master/MCF/Thread/ReaderWriterLock.cpp
+10:16 T2:就 __ATOMIC_ACQ_REL 这种
+10:16 T2:卧槽
+10:17 lh_mouse:看不懂就全上  __ATOMIC_SEQ_CST 吧
+10:17 lh_mouse:x86 上没区别的
+10:19 T2:不是慢么。
+10:19 T2:C的话不考虑虚函数什么的可能简单些。
+10:20 lh_mouse:某些体系上不一样  
+10:20 lh_mouse:x86 没有独立的 acquire 和 release 语义
+10:22 T2:反正先上顺序一致吧。
+10:38 hysw:总算明白为啥叫做topological sort了...
+10:39 lh_mouse:刚才测了一下  开八个线程的时候 __atomic_add_fetch 比 ++ 慢 50 倍
+10:40 T2:hysw, 2333
+10:40 T2:lh_mouse, 还可以啊
+10:41 hysw:话说同步cache要花的时间还是不少的...
+10:44 T2:如果对临界资源变量的修改显式用汇编锁总线就可以上 Weak Consistency？
+10:44 T2:算了还是顺序一致吧。
+10:46 T2:好像只要对同步变量的修改操作使用显示的硬件指令就可以了。
+10:47 lh_mouse:放着 builtin 不用用什么汇编
+10:48 lh_mouse:lock prefix 是必要条件不是充分条件
+10:48 T2:那玩意我真是没看懂
+10:49 lh_mouse:还有几个条件：1 地址必须对齐到边界 2 除非作为 xchg 的操作数（可以不要 lock 前缀）否则必须加 lock 并且内存操作数必须是目标操作数
+10:51 T2:地址必须对齐到边界是说结构体的内存模型最后不能是填充字节？
+10:52 T2:算了不管了先，表示没看懂指令乱序跟内存模型扯上什么关系了，这个好疼。
+10:53 T2:POD内存对齐我倒是知道的
+10:55 T3rm1n4t0r_ joined channel
+10:55 lh_mouse:跟结构体有毛关系
+10:56 lh_mouse:16 位就对齐到两个字节  32 位就对齐到四个字节  64 位就对齐到八个字节
+10:57 T2:哦，是说那个同步变量的长度？
+10:57 T2:卧槽我就说么。
+10:58 T2:我怎么都联系不到结构体内存对齐上然后抓瞎了。
+10:58 condy_ joined channel
+10:58 T2:thx
+10:59 T2:我的思路果然比较奇葩。
+10:59 T2:orz
+10:59 T2:那就直接long就可以了2333
+11:0 T2:geordi, << sizeof(long)
+11:0 T2:geordi, << "Hello?"
+11:1 T2 joined channel
+11:1 T2:geordi, { cout << sizeof(long); }
+11:2 T2:好吧我以为我掉了还reconnect
+11:2 T2:看来是这玩意被玩坏掉了。
+11:7 lh_mouse joined channel
+11:24 sismvg joined channel
+11:43 hope1 joined channel
+11:49 condy_ joined channel
+12:7 iyzsong joined channel
+12:23 code_new joined channel
+12:25 iyzsong joined channel
+12:35 condy_:gcc 竟然不支持local type。。。
+12:44 condy_:c++ primer上是不是写错了?iter1 += iter2; 是迭代器加减法的复合复制运算
+12:45 hysw:iter1+=iter2明显不对...
+12:45 condy_:只适用于vector、deque。
+12:45 condy_:对呀！
+12:47 hysw:迭代器加法貌似无意义
+13:5 lh_mouse:c++ primer 翻译得一团糟
+13:5 hysw:一点都没感觉...
+13:7 lh_mouse:中文版好多翻译错误
+13:8 hysw:从来没发现过错误...
+13:13 zzzzzzzz joined channel
+13:18 condy joined channel
+13:30 T2 joined channel
+13:33 hope1 joined channel
+13:34 hope1 joined channel
+13:45 candy76041820 joined channel
+13:46 silencly07 joined channel
+13:59 varna joined channel
+14:0 varna:噗，没药娘也没EA基佬，怎么办呢
+14:0 *varna 随手抓起一个恥球就把他爆了
+14:6 varna:千代田……
+14:7 lh_mouse:varna, linux 有 suspend_thread 么
+14:7 varna:lh_mouse: 效果是什么，线程放弃调度？
+14:7 lh_mouse:varna, http://codepad.org/QHoa0qzB
+14:7 candy76041820:水（五）上（段）机（式）航（变）母（身）！
+14:8 lh_mouse:varna, 一个是刚才的问题
+14:8 varna:candy76041820: 我可是扔了300燃300弹600钢600铝啊……
+14:8 lh_mouse:还有个   unsigned waiting[MAX_WAITING_THREADS];   这个你怎么处理的
+14:8 lh_mouse:我搞了个循环队列
+14:8 varna:lh_mouse: 用户态我不管，内核态我直接做了个多级轮转队列
+14:9 lh_mouse:上溢呢
+14:9 varna:waiting这里我挂了个侵入式链表而不是数组，假定foreach prefetch
+14:10 lh_mouse:damn
+14:10 lh_mouse:还有
+14:10 lh_mouse:通常 linux 里单进程能创建的 semaphore 数量除了受可用内存限制外还有别的限制吗？
+14:11 varna:我不确认，因为极少用system V信号量了
+14:11 lh_mouse:o.o
+14:12 varna:ulimit -a只限制了POSIX消息队列数量（我这里是819200个）
+14:12 lh_mouse:o.o
+14:12 lh_mouse:好吧 
+14:12 candy76041820:>驼 完成任务“第2艦隊で空母機動部隊を編成せよ！”和“敵空母を撃沈せよ！”，便会作为奖励加入，要记得带航母或轻母作为旗舰去完成。不少新人提督因为没带航母就做完这个任务，结果没拿到赤城，各种痛哭。
+14:13 lh_mouse:よ放在句尾表示啥意思来着
+14:14 varna:candy76041820: 第二舰队刚出去远征，半小时后回来……
+14:14 candy76041820:YOOOOOOOOOOOOO 的意思。
+14:14 varna:而且现在只有水母所以无所谓了
+14:15 varna:今天如果资材还有剩就投进去继续造航母，现在看来一晚上晾着就能补好多资源
+14:16 varna:龙田之类轻巡以后派去第二舰队跑远征好了
+14:16 candy76041820:顺带一提，千代田的乳量也是舰娘中最强（大）的——H cup 
+14:16 varna:那个不重要
+14:16 varna:呜、呜十铃
+14:18 T2:lh_mouse, 你的那个signal里的count参数是？
+14:19 silencly07 joined channel
+14:21 lh_mouse:T2, for(int i = 5; i; --i){ wait(mtx); }  /* do stuffs */ signal(mtx, 5);
+14:21 sgggtagqhay joined channel
+14:22 candy76041820:http://wiki.komica.org/wiki2/?%E6%88%90%E5%8F%A5%2F%E6%98%AF%E9%98%BF%21%21%E6%88%91%E6%98%AF%E5%8F%97%21%21 是啊！你是驼！
+14:22 T2:lh_mouse, 好吧。
+14:23 T2:lh_mouse, 在wait里放入队列但是sleep依然在临界区外面啊，似乎依然有可能wakeup失败？没看懂。
+14:24 lh_mouse:T2, 不会的  自己去查文档
+14:24 T2:lh_mouse, 好
+14:24 lh_mouse:SuspendThread 是计数器 +1  ResumeThread 是计数器 -1
+14:24 lh_mouse:计数器 >0 就睡眠  <=0 就调度
+14:25 lh_mouse:这和调用的顺序无关
+14:25 T2:有点抽象我理解下。
+14:28 varna:candy76041820: 啊蛤蛤，把千代田练到lv12实在有点233，现在我舰队里最高的lv9...
+14:28 varna:但是今天有四个lv7的提督？
+14:28 candy76041820:大破！大破！
+14:28 varna:似乎可以一战
+14:28 sismvg joined channel
+14:29 varna:噗
+14:29 varna:似乎有两个壕
+14:29 varna:一个旗舰大傻，另一个雾岛……
+14:30 varna:噗，另一个看起来不壕的有个吃撑
+14:32 varna:战术地北了
+14:33 varna:最不壕的一个有轻空母……
+14:39 sismvg:3d引擎连个文档都没。。。
+14:49 xxxxxxxxx joined channel
+14:51 varna:凤翔！
+14:56 varna:实在不行就只好每天造三艘幼女补个任务换资源了
+15:2 candy76041820:千万别忘了带航母去捡吃撑。
+15:9 varna:candy76041820: 那个倒不急，先日常一下，把远征和建造任务补上
+15:10 varna:如果每天造三个幼女的话，各资源只花90，还能捞些利
+15:10 varna:加上攒的资源应该可以用来赌战舰
+15:22 candy76041820:\我的天啊！剛剛改二的那珂醬被霧島打成燃4彈6鋼34鋁20了！/ ←K 岛
+15:24 varna:2333
+15:25 silencly07 joined channel
+15:28 varna:果然远征回来之后通信错误是日常
+15:28 candy76041820:http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38900873 眼（雾）镜（岛）v♀s USS 华盛顿
+15:36 *varna 修船中
+15:40 candy76041820:官方四格：主角姐四个赏樱，初雪：樱花树下都埋着尸体呢。深雪：卧槽？！吹雪：其实是因为樱花的淡红色看起来像是血。深雪：那埋的要是武藏没准会变成黑樱花。初雪：再加上秋津丸的话会变灰色？
+15:40 varna:http://static.mengniang.org/common/e/ef/%E9%87%8D%E5%B7%A1-%E9%9B%B7%E7%94%B5.jpg
+15:40 varna:^ Raiden
+15:44 candy76041820:http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38264819
+15:45 candy76041820:>驼 啊，那个在本子里看到过，两只焊在一起拆不开了。
+15:45 varna:23333
+15:46 candy76041820:↑飞鹰：靠，飞行甲板中破。加贺：那不是还有么？（放倒）飞鹰：……
+15:46 varna:所以在捡到北上之前还得继续练电酱，lv20之后就有连装鱼雷了
+15:46 varna:开幕雷击之类的可以靠千代田
+15:47 candy76041820:http://www.pixiv.net/member_illust.php?mode=medium&illust_id=37081222 隼鹰·南斗制空拳！
+15:47 varna:噗噗
+15:47 varna:今天刚被隼鹰黑了一把
+15:48 varna:演习里最不壕的那个提督弄出个隼鹰来，最后战果比差一点没到2.5战术败北了
+15:48 T2:uint64_t fd_conn_i64crap = (uint64_t) arg; // 药没吃系列。
+15:48 varna:那是个测试样例，实际用的时候给我打包参数进去
+15:48 T2:为毛要走一遍uint_64?
+15:49 varna:你可以试试不走，整数这里我要不就作死要不就谨慎来
+15:49 varna:反正编译器如果机智的话应该会优化掉
+15:49 T2:哦，64位的话。
+15:50 T2:反正都是ub
+15:50 varna:修修偶像
+15:50 *candy76041820 
+15:50 T2:好吧，只要不是0就不是ub
+15:51 varna:还有六百多燃料，要不要赌一个战舰呢……
+15:51 *varna 拼了
+15:52 varna:400/100/600/30
+15:53 varna:山城
+15:54 varna:还好
+16:0 varna:啊啊，有战舰就是不一样
+16:0 varna:演习终于赢了一回
+16:0 candy76041820:不幸妹。
+16:1 varna:凤翔/多摩中破，千代田大破，敌全灭
+16:2 candy76041820:TAMA～
+16:2 varna:那珂酱撤下去修了所以没办法，重巡火力也不足
+16:3 varna:比较残的是对面有lv8吃撑所以上来就制空权丧失，还好很快就把吃撑大破了
+16:5 candy76041820:以后频道可以制空权出笼了。
+16:5 varna:这个程度的话说不定过几天就可以去2-1试试刷空母，千代田靠谱之后甚至可以试试刷大傻
+16:5 candy76041820:先捞吃撑。
+16:6 varna:吃撑要击沉空母才行，所以可以留1-4的WO酱
+16:6 T2:lh_mouse, 你早上说的那个地址必须对齐到边界是说共享变量的结构体内部偏移量必须是机器字长的整数倍么？
+16:6 varna:而且2-1似乎有加贺
+16:7 T2:说了一半突然掉了囧。
+16:8 lh_mouse:T2, 绝对地址
+16:8 candy76041820:是说任务啦。
+16:9 varna:我对吃撑的执念其实不如加贺
+16:10 candy76041820:明明是米库。
+16:10 T2:lh_mouse, 额...这个完全不知道怎么玩。
+16:10 varna:战力，战力
+16:10 varna:战力不足的话电酱会沉的
+16:11 varna:T2: 怎么回事？
+16:11 T2:varna, 我只是没看懂顺序一致之类的玩意所以问了下。
+16:11 T2:没看懂乱序跟内存模型有什么关系。
+16:12 varna:哪里的乱序，CPU?
+16:12 T2:__ATOMIC_SEQ_CST)
+16:12 varna:哦，那个
+16:12 T2:就是这个玩意。
+16:12 varna:建议看wiki, 这个要求各种依赖都顺序发生
+16:13 varna:约束极强所以是crap
+16:13 lh_mouse:蛋蛋
+16:13 varna:噗噗，罗盘娘……
+16:13 lh_mouse:除了 seq_cst 以外都只约束被访问变量
+16:13 varna:就是说cst
+16:14 T2:<T2> 如果对同步变量的修改显式用汇编锁总线就可以上 Weak Consistency？
+16:14 T2:<lh_mouse> 还有几个条件：1 地址必须对齐到边界 2 除非作为 xchg 的操作数（可以不要 lock 前缀）否则必须加 lock 并且内存操作数必须是目标操作数
+16:14 candy76041820:http://www.pixiv.net/member_illust.php?mode=medium&illust_id=39755934 发现敌方驱逐舰！全舰载机起飞！驱：啊咧？
+16:15 varna:啊啊，好能吃啊，好能吃啊
+16:15 varna:远征的幼女们请多多地带燃料回来
+16:15 T2:我表示已经疼爆还是顺序来吧。
+16:15 varna:提督继续在司令室里检查内存
+16:15 T2:慢就慢点
+16:16 lh_mouse:T2, int i1, volatile i2; void thread1(){ i1 = 12345; __atomic_store_n(&i2, 1, __ATOMIC_RELEASE); } void thread2(){ while(!__atomic_load_n(&i2, __ATOMIC_ACQUIRE)); assert(i1 == 12345); }
+16:16 candy76041820:http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38163006 WO！
+16:16 lh_mouse:T2, 于不对齐的地址上是不可能实现原子操作的
+16:16 T2:lh_mouse, 主要是条件没理解，第二个倒是简单。
+16:17 lh_mouse:大于内存字长（8 bytes）的理论上也不可能
+16:17 lh_mouse:啊 不对  应该和内存没关系
+16:17 varna:数据线宽度吧
+16:17 T2:结构体首地址的绝对偏移跟什么有关？
+16:17 varna:编译器
+16:17 T2:好吧。
+16:18 T2:内部偏移也跟编译器有关。
+16:18 lh_mouse:应该是总线宽度
+16:19 T2:QTMLGB，老实顺序就是了。
+16:19 lh_mouse:还是不对  两倍总线宽度？
+16:19 T2:又不是造编译器的鬼才知道他怎么优化。
+16:20 varna:lh_mouse: 对齐到奇地址上两倍也没用吧
+16:20 T2:应该没有编译器会傻逼到往奇地址上对齐吧。
+16:21 lh_mouse:varna, 是的
+16:21 lh_mouse:lockxchg8b 要求对齐到 DWORD
+16:21 varna:啊，漂亮
+16:21 varna:又赢一个演习
+16:22 T2:反正上顺序一致+保证共享变量是long然后是结构体第一个成员就Ok
+16:22 T2:死了就换编译器。
+16:22 varna:多摩中破，电酱和千代田大破，敌全灭
+16:22 T2:2333
+16:22 varna:原来那个壕只有一艘榛名小天使能看
+16:22 lh_mouse:T2, 不作死就不会死 通常对齐不到的可能性不存在
+16:22 T2:lh_mouse, 嗯
+16:24 varna:现在是gcc x86-64起手16B对齐的时代
+16:24 varna:不用太担心
+16:24 T2:嗯嗯
+16:26 candy76041820:吃？
+16:26 varna:稍等
+16:27 varna:有场演习+valgrind
+16:27 varna:啊，输掉了
+16:27 lh_mouse:gcc x86 就是 16 对齐的
+16:28 varna:x86也16B对齐了？
+16:28 lh_mouse:是的
+16:29 lh_mouse:不过这是有条件的
+16:29 lh_mouse:调用栈上前一个函数必须也是这样的
+16:34 varna:最后查一遍内存错误
+16:34 varna:ok
+16:36 T2:乱七八糟要查的东西好多
+16:36 varna:candy76041820: 走起？
+16:36 candy76041820:走。
+16:36 T2:8
+16:37 T2:“我那微不足道的心灵根本无法驾驭力量”
+17:8 geordi joined channel
+17:14 xxxxxxxxx joined channel
+17:15 T2:geordi, << sizeof(long);
+17:15 geordi:8
+17:17 xxxxxxxxx:http://qiwen.qianzhan.com/indynews/detail/360/140520-89a155d9.html 
+17:24 hope1 joined channel
+17:24 silencly07 joined channel
+18:2 hope1:　【我国将推行网络安全审查制度】人民日报记者张洋消息，我国将对关系国家安全和公共利益的系统使用的重要技术产品和服务进行网络安全审查。
+18:4 T2:2333
+18:4 T2:我终于大概知道揉程要怎么写了。
+18:5 T2:人民日报记者2333
+18:5 hope1:http://news.sohu.com/20140522/n399897614.shtml 
+18:6 T2:对不符合安全要求的产品和服务，将不得在中国境内使用。 《 2333
+18:7 T2:不过羊驼子那个确实不是一般的疼。
+18:14 randomclown joined channel
+18:22 xxxxxxxxx:搞了碗素面....
+18:25 xxxxxxxxx:http://www.bilibili.tv/video/av1139980/ <- 元首
+18:26 T2:2333
+18:37 Plough joined channel
+18:52 lh_mouse:geordi, { auto p = make_unique<int[]>(5); for(int i = 0; i < 5; ++i){ cout<<p[i],' '; } }
+18:52 geordi:0,  0,  0,  0,  0,  
+18:52 lh_mouse:geordi, { auto p = make_unique<int[]>(5); for(int i = 0; i < 5; ++i){ cout<<p[i],' '; } }
+18:52 geordi:0,  0,  0,  0,  0,  
+18:52 lh_mouse:geordi, { auto p = unique_ptr<int[]>(new int[5]); for(int i = 0; i < 5; ++i){ cout<<p[i],' '; } }
+18:52 geordi:-1819044973,  -1819044973,  -1819044973,  -1819044973,  -1819044973,  
+18:55 hope1:https://speakerdeck.com/ange/when-aes-equals-episode-v
+18:55 cuihao joined channel
+18:56 whocares_2 joined channel
+18:56 hope1:^ make a jpeg that is valid after being encrypted with aes
+18:59 iyzsong:0.0
+18:59 Plough:http://imgs.xkcd.com/comics/slideshow.gif
+19:1 Plough:http://imgs.xkcd.com/comics/halting_problem.png
+19:7 Plough:http://imgs.xkcd.com/comics/tall_infographics.png
+19:8 silencly07 joined channel
+19:10 Plough:http://imgs.xkcd.com/comics/int_pi.png
+19:14 varna:T2: 哪里疼了
+19:15 varna:啊啊！获得了两百燃料
+19:18 varna:呜、呜十铃！
+19:21 varna:终于入手了
+19:21 xxxxxxxxx:http://www.hj.cn/html/special/2013/0709/11352.html
+19:21 xxxxxxxxx:这个东西?
+19:22 varna:打不开
+19:22 xxxxxxxxx:...
+19:23 xxxxxxxxx:http://cache.baiducontent.com/c?m=9f65cb4a8c8507ed4fece763105392230e54f73964c0d0622e888e12d53b055c0624b4ea7c714e19d3c77f661cad4c5ee1ed3571360420a09bbfd20c82e5866d72c8713b676df15664d90eafba5154b637e650feae69f0cb8325e0d9c5d2af4322c944727d&p=8a759a45d0c513b92a9fc7710f4cc1&newp=81759a45d0c507f503a5d22d02149f231610db2151d4d313398ec800d5&user=baidu&fm=sc&query=%CE%D8%A1%A2%CE%D8%CA%AE%C1%E5&qid=&p1=3
+19:23 xxxxxxxxx:百度快照
+19:24 varna:我就猜是皮卡……
+19:24 varna:是舰娘的五十铃，要结婚的
+19:24 xxxxxxxxx:还有个叫五十铃玉的植物
+19:26 varna:入手了未婚妻之后就可以馒馒攒航母和大傻了
+19:26 xxxxxxxxx:羊驼走上了好快的道路
+19:28 silencly07 joined channel
+19:28 varna:搞十二铃牧场才会早泄
+19:30 varna:啊啊上部损坏了
+19:30 varna:一发中破是什么状况2333
+19:30 xxxxxxxxx:一发中出?
+19:31 varna:中破，中破
+19:31 varna:不是中出
+19:31 varna:中出的是舰队的偶像那珂酱
+19:32 *xxxxxxxxx 完全不知道在说什么....
+19:32 varna:http://hiphotos.baidu.com/kandic729/pic/item/4cd52dcea786c917081e1792c93d70cf3bc75726.jpg?v=tbs
+19:32 varna:^ 章鱼烧
+19:32 xxxxxxxxx:好神奇....
+19:36 varna:倒放之后感觉好好
+19:43 candy76041820 joined channel
+19:44 candy76041820:http://www.acfun.com/v/ac676871
+19:44 varna:轻巡·名取，入手
+19:45 varna:啊噗噗噗
+19:45 varna:一个弹着观测射击只掉了3血……
+19:45 condy1 joined channel
+19:47 varna:轻巡·木曾，入手
+19:47 xxxxxxxxx:看成木吉了
+19:47 candy76041820:KUMA TAMA 北上 大井 木曾
+19:48 varna:还好解任务又捞回两百燃料
+19:49 varna:啊啊把中破的呜十铃放在秘书舰真是好顶撸
+19:49 candy76041820:撸撸撸撸撸撸撸撸撸撸撸。
+19:49 varna:小学生春游还有十三分钟
+19:50 varna:希望能多带燃料回来
+19:50 xxxxxxxxx:小学生???
+19:50 candy76041820:天龙水雷战队！天龙幼儿园！
+19:50 varna:xxxxxxxxx: 第二舰队的驱逐舰
+19:51 candy76041820:http://www.bilibili.tv/video/av728486/
+19:51 candy76041820:↑狗头
+19:51 varna:这样下去还是得尽快开第三舰队才行，不然资源仍然不足
+19:51 candy76041820:少派一只小学生出去不行么？
+19:52 varna:多一个舰队就可以一小时多收入两百燃料
+19:52 candy76041820:↑是说第二舰队只派五艘船出去。
+19:53 varna:啊，1.5小时多收入两百
+19:53 varna:candy76041820: 似乎差别不大？
+19:53 candy76041820:少一分弹药燃料消耗呢。
+19:53 varna:驱逐舰消耗极少
+19:54 varna:电酱都中破了也没花几点资源
+19:55 candy76041820:空个澡堂呢。
+19:55 varna:远征不掉血
+19:55 varna:很安全的，失败了也只是耗补给
+19:56 condy1:geordi: {auto p=make_unique<int[]>(5); cout<< TYPE<p>;}
+19:56 geordi:error: the value of 'p' is not usable in a constant expression
+19:56 condy1:geordi: {typedef auto p=make_unique<int[]>(5); cout<< TYPE<p>;}
+19:56 geordi:error: typedef declared 'auto'
+19:56 varna:噗噗，怎么来了些毕业答辩不过的傻木耳
+19:56 condy1:geordi: {typedef auto p=make_unique<int[]>(5); cout<< TYPE_DESC<p>;}
+19:56 geordi:Same error.
+19:56 varna:明明是我和呜十铃的二人时间
+19:58 candy76041820:http://www.bilibili.tv/video/av1137121/ .950 口径的狙击炮。
+19:58 varna:噗，这玩意打了不会脱臼么，应该附赠一个莫辛纳甘用来给肩部复位
+19:59 xxxxxxxxx:噗 到处都有干死黄旭东...
+20:0 varna:rm test_buffer.c
+20:0 varna:噗
+20:1 xxxxxxxxx:羊驼irc远程删文件中
+20:1 varna:弄错终端
+20:2 xxxxxxxxx:974368813:是什么让你有了百度是正经公司的错觉？
+20:3 xxxxxxxxx:@揉牛
+20:4 varna:噗噗
+20:4 varna:H.B.Flankoi 姓江就是屌。转@阪本喵 转@ssfighter 又打老师又和老师做爱，真是人生赢家。转@草泥马维稳办 ......上课时间在机房吃零食 打老师 和老师做爱。。。。
+20:6 Plough:http://imgs.xkcd.com/comics/git_commit.png
+20:6 candy76041820:http://www.gamersky.com/zhuanti/ffocv/index.shtml 靠，洛天依就这木耳配的啊。
+20:7 varna:是啊
+20:7 varna:http://imgsrc.baidu.com/forum/w%3D580/sign=e895f5faba0e7bec23da03e91f2fb9fa/564e9258d109b3de4d16059dcebf6c81810a4c9e.jpg
+20:7 varna:^ 上课时间在机房吃零食等人
+20:7 candy76041820:打♂老师
+20:8 varna:糟，又忘给第二舰队配CVL了
+20:8 candy76041820:……
+20:8 condy:c++98是不是极其难用啊？ 在知乎上看到的，说c++在03之后才可以用。。
+20:9 varna:小学生刚回来就又派出去跑远征1-5
+20:9 *varna 作为提督实在好穷啊
+20:9 varna:condy: 你写c么
+20:9 condy:写。
+20:9 candy76041820:所谓虐待童工。
+20:9 varna:condy: 那就不难用
+20:10 varna:candy76041820: 雷酱可是旗舰，很风光地就出去了
+20:10 condy:soga。
+20:10 lh_mouse:copy(buf.GetReadIterator(), buf.GetReadEnd(), ostream_iterator<unsigned char, char>(cout));   看起来很高端的样子
+20:11 varna:不好看
+20:11 lh_mouse:这只是个 toy
+20:11 lh_mouse:纯粹的 toy  因为它效率非常之低
+20:11 lh_mouse:一次从流中抽一个字符
+20:11 *varna 想起tim系列里那个跑得很快的小耗
+20:12 varna:http://tieba.baidu.com/p/3059518428
+20:12 varna:^ 看来这哥们嫖过
+20:13 lh_mouse:最佳的解决方案是  buf.Traverse([&](auto p, auto cb){ my_vec.insert(my_vec.end(), p, p + cb); });
+20:13 condy:geordi: { vector<int> v={1,2,3,4,5}; copy(v.begin(),v.end(),ostream_iterator<char>(cout, ", ")); }
+20:13 geordi:, , , , , 
+20:13 condy:geordi: { vector<int> v={1,2,3,4,5}; copy(v.begin(),v.end(),ostream_iterator<int>(cout, ", ")); }
+20:13 lh_mouse:geordi, prepend int, before last char
+20:13 geordi:1, 2, 3, 4, 5, 
+20:13 geordi:error: String `char` does not occur.
+20:13 xxxxxxxxx:完突斯瑞: 每天坚持做20个引体向上。
+20:14 *varna 坚信分配器出奇迹
+20:14 lh_mouse:因为块链每一块都不一样大  也没好办法往出拿
+20:14 xxxxxxxxx:这比杀了我还难 或者做一个休息半小时
+20:14 varna:初中中考十个满分，我还真做了十个
+20:14 lh_mouse:于是就搞个接口塞个回调进去
+20:14 xxxxxxxxx:orzzz
+20:15 varna:推重比
+20:15 varna:而且初中我不撸管啊
+20:15 *lh_mouse 认为回调天坑  C 回调更坑
+20:15 *varna 也这么认为
+20:16 hope1:condy, 03和98几乎没区别……
+20:17 condy:hope1: ...
+20:17 hope1:condy, http://www.stroustrup.com/bs_faq.html#C++03
+20:18 hope1:In particular, tutorial and reference material describing C++98 and C++03 can be used interchangeably by all except compiler writers and standards gurus. 
+20:20 FrankHB:标题有区别。一堆template classes改成了class templates。所以这个比较扯。
+20:20 xxxxxxxxx:http://tieba.baidu.com/p/3057178640 linux吧这些家伙脑子都有坑么?
+20:22 candy76041820:直径三厘米。
+20:23 lh_mouse:这种事情有时候想想真是觉得未有天才之前啊
+20:23 lh_mouse:https://linuxtoy.org/archives/chinese-applied-patent-about-wine-arm-and-granted.html
+20:23 lh_mouse:不是不想做啊  做出来都没人承认啊
+20:23 candy76041820:特效一分钟烧完一百万元人民币，特摄一分钟烧完一百万日元。
+20:25 varna:我就说一个问题：驱动
+20:25 candy76041820:http://www.acfun.com/a/ac1189644 楼下打脸现场。
+20:25 varna:别的都勉强能解决得还行
+20:26 varna:免子都死了，为什么这些人可以活？除非他们有特别的看风景技术
+20:26 hope1:没看过专利原文，不知道怎么写的……
+20:26 lh_mouse:驱动这东西就是先有鸡先有蛋
+20:26 lh_mouse:系统不做大  没人写驱动
+20:26 varna:没人写驱动，系统也难做大
+20:26 lh_mouse:核武器公司给 linux 写驱动是老大不愿意了
+20:26 varna:所以得有个第一动力提供合作
+20:27 FrankHB joined channel
+20:27 varna:项目投钱之类的
+20:27 lh_mouse:话说回来吧  我就没装过显卡驱动  一样没多大压力
+20:27 varna:现在固件一般都不错
+20:27 varna:但是得有人做这个固件
+20:27 Plough:http://imgs.xkcd.com/comics/infinite_scrolling.png
+20:27 lh_mouse:不装显卡驱动的原因之一是升级内核卸不掉  当时是编译内核玩
+20:27 varna:成熟的OS实现无所谓了，舔脚的一堆
+20:27 varna:lh_mouse: 实际上不至于这么惨
+20:28 varna:lh_mouse: 我这里显卡驱动是要手工安的，但升级内核的时候只要用官方仓库依赖也都对
+20:28 candy76041820:http://www.acfun.com/a/ac1189919
+20:28 candy76041820:http://www.acfun.com/a/ac1189668 搞个大新闻。
+20:29 hope1:http://herpolhode.com/rob/utah2000.pdf 之前在cat-v看到这个（cat-v.org上不去了，另搜了一个），现在15年过去了好象没什么变化？
+20:29 varna:不愿意下pdf了，讲什么的？
+20:30 hope1:Systems Software Research is
+20:30 hope1:Irrelevant
+20:30 varna:...
+20:30 lh_mouse:Systems Software Research is CRAP
+20:30 varna:我还是觉得对OS来说给出实作比纸面上谈效率重要
+20:30 candy76041820:http://www.acfun.com/a/ac1189685
+20:31 varna:现在说是Research, 但Systems Software还是需要安定性和效率，这个靠目前我见过的研究没法解决
+20:31 varna:所以说一部分研究是猴子撸管并不为过
+20:31 hope1:Instead, we see a thriving software industry that largely ignores research, and a research community that writes papers rather than software.
+20:31 varna:啊，这个话我看过
+20:31 varna:确实如此
+20:31 lh_mouse:公司 vs. 学校
+20:32 varna:即使我自己做东西也一样，我宁可用快速好用的古老算法
+20:32 varna:或者把那些算法简单改改扔出去
+20:32 lh_mouse:LZMA vs. zling
+20:32 varna:zling还好
+20:32 varna:comprox应该是更强调理论性能的，zling是实用向，但缺小耗
+20:33 lh_mouse:zlib 速度完爆   lzma 压缩率完爆
+20:33 hope1:Today’s graduating PhDs use Unix, X, Emacs, and Tex. That’s their world. It’s often the only computing world they’ve ever used for technical work.
+20:33 varna:噗
+20:33 varna:他们一定没来过中国
+20:33 lh_mouse:@microsoft word
+20:33 hope1:-- Feb 21, 2000 Rob Pike
+20:34 varna:我这里的PhD们连程序都不太会写
+20:34 candy76041820:太字去掉。
+20:34 varna:弄个分析数据的提案，我用现有的时间证据估测得算半年
+20:34 lh_mouse:2000 年正好是中国一大批企业开始倒掉的时候
+20:34 iyzsong:o.O
+20:34 varna:明明建几个索引的话就能缩短到几天，如果用纯文本数据的话一天之内就能搞完
+20:35 xxxxxxxxx:话说那样的话什么时候能出点新的东西替代我们现在有的系统?
+20:35 varna:可遇不可求
+20:35 hope1:然后他就开始说四十年前如何如何
+20:35 candy76041820:就跟第一发大建出大和一样。
+20:36 varna:我只相信新东西还有希望，但不代表我能看到这个希望
+20:36 varna:candy76041820: 我觉得真能出马鹿油
+20:36 xxxxxxxxx:感觉发展下去怎么好像越来越被绑上船了似的...
+20:36 varna:不见得
+20:37 varna:我觉得应该抛开「发展了很多年」这个观念，因为现在才刚刚上道
+20:37 hope1:Where is the Innovation? -- Microsoft, mostly. 
+20:37 hope1:Exercise: Compare 1990 Microsoft software with 2000.
+20:37 varna:这种愚蠢也不行不愚蠢也不行的时代，还是折腾点叫兽们不喜欢的实作物，等等进步吧23333
+20:37 varna:噗
+20:38 varna:这个练习毫无意义，我不觉得NT之前的windows能算是像样的产品
+20:39 xxxxxxxxx:产硬件的为了赚钱只给流行的系统开发驱动吧?
+20:39 varna:人不为己下略
+20:39 hope1:1990年的Hurd不知道算什么
+20:39 varna:那时候是个希望，现在是个笑话
+20:40 xxxxxxxxx:所以流行的有良好的驱动支持 消费者也会选择流行的系统吧?
+20:40 varna:别忘了厂商也会考虑前景的
+20:40 hope1:If systems research was relevant, we’d see new operating systems and new languages making inroads into the industry, the way we did in the ’70s and ’80s.
+20:41 varna:The way THEY did? LoL
+20:41 xxxxxxxxx:坐等硬件大佬们开个会然后订个驱动相关的标准啥的
+20:41 varna:What's their progress in '00s? GO?
+20:41 varna:PATCHOULI--
+20:44 varna:xxxxxxxxx: 在那之前我都跟呜十铃结婚了
+20:44 xxxxxxxxx:到时候你们生出小船来我都不奇怪
+20:44 varna:不许说生了十二铃
+20:45 varna:生下来的也不拆
+20:45 varna:至少我保证如果五十铃爆棚一定让她们带着电探合成
+20:46 hope1:怎么mozilla pastebin上不去了……
+20:47 xxxxxxxxx:试试debian的
+20:47 varna:hope1: 你的网络问题，我这里可以
+20:48 candy76041820:>驼 http://www.bilibili.tv/video/av919239/ 结婚什么的？
+20:48 xxxxxxxxx:头像好评
+20:48 varna:candy76041820: 什么阿澄佳奈，明明是一般加奈！
+20:49 candy76041820:（就这四分钟的破视频让我显卡驱动连续崩了四次）
+20:49 varna:我这里加载困难
+20:49 varna:啊刷出来了
+20:49 hope1:解决方案：重启火狐……
+20:50 varna:战舰被嚓破个皮都得修十分钟2333
+20:50 hope1:https://pastebin.mozilla.org/5215420
+20:50 varna:Perl?
+20:50 varna:23333333
+20:51 varna:MIKollection
+20:51 varna:^ 读作「巫女容器」
+20:51 xxxxxxxxx:我擦这是什么表情
+20:52 varna:好评
+20:52 xxxxxxxxx:卧槽太可怕了
+20:53 xxxxxxxxx:这是撞键盘自杀了?
+20:54 varna:哈哈哈哈
+20:54 varna:这个好逗哈哈哈
+20:55 varna:估计是天朝人民万岁了
+20:55 xxxxxxxxx:最后的红色的是啥?
+20:55 varna:不知道是什么
+20:56 candy76041820:\ 一般社员万岁！/
+20:56 xxxxxxxxx:我觉得像键盘拍脸拍出来的
+20:56 varna:凤翔下去，再这么打我迟早得撸管当燃料
+20:57 varna:反正上次糖果都用图片向你们证实JY会爆炸了
+20:57 xxxxxxxxx:什么时候的事情...
+20:57 varna:那个扁平臀的照片
+21:1 varna:candy76041820: 今天第一位的演习提督摆了四个八九十级的潜艇……
+21:1 xxxxxxxxx:http://tieba.baidu.com/p/3059834497
+21:1 xxxxxxxxx:^Tizen
+21:3 varna:噗
+21:3 varna:对面三艘大破一艘中破，我方两艘大破
+21:4 varna:MVP=电酱
+21:4 varna:简直大赚……
+21:4 xxxxxxxxx:http://www.guru3d.com/articles_pages/building_your_own_solid_state_drive_(guide).html 看上去好厉害的样子
+21:5 candy76041820:谁去了？
+21:5 varna:candy76041820: 呜十铃（旗舰），千代田，偶像，那智，电酱，山城
+21:6 varna:水母和山城上来被大破，然后呜十铃和电酱轰爆对面
+21:6 varna:偶像照例被稍稍捏了脸
+21:7 varna:于是今天的演习大进步，三胜两负
+21:7 candy76041820:AC：建造坑太深，Z3都超过100次以上才出的。。。大型建造至今陆军走狗5马鹿油4,我已经无法相信那些个配方里10-20%的成功几率了
+21:7 varna:23333
+21:8 varna:叫你们大建
+21:8 candy76041820:下面：一发入魂表示压力不大。再下面：拆还友！wiki上的成功率全是你们这群托骗资的dalao刷来害我们非洲提督的！
+21:8 varna:2333333
+21:9 varna:拆还友好评
+21:9 varna:大建我没试过，不过别的成功率确实还不错
+21:9 candy76041820:明明是吃还（huan2）友。（吃撑味）
+21:9 varna:反正我现在还不能大建……
+21:9 candy76041820:↑所以果然是近 V 者吃？
+21:10 varna:又捡到幼女，给我个川内吧
+21:11 varna:对对，就这个节奏：大家打偶像啊，别打战舰啊
+21:16 T2:varna, 我切出去看了个电影orz
+21:16 varna:T2: 什么电影，好玩不
+21:16 T2:varna, 就是元首的原版
+21:16 T2:帝国的毁灭
+21:16 varna:哦哦，帝国的毁灭啊
+21:16 varna:好看不
+21:17 T2:墙头草回忆录
+21:17 T2:一般般吧
+21:17 varna:情节如何？
+21:18 T2:还算紧凑
+21:18 varna:啊哈哈，请亚夜花保佑我今天夜战解开第三舰队吧
+21:18 xxxxxxxxx:【720P】【催泪·剧情】小鞋子/天堂的孩子【豆瓣9.1高分伊朗电影·1997】 <- 谁看过球剧透
+21:18 varna:听说过
+21:18 xxxxxxxxx:varna 你可以试试看普陀山
+21:18 varna:xxxxxxxxx: 上次是亚夜花和糖果就过了
+21:19 varna:这次的难度明显低所以还是先向亚夜花祈祷
+21:19 T2:没玩过事件驱动什么的姿势
+21:19 T2:epoll也没用过
+21:19 varna:其实这回的新揉程构造相当简单
+21:19 varna:基本没什么说的，只是能运行程度
+21:20 Plough:拿来写个PSGI Server试试？
+21:20 varna:Plough: 我都没重构
+21:20 varna:Plough: 不确认服务器性能，反正我这里乒乓的时候如果读写锁运气好就很快，不然会稍微坑
+21:20 Plough:varna: 球Github
+21:20 varna:而且条件锁和超时我都没実装
+21:20 varna:Plough: 没传
+21:21 Plough:varna: 球传
+21:21 varna:Plough: 等我过一阵子折腾一下再传，今天先给你破烂的代码吧
+21:21 candy76041820:口占一律：天龙鱼雷帮，川内夜战狂，资源尽吃紧，幼女远征忙；吃撑不出港，大傻放炮仗，战后捞十二，偏偏来偶像。
+21:21 Plough:也中
+21:21 T2:应该能看懂
+21:22 varna:candy76041820: 2333333
+21:23 Plough:varna: 话说我在考虑直接用<<"EOF"生成页面，扔掉那堆模板
+21:23 varna:Plough: 也行
+21:24 Plough:主要是Perl的模板系统不是蛋疼无比就是一堆依赖
+21:24 varna:这些都不疼，疼的是Moose
+21:24 T2:运行的基本单位是 p7coro还是cntx？
+21:25 varna:T2: 你猜？
+21:25 T2:应该是coro吧
+21:25 Plough:一堆模板都是Moooooooooooooooooose based……
+21:25 varna:T2: 为何？
+21:25 T2:因为cntx里面有stack啊。
+21:25 varna:噗，这什么理由……
+21:25 varna:#611 p7_coro_create(test_echo, (void *) fd_conn_i64crap, 4096);
+21:25 varna:^ 这我都写上去了
+21:26 varna:你说运行的东西是什么呢……
+21:26 Plough:目前用的最顺手的是Mojo::Template
+21:27 Plough:可惜继承实现方式是Copy&Paste
+21:27 varna:别指望Perl继承
+21:27 Plough:模板里面塞个sub总不困难吧……
+21:27 T2:哦，我傻逼了。
+21:28 Plough:我看过它生成出来的玩意，也就是$_M .= '<html><head></head><body></body></html>'这样的
+21:29 varna:...
+21:29 varna:前端模板我不熟，能说一下你具体打算怎么搞么
+21:29 Plough:实现include就差不多了
+21:30 Plough:比如说<title><%= title() %></title>
+21:30 Plough:^base.tpl
+21:30 varna:这样啊
+21:30 Plough:然后page.tpl写上<%include base.tpl %><% sub title { return 'a'; } %>
+21:30 T2:mgr_cntx.sched->uc << 上下文是保存在carrier的这个里面？
+21:31 varna:现有DOME分析有靠谱的么
+21:31 varna:T2: 谁的上下文？
+21:31 T2:好多层。
+21:31 Plough:不知道……我找找
+21:31 Plough:不过我觉得拿Mojo::Template改改可能也不困难
+21:31 varna:DOM, 随手打成DOME了
+21:31 Plough:明天看看代码
+21:31 T2:要被调度走的运行中cntx啊
+21:32 varna:你可能会失望，我对大多Perl模组的程序不抱好感
+21:32 varna:T2: 为什么呢
+21:32 Plough:CPAN里倒是有XML::DOM HTML::DOM
+21:32 T2:总得存个地方吧。
+21:32 varna:T2: 然后你就蒙了个地方？
+21:32 T2:varna, 我还没看太懂orz
+21:33 varna:Plough: 估计这两个会神坑，最多XML::DOM比较靠谱
+21:33 varna:T2: 你先找找调度队列在哪吧
+21:33 varna:受不了了，战舰撤下
+21:33 varna:这么打再多两场我就彻底黄摊了
+21:33 Plough:https://github.com/kraih/mojo/blob/master/lib/Mojo/Template.pm
+21:33 Plough:其实就是这坨玩意
+21:34 varna:翻到#60我就有种生理上的不适
+21:34 Plough:unless?
+21:34 candy76041820:> 驼 现在手头上都谁？除了小学生
+21:35 condy:geordi: { string s="123"; cout << s.substr(0,0); }
+21:35 geordi:<no output>
+21:35 condy:geordi: { string s="123"; cout << s.substr(0,1); }
+21:35 geordi:1
+21:35 varna:candy76041820: 换了个重巡上去，我看看是谁……
+21:36 varna:嚓，无限通信error
+21:36 varna:candy76041820: 啊，把加古换上去了
+21:37 varna:龙田和神通带小学生，新入手的轻巡还有木曾和名取
+21:37 varna:小学生带了两百燃料回来，可以一战了
+21:38 varna:Plough: 主要是那个分析代码写得好乱，看着烦
+21:38 Plough:varna: 2333
+21:38 Plough:varna: 或者手码个DFA出来
+21:38 Plough:varna: 之前用Erlang干过这事
+21:39 varna:Plough: 我觉得用词法分析器生成器比较好
+21:39 varna:yapp套装也可以考虑，或者套个xml头直接当xml分析
+21:39 Plough:varna: 主要是我觉得这种活没必要动用那么可怕的东西……
+21:40 Plough:我先试试
+21:40 Plough:写不下去再上生成器
+21:41 varna:我觉得也是
+21:42 varna:出击！目标是WO酱！
+21:42 candy76041820:有舰载战斗机么？
+21:42 varna:只有舰爆
+21:42 varna:噗噗，点错进1-2了
+21:43 candy76041820:……会被击落的吧。
+21:43 varna:秒了对方之后撤退回1-4
+21:43 varna:candy76041820: 被击落过，费的铝土不多
+21:43 candy76041820:别撤啊，说不定又能捞到一艘偶像呢。
+21:44 varna:我可是出动了轻空母和战舰的……
+21:44 varna:被舔伤的话又要修，补给也要消耗不少燃料
+21:44 candy76041820:殴打小学生嘛。
+21:44 xxxxxxxxx:舔伤...
+21:44 varna:啊，罗盘娘给力了
+21:46 varna:可恶凤翔被中破了……
+21:46 varna:撤退……
+21:47 candy76041820:噗。
+21:47 xxxxxxxxx:这电影好揪心啊....
+21:47 varna:先修二十分钟再出击一次
+21:48 condy:geordi: { string s="abcdefg"; transform(s.begin(),s.end(),s.begin(),[](char ch){return toupper(ch);}); cout<<s;}
+21:48 varna:我明明带了偶像，怎么敌舰就是不去捏偶像呢
+21:48 geordi:ABCDEFG
+21:49 condy:geordi: { string s="abcdefg"; transform(s.begin(),s.end(),s.begin(),toupper); cout<<s;}
+21:49 geordi:error: no matching function for call to 'transform(string::iterator, string::iterator, string::iterator, <unresolved overloaded function type>)'
+21:49 varna:中破之后又挨一炮完全不敢继续打
+21:51 candy76041820:口占二律：罗盘似饮酒，网络慢如牛，大破血见底，WO 酱未露头；那智打爆击，那珂抢镜头，大建信配方，结果马鹿油。
+21:51 condy:如何优雅地将一字符串字母转换成大写？
+21:52 candy76041820:strupr
+21:52 varna:呼哇呼哇地遍历一遍
+21:52 condy:没有这个函数。。。
+21:52 varna:st ru pr
+21:52 varna:candy76041820: 非posix
+21:52 varna:我这里没这个……
+21:52 T2:condy, for + toupper
+21:53 varna:大建马鹿油好评如潮
+21:53 candy76041820:LCMapStringEx！
+21:53 varna:@MCFString
+21:53 condy:T2: ...这个代码还比transform要好。。
+21:54 varna:看看到底第一队里谁RP最低……
+21:55 varna:结论：山城
+21:55 candy76041820:必须是她啊。
+21:55 varna:凤翔运20被糊了个熊脸，其余都是运10
+21:56 candy76041820:循环ぱんぱかぱーん去。
+21:56 hope1:c^' '  <-  优雅
+21:56 varna:乳量差评
+21:56 varna:hope1: HOHOHO
+21:57 T2:condy, ...
+21:57 candy76041820:糟，现在还一嘴葱味。
+21:59 varna:「 战舰航母30几发，出了20个小学生的真蒙提路过」
+21:59 varna:「抢号没抢到的是阿富汗提督」……
+22:0 candy76041820:索马里提督表示舰载机完全没打中过人，这样？
+22:0 varna:我那一个校准射击打个E级3HP...
+22:1 varna:所以IJN盛产逗比
+22:1 T2:varna, 你的调度单位不会是carrier吧？
+22:1 T2:给跪了
+22:1 candy76041820:HE 级？
+22:1 varna:飞行员都以为自己会退役之后报个读姬么
+22:1 candy76041820:是航母！
+22:1 varna:T2: 为什么啊
+22:3 T2:因为别的里面没有状态或者乱七八糟的东西额
+22:3 T2:算了我瞎猜的
+22:4 varna:「南极洲提督——比非洲提督还艰苦辛酸的提督，报错娘和罗盘娘最喜欢的人群，最大奉献是发现满血进击沉船的bug，演习0经验的bug，游戏显示错误的bug等等，同时还拉低了wiki某些船和装备的出现率。」
+22:4 varna:T2: 猜错了
+22:5 varna:T2: 你猜出来carrier是什么了没……
+22:6 T2:最大的装了一堆东西的东西，算是个池？
+22:6 T2:伪装成池的OS类似物。
+22:7 varna:T2: 说清楚点，省得你自己都迷糊了
+22:8 T2:varna, 还没看清楚呢。
+22:8 varna:23333
+22:8 varna:那个是用来调度协程的内核线程
+22:9 candy76041820:简而言之你就对羊驼的 C 代码抱持“叫你不用 C++！”的态度就成了。
+22:9 T2:这倒是看出来了，似乎夸张了点。
+22:9 lh_mouse:C++ 渣
+22:9 T2:candy76041820, 似乎这个用C艹也不容易写成看得懂的样子。
+22:10 varna:不是看懂问题
+22:10 varna:是异常
+22:10 varna:小耗以前说过，我就不学他说话了
+22:10 T2:嗯
+22:10 varna:看懂很容易
+22:10 T2:哪里容易了。
+22:10 varna:因为没什么营养
+22:10 lh_mouse:C 有一个好   整个程序不管什么代码 它都不会有异常  但是程序跑来跑去判断返回码呢  TOO COMPLEX  SOMETIMES NAIVE
+22:10 varna:修好了，出击
+22:10 T2:明天吧，应该能看懂。
+22:11 candy76041820:耗子懂个屁，知道我说的是啥地方么就逼逼。
+22:11 lh_mouse:candy76041820, 你就一傻逼  
+22:11 T2:主要event什么的姿势没见过。
+22:12 varna:制空权确保
+22:12 candy76041820:ぺー的，来封我呀踢我呀傻逼。
+22:12 varna:敌舰击沉两艘
+22:12 lh_mouse:敌舰两艘击沉 <=
+22:12 varna:凤翔又被熊脸，还好只掉2HP...
+22:13 candy76041820:太太我喜欢你呀！这样。
+22:13 varna:去打偶像啊！
+22:13 xxxxxxxxx:哪里有太太?
+22:13 lh_mouse:@糖果的太太
+22:13 varna:轻巡·长良，入手
+22:14 candy76041820:那嘎拉。
+22:14 varna:第二战Boss
+22:14 varna:单纵拼火力
+22:15 candy76041820:T 战！
+22:15 varna:偶像不负众望，一发大破
+22:15 varna:拼了，夜战
+22:16 lh_mouse:不弄 UDP Server   直接弄成端对端的
+22:16 varna:凤翔、偶像大破，敌全灭
+22:16 varna:入手了……川内！
+22:16 candy76041820:よし。MVP 谁？
+22:16 varna:那智
+22:17 lh_mouse:geordi, { constexpr unsigned i = 1234; if(i < 0）{ cout <<"meow"; } }
+22:17 geordi:error: Unexpected `}` after `meow"; } `. Expected ')', '/', or balanced code.
+22:17 lh_mouse:geordi, { constexpr unsigned i = 1234; if(i < 0){ cout <<"meow"; } }
+22:17 geordi:<no output>
+22:17 varna:吃撑入手！
+22:18 candy76041820_ joined channel
+22:19 T2:limbo是干嘛的？
+22:19 candy76041820__ joined channel
+22:20 T2:算了我还是先再看看。
+22:20 candy76041820__:吃撑的任务解了？
+22:20 varna:吃撑入手，第三舰队可用
+22:21 candy76041820__:果然那智打爆击那珂抢镜头。
+22:21 varna:川内的零式水侦给了呜十铃
+22:22 varna:现在着手组织第三小学生战队去远征
+22:22 xxxxxxxxx:@小皮卡
+22:23 varna:多摩/加古/深雪/矶波/文月/荒潮
+22:23 candy76041820__:TAMA 好苦命。
+22:26 candy76041820:本子。吃喝调情中，旁边被窝里瑞鹤：我好兴奋啊！我睡不着啊！
+22:26 varna:这样就可以安心去2-1了
+22:26 T2:初始化一个结构体用个100行卧槽
+22:26 varna:T2: 啊哈哈？
+22:26 T2:算了不吐槽了。
+22:27 varna:什么东西哪里用了一百行
+22:27 T2:varna, 没啥，稍微改了下carrier的初始化发现。
+22:27 varna:你改他干嘛……
+22:27 varna:自己重新写一个啊……
+22:27 T2:可以塞8个小飞机进去。
+22:27 varna:我对并发协程的想法已经很局限了，学我有害
+22:27 candy76041820:你是没看我那个三百多行的调色板初始化。
+22:28 T2:candy76041820, 给跪。
+22:28 varna:你那个没办法
+22:28 varna:我的carrier初始化只有四十多行啊
+22:28 varna:四十行整，掐头去尾就更少了
+22:28 candy76041820:啊。顺带一提 VB 室友那个也是二百多行初始化。虽然是自动生成的。
+22:28 T2:折行什么的。
+22:29 varna:折行之后也就多了四行
+22:29 T2:还有逗号表达式。
+22:29 varna:逗号再加二十行没问题吧，实际上十行不到
+22:29 varna:我哪塞了那么多成员进去
+22:30 T2:orz
+22:30 varna:carrier用来实际被OS调度，必要的时候调度coro
+22:30 T2:自己写我就顶多两个结构体 一个thread一个schedule
+22:30 varna:你打算怎么弄，这个可以讨论下
+22:30 T2:算了没法比。
+22:31 varna:我这个弄法从一两年前写ROUtine的时候就定下来没想出过别的
+22:31 varna:未必靠谱
+22:31 T2:我想出来的更不靠谱。
+22:32 varna:说说看
+22:32 varna:thread是什么？
+22:32 lh_mouse:geordi, { foo([](auto p, auto cb){ cout <<TYPE(p), TYPE(cb); }); } void foo(function<void (const unsigned char *, size_t)> &&fn){ fn(0, 0); }
+22:32 geordi:lvalue unsigned char const*, lvalue unsigned long
+22:32 varna:OS的线程还是coro?
+22:32 condy_ joined channel
+22:33 T2:coro
+22:33 varna:那schedule就是OS的了
+22:33 varna:这也没差别
+22:33 varna:往下的展开呢？
+22:33 T2:自己写个。
+22:33 varna:噗？
+22:33 T2:schedule
+22:33 varna:我说是线程模型
+22:34 T2:那就是os的
+22:34 T2:线程结构体里保存个id 栈 栈深 上下文 状态和回调函数指针就完了。
+22:35 varna:然后别的呢，比如说调度和重调度的发生时机，调度队列的持有和访问情况，调度策略和IO策略
+22:35 T2:扔 schedule 结构体里。
+22:35 varna:我是说具体怎么做……
+22:35 T2:一个可运行的队列
+22:35 varna:比如goroutine的典型情况，一个coro要recv于是阻塞了，这时候另一个coro上
+22:35 T2:一个阻塞队列。
+22:36 varna:你具体怎么安排，IO用什么挂，通知怎么做，哪里上锁
+22:36 varna:这样的琐碎事情
+22:36 T2:一个这倒还没想，消息队列？
+22:36 T2:schedule里再扔个上下文。
+22:36 varna:不会是系统五的消息队列吧……
+22:36 T2:一个current
+22:36 varna:不是
+22:37 varna:比如说你一个coro里用了某种你封过的recv(2)
+22:37 varna:你如何描述整个io从发起要求到io完成的过程
+22:37 T2:我想想哈。
+22:37 varna:如果是POSIX的话其实这里可以取个巧
+22:38 varna:但是我的实现里没给，你也可以考虑这方面的事情
+22:38 T2:反正在同一个进程里
+22:38 varna:另外现在p7的IO通知比较低效（也可能是相当低效），因为没有实装ET
+22:38 T2:开个buffer出来？
+22:38 varna:……整个过程
+22:40 T2:struct message {int sender;  size_t size; char* text; message *next};
+22:40 T2:互斥我想想
+22:41 T2:要么扔tbc里？
+22:41 T2:tcb
+22:41 varna:我先吐槽你这窝狗2333
+22:41 T2:0.0
+22:41 varna:举例来说，我这里的IO是这么完成的
+22:42 T2:就是那个thread结构体里增加一个消息队列指针 一个资源信号量一个互斥锁。
+22:42 T2:搞到接收者的id
+22:43 varna:p7_iowrap调用p7_iowrap_, 要求epoll注册读/写并且只限ONESHOT, 之后把自己挂到epoll事件队列上，要求引发调度
+22:43 varna:调度按一贯的俄式风格以超时驱动epoll, 就绪的coro被挂回调度队列，在被调度时候返回，此时io就绪，在p7_iowrap里调用先前的io函数
+22:44 varna:简单来说是这么做的
+22:44 varna:trick的部分在于epoll阻塞期间的新coro创建要求
+22:45 varna:这个我直接糙写了，连了一根管道挂在epoll上，在epoll阻塞期间要求创建coro者向这个管道写入通知
+22:46 varna:你看到的原子操作就用来标明/识别epoll的阻塞状态
+22:46 varna:T2: 现在你的问题是你如何在io就绪的时候通知io
+22:47 varna:我说没优化，你应该能从这些描述里看出来细节各种糙的地方
+22:47 T2:没想那么细致 大概是 send(receiver, msg) { getbuffer(msg) wait(receiver' mutex); add_tail(receiver's msg_queue, msg'copy); }
+22:47 varna:比如io就地就绪的情况，ET的情况，公平程度
+22:47 varna:T2: 问题是谁触发这些
+22:48 varna:T2: 模型都超简单，主要看实作
+22:48 T2: signal(mutex); 用信号量通知。
+22:48 varna:谁让这个信号量活过来
+22:48 varna:这个信号量会卡死谁
+22:49 varna:最后，你用哪里的信号量实现
+22:49 T2:再 signal(receiver's sigmsg) 然后请求调度。
+22:49 T2:这没想。
+22:49 varna:现在我用过的类似信号量或者互斥锁的东西有两种
+22:49 T2:肯定得自己的
+22:49 varna:一种是系统五，这个你用我只是不拦着你，死不死你现在都能知道
+22:49 T2:用户态线程用内核的信号量不是作死么。
+22:50 varna:一种是POSIX的同步系列，这个你用我只是不拦着你，死不死你现在都能知道
+22:50 varna:如果你想自己做，那么想好你怎么知道io可用
+22:51 varna:虽然死不死都知道的两类同样，但既然死不死都知道了下略
+22:51 T2:这个果然疼。
+22:52 varna:所以其实你该man epoll看看示例
+22:52 varna:那个示例写得不好，但稍微说明问题
+22:52 T2:好的。
+22:53 varna:或者其实你知道*nix的典型io多路复用也行
+22:53 T2:主要epoll没见过
+22:53 varna:我不是说你就得用这个，但这至少是我的第一选择
+22:53 T2:姿势我不是都没见过么所以疼。
+22:53 varna:翻翻APUE的目录
+22:53 T2:硬想我只能想出自己做个信号量然后挂个消息队列。
+22:53 varna:至少稍微抱持点好奇心去看看这坨破玩意都能干点什么
+22:54 T2:嗯嗯
+22:54 varna:你一想也知道这做法不靠谱
+22:54 varna:内核会这么搞么……
+22:54 varna:一大堆信号量放在那里是绕远路
+22:54 T2:事件驱动不是没见过么。
+22:55 varna:拿名词绕自己就不好了
+22:55 T2:嗯
+22:55 T2:反正就三个API
+22:55 varna:三个？
+22:55 varna:哪三个
+22:55 T2:epoll好象就三个API吧？
+22:56 varna:如果你的内核版本至少是2.6.27就是四个
+22:56 T2:create ctl wait
+22:56 varna:不推荐用epoll_create, 改用epoll_create1
+22:56 varna:差别你能在手册里看到
+22:56 T2:就是不带参数那个？
+22:56 varna:带一个标志参数
+22:56 varna:close on exec
+22:57 T2:嗯
+22:57 varna:但是你涉及到的东西未必就这三个
+22:57 T2:ucontext倒是看了。
+22:57 varna:那些不算
+22:57 T2:别的还没碰到orz
+22:57 varna:那些逼疯了你自己写也能大致写出来点
+22:58 T2:算了吧通用寄存器不说还有FPU
+22:59 varna:主要是浮点疼些，如果能抄来实现也就没什么了
+22:59 T2:嗯
+22:59 T2:没事有ucontext就行了哈哈
+23:0 T2:然后就是 fcntl 之类的类似物没见过
+23:0 T2:查一下问题不大应该。
+23:2 T2:先睡觉保san值2333
+23:2 varna:啊啊！
+23:2 varna:开发出了零式水侦！
+23:2 T2:orz
+23:3 T2:那个makecontext似乎必须接收64bit的整型
+23:3 T2:所以必须走一遍
+23:3 T2:不然行为不确定。
+23:4 varna:不对
+23:4 varna:你看手册的NOTES第二段
+23:4 varna:int保证，但指针不保证
+23:5 varna:不过x86-64在目前版本不很低的glibc上是可用的
+23:5 varna:零式水侦给偶像了，算是总黑她的补偿
+23:7 T2:嗯
+23:7 T2:就是说指针。
+23:9 varna:只要你还是Intel就不会死
+23:12 hope1:全用intel配件能解决驱动问题吗？
+23:13 varna:Arch?
+23:13 varna:我这里显卡声卡至少都没问题
+23:13 hope1:其他的，intel的驱动似乎都开源？
+23:14 varna:不知道
+23:15 T2:hope1, orz
+23:15 T2:你入了什么？
+23:15 varna:轻空母·祥凤，入手
+23:15 T2:睡觉睡觉
+23:27 xxxxxxxxx:今天在linux吧看到这贴 http://tieba.baidu.com/p/3058054677
+23:27 xxxxxxxxx:然后我发了这贴 http://tieba.baidu.com/p/3059699240
+23:28 xxxxxxxxx:下面的回复把我自己都看乐了
+23:31 varna:有个猫鼻子不错
+23:32 hope1:传个child porn，中美合作查水表
+23:33 varna:明明是LOLI H, 什么child porn
+23:33 xxxxxxxxx:@LULI
+23:33 hope1:这是在描述D盘里的内容？
+23:34 varna:我还真没收多少LOLI H
+23:34 xxxxxxxxx:然后我来黑一下minecraft 1.6.4
+23:34 varna:倒是有三卷非H/Q版的《国立舰队幼儿园》被错扔进H本目录了
+23:34 varna:估计是打包时候手滑，那个明明是一般搞笑向
+23:35 xxxxxxxxx:原版客户端的内置服务器 分配1024M 效果跟吃了屎一样
+23:35 varna:多给点
+23:35 xxxxxxxxx:mcpc-plus 300M
+23:35 xxxxxxxxx:客户端400M
+23:35 xxxxxxxxx:流畅无比
+23:36 varna:...
+23:36 varna:现在mc还是用巫女写的？
+23:36 xxxxxxxxx:嗯
+23:36 varna:看看今天夜战能不能争取出呜十铃改
+23:37 varna:如果能给我个大傻就更好了
+23:37 varna:有大傻的话那珂酱就下放去远征队
+23:39 xxxxxxxxx:另官方服务端分500M 客户端400M也卡翔
+23:39 xxxxxxxxx:虽然服务端上说只用了250多M
+23:40 hope1:"反正现在机器内存多、漏个1G无所谓"
+23:40 hope1:^ #avplayer
+23:40 xxxxxxxxx:说到底 第三方开源物也有靠谱的时候
+23:41 varna:噗
+23:42 varna:单个客户端应用给我漏1GB是开发者无能
+23:42 varna:用1GB和漏1GB是两回事啊
+23:42 varna:难道他们所有的内存都落在malloc阈值之外恰好一时收不回来了么
+23:42 xxxxxxxxx:fps的话 原版组合高的时候30 低的时候0 第三方服务端的话客户端能到60左右
+23:43 xxxxxxxxx:高的时候上80
+23:43 varna:啊啊，2-1没有大傻啊……榛名也行，榛名也行
+23:50 varna:http://imgsrc.baidu.com/forum/w%3D580%3B/sign=8818474aa2ec08fa260013af69d53c6d/359b033b5bb5c9ea6ad5e016d739b6003af3b325.jpg
+23:51 hope1:裁判员？
+23:51 xxxxxxxxx:http://tieba.baidu.com/p/3059315915
+23:51 xxxxxxxxx:hope1: 那个图的重点是马凯
+23:51 hope1:看到了
+23:52 hope1:驱动看来比正确配置gcc还麻烦些
+23:55 xxxxxxxxx:http://tieba.baidu.com/p/3059170492 : 但是又不太喜欢AUR
+23:55 xxxxxxxxx:他用arch找蛋疼的么....

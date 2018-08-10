@@ -1,0 +1,369 @@
+00:40 nobodyzxc quit:Quit: leaving
+01:18 nobodyzxc joined channel
+01:18 nobodyzx1 joined channel
+01:18 nobodyzxc is now known as onepunch
+01:19 nobodyzx1 quit:Client Quit
+01:19 onepunch quit:Client Quit
+01:20 nobodyzxc joined channel
+01:20 nobodyzx1 joined channel
+01:20 nobodyzx1 quit:Client Quit
+01:20 nobodyzxc quit:Client Quit
+01:31 Mokou quit:Remote host closed the connection
+03:07 nobodyzxc joined channel
+03:43 cleamoon quit:Remote host closed the connection
+03:44 cleamoon joined channel
+05:06 nobodyzxc quit:Quit: leaving
+06:54 randomclown joined channel
+07:07 randomclown quit:Quit: Leaving
+08:05 FrankHB quit:Ping timeout: 260 seconds
+08:20 perr joined channel
+08:20 perr quit:Changing host
+08:20 perr joined channel
+08:53 FrankHB joined channel
+09:08 lh_mouse joined channel
+09:14 yimis joined channel
+09:29 yimis quit:Quit: yimis
+09:44 Youmu joined channel
+09:52 keyboardman joined channel
+10:22 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+10:26 keyboardman joined channel
+11:48 \s joined channel
+12:11 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:26 keyboardman joined channel
+12:40 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:54 keyboardman joined channel
+12:56 keyboardman quit:Client Quit
+14:04 keyboardman joined channel
+14:28 zhangoke joined channel
+14:59 \s quit:Quit: Textual IRC Client: www.textualapp.com
+15:05 Dove joined channel
+15:36 perr quit:Ping timeout: 260 seconds
+15:39 Mokou joined channel
+15:48 perr joined channel
+16:59 whocares_2_ joined channel
+16:59 whocares_2 quit:Ping timeout: 260 seconds
+17:12 mels joined channel
+17:16 nobodyzxc joined channel
+17:25 mels quit:
+17:48 Taggnostr quit:Ping timeout: 268 seconds
+17:50 Taggnostr joined channel
+17:58 FrankHB quit:Ping timeout: 260 seconds
+18:15 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+18:22 FrankHB joined channel
+18:42 iyzsong-m joined channel
+18:43 keyboardman joined channel
+18:59 iyzsong-m: (#･∀･)
+19:15 Dove: = =
+19:25 \s joined channel
+19:49 Taggnostr quit:Remote host closed the connection
+20:04 varna joined channel
+20:04 iyzsong-m: ('・ω・') 
+20:04 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+20:04 varna: (｡･ω･)二周目全套街舞装备，一个人把街舞队尬死了
+20:04 Mokou: OTL
+20:04 paper_octopus: orz
+20:05 varna: 尝试过程中被打死四回
+20:05 paper_octopus: 试了一下tl2，感觉略复杂
+20:05 lh_mouse: varna, 奇异啊。
+20:05 varna: lh_mouse: ?
+20:05 lh_mouse: 今天把之前的 condvar 改了改。
+20:05 iyzsong joined channel
+20:06 varna: paper_octopus: TL2主要是区分DPS技能和dot技能的增益差别
+20:06 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/wiki/Benchmarking#test-results    看 Threads 是 1 那几行。
+20:06 lh_mouse: 我把 cv 改成了无脑自旋，照样干不过 windows 内置的 cv 。
+20:06 lh_mouse: 无脑自旋也就是这样的结果了。
+20:07 lh_mouse: 实在想不通 windows 怎么实现的。
+20:07 varna: 内置CV有调度hint?
+20:07 lh_mouse: 不应该呀。
+20:07 varna: 你底下垫的不也是windoze那些么……
+20:07 lh_mouse: 是。
+20:08 lh_mouse: 单生产者单消费者。
+20:08 varna: 奇葩了，这种时候该perf/vtune一下
+20:08 varna: Mokou: 周日的时候你在sbeam上给我发了一个直播请求么……
+20:09 Mokou: varna: 手滑……
+20:09 lh_mouse: 目前ヲ的实现是在 cv_wait 的时候忙等它的 count_released （cv_signal 会将其加一）。
+20:09 lh_mouse: 相比之下 windows 的是在栈上开了个链表，然后在节点上自旋。
+20:09 paper_octopus: 另外羊驼子对 tl1 和 tl2 有什么爽的练法推荐吗
+20:09 varna: windows那个似乎能分散一点压力
+20:09 lh_mouse: windows 的 cv_signal 会从 cv 上取出链表的一个节点然后指定 release 一个线程。
+20:09 varna: paper_octopus: 什么难度
+20:10 paper_octopus: varna: ez
+20:10 lh_mouse: 我觉得这样总线压力会小，虽然只有两个线程。
+20:10 Mokou: varna: TH16公布了
+20:10 Mokou: 东方朱元璋
+20:10 varna: Mokou: 我听说是春夏秋冬四个自机
+20:10 varna: paper_octopus: ez怎么练都爽
+20:10 paper_octopus: 经常浪死
+20:11 paper_octopus: 春夏秋冬.... 
+20:11 varna: 巫女 9 文文 贝奥兰迪
+20:11 Mokou: 灵梦：“吾治乱世，刑不得不重”
+20:11 lh_mouse: varna, 能看懂这个么？  http://locklessinc.com/articles/double_dereference/
+20:11 varna: 我看一下
+20:12 lh_mouse: 他怎么用这个东西从 lockless 单链表中移除元素，看不懂。
+20:23 iyzsong: _(:з」∠)_
+20:30 varna: lh_mouse: 问题点在于？
+20:34 lh_mouse: varna, 我看懂他那 double dereference 的原理。
+20:43 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:43 varna: 我觉得他的double dereference得假设所有用户访问都走ref, 否则会爆掉
+20:44 varna: 而且整个访问过程中，堆必须是可用的
+20:44 varna: 这不像个正常的堆……
+20:44 lh_mouse: 是。
+20:45 lh_mouse: 第一次 deref 之后立即 inc 就是可能会爆炸。
+20:46 varna: 驲，鼠标要坏了
+20:47 varna: 单点下去有双击现象
+20:47 Mokou: 修
+20:47 varna: 不修了，一百元的玩意用了将近五年，不亏
+20:47 Mokou: 十分钟就搞定了
+20:47 Mokou: 把微动拆开，里面铜片的触点打磨下
+20:48 varna: 反正Linux不用鼠标，而旁边的windoze基本都在耍手柄……
+20:48 Mokou: 我这鼠标就这么救过来的
+20:48 varna: s/不用/不太用/
+20:48 varna: 懒得救
+20:48 lh_mouse: varna, 那 double deref 前面有段话。
+20:49 lh_mouse: Is equivalent to the atomic version of:
+20:49 lh_mouse: 看来是用了全局锁。
+20:49 varna: atomic version如果是这个意思，那就有点不和谐了
+20:50 varna: 为了避开ABA之类问题去做这么一个寻址，最后真的能跟就事论事的低竞态方案拼么……
+20:50 lh_mouse: 不过 linux 内核真的有在被管理对象里塞 mutex 结果 mutex_unlock  炸了的。
+20:51 varna: Mokou: 周日入了sbeam上的《无夜之国》，感觉没有耐力条的世界简直就可以漫天飞
+20:51 varna: 在对象里塞元数据我觉得比较作死
+20:51 Mokou: OTL
+20:52 varna: 不死人的诅咒：1.有N段的连击不打最后一段；2.跳不上小腿高的台阶
+20:54 Mokou: ……
+20:54 varna: http://www.bilibili.com/video/av2669418/ 23333
+20:55 varna: PVP的时候我曾经斗胆跳出尬舞三连最后一段
+20:55 Mokou: varna: 复旦的白学演唱会引起了雪菜的注意
+20:55 Mokou: http://wx3.sinaimg.cn/bmiddle/b9128e35ly1fexj3coh0cj20ho0nhqct.jpg
+20:55 varna: 然后被人抓住破绽背刺捅死
+20:55 varna: puuuuuuuuuuuu
+20:56 Mokou: 比起那个时候，现在的白学家已经更加熟练了
+20:57 paper_octopus: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/x0/vk_82181.gif@596w_1l.gif
+20:57 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:57 paper_octopus: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/x0/tz_283967.jpg@596w_1l.jpg
+20:59 varna: _(:з」∠)_btw 二周目舞娘我直接提到第二个boss打了，而且为了避免精神污染，全程中盾（负重不够，没法兼顾盔甲和大盾）
+20:59 varna: 而举盾的结果就是一条过……
+20:59 varna: 简直两个世界
+21:00 varna: _(:з」∠)_尬舞的时候动辄被吸入贝塔
+21:04 paper_octopus: 拿盾算什么好汉
+21:04 varna: 速通之后去王城刷魂，不想节操了
+21:05 varna: 后面觉得心里有愧才只身去跟不死队尬舞
+21:06 varna: 尬舞大剑的麻烦是未必能很快收拾上来复活的队员，结果我前半场砍队长三刀之后就跟他们绕场狂奔，直到红眼队员第一次复活……
+21:06 varna: 二阶段相对好点，不过喝血的时机基本不多
+21:07 varna: 以为距离很长很安全的时候一般都会悲剧，敌人有一个大突进技
+21:07 paper_octopus: 我是老贼的话就给跑步加一个消耗精力
+21:08 paper_octopus: 然后就真没法打了
+21:08 varna: 跑步当然消耗精力……
+21:08 varna: 平常的跑动是慢跑，但敌人接近你的时候都是快跑
+21:08 lh_mouse: paper_octopus, 这是你吗。
+21:08 paper_octopus: 大幅度消耗
+21:08 paper_octopus: ？
+21:08 lh_mouse: 挺萌的。
+21:08 paper_octopus: 我是我呀
+21:09 lh_mouse: 我说上面照片是你吗。
+21:09 varna: 魂3的好处是难度曲线很友善
+21:09 varna: 他是幼女啊
+21:09 lh_mouse: 噢。
+21:09 paper_octopus: 明显不是...
+21:09 lh_mouse: 明显是。
+21:10 varna: 基本上第一个难点在不死队，因为即使看视频记住谷歌的简易打法，也未必能抓到时机绕背
+21:10 paper_octopus: 少女漫小时候只看过圣少女，美战不符合小时候审美
+21:10 varna: 然后比较难的大概是沙力万（翻滚版本）
+21:11 paper_octopus: 你可以试试太阳骑士的打法，一般更简(lu)易(mang)
+21:11 varna: 再往下我觉得难度就因人而异了
+21:11 varna: 怂人会被猎龙铠甲刚死
+21:11 varna: 失误率高的（比如我）会被双王子秒
+21:12 varna: 节操太多但技术跟不上的（比如我）会被薪王秒
+21:12 varna: 至于无名
+21:13 varna: 我叫了个太阳战士，他战术很好：让我在前面吸引注意力+抓破绽输出，他在远处射箭，愉快地逃课通过……
+21:13 CyrusYzGTt: msg ChanServ TAXONOMY #c_lang_cn
+21:14 varna: /msg
+21:14 paper_octopus: 我觉得羊驼子可以入dlc了
+21:15 varna: 我已经买了季票并且安好了
+21:16 varna: 不过现在我的DLC全都是从二周目进的，感觉有点酸爽
+21:16 varna: 鬼知道我能不能在疯掉之前打过小姐姐……
+21:16 paper_octopus: 二周目还好
+21:16 varna: 冻伤太可怕了
+21:16 paper_octopus: 哦，第一个dlc呀
+21:17 paper_octopus: 那应该担心的不是疯掉，是瞎掉
+21:17 varna: 一周目打大书库的时候我跟冰骑士对着莽，上级骑士套+升满的守墓人双刀
+21:17 varna: 我以为一套体力打空之前就有出血硬直
+21:17 varna: rua
+21:17 varna: YOU DIED * 4
+21:18 varna: 第五次上想着不能再抠了，附魔出血+认真翻滚，仍然被砍掉半条血
+21:18 varna: 二周目打活祭品之路门口的冰骑士，本来计划电梯杀
+21:19 varna: 结果施行失败，这货把我顶下电梯，两三下砍死了
+21:19 paper_octopus: 冰骑士一点印象都没有
+21:19 varna: 回来之后用弓箭勾他也没成功，于是把他卡AI活活射死
+21:20 varna: 这么说吧，把沙力万喂给他的手下，他就活不了……
+21:20 varna: 鳄鱼也好冰骑士也好都很恐怖
+21:20 Taggnostr joined channel
+21:20 varna: 有人说鳄鱼能打出陶喆，不过我已经吓得放弃瞎丁日乱滚了，直接出血连死
+21:22 varna: 哦对还有巨人尤姆
+21:23 paper_octopus: 巨人不都是用来刷魂的吗
+21:23 varna: 尤姆不是真正意味上的巨人，他只是高
+21:23 varna: 流程上可以是第二个或者第三个薪王
+21:24 varna: 攻略说要拿Storm Ruler放战技轰他，但没说战技要蓄到剑身发亮……
+21:24 varna: 于是我站在原地蠕动了十几秒或者几十秒，洋葱被他怼死了
+21:24 varna: _(:з」∠)_我TM拿出了淋淋传授的六成功力才把他搞死
+21:25 paper_octopus: 233333
+21:25 varna: 而且加了洋葱之后战技轰他似乎有伤害削减……
+21:25 varna: 洋葱虽然是不死人，但被尤姆干掉以后不会复活
+21:26 varna: 我也许顶着双人战的debuff打了一个人的决斗
+21:26 paper_octopus: orz
+21:26 varna: 试试看这周目有没有希望直接把他砍死，如果能打下来的话绝对精彩绝伦
+21:26 paper_octopus: 然后三周目进入dlc被射成狗
+21:27 varna: 至于艾尔德里奇
+21:27 varna: 我已经给他准备好对策了
+21:27 varna: 信仰已点到25，戴戒指刚好30，够放全场禁魔
+21:27 varna: (｡･ω･)叫你吃伪娘
+21:28 varna: (｡･ω･)禁魔之后传火大剑伺候
+21:29 varna: _(:з」∠)_双王子的话……我想顶大盾……
+21:29 varna: 中盾太拙计了
+21:30 varna: DLC1的杂鱼配置其实很恶意
+21:30 paper_octopus: 尬舞呀
+21:30 varna: 双王子尬舞……我感觉这个难度比淋淋高很多
+21:31 varna: 淋淋的尬舞对策相对容易，因为死角明显
+21:31 varna: 王子的瞬移斩就没那么愉快了
+21:31 varna: 也许练习练习之后，我开一个新档，主修敏运
+21:32 varna: btw 尬舞大剑是不能用道具附魔的，要砍就平砍
+21:32 paper_octopus: orz
+21:32 varna: 玩的都是情怀
+21:32 paper_octopus: 情怀应该巨剑装薪王呀
+21:32 varna: +5之后力C敏A补正，伤害可以看，但也只是不拖后腿的程度
+21:33 varna: 薪王cos我现在当推图安定装备穿着
+21:33 varna: 传火套装+传火大剑+渴望盾
+21:33 varna: 衣服很好看
+21:34 varna: 不过脚部骨骼权重有问题，跑步的时候像是在不断崴脚
+21:34 varna: 应该是腿部偏细+模型向骨骼外侧偏了，导致权重微微错位
+21:35 paper_octopus: 你没把模型捏成古神？
+21:35 varna: 而且玩家的传火大剑是不能变形的
+21:35 varna: 我捏了一个很朴素的脸，活尸化之后看起来就和路边的杂鱼一样
+21:36 varna: 要是传火大剑的战技是变形，那绝对帅上天
+21:36 varna: 然而只是一个PVE特定场景可用的火焰攻击……
+21:36 paper_octopus: mod？
+21:37 varna: 目前没见到这个mod, 因为有联机问题，估计也不会再有
+21:38 varna: btw 尬舞大剑打多数入侵NPC好用
+21:38 varna: 因为他们的思路都是冲过来跟你莽
+21:38 lh_mouse: varna, 那无脑自旋都打不过的 cv 感觉和总线竞争有关系，不知道你有没研究过。
+21:38 varna: 总线竞争我只看过科普级别的玩意儿……
+21:39 paper_octopus: 入侵不都是为了阴人嘛
+21:39 lh_mouse: 可以把 cv 改成 256 字节拆四个 cache line 分别自旋。
+21:40 lh_mouse: 好像比较狗。
+21:40 varna: 这个似乎不错ppoi
+21:40 lh_mouse: 太浪费内存了。
+21:40 varna: paper_octopus: 有剧情支线的入侵NPC, 唯一一个尬舞有风险的是圣骑士弗多林克的狂灵召唤符
+21:41 varna: 我捏了余火1.3k+血，被他一个战技带走……
+21:42 varna: cv这个东西被大量实例化的话也是个祸害，我倒觉得不算很浪费
+21:42 varna: 虽说作为缺省实现是比较狗
+21:43 lh_mouse: 回去想想。
+21:44 lh_mouse: 用 rdtsc 评估自旋效率，如果一次自旋在 200 周期以上就放弃自旋。
+21:44 lh_mouse: 不过写死 200 也不好。
+21:45 varna: 哦不对，烟特大老师尬舞也有风险……
+21:46 varna: 第一次遇到他的时候，我试图把他坑下吊桥摔死
+21:46 varna: 结果他没摔到深渊里，我下去和他缠斗，差点被砍死
+21:47 varna: 瓶子也喝光了，于是半路脱战出去卡他视角，给他做了个刺猬cos
+21:48 varna: 紧跟那后面的流程里还有个大恶魔，没瓶子实在不敢打，就引了屋里的宝箱怪
+21:48 varna: 那宝箱怪活活把恶魔踢死
+21:51 varna: 昨天红旗手滑点直播请求的时候，我还在用大弓猥琐几个骑士
+21:52 varna: 身上带了八万左右的负担，前面几十步路就是boss, 争取少费资源一条过的结论就是道中猥琐
+21:53 paper_octopus: ......
+21:54 varna: 妖王还算好打，中盾架起来安定地过了
+21:54 varna: 除了龙车之外他没什么像样的攻击手段
+21:54 varna: 就是条超大号的保时捷X虫……
+21:55 Mokou: _(:з」∠)_以后我一定要买两张书桌，一张放电脑一张写字
+21:55 Mokou: 共用一张桌子写起来跟缝床单一样
+21:55 paper_octopus: 保时捷J虫不是只会跑吗
+21:55 paper_octopus: 电脑好大orz
+21:55 varna: 布加迪威龙会打
+21:56 varna: 第一条布加迪威龙在初始场景（灰烬墓地）的某个拐角，熟练的话很容易干掉
+21:57 varna: 毕竟进度推到伊鲁席尔地牢之前，没有机会购入龙鳞石强化王魂武器，所以布加迪威龙是重要的素材
+21:57 paper_octopus: 那个看起来还听麻烦的
+21:57 paper_octopus: 一开始裸体的话
+21:57 varna: 绕后翻滚/绕后架盾
+21:58 varna: 他很少平A, 闪过之后砍两下继续绕，保证有一次应急回避的体力
+21:58 varna: 有物抗盾的话基本是送的，没有的话别太莽
+21:58 paper_octopus: 所以裸体时略麻烦
+21:59 varna: 昨天还看一个丧失表演骑士出身不带盾手撕初始古达
+21:59 varna: 那陶喆简直……
+22:01 varna: 陶喆一次只掉一小丝血，但古达就这么被掏到了二阶段，然后乱拳打死
+22:01 paper_octopus: .....
+22:01 paper_octopus: 有没有哪位裸了全程的julao
+22:02 varna: 也许有
+22:02 varna: http://www.bilibili.com/video/av8403757 手撕古达
+22:04 paper_octopus: 法兰不死队队长....
+22:09 paper_octopus: 略有耐心
+22:10 varna: 对招式很有了解，不然不敢这么绕
+22:10 paper_octopus: 然而播放量也很有耐心
+22:10 varna: 一般怂人被人之脓的投技搞过一两次之后都会倾向引敌人出大硬直再打
+22:13 paper_octopus: 我觉得这位是勇者
+22:14 iyzsong quit:Quit: bye
+22:18 varna: http://www.bilibili.com/video/av9476527/ 这位也很勇
+22:19 keyboardman joined channel
+22:19 varna: (｡･ω･)ﾉ
+22:20 paper_octopus: (｡･∀･)ﾉﾞ
+22:24 varna: DLC2这个视频最后也是太虎
+22:24 varna: 直接霸体换血
+22:28 paper_octopus: 我看魂3的视频就觉得就我韩宗的视力和自带的迷途森林光环根本没法玩
+22:30 varna: 迷路不是问题
+22:31 varna: 路都是死出来的
+22:31 paper_octopus: 当年玩仙剑，在第一个迷宫被困了2h....
+22:32 varna: (｡･ω･)ﾉ因为没有固定的敌人配置
+22:32 paper_octopus: 仙3，是固定的
+22:32 paper_octopus: 不过我瞎呀
+22:33 varna: (｡･ω･)用身体记住
+22:33 paper_octopus: 看不到出入口...
+22:34 StardustX: 仙三迷宫确实难，至今印象深刻
+22:35 paper_octopus: 后面全程看攻略，在树的地方看着攻略走了2h...
+22:35 StardustX: 我当时用工具开了个窗口化，旁边放上地图，仍然觉得吃力
+22:39 paper_octopus: 我觉得迷宫可以考验脑力，但绝对不能考验眼力...
+22:40 paper_octopus: 我驲，又下雪了
+22:43 switch joined channel
+22:44 varna: _(:з」∠)_啊啊，2B小姐姐还锁区呢
+22:44 varna: _(:з」∠)_可恶
+22:44 paper_octopus: 身为羊驼难道不能代理购买吗
+22:45 varna: 欧区代购可行么？
+22:45 paper_octopus: 不知道，我见过国内人玩日区的
+22:46 varna: 那应该是他们帐号就在日区
+22:46 varna: 而且目前日区小姐姐也被锁了吧……
+22:52 paper_octopus: 应该是日区账号
+22:52 paper_octopus: 应该没锁吧…
+22:52 paper_octopus: 或者难道是日版？
+22:53 varna: 有多语言的
+22:54 paper_octopus: soga
+22:54 paper_octopus: 那就不确定了
+22:55 paper_octopus: 不过我发现了很多目标是9s的基佬
+22:55 varna: ...
+22:55 Mokou: http://wx2.sinaimg.cn/mw690/0067GdITgy1fey5posf2jj319n0qo78u.jpg NSFW NSFW NSFW
+22:56 varna: puuuuuuuuuuuuuu
+22:56 paper_octopus: 真 海绵体
+22:56 varna: 23333
+22:56 Mokou: 2333333
+22:59 paper_octopus: 其实硬的地方不是海绵，而是气球一样的张力
+22:59 paper_octopus: 海绵无论怎么加水都是软的
+23:01 StardustX: 我见过一种维护乒乓球拍胶片的海绵擦，不加水的时候邦硬
+23:02 Mokou: 【《黎明杀机》加入“戒网瘾医院”，新屠夫可以使用“电疗”】《黎明杀机》新地图是一家中国医院，其中一张很大的横幅上写着“远离网络世界，亲近生活体验”。而且新屠夫的能力可以强势给幸存者来个电疗，磁爆步兵杨永信要上场了啊[doge] ​​​​
+23:02 paper_octopus: 噗
+23:04 varna: 2333333
+23:05 StardustX: 临沂第四人民医院即将走向全球(｡･ω･)ﾉ
+23:09 paper_octopus: 四处都看到说ai以后会让人类都没工作的文章，只是自己了解的部分就觉得ai代替不了…
+23:10 FrankHB quit:Ping timeout: 258 seconds
+23:10 varna: 那种文章没看头
+23:10 varna: (｡･ω･)继续打二周目，不过先不开DLC了
+23:10 paper_octopus: 要不断充实自己不能混吃等死倒是真的
+23:12 paper_octopus: 真有哪位高手突然弄出了强ai大不了转型厨师
+23:12 StardustX: 炒菜机器人已经有了
+23:13 paper_octopus: 厨师的工作明显不是炒菜，就像码农的工作不是打字一样
+23:18 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+23:19 Mokou: 你可以转型月球厨师
+23:19 paper_octopus: 不喜欢兔肉
+23:19 varna: 谜之掉帧……
+23:23 paper_octopus: 神主：例大祭にて東方天空璋の他にもう一つ新作、東方Project第15.5弾　東方憑依花の体験版も出す予定です。こちらもよろしくー。最凶の二人を選ぼうぜ！ 
+23:23 paper_octopus: 这么早就说最凶会不会给人一种钦定的感觉呢
+23:32 paper_octopus: 似乎是二打二的格斗…
+23:41 Mokou: FGO把定期维护去除了
+23:41 varna: 23333333
+23:41 Mokou: 以后的石头没有了……
+23:42 paper_octopus: ……
+23:46 perr quit:Quit: Leaving
+23:47 paper_octopus: 这个厉害了 http://cpc.people.com.cn/GB/34136/2543837.html
+23:47 Mokou: 标题：锟斤拷锟斤拷锟斤拷

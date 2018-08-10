@@ -1,0 +1,929 @@
+00:03: GODDOG quit:Ping timeout: 264 seconds
+00:03: condy: cn: Total of 23 nicks [2 ops, 0 halfops, 0 voices, 21 normal]
+00:03: condy: http://www.acfun.com/a/ac1219064 233
+00:07: T3rm1n4t0r_ quit:Read error: Connection reset by peer
+00:07: silencly07 quit:Ping timeout: 240 seconds
+00:07: T3rm1n4t0r_ joined channel
+00:09: GODDOG joined channel
+00:11: * lh_mouse is satisfied.
+00:12: silencly07 joined channel
+00:29: GODDOG quit:Quit: leaving
+00:38: lh_mouse quit:Read error: Connection reset by peer
+00:58: zzzzzzzz joined channel
+01:03: condy quit:Read error: Connection reset by peer
+01:04: condy joined channel
+01:04: silencly07 quit:Quit: Leaving.
+01:17: zzzzzzzz quit:Ping timeout: 240 seconds
+01:23: T3rm1n4t0r_ quit:Read error: Connection reset by peer
+01:23: T3rm1n4t0r_ joined channel
+01:40: condy: http://www.acfun.com/a/ac1220543 <- 这篇文章文笔好赞！
+02:13: condy: geordi: << "online"
+02:13: geordi: online
+02:15: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; ams("mulq\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); }
+02:15: geordi: error: expected ')' before ':' token
+02:15: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; asm("mulq\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); }
+02:15: geordi: error: 'y' was not declared in this scope
+02:16: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mulq\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); }
+02:16: geordi: error: 'uint128' was not declared in this scope
+02:16: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mulq\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); } struct uint128{uint64_t low, high;};
+02:16: geordi: error: incorrect register `12x' used with `q' suffix
+02:17: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); } struct uint128{uint64_t low, high;};
+02:17: geordi: <no output>
+02:17: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high;};
+02:17: geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and 'uint128')
+02:18: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128) {return os<<high<<low;}};
+02:18: geordi: error: invalid use of non-static data member 'uint128::high'
+02:18: condy: geordi: {int a=0x7fffffff,b=0x7fffffff; uint128 y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128& rhs) {return os<<rhs.high<<rhs.low;}};
+02:18: geordi: 42077924225600
+02:18: condy: geordi: replace all 0x7fffffff with 10
+02:18: geordi: 42077924225600
+02:19: condy: geordi: show
+02:19: geordi: {int a=10,b=10; uint128 y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128& rhs) {return os<<rhs.high<<rhs.low;}};
+02:19: condy: geordi: {int a=10,b=10; uint128 y=asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128& rhs) {return os<<rhs.high<<rhs.low;}};
+02:19: geordi: error: expected primary-expression before 'asm'
+02:19: condy: geordi: {int a=10,b=10; int y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128& rhs) {return os<<rhs.high<<rhs.low;}};
+02:19: geordi: warning: 'y' is used uninitialized in this function
+02:20: condy: geordi: prepend -w
+02:20: geordi: 32767
+02:20: condy: geordi: show
+02:20: geordi: -w {int a=10,b=10; int y; asm("mul\t%2\n\t" : "+a"(a), "=d"(b) : "r"(y) ); cout<<y;} struct uint128{uint64_t low, high; friend ostream& operator<<(ostream& os, const uint128& rhs) {return os<<rhs.high<<rhs.low;}};
+02:20: condy: geordi: << __x64__
+02:20: geordi: error: '__x64__' was not declared in this scope
+02:21: condy: geordi: << __x86_64__
+02:21: geordi: 1
+02:21: condy: geordi: << sizeof(__int128)
+02:21: geordi: error: ISO C++ does not support '__int128' for 'type name'
+02:26: condy: geordi: { auto lambda = [](auto x, auto y) {return x+y;}; cout<<sizeof(lambda); }
+02:26: geordi: 1
+02:27: condy: geordi: { auto lambda = [](auto x, auto y) {return x+y;}; cout<< lambda(1,2);}
+02:27: geordi: 3
+02:31: condy: geordi: { string s = "hello"s;
+02:31: geordi: error: Unexpected end of request. Expected '}' or balanced code.
+02:31: condy: geordi: { string s = "hello"s;}
+02:31: geordi: <no output>
+02:31: condy: geordi: { string s = "hello"s; cout << s; }
+02:31: geordi: hello
+02:32: condy: geordi: { string s = "hello"s; cout << s; chrono::duration dur = 60s; cout << " " << dur; }
+02:32: geordi: error: missing template arguments before 'dur'
+02:32: condy: geordi: { string s = "hello"s; cout << s; int dur = 60s; cout << " " << dur; }
+02:32: geordi: error: cannot convert 'chrono::seconds {aka chrono::duration<long int>}' to 'int' in initialization
+02:32: condy: geordi: { string s = "hello"s; cout << s; chrono::seconds dur = 60s; cout << " " << dur; }
+02:32: geordi: hello 60 s
+02:59: condy quit:Quit: leaving
+03:04: condy_ quit:Remote host closed the connection
+03:45: hysw: cLeaMooN: 把智商交出来
+03:45: hysw: hope1: 把智商交出来
+03:46: hysw: 两个小时后考stat... 要挂了...
+03:59: cLeaMooN: 智商都出口了
+04:00: cLeaMooN: stat不是简单东西
+04:00: hysw: 背各种公式中
+04:34: hope1 quit:Ping timeout: 264 seconds
+04:39: hysw quit:*.net *.split
+04:40: hysw joined channel
+04:43: cLeaMooN: 海棠起得好早
+04:44: cleamoon_ joined channel
+05:36: cLeaMooN__ joined channel
+05:37: cLeaMooN quit:Ping timeout: 245 seconds
+05:38: cLeaMooN__ quit:Read error: Connection reset by peer
+07:12: zzzzzzzz joined channel
+07:20: zzzzzzzz quit:Ping timeout: 245 seconds
+07:34: randomclown joined channel
+07:47: xxxxxxxx quit:Quit: Leaving...
+09:08: Plough joined channel
+09:15: lh_mouse joined channel
+09:27: condy joined channel
+09:29: whatofor joined channel
+09:34: sismvg joined channel
+09:40: FrankHB quit:Ping timeout: 276 seconds
+10:42: sismvg: PM:为什么把初始化放到构造函数里？
+10:45: Zirx joined channel
+10:48: Zirx quit:Remote host closed the connection
+10:49: condy: geordi: { int* p; cout << p; *p=18;}
+10:49: geordi: warning: 'p' is used uninitialized in this function
+10:49: condy: geordi: prepend -w
+10:49: geordi: 0x7fffabe079e0
+10:49: condy: geordi: run
+10:49: geordi: 0x7ffffc1352c0
+10:49: condy: geordi: run
+10:49: geordi: 0x7fffeb6fb390
+10:50: condy: geordi: << __x86_64__
+10:50: geordi: 1
+11:04: T3rm1n4t0r_ quit:Read error: Connection reset by peer
+11:04: T3rm1n4t0r_ joined channel
+11:38: sismvg quit:Read error: Connection reset by peer
+11:42: condy: geordi: { srand(time(0)); vector<int> vec(10, rand() % 10); for(int i=0;i<10;++i)vec.push_back(i); random_shuffle(vec.begin(),vec.end()); cout << majority(vec,0); } int majority(const vector<int>& v,int m) { int cnt=1;int c=v[m];int i=m+1;for(;i<v.size()&&cnt>0;++i){ if(c==v[i]) ++cnt;else --cnt; } if(i==v.size()&&cnt>0)return c; return majority(v, i+1); }
+11:42: geordi: warning: comparison between signed and unsigned integer expressions
+11:42: condy: geordi: prepend -w
+11:42: geordi: 8
+11:43: condy: geordi: show
+11:43: geordi: -w { srand(time(0)); vector<int> vec(10, rand() % 10); for(int i=0;i<10;++i)vec.push_back(i); random_shuffle(vec.begin(),vec.end()); cout << majority(vec,0); } int majority(const vector<int>& v,int m) { int cnt=1;int c=v[m];int i=m+1;for(;i<v.size()&&cnt>0;++i){ if(c==v[i]) ++cnt;else --cnt; } if(i==v.size()&&cnt>0)return c; return majority(v, i+1)
+11:43: condy: geordi: insert cout<<v; before cout
+11:43: geordi: error: 'v' was not declared in this scope
+11:43: condy: geordi: show
+11:43: geordi: -w { srand(time(0)); vector<int> vec(10, rand() % 10); for(int i=0;i<10;++i)vec.push_back(i); random_shuffle(vec.begin(),vec.end()); cout<<v;cout << majority(vec,0); } int majority(const vector<int>& v,int m) { int cnt=1;int c=v[m];int i=m+1;for(;i<v.size()&&cnt>0;++i){ if(c==v[i]) ++cnt;else --cnt; } if(i==v.size()&&cnt>0)return c; return majority
+11:43: condy: geordi: replace cout<<v; with cout<<vec;
+11:43: geordi: {0, 8, 7, 4, 8, 8, 8, 8, 8, 8, 2, 8, 1, 8, 6, 5, 9, 3, 8, 8}8
+11:44: condy: geordi: show
+11:44: geordi: -w { srand(time(0)); vector<int> vec(10, rand() % 10); for(int i=0;i<10;++i)vec.push_back(i); random_shuffle(vec.begin(),vec.end()); cout<<vec;cout << majority(vec,0); } int majority(const vector<int>& v,int m) { int cnt=1;int c=v[m];int i=m+1;for(;i<v.size()&&cnt>0;++i){ if(c==v[i]) ++cnt;else --cnt; } if(i==v.size()&&cnt>0)return c; return majori
+11:51: silencly07 joined channel
+11:59: hysw: condy: 把智商交出来
+12:00: condy: hysw: 人家是弱弱啊！
+12:04: Zirconi joined channel
+12:07: sismvg joined channel
+12:19: zzzzzzzz joined channel
+12:24: condy quit:Quit: WeeChat 0.4.3
+12:24: condy joined channel
+12:26: Qisng joined channel
+12:35: sismvg: 能不翻唱吗。。
+12:35: sismvg: 找到文乃的幸福理论的原版都找不到
+12:56: T3rm1n4t0r_: ; /
+13:14: zzzzzzzz quit:Ping timeout: 240 seconds
+13:15: hope1 joined channel
+13:28: zzzzzzzzzz joined channel
+13:30: zzzzzzzzzz quit:Remote host closed the connection
+13:35: GODDOG joined channel
+13:35: Qisng quit:Remote host closed the connection
+13:39: xia joined channel
+13:41: GODDOG quit:Ping timeout: 244 seconds
+13:41: GODDOG joined channel
+13:43: marisa_ joined channel
+13:43: marisa_: geordi: #include <iostream>
+13:43: geordi: fatal error: iostream: No such file or directory
+13:43: marisa_: template< size_t, typename > struct tem;
+13:44: marisa_: template< typename > struct MT;
+13:44: marisa_: template< size_t s, typename t > struct MT< tem< s, t > >{ static const size_t r = s; };
+13:44: marisa_: int main(int argc, char *argv[])
+13:44: marisa_: {
+13:44: marisa_: 	MT< tem< 0, int > > s;
+13:44: marisa_: 	std::cout<< s.r;
+13:44: marisa_: 	return 0;
+13:44: marisa_: }
+13:44: marisa_: geordi:template< size_t, typename > struct tem;template< typename > struct MT;template< size_t s, typename t > struct MT< tem< s, t > >{ static const size_t r = s; };int main(int argc, char *argv[]){	MT< tem< 0, int > > s;	std::cout<< s.r;	return 0;}
+13:44: geordi: 0
+13:48: Zirx joined channel
+13:52: Zirconi quit:Ping timeout: 264 seconds
+13:55: T3rm1n4t0r_ quit:Read error: Connection reset by peer
+13:55: lh_mouse quit:Ping timeout: 245 seconds
+13:56: lh_mouse joined channel
+13:57: T3rm1n4t0r_ joined channel
+14:02: marisa_ quit:Ping timeout: 245 seconds
+14:09: gmter joined channel
+14:13: hope1 quit:Ping timeout: 244 seconds
+14:34: GODDOG quit:Remote host closed the connection
+14:41: T3rm1n4t0r_: 大V
+14:46: marisa_ joined channel
+14:48: lh_mouse quit:Ping timeout: 245 seconds
+14:48: lh_mouse joined channel
+14:49: lh_mouse: marisa_, 入碗！
+14:50: uuair joined channel
+14:51: marisa_: 丫达！
+14:52: marisa_: 今天的bug更奇葩了，抓不完我入什么碗
+14:53: lh_mouse: marisa_, 快到碗里来
+15:00: uuair quit:Ping timeout: 240 seconds
+15:01: uuair joined channel
+15:05: GODDOG joined channel
+15:05: hope1 joined channel
+15:06: hope1: https://github.com/justjavac/Googls-IPs
+15:06: GODDOG: 看不下去书
+15:09: uuair_ joined channel
+15:09: lh_mouse: 404
+15:11: marisa_: 这里也打不开
+15:11: hope1: https://github.com/justjavac/Google-IPs
+15:11: T3rm1n4t0r_: https://github.com/justjavac
+15:11: uuair quit:Ping timeout: 264 seconds
+15:13: uuair_ quit:Read error: Connection reset by peer
+15:19: xxxxxxxxx joined channel
+15:25: sismvg: maris_:快到我的碗里来，这里有有一大堆毛毛虫
+15:26: sismvg: google:我静态IP的数量比你的工资都多
+15:26: windforce joined channel
+15:35: windforce: rebooting
+15:35: windforce quit:Quit: Leaving
+15:37: windforce joined channel
+15:39: sismvg: 上个月欠了公司100.。。
+15:40: windforce: = =
+15:40: sismvg: 三险一金太坑爹
+15:40: sismvg: 还是不交了
+15:40: windforce: = =
+15:42: condy quit:Ping timeout: 272 seconds
+15:55: marisa_ quit:Ping timeout: 240 seconds
+16:06: kassol joined channel
+16:17: xia quit:Quit: ChatZilla 0.9.90.1 [Firefox 30.0/20140605174243]
+16:36: Zirx: ...面了几家都是等通知
+16:36: varna joined channel
+16:36: varna: 啊，有药娘
+16:36: Zirx: 驼！
+16:37: Zirx: Go如何？有家创业的说要我去学这个，然后学习期间每月开2k，之后另谈
+16:38: Zirx: 似乎是搞云主机的
+16:38: varna: Go不好
+16:38: varna: 我不觉得这是个有前景的语言，而且2k你真的打算去么……
+16:38: tsuki joined channel
+16:39: * varna 掏出一个肝脏接上
+16:39: Zirx: 看起来像是C版的Erlang
+16:39: varna: 差远了
+16:39: varna: 是C版的Java
+16:40: tsuki: c版的二郎就好了...
+16:40: GODDOG: 屌
+16:41: tsuki: 学习还给钱多好
+16:41: varna: 就是实习生啊
+16:41: varna: 求不天真……
+16:41: Zirx: 还有家面试居然最后都问到了epoll和select区别和地址空间的结构。。
+16:41: tsuki: 也就是还要工作？
+16:41: varna: 难道白养你么
+16:42: tsuki: .....
+16:42: varna: Zirx: 很简单啊
+16:42: sismvg: http://www.bilibili.tv/video/av917933/
+16:42: Zirx: 他说是招不到Go的，所以愿意培养一两个
+16:42: sismvg: 人兽大丧失
+16:42: varna: Go本来就不怎么样
+16:42: tsuki: 我以为你找地方去学，他们就月月给你钱呢....
+16:43: varna: 你会这么开公司么……
+16:43: Zirx: SAX和DOM区别，，
+16:43: varna: 也很简单啊……
+16:44: Zirx: 知道倒是知道。。感觉对于应届偏高？
+16:44: varna: 应届八成都是渣，不要向下看齐
+16:44: tsuki: +
+16:45: GODDOG: 现在最火的不是swift么
+16:45: sismvg: 攒点战斗力去MS或者TX
+16:45: tsuki: 一群ee系分不清c和c艹的货
+16:45: Zirx: 可我面的职位似乎是Android。。。
+16:46: sismvg: tsuki：同意。。
+16:46: varna: GODDOG: 苹果什么时候真把一个语言搞火过
+16:46: sismvg: 一群用着C++不知道RAII的家伙
+16:46: GODDOG: varna 好吧 我默默没说话
+16:46: varna: 如果swift不像c艹，那么它还是个苹果奇葩；如果它像c艹，我们为什么不用c艹呢
+16:46: varna: 优势是它底下有llvm, 但llvm不是.net
+16:47: sismvg: 因为I
+16:47: Zirx: 现在新语言都流行像SQL类型后置么
+16:47: varna: 那是像Pascal...
+16:48: Zirx: 。。没学过Pascal
+16:48: sismvg: 话说我工作前2年就几乎没用过静态数组了。。
+16:48: sismvg: 现在天天用，到处char balbal[num】
+16:52: xxxxxxxxx: 上次还看到一帮果粉议论苹果的那个语言搞火了其他平台怎么办....
+16:52: sismvg: 遗传算法进化了半天几乎没效果。。
+16:52: Zirx quit:Read error: Connection reset by peer
+16:53: varna: xxxxxxxxx: 23333
+16:53: Zirx joined channel
+16:53: tsuki: 23333
+16:53: Zirx: 那时候肯定有人把Swift弄成JVM语言
+16:53: varna: 其他平台把他们爆了啊
+16:54: tsuki: 我想说，再不发布新鲜东西，过几年苹果就成其他平台了
+16:54: sismvg: 找个论文都找不到。。
+16:55: sismvg: 百度找到的不要要钱就是要注册，要么就是汊
+16:55: tsuki: 惠普实验室正在研发一种全新架构的计算机，它被称为“The Machine”。The Machine运行不同的操作系统，不同类型的内存，拥有极快的数据传输能力。惠普计划未来几年将The Machine推向市场。The Machine在两年前开始成形，它的核心部分是使用名叫忆阻器的内存，以及用光而不是铜线传输数据的硅光技术。忆阻器（memristor）是一种具有记�
+16:55: tsuki: 新构架来了
+16:55: sismvg: 谷歌雅虎上不去，bing 只能相信他了
+16:55: varna: 论文别信bing
+16:56: varna: 去IEEE/ACM/ScienceDirect搜吧
+16:56: tsuki: bing没法用
+16:56: sismvg: 和百度一个样
+16:56: tsuki: google scholar也上不去？
+16:56: sismvg: 你认为可能？
+16:57: Zirx: imouto.host项目
+16:57: tsuki: 为什么不可能...
+16:57: sismvg: 但是我还是上不去..
+16:57: tsuki: 如果我是主席，想维稳时根本用不着屏蔽scholar，只有想愚民时才用
+16:58: GODDOG: 我在看 忆阻器的论文
+16:58: GODDOG: 真的不错
+16:58: xxxxxxxxx: 如果我是主席 这些细节上的问题我就说他们都是愚蠢的问题
+16:58: sismvg: dijkstra算法可以用作A*的启发式吗
+17:00: tsuki: 对了，这几天知道的一个帝都的超级神奇的规定，私房不许买卖，如果买卖需要办理一个叫土地证的东西，办理费用是一平米3k，然后办理完了平房的地就不归你了，就变成70年使用权了
+17:00: tsuki: 这些才是重要的问题，钓鱼岛之类的才是细节
+17:00: varna: tsuki: 啊？我国不一直都是土地使用权么
+17:01: xxxxxxxxx: tsuki: google的产品到底有哪些是细节 墙google才是重点
+17:01: varna: GODDOG: 里面有什么好玩的么
+17:01: tsuki: 可是地我们买下来了，有gcd发的地契
+17:02: varna: 哦，又土改了……
+17:02: GODDOG: varna 现在是用二氧化钛在纳米级做的吧
+17:02: varna: GODDOG: 这个工艺以前有人做过么？
+17:02: varna: 硬件工艺我一窍不通……
+17:02: tsuki: 现在说地契承认，这地就是你的，可是不许买卖，想买卖地就归我了，你还要交几十万
+17:02: GODDOG: varna 首先忆阻器是在电路理论上推导出来的
+17:03: varna: 怎么推的，能看懂否
+17:03: GODDOG: varna 用什么材料 什么工艺做出来 还在探索极端 惠普只是走在了探索的前端
+17:03: varna: tsuki: 所以说是土改……
+17:03: tsuki: 从电路上推倒的？
+17:03: GODDOG: varna 来个邮箱我发你一片简单点的论文？
+17:04: varna: GODDOG: 我的意思是论文里怎么推的，你能科普下么……
+17:04: tsuki: 土改不得全国级别吗... 帝都怎么自己做..
+17:04: varna: 电路之类的东西看论文我也是目害
+17:04: endle joined channel
+17:04: tsuki: GODDOG: 我要论文，  yj@kth.se ，多谢
+17:05: varna: YJ
+17:05: Zirx: se
+17:05: GODDOG: tsuki 在nature上游的 免费下载
+17:05: varna: 虽然知道是Yue Jiao但怎么都看着像Yin Jing
+17:05: tsuki: 瑜伽火焰!
+17:05: tsuki: ........
+17:06: GODDOG: tsuki memristor
+17:07: GODDOG: tsuki 已发
+17:07: xxxxxxxxx: 月经?
+17:07: GODDOG: QQ邮箱
+17:07: tsuki: 多谢
+17:07: varna: sismvg: A*的启发式用dijk不是太慢了么
+17:08: GODDOG: tsuki 我发了新的给你 我自己那份被窝涂鸦的不成样子了
+17:08: tsuki: 涂鸦了很多h漫吗
+17:08: varna: GODDOG: 阁下学电子的？
+17:08: GODDOG: tsuki 额
+17:08: tsuki: 难道是bl漫
+17:08: GODDOG: varna 我还是学生 电子信息专业的
+17:09: varna: 果然是电子
+17:09: GODDOG: tsuki 本人英文不好 加了很多翻译
+17:09: tsuki: 翻译的欧美BL漫？太重口了
+17:10: GODDOG: 额
+17:10: Zirx: 杭州电子科技大学
+17:10: tsuki: ee好评
+17:10: GODDOG: tsuki 你在这里有了黑我的资本
+17:10: GODDOG: HDU
+17:10: varna: 欧美BL?
+17:10: varna: 不如看摔 跤
+17:11: GODDOG: 你们查host就能知道我在哪里是吧
+17:11: tsuki: 老年版的batman和幼版的robin
+17:11: xxxxxxxxx: YJ 难道是幼交
+17:11: GODDOG: 额
+17:11: GODDOG: 人皇比利
+17:11: varna: GODDOG: 我是DARK 信徒，不信比利
+17:12: varna: 岚月酱变成月经酱如何
+17:12: GODDOG: varna 阁下 是什么方向？
+17:12: tsuki: 果然是喜欢摔 跤之人，药娘团来新人了
+17:12: xxxxxxxxx: 丧失向
+17:12: tsuki: 不要，宁可瑜伽酱
+17:12: varna: GODDOG: 肝脏移植
+17:12: varna: tsuki: 幼教酱？
+17:12: tsuki: 也好
+17:13: varna: 频道Lambda-幼女教导团首席早熟幼女·岚月酱
+17:13: tsuki: 噗
+17:13: GODDOG: tsuki 如何通过host知道 对方在什么地方啊？
+17:13: tsuki: 查ip？
+17:13: GODDOG: varna 吉大？
+17:15: varna: +
+17:15: GODDOG: 额
+17:15: varna: 以前是撸管方向，最近为了早日过上幸福的二人生活转了肝脏移植方向
+17:16: GODDOG: 哦
+17:16: varna: 换了肝之后战斗力就是不一样，3-4一趟过
+17:16: tsuki: 备受好评的回合制策略游戏《文明V（Sid Meier's Civilization® V）》正式推出了Linux版本。虽然官方声明Linux版本是针对Valve的SteamOS，支持尚未发布的Steam手柄，但在其它Linux发行版如Ubuntu上它也能正常运行。《文明V》列出的Linux版硬件需求包括：处理器英特尔Core i3或AMD A10，内存4GB，可用硬盘空间10GB，显卡至少是Radeon HD 6450或Geforce 640M或
+17:16: GODDOG: 额
+17:17: varna: 虽说这些大胃王合计吃掉我一千燃一千几百钢还有五百多弹药……
+17:17: hope1: 重点是驱动啊
+17:17: * varna 击杀一个蚊子
+17:18: hope1: P社的都有原生linux版，但还是没法玩…
+17:18: GODDOG: varna first blood
+17:18: tsuki: 等等看看出不出下载
+17:18: hope1: 可能是我的显卡比较奇葩
+17:18: tsuki: 海棠换本子吧...
+17:18: varna: 三倍速辉针城……
+17:19: hope1: 三倍速应该是wine的问题吧？
+17:20: varna: 基本是显卡驱动
+17:20: varna: th的帧率受本地显卡驱动影响严重
+17:20: GODDOG quit:Quit: /quit
+17:22: tsuki: @worinibaba：预备唱；谁娶了多愁善感的你，谁TM倒霉到底......那时的天空还很蓝，你总爱生吃大蒜......你总说毕业遥遥无期，谁让你挂科留级！我也是偶尔翻照片，才想起逗比的你。
+17:23: varna: 2333
+17:25: tsuki: NVIDIA发布了它的旗舰双卡显卡GeForce GTX TITAN Z，号称是世界最快的显卡，售价2999美元。而AMD也发布了它的旗舰交火显卡R9 295X2，售价1499美元。Pcper测试了两款显卡的游戏性能，结果发现GeForce GTX TITAN Z价高性能低。在2560x1440 和3840x2160(4K)测试项目中，R9 295X2提供了更高和更一致的帧速，有时候其优势甚至高达30%。而GeForce GTX TITAN Z的优�
+17:25: tsuki: 美国联邦第二巡回上诉法院作出裁决（PDF），美国大学及Google有权利不经过作者同意扫描图书馆的藏书，认为他们扫描数字化图书的行为受到了合理使用原则的保护。美国作家协会及其它作家组织指控13所大学未经作者授权扫描了超过千万册图书，其中多所大学是HathiTrust数字图书馆项目成员，HathiTrust数字图书馆的目的是保存文化�
+17:26: Zirx: 就我一个人在看乱码？
+17:27: tsuki: 6月10日，人民日报发表评论文章就网络上盛行的“拼爹论”、“阶层固化论”、“就业不公论”提出不同看法，文章认为：大学生一说就业，先盘点所谓现实条件：爹不是执行官、妈不是董事长、学校不是清华北大；然后背一大串名词，什么“上升通道狭窄”“拼脸时代”“阶层固化”；最后发一声感慨：不公啊……到底是起跑线
+17:27: varna: 不乱码但截断了
+17:27: tsuki: 应该不是就你一个
+17:27: varna: 阶层固化难道不是么
+17:28: varna: 至于拼脸，我就说我四发大建毛都不出，那珂率15/22, 3-2被坑四天
+17:28: varna: 这不是拼脸难道还是拼肝么！
+17:28: xxxxxxxxx: 拼屌拼比?
+17:29: varna: 拼屌没用，拼逼有前途
+17:29: windforce: 我了个大擦
+17:29: windforce: 明明没死锁为毛读不出东西？
+17:30: lh_mouse: sismvg, 实际上我还是主要用 C 数组   原因有两个   第一是柔型数组（g++ 扩展）没法用原生的实现   第二是省键盘
+17:30: kassol left channel:
+17:31: lh_mouse: varna, 前天我想给你看个东西来着 结果你没上
+17:31: hope1: 考场竟然没钟
+17:31: varna: lh_mouse: 我在换肝。那是什么东西？
+17:31: varna: hope1: 正常，自己带个机械表
+17:31: lh_mouse: varna, 忘了……
+17:32: tsuki: 拼屌不如屌边放几万
+17:32: varna: 想起来再说吧……
+17:32: lh_mouse: 啊
+17:32: lh_mouse: varna, 这个 http://codepad.org/e3lDxuqO
+17:32: varna: 啊，这个
+17:33: varna: 最后还是造了case, 不过挺好看的
+17:33: varna: 存下来
+17:34: windforce: https://pastebin.mozilla.org/5395788 发送线程结束了，读函数也返回了，就差个printf结果就是不出来。
+17:35: varna: lmss...
+17:36: varna: windforce: #498走不到么？
+17:37: lh_mouse: varna, 如何最快地产生一个不在 BST 里的元素？
+17:39: windforce: varna, 改了一通宵+一白天，各种就差一个Hello world 走不出来。
+17:39: xxxxxxxxx: http://news.ifeng.com/taiwan/news/detail_2010_07/13/1764495_0.shtml <- 老物
+17:40: varna: lh_mouse: BST的键任意么
+17:40: varna: windforce: recv里self->io.mq_size不变么
+17:41: windforce: varna, 变的。
+17:41: lh_mouse: varna, 打个比方说生成 0-9 的随机数  BST 里有 0 1 2 4 5 7 8 9    如何生成 3 或者 6
+17:42: lh_mouse: 问题就是如何快速找到一个元素不存在于 BST 中的元素
+17:42: varna: lh_mouse: 如果是整数键我会试着左右先序，对每个手头的根，假设键=k, 2logN时间发现BST上下界（只做一次），然后左右二分
+17:43: varna: 每次二分的时候取期望值v分别为k和上界/下界的中值之后递归检查
+17:43: varna: windforce: 那怎么取不出来，失败例里recv是怎么走的
+17:44: xxxxxxxxx: http://www.bilibili.tv/video/av1193710/  <- 毛骨悚然撞鬼经NO.25
+17:45: windforce: varna, 我跟一下看。
+17:45: varna: windforce: 多线程未必好跟，打log吧
+17:45: varna: 跟了现象容易不真实
+17:46: windforce: 居然能显示出fooread write 
+17:46: Zirx: 对了，，，如果有一堆现成，GDB怎么调。。
+17:46: Zirx: 线程
+17:46: varna: 不推荐gdb调，我以前试过，竞态容易出不来……
+17:46: windforce: 居然能显示出两个 foo read write child exit 
+17:46: windforce: 但是就是不打印。
+17:47: windforce: 简直奇葩，再调一下试试。
+17:47: windforce: 流和包分开测应该会好点
+17:48: varna: 我就好奇你recv走到什么地方会回个失败
+17:48: condy joined channel
+17:49: varna: 还是说你发端和收端有一个把别人堵住了
+17:50: lh_mouse: gdb 渣渣
+17:50: varna: 这点我不反对
+17:50: lh_mouse: 升级 mingw-w64 之后 mcf 编译出来拿 gdb 开 gdb 直接挂了
+17:50: varna: 噗
+17:50: windforce: 噗 我懂了。
+17:51: lh_mouse: 所以 gdb 就一个渣
+17:51: varna: 不过我这里没挂啊
+17:51: varna: 估计是MinGW渣了
+17:51: lh_mouse: varna, reading symbols 然后 seg fault
+17:52: varna: 你的gdb带调试符号么？带的话我没法复现
+17:52: lh_mouse: 带
+17:52: windforce: 好吧不是，那我就不懂了。
+17:52: varna: 我的不带所以没法说了，懒得编译一个
+17:52: lh_mouse: 话说  怎么用 objdump 查一个地址的符号？
+17:53: lh_mouse: gdb 啊   没有符号的
+17:53: lh_mouse: 我以为你问我那个程序
+17:53: varna: 哦，那是mingw渣了
+17:53: lh_mouse: varna, 能用 objdump 查一个地址的符号么？
+17:53: lh_mouse: 调试器比 gdb 好用的有的是  关键是符号不知道
+17:53: varna: lh_mouse: objdump出符号表之后手工grep吧
+17:54: windforce: 我用一个线程自己给自己发试试。
+18:00: windforce: https://pastebin.mozilla.org/5395884 https://pastebin.mozilla.org/5395892 https://pastebin.mozilla.org/5395893 
+18:00: windforce: 先这样吧，补一觉。
+18:00: windforce: 眼睛睁不开了卧槽
+18:01: varna: 解决了？
+18:01: windforce: 没。
+18:01: varna: 之前猜想的问题在哪
+18:01: windforce: 困，昨晚上到现在就没睡。
+18:01: varna: 习惯就好了
+18:02: windforce: 似乎recv会死循环
+18:02: varna: ...
+18:02: windforce: read能返回但是读不出东西。
+18:02: windforce: recv也返回过但是仍然死循环我就奇怪了。
+18:02: windforce: 我弄一个线程自己跟自己发试试。
+18:03: varna: windforce: success是0
+18:03: windforce: 对的。
+18:03: varna: #12 static enum { SUCCESS, FAILURE } ret_val;
+18:03: windforce: 嗯
+18:03: varna: while (xxx(yyy) == 0) ?
+18:03: varna: 哦看错了
+18:03: windforce: 所以直接 while(xxx); 失败就继续。
+18:03: varna: 那个是read...
+18:04: varna: 在失败分支上下个断点看吧
+18:04: windforce: 嗯
+18:07: hope1: 又开始打盗版了？剑网2014
+18:08: varna: 怎么搞的
+18:08: varna: 另外剑网不是大龄青年交友网游么
+18:08: windforce: 似乎是测试代码的问题。
+18:08: xxxxxxxxx: 中新网北京6月12日电 (记者 孙自法)中国国家版权局、国家互联网信息办公室、工业和信息化部、公安部12日在北京联合启动“剑网2014”专项行动，旨在进一步加强网络版权执法监管工作，打击网络侵权盗版，依法治理网络空间，净化网络版权环境。
+18:09: xxxxxxxxx: 管的真宽
+18:09: windforce: 好吧不是。
+18:09: windforce: 同一个线程也会死。
+18:13: windforce: 这个太叼了。
+18:14: windforce: 我去睡一会，脑袋不能用了。
+18:15: windforce quit:Quit: Leaving
+18:20: varna: 以后google只好一直代理了
+18:22: FrankHB joined channel
+18:26: xxxxxxxxx: 为啥不恢复.... 不开心
+18:27: tsuki: 如果只Google的话我可以搭一个vpn
+18:29: Zirx quit:Ping timeout: 244 seconds
+18:32: tsuki: 赶明看看怎么弄
+18:32: lh_mouse: 谷狗间歇性抽风
+18:32: lh_mouse: varna, 我貌似发现谷狗页面不自动刷新的原因了
+18:35: lh_mouse: 谷狗的链接是这样的  https://www.google.com.hk/#newwindow=1&q=test&safe=strict
+18:35: boosure quit:Ping timeout: 276 seconds
+18:35: lh_mouse: 但是有的浏览器认为 #后面是书签不影响页面内容   于是就不重新加载了
+18:35: candy76041820 joined channel
+18:35: candy76041820: ぱんぱかぱーん
+18:43: candy76041820: 育碧：我们的远哭 4 即使只有一个人有游戏也能 COOP！
+18:45: varna: 喔喔喔喔
+18:45: varna: Hyper北上大人假摔抗议，入渠一小时
+18:47: silencly07 quit:Quit: Leaving.
+18:47: varna: http://tieba.baidu.com/p/3100878848 # 参考：《尸鬼》中的主要角色之一名为夏野
+18:47: FrankHB quit:Quit: Konversation terminated!
+18:48: candy76041802 joined channel
+18:49: candy76041820 quit:Ping timeout: 246 seconds
+18:57: sismvg quit:Read error: Connection reset by peer
+19:00: varna: KFC新款的牛揉汉堡不错
+19:12: marisa_ joined channel
+19:12: varna: marisa_: 爆
+19:12: marisa_: sismvg: 我根本没有IP啊，所有网站的IP量都比我多吧
+19:12: marisa_: 不要这样了，你们这些hentai！
+19:13: marisa_: 老是欺负我QAQ
+19:13: varna: 快抬尻
+19:14: GODDOG joined channel
+19:17: Zirconi joined channel
+19:17: candy76041802: 爆。
+19:17: varna: 既然今天过了3-4就可以悠闲点了，肝一下POI
+19:18: candy76041802: 你那还好。我这破游戏换了 N 个破解补丁才跑起来。
+19:18: varna: 然后准备准备把摩耶和高雄练上去
+19:18: varna: 游戏怎么样
+19:19: candy76041802: 刚调到个能流畅跑的设置。果然 CryEngine 就是让人 cry 的。
+19:20: marisa_: 什么yoo戏DAZE
+19:21: candy76041802: 靠，动鼠标都有动态模糊而且不能关，果然是 CryEngine。
+19:21: varna: marisa_: ZE?
+19:21: marisa_: 怎么了？
+19:21: varna: 噗，有个哥们封港一周用呜十铃召唤了打伞大姐姐……
+19:21: varna: 提督Lv51
+19:22: xxxxxxxxx: 楼上的家伙好像把一坨东西掉到楼下了 听上去像纸板之类的  然后底下的伙计和他们已经吵了20多分钟了
+19:22: endle: varna, POI？什么东西？
+19:22: varna: 我现在Lv53，是不是该上双大召唤腋凤了……
+19:22: candy76041802: 居然还有收集要素……
+19:23: varna: endle: 舰娘
+19:23: varna: xxxxxxxxx: 居然不是热翔
+19:23: endle: 擦。。。我以为是波兰的OI竞赛
+19:23: candy76041802: 啊，跑过去一个鼠辈。
+19:24: ZzHiyori joined channel
+19:24: varna: endle: 我已退役五年
+19:25: endle: 我也早已退役
+19:27: varna: http://tieba.baidu.com/p/3100292592 # 联邦的新人都是怪物吗！
+19:28: candy76041802: 靠。
+19:29: marisa_: "Why do elephants paint their balls red?"
+19:29: marisa_: "So they can hide in cherry trees"
+19:29: marisa_: With the follow-up of
+19:29: marisa_: "What is the loudest noise in the jungle?"
+19:29: marisa_: "A giraffe eating cherries"
+19:29: marisa_: 2333
+19:29: varna: 23333
+19:29: varna: marisa_: 爆
+19:29: xxxxxxxxx: 擦 绕着楼吵了几圈了
+19:30: varna: xxxxxxxxx: 爆
+19:30: xxxxxxxxx: 好像南边北边都有人在吵......
+19:31: marisa_: 南北战争（大雾
+19:31: varna: 豆腐脑是咸的
+19:31: marisa_: 不吃无压力
+19:31: marisa_: 但基本上不吃甜食
+19:32: varna: marisa_: 爆
+19:34: xxxxxxxxx: 好像停下来了 据说叫警察了....
+19:34: varna: 说起来今天洗个澡之后3-4就一趟过了，难道洗脸已经救不了非提，只能洗澡么
+19:34: varna: 233333
+19:34: varna: hope1`: 我没吃过豆花……
+19:35: candy76041802: 第一关我就没潜入成功。难道我潜入上头了？
+19:35: varna: 之前某天晚上我还看两个车擦了，一群兄贵在路口吵架
+19:35: varna: candy76041802: 来玩MGS, 你可以在潜入时毙敌四百人
+19:35: varna: hope1`: 原来是叫法不同啊
+19:36: varna: 豆腐脑加辣没问题，不过主辣的话我吃不了
+19:36: varna: 哦，那就不是
+19:36: candy76041802: 靠，爷们时间瞄准也给我爷们。
+19:36: varna: 豆腐脑是泡在汤里的揉软豆腐
+19:37: varna: 蘸酱我只吃过一般的豆腐
+19:37: randomclown quit:Ping timeout: 240 seconds
+19:40: varna: candy76041802: 都有什么枪的
+19:41: candy76041802: 主角美国人，手头一把 M1911，可拿 MP40、Kar98k，还一把机枪我当 M14 用了。
+19:41: condy1 joined channel
+19:42: varna: 果断Kar98k
+19:42: varna: 然后挖个坑跳进去打
+19:42: varna: 打的时候不断发出\阁下/的声音
+19:43: candy76041820: 开始时候从 MP40 和 Kar98k 里选一个，我选的 Kar98k，然后端起机枪潜（夕）入（立）。
+19:43: varna: 长枪CQC!
+19:43: candy76041820: Breaching breaching！
+19:44: candy76041820: 靠，瞄准不能……
+19:44: varna: 2333
+19:44: varna: 暂停撸三炮你就瞄得中了
+19:44: varna: 噗噗噗噗，麦克音量大丈夫……
+19:44: candy76041820: 读档，从上一个 breaching 开始。掏出 M1911 干掉两个再换子弹干掉一个。
+19:45: candy76041820: Wz.28？这啥机枪？
+19:46: Sleepwalking joined channel
+19:46: varna: Sleepwalking: 爆
+19:46: Sleepwalking: 天呐
+19:46: Sleepwalking: C酱发我一张图
+19:46: Sleepwalking: 照片上她在用LaTeX！
+19:46: varna: 有了？
+19:46: varna: 噗，又不是早早孕试纸，惊讶什么
+19:46: Sleepwalking: C酱终于入教了！
+19:46: Sleepwalking: LoL
+19:47: xxxxxxxxx: 橡胶棒摩擦
+19:47: Sleepwalking: 话说这里有人熟mingw的吗
+19:47: varna: Sleepwalking: 小耗
+19:47: Sleepwalking: lh_mouse, 在？
+19:47: varna: hope1`: 我猜这个题得弄点整除
+19:47: candy76041820: 你说你们一帮元首国人跟我一美国人喊 here they come？
+19:47: Sleepwalking: 我移植Rocaloid遇到些问题
+19:47: tsuki: 什么？c酱在和照片啪啪啪而且有了？
+19:48: xxxxxxxxx: 帝球是不是也用?
+19:48: varna: candy76041820: 喊安拉胡阿克巴
+19:48: candy76041820: Breaching breaching!!
+19:48: Sleepwalking: 帝球似乎没看到我在节操群的提问
+19:48: candy76041820: 鞭尸泄愤。
+19:48: varna: hope1`: 首先左侧三项里至少得有一个整除13
+19:48: xxxxxxxxx: 先问帝球今天穿没穿胖次
+19:49: varna: hope1`: 然后2x + 1不整除x, 同理轮转
+19:49: xxxxxxxxx: 炸上来再谈正题
+19:50: candy76041820: 还行，每个新子场景所有新刷出敌人在小地图上都有显示。
+19:50: varna: hope1`: 我的话会试着分别假设左侧三项整除y z x然后排列
+19:50: candy76041820: 这似乎还有把斯登？
+19:51: varna: 斯登太难看，扔
+19:51: candy76041820: 反正我把 Kar98k 换了 G43。
+19:51: varna: Kar98k多好
+19:52: candy76041820: 我有机枪！
+19:52: varna: 你们这些自以为掌控了战场的丘八啊
+19:52: xxxxxxxxx: 怎么又开始吵了...
+19:52: varna: ...
+19:53: candy76041820: 场景里架的 MG42 抓起来打了两枪，居然有子弹数限制。也不知道是打完无限换还是总量有限。
+19:53: varna: 噗
+19:53: varna: 元首那个伞兵款的姬枪是什么来着
+19:53: candy76041820: FG42。
+19:54: varna: poi
+19:54: tsuki: hope1: 试都能试出来
+19:54: varna: 就按上面的剪枝条件试吧……
+19:54: marisa_: http://www.bilibili.tv/video/av362830/# 2333
+19:54: candy76041820: 有个声响系统，只要天上有轰炸机飞过引擎声就能把枪声盖住。
+19:54: tsuki: 左边打开除xyz
+19:54: varna: 噗
+19:54: candy76041820: 还能搬走死人尸体。
+19:54: lhanjian joined channel
+19:54: varna: 我看到了MOer的bloody
+19:55: varna: candy76041820: 可以吃么
+19:55: tsuki: 老红军复活了
+19:55: candy76041820: 可以扔。
+19:55: lhanjian: varna, 下个有3个课时（48节课）必选，我应该选操作系统还是编译原理？
+19:55: lhanjian: 下个学期
+19:56: candy76041820: 啊，唱片留声机可以逗。
+19:56: GODDOG: lhanjian 还在选课？
+19:56: GODDOG: lhanjian 问问你挂了没？
+19:56: varna: lhanjian: 哪个容易考选哪个，这两个都得你自己动手
+19:56: varna: 所以选哪个上课都没意义
+19:56: candy76041820: 按 T 扔石头以吸引敌军注意。——我要手榴弹啊！
+19:56: lhanjian: varna, 
+19:56: lhanjian: varna, Soga
+19:57: lhanjian: GODDOG,不知道，又没考完出结构
+19:57: varna: 如果我个人推荐的话，觉得编译好考些
+19:57: candy76041820: 嘿，第一关收集完成。
+19:57: varna: poi
+19:57: GODDOG: lhanjian 问问你老是就好了
+19:57: GODDOG: lhanjian 发个短信过去
+19:57: lhanjian: varna, soga。都是公选课级别的，考试都很容易的。只是看课程内容，似乎都还值得听一下。
+19:57: Zirconi: 面试说是等通知，，估计希望不大
+19:58: lhanjian: GODDOG, 今天才考完数电，哪里这么快。
+19:58: Zirconi: 安天实验室
+19:58: varna: lhanjian: 名字都值得，内容都不值得，说是公选一律不值得
+19:58: tsuki: hope1: 试
+19:58: lhanjian: varna, soga
+19:58: varna: 比如取x=6
+19:58: GODDOG: lhanjian 你今晚考数电啊
+19:58: lhanjian: GODDOG, 上午
+19:58: GODDOG: lhanjian 哦 你是通信 差点忘了
+19:58: tsuki: 从z开始试
+19:58: GODDOG: lhanjian 对了 你是 通信么？
+19:58: lhanjian: GODDOG, 嗯
+19:59: varna: lhanjian: 爆
+19:59: lhanjian: varna, 你太迟啦23333
+19:59: varna: Sleepwalking: 对了，你之前给我推荐那个乐天派的小苹果是药娘么
+19:59: varna: lhanjian: 难道你的处男膜已经破了！
+20:00: lhanjian: varna, 呸呸呸
+20:00: tsuki: 现充烧
+20:00: xxxxxxxxx: .....
+20:01: varna: Hyper北上大人擦伤入渠二十分钟，Lv63大傻擦伤入渠一小时二十分钟
+20:01: varna: 北上大人麻吉天使！
+20:01: Zirconi: 。。。
+20:02: varna: lhanjian: 啊原来没破啊
+20:03: Youmu: geordi: {for(int x=0;x<=N;++x)for(int y=x;y<=N;++y)for(int z=y;z<=N;++z)if((2*x+1)*(2*y+1)*(2*z+1)==13*x*y*z)cout<<x,y,z<< " ";} #define N 1000
+20:03: geordi: error: invalid operands of types 'int' and 'const char [2]' to binary 'operator<<'
+20:03: tsuki: hope1: z大等于于3不可能，为1和2时很好算
+20:03: varna: candy76041820: 噗，川内要实装二改了
+20:03: Youmu: geordi: {const int N=100;for(int x=0;x<=N;++x)for(int y=x;y<=N;++y)for(int z=y;z<=N;++z)if((2*x+1)*(2*y+1)*(2*z+1)==13*x*y*z)cout<<x,y,z<< " ";} 
+20:03: geordi: Same error.
+20:03: varna: candy76041820: 可能还有欠雷和绫波之一（猜想是绫波）
+20:04: Youmu: geordi: {const int N=100;for(int x=0;x<=N;++x)for(int y=x;y<=N;++y)for(int z=y;z<=N;++z) if((2*x+1)*(2*y+1)*(2*z+1)==13*x*y*z) cout<<x,y,z;} 
+20:04: geordi: 1, 7, 451, 9, 19
+20:04: Youmu: geordi: {const int N=100;for(int x=0;x<=N;++x)for(int y=x;y<=N;++y)for(int z=y;z<=N;++z) if((2*x+1)*(2*y+1)*(2*z+1)==13*x*y*z) {cout<<x,y,z;cout<<" ";}} 
+20:04: geordi: 1, 7, 45 1, 9, 19 
+20:05: lhanjian: 继续复（突）习（击）去
+20:06: varna: lhanjian: 把尻留下
+20:07: GODDOG: varna 我有他准确位置
+20:07: tsuki: hope1: 打开后除了xyz后右边是整数，左边是整数乘小数的和，大于三比右边小
+20:07: candy76041820: 哦，居然还有肉搏反杀系统。你一个工兵铲干不过我枪托子不说还让我抢了铲子拍死？会玩不？
+20:07: candy76041820: 元首怎么教你的。
+20:08: silencly07 joined channel
+20:08: iyzsong joined channel
+20:08: varna: GODDOG: 请务必代表我突入他的尻部
+20:09: candy76041820: 定时炸弹的时间可以自己选。不错。
+20:09: GODDOG: varna 把你屌邮件发我  lol
+20:09: varna: GODDOG: 代表，不是带屌
+20:09: GODDOG: varna 好吧 。。。。
+20:09: varna: 比如「电酱代表提督出席了作战会议」，这会议跟提督的器官毫无关系
+20:10: candy76041820: 电先把提督爆到生活不能自理来着。
+20:10: varna: 扶她出去！
+20:10: varna: 1nya
+20:10: varna: 2nya
+20:11: candy76041820: Fire in the hole!
+20:11: GODDOG: varna 233
+20:11: candy76041820: 乌拉！
+20:11: varna: 鱼雷装填desu!
+20:12: varna: ……晓酱带回弹药若干，水桶一个，猫头两只
+20:13: ZzHiyori quit:Ping timeout: 264 seconds
+20:13: ZzHiyori joined channel
+20:14: varna: candy76041820: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=53f5822d08d162d985ee621421e4abec/0d338744ebf81a4c00f22020d52a6059242da613.jpg
+20:14: candy76041820: 冲锋机枪手。
+20:15: varna: AKS74U最高！乌拉！
+20:16: * varna 从裤裆里掏出了一套皮轨
+20:16: lh_mouse: marisa_, 入碗！
+20:18: varna: 我叫你一声同志你敢答应么 http://imgsrc.baidu.com/forum/w%3D580/sign=a13cc1ec950a304e5222a0f2e1c9a7c3/39dbb6fd5266d01655072bc0952bd40735fa353f.jpg
+20:19: varna: 九五式流毒不死…… http://imgsrc.baidu.com/forum/w%3D580/sign=8a89a06c48ed2e73fce98624b703a16d/3d6d55fbb2fb4316d1d1359222a4462308f7d308.jpg
+20:21: tsuki: 做出来了？
+20:21: hope1 quit:Ping timeout: 272 seconds
+20:21: candy76041820: 用望远镜标记了两个敌兵，Kar98k 点了一个，另一个打歪了，掏出 M1911 一枪。
+20:21: xxxxxxxxx: http://www.bilibili.tv/video/av1193558/
+20:22: tsuki: ...把设成1做
+20:22: tsuki: z
+20:22: hope1 joined channel
+20:26: varna: z=1, 2z+1=3, 3(2x+1)(2y+1) = 13xy, 2x+1=13k, 3k(2y+1) = 13xy, 2y+1整除x, 开始取k
+20:26: candy76041820: 哦，MG42 果然是弹药总量有限，就枪上那两百多发。不过竟然要换枪管。
+20:26: varna: 噗
+20:26: varna: 3k(2y+1)=xy
+20:28: varna: 岚月酱前面说的来着
+20:28: tsuki: 你先能做出这种情况再考虑为什么是1...
+20:28: candy76041820: 切，出个门结果屋外那五个让我打死的又刷出来了。
+20:28: varna: 23333
+20:28: varna: candy76041820: 德意志科技力
+20:29: candy76041820: 旁边放了一箱苹果，贴图是平的……
+20:29: varna: 给来一箱蜜柑
+20:32: GODDOG quit:Ping timeout: 244 seconds
+20:34: tsuki: 出门
+20:36: candy76041820: 哦，换了一把散弹一把 Kar98k 狙击镜。
+20:36: varna: 散弹不好玩
+20:36: varna: 霰弹
+20:41: varna: 试到不靠谱为止
+20:42: Youmu: hope1`: x = (6*y+1)/(y-6) --> x=6 + 37/(y-6) --> 由于37为素数，则只能是7或41.
+20:42: tsuki quit:Ping timeout: 272 seconds
+20:42: Youmu: 41 -> 43...
+20:43: candy76041820: 铁拳！一次性！
+20:43: Sleepwalking: 走人。晚安。夜愉。
+20:43: varna: Sleepwalking: 爆
+20:43: Sleepwalking quit:Quit: Sleepwalking
+20:44: * varna 趁着自己还年轻又去了1-5
+20:44: * varna 出门之后发现自己带错装备了……
+20:45: Youmu: hope1`: z=1,代入得到的。不过好像有点问题。
+20:46: lhanjian quit:*.net *.split
+20:47: candy76041820: StG44 入手。替掉 Kar98k。
+20:50: varna: 反潜编队：POI/电酱/出云丸/危楼（姐）
+20:51: varna: 推一次头目看
+20:51: Youmu: hope1`: 好象我算错了。。233
+20:52: Youmu: x=(2y+1)/(9y-2) <- 这个也不对呀！
+20:53: varna: c败……
+20:55: Youmu: echo "2*45+2*7+1-9*7*45"|bc   => -2730
+20:57: Youmu: 看来吾辈的+-*/都不会了....2333
+21:00: Youmu: yep.
+21:01: Youmu: 39 mod (y-6) -> y = 7 or 9 or 13 .
+21:01: Youmu: 13 -> 19...
+21:01: varna: 噗！被喷了两百铝！对面不过就是个塞了烈风的贫乳！
+21:04: Zirconi: PM2.5已经500了。。
+21:06: Plough: demo.benihata.org 可以发新帖了
+21:06: Plough: 以及在浏览器支持localStorage的情况下能保存输入的内容
+21:06: varna: 药呢，吃了没
+21:07: Plough: 从来没吃过
+21:07: varna: 唉唉
+21:07: Plough: 羊驼子又化身撸逊先生了……
+21:08: tutu joined channel
+21:09: varna: 是撸殉
+21:09: iyzsong: 萌 萌 嗒!
+21:09: varna: 药娘怎么可以不吃药呢
+21:10: Plough: 显然我不是药娘
+21:11: varna: 明明就是药娘
+21:11: hope1 quit:Ping timeout: 245 seconds
+21:12: Plough: 明明不是
+21:13: varna: 哪里不是了
+21:13: Plough: 显然不是
+21:13: varna: 快吃药吧
+21:13: Plough: 就不吃
+21:14: iyzsong: 这种奇妙的展开 - -b 
+21:14: varna: 你看你不吃药，大傻都不高兴了……照着对面旗舰给我个miss
+21:15: Plough: 那也不吃
+21:15: Plough: 要不你自己消化掉吧
+21:16: varna: 吃吧吃吧
+21:16: Plough: 不吃
+21:16: varna: 吃了我们可以行炒 饭之事
+21:17: Plough: 你吃了也可以行炒 饭之事
+21:17: candy76041820: 一帮元首兵打不过战地记者，你说说。
+21:17: Zirx joined channel
+21:17: xxxxxxxxx: 为什么要炒饭....
+21:19: varna: 我想侵犯红旗酱啊
+21:20: varna: candy76041820: 啊呀呀呀
+21:20: Zirconi quit:Ping timeout: 244 seconds
+21:20: lh_mouse: 啊
+21:23: * Plough 在啃群魔
+21:25: lh_mouse: 预备消失三天
+21:25: Plough: 话说有啥适合在读书的时候听的东方同人专辑吗
+21:25: lh_mouse: 东方系列啊
+21:26: lh_mouse: 我觉得读书时候最好来点轻音乐 
+21:26: lhanjian joined channel
+21:26: varna: 啊不要啊啊啊啊啊
+21:26: Plough: 其实对我来说都差不多，读一会就听不见了
+21:26: varna: 那珂酱去死
+21:26: Plough: 不过还是习惯放点音乐
+21:27: varna: Plough: http://pan.baidu.com/s/1i3oTqIx
+21:27: Plough: 噗
+21:28: xxxxxxxxx: 不会是那个倒放的啊吧...
+21:28: varna: 正放的
+21:28: xxxxxxxxx: .....
+21:28: varna: http://pan.baidu.com/s/1bnlbKcv
+21:28: varna: 这个是倒放的
+21:31: Plough: 顺便，主题发表功能求测试
+21:31: Plough: 不确定有没有Bug
+21:32: varna: http://demo.benihata.org/thread/view/5399abe8a4538ea0802c9381
+21:32: varna: 发帖界面没有框？
+21:32: Plough: 嗯
+21:32: varna: ff 28.0
+21:32: varna: 哦
+21:33: varna: 建议加个框……
+21:33: Plough: 其实这是跟Medium学的……
+21:33: varna: soga
+21:33: varna: 爆
+21:34: Plough: 其实这回的新特性是关掉页面以后应该能保存内容
+21:34: xxxxxxxxx: 贴吧那种?
+21:35: Plough: 用了window.localStorage,不支持IE7以下浏览器
+21:35: Plough: xxxxxxxxx: 应该比贴吧的好点
+21:35: varna: 确实保存了
+21:36: xxxxxxxxx: 写过然后不准备发了的东西贴吧老记着 ...
+21:36: Plough: 加个clear按钮？
+21:36: xxxxxxxxx: +
+21:36: varna: +
+21:37: varna: 上面写上「爆」
+21:37: xxxxxxxxx: 爆你妹去
+21:37: iyzsong: 2333
+21:37: varna: xxxxxxxxx: 爆
+21:39: Youmu: 这功能应该和zhihu的那个差不多吧？
+21:39: varna: Youmu: 爆
+21:40: xxxxxxxxx: yooooomu
+21:40: Youmu: 妖妖梦也敢爆！
+21:40: varna: 不过就是个受
+21:40: Youmu: 小受多有爱！
+21:41: varna: 所以爆
+21:41: Youmu: ... 我都是用来舔的。(。・_・。)
+21:42: iyzsong: o.o
+21:42: xxxxxxxxx: 受中受....
+21:43: Youmu: 还是受...
+21:43: varna: 所以快抬尻
+21:44: Youmu: 只对妖妖梦受！
+21:44: varna: 爆
+21:44: Plough: hope1`: 嗯
+21:46: varna: 我们的原则是怒撸狠爆使劲搞
+21:47: Plough: 素
+21:47: Plough: 因为发帖用的是contenteditable
+21:47: iyzsong: Plough: 考虑下提供restful式的API?
+21:47: Plough: 得用js把内容塞到隐藏的表单里然后submit
+21:47: varna: 噗
+21:47: Plough: iyzsong: RESTful疼死了
+21:48: Plough: 我倒想搞个9p式的
+21:48: iyzsong: 然后来撸个android客户端...
+21:48: varna: 安卓差评
+21:48: varna: 9p好评
+21:48: Plough: 其实我想把Mongo扔了直接塞到9p上……
+21:48: Plough: 没准更灵活
+21:49: varna: 灵 活
+21:49: Plough: 比如说按tag搜索之类的
+21:50: iyzsong: 于是我们一群人mount论坛后，各种touch、cat、grep...
+21:50: iyzsong: 2333
+21:50: Plough: Mongo要想大小写不敏感只能正则
+21:50: Plough: 谁让你mount了……
+21:50: iyzsong: 9p不就是用来mount的么 - -
+21:50: Plough: 搞个wmiir类似物
+21:51: Plough: tac create /thread/$tid
+21:51: Plough: 当然想mount我也没意见，就是容易出类似sshfs的悲剧……
+21:51: Plough: ls卡30秒什么的
+21:52: hope1 joined channel
+21:52: iyzsong: 的确是个问题..
+21:53: Plough: 话说还没人用那个新编辑器保存啥正经玩意吧
+21:53: Plough: 我想改一下存储方式
+21:53: varna: nay
+21:53: Plough: 中
+21:56: candy76041820: 啊。让我炸铁路桥，然后炸完了过了断桥是一个被堵上的隧道。我还炸它干嘛直接让火车撞石头得了。
+21:59: varna: 不好跟领导汇报
+21:59: candy76041820: 我就是领导。
+22:00: varna: 领导不好跟上面汇报
+22:00: candy76041820: 我就是上面。
+22:01: candy76041820: 干倒一个蹲墙角的，旁边一个麻溜跑到死人的位置用同一个姿势蹲着。元首怎么教你的？
+22:01: varna: 上面不好交待
+22:01: varna: 这一看就是东欧的军事顾问
+22:01: xxxxxxxxx: 预定要炸的地点和石头之间藏着什么东西?
+22:01: varna: 前面死人了，后面的伙计冲上去捡枪然后蹲下赌我一枪打不中
+22:02: varna: 这个打不中的概率比我十发出大凤的概率还小
+22:04: varna: http://tieba.baidu.com/p/3091959241?see_lz=1&pn=1 # 又一个疯了的勇士，相信用大建造出来的船当旗舰就能召唤出压码头
+22:06: varna: 论比叡的料理水平：诸菩萨摩诃萨应如是降伏其心所有一切众生之类若卵生若胎生若湿生若化生若有色若无色若有想若无想若非有想非无想我皆令入无余涅盘而灭度之如是灭度无量无数无边众生实无众生得灭度者何以故须菩提若菩萨有我相人相众生相寿者相即非菩萨
+22:10: hope1 quit:Ping timeout: 252 seconds
+22:19: varna quit:Quit: leaving
+22:21: iyzsong quit:Quit: WeeChat 0.4.1
+22:29: candy76041820: http://dynasty-scans.com/images/1904 客官～你要的大傻二傻～
+22:31: candy76041820: ↑当然隔壁还有个 18x 的扶桑山城。
+22:31: gmter quit:Ping timeout: 252 seconds
+22:31: lh_mouse quit:Read error: Connection reset by peer
+22:33: candy76041820 quit:Quit: Page closed
+22:35: Youmu quit:Ping timeout: 260 seconds
+22:54: GODDOG joined channel
+22:58: Plough quit:Quit: 碎叫
+23:02: Zirx quit:Quit: Leaving
+23:08: whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:18: silencly07 quit:Quit: Leaving.
+23:32: GODDOG quit:Remote host closed the connection
+23:35: marisa_: 话说有啥适合在读书的时候听的东方同人专辑吗 《-bilibili同人音乐博物馆里面有1000P，自己找喜欢的
+23:36: endle quit:Remote host closed the connection
+23:51: windforce joined channel
+23:53: lhanjian quit:Ping timeout: 255 seconds
+23:54: xxxxxxxxx: http://www.bilibili.tv/video/av1190477/
+23:55: xxxxxxxxx: 卧槽这都什么情况

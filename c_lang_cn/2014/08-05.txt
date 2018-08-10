@@ -1,0 +1,524 @@
+00:07:condy quit:Quit: leaving
+00:10:condy joined channel
+00:59:xxxxxxxx: http://puu.sh/aEve3/2349fab122.jpg
+01:01:OO_after quit:Ping timeout: 264 seconds
+01:10:Plough quit:Remote host closed the connection
+01:19:lh_mouse quit:Read error: Connection reset by peer
+01:24:iceant joined channel
+01:28:iceant quit:Client Quit
+01:45:hope1 quit:Quit: Bye
+02:22:xxxxxxxx quit:Ping timeout: 244 seconds
+02:30:xxxxxxxx joined channel
+02:32:aimujie joined channel
+02:58:biergaizi quit:Ping timeout: 244 seconds
+03:07:biergaizi joined channel
+03:12:aimujie quit:Ping timeout: 245 seconds
+03:21:biergaizi_ joined channel
+03:25:biergaizi quit:Ping timeout: 245 seconds
+03:49:xxxxxxxx quit:Quit: Leaving...
+03:59:biergaizi quit:Ping timeout: 256 seconds
+06:05:candy76041820 joined channel
+06:05:candy76041820 quit:Client Quit
+07:01:lambdahanjian joined channel
+07:04:libhanjian quit:Ping timeout: 240 seconds
+07:07:sismvg joined channel
+07:55:aimujie joined channel
+07:56:aimujie quit:Client Quit
+08:12:abysscoldice joined channel
+08:17:abysscoldice quit:Quit: 离开
+08:53:condy quit:Ping timeout: 240 seconds
+09:04:lh_mouse joined channel
+09:06:lh_mouse: geordi, << 1.0p2
+09:06:geordi: error: unable to find numeric literal operator 'operator""p2'
+09:06:iyzsong joined channel
+09:07:lh_mouse: geordi, << 0x1.0e2
+09:07:geordi: error: hexadecimal floating constants require an exponent
+09:12:lh_mouse: iyzsong, 揉
+09:14:sismvg: fuck marco function
+09:14:sismvg: ..白番茄拿宏函数完全没办法。。
+09:14:aimujie joined channel
+09:27:Sleepwalking joined channel
+09:27:lh_mouse: 米库酱！
+09:27:Sleepwalking: www.rocaloid.org <- 官网改版了
+09:28:lh_mouse: 米！库！酱！
+09:28:lh_mouse: 目前正在进行第三次重写  // mcf string 至少重写五次了
+09:28:Sleepwalking: 你TM要看大小啊
+09:29:Sleepwalking: CVE还重写6次了呢
+09:29:lh_mouse: 目前基本没啥东西是一次定型的  基本都至少重写过一次
+09:29:lh_mouse: 米库酱来卖个萌！
+09:30:Sleepwalking: http://bbs.ivocaloid.com/forum.php?mod=viewthread&tid=127215#lastpost
+09:30:Sleepwalking: 我是米库酱  二言喂我袋盐
+09:30:lh_mouse: 是曾经暗恋对象-> ->  现在是朋友  // 233
+09:31:lh_mouse: 烧！了！土！豪！米！库！酱！
+09:31:cleamoon quit:Read error: Connection reset by peer
+09:31:cleamoon joined channel
+09:31:whatofor joined channel
+09:32:lh_mouse: wtf 来了
+09:32:whatofor: 早
+09:32:lh_mouse: 米库酱来了怎么办
+09:32:whatofor: bao?
+09:32:lh_mouse: 我去
+09:32:Sleepwalking quit:Quit: Leaving.
+09:33:lh_mouse: 跑了
+09:37:endle joined channel
+09:42:wysaid joined channel
+09:42:wysaid: I'm back
+09:42:wysaid: 悠游海际，残云入雾随时雨；漫卷涛边，望月托星念雪风
+09:47:lh_mouse: wysaid, 揉
+09:49:wysaid: http://mp3.soso.com/music.so?query=%C3%CE%D6%D0%B7%C9%D0%D0&w=&sut=7903&sst0=1407203328875
+09:49:wysaid: 这首歌简直美爆了
+09:49:wysaid: 单曲循环根本停不下来
+09:52:sismvg: 第一神拳-》星间飞行
+09:52:wysaid: 我听听看，飞机云里面就觉得上面久石让这首歌比较好，主题曲多听几遍就疲了
+09:53:sismvg: 记错了，是超塞的歌。。擦
+09:53:wysaid: 妈蛋，摇滚啊
+09:54:wysaid: 刚刚一直慢音乐，一下切不过来
+09:54:sismvg: 本来是夕阳的纸飞机。。
+09:54:candy76041820 joined channel
+09:54:sismvg: 记错成星间飞行了
+09:55:sismvg: 猜测有奖-》从candy进来以后varna会在多少分钟后进来
+09:55:sismvg: 我猜10分钟
+09:55:wysaid: 酷狗居然找不到这首歌
+09:55:candy76041820: 先爆了药元四再说！
+09:56:sismvg: 这首歌很老了，
+09:56:sismvg: 加上第一神拳的tag
+09:56:sismvg: http://play.baidu.com/?__m=mboxCtrl.playSong&__a=2002588014&__o=/song/2002588014||playBtn&fr=bdsearch||www.baidu.com#loaded
+09:56:boosure joined channel
+09:58:sismvg: http://www.bilibili.com/video/av1362761/ 
+09:58:sismvg: 猫中尉
+09:59:Sleepwalking joined channel
+10:00:candy76041820: 21:06:sismvg: ..commctrl就不能把TREEITEM的定义放进来啊 21:07:sismvg: 找个结构体麻烦死了，MSDN还不写清楚 21:17:sismvg: 要树形控件checkbox的判断的返回值只有个HTREEITEM ←哪来的 TREEITEM 结构？
+10:00:sismvg: 所以说我才找不到
+10:00:candy76041820: ↑刚那首歌正在我歌曲列表里放着。
+10:00:Sleepwalking: qq的验证码遇到个hzyw,一眼看成学霸云。。
+10:00:sismvg: 握爪
+10:00:candy76041820: 啊，你找不到就在那胡耗？HWND 你给我找个 WND 结构？
+10:00:sismvg: 最后在TreeView_GetITEM找到了
+10:00:candy76041820: >sw 爆
+10:01:sismvg: 谁知道ITEM也要句柄 。。
+10:01:candy76041820: TV 用不明白就拿 LV 缩进模拟。
+10:01:boosure: candy76041820: 你好.  Is bilibili a video site? like youtube?
+10:01:candy76041820: Nah. More like Niconico.jp
+10:02:sismvg: 中国最大的同性交友网站
+10:02:boosure: I see
+10:02:candy76041820: 口胡，明明 AC 才是。
+10:02:sismvg: AC你能在首页见到几个比利王
+10:03:sismvg: B站周刊和鬼畜随便一翻就有
+10:03:candy76041820: 那是你不会用 AC，B 站就是为了你这种弱子才特意来个专题的。不信你去搜东方馅挂炒饭。
+10:04:sismvg: list control 没有好办法插入30W个ansi字符串条目吗
+10:05:candy76041820: 说得好像 TV 就能似的。LV 虚拟模式不知道？
+10:05:sismvg: 不知道。
+10:05:candy76041820: 弱子/
+10:05:sismvg: 我几乎不撸UI
+10:06:sismvg: windows和linux直接看内核编程。。
+10:06:candy76041820: How to Use Virtual List-View Controls
+10:06:candy76041820: ↑搜索关键字，自己必应。
+10:06:lh_mouse: sismvg, LB_INITSTORAGE
+10:07:lh_mouse: sismvg, LB_INITSTORAGE Message
+10:07:lh_mouse: --------------------------------------------------------------------------------
+10:07:lh_mouse: Allocates memory for storing list box items. This message is used before an application adds a large number of items to a list box.
+10:07:lh_mouse: 这是  std::vector<>::reserve 一类的东西
+10:08:sismvg_ joined channel
+10:08:lh_mouse: rhj b ?
+10:08:lh_mouse: 掉了？
+10:08:candy76041820: 说回来，三十万条你用复选框干嘛，想让用户挨个自己 check 跟 VS 的异常捕捉选项框一样？
+10:08:lh_mouse: 不是说只能处理 60000 条么
+10:09:lh_mouse: 不到 65535
+10:09:sismvg_: 大概有一个亿左右的条目。。
+10:09:sismvg_: 都是磁力链接
+10:09:lh_mouse: 用什么 List control   脑了进水
+10:10:sismvg_: 因为不知道有什么好的。。
+10:10:whatofor: 磁力链接 这是在做啥
+10:10:candy76041820: Windows 95/Windows 98/Windows Millennium Edition (Windows Me) : The wParam parameter is limited to 16-bit values. This means list boxes cannot contain more than 32,767 items. Although the number of items is restricted, the total size in bytes of the items in a list box is limited only by available memory. 
+10:10:sismvg quit:Ping timeout: 255 seconds
+10:11:candy76041820: WTF 在弄本子？
+10:11:sismvg: 啊。。看来还是批量装载好了
+10:11:lh_mouse: boosure, where do you live now??
+10:11:boosure: Ohio
+10:11:candy76041820: 你还是 listview 得了，这根本没树形关系。
+10:12:sismvg: 有tag的
+10:12:sismvg: 但是现在换成了treeview+listview
+10:12:lh_mouse: boosure, so.. it is about 21:00 or 22:00 there?
+10:12:candy76041820: 这是正道。
+10:12:boosure: 22:12
+10:13:lh_mouse: o.o
+10:13:boosure: HEHE
+10:13:lh_mouse: [10:12:46] 18<22boosure18> 22:12
+10:13:sismvg: 主要麻烦的是我这里都是utf8格式的
+10:13:lh_mouse: sismvg, 自觉 utf-16
+10:13:candy76041820: MultiByteToWideChar 转过来。
+10:13:sismvg: 内存不够用
+10:13:lh_mouse: candy76041820, 渣
+10:13:sismvg: 内存不够用。。
+10:14:candy76041820: 我才懒得跟你那 MCFString 似的自己写。
+10:14:sismvg: 平均情况要用500M,要是转换过去的话1G左右
+10:14:candy76041820: 分段，显示多少转换多少。
+10:14:lh_mouse: candy76041820, 连输出多大都得转码一次才能算出来的渣自动无视
+10:14:candy76041820: 再说 1G 又不是啥大东西。
+10:15:candy76041820: 是，带着你那直接乘二根本不看代理对的破玩意滚吧，单位时间有多远滚多快。
+10:16:candy76041820: 再送你个气球。
+10:16:lh_mouse: candy76041820, 你已经自 high 到高潮了么
+10:16:lh_mouse: 谁告诉你不看代理对的？
+10:23:lh_mouse: candy76041820, 你是不是乱咬人咬习惯了  用不用我帮忙修理修理
+10:30:candy76041820: 修理我，好啊，那你拿出“输出多大都得转码一次才能算出来”的证据，我就服你。
+10:31:candy76041820: 傻逼。
+10:31:lh_mouse: 我就问你  一个 wstring 转成 string 你告诉我 resize 多少
+10:32:candy76041820: 难道你不转就能确定乘二真对？
+10:32:lh_mouse: 诚几？
+10:32:lh_mouse: 至少乘四好不好
+10:33:candy76041820: 乘几除几没工夫细算，反正是个常数。
+10:33:candy76041820: ↑而乘常数反正不准。
+10:33:lh_mouse: 你转的都是中文为什么要乘四？
+10:33:lh_mouse: 神经病么
+10:33:lh_mouse: 反过来呢
+10:33:candy76041820: 你又从哪脑补出来转的都是中文了？
+10:34:lh_mouse: 我问你你有几个字符需要乘四的
+10:34:candy76041820: 你问我干嘛，你说的乘四。[10:36] <lh_mouse> 至少乘四好不好
+10:34:lh_mouse: 全中文至少也得乘三
+10:35:lh_mouse: 如果全是英文呢？
+10:35:candy76041820: 我就问你你从哪脑补出来全是中文或者全是英文了？
+10:35:lh_mouse: candy76041820, 我就问你给你一段文本你怎么知道转码后的长度
+10:36:lh_mouse: 强词夺理倒是很有一套嘛
+10:36:candy76041820: 所以说不转码一遍怎么知道？
+10:36:lh_mouse: 转码一遍算算长度分配空间然后再转码一遍？
+10:36:candy76041820: 谁强词夺理了？[10:18] <lh_mouse> candy76041820, 连输出多大都得转码一次才能算出来的渣自动无视←是不是你说的？那你意思就是不转码就能知道？
+10:36:lh_mouse: 不是 2B 是什么
+10:37:lh_mouse: 转一个字符就塞一个字符懂？
+10:37:candy76041820: 那你还想跟 FormatMessage 似的让 Win 自己 LocalAlloc 让用户 LocalFree？谁真 2B？
+10:37:candy76041820: 转一个字符塞一个字符谁不知道，问题是不知道长度哪来地方给你塞？
+10:38:lh_mouse: candy76041820, 自己接口设计得烂就要用户负责？
+10:39:candy76041820: 这又转进到接口上去了，Win API 接口有几个不烂的？你在 Win 下编程你不受着你倒是滚哪？
+10:40:lh_mouse: candy76041820, 答非所问。我就问你转码一次算长度再转码一次出结果是不是2
+10:41:candy76041820: 你嫌二你给个能直接分配字符串给用户还不用用户手动回收的方式？Win 下？
+10:41:candy76041820: 你还指望所有人都用你那 MCFString？
+10:42:candy76041820: API 又不只考虑 C++ 的 ABI，它还得考虑别家语言也来用的情况，你怎么保证你给的这个分配方式用户的语言能接受 / 兼容？
+10:42:biergaizi joined channel
+10:43:lh_mouse: candy76041820, int (*fnWriteCallback)(void *ctx, const char *data, size_t cnt)  其余我不想解释
+10:44:lh_mouse: candy76041820, 咬人咬够了没
+10:44:candy76041820: 啊，你转个字符串还要个回调？你是不是不知道 C++11 为啥引入 lambda？
+10:45:lh_mouse: candy76041820, [10:42:39] 18<24candy7604182018> API 又不只考虑 C++ 的 ABI，它还得考虑别家语言也来用的情况  // 自攻自受了？
+10:46:lh_mouse: 求 pascal 里面塞个 lambda
+10:48:candy76041820_ joined channel
+10:48:candy76041820_: 卡掉了。
+10:48:candy76041820 quit:Ping timeout: 246 seconds
+10:49:lh_mouse: 活该
+10:49:candy76041820_: 你能不能别逗？C++11 为啥引入 lambda，暂且不论“想把 C++ 变得更现代一点”这等不伦不类的尝试，
+10:49:lh_mouse: 别扯别的
+10:49:lh_mouse: 自己说不能只要 C++ ABI   还扯 lambda
+10:50:candy76041820_: lambda 不就是嫌回调单放外面写着麻烦才引入的？你现在跟我转个字符串还要回调？
+10:50:lh_mouse: candy76041820_, 你去找 C 标准委员会那帮傻逼理论去
+10:51:candy76041820: 还说我自攻自受，连我举个例子你都看不明白？
+10:52:candy76041820: 还让我找 C 标准委员会？
+10:52:candy76041820: 你确定你没少打两个加号？
+10:52:lh_mouse: candy76041820, 我觉得你可以停止乱叫了
+10:52:candy76041820: 我觉得你只是跑题拉不回来 & 拉不出来了。
+10:53:lh_mouse: 跑你家去了？
+10:54:lh_mouse: 不管是 MultiByteToWideChar 还是 WideChatToMultiByte 设计得都烂
+10:54:candy76041820: 我替你拉回来，为啥 MultiByteToWideChar 非要转两次，就是因为它不可能提供个方便的一遍转 & 填完的接口。
+10:54:lh_mouse: 因为它 SB
+10:55:lh_mouse: 懂？
+10:55:candy76041820: 因为它没法强迫所有人都用你那 MCFString 直接返回一个不需要用户手动关心生命周期的字符串，懂？
+10:55:candy76041820: 还笑话人家煞笔，你聪明你怎么不去微软。
+10:56:lh_mouse: 你不煞笔你怎么不去
+10:56:candy76041820: 我煞笔所以我安心用着，不像你那么聪明得不知道自己几斤几两了。
+10:56:sismvg: msdn 的checkbox似乎不见了
+10:56:candy76041820: checkbox？
+10:57:sismvg: 控件啊
+10:58:candy76041820: Button……
+10:59:sismvg: 不是控件啊
+10:59:candy76041820: 到底是啥？
+11:00:sismvg: 就是左边一个框，可以打钩的那个
+11:03:candy76041820 quit:Ping timeout: 246 seconds
+11:06:candy76041820 joined channel
+11:07:candy76041820: 11:00:sismvg: 就是左边一个框，可以打钩的那个 ←去 Control Styles 页面里找。你是要 LV 里面显示复选框？
+11:07:sismvg: 不
+11:07:candy76041820: 那你想干嘛？
+11:07:sismvg: 只是个单纯的框，绑定变量的
+11:07:sismvg: 打上勾为true,没有为false之类的
+11:08:sismvg: 不过应该找到了，发送个BM_GETCHECK就好了
+11:08:candy76041820: 绑定变量？MFC？
+11:09:* candy76041820 从不绑定变量只 BM_GETCHECK。
+11:09:sismvg: 不绑定也oK
+11:09:sismvg: 手动操作
+11:09:candy76041820: 啊，那样的话记得 BS_AUTOCHECKBOX。
+11:10:candy76041820: 省得自己 BM_SETCHECK。
+11:12:sismvg: 想和谷歌CEO喝咖啡吗？半小时5万美元
+11:12:sismvg: ...不能理解
+11:12:candy76041820: 不想。
+11:12:candy76041820: 反正它们就是有钱买点格调呗。
+11:12:sismvg: 50K卖100个微型摄像头还好点
+11:12:candy76041820: +1
+11:13:sismvg: 暑假的痛苦-》幼儿园也放暑假了，没哟女了
+11:13:sismvg: 幼女
+11:15:candy76041820: 09:55:sismvg: 猜测有奖-》从candy进来以后varna会在多少分钟后进来 09:55:sismvg: 我猜10分钟←时间过了，爆药元四。
+11:16:sismvg: 邪乎到家必有鬼
+11:18:sismvg: 嵌套容器月std::for_each
+11:18:sismvg: 与
+11:18:candy76041820: ？
+11:19:sismvg: 要写很多次参数类型。。
+11:19:sismvg: std::vector<std::vector<std::vector<int>>>
+11:19:candy76041820: 鼠辈快来耗类型推导啊！
+11:19:sismvg: 好像c++14应该就没这个问题了
+11:22:lh_mouse: sismvg, http://www.physicsforums.com/showthread.php?t=189221
+11:24:sismvg: ？
+11:24:sismvg: 和这个没关系啊
+11:25:lh_mouse: 发错了
+11:25:candy76041820: geordi, {cout<<'2'; while(true){cout<<'3';}}
+11:26:geordi: 23333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+11:26:sismvg: http://www.hacg.me/wordpress/49859
+11:26:sismvg: NSFW
+11:28:lh_mouse: sismvg, http://upcoder.com/2/efficient-vectors-of-vectors/
+11:49:candy76041820 quit:Quit: Page closed
+11:59:whatofor quit:Read error: Connection reset by peer
+12:02:whatofor joined channel
+12:14:sismvg: such list
+12:15:candy76041820 joined channel
+12:18:hope1 joined channel
+12:18:candy76041820: HOHOHO-Hotate
+12:19:hope1: ...
+12:27:wysaid quit:Quit: ChatZilla 0.9.90.1 [Firefox 31.0/20140716183446]
+12:30:xxxxxxxx joined channel
+12:35:candy76041820 quit:Ping timeout: 246 seconds
+12:37:sismvg: ..原来捐钱也要叫税吗。。
+12:57:sismvg: 抱枕get!
+13:06:Plough joined channel
+13:25:Plough: 哈哈哈哈哈哈哈
+13:26:Plough: 那智终于来了
+13:27:blackskygg joined channel
+13:30:blackskygg quit:Client Quit
+13:41:Sleepwalking left channel:
+13:52:_spaike97 joined channel
+13:54:sismvg: 突然感觉用C给windows写UI的程序员好可怜
+13:54:_spaike97: wo ye jue de
+13:55:lh_mouse: sismvg, C++ 才是天坑
+13:56:lh_mouse: 窗口回调连个传 this 指针的地方都没有
+13:56:sismvg: C++好歹不要CreateBrush然后再手动free
+13:56:sismvg: delete
+13:56:sismvg: 准确来说是C导致的C++坑
+13:58:lh_mouse: struct BrushDeleter { constexpr HGDIOBJ operator()() const noexcept { return NULL; } void operator()(HGDIOBJ hObj){ ::DeleteObject(hObj); } }; typedef MCF::UniqueHandle<BrushDeleter> UniqueBrush;
+13:59:sismvg: C#坑不吭
+14:01:lh_mouse: 没用过
+14:02:sismvg: 想用脚本写UI，但是要和C++交互似乎太慢了
+14:08:khysw: 哪天去弄台台式去...
+14:09:_spaike97 quit:Ping timeout: 240 seconds
+14:14:khysw: 4790K 看上去不错的样子... 貌似可以暂时无视显卡...
+14:16:sismvg: 。。。最近的新人怎么了
+14:16:khysw: sismvg: ?
+14:16:sismvg: 迅雷又出问题了
+14:16:sismvg: 自从上市以后问题不断
+14:16:khysw: ...
+14:16:khysw: 我还是继续研究电脑配置算了...
+14:17:sismvg: 迅雷重复创建任务的bug1个月了还没人修，迅雷看看文件名处理错误也没人修
+14:25:iyzsong quit:Ping timeout: 240 seconds
+14:27:whatofor quit:Read error: Connection reset by peer
+14:28:whatofor joined channel
+14:30:sismvg: だおぢぶくぃ
+14:30:sismvg: 倒地不起-》上边打错了。。
+14:32:khysw: E5-2620...
+14:36:sismvg: 有钱啊
+14:36:khysw: sismvg: 计算机科学系这种奇葩系...
+14:37:sismvg: 但是还是磁盘好点好
+14:37:sismvg: 我的i3从来没有因为数学计算上过90%
+14:37:sismvg: 但是磁盘却卡了半天
+14:37:khysw: SSD...
+14:37:khysw: 没打算SSD-RAID
+14:37:sismvg: 100G顶一年工资
+14:38:sismvg: 干脆买个100G内存当cache
+14:39:khysw: 配台电脑差不多就是两学期的书费，不过计科的人一般不买教科书...
+14:39:sismvg: 你们的书费太。。。
+14:39:sismvg: 好吧，D版党从来没有为书费担心过
+14:40:khysw: 一本$200的不少见...
+14:40:khysw: correction: $200一本的不少见...
+14:40:sismvg: ..什么书啊。。
+14:40:khysw: 商学院，生物学之类的 就有这种奇葩书价...
+14:40:sismvg: 生物学。。
+14:41:sismvg: 我就没见过除了收藏品以外200cny以上的
+14:41:khysw: 准确地说在学生物学的基本上都是生命科学的...
+14:42:khysw: 考虑一下是用E5-2620v2还是4970K...
+14:43:sismvg: 买刀片
+14:44:khysw: sismvg: 我不是土豪... 没那么抽风...
+14:44:sismvg: 那就和我一起来挖矿吧
+14:44:khysw: 不准备配显卡...
+14:45:sismvg: 有矿机的
+14:45:sismvg: 米国的电费是多少
+14:46:khysw: 宿舍的电费是包括的...
+14:47:sismvg: 这里1RMB一度电。。无论早晚
+14:49:khysw: Hydro One的价格：最高0.79RMB,最低0.42RMB
+14:51:sismvg: 电费低的地方挖矿的收益是很高的。。30台矿机按你的价格一个月能剩下1KRMB
+14:51:khysw: 懒得处理这种事情...
+14:51:khysw: 乱用电的话宿舍那群家伙会不高兴的...
+14:52:sismvg: 这倒是。。
+14:52:sismvg: 1KRMB=1/30个初音婚纱手办。
+14:53:khysw: 我倒想去弄块Tesla图形卡玩玩...
+14:53:sismvg: 买了以后你会发现几乎没什么用处
+14:54:sismvg: 现在没时间最多玩小游戏,集成显卡都狗了
+14:54:sismvg: 够了
+14:55:khysw: 当年想玩玩图形，结果发现显卡弱死了...
+14:55:sismvg: @炮姐
+14:56:sismvg: 写list view的人真的没有考虑过数据全是字符串而且还是utf8的情况吗。。
+14:58:iyzsong joined channel
+14:59:sismvg: http://www.bilibili.com/video/av1369369/
+14:59:sismvg: 太可怜了
+15:01:endle quit:Quit: Leaving
+15:06:lh_mouse: NT 内码是 utf-16
+15:07:sismvg: 但是他只是画个图而已撒。。
+15:08:sismvg: 现在非常头疼。。数据量实在太大。。copy已经不可能了
+15:09:Plough: 我操熊岛假摔了
+15:09:Plough: 满血一炮大破是什么情况
+15:12:lh_mouse: [14:32:45] 18<29khysw18> E5-2620...  // 我去年真的想入手 e5
+15:12:lh_mouse: 可是没货
+15:13:khysw: lh_mouse: 天知道该用Xeon还是i7还是等Broadwell...
+15:13:lh_mouse: khysw, 我现在 e3 基本也完秒 i7
+15:14:lh_mouse: 差了个核显而已
+15:14:khysw: 4790k?
+15:14:lh_mouse: Xeon E3
+15:14:lh_mouse: E1230 v3
+15:14:lh_mouse: 多了个 E
+15:18:khysw: 貌似是同一个socket类型...
+15:19:Plough: 我操我竟然排进8703名了
+15:24:aimujie_ joined channel
+15:24:aimujie_ quit:Client Quit
+15:46:lambdahanjian quit:Ping timeout: 240 seconds
+15:48:sismvg: lolicon2sistercon(hentai)
+15:49:sismvg: siscon
+15:53:iyzsong quit:Ping timeout: 255 seconds
+15:54:lh_mouse: 不是 kon 么
+16:02:sismvg: siscon=妹控
+16:19:sismvg: 又get2本俺妹纯爱本
+16:21:iyzsong joined channel
+16:31:lambdahanjian joined channel
+16:37:FrankHB quit:Ping timeout: 255 seconds
+16:38:FrankHB joined channel
+16:38:FrankHB: 本来就是complex...
+16:43:lh_mouse: geordi, << 'ab';
+16:43:geordi: warning: multi-character character constant
+16:50:condy joined channel
+17:05:sismvg: 国外种子的存活率好低啊。。
+17:06:condy quit:Quit: 国内的也不多吧。
+17:08:sismvg: ...神回复
+17:12:condy joined channel
+17:44:Sleepwalking joined channel
+17:44:Sleepwalking: http://www.bilibili.com/video/av1376960/
+17:50:aimujie quit:Quit: Leaving
+17:51:Plough: 日
+17:51:Plough: 今天到底什么情况
+17:51:Plough: 我打对面各种miss
+17:51:Plough: 对面各种暴击
+18:07:xxxxxxxx: 原来rimworld刷敌人是按资产定人数的....
+18:10:lambdahanjian: 有必要在移动硬盘里塞一个WIN7
+18:13:lh_mouse: linux 吧 
+18:13:lh_mouse: win 换电脑开机就蓝屏
+18:15:lambdahanjian: 额，其实我的机内硬盘就是单一Linux。纯粹是为了打游戏所以在移动硬盘里弄个WIN7，反正也不考虑其他电脑……
+18:15:lambdahanjian: 不过貌似可以通过微软的工厂化软件现换电脑也能正常运作？
+18:15:lambdahanjian: 现换->实现换
+18:17:xxxxxxxx: 前段时间刚蓝屏过....
+18:17:lambdahanjian: ……
+18:17:lh_mouse: 工厂啊  那东西不是这么玩的
+18:17:lh_mouse: 那东西是拿来做 OEM 系统的
+18:24:sismvg: 亚当：如果我是同志我现在就会抱住你
+18:24:sismvg: 杰米：。。。。。
+18:25:xxxxxxxx: 已经抱了好久了?
+18:25:sismvg: 没有报，但是我闻到了什么
+18:26:sismvg: 亚当和杰米在一起的时间比杰米和他老婆在一起的时间都长。
+18:26:iyzsong quit:Ping timeout: 255 seconds
+18:44:xxxxxxxx: http://www.bilibili.com/video/av1372060/
+18:47:hope1 quit:Ping timeout: 250 seconds
+18:48:condy: http://www.acfun.tv/a/ac1322206 <- 谁穿过女装来说说感觉。
+18:51:candy76041820 joined channel
+18:52:candy76041820: >PL 羊驼让我先爆你然后再问你是不是还在北方家具城没出来呢。
+18:55:iyzsong joined channel
+18:55:boosure quit:Ping timeout: 250 seconds
+18:58:Plough: 1、自炒去 2、已经被罗盘娘坑没油了
+18:58:Plough: 而且今天特他妈神奇
+18:58:candy76041820: >Plough
+18:58:Plough: T有利 我这边各种miss 对方各种暴击
+18:58:Plough: 同行 我这边各种miss 对方各种暴击
+18:58:Plough: 反航 我这边各种miss 对方各种暴击
+18:58:Plough: T不利 我这边各种miss 对方各种暴击
+18:59:Plough: 舰队和昨天一模一样
+18:59:Plough: 练度只可能比昨天高啊
+18:59:Plough: 而且我还多喂了
+19:02:candy76041820 quit:Ping timeout: 246 seconds
+19:13:sismvg: 我感觉还是哥特萝莉长裙好
+19:13:sismvg: xxxxxxx:你可以试试嘛
+19:14:xxxxxxxx: sismvg: 试试啥?
+19:14:sismvg: 错了。。是condy..
+19:14:sismvg: condy:你可以试试
+19:15:sismvg: fuck list view ,点击checkbox连个消息都没
+19:15:condy: 不应该让 Plough 试吗？
+19:20:lambdahanjian: 红旗酱，萝莉裙！
+19:37:aimujie joined channel
+19:59:lambdahanjian quit:Quit: 风光冉冉东西陌
+20:07:OO_after joined channel
+20:08:iyzsong quit:Quit: poweroff
+20:17:sismvg_ joined channel
+20:18:hope1 joined channel
+20:19:Sleepwalking1 joined channel
+20:21:sismvg quit:Ping timeout: 255 seconds
+20:21:Sleepwalking quit:Ping timeout: 240 seconds
+20:31:deng_cn joined channel
+20:33:deng_cn left channel:
+20:46:lh_mouse: http://gb.cri.cn/42071/2014/08/05/7671s4641401_1.htm
+21:02:sismvg: 怎么看都不像是大批量的生产
+21:02:sismvg: magnet:?xt=urn:btih:0FB50EDB35C84E332E78BB1150AFEF231FAF45DF
+21:02:sismvg: NSFW，奇迹般的，国外链接竟然能离线
+21:06:Sleepwalking1 left channel:
+21:08:lhanjian joined channel
+21:14:xxxxxxxx: http://p4.qhimg.com/t012b84e3a4ac9ab566.jpg?size=440x293
+21:14:sismvg quit:*.net *.split
+21:14:biergaizi_AFK quit:*.net *.split
+21:14:hoxily quit:*.net *.split
+21:15:biergaizi_AFK joined channel
+21:15:hoxily joined channel
+21:21:condy quit:Remote host closed the connection
+21:21:condy joined channel
+21:22:lhanjian quit:Ping timeout: 264 seconds
+21:29:newcxs joined channel
+21:30:newcxs quit:Client Quit
+21:30:newcxs joined channel
+21:31:newcxs left channel:
+21:38:sismvg joined channel
+21:42:sismvg quit:Read error: Connection reset by peer
+22:03:aimujie quit:Quit: Leaving
+22:06:condy quit:Ping timeout: 256 seconds
+22:07:condy joined channel
+22:12:condy quit:Quit: leaving
+22:12:condy joined channel
+22:13:sismvg joined channel
+22:15:sismvg_ joined channel
+22:16:sismvg_: 尼玛。。C86本子第一页全是舰娘
+22:16:xxxxxxxx: 早就说了船不可避....
+22:19:sismvg quit:Ping timeout: 255 seconds
+22:22:sismvg: 还好喜欢的本子出新的篇章了
+22:31:FrankHB: http://perl8.org/ ...
+22:31:condy: geordi: { using ip = std; ip::cout<<"H"; } 
+22:31:geordi: error: 'std' does not name a type
+22:33:condy: geordi: geordi { using ip = T; ip::cout<<"H"; } struct T{static void cout(const string& s) { std::cout(s); }};
+22:33:geordi: error: 'geordi' does not name a type
+22:34:condy: geordi: { using ip = T; ip::cout<<"H"; } struct T{static void cout(const string& s) { std::cout(s); }};
+22:34:geordi: error: no match for call to '(ostream {aka ostream}) (const string&)'
+22:34:condy: geordi: { using ip = T; ip::cout<<"H"; } struct T{static ostream& cout() { return cout;}};
+22:34:geordi: error: invalid initialization of non-const reference of type 'ostream& {aka ostream&}' from an rvalue of type 'ostream& (*)() {aka ostream& (*)()}'
+22:35:condy: geordi: insert  const after ()
+22:35:geordi: error: static member function 'static ostream& T::cout()' cannot have cv-qualifier
+22:36:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:38:biergaizi_AFK quit:Read error: Connection reset by peer
+22:38:biergaizi_AFK joined channel
+22:40:FrankHB: <geordi> error: 'geordi' does not name a type 蛤蛤。。。
+22:46:hoxily quit:Quit: WeeChat 0.4.3
+22:49:newcxs joined channel
+22:49:newcxs quit:Client Quit
+22:50:condy: geordi: { using t = Sales_item; }  struct Sales_item {};
+22:50:geordi: warning: typedef 'using t = struct Sales_item' locally defined but not used
+22:50:condy: geordi: prepend -w
+22:50:geordi: <no output>
+22:54:sismvg: 又找到新的本子了
+23:17:blackskygg joined channel
+23:18:blackskygg: 爆
+23:24:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+23:25:condy: blackskygg: 自爆。
+23:26:blackskygg: 大字爆
+23:30:hope1 quit:Read error: Connection reset by peer
+23:33:hope1 joined channel
+23:52:blackskygg:  /quit
+23:53:blackskygg quit:Quit: Bye

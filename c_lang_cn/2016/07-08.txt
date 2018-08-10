@@ -1,0 +1,481 @@
+00:04 cleamoon_ joined channel
+00:15 hope1 joined channel
+00:16 cleamoon_ quit:Read error: Connection reset by peer
+00:19 hope1 quit:Ping timeout: 252 seconds
+00:22 hope1 joined channel
+00:28 hope1 quit:Ping timeout: 276 seconds
+00:28 whocares_2 quit:Remote host closed the connection
+00:34 cleamoon_ joined channel
+00:35 hope1 joined channel
+00:36 AutoGavy joined channel
+00:38 AutoGavy: geordi, << bark; \ #if true \ string bark = "good day"; \ #else \ int bark = ; \ # endif
+00:38 geordi: good day
+00:38 AutoGavy: good day
+00:39 AutoGavy: AutoGavy, << bark; \ #if true \ string bark = "good day"; \ #else \ int bark = ; \ # endif
+00:39 AutoGavy: good day
+00:41 whocares_2 joined channel
+00:41 whocares_2 quit:Remote host closed the connection
+00:45 lh_mouse: AutoGay
+00:47 whocares_2 joined channel
+00:47 hope1 quit:Ping timeout: 240 seconds
+00:48 hope1 joined channel
+00:48 cleamoon_ quit:Read error: Connection reset by peer
+00:49 AutoGavy: Gavy is not Gay
+00:49 AutoGavy: baka
+00:49 AutoGavy: baka baka
+00:50 AutoGavy: baka_mouse
+00:50 varna: mouseee
+00:50 AutoGavy: bakaaaa
+00:50 * lh_mouse slaps AutoGavy around a bit with a large trout
+00:50 AutoGavy: .-.
+00:51 AutoGavy: 😤
+00:53 lh_mouse: varna, 倒腾 Windows 成功没。
+00:53 varna: lh_mouse: 失败了，win7 64b的英猥达显卡驱动在我这里都会导致蓝屏
+00:53 lh_mouse: 驱动精灵……
+00:53 varna: 而且还会跟声卡网卡驱动开战
+00:54 varna: 没用的，那个给我下的都是奇怪的新版本
+00:54 varna: 全死了
+00:54 lh_mouse: ヲ也是英伟达的卡。
+00:54 varna: 联想这款本略坑
+00:54 lh_mouse: 0.0
+00:54 Mokou: 要不你联系下美帝良心想问问
+00:54 varna: win10现在只能用他们自带的驱动
+00:54 lh_mouse: 叫你买辣鸡联想……
+00:54 varna: win7用他们自带的驱动直接boom
+00:54 Mokou: SB也是Skylake + gt940m，现在似乎不炸了
+00:54 Mokou: 那gt940m还是热插拔的
+00:55 varna: 我觉得主要是联想的锅，不是英猥达的
+00:55 varna: 虽说gtx960m是款快被放弃的产品
+00:55 Mokou: 毕竟美帝良心
+00:55 Mokou: 1080m还早吧
+00:55 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/issues/11
+00:55 Mokou: 1060桌面版都要过会儿才出
+00:55 varna: 最后我找糖果帮我把宋体换成了早期windoze的版本
+00:55 lh_mouse: 这个妳怎么看。
+00:55 AutoGavy: gayhub
+00:56 lh_mouse: AutoGay
+00:56 lh_mouse: AutoGavy, 吃药。
+00:56 AutoGavy: 这个 女尔 字怎么打出来的
+00:56 AutoGavy: baka_mouse
+00:56 Mokou: 妳
+00:56 lh_mouse: vqiy
+00:56 Mokou: ni
+00:56 IntPtr: 妳
+00:56 lh_mouse: AutoGavy, 妳快吃药。
+00:56 AutoGavy: 我这里居然没有这个字
+00:56 AutoGavy: 妳
+00:56 lh_mouse: vqiy nnw ktn axqy
+00:57 AutoGavy: =-=
+00:57 lh_mouse: AutoGavy, 张嘴。
+00:57 varna: refuse to regard POSIX crap态度上我觉得挺好，然而POSIX crap的移植问题太多
+00:57 lh_mouse: 0.0
+00:58 AutoGavy: 妳和你有什么区别
+00:58 lh_mouse: 灭滋瓷 posix 啊。
+00:58 AutoGavy: 百度搜不到，搜妳都是你
+00:58 lh_mouse: 妳和你的区别就是 她和他的区别。
+00:59 AutoGavy: 那为什么issly跟谁说话都用妳
+00:59 lh_mouse: AutoGavy, 他认为妳应该吃药，然后女装。
+01:00 AutoGavy: 单身妄想症么
+01:00 AutoGavy: 🍭
+01:01 AutoGavy: 💊
+01:01 cleamoon joined channel
+01:02 lh_mouse: AutoGavy, 张嘴。
+01:02 lh_mouse: comment 呢 comment 呢 。
+01:02 AutoGavy: 💊💊💊💊
+01:03 AutoGavy: 我要睡觉了
+01:03 AutoGavy: 88
+01:03 lh_mouse: AutoGavy, 先爆照。
+01:03 lh_mouse: 不准睡！
+01:04 varna: 不准黑觉！
+01:04 cleamoon_ joined channel
+01:05 AutoGavy: 0:58:52 ⇐ AutoGavy quit (uid162610@gateway/web/irccloud.com/x-jkhmevfaittrpotp) Quit: Connection closed for inactivity
+01:08 hope1 quit:Ping timeout: 276 seconds
+01:08 lh_mouse: varna, 话说，你看到这个没有。 https://otsukemono.blogspot.com/2016/07/MinGW-w64-GCC-thread-model-mcf.html
+01:09 varna: 我没开代理，这是之前邮件列表里那个十一区人？
+01:09 lh_mouse: 是。
+01:10 varna: _(:з」∠)_蒸蒸日上啊
+01:10 lh_mouse: ヲ不知道，ヲ问过他，他说这是他。
+01:10 lh_mouse: [22:32:38] <lh_mouse> nakyu, do you know this person? http://otsukemono.blogspot.jp/2016/07/MinGW-w64-GCC-thread-model-mcf.html
+01:10 lh_mouse: [22:34:21] <nakyu> lh_mouse, lol it's me
+01:10 lh_mouse: [22:36:13] <lh_mouse> you seemed to have investigated my code. I didn't mention the __USING_MCFGTHREAD__ macro before.
+01:12 lh_mouse: 现在得想个办法卖出去才行。
+01:12 varna: 我觉得如果有些crap不兼容的话还是曲高和寡
+01:12 lh_mouse: mcfgthread 是干脆禁止静态链接所以就没有 mingw 那帮人的破事了。
+01:13 varna: 毕竟是线程模型的可选之一
+01:13 lh_mouse: varna, 有个事情，C11 的 tss_delete 并没有提这个 dtor。
+01:13 lh_mouse: 所以按目前这样子是 C11 conforming 的。
+01:13 varna: 这倒是
+01:15 cleamoon__ joined channel
+01:15 cleamoon quit:Read error: Connection reset by peer
+01:18 cleamoon_ quit:Read error: Connection reset by peer
+01:21 lh_mouse: ktietz 的想法就是，有人可能会写一个动态库，然后在里面创建一个线程，叫用户自己去 join 。
+01:22 varna: 这就是……贰
+01:22 lh_mouse: 所以这里有个问题，因为操蛋的 pthread 有个 join，如果ヲ们自己写的兼容库被静态链接了，就有个大问题。
+01:23 lh_mouse: 两个动态库，分别静态链接了两个 pthread 的静态副本，就出现了两个线程管理器。
+01:23 varna: 这样很麻烦
+01:23 lh_mouse: 而这二者之间的 join 或 detach 是不可以混用的。
+01:23 lh_mouse: 是，所以需要某种进程内唯一的机制。
+01:23 lh_mouse: 如果 pthread 是被动态链接的，因为本来就是唯一的，反而没这个破事……
+01:23 varna: 这种单件类似物还是动态链接比较好，以前我折腾GTK的多语言绑定也是
+01:24 varna: 强行动态加载，否则就会这样地不一致
+01:24 lh_mouse: 对。不过只能静态链接的话，貌似某些人意见很大……
+01:24 varna: 只能动态？
+01:24 lh_mouse: mcfgthread 是只允许动态链接。
+01:24 varna: standalone爱好者么
+01:24 lh_mouse: 其实ヲ也是……
+01:25 varna: 所谓没有地狱的绿色软件……看上去很美
+01:25 slowcoach quit:Quit: slowcoach
+01:25 lh_mouse: dll hell 么。
+01:25 varna: dll hell, 或者就是干脆喜欢一个映像了事
+01:26 lh_mouse: GNU 那种 libfoo.so.6.0.1 呢。
+01:26 varna: 那种是真地狱
+01:26 lh_mouse: mcfgthread-6.dll
+01:26 lh_mouse: ヲ悄悄告诉你，mcfgthread 的版本是从 0 直接飞到 5 的。
+01:27 varna: GNU那种搞法不仅影响名字，而且真的影响某些符号版本
+01:27 varna: 如果用了导出符号的version script, 地狱就坐实了
+01:27 lh_mouse: ヲ觉得只有一个数字确保不会不向下兼容就可以了。
+01:27 varna: 向下兼容的部分其实是保持了的
+01:28 lh_mouse: 对，如果接口改了就直接加一个数字就行了。
+01:28 varna: 这个做法一般是强行提供链接器级别的名字粉碎
+01:28 varna: 比如foo_bar_1 foo_bar_2 被粉碎掉，加上库版本，确定缺省导出符号
+01:28 lh_mouse: 不仅如此。它能保证你能实现 gcc 的 bootstrapping 。
+01:28 varna: 呜呼
+01:28 cleamoon__ quit:Read error: Connection reset by peer
+01:29 lh_mouse: 如果 gcc 本身用的是旧版库，但是你想编译使用新版本库的 gcc，如果不允许二者共存，直接爆炸。
+01:29 lh_mouse: 妈蛋。
+01:29 cleamoon__ joined channel
+01:29 varna: GNU那个搞法之前在频道里还炸伤了一人
+01:29 lh_mouse: 谁。
+01:30 varna: 不是常来的
+01:30 varna: 他手工升级bash, 但ncurses没跟上
+01:30 varna: 结果开机都没终端用
+01:30 lh_mouse: /./
+01:30 varna: 基本必须用介质引导一下拽起来
+01:31 lh_mouse: 0.0
+01:31 lh_mouse: 话说起来，Linux 上面有人没事蛋疼搞静态链接么。
+01:31 varna: 越来越少了
+01:31 lh_mouse: （内核什么的除外）
+01:32 varna: 用户态程序有些缺省用静态链接的，像libtcc
+01:32 varna: 但某些语言的外语言接口拒绝接受这些东西，必须动态链接
+01:33 lh_mouse: 非 M$ 的库毕竟不是亲爹养的。
+01:33 lh_mouse: 很多程序发布的时候都自己带 DLL，维护起来跟静态链接成本反而差不多。
+01:33 lh_mouse: 这伙人不知道直接把东西丢 system32 么。
+01:33 varna: 那种恶习在windoze下太常见了
+01:33 lh_mouse: 结果就是一百个程序带了一百个 libstdc++-6.dll 什么的。
+01:33 varna: 一堆打包附赠dll
+01:34 varna: 不过我觉得这个跟M$的软件包管理缺失有关
+01:35 lh_mouse: 微软没认可的貌似不会让你随便往系统目录丢东西。
+01:35 varna: 这是包管理的一个矛盾，系统目录不该乱写（即使Linux）
+01:36 varna: 但用户目录又矛盾
+01:36 varna: 233song以前参加的nix就打算解决这问题
+01:36 lh_mouse: Linux 有额外的傻逼的地方。
+01:36 varna: 不过至少在我用的时候，效果不好
+01:36 lh_mouse: 比如动态库搜索目录不包括可执行文件自身的目录。
+01:36 lh_mouse: 所以 poseidon 就直接 --prefix=/usr 了。
+01:36 lh_mouse: 傻逼 linux 。
+01:36 varna: 那个犀利的加载器和链接器脱节问题……
+01:36 varna: 加载压根不管链接的
+01:37 varna: 其实Linux还算好
+01:38 varna: Perl在这里更傻，你搞了C接口之后一大堆垃圾
+01:38 varna: 虽说可以就地加载，但需要在程序里显式指明
+01:38 varna: 堆了几坨玩意儿很难看
+01:38 lh_mouse: :joy:
+01:39 lh_mouse: 夏天买了三双鞋一天换一双。
+01:39 varna: 我印象四肢行走的哺乳动物穿了鞋之后会因为不习惯着地触感而不会走路，表现的例子比如顺拐
+01:43 lh_mouse: 哦艹  posix 居然和 iso 艹
+01:43 cleamoon__ quit:Read error: Connection reset by peer
+01:43 lh_mouse: 和 iso c 一样，允许用户自行声明函数并使用。
+01:44 cleamoon__ joined channel
+01:58 cleamoon_ joined channel
+01:58 cleamoon__ quit:Read error: Connection reset by peer
+01:58 wlemuel`` quit:Read error: Connection reset by peer
+01:58 lh_mouse quit:Ping timeout: 240 seconds
+02:00 Mokou: 先撤退
+02:00 Mokou: 诸君武运
+02:00 Mokou quit:Quit: 睡觉
+02:12 cleamoon__ joined channel
+02:12 cleamoon_ quit:Read error: Connection reset by peer
+02:27 cleamoon_ joined channel
+02:27 cleamoon__ quit:Read error: Connection reset by peer
+02:29 varna quit:Quit: leaving
+02:41 cleamoon__ joined channel
+02:41 cleamoon_ quit:Read error: Connection reset by peer
+02:55 cleamoon_ joined channel
+02:55 cleamoon__ quit:Read error: Connection reset by peer
+03:09 AutoGavy quit:Quit: Connection closed for inactivity
+03:09 cleamoon_ quit:Read error: Connection reset by peer
+03:09 cleamoon_ joined channel
+03:18 hope1 joined channel
+03:24 cleamoon__ joined channel
+03:24 cleamoon_ quit:Read error: Connection reset by peer
+03:31 hope1 quit:Ping timeout: 276 seconds
+03:38 cleamoon_ joined channel
+03:38 cleamoon__ quit:Read error: Connection reset by peer
+03:53 cleamoon__ joined channel
+03:53 cleamoon_ quit:Read error: Connection reset by peer
+04:07 cleamoon_ joined channel
+04:07 cleamoon__ quit:Read error: Connection reset by peer
+04:21 cleamoon__ joined channel
+04:21 cleamoon_ quit:Read error: Connection reset by peer
+04:35 cleamoon_ joined channel
+04:35 cleamoon__ quit:Read error: Connection reset by peer
+04:49 cleamoon__ joined channel
+04:49 cleamoon_ quit:Read error: Connection reset by peer
+05:04 cleamoon_ joined channel
+05:04 cleamoon__ quit:Read error: Connection reset by peer
+05:18 cleamoon__ joined channel
+05:18 cleamoon_ quit:Read error: Connection reset by peer
+05:29 hope1 joined channel
+05:32 cleamoon_ joined channel
+05:32 cleamoon__ quit:Read error: Connection reset by peer
+05:38 cleamoon joined channel
+05:38 cleamoon_ quit:Read error: Connection reset by peer
+05:38 cleamoon_ joined channel
+05:42 hope1 quit:Ping timeout: 244 seconds
+05:43 cleamoon quit:Ping timeout: 272 seconds
+05:50 cleamoon__ joined channel
+05:50 cleamoon_ quit:Read error: Connection reset by peer
+06:04 cleamoon_ joined channel
+06:04 cleamoon__ quit:Read error: Connection reset by peer
+06:06 hope1 joined channel
+06:11 hope1 quit:Ping timeout: 258 seconds
+06:19 cleamoon__ joined channel
+06:19 cleamoon_ quit:Read error: Connection reset by peer
+06:32 cleamoon__ quit:Read error: Connection reset by peer
+06:33 cleamoon__ joined channel
+06:47 cleamoon_ joined channel
+06:47 cleamoon__ quit:Read error: Connection reset by peer
+06:57 hope1 joined channel
+07:01 cleamoon__ joined channel
+07:01 cleamoon_ quit:Read error: Connection reset by peer
+07:16 cleamoon_ joined channel
+07:16 cleamoon__ quit:Read error: Connection reset by peer
+07:19 hope1 quit:Ping timeout: 264 seconds
+07:20 hope1 joined channel
+07:23 IntPtr quit:Ping timeout: 258 seconds
+07:30 cleamoon__ joined channel
+07:30 cleamoon_ quit:Read error: Connection reset by peer
+07:44 cleamoon_ joined channel
+07:44 cleamoon__ quit:Read error: Connection reset by peer
+07:57 hope1 quit:Ping timeout: 240 seconds
+07:58 hope1 joined channel
+07:58 cleamoon_ quit:Read error: Connection reset by peer
+07:59 cleamoon_ joined channel
+08:13 cleamoon__ joined channel
+08:13 cleamoon_ quit:Read error: Connection reset by peer
+08:31 cleamoon__ quit:Read error: Connection reset by peer
+08:37 hope1 quit:Ping timeout: 272 seconds
+08:44 cleamoon joined channel
+08:44 hope1 joined channel
+08:55 hope1: 拉丁好难啊_(:з」∠)_
+08:56 cleamoon_ joined channel
+08:57 slowcoach joined channel
+09:00 cleamoon quit:Ping timeout: 252 seconds
+09:11 cleamoon__ joined channel
+09:11 cleamoon_ quit:Read error: Connection reset by peer
+09:14 iyzsong-xx joined channel
+09:16 cc joined channel
+09:18 iyzsong-xx quit:Read error: Connection reset by peer
+09:26 cleamoon_ joined channel
+09:26 cleamoon__ quit:Read error: Connection reset by peer
+09:38 lhanjian: hope1: 拉丁！牽妹子的手跳舞！
+09:41 cleamoon__ joined channel
+09:41 cleamoon_ quit:Read error: Connection reset by peer
+09:55 cleamoon_ joined channel
+09:55 cleamoon__ quit:Read error: Connection reset by peer
+10:02 hope1 quit:Ping timeout: 250 seconds
+10:05 hope1 joined channel
+10:06 lhanjian: hope1: 拉丁！牽妹子的手跳舞！
+10:08 cleamoon_: 一路跳到房间
+10:10 cleamoon__ joined channel
+10:10 cleamoon_ quit:Read error: Connection reset by peer
+10:13 AutoGavy joined channel
+10:13 hope1 quit:Ping timeout: 276 seconds
+10:13 cc quit:Remote host closed the connection
+10:13 cc joined channel
+10:15 cc__ joined channel
+10:18 cc quit:Ping timeout: 252 seconds
+10:24 cleamoon_ joined channel
+10:24 cleamoon__ quit:Read error: Connection reset by peer
+10:36 lhanjian: COD12里面假想的因为动能防空武器的普及导致空军/导弹作用大幅减弱的那一天快要到来了？
+10:36 lhanjian: http://www.haijiangzx.com/2016/0218/755793.shtml
+10:38 cleamoon__ joined channel
+10:41 cleamoon_ quit:Ping timeout: 244 seconds
+10:53 cleamoon_ joined channel
+10:53 cleamoon__ quit:Read error: Connection reset by peer
+11:08 cleamoon__ joined channel
+11:08 cleamoon_ quit:Read error: Connection reset by peer
+11:23 cleamoon_ joined channel
+11:23 cleamoon__ quit:Read error: Connection reset by peer
+11:32 guowang joined channel
+11:37 cleamoon__ joined channel
+11:37 cleamoon_ quit:Read error: Connection reset by peer
+11:52 cleamoon_ joined channel
+11:52 cleamoon__ quit:Read error: Connection reset by peer
+11:56 kevingu joined channel
+12:06 cleamoon__ joined channel
+12:06 cleamoon_ quit:Read error: Connection reset by peer
+12:19 AutoGavy quit:Quit: Connection closed for inactivity
+12:21 cleamoon_ joined channel
+12:21 cleamoon__ quit:Read error: Connection reset by peer
+12:24 guowang quit:Ping timeout: 264 seconds
+12:30 kevingu quit:Remote host closed the connection
+12:35 cleamoon__ joined channel
+12:35 cleamoon_ quit:Read error: Connection reset by peer
+12:50 cleamoon_ joined channel
+12:50 cleamoon__ quit:Read error: Connection reset by peer
+12:57 guowang joined channel
+13:04 cleamoon__ joined channel
+13:04 cleamoon_ quit:Read error: Connection reset by peer
+13:14 lhanjian: cleamoon__: 绅士在刷屏啊
+13:19 cleamoon_ joined channel
+13:19 cleamoon__ quit:Read error: Connection reset by peer
+13:33 cleamoon__ joined channel
+13:33 cleamoon_ quit:Read error: Connection reset by peer
+13:41 iyzsong-xx joined channel
+13:48 cleamoon_ joined channel
+13:48 cleamoon__ quit:Read error: Connection reset by peer
+14:01 sottd joined channel
+14:01 sottd: 频道里有谁通过网上租过房子的吗,我打了4个电话遇到了1个忙音3个通话中...这是不是套路
+14:03 cleamoon__ joined channel
+14:03 cleamoon_ quit:Read error: Connection reset by peer
+14:18 cleamoon_ joined channel
+14:18 cleamoon__ quit:Read error: Connection reset by peer
+14:32 kevingu joined channel
+14:33 cleamoon__ joined channel
+14:33 cleamoon_ quit:Read error: Connection reset by peer
+14:36 kevingu quit:Ping timeout: 246 seconds
+14:44 Mokou joined channel
+14:48 cleamoon_ joined channel
+14:48 cleamoon__ quit:Read error: Connection reset by peer
+15:03 cleamoon__ joined channel
+15:03 cleamoon_ quit:Read error: Connection reset by peer
+15:09 hope1 joined channel
+15:15 hope1 quit:Ping timeout: 246 seconds
+15:18 cleamoon_ joined channel
+15:18 cleamoon__ quit:Read error: Connection reset by peer
+15:32 kevingu joined channel
+15:32 cleamoon_ quit:Read error: Connection reset by peer
+15:33 cleamoon_ joined channel
+15:39 kevingu quit:Ping timeout: 252 seconds
+15:42 xxxxxxxx joined channel
+15:45 xxxxxxxxx quit:Ping timeout: 276 seconds
+15:48 kevingu joined channel
+15:48 cleamoon__ joined channel
+15:48 cleamoon_ quit:Read error: Connection reset by peer
+15:53 kevingu quit:Remote host closed the connection
+15:53 iyzsong-xx: 0 0
+16:00 kevingu joined channel
+16:04 cleamoon_ joined channel
+16:04 cleamoon__ quit:Read error: Connection reset by peer
+16:19 cleamoon__ joined channel
+16:19 cleamoon_ quit:Read error: Connection reset by peer
+16:19 kevingu quit:Remote host closed the connection
+16:33 yimis joined channel
+16:33 cleamoon__ quit:Read error: Connection reset by peer
+16:34 cleamoon__ joined channel
+16:42 yimis quit:Quit: yimis
+16:49 cleamoon_ joined channel
+16:49 cleamoon__ quit:Read error: Connection reset by peer
+17:04 cleamoon__ joined channel
+17:07 cleamoon_ quit:Ping timeout: 240 seconds
+17:18 cleamoon_ joined channel
+17:18 cleamoon__ quit:Read error: Connection reset by peer
+17:32 axmmisaka joined channel
+17:33 cleamoon__ joined channel
+17:33 cleamoon_ quit:Read error: Connection reset by peer
+17:35 guowang: 那个包提供了 这个文件啊 /usr/src/kernels/3.10.0-327.22.2.el7.x86_64 之前那个包被我不小心rm了
+17:38 axmmisaka: 不能用表情好不爽
+17:38 axmmisaka: 给您找找
+17:39 sottd: 23333
+17:45 axmmisaka: 昨天过来connect显示我被ban了
+17:45 axmmisaka: 吓得我
+17:48 cleamoon_ joined channel
+17:48 cleamoon__ quit:Read error: Connection reset by peer
+17:48 lhanjian: axmmisaka: 新人酱？
+17:48 axmmisaka: 是的
+17:48 lhanjian: 贴吧来的？
+17:48 axmmisaka: dalao好
+17:49 axmmisaka: 是的
+17:49 lhanjian: 这个“被袭胸的炮姐”是你？
+17:49 lhanjian: axmmisaka: 求不黑，弱鸡一个
+17:50 axmmisaka: 您怎么知道的
+17:50 lhanjian: 嘿，社工还不容易啊
+17:50 axmmisaka: 哇
+17:51 axmmisaka: 好像百度就出来了
+18:03 cleamoon__ joined channel
+18:03 cleamoon_ quit:Read error: Connection reset by peer
+18:06 cc__ quit:Remote host closed the connection
+18:15 iyzsong-xx quit:Quit: -.-
+18:18 cleamoon_ joined channel
+18:18 hope1 joined channel
+18:21 cleamoon__ quit:Ping timeout: 240 seconds
+18:27 hope1 quit:Ping timeout: 264 seconds
+18:33 cleamoon__ joined channel
+18:33 cleamoon_ quit:Read error: Connection reset by peer
+18:43 Matsune joined channel
+18:48 cleamoon_ joined channel
+18:48 cleamoon__ quit:Read error: Connection reset by peer
+18:57 Matsune: 话说最近好不太平啊 这些dalao们不会一言不合打起来了吧
+19:03 cleamoon__ joined channel
+19:03 cleamoon_ quit:Read error: Connection reset by peer
+19:18 cleamoon_ joined channel
+19:18 cleamoon__ quit:Read error: Connection reset by peer
+19:28 condy: lhanjian 好厉害！
+19:33 cleamoon__ joined channel
+19:33 cleamoon_ quit:Read error: Connection reset by peer
+19:34 guowang quit:Ping timeout: 250 seconds
+19:47 cleamoon_ joined channel
+19:47 cleamoon__ quit:Read error: Connection reset by peer
+19:52 iyzsong joined channel
+19:53 iyzsong quit:Changing host
+19:53 iyzsong joined channel
+19:53 jack_rip_vim joined channel
+19:53 jack_rip_vim: 大家好
+19:54 iyzsong: 吼啊
+19:54 jack_rip_vim: 吼什么？
+19:57 Matsune: http://tieba.baidu.com/p/4658466195
+19:57 Matsune: 背负日本未来的东京大学文学部昨日的课堂情景
+20:02 iyzsong: jack_rip_vim: _(:з」∠)_
+20:02 cleamoon_ quit:Read error: Connection reset by peer
+20:02 cleamoon_ joined channel
+20:02 jack_rip_vim: 。。。。
+20:05 Mokou: 	syscall(SYS_getrandom, buf, sizeof(buf), 0);
+20:05 Mokou: 啊按錯
+20:16 stardustx joined channel
+20:17 cleamoon__ joined channel
+20:17 cleamoon_ quit:Read error: Connection reset by peer
+20:18 stardustx joined channel
+20:18 stdstx left channel:"undefined"
+20:20 stdstx joined channel
+20:24 hoxily joined channel
+20:32 cleamoon_ joined channel
+20:32 cleamoon__ quit:Read error: Connection reset by peer
+20:34 jack_rip_vim: hmmm
+20:34 jack_rip_vim left channel:"Leaving"
+20:42 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+20:45 iyzsong: (┙>∧<)┙へ┻┻
+20:47 cleamoon__ joined channel
+20:50 cleamoon_ quit:Ping timeout: 246 seconds
+20:56 T-J-M quit:Ping timeout: 272 seconds
+20:58 cleamoon__ quit:Quit: Leaving
+20:59 T-J-M joined channel
+21:05 T-J-M quit:Ping timeout: 246 seconds
+21:21 cleamoon joined channel
+21:30 cleamoon: 国有媒体报道（另一来源），新闻出版广电总局对备受争议的移动游戏审批要求进行了辟谣。广电总局否认游戏开发者需要提供5张光盘2部手机，声称这与事实严重不符。根据新闻出版广电官网列举的要求，它只要求3张光盘最多2部手机。
+21:32 cleamoon: 青海一孕妇受传唤8小时后流产，公安局被判赔233.1元
+21:45 yimis joined channel
+21:45 yimis quit:Client Quit
+21:54 iyzsong: -.-
+22:26 hoxily quit:Quit: Leaving
+22:55 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:12 slowcoach quit:Quit: slowcoach
+23:22 hope1 joined channel
+23:28 hope1 quit:Ping timeout: 240 seconds
+23:31 cleamoon quit:Read error: Connection reset by peer
+23:34 hope1 joined channel
+23:37 FrankHB joined channel
+23:39 hope1 quit:Ping timeout: 260 seconds
+23:48 Matsune quit:Read error: Connection reset by peer
+23:55 T-J-M joined channel
+23:57 lh_mouse joined channel

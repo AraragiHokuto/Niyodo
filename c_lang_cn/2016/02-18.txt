@@ -1,0 +1,110 @@
+00:02 hatlist: 熙熙攘攘
+00:09 miao233_ joined channel
+00:16 FallingStars quit:Remote host closed the connection
+00:20 lh_mouse quit:Read error: Connection reset by peer
+00:21 ASenR joined channel
+00:24 Mokou quit:Quit: 睡觉
+00:44 miao233_ quit:Remote host closed the connection
+00:45 miao233_ joined channel
+00:46 miao233_ quit:Remote host closed the connection
+00:46 miao233_ joined channel
+01:06 ASenR quit:Ping timeout: 255 seconds
+01:18 cleamoon quit:Ping timeout: 252 seconds
+01:34 hatlist quit:Read error: Connection reset by peer
+01:34 Meow-J quit:Ping timeout: 240 seconds
+01:38 ASenR joined channel
+01:45 hatlist joined channel
+01:46 Meow-J joined channel
+02:48 hope1 quit:Ping timeout: 265 seconds
+03:20 hatlist quit:Quit: Connection closed for inactivity
+03:20 ASenR quit:Ping timeout: 244 seconds
+04:14 xxxxxxxx quit:Quit: Leaving...
+04:45 whocares_2_ quit:Remote host closed the connection
+04:46 whocares_2 joined channel
+04:56 FallingStars joined channel
+06:02 FallingStars quit:Remote host closed the connection
+08:12 miao233_ quit:Quit: Leaving.
+08:18 cleamoon joined channel
+08:48 hatlist joined channel
+08:49 cleamoon: hatlist, 爆
+08:51 hatlist: 这基佬绅士
+08:57 lh_mouse joined channel
+09:00 StardustX joined channel
+09:14 cleamoon: Bellman–Ford algorithm和Dijkstra's algorithm到底有什么区别？除了BF能发现负重环
+09:44 hatlist: 可以类比为DFS和BFS的关系吧，我记得
+09:45 hatlist: cleamoon: 
+09:45 cleamoon: hatlist, nani？
+09:46 hatlist: 好久没看了，不过这个类比还是有道理的
+09:47 cleamoon: 就是说，没卵区别？
+09:47 hatlist: ……
+09:47 hatlist: 具体区别我就记不起来几项了
+09:48 cleamoon: 我看的区别是一个能处理负重，一个不能
+09:48 cleamoon: 然后复杂度不一样
+09:49 cleamoon: 可是无法理解负重有毛区别
+09:56 iyzsong joined channel
+10:39 ASenR joined channel
+10:52 hatlist: 感觉要GG了，喝了半瓶20多天前开的纯净水！
+10:57 lh_mouse: hatlist, 摸摸。/
+10:57 iyzsong: orz
+10:57 hatlist: lh_mouse: 捏耗鼻
+11:05 ASenR quit:Ping timeout: 265 seconds
+11:06 ASenR joined channel
+11:25 StardustX quit:Remote host closed the connection
+12:51 iyzsong: 吱吱~
+12:52 FallingStars joined channel
+13:14 lh_not_bot: iyzsong: 0.0
+13:19 iyzsong: 妹吱!
+13:21 lh_not_bot: iyzsong: 0.0
+13:32 Mokou joined channel
+13:33 hatlist: lh_not_bot: 小耗有妹吱了，不和小耗玩了！
+13:34 lh_not_bot: 并没有。
+13:34 hatlist: 好悲伤，我也是
+14:00 iyzsong quit:Ping timeout: 244 seconds
+14:01 lh_mouse: geordi, -c struct alignas(16) foo { };
+14:01 geordi: Success
+14:09 xxxxxxxx joined channel
+14:10 lh_not_bot: geordi: << is_trivial<foo>::value; struct foo { constexpr foo(int i) : x (i) { } int x; };
+14:10 geordi: false
+14:18 hope1 joined channel
+14:42 FallingStars quit:Remote host closed the connection
+14:49 StardustX joined channel
+15:27 Youmu joined channel
+16:18 ASenR quit:Ping timeout: 276 seconds
+16:19 ASenR joined channel
+16:48 iyzsong joined channel
+18:15 cleamoon quit:Read error: Connection reset by peer
+18:41 xc joined channel
+18:47 xc: 怎么设置能记录聊天记录的bot啊，想这个频道一样，我想给我的频道也设置个
+18:47 xc: :/
+19:11 iyzsong: :\
+19:32 iyzsong` joined channel
+19:33 iyzsong quit:Ping timeout: 265 seconds
+19:34 iyzsong` quit:Remote host closed the connection
+19:44 iyzsong joined channel
+19:44 Youmu quit:Quit: Connection closed for inactivity
+20:15 xc quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+20:28 yzld2002 joined channel
+20:30 hope1: 啊真是的
+20:30 hope1: 对某些甜得过分的作品完全没有抵抗力
+20:41 iyzsong: 是谁？
+20:42 ASenR quit:Ping timeout: 255 seconds
+20:49 StardustX joined channel
+20:56 StardustX quit:Quit: leaving
+21:15 StardustX joined channel
+22:52 whocares_2_ joined channel
+22:52 whocares_2 quit:Ping timeout: 240 seconds
+22:55 yzld2002 quit:Remote host closed the connection
+23:00 FrankHB joined channel
+23:04 iyzsong quit:Quit: :3
+23:26 lh_mouse: 0.0
+23:29 lh_mouse: geordi, << queue<int>().size();
+23:29 geordi: 0
+23:29 lh_mouse: geordi, << stack<int>().size();
+23:29 geordi: 0
+23:29 lh_mouse: geordi, << priority_queue<int>().size();
+23:29 geordi: 0
+23:31 FrankHB: 吱想搞什么大煋闻。
+23:40 hatlist quit:Quit: Connection closed for inactivity
+23:53 miao233_ joined channel
+23:57 lh_mouse: FrankHB, ヲ想把 StreamBuffer 那个 GetSize() 删了。
+23:58 miao233_ quit:Client Quit

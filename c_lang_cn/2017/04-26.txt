@@ -1,0 +1,71 @@
+00:05 iyzsong quit:Ping timeout: 258 seconds
+00:23 iyzsong joined channel
+00:26 iyzsong quit:Client Quit
+00:27 lh_cat quit:Quit: Connection closed for inactivity
+01:16 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam %0; fstsw ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:16 geordi: error: number of operands mismatch for `fxam'
+01:16 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam st; fstsw ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:16 geordi: Same error.
+01:16 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam %st; fstsw ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:16 geordi: error: invalid 'asm': operand number missing after %-letter
+01:17 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam %%st; fstsw ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:17 geordi: error: number of operands mismatch for `fxam'
+01:17 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam; fstsw ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:17 geordi: error: undefined reference to 'ax'
+01:17 lh_mouse: geordi, << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam; fstsw %%ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:17 geordi: 30720
+01:17 lh_mouse: geordi, <<hex << fxam(0.0);   int fxam(long double f){ uint16_t fcw; __asm__ ("fxam; fstsw %%ax;" : "=a"(fcw) : "t"(f) ); return fcw; }
+01:17 geordi: 7800
+01:27 lh_mouse quit:Quit: night.
+01:42 nobodyzxc quit:Quit: leaving
+01:56 switch quit:Read error: Connection reset by peer
+02:47 Mokou quit:Remote host closed the connection
+06:25 perr joined channel
+06:25 perr quit:Changing host
+06:25 perr joined channel
+07:01 Taggnostr quit:Ping timeout: 255 seconds
+07:10 Taggnostr joined channel
+08:06 Youmu quit:Quit: Connection closed for inactivity
+08:20 FrankHB quit:Ping timeout: 260 seconds
+08:49 FrankHB joined channel
+09:08 yimis joined channel
+09:10 lh_mouse joined channel
+10:08 Youmu joined channel
+13:21 zhangoke joined channel
+13:41 nobodyzxc joined channel
+15:24 nobodyzxc quit:Quit: leaving
+15:25 nobodyzx1 joined channel
+15:26 nobodyzx1 quit:Client Quit
+15:26 nobodyzxc joined channel
+15:27 nobodyzxc quit:Client Quit
+15:29 nobodyzxc joined channel
+15:30 nobodyzxc quit:Client Quit
+15:30 nobodyzxc joined channel
+15:37 nobodyzxc quit:Quit: leaving
+15:37 nobodyzxc joined channel
+15:40 Dove joined channel
+15:44 Dove quit:Client Quit
+15:48 Mokou joined channel
+16:58 whocares_2 joined channel
+16:59 whocares_2_ quit:Ping timeout: 268 seconds
+17:37 Dove joined channel
+17:49 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+17:55 nobodyzxc quit:Quit: leaving
+18:10 FrankHB quit:Ping timeout: 240 seconds
+18:12 yimis quit:Quit: yimis
+18:51 fy1 quit:Remote host closed the connection
+18:51 fy joined channel
+18:55 FrankHB joined channel
+19:55 yujianwo joined channel
+20:03 yujianwo quit:Quit: Leaving
+20:59 nobodyzxc joined channel
+21:02 nobodyzxc quit:Client Quit
+21:02 nobodyzxc joined channel
+21:03 nobodyzxc quit:Client Quit
+21:04 nobodyzxc joined channel
+21:20 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+22:01 yujianwo joined channel
+23:09 iyzsong joined channel
+23:21 iyzsong: _(:з」∠)_
+23:41 iyzsong quit:Ping timeout: 240 seconds
+23:55 perr quit:Quit: Leaving

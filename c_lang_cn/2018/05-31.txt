@@ -1,0 +1,140 @@
+00:00 cleamoon_: 我看很多推荐刷劳模，都说刷baal不多掉啥可是慢
+00:00 Dove|2: 冰法刷底材不错，刷装备还是比不过双热。
+00:00 cleamoon_: soga
+00:00 Dove|2: 劳模有些东西不出的
+00:00 cleamoon_: 等等，底材？哪里出底材
+00:00 cleamoon_: 我连买都买不到合适的孔
+00:00 Dove|2: 各种88级小怪容易出底材
+00:01 Dove|2: 每一幕都有一两个地方有这种小怪，冰法去刷很爽。
+00:02 Dove|2: 但是暗金装备还是双热刷baal来得快
+00:02 Dove|2: 底材最难刷我感觉
+00:02 Dove|2: 一般的底材还好，打打就会有
+00:03 Dove|2: 好的底材比符文都贵
+00:03 cleamoon_: 我不需要好的了，能用就行
+00:04 Dove|2: 睡觉去了
+00:04 varna: 噗叽啪
+00:04 Dove|2: 诸君晚安，夜间愉快。
+00:04 Dove|2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+00:08 x420520 quit:Ping timeout: 260 seconds
+00:12 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/tc/32_237090.jpg@596w_1l.jpg  
+00:12 varna quit:Ping timeout: 268 seconds
+00:12 x420520 joined channel
+00:13 varna joined channel
+00:23 x420520 quit:Ping timeout: 240 seconds
+00:26 x420520 joined channel
+00:27 varna quit:Ping timeout: 256 seconds
+01:41 Taggnostr3 joined channel
+01:42 Taggnostr quit:Ping timeout: 245 seconds
+01:48 Taggnostr joined channel
+01:49 Taggnostr3 quit:Ping timeout: 256 seconds
+01:56 Taggnostr3 joined channel
+01:57 Taggnostr quit:Ping timeout: 256 seconds
+02:10 lh_ideapad quit:Remote host closed the connection
+02:30 lh_mouse quit:Ping timeout: 256 seconds
+02:41 x420520 quit:Ping timeout: 260 seconds
+02:41 x420520 joined channel
+02:53 cleamoon_ quit:Quit: Connection closed for inactivity
+04:20 cleamoon_ joined channel
+04:54 q_xjfd joined channel
+07:16 q_xjfd quit:Remote host closed the connection
+07:39 q_xjfd joined channel
+08:08 q_xjfd quit:Ping timeout: 248 seconds
+08:29 sixand joined channel
+09:01 tutu_wind joined channel
+09:12 wlemuel joined channel
+09:36 leemeng joined channel
+09:48 lh_mouse joined channel
+09:56 lhanjian_: cleamoon_: 绅士还在玩大菠萝2吗
+10:09 wlemuel quit:Ping timeout: 260 seconds
+10:11 wlemuel joined channel
+10:11 lh_ideapad joined channel
+10:21 sixand quit:Ping timeout: 248 seconds
+10:47 matchray: std::knuth_b
+10:47 matchray: 高老頭
+10:48 lhanjian_: matchray: 高德纳怎么了？
+11:00 wlemuel quit:Read error: Connection reset by peer
+11:01 wlemuel joined channel
+11:10 CyrusYzGTt quit:Ping timeout: 264 seconds
+11:34 leemeng quit:Quit: leaving
+12:02 wlemuel quit:Ping timeout: 240 seconds
+12:18 lh_mouse quit:Read error: Connection reset by peer
+12:18 lh_mouse joined channel
+12:45 lh_mouse quit:Read error: Connection reset by peer
+12:56 wlemuel joined channel
+13:03 wlemuel quit:Ping timeout: 240 seconds
+13:32 wlemuel joined channel
+14:17 lh_mouse joined channel
+14:25 \s_ joined channel
+14:25 \s quit:Read error: Connection reset by peer
+14:29 lhanjian_: https://usercontent.irccloud-cdn.com/file/ry1mjfJU/image.png
+14:29 leemeng joined channel
+14:30 \s_ quit:Ping timeout: 268 seconds
+14:37 \s joined channel
+14:57 lh_ideapad: geordi, enum class { };
+14:57 geordi: error: unnamed scoped enum is not allowed
+14:58 lh_ideapad: geordi, << bar; enum class foo { bar = 42 };
+14:58 geordi: error: 'bar' was not declared in this scope
+15:04 cleamoon_ quit:Quit: Connection closed for inactivity
+15:05 CyrusYzGTt joined channel
+15:12 lh_ideapad: geordi, << foo::bar; enum class foo { bar = 42 };
+15:12 geordi: error: no match for 'operator<<' in 'cout << bar' (operand types are 'ostream' {aka 'ostream'} and 'foo')
+15:12 lh_ideapad: geordi, << foo::bar; enum foo : unsigned char { bar = 42 };
+15:12 geordi: 42
+15:12 lh_ideapad: geordi, << foo::bar; enum foo : char { bar = 42 };
+15:12 geordi: 42
+15:18 \s quit:Remote host closed the connection
+15:20 \s joined channel
+15:22 CyrusYzGTt quit:Ping timeout: 245 seconds
+15:35 CyrusYzGTt joined channel
+15:40 \s quit:Ping timeout: 244 seconds
+15:41 \s joined channel
+16:05 CyrusYzGTt quit:Ping timeout: 256 seconds
+16:15 lh_mouse quit:Read error: Connection reset by peer
+16:16 lh_mouse joined channel
+16:17 CyrusYzGTt joined channel
+16:18 \s quit:Remote host closed the connection
+16:19 \s joined channel
+16:32 \s_ joined channel
+16:35 \s quit:Ping timeout: 256 seconds
+16:45 \s_ quit:Ping timeout: 260 seconds
+16:49 \s joined channel
+16:54 \s_ joined channel
+16:57 \s_ quit:Client Quit
+16:57 \s quit:Ping timeout: 256 seconds
+17:09 lh_ideapad quit:Remote host closed the connection
+17:47 lh_mouse quit:Read error: Connection reset by peer
+17:48 lh_mouse joined channel
+18:02 lh_ideapad joined channel
+18:10 wlemuel quit:Ping timeout: 248 seconds
+18:25 wlemuel joined channel
+18:29 T2 joined channel
+18:42 tutu_wind quit:Ping timeout: 256 seconds
+18:45 wlemuel quit:Ping timeout: 244 seconds
+18:50 whocares_2_ quit:Remote host closed the connection
+19:05 tutu_wind joined channel
+19:10 tutu_wind quit:Ping timeout: 260 seconds
+19:15 leemeng quit:Quit: leaving
+19:25 cleamoon_ joined channel
+19:31 zhangoke joined channel
+19:57 CyrusYzGTt quit:Ping timeout: 244 seconds
+20:18 azshtp joined channel
+20:18 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:36 azshtp quit:Ping timeout: 260 seconds
+21:03 iyzsong joined channel
+21:04 lh_ideapad quit:Remote host closed the connection
+21:33 iyzsong quit:Ping timeout: 260 seconds
+21:34 iyzsong joined channel
+21:43 tutu_wind joined channel
+21:55 cleamoon_: lhanjian_: 在玩呀
+21:59 varna joined channel
+22:02 tutu_wind quit:Ping timeout: 256 seconds
+22:02 varna: 噗叽啪
+22:05 varna: 重新推一下某恋爱游戏的同人歌：Wake me when it's over (Aviators)
+22:05 varna: https://genius.com/Aviators-wake-me-when-its-over-lyrics <-- Lyrics
+22:50 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+22:51 zhangoke quit:Quit: zhangoke
+22:52 iyzsong joined channel
+23:11 whocares_2 joined channel
+23:48 lh_mouse quit:Ping timeout: 245 seconds
+23:54 varna quit:Ping timeout: 244 seconds
+23:56 iyzsong quit:Ping timeout: 240 seconds

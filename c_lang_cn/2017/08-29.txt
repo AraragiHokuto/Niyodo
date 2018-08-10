@@ -1,0 +1,370 @@
+00:11 Stevearzh joined channel
+00:12 Izumo joined channel
+00:28 lh_mouse quit:Ping timeout: 240 seconds
+02:20 Izumo quit:Quit: Connection closed for inactivity
+04:57 Youmu quit:Quit: Connection closed for inactivity
+05:11 Stevearzh quit:Ping timeout: 276 seconds
+07:42 Sm4rkey_ joined channel
+08:06 jin7boy joined channel
+08:08 FrankHB quit:Ping timeout: 248 seconds
+08:22 Sm4rkey_ quit:Remote host closed the connection
+08:24 Sm4rkey_ joined channel
+08:42 FrankHB joined channel
+08:44 Sm4rkey_ quit:Remote host closed the connection
+09:52 Youmu joined channel
+09:53 StardustX joined channel
+10:19 sottd joined channel
+10:19 sottd: svn大傻逼
+10:20 sottd: 这里出现了一个bug,最后发现是文件名大小写在windows上和linux上不同处理方式的问题
+10:20 sottd: 最后想要改一下文件名commit的时候
+10:20 sottd: svn不让改了..
+10:20 sottd: 无论怎么修改回小写，最后都会变成大写
+10:20 sottd: Test.json -> test.json
+10:52 jin7boy quit:Remote host closed the connection
+10:55 lh_mouse joined channel
+11:26 kingwen0302 joined channel
+11:28 kingwen0302 quit:Client Quit
+11:48 sottd quit:Remote host closed the connection
+11:52 Arisaka joined channel
+12:09 xhe joined channel
+13:01 StardustX quit:Remote host closed the connection
+13:02 StardustX joined channel
+13:13 xhe_ joined channel
+13:15 xhe quit:Ping timeout: 240 seconds
+13:15 xhe_ is now known as xhe
+13:42 JakesOs joined channel
+13:45 xhe quit:Quit: leaving
+13:50 whocares_2_ joined channel
+13:51 whocares_2 quit:Ping timeout: 246 seconds
+14:06 Sm4rkey quit:Ping timeout: 240 seconds
+14:09 hxhb joined channel
+14:22 Arisaka quit:Quit: Connection closed for inactivity
+14:25 hxhb quit:Remote host closed the connection
+14:25 hxhb joined channel
+14:28 hxhb quit:Remote host closed the connection
+14:28 hxhb joined channel
+14:35 cjh9004 joined channel
+14:51 simon_mrzx joined channel
+15:01 Sm4rkey joined channel
+15:27 hxhb quit:Remote host closed the connection
+15:27 hxhb joined channel
+15:28 hxhb quit:Remote host closed the connection
+15:28 hxhb joined channel
+15:37 hxhb quit:Remote host closed the connection
+15:37 hxhb joined channel
+15:37 dh_pc joined channel
+15:57 condy quit:Ping timeout: 240 seconds
+16:00 Stevearzh joined channel
+16:00 condy joined channel
+16:07 condy quit:Ping timeout: 248 seconds
+16:15 condy joined channel
+16:22 JakesOs quit:Quit: JakesOs
+16:24 hxhb quit:Remote host closed the connection
+16:24 hxhb joined channel
+16:39 cknt joined channel
+16:40 whocares_2_ quit:Ping timeout: 246 seconds
+16:40 whocares_2 joined channel
+16:54 hxhb quit:Remote host closed the connection
+16:54 hxhb joined channel
+16:56 hxhb quit:Remote host closed the connection
+16:56 hxhb joined channel
+17:03 hxhb quit:Remote host closed the connection
+17:03 hxhb joined channel
+17:03 xhe joined channel
+17:07 hxhb quit:Remote host closed the connection
+17:07 hxhb joined channel
+17:12 Arisaka joined channel
+17:12 Arisaka quit:Client Quit
+17:13 Arisaka joined channel
+17:15 simon_mrzx joined channel
+17:18 hxhb quit:Remote host closed the connection
+17:18 hxhb joined channel
+17:20 StardustX quit:Quit: 告辭
+17:27 hxhb quit:Remote host closed the connection
+17:27 hxhb joined channel
+17:44 hxhb quit:Remote host closed the connection
+17:44 hxhb joined channel
+17:55 FrankHB quit:Ping timeout: 240 seconds
+17:59 FrankHB joined channel
+18:00 hxhb quit:Remote host closed the connection
+18:00 hxhb joined channel
+18:04 FrankHB quit:Ping timeout: 260 seconds
+18:05 dh_pc quit:Remote host closed the connection
+18:09 hxhb quit:Remote host closed the connection
+18:09 hxhb joined channel
+18:15 hxhb quit:Remote host closed the connection
+18:15 hxhb joined channel
+18:22 lh_not_bot quit:Remote host closed the connection
+18:26 sottd joined channel
+18:29 sottd quit:Client Quit
+18:31 lh_not_bot joined channel
+19:22 iyzsong-m joined channel
+19:26 FrankHB joined channel
+19:28 Plough joined channel
+19:32 iyzsong-m: (；´Д｀)
+19:39 Youmu: iyzsong-m: 下班了 ?
+19:43 Mokou joined channel
+19:45 Mokou_ joined channel
+19:46 Plough quit:Ping timeout: 246 seconds
+19:49 iyzsong-m quit:Read error: Connection reset by peer
+19:49 Mokou quit:Ping timeout: 240 seconds
+19:51 iyzsong joined channel
+19:52 Mokou_ quit:Ping timeout: 252 seconds
+19:59 mao joined channel
+20:05 mao quit:Read error: Connection reset by peer
+20:06 mao joined channel
+20:08 mao quit:Read error: Connection reset by peer
+20:08 mao joined channel
+20:11 hxhb quit:Remote host closed the connection
+20:12 xhe quit:Quit: leaving
+20:18 mao quit:Read error: Connection reset by peer
+20:20 xhe joined channel
+20:20 mao joined channel
+20:44 mao_ joined channel
+20:46 mao_ quit:Remote host closed the connection
+20:47 mao quit:Ping timeout: 248 seconds
+20:47 mao_ joined channel
+20:50 dantmnf quit:Quit: ZNC - http://znc.in
+20:52 dantmnf joined channel
+20:56 Plough joined channel
+20:58 mao_ quit:Ping timeout: 248 seconds
+21:09 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/g9/7t_187534.jpg@596w_1l.jpg   #这能算立功吗
+21:18 xhe quit:Ping timeout: 255 seconds
+21:19 xhe joined channel
+21:22 xhe quit:Client Quit
+21:39 iyzsong: _(:з」∠)_
+21:40 varna joined channel
+21:45 cleamoon: varna: 爆
+21:45 varna: cleamoon: 爆
+21:46 varna: cleamoon: 上周日我终于虐了路德维希一回
+21:47 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/g9/pa_188030.jpg@596w_1l.jpg
+21:47 cleamoon: 那是啥
+21:47 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/g9/qj_188038.jpg@596w_1l.jpg
+21:48 varna: cleamoon: 老猎人DLC第一个Boss, 那个会用月光大剑的驴
+21:48 cleamoon: .......完全没印象
+21:50 varna: 可搜「诅咒的路德维希」
+21:50 varna: 他有几个真直死（垂降/跳砸）和伪直死（驴车）
+21:50 varna: 其余的招式差不多两三下才能搞死我
+21:54 varna: 路德维希和劳伦斯是我两大心病，他们都能解决掉的话，DLC近乎观光
+21:55 Plough: 现在我更加不明白一个问题了，为什么等绿灯过马路是精日
+21:55 Plough: 在东京老老实实等绿灯的都是中国人……
+21:55 varna: 因为日本人也抢红灯
+21:55 Plough: 日本人别说红灯了
+21:56 Plough: 马路上没车的时候直接从路中间穿过去，斑马线都不管
+21:56 varna: 这应该是个传火的
+22:03 Plough: 今天去我校探了探路
+22:04 Plough: 从高田马场到我校的路上有个小学
+22:04 varna: 有个小学
+22:04 Plough: 不知道以后我上学的时候能不能看到幼女
+22:04 varna: 想着小学全速地前进 报案被捕那算个屁
+22:04 Plough: uccu
+22:04 Plough: 会被遣返的
+22:04 varna: 幼女幼女平坦的胸口 有着一颗纯洁的心
+22:05 Plough: 过了小学走一段然后穿过户山公园就是我校
+22:05 Plough: 总之附近环境不错，也没什么大路
+22:05 Plough: 就是教学楼太像化工厂
+22:06 cleamoon: 正好诱拐
+22:06 Plough: 诱拐不了，我七点跑过去公园里还一堆人
+22:07 cleamoon: 不过东京那么挤穿马路不被撞成橡皮糖
+22:07 varna: 他们都是萝莉控
+22:07 Plough: 东京人开车很慢的
+22:07 cleamoon: 你需要懂得分享
+22:07 Plough: 大概是法规要求
+22:07 varna: 国内是因为限速四十的路只要没有监控就会被开出六十
+22:07 Plough: cleamoon, 昨天上午池袋有个中国人试图当街强奸，被一堆人按倒了
+22:08 varna: Plough: 他应该诱奸
+22:08 cleamoon: 当街强奸什么鬼
+22:08 Plough: varna, 据说是分手了的前女友，试图强行占有
+22:08 cleamoon: 池袋不是闹市吗....
+22:08 cleamoon: .........
+22:08 Plough: 对呀
+22:08 Plough: 所以才轰动
+22:08 cleamoon: 什么鬼
+22:08 varna: 池袋盛产怪物
+22:08 Plough: 上午十点闹市区有人当街脱裤子试图强奸，你想想这是个什么景象
+22:08 varna: 比如说圆珠笔教主，或者使用垃圾桶电线杆饮料机殴打情报贩子的酒店服务生
+22:09 varna: 还有童颜巨乳兵库音的妖刀娘
+22:09 cleamoon: 如果是个大JJ妹子的话更刺激了
+22:09 Plough: 想太多
+22:09 varna: @豆汁味的妻海
+22:09 Plough: 蝗国修正过的强奸罪已经包括强奸男性了
+22:10 Plough: 或者说根本不限定受害者性别
+22:10 varna: 二 人 幸 终
+22:11 Plough: 先辈那时候应该还是旧强奸罪，所以不要紧（确信）
+22:11 varna: Q.E.D.
+22:12 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/g9/z1_187795.jpg@596w_1l.jpg
+22:12 Plough: 这次我 来的时候坐的倒是787
+22:12 Plough: 那个窗户似乎没法彻底调黑
+22:13 Plough: varna, 啊对了，全日空飞机餐有个极好的地方
+22:13 Plough: 给筷子
+22:13 Plough: 东航每次都让我用叉子吃海鲜面……
+22:14 cleamoon: 手抓面
+22:14 varna: 你是海军吧！你要知耻、知耻！
+22:14 cleamoon: 没法调黑什么鬼，没有盖子吗
+22:15 Plough: 787用的新科技，并没有遮光板
+22:15 Plough: http://wx4.sinaimg.cn/mw690/8c4acdefgy1fj0wy8i169j21hc0u0hdt.jpg 游戏渣
+22:16 varna: 但不是肥宅
+22:16 varna: 也就是说，万事俱备只欠纱雾
+22:16 Plough: varna, 不，看点是翻译
+22:17 varna: 噗
+22:17 Plough: 论翻译之前先学语言的重要性
+22:21 cleamoon: 东大有没有给学生免费的vps
+22:21 Plough: 不知道
+22:22 cleamoon: 还没开学？
+22:22 Plough: 开学我也没法知道啊
+22:22 Plough: 这种东西得问东大生
+22:22 cleamoon: 咦？不通知吗
+22:22 cleamoon: 好神奇
+22:22 Plough: 通知也是通知本校学生吧
+22:22 cleamoon: 你们不算吗.....
+22:22 \s quit:Read error: Connection reset by peer
+22:23 Plough: 当然不算
+22:23 cleamoon: ..........
+22:23 Plough: 我是大久保工科大的，又不是东大的
+22:23 * Plough 整理钱包时翻出来一张八达通
+22:23 cleamoon: .........我二了
+22:24 Plough: 想想电子卡这方面其实还是香港好
+22:24 * cleamoon 依旧认为你是东大生
+22:24 Plough: 东京PASMO和SUICA各方面都通用，除了定期券
+22:24 Plough: 也就是说，依然不通用
+22:24 Plough: 并不知道为什么其他全都互通了唯独这个没解决……
+22:25 cleamoon: suika
+22:27 cleamoon: 定期券不就是怕死膜吗
+22:28 Plough: 只用私铁的定期券必须pasmo
+22:28 Plough: 只用JR的定期券必须suica
+22:28 varna: 啊啊，幼女
+22:29 Plough: 横跨私铁和jr的定期券都可以
+22:29 Plough: 机契丹疼
+22:29 Plough: 极其蛋疼
+22:29 varna: 再不吃幼女汁会精神错乱
+22:29 cleamoon: .......什么鬼
+22:29 Plough: @110
+22:29 cleamoon: 赶紧撸点吃了
+22:29 Plough: 因为pasmo当年是私铁联合搞的，suica是jr搞的……
+22:29 Arisaka quit:Quit: Arisaka
+22:29 varna: 米空汁断绝补给已经超过半年了，现在也面临着夜战素分泌不足的痛苦症状
+22:30 cleamoon: 让黑旗提供
+22:30 varna: 米空汁需要米空分泌
+22:30 varna: 现在海色米空帖都没人维护了
+22:31 cleamoon: 黑旗也能分泌尻汁
+22:32 varna: 随便玩玩血源
+22:34 Plough: 啊，我离野兽邸大约47min
+22:34 cknt quit:Quit: WeeChat 1.4
+22:34 Plough: 明天上午能爬起来的话去一趟
+22:34 cleamoon: <Plough> 明天上午能〇起来的话去一趟
+22:37 varna: 驲，被视角卡死了……
+22:38 varna: 视角+陶喆穿模bug
+22:38 varna: 有点迷糊
+22:38 Plough: 【青岛暴走团喊冤：在马路上走就是坏人了？】“你们完全违背民意！”“很多不喜欢运动的人，恶意地把我们当成了坏人。我们是坏人吗？我们在马路上走就坏了吗？就影响社会了吗？”“如果我们损害了谁的利益，我希望他能站出来讲。”
+22:39 cleamoon: 难道真的是暴“走”团？
+22:39 Plough: 对啊
+22:40 Plough: 在机动车道上走
+22:40 cleamoon: ..........
+22:40 cleamoon: 让一个有驾照的骑着就好了
+22:47 varna: 悲剧
+22:47 varna: 反应速度提高之后，陶喆穿模bug越发严重了
+22:47 Plough: 去洗个澡
+22:47 Plough: ……
+22:48 varna: 短距离最速前冲导致穿模，正好错过陶喆判定
+22:48 cleamoon: 反应速度超过设计的速度极限了？
+22:48 varna: 本来慢一点的话，敌人的模型能卡住我，陶喆判定正常
+22:48 varna: 真姬儿丢人
+22:49 varna: 刚才又触发一次……
+22:49 varna: 本来一个1v2抓时间差陶喆卡无敌帧的套路硬是没打出来
+22:49 xhe joined channel
+22:52 varna: 睡前试试能不能把劳伦斯车了
+22:54 cleamoon: 一个图，常数时间检测两个节点是不是直接连接着，是不是只能靠把整个图以矩阵描述了？
+22:54 varna: 理论上是
+22:55 cleamoon: 蛋疼
+22:56 cleamoon: 如果路不多但节点很多有hack吗？比如1M节点，100k路
+22:56 varna: 边表
+22:56 varna: 不要拼理论
+22:56 varna: 均摊其实是常数的
+22:56 varna: 稀疏图尽量用复杂度和边数相关的算法
+22:56 cleamoon: 边表不还得搜索吗
+22:57 varna: 均摊
+22:57 varna: 我嚓，被秒了
+22:58 varna: 一击不到8k的陶喆只打掉了六分之一不到的血……
+22:58 cleamoon: 均摊是个算法的名字吗.... 对应的英文是啥呀
+22:59 varna: 均摊是分析的方法，amortized
+22:59 varna: 意思是说，统计一系列操作的平均复杂度
+22:59 cleamoon: soga
+22:59 cleamoon: 那个意思呀
+22:59 varna: 假如边数不多，但边表里有一个点出发的边很多，那么其他点上出发的边就很少
+23:00 varna: 假定搜索均匀，那么均摊下来复杂性其实近似地不高
+23:00 cleamoon: soga
+23:00 cleamoon: 听起来很美好
+23:02 varna: 劳伦斯这夯货仍然维持普通连段两下秒我的伤害水准……
+23:02 cleamoon: ...攻击略高
+23:03 varna: 我嚓又被秒了
+23:03 varna: 走位有问题
+23:05 cleamoon: @T.K.Flankoi 在我到推特上去跟志仓千代丸发了牢骚后，5pb终于决定给原定只有下载版的「OCCULTIC；NINE」推出实体版了。只不过与此同时9月28日发售也一起给延期到了11月9日。没准这也能算是我的一份锅……
+23:05 c__ joined channel
+23:06 varna: 我嚓
+23:06 varna: 第一段确认即死……
+23:08 varna: 老贼让玩家们知道，圣职兽一旦buff起来也是个怪物
+23:08 cleamoon: 还能buff....
+23:09 varna: 我嚓
+23:09 varna: 秒了
+23:09 varna: 这简直没脾气……
+23:09 varna: 第一段命中之后硬直秒接第二段，准直死
+23:11 varna: 劳伦斯的攻击模组和圣职兽是一样的
+23:11 cleamoon: .........
+23:12 cleamoon: 说起模组一样，我记得war3里食尸鬼和狗头人的模组是一样的....
+23:12 cleamoon: 所以叫狗是有原因的
+23:15 varna: 我驲哦
+23:15 varna: 弱点恢复后不触发第二次陶喆判定……
+23:16 varna: 脸又黑了
+23:21 varna: 我嚓一招秒杀……
+23:23 varna: 这货还是太莽了
+23:24 cleamoon: 你不是在玩女神异闻录吗
+23:24 varna: 没打多少
+23:24 cleamoon: 传说中的时间吞噬游戏
+23:24 varna: 不受死总归不舒服
+23:25 cleamoon: 抖M no 觉醒
+23:26 cleamoon: 看到no就想起，机器猫里的大雄，名字是 nobi nobita....
+23:27 varna: 我驲
+23:27 varna: 又是直死
+23:29 varna: 一击横扫直接满血带走……
+23:30 cleamoon: .......
+23:30 cleamoon: 一击
+23:32 varna: 又是一击满血带走……
+23:32 varna: 半数以上招式不能失误
+23:32 varna: 不然就死了
+23:33 varna: 两喆安定进P3，然而P3被横扫挥中还是会死
+23:35 iyzsong quit:Ping timeout: 252 seconds
+23:35 cleamoon: 对了，之前有个题，一个边境为R的星球，太空中有一堆天降正义，每个都有自己的位置和速度和aoe扩散速度，问最快什么时候能来个全屏弹幕，数据不大，除了难写的一比之外，这个算法怎么做呢
+23:35 varna: 没看懂
+23:36 cleamoon: 一堆ufo要降落在星球上放病毒，病毒由不同扩撒速度，ufo有不同速度和起始位置，问病毒扩散全球最早的时间
+23:37 cleamoon: 我记得是2D的
+23:37 cleamoon: 也有可能是3D.... 不过我想算法应该一样
+23:38 varna: 我驲
+23:38 varna: 又是秒杀
+23:40 varna: MDZZ...
+23:40 cleamoon: 我记得最多只有50个ufo
+23:49 varna: 又被秒了……
+23:50 cleamoon: 你已经中了debuff
+23:50 varna: 无关debuff
+23:50 cleamoon: 获得了被秒杀的能力
+23:50 varna: P3他的直击基本都是秒杀
+23:51 Plough: http://wx3.sinaimg.cn/mw690/006r9j8ngy1fj0wb9sx58j30gy0sk4mc.jpg
+23:51 cleamoon: 换血质号，射爆
+23:51 varna: 血质？
+23:51 varna: 开玩笑的吧
+23:51 varna: 我血质不高，也就五十……
+23:51 cleamoon: ..........
+23:51 varna: 这货大约三四万血
+23:51 varna: 一发起源弹爆头九百多
+23:51 cleamoon: 这打个蛋
+23:52 varna: 一喆不到八千
+23:52 cleamoon: orz
+23:52 cleamoon: 还是陶喆高
+23:53 varna: 问题只是直死技太多了
+23:55 SilverRainZ joined channel
+23:55 SilverRainZ:  /msg ChanServ TAXONOMY #c_lang_cn
+23:55 SilverRainZ: 噗…… 尴尬。
+23:55 cleamoon:  o(*￣▽￣*)ブ
+23:55 varna: 啊
+23:55 varna: 又被……
+23:56 varna: 我真是X了POI...
+23:57 varna: 不扑腾不吐火，出了十几个砸地，这脸得有多黑……

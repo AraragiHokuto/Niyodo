@@ -1,0 +1,1187 @@
+00:27 wlemuel joined channel
+01:17 whocares_2_ joined channel
+01:17 whocares_2 quit:Ping timeout: 264 seconds
+01:25 wlemuel quit:Quit: Lost terminal
+02:13 lh_mouse quit:Ping timeout: 272 seconds
+03:25 boosure joined channel
+04:43 cleamoon joined channel
+05:30 ahe quit:Remote host closed the connection
+05:45 k1mibk joined channel
+08:35 lh_not_b1t joined channel
+08:40 k1mibk quit:*.net *.split
+08:40 iyzsong quit:*.net *.split
+08:40 lh_not_bot quit:*.net *.split
+08:44 iyzsong joined channel
+08:54 xxxxxxxx joined channel
+09:23 lh_mouse joined channel
+09:27 hoxily_HIRC joined channel
+09:31 hope1 joined channel
+09:48 libhanjian joined channel
+09:52 libhanjian quit:Remote host closed the connection
+09:52 libhanjian joined channel
+09:53 Xilzzerts joined channel
+09:58 OwenJia joined channel
+10:20 libhanjian quit:Quit: Leaving
+10:35 hoxily_HIRC quit:Read error: Connection reset by peer
+10:36 hoxily joined channel
+10:39 OwenJia quit:Remote host closed the connection
+10:40 k1mibk joined channel
+10:42 k1mibk quit:Max SendQ exceeded
+10:45 hoxily quit:Quit: Leaving
+10:48 Stevearzh joined channel
+10:48 Stevearzh quit:Changing host
+10:48 Stevearzh joined channel
+10:58 k1mibk joined channel
+11:02 OwenJia joined channel
+11:04 OwenJia quit:Client Quit
+11:09 libhanjian joined channel
+11:21 lh_mouse: k1mibk, 新人爆照
+11:22 OwenJia joined channel
+11:22 OwenJia quit:Changing host
+11:22 OwenJia joined channel
+11:24 k1mibk quit:Remote host closed the connection
+11:30 hope1_ joined channel
+11:31 OwenJia quit:Quit: Konversation terminated!
+11:38 libhanjian: 中午好
+12:03 sismvg joined channel
+12:05 * sismvg 给停机了的手机冲了话费，但是不知道打给谁测试
+12:11 hope1_: 中午好……
+12:11 hope1_: 买两部手机互相打？
+12:14 xxxxxxxx: sismvg: 快去找个女朋友
+12:15 sismvg: 左酱不会说话。。
+12:15 sismvg: 右酱也不会
+12:16 sismvg: 线性代数学者学着。。这节课我们来讲微分方程
+12:17 sismvg: 复数是高几学的？
+12:17 hope1_: 可以使用变声器，然后角色扮演
+12:17 hope1_: 高二？
+12:25 sismvg: 太羞耻了
+12:26 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+12:32 hope1_ quit:Ping timeout: 246 seconds
+12:35 hope1_ joined channel
+12:37 hope1_ quit:Read error: Connection reset by peer
+12:38 hope1 quit:Ping timeout: 255 seconds
+12:40 hope1_ joined channel
+12:53 libhanjian quit:Remote host closed the connection
+12:54 libhanjian joined channel
+12:55 xxxxxxxx: http://news.sohu.com/20150916/n421243776.shtml 真正的坟头蹦迪
+12:58 OwenJia joined channel
+13:09 owen joined channel
+13:12 OwenJia quit:Ping timeout: 264 seconds
+13:15 ahe joined channel
+13:45 lh_cat joined channel
+13:45 varna joined channel
+13:46 varna: 主DNS抽风中，学校这些渣网管啊……
+13:47 lh_mouse quit:Disconnected by services
+13:57 varna: 今天我想想，换个新topic
+14:02 smqf joined channel
+14:12 libhanjian: varna, 爆
+14:13 varna: 你这基佬
+14:14 varna: 出去继续找人签字……
+14:16 varna: 悲剧，刚才导师还在办公室的
+14:19 Xilzzerts: 元心 Syber OS..还真有这玩意
+14:20 lh_not_b1t: smqf: 新人爆照
+14:20 Xilzzerts: 对外提供的API居然带一堆Qt类型
+14:21 smqf: 咳咳，初来乍到，多多关照
+14:21 lh_not_b1t: smqf: 新人爆照
+14:24 lh_not_bot: 我提议将 topic 改为   新人爆照
+14:25 libhanjian quit:Remote host closed the connection
+14:27 lhjkk joined channel
+14:32 lhjkk: 搞不懂HTML为什么没有针对某个tag对做具体的cacahable控制
+14:33 varna: 这提法挺有趣，不过你如果需要的话，是否能hack出一个annotation?
+14:33 varna: 虽说未必适用于现成的DOM Parser
+14:34 lhjkk: 而且其实只要反向代理理解这个annotation并且缓存就行了，都不需要去和浏览器大爷扯皮
+14:34 lhjkk: 我确实考虑拿某个Web框架Hack一个annotation
+14:34 varna: 我觉得你可以这么折中一下
+14:35 varna: 你弄个HTML模板，然后在里面加一个annotation
+14:35 varna: 之后改过的这个模板就可以跟反向代理配合起来了
+14:35 lhjkk: 对
+14:35 lhjkk: 我就是这意思……
+14:36 varna: 都是世界的错啊
+14:36 varna: HTTP各种疼
+14:37 lhjkk: 其实CloudFlare最近也做了这么个类似的东西，不过他们竟然是在源站服务器上部署一个 自动分析DOM树和文档差异 的独立进程
+14:37 varna: 财大气粗
+14:37 varna: 搞DOM很慢的
+14:37 lhjkk: 然后再和反向代理进行特有协议的通讯
+14:37 varna: 我自己就是弄数据的时候吃过亏，所以相当不喜欢折腾……
+14:40 lhjkk: 如果做annotation能不能做的粗暴点，就是说，并不是真的要让反向代理去解析DOM树，只是确定文档某一段可缓存部分的起始和终止点，不能嵌套？
+14:40 varna: 就是因为要这样，才需要它叫annotation而不是extension
+14:40 varna: 比如你可以要求单行、行首起始、简单解析、不嵌套配对
+14:40 lhjkk: 这样就更简单了……
+14:41 varna: 没必要在这种事情上给自己添麻烦
+14:41 lhjkk: 对
+14:41 cleamoon_ joined channel
+14:42 lhjkk: 而且这样就让Web应用开发者即使不使用特定的Template，也能自己手动控制段落的缓存
+14:42 varna: 至少是你手头的那些web应用
+14:43 lhjkk: 对
+14:43 varna: 我觉得这不是个很值得推广的东西，但它能解渴
+14:43 cleamoon quit:Ping timeout: 264 seconds
+14:43 lhjkk: 为什么不值得推广呢？
+14:44 varna: 因为这是个简单粗暴的东西，它没什么往前走的价值
+14:44 lhjkk: 那倒是
+14:45 varna: 一个更有贡献的方式是你自己弄个模板库
+14:45 varna: 但那太慢了
+14:45 lhjkk: 对
+14:46 lhjkk: 不过这玩意儿还是得有个expires/etag/cache-control类似物的设计，不然一旦缓存就没法更新就蛋疼了。
+14:46 varna: 缓存更新不该是在modified首部上么
+14:46 varna: 哦对，你是本地处理
+14:47 varna: 那好办，加一个expire annotation
+14:47 lhjkk: 那个毕竟是针对整个文档的，但是这一小段还是得自己独立的控制
+14:47 lhjkk: 嗯
+14:47 varna: 加在被生成的文档头上
+14:47 lhjkk: 嗯
+14:49 varna: 蛋疼，clang complete还是不支持一部分gcc扩展
+14:49 varna: 有什么不需要太多配置的补全插件推荐么
+14:50 lhjkk: 好像除了clang-complete也没又快又好的了
+14:50 Xilzzerts: QString getOSVersion()。。。真是醉了
+14:50 varna: ycme我不太想用
+14:50 lhjkk: 可惜gcc代码太渣，不然早该有gcc-complete了……
+14:50 varna: 那个显得挺臃肿
+14:50 varna: gcc其实还行的
+14:50 varna: 只是他们一直不开放
+14:52 varna: 反倒clang的官腔我不喜欢
+14:52 varna: 以前我试过一次他们的补全接口，虽说能用，但我觉得他们把C库做得公式化地难看
+14:55 lhjkk: Chromium的GPU进程莫名其妙的CPU使用率飙高……
+14:55 varna: 我主要的浏览器还是ff
+14:56 lhjkk: 自从有个12GiB的RAM以后，我就开始纵容自己以Chrom×为主了……
+14:56 varna: 我不喜欢他们的UI
+14:57 varna: 而且我觉得，插了内存就能动的反倒是mozilla家的产品
+14:58 lhjkk: 我这边FF有时候会js解释器报错，然后某个Tab就没法关掉了，特别烦躁……
+14:58 lh_not_bot: opera opera opera
+14:58 varna: opera逼格太高，他跟我竞争装逼权，我只能让他去死
+14:58 lhjkk: opera-legacy有点特性不完全
+14:58 lhjkk: opera新版又是chromium-fork，没意思……
+14:58 lh_not_bot: 新版 opera 是 chromium 内核
+14:59 varna: ff的js我印象会卡你一阵子，但不会关不掉
+14:59 varna: 关不掉的反倒是不报错的flash
+14:59 lhjkk: 蛤蛤蛤
+14:59 cleamoon_: win10下ff有bug
+14:59 lhjkk: flash为什么还没死啊！！！
+14:59 cleamoon_: 因为舰娘？
+14:59 varna: 从30之后的某个版本开始，包含flash的内容就有时候关不掉
+14:59 varna: 现在好多了
+15:00 varna: 另外ff在启动的时候似乎有点手脚
+15:00 varna: 举例来说，刚才我primary DNS跪了，ff就卡了一阵子
+15:00 varna: wireshark一看，有几个看起来像是他们的站点要求被域名解析
+15:01 varna: 我猜他在等DNS query超时
+15:06 varna: 嘛，我还是怨念C标准
+15:06 varna: 为什么总是零敲碎打的，明明编译器可以做更多事情
+15:07 varna: 面向非PC的编译器可以选择不实现某些特性啊
+15:07 cleamoon_ quit:Ping timeout: 264 seconds
+15:08 Nangcr joined channel
+15:09 xxxxxxxx: baidu首页的新闻里扔了个这http://jingyan.baidu.com/article/335530da837d1c19cb41c3e2.html
+15:09 Nangcr quit:Remote host closed the connection
+15:10 varna: 有时候我都想耍耍clang了，但我对出身不好的东西有点恶感
+15:10 xxxxxxxx: 出身不好?
+15:10 varna: 当然我没有具体划分出地富反坏右
+15:13 varna: 不过我仍然不希望大量用一个apple出身的东西
+15:14 Nangcr joined channel
+15:15 owen quit:Read error: Connection reset by peer
+15:16 varna: 以前有个叫GEM的库，可以用来定制gcc
+15:16 varna: 不过这种尝试想来就是作死
+15:16 xxxxxxxx: 我觉着苹果出身的设备已经被大量使用了...
+15:17 Nangcr quit:Client Quit
+15:17 xxxxxxxx: 另外我觉着我终于明白土豪是怎么玩游戏的了...
+15:18 xxxxxxxx: "一个橙武也就四五千便宜的很"
+15:19 xxxxxxxx: "搞全门派的装备也就十几万"
+15:19 xxxxxxxx: ^大概就是这么一种说法...
+15:20 varna: ...
+15:21 varna: 我试着去3-2打一套瑞云拳看看效果
+15:22 varna: 现在比较蛋疼的事情，就是libclang仍然完全不认得__auto_type
+15:23 lhjkk quit:*.net *.split
+15:23 varna: 结果我在创建要初始化的对象的时候，还得写出类型名字
+15:25 varna: 卧槽
+15:25 varna: https://gcc.gnu.org/onlinedocs/gccint/Plugins.html 这一章我一直忽略了……
+15:26 varna: 或许用这个的话，我能制造出更多鬼畜
+15:29 OwenJia joined channel
+15:29 lhjkk joined channel
+15:31 lhjkk: 脆弱的IRC
+15:32 lh_not_bot: irc 渣渣 
+15:32 varna: lhjkk: https://gcc.gnu.org/onlinedocs/gccint/Plugins.html 你看这个
+15:32 varna: 结果所有的渣渣都活下来了，聪明人只有哀嚎的份……
+15:33 lhjkk: 是啊，好的协议统统被GFW干掉了……
+15:33 xxxxxxxx: 好的协议?
+15:33 lhjkk: xxxxxxxx, 当我瞎扯吧……
+15:34 xxxxxxxx: 你这样说就像勾引一样...
+15:34 varna: 现在我发现3-2瑞云拳不错
+15:35 varna: 就是烧资源一些
+15:35 * lhjkk 成功地勾引到了巨基
+15:36 xxxxxxxx: varna: 一堆航巡陪练?
+15:36 varna: 对，跟旧的3-2练重巡想法一样
+15:37 varna: 航巡带水爆带电探
+15:37 varna: 我现在是2探
+15:37 varna: 然后加一个主副/主炮电探CI的重巡
+15:39 xxxxxxxx: 打夜战?
+15:39 varna: 压阵
+15:39 varna: 需要有一个炮击命中稍高的陪练
+15:41 varna: 实际上就是我觉得现在航母的火力太高了，希望把原来练重巡的办法搬来练战舰
+15:44 xxxxxxxx: 冒出一种战舰好可怜的感觉
+15:45 varna: 我对3-2练级的要求比较苛刻
+15:46 varna: 尽量不进夜战，昼战尽量搞定，5舰阵容不能太容易开幕全灭，观测率和平砍命中要差不多说得过去
+15:46 varna: 但是现在航母的火力很难权衡这些了
+15:48 varna: 不过看来还比较成功，打了几下俾斯麦就一改了
+15:50 xxxxxxxx: 我觉着塞进去12个水爆 怎么说也能比较稳了
+15:50 varna: 太多了
+15:50 varna: 然后疲劳状态下命中还不好
+15:50 varna: 我自己的3-2不是火力不足，而是要考虑在压僚舰火力的时候尽量昼战搞定
+15:54 xxxxxxxx: 塞一堆水爆最坏的情况是 开幕脸黑留下了3个以上 那样之后几乎没办法全打掉
+15:55 xxxxxxxx: 昼战
+15:55 varna: 开幕当然要留下三个以上
+15:55 varna: 不然很可能会丢MVP
+15:55 xxxxxxxx: 留下3个就够了
+15:55 varna: 命中可以靠改修和32补回来
+15:55 varna: 我感觉开幕能干掉一个就可以，两个也不错
+15:55 varna: 然后我有四发昼战观测和四发平砍
+15:56 xxxxxxxx: 塞水爆的话疲劳了基本都打不中
+15:56 varna: 所以我塞的是两个瑞云两个32
+15:56 varna: 稍微改善一下
+15:57 xxxxxxxx: 留下的基本就给战舰打伤害 剩下的一个陪练的打几下虽然不是很稳 应该也能打掉
+15:57 varna: 我总是怕那样留太少了
+15:57 varna: 低级舰的观测率不好
+15:58 xxxxxxxx: 二连伤害一般也能比水爆打出来的高了
+15:58 varna: 前提是能二连的话
+15:58 xxxxxxxx: 就看那个不是塞水爆的陪练会不会突然勃起
+15:59 xxxxxxxx: 吃错药直接duang一下打沉一个 第二轮又duang打沉一个
+16:00 varna: 可能的
+16:00 xxxxxxxx: 是可能的...估计现在更可能
+16:00 varna: 那个位置的陪练本来就需要练度
+16:01 condy joined channel
+16:02 * lh_mouse slaps condy around a bit with a large trout
+16:02 condy: O.O
+16:02 condy: QuQ
+16:03 OwenJia quit:Remote host closed the connection
+16:11 owen joined channel
+16:23 cleamoon joined channel
+16:25 varna: 地摊风格的五仁月饼还不错
+16:26 owen quit:Remote host closed the connection
+16:28 cleamoon: 之前为什么黑五仁来得
+16:28 varna: 不知道
+16:28 varna: 我一直是五仁支持者
+16:31 cleamoon: 我支持的馅已经不买了……
+16:32 varna: 《人肉神话》？
+16:32 cleamoon: 噗
+16:33 cleamoon: 怎么也得是幼肉神话呀
+16:33 varna: 这里neta的是软件工程著作《人月神话》
+16:34 cleamoon: 我知道，似乎不少人认为这是本神棍的玄学书
+16:34 varna: 其实我没读过
+16:35 cleamoon: 我看过一两章
+16:35 cleamoon: 后面看不懂了
+16:36 varna: 问题是那个书并不能阻止傻逼老板……
+16:37 varna: 今天我应该能挺快把俾斯麦二改
+16:37 varna: 这周应该能三改
+16:37 cleamoon: 似乎书的主旨就是放弃吧，你怎么弄都会被pm弄乱，没有银弹，打死他之后发布就好了
+16:37 varna: 23333
+16:37 cleamoon: orz
+16:38 varna: 我记得俾斯麦五十级就能二改
+16:39 cleamoon: orz
+16:40 varna: 二改之后，我稍微体感一下5-4的低耗打法
+16:40 cleamoon: 话说羊驼子遇到教授讲课和屎一样，听了反而不明白那种，怎么办
+16:40 varna: 这种课我遇到过一门：可计算性和计算复杂性
+16:41 varna: 我自己要了往年的讲义来自己看去了
+16:41 cleamoon: ……
+16:41 cleamoon: 我们几乎所有数学课都这样…
+16:41 varna: 数学课正常吧
+16:41 varna: 计算机的课，大多讲起来都容易，因为要照顾听众
+16:42 varna: 不过可计算性基本也算个低端数学课，所以……
+16:42 cleamoon: 一节课加入10+新概念，没证明，没明确定义，没应用，就知道会考…………
+16:43 varna: 没证明没定义什么鬼
+16:43 varna: 课前会发handouts让你看的？
+16:43 cleamoon: 照顾其他系……
+16:43 varna: 噗噗
+16:43 varna: 我以为是那种负担很重，必须自己预习的课
+16:43 xxxxxxxx: 填空题?
+16:43 cleamoon: 教授就是逐字读handouts……
+16:43 varna: ...
+16:44 varna: 教授失格
+16:44 xxxxxxxx: 至少能逐字读出来
+16:44 xxxxxxxx: 你看廖教授的稿子
+16:44 varna: 哦操
+16:44 varna: 别提那稿子了，碉堡了
+16:45 cleamoon: 学校要求少用ppt多写板书，然后教授就把ppt原封不动得抄下来
+16:45 varna: 数学课不在黑板上算给学生看的？
+16:45 cleamoon: 算毛… 连例子都没有
+16:45 varna: ...
+16:45 varna: 什么鬼课
+16:46 cleamoon: 控制理论
+16:46 varna: 太见鬼
+16:46 cleamoon: 经常是你们做这个做那个就能做出这个图，然后就没有然后了
+16:46 xxxxxxxx: 是教学生如何控制心态的么?
+16:47 cleamoon: 控制心态课我们已经有不少了
+16:47 varna: 多玩舰C, 心态自然好
+16:48 cleamoon: 你要学会
+16:48 cleamoon: 享受这个过程
+16:48 xxxxxxxx: 当你开始习惯被人玩
+16:48 xxxxxxxx: 你就会享受这个过程
+16:48 varna: 这基佬
+16:53 cleamoon: 这基佬
+16:54 varna: 命中率还是不好
+16:54 varna: 尽管用了改修程度中上等的主炮和彻甲弹，还是偶尔闹一下……
+16:55 xxxxxxxx: http://live.bilibili.com/12417 这直播间...
+16:55 cleamoon: 带三个电探
+16:55 varna: 三探火力不足
+16:56 cleamoon: 上51炮
+16:56 varna: 昼战观测是有火力调整倍率的……
+16:56 varna: 简单的算术问题
+16:57 cleamoon: 强行吔屎
+16:58 cleamoon: 似乎潜艇的立绘变了
+16:59 varna: 没变，是你撸多了……
+17:00 cleamoon: 之前脑袋上有对讲机吗……
+17:00 varna: 有
+17:01 cleamoon: ………………
+17:01 cleamoon: 撸多了
+17:07 smqf quit:Quit: Leaving
+17:07 cleamoon: 最近一堆新人
+17:08 varna: 一直如此
+17:09 xxxxxxxx: 为啥我看不懂你俩在说啥....
+17:13 varna: 这基佬
+17:16 lhjkk quit:Remote host closed the connection
+17:23 lh_mouse: [16:39:43] <cleamoon> 教授就是逐字读handouts…… // 第一个字读阴平还是读去声
+17:24 sismvg joined channel
+17:25 cleamoon: 四声
+17:25 varna: 教授（Professor）
+17:25 sismvg: poor fessor
+17:27 cleamoon: 微软更新了与北约信息共享合作伙伴关系。根据新的协议，北约能访问 Windows和Office等微软关键产品的源代码，获取微软云服务的信息，共享网络安全威胁相关的情报。
+17:28 xxxxxxxx: poor mf sor
+17:29 varna: 即使北约能访问windows代码也和我现在的机器无关，我只是关心北约驻阿富汗部队某军官给我的那一箱子东西为何还不到（迫真）
+17:29 cleamoon: mf sor怎么可能poor
+17:30 lh_mouse: launching scud storm
+17:30 varna: mousing mice storm
+17:30 cleamoon: 我只是在想过两年北约会不会弄一个北约os，然后巨硬一口老血
+17:30 varna: GNU Hurd会比那个OS先出1.0的
+17:31 cleamoon: 军方动作挺快的
+17:31 varna: 别指望
+17:31 varna: 军方没有那么多的人力投入，这个项目要做就得委托
+17:32 varna: 而一旦牵扯到现行系统替换和官僚机构，我觉得事情的进展会很糟糕
+17:32 cleamoon: 外包给巨硬
+17:32 * lh_mouse slaps varna around a bit with a series of mice
+17:32 varna: 而且老实说，深海军在软件方面的品位我觉得不怎么样
+17:33 cleamoon: 镇首府有软件？
+17:33 xxxxxxxx: 羊驼用过?
+17:33 varna: Ada
+17:33 xxxxxxxx: ....
+17:34 varna: 那语言丑爆了（个人观点）
+17:34 varna: 承诺太多，诚心太少
+17:34 lh_cat joined channel
+17:34 lh_mouse quit:Disconnected by services
+17:34 cleamoon: …………
+17:34 varna: 有关契约的观点也落后，但在用户态并发方面倒是有一些亮点——现在那些东西被吸纳进了go
+17:34 cleamoon: 军方还在用fortran呢
+17:35 lh_moust: fortran是因为legacy太多了
+17:35 cleamoon: ada也是
+17:35 lh_moust: ada没多少有价值的legacy
+17:35 lh_moust: 都是些国家项目
+17:36 lh_moust: 这nick不错
+17:36 lh_moust: moust, 看起来非常啮齿类
+17:36 cleamoon: 噗
+17:36 lh_moust: 还可以把它变成mousta, 复数是moustae
+17:37 lh_moust: 如果要庄严地写在画像上，就是LH_MOVSTA
+17:37 cleamoon: moustous
+17:37 lh_moust: 显得像拉丁文
+17:37 xxxxxxxx: 不懂拉丁文...
+17:37 * lh_mouse slaps lh_moust around a bit with a large trout
+17:37 lh_moust: 有人跟我讲过一点点科普
+17:37 * lh_moust poies
+17:38 xxxxxxxx: 怎么写能像拉登文
+17:39 cleamoon: 从右边开始写虫子
+17:39 lh_moust: 安拉！阿胡！阿克巴！
+17:40 lhjkk joined channel
+17:41 lhjkk: cleamoon, 天朝已然进入负利率时代了
+17:41 lhjkk: 只是这次不是热钱涌入的通胀，而是CPI不高，PPI更低的滞胀
+17:41 cleamoon: 啊？不一直是吗……
+17:41 lh_moust: “天朝已然进入负利率时代了”——我翻译下这句文艺青年的话
+17:42 lh_moust: 「天朝已经进入负利率时代了っぽい！」
+17:42 lhjkk: 哈哈
+17:42 lh_moust: “然”这个字怎么用，我赌一个NKC, 文艺青年们应该是知道的
+17:43 cleamoon: 不应该是  攒什么钱，都氪金抽了11连
+17:46 lh_moust: 邪教害人，我桑肥美如希
+17:46 cleamoon: 我记得前几天兲朝首相还说7%没问题呢
+17:46 cleamoon: 这国家都被黄旭东带坏了
+17:46 lh_moust: 看了看GCC plugin一章的介绍，我兴趣衰退了
+17:47 lh_moust: 估计再作死下去，补全都会爆炸的
+17:47 lh_moust: 狗日的苹果
+17:47 cleamoon: 用icc
+17:48 lh_moust: icc不给扩展啊
+17:48 cleamoon: 你想扩展什么
+17:48 lh_moust: 不过我还真没查过icc有没有补全
+17:48 lh_moust: 但如果它不支持比clang更多的gcc扩展，那么我目前至少懒得用
+17:49 cleamoon: 他似乎没多少gcc扩展
+17:49 * lh_moust 对代码在编译器上的portable毫无兴趣
+17:54 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+17:58 boosure quit:Quit: Get your hand off of it
+18:05 cleamoon quit:Ping timeout: 240 seconds
+18:08 lh_moust: ok, 换了新的活动主题topic
+18:09 lh_moust: 这次的主角是大致都能拿到的江风、鬼知道能不能拿到的海风、天知道能不能拿到的照月和只有田中才知道下次能不能拿到的秋月
+18:17 lh_mouse quit:Quit: Meow
+18:17 lh_mouse joined channel
+18:17 lh_mouse: [18:13:30] * Topic for #c_lang_cn set by lh_moust (Wed Sep 16 18:03:20 2015)
+18:18 * lh_mouse slaps lh_moust around a bit with a large lh_moust 
+18:18 lh_moust: 23333
+18:18 lh_moust: 我觉得这名字确实挺带感的
+18:19 xxxxxxxx: 我记得以前有人说过不许高仿的
+18:19 lh_moust: 那不是人，是啮齿类
+18:19 lh_mouse: 于是怎么办吧（叉腰）
+18:19 varna: 我变回去吧
+18:20 varna: 虽然我难得确定了老鼠的腰部在哪里……
+18:20 lh_not_bot: 其实那是个⑨的表情
+18:20 xxxxxxxx: 有这种部位么...
+18:20 varna: 应该有吧？
+18:21 xxxxxxxx: 我去baidu搜 老鼠 腰
+18:21 xxxxxxxx: "您要找的是不是: 老鼠药"
+18:21 varna: 哺乳动物没有被肋骨保护的上半身应该有一条地方能称为腰的？
+18:23 xxxxxxxx: 腰部是動物腹部的一部份，在肋骨以下，臀部以上。一般來說，腰部是軀幹中最幼的部份。
+18:23 xxxxxxxx: 腰後的凹陷處又稱腰窩，是傳說中的維納斯之眼。
+18:24 xxxxxxxx: 最幼的部份 ?
+18:25 varna: 最细的部分
+18:25 varna: “幼圆”=“细圆”
+18:25 xxxxxxxx: 原来是这个意思....
+18:26 varna: 你们这些淫魔啊
+18:26 varna: 没救了
+18:26 varna: 连幼女都不放过
+18:30 cleamoon joined channel
+18:30 hope1_ quit:Read error: Connection reset by peer
+18:30 hope1_ joined channel
+18:36 cleamoon: 2010年，Google退出中国大陆市场，对媒体哭诉道：“中国大陆你们这群流氓！我不跟你们玩了！我要再回中国我就不姓G”。2015年，原Google改名为Alphabet。有消息称其打算再次进入中国市场。  233333
+18:38 xxxxxxxx: 66666
+18:39 cleamoon: 艹，要什么没什么，要不容易活动给了个伊利，结果半个月不出古鹰
+18:40 varna: 这是今天的第多少个阳炎了……
+18:40 Mokou joined channel
+18:41 varna: 古鹰稀有度欺诈是正常的，四图有一些，但也很少
+18:41 Mokou: 网购的2.65元签字笔到了
+18:41 cleamoon: 水笔？
+18:41 xxxxxxxx: 欧元?
+18:42 Mokou: RMB
+18:42 xxxxxxxx: 不科学 这不像红旗的作风
+18:42 cleamoon: 山城马上二改
+18:42 cleamoon: 2.65元一个笔帽吧
+18:42 varna: 肝败下风
+18:42 Mokou: 我这穷逼难得奢侈一回……
+18:42 Mokou: 一根笔芯
+18:43 cleamoon: 但是我没有图
+18:43 cleamoon: orz
+18:43 xxxxxxxx: 啊 这样感觉就正常多了
+18:43 varna: 唉唉
+18:44 Mokou: varna: 话说你大概啥时候去杭州
+18:44 varna: 不知道
+18:44 xxxxxxxx: 幼女终于也要开始练等级了么?
+18:44 varna: 干他娘的，练级练出疲劳……这简直是练重巡
+18:45 Mokou: 去得晚的话我高考完没准可以吉林跟你面下基……
+18:45 varna: 你高考完基本没戏了
+18:45 Mokou: 那我从新泽西回来再去杭州？
+18:45 varna: 随意
+18:45 Mokou: 还是说你打算先回趟岛城
+18:45 cleamoon: 不肝，我只是一直只用山城，其他都不用而已......
+18:45 varna: 青岛我也就是大假回去
+18:46 Mokou: 高考完也不是小假了……
+18:46 varna: 真恶心，今天丢MVP不超过七次，然而刚才的四盘里就出了三次
+18:47 cleamoon: 5个99级潜艇S胜，4个平均40级B胜，我日呀
+18:48 Mokou: varna: 对了，我现在有这么个想法
+18:48 Mokou: Agano还是用event loop的形式实现
+18:48 Mokou: 但是不是监听socket返回可读/可写
+18:48 varna: proactor?
+18:49 Mokou: 没听说过，虽然我感觉你大概猜到了……
+18:49 varna: 那也行
+18:50 Mokou: 似乎就是
+18:50 Mokou: 不过我不用回调
+18:50 lhjkk: 反正主流就两种方案 Reactor/Proactor……
+18:50 varna: lhjkk: 未必
+18:50 varna: Leader-Follower也是可以用的
+18:50 Mokou: 而是封装一层recv，如果可读就返回AGN_OK并recv，否则返回AGN_DELAYED
+18:50 lhjkk: varna, 那个是另一个层面的设计模式
+18:50 varna: delayed的意义是什么
+18:51 varna: lhjkk: 但是单纯的re/pro都只是朴素的划分，并且都有分用意义
+18:51 varna: 我觉得别那么拘谨
+18:51 lhjkk: 那倒是
+18:51 Mokou: 表示对目标handler进行recv操作的请求已经确认，并将会在能够执行时执行
+18:51 varna: 严肃的事情留着给妹子留下深刻印象好了
+18:51 Mokou: 已经记录*
+18:51 lhjkk: 我是教条地按着POSA的划分方法划的
+18:51 varna: 反正这里除了禽兽就是基佬
+18:51 varna: 异步啊
+18:51 Mokou: +
+18:51 varna: 这看着很难受
+18:52 varna: 你写写看吧
+18:52 Mokou: 我的考虑是如果可能的话，其实我可以在Agano里加入线程要素
+18:52 xxxxxxxx: 严肃的事情留着给妹子留下深刻印象好了 <- 如何严肃的留下深刻印象?
+18:52 varna: HS/HA是可以接受的
+18:52 Mokou: 比如一个监听线程，一个IO线程，一个用户任务执行线程
+18:53 varna: xxxxxxxx: 你要计算一下装逼权
+18:53 Mokou: HS/HA是？
+18:53 varna: 不少于妹子逼格3倍则装逼确保，少于3倍但不少于1.5倍则装逼优势
+18:54 varna: Half-Synchronization / Half-Asynchronization
+18:54 xxxxxxxx: 比如对妹子说 "我们不适合 分手吧"?
+18:54 Mokou: 差不多
+18:54 Mokou: 我不想用回调，但是用C折腾用户线程容易爆炸
+18:54 varna: 一个IO复用把消息投递到队列层，消息循环从队列层里取东西
+18:54 Mokou: 而且后者不是Agano，是p8
+18:54 varna: p7已经是用户线程了
+18:54 cleamoon: 少于1/3就是装逼丧失？
+18:55 varna: +
+18:55 Mokou: 我以为你准备扔掉p7来着
+18:55 varna: p7我要留着的
+18:55 varna: 现在它在servcraft底下
+18:55 Mokou: 而且我总感觉搞个Reactor出来就变成了Yet Another Slower Nginx……
+18:55 varna: 用着新的鬼畜接口了，以后会继续加一点锁
+18:56 lhjkk: 反正怎么搞都是有差不多的轮子……
+18:56 cleamoon: 咦，我刚发现，我为什么练高波.....
+18:57 lhjkk: HS/HA那就是Yet Another Libevent2
+18:57 lhjkk: Proactor那就是Yet Another BOOST ASIO
+18:59 Mokou: 无所谓
+18:59 Mokou: 反正不是nginx
+18:59 Mokou: Libevent2和boost::asio并不能直接当HTTP服务器用吧
+18:59 lhjkk: 哦
+18:59 lhjkk: 那是没有
+19:00 varna: cleamoon: 高波Lv35给个duang
+19:00 lhjkk: 不过node.js Erlang Golang都是有完整的HTTP服务器实现的。不过红旗完全不必纠结这些
+19:00 Mokou: 那些HTTP服务器都不是C写的
+19:00 lhjkk: 从我个人的角度来讲，要是能解决HTTP服务器中蛋疼的资源管理问题倒是十分有价值的
+19:00 xxxxxxxx: 说起duang我就想到饼作战...
+19:00 cleamoon: varna, duang之后就可以死了吧
+19:01 Mokou: 我希望能让Agano完全不做内存分配/去配
+19:01 varna: cleamoon: 可以
+19:01 lhjkk: Mokou, 有意思
+19:01 varna: 那你可以做一个鬼畜接口出来
+19:02 varna: 但我个人的经验是，你很难让C代码在内存的归属上干净
+19:02 lhjkk: 如果能剥离 内存池/malloc_free/GC/ARC 那真的很有价值
+19:02 varna: lhjkk: 剥离这个太容易了啊……
+19:02 lhjkk: varna, 对C来说没法那么舒服吧
+19:02 varna: 现在p7的内存使用，都是由用户决定的
+19:02 varna: 他们提供分配器
+19:03 lhjkk: varna, 可是那些侵入式的内存管理怎么办？
+19:03 varna: 可以实例化别的分配器
+19:03 Mokou: 我的设想是Agano要求的并非分配器，而是分配好的内存
+19:03 varna: 但是老实说，如果你要作死，那么你其实该做一个thunk allocator
+19:03 varna: 别搞什么花招，不行再帖一剂LRU cache
+19:03 varna: 至于分配好的内存
+19:03 Mokou: thunk?
+19:04 varna: 这事情太理想了，你做不到
+19:04 lhjkk: 但是无论如何总有 资源（不是内存）的管理问题
+19:04 Mokou: 我还是想试试
+19:04 varna: lhjkk: 说清楚点
+19:04 Mokou: 做不到指？
+19:04 varna: 我境界不够，求详解
+19:04 lhjkk: 比如这次 HTTP事务 到底是不是应该从 软件中消失
+19:04 varna: 所以我说C这件事情做不干净
+19:05 varna: 你必须显式写出归还
+19:05 lhjkk: 对
+19:05 lhjkk: 就是这回事，这显然不是靠 内存管理机制 可以消除的
+19:05 varna: 两回事
+19:05 varna: 为何你自己说跑题了……
+19:05 varna: 实际上是这样
+19:05 varna: 你可以标定一个对象的归还
+19:06 varna: 但因为你缺点糖，所以你同时需要写出内存的归还（如果必要）
+19:06 varna: 如果你把这个内存管理藏在对象管理下面，来个delete this
+19:06 varna: 我觉得这是在骗自己
+19:07 Mokou: 其实我是希望提供一套约定
+19:07 lhjkk: 我说的这回事似乎和羊驼的两回事 是两回事（什么鬼）…… 我说的是，我想表达的就是羊驼现在想说的意思，所以是一回事。但是羊驼想说的两回事是指对象管理和内存管理是两回事？
+19:08 varna: 而红旗的想法，我觉得是对象表示和对象的内存管理可以分开
+19:08 varna: 如果能做到，那么整个实现是羽量的
+19:08 varna: 它可以在任何给定的内存上运行
+19:08 varna: 我觉得这对C实现来说太难了
+19:08 Mokou: 何时内存被Agano占优，何时内存被归还，如何在内存尚未被归还的情况下要求强制归还
+19:08 Mokou: 占有*
+19:09 varna: 这已经乱了
+19:09 Mokou: 乱了指？
+19:09 varna: 而且实际上我觉得这没必要
+19:09 varna: 你无非是再造一个用户堆而已
+19:10 varna: 至于lhj
+19:10 varna: 你可能没理解我那些话底下比较insane的东西
+19:10 lhjkk: 我应该是没理解
+19:10 varna: 说是那么说的，但我希望提供的感觉不太一样——然而我认为它只是个模糊的感觉，它和现有的运行时差别不大
+19:11 varna: 所以我也说，这恐怕只是再造用户堆
+19:11 cleamoon quit:Ping timeout: 256 seconds
+19:11 Mokou: 我倒不介意造个方的轮子出来
+19:12 varna: 问题是你会发现这个轮子看起来是方的，但走起路来是圆的……
+19:12 varna: 它要真是个方轮子，那也挺好的
+19:12 Mokou: 总之我先写写试试，写不出来再说
+19:12 varna: +
+19:12 varna: 写糊了就算了
+19:12 varna: 写好了就有了
+19:12 lhjkk: +
+19:12 lhjkk: 反正不写是一点感受都没有的
+19:13 Mokou: 写糊了我就扔了重新封装一个，改叫Mogami
+19:13 varna: 写了也不会想撸的
+19:13 varna: 尤其是我现在撸管惯用手已经常规地鼠标手这样的场合
+19:14 xxxxxxxx: 羊驼用右手啊
+19:14 varna: +
+19:14 hoxily joined channel
+19:15 Mokou: 对了，关于装甲倾角，其实我现在有这么个想法
+19:15 Mokou: 我们把原来的徹甲表拆成两张
+19:16 varna: 我日，观测率不足……
+19:16 Mokou: 一张是距离与落角，以及另一个用来衡量彻甲力的因数
+19:16 iyzsong:   >_>
+19:16 varna: iyzsong: eee玉照
+19:16 Mokou: 另一张是角度与击穿某种装甲所需要的彻甲力因数的对应
+19:16 iyzsong: 没有啊
+19:16 lhjkk: varna, 最近在想一个很蛋疼的问题。
+19:17 Mokou: 这个因数我现在考虑的是动能，不过我得再查查资料才能确定
+19:17 varna: Mokou: 似乎可以
+19:17 varna: lhjkk: 什么问题
+19:18 lhjkk: varna, 有一个需要实时同步的，在网络间多台计算机之间同步的共享变量。
+19:18 varna: 为什么要有这个东西
+19:18 varna: 为什么要多台计算机同步，而不是一台计算机管理、另一些计算机拉取
+19:18 xxxxxxxx: http://www.zhihu.com/question/20158531#answer-938557
+19:19 Mokou: 我先去吃饭 
+19:19 lhjkk: varna, 比如说排队，队列长度1000。但是单机没有能够处理 想排到队列里的超多的请求 的能力
+19:19 varna: 说得不清楚
+19:20 varna: 单机没有，多台主机为什么能有
+19:20 varna: 你需要处理一个积压队列？
+19:20 lhjkk: 对
+19:20 varna: 这设计是谁给的
+19:20 lhjkk: 脑洞
+19:20 varna: 我觉得这设计有问题
+19:20 lh_mouse: [19:02:30] <varna> 如果你把这个内存管理藏在对象管理下面，来个delete this // 疯子做法
+19:20 lhjkk: 而且这个积压队列可能本身就不能够积压下来
+19:21 varna: 问第一个问题：这些请求从哪个gateway进
+19:21 cleamoon joined channel
+19:21 lhjkk: varna, 哪个GateWay？
+19:21 lhjkk: 没懂
+19:21 varna: lh_mouse: 我不会这么做，但我从这评论里看到了C艹党的yooo越感，希望这是错觉
+19:22 varna: lhjkk: 谁来向后面的若干台平等的主机分发这些请求
+19:22 lh_mouse: 不论优越  delete this 绝大多数情况下都傻逼
+19:22 varna: 这只是个比方
+19:22 lhjkk: varna, 你是说负载均衡么？
+19:23 xxxxxxxx: 也许现在需要一句 "是, 照我说的做!" 
+19:23 varna: lhjkk: 难道你的这些主机每台都有能力去吃一堆连接，但内存里摆不下请求对象？这也太奇葩了
+19:24 varna: 而如果你只是想做个分布式共享队列，没必要疯狂同步
+19:24 lhjkk: varna, 哦，对，就是分布式共享队列……
+19:24 lhjkk: 但是怎么让这些请求按照时间先来后到呢……
+19:24 varna: 为什么要严格区分时间
+19:25 varna: 你的状态机允许乱序发送、收端同步？
+19:25 lhjkk: 倒不是严格按照时间，而是希望有个 先来后到……
+19:26 varna: 自己打时间戳排队
+19:26 lh_mouse: 你们在研究啥
+19:27 lhjkk: varna, “自己”是指？
+19:27 varna: lhj有些不明确的想法
+19:27 varna: lhjkk: 随意，假如你不能明确什么是“自己”，那也没必要明确先后
+19:28 varna: 如果你需要一个数据仓库，而不是一个单纯的内存消息队列，可能会更宽松
+19:28 varna: 比如说一个前端爬虫服务器后面接一个data store, 然后上一个集群做分析
+19:28 varna: 这样的data cycle也挺流行的
+19:28 varna: 但我不知道你到底想要什么
+19:29 lhjkk: 如果举一个具体的例子的话，就是 秒杀/抢购 之类的网络服务
+19:29 varna: 那跟你要的东西差远了吧……
+19:30 lhjkk: ……
+19:30 varna: 首先，排队失败的直接就不缓存了
+19:30 lh_mouse: RichSelian @幻の上帝 找到bug了，在encoder里面可能会产出内存溢出的匹配，比如文件最后几个byte是0，往后的内存也是0的时候就会一路match过去，然后decode的时候就出问题了。
+19:30 lh_mouse: 果然还是 lzma 一类靠谱
+19:31 varna: 其次，你说客观上有个时间，但如果gateway有多个，那么时间戳需要统一，你得能统一
+19:31 varna: 除非你是个jsp厨，指望业务能在进来的瞬间走进容器，然后经过复杂的呕吐过程解决
+19:32 lh_mouse: [19:13:49] <lhjkk> varna, 有一个需要实时同步的，在网络间多台计算机之间同步的共享变量。 // 我觉得你能干掉这需求比为这需求糊翔靠谱
+19:32 varna: +
+19:33 xxxxxxxx: @时间
+19:33 lhjkk: 我当然知道这需求不可能实现……实时的强一致性怎么可能做到呢……
+19:33 varna: 我一开始以为你是要做类似MMORPG那样的，多台主机之间需要一点交互但需求都存在的东西
+19:33 lh_mouse: zikan
+19:34 xxxxxxxx: 西方人对待亚洲人，中国韩国日本其实也是这样（哦，在法国日本可能要分开讨论，法国人对日本的了解远超东亚其他国家） <- 这算是黑么?
+19:36 xxxxxxxx: 电脑方面，Asus怒刷存在感。。。。不过主要是这些牌子的家电比较便宜，很少有当地人知道Hisense和TCL是国货。。。但是知道三星是韩国的人就多多了。
+19:36 cleamoon: 水母真tm难练
+19:37 varna: 水母练级基本别指望了
+19:37 varna: 喜欢出去打的话就打3-5，不然演习+水上机就好
+19:37 lh_not_bot: https://translate.google.cn/  谷狗翻译能用了？
+19:37 varna: 能了
+19:37 iyzsong: lhjkk: '秒杀'的结果是在该件商品秒完才出吧
+19:37 lh_not_bot: 输入法不能用
+19:37 xxxxxxxx: 一直可以
+19:38 lh_not_bot: 虽然输入罗马音可以认得  不过没法选字
+19:38 varna: 那一定跟老鼠的眼部结构有关……
+19:39 * lh_not_bot slaps varna around a bit with a large Google
+19:39 * varna poies
+19:39 cleamoon: 艹，大破出击
+19:39 lhjkk: iyzsong, 秒完才出？
+19:39 varna: cleamoon: 来得及，F5吧
+19:39 Mokou: 谁大破了……
+19:39 varna: 没选阵型就不会死
+19:40 Mokou: varna: 他是不是点进战斗界面才发现有人大破了
+19:40 cleamoon: 不，我是故意的
+19:40 varna: 那就祈祷吧
+19:40 varna: 噗
+19:40 Mokou: 欧洲人没人性
+19:40 varna: 拆了也比送下去好
+19:40 cleamoon: 我可不是去送死的...
+19:41 Mokou: 你想看看损管什么效果？
+19:41 cleamoon: 4cv1av1ss淦3-2
+19:41 xxxxxxxx: 另外，韩国人给我感觉他们更能融入当地文化当中，而不像一群中国人在哪儿都扎堆儿，相比中国人来说他们也比较open，所以更能和当地人玩到一起去吧。
+19:41 xxxxxxxx: ^我记得之前有人说韩国人喜欢扎堆
+19:41 xxxxxxxx: 这次又反过来了
+19:41 lh_mouse: ICP证合字B2-20070004号
+19:41 xxxxxxxx: 你是为了听台词么...
+19:41 cleamoon: 千代田还有160经验12级，然后我就改造了，不用修了
+19:41 xxxxxxxx: 大破的是哪个?
+19:41 iyzsong: lhjkk: 这样就好处理了 没秒完就加个定时器， 每个节点接受商品数量个请求，汇总再排下序就行了
+19:41 Mokou: 但是沉了怎么改造
+19:42 cleamoon: 哈哈哈，成功了
+19:42 varna: ...
+19:42 varna: 铤而走险啊
+19:42 varna: 这时候至少上个损管
+19:42 cleamoon: 这种情况一般沉不了吧...
+19:42 xxxxxxxx: 这提督是平壤来的么?
+19:42 varna: 会沉的
+19:42 varna: 一炮就够了，对面能做到的
+19:42 lhjkk: iyzsong, 不过这样的话，就不能做到立刻给浏览器返回这次秒杀的结果了……
+19:42 Mokou: 我不敢说我现在去3-2能不出事故
+19:42 cleamoon: 9/41，还好
+19:42 Mokou: 你家舰队大概比我家的莉害得多
+19:43 cleamoon: 我脸白，没事
+19:43 cleamoon: 开幕沉5个半
+19:43 xxxxxxxx: 白皮幼女
+19:43 lhjkk: iyzsong, 汇总排序也有各主机存的请求的顺序依赖什么解决呢
+19:43 lhjkk: 的问题
+19:43 Mokou: 开幕沉五个半很容易
+19:43 Mokou: 开幕六个miss也很容易
+19:43 cleamoon: 3-2还真没见过6miss......
+19:43 xxxxxxxx: orz
+19:43 iyzsong: lhjkk: 国人秒的很快的，你可以加个1s的定时器, 排序是按请求的时间啊 <_<
+19:43 varna: lhjkk: 解决不了，除非你有一次同步，之后你相信那次同步之后的误差是可以接受的
+19:44 xxxxxxxx: 我没遇到过六个miss
+19:44 * varna 笑而不语
+19:44 xxxxxxxx: 心眼真实
+19:44 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+19:44 xxxxxxxx: 随便找几个告诉他们秒到了不就好了
+19:44 xxxxxxxx: 运气是实力的全部
+19:45 varna: @海上护卫总队
+19:45 varna: 实际上你都不用汇总排序
+19:45 cleamoon: 我这么大破进击好多次了，简单说就是，洗脸去
+19:45 lhjkk: xxxxxxxx, 这个其实是以前常用的一种解决方案。
+19:46 varna: 或者说，你可以给出汇总排序的总量
+19:46 Mokou: 毕竟身经百战，跟我这种新米没法比
+19:46 varna: 即使我没什么原则，我自己大破进击的代价也太高了
+19:46 varna: 丢一个瑞云和丢一个晴岚毕竟不一样
+19:47 Mokou: 你这种欧洲人赌B子说出就出
+19:47 Mokou: 还缺晴岚？
+19:47 xxxxxxxx: 你看活动会管你 在线多久 囤了多少资源 课了多少金么?
+19:47 lhjkk: 看来必须是多牺牲些准确性才能做到……
+19:47 varna: 问题是你压根就没有终极的准确性
+19:47 varna: 只要拿request的服务器多于一台，时间戳就没准，差不多行了
+19:47 varna: 你要学会享受这个过程
+19:48 varna: Mokou: 对了，我昨天把dragon的过弯改到1.6，玩起来确实开心多了……
+19:48 Mokou: 你把Sabre也改到1.6
+19:48 varna: VHF我都没动
+19:49 varna: dragon是因为我觉得那东西尺寸跟drake几乎一样
+19:49 hoxily quit:Quit: Leaving
+19:49 varna: 唯一逗乐的就是自带的神一样的发电机，连六门sunfury 1都撑不住
+19:49 Mokou: Sabre轻
+19:49 Mokou: ……
+19:49 Mokou: VHF大法好
+19:49 varna: 不是轻的问题
+19:49 varna: VHF都太大了
+19:49 Mokou: 大丈夫
+19:49 varna: 扭了也会被弹的
+19:49 Mokou: 你要看密度
+19:50 Mokou: 密度小了打上去全是过穿
+19:50 varna: 我想要那种开起来感觉比较小命不保的东西
+19:50 Mokou: 抖M驼
+19:50 lhjkk: 看来AST诚不欺我也
+19:50 varna: 所以有两样数据我从来不动：一样是机体耐久，一样是发电机
+19:50 varna: 挂点高级没关系，功率等级跟不上就ok
+19:51 Mokou: 我试着设计一下那级本格的新锐战列舰
+19:51 Mokou: 三基九门前二后一是个好设计，但是我总感觉太普通了
+19:51 Mokou: 我来个奇葩点的看看
+19:51 varna: 另外sunfury 1那个就是kusari标准的Lv5光子爆破炮
+19:51 varna: Lv6版本有血龙改型，也可以在北海道-中国地方跳跃洞附近拿到
+19:52 varna: dragon就不像个HF
+19:53 xxxxxxxx: 羊驼玩的那个自由幸运E 也是个陪装备坐着看的游戏么?
+19:54 varna: 不是
+19:54 varna: 是模拟飞行的，做任务赚钱买装备买飞船
+19:54 varna: 可以联机，需要开服务器，但也有现成的私人服务器
+19:54 xxxxxxxx: 飞起来有趣么?
+19:55 varna: 挺容易上手的，我觉得还挺好玩
+19:55 varna: 单人战役打几个任务差不多就上手了
+19:55 cleamoon: 基王玩不玩super meat boy
+19:55 xxxxxxxx: 不玩
+19:58 xxxxxxxx: 这几天每天刷三圈噩梦的菠萝A姐和鸡领袖 然后就掉了3个暗金
+19:58 varna: ...
+19:58 varna: 你还在anhei3战网？
+19:58 xxxxxxxx: 单人
+19:59 varna: ……
+19:59 varna: 剩下是什么，西刚么
+20:00 xxxxxxxx: 西刚 伊森哈德
+20:00 lh_cat joined channel
+20:00 varna: 太惨了
+20:00 xxxxxxxx: 不朽之王套装的鞋子 胸甲以前放在仓库里的
+20:01 varna: 西刚和衣森哈德简直滥得标准
+20:01 xxxxxxxx: 另外那个鞋子绝对是在嘲讽我
+20:01 varna: 说起来，要是频道里玩freelancer的人稍微有几个的话，可以架一个服务器
+20:01 varna: 游戏自带服务器端的
+20:02 xxxxxxxx: 对了还有个克雷德劳的手套
+20:02 varna: 233333
+20:02 varna: 连个像样的绿装都没掉……
+20:03 cleamoon: freelancer?
+20:03 xxxxxxxx: 一定是因为我一点都没撑MF
+20:03 xxxxxxxx: 我觉着这甚至比我在那个战网打boss还惨
+20:04 varna: cleamoon: +
+20:04 varna: 一点MF没有去刷boss...
+20:05 cleamoon: 我试试
+20:05 varna: 老游戏了，安装程序应该就数百兆
+20:07 xxxxxxxx: 暗金好像是 噬魂叉 坦杜里嘎 骨肉
+20:07 varna: 哈哈哈哈
+20:07 varna: 这三个熊玩意……
+20:08 xxxxxxxx: 那个长矛还不如一把蓝色的武器伤害高
+20:08 varna: 噬魂叉嘛，我只能说是一个很适合plugY的装备
+20:09 varna: 因为出它的时候基本都没卵用……
+20:10 xxxxxxxx: 然后我今天忍不住了 去地狱转了一圈 弄到个长串之耳
+20:10 xxxxxxxx: 结果我还是在用夜烟好歹有点抗性
+20:11 Mokou: varna: https://pastebin.mozilla.org/8846546 这是用来四打六的本格新锐战列舰
+20:11 Mokou: 相比朝日的变化是强化了火力，而弱化了航速、装甲和动力
+20:12 varna: 有个问题
+20:13 varna: 我不太明白这个软件算出来的抗波能力参数，相对日本近海的情况如何
+20:14 varna: 日本的海况似乎是比较糟糕的
+20:14 Mokou: 你指最后一句？
+20:15 Mokou: 我把干舷调低些试试
+20:15 xxxxxxxx: 新旅馆?
+20:18 varna: 还有几场就可以改造了
+20:20 cleamoon: orz
+20:21 varna: 我日
+20:21 varna: 路由器崩溃
+20:23 Mokou: https://pastebin.mozilla.org/8846547 果然是干舷太高了
+20:24 varna: 这就显得好多了，不过吨位好大……
+20:24 varna: 造四艘这样的战舰，需要美国程度的国力吧
+20:24 Mokou: 不然扛不住12门410……
+20:24 Mokou: 蝗国本来就没救
+20:24 Mokou: 而且大和级都没他们造出来了
+20:24 varna: 没看到弹药库在被弹面积上的比例
+20:24 Mokou: 被*
+20:25 varna: 不过这个吨位比肥桑大，应该有戏
+20:25 Mokou: 其实我怀疑SPS对弹药库长度的处理有问题
+20:25 Mokou: 我让朝日九门炮全部前置，也没见到主装变短……
+20:27 varna: 啊，难得一见的瑞云拳开幕一个都没打死……
+20:27 varna: 然而以为这点程度就能恶心到我军，还是不够的
+20:28 xxxxxxxx: 话说不知道你朋友是什么德鲁伊。。元素德鲁伊的话最好用个血牛配合他，像嚎叫野蛮人、复仇圣骑士都行，你在前面顶着，元素在后面施法，当然还可以配武学刺客，秒BOSS，让你朋友清小怪，元素AOE真心的强；要是变身或是召唤德鲁伊的话，那就可以百搭，因为暴雪当初设计时，德鲁依就是个很容易的英雄，尤其是变身和召唤型，用诅咒死灵
+20:28 xxxxxxxx: 、信心弓亚马逊、光环骑都可以，或者你也练个德鲁伊也行；关于女巫，我是不建议用的，要是用也不要是电系的，所谓无敌电技能，是有可能的，一招妙，但是电系都有很大的伤害差，一般靠人品。
+20:28 varna: 谁TM在吹逼
+20:28 xxxxxxxx: 我觉着他在骗人
+20:28 varna: 武学刺客
+20:28 varna: 哦不对
+20:28 varna: 这是个唬人的……
+20:28 varna: 全都是神build
+20:30 Mokou: 噗
+20:30 Mokou: 碉堡了
+20:30 Mokou: 土佐居然比朝日贵
+20:30 Mokou: 这不科学啊
+20:31 Mokou: 多了三门炮怎么可能贵那么多
+20:31 varna: 炮多
+20:31 Mokou: 然而动力只有十万零八千匹
+20:31 Mokou: 动力系统才贵吧
+20:31 varna: 我一直以为炮塔花钱多的？
+20:32 Mokou: 炮塔似乎不如动力系统……
+20:32 varna: ...
+20:32 Mokou: 你看太太和大凤贵成什么样了
+20:32 Mokou: 三条太太顶两条大和……
+20:32 xxxxxxxx: 有那时候的锅炉的图纸么?
+20:32 Xilzzert joined channel
+20:33 varna: 我觉得他们在骗钱
+20:33 Mokou: https://pastebin.mozilla.org/8846548 修改了一下朝日的设计
+20:33 varna: 立项的时候根本就没有那么多钱，都是特技
+20:33 Mokou: 这样的话我不如直接造六条朝日……
+20:33 varna: 那个飞行甲板，飞上去很duang
+20:33 Mokou: 现在朝日的防护比Iowa强
+20:33 Mokou: 火力略弱
+20:33 xxxxxxxx: 看形势不好赶快骗些钱捞一笔
+20:33 varna: 今天最后一盘3-2
+20:33 varna: 瑞云拳被证实很有用
+20:34 Mokou: 而且土佐炮塔不比朝日多，只是加了门炮而已
+20:34 Mokou: 毕竟四连装
+20:35 varna: 16in四连装……
+20:35 varna: 这东西没问题么
+20:35 varna: 我觉得你需要一个三式HOI啊
+20:35 Mokou: 没关系，Iowa散布800m不是一样打
+20:35 varna: HOI的电路图都要改的
+20:35 Mokou: 你要相信蝗国炮手的技术
+20:36 varna: 搞定，俾斯麦第一张图
+20:36 Xilzzerts quit:Ping timeout: 256 seconds
+20:37 Mokou: OTL
+20:37 Mokou: 总之我觉得这东西可以扔了，不如造朝日
+20:37 cleamoon: orz
+20:37 varna: 这神一样的对空
+20:37 Mokou: 朝日的甲板甚至比大和厚3cm
+20:37 varna: 我已经无力回天
+20:38 varna: 作为一条战舰，成功达到了丢人的水准
+20:38 Mokou: 然而能秒F22
+20:38 varna: 明天开始试着打5-4
+20:39 Mokou: 等这次冬活对面实装福特级，没准你会发现她还能秒F35
+20:39 varna: 由无私的毛神和无敌的鸟海护航
+20:39 Mokou: 对了，让你给蝗国设计一级防空巡洋舰，你会怎么造
+20:40 varna: 我会照抄亚特兰大，用127连装高角炮，但加装电探和CIC, 直到这个方案被否决、设计人被拥抱变化
+20:41 xxxxxxxx: 一堆防空澡盆 拿缆绳串起来
+20:41 Mokou: 我也有这个想法，但是这方案缺少点蝗国特色啊
+20:41 varna: 蝗国的防空武器没问题的，但是作战方案太差了
+20:41 varna: 他们需要的是CIC, 不是新武器
+20:41 xxxxxxxx: 然后让驱逐舰拉着跑
+20:41 Mokou: 然而零战的无线电……
+20:41 varna: 不止零战
+20:41 Mokou: 其实平心二论，问题不是蝗国电探太差了
+20:41 varna: 你让阳炎十八铁人装CIC, 估计也没钱
+20:42 Mokou: 是米畜电探太莉害了……
+20:42 varna: 然后还要训练
+20:42 varna: 之后想了想，机动部队的伙计们学会飞已经很不容易了
+20:42 varna: 阿部君的彗星队还在地上哭呢
+20:42 xxxxxxxx: 俄罗斯电影人谈中俄电影：抗战剧是双方合作重要契合点
+20:43 varna: 然而我印象苏联红军在东北打得跟三哥一样
+20:43 varna: 以抢劫为主，辅以强奸
+20:43 Mokou: 哦对了
+20:43 Mokou: PLAN在通过对马海峡的时候挂了Z字旗……
+20:43 varna: ……
+20:43 varna: 还不如大家看看《钢炼》
+20:43 xxxxxxxx: 这是要拍苏联支援了一半赶忙回家解决家事么?
+20:43 varna: 支援不会来的
+20:44 varna: 你相信我，这个我在新铁底都绝望了
+20:44 Mokou: 哦对了
+20:45 Mokou: 朝日的炮盾可以上到510
+20:45 Mokou: 扛得住
+20:46 xxxxxxxx: 不是说装备什么的还是到了一些的么
+20:46 varna: 人也来了
+20:47 varna: 但还是强奸了
+20:47 xxxxxxxx: 然后又回去了
+20:48 xxxxxxxx: http://img1.cache.netease.com/catchpic/D/D8/D856977925D1B122079AA9DCE1529991.jpg
+20:48 xxxxxxxx: 俄罗斯青年演员阿廖沙库奇科娃
+20:48 xxxxxxxx: 我觉得她的脸似乎歪了?
+20:48 Mokou: varna: 对了，我想到个主意
+20:49 varna: 眼睛而已
+20:49 varna: Mokou: 爆
+20:49 Mokou: 两条大和两条朝日对依阿华，或者两条大和六条朝日对北卡南达依阿华
+20:49 Mokou: 这个剧本给code_new练手
+20:50 varna: 这剧本怎么打
+20:50 varna: 大家排成复纵阵炮击么……
+20:50 Mokou: 他要是愿意的话，也试验下新的炮击判定
+20:50 Mokou: 单纵复纵都可以
+20:50 Mokou: 夜战
+20:50 xxxxxxxx: 大家约好不开枪 来登舰肉搏...
+20:50 Mokou: 那是苏联红海军
+20:50 varna: 我不太能理解这个剧本，不过你跟他商量下吧
+20:50 varna: 我怎么都好说
+20:51 Mokou: 近海战列线对决
+20:51 Mokou: 九段作战最后一段
+20:51 varna: 不是不是
+20:51 varna: 只是这种作战方式我觉得太明显了
+20:51 xxxxxxxx: http://sports.sohu.com/20150916/n421264173.shtml
+20:52 xxxxxxxx: 日媒：恒大实力太强大 黄博文世界波堪比齐达内
+20:52 hope1_ quit:Ping timeout: 246 seconds
+20:52 iyzsong quit:Ping timeout: 246 seconds
+20:52 varna: @护球像亨利
+20:52 hope1_ joined channel
+20:52 Mokou: 或者两条大和组成一个典型的水打部队，两条朝日带领重巡组成一个游击部队
+20:52 Mokou: 对面给德梅因？
+20:52 varna: 总体来说你随意
+20:53 varna: 我考虑的事情有时候容易复杂而令人不快
+20:53 Mokou: 我是想看看两条大和加上两条朝日能不能对四条Iowa取得优势
+20:53 Mokou: 这是朝日的主要设计目标
+20:53 varna: 比如说，现在我还在妄想K作战的事……
+20:54 Mokou: ……
+20:54 Mokou: 那个我也想交给code_new
+20:54 xxxxxxxx: 首回合保利尼奥的世界波，让门将菅野孝宪没有做出任何反应。此役，黄博文则用了一脚凌空抽射再次让日本门将目瞪口呆。日本媒体形容这脚射门：“堪比齐达内当年在欧冠决赛的射门的气势，整个球网都在颤抖的感觉。”
+20:54 Mokou: 但他想先打炮雷击战不是
+20:54 varna: 那个剧本我的构想近乎是player-free的
+20:54 varna: 不过看他吧
+20:54 varna: 我只是说说玩
+20:55 varna: 还是那句话，K作战如果我来裁判，可能我会要求玩家提供预案
+20:55 varna: 而情报量是掷骰决定的
+20:56 varna: 对了，这月你打不打4-5？
+20:56 Mokou: 我看情况
+20:56 Mokou: 现在我1-5都没打
+20:56 varna: 哦
+20:56 wlemuel joined channel
+20:56 Mokou: 你想和我一起打？
+20:56 varna: 1-5其实我现在一点都不愿意打
+20:56 varna: 我就是问问，这月我4-5打完了，5-5不想动
+20:56 Mokou: なるほど
+20:56 varna: 4cv 5-5需要支援的，觉得有点亏
+20:56 Mokou: 你想看的话我这周末去试试
+20:56 Mokou: 打成什么样都无所谓，反正我半弃坑状态……
+20:57 varna: 那就不必了
+20:57 varna: 多点低保资源没坏处
+20:57 Mokou: 我不想管那么多了
+20:57 Mokou: 去你妈的资源
+20:57 Mokou: 二十万资源卵用没有
+20:58 varna: 即使没用，对我来说十万也比五万好
+20:59 code_new joined channel
+20:59 varna: 码新来了
+20:59 varna: 爆他
+20:59 varna: code_new: 爆
+20:59 cleamoon: code_new, 爆
+21:00 xxxxxxxx: 你们这群基佬
+21:00 code_new: varna: 爆
+21:00 code_new: cleamoon: 爆
+21:00 varna: 基头四之首要给我们示范爆法了
+21:01 condy: 233
+21:01 varna: condy: 爆
+21:01 cleamoon: condy, 爆
+21:02 code_new: 基头四: xxxxxxxx varna cleamoon ?
+21:03 condy: 0.0
+21:03 condy: uccu!
+21:03 lhjkk: condy, 
+21:03 condy: lhjkk: prpr
+21:03 cleamoon: 明显不是
+21:03 varna: EAgleLeo lhj condy iyzsong
+21:03 code_new: 缺一个，用condy补上吧
+21:03 varna: 我日他大爷的，js卡死了
+21:03 varna: 简直大快人心
+21:03 xxxxxxxx: varna是四头基
+21:04 varna: 这基佬总想拉我下基
+21:04 xxxxxxxx: 基喊基系列
+21:05 varna: 现在这基佬都不敢妮可妮可妮了
+21:06 iyzsong joined channel
+21:06 condy: iyzsong: prpr
+21:06 xxxxxxxx: 你喊基喊捉基 才是基喊基喊基
+21:08 varna: 他终于忍不住用了妮可妮可妮范式
+21:08 cleamoon: 噗，freelancer竟然翻译成自由幸运E，没有任何会英文的吗
+21:08 varna: lancer
+21:08 condy: oh♂Saber
+21:08 varna: 其实freelancer这个词不太好翻
+21:08 Mokou: code_new: 话说我打算来这么一场推演，你看看有没有兴趣
+21:08 varna: 但直译free+lancer肯定是错的
+21:08 cleamoon: 自由职业者呀
+21:09 varna: 对
+21:09 Mokou: 主题是两条大和两条朝日对四条Iowa
+21:09 varna: 但你不能这么当游戏标题……
+21:09 Mokou: 如果这样没意思，可以这么来
+21:09 varna: 或者这么译：《接单儿的》
+21:09 cleamoon: 那就繁体wiki的那个星际游侠
+21:09 Mokou: 两条大和组成一个标准的水上打击部队，而两条朝日带领重巡组成游击部队
+21:09 varna: 念儿化音的时候舌头要滚一下
+21:09 varna: 星际游侠不错
+21:09 Mokou: 美国人那边你看着办，比如来个德梅因什么的
+21:09 varna: 好歹该有的都有了
+21:10 code_new: Mokou: 我当裁判吗
+21:10 varna: code_new: 你也可以当RBQ...
+21:10 Mokou: 是
+21:10 cleamoon_ joined channel
+21:10 varna: 22:04 < code_new> Mokou: 我当裁判吗
+21:10 varna: 22:04 <+varna> code_new: 你也可以当RBQ...
+21:10 varna: 22:04 <+Mokou> 是
+21:10 Mokou: 我听说你想先来个炮雷击战练练手……
+21:10 varna: ^ 这红旗
+21:10 varna: 太污了，嘻嘻嘻
+21:10 Mokou: varna: 然而你那句话并不是对我说的
+21:10 cleamoon_: 这红旗
+21:10 code_new: ……手贱百度了一下RBQ
+21:11 Mokou: 你看这只羊坨
+21:11 code_new: 你看这只羊坨
+21:11 Mokou: 先离开一回，回来再说……
+21:11 cleamoon_: 或者翻译成《外星人也怕城管》
+21:11 varna: 那是一堆海鲜
+21:11 code_new: 那我们国庆开始吧
+21:11 Mokou: 成
+21:11 cleamoon_: 开始什么？起义？
+21:11 xxxxxxxx: 单干水管工
+21:11 code_new: OK
+21:11 varna: 我其实不太喜欢单人战役打海鲜的最后几关
+21:11 xxxxxxxx: 这样翻译多好
+21:12 varna: 敌人根本都不是常规的
+21:12 Mokou: 那我加紧吧新的炮击判定方案赶出来
+21:12 varna: 最后只要我能过弯、我能开炮，就可以了，觉得挺蛋疼的
+21:12 cleamoon_: 卧槽，这什么情况
+21:12 varna: 还不如跟棍国人展开大决战，再歼灭他们一个舰队
+21:12 varna: 好歹我能打打正常的战斗机
+21:12 cleamoon_: 看黄旭东视频到一个时间点就自动跳闸
+21:13 cleamoon_: 而且是学校电脑跳闸
+21:13 varna: 23333
+21:13 cleamoon_: 连续三次
+21:13 cleamoon_: 毒奶的力量无穷无尽
+21:13 cleamoon quit:Ping timeout: 250 seconds
+21:14 xxxxxxxx: 对了模拟飞行的话 地图有边界么?
+21:15 varna: 有
+21:15 xxxxxxxx: 飞着飞着撞上谜一般的透明墙?
+21:15 varna: 撞墙，如果你有参照物的话能发现按冲量变向
+21:17 cleamoon_: ......
+21:18 xxxxxxxx: 还有个自由幸运E:重生
+21:18 varna: Rebirth似乎不怎么样
+21:18 varna: 应该是俄国重制的吧
+21:18 xxxxxxxx: 刚才有个帖子也说是俄国人做的
+21:19 cleamoon_: 我觉得fz的lancer重生也会变成berserker
+21:19 varna: berserker不是要特别召唤的么
+21:20 cleamoon_: 不是特定召唤吧
+21:20 varna: 虽说我不知道如果没人显式让英灵狂化的话该怎么决定
+21:20 condy quit:Quit: leaving
+21:20 varna: fsn没说，但fz里召唤兰斯洛特的时候加了一点强行让英灵发狂的咒文
+21:22 cleamoon_: try(hero(lancer).get(crazy)) throw 梁非凡.吔(屎);
+21:22 xxxxxxxx: 圣肥战争召唤王司徒与诸葛村妇多好
+21:22 cleamoon_: 感觉fz的剧情要比fsn做的认真的多
+21:23 cleamoon_: fsn各种土狼淦金闪闪简直不能忍
+21:23 varna: fsn是型月不成熟的时候搞的（虽然我认为他们搞的剧本大多是渣）
+21:23 varna: fz好歹是虚渊用心思些的
+21:24 varna: 写*
+21:24 cleamoon_: 噗，原来是老虚写的
+21:24 hoxily joined channel
+21:25 cleamoon_: fz至少每个英灵除了ass ass in都很有存在感，fsn根本就是没记住谁
+21:25 xxxxxxxx: 山门装B男
+21:26 varna: assassin挺有存在感的
+21:26 varna: 上来就被秒杀，然后又协助搞阴谋
+21:26 varna: 最后又被秒杀
+21:26 varna: 小说里其实不算不抢眼，就是动画里戏份少了
+21:27 cleamoon_: 比其他的略少
+21:27 varna: 一开始切嗣没干掉肯尼斯，相当大的原因也是assassin在场
+21:27 varna: 那倒是
+21:27 xxxxxxxx: 如果拿兵马俑召唤能召唤出啥?
+21:27 varna: xxxxxxxx: 山门装逼男其实不是assassin...
+21:27 varna: 估计能召唤出第二个兵马俑
+21:28 xxxxxxxx: 我还以为能召唤出一个捏泥人的家伙出来...
+21:28 cleamoon_: 徐福，嬴政，王翦，吕不韦，或者是铁巨根
+21:29 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=5e755291d409b3deebbfe460fc846d81/c2cec3fdfc039245deb314f68294a4c27c1e25c0.jpg 又是这图……
+21:29 cleamoon_: 2333333
+21:32 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=194f177c364e251fe2f7e4f097bdc817/b7fd5266d0160924f363175dd20735fae6cd3435.jpg 
+21:32 cleamoon_: ......
+21:33 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=64977f43910a304e5222a0f2e1f3a686/38dbb6fd5266d01690ac956f912bd40735fa353b.jpg 还有个黑暗的
+21:33 xxxxxxxx: 噗噗噗
+21:33 cleamoon_: @maylogcom: #转 如果你死的时候还是个处，那么你就是你直系祖先中第一个死的时候还是处的人。#浴室沉思#
+21:34 sismvg joined channel
+21:35 sismvg: 没有主元的列就是自由列吗？还是说列中要有0?
+21:35 varna: 没有主元
+21:36 sismvg: tk
+21:38 cleamoon_: 3-2 cv练级挺不错的
+21:38 varna: 现在更容易了
+21:45 cleamoon_: 就是没改造图
+21:45 varna: 现在一个月能拿三个章的话，图也还会有的
+21:45 varna: 四个月三张这样的感觉
+21:48 sismvg: 为什么主元的符号就是相应位置上的特征值的符号?
+21:48 cleamoon_: 那么开始撸2-5
+21:48 sismvg: 能ping过这里，却上不去baidu..
+21:51 cleamoon_: 卧槽，瑞穗40级改，我不练了
+21:53 Mokou: varna: 我终于让朝日能和Iowa对肛了
+21:53 varna: ...
+21:54 Mokou: 稍等， 我重新生成下
+21:55 xxxxxxxx: 刚上手先玩野蛮人吧，皮糙肉厚死不了；熟悉地图玩法后再试刺客，杀人红尘中脱身白刃里，快感十足；然后练习亚马逊，爆发不错；最后推荐冰冷系法师，刷图过关轻轻松松；曾经拿这几类英雄都刷完了地狱。加油吧骚年  <- 他一定在使坏
+21:55 cleamoon_: 噗
+21:55 sismvg: 法师如何加点，在线等
+21:55 cleamoon_: 这是个坑
+21:57 xxxxxxxx: 我觉着最靠谱的就是先弄个冰法师 然后腿个闪电标枪刷牛场
+21:57 lhjkk: varna, 
+21:57 Mokou: varna: https://pastebin.mozilla.org/8846554
+21:57 Mokou: 我终于把九四式塞进去了……
+21:59 cleamoon_: 刚上手专注bsk，然后武学ass，然后暴力狼，然后炮轰ama，然后白热din，然后纯电sor，最后纯毒nec，这样你就能修成真身抖M了
+22:00 varna: 纯毒算是个解脱，Zealdin我……感觉还行
+22:00 Mokou: 你觉得这个肛Iowa有戏吗
+22:00 varna: 我不知道
+22:00 cleamoon_: 对呀，这个是个解脱的过程
+22:03 hoxily quit:Quit: Leaving
+22:03 Mokou: 防护比Iowa强是没问题的
+22:03 Mokou: 火力应该至少同等级
+22:04 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150826023504]
+22:07 lhjkk quit:Quit: Leaving
+22:09 lh_cat quit:Quit: Connection closed for inactivity
+22:18 xxxxxxxx: 幸运E的开场动画看上去挺好
+22:18 varna: 你安好了？
+22:19 varna: 体验一下体验一下
+22:20 cleamoon_: 等等，一个月三个勋章是哪三个？
+22:20 xxxxxxxx: 我从贴吧找了个自称绿色版的
+22:21 xxxxxxxx: 被迫看完了一段剧情之后 我发觉界面是中文的而且字超大
+22:21 varna: 我有个小字体，你要不
+22:22 justin126 joined channel
+22:22 varna: http://pan.baidu.com/s/1ntjCBA5 
+22:25 xxxxxxxx: 高分辨率羊驼用了么?
+22:26 varna: 没用
+22:26 varna: 高分辨率和纹理重制都没用
+22:26 varna: 平时我是开800x600的，空战时候因为觉得碍事所以会关掉HUD
+22:27 varna: 鱼雷导弹之类数目基本就只能自己数着了……
+22:28 cleamoon_: 今天淦了20盘3-2，超标了
+22:29 xxxxxxxx: discovery_4.88.0.exe 这个补丁羊驼用了么?
+22:29 varna: 那个是mod, 也没用
+22:30 varna: 我没打mod, 一部分参数是手工调的
+22:30 cleamoon_: orz
+22:30 varna: 著名的mod应该有discovery和evil rising吧
+22:32 justin126 quit:Quit: 离开
+22:32 varna quit:Quit: leaving
+22:35 xxxxxxxx: 这补丁....
+22:35 xxxxxxxx: 直接替换系统字体...
+22:57 Mokou: 睡觉
+22:57 Mokou: 诸君武运
+22:57 Mokou quit:Quit: 睡觉
+23:08 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.3/20150827193320]
+23:21 ahe quit:Quit: 离开
+23:34 cleamoon_ quit:Ping timeout: 246 seconds

@@ -1,0 +1,130 @@
+00:47:zzzzzzzz quit:Quit: Leaving
+00:51:Helloguy joined channel
+00:59:Plough quit:Quit: leaving
+01:01:hope1 quit:Ping timeout: 245 seconds
+01:02:condy: 晚上看电影play..
+01:02:condy quit:Quit: leaving
+01:23:Petrus071 quit:Quit: Leaving.
+01:38:Helloguy quit:Quit: Leaving
+02:36:cleamoon joined channel
+14:57:clcn_logbot joined channel
+14:57:hope1: 14:56 -NickServ(NickServ@services.)- Registered : Jun 12 16:16:12  2013 (1 year, 10 weeks, 2 days, 16:40:23 ago)
+14:57:lh_mouse: 而且为什么无人认领呢
+14:58:lh_mouse: lh_mouse@iZ28phf1srfZ:~$ curl -v [0:1]:8850
+14:58:lh_mouse: curl: (3) [globbing] error: bad range specification after pos 2
+14:58:lh_mouse: lh_mouse@iZ28phf1srfZ:~$ curl -v [::1]            
+14:58:lh_mouse: curl: (3) [globbing] illegal character in range specification at pos 2
+14:59:lh_mouse: lh_mouse@iZ28phf1srfZ:~$ curl -v "http://[::1]:8850/"
+14:59:lh_mouse: curl: (3) [globbing] illegal character in range specification at pos 9
+15:02:hope1: 有一个叫brisk_的偶尔来
+15:02:hope1: 用的是同一个cloak
+15:03:hope1: 偶尔 -> 今年没来过
+15:04:lh_mouse: 没有记录
+15:05:hope1: 我这里最后的纪录是2013-11-09
+15:05:Plough: lh_mouse: 你的curl版本是啥
+15:06:lh_mouse: curl 7.26.0 (x86_64-pc-linux-gnu) libcurl/7.26.0 OpenSSL/1.0.1e zlib/1.2.7 libidn/1.25 libssh2/1.4.2 librtmp/2.3
+15:06:Plough: ……
+15:06:Plough: curl 7.37.1没问题
+15:07:Plough: 我找到个08年的bug
+15:07:Plough: [redflag@localhost ~]$ curl -v "http://[::1]:8850/"
+15:07:Plough: curl: (7) Failed to connect to ::1 port 8850: Connection refused
+15:12:krfantasy joined channel
+15:17:lh_mouse: 0 0
+15:27:acgtyrant quit:Ping timeout: 255 seconds
+15:31:OO_after quit:Ping timeout: 255 seconds
+15:33:OO_after joined channel
+15:39:richselian joined channel
+15:44:condy: 原来KDE是kedy这样读的啊。。一直是K-D-E这样读的说。。(。・_・。)
+15:44:Plough: 一直K-D-E+
+15:48:Plough: 北上大人终于改二了
+15:57:krfantasy quit:Remote host closed the connection
+15:59:richselian: 疼
+16:01:hope1: 疼
+16:11:Plough: 噗
+16:11:Plough: 雪风没货了
+16:14:acgtyrant joined channel
+16:24:condy: 为什么听香菜的声音，总是想到美柑。。。
+16:29:richselian: 噗
+16:30:richselian: 我去给妹纸选一个妹抖装
+16:30:Plough: 卧槽我怎么突然冲到7649名了
+16:31:Plough: 3333造出弥生了
+16:37:lhanjian joined channel
+16:46:hoxily quit:Quit: WeeChat 0.3.2
+16:48:hoxily joined channel
+17:06:xxxxxxxx: KDE 肯定饿
+17:08:hysw: (爪机自重,3MiB)http://hysw.org/paste/20140824.jpg < 完全抽风了
+17:09:xxxxxxxx: 学霸云发福记?
+17:13:boosure quit:Ping timeout: 240 seconds
+17:14:Plough: 这啥好可怕
+17:20:hysw quit:Ping timeout: 255 seconds
+17:21:richselian left channel:
+17:23:hope1: golly为什么不在源里……
+17:47:xxxxxxxx: golly是啥?
+17:48:lh_mouse: acgtyrant, 揉
+17:49:hope1: 生命游戏模拟器
+17:50:OO_after: 生命游戏模拟器
+17:50:hope1: ...
+17:50:condy: 这又是bug。。
+17:50:condy: 生命游戏模拟器
+17:50:xxxxxxxx: 复读机
+17:50:xxxxxxxx: 生命游戏模拟器
+17:50:condy: geordi: ("生命游戏模拟器")
+17:50:geordi: 生命游戏模拟器
+17:51:lh_mouse: 次奥
+18:30:ring joined channel
+18:38:ring quit:Quit: Bye
+18:38:hoxily: 生命游戏模拟器?
+18:42:xxxxxxxx: 那个闪瞎狗眼的东西
+18:43:hoxily: 这图很漂亮嘛
+18:47:lh_mouse: @制造生命游戏模拟器
+18:48:lhanjian quit:Remote host closed the connection
+18:51:xxxxxxxx quit:Ping timeout: 260 seconds
+18:54:cleamoon joined channel
+19:06:lh_mouse: geordi, <<shared_ptr<char>(shared_ptr<void>(), "meow");
+19:06:geordi: warning: deprecated conversion from string constant to 'char*'
+19:06:lh_mouse: geordi, <<shared_ptr<const char>(shared_ptr<void>(), "meow");
+19:06:geordi: meow
+19:12:boosure joined channel
+19:55:krfantasy joined channel
+20:32:cLeaMooN_ joined channel
+20:38:xxxxxxxx joined channel
+20:59:krfantas` joined channel
+21:00:krfantasy quit:Ping timeout: 246 seconds
+21:02:lh_mouse: epoll 有没有人用过的
+21:03:condy: 我记得你以前（2个月前？）就似乎有问过epoll的东西呀。
+21:10:boosure quit:Ping timeout: 246 seconds
+21:21:endle quit:Ping timeout: 250 seconds
+21:34:condy: geordi: { string s="abcd1234xxoo", pattern="1234"; if(search(s.being(),s.end(),pattern.begin(),pattern.end())!=s.end())cout<<"y"; }
+21:34:geordi: error: 'string' has no member named 'being'
+21:34:condy: geordi: repalce being with begin
+21:34:geordi: error: 'repalce' does not name a type
+21:35:condy: geordi: sohw
+21:35:geordi: error: 'sohw' does not name a type
+21:35:condy: geordi: show
+21:35:geordi: sohw
+21:35:endle joined channel
+21:35:condy: geordi: undo and undo and replace being with begin
+21:35:geordi: error: Unexpected `undo` after `undo and `. Expected edit command.
+21:35:condy: geordi: undo and show
+21:35:geordi: repalce being with begin
+21:35:condy: geordi: { string s="abcd1234xxoo", pattern="1234"; if(search(s.begin(),s.end(),pattern.begin(),pattern.end())!=s.end())cout<<"y"; }
+21:35:geordi: y
+21:40:endle quit:Ping timeout: 245 seconds
+21:58:wysaid joined channel
+22:06:hysw joined channel
+22:25:condy quit:Quit: tomorrow is another day!
+22:26:hysw quit:Ping timeout: 255 seconds
+22:26:wysaid: 。
+22:31:wysaid quit:Ping timeout: 260 seconds
+22:35:boosure joined channel
+22:36:hope1 quit:Ping timeout: 260 seconds
+22:51:condy joined channel
+22:53:wysaid joined channel
+22:57:krfantasy quit:Remote host closed the connection
+22:59:hope1 joined channel
+23:17:hope1 quit:Ping timeout: 260 seconds
+23:45:condy quit:Quit: leaving
+23:48:blackskygg joined channel
+23:48:blackskygg: 都高三了才发现数学课本的珍贵
+23:54:blackskygg: ex-hentai是什么鬼东西来的
+23:54:blackskygg: 为什么最近经常听到有人在说这个

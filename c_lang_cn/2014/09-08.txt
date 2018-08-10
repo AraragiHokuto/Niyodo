@@ -1,0 +1,1233 @@
+00:00:cleamoon: shit，电脑没电了... 才发现...
+00:01:MoeIcenowy joined channel
+00:01:condy: Perl 是唯一一门在 RSA 加密前后看起来一样的语言。 -- Keith Bostic 
+00:01:Petrus07 quit:Quit: Leaving.
+00:01:condy: 233
+00:02:sismvg: pu 
+00:03:sismvg: 反论：机器语言也一样
+00:04:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+00:08:acgtyrant quit:Ping timeout: 255 seconds
+00:08:condy: Why do Java developers wear glasses?
+00:08:condy: Because they can't C#.
+00:08:condy: 转自 http://www.zhihu.com/question/20034686 
+00:12:cleamoon: 23333
+00:12:cleamoon: 这个梗没懂
+00:13:Plough: see sharp(?)
+00:14:cleamoon: 哦.....
+00:19:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+00:40:Plough quit:Remote host closed the connection
+00:46:condy quit:Quit: WeeChat 1.0
+00:50:MoeIcenowy quit:Remote host closed the connection
+01:01:code_new quit:Quit: Leaving
+01:02:MoeIcenowy joined channel
+01:08:SoftRUN quit:Quit: 离开
+01:47:MoeIcenowy quit:Ping timeout: 260 seconds
+02:18:zzzzzzzz quit:Quit: Leaving
+02:52:hope1 quit:Ping timeout: 245 seconds
+04:32:hysw quit:Ping timeout: 255 seconds
+09:23:JQK quit:Ping timeout: 264 seconds
+09:24:hysw joined channel
+09:32:MoeIcenowy joined channel
+09:34:hysw quit:Ping timeout: 252 seconds
+09:36:hysw joined channel
+09:58:JQK_Phone joined channel
+10:03:code_new joined channel
+10:04:wsyh joined channel
+10:11:sismvg joined channel
+10:13:Petrus07 joined channel
+10:25:wsyh quit:Ping timeout: 255 seconds
+10:26:acgtyrant joined channel
+10:28:code_new quit:Ping timeout: 246 seconds
+10:29:code_new joined channel
+11:01:code_new quit:Ping timeout: 245 seconds
+11:05:uuair joined channel
+11:24:blackskygg joined channel
+11:33:uuair quit:Read error: Connection reset by peer
+11:34:Plough joined channel
+11:39:MoeIcenowy quit:Ping timeout: 260 seconds
+11:39:cleamoon quit:Ping timeout: 255 seconds
+12:18:hysw quit:Ping timeout: 240 seconds
+12:22:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+12:52:blackskygg96 joined channel
+12:52:blackskygg96 quit:Client Quit
+13:29:Plough: 单横对单横被鱼雷中破了
+13:29:Plough: 我家的祥瑞是不是盗版的
+13:39:wlemuel joined channel
+13:39:wlemuel quit:Client Quit
+13:46:Sleepwalking joined channel
+13:50:blackskygg quit:Quit: Leaving.
+13:51:Sleepwalking1 joined channel
+13:54:Sleepwalking quit:Ping timeout: 276 seconds
+13:59:hope1 joined channel
+14:18:JQK2 joined channel
+14:22:IveArthur joined channel
+14:23:IveArthur: yabali
+14:24:Plough: yappari
+14:24:wlemuel joined channel
+14:24:IveArthur: ←_←
+14:25:IveArthur: 我日语渣清喷
+14:25:acgtyrant quit:Remote host closed the connection
+14:26:cleamoon joined channel
+14:29:acgtyrant joined channel
+14:30:lemuel joined channel
+14:31:wlemuel quit:Ping timeout: 260 seconds
+14:32:lh_mouse: IveArthur, 揉
+14:32:lh_mouse: Sleepwalking1, 0 0
+14:32:IveArthur: -_-||
+14:32:lh_mouse: Sleepwalking, 0 0
+14:33:sismvg joined channel
+14:33:IveArth4 joined channel
+14:37:IveArthur quit:Ping timeout: 276 seconds
+14:42:IveArth4 left channel:
+14:45:sismvg: my->_<1
+14:45:IveArth4 joined channel
+14:45:IveArth4: timeout之后断开然后就蛋疼了
+14:46:IveArth4: 果然要跪
+14:47:zzzzzzzz joined channel
+14:51:IveArthur joined channel
+14:53:IveArth4 quit:Ping timeout: 245 seconds
+14:54:JINKELOID joined channel
+14:57:IveArthur left channel:
+14:59:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+15:07:sismvg: 试着同比例划分三角形
+15:07:sismvg: 发现虽然不能完整填充，但是似乎可以螺旋式无限小的划分
+15:08:hope1: 同比例划分？
+15:10:sismvg: 同比例。
+15:11:hope1: 没明白……
+15:12:cleamoon quit:Ping timeout: 255 seconds
+15:12:sismvg: 就是角度一样的三角形
+15:13:sismvg: 一个个填充进一个大的三角形
+15:22:sismvg: 白番茄选词要用方向键太坑了
+15:22:sismvg: 手移到方向键上的时间就能多打好几个字。
+15:32:MoeIcenowy joined channel
+15:37:lh_mouse: geordi, << make_index_sequence<5>();
+15:37:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and 'make_index_sequence<5ul> {aka integer_sequence<long unsigned int, 0ul, 1ul, 2ul, 3ul, 4ul>}')
+15:37:lh_mouse: geordi, << make_index_sequence<5>()();
+15:37:geordi: error: no match for call to '(make_index_sequence<5ul> {aka integer_sequence<long unsigned int, 0ul, 1ul, 2ul, 3ul, 4ul>}) ()'
+15:37:condy joined channel
+16:01:MoeIcenowy quit:Remote host closed the connection
+16:05:condy: cin/cout 是不是在 global constructor时被创建的啊？
+16:05:condy: lh_mouse: ^
+16:07:wlemuel joined channel
+16:07:lh_mouse: condy, std::ios_base::Init
+16:07:lemuel quit:Ping timeout: 252 seconds
+16:08:lh_mouse: 你看下这东西
+16:08:condy: 嗯。
+16:09:Sleepwalking quit:Ping timeout: 268 seconds
+16:09:Sleepwalking joined channel
+16:19:wlemuel quit:Ping timeout: 255 seconds
+16:21:ZedFire joined channel
+16:30:ZedFire quit:Read error: Connection reset by peer
+16:32:ZedFire joined channel
+16:56:ZedFire quit:Read error: Connection reset by peer
+16:57:ZedFire joined channel
+16:57:MoeIcenowy joined channel
+16:58:ZedFire quit:Read error: Connection reset by peer
+16:59:ZedFire joined channel
+17:07:condy: geordi: --show-compile-flags
+17:07:geordi: -finput-charset=UTF-8 -O0 -std=c++1z -pedantic-errors -Wfatal-errors -Wall -Wextra -Wno-empty-body -Wno-missing-field-initializers -Wwrite-strings -Wno-deprecated -Wno-unused-parameter -Wno-unused-variable -Wno-non-virtual-dtor -Wno-variadic-macros -fno-diagnostics-show-option -fno-use-linker-plugin -fmessage-length=0 -ftemplate-depth-128 -fno-merg
+17:10:MoeIcenowy quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+17:17:hope1 quit:Remote host closed the connection
+17:18:Sakairuka joined channel
+17:19:Sakairuka left channel:
+17:19:whocares_2 quit:Ping timeout: 264 seconds
+17:38:condy: To remove all addresses:
+17:38:condy: ip addr flush dev eth0
+17:38:condy: 原来这么简单...
+17:44:ZedFire quit:Read error: Connection reset by peer
+17:46:sismvg: 我一直以为我食量很大，直到我看到相扑选手的早晨
+17:47:sismvg: http://www.ithome.com/html/out/102456.htm
+17:47:sismvg: 魔兽世界 电影
+17:52:lh_mouse: geordi, << std::is_nothrow_assignable<int>::value;
+17:52:geordi: error: wrong number of template arguments (1, should be 2)
+17:52:lh_mouse: geordi, << std::is_nothrow_assignable<int, int>::value;
+17:52:geordi: 0
+17:52:lh_mouse: geordi, << std::is_nothrow_assignable<int, int &&>::value;
+17:52:geordi: 0
+17:53:lh_mouse: geordi, << std::is_nothrow_assignable<foo, foo>::value;  struct foo { };
+17:53:geordi: 1
+18:05:sismvg: 羊驼呢
+18:14:lh_mouse: geordi, << std::is_nothrow_move_assignable<int>::value;
+18:14:geordi: 1
+18:20:cleamoon joined channel
+18:50:whocares_2 joined channel
+19:04:condy: http://acmore.duapp.com/ <- sismvg 福利哦！
+19:04:sismvg: 我才不会相信
+19:04:condy: sismvg: 真的。
+19:05:condy: 抓的是acfun的被删评论！
+19:05:cleamoon quit:Read error: Connection reset by peer
+19:05:cLeaMooN_ joined channel
+19:05:sismvg: idc
+19:06:JINKELOID quit:Quit: Leaving.
+19:13:sismvg: http://www.acfun.tv/a/ac479831
+19:13:sismvg: 这种家伙不烧还得了？
+19:18:ZedFire joined channel
+19:19:cLeaMooN_: 四元娘爆了他
+19:20:ZedFire quit:Read error: Connection reset by peer
+19:24:ZedFire joined channel
+19:28:ZedFire quit:Read error: Connection reset by peer
+19:29:ZedFire joined channel
+19:29:iyzsong joined channel
+19:30:condy: 原来 partial_sum 内部实现用了omp...
+19:32:sismvg: 并行求和CPU做起来太慢
+19:32:sismvg: GPU又难以同步。。
+19:33:Sleepwalking quit:Ping timeout: 276 seconds
+19:37:ZedFire quit:Read error: Connection reset by peer
+19:38:condy: 本来以为直接用numeric中的东西会有问题，没有想到在内核态也可以用唉！
+19:38:condy: \yeah/
+19:39:Sleepwalking joined channel
+19:40:lh_mouse: Sleepwalking, 0 0
+19:54:condy: geordi: { cout << left << setw(10) << "hello"; }
+19:54:geordi: hello     
+19:54:condy: geordi: replace left with right
+19:54:geordi:      hello
+19:55:condy: geordi: replace 10 with 0
+19:55:geordi: hello
+20:02:condy: geordi: { __asm__ __volatile__("call _Z3foov"); } void foo(){cout<<"hello";}
+20:02:geordi: hello
+20:03:MoeIcenowy joined channel
+20:03:condy: geordi: { __asm__ __volatile__("call foo"); } extern "C" void foo(){cout<<"hello";}
+20:03:geordi: hello
+20:03:MoeIcenowy: 呃。。。连asm都可以用
+20:04:MoeIcenowy: 来个cpuid？
+20:04:MoeIcenowy: condy: 会用cpuid指令吗
+20:04:condy: MoeIcenowy: 不会。。刚刚学汇编..
+20:04:Sleepwalking: 药来了？
+20:04:Sleepwalking: 可惜羊驼不在。。。
+20:06:MoeIcenowy: Sleepwalking: 早
+20:06:Sleepwalking: geordi: {float a, b; b = 3; __asm__ __volatile__ ("movss %1, %0\n":(+m)a:(m)b:); cout<<a;}
+20:06:geordi: error: expected string-literal before '(' token
+20:06:Sleepwalking: ...
+20:06:MoeIcenowy: Sleepwalking来玩sse了
+20:07:condy: geordi: {float a, b; b = 3; __asm__ __volatile__ ("movss %1, %0\n":+m(a):m(b):); cout<<a; }
+20:07:geordi: error: expected string-literal before '+' token
+20:07:condy: geordi: {float a, b; b = 3; __asm__ __volatile__ ("movss %1, %0":+m(a):m(b):); cout<<a; }
+20:07:geordi: Same error.
+20:07:MoeIcenowy: __asm__ __volatile__ ("mov eax,0 \n cpuid\n")
+20:07:condy: geordi: {float a, b; b = 3; __asm__ __volatile__ ("movss %1, %0":(+m)a:(m)b:); cout<<a; }
+20:07:geordi: error: expected string-literal before '(' token
+20:08:MoeIcenowy: Sleepwalking: 你确定是gcc？
+20:08:condy: MoeIcenowy: 是gcc.
+20:08:Sleepwalking: geordi: {float a, b; b= 3; __asm__ __volatile__ ("movss %1, %0\n":"+m"(a):"m"(b):); cout<<a;}
+20:08:geordi: error: too many memory references for `movss'
+20:08:Sleepwalking: ?!
+20:08:Sleepwalking: 普
+20:08:MoeIcenowy: geordi: {__asm__ __volatile__ ("mov eax,0 \n cpuid\n")}
+20:08:geordi: error: expected ';' before '}' token
+20:08:MoeIcenowy: geordi: {__asm__ __volatile__ ("mov eax,0 \n cpuid\n");}
+20:08:geordi: error: too many memory references for `mov'
+20:08:MoeIcenowy: ...
+20:09:condy: geordi: { __asm__ __volatile__("mov 0, eax"); }
+20:09:geordi: Same error.
+20:09:Sleepwalking: geordi: {float a, b; b= 3; __asm__ __volatile__ ("movss %1, %%xmm0\n""movss %%xmm0, %0\n":"+m"(a):"m"(b):);cout<<a;}
+20:09:geordi: 3
+20:09:Sleepwalking: bingo
+20:09:Sleepwalking: 忘记movss不能同时操作俩内存了
+20:09:MoeIcenowy: geordi: {__asm__ __volatile__ ("mov eax,0");__asm__ __volatile__ ("cpuid");}
+20:09:geordi: error: too many memory references for `mov'
+20:10:condy: geordi: { __asm__ __volatile__("movl 0, eax"); }
+20:10:geordi: Same error.
+20:10:MoeIcenowy: 艹忘了ATT
+20:10:Sleepwalking: condy: mov eax, %0
+20:10:condy: 。。。
+20:10:condy: 不是ATT的语法吗？
+20:10:MoeIcenowy: geordi: {__asm__ __volatile__ ("mov 0,$eax");__asm__ __volatile__ ("cpuid");}
+20:10:geordi: error: unsupported instruction `mov'
+20:10:condy: geordi: { __asm__ __volatile__("movl $0, eax"); }
+20:10:geordi: undefined reference to `eax'
+20:10:Sleepwalking: geordi: {int cpuid; __asm__ volatile("mov %%eax, %0\n":"+m"(cpuid)::);cout<<cpuid;}
+20:10:geordi: 0
+20:10:condy: geordi: { __asm__ __volatile__("movl $0, %eax"); }
+20:10:geordi: <no output>
+20:10:Sleepwalking: 居然是0.。。
+20:10:condy: \yeah/
+20:11:MoeIcenowy: geordi: {__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");}
+20:11:geordi: <no output>
+20:11:Sleepwalking: 啊忘记调cpuid了。。
+20:11:Sleepwalking: 噗
+20:11:Sleepwalking: 不玩了
+20:11:MoeIcenowy: 谁帮我写一个输出eax,ebx,ecx,edx
+20:12:MoeIcenowy: Sleepwalking: 怎么调出exx内容
+20:12:Sleepwalking: mov %%eax, %0
+20:12:MoeIcenowy: 然后？
+20:12:condy: geordi: { register int eax __asm__ __volatile__("%eax"); cout <<eax; }
+20:12:geordi: error: expected '(' before '__volatile__'
+20:13:MoeIcenowy: ？！
+20:13:Sleepwalking: geordi: {int a,b;__asm__ __volatile__ ("cpuid\n mov %%eax, %0\n mov %%ebx, %1\n",:"+m"(a),"+m"(b)::); cout<<a<<" "<<b;}
+20:13:geordi: error: expected ')' before ',' token
+20:13:Sleepwalking: geordi: {int a,b;__asm__ __volatile__ ("cpuid\n" "mov %%eax, %0\n" "mov %%ebx, %1\n",:"+m"(a),"+m"(b)::); cout<<a<<" "<<b;}
+20:13:geordi: Same error.
+20:13:condy: geordi: { register int eax __asm__("%eax"); cout <<eax; }
+20:13:geordi: -1001921304
+20:13:Sleepwalking: 蛋碎。。。
+20:14:MoeIcenowy: geordi: {register int eax __asm__ __volatile__("%eax"); __asm__ __volatile__ ("movl $0,%%eax");__asm__ __volatile__ ("cpuid");cout << eax;}
+20:14:geordi: error: expected '(' before '__volatile__'
+20:14:condy: geordi: erase all __volatile__
+20:14:geordi: error: bad register name `%%eax'
+20:14:MoeIcenowy: geordi: {register int eax __asm__("%eax"); __asm__ __volatile__ ("movl $0,%%eax");__asm__ __volatile__ ("cpuid");cout << eax;}
+20:14:geordi: Same error.
+20:14:Sleepwalking: geordi: {int a,b;__asm__ __volatile__ ("cpuid\n" "mov %%eax, %0\n" "mov %%ebx, %1\n":"+m"(a)"+m"(b)::); cout<<a<<" "<<b;}
+20:14:geordi: error: expected ')' before string constant
+20:14:condy: geordi: replace %% with %
+20:14:geordi: error: String `%%` occurs multiple times.
+20:14:condy: geordi: replace all %% with %
+20:14:geordi: error: expected ')' before string constant
+20:14:MoeIcenowy: geordi: {register int eax __asm__("%eax"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");cout << eax;}
+20:14:Sleepwalking: geordi: {int a,b;__asm__ __volatile__ ("cpuid\n" "mov %%eax, %0\n" "mov %%ebx, %1\n":"+m"(a),"+m"(b)::); cout<<a<<" "<<b;}
+20:14:geordi: 13
+20:15:geordi: 13 1970169159
+20:15:Sleepwalking: ok
+20:15:MoeIcenowy: geordi: {register int eax __asm__("%eax"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");cout << eax;}
+20:15:geordi: 13
+20:15:MoeIcenowy: 不对
+20:15:MoeIcenowy: 我们来用printf
+20:15:MoeIcenowy: 要输出十六进制
+20:15:MoeIcenowy: geordi: {register int eax __asm__("%eax"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x",eax);}
+20:15:geordi: d
+20:15:Sleepwalking: 为什么不把ee-fft port上去呢 2333
+20:15:MoeIcenowy: ？！
+20:16:MoeIcenowy: ？！？！
+20:16:MoeIcenowy: d？！
+20:16:MoeIcenowy: 优化了？！
+20:16:MoeIcenowy: __asm__里面能不能访问局部变量
+20:16:Sleepwalking: 的确容易被优化
+20:16:Sleepwalking: 不过printf存在依赖就不会了
+20:17:Sleepwalking: movl $0, %eax 那个%要去掉
+20:17:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x",eax,ebx,ecx,edx);}
+20:17:Sleepwalking: __asm__后面的%eax要改成%%eax
+20:17:geordi: d 756e6547 6c65746e 49656e69
+20:17:Sleepwalking: 不过13的hex是d啊
+20:18:MoeIcenowy: 艹
+20:18:MoeIcenowy: 原来不用eax
+20:18:Sleepwalking: 。。。
+20:18:MoeIcenowy: 鉴定完毕
+20:18:MoeIcenowy: 这是正牌Intel CPU
+20:19:MoeIcenowy: 756e6547 6c65746e 49656e69 大家可以转一下ASCII
+20:20:MoeIcenowy: Sleepwalking: 羊驼是？
+20:20:Sleepwalking: CPUID returns processor identification and feature information in the EAX, EBX, ECX, and EDX registers.
+20:20:Sleepwalking: ia-32-arch-software-developer-instruction-set-reference-manual
+20:21:MoeIcenowy: @sw 你可以看看这个支持什么指令集
+20:21:MoeIcenowy: 以后eefft选择性开启也有用
+20:21:Sleepwalking: cpuid调用时 eax是参数……
+20:22:Sleepwalking: 当我没说 你mov了
+20:22:zzzzzzzzzzz joined channel
+20:22:condy: GenuntelineI
+20:23:condy: ^ 这个是啥？
+20:23:Sleepwalking: 今天羊驼居然没来 如果来了肯定要爆你
+20:24:condy: geordi: { __asm__ __volatile__ ("movl $0,%eax"); __asm__ __volatile__("cpuid"); register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); printf("%x %x %x %x",eax,ebx,ecx,edx); }
+20:24:geordi: No change in output.
+20:24:MoeIcenowy: @condy Intel的品牌信息
+20:24:lh_mouse: Sleepwalking, 
+20:25:StarBrilliant joined channel
+20:25:Sleepwalking: 怎么都来了。。
+20:25:lh_mouse: Sleepwalking, 喵~
+20:26:StarBrilliant: pia~
+20:26:condy: geordi: { register int eax __asm__("%eax"); cout << eax; __asm__ __volatile__("call foo"); cout << "$" << eax; } extern "C" int foo(){return 1;}
+20:26:geordi: 1623180520$1
+20:26:StarBrilliant: ???!!!!!
+20:26:zzzzzzzz quit:Ping timeout: 252 seconds
+20:26:StarBrilliant: ASM也可以？
+20:26:StarBrilliant: { __asm__("int3"); }
+20:26:StarBrilliant: geordi: { __asm__("int3"); }
+20:26:geordi: Trace/breakpoint trap
+20:26:Sleepwalking: StarBrilliant: 刚才我和Icenowy在艹cpuid
+20:26:StarBrilliant: ....
+20:27:lh_mouse: Sleepwalking, 揉
+20:27:StarBrilliant: 揉
+20:27:StarBrilliant: 蹭
+20:27:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+20:27:geordi: d 756e6547 6c65746e 49656e69 Genu
+20:27:Sleepwalking: 滚
+20:27:lh_mouse: QAQ
+20:27:MoeIcenowy: geordi怎么了
+20:27:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+20:27:geordi: No change in output.
+20:27:MoeIcenowy: 哦好了
+20:29:sismvg: 又死在了数据噪声上。。
+20:30:MoeIcenowy: geordi: {void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(ebx);pc(ecx);pc(edx);}
+20:30:geordi: error: a function-definition is not allowed here before '{' token
+20:30:MoeIcenowy: geordi: {void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(ebx);pc(ecx);pc(edx);}
+20:30:geordi: Same error.
+20:30:MoeIcenowy: 没反应？！
+20:30:MoeIcenowy: 哦
+20:31:StarBrilliant: Same error...........
+20:31:StarBrilliant: 能不能执行命令呀
+20:31:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); __asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(ebx);pc(ecx);pc(edx);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+20:31:geordi: d 756e6547 6c65746e 49656e69 Genu�I�
+20:31:MoeIcenowy: ecx,edx怎么了
+20:31:MoeIcenowy: 难道是fastcall
+20:32:varna joined channel
+20:32:varna: Sleepwalking: 爆
+20:32:varna: Plough: 爆
+20:32:varna: MoeIcenowy: 爆
+20:32:varna: MisakaMikoto: 爆
+20:32:lh_mouse: MoeIcenowy, 你第一个 printf 之后 ecx 就挂了
+20:32:varna: 还有个啮齿类
+20:32:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");printf("%x %x %x %x ",eax,ebx,ecx,edx);b=ebx,c=ecx,d=edx;pc(b);pc(c);pc(d);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+20:32:geordi: d 756e6547 6c65746e 49656e69 Genu�Y�
+20:32:MoeIcenowy: ...
+20:33:lh_mouse: varna, 米库酱骂我
+20:33:varna: lh_mouse: 你赣他僻衍
+20:33:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(b);pc(c);pc(d);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+20:33:geordi: d 756e6547 6c65746e 49656e69 GenuntelineI
+20:33:Sleepwalking: varna: MoeIcenowy是药娘
+20:33:Sleepwalking: 快去爆它
+20:33:varna: Sleepwalking: 啊？
+20:33:varna: 三个药娘了？
+20:33:Sleepwalking: 我不是！
+20:33:MoeIcenowy: ...
+20:33:varna: 来来米库酱也趴下排好
+20:33:varna: 我先打一通尻鼓
+20:33:Sleepwalking: 它真的是药娘啊啊啊 先爆它
+20:34:MoeIcenowy: @sw 不要嘛～
+20:34:varna: MoeIcenowy: 真的是药娘？
+20:34:MoeIcenowy: varna是什么？
+20:34:varna: Sleepwalking: 先爆你吧，毕竟你是频道看板药娘
+20:34:MoeIcenowy: 早就停了
+20:34:Sleepwalking: ……
+20:34:* StarBrilliant 好想被侵犯呀
+20:34:varna: 肉尻的米库酱和白丝的红旗酱
+20:34:MoeIcenowy: 论我就是头像Is那个
+20:34:varna: StarBrilliant: 爆
+20:34:* StarBrilliant 的身体好想被侵犯呀
+20:34:Sleepwalking: ……
+20:34:* StarBrilliant 怎么了，对偶的身体不满意吗？
+20:34:* MoeIcenowy 不容许SB在这里胡闹
+20:35:Sleepwalking: 这是拆频道的节奏。。。
+20:35:StarBrilliant: 琳讨厌偶吗？
+20:35:* varna 不允许频道药娘停药
+20:35:varna: 真是那个冰雪聪明琳之风？
+20:35:StarBrilliant: 琳不想和偶做H的事吗？
+20:35:Sleepwalking: varna: 没错。。。
+20:35:Sleepwalking: 其实一直在#Rocaloid..
+20:35:StarBrilliant: 偶好想被琳玩弄呀
+20:35:varna: 肉尻oid?
+20:35:Sleepwalking: = =
+20:35:sismvg: 应该log
+20:36:StarBrilliant: 对了，好像肉尻loid的引擎叫「Ruce如厕」
+20:36:Sleepwalking: sismvg: SB这种节操一直掉光的。。
+20:36:MoeIcenowy: @varna 我在来这里之前就停药了
+20:36:StarBrilliant: 但是……
+20:36:varna: MoeIcenowy: 为什么停药了
+20:36:StarBrilliant: 但是SB真的很想被侵犯
+20:36:varna: StarBrilliant: 爆
+20:36:MoeIcenowy: @varna 害怕影响IQ
+20:36:varna: MoeIcenowy: 你看米库酱都不影响
+20:36:MoeIcenowy: RUCE如厕。。。
+20:37:MoeIcenowy: 米库是？
+20:37:varna: IQ这东西没用，小耗IQ估计不低，他还是个啮齿类
+20:37:StarBrilliant: 不要
+20:37:Sleepwalking: MoeIcenowy: 去跟羊驼睡 他会爆你带你玩贱女人然后成为perl僧
+20:37:varna: 再写c艹他也是个啮齿类，变不成羊驼
+20:37:MoeIcenowy: perl...不要！
+20:37:MoeIcenowy: 我要python！
+20:37:varna: py去死——
+20:37:MoeIcenowy: 不要perl！
+20:37:Plough: varna: 去了两趟5-3
+20:37:MoeIcenowy: 啊啊啊！
+20:37:Plough: 被塔姐教育了一通
+20:37:StarBrilliant: sb也要python
+20:37:sismvg: http://www.ithome.com/html/digi/102285.htm
+20:37:varna: Plough: 我还以为打了两格血呢，爆
+20:37:MoeIcenowy: vala也行！！！
+20:37:sismvg: 买买买买！
+20:37:MoeIcenowy: C#更好！！！
+20:37:StarBrilliant: sb会和琳有同样的选择的！
+20:37:varna: vala也去死
+20:37:Plough: varna: 自 炒去
+20:37:StarBrilliant: vala也行！
+20:37:Plough: 我脸哪那么好……
+20:38:StarBrilliant: sb会和琳有同样的选择的！
+20:38:MoeIcenowy: RUtil都行了！！！
+20:38:StarBrilliant: sb会支持琳的
+20:38:varna: 连个编译器都没有，直接编译成c还用gobject的东西
+20:38:StarBrilliant: glib也行
+20:38:Plough: 话说我觉得塔姐比莉酱可怕啊
+20:38:MoeIcenowy: RUtil简直是一种语言
+20:38:Plough: 莉酱一个CI脸好也就打个中破
+20:38:varna: Plough: 你没吃过莉酱的炮雷混合么
+20:38:Plough: 塔姐随手一点轰隆
+20:38:varna: MoeIcenowy: 一看就是你语言见少了……
+20:38:MoeIcenowy: 又在黑 Sleepwalking 了
+20:38:varna: 支持RUtil对象语义的站出来我直接开喷好了
+20:38:MoeIcenowy: @varna 来我们写bf
+20:38:varna: MoeIcenowy: 我连bf自解释器都写了
+20:39:MoeIcenowy: @varna rutil2读的我醉了
+20:39:SoftRUN joined channel
+20:39:Sleepwalking: MoeIcenowy: 在此之前驼子已经喷过RUtil2了。。
+20:39:Plough: MoeIcenowy: 装逼也不挑个对象……
+20:39:MoeIcenowy: @varna 那我们来上草泥马
+20:39:varna: gmh不是whitespace么
+20:39:MoeIcenowy: 就是
+20:39:StarBrilliant: 琳不准上草泥马
+20:39:varna: 寄存器机比单纯的仿基佬机好耍多了……
+20:39:MoeIcenowy: “上草泥马”
+20:39:StarBrilliant: 草泥马是谁？
+20:40:StarBrilliant: 琳上我吧
+20:40:varna: 你自己写几个基佬机或者Post基佬机程序就知道了
+20:40:* StarBrilliant 好想被琳上
+20:40:Sleepwalking: 拆频道的节奏……
+20:40:MoeIcenowy: 程序员三大乐趣
+20:40:MoeIcenowy: 操作系统
+20:40:MoeIcenowy: 编译原理
+20:40:lh_mouse: 烧饼 ATT 语法
+20:40:MoeIcenowy: 图形学
+20:40:StarBrilliant: 琳不可以上别的男孩子！
+20:40:varna: 逗比
+20:40:varna: 首先去掉图形学
+20:40:Sleepwalking: 目测要被喷死。。
+20:40:varna: 其次我们可以谈谈OS和编译
+20:41:MoeIcenowy: 来我们来写libc吧
+20:41:StarBrilliant: 程序员三大乐趣：撸管撸管撸管
+20:41:MoeIcenowy: 。。。
+20:41:lh_mouse: 米！库！酱！
+20:41:MoeIcenowy: @SB 你都找到女朋友了
+20:41:Plough: 大傻给提督泡个红茶，我要看戏
+20:41:Sleepwalking: 对啊 SB是大线虫
+20:41:varna: 自制内核还不是一大堆……
+20:41:StarBrilliant: 被撸管被撸管被撸管！
+20:41:Sleepwalking: 我们都来烧他
+20:41:MoeIcenowy: 不要讽刺别人了
+20:41:StarBrilliant: sb才不是线虫
+20:41:StarBrilliant: sb只会爆炸
+20:41:StarBrilliant: Sw = Super Wheelmaker
+20:42:varna: 我只是看gobject类似物不顺眼，其中包括米库酱的RUtil系列
+20:42:Plough: gobject简直疼死
+20:42:varna: 自称面向对象的数据聚合只是自作多情为什么就是不明白呢
+20:42:Plough: 疼得我都想自己封个GUI库出来
+20:42:Plough: 弃掉GTK
+20:42:varna: Gtk还可以
+20:42:Sleepwalking: 有点明白了 不过已经这么做了
+20:43:varna: 但是GtkSourceview就……
+20:43:MoeIcenowy: @sb 我今天突然想了下
+20:43:varna: Plough: 5-3你刷闪了么？
+20:43:MoeIcenowy: pp_cs2java体系不但能对付cs,java
+20:43:Plough: Plough: 四个闪
+20:43:MoeIcenowy: 还能对付vala
+20:43:Plough: 我只是过去见见市面的，没准备推
+20:43:Sleepwalking: MoeIcenowy: [蜡烛]
+20:43:Plough: 打算先把熊岛二改了
+20:43:varna: 这是什么“体系”
+20:44:Plough: 话说5图有没有能练战舰的地方
+20:44:varna: 难道是直接把cs编译到java么
+20:44:varna: Plough: 5-4
+20:44:Plough: ……
+20:44:Plough: 得
+20:44:Plough: 我先去3-2吧
+20:44:StarBrilliant: MoeIcenowy: 对了，琳把 pinyin2xsampa 改写成 cs 吧
+20:44:Plough: 这个月肝是留不住了
+20:44:MoeIcenowy: @varna 通过预处理
+20:44:varna: 嚓，忘带彻甲弹了
+20:45:MoeIcenowy: 在java文件里
+20:45:MoeIcenowy: 不对
+20:45:MoeIcenowy: 在cs文件里
+20:45:MoeIcenowy: 写java代码
+20:45:Sleepwalking: [蜡烛]
+20:45:MoeIcenowy: 同时与cs代码并存
+20:45:varna: MoeIcenowy: 能补全么
+20:45:MoeIcenowy: 是cadencii在3.4.1之前的黑科技
+20:45:MoeIcenowy: @varna 什么意思
+20:45:varna: 这哪里算黑科技……
+20:45:sismvg: 不知道电动车怕不怕太阳耀斑
+20:46:MoeIcenowy: @varna 论现在的cadencii已经不能java编译了
+20:46:sismvg: http://i-ab.com/2321/
+20:47:sismvg: 伊利亚手办
+20:47:varna: 没看出哪里黑来……
+20:49:MoeIcenowy: @varna ...
+20:49:MoeIcenowy: @varna 论你怎么知道我的存在。。。
+20:49:Sleepwalking: 233333333
+20:49:MoeIcenowy: sw当时说从你那里听说过我
+20:49:varna: 我会随意地记一些id
+20:50:cLeaMooN_: alpako来了就一地节操
+20:50:varna: 不过因为米库酱相关诸君都实在太青春向上了，就只简单搜了一个药娘
+20:50:varna: 我哪里一地节操，现在我一地大破……
+20:50:Sleepwalking: 2333333
+20:50:StarBrilliant: MoeIcenowy: 我第一次知道琳是在 fx-es(ms)
+20:50:StarBrilliant: 当时琳可以一个传奇般的存在呢
+20:51:cLeaMooN_: 这里有金发巨乳萝莉的姐姐？
+20:51:varna: 非程序员三大爱好：撸，射，洗
+20:52:cLeaMooN_: 不爱好洗
+20:52:varna: 撸完得洗
+20:52:MoeIcenowy: @varna 论我的头像你是怎么记住的
+20:52:varna: MoeIcenowy: 我不记得头像，只记得id
+20:52:MoeIcenowy: 。。。
+20:52:cLeaMooN_: 又不在床上撸
+20:52:MoeIcenowy: 那Is与Sl是怎么回事
+20:53:varna: Is不知道，sleepwalking是因为我经常爆他
+20:53:Sleepwalking: ....
+20:53:MoeIcenowy: 我头像Is...
+20:53:varna: 他都答应我爆了
+20:53:MoeIcenowy: @Sleepwalking 什么情况
+20:53:Sleepwalking: 卧槽什么时候答应了
+20:53:varna: 17:05:varna: Sleepwalking: 能不能系统地简介一下这个问题
+20:53:varna: 17:06:varna: 然后我们行炒 饭之事
+20:53:varna: 17:06:Sleepwalking: varna: 等我准备一下
+20:53:Sleepwalking: ..........
+20:53:StarBrilliant: 难道还有人在床上撸？
+20:53:varna: 9.5 http://irclogs.benihata.org/2014-09-05.txt
+20:53:Sleepwalking: 上下文啊
+20:54:StarBrilliant: sb没有在床上撸
+20:54:StarBrilliant: sb不太懂
+20:54:varna: 我的两句话是接一起的
+20:54:varna: 哦操……瑞凤，干得漂亮、干得漂亮……
+20:54:cLeaMooN_: 集合论简直我艹，急需120的iq
+20:55:varna: 最近活又麻烦起来了，还要折腾点一看就没希望的网页去噪
+20:55:StarBrilliant: MoeIcenowy: 琳第一次认识sb是在哪
+20:55:StarBrilliant: 呢？
+20:55:StarBrilliant: 呢～
+20:55:varna: 相信web上有知识而不是有屁话就是个梦啊
+20:55:varna: 要是web上知识更多的话，就不会冒出那么多SNS傻逼来了
+20:56:cLeaMooN_: web上优质是呀，新浪下载就不少
+20:56:varna: 训练一个贝叶斯网络去指导舰娘出击都比泛用知识靠谱
+20:56:StarBrilliant: 偶想信web上知识更多
+20:56:Sleepwalking: ...
+20:56:StarBrilliant: 比如Wikipedia
+20:56:Sleepwalking: jos/sasp
+20:56:SoftRUN quit:Quit: 离开
+20:56:varna: 事在人为
+20:57:Sleepwalking: Coursera挺好的
+20:57:varna: 不是那个意思
+20:57:Sleepwalking: 是说人怎么利用？
+20:57:varna: 是说算法怎么利用
+20:57:MoeIcenowy: @sb 到处都是
+20:57:MoeIcenowy: 但是第一次在微博
+20:57:varna: 非结构化的知识很惨，意义不明的知识很糟糕
+20:58:StarBrilliant: 琳让sb弄得到处都是……
+20:58:cLeaMooN_: 想撸的五花大绑都能射，不想的金发幼女裸面前都ed
+20:58:StarBrilliant: sb好伤心
+20:58:StarBrilliant: sb明明好好洗的
+20:58:Sleepwalking: 。。。。。
+20:58:Sleepwalking: 这频道变得更脏了
+20:58:iyzsong: 2333
+20:58:varna: 哪里脏了
+20:58:varna: 不是很纯情么
+20:58:sismvg: C45在处理连续值得时候有没有可能离散化出来的值是相同的？
+20:58:lh_mouse: Sleepwalking, 米！库！酱！
+20:58:varna: 可能
+20:59:varna: 但是你如果做离散化，应该有你的理由
+20:59:varna: 实际上从我个人的实践来看，我推荐在不知道如何离散化的时候加一层不确定性推理
+20:59:sismvg: 关键不是这个
+20:59:varna: 这样可以考虑把属性综合转换成可以离散表示，有（人可以理解的）意义的证据
+21:00:sismvg: 我交给下一个子树的集合没法去掉这些值
+21:00:varna: 举例说看
+21:00:iyzsong: 祝各位丧失中秋快乐 =w=
+21:00:varna: 难道你的值都不打标签的
+21:00:sismvg: 标签？
+21:00:varna: iyzsong: 中秋快乐
+21:00:cLeaMooN_: 什么时候中秋？
+21:00:varna: cLeaMooN_: 似乎是今天
+21:00:StarBrilliant: 今天中秋呀
+21:00:cLeaMooN_: .....
+21:00:sismvg: 我差点忘了
+21:00:cLeaMooN_: 好吧
+21:00:cLeaMooN_: 中秋快乐
+21:01:iyzsong: ...
+21:01:varna: sismvg: 难道你是直接看值就去掉了
+21:01:cLeaMooN_: 是吃月饼吧？
+21:01:sismvg: 嗯。。
+21:01:varna: ...
+21:01:varna: cLeaMooN_: 吃炮弹
+21:01:sismvg: 为什么不是周日中秋呢
+21:01:varna: 因为周五要更新
+21:01:StarBrilliant: 因为是今天呀
+21:02:sismvg: 周日中秋的话就可以吃月饼了
+21:02:cLeaMooN_: 炮弹没有五仁馅的
+21:02:varna: 谁想好好过节的时候跑去大破啊
+21:02:varna: 我赌五毛3-5的头目战是撸改
+21:02:sismvg: varna:标签是什么
+21:02:varna: sismvg: 你不是每次从集合里去掉一个属性么
+21:03:Sleepwalking: 对于驼子不是谁想哈好好打大破的时候跑去过节么。。
+21:03:sismvg: 但是我还要从这些属性里提取有用的样例啊
+21:03:Sleepwalking: ibus...
+21:03:varna: sismvg: ?
+21:03:varna: Sleepwalking: 换fcitx吧
+21:04:sismvg: 我有一个温度属性，我需要其中75度的样例，其他的都不要
+21:04:StarBrilliant: 形码大法好
+21:04:varna: 要来干什么
+21:04:sismvg: 不是要给下一层吗？
+21:04:varna: 75是你选出来的怎么拿不到
+21:05:varna: 说白了不就是你自己的集合划分不开么……
+21:05:sismvg: 。。
+21:05:sismvg: 举例有点问题
+21:06:sismvg: 我有离散化的点，分别是75,75,但是我想要小于75的数据
+21:06:varna: 这什么意思……
+21:07:sismvg: 但是程序里没法更具现有的参数判断
+21:07:sismvg: 根据
+21:07:varna: 分别是75，75是什么
+21:07:sismvg: 75左边的，75右边的
+21:07:Plough: varna: 对了，你是在岩川？
+21:07:varna: Plough: 是
+21:07:Plough: 今天在岩川开了个小号
+21:07:cLeaMooN_ quit:Read error: Connection reset by peer
+21:07:cleamoon joined channel
+21:07:varna: sismvg: 你离散化的结果是什么
+21:07:varna: Plough: ...
+21:07:varna: Plough: 开小号干嘛……
+21:08:sismvg: 一个阈值点75
+21:08:Plough: 闲着没事抢个玩
+21:08:cleamoon quit:Read error: Connection reset by peer
+21:08:sismvg: 我有两个输出，所以就分成了左右子树
+21:08:cleamoon joined channel
+21:08:Plough: 然后发现小号玄学对我无效，战舰公式1小时潜艇公式出羽黑
+21:08:varna: sismvg: 我问你离散化的结果是什么
+21:09:sismvg: 理解不能。。
+21:09:cleamoon quit:Read error: Connection reset by peer
+21:09:varna: sismvg: 离散化之后的属性值域是什么
+21:09:cleamoon joined channel
+21:11:sismvg: http://fangdonghao1029.blog.163.com/blog/static/34364307201281352032174/
+21:11:sismvg: 按照这上面做的。。
+21:11:Plough: 对了，我怎么感觉我家的祥瑞是盗版的
+21:12:Plough: 1-5两次就她中破其他全没事
+21:12:Plough: 两次都是
+21:12:varna: sismvg: 然后你怎么就分不出集合了……
+21:14:sismvg: array<int,2> <-左子树值，右子树值
+21:14:Sakairuka joined channel
+21:14:sismvg: 但是他们是相同的，我的参数给了一个要屏蔽的值
+21:14:cleamoon quit:Ping timeout: 245 seconds
+21:14:condy: geordi: { cout << setw(10) << "H"; cout << "A"; }
+21:14:geordi:          HA
+21:14:sismvg: 这个值是从上面的数组中拿的
+21:15:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(b);pc(c);pc(d);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+21:15:geordi: d 756e6547 6c65746e 49656e69 GenuntelineI
+21:15:sismvg: 但是我不知道是要取阈值点左边的还是右边的值
+21:15:varna: sismvg: 自作孽
+21:15:sismvg: 有别的办法吗
+21:15:MoeIcenowy: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(b);pc(d);pc(c);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+21:15:geordi: d 756e6547 6c65746e 49656e69 GenuineIntel
+21:15:varna: sismvg: 你非得这么写么
+21:16:sismvg: 不用
+21:16:varna: 那不就行了
+21:16:condy: geordi: { cout << setw(10) << internal << "H"; cout << "A"; }
+21:16:geordi:          HA
+21:17:sismvg: 算了。。加个bool好了。。
+21:17:condy: geordi: { cout << setw(10) << internal << -101; cout << "A"; }
+21:17:geordi: -      101A
+21:17:Sakairuka quit:Quit: AndroidIrc Disconnecting
+21:18:StarBrilliant: geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(b);pc(d);pc(c);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx >>24)&0xff);}
+21:18:geordi: d 756e6547 6c65746e 49656e69 GenuineIntel
+21:19:StarBrilliant: 不明白那个 GenuineIntel 是怎么出来的
+21:19:StarBrilliant: MoeIcenowy: 琳教教我
+21:19:StarBrilliant: 没有看到 %s 呀
+21:20:FrankHB quit:Ping timeout: 252 seconds
+21:20:varna: pc(b);pc(d);pc(c);
+21:21:StarBrilliant: Genu ineI ntel 么？
+21:21:StarBrilliant: 这么坑……
+21:21:ZedFire joined channel
+21:21:varna: geordi: replace pc(c) with pc(d)
+21:21:geordi: warning: variable 'c' set but not used
+21:22:varna: geordi: show
+21:22:geordi: {register int eax __asm__("%eax");register int ebx __asm__("%ebx");register int ecx __asm__("%ecx");register int edx __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__ __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x ",eax,ebx,ecx,edx);pc(b);pc(d);pc(d);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff, (ebx >>8)&0xff,
+21:22:Plough: 神通熊岛川内利根双犬小姨子苍龙……要练的船好多啊
+21:23:Plough: 话说Lv42的利根去3-2A能抢到MVP吗
+21:23:varna: 危险
+21:23:varna: 苍龙二改不急
+21:23:sismvg_ joined channel
+21:23:MoeIcenowy: @Sb 我一开始也以为bcd
+21:23:MoeIcenowy: 原来是bdc
+21:23:Plough: 川内二改是拿夜侦和照明弹
+21:24:StarBrilliant: MoeIcenowy: 啊？
+21:24:StarBrilliant: 哈哈哈
+21:24:Plough: 总之是先为5-3准备部队
+21:24:StarBrilliant: 不明白 Genu ineI ntel 这个字符串存在的意义
+21:24:Plough: 神通是因为今天无聊点到了36级准备干脆练到二改
+21:24:StarBrilliant: 只是正好12个字符么……
+21:24:varna: Plough: 轻巡去1-5和4-3
+21:25:Plough: 现在是去1-5
+21:25:varna: 5-3我个人感觉刷闪比夜战装备有用
+21:25:varna: 至于POI, 不练不好，练了别太伤感
+21:25:Plough: 容易摔么
+21:25:varna: 摔
+21:25:varna: POI回避低
+21:25:Plough: 或者我先去把双风刷上60级？
+21:25:sismvg quit:Ping timeout: 252 seconds
+21:25:varna: 不用
+21:26:varna: 五十多级够了，四十多也勉强
+21:26:Plough: 雪风酱的CI，赞！
+21:26:Plough: 现在不到30级……
+21:26:StarBrilliant: MoeIcenowy: 偶觉得我越来越写不出东西了
+21:26:varna: 5-3重点还是雷巡和战舰
+21:26:varna: 幼女是用来带路的
+21:26:Plough: 这两次没带雷巡带的重巡……
+21:27:Plough: 利根的图纸我已经准备好了，就差等级
+21:27:Icenowy joined channel
+21:27:StarBrilliant: Icenowy: 偶觉得我越来越写不出东西了
+21:27:varna: 重巡作死
+21:27:varna: 火力不够
+21:27:Icenowy: geordi: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int b,c,d;__asm__ __volatile__ ("movl $0,%eax");__asm__  __volatile__ ("cpuid");b=ebx,c=ecx,d=edx;printf("%x %x %x %x  ",eax,ebx,ecx,edx);pc(b);pc(d);pc(c);}void pc(int ebx){printf("%c%c%c%c",ebx &0xff,  (ebx >>8)&0xff,(ebx >>16)&0xff,(ebx  >>24)&0xff);}
+21:27:geordi: d 756e6547 6c65746e 49656e69  GenuineIntel
+21:27:Icenowy: 我得再写点cpuid代码
+21:27:Plough: 我试了下还行啊，反正重巡只打对面DD
+21:27:Plough: 摔的也是雾岛
+21:28:condy: geordi: << TYPE<left>
+21:28:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>')
+21:28:varna: 主要是进头目之后
+21:28:condy: geordi: << TYPE<decltype(left)>
+21:28:geordi: ios_base& (ios_base&)
+21:28:varna: 不过也可能跟我雷巡等级一直偏高有关
+21:28:Plough: 我要不要给北上大人装个五连鱼雷上去
+21:28:varna: 不要
+21:29:varna: 安定地夜战二连
+21:29:varna: 点谁谁死
+21:29:Plough: 中
+21:29:varna: 鱼雷是拼CI的
+21:29:Plough: 给雪风酱？
+21:30:varna: 雪风旗舰，CI装
+21:30:ZedFire2 joined channel
+21:30:Plough: 我觉得雪风酱很可能就直接去打DD了
+21:30:varna: 另一个驱逐推荐POI
+21:30:varna: 打谁不重要
+21:30:Plough: POI没练上去……
+21:30:varna: 重要的是你吃一发CI能保持中破
+21:30:Plough: 卧槽我出巨根了
+21:31:varna: 进门三个莉酱，顺次打掉概率算算也知道……
+21:31:varna: 如果再加先验概率就更惨不忍睹
+21:31:Plough: 中
+21:31:Plough: 今天我第一次进D点就是扶她+3莉酱……
+21:31:sismvg: 海盗船不是卖内存条的。。
+21:32:sismvg: 是卖散热片的
+21:32:varna: 5-3反正以脸为主
+21:32:Plough: 虽说只有最后一只CI了
+21:32:varna: 脸好的时候就是好，黑的时候一天十次二十次焦作人……
+21:32:Icenowy: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int a,b,c,d;__asm__ __volatile__ ("movl $1,%eax");__asm__  __volatile__ ("cpuid");a=eax;b=ebx,c=ecx,d=edx;printf("%x",(a&0x780)>>7);if((d>>23)&1)printf(" MMX");}
+21:32:Icenowy: geordi: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int a,b,c,d;__asm__ __volatile__ ("movl $1,%eax");__asm__  __volatile__ ("cpuid");a=eax;b=ebx,c=ecx,d=edx;printf("%x",(a&0x780)>>7);if((d>>23)&1)printf(" MMX");}
+21:32:geordi: warning: variable 'c' set but not used
+21:32:Plough: 第二次是莉酱一发CI擦掉旗舰大傻15点血
+21:32:Icenowy: ...
+21:33:Plough: 可惜的是雾岛已经被塔姐爆掉了
+21:33:Icenowy: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int a,b,c,d;__asm__ __volatile__ ("movl $1,%eax");__asm__  __volatile__ ("cpuid");a=eax;b=ebx,c=ecx,d=edx;printf("%x",(a&0x780)>>7);if((d>>23)&1)printf(" MMX");c=c;b=b;}
+21:33:ZedFire quit:Ping timeout: 246 seconds
+21:33:hysw joined channel
+21:33:Icenowy: geordi: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int a,b,c,d;__asm__ __volatile__ ("movl $1,%eax");__asm__  __volatile__ ("cpuid");a=eax;b=ebx,c=ecx,d=edx;printf("%x",(a&0x780)>>7);if((d>>23)&1)printf(" MMX");c=c;b=b;}
+21:33:geordi: d MMX
+21:33:Icenowy: 支持MMX。。。
+21:33:Icenowy: （废话）
+21:34:Icenowy: 开始读串号
+21:34:hysw: sismvg: 把智商交出来
+21:34:cleamoon joined channel
+21:34:hysw: Sleepwalking: : 把智商交出来
+21:34:sismvg: 这种时候为了表明自己的低智商以及迫切需要智商的心情
+21:34:sismvg: 你应该这么说：把IQ卡交出来
+21:34:varna: 瑞凤都lv67了……
+21:35:varna: 天下无贼梗啊
+21:35:Icenowy: gerodi: {register int eax __asm__("%eax");register int ebx  __asm__("%ebx");register int ecx __asm__("%ecx");register int edx  __asm__("%edx"); int a,b,c,d;__asm__ __volatile__ ("movl $3,%eax");__asm__  __volatile__ ("cpuid");a=eax;b=ebx,c=ecx,d=edx;a=a;b=b;c=c;d=d;printf("%x%x",ecx,edx);}
+21:35:geordi: 00
+21:35:Icenowy: sw怎么了。。。
+21:35:Plough: 没女儿的路过
+21:35:Sleepwalking: ？
+21:35:Icenowy: “Sleepwalking: : 把智商交出来”
+21:35:Plough: 今天空母公式下去好不容易出了个1小时以外的玩意
+21:35:Plough: 凤翔
+21:35:Sleepwalking: 学霸云 把智商交出来
+21:36:varna: 瑞凤战斗力还是很高的，倒数来看仅次于龙凤
+21:36:Icenowy: 486以后的CPU就不再提供该功能。。。
+21:36:Sleepwalking: Icenowy: 是64bit下不提供
+21:36:Plough: 23333
+21:36:Icenowy: 。。。
+21:36:StarBrilliant: geordi: { __asm__ __volatile__ ("movl $57, %eax"); __asm__ __volatile__ ("int $128"); printf("test fork"); }
+21:36:geordi: Bad system call
+21:36:StarBrilliant: geordi: { __asm__ __volatile__ ("movl $2, %eax"); __asm__ __volatile__ ("int $128"); printf("test fork"); }
+21:37:geordi: Bad system call
+21:37:StarBrilliant: geordi: { __asm__ __volatile__ ("movl $2, %ebx"); __asm__ __volatile__ ("int $128"); printf("test fork"); }
+21:37:geordi: Bad system call
+21:37:varna: 系统调用会被拦的
+21:37:StarBrilliant: ...
+21:37:sismvg: geordi,{int func(){int b=10;} <<func();}
+21:37:geordi: error: a function-definition is not allowed here before '{' token
+21:37:Icenowy: 。。。
+21:38:condy: geordi: << setw(10)
+21:38:geordi: <no output>
+21:38:sismvg: geordi,{int func(){int b=10;} cout<<func();}
+21:38:geordi: error: a function-definition is not allowed here before '{' token
+21:38:sismvg: 还是不会用。。
+21:38:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+21:38:StarBrilliant: ...
+21:38:Icenowy: geordi: {fork();exit();}
+21:38:geordi: error: too few arguments to function 'void exit(int)'
+21:38:StarBrilliant: geordi: {fork(); print("test")}
+21:38:geordi: error: 'print' was not declared in this scope
+21:38:Icenowy: geordi: {fork();exit(0);}
+21:38:StarBrilliant: geordi: {fork(); print("test");}
+21:38:geordi: Operation not permitted: clone
+21:38:geordi: error: 'print' was not declared in this scope
+21:38:StarBrilliant: geordi: {fork(); printf("test");}
+21:38:geordi: Operation not permitted: clone
+21:38:condy: geordi: { std::_Setw ret = setw(10); cout << ret; }
+21:38:geordi: <no output>
+21:38:StarBrilliant: geordi: {malloc(10);}
+21:38:geordi: <no output>
+21:39:iyzsong: #hy: the readability of scheme and the speed of python ...
+21:39:StarBrilliant: geordi: {calloc(0x7fffffff, 0x7fffffff);}
+21:39:geordi: <no output>
+21:39:StarBrilliant: ??!!!!!!
+21:39:StarBrilliant: geordi: {calloc(0x1000, 0x100);}
+21:39:geordi: <no output>
+21:39:StarBrilliant: ?!!!!!!!!!!!!!!1111
+21:39:StarBrilliant: geordi: {malloc(0x7fffffff);}
+21:39:geordi: <no output>
+21:39:StarBrilliant: WTF
+21:39:condy: geordi: { auto ret = calloc(0x7fffffff, 0x7fffffff); cout << ret; }
+21:39:geordi: 0
+21:39:varna: output
+21:40:StarBrilliant: 哦……0
+21:40:Plough: 另外大傻的立绘仔细看也能找到鼻子吧
+21:40:varna: 那是你屏幕上的精斑
+21:40:StarBrilliant: geordi: {for(;;) calloc(0x100, 0x10000);}
+21:40:Plough: 明显不是
+21:40:varna: 那是你屏幕上的精斑
+21:40:geordi: CPU time limit exceeded
+21:40:StarBrilliant: ...
+21:40:Plough: 1、没有精斑 2、精斑怎么会随着立绘动来动去
+21:40:cleamoon: 精液一般很难穿过桌子
+21:41:Sleepwalking quit:Ping timeout: 260 seconds
+21:41:StarBrilliant: Icenowy: 还有什么好玩的指令呢？
+21:41:cleamoon: 一串精斑
+21:41:condy: geordi: { cout << hex << 15; cout << 15; }
+21:41:geordi: ff
+21:41:Icenowy: 没有了吧
+21:41:condy: 果然...
+21:41:Icenowy: 试试文件系统访问？
+21:41:Icenowy: geordi: {system("ls");}
+21:41:geordi: Operation not permitted: clone
+21:41:varna: system
+21:41:Icenowy: geordi:{FILE *fp = fopen("/etc/hosts","r");}
+21:41:geordi: <no output>
+21:42:varna: fork+exec会死怎么就是不明白……
+21:42:Icenowy: geordi:{FILE *fp = fopen("/etc/hosts","r");if(!fp){printf("FAILED");}}
+21:42:geordi: FAILED
+21:42:Icenowy: 呢。。。
+21:43:StarBrilliant: ...
+21:43:varna: 啊呀呀，阿武隈好看的图真少……
+21:43:StarBrilliant: Icenowy: 对了，用模板把C编译器搞垮
+21:43:Icenowy: 。。。
+21:44:StarBrilliant: Icenowy: 对了，用模板把C++编译器搞垮
+21:45:StarBrilliant: Icenowy: 我不太懂C++，但是我知道一个C++代码可以吃编译器 8GB 内存
+21:45:cleamoon: 做得到吗
+21:45:Icenowy: avbot。。。
+21:45:StarBrilliant: cleamoon: avbot
+21:45:StarBrilliant: 还有 PyPy
+21:45:cleamoon: 噗
+21:45:StarBrilliant: 不过PyPy是RPython啦
+21:45:cleamoon: 那种满眼boost的玩意
+21:46:varna: 这就是不给yinwang妹子让他发明不出System I的下场啊
+21:46:StarBrilliant: Icenowy: 找一段avbot代码吧
+21:47:Icenowy: 没有
+21:47:varna: “把高阶类型放到lambda抽象之前”
+21:47:Icenowy: 我的avbot用的都是安同编译的
+21:47:varna: 要不就是把推断扔到lambda抽象之前——反正又是个System F
+21:47:cleamoon: boost本身就满眼模板，耦合度又过高，编译时都带上都不新鲜....
+21:48:ZedFire2 quit:Read error: Connection reset by peer
+21:48:StarBrilliant: ...
+21:48:StarBrilliant: 实在不懂C++
+21:48:StarBrilliant: 呢~
+21:48:Sleepwalking joined channel
+21:48:Icenowy: 我也不懂模板
+21:49:cleamoon: varna: 似乎很多人用瓶颈为理由为lisp的效率洗地
+21:49:Icenowy: sbcl么么哒
+21:50:varna: 我仍然指出能做到java效率就可以
+21:50:StarBrilliant: java...
+21:50:varna: 实现一等函数不麻烦，但续延要求以call record实现调用就略麻烦
+21:51:varna: 另一方面，异构列表和模式匹配放在一起也是静态分析的灾难，不管yinwang怎么鼓吹这都是灾难——因为他懒得真去操后端
+21:51:cleamoon: java可以呀
+21:51:varna: 没必要真为效率洗地，因为洗不白
+21:52:StarBrilliant: ...................................
+21:52:varna: 一边是编译器的蛀虫，一边是utlc的蛀虫，到底哪边更黑呢
+21:52:cleamoon: 哦，你说正常java的效率呀，那用v8好了
+21:52:varna: v8是js引擎不是巫女
+21:52:Icenowy: 。。。
+21:52:Icenowy: 论gcj。。。
+21:52:cleamoon: 我知道
+21:52:StarBrilliant: gjc并不比jit快多少呀
+21:53:StarBrilliant: Java本身这基于栈的实现
+21:53:cleamoon: scheme编译到v8的码运行比编译到jvm的码快
+21:53:StarBrilliant: 本来就是恶心
+21:53:varna: cleamoon: jvm后端做砸了么
+21:54:cleamoon: 我看的那个没做后端
+21:54:varna: 如果他不幸手工封了一坨异构列表那估计就更惨了
+21:54:varna: 其实lisp用户应该反省一个小小的槽点
+21:54:varna: letrec语义可以打入let语义
+21:55:varna: 虽然不打入实现起来简单
+21:55:varna: let的类型推论写公式超直白
+21:55:cleamoon: 这不很重要吧
+21:55:varna: 这只是黑他们连Y算子到底是什么都不在意
+21:57:cleamoon: 关心不了了，学完lc就傻了
+21:58:cleamoon: 我擦，教授用半湿的海绵擦黑板，都擦成白板了
+21:59:hysw: 作死： Analysis II, 'Groups, Rings & Fields', Machine Learning and Data Mining, Introduction to Image Understanding, Algorithm Design, Analysis & Complexity, Computer Networks, Operating Systems, Computer Graphics, Database System Technology
+22:00:StarBrilliant: 半湿的海绵
+22:00:condy: 你漏了一个"体".
+22:00:cleamoon: 2333
+22:01:varna: +
+22:01:cleamoon: 学霸云多爆点数学，和我一起作死吧
+22:02:varna: 岚月酱不是要造直升机的么
+22:02:cleamoon: 现在满眼都是数学课呀...
+22:02:varna: soga
+22:03:Sleepwalking quit:Ping timeout: 252 seconds
+22:03:cleamoon: 要屎了... 我才不管czf和izf的关系呢...
+22:03:hysw: 先把计算机的脑抽搞定之后才有时间
+22:03:varna: zfc...
+22:03:cleamoon: zfc和czf不一样....
+22:04:varna: 日，这疯狂的红脸抢MVP是闹什么……瑞凤又没二改
+22:04:cleamoon: 复分就够恶心了
+22:05:Plough: 你在练啥
+22:05:Plough: 重巡？
+22:05:varna: 陆奥，附赠千代田航改和羽黑
+22:05:Plough: ……
+22:06:Plough: 只留两个舰攻试试？
+22:06:varna: 已经只留两个了
+22:06:varna: 再扒就扒光了
+22:06:Plough: ……可怕
+22:06:Plough: 我家的轻母红脸就是摆设
+22:06:varna: 再这么代打下去搞不好瑞凤就杀进第一页了
+22:07:Plough: 话说雪风酱是带个炮还是直接三个鱼雷
+22:08:cleamoon: 以前认为拓扑就够难了，现在觉得拓扑简直良心
+22:09:cleamoon: 话说学霸云这是一学期的课？
+22:10:Plough: 大井亲还没二改
+22:10:Plough: 上利根还是霸王硬上弓
+22:10:varna: Plough: 三鱼雷，大井二改之后喂满拉去
+22:10:StarBrilliant: 刚刚偶的显卡挂了
+22:10:Plough: 估计比较漫长
+22:10:StarBrilliant: 重启了
+22:10:StarBrilliant: 我的 uptime 呀呀呀呀！
+22:10:Plough: 现在才十几级
+22:11:varna: 1-5炸鱼
+22:11:Plough: 今晚来不及
+22:11:hysw: cleamoon: +
+22:11:Plough: 我准备再出去溜一圈
+22:11:varna: 就是小半个肝尖的事
+22:11:varna: 利根也行，不过我觉得不如大井
+22:11:hysw: 拓扑学不是水课么？
+22:11:Plough: 我先上利根吧
+22:11:varna: 噗
+22:12:varna: 23:11 < Plough> 我先上利根吧
+22:12:Plough: 有什么问题么
+22:12:Plough: 本来就是我的船
+22:13:varna: WAREAOBA WAREAOBA
+22:13:varna: 这MVP抢的
+22:14:varna: 略麻烦，现在我很像爆了红旗酱
+22:14:varna: 很想
+22:16:varna: 算了命中不够的话只好换41炮，我还没那个试制41……
+22:21:cleamoon: 感觉texmacs的速度并不差，就是稳定性呵呵
+22:21:FrankHB joined channel
+22:21:hysw: texmacs就是打完几个保存一次
+22:22:varna: 我今天究竟吃了多少T不利呢……数下来都是反航
+22:22:cleamoon: 我是每次粘贴就崩
+22:23:condy quit:Quit: leaving
+22:24:condy joined channel
+22:24:StarBrilliant: uptime丢了求
+22:24:StarBrilliant: uptime丢了求安慰
+22:24:varna: uptime又不能吃
+22:25:StarBrilliant: 呜呜呜
+22:25:StarBrilliant: Icenowy: 快点侵犯我让我舒服吧
+22:25:Icenowy: 。。。
+22:25:varna: 你打算拿服务器log做个经文条缠脖子上cos什么主教么
+22:25:StarBrilliant: Icenowy: 偶的uptime丢了……
+22:25:StarBrilliant: 偶的显卡挂了
+22:25:cleamoon: 据说这里来了一群药娘？
+22:25:StarBrilliant: 几周的uptime呀……
+22:25:StarBrilliant: 桑心……
+22:26:StarBrilliant: >_<
+22:26:varna: 放着又没用
+22:26:StarBrilliant: varna: 怎么没用嘛……可以装逼的说
+22:26:varna: 哪里能装逼……
+22:26:StarBrilliant: 偶有个菊花但是还少个逼嘛……
+22:26:varna: 又不是服务器，又没什么监控重点，难道不是花样黑自己么
+22:26:varna: 把前面切了就可以做出一个来
+22:26:hysw: uptime: 83 days...
+22:27:StarBrilliant: 但是……我可是以前试过一个月不重启的
+22:27:* varna 除了开旁边机器算数据之外自己的本子一直随身带着
+22:27:Plough:  23:27:30 up 10:54,  1 user,  load average: 2.41, 2.67, 2.64
+22:28:hysw: 以前经常开两个月然后-Syu
+22:28:cleamoon: 我连手机都每天重启
+22:28:StarBrilliant: 其实是 flash 崩了让 chrome 崩了，chrome 崩了让 polkit 崩了，polkit 崩了让 libc 崩了……
+22:28:varna: 又没人天天连接你，多长时间不重启只能说明你电压很稳定从不Syu
+22:28:StarBrilliant: 我iPhone已经一个月没有重启了
+22:28:StarBrilliant: Syu嘛……除了更新内核偶也是不重启的啦
+22:28:StarBrilliant: 嘛嘛嘛好想被侵犯
+22:28:cleamoon: alpako上
+22:29:Icenowy left channel:
+22:29:varna: 看这样子我实在不想侵犯
+22:29:StarBrilliant: ...
+22:29:Plough: Lv32雪风改 Lv30天津风改 Lv52北上改二 Lv42利根改 Lv76大傻改二 Lv56雾岛改
+22:29:varna: 先刷三层闪
+22:29:Plough: 两层和三层有啥区别
+22:29:Plough: 两层现在是有了
+22:30:varna: 三层能多十点
+22:30:hysw: 经常Syu,除非Syu涉及KDE否则没兴趣重启
+22:30:Plough: 只出去一次没啥关系吧
+22:30:varna: 似乎morale影响对方CI发动率和效果……
+22:30:cleamoon: alpako只喜欢红旗miku和吾王
+22:30:Plough: 懒得刷了……
+22:30:varna: 不过你如果嫌烦就算了
+22:30:Plough: 就这么出去试试吧
+22:31:varna: cleamoon: 那伙计看着实在横竖都不想爆
+22:31:Plough: Kirakira的出去了
+22:31:StarBrilliant: Kirakira的出去……
+22:31:StarBrilliant: 好桑心
+22:31:Plough: 上来莉酱就CI……
+22:31:StarBrilliant: sb今天晚上又要和手指过咩……
+22:31:Plough: 还来两次
+22:31:Plough: 还都打天津风
+22:31:StarBrilliant: 嘛……
+22:31:Plough: 还好只擦到小破
+22:31:StarBrilliant: 呢……
+22:32:varna: 这不挺好的么
+22:32:* condy 诸君夜间愉快、武运长久、撸完不梦遗
+22:32:condy quit:Quit: leaving
+22:32:Plough: 只是突然发现莉酱智商好高
+22:32:StarBrilliant: sb是听说群里有一群小攻才进来的
+22:32:Plough: RJ……
+22:32:varna: 其一，这里不是群
+22:32:varna: 其二，这里不讲攻受只管爆菊
+22:32:Plough: 卧槽两个塔姐……
+22:32:StarBrilliant: ...
+22:32:StarBrilliant: 快爆我……
+22:33:StarBrilliant: sb好想被爆
+22:33:Plough: 莉酱没CI
+22:33:Plough: 有戏
+22:33:varna: 我暂时不想爆你，你找个有意向的伙计吧
+22:33:Plough: 过了
+22:33:StarBrilliant: 不要……
+22:33:Plough: 还好雪风酱智商高直接把旗舰塔姐灭了
+22:33:hysw: StarBrilliant: 把智商交出来
+22:33:StarBrilliant: 不要………………
+22:33:StarBrilliant: 不要……
+22:33:Plough: 跑到补给船那了……
+22:33:varna: 主要是你这自动求爆的类型我已经没兴趣了……
+22:33:varna: 补给船没事
+22:33:StarBrilliant: sb想要被艹的时候是没有智商的
+22:33:varna: 那个不是沟，直接打
+22:34:varna: 打完还是高确率进头目
+22:34:Plough: 我怕莉酱……
+22:34:Plough: 没CI
+22:34:Plough: 还好
+22:34:varna: 一般只有杂鱼
+22:34:Plough: 又一只莉酱
+22:34:Plough: 有
+22:34:varna: ...
+22:34:varna: 脸略黑
+22:34:MoeIcenowy: @sb 私聊吧
+22:34:Plough: 卧槽我这就过了？
+22:34:Plough: 果然刷闪大法好么
+22:34:varna: 刷闪好
+22:35:Plough: 进Boss了
+22:35:Plough: 人生苦短？
+22:35:varna: 干
+22:35:varna: 不要管潜艇，往死里干
+22:35:Plough: 其实我给天津风带了声纳和爆雷
+22:35:Plough: T不利……
+22:35:Plough: 不过雾岛上来就把旗舰灭了
+22:36:varna: 单横可以，但你未必能好好撑到夜战
+22:36:varna: 我前哨战三个单横一个单纵，决战是单纵
+22:36:cleamoon: d2之类的我经常只要干不死就往死里干，然后就死了
+22:36:varna: 对方旗舰是个运兵船，基本吃战舰一发就废了……
+22:36:Plough: 我家的头脑派似乎不是物理上的
+22:37:Plough: 上来就打旗舰实在感动死我
+22:37:cleamoon: 不是说运兵船很硬吗
+22:37:varna: 不硬
+22:37:varna: 运输舰都不抗打
+22:37:Plough: 雾岛抬起巨根轰隆一下的事
+22:37:varna: 这个图是第一次所罗门海战
+22:37:varna: 日军误认为击沉了美军运兵船，认为取得了大胜利，后来才发现搞错了
+22:37:Plough: A胜
+22:38:Plough: 掉一只足柄
+22:38:varna: 在那个位置上日军取得了很多战术胜利，美军确保了部队和物资运输，最后日军亏得灰头土脸
+22:38:StarBrilliant: 哈……哈……呒……呒
+22:38:StarBrilliant: 弄得不行了
+22:39:varna: 毫无感觉
+22:39:cleamoon: 二战日军侦查问题看来很大
+22:39:cleamoon: 无感觉+
+22:39:cleamoon: 又不是金发巨乳萝莉的姐姐
+22:40:varna: 舰种误判，索敌失误，雷达失格，补给从珍珠港时期一路被掐到战败
+22:40:StarBrilliant: 呜呜呜……呒……哈……
+22:40:StarBrilliant: 嗯嗯、唔
+22:40:cleamoon: 补给不是从中国弄？
+22:40:varna: 中国那时候没开发出石油
+22:41:cleamoon: .....
+22:41:varna: 别的不论，没油怎么开船……
+22:41:varna: 后期我记得把煤油混烧锅炉都换成重油专烧锅炉了
+22:41:cleamoon: 噗
+22:41:varna: 马力大很多
+22:41:cleamoon: 那他得瑟什么，明显谁都打不过嘛
+22:42:varna: 能打过中国印度之类当时完全不行的国家
+22:42:varna: 但是打美国简直是笑话
+22:42:varna: 山本自己都知道不行，但是上面让他打他也得打
+22:42:varna: 我操
+22:43:cleamoon: 政府从来就是笑话
+22:43:varna: 差点大破出击
+22:43:Plough: 潜艇？
+22:43:varna: 潜艇
+22:43:varna: 幸好多看一眼，编成点错了
+22:44:cleamoon: 还不如气球炸弹从头玩到尾呢
+22:44:Plough: 我曾经有过血的教训……
+22:44:varna: 实际上他们的渐减邀击策略是防御性的
+22:44:varna: Plough: 我一般检查三遍，所以还好
+22:44:Plough: 我现在是回来直接入渠
+22:44:Plough: 点不出去
+22:45:varna: 今天晚上睡不睡呢……
+22:45:Plough: 我是得睡
+22:45:Plough: 明天得上学
+22:45:varna: 我先爆你几十下
+22:46:Plough: 你自 炒一晚上吧
+22:46:varna: 爆爆
+22:46:lh_mouse: meow
+22:46:cleamoon: 红旗今年初三？
+22:46:Plough: 高二
+22:46:lh_mouse: 高二……
+22:46:lh_mouse: [[广告]]
+22:46:lh_mouse: 兜售 RA2DIY 邮箱
+22:46:lh_mouse: () noexcept { return; }
+22:46:varna: 售？
+22:47:varna: 花钱的不要
+22:47:cleamoon: 那玩意还能售...
+22:47:lh_mouse: 0 0
+22:47:lh_mouse: 喂
+22:47:MoeIcenowy quit:Remote host closed the connection
+22:47:Plough: Discuz?
+22:47:Plough: 据说有后门……
+22:47:lh_mouse: 不是 discuz 的
+22:47:lh_mouse: discuz 哪有本事搞邮箱啊
+22:47:Plough: bbs.ra2diy.com
+22:47:lh_mouse: webmail.ra2diy.com
+22:48:varna: 九十七的光辉啊……
+22:48:cleamoon: 太 长 了，五个字节以下我要
+22:49:lh_mouse: 一个月 80 一年 760
+22:49:varna: 瑞凤和陆奥开始血拼
+22:49:lh_mouse: 5G 空间  200G/月流量
+22:49:varna: 一个月80！
+22:49:lh_mouse: 白送 独立IP 加一个域名
+22:49:varna: 哦
+22:49:varna: 那还可以……虽然没兴趣
+22:49:lh_mouse: 有 390 的不带独立 IP
+22:50:lh_mouse: 送邮箱送 IP 送域名真他妈值啊
+22:50:lh_mouse: 一个 Ip 加域名就两百多了
+22:50:varna: 里面难道有耗腻
+22:51:MoeIcenowy joined channel
+22:51:cleamoon: 一个月80够vps了
+22:52:varna: 回去睡，明天还有些手续要办
+22:53:lh_mouse: 不够
+22:53:MoeIcenowy: bye
+22:53:lh_mouse: 我那个 vps 一年 2k
+22:53:varna: 诸君夜间愉快，武运长久，撸管清洁不县长
+22:53:varna quit:Quit: leaving
+22:53:lh_mouse: 80 的 vps 能用？
+22:54:Plough quit:Quit: 碎叫
+22:54:cleamoon: 噗
+22:54:cleamoon: 耗子好有钱
+22:55:cleamoon: 一个月50是我承受范围
+22:55:cleamoon: 耗子2k的得什么配置
+22:56:lh_mouse: 双核 1G 内存 2M 公网带宽  固定IP  20G 硬盘我记得
+22:57:cleamoon: 哦，还不错，就是有点贵...
+22:57:cleamoon: 不过也没看你用vps干什么呀...
+22:58:lh_mouse: 2G 内存
+22:58:lh_mouse: CPU： 2核    内存： 2GB
+22:58:lh_mouse: 数据盘： 0G    带宽： 2Mbps
+22:58:lh_mouse: cleamoon, github.com/lhmouse/poseidon
+22:59:cleamoon: ...好吧
+23:03:cLeaMooN_ joined channel
+23:03:cleamoon quit:Read error: Connection reset by peer
+23:07:cLeaMooN_ quit:Ping timeout: 246 seconds
+23:09:SoftRUN joined channel
+23:13:SoftRUN quit:Client Quit
+23:14:Moe_Icenowy joined channel
+23:16:MoeIcenowy quit:Ping timeout: 272 seconds
+23:25:Moe_Icenowy quit:Quit: AndroIRC - Android IRC Client ( http://www.androirc.com )
+23:49:iyzsong quit:Ping timeout: 245 seconds

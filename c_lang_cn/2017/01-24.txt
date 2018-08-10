@@ -1,0 +1,86 @@
+00:06 kNUhzU joined channel
+00:09 zwindl is now known as abc_
+00:10 abc_ is now known as zwindl
+00:56 Mokou quit:Remote host closed the connection
+01:00 H0P quit:Ping timeout: 258 seconds
+01:01 kNUhzU quit:Ping timeout: 260 seconds
+01:05 kNUhzU joined channel
+01:24 H0P joined channel
+01:59 lh_mouse quit:Read error: Connection reset by peer
+02:03 kNUhzU quit:Quit: Leaving.
+02:24 H0P quit:Ping timeout: 255 seconds
+04:25 zwindl quit:Quit: Connection closed for inactivity
+05:16 gauge quit:Quit: Quiting
+05:23 gauge joined channel
+05:43 gauge joined channel
+07:55 H0P joined channel
+08:08 Youmu quit:Quit: Connection closed for inactivity
+08:47 kNUhzU joined channel
+08:51 H0P quit:Ping timeout: 258 seconds
+09:19 spellsinger joined channel
+09:25 lh_mouse joined channel
+09:33 Youmu joined channel
+09:35 spellsinger quit:Quit: Leaving
+09:53 zwindl joined channel
+10:15 geordi quit:Remote host closed the connection
+10:15 geordi joined channel
+10:36 xhe joined channel
+10:58 petrichorx_ joined channel
+11:12 lh_mouse: geordi, { mutex m; unique_lock<mutex> l(m, defer_lock); }
+11:12 geordi: <no output>
+11:12 lh_mouse: geordi, { mutex m; unique_lock<mutex> l(m, adopt_lock); }
+11:12 geordi: <no output>
+11:12 lh_mouse: geordi, { mutex m; unique_lock<mutex> l(m, defer_lock); l.lock(); }
+11:12 geordi: <no output>
+11:12 lh_mouse: geordi, { mutex m; unique_lock<mutex> l(m, defer_lock); l.lock(); l.lock(); }
+11:12 geordi: terminated by system_error: Resource deadlock avoided
+11:13 lh_mouse: geordi, { mutex m; unique_lock<mutex> l(m); l.unlock(); l.unlock(); }
+11:13 geordi: terminated by system_error: Operation not permitted
+11:30 Stevearzh quit:Quit: Quit...
+11:33 Stevearzh joined channel
+11:57 lh_mouse: geordi, -c struct foo { void bark() __restrict__ { } };
+11:57 geordi: Success
+12:38 iyzsong-m joined channel
+12:39 iyzsong-m: (#･∀･)
+13:14 xhe quit:Ping timeout: 256 seconds
+13:14 kNUhzU quit:Quit: Leaving.
+13:16 xhe joined channel
+13:46 iyzsong-m quit:Ping timeout: 240 seconds
+13:50 petrichorx_ quit:Quit: Connection closed for inactivity
+14:26 xxxxxxxx joined channel
+14:49 iyzsong-w joined channel
+15:55 zwindl quit:Quit: Connection closed for inactivity
+16:27 Dove joined channel
+16:27 Dove quit:Client Quit
+16:54 xhe quit:Quit: leaving
+16:56 Mokou joined channel
+17:05 zwindl joined channel
+17:19 H0P joined channel
+17:39 whocares_2 quit:Ping timeout: 240 seconds
+17:39 whocares_2_ joined channel
+17:41 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:09 zwindl is now known as feaecfd
+18:21 feaecfd is now known as zwindl
+18:23 xxxxxxxx quit:Quit: Leaving...
+18:32 H0P quit:Quit: WeeChat 1.7
+18:39 iyzsong joined channel
+18:46 H0P joined channel
+18:56 zwindl quit:
+19:12 H0P quit:Ping timeout: 240 seconds
+19:15 iyzsong-m joined channel
+19:15 zwindl joined channel
+19:33 iyzsong-m quit:Ping timeout: 256 seconds
+19:54 H0P joined channel
+20:13 lh_mouse: geordi, << EPSILON
+20:13 geordi: error: 'EPSILON' was not declared in this scope
+20:13 lh_mouse: geordi, << DBL_EPSILON
+20:13 geordi: 2.22045e-16
+20:46 xhe joined channel
+20:48 * lh_mouse slaps xhe around a bit with a large trout
+21:28 cleamooon joined channel
+22:23 Dove joined channel
+22:25 Dove quit:Client Quit
+23:02 xhe quit:Quit: leaving
+23:29 iyzsong quit:Quit: bye
+23:52 gauge quit:Ping timeout: 256 seconds
+23:59 gauge joined channel

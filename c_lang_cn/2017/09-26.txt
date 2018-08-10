@@ -1,0 +1,157 @@
+00:00 tutu_wind quit:Remote host closed the connection
+00:01 tutu_wind joined channel
+00:15 tutu_wind quit:Remote host closed the connection
+00:18 tutu_wind joined channel
+00:25 tutu_wind quit:Ping timeout: 240 seconds
+00:29 dantmnf quit:Quit: ZNC - http://znc.in
+00:31 dantmnf joined channel
+00:33 tutu_wind joined channel
+00:40 tutu_wind quit:Remote host closed the connection
+00:41 tutu_wind joined channel
+00:45 tutu_wind quit:Remote host closed the connection
+00:46 tutu_wind joined channel
+00:52 iyzsong quit:Ping timeout: 240 seconds
+00:57 tutu_wind quit:Ping timeout: 240 seconds
+00:59 tutu_wind joined channel
+01:03 tutu_wind quit:Remote host closed the connection
+01:04 tutu_wind joined channel
+01:08 tutu_wind quit:Remote host closed the connection
+01:09 tutu_wind joined channel
+01:19 lh_mouse: geordi, -c struct foo { static void bark(foo *, int); void use(){ bark(1); } };
+01:19 geordi: error: no matching function for call to 'foo::bark(int)'
+01:19 lh_mouse: geordi, use --clang
+01:19 geordi: error: too few arguments to function call, expected 2, have 1
+01:21 tutu_wind quit:Remote host closed the connection
+01:22 tutu_wind joined channel
+01:26 tutu_wind quit:Remote host closed the connection
+01:27 tutu_wind joined channel
+01:31 lh_mouse: geordi, { static_cast<base *>(test()); } struct base { }; struct derived : base { }; struct test { operator base * const { BARK; return 0; } operator derived *(){ BARK; return 0; } }; 
+01:31 geordi: error: 'operator base* const' does not name a type; did you mean 'operator,'? (fix known)
+01:31 lh_mouse: geordi, { static_cast<base *>(test()); } struct base { }; struct derived : base { }; struct test { operator base *() const { BARK; return 0; } operator derived *(){ BARK; return 0; } }; 
+01:31 geordi: test::operator derived*()
+01:35 tutu_wind quit:Ping timeout: 240 seconds
+01:42 tutu_wind joined channel
+01:48 tutu_wind quit:Remote host closed the connection
+01:49 tutu_wind joined channel
+01:53 tutu_wind quit:Remote host closed the connection
+01:57 tutu_wind joined channel
+02:01 tutu_wind quit:Remote host closed the connection
+02:02 tutu_wind joined channel
+02:08 tutu_wind quit:Ping timeout: 240 seconds
+02:10 tutu_wind joined channel
+02:14 tutu_wind quit:Remote host closed the connection
+02:15 tutu_wind joined channel
+02:24 tutu_wind quit:Remote host closed the connection
+02:25 tutu_wind joined channel
+02:31 tutu_wind quit:Ping timeout: 240 seconds
+02:33 tutu_wind joined channel
+02:37 tutu_wind quit:Remote host closed the connection
+02:38 tutu_wind joined channel
+02:42 tutu_wind quit:Remote host closed the connection
+03:01 tutu_wind joined channel
+03:04 tutu_wind quit:Remote host closed the connection
+03:07 tutu_wind joined channel
+03:11 tutu_wind quit:Remote host closed the connection
+03:11 cleamoon_ quit:Quit: Connection closed for inactivity
+03:12 tutu_wind joined channel
+03:16 tutu_wind quit:Remote host closed the connection
+03:19 tutu_wind joined channel
+03:21 tutu_wind quit:Remote host closed the connection
+03:24 tutu_wind joined channel
+03:26 tutu_wind quit:Remote host closed the connection
+04:39 Youmu quit:Quit: Connection closed for inactivity
+04:49 lh_mouse quit:Read error: Connection reset by peer
+04:50 lh_mouse joined channel
+05:37 lh_mouse quit:Ping timeout: 240 seconds
+05:45 Guest95681 quit:Ping timeout: 240 seconds
+05:47 debian joined channel
+05:48 debian is now known as Guest16556
+06:04 Plough quit:Read error: Connection reset by peer
+06:24 mexjb joined channel
+07:41 Youmu joined channel
+08:37 zhangoke joined channel
+09:05 YangMame joined channel
+10:00 Youmu quit:Quit: Connection closed for inactivity
+10:21 StardustX joined channel
+10:24 Youmu joined channel
+11:02 mexjb quit:Quit: Connection closed for inactivity
+11:32 sabri_counter joined channel
+11:33 \ss is now known as \s
+11:33 \s quit:Changing host
+11:33 \s joined channel
+11:38 sabri_counter quit:Quit: Leaving
+12:30 sottd joined channel
+12:31 sottd: 华为的sdk开发就是个大傻逼，要求把服务器端用来验证支付合法性的key用在客户端
+12:31 sottd: 还在边上写上注释：浮标密钥，CP必须存储在服务端，然后通过安全网络（如https）获取下来，存储到内存中，否则存在私钥泄露风险
+12:31 sottd: 他妈的内存里就安全了？
+12:54 StardustX: 浮标密钥是什么？没听说过
+12:56 sottd: 就当做这个密钥泄露以后玩家可以免费充值的东西吧
+12:57 StardustX: 噗，把服务端用的私钥放在用户内存里？
+12:57 sottd: 是啊,有点经验的人怎么也能弄到这东西了
+12:57 sottd: 更加可怕的事情是
+12:57 sottd: 我们以前有一个包，有个sdk接入人员。他直接放到了java变量里去
+12:58 sottd: 日狗
+12:58 sottd: 还好没被发现
+12:59 StardustX: 可以去搞黑产了🌚
+14:04 ovoldemorto joined channel
+14:59 condy quit:Ping timeout: 240 seconds
+15:12 condy joined channel
+15:52 thinkpad_ joined channel
+16:07 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 55.0.3/20170824053622]
+16:19 thinkpad_ quit:Quit: thinkpad_
+16:26 whocares_2 quit:Ping timeout: 248 seconds
+16:26 whocares_2_ joined channel
+16:29 condy quit:Ping timeout: 260 seconds
+16:29 condy joined channel
+17:30 lh_mouse joined channel
+17:46 Plough joined channel
+17:53 leslielg joined channel
+17:58 ovoldemorto quit:Ping timeout: 240 seconds
+18:04 leslielg quit:Ping timeout: 260 seconds
+18:37 iyzsong-m joined channel
+18:37 iyzsong-m: (~_~;)
+18:42 Dove joined channel
+18:44 Dove quit:Client Quit
+18:54 iyzsong-m quit:Ping timeout: 248 seconds
+19:02 iyzsong joined channel
+19:12 StardustX_ joined channel
+19:12 StardustX quit:Read error: Connection reset by peer
+19:29 Dove joined channel
+19:49 lh_mouse: geordi, << dynamic_cast<int>(1)
+19:49 geordi: error: cannot dynamic_cast '1' (of type 'int') to type 'int' (target is not pointer or reference)
+19:49 lh_mouse: geordi, << const_cast<int>(1)
+19:49 geordi: error: invalid use of const_cast with type 'int', which is not a pointer, reference, nor a pointer-to-data-member type
+19:49 lh_mouse: geordi, << reinterpret_cast<int>(1)
+19:49 geordi: 1
+20:06 StardustX_ is now known as StardustX
+20:14 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:26 lh_mouse: geordi, struct foo { foo(){ } foo(const foo &) = delete; }; struct bar { int a; foo f; } b = { 1 };
+20:26 geordi: Success
+20:26 lh_mouse: geordi, use --clang
+20:26 geordi: Success
+20:29 CyrusYzGTt quit:Ping timeout: 248 seconds
+20:39 LouisLIU joined channel
+20:42 LouisLIU quit:Client Quit
+20:46 CyrusYzGTt joined channel
+21:17 iyzsong: (┙>∧<)┙へ┻┻
+21:37 lhanjian: 🐱星人便血了
+21:37 lhanjian: 哭哭
+21:42 YangMame quit:Quit: Konversation terminated!
+21:47 StardustX: 你这丧尸对🐱星人干了什么？
+22:23 lh_mouse: geordi, { using T = int [3]; using CT = add_const_t<T>; cout <<TYPE<CT>; }
+22:23 geordi: const int [3]
+22:23 lh_mouse: geordi, { using T = int [3]; using CT = add_const_t<T>; cout <<TYPE<CT>; using RCT = remove_extent_t<CT>; cout, TYPE<RCT>; }
+22:23 geordi: const int [3], const int
+22:49 lh_mouse: geordi, <<"lh_mouse"
+22:49 geordi: lh_mouse
+22:58 BYGuan joined channel
+23:04 GreyHound joined channel
+23:10 StardustX quit:Quit: 告辭
+23:13 GreyHound quit:Ping timeout: 255 seconds
+23:17 LouisLIU joined channel
+23:18 LouisLIU quit:Read error: Connection reset by peer
+23:38 Youmu: geordi: << "lh_:cat:"
+23:38 geordi: lh_:cat:
+23:45 lh_mouse quit:Quit: For the Red Army!
+23:49 lh_mouse joined channel
+23:59 condy quit:Ping timeout: 240 seconds

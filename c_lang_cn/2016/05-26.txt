@@ -1,0 +1,469 @@
+00:03 varna: 卧槽洗出好物了
+00:03 varna: ilvl88 reqlvl52
+00:04 varna: 被击中时Lv3九头蛇 +2毒骨 +6%FRW +3%LL +14Life +17%CR +10%MF
+00:05 cleamoon: 卧槽
+00:05 cleamoon: 这略nb了
+00:05 cleamoon: 关键是那+2毒骨
+00:05 varna: 底材是ilvl90的项链
+00:05 cleamoon: orz
+00:07 T-J-M quit:Quit: 吾去矣
+00:07 varna: 瞬间就欧了
+00:07 varna: 原来我那个项链是+1nec技能
+00:08 stardust is now known as stardustx
+00:08 T-J-M joined channel
+00:09 cleamoon: 戒指最欧我弄到过+2召唤技能的
+00:09 varna: 戒指感觉一般比项链属性低，+2单系已经很厉害了
+00:11 cleamoon: +
+00:13 varna: 现在我一发骨矛有1.9k-2k左右伤害了
+00:14 cleamoon: orz
+00:15 varna: 不过挺遗憾的是，现在我这个人物等级应该做不出职业技能+2的项链
+00:15 varna: 最多+1
+00:16 varna: 单系+2也可行
+00:16 cleamoon: 职业技能+2的项链估计需要血统
+00:16 varna: 那个应该得ilvl上90
+00:17 varna: 同时nec等级也得够90
+00:17 cleamoon: orz
+00:17 varna: 现在我洗出来最高ilvl89
+00:26 T-J-M quit:Ping timeout: 250 seconds
+00:27 varna: btw, 8pp骨系想站得住，我觉得可以点一级吸引
+00:28 varna: 衰老拖住敌人，然后分散点几个吸引，敌人内讧的时候米山上去可以打打
+00:28 varna: 然后骨矛辅助
+00:32 cleamoon: 但是还是没有伤害
+00:34 varna: 那没办法
+00:34 varna: 毕竟敌人太猛
+00:40 T-J-M joined channel
+00:44 xxxxxxxx: 00:11:49 cleamoon>职业技能+2的项链估计需要血统 <- 需要个sor到处捡垃圾赌博挂件...
+00:45 varna: 持家靠春饼……
+00:47 varna: 其实主要得有个KC妹抖
+00:48 xxxxxxxx: 牛场似乎物品等级比较低?
+00:49 varna: 要珠宝、Amn和宝石
+00:49 varna: 项链靠赌，HA5赌博等级够就有底材
+01:00 xxxxxxxx quit:Quit: Leaving...
+01:04 varna quit:Quit: leaving
+01:13 linearain joined channel
+01:13 linearain: hi
+01:19 FrankHB quit:Ping timeout: 244 seconds
+01:27 linearain quit:Quit: Leaving
+01:28 Mokou: 睡觉
+01:28 Mokou: 诸君武运
+01:28 Mokou quit:Quit: 睡觉
+01:31 T-J-M quit:Quit: 吾去矣
+01:34 cleamoon quit:Ping timeout: 240 seconds
+02:01 T-J-M joined channel
+02:53 lh_mouse quit:Quit: I have China's blessing!
+02:59 FrankHB joined channel
+03:06 FrankHB quit:Quit: Konversation terminated!
+04:18 Youmu quit:Quit: Connection closed for inactivity
+06:27 cleamoon joined channel
+06:35 whatofor_1 quit:Read error: Connection reset by peer
+07:13 Youmu joined channel
+08:58 cc joined channel
+08:59 cc: 早~
+09:20 FrankHB joined channel
+09:20 AutoGavy joined channel
+09:42 AutoGavy: (｡･ω･)ﾉ
+09:42 AutoGavy: good day
+09:46 CyrusYzGTt quit:Ping timeout: 244 seconds
+09:46 cc: ouyuan
+09:47 cc: 打错了
+10:28 Youmu quit:Quit: Connection closed for inactivity
+10:31 varna joined channel
+11:04 Stevearzh quit:Quit: ZZZzzz…
+11:25 cleamoon quit:Ping timeout: 240 seconds
+11:45 x-hope quit:Ping timeout: 260 seconds
+11:51 hope1 joined channel
+11:55 varna: hotatata
+12:14 Stevearzh joined channel
+12:26 lh_mouse joined channel
+12:32 FrankHB quit:Read error: Connection reset by peer
+12:33 FrankHB joined channel
+13:23 Stevearzh quit:Remote host closed the connection
+13:24 Stevearzh joined channel
+13:34 Mokou joined channel
+13:47 lh_mouse quit:Read error: Connection reset by peer
+13:49 lh_mouse joined channel
+13:55 lh_mouse quit:Read error: Connection reset by peer
+13:57 lh_mouse joined channel
+13:58 sottd joined channel
+13:59 sottd: wow
+13:59 sottd: 被重复代码折磨了两天了
+14:00 sottd: 接到了给这些代码写文档的任务................................
+14:07 AutoGavy quit:Quit: Connection closed for inactivity
+14:09 Youmu joined channel
+14:11 sottd: 关于用户登陆,MD5(password)以后用SSL发送给服务器足够安全吗
+14:12 sottd: 这变的salt是固定的
+14:40 SilverElf joined channel
+14:53 lh_mouse: 都 SSL 还 MD5 干啥。
+14:54 lh_mouse: 固定 salt  = 没有卵用，连重放攻击都扛不住。
+15:00 varna: 固定盐是骗人的
+15:00 varna: 如果你只需要一般程度的安全性，就用SSL
+15:01 varna: MD5的唯一好处是你可以控制出一个（可能会冲突所以要加盐）的定长串
+15:01 varna: 放在首部或者别的什么地方方便
+15:05 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=4b8c891044166d223877159c76220945/7d1d7313632762d0e974aa64a7ec08fa533dc691.jpg
+15:07 whocares_2 quit:Ping timeout: 244 seconds
+15:09 whocares_2 joined channel
+15:09 sottd: 道德沦丧，世风日下，那么，从哪里可以买到呢
+15:10 whocares_2 quit:Remote host closed the connection
+15:10 varna: (｡･ω･)给我介绍个妹子，我花一些时间让她分泌母乳
+15:10 varna: (｡･ω･)然后我们再谈买卖
+15:10 whocares_2 joined channel
+15:11 sottd: 我背后坐着个看动画的妹子美工
+15:11 varna: 求打包邮来我侵犯
+15:11 Mokou: 這現充能熟練地讓妹子分泌母乳
+15:11 Mokou: 真是太可怕了
+15:11 sottd: 她男朋友就在他对面
+15:11 varna: 你负责色诱她男朋友
+15:11 Mokou: 你把她男友肛了
+15:11 varna: ^ GAY
+15:12 Mokou: 英雄所見略同
+15:12 Mokou: varna <- 女裝子
+15:12 varna: 16:07 <+varna> ^ GAY
+15:12 varna: 16:07 < Mokou> 英雄所見略同
+15:12 Mokou: 16:07 <+varna> 你负责色诱她男朋友
+15:12 Mokou: 16:07 < Mokou> 你把她男友肛了
+15:12 sottd quit:Quit: 逃
+15:12 varna: ...
+15:13 Mokou: 這女裝子太變態了，把人都嚇跑了
+15:13 varna: ^ 药娘
+15:13 Mokou: ^ 女裝子
+15:18 powerailin joined channel
+15:18 powerailin: cs TAXONOMY #c_lang_cn
+15:19 powerailin: haha
+15:20 varna: hoho
+15:20 powerailin: 哇，有人冒泡了
+15:22 varna: (｡･ω･)我是头丧失，不是人
+15:23 powerailin: 嚯嚯，林正英是我师父Q
+15:24 varna: (｡･ω･)
+15:29 sottd joined channel
+15:29 sottd: 被剧透了...我忍了那么久不去看漫威的漫画，结果还是被剧透了..
+15:29 sottd: 美国队长时九头蛇特工啦!
+15:31 powerailin: 那么问题来了，你现在算不算剧透？
+15:32 sottd: 我已经疯了
+15:33 powerailin: 可以喝杯水冷静一下
+15:33 sottd: 就像关谷神奇知道了小龙女被玷污的感觉
+15:33 powerailin: 实在不行，喝杯开水
+15:37 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/wiki  请多指教。
+15:37 condy: _(:з」∠)_
+15:39 Mokou: http://ww1.sinaimg.cn/mw690/87246b09jw1f45eapikcuj20jy0zk0wo.jpg
+15:42 lh_mouse: condy, https://github.com/lhmouse/mcfgthread/wiki/env-once_flag.h
+15:42 FrankHB quit:Ping timeout: 260 seconds
+15:43 powerailin: Mokou: 西安的高校啊
+15:43 powerailin: Mokou: 我也在西安读过书
+15:43 varna: powerailin: 神逻辑
+15:44 powerailin: 看图片啊
+15:48 condy: lh_mouse: _(:з」∠)_
+15:51 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+15:52 varna: 图片随意转，跟学校有什么关系……
+15:52 powerailin: _(:з」∠)_
+15:53 powerailin: _(:><)_
+15:53 powerailin: _(:(><)_
+16:03 powerailin quit:Quit: powerailin
+16:11 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/wiki/env-assert.h
+16:11 lh_mouse: 好玩么。
+16:13 lh_mouse: 太损了……
+16:13 lh_mouse: 换了一个。
+16:13 varna: 你叫它assert而非verify?
+16:14 Mokou: http://mp.weixin.qq.com/s?__biz=MzI1MTMxOTQ3OA==&mid=2247483660&idx=1&sn=c3965119d4ff60dab8b08cd43f35aae5&scene=2&srcid=0526FS8tONu26BDIpqL1S1S2&from=timeline&isappinstalled=0#wechat_redirect
+16:14 lh_mouse: 对。
+16:15 lh_mouse: varna, #define assert(e) (void)(!(e) && (__builtin_unreachable(), 1))
+16:15 varna: 不过这个东西看起来唯一让人有点不愉快的地方，是expr_保证被正确求值
+16:16 lh_mouse: 你搞错了，这是好事。
+16:16 varna: 为什么呢
+16:16 lh_mouse: 下面有个 example 说明为什么这是好事。
+16:17 lh_mouse: D:\Desktop>gcc test.c -O3 -static
+16:17 lh_mouse: D:\Desktop>a
+16:17 lh_mouse: boom
+16:17 varna: 令编译器假定倒不是坏事
+16:17 varna: 这个我理解
+16:17 varna: 但我不喜欢用断言控制这个行为，我更喜欢一个assert看起来像在正确情况下完全不存在的东西
+16:18 lh_mouse: 这两个目的貌似不能同时达到。
+16:18 varna: +
+16:18 varna: 但假定引入assert改变了编译器的看法，这使得它过分敏感了
+16:19 lh_mouse: 先放着吧反正还有 assert() 垫着。
+16:19 varna: _(:з」∠)_
+16:20 varna: 而且老实说，让expr_不被求值是没法保证的
+16:21 varna: 所以我觉得它叫verify更好
+16:37 Stevearzh quit:Excess Flood
+16:38 Stevearzh joined channel
+16:47 xxxxxxxx joined channel
+16:48 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/env-expect.h
+16:53 Mokou: http://ww1.sinaimg.cn/mw690/a7cb85c1jw1f48vt9puvhj20ci0iw0ts.jpg
+16:53 varna: Mokou: 爆
+16:59 varna: (｡･ω･)ﾉ晚上有人d2么
+16:59 varna: anhei3战网开荒
+17:03 varna: xxxxxxxx: ^
+17:11 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/env-itow.h
+17:30 xxxxxxxx: varna:  幼女呢?
+17:30 varna: xxxxxxxx: 幼女还没冒出来吧
+17:31 varna: cleamoon__: ^
+17:34 Mokou: http://ww1.sinaimg.cn/mw690/ae6c7e04jw1f48wnw9wnfj20c30f7dgt.jpg
+17:35 xxxxxxxx: 这同志怎么回事啊 腿受伤了么233
+17:35 Mokou: 全体起立为昆明恐怖袭击死难者默哀
+17:36 varna: 咦我看见这个同志戴了一个小帽
+17:36 xxxxxxxx: 小帽+1
+17:37 varna: 安拉！阿胡！阿克巴！
+17:40 varna: http://hiphotos.baidu.com/p%B0%C9%DF%A3%B9%DC%B4%F3%B6%D3%B3%A4/pic/item/3b9c1c0ad9f9d72ad8b00f8ed42a2834369bbba6.jpg?v=tbs
+17:41 xxxxxxxx: 哈哈哈
+17:42 cc quit:Remote host closed the connection
+17:46 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/env-wcpcpy.h  旧货。
+17:48 varna: https://pic1.zhimg.com/084db10af3b78b81abadbe20d320d6c8_b.jpg
+17:51 varna: Q: 安拉胡阿克巴什么意思？  A: 大街上听到这个是卧倒的意思
+17:57 xxxxxxxx: http://news.dahe.cn/2016/05-26/106911734.html 我不觉得这婴儿车能让人更想出门...
+17:57 stardustx: 我把刚才的Mokou发的那个“教你如何用路由器自然养生”发到微信里，转发量相当客观
+18:01 xxxxxxxx: 路由器养生?
+18:02 stardustx: 16:09 <Mokou> http://mp.weixin.qq.com/s?__biz=MzI1MTMxOTQ3OA==&mid=2247483660&idx=1&sn=c3965119d4ff60dab8b08cd43f35aae5&scene=2&srcid=0526FS8tONu26BDIpqL1S1S2&from=timeline&isappinstalled=0#wechat_redirect
+18:04 xxxxxxxx: 什么鬼.....
+18:12 yaaic59420 joined channel
+18:13 varna: (｡･ω･)
+18:15 condy: (｡･ω･)ﾉ
+18:30 lh_mouse: varna, 
+18:31 lh_mouse: 对于 BST 比按大小顺序在某一个节点前面相邻的节点的那个英文名词叫什么来着。
+18:32 varna: lh_mouse: 前驱（predecessor）？
+18:33 lh_mouse: infix ancestor ... ?
+18:34 varna: 我会说inorder predecessor
+18:34 lh_mouse: We can use The Binary Search Tree (BST) property to find the inorder successor and predecessor of a node in a BST.
+18:34 lh_mouse: 0.0
+18:34 varna: 意思是“按中序排成序列，在某结点前面的”
+18:34 lh_mouse: 喵。
+18:34 varna: _(:з」∠)_
+18:36 lh_mouse: 那最前面的那个呢。
+18:37 varna: 这个想不出好办法了，我会说the inorder-minimal node
+18:38 lh_mouse: 0 0
+18:38 lh_mouse: 不一定是 minimal 呢。
+18:39 varna: 中序最前面没问题吧？
+18:39 lh_mouse: inorder first ?
+18:39 varna: 或者直接说leftmost, 不提序？
+18:40 lh_mouse: 0 0
+18:40 Stevearzh quit:Quit: ZZZzzz…
+18:41 stardustx left channel:"undefined"
+18:41 stardustx joined channel
+19:08 yaaic594202 joined channel
+19:10 xxxxxxxx: varna: 等幼女来了开荒? 这次羊驼要练什么?
+19:11 yaaic59420 quit:Ping timeout: 260 seconds
+19:12 cleamoon joined channel
+19:12 varna: xxxxxxxx: 幼女想练鸡腿，我比较随意，如果不太危害的话想来个纯骨
+19:13 varna: cleamoon: 晚上开荒？
+19:13 cleamoon: xxxxxxxx, 基王练什么
+19:13 cleamoon: varna, 晚上是指什么时候
+19:13 cleamoon: 现在？
+19:14 varna: 过0.5-2h? 我先去吃饭
+19:14 cleamoon: 过2h我估计就带着小姨子跑路了....
+19:14 varna: ...
+19:14 varna: 我看看世界时间
+19:15 cleamoon: 出门买东西
+19:15 varna: 1210...
+19:15 cleamoon: 13 : 10
+19:15 varna: puuu
+19:15 varna: 1700之后呢？
+19:15 varna: 瑞典时间
+19:16 cleamoon: 2200之后可能....
+19:16 varna: 那就有点悲剧了
+19:16 varna: 时差太严重
+19:16 cleamoon: 不过早上可能
+19:16 cleamoon: 话说基王到底玩什么
+19:16 varna: 早上打游戏显得太蛋疼了……
+19:17 xxxxxxxx: 没什么想法...
+19:19 cleamoon: 我觉得你可以试试zealdin
+19:19 cleamoon: 如果有个zeal，狼德就能用了
+19:23 cleamoon: 要不基王作为基王，玩ass ass in吧
+19:26 cleamoon: @糗百 与网友约见，，，吃饭，看电影，一切顺利。然而在宾馆内却被各种被拒绝。气呼呼的脱下长裤对其说，你要是能让它小下来，我就老实睡觉。。。。。。结果，她脱下裙子掏出一根更大的，，
+19:31 yaaic594202 quit:Read error: Connection reset by peer
+19:31 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ms/y0_55350.jpg@596w_1l.jpg    23333333
+19:31 yaaic59420 joined channel
+19:32 varna: 2333333
+19:34 xxxxxxxx: http://diablo.gamepedia.com/Smiter_by_dub_Lucifer 这个如何233
+19:35 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/mt/y3_240858.jpg@596w_1l.jpg
+19:35 cleamoon: 哦，盾击呀
+19:36 cleamoon: 可疑的，羊驼子开一个吸血诅咒就完了
+19:37 Mokou: 钱钟书去世后不久，我给杨绛打电话，说要选他亡夫的《谈中国诗》入教材，她毫不犹豫地说不同意。但我想，你不同意也得同意，因为这是为孩子读的国家课本，于是我们就把那文章编进了语文教材，她后来也没抗议。现在我想，杨绛为什么不同意她丈夫文章进教材？是故作清高？还是她对TG的语文课本没
+19:37 Mokou: 有好感？
+19:37 Mokou: ^ 新梗
+19:37 varna: 吸血诅咒啊？可以有
+19:38 cleamoon: 不过盾击又是一个没好装备就没虚区的....
+19:38 xxxxxxxx: 疼...
+19:38 xxxxxxxx: 估计不会有好装备
+19:38 cleamoon: 主要靠CB
+19:39 cleamoon: 或者说完全靠CB.....
+19:39 xxxxxxxx: 我怀疑野蛮人那个专心也得堆CB...
+19:39 cleamoon: 有可能
+19:40 xxxxxxxx: 武器和技能的伤害对普通小怪都和挠痒痒一样...
+19:40 varna: 连段必须CB
+19:40 varna: 吃饭
+19:40 cleamoon: 我看一个介绍说应该用攻击很高的东西干，因为本身很硬
+19:47 xxxxxxxx: http://diablo.gamepedia.com/ManaShield_Sorc_by_ShadowBaam 这个也神奇
+19:48 cleamoon: 这个也需要神装...... 需要飓风铠甲之类的......
+19:49 xxxxxxxx: 一下打没蓝怎么破233
+19:50 cleamoon: 我看的那个存档每秒回复600+的魔
+19:51 xxxxxxxx: 听上去挺美好的 脱光了呢
+19:52 cleamoon: 脱光了能被僵尸摸死
+19:52 cleamoon: 全魔派
+19:52 cleamoon: 应该是唯一一个加魔的，还是全魔
+19:58 Youmu quit:Quit: Connection closed for inactivity
+19:58 cleamoon: 如果你想要个人神装版，zealdin有一版就是神装的，不过需要至少两个#31
+20:00 xxxxxxxx: 并不想要神装233
+20:15 xxxxxxxx: http://news.qq.com/a/20160526/053487.htm 可怜
+20:16 cleamoon: uccu
+20:16 cleamoon: 你一定是很想尝试吧
+20:18 xxxxxxxx: 嗯 所以幼女快露出肛门我拿高压气体给你充些
+20:18 cleamoon: 明显是你想尝试，来，抬尻
+20:22 AutoGavy joined channel
+20:24 xxxxxxxx: http://society.dbw.cn/system/2016/05/26/057233260.shtml 越来越可怕了 最近的新闻...
+20:26 cleamoon: 看来基王很享受特殊玩法
+20:27 varna: 你们真可怕
+20:28 iyzsong: orz
+20:32 xxxxxxxx: 羊驼食好饭了?
+20:33 varna: 吃完了
+20:33 varna: 有人要玩么？
+20:33 xxxxxxxx: cleamoon: 
+20:34 varna: anhei3战网是不是还不能大箱子？
+20:34 xxxxxxxx: 不知道...
+20:34 varna: 我用D2Loader启动吧
+20:34 varna: 幼女幼女
+20:34 Mokou: 啊，刚才群里有人给我看了一眼他在EU3里的档
+20:34 cleamoon: 开开开
+20:34 Mokou: 他用大明正常玩，统一了全世界
+20:34 varna: ...
+20:34 varna: 开
+20:35 cleamoon: 我2min前开了d2，还有3min就能进了
+20:35 varna: 我去没删档
+20:35 cleamoon: 对了，基王玩什么
+20:36 varna: 谁C主
+20:37 cleamoon: 都行
+20:37 cleamoon: 等我关flash开音乐
+20:37 xxxxxxxx: 然而我试试看那个加点 http://diablo.gamepedia.com/Zealot_by_lMarcusl
+20:37 varna: 那我玩骨nec
+20:37 cleamoon__: ok
+20:39 xxxxxxxx: 羊驼开房间?
+20:39 varna: ok
+20:39 cleamoon__: 开 房 间 
+20:40 varna: c_lang_cn deadbeef
+20:40 xxxxxxxx: 开房间 啪幼女 
+20:40 cleamoon__: deadbeef是什么
+20:40 varna: 密码
+20:40 cleamoon__: 是什么梗
+20:41 varna: 是个十六进制数
+20:41 varna: 幼女来组队
+20:41 cleamoon__: 怎么组队
+20:41 varna: 下面有个队伍面板
+20:41 varna: 里面邀请你了
+20:41 cleamoon__: 好的
+20:42 cleamoon__: girigiri
+20:42 cleamoon__: 是基王？
+20:44 varna: 是
+20:44 Stevearzh joined channel
+20:50 Mokou: 【不服处罚 男子2个月#发4千条微博诅咒交警#[笑cry]】儿子出了交通事故，在常州打工的淮安男子认为交警处置有偏袒。在2个月内，发了4600多条微博辱骂当事民警。最终，5月18日，因涉嫌侮辱他人，该男被武进警方行政拘留10天。
+21:00 Guest22411 joined channel
+21:09 Mokou: http://ww2.sinaimg.cn/mw690/880992c9jw1f4932nvw32j20k00f9wla.jpg 蜥禁评
+21:18 Mokou: 一个男客户，姓江。
+21:18 Mokou: 月初的时候寄件名都写江郎
+21:18 Mokou: 月底这几天寄件把名字改了
+21:18 Mokou: 叫江郎财尽
+21:18 Guest22411 is now known as hoxily_
+21:27 Mokou: http://picpaste.com/lVE99w2M.jpg
+21:28 yaaic59420 quit:Remote host closed the connection
+21:35 iyzsong: = =
+22:30 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/env-avl_tree.h
+22:31 Mokou: https://www.politicalcompass.org
+22:31 Mokou: ^ 政治倾向测试
+22:37 AutoGavy quit:Quit: Connection closed for inactivity
+22:41 Youmu joined channel
+22:51 iyzsong: (-3.25, -4.41) = =
+22:52 varna: _(:з」∠)_
+22:53 xxxxxxxx: 弄到一个三孔盾牌...
+22:53 varna: 开荒也就是做做古代人吧
+22:53 cleamoon__: 我被卡在地下了...
+22:53 xxxxxxxx: 三孔小盾
+22:53 cleamoon__: 我开的传送门在30m外
+22:54 varna: ...
+22:54 xxxxxxxx: 还有个无形的金10FHR盾 外加一个孔...
+22:54 varna: zealdin的fhr不那么要求高？
+22:54 varna: 毕竟不可打断
+22:54 varna: 从地底通道开始，我接了个电话
+22:54 xxxxxxxx: 防御32呢幼女拿着多好233
+22:54 varna: 一直到打完遗忘之塔，都在单手操作
+22:55 xxxxxxxx: 34
+22:55 varna: 意识模糊
+22:55 varna: 诅咒、尸爆、喝瓶子，根本跟不上
+22:55 cleamoon__: paladin双手似乎没用....
+22:56 varna: pal左手只需要喝瓶子……
+22:57 cleamoon__: 我练练级？
+22:57 varna: 现在我单机的nec档，技能是F1衰老 F2骨牢 F3骨甲 F4土魔 F5TP A伤害加深 S尸爆 D吸引 左键骨矛
+22:57 varna: 不练也行
+22:58 varna: 三人打3pp不难的
+22:58 cleamoon__: 打算弄到18
+22:58 varna: 有麻烦巨基上，他技能已经成型了
+22:58 cleamoon__: 就有鸡腿了
+22:58 varna: 18也行
+22:58 varna: 不过我下次打再练，跟着你们混一级就18了
+22:58 cleamoon__: orz
+22:58 cleamoon__: 我刚16
+22:58 varna: 现在我自己砍不动怪
+22:59 xxxxxxxx: 我也只有17级...
+22:59 varna: 总之18级了我也比较废，得弄个杖来
+23:00 cleamoon__: 我们需要眼光
+23:00 varna: 那是梦，以后我就带一堆蓝瓶子磕
+23:01 varna: 反正你们还是输出高，我继续诅咒+尸爆
+23:01 varna: 对了18级我出吸血诅咒
+23:01 cleamoon__: 尸爆输出很高
+23:01 varna: 你们要用吧？
+23:02 varna: 尸爆需要配合伤害加深，不过如果你们要吸血诅咒的话我就不盖掉了
+23:02 cleamoon__: 我没用
+23:02 varna: 给巨基用吧
+23:02 varna: 不过他不危险的时候我可能会在尸爆之前补伤害加深
+23:03 cleamoon__: 我都不知道基王去哪了...
+23:03 varna: 你地图lag估计太大了
+23:03 cleamoon__: 5min
+23:03 cleamoon__: 没看到了
+23:03 varna: 而且这基佬有一个好处：跑得比谁都快
+23:04 cleamoon__: 18我有逃跑光环了
+23:04 varna: 我还得弄点耐力药水去
+23:04 varna: 不然跟不上你们
+23:05 varna: 纯骨nec其实二十级之前都挺憋屈的
+23:05 cleamoon__: 我找到蛇殿了....
+23:06 varna: 而地狱里，我觉得纯骨还是要用Might米山
+23:06 varna: Defiance的输出不够，而纯骨的手法在很多时候足够自保
+23:06 cleamoon__: 进lost city右转就是snake valley...
+23:06 varna: ...
+23:06 varna: 蛆巣呢
+23:06 cleamoon__: 没去
+23:06 cleamoon__: 估计基王在里面受苦
+23:06 varna: 估计不会
+23:07 cleamoon__: 有办法看他在哪吗
+23:07 varna: 缺人的话任务也怪麻烦的，不过下次任务最慢的人C主吧
+23:07 varna: 团队面板里只能显示他的区域
+23:07 varna: 具体位置离远就看不到了
+23:10 cleamoon__: 对了，下次地图不会重复吧？
+23:10 cleamoon__: 卧操，我被空气打飞了
+23:11 varna: 地图按建游戏的玩家给定
+23:11 varna: 我记得是这样
+23:11 varna: 路点不记得什么状况了，不过你要是顺路见到的话点了总归不坏吧
+23:11 xxxxxxxx: 从虫子洞里爬出来了233
+23:12 cleamoon__: 找到杖了？
+23:12 varna: 拿了国王之杖？
+23:13 cleamoon__: 我反正拿到amulet了
+23:14 varna: 下把还是我开吧，我任务进度最慢
+23:14 xxxxxxxx: 幼女不要盾牌么?
+23:15 cleamoon__: 随便拿个就行了
+23:15 varna: 先闪了，今天超困
+23:15 cleamoon__: 杖有一套就行了吧
+23:15 varna quit:Quit: leaving
+23:18 cleamoon__: 基王有钱吗？
+23:19 xxxxxxxx: 穷 刚刚砸锅卖铁给米山弄了个衣服...
+23:19 cleamoon__: .....
+23:20 cleamoon__: 我撞上次元壁了
+23:21 cleamoon__: 然后，your connection has been interapted...
+23:25 hoxily_ quit:Quit: Leaving
+23:29 cleamoon__: 慢到死了
+23:29 cleamoon__: 没法玩
+23:40 whocares_2_ joined channel
+23:41 jason___ joined channel
+23:41 jason___: 你们好阿
+23:41 whocares_2 quit:Ping timeout: 264 seconds
+23:42 jason___: 你好 whocares
+23:42 cleamoon: 你好呀
+23:42 jason___: 我在深圳,你是哪的人阿?
+23:43 cleamoon: 地球人
+23:45 jason___: 喔
+23:50 whocares_2 joined channel
+23:51 whocares_2_ quit:Ping timeout: 260 seconds
+23:57 Stevearzh quit:Quit: Quit...

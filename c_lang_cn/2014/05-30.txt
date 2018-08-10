@@ -1,0 +1,1378 @@
+1:0 hoxily joined channel
+1:11 condy joined channel
+1:16 xxxxxxxxx joined channel
+1:33 condy:hysw: 这个怎么解？2n长度的数组，将其等分为要
+1:34 hysw:?
+1:34 condy:hysw: s1,s2两个集合，求其集合和的差最小。
+1:34 hysw:看上去像NP问题...
+1:34 condy:是NP。
+1:35 hysw:heuristic search + search tree pruning
+1:36 condy:搜索不会太慢吗？本来想dp来着，原来不是dp啊。
+1:37 hysw:如果所有数值都是整数的话，dp
+1:37 condy:是整数。
+1:37 condy:hope1`_: e.g s1={1,3}, s2={2,4} sum(s1) - sum(s2) = -2
+1:38 hysw:dp
+1:38 condy:写出了状态转移方程，总感觉不符合最优子结构。
+1:39 condy:hysw: ^
+1:39 condy:hope1`_: 最小差为多少。
+1:39 hysw:"最小" < abs or plain
+1:40 condy:abs.
+1:40 FrankHB joined channel
+1:40 hysw:背包问题...
+1:40 condy:很像，可是总感觉不对。
+1:41 hysw:不是最经典的那种
+1:41 condy:是哪种？
+1:42 condy:2个集合的元素个数是一样的。
+1:43 hysw:背包，最大的小于1/2总weight的weight
+1:44 condy:hysw: 有一个限制，就是两个集合的元素个数是一样的。
+1:44 hysw:背包，最大的小于等于1/2总weight的weight
+1:45 hysw:另外，这货是0/1背包，所以估计要用二维数组...
+1:46 hysw:当然如果weight太大的话乖乖的用heuristic search + pruning去吧
+1:47 condy:从子问题求得当前问题的最优解这步是怎么做的？
+1:47 condy:或者说一下状态转移方程。
+1:47 condy:hysw: ^
+1:50 hysw:标准0-1背包
+1:51 condy:f[i,v]=max{f[i-1,v], f[i-1,v-Ci]+Wi}感觉不行啊。
+1:54 condy:hysw: 对于这个测试数据 1 1 1 9 10 11 来说。0-1背包会错。
+1:56 hysw:又不是说照抄...
+1:57 hysw:dp[nitems][weight] = {0, 1}
+2:0 condy:看不明白，求个状态转移方程。
+2:1 hysw:dp[i][w] = 1 if dp[i-1][w-v] else 0
+2:3 hysw:得跑到另一个校区去交作业去了..
+2:3 condy:初始状态是？
+2:3 hysw:dp[0][0]=0
+2:3 hysw:dp[0][0]=1
+2:5 condy:thx. 来演算一下。
+2:8 hysw:结果是max(w for dp[n][w<=sum(s)/2])
+2:10 hysw:另外，这货是一个三维dp...
+2:10 hysw:dp[nitems < 这货是总数不是第几个][weight]
+2:11 condy:果然理解错了。。。2333
+2:13 condy:原来是这样啊，有点明白了。
+2:19 condy:thx。
+2:23 condy:能不能问一下为什么可以这样想？
+2:23 condy:hysw: 
+2:23 condy:怎么想到的啊？
+2:52 condy:geordi: {vector<string>()[-1];}
+2:52 geordi:<no output>
+2:52 condy:geordi: prepend -w 
+2:52 geordi:<no output>
+2:52 condy:geordi: show
+2:52 geordi:-w {vector<string>()[-1];}
+2:53 condy:geordi: -w {cout<<vector<string>()[-1];}
+2:53 geordi:Undefined behavior detected.
+2:53 condy:geordi: -w {string s = vector<string>()[-1]; cout << s;}
+2:53 geordi:No change in output.
+2:53 condy:geordi: -w {string s = vector<string>()[-1]; }
+2:53 geordi:No change in output.
+3:3 cleamoon:还有这么多人呀
+3:26 zzzzzzzz:半夜三更
+3:27 cleamoon:半夜还换那么多次衣服
+3:29 zzzzzzzz:随？
+3:37 cleamoon:地？
+4:12 wsyh joined channel
+4:14 wsyh:cleamoon: 把智商交出来
+4:17 cleamoon:wsyh, 把节操交出来
+4:17 wsyh:cleamoon: 把智商交出来
+4:17 wsyh:cleamoon: 把智商交出来
+4:19 cleamoon:wsyh, 把节操交出来
+4:19 cleamoon:wsyh, 把节操交出来
+4:19 wsyh:cleamoon: 把智商交出来
+4:20 wsyh:cleamoon: 把智商交出来
+4:20 wsyh:cleamoon: 把智商交出来
+4:20 cleamoon:wsyh, 把节操交出来
+4:20 cleamoon:wsyh, 把节操交出来
+4:20 cleamoon:wsyh, 把节操交出来
+4:22 cleamoon:we can do this forever
+4:22 zzzzzzzz:cleamoon, yes, you can
+4:23 zzzzzzzz:cleamoon, wsyh, 把智商和节操交出来
+4:23 wsyh:zzzzzzzz: write a bot to do this and put that in to a channel
+4:23 cleamoon:应该是ass we can
+4:24 wsyh:zzzzzzzz: 把计算姬交出来
+4:24 cleamoon:计算姬？烧
+4:24 zzzzzzzz:wsyh, 你能带走就拿去～
+4:24 wsyh:zzzzzzzz: 把数学娘交出来
+4:24 cleamoon:婶可忍，叔不可忍
+4:25 zzzzzzzz:wsyh, 你能带走就拿去～
+4:25 *zzzzzzzz 只要一篇论文....
+4:25 cleamoon:我来
+4:27 wsyh:cleamoon: 把数学娘和计算姬都交出来
+4:28 zzzzzzzz:cleamoon, 给我计算机就行了
+4:28 cleamoon:我哪有
+4:28 cleamoon:我连计算器都没电了
+4:29 zzzzzzzz:那你咋上IRC的....
+4:30 wsyh:6点钟才上 课酱... 无聊死了
+4:31 cleamoon:我的拉普塔普有电
+4:31 cleamoon:无聊给我做作业
+4:31 zzzzzzzz:9点钟才能做 实验酱...论文酱还没搞完
+4:32 wsyh:cleamoon: sTarCraFt Il
+4:32 cleamoon:一个200g重的挂了的物体每分钟C14分解400个，这玩意几万年前死的
+4:32 cleamoon:你的拉普塔普可以玩斯塔克拉夫特2？烧
+4:34 wsyh:这道题目有问题，一个200g重的二氧化硅砝码挂了，这砝码里貌似没有C14...
+4:34 cleamoon:一个200g重的以前活着的玩意挂了的物体每分钟C14分解400个，这玩意几万年前死的
+4:35 cleamoon:话说，二氧化硅砝码怎么挂
+4:36 wsyh:给砝码通电就成砝坑斯坦了
+4:36 zzzzzzzz:。。。。
+4:37 cleamoon:那也没挂呀
+4:37 wsyh:然后断电
+4:37 zzzzzzzz:C14那玩意儿不是标记了才会有吗，同位素示踪啥的
+4:38 cleamoon:断电也还是砝码
+4:38 cleamoon:不标记也有
+4:38 cleamoon:要不怎么测年龄
+4:38 zzzzzzzz:==
+4:39 cleamoon:不知道年龄怎么能推到合法萝莉
+4:40 zzzzzzzz:233333
+4:40 zzzzzzzz:合法萝莉靠目测就可以？
+4:41 cleamoon:目测了还能叫萝莉
+4:41 cleamoon:就要目测出局，实际合法
+4:42 cleamoon:除非你爸叫李刚或者金刚
+4:43 zzzzzzzz:Σ(゜д゜=!)>
+5:34 boosure joined channel
+5:42 zzzzzzzz:@3ms_MAMA: 现在中国的一些女仆咖啡，没有涉及国外的一些开放的经营理念，连个性服务都提供不了，难怪这个行业在这片土壤上只能垂死挣扎
+5:45 cleamoon:中国有女仆咖啡？
+5:46 zzzzzzzz:有啊→_→
+5:46 cleamoon:哪里...
+5:46 zzzzzzzz:北京就有好多家，我没去过....
+5:46 zzzzzzzz:同学有在那里打工过的
+5:46 zzzzzzzz:貌似我们学校也有一家
+5:47 cleamoon:给我介绍介绍
+5:47 boosure:对不起， 我迟到
+5:47 *zzzzzzzz 都没去过...
+5:47 cleamoon:能开个性party的
+5:47 zzzzzzzz:可以问问肉牛
+5:47 zzzzzzzz:绅士要回国了？
+5:49 cleamoon:没有
+5:49 zzzzzzzz:→_→
+5:49 cleamoon:但是知道了总好
+5:50 cleamoon:找地方卖前女优
+5:52 *zzzzzzzz 默默地说，连个性服务都提供不了的地方...
+5:55 cleamoon:8z去工作吧
+5:56 zzzzzzzz:赶论文ing
+6:20 cleamoon:干完了给我看看
+7:6 hope1 joined channel
+7:53 lh_mouse joined channel
+7:54 lh_mouse:meow
+7:59 boosure joined channel
+8:39 xxxxxxxxx:啊啊啊啊啊啊啊google连上了 天朝人民万岁!!!
+9:44 sismvg joined channel
+10:10 silencly07 joined channel
+10:11 condy joined channel
+10:16 hysw:all: 把智商交出来
+10:25 condy joined channel
+10:42 lh_mouse:geordi, { auto p = make_unique<foo>(); } struct foo { void *operator new(size_t cb){ cout <<"meow!"; return ::operator new(cb); } };
+10:42 geordi:meow!
+10:53 lh_mouse:geordi, { foo().bar(); } struct foo { void *operator new(size_t cb){ cout <<"meow!"; return ::operator new(cb); } void bar(){ delete new int; } };
+10:53 geordi:<no output>
+10:54 lh_mouse:geordi, { foo().bar(); } struct foo { void *operator new(size_t, char){ cout <<"meow!"; return nullptr; } void bar(){ int i; new('a') int(123); } };
+10:54 geordi:error: no matching function for call to 'operator new(sizetype, char)'
+10:54 lh_mouse:geordi, { foo().bar(); } void *operator new(size_t, char){ cout <<"meow!"; return nullptr; } struct foo { void bar(){ int i; new('a') int(123); } };
+10:54 geordi:warning: unused variable 'i'
+10:54 lh_mouse:geordi, prepend -w
+10:54 geordi:meow! Undefined behavior detected.
+11:8 sismvg:又要开始坑了
+11:11 sismvg:今天有3个挂城门嫌疑帖
+11:14 lh_mouse:geordi, { cout <<get<0>(t); } auto t = make_tuple(123, '4', 56.00);
+11:14 geordi:123
+11:14 lh_mouse:geordi, help
+11:14 geordi:Mini-manual:  http://www.eelis.net/geordi/
+11:15 lh_mouse:geordi, --no-using-std { cout <<get<0>(t); } auto t = std::make_tuple(123, '4', 56.00);
+11:15 geordi:error: 'cout' was not declared in this scope
+11:15 lh_mouse:geordi, prepend std:: before cout
+11:15 geordi:error: 'get' was not declared in this scope
+11:15 sismvg:C库里有算求和级数的函数吗
+11:15 lh_mouse:geordi, prepend template  before get
+11:15 geordi:error: expected primary-expression before 'template'
+11:16 lh_mouse:sismvg, 什么是求和级数
+11:16 sismvg:反了。。
+11:17 sismvg:级数求和
+11:36 MOokeN joined channel
+11:43 lh_mouse:什么级数
+11:53 xxxxxxxxx joined channel
+11:58 lh_mouse:geordi, { vector<foo> v; iota(back_inserter(v), 10, 0); } struct foo { int i; };
+11:58 geordi:error: no matching function for call to 'iota(back_insert_iterator<vector<foo> >, int, int)'
+11:58 lh_mouse:geordi, { vector<foo> v; iota(back_inserter(v), 10, 0); } struct foo { int i; foo(int x):i(x){ } };
+11:58 geordi:Same error.
+11:59 lh_mouse:geordi, { vector<foo> v; for(int i = 0; i < 10; ++i){ v.emplace_back(i); } } struct foo { int i; };
+11:59 geordi:error: no matching function for call to 'foo::foo(int&)'
+11:59 lh_mouse:geordi, { vector<foo> v; for(int i = 0; i < 10; ++i){ v.emplace_back(foo{i}); } } struct foo { int i; };
+11:59 geordi:<no output>
+12:0 T2 joined channel
+12:1 lh_mouse:geordi, { vector<foo> v; for(int i = 0; i < 10; ++i){ v.emplace_back(foo{i}); } sort(v.begin(), v.end(), [](auto &lhs, auto &rhs){ return lhs.i > rhs.i; }); for(auto &f:v){ cout <<v.i <<' '; } } struct foo { int i; };
+12:1 geordi:error: 'class vector<foo>' has no member named 'i'
+12:1 lh_mouse:geordi, { vector<foo> v; for(int i = 0; i < 10; ++i){ v.emplace_back(foo{i}); } sort(v.begin(), v.end(), [](auto &lhs, auto &rhs){ return lhs.i > rhs.i; }); for(auto &f:v){ cout <<f.i <<' '; } } struct foo { int i; };
+12:1 geordi:9 8 7 6 5 4 3 2 1 0 
+12:29 hope1 joined channel
+12:41 sismvg joined channel
+12:50 sismvg:学AI还要撸积分。。
+12:51 sismvg:这叫我连sin和cos是什么意思的学渣怎么开开心心看
+12:51 lh_mouse:随便找个人告诉他用C 给我写个接口即可
+12:52 lh_mouse:sin = 原罪  cos = Costume Play
+12:52 sismvg:我读的书少，不要骗我
+12:53 sismvg:舰娘听说要日本IP。。。太坑爹
+12:57 lh_mouse:我不玩
+12:58 sismvg:放弃抢号
+12:59 xxxxxxxxx:你去问问羊驼他说不定知道相关的
+12:59 sismvg:还是老老实实看书去吧
+13:0 xxxxxxxxx:不过我还是觉得rimworld好玩一点 或者说我根本就不清楚舰娘是什么情况
+13:1 xxxxxxxxx:另刷号也要刷好久的吧。。。
+13:1 sismvg:撸CG就好了
+13:1 sismvg:最近弄了点萝莉的时间的CG
+13:1 sismvg:看看能不能人工去码（邪恶）
+13:2 sismvg:周一发的快递，到现在还没出中转。。
+13:25 condy joined channel
+13:26 xxxxxxxxx:http://dandanplay.com/ <- 这是啥? 
+13:27 T3rm1n4t0r_:以前用过一次，各种报错，现在已被我放置Play
+13:29 sismvg:win不能用gcc4.9吗
+13:30 xxxxxxxxx:http://h.acfun.tv/t/3432754                   ,
+13:30 lh_mouse:geordi, template<typename> void foo(){ } template<> extern void foo<int>(){ }
+13:30 geordi:error: explicit template specialization cannot have a storage class
+13:30 lh_mouse:geordi, replace extern with inline
+13:30 geordi:Success
+13:36 xxxxxxxxx:http://puu.sh/97fc1/d735fa37c6.png
+13:40 xxxxxxxxx:http://h.acfun.tv/t/3374859
+13:41 sismvg:楼主太可怜了啦
+13:42 T3rm1n4t0r_ joined channel
+13:44 condy_ joined channel
+14:8 lh_mouse:geordi, { int i = 8, j = 2; i >>= j >>= 1; cout <<i, j; } 
+14:8 geordi:4, 1
+14:12 lh_mouse:geordi, << new auto new auto new int(123);
+14:12 geordi:error: invalid use of 'auto'
+14:13 lh_mouse:geordi, { int i = 8, j = 2; i ? i : j = 4; cout <<i,j; } 
+14:13 geordi:8, 2
+14:14 lh_mouse:geordi, { int i = 8, j = 2; !i ? i : j = 4; cout <<i,j; } 
+14:14 geordi:8, 4
+14:25 lh_mouse:geordi, constexpr int foo(int i){ if(i == 1){ return 2; } else { return 4; } }
+14:25 geordi:error: compound-statement in constexpr function
+14:33 xxxxxxxxx:温家宝在河北一中学跳大绳讲地理......
+14:33 xxxxxxxxx:跳大绳...
+14:43 sismvg:2333
+14:43 sismvg:来自小编的恶意
+14:45 varna joined channel
+14:48 zzzzzzzzz joined channel
+15:4 zzzzzzzz joined channel
+15:4 sismvg:开始看第3遍AI了。。
+15:8 varna:啊？
+15:15 sismvg:某本书开始撸第3遍了
+15:17 varna:干嘛看那么多遍……
+15:17 varna:搞机器学习的话那些书横竖都是导论，不如看看论文
+15:18 varna:虽然论文里很多不实用物，但是也有些好用的
+15:18 varna:噗噗，岩川的迪拜肝神战果破万了……
+15:19 hysw:下午三点有Computational Linguistics的玩意...
+15:19 sismvg:前两遍只是翻翻
+15:19 sismvg:仔细撸退火
+15:20 varna:模拟退火那个不是全靠启发式么
+15:20 sismvg:不清楚
+15:21 varna:而且你不是搞机器学习的么……
+15:21 hysw:反正KR的教授正在讲各种搜索算法
+15:22 sismvg:新人
+15:22 varna:爆
+15:22 sismvg:bug修复完了，没有新的bug给我做
+15:23 sismvg:总感觉好可怕
+15:25 zzzzzzzzz:....
+15:25 sismvg:Z版的手办好贵
+15:25 sismvg:冈叔的手办好想要
+15:25 zzzzzzzzz:新人，报ID，报三围，爆果照
+15:25 varna:WO?
+15:26 sismvg:快点
+15:27 zzzzzzzzz:(´・ω・`)我又不是新人
+15:27 sismvg:新人都说自己不是新人
+15:28 zzzzzzzzz:你才是新人，你们全家都是新人
+15:28 sismvg:我还不是new type
+15:30 sismvg:听说new type可以开高达把妹子
+15:30 sismvg:hine你更有一堆基友
+15:31 xxxxxxxxx:我们还是跳大绳讲地理吧
+15:33 varna:非洲提督路过
+15:33 T2 joined channel
+15:34 sismvg:舰娘都不穿衣服？
+15:34 xxxxxxxxx:我到河北省来 我来不是为了地理 大绳好棒好棒的
+15:35 varna:sismvg: 穿
+15:35 sismvg:非洲的舰娘
+15:35 varna:穿
+15:35 varna:非洲提督主要是脸黑，舰娘还是好好穿着衣服的
+15:35 sismvg:切
+15:36 xxxxxxxxx:有没有舰药娘
+15:37 varna:米库酱不来
+15:39 xxxxxxxxx:http://gb.cri.cn/mmsource/images/2014/05/30/nf140530031.jpg <- 蛇形刁手
+15:43 sismvg:吃我螳螂拳
+15:44 Zirx joined channel
+15:44 whatofor joined channel
+15:45 varna:这就是南斗圣拳的精髓！
+15:46 varna:电酱！开发爆雷了！
+15:47 varna:噗，一发出三式爆雷
+15:47 varna:好评如电
+15:47 zzzzzzzzz:→_→
+15:48 varna:啊，又开发出九四式爆雷
+15:48 sismvg:北斗百裂拳不掺水
+15:48 varna:电酱好厉害啊
+15:48 varna:第三个九四式爆雷，这下岛风也有装备了
+15:49 zzzzzzzzz:上哪儿搞日本IP去→_→
+15:49 varna:win党可以直接用筑波大学的VPN
+15:50 varna:不过我是用的acgproxy( www.acggate.net )
+15:50 T3rm1n4t0r_ joined channel
+15:50 sismvg:抢号好麻烦
+15:51 varna:要有爱
+15:51 zzzzzzzzz:⊙﹏⊙
+15:52 varna:水听开发出来了！电酱～逗～
+15:53 varna:今天开发出三个爆雷两个水听
+15:54 varna:这样就可以电酱+岛风+千代田航+扶桑去1-5继续捞潜艇了
+15:56 xxxxxxxxx:http://puu.sh/97kX8/010179d245.jpg 
+15:57 varna:那 珂 轰 沉
+16:2 lh_mouse:geordi, { int j = 0; for(int i = 3; i; --i){ j += i; [=]{ cout <<j; } } }
+16:2 geordi:error: expected ';' before '}' token
+16:2 lh_mouse:geordi, { int j = 0; for(int i = 3; i; --i){ j += i; [=]{ cout <<j; }(); } }
+16:2 geordi:356
+16:3 Xilzzerts joined channel
+16:5 sismvg:小龙卷prprprp
+16:6 varna:药元四快吃药
+16:8 lh_mouse:算文件 SHA 算了半天对不上
+16:8 lh_mouse:仔细一看  卧槽 我把路径给哈希了  怪不得不一样
+16:9 lh_mouse:动态类型语言就该去死
+16:10 varna:拿个手枪两百米点射打不中怪谁
+16:11 varna:而且这是弱类型的问题还是动态类型的问题两说
+16:12 varna:虽然确实是个问题，我被坑过不下几十回……
+16:17 T2:varna, epoll 的用法还是有个问题，看介绍在ET下可读写和返回EAGAIN的时候都会生成一个事件，但是例子中的用法似乎都是直接假设生成的事件是可读写的，都直接使用.data.fd了，返回EAGAIN的事件似乎被忽略了？
+16:20 varna:来源请求
+16:21 varna:我并没在文档里看到ET会额外添加非阻塞不可读时的触发
+16:21 T2:An event-driven state  machine  application should,  after having received EAGAIN, record its current state so that at the next call to do_use_fd() it will continue to read(2) or write(2) from where it stopped before.
+16:21 varna:把这句话大声念三遍
+16:22 T2:varna, 那就是我理解错了。
+16:22 T2:2b了
+16:22 T2:我那点可怜的智商被昨天那个2b拉低得不行了。
+16:24 biergaizi joined channel
+16:24 varna:实际上这里可以考虑合理的情况
+16:24 varna:你指定了EPOLLIN, 然后对面回你个不可读的情况，于是你尿了一地
+16:24 varna:这怎么可能
+16:31 varna:反潜队！教那个大将做人！
+16:31 varna:S胜2333
+16:35 varna:对面四发开幕雷击一个都没中还真是玄学啊
+16:40 varna:呜十铃……
+16:40 T2:也对
+16:41 varna:咦我被喷铝了！
+16:41 varna:那个可恶的四航母，一场演习大概喷掉我三百铝……
+16:41 T2:我TM还是去喷逗比玩吧，我的智商似乎不足了。
+16:41 varna:幸好争取了B胜
+16:41 T2:表示想不出昨天那个毒怎么下？通用寄存器怎么设置。
+16:42 varna:哪个
+16:42 T2:STACK RESERVED SIZE
+16:42 varna:mprotect(3p)
+16:43 xxxxxxxxx:孔文革真惨....
+16:43 T2:varna, 好的。
+16:43 varna:孔爷终于被虐了么
+16:44 xxxxxxxxx:被西瓜头打爆了
+16:44 T2:其实我就没懂如何确定栈上哪个位置是哪个变量的。
+16:44 varna:T2: 那里跟通用寄存器有什么关系
+16:44 varna:我压根就没确定
+16:44 T2:听不懂了。
+16:44 varna:反正也不用确定，直接把全部local auto拷过去
+16:44 varna:gcc生成的代码会以r10为基继续按偏移访问
+16:45 varna:岛风：「岛风、开始炮雷击战！」 电：「就是这样！」
+16:47 T2:表示想不出如果从一个过程的中间开始执行，那前半部分的计算和变量要怎么弄。也没懂参数个数大小和类型之类怎么判定的，我去搜搜看。
+16:48 varna:你在说什么
+16:48 varna:我草草草哦阿彻哦凹糙糙哦啊
+16:48 varna:我要的是潜艇，不是非洲的顶点啊！
+16:48 T2:varna, 我去读读你那个闭包。
+16:48 T2:我只是知道栈是个什么而已。
+16:49 varna:T2: 那个必须上手调试才能懂
+16:49 varna:不然你没法确切地知道发生了什么
+16:50 varna:建议先调试个有nested function的程序，那样情景简单
+16:50 T2:好的。
+16:50 varna:记得看调试器的反汇编输出
+16:50 T2:嗯
+16:51 varna:一般在栈上找local auto直接按偏移就可以了，硬写进目标代码
+16:51 varna:nested function的上下文前面说过了是r10基址
+16:51 varna:按这个想法去调试看
+16:51 T2:r10什么的我得先科普下。
+16:52 varna:r10就是x64的通用整数寄存器
+16:52 varna:没什么特别的
+16:52 cleamoon joined channel
+16:53 Zirx joined channel
+16:54 T2:varna, 里面保存参数的最高地址？
+16:54 varna:T2: 基本不会有参数
+16:54 T2:搜一下看看。
+16:54 Xilzzerts joined channel
+16:54 T2:脑补不过去了。
+16:55 varna:T2: 最低效的local auto访问不一般会用[esp + off]么
+16:55 varna:T2: 这里你把esp/rsp换成r10
+16:55 T2:嗯
+16:55 Xilzzerts:Disconnected
+16:55 Xilzzerts:Connected to: verne.freenode.net
+16:55 T2:编译生成的一般都是rbp
+16:55 cleamoon_ joined channel
+16:55 varna:至于参数，LK x86的调用约定要求前六整数参数/前四浮点参数直接寄存器传
+16:55 cleamoon:近日，安徽安庆实施殡葬改革，要求从6月1日起，全市城乡居民死亡后按规定火化。政策公布后，造成有不下10位七旬和八旬老人因为想要在土葬禁令生效之前下葬而自杀，约46000口棺材被销毁。
+16:56 varna:T2: rbp? 编译消灭的一般是rbp
+16:56 varna:无帧底优化是很常见的
+16:56 T2:啊，完全不懂
+16:56 T2:先去科普一点
+16:57 varna:稍微了解下典型的x86/64栈帧长什么样就行了，很简单
+16:58 T2:好的
+16:58 varna:终于得到了潜艇
+16:58 varna:再来一艘
+16:58 Xilzzerts:我就记得PUSH 参数，PUSH IP，CALL FUNC……
+16:59 varna:未必
+16:59 varna:参数很可能不在帧上
+16:59 Xilzzerts:stdcall
+16:59 T2:我只知道从右至左push参数然后push返回地址然后 push bp mov sp bp 这样
+16:59 varna:我说x86064
+16:59 varna:我说x86-64
+16:59 varna:不过即使是x64，gcc这里如果你开O0的话会观察到参数被强行写回了
+17:0 cleamoon:alpako的编译学的有成效了？
+17:0 varna:更高的优化会试图保留寄存器参数
+17:0 varna:cleamoon: 这些是以前就知道的
+17:0 T2:cleamoon, 这他早就知道吧。
+17:0 cleamoon:soga
+17:0 varna:cleamoon: 现在还在看那大部头，里面在讲流水之类的处理
+17:0 cleamoon:开始写了吗
+17:0 varna:没呢
+17:1 varna:还没学会
+17:1 T2:然后参数数量size和类型什么的在哪里存怎么寻址什么的完全不知道。
+17:1 cleamoon:yy着写
+17:1 varna:那样不如我写个前端然后直接生成LLVM IR
+17:2 varna:T2: 常见的调用约定见过几种你就大致有谱了
+17:2 cleamoon:那就不叫你写的了吧...
+17:2 varna:后端不急，反正跟打游戏一样就是个乐子
+17:3 varna:其实还有个办法
+17:3 T2:上下文切换都是脑补程度 脑补到设置了下pc和寄存器值从而跳转了个代码段这样。
+17:3 varna:我把小耗捉来放手上，让他生成代码，效率应该好
+17:3 xxxxxxxxx:印象中看过的一本书里也有介绍不用push之类的东西 直接让使用这段代码的家伙自己把参数移进寄存器里的做法...
+17:3 varna:T2: 别脑补，切上下文不麻烦，自己写
+17:3 cleamoon:它只会变得扁平
+17:3 Xilzzerts:记得有个平台有TASK寄存器？
+17:4 varna:xxxxxxxxx: i686/i386的记法可能是fastcall/regparm, x86-64这是日常
+17:4 T2:Xilzzerts, 有些有两套。
+17:4 varna:Xilzzerts: 常识：不要用硬件切进程，慢
+17:4 varna:比如TSS之类的，又大又臭又慢，同时危害调度策略
+17:4 T2:同时保存两套上下文以供切换。
+17:4 varna:典型是体系结构强奸操作系统未遂的下场
+17:5 varna:在现行常用的几种体系上，仍然推荐软件实现
+17:5 T2:但是从过程中间执行，通用寄存器的值都没求的情况就脑补不过去了。
+17:5 varna:T2: 等下我给你看个
+17:6 T2:cdecl什么的我倒是能脑补一点，编译阶段知道前半部分，后半部分用户手工通过va_list指定。
+17:7 varna:https://pastebin.mozilla.org/5290030 # 这里是切地址空间和内核栈的部分
+17:7 T2:怎么做我就不清楚了。
+17:7 T2:3Q
+17:7 varna:实际上看你这个描述你什么都不清楚……
+17:7 Xilzzerts:所以我就在想Erlang所谓的进程在底层是怎么做的……
+17:7 T2:varna, 确实。
+17:7 varna:Xilzzerts: 我也没读过
+17:8 varna:https://pastebin.mozilla.org/5290043 # 这里是另一段重调度代码
+17:8 varna:https://pastebin.mozilla.org/5290044 # 这里是irq分用
+17:8 T2:3Q
+17:9 varna:代码来自很久以前的一个失败试验品nvm, 在那里我希望实现内核支持的协作式并发以提供稍微高效一点的IPC通路，不过后来我自己都写不下去了
+17:9 xxxxxxxxx:google又不行了....
+17:10 varna:因为是32位代码所以你会看到fastcall之类
+17:10 Xilzzerts:说起IPC，貌似至今也没见到用了MQ的代码……
+17:11 varna:应该说IPC本身大多沉重
+17:11 varna:分布式的另论
+17:12 Xilzzerts:感觉RPC其实也是IPC
+17:12 varna:IPC这个说法很广所以没问题
+17:14 sismvg:这里就上不去google..
+17:14 varna:因为你没吃螺
+17:14 sismvg:这公司好叼。。。自己撸3D引擎。。
+17:14 T2:sismvg, 我觉得羊驼子的玩意你不见得google得出来。
+17:15 varna:十三叔公司似乎就这么搞
+17:15 sismvg:google起码比百度好。
+17:15 varna:他们似乎还把dx的什么东西集成进编译器了
+17:15 sismvg:然后一个文档都没
+17:15 cleamoon:撸三弟引擎的有的是
+17:16 varna:没文档2333
+17:16 sismvg:写个文档有这么难嘛
+17:16 varna:爆
+17:16 sismvg:文档不写的话好歹吧函数用法写一边啊
+17:17 cleamoon:他们认为你应该读代码
+17:17 varna:他们认为你应该失业
+17:17 sismvg:我又不是撸3d的
+17:17 varna:所以特意不给你文档
+17:17 sismvg:我的san已经没了
+17:17 varna:最后你就去殴打PM了
+17:17 sismvg:PM不是管3D的
+17:17 varna:不爽就打他
+17:18 cleamoon:然后就能扛起5kg的砖头了
+17:18 sismvg:拖他的福，我有大把时间看书
+17:18 varna:扛起我心爱的砖头琴～
+17:21 Xilzzerts:我这项目也没文档啊，随便来个文件就好几K行……
+17:22 iyzsong joined channel
+17:22 varna:再出击一次然后吃饭
+17:23 cleamoon:写文档是个麻烦事
+17:23 zzzzzzzzz_ joined channel
+17:24 varna:岚月酱快来和我交配
+17:25 cleamoon:我把你解剖掉
+17:25 cleamoon:然后做成羊蝎子
+17:25 varna:噗噗
+17:26 cleamoon:哪天想到的怎么吃幼女好来得？忘了
+17:26 varna:体外消化
+17:26 sismvg:百度：美少女品茗会
+17:27 varna:Nanodesu!
+17:27 varna:我草草草哦阿彻哦凹艹擦擦哦嚓
+17:28 varna:怎么到哪都有那珂酱……
+17:31 cleamoon joined channel
+17:32 varna:吃饭
+17:32 sismvg:你搜过了那个词？
+17:32 cleamoon:擦，怎么突然键盘就没反应了
+17:33 sismvg:你意念打字？
+17:33 cleamoon:重启了
+17:33 cleamoon:意念打字太累
+17:33 sismvg:非USB键盘？
+17:35 cleamoon:内置的
+17:36 zzzzzzzzz_:>﹏<
+17:37 xxxxxxxxx:usb键盘?
+17:38 cleamoon:内置的肯定不是usb吧...
+17:38 xxxxxxxxx:http://blog.sina.com.cn/s/blog_49816e33010151nv.html 瞎眼向.....
+17:39 sismvg:看到标题的瞬间我理智的关了
+17:41 xxxxxxxxx:http://tieba.baidu.com/p/2353581886 orzzzzzzzz
+17:46 T2:http://yangzhiyong77.iteye.com/blog/1414651 << 这个没错吧？
+17:46 sismvg:hentai
+17:46 sismvg:@Y太
+17:47 T2:表示连两个8259A通过级联来实现为什么是16个都没看懂orz
+17:48 T2:怎么看都是15个 = =
+17:48 sismvg:0-15
+17:49 sismvg:[0,15]
+17:54 T2:sismvg, 02H被占了哦。
+17:55 T2:IRQ2
+18:5 sismvg:肉粽=白米粽+酱油
+18:12 lh_mouse:15 个无误
+18:12 lh_mouse:标配是二级联  也有三级联的
+18:12 JQK joined channel
+18:13 lh_mouse:三级联是一个下面挂两个 22 个中断
+18:21 T2:lh_mouse, 圆来乳此
+18:30 zzzzzzzzz joined channel
+18:42 liuzhoou joined channel
+18:43 hope1 joined channel
+18:47 cleamoon_ joined channel
+18:48 Plough joined channel
+18:50 zzzzzzzzz_ joined channel
+18:56 zzzzzzzzz joined channel
+18:56 sismvg:FJ要是能和村田雄介合体就好了
+18:59 boosure joined channel
+19:0 varna:爆
+19:0 Plough:那位大神还活着不
+19:1 varna:我去看看
+19:2 cleamoon joined channel
+19:3 varna:死了
+19:3 Plough:真遗憾
+19:3 varna:今天争取把岛风改出来
+19:3 Plough:我准备用两天学会Perl和他一战的来着
+19:3 condy joined channel
+19:3 Plough:虽说一堆特性都没管
+19:3 T2:还活着呢
+19:3 varna:都不放屁了不是
+19:3 code_new joined channel
+19:4 T2:开了好几个贴挂了个城门似乎还引出一个玩算法的伙计。
+19:4 varna:我也算是弄算法的口牙！
+19:4 varna:啊啊电酱让着岛风一点……
+19:4 T2:目前遇到一个算法不会，就当你们检测用吧，离散点集的加权voronoi图生成，希望吧内大神一显身手。 << 不是那个大婶。
+19:4 varna:就是那个
+19:4 T2:似乎真的是个玩算法的伙计。
+19:5 *Plough 认为羊坨是拿汇编交换参数的逗逼
+19:5 varna:几年前这货在本部跟我对喷的时候就用的这个问题
+19:5 varna:现在还没换过
+19:5 varna:别被傻逼忽悠了
+19:5 *varna 默默地把螺内酯递给了红旗酱
+19:5 T2:圆来乳此
+19:5 *Plough 噗了Alpako一脸
+19:5 varna:现在这货出来一次我就封他一次
+19:6 Plough:传说中让人气急败坏的神技么
+19:7 varna:电酱！红豆饭做好了WO!
+19:17 condy:geordi: {vector<int> v={1,2,3,4}; auti i=find(v.begin(),v.end(),3),j=find(v.begin(),v.end(),4);if (j>i)cout<<"1";else cout<<"2";}
+19:17 geordi:error: 'auti' was not declared in this scope
+19:17 varna:好想侵犯红旗啊
+19:17 condy:geordi: replace auti with auto
+19:17 geordi:1
+19:17 condy:geordi: replace vector with list
+19:17 geordi:error: no match for 'operator>' (operand types are 'list<int>::iterator' and 'list<int>::iterator')
+19:17 condy:geordi: show
+19:17 geordi:{list<int> v={1,2,3,4}; auto i=find(v.begin(),v.end(),3),j=find(v.begin(),v.end(),4);if (j>i)cout<<"1";else cout<<"2";}
+19:19 varna:好想侵犯红旗啊
+19:19 *Plough 已报警
+19:20 varna:呜、红旗酱居然随身携带防狼报警器的？
+19:20 Plough:噗
+19:21 Plough:准备去撸Code Search
+19:21 Plough:先把Index撸出来
+19:23 varna:好困
+19:23 varna:吃多了
+19:25 condy:geordi: {typedef std::iterator_traits<int*> traits;if (typeid(traits::iterator_category)==typeid(std::random_access_iterator_tag)) cout << "int* is a random-access iterator";}
+19:25 geordi:int* is a random-access iterator
+19:26 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits>;}
+19:26 geordi:iterator_traits<int*> 
+19:27 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits::value_type>;}
+19:27 geordi:int
+19:27 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits::reference>;}
+19:27 geordi:int&
+19:27 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits::pointer>;}
+19:27 geordi:int*
+19:28 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits::iterator_category>;}
+19:28 geordi:random_access_iterator_tag
+19:28 condy:geordi: {typedef iterator_traits<int*> traits; cout << TYPE<traits::difference_type>;}
+19:28 geordi:long
+19:28 lh_mouse:荔枝好吃
+19:30 varna:耗鼻好玩
+19:31 lh_mouse:varna, http://baike.baidu.com/view/20514.htm
+19:31 lh_mouse:功能主治
+19:31 lh_mouse:行气散结，祛寒止痛。用于寒疝腹痛、睾丸肿痛。[5]
+19:31 lh_mouse:我三年前就知道了
+19:33 varna:噗，治蛋疼的？
+19:33 FrankHB:http://tieba.baidu.com/f?ct=335675392&tn=baiduPostBrowser&sc=51413770716&z=3075482168#51413770716
+19:33 FrankHB:233
+19:33 varna:2333
+19:42 liuzhoou joined channel
+19:42 varna:头疼发作了，红旗酱来帮我揉脸吧……
+19:47 xxxxxxxxx:揉舔撸驼
+19:48 varna:不行还是没燃料……
+19:48 varna:今天如果按时睡觉的话，岛风只能明天改出来了
+19:49 T2:varna, 睡觉吧
+19:51 varna:远征还有三十五分钟，按这样的话燃料量应该可以出击三次以上
+19:51 varna:似乎是没戏了，回去撸管子
+19:51 varna:早上大撸一发之后就虚弱了
+19:52 sismvg:尼玛，一个函数里15个else...
+19:52 varna:2333
+19:52 sismvg:吓尿了
+19:52 varna:药元四快吃药
+19:53 sismvg:要吃你吃
+19:53 varna:http://tieba.baidu.com/p/3071446778
+19:53 varna:哈哈哈哈哈哈
+19:54 varna:有个药娘奶水根本就停不下来2333333
+19:55 sismvg:一半的UI从本地装载样式，另一半的用完全不同的方法装载。。
+19:55 sismvg:调试都没法调试。。
+19:55 xxxxxxxxx:臃余是啥意思?
+19:56 varna:估计是村里都这口音
+19:57 xxxxxxxxx:google出来的基本上是睑板前臃余之类的... 
+19:58 xxxxxxxxx:就一个在线翻译有个删除臃余文件及无效连接....
+20:0 varna:http://tieba.baidu.com/f?ie=utf-8&kw=%E6%A2%85%E6%AF%92&fr=search
+20:1 sismvg:他妈的，setCaption竟然会设置图片
+20:2 sismvg:谁写的鬼东西
+20:2 sismvg:getstringres还会装载图片的。。
+20:3 Plough:sam不会用……求教
+20:3 Plough:man里面那些命令都咋用
+20:4 varna:23333
+20:6 Plough:http://http02.cat-v.org/
+20:6 Plough:谁有兴趣
+20:8 varna:HTTP sucks
+20:8 varna:至于兔站么，如果他们能复活9p那还靠谱点
+20:8 Plough:2333
+20:8 Plough:我只觉得他们那个Werc巨疼
+20:8 varna:总搞雷声大雨点小的东西不好玩
+20:9 Plough:Werc:
+20:10 Plough:Database free, uses files and directories instead.
+20:10 Plough:Written using the rc shell, leveraging the standard Unix/Plan 9 command toolkit.
+20:10 Plough:Minimize tedious work: eg., no need to ever write HTML, use markdown (or any other format) instead.
+20:10 Plough:Very minimalist yet extensible codebase: highly functional core is 150 lines, with extra functionality in modular apps.
+20:10 Li_o joined channel
+20:11 Li_o:山东一女子因拒给陌生男手机号被6人打死
+20:11 Li_o:逆天了。
+20:11 varna:噗
+20:11 T2:2333
+20:11 varna:给完换号啊
+20:11 varna:怎么就是不懂事
+20:12 sismvg:4月份的bug，今天才发给我
+20:12 varna:sismvg: 你们那是个什么系统
+20:14 sismvg:游戏啦
+20:14 T2:除了游戏不会有人去做3D引擎了吧
+20:14 FrankHB:http://ninetimes.cat-v.org/ 为啥是⑨。
+20:14 varna:FrankHB: 恥球今天穿了什么式样的内裤！
+20:15 Li_o left channel
+20:15 varna:成句：你的内裤是什么颜色的啊！
+20:15 sismvg:其实我奇怪的是4月份的bug为什么就是没人修
+20:17 varna:被当作愚人节笑话了
+20:20 sismvg:2333
+20:21 xxxxxxxxx:chrome 11年就有的bug现在还没修好呢
+20:22 xxxxxxxxx:windows调整dpi之后chrome的全屏模式就纱布了
+20:23 xxxxxxxxx:^win 7
+20:24 sismvg:论bug修复的重要性
+20:26 varna:快吃药
+20:29 endle joined channel
+20:32 xxxxxxxxx:http://puu.sh/97wN2/06758b7c60.jpg 真是可怕
+20:32 varna:噗
+20:33 varna:他们是在掘肛么……
+20:36 xxxxxxxxx:http://tieba.baidu.com/p/2642491458?pid=45493059159#45493059159 
+20:36 xxxxxxxxx:上面那个是胡子么>
+20:36 xxxxxxxxx:?
+20:36 sismvg:处男表示永远不可能的这个了。。
+20:37 whatofor:重口味。。
+20:37 xxxxxxxxx:不过我有点奇怪为啥他们啥都怀疑是梅毒....
+20:37 varna:老王……
+20:39 varna:sismvg: 万一你染上了喜欢用原味丝袜找快感的癖好……
+20:41 condy:geordi: {char* s="abcdefg";char* pattern="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b)});}
+20:41 geordi:error: no matching function for call to 'begin(char*&)'
+20:41 condy:geordi: {char s[]="abcdefg";char pattern[]="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b)});}
+20:41 geordi:error: expected ';' before '}' token
+20:41 condy:geordi: {char s[]="abcdefg";char pattern[]="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b)}));}
+20:41 geordi:error: Unexpected `)` after `tolower(b)})`. Expected '}' or balanced code.
+20:42 condy:geordi: {char s[]="abcdefg";char pattern[]="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b);});}
+20:42 geordi:<no output>
+20:42 condy:geordi: show
+20:42 geordi:{char s[]="abcdefg";char pattern[]="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b);});}
+20:42 condy:geordi: {char s[]="ABCdefg";char pattern[]="ABC";cout<<find_end(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b);});}
+20:42 geordi:<no output>
+20:42 varna:噗
+20:43 varna:geordi: << "喵"
+20:43 geordi:喵
+20:43 condy:geordi: {char s[]="ABCdefg";char pattern[]="ABC";cout<<search(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b);});}
+20:43 geordi:<no output>
+20:44 condy:geordi: {char s[]="ABCdefg";char pattern[]="ABC";cout<<*search(begin(s),end(s),begin(pattern),end(pattern),[](char a,char b){return tolower(a)==tolower(b);});}
+20:44 geordi:<no output>
+20:46 condy:geordi: {char s[]="ABCdefg";char pattern[]="ABC";cout<<search(begin(s),end(s),begin(pattern),end(pattern))-s;}
+20:46 geordi:8
+20:46 sismvg:varna:我不是丝袜控
+20:46 condy:geordi: {char s[]="ABCdefg";char pattern[]="ABC";cout<<search(begin(s),end(s),begin(pattern),end(pattern));}
+20:46 geordi:<no output>
+20:46 varna:sismvg: 原来你也喜欢白色短棉袜，果然同为正道中人
+20:47 sismvg:我喜欢长腿袜
+20:47 condy:geordi: {int s[]={1,2,3,3};int pattern[]={1,2,3};cout<<search(begin(s),end(s),begin(pattern),end(pattern))-s;}
+20:47 geordi:0
+20:47 varna:……你这异端
+20:47 condy:geordi: {int s[]={1,2,3,3};int pattern[]={1,2,3};cout<<search(begin(s),end(s),begin(pattern),end(pattern));}
+20:47 geordi:0x7fff4cfe9280
+20:47 condy:geordi: {int s[]={1,2,3,3};int pattern[]={2,3};cout<<search(begin(s),end(s),begin(pattern),end(pattern));}
+20:47 geordi:0x7fff5d6248a4
+20:47 condy:geordi: {int s[]={1,2,3,3};int pattern[]={2,3};cout<<search(begin(s),end(s),begin(pattern),end(pattern)) - s;}
+20:47 geordi:1
+20:48 sismvg:varna:这才是正道
+20:48 sismvg:还有护手也萌
+20:49 varna:你该送进电刑室写一个月的Perl
+20:50 sismvg:@阿拉图灵
+20:50 sismvg:阿兰图灵
+20:52 varna:爆
+20:54 lh_mouse:洗澡澡
+20:54 xxxxxxxxx:长腿袜? 一股增高鞋的意思....
+20:54 varna:洗小耗
+20:54 varna:还是电酱放在司令室里可爱
+20:54 varna:逗——
+20:55 condy:codepad.org has something based on geordi, which runs everything in a chroot (i.e restricted to a subtree of the filesystem) with resource restrictions, and uses the ptrace API to restrict the untrusted program's use of system calls. See http://codepad.org/about .
+20:55 condy:原来geordi这么著名。
+20:56 *varna 开始舔屏幕
+21:2 varna:出击前按惯例，提督要洗脸……
+21:4 varna:反潜队、出击！
+21:9 condy:geordi: {vector<double> v={1.1,2.2,3.3};cout<<accumulate(v.begin(),v.end(),0);}
+21:9 geordi:6
+21:9 condy:geordi: {vector<double> v={1.1,2.2,3.3};cout<<accumulate(v.begin(),v.end(),0.0);}
+21:9 geordi:6.6
+21:10 lh_mouse:c++11 渣渣
+21:11 lh_mouse:geordi, { vector<char> v; static const char str[] = "meow"; v.insert(v.end(), begin(str), end(str) - 1); }
+21:11 geordi:<no output>
+21:11 varna:小耗洗好了！我拿些醋来！
+21:11 lh_mouse:你们开 -O3 -std=c++11 和 -std=c++03 试试
+21:11 lh_mouse:生成的机器码哪里不一样
+21:13 lh_mouse:开 c++11 大概是这样  src = str; v.uninit_resize(4); auto *begin = v.data(), *end = begin + 4; for(char *p = begin; p != end; ++p){ if(p){ p = *(src++); } }
+21:14 lh_mouse:开 c++03 大概是这样 v.uninit_resize(4); *(uint32_t *)v.data() = 'woem';
+21:14 lh_mouse:高下立判
+21:14 condy:03 -> 0x.
+21:14 lh_mouse:0x 就是 11
+21:14 varna:怎么11会生成出这种东西来的
+21:14 condy:03 没办法用begin, end
+21:14 varna:优化没能跟上么
+21:15 lh_mouse:gcc 渣
+21:15 varna:cl优化了？
+21:15 varna:gcc的优化似乎一直保守，但我没读过（或者说gcc那个恐怖的中间表示让我宁可用llvm）
+21:17 FrankHB:G++蠢关C艹鸟事。
+21:18 varna:不过这个begin和end真的有用么
+21:18 varna:c艹到现在还是保留着一般数组各处被cast的问题吧
+21:18 T2:condy, 谁告诉你的？
+21:18 condy:T2: ?
+21:19 T2:condy, condy> 03 没办法用begin, end
+21:19 condy:g++ -std=c++03 a.cpp 
+21:19 condy:a.cpp: In function ‘int main()’:
+21:19 condy:a.cpp:8:32: error: ‘begin’ was not declared in this scope
+21:19 lh_mouse:我一直觉得 placement new 查返回值是 2B
+21:19 condy:     v.insert(v.end(), begin(str), end(str) - 1);
+21:19 condy:                                ^
+21:19 condy:a.cpp:8:42: error: ‘end’ was not declared in this scope
+21:19 condy:     v.insert(v.end(), begin(str), end(str) - 1);
+21:19 condy:                                          ^
+21:19 lh_mouse:condy, 自己改成 str, str+43
+21:19 FrankHB:说不定是libstdc艹异常规范又搓逼了。
+21:19 lh_mouse:condy, 自己改成 v.insert(v.end(), str, str+4)
+21:20 varna:+
+21:20 lh_mouse:FrankHB, 标准委员会二逼而已
+21:20 varna:明明只是个const char []何必搞什么begin end
+21:20 FrankHB:lh_mouse: 你改个不二的？
+21:20 varna:lh_mouse: 现在的语义哪里会阻拦优化，没看出来
+21:20 lh_mouse:varna, 那个啊  那个不仅仅用于数组的
+21:20 FrankHB:varna: 支持range-based for。
+21:20 varna:原来如此
+21:21 varna:结果内建数组的优化就没跟上啊
+21:21 varna:这怎么看都不是语义上优化不能的东西
+21:21 lh_mouse:varna, int a; new(&a) int (123);  // int *p = (int *)::operator new(sizeof(int), &a); if(p != nullptr){ *p = 123; }
+21:21 lh_mouse:和数组没关系  换成别的也一样
+21:22 T2:condy, 我眼瞎了。
+21:22 lh_mouse:if(p != nullptr)  // 这纯傻逼 没有之一
+21:22 T2:哦腋
+21:22 varna:lh_mouse: 我的意思是数组那里至少可以直接优化掉
+21:22 varna:别的另论
+21:23 lh_mouse:FrankHB, § 5.3.4 15  If the
+21:23 lh_mouse:allocation function returns null, initialization shall not be done, the deallocation function shall not be called,
+21:23 lh_mouse:and the value of the new-expression shall be null.
+21:23 lh_mouse:placement operator new 是 noexcept 的   所以就适用该规则
+21:23 lh_mouse:真是天大的槽点
+21:23 varna:另外p != nullptr这种东西我不确认去掉会死多少、不去掉会慢多少
+21:24 lh_mouse:结果我自己造了个空的 operator new 不是 noexcept 的
+21:24 lh_mouse:varna, 一次填一个字节呢？
+21:24 lh_mouse:如果没有这检查很容易优化成 memmove
+21:24 varna:那是犯傻
+21:24 varna:比如说编译器看*p = 123;这个语句
+21:24 lh_mouse:因为每次都检查所以就没法 memmove
+21:24 varna:没检查的话可能引入另一个坑点
+21:25 varna:出于运行时正确的考虑，体系无关的部分断言p != nullptr
+21:25 FrankHB:http://stackoverflow.com/questions/17571103/passing-null-pointer-to-placement-new
+21:25 varna:然后就看后面的东西会不会被当死代码杀了
+21:25 varna:小概率事件，但是以前的c编译器干过类似的事情
+21:25 varna:几趟下来半个函数蒸发了
+21:26 lh_mouse:varna, 充分内联后  p == &a;  于是编译器 shall have known that (p == nullptr) is false
+21:26 varna:这个绝大部分情况下没问题
+21:26 lh_mouse:纯粹就是 g++ 傻逼
+21:26 lh_mouse:vector 更傻逼   我不想初始化是否可以？
+21:26 varna:不过「充分内联」之前做到过么
+21:26 FrankHB:不可以。
+21:27 lh_mouse:我要 default initialized    不要 value initialized
+21:27 FrankHB:谁叫你用container。
+21:27 FrankHB:你要艹buffer就自己new。
+21:27 lh_mouse:所以就说傻逼一样的 vector
+21:27 varna:虽说这里似乎可以定值出来
+21:27 lh_mouse:MCF::Vector 就是 default initialized 
+21:27 varna:MCF退散
+21:27 FrankHB:default initialized嘛，包一层aggregate不行？
+21:27 lh_mouse:FrankHB, 你试试去好了 不可能的
+21:28 lh_mouse:geordi, { vector<foo> v; v.resize(5); for(auto &f:v){ cout<<f.i; } } struct foo { int i; };
+21:28 geordi:00000
+21:28 FrankHB:嘛，看来是没办法。
+21:28 FrankHB:没兴趣找这种抽的。或许真得dynarray了。
+21:29 T2:= =
+21:32 lh_mouse:羊驼和怪兽还真是有闲心   非得跟逗比一般见识？
+21:33 varna:今天玩腻就不去了
+21:33 FrankHB:耐久度高的玩具多艹艹。
+21:33 varna:怪兽叔今天来劲，他去了
+21:34 varna:FrankHB: 这货应该是我以前在本部见一次封一次的傻逼之一
+21:34 varna:看到有人提voronoi图感觉应该是这个
+21:34 varna:所以懒得理了
+21:34 lh_mouse:今天有个人给我打电话 问我是不是做飞艇的
+21:34 varna:噗？
+21:34 lh_mouse:很奇怪 那个人知道我的名字
+21:34 varna:你不是做游戏的么23333
+21:34 lh_mouse:我只是之前好奇在百度搜了一下飞艇而已
+21:35 lh_mouse:我觉得百度可能把我的手机号卖了
+21:35 varna:你百度帐号绑定手机了？
+21:35 varna:果然
+21:35 lh_mouse:是啊
+21:35 varna:我就没绑
+21:35 varna:他哪天强制我绑我哪天衮蛋
+21:35 lh_mouse:但是现在抓不到百度的证据
+21:35 varna:肉牛都拿手机号试验算法了，一般员工卖掉也是有可能的
+21:36 xxxxxxxxx:baidu上次让我绑然后我几天没登陆 后来又登上了....
+21:36 lh_mouse:百度的员工素质真他妈堪忧  包括肉牛
+21:37 varna:肉牛都不是处男了
+21:38 lh_mouse:我现在把 021 开头的固定电话全屏蔽了
+21:38 xxxxxxxxx:噗吱噗吱后面要加上揉舔撸了么...
+21:38 varna:ok, 岛风改造完成
+21:38 lh_mouse:宁可错杀一千不漏杀一个
+21:38 xxxxxxxxx:然后妹子打了个电话
+21:38 lh_mouse:基本不会有人用固定电话
+21:39 lh_mouse:什么年代了还用固定电话
+21:39 varna:妹子打电话算什么……
+21:40 lh_mouse:这东西应该发出去  让知道的人越多越好
+21:41 varna:+
+21:42 varna:不过你得确实做好凭证就是了，不然怪麻烦
+21:43 lh_mouse:哪有那么多凭证
+21:43 lh_mouse:这事情你问百度百度承认么
+21:43 varna:不是承认与否的问题，谁承认啊……
+21:43 lh_mouse:所以咯
+21:43 varna:现在你在这里说，信度倒是足够
+21:43 lh_mouse:我没事忽悠你干什么
+21:44 varna:提醒别人的话，别人未必就信了
+21:44 lh_mouse:爱信不信  有一个信的就算一个
+21:44 varna:也就这样了
+21:44 FrankHB:在你要推广前就发艹群里了。
+21:44 FrankHB:C艹群。
+21:44 lh_mouse:我看到了
+21:44 varna:反正弄凭证一样麻烦
+21:44 lh_mouse:我不说话   但是你们发的我都看得见
+21:45 varna:其实他是偷油吃下不来了
+21:45 T2:A pending signal being unblocked and being delivered before the call that unblocked it returns
+21:45 varna:啊，信号怎么了？
+21:45 T2:这句没看懂
+21:46 T2:切过来发现你们在讨论奇怪的问题
+21:46 varna:主要是小耗被度娘坑了
+21:47 T2:我也绑了，不过我经常换号。
+21:47 lh_mouse:A pending signal (being unblocked and (being delivered (before the call that unblocked it returns))
+21:47 varna:T2: 你在看哪里的手册，这只有半句
+21:47 varna:那信号怎么了
+21:47 T2:varna, man signal
+21:48 Plough:cat-v居然是用rc shell+CGI写的
+21:48 Plough:我怎么觉得那么疼呢……
+21:48 T2:我觉得我的英文白学了。
+21:48 T2:好TM疼
+21:48 T2:lh_mouse, before the call that unblocked it returns
+21:48 *Plough 准备把回帖功能做上
+21:49 T2:^ 这什么玩意？
+21:49 lh_mouse:X球学派？
+21:49 Plough:嗯
+21:50 lh_mouse:直接拿个 WP 引擎就行  我觉得
+21:50 varna:T2: 只是说信号阻塞的问题
+21:50 Plough:demo.benihata.org 开发中的新版挂在这
+21:50 Plough:方便及时噗
+21:50 T2:varna, 我再看看
+21:50 varna:A signal may be blocked, which means that it will not be delivered until it is later unblocked.
+21:51 lh_mouse:注册不能
+21:51 varna:阻塞中如果仍然有同样的信号到达，对旧API来说是未决的
+21:51 Plough:没写
+21:51 Plough:现在很多按钮都是假的
+21:51 varna:推荐用新API的缘故就是因为有信号排队
+21:52 varna:你能在ulimit里看到排队信号的数量
+21:52 varna:造成信号阻塞的情况可能有你处于旧API的处理函数中，或者你指定了阻塞之类
+21:54 T2:varna, ulimit 我只改了core
+21:54 T2:这个要改么？
+21:55 T2:卧槽，似乎改了还没保存
+21:55 condy:geordi: {vector<int> vec;fill_n(vec.begin(), 10, 0);}
+21:55 geordi:Undefined behavior detected.
+21:55 condy:geordi: prepend -w
+21:55 geordi:No change in output.
+21:56 varna:T2: 改别的干吗……你要实装上阵挺个十万客户么……
+21:56 lh_mouse:geordi, replace vec.begin() with back_inserter(vec)
+21:56 geordi:<no output>
+21:56 lh_mouse:geordi, prepend cout <<vec; before }
+21:56 geordi:{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+21:57 condy:其实想让它制造disaster.
+21:57 T2:varna, 好吧，但是那个改了似乎不保存？
+21:57 T2:ulimit -S -c unlimited 每次都得这样一下？
+21:57 condy:geordi: show
+21:57 geordi:-w {vector<int> vec;fill_n(back_inserter(vec), 10, 0);cout <<vec;}
+21:57 lh_mouse:重制的话我想把这些系统相关的部分抽出来
+21:57 lh_mouse:https://github.com/lhmouse/MCF/blob/master/MCFBuild%200.4/FileSystem.cpp
+21:57 lh_mouse:GetFileSha256  异步哦亲
+21:57 lh_mouse:这效率应该还是挺可观的我觉得
+21:58 varna:T2: 你看看APPLICATION USAGE一节
+21:58 varna:T2: Since ulimit affects the current shell execution environment ...
+21:59 cleamoon_ joined channel
+21:59 T2:varna, 好的。
+21:59 cleamoon joined channel
+22:2 varna:电酱：「像这样的、不打仗的和平时间、好喜欢desu」
+22:2 varna:呜啊啊啊prpr
+22:7 condy:geordi: {vector<int> vec;vec.reserve(10);fill_n(vec.begin(),10,0);}
+22:7 geordi:<no output>
+22:8 condy:geordi: replace last 10 with 10000
+22:8 geordi:error: tried to delete pointer not returned by previous matching allocation. Aborted
+22:8 condy:geordi: show
+22:8 geordi:{vector<int> vec;vec.reserve(10);fill_n(vec.begin(),10000,0);}
+22:10 cleamoon_ joined channel
+22:16 Li_o joined channel
+22:19 T2:好吧，看懂了。
+22:30 lhanjian joined channel
+22:31 lhanjian joined channel
+22:32 liuzhoou joined channel
+22:34 lh_mouse:大吴国  陆逊香香 二张黄盖 周泰吕蒙 孙权太史慈
+22:38 hope1 joined channel
+22:39 T2:varna, 头疼就早点睡吧。
+22:42 varna:今天大胜利，岛风改造完成
+22:42 varna:明天改造电酱和（如果可能）响酱
+22:42 Plough:http://explainxkcd.com/wiki/images/e/e8/dwarf_fortress.png
+22:42 varna:s/电酱/雷酱/
+22:44 hope1:前年的物理题只做了41/100…
+22:44 varna:hope1: ...
+22:44 varna:hope1: 你们物理都学什么的？
+22:45 lhanjian:这确实有点……
+22:45 varna:有牛顿三定律的简单运动学？简单机械？纯电阻单电源电路的欧姆定律？
+22:45 hope1:不少是竞赛题
+22:45 varna:可能还有几何光学吧
+22:45 Plough:http://imgs.xkcd.com/comics/habitable_zone.pnghttp://imgs.xkcd.com/comics/habitable_zone.png
+22:45 Plough:http://imgs.xkcd.com/comics/habitable_zone.png
+22:45 varna:竞赛题能答四十分不是不错么
+22:45 varna:你又没准备过竞赛
+22:46 varna:不行就买个竞赛习题册做做，我初中做过点那个，感觉可以准备
+22:46 varna:你做那个是自招吧？
+22:46 varna:中考应该不会有那程度
+22:46 T2:F = ma 和 U = IR 似乎是高中内容。
+22:46 T2:不记得了。
+22:47 varna:T2: 简单欧姆定律初中我确实学过
+22:47 varna:至于牛顿定律我初中没有，但是现在我倾向猜有就是了
+22:47 T2:那可能是每个省不同。
+22:47 Plough:欧姆定律初中
+22:47 Plough:F=ma是高中
+22:47 varna:Plough: 青岛现在还是这样的啊
+22:47 Plough:varna: 嗯
+22:47 varna:Plough: 那吃点螺不？
+22:48 Plough:varna: 噗
+22:48 T2:hope1, 好吧，杯具地加正。
+22:48 Plough:varna: 怎么转过去的
+22:48 varna:Plough: 硬扭
+22:48 varna:...
+22:48 varna:大题比选择好得分啊……
+22:48 Plough:我记得中考的时候综合计算我一道没对
+22:48 T2:不一定。
+22:49 varna:揉脸
+22:49 T2:我05年中考的，没参考价值。
+22:49 varna:要是我没挂上那个四小时远征现在就看了
+22:49 varna:啊，看看
+22:49 Plough:我那年题特变态，貌似全市没几个人能做完题
+22:49 lh_mouse:geordi, { } __attribute__((optimize("-fpermissive"))) void foo(){ }
+22:49 geordi:<no output>
+22:49 lh_mouse:geordi, { } __attribute__((optimize("-fexception"))) void foo(){ }
+22:49 geordi:error: unrecognized command line option '-fexception'
+22:49 Plough:当时我是第一道中和计算做完，抬头一看就剩半小时了
+22:50 lh_mouse:geordi, { } __attribute__((optimize("-fexceptions"))) void foo(){ }
+22:50 geordi:<no output>
+22:50 varna:噗，我一上来就看到一个偷油小耗
+22:50 Plough:果断扔掉第二道跳到后面做探究
+22:50 Plough:s/中和/综合
+22:50 T2:Plough, 练习做少了就是这样。
+22:50 T2:不过无所谓了。
+22:51 Plough:T2: 全市练习都做少了？
+22:51 Plough:后来一问我做的算快的
+22:51 Plough:大部分人都是最后一面看都没看
+22:51 varna:六面炸啊
+22:51 Plough:varna: 最后一科，没B了
+22:52 T2:不知道，反正我上初中那会儿玩疯了我爸实在没辙让我把高中内容先学了。
+22:52 varna:Plough: 2333
+22:52 T2:所以没太大压力。
+22:52 Plough:hope1`: 青岛
+22:52 lh_mouse:geordi, { } __attribute__((optimize("fexceptions"))) void foo(){ }
+22:52 geordi:error: unrecognized command line option '-ffexceptions'
+22:52 Plough:玩疯了+
+22:52 lh_mouse:geordi, { } __attribute__((optimize("exceptions"))) void foo(){ }
+22:52 geordi:<no output>
+22:52 *Plough 现在仍处于玩疯状态
+22:52 varna:hope1`: 粗略看了下，似乎没有第二定律，所以考虑买本竞赛书背版试试
+22:52 T2:“如果那会儿知道有C就好了。”
+22:52 Plough:http://imgs.xkcd.com/comics/qr_code.png
+22:52 T2:天天泡游戏厅KOF
+22:52 varna:T2: 别想，我那阵子会点c语法也没去写程序
+22:53 varna:KOF练好了才是正道
+22:53 Plough:hope1`: F=ma
+22:53 T2:varna, 已经废了。
+22:53 varna:hope1`: 简单地写，F = ma
+22:53 T2:hope1, 嗯
+22:53 varna:直白的写法应该是 F = dp/dt
+22:53 varna:p是动量
+22:53 T2:牛顿三定律其实就是一个公式。
+22:54 Plough:高一没微积分……
+22:54 varna:不然如果单独写ma的话总得解释下这是个瞬时写法
+22:54 T2:非要分成三个定律实在有点叼。
+22:54 Plough:不过似乎高中微积分相当坑？
+22:54 varna:但是高中因为种种原因就ma了，反正我微积分是渣渣
+22:54 Li_o:话说至今仍后悔初中没好好玩， 至少目前社会中没有用到里面的东西。
+22:54 varna:高中你会求导就行了
+22:54 T2:加速度和受力只能计算瞬时吧。
+22:54 Plough:问了下我们数学老师，她说高中不讲极限……
+22:55 T2:Plough, 微分会了就行。
+22:55 varna:T2: 你写成导数就直白了
+22:55 Plough:倒数直接背公式
+22:55 FrankHB:dp/dt还不一样是瞬时写法。
+22:55 T2:varna, 也对
+22:55 Plough:导数
+22:55 varna:FrankHB: 塞一个算子进去省两个字
+22:55 Plough:hope1`: 可能数学课干脆无视了？
+22:55 Plough:hope1`: 反正我们老师是这么说的
+22:55 FrankHB:varna: 哪里省了。
+22:55 T2:Plough, 课就是拿来无视的。
+22:55 varna:FrankHB: 省得给高中生解释
+22:55 T2:^ 我朝教育的真谛。
+22:56 varna:T2: 就因为你这样
+22:56 FrankHB:a的定义本来就有瞬时的意思，平均得加bar。这是初中常识吧。
+22:56 Plough:2333
+22:56 T2:所以毕不了业是么。
+22:56 varna:上课明明是为了防止夜战
+22:56 Plough:我先不评论
+22:56 Plough:反正我一直是玩疯状态
+22:56 T2:至少我上过的课都是这样的。
+22:56 Plough:中考那三天回家我就推大图书馆
+22:56 varna:知道早上要上课，本来一周夜战六天，结果只能夜战三天了
+22:56 FrankHB:写成F = dp/dt主要有两个原因：1.这是作者本人的原始写法；2.和相对论动力学方程一致。
+22:57 *Plough 每天夜战
+22:57 varna:有三天可以四点睡七点起，其余时候得好好侵犯觉酱
+22:57 Plough:结果就是期中考试没睡好
+22:57 varna:FrankHB: 原来如此，恥球今天到底穿胖次没……
+22:57 T2:好吧，其实我也没上过什么课。
+22:57 Plough:数学六道大题五道在最后一步算错数
+22:57 Plough:20分没了
+22:57 varna:Plough: 跟我高考似的……
+22:57 Plough:varna: 23333
+22:58 varna:不过我高考只算错三个2333
+22:58 T2:“迟到不及格的撸过。”
+22:58 Plough:好在英语年级第三化学第一，拉回去了
+22:58 liuzhoou joined channel
+22:58 varna:算了今天夜战
+22:58 Plough:明天端午，怕啥
+22:58 T2:varna, 头不疼了？
+22:58 varna:Plough: 我无所谓
+22:58 T2:Plough, 他似乎头疼
+22:59 Plough:头疼几小时前刚缓过来
+22:59 varna:Plough: 我一周就两天课，怎么都起来了
+22:59 varna:T2: 岛风酱改造完之后就不疼了
+22:59 Plough:varna: 一周五天哭瞎，好在39没啥压力
+22:59 varna:Plough: 39的话也不至于给你们加课
+22:59 T2:varna, 我觉得你还是睡下比较好。
+22:59 Plough:我化学作业次次空一半交上去也没人找我麻烦
+23:0 varna:昨天做梦打了一晚上14.3
+23:0 varna:而且都是差一点击破的时候到时间了……
+23:0 T2:Plough, 我要说我这辈子没交过100次作业你信么？
+23:0 Plough:T2: 太正常了
+23:0 Plough:T2: 我这学期没交过文科的作业
+23:1 varna:高中语文课代表超可爱所以下略
+23:1 T2:我说交作业次数总和不超过100次。
+23:1 Plough:我知道
+23:1 Plough:所以这多正常
+23:1 T2:“毕不了业是么”
+23:1 Plough:varna: 语文课代表是一点也不可爱的男孩子
+23:1 T2:2333
+23:2 Plough:T2: 目前我似乎还没有毕不了业的现象……
+23:2 T2:Plough, 我上大学之前也没有。
+23:2 Plough:s/现/迹/
+23:2 T2:应该说毫无。
+23:2 condy joined channel
+23:2 T2:不过你应该没压力。
+23:2 varna:Plough: 没关系啊，你很可爱的
+23:2 Plough:varna: 我不是课代表
+23:2 *varna 觉得这时候红旗酱该脸红心跳了
+23:2 Plough:varna: 虽说初中当过两年物理
+23:2 *Plough 是绅士所以没感觉
+23:2 varna:明明是药娘
+23:3 Plough:是绅士
+23:3 varna:今天有个药娘都出奶水了
+23:3 T2:“万年数学课代表撸过”
+23:3 varna:红旗酱和米库酱该向他学习
+23:3 Plough:主业是让班里的妹子们娇羞
+23:3 lh_mouse:C++ 编译 真他妈的  慢
+23:3 varna:吃下去的是药，挤出来的是奶！
+23:3 T2:lh_mouse, = =
+23:3 Plough:显然不如奶牛
+23:3 varna:Plough: 果然你是士织酱
+23:3 Plough:varna: 那是啥
+23:3 condy:date a live.
+23:4 varna:Plough: 约炮大作死
+23:4 Plough:varna: 没太看
+23:4 varna:Plough: 不谋而合
+23:4 Plough:varna: 但是我显然不是伪娘
+23:4 varna:是药娘
+23:4 Plough:也不是药娘
+23:4 Plough:是高贵的变态绅士
+23:4 varna:明明是药娘
+23:5 Plough:明明是绅士
+23:5 lhanjian:condy, 揉
+23:5 varna:电酱放置着好可爱啊舔舔
+23:5 varna:lhanjian: 爆
+23:5 lhanjian:varna, 闪开
+23:5 *lhanjian 成功闪开varna的袭击
+23:6 lh_mouse:geordi, { function<void()> f = bind(foo); } void foo(){ } 
+23:6 geordi:<no output>
+23:6 varna:呜、今天撸多了，命中率下降
+23:6 lh_mouse:geordi, replace last () with (int = 0)
+23:6 geordi:error: too few arguments to function
+23:6 Plough:hope1`: 主要是麻烦
+23:6 *varna 海棠天狗聪明市松可爱
+23:6 Plough:因为步骤要求的很死板
+23:7 condy:lhanjian: 舔。
+23:7 Plough:两道综合计算
+23:8 condy:geordi: show
+23:8 geordi:{ function<void()> f = bind(foo); } void foo(int = 0){ } 
+23:8 lhanjian:condy, uccu
+23:8 condy:geordi: replace first () with (int)
+23:8 geordi:error: too few arguments to function
+23:8 condy:geordi: show
+23:8 geordi:{ function<void(int)> f = bind(foo); } void foo(int = 0){ } 
+23:8 varna:海棠端午不放假么？
+23:8 Plough:困了
+23:8 Plough:碎叫
+23:8 condy:lhanjian: 哪有焦躁。
+23:10 lhanjian:(´ﾟДﾟ`)
+23:10 lhanjian:用0当角标算23333
+23:11 varna:噗噗，CCF那群人不是说5.30给录用决定么
+23:11 T2:hope1`, 用0当脚标算的...
+23:12 T2:那什么...
+23:12 T2:算了
+23:12 varna:现在一个通知都没有，只告诉我论文已提交
+23:12 condy:肯定是求数列的通项。
+23:13 varna:我还dokidoki了一下，结果2333
+23:13 T2:varna, = =
+23:13 varna:hope1`: 班上有可爱妹子么
+23:13 T2:hope1`, 趁早下手。
+23:13 T2:hope1`, 你觉得可能没通过么。
+23:14 varna:hope1`: 别的会议有
+23:14 lhanjian:论文这东西，即便是羊驼子，也得吃一脸灰
+23:14 varna:hope1`: 最后都会给你一个明确的说法，附上审稿意见
+23:14 varna:给我拒了我可以按意见改，改了再投别的，那都无所谓
+23:14 varna:反正做学术我不太行，这都是期望内
+23:15 varna:hope1`: ……
+23:15 varna:hope1`: 看来还是稍稍关注了的
+23:15 lhanjian:hope1`, 嗯，关注了就好。
+23:15 varna:http://tieba.baidu.com/p/2992293092?see_lz=1&pn=1
+23:15 lhanjian:不对啊。
+23:15 varna:^ 我还是举这个例子
+23:15 lhanjian:“我没认识很可爱的”
+23:15 varna:@小女孩长得好可爱好象吹雪啊
+23:15 lhanjian:那就是，认识了比较可爱的！！
+23:15 lhanjian:FFF团呢！@condy
+23:16 T2:lhanjian, 好吧。
+23:16 lh_mouse:geordi, class base { }; class d : private base { }; class dd : public d { void foo(base &){ } };
+23:16 geordi:error: 'class base base::base' is inaccessible
+23:16 lhanjian:这不好
+23:16 lh_mouse:geordi, append :: before last base
+23:16 geordi:Success
+23:16 T2:hope1`, 总之，先下手为强一点没错。
+23:16 lhanjian:海棠这么高，以后打打篮球什么的，可能认识些不错的家伙
+23:17 varna:hope1`: 电子竞技和东方也是运动
+23:17 lhanjian:(つд⊂)
+23:18 T2:hope1`, 篮球真的不错。
+23:18 varna:什么打篮球男生受欢迎都是忽悠吊丝的
+23:18 T2:varna, 跟那没关系
+23:18 varna:一两周之前我和糖果在看一个TAS yym录像，旁边还过来一个基佬呢
+23:18 varna:要是当时我带了本子直接让那哥们来一盘木吉
+23:19 varna:T2: 篮球会砸头，我有心理阴影
+23:19 varna:小时候被篮球一发咣了，自此以后再不近有人打球的篮球场
+23:19 lhanjian:varna, 这明明是事实，想当年打篮球的时候，多少妹子来围观
+23:19 T2:varna, 多砸几下就好了。
+23:19 lhanjian:我……们
+23:20 varna:lhanjian: 然后你们就出去打炮了是吧
+23:20 T2:varna, 撸码还会被噗呢2333
+23:20 varna:撸码至少不会招来很多无趣妹子
+23:21 varna:虽然可能撸多了就傻逼了，不过我撸得不多也傻逼了
+23:21 T2:也对，不过真的跟那个没关系。
+23:22 T2:至少有活动一下的意识。
+23:22 varna:比如妹子来了，看你屏幕上一个双马尾
+23:22 varna:问「这谁啊」，答「呜十铃」，问「什么游戏啊」，答「我老婆」
+23:22 lhanjian:哼，羊驼子又来晒妹！烧！
+23:22 varna:然后就没然后了
+23:22 varna:我晒的是呜十铃
+23:22 T2:2333
+23:22 varna:hope1`: 是
+23:22 T2:hope1`, 被你发现了。
+23:24 T2:话说我老婆曾经是tifa来着。
+23:24 varna:T2: 舰娘可是实装了结婚的
+23:24 T2:varna, 那会儿没舰娘。
+23:25 varna:T2: 你也来舰娘吧？
+23:25 varna:hope1`: 没遇到过……
+23:25 T2:varna, 我要能翻墙就来了。
+23:25 varna:T2: 用acggate.net的代理
+23:25 T2:就是疼。
+23:25 T2:好的。
+23:26 varna:我这种蒙古提督都成功转战非洲大陆了
+23:27 hope1 joined channel
+23:28 varna:办公室里的电酱 http://imagebin.org/312252
+23:28 hope1:小耗偷油那题就没明白，不用去算表面积？
+23:28 T2:表示/etc下没有个hosts
+23:28 T2:哦 有
+23:29 T2:我眼残了。
+23:29 varna:链接消失了，我在线看的……
+23:29 hope1:此链接分享内容可能因为涉及侵权、色情、反动、低俗等信息，无法访问! 
+23:30 hope1:233
+23:30 lhanjian:2333333
+23:30 hope1:我把答案一词去掉看看
+23:30 T2:hope1, 再发一遍题目？找不到了。
+23:30 hope1:http://pan.baidu.com/s/1pJ6X6rx e92u
+23:30 varna:电酱噗了被子哦 http://imagebin.org/312253
+23:31 varna:hope1: 侵权色情反动低俗了
+23:31 lhanjian:打个包
+23:31 T2:hope1, 挂了。
+23:31 hope1:……
+23:31 hope1:打个包
+23:32 lhanjian:学习各大毛站
+23:32 lhanjian:取个伟光正的名字
+23:32 varna:军国主义黄赌毒.crox
+23:32 hope1:233
+23:32 lhanjian:社会主义大毒草
+23:33 hope1:http://pan.baidu.com/s/1kT0ufJL tvbo
+23:34 varna:噗噗，度盘不鸟我……
+23:34 T2:= =
+23:34 varna:我那1.2G的军国主义黄赌毒本子没共享上度盘啊
+23:34 varna:而且其实里面还有五种是全年龄的……
+23:35 T2:= =
+23:36 lh_mouse:geordi, template<typename T, size_t N> auto foo(initializer_list<T> il) -> typename enable_if<il.size() == N>::type { }
+23:36 geordi:error: template argument 1 is invalid
+23:36 sismvg joined channel
+23:36 sismvg:坑了。。
+23:36 varna:爆
+23:37 sismvg:整个项目组就我没发粽子，因为我还没有被正式计入名册
+23:37 sismvg:所以少订了。。
+23:37 lh_mouse:geordi, template<typename T, T &&... P> void foo(P... refs){ }
+23:37 geordi:error: variable or field 'foo' declared void
+23:37 lh_mouse:geordi, template<typename T, int &&... P> void foo(P... refs){ }
+23:37 geordi:Same error.
+23:37 lh_mouse:geordi, template<typename T, int... P> void foo(P... refs){ }
+23:38 geordi:Same error.
+23:38 sismvg:顺带求周六不用上班
+23:38 lh_mouse:geordi, template<typename T, int P...> void foo(P... refs){ }
+23:38 geordi:error: expected '>' before '...' token
+23:39 varna:sismvg: 给你个毛僵
+23:39 lh_mouse:geordi, template<typename T, int P...> void foo(){ }
+23:39 geordi:Same error.
+23:39 lh_mouse:geordi, template<typename T, int ...P> void foo(){ }
+23:39 geordi:Success
+23:39 sismvg:我突然无法理解那个4月份的bug为什么被拖那么久
+23:39 sismvg:。。。我一个小时就Over了 ，50分钟花在了坑爹的服务器交互上。。
+23:41 T2:varna, 这玩意可以注册么？
+23:41 T2:舰队collection
+23:41 sismvg:geordi, int a=10;
+23:41 geordi:Success
+23:41 hope1:你得刷号
+23:41 sismvg:geordi, a-=20;
+23:41 geordi:error: 'a' does not name a type
+23:42 sismvg:geordi, int a=10; a-=20; a+20; cout<<a;
+23:42 geordi:Same error.
+23:42 sismvg:怎么用的来着。。
+23:42 T2:hope1, 圆来乳此。
+23:42 varna:T2: 关注下官方twitter, 会公布帐号抽选时间
+23:42 sismvg:geordi, {int a=10; a-=20; a+=20; cout<<a;}
+23:42 geordi:10
+23:43 varna:到点之后F5吧，记得把系统时间调到东九区
+23:44 zzzzzzzz joined channel
+23:44 sismvg:goerid,{int a=0; a= 1000-(200000+10000); a-=10000;}
+23:44 sismvg:geordi,{int a=0; a= 1000-(200000+10000); a-=10000; cout<<a;}
+23:44 geordi:-219000
+23:45 T2:varna, 好的。
+23:45 T2:gmail打不开2333.
+23:45 hope1:万恶的长城……
+23:45 hope1:goagent也没法用了
+23:45 T2:我已笑丑。
+23:46 T2:笑抽。
+23:46 varna:google又挂了
+23:46 T2:ssh似乎也挂得差不多了。
+23:46 varna:代理走起
+23:46 T2:没网银无法支付啊。
+23:46 *varna 有特别的代理姿势
+23:46 lhanjian:看我的IP就知道我出于什么状态了……
+23:46 varna:T2: 现在是免费的
+23:47 T2:还有活着的免费VPN？
+23:47 sismvg:话说天朝的山寨舰娘还没有出来？
+23:47 varna:有啊
+23:47 varna:sismvg: 出了也不好玩啊，我国海军从北洋水师之后……
+23:47 varna:陆军倒是可以一战
+23:47 sismvg:坦克娘
+23:48 varna:比如传说中人见人噗的八八狙xian
+23:48 varna:T2: twitter https://twitter.com/KanColle_STAFF
+23:48 lhanjian:hope1, 海棠可以尝试换换GoAgent的IPlist。不过现在封的很快
+23:48 varna:T2: 次回の新規着任サーバ開放は、明日【5/31(土曜日)】に実施予定です。 # 明天你可以试试
+23:48 varna:lhanjian: 我还是觉得cjb.net不错，隐蔽，速度也好
+23:49 varna:当然没goagent那么快
+23:49 T2:varna, 主要是gmail都上不去。
+23:49 varna:去cjb.net搞个ssh
+23:49 T2:認証メールを送信しました
+23:49 T2:cjb已经被墙了。
+23:49 varna:换hotmail
+23:49 T2:注册不能
+23:49 varna:...
+23:49 hope1:所以那个偷油的题是怎么回事……
+23:49 lhanjian:T2, 应该没有。我这里可以直接上cjb
+23:49 sismvg:goagent慢
+23:49 T2:我试过各种姿势了。
+23:49 varna:hope1: 我现在还没拖下来……
+23:49 sismvg:虽然相对来说块
+23:49 T2:lhanjian, 你点注册。
+23:50 lhanjian:哦，根本刷不全……
+23:50 hope1:sismvg, goagent原来能流畅看u2b
+23:50 sismvg:现在连上去豆几乎不行。。
+23:50 T2:ssh没有，vpn没有，goagent自举不能。
+23:50 T2:2333
+23:51 hope1:怎么用w3m上google就很快……
+23:51 T2:gmail都打不开2333
+23:51 varna:cjb.net可以流畅看youporn!
+23:51 hope1:又是这样，重启firefox -> 解决问题
+23:52 T2:varna, 关键是注册不能。
+23:53 varna:你hotmail都用不了么……
+23:53 Li_o:那东西好复杂  0.0.。。
+23:53 varna:Li_o: 什么东西？
+23:54 Li_o:舰娘。
+23:54 varna:Li_o: 不复杂，主要靠脸
+23:55 varna:举例来说，游戏里T字战的实现都是错的……
+23:55 sismvg:杨威利：沉默与助威没有两样
+23:55 Li_o:。。。OTL  原来这才是你们的目的～～～
+23:55 varna:如果是舰炮对轰，T字有利一方应该各种优势，但目前的实现是地方也优势
+23:55 varna:敌方
+23:56 varna:而战舰对潜的话横向排开的战舰就会亏，火力面没发挥但受击的面积变大
+23:57 varna:细致的地方并没有实装，所以其实主要是冲着别的奇怪东西去的
+23:57 varna:同是伪军宅向，铁血联盟的人气之所以不足就是因为没可爱的幼女啊
+23:58 varna:人家夜战是2333，你这里夜战是端着个G36K模人狗头，差距就出来了……

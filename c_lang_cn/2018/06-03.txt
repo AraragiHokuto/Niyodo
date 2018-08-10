@@ -1,0 +1,165 @@
+00:19 matchray: MSVC DLL  templated static variable 可能會有相同地址？垃圾編譯器
+00:29 matchray: explicit instantiation才能讓static variable地址不同
+01:27 lh_mouse quit:Read error: Connection reset by peer
+02:22 matchray: “作为人类从5000年前就开始驯化的智慧型哺乳动物，他们早就学会了如何和人类和平共处，根据自己的家庭地位来权衡自己的行为。”
+03:06 matchray: template <int N> struct rank : rank<N - 1> {};
+03:06 matchray: template <> struct rank<0> {};
+03:06 matchray: 這個技巧好，用來sfinae
+03:09 matchray: 看起來讓MSVC接受的sfinae又要複雜一點兒
+07:42 Windoa quit:Read error: Connection reset by peer
+07:55 zhangoke joined channel
+08:03 zhangoke quit:Quit: zhangoke
+08:04 zhangoke joined channel
+08:13 perr joined channel
+08:18 perr quit:Remote host closed the connection
+08:19 perr joined channel
+08:19 perr quit:Changing host
+08:19 perr joined channel
+08:53 varna joined channel
+08:53 varna: 噗叽啪
+08:58 cleamoon_: varna: 爆
+09:00 varna: 幼女没有主炮
+09:02 varna: 又累又不舒服，然而懒床估计会更难受，只好爬起来了
+09:03 cleamoon_: varna: 不应该去医院吗
+09:03 cleamoon_: 口味都变了可不是小事
+09:04 varna: 按季签到的流感
+09:04 varna: 一年至少四次
+09:05 cleamoon_: GPD Pocket 2 mini laptop to sport a slimmer bezels and body, faster processor
+09:05 cleamoon_: .......
+09:05 varna: 组里有哥们把我传染了，这个没办法
+09:05 cleamoon_: 你这流感略厉害
+09:05 varna: 我流感一般慢性鼻炎咽炎一起发作
+09:05 varna: 比较悲剧
+09:05 varna: 咦，GPDP2公布了啊
+09:06 varna: reddit上倒也有提
+09:06 varna: PD are in the process of readying the Pocket 2 for an Indiegogo campaign - no set date as yet.  # 要众筹了
+09:08 cleamoon_: 众（骗）筹（钱）
+09:09 varna: 身体不舒服的时候适合看doraiba
+09:09 cleamoon_: 野兽子一身慢性病
+09:10 lhanjian_: varna: uccu
+09:11 varna: 我体质一直属于比较烂的类型……
+09:12 cleamoon_: 野兽子一身〇性病
+09:12 varna: (｡･ω･)并没有滥交
+09:13 lhanjian_: 野兽子一身〇性病
+09:15 cleamoon_: @糗百 [17点最糗]女人用沐浴露，洗完后发现“呀！我的皮肤变得好嫩滑啊！！！” 男人用沐浴露，洗完后发现“操，泡沫都洗完了，怎么还这么滑，难道没洗干净？？？”  #难道就应该是滑的？
+09:19 lhanjian_: 阿拉花瓜！
+09:29 cleamoon_: 感觉海盗不光是人，虫子也是慢性子，昨天爸妈睡了之后看到一直蚊子落墙上，我不发声地踢死了，今天又直接攥死了一只
+09:29 varna: 万物非主 葛温靠谱 葛温德林 是我团长
+09:29 * varna 念诵清真言
+09:31 cleamoon_: uccu
+09:31 lhanjian_: 你不清真
+09:33 varna: 三百六十五里路啊
+09:35 cleamoon_: 似乎不少新人入了重制版，都疯狂受苦
+09:35 varna: 重制版的动作还是魂1那个奇妙的缓慢剑法，受不了……
+09:36 cleamoon_: 不知道还有没有掉帧攻击
+09:36 varna: 帧数好很多了
+09:36 varna: 但是六十帧的缓慢剑法和比老滚还不自然的动作让人感觉很不爽
+09:36 varna: 所以就没买正式版
+09:37 cleamoon_: 六十帧的缓慢剑法23333
+09:38 cleamoon_: 有个新的仿黑魂的2D游戏，unworthy
+09:39 cleamoon_: 我的感觉是其本质并没有咸鱼庇护所那么黑魂，但表象几乎是抄袭级别的
+09:41 varna: 黑盐算是这些2D魂里做得最好的一个了
+09:42 cleamoon_: 董事长直播了一下unworthy，疯狂受苦
+09:42 cleamoon_: 据他说，是设计的sb，并不是难得有理由
+09:43 varna: 2333333
+09:43 varna: 既然老菊这么说，我就信他吧
+09:45 cleamoon_: 还有个好玩的，半米就能摔伤，摔下十层楼不费血
+09:45 varna: 跳下去吧，不会死的
+09:46 varna: 黑盐玩个法师看看什么感觉的
+09:48 cleamoon_: 我在等董事长直播咸鱼
+09:54 cleamoon_: 知情人士透露，微软最近与 GitHub 协商收购事宜
+09:56 varna: MDZZ
+09:56 cleamoon_: 以后gayhub就会出现“你要update吗：1.同意，2.确定”的选项了
+09:56 varna: 打克总的时候爆个网络错误让我按确定
+09:56 varna: 直接废一个档
+09:56 varna: 删号重来
+09:57 cleamoon_: .......
+09:59 lhanjian_: 撸
+10:07 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/tv/ra_338356.jpg@596w_1l.jpg   #我觉得光坐在这里就很尴尬了
+10:10 varna: 零失误两百刀……
+10:10 varna: 一刀5血
+10:11 iyzsong joined channel
+10:11 cleamoon_: orz
+10:12 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/tv/xf_147917.jpg@596w_1l.jpg  
+10:13 cleamoon_: 我儿时的壮举只有管一个小哥叫阿姨，导致其惊愕了数分钟
+10:32 Mokou: https://usercontent.irccloud-cdn.com/file/Dd1HFG3y/1e36d1i9w3kmb6svsxa4tjtr7.jpg
+10:36 cleamoon_: 2,3 那个是什么
+11:00 varna: 救世啊（搭顺风车）
+11:02 iyzsong quit:Read error: Connection reset by peer
+11:06 iyzsong joined channel
+11:07 lhanjian_: 灵梦到底怎么你们了
+11:07 Mokou: 今 天 好 天 气
+11:09 varna: 可可是蛮 法 天的么？
+11:15 Test joined channel
+11:16 Test is now known as Guest41534
+11:24 iyzsong quit:Ping timeout: 265 seconds
+11:30 Guest41534 quit:Quit: Page closed
+11:33 lhanjian_: ooc同人是什么
+11:34 varna: https://www.bilibili.com/video/av218543 三倍icecream
+11:39 varna: https://www.bilibili.com/video/av9254850 花映冢
+11:40 varna: 弹 幕 开 花 宣 言
+11:52 zhangoke quit:Quit: zhangoke
+11:57 iyzsong joined channel
+12:13 lhanjian_: varna: gan
+12:16 varna: ?
+12:17 lhanjian_: 我要不要买个彩六试试水
+12:18 lhanjian_: varna 远哭5的手感怎么样
+12:18 matchray: clang/lib/Driver 感覺都是GNU遺毒
+12:19 varna: lhanjian_: 马马虎虎，没特点
+12:19 varna: 射击要击杀效率的话买PC版就好了
+12:20 lhanjian_: 如果只是cod级的射击，那不要pc
+12:28 lhanjian_: https://www.irccloud.com/pastebin/MTjykKqj
+12:29 varna: 三十个SIK姐贵
+12:30 varna: 致死量（确信）
+12:31 varna: 咦，reddit改版了
+12:31 varna: 好难看
+12:36 * Mokou 在刷/r/polandball
+12:39 lhanjian_: 春田m1903a1！
+13:01 varna: 今天不写码了，只做设计
+13:02 varna: 不想清楚不动手，不然会很麻烦
+13:21 AndChat611184 joined channel
+13:57 ifr0zen joined channel
+14:45 cleamoon_ quit:Quit: Connection closed for inactivity
+15:20 AndChat611184 quit:Ping timeout: 276 seconds
+15:24 AndChat611184 joined channel
+15:30 AndChat611184 quit:Ping timeout: 276 seconds
+15:41 lh_mouse joined channel
+15:50 jingjinghack quit:Remote host closed the connection
+15:56 q_xjfd joined channel
+16:00 q_xjfd quit:Remote host closed the connection
+16:51 lhanjian_: varna: TenNouHeika，BanZai!!!!!
+17:11 jingjinghack joined channel
+17:17 perr quit:Remote host closed the connection
+17:18 perr joined channel
+17:25 xiaoxi_ joined channel
+17:59 Mokou: 丢人了 https://usercontent.irccloud-cdn.com/file/IgTC7GQc/japanex.png
+18:01 lh_mouse quit:Ping timeout: 256 seconds
+18:25 lh_mouse joined channel
+18:37 lhanjian_: https://usercontent.irccloud-cdn.com/file/xphQICkp/Screenshot_2018-06-03-18-36-37-31.png
+18:37 lhanjian_: varna: 
+18:37 lhanjian_: https://usercontent.irccloud-cdn.com/file/jz7KerC6/Screenshot_2018-06-03-18-37-33-00.png
+19:03 perr quit:Remote host closed the connection
+19:03 perr joined channel
+19:23 zhangoke joined channel
+19:31 iyzsong quit:Ping timeout: 260 seconds
+19:36 iyzsong joined channel
+19:39 undefine_ joined channel
+19:42 cleamoon_ joined channel
+19:50 undefine_ quit:
+19:51 perr quit:Remote host closed the connection
+20:06 Dove joined channel
+20:17 Dove: 我滚回去玩wow了，搞了个猎人，还不错。
+20:20 iyzsong: 0.0
+20:21 Dove: 实在没什么事可干
+20:26 varna quit:Ping timeout: 265 seconds
+20:44 xiaoxi_ quit:Quit: Leaving
+20:55 lh_mouse quit:Read error: Connection reset by peer
+21:22 ifr0zen quit:Remote host closed the connection
+21:23 perr joined channel
+21:35 zhangoke quit:Quit: zhangoke
+21:49 Dove quit:Read error: Connection reset by peer
+22:10 iyzsong quit:Ping timeout: 240 seconds
+22:11 perr quit:Remote host closed the connection
+22:26 perr joined channel
+23:58 matchray: https://www.zhihu.com/question/36103380
+23:58 matchray: 垃圾垃圾垃圾微信

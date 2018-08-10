@@ -1,0 +1,540 @@
+0:23 tsuki joined channel
+0:40 lh_mouse:geordi, using fp = int(int); int foo(int a){ return a+1; } int main(){ fp p = &foo; cout << (*p)(2); }
+0:40 geordi:error: function 'int p(int)' is initialized like a variable
+0:40 lh_mouse:geordi, using fp = int(*)(int); int foo(int a){ return a+1; } int main(){ fp p = &foo; cout << (*p)(2); }
+0:40 geordi:3
+0:41 lh_mouse:geordi, using fp = int(int); int foo(int a){ return a+1; } int main(){ fp *p = &foo; cout << (*p)(2); }
+0:41 geordi:3
+0:44 hysw:这是什么奇葩的考试...
+0:44 hysw:题目彻底的水，然后根本没可能做完
+1:57 tsuki_ joined channel
+3:6 whocares_2 joined channel
+3:47 cleamoon joined channel
+6:53 tsuki joined channel
+7:4 xxxxxxxxx joined channel
+7:14 cleamoon_ joined channel
+7:17 hoxily joined channel
+7:32 hoxily joined channel
+7:35 endle joined channel
+8:4 iyzsong joined channel
+8:14 Sleepwalking joined channel
+8:16 Sleepwalking:geordibot呢
+8:22 boosure joined channel
+8:27 hope1 joined channel
+8:34 hysw:但愿能在CSC240的exam弄到个60%...
+8:34 Sleepwalking:昨晚试着跟C酱玩翻跟头亲亲
+8:34 Sleepwalking:发现根本够不着手啊。。。
+8:35 T3rmin4t0r joined channel
+8:35 hysw:简单到随手解决的题，然后变态的题量... 这是靠学了些什么还是手写能力...
+8:47 xxxxxxxxx:Sleepwalking: 或许你们可以试试看这个http://mat1.gtimg.com/gamezone/tui/004.gif
+8:57 silencly07 joined channel
+9:13 hoxily:xxxxxxxxx: 我成功地让weechat有了带声音的notify
+9:15 xxxxxxxxx:怎么弄的?
+9:16 hoxily:xxxxxxxxx: anotify
+9:17 hoxily:xxxxxxxxx: 参考这个脚本，http://weechat.org/scripts/source/anotify.py.html/
+9:22 lh_mouse joined channel
+9:31 *lh_mouse meows
+9:31 hoxily:lh_mouse: moo~
+9:54 zzzzzzzz joined channel
+10:20 Zirx joined channel
+10:25 boosure joined channel
+11:31 Sleepwalking joined channel
+11:38 iyzsong joined channel
+11:40 xxxxxxxx_ joined channel
+11:45 condy joined channel
+11:54 code_new joined channel
+12:22 Zirconi joined channel
+12:22 Zirconi:人民日报刊文：外语直接使用破坏汉语纯洁
+12:22 Zirconi:为什么“诺基亚”“摩托罗拉”能译成汉字，而iPhone和iPad就没能翻译过来？英语吸收汉语词汇都改为字母拼写，为什么汉语中却要夹杂大量英文？外来语对汉语的纯洁和健康的伤害到底有多大？
+12:22 Zirconi:面对外来语无处不在的身影，不少国人不禁发出这样的疑问。
+12:23 xxxxxxxx_:春节妈蛋
+12:23 xxxxxxxx_:纯洁
+12:23 Zirconi:“采用了基于OpenEdX开源平台，开发了HTML5视频播放器，不再依赖国外课程播放首选的YouTube，解决了国内用户无法访问国外edX平台问题。”
+12:23 Zirconi:类似的表述，如今在报刊等出版物中屡见不鲜。WiFi、CEO、MBA、CBD、VIP、PM2.5，大量外语词不经翻译就见诸报端，甚至还出现在某些严肃的学术期刊里。
+12:23 Zirconi:可是，这样的“零翻译”，不知有多少读者看得懂？
+12:23 Zirconi:专家表示，“零翻译”的外语词，既破坏了汉语言文字的严整与和谐，影响了汉语表意功能的发挥，使语境支离破碎，从深层次来说，也消解了中国文化精深而丰富的内涵。
+12:24 xxxxxxxx_:甚至还出现在某些严肃的学术期刊里
+12:25 iyzsong:2333
+12:26 xxxxxxxx_:我不会写汉字不是因为我没学过汉字怎么写 而是因为汉字太难了
+12:27 xxxxxxxx_:虽然说各种首字母简写确实容易疼 但是乱七八糟的中文翻译更疼
+12:27 Zirconi:外语中文译写部际联席会议专家委员会首席专家夏吉宣持相似观点，“改革开放以来，特别是改革开放初期，一些人盲目崇拜西方，随意使用外语词以显示自己有知识、文化水平高，这也加剧了外来语的泛滥。”此外，一些科技、医药方面的专业词汇，一时半刻找不到相对应的词，又着急使用，所以只好直接引用，造成“零翻译”现象。
+12:27 Zirconi:“懒惰，觉得写英文缩写更省事，是外来语滥用的一大主因。”中国外文出版发行事业局副局长王刚毅对此直言不讳。
+12:30 Zirconi:油土比。。
+12:31 xxxxxxxx_:油土鳖 偶喷一地埃克斯 艾丰
+12:31 Zirconi:艾丰还是叫我的手机比较好
+12:32 xxxxxxxx_:又没有分开
+12:32 xxxxxxxx_:别说直接翻译了 就说不直接的 句柄 句柄是啥
+12:33 Zirconi:今天深圳的环境空气中空气动力学当量直径小于等于二点五微米的颗粒物指数是三十，空气良好
+12:35 xxxxxxxx_:然后我就见到个家伙吧一个叫handle的变量翻译成句柄了
+12:36 xxxxxxxx_:而且更坑爹的是英文完全不同的东西却有类似的中文意思 然后中文名几乎一模一样
+12:45 xxxxxxxx_:c 和c艹改翻译成什么?
+12:46 richselian joined channel
+12:52 Zirconi:咖啡新手如何学习春天，炫耀，冬眠三大框架？
+12:56 Zirconi:淘宝用的是咖啡老板，框架是我的巴蒂，缓存服务器是自己开发的，基本遵循系统网络架构。数据库用的王八壳
+13:35 Lord_V joined channel
+13:51 hope1 joined channel
+14:22 iyzsong joined channel
+14:27 JQK joined channel
+14:43 hoxily:hope1`: 王八壳是指先知吗？
+15:1 silencly07 joined channel
+15:6 JQK:hoxily: Oracle?
+15:8 iyzsong:w.w
+15:20 lh_mouse:ORACLE 有官方翻译叫甲骨文
+15:20 lh_mouse:王八壳是什么东西
+15:20 lh_mouse:这是黑？
+15:20 xxxxxxxx_:甲骨
+15:20 xxxxxxxx_:大概是
+15:25 iyzsong:2333
+15:26 lh_mouse:很早之前看的文章 说日本老人抱怨看不懂用片假名写的外来语
+15:32 richselian:有个没用的andoird手机可以用来干嘛？
+15:32 lh_mouse:mingw-w64 gcc 4.9.0 出来了
+15:33 lh_mouse:richselian, 砸核桃
+15:33 xxxxxxxx_:装个模拟器玩老的掌机游戏...
+15:34 richselian:lh_mouse: 我有锺子了
+15:34 richselian:xxxxxxxx_: 新的手机也能玩呀
+15:35 richselian:倒是可以放公司，有24小时wifi
+15:35 xxxxxxxx_:https://play.google.com/store/apps/details?id=com.eapps.androidpcremote 当遥控器用?
+15:35 richselian:但是好像没什么用
+15:37 xxxxxxxx_:充当Web服务器 ....
+15:38 xxxxxxxx_:充当安全摄像头
+15:46 whatofor joined channel
+15:47 richselian:。。。。。。
+16:8 geordi joined channel
+16:19 cleamoon__ joined channel
+16:20 randomclown joined channel
+16:20 randomclown left channel
+16:21 randomclown joined channel
+16:24 lh_mouse joined channel
+16:26 New_V joined channel
+16:29 xxxxxxxx_:嫌犯称患艾滋针扎警察被击毙
+16:29 xxxxxxxx_:^不作死就不会死
+16:31 cleamoon joined channel
+16:47 varna joined channel
+16:47 xxxxxxxx_:驼
+16:47 varna:明天要去漫展了
+16:48 varna:恋恋啊啊舔舔
+16:48 hope1:羊驼明天要去见恋恋？
+16:48 xxxxxxxx_:坐等明天羊驼被捕
+16:48 varna:hope1: 只是去漫展而已
+16:48 varna:http://tieba.baidu.com/p/2955062737
+16:48 varna:^ 这个
+16:52 hope1:http://paper.people.com.cn/rmrb/html/2014-04/25/nw.D110000renmrb_20140425_1-12.htm
+16:52 varna:曰人民报？
+16:53 varna:噗
+16:53 varna:傻逼言论
+16:53 hope1:+
+16:53 varna:连术语都黑，这些人是多脑残
+16:54 xxxxxxxx_:翻译还要靠国学大家呢
+16:54 varna:以后帕秋莉改叫藿识算了
+16:55 hope1:表示概念的术语倒还好，确实应该翻译，但是这种产品名称……
+16:55 xxxxxxxx_:我真没觉得概念就一定要翻译
+16:55 xxxxxxxx_:如果有同样的东西翻译无妨 没有就别非要翻个出来
+16:56 hope1:新名词不就得自创一个翻译了
+16:57 varna:@妹汁篮
+16:57 xxxxxxxx_:大家都自创听谁的?
+16:57 hope1:@在线函数
+16:57 varna:xxxxxxxx_: @MCF_Notation
+16:57 hope1:总之也比直接写inline function好
+16:58 xxxxxxxx_:比如minecraft翻译成 我的世界 然后mine和craft就都不见了?
+16:58 biergaizi joined channel
+16:59 varna:xxxxxxxx_: 重点是诚哥
+16:59 hope1:minecraft就属于产品名称，没有公认的翻法不翻也行
+17:0 varna:@min_craftG
+17:0 varna:@mine_craftG
+17:0 xxxxxxxx_:地雷羊驼
+17:0 varna:不对，明显不国学
+17:0 varna:应该译成「萃香WCNM」
+17:2 xxxxxxxx_:另 法师妹子打都瑞尔好方便啊
+17:2 varna:没被秒？
+17:2 xxxxxxxx_:没
+17:2 varna:你点体力了？
+17:2 lh_mouse:varna, AS 里面 /APP /NOAPP 是干啥的
+17:3 xxxxxxxx_:点了一些 不然前期跑路太疼了
+17:3 lh_mouse:[16:48:58] 20<lh_mouse>30 void foo(){ __asm__("_foo: ;"); }
+17:3 lh_mouse:[16:49:12] 20<lh_mouse>30 gcc test.c -O0    => Error: symbol `_foo' is already defined
+17:3 lh_mouse:[16:49:25] 20<lh_mouse>30 gcc test.c -O3 =>  No warnings??
+17:3 varna:lh_mouse: 单独编译我都用yasm的
+17:3 varna:as太疼了
+17:3 varna:从不管那鸟玩意
+17:4 lh_mouse:varna, gcc -S 出来的
+17:4 varna:那就不知道了
+17:4 New_V joined channel
+17:5 xxxxxxxx_:frost nova(这个该翻译成啥 冰冻新星 还是寒星? ) tp 火球 外加药水 米山都没死就打死都瑞尔了
+17:6 xxxxxxxx_:而且tp赶路好厉害啊
+17:7 varna:帕秋莉——
+17:7 xxxxxxxx_:带上一包药出门开始跳
+17:8 varna:GO!
+17:8 xxxxxxxx_:话说这样看或许可以不点体力?
+17:8 *varna 吃了两个三明治结果饿了，然后发觉兜里没钱
+17:12 varna:五十铃！
+17:13 xxxxxxxx_:羊驼法师不加体力的么?
+17:13 varna:我全人物都不加体力
+17:13 xxxxxxxx_:加敏捷?
+17:14 varna:近战加敏
+17:14 xxxxxxxx_:法师难道加精 力了?
+17:14 varna:加蓝加力量
+17:14 varna:另外精 力原文是energy
+17:14 xxxxxxxx_:....
+17:15 xxxxxxxx_:加蓝还不如穿个带蓝石头的盔甲或者头盔...
+17:15 varna:不喜
+17:15 xxxxxxxx_:感觉属性点加蓝很少...
+17:16 varna:法师就该多点蓝，有气氛
+17:16 xxxxxxxx_:包里有3/4的蓝应该不少了
+17:16 varna:不带那么多
+17:17 varna:基本是十六瓶里面四瓶蓝，其余的OSP
+17:18 xxxxxxxx_:每次回家用腰带买药...
+17:19 cleamoon:加精？這略神奇
+17:20 xxxxxxxx_:我前几级倒是加了蓝
+17:22 varna:噗，这个2MSL好长啊
+17:25 *varna 认为长久以来「加缓存必须测试」的教训简直巨正确
+17:26 varna:不过贴上缓存之后会有二十次里出一次的五倍速揉程……
+17:27 Lord_V joined channel
+17:29 varna:real	0m0.286s
+17:29 varna:user	0m0.000s
+17:29 varna:sys	0m0.083s
+17:29 varna:丧心病狂的对象池大命中+竞争不激烈
+17:42 boosure joined channel
+17:51 varna:基本的并发和阻塞IO应该是差不多了，以后如果蛋疼就写条件锁和定时器事件
+17:52 richselian:疼
+17:53 varna:叫你ML
+17:53 varna:richselian: 说起来你机器学习搞出什么花样了么
+17:53 xxxxxxxx_:对了揉牛今天问过旧手机干啥用
+17:53 varna:旧手机？我的就是2G
+17:53 varna:旧手机可以改造成蓝牙路由器
+17:54 varna:加一个应用层协议和自定义选路之类的应该可能
+17:54 varna:不行的话还可以插在衣服里当防弹板
+17:55 xxxxxxxx_:似乎是安卓机
+17:55 varna:完爆凯夫拉之类抗冲不抗切的东西
+17:55 varna:啊那就没戏了
+17:55 xxxxxxxx_:安卓机据说可以当web服务器
+17:56 xxxxxxxx_:似乎也有当笔记本遥控器/触摸板的说法
+17:56 varna:我倾向当遥控器
+17:56 varna:手机的电量当服务器完全没戏
+17:56 richselian:varna: 有戏
+17:56 xxxxxxxx_:插上电源呗
+17:56 varna:噗护
+17:56 varna:噗呼
+17:57 richselian:24小时电源+wlan
+17:57 varna:不如写个RPC接到wm上当遥控器
+17:57 varna:……
+17:57 varna:还不如那个能隔一根屌距离输电的电源呢
+17:57 richselian:。。。
+17:57 xxxxxxxx_:还有个太蠢的用处我就没说... 挖矿什么的
+17:57 varna:或者用作传感器网络的reduce/master节点
+17:58 varna:传感器放女厕里
+17:58 varna:还可以买UAV, 在手机上部署UAV::Pliot
+17:58 varna:Perl程序哦
+17:58 xxxxxxxx_:对了还有个什么安全监控摄像头的
+17:58 varna:似乎可以传320x200的实时图像回来
+17:58 xxxxxxxx_:偷拍狂魔
+17:59 varna:richselian: 那个屌长输电电源是我本科时候创新项目有几个哥们搞的
+17:59 varna:他们汇报成果的时候全场都乐了
+17:59 varna:啊啊啊啊啊啊啊啊
+17:59 xxxxxxxx_:难道直白的提到了屌?
+17:59 varna:今天又没刷到
+17:59 varna:xxxxxxxx_: 我提到了
+18:0 xxxxxxxx_:噗
+18:1 varna:喝了些水果然就不肚饿了
+18:1 varna:喝了些水|果然|就不肚饿了
+18:1 varna:省下些明天买同人本子或者妹抖咖啡厅的钱
+18:2 xxxxxxxx_:http://puu.sh/8mHjx.jpg 我参考的那个视频里普通难度第四幕出门时背包里是这样的...
+18:2 varna:噗
+18:2 varna:麻烦死了
+18:2 varna:药水OSP是常识
+18:3 xxxxxxxx_:OSP <- 还是没搞清是什么意思
+18:4 boosure joined channel
+18:4 varna:http://lambda-the-ultimate.org/node/4919
+18:4 varna:^ F#
+18:5 varna:xxxxxxxx_: On-Site Procurement 
+18:6 xxxxxxxx_:然后他回去第三幕练级了的样子
+18:7 xxxxxxxx_:拣地上的不够用吧 蓝瓶
+18:7 varna:够
+18:8 xxxxxxxx_:我感觉好像不太够....
+18:8 xxxxxxxx_:视频里那货就没好好走过路 一直在tp....
+18:9 xxxxxxxx_:红药可能够 蓝药明显不够
+18:12 varna:蓝药不够是你tp太多了
+18:12 varna:急什么，你又不是提督
+18:13 xxxxxxxx_:跳小怪
+18:13 varna:疼
+18:13 varna:小耗有什么好跳的
+18:14 xxxxxxxx_:走过去要被摸 跳过去赶路快
+18:14 varna:233
+18:14 varna:急什么，你又不是提督
+18:15 xxxxxxxx_:比如第二幕最后的墓穴里
+18:16 xxxxxxxx_:小怪多的要死 跳过去多好
+18:16 xxxxxxxx_:还有第三幕的奇葩地形
+18:17 varna:我都是全歼
+18:23 xxxxxxxx_:缺经验的时候才全歼呢
+18:25 varna:玩游戏急匆匆的就不好玩了
+18:26 varna:你这么搞迟早比岛风小必吃还快
+18:27 varna:另外感觉LK 3.14文件系统响应速度明显下降的只有我么
+18:27 xxxxxxxx_:直接跳过去秒boss多好玩
+18:29 xxxxxxxx_:我玩圣骑的话肯定被迫全图....
+18:31 hope1:tsuki, 发现之前20(3)题按p<=x<p+1证得没写对... 求过程
+18:32 cleamoon:在球一邊原題...
+18:33 hope1:求函数 y = |x-1| + ... + |x-n| 的最小值及对应自变量x的取值
+18:34 varna:http://tieba.baidu.com/p/3005160014
+18:34 varna:^ 已嘲讽
+18:35 hope1:233
+18:37 cleamoon:這不是3嗎？
+18:38 hope1:是啊
+18:42 cleamoon:哦，設爲p後拆開, sum(1 to p) - p*x +sum(p+1 to n) + (n-(p+1)+1)x，這是p在1n之間的情況，在這之外就是+-( nx-sum(1 to n) )，然後比較他們就行了
+18:42 varna:正体字？
+18:42 cleamoon:n有多於2倍cpu的時候？
+18:42 cleamoon:輸入法抽風懶得改了
+18:43 varna:cleamoon: 二倍CPU是典型的经验取值，不过我不拒绝更多的线程
+18:43 varna:用户自己调节吧
+18:44 varna:实际上以后可以考虑把缓存用量/用法也加进去
+18:44 cleamoon:soga
+18:44 varna:HT的加速我记得一般是1.2倍，但这是计算密集的情况
+18:45 varna:IO密集的话可以放松一点
+18:45 varna:HT=2
+18:45 cleamoon:雖然對鎖完全沒瞭解，不過這個情況下讓b隨便訪問也沒關係吧？還是說a自己也要那塊內存池？
+18:46 Plough joined channel
+18:46 varna:A创建对象的时候要从自己的池里取，B会把一部分对象还回去
+18:46 varna:典型的情况是新揉程的协程创建请求和IO挂起续延
+18:46 hope1:cleamoon, sum(a to b)是指?
+18:47 cleamoon:哦，那我的話應該是弄一個標識，由a控制，b判斷是否能訪問
+18:47 varna:这两个都是谁创建就倾向创建的东西，所以还回去的话容易利用
+18:47 cleamoon:hope1, 等差數列求和呀
+18:47 varna:cleamoon: 那样会积压，我也考虑过这么搞
+18:47 varna:不过最后还是用了疯狗抢翔的实现
+18:47 varna:积压-强制同步虽说大概也可行
+18:48 cleamoon:如果不積壓可不可以弄一大堆標識，識別那些是可以用的
+18:48 Caworb joined channel
+18:48 varna:不能保证原子化了
+18:48 cleamoon:搶翔不會崩嗎
+18:48 varna:实际上我写远程协程创建的时候就用了一个标识
+18:48 varna:不会，我锁了
+18:48 cleamoon:原子化是什麼...
+18:48 varna:futex在竞争不激烈的时候不过内核，所以性能大致还有保障
+18:48 cleamoon:搶翔不是不用鎖呀....
+18:49 varna:那是找死
+18:49 varna:cleamoon: 一个标识可以原子地判别，多个就不行了
+18:49 cleamoon:所以說呀...
+18:49 cleamoon:哦，哪有什麼意義...
+18:49 varna:?
+18:49 cleamoon:就是多點信息傳輸
+18:49 varna:没搞清楚你在说什么6
+18:49 cleamoon:原子化有什麼意義？
+18:50 varna:保证标识一次性读/写，不会出现写标识到一半被插入了非法的读写之类
+18:50 varna:你打了标识，那么就是个临界
+18:50 cleamoon:.在給標識弄個鎖......
+18:50 varna:太甜了
+18:51 varna:一个指令或者instru就能搞定的
+18:51 cleamoon:沒弄過這類玩意，都是yy出來的
+18:51 varna:说不定以后我会试试标识+积压+强制同步
+18:52 varna:反正这种东西都得测了之后再说
+18:52 cleamoon:-
+18:52 cleamoon:+
+18:52 cleamoon:......
+18:52 varna:233
+18:53 varna:说起来岚月酱不是长发么，穿女装吧
+18:55 cleamoon:2333  http://photo.fanfou.com/n0/0a/k0/38_475077.jpg
+18:55 cleamoon:又不是永久長髮...
+18:55 cleamoon:現在只到鼻尖
+18:55 varna:八神啊……
+18:55 cleamoon:海棠肯定更長
+18:55 hope1:cleamoon, 这比较了也毫无意义吧...
+18:55 hope1:鼻尖？好可怕
+18:56 varna:cleamoon: 海棠是双马尾
+18:56 varna:哪有你那么长
+18:56 cleamoon:hope1, 比較就出答案了呀
+18:56 varna:海棠求温泉、海棠捏小手、啊呀呀呀
+18:56 cleamoon:馬尾可以弄到前邊來
+18:58 varna:这个有点难
+18:58 varna:双马尾的基本构造还是在后方长发的基础上进行的
+18:58 hope1:cleamoon, 没明白
+18:59 cleamoon:後方長髮和前方長髮有區別？
+18:59 varna:后面不能直接翻到前面吧
+18:59 richselian:噗
+18:59 varna:非处男出现了
+19:1 varna:HOHOHO~HOTate~
+19:2 varna:AyaHota~
+19:3 hope1:ayahota?
+19:3 hope1:先吃饭去
+19:3 varna:hope1: aya + hata(te)
+19:4 *varna 肚饿
+19:12 xxxxxxxx_:听上去又该剪头发了....
+19:14 varna:爆
+19:15 varna:兄贵吧有个伙计提问：
+19:15 varna:「承太郎让替身握住自己心脏装死，DIO采取的办法不是耳朵贴地听心跳而是直接不管是死是活给他一发息子握的话，承太郎岂不死路一条？」
+19:15 cleamoon:hope1, 這方法還真挺麻煩的，弄出的式子不漂亮
+19:16 cleamoon:PC-BSD项目正从头开始开发一个BSD授权的开源桌面环境 Lumina。Lumina将是基于 Qt工具箱，旨在取代KDE成为PC-BSD默认的桌面环境。现阶段 Lumina被认为尚处于早期alpha状态，但已被PC-BSD的软件包仓库收录，它的目标是成为一个轻量级的、稳定而快速的桌面环境
+19:17 cleamoon: 中国最大门户之一的新浪在遭到净网行动打击之后，股票一度下跌超过7%，最终收盘下跌3%，中资股也都全线下跌。扫黄打非办公室的通告说，新浪读书和新浪拍客刊登了色情作品，其中有的作品点击量达数百万次，宣扬淫秽色情，危害社会公德，影响范围极广，严重危害未成年人的身心健康。新浪读书目前已经关闭了小说连
+19:17 cleamoon:载，至今已有20多家网络文学网站在净网行动中因色情原因关闭。社科院的一位匿名人士表示，国家整顿社会风气已从领导干部扩展到整个社会，新浪网在门户中较有影响力，严查可起到杀一儆百的作用。新浪网辩解称，新浪读书早已被分拆出去，由新浪阅读信息技术有限公司独立运营，员工170多人，大多是刚刚毕业不久的大
+19:17 cleamoon:学生，平均年龄25岁左右。《南方都市报》称， 4月11日，新浪读书至少10位工作人员被警方带走，其中多名编辑被拘留。
+19:18 varna:临时工
+19:20 varna:而且领导还没整顿好怎么又开始搞屁民了
+19:21 cleamoon:就沒打算整頓領導
+19:22 hope1:cleamoon, 三角不等式的方法比较简单，但是不通用……
+19:22 cleamoon:這麼長時間的騷動都是爲了統一集團打到商業敵人而已
+19:22 cleamoon:三角不等式是什麼
+19:23 hope1:|a+b|<=|a|+|b|
+19:24 cleamoon:Chinese authorities have reportedly been cracking down on the evils of BL, arresting “20 young women” for being involved with the creation and distribution of yaoi fan fiction over the Internet.
+19:24 cleamoon:哦，還有這名字
+19:25 cleamoon:我這方法略麻煩，還是用昨天的方法吧
+19:26 hope1:昨天的方法怎么做
+19:27 cleamoon:小明有心理阴影，求阴影部分面积。小明很生气，求生成气体体积。小明找到了对象，求对象的内存地址。小明买东西攒积分，求积分上下限。小明去旧金山玩，求下载金山毒霸。小明觉得刷人人很有劲，求劲度系数。小明抱到了大腿，求大腿肌肉结构图。小明种了一棵树，求树的节点个数。小明在撸棒，求鲁棒性。
+19:27 varna:.
+19:27 cleamoon:就是昨天某人說的那個方法呀，從兩頭往中間夾
+19:28 varna:强而有力，强而有力啊
+19:28 xxxxxxxx_:F91前段时间刚说过自己的人族"强而有力的多线"
+19:28 hope1:cleamoon, 就是condy那个三角不等式的方法？
+19:28 varna:2333
+19:29 cleamoon:那個算三角不等式嗎... 反正就是昨天某人說的那個啦
+19:29 varna:某人……
+19:29 varna:键识别障碍么……
+19:30 cleamoon:不，是內存太小
+19:30 xxxxxxxx_:智商杯随机到人族被打败之后说"强而有力的多线都没发挥出来"
+19:30 varna:23333
+19:32 cleamoon:笑尿：  http://www.bilibili.tv/video/av1080314/
+19:36 varna:2333
+19:36 xxxxxxxx_:我咋觉得好像在哪里看到过这个视频....
+19:37 varna:噗
+19:37 varna:我开始看基头四的那一话漫画了……
+19:39 xxxxxxxx_:看上去法师妹子第五幕的任务也很好做
+19:39 condy joined channel
+20:10 hope1:cleamoon, （4）呢……
+20:11 cleamoon:4是什麼...
+20:11 hope1:y = |x-1| + ... + |9x-1|
+20:18 richselian:疼
+20:26 varna joined channel
+20:28 varna:MLGBD
+20:31 tsuki joined channel
+20:32 richselian:疼
+20:32 richselian:回家
+20:33 varna:无线网无限断
+20:33 lh_mouse:g++ 4.9 的 -flto 倒是比原来强了不少
+20:33 lh_mouse:没有 xxx defined in discarded secion 了
+20:34 lh_mouse:不过这货把我的入口点给删了
+20:34 hope1:233
+20:34 cleamoon:hope1, 這個我會猜 5x = 1 然後證明這個最小
+20:35 varna:lh_mouse: clang会把你的一整个函数当死代码灭了
+20:35 hope1:cleamoon, wolfram|alpha: minimize ... 得到 x = 1/7, y = 24/7
+20:35 cleamoon:噗
+20:35 varna:2333
+20:37 varna:看起来我月末的睡眠时间基本要跪了
+20:37 hope1:看来这题最有效的方法是代9个数进去算……
+20:37 varna:争取每天睡三小时觉
+20:37 varna:觉（三音节）
+20:37 hoxily:varna: 3小时？
+20:38 hoxily:varna: 会不会太少？
+20:38 varna:hoxily: 我要赶连载……
+20:38 cleamoon:alpako要幹什麼？
+20:38 varna:然后还有4.30的数据库大会截稿
+20:38 varna:要干觉酱
+20:39 cleamoon:除了他呢
+20:39 varna:部分求值我还没写程序呢……
+20:40 varna:那些鬼畜数据流方程列了一大堆，结果根本不解决实际问题
+20:40 varna:叫兽吔屎去
+20:41 hope1:cleamoon, 这样拿不到分啊……
+20:41 cleamoon:計算什麼的數據流？
+20:41 cleamoon:爲什麼拿不到分呀
+20:41 varna:cleamoon: 程序啊……
+20:42 varna:不算数据流就没定值点，这些是做各式分析的基本
+20:42 cleamoon:那有什麼實際問題可解決的...
+20:42 hope1:cleamoon, 大题
+20:42 cleamoon:大題也可以試數呀，試數過程中證明最小就好了
+20:43 varna:+
+20:44 hope1:这样啊
+20:44 cleamoon:不行你試試我剛才那個，麻煩就直接試數了
+20:45 cleamoon:雖然答案長但是無腦
+20:45 varna:啊，我找到扶他村投影定理了
+20:45 varna:http://en.wikipedia.org/wiki/Partial_evaluation
+20:47 lh_mouse:varna, __attribute__((used))
+20:47 whatofor joined channel
+20:48 varna:lh_mouse: 揉sed
+20:48 varna:那个例子里应该是从假定指针访问非空开始的一系列人道毁灭
+20:48 varna:数据流分析的猥大胜利
+20:48 newbie joined channel
+20:48 varna:wtf兄来了
+20:49 varna:爆
+20:54 whatofor joined channel
+20:57 biergaizi joined channel
+21:13 hope1:回来了
+21:14 varna:HOHOHO~HOTate~
+21:17 hope1:cleamoon, 无脑方法是令p <= x <= p+1，算出y在[p, p+1]区间上是某个一次函数，证明第一个使y斜率大于零的区间左端点之前函数递减，之后函数递增？
+21:17 varna:hope1: 无脑解法确实是在有限情况下作图，然后装模作样证单调
+21:18 varna:等你证完(9)个区间之后就结束了
+21:19 hope1:列举区间直接一个个算端点
+21:20 varna:HOHOHO~
+21:20 varna:AyaHota~
+21:20 varna:饿死了，回去买四包三鲜伊面再说
+21:21 varna:SAN鲜伊面
+21:21 hope1:这个大概吃几包能饱？
+21:21 varna:我猜SAN包
+21:22 varna:啊，那干脆买一袋五包的算了
+21:25 varna:肚饿的时候还是SAN鲜伊面惯用
+21:25 Plough:终于用Erlang敲出来了一个Chatroom……
+21:25 varna:管用
+21:25 varna:好评。
+21:25 Plough:https://gist.github.com/HououinRedflag/11289440
+21:25 Plough:球吐槽
+21:25 Plough:翻着doc敲出来的
+21:26 varna:吐槽不能，肚饿
+21:26 Plough:2333
+21:26 varna:……似乎不止是肚饿的问题，网尿了
+21:27 lh_mouse:来个人告诉我怎么能不让 flto 把我的入口函数删了
+21:28 varna:这里有人么
+21:29 hope1:report bug?
+21:29 varna:等他们改的周期太长了吧
+21:29 varna:而且未必能patchOULI
+21:30 hope1:fork之
+21:30 varna:2333
+21:31 varna:mcc
+21:31 varna:mzz
+21:31 varna:Mouze Zhizhi
+21:31 menma joined channel
+21:31 varna:脸神？
+21:32 menma:羊驼⊙ω⊙
+21:32 hope1:应该是
+21:32 varna:虎揉脸神小鸟
+21:33 lh_mouse:面码快到碗里来
+21:33 varna:脸神已经被我揉软了
+21:35 root joined channel
+21:36 varna:root!
+21:36 tsuki joined channel
+21:36 varna:出现了一个root!
+21:37 varna:而且是岚月酱！
+21:37 hope1:噗
+21:37 cleamoon:我起得名字
+21:38 varna:走了
+21:38 varna:大家腋间愉快
+21:38 cleamoon:無腦就是試九個區間
+21:38 hope1:李彦宏：百度大脑“智商”已相当于两三岁小孩
+21:38 hope1:...
+21:39 cleamoon:百度大腦是什麼？
+21:39 T2 joined channel
+21:40 hope1:http://tech.sina.com.cn/i/2014-04-25/05289344087.shtml
+21:41 lh_mouse:百度的管理层的智商确实只相当于两三岁小孩
+21:41 cleamoon:2333
+21:42 hope1:原来贴吧是人工智能运营的…… 好厉害
+21:42 cleamoon:這個現在的科技應該做不到吧
+21:43 hope1:http://xinhaiguang.baijia.baidu.com/article/13346
+21:43 Plough:唐雎曰：“大王尝闻布衣之怒乎？”秦王曰：“布衣之怒，亦免冠徒跣，以头抢地耳。”谓唐雎曰：“公亦尝闻天子之怒乎？”唐雎对曰：“臣未尝闻也。”
+21:43 Plough:秦王曰：“天子之怒，无可奉告，比你们不知道高到哪去了，想弄个大新闻，好把我批判一番，你们这样做是不行的。你们还是too young，sometime naive。此乃天子之怒。”
+21:45 hope1:华莱士呢
+21:46 Plough:唐雎就是华莱士
+21:47 Plough:“魏国的唐雎知道吗？我和他谈笑风生！”
+21:53 hope1:“您佩不佩服这名青年的勇气？那个青年的心，他的勇气。那个独自站在那里对抗坦克车的人。”
+21:54 lh_mouse:那人是纯傻逼
+22:0 hope1:“你说到那个青年的勇气，我来告诉你你所谓的勇气是什么。这个青年从小就从父母、老师和社会那里了解到解放军是人民的子弟兵，他绝不相信子弟兵的坦克车会从他身上压过去。”
+22:2 iyzsong:w.w
+22:8 biergaizi joined channel
+22:10 cleamoon:據說那段就在大使館和外交公寓的街上，那人就是公約數顧來的，爲了給外國人看不會壓過去，不會殺人之類的
+22:10 cleamoon:tam那邊最後就是很多直接壓過去了
+22:14 lh_mouse:洗澡澡
+22:31 hysw:靠... 下午考438会跪的...
+22:48 zzzzzzzz joined channel
+22:51 biergaizi joined channel
+22:53 sleepwalking joined channel
+22:53 sleepwalking:SICP和The xxx Schemer系列的区别在哪？
+22:57 hysw:sleepwalking: 加入Haskell&Prolog党吧
+22:57 sleepwalking:我看完第一本后去看SICP好了
+22:58 hysw:write yourself a scheme in 48 hours -_-
+23:6 Caworb left channel
+23:17 sleepwalking joined channel
+23:18 hysw:sleepwalking: 来研究歌德尔不完备吧
+23:18 sleepwalking:看不懂。。
+23:18 randomclown joined channel

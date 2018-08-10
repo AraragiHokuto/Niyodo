@@ -1,0 +1,135 @@
+00:00 varna: 下回再买，就去买桶装原味的
+00:00 cleamooon: 为什么吃麦片
+00:00 cleamooon: 而且为什么这么晚吃...
+00:03 cleamoooon joined channel
+00:04 varna: 本来我是走麦片酱油路线的，睡前吃一点当个夜宵
+00:05 cleamoooon: orz
+00:06 varna: 下回还是煮挂面吧……
+00:06 cleamoooon: 腋宵黄瓜蘸酱
+00:06 Mokou: ビール！ビール！
+00:07 cleamoon quit:Ping timeout: 260 seconds
+00:07 Mokou: ^ 去拉面摊了
+00:07 varna: 就近倒还真有个农贸市场
+00:08 varna: 之前厕所被堵，清理时候去那里买的洁厕灵很好用
+00:10 iyzsong: night :-
+00:10 iyzsong quit:Quit: bye.
+00:11 cleamoooon: 对了，玻璃渣和deepmind正式合作做sc2版的alpha go了
+00:11 varna: ...
+00:11 cleamoooon: 我估计叫 alpha gou
+00:12 varna: 卡拉是条……
+00:12 Mokou: nico上的红字各种作死……
+00:12 varna: 创价？
+00:12 Mokou: 中华特有HOMO合作里的
+00:13 varna: ...
+00:13 varna: 小立本也作死啊
+00:13 Mokou: +
+00:32 varna: 先睡
+00:32 varna: 武运
+00:32 varna quit:Quit: leaving
+01:01 Mokou quit:Quit: 睡觉
+01:52 cleamoooon quit:Ping timeout: 260 seconds
+02:40 lh_mouse quit:Read error: Connection reset by peer
+04:14 xxxxxxxx quit:Quit: Leaving...
+04:51 linearain joined channel
+04:54 linearain: hi
+04:54 linearain: ni hao
+04:56 cleamoon joined channel
+05:18 linearain: hello
+05:40 linearain quit:Quit: Leaving
+07:08 Sasasu joined channel
+08:19 FrankHB quit:Ping timeout: 260 seconds
+08:20 iyzsong-xx joined channel
+08:41 wl_xxxxx joined channel
+08:53 FrankHB joined channel
+09:12 yimis joined channel
+09:12 yimis quit:Client Quit
+09:25 lh_mouse joined channel
+09:28 iyzsong-xx quit:Read error: Connection reset by peer
+09:38 whatofor joined channel
+09:41 LastAvengers joined channel
+09:52 wl_xxxxx quit:Ping timeout: 256 seconds
+10:10 Youmu joined channel
+10:10 FrankHB quit:Read error: Connection reset by peer
+10:10 FrankHB joined channel
+10:51 wl_xxxxx joined channel
+11:01 pjfloyd joined channel
+11:46 jin7boy joined channel
+11:46 jin7boy: :-(
+11:46 jin7boy: java创建个窗口但是关闭不了
+11:46 jin7boy: 视频里面看着挺好用, 但是我电脑是win10, jdk1.8 用不了
+11:46 jin7boy: http://paste.ubuntu.com/23440081/
+12:05 jin7boy quit:Quit: Leaving.
+12:11 LastAvengers quit:Ping timeout: 260 seconds
+12:30 yimis joined channel
+12:43 wl_xxxxx quit:Ping timeout: 244 seconds
+12:45 iyzsong-xx joined channel
+13:03 pjfloyd quit:Remote host closed the connection
+13:10 iyzsong-xx: -.-
+13:21 iyzsong-xxx joined channel
+13:25 iyzsong-xx quit:Ping timeout: 260 seconds
+13:49 LastAvengers joined channel
+14:06 lh_mouse quit:Read error: Connection reset by peer
+14:26 lh83mail1 joined channel
+14:28 lh83mail1 joined channel
+15:39 cleamoon quit:Ping timeout: 260 seconds
+15:43 wl_xxxxx joined channel
+15:48 wl_xxxxx left channel:"Leaving"
+16:09 Sasasu[D] joined channel
+16:23 whocares_2_ joined channel
+16:24 whocares_2 quit:Ping timeout: 260 seconds
+16:36 LastAvengers quit:Quit: Srain0.05-git@0.376.a27899c close.
+16:37 LastAvengers joined channel
+16:41 cleamoon joined channel
+16:43 cleamoon quit:Client Quit
+16:44 yimis quit:Remote host closed the connection
+16:44 yimis joined channel
+17:07 iyzsong-xxx: x.x
+17:22 Mokou joined channel
+17:31 Sasasu[D] quit:Quit: WeeChat 1.6
+17:41 xzmsybzx joined channel
+17:41 yimis quit:Quit: yimis
+17:59 Sn0rt is now known as Sn0rt_aflk
+17:59 Sn0rt_aflk is now known as Sn0rt_afk
+18:05 iyzsong-xxx quit:Read error: Connection reset by peer
+18:09 FrankHB quit:Ping timeout: 265 seconds
+18:26 Mokou: lh_not_bot: 特首，问个问题
+18:27 Mokou: lh_not_bot: std::atomic<Integral>保不保证sizeof(std::atomic<integral_t>) == sizeof(integral_t)?
+18:30 lh_mouse joined channel
+18:54 xxxxxxxx joined channel
+18:58 iyzsong joined channel
+19:01 iyzsong: (┙>∧<)┙へ┻┻
+19:03 xxxxxxxx: https://zhidao.baidu.com/question/263550817071847885.html 卧槽我看到了什么
+19:05 iyzsong: 我看到了 "Secure Connection Failed" = =
+19:06 xxxxxxxx: 噗 baidu也这样是什么鬼
+19:21 yimis joined channel
+19:27 xxxxxxxx quit:Quit: Leaving...
+19:31 iyzsong: 今天装上 cygwin 然后配了会儿 Emacs 就下班了了 -.-
+19:37 Youmu: Mokou: 不保证
+19:38 Youmu: [ Note: The representation of an atomic specialization need not have the same size as its corresponding
+19:38 Youmu: argument type. Specializations should have the same size whenever possible, as this reduces the effort
+19:38 Youmu: required to port existing code. —end note ]
+19:39 iyzsong: _(:з」∠)_
+19:44 Mokou: 噫
+19:44 Mokou: 算了我直接这么用吧
+20:29 whocares_2_ quit:Ping timeout: 252 seconds
+20:33 FrankHB joined channel
+20:38 LastAvengers quit:Quit: Srain0.05-git@0.376.a27899c close.
+20:44 whocares_2 joined channel
+20:53 hoxily joined channel
+20:56 lh_cat joined channel
+21:47 hoxily quit:Quit: Leaving
+22:19 pjfloyd joined channel
+22:21 pjfloyd quit:Remote host closed the connection
+22:23 LastAvengers joined channel
+22:23 LastAvengers quit:Client Quit
+22:25 pjfloyd joined channel
+22:27 pjfloyd quit:Remote host closed the connection
+22:29 pjfloyd joined channel
+22:38 pjfloyd quit:Ping timeout: 256 seconds
+22:43 LastAvengers joined channel
+23:12 lh_cat quit:Quit: Connection closed for inactivity
+23:32 Sasasu quit:Quit: WeeChat 1.0.1
+23:35 yimis quit:Quit: yimis
+23:41 iyzsong quit:Quit: bye.
+23:45 Youmu quit:Ping timeout: 250 seconds
+23:51 Youmu joined channel

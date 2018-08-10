@@ -1,0 +1,97 @@
+00:14 CyrusYzGTt quit:Remote host closed the connection
+00:45 CyrusYzGTt joined channel
+00:58 iyzsong joined channel
+01:02 iyzsong quit:Ping timeout: 248 seconds
+01:42 varna quit:Ping timeout: 256 seconds
+03:29 whocares_2_ quit:Read error: Connection reset by peer
+03:29 whocares_2 joined channel
+05:18 meowray: https://github.com/MaskRay/ccls/wiki/Visual-Studio-Code
+07:09 zhangoke joined channel
+07:32 zhangoke quit:Quit: zhangoke
+09:15 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:08 lh_mouse joined channel
+10:52 iyzsong joined channel
+11:27 cleamoon_ quit:Quit: Connection closed for inactivity
+11:42 wenfeng quit:Quit: WeeChat 2.1
+11:42 wenfeng joined channel
+12:02 varna joined channel
+13:29 iyzsong quit:Read error: Connection reset by peer
+13:36 wenfeng quit:Quit: WeeChat 2.2
+13:41 wenfeng joined channel
+13:54 ryan_c joined channel
+14:11 ryan_c quit:Quit: Leaving
+15:48 zhangoke joined channel
+16:01 zhangoke quit:Quit: zhangoke
+16:03 meowray: ccls不用libclang了
+16:03 meowray: completion diagnostics也是clang c++了
+16:03 meowray: https://github.com/MaskRay/ccls/commit/ccd5f7aec5bad916298234d93f0c0c66c69c2f24
+16:03 meowray: 非常精妙的bug
+17:21 varna: _(:з」∠)_
+17:26 varna: 我嚓，只要不开空调，看个稍微正常点的视频就会飙上80度
+17:26 varna: 而且没法禁用独显
+17:26 varna: 太姬儿惨了
+17:59 lhanjian: varna: 本子跪了。
+17:59 lhanjian: ？
+18:00 \s quit:Ping timeout: 260 seconds
+18:02 varna: 没
+18:08 lhanjian: steamlink挺好用的
+19:56 varna: 驲，又眼疼了
+20:21 zhangoke joined channel
+20:38 whocares_2_ joined channel
+20:39 whocares_2 quit:Ping timeout: 264 seconds
+20:40 CyrusYzGTt joined channel
+20:58 dshale joined channel
+20:58 dshale: how can i convert string to int?
+20:59 dshale: hi,anybody here?
+21:01 varna: (｡･ω･)ﾉ
+21:01 varna: well if you really what you're talking about...
+21:02 varna: - what is a "string"
+21:02 varna: and
+21:02 varna: - what is "conversion"
+21:02 varna: and last but not least
+21:02 varna: - which language
+21:03 dshale: The basic type of c language 
+21:03 varna: man atoi
+21:03 varna: atoi() atol() atoll() strtol() strtoul()
+21:04 dshale: where can i find the api ?
+21:04 dshale: which website?
+21:04 varna: usually we ask google for answers
+21:05 varna: keywords like "string to int c language"
+21:05 dshale: OK
+21:05 varna: it seems you're under windows
+21:05 dshale: yes
+21:05 dshale: i am using freenode.net
+21:05 varna: so 'tis a pity that you may got no manuals by default...
+21:05 dshale: yes
+21:05 varna: just google, usually enough
+21:06 dshale: thank you
+21:06 varna: (｡･ω･)ﾉ
+21:07 varna: btw C does not have a "string" type
+21:07 varna: C-styled strings are actually emulated by null-terminated storage
+21:08 dshale: Sorry,i mean cpp.
+21:09 varna: ...
+21:11 dshale joined channel
+21:11 dshale quit:Client Quit
+21:30 zhangoke quit:Quit: zhangoke
+21:50 Mokou: https://www.bilibili.com/video/av13317398 替天雷普
+21:51 varna: ^ inm厨
+21:57 lhanjian: inm厨
+22:00 lhanjian: varna: 我在复习荒野
+22:02 varna: 远野？
+22:02 lhanjian: ？
+22:04 varna: 远野
+22:04 lhanjian: 远野是什么
+22:04 varna: 查一下
+22:06 lhanjian: 懒得查了
+22:13 Mokou: https://www.bilibili.com/video/av3101833 命运
+23:09 cleamoon_ joined channel
+23:12 varna: 幼女
+23:13 lhanjian: 谁能来电死我啊
+23:16 varna: 電死？
+23:16 varna: NANODEATH
+23:18 cleamoon_: @電
+23:20 cleamoon_: Google Maps API 将开始收费
+23:21 cleamoon_: For archer:  libutf8proc>=2.1.1-3 update requires manual intervention
+23:38 varna: ...
+23:44 cleamoon_: 【社科院报告：建议全国2030年起实行4天工作制】
+23:50 lh_ideapad joined channel

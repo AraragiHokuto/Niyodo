@@ -1,0 +1,516 @@
+00:01 cleamoon_: 我刚好30
+00:01 cleamoon_: 赌一赌
+00:01 cleamoon_: 还没进3关呢...
+00:02 yzld2002 quit:Remote host closed the connection
+00:02 yzld2002 joined channel
+00:02 tutu: 晚安 … 诸神~
+00:03 T2: 诸神的黄昏
+00:03 tutu quit:Quit: -a- Android IRC 2.1.3
+00:04 code_new quit:Quit: Leaving
+00:07 condy: 游基王..
+00:09 T2: 跟那个没关系
+00:13 cleamoon_: http://www.bilibili.com/video/av1966071/
+00:14 yzld2002 quit:Quit: yzld2002
+00:15 blackskygg quit:Read error: Connection reset by peer
+00:15 T2: 诸君晚安，夜间愉快。
+00:15 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+00:23 Plough quit:Remote host closed the connection
+00:36 Petrus07 quit:Quit: Leaving.
+00:39 xxxxxxxx: http://h.nimingban.com/t/5963693
+00:55 xxxxxxxx: 哈哈哈 上午说做"提督不拿甲级 和咸鱼有什么区别"的那个UP 现在旁边多了个图片说"咸鱼+ 我当定了"
+01:52 condy quit:Quit: leaving
+03:00 hope1 quit:Ping timeout: 244 seconds
+03:02 lh_cat quit:Ping timeout: 246 seconds
+03:03 lh_cat joined channel
+03:20 whocares_2 joined channel
+03:21 biergaizi_ quit:Remote host closed the connection
+03:22 biergaizi_ joined channel
+03:23 whocares_2_ joined channel
+03:24 whocares_2 quit:Ping timeout: 255 seconds
+03:25 whocares_2 joined channel
+03:27 whocares_2_ quit:Ping timeout: 255 seconds
+03:30 whocares_2 quit:Ping timeout: 250 seconds
+03:30 whocares_2 joined channel
+03:52 whocares_2 quit:Ping timeout: 264 seconds
+03:52 whocares_2 joined channel
+04:16 whocares_2 quit:Ping timeout: 250 seconds
+04:18 whocares_2 joined channel
+04:27 whocares_2 quit:Ping timeout: 240 seconds
+04:27 whocares_2 joined channel
+04:46 whocares_2 quit:Remote host closed the connection
+04:47 whocares_2 joined channel
+04:48 whocares_2_ joined channel
+04:51 whocares_2 quit:Ping timeout: 255 seconds
+06:02 ChanServ quit:shutting down
+06:04 ChanServ joined channel
+08:12 xeirrr joined channel
+08:13 xeirrr left channel:"Leaving"
+08:29 tutu joined channel
+08:44 tutu: morning~
+09:15 tutu quit:Ping timeout: 255 seconds
+09:48 shui_code joined channel
+09:51 tutu_wind joined channel
+10:07 endle joined channel
+10:19 tutu_wind: 今天肿么好冷清 ～～～ Meow ～
+10:22 xxxxxxxx: 昨天爆肝的几位估计都补觉呢
+10:23 lh_mouse joined channel
+10:26 tutu_wind: xxxxxxxx: 爆肝 ～ 哇卡卡 ～ 
+10:26 tutu_wind: xxxxxxxx: 就是打游戏很晚》？
+11:25 lh_cat2 joined channel
+11:26 * dantmnf 继续肝
+11:26 tutu_wind: 。。。
+11:27 lh_bot: 0 0
+11:29 lh_cat quit:Ping timeout: 255 seconds
+11:30 tutu_wind: lh_bot: 你不会也在玩吧 ～ 
+11:30 lh_bot: tutu_wind: 不玩游戏
+11:31 lh_bot: 逗我
+11:31 tutu_wind: 2333
+11:31 lh_bot: irssi 这什么鬼
+11:32 lh_cat2 was kicked by :fvck the network
+11:32 tutu_wind: 好了啊 ～ 有@了
+11:33 lh_bot: IRC 渣渣协议
+11:33 lh_bot: 上面我写了个脚本发三条命令
+11:33 tutu_wind: 。。。
+11:34 lh_bot: 中间那个居然是最先执行的
+11:36 tutu_wind: 好吧 ～ 不懂的说
+11:37 lh_bot: 简单来说  /chanserv op #c_lang_cn 返回的时候还没获取 op    并且没有靠谱的办法来判定这个状态
+11:38 lh_bot: 并且协议不提供上下文   也就是说必须客户端本地判断状态
+11:39 tutu_wind: 擦，还要本地判断～ 
+11:39 lh_bot: 要么就阻塞掉
+11:39 lh_bot: 反正完全没状态  连 cookie 这种残次品都没有
+11:40 lh_bot: 而且还有每条命令 512 个字符这种操蛋限制  注意上面的 512 是包含 CRLF 的   所以最大只能是 510 个字符
+11:40 lh_bot: 我就奇怪为什么 UNIX 生的网络协议有一大票都是 CRLF 换行
+11:40 tutu_wind: 毕竟很老的协议了
+11:40 lh_bot: 典型例子是 HTTP 和 IRC
+11:41 lh_bot: geordi: << sizeof std::string;
+11:41 geordi: error: expected primary-expression before ';' token
+11:41 lh_bot: fvck
+11:41 lh_bot: geordi: << sizeof(std::string);
+11:41 geordi: 32
+11:41 lh_bot: yeah
+11:41 tutu_wind: 32 。。。
+11:42 lh_bot: 四个指针
+11:42 lh_bot: 这是正常的实现    libcxx 那个三个指针大小的是不正常的
+11:42 lh_bot: geordi: << TYPE<std::string>;
+11:42 geordi: string
+11:43 endle quit:Quit: Leaving
+11:55 lh_cat joined channel
+12:04 lh_bot: tutu_wind: 今天捏耳朵了么
+12:04 lh_bot: tutu_wind: 捏兔耳朵
+12:04 tutu_wind: lh_bot: 捏小耗嘴
+12:05 lh_bot: 不！给！捏！
+12:05 tutu_wind: lh_bot: 正在被一个问题困惑 ～ 
+12:06 tutu_wind: lh_bot: 我说了啊 
+12:09 tutu_wind: lh_bot: 递归创建一个二叉树 ， 有木有好一点的方法 。。。
+12:11 tutu_wind: lh_bot: 我把要写到节点里面的数据都保存到了数组里 ， 创建树的时候从数组里取数据填到节点的值域
+12:11 tutu_wind: lh_bot: 只不过，到叶子节点的时候，不好处理～
+12:39 Plough joined channel
+12:48 hoxily joined channel
+12:55 tutu joined channel
+12:57 tutu: 吃饭喽 ~
+13:17 tutu quit:Read error: Connection reset by peer
+13:21 tutu joined channel
+13:27 condy joined channel
+13:47 tutu_ joined channel
+13:49 tutu quit:Ping timeout: 245 seconds
+13:54 tutu_ quit:Read error: Connection reset by peer
+13:55 tutu joined channel
+14:00 tutu quit:Ping timeout: 265 seconds
+14:27 hope1 joined channel
+14:36 condy quit:Quit: Reconnecting
+14:37 condy joined channel
+14:44 condy quit:Ping timeout: 246 seconds
+14:44 condy joined channel
+14:48 hoxily quit:Read error: Connection timed out
+14:49 hoxily joined channel
+15:08 hope1_ joined channel
+15:13 tutu_wind quit:Quit: WeeChat 1.0.1
+15:33 Nangcr joined channel
+15:35 T2 joined channel
+15:43 Nangcr: 名字前面有@是什么意思
+15:44 Plough: 说明有权限
+15:45 Nangcr quit:Quit: -a- Connection Timed Out
+15:48 Nangcr joined channel
+15:57 pocmon joined channel
+16:03 pocmon quit:Quit: Leaving.
+16:16 shui_code quit:Ping timeout: 245 seconds
+16:21 Nangcr quit:Quit: -a- Android IRC 2.1.3
+16:22 shui_code joined channel
+16:22 Nangcr joined channel
+16:41 blackskygg joined channel
+16:42 blackskygg: 那个输送用的xx缶是什么东西
+16:46 condy quit:Remote host closed the connection
+16:46 condy joined channel
+16:57 Plough: 远征用的
+16:57 Plough: 以及部分图带路用
+17:10 whocares_2_ quit:Remote host closed the connection
+17:40 T2: cleamoon: http://v.youku.com/v_show/id_XMzk0NDQwMzY0.html 
+17:42 shui_code quit:Ping timeout: 245 seconds
+17:49 Nangcr quit:Ping timeout: 256 seconds
+17:50 Nangcr_ joined channel
+17:51 T2: cleamoon: BGM只是个逗乐的东西
+17:55 lh_cat quit:Ping timeout: 255 seconds
+17:56 shui_code joined channel
+18:00 lh_cat joined channel
+18:01 hope1 quit:Ping timeout: 252 seconds
+18:04 w15tp joined channel
+18:05 w15tp: 自从不上学工作后感觉自己脑袋变笨了。
+18:06 w15tp: 干的搅面。平时主要看面的筋度，手感比较敏感，至于脑子，算了，现在说实话 初中的二次方程都不会解。 OTL
+18:11 T2: w15tp: 那解一下就聪明了。
+18:12 w15tp: 别提了，现在在找初中的数学pdf。网上的愣是找不到。
+18:13 w15tp: 我的书全被我妈强制销毁了。
+18:15 T2: 二次不就是十字相乘和套公式么。
+18:15 w15tp: OTL 忘完了。现在就初中的英语记得大概。
+18:16 T2: 百度一下 你就知道
+18:16 w15tp: 有空还是去新华书店买去吧。也用不了多少工资。
+18:16 w15tp: 那搜索引擎 搜到的都是乱七八糟的。，
+18:16 T2: 不是，没必要什么都搞本书。
+18:17 blackskygg: 保有舰x余裕什么鬼什么意思
+18:17 blackskygg: 活动里出现的，我被挡在外面了
+18:17 w15tp: 不说了。唯一的答案就是  百度的pdf都是扫描版。本来眼睛就不好。
+18:17 Petrus07 joined channel
+18:17 T2: 一个小学数学教了六年呢，十几本书呢，劳资都不知道这是看不起小学生智商还是怎么回事。
+18:18 w15tp: 濮阳这里又没有二手书市场
+18:18 w15tp: 一年就教完，你让老师吃什么。
+18:19 w15tp: 学费，教辅费。xx费 and xx费。。
+18:19 T2: 所以初中数学你还搞本书？
+18:20 w15tp: T2，不用百度一下。 用百度知道，网友的力量是无穷的。
+18:20 T2: 除了扯乘法必须是每份数乘以份数反过来就算错之类的玩意劳资也没看出那十几本书有什么建树。
+18:21 T2: 何必给他们洗地
+18:21 w15tp: 网页搜的貌似需要 迅雷电驴。 不敢回到xp下，怕又控制不住自己又玩游戏。
+18:21 w15tp: 你看过 初中的奥赛？
+18:21 T2: 不看那玩意，我这儿没奥赛。
+18:21 w15tp: 羡慕。
+18:22 T2: 羡慕个鸟，是没。
+18:22 w15tp: 数学老师都说了，因为河南人多，所以数学题的难度很大。很大。
+18:22 w15tp: 都是偏题，怪题。
+18:22 Nangcr_ quit:Quit: -a- Android IRC 2.1.3
+18:23 Nangcr joined channel
+18:23 w15tp: 不说了，去找找资源去。要不然晚上又没的打法时间了/
+18:23 w15tp: 戒游戏不容易，老大不小再玩游戏该找不到老婆了。
+18:25 T2: 找本线性代数
+18:25 T2: 又薄又简单
+18:25 w15tp: 初中基础你以为我能看懂 -.-、、
+18:25 T2: 小学基础就够了
+18:26 T2: 都没有二次的
+18:26 T2: 所以才叫线性来着
+18:30 krfantasy joined channel
+18:32 lh_cat quit:Ping timeout: 250 seconds
+18:32 w15tp: OTL。
+18:33 w15tp: 求解线性方程组，我还是重修吧。幸好没有上大学，
+18:33 tutu joined channel
+18:33 w15tp: 话说身边一同事 是清华的，得了肾结石。这时才觉得原来大学生也会生病。
+18:34 w15tp: 尤其是名牌大学的。
+18:34 tutu: …
+18:34 T2: = =
+18:35 T2: 多半都是被大学上的，我说真的，你翻一下线性代数就会发现你也能看懂。
+18:35 T2: 何必呢
+18:35 tutu: ！…？
+18:35 w15tp: 再罗嗦一句，向我们这里的小城市。你父母没钱基本别打算上名牌大学，没钱交学费。就连我那个同事他爹也是厂子老板的合作伙伴。
+18:35 T2: 我爸妈就是因为没上过大学才能把劳资搞去上大学啊。
+18:35 w15tp: 好吧，又 脑抽了。别见怪。
+18:36 w15tp: OTL。。。
+18:36 w15tp: 笑了。
+18:36 w15tp: 不过还是谢谢你的提醒，等我打法时间的时候会去找找。（前提是我还记得）。
+18:36 T2: 真是这么回事，他们要是被大学上过我大概也就不用这么辛苦了。
+18:36 Plough: T2: 羊驼让我用合适的方式提醒你闭嘴，你觉得哪种方式比较好
+18:37 T2: Plough: 好好好
+18:37 w15tp: 给他老爸打电话。
+18:37 w15tp: 这里禁言了？
+18:37 T2: 只是对我禁言了。
+18:37 w15tp: ～～。你们继续。
+18:39 Plough: 先去吃饭
+18:49 smokeink joined channel
+18:52 Nangcr quit:Quit: -a- Android IRC 2.1.3
+18:52 Nangcr joined channel
+18:54 hope1_ quit:Ping timeout: 245 seconds
+18:56 lh_cat joined channel
+18:56 hope1_ joined channel
+18:58 Nangcr: 欢迎对舰娘有兴趣的同志来我刚创建的 #kancolle-cn 玩耍
+18:58 Nangcr: 虽然目前看来。。几乎没人
+18:58 Nangcr: 总之就是欢迎来玩耍
+19:02 xxxxxxxx: Plough: 直接说你胸小 快住口就行了
+19:04 krfantasy1 joined channel
+19:05 T2: xxxxxxxx: 死基佬快趴好
+19:05 Nangcr quit:Quit: -a- Connection Timed Out
+19:06 krfantasy quit:Ping timeout: 264 seconds
+19:09 tutu quit:Read error: Connection reset by peer
+19:09 tutu_ joined channel
+19:11 ring joined channel
+19:11 code_new joined channel
+19:15 Nangcr joined channel
+19:16 ring quit:Ping timeout: 246 seconds
+19:16 w15tp quit:Quit: w15tp
+19:32 tutu_: http://www.zhihu.com/question/27993064
+19:32 tutu_: Meow~
+19:36 lh_bot: tutu_: 揪兔耳朵
+19:36 iyzsong: - -
+19:36 tutu_: …
+19:36 tutu_: 小耗，上午在忙？
+19:36 lh_bot: iyzsong: 揪耳朵
+19:38 lh_bot: tutu_: 兔子不可以学猫叫噢
+19:39 tutu_: … 你学一下
+19:39 lh_bot: 喵
+19:39 hope1_ quit:Ping timeout: 245 seconds
+19:41 tutu_: 于是我不再唱歌
+19:50 shui_code quit:Ping timeout: 246 seconds
+19:53 shui_code joined channel
+19:56 finalbos joined channel
+20:04 krfantasy1 quit:Ping timeout: 245 seconds
+20:10 Stevearzh quit:Remote host closed the connection
+20:25 hope1 joined channel
+20:34 shui_code quit:Ping timeout: 250 seconds
+20:37 hope1 quit:Ping timeout: 246 seconds
+20:39 izmntuk quit:Quit: reattaching
+20:39 Nangcr quit:Read error: Connection reset by peer
+20:40 izmntuk joined channel
+20:45 Petrus07 quit:Quit: Leaving.
+20:45 Stevearzh joined channel
+21:05 lhanjian joined channel
+21:09 hope1 joined channel
+21:22 Petrus07 joined channel
+21:31 lhanjian: http://www.w3schools.com 怎么了？
+21:40 hope1 quit:Ping timeout: 245 seconds
+21:42 dantmnf: lhanjian: 正常
+21:43 T2: lhanjian: 先爆
+21:43 lhanjian: T2, 炸！
+21:43 lhanjian: dantmnf, 那个输密码是咋回事……
+21:49 dantmnf: CloudFlare?
+21:49 dantmnf: 不是...
+21:51 lh_cat: 妹子
+21:51 finalbos quit:Remote host closed the connection
+21:52 finalbos joined channel
+21:57 condy quit:Ping timeout: 246 seconds
+21:58 T2: lh_cat: 妹子已经跑了啦
+21:59 condy joined channel
+22:00 Nangcr joined channel
+22:03 lh_cat: 妹子
+22:03 Nangcr: 才不是
+22:03 lh_cat: ？
+22:04 Nangcr: ←_←阿勒，不是说我吗
+22:04 lh_cat: 新人是药娘？
+22:04 lh_cat: 不是
+22:04 Nangcr: ←_←我去翻下log
+22:04 lh_cat: 药娘！
+22:05 lh_cat: Nangcr: 药娘
+22:05 Nangcr: ←_←不是
+22:05 * lh_cat 喂了 nangcr 二斤螺
+22:06 Nangcr: ←_←药娘和背叛成为人妖的要区别开
+22:06 Nangcr: 背叛—>被迫
+22:07 T2: 所以说你承认自己是人妖咯
+22:07 T2: 有这点就够了，爆。
+22:08 Nangcr: ←_←非逼我晒妹你们才死心吗
+22:08 lh_cat: 百度输入法能关闭智能造词么？
+22:08 T2: 快晒妹
+22:09 Nangcr: ←_←我怕你们花式P图
+22:09 T2: 气死这群死基佬，劳资不扯淡了还不跟劳资说话。
+22:09 lh_cat: 哦艹   智障输入法哟
+22:09 T2: 要不我先晒？
+22:09 T2: 给个能贴图的地方
+22:10 lh_cat: 我输入  sasr  提示我 念 muban    操你妈这输入法是多傻逼 
+22:10 lh_cat: t2, 看 topic
+22:11 Nangcr: img.vim-cn.com
+22:13 T2: http://img.vim-cn.com/fb/442cd6cec968815ea20b2c70d559830b72a4c7.jpg
+22:13 T2: 想涂下眉毛未遂
+22:13 T2: = =
+22:13 Nangcr: 这。。
+22:13 T2: your turn
+22:14 Nangcr: 好吧。。马上
+22:14 lh_cat: 这谁
+22:14 condy: T2: 好漂亮的男人.
+22:15 T2: 尼玛你说这是男人？
+22:15 lh_cat: 哦   神脑补
+22:15 T2: 尼玛你说这是男人？
+22:15 T2: 尼玛你说这是男人？
+22:15 condy: T2: 我以为这是你。。
+22:15 T2: 噗，我要长这样早就统一宇宙了。
+22:16 T2: 颤抖吧，凡人！
+22:16 Nangcr: http://img.vim-cn.com/78/edb85b2d05376df8ae3cdbe468660c2d219090.jpg
+22:16 lh_cat: 这明明是 condy
+22:16 T2: Nangcr: 卡哇伊
+22:16 condy: 我要长这样，早就有妹了。。
+22:16 Nangcr: 谢谢('ェ')
+22:16 T2: 客气，事实罢了。
+22:16 lh_cat: 这，是谁
+22:16 Nangcr: 这在学校操场拍的
+22:17 cleamoon_: 这个是nangcr？
+22:17 Nangcr: 夏天拍的
+22:17 condy: 人参淫家。
+22:17 Nangcr: 说了晒妹←_←
+22:17 lh_cat: 找焼
+22:17 T2: 说了晒妹←_←
+22:17 cleamoon_: 你晒自己也算晒妹
+22:17 Nangcr: ←_←我自己好丑的
+22:17 T2: ←_←我自己好丑的 +
+22:18 Nangcr: ←_←又黑又矮又胖
+22:18 T2: 麻痹这个我倒是够不着。
+22:18 lh_cat: 这脸一般   7.5 分
+22:18 Nangcr: ←_←我们这地方姑娘长相有限
+22:18 T2: 这群死基佬不理我
+22:18 Nangcr: 这个在我们学校算班花级的
+22:19 lh_cat: 你又不晒自己
+22:19 Nangcr: ←_←那我找一张能看的
+22:19 T2: ←_← 我们这地方姑娘长相有限 这个在我们学校（曾经）算校花级的
+22:19 Nangcr: ←_←其实网上搜一下也能找到我照片
+22:19 lh_cat: 呵呵哦
+22:21 Nangcr: http://img.vim-cn.com/60/71cca9ec0942b173c8d6f707fc0970c5729b0c.jpg
+22:21 Nangcr: 帅的那个是我
+22:21 condy: 义薄云天腹肌猫
+22:21 Nangcr: ←_←那是我TwitterID
+22:21 cleamoon_: google nangcr出来的  https://lh4.googleusercontent.com/-L4W_jIa8vyU/AAAAAAAAAAI/AAAAAAAAAAA/McJ9B3fqGVU/photo.jpg  warning!! warning!! warning!! not save for viewing!!
+22:22 cleamoon_: 哦，原来是三胖大人
+22:22 Nangcr: 是这样的。
+22:22 lh_cat: 今天我们前端主程目测和老婆 吵架了
+22:22 T2: 2333
+22:23 Nangcr: 我的ID Nangcr全世界只有我一个人在用(似乎。然后我发现再也隐藏不了什么了
+22:23 Nangcr: 所以放弃隐藏隐私
+22:23 T2: 不是，你隐藏也没用。
+22:23 Nangcr: Nangcr做关键字在Google上可以搜索到我几乎所有足迹
+22:24 Nangcr: 甚至包括09年我才五年级时候在源码天空的一条小小的评论
+22:24 Nangcr: 可怕
+22:24 cleamoon_: 就好象谁想知道你的足迹似的
+22:24 T2: 不可怕
+22:25 Nangcr: 万一查水表
+22:25 T2: 就说这个...算了我不说了。
+22:25 cleamoon_: 查水表谁还用这个
+22:26 Nangcr: 万一哪天我脑抽了一下在某个社区说了点什么不该说的。都不需要人肉，随便Google上点两下我住址姓名什么都暴露了
+22:27 lh_cat: 我账号也就我一人用
+22:28 T2: 所以不要脑抽就行了啊
+22:31 izmntuk_ joined channel
+22:33 izmntuk quit:Ping timeout: 245 seconds
+22:36 blackskygg: 每次到boss前都给我来一发大破
+22:37 blackskygg: 莫名其妙
+22:37 blackskygg: 明明之前一直完胜过来的
+22:37 T2: = =
+22:38 Nangcr: 明天放号，我继续去赌脸
+22:40 blackskygg: boss会自动回血的吗
+22:40 blackskygg: 怎么感觉它血变多了
+22:44 lh_mouse: blackskygg, 揉揉
+22:46 Plough: 不会
+22:46 hope1 joined channel
+22:47 shui_code joined channel
+22:48 T2: 肝去了肝去了哎
+22:52 xxxxxxxx: 所以你看xxxxxxxx这种多好
+22:53 lh_mouse: blackskygg, 揉揉
+22:53 xxxxxxxx: 另外前面你们几个说什么自己要长成那样就有妹子什么的还是太天真 最多被人肛
+22:54 Nangcr: 机智
+22:54 lh_mouse: geordi, { istringstream iss("123 456"); int a; iss >> a; cout <<!!iss; iss >> a; cout << !!iss; cout <<iss.eof(); }
+22:54 geordi: truetruetrue
+22:54 Nangcr: 英国有一胖小伙当gay都找不到对象，因为太胖了
+22:55 T2: xxxxxxxx: 不呗，我都是在上面的。
+22:56 T2: xxxxxxxx: 快趴好
+23:03 Nangcr: QAQ没有提督来#kancolle-cn玩吗
+23:03 Nangcr: 好冷清=A=
+23:04 T2: 我去了结果你跑了
+23:04 T2: 我就不去了
+23:06 lh_mouse: StarBrilliant 不是之前那个玻璃心么
+23:07 Nangcr: 他啊。。教室在我楼上来着。。
+23:07 Nangcr: 我们是。。一个学校的。。
+23:07 lh_mouse: 玻璃心  呵呵
+23:08 Nangcr: (^O^;)说起来，还是他告诉我这个群的
+23:08 lh_mouse: yoyoyo
+23:09 Nangcr: (^O^;)毕竟现实中认识的朋友，所以言语方面还请包含。。我不想太难堪
+23:09 lh_mouse: 哦  那我直接跟你说什么事情好了
+23:10 lh_mouse: 那货搞了个针对 “sb” 两个字母的自动回覆   于是你懂的
+23:10 Nangcr: (^O^;)我也听SB说了退群的事情，具体什么没敢问，好像，挺不愉快的
+23:10 Nangcr: (^O^;)发生了什么。。吗
+23:10 lh_mouse: 然后就没然后了
+23:12 Nangcr: 我平时喊他都喊SB的啊
+23:12 lh_mouse: Nangcr, “自动回覆”
+23:12 Nangcr: =.=
+23:12 lh_mouse: 于是他就被扔出去了
+23:13 Nangcr: 其实他那边设置了SB会提醒他有新消息
+23:13 lh_mouse: 你自己怎么提醒我不管
+23:13 lh_mouse: 别整什么自动回覆
+23:13 Nangcr: =A=喵
+23:16 lh_mouse: Nangcr, 你高中还是大学
+23:17 Nangcr: 高中，顺便一提，我手机这个客户端没有自动补全也没有复制，所以回复别人为了快一点我有时不加对方ID
+23:17 Nangcr: 请不要介意QWQ
+23:18 lh_mouse: 哦  怪不得玻璃心
+23:18 lh_mouse: （不是说你）
+23:18 Nangcr: =A=
+23:20 Nangcr: =A=SB还是挺和善友好的，可能是有什么误会吧，也许当时气头上。
+23:21 lhanjian quit:Remote host closed the connection
+23:21 Nangcr: =A=反正我尽量避免和人争吵，毕竟一嘴笨二懂得少
+23:22 blackskygg: 打到后面竟然没有飞机了
+23:22 blackskygg: 坑爹
+23:23 T2: Nangcr: 趁着懂得少多吵几次
+23:23 blackskygg: 听说炮姐曾经在这个频道里呆过
+23:23 blackskygg: 后来不知道为何就不见了
+23:23 T2: Nangcr: 可以练嘴，懂得多了就没机会了。
+23:23 Nangcr: 炮姐到底何许人物
+23:23 T2: 不知道
+23:24 blackskygg: 吧内风云人物
+23:24 Nangcr: 用c88行写个扫雷非常困难吗？
+23:24 Nangcr: 怎么被当作神一样敬仰
+23:24 blackskygg: 额
+23:24 T2: 不是非常但是
+23:24 T2: 那是贴吧
+23:24 Nangcr: 哦是写了个俄罗斯方块
+23:24 Nangcr: 用了八十多行
+23:24 blackskygg: 为何是以行来衡量
+23:24 Nangcr: 我觉得。。大概。也就一百行以内吧，俄罗斯方块
+23:24 T2: 因为卖点是行数啊
+23:24 tutu joined channel
+23:25 blackskygg: 无法理解这种计数方式
+23:25 dantmnf: 4096 字节也可以算一行
+23:25 T2: 那时候炮姐小
+23:26 blackskygg: 丙级E1的奖品我一个都看不懂
+23:32 cleamoon: 我随便在贴吧放放屁那群sb都能崇拜我，这完全没有参考价值
+23:34 lh_mouse: [23:23:07] <T2> Nangcr: 趁着懂得少多吵几次  // 逗
+23:34 lh_mouse: 你能不说话么
+23:35 lh_mouse: 一个 main() 写一行很难么
+23:36 blackskygg: 我想知道，给粮舰是消耗品吗
+23:36 dantmnf: 是
+23:36 blackskygg: 点下去就没了？
+23:37 dantmnf: 嗯
+23:37 blackskygg: 简直凶残
+23:37 dantmnf: 哦还会叫你选是用间宫还是伊良湖
+23:38 dantmnf: 还是两个一起用
+23:38 blackskygg: 还是留着拿来看吧
+23:38 blackskygg: 特注家具職人
+23:39 blackskygg: 这又是什么
+23:39 blackskygg: 装修工吗
+23:39 dantmnf: 买稀有家具用的
+23:39 blackskygg: 氪金？
+23:39 dantmnf: 职人是氪金道具
+23:40 dantmnf: 家具不是
+23:40 blackskygg: 明白
+23:40 dantmnf: 远征和一些图会有家具箱
+23:40 hoxily quit:Quit: Leaving
+23:40 dantmnf: 使用之后有家具币
+23:41 tutu_ joined channel
+23:41 lh_mouse: 吧主大人，我找你有件事，你可以帮我删个帖子吗 2月2日 11:02
+23:41 lh_mouse: 202057579
+23:41 lh_mouse: this http://tieba.baidu.com/p/2418114648
+23:41 lh_mouse: 这个贴子我不忍直视了，每次在百度上输入自己的ID搜索结果中首先看到的就是这个
+23:43 blackskygg: 睡了
+23:43 tutu quit:Ping timeout: 246 seconds
+23:43 dantmnf: 2333333333
+23:43 xxxxxxxx quit:Read error: Connection reset by peer
+23:43 lh_mouse: blackskygg, 揉揉 0.0
+23:43 blackskygg: 诸君晚间愉快，武运昌隆
+23:43 lh_mouse: QAQ
+23:43 lh_mouse: 捏捏呢？
+23:43 blackskygg: lh_mouse:捏捏
+23:43 lh_mouse: (开心)
+23:43 blackskygg: 睡了
+23:43 cleamoon: 2333
+23:43 lh_mouse: 晚安
+23:43 tutu__ joined channel
+23:43 blackskygg: bye
+23:45 xxxxxxxx joined channel
+23:45 tutu_ quit:Ping timeout: 250 seconds
+23:46 hope1 quit:Ping timeout: 245 seconds
+23:46 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:49 hope1 joined channel
+23:50 tutu__: 小耗在贴吧里很火啊
+23:51 lh_mouse: ?
+23:52 cleamoon: 贴吧是爱喷就会赢的地方
+23:52 tutu__: 看你的贴吧等级好高
+23:53 lh_mouse: 贴吧那种地方   基本就快弃了
+23:53 finalboss_w joined channel
+23:54 tutu__: 喔喔 …
+23:55 tutu joined channel
+23:56 finalbos quit:Ping timeout: 244 seconds
+23:58 tutu__ quit:Ping timeout: 245 seconds

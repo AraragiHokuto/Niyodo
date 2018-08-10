@@ -1,0 +1,575 @@
+00:00 varna: 再失败的话就认栽，拒绝出内存
+00:00 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0p/b6_512238.jpg@596w_1l.jpg
+00:01 varna: 针对每个区域，因为申请长度是定长的，所以我期望在不走slaves的情况下，分配和去配都不经过查找
+00:01 varna: 结果这就又回到了在meta page上放mark结构的老套路
+00:02 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0p/8f_184835.jpg@596w_1l.jpg
+00:03 varna: 理智一点想的话，结构大致是 meta page | user pages | red page
+00:03 perr quit:Quit: Leaving
+00:04 varna: 某些VM不是这么放的，不过我只想防一下栈向生长方向溢出
+00:04 varna: 啊不对
+00:04 varna: 我是不是搞反了
+00:04 varna: meta page | red page | user pages
+00:04 varna: （虽然这个方案明显地倾向了某些体系）
+00:06 cleamoon: 这类东西现在人们不研究了？
+00:06 varna: 不，这个方案其实很简单
+00:06 varna: meta page存在的意义就是偷懒
+00:06 varna: 分配器的元数据会被放在这一页上
+00:07 varna: task元数据可以扔在这页上的合适位置
+00:07 varna: 分配器元数据里留一个链表节点，直接用来检索可用元素
+00:07 varna: 这些链表节点被实际的分配器结构穿一下就ok了
+00:08 varna: 分配要做的主要工作，就是拿这个链表出队一下
+00:08 varna: 去配在不考虑slave的情况下更简单，一次入队结束
+00:09 varna: 当然做成栈也行
+00:09 varna: 考虑到热度问题，也许栈更好
+00:09 yimis quit:Quit: yimis
+00:12 varna: 到头来只是个简单的应用而已，从来也没人认为链表需要单独的空间来存
+00:12 cleamoon: 听起来挺麻烦的
+00:12 varna: 只有slave麻烦
+00:13 varna: 因为它们都是临时用来补缺的空间，不用了就要撤掉，但用的时候又要减少线性查找的次数
+00:13 varna: 比起优化查找算法，不如优化维护的细节
+00:13 varna: 当然不算什么真优化，就是在前后顺序上做点小动作
+00:16 cleamoon: 先洗澡还是先吃饭还是先，给老婆充气呢
+00:17 varna: 简单来说，就是我希望有空页面供分配的slaves在slave队列靠前的位置
+00:17 varna: 但这个要求不绝对
+00:17 varna: 所以我可能只在释放页面的函数上做一点微小的工作，要求一个slave的容量从0变到1的时候，提升一下它的位置
+00:18 cleamoon: 听起来挺合理的，不过这个位置提升不慢吗
+00:19 varna: 不慢，这是个链表，把它摘下来只需要几条语句，再加上去还是几条
+00:19 varna: 不过真正的pitfall在于，一堆容量1的slaves在前面其实也会造成一次成功查找后跟一次失败查找
+00:20 varna: 所以分配的时候有一个对称的手脚会好点
+00:21 cleamoon: 为什么一定会失败查找呢
+00:21 varna: 比如按容量来说，这个列表是 1 1 1 2
+00:21 varna: 一次成功分配之后变成 0 1 1 2
+00:22 varna: 下一次查找还是从头开始的（保证应变）
+00:22 cleamoon: soga
+00:22 varna: 0 1 1 2上，第一个元素的查找不符合要求，得走到第二个
+00:22 varna: 以此类推
+00:22 varna: 为了止损，1 1 1 2的那次成功查找应该导致队列变成1 1 2 0
+00:22 cleamoon: 这，有办法解决吗
+00:23 varna: 查到一个容量只剩1的slave, 直接扔队尾
+00:23 cleamoon: 查找时候改呀，总觉得会蛋疼
+00:23 varna: 查到就可以退出循环了
+00:24 varna: 然后分配+调整
+00:24 varna: 顺理成章，只不过多了一个后续步骤
+00:24 varna: 这个分配器是限定单线程用的，所以不必在意糟糕的事情
+00:25 cleamoon: 所以你在写这个？
+00:25 varna: +
+00:25 varna: 这个东西要取代原先p7的一句malloc, 当作新p7r的栈分配器
+00:26 varna: 以前那个太作死了
+00:27 cleamoon: orz
+00:27 cleamoon: p7为什么多了个尾巴
+00:27 varna: r = rebuild
+00:27 cleamoon: orz
+00:27 varna: 用法还是一样的，不过我觉得内部结构该有变化
+00:28 cleamoon: p7 改
+00:28 varna: 搞不好会失败掉
+00:28 varna: 以前玩花样已经失败过两个玩意儿了
+00:29 cleamoon: 叛逃用c艹写
+00:29 varna: 不是那些问题
+00:29 varna: 第一个是TLS炸了
+00:29 varna: 第二个是性能不好
+00:29 varna: 现在的性能也就那么回事，但当时的试验品可是差太远
+00:30 cleamoon: 什么问题导致的？
+00:31 varna: 调度没写好，还被强行塞进用gcc C constructor扩展约束的函数里面
+00:32 cleamoon: orz
+00:32 varna: p7的做法是执行初始化所在的线程，它的运行流程被调度循环侵占；如果要求更多的调度线程，那么这些线程会以调度循环为入口启动
+00:32 lh_cat quit:Quit: Connection closed for inactivity
+00:32 varna: 所以初始线程未必需要参与并发功能的维持
+00:33 cleamoon: 这不好吗
+00:34 varna: 这其实无所谓，只是个自然的结果
+00:34 varna: 谁执行p7_init, 谁就被征用成第一个调度线程
+00:34 varna: 它的流程会被保存成第一个可调度的协程
+00:36 cleamoon: p7r改成了什么
+00:37 varna: 这个不会改
+00:37 varna: 但我想把调度循环去掉，做成单趟的函数
+00:37 varna: 这个函数本身没有状态，它用来改变调度器的状态
+00:38 varna: 如果运气好成功了，这样的改动应该能去掉一些swapcontext
+00:38 varna: 开销会小一些，也许副作用比在p7里面强行要求短路重调度还小
+00:39 cleamoon: 运气好...
+00:39 varna: 我不知道这个新花样的性能会变成什么样
+00:39 varna: 反正放假，就当娱乐做做看
+00:41 varna: 实际上如果自己做玩具内核的话，在irq尾巴上凹一次重调度也是正论
+00:41 varna: 而且未必限于timer irq
+00:41 cleamoon: orz
+00:41 varna: 这个做法应该可以从minix 3里面看到
+00:44 cleamoon: 赶快去做芯片吧，从芯片开始处理是正途
+00:44 cleamoon: 话说，的确有人是这么做的...
+00:44 varna: 我现在可是光明正大地写用户态程序
+00:45 varna: 恥球才造芯片
+00:47 cleamoon: 光明正大地写前端
+01:09 varna: 我总觉得学校里教数据结构的时候该也给学生看一两个简单分配器的例子
+01:09 varna: 作为中盘总结性的例子还是挺不错的
+01:11 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+01:18 varna quit:Quit: leaving
+01:28 Youmu quit:Quit: Connection closed for inactivity
+01:52 FrankHB: hs不是光泄漏就够炸了嘛，还有空在乎lazy……
+01:56 FrankHB: 函数不需要能beta。反正不都是lambda abstraction。
+02:23 Mokou quit:Remote host closed the connection
+02:33 Taggnostr quit:Ping timeout: 276 seconds
+02:35 Taggnostr joined channel
+06:46 Youmu joined channel
+07:26 cleamoon quit:Ping timeout: 252 seconds
+07:52 perr joined channel
+07:55 bestucan joined channel
+07:55 bestucan quit:Client Quit
+07:58 bestucan joined channel
+07:58 bestucan quit:Client Quit
+08:09 perr quit:Read error: Connection reset by peer
+08:21 perr joined channel
+08:21 perr quit:Changing host
+08:21 perr joined channel
+09:37 CaMoT joined channel
+09:38 Youmu quit:Quit: Connection closed for inactivity
+09:40 lhanjian: 《东方红舞斗V》登陆PS4/PSV 支持VR
+09:40 lhanjian: http://www.vgtime.com/article_QzA1M0VDMkVDOEY4MEY4QzkwRkJBMjcxMUY4OTcwMDI=.jhtml
+10:31 yimis joined channel
+10:32 justin_snake joined channel
+11:41 StardustX quit:Ping timeout: 265 seconds
+11:47 StardustX joined channel
+11:54 yimis quit:Quit: yimis
+11:57 StardustX quit:Quit: leaving
+11:58 StardustX joined channel
+12:02 StardustX quit:Client Quit
+12:03 StardustX joined channel
+12:04 StardustX quit:Client Quit
+12:12 tutu_wind joined channel
+12:13 perr quit:Ping timeout: 244 seconds
+12:15 varna joined channel
+12:15 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=bbf6c639c511728b302d8c2af8fec3b3/a241ebc4b74543a9e8d0b36416178a82b8011422.jpg 傻逼百度
+12:41 StardustX joined channel
+13:12 yimis joined channel
+13:12 yimis quit:Client Quit
+13:56 varna: http://www.bilibili.com/video/av153265/
+13:58 iyzsong joined channel
+14:28 CyrusYzGTt joined channel
+14:37 whatofor quit:Ping timeout: 244 seconds
+15:13 Mokou joined channel
+15:14 iyzsong: = =
+15:16 FrankHB: 高兴帝挂了？
+15:18 xxxxxxxx quit:Quit: Leaving...
+15:33 CyrusYzGTt quit:Ping timeout: 244 seconds
+15:40 FrankHB: http://www.bilibili.com/video/av5802228/
+15:49 varna: 2333333
+15:50 Mokou: bilibili危险地带
+15:53 Mokou: 我在评论区里发现了噫只地球
+15:58 varna: 我驲，外面在下雨
+16:21 lh_mouse joined channel
+16:25 Mokou: http://ww1.sinaimg.cn/mw690/bcfe0f78gw1f7hl7y9pjaj20dr0beq3r.jpg
+16:27 varna: 2333333
+16:31 varna: 卧槽
+16:31 varna: 我驲驲驲
+16:31 varna: 我被ucontext卖了
+16:31 Mokou: ……什么情况
+16:31 varna: void (*__func)(void)
+16:31 Mokou: ……
+16:31 Mokou: 没参数啊
+16:31 varna: 虽然无所谓
+16:32 varna: 标准C胜利了……
+16:44 Mokou: http://ww3.sinaimg.cn/mw690/6dd57921jw1f7gobhldknj20k0081q33.jpg “看到这张图的人一般都会有特殊的幻视”
+16:46 varna: 驲，clang complete又在头文件上抽风了
+16:50 iyzsong: (┙>∧<)┙へ┻┻
+16:56 Mokou: 叛教用LEEE的补全吧
+17:01 varna: 看会儿动画再出去吃饭
+17:02 varna: 往下就要凹调度了，想想就麻烦
+17:04 justin_snake quit:Quit: ChatZilla 0.9.92 [Firefox 48.0.2/20160823121617]
+17:04 varna: 现在整个struct p7r_context都在用户栈的meta page上
+17:04 varna: meta page之后是一页red page, 接着才是用户栈
+17:05 varna: 当然这个设计实际上假设了向低址生长的栈，换言之用户栈爆掉的时候会首先读写到红页上
+17:06 varna: 下面就尴尬了：因为*nix天生的生活不能自理性，我也不知道这个玩意儿能不能被抓好……
+17:07 varna: 我能拿到错误地址，但判断这个地址是否在一个红页上就不那么容易
+17:07 varna: 还得前前后后地加东西
+17:08 varna: 最后如果用户handler把这个覆盖掉了，就全6了
+17:08 Matsune joined channel
+17:09 varna: 换句话说，目前来看栈溢出还是致命的；不过我可以保留一个简单的谓词，让它瞬间判断某个地址是否在定长栈的红页上
+17:09 * varna _(:з」∠)_
+17:10 * Matsune _(:з」∠)_
+17:10 varna: 现充音音子
+17:10 varna: 请给我介绍可爱的数学娘！
+17:11 Matsune: 不认识 今天刚联系了研究室的前辈
+17:11 Matsune: 听说是妹纸 但是是做化学推断的。。。
+17:11 varna: 化学推断？自动化的算法么
+17:12 varna: 这可能挺有趣的，他们的化学推断希望解决什么样的问题？
+17:13 Matsune: 我看了下图文介绍 貌似是有机推断 可能是通过计算机来模拟实验 看看什么样的反应可能得到自己想要的有机结构
+17:13 varna: 类似制药那种？
+17:13 Matsune: 用不用于制药我就不清楚了
+17:13 varna: 给一个靶子，模拟特定的有机物和它结合，观察效果是否在预期之内
+17:13 varna: 如果是这样的话，感觉在制药行业用得很多
+17:14 Matsune: 新規化合物の設計は薬学，医学，農学などにおいて重要であり
+17:14 varna: 果然
+17:14 varna: 虽说药学二字显得很臭
+17:14 varna: 游泳部24岁部员开除，请
+17:14 Matsune: 是和学校的化学研究所联合的课题
+17:15 Matsune: 不知道她之后打算去干嘛
+17:15 varna: 以前听说，现代制药从这种模拟方法里受益很多
+17:15 * varna 打了一小时hyz之后手速上升了……
+17:15 iyzsong: _(:з」∠)_
+17:16 varna: 虽说直落二做掉木吉只有一次
+17:17 Matsune: 不过比较让我吃惊的是 她居然跟我说 你不会日语在研究室无所谓 但是说不了英语寸步难行。。。
+17:17 varna: 这倒是挺好的
+17:18 varna: 要是说英语就可以的话，也不需要什么语言基础了……
+17:18 iyzsong: 2333
+17:18 Matsune: 不过研究室可以说英语 在那边日常生活还是得说点日语吧
+17:19 varna: 你可以平时也说英语，装作是美籍华人的样子
+17:19 Matsune: 这个 听不出来吗
+17:19 varna: (｡･ω･)ﾉ你别说日式英语就大丈夫
+17:21 varna: 屋里太闷了，空气好差
+17:21 StardustBot quit:Remote host closed the connection
+17:21 varna: 姬贰零不让开窗还真麻烦
+17:21 Matsune: 说不定过去几年英语突飞猛进 然后日语忘光了。。。
+17:22 varna: 你可以每天早上起来朗诵一段《源氏物语》
+17:22 Matsune: 源氏物语 竜神の剣を喰らえ？
+17:22 varna: 镖！镖！镖！挡！影！流斤喏啊啊
+17:22 varna: 对就是这个
+17:23 varna: 不过那个名字真的不该译成源氏……
+17:23 Matsune: 应该叫根基
+17:23 varna: 他和画强袭魔女那位一样，姓岛田
+17:24 lhanjian: 素体？
+17:24 varna: 横竖还是叫“岛田源司”之类的顺一些
+17:24 StardustX quit:Read error: Connection reset by peer
+17:25 varna: 反正打比赛输了都可以怪根基
+17:25 Matsune: 根基已经被削弱了
+17:25 varna: 只要他没把对面后排杀崩就可以说他不会玩
+17:26 varna: 根基又削了？最近我都没玩
+17:26 Matsune: 大招砍两秒 爬墙不重置二段跳
+17:26 varna: 76削了之后我已经很不爽了
+17:26 varna: puuuu
+17:26 varna: 爬墙不重置二段跳太坑了
+17:27 varna: 大招砍两秒我没异议，会玩的根基开大那可不是一般能切
+17:27 varna: 整个点里都能被他烦得乱七八糟
+17:27 * varna 说这话的时候我脑子里是一个花村B点
+17:28 Matsune: 不过我也好久没玩了
+17:28 varna: 自从买了PIGU之后，我就养成了遇事不决手76的习惯
+17:28 Matsune: 我比较喜欢路霸
+17:28 varna: 路霸也不错
+17:29 varna: 一套一个
+17:29 Matsune: 有消息说下一个新英雄的大招会是隐身。。。
+17:29 varna: 坑局有时候不是缺肉，而是缺输出
+17:29 varna: 虽说猎空很漂亮，但我开的是低特效……
+17:30 varna: 隐身……
+17:30 varna: 又一个偷点的
+17:30 Matsune: 不知道去了十一区还有没有机会玩这个
+17:30 varna: 难
+17:30 Matsune: 或者我应该给研究室的阿三推荐推荐
+17:30 varna: 十一区连暴雪的服务器是坑吧
+17:30 Matsune: 印度女神？
+17:30 varna: 他会杀了你的
+17:31 varna: sym的衣服已经被三哥提出抗议了
+17:31 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/singletons/job_dispatcher.cpp#L155
+17:31 lh_mouse: varna, 这样不行？
+17:31 lh_mouse: varna, 来上海，ヲ教你写 C艹。
+17:32 varna: lh_mouse: 你误解了，我一直觉得这是终极方案
+17:32 lh_mouse: 0.0
+17:32 varna: 对sql来说足够了
+17:32 varna: 噗，你要是真教我写C艹的话，我每顿能多吃两碗饭
+17:33 varna: 现在p7r的目标还是弄一个比libtask结构更干净，性能相比go不那么怂的goroutine
+17:34 varna: 至于go的net/http, 我不知道他搞出了什么鬼，为什么那么慢；下回写测试的时候直接用TCP
+17:34 varna: 在以前的bench里面，这东西已经堕落到和node拼性能的程度
+17:36 Mokou: http://ww2.sinaimg.cn/mw690/9ce0ac6dgw1f7hmeuqgdtj20g40c3gmq.jpg 战地一野队最佳玩家列表
+17:37 varna: speed scorer
+17:37 varna: 唔唔
+17:37 varna: 你们有一个好
+17:39 varna: Mokou: 你有没有打算试试彩虹六号围攻？
+17:39 varna: 虽说育碧服务器
+17:39 Mokou: 刚给P社送了一堆钱，暂时不考虑
+17:39 Mokou: 辣鸡瑞典小作坊败我钱财
+17:40 varna: 壕可怕
+17:40 Mokou: ^ 壕可怕
+17:40 varna: 完全不壕
+17:40 Mokou: 你是壕的消息从本部到学派无人不知无人不晓
+17:41 varna: (｡･ω･)哪有人
+17:41 varna: 不是非灵长类就是丧失
+17:41 Matsune: 我现在就等着文明6了
+17:41 Matsune: 等着给席德梅尔送钱
+17:41 Mokou: 文明6我等-99%再说
+17:42 varna: 我现在感觉新游戏好空虚
+17:42 Mokou: 秦始皇首都西安，感觉太可怕
+17:42 varna: 将来在学派架个试验服务器连hyz吧
+17:42 Matsune: 文明6根据目前的试玩来看
+17:42 varna: 虽然现在wine hyz的联机会直接崩溃
+17:42 Mokou: 可以考虑，有Linux版么
+17:43 Matsune: 可能会是文明系列最好的一作了
+17:43 Mokou: 现在我不是很喜欢文明系列的风格
+17:43 Mokou: 总感觉各个文明只是个名字和技能的差别，有点没意思
+17:43 Mokou: 我还是更喜欢历史发明局
+17:44 Matsune: 说起来文明6居然也加入了宣战理由这玩意
+17:44 varna: _(:з」∠)_啊啊，一直没腾出手来重新设计一盘推演
+17:44 varna: _(:з」∠)_有提案么
+17:44 Mokou: 我只有个粗浅的想法，就是之前那篇没能实行的空母大决战
+17:44 Mokou: 那个决战我给的配置是有考虑的
+17:45 varna: 可以有，要不你把之前的设计发给我吧
+17:47 StardustX joined channel
+17:53 lh_mouse: [17:31:51] <varna> 噗，你要是真教我写C艹的话，我每顿能多吃两碗饭 // 啥意思。
+17:53 varna: lh_mouse: 乐啊
+17:53 varna: 胃口是和心情有关的
+17:54 lh_mouse: 0.0
+18:01 lh_mouse: https://creativecommons.org/licenses/by-sa/4.0/deed.zh  // 渣翻译：   没有附加限制 — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+18:03 Mokou: http://ww3.sinaimg.cn/mw690/c378c227jw1f7hd8gcv6oj20jg0rg0xn.jpg 秋グラ妄想 
+18:05 varna: 喔喔喔喔
+18:05 varna: KTKM!
+18:05 Mokou: 北上大人现在Lv119
+18:05 varna: 唉唉
+18:06 varna: 弃坑时Lv136
+18:06 Mokou: 阿弥陀佛
+18:07 varna: 我把各种心血都花在KTKM身上了
+18:08 Mokou: 要不你弄个小号吃咸鱼
+18:08 varna: 不了
+18:08 varna: 经营起来怎么都是很困难的事情
+18:08 Mokou: _(:з」∠)_
+18:08 Mokou: 我觉得以后关底我打个丙就行，反正甲章无非一万油
+18:09 Mokou: 这次我才发现甲乙简直是天壤之别
+18:09 varna: 我已经没那么多精神去拼死练级了
+18:09 Mokou: 打个乙*
+18:09 Mokou: 懒得练级+
+18:09 Mokou: 朝潮改二到现在没丁
+18:10 varna: 小裙子
+18:11 varna: 屋里空气太糟糕了
+18:11 varna: 等会儿出去的时候必须开空调才行
+18:12 perr joined channel
+18:26 varna: (｡･ω･)在这种屋子里闷着，似乎都觉得视物模糊了，感觉撸多
+18:27 cleamoon joined channel
+18:28 varna: Mokou: 说起来，linode这种东西上部署docker麻烦么？
+18:29 cleamoon: 王兴上了高铁坐下来，发现左手边坐了一个上进青年：小桌板上放着一串佛珠和一本《世界上最伟大的推销员》，封面上那金光灿灿的金字塔我看着非常眼熟，二十年都没有变，不愧是经典畅销书。然后，他掏出手机开始放马云演讲视频……
+18:29 varna: 233333
+18:31 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0s/16_258734.jpg@596w_1l.jpg  不知道这个算不算nsfw
+18:32 Mokou: varna: docker怎么部署的
+18:34 cleamoon: @xueshudi 有次接到一电话，从电话号码来看基本可以确定是个诈骗电话，一个故作威严的声音说：“喂，是XXX吗？”我说：“是啊，哪位？”对方：“我是..诶......我是.我是.等下，我看看我是谁.我是.唉，算了！"说完，对方就挂了电话，留下一脸懵逼的我.
+18:34 cleamoon: 台上一分钟，台下十年功，多练习啊
+18:35 varna: 23333
+18:35 Mokou: 2333333
+18:36 varna: 这种时候第一时间反应过来啊：「我是张宝华」
+18:37 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0r/dr_259624.jpg@596w_1l.jpg
+18:37 varna: 哈哈哈哈
+18:37 varna: 酒精，或者不怕死的话试试ccl4...
+18:37 Mokou: 老图了……
+18:38 varna: 有机物还是得靠有机溶剂
+18:38 cleamoon: @青铜神树 卧槽 笑疯了 那个被骗1760w的教授就是把蒋介石（Chiang Kai-shek）错译为常凯申的那位啊 hhhhhhhh
+18:39 cleamoon: 有机溶剂的话，〇液应该也行
+18:39 varna: @雪风
+18:40 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0q/s7_134051.jpg@596w_1l.jpg
+18:42 cleamoon: 其实大腿写那个总比各处全是血强
+18:42 varna: 某东曾经有个伙计把测试用的去重定时器发到线上了，导致用户购物车被清空十分钟左右
+18:42 varna: 还是挺猛的
+18:42 Mokou: 66666666
+18:45 cleamoon: 不是用户不用花钱买10min就好了
+18:45 varna: 用户打电话去投诉，据在场人员说，那哥们反应过来以后冷汗就下来了
+18:46 Mokou: 帮你剁手，多好
+18:46 varna: 你这叫不考虑影响，万一一个电话打到刘〇东那儿，把他惊ED了
+18:47 varna: 整个部门的绩效能扣几十年呢
+18:47 Mokou: ED了赶紧上位绿了Boss
+18:47 cleamoon: 把他惊ED了就踏实了
+18:47 cleamoon: 万一把他惊女装了
+18:49 cleamoon: 感冒了
+18:49 cleamoon: 有什么土方子吗
+18:49 varna: 多喝热水
+18:49 * varna 练度极高
+18:49 Mokou: 多喝沸水
+18:49 cleamoon: 我试试
+18:50 varna: 喝热水+裹被子发汗+吃感康
+18:50 cleamoon: 神tm海岛国药店是正点下班周末不开门的
+18:50 varna: 我基本就这么折腾
+18:50 varna: ...
+18:50 varna: 奇葩，今天外面居然有车了
+18:50 varna: 出去吃饭
+18:50 cleamoon: 我滚床单体表温度能到50度
+18:51 varna: 你是哪来的腋幼巫女
+18:53 cleamoon: 现在的问题基本就是咳嗽和留鼻涕了
+18:58 Mokou: http://www.acfun.tv/a/ac3076748 评论区
+19:01 cleamoon: 鈤，饿了
+19:38 Mokou: varna: 另外我发现了一个事情
+19:38 Mokou: 用大屌征服世界的游戏不光大帝国，还有乱伦风云2
+19:39 Matsune: 还有炎孕
+19:44 cleamoon: banished 这游戏不错
+19:46 Matsune: 这个一定要去贴吧打好mod
+19:48 cleamoon: 有好玩的 mod？
+19:57 Matsune: 有挺多的
+19:58 Matsune: 你可以去 放逐之城 这个贴吧去看看
+20:01 cleamoon: 有没有变黄版本的mod
+20:13 StardustX quit:Quit: Lost terminal
+20:23 varna: 乱伦风云2我听说过
+20:23 varna: 似乎P社不少游戏都能乱伦？
+20:24 varna: 出去一圈才明白，那些车上全是条子
+20:25 cleamoon: 真用得着那么多条子吗
+20:26 varna: 用不着，原来条子的治安亭里都换成PLA了
+20:27 varna: 再说防着点也没错，万一几个阳炎厨晚上出去，突然爆炸了
+20:27 cleamoon: 我总觉得这人数已经多到这群人本身就是威胁的程度了
+20:27 varna: 检查遗骸的时候发现毛发全无
+20:27 varna: 最后鉴定书上只能写「阳炎拔锚」
+20:28 cleamoon: 23333
+20:30 varna: 今天也是惨，下了雨之后还是热
+20:31 Mokou: 只有乱伦风云，其他的就没人际关系的系统
+20:31 Mokou: “我的附庸的附庸不是我的附庸，我的女儿的女儿还是我的女儿”
+20:31 cleamoon: 和梨花酱去西湖裸双
+20:32 varna: 我宁可等十月以后找他去浙大看妹子
+20:33 tutu_wind quit:Remote host closed the connection
+20:33 varna: 性质高了还可以掏出老战友表演开机吐核，岂不美哉
+20:33 varna: 兴致*
+20:34 cleamoon: 然后钓到了一个perl僧妹子，回家一看，有把
+20:34 varna: @宗汉酱
+20:34 Mokou: damn even better
+20:35 Mokou: 妈的到底是谁想出来让Alt+Q退出Alt+W关标签页的
+20:36 varna: q和w我一百次里会按错一两次，概率很高
+20:36 varna: 同不喜欢
+20:36 Mokou: 而且神TM连个确认都没有直接爆炸了
+20:36 Mokou: 点叉号还有个确认呢
+20:37 cleamoon: chrome现在把q禁用了
+20:37 cleamoon: 因为，真tm没用
+20:37 cleamoon: 神关闭需要那么快呀
+20:37 cleamoon: 谁
+20:37 Mokou: 而且如果我要想改个快捷键还得下个扩展
+20:38 cleamoon: 总比需要改代码强
+20:39 varna: 所以欠雪最好了
+20:39 varna: 全操作从绑定到逻辑都暴露给用户
+20:40 varna: 连重新编译都不需要
+20:40 iyzsong: dvorak大法好..
+20:40 Mokou: 不想用dvorak，键帽高度会乱
+20:40 iyzsong: ^ q在'x', w在','的位置
+20:41 varna: 太不便携了
+20:41 varna: 最近我把新买的键盘卸下去，顶着有盲区的空格键强行写码
+20:42 cleamoon: 我之前试了下法语键盘，简单说就是蛋疼
+20:42 iyzsong: 2333
+20:42 varna: 最后我还是回归了用心使烂货的阶段
+20:45 varna: 啊，可乐真好
+20:45 varna: 喝了之后感觉复活一样
+20:45 Mokou: 百事还是CC
+20:45 bestucan joined channel
+20:46 varna: CC
+20:46 Mokou: 吃我十字军
+20:46 varna: 今年我是泛可乐主义者
+20:46 Mokou: (｡･ω･)对异教徒发动圣战不需要宣称权
+20:47 cleamoon: 对了，os基础课老师主页上写，“别指望能一次性把linux装好，我第一次装ubuntu用了7次才能用”，然后我对教学质量就充满了怀疑....
+20:47 bestucan quit:Client Quit
+20:47 Mokou: 他吃了六次内部错误吧
+20:48 varna: archlinux装一次就能用了
+20:48 Mokou: gentoo装一次就能让你换台电脑了
+20:48 varna: 虽说有点狂妄，不过窃以为我这种人来上OS基础也是可以的……
+20:48 cleamoon: ubuntu 装7次我只觉得智商问题，又不是gentoo
+20:48 cleamoon: 可以呀，开课吧
+20:48 varna: 至少我能比某些课本讲得还血肉真实些
+20:48 FrankHB: 不快滚搞不好就白装。
+20:49 varna: 恥球来了
+20:49 varna: 拍他
+20:49 Mokou: 啪啪啪
+20:49 varna: 啪啪啪
+20:49 cleamoon: 啪啪啪
+20:50 varna: 我在厂里还给恥球的pl docs打了个广告
+20:50 cleamoon: 恥球的pl docs？
+20:50 Mokou: 把耻球的福音传播到A厂的每一寸土地
+20:51 cleamoon: 羊驼子赶紧写教程吧，我认识个编辑，到时给你出版
+20:51 varna: 累，而且现在出书除了倒贴钱之外意义小
+20:51 cleamoon: 然后去A厂一看，所有人都进入了厕所，穿着睡袋
+20:51 varna: 是裹着被子
+20:52 cleamoon: 似乎够有名就不赔钱
+20:52 varna: 工区没睡袋，但有沙发和折叠床
+20:52 Mokou: 耻球胡阿克吧！
+20:53 cleamoon: 能不能躺着撸码
+20:53 varna: 其实还有个原则，一般越基础的课越该大师来讲，不然给学生的方向性不好
+20:54 cleamoon: orz
+20:54 varna: 没规定不能，但不加班的时候最好还是别强行加班
+20:54 varna: WARNING
+20:54 cleamoon: ヾ(｡｀Д´｡)，global notice
+20:54 varna: 十分钟之内services会停掉
+20:55 Mokou: 制空确保然后大凤大破了
+20:55 varna: 想掏出op权限的话现在还来得及
+20:55 cleamoon: 所以，羊驼子来写教程吧
+20:55 varna: 服务停止至少持续十分钟
+20:55 Mokou: 我掏一个以防万一
+20:55 varna: Tanenbaum就写得很好
+20:56 cleamoon: general cs 的教程
+20:56 varna: 只不过一些老师照本宣科了
+20:56 cleamoon: 最好写个1M字的
+20:56 cleamoon: 大部分都是吧
+20:56 varna: General CS? 经验，训练，爱好
+20:56 iyzsong: 0 0
+20:56 varna: eeesong!
+20:56 varna: eeee!
+20:56 cleamoon: 这里面还有个训练呀
+20:57 StardustX joined channel
+20:57 cleamoon: https://tanenbaum.org/
+20:57 varna: 口耳相传的经验很多需要匡正
+20:58 varna: 为了避免野路子，训练还是必要的
+20:58 cleamoon: 所以，你说说训练呗
+20:58 varna: 现在CS方向的真·教学和萨满教差不多
+20:58 varna: 原则课上也都有讲
+20:58 varna: 但学生不去写代码谁也救不了
+20:58 cleamoon: 然后出本书叫“贴吧神兽教你21天精通CS”
+20:59 iyzsong: 2333
+20:59 cleamoon: 我们伟大的cs master都不要求会编程
+20:59 cleamoon: 要求里连python都没有
+20:59 varna: 但他会撩妹
+21:01 cleamoon: cs系哪有妹子
+21:02 varna: 撩外系的
+21:02 StardustX: 我上次看新闻说斯坦福最受女生欢迎的专业已经变成了CS
+21:03 varna: Y?
+21:03 cleamoon: 外系也没有
+21:04 cleamoon: 不太可能吧
+21:04 varna: 因为现在运行时强行GC的语言越来越多，没必要顶着毁容的风险跟电脑过不去了？
+21:04 StardustX: 不知道原因，贴个原文 http://cn.reuters.com/article/stanford-computer-idCNKCS0S406720151010
+21:05 varna: idC-NKC-SOS-...
+21:05 varna: NKC出事了？
+21:05 ChanServ quit:shutting down
+21:07 StardustX: 233，ChanServ出事了倒是真的。。
+21:07 iyzsong: w.w
+21:08 cleamoon: 于是到底是什么重启了
+21:08 iyzsong: 我还以为是freenode整个要关
+21:09 varna: 服务
+21:09 varna: NickServ ChanServ 这样的
+21:09 gauge is now known as Arch
+21:10 Arch is now known as ArchSer
+21:10 ArchSer is now known as ArchServv
+21:10 ArchServv is now known as ArchServe
+21:10 ArchServe is now known as ArchSer
+21:11 varna: 改名不算NickServ
+21:11 varna: NickServ是管认证的
+21:11 ArchSer is now known as [ArchServ]
+21:11 Mokou: 这时候改名叫nickserv是不是能收到一大堆密码
+21:11 StardustX: 我试了，不行
+21:11 cleamoon: 怎么改名来得
+21:11 iyzsong: 2333
+21:11 StardustX: NickServ :Erroneous Nickname
+21:12 Mokou: 肯定不能让你改
+21:18 ChanServ joined channel
+21:19 iyzsong quit:Changing host
+21:19 iyzsong joined channel
+21:21 cleamoon: 昨晚梦到和父母去酒吧喝酒，轮到我们时机器坏了，然后就是无论如何酒都上不了，一直等，为了补偿，上了很多各种菜....
+21:21 varna: 这几天做梦除了程序崩溃就是上游尿崩
+21:24 cleamoon: http://blog.sciencenet.cn/blog-3377-1000753.html
+21:27 lh_mouse: [21:10:38] <Mokou> 这时候改名叫nickserv是不是能收到一大堆密码 // 曾经有一天是可以改的。
+21:27 lh_mouse: 你可以自己翻 freenode 的 blog 。
+21:28 varna: ^ 无孔不入的种族
+21:29 iyzsong: _(:з」∠)_
+21:31 cleamoon: 卫生局曾对我们说，因为修地铁，很多耗子跑了出来，请不要让耗子死在厨房里
+21:32 StardustBot joined channel
+21:41 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/0t/ev_173933.gif@596w_1l.gif
+21:43 yimis joined channel
+21:50 xxxxxxxx joined channel
+21:51 xxxxxxxx: 今天突然想起 两手抓 两手都要硬 这么个说法
+21:51 varna: 巨基必有高论
+21:52 xxxxxxxx: 基本粗鄙 我总觉得这是再说三基大战
+21:52 xxxxxxxx: 在说
+21:52 cleamoon: 巨基必有高论
+21:52 varna: 果然
+21:52 varna: 爆他
+21:52 varna: xxxxxxxx: 爆
+21:52 cleamoon: xxxxxxxx, 爆
+21:54 yimis quit:Quit: yimis
+21:56 xxxxxxxx: 然而小平同志到底抓了多少手?
+21:56 varna: ^ 作死
+21:58 cleamoon: @千手观音
+21:58 xxxxxxxx: 只是印象中抓了好多次两手
+21:59 [ArchServ] is now known as [HoroServ]
+22:00 varna: 22:58 -!- [ArchServ] is now known as [HomoServ]
+22:03 varna: 空气太差，今天早点睡
+22:03 varna: 明天得开门通风了
+22:07 iyzsong quit:Ping timeout: 250 seconds
+22:12 varna: 武运
+22:12 iyzsong joined channel
+22:12 varna quit:Quit: leaving
+22:17 cleamoon: 意识模糊，去超市看看有没有扑热息痛，但是发现只有坐药，我，退缩了....
+22:22 iyzsong quit:Ping timeout: 255 seconds
+22:26 iyzsong joined channel
+22:32 iyzsong quit:Ping timeout: 276 seconds
+22:55 Matsune quit:Read error: Connection reset by peer
+23:00 perr quit:Quit: Leaving
+23:10 yimis joined channel
+23:16 yimis quit:Quit: yimis
+23:27 Youmu joined channel
+23:30 StardustX quit:Quit: 去睡觉

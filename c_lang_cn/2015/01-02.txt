@@ -1,0 +1,314 @@
+00:00:geordi joined channel
+00:00:cleamoon_: 这里又没有古代代码
+00:00:lh_mouse: geordi, --version
+00:00:geordi: g++ (GCC) 5.0.0 20141228 (experimental)
+00:00:lh_mouse: geordi, template<typename T> struct my_queue { void push(T){ } void ice(){ trav([&](auto &&v){ push(v); }); } template<typename F> void trav(F &&f){ f(T()); } }; template class my_queue<int>;
+00:00:geordi: internal compiler error: Segmentation fault
+00:00:lh_mouse: 还是一样
+00:05:Plough quit:Ping timeout: 244 seconds
+00:05:AngelC: 话说...
+00:05:Plough joined channel
+00:05:AngelC: 比如像std::function<void (int)>
+00:05:AngelC: 这样的
+00:05:AngelC: 怎么能把void 和 int提取出来呢
+00:06:lh_mouse: 场合呢  你要做什么
+00:06:AngelC: 造轮子。。。
+00:06:lh_mouse: 你要造 function？
+00:07:AngelC: simple。。。
+00:07:AngelC: 实际上只是好奇辣。。。
+00:07:AngelC: 我是baka。。
+00:08:lh_mouse: geordi, -c template<typename Fn> struct my_function; template<typename R, typename ...Args> struct my_function<R (Args...)> { }; template class my_function<void (int, double, long &&)>;
+00:08:geordi: Success
+00:08:lh_mouse: AngelC, ^
+00:08:JQK_Phone joined channel
+00:08:AngelC: 而且。。构造函数可以是模版函数么
+00:08:AngelC: 好~我看看
+00:13:AngelC: 好厉害啊
+00:13:AngelC left channel:"Leaving"
+00:14:AngelC joined channel
+00:14:AngelC: QAQ 我果然是baka。。。
+00:14:AngelC: 诸君晚安~
+00:14:AngelC left channel:
+00:17:geordi quit:Remote host closed the connection
+00:17:AngelC joined channel
+00:17:geordi joined channel
+00:17:cleamoon_: 新人又回来了
+00:17:lh_mouse: yaaic
+00:18:hope1`: http://book.douban.com/subject/4010127/ 
+00:19:Petrus07 quit:Quit: Leaving.
+00:19:GODDOG quit:Ping timeout: 255 seconds
+00:20:cleamoon_: 这个看过，还不如直接看书呢
+00:21:cleamoon_: 不够萌，不如找本fourier画满萌妹子
+00:30:hope1`: 不会画怎么办
+00:30:cleamoon_: 临摹
+00:34:boosure quit:Quit: Get your hand off of it
+00:35:geordi quit:Remote host closed the connection
+00:35:geordi joined channel
+00:38:izmntuk quit:Ping timeout: 255 seconds
+00:43:Plough quit:Remote host closed the connection
+01:14:erhandsome quit:Ping timeout: 240 seconds
+01:16:xxxxxxxx joined channel
+01:35:code_new quit:Quit: Leaving
+01:53:lh_mouse quit:Quit: Meow
+02:19:lh_cat joined channel
+02:19:lh_cat quit:Client Quit
+02:19:lh_cat joined channel
+02:22:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+04:32:xxxxxxxxx joined channel
+04:35:xxxxxxxx quit:Ping timeout: 272 seconds
+05:00:boosure joined channel
+06:05:lh_bot quit:Ping timeout: 256 seconds
+06:05:lh_bot_ joined channel
+08:09:whocares_2 quit:Ping timeout: 244 seconds
+08:26:izmntuk joined channel
+08:32:endle joined channel
+08:43:cleamoon__ joined channel
+08:45:cleamoon quit:Remote host closed the connection
+09:31:Plough joined channel
+09:41:whocares_2 joined channel
+09:55:Sleepwalking joined channel
+09:55:Sleepwalking: 今天人好多啊
+10:24:Plough: 大淀里面果然没穿
+10:52:hope1` joined channel
+10:54:Plough quit:Ping timeout: 245 seconds
+10:54:Plough joined channel
+11:04:Plough quit:Quit: Reconnecting
+11:11:JQK quit:Remote host closed the connection
+11:13:Plough joined channel
+11:15:ring joined channel
+11:32:JQK joined channel
+11:54:iyzsong: afternoon!
+12:00:ring quit:Remote host closed the connection
+12:05:\u joined channel
+12:07:hoxily1 joined channel
+12:23:xxxxxxxxx quit:Quit: Leaving...
+12:38:Plough quit:Ping timeout: 264 seconds
+12:38:Plough joined channel
+12:48:boosure quit:Quit: Get your hand off of it
+13:00:AngelC quit:Ping timeout: 244 seconds
+13:02:biergaizi quit:Quit: Konversation terminated!
+13:05:ring joined channel
+13:19:biergaizi joined channel
+13:21:lh_bot_ quit:Ping timeout: 250 seconds
+13:21:condy joined channel
+13:21:lh_bot joined channel
+13:30:izmntuk quit:Quit: reboot
+13:50:condy: 换log地址了..
+13:53:ring quit:Ping timeout: 240 seconds
+13:54:erhandsome joined channel
+14:00:Plough: 其实原来那个也能用
+14:00:Plough: 只不过写不下了
+14:11:ring joined channel
+14:13:hoxily1 quit:Ping timeout: 250 seconds
+14:14:condy: geordi: { function<int> fn(foo); cout<<fn(); } int foo() {return 1; }
+14:14:geordi: error: variable 'function<int> fn' has initializer but incomplete type
+14:14:condy: geordi: { function<int()> fn(foo); cout<<fn();} int foo() {return 1; }
+14:14:geordi: 1
+14:15:Petrus07 joined channel
+14:15:hysw: Plough: ?
+14:16:Plough: ?
+14:16:hysw: "只不过写不下了"?
+14:16:Plough: 两个地址都写上的话似乎会被截断
+14:20:hysw: Plough: 回头等DNS结束之后直接改成 irc.hysw.org 算了...
+14:21:hysw: 另外http前缀直接无视掉
+14:21:Plough: 去掉https也不够把
+14:21:Plough: irclogs.benihata.org
+14:23:hysw: 我指我那个...
+14:23:Plough: 你那个改了大概可以……不过无所谓了
+14:23:Plough: 两个地址其实一样
+14:27:hysw: 貌似发现了13年的log...
+14:31:hysw: 懒得放上去了...
+14:37:lh_mouse joined channel
+14:39:hysw: Plough: 现在可以把log的地址换成irc.hysw.org了...
+14:40:hysw: 另外，后面的@没必要留着
+14:41:xxxxxxxx joined channel
+14:52:Petrus07 quit:Ping timeout: 265 seconds
+14:53:Petrus07 joined channel
+14:55:FrankHB: ystdex::parameter_of_t和ystdex::return_of_t不用造毛轮子。
+14:58:sismvg joined channel
+14:58:sismvg: http://tieba.baidu.com/p/3500922532
+14:58:sismvg: 云南男教师猥亵15男生
+14:59:sismvg: 咳咳
+15:01:whatofor joined channel
+15:02:lh_mouse quit:Read error: Connection reset by peer
+15:04:condy: 煋。
+15:07:izmntuk joined channel
+15:09:Petrus07 quit:Read error: Connection timed out
+15:11:Petrus07 joined channel
+15:23:whatofor quit:Read error: Connection reset by peer
+15:23:whatofor joined channel
+15:27:cleamoon__ quit:Remote host closed the connection
+15:31:lh_bot: 幻の上帝<frankhb@vip.qq.com>  15:30:58
+15:31:lh_bot: 长个j8。
+15:36:condy: 这个bot会把QQ群的东西转发过来？
+15:37:lh_bot: 我不是 bot
+15:38:condy: = =
+15:38:condy: 差点--help.
+15:43:Sleepwalking: lh_bot: --forced-burst
+15:44:sismvg: 该资源被举报,无法添加到离线资源
+15:44:sismvg: 最近总看到这个
+15:52:* sismvg 想要个GPU集群
+15:53:condy quit:Remote host closed the connection
+15:55:condy joined channel
+16:02:erhandsome quit:Remote host closed the connection
+16:03:sismvg: darknet shodan 原来网络也有黑社会啊
+16:05:erhandsome joined channel
+16:09:sismvg: shodan太可怕了。。。还好我没有装过摄像头
+16:13:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+16:13:sismvg joined channel
+16:16:condy: = =
+16:19:lh_cat quit:Ping timeout: 256 seconds
+16:22:lh_cat joined channel
+16:47:erhandsome quit:Ping timeout: 250 seconds
+16:54:erhandsome joined channel
+17:00:sismvg: 有谁墙外的能帮我下一下 https://static.Shodan.io/downloads/Shodan-maltego-entities.mtz嘛？
+17:01:condy: sismvg: 404
+17:01:sismvg: 你墙外？
+17:01:condy: 没有呀。
+17:01:sismvg: 墙内上不去的
+17:01:condy: 404依旧。
+17:02:sismvg: 嗯。
+17:03:condy: 链接失效了吧。
+17:03:condy: 明明是这个。
+17:03:condy: https://static.shodan.io/downloads/shodan-maltego-entities.mtz
+17:03:condy: sismvg: ^
+17:04:sismvg: 啊
+17:04:sismvg: 没什么变化啊，只是变了小谢
+17:04:sismvg: 写
+17:04:condy: 对呀，就是变了小写。
+17:05:sismvg: soga
+17:05:lh_cat quit:Ping timeout: 256 seconds
+17:09:lh_cat joined channel
+17:16:Guest87747 quit:Read error: Connection reset by peer
+17:26:condy: 已经被 Masked bitcH 洗脑了。
+17:49:Sleepwalking: Masked bitch是好物
+17:49:Sleepwalking: 一定要听remix
+17:50:Sleepwalking: 然后用浓度80%的氪金溶液清洗狗耳
+17:53:condy: OAO
+17:54:ring quit:Remote host closed the connection
+17:55:Sleepwalking: Club remix最爱，可惜太短
+17:55:ring joined channel
+18:09:iyzsong: https://medium.com/@hansdezwart/ai-weiwei-is-living-in-our-future-474e5dd15e4f
+18:10:lh_cat joined channel
+18:12:condy: 爱微微..好奇怪的名字。
+18:13:iyzsong: 艾未未
+18:13:condy: O.O
+18:16:ring quit:Read error: Connection reset by peer
+18:25:cleamoon joined channel
+18:28:lh_bot: geordi: -c namespace foo { using ::std::size_t; } using namespace fop; size_t test;
+18:28:geordi: error: 'fop' is not a namespace-name
+18:28:lh_bot: geordi: -c namespace foo { using ::std::size_t; } using namespace foo; size_t test;
+18:28:geordi: Success
+18:40:Petrus07 quit:Ping timeout: 245 seconds
+18:41:sismvg quit:Read error: Connection timed out
+18:46:lh_bot: freenode 这逗比
+18:46:Sleepwalking: aHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9mb3J1bS8jIXRvcGljL3h1ZXNoZW5nNTEyL19Wc3pHeFpnbnJZCg==
+18:46:Sleepwalking: 唉
+18:49:sismvg joined channel
+18:54:biergaizi quit:Quit: Konversation terminated!
+18:55:Petrus07 joined channel
+18:56:FrankHB quit:Remote host closed the connection
+18:56:FrankHB joined channel
+19:17:ring joined channel
+19:27:hope1`: FF在10分钟内崩了三次
+19:32:iyzsong: 233
+19:33:Plough: FF@喜欢爆炸
+19:44:ring quit:Remote host closed the connection
+19:45:hope1`: iyzsong, 看完了
+19:56:ring joined channel
+19:58:lh_mouse joined channel
+20:06:ring quit:Ping timeout: 245 seconds
+20:10:JQK quit:Remote host closed the connection
+20:11:JQK joined channel
+20:12:code_new joined channel
+20:19:hoxily1 joined channel
+20:28:lh_mouse quit:Read error: Connection timed out
+20:29:hoxily1 quit:Quit: Bye
+20:30:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+20:35:lh_mouse joined channel
+20:48:biergaizi joined channel
+20:51:lh_mouse quit:Quit: Meow
+20:57:iyzsong: *.*
+21:16:lh_mouse joined channel
+21:19:T2 joined channel
+21:21:iyzsong: WoW
+21:26:ring joined channel
+21:26:condy: OwO
+21:28:windforce joined channel
+21:29:T2 quit:Ping timeout: 240 seconds
+21:30:T2: 敏娜桑腋间愉快
+21:30:T2 quit:Client Quit
+21:30:ring quit:Ping timeout: 240 seconds
+21:51:biergaizi_ joined channel
+21:52:biergaizi quit:Ping timeout: 240 seconds
+21:55:izmntuk quit:Ping timeout: 245 seconds
+21:55:izmntuk joined channel
+21:56:Plough quit:Ping timeout: 244 seconds
+21:56:Plough joined channel
+21:57:erhandsome quit:Ping timeout: 256 seconds
+22:03:GODDOG joined channel
+22:15:GODDOG quit:Ping timeout: 245 seconds
+22:21:GODDOG joined channel
+22:25:GODDOG quit:Ping timeout: 250 seconds
+22:26:GODDOG joined channel
+22:39:condy quit:Quit: leaving
+22:54:AngelC joined channel
+22:54:AngelC: QAQ
+22:54:AngelC: 各位犇
+22:55:cleamoon: 犇都下了
+22:58:cleamoon: AngelC, 新人怎么找到的这里
+23:05:sismvg joined channel
+23:05:sismvg quit:Client Quit
+23:06:AngelC: 我以前来过……
+23:06:AngelC: 最近正好搞了台服务器
+23:06:AngelC: 就想起来了……
+23:10:cleamoon: 壕
+23:11:cleamoon: 烧土壕分零件
+23:11:endle: 搞一个VPS不贵吧
+23:12:AngelC quit:Remote host closed the connection
+23:12:cleamoon: 穷呀
+23:13:AngelC joined channel
+23:14:GODDOG: 犇
+23:16:lh_mouse: VPS 便宜的一年只要六七百
+23:17:cleamoon: 只能承受200左右的
+23:18:AngelC: ……
+23:18:AngelC: 就是阿里云最便宜的
+23:21:lh_mouse: 他最便宜的没个用
+23:21:lh_mouse: 没公网 IP  一个月 55
+23:22:lh_mouse: 我买的一年 2k 的  中等配置
+23:22:cleamoon: 没公网IP...
+23:22:lh_mouse: 2G 内存   双核处理器   2M 公网带宽
+23:22:Stevearzh quit:Read error: Connection reset by peer
+23:23:Stevearzh joined channel
+23:27:Sleepwalking quit:Quit: Leaving.
+23:29:Plough quit:Remote host closed the connection
+23:31:hope1`: http://zhi.hu/daSr
+23:32:AngelC quit:Remote host closed the connection
+23:32:AngelC joined channel
+23:33:AngelC: ……
+23:37:cleamoon: 其他地方“太长不看”应该是喷子的借口，知乎真是太长，没重点，没法看
+23:38:erhandsome joined channel
+23:38:AngelC: 其实就是懒得看……
+23:39:* iyzsong building qt5 >.<
+23:39:endle quit:Quit: Leaving
+23:40:cleamoon: 那个回答里夹的整个文章可以总结为一句：片子太烂，审片的懒得看
+23:41:cleamoon: 为什么不止写一句呢，为了混淆试听，还有知乎喜欢长的，不喜欢有内容的
+23:41:slowcoach joined channel
+23:41:cleamoon: 干货他们最讨厌
+23:41:slowcoach quit:Client Quit
+23:42:GODDOG: cleamoon: 知乎和stackflow的差别是什么？
+23:43:GODDOG: cleamoon: stackoverflow
+23:43:cleamoon: stackoverflow里赞扬懂的，知乎赞扬不懂装懂的
+23:45:GODDOG: cleamoon: 精辟 我有个同学一年在知乎回答170多条 共计8万字 我说他是闲的蛋疼
+23:45:AngelC quit:Remote host closed the connection
+23:46:cleamoon: 8万...
+23:46:cleamoon: 那都能写本书了
+23:46:iyzsong: orz
+23:48:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:55:GODDOG: cleamoon: 搞辩论的人 说的那些东西都没边儿
+23:55:GODDOG: cleamoon: stackoverflow上不去了
+23:56:cleamoon: stackoverflow被墙了？
+23:57:cleamoon: 辩论的目的是赢而不是正确，所以运用错误数据，逻辑谬误也是可以的
+23:57:hope1`: cleamoon, 主要想说的不是普通人民群众的举报问题吗……
+23:57:hope1`: 这个确实通过例子解释比较好，而且也不算多长
+23:58:cleamoon: 没觉得

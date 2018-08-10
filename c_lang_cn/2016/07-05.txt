@@ -1,0 +1,396 @@
+00:02 slowcoach: lh_mouse: 我要star你～
+00:03 slowcoach: 算了 还是follow吧
+00:04 lh_mouse: 0.0
+00:05 slowcoach: 话说咋还遇到objc的问题了... 我瞅瞅
+00:09 cleamoon: varna, 用高斯分布模拟其他的分布，比如超几何分布时，怎么做误差分析？
+00:12 slowcoach: … 为啥windows上会出现libobjc... 原来现实世界真有那么玩儿的啊？
+00:16 varna: cleamoon: 不清楚
+00:20 lh_mouse: slowcoach, 有。
+00:20 Matsune quit:Read error: Connection reset by peer
+00:20 cleamoon: varna, 你做分析时不估计误差？
+00:21 lh_mouse: http://96.44.178.21/gcc-mcf/mingw32.7z
+00:21 lh_mouse: http://96.44.178.21/gcc-mcf/mingw64.7z
+00:21 lh_mouse: 全套带 GDB 的工具链。
+00:21 lh_mouse: d1ee85d3344e1736a34f089deaa7a747 *mingw32.7z
+00:21 lh_mouse: 85569d90e01018e960da50e6f696acbb *mingw64.7z
+00:22 slowcoach: 0.0
+00:24 varna: cleamoon: 我没试过这么模拟，都是强行学习的……
+00:24 lh_mouse: 求 star 。
+00:24 cleamoon: orz
+00:25 cleamoon: varna, ML的本质是什么呀... 线性归纳吗
+00:25 varna: 没有什么本质……
+00:25 cleamoon: ...
+00:25 varna: 你甚至没法定义学习，谈本质为时过早
+00:26 lh_mouse: ML 的本质不是啪啪啪么。
+00:27 cleamoon: 哦，我指的是现行的可用的ML算法本质
+00:31 cleamooon: 《清代野记》里一个故事。一回教阿訇路过猪肉店，正好店里杀猪，溅了一身血。阿訇索赔银饼十枚（挺多钱≈切糕），屠夫说：“钱给你了，衣服留下，反正衣服也不清真了…”第二天，屠夫穿上这身衣服卖肉，人们都传说回回在卖猪肉。阿訇听说后，到肉店要动手，遭到围观群众谴责，只好加倍把衣服赎回了
+00:32 cleamooon: 一路磕磕碰碰的国际热核聚变实验反应堆(ITER)项目最近跨过了一个重要里程碑，交付了被称为The Machine的国际托克马克装置的第一个组件。国际托卡马克是利用磁约束实现受控核聚变的环性容器，旨在验证可控热核聚变技术。该工程已经超支40亿欧元，第一次启动测试的时间一再推迟，从原计划的2016年，延期到2019年，现在很有
+00:32 cleamooon: 可能再次延期到2025年。项目的总建造费用目前估计为150亿到200亿欧元，而原计划是50亿到100亿欧元，建造费用的快速飚升在参与各国中间引发了争论。
+00:33 cleamooon: 最高互联网审查机构机构网信办进一步收紧了对网络新闻的控制，它要求所有新闻网站及社交网站不得刊登未经核实的新闻。 网信办下发了《关于进一步加强管理制止虚假新闻的通知》，称网络媒体未经许可前，不得报道摘自社交媒体的消息。通知要求“各网站要落实主体责任，进一步规范包括移动新闻客户端、微博、微信在
+00:33 cleamooon: 内的各类网络平台采编发稿流程，建立健全内部管理监督机制……严禁道听途说编造新闻或凭猜测想像歪曲事实。＂网信办称，对制造、传播虚假新闻情节较为严重的新浪网、凤凰网、财经网、腾讯网、网易网等多家网站进行了处罚和惩戒。
+00:39 Mokou: 先睡
+00:39 Mokou: 诸君武运
+00:39 Mokou quit:Quit: 睡觉
+00:41 hoxily quit:Quit: Leaving
+00:44 varna quit:Quit: leaving
+00:53 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/s8/fw_16035.jpg@596w_1l.jpg
+01:03 lh_mouse quit:Ping timeout: 252 seconds
+01:45 slowcoach quit:Quit: slowcoach
+02:07 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+02:27 T-J-M quit:Quit: 吾去矣
+02:27 T-J-M joined channel
+03:10 CyrusYzGTt joined channel
+04:57 Youmu joined channel
+05:49 whatofor joined channel
+05:49 whatofor_1 quit:Read error: Connection reset by peer
+06:08 Gring joined channel
+06:40 condy quit:Ping timeout: 240 seconds
+06:41 condy joined channel
+07:03 Youmu quit:Quit: Connection closed for inactivity
+08:24 FrankHB quit:Ping timeout: 240 seconds
+08:36 cnbleu joined channel
+08:38 cnbleu: 早～
+08:49 iyzsong-xx joined channel
+08:50 FrankHB joined channel
+09:10 Gring quit:Ping timeout: 264 seconds
+09:13 iyzsong-xx quit:Remote host closed the connection
+09:17 lh_mouse joined channel
+09:54 leo_ joined channel
+10:15 kevingu joined channel
+10:27 kevingu_ joined channel
+10:30 kevingu quit:Ping timeout: 244 seconds
+10:37 lh_cat joined channel
+10:37 lh_mouse quit:Ping timeout: 244 seconds
+10:42 kevingu_ quit:Ping timeout: 276 seconds
+10:44 kevingu joined channel
+10:48 leo_ left channel:"Leaving"
+10:48 slowcoach joined channel
+11:01 lhanjian: 早
+11:07 AutoGavy joined channel
+11:07 * lh_cat slaps AutoGavy around a bit with a large trout
+11:08 lh_cat is now known as lh_mouse
+11:17 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/sa/7g_508750.jpg@596w_1l.jpg
+11:42 kevingu quit:Remote host closed the connection
+11:43 kevingu joined channel
+11:50 kevingu_ joined channel
+11:53 kevingu quit:Ping timeout: 276 seconds
+12:01 FrankHB: hy菌呢。https://github.com/tieba/tieba.github.com/issues/27
+12:06 Youmu joined channel
+12:07 kevingu_ quit:Ping timeout: 272 seconds
+12:37 FrankHB quit:Ping timeout: 250 seconds
+12:54 Gring joined channel
+13:04 cc joined channel
+13:06 xxxxxxxxx joined channel
+13:08 xxxxxxxx quit:Ping timeout: 264 seconds
+13:19 AutoGavy quit:Quit: Connection closed for inactivity
+13:30 lh_mouse: 这个是 JQK  ？
+13:30 lh_mouse: 看来是高考完了？
+14:07 cnbleu quit:Remote host closed the connection
+14:09 cnbleu joined channel
+14:26 cc quit:Remote host closed the connection
+14:27 cc joined channel
+14:30 Mokou joined channel
+14:56 Matsune joined channel
+14:56 cc quit:Remote host closed the connection
+14:57 cc joined channel
+15:10 wlemuel joined channel
+15:12 wlemuel quit:Read error: Connection reset by peer
+15:13 wlemuel joined channel
+15:16 wlemuel` joined channel
+15:16 wlemuel quit:Read error: Connection reset by peer
+15:21 kevingu joined channel
+15:22 slowcoach_ joined channel
+15:23 slowcoach quit:Ping timeout: 240 seconds
+15:23 slowcoach_ is now known as slowcoach
+15:24 cleamoon quit:Ping timeout: 252 seconds
+15:31 cleamoon joined channel
+15:51 cnbleu quit:Ping timeout: 240 seconds
+15:51 Mokou: puuuuu
+15:51 Mokou: 原来EU4有linux版
+15:51 cnbleu joined channel
+15:56 * lh_mouse slaps Mokou around a bit with a large trout
+15:57 Mokou: 这耗越来越暴力了，需要放进跑轮里
+16:16 kevingu quit:Ping timeout: 244 seconds
+17:01 CyrusYzGTt quit:Ping timeout: 240 seconds
+17:11 lh_mouse: geordi, << sizeof(d); struct vb { int a[10]; }; struct b1 : virtual vb { int b[20]; }; struct b2 : virtual vb { int c[30]; }; struct d : b1, b2 { int d[40]; }; 
+17:11 geordi: 416
+17:12 lh_mouse: geordi, << sizeof(d); struct vb { char a[10]; }; struct b1 : virtual vb { char b[20]; }; struct b2 : virtual vb { char c[30]; }; struct d : b1, b2 { char d[40]; }; 
+17:12 geordi: 120
+17:14 lh_mouse: geordi, << sizeof(pm); struct vb { char a[10]; double dvb; }; struct b1 : virtual vb { char b[20]; double db1; }; struct b2 : virtual vb { char c[30]; double db2; }; struct d : b1, b2 { char d[40]; double dd; }; double d::*pm = &d::dd;
+17:14 geordi: 8
+17:14 lh_mouse: geordi, << reinterpret_cast<ptrdiff_t>(pm); struct vb { char a[10]; double dvb; }; struct b1 : virtual vb { char b[20]; double db1; }; struct b2 : virtual vb { char c[30]; double db2; }; struct d : b1, b2 { char d[40]; double dd; }; double d::*pm = &d::dd;
+17:14 geordi: error: invalid cast from type 'double d::*' to type 'ptrdiff_t {aka long int}'
+17:14 lh_mouse: geordi, << reinterpret_cast<ptrdiff_t &>(pm); struct vb { char a[10]; double dvb; }; struct b1 : virtual vb { char b[20]; double db1; }; struct b2 : virtual vb { char c[30]; double db2; }; struct d : b1, b2 { char d[40]; double dd; }; double d::*pm = &d::dd;
+17:14 geordi: warning: dereferencing type-punned pointer will break strict-aliasing rules
+17:14 lh_mouse: geordi, -w << reinterpret_cast<ptrdiff_t &>(pm); struct vb { char a[10]; double dvb; }; struct b1 : virtual vb { char b[20]; double db1; }; struct b2 : virtual vb { char c[30]; double db2; }; struct d : b1, b2 { char d[40]; double dd; }; double d::*pm = &d::dd;
+17:14 geordi: 128
+17:15 lh_mouse: geordi, -w << reinterpret_cast<ptrdiff_t &>(pm); struct vb { char a[10]; double dvb; }; struct b1 : virtual vb { char b[20]; double db1; }; struct b2 : virtual vb { char c[30]; double db2; }; struct d : b1, b2 { char d[40]; double dd; }; double d::*pm = &d::dvb;
+17:15 geordi: error: pointer to member conversion via virtual base 'vb'
+17:45 yimis joined channel
+17:48 cc quit:Remote host closed the connection
+17:48 jackma joined channel
+17:49 jackma quit:Client Quit
+17:50 cnbleu quit:Ping timeout: 276 seconds
+17:51 xxxxxxxxx quit:Quit: Leaving...
+18:40 hoxily joined channel
+18:55 Matsune_ joined channel
+18:57 Matsune quit:Ping timeout: 258 seconds
+18:58 Gring quit:Ping timeout: 264 seconds
+19:03 iyzsong joined channel
+19:04 iyzsong quit:Changing host
+19:04 iyzsong joined channel
+19:21 cnbleu joined channel
+19:22 \f joined channel
+19:49 cnbleu quit:Ping timeout: 272 seconds
+19:53 cleamooon: 华为被发现造假：其宣传用华为最新推出P9手机拍摄的照片忘了删掉EXIF信息，被发现是用佳能单反加高级镜头拍摄的，这套摄影设备要4500美元。
+19:53 Mokou: 这个有洗地的
+19:53 cnbleu joined channel
+19:54 Mokou: “这说明华为的拍照已经好到工作人员都分不清手机和相机的照片了。加油华为！”
+19:54 Mokou: ^ 我直接看傻
+19:57 cleamooon: 23333333
+19:57 Mokou: 便宜水軍用不得啊
+19:58 \f quit:Quit: \f
+19:59 cleamooon: @克克洛斯 在大连发现一个很神奇的群体。家里穷、长得不咋好看的小女孩儿，原先是做服务员洗洗碗之类的，来大连报个前端培训班，混进软件公司，然后找机会嫁给程序员，直接就小康了。
+19:59 cleamooon: 水军不是够多就好了吗
+19:59 cleamooon: 说的对不对都是次要的
+20:00 Mokou: 然而這容易被人當成反竄黑
+20:02 cleamooon: https://www.zhihu.com/question/48159110/answer/109463750?f3fb8ead20=306db30c39acc5324dc4c02791de9edf
+20:02 cleamooon: 无所谓，只要说的人多了，黑与不黑都一样
+20:02 cleamooon: 连小时代都能买出名，黑又如何
+20:04 cleamooon: 最后一个月的Windows 10免费升级通知将是全屏的
+20:06 cnbleu quit:Remote host closed the connection
+20:11 Matsune_: 我今天才知道清真食品是要给绿教交税的
+20:12 cleamoon: 什么鬼
+20:12 Matsune_: 清真标识是绿教xx协会发的 
+20:12 Matsune_: 这个标识的食品 要给绿教xx协会交税
+20:12 Matsune_ is now known as Matsune
+20:13 cleamoon: 我怎么觉得这个协会和牙防组是一类东西
+20:13 Matsune: 认证费用是货物总值的千分之一点五
+20:14 Matsune: 相当于是宗教税
+20:14 cleamoon: 卧操
+20:14 cleamoon: 超高呀
+20:16 Matsune: 买清真食品 支援绿教发展。。。
+20:19 cleamoon: 不过，帝都好吃的饭馆确实是清真的....
+20:20 Matsune: 绿教这个制度很有远见啊 有钱才能做大嘛。。。
+20:20 Matsune: 以后TC可以变成中华人民共和斯坦
+20:25 cleamoon: 看来绿绿除非统治世界，要不肯定会被灭掉呀
+20:26 iyzsong: _(:з」∠)_
+20:31 Matsune: 以他们的教义来说 他们不太可能安静的生活在中东
+20:31 Matsune: 所以要么他们统治世界 要么他们被灭亡
+20:33 cleamoon: 好好好，开始圣战吧
+20:34 Mokou: 還共和什麼啊，直接中華斯坦
+20:35 Mokou: 中華斯坦憲法第一條，只有穆斯林是一等公民，可以娶羊當老婆，卡費勒不許艹羊
+20:38 varna joined channel
+20:38 cleamoon: 看卡利班的法律就好了
+20:46 cnbleu joined channel
+20:47 lh_mouse: ， varna 就冒出来了。
+20:47 lh_mouse: 刚说完艹羊
+20:52 cnbleu: 😏
+21:17 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/sa/7h_508749.jpg@596w_1l.jpg
+21:52 lh_cat joined channel
+21:54 jackma joined channel
+21:55 lh_mouse quit:Ping timeout: 250 seconds
+21:56 lh_cat is now known as lh_mouse
+22:13 Youmu quit:Quit: Connection closed for inactivity
+22:18 iyzsong: (┙>∧<)┙へ┻┻
+22:28 slowcoach_ joined channel
+22:28 slowcoach quit:Ping timeout: 260 seconds
+22:28 slowcoach_ is now known as slowcoach
+22:34 cleamoon: varna, 上次看的那个测试红楼后40回是不是郭敬明写的，怎么做才是对的呢
+22:44 Flandre` quit:Ping timeout: 272 seconds
+22:44 varna: cleamoon: 我不知道
+22:44 Flandre` joined channel
+22:44 varna: 认为需要领域专家，不然可能模型都是错的
+22:45 cleamoon: soga
+22:45 iyzsong: 需要白学专家 (｢・ω・)｢
+22:48 cleamoon: 卧操，我打出了lem
+22:50 Matsune_ joined channel
+22:51 cleamoon: 另外，感觉现在ne有点难打呀，熊鹿各种不靠谱
+22:51 cleamoon: 反而是ud舒服多了
+22:52 Matsune quit:Ping timeout: 240 seconds
+22:53 varna: OTL
+22:53 varna: UD我觉得厉害一些了
+22:53 varna: NE嘛……总觉得warden被砍了
+22:53 cleamoon: 噩梦打出lem，脸渐渐转移了
+22:53 varna: HUM很注重战术，ORC还是那个恶心样子
+22:53 cleamoon: ne感觉只能吹风干orc了
+22:53 cleamoon: 还有tr
+22:53 cnbleu quit:Remote host closed the connection
+22:54 varna: TR不靠谱，太慢了
+22:54 cleamoon: ud也老样子，不过多了不少新战术
+22:54 cleamoon: 一下子强多了
+22:54 varna: 我是感觉UD完全不同了
+22:54 varna: 现在我看到的UD多数走暴力蜘蛛或者慢蜘蛛路线，战场很柔和
+22:54 cleamoon: 还是开不了矿
+22:55 varna: 但至少不会一波NC连杀争取优势
+22:55 cleamoon: 对，和以前不同，不爱肛了
+22:55 varna: 而且我最近真的没见到卖家一波流
+22:55 varna: 感动得很
+22:55 cleamoon: ...这不是正经战术吗
+22:56 cleamoon: 啊，我看的是14年的比赛...
+22:56 varna: 以前fov都打出过成功的卖家一波，正面大胜，对面所有分矿正常运转，然后fov就正常地gg了
+22:56 cleamoon: 噗
+22:57 cleamoon: 卖家的前提是对方也没矿吧....
+22:57 varna: 不卖家他能大败，估计是输游戏不能输气势、不如赌一波的心态
+22:58 varna: 现在UD给我的感觉是不容易被针对，因为非内战的大方向比以前更少了
+22:58 cleamoon: 没有后续确实不好弄
+22:58 cleamoon: 据说ud克ne克的很死
+22:58 cleamoon: 啊，remind会用中文说“我要吃红烧肉”了
+22:59 varna: NE兵种属性被主流UD战术克制
+22:59 varna: 但只是属性劣势，还没到相性劣势的程度
+23:00 varna: NE比较麻烦的事情就是抓和timing没ORC那么恶心
+23:00 cleamoon: 哦，那还好
+23:00 cleamoon: 剑圣太烦人了
+23:00 varna: 一个贱圣就能为UD选手的魔法值管理增加很多麻烦
+23:00 cleamoon: 有疾风步还不好杀
+23:00 varna: 然而一个DH...你抽一口也行，然而你逃不远
+23:01 varna: 贱圣逼人C怪占位
+23:01 varna: 各种麻烦
+23:01 cleamoon: 所以ud缺一个敏捷英雄
+23:01 varna: UD不擅长黏人
+23:01 varna: 三英雄里，输出永远是Lich
+23:02 varna: 三发DR的话就是控场，大屁股的话就是肉盾，小强被扔进历史垃圾堆不能自拔
+23:02 cleamoon: 不明白为什么不用小强
+23:03 cleamoon: 召唤+眩晕不好吗
+23:03 varna: 他团控疲软
+23:03 cleamoon: 我看到不少三发娜迦，然后脑残粉连击的
+23:03 varna: DR用沉默更好
+23:03 varna: 哦对，三发那加也行
+23:04 cleamoon: 他不是有带眩晕的震荡波吗... 难道没魔？
+23:04 varna: 我总觉得三发小强的话，走位不方便
+23:04 varna: 小强是地刺眩晕啊……
+23:04 cleamoon: 对呀
+23:05 cleamoon: 地刺和震荡波，没什么本质区别
+23:05 cleamoon: 好久没看到三远了
+23:05 varna: 有
+23:05 varna: 地刺的控制距离不长，需要小强离战场近
+23:05 varna: 沉默是远程施法的
+23:07 cleamoon: 如果人口上限是250，然后维修费用限额翻3倍，然后操作简化一些，应该就好看多了
+23:07 cleamoon: 不过打一场会累死
+23:07 cleamoon: 不长吗，没怎么用过...
+23:07 varna: 你想想若风
+23:08 cleamoon: 没看过
+23:08 varna: 著名的若风巫师，dota
+23:08 varna: 那个晕技是用小强技能改的
+23:08 Matsune_: 若风一指！
+23:08 cleamoon: 话说，有个剑圣名字叫，尤舒拉
+23:08 cleamoon: .....
+23:08 varna: Matsune_: 团战杀NEC并没有任何错误
+23:09 varna: cleamoon: 估计是yosura, 〇修罗……然而译过来略搞
+23:09 Matsune_: 话是这么说 但实际上杀SF问题也不大
+23:10 varna: 问题不大，只不过若风选择杀了那个NEC
+23:10 varna: 只不过NEC身上没带够钱，让你产生大了小兵的错觉
+23:11 varna: 说起刀塔，现在我还收藏着单车武士视频
+23:11 cleamoon: 以前看澄海3c，一个人操纵那么多东西，apm 600，总觉得dota不够给劲
+23:12 varna: 3c对操作要求很高
+23:12 varna: 现代刀塔更多是战术
+23:12 cleamoon: 有点太高了
+23:12 varna: 3c我跟别人打从来都是血崩地输掉
+23:13 cleamoon: 不问爹或者要钱我连电脑都打不过...
+23:13 varna: (｡･ω･)ﾉ有人玩overpigu么
+23:14 varna: 另外我觉得黑XB骑士的人没那么多，怒吼天尊的人望似乎还行
+23:15 Matsune_: xb骑士退役了
+23:15 Matsune_: 今年没打进TI
+23:15 cleamoon: 如果屁股是2d platform我就玩了
+23:16 varna: 噫吁戲
+23:16 Matsune_: 按照大多数职业选手的看法 国内dota能打的人不少
+23:16 Matsune_: 能BP的人屈指可数
+23:16 Matsune_: xb骑士好歹还算个能BP指挥的人
+23:17 varna: +
+23:18 Matsune_: 酱菜多 帅才少
+23:18 varna: 今天中午来了几盘PIGU路人，也是被坑成狗……
+23:19 Matsune_: 233
+23:19 varna: 花村进攻，我手大锤，己方两个麦爹在我身后绕啊绕啊绕
+23:20 varna: A点都没拿下就输了……
+23:20 varna: 而且坑爹路人局的最大特点是逼人手大锤，因为根本没有T
+23:21 Matsune_: 那还不如来个屠夫
+23:21 Gring joined channel
+23:21 Matsune_: 其实花村可以5dva直接进去
+23:21 varna: 花村5dva是个路子
+23:21 varna: 屠夫的麻烦是推车推不动
+23:22 varna: 抢点还好
+23:22 Matsune_: 推车图还是大锤好使
+23:22 varna: 老实说抢点大锤有时候是救场的
+23:22 Matsune_: 不少有地形杀的抢点图屠夫都很好用
+23:22 cleamoon: 屁股还能T？
+23:23 varna: 不过总觉得最近幼儿源少很多
+23:23 cleamoon: 不是瞬死吗
+23:23 varna: 今天只遇到一个
+23:23 cleamoon: 幼儿买不起吧
+23:23 varna: 照着我竜啊呃至少有三回
+23:23 varna: 幼儿源是说那种选Genji但不会玩的
+23:23 varna: 觉得很帅然而跟真人打被怒草
+23:24 Matsune_: 我前两天和同学开黑 有个路人源氏 开了大招砍屠夫被屠夫一枪打死。。。
+23:24 varna: 我之前努巴尼防守，手个76，看着Genji照着我贴脸冲
+23:25 varna: 中间也不怎么扔镖
+23:25 varna: 估计是有点头晕了
+23:25 cleamoon: 哦
+23:26 cleamoon: 那不就是说我嘛... 我就喜欢选好看的...
+23:26 Matsune_: 源氏玩多了是有点晕。。。
+23:26 varna: 我倒不会晕，然而我瞄不好，于是退避了
+23:26 varna: 逼我切后排的话我就选死神……
+23:26 Matsune_: 我玩源氏经常shift之后不知道自己划了多远
+23:27 Matsune_: 我基本不玩突击英雄
+23:27 Matsune_: 我有一手绝活漓江塔打铁
+23:27 varna: 233333333
+23:28 varna: 我之前有一个很大的奥义，Genji开大之后英猥达显卡驱动掉线，然后就没然后了
+23:28 varna: 竜哔————————————————————蓝屏 这个感觉
+23:28 cleamoon: varna, 一个型如 y=a*x + b*dx/dt + c*int_0^t x*dt 的方程，x自己乱动，想改变abc保持y尽量不变，或者尽快回到某个规定值r，要求不要上下飘，这种ML里有现成的思路吗
+23:28 cleamoon: 现在你用的什么系统
+23:28 Matsune_: 我这老爷机开始的时候大家一疯狂移动 渲染就崩溃了
+23:28 cleamoon: win 8.5吗
+23:29 varna: TP E430是Arch, ISK那台还是瘟十
+23:29 varna: cleamoon: 这个我不知道……微分方程我不太会
+23:29 cleamoon: 回滚失败？
+23:29 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:29 * Matsune_ 洗澡去
+23:29 varna: 回滚成功了，中间安win7也成功了，只是win7没有以太网、无线网、USB驱动
+23:29 cleamoon: 这不能算微分方程吧... 就一个线性项，一个微分，一个积分项
+23:30 varna: 怎么安都安不上，估计得用联想固件，还可能失败
+23:30 cleamoon: 以前就没有还是回滚的没有
+23:30 cleamoon: ......
+23:30 varna: 瘟十现在我固定在初始配置了，没问题
+23:31 cleamoon: ...
+23:32 varna: 我最不适应PIGU的一点，是对T的需求量太大了
+23:32 varna: 就是个FPS风格的刀塔
+23:32 cleamoon: 或者都不要方程，就一个黑盒，两个输入一个输出，一输入各种变，一个输入你控制，要求输出尽量像上面那样安定，ML有这方面研究吗
+23:33 varna: 这是拟合问题吧
+23:33 cleamoon: FPS风的dota？听起来，很看不懂呀
+23:33 varna: 给定三维点集，要求拟合一函数
+23:33 varna: 哦不对
+23:34 varna: 点集没给定……那至少不是个经典问题
+23:34 cleamoon: 给定的话就容易了
+23:35 cleamoon: 当然，现在的问题是，这个黑盒是3k输入，2k乱动，1k控制，50输出
+23:35 varna: ……
+23:35 cleamoon: 大概这个数量级
+23:35 cleamoon: 可以分成数百上面那个简化版本
+23:35 varna: 不知道怎么办了
+23:35 cleamoon: 所以简化的那个好解就行
+23:35 jackma quit:Quit: My Mac has gone to sleep. ZZZzzz…
+23:36 varna: 不过如果是2输入1输出的话，这里的麻烦其实是这个黑盒是不是多项式、如果是则是什么样的多项式
+23:36 cleamoon: 嗯，我基本可以肯定，不是
+23:37 varna: 那就更跪了，像你之前那个方程
+23:37 varna: 你有训练数据么
+23:37 cleamoon: 多项式或者多项式的积商的话，我上面那个就能解了
+23:38 cleamoon: 训练数据应该是有的
+23:38 varna: 多项式的话甚至可以维持全程黑盒……
+23:38 cleamoon: 不过是自己试出来的...
+23:40 yimis quit:Quit: yimis
+23:41 cleamoon: 这个问题在于，1, 黑盒可能很复杂，2，数据量其实，挺大的
+23:41 varna: 黑盒复杂+
+23:42 varna: 如果黑盒客观上就复杂，那就麻烦了
+23:42 cleamoon: 黑盒应该是个很蛋疼的微分方程
+23:43 cleamoon: 如果可控输入变多，会更容易吗
+23:43 varna: 不会，因为我不知道怎么处理微分方程的这种问题
+23:43 cleamoon: 不用考虑方程，反正没法解
+23:43 cleamoon: 甚至没法列出来
+23:43 varna: 不，客观上就麻烦
+23:43 cleamoon: 只知道是黑盒
+23:44 varna: 处理多项式的办法毕竟和微分方程不一样
+23:45 stdstx left channel:"undefined"
+23:46 cleamoon: 多项式毕竟容易...
+23:47 stardust joined channel
+23:48 cleamoon: 羊驼子日常研究的都是多项式？
+23:48 varna: 我日常不太研究
+23:49 cleamoon: 你的论文是梦出来的吗....
+23:55 Matsune_ quit:Quit: Leaving

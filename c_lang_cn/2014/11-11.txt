@@ -1,0 +1,434 @@
+00:40:erhandsome quit:Quit: leaving
+00:45:lh_mouse: http://baike.baidu.com/view/1658644.htm?fr=aladdin
+00:50:code_new quit:Quit: Leaving
+00:53:slowcoach quit:Ping timeout: 260 seconds
+01:07:hoxily quit:Quit: Leaving
+01:09:lh_mouse quit:Quit: Meow meow meow
+01:38:izmntuk quit:Ping timeout: 255 seconds
+01:38:izmntuk joined channel
+01:39:biergaizi_ joined channel
+01:39:biergaizi quit:Ping timeout: 272 seconds
+01:46:biergaizi__ joined channel
+01:46:biergaizi_ quit:Ping timeout: 244 seconds
+01:53:biergaizi__ quit:Quit: Konversation terminated!
+02:07:OO_after quit:Ping timeout: 255 seconds
+02:18:OO_after joined channel
+03:52:boosure joined channel
+06:05:cleamoon_ quit:Ping timeout: 264 seconds
+07:03:cleamoon_ joined channel
+07:07:cleamoon quit:Ping timeout: 244 seconds
+07:23:erhandsome joined channel
+08:29:cleamoon__ joined channel
+08:32:sismvg joined channel
+08:33:cleamoon_ quit:Ping timeout: 258 seconds
+08:37:slowcoach joined channel
+08:48:erhandsome quit:Ping timeout: 264 seconds
+08:50:Sleepwalking joined channel
+08:55:lhanjian joined channel
+08:56:sismvg: http://www.ithome.com/html/it/111926.htm
+08:57:sismvg: 只有小白相信这东西安全
+09:04:Plough joined channel
+09:05:lhanjian: 如果公安部的数据库被日了，那就像南棒一样了
+09:07:sismvg: 没有数据库是安全的。。离线的有技术能破了
+09:09:lhanjian: 在线都会被注入的一塌糊涂
+09:23:boosure quit:Quit: Get your hand off of it
+09:31:xxxxxxxx: 逗比新闻...
+09:37:whatofor joined channel
+09:40:xxxxxxxx: 在unturned中小看了地雷的伤害范围把自己炸上了天....
+09:46:lh_mouse joined channel
+09:47:sismvg: 迅雷看看太容易崩溃了
+09:49:lhanjian quit:Quit: 风光冉冉东西陌
+09:51:sismvg: 有人翻译程序设计相关书籍的时候把classic翻译成了经典。。
+09:52:sismvg: 还有古典。。
+10:04:lhanjian joined channel
+10:12:sismvg: 我看见一个网站。正面的链接大开着，链接里一片阴暗的浓雾。高高的服务器外面站着一个绅士……，一个新共产主义绅士。
+10:15:xxxxxxxx: 10:03:20 Muimi>Yeah, everyone I've met in Japan is super racist against China, dude....
+10:21:lhanjian: 本子人民这么种族主义？
+10:31:cleamoon__ quit:Read error: Connection reset by peer
+10:31:cleamoon__ joined channel
+10:37:Sleepwalking quit:Ping timeout: 240 seconds
+10:39:lh_mouse: 难道中国不是如此吗
+10:39:lh_mouse: 至少我认为日本人是劣等民族
+10:39:* lh_mouse 给我一个元首 我把日本从地球上抹杀
+10:42:lh_cat quit:Ping timeout: 250 seconds
+10:44:lhanjian: 天朝人民口嫌体正直，两国关系越紧张，去日本的天朝游客反倒不减猛增。虽然有汇率，消费水平等各方面的原因，但是赴日的天朝游客增长速度也还是很快乐
+10:44:lhanjian: 了
+10:45:lh_mouse: 你知道的太多了
+10:45:sismvg: 因为汇率大跌
+10:52:Sleepwalking joined channel
+10:54:erhandsome joined channel
+10:58:xxxxxxxx quit:Quit: Leaving...
+10:58:erhandsome quit:Client Quit
+11:04:Sleepwalking quit:Ping timeout: 245 seconds
+11:07:hoxily joined channel
+11:07:Sleepwalking joined channel
+11:11:erhandsome joined channel
+11:19:erhandsome quit:Ping timeout: 250 seconds
+11:27:Plough quit:Ping timeout: 272 seconds
+11:28:Plough joined channel
+11:28:erhandsome joined channel
+11:32:lhanjian quit:Quit: 风光冉冉东西陌
+11:43:izmntuk quit:Ping timeout: 265 seconds
+11:44:erhandsome quit:Ping timeout: 255 seconds
+12:07:khysw: malloc
+12:08:khysw: free(malloc(0))
+12:13:Sleepwalking quit:Ping timeout: 244 seconds
+12:16:erhandsome joined channel
+12:22:lhanjian joined channel
+12:33:sismvg: shared_memory(0)
+12:36:Sleepwalking joined channel
+12:56:lh_cat joined channel
+13:08:biergaizi joined channel
+13:12:Plough quit:Remote host closed the connection
+13:34:whatofor_1 joined channel
+13:35:slowcoach quit:Changing host
+13:35:slowcoach joined channel
+13:35:slowcoach: =_,=
+13:37:whatofor quit:Ping timeout: 264 seconds
+14:20:sismvg: 尼玛，那个家伙把activation翻译成释放的啊!
+14:33:sismvg: 到处都是PHP,PHP,PHP*100
+14:56:khysw: malloc,malloc,malloc,malloc,malloc,malloc,malloc,malloc,malloc,malloc,malloc,
+14:56:khysw: geordi: malloc(10000000)
+14:56:geordi: error: expected constructor, destructor, or type conversion before '(' token
+14:56:khysw: geordi: <<malloc(10000000)
+14:56:geordi: 0x7f6937561040
+14:57:khysw: geordi: <<malloc(100000000000)
+14:57:geordi: 0
+14:57:khysw: geordi: <<free(malloc(100000000))
+14:57:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and 'void')
+14:57:khysw: geordi: <<(free(malloc(100000000)),0)
+14:57:geordi: 0
+15:05:lh_mouse_ joined channel
+15:05:lh_mouse_ quit:Client Quit
+15:09:sismvg: georid:<<*(char*)malloc(99)
+15:09:geordi: �
+15:10:sismvg: georid,{strcpy(*((char*)malloc(99)+100),"pause");}
+15:10:geordi: error: invalid conversion from 'char' to 'char*'
+15:10:sismvg: georid,{strcpy(((char*)malloc(99)+100),"pause");}
+15:10:geordi: <no output>
+15:16:lh_bot left channel:"Meow meow meow"
+15:16:lh_bot joined channel
+15:26:sismvg: 手动提权好麻烦
+15:26:erhandsome quit:Ping timeout: 255 seconds
+15:28:sismvg: windows的UAC形同虚设
+15:28:sismvg: 用户只能知道应用需要什么权限，却不知道这些权限要用来干嘛
+15:33:khysw: 安卓的权限更坑....
+15:35:sismvg: 好歹有提示啊
+15:35:sismvg: 比如要求短信服务什么的
+15:35:khysw: 就算提示了你也没办法管...
+15:35:khysw: Windows下我起码可以去弄个虚拟机玩玩...
+15:35:sismvg: 我记得有管理APP的
+15:36:sismvg: 好像叫root权限还是什么的
+15:36:sismvg: windows要这样的东西略微有点麻烦。。还要hook..
+15:45:lh_mouse: 都是逗比
+16:15:sismvg: windows.kernel实在是太多了
+16:23:sismvg: 想要写Data的，下意识写成了代他。。
+16:25:izmntuk joined channel
+16:40:Sleepwalking quit:Ping timeout: 256 seconds
+16:43:slowcoach: 还好没有写成Dota
+16:50:sismvg: 看到网购买东西的评论：估计是正品
+16:50:sismvg: 大概是真的
+16:50:sismvg: 233333
+16:51:condy joined channel
+16:51:lhanjian quit:Quit: 风光冉冉东西陌
+16:51:lhanjian joined channel
+17:03:lh_mouse: geordi, -c { int a; a = 1 \ - \  - \ 1; }
+17:03:geordi: warning: variable 'a' set but not used
+17:03:Sleepwalking joined channel
+17:03:lh_mouse: geordi, prepend -w
+17:03:geordi: Success
+17:04:condy: geordi: insert cout<<a; after second ;
+17:04:geordi: Success
+17:05:condy: geordi: erase -c
+17:05:geordi: 2
+17:11:whocares_2_ quit:Ping timeout: 250 seconds
+17:13:sismvg: oh ,poor MacGver
+17:19:cleamoon joined channel
+17:21:cleamoon: 噗，科学家发现让人变蠢的病毒
+17:22:condy: http://www.zhihu.com/question/19976391#answer-2707577
+17:22:condy: 双涨知识了..
+17:22:* condy 关注两性健康，从你我做起
+17:27:cleamoon: 我只觉得知乎应该改名故事会
+17:27:Sleepwalking quit:Ping timeout: 244 seconds
+17:27:cleamoon: 大部分人不想看答案，他们想看故事
+17:27:lhanjian: +
+17:28:lhanjian: 我就喜欢看故事看段子
+17:29:cleamoon: 所以想看真正答案别去知乎
+17:29:lhanjian: 估计只能看冷酷的社会调查或者数据分析了
+17:30:cleamoon: 我上次买钢笔就发现了，知乎上洋洋洒洒几千字，有用的不到30个，结果我去试了还是tm扯淡
+17:30:lhanjian: condy, 我家小区门口那条街就有两家粉红灯箱店。没觉得有啥特别的……
+17:30:lhanjian: cleamoon, 2333333
+17:30:condy: http://www.zhihu.com/question/26535189 <- 这几个电影好像挺不错的唉..
+17:31:condy: 粉红灯箱店, 好奇怪的名字。
+17:31:cleamoon: 真正宅心仁厚的人说话只有数据和道理，想要利用别人的才一口一个梦想呢
+17:32:code_new joined channel
+17:32:lhanjian: condy, 灯都用粉色的。表明这不是一般的理发美容店。
+17:33:condy: ...
+17:33:cleamoon: 看了一下，几个我看过的确实结尾神奇，但是常看电影的除了肖申克这类的应该不觉得奇怪
+17:33:condy: @片轮少女
+17:33:* condy 很少看电影
+17:34:cleamoon: 因为悬疑片会隐藏线索，可是我是传奇这类的是满地都是线索
+17:34:cleamoon: 这就是为什么只有导演结局不违和
+17:34:condy: 可是却又没有发现..
+17:35:cleamoon: 当然不能直接发现
+17:35:lhanjian: 54
+17:35:lhanjian: 【消息称土改总体方案年底出台 江浙或成“试验田”】权威人士日前透露，由国土资源部等部委牵头制定的土地改革总体方案已经成形，预计在12月的“中央农村经济工作会议”上正式推出，最快可能在2015年年初安排试点。（中国证券网）
+17:35:* cleamoon 不知道土改是什么
+17:36:lhanjian: http://www.cs.com.cn/xwzx/hg/201411/t20141111_4560335.html
+17:36:cleamoon: 我是传奇挺不错的，被普通结局毁了
+17:36:cleamoon: 估计制片人认为一般人看不懂
+17:37:cleamoon: 看导演结局就一切联系起来了
+17:39:slowcoach quit:Ping timeout: 256 seconds
+17:39:cleamoon: 感觉和没土 改差不多？
+17:41:cleamoon: 看几个半疯的影评就基本电影入门了
+17:42:* cleamoon 看过一个6w字的eva影评...
+17:46:cleamoon: lhanjian: 铝合金觉得房价会如何
+17:48:lhanjian: cleamoon, 看货币政策
+17:49:cleamoon: 货币肯定会不断放松呀
+17:51:lhanjian: cleamoon, 看起来克强是个心里有数的家伙。
+17:51:lhanjian: 货币不断放松，那估计房价见底挺快。
+17:51:cleamoon: 这怎么看... 你和他啪啪啪了？
+17:51:lhanjian: 像去年底一样，只是放一波灌灌水
+17:51:lhanjian: 信用问题过去了，也就不放了
+17:52:Sleepwalking joined channel
+17:52:cleamoon: 见地快？见完底之后涨？
+17:52:lhanjian: 嗯
+17:52:cleamoon: 我怎么觉得信用问题只会越来越大
+17:53:lhanjian: cleamoon, 那就是天朝经济像80年代霓虹一样，药丸。那就等着大熊市来临吧
+17:54:cleamoon: 如果前几年股市跌成那样还不叫大熊市的话，那现在霓虹应该叫经济腾飞了
+17:54:lhanjian: 没听懂啥意思
+17:54:cleamoon: 意思是我觉得已经进入大熊市了
+17:55:lhanjian: 说不定还有进一步探底的可能呢
+17:56:cleamoon: 觉得单纯从宏观经济上没什么可做的了
+17:56:whocares_2 joined channel
+17:57:lhanjian: 面对还没研究清楚的经济周期，其实也没什么想法了
+18:02:cleamoon: jj过热是问题，在根部拴住不是jj消失进入无巨 根的灌 肠主义，就是撑破一 泻 千 里，加油的话也许更硬，但硬的目的还是一 泻 千 里，在没找到jj的理论 - 春哥或凤姐使其自己软 下来之前，基本没有其他做法
+18:03:cleamoon: 当然也可以等，但可能广大撸友不想等
+18:04:lhanjian: 想主动进入贤者时间，也是不太容易
+18:04:cleamoon: 话说南方经济如何？据父母说帝都萧条的很
+18:04:lhanjian: 没感觉到特别不好。
+18:04:lhanjian: 金融危机的时候那种感觉没有
+18:04:cleamoon: 一般是打药，但是没找到特效药刺激会喷
+18:05:cleamoon: 据说帝都有了
+18:05:sismvg: poor MacGyver
+18:05:cleamoon: 帝都最繁华的王府井，父母蹲点，发现有人逛没人买
+18:06:cleamoon: 除了新华书店
+18:06:cleamoon: 王府井旁边的东四也是购物饮食一条街，现在都没人逛了
+18:07:cleamoon: 最好玩的是据说机场的饭馆找了帮人在门口叫卖
+18:08:sismvg: 哥特幼女别样萌
+18:08:sismvg: 可远观而不可亵玩耶
+18:09:cleamoon: 在门口全是"大爷，进来玩呀"，进去就变成了"这么穷，没有几亿也敢来买手机？给我打出去"
+18:09:lhanjian: 我朝人民的境外消费能力大增
+18:11:cleamoon: 奶粉还是食盐还是茅台？
+18:11:sismvg: 盐啊
+18:11:sismvg: 天朝都3块400克了
+18:11:cleamoon: 话说房东女儿倒国外衣服挣了不少
+18:12:cleamoon: 谁有性 趣
+18:12:cleamoon: 和我们一样的价格
+18:14:sismvg: 米国人的发音好难
+18:19:sismvg: 灰发幼女大赞
+18:21:cleamoon: 2333  什么叫任性？好好的一瓶消毒液，名字却非要叫“84消毒液”。。。。。。。。。84=不是(zt)
+18:21:cleamoon: 傲姣消毒液
+18:22:cleamoon: 单身就算了，没钱抢购也算了，明明是为自己量身定做的节日却变成了情侣们的购物节。现在的双十一对单身狗来说简直就是三重打击！(zt)
+18:33:cleamoon: 话说药四娘多大
+18:33:xxxxxxxx joined channel
+18:34:sismvg: 药四娘是谁？
+18:34:condy: 不是你吗.
+18:34:condy: 哦，看错了，药娘四!
+18:34:cleamoon: 噗
+18:35:sismvg: 我是四元飒
+18:35:slowcoach joined channel
+18:35:xxxxxxxx: 药元飒
+18:35:sismvg: 我是四元飒
+18:35:cleamoon: 既基头四之后这里也有了药娘四
+18:36:sismvg: 把妹就要从小开始啊
+18:37:slowcoach quit:Changing host
+18:37:slowcoach joined channel
+18:38:cleamoon: 从小就抓住右手
+18:41:lh_mouse: 有企鹅的加下群啊  384042845
+18:41:xxxxxxxx: 从小就要花式撸管
+18:41:cleamoon: 什么群
+18:45:xxxxxxxx: http://tieba.baidu.com/p/3403133879
+18:45:xxxxxxxx: 花式撸管群
+18:45:lh_mouse: 水群
+18:46:sismvg: 我的既视感告诉我我在这句话过后发过一个最悲惨的人的相关帖子
+18:47:cleamoon: 我的bt出问题，速度显示过10+GB/s
+18:47:cleamoon: 当然，只是显示
+18:47:xxxxxxxx: 土豪速度
+18:48:sismvg: 23m/s的速度你试过没有
+18:48:cleamoon: 开车可以，没跑过那么快
+18:49:sismvg: 23MB/s
+18:49:Plough joined channel
+18:49:cleamoon: 以前有过
+18:49:cleamoon: 现在只有6MB/s左右
+18:50:sismvg: 跪
+18:50:sismvg: 晚餐只有20块RMB，然后这才发觉是假币
+18:51:cleamoon: 5张四块的？
+18:52:sismvg: 1章20
+18:57:cleamoon quit:Read error: Connection reset by peer
+18:59:Sleepwalking quit:Ping timeout: 272 seconds
+19:00:sismvg: 今天就是买买买
+19:03:whocares_2 quit:Ping timeout: 272 seconds
+19:04:whocares_2 joined channel
+19:11:condy: /dev/sda4       370G  349G  3.0G 100% /home
+19:12:condy: QAQ
+19:20:Sleepwalking joined channel
+19:23:sismvg: 土豪
+19:23:sismvg: 我才475
+19:23:sismvg: swap 3.0?
+19:36:cleamoon joined channel
+19:45:code_new quit:Quit: Leaving
+19:51:cleamoon_ joined channel
+19:51:cleamoon quit:Read error: Connection reset by peer
+19:51:Plough: /dev/sda1       118G   14G   99G   13% /
+19:59:Sleepwalking: /dev/sda1       227G   56G  160G  26% /
+20:01:sismvg:  /dev/sda1 系统找不到指定路径
+20:02:lh_mouse: /dev/disk/by-uuid/3182c92d-4ef1-4530-8f26-eb6fba1b40f3  452G  6.2G  423G   2% /
+20:02:lh_mouse: VPS
+20:02:sismvg: 亲爱的杀手先生更新的好慢啊
+20:02:sismvg: 屌神也不更新了
+20:03:Sleepwalking: Plough: lh_mouse: 我们都是分区时手贱把全部空间扔/上系列？
+20:04:lh_mouse: Sleepwalking, 捏脸！
+20:12:lhanjian: http://www.infoq.com/cn/news/2014/11/fastsocket-github-opensource
+20:13:lh_mouse: Global notice 是什么情况
+20:13:nicball joined channel
+20:14:ring quit:Read error: Connection reset by peer
+20:15:Sleepwalking quit:Ping timeout: 250 seconds
+20:28:FrankHB quit:Remote host closed the connection
+20:29:FrankHB joined channel
+20:57:lhanjian: “我想用C+，而不是C++”
+20:58:cleamoon_: 233
+20:58:lhanjian: cleamoon_, 好像本来就有C+的样子
+20:59:lhanjian: cleamoon_, 俄罗斯央行网站１０日发布声明说，从当日起俄央行事实上允许卢布汇率自由浮动。
+20:59:lhanjian: 毛子药丸？
+21:00:cleamoon_: 似乎是个其他的项目
+21:00:cleamoon_: 药丸
+21:00:cleamoon_: 希望不要三战
+21:01:lhanjian: 乌克兰的枪声
+21:01:lhanjian: 要是普京在克里米亚视察被乌克兰民族主义者刺杀，就……
+21:01:cleamoon_: 不可能的
+21:02:cleamoon_: 比他飞机坏了掉下来还不可能
+21:03:lhanjian: 对于俄罗斯央行来说，宣布政策调整的时机可谓再好不过了，近几个月导致卢布汇率暴跌的主要因素：原油(77.38, -0.02, -0.03%)价格下跌——发生逆转，美国WTI原油和布伦特原油周一上涨超过1%。据《华尔街日报》，围绕乌克兰的政治紧张态势加剧、利比亚局势不稳威胁石油供应提振了油价。(谷云)
+21:05:lhanjian: 对于俄罗斯央行来说，宣布政策调整的时机可谓再好不过了，近几个月导致卢布汇率暴跌的主要因素：原油(77.38, -0.02, -0.03%)价格下跌——发生逆转，美国WTI原油和布伦特原油周一上涨超过1%。据《华尔街日报》，围绕乌克兰的政治紧张态势加剧、利比亚局势不稳威胁石油供应提振了油价。(谷云)
+21:06:iyzsong joined channel
+21:08:cleamoon_: 感觉好假... 涨1%就最好时机了... 估计涨10%就不调了
+21:10:lhanjian: 毛子可能真希望打仗吧
+21:10:lhanjian: 美帝只要攻击产油国，毛子就要笑了
+21:12:iyzsong: http://www.gnome.org/groupon/ - -b
+21:12:iyzsong: 注册了GNOME的商标..
+21:13:cleamoon_: 打仗就tnnd好玩了
+21:13:cleamoon_: 各种计划混乱
+21:16:cleamoon_: 米国给产油国技术，让他们产量翻倍，估计就好玩了
+21:16:lhanjian: 美帝这次打击毛子，靠的就是自己家里的页岩
+21:16:lhanjian: 气
+21:16:lhanjian: 这种预期一旦出现，毛子就疼了
+21:18:erhandsome joined channel
+21:20:cleamoon_: 我要是噗丁，我才不打仗呢，国家怎么样关我鸟事，自己蹲家天天吃虾仁
+21:21:sismvg: -自主规制
+21:21:lhanjian: 毛子不讲我们的理，他们的想法我们不懂
+21:22:cleamoon_: 我到不觉得他很难懂
+21:23:sismvg: windows内核编程什么鬼畜翻译啊
+21:23:sismvg: 稀疏分配内存。。。
+21:24:cleamoon_: 看了入侵格鲁吉亚的纪录片之后就能看出来了，丫门就是一群只为自己着想的渣渣
+21:26:lhanjian: 纪录片可不止一个视角
+21:26:cleamoon_: 我只想知道那帮能决定的人是怎么想的
+21:26:lhanjian: 俄罗斯很奇特，一个西方理解不了的自民主义国家
+21:27:whatofor_1 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:27:erhandsome quit:Ping timeout: 265 seconds
+21:27:cleamoon_: 没觉得太奇特
+21:27:cleamoon_: 没出现什么出圈的招
+21:27:lhanjian: +
+21:28:lhanjian: 毛子要弄前独联体国家都能碾压吧
+21:28:erhandsome joined channel
+21:30:cleamoon_: 没意义，会被人拖死
+21:31:cleamoon_: 他攻击友军石油产出国倒可能
+21:31:sismvg: windows内存真是个大章节。。文档都写了块8页了。。
+21:33:lhanjian: http://soft.cs.tsinghua.edu.cn/os2atc2014/ppt/kernel-session/kernel-session-linxiaofeng.pdf
+21:33:sismvg: 锁就是坑
+21:34:sismvg: 无锁设计又不好弄
+21:34:sismvg: 见过有个人这么同步的push_back数据的
+21:35:sismvg: HANDLE mtx=CreateMutex(....); WaitForSingleObject(mtx) vec.push_back(var);  ReleaseMutex(mtx);
+21:36:sismvg: 不卡你卡谁
+21:36:lhanjian quit:Quit: 风光冉冉东西陌
+21:36:cleamoon_: 饭馆柔软度兄妹
+21:40:sismvg: 神马东西
+21:40:lh_cat: 见过太多这傻逼代码了
+21:41:cleamoon_: 老虎机的quit message
+21:41:FrankHB: 你自己艹无锁明显更坑。
+21:42:lh_cat: 看情况  不过这人没异常安全概念？
+21:46:cleamoon_: 我觉得大部分都没有
+21:52:sismvg: fastsocket..fastio 命名的天赋没有呢
+21:53:sismvg: fastbiu
+21:56:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+21:58:lh_cat: 一千个人里都见得有一个懂如何用异常的   包括某些在 assert 里抛异常的傻逼
+21:59:FrankHB: 禁止assert里抛异常的明显更傻逼。
+22:02:iyzsong quit:Ping timeout: 250 seconds
+22:02:lh_cat: 我禁止解引用 空指针也 sb？
+22:02:lh_cat: 就该抛异常？
+22:04:cleamoon_ quit:Read error: Connection reset by peer
+22:04:cleamoon joined channel
+22:06:FrankHB: 允许解引用空指针跟允许抛异常有个P可比性。
+22:06:lh_cat: clear 还不让抛异常呢  你 要不要在析构里抛异常啊
+22:07:lh_cat: 照你的傻逼逻辑 clear 就不应该 noexcept
+22:07:FrankHB: 傻逼逻辑clear哪里没noexcept了。
+22:07:lh_cat: 我析构里写 assert 呢
+22:08:FrankHB: 我析构里还就写declare unreachable了，有意见？
+22:08:lh_cat: 我在析构里写 assert 你家析构也是 sb？
+22:09:FrankHB: 你倒是给我找找谁没事在析构乱加noexcept的？
+22:09:lh_cat: 傻逼的地方多了去了不差你一个
+22:09:FrankHB: 自己二还好意思扯。
+22:09:cleamoon quit:Ping timeout: 264 seconds
+22:09:lh_cat: 傻逼   多数情况下析构隐式 noexcept
+22:10:lh_cat: 你给我 assert 啊
+22:10:FrankHB: 谁叫你显式noexcept的？
+22:10:FrankHB: 你assert自己noexcept二了怪谁。
+22:10:lh_cat: 我就问你是不是有人规定析构不能 assert
+22:11:lh_cat: 隐式就不 noexcept ？
+22:11:lh_cat: 你是傻逼么
+22:11:FrankHB: 我就吻你是不是有人规定隐式就noexcept？
+22:11:FrankHB: 你2b么。
+22:11:lh_cat: 我艹
+22:11:FrankHB: https://akrzemi1.wordpress.com/2013/08/20/noexcept-destructors/ 呵呵呵呵。。。
+22:11:FrankHB: 你能艹出啥。
+22:11:lh_cat: 帝球又掉节操
+22:12:FrankHB: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2010/n3166.html 你当别人没艹过？
+22:12:lh_cat: 你是不是析构里 assert 了还得 noexcept(false)？
+22:12:FrankHB: noexcept(false)个蛋。
+22:12:lh_cat: 我不看垃圾
+22:12:FrankHB: noexcept(assert(xxx))
+22:12:lh_cat: 帝球就是最大的垃圾
+22:12:FrankHB: 你不想看的那个垃圾跟你想的一样。
+22:12:FrankHB: 结果就没艹进C艹11里面。
+22:13:lh_cat: 标准傻逼的地方多了去了
+22:13:lh_cat: 包括帝球
+22:14:FrankHB: 标准跟我一样权威了么。
+22:14:FrankHB: 吱B自己没见过只会脑补。
+22:14:FrankHB: http://www.kolpackov.net/projects/c++/eh/dtor-1.xhtml
+22:14:FrankHB: 你当类似的破事C艹11前就没有？
+22:20:cleamoon joined channel
+22:25:lhanjian joined channel
+22:26:FrankHB: 这里标准当然是有SB的地方：看到一个throw居然不隐式noexcept(false)，把这个throw用一个函数包装一层就noexcept(false)了。
+22:26:FrankHB: 可惜吱了半天好像都没看出来。
+22:32:condy quit:Ping timeout: 265 seconds
+22:34:lh_cat: Frank 虎逼
+22:35:FrankHB: http://www.lenholgate.com/blog/2005/09/assert-is-evil.html 呵呵。。。
+22:36:FrankHB: 吱逼要排生肖么。。
+22:36:Plough quit:Quit: 碎叫
+22:54:lucifly joined channel
+22:56:lucifly: hello
+22:57:lucifly: anybody here?
+22:57:lucifly left channel:"bye"
+22:58:dantmnf: lucifar...
+22:59:hoxily quit:Quit: kick'em ass
+23:04:lhanjian quit:Ping timeout: 256 seconds
+23:12:slowcoach: 帝球出现了 大家快跑！
+23:13:slowcoach: (逃
+23:13:lh_mouse: [22:11:25] 18<27FrankHB18> 我就吻你是不是有人规定隐式就noexcept？
+23:13:lh_mouse: ^ 帝球节操掉光图
+23:14:cleamoon: 耻球X耗子
+23:17:nicball quit:Ping timeout: 272 seconds
+23:29:ring joined channel
+23:37:ring: Rutherford
+23:37:lh_mouse: !help
+23:37:lh_mouse: ~help
+23:37:lh_mouse: hmm

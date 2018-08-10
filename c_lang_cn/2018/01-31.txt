@@ -1,0 +1,214 @@
+01:05 lh_mouse quit:Ping timeout: 240 seconds
+01:21 N00d1e51 quit:Quit: Leaving.
+02:47 N00d1e5 joined channel
+03:53 Stevearzh quit:Read error: Connection reset by peer
+03:54 Stevearzh joined channel
+04:25 matchray: https://github.com/llvm-mirror/clang-tools-extra/blob/master/clangd/FuzzyMatch.cpp
+05:03 N00d1e5 quit:Quit: Leaving.
+05:03 N00d1e5 joined channel
+05:03 N00d1e5 quit:Client Quit
+05:34 N00d1e5 joined channel
+06:46 geordi joined channel
+08:44 lh_mouse joined channel
+09:19 L-ios joined channel
+09:31 matchray: https://twitter.com/HaskRay/status/958504973012164608
+09:44 N00d1e5 quit:Quit: Leaving.
+10:20 yonka joined channel
+10:20 yonka quit:Remote host closed the connection
+10:20 yonka joined channel
+10:46 hitman-usa joined channel
+10:49 Kaimaris quit:Ping timeout: 246 seconds
+10:52 Kaimaris joined channel
+11:25 ininke joined channel
+11:57 matchray: C++11 的 string_view 用哪家的
+12:07 hitman-usa is now known as gentoo-us
+12:21 ininke quit:Read error: Connection reset by peer
+12:24 Youmu: 自己造呀
+12:26 matchray: 小老鼠，怎麼辦，我連string_view也造不來
+12:31 ininke joined channel
+12:31 hanjian_l: matchray: 现在好像不流行shmget了？都直接mmap然后手动进程间共享了
+12:41 matchray: hanjian_l: 20年前的程式……
+12:42 hanjian_l: 不过shmget还可以用的很好的样子
+12:43 xhe joined channel
+12:44 \s quit:Remote host closed the connection
+12:46 \s joined channel
+12:47 xhe quit:Client Quit
+12:49 leon_e joined channel
+12:52 leon_e quit:Client Quit
+13:06 lh_mouse: 0.0
+13:22 matchray: std::basic_string::find(std::basic_string_view<CharT, Traits> sv, size_type pos = 0) const; // 我討厭member function
+13:22 matchray: 這種就沒法靠shim string_view
+13:23 matchray: 應該叫polyfill？
+14:00 gentoo-us quit:Remote host closed the connection
+14:02 gentoo-us joined channel
+14:04 matchray: 老鼠是不是認爲儘量用int，少用size_t
+14:46 hanjian_l: https://www.youtube.com/user/USENIXAssociation/videos 这个很值得订阅看
+14:48 hanjian_l: 可是size_t是unsigned啊
+14:48 hanjian_l: 我总倾向于妥协于POSIX API
+15:32 matchray: 在用各種技巧節省內存
+15:33 lh_mouse: matchray, 反了。
+15:33 lh_mouse: 傻逼 int  。
+15:33 lh_mouse: 1000 个 int 里  999 个 傻逼。
+15:33 hanjian_l: int被滥用的厉害
+15:34 hanjian_l: lh_mouse: size_t 是不是 >= int ?
+15:35 hanjian_l: 说错了应该是ssize_t 是不是 >= int
+15:48 yonka quit:Remote host closed the connection
+15:49 yonka joined channel
+15:51 yonka quit:Read error: Connection reset by peer
+15:51 yonka joined channel
+15:52 matchray: lh_mouse: 那麼用 long ?
+15:54 matchray: mov rax,rbx 3個字節而 mov eax,ebx 2個
+15:56 yonka quit:Ping timeout: 264 seconds
+16:04 ininke quit:Ping timeout: 260 seconds
+16:16 lh_mouse: matchray, 用 int32_t 。
+16:16 lh_mouse: int 基本是 specs 特权。
+16:16 lh_mouse: 例外如 std::istream::get() 的返回值。
+16:23 gentoo-us quit:Ping timeout: 255 seconds
+16:24 matchray: 儘量不要用 size_t ?
+16:24 matchray: 循環呢？ for (int32_t i = 0; i < int32_t(a.size()); i++)  ?
+16:25 matchray: specs? specifications?
+16:26 gentoo-us joined channel
+16:30 matchray: const string& vs string_view ?   string_view會多消耗一個寄存器但少一次間接尋址吧
+16:38 lh_mouse: [16:24:58] <matchray> 循環呢？ for (int32_t i = 0; i < int32_t(a.size()); i++)  ?   // 这个用 std::size_t  
+16:38 lh_mouse: [16:30:06] <matchray> const string& vs string_view ?   string_view會多消耗一個寄存器但少一次間接尋址吧 // 这不重要。
+16:38 matchray: ......
+16:38 matchray: 什麼重要
+16:39 lh_mouse: 寄存器什么的，完全不重要。
+16:41 hanjian_l: 每次看到小耗研究这些，我就决心不学不用艹
+16:41 hanjian_l: C艹
+16:41 hanjian_l: 日了狗了
+16:41 hanjian_l: 万恶之源万恶之源
+16:43 matchray: 少一次間接尋址重要？
+16:44 matchray: 我今天把各種 optional<string> 都改成 string
+16:44 matchray: 調整了 IndexType 等 struct layout
+16:44 matchray: 字節少的放在後面
+16:45 matchray: 用 int16_t int16_t 從 string detailed_name 提取子串組成原來的 string short_name
+17:08 lh_mouse: hanjian_l, 愚蠢。
+17:09 lh_mouse: matchray, 窝想学学做架构。  太底层的东西已经没多少发掘价值了。
+17:21 hanjian_l: lh_mouse: 那就跳槽到云计算的公司去啊
+17:22 hanjian_l: 以小耗的资历不难找吧
+17:22 lh_mouse: 难。
+17:23 hanjian_l: lh_mouse: 你愿意稍微降薪就不难。资深的C++开发很稀缺的
+17:23 hanjian_l: 要不然去ucloud/七牛这种二线云计算厂
+17:23 hanjian_l: 网易也不错啊
+17:24 hanjian_l: lh_mouse: 你把简历给我，我给你塞到阿里云CDN去。
+17:27 cleamoon_ joined channel
+17:30 lh_mouse: hanjian_l, https://www.lhmouse.com/resume/   一直就在这晾着。   不过窝在年前基本不考虑了。
+17:30 hanjian_l: lh_mouse: 小耗把自己的github更新进去
+17:31 hanjian_l: 我年后和阿里云的老伙计们吃顿饭，提下这个事儿
+17:31 lh_mouse: 0.0
+17:31 lh_mouse: 哇，谢谢你呢。
+17:33 hanjian_l: 还没成呢，谢啥，说不定浪费你时间
+18:10 hitman-usa joined channel
+18:11 gentoo-us quit:Quit: gentoo-us
+18:27 hitman-usa is now known as Gentoo-us
+18:30 varna joined channel
+18:30 varna: _(:з」∠)_夕莉莉莉莉莉莉莉莉
+18:30 Gentoo-us: 2333
+18:33 Aldrich: 一只羊驼子冒了出来
+18:39 hanjian_l: varna: 我还没下班
+18:39 hanjian_l: 捉鸡
+18:39 hanjian_l: 早上起来的太晚了
+18:39 hanjian_l: 太早走人行政又要罗嗦了
+18:40 Aldrich: https://www.bilibili.com/video/av18576395/?from=search&seid=4451056828497281714 淫 特 纳 雄 耐 尔
+18:40 hanjian_l: 我的小号没有建造用的资源了
+18:40 varna: 我强行回来，以为自家无锁缓冲有个悲剧，后来发现悲剧已经补好了
+18:40 Aldrich: 氪
+18:40 hanjian_l: 空看着十几个赚来的人性制造契约发呆
+18:40 hanjian_l: Aldrich: 不想氪资源
+18:40 varna: 最近在新的履单系统里强行把原先规则系统的轮子缩小了塞进去
+18:40 varna: 原来的产品太重了懒得用
+18:40 hanjian_l: varna: https://www.youtube.com/watch?v=D53T1Ejig1Q&t=2873s&list=WL&index=11
+18:41 hanjian_l: 这个推荐一下，很好玩的火焰图
+18:41 hanjian_l: 新款的flamegraph
+18:41 varna: (｡･ω･)ﾉ
+18:41 varna: 火焰图吼啊
+18:41 varna: Aldrich: https://www.bilibili.com/video/av18525078/ 雪 源 诅 咒
+18:42 Aldrich: 今晚还突突不
+18:43 varna: 随意
+18:43 hanjian_l: Aldrich: 羊驼子我就突
+18:43 hanjian_l: 那就突
+18:43 hanjian_l: 我想我要8点20左右才能上线
+18:43 Aldrich: OK，先等我外卖到了
+18:43 varna: 正好，我封一套缓冲
+18:45 hanjian_l: 今天没有建出4星以上的枪娘
+18:46 Aldrich: 今天又一只莫辛纳干
+18:46 Aldrich: 可以，这很共产
+18:46 hanjian_l: 哦，mk23和as val还不错
+18:46 hanjian_l: 还有9A91
+18:46 hanjian_l: 56-1也是大欧派啊
+18:47 varna: 我想到一个问题啊
+18:47 varna: 血源的故事里，主人公不就是要和野兽先辈们交战么
+18:48 varna: 1. 野兽先辈的称号里有野兽，劳伦斯是第一任教区长，后来化身怪兽，是先辈也是野兽
+18:48 varna: 2. 野兽先辈雷普远野，是屑；劳伦斯主持人体实验，也是屑
+18:49 varna: 3. 野兽先辈体格强壮，劳伦斯一击1.9k+，体格也很强壮
+18:49 cleamoon_: 23333333
+18:49 varna: 4. 野兽先辈喜欢王道征途，劳伦斯以力破巧，也是王道
+18:50 varna: 5. 野兽先辈喜欢红茶，劳伦斯讲一口英式口音的英语，来自红茶之国
+18:50 varna: 6. 已知160以下的114514论证都存在，数字论证略
+18:50 varna: Q.E.D.
+18:51 Aldrich: 这人完了
+18:52 Aldrich: 怎么逸站还自己搞了个微博出来
+18:52 hanjian_l: uccu
+18:52 hanjian_l: 国产枪娘似乎都有大欧派
+18:52 varna: M99
+18:56 varna: 实际上，也有不错的论证指出Q.E.D.就是野兽先辈
+19:06 varna: 如果脱离inm的话恐怕还有个更恶意的论证：黑泽逢世伊碧塔丝说
+19:12 Aldrich: 没有野兽先辈奈亚子说么
+19:16 varna: 那么人偶什么的，有在用吧
+19:17 Aldrich: - Это может быть
+19:20 varna: 现在看《舞娘》MV里刷「这血量没法尬舞」的弹幕，我终于可以笑而不语了
+19:21 Aldrich: 然而你已经被锁定惹
+19:21 perr joined channel
+19:21 Aldrich: 举头三尺有神淋
+19:26 varna: (｡･ω･)ﾉ法兰舞法天舞台！
+19:27 varna: (｡･ω･)ﾉLighting法苏天女平静的月光温柔丝滑疼你
+19:34 Gentoo-us quit:Remote host closed the connection
+19:52 hanjian_l: varna: 来来来
+19:52 hanjian_l: 突突突 Aldrich 
+19:55 varna: (｡･ω･)ﾉ
+19:55 varna: 地狱厨房集合
+20:03 perr quit:Quit: Leaving
+21:01 CyrusYzGTt quit:Ping timeout: 268 seconds
+21:29 yonka joined channel
+21:31 N00d1e5 joined channel
+21:33 yonka quit:Ping timeout: 248 seconds
+21:49 iyzsong joined channel
+21:55 hanjian_l: 今天是咸鱼的一天哪
+21:55 iyzsong: orz
+22:15 N00d1e5 quit:Quit: Leaving.
+22:20 varna quit:Ping timeout: 268 seconds
+22:26 varna joined channel
+22:40 Aldrich: 毕竟太卡……
+22:40 varna: 刚开始玩的时候一半时间都这个感觉，特尴尬
+22:41 Aldrich: 噫吁嚱
+22:41 Aldrich: 另外刚才那发2:40是SIG-510
+22:41 varna: 2:40没好枪
+22:42 Aldrich: 噫吁嚱
+22:43 Aldrich: puuuuu
+22:43 Aldrich: 三越出了砍口垒周边衣架……
+22:43 Aldrich: 5400JPY
+22:44 Aldrich: https://wx2.sinaimg.cn/mw690/005KjWTzly1fo01wmus26j30k00zkta4.jpg
+23:18 varna: 龙之信条里面，有个线上哥们雇了我捏的小姐姐从者之后似乎觉得很好舔，给了一个最高级黑咒武器当礼物……
+23:19 varna: 土豪真可怕
+23:20 Aldrich: OTL
+23:20 varna: 开出来是我用的顶级匕首，总之赚到
+23:24 lh_mouse: geordi, -c struct foo { int a; foo(int b) : a(b) try { } catch(int){ } };
+23:24 geordi: error: expected '{' before 'try'
+23:24 lh_mouse: geordi, -c struct foo { int a; foo(int b) try : a(b) { } catch(int){ } };
+23:24 geordi: Success
+23:31 lh_mouse quit:Ping timeout: 240 seconds
+23:35 Aldrich: 再造一发
+23:35 Aldrich: 03:25
+23:36 Aldrich: 噫吁嚱
+23:36 varna: 过北京时间12点我也造一点
+23:40 Aldrich: 噫，2-1e好烧桶
+23:40 Aldrich: 果然现在就去那里练级还太早了么
+23:42 varna: 改修一下
+23:46 varna: SMG的回避重要
+23:47 cleamoon_ quit:Quit: Connection closed for inactivity
+23:49 Aldrich: 另外八千效能的队伍一般平均多少级
+23:50 varna: 没仔细记，好好配阵型和装备的话感觉四五十级
+23:50 Aldrich: 了解
+23:51 Aldrich: 那我先练一队50的，然后等着刷中级……
+23:52 hanjian_l: 日了，睡不着

@@ -1,0 +1,163 @@
+14:16 Oyodo joined channel
+14:30 Mokou joined channel
+14:31 cleamoon joined channel
+16:10 doublehou joined channel
+16:15 CyrusYzGTt joined channel
+16:18 lhanjian: 自从大家都开始上班以后，频道冷清了不少额
+16:18 lhanjian: 也就红旗偶尔和羊驼子打打舰娘
+16:19 lhanjian: cleamoon: 这样ｆｉｒｅｆｏｘ又可以回来继续用NPAPI了？
+16:21 CyrusYzGTt quit:Ping timeout: 276 seconds
+16:54 * lh_mouse slaps lhanjian around a bit with a large trout
+16:57 lhanjian: 小耗
+17:07 StardustX: 呼，终于不用担心明年秋天没有学上了，给校园生活续了三年
+17:11 lhanjian: ２
+17:11 lhanjian: StardustX: 读研？
+17:11 lhanjian: 高中？
+17:12 StardustX: 读研
+17:13 doublehou quit:Ping timeout: 240 seconds
+17:13 StardustX: EE横竖是药丸，毕业生大部分都去写代码了，不会写代码好多跑去当产品经理了
+17:20 cleamoon-mobile joined channel
+17:21 lhanjian: 嗯
+17:21 lhanjian: 读ＣＳ，妥妥的
+17:21 lhanjian: 我就是ＥＥ（通信工程），妥妥地写代码
+17:24 cleamoon-mobile quit:Ping timeout: 250 seconds
+17:26 lh_mouse: https://github.com/lhmouse/MCF/tree/master/MCFCRT/src/stdc/math   求测。
+17:26 lh_mouse: gcc sin.c -std=c11 -masm=intel -O3
+17:35 doublehou joined channel
+17:44 cleamoon-mobile joined channel
+17:49 doublehou quit:Read error: Connection reset by peer
+17:51 cleamoon-mobile quit:Ping timeout: 250 seconds
+17:52 cleamoon-mobile joined channel
+17:57 cleamoon-mobile quit:Ping timeout: 250 seconds
+18:06 Mokou: http://ww2.sinaimg.cn/mw690/7e948b4djw1f7l6f8nq88j20ku112q8e.jpg 三星莉害啊
+18:06 StardustX quit:Remote host closed the connection
+18:07 FrankHB quit:Ping timeout: 265 seconds
+18:11 cleamoon-mobile joined channel
+18:19 cleamoon-mobile quit:Ping timeout: 264 seconds
+18:22 cleamooon joined channel
+18:37 FrankHB joined channel
+18:43 StardustX joined channel
+18:48 perr joined channel
+18:57 StardustX quit:Read error: Connection reset by peer
+18:57 StardustX joined channel
+19:09 iyzsong joined channel
+19:51 iyzsong: (┙>∧<)┙へ┻┻
+20:23 yimis joined channel
+20:25 yimis quit:Client Quit
+20:36 Mokou: http://ww1.sinaimg.cn/mw690/a7cb85c1jw1f7lacetjxgj20hs0h5gn0.jpg
+20:37 xxxxxxxx joined channel
+20:50 cleamooon quit:Quit: Connection closed for inactivity
+21:11 lh_mouse: 买衬衫送了个领结。
+21:11 lh_mouse: 结果人人都说是柯南。
+21:24 varna joined channel
+21:24 varna: (｡･ω･)
+21:25 Mokou: varna: 你不考虑T450或者T460？
+21:25 Mokou: x40那一代我印象中恶评不少
+21:26 varna: 恶评例如？
+21:26 Mokou: 触摸板上方的按键变成了触摸式而不是实体按键，而且形状是方的，很容易按偏
+21:27 varna: 哦，那个啊
+21:27 varna: 我基本不用触板的，所以……
+21:27 Mokou: x50又改回去了
+21:27 varna: 那反而不好了
+21:27 varna: 我觉得那个废柴触板很好看
+21:27 FrankHB quit:Read error: Connection reset by peer
+21:27 Mokou: 总之x40应该算是试验平
+21:27 Mokou: 品*
+21:28 FrankHB joined channel
+21:28 varna: 性能ok的话也不错的
+21:29 Mokou: x40啥配置
+21:29 varna: i5-4210M
+21:29 Mokou: haswell啊
+21:30 Mokou: 不考虑来个skylake试试能不能复现爆炸么
+21:30 varna: 你看我一直纠结的几款型号就知道我在意的是什么了
+21:31 Mokou: 4210M是啥封装？
+21:31 varna: BGA可换
+21:31 varna: 然而不打算换
+21:31 Mokou: 噫
+21:32 Mokou: 我觉得你可以考虑来个新点的
+21:32 varna: 太贵
+21:32 Mokou: 毕竟haswell的tsx支持被干掉了不是
+21:32 Mokou: T440多少钱
+21:33 varna: 我驲
+21:33 varna: 4210U那款没货了
+21:33 Mokou: ……
+21:33 FrankHB quit:Ping timeout: 250 seconds
+21:33 varna: 4210M还是贵了点
+21:35 Mokou: 另外这几天我才发现原来linux下可以手动控制显卡风扇速度
+21:35 varna: puuu
+21:36 Mokou: /sys 下有个文件可以敲一个0到255的值进去，对应风扇关闭和最大
+21:36 Mokou: 现在默认是35
+21:37 Mokou: 不过我没找到调核心频率的地方
+21:38 varna: 不过现在我这个E430还有时候开机报fan error
+21:38 Mokou: 我一般手动把风扇转速改成100
+21:38 Mokou: ……
+21:39 Mokou: 啊
+21:39 Mokou: /sys/class/drm/card0/device/hwmon/hwmon[0-9]/pwm1
+21:39 Mokou: radeon驱动限定
+21:39 varna: 噫吁戲
+21:40 Mokou: 另外我基本上可以确定linux驱动不怎么会节能了
+21:40 Mokou: 关掉风扇温度直接暴涨……
+21:43 varna: Linux驱动在节能方面总是一塌糊涂
+21:43 varna: 要不我为什么问睿频的事情……
+21:43 varna: 当然这个是反过来的
+21:44 varna: 据说有些犀利的睿频驱动降了之后升不上来
+21:44 Mokou: 66666666666
+21:44 Mokou: 我现在CPU大约30多度
+21:44 varna: OTL
+21:44 Mokou: 毕竟基本空载
+21:45 Mokou: 而且NZXT H440自带四个风扇……
+21:45 varna: 我低载四十度……
+21:45 Mokou: 你那毕竟笔记本
+21:46 Mokou: 不过linux下有什么烤机程序么
+21:46 Mokou: 我想试试频率能不能升上去
+21:46 varna: 不知道，你编译个什么吧
+21:46 Mokou: llvm编译不过十分钟……
+21:47 iyzsong: _(:з」∠)_
+21:47 varna: llvm比较快的
+21:47 varna: 试试在十个不同的地方编译火狐
+21:47 Mokou: 噫
+21:48 iyzsong: 2333
+21:48 Mokou: 然后我网都没法上
+21:48 Mokou: 我开16个进程while(1);？
+21:48 varna: 意义不大
+21:49 Mokou: 也是
+21:49 Mokou: 一个进程while(1)五十度就封顶了
+22:17 xxxxxxxx: http://finance.sina.com.cn/stock/usstock/c/2016-09-07/doc-ifxvqctu6450701.shtml
+22:17 xxxxxxxx: 这说法真好玩
+22:19 varna: 哪儿混进来的粪青……
+22:19 Mokou: “學校是不是有病？？？！！！！Study Tour去北韓？？？？？？？？？？？還要簽生死狀？？？？？？？？？ ”
+22:20 varna: 2333333
+22:22 xxxxxxxx: [环球网综合报道]据日本《产经新闻》7月21日报道，关于2016年2月在中国台湾桃园国际机场发现面额总值为1.19亿日元（约合人民币743万元）的疑似日本旧版一万日元纸币一事，台湾当局方面21日发布鉴定结果称均为伪钞。今后准备作为伪造货币事件展开调查。
+22:24 varna: 对了，推荐个感觉还不错的小SLG: Shadowrun系列
+22:24 varna: 设定背景比较Cyberpunk
+22:24 xxxxxxxx: 伍媚来粉粉[广东东莞]
+22:24 xxxxxxxx: 我只能说：我羡慕日本人，没有假货，反观我们，没有真货！打击假货，力度能重点吗？
+22:24 yimis joined channel
+22:24 varna: 打起来不太难，还挺有趣的
+22:25 xxxxxxxx: 这评论要死...
+22:26 xxxxxxxx: 日本女子逼朋友卖淫1000余次 获利1000万日元
+22:27 xxxxxxxx: 我估计也就是她没屌 不然还得加一条强X
+22:29 xxxxxxxx: 杉山步与卖淫女子曾一起在静冈市的风俗店（性产业）工作。杉山步通过社交软件强迫女子卖淫。她找借口要求对方给自己现金，称：“你做了让我不开心的事，卖淫赚钱给我”。
+22:29 varna: 理由太屌……
+22:29 Mokou: 6666666
+22:29 xxxxxxxx: 有道理 道歉时露出胸部是不够的
+22:30 Mokou: http://ww2.sinaimg.cn/mw690/741a5a1fgw1f7ldt0il5bj20dc0a474x.jpg
+22:31 xxxxxxxx: 噗
+22:32 iyzsong: - -  
+22:37 Mokou: http://ww1.sinaimg.cn/mw690/707e96d5gw1f7ld9u0193j20do0f174t.jpg
+23:00 yimis quit:Ping timeout: 240 seconds
+23:08 xxxxxxxx: http://img.mp.itc.cn/upload/20160907/9c7b9fff9f9147bba55981c2cff9ced2_th.jpeg
+23:09 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:09 varna quit:Quit: leaving
+23:10 perr quit:Ping timeout: 240 seconds
+23:11 perr joined channel
+23:28 lh_mouse: https://sourceforge.net/p/mingw-w64/mailman/message/35353216/
+23:31 StardustX quit:Read error: Connection reset by peer
+23:32 yimis joined channel
+23:39 yimis quit:Quit: yimis
+23:39 lh_mouse quit:Ping timeout: 240 seconds
+23:49 cleamooon joined channel
+23:54 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/15/gw_187936.jpg@596w_1l.jpg
+23:54 cleamooon: 光启科学宣布了投资15亿美元建太空旅游和未来科技主题公园的计划。该集团正准备为亚洲首个近太空旅游项目进行载人试验。它已经完成了“旅行者”号高空气球的无人驾驶试验。这种高空气球装载着通信和天气监测设备，还能将游客送上24千米的高空。光启科学称，将
+23:54 cleamooon: 在未来两年内进行载人飞行试验。总部位于深圳的光启科学正在开发一系列“未来技术”，包括一款动力外骨骼。它在海外收购了几家技术公司，还设立了一支5000万美元、专门投资以色列高科技初创企业的投资基金，计划很快设立第二支基金。
+23:56 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/15/0y_231156.jpg@596w_1l.jpg  #以后国内也可以干妹妹了

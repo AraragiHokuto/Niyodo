@@ -1,0 +1,193 @@
+00:00 varna: 233333
+00:01 cleamoon: 垂头丧气的灵梦被河取骂“我对你太失望了”，意外的蛮萌
+00:01 varna: 巫女很好的
+00:01 varna: 很可爱的
+00:02 cleamoon: +
+00:02 cleamoon: 2un只爱这巫女，其他人都可有可无的
+00:03 cleamoon: 连人气最高的摩罗砂，神主都称其为“反正是个配角”
+00:07 varna: 撸撸睡了，明天开始就要血拼……
+00:07 varna: 健斗
+00:07 varna quit:Quit: leaving
+00:08 H0P joined channel
+00:34 H0P quit:Ping timeout: 240 seconds
+00:42 H0P joined channel
+01:03 lh_cat joined channel
+01:05 lh_mouse quit:Ping timeout: 260 seconds
+01:09 H0P quit:Ping timeout: 264 seconds
+02:11 cleamoon quit:Ping timeout: 240 seconds
+02:20 lh_cat quit:Ping timeout: 240 seconds
+02:45 H0P joined channel
+02:52 cleamoon joined channel
+03:07 B005ter joined channel
+03:10 H0P quit:Quit: WeeChat 1.7
+03:15 B005ter quit:
+03:23 B005ter joined channel
+03:46 zwindl quit:Quit: Connection closed for inactivity
+03:58 cleamoon quit:Ping timeout: 240 seconds
+04:34 cleamoon joined channel
+04:58 B005ter quit:Remote host closed the connection
+05:25 B005ter joined channel
+05:40 cleamooon joined channel
+05:40 cleamooon quit:Remote host closed the connection
+05:42 cleamoon quit:Ping timeout: 248 seconds
+06:56 xhe joined channel
+07:32 Youmu_ joined channel
+07:33 lh_not_b1t joined channel
+07:36 condy_ joined channel
+07:37 Youmu quit:*.net *.split
+07:37 lh_not_bot quit:*.net *.split
+07:37 condy quit:*.net *.split
+07:37 condy_ is now known as condy
+07:37 Youmu_ is now known as Youmu
+08:02 B005ter quit:Remote host closed the connection
+08:33 xhe quit:Ping timeout: 240 seconds
+08:38 xhe joined channel
+08:49 iyzsong-w joined channel
+09:02 B005ter joined channel
+09:06 yimis joined channel
+09:06 yimis quit:Client Quit
+09:07 B005ter quit:Ping timeout: 255 seconds
+09:16 iyzsong-w: -.-
+09:22 Mokou joined channel
+09:42 randomclown joined channel
+09:50 ShiinaMashiro joined channel
+09:57 Mokou quit:Ping timeout: 240 seconds
+10:51 Stevearzh quit:Remote host closed the connection
+10:52 Stevearzh joined channel
+12:11 ShiinaMashiro quit:Quit: Connection closed for inactivity
+12:26 iyzsong-w quit:Ping timeout: 240 seconds
+12:58 Youmu is now known as YoumuChan
+12:58 YoumuChan is now known as Youmu
+13:18 lh_mouse joined channel
+13:22 iyzsong-w joined channel
+13:23 Youmu is now known as Youmu__
+13:23 Youmu__ is now known as Youmu
+13:37 lh_cat joined channel
+13:38 lh_cat: geordi: #define a 1'b2
+13:38 geordi: Success
+13:38 iyzsong-w quit:Ping timeout: 264 seconds
+13:38 lh_cat: geordi: use --clang
+13:38 geordi: Success
+13:38 lh_cat: geordi: #define q 1b2
+13:38 geordi: Success
+13:39 lh_cat: geordi: auto a = 1b2;
+13:39 geordi: error: unable to find numeric literal operator 'operator""b2'
+13:44 lh_cat: geordi: #define q 1'g2
+13:44 geordi: Success
+13:44 lh_cat: geordi: use --clang
+13:44 geordi: Success
+13:44 lh_cat: geordi: int a = 1'2';
+13:44 geordi: error: missing terminating ' character
+13:45 randomclown quit:Quit: Leaving
+13:45 lh_cat: geordi: int a = 1'b2; unsigned long long operator""b2(){ return 1; }
+13:45 geordi: error: digit separator outside digit sequence
+13:46 lh_cat: geordi: erase '
+13:46 geordi: error: unable to find numeric literal operator 'operator""b2'
+13:52 iyzsong-w joined channel
+14:08 xhe quit:Ping timeout: 255 seconds
+14:18 Youmu: geordi: show
+14:18 geordi: int a = 1b2; unsigned long long operator""b2(){ return 1; }
+14:35 xhe joined channel
+14:36 ring joined channel
+14:36 ring quit:Client Quit
+14:37 ring joined channel
+14:40 lh_mouse: geordi, double a = 1.0'2;
+14:40 geordi: Success
+14:44 ShiinaMashiro joined channel
+14:47 ring quit:Quit: Bye
+14:49 lh_mouse: geordi, << v(r,q); \ #define q 0'b1 \ #define r 0x \ #define v(x,y) v_(x,y) \ #define v(x,y) x##y
+14:49 geordi: error: "v" redefined
+14:49 lh_mouse: geordi, << v(r,q); \ #define q 0'b1 \ #define r 0x \ #define v(x,y) v_(x,y) \ #define v_(x,y) x##y
+14:49 geordi: 177
+14:57 lh_mouse: geordi, use --clang
+14:57 geordi: 177
+14:59 xhe quit:Ping timeout: 240 seconds
+15:01 xhe joined channel
+15:22 sottd joined channel
+15:28 Mokou joined channel
+15:49 lh_cat quit:Quit: Connection closed for inactivity
+16:06 xxxxxxxx joined channel
+16:35 zwindl joined channel
+17:01 ShiinaMashiro quit:Quit: Connection closed for inactivity
+17:22 B005ter joined channel
+17:32 iyzsong-w: x.x
+17:33 cleamoon joined channel
+17:36 whocares_2_ quit:Ping timeout: 245 seconds
+17:36 whocares_2 joined channel
+17:45 xhe quit:Quit: leaving
+18:09 cleamooon joined channel
+18:09 cleamoon quit:Read error: Connection reset by peer
+18:11 cleamooon quit:Read error: Connection reset by peer
+18:16 B005ter quit:Remote host closed the connection
+18:17 cleamoooon joined channel
+18:25 cleamoooon: 卧槽，刚知道，在海盗国，强奸幼女，只要没把人打伤，基本也就判1年，包括缓刑基本就是6个月左右
+18:25 cleamoooon: 如果未成年基本就是1-2个月
+18:25 cleamoooon: 而且，这包括外国人
+18:28 lh_mouse: geordi, { int big = INT_MAX; float zero = 0; auto val = big + zero; cout <<TYPE(val), val; } 
+18:28 geordi: lvalue float, 2.14748e+09
+18:29 sottd: 一月血赚,一年不亏?
+18:29 B005ter_ joined channel
+18:30 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:30 B005ter__ joined channel
+18:30 cleamoooon: 基本没法不拿到缓刑，除非你在里面干死了几个警察
+18:31 cleamoooon: 刚刚判了一个强奸了两个的18岁叙利亚人，2个月
+18:33 B005ter_ quit:Ping timeout: 240 seconds
+18:35 sottd: 可怕
+18:35 sottd: 果然是海盗国
+18:37 cleamoooon: 啊啊啊，我好想去qj呀
+18:41 ShiinaMashiro joined channel
+18:58 B005ter__ quit:Ping timeout: 240 seconds
+19:00 iyzsong-m joined channel
+19:02 iyzsong-m quit:Client Quit
+19:17 Dove joined channel
+19:34 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:37 B005ter joined channel
+19:50 hope1 joined channel
+19:52 cleamoooon: hope1, 爆
+19:59 B005ter: 新人有个关于 ruby 添加 PATH 的问题……
+19:59 B005ter: 我原来的 PATH 是 ： export PATH="/usr/local/sbin:$PATH"
+19:59 B005ter: 现在想添加 ruby 在里面，要加入什么代码呢？
+20:00 B005ter: 网上看到一行，不是很理解…… 所以不知道如何和当前的 PATH 结合
+20:00 B005ter: export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/ruby/2.4.0/bin" 
+20:02 cleamoooon: export PATH="$PATH:/usr/local/Cellar/ruby/2.4.0/bin"
+20:03 cleamoooon: 不过ruby是存在那种很谐的地方吗
+20:03 B005ter: 只添加一行这个就可以了哈？ 不用删掉我原来的对么大神？
+20:03 cleamoooon: 不用删
+20:03 cleamoooon: 而且我顶多算跳大神的
+20:04 B005ter: 我根据这个目录看看
+20:10 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 50.1.0/20161208153507]
+20:10 B005ter: 并没有这个路径，尴尬…… 我找到这个：/Users/Cleamoooon大神/.gem/ruby/2.0.0/bin
+20:10 B005ter: 我加这个试试
+20:11 cleamoooon: 惊了，你的电脑里怎么有我的名字...
+20:11 B005ter: 我发送前改的呀，哈哈哈哈……
+20:12 cleamoooon: ....
+20:13 B005ter: 好奇怪…… 我在 MacOS 上用 jekyll，它一定要去不存在的目录找文件……
+20:13 B005ter: _/usr/local/Cellar/ruby/2.4.0/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)
+20:13 B005ter: 我去 google 先……
+20:17 cleamoooon: mac orz 壕
+20:34 iyzsong-m joined channel
+20:35 iyzsong-m: (¯―¯٥)
+20:36 cleamoooon: 好多奇葩字母
+20:39 Mokou quit:Remote host closed the connection
+20:40 Mokou joined channel
+20:58 iyzsong-m quit:Ping timeout: 276 seconds
+21:11 ShiinaMashiro quit:Quit: Connection closed for inactivity
+21:23 iyzsong joined channel
+21:24 iyzsong quit:Remote host closed the connection
+21:26 zwindl quit:Quit: Connection closed for inactivity
+22:02 B005ter_ joined channel
+22:02 B005ter quit:Read error: Connection reset by peer
+22:23 lh_mouse: http://share.iclient.ifeng.com/news/sharenews.f?guid=95d86a32-5c40-40d5-af8d-894d50a1e547
+22:37 B005ter joined channel
+22:37 B005ter_ quit:Read error: Connection reset by peer
+22:48 xhe joined channel
+22:55 xhe quit:Quit: leaving
+22:57 xhe joined channel
+23:09 B005ter: 哪位前辈写 Markdown 博客啊？ 我想实现 MD 标题跳转
+23:09 B005ter: ### <div id="proj">PROJECT</div>
+23:10 B005ter: 然后…… div 什么的都是标题了……
+23:12 B005ter: <div id="proj"> ### PROJECT</div>
+23:12 B005ter: 自然也不行
+23:12 B005ter: 所以就要抛弃 MD 用常规的 <h12345> 了吧
+23:58 hope1: 正直者之死…… 放弃理解_(:з」∠)_
+23:58 lh_mouse: MD 有很多变种。

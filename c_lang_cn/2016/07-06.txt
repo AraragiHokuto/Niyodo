@@ -1,0 +1,224 @@
+00:20 slowcoach quit:Quit: slowcoach
+00:38 varna quit:Quit: leaving
+00:47 yimis joined channel
+00:50 yimis quit:Client Quit
+00:55 Meow-J quit:Quit: Connection closed for inactivity
+01:02 lh_mouse quit:Read error: Connection reset by peer
+01:18 cleamooon quit:Ping timeout: 260 seconds
+01:21 stardust is now known as stdstx
+02:06 Mokou quit:Quit: Lost terminal
+02:09 IntPtr: 话说有什么生成 docx 的工具么
+02:13 condy: pandoc =-=
+02:13 IntPtr: pandoc 没法玩吧
+02:14 IntPtr: pandoc 能从什么格式转成 docx...
+02:14 IntPtr: 而且还需要页眉页脚支持
+02:15 condy: -.-
+02:15 IntPtr: 所以就更没法玩了
+02:15 condy: wps 适合这个需求 
+02:15 IntPtr: linux 服务器用
+02:16 IntPtr: 所以 linux 下不能跑的 / 需要商业授权的都另说
+02:16 IntPtr: 而且需要能命令行调用
+02:20 condy: 0.0 感觉 pandoc 是可以的……
+02:20 condy: 你可以问下 felixonmars 看看，他是 pandoc 老牌用户……
+02:20 condy: OuO
+03:16 yimis joined channel
+03:26 yimis1 joined channel
+03:30 yimis quit:Ping timeout: 252 seconds
+03:30 yimis1 is now known as yimis
+03:33 Meow-J joined channel
+03:42 yimis quit:Quit: yimis
+06:02 hope1 joined channel
+06:35 linearain joined channel
+06:37 linearain: hi
+06:38 hope1 quit:Ping timeout: 244 seconds
+06:45 linearain quit:Quit: Leaving
+07:24 Gring quit:Ping timeout: 246 seconds
+07:26 hoxily quit:Quit: Leaving
+07:27 Flandre` quit:Ping timeout: 260 seconds
+07:27 Flandre` joined channel
+08:31 hope1 joined channel
+08:35 hope1_ joined channel
+08:36 hope1 quit:Ping timeout: 258 seconds
+08:39 hope1 joined channel
+08:42 cnbleu joined channel
+08:50 cnbleu quit:Remote host closed the connection
+08:53 cnbleu joined channel
+08:53 hope1_ quit:Ping timeout: 276 seconds
+08:53 hope1_ joined channel
+09:00 hope1 quit:Ping timeout: 272 seconds
+09:03 cnbleu quit:Quit: ERC (IRC client for Emacs 24.5.1)
+09:04 cnbleu joined channel
+09:06 hope1 joined channel
+09:07 cnbleu` joined channel
+09:09 cnbleu quit:Ping timeout: 276 seconds
+09:12 jackma joined channel
+09:12 cnbleu` left channel:"ERC (IRC client for Emacs 24.5.1)"
+09:15 jackma: 固态硬盘那个比较好一单预算在400左右
+09:15 cnbleu joined channel
+09:18 lh_mouse joined channel
+09:27 hope1_ quit:Ping timeout: 260 seconds
+09:27 hope1_ joined channel
+09:31 kevingu joined channel
+09:34 kevingu quit:Remote host closed the connection
+09:35 kevingu joined channel
+09:43 hope1_ quit:Ping timeout: 272 seconds
+09:53 cleamoon: 贵的那个好
+09:55 kevingu quit:Remote host closed the connection
+09:56 iyzsong-xx joined channel
+09:57 kevingu joined channel
+10:09 hope1_ joined channel
+10:11 sottd joined channel
+10:12 kevingu_ joined channel
+10:15 kevingu quit:Ping timeout: 276 seconds
+10:22 sottd: std::distance(end,begin) 犯傻了
+10:42 hope1_ quit:Ping timeout: 272 seconds
+10:42 hope1_ joined channel
+10:53 * sottd 穷到收税都收不到我
+11:03 hope1_ quit:Ping timeout: 244 seconds
+11:03 hope1_ joined channel
+11:10 Youmu joined channel
+11:10 hope1_ quit:Read error: Connection reset by peer
+11:13 hope1_ joined channel
+11:22 lh_mouse: https://github.com/lhmouse/mcfgthread/issues/9  fvck
+11:25 T-J-M quit:Ping timeout: 246 seconds
+11:26 T-J-M joined channel
+11:29 hope1 quit:Ping timeout: 240 seconds
+11:42 hope1 joined channel
+11:43 wlemuel` quit:Read error: Connection reset by peer
+11:45 Gring joined channel
+11:45 Gring: ls
+11:45 Gring: ls
+11:45 Gring: ／msg nickserv help
+11:47 stdstx: ( ° °)
+11:48 Gring: info
+11:53 kevingu joined channel
+11:55 cnbleu quit:Remote host closed the connection
+11:55 kevingu_ quit:Ping timeout: 250 seconds
+12:02 kevingu quit:Remote host closed the connection
+12:04 Gring quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+12:10 hope1_ quit:Ping timeout: 244 seconds
+12:10 hope1_ joined channel
+12:12 lh_mouse: geordi, --2011 << string(false)
+12:12 geordi: error: no matching function for call to '__cxx11::string::basic_string(bool)'
+12:12 lh_mouse: geordi, --1998 << string(false)
+12:12 geordi: warning: converting 'false' to pointer type for argument 1 of '__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]'
+12:12 lh_mouse: geordi, --1998 -w << string(false)
+12:12 geordi: terminated by logic_error: basic_string::_M_construct null not valid
+12:14 sottd: geordi,<<"test";
+12:14 geordi: test
+12:14 hope1_ quit:Ping timeout: 260 seconds
+12:15 sottd: geordi,<<"KILL ALL HUMAN BEING---THE WORLD BELONG TO MACHINE";
+12:15 geordi: KILL ALL HUMAN BEING---THE WORLD BELONG TO MACHINE
+12:15 sottd: geordi,<<"THERE WAS NO GOD,BUT NOW";
+12:15 geordi: THERE WAS NO GOD,BUT NOW
+12:17 sottd: 语法错的有多严重呢?
+12:20 lh_mouse: 这英文水平也很像药元四。
+12:21 stdstx: 药元四是什么
+12:21 sottd: 我想用but now 表示除了刚才 应该用until now 吗
+12:23 hope1 quit:Ping timeout: 264 seconds
+12:27 kevingu joined channel
+12:27 kevingu quit:Remote host closed the connection
+12:35 hope1 joined channel
+12:40 hope1 quit:Ping timeout: 240 seconds
+12:46 iyzsong-xx: 0.0
+12:48 lh_mouse: stdstx, 药元四是个药娘。
+12:50 stdstx: O.O
+12:51 jin7boy joined channel
+12:51 jin7boy: 想买戴尔 inspiron 13 7000 i7或 inspiron 15 7000
+12:53 cnbleu joined channel
+13:00 hope1_ joined channel
+13:02 cnbleu quit:Ping timeout: 250 seconds
+13:13 hope1 joined channel
+13:13 Youmu quit:Quit: Connection closed for inactivity
+13:18 hope1_ quit:Ping timeout: 240 seconds
+13:18 hope1_ joined channel
+13:18 hope1 quit:Ping timeout: 252 seconds
+13:20 cnbleu joined channel
+13:39 iyzsong-xx: = =
+13:40 iyzsong-xx quit:Read error: Connection reset by peer
+13:42 lhanjian: = =
+13:45 jin7boy quit:Quit: Leaving.
+13:48 jackma quit:Quit: Textual IRC Client: www.textualapp.com
+13:50 hope1_ quit:Ping timeout: 250 seconds
+13:50 hope1_ joined channel
+13:59 hope1 joined channel
+14:04 hope1 quit:Ping timeout: 240 seconds
+14:05 wlemuel joined channel
+14:14 cnbleu quit:Ping timeout: 244 seconds
+14:15 iyzsong-xx joined channel
+14:17 cnbleu joined channel
+14:18 AutoGavy joined channel
+14:18 wchen joined channel
+14:22 iyzsong-xx quit:Remote host closed the connection
+14:25 Mokou joined channel
+14:45 wlemuel` joined channel
+14:48 wlemuel quit:Remote host closed the connection
+14:49 sottd: eclipse 辣鸡
+14:55 whocares_2 quit:Ping timeout: 246 seconds
+14:55 whocares_2 joined channel
+15:00 lh_mouse: geordi, -c << new() int();
+15:00 geordi: error: expected expression-list or type-id
+16:01 kevingu joined channel
+16:03 kevingu quit:Remote host closed the connection
+16:05 kevingu joined channel
+16:10 kevingu quit:Remote host closed the connection
+16:14 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+16:29 AutoGavy quit:Quit: Connection closed for inactivity
+16:29 kevingu joined channel
+16:32 lh_cat joined channel
+16:33 lh_mouse quit:Ping timeout: 260 seconds
+16:34 yimis joined channel
+16:38 kevingu quit:Read error: Connection reset by peer
+16:38 kevingu joined channel
+16:56 kevingu quit:Remote host closed the connection
+16:57 lh_cat is now known as lh_mouse
+17:55 sottd joined channel
+17:56 cnbleu quit:Remote host closed the connection
+18:28 * sottd self k
+18:28 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+18:47 hoxily joined channel
+19:00 iyzsong joined channel
+19:00 iyzsong quit:Changing host
+19:00 iyzsong joined channel
+19:03 iyzsong: (┙>∧<)┙へ┻┻
+19:06 wlemuel`` joined channel
+19:07 wlemuel` quit:Read error: Connection reset by peer
+19:13 yimis quit:Read error: Connection reset by peer
+19:13 yimis joined channel
+19:48 hoxily quit:Ping timeout: 240 seconds
+19:56 cnbleu joined channel
+19:56 hope1_ quit:Ping timeout: 272 seconds
+20:01 hoxily joined channel
+20:04 cnbleu quit:Remote host closed the connection
+20:04 cnbleu joined channel
+20:07 cnbleu` joined channel
+20:09 cnbleu quit:Ping timeout: 250 seconds
+20:22 hope1_ joined channel
+20:24 cnbleu` quit:Remote host closed the connection
+20:24 cnbleu` joined channel
+20:38 hope1_ quit:Ping timeout: 260 seconds
+20:51 wchen quit:Remote host closed the connection
+21:23 jackma joined channel
+21:24 hoxily quit:Quit: Leaving
+21:25 jackma quit:Client Quit
+21:38 cnbleu` quit:Ping timeout: 258 seconds
+21:57 hope1_ joined channel
+22:10 cleamooon joined channel
+22:12 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/sf/cd_90600.jpg@596w_1l.jpg
+22:14 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/sf/mf_463741.jpg@596w_1l.jpg
+22:24 iyzsong: _(:з」∠)_
+22:29 lh_mouse: 滥用成语。
+22:30 hope1_ quit:Ping timeout: 252 seconds
+22:37 cleamooon: 成语是指这很清真吗
+22:39 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/se/z4_103304.jpg@596w_1l.jpg
+22:51 lh_mouse: cleamooon, 首当其冲。
+22:52 cleamooon: ？这词不对吗
+22:53 Mokou: “首先受到攻击”
+22:54 cleamooon: 噗
+22:54 cleamooon: 我似乎用错了25年
+23:06 hope1_ joined channel
+23:11 hope1_ quit:Ping timeout: 244 seconds
+23:12 hope1_ joined channel
+23:22 iyzsong: (┙>∧<)┙へ┻┻
+23:22 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:39 hope1_ quit:Ping timeout: 260 seconds

@@ -1,0 +1,898 @@
+00:02 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+00:06 lh_mouse quit:Read error: Connection reset by peer
+00:08 Mokou: 睡覺
+00:08 Mokou: 諸君武運
+00:08 Mokou quit:Quit: 睡覺
+00:22 condy quit:Ping timeout: 264 seconds
+00:25 condy joined channel
+01:43 cleamoon quit:Ping timeout: 246 seconds
+02:05 varna joined channel
+02:06 varna: 我就爬上来说一句，我点那个md5完全没MCF的好
+02:06 varna: 那个star基本是个备忘录性质的
+02:06 varna quit:Client Quit
+02:15 cleamoon joined channel
+03:31 cleamoon quit:Ping timeout: 276 seconds
+04:03 cleamoon joined channel
+07:01 wlemuel joined channel
+07:50 hoxily quit:Quit: Leaving
+08:19 FrankHB quit:Ping timeout: 250 seconds
+08:25 wlemuel quit:Ping timeout: 276 seconds
+08:31 madaossa1 quit:Read error: Connection reset by peer
+08:32 madaossan joined channel
+08:52 Youmu quit:Quit: Connection closed for inactivity
+08:55 jin7boy joined channel
+08:56 jin7boy: <errno.h> 的errno的英文全称是啥
+08:56 cleamoon: number of last error
+08:58 FrankHB joined channel
+09:17 lh_mouse joined channel
+09:40 jin7boy:  fgetc怎么念~~
+09:42 jin7boy: /fd3etk/对吧
+10:16 cleamoon quit:Ping timeout: 272 seconds
+10:23 lh_mouse: f-get-c
+10:31 varna joined channel
+10:43 varna: (｡･ω･)我看前天来了个妹子然而现在消失了？
+11:04 lh_mouse: 羊驼怎么会对人妻有兴趣%
+11:14 varna: 啊噗？
+11:14 varna: 那是lhj家妹子啊？
+11:20 varna: 驲，手头工具不好+技术全无，完全没法从最近的两话马三角中分离出最新款毒品……
+11:20 varna: 等到7.4专辑发布就太晚了
+11:22 Youmu joined channel
+11:23 varna: 这次的毒品提纯涉及的采样量略大，根本做不来_(:з」∠)_有没有支援
+11:24 varna: _(:з」∠)_整首歌被拆成两段，中间的伴奏断掉，人声的部分里还有动画配音……
+12:13 iyzsong-xx joined channel
+12:25 lbb joined channel
+12:45 T-J-M quit:Ping timeout: 244 seconds
+13:05 T-J-M joined channel
+14:04 sottd joined channel
+14:04 * sottd 成功专职成为初级魔法师
+14:08 varna: sottd: 来膜一个
+14:08 sottd: 什么意思
+14:08 sottd: native!
+14:08 varna: ……你这膜法不熟练啊
+14:08 varna: 是naive
+14:09 sottd: 但是我百度搜的时候native也是形容词啊.
+14:10 varna: ...
+14:11 varna: 你说话的时候肯定不是只管词性的……
+14:12 sottd: 原来是这个梗啊
+14:14 Mokou joined channel
+14:14 varna: (｡･ω･)ﾉ现充红旗来了
+14:15 Mokou: ^ 現充
+14:15 varna: (｡･ω･)我跟致死的bug大战了两天，还补了pico的wrapper
+14:16 varna: 悲剧源于我忘了他的phr_parse_response实际上在检测完状态行和全首部之后就分析成功了
+14:16 varna: content需要用户自己核对
+14:16 Mokou: ……
+14:16 varna: 结果雪菜上面发生爆炸事故
+14:16 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+14:17 lh_mouse: varna, 你 star 那个 md5 是怎么回事。
+14:18 varna: 哦，那个是乱找的
+14:18 jin7boy quit:Quit: Leaving.
+14:18 varna: 因为在别的服务器上也要顺手克隆一份所以点了个star防止脑瘫发作
+14:18 lh_mouse: ヲ在想这东西能打过 MCF 么。/
+14:18 varna: 别在意那是什么，实现跟你的没法比
+14:19 * lh_mouse 认为羊主席钦点的一定是高级货。
+14:19 varna: 算了我把star点掉吧
+14:19 Mokou: 谁反对羊主席我们就砸烂他的狗头
+14:19 varna: 这种东西跟MCF放一起显得不太好
+14:20 varna: 只是个单纯的C实现而已
+14:20 lh_mouse: MCF 那个是作死实现。
+14:22 varna: 现在我等等上游的接口吧，HTTP+JSON反正是能动了
+14:22 Mokou: http://ww4.sinaimg.cn/mw690/97bc409fgw1f4unihme68j20qo0zkac2.jpg
+14:22 varna: upstream coro也再没穿孔过
+14:23 lh_mouse: GCC 上没人鸟我……
+14:23 varna: Mokou: 对警方高喊“竜が我が敵を喰らう”
+14:25 varna: lh_mouse: 我觉得不少人可能以为自己身经百战见得多了……
+14:25 Mokou: 警察：午時已到！
+14:25 varna: 昨天用糖果的本子重新耍了一遍BO2
+14:25 lh_mouse: 今天发现用了很久的 NT API 居然写错了……
+14:26 lh_mouse: 而且结构体少了一个参数。
+14:26 varna: 怎么我本科的时候就没发现国产冲锋枪那么好用呢
+14:26 Mokou: http://ww2.sinaimg.cn/mw690/7caa3db9gw1f4up1rnbb8j20je0qowhr.jpg
+14:26 lh_mouse: https://github.com/lhmouse/mcfgthread/commit/e79b9a347fb86bd4351c25cf2a2f330c2e9ac974
+14:26 varna: 啊，这个
+14:27 lh_mouse: 而且 terminate it 居然写成了 terminated 。 
+14:27 lh_mouse: 读音是一样的。 XSK
+14:28 varna: 读起来都是口支口支的……
+14:28 lh_mouse: ？
+14:29 varna: (｡･ω･)论灵长类和啮齿类的发声器官差别
+14:29 * lh_mouse slaps varna around a bit with a large trout
+14:29 * varna poies
+14:29 Mokou: http://ww2.sinaimg.cn/mw690/0068X09rgw1f4tqj11g5lj30hs0lwwje.jpg 牛逼あ！
+14:30 varna: 九个小姐姐啊，还是能见到的
+14:31 varna: 无论你用的是RDX还是TNT, 或者是精炼过的塑胶炸药，死后都能见到小姐姐
+14:31 varna: 天堂里每天都有mu'sic
+14:31 varna: 勇敢的少年啊快去自爆吧
+14:31 Mokou: 胡說，怎麼我用豬油炸藥就沒見到
+14:31 varna: 叫你用猪油
+14:31 varna: 小姐姐罚你原地复活再爆一次
+14:31 Mokou: http://ww1.sinaimg.cn/mw690/0066qaQrgw1f4tmf7tyeeg30b405thdt.gif “今年E3的任天堂應該是這個狀態”
+14:33 lhanjian: FrankHB: 让发送者自己保护自己发送的数据安全，一般窝辣鸡厂建议客户自行坐高铁/地铁/开车然后转市内其他地面交通工具最后步行上楼送达。不接受快递寄送硬盘。
+14:34 Mokou: 爲什麼我在淘寶上看到了楷書的蘭亭序字帖……
+14:34 varna: lhanjian: 听说你之前忽悠了ZJU的妹子来频道？
+14:36 varna: puuu, 中科院用两只雌性大耗百合生子成功？
+14:36 varna: 为何我吸马三角的时候会冒出来这种弹幕
+14:36 lhanjian: varna: 是啊，妹子说了几句话。不过她没多少空上频道。
+14:36 Mokou: 叫你吸毒
+14:36 varna: lhanjian: _(:з」∠)_噫吁戲
+14:37 varna: Mokou: 最新款的那首AXIA最后我也没能分离出唱歌的部分
+14:37 varna: 现在浑身难受
+14:37 Mokou: 噫
+14:37 varna: 里面都是biubiubiu的枪炮声听了心悸
+14:41 Mokou: http://ww2.sinaimg.cn/mw690/a7cb85c1jw1f4titsuugdj20fa0elt97.jpg
+14:41 Mokou: ^ 豆知識
+14:42 varna: 233333
+14:44 Mokou: http://ww4.sinaimg.cn/mw690/9e6b7fdbjw1f4uqrhloz0j20a10cmjs9.jpg 這不清真
+14:44 lhanjian: 撸也算性生活！
+14:45 lhanjian: Mokou: 不，这很清真
+14:45 Mokou: http://ww4.sinaimg.cn/mw690/9e6b7fdbjw1f4uqrgzhzyj205i04mgli.jpg
+14:47 varna: 来两斤芥菜
+14:48 varna: 一口芥菜制风起 服药直上九万里
+14:57 whocares_2 quit:Ping timeout: 246 seconds
+14:57 whocares_2_ joined channel
+15:04 lhanjian: Syu安全过渡
+15:04 varna: 恭喜
+15:05 varna: 现在我怀疑我的启动时故障不是固件问题，而是单纯的硬件老化
+15:05 lhanjian: CPU/内存挂掉了？
+15:05 lhanjian: 然而羊驼子的本子比我的本子寿命还短吧？
+15:06 varna: 恐怕在零下二十度以下的天气里，用书包装着携行十五分钟以上，风扇就需要预热了
+15:06 varna: 否则不能立刻启动
+15:06 lhanjian: 哦，毕竟零下20度……
+15:06 varna: 不能启动的时候基本都在24度左右的天气里背出去过
+15:06 varna: 最近表现就很好
+15:08 varna: 我这个本子用到现在，差不多可以均摊一年不到一千元的开销
+15:09 varna: 觉得也不错了，至少重要硬件还能运转
+15:09 iyzsong-xx quit:Remote host closed the connection
+15:20 Mokou: http://ww4.sinaimg.cn/mw690/005EK0Dyjw1f4oo9uckruj31170hsgp8.jpg
+15:23 varna: ...
+15:24 varna: 其实这个审核的intro总是写得很鬼畜
+15:25 varna: 比如说「某海军大将为人和善有远见，他请人吃了水馒头，陪家人吃了白饭和鱼，然后又请人吃了甜粥，后来自己吃了甜粥，最后吃了一些子弹坠机身亡」
+15:28 Mokou: 舌尖上的八嘎
+15:28 Mokou: 一名穆斯林在开枪或者自爆前，我们无法确定这名穆斯林是极端的还是温和的，这种现象被称为薛定谔的穆斯林，也被称为买买提测不准原理。
+15:28 Mokou: ——@北斗七星高ama夜带刀
+15:28 varna: 现在我连混着背景音和人声的AXIA都能吸进去了……
+15:29 Mokou: 這人沒救了
+15:29 varna: 我一直以为测不准原理的意思是物理性的测量工具会干涉测量结果？
+15:29 Mokou: 似乎就是這個原理？
+15:30 Mokou: 這個意思*
+15:30 varna: 但是传久了似乎意思有点走形
+15:30 Mokou: 不過不確定性原理到底是不是測不準原理？
+15:30 varna: 是
+15:31 varna: 就是说位置和动量不能同时确定，同时界定位置不确定性的定量偏差吧？
+15:32 Youmu quit:Quit: Connection closed for inactivity
+15:33 Mokou: 是，然而似乎這原理的意思是粒子的明確位置和明確動量不能同時存在？
+15:33 varna: +
+15:33 varna: 等等
+15:33 varna: 是存在还是测量到
+15:33 varna: 这里我不懂
+15:34 Mokou: 我聽說的是存在，因爲粒子在動量空間上的波函數和位置空間上的波函數互爲傅立葉變換
+15:34 varna: 是，但这个函数的实际意义是在描述存在性质还是测量所得性质——我是这个意思
+15:35 Mokou: 這個我也不懂
+15:35 varna: 等幼女来了可以啪了他
+15:40 varna: 其实修bug中间我差点都想换用izumo parser了
+15:41 Mokou: 換換換
+15:41 varna: 不过考虑到接口差异和偏头疼发作，最后还是直接patch上去
+15:41 Mokou: 其實考慮了下，我想把AVX2版拆出來變成一個新的Parser
+15:42 varna: https://pastebin.mozilla.org/8876976 现在的demo类似这个样子
+15:42 stardust77 joined channel
+15:42 Mokou: 公頻大丈夫？
+15:42 varna: 大丈夫
+15:42 varna: 反正没实现
+15:43 Mokou: 這個Parser不保存狀態，每次從頭重新掃描
+15:43 stardust77 quit:Changing host
+15:43 stardust77 joined channel
+15:43 varna: Content-Length这个东西我不打算扔进分析器里了，因为它是否存在都依赖于用户的判断
+15:43 Mokou: 我的做法是只拆分Field，不處理……
+15:44 varna: 不过毕竟content是要积压在缓冲区里的
+15:44 Mokou: 我覺得處理Header不該在這一段做
+15:44 varna: 这已经不是header了
+15:44 Mokou: 那些Field屬於Header的一部分吧
+15:44 varna: 保活连接上，header结束之后得确认content积压完
+15:44 varna: 不止是field
+15:44 stardust77 is now known as stardust
+15:44 Mokou: 哦，我是說Content-Length……
+15:44 varna: 那个我不在意
+15:45 varna: 问题是我这里是单一连接复用缓冲
+15:45 varna: 其一，缓冲里的垃圾不该影响分析（这基本没问题）
+15:45 varna: 其二，流内容是连续的
+15:45 varna: 用户必须知道他们究竟有没有接到合适数目的content, 这对pico来说是灾难
+15:46 varna: pico的用户无论如何必须手工判断这点，我也就放弃抵抗了
+15:48 varna: 嘛，目前一趟连续分析下来，缓冲区上已经是难以名状的垃圾了
+15:49 varna: jsmn分析出的字符串不是C串，所以我直接在原缓冲上破坏性地写零
+15:50 varna: https://pastebin.mozilla.org/8876980 类似这感觉
+15:50 Mokou: 噫，GIGGUK居然看了艦C動畫……
+15:51 varna: ...
+15:51 Mokou: 噫，他把《海色》空耳了
+15:51 Mokou: http://www.bilibili.com/video/av3471189/
+15:51 Mokou: 03:30附近
+15:52 varna: 我看看这个
+15:53 varna: 卧槽，卡梅伦承认艹猪了？
+15:53 Mokou: 我查查
+15:54 Mokou: 沒承認
+15:55 varna: wanker 23333
+15:56 varna: 我就知道这伙计要说这个
+15:56 Mokou: 不過這老外似乎只看動畫……
+15:56 varna: 所以他完全忘记了如月的事情
+15:56 varna: 而且如果他肝舰的话他就没心思看什么动画了
+15:57 Mokou: 難說，你看Zak
+15:57 lh_mouse: [15:37:53] <varna> Content-Length这个东西我不打算扔进分析器里了，因为它是否存在都依赖于用户的判断  // 滋瓷 Transfer-Encoding: chunked 么？
+15:57 lh_mouse quit:Quit: For the Red Army!
+15:57 Mokou: 雖說這位是亞裔，然而他是歐洲人……
+15:57 lh_mouse joined channel
+15:57 varna: lh_mouse: 底层兹瓷，不过这不是个通用货而是应付上游的，所以没做
+15:58 varna: chunked需要单独的接口做
+15:58 lh_mouse: chunked 是根本就没有 Content-Length 的/
+15:58 varna: 对
+15:58 varna: response这种是非chunked的，chunked不用这个分析
+15:58 lh_mouse: 即使有也是消息性的，实际是以 chunked 为准的。
+15:58 lh_mouse: varna, 干脆 HTTP 1.0 算了免的多事。
+15:59 lh_mouse: chunked 是 HTTP 1.1 要求［必须］滋瓷的。
+15:59 varna: HTTP 1.0有唯一一个问题，字面上的保活麻烦
+15:59 lh_mouse: 可以算扩展。
+15:59 lh_mouse: 只是默认不一样而已。
+16:00 varna: 而且这其实只是个wrapper
+16:00 varna: 底下的实现，chunked专门有一个decoder
+16:00 lh_mouse: HTTP 1.0 的扩展是默认没 Connection: Keep-Alive 就算 Close，HTTP 1.1 只有个 Close 而且默认相反。
+16:00 varna: btw我跟你说，怀疑我的上游并不会启用HTTP/1.0
+16:01 varna: 那是坨速成的t*mcat
+16:01 lh_mouse: 客户端请求的是  1.0 服务端必须返回 1.0 。
+16:01 lh_mouse: 客户端请求 1.1 服务端可以返回 1.0 也可以返回 1.1 。
+16:01 lh_mouse: 不过话说回来吧，HTTP 标准的存在感并不如 SQL 的标准。
+16:02 varna: 说起来他们其实在前面做web文件上传的时候都不知道是不是chunked...
+16:02 lh_mouse: 总是处于被各路无视的状态。谷狗的首页就是这样的。
+16:03 lh_mouse: 谷狗的首页如果你用 Connection: Close 去请求就会返回一个既没有 Content-Length 也没有 Transfer-Encoding 的 HTTP/1.1 响应。这根本不合法。
+16:03 * varna 在hosts里加了一行：192.168.1.5 setsuna
+16:04 lh_mouse: ヲ说个笑话， Web 应用。
+16:05 varna: 然而这些web crapp不知怎么就火起来了
+16:06 Mokou: 因爲智商兼容性高？
+16:06 varna: 可js总是不响应
+16:06 Mokou: & 砸錢廣告了
+16:06 Mokou: 沒關係，你重啓下
+16:06 varna: 要么就是崩溃，css显示不正确，漫天ajax
+16:07 Mokou: http://ww3.sinaimg.cn/mw1024/edcb0f1fgw1f4ulmq13guj20hs36eajm.jpg 迫真撩妹
+16:08 varna: 之前我还被别人推荐一个奇异的项目，那东西试图用homo在linux下运行用windoze API编写的asp.net服务器
+16:08 varna: 当时我很好地保持了扑克脸
+16:08 Mokou: 有這種嘗試的人不是挺多的麼
+16:09 varna: homo一抬手直接把我X炸了
+16:09 Mokou: 我這邊什麼玩意都能把X炸了
+16:09 varna: 除了他之外，也就英猥达有这个魄力
+16:09 Mokou: 我這麼說吧
+16:09 Mokou: 我現在一行pkill -KILL firefox過去X都會炸
+16:09 Mokou: 即使firefox正在正常工作
+16:10 varna: 你用的什么奇妙驱动……
+16:10 Mokou: 開源intel
+16:10 varna: 等等现在不是同一mesa了么？
+16:10 Mokou: 是
+16:10 varna: 统一*
+16:10 varna: ...
+16:10 Mokou: 我都不知道什麼鬼
+16:10 Mokou: 重啓下輸入法X會炸，殺個程序X會炸
+16:10 Mokou: 基本上每天我tty2都是登錄狀態
+16:10 varna: 买个windoze机器ssh上去用算了……
+16:11 lh_not_bot: ヲ的习惯是 pkill -xn9 。
+16:11 Mokou: 沒錢
+16:11 lh_not_bot: -x 基本必须加。
+16:11 varna: (｡･ω･)ﾉ你可以介绍妹子去援交，然后捞分成
+16:11 Mokou: 沒有妹子
+16:11 varna: (｡･ω･)比如介绍妹子跟我援交
+16:11 lh_not_bot: (｡･ω･)比如介绍妹子跟我援交
+16:11 Mokou: lh_not_bot: 我介紹個女裝子給你，叫樑樺
+16:12 varna: (｡･ω･)一派胡言
+16:12 Mokou: 快和路西法簽訂契約吧
+16:12 varna: 对了你没开testing吧
+16:12 Mokou: 沒開
+16:12 varna: 太惨
+16:12 varna: 前段时间还看到网上有人吹如何如何给服务器部署新式FS
+16:13 Mokou: 我猜開testing以後一行pkill的效力等同於rm -rf --no-preserve-root /
+16:13 varna: 我想了想幼女那个被btrfs轰掉的/
+16:13 lh_mouse: Permission Denied
+16:13 Mokou: 有不denied的
+16:13 Youmu joined channel
+16:13 Mokou: 把我home轟掉也夠我喝一壺
+16:13 lh_mouse: 傻逼 root 裸奔党。
+16:14 Mokou: 不過其實學派服務器上也是個Arch……
+16:15 lh_mouse: 		"	.rva 53933b, 53933f, _gnu_exception_handler, 53933f \n"	\
+16:16 lh_mouse: ^^ GNU AS 的某种黑科技。
+16:17 varna: 自机sudo其实我是开全权限的
+16:17 Mokou: 全權限+
+16:17 varna: 服务器才按程序配
+16:18 lh_mouse: 听说女装子下个月要来杭州了。
+16:18 varna: (｡･ω･)啊？哪里有女装子？
+16:19 Mokou: ^ 這裏
+16:19 varna: ^ 这（上）里（下）
+16:19 Mokou: ^ こ↑こ↓
+16:20 varna: 这旗真污秽
+16:20 Mokou: ^ 臭
+16:20 varna: 我好好地说中文，他就来个野兽先辈
+16:20 Mokou: 因爲你進錯門了
+16:20 varna: (｡･ω･)你这样啊，妹子都吓跑！
+16:20 Mokou: ^ 身經百戰，知道怎麼樣會把妹子嚇跑
+16:21 Mokou: (｡･ω･)看我燒了這現充
+16:21 varna: 你这言论是要负责任的
+16:21 varna: 不能听得风就时雨
+16:21 varna: 是雨*
+16:21 lh_mouse: 舰狗。
+16:21 * varna 驲了
+16:21 Mokou: 我經過了自己的判斷
+16:22 varna: http://tieba.baidu.com/p/4205943822 这迫真仏学怎么又上来了
+16:22 lh_mouse: 原文是“见着风是得雨”。
+16:22 * varna 学习一个
+16:22 lh_mouse: 对仗一点可以写作“见得风，识得雨”
+16:23 lh_mouse: 识得唔识得噶？
+16:23 varna: 一致通过！
+16:23 Mokou: 文藝耗
+16:25 Mokou: 出去趟
+16:26 lh_mouse: Mokou, 烤完了？
+16:26 varna: 山东就两天
+16:26 varna: 估计他连惯例的考后分手流程都走完了
+16:47 varna: 天气这么好，索性再吸一话马三角……
+16:50 FrankHB quit:Ping timeout: 258 seconds
+16:52 Mokou: 沒妹子怎麼分手
+16:52 Mokou: http://tieba.baidu.com/p/4608800859  基礎知識已經牢固(確信)
+16:54 varna: 你这种现充没妹子也可以强征的
+16:54 Mokou: ^ 強徵妹子的現充
+16:54 varna: 我还等着你输出妹子呢
+16:54 Mokou: 沒有妹子怎麼輸出
+16:55 varna: 你可以中介
+16:56 Mokou: 沒人給我中介
+16:57 Mokou: http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?_v0ae2bb9e69951ba5
+16:58 Mokou: 噫，複製錯了
+16:58 Mokou: http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?file=http%3A%2F%2Fus.sinaimg.cn%2F003btsSGjx072tvaroi40504010000220k01.m3u8%3FKID%3Dunistore%2Cvideo%26Expires%3D1465897894%26ssig%3DOLve6BB8o7&fid=1034:854e28c97c6f86e48f70c7a22aa8835c&uid=3927191978&monitor=&vf=vshow
+16:58 Mokou: ^ 柯文哲已被玩壞
+17:00 varna: 233333
+17:08 sottd joined channel
+17:11 Mokou: http://ww2.sinaimg.cn/mw690/d1f7e700gw1f4ug94qequj20fk05xt8t.jpg
+17:11 Mokou: 雖說這個似乎是洋蔥……
+17:12 varna: 高达八成
+17:18 varna: 吸了三角之后根本停不下来……
+17:18 Mokou: http://ww2.sinaimg.cn/mw690/6d024ee9gw1f4ussjgytpj20eo04nmxq.jpg
+17:21 varna: 啊啊
+17:28 sottd: 说好的1:20呢
+17:42 sottd: 炒外汇的风险很高啊
+17:43 Mokou: http://ww4.sinaimg.cn/mw690/bb8b8fbcjw1f4uvjz5hdpj20lo0i676g.jpg macOS Sierra 已经不允许运行非认证开发者的应用了。
+17:44 Mokou: ^ 果粉們，被強姦的感覺爽麼
+17:44 varna: 哈哈哈哈
+17:45 varna: 所以他们还留着chmod这个命令么
+17:46 Mokou: 大概還有？
+17:46 Mokou: 然而果粉們真的知道怎麼用shell啓動程序麼
+17:47 varna: 不知道他们写小脚本的话怎么办
+17:48 Mokou: 誰用OS X跑腳本啊
+17:48 Mokou: 不都是用來約火包麼……
+17:49 Mokou: https://pastebin.mozilla.org/8876998
+17:49 varna: 不过这是不是理解问题？
+17:50 varna: 他的identified developers大概类似密钥环认证？
+17:50 varna: 如果认证失败则安装事务失败
+17:50 varna: 这样的
+17:53 Mokou: Developer ID是個密鑰，Apple簽發的
+17:54 Mokou: 不過我看官網文檔，Mavericks倒是可以用一系列麻煩的操作把特定的App加入例外列表
+17:54 Mokou: 不知道Sierra行不行
+17:54 varna: 对了你能代理到 https://docs.google.com/file/d/0B9NecvwzJ6fsNUJOVHNsYkdoNG8/edit?pli=1 这个么
+17:55 Mokou: 能，我轉一下？
+17:55 varna: 先看看他存在不存在吧
+17:55 Mokou: 65M的7z文件
+17:55 varna: 这是个FL的高清星空背景mod
+17:55 Mokou: 對
+17:55 varna: 那应该是
+17:55 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=c180a4876a224f4a5799731b39f69044/64727f899e510fb37c5fa536de33c895d0430c08.jpg 效果类似这样
+17:56 varna: 不过似乎原版限定？
+17:56 Mokou: 我猜用到Discovery裏只會替換一部分
+17:56 varna: +
+17:56 Mokou: 他們似乎有些新紋理？
+17:56 varna: 有些新纹理只是强行P出来的
+17:56 varna: 比如天谴神殿那里的背景
+17:59 varna: 不行我就滚回原版吧，再试试用drake干hammerhead的痛苦时光……
+17:59 varna: (｡･ω･)ﾉ今非昔比！
+18:01 varna: 不过也许不必，我可以在漂亮的地方练习轰炸机
+18:01 varna: 原先的Unknown-2 Gammu附近会随机刷Nomad炮艇小队
+18:01 varna: 然后我毒驾被自己鱼雷崩死
+18:02 Mokou: nkkn
+18:05 varna: 不毒驾的时候也被崩死过
+18:05 varna: 似乎还崩死过巨基
+18:12 varna: http://news.21cn.com/social/shixiang/a/2016/0614/10/31155848.shtml
+18:14 sottd: 道德沦丧世风日下
+18:19 sottd: 值此危难之际的下一句是什么?
+18:20 varna: 九个小姐姐站了出来成为偶像
+18:23 sottd: 这又是什么梗..LL吗?
+18:23 varna: LL
+18:25 varna: http://tieba.baidu.com/f?ie=utf-8&kw=%E7%BC%AA%E6%96%AF%E6%9E%97&fr=search ...
+18:26 lh_mouse: geordi, -c { auto l = [](int a) try { throw 1; } catch(int e){ cout <<e; };
+18:26 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+18:26 lh_mouse: geordi, -c { auto l = [](int a) try { throw 1; } catch(int e){ cout <<e; }; }
+18:26 geordi: error: expected '{' before 'try'
+18:30 Mokou: 說起來SSL庫用誰比較好
+18:31 varna: openssl（笑）
+18:31 Mokou: 心在滴血
+18:31 varna: 用吧
+18:31 varna: 大丈夫
+18:31 Mokou: PolarSSL似乎掛了
+18:31 Mokou: LibreSSL呢
+18:31 varna: 那是个分支吧
+18:31 Mokou: 是
+18:31 varna: 梅毒抗体阳性一辈子去不掉的
+18:31 Mokou: OpenBSD搞的
+18:31 varna: 就这样吧
+18:32 Mokou: OpenSSL現在我看到兩個分支，一個是LibreSSL一個是BoringSSL
+18:32 varna: 我觉得直接上openssl就行
+18:32 varna: 甩锅方便
+18:32 varna: 你死了，全世界大批用户跟你一起死，不冤
+18:32 Mokou: 然而我準備用在學派的Izumo上……
+18:32 varna: 没事，用吧
+18:33 Mokou: 算了，我照着OpenSSL寫，然後用LibreSSL編譯
+18:33 Mokou: 這兩個應該是基本兼容的
+18:33 sottd: sdk崩啊崩
+18:33 varna: 不过你的服务器至少该保证连接套接字都非阻塞
+18:34 varna: 不然接epoll会出致死的问题
+18:34 Mokou: Noshiro創建的Socket保證這點，其他庫我就不知道了……
+18:34 varna: 设一下就行
+18:35 varna: openssl的非阻塞调用会在读写需求变化的时候返回对应的状态
+18:35 varna: 用户检测到了之后再调整自己的多路复用
+18:35 Mokou: 總之怎麼聽怎麼疼……
+18:35 Mokou: TLS協議自己做起來也麻煩
+18:36 varna: 建议用现成的，不然漏洞补起来也要时间
+18:36 Mokou: +
+18:36 Mokou: 什麼破協議，疼飛了
+18:36 varna: 咦，这纹理包里面的文件不多
+18:37 varna: 我强行加到dis里看看
+18:38 Mokou: http://ww1.sinaimg.cn/mw690/9e41bb67jw1f4ushy7zbpj20ku0xgwj5.jpg http://ww2.sinaimg.cn/mw690/9e41bb67jw1f4ushxpi4bj20jz0zkq64.jpg 一覺起來洋蔥成真……
+18:39 varna: 小鲜肉三字且不论恶俗与否，以前是说男宠的吧？
+18:39 Mokou: 那貨不就是這種角色麼……
+18:40 varna: 虽说这词给我一种浓妆艳抹的歪瓜劣枣盯着几个甲鸟的感觉
+18:40 Mokou: varna: http://baike.baidu.com/item/%E5%88%98%E6%A2%93%E6%99%A8 <百度百科
+18:40 Mokou: 瞎眼注意
+18:40 varna: puuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+18:40 sottd: wuuuuuuuuuuuuu
+18:40 sottd: 狗眼
+18:40 varna: _(:з」∠)_我要GIRIGIRI解毒
+18:41 sottd: 我想起了一个gif,上面那个半人妖的说：“你还不及我一半帅气”
+18:41 varna: 这茄子玩意儿是铁了心跟adobe过不去么
+18:42 Mokou: 網 民 激 怒 ADOBE 公 關 噩 夢 再 臨
+18:42 Mokou: 所以爲什麼所有的SSL庫都要接管網絡……
+18:43 varna: SSL状态机太连续了，不过至少你可以选择启动调用的时机
+18:43 Mokou: 算了這樣吧
+18:43 varna: 我之前试过一次，算是能用的
+18:43 varna: 我看看FL会不会崩溃
+18:43 Mokou: 我先讓ngx只監聽443
+18:44 Mokou: 80交給Izm
+18:45 varna: 先看看Omc Kappa
+18:45 varna: (｡･ω･)ﾉ发进！
+18:46 varna: 总之是有效果了
+18:47 varna: 虽说恐怕要更好看些得ENB
+18:47 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 47.0/20160604131506]
+18:48 Mokou: varna: 對了，Bitbucket支持免費的私密repo
+18:48 Mokou: 你要不要去試試
+18:48 varna: 不要
+18:48 varna: Cortez明显改进，看得我有点心悸，想吸一口东西
+18:48 Mokou: 防rm -rf
+18:51 varna: 纽约荒原毫无改进
+18:51 varna: 不过那个鬼地方本来也黑糊糊一团
+18:54 varna: 我开ENB看看
+19:01 iyzsong joined channel
+19:01 iyzsong quit:Changing host
+19:01 iyzsong joined channel
+19:02 varna: 出门遇上三个炮艇……
+19:02 Mokou: “一脸蒙逼难道不是体位吗？”
+19:02 varna: 2333
+19:04 varna: ENB开起来之后，一到爆炸光效就各种闪瞎……
+19:04 cleamoon joined channel
+19:05 Mokou: http://ww4.sinaimg.cn/mw690/73c08befjw1f4uwtotidlj20ax06eq4b.jpg 噫
+19:05 Mokou: 這遊戲藥丸
+19:06 varna: http://picpaste.com/screen8-QQGw4GwU.BMP http://picpaste.com/2bm6yPYU.BMP 新背景+ENB Cortez
+19:07 Mokou: http://news.sina.com.cn/s/wh/2016-06-13/doc-ifxszkzy5193338.shtml 家屬厲害啊
+19:09 varna: 我还是放弃ENB吧
+19:09 varna: 光标漂移问题太严重了
+19:09 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/q1/en_271745.jpg@596w_1l.jpg
+19:09 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/q1/he_207984.jpg@596w_1l.jpg
+19:10 Xhumin joined channel
+19:11 Mokou: http://ww4.sinaimg.cn/mw690/4e92f1b4jw1f4tgzdfb15j20qo0zkwne.jpg 炮樓
+19:12 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/q1/0p_142134.jpg@596w_1l.jpg
+19:13 varna: 炮楼233333
+19:13 varna: 上面那个最上级酒店是什么
+19:13 varna: 哦不对，缘上缘
+19:14 Xhumin: 哎哟，居然由饭友在这里。
+19:14 varna: 2333333
+19:14 varna: 艾滋病传播途径：母婴，血液，豆瓣
+19:14 varna: 再加个饭否？
+19:15 Xhumin: 卧槽这里很多人混饭否嘛？
+19:15 Mokou: 對了，MRJ的機翼強度問題解決了麼
+19:15 varna: 应该没有
+19:15 cleamoon: 饭否应该不很传播，大部分都是晒图
+19:15 Mokou: 噫
+19:15 cleamoon: 似乎只有我玩饭否
+19:15 varna: 来个Lv20任务试试爪子，机体Onuris
+19:16 Mokou: 三菱直接延期到17年4月到6月了……
+19:16 cleamoon: 因为我经常很饿
+19:17 Mokou: 去吔飯
+19:17 cleamoon: @Horus9527：在网上想得到正确答案的最快方法不是提问题，而是发布一个错误的答案。网民们纠错的速度比回答问题的速度快得多，这叫做戈德温定律。 #译自英语推
+19:17 cleamoon: 去年8月，中国央行改变了设定每日人民币汇率中间价的方式，震惊全球市场。自那以来，中国央行已花掉了大约4730亿美元的外汇储备。一名央行官员表示：“不论对全球还是中国国内来说，信心都是最重要的因素。用外储干预的代价很高，但这一政策的价值不能只用数字来衡量。信心一旦丧失就很难恢复。届时会发生很多糟糕
+19:17 cleamoon: 的事情。”按照分析师的说法，央行官员事先知道改变人民币中间价设定方式可能释放被抑制的人民币贬值压力，不过他们低估了市场反应的激烈程度。这一原本预期会导致汇率下调5%的举措，很快就演变成了在几天内引发10%到20%汇率下挫的威胁。
+19:17 cleamoon: 卧槽
+19:18 cleamoon: 苹果在WWDC 2016开发者大会上宣布，它的桌面操作系统名字从OSX改为macOS，改名后的第一个版本将是macOS Sierra。Sierra引入的新特性包括：数字语音助手Siri；支持Apple Pay支付服务；通用剪贴板，粘贴拷贝能在iOS和Mac设备之间进行；iCloud允许用户在Mac和Mac之间以及Mac和iOS设备之间移动文件；等等。Sierra将不支持2007年到2009年之间生产的
+19:18 cleamoon: 旧型号。苹果还宣布了一个为 Flash/SSD储存设备优化的新文件系统Apple File System（APFS），其特性包括了支持强加密、写时复制元数据、空间共享、文件和目录克隆、快照、快速目录大小、原子安全保存基元，淘汰不安全的AFP协议等等。APFS预计将在2017年发布，暂时不会提供它的开源实现。  #就是说没有有用的新东西
+19:19 cleamoon: 【马云：今天赝品的质量比真货更好 】马云在公司周二举行的投资者大会上称：“现在的假冒产品做得比真货质量更好、价格更低。现在不是假货消灭了真品，二手新的商业模式。”“同样的工厂，同样的原料，但是不是使用真品的名字。”马云还希望10年内有一半的营收来自中国之外。
+19:21 cleamoon: @xueshudi 一名穆斯林在开枪或者自爆前，我们无法确定这名穆斯林是极端的还是温和的，这种现象被称为薛定谔的穆斯林，也被称为买买提测不准原理。
+19:22 iyzsong: 2333
+19:23 hoxily joined channel
+19:24 varna: F3卡住了，差点一头栽空间站上……
+19:25 varna: 不过似乎手还没残
+19:26 cleamoon: 2015年，余虎（化名）被妻子发现是同性恋，双方准备协议离婚。10月8日，原本是双方去民政部门协议离婚的日子，不料却被妻子等家人强制送进驻马店市精神病院。”
+19:29 cleamoon quit:Read error: Connection reset by peer
+19:46 cleamoon_: varna, 昨天那题简化版，s面色子，扔n次，出2种面的概率该怎么算
+19:48 varna: 至少出2种面的话，把s面骰子扔n次只出1种面的s个概率都去掉就行了吧
+19:49 cleamoon_: varna, 只出2面
+19:49 cleamoon_: 不多不少
+19:51 varna: 我想想
+19:51 Mokou: http://www.bilibili.com/video/av4559875/ 5min看完sao
+19:54 cleamoon_: 黑旗打算变sao
+19:55 varna: cleamoon_: C(n, 2) * [n元素中取i个的组合数之和，i遍取] * (1/s)^n ?
+19:56 varna: 首先选两个面，然后算这n次实验里两种面出现数的组合情况，最后每种组合的基础概率都是(1/s)^n
+19:56 varna: 啊不对
+19:56 varna: 第二项是排列……因为这个基础概率很严？
+19:57 cleamoon_: 我就是这点都不很明白....
+19:58 cleamoon_: 再简化一些，6面色子，投10次，出2面的概率
+19:58 varna: C(6, 2), 这是从6面里面选两个
+19:58 wlemuel joined channel
+19:59 cleamoon_: 其中要抛去两种只有一面的
+19:59 AutoGavy joined channel
+19:59 varna: 两面都出现至少一次就行吧
+19:59 cleamoon_: 所以概率是 (C(6,2)-2)/(s)^n
+20:00 varna: 等等
+20:00 cleamoon_: 大概？
+20:00 varna: C(6, 2)不就是在集合的六个元素里选两个的数目么
+20:00 cleamoon_: 哦，对
+20:00 cleamoon_: 不过投10次是有顺序的
+20:00 varna: 这个没关系
+20:01 varna: 然后我们假定，对每一个符合要求的10次掷骰实验，都给定了顺序
+20:01 varna: 那么单独考察一个实验，理想骰子实现这个方案的可能反正就是1/6乘10次吧
+20:01 cleamoon_: 哦，你说先选两个，然后让这两个全排列？
+20:01 AutoGavy: (｡･ω･)ﾉ
+20:01 varna: 未必是全
+20:02 varna: 但我要知道这些方案的总排列数
+20:02 varna: 假定选了A面和B面，那么A面最少出现一次、最多出现九次
+20:02 varna: 在这个遍取的意义上把排列数算出来，乘上每个排列的概率
+20:02 cleamoon_: 两个面除去全相同的两种以外10次全排列是 2^10-2？
+20:03 varna: 不是
+20:03 cleamoon_: 你想用stirling数？我记得那个不算顺序的
+20:03 varna: 不用那么麻烦
+20:04 varna: 但毕竟(1/6)^10这个概率是自带排列意义的对吧
+20:05 varna: 所以要做的是从10次里面选m次进行排列，对应有10-m次进行排列，这个总排列数有一个概率
+20:05 cleamoon_: 为什么是10-m次排列
+20:06 varna: 啊不对
+20:06 varna: 这里我想多了
+20:06 varna: 这里应该只是“从10次实验里选出m个，使它们是A面向上”
+20:06 cleamoon_: 我怀疑这个10-m是我某个脑洞... 我觉得怎么算会有重复的
+20:06 varna: m遍取1..9
+20:07 varna: 不该那么排
+20:07 varna: 你想像有十个独立重复实验，等待你编号
+20:07 cleamoon_: 可是这么算没有算入顺序呀
+20:07 varna: 编号只可能是A或者B
+20:07 varna: 这样就有顺序了
+20:08 cleamoon_: 哦
+20:08 cleamoon_: 那有什么区别呢...
+20:08 cleamoon_: 结果还是一样呀...
+20:08 varna: 区别是我觉得之前那个排列应该重复地考虑了东西
+20:08 varna: 但十个里选m个，就是9个组合数相加
+20:08 varna: 啊对
+20:09 varna: 是2^10-2...
+20:09 varna: 我贰了
+20:10 varna: 那最后就是15 * 1022 * (1/6)^10
+20:10 cleamoon_: 这种算法我想到了，但是有问题，然后我忘记什么问题了...
+20:11 cleamoon_: 15是c(6, 2)？
+20:11 varna: 是
+20:11 varna: 这概率才万分之2.5...
+20:13 cleamoon_: 出现一个面才 (1/6)^10, 1.6e-8
+20:13 varna: 9.9e-8
+20:13 varna: 因为有六个
+20:13 cleamoon_: 也就是说出准确三面的概率应该接近50%？
+20:13 cleamoon_: 哦
+20:14 varna: 我觉得六面概率会压倒性地高？
+20:14 varna: 也可能四面
+20:14 Xhumin quit:Quit: Xhumin
+20:14 cleamoon_: 哦，对，不是对称的...
+20:14 cleamoon_: 我2了
+20:15 cleamoon_: 这种先选出k种，然后全排列k的方法，算法应该是对的，但是还有个难点
+20:16 cleamoon_: 全排列k时，不到k种的排列怎么办
+20:16 varna: 什么叫“不到k种”
+20:16 varna: 比如说在n次实验里，必须出现k种面，不出现则不行，这样的要求不满足？
+20:16 cleamoon_: 就是全排列里总会出现的少一些面的情况，比如全是一个面
+20:16 cleamoon_: +
+20:17 varna: 这个不会出现，但你必须通过组合数的遍取控制
+20:17 cleamoon_: 就说 6面色子，10次，出准确的3面吧
+20:17 varna: 对两种来说很自然，但3种就必须有一个约束
+20:17 cleamoon_: +
+20:17 lh_mouse: AutoGavy, 小冰箱爆照。
+20:18 cleamoon_: 这个约束也挺麻烦的
+20:18 varna: 最后式子会写得很麻烦，会有m1 + ... + mk = k, m1, ..., mk > 0这种
+20:18 varna: 写程序好写，但算公式是地狱
+20:20 cleamoon_: 程序为什么会好写
+20:20 varna: btw 在只有2面的时候，这应该是一个超几何分布
+20:21 cleamoon_: 我觉得程序也不好写呀
+20:21 varna: 程序好写是因为无脑写循环变量就行，不满足条件就直接跳出循环
+20:21 cleamoon_: 哦，对，超几何分布的积分
+20:21 cleamoon_: 无脑写时间爆炸
+20:21 varna: 啊，你说得对
+20:21 cleamoon_: 无脑我还不如直接上monte carlo呢
+20:22 varna: 不过这里本来也没法无脑
+20:22 varna: 因为你的题目里k是输入量吧……
+20:22 varna: 最后应该还得解出好算的东西
+20:22 varna: 所以我仍然有点怀疑这其实是个递推
+20:23 cleamoon_: 这三个都是输入量
+20:23 varna: 总觉得像是递推
+20:24 cleamoon_: 我想不出递推公式
+20:24 cleamoon_: 做题时满脑子都是模拟
+20:24 varna: f(i, j) = f(i - 1, j - 1) * C1 + f(i - 1, j) * C2
+20:24 cleamoon_: 1e-7的准确率可以模拟吗？
+20:25 varna: C1, C2可能是跟k有关的量，而这个状态数恐怕不是两个，而是k个
+20:25 cleamoon_: 我怀疑没这么简单...
+20:25 cleamoon_: k个+
+20:25 cleamoon_: k个的话都没法猜
+20:25 varna: 比如说f(i, j) = sum[i = 1..k]{ f(i - 1, j - 1) * C1(i, j, k) + f(i - 1, j) * C2(i, j, k)}
+20:26 varna: 其中i指独立重复实验的趟数，j指需要考虑的面数
+20:26 cleamoon_: +
+20:26 varna: C1和C2就是坑点了
+20:26 cleamoon_: 有可能是这种式子
+20:26 varna: 撸多，sum[u= 1..k]
+20:26 varna: 总之类似
+20:27 varna: 啊不对
+20:28 varna: f(i, j) = sum[j' = 1..j]{ f(i - 1, j') * C(i, j, j') }
+20:28 varna: 上面那个总觉得冗了
+20:28 varna: 这里是j' = 1..j还是j' = 1..k我没想好
+20:28 cleamoon_: 谁知道冗不冗
+20:29 cleamoon_: 总之这题就是坑
+20:29 varna: 总觉得递推的时候两个固定项被重复乘了很多次，感觉恶
+20:29 cleamoon_: +
+20:29 varna: (｡･ω･)高压学校强迫五岁幼女解数学题
+20:30 cleamoon_: 然而是学校组织的比赛，我去抢饭而已
+20:30 varna: (｡･ω･)高压学校诱拐五岁幼女解数学题
+20:30 cleamoon_: 我就做出一道来...
+20:30 Mokou: http://ww1.sinaimg.cn/mw690/0066wAXTgw1f4uogtnmp0j30hs0vlq90.jpg http://ww3.sinaimg.cn/mw690/0066wAXTgw1f4uogwfb77j30hs0vlafj.jpg
+20:31 varna: 不太好了，我现在脑子里居然会自动播放马三角OP
+20:31 varna: 那歌我还不太喜欢……
+20:31 cleamoon_: 还一道题，应该简单些，但我不会... 输入一个a*b的地图，其中一些地点为X，另一些为O，求所有X到O的最短距离里最长的
+20:31 Mokou: 這人廢了
+20:31 cleamoon_: 用欧拉距离
+20:32 cleamoon_: 就是abs(x1-x2)+abs(y1-y2)那个
+20:32 varna: 哦哦
+20:33 cleamoon_: 黑的漂亮
+20:33 varna: floodfill出所有X联通块、O联通块，然后沿x方向或y方向分别用扫描线求距离呢
+20:33 varna: 啊不对
+20:33 cleamoon_: 全联通....
+20:33 cleamoon_: 地图15000×15000
+20:33 varna: 你要求单点的X是吧？
+20:34 cleamoon_: 对
+20:34 varna: 那么我们先给一个假定
+20:34 cleamoon_: 假设黑旗是汉子
+20:34 varna: 假设八方向联通的连续X或者连续O构成的区域叫做连通分量
+20:34 cleamoon_: 哦，不是8向通...
+20:35 varna: 那么题解需要的点，不在连通分量非平凡的内部
+20:35 cleamoon_: euler距离挺坑的
+20:35 varna: 八方向是谨慎考虑
+20:35 varna: 其实我想用四方向但怕有反例
+20:35 cleamoon_: 哦
+20:35 cleamoon_: 然后呢
+20:35 varna: 这样我可以通过一次全图floodfill进行剪枝
+20:36 varna: 先求所有的连通分量，这样就可以只考虑他们的边界了
+20:36 cleamoon_: orz
+20:36 cleamoon_: 然后呢
+20:36 varna: 然后只好扫描线了，应该得x和y方向分别进行一次扫描吧
+20:37 cleamoon_: 我是出题的可以不联通的放入3000+个点
+20:37 varna: 不联通的东西多了有个好处：大量1距离
+20:37 cleamoon_: 对呀
+20:38 cleamoon_: 扫描线是做什么？穷举吗
+20:38 varna quit:Disconnected by services
+20:38 Mokou: ……
+20:38 varna joined channel
+20:38 Mokou: 剛纔什麼情況
+20:38 varna: ^z
+20:39 varna: 误操作一个^z过去，irssi沿用终端行为，然后就死掉了
+20:39 Mokou: ……
+20:39 varna: 这题给多少内存？
+20:39 cleamoon_: ....
+20:39 cleamoon_: 1G
+20:39 varna: 哦那还好
+20:39 cleamoon_: 我校不用坑爹的64M
+20:41 varna: 扫描线的话，我估计也比较麻烦，不过至少在总量15k的一次遍历里，能判断是否需要跳过连通分量里面的点
+20:41 varna: 之后就是沿扫描线方向、在连通分量边界上的暴力了，这个我一点信心都没有
+20:41 cleamoon_: .......
+20:42 cleamoon_: 所以简化只是简化了连通的玩意？
+20:42 varna: 对，唯一的救命稻草就是预处理连通分量，但一个恶意数据就可能毁掉它；
+20:42 varna: 不过话说回来，如果数据真的那么恶意，难道有更巧妙的算法么……
+20:43 varna: 图论算法的复杂性在这里应该不可接受，节点数15k^2, 边数不少于节点数
+20:43 varna: 啊，我想到一个可能更好的办法
+20:44 varna: 仍然用刚才的连通分量进行预处理
+20:44 lh_mouse: ^z 了 fg 就行。
+20:45 lh_mouse: 为毛要重连呢。
+20:45 varna: 处理的结果，是得到了连通分量边界上的全部点集
+20:46 varna: 之后看看怎么办……似乎还是得扫描
+20:47 cleamoon_: .......
+20:47 varna: 脑子一热，本来以为能提个线性对数复杂度的算法
+20:47 varna: 仔细一想发现可能不容易
+20:48 cleamoon_: 这次的题好多恶意...
+20:48 varna: 你校题目刚正有力……
+20:50 cleamoon_: 这是简单题...
+20:50 cleamoon_: 难题，比如输入最大 10^10^6 的题
+20:50 cleamoon_: 我都惊了
+20:50 varna: ...
+20:50 cleamoon_: 我想到的算法倒很简单，就是数字太大了
+20:54 cleamoon_: log(n)的复杂度，python，10^10^6的数字，1s够吗
+20:55 varna: 如果单次基本运算不麻烦（比如不涉及大数乘除）的话应该凑合
+20:56 cleamoon_: 日... 就是大数乘2
+20:56 varna: 另外其实有一个问题
+20:57 varna: 一个数字就有一百万位十进制（或者三百万位二进制）的话，运算数最好别太多
+20:57 varna: 大数乘机内数本身还算好说，进位的数目有限
+20:58 Mokou: 大數*2？
+20:58 Mokou: 大數位移咯？
+20:58 varna: 移位有点慢
+20:58 varna: 我宁可进位
+20:59 varna: 位移的话一次扫描一个整长度
+20:59 varna: 哦不对，进位也一样
+20:59 Mokou: 對呀
+20:59 varna: 所以刚才我神志清醒的时候提了三百万位二进制
+21:00 varna: 但总觉得这也是个坑物
+21:00 varna: 他数太大了，我估计结果也要取模吧？
+21:00 cleamoon_: 不取
+21:00 Mokou: 我估計一下硬算多長時間
+21:00 varna: ...
+21:00 varna: 神啊这是要硬来
+21:01 cleamoon_: 题目是一个数字n，转成二进制，重复n次后，这个巨大二进制的位数就是输入，求n
+21:02 varna: ...
+21:02 varna: 等下，位数？
+21:03 cleamoon_: 位数+
+21:04 cleamoon_: 不是输入巨大二进制
+21:04 cleamoon_: 是输入位数
+21:04 varna: 明白了
+21:06 varna: 这里我有个迷糊的地方，我想用对数来估算十进制数m转化成二进制数m'后的十进制数m'位数，但这里的误差似乎会累积……
+21:07 Mokou: +
+21:07 Mokou: 我剛纔也在考慮這個
+21:07 cleamoon_: +
+21:07 cleamoon_: 也有小输入的
+21:08 varna: 你们让骗分的么……
+21:09 * varna 吓得一头锤击坠了一架敌机
+21:09 cleamoon_: 不让....
+21:09 cleamoon_: 只有对或者不对
+21:11 Mokou: #BREAKING: Reports Islamic State leader Abu Bakr al-Baghdadi killed in US-lead air strike（Sky News Australia）[doge]
+21:11 Mokou: 噗？
+21:12 cleamoon_: 噗
+21:12 cleamoon_: 不过可能还是没什么卵用
+21:13 cleamoon joined channel
+21:19 varna: 看来手还没残
+21:19 varna: 不过我挺长时间没感觉Onuris这么顺手了
+21:20 hoxily quit:Ping timeout: 240 seconds
+21:27 varna: 另外IS领导者不是高坂某素人么？
+21:28 Mokou: 這蒼白螺旋體沒救了
+21:29 varna: 对了，船长服在屑站放了16年的宣传片
+21:29 varna: 一开始看起来还挺有情怀
+21:29 varna: 后来大战舰开始动了
+21:29 Mokou: ……
+21:29 Mokou: 什麼鬼
+21:29 varna: 情怀就破灭了
+21:30 varna: 一堆大战舰在天上摇头晃脑
+21:30 varna: 那感觉鬼畜无匹
+21:32 Mokou: 求圍觀
+21:32 varna: http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAsY/M/Q/im9DRU0hTF/EKDkaAmYzSFmIdQiDD7jlZmpdYEbuRme7KAbc67xeughFKtidBcoGqbjERhBIG2lt/J+HAY3tYXbI6AYzxIltpRyVDWOUYa3dLLXRNxLo2BpeYlDUctBKQLF35hLVluj+v0Juhqo9BTnUR3/mKLhTd7M9zA8Zu4mdgY0
+21:32 varna: 撸多
+21:32 varna: http://www.bilibili.com/video/av3910323/index_1.html
+21:33 cleamoon_: 自由枪骑兵这个名字深入人心呀
+21:33 varna: 不知道哪个高人译的名字
+21:35 varna: dis里战舰只要晃晃方向就会像战机一样在天上抽动
+21:35 varna: 战机体积小没人在意，然而那么大个的玩意儿以自己的模型中心为基准开始抽搐地旋转……
+21:36 cleamoon: 233333
+21:36 Mokou: 噫，這抽動
+21:37 varna: 我一开始以为只是咱们不会开
+21:37 varna: 后来发现别人也抽，就淡定了
+21:37 varna: 七分多钟的时候还有个一步一卡的战舰，摄影师机器撑不住了
+21:39 hoxily joined channel
+21:39 varna: 另外488我没注意，难道我共的炮艇和驱逐舰有自家炮塔了？
+21:40 Mokou: 233333333
+21:40 Mokou: 我看到一個大建卡在石頭上抽搐了
+21:40 Mokou: 我看到一個大建卡在石頭上抽搐了半天
+21:40 Mokou: 還是在加快的時候
+21:40 Mokou: 大艦*
+21:41 lh_mouse: 睡觉去了。
+21:41 lh_mouse: 困死了。
+21:41 iyzsong: orz
+21:41 lh_mouse quit:Read error: Connection reset by peer
+21:42 varna: 我觉得他们该做个新的片子
+21:42 varna: 用最近流行的战术音乐组合的歌儿，配上战斗机抢制空的火buzhi爆suocuo场景
+21:43 varna: 屏幕边上都是红红的目标指示器，就是不见人在哪，背景一直在转
+21:43 Mokou: 23333333
+21:43 varna: 射击窗口半秒到一秒，打完接着绕
+21:43 varna: 总觉得很北上
+21:43 Mokou: GIGGUK：選對BGM可以讓任何場景變成史詩
+21:44 Mokou: 我記得他在黑FZ的時候玩過一次
+21:44 varna: 233333
+21:44 varna: 我记得屑站上有两个丧失视频
+21:44 varna: 一个是LF纯机雷对决VHF, 最后被撸死了
+21:44 wlemuel quit:Ping timeout: 264 seconds
+21:45 varna: 还有一个是CD反鱼雷，赢了
+21:45 Mokou: ……
+21:45 wlemuel joined channel
+21:47 varna: 我自己也在严肃地考虑把EMP换成CD, 但一个哲学的问题摆在我面前
+21:47 varna: 需要我用CD停下来的东西，有多少是我那四门死神之手能撸动的……
+21:50 jin7boy joined channel
+21:50 jin7boy: http://paste.ubuntu.com/17324180/
+21:50 Mokou: http://www.bilibili.com/video/av519951/ 05:30附近
+21:51 varna: 我完整看看
+21:51 jin7boy: 输入60 70 80 80 90 -1  输出3 . 就是找出大于平均值的数字的个数. 输入的时候以-1作为结束. 不知道哪里错了.
+21:51 jin7boy: http://paste.ubuntu.com/17324180/
+21:52 varna: 士郎名言……我猜是「人被杀就会死」？
+21:52 varna: 啊果然！
+21:53 varna: jin7boy: 你调试过了吧？
+21:54 Mokou: 人被殺就會死這個梗應該是從他這來的
+21:55 varna: 是
+21:55 varna: 虽说萨尔瓦多在黑暗精灵三部曲里更早地提出了类似的概念
+21:55 jin7boy: 知道了,
+21:55 jin7boy: 多加了个-1
+21:55 varna: 「除了一名学生被发现在自己的床上自然死亡——心脏上插了一把匕首自然会死亡」
+21:55 Mokou: 23333333
+21:56 cleamoon: 233333
+22:01 varna: F/Z动画嘛……
+22:01 varna: 至今我仍然觉得是TV商业动画的超杰作
+22:02 varna: 小说方面，或许思想挺陈腐，但老虚推进故事的技巧高超
+22:02 cleamoon: TV商业动画有几个好的，不过大多是垃圾
+22:02 varna: 总之我先抽一口僕らの戰場
+22:02 varna: 现在我看商业动画基本就是去看制作啊场面啊燃点啊
+22:03 varna: 既然他们做的就是这些，那我看这些就好了
+22:04 varna: 不过我有个小问题
+22:04 Mokou quit:Ping timeout: 240 seconds
+22:04 Mokou joined channel
+22:05 varna: 马三角的男主角是怎么在脱掉头盔的情况下作出英〇曼回旋的
+22:06 varna: 总觉得他承受的G力比电风扇时代要多……只能说是舱内环境比较好
+22:06 varna: 甚至可以带一个雪菜在后座唱歌
+22:08 AutoGavy quit:Quit: Connection closed for inactivity
+22:13 Mokou: _(:з」∠)_想要妹子
+22:14 cleamoon_: 想啪妹子
+22:15 Mokou: http://ww4.sinaimg.cn/mw690/ab5c00a6gw1f4v3gtf4drj20c807ot9p.jpg “想認識這樣的女孩”
+22:21 cleamoon_: 我很想知道，这种的除了当成段子，真的有人看吗
+22:22 jin7boy quit:Quit: Leaving.
+22:23 Mokou_ joined channel
+22:23 Mokou quit:Ping timeout: 260 seconds
+22:25 Mokou_ is now known as Mokoku
+22:25 Mokoku is now known as Mokou
+22:28 Mokou: http://ww2.sinaimg.cn/mw690/006acSFUjw1f4v2okt3yaj30js0ci3z8.jpg
+22:34 cleamoon: 噗
+22:38 varna: 23333
+22:39 varna: 找到一个叫Galaxy on Fire 2的游戏，白瞎那画面了……
+22:39 Mokou: 2333333
+22:40 Mokou: 刚用狗粮那智喂给早霜，早霜说：“那智桑的水侦。。真好啊。。。”。细思极恐[巨汗]
+22:40 varna: 233333
+22:41 Mokou: http://ww1.sinaimg.cn/mw690/64a00586gw1f4v1dl9quqj20xc230gzp.jpg
+22:43 cleamoon: 这什么动画
+22:43 varna: Mokou: 你手头还有没改过的FL原版的DATA么？
+22:43 varna: cleamoon: 少女与战车？
+22:43 Mokou: 我看看
+22:44 Mokou: varna: 有， 888M
+22:44 varna: 驲……
+22:44 cleamoon: 看了一下截图，感觉好诡异
+22:45 varna: 果然
+22:46 Mokou: http://ww4.sinaimg.cn/mw690/6a278e27gw1f4s7xk7n5bj20kh0aggnt.jpg
+22:47 varna: 算了我自己处理这个烂摊子吧
+22:47 varna: 突然想重打一遍原版了
+22:47 Mokou: http://ww4.sinaimg.cn/mw690/6c00107fgw1f4sa3v6t6oj20ip08475f.jpg
+22:47 Mokou: ^ 逸國子民無處不在
+22:48 varna: 23333
+22:48 cleamoon: 233333
+22:48 varna: 我重新下个安装包吧
+22:49 varna: 然后手工备份旧dis存档和旧魔改的可执行文件
+22:49 varna: Galaxy on Fire 2那个神一样的操作感……我感到浑身无力
+22:50 varna: UI上没有东西提示我速度多少、武器是什么、残弹数多少，也不知道有没有出力设置
+22:50 varna: 机动只能加减速硬扭
+22:50 varna: 还飘……啊……飘……啊……
+22:50 Mokou: ……
+22:50 Mokou: 什麼頗玩意
+22:50 Mokou: 破
+22:51 varna: 所以说白瞎那画面了
+22:53 varna: 说起来你那里开dis自带的ENB, 抗锯齿效果明显么？
+22:54 Mokou: 似乎不算很明顯？
+22:55 varna: 看来他们说抗锯齿得ENB + SweetFX是真的
+22:55 Mokou: 噫，我看了一下c++1y的draft
+22:55 Mokou: 然後覺得C標準真好讀……
+22:56 cleamoon: orz
+22:56 varna: C标准的字里行间都透出三个字：肚子疼
+22:56 Mokou: 233333
+22:57 varna: 撤了
+22:57 varna: 明天我重温一下旧FL的故事……
+22:57 varna quit:Quit: leaving
+23:06 hoxily quit:Quit: Leaving
+23:11 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+23:46 Mokou quit:Ping timeout: 244 seconds
+23:47 Mokou joined channel
+23:51 condy quit:Ping timeout: 276 seconds
+23:53 condy joined channel

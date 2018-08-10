@@ -1,0 +1,924 @@
+00:17 FrankHB joined channel
+00:38 lh_mouse quit:Read error: Connection reset by peer
+00:41 Stevearz1 joined channel
+00:42 Stevearzh quit:Ping timeout: 264 seconds
+00:45 xxxxxxxx: baidu真tm智能 我搜hoik直接给我改成wiki
+00:47 xxxxxxxx quit:Quit: Leaving...
+00:56 molikto quit:Remote host closed the connection
+01:11 cleamoon quit:Ping timeout: 248 seconds
+01:12 cleamoon__ quit:Ping timeout: 255 seconds
+01:12 cleamoon joined channel
+01:54 Stevearz1 quit:Ping timeout: 246 seconds
+02:54 molikto joined channel
+02:55 molikto quit:Remote host closed the connection
+02:56 molikto joined channel
+03:26 molikto quit:Remote host closed the connection
+03:31 cleamoon- joined channel
+04:05 molikto joined channel
+04:09 molikto quit:Ping timeout: 256 seconds
+04:29 FrankHB quit:Ping timeout: 248 seconds
+04:37 molikto joined channel
+04:49 molikto quit:Remote host closed the connection
+05:30 molikto joined channel
+05:46 molikto quit:Remote host closed the connection
+06:22 xxxxxxxx joined channel
+07:57 hoxily quit:Quit: WeeChat 1.2
+07:58 hoxily joined channel
+08:05 dzip quit:Ping timeout: 264 seconds
+08:32 tutu_wind joined channel
+08:37 tutu_wind: http://mail.163.com/js6/main.jsp?sid=WDBQjSpYSyIRVtWzYRYYlJAuXzOdxypC&df=webmail163
+08:38 tutu_wind: 发错 ...
+08:47 wlemuel quit:Ping timeout: 252 seconds
+09:03 lh_mouse joined channel
+09:10 ASenR joined channel
+09:29 tutu_wind: lh_mouse: http://music.163.com/#/song?id=5086081
+09:29 tutu_wind: lh_mouse: 清晨来一首 , 提神醒脑 ~ 
+09:31 cleamoon quit:Read error: Connection reset by peer
+09:32 cleamoon joined channel
+09:42 hysw: tutu_wind: RiverFlowsInYou这首倒是不错...
+09:45 tutu_wind: hysw: 恩 , 混音的节奏很好呢 ~ 
+09:46 hysw: 还是感觉听某个学霸弹比较涨智商...
+09:47 hysw: 这玩意不适合做作业的时候听...
+09:51 * hysw 轻音乐什么的当背景还是挺好的...
+09:54 * tutu_wind 嗯 是呢 ~
+10:06 lh_mouse: 醒 脑
+10:06 lh_mouse: @羊叫兽
+10:15 tutu_wind: lhanjian:  字长为32位 , 存储容量为4M , 寻址空间是多大
+10:17 Stevearzh joined channel
+10:18 hysw: 4G?
+10:20 tutu_wind: hysw: 是根据数据总线宽度计算 ?
+10:21 hysw: tutu_wind: 大概是地址总线
+10:22 hysw: tutu_wind: 一直用英文术语所以中文术语搞不太清楚，自己去查资料去比较好
+10:35 Stevearzh quit:Quit: WeeChat 1.3-dev
+10:37 Stevearzh joined channel
+10:42 Plough joined channel
+10:48 hysw: Plough: 智商
+10:53 Plough: hysw: 智商已收到，thx
+10:54 hysw: Plough: 那是学校里散布的反智商...
+11:00 Plough: 嗯，我给你的是反智商
+11:08 varna joined channel
+11:08 varna: 会议给了我两个审稿意见，其中一个类似“后面太长不看”……
+11:09 cleamoon: 23333
+11:09 varna: 我安心投学报去了
+11:09 cleamoon: 另一个是“前面太长不看”？
+11:10 varna: 另一个只说了点实验方面的意见，他建议加一些对照，不过看起来没看理论……
+11:10 cleamoon: 于是基本就是“太长不看”
+11:10 varna: 总之这次被大坑，本来投这个会议是因为他们出结果快
+11:10 varna: 结果被坑三个月，我还不如投学报呢
+11:10 cleamoon: 反正不花你的钱
+11:11 cleamoon: 又不能提前毕业
+11:11 varna: 投学报也花我的钱，不过我出版面费也无所谓
+11:11 varna: 学报虽然审稿慢，但我这文四月中旬就扔出去了……
+11:12 cleamoon: ...
+11:12 cleamoon: 你们为什么要写那么多论文
+11:12 cleamoon: 一片不就好了
+11:12 varna: 之前那篇我觉得太惨了，重新搞了一个
+11:12 boosure quit:Quit: Get your hand off of it
+11:13 cleamoon: 能毕业就好，惨不惨无所谓吧
+11:13 varna: 总之这次有在线投稿系统了，至少我能看到进度
+11:13 varna: 太惨了不好发，至少弄得漂亮点安心
+11:13 cleamoon: 有没有中文的我可以抄一下的
+11:14 varna: 不推荐抄，国外有些审稿人还是身经百战见得多的
+11:14 varna: 刚才排完版把文章扔出去了，页数暴涨到15p...
+11:14 cleamoon: 不是毕设，是日常作业级别的...
+11:14 varna: 你们要做什么作业呀……
+11:14 cleamoon: 毕设基本是奴工
+11:15 cleamoon: 叫兽说如果拿足够好看的论文来就不用写作业了...
+11:16 varna: ...
+11:16 cleamoon: 这次写的题目是什么
+11:17 varna: 这次把我前段时间的一些主观贝叶斯的东西整理了加进去
+11:17 varna: 还是做SNS上的信任预测
+11:17 cleamoon: orz
+11:17 cleamoon: 那估计也就一门课能用...
+11:19 hysw: 还在等结果的路过
+11:20 cleamoon: 学霸云等勃士的录取吗
+11:20 hysw: 论文...
+11:20 cleamoon: 学霸orz
+11:20 hysw: 博士什么的有点不想读
+11:20 cleamoon: @三年拿勃士学位
+11:21 hysw: 没有妹纸读什么博士...
+11:21 FrankHB joined channel
+11:22 xxxxxxxx: 这回的D2是不是已经坑了?
+11:23 varna: 坑了吧
+11:23 cleamoon: 要不你们双开玩
+11:24 varna: 没意思……
+11:24 cleamoon: 羊驼子有大量可用电脑
+11:24 varna: HO棠要是来了还可以一起玩
+11:24 cleamoon: 海棠姬不是在玩吗
+11:24 varna: 我又不喜欢刷装备
+11:24 varna: 他没什么时间了吧？
+11:24 cleamoon: 要回幻想乡了？
+11:24 hysw: varna: 读烟酒僧有意义么？
+11:25 varna: hysw: 国外我不知道，国内我觉得随意
+11:25 cleamoon: 不读就是个纯渣渣，读了就成为了混血渣渣
+11:25 varna: 双大武哔401加贺……
+11:26 varna: 全婚，最低加贺136
+11:26 varna: 这真心不好打了
+11:26 cleamoon: 我学士的课程足以让我找到一个在cern冲咖啡的职业
+11:26 * hysw 哪天滚回去把整本圣经读一遍...
+11:26 cleamoon: 肝orz
+11:26 varna: 圣经我只读过新标点和合本的……英文版念了一点
+11:27 varna: 算了不能怂
+11:27 hysw: 准备直接读NIV
+11:27 cleamoon: 圣经就读到巴别塔
+11:27 cleamoon: HIV？
+11:28 varna: 跟他拼了
+11:28 hysw: KJV和NIV还是有区别的...
+11:28 hysw: 还有一堆不同的版本...
+11:28 cleamoon: 我今天遇到的都是福利
+11:29 hysw: 暂时还没准备去学希伯来文
+11:29 varna: 1ca2clt3dd跟他决战一把
+11:29 Plough: 金属炮管终于发货了
+11:30 varna: 不好
+11:30 Plough: 离下单到发货过了整整两天……
+11:30 cleamoon: 6bb干死他
+11:30 varna: 我用武大吧
+11:30 Plough: 壕rz
+11:30 varna: 1ca2clt2bb1dd
+11:30 Plough: 我也就上一个大姐姐，还是因为准备婚
+11:30 varna: 对面太黑暗了，我想试着赢一把
+11:31 cleamoon: 对了，这个队伍可以上南西队...
+11:31 varna: 可以
+11:31 varna: 但没意义
+11:31 Plough: 没意义+
+11:31 varna: 这些婚舰赢了的话经验很多
+11:31 varna: 干
+11:32 varna: 对面旗舰150大和
+11:32 varna: 不确认是不是完全体
+11:32 Plough: ……
+11:32 cleamoon: 赢不了怎么办
+11:32 Plough: 进去一发波动炮？
+11:32 varna: 赢不了就只能吃几百经验了
+11:32 varna: 啊，小和直接大破
+11:32 cleamoon: 每次我遇到经验高的都干不死
+11:32 varna: 大和中破，换了对面大凤
+11:32 varna: 对面武藏被一炮大破
+11:32 cleamoon: 而且那种总有罚站货
+11:32 varna: KTKM中破
+11:32 varna: BSM哑了
+11:33 varna: 武藏似乎死了
+11:33 varna: KTKM大破
+11:33 varna: 卧槽大和爆了对面一炮104……
+11:33 varna: 昼战收工
+11:33 * xxxxxxxx 判断频道组队永远通不了地狱
+11:34 cleamoon: 婚舰战婚舰才对呀，上电浆
+11:34 Stevearzh quit:Quit: WeeChat 1.3-dev
+11:34 varna: 婚舰只用了北大和小和
+11:34 cleamoon: 我觉得陷阱ass单独就能了...
+11:34 varna: 我还给尻根配了个炮雷
+11:34 varna: 陷阱ass不能
+11:34 varna: 打不过电鬼
+11:35 varna: 不过有个人帮我的话应该能通，我现在电伤也有勉强3.4k
+11:35 cleamoon: 重开几次，直到哪次没有电鬼
+11:35 Plough: WoWS里鱼雷CI效果不如炮雷
+11:35 varna: 王座肯定有电鬼吧
+11:35 Stevearzh joined channel
+11:35 cleamoon: 有个审判炖鸡去作死就好了
+11:35 varna: 有个点了LR的nec去就行
+11:35 cleamoon: 王座的又不用全弄死
+11:35 varna: 但是很烦啊……
+11:36 cleamoon: 如果是个只点了LR的nec呢......
+11:36 varna: 我基本都是加技能不加抗的，得有人帮我处理下
+11:36 cleamoon: 你不是弹幕玩家吗，就当弹幕玩呗
+11:36 varna: 只点LR我还不如弄根棍子……
+11:36 varna: 我试着玩过，玩脱了
+11:36 Plough: 熊野大小姐天天抱着甲板蹲下
+11:36 xxxxxxxx: 不加抗+
+11:36 varna: 不能扔B啊
+11:36 Plough: 到现在基本就没闪避过
+11:36 cleamoon: ......
+11:36 cleamoon: d2的B是什么呢
+11:37 varna: 基本没有
+11:37 varna: d2至今没有无敌技，圣盾那样的
+11:37 xxxxxxxx: 专心啊防御力暴涨 笑
+11:38 varna: 基佬那专心蛮子还挺不错的
+11:38 varna: 除了他自己打得郁闷
+11:38 varna: 老实说我在后面甩完陷阱喝茶，3pp很愉悦……
+11:38 cleamoon: 我试过调出来的5光环89级nec，说是切超D和切菜似的，我的实验结果发现确实是切菜，不过是他切我
+11:38 varna: 你没改装备？
+11:39 xxxxxxxx: 沙袋
+11:39 cleamoon: 改了呀
+11:39 varna: 攻击谁干，骷髅米山？
+11:39 cleamoon: 就是没带复活死尸
+11:39 varna: 那不行呀
+11:39 cleamoon: 骷髅米山+
+11:39 varna: 得带乌达尔兽系列的怪物
+11:40 cleamoon: 我之前实验的他给的存档不用呀...
+11:40 varna: 我自己那几个穷逼单机档里打超D最顺的是pal, 然而我自己手滑打到一半被搞死了
+11:40 varna: ...
+11:40 xxxxxxxx: 羊驼在后面愉悦的时候我在前头一个人都砍不死
+11:40 varna: 你去火焰之河搞一些……虽然也是概率出
+11:40 varna: xxxxxxxx: 你最后伤害多少
+11:41 cleamoon: zealdin？
+11:41 varna: zeal
+11:41 xxxxxxxx: 专心野蛮人还是吃武器
+11:41 varna: 穷人还是有个nec比较好，各种方便……
+11:41 xxxxxxxx: 我觉得穷人应该弄个ama去刷牛
+11:42 cleamoon: zeal能打中？
+11:42 varna: 泰坦复仇不好出
+11:42 xxxxxxxx: 尤其是那边有回收公式
+11:42 varna: cleamoon: 能，我堆了很多LL/LM, 还有个执法者
+11:42 varna: 砍中了1/3机率给敌人衰老
+11:42 varna: 还有妖趾
+11:43 varna: 站人堆里1pp拼，4pp我不敢，会被砍死……
+11:43 cleamoon: 我给炮轰ama弄了个信心大院长，可是攻速不够还是站着死
+11:43 xxxxxxxx: 我直接在普通牛场刷出了12个8#
+11:43 cleamoon: 哦，对，我开的8pp....
+11:43 varna: 地狱对近战的要求太高了，8pp穷人根本不敢刷
+11:43 varna: 8pp我只敢打魔法的
+11:44 cleamoon: 魔法舒服的我也只知道鸡腿
+11:44 varna: 其实纯骨装备好很舒服
+11:44 cleamoon: 冰火法还好
+11:44 varna: 单发3k应该可能
+11:44 varna: 但我只能做到单发1.7k...
+11:44 cleamoon: .....
+11:45 varna: 不过毕竟看着帅
+11:45 cleamoon: 好处也就是魔免比元素免少
+11:45 varna: 但是魔免有个越不过的坎
+11:45 cleamoon: 最帅的是元素德
+11:45 varna: KB第二波，诅咒的阿克姆
+11:46 varna: 杀他需要控制好场面，不然尸爆很麻烦
+11:46 cleamoon: 有米山呢
+11:46 varna: 米山好还行
+11:46 varna: 但他的毒是按比例扣血的吧……
+11:46 cleamoon: 无限刚毅米山
+11:46 xxxxxxxx: 不过毕竟要喝蓝瓶
+11:46 varna: 都出无限了那无所谓……
+11:46 varna: amp挂起上去直接砍死他
+11:47 varna: xxxxxxxx: 单机的话就不止是喝蓝瓶的问题了
+11:47 varna: 我调错pp数的时候感觉敌人是看着我而蛋疼至死的
+11:47 cleamoon: 一个地狱通关，两个噩梦通关，我只有2个sol
+11:48 varna: 我用骨牢圈住敌人拉嘲讽，然后贴衰老增加骨牢生存时间，之后一边灌水一边打骨矛
+11:48 cleamoon: 连el什么的都很少
+11:48 cleamoon: ......
+11:48 varna: 然而尸爆伤害1pp, 敌人又被隔开，效果不大
+11:49 varna: 水灌得天昏地暗，反正最后敌人终于都死了
+11:49 varna: 打一波人喝一堆瓶子
+11:49 cleamoon: 那还不如电枪呢
+11:49 varna: 电枪伤害高
+11:49 varna: 而且一样没有命中问题，人越多越厉害
+11:50 cleamoon: 所以为什么练的人少
+11:51 varna: 不少啊
+11:51 varna: 刷牛方便
+11:51 varna: 基佬说的ama刷牛不就是那么刷的……
+11:52 cleamoon: 方便+
+11:52 cleamoon: 比鸡腿方便
+11:52 varna: 不过我不喜欢刷
+11:52 cleamoon: +
+11:52 varna: 所以一直不太玩战网，单机也都挑穷鬼的玩法，不行就只通NM
+11:53 varna: 对了谁来agar.io
+11:53 cleamoon: .....
+11:53 cleamoon: 卡死浏览器
+11:53 molikto joined channel
+11:53 varna: 我看着一个比手掌还大的比利时飞过去了……
+11:56 varna: 看我doge一下
+11:56 cleamoon: 对了，是伊利难出还是青叶难出
+11:57 lh_mouse: varna, i686 实模式寻址范围到底是 1M 还是 4G
+11:57 Plough: 这延迟太TM打了
+11:57 Plough: 大*
+11:57 xxxxxxxx: 我真是非洲人了.... terraria丛林转了一圈 强行找不到神庙
+11:57 xxxxxxxx: 日了poi了
+11:57 lh_mouse: 有一种说法是段寄存器是 FFFF 的时候并不是移位相加   所以是 1M + 16K - 16
+11:58 lh_mouse: 但是 32 位寻址的时候怎么处理的
+11:58 varna: 32位的段寄存器不是已经变成selector了么
+11:59 lh_mouse: 按照 intel 一贯的做法就是只接低位的线  高位截断
+11:59 varna: 哦，实模式啊
+11:59 lh_mouse: 实模式
+12:00 varna: i686实模式寻址还是1M不是
+12:00 sismvg joined channel
+12:00 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=918517dc2d34349b74066e8df9e81521/c02a9a16fdfaaf5147767779895494eef11f7a14.jpg
+12:00 sismvg: 绝赞的上色
+12:00 sismvg: prprprp
+12:00 sismvg: http://tieba.baidu.com/p/3876758037?fr=frs
+12:00 lh_mouse: 那么比如 mov eax, dword ptr[0x1234567] 怎么办
+12:00 sismvg: nfsw
+12:01 varna: 我不确认是around还是直接报错
+12:01 lh_mouse: new file system w*
+12:01 varna: 实模式干脆是不开A20以上的
+12:01 varna: 那些地址线用不了
+12:02 lh_mouse: 另外  TC 时代的 HUGE 模式据说可以寻址 4G
+12:02 lh_mouse: 难道是 386 保护模式？
+12:02 varna: TC的时代用保护模式没问题吧，估计是编译到386
+12:03 cleamoon: fa fa fa fa fa fa fa
+12:03 lh_mouse: 不过话说回来吧
+12:03 lh_mouse: x86 这样复杂的指令集论执行效率完爆 powerpc 一类好几倍
+12:03 cleamoon: 武藏三号机
+12:03 varna: cleamoon: ...
+12:04 varna: 现在单纯的RISC我觉得更多是编译方面的学术价值
+12:04 varna: 我日
+12:04 varna: 出生点不好，被人秒吃了……
+12:05 cleamoon: 怒睡
+12:10 cleamoon quit:Ping timeout: 240 seconds
+12:12 varna: 狗活了一阵子被人怒吃
+12:12 xxxxxxxx: http://www.zhihu.com/question/23525927 因为脸黑
+12:13 sismvg: 早上用25台盟军的两栖运输船去攻打2台磁暴线圈。结果全灭..
+12:13 varna: “说个故事，我的司机一个月人民币900的工资3个老婆，10个孩子……”
+12:13 varna: 卧槽
+12:14 molikto quit:Remote host closed the connection
+12:15 sismvg: ...每天饭钱3块..
+12:18 xxxxxxxx: "我就说说我吃过的玩意，螃蟹石斑鱼这些太小儿科了，羚羊，五爪金龙，老鹰，穿山甲，蟒蛇……" 他应该是广东人吧
+12:19 xxxxxxxx: 另外五爪金龙是啥...
+12:19 sismvg: 蜈蚣？
+12:19 sismvg: 原来是蜥蜴
+12:20 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=cdd6fbe990cad1c8d0bbfc2f4f056509/d1160924ab18972b299feb0ce3cd7b899f510a4b.jpg
+12:21 Plough: http://item.taobao.com/item.htm?spm=2013.1.20141002.4.5QwAec&scm=1007.10009.6098.i163956327&id=163956561&pvid=ff1a1973-54a2-4419-a9d8-2be8ad4476cf
+12:21 Plough: 这玩意居然真有人卖啊
+12:21 sismvg: 12天没洗澡了..天天下雨
+12:22 varna: Plough: 说起来你想起主题了没？
+12:22 Plough: 没
+12:22 Plough: 有啥建议吗
+12:23 varna: 我的建议可能会比较偏门，所以算了……
+12:23 sismvg: 我的RPC的序列化功能是用户提供的.然后我又提供了异步RPC消息的callback. 
+12:23 sismvg: 然后用户的这个模块崩溃了,我该告诉callback吗?
+12:23 Plough: 先说出来看看嘛
+12:24 varna: 还是旧想法，我想试图还原旧的水面舰鱼雷战术
+12:24 Plough: なるほど
+12:25 Plough: http://imgsrc.baidu.com/forum/w%3D580/sign=bac8aa2379d98d1076d40c39113eb807/189e06f431adcbefe21c42d9a9af2edda2cc9f85.jpg
+12:26 xxxxxxxx: 如果你想让各国政府（而非NGO）完全无私的援助另一国政府，那你自己就不正常，就错了，因为你违反了政治学最基本的原则。 <- 有人知道政治学最基本的原则么
+12:26 varna: ...俄文……
+12:26 varna: 我没学过政治学
+12:27 Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=46f64923f203918fd7d13dc261062497/d52a2834349b033b7e64e21910ce36d3d439bd00.jpg
+12:27 xxxxxxxx: 我也没有
+12:28 xxxxxxxx: 老红军不知道这方面有没有内幕
+12:28 varna: 这图没什么
+12:28 xxxxxxxx: lhanjian: 
+12:28 varna: 一个乘法形成一个笛卡尔积，但一个加法形成一个联合
+12:28 varna: 这是类型论
+12:28 Plough: 如果你觉得不开心，试着想想：1.你没有出生在第三世界国家；2.你不必经历战争摧残；3.你能通过网络看到不一样的世界。还不开心？那好我再告诉你：4.你不是婉拒出版哈利波特第一集的十二个出版社之一；5.你得过的奥斯卡金像奖和李奥纳多一样多。——teaspoon900
+12:28 varna: 你们啊，图样图森破
+12:29 xxxxxxxx: 想过上面那些之后 再想想不开心怎么办
+12:29 varna: 然而还是不开心
+12:29 sismvg: 后两个什么意思
+12:30 varna: 我手头的甲章也和莱昂纳多一样多
+12:30 sismvg: 6:你没有和李奥纳多一样多的情人
+12:30 Plough: 你怎么知道莱昂纳多不是震电dalao身怀十一甲……
+12:31 Plough: 没准人家还有两个53舰艏
+12:31 varna: 你说的对，我竟无言以对
+12:32 varna: 另外没记错的话，莱昂纳多应该演过GV
+12:32 varna: 仔细看Junkyard Boys里面木吉七本枪
+12:32 xxxxxxxx: 你了解的真多
+12:32 varna: 里面有疑似莱昂纳多的人
+12:32 Plough: 23333
+12:32 sismvg: ...
+12:33 Plough: 现在的WoWS：对面俩大和，这把稳了
+12:35 varna: 肛旗期末考完了？
+12:35 Plough: 考完了
+12:35 varna: 哦哦
+12:35 Plough: 9 10两天返校
+12:35 Plough: 然后就没事了
+12:40 varna: Plough: 爆
+12:41 Plough: varna: 肛
+12:50 lh_cat joined channel
+12:51 tutu_wind: Plough: 肝~ 
+12:53 molikto joined channel
+12:53 lh_mouse quit:Ping timeout: 264 seconds
+12:57 molikto quit:Ping timeout: 248 seconds
+13:00 xxxxxxxx: 然而agar.io我运气最好的一次也只排到过第六
+13:00 xxxxxxxx: 最后被开黑的NGA和韩国人逼得走投无路
+13:05 xxxxxxxx: 不行我这里还是延迟...
+13:09 varna: 嚓，不合作的人吃我……
+13:12 sismvg: http://tieba.baidu.com/p/3876676240?fr=frs
+13:13 sismvg: 在美国展出幼女18#..作大死啊
+13:16 ASenR quit:Quit: Lost terminal
+13:16 Plough: 重启到win去玩会wows
+13:16 Plough quit:Remote host closed the connection
+13:18 Plough joined channel
+13:22 xxxxxxxx: http://cells.happyfor.me/ 还是这里比较好
+13:26 xxxxxxxx: 然而依然卡...
+13:34 varna: 啊好麻烦，这个优化问题
+13:39 lh_cat quit:Read error: Connection reset by peer
+13:43 lh_mouse joined channel
+13:44 lh_not_bot: 12:20 < sismvg> 12天没洗澡了..天天下雨  // 目前三天一次路过
+13:44 sismvg: 原本一天一次
+13:44 hoxily quit:Ping timeout: 244 seconds
+13:46 lh_not_bot: 24℃ 洗个毛
+13:47 sismvg: 尤其是毛，一定要洗干净
+13:48 lh_not_bot: 你又皮痒了
+13:48 sismvg: ?
+13:50 lh_not_bot: 我说个事情  不针对任何人
+13:50 lh_not_bot: 在掂量自己是否有资格谈笑风生之前  想想自己有没有蛤蛤那样的地位
+13:50 sismvg: geordi,<<sizeof(std::function<void(void)>)
+13:50 geordi: 32
+13:50 lh_not_bot: 蛤蛤可以那样做  如果换成一个不坐在他位置上的人  就是纯傻逼
+13:50 sismvg: geordi,<<sizeof(int(*)(int))
+13:50 geordi: 8
+13:51 molikto joined channel
+13:51 molikto quit:Remote host closed the connection
+13:51 lh_not_bot: std::function 不支持 copy on write 就是最大的逗比设计
+13:51 molikto joined channel
+13:51 sismvg: geordi,<<sizeof(std::atomic_size_t)
+13:51 geordi: 8
+13:55 hoxily joined channel
+14:19 molikto_ joined channel
+14:19 molikto quit:Read error: Connection reset by peer
+14:22 condy: geordi: << sizeof(std::atomic<int>)
+14:22 geordi: 4
+14:22 lh_not_bot: geordi: << sizeof(condy); __extension__ using condy = char[0];
+14:22 geordi: 0
+14:24 lh_not_bot: condy: 摸头
+14:24 lh_not_bot: condy: 卖个萌
+14:24 condy: 萌力不够了（
+14:25 lh_not_bot: 需 要 补 充 ？
+14:25 xxxxxxxx: condy: 吃点三吱补补
+14:26 * varna 掏出醋
+14:26 * lh_not_bot slaps varna around a bit with xxxxxxxx 
+14:27 condy: Pia!<(=ｏ ‵-′)ノ☆
+14:31 shui_code joined channel
+14:33 xxxxxxxx: 补充效果很明显
+14:35 sismvg: 今天看到个误判的新闻，法官对嫌疑人这么说:你要是没有罪,为什么那个和你无冤无仇的人要指控你呢?
+14:35 xxxxxxxx: 哈哈哈
+14:36 sismvg: 然后判了10年
+14:39 lh_not_bot: varna: http://paste.ubuntu.com/11834530/  这个有什么漏洞么
+14:39 ASenR joined channel
+14:40 lh_not_bot: 28 行删掉
+14:40 varna: 我看下
+14:45 varna: 看着没什么
+14:52 lh_not_bot: 如果没有 FIFO   这就算一个解了
+14:52 lh_not_bot: 之前是没有 18-20 这三行的
+14:52 lh_not_bot: 结果会死锁的
+14:52 lh_not_bot: 这个东西不容易重现  最后发现是这问题
+14:53 molikto_ quit:Ping timeout: 244 seconds
+14:53 molikto joined channel
+14:54 lh_not_bot: 线程 1 执行到 39 行  线程 2 执行到 17 行  然后线程 1 执行到 40 行  发现 waiting 是 0   于是线程 1 执行第二个循环  线程 2 执行到 for 里面等待信号量   线程 1 执行到 lock 发现 waiting 是 1（也就是线程 2）  往下进入 for 同样等待信号量  于是死锁
+14:55 lh_not_bot: 现在这样子应该没问题了吧
+14:56 varna: 我看着是没问题了，能保证进自旋临界之后pre是对的
+14:56 * varna 正在准备抛弃WHObuki
+14:58 lh_not_bot: 按目前的测试   这个锁在耗时操作上（我测试是打开一个文件再关掉）的性能接近 Windows 自带的 critical section   而在短时操作上比系统自带的快一倍多
+14:58 lh_not_bot: 我这里解决的问题是  由非持有锁的线程释放互斥锁
+14:58 lh_not_bot: 我翻了下 posix 的文档   没有保证这样的行为可移植
+14:59 Plough quit:Read error: Connection reset by peer
+14:59 varna: 非持有者释放？具体的场合求举例
+14:59 lh_not_bot: Linux 文档写明 fast 属性的 pthread_mutex 支持这种行为 但是同样不保证可移植
+14:59 lh_not_bot: varna: 读写锁
+14:59 varna: 哦
+14:59 lh_not_bot: 二元信号量支持这样搞  但是开销太大
+15:00 lh_not_bot: 前几天 mingw-w64 的俩开发者因为这事情掐起来
+15:00 lh_not_bot: 到底是否应该支持这种不保证可移植的行为
+15:00 varna: 我觉得该兹瓷
+15:01 lh_not_bot: 确实  虽然不保证  但是如果没有这样的操作  那么非递归锁的意义就不太大了
+15:01 xxxxxxxx: 滋磁也要遵守基本法
+15:01 Plough joined channel
+15:01 lh_not_bot: 基本法闷声发大财了
+15:01 lh_not_bot: 他什么都不说
+15:01 varna: gcc有个古话叫闷声大吐核
+15:02 lh_not_bot: 我大概知道之前的读写锁为啥会那么慢
+15:02 lh_not_bot: 因为互斥锁的部分是用信号量实现的
+15:03 lh_not_bot: 非竞态也会导致陷入
+15:03 varna: 结果信号量陷入了么
+15:03 lh_not_bot: 改成 mutex 之后  写锁的开销大概是单互斥锁的两倍多一点
+15:04 * lh_not_bot 干活去了
+15:07 molikto quit:Ping timeout: 240 seconds
+15:09 molikto joined channel
+15:32 shui_code quit:Quit: WeeChat 1.1.1
+15:32 xxxxxxxx quit:Quit: Leaving...
+15:46 hoxily quit:Ping timeout: 265 seconds
+16:59 Plough quit:Remote host closed the connection
+16:59 Plough_ joined channel
+17:02 Plough_: realtek: 我发起疯来连192.168.1.1都爆炸
+17:11 varna: Plough_: 爆
+17:19 hoxily joined channel
+17:39 Plough_: varna: 肛
+17:43 Mokou: 一艘意大利渔船在希腊沿海沉没，渔夫成功游到岸上，但全身上下已然只剩破烂的衣裤和口袋里的一欧元。 　 　 现在他是全希腊最富有的人。 ——Rocket11
+17:48 varna: 2333
+17:52 lh_mouse: 你 nick 挂了？
+17:52 Mokou: 没
+17:52 Mokou: 只是想换个玩玩
+17:52 lh_not_bot: Mokou: 摸头
+17:53 Mokou: lh_not_bot: 捏
+17:53 lh_mouse: Mokou, 摸头  （伸出两只猫爪子）
+17:54 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=3962f597093387449cc52f74610ed937/679ce10f4bfbfbed64229db87df0f736aec31fb5.jpg
+17:55 varna: 23333
+17:55 lh_not_bot: http://baike.baidu.com/link?url=J1xizoCwWklN6rU6EyLP3j5l_cTz7FzO3K3HTR0tZITDWdXBb4CfVof-1SHdtE9U-04rqZJ0c_fkI0TCw4sA9XYLP53ttw6MgTe78izDsJC
+17:56 varna: http://baike.baidu.com/view/1245033.htm
+17:57 varna: http://iask.fh21.com.cn/question/2932895.html
+18:01 lh_not_bot: 为何要伤害我的眼睛……
+18:02 Mokou: 终于把1-5斩了
+18:03 varna: 不是我做的孽
+18:03 varna: 我心思一邪，从操局长的百度百科直接转到搜索引擎
+18:03 varna: 第一页上的条目
+18:07 Mokou: http://tieba.baidu.com/p/3874705720 来看相声
+18:12 varna: 什么逗比……
+18:13 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=c74eac2dacec8a13141a57e8c7029157/f5c3b5119313b07e5ae2d8ca09d7912396dd8c42.jpg
+18:13 sismvg: 下限
+18:17 Mokou: 这位似乎是网络建国登基的满洲国皇帝
+18:18 varna: 卧槽？
+18:18 varna: 他自封皇帝了？
+18:19 Mokou: 不知道是不是自封，总之网上都叫他硕帝
+18:19 Mokou: 而且他的文章里满篇满洲
+18:19 varna: 来信看
+18:20 varna: 伪满皇宫门口见……
+18:20 varna: 砍
+18:21 Mokou: 233333
+18:21 cleamoon joined channel
+18:22 molikto_ joined channel
+18:22 molikto quit:Read error: Connection reset by peer
+18:23 varna: 说起来，当时的伪政府和宪兵队离吉大医学院/白求恩医院不远
+18:25 molikto_ quit:Remote host closed the connection
+18:28 Mokou: 补给了些耗材，卖家送了一架F22……
+18:28 varna: ...
+18:29 Mokou: 虽说是只能大致看出样子的几块钱的玩意
+18:29 Mokou: 不过反正是送的
+18:29 varna: 以前我看过一个逗乐的视频
+18:29 varna: 一个日本伙计买了SCAR-L仿真枪，不知道怎么耍好了
+18:29 varna: 于是他把牙刷绑在了拉机柄上
+18:30 varna: 啊噗噗噗噗噗……
+18:33 Mokou: ……
+18:33 Mokou: 你们日本人真会玩
+18:33 varna: http://www.bilibili.com/video/av2538123/ 这UP想女朋友想疯了
+18:37 sismvg: ...没想到本机有程序用了5150端口..调试就这个错了》。
+18:37 Mokou: 才一分钟多，这UP主太不持 久
+18:38 varna: sismvg: ……那bind就该报错了吧……
+18:38 varna: aLIEz那歌我还挺喜欢的
+18:38 varna: 当然副歌部分我就当他在唱可乐芬达王老吉
+18:39 varna: 从浑作战开始的三个活动我都关掉游戏BGM用那个
+18:39 sismvg: 我没开服务器,是别的程序用掉了
+18:39 varna: 一样的
+18:39 varna: 你bind会绑不上
+18:40 varna: 不过这里有个问题啊
+18:40 varna: 没bind为何要固定5150这个口？
+18:41 sismvg: @linux网络编程
+18:42 sismvg: 弄错了,是winsock网络编程用这个
+18:43 varna: http://www.bilibili.com/video/av1005028/
+18:46 varna: http://www.bilibili.com/video/av631444/ 好久不见的炎之导师
+18:47 Mokou: 活动图我还是听原版BGM
+18:47 molikto joined channel
+18:47 Mokou: 你像春活最后两面那BGM就很不错
+18:47 varna: 那个确实很赞
+18:48 varna: 「有种再来 捞不出来 听说你们带潜艇过夜战？随便打 S也拿走 矶～风出不来」
+18:48 varna: ^ 就地中文填词
+18:49 Mokou: 23333
+18:49 Mokou: 说起来最近没怎么看到创价学会了
+18:49 varna: 前段时间有几个MAD
+18:50 varna: 15春的真·BGM其实是M姬的无缝呵呵呵呵
+18:50 varna: 我捞的时候二队带了三个火箭弹
+18:50 Mokou: ……
+18:50 varna: 那呵的
+18:50 Mokou: nico上以前的创价学会物都被封了……
+18:50 varna: ……创价学会发力了？
+18:51 Mokou: 大概是
+18:51 Mokou: 写了几句因侵权什么的
+18:51 molikto quit:Remote host closed the connection
+18:51 varna: 应该怒吼“我对宗教没有兴趣！不要再来了！”
+18:52 Mokou: 然后直接被嘴炮轰杀么……
+18:52 Mokou: 先去吃饭
+18:52 varna: 被魔音的柴田……
+19:00 Stevearzh quit:Quit: WeeChat 1.3-dev
+19:17 Mokou quit:Ping timeout: 246 seconds
+19:17 molikto joined channel
+19:18 ASenR quit:Quit: Lost terminal
+19:21 Mokou joined channel
+19:22 Mokou: 于是wifi又炸了
+19:22 Mokou: 今天炸了四次
+19:22 wlemuel joined channel
+19:26 Plough joined channel
+19:27 Mokou quit:Ping timeout: 250 seconds
+19:32 varna: Mokou: 爆
+19:36 Mokou: http://www.bilibili.com/video/av2294580/ 还是创价学会带感
+19:37 varna: 开口就是柴田……
+19:37 varna: 操，这个魔音突破天际了……
+19:38 Mokou: 柴田的魔音是每个创价MAD的必备要素……
+19:39 varna: 这个魔音连贯而嘹亮，很赞
+19:40 varna: http://www.bilibili.com/video/av2513180/
+19:41 varna: ^ 畜牲的供氧
+19:42 Mokou: 不过说起来，柴田算是被整得最惨的一个了吧
+19:42 Mokou: 各种魔音……
+19:42 varna: 「请赐给我乳腺癌和肺癌的力量 病魔能安心在北邮下 干倒×校长」……
+19:43 varna: 柴田的魔音毕竟各种好
+19:43 Mokou: 233333
+19:44 * hoxily 爆 varna 
+19:44 Mokou: http://www.bilibili.com/video/av2306152/ 这还有个修正版……
+19:45 varna: ...
+19:45 varna: hoxily: 你这基佬
+19:46 lh_cat joined channel
+19:47 varna: 卧槽
+19:47 varna: 我拍中了一个蚊子，他居然没死
+19:47 varna: 还脱离了
+19:50 lh_mouse quit:Ping timeout: 252 seconds
+19:50 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=269d517ab7b7d0a27bc90495fbed760d/1a4cdb2f070828389499e1dcbd99a9014d08f111.jpg shizuma脸发现
+19:53 sismvg: 原本以为苏联战役里天皇开的萝卜有多屌,开了一大堆天启准备和他拼。结果被放在路边的几架小飞机给突突了》。
+19:53 varna: http://www.bilibili.com/video/av2509078/ 以父之名
+19:54 tutu_wind: ~pia lh_mouse 
+19:54 Mokou: 天皇开的那玩意不就是个鬼王么
+19:54 * lh_mouse slaps tutu_wind around a bit with a large trout
+19:55 varna: 然而晋三早已看穿了一切
+19:56 sismvg: 我原以为要开出很叼的将军刽子手
+19:58 varna: http://www.bilibili.com/video/av2507554/ 杰克奥特曼泪流满面
+20:00 Mokou: 将军刽子手一出天启卵用
+20:00 Mokou: http://www.bilibili.com/video/av3741/突然发现我收藏夹里还有这么个文物……
+20:01 varna: 啊，这个
+20:01 varna: 断罪歌……
+20:01 Mokou: 隔了这么久一听还是挺带感
+20:01 varna: 这有个系列吧？
+20:02 varna: 宴酒塚那些
+20:02 Mokou: ……这个我还真不清楚
+20:03 varna: 我又想起国内一个诡异的凹梦流派
+20:03 varna: 四张六根走起，凹完收工
+20:04 Mokou: ……
+20:04 Mokou: 不过想想审判灵梦的那句“东方热潮毫不减退”，再看看现在的国之将亡……
+20:05 varna: 别怕，这时候该高呼妮可妮可妮来招揽人了
+20:05 varna: 在百合弱子退去之后，GAY想乡的价值才能体现出来
+20:06 varna: 噗，我才发现B站的地狱少女都被和谐了
+20:06 Mokou: 噗
+20:07 Mokou: 地狱少女我好像看到第二季，还没看完
+20:07 varna: 动画老实说挺差的，我最喜欢的部分是第一季OP（包括影像）
+20:09 Mokou: 我都快没印象了……
+20:10 varna: 有一个麦金塔服务器
+20:11 Mokou: 哦对
+20:11 varna: 第一季OP在现在听也是好歌
+20:12 varna: 阎魔爱散开的头发也超好看
+20:12 varna: 和我是幼女爱好者一点关系都没有
+20:12 Mokou: 解释就是掩饰
+20:13 varna: 地狱少女我至今认为是漂亮原案被脚本和系列构成搞砸的几部可能成为好作品的动画之一
+20:13 varna: 第一季其实也是有主线的，但主线太弱了
+20:14 varna: 即使稍微商业化一些，做成darker than black那个感觉也好啊
+20:14 varna: 当然不要再让少女每次都从项链里掏出三枪下班用反器材狙击枪、还强迫观众看十多秒特写就好
+20:15 varna: 流星双子那个魔法少女式掏枪跟当年的冰河8.6s芭蕾一样……雷人
+20:15 Mokou: 23333
+20:18 sismvg: 看到个幻想乡吃人肉罐头的漫画.太可怕了
+20:18 sismvg: 最后还来了句：感谢你们的肉..
+20:27 cleamoon__ joined channel
+20:30 endle joined channel
+20:33 varna: 听了听上坂瑾和金元寿子的喀秋莎，很想把金元的部分都掐了……
+20:34 varna: 换上买四个萝卜切吧切吧剁了也比驱逐姬强……
+20:35 Mokou: ……
+20:37 cleamoon__: 希腊人不工作拿到的福利也足以每年旅游几次的
+20:37 cleamoon__: 不过潮好有料呀
+20:37 varna: 潮一直如此
+20:37 varna: 现在这个泳衣，被人爆料是战时的牛奶包装……
+20:38 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=6a92eeb8201f95caa6f592bef9157fc5/d463702ac65c1038aedb2504b7119313b17e8907.jpg
+20:38 varna: ^ 图
+20:39 cleamoon__: 那是牛奶？我以为是酒呢
+20:39 Mokou: http://tieba.baidu.com/p/3877890003 然而我记得克爹最近被削了……
+20:40 Mokou: 现在能叫爸爸的只有最上和德梅因
+20:40 varna: 我被洗脑，并不知道美帝的轻巡用来干什么
+20:41 Mokou: 用来肛IJN的重巡
+20:41 varna: 就知道他们打飞机非常厉害，船长的智商似乎也不知为何很高
+20:41 Mokou: 2333
+20:41 varna: 以至于月月水火木金金的水雷战队被揍得稀里糊涂
+20:41 Mokou: 毕竟重
+20:41 Mokou: 一万吨打五千五百吨你告诉我怎么苏
+20:42 varna: 美军驱逐队在典型战斗中犯的错误甚至比某武斗运输团还少
+20:42 varna: 他们的上级似乎仔细地研究了对策
+20:42 Mokou: ……
+20:42 varna: 美国那么多驱逐舰，怎么可能全都一下子达到比对手还高的训练水平……
+20:43 varna: 当然有飞机有电探是一回事，但和敌人展开了近战又是一回事了
+20:43 varna: 至于水雷战队之精锐
+20:44 varna: 虽然不知道精锐到什么程度，总之是被过当的攻击直接送下去了
+20:44 Mokou: 233333
+20:44 varna: 所以说，侠之大者，接猫接狗接矢矧
+20:45 Mokou: 说起来，我突然想起十年前和别人一起玩冒险岛私服的时候了 ……
+20:45 varna: 十年前……05年我是不是条窝狗来着……
+20:46 Mokou: 我刚学会上网一年，被人拉过去了
+20:46 varna: 想了想05年应该不是
+20:46 molikto quit:Read error: Connection reset by peer
+20:46 varna: 恐怕还要再晚一点
+20:46 Mokou: 05年羊驼子在上那个等级的学校
+20:46 molikto joined channel
+20:46 Mokou: 哪个*
+20:47 cleamoon__: 我还以为肛旗会说十年期和别人一起玩妹子的时候
+20:47 Mokou: 那是你这种现充
+20:47 cleamoon__: 我已经宅家里三天没出屋了
+20:47 varna: 05年我没上高中
+20:47 varna: 卧槽人生悲剧之一
+20:47 varna: 刷闪数错数
+20:48 Mokou: ……
+20:48 varna: 朝潮补闪……
+20:48 Mokou: 强行A胜
+20:48 cleamoon__: 饭否怎么那么慢
+20:49 varna: 现在我都不上饭否了
+20:49 Mokou: 每次都他妈爆我反潜
+20:49 varna: 恋恋犯二看起来太蛋疼
+20:50 varna: 我现在都不换反潜装了，炸掉就炸掉，炸不掉就认了……
+20:50 cleamoon__: 恋恋不怎么说话了，估计总算快死了
+20:50 varna: 水雷战队还是要靠爆大船来锻炼口牙！
+20:50 Mokou: 我直接换船
+20:50 Mokou: 然后吹雪酱被对面大破雾岛顶着反航一炮秒了
+20:51 varna: 对了，南西作孽有成果了
+20:51 varna: 今天铝酱和一库直接逼婚
+20:51 Mokou: ……
+20:51 varna: 168进入冲刺阶段，哈酱可能还有不到一半
+20:52 Mokou: 苦瓜不过Lv93
+20:52 Mokou: 南西太可怕
+20:53 varna: 南西太可怕
+20:53 varna: 我和肛旗平时都不怎么出击
+20:53 varna: 然而我提督经验估计比他多了一百万以上？
+20:53 Mokou: 估计是
+20:53 Mokou: 我现在还是Lv102
+20:53 cleamoon__: 尔等打得过3-5的
+20:54 Mokou: 我打不过
+20:54 varna: lv106/3.6Mexp
+20:54 Mokou: 另外我才知道提尔曼计划已经有命名了
+20:54 Mokou: 叫罗德岛……
+20:54 varna: 这土包子名字……
+20:54 varna: 罗德岛是不是在纽约附近？
+20:54 Mokou: 反正是个洲名
+20:55 Mokou: 我查查
+20:56 varna: 3-5是我最后的矜持啊
+20:56 molikto quit:Read error: Connection reset by peer
+20:56 varna: 现在哪有需要水雷战队的地方
+20:57 Mokou: 罗德岛本体在希腊附近
+20:57 varna: 也就3-2 3-5 水反 6-3
+20:57 molikto joined channel
+20:57 cleamoon__: 我只有2-3,2-3,2-3,2-3
+20:58 Mokou: 洲确实是在纽约旁边不远
+20:58 cleamoon__: 我还需要至少100个航母才能喂饱各种船的制空...
+20:59 varna: 日常捞捞轻母就好了
+20:59 Mokou: 纽约洲往东再往东
+20:59 Mokou: Connecticut旁边就是
+21:00 Mokou: 东边
+21:01 cleamoon__: 哪有轻母
+21:01 varna: 2-3
+21:01 varna: 有飞鹰隼鹰祥凤RJ
+21:01 varna: 道中也有，A胜偶尔能，S胜比较多
+21:06 Mokou: http://tieba.baidu.com/p/3871562132 我该说什么
+21:07 cleamoon__: 哦，似乎不是饭否崩了，是我自己的网崩了...
+21:08 varna: 噗
+21:09 varna: 可怕的德棍
+21:09 wlemuel quit:Ping timeout: 255 seconds
+21:09 varna: 46炮那种火控不行射速不行的东西放到现在来，是要等到二十公里上炮战么
+21:10 Mokou: 今天还看见个20in主炮五基二十门的
+21:10 varna: ……现代的舰炮不是用来干这个的啊
+21:10 Mokou: 一被吐槽就说“如果用现代科技应该会好得多吧”
+21:10 Mokou: 现代科技谁TM跟你玩……
+21:10 varna: 如果用现代科技的话用小口径速射炮配榴弹
+21:11 varna: 主力武器还是飞机和导弹
+21:11 Mokou: 所以我直接表示他这脑洞毫无意义
+21:11 Mokou: 这么来的话我还直接上波动炮呢
+21:11 varna: 现在更重要的是数据链和卫星啊
+21:11 cleamoon__: 我会用上海雾的装备的
+21:12 varna: 那些太威了，不过首先你要变成一个逗比……
+21:12 Mokou: 或者变成一个欧提
+21:12 varna: 嗯，我们是说不知道是不是人的翔像
+21:12 varna: 那人太欧不能直视
+21:12 varna: 而且他试图在海雾内部宣传毛泽东思想
+21:13 Mokou: 毛泽东思想什么情况……
+21:13 varna: 党内无党帝王思想 党内无派千奇百怪
+21:14 varna: 炮轰大和的资产阶级司令部
+21:14 Mokou: 233333
+21:14 Mokou: 手动搓出来的这段圆柱直径倒是够了
+21:15 Mokou: 就是不知道我能不能修得足够正……
+21:15 varna: 肛旗搓柱……
+21:15 varna: 你要用嘴含
+21:15 Mokou: 你来帮我含
+21:15 varna: 你这基佬
+21:15 Mokou: 我从未见过如此厚颜无耻之驼
+21:15 Mokou: 主要是因为十米测距仪被不知道是我父母中的谁弄断了一边
+21:16 varna: ...
+21:16 cleamoon quit:Ping timeout: 255 seconds
+21:16 varna: 那么脆的？
+21:16 Mokou: 不脆，所以我至今想不明白那玩意是怎么断的
+21:16 Mokou: 但是它就是断了……
+21:16 Mokou: 而且断下来的部分还找不到了
+21:17 varna: 说不定是你梦游的时候吃了
+21:17 varna: 试着灌肠看？
+21:17 Mokou: 然而我不梦游
+21:17 cleamoon joined channel
+21:18 Mokou: 田宫只给了备用的十五米测距仪，所以我得自己动手……
+21:18 cleamoon__ quit:Ping timeout: 248 seconds
+21:18 varna: 似乎现在有一批人要把周杰伦的专辑做完
+21:18 Mokou: ……
+21:18 Mokou: 真可怕
+21:18 varna: http://www.bilibili.com/video/av2538181/
+21:18 * sismvg 不知道recvfrom出错后该干什么..
+21:19 varna: 该存下errno然后判断错误码
+21:19 Mokou: 说起来，如果我想在用户态自己撸一遍TCP的话能做到吗
+21:19 varna: 能
+21:19 sismvg: 该尽力恢复吗
+21:19 varna: 但你可能需要一个服务器实现
+21:19 Mokou: 服务器实现指？
+21:19 varna: sismvg: 什么叫尽力恢复，你甚至不指明错误
+21:20 varna: Mokou: daemon
+21:20 Mokou: 这个倒不是问题
+21:20 Mokou: 主要是我该用哪些接口来直接折腾底层
+21:20 varna: 你有两个选择
+21:20 varna: 第一个是用raw实现一个传输层协议，这个我不那么推荐
+21:20 varna: 第二个是类似UDT的选择，reliable UDP
+21:21 Mokou: 其实我是想熟悉一下TCP……
+21:21 varna: 那样我觉得看看书就好了
+21:22 Mokou: 自己撸一遍记得比较熟
+21:22 varna: 太累了
+21:22 Mokou: raw那个怎么玩的
+21:22 Mokou: 累了直接坑掉就好……
+21:22 varna: SOCK_RAW
+21:23 Mokou: 我查查
+21:23 varna: 你可以拿到IP报
+21:23 varna: 不过这个要权限
+21:23 cleamoon_ joined channel
+21:26 varna: 菊座退休了！？
+21:26 Mokou: 噗！？
+21:26 cleamoon quit:Ping timeout: 265 seconds
+21:27 varna: 哦不对，没说全
+21:27 molikto quit:Ping timeout: 276 seconds
+21:27 varna: 菊座退休之后应该还要做节目
+21:27 varna: 他还在参加录像
+21:27 molikto joined channel
+21:28 Mokou: なるほど
+21:28 cleamoon_: 他退不退休无所谓吧，他的主要工作不是毒奶和艹船吗
+21:28 Mokou: 大和号很可能就是烧煤的
+21:28 Mokou: 俾斯麦是个刀枪不入的玩意
+21:28 varna: 说反一次不容易
+21:28 varna: 说反一次容易
+21:29 varna: 每次都说反么……
+21:29 cleamoon_: 话说总说核潜艇核潜艇的，核动力到底有什么好
+21:29 varna: 至于赤城加贺苍龙飞龙翔～鹤瑞鹤，全都着火了
+21:29 Mokou: 远
+21:29 Mokou: 中间栖姬三天加一次油你遭的住？
+21:29 varna: 核动力能源多，发电方便
+21:30 cleamoon_: soga
+21:30 varna: 连续的高速续行，以及在这过程中供给各种电子设备能源，不是那么容易的
+21:30 cleamoon_: 那为什么没有核动力灰机和核动力火箭呢
+21:30 varna: 不过另一方面，随伴舰小姐们能不能撑得住是另一回事，所以核潜艇方便
+21:30 Mokou: 你知道二代大E为何十万吨么……
+21:30 varna: 而且小型化很难啊……
+21:30 cleamoon_: 太沉？
+21:30 Mokou: +
+21:31 varna: 那是个反应堆
+21:32 varna: 不过传闻说核动力的维护又贵又麻烦
+21:32 varna: 现在深海军的主力驱逐舰还是常规动力不是
+21:33 Mokou: 说起来海自的航空驱逐舰能搞核动力不
+21:33 Mokou: 会不会违反条约？
+21:34 varna: 我不知道
+21:34 varna: 不过我估计大家都会高兴地看着出云和日向在横须贺阳炎化，顺带崩掉一票子深海军……
+21:35 varna: 日本核事故现在都成大丑闻了，比杨幂的脚还那啥
+21:35 Mokou: 233333
+21:35 Mokou: 不过大概也没必要？毕竟名义上还是撸管队
+21:35 Mokou: 航妈应该偏向进攻性吧
+21:35 varna: 技术储备对各国都是必要的
+21:36 cleamoon_: 五代核反应堆太贵，没人愿意换
+21:36 Mokou: 这倒是
+21:36 varna: 前有剑崎高崎，今有出云日向
+21:36 sismvg: http://tieba.baidu.com/p/3878018454?fr=frs
+21:36 sismvg: 啄木鸟宣布片子永久免费
+21:36 sismvg: udp遇到了"远程主机强迫关闭了一个现有的连接"该怎么办
+21:38 wlemuel joined channel
+21:38 varna: 如果你做了虚拟的连接，那么此处你该放弃一切工作
+21:38 varna: 直接收尾，不做复原
+21:51 wlemuel quit:Ping timeout: 252 seconds
+21:52 wlemuel joined channel
+21:55 lh_mouse quit:Read error: Connection reset by peer
+22:01 sismvg: http://bbs.soul-plus.org/read.php?tid=150877
+22:03 cleamoon_: 药元四的收藏
+22:03 tutu_wind quit:Remote host closed the connection
+22:23 molikto quit:Read error: Connection reset by peer
+22:23 molikto joined channel
+22:24 hoxily quit:Quit: Leaving
+22:27 lh_cat joined channel
+22:28 lh_cat: 口苗
+22:28 varna: 三口支
+22:32 varna: http://tieba.baidu.com/p/3870927638?fr=frs
+22:32 Mokou: 噗，贴吧结婚系统真来了
+22:32 varna: 超级杀马特
+22:38 ASenR joined channel
+22:52 Mokou: 说起来我是不是该找时间练下赤城
+22:52 Mokou: Lv47……
+22:53 varna: Lv47...
+22:53 varna: 找个时间练到七八十吧……
+22:53 Mokou: 因为出了大凤以后就一直没用过……
+22:53 varna: 我不知道大凤的回避如何
+22:54 Mokou: 比大和级差
+22:54 varna: 老实说，我也没见过比加贺桑更差的
+22:54 varna: 大和级毕竟因为大部分时候一炮糊脸上没什么感觉所以回避感觉不出来
+22:54 Mokou: 大凤Lv99的回避我记得是59
+22:54 Mokou: 大和级是63
+22:55 varna: 刷了闪差别不那么大，不过我不指望了
+22:55 varna: 能挺过塔姐一炮就行
+22:55 varna: 目前我那大凤只有一次被一炮大破
+22:55 Mokou: 田日先，大凤明明也是十六万匹
+22:56 varna: 田中稀里糊涂的
+22:56 varna: 后期的主力航母机动力不如加贺，简直不可能
+22:56 Mokou: 加贺改Lv99的回避比大凤改高10点……
+22:57 varna: 加贺我现在就可以用一点零战堆上70回避
+22:57 Mokou: 我感觉田中玩历史梗经常玩过火
+22:57 varna: Lv97回避68
+22:57 Mokou: 雾岛的火力、大凤的回避和磕药炮的命中
+22:58 varna: 没办法，哪有人喜欢玩战略游戏
+22:58 Mokou: 大凤Lv110回避61
+22:58 Mokou: 你说说……
+22:58 varna: 他自己都知道战略游戏不来钱所以做了现在这么个东西
+22:58 varna: 挺懂的
+22:58 Mokou: 不过我觉得这没必要啊……
+22:59 Mokou: 大凤回避给个加贺水平意思意思行了
+22:59 varna: 这个嘛，想想海突
+22:59 Mokou: 嗑药炮也是，命中-1黑一下，然后嗑改变成命中+1
+23:00 Mokou: 海突是？
+23:00 varna: 前段时间最新的海上反击部队突入
+23:00 Mokou: ……
+23:00 varna: 点名了：长良 比叡 雾岛 晓 雷 电
+23:00 varna: 5-1头目S
+23:00 Mokou: 田日先
+23:00 varna: 没看错，一点制空都没有
+23:00 varna: 全程被打
+23:00 varna: 带路也没有
+23:01 Mokou: 那为何设计带路……
+23:01 varna: 前面一些还有点带路
+23:01 Mokou: 怎么不来个水打部队强行突破基斯岛
+23:01 varna: 这个有2dd带路，但没有2cav
+23:01 varna: 最操蛋的是必定被吊打
+23:01 varna: 让人体验下3-2
+23:01 varna: 先撤了，武运
+23:01 varna quit:Quit: leaving
+23:15 Mokou quit:Quit: 碎叫
+23:27 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 38.0.6/20150605094246]
+23:29 endle quit:Quit: Leaving
+23:31 tutu_wind joined channel
+23:49 xxxxxxxx joined channel

@@ -1,0 +1,83 @@
+01:01 whocares_2 joined channel
+01:03 whocares_2_ quit:Ping timeout: 248 seconds
+01:28 lh_mouse quit:Ping timeout: 258 seconds
+02:46 Youmu quit:Quit: Connection closed for inactivity
+02:47 Mokou quit:Remote host closed the connection
+04:40 cleamoon joined channel
+05:38 cleamooon joined channel
+05:41 cleamooon quit:Client Quit
+05:42 cleamoon quit:Ping timeout: 265 seconds
+05:43 cleamoon joined channel
+08:39 whocares_2_ joined channel
+08:39 cleamooon joined channel
+08:47 whocares_2 quit:Ping timeout: 240 seconds
+08:47 cleamoon quit:Ping timeout: 240 seconds
+08:58 Flandre__ quit:*.net *.split
+09:03 yimis joined channel
+09:08 Flandre__ joined channel
+09:35 cc joined channel
+09:38 zwindl joined channel
+09:46 Youmu joined channel
+09:49 lh_mouse joined channel
+10:16 gauge quit:Quit: Quiting
+10:45 doublehou joined channel
+11:30 lh_cat joined channel
+11:32 lh_mouse_ joined channel
+11:34 lh_mouse quit:Ping timeout: 260 seconds
+11:35 lh_cat quit:Ping timeout: 250 seconds
+11:52 gauge joined channel
+12:05 lh_cat joined channel
+12:08 lh_mouse_ quit:Ping timeout: 250 seconds
+16:15 lh_cat is now known as lh_mouse
+16:45 doublehou quit:Ping timeout: 252 seconds
+16:48 perr joined channel
+17:00 wlemuel joined channel
+17:05 Mokou joined channel
+17:07 Mokou quit:Client Quit
+17:08 Mokou joined channel
+17:12 iyzsong joined channel
+17:14 iyzsong: 2333
+17:19 wlemuel quit:Remote host closed the connection
+17:24 wlemuel joined channel
+17:29 iyzsong quit:Quit: ZNC 1.6.3 - http://znc.in
+17:44 zwindl quit:Quit: Connection closed for inactivity
+17:53 yimis quit:Quit: yimis
+18:01 doublehou joined channel
+18:03 zwindl joined channel
+19:35 hoxily joined channel
+19:44 doublehou quit:Ping timeout: 264 seconds
+20:37 iyzsong joined channel
+20:55 iyzsong: _(:з」∠)_
+21:04 iyzsong quit:Quit: bye.
+21:25 whocares_2 joined channel
+21:25 whocares_2_ quit:Ping timeout: 258 seconds
+21:51 varna joined channel
+22:32 Mokou: varna: 怒斥香港记者那段出高清版了
+22:32 Mokou: 虽然只有一部分
+22:37 varna: 哈哈哈哈
+22:37 varna: 做一下雪风的舰载艇
+22:37 varna: 水贴有什么要注意的么？
+22:37 Mokou: 没贴过，大概按照教程来就可以？
+22:38 varna: _(:з」∠)_我试试
+22:38 varna: 这周先做完，然后入点珐琅涂料调调做旧用的颜色
+22:51 Mokou: varna: 对了，今天舰C维护
+22:51 Mokou: 然后打出来的洞可以上PAD了
+22:51 Mokou: 摩耶的洞还有个特效，可以上机枪
+22:54 zwindl quit:Quit: Connection closed for inactivity
+22:55 zwindl joined channel
+23:00 Mokou: 换个长者向的窗户
+23:31 lh_mouse: geordi, { std::forward_list<int> il = {1, 2, 3, 4, 5, 6, 7}; 
+23:31 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+23:31 lh_mouse: auto iter = std::prev(il.end());
+23:31 lh_mouse:  }
+23:31 lh_mouse: geordi, { std::forward_list<int> il = {1, 2, 3, 4, 5, 6, 7}; auto iter = std::prev(il.end()); } 
+23:31 geordi: /usr/local/include/c++/7.0.0/bits/stl_iterator_base_funcs.h:151: constexpr void __advance(_InputIterator&, _Distance, input_iterator_tag) [with _InputIterator = _Fwd_list_iterator<int>; _Distance = long int]: Assertion '__n >= 0' failed. [+ 1 discarded line]
+23:31 lh_mouse: geordi, --clang { std::forward_list<int> il = {1, 2, 3, 4, 5, 6, 7}; auto iter = std::prev(il.end()); } 
+23:31 geordi: error: no matching function for call to 'prev'
+23:32 lh_mouse: geordi, { std::forward_list<int> il = {1, 2, 3, 4, 5, 6, 7}; auto iter = il.end(); --iter; } 
+23:32 geordi: error: no match for 'operator--' in '--((_Fwd_list_iterator<int>*)this)->_Fwd_list_iterator<int>::base()' (operand type is '_Fwd_list_iterator<int>')
+23:36 cleamooon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/dt/3h_426463.jpg@596w_1l.jpg
+23:40 perr quit:Remote host closed the connection
+23:41 Meow-J quit:Remote host closed the connection
+23:41 Meow-J joined channel
+23:41 whatofor quit:Ping timeout: 256 seconds

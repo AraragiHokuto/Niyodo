@@ -1,0 +1,376 @@
+00:00 varna: 还有人指出「星际玩家又没有双眼」
+00:00 cleamoon_: 2333333
+00:01 cleamoon_: 比起最后一关，我倒觉得一粒蛋变身那关麻烦
+00:02 cleamoon_: 骚扰太烦人了
+00:02 varna: +
+00:02 varna: 提克迪奥斯的战术比马尔加尼斯强多了
+00:03 varna: puuuu
+00:03 varna: 91简直就是天生的阿傻子……
+00:03 varna: 杀羊、A乌瑟尔，还觉得不能给自己加血
+00:04 cleamoon_: 23333333
+00:04 cleamoon_: 这智力受族战役就得受苦
+00:05 cleamoon_: 有几关我记得挺麻烦的
+00:05 loser quit:Ping timeout: 256 seconds
+00:05 varna: 赛纳留斯
+00:06 loser joined channel
+00:06 cleamoon_: 哦，对，那关傻子是无论如何也过不了的
+00:08 varna: 怕是会指挥绿皮被赛纳留斯打爆
+00:08 varna: 哈哈哈哈换家
+00:08 varna: 换家还行
+00:08 lh_mouse quit:Ping timeout: 256 seconds
+00:08 cleamoon_: 变了混乱攻击瞎打也很难受
+00:09 cleamoon_: 一粒蛋第一视角 233333
+00:09 varna: 23333333
+00:13 jimmylu2333-fedo joined channel
+00:16 loser quit:Remote host closed the connection
+00:18 varna: 91杀村民的操作比打敌人好很多啊
+00:19 loser joined channel
+00:19 cleamoon_: 2333333
+00:22 cc quit:Quit: xc:www.chnxc.net
+00:29 varna: 人族的BGM还是好听
+00:35 cleamoon_: 开战役15s，“我通关了吧？”
+00:36 matchray: lh_not_bot: 我要去学clangd了
+00:45 condy: https://github.com/inlmouse 这是谁啊，怎么跟 lh_mouse 的昵称这么像
+00:50 varna quit:Ping timeout: 240 seconds
+00:58 jimmylu2333-fedo quit:Remote host closed the connection
+01:12 iyzsong quit:Ping timeout: 260 seconds
+02:09 jimmylu2333-fedo joined channel
+02:20 jimmylu2333-fedo quit:Ping timeout: 240 seconds
+02:22 jimmylu2333-fedo joined channel
+02:37 Stevearzh quit:Ping timeout: 240 seconds
+02:50 jimmylu2333-fedo quit:Quit: WeeChat 2.0.1
+04:20 matchray: hanjian_l: 掐指算來我的維新("Owner")只持續了百日，現在戊戌政變我只能流亡clangd了
+04:46 jingjinghack quit:Remote host closed the connection
+04:46 jingjinghack joined channel
+07:31 yonka joined channel
+07:36 yonka quit:Ping timeout: 265 seconds
+08:44 CyrusYzGTt joined channel
+09:07 lh_mouse joined channel
+09:10 CyrusYzGTt quit:Read error: Connection timed out
+09:11 CyrusYzGTt joined channel
+09:42 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+09:42 CyrusYzGTt joined channel
+09:42 CyrusYzGTt quit:Remote host closed the connection
+09:58 yonka joined channel
+10:09 lh_ideapad joined channel
+10:11 lh_ideapad: matchray, 喵喵喵？
+10:12 matchray: lh_ideapad: https://reviews.llvm.org/D44720
+10:14 lh_ideapad: lowerCamelCase 飞妈。
+10:15 lh_ideapad: matchray, 妳和 cquery 发生了啥。
+10:16 iyzsong joined channel
+10:23 matchray: 原作者发动政变把我改成Member并revert我的commits
+10:23 matchray: pattern里带空格时你觉得怎么搜索好
+10:26 iyzsong: morning :x
+10:31 lh_ideapad: matchray, 何故呢。
+10:31 lh_ideapad: 这不叫政变吧。你本来也不是 owner Kb.
+10:35 lh_ideapad: 感觉是 RMS 和 ESR 大战呢。
+10:37 CyrusYzGTt joined channel
+10:39 matchray: 本來是Owner
+10:40 lh_ideapad: owner 居然不是只有一个？
+10:41 matchray: 有很多個
+10:42 matchray: 甚至只有兩三個commits的人他都會給ownership
+10:44 lh_ideapad: <_<
+10:44 matchray: 他知道如果把我刪了我肯定不會再想貢獻的
+10:45 matchray: https://ptpb.pw/Mtre.jpg
+10:45 matchray: 這種話說給我聽沒用的
+10:46 matchray: https://ptpb.pw/VCo2.jpg
+10:46 matchray: 打得快了，有很多typo
+10:49 matchray: 除了能push和不能push還有什麼區別
+10:54 CyrusYzGTt quit:Ping timeout: 240 seconds
+10:56 CyrusYzGTt joined channel
+11:07 lh_ideapad: geordi, << sizeof(::ip_mreqn)
+11:07 geordi: error: '::ip_mreqn' has not been declared
+11:07 lh_ideapad: geordi, << sizeof(::ip_mreqn); #include <net/if.h>
+11:07 geordi: Same error.
+11:07 lh_ideapad: geordi, << sizeof(::ip_mreqn); #include <netinet/ip.h>
+11:07 geordi: Still same error.
+11:07 lh_ideapad: geordi, << sizeof(::ip_mreqn); #include <netinet/in.h>
+11:07 geordi: Again, same error.
+11:07 lh_ideapad: geordi, << sizeof(::ip_mreqn); #include <sys/socket.h>
+11:07 geordi: Same error.
+11:13 lh_ideapad: 厉。
+11:18 lh_ideapad quit:Remote host closed the connection
+11:19 lh_ideapad joined channel
+11:22 CyrusYzGTt quit:Read error: Connection timed out
+11:24 CyrusYzGTt joined channel
+11:40 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+11:40 iyzsong joined channel
+12:40 iyzsong: x.x
+13:07 cleamoon_ quit:Quit: Connection closed for inactivity
+14:04 CyrusYzGTt quit:Ping timeout: 240 seconds
+14:21 CyrusYzGTt joined channel
+14:30 iyzsong quit:Ping timeout: 265 seconds
+15:05 matchray: sbcl 好玩嗎
+15:26 matchray: lh_ideapad:   int64_t OutputOff : 63; uint64_t Live : 1; // 我記得標準不允許不同類型？但是MSVC有些signed types的bug?
+15:30 matchray: https://github.com/llvm-mirror/clang-tools-extra/blob/master/clangd/FuzzyMatch.h#L51
+15:34 matchray: 有想寫go的可以把這個算法搬到fzf。我認爲比fzf好
+15:35 matchray: 但是忽略模式串的空格可能會更友好？比如"c c" 也能匹配文本 cc cC
+15:52 Dove joined channel
+15:55 lh_ideapad: matchray, 标准允许 ！= ABI 兼容。
+15:55 lh_ideapad: geordi, << sizeof(foo); struct foo { int a : 5; unsigned b : 6; };
+15:55 geordi: 4
+15:55 lh_ideapad: geordi, << sizeof(foo); struct foo { long a : 5; unsigned long b : 6; };
+15:55 geordi: 8
+15:56 lh_ideapad: geordi, replace last long with int
+15:56 geordi: 8
+15:56 lh_ideapad: geordi, replace last int with long long
+15:56 geordi: 8
+15:56 lh_ideapad: geordi, show
+15:56 geordi: << sizeof(foo); struct foo { long a : 5; unsigned long long b : 6; };
+16:29 Stevearzh joined channel
+17:11 loser quit:Read error: Connection reset by peer
+17:11 lichun joined channel
+17:12 lichun joined channel
+17:33 jingjinghack quit:Remote host closed the connection
+17:33 jingjinghack joined channel
+18:55 iyzsong joined channel
+18:58 jimmylu2333-fedo joined channel
+18:58 iyzsong quit:Client Quit
+18:58 lichun quit:Read error: Connection reset by peer
+19:03 loser joined channel
+19:05 iyzsong joined channel
+19:24 varna joined channel
+19:25 varna: _(:з」∠)_今天频道里也没有哪怕是迫真的小姐姐
+19:27 lh_ideapad: varna, 你晚上在不在。
+19:28 varna: 在
+19:28 lh_ideapad: 好的。
+19:28 varna: (｡･ω･)ﾉ
+19:30 jingjing- joined channel
+19:31 jingjinghack quit:Ping timeout: 268 seconds
+19:34 hanjian_l: 核心危机
+19:34 hanjian_l: 狂刷金牌也不够核心用
+19:38 Mokou: varna: E7P1我斩了
+19:39 varna: orz
+19:40 Mokou: 也就是说基本上我已经赢了
+19:41 varna: 大佬是这样的
+19:51 iyzsong: -.-
+19:51 lh_ideapad: iyzsong, 摸摸头。
+20:06 Dove: 哎尼玛
+20:09 Dove: iyzsong: 大佬，你微信多少？
+20:09 Dove: 你加我吧，ztwloveu。
+20:10 Dove: 18909715624
+20:28 Mokou: 啊
+20:28 Mokou: QB在微博上给我点了个赞
+20:28 varna: QB?
+20:28 Mokou: QBLink
+20:28 varna: 我以为圣Gay王……
+20:29 Mokou: 女提督
+20:30 varna: 情圣是这样的
+20:31 Mokou: 情圣个丁日
+20:31 Mokou: 先躺了，困死了
+20:31 Mokou: 明天的诊疗我先鸽掉，改到后天
+20:31 Mokou: 先把活动斩了再说
+20:32 varna: _(:з」∠)_
+20:32 hanjian_l: 肝帝
+20:32 Mokou: 一期最后一次活动了
+20:41 Dove: 大佬不鸟我啊，哎。
+20:49 hanjian_l: 今天的土豆异常流畅
+20:50 Dove: 你在土豆看神马？
+20:53 Dove: 我去追基本演绎法
+20:53 varna: 我明天再烤土豆
+20:54 Dove: 我TM都不记得我看到第几集了。
+20:54 Dove: 算了
+20:55 Dove: 这会儿又有点浮躁。
+20:57 Dove: 大概是吃太多了
+21:12 lh_ideapad quit:Remote host closed the connection
+21:24 varna: _(:з」∠)_没有迫真小姐姐
+21:29 hanjian_l: 今天的土豆暗区也很流畅
+21:30 varna: _(:з」∠)_抽不到vivi婚纱
+21:41 yonka quit:Remote host closed the connection
+21:53 jimmylu2333-fedo quit:Ping timeout: 256 seconds
+21:59 cleamoon_ joined channel
+22:07 cleamoon_: matchray: may犇真是什么都用emacs呀
+22:13 GreyHound joined channel
+22:14 cleamoon_: https://github.com/crazyguitar/pysheeet  python速查表
+22:15 Dove: orz
+22:15 varna: 幼女幼女平坦的胸口
+22:15 cleamoon_: varna: 爆
+22:15 varna: cleamoon_: 刚
+22:16 varna: 看91打魔兽太逗了
+22:16 varna: 各种瞎玩
+22:17 Dove: 我也不会玩魔兽
+22:18 varna: 总觉得这两天突然降温，有点要生病的架势
+22:18 varna: 得好好休息
+22:18 Dove: 那你早点睡呗
+22:18 cleamoon_: varna: 25仔之王操纵25仔之王
+22:19 varna: emmm 估计今天十二点之前就睡了
+22:19 Dove: 我最主要的问题是他妈活干得太少而吃得太多。
+22:20 yonka joined channel
+22:20 Dove: 还TM爱喝可乐，撑的要死。
+22:20 yonka quit:Remote host closed the connection
+22:21 yonka joined channel
+22:22 varna: 挺长时间没喝过可乐了
+22:22 varna: 周末买瓶吨吨
+22:24 cleamoon_: 感觉91练练魔兽能打的不错的
+22:24 cleamoon_: 毕竟rts理解还在
+22:24 varna: 他就是纯娱乐打打
+22:25 varna: 操作都在的
+22:25 varna: 就是故意瞎玩
+22:25 cleamoon_: 我估计以后会出现他和毒奶的魔兽智商悲的
+22:25 Dove: 我感觉魔兽和星际差得太远了。
+22:25 cleamoon_: 问题是91太不喜欢让兵用魔法了
+22:25 bordeaux_facile_ quit:Ping timeout: 255 seconds
+22:26 varna: 1212A
+22:26 cleamoon_: 神圣的F2并不存在
+22:27 cleamoon_: 人族最后一关91余钱比我少多了
+22:27 varna: 91没太搞清楚维修费是怎么回事
+22:27 varna: 卡维修费下限不爆兵怪可惜的
+22:27 Dove: 毕竟学会了某人的运营，剩下的就是A上去了。
+22:28 bordeaux_facile joined channel
+22:28 cleamoon_: 按现在的发展，海加尔山估计会很精彩
+22:28 lh_mouse: varna, 之前我跟你说的，非得要服务器用 windows 不用 linux 的那个，
+22:29 varna: lh_mouse: 啊，那位有什么新闻么
+22:29 lh_mouse: 本来，过了这周，我想找他的，你们再不开新项目我就另谋出路了。
+22:29 lh_mouse: 结果，今天他自己找上来了。
+22:29 varna: 结果他自己要开新项目了啊
+22:30 lh_mouse: 没有，他想把我踢出去，还赔了一个月工资。
+22:30 varna: ……
+22:30 varna: 神TM
+22:30 lh_mouse: 我觉得，对我来说不算是完全的坏消息。
+22:31 cleamoon_: ........
+22:31 cleamoon_: 什么鬼
+22:31 lh_mouse: 大概是这样，他觉得我对他们失去利用价值了。
+22:32 lh_mouse: 剩下的都是客套话，我是不听客套话的，没什么好客气的。
+22:33 lh_mouse: “以后有机会再联系。”“我对你没有利用价值了还联系什么。”
+22:33 Dove: 你不要这么想嘛
+22:34 varna: 史实如此
+22:34 varna: s/史实/事实/g
+22:34 Dove: 哎
+22:34 lh_mouse: 他们之前的承诺还没兑现呢。
+22:34 lh_mouse: “那事我食言了，真心道个歉。”“我不给人道歉也不接受道歉。”
+22:35 lh_mouse: 好坑，我觉得。
+22:36 cleamoon_: 删库
+22:36 varna: 这个转型估计憋了一阵子了
+22:36 lh_mouse: 都没上线产品删什么。
+22:37 cleamoon_: ......
+22:38 varna: 后面还在上海？
+22:38 lh_mouse: 应该是。
+22:39 varna: 先祝武运，有意向也可联系
+22:40 lh_cat joined channel
+22:40 varna: 我组一个哥们最近被村淘气得已经准备好走人了
+22:41 lh_cat: varna: 你厂好像很多 java ？
+22:41 varna: 我厂大多jawa，不过上海不知道有没有阿里云的C艹岗
+22:41 lh_cat: 不考虑屙里云。
+22:41 varna: 那就先观望
+22:42 varna: 我最近看到比较缺人的中间件也都是jawa
+22:42 varna: 然后是go，做研发效能
+22:42 varna: 业务线当然也缺人缺爆
+22:42 varna: 最后，村淘 sucks
+22:43 lh_cat: 下个月可以出去闲晃了，先看看。我还想转运维呢。
+22:43 cleamoon_: orz
+22:43 lh_cat: go 用的人多吗？
+22:43 varna: 估计上面知道业务线容易坑，直接推出了晋升锁一年不准内转的规定
+22:43 varna: 不太多，目前基建不好
+22:43 varna: 厂内基建好的就是java和nodejs
+22:43 lh_cat: 了解。
+22:44 varna: go是去年有大佬推了一把，但应该也没走出研发效能和稻壳儿相关
+22:45 lh_cat: docker 除了支援少，坑在哪。
+22:45 varna: 网络IO似乎有性能折扣
+22:46 varna: 其余还好
+22:46 lh_cat: 不是大问题。
+22:46 varna: 目前我手头的应用全都docker化了，没感觉多大差别，倒是配置基线之类的好做很多
+22:47 varna: 但是平心而论，目前业务线的docker基建也很糙，概略地说，就是直接从xen迁移来的方案，长尾应用的处理并不好
+22:47 loser quit:Remote host closed the connection
+22:47 varna: 批预算的风格也是旧的风格
+22:50 lh_mouse: xen 性能应该还不错。
+22:50 varna: xen很好
+22:50 lh_mouse: 半虚拟化还是全虚拟化。
+22:51 varna: 没细究过，我进厂不久就强推docker化了
+22:51 lh_mouse: 实在不行我改行做运维去。
+22:52 lh_mouse: 游戏开发简直是 动词人称代词亲戚人体器官的节奏。
+22:52 Dove: 2333
+22:53 varna: 我其实一直没搞清楚，你后来这个厂是手游还是别的？
+22:53 lh_ideapad joined channel
+22:54 cleamoon_: 233333
+22:54 lh_mouse: 对。
+22:54 varna: soka
+22:55 lh_mouse: 不知道从哪弄来的，前端 U3D C# 的，后端 C++ 的 Windows 的。。
+22:55 varna: ...
+22:56 GreyHound quit:Read error: Connection reset by peer
+22:56 GreyHound joined channel
+22:57 cleamoon_: ......
+22:58 lh_mouse: 改需求改得真牛逼，从 3v3 MOBA 改成吃鸡。
+22:58 lh_mouse: 三个月改成六个月。
+22:58 Dove: 2333
+22:58 lh_mouse: 而且还没做完。
+22:58 varna: 瞎追热门
+22:58 varna: 吃鸡不好搞啊
+22:59 Dove: 不知道吃鸡哪里好玩的路过
+22:59 cleamoon_: 什么鬼
+22:59 cleamoon_: 这改的略厉害
+22:59 lh_mouse: 而且他一直强调自己在做资本。
+23:02 varna: ...
+23:03 cleamoon_: 这做了很长时间了吧
+23:03 varna quit:Read error: Connection reset by peer
+23:05 Dove: 哎尼玛我也睡觉去了
+23:05 Dove: 诸君武运
+23:05 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:06 varna joined channel
+23:07 cleamoon_: 哈哈哈，红绿色盲阿尔萨斯
+23:09 varna: 从2B回到血源，感觉整个人的反射神经都可以悠闲下来了
+23:11 hanjian_l: 我现在狂刷金牌拿核心
+23:12 varna: 今天懒得登了，一开始遇到一个不太会打的哥们在我背后叛变，照他脑袋糊了四十三发，伤害延迟超过2s，我被卡死了
+23:12 varna: 活活错过了开大压制的时机
+23:12 varna: 然后就不想逛
+23:13 cleamoon_: 这卡的神了
+23:13 cleamoon_: 魔都不是网络很好吗
+23:14 varna: 杭州，杭州
+23:14 hanjian_l: 我今天流畅的一塌糊涂
+23:14 varna: 土豆在国内直连一直不行
+23:14 hanjian_l: 打的超爽
+23:14 hanjian_l: 几乎没有结算延迟
+23:14 varna: 一般我半夜两点到早上十点以外的时间都得仔细骰一个好用的服务器
+23:14 varna: 今天这个意外情况是我还没遇到试lag的怪，就交火了
+23:15 varna: 准备也不足，穿了一身破烂邪教出去
+23:15 cleamoon_: 代理一下？
+23:16 yonka quit:Remote host closed the connection
+23:17 GreyHound quit:Read error: Connection reset by peer
+23:17 GreyHound joined channel
+23:17 GreyHound quit:Read error: Connection reset by peer
+23:18 GreyHound joined channel
+23:18 varna: 土豆1就当暖暖玩了，不碍事
+23:18 varna: 2如果能继承一部分存档或者给些好处，而且游戏性不错的话就考虑代理
+23:20 cleamoon_: 有要出2吗
+23:20 jimmylu2333-fedo joined channel
+23:20 varna: 卫星放出来了
+23:21 lh_ideapad quit:Remote host closed the connection
+23:21 GreyHound quit:Read error: Connection reset by peer
+23:22 GreyHound joined channel
+23:22 lh_ideapad joined channel
+23:22 Stevearzh quit:Max SendQ exceeded
+23:23 Stevearzh joined channel
+23:23 cleamoon_: 话说，ubi不少股份被腾讯收购了....
+23:23 cleamoon_: 你还想等吗
+23:24 varna: 大不了不玩……
+23:24 varna: 而且这些公司买来买去的不必太慌张
+23:25 cleamoon_: 疼逊不好说
+23:29 GreyHound_ joined channel
+23:30 GreyHound quit:Ping timeout: 246 seconds
+23:32 varna: 早见大法好
+23:32 varna: 早见配的人偶妹太赞了
+23:32 GreyHound_ quit:Read error: Connection reset by peer
+23:32 GreyHound joined channel
+23:34 cleamoon_: 人偶太高了
+23:34 varna: 两米二
+23:34 varna: 有爱好者测算，猎人一米九
+23:34 iyzsong quit:Ping timeout: 256 seconds
+23:35 varna: 9体12耐30敏，看看这回渴血兽能把我切成几段
+23:35 varna: 以防万一，带一些丢人的燃烧弹
+23:38 lh_ideapad quit:Remote host closed the connection
+23:39 varna: 糟了
+23:39 varna: 卡在地形里被秒了
+23:44 varna: 搞定
+23:44 varna: 这样就可以去流奶与蜜的亚哈古尔了
+23:45 cleamoon_: orz
+23:46 varna: 最后补刀用了一个燃烧弹
+23:46 cleamoon_: 卑鄙的外乡人
+23:47 varna: P3最后一喆掏完还剩一刀零一些血量
+23:47 varna: 不想作死了直接正义掉
+23:47 yonka joined channel
+23:48 varna: (｡･ω･)讲道理我很不卑鄙了，从初见至今，打他从未扔过血鸡尾酒
+23:49 cleamoon_: 91这25仔，做人族时杀人，做不死族时杀诗僧
+23:49 cleamoon_: 不那么卑鄙的卑鄙的外乡人
+23:51 yonka quit:Ping timeout: 240 seconds
+23:53 varna: 看来今天也不会十二点前就睡
+23:56 varna: 混乱之智 233333
+23:57 varna: 真的是伊利丹第一视角

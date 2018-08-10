@@ -1,0 +1,921 @@
+00:02 dfceaef- quit:Ping timeout: 240 seconds
+00:21 StardustX quit:Remote host closed the connection
+00:39 owen quit:Quit: Konversation terminated!
+00:39 owen joined channel
+00:42 OwenJia joined channel
+00:45 owen quit:Ping timeout: 246 seconds
+00:51 Stevearzh quit:Read error: Connection reset by peer
+00:53 Stevearzh_ joined channel
+01:07 lolisa joined channel
+01:14 lh_mouse quit:Read error: Connection reset by peer
+01:24 Meow-J quit:Quit: Connection closed for inactivity
+02:13 linearain joined channel
+02:13 linearain: hello 
+02:23 lolisa quit:Quit: meow
+02:28 linearain quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+02:31 xxxxxxxx joined channel
+03:11 hysw2 joined channel
+03:16 hysw2 quit:Ping timeout: 252 seconds
+03:24 wlemuel joined channel
+03:29 wlemuel quit:Ping timeout: 260 seconds
+05:24 linearain joined channel
+05:24 linearain: hi
+05:45 linearain quit:Remote host closed the connection
+06:13 wlemuel joined channel
+06:18 wlemuel quit:Ping timeout: 256 seconds
+06:50 sleepwalking joined channel
+08:54 owen joined channel
+08:57 OwenJia quit:Ping timeout: 260 seconds
+09:14 xxxxxxxx quit:Read error: Connection reset by peer
+09:15 xxxxxxxx joined channel
+09:15 lh_mouse joined channel
+09:16 Xilzzerts joined channel
+09:32 StardustX joined channel
+09:59 Stevearzh_ quit:Quit: Be back later...
+10:32 sleepwalking quit:Quit: Ex-Chat
+10:32 sleepwalking joined channel
+10:43 condy: geordi: << 100ms
+10:43 geordi: 100 ms
+10:43 condy: geordi: { auto i = 100ms; cout << TYPE<decltype(i)>; }
+10:43 geordi: chrono::duration<long, ratio<1l, 1000l> > 
+10:44 condy: geordi: { auto i = 100ms; cout << is_conventible<decltype(i),int>::value; }
+10:44 geordi: error: 'is_conventible' was not declared in this scope
+10:44 condy: geordi: use convertible
+10:44 geordi: false
+10:44 lhanjian_: C++连duration都加进去了？！
+10:45 lhanjian_: condy, 
+10:45 condy: lhanjian_: 是呀
+10:45 condy: lhanjian_: 'prpr
+10:45 condy: 还学什么  rust(
+10:45 lhanjian_: 没事，估计等我们退休了业界也用不上
+10:45 lhanjian_: ChanServ, 
+10:45 lhanjian_: condy, 
+10:45 condy: ouo
+10:51 lh_mouse: ChanServ, kick condy 
+10:51 lh_mouse: ChanServ, quiet condy 
+10:51 condy: QuQ
+10:51 lh_mouse: ChanServ, quiet #c_lang_cn condy 
+10:52 condy: ...
+10:53 iyzsong: # kill all
+10:53 condy: iyzsong: 膜
+10:54 pocmon joined channel
+10:54 pocmon quit:Changing host
+10:54 pocmon joined channel
+10:59 sleepwalking: 日啊好不适应，随手google twitter youtube全上不了，感觉什么事都没法做orz
+11:00 lhanjian_: sleepwalking, 挂代理吧
+11:00 sleepwalking: lhanjian_, 求代理
+11:00 lh_mouse: sleepwalking, 美国线虫闭嘴。
+11:00 sleepwalking: 我前几天在芝加哥的时候买了个，结果回来没法用
+11:00 lhanjian_: sleepwalking, 会用PAC吗？
+11:00 lh_mouse: QuQ
+11:01 sleepwalking: lhanjian_, 那是什么
+11:01 lh_mouse: sleepwalking, curl -vk 'www.google.com' -x '114.215.147.2:5322'
+11:01 iyzsong: 跪 城会玩.. http://en.cppreference.com/w/cpp/language/user_literal
+11:01 sleepwalking: 多谢
+11:01 lh_mouse: sleepwalking, 给钱。
+11:01 lh_mouse: 450
+11:01 iyzsong: 2333
+11:02 sleepwalking: lh_mouse, 好使
+11:02 lhanjian_: 耗子这个应该可用
+11:02 lh_mouse: sleepwalking, 给钱。
+11:04 lhanjian_: sleepwalking, socks5 115.28.244.186:12345
+11:06 lh_mouse: 阿里云的数据流量价钱是 ￥0.72/GiB。
+11:07 sleepwalking: 突然想到我还有一个EC2挂着呢……
+11:07 lhanjian_: 想多了，amazon EC2现在能卡到你死
+11:07 lhanjian_: 没有CN2线路你还想上国际网？
+11:08 sleepwalking: 嗯……不光EC2 学校服务器也卡死。。。
+11:08 sleepwalking: 日啊xterm会话都卡出翔
+11:11 lhanjian_: 总之你自建的基本别想用。中国电信的国际出口尤其是在上海，已经卡爆了。
+11:20 Stevearzh_ joined channel
+11:33 sleepwalking: 天，学校的服务器变快了
+11:33 sleepwalking: 直接把firefox X过来
+11:34 sleepwalking: 简直神速。。。
+11:59 sleepwalking quit:Ping timeout: 240 seconds
+12:23 Stevearzh_ quit:Read error: Connection reset by peer
+12:24 Stevearzh_ joined channel
+12:25 Sleepwalking joined channel
+12:26 Mokou joined channel
+12:35 lhanjian_: 写论文真TM shxt
+12:36 hoxily joined channel
+12:38 wlemuel joined channel
+12:44 wlemuel quit:Ping timeout: 260 seconds
+12:54 condy: wow 
+12:55 condy: Makefile 卒
+12:55 lhanjian_: condy, 卒
+12:55 condy: 果断换个 build.py
+12:56 lhanjian_: condy, python版本不对，缺个库，于是卒
+12:57 lhanjian_: 直接bash吧
+12:57 condy: ...
+13:15 lhanjian_: 回学校一趟
+13:15 lhanjian_: 交论文去
+13:15 lhanjian_ quit:Remote host closed the connection
+13:24 MaryJane joined channel
+13:25 MaryJane quit:Changing host
+13:25 MaryJane joined channel
+13:31 StardustX quit:Remote host closed the connection
+13:31 FrankHB joined channel
+14:13 sleepwalking joined channel
+14:21 hoxily quit:Quit: Leaving
+14:43 hoxily joined channel
+15:01 xxxxxxxx quit:Quit: Leaving...
+15:20 hoxily quit:Quit: Leaving
+15:21 FrankHB quit:Ping timeout: 276 seconds
+15:40 StardustX joined channel
+15:48 varna joined channel
+15:50 varna: 今天的演习旗舰就用霞好了
+15:55 pocmon quit:Quit: 闪...
+16:11 Mokou quit:Quit: Lost terminal
+16:12 Mokou joined channel
+16:12 Mokou: 羊驼子居然冒出来了
+16:12 varna: 昨天着凉了
+16:13 varna: 我想到个问题啊，并行编译的时候，你用什么执行实际的用户命令呢
+16:13 varna: GNU make里写得可是一坨sh*t
+16:13 varna: s/得/的/
+16:13 varna: 我真的看到了vfork
+16:13 Mokou: 我现在想这么来
+16:14 Mokou: depcheck返回的不是0 or 1，是一个array，里面包含一系列用于解决依赖的sub
+16:14 Mokou: 这些sub是可以并行执行的
+16:14 varna: 不，我说的是API
+16:14 varna: 拓扑排序那边怎么逗号
+16:14 varna: 都好*
+16:14 Mokou: 然后进程池
+16:15 varna: 问题是你要执行外部命令
+16:15 wlemuel joined channel
+16:15 varna: 根本池不起来……
+16:15 Mokou: system？
+16:15 varna: system = fork+exec
+16:15 Mokou: 就是这样咯
+16:15 varna: 那根本不用开池吧……
+16:15 varna: 然而开销
+16:15 varna: 虽说fork-exec的开销其实不高
+16:15 Mokou: 但是外部命令池不起来啊
+16:15 varna: 对
+16:15 varna: 然后还有一个问题
+16:16 varna: 这个和拓扑序有关
+16:16 varna: 如何保证拓扑序正确的前提下，有尽量多的任务准备就绪了
+16:16 varna: 素朴的做法可以是拓扑排序的一个pass交付一次执行，这肯定是对的
+16:16 varna: 但这肯定不是最榨的
+16:17 Mokou: 最榨的怎么来
+16:17 varna: 举例来说，图的一部分是A->D, A->C, B->C
+16:17 varna: 拓扑排序的第一趟是A, B
+16:17 varna: 然而若A完成，D立刻可用，此时C或许在等B
+16:18 varna: 就是这样的意思
+16:18 Mokou: 我就是想在这里池
+16:18 varna: 问题不是池，是这里的任务队列你怎么写
+16:19 varna: 这不太显然
+16:19 Mokou: 开个池，闲下来的worker寻找可用的任务
+16:19 varna: ……
+16:19 varna: 这说法跟没说一样，你仔细想想……
+16:19 varna: 除非你说这里怎么锁都无所谓（虽说可能就是无所谓）
+16:19 Mokou: 不，我发出去的时候你第二句话还没发出来……
+16:19 varna: ...
+16:20 wlemuel quit:Ping timeout: 245 seconds
+16:20 Mokou: 如果反过来呢
+16:20 Mokou: 让可用的任务去找worker
+16:20 varna: 调度分发也行
+16:21 Mokou: A完成了，通知D和C
+16:21 varna: 这个说法基本是不成立的
+16:21 varna: 因为你可以说A触发所有出度上的入度-1
+16:21 varna: 然后有一个通知
+16:21 varna: 但这之后的做法就是写个任务队列还是写个分拣调度了
+16:23 Mokou: 说法不成立指？
+16:23 varna: 所谓的“通知”，如果只是触发，那就只是触发了
+16:24 varna: 如果不是，那么你需要假定被通知方有一个控制流
+16:24 varna: 总之都是蛋疼，我的倾向是分选+vfork
+16:24 varna: 即使vfork不被支持了
+16:24 Mokou: 或者这么说
+16:24 varna: 如果真的挂了就朴素地fork吧
+16:24 Mokou: 一个任务完成了，所有依赖它的任务入度-1
+16:25 varna: 这是平凡的
+16:25 Mokou: 然后开始分拣入度为0的点
+16:25 varna: 我只是蛋疼这里没有别的写法了
+16:25 varna: 也就是说，反复刷地址空间不可避免
+16:25 Mokou: 不过linux的fork还是没有CoW？
+16:25 varna: 缺省CoW
+16:25 Mokou: 那vfork意义不大了吧
+16:26 varna: 字面上保证child先走
+16:26 varna: 就这一点意义了
+16:26 Mokou: 我觉得不如直接fork……
+16:26 Mokou: http://ww1.sinaimg.cn/bmiddle/7c070cfdjw1ez7gwqqzjej20c80ghq43.jpg
+16:27 varna: 实际上vfork被POSIX驲掉了
+16:27 varna: "POSIX.1-2008 removes the specification of vfork()."  # vfork(2)
+16:27 Mokou: ……
+16:28 Mokou: 哦对了
+16:28 Mokou: HTTP 451通过了
+16:28 varna: 那是什么？
+16:28 varna: 我查查
+16:28 Mokou: Unavailable For Legal Reasons
+16:28 varna: 噗
+16:28 Mokou: 451来自某反乌托邦小说
+16:28 varna: 噗哈哈哈
+16:28 varna: 吓得168出门小破
+16:29 Mokou: FC707的低音还是强些
+16:29 Mokou: 虽说这不是铁家的风格……
+16:29 Mokou: varna: 对了，你不试试潜79么
+16:29 iyzsong: 0 0
+16:30 varna: 不试，那钱够我买两个现在这样的
+16:30 varna: 还能剩下三块钱来一瓶可乐
+16:30 Mokou: 不过音质确实不错
+16:30 varna: 这里我坚持应用部署迫击炮的原则
+16:30 varna: 一个打得准的不如两个打得凑合准的
+16:31 Mokou: 或者来个真正的音乐
+16:31 varna: 你说兄贵么
+16:31 Mokou: 我说逼厕
+16:33 varna: TodoList.pm里那些东西是用来封节点结构的？
+16:33 Mokou: 是
+16:33 Mokou: 啊不对
+16:33 Mokou: 那个只是偷懒
+16:33 varna: 我有个馊主意
+16:33 Mokou: 为了那个exist
+16:33 varna: 何不试试HOI::Match
+16:33 Mokou: 可以试试
+16:34 varna: 噫
+16:34 varna: 看见伊号作战不打，我浑身难受……
+16:34 Mokou: 话说你们那边有天桥逼厕么
+16:34 varna: 那是什么？
+16:34 Mokou: Beats
+16:34 Mokou: True music
+16:34 varna: 没试过这个
+16:35 Mokou: 我就说个事，那公司前段时间被苹果收购了
+16:35 Mokou: 你懂得
+16:35 * varna 杀进了南西
+16:35 varna: 积习难改
+16:35 Mokou: 总之耳机吧的黑法是天桥10元Beats音质好过正品
+16:36 varna: 真的啊
+16:36 Mokou: 可能有点夸张
+16:36 Mokou: 不过Beats的风格是无脑低音轰头
+16:36 Mokou: 中高频惨不忍听
+16:36 Mokou: 然后卖300刀
+16:37 varna: tUre mUsic
+16:37 varna: 三玄学相杀的第一盘就进了boss
+16:37 varna: 果然还是该积德之后再做南西系
+16:38 Mokou: 不是先撸么
+16:38 Mokou: https://pic4.zhimg.com/2f9a8eaaa954428e220aed899ca1abb7_b.jpg
+16:38 varna: 昨天撸过了
+16:39 varna: 第一盘就出个RJ
+16:39 Mokou: 砧板GET
+16:41 varna: 今天用糖果那的机器看了看p7代码，意外地不污
+16:41 Mokou: 为什么在你的机器上就那么污
+16:41 Mokou: 一定是你太WU
+16:41 varna: 大概是平时看惯了觉得污，换个字体就不污了
+16:42 varna: 我哪里污了
+16:43 Mokou: 你不污谁污
+16:43 varna: 不知道
+16:43 varna: qh>
+16:43 varna: qh?
+16:43 varna: 亚顿也比我污
+16:43 Mokou: 噫
+16:43 * Mokou 拿出去污粉
+16:43 varna: 你那利根喷雾
+16:44 Mokou: 利根对空+1
+16:44 varna: 潜艇队操刀，我先造个低保
+16:44 varna: 哦，还得把之前的收了
+16:44 varna: 比叡榛名
+16:45 varna: 一发4.5h
+16:46 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=9fd01365b54543a9f51bfac42e168a7b/f55602087bf40ad14e100a72552c11dfa8ecce5d.jpg ……
+16:46 varna: 第二发4.5h...
+16:48 varna: 这大建如此正常，一定是上次的变欧喷雾过期了
+16:50 varna: 地狱金刚鬼疝城，犹闻长门作蛇声；伊势日向哪里去，大建工厂上吊去……
+16:50 Mokou: ……
+16:51 Mokou: 叫你不用利根喷雾
+16:51 varna: 以后我大建之前先做点功德
+16:51 Mokou: 先啪只妹子
+16:51 varna: 哪有妹子给我啪，求介绍
+16:51 varna: 你们学校大概有可爱的妹子吧
+16:51 Mokou: 把你家妹子哄回来
+16:51 Mokou: 可爱的妹子要是能啪我早啪了
+16:51 Mokou: 然而并不能
+16:51 varna: (｡･ω･)ﾉ不会哄
+16:52 varna: 我只会多喝热水，这个真的有效
+16:52 varna: 昨晚我灌了半瓶子热水，早上就不头疼了
+16:52 Mokou: 我教你怎么哄，你把她叫到你宿舍
+16:52 Mokou: 然后 http://ww1.sinaimg.cn/bmiddle/71decc01jw1ez8atloc1qg208g06q7wi.gif
+16:52 varna: 然后看着桌上一个KTKM一个WO
+16:53 varna: 这人不行，他POI没结婚
+16:53 Mokou: 婚不婚不重要，关键是诚意
+16:53 varna: 而且火狐又bug了
+16:53 varna: 加载gif只动一次，第二次不动
+16:53 varna: 悲剧玩意儿
+16:54 Mokou: 这个chrome也只动一次
+16:54 varna: 而且我宿舍没联网
+16:54 Mokou: 那就去她那
+16:54 varna: 噗
+16:54 varna: uccu
+16:54 Mokou: http://ww3.sinaimg.cn/bmiddle/006fYzlSgw1ez7mdc69xrj30c808lt9l.jpg
+16:54 varna: 去哪不都得打演习么
+16:54 Mokou: 打完演习再上大锤
+16:55 Mokou: http://ww1.sinaimg.cn/bmiddle/79703ec8gw1ez8arjhywnj20er0keaeg.jpg
+16:56 varna: clang complete碰到gcc鬼畜就变傻
+16:57 Mokou: 叫你用什么GNU的破玩意
+17:00 varna: 我给p7补上一个粗糙的readv读内部报文
+17:00 lh_mouse: 叫你插什么 GNU 的破旗。
+17:19 Mokou: http://ww3.sinaimg.cn/bmiddle/005QT4fbjw1ez7n1hykbij30e80d2gmf.jpg
+17:19 Mokou: http://ww1.sinaimg.cn/bmiddle/005QT4fbjw1ez7n1ibqr3j30fb0kndh1.jpg
+17:26 varna: Mokou: 稍微改了一下内部通信的写法 https://github.com/Akvelog/servcraft/blob/master/p7/p7impl.c#L489
+17:26 Mokou: 先拜再看
+17:28 varna: Ln483是多余的，懒得删了
+17:28 varna: 回头看才发现
+17:28 varna: 下次清理破烂的时候把警告开高点再说吧_(:з」∠)_
+17:29 Mokou: http://ww2.sinaimg.cn/bmiddle/b8b73ba1gw1ez1lb40pd8j20c7435dwz.jpg
+17:29 lh_not_b1t: if (cntx != NULL) {  // 噗
+17:29 varna: 其实它==NULL我也没什么办法
+17:30 lh_not_b1t: varna: != NULL 真多余
+17:30 lh_not_b1t: if(cntx) 
+17:30 varna: 是
+17:31 lh_not_b1t: 另外我不喜欢你这种写法。
+17:31 varna: 这里NULL就是(void *) 0吧
+17:31 varna: 怎么写更好（对C来说）
+17:31 lh_not_b1t: 我的写法是  auto cntx = init_some(); if(!cntx) return 0;   /* do initialization here */ return cntx;
+17:31 varna: 这样啊
+17:31 lh_not_b1t: 这样初始化和上面的 malloc 什么的位于同一个缩进级别上。
+17:31 varna: 这样倒是干净，不过我一直以为if倾向生成肯定的代码呢
+17:32 lh_not_b1t: 嘛，当然只是而风格问题。
+17:32 hoxily joined channel
+17:32 varna: 如果不考虑的话，if (!cntx)看着干净
+17:32 lh_not_b1t: 我个人的风格是一条路走到底的是正常控制流，所以中间出错的都是半路 return。
+17:32 varna: 因为确实错误处理控制流跟正常控制流在同一缩进上不好
+17:32 lh_not_b1t: 缩进太多了看着难受。
+17:33 varna: 是这样
+17:33 lh_not_b1t is now known as lh_not_bot
+17:33 varna: 而且如果有折叠，就更糟糕了……我因为不用折叠
+17:33 varna: 折起来的话正常逻辑会被盖住
+17:33 Mokou: varna: http://tieba.baidu.com/p/4227290309
+17:34 lh_not_bot: ヲ也不用。
+17:34 varna: Mokou: 看我给他提个问题
+17:34 lh_not_bot: 像你这么写会给人一种假象：走到 if 下面之后，该指针空与非空，是同一种情况。
+17:34 lh_not_bot: 虽然下面直接 return 了。
+17:35 varna: 这个说得好
+17:35 lh_not_bot: 所以有时ヲ为了图省省事   确实是会像你这么写的。
+17:35 varna: _(:з」∠)_ p7里面都是这些糟糕玩意
+17:35 lh_not_bot: 比如这样：  mutex_lock(); void *ptr = malloc(...); if(ptr) init(ptr); mutex_unlock(); return ptr;
+17:36 varna: 以后我写个if (unlikely(very_very_bad_condition)) 好了
+17:36 * Mokou 开始拆吧
+17:36 lh_not_bot: 手艹 unlikely 经常比默认的慢。
+17:36 varna: 得是很糟糕的时候才行
+17:36 lh_not_bot: 当然可能和我满地 inline, __flatten__ 有关。
+17:36 varna: 一般糟糕就不跟他unlikely了
+17:36 lh_not_bot: inline 之后经常有些是 likely 有些是 unlikely。
+17:36 varna: inline之后没法说了
+17:37 varna: 因为可能优化乱掉
+17:37 lh_not_bot: 我确实遇到过好几次不管写 likely 还是 unlikely 都比原来慢的操蛋情况。
+17:37 condy: 从渣乎看到，现代的分支预测比较足够好（
+17:37 condy: s/比较/已经
+17:37 lh_not_bot: 无必要杞人忧天。
+17:37 varna: condy: 但分支预测主要针对连续的循环，而不是分批次的调用
+17:37 varna: 大部分时候不管是对的
+17:38 condy: 0.0
+17:38 varna: 然而说分支预测，对可能间隔时间-空间都不近的两次函数调用，目前CPU没法管那么远
+17:38 varna: 所以其实只是那一点上的likely/unlikely会不会搬石头自砸脚
+17:38 condy: （我记得还有个东西，忘了，是说 likely 在现代处理器上已经可以不用了
+17:39 condy: 我去找找
+17:39 lh_not_bot: 分支侦测不如分支消除来得利亮。
+17:39 lh_not_bot: ヲ要点名批一个，GCC 的 branch elimination 非常推板。
+17:40 varna: 找几个西方记者来看看
+17:40 lh_not_bot: ヲ举个栗子，对一个带符号整数向负无穷舍入到 16 的倍数怎么做。
+17:42 lh_not_bot: 原始的算法当然是 int foo(int a){ if(a >= 0) return a / 16 * 16; else return ~(~a / 16 * 16); }
+17:42 lh_not_bot: 这个，GCC 4.9 还没办法消除分支，所以最后必须手写。
+17:43 varna: 4.9...
+17:43 varna: 我看看现在我手头这个
+17:44 lh_not_bot: int foo(int a){ int mask = a >> (sizeof(a) * CHAR_BIT - 1); return ((a ^ mask) / 16 * 16) ^ mask; }
+17:44 lh_not_bot: 这里有个更投机取巧的办法。
+17:45 varna: 5.2开O2还在cmovns
+17:45 lh_not_bot: 注意除以或者乘以 16 是移位，而对于移位，两次 xor 最终会抵消掉。所以可以直接写  int foo(int a){ return (a >> 4) << 4; }
+17:45 lh_not_bot: 如果不是 16 32 这样的幂次，就得像中间那么写。
+17:46 varna: (｡･ω･)ﾉ
+17:46 varna: 咦，那大神还没回答我问题……
+17:47 lh_not_bot: varna: gcc 还是太叒。
+18:01 Mokou: 啊，今天是姨夫的生日……
+18:02 varna: 近藤信竹？
+18:02 varna: 不对，我似乎搞混了
+18:02 Mokou: 平井一夫
+18:03 varna: 噗，RJ 1:700水线上某模型画报封面了
+18:03 Mokou: 噗
+18:03 varna: http://ww4.sinaimg.cn/large/8b8caab2gw1excefgfn5kj20go0nldn8.jpg
+18:03 Mokou: 怎么说的，观赏砧板两用？
+18:04 Mokou: AOSHIMA……
+18:04 Mokou: 虽然你汉字里有青岛两个字
+18:05 Mokou: http://ww4.sinaimg.cn/bmiddle/6106a4f0gw1ez86ensnyvj20ic0ieq61.jpg 武陵人炸鱼为业
+18:05 varna: 一天三进Boss三个轮型阵……
+18:05 varna: 我潜水部队也是辛苦
+18:06 varna: 想了想，一张照片240亿次运算也没什么吧
+18:07 Mokou: 然而苹果的摄像头是索尼的
+18:07 varna: 一亿才8个零，然而一张图上面就有几百万像素
+18:07 varna: 然后他们那些运算估计得有一大堆是插值和调色相饱和度的
+18:08 varna: 对了，Magpul公司卖战术手机壳
+18:08 varna: 上面有加强筋，类似雷明顿ACR/6.8SPC那个弹匣的样子
+18:09 Mokou: ……
+18:09 varna: 我记得Magpul是没有金属加工能力的
+18:09 varna: 所以总搞塑料小件，什么折叠冲锋枪设计啊，三角小握把啊
+18:10 Mokou: ……
+18:10 Mokou: 来个折叠枪管
+18:10 varna: 蝗军整个飞机都能折起来，何况一个枪管
+18:10 Mokou: 还好他们没搞出来折叠式大和级
+18:11 varna: 指挥135的袖珍战舰，适合全性能减40%的你
+18:11 Mokou: 23333
+18:11 varna: 这东西真有的
+18:11 varna: 但是触发条件我没搞明白
+18:12 varna: 而且其实还是没什么卵用
+18:12 Mokou: “ 打下切尔诺贝利，然后在星门中断的期间点两次那个排泄物事件”
+18:12 Mokou: 这个似乎是零式袖珍战舰的条件
+18:12 varna: 那个事件跟北非战线有关么
+18:13 Mokou: 并不知道
+18:13 varna: 星门中断我印象只有两三回合
+18:13 varna: 那时候我正昏天黑地点妹子事件呢
+18:13 Mokou: ……
+18:13 varna: 古贺妹子的指挥整整能加到540
+18:14 varna: 然后潜特型也是135指挥一个，正好带上四个，高索敌1.2k航空，先手怒杀
+18:14 Mokou: 540用来开某不知名的五十万吨战列舰么
+18:14 varna: 那个其实可以给萝莉科夫
+18:15 varna: 印象他就一个格子，然而指挥五百多
+18:15 Mokou: ……
+18:15 Mokou: 不过金田正好540
+18:15 hoxily quit:Read error: Connection reset by peer
+18:15 varna: 我觉得这东西最适合的就是蹲了一万年二线的山本老头
+18:16 hoxily joined channel
+18:16 Mokou: 然而山本老头去见神武天皇了
+18:16 varna: 510+30指挥，带上威风一下，死了
+18:16 varna: 他不打够十几场侵攻战是不会死的
+18:16 Mokou: 然而出了金田的时候……
+18:16 varna: 但古贺是妹子，所以老爷子就安心去吧
+18:17 varna: 你可以这样，按贴吧攻略十七回合速通一个真希结局，然后把特典给小泽或者田中，老头子直接退休
+18:17 varna: 里面有一项是提督指挥+90
+18:18 varna: 或者还有个办法
+18:18 varna: 非日本化路线，第二次颁发勋章要国宝，可以收到指挥570的伊藤〇文
+18:19 varna: 让樋口提督辛苦一下的话也不是不可能……
+18:19 Mokou: ……
+18:19 Mokou: 总之各种坑
+18:19 Mokou: 超战舰这指挥值太高了吧
+18:19 varna: 古贺妹子的事件也是坑的
+18:19 varna: 事件1直接有，然而事件2不触发凶战士技能是不会出来的
+18:20 Mokou: ……
+18:20 varna: 又得受伤又不能被秒杀，这个或许放在哈尼那里或者人革连的前期防卫战容易些
+18:21 varna: 然后点够总共六七个事件就能加指挥了，哦瘊瘊
+18:21 Mokou: 所以我觉得最好的办法还是制作组切腹
+18:21 varna: 比起小泽的完整八个、诺伊曼的看起来只有几个事件要好多了
+18:21 varna: 所谓“看起来”，是因为如果不进行完小泽事件的话就会卡在中间
+18:23 varna: 正是所说的“我想，肩负国运如此久的南云将军，也是时候休息一下了吧！新来的小泽将军脸在〇〇中〇得发红，显出一种健康的神色。”
+18:24 Mokou: ……
+18:24 Mokou: 真可啪
+18:25 Mokou: 话说大西怎么没出场
+18:25 varna: 大西太过激了
+18:25 varna: 也可能他忙于起模范带头作用
+18:26 Mokou: 大西切腹不介错
+18:26 varna: 大概已经口服了什么……
+18:26 Mokou: 不是15h么……
+18:26 varna: 噗
+18:26 varna: 自找的
+18:27 Mokou: 死得好歹还有点气势
+18:27 varna: 不足以向特攻队员道歉
+18:27 Mokou: 你看看某不愿意透露新名的东条上等兵
+18:27 Mokou: 性命
+18:27 Mokou: 姓名
+18:27 varna: 东条差点把天皇卖了
+18:27 * Mokou 手癌晚期
+18:27 varna: 麦克阿瑟让他串供，他就是不串
+18:27 Mokou: 然而他卖得掉裕仁么……
+18:28 varna: 卖不掉，最后一次庭审的记载说东条承认侵略战争的主谋是他，不是天皇
+18:28 Mokou: 不串供不会直接被切腹么
+18:28 varna: 然而并不知道老麦克做了什么工作
+18:28 Mokou: 然而国民不会信东条吧
+18:28 varna: 是美国提出让他串供的，他就是不串
+18:28 varna: 国民不信不要紧，先保住天皇，然后油库里
+18:29 varna: 都饿死人了，谁还管谁发动的侵略战争
+18:29 varna: 说着我掉沟里了
+18:29 Mokou: 当时日本国民对天皇的信仰应该还是很足的
+18:29 Mokou: 你看菊与刀
+18:29 varna: 还TM掉大战舰沟……
+18:29 Mokou: 没有一个战俘说过天皇坏话
+18:29 Mokou: 就算那些战俘各种喷上级马鹿……
+18:29 varna: 这个正常
+18:30 varna: 不然麦克阿瑟早搞个共和政体了
+18:30 Mokou: 所以东条酱怎么就是不明白
+18:30 Mokou: 战败前就有一堆人喊“天皇被陆军骗啦”
+18:31 varna: 骑虎难下
+18:31 varna: 他赌不赢的，但他想赌，那就死吧
+18:31 Mokou: +
+18:33 Mokou: 噗
+18:33 Mokou: 岛城博物馆里有满洲国某人为悼念乃木写的诗啊……
+18:33 Mokou: 哪天我去看看
+18:33 varna: 乃木那混球都有人悼念么……
+18:34 Mokou: 毕竟伪满
+18:34 Mokou: 1921年，郑孝胥为悼念乃木希典而作诗。诗碑现存于青岛博物馆。博物馆刻意将碑体斜立，以示对郑孝胥和乃木的反感。[2]
+18:34 varna: 不忍直视
+18:34 varna: 233333
+18:34 Mokou: 鄭孝胥（1860年5月2日－1938年3月28日），字蘇龕，號海藏，中國福建省闽县（今福州）人。他是清朝的改革派政治家，亦是滿洲國建國的參與者之一，後出任滿洲國國務總理。
+18:34 varna: 这个可以看看
+18:35 Mokou: 上次去博物馆是小学，那时候毛也不懂
+18:35 Mokou: 真可惜
+18:35 varna: 毛也不懂，于是对着〇了一管？
+18:35 Mokou: uccu
+18:36 varna: KTKM决定小憩十分钟
+18:41 Mokou: http://ww4.sinaimg.cn/bmiddle/005RWsydjw1ez8grr9r4xj30hm0ladgy.jpg 谁试试这个裤子
+18:45 varna: 我日，大战舰……
+18:45 varna: 米空闪开了！
+18:45 * varna 逃过一桶
+18:49 Mokou: 卧槽
+18:49 Mokou: 【十一月作戦】报酬一览 新玩具 試作推進器「ネ式エンジン」实装。
+18:49 Mokou: http://ww4.sinaimg.cn/bmiddle/e4beb8aegw1ez8m49fpoij20rm0dvdl8.jpg
+18:50 MaryJane quit:Quit: Leaving
+18:50 varna: 我看看社区的消息
+18:51 varna: 还真是
+18:51 Mokou: 这就喷气时代了
+18:51 Mokou: 66666
+18:51 varna: 余下是51、大和发夹、试46
+18:51 varna: 这月战果奖励不错啊
+18:53 varna: 看来以后真要改装喷气机了
+18:59 code_new joined channel
+18:59 varna: 码新来了
+18:59 varna: 爆他
+19:00 code_new: varna: 爆
+19:00 varna: 这基佬
+19:00 code_new: 然而你先被爆了
+19:00 varna: 基佬真可怕
+19:00 code_new: 基喊捉基
+19:00 varna: 然而这基佬估计是个秃子
+19:01 code_new: 然而我头发浓密
+19:01 varna: 拿出你的新引擎来看看
+19:02 code_new: 新引擎？
+19:02 varna: 我突然感觉到一阵恶寒
+19:02 varna: 到下次更新之前，我是不是得攒一点资源
+19:02 * Mokou 只有三万油弹
+19:02 varna: 估计又有任务要拿喷气机引擎了，然而我是没有战果奖励的
+19:02 varna: 我现在油剩一万六，弹剩七千
+19:03 code_new: 这几天都没动舰娘，先上去把远征收了……
+19:04 code_new: 舰娘竟然被挤到第二位了……
+19:05 varna: dmm页面上舰C后来就不在第一个了吧
+19:05 code_new: 后来是什么时候
+19:05 varna: 14.7以后？
+19:06 code_new: 上周看还一直是第一
+19:06 varna: 哦……
+19:06 varna: 算了我手痒
+19:06 varna: 还有十三个喷灯，喷一个出来
+19:06 Mokou: 还有449个灯
+19:06 varna: 这欧洲人
+19:07 Mokou: 欧洲人又嘲讽我这个非洲人
+19:07 varna: 4:20...
+19:07 Mokou: 我出的东西都没什么好喷的
+19:07 varna: 哦操
+19:07 Mokou: 玩一发大的
+19:07 varna: 亮了
+19:07 varna: 我忘接任务了
+19:07 Mokou: ……
+19:07 varna: 哈哈哈哈
+19:07 varna: 大丈夫，两小时之后我再造一发
+19:07 Mokou: 走好
+19:07 Mokou: 大破的资源
+19:08 Mokou: 双大武俾召唤阵 5672
+19:08 varna: 明天我得补点闪了，不然没法打
+19:08 Mokou: 4h
+19:09 Mokou: 大和
+19:09 Mokou: (拆成两半的)
+19:09 Mokou: 去吃饭
+19:10 varna: 果然，今天改小灯是青叶
+19:15 pocmon joined channel
+19:15 pocmon quit:Changing host
+19:15 pocmon joined channel
+19:16 code_new: 话说你们在弄什么灯
+19:17 varna: 我在改普通的探照灯，以前一直想弄，不过总是忘
+19:17 code_new: 哦哦
+19:18 code_new: 之前想改个一式穿甲弹……结果max时没确保，然后失败了
+19:19 code_new: 然后我现在没有91了……
+19:19 varna: ...
+19:20 code_new: 应该是只剩一个91了
+19:22 varna: 别的都有改修？
+19:23 code_new: 没有别的了，已经用光了
+19:23 code_new: 每日赌一下吧OTZ
+19:23 varna: ...
+19:23 varna: 这是作死啊
+19:24 varna: 91+6好歹弄四个
+19:25 code_new: 感觉91太多了，然后就想弄个一式
+19:25 code_new: 改完发现真少……
+19:26 code_new: 先去1-5捞一下江风OTZ
+19:27 varna: OTL
+19:33 varna: 火狐变成了一坨傻逼
+19:34 code_new: 23333
+19:34 varna: 常用的文件对话框上，如果文件浏览的视图里存在至少一个文件，那么新建目录就会很快失败
+19:34 varna: 于是我没法直接新建目录了
+19:34 Mokou: 这个啊
+19:35 Mokou: 早就有了吧
+19:35 varna: 我以前从没遇到过
+19:35 Mokou: 我这里一直这样
+19:36 code_new: 倒是经常被ff的plugin-container卡死
+19:36 varna: mozilla到底怎么把软件做成这熊样的……
+19:37 varna: 不，你是被自己的欧气震慑了(｡･ω･)ﾉ
+19:37 code_new: 我竟然在欧皇面前被称有欧气
+19:38 varna: 我是欧洲人的大管家
+19:38 varna: 实际还是黑鬼
+19:38 Mokou: 欧皇谦虚了
+19:38 code_new: 欧皇谦虚了
+19:38 * varna 方了
+19:38 varna: 诸君大和大凤的时候我还在大井大潮呢……
+19:39 Mokou: 然而你都多少锅战神了
+19:39 Mokou: 而且你看我就没有什么齐柏林
+19:39 varna: _(:з」∠)_
+19:40 varna: 我捞的时候大概不该听《鬼子进村》提高回避率
+19:40 varna: 后来别人跟我说，鬼子都进村了，哪有货留下……
+19:40 Mokou: uccu
+19:40 Mokou: 然而我用正常的BGM也没出货
+19:41 varna: 对了，现在局座似乎跟262联手出节目了
+19:41 code_new: 然而我没用BGM也捞了六十多次
+19:41 varna: 一转攻势，卧烟社装逼权丧失
+19:41 Mokou: 然而262已经成为娱乐节目了
+19:41 varna: 我今天看局座讲他上舰时候吃的东西很有意思
+19:42 Mokou: 紫色的咖喱？
+19:42 varna: 他说有一次上意大利舰，军官餐厅准备了一大块“像腊肉的东西”
+19:42 varna: 围观群众拔腿就跑
+19:42 code_new: 23333
+19:42 Mokou: ……
+19:42 varna: 观众都方了
+19:42 varna: 那大概是意大利的什么火腿吧
+19:43 varna: 后来局座说，最后上了意大利面，“那个爽”
+19:45 code_new: 局座什么都能上
+19:46 varna: 哪儿来的小姑娘
+19:47 varna: 总觉得我今天再造一发低保的话，更新以后4-5的悲剧就要重演
+19:47 varna: 然而我还是想给十六万钢凑个整
+19:55 Mokou: http://ww4.sinaimg.cn/bmiddle/6973530djw1ez8n6wynmqj20c404wjrs.jpg
+19:57 varna: 这苏文我似乎见过
+19:57 varna: 然而没读完就被续了
+19:57 Mokou: 23333
+19:57 Mokou: “英语讲座那个老师拿antidisestablishmentarianism这个词装逼怎么拆分单词...然后我就问他 assassin怎么分”
+19:57 varna: 一直想拜读一下完整版的
+19:57 varna: 当然是尻尻突突突
+19:58 varna: anti-dis-establishment-arian-ism?
+19:58 hoxily: ass-ass-in
+19:59 varna: hoxily: 爆
+19:59 Mokou: 大概是
+19:59 varna: anti-dis-establish-men-tar-段错误（吐核）
+19:59 hoxily: a-ssa-ssin
+19:59 Mokou: 23333
+20:00 Mokou: 对，就那么分
+20:00 varna: 新版bash的翻译就没这么喜感
+20:00 varna: 译成“段错误（核心已转储）”
+20:00 Mokou: 虽说实际上追求长度的话可以构造成antidisestablishmentarianistically
+20:01 varna: 我想个更糟糕的
+20:01 varna: exeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee... # bad things happen when firefox is downloading some exe
+20:01 Mokou: 233333333333333333333
+20:01 Mokou: leeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+20:02 varna: 火狐不知道受到什么心理创伤，下载exe的时候会在文件尾部没法结束
+20:02 varna: 同时拒绝友善地关闭下载连接
+20:03 varna: 所以那个和（哔——）谈恋爱的苏文有没有链接？
+20:04 Mokou: 没找到
+20:05 varna: KTKM蹭了7血，要求泡澡1.5h
+20:05 iyzsong: 2333
+20:05 varna: 断固拒否！
+20:06 varna: code_new: 对了，限定掉落似乎下次更新就没有了
+20:07 code_new: varna: +
+20:07 code_new: 正在捞
+20:07 varna: 我理智地想了想，下一发我还是不低保了吧
+20:08 varna: 还有两天就要接受新的恶意（迫真），多点弹药我好做任务
+20:08 code_new: 圣诞节我来两发BSM
+20:08 varna: (｡･ω･)ﾉ欧皇要做法了！
+20:08 varna: 不对，欧洲人不作法……
+20:08 varna: s/做/作/
+20:08 code_new: 欧皇奶我！
+20:08 * varna 是萨满
+20:09 code_new: 朝皇晚满
+20:10 code_new: 这次怎么没有三倍掉率了	_(:з」∠)_
+20:11 varna: 我听说双倍掉率只有13秋E5的矢矧吧，三倍什么鬼……
+20:11 code_new: 三倍是秋活的西南风
+20:11 varna: 噗？
+20:12 code_new: 当时没有西南风的黑提在4-5有三倍几率可以捞到
+20:13 varna: 没有西南风主要是错过活动
+20:13 varna: 谈不上黑
+20:14 code_new: 然而我E4捞罗马也并没有见到_(:з」∠)_
+20:14 varna: 以后还有的
+20:14 code_new: 云龙不知下次活动会不会回来
+20:15 code_new: 还有任务在等着……
+20:15 varna: 云龙6-3有
+20:15 code_new: 哦哦
+20:15 varna: 请务必夯，6-3拿S比较鬼畜
+20:15 code_new: 6-1一直没打……
+20:15 varna: 可以看看维基
+20:16 varna: 有个经验的认识
+20:16 code_new: 6-3的图看上去挺清纯的
+20:16 varna: Boss也很清纯可爱
+20:17 code_new: 比5-3好多了
+20:18 varna: 这个我不置评……
+20:18 varna: 5-3我可以夜战敢行去捞十条鱼
+20:18 varna: 然而6-3……
+20:18 Mokou:  有很多小白对jC++学习路线很迷茫！
+20:18 Mokou: 由于很强的跨平台性，C++技术吸引了大量的追随者，可以说是世界排名第一的编程语言，
+20:18 Mokou: 在世界的每个角落，都活跃着java技术。虽然说IT技术学习起来并不困难，可是如果没有明
+20:18 Mokou: 确的方向，没有合理的计划，那么学习起来就非常困难，下面就简单梳理一下C++的学习路
+20:18 Mokou: 线。
+20:18 Mokou: http://tieba.baidu.com/p/4227050054
+20:18 Mokou: 这个还不如之前那个C语言javadoc的……
+20:19 varna: 23333333
+20:19 varna: jC++
+20:19 varna: 挂起来吧
+20:20 code_new: jC++是什么鬼
+20:21 varna: 不会用替换的下场
+20:22 sleepwalking: [ [ 'AE', 'N' ],  [ 'T', 'AY' ],  [ 'D', 'IH' ],  [ 'S', 'AH', 'S' ],  [ 'T', 'AE', 'B' ],  [ 'L', 'IH', 'SH' ],  [ 'M', 'AH', 'N' ],  [ 'T', 'EH' ],  [ 'R', 'IY' ],  [ 'AH' ],  [ 'N', 'IH' ],  [ 'Z', 'AH', 'M' ] ]
+20:22 Mokou: 给小号换个大姐姐头像
+20:24 Mokou: 然后钓个鱼
+20:24 varna: sleepwalking: 爆
+20:27 hoxily quit:Quit: Leaving
+20:27 iyzsong: 窝明天又可以去面试啦 = =   http://shanhai.smile-tech.cn/ 这家公司的运维~
+20:27 varna: OTL
+20:28 varna: 233song后来专攻运维了？
+20:28 iyzsong: 没有.. 都不知道是干啥的
+20:29 varna: 看你面的都是运维类似
+20:31 iyzsong: 这个才是运维..  之前只写了几天的iOS  深度是完全不知道算干啥的
+20:31 varna: 红帽子那个呢
+20:32 iyzsong: 那个是测试岗呀
+20:32 varna: 哦
+20:32 iyzsong: 感觉我什么都干不好的样子 囧
+20:33 * varna 同感
+20:33 * Mokou 同感
+20:34 Mokou: 然而你还能追leee
+20:35 iyzsong: 并不能 ╮(╯▽╰)╭
+20:35 varna: 他打错了，其实是“并不用”
+20:36 Mokou: なるほど
+20:36 Mokou: 不愧是现充
+20:38 varna: 你这鱼也没钓上来啊
+20:38 varna: 换个四听试试
+20:38 Mokou: 都是因为你们过度捕捞
+20:38 Mokou: 搞得我无鱼可钓
+20:38 varna: 我这月一个鱼塘都没去，不是我的锅
+20:39 Mokou: http://ww2.sinaimg.cn/bmiddle/5d4fc01bgw1ez8of0bd0zj20f40c9dgq.jpg 
+20:39 varna: 2333
+20:39 Mokou: M$也沦陷了
+20:39 iyzsong: - -
+20:40 iyzsong: 钢 筋混凝土
+20:40 code_new: M$现在也走上卖萌道路
+20:40 varna: iyzsong: 爆
+20:42 Mokou: http://mmbiz.qpic.cn/mmbiz/tbEqc7Wk0mbibOMMXJdialoEZlSiaxtdkljibwGlQ63NPWQfezL1M4Vz8Us6DlNXkXf50nic9edT9UplAmlSlwrAD1w/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1
+20:42 varna: 蛤蛤蛤
+20:43 pocmon quit:Quit: 闪...
+20:44 code_new: http://www.picpaste.com/a-9mUkngvs.jpg 
+20:44 code_new: ^镇守府的这个装扮怎么样
+20:45 varna: 不是我的菜
+20:45 code_new: 好吧
+20:46 code_new: 新买了一批廉价家具
+20:46 varna: http://picpaste.com/YNr6QLh2.png 我还是走和风路线
+20:48 code_new: 突然发现大淀的黑丝没了
+20:48 code_new: 然而作为任务娘的大淀有穿黑丝
+20:49 varna: 发任务的时候米空要换一套衣服
+20:49 code_new: _(:з」∠)_
+20:49 Mokou: 不过其实大尻那种黑丝不太科学吧
+20:49 Mokou: 反光什么鬼
+20:49 varna: 科学
+20:49 varna: 我见过反光的
+20:50 Mokou: 确定反光的是“丝”？
+20:50 varna: 大概不是腿上的肥油
+20:50 code_new: ……
+20:51 code_new: 明明是腿间的蜜汁液体
+20:51 varna: 那个只冒泡不反光
+20:52 varna: 你中学的时候没组织过课后X教育么……
+20:52 Mokou: 黑主玖兰LY: 回复 土耳其海军司令 ：你删的那么理直气壮。那么你对伸手和不伸手一定有明确的定义吧，请从帖子的描写中解释一下两者区别和我是怎么伸的手。杀一个人是除恶扬善，杀一个村子的人呢？你删那么多贴没有想过你的问题。。。
+20:52 Mokou: 666666
+20:52 iyzsong: 圣诞节快要到了 我们来互送礼物吧
+20:52 code_new: 没有……
+20:52 varna: 送什么呢
+20:52 iyzsong: 课后拉大树?
+20:52 condy: iyzsong: lol
+20:52 varna: 啊，233song那里叫拉大树啊
+20:53 varna: 我那里叫上杠，东北人民管那个叫阿鲁巴
+20:53 iyzsong: 窝已经忘记叫什么了
+20:53 code_new: 我们叫开飞机……
+20:53 condy: 湾湾也叫阿鲁巴唉
+20:53 varna: 噗，原来全中国都在这么操倒霉孩子……
+20:54 Stevearzh_ quit:Quit: Be back later...
+20:54 Mokou: 你才知道啊
+20:54 varna: 我以为主要是北方
+20:54 Mokou: 不过这个似乎北欧也有
+20:54 varna: 而且当时贰中我们那年级其实就固定的几个人被上
+20:54 varna: 还有个伙计被拍了五十二秒的视频
+20:55 sleepwalking: 脑补北方口音念阿鲁巴……
+20:55 Mokou: 我们主要是高一的时候去上高二的
+20:55 varna: 表情坚毅，动作不太到位，而且我们那里缺杠，都是去艹门的
+20:55 varna: 还得有几个人把门板固定住
+20:55 Mokou: 艹门+
+20:55 Mokou: 不过我们不需要固定门，艹对方向就没问题……
+20:55 sleepwalking: +
+20:56 varna: sleepwalking: 爆
+20:56 randomclown quit:Quit: Leaving
+20:56 varna: 米库酱这么高雅的人也参与上杠，我真是始料未及
+20:58 Mokou: 夕洋one申请添加你为好友，申请理由：代写
+20:58 Mokou: 233333
+20:58 varna: 233333
+20:58 Mokou: 我看看他代写的水平多高
+20:58 varna: 来来来
+20:58 iyzsong: 0 0
+20:58 varna: 上钩了，现在开始遛鱼
+20:58 Mokou: 然而我该怎么联系他
+20:59 varna: 不知道百度的傻逼玩意怎么用
+20:59 Mokou: 似乎得用手机
+20:59 Mokou: 我试试
+20:59 varna: 得用客户端？
+20:59 varna: 巴拉森
+21:00 owen quit:Ping timeout: 272 seconds
+21:00 Mokou: 手机客户端我倒是有
+21:00 varna: 我现在倒是想给度盘绑个手机号收一下战列舰论坛的资料
+21:00 varna: 反正长春这个号以后也不会太用
+21:01 Mokou: 为啥要绑手机号
+21:01 Mokou: 良化那个号？
+21:01 varna: _c这个
+21:01 varna: 绑手机号似乎能多很多容量
+21:01 Mokou: 哦
+21:01 Mokou: 容量我有
+21:01 varna: 索性就给他绑一个不太用的
+21:01 Mokou: 你要是不想帮的话我帮你收就行
+21:02 varna: 我年后绑一下
+21:02 Mokou: 扩容应该是要下APP
+21:02 varna: 驲？
+21:02 Mokou: 对
+21:02 varna: 驲
+21:02 Mokou: 所以你绑了也没用
+21:02 varna: 不伺候他了
+21:06 owen joined channel
+21:18 Mokou: http://ww4.sinaimg.cn/mw1024/4764ca7egw1ez8pt8d6drj207a020wed.jpg
+21:18 varna: 23333
+21:23 varna: 一发低保下去4h
+21:28 Mokou: 吧务大人叫我说问题
+21:28 Mokou: 那我说下
+21:30 varna: 哦对
+21:30 varna: 昨晚我反省了一下，upholder这个机体其实不错
+21:30 varna: 是我用的姿势不好，认真一点的话是不错的轰炸机
+21:32 varna: 然而不知道是我心理作用还是其他原因，感觉1.02的过弯和1.07差距好大
+21:33 varna: Touketsu的回避很好，然而炮雷布局实在不怎么样
+21:33 varna: Orchid中庸
+21:34 varna: Mamoru就是个PIGU, 除了难看之外没缺点
+21:39 Mokou: 问题提出来了
+21:40 varna: lmcc
+21:40 varna: 哦，看到了
+21:40 Mokou: 就是关于arashi的那几个
+21:53 sleepwalking quit:Ping timeout: 240 seconds
+21:55 cleamoon joined channel
+22:00 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=dc057243322ac65c6705667bcbf3b21d/24be76094b36acafc85f38df7bd98d1001e99c2c.jpg 我有点想给他翻译一个
+22:01 Mokou: 算了，先不翻译了
+22:03 cleamoon quit:Read error: Connection reset by peer
+22:03 wlemuel joined channel
+22:04 cleamoon joined channel
+22:12 cleamoon quit:Read error: Connection reset by peer
+22:12 cleamoon joined channel
+22:19 cleamoon: http://www.williamlong.info/archives/4456.html
+22:19 varna: 英文维基没被墙，多数词条还是可以看的
+22:20 cleamoon quit:Read error: Connection reset by peer
+22:21 cleamoon joined channel
+22:21 cleamoon: https://www.zhihu.com/question/31021915/answer/63787666
+22:21 cleamoon: soga
+22:22 varna: 德文23333
+22:23 varna: 这需要无前缀码
+22:23 varna: 然后就好认了
+22:23 cleamoon: http://video.weibo.com/show?fid=1034:0c2b98972774bb00d6a80117a817c1d7
+22:23 lhanjian_ joined channel
+22:24 cleamoon: 和德文同系的瑞典文也这样，不过长词较少，人们不喜欢看到太长的词
+22:24 Msajka joined channel
+22:24 lhanjian_: varna, !
+22:24 Mokou: 黏着语都这么来吧
+22:24 Msajka left channel:"AndroIRC"
+22:24 Mokou: 比如前面那个antidisestablishmentarianism
+22:25 ASenR joined channel
+22:25 varna: 德文长词似乎很常见
+22:25 varna: 估计是自然形成的无前缀码
+22:26 Mokou: 那是因为英语是异端
+22:26 Mokou: 不然英语现在大概也这鸟样……
+22:26 varna: 英国不算欧洲（笑）
+22:26 cleamoon: http://pbs.twimg.com/media/CWzva-QUYAAGQbp.jpg   膜法尸
+22:27 cleamoon: 腐国是米帝殖民地
+22:27 lhanjian_: varna, 爆！
+22:27 lhanjian_: Mokou, 膜
+22:27 varna: 这基佬
+22:27 Mokou: 这基佬
+22:27 lhanjian_: cleamoon, 吃饱了没事干的歪国仁
+22:28 lhanjian_: 歪果仁
+22:28 Mokou: 另外土耳其文其实也这样
+22:28 Stevearzh_ joined channel
+22:28 lhanjian_: cleamoon, 这个蛤丝不得了啊
+22:28 varna: 火鸡文
+22:29 cleamoon quit:Read error: Connection reset by peer
+22:30 cleamoon joined channel
+22:31 Mokou: 什么Avrupalılaştıramadıklarımızdan mısınız
+22:31 lhanjian_: cleamoon, 绅士最近掉线也挺频繁的啊
+22:31 cleamoon: 是呀
+22:31 cleamoon: 老是显示no such device or address
+22:31 cleamoon: 每天不停的掉
+22:32 varna: 我看到了那个土耳其文里有m!s!n!
+22:32 lhanjian_: cleamoon, 你的网卡或者网络设备哟故障？
+22:32 Mokou: uccu
+22:32 cleamoon: 我不记得改了设置呀.... 就是更新了win之后就这样了
+22:32 varna: 撤了
+22:32 varna: 武运
+22:32 varna quit:Quit: leaving
+22:32 cleamoon: 我试试webchat
+22:33 cleamoon_ joined channel
+22:33 cleamoon quit:Client Quit
+22:43 Youmu joined channel
+22:46 Mokou: 睡觉
+22:46 Mokou: 诸君武运
+22:46 Mokou quit:Quit: 睡觉
+22:47 OwenJia joined channel
+22:47 OwenJia quit:Changing host
+22:47 OwenJia joined channel
+22:50 owen quit:Ping timeout: 276 seconds
+22:53 OwenJia quit:Quit: Konversation terminated!
+23:17 lhanjian_: 一直觉得逃逸检测隐藏掉分配在栈上或者堆上这回事，在编译时报错然后要求开发者自己改好了
+23:19 cleamoon_: 哦，对了，上次那个cout爆破是cygwin崩了，换了msys就没事了.......
+23:28 lhanjian_: 。。。
+23:30 ASenR quit:Remote host closed the connection
+23:40 cleamoon_ quit:Ping timeout: 252 seconds
+23:49 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 43.0.1/20151216175450]

@@ -1,0 +1,328 @@
+00:53 matchray: op已經被老鼠搶了
+00:55 lh_mouse: matchray, 摸摸头。
+00:55 lh_mouse: 摸摸毛毛头。
+00:57 matchray: 昨天linode meltdown重啓了，我就斷線了
+00:57 lh_mouse: 睡觉。
+01:02 lh_mouse quit:Ping timeout: 276 seconds
+01:45 ftantic joined channel
+01:45 ftantic quit:Client Quit
+05:49 Aldrich: 说起来频道里有人有兴趣玩CoC么
+05:50 cleamoon_: CoC?
+05:54 Aldrich: Call of Cthulhu
+05:54 Aldrich: 有些模组2-4个人就可以玩起来
+05:59 cleamoon_: 看起来像horror rpg？
+05:59 Aldrich: trpg
+05:59 Aldrich: 不是那个电子游戏
+06:00 cleamoon_: Call of Cthulhu: The Card Game?
+06:01 Aldrich: https://en.wikipedia.org/wiki/Call_of_Cthulhu_(role-playing_game) 这个玩意
+06:05 cleamoon_: quick-start 34页......
+06:06 Aldrich: 其实玩家学会创建调查员基本上就可以了
+06:06 Aldrich: 剩下的交给KP
+06:12 cleamoon_: 凑几个人再说吧
+06:13 Aldrich: hanjian_l: ^
+06:13 Aldrich: 我手上有个剧本只需要两个人就能玩起来
+06:16 cleamoon_: 看说明看三天
+06:26 Aldrich: 并不需要
+06:26 Aldrich: 把调查员设置出来就行
+08:21 whocares_2_ quit:Ping timeout: 248 seconds
+08:21 whocares_2 joined channel
+08:44 lh_mouse joined channel
+09:23 hanjian_l: Aldrich: 我看看
+09:31 hanjian_l: 桌游？
+09:33 yonka quit:Remote host closed the connection
+09:51 hanjian_l: https://usercontent.irccloud-cdn.com/file/e73SPJ3o/Screenshot_2018-01-17-09-51-08-16.png
+10:12 yonka_ joined channel
+10:13 yonka_ quit:Remote host closed the connection
+10:15 yonka joined channel
+10:28 L-ios quit:Quit: L-ios
+10:31 hanjian_l: matchray: 2018-01-17 10:31:56.035 (   0.019s) [querydb      ]message_handler.cc:64       0| Unable to find file "/home/lhanjian/up/utun/src/utun_vpn_server.c"
+10:31 hanjian_l: Impossible啊
+10:37 L-ios joined channel
+10:39 hanjian_l: https://www.irccloud.com/pastebin/OzaAaKTe/
+11:01 matchray: ??
+11:01 matchray: std::string::rfind
+11:02 L-ios1 joined channel
+11:02 matchray: --variant=debug 看下怎么回事
+11:03 L-ios quit:Ping timeout: 248 seconds
+11:03 L-ios1 is now known as L-ios
+11:05 hanjian_l: 等我休息的时候，把build改成debug吧
+11:07 L-ios1 joined channel
+11:08 L-ios quit:Ping timeout: 255 seconds
+11:08 L-ios1 is now known as L-ios
+11:41 matchray: 我用一個 #!/bin/zsh exec  build/bin/cquery   wrapper的
+11:52 * lh_mouse slaps matchray around a bit with a large trout
+11:55 yonka quit:Remote host closed the connection
+12:04 matchray: hanjian_l: 對於 int foo = 3; // 是不是應該把 = 3;  // initializer 顯示出來
+12:34 matchray: https://github.com/jacobdufault/cquery/issues/260 close了
+12:34 L-ios1 joined channel
+12:35 L-ios quit:Ping timeout: 256 seconds
+12:35 L-ios1 is now known as L-ios
+12:39 matchray: 更容易出現多行了
+12:39 matchray: vim用戶苦不堪言
+12:56 yonka joined channel
+12:57 ininke joined channel
+13:02 lh_mouse: matchray, 摸毛毛头。
+13:07 hanjian_l: 为什么是毛毛啊？
+13:10 lh_mouse: hanjian_l, https://github.com/MaskRay
+13:12 hanjian_l: 哦
+13:13 hanjian_l: matchray: 作为残缺c用户，照着c++习惯就好了。
+13:13 matchray: 猫猫
+13:13 matchray: hanjian_l: initializer 你觉得好不好
+13:14 hanjian_l: 不必要。
+13:14 hanjian_l: 对c++可能重要些吧？c用户好像都少用init的说法
+13:15 hanjian_l: 如果碰到结构体，可能反而怀疑自己有没有初始化所有域了
+13:17 lh_mouse: matchray, 你怎么知道窝叫猫猫。 QAQ
+13:20 matchray: 我以为我叫猫猫，你叫老鼠
+13:22 lh_mouse: 0.0
+13:22 lh_mouse: 窝就叫猫猫啊。
+13:22 lh_mouse: 毛毛头不是你头像么。
+13:23 lh_mouse: follow 呢你的 follow 呢。 QAQ
+13:24 matchray: 我的是毛线球
+13:24 matchray: 你搜索haskell logo proposal
+13:26 hanjian_l: gopher有对手了
+13:27 hanjian_l: Glenda
+13:27 hanjian_l: 毛线球 土拨鼠 受兔
+13:27 hanjian_l: 笼耗
+13:32 lh_mouse: https://wiki.haskell.org/wikiupload/1/18/Lambdanimal.svg
+13:32 lh_mouse: e
+13:32 lh_mouse: https://wiki.haskell.org/Haskell_logos/New_logo_ideas
+13:38 lh_mouse: https://blog.lilydjwg.me/posts/31620
+13:38 lh_mouse: 效率无法预测。由于对 Haskell 缺乏了解，很多人甚至都不知道这一点。很多人直接就认为「Haskell 效率低下」。这不对。事实是，很难预测一个 Haskell 程序的效率。微妙的、没有明显关联的不同有时可能导致效率的巨大差异。（译注：蝴蝶效应啊？）
+13:38 matchray: 是的
+13:41 hanjian_l: 我只记得IO的存在是个必然会破坏Haskell优雅的地方？
+13:42 matchray: function-try-block
+13:42 matchray: 没有破坏；
+13:43 lfoder joined channel
+13:44 lfoder left channel:"WeeChat 2.0.1"
+13:56 cleamoon_ quit:Quit: Connection closed for inactivity
+14:03 lh_mouse: hanjian_l, 一个完全无法定义 side effect 的“纯函数式”语言未免过于乌托邦。
+14:03 lh_mouse: 个人观点。
+14:03 hanjian_l: 不懂
+14:04 matchray: newtype IO a
+14:04 matchray:   = GHC.Types.IO (GHC.Prim.State# GHC.Prim.RealWorld
+14:04 lh_mouse: hanjian_l, 你如何定义 for(int i = 0; i < 10; ++i) puts("hello");
+14:04 matchray:                   -> (# GHC.Prim.State# GHC.Prim.RealWorld, a #))
+14:04 matchray: 是链式的
+14:04 matchray: state
+14:04 hanjian_l: 我现在连以前海棠的那篇lambda-cal都没看懂
+14:04 matchray: hanjian_l: 可变的东西都是通过指针形式的
+14:04 lh_mouse: 我只能在组合逻辑电路的层次理解。
+14:05 lh_mouse: 组合逻辑电路认为在一个时钟周期内的电路是没有状态的。
+14:05 lh_mouse: 然而你不得不定义输入的时钟周期和下一个时钟周期。所以其实这中间有个时间差。
+14:06 lh_mouse: 如果驱动电平的时钟周期比电路延迟还大，这个就没法用了。
+14:06 lh_mouse: 说得明白一点，写组合逻辑电路大可以不考虑时序问题，只要够用——因为时序是你的用户应该考虑的问题。
+14:06 lh_mouse: = 丢锅。
+14:07 lh_mouse: 所谓不够优雅无非就是没有很暴力地丢锅给用户。
+14:08 CyrusYzGTt quit:Ping timeout: 255 seconds
+14:19 matchray: https://github.com/jacobdufault/cquery/issues/262 不知道怎么标记
+14:19 matchray: https://github.com/jacobdufault/cquery/issues/292 问题在于这种操作不是LSP标准
+14:19 matchray: lh_not_bot: are you a bot
+14:23 L-ios1 joined channel
+14:24 L-ios quit:Ping timeout: 240 seconds
+14:24 L-ios1 is now known as L-ios
+14:27 L-ios quit:Read error: Connection reset by peer
+14:29 CyrusYzGTt joined channel
+14:29 L-ios joined channel
+14:31 Aldrich: hanjian_l: 对，桌游
+14:31 Aldrich: 有兴趣么
+14:31 Aldrich: 如果频道里能凑够人的话，我就简单给你们讲一下规则，然后咱跑一个剧本试试
+14:31 Aldrich: 我当KP
+14:32 lh_not_bot: 红旗酱脱下了裤子。
+14:32 Aldrich: 小耗被羊驼摸到了鼻子，请使用敏捷判定
+14:33 matchray: Aldrich: 您去推动一下 https://github.com/emacs-mirror/emacs/commits/feature/noverlay  Emacs overlay, interval tree based on augmented red-black tree
+14:33 matchray: 作者好像不太想动了
+14:35 Aldrich: ……我尽力
+14:35 Aldrich: 怎么推
+14:35 matchray: Reddit 怎么 @ 一个用户 https://www.reddit.com/r/emacs/comments/7qyl39/c_language_server_cquery/
+14:36 matchray: 还有这个 https://github.com/syl20bnr/spacemacs/issues/10134 
+14:36 matchray: @  https://github.com/politza  说我们Emacs overlay用户受苦受难，就等着您的interval tree来解救了
+14:40 Aldrich: matchray: 似乎是 /u/politza 这种格式？
+14:43 matchray: Aldrich: 改了
+14:52 L-ios quit:Read error: Connection reset by peer
+14:54 lh_mouse: @richox
+14:54 lh_mouse: richox started following you
+14:54 lh_mouse: an hour ago
+14:54 lh_mouse: whaaaaaaaaaat the heeeeeeck
+14:54 L-ios joined channel
+15:00 matchray: 去 oftc 问 puremourning 是不是有意愿集成cquery
+15:01 matchray: 谁去给猫儿挂铃铛
+15:21 lh_mouse: 喵喵喵？
+15:23 matchray: 函數指針顯示不好
+15:24 matchray: int (*a)();  // hover 信息爲 int (*)() a)()
+15:26 matchray: 我現在的做法 https://github.com/jacobdufault/cquery/commit/3d3e01e1422506d99fee250c3c84ee9f14875df9#diff-19b5468b31e41983ea4e82a47384ba0eR444
+15:26 matchray: fc.content.substr(*spell_end, *extent_end - *spell_end); 
+15:27 matchray: spell 是標識符；extent 是整個statement(不含分號)
+15:27 matchray: 把標識符後面的東西都貼上來
+15:27 matchray: 因此對於 int (*a)(); 這樣inside-out寫法，就壞了
+15:28 matchray: 有些地方是好的，比如  A a = A(); int field : 3; 
+15:28 lh_mouse: 0 0
+15:28 matchray: A g(3+2)
+15:29 matchray: 感覺需要特判 function pointer
+15:29 lh_mouse: 辣鸡中缀声明。
+15:30 matchray: 不知道誰發明的
+15:30 matchray: inside-out syntax: the million dollar mistake
+15:31 ininke quit:Ping timeout: 256 seconds
+15:35 matchray: pointer to CXType_Unexposed
+15:35 ininke joined channel
+15:37 ininkf joined channel
+15:41 ininke quit:Ping timeout: 256 seconds
+15:44 lh_mouse: matchray, int (*(*ptr)[42])[21] = { 0 };
+15:47 matchray: 非常艱難，函數指針在 clang_getPointeeType 後是 CXType_Unexposed ；
+15:48 matchray: 指向數組的指針，我再研究下
+15:48 matchray: int (&ptr)[42];
+15:48 matchray: reference member..
+15:49 matchray: rvalue reference member
+15:51 lh_mouse: int (*(*ptr)[42])[21]
+15:52 lh_mouse: *(*ptr)[42]   is    int [21]
+15:52 lh_mouse: (*ptr)[42]   is    a pointer to `int [21]`
+15:53 lh_mouse: *ptr   is   an array of 42 pointers to `int [21]`.
+15:53 ininkf quit:
+15:53 lh_mouse: ptr is    a pointer to an array of 42 pointers to `int [21]`.
+15:55 hanjian_l: Fxxk，我选择golang或者godie
+15:55 matchray: 好像對於 lvalue rvalue reference ，libclang CXType.cpp 沒有辦法取出引用的類型
+15:56 matchray: 不對。getPointeeType 有救
+15:58 matchray: 應該不停地解引用 判斷是否存在函數類型或數組類型？
+15:59 Aldrich: hanjian_l: 有兴趣跑团么
+15:59 hanjian_l: 跑团？
+15:59 Aldrich: 就是之前提到的克苏鲁桌游
+16:00 Aldrich: 手上有个剧本最少两个PC就可以玩
+16:00 Aldrich: 等羊驼子来了再问问他
+16:00 hanjian_l: 不喜桌游
+16:00 hanjian_l: 桌游还是线下玩合适
+16:01 Aldrich: 噫吁嚱
+16:01 Aldrich: 其实网团的好处是可以弄一堆脚本
+16:05 hanjian_l: 红旗写个传统的纯文本网游吧
+16:05 hanjian_l: cc@lh_mouse 
+16:14 lh_mouse: 0.0
+16:21 matchray: 感觉不行
+16:22 matchray: https://github.com/jacobdufault/cquery/commit/a996828c74de5b87a82cd2567cd8b2bbebd5c1de
+16:23 L-ios quit:Quit: L-ios
+16:23 matchray: 完全不会识别
+16:28 matchray: 就这样吧
+16:30 lh_mouse: 空格缩进邪教。
+16:30 matchray: struct A 里 int (*(*ptr1)[42])[21]; 能识别
+16:31 matchray: 但 int (&&ptr)[42]; 不行
+16:31 lh_mouse: <_<
+16:31 lh_mouse: static constexpr unsigned foo = 1; int ptr[true&&foo];
+16:31 matchray: 这种 (rvalue) member reference array 用得还挺少的
+16:32 matchray: 目前会显示为 const unsigned int foo = 1 和  int [1] ptr
+16:33 lh_mouse: <_< 
+16:33 lh_mouse: no IDE knows more C++ than a compiler.
+16:34 matchray: the compiler hides something to me
+16:34 matchray: s/to/from
+16:41 lh_mouse: technically we call those hidden things 'implementation details'. <_<
+16:48 testuser001 joined channel
+16:48 testuser001: test
+16:49 * lh_mouse slaps testuser001 around a bit with a large trout
+16:49 lh_mouse: ヾ(o◕∀◕)ﾉヾ
+16:49 testuser001: 公司里的妹子，全是人妻
+16:49 testuser001: 痛苦
+16:50 lh_mouse: 自重。
+16:50 testuser001: 而且还是长得漂亮身材好
+16:50 testuser001: 我觉得我要预订骨科医院
+16:50 lh_mouse: 请便，不拦。
+16:51 testuser001: 现在公司里10个程序。有3个人给IOS出马甲包。。
+16:52 testuser001: 一个游戏换了4次皮
+16:52 testuser001: 感觉要扑街啊
+16:52 testuser001: 最重要的金牛却只有2个人维护。。
+16:52 testuser001: 真不知道怎么想的
+17:08 StardustX: 在网络上跑克苏鲁这类 TRPG 太硬核了，节奏慢，时间长。
+17:08 StardustX: 我跑过几次，体验一般，比较适合杀时间，基本上一次就是好几个小时。
+17:08 StardustX: 感觉还是适合当面玩
+17:08 Aldrich: 以前频道里做过类似的事情，就是SK4
+17:09 Aldrich: 一推一星期
+17:09 StardustX: 不过开语音可能会好一点，但是有点尬
+17:10 StardustX: SK4 是？
+17:10 Aldrich: Seekrieg 4
+17:10 Aldrich: 海战兵棋
+17:10 testuser001 quit:Quit: Page closed
+17:12 StardustX: 你们肝力太可怕了
+17:13 Aldrich: 反正慢慢来嘛
+17:13 Aldrich: 我觉得CoC应该还能时间短点
+17:13 Aldrich: 毕竟SK4判定太多了，大部分时候都在等裁判各种D100……
+17:16 L-ios joined channel
+17:19 StardustX: _(:з」∠)_
+17:26 Aldrich: _(:з」∠)_总之在频道里玩TRPG最大的问题都是凑不齐人
+17:27 lh_mouse: ヾ(o◕∀◕)ノヾ
+18:10 hanjian_l: Aldrich: 那个时候大家都还是学僧狗，现在就……
+18:11 Aldrich: 那个时候也就每天晚上推一阵
+18:11 Aldrich: 总之我想找个简单的剧本先试试
+18:11 Aldrich: 想想当时我高三呢
+18:11 hanjian_l: 你看羊驼子，现在每天上PSN，日常留言“我又人肉云计算了”
+18:12 hitman-usa joined channel
+18:12 Aldrich: 这场我不太想找羊驼子
+18:12 hanjian_l: StardustX: 快把你的PS4买来啊
+18:12 Aldrich: 我估计他看过这个剧本了
+18:12 hanjian_l: Aldrich: puuuu
+18:13 Aldrich: 太太做过这个剧本的跑团
+18:13 hanjian_l: StardustX: 快买PS4，我们贩毒语音几回，就不尬
+18:16 StardustX: hanjian_l: 我还在海拉尔大陆拯救塞尔达公主呢，不着急
+18:16 hanjian_l: StardustX: 着急，现在人民币汇率坚挺，还不赶快海淘你没机会了
+18:28 hitman-usa quit:Remote host closed the connection
+18:35 hitman-usa joined channel
+18:45 hitman-usa quit:Remote host closed the connection
+18:50 hitman-usa joined channel
+19:23 CyrusYzGTt quit:Ping timeout: 240 seconds
+19:59 CyrusYzGTt joined channel
+20:12 CyrusYzGTt quit:Ping timeout: 255 seconds
+20:38 hanjian_l: StardustX: 肝！
+20:40 hanjian_l: https://usercontent.irccloud-cdn.com/file/Ii473qR7/wx_camera_1516192753614.jpg
+20:40 hanjian_l: 喵
+20:41 iyzsong joined channel
+20:46 Aldrich: 来肝CoC啊
+20:46 Aldrich: 试试看
+20:49 hanjian_l: Aldrich: 好
+20:49 Aldrich: 我们还需要一个玩家
+20:52 CyrusYzGTt joined channel
+20:52 hanjian_l: Youmu: 
+20:52 hanjian_l: condy: 
+20:52 hanjian_l: StardustX: 
+20:53 hanjian_l: lh_mouse: 
+20:55 hanjian_l: Aldrich: Radio Disabled
+20:56 Aldrich: 其实这个剧本2~4个PC都可以
+20:58 hanjian_l: .
+20:58 Aldrich: 不过我是KP，而羊驼子八成被剧透过……
+21:01 hanjian_l: .
+21:12 hanjian_l: Aldrich: 车吧
+21:12 hanjian_l: 没啥事了
+21:13 Aldrich: 车不动，我还在读CoC的log
+21:13 Aldrich: 身为准KP我先提前做点功课
+21:16 hanjian_l: 那我先睡会儿
+21:16 Aldrich: OK
+21:16 * hanjian_l 说不定就睡到明天了
+21:17 Aldrich: 大丈夫，估计一时半会凑不齐人
+21:17 CyrusYzGTt quit:Ping timeout: 255 seconds
+21:22 CyrusYzGTt joined channel
+21:25 hitman-usa quit:Remote host closed the connection
+21:26 yonka quit:Remote host closed the connection
+21:27 yonka joined channel
+21:32 yonka quit:Ping timeout: 256 seconds
+21:43 yonka joined channel
+21:44 yonka quit:Read error: Connection reset by peer
+21:46 yonka joined channel
+21:51 yonka quit:Ping timeout: 248 seconds
+22:10 cleamoon_ joined channel
+22:38 yonka joined channel
+22:51 lh_mouse quit:Ping timeout: 256 seconds
+23:25 iyzsong quit:Ping timeout: 240 seconds
+23:26 ftantic joined channel
+23:26 ftantic: 0.0
+23:29 cleamoon_: o_o
+23:37 Aldrich: cleamoon_: 岚月酱来么
+23:38 Aldrich: 来的话我给你讲讲规则就行，不用读那么多东西
+23:38 cleamoon_: Aldrich: 你们都准备好了？这么快
+23:38 Aldrich: cleamoon_: 我读完规则书了
+23:39 Aldrich: 反正PL基本上只需要建立人物，然后说PC打算做什么就行
+23:39 Aldrich: 绝大部分工作都由KP负责……
+23:41 cleamoon_: 不很明白，不过想试试
+23:43 Aldrich: OK，那明天我详细跟你们讲一下
+23:44 cleamoon_: 吼呀
+23:46 Aldrich: 另外这个剧本可以有2到4个PC，所以还能再加几个人
+23:46 Aldrich: 其他人有兴趣也可以加入
+23:50 hanjian_l: 我醒了
+23:50 hanjian_l: 不知道还会不会再睡过去
+23:52 cleamoon_: 神奇的作息时间
+23:53 cleamoon_: 在尝试+重启了50+次之后总算搞定了休眠
+23:56 Aldrich: hanjian_l: 岚月酱加入了游戏
+23:56 Aldrich: 跑么
+23:56 Aldrich: 当然要跑也不是今天跑，今天只是简单介绍下怎么创建人物

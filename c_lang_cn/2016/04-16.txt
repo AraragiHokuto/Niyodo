@@ -1,0 +1,1183 @@
+00:08 Taggnostr joined channel
+00:16 LastAvengers joined channel
+00:16 JQK quit:*.net *.split
+00:16 JQK joined channel
+00:20 lhanjian quit:Ping timeout: 276 seconds
+00:21 lhanjian joined channel
+00:32 FrankHB quit:Ping timeout: 244 seconds
+01:03 LastAvengers quit:Quit: Srain 0.01
+01:12 cleamoon quit:Ping timeout: 252 seconds
+01:24 Matsune_ quit:Read error: Connection reset by peer
+01:25 Mokou_ joined channel
+01:25 lh_cat joined channel
+01:25 T-J-M quit:Ping timeout: 250 seconds
+01:27 T-J-M joined channel
+01:27 Taggnostr2 joined channel
+01:29 lhanjian quit:*.net *.split
+01:29 Taggnostr quit:*.net *.split
+01:30 lhanjian_ joined channel
+01:30 lh_not_bot quit:*.net *.split
+01:30 Mokou quit:*.net *.split
+01:30 lh_mouse quit:*.net *.split
+01:35 Mokou_: 睡觉
+01:35 Mokou_: 诸君武运
+01:35 Mokou_ quit:Quit: 睡觉
+01:38 lh_cat quit:Ping timeout: 260 seconds
+01:39 lh_not_bot joined channel
+01:42 lh_mouse joined channel
+01:47 Youmu quit:Quit: Connection closed for inactivity
+01:58 lhanjian_ quit:Ping timeout: 260 seconds
+02:02 lhanjian_ joined channel
+02:03 lhanjian_ is now known as lhanjian
+02:03 Youmu joined channel
+02:03 zcy quit:Ping timeout: 260 seconds
+02:09 zcy joined channel
+02:09 lh_mouse quit:Quit: night
+02:09 zcy is now known as Guest47244
+02:25 lh_not_bot quit:Ping timeout: 260 seconds
+02:25 condy quit:Ping timeout: 276 seconds
+02:36 condy joined channel
+02:47 condy quit:Ping timeout: 244 seconds
+02:48 Stevearzh quit:Ping timeout: 244 seconds
+02:56 Stevearzh joined channel
+03:00 condy joined channel
+03:04 lh_not_bot joined channel
+03:21 JQK quit:Ping timeout: 276 seconds
+03:21 JQK joined channel
+03:25 Stevearzh quit:Excess Flood
+04:33 lhanjian quit:Quit: Connection closed for inactivity
+05:16 xxxxxxxxx joined channel
+05:17 xxxxxxxx quit:Ping timeout: 276 seconds
+06:37 Youmu quit:Quit: Connection closed for inactivity
+07:07 iyzsong: orz
+07:14 iyzsong: 早!
+07:53 cleamoon joined channel
+08:15 miao233_ quit:Quit: Leaving.
+08:38 LastAvengers joined channel
+08:43 Taggnostr2 quit:Ping timeout: 276 seconds
+08:46 Taggnostr joined channel
+08:58 iyzsong: (；・∀・)
+09:03 Youmu joined channel
+09:10 lh_mouse joined channel
+09:13 iyzsong: ʕ•ٹ•ʔ
+09:15 iyzsong: 饿啊~
+09:15 cleamoon: iyzsong, 爆
+09:16 Youmu: iyzsong: Ouo
+09:22 lh_cat joined channel
+09:38 lh_cat: OuO
+09:55 lh_cat: 发现了个不得了的网站： https://segmentfault.com/
+09:58 LastAvengers quit:Quit: Srain 0.01
+10:31 xxxxxxxxx quit:Quit: Leaving...
+10:48 CyrusYzGTt joined channel
+11:07 whocares_2 quit:Ping timeout: 244 seconds
+11:08 whocares_2 joined channel
+11:25 Dove joined channel
+11:25 Dove: 啊咧，羊驼持续不在。
+11:25 Dove: 这是到哪现充去了。
+11:47 Youmu quit:Quit: Connection closed for inactivity
+12:03 lh_cat quit:Quit: Connection closed for inactivity
+12:37 bloom joined channel
+12:40 lhanjian joined channel
+12:48 bloom: 起来嗨
+12:53 Dove: 啊咧，有什么好High的嘛？
+12:53 Mokou joined channel
+13:29 Matsune joined channel
+13:29 Matsune: 孔乙己一进屋，所有面试的人便都看着他笑，有的叫道，“孔乙己，你又被刷了！”他不回答，对HR说，“我是来自中科大物理学院的孔乙己，中科大物理全国第一。”便掏出成绩单，上面在量子力学理论力学等课下画了红线，标注上“难”。他们又故意的高声嚷道，“你一定又被因为没学过专业课刷下来了！”孔乙己睁大眼睛说，“你怎么
+13:29 Matsune: 这样凭空污人清白……”“什么清白？我前天亲眼见HR说你学了一堆没有用的东西，给刷了。”孔乙己便涨红了脸，额上的青筋条条绽出，争辩道，“技术课程算什么，这是器。学物理的人，怎么能学工具课程？”接连便是难懂的话，什么“数理基础”，“形而上”，什么“探索真理”之类，引得众人都哄笑起来：屋内外充满了快活的空气。
+13:44 hoxily joined channel
+13:48 varna joined channel
+13:48 varna: 现在的reactor库啊，就会搞大新闻
+13:48 varna: 傻傻做不好事情
+13:48 Mokou: 什么情况
+13:49 varna: 要折腾他们这边的存储，没有合适的现成解决方案（包括直接集成nginx），于是翻了翻libev的文档
+13:50 varna: 尤其是超时的部分，全都单独一个回调
+13:50 varna: 并不知道库的设计者脑子里都在想什么
+13:50 varna: 哪有多少自顾自的超时
+13:51 Mokou: _(:з」∠)_
+13:52 varna: 不过不管怎么说昨天我还是回宿舍睡了一天
+13:52 Mokou: http://ww2.sinaimg.cn/mw690/6e6bf3aegw1f2wev1d8voj20go0d0jua.jpg
+13:53 varna: 233333
+13:53 varna: 为什么阿武隈那队里有几个妹子
+13:53 Mokou: 说不定是可爱的男孩子
+13:53 Mokou: http://ww2.sinaimg.cn/mw690/6e6bf3aegw1f2wev214jej20go0d0mzs.jpg
+13:54 varna: 存储这边我先用p7写了，拼上性能拙计
+13:54 varna: 真拙计了再说
+13:54 lh_mouse: [23:27:21] <lh_mouse> [23:11:06] <Mokou> 警察：我的狗告诉我你嗑药了。 市民：我嗑药？你才是跟狗说话的那个人啊。 // 没看懂。
+13:54 lh_mouse: Mokou, 戳。
+13:54 varna: 虽说我怎么都觉得把一个小文件缓存存储放在前面做云存储是在自爆
+13:55 lh_mouse: 某人：如果你以光速绕着树跑，你就可以自爆。
+13:55 Mokou: lh_mouse: 缉毒犬
+13:55 lh_mouse: 另某人：如果你已光速绕着树跑，你的 jj 长度会变成零。
+13:55 lh_mouse: Mokou, 后半句看不懂。
+13:55 Mokou: lh_mouse: 他把“告诉”理解成说话了
+13:56 lh_mouse: 一点都不好笑。
+13:56 Mokou: _(:з」∠)_
+13:56 varna: https://github.com/arut/nginx-mysql-module 神风党
+13:57 Mokou: 噗
+13:57 Mokou: 这什么鬼
+13:57 lh_mouse: ヲ在 mingw-w64 的 ML 上勾搭到一个日本人，タ看起来对 mcfgthread 有兴趣。
+13:58 varna: Mokou: 其实亮点在源码里
+13:58 varna: 他的handler里直接一个real connect
+13:58 varna: mysql那点可怜的连接啊
+13:58 Mokou: ……
+13:59 varna: lh_mouse: 日本程序员信得过么（笑）
+13:59 lh_mouse: varna, 求帮忙艹 GCC 。
+14:01 varna: lh_mouse: OTL, gcc目前艹不动，尤其windows...
+14:01 Meow-J joined channel
+14:02 lh_mouse: https://sourceforge.net/p/mingw-w64/mailman/mingw-w64-public/thread/153e3b07.ca66b.1541a503ade.Coremail.lh_mouse@126.com/  
+14:02 lh_mouse: 深藏功与名。
+14:05 Dove: OTL
+14:06 lh_not_bot: https://github.com/Alexpux/MINGW-packages   这里有 MSYS2 的构建脚本。
+14:17 Dove: 话说存储怎么入门，就是做后端需要的基本的技术包括主备切换分库分表之类的。
+14:17 varna: 那是DBA
+14:18 Dove: 小厂的话这都是后端的活吧
+14:18 varna: 小厂的话你不如学nginx二次开发
+14:19 Dove: 嗯，我去看看。
+14:19 varna: 数据库甚至可能是前端的人主要搞的，这事没个准，然而你非得搞个大新闻
+14:20 varna: 你觉得自己很犀利的代价或许是客户觉得产品不能上线
+14:21 Dove: soga，我也就是先问问
+14:22 varna: ^ 强行找台阶下
+14:22 Dove: 因为我看很多招聘信息都要求会数据库开发。
+14:23 Dove: 然而我只会一点SQL语句还没用过基本忘光了。
+14:23 varna: 然后你就想像你进去之后别人让你设计数据表么……
+14:23 Dove: 难说
+14:23 varna: 开什么玩笑
+14:24 Dove: 好嘛不懂
+14:25 varna: 我觉得这只是逻辑性的问题
+14:25 varna: 谁真信得过非挖角来的新人
+14:25 Dove: 然而他信得过我也不会orz
+14:26 lh_mouse: https://en.wikipedia.org/wiki/R-7_Semyorka
+14:26 varna: 别人提提问就明白了
+14:26 Dove: 嗯
+14:30 varna: 我还是那句话，比起看上去能摆上台面的东西，不如搞点lowb的
+14:31 Dove: 嗯
+14:32 varna: 踏实点，真让你从头写C服务，你就怂了
+14:32 Dove: 我打算学一下ncurses然后写个编辑器，反正上学期间也干不了人么。
+14:32 Dove: 什么
+14:32 varna: 你不是要找工作么
+14:32 Dove: 还早
+14:32 Dove: 最早7月份才能去实习。
+14:32 varna: 这不早了
+14:32 bloom quit:Ping timeout: 264 seconds
+14:33 varna: 按在下的看法，你目前毕竟什么都不会
+14:33 Dove: 是的
+14:33 varna: 除非你指望你花两个月时间，按着你一贯以来的心态和效率，能做出比以前几年还好的成果，不然省省吧
+14:34 Dove: 我打算熟悉一下网络编程和多线程编程，用一用API。然后写个epoll+线程池的玩意让它能并发。
+14:34 varna: 5h时间够么
+14:34 Dove: 我一贯以来是水了点。
+14:34 Dove: 差不多够吧
+14:34 varna: if 'tis enough, do it now
+14:35 Dove: 嗯，好的。
+14:36 bloom joined channel
+14:36 lh_mouse: ヲ认为ヲ们应该让 T2 学着用 poseidon 写个负载均衡什么的。
+14:37 varna: 其实我觉得推销poseidon益处多于害处，不过我完全不会C艹……
+14:39 varna: libevent开了个傻头，一堆人跟着学，搞得半死不活
+14:43 varna: 然后我突然想起来，忘吃午饭了
+14:43 varna: 吃点暖和的去
+14:51 Dove: lh_mouse: 好啊，等我写完这个玩具。
+14:57 hoxily quit:Quit: Leaving
+15:00 Stevearzh joined channel
+15:01 bloom quit:Quit: bloom
+15:01 bloom joined channel
+15:02 bloom quit:Client Quit
+15:22 bloom joined channel
+15:35 bloom quit:Quit: bloom
+15:42 Dove: lh_mouse: 你写的C艹我完全看不懂OTL
+15:43 lhanjian quit:Quit: Connection closed for inactivity
+15:44 varna: 哦瘊瘊，吃了个涮串火锅
+15:44 varna: 千叶豆腐各种好
+15:46 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=8d398c77207f9e2f70351d002f0beb24/472309f7905298225ebc0752d0ca7bcb0b46d497.jpg 1/1
+15:47 Dove: 啊我日，C艹太可怕了。
+15:48 varna: 然而如果你能忍受各种避都避不开的长生存期/跨作用域对象的C解决方案的话
+15:48 Dove: 然而小耗的C艹我看都看不懂。
+15:49 varna: 所以说何必充大头……
+15:49 lh_mouse: Dove, 你自己比较着两个。
+15:49 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/examples/https_client/mmain.cpp?ts=2
+15:49 lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCFCRT/env/thunk.c?ts=2
+15:50 lh_mouse: 高下立判。
+15:51 varna: 给你看个更糟的 https://pastebin.mozilla.org/8867917
+15:51 Dove: 我知道poseidon很好用。
+15:51 Dove: 然而我看不懂。
+15:51 varna: 你搞错了重点
+15:51 varna: C代码的丑是天生的，改不掉
+15:51 varna: C艹代码的丑可以遮一遮
+15:54 Dove: 但是C的代码我好歹能看懂它干了点啥。
+15:54 lh_mouse: exit(EXIT_FAILURE); 这太难看。
+15:54 lh_mouse: 应该 abort(); 。
+15:54 varna: 唔，说的对
+15:54 varna: 得*
+15:55 Dove: C艹的话我觉得语法都白学了。
+15:55 lh_mouse: 羊驼子怎么也会唔了。
+15:55 varna: 我挺早就唔的
+15:56 varna: 这里我有个小区分，唔=点点头，嗯=点点头嗯一声
+15:56 lh_mouse: 娇喘一声。
+15:57 varna: 这耗吃了奇怪的丸子
+15:57 varna: 今天还听说一个真实的悲催故事
+15:57 Mokou: http://ww2.sinaimg.cn/mw690/92d3b663jw1f2xd3981emj20cf0m8aag.jpg
+15:58 varna: 不知道哪里的管理员用root登陆，执行了一个错误的sh脚本，把他的存储和备份服务器连根拔了
+15:58 Dove: 2333
+15:59 Dove: 撸去了，看C艹真是伤心。
+15:59 varna: Mokou: 这旗只发图不说话，估计在逗妹子
+15:59 Mokou: varna: 并没有妹子给我逗
+15:59 varna: 现充真可怕啊
+16:00 Mokou: 昨天我才第三次 被拒
+16:00 Mokou: 昨天我才第三被拒
+16:00 varna: puuu
+16:00 Mokou: 昨天我才第三次被拒
+16:00 varna: 这旗说不会话
+16:00 Mokou: Thinkpad键盘老双击
+16:00 Mokou: 原因不明
+16:00 varna: 你要不要学点白学？
+16:00 Mokou: 没找到WA2动画
+16:01 varna: 爱奇艺
+16:01 Mokou: ……
+16:01 Mokou: 广告会蛋疼吧
+16:01 varna: 忍着吧
+16:01 varna: 其他地方基本都削除了
+16:01 Mokou: _(:з」∠)_我找找下载
+16:01 varna: 学了白学说不定你就会把妹了
+16:01 Mokou: 学不会_(:з」∠)_
+16:02 varna: 这哈里发一样的气势
+16:02 varna: 不刷闪就是莽
+16:02 Mokou: 然而并不能战胜哈里发
+16:02 varna: 前天走之前我用糖果的本子打了一趟COD8
+16:03 varna: 然后我明白了，800x600打Regular战役我会奇怪死掉的原因是分辨率小看不清敌人
+16:03 Mokou: ……
+16:03 varna: 全屏满帧各种虎，唯一不太爽快的是他的键位……
+16:04 varna: v肉搏，中键闪光弹，主副武器用滚轮切——这三个都习惯不能
+16:04 Mokou: v是cod4的键位吧？
+16:04 varna: 6似乎也是
+16:05 Mokou: 6我记得已经是E了……
+16:05 varna: 太远了，结果生存战打到二十波上我居然被一个狗头咬死
+16:05 varna: E了半天没反应过来
+16:05 Mokou: 糖果还没习惯过来么
+16:05 Mokou: ……
+16:05 varna: 他打得比较悠闲，只玩最低难度……
+16:05 Mokou: ……
+16:05 varna: 我看他打的时候大致跟敌兵站着对撸
+16:06 varna: 不过从头打起的生存战有一点蛋疼：干阿诺难
+16:07 varna: 突击步枪弹数很危险，我满地跑着买AGM
+16:08 Mokou: _(:з」∠)_
+16:08 varna: 突然想起来，白学无用的话试试药学？
+16:08 Mokou: 噫
+16:09 Mokou: 这人 间 之 屑
+16:09 varna: 推波助澜而已
+16:09 Mokou: 啊
+16:09 Mokou: 41不够了……
+16:09 varna: 你看远野其实也是给一
+16:10 varna: 只不过先辈给他下了点药让他放松
+16:11 Matsune: なんでそんなに巧いのよ。
+16:12 varna: ^ 打
+16:15 Mokou: http://ww4.sinaimg.cn/mw690/6e6bf3aegw1f2wev0zvyrj20go0d0di3.jpg
+16:16 Mokou: http://ww4.sinaimg.cn/mw690/4ab41f2bgw1f2uvc36zn5j20cp0hxwkn.jpg 千古兴亡多少事？悠悠
+16:16 varna: 悠悠2333
+16:23 Dove: 小耗吓得我赶紧把招聘信息和简历上的熟悉C艹改成了解C艹了。
+16:25 Matsune: 该写的熟悉要写的呀
+16:25 * varna 想起了自己的简历写的是“较常在Linux下使用C和Perl”
+16:25 Dove: 语法都看不懂熟悉个J8
+16:27 varna: 我强行一个“熟悉”都没写
+16:28 varna: 并不知道为何很多人有自信写“熟悉”甚至“精通”
+16:28 Dove: 我很不要脸的熟悉了C语言，还熟悉了一堆我暂时没用过的技能。
+16:28 varna: 找虐么……
+16:28 varna: 求看看你的简历
+16:29 Matsune: 21天就能精通C++了
+16:29 Dove: 我的项目都是编的，求不看。
+16:29 Dove: 我把准备做还没做的都写上去了。
+16:29 varna: 怕被喷何必声张
+16:29 varna: 不知道能不能做到何必硬写
+16:30 Dove: 准备找工作之前做完的。
+16:30 Dove: http://pan.baidu.com/s/1qYR821Q
+16:30 varna: 求看看
+16:30 Dove: 不要脸的厉害
+16:30 Dove: 求轻喷
+16:31 Dove: 然而我连makefile都不会写，gdb也没用过。
+16:31 varna: puhahhhhhhhhhhhhh
+16:31 Dove: 我只是为了吓唬HR
+16:31 varna: 我感觉这种简历看上去跟“我这些都不太会”是一样的
+16:32 varna: HR又卜是傻逼……
+16:32 Dove: 能看出我这些都不太会就行了其实。
+16:32 Dove: 。我本来就是想表达这个意思。
+16:32 varna: 然后你就被直接刷了
+16:32 varna: 好歹让别人看到你会什么……
+16:33 Dove: 然而我确实啥都不会啊。
+16:33 varna: ...
+16:33 varna: @nginx
+16:33 varna: ngx很有用的，会开发它的模组有时候能解决不少问题
+16:33 Dove: 嗯，我去学学。
+16:34 varna: 这不是建议，只是指出，你列出的东西基本都不是能保证产品上线的东西
+16:34 varna: 我可以跟你打个赌，三个月之后你仍然不知道coroutine可能是什么
+16:35 Dove: 网络编程和多线程编程我都没写过我照样写了熟悉，然而我本来就没有保证产品上线的能力，除非给个傻瓜框架。
+16:35 varna: 何必呢
+16:35 varna: 实事求是很难么
+16:35 Dove: 那我就只能写个了解C语言了。
+16:35 varna: 了解？
+16:36 Mokou: 小耗来面试一下
+16:36 Dove: 卧槽，我总不能写“我啥都不会但是我会学的很快的”吧
+16:37 Dove: 使用过C语言行吧。
+16:37 varna: 唔，“你说你做过Unix下的C语言编程，你知道malloc返回的地址吧”
+16:37 varna: “如果malloc返回非空，是否能确保在返回后立刻访问这指针的时候程序不崩溃？”
+16:38 Mokou: 噗
+16:38 Mokou: 我看了一眼频道，回来一看五胡乱华了
+16:38 varna: ^ 当然，直接莽一个“能”或者“不能”都是错
+16:39 Dove: 然而我一直以为是能。
+16:39 varna: 你看，掉坑里了
+16:40 lhanjian joined channel
+16:40 Dove: 额
+16:41 lh_mouse: 跑程序之前 ulimit -Sv 一下。
+16:41 Dove: 我觉得不去作死写“精通”不至于碰到这种坑吧。
+16:42 varna: 不，你总不能看着服务器因为过提交策略死掉吧
+16:43 Dove: 嗯
+16:43 lh_mouse: ヲ认为这个坑很少人遇到过。
+16:43 varna: 极少，一般OOM会先动手
+16:43 lh_mouse: 或者说这个坑纯粹是因为 Linux 大傻逼。
+16:43 lh_mouse: 你真的不能指望用户傻逼到和 Linux 一样的程度。
+16:43 varna: Linux有一套奇葩的策略，最后的结果还是一堆永远过提交的程序在抢内存
+16:44 varna: 而且我这里还真缺省开overcommit_memory=0
+16:44 Dove: 哎，改简历。
+16:46 lh_mouse: 没什么必要，正式环境配起来麻烦。
+16:46 lh_mouse: 而且万一真的内存泄漏炸了就好玩了。
+16:46 lh_mouse: ulimit -Sv 可以保证没事。
+16:48 varna: -Sv倒是，张嘴吃NULL就行……
+16:50 LastAvengers joined channel
+16:50 varna: 潜在的药娘新人来了
+16:51 varna: LastAvengers: 听说过螺内酯么
+16:55 LastAvengers: :-|
+16:55 varna: LastAvengers: 吃点不？
+16:55 LastAvengers: 不。 [义正严辞状]
+16:56 LastAvengers: 或许 Youmu 会感兴趣。
+16:56 varna: condy: ^
+16:57 Guest79792 is now known as xu0o0
+17:00 Dove: 我决定努力啦，不会再是一贯水准的效率了。
+17:00 Dove: 太TM打脸了。
+17:01 Dove: 连个简历都没法编下去。
+17:05 xu0o0 is now known as xuOoO
+17:06 xuOoO is now known as xuOo0
+17:06 xuOo0 is now known as xu0o0
+17:08 varna: lhanjian: 有没有好一点的米泽圆版本的white album? 搜到的感觉都声线奇怪
+17:08 lhanjian: varna: http://music.163.com/#/search/m/?s=white%20album&type=1
+17:09 varna: 我试试，虾米搜到的也类似这些……
+17:09 varna: 嗯，这有个不错的
+17:10 varna: 果然录音室能把死马医成活马
+17:10 lhanjian: 哪个？
+17:11 varna: WA2 CONCERT Special
+17:11 Mokou: 阿苏神社倒了啊……
+17:11 Mokou: 大丈夫我相信本子的重建能力
+17:13 varna: 不过听下来，我还是喜欢平胸绫版本的
+17:13 varna: 米泽圆版本适合配给动画
+17:15 varna: 而且为什么我在评论区发现了lawson鹿岛和灯泡OOI
+17:16 Mokou: http://ww4.sinaimg.cn/mw690/ac593e95jw1f2yhrhqa8yj20c8199jy1.jpg
+17:17 varna: 想起那个发帖剪炸弹电线的哥们
+17:18 lhanjian: 平野绫毕竟唱功强
+17:19 varna: 不过我那么相信录音室
+17:19 varna: 虽说明明是平胸绫先来的
+17:21 varna: lhanjian: WA2三部游戏大约多大？
+17:21 lhanjian: 几个G吧
+17:22 varna: 挺好
+17:22 lhanjian: 已经有整合版了
+17:22 varna: 下周找个时间拖下来
+17:22 varna: 还是该玩玩原作看看北原有多渣
+17:22 lhanjian: pan.baidu.com/s/1f5UYL ( 提取码：ldqr。解压码：White Album 2 或 四散的尘埃)
+17:23 varna: 挂了
+17:23 varna: 加密提取也会被审核吧
+17:24 varna: http://tieba.baidu.com/p/4481568969 有谁要上么（手工滑稽）
+17:26 lhanjian: 链接: http://pan.baidu.com/s/1jHA91DO 密码: cux6
+17:26 varna: 噫
+17:26 varna: 好
+17:26 varna: thx a lot
+17:26 varna: 我看看磁盘还剩多少
+17:27 varna: 还行，剩45.8G
+17:28 varna: 单线程300+KBps强行拽下来
+17:29 varna: 推完这个之后我就能和lhj好好讨论白学了
+17:31 lhanjian: axel拖
+17:31 lhanjian: 对百度别手下留情
+17:31 lhanjian: axel上了以后能满载
+17:31 lhanjian: 当然，稍微考虑下内网的其他群众就好
+17:31 lh_mouse quit:Read error: Connection reset by peer
+17:32 varna: 我安一个
+17:32 LastAvengers quit:Quit: Srain 0.01
+17:32 lh_mouse joined channel
+17:32 cleamoon: 羊驼子现充回来了
+17:33 varna: cleamoon: 我给自己放了一天假而已
+17:33 varna: lhanjian: 度盘的下载链接怎么抓方便，看浏览器汇报？
+17:35 lhanjian: 不管是FF还是Chrome，在开始下载以后，在下载管理器里都可以直接把真实链接找到的吧
+17:35 varna: 走起
+17:35 varna: 噗
+17:36 varna: 忘加引号了
+17:37 varna: 我去这速度
+17:37 lhanjian: ''
+17:37 varna: lhj不愧熟练司机
+17:38 lhanjian: 百度的节点优化不太一致的，如果碰到超不过400KiB/s
+17:38 lhanjian: 那就刷一下，换个链接再下
+17:38 varna: 我不要求太高，现在平均500KBps
+17:39 cleamoon: 放了一天假啪妹子？
+17:39 varna: cleamoon: 在宿舍蹲着
+17:39 cleamoon: 蹲点抓妹子
+17:39 Dove: 蹲着啪妹子
+17:39 varna: 完全没有妹子
+17:39 Dove: orz
+17:39 varna: 你们谁给我推荐一个
+17:39 cleamoon: malloc返回非空还能炸？
+17:40 varna: cleamoon: 能
+17:40 cleamoon: 蹲点啪汉子
+17:40 Dove: 我要认识妹子还能这么苦逼么。
+17:40 varna: linux的malloc实现一连串逗比
+17:40 varna: 大块浮动阈值，过提交和OOM...
+17:40 varna: 以前有人被阈值浮动坑得以为自己论外了
+17:41 Mokou: cleamoon: linux会开空头支票
+17:41 Dove: 那怎么办？这个似乎没法自己处理？换个分配器？
+17:41 varna: 小耗说了
+17:41 Dove: 我看看
+17:41 varna: ulimit -Sv限定虚拟内存数
+17:41 varna: 如果你不怕死，看这里 /proc/sys/vm/overcommit_memory
+17:42 varna: 0是启发式策略，1是总承认过提交，2是绝不承认过提交
+17:43 varna: 明天的南西即将失去直掩玄学……
+17:43 cleamoon: 什么鬼
+17:43 varna: 娄号超过80%
+17:43 varna: 我打算一次性搞定
+17:43 varna: 这样能多两个桶
+17:44 cleamoon: orz
+17:45 varna: axel这速度很安定啊
+17:47 varna: 啊，三个桶！
+17:47 lhanjian: 是啊
+17:47 lhanjian: 很少掉下来的
+17:47 varna: 三个桶真好啊！真好啊！
+17:47 cleamoon: orz
+17:47 lhanjian: 所以对路由器的杀伤力也不小
+17:47 varna: 大丈夫，这办公室除了我之外都是周末不到场主义
+17:48 lhanjian: 羊驼子真奋斗
+17:48 varna: 不算奋斗，只是从实验室转移到了办公室而已
+17:49 varna: 说起来，ngx很难让两个基于URL规则的模组合作工作吧？
+17:50 lhanjian: 为什么不能合作工作？
+17:50 varna: 你的合作是指？
+17:50 Dove: 你创业还是你哥们（姐们）创业？
+17:50 varna: Dove: 你就这么点主意了么……
+17:51 lhanjian: varna: 两个各自过滤，是没问题的
+17:51 lh_mouse: 校长千古。
+17:51 lh_mouse: 操他妈，老子 clone GCC 的 repo 五个小时 35% 。
+17:51 varna: lhanjian: 或者我把场景说得更明白些吧，我想在nginx的fastdfs module（基于URL工作）前面加一层过滤，如果过滤失败则拒绝用fastdfs module继续业务，这个手写的成本能有多大
+17:52 lh_mouse: 直接用洛杉矶 VPS 拖然后打一个 tar 拖回来。
+17:52 lh_mouse: 洛杉矶 vps 上面直接 git clone --mirror 都有 6MBps。
+17:52 varna: 另外这个过滤可能涉及mysql
+17:52 lhanjian: 我都是proxychains git clone的
+17:52 lhanjian: 不然慢的无法忍受
+17:52 Mokou: proxychains +
+17:53 lhanjian: varna: 应该不难做到。毕竟是两件有先后顺序的事而已
+17:54 varna: 其实说原理的话，应该都好说；问题是sql这里
+17:54 cleamoon: 五小时 35%..... 
+17:54 varna: 我不想疯狂real connect
+17:54 varna: 然而写连接池的话还不如我继续用p7
+17:54 cleamoon: 这比编译还慢了
+17:54 lh_mouse: 哦艹   medusa 被 kill 了。
+17:58 varna: 算了我还是先用p7
+17:59 varna: 无差别存储用fastdfs本来就是个挺失误的事情
+18:00 Mokou: varna: 要不然你用p7写一层坝拦在mysql前面，挡住来自nginx的洪水连接？
+18:01 varna: Mokou: 不用，我的Plan B就两个可能：第一个，我自己写权限控制；第二个nginx + fdfs nginx module
+18:01 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=e10ceaab6c63f6241c5d390bb77feaf8/96dda144ad345982a1a484000bf431adcbef8471.jpg NKC
+18:01 lh_mouse: wget 96.44.178.21/gcc.git.tar.gz
+18:02 lh_mouse: 谁要。
+18:02 lh_mouse: 洛杉矶带宽不要钱啦。
+18:02 varna: 暂时不要
+18:02 varna: 不过我第一眼看了个wet
+18:02 Mokou: uccu
+18:02 Dove: http://www.nginx-discovery.com/ 这个站你们能打开么？
+18:02 lh_mouse: uccu
+18:02 varna: 不代理的话看着连不上
+18:04 Dove: soga，我这儿打开了但是也不全
+18:05 cleamoon: 这种网站墙什么
+18:05 varna: 主机被墙了吧
+18:06 lh_not_bot: medusa 有个很严重的问题。
+18:06 Dove: 没事，我上nginx的wiki学一下。
+18:07 lh_not_bot: 比如ヲ用 wget 拖一个 10G 的资源，本地主机会不断收到数据，最后两种结果。
+18:07 lh_not_bot: 第一种是没有 ulimit 被 kill，第二种是加了 ulimit 抛出 bad_alloc 然后把客户端踢掉。
+18:07 lh_not_bot: 这个地方缺一个拥塞控制。
+18:09 varna: 这里有个问题
+18:09 varna: 什么地方用了那么多缓冲？
+18:09 varna: 客户端速率不够么
+18:10 varna: Mokou: http://manhua.dmzj.com/kykjjnjyrsdyj/ 我了个去……
+18:11 Mokou: ……
+18:12 varna: 这都有人搬
+18:12 lh_mouse: varna, 是。
+18:13 varna: lh_mouse: 要不你做个窗口……
+18:13 lh_mouse: 蛋疼。
+18:13 varna: 不然就只好bad_alloc踢客户端了
+18:13 lh_mouse: 要不要来个慢启动指数回退什么的。
+18:13 varna: 我觉得你可以试着快启动
+18:13 lh_mouse: varna, 那是吐槽。
+18:13 varna: 前k次bad_alloc忽略但计数
+18:14 lh_mouse: 不可能忽略。
+18:14 varna: 因为有一连串的破事？
+18:14 lh_mouse: bad_alloc 之后这个链接的状态已经不可控了，只能暴力关掉。
+18:14 varna: 果然……
+18:14 lh_mouse: TCP 是时序的。
+18:15 lh_mouse: 你都没法知道客户端收到哪里，哪里该重发。
+18:15 lh_mouse: 实际上这个也是 SCTP 不成气候的主要原因。
+18:15 varna: 所以你最多只能预先控制积压缓冲的数目？
+18:16 varna: 但这样效率就坑了
+18:18 varna: “机智”一点的方法或许会考虑测量速度，总之也是预先控制
+18:18 lh_mouse: 得 hack 底层。
+18:18 lh_mouse: 某些情况下不能调用 read  这样 TCP 才不会一直给对方发 ACK。
+18:19 lh_mouse: 目前我的做法是如果 send buffer 超过某个阈值就不调用 read ，但是这里并没法用。
+18:19 lh_mouse: 因为两个服务器之间的连接是所有客户端共享的。
+18:19 lh_mouse: 所以得实现一种机制告诉另一个服务器“不要再处理这个客户端的数据”。
+18:20 lh_mouse: 或者用文件缓冲。
+18:20 lh_mouse: 而不是内存缓冲。
+18:26 * varna 彻底把显示屏变成了黑板
+18:27 Mokou: 暴殄天物不要送我
+18:28 cleamoon: orz
+18:29 varna: 公物，不给你
+18:30 Mokou: 不过我觉得你可以试着习惯下显示器放左边
+18:30 varna: 习惯不能
+18:30 Mokou: 强行习惯
+18:30 varna: 我的字体尺寸需要集中注意力+屏幕到眼睛距离有害健康才能看清
+18:30 varna: 但再大了显得很难看
+18:31 varna: 主工作区放在左手侧不可接受
+18:31 Mokou: 不看字只挂远征呢
+18:31 Mokou: 你用外接显示器当主工作区的？
+18:31 varna: 我习惯主工作区在左边
+18:31 Mokou: ……
+18:31 Mokou: 我习惯主工作区在正前方
+18:31 varna: 这没错
+18:32 varna: 但一般我的额外显示屏都在右侧
+18:32 Mokou: _(:з」∠)_
+18:32 Mokou: 搬不过去么
+18:32 varna: 不好走线
+18:32 varna: 以后我弄个便携的
+18:32 Mokou: 壕TL
+18:32 varna: 反正我没女朋友，不用算计彼女开销
+18:33 * Mokou 没女朋友也没钱
+18:33 varna: 而且现在我的note工作基本都靠便签条和纸质笔记本……
+18:33 varna: 形成了一种扭曲的日记习惯
+18:33 Mokou: OTL
+18:33 * Mokou 字丑
+18:34 * cleamoon 副显示器需要手写才会显出东西来
+18:34 varna: 每天记备忘的时候都写个日期和题目，内容有写码、杂务和舰C
+18:35 cleamoon: orz
+18:37 Mokou: http://ww4.sinaimg.cn/mw690/69c2ab34jw1f2ypazo7i8j20wj0spq7e.jpg -1s
+18:38 cleamoon: 233333
+18:38 varna: 蛤蛤蛤蛤
+18:41 Mokou: http://ww3.sinaimg.cn/mw690/006dtKxOgw1f2om975m3eg30ak0aux6p.gif NSFW
+18:43 varna: 2333
+18:44 Mokou: 去吔饭
+18:44 cleamoon: 23333
+18:50 varna: 海色没救了，改个图都禁白膜法
+18:51 varna: 这不是强行降低人们的姿势水平、使练度逐日退步的做法么
+18:58 varna: cleamoon: http://tieba.baidu.com/p/4477499127?see_lz=1 丧失漫画
+18:59 cleamoon: 噗
+19:00 LastAvengers joined channel
+19:00 lhanjian: 这届美国人民不行，不依不饶。奥巴马晒税单了。
+19:00 lhanjian: https://www.whitehouse.gov/sites/whitehouse.gov/files/images/Blog/Obamas%202015%20Taxes.pdf
+19:00 cleamoon: 画的太汗了，不够娘
+19:02 varna: 这本来就是个给一漫画
+19:03 varna: 噫，奥巴马真的要当偶像了？
+19:03 varna: 难怪他前段时间翻唱了《初恋！水雷战队》……
+19:04 miao233_ joined channel
+19:06 cleamoon: 噗
+19:17 Mokou: 海色药丸
+19:17 Mokou: 要不然你拉上一帮人来学派舰娘版吧
+19:18 varna: 我没什么人气的
+19:18 Mokou: 毕竟dalao
+19:18 varna: 认识我的人现在有一多半都只潜水
+19:18 varna: 圣GAY王和影月那样的人也基本只在有重大更新的时候出来做攻略
+19:19 varna: 而且老实说舰娘版没有任何看点
+19:20 varna: 游戏都是持矢，同人自己上P站，考证没人想看，推演总缺人
+19:20 varna: 万一再来几个咬定打的不是米畜是怨灵的萌二那就乐翻天
+19:20 Mokou: 正好调戏一下
+19:21 varna: 军国主义黄赌毒，自己闷着玩就好
+19:21 cleamoon: 你可以做解说，成为毒奶
+19:22 varna: 我闭上嘴不说话都够惨了……
+19:22 Mokou: 【李克强妙解清华校训】李克强总理15日来到清华大学图书馆，与学生围坐交流，妙解清华校训。总理说，《易经》里自强不息前有“天行健”，指天在不停运转，君子要自强不息；厚德载物前有“地势坤”，地势起伏能容纳万物，所以你们走向社会要致力于追求公平正义和包容发展。
+19:22 Mokou: 这哪里妙了
+19:22 varna: @马凯
+19:24 iyzsong: 一脸(・∀・)
+19:24 Mokou: http://ww4.sinaimg.cn/mw690/8443d993jw1f2ypolxb91j21kw41ynct.jpg
+19:27 condy: -.-
+19:27 varna: condy: 张嘴吃药
+19:28 condy: iyzsong: ^
+19:28 condy: iyzsong: 伪白学家来吃药
+19:29 stardust: 你们一般都吃什么药
+19:29 condy: stardust: 板蓝根(
+19:29 varna: stardust: 频道推荐药娘服用螺内酯和妈富隆
+19:30 iyzsong: 今天去看go什么的大会，那些人都好熟练啊
+19:32 Dove: iyzsong: 你比我强多了，肯定会找到好工作的。
+19:33 varna: Mokou: 我突然想到一个歪解：李总理来到清华大学图书馆，试图与学生围坐交流，却发现去图书馆的学生都有男友/女友
+19:33 Dove: 瞄了一眼招聘发现阿里在招nginx二次开发，要求5年精咽OTL。
+19:33 iyzsong: thx (*ﾟ∀ﾟ)
+19:34 Dove: 看来这个东西比较难。
+19:34 lhanjian quit:
+19:35 lhanjian joined channel
+19:35 Mokou: varna: 不会的，图书馆应该被封了
+19:35 Mokou: 参见食堂
+19:35 varna: 没事，还有杰士邦楼呢
+19:35 Mokou: “进图书馆？名单上有你吗？没有？滚！”
+19:36 varna: “我有五个甲！”
+19:36 varna: “跟我们走一趟”
+19:36 Mokou: “梁桦？这个人存在过吗？”
+19:36 Dove: “跟我们走一趟”2333
+19:36 varna: (｡･ω･)ﾉ114514
+19:37 Mokou: 一 人 幸 终
+19:37 lhanjian quit:Client Quit
+19:37 varna: 我并不明白你们在哪儿学了这么多药学
+19:37 varna: 真是污秽不堪
+19:37 Mokou: 你还好意思说我
+19:38 varna: (｡･ω･)哦瘊瘊。
+19:38 Dove: 他地图炮的是"你们"
+19:38 varna: (｡･ω･)我像你这么大的时候可没学过药学。
+19:38 Dove: 然而我完全没看懂
+19:38 Mokou: (#・∀・)你这么大的时候没有药学
+19:39 varna: (｡･ω･)我竟无言以对。
+19:39 Dove: 什么是药学
+19:39 varna: Dove: 日本GV《仲夏夜之淫梦》的neta
+19:39 Dove: soga
+19:39 varna: 其中涉及野兽先辈给后辈远野下药的情节
+19:39 varna: 二 人 幸 终
+19:44 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=3e095d8a6759252da3171d0c04a0013b/4a36acaf2edda3cc9b2907b006e93901203f9255.jpg
+19:45 LastAvengers left channel:"Srain 0.01"
+19:48 varna: 我嚓1.6MBps
+19:48 Mokou: OTL
+19:48 varna: 哈哈哈度娘你也有今天
+19:48 Mokou: 我也装个axel
+19:49 varna: 出去采购
+19:51 cleamoon: 会不会度娘也用的axel，然后下载时以为是自己的客户端，就没限速？
+19:51 stardust: axel和aria2哪个更好用
+19:52 condy: stardust: lhanjian_ssh 说是 axel 说(我下载115网盘的时候也是这个好
+19:55 stardust: (｡・`ω´･)装一个试试
+19:55 hope1: 感觉我已经不会用互联网了…… 磁链搜不到metadata怎么破
+19:55 hope1: 用的transmission
+19:56 Mokou: 你加几个tracker？
+19:56 cleamoon: 我这里经常搜不到.....
+19:56 hope1: 并不知道国内有哪些可用的tracker
+20:05 Mokou: 【高速惊现“地球通行证”】在粤赣高速公路上，交警蜀黍拦下了一辆载人摩托车。然后，车主亮出了“地球通行证”！该证清晰的标注“整个地球任何地方可以通行”，车主向交警表示，“这张证在手，打遍天下无敌手。”[doge][doge]
+20:05 Mokou: http://ww3.sinaimg.cn/mw690/70856785jw1f2ygus2sixj20aw0cadg8.jpg
+20:07 varna: 那是用来裹着被子在厕所里从略的吧
+20:08 varna: 下周把油飙上十万
+20:08 varna: 周末我就不补闪了
+20:10 cleamoon: 这个火星人被骗得不浅呀，自从哆啦A梦作者弄到船票之后，地球通行证就不再发放了
+20:11 varna: 噫
+20:11 varna: 连接被掐，过了几秒钟才复活
+20:12 varna: 然而仍然保持了将近1.5MBps的速度
+20:12 varna: ls
+20:12 varna: 驲
+20:13 varna: 最后一分卷走起
+20:13 varna: 这奔走如飞的感觉
+20:13 varna: 简直就像在榛名山飙车
+20:13 varna: (｡･ω･)ﾉ榛名大丈夫！
+20:20 varna: 瞬间完成
+20:20 varna: ok看我解压
+20:21 varna: 差点把解压密码打成Shit Album...
+20:21 Mokou: uccu
+20:24 varna: shit album应该是正解
+20:25 varna: 我觉得比欧根齐柏林那个版本要好
+20:31 varna: 看看能不能运行
+20:33 varna: ok, 能正常运行主要部分
+20:33 varna: lhanjian_ssh: 不能播放动画是什么错误
+20:34 varna: 似乎有两个文件需要重命名？
+20:34 varna: 看来不行
+20:34 varna: 重命名也会挂掉
+20:35 varna: 估计是解码器的锅
+20:37 cleamoon: 我的war3也不能播放动画
+20:37 varna: 这问题遇到不止一回了，不过S;G的动画可以用我现在的解码器播放
+20:53 lh_cat joined channel
+20:54 varna: 看来不是解码器的锅
+20:57 cleamoon: 按我现在得到的信息看，似乎“无法证伪的科学”已经不是主流科学哲学的思想了
+21:00 varna: 蛋疼
+21:00 varna: 我直接用mplayer能放他们的动画
+21:00 cleamoon: ......
+21:00 varna: 但wine并不知道用这个
+21:00 varna: 查了几下不知道怎么做文件关联……
+21:02 Mokou: mplayer没法被wine调用吧
+21:03 varna: 疼
+21:03 cleamoon: 疼
+21:03 varna: 但windows media player的安装包在64位wineprefix下直接拒绝安装
+21:04 cleamoon: 你看看winetricks
+21:04 varna: 那个我试过
+21:05 varna: 甚至有人指出prerequesites包括Pray to the Flying Spaghetti Monster and let yourself be touched by his noodly appendage
+21:08 cleamoon: varna, acm代码写得屎一样怎么办，我一般比官方答案字符多200%
+21:08 varna: 大丈夫，那些代码都是粪
+21:08 cleamoon: 即使算法一样也这样
+21:09 varna: 算了我不装wmp了
+21:09 varna: 检查了一下，那些动画都是op/ed
+21:09 cleamoon: 其实 gal 的话可以 vbox 解决
+21:09 varna: cleamoon: 我也这样，淡定
+21:09 varna: vbox太慢了
+21:11 cleamoon: 可是屎一样的代码写得慢，debug更慢
+21:12 varna: 我以为是因为写得清楚所以长？
+21:13 cleamoon: 一个是老想给变量起好名字，然并卵，还有就是大量手动没多大用但不知道能不能去掉的优化
+21:13 cleamoon: 还有就是 debug 代码很碍眼
+21:13 varna: 代码级别的优化略屌
+21:13 varna: 略掉
+21:14 cleamoon: 一般不会有影响？
+21:14 varna: 竞赛一般考算法技巧
+21:14 varna: 多数时候不用卡表
+21:14 cleamoon: soga
+21:14 varna: 正常地算算复杂度，别滥用递归就行
+21:14 cleamoon: 那差不多能少 10%-15% 的代码
+21:15 cleamoon: 尾递归呢？
+21:15 varna: ACM的话，基本的ADT不是可以带纸面材料么
+21:15 varna: 尾递归手工解决
+21:15 varna: 一个循环的事
+21:15 cleamoon: soga
+21:15 cleamoon: 可以带纸面材料
+21:15 varna: 状态空间搜索的递归直接暴力写，DFS考虑暴力，BFS考虑迭代
+21:16 varna: ADT用纸面材料确保正确性
+21:16 cleamoon: 我们用的是怪物们写的优化过的 template
+21:16 varna: 其余的地方出错了就临时断点+打log吧
+21:16 varna: 应该不太有时间单步跟
+21:16 cleamoon: soga
+21:17 cleamoon: 我想的还算快，算中等水平，可是写的太慢了
+21:17 varna: 要不换个人写
+21:17 cleamoon: 我又说不清.....
+21:17 cleamoon: 而且选拔是自己撸
+21:18 varna: 那你可以把代码写得更脏点？
+21:18 varna: 大量用globals
+21:18 cleamoon: 虽然没法去 acm，但是总想去区域赛玩玩
+21:18 varna: 然后胡乱弄几个input(); solve(); dump();搞定
+21:18 varna: 别管程序多粪，把想法弄出来就行
+21:19 cleamoon: 一直不用globals.... 答案都是满地globals....
+21:19 varna: 我觉得粪代码用globals可以加速
+21:19 varna: 别去想接口了
+21:19 cleamoon: 答案就是这么写的... input(), solve()...
+21:19 varna: 这种地方基本都在掉节操
+21:20 cleamoon: 一段时间没写，我现在连直接模拟都写不出来了
+21:21 varna: 模拟有可能传几个参数好点，也许你要省下恢复某些状态的代码
+21:21 varna: 但很多时候，你的输入输出数据、重要的中间数据，一律全局走起会节约脑子想算法
+21:22 cleamoon: 没那么高级，就是单纯的多一层 while(1) 或者少一层 while(1)
+21:23 cleamoon: 我校水平很低的，计算几何的题都没人做
+21:23 varna: 而且我以前听说过披着模拟题外衣的矩阵题……
+21:23 varna: 刘汝佳举过例子
+21:23 varna: 计算几何难了挺难的
+21:23 varna: 现在我连个凸包都没法好好写出来
+21:23 varna: 别提其他的了
+21:24 cleamoon: 凸包是我校怪物的极限
+21:24 cleamoon: 矩阵题确实不少
+21:24 varna: 从问题里认出高效的矩阵解法难
+21:24 cleamoon: 毕竟我们的教练是波兰来的勃士.....
+21:24 varna: 这个感觉挺考验技巧性
+21:25 cleamoon: 难+
+21:27 varna: 我还有个办法，你考虑再找八个妹子
+21:27 varna: 你们站出来成为偶像
+21:27 cleamoon: 噗
+21:27 varna: 五岁幼女的你可以扮妮可
+21:28 cleamoon: 没那个本钱
+21:28 varna: 那扮妮可的妹妹？
+21:28 varna: 妮可很多妹妹
+21:28 cleamoon: 噗
+21:29 cleamoon: 我唱歌跳舞其实都还好，不过长得太安康了
+21:30 cleamoon: 看到妮可妮可妮总有装嫩的感觉
+21:30 Dove: 唱歌跳舞幼女酱
+21:30 varna: 那你试试吉他SOLO? 如果成功的话可以直接进阶白学硕士
+21:30 cleamoon: 不会吉他
+21:30 varna: 我记得你以前试过超超速成吉他
+21:30 cleamoon: 不过老爸会小提琴
+21:30 Dove: 吉他比编程简单多了
+21:30 Dove: 可以速成
+21:31 cleamoon: 没速成，只是记住了几个指法
+21:31 varna: 岚月酱那个似乎是以分钟计的？给我印象极为深刻
+21:31 Dove: 然而bunengsolo
+21:31 Dove: 不能solo
+21:31 Dove: 分钟计是如何做到的
+21:31 cleamoon: 3min 而已
+21:31 CyrusYzGTt quit:Read error: Connection timed out
+21:31 cleamoon: 记住了 3min
+21:31 cleamoon: 不是 3min 记住了
+21:32 varna: ……
+21:32 varna: 我觉得玩乐器的人都有一套水准，我手上了乐器就不听使唤
+21:32 Dove: 多练练就好了
+21:32 varna: 小学教竖笛，我都学不好
+21:32 cleamoon: 乐器 是谁
+21:32 cleamoon: 学不好+
+21:32 varna: 完全不像耍键盘这么无意识
+21:32 lh_mouse_ joined channel
+21:32 Dove: orz
+21:32 Mokou: 不听使唤+
+21:32 varna: 在键盘上找到include struct和return之后我基本就可以闭着眼敲了
+21:33 Dove: OTL
+21:33 varna: 然而乐器实在太难了
+21:33 cleamoon: 太难了+
+21:34 varna: 至今我想像有些新手学了语言不明白怎么写程序，就类比自己摸着一个竖笛不知道怎么作曲……
+21:34 cleamoon: 之前尝试练肛琴，乐谱中一行的内容我练了4h，还没记住......
+21:34 varna: 钢琴OTL
+21:34 CyrusYzGTt joined channel
+21:34 Dove: 基本和弦切换练熟然后加点扫234弦的技巧就照着谱子可以玩一下
+21:34 cleamoon: 准确的说是电子琴
+21:34 varna: 键盘都挺难吧
+21:34 Dove: 键盘都难+
+21:35 cleamoon: 我觉得比吉他容易
+21:35 cleamoon: 至少有规律
+21:35 cleamoon: 吉他的和弦哪有规律....
+21:36 lh_mouse quit:Ping timeout: 276 seconds
+21:36 Dove: 有不同的按法
+21:36 varna: 看着两位白学学士的交流，我感觉自己的姿势水平倒退了十几年……
+21:37 Dove: 我看见你们交流编程我就感觉自己白活了
+21:37 varna: 然而写代码交不来女朋友
+21:37 iyzsong: 我现在只会按空把位的和弦 = =
+21:37 varna: 你看233song会玩一点吉他，他就能去舔L噫噫噫
+21:38 Dove: 基本上只要把根音按住了就行了。
+21:38 iyzsong: 然而并不能舔
+21:38 cleamoon: 吉他给我最大的感觉就是，左手大拇指好疼......
+21:38 varna: 我乐盲，于是整个本科期间都没能搜出她来
+21:38 Dove: 扫弦只扫234
+21:38 Dove: 然后就可以舔妹子了。
+21:38 cleamoon: 乐盲+
+21:39 Dove: 忘光了
+21:39 iyzsong: 这个比较简单 => https://en.wikibooks.org/wiki/Guitar/Open_Chords
+21:39 cleamoon: 合唱队都没能参加
+21:41 Dove: 反正就是你能保证最低音是你按的那个和弦的根音就可以了。
+21:41 hope1: 对音乐甚至没有感知能力……
+21:41 varna: 我觉得让我重修微分方程都比学乐器靠谱
+21:41 Dove: 所以可以有很多种按法。
+21:41 varna: 好歹前者我有信心学会一点入门级的
+21:41 Dove: 很简单的
+21:41 iyzsong: 噢噢 我还只会照着图按
+21:42 varna: 键盘的话我现在就会waasdddcddacSHIFTwSHIFTgcqsddc
+21:43 Dove: 我的乐理已经完全忘光了，如果有大横按的基础，和弦只需要在品位上平移。
+21:43 hope1: 敲键盘的指法一直不对，然后就纠正不过来了，无意识……
+21:43 Dove: 敲键盘的指法改了很久然而还是用不上小拇指，我已经放弃了。
+21:43 cleamoon: 比起乐器我宁愿重学搏击... 虽然都是学的时候难受，但至少学完了搏击身体还算舒服
+21:44 varna: hope1: 那个按键序列是原地鬼畜-蹲-左右鬼畜-起-跑-停-手雷-蹲-闪光弹-鬼畜-起
+21:44 cleamoon: 键盘还有指法？
+21:44 cleamoon: 我写英文笔顺都不对....
+21:44 varna: cleamoon: 你看f键和j键
+21:44 varna: 那是食指基准
+21:44 hope1: 咦，什么游戏
+21:44 varna: 其余的手指尽可能取近道
+21:45 varna: 只不过我是拼手速的伪二指禅
+21:45 varna: hope1: cod
+21:45 Dove: 记得小时候很多卖一张纸上面印个键盘练指法的。
+21:45 Dove: 然后才粗线小霸王学习机连打字
+21:45 Dove: 然而我都拿来魂斗罗了。
+21:46 varna: 小时候有台不错的586……
+21:46 Dove: 壕
+21:46 lh_cat: 不看键盘戳歪的路过。
+21:46 stardust: +
+21:46 hope1: 还以为是某种格斗游戏
+21:47 cleamoon: 哦，食指基准呀，我每次一开始打字就放弃这些玩意了
+21:47 varna: 我打cod的时候基本都在鬼畜走动
+21:47 hope1: 不看键盘完全没问题，看键盘就要出事……
+21:47 cleamoon: 不看键盘戳歪+
+21:47 stardust: 不看键盘的话完全不会打字
+21:48 varna: 一边走一边按着敌人的大致方位打短点射，结果有时候杀两个敌兵要费二十发以上子弹
+21:48 iyzsong: 看键盘的话完全不会打字..
+21:48 varna: 其中十发打偏，剩下十多发两人平分，可能还有几发是糊在尸体上的
+21:49 hope1: 打cod总是存活不了
+21:49 varna: 有统计的现代风射击游戏里，我的命中率差不多25%-48%...
+21:49 cleamoon: 不应该都给尸体吗
+21:49 cleamoon: 把尸体当成耻球
+21:49 hope1: 感觉fps总死就没意义了……
+21:49 varna: 48%那个是GRFS, 有掩体后射击和未察觉时一击瞬杀的设定
+21:50 Dove: 你可以调难度就不会总死了啊。
+21:50 varna: 就这样我还能在乱战中浪费成匣的弹药
+21:50 cleamoon: 除非能问句谁是你的老爹，否则我玩不了fps
+21:51 stardust: 2333
+21:51 varna: ^ 幼女晕3D
+21:51 Dove: 不是36D么
+21:51 hope1: Dove, 就算我努力不去想理论上我该已经死了几个数量级…… 手残没药医
+21:51 varna: 将来我配个台式机的话一定要试试显卡危机……
+21:52 varna: 即使是我，也喜欢看场面漂亮的大片
+21:52 * stardust 在台式机里放了赛扬
+21:52 Dove: hope1: 我也是手残
+21:52 hope1: 也可能是命中率过低。但是火力一密集就不知道怎么办
+21:53 varna: 火力密集的时候压制射击或者找最近的掩体跑，或者朝方便的地方扔手榴弹
+21:53 cleamoon: 我一般都等火力密集时冲上去
+21:53 Dove: 我努力打了很多年的KOF之后终于意识到做事情是需要天赋的。
+21:53 varna: 打中敌人的话他们会吃痛抖一下
+21:54 hope1: 短点射比起全自动命中率好很多？
+21:54 Dove: 好很多
+21:54 varna: 好很多
+21:54 varna: 就是费鼠标
+21:55 varna: 除非你被逼得要么开枪要么死了，不然全自动意义不大
+21:55 cleamoon: 像这样的天赋？  https://en.wikipedia.org/wiki/Lisa_Sauermann
+21:55 varna: 当然我不是说3-round burst
+21:56 hope1: 噫，突然想再试试了
+21:56 hope1: 3-round burst怎么了
+21:56 varna: 基本都是枪械全自动，你自己控制出一个短促爆发（这不同于现实世界中通过扣下扳机实现的真正短点射）
+21:56 Dove: cleamoon: 不是，没有天赋的我连基本的五连都放不出来。
+21:56 varna: 3-round burst太慢了
+21:56 Dove: 尽管我玩了很多年。
+21:57 varna: 三发点射的两次开火之间间隔往往明显，如果敌人火力猛的话有点麻烦，毕竟他们死上几个人完全没问题……
+21:58 Dove: hope1: 去打CS go吧。
+21:58 cleamoon: https://www.imo-official.org/participant_r.aspx?id=19624  怪物
+21:58 hope1: 真实情景下的3-round burst呢？
+21:58 varna: 现实世界中的三发点射在理论家和士兵眼中各有差别
+21:59 varna: 一部分设计者认为，班组步枪手们的三发点射可以有效地均衡火力密度和命中率
+21:59 varna: 这思路的结果是M16A2和M16A4，只提供半自动单发和三发点射，没有全自动
+21:59 varna: 士兵们则往往喜欢密集的火力，他们也许会期望5-6发的短点射
+22:00 varna: 也有在三发/两发点射方面下了狠功夫的设计
+22:00 varna: 比如AN-94（滑轮控制，两发）
+22:00 varna: 或者AEK-971系列（三发点射，我不太明白原理名字）
+22:00 varna: 不过这两种俄式步枪都提供全自动
+22:01 varna: 当然按照美军的嘲讽，当班组机枪手开火的时候，步枪手们就放下枪看热闹
+22:01 lh_cat: 点射长了以后枪口会跳，所以除非是重机枪，没卯月。
+22:01 varna: lh_cat: 你混淆了几个问题
+22:01 lh_cat: 后面的不准。
+22:01 varna: 第一，怎么点
+22:02 varna: 前两到三发理论上会很好，但这里的好一部分原因是可感后座
+22:02 varna: 如果你的枪械动作比可感后座更快，那么射手也许反应不过来，可以保持射击姿势
+22:03 lh_cat: 和姿势无关。物理振动。
+22:03 varna: 第二，你的班组战术怎么设计（步枪为主控制扇面，还是步枪-班机为主压制+重武器攻击）
+22:03 hope1: 原来如此。不提供全自动的实际效果如何呢
+22:03 varna: M16A4褒贬各半
+22:03 varna: 不过美国陆军近年来出的任务还是不如马润多，而马润挑选装备的余地更多，所以我没法说
+22:04 varna: 另外小耗混淆的第三点是枪械分类的问题
+22:04 varna: HMG这个东西基本不考虑在一般班组之内，但LMG可以
+22:04 hope1: 实战上会产生什么限制？
+22:04 varna: 后者携行性明显更好
+22:04 varna: hope1: 一个笑话：三十秒内上帝保佑枪多子弹多的人
+22:05 varna: 而说回去的话，LMG, 或者按美式的说法直接叫“自动步枪”，有时候显得比较土气——可能就是重枪管+脚架
+22:05 cleamoon_ joined channel
+22:06 varna: 5-6发对弹鼓式的LMG来说合适，但对30-40发弹匣的突击步枪（无论用什么握把，无论是否挂机）来说都有危险
+22:06 varna: 这一点理论家们算得应该差不多
+22:06 cleamoon: 那天羊驼子说剑不是用来互相肛的，那么一般冷兵器战争时都怎么打呢？
+22:06 varna: cleamoon: 长矛
+22:07 varna: 剑很难的，容易伤到自己和友军
+22:07 hope1: 没有明白，是说扫射并无卵用吗
+22:07 varna: 但步兵长矛物美价廉
+22:07 varna: hope1: 基本上
+22:07 varna: 步兵兔兔兔地扫射是很卵的，谣传说黑叔叔喜欢这么搞
+22:08 varna: 但人类步兵有个特点：容易受伤，容易死
+22:08 varna: 所以希望更多的自动火力，这有相当程度是士兵的心理
+22:09 hope1: 之前在图书馆看到一个讲非洲被遗忘部落的图鉴，说一群拿着AK的裸体土著对着直升机鸣枪，可能是没见过以为是奇怪的捕食动物
+22:09 varna: 再说我兔还有不占编制的火箭炮……
+22:09 varna: 2333
+22:11 varna: 说回去的话，M16A4应该是长久以来的一个撕点
+22:11 cleamoon: 只用长矛插还是有可称为格斗的东西？
+22:11 varna: cleamoon: 有基本动作和编组战术（比如2人一组，盯住一个突前的敌兵，一人格挡一人挺进突刺这样）
+22:12 varna: 但不会有武术那样细致的格斗动作，因为太难了
+22:12 varna: 后来还有摆长矛阵的，这个艺术作品里表现比较多
+22:12 hope1: 完全不知道冷兵器时代的战术是怎么样的，有没有介绍这方面的资料？
+22:13 varna: 我没系统看过那些……
+22:13 hope1: 我知道最早的战术都是西班牙火枪长矛阵了
+22:14 varna: 冷兵器吧倒是有人喜欢这些，程度我没法确认
+22:14 varna: 一开始胡乱看这些是因为有人提底比斯GAY军的事情
+22:15 varna: 后来还有人配图讲解中世纪的无甲剑术，顺便普及开罐头常识
+22:15 cleamoon: 冷兵器时代的将军一般是干什么用的
+22:15 varna: 不清楚，但每个时代都得有人管宏观的战术吧……比如走什么路线，兵种怎么配，怎么摆阵，怎么通信
+22:16 hope1: 说起来我夏校报了罗马史，说不定会有专门这方面的叫兽
+22:16 varna: OTL
+22:16 cleamoon_: orz
+22:16 varna: 一直忘了入一部吉本的《罗马帝国衰亡史》
+22:16 varna: 虽说我对冷兵器时代的贵乱一直兴趣缺缺
+22:17 hope1: 一门拉丁一门罗马史 _(:3」∠)_
+22:17 varna: OTL
+22:18 cleamoon_: orz
+22:18 Dove: 拉丁orz
+22:20 Dove: 从各个方面来说，叫兽都是一种两极分化很大的生物。
+22:20 hope1: 冷兵器时代怎么维持大疆域的统治的？
+22:20 Dove: 我朝的话参考商鞅变法
+22:21 Dove: 其他地方没有大疆域统治？
+22:21 hope1: 哦有道理，我朝的中央集权比较厉害……
+22:22 varna: 我朝的分封控制得比较严吧
+22:22 cleamoon_: 靠防火墙？不，长城？
+22:22 varna: 罗马人民怎么搞的就看HO棠课上怎么说了
+22:23 Mokou: 我朝大概是县制+半自制？
+22:23 Mokou: 自治*
+22:23 Dove: 到现在也不是鼓励乡贤么。
+22:23 varna: 我朝算半自治的话欧洲那不得算全民造反……
+22:24 Mokou: 一起来吧
+22:24 hope1: 首都人民拒绝缴税……
+22:24 Mokou: 比如西域、南匈奴以及女真
+22:25 Mokou: 你看王提督一上台西域直接不鸟天朝了
+22:25 varna: 爵士头衔什么的，已经无所谓了；因为已经没有风干肉，值得去发霉了。收不到手的租子，已经不需要了；因为不再有领民，值得去耕田了……
+22:26 Dove: 2333
+22:26 Mokou: ^ 拉去菜市口
+22:26 cleamoon_: 这白膜法师
+22:26 varna: 欧洲似乎颇有些穷得只剩头衔的贵族
+22:26 varna: 不白一下说不过去
+22:27 hope1: 沙俄农奴制和我国比较像？
+22:27 varna: 两方面的边角料我都没看过，红旗上
+22:27 Mokou: 沙俄不了解
+22:28 Dove: 沙俄我只了解了一下叶卡捷琳娜二世这个人。
+22:28 varna: 我国封建时候的农民是个什么状况呢
+22:29 Mokou: 地主+佃农？
+22:29 hope1: 我国农民以前吃什么呢，欧洲中世纪似乎主流都是会长致幻霉菌的黑面包？
+22:29 Mokou: 土地兼并似乎一直没被压制住
+22:30 varna: 佃农的劳动义务怎么算？
+22:30 varna: 农民的劳动义务应该挺影响他们经济水平的
+22:30 cleamoon_: 秦朝吃豆子
+22:30 Mokou: 劳动义务指？
+22:30 cleamoon_: 我只知道这一个朝代
+22:31 varna: hope1: 黑面包是13xx年或者14xx年的事情了？
+22:31 cleamoon_: 耕地主的田吧
+22:31 varna: Mokou: 比如一年需要给地主劳动几个月这种
+22:31 varna: 这些时间里他们没空管自己的田（如果有）
+22:32 cleamoon_: 秦朝有钱人是喝小米粥的
+22:33 Mokou: 大概看地区和自身经济状况？
+22:33 varna: 我猜不会好到哪去
+22:33 varna: 想想七九年，那是何等的进步……
+22:33 Mokou: 经济好的时候倒是经常会有佃农把田买回去自己干
+22:34 varna: cleamoon_: 说得我饿了
+22:34 hope1: varna, 似乎到16xx年都还是。
+22:34 Mokou: 应该和俄国的农奴制差别挺大
+22:34 varna: hope1: 我的意思是，有面包就已经很好了吧……
+22:35 hope1: 据说女巫骑扫帚其实是在磕药
+22:35 varna: 那个据说是
+22:35 cleamoon_: 我看网上说其实封建时期底层不非常腐败，因为没钱可贪，可信否？
+22:35 varna: cleamoon_: 我觉得不可信
+22:35 hope1: varna, 那黑面包之前是啥……
+22:35 cleamoon_: varna: 那么我说说我家饭馆卖的饺子馅？
+22:35 varna: hope1: 也许是更恐怖的东西，比如糊糊
+22:35 varna: cleamoon_: 求说
+22:35 cleamoon_: 海盗国是吃土豆
+22:36 Dove: cleamoon: 我听说一个知县退休可以攒20万两。
+22:36 Dove: 干到退休的话
+22:36 hope1: 长霉的黑硬面包够恐怖了吧
+22:36 hope1: 说不定罗马人民吃得还不错
+22:37 varna: 我有个错觉，自从基督教进驻欧洲之后，欧洲人民的饮食水平一落千丈
+22:37 varna: hope1: 你得看那面包里有多少木屑
+22:37 Mokou: 萌朝的佃农和地主在法律上是地位平等的，地主对佃农只有经济约束
+22:37 Mokou: @魏晋风骨 
+22:38 Mokou: 噫，刚才一阵Lag
+22:38 varna: 明朝这么厉害的啊？
+22:38 hope1: varna, 至少人人都有红葡萄酒和发酵的大饼吃
+22:38 Mokou: 相当莉害，虽说礼制上地主高一等，但法律上都是平民身份
+22:38 hope1: 咦
+22:38 cleamoon_: 鸡肉菠菜，猪肉葱花香肠，番茄牛肉，白菜粉丝炸豆腐，dill 三文鱼
+22:38 varna: hope1: 想想后来用来填肚子的麦芽酒……
+22:39 varna: cleamoon_: 好赞啊！
+22:39 varna: 口水出来了
+22:39 cleamoon_: 确实很赞
+22:39 hope1: 然而明朝法治实施情况如何
+22:39 cleamoon_: 于是你饿了
+22:39 Mokou: 地主打死佃农是得偿命的
+22:39 varna: 最多我可能不喜欢香肠，但如果不是肥肉很多的香肠就很好
+22:39 varna: 我真饿了
+22:39 hope1: 噫，下周让我妈试试
+22:39 varna: 这饺子馅好顶赞
+22:39 Dove: 这个点没吃的的了吧
+22:40 varna: Dove: 开窗，有西北风
+22:40 Dove: OTL
+22:40 cleamoon_: 是用来提味和增加口感的
+22:40 Mokou: 实施情况得看被涉及的人员的实际地位吧，毕竟我朝封建时代没真正法治
+22:40 hope1: Mokou, 这倒不错
+22:40 Mokou: 不过一般乡下的小地主来个 人人平等大概是可能的
+22:41 varna: hope1: 法制基本上都实施不好，所以上级能立法就已经是进步了
+22:41 cleamoon_: 蘸酱是加了各种蔬菜水果的醋姜汁
+22:41 varna: 我是饺子基本不蘸酱派
+22:41 Mokou: 当然萌朝的黑点是上层带头土地兼并
+22:42 hope1: 然而P社强行削大明，天朝政体基础自治度50%
+22:42 Dove: 我蘸醋和辣椒油
+22:42 varna: Call for modders!
+22:42 cleamoon_: 不蘸酱会腻的，毕竟15个，每个接近50g的饺子
+22:42 varna: 那就用传统的醋+酱油+辣椒油
+22:43 Dove: 是滴
+22:43 varna: 或者醋+辣椒油
+22:43 varna: 酸辣去腻
+22:43 cleamoon_: 那样味道太重，会吃不出饺子本身的味道
+22:43 varna: 噫，这是好饺子
+22:43 Mokou: 醋&辣椒油+
+22:43 varna: 会强调本身味道的东西大多是好东西
+22:43 cleamoon_: 我家酱味道很淡的，可以直接喝
+22:44 varna: 听起来很厉害啊
+22:44 Mokou: 听起来很厉害+
+22:44 cleamoon_: 而且也的确有人买来直接喝......
+22:44 Dove: 味道很淡我多半就不蘸了
+22:44 hope1: 四川这里小饭馆……
+22:45 varna: 哪儿都一样，君不见加州牛肉面
+22:45 cleamoon_: 一直在改配方，而且成品基本和当时买到了什么菜有关，所以料其实还更多，不过剩下的就没谱了
+22:45 varna: 葱花香菜酱油汤，照样拯救中国人……
+22:45 varna: 唉唉大厨就是厉害
+22:46 cleamoon_: 有时有青豆，有时有烂掉的虾之类的
+22:46 varna: ...
+22:46 cleamoon_: 寿司虾，不能用了就放进去
+22:46 Dove: 这种酱比较奇葩
+22:46 hope1: 厉害
+22:46 varna: 有没有幼女汁？
+22:47 varna: 写作萝汁就可以，不变态的人看着以为是萝卜汁
+22:48 cleamoon_: 饺子里不放汁，因为火力不够，必须用煮完了一半的饺子做，放了汁的话饺子会碎掉
+22:48 varna: 是说蘸料
+22:49 cleamoon_: 蘸料不知道，我参与蘸料时是两年前，现在配方肯定不一样了
+22:49 varna: 果然用了幼女汁
+22:49 varna: 这幼女固定在五岁之后就参与了蘸料
+22:50 cleamoon_: 不过老爸对饺子不很满意，因为成本限制，没法发挥全力肛
+22:50 varna: 先做大量半成品，要的时候再下锅？
+22:50 varna: 那样的话会折扣不少吧
+22:50 cleamoon: 做完了煮一半捞出来冻上
+22:51 Dove: 外面卖的饺子都这样的吧
+22:51 cleamoon: 不，中国的火力应该是够当时煮的
+22:51 cleamoon: 我家呢，会跳闸.....
+22:51 Dove: 移民瑞典开个饺子店也是不错的。
+22:51 varna: 瑞典火力坑爹？
+22:51 varna: 闸！？
+22:52 varna: 你们的天然气呢
+22:52 cleamoon: 没有呀
+22:52 Dove: 我这里的都是冻饺子煮的
+22:52 varna: puuu
+22:52 cleamoon: 都是用电的
+22:52 varna: 用电那不坑死……
+22:52 Mokou: 噗噗个噗
+22:52 Dove: 有钱人啊
+22:52 Mokou: 电什么鬼
+22:52 Dove: 噗
+22:52 Dove: 用气便宜啊
+22:52 cleamoon: 只有电.....
+22:52 varna: ...
+22:52 cleamoon: 没有煤气管道都
+22:52 Mokou: ……
+22:53 Mokou: 海盗国这什么鬼
+22:53 varna: ...
+22:53 varna: 吓傻了
+22:53 Dove: 然
+22:53 varna: 没有火的话怎么做中国菜……
+22:53 cleamoon: 就是.....
+22:53 Mokou: 你买一堆木头
+22:53 cleamoon: 不过老爸可以，虽然我不知道哪里是hack
+22:53 Mokou: 当柴
+22:53 varna: 估计挑了不用大火的做法？
+22:54 cleamoon: 哦，木头可以有，不过我家没壁炉.....
+22:54 cleamoon: 应该是
+22:54 Dove: 木头更贵吧
+22:54 Mokou: 垒一个
+22:54 cleamoon: .......
+22:54 stardust: 没有煤气可以用电磁炉啊
+22:54 varna: 欧洲人民的炉子不都是烤炉么？
+22:54 varna: stardust: 火力不足
+22:54 Dove: stardust: 电费高
+22:55 stardust: 勉强可以炒菜吧
+22:55 cleamoon: 14层楼的底商造一个透风估计要几百万吧
+22:55 cleamoon: 我家就是用电磁炉......
+22:55 varna: 然而大厨估计还是喜欢火
+22:55 cleamoon: 喜欢火+
+22:55 varna: 电磁炉总得放在那上面不温不火地热着
+22:55 Mokou: 不掂锅叫做菜？
+22:56 cleamoon: 已经好久没认真翻菜了，放在那里都不热，没必要翻......
+22:56 varna: 电磁炉做菜主要就是拿铲子胡乱翻翻，反正我也不会……
+22:56 Dove: 我表示菜什么的有得吃就行了，然而电费贵电费贵电费贵，重要的事情说三遍。
+22:57 cleamoon: 海盗国似乎电费单价不贵
+22:57 Dove: 肯定比用气要贵的。
+22:57 hope1: 然而用电可以做出一样的效果？
+22:57 varna: 不过欧洲人民做菜是不是不太用明火？
+22:58 varna: 他们很多东西都可以焗或者烤吧
+22:58 Dove: 我朝就别提了，煤卖不出去都要发霉了电价还是不降。
+22:58 cleamoon: 我这里想用气必须让特殊的车送来一个一个的罐子，光送货就几千
+22:58 varna: 虽说有些炒菜
+22:58 varna: 不过看着一堆混沌
+22:58 Dove: 那还是用电吧
+22:58 Dove: 安全干净省心
+22:59 varna: (｡･ω･)ﾉ电电电
+22:59 Dove: 羊叫兽之吻
+22:59 cleamoon: 老爸是在南方风饭店学艺的北方人，口味又喜欢酸辣，所以我家吃的东西其实和哪里的传统菜都不一样......
+23:00 Dove: 比较奇葩
+23:00 varna: 噗？
+23:00 varna: 我以为你家做菜是北方口味
+23:00 cleamoon: 刚开张时不会用那个破电，开张一个月击穿了6个保险丝
+23:00 cleamoon: 不是
+23:00 cleamoon: 比较偏南方口味
+23:00 cleamoon: 没有不放糖的菜
+23:00 Dove: 哦，我不太吃得惯南方口味。
+23:00 varna: 击穿六个保险丝……
+23:00 varna: 你们不是用空气闸的？
+23:01 cleamoon: 后来老爸给改到空气闸了
+23:01 Dove: 然而找工作多半是要去南方了。
+23:01 cleamoon: 饭馆上任主人给我们留了二十几个保险丝......
+23:01 varna: ...
+23:01 Dove: 2333
+23:01 varna: 拿来掏鼻子玩儿吧
+23:02 varna: 下线
+23:02 varna: 武运
+23:02 varna quit:Quit: leaving
+23:02 cleamoon: 原来羊驼子用保险掏鼻子
+23:03 cleamoon: 我说的这种保险丝   http://thumbs.dreamstime.com/z/%E7%93%B6diazed%E4%BF%9D%E9%99%A9%E4%B8%9D-24142485.jpg
+23:04 Dove: 2333
+23:05 stardust: 画风突变
+23:10 lh_mouse_ is now known as lh_mouse
+23:10 Dove: 看不进去书了，看啥都看不懂了，碎觉，诸君武运。
+23:10 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/

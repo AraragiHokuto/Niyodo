@@ -1,0 +1,904 @@
+00:04 tutu1: libhanjian: hanjian 有没有了解过inotify 
+00:05 libhanjian: 没用过
+00:06 tutu1: libhanjian: 喔喔 ~ 没事 , 刚才在 知乎 上看到了 
+00:07 tutu1: http://www.zhihu.com/question/21516827
+00:15 LittleKey joined channel
+00:25 Izumo: 睡觉
+00:25 Izumo: 诸君武运
+00:25 Izumo quit:Quit: 睡觉
+00:41 tutu1: 晚安 ~ 
+00:41 tutu1 quit:Quit: WeeChat 1.2
+00:43 LittleKey quit:Quit: Leaving.
+01:04 yzld2002 quit:Quit: yzld2002
+01:16 whatofor joined channel
+01:19 whatofor_1 quit:Ping timeout: 250 seconds
+01:41 molikto quit:Remote host closed the connection
+01:58 lh_mouse quit:Read error: Connection reset by peer
+02:57 hope1_ quit:Remote host closed the connection
+02:59 ASenR quit:Quit: Lost terminal
+03:14 geordi quit:Remote host closed the connection
+03:15 geordi joined channel
+03:35 biergaizi_ joined channel
+03:38 biergaizi quit:Ping timeout: 248 seconds
+03:44 biergaizi joined channel
+03:45 biergaizi_ quit:Ping timeout: 260 seconds
+04:11 cleamoon quit:Ping timeout: 250 seconds
+05:23 boosure joined channel
+05:25 cleamoon joined channel
+05:47 hysw quit:Remote host closed the connection
+05:47 hysw joined channel
+06:33 hysw quit:Remote host closed the connection
+06:33 hysw joined channel
+06:39 hope1_ joined channel
+07:59 hoxily joined channel
+08:14 tutu_wind: morning ~
+08:25 cleamoon: tutu_wind, 爆
+08:25 tutu_wind: cleamoon: 你那里应该深夜了吧
+08:30 Ivan97 joined channel
+08:52 tutu_wind: Ivan97: 揉捏 ～
+08:52 Ivan97: tutu_wind: 纳尼
+09:07 yzld2002 joined channel
+09:21 lh_mouse joined channel
+09:33 cleamoon quit:Remote host closed the connection
+09:34 tutu_wind: Ivan97: 上班ing ？
+09:35 cleamoon joined channel
+10:12 iyzsong1: 早.
+10:28 lh_mouse quit:Read error: Connection reset by peer
+10:29 lh_mouse joined channel
+10:45 hoxily_ joined channel
+10:47 hoxily quit:Ping timeout: 240 seconds
+10:56 ASenR joined channel
+11:10 Izumo joined channel
+11:25 hoxily quit:Read error: Connection reset by peer
+11:26 hoxily joined channel
+11:29 FrankHB quit:Remote host closed the connection
+11:29 FrankHB joined channel
+11:31 varna joined channel
+11:32 varna: Izumo: 你平时测试用的ab命令是什么
+11:32 varna: Izumo: 主要是-c和-n
+11:33 Ivan97 quit:Quit: Connection closed for inactivity
+11:41 varna: Izumo: 我刚才查了一下内存，看起来是没漏
+11:41 varna: ab打了20k请求，valgrind指出的possibly lost地址应该都是事实上的still reachable（被我池化了）
+11:41 Asuka joined channel
+11:42 varna: 要是能确认你的测试条件，我复现一下没什么特别问题就commit
+11:43 varna: Asuka: 欢迎
+11:44 Asuka: ..
+11:45 varna: 我基本确认没漏
+11:45 tutu_wind: varna: 好棒
+11:45 tutu_wind: varna: 摸摸 ～
+11:45 varna: 在izumo.c里姑且硬编码了容量32的池，池容量8192/大块阈值4096
+11:46 varna: 10并发10k请求本地用了十个池，1k并发10k请求本地用了全部32个池化的位置
+11:46 varna: valgrind诊断的32个possibly lost就是那里（我直接c-c了服务器）
+11:47 varna: tutu_wind: 噗？
+11:47 tutu_wind: varna: 吃饭饭没？
+11:47 varna: 没呢，等会儿对付点
+11:47 varna: 今天胃口不大，来实验室之后就先把给红旗用的内存池弄了一下
+11:49 tutu_wind: 么么 ～ 先去吃饭了 ～ 
+11:49 varna: 加贺岬这歌……闷烧的加贺女子力全开啊
+11:52 varna: Izumo: 我提交了一下，K没动，只改动了I的源码；如果你那边测试I可以用，那么K也可以相应地变化
+11:53 Izumo: 了解
+11:54 varna: 这个内存池其实是存货
+11:54 FrankHB quit:Ping timeout: 246 seconds
+11:54 Izumo: 我平时ab一般是-n(10000|200000|500000) -c1000
+11:54 varna: 那应该还好
+11:54 Izumo: 另外有没有办法在INSERT里塞一个DROP DATABASE进去
+11:55 varna: 我不知道办法，除非你被注入了
+11:55 varna: Izumo: 有一个需要提的地方，你重新看I的代码的时候小心
+11:56 varna: 我把client里的内存池成员改成了指针
+11:56 varna: 原先你是一个单纯的成员，但我这里的内存池里没有挂小块指针，而是直接上了柔性数组
+11:57 varna: 顺便赠送一个没卵用的错误码，自带errsv
+12:00 Izumo: 了解
+12:00 Izumo: 我也开始赠送错误码了
+12:00 Izumo: 直接');DROP DATABASE dbname没有用
+12:00 Izumo: mysqli_query禁止了多重查询
+12:01 varna: ...
+12:01 Izumo: 没错我就是在注入……
+12:01 varna: 防注入啊
+12:01 varna: 注入我手法极烂，等lhj下班了考虑问问他吧
+12:01 Izumo: 还是之前那个循环九个query的新米
+12:02 varna: 「私とあなた射掛ければ そう 朧月夜が綺麗ね」
+12:02 Izumo: 他直接写了 mysqli_query($link, "INSERT INTO players (Name, Status) VALUES ('$name', 1)");
+12:02 varna: 加贺桑为了当偶像已经不惜唱这种歌了
+12:02 Izumo: 做了用户名合法性检测
+12:02 Izumo: 然而是在本地用JS做的
+12:02 varna: drop应该不能塞进insert里
+12:03 Izumo: 能塞一个SELECT进去，但是光爆root密码多没意思
+12:03 Izumo: 他root密码是空的这点直接硬编码在代码里
+12:03 varna: 存储过程呢
+12:04 Izumo: 其他的没什么可以注入的点了
+12:04 Izumo: 就这一个点要求用户输入$name
+12:04 varna: 我的意思是这里你建一个proc
+12:05 varna: 然后换成exec
+12:05 varna: 他支持这样的么
+12:05 varna: 哦不对，只有一个insert啊……
+12:06 Izumo: 只有一个insert……
+12:06 Izumo: exec也塞不进去
+12:06 varna: 小罗伯特无能为力
+12:06 Izumo: https://github.com/mkpoli/Jinrou-Game/
+12:06 Izumo: これ
+12:07 varna: 啊，在学派上见过这人
+12:07 Izumo: 现在他开始搞这个了
+12:07 Izumo: 昨天晚上我用curl给他塞了一串JS进去
+12:07 Izumo: 然而注入尝试一直没成功
+12:08 Izumo: 今天一查才知道mysqli_query禁止了多重请求……
+12:08 varna: 我觉得这里强行塞是正解，要是query禁了多重请求，我就不会注入了
+12:08 Izumo: 这里可以塞个subquery进去SELECT password FROM mysql.user WHERE user='rooot'
+12:08 Izumo: 这里可以塞个subquery进去SELECT password FROM mysql.user WHERE user='root'
+12:09 Izumo: 尤其是他直接用的root……
+12:09 varna: 我很奇怪为何他直接开放了数据库接口
+12:09 Izumo: 因为他并没意识到这样有什么不妥……
+12:09 Izumo: 他对很多事情都没啥概念
+12:09 varna: 好歹装模作样在前端提供自己的API, 后面再折腾随意
+12:10 Izumo: 还是序列化那次
+12:10 Izumo: 我跟他说“你加个API，一次请求所有用户的数据，这样一个一个请求太慢了”
+12:10 Izumo: “API是什么”
+12:12 Izumo: 所以别对他期望太高……
+12:13 varna: ...
+12:14 Izumo: 这应该是他第一次接触db啊http啊之类的东西
+12:15 Izumo: 不然他也不至于select出所有用户的ttl写个循环和当前epoch比较如果大于就执行一串DELETE
+12:15 varna: ...
+12:15 Izumo: 这一大串等价于DELETE FROM players WHERE $now > TTL
+12:16 varna: 效率先不论
+12:16 varna: 我只说接口什么的，太奇妙
+12:17 varna: 要是他知道后面在给他准备事务，自然会弄一个delete的……
+12:17 Izumo: 他大概还没个整体的思路，只是想到啥加啥……
+12:18 Izumo: 不过其实说实话，维护在线状态的任务我觉得应该交给Redis
+12:18 Izumo: MySQL怎么想都是用三式弹打飞机
+12:18 molikto joined channel
+12:19 varna: 这是在线状态！？
+12:19 Izumo: 是
+12:19 varna: ...
+12:19 Izumo: 加了在线状态的版本他应该还没push
+12:20 varna: 我低估前端人员的水平了
+12:20 Izumo: 233333
+12:20 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=636722389b16fdfad86cc6e684b48d54/fc1f4134970a304ee19779e9d7c8a786c9175c68.jpg 左下角混进来什么了
+12:20 Izumo: 我一直在给他安利Redis，到现在为止都没成功
+12:20 Izumo: 233333
+12:21 Izumo: 另外加贺岬有下载吗
+12:21 Izumo: 我不太想花1.5K家具币……
+12:21 varna: 我上传一下
+12:21 Izumo: thx
+12:22 varna: http://pan.baidu.com/s/1sjsnJo5
+12:22 ASenR quit:Quit: Lost terminal
+12:22 hope1_ quit:Remote host closed the connection
+12:23 varna: 为何他不用呢
+12:23 varna: 对手工维护这种小事务有自信么
+12:24 varna: 我感觉前端的拿来主义者应该更多才对
+12:24 Izumo: 他嫌学起来麻烦
+12:24 varna: 噗
+12:25 Izumo: 旋律不错，虽说让我联想到了武侠片……
+12:25 varna: 这个是演歌
+12:25 varna: 虽然比较pop化……
+12:25 cleamoon quit:Ping timeout: 244 seconds
+12:27 varna: 哪天八万钢来唱个HOI a live吧
+12:29 Izumo: 啊，完全体的经验人数眼睛……
+12:30 varna: 我日
+12:30 varna: 刷个闪都被天龙炸瞎狗眼
+12:31 Izumo: 哈哈哈罗马1人
+12:31 Izumo: 然后罗马发现意大利22人
+12:31 varna: 噗
+12:32 Izumo: 间宫118人
+12:32 varna: 我了割草，一水战开号作战突入、再突入是全员点名的……
+12:32 Izumo: Lady和响爷都是8人
+12:32 varna: 第一次：响、晓、岛风、若叶、五腋雨
+12:33 varna: 第二次：响、岛风、夕云、长波、秋云
+12:33 varna: 天城23333
+12:34 lh_mouse quit:Read error: Connection timed out
+12:34 Izumo: 又黑天城立绘
+12:34 hysw: Facebook果然是糟糕的玩意
+12:35 varna: 如月梗也飞起
+12:35 varna: 提督和大淀……
+12:35 lh_mouse joined channel
+12:35 Izumo: 为什么这些船模厂家都喜欢做最终形态的武大呢……
+12:36 Izumo: 那一堆九六神炮到底哪里好看了
+12:36 libhanjian: 早
+12:36 varna: libhanjian: 爆
+12:37 Izumo: http://pan.baidu.com/s/1sjsnJo5
+12:37 Izumo: 啊，错了
+12:37 Izumo: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=02e24438be0e7bec23da03e91f15b838/574e9258d109b3dea761b45fcabf6c81800a4c2e.jpg
+12:37 Izumo: 今天份的笑话
+12:38 varna: ...
+12:38 varna: 神啊救救德棍吧
+12:39 Izumo: 据说底下还在脑洞平衡一下潜艇
+12:39 Izumo: 水下20kn
+12:39 varna: 什么鬼
+12:39 varna: 90kn算了
+12:39 varna: 只是平常的海雾巡潜型哦
+12:39 Izumo: 三秒日边2333
+12:39 hysw: 继续看社会心理学
+12:40 tutu_wind: hysw: 社会心里学？
+12:41 hysw: tutu_wind: https://www.coursera.org/course/socialpsychology < -_-
+12:41 tutu_wind: hysw: 喔喔 ～ soga
+12:41 Izumo: http://imgsrc.baidu.com/forum/w%3D580/sign=4f3098209445d688a302b2ac94c37dab/729dc711728b471035dfacdfc5cec3fdfd0323e9.jpg 毛子的神船
+12:41 Izumo: 这玩意还真造出来了
+12:42 hysw: tutu_wind: 还不错的课...
+12:42 tutu_wind: hysw: 比较喜欢行为心理学呢
+12:42 xxxxxxxx joined channel
+12:43 tutu_wind: hysw: 阿里噶多 ～
+12:43 hysw: tutu_wind: 行为心理学?
+12:44 xxxxxxxx: http://tieba.baidu.com/p/3898604687 老和尚们中枪了
+12:46 tutu_wind: hysw: 嗯呢
+12:46 xxxxxxxx: 红旗找到那个不是大平底锅船么
+12:47 hysw: tutu_wind: 你是指一个领域还是某门课？
+12:48 tutu_wind: hysw: 就是属于心理学领域吧 ，coursera上貌似没有吧
+12:50 * hysw 准备去学认知科学
+12:54 xxxxxxxx: http://tieba.baidu.com/p/3901132132 看上去是个求婚贴(不是玩笑) 
+13:14 varna: 十六万钢最初的演习，开幕miss炮击miss...
+13:15 varna: 雷击又miss了……
+13:15 varna: 需要多给十六万钢打演习
+13:22 xxxxxxxx: 羊驼要把aww练成2队?
+13:24 varna: 我需要八万钢能够在3-5代替神通
+13:24 varna: 但决战兵器仍然是神通，这不会变化
+13:25 varna: 现在是喂好了雷装和火力的十六万钢，单纵开幕打对面8x级的驱逐舰还会miss
+13:25 varna: 体感有点差
+13:25 Izumo: 8x级的驱逐舰我从来不指望能打中
+13:26 varna: 虽然面板一百出头的雷装对雷命中肯定有点影响，根本不可能做到151的北大那么好
+13:26 Izumo: 4x级的重巡夜战能连闪你四发炮弹
+13:26 Izumo: 你服不服吧
+13:26 varna: 203buff吧
+13:26 varna: 重巡我一直认为成型很快的
+13:27 Izumo: 203再buff也不能这么狠吧
+13:27 Izumo: 90+的战舰和70+的重巡扛不住那点炮重简直牛逼
+13:27 xxxxxxxx: 重巡5-4?
+13:27 Izumo: 重巡我去3-2，你可以试试5-4
+13:28 varna: 重巡5-4比较无脑，但3-2比较节约
+13:29 xxxxxxxx: 然而我不觉得3-2重巡算很快
+13:29 varna: 挺快的
+13:29 Izumo: 3-2比5-4快多了吧
+13:29 Izumo: 你还想多快……
+13:29 varna: 5-4主要是兼顾战果的打法
+13:30 varna: Izumo: 另外求你那边ab炸一下izumo
+13:30 * xxxxxxxx 觉得重巡并不好练
+13:30 varna: 确实不好练
+13:30 varna: 不过是相对于战舰来说的，重巡观测率低一些
+13:32 Izumo: 噗？
+13:32 Izumo: sigsegv……
+13:33 Izumo: ==2455== Invalid read of size 8
+13:33 Izumo: ==2455==    at 0x4022B6: izm_mempool_alloc (pool.h:40)
+13:33 Izumo: ==2455==    by 0x4022B6: izm_http_req_parser_run (request.c:181)
+13:33 Izumo: ==2455==    by 0x40155A: handle_event (izumo.c:195)
+13:33 Izumo: ==2455==    by 0x400DF7: main (izumo.c:419)
+13:33 Izumo: ==2455==  Address 0x2010 is not stack'd, malloc'd or (recently) free'd
+13:33 varna: pull了？
+13:33 Izumo: pull了
+13:33 varna: .h是怎么回事
+13:33 varna: pool.h没有第四十行吧
+13:34 Izumo: 我看看
+13:34 Izumo: ……大概是链接的问题
+13:34 Izumo: 现在好了
+13:35 varna: 2333
+13:35 Izumo: Time taken for tests:   0.537 seconds
+13:35 Izumo: n10000 c1000
+13:35 varna: 我这里1k/10k和10/10k都挺快的
+13:35 Izumo: +
+13:35 varna: 我说个悲惨的故事，ab折腾这些比我那个胡乱写的客户端还快
+13:36 Izumo: ……
+13:36 varna: 我tm就是在connect send recv啊……
+13:36 Izumo: 这什么情况
+13:36 varna: 我不管了
+13:36 varna: 随他去吧
+13:38 varna: 我稍微改一下K的源码，等会你帮我试试看……
+13:38 Izumo: 了解
+13:42 lh_mouse: [11:50:59] <varna> 今天胃口不大，来实验室之后就先把给红旗用的内存池弄了一下 // 居然没叫肛旗
+13:42 varna: 我去掉了敏感器官
+13:42 varna: Izumo: push了
+13:42 Izumo: 了解
+13:44 Izumo: 等我吃完饭……
+13:44 varna: ok
+13:48 Asuka: 麻痹 三体太耗我脑容量了。。
+13:49 varna: 我就知道三体里有个大凤
+13:50 Izumo: 你也有大凤
+13:51 varna: 我大凤确实已经达到了雷爷之外的实战水准，可以运用了
+13:54 Asuka quit:
+13:56 varna: 怎么有人黑八万钢都黑到索敌头上了
+13:57 varna: 水反要用米空带两组飞机不如不做
+14:06 Izumo: varna: 炸了
+14:08 Izumo: 目前见到的炸点有izm_mempool_get izm_mempool_drain izm_response_write
+14:08 Izumo: 这三个炸点随机
+14:09 Izumo: 不过表现都是SIGSEGV
+14:09 Izumo: list_del也是炸点之一……
+14:09 Izumo: 这个是在izm_mempool_get里面
+14:12 hope1 joined channel
+14:14 varna: 奇怪
+14:14 Izumo: 大和Lv96
+14:14 * hysw 继续刷课...
+14:15 Izumo: 另外我pull下来的版本没法直接编译……
+14:15 varna: 有编译错啊
+14:15 varna: 那有可能
+14:15 * hysw 木有妹纸...
+14:15 Izumo: client里的pool没改成指针，izm_mempool_destroy也没改成drain
+14:15 Izumo: 但是这两个应该不是问题……
+14:16 Izumo: 我push一下？
+14:16 varna: 是问题
+14:16 varna: 你push一下
+14:16 varna: 哦我知道了
+14:16 varna: 你push吧
+14:17 varna: 然后别管K了
+14:17 Izumo: 了解
+14:17 varna: 那个就是会炸的
+14:17 varna: commit的时候注明不可用
+14:17 varna: 让它能编译就行了
+14:18 Izumo: 已push
+14:18 varna: 已同步
+14:19 varna: 那个没办法不炸，内存池没锁
+14:19 Izumo: なるほど
+14:20 varna: 稍等下我试试快速地补补
+14:20 varna: 你再试试
+14:22 Izumo: 炸了
+14:22 varna: 现在是哪里
+14:22 Izumo: backtrace一大串，总之是在parser里
+14:23 varna: ...
+14:23 Izumo: #0  0x00007ffff78968d3 in malloc () from /usr/lib/libc.so.6
+14:23 Izumo: #1  0x0000000000401be7 in izm_mempool_new (nfail=<optimized out>,  nlarge=<optimized out>, size=0) at mem/pool.c:25
+14:23 Izumo: #2  izm_mempool_get (nfail=<optimized out>, nlarge=<optimized out>) at mem/pool.c:116
+14:23 Izumo: 接下来是数不清的izm_mempool_alloc
+14:23 varna: 噗？
+14:24 Izumo: 摞了几十层……
+14:25 Izumo: 只开一个内核线程没问题
+14:25 varna: mem/pool.c编译过了？
+14:25 varna: make clean; make
+14:25 Izumo: 编译过了
+14:27 varna: 稍等一下
+14:27 varna: pull 再试试
+14:28 varna: Izumo: 现在可以了么
+14:28 Izumo: 炸点不变，只开一个内核线程还是没问题
+14:29 varna: 见鬼
+14:29 varna: ln4是什么
+14:29 Izumo: static __thread
+14:29 hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+14:29 varna: 这个我自己修一下吧
+14:31 varna: 日
+14:31 varna: p7demo那个地方要怎么弄才能pull下来东西……
+14:31 hope1 joined channel
+14:31 varna: 哦不对
+14:32 varna: 切，麻烦死了
+14:33 Izumo: git submodule update --recursive
+14:33 Izumo: 你试试这个？
+14:33 varna: 没用……
+14:33 iyzsong1: 下午好 o.o
+14:34 iyzsong quit:Changing host
+14:34 iyzsong joined channel
+14:34 varna: 我放弃，直接动态链接
+14:35 Izumo: git submodule init ; git submodule update
+14:35 Izumo: 这样呢
+14:36 varna: ok
+14:37 varna: 果然直接挂
+14:37 Izumo: 只开一个内核线程应该没问题
+14:37 varna: 哦我操
+14:38 varna: 知道了
+14:38 varna: 我的锅，这需要p7支持……
+14:38 Izumo: ……
+14:38 varna: 是这样的
+14:38 varna: 在main里面初始化了对吧
+14:38 varna: 那就初始化了一个线程
+14:38 varna: 你懂的
+14:39 Izumo: ……没懂
+14:39 varna: p7的结构是这样的
+14:39 varna: 初始线程自行调用调度循环
+14:39 varna: 但其余线程以调度循环为入口被创建
+14:39 varna: 我只加了一个gcc tls修饰……
+14:40 varna: 然后只有初始线程的池被初始化了
+14:40 varna: 其余的一律咣
+14:40 Izumo: ……
+14:40 Izumo: なるほど
+14:40 varna: 上游问题，但至少比较清楚
+14:40 varna: 这个暂时不管，先用I吧
+14:40 Izumo: 所以需要在每个线程创建时初始化一次？
+14:40 varna: 我需要给p7提供内核线程TLS相关的支持
+14:41 Izumo: 了解
+14:41 Izumo: 果然线程麻烦事多
+14:41 varna: 到那个做完之前K先炸着
+14:41 Izumo: fork大法好
+14:42 varna: 这个内存池是以前的东西
+14:43 varna: 本来打算写新的玩意时候用这个，不过后来我放弃了
+14:43 varna: 当时我就写了个demo, 然后查了内存，TLS什么都忘了……
+14:43 Izumo: 23333
+14:44 Izumo: 或者你不TLS，直接暴力地来一套锁？
+14:44 varna: 不好
+14:44 varna: 我希望协程不在意这个
+14:44 Izumo: なるほど
+14:44 varna: 线程再多也就几个，协程一起咣叽咣叽上锁，那简直
+14:44 Izumo: 完全就像fork一样么
+14:44 varna: 我不知道会变成什么鬼样子……
+14:45 Izumo: 另外我在考虑Header要不要实现成链表+红黑树
+14:45 varna: header?
+14:45 Izumo: HTTP Header
+14:45 varna: 为何要红黑树，你要检索么
+14:46 Izumo: Header是要检索的
+14:46 varna: 做个散列表行了
+14:46 Izumo: 但是一般Header也就十个左右……
+14:46 FrankHB joined channel
+14:46 varna: 那先不管
+14:46 Izumo: 也成
+14:46 varna: 操，这演习要输
+14:46 Izumo: 我想这么搞，但感觉很可能不值
+14:47 Izumo: 我上午下午各一个ASS
+14:47 varna: 谁把那个大姐姐干掉……
+14:47 varna: 不不，昼战已经大破四个了
+14:47 varna: 剩下十六万钢和矶风……
+14:47 Izumo: ……
+14:47 Izumo: 十六万钢爆个大姐姐应该还够
+14:48 varna: 输了
+14:48 Izumo: ……
+14:48 varna: 一念之差不上护航的下场
+14:48 varna: 1bb1ca4cv我用了1cl5dd去打……
+14:48 Izumo: http://tieba.baidu.com/p/3843270147 23333
+14:49 xxxxxxxx: 水雷综合征
+14:50 hoxily_ joined channel
+14:50 varna: 这叫水雷魂
+14:50 FrankHB quit:Ping timeout: 265 seconds
+14:51 hoxily- joined channel
+14:52 hoxily quit:Ping timeout: 244 seconds
+14:54 hoxily_ quit:Ping timeout: 240 seconds
+15:00 molikto quit:Remote host closed the connection
+15:01 Izumo: http://ww1.sinaimg.cn/bmiddle/6f5ef307gw1eu6q3cgjlfj20go0b43yp.jpg 镇宅用
+15:08 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+15:09 hope1_ joined channel
+15:21 varna: Izumo: 你的submodule怎么更新……
+15:22 biergaizi quit:Quit: Konversation terminated!
+15:22 varna: 进去之后pull就行？
+15:22 Izumo: 应该是
+15:23 varna: 似乎是
+15:24 varna: 通过
+15:25 libhanjian: NAPT的UDP打洞看起来是没什么可靠的方法了
+15:26 varna: Izumo: submodule要提交么？
+15:26 varna: libhanjian: 至少我不知道……
+15:26 Izumo: 好像要……
+15:27 varna: 怎么提交的……
+15:27 varna: 我查嚓
+15:27 Izumo: 罗马音算啥英文名，英文名是类似这样的：
+15:27 Izumo: 赤城 － Aluminum Ghoul
+15:27 Izumo: 龙骧 － Chopping Board
+15:27 lh_mouse quit:Ping timeout: 244 seconds
+15:30 whatofor_1 joined channel
+15:31 varna: 嚓，为什么都不写清楚怎么提交submodule变化……
+15:31 Izumo: git add?
+15:31 Izumo: 然后commit
+15:32 varna: 查到了
+15:32 varna: add - commit就行
+15:32 cleamoon joined channel
+15:32 whatofor quit:Ping timeout: 240 seconds
+15:33 varna: Izumo: 你现在再试试
+15:37 Izumo: 不炸了
+15:37 varna: 那就对了
+15:38 varna: 我刚才用ab试爆过了
+15:39 varna: c1k n10k 0.877s
+15:40 varna: 50%的请求在62ms之内得到响应，不过这数据没意义就是了
+15:41 varna: 卧槽
+15:41 varna: 单纵孙子一发把满血铝酱4/13……
+15:43 Izumo: ……
+15:44 Izumo: 不过有个问题
+15:44 varna: 什么问题
+15:45 Izumo: "Content-Length"这个字符串似乎被覆盖了
+15:45 varna: 噗？
+15:45 cleamoon quit:Ping timeout: 250 seconds
+15:45 Izumo: 你pull一下
+15:45 Izumo: 然后curl -v请求
+15:46 Izumo: 有ln54的情况下正常，没有就会bug
+15:46 varna: izumo有这个问题么
+15:46 Izumo: 有
+15:48 varna: 咦，跪掉了
+15:50 varna: 有个对齐弄错了
+15:50 varna: Izumo: 长度是520吧
+15:50 Izumo: 应该是
+15:51 varna: 出云是520 橿原是526
+15:51 Izumo: +
+15:52 varna: 你再试试
+15:52 varna: 已push
+15:52 Izumo: 正常了
+15:52 varna: ok
+15:53 Izumo: 主要是我突然发现ab的Server Software是空的……
+15:53 varna: 下回我还是得curl ab 浏览器都试试
+15:58 varna: 卧槽小和
+15:58 varna: 小和被ECA平打大破
+15:58 varna: 有闪的
+16:00 Izumo: http://tieba.baidu.com/p/3900836583 真可怕
+16:01 varna: 5L是亮点
+16:02 Izumo: 2333
+16:02 varna: 哦操
+16:02 Izumo: 海关工作人员带个手套都能骂
+16:02 Izumo: 真是可怕
+16:02 varna: 2-2沟了……
+16:02 Izumo: ……
+16:02 varna: 而且沟上进补给
+16:03 varna: 4dd围殴把撸爷干了个中破
+16:04 varna: 据此我觉得10dd干爆大和是可以的
+16:04 Izumo: 233333
+16:04 Izumo: 夭寿啦撸爷翻船啦
+16:05 varna: 有个人写后面业务逻辑就是爽快_(:з」∠)_
+16:05 varna: 我最烦HTTP那些鸟事……
+16:05 Izumo: 23333
+16:05 xxxxxxxx: 现代的导弹驱逐舰10个能干大和么?
+16:06 varna: 危险
+16:06 Izumo: 有可能能干过，也有可能谁也干不过谁
+16:06 xxxxxxxx: 还是炸不穿?
+16:06 varna: 炸不穿为主
+16:06 Izumo: 打沉别想，洗甲板可能勉强
+16:06 Izumo: 同样大和也别想干掉10DD
+16:06 varna: 导弹驱逐舰打水线也太勉强了
+16:06 varna: 但是让对方失能还是可能的
+16:06 Izumo: 追不上打不到，只能挨打
+16:08 varna: 居然有人认为水雷战队是护航的
+16:08 varna: 嗯，那些东西最不会的就是护航
+16:09 varna: 哦操
+16:09 varna: 2-2二连沟
+16:09 varna: 路线都是一样的
+16:09 xxxxxxxx: 不是用来护航的么? 
+16:10 xxxxxxxx: 护航失败了还能回家
+16:10 varna: 水雷战队是用来冲上去对敌方水面部队造成损害的……
+16:10 varna: 不然该多装高射炮
+16:14 varna: 出动了比较抗压的轻母就进去了
+16:14 varna: 然后俩WO...
+16:16 varna: 总之是做完了
+16:16 varna: 空袭打残一个，绫波打哑一个
+16:24 Izumo: 恶魔之时: 回复 擦叻二天一 :齐柏林比较抗炸啊，不像信泷被美国的潜艇给沉了。 
+16:24 Izumo: 大脑是个好东西
+16:24 varna: ...
+16:25 varna: 还好他没说大凤一雷沉，不然黑点更多
+16:26 Izumo: 先不说希佩尔级防护能不能叫抗炸
+16:26 Izumo: 炸弹和鱼雷是一回事么……
+16:26 varna: 跟这些人解释是没用的
+16:27 varna: 对德棍的标准回应：「你这非雅利安人傻逼」
+16:27 Izumo: 233333
+16:27 Izumo: 父母生我支那身，地摊赐我德三心
+16:28 varna: 活得真辛苦
+16:29 Izumo: 底下还有另一个喊齐柏林设计不错的
+16:29 molikto joined channel
+16:33 varna: 窃以为德棍仍然应该组织HK官网一日游
+16:34 varna: 「我们的枪被太阳晒了之后没有任何问题！客户都说好！」
+16:34 Izumo: 2333
+16:34 varna: 实际的情况是这样的
+16:35 varna: G36在炎热地区作战的时候，被太阳晒了出现故障
+16:35 varna: 故障太多被人黑，HK开始在官网上放五毛广告
+16:35 varna: 后来还出了个宣传片宣传自己厂子，然而通篇的主角是手枪，并没有多提G36……
+16:36 Izumo: 2333
+16:36 Izumo: 德棍会用自己的身体挡住太阳
+16:36 Izumo: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=1f1cf1bdaf014c08193b28ad3a400308/7acb0a46f21fbe099d5bbf006d600c338744ad99.jpg 今天份的笑话*2
+16:36 varna: ...
+16:36 Izumo: 这个跟牛逼
+16:36 Izumo: 更*
+16:36 Izumo: 不是翻船了，干脆直接让船体受不了
+16:37 varna: 不忍直视
+16:38 Izumo: http://tieba.baidu.com/p/3900623126?pn=2 58L
+16:38 Izumo: 战列舰吧观光团已经过去了
+16:40 varna: 然而他并没说清楚几个问题
+16:40 varna: 其一，何谓齐射
+16:40 varna: 其二，影响了什么
+16:40 varna: 光拿着一句cite说事，这跟抢占道德新高峰有毛蛋差别
+16:41 Izumo: yuki8301: 回复 616804891 :你不考虑炮台强度了？扶桑级356的发射冲击力和46能比？9管齐射当然可以，然后炮台就飞了。大和级本身就是很紧凑的设计，强度上达不到9管齐射的要求。当年美国战后接收资料后模拟重建大和，结果船身是大和的一倍。 
+16:41 Izumo: 炮台就飞了
+16:41 molikto quit:Remote host closed the connection
+16:41 varna: 炮台飞了脑补太大
+16:41 varna: 我只能求计算
+16:42 varna: 不然我可以指出层主全力咀嚼的时候牙缝会错位
+16:42 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=e5febdeca186c91708035231f90671cf/aa18972bd40735fa96f917ad98510fb30f24089c.jpg 夏天了啊
+16:42 Izumo: 233333
+16:42 Izumo: 日常1/1
+16:42 molikto joined channel
+16:43 varna: 弄点咖啡喝
+16:45 Izumo: 哦对了
+16:45 Izumo: varna: http://www.zhanliejian.com/navweaps/index_weapons.htm
+16:45 varna: 哦哦，这是他们的镜像啊
+16:45 Izumo: +
+16:46 Izumo: An experimental gun begun shortly after the end of World War I and sometimes confused with the 46 cm/45 (18.1") 5th Year Type.  Two prototypes were produced at the Kure Navy Yard, but the first one split during test firing.  Work was halted by the Japanese signing of the Washington Naval Limitation Treaty, but resumed starting in November 1935 to test the protection system of what became the Yamato class 
+16:46 Izumo: battleships.  The second gun was found by the US occupation forces at the Kamegakubi proving grounds in December 1945.  It was apparently destroyed a short time later.
+16:46 Izumo: ^480炮
+16:46 varna: 还是吴厂的东西……
+16:46 Izumo: 而且他们还为这炮造过91……
+16:46 Izumo: 不过美国人也搞过16in/56
+16:47 varna: 16in?
+16:47 Izumo: 16in
+16:47 varna: 一个变长了的41炮……
+16:47 Izumo: 出膛速度3000ftps
+16:48 libhanjian: 白羽
+16:48 libhanjian: 这个代号掉包了
+16:48 libhanjian: 碉堡了 
+16:48 varna: 噗
+16:48 Izumo: 比50倍径和45倍径性能都要好
+16:48 varna: 白习习……
+16:48 Izumo: 然而身管寿命只有25发
+16:48 libhanjian: 習
+16:48 varna: no zuo no die...
+16:48 Izumo: 啊，125发
+16:49 Izumo: 其实这玩意最早是18in/48 MkI
+16:49 Izumo: 结果一个条约下来来
+16:49 Izumo: 他们就把内膛换了……
+16:51 varna: 我猜这把小卷要摔
+16:51 varna: 啊，失禁风
+16:54 molikto_ joined channel
+16:54 molikto quit:Read error: Connection reset by peer
+16:54 varna: http://tieba.baidu.com/p/3902931813?fr=frs 驱逐伊级发现
+16:55 Izumo: 233333
+16:57 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+16:57 hope1_ joined channel
+17:01 xxxxxxxx: 抱歉，根据相关法律法规和政策，本吧目前仅允许4级头衔以上会员发贴 <- 法律法规?
+17:03 Asuka joined channel
+17:05 Izumo: 孙吧很久之前就被上了等级墙了吧
+17:06 Izumo: 噗
+17:06 Izumo: H39也是垂直主装啊……
+17:11 varna: 喝点咖啡悠闲一下
+17:12 varna: 说起来，izumo的epoll形态是什么样的
+17:12 xxxxxxxx: 今天有尿味么?
+17:12 varna: 还是现在这样么
+17:12 varna: xxxxxxxx: 今天没有了
+17:12 Izumo: 这两天懒，event loop没太动
+17:12 Izumo: 形态指？
+17:13 varna: 就说event loop
+17:13 libhanjian: 这几天才发现，斩舰刀的eventList是LIFO
+17:14 varna: libhanjian: 说起来，你们用的是现在那个plus还是以前的版本
+17:14 Izumo: 斩舰刀是？
+17:14 varna: ngx
+17:14 Izumo: 为啥叫斩舰刀
+17:14 libhanjian: varna, 一直都是Tengine
+17:14 varna: 是个比喻
+17:14 varna: libhanjian: 那是个什么，customized ngx?
+17:15 libhanjian: 和NginxPlus异曲同工
+17:15 Izumo: 淘宝改过的ngx
+17:15 varna: 明白了
+17:15 varna: 那听起来挺有搞头……
+17:15 molikto_ quit:Ping timeout: 264 seconds
+17:15 libhanjian: 还有大量的Feature不适合开源出来
+17:15 Izumo: Izumo的处理流程基本上就是epoll_wait -> timeout -> io -> delayed
+17:16 molikto joined channel
+17:16 varna: 想了想，我就不给你推荐intel限定的爆炸物了
+17:16 Izumo: 爆炸物可以扔进Kashiwara
+17:17 Izumo: 或者再fork一个Akagi
+17:17 varna: 有点麻烦
+17:17 varna: 我说的爆炸物基本都会影响基本构造
+17:17 varna: 先不用了吧
+17:18 Izumo: 也成
+17:25 varna: 毕竟这次橿原的爆炸物试验已经超乎我想像地成功了
+17:32 xxxxxxxx: 超乎想象的爆炸了?
+17:34 varna: 能用而且没漏
+17:35 Asuka quit:
+17:35 xxxxxxxx: 美军又撤退了
+17:38 Izumo: varna: pool.c ln60是干嘛的……
+17:38 Izumo: 哦，懂了
+17:38 Izumo: 我没注意那是个=而非==
+17:40 varna: ...
+17:41 Izumo: 主要是gcc弹了个warning出来
+17:41 Izumo: 现在闭嘴了
+17:41 varna: 申请的时候用的是major
+17:41 varna: 但传递的时候用的始终是第一个池
+17:42 varna: 其实这是我以前的考虑方式
+17:42 varna: 如果现在的话，也许会用一个什么东西把pool统合起来管
+17:44 varna: Izumo: 另外提一句，单池尺寸和大块阈值是我瞎写的
+17:44 varna: 你要用的话别信我那些口胡
+17:45 Izumo: ……
+17:45 Izumo: 了解
+17:45 varna: 我胡写了个单池8K大块4K
+17:45 Izumo: 这个写进config.h吧
+17:45 varna: 对
+17:46 varna: 这是可以配置的东西
+17:46 varna: 包括内存池失败次数什么的
+17:47 varna: 失败次数决定在一个池上申请失败的容忍次数，不能容忍的情况下它不再是major
+17:47 varna: 如果失败但可以容忍，那么会挂一个新池上去备用，但major不变
+17:47 Izumo: 我先用你口胡的，之后再改
+17:48 varna: ok
+17:51 Izumo: 说起来cap是干嘛的
+17:52 varna: psize是每池大小，cap是容许被池化的对象数目
+17:52 varna: drain在cap容许范围内回收对象（但是卸大块）
+17:52 varna: 如果超过cap, drain就是destroy
+17:52 Izumo: naruhodo
+17:54 Izumo: 另外你那个util_heap我直接偷走了啊
+17:57 varna: 这部分我唯一有点不爽的是本地仓库有个重复，不过没办法
+17:58 varna: 头文件你通过目录misc来区别吧
+17:58 varna: 然后加上前缀
+17:58 Izumo: 了解
+17:58 varna: 这样冗余的锅只是p7的
+17:58 varna: 主要的锅是我考虑得不好
+17:58 varna: 为了作死，有些东西黏一起了
+17:59 Izumo: 或者我撸一套单独的list和heap，然后改改mempool
+17:59 varna: 不用
+17:59 varna: util_list和heap直接用行了
+17:59 Izumo: 其实我有往windows上移植的考虑……
+17:59 varna: 单独写也是重复，没差的
+17:59 varna: p7至少依赖少，改起来容易
+18:04 cleamoon joined channel
+18:06 ASenR joined channel
+18:11 Izumo: 另外compare_func返回-1是false？
+18:12 varna: 我看一眼
+18:12 varna: Izumo: 三路比较
+18:12 varna: 例子可以看p7 ln309
+18:13 varna: lt=-1 eq=0 gt=1
+18:13 Izumo: 了解
+18:15 shui_code joined channel
+18:16 cleamoon: 我突发奇想了一个，把比较结果指针当作参数一起传递，return异常
+18:18 varna: 难看
+18:19 varna: return status的事情我很多时候是在和系统调用统一口径的时候才做的
+18:19 cleamoon: c不是没有异常处理嘛，所以只能这样，要不永远return一个pair
+18:21 Izumo: http://tieba.baidu.com/p/3903300289 玄学汽水只喝一半的后果
+18:21 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/sh/nk_21793.jpg  等身抱枕...
+18:22 varna: cleamoon: 但是出参我一般能不用则不用了
+18:22 varna: 如果可能的话区别一下返回值，如果作死的话么——你知道该怎么爆炸……
+18:23 cleamoon: 之前我完全不考虑异常的... 被小耗影响了...
+18:24 varna: 但是C的话，很多事情需要调整
+18:24 varna: 照搬容易更难看，君不见各种自居面向xx的伙计造出来那一堆丑陋玩意儿
+18:25 cleamoon: c就是void*好看
+18:27 varna: void *我巨烦
+18:27 varna: 然而我也没更多办法
+18:27 varna: 抬手一个void (*)(void *)捆绑一个void *的事情绝非少见
+18:27 varna: 要不就引入爆炸物
+18:28 cleamoon: 阿武隈改二，厉害吗？
+18:28 varna: void (*)(void *)变成void (*)(void)
+18:28 varna: 不错
+18:28 varna: 但是要图纸
+18:28 cleamoon: 爆炸物不是必须的嘛
+18:28 cleamoon: 爆炸就是艺术
+18:29 libhanjian: void (*)(void *)，"万能"指针
+18:29 libhanjian left channel:"Leaving"
+18:29 libhanjian joined channel
+18:29 libhanjian: 我记得BSD党的内核里就一堆void (*)(void *)
+18:30 libhanjian: 几乎是把void *当异构数组在用了
+18:30 cleamoon: 没满眼goto就不错了...
+18:31 cleamoon: 有哪个源码满眼goto但是还活着的软件吗？
+18:31 Izumo: Izumo
+18:31 varna: linux
+18:32 xxxxxxxx: 谁搞个充满恶意的软件?
+18:32 cleamoon: 把c当lisp写
+18:45 varna: 充满恶意啊
+18:45 varna: 有人想试用WHObuki么
+18:47 cleamoon: 或者用羊陀子的perl写lisp style的c
+18:55 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+18:55 hope1_ joined channel
+18:59 FrankHB joined channel
+19:09 shui joined channel
+19:11 shui_code quit:Ping timeout: 255 seconds
+19:11 Izumo: http://ww2.sinaimg.cn/bmiddle/e4ff1178jw1eu740bbpaij20i80ebtbv.jpg 神抱枕
+19:14 sismvg joined channel
+19:14 varna: 吃饭去
+19:14 sismvg: 这几天面试，发现了各个HR对通宵态度的不同。
+19:15 sismvg: 一个说怎么可以不通宵呢。老板给你钱你不能坐在那里吧
+19:15 sismvg: 另一个说通宵这种事情偶尔一次可以，要不然就是玩命呢
+19:15 sismvg: -
+19:15 sismvg: 看来第一个HR其实是老板
+19:20 cleamoon quit:Ping timeout: 264 seconds
+19:37 cleamoon joined channel
+20:02 FrankHB quit:Remote host closed the connection
+20:02 FrankHB joined channel
+20:06 molikto quit:Remote host closed the connection
+20:06 molikto joined channel
+20:18 molikto quit:Remote host closed the connection
+20:18 varna: 查了下论文转投，十天就给我外审去了……
+20:18 hoxily quit:Quit: Leaving
+20:18 varna: 某学报理学版略拼啊
+20:19 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+20:19 hope1_ joined channel
+20:19 cleamoon: 论文允许一次投好几个不同的地方吗
+20:20 varna: 严格禁止
+20:20 iyzsong: <_<
+20:20 varna: 被发现的话处分很严重的
+20:20 cleamoon: ......
+20:21 cleamoon: 为毛
+20:21 cleamoon: 多挣点稿费而已
+20:21 varna: 一般来说期刊的录用数目都有限
+20:21 varna: 如果多处accept容易挤占他人资源
+20:22 cleamoon: soga
+20:22 varna: 所以规矩是被明确拒绝或者在录用意见出来之前自主放弃的话，才可以投别的
+20:22 varna: 当然有作死的
+20:22 varna: 比如以为把文章译成日文就不会死，结果不小心死了的……
+20:23 varna: 另外往学术期刊投稿，即使通过最正常的途径也是要作者花钱的
+20:24 varna: 基本上关系是期刊录用=对作者工作的正式评定，而被录用工作的作者有义务支持这期刊——具体来说就是出审稿费和版面费
+20:24 varna: 投稿基本上是requirements和fame的事情
+20:27 cleamoon: soga
+20:30 varna: 另外明天我会放出下次推演的地图和阵容
+20:31 cleamoon: 谁干谁？
+20:31 Izumo: 了解
+20:32 varna: 红旗和他的熟人，脑洞的机动部队作战
+20:34 molikto joined channel
+20:35 cleamoon quit:Ping timeout: 240 seconds
+20:39 sismvg: 突然发现旭日战役第一关和偷袭珍珠港差不都..都是拿小型潜艇打船.
+20:41 varna: 珍珠港的甲标的是个……笑话
+20:41 Izumo: @有去无回甲标的 
+20:41 varna: 那个没死的没被封军神
+20:42 varna: 另外甲标的最终型号提高了命中率（理论）
+20:42 varna: code_new以前那种直接指明敌舰投放的指令也可以完善（迫真）地实现
+20:44 cleamoon joined channel
+20:44 Izumo: ……
+20:44 molikto quit:Read error: Connection reset by peer
+20:45 molikto joined channel
+20:45 varna: 当然那时候八万钢在不在又是另一回事了
+20:46 cleamoon: 培养几个新军 事 家好打中途岛
+20:47 varna: 大家都不太想玩这种麻烦游戏……
+20:47 varna: 估计桌上游戏号召人来玩DND都比这人气高
+20:47 Izumo: 我很喜欢啊
+20:47 Izumo: 只要我不当裁判
+20:47 varna: 233333
+20:48 Izumo: 另外下次我问问深海那位有没有兴趣打珊瑚海吧
+20:48 Izumo: 老让羊驼子当裁判感觉有点可怜
+20:48 varna: 没事
+20:48 varna: 我蛋疼了就去打空母决战……
+20:49 Izumo: 233333
+20:49 Izumo: 武大决战
+20:49 cleamoon: 没事，他是抖M
+20:49 varna: 武大决战那两面我不打了
+20:49 varna: 打过三遍之后我真不想打了
+20:50 varna: 灭掉对面一票子任务部队之后，突入莱特湾的武大游击部队只有两个没大破的
+20:50 Izumo: ……
+20:51 cleamoon: 哦，任务单位不变的游戏类型呀... 略坑
+20:51 varna: 而且那关算重大战果的不是战列舰，是小泽队
+20:51 varna: 只要他们送了，就会输
+20:52 varna: 当然如果只灭掉了登陆部队也会输
+20:52 varna: 论游戏性还是前面几关好玩点……
+20:54 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+20:54 Izumo: ……
+20:54 hope1_ joined channel
+20:58 cleamoon quit:Ping timeout: 252 seconds
+21:05 molikto quit:Remote host closed the connection
+21:07 molikto joined channel
+21:07 shui quit:Ping timeout: 255 seconds
+21:13 lh_mouse joined channel
+21:15 hope1_ quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:17 lh_mouse: git submodule 大傻逼
+21:18 lh_mouse: 必须得先 init 再 update
+21:19 Izumo: 26楼 1250164200俾斯麦装甲防护性能其实是战列舰第一，德国采用的钢板质量远高于其他各国，德国的360毫米钢板相当于日本的648毫米到720毫米，德国的水下TNT威力极大，大和能承受住400吨日本水下TNT，可连200吨的德国TNT都承受不住，美国的300吨TNT也就相当于250吨德国TNT左右与俾斯麦相当，由此可见俾斯麦的防
+21:19 varna: git用得多，我就想念svn
+21:19 Izumo: 护性能高于大和等于衣阿华。
+21:19 Izumo: 这是一条来自铁血的笑话
+21:19 varna: 铁血一堆逗比
+21:19 FrankHB quit:Read error: Connection reset by peer
+21:20 Izumo: 德国产的三硝基甲苯爆炸起来威力都比日本的三硝基甲苯大
+21:20 lh_mouse: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { friend foo<Args...>; }; template bar<int, int>;
+21:20 geordi: error: expected unqualified-id before ';' token
+21:20 lh_not_bot: geordi: insert  class after friend
+21:20 geordi: Same error.
+21:21 lh_not_bot: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { friend template foo<Args...>; }; template bar<int, int>;
+21:21 geordi: error: expected unqualified-id before 'template'
+21:21 varna: 卧槽刷闪大破
+21:21 Izumo: Q:
+21:21 Izumo: Q:BIG7哪艘最强，哪艘最弱？
+21:21 lh_not_bot: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { template<typename ...> friend foo; }; template bar<int, int>;
+21:21 geordi: error: invalid use of template-name 'foo' without an argument list
+21:21 Izumo: A:最弱不好说，不过
+21:21 Izumo: 陆奥最强有战绩就是值回造价，什么皮厚魔改都是浮云情怀，单杀大7的情怀
+21:21 lh_not_bot: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { template<typename ...> friend class foo; }; template bar<int, int>;
+21:21 geordi: error: expected unqualified-id before ';' token
+21:21 varna: 刷闪大破还得个A
+21:21 varna: 陆奥正解
+21:21 lh_not_bot: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { template<typename ...> friend class foo; }; template class bar<int, int>;
+21:21 geordi: Success
+21:21 varna: 其他六舰干掉过同级大战舰么？
+21:22 lh_not_bot: geordi, -c template<typename ...Args> struct foo { }; template<typename ...Args> struct bar { friend foo<Args...>; }; template class bar<int, int>;
+21:22 geordi: Success
+21:22 Izumo: 陆奥战绩强过俾斯麦
+21:24 lh_mouse quit:Disconnected by services
+21:28 sismvg: 服务器的log文件位置应该出现在构造函数中吗？
+21:29 lh_not_bot: varna: svn 1.8 > git > svn 1.6
+21:32 shui joined channel
+21:33 libhanjian quit:Quit: Leaving
+21:36 Izumo: http://imgsrc.baidu.com/forum/w%3D580/sign=19b335a0fd1986184147ef8c7aef2e69/95e0b81f4134970a9ae6a0ee90cad1c8a6865d09.jpg 某人民教师的PC内存居然有24G……
+21:37 Izumo: 他娘的资本主义
+21:41 iyzsong: orz
+21:41 iyzsong: 2G的爬过
+21:50 LittleKey joined channel
+21:59 FrankHB joined channel
+21:59 tutu_wind quit:Ping timeout: 244 seconds
+22:00 varna quit:Quit: leaving
+22:06 LittleKey quit:Ping timeout: 250 seconds
+22:06 sismvg: i7 990x才是重点啊 6300一个啊..24G内存才2500,打折能2200买到..
+22:08 sismvg: 说来日本好像不是资本主义
+22:11 endle joined channel
+22:17 lh_cat joined channel
+22:18 lh_cat: meow
+22:20 LittleKey joined channel
+22:25 sismvg: 再等等就能上32G内存了
+22:26 sismvg: 到时候开16GB做测试用缓存,再也不怕性能测试解析要半天了
+22:28 shui quit:Ping timeout: 246 seconds
+22:29 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 39.0/20150630154324]
+22:32 LittleKey quit:Ping timeout: 264 seconds
+22:33 shui joined channel
+22:34 boosure quit:Quit: Get your hand off of it
+22:37 lh_mouse joined channel
+22:45 shui quit:Read error: Connection reset by peer
+22:45 tutu_wind joined channel
+22:46 shui joined channel
+22:48 FrankHB quit:Read error: Connection reset by peer
+22:48 FrankHB joined channel
+22:55 shui1 joined channel
+22:56 shui quit:Ping timeout: 264 seconds
+22:58 tutu_wind quit:Ping timeout: 260 seconds
+22:58 tutu_wind joined channel
+22:58 lh_mouse quit:Read error: Connection reset by peer
+22:59 lh_mouse joined channel
+23:53 tutu_wind: 晚安 ~ 么么 ~ 
+23:53 tutu_wind left channel:"碎觉 ~"

@@ -1,0 +1,132 @@
+00:32 varna quit:Ping timeout: 256 seconds
+00:53 Meow-J quit:Remote host closed the connection
+00:53 Meow-J joined channel
+01:17 iyzsong-m joined channel
+01:18 iyzsong-m: (#･∀･)
+01:25 lh_mouse quit:Ping timeout: 260 seconds
+01:25 fy quit:Remote host closed the connection
+01:25 fy joined channel
+01:30 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+01:40 Stevearzh quit:Ping timeout: 260 seconds
+02:08 Mokou quit:Remote host closed the connection
+03:04 xxxxxxxx joined channel
+03:05 xxxxxxxx quit:Client Quit
+04:25 cleamooon quit:Quit: Connection closed for inactivity
+05:26 cleamoon joined channel
+05:27 cleamoooon quit:Ping timeout: 260 seconds
+08:10 Youmu quit:Quit: Connection closed for inactivity
+09:09 cleamooon joined channel
+09:10 yimis joined channel
+09:11 yimis quit:Client Quit
+09:36 iyzsong-w joined channel
+09:48 Youmu joined channel
+10:21 vxcoder joined channel
+10:25 Mokou joined channel
+11:55 danny1 joined channel
+12:24 lh_mouse joined channel
+12:24 iyzsong-w quit:Ping timeout: 258 seconds
+12:26 lh_mouse quit:Read error: Connection reset by peer
+12:26 lh_mouse joined channel
+12:32 whocares_2_ joined channel
+12:33 whocares_2 quit:Ping timeout: 240 seconds
+12:47 Dove joined channel
+12:48 T2 joined channel
+12:49 Dove quit:Client Quit
+12:59 l0nGYear_test joined channel
+13:12 l0nGYear_test_ joined channel
+13:14 l0nGYear_test quit:Ping timeout: 240 seconds
+13:28 Guest71824 joined channel
+13:28 StardustX quit:Quit: ZNC - http://znc.in
+13:29 StardustX joined channel
+13:42 iyzsong-w joined channel
+13:44 Guest71824 quit:Quit: i borked it
+13:53 l0nGYear_test joined channel
+13:55 l0nGYear_test_ quit:Ping timeout: 260 seconds
+14:24 cleamoon quit:Ping timeout: 258 seconds
+14:25 T2 quit:Ping timeout: 260 seconds
+14:35 cleamoon joined channel
+15:00 whatofor quit:Read error: Connection reset by peer
+15:00 whatofor joined channel
+15:12 lh_mouse: geordi, << typeinfo(); 
+15:12 geordi: error: 'typeinfo' was not declared in this scope
+15:12 lh_mouse: geordi, << type_info(); 
+15:12 geordi: error: no matching function for call to 'type_info::type_info()'
+15:25 iyzsong-w quit:Ping timeout: 258 seconds
+15:29 iyzsong-w joined channel
+16:14 danny1 joined channel
+16:22 T2 joined channel
+16:25 cleamoooon joined channel
+16:28 cleamoon quit:Ping timeout: 260 seconds
+16:30 l0nGYear_test quit:Ping timeout: 258 seconds
+16:30 l0nGYear_test joined channel
+17:38 l0nGYear_test_ joined channel
+17:40 l0nGYear_test quit:Ping timeout: 260 seconds
+17:47 danny1 quit:Quit: Leaving...
+17:51 lh_mouse: geordi, << type_info() < type_info(); 
+17:51 geordi: Same error.
+17:51 lh_mouse: geordi, << foo() < foo(); const std::type_info & foo();
+17:51 geordi: error: no match for 'operator<' in 'operator<< <char, char_traits<char> >(cout, (* & foo())) < foo()' (operand types are 'ostream' and 'const type_info')
+17:52 lh_mouse: geordi, -c << (foo() < foo()); const std::type_info & foo();
+17:52 geordi: error: no match for 'operator<' in 'foo() < foo()' (operand types are 'const type_info' and 'const type_info')
+17:52 lh_mouse: geordi, -c << (foo() != foo()); const std::type_info & foo();
+17:52 geordi: Success
+18:19 vxcoder quit:
+18:20 lh_mouse quit:Read error: Connection reset by peer
+18:20 lh_mouse joined channel
+18:28 iyzsong-w quit:Quit: ZNC 1.6.4 - http://znc.in
+18:43 perr joined channel
+19:44 T2 quit:Ping timeout: 260 seconds
+20:01 T2 joined channel
+20:03 l0nGYear_test_ quit:Ping timeout: 256 seconds
+21:14 varna joined channel
+21:14 varna: (｡･ω･)
+21:20 Meow-J quit:Remote host closed the connection
+21:20 Meow-J joined channel
+21:24 fy1 joined channel
+21:24 fy quit:Remote host closed the connection
+21:25 lh_mouse: (｡･ω･)
+21:25 lh_mouse: varna, 怎么教人用 att 语法。
+21:26 varna: lh_mouse: 让他们在厕所里读手册，看看哪个味道更大
+21:26 lh_mouse: perfect.
+21:34 cleamoooon quit:Ping timeout: 264 seconds
+21:34 cleamoon joined channel
+21:36 varna: (｡･ω･)ﾉ等会儿就能拿到斯登酱的结婚礼服了
+21:37 varna: (｡･ω･)ﾉ http://weibo.com/1936540534/ExNNw5mPm?type=comment#_rnd1490189094871 这个样的
+21:37 Mokou: 秃TL
+21:37 Mokou: http://bangumi.bilibili.com/anime/1732/ 官方有病系列
+21:38 Mokou: 啊
+21:38 Mokou: 1080p的魔伊下完了
+21:38 varna: Mokou: 这个礼服只要小活动拿1650积分就可以了
+21:38 Mokou: _(:з」∠)_懒得开少前
+21:39 Mokou: FGO双修已经快把我肝废掉了
+21:39 f0ry joined channel
+21:39 f0ry quit:Remote host closed the connection
+21:40 iyzsong-m joined channel
+21:40 iyzsong-m: (#･∀･)
+21:42 varna: 现在每天目睹Java用户们瞎丁日用线程，我越来越信仰IO密集的协作式调度了
+21:42 iyzsong-m: 2333
+21:46 cleamoooon joined channel
+21:49 cleamoon quit:Ping timeout: 240 seconds
+21:49 varna: oooo
+21:50 varna: 啊哈哈！拿到啦！
+21:51 Mokou: OTL
+21:51 iyzsong-m quit:Ping timeout: 260 seconds
+21:52 varna: 2.4k分还有一百个采购币，看看能不能拿下
+21:53 varna: 卧槽大破没和谐
+21:53 varna: 有关部门都哪去了
+21:54 Stevearzh joined channel
+22:05 perr quit:Remote host closed the connection
+22:25 cleamooon quit:Quit: Connection closed for inactivity
+22:29 Mokou: http://wx3.sinaimg.cn/mw690/90737957gy1fdvmhp4b4sj20gr0aeah5.jpg
+22:55 cleamoon joined channel
+22:57 cleamoooon quit:Ping timeout: 260 seconds
+22:59 cleamooon joined channel
+23:00 cleamoon quit:Ping timeout: 246 seconds
+23:25 T2 quit:Read error: Connection reset by peer
+23:47 whatofor quit:Ping timeout: 264 seconds
+23:52 lh_mouse: geordi, --2011 { static_cast<int []>({1,2,3,4,5}); }
+23:52 geordi: error: expected primary-expression before '{' token
+23:52 lh_mouse: geordi, --2011 { using T = int []; T{1,2,3,4,5}; }
+23:52 geordi: <no output>
+23:54 lh_mouse: geordi, --2011 { int[]{1,2,3,4,5}; }
+23:54 geordi: error: decomposition declaration only available with -std=c++1z or -std=gnu++1z

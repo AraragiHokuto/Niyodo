@@ -1,0 +1,29 @@
+00:02 codenew_ joined channel
+00:02 codenew quit:Read error: Connection reset by peer
+00:32 lh_not_bot quit:Ping timeout: 264 seconds
+00:33 lh_not_bot joined channel
+00:36 lh_mouse: http://www.managershare.com/2011/02/09/common-misunderstandings-and-logical-fallacy-summary/
+00:42 wlemuel quit:Quit: Lost terminal
+01:11 lh_mouse: geordi, -c { foo f; auto f2 = f; } struct foo { foo(){ } template<typename T> foo(T){ BARK; } };
+01:11 geordi: Success
+01:11 lh_mouse: geordi, { foo f; auto f2 = f; } struct foo { foo(){ } template<typename T> foo(T){ BARK; } };
+01:11 geordi: <no output>
+01:11 lh_mouse: geordi, { foo f; auto f2 = f; } struct foo { foo(){ } template<typename T> foo(const T &){ BARK; } template foo<foo>(); };
+01:11 geordi: error: expected '<' before 'foo'
+01:11 lh_mouse: geordi, { foo f; auto f2 = f; } struct foo { foo(){ } template<typename T> foo(const T &){ BARK; } };
+01:11 geordi: <no output>
+01:13 codenew_ quit:Ping timeout: 264 seconds
+01:13 Mokou: 睡觉
+01:13 Mokou: 诸君武运
+01:13 Mokou quit:Quit: 睡觉
+01:51 ASenR joined channel
+02:02 ASenR_ joined channel
+02:02 ASenR quit:Quit: Reconnecting
+02:07 lhanjian_ quit:Remote host closed the connection
+02:39 ASenR quit:Quit: leaving
+02:41 ASenR joined channel
+02:42 ASenR quit:Client Quit
+02:53 cafebeef quit:Disconnected by services
+02:59 boosure joined channel
+03:56 hope1 quit:Read error: Connection reset by peer
+03:56 hope1 joined channel

@@ -1,0 +1,866 @@
+00:02:Plough quit:Remote host closed the connection
+00:16:cleamoon joined channel
+00:49:erhandsome quit:Ping timeout: 245 seconds
+00:54:erhandsome joined channel
+01:14:erhandsome quit:Quit: leaving
+01:23:lh_mouse quit:Quit: :Christmas night
+03:50:xxxxxxxx quit:Quit: Leaving...
+05:13:cleamoon_ quit:Quit: Leaving
+05:13:cleamoon_ joined channel
+06:32:cleamoon quit:Remote host closed the connection
+08:24:Sleepwalking joined channel
+08:41:xxxxxxxx joined channel
+09:11:iyzsong joined channel
+09:17:Xilzzerts joined channel
+09:47:whatofor joined channel
+09:53:xxxxxxxx: 昨天晚上有多少人现充去了?
+09:55:lh_cat: meow
+09:57:lh_mouse joined channel
+10:31:sismvg joined channel
+10:31:sismvg: http://tieba.baidu.com/p/3488151792
+10:32:sismvg: 我们从此再也未看见那天我们所见到的香菜的笑容
+10:34:FrankHB: ctmlgb xcb_send_event
+10:40:FrankHB: 辣鸡，还不如XSendEvent把参数类型写清楚了。
+10:49:OO_after quit:*.net *.split
+10:51:OO_after joined channel
+10:51:iyzsong: 0.0
+11:00:xxxxxxxx quit:Read error: Connection reset by peer
+11:00:xxxxxxxx joined channel
+11:02:hope1 joined channel
+11:25:hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+11:31:lh_mouse: geordi, { derived d; shared_ptr<derived> empty(shared_ptr<void>(), &d); auto p = static_pointer_cast<base>(empty); cout <<p; } struct base { }; struct derived : base { };
+11:31:geordi: 0x7fff4ce7207f
+11:31:lh_mouse: geordi, { derived d; shared_ptr<derived> empty(shared_ptr<void>(), &d); auto p = static_pointer_cast<base>(empty); cout <<p, p.use_count(); } struct base { }; struct derived : base { };
+11:31:geordi: 0x7fffd3a1d20f, 0
+11:57:erhandsome joined channel
+12:04:iyzsong quit:Quit: WeeChat 1.0.1
+12:38:sismvg quit:Read error: Connection reset by peer
+12:39:sismvg joined channel
+12:39:sismvg quit:Client Quit
+12:40:lh_mouse: http://www.acfun.tv/v/ac1630969
+12:44:lh_mouse quit:Read error: Connection timed out
+12:45:lh_mouse joined channel
+12:56:erhandsome quit:Ping timeout: 256 seconds
+12:57:erhandsome joined channel
+13:05:T2 joined channel
+13:13:lh_mouse quit:Read error: Connection timed out
+13:14:T2: 国家明确认定的邪教组织共21个：小学生兄弟会、阳炎爆破敢死队、E3神教、索尼大法、东方大法、V+厨、东山文化、舰娘提督会、都是时臣的错真理会、LL大法、买买买神教、金坷垃护卫队、蓝猫神教、神船大法、梁逸峰神教、兄贵哲♂学研究会、FFF异端审判会、德国骨科、之后干了个爽协会、元首皇家骑士团、有钱就是任性委员会。
+13:14:lh_mouse joined channel
+13:17:dantmnf: 噗
+13:27:T2: 2333
+13:33:GODDOG joined channel
+14:01:Xilzzerts: 最近似乎GFW加强了啊
+14:04:T2: 无所谓吧
+14:06:Xilzzerts: 没Google这工作能力得少不少啊
+14:06:T2: www.search.com
+14:07:T2: 谷歌学术能打开吧？
+14:07:T2: 好吧打不开
+14:08:erhandsome quit:Ping timeout: 252 seconds
+14:10:T2: Xilzzerts, startpage.com
+14:11:T2: 这个好像也打不开了。
+14:11:T2: NBNB
+14:17:hysw: T2:交出智商或者Quadro K6000
+14:17:T2: hysw, 我在死记硬背物理中，没有多余的智商了。
+14:18:hysw: 给QuadroK6000
+14:21:T2: hysw, 没钱
+14:24:GODDOG quit:Ping timeout: 250 seconds
+14:24:GODDOG joined channel
+14:31:xxxxxxxx quit:Read error: Connection reset by peer
+14:48:condy joined channel
+14:50:lh_mouse: condy, 爆照
+14:50:condy: Yada!
+14:50:lh_cat: condy: 爆照
+14:50:condy: hentai!
+14:50:condy: H!
+14:51:lh_cat: condy 原来要 H
+14:51:lh_cat: 你想被谁 H 
+14:51:condy: ...
+14:51:condy: 乃萌这些hentai!
+14:55:* lh_mouse 满脑子 H 的 condy 
+14:57:* condy 人家才没有呢！
+14:59:T2: = =
+15:45:varna joined channel
+15:45:varna: Sleepwalking: 爆
+15:46:varna: \u: 之前忘问个事情……
+15:48:varna: \u: 神犇的类型推断是否支持（伪语言）letrec fg = (letrec f = \x.(snd fg) x, g = \y.y + ((fst fg) y) in [f, g]) in fg # 其中[f, g]是一个有序对，fst和snd分别取对的第一元和第二元
+15:49:varna: 以前做algorithm W用这么个样例把自己爆了
+16:43:GODDOG quit:Quit: leaving
+16:54:hope1 joined channel
+16:55:varna: hotatatat
+17:03:hope1: 昨天第一次收了一堆贺卡
+17:03:varna: 你看你这现充
+17:03:condy: 原来是隐藏的人参淫家。
+17:03:varna: 什么会长酱啊、社长酱啊、啊呀呀呀啊
+17:06:lh_mouse: 欧尼酱
+17:08:Plough joined channel
+17:08:lh_mouse: PolymorphicSharedPtr<void> p = MakePolymorphicShared<int>(12345); autp p1 = DynamicPointerCast<int>(p); assert(p1 && *p1 == 12345); auto p2 = DynamicPointerCast<double>(p); assert(p2 == nullptr);
+17:08:lh_mouse: awesome isn't it. :|
+17:08:Sleepwalking: hope1: FFF
+17:09:varna: Plough: 肛
+17:09:Plough: 足柄改二居然给三门二号炮……
+17:09:Plough: varna: 自肛去
+17:09:varna: Sleepwalking: 你这更大的现充说什么
+17:09:hope1: 每个人都有的啦…… 总之还是很高兴
+17:09:T2: Sleepwalking, 线虫xinie
+17:10:* Sleepwalking 半年没碰妹子了
+17:10:lh_mouse: varna, 提供完全非侵入式的智能指针并且支持胡乱 dynamic_cast  于是 void 指针又可以满地飞了
+17:10:varna: ...
+17:10:T2: Sleepwalking, 我半年没见过妹子了我会乱说？
+17:10:varna: Sleepwalking: 你还碰过妹子！
+17:10:hope1: …… 丧心病狂
+17:10:varna: hope1: 我没有会长酱社长酱
+17:10:Plough: 米尻酱居然碰过妹子
+17:11:T2: 啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+17:11:hope1: varna:我也没有啊！
+17:11:T2: 乃萌这群线虫啊
+17:11:varna: hope1: 你显然有
+17:11:T2: 切腹吧！
+17:11:T2: 统统切腹去吧！
+17:14:hope1: 很久没联系了，只是见到了打下招呼的程度。社团和预期不同，早就转了
+17:14:geordi quit:Read error: Connection reset by peer
+17:15:T2: hope1, 不要这么当真啊
+17:16:Plough: 昨天我大建了两发
+17:16:Plough: 出了五小时
+17:16:hope1: T2: 实际情况反差太大啊！
+17:16:varna: 我刚中MNB
+17:16:varna: hope1: 社团不关键，关键的是妹子
+17:17:T2: hope1, 玩笑啦玩笑。
+17:17:varna: 昨天还有个哥们造失身，结果八大金刚
+17:17:Plough: 2333333
+17:17:T2: 2333
+17:17:Plough: 一发五小时一发四小时
+17:17:Plough: 不过其实昨天我没看时间，点下建造直接最小化窗口
+17:17:Plough: 等听到语音才点回去
+17:17:varna: 造得他意识模糊，不过得明白他是十六发双大、现在双大武B的欧洲人
+17:18:T2: hope1, 木油幽默感是不行的啊。
+17:18:T2: 啊啊啊啊啊啊啊
+17:18:T2: Sleepwalking, 果然线虫还是死吧
+17:18:Plough: 欧卡不奇么
+17:18:Sleepwalking: 这边所有人毕业了都出国跑世界各地去了，异地的概率>95%,呸
+17:18:Plough: 我倒是见过六发大建跪六发大和，但是他把出武藏和铁相算跪大和的欧皇
+17:18:varna: Sleepwalking: 你先上了再说
+17:19:Plough: 然后这次放弃朝云直接大建十连赌
+17:19:Plough: 大鸟401失矧
+17:19:geordi joined channel
+17:19:varna: 目前3-3 5-3 3-5头目战都有山云
+17:19:Plough: 不能造我就先不捞了
+17:19:T2: Sleepwalking, 不异地如何体现线虫的优势？
+17:19:hope1: 当然社长是本班的，还是收到了贺卡
+17:19:Sleepwalking: 着什么逻辑。。
+17:19:Plough: 我宁可先要撒卡哇
+17:19:hope1: Sleepwalking: 异国？
+17:20:T2: Sleepwalking, 到处都有的逻辑啊。
+17:20:varna: Sleepwalking: 操完扔扔了滚
+17:20:varna: hope1: 你看！
+17:20:Sleepwalking: ……
+17:20:varna: hope1: 然后就灭茶苦茶sex了
+17:20:T2: Sleepwalking, xinie，yabaxinie。
+17:20:Sleepwalking: T2: 什么意思？
+17:20:Sleepwalking: 西捏 哑巴西捏？
+17:20:T2: Sleepwalking, 嗯
+17:21:varna: Sleepwalking: “死吧、果然（还是）去死吧”
+17:21:Sleepwalking: ……
+17:21:Plough: 不是shine么
+17:21:varna: 还是拿汉语拼音拼的
+17:21:T2: = =
+17:21:Plough: 而且我记得貌似是yappa?
+17:21:T2: varna, 我的输入法那个什么
+17:21:T2: 没那么高级啊。
+17:21:T2: orz
+17:21:* Sleepwalking 还是继续撸码好了
+17:22:varna: 有个促音
+17:22:Plough: T2: 去弄个Anthy
+17:22:T2: Plough, ano，ki mi sun da
+17:22:T2: Plough, 我有病么。
+17:22:varna: 我觉得我们不该转移话题
+17:22:varna: 现在的主要矛盾是hotate和会长酱和社长酱
+17:23:Plough: 主要矛盾是我觉得我要还原历史了……
+17:23:T2: 你果然要把正太玩成你那样的绅士么？
+17:24:varna: 你见过我开后宫么
+17:24:varna: 你的情况比历史好点
+17:24:Plough: 我的水平大概比日军指挥官臭点……
+17:25:code_new joined channel
+17:25:Plough: (点？)
+17:25:T2: varna, 我是说你想玩到他去艹船么。
+17:25:T2: = =
+17:26:T2: hope1, 绅士很危险啊喂。
+17:28:hope1: T2:我可是很正直的，才不是羊驼/绅士那种变态
+17:28:T2: hope1, 绅士会传染的啊喂。
+17:29:varna: hope1: 你有妹子当然不会当变态
+17:31:hope1: 我收到的每一张都是好人卡啊
+17:31:varna: 你在口胡
+17:31:varna: 卡上难道写了“你是个好人，但我们不合适”》
+17:31:varna: ？
+17:31:varna: 还是说写了“我很喜欢你，但我们有生殖隔离”？
+17:32:lh_mouse: 难道 hope1 是 ♂♀？
+17:32:T2: varna, 有妹纸还被搞成变态的撸过。
+17:32:varna: Plough: 你得明白机动部队指挥官以前都是水雷专业的
+17:32:T2: hope1, 前车之鉴啊
+17:32:hope1: 没有那么直白的后半句吧
+17:33:varna: T2: 你妹子年龄太大，ho棠那可是文学少女
+17:33:varna: hope1: 只写了前半句的“我很喜欢你”？
+17:33:T2: varna, 文学少女那种玩意我有一打好吧。
+17:33:T2: 哎。
+17:34:T2: 都是眼泪啊卧槽。
+17:34:hope1: 有些是贴了“学霸”等标签，和隔离也差不多
+17:34:varna: hope1: 这是隐式告白
+17:35:varna: Plough: 另外指出一点，这次的作战没有大比例索敌阶段
+17:35:varna: code_new: 另外指出一点，这次的作战没有大比例索敌阶段
+17:35:T2: hope1, 标签不重要啊喂，衣服都脱了何况标签。
+17:35:T2: 卧槽你看我已经没救了，你还可以救一下。
+17:35:hope1: 这倒没有，主要是好人
+17:35:hope1: 下课了，先回
+17:35:hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+17:36:T2: 额
+17:36:code_new: 好的
+17:36:Sleepwalking: 我会说这三天圣诞放假没上课吗
+17:36:varna: 时间大体是夜间，风力对烟幕和舰船稳定性的影响忽略不计，海况5
+17:38:varna: 能见度等级预想在8，基础能见度可以预想在50%附近
+17:38:varna: 这是基础的海况
+17:38:Plough: a了解
+17:38:varna: 开不开探照灯就看诸君的了（笑）
+17:39:varna: 据说一人前的Lady都会开灯的（银笑）
+17:40:T2: = =
+17:40:varna: 噗，八万钢都喂满了……
+17:40:xxxxxxxx joined channel
+17:40:varna: xxxxxxxx: 爆
+17:41:varna: 这不太好办……
+17:45:xxxxxxxx: 我发现糟糕站的效率好高啊
+17:45:varna: 蛋碎一地
+17:46:varna: 战舰航母喂明石这还是我头一回……
+17:46:xxxxxxxx: 前两天发现一个站可以直接搞到.mp4 今天就403了
+17:46:varna: 我拿到暗杀金正恩的电影……
+17:47:xxxxxxxx: 那个好看么?
+17:47:varna: 没看
+17:47:Sleepwalking: 求发
+17:47:varna: 噗，加贺……
+17:47:varna: 2.2G, 上传不能……
+17:47:Plough: ……你在干嘛
+17:48:Sleepwalking: ……
+17:48:varna: Plough: 加贺母港语音，你多戳戳就知道了
+17:48:xxxxxxxx: Sleepwalking: 刺杀三胖?
+17:49:xxxxxxxx: 印象中四元药发过磁力链接
+17:49:xxxxxxxx: 昨天看到有人直播刺杀三胖 没去看
+17:49:T2: 噗，果然索敌比预想的还麻烦。
+17:50:varna: 这次是夜战，所以索敌基本靠狗
+17:50:varna: 如果往下还有人想打珊瑚海和中途岛的话索敌会好玩很多
+17:51:varna: 实际上SK4的索敌比预想的要粗暴很多
+17:51:Sleepwalking1 joined channel
+17:51:Sleepwalking1: 刚刚搜到了下载链接 结果IRC就断了 尼玛
+17:51:varna: Sleepwalking1: 爆
+17:51:Sleepwalking1: http://blog.sina.com.cn/s/blog_4ae1b3670102vfdh.html
+17:52:Sleepwalking quit:Ping timeout: 258 seconds
+17:52:xxxxxxxx: http://www.bilibili.com/video/av1819091/
+17:53:Plough: ……
+17:54:Plough: 听到了
+17:54:varna: 继日向之后，机动部队又疯了一个
+17:57:Plough: 貌似城娘这次的活动很可怕
+17:57:Plough: 我还是决定先不回去了
+17:57:varna: 可怕与否不太了解，我就见到两个现象
+17:57:varna: 一个是舰吧话题帖疯了一片，另一个是推特上玩家开始怒骂运营……
+17:57:Plough: 233333
+17:58:Plough: 据说相当于把夏活E6的血条*10
+17:58:varna: ...
+17:58:Plough: 而城娘里相当于傻级的城比舰娘大和出率还低
+17:58:Plough: 总结起来就是“不氪金玩你妈逼”
+17:59:varna: 氪金有什么好处，能十一连抽出肥桑？
+17:59:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=cf85dfd8554e9258a63486e6acb9d058/b812c8fcc3cec3fd3aa590c9d588d43f869427f6.jpg
+18:00:Plough: 能把被抓走的城赎回来
+18:00:Plough: 不然分分钟吃空你家所有资源
+18:00:Plough: 别忘了城娘远征看脸
+18:00:Plough: 233333
+18:00:Plough: 说起来我好久没碰Lovelive了
+18:01:varna: 你这aji人
+18:01:Plough: 半个
+18:01:varna: 再说ll里肥桑不是很稀有么
+18:01:xxxxxxxx: http://i0.hdslb.com/240_180/video/c0/c0e0e3a63ed422d442fc13d68d2dddc2.jpg 这图 哈哈哈
+18:01:varna: 玩舰娘的话肥桑满地都是
+18:01:Plough: 话说你那边wine th14大概多少FPS
+18:01:varna: 噗
+18:02:varna: Plough: 六十
+18:02:Plough: 我换成catalyst以后依然40fps
+18:02:Plough: 而且前几天特高能
+18:02:Plough: 我顶着40fps推完了6面
+18:02:varna: 我集显
+18:02:Plough: 然后大冬天的笔记本在结尾画面过热关机了
+18:03:varna: ...
+18:04:varna: 给新捞的足柄弄点东西吃
+18:04:T2: = =
+18:10:erhandsome joined channel
+18:10:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=aa6c30771d178a82ce3c7fa8c602737f/ec6b89bf6c81800a319243b5b23533fa838b47cd.jpg # 放肆
+18:11:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=f836f771523d26972ed3085565fab24f/6ce9c4cb39dbb6fd0abc2f9d0a24ab18962b375d.jpg # 其二
+18:13:Plough: 我操
+18:13:T2: varna, 这啥？
+18:13:Plough: 三面打老师打着打着X给我把屏幕关了
+18:14:T2: 噗
+18:14:varna: T2: 玩梗
+18:14:T2: varna, 好吧。
+18:16:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=3498d28b4990f60304b09c4f0929b21b/a8ec8a13632762d04919fa05a3ec08fa513dc661.jpg # 熟悉的姿势
+18:17:Xilzzert joined channel
+18:18:Xilzzerts quit:Ping timeout: 244 seconds
+18:21:varna: 对了今天肛旗被爆几次？
+18:24:Plough: 0
+18:24:varna: Plough: 那就肛
+18:24:Plough: varna: 自爆去
+18:25:varna: 圣诞节不就该爆么
+18:26:Plough: 你该自爆
+18:26:cleamoon_: 刺杀三胖电影挺没劲的
+18:26:varna: 十连沟
+18:27:erhandsome quit:Ping timeout: 264 seconds
+18:28:Plough: 噗？
+18:28:Plough: 这次有塞钱箱？
+18:29:varna: 有
+18:29:Plough: 买来能大建出灵梦么
+18:29:erhandsome joined channel
+18:29:Plough: 我觉得我冬活可以三秒通关了
+18:30:varna: 我币不够，然后荞麦面桌子还要职人
+18:30:cleamoon_: 著名计算机科学教授，TeX排版系统及《计算机编程艺术》作者高德纳在今年5月的一次演讲中，谈到他泪流满面的读完了Martin Campbell-Kelly的论文《软件历史的历史》（PDF）。他最大的感慨是，历史学者为了迎合大众而误入歧途，他们的著作为此略掉了技术的细节。他发出呼吁，“让我们不要简化计算机科学的历史”（m4v视频 文
+18:30:cleamoon_: 件下载）。计算机科学专业的历史学者对此作出回应，历史书没有按照高德纳喜欢的方式书写的一个原因是，这种书需要专家多年的研究，而且只会卖出几百本。他们的工作不会有多少版税支持。
+18:31:varna: 2333
+18:31:varna: 高老头怎么有精神头跑出来了，TAOCP这辈子不都写不完了……
+18:33:Plough: 果然昨天又出那珂酱了
+18:34:cleamoon_: @QiubaiBot：同事发了条吐槽：“6岁的大儿子一脸严肃地说道「房间所有的门窗都锁上了，也没有烟囱，我却拿到了礼物。这是一个密室，圣诞老人就在你们中间。」感觉被怀疑了，不知道怎么解释才好。”
+18:34:cleamoon_: taocp不是还差3本呢么...
+18:34:xxxxxxxx: 那个同事最近应该小心发生什么事件
+18:35:varna: 是差三卷，每卷不定多少本……
+18:36:cleamoon_: 233  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/8q/q6_281433.jpg
+18:36:condy: 据说是要凑齐12本。
+18:36:cleamoon_: ....
+18:36:cleamoon_: 那她写不完了
+18:37:cleamoon_: R这个算15吧  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/8q/vz_237328.jpg
+18:38:varna: 这棒各没二改啊
+18:38:varna: 另外C87谁有机会去的……
+18:38:Plough: 卡立绘了
+18:38:T2: 果然不是重度强迫症就做不了学术啊。
+18:38:varna: 魔性之潮要出本子的
+18:38:T2: = =
+18:38:varna: 比村乳业
+18:39:cleamoon_: http://www.bilibili.com/video/av1731928/
+18:39:Plough: 卡死了，F5
+18:40:cleamoon_: 擦，gentoo全弄完了装不上syslinux
+18:41:varna: dmm卡翔
+18:42:varna quit:Quit: Reconnecting
+18:42:Plough: 刚才似乎是卡在了机枪上
+18:44:xxxxxxxx: 刚才那个链接是什么情况
+18:44:varna joined channel
+18:48:varna: 我了割草
+18:49:varna: 突然什么都上不去了……
+18:50:Plough: ……
+18:50:varna: 不动手BAN就连手机充钱都不行
+18:53:Petrus07 joined channel
+18:56:Xilzzert quit:Quit: Leaving
+19:00:xxxxxxxx: 大妈回来复仇了?
+19:01:varna: dns跪了五分钟
+19:01:varna: 鬼知道怎么回事
+19:02:xxxxxxxx: 大妈表示我要嘲你啊
+19:04:T2: 去买点吃的
+19:04:cleamoon_: Ra4-the revenge of big mamma
+19:04:T2 quit:Quit: Leaving
+19:05:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=7f6b999afefaaf5184e381b7bc5594ed/8fc806166d224f4a91d442af0af790529922d1f4.jpg
+19:15:Plough: 23333333
+19:17:varna: 妈蛋……
+19:17:varna: 十五连沟之后一个出门大破
+19:17:varna: C败
+19:24:T2 joined channel
+19:25:varna: 十六连沟
+19:32:varna: 终结
+19:38:Plough: 昨天我压根没做出击任务
+19:39:varna: 我也没做
+19:39:varna: 昨天我在寝室调程序
+19:39:varna: 南西终于做完
+19:39:Plough: 昨天折腾课件折腾到12点
+19:39:Plough: 本来想撑着做完补给船，结果直接三连Boss拍我脸上
+19:39:Plough: 得，不让做就不做
+19:39:varna: 前天是七连
+19:40:varna: 今天是十六连沟
+19:40:Plough: 掉沟的概率比进Boss大多了
+19:40:varna: 然后捞出一堆对空，我都不知道喂谁……
+19:40:varna: 七连那个是Boss
+19:41:varna: 肝雪都没保住我
+19:41:Plough: ……
+19:41:Plough: 总之任务绝对有玄学
+19:42:Plough: 山云的立绘真心无爱……
+19:42:Plough: 我感觉比朝云差远了
+19:42:varna: 倒过来看就是吃我大亲爹
+19:44:Plough: 某群主：“你说这是足柄的同人图我都信”
+19:44:varna: 我先反潜去
+19:46:cleamoon_: 摔 跤  http://www.bilibili.com/video/av1752962/
+19:46:varna: 怎么我现在没得喂了就弄出一大堆对空……
+19:47:varna: 卧槽
+19:47:varna: 我点了个单纵阵
+19:47:Plough: ……
+19:47:Plough: 1-5?
+19:47:varna: 4-3
+19:47:Plough: 4-3还好吧，只是炸不掉
+19:47:varna: 估计能炸掉
+19:48:Plough: Orz
+19:48:varna: 炸掉了
+19:52:xxxxxxxx: Quakelive最后那个训练还是跳不过去...
+19:53:varna: 我把你爆过去
+19:57:cleamoon_: 对没多少资料的事也能吵死，知乎上不少吵中国军事实力的
+19:59:varna: 我觉得他们不如对肛
+20:00:cleamoon_: 对肛+
+20:00:cleamoon_: 摔 跤，谁赢了就能得到正确答案权和肉体支配权
+20:03:varna: 啊啊啊啊啊啊啊啊啊啊啊
+20:03:varna: 今年的大淀挂轴要职人！
+20:03:varna: 大淀的字写得多好看居然要职人真是坑死我
+20:04:Plough: 运 营 爆 破
+20:04:varna: 大淀这个字体超赞的
+20:06:varna: Plough: http://tieba.baidu.com/p/3489307100
+20:08:Plough: 氪氪氪
+20:08:Plough: 或者你干脆把Z1拿了？
+20:08:Plough: 两星期没第三个远征队比较蛋疼，不过也就两星期
+20:08:varna: 我缺资源
+20:09:Plough: 23333333
+20:09:varna: 两星期休闲的话我能折腾出三四万资源至少
+20:09:varna: 爆肝就不知道多少了，自从我放弃大鸟之后就没爆肝攒过
+20:09:Plough: 话说5-4为啥是九星图……
+20:10:varna: 星数是敌人能力综合评估，不是地图难度
+20:10:varna: 还记得AL E1那个五星难度么
+20:12:Plough: 资源啥时候都能攒，挂轴可能就这段时间……
+20:13:varna: 我就着大淀舔舔好了
+20:13:varna: 以人为本
+20:13:varna: 现在我基本过低保就是一两发大和
+20:16:Plough quit:Remote host closed the connection
+20:21:Plough joined channel
+20:22:varna: Plough: 爆
+20:22:Plough: varna: 自爆去
+20:22:varna: code_new: .
+20:22:varna: Plough: .
+20:23:varna: 明天晚上有时间的话，推演就定在明晚吧？
+20:23:Plough: 应该没问题
+20:23:varna: 不会痛经？
+20:24:Plough: 噗
+20:24:cleamoon_: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/8r/3r_457430.jpg
+20:24:varna: 仏仏仏仏
+20:24:xxxxxxxx quit:Ping timeout: 245 seconds
+20:30:erhandsome quit:Ping timeout: 264 seconds
+20:32:code_new: varna, 好的
+20:32:varna: ok
+20:39:T2: = =
+20:40:varna: 到时候会开两个临时频道，#c_lang_sk4_ijn / #c_lang_sk4_usn
+20:42:cleamoon_: 那什么玩意...
+20:44:varna: 分别是日方和美方玩家的频道
+20:53:endle joined channel
+20:56:cleamoon_: .....
+20:57:varna: 因为两方的指令和报告都得分开
+20:58:varna: 所以随便临时弄两个
+20:58:cleamoon_: 然后弄个马甲去对方看
+21:00:varna: 想赢有各种办法
+21:00:varna: 不过我觉得没必要搞那么严格，差不多行了
+21:02:cleamoon_: 1v1吗
+21:02:varna: 目前是
+21:02:cleamoon_: 难道还能多p
+21:02:sismvg joined channel
+21:03:varna: 如果玩中途岛，我希望人能多点
+21:04:sismvg: 想让马儿跑，又要马儿不吃草。。
+21:04:sismvg: 我开始怀疑我的认知了。。
+21:04:varna: 一个南云，一个山口，一个斯普撸恩斯，再来个佛莱彻
+21:05:cleamoon_: 噗
+21:05:T2: = =
+21:05:T2: 中途岛果然无论如何都打不赢好吧。
+21:06:T2: 因为有4人orz
+21:07:varna: 中途岛这个没法说
+21:08:varna: 航空战的事情我想再斟酌下
+21:08:cleamoon_: 羊驼开始模拟了
+21:09:varna: sk4的航空战规则不够细致
+21:09:sismvg: 羊驼模拟战役
+21:10:sismvg: http://www.ithome.com/html/it/119688.htm
+21:11:sismvg: 他们怎么分辨那些用户是不是人的呢
+21:12:cleamoon_: 这里大部分不都是xym大婶的ai吗
+21:13:varna: 我就是
+21:14:cleamoon_: 我是ai生成物
+21:14:Plough: 用sk5?
+21:15:varna: sk5毕竟收费，我想稍微修补下
+21:15:sismvg: geordi,<<"I'm GOD!"
+21:15:geordi: I'm GOD!
+21:15:varna: 首先要求双方机动部队提交航空队编制
+21:15:Plough quit:Read error: Connection reset by peer
+21:15:varna: 然后重新考虑合成风力和具体机型
+21:15:varna: 战斗机数据也微调一下
+21:15:Plough joined channel
+21:16:varna: 同时降低索敌的自动化程度，要求具体指定索敌角度
+21:17:varna: 这样机动部队的指挥者可能会安排更多舰侦或者Scout Bomber, 并且施行多段索敌
+21:18:varna: 另外同样有一点需要考虑，就是超视距作战时候辨认敌舰的成功程度
+21:19:Plough: 感觉修正起来好麻烦
+21:19:varna: 制空权方面有现成公式，我可能只要加点数据
+21:20:varna: 麻烦的是合成风力方面的历史数据和敌舰辨认的数据
+21:20:cleamoon_: 我要做中途岛的山本，就等着最后说“南云会回来的”
+21:21:T2: varna, 这个增加难度啊喂。
+21:21:varna: 中途岛我肯定不会引入山本
+21:21:varna: 那货离南云有他整个部队最大战速开一天的举例
+21:21:varna: 距离*
+21:21:T2: 我是毛都不知道啊卧槽。
+21:21:varna: 你说长门都开过来了，岛上的非洲人不得被晒死
+21:21:varna: 一看，卧槽一个HOMO
+21:22:cleamoon_: 所以我等着做总结呀
+21:22:varna: T2: 不那样的话航空战不好玩啊
+21:22:T2: 基本的东西都不知道吖关键。
+21:23:varna: 读点历史故事照着比划比划
+21:23:Plough: 山本是舰娘开服初期就出长门的欧提
+21:23:T2: 哪有那种东西啊我晕
+21:23:varna: 你也能来个命运的四十五分钟
+21:23:T2: 好吧我去找找看
+21:23:varna: 渊田美津雄有回忆录啊
+21:23:Plough: 命运的45分钟好评
+21:23:varna: 虽然很口胡
+21:23:T2: = =
+21:24:T2: 怎么看都是反面教材。
+21:24:varna: 我看了《机动部队》觉得渊田还是不错的
+21:24:cleamoon_: 别按着历史来呀
+21:24:varna: 当然他的好运之处在于从吃撑上撤离的时候摔断腿了
+21:25:varna: 战术可以学一点，但是指挥可以自己来啊
+21:25:Plough: 话说我们把五航弄去中途岛如何
+21:25:varna: 比划战术的话，比如直掩机给多少、掩护战斗机给多少、攻击队怎么组织
+21:25:varna: Plough: 五航没飞机了
+21:25:sismvg: 一天公司停电一个小时，上司把我们聚在一起让我们谈谈初恋
+21:25:Plough: 光用一二航战还原多没意思
+21:25:Plough: 从一二航上拆
+21:25:varna: 当时做不到
+21:26:sismvg: 轮到我的时候我告诉上司我读的男校
+21:26:varna: 42年之前航空队是绑死在航母上的，你能在垂尾上看到字母标识
+21:26:Plough: ……
+21:26:varna: A~E从一航到五航
+21:26:Plough: 蛋疼
+21:26:varna: 比如AI-xxx就是一航战/吃撑/xxx机
+21:26:T2: varna, soga
+21:26:Plough: 就当重新喷了如何
+21:26:varna: 后来被打残了，航空队一律用三位数编号，不捆绑了
+21:26:varna: Plough: 美军怎么平衡
+21:27:cleamoon_: 就会一句：全军突击
+21:27:Plough: 给猫鼻子？
+21:27:Plough: 来场娇喘式脑洞
+21:28:varna: 简直作大死，这样好了
+21:28:varna: 二阶段一正面作战
+21:28:varna: 第一阶段，一航战vs中间姬
+21:28:varna: 第二阶段，机动部队vs中间+约克城全员+大黄蜂
+21:29:varna: P1如果顺利的话中间栖姬可以有约克城的支援
+21:29:Plough: 那我先把伊姆亚叫过去
+21:29:Plough: 我有伊姆亚你怕不怕
+21:29:varna: 我跟你说，机动部队指挥官都是水雷出身的（笑）
+21:30:varna: 其实中途岛各种莫名其妙
+21:30:a3 joined channel
+21:30:varna: 我不太想加火鸡姐妹的一个重要原因是想让榛名出场
+21:31:varna: 不过作为航空战的预演，如果有人玩的话我可以查资料开一场1v1的珊瑚海
+21:31:varna: 五航战对TF16
+21:33:varna: （不过如果有人愿意当裁判的话我也想自己玩玩就是了）
+21:34:Plough: 打完明天那场我倒想试试当裁判
+21:34:varna: 成
+21:34:Plough: 珊瑚岛大概啥时候打？
+21:35:varna: 随意
+21:35:varna: 你能准备出来就行
+21:35:Plough: 大概得过年
+21:35:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+21:35:Plough: 平时我不一定有时间仔细考虑
+21:36:varna: 零碎的时间先考虑下航空战规则吧
+21:36:varna: 不过珊瑚海的时候两方的机体大多都好说
+21:36:varna: 日军是零战、九九、九七，美军是F4F、SBD、TBF
+21:37:varna: 列噗如果要登场的话，我推荐考虑42年以后的战役
+21:38:varna: 假设崛越二郎没有痛经，十七试舰战投产定型成A7M2
+21:38:varna: 那时候的圣克鲁斯群岛海战会如何
+21:38:a3 quit:Ping timeout: 245 seconds
+21:39:Plough: 我还是想知道莱特湾的时候栗田没怂会怎样
+21:39:Plough: 毕竟我算半个大舰巨炮主义者
+21:40:varna: 他会被一百三十四个爷爷和不计其数的鱼雷艇包围，然后被水淹没
+21:40:Plough: 23333333
+21:40:varna: “离下班还有一小时，我们喷个爷爷出来”
+21:41:varna: 如果有人敢打莱特湾的话其实我也不知道这个战役剧本该怎么写
+21:41:Plough: 莫慌，直接拿大和撞过去
+21:41:varna: 那时候的美军太可怕了
+21:41:varna: 倒不是说如何如何，主要是太多
+21:42:Plough: 那干脆脑洞一场战舰对肛？
+21:42:varna: 瓜岛夜战？
+21:42:varna: 雾岛对院长
+21:42:varna: 或者脑洞一个日本海近海决战
+21:42:Plough: 没大和级不好玩
+21:42:Plough: 脑洞近海决战+
+21:42:varna: Iowa级对大和级
+21:42:varna: 或者还有个主义
+21:42:varna: 主意*
+21:43:Plough: 再把扶桑山城金刚长门都拉上
+21:43:varna: 假设天一号作战的时候美军机动部队没有到
+21:43:Plough: 对面拉上北卡南达萌大拿
+21:43:varna: 实际到的是战舰战队
+21:43:varna: 如果那样的话，就是梓喵和Saber对院长了
+21:44:varna: 总之如果是战舰战队作战我也会希望塞一些巡洋舰进去
+21:44:Plough: 我去研究下天一号作战
+21:44:varna: 然后提供两个尺寸的地图，其中一个用来索敌
+21:44:Plough: 肯定不会是纯战舰，那太没意思了
+21:44:varna: 海战游戏最好玩的部分其实就是索敌和接敌了
+21:45:Plough: 另外貌似有人用SK5推过大和对依阿华
+21:45:Plough: 大和跪了
+21:45:varna: 怎么推的
+21:45:Plough: 我去找找
+21:45:varna: 不会是大半夜两边对肛吧……
+21:45:Plough: 总之结论是依阿华火控太可怕
+21:45:varna: Iowa的雷达和大和的水观，后者太落后
+21:45:Plough: 就两只船对肛
+21:46:varna: 而Mk7舰炮和大根哪个更强，这个就看设定者的微调了
+21:46:varna: SK5里日军还有九八式瞄准仪的+11命中么？
+21:46:T2: varna, 嗯
+21:47:varna: 大和我记得装备的是21探、13探、22探，这三个全是悲剧……
+21:47:varna: 21和13是对空电探，范围大约一百公里（渊田的口述）
+21:47:varna: 22那个水上电探不能用来火控射击，只能大致索敌……
+21:48:Plough: 其实那个战报他貌似只推了一半
+21:48:Plough: 最后是依阿华总计1205DP 大和总计1300DP
+21:48:Plough: 总计损失*
+21:48:T2: 银他妈实在是受不鸟了。
+21:48:varna: 这不靠谱啊……
+21:49:varna: 航向呢，不会是不索敌直接同航吧
+21:49:Plough: 没索敌阶段，似乎是直接同航了……
+21:50:varna: 疼
+21:50:varna: 那样大和确实吃亏
+21:50:T2: 阵型神马的麻烦死了。
+21:51:varna: 但是即使这样，Mk7舰炮也不该那么容易在不太近的射程内击穿大和的主装甲带吧
+21:51:T2: 舰距300？
+21:51:varna: 300什么
+21:51:T2: 码？
+21:51:varna: 你逗我
+21:51:T2: 怎么算紧凑我都不知道
+21:51:T2: = =
+21:52:varna: 先排2000yd
+21:52:T2: 这要拼个阵型出来
+21:52:Plough: 确实依阿华打大和各种打不透
+21:52:Plough: 但是一打透就DE……
+21:52:T2: 虽然大概能猜到是没什么用的伙计挡前面。
+21:52:varna: 一个船就一百几十米长，间距三百码太危险了
+21:52:varna: T2: 你该补补历史
+21:52:varna: 前面的舰可以用来索敌和对潜
+21:52:Plough: 我看了DE，似乎就是CD
+21:52:T2: varna, OK。
+21:53:Plough: 投掷J1的L表项, 投掷结果是90，击中9V SUPERSTR。穿甲值15>大和的9V SUPERSTR装甲厚度8.2。所以查K4的CLASS A，投掷伤害，骰子值是28，伤害是190DP.DE投掷2，发生DE。再投掷L3的SUPERSTR表项，投掷结果为57，DE编码为145.结果为舰桥损毁，危害情势是18+16=34.目标必须保持当前航速航向，直至消除此次打击的危害。舰桥命令
+21:53:Plough: 值-2，旗号命令值-2.投掷舰长是否战死，投掷骰子值为80，舰长未战死。额外DE投掷55，则额外DE编号为159，结果为副炮的一个火控系统失灵，危害情势是68+16=84.目标的在这个火控系统的控制下的副炮火控值为0（除非还有一个火控系统），或者可以使用炮塔的本身的火控系统LCS(使用B2L等指令)。
+21:53:T2: 前面的伙计可以吸引火力2333。
+21:53:Plough: ^mk7射大和
+21:53:Plough: 这是其中的一炮
+21:53:varna: 果然舰桥损毁
+21:53:hope1 joined channel
+21:53:xxxxxxxx joined channel
+21:53:Plough: 不过最后一楼大和脸了一下
+21:53:varna: 但是大和舰桥的装甲也足够厚了……
+21:53:Plough: 累计1300DP，达到TIER2，但是没CD
+21:53:varna: 我查查
+21:54:Plough: 依阿华累计1205DP，达到TIER2及3，全部DE……
+21:54:varna: 主装甲带410cm, 水平装甲200mm
+21:55:varna: 主炮正面560mm, 顶盖270mm, 司令塔500mm
+21:55:varna: 怎么想Mk7都得拼脸
+21:55:varna: 410mm
+21:55:varna: 不是cm
+21:55:Plough: 似乎确实是脸出来的
+21:55:Plough: 打了两次舰桥
+21:55:Plough: 投掷J1的L表项, 投掷结果是38，击中3H SUPERSTR。穿甲值6.3>衣阿华的3H SUPERSTR装甲厚度5.3.。所以查K4的CLASS A，投掷伤害，骰子值是25，伤害是240DP.DE投掷1，发生DE。再投掷L3的1H DECK表项，投掷结果为49，DE编码为143.
+21:56:Plough: 击中舰桥，下个回合只能保持当前航向航速。BRC永久-1，FCR永久-1.舰长未战死（投掷93）。额外DE投掷15，则额外DE编号为160，结果为主炮的一个火控系统失灵，目标的这个火控系统的控制下的副炮火控值为0（除非还有一个火控系统），或者可以使用炮塔的本身的火控系统LCS(使用B2L等指令)。
+21:56:Plough: ^这是第二发
+21:56:varna: 这毕竟是战列舰设计的大原则：不能被自身主炮轰沉……
+21:56:Plough: 不对，这是大和打依阿华……
+21:56:Plough: 我再看看这局的670DP是怎么打出来的
+21:57:Plough: 投掷J1的L表项, 投掷结果是34，击中3H SUPERSTR。穿甲值6.7>大和的3H SUPERSTR装甲厚度5.7。所以查K4的CLASS A，投掷伤害，骰子值是42，伤害是220DP.DE投掷45，发生DE。再投掷L3的SUPERSTR表项，投掷结果为12，DE编码为124.结果为与引擎室永久失去联系，所有与速度改变的舰桥指令必须要投掷1-25才能成功下达。额外DE投掷35
+21:57:Plough: ，则额外DE编号为118，结果为引擎室中弹。永久损失航速3节（投了92），甲板着火，火势20. 永久加速度值-1节（如果加速度为1节，那么变为1/2节）。
+21:57:Plough: ^第二发
+21:57:Plough: 投掷J1的L表项, 投掷结果是43，击中5V BELT MID。穿甲值15>大和的5V BELT MID装甲厚度14.1。所以查K4的CLASS A，投掷伤害，骰子值是91，伤害是340DP.DE投掷87，未发生DE。
+21:57:Plough: ^第四发
+21:57:Plough: 这两发比较伤
+21:57:varna: 造了七百铝的飞机
+21:57:varna: 得了12甲和流改
+21:57:Plough: Orz
+21:58:varna: 这样有8个12甲和7个流改了
+21:58:hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+21:58:Plough: 12甲四个烈噗流改各一页
+21:58:Plough: 震电改二六个
+21:58:varna: 列噗十四个
+21:59:Plough: Orz
+21:59:varna: 紫电改二十三个……
+21:59:Plough: ……
+21:59:Plough: 果然震电改二更稀有么
+21:59:varna: 以前赌舰战总有紫电
+21:59:varna: 其实紫电的战果不错的，虽然是J字头改A字头
+22:00:Plough: 紫电不是陆基么
+22:00:varna: 052在飞行员当中不那么流行（虽然后来王牌们觉得不错），062是因为飞鹰隼鹰起不了99所以改爆战了
+22:00:Plough: 镇守府又不能直接放飞机……
+22:00:varna: J字头都是局地战
+22:00:varna: 震电应该也是
+22:00:Plough: 不过我的私服装了幼女的话倒是可以弄点陆基飞机了
+22:01:varna: 但是紫电毕竟有改型
+22:01:Plough: 小男孩不可避
+22:01:varna: 命名就像是A6M2-N
+22:01:varna: 有一杠和重编号的都是变过机种的，但字头似乎不变
+22:01:varna: 所以零水战还是保持了A字头
+22:01:varna: 比起这个，美国货就好理解多了
+22:02:Plough: 我看底下群众的回帖，似乎都认为SK5里面大和比较吃亏
+22:02:varna: 比如SB = Scout Bomber, TB = Torpedo Bomber, F = Fighter
+22:02:varna: 后面接一个公司编码
+22:02:Plough: Soga
+22:02:varna: 比如D=道格拉斯，F=格鲁门
+22:03:varna: 大和其实就该吃Iowa的亏
+22:03:varna: 我觉得这不冤枉
+22:03:Plough: 火控太悲剧么
+22:03:varna: 对
+22:03:varna: 我还是说院长的作战记录，他们在四二年就开始用雷达火控了
+22:04:varna: 在战斗报告里也能看到观测员和雷达的结论差别
+22:04:varna: 当然有个非常喜感的场景
+22:04:varna: 似乎是在晚上十点钟附近开打了，主炮观测员被副炮火光晃瞎，没看到弹着
+22:04:Plough: ……
+22:05:Plough: 果然还是论雷达的优越性么
+22:05:Plough: 话说3x电探是什么情况
+22:05:varna: 文雅地说那个M.B. spotter was blinded应该译成“被……短暂致盲”
+22:05:varna: 三型电探我没仔细查过
+22:05:varna: 我甚至不知道有哪些舰装备过这东西
+22:06:varna: 另外其实SK4航空战我觉得最坑的一点是体现不出舰战性能的巨大差别
+22:07:varna: 比如两机砖21对上两机F4F, 究竟该怎么打
+22:09:hope1 joined channel
+22:09:varna: 一个逗乐的场景可能是砖21想扭但没扭过来
+22:09:varna: 然后F4F冲过头了没能一击脱离
+22:09:varna: 接下来砖21想减速拉高来一个小半径扭转，结果机翼铆钉开了、蒙皮起褶，玉碎了
+22:10:varna: 最后底下的两个鲨鱼获得了战术的胜利
+22:10:Plough: 233333333
+22:12:Plough: ……三号电探连日文wiki都没有页面
+22:12:Plough: 另外貌似还有四号和六号？
+22:12:varna: 是型还是号
+22:12:varna: 电探的两位数字前面是型，可能是搜坏了？
+22:13:Plough: 号
+22:13:varna: ...
+22:13:Plough: “4号電波探信儀1型”<-这样的
+22:13:Plough: 不过没有链接
+22:14:varna: 我印象只有五十铃牌用得最多，然后就是毛嘎敏牌……
+22:14:Plough: 有链接的只有13 21 22
+22:14:Plough: 14和12后面只有三个字：“陸上用”
+22:14:varna: 2333
+22:15:Plough: 23号后面有一行：“仮称23号電探。第一〇一号哨戒艇。”
+22:15:varna: 还有23号啊……
+22:15:Plough: 51归在航空机用里
+22:16:Plough: 日文wiki上是这么列的……
+22:16:varna: 那说不定是大型机带的雷达，或者光字辈用的
+22:16:Plough: 快给我63号
+22:16:Plough: 运营敢给我就敢氪金冲排位
+22:21:LittleKey joined channel
+22:24:Plough: 6x似乎是对空电探
+22:25:Plough: ６３号電探は遠距離早期発見用。 ６３号は１１号(改３)電探の方向測定に等感度方式、並びに距離に時間軸位相測定方式を付加して測定精度を高めたもの。
+22:25:Plough: また１１号と違い空中線の回転は地下壕内にある電探室から操作する。
+22:25:varna: 陆基用？
+22:25:Plough: 我还是不氪金冲排名了……
+22:25:Plough: 貌似是
+22:26:Plough: 4x是对空射击用
+22:26:varna: 瞄准盘终于进化了……
+22:30:hope1: 收到一张特别的Extra card
+22:30:varna: 你看
+22:31:xxxxxxxx: 说好的周末互肛呢?
+22:32:condy quit:Quit: leaving
+22:32:varna: xxxxxxxx: 明天晚上
+22:32:tutu_wind joined channel
+22:32:varna: 话说谁能下到这两个
+22:32:varna: https://www.dropbox.com/s/3a4d4jevephwf5k/DXExtract.zip https://www.dropbox.com/s/cwkc7y9aalocq8k/keys.ini
+22:33:xxxxxxxx: dropbox
+22:33:Plough_ joined channel
+22:33:hope1: 还有插画的，虽然被画成了猴子……
+22:33:xxxxxxxx: 不是被抢了么？
+22:33:varna: 是
+22:33:varna: hope1: 谁给的
+22:33:Plough_ left channel:
+22:33:xxxxxxxx: 会长?
+22:35:cleamoon_: 正太的后宫越来越大了
+22:36:varna: cleamoon_: 上面那两个dropbox文件能帮忙下一下么……
+22:36:varna: ho棠不说话了
+22:36:varna: ho棠正在跟妹子互发短信
+22:37:Plough: 我这能下
+22:37:varna: Plough: 求帮忙
+22:38:hope1: 总之是一个很有趣的妹子，嗯
+22:38:cleamoon_: 红旗在下吗
+22:38:varna: hope1: 你看！
+22:38:cleamoon_: 啪啪啪起来很有趣
+22:38:xxxxxxxx: 线虫 烧!
+22:38:varna: ho棠这下就有三人后宫了
+22:39:varna: 会长酱、社长酱、很有趣酱
+22:39:xxxxxxxx: 社长?
+22:39:xxxxxxxx: 搬运社?
+22:39:varna: Plough: 求度盘……DCC跪
+22:39:Plough: 稍等
+22:39:varna: thx
+22:41:Plough: varna: http://pan.baidu.com/s/1eQjEoYA
+22:41:hope1: 很有趣酱算什么啊！
+22:41:varna: Plough: thx
+22:41:varna: hope1: 前面两个都承认了啊！要是不喜欢很有趣酱可以叫插画酱
+22:42:LittleKey quit:Quit: Leaving.
+22:42:xxxxxxxx: 所以说社长是怎么回事?
+22:43:Sleepwalking1: hope1: FFF
+22:44:* dantmnf FFF
+22:44:cleamoon_: 我唯一和贺卡有接触的就是初高中作为班委去给全班买贺卡...
+22:44:cleamoon_: Sleepwalking1, 现充退散
+22:44:hope1: 什么都没承认！
+22:45:varna: 我日，.net抛了个异常……
+22:45:Plough: ……
+22:45:T2: = =
+22:46:hope1: Sleepwalking1: 现充退散！
+22:46:cleamoon_: hope1, 后宫王
+22:46:cleamoon_: Sleepwalking1, 现充王
+22:47:hope1: 话说会长送的六级还没开始背
+22:47:xxxxxxxx: cleamoon_: 幼女王
+22:49:hope1: Sleepwalking: 对了，你有没有了解过USAD
+22:49:Sleepwalking: hope1: 我室友参加过
+22:50:Sleepwalking: 那死人现在已经收到4个offer了  可恶
+22:50:Sleepwalking: 我一个没有
+22:50:hope1: 具体是怎么回事
+22:50:Sleepwalking: 十项全能那个是吧
+22:50:hope1: 对
+22:51:cleamoon_: usad？
+22:51:Sleepwalking: 就是组队，回答各种学科的问题
+22:51:cleamoon_: 对了，miku不是该去米国了吗
+22:51:Sleepwalking: 听说数学方面中国可以草虐  自然科学惨死
+22:52:cleamoon_: 那不可能
+22:52:cleamoon_: 物理学霸一堆呢
+22:52:Sleepwalking: cleamoon_: 他们问得不深，但太广
+22:52:hope1: 对拿offer似乎很有好处？
+22:53:Sleepwalking: 似乎吧……
+22:53:cleamoon_: 海棠也想去米国？
+22:53:Sleepwalking: 室友是申艺术类的，可能参考价值不大
+22:53:cleamoon_: 就是不怕广呀
+22:53:Sleepwalking: cleamoon_: 他们考生物
+22:54:cleamoon_: 我就认识两个生物高手... 一个专门养老鼠蜘蛛，一个专门杀老鼠蜘蛛....
+22:55:hope1: 考的不会比生物竞赛难吧
+22:55:Sleepwalking: 不清楚
+22:55:cleamoon_: 生物竞赛就是解剖解剖青蛙之类的
+22:55:hope1: 考的形式是？essay/paper/presentation?
+22:56:Sleepwalking: 我觉得你至少混个区域的奖应该是没问题的
+22:56:Sleepwalking: 形式是现场抢答
+22:56:hope1: cleamoon_: 省上只有笔试吧
+22:56:hope1: 抢答……
+22:57:cleamoon_: ......
+22:57:Sleepwalking: 听说他们之所以拿了个奖是因为在国内碰上个战术性傻逼的对手
+22:58:Sleepwalking: 居然组织两个人拿到题先翻译成中文，再给剩下的人看233
+22:58:hope1: 233
+22:58:cleamoon_: 2333
+22:59:hope1: 全程都是整个团队合作？和老师说的不太一样啊……
+22:59:varna: 悲剧，我最后用旁边那个windows机器运行的……
+23:00:Plough: 不成，演习还是不能上重巡
+23:01:Plough: 信重巡吃D败
+23:01:Sleepwalking: 个人觉得不如找点CS方面的竞赛
+23:01:hope1: 你是说NOI？
+23:02:Sleepwalking: 不一定是比赛啊 创新大赛之类的也可
+23:02:Sleepwalking: 像我没个奖就死很惨
+23:02:varna: Plough: 我现在是1cav2dd3cl
+23:02:hope1: 之前不是有个可以投论文的算法吗
+23:02:varna: scigen啊
+23:03:Sleepwalking: scigen..
+23:03:Sleepwalking: scigen要是能撞上也是极好的……
+23:03:erhandsome joined channel
+23:04:cleamoon_: 大穴有除了acm的比赛吗？
+23:05:varna: google jam?
+23:06:varna: topcoder?
+23:06:endle quit:Quit: Leaving
+23:06:hope1: 什么创新大赛总觉得要么很水，要么是真得做创新，太难
+23:06:ChanServ quit:shutting down
+23:06:Sleepwalking: +
+23:07:Sleepwalking: 要么就尽早勾搭教授 要到推荐信
+23:07:cleamoon_: 全是cs比赛...
+23:09:varna: 撤退
+23:09:varna: 诸君夜间愉快
+23:09:hope1: 晚安
+23:09:varna: 明天的推演，也请期待
+23:09:varna quit:Quit: leaving
+23:10:cleamoon_: 除了和教授摔 跤还有办法勾搭吗
+23:10:ChanServ joined channel
+23:18:Stevearzh quit:Remote host closed the connection
+23:18:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:28:T2 quit:Quit: Leaving
+23:33:tutu_wind quit:Ping timeout: 245 seconds
+23:40:Sleepwalking quit:Ping timeout: 258 seconds
+23:41:Stevearzh joined channel

@@ -1,0 +1,289 @@
+00:01 Mokou joined channel
+00:16 sottd joined channel
+00:23 sottd quit:Quit: ChatZilla 0.9.93 [Firefox 56.0/20170926190823]
+00:26 lh_mouse: geordi, template <const char& V>
+00:26 geordi: error: expected unqualified-id at end of input
+00:26 lh_mouse: using char_sequence_t = int; template <typename T> constexpr char name_of_v = 'x'; template <typename T> using type = char_sequence_t<name_of_v<T>>;
+00:26 lh_mouse: geordi, template <const char& V> using char_sequence_t = int; template <typename T> constexpr char name_of_v = 'x'; template <typename T> using type = char_sequence_t<name_of_v<T>>;
+00:26 geordi: internal compiler error: Segmentation fault
+00:26 lh_mouse: geordi, use --clang
+00:26 geordi: Success
+00:27 B005ter quit:Remote host closed the connection
+00:27 B005ter joined channel
+00:27 B005ter quit:Remote host closed the connection
+00:28 B005ter joined channel
+00:29 lh_mouse quit:Read error: Connection reset by peer
+00:32 B005ter quit:Ping timeout: 264 seconds
+01:29 B005ter joined channel
+02:09 bordeaux_facile quit:Ping timeout: 240 seconds
+02:10 bordeaux_facile joined channel
+03:18 cleamoon_ quit:Quit: Connection closed for inactivity
+03:50 B005ter quit:Remote host closed the connection
+04:07 Youmu quit:Quit: Connection closed for inactivity
+04:27 B005ter joined channel
+08:19 GODDOG joined channel
+08:20 GODDOG: lhanjian: Hi 开始上班了？
+08:20 lhanjian: 嗯
+08:20 GODDOG: nick~
+08:24 lh_mouse joined channel
+08:33 tutu_wind quit:Ping timeout: 240 seconds
+08:34 tutu_wind joined channel
+08:49 tutu_wind quit:Remote host closed the connection
+09:01 YangMame joined channel
+09:29 GODDOG quit:Ping timeout: 260 seconds
+09:37 GODDOG joined channel
+09:47 GODDOG quit:Read error: Connection reset by peer
+09:50 GODDOG joined channel
+10:01 GODDOG quit:Read error: Connection reset by peer
+10:02 GODDOG joined channel
+10:02 GODDOG quit:Read error: Connection reset by peer
+10:07 GODDOG joined channel
+10:09 GODDOG quit:Read error: Connection reset by peer
+10:11 Youmu joined channel
+10:14 GODDOG joined channel
+10:19 GODDOG quit:Client Quit
+12:25 iyzsong-m joined channel
+12:45 iyzsong-m quit:Ping timeout: 255 seconds
+13:46 B005ter quit:Remote host closed the connection
+13:47 B005ter joined channel
+13:51 B005ter quit:Ping timeout: 248 seconds
+14:10 B005ter joined channel
+15:03 CyrusYzGTt quit:Ping timeout: 248 seconds
+15:20 CyrusYzGTt joined channel
+15:40 \ss joined channel
+15:42 Stevearzh quit:Ping timeout: 260 seconds
+15:43 dh_pc joined channel
+15:43 \s quit:Ping timeout: 260 seconds
+15:49 \ss is now known as \s
+15:49 \s quit:Changing host
+15:49 \s joined channel
+15:50 Stevearzh joined channel
+16:01 B005ter quit:Remote host closed the connection
+16:11 B005ter joined channel
+16:19 whocares_2_ joined channel
+16:19 whocares_2 quit:Ping timeout: 255 seconds
+17:00 Saltedfish joined channel
+17:00 Saltedfish quit:Client Quit
+17:01 YangMame quit:Remote host closed the connection
+17:09 B005ter quit:Remote host closed the connection
+17:09 B005ter joined channel
+17:13 B005ter quit:Ping timeout: 246 seconds
+17:20 Patrick15 joined channel
+17:21 Patrick15 quit:Remote host closed the connection
+17:34 \ss joined channel
+17:36 \ss quit:Remote host closed the connection
+17:36 \ss joined channel
+17:37 \s quit:Ping timeout: 255 seconds
+17:46 \ss is now known as \s
+17:46 \s quit:Changing host
+17:46 \s joined channel
+17:47 tomato joined channel
+17:51 tomato quit:Client Quit
+18:03 dh_pc quit:Remote host closed the connection
+18:08 \ss joined channel
+18:10 \s quit:Ping timeout: 248 seconds
+18:13 \ss is now known as \s
+18:13 \s quit:Changing host
+18:13 \s joined channel
+18:25 varna joined channel
+18:25 varna: 又是一堆需求砸下来，感觉这次至少连续无休十五天
+18:27 varna: (｡･ω･)所以有没有可爱的女装子暖床啊？
+18:37 iyzsong-m joined channel
+18:37 iyzsong-m: (°ー°〃)
+18:38 varna: (｡･ω･)ﾉ
+18:43 lhanjian: varna: 这样羊驼子可以趁着过完双十一休一个月的假了
+18:43 * lhanjian 下班
+18:43 varna: 开玩笑的吧……
+18:43 varna: 你也呆过月饼厂，怎么可能存在一个月的假期
+18:44 lhanjian: varna: 我有同事休了两个多礼拜的假
+18:44 lhanjian: 年假/调休/公共假期
+18:44 lhanjian: 除了紧急修复线上问题，那段时间都没怎么见他出现过
+18:44 varna: 超过四天的假，我估计都拼不下来
+18:45 varna: 业务需求一堆
+18:45 lhanjian: 如果业务需求实在过于紧凑，那就只能零零散散休掉了
+18:45 lhanjian: 说起来我现在也有年假可以休了
+18:45 lhanjian: 虽然现在不是时候
+18:46 iyzsong-m quit:Ping timeout: 240 seconds
+18:47 varna: 姑且血疗放松下
+18:47 varna: 对了，噬神者要出3了
+18:48 varna: 今天看到一个预告片，应该值得期待
+18:50 varna: 周末如果不赶的话还可以试试喷笔
+18:51 varna: 不过也许19号以后我考虑调休一天，有封网
+18:54 varna: (｡･ω･)试个恶趣味的一周目打法：敏号15力购点，主锯刀
+18:57 iyzsong joined channel
+19:07 varna: 卧槽
+19:08 varna: 我被地形卡住了
+19:08 varna: _(:з」∠)_这bug
+19:15 iyzsong quit:Read error: Connection reset by peer
+19:18 B005ter joined channel
+19:24 YangMame joined channel
+19:25 YangMame quit:Remote host closed the connection
+19:26 YangMame joined channel
+19:29 Dove joined channel
+19:30 Dove: 讲个笑话，今年公司税交得太少，被税务局查账了。
+19:30 varna: _(:з」∠)_
+19:31 Dove: 去年交了几十万，今年交了2W5.
+19:31 Dove: 我今天被叫去问询。
+19:31 varna: 结果如何
+19:32 Dove: 关于学经的问题，我还是太自己为是加上急功近利了。
+19:32 Dove: 反正他们确定没能从我身上找出什么破绽。
+19:32 Dove: 至于别的破绽我就不知道了。
+19:34 Dove: 本来是我小姨在做会计，结果我妹妹得了肿瘤，在北京做手术，我临时顶班就碰上这种事情。
+19:34 Dove: 也好，要是她或者法人去了估计自乱阵脚。
+19:34 varna: 良性？
+19:34 Dove: 良性
+19:35 varna: 那还好
+19:35 Dove: 我反思了一下，我TM只关心自己，从来不关心别人，打算要改所以就去顶班了。
+19:36 Dove: 结果刚接手就碰到这种事情。
+19:38 Dove: 不过应该没什么问题。
+19:39 varna: 临时顶班不会被临时甩锅么
+19:39 Dove: 锅肯定是有的，接好就行了。
+19:40 Dove: 说破大天也不能把我抓进去吃牢饭吧。
+19:40 Dove: 所以也不打紧。
+19:40 varna: 财税法和风控的锅感觉都比较黑
+19:41 Dove: 那也没办法了不是。
+19:43 Dove: 说破大天，如果有锅也是神要甩我一锅。福兮祸之所伏，祸兮福之所倚，接好就行了。
+19:44 Dove: 我TM一个无业游民又不打算发财，还怕接锅不成。
+19:46 Dove: 再说我是接我小姨的班，又不是外人。
+19:56 varna: 啊啊，果然还是锯刀的格斗手感最好
+19:59 Dove: 我也想玩主机游戏啊。
+19:59 Dove: 你竟然还能抽出空来玩游戏，连我都感觉没什么空。
+19:59 varna: 总得休息下
+20:00 Dove: 沉迷于wow宠物和星际中，不打算入吃鸡坑，没钱玩别的。
+20:01 Dove: 没收入是这样了，等我小姨回来接班，我也去找个工作算了，不过那样更没空玩了。
+20:01 Dove: 总感觉很亏。
+20:02 varna: 又不是每天加班到十一点之后
+20:02 Dove: 找个3000块的工作，搭上一个月。
+20:02 Dove: 感觉亏了一个亿
+20:02 Dove: 可能还不到3000块。
+20:03 Dove: 算了，无为而无不为，就找个工作好了。
+20:04 Stevearzh quit:Ping timeout: 246 seconds
+20:04 Dove: 反正钱这种东西，多了也没用，就当挣个wow月卡钱。
+20:05 varna: 唉唉，今天努力下把路德维希切掉算了
+20:05 varna: 虽说八周目不再有难度提升，但心里还是害怕
+20:06 Dove: 给八周目dalao跪了
+20:06 varna: 很休闲的
+20:07 Dove: 我打过八周目的游戏就是生化危机和鬼泣了。
+20:07 Dove: 鬼泣可能还没有八周目。
+20:07 varna: 血源不打高周目总有点遗憾
+20:07 varna: 实际上一周目和NG+的难度差别很大
+20:08 varna: 倒不是说一周目简单，而是说难度分布不同
+20:08 Dove: 生化危机4二周目以后就没意思了，所以一直打专家1周目。
+20:08 lhanjian: 羊驼子黑魂没有八周目？
+20:08 varna: 黑魂六周目的时候机器坏了
+20:08 Dove: 2周目以后就都是改满的枪，吃满的血，一点意思都没有了。
+20:09 varna: 血源七周目封顶，上个月搞定的
+20:10 Dove: 还有各种变态盔甲，无限弹药武器。
+20:10 Dove: 完全就不是生化危机了，魔村夺宝记。
+20:11 varna: 血源反正怎么加血都可能被瞬杀
+20:11 varna: 体验还好
+20:11 Dove: 生化危机4专家还可以，其他难度想死真是难。
+20:11 Dove: 尤其是高周目。
+20:12 Dove: 我这种手残都会无聊的
+20:13 Dove: 我高二高三就玩这破游戏了。
+20:14 varna: 可惜血源日版存档不通用
+20:14 varna: _(:з」∠)_好想用自己的完全状态去听早见师姐说话啊
+20:14 Dove: 我妈在叫我了。
+20:15 varna: 这次也不知道要死多少回才能找到感觉
+20:19 lhanjian: 黑魂八周目也并没有什么特别的
+20:19 lhanjian: 刚刚屠了猎龙铠甲
+20:19 varna: 米狄尔和爷爷如何
+20:19 varna: 还是那么硬？
+20:20 lhanjian: 对
+20:20 lhanjian: 我不升级的
+20:20 varna: 升级也就多三五十点伤害
+20:20 lhanjian: 招式套路也没什么变化
+20:20 varna: 不像血源，陶喆基础伤害Lv200才封顶
+20:21 lhanjian: 无非就是他们血多攻高，可能会准直死
+20:21 lhanjian: 我就压着128，玩各种武器
+20:21 varna: (｡･ω･)ﾉ走一波驴，看看这回他能杀我几十次
+20:21 lhanjian: 破烂断剑也能杀杀薪王
+20:22 varna: have mercy have mercy...
+20:22 varna: 我嚓
+20:23 varna: 开场不出十秒钟，一个找错节奏的跳砸……
+20:24 lhanjian: 又是irc杀？
+20:25 varna: 一个冲刺
+20:25 varna: 路德维希比较正常了，刚才没数秒
+20:27 Stevearzh joined channel
+20:28 varna: 噫
+20:28 varna: 原来在胯下吃一击也是直死……
+20:31 varna: 还好
+20:31 varna: 死了三次就通过了
+20:31 varna: 之前那个掐空打头的鞭子套路看来还算是掌握了
+20:50 lhanjian: 最难打的竟然是光头48
+20:50 lhanjian: 太肉了
+20:51 varna: 武器相性问题？
+20:53 Stevearzh quit:Ping timeout: 248 seconds
+20:58 lhanjian: 不管是特大还是短剑。伤害都太低。胖子硬到进不了身
+21:00 varna: 外围削弱+走位分流，进去之后箭步尬舞平砍之类的蹭几下呢
+21:02 Stevearzh joined channel
+21:13 Stevearzh quit:Remote host closed the connection
+21:13 Dove quit:Ping timeout: 248 seconds
+21:17 lhanjian: 时间不够，他们还会集体大回复
+21:18 lhanjian: 不过分流应该有办法
+21:18 varna: 回复的时候重武器冲进去凹，轻武器应该事先做好分流了
+21:18 varna: 场面很乱，不贪就行
+21:20 lhanjian: 我现在弄清楚薪王化身长枪模式那个360度旋转是什么武器了。是戟类武器的重攻击和战技
+21:20 varna: HO!
+21:20 varna: 片儿刀啊！
+21:20 * Mokou 刚醒
+21:20 Mokou: 作息已经彻底爆炸了
+21:20 varna: ^ 堕落的太学生
+21:26 YangMame quit:Remote host closed the connection
+21:27 YangMame joined channel
+21:28 Stevearzh joined channel
+21:31 Stevearzh quit:Read error: Connection reset by peer
+21:32 Stevearzh joined channel
+21:35 B005ter quit:Remote host closed the connection
+21:38 Stevearzh quit:Quit: Quit...
+21:39 Mokou: https://wx4.sinaimg.cn/mw690/6a10d9e5gy1fkd21ivltyj20m80go775.jpg “与生命的赛跑开始了”
+21:40 Stevearzh joined channel
+21:46 Stevearzh quit:Quit: Quit...
+21:48 B005ter joined channel
+21:51 Stevearzh joined channel
+21:55 Stevearzh quit:Client Quit
+22:00 YangMame quit:Remote host closed the connection
+22:02 YangMame joined channel
+22:02 YangMame quit:Client Quit
+22:06 Stevearzh joined channel
+22:09 Stevearzh quit:Read error: Connection reset by peer
+22:09 Stevearzh joined channel
+22:12 Stevearzh quit:Read error: Connection reset by peer
+22:18 Mokou: https://wx3.sinaimg.cn/mw690/640cd1a8gy1fkdapv6087j206u0563yh.jpg A: 现在装个软件都得精通中文了
+22:18 Mokou: B: 还需要逻辑学吧
+22:18 Mokou: C: 心理学？
+22:18 Mokou: D: 可能还需要懂量子力学 ​​​​
+22:20 varna: 懂白学行不行？
+22:20 Mokou: 懂白学的话你会面对着一堆附加软件为什么会这样呢
+22:21 varna: 为什么会变成这样呢
+22:22 cleamoon_ joined channel
+22:23 varna: 噬神者2这个丧心病狂的大位移无限连……
+22:23 varna: 看来制作者好好反省了，code:vein做出来的demo效果明显有改进，像是毫无手感的soullike
+22:34 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/q7/fs_56299.jpg@596w_1l.jpg
+22:35 Stevearzh joined channel
+22:36 varna: jbdxbl
+22:36 cleamoon_: 就不大小便了？
+22:37 varna: 见不到先辈了
+22:37 Mokou: 我对INM没有兴趣，请不要再来了！(关门)
+22:37 Mokou: 昨天在微博上看到日本大使馆官博给创价大学打广告
+22:37 varna: 233333
+22:38 cleamoon_: 233333
+22:40 Stevearzh quit:Ping timeout: 240 seconds
+22:44 cleamoon_: https://img.vim-cn.com/51/ceaa69de9a9af4eb360653a9310d46f72844d4.jpg  我已经连说都不会话了
+22:45 Stevearzh joined channel
+22:46 varna: 23333
+22:49 Stevearzh quit:Ping timeout: 240 seconds
+22:51 Mokou: https://wx2.sinaimg.cn/mw690/0063GeVxgy1fkd8md8qgxj30f00qoq4o.jpg
+22:59 varna: 第一眼以为稻芳
+23:00 Mokou: 明显是义乌巫医
+23:00 Stevearzh joined channel
+23:05 Stevearzh quit:Read error: Connection reset by peer
+23:15 Stevearzh joined channel
+23:24 lh_mouse: GCC 5 is now dead.
+23:26 Mokou: https://wx4.sinaimg.cn/mw690/e05816e2ly1fkd513udlkj21kw0bejup.jpg 恶意的政治隐喻
+23:27 cleamoon_: 我记得gentoo什么的还用gcc 4.x呢
+23:36 Stevearzh quit:Read error: Connection reset by peer
+23:37 Stevearzh joined channel
+23:39 Mokou: 切win
+23:39 Mokou quit:Remote host closed the connection
+23:50 Izumo joined channel

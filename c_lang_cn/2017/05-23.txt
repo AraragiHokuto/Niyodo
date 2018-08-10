@@ -1,0 +1,101 @@
+00:05 qaros_ quit:Remote host closed the connection
+01:39 lh_mouse quit:Ping timeout: 240 seconds
+02:30 yirabbit_ quit:Ping timeout: 260 seconds
+02:35 yirabbit_ joined channel
+02:53 CyrusYzGTt quit:Ping timeout: 260 seconds
+03:02 cleamoon quit:Ping timeout: 260 seconds
+03:10 CyrusYzGTt joined channel
+03:40 Mokou quit:Remote host closed the connection
+04:50 Youmu quit:Quit: Connection closed for inactivity
+05:18 cleamoon joined channel
+06:34 FrankHB quit:Ping timeout: 268 seconds
+07:31 qaros_ joined channel
+07:41 qaros joined channel
+07:43 qaros_ quit:Ping timeout: 260 seconds
+07:56 qaros quit:Remote host closed the connection
+08:29 yirabbit_ quit:Ping timeout: 240 seconds
+08:33 perr joined channel
+08:34 yirabbit_ joined channel
+08:40 yirabbit_ quit:Ping timeout: 255 seconds
+08:47 yirabbit_ joined channel
+08:57 qaros joined channel
+09:09 yimis joined channel
+10:01 Mokou joined channel
+10:03 Youmu joined channel
+10:28 lh_mouse joined channel
+11:25 keyboardman joined channel
+12:00 yirabbit_ quit:Ping timeout: 268 seconds
+12:14 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:21 whocares_2 joined channel
+12:22 whocares_2_ quit:Ping timeout: 246 seconds
+12:35 yirabbit_ joined channel
+12:40 yirabbit_ quit:Remote host closed the connection
+13:09 acelee_ joined channel
+13:09 acelee_ is now known as aceli
+13:24 lh_mouse quit:Read error: Connection reset by peer
+13:25 lh_mouse joined channel
+13:47 aceli quit:Quit: Leaving...
+14:06 keyboardman joined channel
+14:45 kuliuwu joined channel
+14:47 perr quit:Ping timeout: 240 seconds
+14:59 Taggnostr quit:Remote host closed the connection
+16:24 paper_octopus: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/0y/4y_431196.jpg@596w_1l.jpg
+17:24 qaros quit:Ping timeout: 268 seconds
+17:41 qaros joined channel
+17:44 ShiinaMashiro joined channel
+17:51 yimis quit:Quit: yimis
+18:03 lh_mouse: geordi, -c vector<class foo { int a; }> v;
+18:03 geordi: error: types may not be defined in template arguments
+18:15 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+18:17 lh_mouse: geordi, -c __extension__ int a[2] = { [1] = 233 };
+18:17 geordi: sorry, unimplemented: non-trivial designated initializers not supported
+18:17 lh_mouse: geordi, -c __extension__ constexpr int a[2] = { [1] = 233 };
+18:17 geordi: Same output.
+18:17 lh_mouse: geordi, --clang -c __extension__ int a[2] = { [1] = 233 };
+18:17 geordi: Success
+18:21 Youmu: geordi: version
+18:21 geordi: GCC 8.0.0 20170506 (experimental)
+18:26 rapiz joined channel
+18:28 paper_octopus: orz
+18:28 paper_octopus: 都8了
+18:34 rapiz quit:Quit: Konversation terminated!
+18:36 Taggnostr joined channel
+18:37 rapiz joined channel
+18:39 rapiz quit:Client Quit
+18:43 rapiz joined channel
+18:46 iyzsong-m joined channel
+18:46 keyboardman joined channel
+18:46 iyzsong-m: (；・∀・)
+18:47 rapiz quit:Client Quit
+19:00 qaros quit:Ping timeout: 272 seconds
+19:07 acelee quit:Quit: Connection closed for inactivity
+19:28 qaros joined channel
+19:33 iyzsong-m quit:Ping timeout: 240 seconds
+19:35 kuliuwu quit:Quit: Leaving
+19:40 qaros quit:Remote host closed the connection
+19:43 qaros joined channel
+20:04 ShiinaMashiro quit:Quit: Connection closed for inactivity
+20:06 qaros quit:Remote host closed the connection
+20:07 qaros joined channel
+20:13 erhandsome quit:Ping timeout: 260 seconds
+20:15 erhandsome joined channel
+20:17 LouisLIU joined channel
+20:19 LouisLIU quit:Client Quit
+20:43 qaros quit:Ping timeout: 240 seconds
+20:55 perr joined channel
+21:06 qaros joined channel
+21:06 keyboardman quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+21:25 qaros quit:Ping timeout: 246 seconds
+21:27 qaros joined channel
+21:31 qaros quit:Remote host closed the connection
+21:33 qaros joined channel
+22:05 qaros quit:Ping timeout: 246 seconds
+22:08 qaros joined channel
+22:12 iyzsong joined channel
+22:13 qaros quit:Remote host closed the connection
+22:17 iyzsong quit:Ping timeout: 260 seconds
+22:19 qaros joined channel
+22:20 perr quit:Quit: Leaving
+22:39 qaros quit:Remote host closed the connection
+22:40 qaros joined channel
+23:17 qaros quit:Ping timeout: 240 seconds

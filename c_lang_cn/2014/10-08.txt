@@ -1,0 +1,1147 @@
+00:04:lhanjian: 不同expire时间的timer都各自在minheap上。每个时间点的timer用各自malloc出的空间存放，如果有两个或两个以上的expire时间点相同的timer，那么realloc扩充之前的空间，塞在原有的后面。
+00:04:lh_mouse: 你用 C 写？
+00:05:lhanjian: 嗯
+00:05:lh_mouse: 一个 minheap 就够
+00:05:lhanjian: 这个我知道……
+00:05:lh_mouse: 实际上就是那么干的
+00:07:lhanjian: realloc的坑在哪里？
+00:07:lh_mouse: 就 C 语言   没多大坑
+00:07:lhanjian: glibc实现意义上的……
+00:07:lh_mouse: 不是说 glibc
+00:08:lh_mouse: 这里的坑主要体现在他没法保证原来的内存咋办了
+00:08:lh_mouse: 一个明显的例子就是链表的节点就不能 realloc 因为可能有别的节点在指向自己
+00:10:lh_mouse: 这里 C 语言坑不大  本来这种用例就少
+00:11:lhanjian: 也许考虑可以用二重指针的链表回避这个问题？
+00:11:lh_mouse: 那反而不如数组套数组
+00:11:lh_mouse: 链表的性能是渣
+00:11:lh_mouse: 实际上 std::deque 就是数组套数组
+00:12:lh_mouse: 块链一般也弄成固定大小的块  没这问题的、
+00:12:lh_mouse: 为一个指针单开一个链表节点无论怎么讲都逗
+00:16:Petrus07 quit:Quit: Leaving.
+00:20:lh_mouse quit:Quit: Meow meow meow
+00:24:lhanjian quit:Quit: 风光冉冉东西陌
+00:24:OwenJia quit:Ping timeout: 250 seconds
+01:44:hysw joined channel
+03:35:xxxxxxxx quit:Quit: Leaving...
+04:52:FrankHB quit:Ping timeout: 258 seconds
+05:55:xxxxxxxx joined channel
+06:01:FrankHB joined channel
+06:23:xxxxxxxx quit:Quit: xxxxxxxx
+07:32:hoxily joined channel
+08:05:OwenJia joined channel
+08:05:OwenJia quit:Changing host
+08:05:OwenJia joined channel
+08:46:lh_mouse joined channel
+08:48:lhanjian joined channel
+08:49:boosure joined channel
+09:00:hoxily_ joined channel
+09:03:hoxily quit:Ping timeout: 246 seconds
+09:14:MisakaMikoto quit:Remote host closed the connection
+09:14:MisakaMikoto joined channel
+09:18:wysaid joined channel
+09:37:whatofor joined channel
+09:37:lhanjian quit:Quit: 风光冉冉东西陌
+09:40:boosure quit:Ping timeout: 250 seconds
+10:37:lh_mouse: clcn_logbot, 爆
+10:37:lh_mouse: Plough, 爆
+10:37:lh_mouse: Plough, 爆
+10:37:lh_mouse: Plough： 爆
+10:37:lh_mouse: Plough: 爆
+10:37:lh_mouse: Plough: 爆
+10:37:lh_mouse: 呃
+11:07:wysaid: 爆！
+12:14:hoxily_ quit:Ping timeout: 258 seconds
+12:43:Xilzzerts joined channel
+12:57:sismvg joined channel
+13:22:OwenJia quit:Quit: Konversation terminated!
+13:51:wysaid quit:Quit: ChatZilla 0.9.90.1 [Firefox 32.0.3/20140923175406]
+13:58:lhanjian joined channel
+14:07:lhanjian quit:Ping timeout: 260 seconds
+14:09:lhanjian joined channel
+14:27:Mran____ joined channel
+14:28:Mran____: 炮姐在认真的上课吗
+14:29:varna joined channel
+14:30:varna: 药娘都没了
+14:30:varna: MisakaMikoto: 求交配
+14:43:sismvg: 跪
+14:44:sismvg: 人事放了我三个小时的鸽子
+14:44:xxxxxxxx joined channel
+14:45:hysw quit:Ping timeout: 240 seconds
+14:45:hysw joined channel
+14:45:varna: sismvg: 爆
+14:46:sismvg: no
+14:46:sismvg: 顺带是我的错觉吗。。我认为码农应该没几个抽烟的啊。。
+14:46:sismvg: 结果今天去offer的公司看了几个小时。。门口十几个人一起抽。。
+14:46:varna: POI?
+14:47:varna: 这次去应聘什么岗位
+14:47:sismvg: 依旧客户端
+14:47:sismvg: ML还没那个能力
+14:47:varna: 用什么做？
+14:47:sismvg: cpp
+14:47:sismvg: 不过我已经放弃回家了
+14:47:varna: Y?
+14:48:sismvg: 说了人事放了我三个小时的鸽子。。
+14:48:sismvg: 然后等我忍不住走的时候还是放我鸽子
+14:48:lhanjian: 四元现在找工作？
+14:48:sismvg: ....
+14:48:sismvg: 不一直早嘛。。
+14:48:sismvg: 在
+14:50:varna: 约好的时间结果HR没来？那什么公司？
+14:51:hysw quit:Ping timeout: 246 seconds
+14:51:sismvg: 不是HR，是入职
+14:51:lhanjian: 那就不着急呗
+14:52:varna: ...
+14:52:sismvg: 首先放了我三个小时鸽子，然后十几个人集体抽烟。。
+14:52:varna: lhanjian: lhj现在大三还是大四？
+14:52:lhanjian: 三
+14:52:varna: soga
+14:52:sismvg: 校招kesu
+14:52:lhanjian: 要是四的话，估计也要着急了
+14:52:varna: 校招很多的吧
+14:52:sismvg: 顺带在他们项目里看到了这样的代码
+14:53:lhanjian: 前几天去了网易的宣讲会，跟他们的运维开发聊了几句，好像还行的样子
+14:53:varna: 聊的什么？
+14:53:lhanjian: varna, 渣渣学校。BAT基本不来。得靠自己投简历
+14:53:sismvg: button_val[0]=10; button_val[1]=100; button_va[2]=1000 ~一直这么写到5...
+14:53:varna: wow so nage
+14:53:varna: lhanjian: 啊噗？
+14:53:varna: lhanjian: 网易都来了，别的公司也大致都来吧？
+14:53:lhanjian: varna, 随便扯了几句自己那个服务器，顺带聊了聊网易的后台开发
+14:54:lhanjian: varna, 也就网易/华为会来。
+14:54:lhanjian: 阿里偶尔来
+14:54:lhanjian: 百度腾讯就只能去ZJU/网上投了
+14:54:sismvg: 你看看你们，有校招还不知足
+14:54:varna: 对方对服务器有什么看法？
+14:54:varna: sismvg: uccu, 为什么不上大学……
+14:54:sismvg: 政策问题
+14:54:varna: ...
+14:54:lhanjian: varna, 没具体聊。他是搞运维的，网易主要用nginx当反向代理
+14:55:varna: 运维略苦啊
+14:55:sismvg: 大人的理由
+14:55:varna: uccu, 跟我扯什么大人的理由……
+14:55:lhanjian: varna, 嗯。他建议我要是写码底力足够还是以后投开发比较符合我的意愿
+14:56:lhanjian: 不过网易的运维工具开发对我可能更简单一点。
+14:56:varna: 我觉得你要是打算维持现在方向的话还是投开发为好
+14:56:lhanjian: 我也觉得是。
+14:56:varna: 运维做的事情略不一样
+14:56:lhanjian: 阿里那边就等社团的伙计给内推了。
+14:57:varna: 阿里的内推是什么政策，免一个笔试？
+14:57:lhanjian: 应该是。
+14:57:sismvg: -_- uccur
+14:57:lh_mouse: 我之前好像说过一句话
+14:57:lh_mouse: 所谓的项目经验就是和傻逼相处的经验
+14:57:lh_mouse: 当然我不是说国内的开发者都是傻逼
+14:57:varna: 前提是自己得足够聪明
+14:57:lh_mouse: 但是十个里面有九个是
+14:57:* varna 自居鲁钝
+14:57:lhanjian: varna++
+14:57:lh_mouse: 至少不聪明
+14:58:* lhanjian 肯定是耗子眼里的傻逼
+14:58:lh_mouse: 傻逼和傻子不一样
+14:58:lh_mouse: 比如  菜比和菜鸟
+14:58:lhanjian: ……
+14:58:lh_mouse: 傻子 或者菜鸟   至少是无害的
+14:59:sismvg: lh->没有三角框的消息怎么弄得
+14:59:varna: 其实比较麻烦的另一种事情是每人都拿出一种划定傻逼的标准
+14:59:lhanjian: +
+15:00:varna: 最后每个人都因为各种各样的原因变成了傻逼，而且都闪闪发光地小葱明
+15:01:lhanjian quit:Quit: 风光冉冉东西陌
+15:01:lhanjian joined channel
+15:02:sismvg: 开着风扇冷，关了风扇热的天气。。
+15:02:varna: 怎么说呢，所谓“战术的葱明”
+15:04:lhanjian: 话题好像跑远了
+15:04:varna: 不远
+15:05:varna: 实际上开发者团体里类似的言论我很久以前就有所耳闻，不过当时我甚至还没梦遗过所以更没法试图理解这是怎么回事
+15:06:sismvg: http://www.565656.com/ting/383179.htm <-赞
+15:06:sismvg: 非常腐
+15:06:varna: 腐不如哲 学
+15:08:sismvg: 如果把腐比作柔道的话，哲 学就是摔 跤
+15:08:varna: 完全不是
+15:08:varna: 腐是一堆蛋疼木耳的妄想，因为自己不敢去找男人所以只好幻想两个基佬之中有一个是娘炮
+15:09:Xilzzerts: ...
+15:10:lhanjian: Xilzzerts, Zirx下午好
+15:10:varna: 腐女幻想的BL完全是少女漫画里王子和少女的交往模式，这显然不是统计意味上的基佬
+15:11:sismvg: 那么哲学的受也只不过BL的“少女”方的放大
+15:11:varna: 哲学不分攻受只分艹和被艹
+15:11:Xilzzerts: 最近投公司校招的我看了下都是研究生。。
+15:12:varna: 忽略少女漫画文本中少女范畴一方的特征，强行指出1和0即为王子范畴和少女范畴，是典型的诡辩失败
+15:12:Xilzzerts: Leader的看法是技术不高还想拿高工资
+15:12:sismvg: 帝球是烟酒僧？
+15:12:varna: 直白地说，是忽略内涵而试图把注意力吸引到外延上的诡辩尝试
+15:13:varna: Xilzzerts: 那些研究生都投了什么方向？
+15:13:lhanjian: sismvg, 耻球早就业了吧
+15:13:varna: lhanjian: 恥球读研
+15:13:lhanjian: 不是已经研究僧都毕业了么
+15:13:sismvg: 说不定什么时候就抓到了帝球但你还不知道
+15:13:varna: 现在才研三吧，恥球只比我高一级
+15:13:lhanjian: soga
+15:14:sismvg: 嗯。。。。我想我知道怎么找到帝球了
+15:14:Mran____: 6,06,0地球
+15:14:sismvg: 地球不是圆的！
+15:15:xxxxxxxx: 帝球是圆的
+15:15:lhanjian: 巨基也读研了吧？
+15:15:varna: 其实EA基佬是国安的
+15:15:xxxxxxxx: 我是智障
+15:16:Mran____: 613,0我也是
+15:16:varna: Mran____: 爆
+15:16:Mran____: 我刚大一
+15:16:lhanjian: Mran____, 大有可为。
+15:16:varna: 哦？什么专业？
+15:16:xxxxxxxx: 我刚门
+15:16:varna: xxxxxxxx: 爆
+15:16:Mran____: 以前混过贴吧。
+15:16:lhanjian: Mran____, 知道你
+15:17:sismvg: GDI弄字体好疼
+15:17:varna: 面码头像的人太多了，Mran是几个我分不出来的人之一
+15:17:Mran____: 你知道我⊙▽⊙
+15:17:sismvg: 一边要关系逻辑大小，一边又要关系用户的设备。。
+15:17:sismvg: 关心
+15:17:varna: sismvg: GDI你该去问糖果，他耍得多
+15:17:lhanjian: Mran____, 你以前也来过IRC
+15:17:Xilzzerts: 都是投的研发啊
+15:17:varna: Xilzzerts: 研究生水平不至于很差吧
+15:18:sismvg: 他不在
+15:18:varna: 贴吧
+15:18:Mran____: 对。。。因为高考就把这块放下了
+15:18:lhanjian: 上次来的时候你好像才高二，现在就大一了……
+15:18:varna: 因为gao kao 就把这块放下了？
+15:18:xxxxxxxx: 搞尻?
+15:18:varna: xxxxxxxx: uccu
+15:19:varna: 当时《武藏的guitou》也是这么被基佬们玩坏的
+15:19:Mran____: 抽不出来时间学
+15:19:sismvg: 写出ChooseFont的人实在是太聪明了
+15:20:varna: 你怎么又开始GDI了，公司要用？
+15:20:Mran____: 这不大一了嘛，继续努力
+15:20:sismvg: 我要用
+15:21:varna: 噗
+15:21:sismvg: 总不能一直用命令行看输出
+15:21:sismvg: ML的
+15:21:xxxxxxxx: 有木有什么浏览器插件可以把下载的东西直接分类放?
+15:21:varna: 机器学习不好好搞算法折腾什么GUI...
+15:21:sismvg: 顺带面试的时候方便点
+15:21:sismvg: 我估计我要个几年才能干ML吧。。
+15:21:varna: 输出个csv之类东西直接用matlab或者别的数学/统计软件看看行了
+15:22:varna: 这么想你几年之后还会是这样
+15:22:sismvg: 所以现在找个小公司赚点硬件钱
+15:22:Xilzzerts: 没说差啊，只是和要求资薪不符
+15:22:varna: 他们要多少
+15:22:sismvg: 我都是5000..
+15:22:Xilzzerts: 起步的7K+吧
+15:23:varna: 这个哪里多
+15:23:sismvg: 感觉不多。
+15:23:libhanjian joined channel
+15:24:Xilzzerts: 武汉应该不算低了，反正我只记得一个不知道volatile
+15:24:varna: 还是说你们只肯给本科生4k+
+15:24:sismvg: 也许武汉物价低
+15:24:sismvg: 你看上海租个20平米的房子一个月1500.。
+15:24:varna: 没听说过volatile太过分了
+15:25:varna: 不过就怕面试的伙计自己也一知半解
+15:25:sismvg: 不是干嵌入的才用的嘛
+15:25:varna: 逗
+15:25:sismvg: 偶尔写个锁
+15:25:varna: 锁你自己上lock前缀去
+15:26:varna: 嵌入式的位置更麻烦，写一个地址也未必就是内存地址
+15:26:libhanjian: volatile体现了优化是万恶之源？
+15:26:varna: 不是
+15:26:lhanjian quit:Ping timeout: 272 seconds
+15:26:sismvg: 偶尔优化会出问题
+15:27:varna: 只是没什么万能，如果你真的要锁总线那么自己锁
+15:27:varna: 后端优化只是那个位置上不能假定不写回
+15:28:varna: 比早期T *p; ... SOME_EXPR((*p)); ...之类引发的管你死不死代码消除还强点
+15:31:libhanjian quit:Quit: 风光冉冉东西陌
+15:31:libhanjian joined channel
+15:32:libhanjian: .
+15:33:varna: 十月份的时候总是过敏
+15:33:libhanjian: 鼻炎？
+15:33:varna: +
+15:34:libhanjian: 我也是。得早点开始吃鼻炎药，不然入冬了就更严重了
+15:34:varna: 入冬还好
+15:34:sismvg: 鼻炎的时候总会弄出一大堆纸巾
+15:35:sismvg: 然后倒垃圾的时候总有那么些人会心一笑
+15:36:libhanjian: 我都躲着扔……
+15:36:varna: uccu
+15:36:varna: 你们撸得还少么
+15:37:sismvg: 我不用纸巾
+15:37:xxxxxxxx: 擦在裤子上么?
+15:37:varna: @梵高
+15:37:sismvg: 撸到一半不sj
+15:38:Xilzzerts: 还有个简历贴大头贴的，直接被刷了。。
+15:38:sismvg: 然后让大脑充血回去看高等数学
+15:38:libhanjian: Xilzzerts, 真是作死啊……
+15:38:varna: 以前rox不是在简历上帖了个阎魔爱……
+15:38:varna: sismvg: 你很快就ED了
+15:39:xxxxxxxx: 药娘来自切吧
+15:39:sismvg: 简历大禁忌-》NO大头贴，NO200字以上
+15:39:sismvg: 别写面试官看不懂的东西
+15:40:varna: 你怎么保证你研究的东西别人都能一下看懂……
+15:40:libhanjian: 真是奇葩，怎么libev/libevent 都用fd做映射返回到事件……
+15:41:xxxxxxxx: 王 根那样 不管你们怎么想 反正我很屌
+15:41:varna: yinwang现在的思路不该是妹子都该喜欢他因为他自己觉得自己很屌么
+15:42:lambdahanjian joined channel
+15:42:sismvg: 当地的一只yinwang发疯了，不断挑战周围的屌丝的底线
+15:42:sismvg: 然后默默的打开了M24
+15:42:varna: M24?
+15:43:sismvg: M24
+15:43:varna: M24不是美军的狙击枪么
+15:43:sismvg: 对啊
+15:43:varna: 给我换M40A3
+15:43:sismvg: 加钱
+15:43:varna: M40A3都在淘汰边缘了
+15:43:varna: 缺钱的去买KAC M110 SASS啊
+15:43:varna: 雷明顿没选上就是因为贵啊
+15:43:sismvg: 古董才有乱抬价的本钱
+15:44:FrankHB: 王根的屌有地方用么。
+15:44:hoxily_ joined channel
+15:44:Xilzzerts: 公司一个高中毕业的运维似乎很厉害，上次看到手写iptables规则
+15:44:sismvg: 等等
+15:44:varna: M24在中二市场上卖价估计还不如一支莫辛纳甘
+15:44:xxxxxxxx: 有手啊
+15:44:varna: Xilzzerts: 那有特比的么……
+15:44:varna: 特别
+15:44:sismvg: FrankHB:http://item.taobao.com/item.htm?spm=a1z10.3.w4002-7874473910.22.8g5i1N&id=40594666498
+15:44:sismvg: NSFW
+15:45:Xilzzerts: 各种awk脚本，shell脚本，KVM相关命令，就没见过他查man的
+15:45:varna: 另外指出一点，M24改和M24 .338其实都还不错，前者可以改枪管附赠一个十发弹匣
+15:46:libhanjian quit:Ping timeout: 272 seconds
+15:46:sismvg: awk应该没什么奇怪的
+15:46:varna: 那倒是经验丰富，不过跟没上过大学有关系么……
+15:46:varna: 我从不用awk, 一律perl
+15:46:sismvg: such perl
+15:46:lambdahanjian: 在羊驼子眼里，这种经验的东西不太有价值吧……
+15:46:varna: 有
+15:47:varna: 经验很有价值，但经验只要积累就会涨去来
+15:47:varna: 起来
+15:47:Xilzzerts: 相比一新来写php的，还打算用sh运行二进制文件呢
+15:47:sismvg: Perl是唯一一门在RSA加密以后和加密以前看按起来没有差别的语言
+15:47:varna: 比的对象不对
+15:47:varna: 我觉得你这么比只是因为自己被吓着了……
+15:48:varna: 比如我指出一个man相关的问题：epoll_wait是否有bad connection错误
+15:50:Xilzzerts: 我猜有
+15:51:varna: 你看看man
+15:51:varna: 顺便指出一点，当看到bad connection的时候你该有个方向性的考虑
+15:56:sismvg: http://tieba.baidu.com/p/3338138445 巨人剧透-》虽然早就猜到了
+15:56:xxxxxxxx: http://www.bilibili.com/video/av1575659/ 这个有人看过么?
+15:57:Xilzzerts: 丧尸
+15:57:sismvg: 超级丧失
+15:57:sismvg: 魔法“大叔”
+15:57:lh_mouse: connection 蛋
+15:57:lh_mouse: DEBUG_THROW(SystemException, errno); 天下大吉
+15:57:sismvg: 还是去看Monster吧
+16:15:lambdahanjian: emacs能在tty里跑吗？
+16:16:varna: emacs -w
+16:18:lambdahanjian: 哦，原来emacs在X里面会自动弹新窗口打开……
+16:18:Mran____ quit:Ping timeout: 260 seconds
+16:24:xxxxxxxxx joined channel
+16:27:FrankHB: sismvg: 煋，这店早就在某个绅士资源站右侧的广告点进去看过了。
+16:27:FrankHB: 嘛，王 根估计还没有这等觉 悟。
+16:28:xxxxxxxx quit:Ping timeout: 272 seconds
+16:36:sismvg: FrankHB:你也去i-AB?
+16:44:FrankHB: galacg.me。i-AB的那广告不是在最上面么。
+16:53:sismvg: i-AB是右边。。
+17:16:FrankHB: 。。。不是首页左中上么，右边都是正常向。
+17:18:sismvg: IE ? 
+17:18:FrankHB: FF
+17:19:sismvg: 我也是FF。。但是还是右边。。
+17:20:sismvg: http://www.tu265.com/di-c92255cafb15f1d86189702858c47956.jpg
+17:25:varna: 我居然开始写typemap了，黑魔法真是悲惨啊
+17:28:lh_mouse: 你们谁告诉我怎么靠谱点实现 switch("blahblah")
+17:28:lh_mouse: case 全是字面量
+17:28:lh_mouse: 妈的如果有 lambda 就好了
+17:30:lh_mouse: 开个数组二分查找   里面塞一堆 lambda
+17:30:varna: 没办法，我自己写perl都是$switches->("foobar")->(@_), 后来我发明了 https://metacpan.org/pod/HOI::Match 这个
+17:30:varna: c就没办法了
+17:31:lh_mouse: C 可能恶心点  不过并非无法做
+17:31:lh_mouse: 函数指针嘛
+17:31:varna: 参数转发很疼，还是得开扩展
+17:31:lh_mouse: 反正 switch 用跳表也跟函数指针没多大区别
+17:31:varna: 一层的lambda也可以hack
+17:31:lh_mouse: 这地方最恶心的是 C++03  
+17:31:lh_mouse: 各种 private  用 静态函数根本无法访问
+17:32:lh_mouse: 反而还不如 C 啊
+17:32:varna: 11之前的c艹实在太难受
+17:32:varna: 那时候lambda用起来方便的似乎还得靠boost吧
+17:32:lh_mouse: 那时候有 lambda 么……
+17:33:varna: boost有吧？
+17:33:lh_mouse: 没印象  容我 grep 一下
+17:34:lh_mouse: 还真有
+17:34:lh_mouse: 我看看好玩不
+17:35:lh_mouse: oh fuck
+17:35:varna: 2333
+17:35:lh_mouse: varna, 是这种东西
+17:35:lh_mouse: if_< less<_1, int_<7> >, plus<_1,_2>, _1 >
+17:35:lh_mouse: CNM 逗我
+17:35:lh_mouse: 这完全不是 C++11 的 lambda 嘛
+17:35:varna: 现在phoenix还保留了这些if_呢……
+17:35:lh_mouse: 就是一大堆模板构成一个 function class
+17:36:lh_mouse: 我说那个 lambda 是这种东西  
+17:36:varna: 函数就是了
+17:36:varna: 1st-class function
+17:36:lh_mouse: geordi, { int i = 3; struct impl { static void do(int &x){ ++x; } }; impl::do(i); cout <<i; }
+17:36:geordi: error: expected unqualified-id before 'do'
+17:37:lh_mouse: geordi, { int i = 3; struct impl { static void do(int &x){ ++x; } }; impl().do(i); cout <<i; }
+17:37:geordi: Same error.
+17:37:lh_mouse: 哦艹
+17:37:lh_mouse: 忘了 do 是关键字
+17:37:varna: geordi: replace do with foo
+17:37:geordi: error: String `do` occurs multiple times.
+17:37:lh_mouse: geordi, undo and replace all do with invoke
+17:37:geordi: 4
+17:37:lh_mouse: geordi, show
+17:37:geordi: { int i = 3; struct impl { static void invoke(int &x){ ++x; } }; impl::invoke(i); cout <<i; }
+17:37:lh_mouse: 就是没法捕获 不过应该可以兼容 c++03
+17:38:code_new joined channel
+17:38:lh_mouse: 即使是刚说的用打表二分查找  里面的 lambda 也得 cast 成函数指针
+17:38:varna: 捕获这么晚才被重新拿进标准，也算是落后历史六七十年……
+17:38:lh_mouse: 不过那个可以塞到宏里面
+17:38:lh_mouse: 嘛 捕获什么的……
+17:39:varna: 鼻炎好悲剧
+17:40:varna: 晚上得顺道去买点扑尔敏
+17:40:lh_mouse: 严重么
+17:40:varna: 一般吧，只是过敏打喷嚏
+17:43:lh_mouse: 过敏……
+17:44:varna: 每年九月十月总是发过敏性鼻炎，这次估计还是不吃药就喷嚏不断
+17:46:boosure joined channel
+17:47:FrankHB: 没六十年。
+17:47:FrankHB: 重新？
+17:47:lh_mouse: 四五十年
+17:47:FrankHB: C-like就没重新好不。
+17:47:lh_mouse: 七十年代算到现在四十年多
+17:47:varna: 七十年代？得从三十年代开始算吧
+17:48:lh_mouse: 八十年……
+17:48:FrankHB: 三十年代有捕获的概念么。
+17:48:FrankHB: 不是直接拿过来用？
+17:48:lambdahanjian: varna, 那就早点开始坚持吃药。坚持吃上两个礼拜问题不大
+17:48:lh_mouse: 吃什么 吃螺？
+17:48:varna: FrankHB: 现在说捕获算是亡羊补牢
+17:48:varna: 吃一天扑尔敏就好了
+17:49:lh_mouse: 如果是说七十年代
+17:49:varna: 我得爆药娘，怎么能吃螺
+17:49:lh_mouse: 那个年代嘛  我觉得考虑得更多的是性能
+17:49:lh_mouse: 而不像现在
+17:49:lh_mouse: 现在属于单机性能不足  集群性能过剩
+17:50:FrankHB: C艹外的大部分好像还是无视捕获的居多。因为GC惯坏了没意义强调了么。
+17:50:varna: 不过有operator()之后就应该考虑把1st-class function提上来
+17:50:varna: 做成编译器读懂的functor糖也好
+17:50:lh_mouse: 某种观点认为函数式编程语言之所以最近如此火 是其特性适合分布式运算
+17:50:varna: 我不这么认为
+17:50:lh_mouse: 而在单机性能极其低下的年代函数式确实发展不起来
+17:50:lh_mouse: 嘛
+17:50:FrankHB: operator()就是明摆着的奇技淫巧罢了。
+17:51:lh_mouse: 说当年 C 如何艹翻 lisp
+17:51:FrankHB: 莫名其妙成功地擦了屁股，另论。
+17:51:varna: 实际上这些语言里真的被分布了的是erlang, 而erlang并不具有purity（笑）
+17:52:lh_mouse: C 更多是简单抽象实现的语言
+17:52:varna: 而强调purity的语言中，运算往往从compute变成calculus, 最后处理副作用和执行顺序的偏序碍手碍脚
+17:52:FrankHB: N3690补上了lambda的operator()的C艹linkage，于是一堆玩意儿又艹蛋了。比如就算[]也没法当signal handler……
+17:52:lh_mouse: 从积极的角度考虑  实现有的 C 基本都有  C 没有的也有 asm 可以擦屁股
+17:52:lh_mouse: 别的语言很少有这种东西
+17:52:FrankHB: 1st class支持的狗皮膏药敢少些么。
+17:52:varna: 函数式语言之所以变成话题，一部分原因也是相当的开发者没文化真可怕
+17:52:lh_mouse: 但是  我看 C 的函数也别不爽
+17:52:lh_mouse: 也特别*
+17:52:FrankHB: asm擦屁股于是可用性大打折扣。
+17:53:FrankHB: 用C很大一部分人的理由就是不想用asm。
+17:53:varna: 结果现在快反过来了
+17:53:FrankHB: 233
+17:53:lh_mouse: 实现变了语言没变你还是没办法
+17:53:FrankHB: 语言变了撸实现的要造反。
+17:54:lh_mouse: ?mmintrin.h 是因特尔搞出来的  虽然没进标准  不过还没哪个 x86/64 编译器敢无视的
+17:54:varna: signal handler本身就是作死
+17:54:lh_mouse: 而且所谓 intrin 
+17:54:lh_mouse: 意思就是直接翻译成指令  并非真正的函数调用
+17:55:lh_mouse: 也可以算是语言本身的扩展
+17:55:varna: builtin吧
+17:55:lh_mouse: 可扩展性太差的本质问题没解决
+17:55:lh_mouse: 加 builtin 固然是解决方案
+17:55:FrankHB: Intel在这里也就这样了。有能耐叫AT&T syntax滚蛋么。
+17:55:lh_mouse: 那是头痛医头脚痛医脚的解决方案
+17:56:varna: 哪里的可扩展性
+17:56:FrankHB: 自家的编译器还是兼容GNU的命令行。
+17:56:varna: 语用的还是语义的
+17:56:lh_mouse: 语用是什么概念
+17:56:FrankHB: 比如coding convention之类。
+17:56:varna: 说语用不准
+17:56:varna: 这么说吧，库的可扩展性还是单纯语义的
+17:57:lh_mouse: 这个也不好解释 打个比方
+17:57:lh_mouse: SFINAE 是对模板的扩展
+17:57:lh_mouse: 我指的这个
+17:57:FrankHB: 反正C/C艹不是。
+17:57:FrankHB: 连个动态库都管不着。
+17:57:lh_mouse: 毕竟 type_traits 是 C++11 才进标准的  很早之前 boost 就有了
+17:57:varna: 这个啊
+17:57:lh_mouse: 这属于 旧瓶装新酒
+17:58:varna: 这样的东西我从来没看见不是凑合的解决方案
+17:58:lh_mouse: 凑合归凑合  起码不用整天改编译器
+17:58:lh_mouse: builtin 那种得改编译器
+17:58:varna: 如果c艹用户不愿意放弃他们的descriptive programming, 这种就逃不掉
+17:59:FrankHB: 这个？你要可扩展性无非就是艹个REPL，然后让现有的C艹代码滚粗。（C艹的REPL能指望？）
+17:59:lh_mouse: 例如呢
+17:59:varna: REPL...
+17:59:varna: 我宁可让REPL去死
+18:00:lh_mouse: 羊驼： Ri Earth Piyan Language
+18:00:lh_mouse: （逃）
+18:00:varna: 这个好
+18:00:FrankHB: REPL变成标配以后至少某些人能通过实现起来的dt领教到哪里的设计犯二了。
+18:01:lh_mouse: 你指的是 Read-Eval-Print-Loop  么
+18:01:varna: 但是REPL也毫不解决语义问题，更糟糕的时候甚至可能扩大元编程逗比
+18:02:varna: 个人意见，现在的指称语义尝试没法提供所谓可扩展性，所以只好换花样提供自肛机制
+18:03:lh_mouse: 语义：  ##c++ 有一帮人说要干掉 C艹中的 volatile
+18:03:FrankHB: 不是解决语义问题，是一开始就不该有那么多问题。在必须实现REPL的情况下，实际问题会逼某些人别搞的太离谱。不用POSIX这样的拙计了。
+18:03:FrankHB: 干掉了有毛用。
+18:03:varna: POSIX在加上IX后缀之后已经没有救赎了
+18:04:varna: lh_mouse: 他们拿什么干掉
+18:05:FrankHB: 如果不算不断的擦屁股的话，C就没救赎。
+18:05:varna: 我现在想知道什么是有救的
+18:05:FrankHB: 更何况现在的C基本上连擦屁股的动力都没有……
+18:05:varna: c不是已经开始自灭了么……
+18:06:FrankHB: 也许C-- + C++都会好点。。。
+18:06:varna: 现在的c标准只会耍些奇葩东西，不成他们的观点是“决不能跟c艹保持口径一致”
+18:06:FrankHB: C现在的问题不是本身，而是就是想自灭都不可能干净的现状。
+18:07:varna: 现状的大背景是没有合适的代数解决底下的各种问题，而相当数量的用户也不满GC
+18:07:FrankHB: C11的signal都没C艹的有可用性……无力吐槽。。。
+18:07:lh_mouse: C 自灭了 MCF 咋办
+18:07:uuair_ quit:Quit: leaving
+18:07:FrankHB: 冷笑话：gcc -MF
+18:07:* lh_mouse 我很好奇
+18:07:varna: lh_mouse: 变成MSF = Mouse's self f@cking
+18:07:uuair joined channel
+18:07:uuair quit:Changing host
+18:07:uuair joined channel
+18:08:FrankHB: 相当多不满GC的都是C艹用户吧。
+18:08:lh_mouse: 嘛 autojoin delay 我都改成 30s
+18:08:lh_mouse: uuair, 你的胖次露出来了
+18:09:varna: FrankHB: 是
+18:09:varna: 巫女用户按四个人头算作一个人力的方式计入总数
+18:10:FrankHB: 不满GC也不满C艹的撸啥呢。。。Rust之类的长期初级阶段玩具？
+18:10:lh_mouse: 嘛  就说 unique_lock  这种东西
+18:10:varna: 撸c艹吧……
+18:10:lh_mouse: 放别的语言怎么实现呢
+18:10:uuair: lh_mouse: ??什么
+18:10:lh_mouse: uuair, [18:08:05] 23* uuair (~uuair@li281-21.members.linode.com23) has joined
+18:10:lh_mouse: [18:08:05] 24* uuair has quit (Changing host)
+18:10:varna: 19:07 -!- uuair [~uuair@li281-21.members.linode.com] has joined #c_lang_cn
+18:10:varna: 19:07 -!- uuair [~uuair@li281-21.members.linode.com] has quit [Changing host]
+18:11:lh_mouse: auto join 延迟改大点  改成 30 
+18:11:lh_mouse: 就算你 nick 没改过来 也被 nickserv 干掉了
+18:11:FrankHB: 老实说还真不想太多人撸C艹，C艹是少数历史上平均教育质量差不多一直比C还渣的玩意儿了，现在还各种抽风。
+18:11:lh_mouse: 然后默默 quit 装作啥也没发生
+18:11:lh_mouse: C++ 整体水平明显低
+18:12:lh_mouse: 比 C 还低
+18:12:FrankHB: 低得多了。。。
+18:12:lh_mouse: mongodb 那个 C++ driver……满地传值
+18:12:lh_mouse: 我都无力吐槽了
+18:12:varna: unique_lock... 巫女党的这东西似乎变成了持有对象所有权的synchronized
+18:12:sismvg: 21天学完XXX语言
+18:12:FrankHB: 其实已经被Java救了不少，否则更低。
+18:12:lh_mouse: varna, 就类似于 unique_ptr
+18:12:lh_mouse: 不过 unique_ptr 销毁时候删除持有的对象
+18:12:varna: soga
+18:12:lh_mouse: unique_lock 销毁时释放持有的锁
+18:13:lh_mouse: C++ 的 RAII 省了不少事   当然也是 C 渣的地方
+18:13:uuair: lh_mouse: 没办法啊，登录退出信息，怎么隐藏呢
+18:13:lh_mouse: 但是很多人不用异常 让我很困惑
+18:13:FrankHB: 不过上面是说会撸出代码的。如果包括自认为“学过”，那么也未必（二级党头顶青天……
+18:13:lh_mouse: uuair, 你等 nickserv identify 之后再 join  所以我说你把延迟改大点
+18:13:lh_mouse: hexchat 默认延迟是 5s   你窗口
+18:13:uuair: lh_mouse: 哦，我试试
+18:14:lh_mouse: nick 没认证过 直接 join ##c++ 被踢出来
+18:14:varna: 你很耗奇
+18:14:FrankHB: 你很好骑
+18:14:lh_mouse: 你说精通 C 语言我信
+18:14:lh_mouse: C 某种意义上是精简特性的极致
+18:14:FrankHB: 精通 C 语言我都不信。
+18:14:FrankHB: 什么叫trap representation？
+18:15:lh_mouse: 为了精简指针甚至能 YY 出“标量等价于一个元素的数组”
+18:15:lh_mouse: FrankHB, 你是指那个未初始化的整型啥啥的
+18:15:uuair quit:Quit: leaving
+18:15:varna quit:Quit: Reconnecting
+18:15:lh_mouse: an indeterminate value might trap 
+18:15:varna joined channel
+18:15:uuair joined channel
+18:15:FrankHB: 不是一回事。
+18:15:sismvg: 我还是老老实实写会用C++吧,,
+18:15:varna: 妈的
+18:15:FrankHB: 标准解释是：an object representation that need not represent a value of the object type
+18:16:uuair: lh_mouse: 好了么？
+18:16:varna: sismvg: 你老实过么……
+18:16:FrankHB: C在一些地方比C艹还抽象。。。
+18:16:lh_mouse: uuair, 好了啊
+18:16:sismvg: 我一直都写熟悉，但是还是有点心虚
+18:16:varna: 没看出抽象，只看出是抽得无奈……
+18:16:jKluolin joined channel
+18:16:FrankHB: 虽然这地方倒不是。
+18:16:lh_mouse: 我上面已经说过那个例子了
+18:16:uuair quit:Client Quit
+18:16:lh_mouse: C 本身不区分 pointer to scalar 和 pointer to array
+18:16:FrankHB: indeterminate value
+18:16:FrankHB: either an unspecified value or a trap representation
+18:16:varna: 一个抽象应该是确实的抽象，而不是撸得神志模糊不敢定义什么是什么
+18:16:lh_mouse: 所以才会搞出这种无聊的规定
+18:17:varna: 而目前我没文化我自豪的问题仍然满地可见
+18:17:lh_mouse: 另外 array 本来该叫 vector
+18:17:lh_mouse: scalar 本来就和 vector 是反义词
+18:17:varna: vector+
+18:17:FrankHB: std::vector本来该叫array...的一种。
+18:17:varna: 阵列怎么看都别扭
+18:17:lh_mouse: 规定 scalar 等价于只有一个元素的 array 没任何意义   而且导致节外生枝
+18:17:lh_mouse: 比如指针算数
+18:17:FrankHB: Stepanov那时候没词了瞎折腾……
+18:17:varna: lh_mouse: 本来也不该是这样
+18:17:sismvg: 可变长array?
+18:18:varna: scalar和vector的类型就不一样
+18:18:lh_mouse: 无视 VLA
+18:18:sismvg: 可勃起array
+18:18:lh_mouse: 至于数组为什么不是可修改的左值……
+18:18:FrankHB: 更奇怪的是B里面本来也就是叫vector。
+18:18:uuair joined channel
+18:18:varna: 一个array类型是一个确定非monotype的polytype, 而一个scalar类型只是一个polytype
+18:18:lh_mouse: 某些人认为这东西不能塞进寄存器？
+18:18:jKluolin quit:Client Quit
+18:18:varna: 这件事情在语义上足够清楚
+18:19:lh_mouse: 有的时候语义和语法是完全的两回事
+18:19:lh_mouse: 比如 C++11 那个 lambda
+18:19:lh_mouse: 从语法上定义就是一个对象，捕获的是成员
+18:19:FrankHB: 别吱，数组本来就可以是可修改的左值。。。
+18:19:lh_mouse: 不过扯到语义就不知道是啥东西了
+18:19:varna: 那个functor-like算是个实现，而语义是个残货
+18:19:FrankHB: lambda捕获的那个定义的不是对象，是“变量”。
+18:20:varna: 据我所知lambda现在还没法完好地塞进c艹的类型系统里？
+18:20:lh_mouse: 语义是残  但是残有残的好处
+18:20:lh_mouse: FrankHB, lambda 表达式的求值结果是一个对象 称为闭包
+18:20:lh_mouse: 语义残了就给实现随便解释
+18:20:lh_mouse: 于是各种优化都敢上
+18:20:varna: 我说残主要是类型语义
+18:20:FrankHB: 你说lambda expr本身……我看成捕获的东西了。
+18:20:varna: 不是操作语义
+18:21:lh_mouse: each closure object has its unique type 啥啥的
+18:21:* varna 一直反对用closure一词表示具上下文的一等函数
+18:21:lh_mouse: C++ 的 closure 还真不是函数   是对象
+18:21:varna: 一等函数
+18:21:lh_mouse: 如果按照函数不是对象来解释
+18:22:FrankHB: closure就是一坨状态来着吧。
+18:22:lh_mouse: 函数不是一类对象
+18:22:FrankHB: 跟语言构造从来就是两回事。
+18:22:lh_mouse: 所以只能用“对象”表示“一类对象”
+18:22:lh_mouse: 这里两个“对象”的外延不一样
+18:22:FrankHB: dt不。
+18:22:varna: lh_mouse: 我不是单就c艹来说的，而把c艹的做法外延出去我觉得是洗白c艹的悲剧
+18:23:FrankHB: C艹的概念既然残了，扔了就是。
+18:23:FrankHB: 反正我不会搞错外延。混一起说消歧义疼。
+18:23:varna: 实现归实现，但是把无可奈何的解法当作理所当然的解法不合适
+18:23:FrankHB: C艹都理所当然把类模板排除在类型之外了，还能说啥。
+18:24:lh_mouse: 就说语法上表现为一个对象  但是实现起来随便艹甚至都可能把对象优化没了
+18:24:lh_mouse: C 就没有这个魄力
+18:24:FrankHB: 哪有。
+18:24:varna: 这不是魄力
+18:24:FrankHB: 哪没有。
+18:24:lh_mouse: 怎么讲  
+18:24:lh_mouse: inline？
+18:24:lh_mouse: 有还是没有啊
+18:24:varna: 我觉得只是你试图无视语义同时把实现推向语义
+18:24:FrankHB: C的observable behavior跟C艹的as-is rule几乎就是一路货。
+18:25:FrankHB: 只不过提法和个别细节（比如……还是signal）不一样。
+18:25:varna: 举例来说，我可以把一个monad直接优化成顺序求值的指令序列——这同样和语义无关
+18:25:FrankHB: C艹多出来的优化依据就只有12.8的几条而已。
+18:25:varna: 这里的优化把1st-class function直接抹消了
+18:26:varna: 原本monad的顺序保证来自函数复合，而优化的结果直接认定这里是顺序执行的程序
+18:26:FrankHB: C的问题看来也不是不敢，而是之前他们根本就没想到能这么做，或者想到了没敢实现。
+18:26:FrankHB: 理论上YY的有啥不敢的。
+18:27:FrankHB: varna: 把monad优化成顺序求值还是语义相关的。至少得有语义规则保证这里的优化是被允许的。
+18:28:varna: FrankHB: 那样只能允许as-is rule
+18:29:FrankHB: 就是这个。
+18:29:varna: 但是这里的麻烦在于as-is rule能确实地形式化么……现在的语义糟糕就在这种地方
+18:29:cleamoon__ joined channel
+18:30:varna: 不是algebraic effects, 而是xxx rules -- 难以用某种代数描述，而不得不给出富有意义的说明
+18:30:FrankHB: 很容易啊，构造个状态集合出来，然后具体内容搞成implementation-defined或者干脆unspecified（也没别的办法了）。。。但就是没法用于实现。。。
+18:30:FrankHB: 操作语义是好搞的。
+18:30:varna: 操作语义都指定了就太 硬 了
+18:31:varna: 但是指称语义是残的，公理语义在algebraic effects上也是残的……
+18:31:varna: 我去进点羊味素回来腌小耗
+18:31:FrankHB: 于是靠啥，自然语言语义么。。。
+18:31:varna: Godsphere knows, 我对目前的形式语义干脆就没信心……
+18:32:FrankHB: 形式语义要能实用也得有一定实现吧。鸡蛋问题了。
+18:35:FrankHB: 又DSB残了。。。as-is→as-if
+18:37:cleamoon_: 不能直接 switch (hash(the_string)) 吗
+18:39:cleamoon__ quit:Ping timeout: 260 seconds
+18:46:cleamoon_: 中华名将戴旭认为他在微博上打不出“占中”，只能以 “Z中” 指代，原因是新浪已被美资控制，系美国的政治黑手设立了敏感词。
+18:47:krfantasy joined channel
+18:48:FrankHB: 233
+18:48:cleamoon_: zt  昨天坐动车回上海的时候，一个阿姨占着别人的座不肯让，还大声说“小伙子我年纪大了，腿脚不好，你就让我坐吧，谢谢你了！”那小伙子一脸错愕不知道该如何反应。#记本年度最让我吃惊的一件事   23333
+18:49:cleamoon_: 2333 之前几年某个获奖的日本人叫下村修，这次是中村修二；今后我们最好关注一下上村修三这个人
+18:51:Xilzzerts: 那个睡过无数舰娘的张天师呢
+18:52:Mran____ joined channel
+18:52:cleamoon_: 张天师估计刚刚支持了三胖，现在去闭门思过了
+18:53:Xilzzerts quit:Read error: Connection reset by peer
+18:54:lambdahanjian: 突然特别想知道1024的服务器架构……
+18:55:xxxxxxxxx: 传说中的技术领先?
+18:55:cleamoon_: 1024？
+18:55:lambdahanjian: IIS6.0+ASP.NET……
+18:56:lambdahanjian: cleamoon_, 线虫
+18:56:lambdahanjian: 连1024都不知道
+18:58:cleamoon_: 为什么叫这个诡异名字...
+18:59:cleamoon_: 最好的床  http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/2h/9b_424710.jpg
+18:59:sismvg: 草榴啊！
+19:01:cleamoon_: ARM宣布了针对物联网低功耗设备的操作系统mbed OS。mbed OS部分开源，其余部分控制在ARM手中，理由是为了确保操作系统不会碎片化。ARM声称mbed OS只需要256kb内存，它希望开发商能能使用mbed开发电池使用寿命长达数年的设备。mbed OS将免费提供给所有厂商使用。在物联网领域，mbed面临多个竞争对手的挑战，如通用电气的 Predix 、三
+19:01:cleamoon_: 星的 Tizen，Nest Labs使用的是基于Linux的私有软件，在被Google收购后它未来可能改用 Android。
+19:01:Plough joined channel
+19:02:Mran____ quit:Ping timeout: 272 seconds
+19:04:Mran____ joined channel
+19:04:Mran____ quit:Client Quit
+19:04:cleamoon_: 造福射会  http://imgsrc.baidu.com/forum/w%3D580/sign=3ffdbdaa95eef01f4d1418cdd0ff99e0/67700cd0f703918f2b9e3904503d269758eec40c.jpg?v=tbshttp://imgsrc.baidu.com/forum/w%3D580/sign=3ffdbdaa95eef01f4d1418cdd0ff99e0/67700cd0f703918f2b9e3904503d269758eec40c.jpg?v=tbs
+19:04:cleamoon_: 发重了  http://imgsrc.baidu.com/forum/w%3D580/sign=3ffdbdaa95eef01f4d1418cdd0ff99e0/67700cd0f703918f2b9e3904503d269758eec40c.jpg?v=tbs
+19:05:lh_mouse: 恶心不
+19:07:lambdahanjian: cleamoon_, 国内正吃饭前后的时间
+19:07:cleamoon_: 放心，就是为了这个时候发的
+19:08:sismvg: 玄学
+19:17:cleamoon_: 有人用wps吗
+19:20:GODDOG joined channel
+19:20:sismvg: fuck wps
+19:20:GODDOG: sismvg: .
+19:20:sismvg: 后台无提醒自动更新，慢的坑爹，更新服务还写的烂的一笔
+19:20:sismvg: 一个30M的软件能卡死我的电脑
+19:21:sismvg: 顺带还会后台下载&安装其他程序-》游戏盒子，猎豹WIFI
+19:21:cleamoon_: 哦，那就算了
+19:22:sismvg: office你还是用Z吧，298不贵。
+19:24:sismvg: 顺带吐槽一下百度搜索软件的时候的百度软件中心
+19:24:sismvg: 从上面下的东西无一例外，全部会自动后台安装其他的软件。
+19:29:cleamoon_: Z？
+19:30:condy joined channel
+19:33:lhanjian_: GODDOG, 
+19:42:condy: http://www.zhihu.com/question/23437461
+19:42:condy: R10..
+19:43:Mran____ joined channel
+19:43:Mran____ quit:Client Quit
+19:45:krfantasy quit:Ping timeout: 244 seconds
+19:45:condy: 蓬莱山辉夜姬这种带点挑衅的魅惑表情。对自己的美貌具有绝对的自信的腹黑妹子，同时妹子也很喜欢你，才会漏出这种表情。
+19:45:condy: ...
+19:45:condy: 好棒！
+19:46:FrankHB: 扔梦塔哈娜给度娘，度娘右边问我是不是要搜黑羽……扔黑羽过去TM尽是黑羽快斗……
+19:47:condy: 233
+19:51:krfantasy joined channel
+19:53:sismvg: 233
+19:53:sismvg: Z就是正版
+19:54:sismvg: 紧身裤骚想干
+19:54:krfantasy quit:Client Quit
+19:56:condy: sismvg: 你是妹系吗..
+19:56:condy: s/是/不是
+19:56:sismvg: 是啊
+19:56:sismvg: 。。。
+19:57:condy: 妹系穿紧身裤有点感觉不太合适。。
+19:57:sismvg: 谁说要妹系穿了
+19:57:sismvg: 妹系要么哥特，要么宽松系
+19:58:* condy 吾爱美柑！
+19:58:sismvg: 宽松系的好例子
+19:58:sismvg: 中等长度的短裤神笔
+19:59:lh_mouse: condy, 爆照
+19:59:condy: QAQ
+19:59:lh_mouse: 不爆照就把你泡在羊味素里
+19:59:condy: 人家是大叔了啦！
+20:00:sismvg: ?
+20:00:* condy 是大叔
+20:00:sismvg: 哈。。
+20:01:cleamoon_: sismvg, lin下用什么...
+20:01:lh_mouse: condy, 爆照
+20:02:sismvg: 不知道。。
+20:02:condy: geordi: << "lh_mouse: (。・_・。)"
+20:02:geordi: lh_mouse: (。・_・。)
+20:02:sismvg: 我一直都不用office的。。
+20:02:lh_mouse: LibreOffice 啊
+20:02:lh_mouse: 据说有 WPS
+20:09:Plough: 啊啊，终于在生放送里看到了一个真新米了……
+20:09:Plough: 用41和35.6炮推5-3的新米
+20:09:Plough: 虽说他也上了爱岩
+20:09:lhanjian_: WPS还行，能用。
+20:10:lhanjian_: 就是公式编辑器在Linux上不可用。
+20:10:Plough: Lv66
+20:10:lhanjian_: 优点是各种界面风格的M$ Office都有
+20:11:lhanjian_: http://pastebin.mozilla.org/6741683
+20:12:lhanjian_: lh_mouse, 耗子能不能从性能的角度解释一下这种链表？
+20:12:Plough: 第二点大傻被塔姐两炮灭了
+20:12:Plough: 他回家了
+20:13:lhanjian_: struct item { struct item *next, struct item **prev}
+20:13:lh_mouse: lh_mouse, queue 看起来是个 ngx_event_t** ？
+20:13:Plough: はるにゃ……
+20:14:lhanjian_: 嗯
+20:15:lhanjian_: 教科书式的都是{ T *next, T *prev}
+20:15:lh_mouse: 我也会那样写
+20:16:lh_mouse: 没什么好处吧
+20:17:lh_mouse: 而且难看
+20:17:lh_mouse: 应该不是性能问题
+20:17:lhanjian_: 这个看起来的好处是，只要直接用 *queue 就是下家， queue就是上家……
+20:17:lh_mouse: 就 C 来论没什么区别
+20:18:cleamoon_: 这算什么好处...
+20:18:lh_mouse: 聚合的第一个成员的地址等于聚合的地址
+20:18:lh_mouse: 所以没什么本质区别
+20:19:lh_mouse: 可能是作者想故意秀一下二级指针呢
+20:19:* lh_mouse 写过三级指针的坑货
+20:20:lh_mouse: int alloc_argv(char ***argvp); void free_argv(int argc, char **argv);
+20:22:cleamoon_: 小耗这个异常处理怎么办...
+20:22:lh_mouse: 什么异常处理
+20:23:lh_mouse: 如果你说上面那个  不难
+20:25:cleamoon_: 感觉坑
+20:25:lh_mouse: 哪里坑
+20:25:lh_mouse: 拿 std::pair<int, char **> 当 handle 丢 MCF::UniqueHandle 里面完事
+20:27:condy: 总感觉在C++里用侵入式链接怪怪的...
+20:27:FrankHB: 艹啥C接口。
+20:27:lh_mouse: struct my_deleter { using handle = std::pair<int, char **>; constexpr handle operator()() noexcept { return {}; } void operator()(handle h) noexcept { ::free_argv(h.first, h.second); } };  my_deleter::handle h; h.first = ::alloc_argv(&h.second); MCF:UniqueHandle<my_deleter> hargv(h);
+20:27:FrankHB: M$的CRT撸货一部分也直接C艹实现了。
+20:28:lh_mouse: 吱吱吱一边去
+20:28:condy: s/链接/链表
+20:28:lh_mouse: 总得有人写 C 接口
+20:28:lh_mouse: 你不写也得有人写
+20:28:lh_mouse: 这个东西用 unique_ptr 也可以做  当然 shared_ptr 最简单
+20:29:FrankHB: 我说alloc_argv之类的。
+20:29:FrankHB: 有非用C来实现的必要性么。
+20:29:lh_mouse: 有
+20:29:lh_mouse: 你用 C++ 写的 C 怎么用6
+20:29:lh_mouse: 这问题还不够明显吗
+20:30:lh_mouse: 不过我是后来觉得太操蛋 所以干脆改 vector<string> 了
+20:30:FrankHB: 233
+20:30:lh_mouse: 起因是 msvcrt 有 bug
+20:30:lh_mouse: 嘛 
+20:33:sismvg: C++当然不是Microsoft的专利。但是Microsoft选择了C++，并取得了成功，这是肯定的了：象CRT，象VC，象Windows，象Office，象 SQL Server等等。这一方面说明了C++的优势，一方面也是Microsoft自身的因素在起作用。
+20:33:sismvg: 。。。
+20:34:sismvg: 除了ppl以外我都没有看见MS的C艹那里像C艹了，反而坑了一群新人
+20:36:cleamoon_: 很多人都在用c艹，但这不代表c艹就好...
+20:37:lh_mouse: C++ 省事
+20:39:cleamoon_: 省事+
+20:43:sismvg: http://www.ithome.com/html/it/106813.htm
+20:43:sismvg: 纸书明显是用来收藏的
+20:44:sismvg: 而用电子书的基本都是学生或者必须要时常补充知识的
+20:48:GODDOG: lhanjian_: ,
+20:50:GODDOG quit:Quit: leaving
+20:57:* varna 喜欢读实体书
+20:58:* condy 可以在停电的时候看
+20:58:varna: 电子文档一般就看论文和手册
+20:58:Plough: 为什么condy可以在停电的时候看
+20:58:varna: Plough: 爆
+20:59:Plough: varna: 回去自爆
+20:59:* condy 因为是实体书
+20:59:Plough: 原来conky是实体书么……
+20:59:Plough: 另外我发现我又被欺骗了
+20:59:sismvg: 实体书可以更加的有B格
+21:00:Plough: 刚才放送5-3的那只有33电探
+21:00:varna: 你看
+21:00:Plough: 他才Lv66啊喂
+21:00:varna: 放肆，你跟dalao能比
+21:00:sismvg: 你看抱着本E文版的权利的游戏的第三卷多屌
+21:00:Plough: はるにゃ都还没二改啊喂
+21:00:Plough: (虽说我的也没)
+21:00:varna: 杀与操之歌略中二
+21:01:sismvg: 本来就是中二时间观
+21:01:sismvg: 但是剧情不中二
+21:01:Plough: 又是一只支援舰队上dalao主力舰队三东山的dalao
+21:01:varna: 那是你dnd看少了
+21:01:Plough: 上大和
+21:01:varna: 卓族三部曲和龙枪编年史那才是中二
+21:01:sismvg: 血色婚礼就够了
+21:01:sismvg: 龙枪。。
+21:01:Plough: 第一点完全S胜
+21:01:varna: 地海和安柏志也算
+21:01:sismvg: 艾泽拉斯编年史。
+21:02:varna: 龙枪编年史其实就是个团报，而且他们那个团打到第一卷一开始就团灭了
+21:02:Plough: 第二点空优GET
+21:02:sismvg: 然后男主复活中二复仇？
+21:02:Plough: 支援舰队旗舰是电酱
+21:02:varna: 龙枪传奇是系列中二之巅峰，新世纪巨龙是犯二之巅峰，第五次元系列是逗
+21:02:varna: sismvg: 他们假设没灭，继续写下去了
+21:03:Plough: 大傻被喔改一下中破
+21:03:Plough: 我看看他能撑多久
+21:03:varna: 其实那个剧本论游戏难度来说真的挺高，而他们团的战力虽然不错但道中战斗实在太难了……
+21:04:sismvg: 。。5本303元
+21:04:varna: 别买
+21:04:varna: 龙枪是渣作，卓族三部曲也是
+21:04:sismvg: 没要买
+21:04:Plough: 雷爷一颗鱼雷大破赤城，回家了
+21:04:Plough: 单纵T有利
+21:04:sismvg: 幼女总是会出现在不可思议的地方
+21:04:Plough: 我看他花多少钢
+21:05:varna: 老外的娱乐作品我还是觉得汤姆克兰西比较好
+21:05:varna: 刚正朴实有看头
+21:05:Plough: 一中破两大破
+21:05:varna: 正常
+21:06:varna: Plough: 你真的不打算试试perlxs么，现在我已经堕落到认为typemap也不错的程度了
+21:06:Plough: 最近没啥用的上的地方……
+21:06:varna: 写个c库硬说是Perl
+21:07:Plough: 话说单纵T有利打成这样已经不错了吧
+21:07:Plough: 没六个大破回来
+21:07:varna: 不至于
+21:07:varna: 雷爷的炮击其实很温柔
+21:07:Plough: 但是也经常温柔的轰隆一下啊
+21:07:varna: 我还真只遇到过一次
+21:08:Plough: 主要还是鱼雷么
+21:08:varna: +
+21:08:Plough: 那门神单横呢？
+21:08:varna: 门神雷爷一般都有制空权，对面差不多会剩18架飞机
+21:08:varna: 不要单横
+21:08:Plough: 会有啥后果
+21:09:varna: 打不掉对方容易被概率蹭血，航母的安全性也糟糕
+21:09:Plough: Soga
+21:09:varna: 如果对面火力够强，我最倾向的战法还是以打掉为主
+21:09:Plough: 另外似乎铁底海峡那时候似乎确实出了不少粪提……
+21:10:varna: 毕竟如果你能去5-5，舰队等级都不会差的，有信心打垮对面
+21:10:Plough: 昨天还在nico上看见一个门神魔王大破直接进击的
+21:10:varna: ...
+21:10:varna: 何必呢
+21:10:Plough: 估计是打太久脑子一热就过去了
+21:10:varna: 打不过就放弃，没必要强打
+21:10:cleamoon_: 什么时候电子书可以随便在上边做笔记，翻页不疼时就能取代纸质书了
+21:10:Plough: 最后斩掉了，不过作死的后果你懂得
+21:11:varna: 何必呢
+21:11:Plough: 还是被院长一炮轰脸上……
+21:11:Plough: 我看他大破进击还当他带损管了
+21:11:varna: 虽说如果愿意肝，很快就能赶出来，但为什么自寻不快呢
+21:11:varna: 尽人事听天命就好了
+21:11:Plough: 嘛，人发疯了干出啥事都有可能
+21:12:varna: 心理素质太差
+21:12:Plough: 虽说我发疯的表现是六个损管丢过去
+21:12:varna: 上损管拼命还算正常，以前5-3有不少这么干的
+21:12:Plough: 我5-3没上，六图上了
+21:12:Plough: 6-2是懒得熬夜直接给DD上了两个损管
+21:13:Plough: 天津风不负众望在门神大破了，还好我机智
+21:13:Plough: 最后依然是没用到
+21:13:varna: 我一贯不相信能进Boss时候的dd带路
+21:13:Plough: 6-2貌似不带DD会走中间？
+21:13:varna: 会
+21:13:Plough: 我看见喔改就尿了
+21:13:varna: 没有喔改
+21:13:Plough: 似乎有个配置有
+21:14:Plough: 而且猫鼻子更可怕
+21:14:varna: 中间的机动部队可能是喔酱、莉酱或者tsu级和爷爷的糊黄
+21:14:varna: 护航
+21:14:varna: 猫鼻子应该能拿到空优，拼一下防空吧
+21:14:Plough: 啊咧确实没有
+21:14:varna: 喔改是I点
+21:14:Plough: 大概是我记混了
+21:15:varna: 应该是喔改、莉改、撸改三选一
+21:15:Plough: 我的确是冲去I点了……
+21:15:varna: 2dd应该是下路战斗回避之后36+LoS走I
+21:15:Plough: 那我应该是被猫鼻子吓跑了
+21:15:Plough: 我懒得控那么细了
+21:15:varna: 我的走法是B走漩涡进喔酱过H, LoS35-进头目
+21:15:Plough: 另外5-5生放送这次是卡嘎大破
+21:15:sismvg: 百度又作死了
+21:16:Plough: 一航战的两位一个大破一个中破
+21:16:sismvg: 因为吧主没有通过定期审核而被干掉了。。
+21:16:Plough: 我是直接冲I点单横脸挡炮弹
+21:16:sismvg: 然后所有努力的小吧也被干掉了
+21:16:varna: 打掉一血的时候已经没桶了，剩下的桶都是临时打出来的
+21:16:varna: 全程单纵，见谁干谁
+21:16:Plough: 打掉一血的时候还有180桶
+21:17:Plough: 我主要是担心DD的情况
+21:17:varna: 打掉6-1的时候我还剩二十多桶……
+21:17:Plough: 毕竟lv50不到闪避还是不很好
+21:17:varna: I点的好处是可以赌
+21:17:Plough: 6-1我直接发疯上损管了所以只用了30桶……
+21:17:varna: 遇上撸改基本没救了，只有极其强大的阵容才能保证未必劝退
+21:18:Plough: 撸改我似乎还没碰到过
+21:18:varna: 但是喔改可能就放人
+21:18:Plough: 一次莉爷被劝退
+21:18:varna: 撸改是单纵，配两个撸级
+21:18:Plough: 后来基本都是喔改
+21:18:varna: 莉改我不知道，喔改应该是最弱的，因为走I的阵容制空可以很好
+21:18:Plough: “玩你妈逼”配置么
+21:18:varna: “非提衮粗”配置
+21:19:varna: 大和级硬吃撸改一炮应该没问题
+21:19:varna: 我记得撸改只有120+火力
+21:19:Plough: 我记得春活E5有人满血三层闪大和被一炮轰隆来着
+21:19:Plough: 忘了是谁打的，貌似不是院长
+21:20:varna: 装甲*2/3，敌方火力*4/3，折合两倍裸伤害，万一再是CI乘1.5……
+21:20:Plough: 233333
+21:20:Plough: 所以“玩你妈逼”也有可能
+21:20:varna: 啊果然，撸改130火力
+21:21:varna: 基本上一炮糊上去，大和级以下就可以修正伤害了
+21:21:Plough: 233333
+21:22:varna: 还好装备雷达只是Mk2
+21:22:varna: 如果装备深海水上雷达，大概非提就全都得祈祷两炮不中
+21:22:varna: 而且祈祷也没用了
+21:22:Plough: 撸改我印象深刻的地方是在Boss
+21:22:Plough: 有一次进去以后直接在白天废了我全部的战舰
+21:22:Plough: 喜闻乐见没打掉
+21:23:varna: 我就带了一个战舰（笑）
+21:23:Plough: 我应该是上了两只
+21:23:varna: 以弱换强的战法当然要靠鱼雷，所以……
+21:23:Plough: 魔王么……
+21:24:* varna 在还原（脑洞的）历史
+21:24:varna: 旗舰羽黑，以下棒各北上大井加贺赤城
+21:24:varna: 第一血的战舰是大傻
+21:24:Plough: 我记得我的第一血是北上大人和雾岛一起拿的
+21:24:varna: 后来大傻实在摔得太狠，我就换了棒各
+21:24:Plough: 北上大人进门一颗鱼雷照着旗舰过去了，但是没打掉
+21:25:Plough: 然后雾岛一刀补过去
+21:26:Plough: 撸改算上装备也有150火力……
+21:26:varna: 当时打得意识模糊，我还偏头疼，不知道谁拿下的运输船
+21:26:Plough: ……
+21:27:varna: 一直打到早上四五点
+21:27:Plough: 我一般只记得谁拿下了运输船
+21:27:varna: 期间做掉所有日常拿桶
+21:27:Plough: ……
+21:27:varna: 跟我5-3斩杀就差个八点钟考试
+21:28:sismvg: http://www.ithome.com/html/win10/106854.htm
+21:28:sismvg: win java
+21:29:varna: 反正最后确实是在晓的水平线上刻下正字了，回去直接倒了一天
+21:30:Plough: ……
+21:30:Plough: 话说女神是不是也有增加回避的玄学
+21:31:varna: Godsphere knows
+21:31:Plough: 据说E6某人给两个魔王各上一个女神
+21:31:Plough: 然后不负众望地门神大破了
+21:31:varna: 魔王满血复活何等可怕
+21:31:Plough: 他大喊着“我已经是天下无敌了！”冲进去了
+21:32:Plough: 然后院长呵呵一笑给他打了两个miss
+21:32:varna: 结果院长智商上线
+21:32:varna: 果然
+21:32:varna: 不落的辛條旗啊，天佑罗斯福
+21:33:varna: 要是真满血复活的话基本上就没跑了
+21:33:Plough: 院长：“听说你家魔王能复活？”
+21:34:varna: 院长上得了战场下得了厨房，女子力max
+21:34:Plough: E6院长的娇喘太可怕
+21:35:varna: 等下，两个院长四发炮击都没糊上？
+21:35:Plough: 他有六条船呢……
+21:35:Plough: 估计院长还给他废了几个战舰
+21:35:varna: 三分之一是雷巡啊
+21:35:varna: 这也太丧了
+21:35:Plough: 这就是院长的智商……
+21:36:Plough: 弥生酱越来越喜欢玩水了
+21:38:varna: 今天练级居然还练掉三个桶，简直悲惨不堪
+21:38:Plough: 我练利根的时候四级三个桶……
+21:38:Plough: 而且三次鱼雷都是冲着大淀酱过去的
+21:38:varna: RJ和隼鹰吃了些鱼雷，我大慢心没给喂满结果出事了
+21:39:varna: 直接打成了平面栖战姬
+21:39:Plough: 果然不接任务就能进Boss
+21:39:Plough: 然后直接给我撸了一个大破出来
+21:39:Plough: 又黑RJ
+21:39:varna: 平时是姬，爆衣了就是战姬
+21:43:varna: 七十级附近/以上真不好练
+21:45:Plough: 总之接下来是二航和妙高
+21:46:varna: 妙高好办
+21:46:varna: 扔着代打就行了
+21:47:varna: 我当时是20.3主炮和12.7连装高角炮
+21:47:Plough: 我现在手上有了一个三号炮……
+21:47:varna: 稀有装备我一般不扒
+21:47:Plough: 我觉得我是不是该先把隈隈子改了拿第二个
+21:48:Plough: 怕手滑拆掉么
+21:48:varna: 利根只送一个！？
+21:48:Plough: 嗯
+21:48:Plough: 只有一个……
+21:48:varna: 不是，难得改造送了好装备，扒掉太没人性
+21:48:varna: POI炮和二号炮我都留着的
+21:48:varna: 棒各那两门356是因为太渣所以直接扔仓库了
+21:48:Plough: 资源合理分配嘛
+21:49:varna: 能凑合过的地方，我就不扒特有装备
+21:49:Plough: 又不是像养殖呜十铃那样扒掉装备直接喂了
+21:49:Plough: 不过三号炮只多两点火力和一点对空……
+21:49:varna: 毕竟还是好一些
+21:50:varna: 而且后面有什么玄学也不知道
+21:50:lhanjian_: 回寝
+21:50:lhanjian_ quit:Quit: 风光冉冉东西陌
+21:50:Plough: 隐藏属性命中+20
+21:50:Plough: ^脑洞
+21:50:cleamoon_:  一名中国留学生因于网上发表赞扬朝鲜领袖并抨击韩国保守派政权的言论，同时参与进步势力所举办的示威活动，今年8月遭韩方驱逐出境。目前在韩国的中国留学生将近6万人。来自中国广东的20岁宋姓学生于2012年底在首尔某大学语学堂学习韩文，并预计于今下半年就读本科，将原先的语言研修签证(D5)更改为一般留学生签证(D2
+21:50:varna: 虽然这种时候该奥康剃刀
+21:50:cleamoon_: )，却因当局接获举报而接受调查。在来到韩国前后，宋姓学生就多次在网上发表激进言论。金正日死亡时，他在网上留言：“向伟大指导者金正日同志表达沉痛哀悼。”去年底，他也在网上刊载朝鲜第三代领袖金正恩现场视察的照片，同时写道：“伟大指导者金正恩元首脚踩雪地、环视周围，看了真是感动。” 在朴槿惠总统
+21:50:cleamoon_: 于去年就任时，宋姓学生就在网上写道：“刚刚看见‘南朝鲜’傀儡集团的新头头朴槿惠，我没带凶器或炸弹真是太可惜了，虽没做到，但一定要帮助朝鲜人民，把这位独裁者给除掉。” 宋姓学生标榜自己为“左翼支持者”与“进步倾向网友”。接受当局调查时，宋一直行使缄默权。
+21:50:varna: 噗
+21:51:varna: Plough: 深海电探已经+24了，这边的命中还是一战水平……
+21:51:sismvg: 炒作还是吃了太多二恶英？
+21:51:Plough: 对面的船不都是Lv1的么……
+21:51:varna: 喔改那回避绝对不止
+21:52:Plough: 我又有了五页零水侦
+21:52:varna: 不带夜侦根本打不中
+21:52:cleamoon_: 二恶英是什么
+21:52:varna: 我记得是有害物质，似乎致癌
+21:52:varna: 可能是姬肉里有
+21:52:varna: 鸡肉
+21:52:sismvg: 化合物，会导致变异
+21:53:sismvg: 直男吃下能变受
+21:53:Plough: 貌似是越南战争时期美帝用的落叶剂？
+21:53:sismvg: 受吃下能变药娘
+21:53:varna: 快买两吨来，我建设药娘大军
+21:53:sismvg: 去黑市
+21:54:cleamoon_: 药娘吃下变比利 王吗
+21:54:varna: 黑市太贵了，有没有产率高的生产公式
+21:54:varna: 一发100铝以下我都能接受
+21:54:Plough: 话说大破进击才沉船是官方确认的？
+21:54:varna: 确认了
+21:54:sismvg: C12H4Cl4O2 
+21:54:Plough: 那就中
+21:55:cleamoon_: 买点鸡肉就有了
+21:55:varna: 大きなダメージを受けた状態での戦闘は艦娘ロストのリスクがあるので、
+21:55:varna: 艦隊保全のためには、勇気をもった撤退も必要です。
+21:55:sismvg: 我们要老白
+21:55:varna: 作战纲要，「出击」章「敌主力舰队」节
+21:55:Plough: Soga
+21:56:sismvg: Dear Mr.W.W
+21:57:sismvg: 无法理解那么多公司为什么要死绑在MFC上呢
+21:59:sismvg: 我也是最近几天看完的，第一 二季是一集一集看完的，第三季快进，第四季挑着看，第五季只看最后一集，违背常理啊，还看过卡拉狄加，，剧情都是刚上来还算正常，越往后越让人看不懂，明显感觉是在凑，没什么好讲的了，却硬加悬念，生硬的制造矛盾，这个最典型的就是 越狱了，对超过两季的�
+22:00:sismvg: �剧彻底失望，请问有不超过两季的美剧吗？
+22:00:sismvg: 某贴吧用户回复绝命毒师吧的。。
+22:00:sismvg: 已经无法理解他们的智商了。。自己跳着看还说剧的剧情接不上。。
+22:02:* varna 还是觉得扶桑帅气
+22:02:Mran____ joined channel
+22:02:Mran____ quit:Client Quit
+22:03:varna: 明明有六基十二门主炮和两大排副炮，非得脑洞成航战……
+22:04:Plough: 一CI就大破
+22:05:varna: 还行，两舰一共活了十人
+22:05:Plough: ……
+22:05:varna: 编制加一起大约两千多人吧
+22:05:varna: 那十人可能还都是山城的乘组员，扶桑大概是全灭了
+22:06:varna: 但是bs: midway里扶桑超莉害的
+22:07:varna: midway的挑战关卡里大和倒是很不错，敌舰都打不动，但对方Y氏和H氏一起就是五个编队的舰爆或者三个编队的舰攻，直接炸得胸罩爆裂……
+22:08:Plough: ……
+22:08:Plough: 有萌大拿酱吗
+22:08:varna: Pacific里倒是有爱荷华
+22:08:sismvg: 刚才一只蟑螂由手跑到了我的裤子上，依依不舍离去。
+22:08:varna: 还有南方栖战鬼
+22:08:sismvg: 此时我想起了蟑螂娘的种种回忆，认为蟑螂想要和我搞好关系
+22:08:Plough: 真可怜
+22:08:Plough: 游戏里都没……
+22:09:sismvg: 我非常的感动，然后一抖腿把他踩死了
+22:09:varna: battlestations系列无比巨大脑洞，基本和历史关系不大，认为是政策关系故意打码架空的
+22:09:Plough: 美帝也有政策问题吗……
+22:09:varna: 你相信扶桑四一年沉在了吕宋岛么
+22:09:Plough: 说好的敏煮呢
+22:10:Plough: ……
+22:10:varna: 毕竟要考虑影响，虽然这个工作室似乎是欧洲的
+22:10:varna: 珊瑚海倒是基本还原，但是没有肚子
+22:10:Plough: MI呢
+22:10:varna: 中途岛分成两关，基本还原了
+22:10:Plough: 南云全灭么
+22:11:varna: 第一关是中间栖姬对吃喝，第二关是机动部队对大白腿系列
+22:11:Mran____ joined channel
+22:12:varna: 最逗的是早期某关你带领一只爷爷和一只伊级孙子的编队去突袭日本停泊在小岛的运输船，时间拖长了会出现那珂酱
+22:12:Plough: ……
+22:12:Plough: 爷爷还怕那珂酱吗
+22:12:Plough: CI焦作人
+22:13:varna: 如果你仔细看，会发现那珂酱直接用了KUMA级的船体，而且侧舷上大大地写着KUMA, 更糟糕的是假名写反了（旧日军是右写的）
+22:13:Plough: ……
+22:13:Plough: 话说HOI里川内三姐妹也是KUMA-Class
+22:13:Plough: 啥情况
+22:13:varna: 严重错误
+22:13:Plough: 我当时还以为自己记错了
+22:14:varna: KUMA级是仅次于天龙型的落后舰，川内级则是次于阿贺野级的先进型
+22:14:varna: @成熟的轻巡的佐仓大法
+22:14:varna: 而且神通和那珂那四个高矮胖瘦都不一样的烟囱和川内的旧式方鼻子都是逗乐点
+22:15:lh_mouse: MEOW
+22:15:varna: 后来midway出了个DLC, 是美军战舰和航母的混编部队突袭楚克岛
+22:15:varna: 终于让那珂酱死在了该她死的地方
+22:16:varna: lh_mouse: 捏鼻子
+22:23:varna: Plough: 哦对，至于爷爷怕不怕那珂酱的问题，贴吧某肝帝表示他家那珂酱在铁底爆过院长……
+22:25:varna: 走了，诸君夜间愉快、武运长久
+22:25:varna quit:Quit: leaving
+22:34:* condy 诸君夜间愉快、武运长久
+22:34:condy quit:Quit: leaving
+22:37:hoxily quit:Quit: Leaving
+22:38:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:49:hysw joined channel
+22:52:* lh_mouse bites hysw 
+22:59:Petrus07 joined channel
+23:08:Plough quit:Remote host closed the connection
+23:10:sismvg quit:Quit: ChatZilla 0.9.91 [Firefox 28.0/20140314220517]
+23:13:hysw quit:Ping timeout: 246 seconds
+23:14:lh_mouse: hysw_logbot, 喵
+23:21:Mran____ quit:Ping timeout: 244 seconds
+23:21:lhanjian joined channel
+23:27:xxxxxxxxx quit:Quit: Leaving...
+23:29:lhanjian quit:Ping timeout: 246 seconds
+23:30:FrankHB quit:Quit: Konversation terminated!
+23:30:FrankHB joined channel

@@ -1,0 +1,1328 @@
+00:01 cleamoon: 卧操，两次躺潜艇点了
+00:02 libhanjian: varna, LRU的最佳实现是用啥数据结构？
+00:03 varna: libhanjian: LRU cache?
+00:03 libhanjian: 嗯
+00:03 libhanjian: 就羊驼说的hash吧
+00:03 varna: 均衡最好的话就是传统的双向链表+开散列
+00:04 varna: 我说的不是LRU cache
+00:04 libhanjian: 哦
+00:04 varna: 我就想做个开散列
+00:04 varna: LRU cache那东西是要扔entry的
+00:04 varna: 那不是字典
+00:04 libhanjian: 假定我需要的是HTTP Host查找呢
+00:05 varna: 那么这里需要问你了，你有多大的数据要查
+00:05 varna: 如果你需要维护一个磁盘数据库加一个内存热点，可以用LRU cache
+00:05 varna: 这样你未必read through
+00:06 libhanjian: 嗯
+00:07 cleamoon: fa，打不了乙，门神太厉害
+00:07 cleamoon: 门神送给我5个大破
+00:08 varna: ...
+00:08 cleamoon: 打不了乙我觉得E6根本就没必要打呀...
+00:08 varna: 门神都有谁
+00:09 yzld2002 quit:Remote host closed the connection
+00:09 varna: libhanjian: 另外我提个鬼畜，你就当笑话，哪天有兴趣了你可以试试
+00:10 libhanjian: 嗯
+00:10 varna: 有个叫Judy Array的东西，用来处理需要插入删除的数组
+00:10 varna: 那恐怕是个按cache line优化过的radix tree, 我没写过
+00:10 varna: 有现成的实现
+00:10 varna: 关于这东西和散列表的时间效率，应该有人撕逼
+00:11 varna: 至今为止粗暴考虑我都用散列表了
+00:11 hope1 quit:Ping timeout: 240 seconds
+00:11 cleamoon: 两个航一个戦
+00:11 varna: 哦，别怕，再试试
+00:13 cleamoon: 我试试
+00:15 cleamoon: 出击就中破
+00:18 xxxxxxxx: http://tieba.baidu.com/p/3993698407 @梵高
+00:18 hope1_ joined channel
+00:20 hope1 joined channel
+00:21 cleamoon: 噗
+00:21 libhanjian: cleamoon, http://news.163.com/15/0823/13/B1N600VT0001124J.html
+00:24 libhanjian quit:Quit: Leaving
+00:24 varna: Mokou: 你备份所有log了么
+00:24 Mokou: 我irssi一直开着log功能
+00:24 varna: ok
+00:24 Mokou: 等会我整理一下打个包
+00:24 wlemuel quit:Quit: Lost terminal
+00:24 varna: 那我就不备份了，等你的包
+00:24 varna: thx
+00:24 cleamoon: 好吧，能进，就是半死进
+00:25 cleamoon: 噗
+00:25 Mokou: 其实在我这里看来，美军还有很大回旋余地的
+00:25 cleamoon: boss是空母栖姬
+00:25 varna: 是
+00:25 Mokou: 现在没谁能稳赢
+00:25 Mokou: 日军优势很大，但这也只是因为莫尔兹比爆炸了
+00:25 varna: 往下我的打算是这一波无论输赢都返航，然后拖一晚上
+00:25 varna: 之后用拉包尔和二羽鹤的第二攻击波拼一波出来
+00:26 cleamoon: 机动部队根本没法打呀...
+00:26 Mokou: https://pastebin.mozilla.org/8843625 这是我这里的log
+00:26 Mokou: 或者说note
+00:26 xxxxxxxxx joined channel
+00:26 Mokou: 拉包尔不用想，现在拉包尔根本够不着机动部队
+00:26 Mokou: 六百海里，还没回去就掉海里了
+00:27 xxxxxxxxx: 优势很大 A了上去 打出GG
+00:27 varna: 不是现在
+00:27 varna: 先拖一晚上，然后看索敌的情况
+00:27 Mokou: 我知道，我只是在说美军现在的情况
+00:27 varna: 我需要一些时间，可能还有整个神通队的人命
+00:27 code_new: 日军的战术太缜密了Orz
+00:27 cleamoon: E6带不带穿甲弹？
+00:27 varna: 带
+00:27 Mokou: 带
+00:27 code_new: 撤
+00:27 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 40.0.2/20150814092310]
+00:27 xxxxxxxx quit:Ping timeout: 240 seconds
+00:28 xxxxxxxxx: 两个带后面跟着一个撤...
+00:28 Mokou: 另外其实我说个比较谐的情况
+00:28 cleamoon: 哈哈哈，全舰除了一个全大破，打了boss50血
+00:28 cleamoon: 我觉得我的资源撑不到斩杀
+00:28 Mokou: 其实0830的时候TF17和水打舰队都只差一海里进入你的索敌机之一的视界……
+00:28 Mokou: 虽说我放宽条件掷骰以后也没索到
+00:29 varna: 这个没办法
+00:29 varna: 其实神通的整个队伍，我是打算送下去当蝗国防波堤的
+00:30 varna: 如果必要，也包括祥凤队
+00:30 varna: 噗
+00:30 varna: 为什么投降……
+00:30 Mokou: 我也奇怪
+00:30 varna: 3cv
+00:30 Mokou: 只爆炸了一个
+00:31 Mokou: 而且那一个的舰战还全在天上
+00:31 xxxxxxxxx: 投降了?
+00:31 Mokou: http://picpaste.com/1rYCgnmy.png 出生点和初始地图
+00:31 Mokou: 虽说美军对水打部队的运用和我想的有点不一样
+00:32 varna: 我给一下我最后的地图预估
+00:32 Mokou: 左边的那个圈我主要是为了水打加的
+00:32 varna: http://picpaste.com/IDK682MS.png
+00:32 Mokou: 这样同样都用最大战速的话，北卡应该先于傻级到达莫尔兹比
+00:33 Mokou: OTL
+00:33 varna: 不过战斗机好少？
+00:33 Mokou: 我给了他上次的推荐配置做参考
+00:33 varna: 敌人的制空力总体还是比我低……
+00:33 Mokou: 然后他直接用了……
+00:34 Mokou: 实际上3CV对2CV1CVE，不考虑陆基的话我觉得你都会被吊打
+00:34 varna: 其实可以的
+00:34 varna: 他的制空力只要随便对付就能跟我拼
+00:34 varna: 然后我拦不住他
+00:34 Mokou: 但是他还是没学会索敌
+00:34 varna: 我的打算大致是这么几点
+00:34 Mokou: 你看他下的索敌指令
+00:34 Mokou: 两机水侦组成一个编队，索一条直线
+00:34 varna: 第一，莫尔兹比方面不能指望轰炸，必须空战
+00:35 varna: 所以我计算了一个源田主义的航空战
+00:35 hope1: zhi.hu/uhQw
+00:35 varna: 集中用陆攻干掉他的B17
+00:35 varna: 然而我没想到会这么少
+00:35 Mokou: 他的B-17到最后都没飞起来
+00:35 hope1: 真是可惜……
+00:35 varna: 我预计中的B-17至少一个squadron
+00:36 Mokou: 我没想到P-38会被Betty吊打……
+00:36 varna: 在我的航空战开始之前，莫尔兹比就会被深海堡垒重爆夷为平地
+00:36 xxxxxxxxx: 我妈当时在旁边，想劝阻我，然而没啥用，最终我自己选择退出了 T_T 不是女装的料
+00:36 xxxxxxxxx: orz
+00:36 hope1: 注意是谁
+00:37 Mokou: 当然这个或许是我的平衡失误
+00:37 varna: 我给的图上，莫尔兹比港的两个阴影分别是敌方预想轰炸开始时候和索敌400nmi时候的索敌危险区
+00:37 Mokou: 给他30机搭载的话或许会好些
+00:37 varna: 按照时间可以参考那两个阴影前进
+00:37 varna: 拉包尔则是零战可以护航的合理范围
+00:38 varna: 所有日军部队标出了4h索敌范围
+00:38 varna: 以莫尔兹比港的空袭为打开局面的一战，看4h的索敌结果，太远就放弃
+00:38 varna: 之后就没有多少计划了，这是我搞砸的
+00:38 Mokou: 最后那三颗鱼雷确实是人品了……
+00:39 varna: 本来我的考虑是整备一个攻击队，然后通过拦敌人的索敌机来判定地方位置
+00:39 Mokou: 想当年我21机九七没炸死萨拉
+00:39 varna: 同时我自己的索敌优先用来决定发进
+00:39 xxxxxxxxx: 母后来了一句：儿啊，我还能抱孙子吧？外孙也行啊  <- 外孙orz
+00:39 varna: 结果我制空算少了
+00:39 Mokou: 你预想的3CV会是哪三艘？
+00:40 varna: 我预想是Lex和萨拉，第三艘不在我考虑之内
+00:40 Mokou: 不在考虑之内什么情况……
+00:40 varna: 我不在乎第三艘是什么，目标就是轰沉两艘+莫尔兹比，逼敌人投降
+00:40 Mokou: なるほど
+00:40 varna: 而之所以不在意第三艘，是因为美军的攻击队质量问题
+00:40 Mokou: 然而列克星顿是中间以外最硬的空母
+00:41 Mokou: 1243DP 6.0的侧舷
+00:41 varna: SBD初期型巡航120，我的攻击队会比他先到达目标
+00:41 varna: 我有一个小时不到的时间组织防御
+00:41 varna: 但是舰爆无论如何回不来
+00:41 varna: 即使不特攻，也全都会死掉的
+00:42 varna: 所以这里没有outrange, 只有一点点时间优势和显著的鱼雷优势
+00:42 Mokou: 然而七架特攻机全撞海里了
+00:42 varna: 但我没想到美军完全没调整舰攻
+00:42 varna: 另外那个大队舰攻的参考搭配是不是上次大黄蜂的
+00:42 Mokou: 其实这场要是我的话，或许我会直接堆满舰爆……
+00:42 Mokou: 是
+00:42 varna: 那个是我个人的致敬因素……
+00:43 Mokou: 我知道，但我和他说明了这个参考配置的来源……
+00:43 varna: MI反击战里大黄蜂舰爆队用命堆出了希望
+00:43 varna: ...
+00:43 varna: 舰攻队*
+00:43 varna: 虽然人头是企业舰爆队的，但死人更多是舰攻队
+00:43 Mokou: 然而他没改
+00:43 varna: 他知道臭弹率吧
+00:44 Mokou: 我告诉他了
+00:44 varna: ...
+00:44 Mokou: 然而他没改
+00:44 Mokou: 我总不能跟他说：“我跟你讲，舰攻没卵用，你堆舰爆的话能骑死对面”
+00:44 varna: 然而这剧本美军还是该用舰爆
+00:45 varna: 大批发舰，数目灵活，还可以索敌攻击
+00:45 varna: 航程比日军长
+00:45 Mokou: 其实我一直都担心这个问题
+00:45 varna: 不过如果用了，那么就要仔细计算时间
+00:45 Mokou: 如果美军直接利用搭载优势堆舰爆，日军怎么防
+00:45 varna: 美军在掐表，日军在走刀锋
+00:45 varna: 3cv我觉得我会输的，只能拼细节
+00:45 varna: 比如在第一个拦截上50mi全速偏航
+00:46 Mokou: 然而像我这种狂魔没准给你来个四相索敌
+00:46 Mokou: 我飞机多我怕谁……
+00:46 varna: 那没办法
+00:46 varna: 美军3cv的索敌侦查太可怕了
+00:46 Mokou: 我一直都担心这个问题
+00:46 Mokou: 直到他给我他的搭载
+00:46 Mokou: 嗯
+00:46 varna: 不说四相，五小时内我都心惊胆战
+00:46 varna: 所以我的策略是超过4h不追尾
+00:47 varna: 没必要让索敌机那么死掉，我拿个参数解三角就行了
+00:47 varna: 但如果敌军在上风向，我可能就要全力扯乎
+00:48 varna: 结果我看了看美军的指令，攻击队没有发进准备……
+00:48 Mokou: 没有
+00:48 varna: 水上部队老实说我压根不知道怎么用
+00:48 Mokou: 而且他索敌几乎是胡乱索一通，事先也不问情报
+00:48 Mokou: 我的想法就是艹岛
+00:49 Mokou: 舰队决战你打不动的
+00:49 varna: 我开到莫尔兹比的前提是我有制空权，最好有制海权
+00:49 Mokou: 对
+00:49 varna: 然而制海权怎么也得两三天
+00:49 Mokou: 你得先保证北卡不在那
+00:49 varna: 制空权一两天
+00:49 Mokou: 所以说这队其实我是打算用来偷的
+00:49 varna: 结果这个水打就是主战场的后腿
+00:49 Mokou: 如果他没考虑到艹岛的情况的话，你可以大半夜直接摸过去……
+00:49 varna: 因为根本偷不下来，除非敌方安排太糟糕了
+00:50 varna: 你看到我标的那个4h索敌了吧
+00:50 Mokou: 看到了
+00:50 varna: 我根本不敢让水上部队去那范围
+00:50 Mokou: 所以是半夜……
+00:50 Mokou: 当然现在水打没卵用的原因之一是我最后还是没加入雷雨云
+00:50 varna: 基本来说，让他们走S/SW/W方向都是会死的
+00:51 varna: 实际上有这么个讨巧的索敌
+00:51 varna: 用极少量重战在莫尔兹比以东搜索1k
+00:51 varna: 10k
+00:51 hope1: http://www.npc.gov.cn/npc/xinwen/lfgz/flca/2015-07/06/content_1940614.htm
+00:51 hope1: 卧槽
+00:51 Mokou: 但是他没问情报
+00:51 varna: 但这个做法和两个战术矛盾
+00:52 varna: 第一，莫尔兹比需要重点防御拉包尔，最好能摧毁敌方
+00:52 Mokou: 如果你看log，你会发现最后我实在忍不住了，告诉他零战巡航速度180，0746加入战斗
+00:52 varna: 不然一天被日常几次睡也受不了
+00:52 varna: 第二，美军手头有极其强大的机动部队，但跟敌军整整差出了一个索敌结论的时间间隔
+00:52 varna: 这让人难以忍受
+00:54 Mokou: 对了，你还记得我说我算美军的AAF的时候受到了巨大的惊吓么
+00:54 varna: 记得
+00:54 varna: 所以这里需要计算的是多少B-17能够瘫痪拉包尔
+00:54 Mokou: 我给你看个数据
+00:54 varna: 不需要摧毁，大确率瘫痪就行
+00:54 Mokou:  USS North Carolina 1236DP AC3/C2 AAF = (4.4 * 20)/*1.2*1.3 + (2.4 * 60)M-*1.3 + (1.6 * 48)L-*1.3 = 137/ + 187M- + 100L- = 424L- 324M- 137/
+00:54 varna: 噗
+00:55 Mokou: 吓得我看了三遍wiki
+00:55 Mokou: 一条船顶一整个五航
+00:55 Mokou: 这打个卵
+00:56 Mokou: 我还没敢算Iowa
+00:56 varna: 我不打他就好了……
+00:56 xxxxxxxxx: http://zhuanlan.zhihu.com/shaofeidu/20178478 是不是因为我太没有艺术细菌才看不出这些打扮有什么特别的地方?
+00:56 varna: 联合舰队最大的十六万马力
+00:56 Mokou: 当然其实水打没卵用还有个原因
+00:56 Mokou: 本来我的计划里那不是两条傻级，是一条伞级……
+00:57 varna: xxxxxxxxx: 我也看不出
+00:57 Mokou: 2400DP 200mm的水平装甲，根本炸不动
+00:57 Mokou: 一堆舰爆呜呜飞下去效果无异于放鞭炮
+00:57 varna: 我唯一没想到的是美军的兵力这么强
+00:58 xxxxxxxxx: 频道里有比较在行穿衣打扮的么?
+00:58 hope1: xxxxxxxxx: 这啥……
+00:58 Mokou: 他要求防空，我就给了他两条亚特兰大爸爸……
+00:58 varna: 亚特兰大正常
+00:58 Mokou: 水打应该不成问题，北卡最快28kt
+00:58 cleamoon: 413. That’s an error. Your client issued a request that was too large. That‘s all we know.  什么鬼？
+00:58 Mokou: 所以还是搭载碾压了
+01:00 varna: 我主要害怕舰载航空兵
+01:00 Mokou: 我也怕这个
+01:00 Mokou: 但是可供我调整的空间太小了……
+01:00 xxxxxxxxx: hope1: 不知道 这个看上去在写那些人穿衣服很有品位...
+01:00 Mokou: 我给他一条CVE吧，鱼雷垃圾
+01:00 varna: 这场其实你调整得还行
+01:00 xxxxxxxxx: 然而我感觉不出来...
+01:00 hope1: 一直穿ccf提供的shirt
+01:00 Mokou: 给他两条CVE吧，吞吐怎么办
+01:00 varna: 他陆基如果再强下去，我就会提前两年步入机动部队的日常了
+01:00 hope1: 前面一坨3p大学的标志，不过不是很大
+01:00 varna: 所以美军在这个前提下作出的努力是牺牲莫尔兹比
+01:00 varna: 然后以1cv的代价换掉二羽鹤
+01:00 Mokou: 这也是我的预想
+01:00 varna: 这比史实多一些少一些
+01:00 varna: 但可以执行
+01:00 Mokou: 没关系，MI取得胜利就成
+01:00 varna: 开局实际上是拉包尔和莫尔兹比互换
+01:00 Mokou: MO丢了就丢了
+01:01 varna: 之后双方失去陆基机场
+01:01 varna: 拼机动部队的话，日军是吃亏的
+01:01 varna: 看怎么把握时间了
+01:01 Mokou: 所以这场如果是我们对打呢
+01:01 Mokou: 继续双方全家爆炸？
+01:02 varna: 拿美军的人占便宜
+01:02 varna: 咱俩的做法会差不多的
+01:02 Mokou: +
+01:02 varna: 3h-4h之后第一个结论出来，然后就等爆炸吧
+01:02 Mokou: 毕竟我受你影响挺深……
+01:03 Mokou: 所以其实我还是希望能找到一个裁判
+01:03 varna: 你比我还健康点，我有些大混蛋的毒素
+01:03 Mokou: 要不你去海色那边安利一下？
+01:03 hope1: 第三十一条　关键信息基础设施的运营者应当在中华人民共和国境内存储在运营中收集和产生的公民个人信息等重要数据
+01:03 varna: 海色现在全是活动活动活动，qh那群里的军事爱好者也少
+01:03 Mokou: 蛋疼
+01:03 varna: 我只能潜移默化地试试
+01:04 hope1: 好厉害……
+01:04 varna: 有几个熟人还是喜欢军事的，不过工作党估计累，看手册怪麻烦（这几个人语言倒不是问题）
+01:04 Mokou: 倒是
+01:04 varna: 蓝大的日文比我好到不知道哪里去了，C子日文也比我强
+01:04 varna: 英文反正都能读通一般资料
+01:04 Mokou: 或者我们来个裁判速成手册&QuickRef？
+01:05 xxxxxxxxx: C子？
+01:05 varna: 我觉得我当时写下了相当多裁判需要知道的东西，然而还是那么一大堆……
+01:05 Mokou: 所以需要一个QuickRef
+01:05 varna: 如果让我现在加，最多加一个三角算例参考
+01:05 Mokou: 不知道是不是我太不认真
+01:05 varna: quickref比较好
+01:05 varna: 不过我最不擅长做这个
+01:05 Mokou: 总之我这次的感觉是裁判不需要背下规则，只需要知道在哪一页能找到就可以
+01:05 varna: 是这样
+01:06 Mokou: 我全程开着规则书……
+01:06 varna: 但我现在的感觉就跟考试之前的老师一样
+01:06 xxxxxxxxx: 00:59:43 Mokou>毕竟我受你〇〇挺深……
+01:06 varna: 「全是重点」
+01:06 Mokou: 233333
+01:06 Mokou: 所以我们需要一份索引
+01:06 varna: 想法不错，索引+速算算例
+01:07 varna: 不过在做出来之前，我还是想看看你的第三法成文
+01:07 Mokou: 这两天我看看能不能弄出来
+01:08 Mokou: 关于火控雷达，我和老苏讨论以后有了这么个方案
+01:08 varna: xxxxxxxxx: C子不是妹子
+01:09 xxxxxxxxx: 这个子难道是羊驼常用的那个子的意思...
+01:09 Mokou: 如果火控雷达不足以支持纯粹的盲射（比如Mk3），那么只进行测量，不回报着弹情况
+01:09 Mokou: 如果火控雷达足以支持纯粹的盲射（如Mk8以上），那么回报着弹情况
+01:09 varna: xxxxxxxxx: 不，是群众希望他变成妹子的意思
+01:09 Mokou: 但按照火控雷达的性能划定一个距离区间，在这区间之内模糊着弹情况的报告
+01:10 Mokou: 比如报告“远弹或跨射”
+01:10 varna: 这样听着不错
+01:10 xxxxxxxxx: 雷达还能这么用么...
+01:10 xxxxxxxxx: 感觉好厉害
+01:10 Mokou: 那我先这样试试
+01:10 Mokou: 之后我们拟定一个场景来打一场？
+01:10 varna: xxxxxxxxx: 二战的火控雷达就是辅助观瞄设备
+01:11 varna: 不要裁判么
+01:11 varna: 直接评估参数？
+01:11 Mokou: 能找到裁判最好
+01:11 Mokou: 前提是能找到
+01:11 varna: 看看code_new的想法吧
+01:11 Mokou: 我也这么考虑……
+01:11 varna: 单纯的炮击战可能还好说，我尽量不雷击
+01:11 xxxxxxxxx: 没打中和打中雷达看来有什么区别么?
+01:11 Mokou: 你威力巨大之九三式
+01:11 Mokou: 没有
+01:11 varna: xxxxxxxxx: 雷达不判别着弹，只判定水柱
+01:12 Mokou: 雷达是用来测水柱等等
+01:12 Mokou: 雷达是用来测水柱的
+01:12 varna: 原理上只是用设备替代人工观测水柱
+01:12 Mokou: 中弹判定要看现象
+01:12 Mokou: 比如说冒出火光，或者看到爆炸
+01:12 varna: 比如“敌舰沉默，灯光全灭”什么的
+01:12 xxxxxxxxx: 没有发现水柱的话 怎么判断是中了还是炮弹蜜汁消失?
+01:12 Mokou: 没法判断
+01:12 varna: 没发现就悲剧了
+01:13 varna: 就当白打
+01:13 varna: 但一般都会有
+01:13 varna: 冲击力很大，会引爆的
+01:13 xxxxxxxxx: 那别人一炮出来我就关灯....
+01:13 Mokou: 你就当这轮打出去的全是wild shot
+01:13 Mokou: 其实水柱似乎不是炸出来的
+01:13 Mokou: 是砸出来的
+01:13 varna: 全舰电闸都拉了，你观瞄也不行啊……
+01:13 varna: 火炮射击这个动作是电气化的
+01:14 xxxxxxxxx: 装死保命
+01:14 Mokou: 我记得战列舰论坛之前提过这个问题，实际上大部分时候撞击水面的力度不足以引爆彻甲弹
+01:14 varna: 哦？
+01:14 varna: 那估计就打到真死了
+01:14 Mokou: 而且炸药炸出来的水柱和炮弹直接拍出来的水柱是不一样的
+01:14 varna: 什么威力巨大之九三式之类
+01:14 varna: 染色剂和高度？
+01:14 Mokou: 对
+01:15 Mokou: 拍出来的水柱很细长，而且大致成圆柱型
+01:15 xxxxxxxxx: 击中了还会继续补刀么...
+01:15 varna: 会的
+01:15 Mokou: 而炸弹炸出来的可能更适合叫做“水花”
+01:15 xxxxxxxxx: 太没人性了....
+01:15 varna: 毕竟大家还是喜欢看爆炸和炎上
+01:15 varna: 想想神通
+01:15 Mokou: 当然也不一定
+01:15 Mokou: 想想白平原
+01:15 varna: 半夜开灯，据吹中了不知道多少弹
+01:15 Mokou: 烟雾被误判成火灾，逃过一劫
+01:16 varna: 着弹不知道多少，击出的炮弹数简直跟狂欢一样
+01:16 Mokou: 作死是一门技术
+01:16 varna: 我感觉那些美军都进入作战的激情状态不能自拔了，对着神通疯狂浪费炮弹
+01:17 Mokou: 毕竟炮术是人家的三分之一
+01:17 varna: 但四三年美军护卫队的练度应该不错了
+01:17 Mokou: 不过最近我才知道一件事
+01:17 varna: 我看原为一的回忆录里，记载了二十七驱出去鼠输送被吊打
+01:17 Mokou: 大家都黑高雄散布差
+01:17 varna: 日军驱逐队不仅没有完成任务，而且在水面战中失败了
+01:18 Mokou: 但他们1并不知道三十年代美军重巡散布更棒
+01:18 varna: 休斯顿的hoiless triple mount...
+01:18 Mokou: 三十年代美国人的8in炮出膛速度3000fps
+01:18 Mokou: hoiless
+01:18 Mokou: 3000fps
+01:18 Mokou: 什么概念
+01:18 Mokou: 散布一千八百米
+01:18 Mokou: 你怕不怕
+01:19 xxxxxxxxx: 其实这是喷子
+01:19 varna: 带着一堆问题下水等解决呢，跟鱼雷一个德行
+01:19 Mokou: 后来减装药了
+01:19 varna: 鱼雷的一部分问题可能还是战斗部重量估算失误，但主炮的问题最后也没有很通用的解决方案
+01:19 varna: HOI似乎算是不错的
+01:19 Mokou: 高雄不到500米的散布都被人各种喷……
+01:20 Mokou: 这还是没HOI的时候
+01:20 varna: 我觉得中口径hoiless五百米算是先进了
+01:20 xxxxxxxxx: 我仔细对了对羊驼和红旗的海图 似乎美军有一部分基本没动?
+01:20 Mokou: 美军的机动部队一直在纠结
+01:20 Mokou: S N S N S N
+01:20 varna: 红旗的海图是初始配置吧
+01:20 varna: ...
+01:20 varna: 我跟你说，看到他15ktS, 我的第一反应是他发进了，而我没拦截掉他的索敌机
+01:20 Mokou: 是
+01:21 Mokou: 他本来打算炸拉包尔，后来发现拉包尔离他六百海里远
+01:21 varna: ...
+01:21 Mokou: 不过不炸拉包尔也是S
+01:21 Mokou: 他要换CAP
+01:21 varna: 对陆轰炸不算时间……
+01:21 xxxxxxxxx: 美军正在聚飞龙
+01:23 Mokou: 这次弹道数据没用上，不过或许也是好事……
+01:23 varna: 你会累死的
+01:23 Mokou: 我都不知道这么来要算上多长时间
+01:23 Mokou: 但是要处理倾角问题大概只有这种方法了
+01:23 varna: 万一突然出来几个大逗比领着熊孩子要跟你打什么航空炮雷击战
+01:23 varna: 直接天国去也
+01:24 Mokou: 去天国之前我会变出一条藤本超大和把她们也轰下去
+01:24 Mokou: 12门51你怕不怕嘛
+01:24 Mokou: 虽然我到现在都不知道这玩意散布到底多好
+01:24 xxxxxxxxx: 一起开会翻过来么?
+01:24 varna: 说起来，这回我祥凤的用法彻底CVE了
+01:24 Mokou: 不知道
+01:24 varna: 管他鱼雷炸弹爆雷一律不挂
+01:25 Mokou: 藤本君又不是没翻过船，虽说他主要是背锅的
+01:25 varna: 藤本君翻船的政治错误有点大
+01:25 xxxxxxxxx: 那个补给舰队是干啥的?
+01:25 varna: 最后这个背锅的讨论很麻烦
+01:25 varna: 旧日本海军如果要晋升，你不能犯错误……
+01:26 Mokou: “三川军一的巡洋舰，能翻得么？”
+01:26 xxxxxxxxx: 有错误能推给陆军么?
+01:26 varna: 什么那珂酱出事了，神通又把谁干了，驱逐舰翻了几个
+01:26 Mokou: 翻船怎么推给马鹿……
+01:26 varna: 这些司令和司令官的锅怎么推，估计后人看着也是个悲惨的喜剧
+01:27 varna: 当时陆军也不争气，想不出自己弄几个潜艇
+01:27 varna: 管他能潜否，总之沉下去看看
+01:27 Mokou: 23333
+01:27 Mokou: 吃了还能加运
+01:27 xxxxxxxxx: 比如海上突然发现了漂浮的东西怀疑是陆军开发的新东西
+01:28 varna: 后来不是有传言说马鹿油运输试制核弹么
+01:28 varna: 总觉得是马鹿油老兵会的谣言
+01:28 Mokou: 本子造得出核弹吗……
+01:28 varna: 他们还专门有个军歌的样子
+01:28 varna: 什么“啊、雄壮的马鹿油队”
+01:28 Mokou: 核弹都出得来，震电不能飞？
+01:28 varna: 结果田中这个右棍野郎一出来，估计老兵会的人都咬牙切齿
+01:29 xxxxxxxxx: 雄壮的马战神
+01:29 Mokou: 2333
+01:29 varna: 雄壮的马鹿油队就这么变成了超破坏拳
+01:29 varna: 反倒海军抱着矢矧舔得开心
+01:29 Mokou: 还有蜜瓜的本子
+01:30 varna: 三本蜜瓜本，还有什么舰狗隔壁的大和轮机长……
+01:30 varna: 那哥们良心发现，只在贴吧发帖，没给轮机长桑看大和2014年的舰影
+01:31 varna: Mokou: 对了，你有usn频道的log底子么
+01:31 Mokou: 有
+01:31 varna: 求打包
+01:32 Mokou: https://pastebin.mozilla.org/8843633
+01:32 varna: thx
+01:32 xxxxxxxxx: 应该给那个轮机长看看超级重巡的图片
+01:32 Mokou: 不过大姐姐2014的舰影也没啥啊
+01:32 Mokou: 也就几个pad而已
+01:33 varna: 我就记得卧烟社那个恶意的翔鹤1941和2014对比
+01:33 Mokou: 2015
+01:33 varna: 哦对
+01:33 Mokou: 卧烟社这个外号不如他们的本名
+01:34 varna: 本来是什么
+01:34 Mokou: 我现在觉得本名应该是膜蛤社
+01:34 Mokou: 卧烟社才是外号
+01:34 varna: 我就记得轻巡能代研究员变成重巡摩耶研究员，然后开始暴力膜蛤
+01:34 varna: ……果然观长者……
+01:35 Mokou: 不过他们的视频似乎没啥硬伤
+01:35 Mokou: 你再看看262
+01:35 varna: 别提262
+01:35 varna: 我宁可去舰吧跟欠雪航改二那位撕逼
+01:35 Mokou: 262已经不要脸了
+01:35 Mokou: “在娱乐视频里找干货？”
+01:35 varna: 那楼里听说有个人已经打算让喷气机效仿RATO上IJN多段式木甲板了
+01:36 Mokou: 我不找干货我看你视频？
+01:36 Mokou: ……
+01:36 varna: 他以为木板上RATO能推动螺旋桨就也能飞喷气式飞机
+01:36 varna: 我大鲸失色
+01:36 varna: 本来RATO的典型例子就是龙凤
+01:37 Mokou: 甲板不会烧起来？
+01:37 varna: 赤城前辈都烧起来了，龙凤跟着烧烧，显得有机动部队的传承
+01:38 varna: 还可以一边烧一边嘲笑陆基的渊田家族（后期型）
+01:38 Mokou: 田中也只给五航战上个CATO不是
+01:38 varna: 估计天山默认RATO了
+01:38 varna: 龙凤现在什么都能飞起来
+01:38 Mokou: ……
+01:38 Mokou: 干脆飞B2算了
+01:38 Mokou: 反正RATO
+01:39 xxxxxxxxx: http://tech.hexun.com/2015-08-22/178527841.html 有人会要这种蛋疼东西么?
+01:39 varna: 对了说个笑话
+01:40 varna: 前几天实验室有个哥们从北京回来，我跟他聊他被派去做的项目
+01:40 varna: 他跟我说了句“haitu你听说过么”
+01:40 varna: 我差点脱口“那个我不做”
+01:41 Mokou: haitu是啥……
+01:41 varna: 第一反应，“海突你听说过么”
+01:41 Mokou: ……
+01:41 Mokou: 舰狗暴露
+01:41 varna: 一秒钟之后反应过来他说的是海图
+01:42 varna: 我了割草咧
+01:43 varna: 我觉得美军索敌失误主要是他设备问题
+01:43 Mokou: 我也有这种感觉
+01:43 Mokou: 但是他连要放个扇面都不知道……
+01:43 varna: 或者他有大屏幕，或者他能画图，都能作出你那个提示的位置
+01:43 Mokou: 那个是最后我忍不住了
+01:43 varna: 大丈夫
+01:43 Mokou: 再这样下去又是单方面吊打……
+01:44 varna: 不过这回CAP很得力
+01:44 varna: 制空权拿到了
+01:45 Mokou: 那是因为他两条航母并行作业还没放攻击队……
+01:45 Mokou: 我觉得他还是进攻性太弱了
+01:45 varna: 18min足够他起飞甲板上的一个攻击波
+01:45 varna: 不会五分钟的
+01:47 Mokou: 所以咯
+01:47 Mokou: 不过他也没索到敌
+01:47 varna: 第一天的第一场航空战我不知道他怎么想，但我无论输赢都得逃跑
+01:47 Mokou: 喔喔喔，找到好东西了
+01:48 xxxxxxxxx: 红旗喔喔喔的叫起来了
+01:48 Mokou: 萨马岛美方的部分展播
+01:48 Mokou: 战报*
+01:48 varna: 这个好
+01:48 Mokou: 战列舰吧的人发的，两星期以后删除
+01:48 Mokou: 我先存上
+01:48 varna: 另外我怀疑舰C的BGM有毒
+01:49 varna: 我中间开着的是《我军、与敌机动部队交战》和《索敌机、发舰开始》
+01:49 Mokou: ……
+01:49 varna: 蝗国海鹫稀里哗啦
+01:49 Mokou: 毕竟50+ F4F
+01:49 varna: 最后换回花守之丘
+01:50 Mokou: 简直就是吊打
+01:50 Mokou: 等等
+01:50 Mokou: 0530的那堆索敌出去的时候你放的是啥
+01:50 Mokou: 索敌机发舰？
+01:50 varna: 那时候啊
+01:50 varna: 那时候似乎是亡灵序曲
+01:50 Mokou: 哦，那看来擦弹不是BGM的锅……
+01:51 Mokou: 0930的时候祥凤的97其实差点索到给油舰队
+01:51 Mokou: 可惜掷骰判定没索到
+01:51 varna: 徒增困扰
+01:52 Mokou: 不然我会告诉你“分别于xx xx发现敌舰队，皆以两条平顶船为主”
+01:52 varna: 这种事情上我都挺悲观的
+01:52 Mokou: 然后看你什么反应……
+01:52 varna: 大丈夫
+01:52 varna: 看距离，中间可以改一次发进
+01:52 Mokou: 当然其实TF11我给了点暗示
+01:52 Mokou: 之前我说补给舰和航母我都会报告成“平顶船”
+01:53 Mokou: 而我最后报告给你的是“大型平顶船”
+01:53 varna: 那个我看到之后觉得并非补给船
+01:53 varna: 如果说大型，给油舰虽然吨位够大，但顶不那么平
+01:53 Mokou: 将近四万吨，怎么样也看不成油轮……
+01:53 varna: 别说
+01:53 Mokou: 我说的大型一般指战列舰水平了
+01:53 varna: 看野分
+01:53 Mokou: 那是晚上
+01:54 varna: 战列舰水平
+01:54 varna: 尻取大白天也被乱打
+01:54 varna: 虽然不排除靶舰嫌疑
+01:54 Mokou: 尻取基本上是练炮术吧
+01:54 varna: 那珂酱被活活打死
+01:54 varna: 大概都是靶舰
+01:55 Mokou: 我记得似乎专门下令让BB去打尻取航妈别插手？
+01:55 varna: 有这个说法
+01:55 xxxxxxxxx: 所以那些补给舰是干啥的?
+01:55 varna: 歼灭敌主力之后让水上部队进去炮击
+01:55 Mokou: 然后就是首轮跨射野分
+01:55 Mokou: 然而Iowa远近散布八百
+01:55 varna: xxxxxxxxx: 长程跋涉的时候给油的，不然高速航行的续航力不够
+01:55 Mokou: 找给油舰的资料花了我两天时间
+01:56 Mokou: 不过说起来，你为什么觉得那两个不像补给船
+01:56 xxxxxxxxx: 这次的图上有补给的过么?
+01:57 Mokou: 这次还没到需要补给的时候就结束了
+01:57 Mokou: 预定四天，现在打了不到半天
+01:57 xxxxxxxxx: ....
+01:57 varna: 我的印象里，补给船不足以称为大型
+01:57 varna: 确实吨位够
+01:57 Mokou: 果然
+01:57 varna: 但上层建筑比航母要多
+01:57 varna: 可能跟CVE/CVL混淆，但如果是Lex系列应该不至于
+01:57 varna: 而我的假想敌如同计划里写的，就是Lex系列
+01:58 Mokou: 对了，你的计划再发一下吧
+01:58 varna: ok
+01:58 varna: https://pastebin.mozilla.org/8843634
+01:59 Mokou: OTL
+02:00 Mokou: 总之这次打得相当有趣
+02:00 Mokou: 最后那波攻击简直峰回路转……
+02:00 varna: 我还是挺满意这次的参数调整的
+02:00 varna: AA火力和CAP都被调到了可用的程度
+02:00 Mokou: 其实算完舰攻的AAF以后我已经开始考虑CD的问题了
+02:00 varna: 这样一个2cv的机队可以取得不错的成果
+02:00 varna: 往下我的疑问只有一点了
+02:01 Mokou: 我当时在想，如果能打个严重进水出来那至少能废掉发着舰能力
+02:01 varna: 是否要提供上风向起降
+02:01 varna: 这个时候的CAP限制
+02:01 varna: 举例来说，航空战已经细致到2min了
+02:01 Mokou: 这个时候我假定已经转向S
+02:01 varna: 这时候是否要考虑细节，也即上风向转向
+02:01 varna: 如果考虑进去那就没问题了
+02:02 varna: 毕竟还能起飞飞机，说明对空雷达有用
+02:02 varna: 总之别是黑压压一大堆苍蝇过来，然后谁就摔死了
+02:02 Mokou: 如果机动部队能活下来的话，那么之后我按照空战的时间结算移动
+02:02 Mokou: 对空雷达太可怕
+02:03 Mokou: 保底提前七回合
+02:03 Mokou: 这怎么玩
+02:03 Mokou: 而没有对空雷达的情况，最多提前七回合
+02:03 varna: 打过几次之后航空战的数值就比较像样子，雷达的重要性也体现出来
+02:04 Mokou: 然而1942年底21才开始实装……
+02:04 varna: 那时候都兵败如山倒了
+02:04 varna: RJ应该都下去
+02:04 Mokou: 北卡、太太和主任老早就开始装雷达了
+02:04 Mokou: 美军这三队主力舰队全都有对空雷达
+02:04 varna: 太太有钦点，我以前一直以为是瑞鹤先装的
+02:04 varna: 后来看了回忆录才知道是翔鹤先有
+02:04 Mokou: 我说的是深海太太
+02:05 varna: 深海人的防空体系……
+02:05 Mokou: 最早装21的我记得是伊势？
+02:05 varna: 是
+02:05 Mokou: 深海人一条船顶你一个五航战
+02:05 varna: 电探试验舰，成功发现二逗比
+02:05 Mokou: 你能怎么办……
+02:05 varna: 我没办法，AAF算了三场都是这个样子……
+02:05 varna: 有炮有雷达有飞机，层次丰富火力猛
+02:06 Mokou: 过了一年，我再乘个1.6上去
+02:06 xxxxxxxxx: 原来这两个逗比是用来做实验的...
+02:06 Mokou: 那数值太美，我不敢想
+02:06 varna: xxxxxxxxx: 柱岛舰队总是没事干
+02:06 Mokou: 那两个逗逼的改装似乎不少
+02:06 Mokou: 历史上IJN惟二的两条航战
+02:07 Mokou: 不过这个改装似乎是因为日向炮塔炸了？
+02:07 varna: 各种凑巧
+02:08 hope1 quit:Ping timeout: 244 seconds
+02:08 varna: 至少我手头那份横空43年的机动部队战术操典就把伊势级列入航空战力了
+02:08 Mokou: ……
+02:08 Mokou: 放彗星特攻么
+02:08 Mokou: 然而七架全撞海里了
+02:08 varna: 估计要穿梭
+02:08 Mokou: 6架
+02:08 Mokou: 我记得当时是88以下就有命中
+02:08 Mokou: 结果一点，扔出来个90
+02:08 varna: 是
+02:09 varna: 83还是88我忘了
+02:09 varna: 天不让我特攻，就这样吧
+02:09 Mokou: 83
+02:09 Mokou: 打下来一架
+02:09 varna: DER那三个简直屌炸
+02:10 Mokou: 点出来第一个DER的时候我就有不用算CD的预感了
+02:10 varna: 我威力巨大之九一式换算中了超过4.5枚
+02:10 Mokou: 直接一个0
+02:10 molikto_ quit:Remote host closed the connection
+02:10 Mokou: 我突然想扔一下CD了
+02:10 varna: 低调
+02:10 varna: 等你有精神再娱乐吧
+02:11 Mokou: 也成
+02:11 Mokou: 其实我一直想搞个严重进水
+02:12 xxxxxxxxx: 微软新专利：电击方式告诉你来新通知了
+02:12 Mokou: 超过75%伤害直接倾覆
+02:13 Mokou: 拯救DER悲剧的最后一根稻草
+02:13 varna: 现在flooding和damage不单算，而且拿不出合适的依据来
+02:13 varna: 我的倾向是粗暴处理
+02:14 Mokou: flooding现在基本是CD吧
+02:14 varna: 是
+02:15 varna: 这个没法说
+02:15 varna: 毕竟鱼雷的伤害首先还是爆炸能量
+02:15 varna: 至于美军后来的姿势开始利用倾覆，那是另一阶段了
+02:15 Mokou: 比如轮X大姐姐的时候？
+02:16 varna: 主要是轮爆大和
+02:16 varna: 毕竟后来IJN还剩几个大船给他们爆的
+02:16 varna: 想打都得去母港，不然没油
+02:17 Mokou: 2333
+02:17 Mokou: 一堆防空炮台
+02:17 varna: 米空被搞得稀烂
+02:17 varna: 机库都翻出来了
+02:17 varna: 我一点糟糕的事情都没想
+02:17 Mokou: 你看看你
+02:17 Mokou: 不过我有个问题 
+02:17 Mokou: U2里面100%那行是干嘛用的……
+02:17 varna: 我看看
+02:17 Mokou: 士气
+02:18 varna: ...
+02:18 varna: 什么鬼
+02:18 Mokou: 扔个98就与舰同沉么……
+02:18 varna: 还有几个想以水代酒的就随他们去吧
+02:19 varna: 反正提督不过是那种不懂得她风情的男人，飞龙该活下来去谈更好的恋爱
+02:19 varna: 我一点糟糕的事情都没想
+02:19 Mokou: 川川可爱
+02:19 varna: 我什么都不知道
+02:19 Mokou: 42，萨拉的船员弃舰了
+02:21 Mokou: 我先睡觉了
+02:21 Mokou: 明天我把这场的战报整理一下
+02:21 Mokou: 另外我觉得如果以后美军那位还想打的话，我们需要先给点科普
+02:21 Mokou: 尤其是索敌……
+02:22 varna: 我觉得索敌这事，最好的科普就是打两盘空母决战
+02:22 Mokou: 难道不是看一遍断剑么
+02:22 varna: 切身感受
+02:22 Mokou: 我是这么学的
+02:22 varna: 那个太慢了
+02:22 varna: 空母决战一小时之内就能玩一盘
+02:22 Mokou: 空母决战有误差这回事吗
+02:22 Mokou: 我似乎没发现……
+02:22 xxxxxxxxx: 索敌有什么特殊的姿势么?
+02:22 varna: 没有，只有敌军屹立不倒的PBY
+02:23 varna: 还有看到就让人哆嗦的重爆
+02:23 Mokou: 然而指挥官至少应该知道索敌需要形成一个扇面
+02:23 varna: 以及不知道为何都变成火鸡的零战
+02:23 Mokou: 放一条直线出去就是撞大运
+02:23 Mokou: 撞不到就死
+02:23 varna: 空母决战最好的关卡就到所罗门海战和南太平洋海战
+02:23 varna: 马里亚纳和莱特湾的姿势相当特别
+02:23 varna: 跟做梦一样
+02:24 Mokou: 先睡觉，诸君武运
+02:24 Mokou quit:Quit: 睡觉
+02:24 varna: 武运
+02:31 varna: http://tieba.baidu.com/p/3994753184 ...
+02:31 varna: 我看看图鉴
+02:32 varna: 这妖精还真是翔鹤……
+02:38 xxxxxxxxx: http://tieba.baidu.com/p/3980630268 水生火热中的基佬们
+02:47 xxxxxxxxx: http://tieba.baidu.com/p/3983119092 噗噗噗 这里说LGA的舰C群 有人啪了姐姐
+02:49 varna: 卧槽？
+02:52 varna: 我嚓咧
+02:53 varna: clang complete遇到__auto_type还是会跪
+02:53 xxxxxxxxx: http://it.21cn.com/prnews/a/2015/0820/11/29944120.shtml 洗得一手好地 海军需要你
+02:54 varna: 我好久没看《欠雪！加油》那个四格了
+02:54 varna: 等会补补
+03:01 FrankHB quit:Read error: Connection reset by peer
+03:31 varna: 卧槽，实验室有个做数据的哥们开始打呼噜了
+03:31 xxxxxxxxx: http://m.guokr.com/post/554072/#viewImg 噗噗噗这东西还能这么用...
+03:31 varna: 比我这种燃烧殆尽的夜战力安稳多了啊
+03:31 varna: 卧槽
+03:32 xxxxxxxxx: 这个真的是用鸽子发给数学家去做了吧...
+03:33 varna: 贝塞尔曲线应该可以插出来的
+03:33 xxxxxxxxx: 然而它竟然知道什么是皮卡丘...
+03:34 xxxxxxxxx: http://pic4.zhimg.com/6580b85b71bd2f7d06d637cace9f180b_b.jpg orz
+03:37 varna: OTL
+03:38 xxxxxxxxx: 还能画金将军的...
+03:42 varna: 最后我的__auto_type只剩下了一句
+03:42 varna: __auto_type allocator = s1_root_alloc_get_proxy();
+03:42 varna: clang早日投诚吧，何必顽抗呢
+03:44 xxxxxxxxx: http://www.zhihu.com/question/34923118/answer/60467798
+03:45 varna: 卧槽
+03:45 varna: 百度百科又在膜蛤……
+03:46 xxxxxxxxx: 更多回答里面有个葫芦娃里头出来的图
+03:47 xxxxxxxxx: 卢瑟乐队回答的那个图orz
+03:53 xxxxxxxxx: 外行人对你熟知的领域有哪些误解？ 回答 我的领域：转基因。外行人的误解：崔永元说得对！
+03:59 varna: 泡点茶
+04:11 xxxxxxxxx: http://www.zhihu.com/question/34896609
+04:14 varna: 强行非暴力膜蛤
+04:16 varna: 周常更新了
+04:17 varna: 等速吸练好了，就可以给沼跃演习
+04:24 xxxxxxxxx: http://www.zhihu.com/question/34847966 改名叫直乎吧
+04:26 varna: 我觉得判断依据该是爆不爆而非抱不抱
+04:33 varna: 还差1.3k经验，先去打十二个出击吧
+04:33 varna: 下午的演习可以空出位置来
+04:34 varna: 我日
+04:34 varna: 一次昼战的消耗是20油3弹……
+04:37 varna: 打1-1那个孙子会一次打不死……
+04:38 varna: 算了我还是送去传统项目一下
+04:51 xxxxxxxxx: http://pic2.zhimg.com/dcbea3311e356f3a79530a5b10d5ec85_b.jpg
+04:51 xxxxxxxxx: 羊驼觉得哪个好看些?
+04:54 varna: 我的话大概会选雍正和道光
+04:55 xxxxxxxxx: 为啥?
+04:56 varna: 乾隆和嘉庆那种行书我不太会看
+04:56 varna: 所以就选通俗点的
+04:57 xxxxxxxxx: 我是问问雍正道光的哪里好 书法相关我迷糊...
+04:59 varna: 只是看着比较通俗帅气的行书……
+04:59 varna: 书法我没学过，只描过红
+05:14 cleamoon: 羊驼子又不走
+05:16 varna: 晚上跟他们把推演打完了
+05:16 varna: http://manhua.dmzj.com/junjianjianzaijidemimi/ 这系列的漫画居然更新了
+05:16 varna: 作为余兴科普还是挺好玩的
+05:16 cleamoon: 什么结果？
+05:17 varna: 美军1cv（萨拉）战没，我损失了第一攻击波的绝大部分攻击队，莫尔兹比港工事被炸毁，1030-1130回合美军放弃
+05:18 cleamoon: 噗
+05:19 varna: 红旗明天会整理下战报
+05:19 varna: https://pastebin.mozilla.org/8843643 这里是他大致的笔记
+05:19 cleamoon: 噗，姐控
+05:19 cleamoon: 我也想要哈酱做姐姐呀
+05:20 cleamoon: 为什么米菌放弃了？
+05:21 varna: 原因不明
+05:21 varna: 我花费了一半舰载攻击队的出击只是拉平了差距而已
+05:21 cleamoon: 我觉得这时米菌占优呀...
+05:21 varna: 没法说谁占优
+05:22 varna: 至少萨拉的攻击队都送下去了
+05:22 varna: 但他仍然没有劣势
+05:22 varna: 而我只能跑
+05:23 cleamoon: 我觉得那就是优势 @黄旭东
+05:23 varna: 整个第二次攻击波发进需要不到一小时时间，eta估计不会超过三小时，索敌情报如果能挺一小时的话虽说可以发进，但我会丧失CAP
+05:23 xxxxxxxxx: 索敌的时候能不能直接带上炸B去?
+05:24 varna: 索敌攻击受限
+05:24 varna: 而且一般来说索敌要求每机至少两人
+05:24 varna: 不然没法兼顾导航和索敌
+05:24 varna: 索敌攻击的规则我是从上次推演开始用的
+05:24 varna: 按照美军惯例，用2机舰爆编队
+05:25 varna: 简单地说，我往下还是要苦战
+05:26 xxxxxxxxx: 隔一段侦查机后头跟上两个炸B啥的?
+05:26 varna: 祥凤的舰侦可能要挪用当攻击队，拉包尔的一式攻也要重新整备
+05:26 varna: 那种不好办……扇面会跟不上
+05:27 varna: 索敌出去就是单程4-5h
+05:28 varna: 这么说吧，如果1130回合美军不放弃，我可能就先拖时间去了
+05:28 varna: 即使要决战，也得拉上拉包尔的攻击队
+05:29 varna: 目指击沉2cv让他投降就行，我压根不知道他有3cv...
+05:30 xxxxxxxxx: 索敌的飞机飞出去还能改变方向么?
+05:31 varna: 能
+05:31 varna: 算好续航力就行
+05:32 varna: 不过100kt的索敌编队速度，希望变化不要比计划快
+05:33 xxxxxxxxx: 续航紧张?
+05:33 varna: 一般的水侦续航力可以考虑规划5-6h的往返
+05:33 varna: 大型陆基飞机会更长时间
+05:34 varna: 舰爆方面，SBD前期型大约往返不超过5h, 九九我个人不推荐超过3.4h
+05:35 varna: 这些时间是用100kt的索敌航速计算的
+05:35 varna: 如果用巡航航速，时间会更短些；恒等的部分是航程
+05:35 varna: 恒定*
+05:36 xxxxxxxxx: 快了会漏目标么?
+05:37 varna: 100kt已经很快了（不是空战意味），高空中查看海面目标不太容易
+05:37 varna: 换算大约是1海里=1.852公里
+05:38 varna: 换言之，索敌机需要保持51.4m/s的速度飞行，同时还要注意情报和航法
+05:38 varna: 为了保持隐蔽，还需要在不太低的海拔上执行任务
+05:39 xxxxxxxxx: 我还以为海面上找船那么大漂浮物应该比较容易...
+05:39 varna: 可能你需要在几千米高空找一个一百到两百米长的黑影子……
+05:40 varna: 找一坨还好说
+05:40 cleamoon: 一两百米？
+05:40 xxxxxxxxx: 飞低些呢?
+05:40 cleamoon: 哦，你说船呀
+05:41 cleamoon: 灰机为什么不带几个声纳
+05:41 varna: 飞低了比较麻烦，更容易被发现
+05:41 varna: 有时候索敌机也会特意选择云层
+05:41 xxxxxxxxx: 真是麻烦的工作...
+05:41 varna: 美国人喜欢玩这手，比如云里突然钻出两个SBD冲着瑞凤还不是谁就去了
+05:41 varna: 大型机可以带机载雷达
+05:42 xxxxxxxxx: 飞机带声纳这是特殊侦查么?
+05:42 varna: 不过因为电子技术问题，雷达挺重，或者飞机够大从而动力搭载够多，或者你是掌握核心科技的美帝
+05:42 varna: 深海人的发动机马力比日货大很多
+05:43 varna: 所以SK4规则里也指出，在合适的年份（太平洋战争初期开始），深海航空队不会偏航……
+05:43 varna: 至于反潜机，没有现在流行的各种高档装备
+05:43 varna: 反正二战潜艇也不怎么能潜，潜下去也不怎么能跑，干脆就在航线上找上浮的潜艇
+05:44 varna: CVE的舰攻和慰安丸的反潜联络机都可以干这个
+05:44 xxxxxxxxx: 首先要能潜
+05:44 varna: 那时候的大型潜艇以伊号系列为例
+05:45 varna: 大多是水面最大战速十几节，下潜之后就剩个位数了
+05:45 varna: 氧气也不够
+05:45 xxxxxxxxx: SK4里面有潜艇么?
+05:45 varna: 执行的任务反正五花八门，运输线破坏、战斗哨戒、无线电侦听、水上机中继补给什么的
+05:45 varna: 规则里有
+05:45 cleamoon: 一个现代侦察机干翻二战cv都很正常
+05:46 varna: 以前code_new对T2的那场就用了甲标的
+05:46 varna: 还打了几个鱼雷
+05:46 xxxxxxxxx: cleamoon: 怎么干?
+05:46 xxxxxxxxx: 中了没?
+05:47 cleamoon: 一发战术核武器，然后20km高时速3马赫的玩意对二战cv来说就是怪物
+05:47 varna: 鱼雷全都没判定
+05:47 varna: T2放弃了
+05:47 varna: 已经射出去的雷迹超过一百发
+05:47 cleamoon: 如果是我一定要打到弹尽粮军
+05:47 xxxxxxxxx: 美军有放弃的传统么...
+05:47 varna: 至少一弹命中的可能达到了可以接受的程度
+05:48 varna: 但未必输
+05:48 xxxxxxxxx: cleamoon: 快去拯救美军
+05:48 varna: 旧式直航鱼雷在夜战的雷击命中其实也有够惨
+05:48 varna: 最惨的打法还是蝗军，4/180+
+05:49 varna: 看这个数目应该是按照夜战条令打了的，不过就中了四个……
+05:49 varna: 瓜岛夜战也玩脱过，天津风自信的抵近雷击太近
+05:50 cleamoon: 对于乱矿多兵营的货放弃菊部大决战很正常
+05:50 varna: 以至于鱼雷根本没有解开保险就撞敌舰上了，duangduang几声毛用没有
+05:50 xxxxxxxxx: ....
+05:50 varna: 至于北大
+05:50 xxxxxxxxx: 这也可以...
+05:50 cleamoon: 噗
+05:50 cleamoon: 什么鬼
+05:50 varna: 那两位我不确认有没有打过条令的雷击战
+05:51 varna: 反正后来都搬砖去了……
+05:52 varna: 至于游戏的北大Lv50二改，放在现在的话大概要吃图纸
+05:52 cleamoon: 我倒是很希望让兲朝全部陆军和米帝全部陆军找个沙漠来场大决战，继好看也对经济有好处
+05:53 varna: 雷巡改造是两舷各五座二十具九〇管配九三式
+05:53 varna: 但没有用过五连装
+05:53 xxxxxxxxx: 大沙漠...
+05:53 varna: 那之后把鱼雷撤掉换成大发（就是跑远征用的大发）
+05:53 varna: 后来大井被干下去了，北上继续改造搭载特攻兵器
+05:54 varna: 那个舰尾应该对应目前能装甲标的系列的乙巡（北大木曾八万钢）
+05:55 varna: 结果现在田中回过神来了，开始nerf情怀……
+05:56 varna: 所以说岚月酱不来试着拯救下美军么
+05:56 cleamoon: 不会规则呀
+05:57 cleamoon: 如果我玩航空站命令是全军出动然后布朗运动裁判会死的
+05:57 varna: http://tieba.baidu.com/p/3787271229 这里有个简易版的
+06:02 varna: 到早上我才想起来，现在手头用的这个散列表不该LRU
+06:02 cleamoon: 羊驼子竟然会好好说话
+06:02 varna: 我需要保持并发读的一致性，举例来说，线程A可能和线程B拿着同样的键对散列表进行查找
+06:03 varna: 但我仍然不想在这里上锁
+06:03 varna: 如果可能的话
+06:03 varna: 原子的事情我想扔到业务里
+06:03 varna: 所以这里直接开散列糙写一下
+06:11 varna: ok, 稍微变更了一下
+06:12 varna: 给出了用户可用的rehash接口，以及一个不自行rehash的try_insert
+06:12 varna: 不过我不觉得这是个最终解决方案
+06:12 varna: 我应该可以不rehash
+06:13 varna: 反正是驻留内存的小字典，可以多来几块儿
+06:14 cleamoon: 意大利驱逐好用吗？
+06:14 varna: 不好用
+06:15 cleamoon: 好想都喂掉
+06:22 xxxxxxxxx: 航空战绕路靠谱不?
+06:22 varna: 看计算结论了
+06:23 xxxxxxxxx: 比如索敌结束之后先起一波炸B往前飞 然后再起一波像模像样的送死队
+06:25 xxxxxxxxx: 或者说 飞机起飞了容易被对面的飞机看到不?
+06:26 varna: 可以看到，不过未必仔细
+06:26 varna: 但问题是你得算一下单舰吞吐量
+06:26 varna: 时间未必够用
+06:27 xxxxxxxxx: 很低?
+06:27 varna: 一个可用的攻击队差不多是我之前组织的72机那么多
+06:28 varna: 这已经用掉了大部分甲板
+06:28 varna: 从后甲板开始按照攻-爆-战的顺序最多征用1/3
+06:28 varna: 从后甲板开始按照攻-爆-战的顺序最多征用2/3
+06:28 varna: 之后发舰集合计算eta（超过2h）
+06:28 varna: 余下的问题是去掉这个第一攻击波，常备舰侦和CAP舰战有多少
+06:29 varna: 是不是需要第二攻击波
+06:29 varna: 如果是2cv的航空战队，恐怕拼不出第三波
+06:29 varna: 也即一次性能够支出的攻击波大约两个，发进时间相差大约不到1h
+06:30 varna: 这期间可能要考虑3h更替的CAP舰战队
+06:30 varna: 以及防空准备和多相索敌
+06:38 xxxxxxxxx: 甲板长度和能放多少飞机怎么算的?
+06:39 varna: 目前按照实际数据来估算的
+06:39 xxxxxxxxx: 还有机型区别?
+06:39 varna: 舰攻发舰估算限定后甲板起的1/3长度
+06:39 varna: 有……
+06:39 xxxxxxxxx: .....
+06:39 varna: 数据是按照实际的飞机来的
+06:40 cleamoon: 航空战有没有飞机故障率的计算？
+06:40 varna: 有
+06:40 varna: 不过简化考虑，只在发进之后计算一次drop out
+06:41 varna: 同样简化考虑，所有被判定dropped out的飞机回舰整备
+06:41 varna: 整备完可以继续用
+06:41 xxxxxxxxx: 如果绕路队是去特攻的似乎还能省一波接收的甲板
+06:42 varna: ...
+06:42 varna: 好好的飞机，不到没办法何必呢……
+06:44 varna: 更不用提鱼雷机那种特攻都尴尬的东西，只能正面来
+06:45 xxxxxxxxx: 对了对一同艘船同时能攻击的飞机数量是多少?
+06:45 varna: 目前暂定是18机/2min, 比手册的建议多9机
+06:46 varna: 不过我仍然在考虑这个参数和手册的比起来哪个好
+06:46 varna: 如果下次还有航空战的话，我想建议用9机/2min试试触接效果
+06:49 varna: 不过其实也差不了太多
+06:49 varna: 反正都是宇宙真理的二项分布……
+06:50 xxxxxxxxx: 18机能干死一条船么?
+06:51 varna: 如果是鱼雷机的话基本上大局已定
+06:51 varna: 美国货前期型另论
+06:51 varna: 舰爆的话对战舰没辙，航母说不定可以造成相当的损伤
+06:51 varna: 日货两说
+06:52 xxxxxxxxx: 那大量带鱼类直接不要命的扔不就好了
+06:53 varna: 然而你得有制空
+06:53 varna: 举例来说，翔鹤级的甲板长度大约240m+
+06:53 varna: 舰攻发舰区域限定后甲板开始80m, 如果用97舰攻的话大约排8*2
+06:54 varna: 一个不错的航空战队能提供32机鱼雷机
+06:54 varna: 然后看零战直掩的情况了
+06:54 varna: 如果能拿下制空，那基本上安定
+06:54 varna: 拿不下的场合，敌方CAP可以有更多概率直接攻击舰攻队
+06:54 varna: 然后就稀里哗啦
+06:56 xxxxxxxxx: 我就是想让对手的第一波吃第二波的舰战 这时候趁乱鱼雷炸 这样的意思
+06:57 varna: 时间差距
+06:57 varna: 2cv没法提供流水的两个攻击波
+06:57 varna: 如果中间有喘息机会，那么对方也就整备回来了
+06:57 varna: 半小时足够
+06:59 xxxxxxxxx: 反正第一波不主张他们回来 只要让他们在附近天上飞 第二波当诱饵主要制空
+07:00 xxxxxxxxx: 两边战斗机开打 鱼雷就去偷
+07:00 varna: 续航呢
+07:00 varna: 如果你让一大堆苍蝇保持追尾，而这些苍蝇只有六回合的空战时间
+07:01 varna: 或者这些苍蝇连制空都拿不到……
+07:01 varna: 两小时之后估计底下都闪闪发光了
+07:02 varna: 另外追尾中的索敌机，每机的击坠率是65%
+07:02 xxxxxxxxx: 就是一开局就去搏命的 闪闪发光不论哪没啥意外...
+07:02 varna: 怎么搏
+07:03 varna: 不制空被敌人流水吊打么……
+07:03 varna: 半个小时之后第二波到了，敌人整备也结束了，接着来么……
+07:03 varna: 恐怕半个小时还是乐观的
+07:04 xxxxxxxxx: 就看去偷的能不能比较稳的拿下对方船
+07:04 varna: 问题是你去偷的一队到底怎么编成
+07:05 varna: 如果对方是美军，拦截空战至少提前7回合
+07:05 xxxxxxxxx: 那基本就没啥可偷了
+07:05 varna: 日军后期也一样
+07:05 varna: 拦截判定的要素基本上考虑雷达和CAP的情况
+07:06 varna: 都有的话拦截就能提前很多
+07:07 xxxxxxxxx: 我太清楚一波去送命的飞机能顶着敌人预警取得多大成果
+07:07 xxxxxxxxx: 不太
+07:08 varna: 这么说吧
+07:08 varna: 我在丧失制空的情况下，被打满了六轮空战
+07:08 varna: 32个舰攻只有9个到地方了
+07:09 varna: 单发投弹命中率0.15
+07:09 varna: 不过这是被对空炮火拦截之后的事了……
+07:09 varna: 更惨的是以前code_new, 无制空全灭
+07:09 varna: 根本没能到达投弹位置
+07:09 varna: 虽说他出动的也少了点
+07:15 molikto joined channel
+07:15 molikto quit:Remote host closed the connection
+07:16 varna: 不过我感觉似乎这频道里让雷击队去送命的大混蛋主义者不止我一个啊
+07:19 varna: EA基佬下次不来一盘么？
+07:19 xxxxxxxxx: 我觉得我得被吊打
+07:20 varna: 不至于
+07:20 varna: 不少算术问题可以先有模糊提案，然后跟裁判商量
+07:22 xxxxxxxxx: 我预计的情况是这样的 索敌结束 两人都发现了对面的大体位置 假想对手会起飞大量战斗机抢制空 而后起飞攻击队 由此己方先起飞攻击队 后起飞战斗机 在两方开往对方方向途中战斗机相遇之后 己方攻击队去袭击对面船只
+07:23 varna: 途中恐怕不太会直接开打
+07:23 xxxxxxxxx: 和平走过么...
+07:23 varna: 其一是路过，其二是不知道过去之后还有多少空战
+07:24 varna: 母舰上方的制空权才是真正重要的
+07:24 varna: 而且一般来说，攻击波里面会包含一些未必能确保制空但能争夺一段时间的舰战
+07:24 varna: 具体多少就看算法了
+07:25 xxxxxxxxx: 我预计是对面看到自己空战赢了 然后开始起飞攻击队 这时候第一波对手不算时间根本不知道有这样的东西 还在继续往前飞
+07:25 varna: 那样太被动了
+07:26 varna: 拿到一个敌方索敌机被击落的消息之后，至少预留1h的敌方已飞行时间
+07:26 varna: 那时候即使进行空战，也没法预计结果
+07:27 varna: 舰载机的配比毕竟也要考虑，除非你只赌一个攻击波，不成功就投降
+07:27 varna: 所以即使两方的索敌结果差不多时候出来，也可以考虑两个因素
+07:27 varna: 第一是纯粹的航程优势
+07:27 varna: 第二是速读优势
+07:28 varna: 速度的方面，可能在道中相差出不到1h的时间
+07:28 cleamoon: 如果你搞定了脚本什么的，我和基王应该可以撸一次炮击战
+07:28 hope1_ quit:Ping timeout: 255 seconds
+07:28 hope1_ joined channel
+07:29 varna: 如果你像舰C一样夺取母舰上方的制空权，那攻击能力就很贫弱了
+07:29 varna: 然而大舰巨炮在动辄数百海里的航空战里除了偶尔防空（日货不论）之外没什么用
+07:31 varna: 至于算时间的方面，我自己的考虑都是按2-3h先预估一波
+07:31 varna: 只要第一攻击波能够上天，至少不会来个命运的X分钟
+07:32 cleamoon: 舰攻到底是干什么用的？
+07:33 varna: 舰攻一般是大飞机，三座（驾驶+导航/射法+机枪手/通信兵）
+07:33 varna: 没能力俯冲（流星没能实现）
+07:33 varna: 引擎的动力比较好，可以带重一些的武器（鱼雷或者重型炸弹）
+07:33 xxxxxxxxx: 我觉得我这个预计挺疯狂的...
+07:34 xxxxxxxxx: 正常人肯定不这么来
+07:34 varna: 如果不挂载的话，可以获得不错的航程，所以也可以用来索敌
+07:34 varna: 不过二战时期的舰载机，我所知的范围内绝大部分是单发动机的
+07:35 Boosure|2 joined channel
+07:35 varna: 设计用于舰上作战的更是绝大部分单发
+07:41 molikto joined channel
+07:41 varna: http://tieba.baidu.com/home/main?un=%E6%97%A5%E7%9C%9F%E5%A7%AC%E5%BE%97%E6%A2%85%E6%AF%92&ie=utf-8&fr=pb 多大仇……
+07:43 xxxxxxxxx: 这位关注了黑丝吧 cos吧
+07:45 varna: 主要这名字简明扼要
+07:45 varna: 一共七个字的空间用掉六个字
+07:45 varna: 还引发了我深深的沉思
+07:45 varna: 为何不是淋病呢
+07:47 hoxily joined channel
+07:47 cleamoon: 噗
+07:47 cleamoon: 似乎是因为淋病能治？
+07:47 varna: 梅毒也能
+07:48 xxxxxxxxx: 我只知道小广告上啥都能治
+07:48 xxxxxxxxx: 并不知道哪个到底能被治好...
+07:49 varna: 我印象这两个都有治愈可能
+07:51 varna: http://tieba.baidu.com/p/3955966640 R18 R18 R18
+07:52 varna: 百度真是什么奇葩都有……
+07:52 cleamoon: 小广告不是主要治不孕不育吗
+07:52 varna: 尖锐湿疣 淋病梅毒 一针见效 # 我小时候经常见电线杆上有
+07:54 cleamoon: 尖锐湿疣到底是什么鬼
+07:54 varna: 这是个可以查的病名……
+07:54 varna: 噗，还有个基佬
+07:54 cleamoon: .......
+07:55 varna: http://tieba.baidu.com/p/3982596702
+07:56 cleamoon: 不过是个梅毒，就都不敢啪啪啪了
+07:56 tutu_wind: morning ~
+07:57 varna: http://tieba.baidu.com/p/236293697 然后这位是梅毒吧最后一页的最后一帖
+07:57 xxxxxxxxx: 幼女说的话被别人看到不得吓死...
+07:58 tutu_wind: 打早上的 ~ 谈论这个多不好 ~
+07:58 tutu_wind: 大
+08:01 cleamoon: 咱们来肛秃兔吧
+08:01 tutu_wind: 冷静 ...
+08:04 varna: 又做掉了一个函数
+08:04 varna: 差不多可以准备回去睡觉了
+08:06 varna: 撤退，诸君武运
+08:07 varna quit:Quit: leaving
+08:07 cleamoon: 日理万鸡的羊驼子
+08:09 tutu_wind: 羊陀通宵了 ?
+08:10 cleamoon: +
+08:10 xxxxxxxxx: cleamoon: 特斯拉涡轮机这东西有什么实用的栗子么？
+08:15 cleamoon: 这是什么...
+08:16 xxxxxxxxx: 一个谜的不行的东西....
+08:18 cleamoon: 看wiki似乎有不少
+08:24 hope1_ quit:Ping timeout: 260 seconds
+08:24 hope1_ joined channel
+08:28 hope1_ quit:Ping timeout: 246 seconds
+08:32 xxxxxxxxx quit:Quit: Leaving...
+08:36 tutu_wind quit:Ping timeout: 240 seconds
+08:39 hope1 joined channel
+08:46 krfantasy joined channel
+08:49 tutu_wind joined channel
+08:55 sismvg joined channel
+09:04 sismvg: 被动语态分成【攻】和【受】两方,【受】放有2个洞，分别是be动词和have,偶尔有些变态还会用别的地方. 【攻】放有一把武器只有be动词
+09:05 Youmu` joined channel
+09:06 sismvg: 不知如此理解是否正确
+09:08 lh_mouse joined channel
+09:10 tutu_wind: 这个 理解 ...
+09:12 sismvg: 只是攻受的体位不知道如何理解。
+09:19 hoxily quit:Read error: Connection timed out
+09:19 hoxily joined channel
+09:37 hope1 quit:Ping timeout: 240 seconds
+09:37 whatofor joined channel
+09:42 hope1 joined channel
+09:42 FrankHB joined channel
+09:44 blackskygg joined channel
+09:52 blackskygg quit:Read error: Connection reset by peer
+09:55 molikto quit:Remote host closed the connection
+10:16 Stevearzh joined channel
+10:16 Stevearzh quit:Changing host
+10:16 Stevearzh joined channel
+10:21 molikto joined channel
+10:26 molikto quit:Ping timeout: 240 seconds
+11:00 molikto joined channel
+11:01 hoxily_ joined channel
+11:03 zhangxaochen_ joined channel
+11:03 zhangxaochen quit:Read error: Connection reset by peer
+11:04 hoxily quit:Ping timeout: 260 seconds
+11:05 molikto quit:Ping timeout: 244 seconds
+11:32 hope1 quit:Ping timeout: 240 seconds
+11:52 molikto joined channel
+12:02 molikto quit:Ping timeout: 250 seconds
+12:13 Youmu`` joined channel
+12:14 molikto joined channel
+12:25 yzld2002 joined channel
+12:45 tutu_wind: 吃饭喽~
+12:55 hope1_ joined channel
+12:57 yzld2002 quit:Remote host closed the connection
+13:04 hope1 joined channel
+13:06 Mokou joined channel
+13:12 hope1_ quit:Read error: Connection reset by peer
+13:15 hope1_ joined channel
+13:16 hope1 quit:Ping timeout: 246 seconds
+13:17 xxxxxxxx joined channel
+13:18 molikto quit:Remote host closed the connection
+13:23 hope1 joined channel
+13:34 sismvg: HentaiVerse意外的好玩
+13:53 xeirrr joined channel
+13:56 molikto joined channel
+13:59 molikto_ joined channel
+14:00 molikto quit:Read error: Connection reset by peer
+14:02 hope1 quit:Ping timeout: 245 seconds
+14:02 hope1 joined channel
+14:18 molikto_ quit:Remote host closed the connection
+14:20 molikto joined channel
+14:21 hope1 quit:Ping timeout: 244 seconds
+14:22 sismvg: 【次世代
+14:23 sismvg: 【次】时代游戏，看到最近的手游，页游，随便搞个剧本就能出的FPS，果然很次
+14:24 xxxxxxxx: 然而你觉着啥游戏不次?
+14:56 xeirrr left channel:"Leaving"
+15:00 tutu_wind: xxxxxxxx: 真实女友
+15:14 xxxxxxxx quit:Quit: Leaving...
+15:34 hoxily quit:Quit: Leaving
+15:37 sou_ joined channel
+15:38 lh_mouse: sou_, 爆照
+15:38 sou_: irc也能暴照？
+15:38 sou_: 玩我呢吧？
+15:39 lh_mouse: sou_, /cs taxonomy #c_lang_cn 
+15:39 sou_: ??
+15:40 lh_mouse: sou_, 给你贴图片的网址
+15:40 lh_mouse: 你要爆照？
+15:41 sou_: lh_mouse: 不要
+15:41 sou_: 这里没大有人气啊
+15:41 lh_mouse: 你爆照就有人气了
+15:55 hope1_ quit:Ping timeout: 250 seconds
+15:55 hope1_ joined channel
+16:10 tutu_wind: sou_: 爆
+16:29 molikto quit:Remote host closed the connection
+16:30 molikto joined channel
+16:50 iyzsong quit:Quit: SYSTEM DESTROYED
+16:50 condy quit:Remote host closed the connection
+16:53 hope1_ quit:Remote host closed the connection
+16:54 hope1_ joined channel
+17:02 hope1_ quit:Ping timeout: 244 seconds
+17:03 hope1_ joined channel
+17:04 erhandsome: tutu_wind: 你果然是个基佬
+17:05 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 39.0.3/20150806001005]
+17:18 yzld2002 joined channel
+17:29 tutu_wind: erhandsome: ... ... ... ... orz
+17:29 hope1_ quit:Read error: Connection reset by peer
+17:29 hope1_ joined channel
+17:41 FrankHB quit:Ping timeout: 244 seconds
+18:10 hope1_ quit:Read error: Connection reset by peer
+18:11 sou_ quit:Remote host closed the connection
+18:15 molikto quit:Remote host closed the connection
+18:19 molikto joined channel
+18:19 molikto quit:Remote host closed the connection
+18:37 FrankHB joined channel
+18:38 molikto joined channel
+18:41 cowlog joined channel
+18:41 cowlog left channel:"WeeChat 1.3"
+18:44 boosure quit:Quit: Get your hand off of it
+18:51 molikto_ joined channel
+18:54 molikto quit:Ping timeout: 244 seconds
+18:57 hope1 joined channel
+19:12 molikto_ quit:Remote host closed the connection
+19:19 molikto joined channel
+19:24 yzld2002 quit:Remote host closed the connection
+19:25 yzld2002 joined channel
+19:29 hope1_ joined channel
+19:31 Stevearzh quit:Ping timeout: 272 seconds
+19:31 hope1 quit:Ping timeout: 246 seconds
+19:35 Youmu` joined channel
+19:38 FrankHB quit:Read error: Connection reset by peer
+19:41 FrankHB joined channel
+19:49 xxxxxxxx joined channel
+19:53 hope1_ quit:Ping timeout: 244 seconds
+19:54 mntcdrom joined channel
+19:54 mntcdrom: 有人在吗
+20:03 mntcdrom: exit
+20:04 mntcdrom quit:Quit: leaving
+20:04 mntcdrom joined channel
+20:06 zhangxaochen_ quit:Quit: Leaving
+20:09 tutu_wind: mntcdrom: 肿么了?
+20:39 molikto quit:Remote host closed the connection
+20:42 molikto joined channel
+20:53 mntcdrom quit:Ping timeout: 264 seconds
+20:54 mntcdrom joined channel
+20:55 molikto quit:Remote host closed the connection
+21:05 maucat_ joined channel
+21:06 maucat_: 很好
+21:10 lh_mouse: maucat_, 爆照
+21:11 maucat_: lh_mouse, 要不要这么直接
+21:11 benzene joined channel
+21:11 benzene quit:Remote host closed the connection
+21:12 maucat_: 中国的irc竟然还有人。
+21:12 xxxxxxxx: 然而这句话看着好别扭
+21:12 maucat_: 我是看后缀是cn然后进来的。
+21:13 maucat_: 然后见到活人了，竟然让我有点小激动
+21:13 benzene joined channel
+21:15 lh_mouse: benzene, 爆照
+21:15 lh_mouse: maucat_, 爆照
+21:15 lh_mouse: 新人必须爆炸
+21:16 lh_mouse: s,爆炸,爆照,
+21:16 xxxxxxxx: 21:12:42 lh_mouse>新人必须爆炸
+21:16 * lh_mouse slaps xxxxxxxx around a bit with a large trout
+21:17 lh_mouse: IP地址: 180.129.185.177云南省玉溪市 联通
+21:17 hope1 joined channel
+21:17 xxxxxxxx: 诊疗床突然坍塌女子摔伤告医院 院方：你自己太胖
+21:17 JQK: benzene 是我用來測試 IRC 客戶端的
+21:17 lh_mouse: IP地址: 140.75.70.17山东省济南市 电信
+21:17 maucat_: 玉溪市。
+21:17 lh_mouse: JQK, 咦  你会说话呀
+21:18 lh_mouse: 我说怎么 ctcp 没反应
+21:18 whatofor quit:Read error: Connection reset by peer
+21:18 benzene quit:Remote host closed the connection
+21:18 code_new joined channel
+21:18 whatofor joined channel
+21:19 maucat_: 越狱第2季 第10集 Prison Break S02E10
+21:19 tutu_wind: maucat_: 爆照 ~
+21:20 maucat_: 我喜欢t-bag，所以不要爆了吧～
+21:20 lh_mouse: 新人爆照乃传统
+21:20 tutu_wind: +
+21:21 xxxxxxxx: 相亲么...
+21:24 molikto joined channel
+21:25 wlemuel joined channel
+21:25 lh_mouse: 百度司马
+21:27 hope1 quit:Ping timeout: 272 seconds
+21:37 wlemuel quit:Ping timeout: 250 seconds
+21:37 wlemuel joined channel
+21:40 benzene joined channel
+21:40 maucat_ quit:Quit: Ex-Chat
+21:41 benzene quit:Remote host closed the connection
+21:43 benzene joined channel
+21:45 benzene quit:Remote host closed the connection
+21:45 tutu_wind: xxxxxxxx: benzini 日语啥意思来着
+21:46 xxxxxxxx: 我不太懂... 问口支靠谱些...
+21:46 xxxxxxxx: @lh_mouse 
+21:46 code_new: 没关系？
+21:47 tutu_wind: 不知啊
+21:54 xxxxxxxx: 包括霍金在内的1000多名科学家、企业家等联名公开信，呼吁在世界范围内禁止研发、生产“杀手机器人”
+21:55 xxxxxxxx: 又是霍金...
+21:57 code_new quit:Quit: Leaving
+22:07 cafebeef quit:Ping timeout: 240 seconds
+22:07 beefcafe quit:Ping timeout: 240 seconds
+22:14 code_new joined channel
+22:15 molikto quit:Remote host closed the connection
+22:18 molikto joined channel
+22:22 hope1 joined channel
+22:24 cafebeef joined channel
+22:24 beefcafe joined channel
+22:26 hope1_ joined channel
+22:27 hope1_: 第四十三条 ……；对来源于中华人民共和国境外的上述信息，应当通知有关机构采取技术措施和其他必要措施阻断信息传播。
+22:27 hope1_: 原来是这样的
+22:27 hope1 quit:Ping timeout: 252 seconds
+22:31 xxxxxxxx: 货车高速倾翻 20吨苹果遭河南村民哄抢只剩2吨
+22:32 hope1 joined channel
+22:34 hope1_ quit:Ping timeout: 252 seconds
+22:40 cafebeef quit:Ping timeout: 240 seconds
+22:41 libhanjian joined channel
+22:41 cafebeef joined channel
+22:42 libhanjian quit:Remote host closed the connection
+22:42 libhanjian joined channel
+22:42 libhanjian quit:Client Quit
+22:43 libhanjian joined channel
+22:44 libhanjian: 好不爽，总感觉有shit拉不出来
+22:48 lh_mouse: tutu_wind, 问谷狗翻译
+22:51 hope1: 我刷着手机蹲一个小时马桶之后也是这感受
+22:52 xxxxxxxx: 你确定不是屎干在屁股上的感觉...
+22:52 libhanjian: xxxxxxxx, 不是
+22:52 libhanjian: hope1, 蹲了五分钟（海棠竟然有蹲了一个小小时玩手机的经历！
+22:53 xxxxxxxx: 来加些润滑油
+22:53 libhanjian: 一米八的海棠蹲了一个小时厕所就为玩手机！
+22:54 lh_mouse: 你们够了没
+22:54 lh_mouse: 人家吃东西呢
+22:54 lh_mouse: 一翻回来看到这东西
+22:54 libhanjian: 22：49……
+22:54 lh_mouse: 操你妈的
+22:54 xxxxxxxx: 然而你吃东西太晚了...
+22:57 hope1_ joined channel
+22:58 hope1 quit:Ping timeout: 264 seconds
+22:58 hope1_: 然而就断线了
+22:59 hope1_: 所以这跟身高有什么关系！
+22:59 code_new: HO棠一米八 0 0
+22:59 xxxxxxxx: code_new: 重点是一小时
+23:00 Mokou: 我上次量的时候是一米八二
+23:01 code_new: 红旗一米八二QAQ
+23:01 libhanjian: 估计现在都不止了
+23:05 code_new: 一小时站起来是什么感觉……
+23:05 code_new: 如果是坐便器还好=。=
+23:05 code_new: 我曾经在坐便器睡过两小时
+23:05 Mokou: 眼前会黑的
+23:08 hope1 joined channel
+23:08 hope1: 当然是坐便器……
+23:09 hope1_ quit:Ping timeout: 246 seconds
+23:09 Mokou: 我蹲过一小时……
+23:10 hope1: 旧式的蹲？
+23:10 Mokou: +
+23:19 hope1: 无法想像
+23:19 xxxxxxxx: 一半公厕之类的地方不都是蹲的么?
+23:19 libhanjian: 我都睡着过
+23:19 xxxxxxxx: 一般
+23:20 libhanjian: 熬夜打游戏太晚，蹲着睡着了，起来的时候，根本动不了
+23:20 xxxxxxxx: 我只在洗澡的时候睡着过...
+23:21 libhanjian: 洗澡的时候我也睡着过……
+23:21 xxxxxxxx: http://oversea.huanqiu.com/article/2015-07/6857869.html 这个地板洗得好
+23:23 libhanjian: 环球就是擅长叼盘子的Dog，再脏的锅也能洗
+23:23 Mokou: “这是岸信介先生。”她继续着她的讲解，话题随之转向岸信介首相(日本前首相、安倍晋三的外祖父)、安倍晋太郎前外相(安倍晋三的父亲)和安倍的话题上来
+23:23 Mokou: 怎么不顺便提一下岸信介先生的另一个身份呢……
+23:24 lh_mouse: 乘客要空姐为其脱裤被拘5天 网友称处罚太轻
+23:24 libhanjian: 。
+23:28 cleamoon quit:Ping timeout: 272 seconds
+23:29 cleamoon joined channel
+23:36 lh_mouse: Mokou, 你脱裤
+23:37 yzld2002 quit:Remote host closed the connection
+23:53 xxxxxxxx: 中俄同江大桥我方完成60% 俄方仍无动工迹象 66666
+23:53 hope1 quit:Ping timeout: 252 seconds
+23:56 xxxxxxxx: 安倍晋太郎那个眼镜看着好眼熟...

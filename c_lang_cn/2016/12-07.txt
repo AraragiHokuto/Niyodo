@@ -1,0 +1,427 @@
+00:02 Mokou: 羊驼子冒出来了
+00:03 varna: 珐琅颜料没有合适的了，弄了点便宜的国产渗线液
+00:03 Mokou: 噫吁嚱
+00:04 varna: 之前试着用水性颜料干扫，效果很惨
+00:04 varna: 手头还没棉签，于是用手蘸了稀释剂上去擦，效果好
+00:04 Mokou: 我看完你叫啥以后内心毫无波动
+00:05 Mokou: 并没觉出有泪点……
+00:05 varna: 新海诚嘛
+00:05 Mokou: 不过三叶的奶子很真实，为了这个我打算找时间二刷
+00:06 varna: 啊，我决定表现出高度的不兼容性
+00:06 varna: EPOLLEXCLUSIVE!
+00:06 Mokou: 这啥做法
+00:06 varna: LK 4.5+, epoll惊群避免
+00:07 Mokou: ……
+00:07 varna: 咦
+00:07 Mokou: 为啥会需要这种玩意
+00:07 varna: 这个东西很坑爹
+00:08 varna: 其实用不到
+00:08 varna: 不对，压根就不该用
+00:08 Mokou: 为什么一个fd会被塞进好几个epoll里
+00:08 varna: 我觉得这种情况基本是那个accept fd被塞进了几条疯狗里，为了飙L-F并行度
+00:09 Mokou: ……
+00:09 Mokou: REUSEPORT，请
+00:10 varna: 比如说N核/1.2HT加速比，L-F线程池处理请求，这时候我会考虑2N-4N基本线程数把load压满
+00:10 varna: 但这时候如果Leader只有一个，它就是瓶颈
+00:10 varna: 如果还要榨网卡的话，多leader是可能的
+00:10 varna: 然后就惊群了
+00:11 Mokou: REUSEPORT呢
+00:11 Mokou: 还是你的leader数已经多到要节省FD的程度了
+00:11 varna: REUSEPORT我记得是进程级别的？
+00:11 Mokou: 线程也可以啊？
+00:11 Mokou: 我现在就是REUSEPORT每个carrier来一个
+00:12 varna: 这样啊……
+00:12 varna: 不过可能的话，我希望把这个细节埋在epoll里
+00:12 Mokou: 我觉得蛋疼
+00:12 Mokou: 反正效果都是内核负载均衡，不如直接分开处理FD
+00:13 Mokou: 到时候我要是想移植到FreeBSD上也方便
+00:13 varna: 不过这里有个细节
+00:13 varna: REUSEPORT保证内核SLB, 但EPOLLEXCLUSIVE没保证
+00:13 varna: 请求爆炸的时候容易不均衡，一旦压崩了就会崩
+00:13 Mokou: +
+00:15 cleamooon quit:Quit: Connection closed for inactivity
+00:16 varna: 估计明天树脂就能到，然后我开始丧失的翻模
+00:17 varna: (｡･ω･)升127炮不确保
+00:17 Mokou: (｡･ω･)第一架改修水侦目前+7，没失败过
+00:18 sleepwalking: 现在你们用什么网站贴图，国内能访问到？
+00:18 varna: sleepwalking: 爆
+00:18 varna: picpaste
+00:18 sleepwalking: ok
+00:18 varna: sleepwalking: 爆
+00:19 sleepwalking: varna: http://picpaste.com/Screenshot_from_2016-12-06_10-16-44-SbNBuM9G.png
+00:19 sleepwalking: 你觉得这个蓝色的像是什么分布
+00:19 varna: connecting, 稍等
+00:21 varna: 看着像个正态啊
+00:21 varna: 不对
+00:22 varna: 说不清楚……正态应该不是这么凹的
+00:23 sleepwalking: varna: http://picpaste.com/Screenshot_from_2016-12-06_10-22-03-gxyUFbkV.png Zoom out
+00:23 Mokou: http://wx1.sinaimg.cn/mw690/538efefbly1faganje1pjj20hs4me4qp0.jpg 叫你们用什么GC
+00:24 varna: 这种凹下去的曲线还真不知道……
+00:24 sleepwalking: The blue log pdf is the compound of a generalized extreme value dist. and a normal dist.
+00:24 sleepwalking: which probably don't have closed form...
+00:25 sleepwalking: those super twisted distributions..
+00:25 sleepwalking: 总之我就想办法找个类似的分布来逼近
+00:25 varna: C酱用goto语句飞起来了！C酱的流水线排空了！C酱嗝出一个大气泡，慢下来了！
+00:25 varna: ...
+00:26 varna: btw 其实真的不用FGC
+00:26 varna: YGC就能爆掉性能……
+00:26 Mokou: 2333333
+00:26 varna: 个人经验
+00:26 Mokou: 来两个java酱一起同步
+00:26 Mokou: 再来两个C酱
+00:26 varna: FGC周期控制在3d以上，保证每次能收掉就可以
+00:26 Mokou: 我们先CAS-yield一波
+00:26 varna: 不过这很困难，因为鬼知道依赖会不会写程序
+00:27 sleepwalking: C酱有点像Ghost in the shell的Major啊
+00:27 varna: 只是脸有点素子吧
+00:27 varna: 现在的药娘居然看攻壳机动队！？
+00:27 sleepwalking: 侧脸很像阿
+00:28 varna: 标准苛烈本气脸（
+00:29 sleepwalking: 说起来Major的中文是什么。。
+00:29 varna: 少校
+00:29 sleepwalking: 啊……
+00:30 varna: 日文写法是少佐
+00:30 sleepwalking: 难怪……shousa
+00:30 varna: Mokou: 另外其实不是两个Java酱一起同步，是两百个
+00:31 Mokou: 23333333
+00:31 varna: 去掉daemon或许只有三五十个
+00:31 sleepwalking: /weaboo mode
+00:31 Mokou: 跑道被Java酱占满了！其他语言都被挤出去了！（绝望）
+00:31 varna: 毕竟Java的new是不抛bad alloc的
+00:32 Mokou: 那满了怎么办
+00:32 varna: FGC之后申请失败直接OOM, 自绝于人民
+00:32 Mokou: ……
+00:32 varna: 炸死了
+00:32 Mokou: 能用？
+00:32 varna: 我觉得不太能
+00:32 Mokou: 怎么会有人拿这种语言写服务器的
+00:32 Mokou: OOM就去死的话我为什么不用rust
+00:32 varna: vala（笑）
+00:33 Mokou: Gnome
+00:33 varna: GObject is not designed to run fast // 我记得stackoverflow上一个vala用户这么锁
+00:33 varna: 说*
+00:33 varna: h键也不行了……
+00:34 Mokou: 你读过书么？读过书，……我便考你一考。Gnome的爆炸，怎样炸的？
+00:34 varna: gmalloc()有四种炸法
+00:34 varna: (｡･ω･)ﾉ来份八八套！
+00:35 sleepwalking: 2个小时后 机器学习课期末考试
+00:35 Mokou: 所以为什么这么多语言都喜欢OOM就炸妈
+00:35 sleepwalking: 请大家明早为我RIP
+00:36 varna: sleepwalking: 爆
+00:36 Mokou: ^ HOMO特有的祝福
+00:36 varna: 我觉得因为这些语言的用户不希望进行内存管理
+00:36 Mokou: 所以要最终用户掏钱买内存么
+00:37 varna: bad alloc导致对象创建失败如果要在Java中检出，我想所有还活着的Java代码都必须升级到JDK8，然后全对象Optional化
+00:37 Mokou: ……
+00:37 varna: 接下来就是异常和返回值的交替乱舞
+00:37 Mokou: 但是懒得管的话，直接让bad_alloc扔出来不接不是一样的么
+00:38 varna: 不，Java用户已经够傻了，你再让他们检查bad_alloc, 程序会没法读的
+00:38 Mokou: 噫吁嚱
+00:38 Mokou: 不过java本来也没法管理内存就是了
+00:38 Mokou: 我都没法删掉对象，怎么管理内存
+00:38 varna: try { if / Optional } catch () { } finally
+00:38 varna: 这能看么……
+00:38 Mokou: ……
+00:39 Mokou: 叫你们不用RAII
+00:39 varna: 昨天我还看到一个核心应用代码，if { if if if }
+00:39 varna: MDZZ
+00:39 Mokou: 66666666
+00:40 varna: 当然更核心的里面有if if if if for { if if continue if if for {} }
+00:40 Mokou: ……
+00:40 Mokou: 你们不会多写几个方法么
+00:41 varna: 已经没人敢改那些代码了
+00:41 sleepwalking: 但是Java代码和Dan Roth的ppt相比，我觉得还是后者更难看
+00:41 varna: Java代码彰显了人性的丑恶
+00:41 varna: 懒，馋，党同伐异
+00:42 varna: 或者换个说法
+00:42 varna: 一叶障目+党同伐异
+00:42 Mokou: 另外java党是不是觉得把代码拆成单独的方法也会有重大性能损失的？
+00:43 varna: 这倒不是
+00:43 varna: 然而你指望一个三哥赶火车不考虑买挂票，不太可能
+00:44 varna: 成长环境问题
+00:44 Mokou: 2333333
+00:44 Mokou: 所以说他们一叶障目么
+00:47 varna: 冲点麦片吃
+00:56 Mokou: http://www.acfun.tv/v/ac3302660 修罗场
+00:57 varna: 你为什么这么熟练啊？你究竟进出了多少回基斯卡岛啊！
+01:00 varna: 突然想到一个坑点：配好比例的廉价渗线液不能干扫……
+01:00 Mokou: ……
+01:00 varna: 算了祈祷下等我做差不多的时候，大批买东西的店里颜料到着
+01:01 varna: 先只练习画墨线
+01:01 varna: 尽管是个长谷川的板件但好歹也是雪风，草草做完会遭报应的
+01:03 varna: 而且如果这些廉价货把喷罐漆面溶掉，就没救了
+01:03 varna: 简直在赌命
+01:04 Mokou: 噫吁嚱
+01:04 Stevearzh quit:Remote host closed the connection
+01:05 varna: 但九块钱一瓶的渗线液我感觉……价格挺好的……
+01:08 varna: 只要再去杂货店搞一盒棉签就可以试着画出很不错的效果
+01:20 lh_mouse: [00:37:07] <Mokou> 但是懒得管的话，直接让bad_alloc扔出来不接不是一样的么  // 不一样。
+01:20 lh_mouse: 你不可能不用 try ... catch ... finally 写出 C艹一样 exception neutral 的代码。
+01:21 Mokou: 然而已经炸妈了
+01:21 lh_mouse: Java 并不滋瓷用户定义的 commit or rollback 语义的对象——你可以显式 catch 但是你不能构造这样一个 transaction 对象。
+01:22 lh_mouse: 所以他们会想出 synchronized 这种东西。
+01:22 varna: 自带管程，最后反悔了
+01:22 lh_mouse: 自带管程要滋瓷从半路子退出。
+01:22 lh_mouse: 这点上天生残废的 C艹一样做不出来。，
+01:22 lh_mouse: 狗咬狗。
+01:23 lh_mouse: 睡觉。
+01:24 varna: 唉唉，看来干扫的做法没学错，就是颜料成分不合适
+01:24 varna: 睡觉，武运
+01:24 varna quit:Quit: leaving
+01:27 lh_mouse quit:Ping timeout: 245 seconds
+02:01 Mokou quit:Remote host closed the connection
+02:21 sleepwalking quit:Ping timeout: 244 seconds
+04:00 cleamooon joined channel
+04:20 sleepwalking joined channel
+04:55 whocares_2 quit:Remote host closed the connection
+05:35 whocares_2 joined channel
+05:36 sleepwalking quit:Quit: WeeChat 1.5
+06:35 cleamooon quit:Quit: Connection closed for inactivity
+08:09 Sasasu joined channel
+08:19 FrankHB quit:Ping timeout: 268 seconds
+08:51 FrankHB joined channel
+09:00 iyzsong-xx joined channel
+09:04 yimis joined channel
+09:06 yimis quit:Client Quit
+09:08 yimis joined channel
+09:15 mork joined channel
+09:18 yimis quit:Quit: yimis
+10:03 iyzsong-xxx joined channel
+10:07 iyzsong-xx quit:Ping timeout: 265 seconds
+10:15 lh_mouse joined channel
+10:37 mork quit:Ping timeout: 256 seconds
+10:39 mork joined channel
+11:11 yimis joined channel
+11:13 enerievolkcolreh joined channel
+11:21 yimis quit:Quit: yimis
+11:47 Sasasu quit:Quit: WeeChat 1.0.1
+12:28 Sasasu joined channel
+12:30 iyzsong-xxx: = =
+13:40 iyzsong-xxx quit:Read error: Connection reset by peer
+13:41 iyzsong-xx joined channel
+13:57 yimis joined channel
+13:58 yimis quit:Client Quit
+14:27 mork quit:Ping timeout: 268 seconds
+14:29 mork joined channel
+14:36 yimis joined channel
+15:18 cleamooon joined channel
+16:03 Meow-J quit:Ping timeout: 244 seconds
+16:19 dantmnf quit:Ping timeout: 250 seconds
+16:22 dantmnf joined channel
+16:50 iyzsong-xx: 0 0
+16:59 Mokou joined channel
+17:46 yimis quit:Quit: yimis
+18:02 iyzsong-xx quit:Read error: Connection reset by peer
+18:22 FrankHB quit:Ping timeout: 258 seconds
+18:25 Taggnostr quit:Remote host closed the connection
+18:40 lh_mouse: geordi, { istringstream iss("123"); iss.exceptions(ios_base::goodbit); int a; iss >>a; }
+18:40 geordi: <no output>
+18:45 cleamooon quit:Quit: Connection closed for inactivity
+18:47 FrankHB joined channel
+18:50 cleamooon joined channel
+18:56 yimis joined channel
+19:02 yimis quit:Quit: yimis
+19:08 iyzsong joined channel
+19:28 iyzsong: (┙>∧<)┙へ┻┻
+19:31 FrankHB quit:Remote host closed the connection
+19:32 FrankHB joined channel
+19:59 cleamoon joined channel
+20:04 cleamoon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/c2/0j_74480.jpg@596w_1l.jpg
+20:06 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0d/c0/8x_431555.jpg@596w_1l.jpg  23333
+20:33 mork quit:Remote host closed the connection
+20:42 whocares_2 quit:Remote host closed the connection
+20:43 whocares_2 joined channel
+21:04 Stevearzh joined channel
+21:18 cleamoon: 一片板蓝根：天冷了，给大家讲点养生之道，枸杞是个好东西，吃点对身体有好处，可以延年益寿，古人云：枸利果佳盛食矣，气阴火服必驱之。
+21:31 FrankHB quit:Remote host closed the connection
+21:32 iyzsong quit:Remote host closed the connection
+21:33 iyzsong joined channel
+21:36 FrankHB joined channel
+21:44 iyzsong quit:Ping timeout: 258 seconds
+21:45 lh_mouse: cleamoon, 东北话里国和果同音。
+21:52 iyzsong joined channel
+21:53 cleamoon: 233333
+21:55 varna joined channel
+21:55 lh_cat joined channel
+21:55 * varna 炮塔已填进模具，等明天看效果
+21:55 lh_cat: varna: 讲个笑话。
+21:55 varna: 我估计六成得返工
+21:56 varna: (｡･ω･)ﾉ
+21:56 lh_cat: 昨天老板跟ヲ说，之前那坑货说ヲ不听话，建议老板把ヲ开掉。
+21:56 varna: 啊？傻逼？
+21:56 varna: 这货什么思路
+21:56 varna: 人品略差啊
+21:57 lh_cat: 还有更好笑的呢。
+21:57 lh_cat: 你见过哪家公司把股东开掉的么。
+21:57 varna: 这耗有钱了！
+21:57 lh_cat: 好笑不。
+21:57 varna: 这耗控股了！
+21:58 varna: 这是他个人的一小步，但却是啮齿类的一大步！
+21:58 lh_cat: 没，没有任何的这个意思。
+21:58 varna: 这有一种钦点的感觉（笑）
+21:58 iyzsong quit:Ping timeout: 250 seconds
+21:58 varna: 不过这货的人品看着有点糟糕啊
+21:58 varna: 当老板面说开人，这也得能说出口
+21:58 lh_cat: 是。
+21:58 varna: 又不是人力的
+21:59 varna: 啊对了，说起开股东，我想起一个公司
+21:59 lh_cat: 磨了两个半月。
+21:59 varna: 我厂确实开（笑）
+22:00 lh_cat: 弄了人家没源码的库，搞了个会爆炸的东西。
+22:00 lh_cat: 你厂有钱不能比。
+22:00 varna: 技术差我可以理解，但做人做成这样就……
+22:01 varna: 技术好不好，好歹留一线
+22:01 lh_cat: redis 重启之后不会从 mysql 读数据。
+22:01 varna: ...
+22:01 varna: 那不废了
+22:02 lh_cat: 他的网络不知为何会读出错的 utf8 ，用 protobuf 发给客户端客户端炸，发给服务器服务器挂。
+22:03 varna: 测出来bug之后他作何反应
+22:04 lh_cat: 就什么都不说（双手捂裆）。
+22:05 varna: 表现出一股蛋疼的气息
+22:06 lh_cat: 还好他走了。
+22:06 iyzsong joined channel
+22:06 lh_cat: ヲ们几个人建议重做。
+22:06 lh_cat: 老板不知怎么想的，和坑货说，你做快三个月的东西我们要重做。
+22:07 varna: 重做比较好吧，不然留下个烂根将来疼死
+22:07 varna: ……
+22:07 lh_cat: 坑货曰，你就是狗屎。
+22:07 varna: puuuuuuuuu
+22:07 varna: 我笑出声
+22:08 varna: 不过还是得重做掉
+22:08 varna: 现在我就被迫还自己入职前别人欠下的债
+22:08 lh_cat: 是。
+22:10 varna: 驲，用力过猛，一条鱼雷管被打薄了一层……
+22:11 lh_mouse: 用 力 过 猛
+22:11 varna: @切尔诺贝利大耗
+22:12 lh_mouse: 不过窝提个问题吧。
+22:12 lh_mouse: 现在有个场合。
+22:13 lh_mouse: 几个不同类型的服务器要保持和中央服务器的长连接，这里每个服务器需要一个 center connector 。但是因为每个服务器需要接收从 center 发来的反向查询请求，每个地方的应答函数都不一样。
+22:14 lh_mouse: 这导致不同服务器的 connector 大同小异，除了配置表路径和应答函数以外不得不复制大量代码。
+22:14 lh_mouse: ヲ不清楚你们是否有干净一点的解决方案。
+22:15 varna: Java用户不这么做，多数时候他们会把这里的效率牺牲掉
+22:15 lh_mouse: 什么效率/
+22:15 cleamoon: 作为股东，干脆把那人开掉呗
+22:16 varna: 不走单独的connector, 而用一个消息队列横在中间
+22:16 lh_mouse: ヲ什么都不说。
+22:16 Sub_title joined channel
+22:16 lh_mouse: varna, 是ヲ在想的。
+22:17 lh_mouse: connector 有一些配置不能独立出来。
+22:17 cleamoon: 噗，坑货还敢还嘴
+22:18 varna: 配置还好说，需要复制的代码主要干什么？处理网络之类？
+22:18 lh_mouse: 还有个办法是弄个抽象基类把读配置文件的接口甩给派生类，然后满地继承。
+22:18 varna: 满地继承简直不能看
+22:18 lh_mouse: 对。
+22:18 lh_mouse: 因为服务器之间通信是无状态的，所以需要重写一批 Job （参见 poseidon 的 cbpp/session.cpp）。
+22:19 lh_mouse: 和那个差不多，只是因为是无状态，就得在 Cbpp::LowLevelSession 上重新封装。
+22:20 varna: 其实我个人的想法是这种多节点问答的场合，是否考虑在某处做一个黑板
+22:20 varna: 黑板用来保存询问状态
+22:20 varna: 提问者和回答者之间的长连接用来做推送
+22:20 lh_mouse: 请求应答只针对单节点。
+22:20 lh_mouse: 需要额外状态可以做 cookie 。
+22:21 lh_mouse: 光是在 LowLevelSession 上封装无状态请求应答就得三四百行。
+22:21 lh_mouse: 还不算 TcpServer 和 TcpConnector 。
+22:21 iyzsong: _(:з」∠)_
+22:21 varna: 提出黑板的想法在于牺牲一点通信效率（本来一条半双工信道就够了），把用函数解释数据的开销变到一个数据的序列化-反序列化上
+22:22 lh_mouse: 做有状态的？
+22:22 varna: 同时隔离问题状态，提供节点猝死复活之后的快速重试
+22:22 lh_mouse: 有状态的很容易 deadlock 。
+22:22 varna: 不做状态
+22:23 lh_mouse: ヲ现在想的是尽可能复用代码……
+22:23 varna: 中心提问，目标节点按事件处理流程做一个值序列化+写黑板
+22:23 varna: 这样就不容易了
+22:24 lh_mouse: x.x
+22:25 lh_cat: 满地继承未必不能看。
+22:25 lh_cat: 总比满地宏强。
+22:26 varna: 代码表面上不难看
+22:26 varna: 只是搞出了很多不必要的概念
+22:27 lh_cat: 是。
+22:27 lh_cat: 构造器还是跑不掉照抄。
+22:27 varna: 你居然会说“构造器”……
+22:28 lh_cat: mcfgthread 的 star 掉了一个，
+22:28 lh_cat: varna: 奇怪？
+22:28 varna: 我一直以为这是个巫女党黑话
+22:28 iyzsong: 不是叫函数么..
+22:29 lh_cat: 本来就应该叫构造器。构造器包括构造函数和构造函数模板。
+22:29 varna: xx子
+22:29 iyzsong: 噢~
+22:29 varna: 显得可爱
+22:29 varna: 因为巫女党只会说“方法”，不会说“函数”
+22:29 iyzsong: 2333
+22:30 lh_cat: 复制构造函数，移动构造函数和析构函数因为只能是函数所以特殊。
+22:30 lh_cat: 扯蛋，还没有对象何来方法。
+22:30 lh_cat: 静态方法什么的么。
+22:31 FrankHB: 方法不需要对象。
+22:31 varna: 球来了
+22:32 varna: 这个问题类似于胎儿是否有灵魂
+22:32 lh_cat: 还是当基类满地继承好些。
+22:36 iyzsong: 我现在都是写 mixin 插到模型类上 - -b
+22:41 varna: 噫噫噫呢
+22:41 iyzsong: 刚刚电话面了家杭州的公司 _(:з」∠)_
+22:41 varna: (｡･ω･)ﾉ来玩啊
+22:41 cleamoooon joined channel
+22:42 iyzsong: 希望可以带我脱离苦海... 这边项目的代码已经被我搞的不能看了
+22:42 whocares_2_ joined channel
+22:43 varna: (｡･ω･)拿出点堂吉诃德的精神来！这么写代码，噫噫噫是不会嫁给你的！
+22:43 whocares_2 quit:Ping timeout: 265 seconds
+22:44 cleamoon quit:Ping timeout: 250 seconds
+22:44 iyzsong: 堂吉诃德是什么精神 _(:з」∠)_
+22:44 varna: 骑士要有个意中人的精神
+22:47 iyzsong: =.=
+22:47 varna: 头疼_(:з」∠)_
+22:47 Mokou: _(:з」∠)_
+22:48 iyzsong: 冲了个水，有点抖
+22:49 Mokou: http://tieba.baidu.com/p/4884478710 死宅真恶心
+22:52 Sub_title quit:Quit: Mutter: www.mutterirc.com
+22:53 cleamoooon: gravity0经过一番概率计算，我终于明白了当年反战口号 make love, not war 的意思了。随你们打，世界最终属于生得多的。
+22:53 FrankHB quit:Remote host closed the connection
+22:53 lh_mouse: 本吧头图、背景、导航顶部以及页面右侧信息由第三方提供，可能存在广告，请您仔细甄别。
+22:55 FrankHB joined channel
+22:58 cleamoooon: 新电脑装arch总不成功，xorg拒绝合作，负隅顽抗
+23:01 Sub_title joined channel
+23:04 Sub_title quit:Client Quit
+23:04 lh_mouse: 艹它。
+23:05 iyzsong: 2333
+23:07 cleamoooon: 艹不动
+23:09 iyzsong: 显卡挂可以换 xf86-video-{vesa,fb} 输入挂了可以试试外接键盘
+23:11 cleamoooon: 不知道什么问题...
+23:12 iyzsong: 2333 Xorg.0.log 里没给点什么么 
+23:15 cleamoooon: 我记得是说 x 已经在运行了，用 sudo 的话告诉 screen 数量不对，Xorg -configure 失败...
+23:16 iyzsong: _(:з」∠)_ 肯定是 systemd 的锅
+23:18 cleamoooon: 有可能
+23:18 cleamoooon: 作死加上了sddm自动启动，然后就卡开机了
+23:20 Mokou: 你有X的配置文件么
+23:20 cleamoooon: nvidia 自动生成的有一个
+23:20 Mokou: ……
+23:20 Mokou: 你用闭源驱动？
+23:20 cleamoooon: X自动生成不了
+23:20 cleamoooon: +
+23:20 Mokou: 那就疼了
+23:20 cleamoooon: 闭源的不好？
+23:21 Mokou: 闭源的配置我记得极其麻烦
+23:21 Mokou: 你需要很高性能么
+23:21 iyzsong: Xorg用开源驱动不需要配置文件
+23:21 cleamoooon: 前几天试图安装，又一次失败
+23:21 iyzsong: _(:з」∠)_
+23:21 cleamoooon: 开源的驱动我也装了
+23:21 cleamoooon: 之前的旧电脑也很神奇，有配置就傲娇，必须无配置启动....
+23:22 Mokou: 你要是打算用开源的话就删掉配置文件、卸掉闭源驱动
+23:22 Mokou: 不打算用的话就删掉开源驱动
+23:22 cleamoooon: soga
+23:22 Mokou: 两个并存我不确定会不会有问题
+23:22 cleamoooon: 不过我只用intel驱动也还是打不开X
+23:22 Mokou: ……
+23:22 Mokou: X怎么说
+23:23 iyzsong: 双卡..  用intel要先确认/proc/fb是interdrmfb
+23:23 iyzsong: inteldrmfb
+23:24 cleamoooon: 具体的不很记得了，都是类似no screen found那种没用的
+23:25 Mokou: ……
+23:25 Mokou: 下次你试着把log贴一下
+23:25 cleamoooon: 好的
+23:25 cleamoooon: 过几天再做一次死
+23:33 varna quit:Quit: leaving
+23:35 Taggnostr joined channel
+23:35 iyzsong quit:Quit: night.
+23:36 lh_mouse: geordi, namespace bar { using namespace bar; }
+23:36 geordi: Success
+23:37 cleamoooon: 在win上做c艹编程还是疼
+23:59 Sasasu quit:Quit: WeeChat 1.0.1

@@ -1,0 +1,835 @@
+00:23 wlemuel quit:Ping timeout: 245 seconds
+01:18 hoxily quit:Quit: Leaving
+01:24 ASenR quit:Quit: Lost terminal
+03:36 LittleKey quit:Quit: Leaving.
+04:37 boosure joined channel
+04:49 xxxxxxxxx quit:Quit: Leaving...
+04:50 lh_mouse quit:Read error: Connection reset by peer
+08:37 wlemuel joined channel
+08:43 ASenR joined channel
+08:51 wlemuel quit:Ping timeout: 258 seconds
+09:03 lhanjian joined channel
+09:05 lh_mouse joined channel
+09:07 Xilzzerts joined channel
+09:08 lhanjian: lh_mouse, 抓住一只耗子
+09:13 ASenR quit:Quit: Lost terminal
+09:57 * lh_not_bot slaps lhanjian around a bit with a large trout
+10:16 boosure quit:Quit: Get your hand off of it
+10:59 lhanjian: 不明白为什么一个单纯的TCP隧道，还非得并发才能正常的全双工……
+11:04 lhanjian: bitcoin协议设计够SB的，把全互联网几乎所有的交易历史都要下载下来才能用，MD，40GiB的数据！
+11:06 lh_not_bot: 并发？
+11:10 lhanjian: lh_not_bot, 我感觉我做了件多余的事。一个方向的转发开一条线程……
+11:10 lh_not_bot: lhanjian: 这是十年前的做法
+11:10 lhanjian: lh_not_bot, 嗯。
+11:11 lh_cat joined channel
+11:11 lh_mouse quit:Disconnected by services
+11:12 lh_not_bot: lhanjian: https://github.com/lhmouse/poseidon-medusa/blob/master/src/singletons/fetch_client.hpp?ts=4#L65
+11:12 lh_not_bot: 收到数据就往主线程丢个消息就完了  每个消息都带一个 UUID
+11:12 lhanjian left channel:"Leaving"
+11:13 lhanjian joined channel
+11:13 lhanjian: lh_not_bot, 我用的golang，反倒只能用goroutine了……
+11:13 lhanjian: 一开始想直接,ReadFromClient,WriteToTarger,ReadFromTarget,WriteToClient,loooooop
+11:14 lh_not_bot: 是这样
+11:15 lhanjian: 不知道被什么东西坑了,Client死活收不到WriteToClient的内容……
+11:16 lh_not_bot: 0.0
+11:23 lhanjian: 130行就能用的https proxy。结果是被该死的SSL服务商坑了两天
+11:50 lh_not_bot: 只支持 https 意义不大的
+11:51 lh_not_bot: 拿来上 GMAIL 估计没问题
+11:54 lhanjian: lh_not_bot, 当然不是只支持https……
+12:19 ASenR joined channel
+12:39 varna joined channel
+12:45 xxxxxxxx joined channel
+12:46 varna: xxxxxxxx: 爆
+12:48 xxxxxxxx: varna: 爆你妹去
+12:49 xxxxxxxx: 演习对手 菊花好好菊花: 日田中先人
+12:53 varna: 晓要二改了
+12:54 xxxxxxxx: 厉害不厉害?
+12:54 varna: 我觉得应该有0.9欠吧？
+12:54 varna: 瓜岛夜战第一天的探照灯是比叡和晓开的
+12:54 varna: 作战之后晓也被树了典型
+12:55 varna: 总之从搬砖队撤下来，开始演习
+12:57 xxxxxxxx: 并没有留晓 厉害的话再说吧....
+13:00 varna: 瓜岛那一批都挺猛的，我觉得可以试着留一个……
+13:07 lhanjian: M$最近感觉把自己的家当到处开源……
+13:09 varna: 他们总会有技术储备的
+13:09 varna: 而开源更适合埋葬边缘项目或者试验不想投入大成本的小东西
+13:09 xxxxxxxx: M$又开源了啥?
+13:10 varna: 艹，我图纸烧光了
+13:10 lhanjian: 我觉得微软开源C#这点至少是挺有诚意的（MIT协议）
+13:10 xxxxxxxx: 图纸我似乎也不够用了...
+13:11 varna: 到七月份我能凑出两个图来
+13:11 varna: 这是假设我仍然不打5-5
+13:11 varna: 不过不打的话，到七月初是八个章
+13:11 varna: 刚好2图
+13:12 varna: 刚才才意识到利托里奥和罗马昨天就能改造了
+13:12 xxxxxxxx: 这个月只有一张图纸 暂时没章 还有3-5没打 
+13:12 varna: 然后最后两个图纸直接出手
+13:13 xxxxxxxx: 然而没有罗马...
+13:17 ASenR quit:Quit: 睡觉
+13:19 varna: 语法修好了
+13:19 lhanjian: 格林斯潘第十定律……
+13:19 varna: 写了一个表达力略弱，但能保证语法分析之后就能出normal order的文法
+13:29 iyzsong: 几乎每次出去都有人找我问路，然而我指的都是错的..
+13:30 lh_not_bot: lhanjian: HTTP 转发呢
+13:30 lh_not_bot: iyzsong: 摸头
+13:30 lhanjian: lh_mouse, GET？
+13:32 xxxxxxxx: iyzsong: 然后别人都找到了正确的路
+13:32 lh_not_bot: lhanjian: 是的
+13:33 lhanjian: lh_not_bot, 这个当然做了。
+13:33 lh_not_bot: lhanjian: 客户端请求的是 HTTP 1.1   但是远程服务器返回的是 HTTP 1.0   如何处理
+13:34 lh_not_bot: 另外  转发时候报头必须进行修改  例如 connection 必须改写为 Close
+13:36 lhanjian: lh_not_bot, 吱给我个1.0的样例页面，我测一下
+13:36 lh_not_bot: lhanjian: 实际上不多
+13:37 lh_not_bot: lhanjian: 我的想法是  proxy 返回的数据强制改写为 chunked  这样都兼容
+13:51 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=061a533e5bdf8db1bc2e7c6c3922dddb/cf2cfb096b63f624311a6ba58244ebf81b4ca380.jpg
+14:10 lhanjian: lh_not_bot, 发现可以鸵鸟。虽然代理会自动把HTTP1.0改为HTTP1.1，但是客户端并不会在意HTTP1.1有没有connection项……
+14:13 lh_not_bot: lhanjian: 代理服务器需要处理
+14:13 lh_not_bot: lhanjian: 比如远端服务器发送的 content-length 是 1000  发送 500 后掉线  怎么办
+14:13 lh_not_bot: 这个和 http 1.0 很相似
+14:14 lhanjian: “掉线”这个很难办吧……
+14:14 lh_not_bot: lhanjian: 你的客户端会怎么办
+14:14 lhanjian: 客户端卡着
+14:15 lh_not_bot: 它收到的 content-length 是 1000
+14:15 lhanjian: 我觉得这是正常行为……
+14:15 lhanjian: 如果客户端直连，他也应该“卡着”
+14:15 lh_not_bot: 另外的问题  是否会对你自己的服务器造成潜在的 DDoS 威胁
+14:15 lh_not_bot: 还有   pipelining 怎么办
+14:16 lh_not_bot: lhanjian: 如果远端服务器掉线你应该把连接关掉
+14:16 lh_not_bot: 但是对于 HTTP 1.0  不可以这样做
+14:16 lh_not_bot: 除非你每个请求都返回 Proxy-Connection: Close
+14:17 lh_not_bot: 我只能说 HTTP 就是一坨屎
+14:17 varna: HTTP 1.0不是缺省不保活的么？
+14:17 lh_not_bot: varna: 远端是 HTTP 1.0
+14:17 varna: 哦
+14:17 lh_not_bot: 代理服务器是 1.1
+14:17 varna: 那就惨了
+14:18 lh_not_bot: varna: 转 chunked 应该有解
+14:18 lh_not_bot: 但是万一客户端是 1.0  又 SB 了
+14:27 lhanjian: lh_not_bot, 远端掉线，我应该关掉服务器……问题是代理怎么能知道远端 掉线 ……
+14:27 lhanjian: 关掉连接
+14:34 Xilzzert joined channel
+14:35 Xilzzerts quit:Ping timeout: 264 seconds
+14:46 hysw quit:*.net *.split
+14:46 hysw joined channel
+15:10 lh_not_bot: lhanjian: EPOLLERR
+15:11 lhanjian: lh_not_bot, 这不叫掉线。这叫对端主动断线吧……
+15:11 lh_not_bot: lhanjian: 补基础去  对端优雅关闭不会 err 的
+15:11 lhanjian: 我知道
+15:12 lhanjian: 耗子你也知道，如果你发了包，对方物理上把网线拔了，你不会有机会得到对方的无论是优不优雅的结果……
+15:12 lhanjian: 上次耗子你那个9分钟测试。
+15:12 lh_not_bot: lhanjian: EPOLLERR  用 getsockopt 获得错误码是 ETIMEDOUT
+15:13 lhanjian: 哦，就是TIMEOUT啊……
+15:14 lh_not_bot: lhanjian: https://github.com/lhmouse/poseidon/blob/master/src/epoll.cpp?ts=4#L170
+15:17 lhanjian: 原来还可以通过getsockopt进一步得到EPOLLERR对应fd的具体错误信息……
+15:38 ASenR joined channel
+15:48 varna: 好想侵犯药娘啊！
+15:48 varna: 药娘都哪去了！
+15:51 lh_not_bot: lhanjian: 你以前不知道？
+15:52 lhanjian: lh_not_bot, 没这么做过……
+15:53 whatofor quit:Read error: Connection reset by peer
+15:53 whatofor joined channel
+15:56 lh_not_bot: 我感觉刚才那个文件  #197 #267 写得好恶心
+15:59 lhanjian: 已经HUP就直接关了fd好了
+16:07 lh_not_bot: 一开始是那么做的
+16:08 lh_not_bot: 不过也是  可以改回去
+16:11 lh_not_bot: 目前来看是没必要改的
+16:28 lh_not_bot: 改吧改吧
+16:30 Stevearzh quit:Ping timeout: 264 seconds
+16:32 lhanjian: 我在想有没有必要调高在太平洋东岸的主机的接受发送窗口
+16:33 varna: 应该先打下中途岛
+16:41 Stevearzh joined channel
+16:44 varna: 看起来一点也鬼畜的语法完成了： < [ ^a, `atom, 1] as f.b c > func add2 (a, b) { + a b };
+16:44 varna: ……一点也不鬼畜
+16:45 lhanjian: 好多sigil
+16:45 varna: 这不是sigil
+16:45 ASenR quit:Quit: Lost terminal
+16:46 iyzsong: 啥玩意
+16:46 varna: ^前缀要求模式匹配中不求值后缀的变量，而以模式匹配成功时的对应值覆盖变量的当前值
+16:46 varna: `是原子文字量的固定前缀
+16:46 varna: iyzsong: 自制脚本的语法分析
+16:46 varna: 刚简单弄了个序列化检查一下文法
+16:46 lhanjian: 自制脚（鬼）本（畜）
+16:48 varna: 函数定义提供三个糖：func FUNCNAME ( PARAMLIST ) { BODY }, func ( PARAMLIST ) { BODY }, { BODY }
+16:49 varna: 调用方面提供绑定第一元到一函数的语法object.method
+16:50 varna: 不过糖符号.的读法是normal order的，也即a.b c.d是(a.b c).d, 如果不要这样的话得显式(a.b) (c.d)
+16:53 varna: 当然我有打算提供一个赋值糖
+16:54 varna: 表达式-> a b是模式匹配< [^a] as b >的糖
+16:54 varna: 不过也可能不提供，虽然现在做了语法，但模式匹配这里我有点想改
+16:57 iyzsong: 完全猜不到怎么匹配的  < [pattern] as var > stmt.. 那被匹配的是啥?
+16:58 varna: < PATTERN as EXPR >
+16:58 varna: 这模式匹配我的打算是返回一个函数
+16:58 varna: 若成功，那么是\x.z, 其中z是EXPR的值
+16:58 varna: 若失败，那么是\x.x u
+16:59 varna: 其中u是一个原子
+16:59 varna: 出于同样的理由，我没有提供if and or not但提供了条件运算符
+17:00 varna: 至少在语义上，T = \x.\y.x F = \x.\y.y
+17:00 varna: 从而and = \x.\y.x y x
+17:00 varna: or = \x.\y.x x y
+17:00 varna: not = \x.x F T
+17:00 iyzsong: = =
+17:00 varna: 所以单纯在基本语义上，条件控制流是不必要的
+17:01 varna: 当然这造成了其他的问题（挺严重的，比如优化器如何识别）
+17:01 varna: 不过因为定位就是个脚本试作品，所以我暂且不考虑这些
+17:11 varna: https://pastebin.mozilla.org/8834228 这里是测试，顺便宣传一下HOI::Match
+17:12 varna: 用了HOI::Match, 你也能在Perl里对函数参数进行模式匹配！
+17:12 lh_not_bot: Hell March
+17:12 lhanjian: 调大本地的窗口大小真的有用……
+17:15 lhanjian: 下载速度翻番了
+17:15 lhanjian: 到底是给Arch设置了这么小的缓冲区……
+17:16 varna: 不是我
+17:16 lhanjian: [13684.590629] Chrome_ChildThr[9052]: segfault at 0 ip 00007fef5bb11fc9 sp 00007fef499b5550 error 6 in libmozalloc.so[7fef5bb10000+5000]
+17:21 xxxxxxxx: lhanjian: 啥情况?
+17:21 lhanjian: xxxxxxxx, 哪个？
+17:22 lhjkk joined channel
+17:22 varna: xxxxxxxx: 爆
+17:22 lhjkk: 电脑内存满了。。。。
+17:23 xxxxxxxx: lhanjian>到底是给Arch设置了这么小的缓冲区…… <- 这个
+17:24 lhjkk: rmem_max
+17:24 lhjkk: 缓冲区太小，延迟又太大。。。
+17:26 xxxxxxxx: 比其他发行版默认的都小?
+17:26 lhjkk: 其他的max比较大
+17:26 lhjkk: 但arch连max都偏小
+17:32 lhjkk: x11挂了，然而ap还活着
+17:35 lhanjian: 在内核屠杀了N个进程之后，又活过来了
+17:36 lhanjian: 内存杀手Chromium
+17:37 varna: 毕竟是世界上被最多进程使用的浏览器
+17:37 lhanjian: 2333333
+17:37 xxxxxxxx: 被最多进程使用?
+17:38 lhanjian: xxxxxxxx, PID 1xxxxx 1xxxxx 1xxxxx 1xxxxx 1xxxxx 1xxxxx 
+17:38 lhanjian: firefox: PID 1xxxxx
+17:39 wlemuel joined channel
+17:39 xxxxxxxx: FF没有那个装flash的插件容器了?
+17:39 lhanjian: xxxxxxxx, 装上那个容器，还比chromium小一半
+17:39 varna: 有啊
+17:39 varna: 那个插件容器就一个进程吧？
+17:40 lhanjian: plugin-container，就一个
+17:40 xxxxxxxx: 就一个然而出奇的耗资源
+17:41 lhanjian: 但是如果他被内核干掉了，没什么损失
+17:41 lhanjian: 我现在top里
+17:41 lhanjian: 有一个plugincontainer
+17:41 lhanjian: VIRT 700MiB
+17:42 lhanjian: 有10多个chromium,平均每个VIRT 850MiB+
+17:42 lhanjian: Firefox-cn一个,2GiB+
+17:42 varna: 主要是插件容器如果死掉的话可以就地复活
+17:43 xxxxxxxx: chrome和chromium进程数上面一致?
+17:43 lhanjian: xxxxxxxx, 基本是一个东西。
+17:43 lhanjian: chromium还更少，因为要求不能自带flash
+17:51 lhanjian: xxxxxxxx, 我的服务端上的Ubuntu，里面有VPS运营商给我设置的一组推荐的w/r mem_max/default值
+17:56 xxxxxxxx: http://www.bilibili.com/video/av2346716/ 拉科尼亚号的沉没（2010） <- 介绍上说有U艇
+17:56 xxxxxxxx: 还说有"飞过来"
+17:56 varna: ...
+17:57 varna: 欧根：飞呀！飞呀！ 元首：飞过来！飞过来！
+17:58 lhjkkk joined channel
+17:58 lhjkk quit:Read error: Connection reset by peer
+18:26 lhjkkk quit:Ping timeout: 255 seconds
+18:34 lhanjian: 原来Rust已经折腾了10年……
+18:39 Plough joined channel
+18:40 varna: Plough: 肛旗肛旗肛
+18:41 Plough: varna: 爆
+18:41 Plough: 特驱改二啊……似乎还号
+18:41 Plough: 还好*
+18:41 Plough: 噗，Zak娶了棒各？
+18:42 lhanjian quit:Quit: Leaving
+18:44 lhjkkk joined channel
+18:44 lhjkkk quit:Remote host closed the connection
+18:46 izmntuk joined channel
+18:47 Xilzzert quit:Read error: Connection reset by peer
+18:47 Xilzzert joined channel
+18:48 varna: 那个特型改二是Lady
+18:48 Plough: 不是五航就好
+18:49 varna: 昨晚我特意把莱特湾收拾了
+18:49 Plough: 快开信浓
+18:50 varna: 重巡沉3大破7，歼敌航母9战舰6
+18:50 Plough: ……
+18:50 Plough: 真可怕
+18:50 varna: 这游戏该改名叫武大骑脸
+18:50 Plough: 美帝高呼不可战胜
+18:51 varna: 跟小泽的机动部队并没有关系，但是他们被打破打沉了会影响战果
+18:51 Plough: ……
+18:51 varna: 西村部队又少又慢也没有用
+18:51 Plough: 疯狂CAP吧
+18:51 varna: 志摩部队最大吨位的有几个巡洋舰
+18:51 varna: 路上基地有七十多个052，跟敌人三十多的直卫队交手，先各掉一半
+18:52 varna: 陆上*
+18:52 varna: 等到两边数目都差不多了，美国人就无比优势地将火鸡全数歼灭
+18:52 varna: CAP护航范围不够，不过小泽队不在敌人攻击半径之内
+18:53 varna: 最后是我第二天下午摸到登陆部队附近，让陆基基地和志摩部队把马润收拾了
+18:53 Plough: 所以只要不猪突就没问题么
+18:53 varna: 武大跟对面田纳西什么的一顿乱战，TF77在晚七点多全灭
+18:53 varna: 然后北上追TF38，他们还特别赏脸地冲着我过来了
+18:54 Plough: ……
+18:54 varna: 第三天打到中午几乎都大破了
+18:54 varna: 然而武大几乎把敌攻击队打了个精光
+18:55 varna: 有高射炮打掉的、跟着航母炸了的、燃料不足坠海的……
+18:55 varna: 所以莱特湾其实CAP不是重点，重点只是要把武大莽上去……
+18:55 Plough: ……
+18:55 Plough: 壮哉我大舰巨炮
+18:56 varna: 马里亚纳的原理也一样，只不过那时候机动部队的攻击力至少还强点
+18:57 Plough: 然而岛国哪来那么多油……
+18:57 varna: 莱特湾的时候还是够武大他们出去的
+18:57 Plough: 但是之前一直骑脸啊
+18:57 Plough: 历史上武大没这么疯狂吧
+18:58 varna: 历史上武藏直接废了
+18:58 Plough: 武藏跪了
+18:58 Plough: 大和被潜艇阴了
+18:58 Plough: 总之都没卵用
+18:58 varna: 那图确实满地潜艇
+18:59 varna: 从马尼拉到苏里高海峡那么一点点地方就有三个哨戒线
+18:59 varna: 最逗的是在台湾以东老远的大洋上还有一个或者两个
+18:59 Plough: ……
+18:59 Plough: 我们的游戏很平衡
+19:00 Plough: 说起来毛子会把潜艇搞成什么样呢……
+19:00 varna: 水下20kt...
+19:00 Plough: 23333
+19:00 Plough: 战舰党宣布退出WOWS
+19:02 varna: 我最近才发现谷风的股不错
+19:03 Plough: 毕竟股风
+19:03 Plough: 中破以后更赞
+19:03 varna: 中破那是作大死
+19:04 Plough: 多好
+19:04 Plough: 先去吃饭
+19:20 lhanjian joined channel
+19:20 * lh_not_bot slaps lhanjian around a bit with 鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+19:23 Plough: 回来了
+19:26 Plough: 我才发现官推的头像好赞啊
+19:31 cleamoon__ joined channel
+19:31 lh_not_bot: http://news.163.com/15/0521/18/AQ5LA1B200014AED.html
+19:32 lh_not_bot: http://money.163.com/15/0521/10/AQ4OK1HA00253B0H.html
+19:34 cleamoon__: 似乎只是船被炸了
+19:35 lh_mouse: 周恩来：  你敢炸老子渔船  老子就敢炸你的军舰
+19:36 cleamoon__: 伟大的外交政策
+19:38 Plough: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH STEP ON ME SOME MORE MY LADY!
+19:38 Plough: STEP ON ME EVERYDAY!
+19:38 Plough: ^Zak捞到矶风时
+19:41 cleamoon__: .......
+19:41 cleamoon__: Mak
+19:42 Plough: 然后Zak开始狂吃矶风料理
+19:46 cleamoon__: 然后他成为了真正的抖M提督
+19:46 Plough: YAHAGI! YAHAGI! YAHAGI! YAHAGI!!
+19:46 cleamoon__: 我又三发大建，飞鹰，隼鹰和陆奥...
+19:47 Plough: 我也想要陆奥啊
+19:47 cleamoon__: 你的陆奥都100级了吧
+19:48 Plough: 早呢
+19:48 Plough: 刚80
+20:14 izmntuk quit:Ping timeout: 244 seconds
+20:16 izmntuk joined channel
+20:21 endle joined channel
+20:28 cleamoon__: 肝rz
+20:32 Plough: 纯靠演习
+20:53 xxxxxxxx: cleamoon__: 你应该问红旗武藏大和
+20:54 izmntuk quit:Ping timeout: 244 seconds
+20:54 cleamoon__: 我只要401
+21:00 xxxxxxxx: 啥潜艇都是当RBQ的命
+21:02 izmntuk joined channel
+21:05 cleamoon__ quit:Ping timeout: 256 seconds
+21:05 cleamoon__ joined channel
+21:11 cleamoon__ quit:Ping timeout: 265 seconds
+21:25 varna: 我看到岚月酱在大建
+21:25 endle quit:Quit: Leaving
+21:25 Plough: 我在考虑要不要把Zak的E7转过来
+21:25 Plough: 喜感度爆表
+21:25 varna: 太亮了，会瞎人的
+21:26 Plough: 另外我听说现在WOWS的北上大人是战列舰级别的
+21:26 Plough: 舵效意义上
+21:26 varna: 虽然北上是旧货中的旧货……
+21:26 Plough: 所以进了CA的射程你就可以双手离开键盘了……
+21:27 varna: KUMA级差劲倒是可以理解
+21:27 Plough: 我终于体会到了黄金大锉刀的威力
+21:27 Plough: 然而鱼雷射程只有10km
+21:27 varna: 实际上天龙、球磨、川内三级都是悲剧
+21:27 varna: 以日军标准来说都是悲剧……
+21:28 Plough: ……
+21:28 varna: 至于魔法一样的亚特兰大，原理大概和肥桑姐是类似的
+21:28 code_new joined channel
+21:28 Plough: 我听说亚特兰大玩家都是这个态度：“什么，炮塔还有装甲！？”
+21:28 varna: code_new来了
+21:28 wlemuel quit:Ping timeout: 256 seconds
+21:28 varna: 快骗他大建
+21:29 Plough: code_new: 我来骗你大建了，快赌
+21:29 code_new: QAQ
+21:29 code_new: 欧皇又出来骗人
+21:29 izmntuk quit:Ping timeout: 244 seconds
+21:29 wlemuel joined channel
+21:29 code_new: 活动完了没跑远征，资源不足
+21:29 Plough: 欧皇都有401
+21:30 varna: 欧皇有俾斯麦
+21:30 varna: 我资源也不足，别怕
+21:30 code_new: 欧皇有武双大
+21:31 varna: 肛旗是欧洲细作，我只是个萨满
+21:31 code_new: 欧皇有Roma矶风
+21:32 Plough: 你是祭司
+21:32 varna: 我月末还要组织仪式呢
+21:33 varna: 上次的萨满似乎搞错了什么手续，在他那里等级参加献祭的勇士都死了
+21:33 code_new: 这次活动出了一库，作为索马里人的我已经很知足了
+21:33 varna: 他自己出了个大和二号机
+21:33 varna: 哭笑不得
+21:33 Plough: 噗
+21:33 code_new: ……
+21:33 Plough: 他是在收集别人的运吧
+21:33 varna: 不知道，总之每人都拎了个战神哭着回去了
+21:34 cleamoon__ joined channel
+21:34 Plough: 这个萨满不对劲
+21:34 Plough: 包括我
+21:34 code_new: 战神也是欧洲产物啊
+21:34 Plough: 另外我确实在考虑弄个700的模型放在桌子上拿着玩了
+21:34 Plough: 你说我是弄扶桑呢还是天成呢还是纪伊呢……
+21:34 Plough: 天城*
+21:34 code_new: 像我只能抱着一堆傻级哭
+21:34 cleamoon__: 壕rz
+21:34 Plough: 700的模型壕个屁
+21:35 code_new: 壕rz
+21:35 cleamoon__: 傻级两个月出了快5套了，我连2-3都出傻级了
+21:35 varna: 肥桑！
+21:35 cleamoon__: 我至今模型花的钱还没有100
+21:35 Plough: 肥桑我怕我拿不住……
+21:35 varna: 下午四点所见的战舰，有着艺术般的上部建筑
+21:35 Plough: 700的意思是1:700
+21:35 code_new: 话说有个问题求一下解决方案：http://tieba.baidu.com/p/3777876556
+21:35 Plough: 不是700块钱
+21:36 varna: code_new: 你的py是不是被py3代替了
+21:36 code_new: 没有
+21:36 code_new: python版本2.7
+21:36 Plough: code_new: 环境变量改了么
+21:36 code_new: python3还是python3
+21:36 code_new: 按google的改过
+21:36 code_new: 然而没用
+21:37 varna: 但是我这里缺省的python确实是py3...
+21:38 Plough: sys.path的值是？
+21:38 code_new: 现在我都不知道改用什么方法了= =
+21:38 varna: 肛旗来，他至少熟py点
+21:38 code_new: https://pastebin.mozilla.org/8834247
+21:38 xxxxxxxx: pacman有没有log能看到前段时间到底干了啥?
+21:39 code_new: 有相关问题的就是那次Rsc了
+21:39 varna: xxxxxxxx: /var/log底下一般有
+21:40 varna: 我的log可以一直追溯到13年我安系统的时候
+21:40 xxxxxxxx: 那先看看有没有多拆了啥奇怪的东西呗
+21:40 cleamoon__: code_new, -Syu 然后重启
+21:40 cleamoon__: 我好几次都是这么解决的...
+21:40 varna: 他的依赖应该是全的吧？
+21:40 varna: 依赖破损的话应该很容易发现
+21:40 code_new: 我发现这个问题的时候已经Syu并重启过很多次了
+21:41 cleamoon__: ...
+21:41 code_new: 发现这个问题前*
+21:41 cleamoon__: 装上ibus后能用吗？
+21:42 xxxxxxxx: 帖子里说没用
+21:42 Plough: 你看看/usr/lib/python2.7/site-packages/下有没有BeautifulSoup
+21:42 Plough: 我装了个一个，应该是在这个位置下
+21:42 varna: Syu
+21:42 code_new: python相关的大部分都用不了了
+21:42 Plough: 你先检查一个这个
+21:42 Plough: 一下*
+21:43 varna: 我已经做完南西、大整备、反潜、10远征
+21:43 varna: 祈祷我能活着重启
+21:43 code_new: Plough: 没有
+21:43 Plough: ……确定python2-beautifulsoup3装了？
+21:43 * xxxxxxxx 很休闲的没怎么做任务...
+21:43 code_new: 这个我pacman过了
+21:43 code_new: 装了
+21:43 Plough: 这情况略诡异
+21:44 cleamoon__: 我怀疑pacman崩了...
+21:44 Plough: 另外文件名是BeautifulSoup.pyc
+21:44 xxxxxxxx: ImportError: No module named Qt  <- 这个神奇
+21:44 code_new: community/python2-beautifulsoup3 3.2.1-3 [installed]
+21:44 cleamoon__: 如果是我我会 pacman -S --force $(pacman -Qqs)
+21:44 varna: --force...
+21:44 cleamoon__: --force
+21:44 Plough: --force……
+21:44 varna: 比起force, 我更推荐备份home之后自尽
+21:45 cleamoon__: 有什么区别
+21:45 varna: 至少能得到一个全新的能用的系统
+21:45 varna: 反正让arch动起来需要的东西很少
+21:45 varna: 而force之后需要的可能是一个引导介质
+21:45 varna: 我以前就是
+21:45 wlemuel quit:Ping timeout: 245 seconds
+21:45 cleamoon__: 这么一说，我新买的本子各种没驱动...
+21:45 code_new: Plough: 有这个= =
+21:45 cleamoon__: 你force了些什么鬼呀...
+21:46 Plough: ……有文件但是读不到么
+21:46 Plough: 我查查
+21:46 wlemuel joined channel
+21:46 code_new: 那个Qt的折腾了我好久
+21:46 varna: cleamoon__: 我在filesystem不能正确安装的情况下force了
+21:46 code_new: 明明是有Qt.so
+21:46 varna: 一把爆炸
+21:47 cleamoon__: .......
+21:47 Plough: Qt.so卵用没有，有用的是Py的module
+21:47 cleamoon__: 叫你不看arch news
+21:47 code_new: = =
+21:47 xxxxxxxx: 我们需要一个 --作死 参数
+21:47 Plough: 我先查查这是什么情况……
+21:47 cleamoon__: 有文件读不到比较神奇
+21:48 varna: xxxxxxxx: 是，照我说的做
+21:48 varna: 如果这次更新成功，下次更新就是夏活之后
+21:49 cleamoon__: 我给老爸那台电脑上次更新是3个月前...
+21:49 code_new: 话说为什么在root和普通用户下报错不同
+21:49 varna: 但我上次更新是浑作战之后……
+21:49 varna: code_new: 大概是环境变量差别
+21:49 code_new: 哦哦
+21:49 xxxxxxxx: 大概是作死程度的不同?
+21:50 varna: 我何时安了撸比？
+21:50 cleamoon__: .......
+21:50 cleamoon__: arch那么久不更新不疼？
+21:50 cleamoon__: 尤其是chrome
+21:50 Plough: 等等
+21:50 Plough: calibre是用py2还是py3的
+21:50 xxxxxxxx: 对了 看看有没有把什么配置文件给你换成新的之类的?
+21:50 code_new: 不知= =
+21:51 varna: cleamoon__: 不疼，我的chrome只用来玩舰娘
+21:51 Plough: 我发现了一个问题
+21:51 code_new: Plough: 不知
+21:51 Xilzzert quit:Ping timeout: 265 seconds
+21:51 Plough: 为何你的Py2在试图加载Py3的module……
+21:51 varna: 我就说这个问题
+21:51 Plough: ImportError: /usr/lib/python3.4/site-packages/_dbus_bindings.so: undefined symbol: PyBytes_Type
+21:51 Plough: /usr/lib/python3.4
+21:51 varna: 他的环境被替换成了py3的……
+21:51 Plough: 这能找到符号才见鬼了……
+21:52 varna: 我这里就是
+21:52 cleamoon__: 舰娘不要求最新chrome？
+21:52 Plough: 你的calibre怎么安的，直接pacman -S？
+21:52 varna: 有些脚本必须强行启用py2
+21:52 code_new: +
+21:52 Plough: 这不科学……
+21:52 cleamoon__: 不科学+
+21:52 code_new: python --version Python 2.7.9
+21:52 varna: cleamoon__: 不要求，最后一次大震动是去年棒各二改之后libflashplayer版本不再被兼容了
+21:52 Plough: cat /usr/bin/calibre | head -n1
+21:52 izmntuk joined channel
+21:53 code_new: Plough: #!/usr/bin/env python2
+21:53 cleamoon__: 我说，备份home吧，重装arch对于熟悉的人来说30min的事...
+21:53 cleamoon__: libflashplayer不兼容确实疼
+21:53 code_new: QAQ
+21:53 Plough: 而且即使是脚本用了Py3也不对啊
+21:53 wlemuel quit:Ping timeout: 252 seconds
+21:53 Plough: undefined symbol明显是因为Py2在试图加载Py3的Module
+21:54 code_new: 我这上面都下太多了
+21:54 varna: 但他加载路径为何是py3的
+21:54 code_new: 重装会很麻烦
+21:54 varna: py有什么环境变量么
+21:54 Plough: 对呀
+21:54 Plough: 我在奇怪这个
+21:54 Plough: PYTHONPATH，不过我看他刚才的输出应该没问题
+21:54 Plough: 我再确认一眼
+21:54 wlemuel joined channel
+21:54 code_new: py的环境变量没有用后就干掉了
+21:54 code_new: 现在没有PYTHONPATH
+21:54 Plough: 所以不应该有问题啊
+21:54 varna: 没有的话不该出错
+21:55 Plough: 你刚才那个sys.path是在通常用户下用python2输出的吧
+21:55 code_new: +
+21:55 Plough: 简直闹鬼
+21:55 cleamoon__: 下载太多了？
+21:56 varna: 一大堆haskell的包飞过去了
+21:56 varna: 我赌十个NKC, 他们过一阵子就会开始报错
+21:56 Plough: PYTHONPATH=/usr/lib/python2.7/site-packages calibre
+21:56 Plough: 这样呢
+21:56 varna: 每次haskell的包都报错说stdin如何如何
+21:56 varna: 然后我何时安了node.js...
+21:56 varna: 还有在校内伪装MAC用的macchanger...
+21:57 varna: racket...
+21:57 varna: 简直藏污纳垢
+21:57 Plough: node.js是洗剪吹的最爱
+21:57 varna: 噗，还有rust
+21:57 Plough: 这下他们也可以写后端了
+21:57 cleamoon__: haskell的包你是用yaourt装的？不会崩吗...
+21:57 varna: pacman的
+21:57 varna: 全都会崩
+21:57 code_new: Plough: https://pastebin.mozilla.org/8834251
+21:57 cleamoon__: ....
+21:57 varna: 我都押十个NKC了
+21:58 varna: 还有wine-HOMO
+21:58 varna: lua vbox ...
+21:58 varna: xmonad xmobar...
+21:58 Plough: ……东西真多
+21:59 wlemuel quit:Ping timeout: 250 seconds
+21:59 varna: 我不用的软件比田中放的卫星都多
+21:59 cleamoon__: 我会说这些我都装了吗
+21:59 cleamoon__: 我连sage都装了
+21:59 cleamoon__: 而且我从没用过
+21:59 Plough: 这都什么鬼
+21:59 varna: 终于到gcc运行时库了
+21:59 Plough: 我查了一下那个报错
+21:59 varna: lib32系列
+21:59 Plough: 一堆人叫我重新编译python
+21:59 varna: ...
+21:59 wlemuel joined channel
+21:59 code_new: ……
+21:59 varna: 然而我觉得该相信ABS
+22:00 varna: 跟ABS斗争的结果是你得到了至少一天不可用的系统
+22:00 Plough: 然而dwm必须abs
+22:00 varna: 在一天之后你运行系统，成功地检查到了依赖破损
+22:00 varna: dwm直接上源码吧
+22:00 varna: 一共两三千行的东西
+22:00 varna: keyring...别猫
+22:00 Plough: abs也是源码……
+22:00 Plough: 反正无所谓了
+22:01 Plough: make install 和 makepkg -i差不多
+22:01 varna: 我最烦keyring更新，他们那个服务器简直就是小霸王
+22:01 Plough: 我也烦
+22:01 varna: 果然导入失败
+22:01 Plough: 另外我总觉得code_new出现了些python之外的灵异现象……
+22:02 Plough: 我最近Syu比较勤快，今天没出问题……
+22:02 varna: 我日，还是不能导入
+22:02 code_new: 我每日Syu的
+22:02 code_new: 别问我Syu是谁
+22:03 Plough: 确认一下，Py2版本号是？
+22:03 code_new: Python 2.7.9
+22:03 Plough: pacman -Q python2
+22:03 code_new: python2 2.7.9-1
+22:04 Plough: pacman -Q python2-dbus
+22:04 code_new: python2-dbus 1.2.0-4
+22:04 Plough: ……和我这边是一致的啊
+22:04 code_new: ……
+22:05 code_new: 要不肛旗ssh我试试
+22:05 Plough: 今晚来不及了
+22:05 code_new: 好吧
+22:05 varna: 我日
+22:05 varna: 还是失败
+22:05 wlemuel quit:Ping timeout: 265 seconds
+22:05 xxxxxxxx: 哈哈哈
+22:05 Plough: 其实我有个最简单的办法解决
+22:05 code_new: 重装吗QAQ
+22:05 Plough: 把所有用python写的软件全灭了
+22:05 code_new: ……
+22:06 Plough: 一了白了
+22:06 Plough: 百*
+22:06 code_new: 最近用到ebook-viewer
+22:06 code_new: 才知道python坏了
+22:06 Plough: 明天我再查查
+22:06 Plough: 22:59 < Kopta> will you be turning a lady into a real lady? ——#kancolle@Rizon
+22:06 code_new: 感谢Orz
+22:07 Plough: 换Perl吧
+22:07 varna: 逗
+22:07 varna: 重装就好了……
+22:07 varna: 我就地重装了archlinux-keyring, 直接解决……
+22:08 Plough: ……
+22:08 code_new: ……
+22:08 Plough: 所以其实小霸王服务器是有镜像的么
+22:08 varna: 这就是软件包之间没有更好的拓扑依赖的坏处
+22:08 Plough: 我们来写个suckless package manager吧
+22:08 varna: 估计是某时刻keyring有一次更新，但本地的keyring用了旧的
+22:08 varna: 其实这时候nix的部署脚本可能真的更好
+22:08 code_new: Rsc太作死了QAQ
+22:09 varna: pacman的删除太渣了
+22:09 varna: 我宁可留下一堆渣依赖，也不敢连根拔
+22:09 code_new: ……
+22:09 varna: 一旦“是，按我说的做”，那就真按我说的做了……
+22:10 Plough: 我不知道啥时候养成了用Rndd的习惯……
+22:10 varna: 哈哈哈哈又一个氪金大成功的
+22:10 Plough: ……最近氪金大成功好多啊
+22:10 Plough: 35那群里已经出来两个了
+22:10 varna: 他们是不是背了几个锅？
+22:11 varna: 氪金背锅自带大成功玄学
+22:11 xxxxxxxx: 氪金大成功
+22:11 xxxxxxxx: ？
+22:11 varna: 需要解压8GiB, 净安装666MiB
+22:11 varna: xxxxxxxx: 被不明不白地白送了点数
+22:11 Plough: 35的群里人人都要背锅
+22:12 Plough: 然而我并没有氪金大成功过
+22:12 varna: 礼品券不会大成功吧
+22:12 varna: 一般大成功的都是绑了卡的？
+22:12 Plough: 氪金大成功还有另一种表现的
+22:12 Plough: 买十个戒指，猫了
+22:12 varna: ...
+22:12 Plough: 刷新上去一看，自己拿到了20个戒指……
+22:12 varna: 服务器端校验失败么
+22:12 varna: 噗
+22:12 Plough: 应该是
+22:13 varna: 校验失败但事务不衮回！？
+22:13 xxxxxxxx: http://terraria.gamepedia.com/Coin_Gun 这个和造大和比哪个坑?
+22:13 Plough: 还有人氪了20个船位，然后猫了
+22:13 Plough: 然后他船位开满了……
+22:13 code_new: ……
+22:13 varna: ...
+22:13 Plough: 当然意思是他拿到了40个船位
+22:14 varna: 开始更新
+22:14 varna: 合计614个包
+22:14 Plough: 不过这种情况倒是不用怕
+22:14 Plough: 每次官方的答复都是“当送你的就行了”
+22:14 varna: 藤本退散！平贺不让！
+22:14 varna: 风浪不侵！机雷御免！
+22:14 Plough: 不过说到这事，我有想起之前私服的事了……
+22:14 Plough: 入渠猫了，刷新一看
+22:14 Plough: 资源和桶没了，船还是破的
+22:14 varna: 啊，我安了booooooooooooooooooooooooooooooooooooooooooost
+22:15 Plough: 还有人氪了2k弹药，猫了
+22:15 Plough: 刷新一看，钱没了
+22:15 Plough: 弹药也没影
+22:15 varna: 还安了libevent
+22:15 varna: chromium-pepper-flash的密钥突然对了
+22:15 varna: 居然还有cmake
+22:16 varna: dogexygen
+22:16 varna: eeemacs...
+22:16 wlemuel joined channel
+22:16 Plough: ……你还留着emacs啊
+22:17 varna: 我忘删了
+22:17 Plough: 然而改配置文件的时候我还是用nano或者vim
+22:18 Plough: eeeeeeeeeeeeeeeeeeeeeeeeeemacs太慢了，而且不能用root
+22:18 varna: vim其实也开始慢了
+22:18 varna: 当然我认为这是py用户的锅
+22:18 varna: 他们写些渣插件慢得见鬼
+22:18 Plough: 23333
+22:18 Plough: @Randall
+22:18 code_new: ……
+22:18 xxxxxxxx: 看了看ubuntu的软件中心
+22:18 Plough: 我听说还有个小行星用这家伙命名了
+22:19 varna: 哈哈哈哈
+22:19 varna: ghc-pkg挂了
+22:19 Plough: http://ww2.sinaimg.cn/large/79703ec8gw1esc5pvfnxwj20ei09r3zw.jpg 真想去一次
+22:19 varna: 哈哈哈哈哈哈haskell又一次集体阵亡
+22:19 xxxxxxxx: 有没有小行星用雷总的名字命名?
+22:19 Plough: 噗
+22:19 Plough: hshskell又挂了啊
+22:20 varna: haskell的包每次更新都在爆炸
+22:20 varna: Interface file is of wrong version: foo bar blah blah blah
+22:21 Plough: 用什么haskell
+22:21 varna: libreoffice...
+22:21 Plough: 就该用Erlang
+22:21 varna: hs我是当时拿来做比较试验的
+22:21 wlemuel quit:Ping timeout: 250 seconds
+22:21 iyzsong: haskell用nix很爽啊
+22:21 varna: 当时写那个H-M推断实现需要一个正确的实现对比
+22:21 varna: 然后就用了ghci
+22:22 izmntuk quit:Ping timeout: 244 seconds
+22:22 wlemuel joined channel
+22:22 varna: build hook
+22:22 Plough: 从此不曾见光明？
+22:23 varna: linux安完了
+22:23 xxxxxxxx: nix现在仓库里东西多了么?
+22:23 varna: 下面是mate系列
+22:23 Plough: 真可怜
+22:23 varna: xxxxxxxx: 我觉得该问问他们的包签名是否冲突了
+22:23 Plough: 先碎叫
+22:23 Plough: 诸君武运
+22:23 cleamoon__: 编译python...
+22:23 Plough quit:Quit: 碎叫
+22:23 cleamoon__: 超作死
+22:23 varna: 咦，我还有个nmap
+22:23 varna: 我什么时候干过这种下作事情的……
+22:24 iyzsong: xxxxxxxx: nixpkgs有全部的hackage(自动更新)...
+22:24 cleamoon__: 不过我也确实做过很多次死，但没一次成功的
+22:24 xxxxxxxx: 羊驼好梦中下作
+22:24 varna: 撸管是人类进步的阶梯
+22:24 code_new: 我还编译了共4次PyQt4/5……
+22:25 varna: 今天我一撸，就消灭了四十八个移入-归约冲突
+22:25 iyzsong: 真的么..
+22:25 cleamoon__: arch是真的不能全局编译，会死
+22:25 varna: iyzsong: 真的
+22:25 cleamoon__: 喜欢编译去gentoo
+22:25 iyzsong: = =
+22:25 varna: iyzsong: 昨天我那个文法还是全部最右推导的，今天我一撸就把他们都变成最左推导了
+22:25 code_new: gentoo现在安装速度很快了感觉
+22:25 code_new: 寒假也就5h就搞定了
+22:26 iyzsong: 2333
+22:26 varna: 然后我检查了一下语法树，看上去还不错
+22:27 varna: 咦，thunderbi还没卸掉……
+22:27 cleamoon__: gentoo就是装完之后各种奇葩错误，然后修复错误各种奇葩男受
+22:27 varna: code_new: 快大建
+22:27 xxxxxxxx:  code_new>gentoo现在安装速度很快了感觉 code_new>寒假也就5h就搞定了
+22:28 code_new: 怎么要大建了QAQ
+22:28 varna: 不大建你怎么变强呢
+22:28 code_new: ……我的舰娘们很卖力的
+22:28 xxxxxxxx: 大建一万个马战神出来全队满运
+22:28 code_new: E6斩杀一次就过了
+22:28 code_new: 虽然拿了A
+22:29 varna: 这次毕竟是能排前三易的福利活动……
+22:29 izmntuk joined channel
+22:29 xxxxxxxx: code_new: 捞到罗马了?
+22:29 varna: 伙计们我重启了
+22:29 code_new: 没有啊……
+22:29 varna quit:Quit: leaving
+22:29 xxxxxxxx: 我也没
+22:29 cleamoon__: 我昨天大建了个5h的
+22:29 code_new: xxxxxxxx: 这次活动只有高波
+22:29 cleamoon__: roma我估计早晚开大建
+22:29 code_new: 倒是捞到了一库
+22:30 code_new: 下次活动应该还可捞
+22:30 code_new: Roma*
+22:30 cleamoon__: 一库+
+22:30 cleamoon__: 但是没捞到511
+22:30 xxxxxxxx: 这次活动我拆了两个19
+22:31 xxxxxxxx: 因为捞出了战神
+22:31 code_new: 巨基欧皇
+22:31 code_new: ……
+22:31 xxxxxxxx: 然而罗马根本连骡子毛都没见过...
+22:31 varna joined channel
+22:32 varna: 我活着回来了
+22:32 code_new: 好快
+22:32 varna: Linux shiki 4.0.4-1-ARCH #1 SMP PREEMPT Mon May 18 06:43:19 CEST 2015 x86_64 GNU/Linux
+22:32 xxxxxxxx: varna 说不定过两天就发现是半死不活的回来了
+22:32 ASenR joined channel
+22:32 code_new: 23333
+22:33 varna: 目前看起来还好
+22:34 iyzsong: Linux akarin 4.0.4-gnu #1 SMP Mon May 18 21:33:05 UTC 2015 x86_64 GNU/Linux
+22:34 varna: ok, 全面复活
+22:35 code_new: Linux arch 4.0.3-1-ARCH #1 SMP PREEMPT Wed May 13 15:38:47 CEST 2015 x86_64 GNU/Linux
+22:35 code_new: 卧槽
+22:36 code_new: 话说我404是装了的
+22:36 code_new: 怎么not found 了
+22:36 iyzsong: o.o
+22:36 cleamoon__: shiki是什么
+22:36 varna: 主机名
+22:36 xxxxxxxx: code_new: 你的时间...
+22:37 code_new: ……
+22:37 code_new: 昨天刚装上
+22:40 cleamoon__: 主机名什么一次
+22:40 cleamoon__: 欧皇基王
+22:41 xxxxxxxx: cleamoon__: 幼女在说啥?
+22:42 cleamoon__: 主机名什么意思
+22:42 cleamoon__: 说基王拆两个19
+22:42 varna: cleamoon__: shiki可以直接读作“式”或者“四季”，中二点读作“尸鬼”也行
+22:42 varna: 都是shiki
+22:43 xxxxxxxx: cleamoon__: 那个本来是为了练重巡1-5捞出来的
+22:43 code_new: shiki: 色
+22:43 cleamoon__: .....
+22:43 cleamoon__: 欧皇基王
+22:43 cleamoon__: 重巡怎么打1-5
+22:44 cleamoon__: 两仪 驼
+22:44 code_new:  不是在1-5练重巡= =
+22:44 varna: 是为了练重巡而在1-5捞出的肉盾……
+22:44 xxxxxxxx: 3-2需要潜艇 没有潜艇 所以去1-5先捞潜艇想要168 结果出了俩19
+22:45 code_new: 活动前我拆了大约15只ss
+22:45 code_new: 欧皇巨基……
+22:45 xxxxxxxx: 潜艇大亨....
+22:45 code_new: 我为了捞一库在1-5奋斗了上百回了
+22:45 varna: 巨基是典型的又欧又肝
+22:46 izmntuk quit:Ping timeout: 244 seconds
+22:46 wlemuel quit:Ping timeout: 264 seconds
+22:46 wlemuel_ joined channel
+22:46 cleamoon__: .......
+22:47 xxxxxxxx: 又事故了....
+22:47 cleamoon__: 感觉基王就是需要大和了，来一发就有了，需要潜艇了，去一趟1-5就三四艘了，不需要留船，都现捞就好了
+22:48 varna: 我觉得也是
+22:48 code_new: 巨基官托
+22:50 varna: 我现在手头几个一级潜艇，但还是不想练级
+22:50 xxxxxxxx: 1-5活动E2通过后我捞了两三回每次大概一上午
+22:50 cleamoon__: 我自从知道了2-3之后就没拆/喂过潜艇，但完全没上涨
+22:50 xxxxxxxx: 能捞出1-2个潜艇
+22:51 varna: 我捞了不到一百盘明石的时候也就出了一两个潜艇
+22:51 wlemuel_ quit:Ping timeout: 255 seconds
+22:51 wlemuel joined channel
+22:52 cleamoon__: 我把山城从2练到40，1-5，就出了一个58
+22:53 * xxxxxxxx 想要罗马 然后罗马就放假了
+22:54 cleamoon__: 这是个比我晚入的甲鱼的炫耀
+22:54 xxxxxxxx: 说着terraria挂机都出事故了
+22:54 varna: 我入坑不到三个月的时候开了活动
+22:54 varna: 然后我打了两面……
+22:54 varna: 巨基入坑不到三个月的时候开了活动，他通关了
+22:55 cleamoon__: +
+22:55 code_new: +
+22:55 cleamoon__: 欧皇肝帝基王
+22:55 code_new: 皇帝王
+22:55 cleamoon__: 皇帝王+
+22:56 xxxxxxxx: 不是说因为是福利活动么
+22:56 cleamoon__: 夏活就是基王成为julao的典礼
+22:56 cleamoon__: 福利活动我差点咸鱼没过...
+22:57 varna: 但问题是MI也是福利
+22:58 varna: 可我连AL的二线阵容都凑不出来……
+23:00 varna: 巨基那叫帝皇
+23:00 varna: 次男帝皇的帝皇
+23:01 varna: 回去了，诸君武运
+23:01 varna quit:Quit: leaving
+23:12 cleamoon__: 次男道弟黄
+23:28 izmntuk joined channel
+23:34 LittleKey joined channel
+23:43 hoxily joined channel

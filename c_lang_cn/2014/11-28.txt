@@ -1,0 +1,655 @@
+00:09:boosure quit:Quit: Get your hand off of it
+00:20:blackskygg quit:Ping timeout: 240 seconds
+00:53:yzld2002 joined channel
+00:56:yzld2002 quit:Client Quit
+01:23:erhandsome quit:Ping timeout: 240 seconds
+01:24:Stevearzh quit:Ping timeout: 272 seconds
+02:21:lh_mouse quit:Read error: Connection reset by peer
+02:41:boosure joined channel
+03:58:boosure quit:Ping timeout: 245 seconds
+04:41:cleamoon: EliClover 刚才切换出搜狗 一下弹出个今日输入文字超过100个字 点开一看 已输入XX个字 击败全国XX%人。。。一股草泥马的感觉油然而生
+04:42:boosure joined channel
+04:43:boosure quit:Client Quit
+05:03:cleamoon quit:Ping timeout: 258 seconds
+05:36:cleamoon joined channel
+05:43:boosure joined channel
+06:04:izmntuk quit:Remote host closed the connection
+06:54:xxxxxxxx: http://puu.sh/d85ZU/6490290bc1.jpg @FrankHB 
+06:56:cleamoon quit:Ping timeout: 240 seconds
+07:11:cleamoon joined channel
+07:41:cleamoon quit:Ping timeout: 265 seconds
+07:55:cleamoon joined channel
+08:06:cleamoon quit:Ping timeout: 258 seconds
+08:13:GODDOG joined channel
+08:21:cleamoon joined channel
+08:55:GODDOG quit:Quit: leaving
+08:57:Sleepwalking joined channel
+09:05:lh_mouse joined channel
+09:26:lh_cat quit:Ping timeout: 245 seconds
+09:35:lh_cat joined channel
+09:35:lh_cat: 狗输入法本来就逗
+09:36:whatofor joined channel
+09:59:boosure quit:Ping timeout: 255 seconds
+10:05:boosure joined channel
+10:17:Xilzzerts joined channel
+10:23:xxxxxxxxx joined channel
+10:24:xxxxxxxx quit:Ping timeout: 265 seconds
+11:05:condy joined channel
+11:13:erhandsome joined channel
+11:16:hope1 joined channel
+11:19:boosure quit:Ping timeout: 240 seconds
+11:25:lhanjian joined channel
+11:29:hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+11:43:boosure joined channel
+12:05:condy: geordi: << TYPE<void* volatile*>
+12:05:geordi: void* volatile*
+12:05:condy: geordi: << TYPE_DESC<void* volatile*>
+12:05:geordi: pointer to a volatile pointer to anything
+12:06:condy: geordi: replace void with int
+12:06:geordi: pointer to a volatile pointer to an integer
+12:27:Sleepwalking quit:Ping timeout: 240 seconds
+12:33:xxxxxxxxx quit:Ping timeout: 272 seconds
+12:33:condy: geordi: { auto fn = [](int x) { to_string(x); }; typedef result_of<decltype(fn)>::type A; cout << TYPE<A>; }
+12:33:geordi: error: 'type' in 'class result_of<main(int, char**)::<lambda(int)> >' does not name a type
+12:33:condy: geordi: { auto fn = [](int x) { to_string(x); }; typedef typename result_of<decltype(fn)>::type A; cout << TYPE<A>; }
+12:33:geordi: Same error.
+12:34:Stevearzh joined channel
+12:44:boosure quit:Read error: Connection reset by peer
+12:47:Petrus07 joined channel
+12:53:hoxily|rest joined channel
+12:55:hoxily|rest left channel:
+12:59:whatofor_1 joined channel
+13:02:whatofor quit:Ping timeout: 264 seconds
+13:08:condy: 训练集抓的不好，结果都给我推荐星际穿越..Orz.
+13:22:lh_cat2 joined channel
+13:23:lh_cat quit:Ping timeout: 245 seconds
+13:26:Sleepwalking joined channel
+13:29:xxxxxxxx joined channel
+13:34:whatofor joined channel
+13:38:whatofor_1 quit:Ping timeout: 272 seconds
+13:51:FrankHB quit:Remote host closed the connection
+13:51:FrankHB joined channel
+13:59:izmntuk joined channel
+14:08:yzld2002 joined channel
+14:19:yzld2002 quit:Quit: yzld2002
+14:20:lhanjian: FrankHB, C的Label后面不能跟声明，有啥设计上的解释么？
+14:20:lhanjian: ABCD: int a; //WRONG
+14:21:FrankHB: label: 语句;的副作用。
+14:21:FrankHB: 一样的道理：C一开始就不允许声明出现在同一个块的语句后面，你说有啥原因么。
+14:28:Xilzzerts: ..没有section的ELF怎么解析
+14:28:Xilzzerts: 现在能够通过segment找到DYNAMIC段
+14:29:Xilzzerts: 但是不知道SYMTAB的长度
+14:48:lhanjian: Xilzzerts, http://em386.blogspot.com/2006/10/elf-no-section-header-no-problem.html
+14:48:lhanjian: 有用否？
+14:49:Xilzzerts: thx，我先看看
+14:59:lh_cat2 quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+15:00:lh_cat joined channel
+15:04:Xilzzerts: 这可是有效的论据啊。。
+15:04:Xilzzerts: 虽然和目前我的实现有点差别
+15:07:lhanjian: Xilzzerts, zirx莫非是搞出了什么救命的黑魔法？
+15:09:Xilzzerts: 每个Symbol都有一个名字，它给出了字符串表和他的长度
+15:09:Xilzzerts: 解析出字符串表的项数应该就是Symbol的个数
+15:11:lhanjian: 哎，symbol的名字不是可以全部strip的么
+15:12:Xilzzerts: 这个不能Strip吧，不然dlsym怎么办
+15:16:lhanjian: 哦，原来是Dynamic Linking啊，我火星了
+15:17:Xilzzerts: 我试的几种办法都和readelf的不一样。。
+15:21:condy quit:Quit: leaving
+15:21:Xilzzerts: readelf有句注释
+15:21:Xilzzerts: Since we do not know how big the symbol table is,
+15:21:Xilzzerts: 	     we default to reading in the entire file (!) and
+15:21:Xilzzerts: 	     processing that.  This is overkill, I know, but it
+15:21:Xilzzerts: 	     should work.
+15:34:Xilzzerts: 貌似readelf也是用的文章提到的那种办法。。
+15:37:Sleepwalking quit:Ping timeout: 255 seconds
+15:40:Sleepwalking joined channel
+16:05:whatofor_1 joined channel
+16:06:whatofor quit:Ping timeout: 250 seconds
+16:09:whatofor_1 quit:Ping timeout: 256 seconds
+16:10:whatofor joined channel
+16:12:hope1 joined channel
+16:12:hope1: 分数线出来了
+16:12:lhanjian: hope1, 怎么样
+16:13:hope1: 一等线400分，我415
+16:14:lhanjian: GOOD
+16:14:lhanjian: 不对,Perfect
+16:15:hope1: 浙江线果然上500了……
+16:18:lhanjian: 这也要划省级分数线啊……
+16:20:hope1: 浙江在分数线最高的情况下获奖人数还是比其他省多不少……
+16:20:hope1: http://www.noi.cn/noi-news/noi/650-ccf-noip2014
+16:22:hope1: noip实际上还是省级的，只不过试题统一
+16:22:lhanjian: 江西好低啊……
+16:23:lhanjian: 如果……
+16:23:lhanjian: 算了，没有如果
+16:25:hope1: 分数线比较低的省基本上没有几所学校组织信息竞赛
+16:25:lhanjian: 哎
+16:25:lhanjian: 都怨自己吧
+16:27:xxxxxxxx: FL8000 300左右的电容键盘有土豪去试试看么?
+16:27:FrankHB quit:Read error: Connection reset by peer
+16:27:xxxxxxxx: 虽然外观很掉价
+16:27:hope1: 没意义，那我还不如怨自己没早生两年直接保送……
+16:27:xxxxxxxx: 你应该怨自己没能跳级
+16:32:hope1 quit:Quit: http://www.kiwiirc.com/ - A hand crafted IRC client
+16:32:hope1` joined channel
+16:33:hope1`: 有道理
+16:35:Sleepwalking: 才300
+16:36:lh_mouse: Sleepwalking, 捏脸
+16:43:FrankHB joined channel
+16:51:lh_mouse: FrankHB, 戳
+17:11:lhanjian: hope1`, 也对哦，海棠直接跳级，那就回避了休学两年的问题了
+17:11:endle joined channel
+17:12:lhanjian: lh_mouse, 耗子看过M￥
+17:12:lhanjian: 最近开源的那些东西了么？
+17:12:hope1`: lhanjian:休了之后又没回去上初一，相当于正常时间
+17:13:hope1`: 原来wen.lu的出处在这 http://www.v2ex.com/t/117230
+17:13:lhanjian: hope1`, 美帝的那个greatfire.org还想拿走wen.lu域名搞宣传……
+17:14:lh_mouse: lhanjian, 没看
+17:14:lhanjian: FrankHB, 耻球看了没?
+17:20:condy joined channel
+17:20:lh_mouse: condy, 爆照
+17:21:condy: 肯定是trigger..
+17:25:erhandsome quit:Quit: leaving
+17:29:biergaizi joined channel
+17:45:JQK joined channel
+17:55:lh_cat quit:Ping timeout: 245 seconds
+18:10:varna joined channel
+18:10:varna: Sleepwalking: 爆
+18:11:varna: 发明了一个好东西
+18:11:varna: my $list = comp( sub { $x + $y + $z }, x => [ 1, 2, 3 ], y => [ 4, 5, 6 ], z => [ 1, 2 ] )->( sub { $x > 2 });
+18:11:varna: 这是个支持延迟求值的列表推导式
+18:13:varna: generator可以是array ref或者sub(=homebrew perlish iterator)
+18:13:varna: guard可以是任意的sub
+18:13:varna: 数量都不限制
+18:23:condy: 黑魔法看不懂啦.
+18:23:condy: @ lhanjian 
+18:28:varna: 这个是 { x+y+z | x belongs to { 1, 2, 3 }, y belongs to { 4, 5, 6 }, z belongs to { 1, 2 }, x > 2 }
+18:29:varna: 但是generator可以是个无限列表，只要不force展开就不会全部求值
+18:31:Sleepwalking: 话说 有人用过CART决策树吗
+18:31:varna: CART没用过，只用过ID3、C4.5和Fuzzy ID3
+18:31:varna: 说着我脱下了米尻酱的库子
+18:33:Sleepwalking: 决策数用来做回归，和FFNN相比如何？
+18:34:varna: 不好
+18:34:Sleepwalking: 在训练样本很有限的情况下呢？
+18:35:varna: 两个都很不好
+18:35:Petrus07 quit:Quit: Leaving.
+18:35:Sleepwalking: 好吧
+18:35:Sleepwalking: 谢谢
+18:35:varna: 训练样本有限就没什么好的，但如果你真的要拼的话，决策树吧
+18:35:xxxxxxxx: cqwrteur又冒出来了
+18:35:varna: xxxxxxxx: 爆
+18:36:varna: 对了米尻酱快脱裤
+18:36:xxxxxxxx: 怎么又变成米尻了...
+18:37:varna: 肉尻的米尻酱和美尻的肛旗酱
+18:37:Sleepwalking: xxxxxxxx: 那是羊驼YY
+18:37:varna: 你看米尻酱都没反对我脱他库
+18:37:xxxxxxxx: 对对对都是他们YY的我怎么可能是基佬
+18:38:varna: 你显然是基佬
+18:40:xxxxxxxx: 我昨天突然觉得D2的号可能被删掉了....
+18:41:xxxxxxxx: 然后都没敢打开
+18:41:Plough joined channel
+18:41:varna: Plough: 爆
+18:42:Plough: varna: 自爆去
+18:42:varna: 频道的看板药娘终于又都来了
+18:42:varna: 大建不
+18:42:varna: 我准备来发低保
+18:42:Plough: 中
+18:42:varna: 刚打5-5差一炮，估计下个月可以试着月常了
+18:42:Plough: 另外我在考虑放弃朝云
+18:42:Plough: 太TM精污了
+18:43:Plough: 我说我捞出了赤城你信么
+18:43:varna: E2好多赤城
+18:43:varna: 什么赤城啊大淀啊
+18:43:xxxxxxxx: 精污?
+18:43:Plough: 赤城掉率比朝云低
+18:43:varna: xxxxxxxx: 被精咽污染的意思
+18:43:varna: Plough: 想想6-2
+18:43:Plough: 而且我还捞出了第二只防晒霜
+18:43:xxxxxxxx: 什么郝斌啊
+18:43:varna: 我看话题帖都是大坨赤城出货，就是没朝云
+18:44:Xilzzerts quit:Read error: Connection reset by peer
+18:44:Plough: 总之我先大建，然后能捞多少捞多少
+18:44:varna: 要么就是天降防晒霜，拆夕云级保平安
+18:44:Plough: 现在24k油23k弹药
+18:44:varna: 刚5-5烧了我三千油四千钢
+18:44:Plough: 我想连赌
+18:44:Plough: 两发4662
+18:45:varna: 我陪你两个低保吧
+18:45:varna: 多了我赌不起
+18:45:Plough: 等8点半
+18:45:varna: 成
+18:45:Plough: 我看看玄学有没有用
+18:45:lh_mouse: 羊驼来了又热闹了
+18:46:xxxxxxxx: 热(cao)闹(chuan)
+18:46:varna: 噗，6-2 NKC rate现在0.06%……
+18:46:varna: xxxxxxxx: 爆
+18:46:varna: 你们都不说话，我发黑魔法都不说话，一草船你们就都出来了
+18:46:Plough: ……再次说明你个脸帝
+18:47:Plough: 另外我显示屏到了
+18:47:varna: NKC和肝雪dalao保我怒草雷爷
+18:47:Plough: 笔记本还没回来
+18:47:varna: 要不是昼战那个金孙子命大，现在我估计还在打5-5……
+18:48:lh_mouse: 羊驼每三日前来 巡 视 一番
+18:50:varna: 我来爆药娘
+18:50:Plough: varna:另外我搞了这么个玩意: http://pastebin.ubuntu.com/9281425/
+18:50:varna: 新renderer啊
+18:50:Plough: 我打算直接用Erlang写学派后端了
+18:50:xxxxxxxx: 怎么用ubuntu的了?
+18:50:varna: uuuuuuu
+18:50:Plough: mozilla的没erlang的高亮
+18:51:varna: uuuuu
+18:59:lh_mouse: 开了五个数据库线程   数据库写失败导入文件里面
+19:00:lh_mouse: 数据库线程按照表名轮转调度  一个表一个线程  一个线程好几个表   线程内部序列化
+19:00:lh_mouse: 嘛   还缺点啥
+19:00:varna: 缺点羊味素
+19:02:Petrus07 joined channel
+19:12:varna: http://www.bilibili.com/video/av1748605/ 最近挺流行的一个鬼佬提督
+19:13:varna: 游戏精神挺好，就是缺烈风……
+19:13:Plough: 昨天听说了，去看看
+19:14:varna: FIRE IT UP! We need the power of JESUS!
+19:15:varna: 现在都变成梗了
+19:16:varna: 还是要指出一下，决战对方制空力是111+48*2 = 207，空优311
+19:16:varna: 这都凑不出来明显是一个从零到零的悲伤故事
+19:18:xxxxxxxx:  We need the power of JESUS!哈哈哈
+19:18:varna: 背景故事是他被主任怒草四天，据说只剩三千油
+19:18:Plough: 233333
+19:18:varna: 然后怒吃舰攻伊良糊冲进去跟太太拼耶稣
+19:18:Plough: 看完我就想说别人家的大井
+19:18:varna: 耶稣给他发动了全套夜战buff
+19:19:varna: 然后北上大人照着装母姬来了个6xx
+19:19:varna: 结论：耶稣不管雷击
+19:19:Plough: 233333
+19:19:varna: 他连支援都烧不起了
+19:20:varna: 贴吧有人似乎演习过这提督
+19:20:varna: 和我等差不多（可能还差点），挺平常的黑鬼……
+19:21:Plough: 别被骗了，人是美提
+19:21:varna: 不管他脸多白，这货的直掩机里没052也得有紫电
+19:22:Plough: 明年春活直接三户愚吕冲进去
+19:22:xxxxxxxx: 简直吃错药....
+19:22:varna: 烈風を巻き起こして 突き進め～
+19:22:varna: 春活我也就准备最多折腾一户愚吕
+19:23:varna: 不捞船大概够用了
+19:24:varna: 反正最后一关看看敌方数据，如果能干掉就打；然后再看看劝退力，劝退理论上几乎必然的话就不打，直接放烟花去
+19:24:varna: 现在看矶风颇顺眼，但是矶风怎么也得等个半年，所以别的花瓶有则有没有就算了……
+19:25:varna: 矶风可是知道打敌人要用单纵的
+19:26:Plough: 我还是信北上大人
+19:26:Plough: 我家的北上大人当年可是抵挡住了Hime的诱惑愣是选择了教授
+19:27:varna: 我就知道我对不起大井
+19:27:varna: 拿掉爆雷之后我一晚上拿下四个击杀
+19:27:Plough: 2333333
+19:28:varna: 北上粘土下午到货了，放在宿舍里可以模
+19:28:Plough: 大建不
+19:28:varna: 等我十分钟
+19:28:Plough: 我看看玄学时间到底是东八区还是东九区
+19:28:Plough: 中
+19:29:Plough: 先日常赌电探
+19:29:Plough: 昨天出了个32
+19:29:Plough: 再把欧根改了我就可以给支援舰队每人一个高级电探了'
+19:30:Plough: 噗，昨天出了那珂酱
+19:35:varna: 赌？
+19:35:Plough: 中
+19:35:varna: 4:20
+19:35:Plough: 秘书欧根 公式4662+20
+19:35:varna: 4:00
+19:35:varna: 温暖了
+19:36:Plough: 4小时
+19:36:Plough: 4小时
+19:36:varna: 赌赌赌不能停
+19:36:varna: 我再来一发
+19:36:varna: 刚才一个是HA RU NA
+19:37:Plough: 5小时
+19:37:varna: 1:30
+19:37:varna: 喷
+19:37:varna: 好
+19:37:varna: 还有谁缺对空的
+19:37:Plough: 4小时
+19:37:boosure joined channel
+19:37:Plough: 说好的活动玄学和四槽玄学呢……&
+19:38:Plough: 回头看一眼 麦霸麦霸陆奥大傻
+19:38:Plough: 去吃饭
+19:39:code_new joined channel
+19:39:varna: 第四发4:20
+19:39:code_new: varna, 爆
+19:39:varna: code_new: 你看卡您
+19:39:varna: 你看看你
+19:40:code_new: 2333
+19:41:varna: 快来大建
+19:41:code_new: 周一活动结束，看能不能捞一只天津风
+19:41:varna: 刚才我和肛旗一人放了四个烟花
+19:41:code_new: 大和？
+19:41:varna: 他造大和，我低保
+19:41:varna: 现在我就剩不到一万油了
+19:42:code_new: 我刚刚来了一发大凤……然后6航就齐了
+19:42:varna: 你这欧洲人
+19:42:varna: 我三发大凤放出去加了不到十点对空
+19:43:varna: 下个月得谨慎点了
+19:43:code_new: 不……我赌烈风已经1个半月了
+19:43:code_new: 目前只有一个……
+19:43:varna: 欧洲人用脸挡航弹，不用什么十七试舰战
+19:43:Sleepwalking quit:Ping timeout: 250 seconds
+19:44:code_new: 而且那一个是第一次赌出的orz后面就没了
+19:44:varna: 目前的资源……
+19:44:varna: 9.9k/13.3k/24.6k/11.6k+465/66/45
+19:45:varna: 这几天又是出击任务又是5-5的，糟蹋掉不少
+19:45:code_new: 20.6k/14.1k/15.2k/17.7k
+19:45:code_new: ^20.6k/24.1k/15.2k/17.7k
+19:45:varna: 超战舰小破一次就要四百多钢
+19:45:varna: 然后这伙人还接力蹭
+19:46:varna: 然后我还上了2bb2cv的道中支援……
+19:46:varna: 这一顿胡吃海喝
+19:46:code_new: 终于把你的油肝没了……
+19:46:code_new: 我可是天天去南西捞油
+19:46:varna: 我也南西
+19:47:varna: 你得明白我上周末的桶数不足四百……
+19:47:varna: 上次大凤烟花是不是上周
+19:47:code_new: ……
+19:47:varna: 那时候我还剩一千多油……
+19:47:varna: 然后我肝回两万，然后造回一万……
+19:48:varna: 哦不到两万，今天打5-5之前是一万八
+19:48:code_new: 感觉每天南西捞油+任务+远征就能有近8000油输入
+19:48:varna: 毕竟低保
+19:49:varna: 远征我还是坚持11桶北鼠13桶东急
+19:49:code_new: 下周一再来一发大和
+19:49:varna: 但是每天演习差不多就得烧掉一千油弹
+19:50:code_new: 我的演习次数太少……
+19:50:varna: 中间还有棒各出击、西村队第二次出击、轻航母战队出击……
+19:50:varna: 虽说这几个加起来可能也就两千多消耗
+19:51:code_new: 吃得太猛……
+19:51:code_new: 顺便问一下瑞鹤要不要留两只
+19:51:varna: 各种大舰巨炮航母往出开，5-1还得上道中支援
+19:51:varna: 不要
+19:51:code_new: 赤城留两只？
+19:51:varna: 不要
+19:51:code_new: 不是说活动要吗
+19:52:varna: 你不会看了贴吧那个傻逼的留两套攻略吧
+19:52:code_new: 没有=。=
+19:52:varna: 一般活动第一阶段拼的是闪、桶和二线……
+19:52:Sleepwalking joined channel
+19:52:varna: 而航母这东西一共就八个，正常的游戏设计不会把你坑在理论阶段
+19:52:Sleepwalking: varna: 爆
+19:52:varna: Sleepwalking: 你软
+19:52:code_new: 好的……那样我能多空点船位了
+19:52:varna: Sleepwalking: 得我爆你，你射在地上
+19:53:code_new: 2333
+19:53:varna: 所以其实重要的是二线能拿出跟自己弹性相应的队伍
+19:54:* code_new 已经步入80大军……
+19:55:varna: 弹性这次没法说
+19:55:code_new: 现在有太多船需要肝了……略虚
+19:56:varna: 有说法是这次的弹性线是80/94/98/100
+19:56:varna: 但我的观察只是80/90/100
+19:56:code_new: 80/90/100+
+19:56:varna: 你们再虚也没我虚……
+19:56:code_new: 80/94/98/100略奇葩
+19:57:code_new: ……
+19:57:varna: 第一页118~86，第二页85~78，第三页77~68，第四页68~58，第五页56~42……
+19:58:varna: 而且这里面还有四五个潜艇
+19:58:varna: 就这样我还得打最高难度，支援队的12甲都凑不齐
+19:58:varna: 支援队的大根其实也凑不齐……
+19:59:code_new: 第一页还62～92，第二页51～61，第三页32～47，后面没法看了
+19:59:code_new: 潜艇50+的有3只了
+19:59:Plough: 回来了
+19:59:Plough: 先拆
+19:59:code_new: Plough, 先爆
+19:59:varna: 之前我以为一天南西把58从89肝上90很黑
+20:00:varna: 后来有一天我把58从90肝上91
+20:00:varna: 然后我想想，噩梦该结束了吧
+20:00:Plough: code_new: 我直接拿大根把你爆脱肛信不信
+20:00:varna: 昨天91～92
+20:00:varna: 我一边吐一边码奥义
+20:00:code_new: ……
+20:00:Plough: 拆了四只大 战 舰
+20:01:Plough: 以及一只偶像
+20:01:varna: 结果我昨天一边吐血一边码奥义，还码错了
+20:02:varna: my $list = comp( sub { $x + $y + $z }, x => [ 1, 2, 3 ], y => [ 4, 5, 6 ], z => [ 1, 2 ] )->( sub { $x > 2 } );
+20:02:varna: 这个推导要支持惰性求值，结果我脑一抽给写成每个generator的迭代算符一起往前走一步
+20:02:varna: 最后我采取了一个极其扭曲的解法
+20:03:varna: 我要求每个迭代算符返回一个对，包含迭代结果和迭代是否结束的结论
+20:03:varna: 然后我手工把所有的generator生成一个续延
+20:03:varna: 形如 $self->{generators}->{x}->($self->{generators}->{y}->($self->{generators}->{z}->()))
+20:04:varna: 然后我把这个续延直接做成一个串，扔进生成的list里；每次惰性求值eval一下……
+20:04:code_new: Orz
+20:04:varna: 其实一开始纸面上写的比这个要好看
+20:05:varna: 我曾经要求每个迭代算符接受一个续延，而不是接受一组参数
+20:05:Plough: 你要干啥
+20:05:varna: 但是那样不好预先生成
+20:05:varna: 我做了一个支持惰性求值的列表推导式
+20:05:varna: 例子像上面那个
+20:05:varna: 实际上是缺省惰性求值
+20:06:Plough: list comprehension么
+20:06:varna: +
+20:06:Plough: Soga
+20:06:varna: comp( formula, generators, ...)->( guards, ... )
+20:06:varna: 这返回一个推导式对象
+20:07:varna: 然后可以随意做点什么，比如取元素或者force全部展开
+20:07:Plough: 我突然想玩玩Source Filter
+20:07:varna: CPAN上那个List::Comprehension太差
+20:07:varna: Source Filter挺好，就一个缺点
+20:07:varna: 如果你要在里面上B系列奥义，源码得能过编译
+20:08:Plough: B系列奥义是啥
+20:08:varna: Deparse之类
+20:08:varna: 一个不太难的例子可以参考Python::Decorator
+20:09:Plough: B::*么
+20:09:Sleepwalking: Source Filter?
+20:09:varna: Perl的hash迭代器太差了，C接口就巨差，Perl自己的也不好
+20:09:varna: Sleepwalking: 爆
+20:09:varna: 对
+20:09:Plough: Soga
+20:09:varna: 结果现在我自己用的迭代干脆都是直接sub { my $idx = 0; sub { ... } }->()
+20:09:varna: 你不给我提供，我自己绑还不行么
+20:10:varna: 提督会奥术，撸酱拦不住
+20:12:varna: Sleepwalking: Perl作死奥义之一，拿当前的caller所在模组的源码进来改改再扔回去
+20:14:Sleepwalking: [语音合成算法之源-滤波器……
+20:14:varna: 滤波器是不是可以拦住巨乳，只让贫乳的过
+20:15:Sleepwalking: 不，一般情况是把巨乳滤成贫乳，改变乳的位置也是可行的，但要冒着重叠的风险
+20:16:varna: 米尻酱现在乳量多少
+20:16:Sleepwalking: 0
+20:16:varna: 乳头都没了？
+20:16:Plough: 被自己咬掉了么
+20:16:varna: 喔喔喔喔喔喔喔喔哦
+20:16:varna: 撸撸撸撸
+20:16:Sleepwalking: 丧失……
+20:18:varna: 总感觉下次活动拼耶稣也会变成梗……
+20:18:varna: 而且得考虑到一个问题，欧洲人很多都是信耶稣的
+20:18:Plough: 天主给了我大凤
+20:19:varna: NKC给了我哔——
+20:19:varna: （自主规制）
+20:20:code_new: 现在每日四发不知道赌什么了
+20:20:varna: 三式套有多少
+20:20:varna: 如果不缺的话考虑水观
+20:20:varna: 当然我觉得烈风和大根更靠谱
+20:20:varna: 或者1993狙击三式弹和91弹
+20:20:code_new: 装备方面还是打算继续烈风
+20:20:code_new: 船方面不知赌什么了
+20:20:varna: 不赌
+20:20:varna: 那四个造船拿来捞自演挺赚的
+20:20:varna: 普建出长门的都是HOMO
+20:21:varna: 资源，不是自演……
+20:21:code_new: 主要是嫌浪费四发紫菜
+20:21:varna: 不浪费
+20:21:varna: 每日的资材收入是正的
+20:22:code_new: 攒资材大建
+20:22:code_new: 资材还是比资源难赚的
+20:22:Plough: 还差400家具币
+20:22:varna: 资材每天都能得几个
+20:22:Plough: 要不然我去3-4捞一趟？
+20:22:varna: Plough: 你周末赶快把武藏买了，下次更新家具说不定就下架了
+20:23:varna: 跑个十远征什么的都行
+20:23:Plough: 所以
+20:23:code_new: Orz
+20:23:varna: 不用专门去家具城
+20:23:Plough: 不对
+20:23:Plough: 我出不去……
+20:23:varna: 我觉得把日常的十远征做了，再跑跑北鼠就行
+20:23:Plough: 只有1.4k弹药了
+20:23:code_new: 肛旗打算换武藏？
+20:23:Plough: 十远征平时做不了
+20:23:varna: code_new: 八万八那个
+20:23:varna: Plough: 明天你不就做了
+20:23:varna: 实在不行弄几个潜艇去家具城逛逛也来得及
+20:23:Plough: 不过其实应该不用等明天
+20:24:Plough: 我北鼠和东急队还没回来
+20:24:Plough: 脸好的话今天就能买
+20:24:varna: 北鼠自带小箱子，拼一下脸吧
+20:24:code_new: 小箱子还是挺好捞的
+20:25:varna: 现在把演习挂图拿下去换了那个很便宜的花
+20:25:Plough: 小箱子不用捞，我跑一天远征就有不少
+20:25:Plough: 108桶196喷火器176资材
+20:25:Plough: 33螺丝
+20:25:Plough: 或许我该去捞明石？
+20:26:varna: 去一趟一百一二十弹吧
+20:26:varna: 反潜比较便宜，但也不会很便宜
+20:26:Plough: 明后天去
+20:26:Plough: 其实我还是想要朝云
+20:26:Plough: 不过我得先把3-5推了
+20:29:code_new: 话说2-5有弹性吗
+20:30:varna: 有
+20:30:varna: lv100+如果走下路推荐回避喔改
+20:30:varna: 虽然未必出，但是打那仗意思不大
+20:31:code_new: 了解
+20:31:code_new: 虽然lv100还很遥远
+20:31:varna: 回避的编成之一是2dd+2ca[v]+cvl+clt
+20:31:varna: 当然还得索敌
+20:32:lh_mouse: varna, pthread_mutex 不是 FIFO的 ？！
+20:32:varna: 不是
+20:32:lh_mouse: 艹  被坑了
+20:34:lh_mouse: bool val = false;  thread1:   pthread_mutex_lock(mtx); atomic_store(val, true); pthread_unlock(mtx);      thread2:  pthread_mutex_lock(mtx); for(;;){ pthread_unlock(mtx); if(atomic_load(val)){ break; } pthread_lock(mtx); sleep(1); }
+20:34:lh_mouse: thread1 华丽饿死
+20:34:lh_mouse: 什么几把东西
+20:37:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:38:varna: 好想侵犯肛旗啊
+20:39:Plough: varna: 对了，我给log弄了个https
+20:39:Plough: 自签名
+20:40:cleamoon: @kazoo04:非程序员大概很难体会「修改规格」这句话的可怕程度。就好比，厨师做了一碗牛肉盖饭，正在进行「把肉盖到饭上」这个关键步骤时突然听客人说：「哎，好想吃披萨呀」
+20:40:varna: 好想侵犯肛旗啊
+20:43:varna: 好想侵犯肛旗啊
+20:43:varna: 肛旗快迟来
+20:43:varna: 快出来
+20:45:cleamoon: Windows媒体播放器终于开始变得有用了。Windows系统捆绑的媒体播放器因为不支持常用的媒体文件格式而被大多数用户抛弃，现在微软逐渐转变方向：Windows 10将支持Matroska Video封装容器和无损音频编解码器 FLAC。微软开发者Gabriel Aul上传了一幅屏幕截图，显示了WMP播放FLAC格式音乐。FLAC不支持DRM，所以一直不被微软支持。新的功能预
+20:45:cleamoon: 计会在不久后推送给Windows 10技术预览版用户。
+20:46:hope1 joined channel
+20:47:lh_mouse: windows 根本不知道它的播放器缺什么
+20:47:lh_mouse: 不能缩小到托盘的播放器 = crap
+20:47:cleamoon:  在泰国军政府总理帕拉育（Prayuth Chan-ocha）面前高举《饥饿游戏》手势的五名大学生遭到了拘留，被控违反了戒严令。在《饥饿游戏》电影中，举三根手指的手势代表了反抗。报道称，五名孔敬大学的学生被带到了一个军营，被要求签署一个不参加政治活动的协议但遭到了拒绝。他们在拘留8小时后释放。政府官员在一份声明中
+20:47:cleamoon: 称，看电影是个人事务，但在看电影后参与政治活动，这是戒严令所不允许的，“如果我们允许一个组织举行政治活动，其它组织就会群起而效之，我们将永远也无法实现和平和次序。”
+20:48:cleamoon:  德州南区检方上周宣布与28岁的黑客Fidel Salinas达成了认罪协议，Salinas承认了运行脚本尝试暴力破解Hidalgo县网站的管理账号，在尝试了14000次错误密码后，系统将真正的管理员给踢了出去。Salinas承认了一项轻罪名，同意向Hidalgo县赔偿1万美元。在声明背后，检方略过了Salinas曾被控44项重罪名的事实，每项罪名的最长刑期为10年，
+20:48:cleamoon: 这位只是玩玩暴力破解的黑客面临了最高440年刑期。几乎所有的罪名全被驳回。Salinas的辩护律师说，这些重罪指控是基于对计算机犯罪法律的错误解读，司法部的检察官有滥权嫌疑。这种重罪化黑客活动的做法也常见于其它类似的案件，比如Aaron Swartz案件，Swartz在压力之下自杀，引发了广泛的争议。
+20:48:varna: 暴力破解啊……
+20:48:varna: 他为什么不开掘削機
+20:51:tutu_wind joined channel
+20:56:cleamoon: 原来爆破是违法的
+20:57:hope1: 返回有序对是常规处理方法吧
+21:00:varna: hope1: ？
+21:01:hope1: 那个迭代
+21:02:varna: hope1: 那个是，但Perl内建的迭代很恶心
+21:02:hope1: 每个generator相当于取repeat lst的下一个元素？
+21:02:varna: 他们不给你迭代器，只给你个each
+21:02:varna: 如果你看c api, 会发现hash iter实际上在hash上记录一个状态
+21:02:varna: hope1: 是
+21:03:varna: generator和guard都是直观的
+21:03:xxxxxxxx quit:Quit: Leaving...
+21:11:hoxily joined channel
+21:11:cleamoon:  闲置公寓楼林立的鬼城、被遗弃的高速公路和被关闭的炼钢厂遍布中国全国各地——政府研究人员撰写的一份报告称，自2009年以来，政府刺激措施和亢奋建设活动已造成6.8万亿美元（折合人民币超过40万亿）的投资浪费。2009年和2013年，无效投资均占到中国经济总投资的近一半。近年有很大一部分投资流向房地产项目，但住宅
+21:11:cleamoon: 销售和价格今年双双下跌，导致各方担忧楼市即将崩盘。房地产行业的配套产业，如钢铁、玻璃和水泥，多数存在严重的产能过剩，受到楼市低迷的沉重打击。中国和海外经济学家独立进行的估算显示，中国在金融危机后投放的刺激资金，有相当大一部分被本应负责通过投资提振增长的共产党官员据为己有。咨询机构Emerging Advis
+21:11:cleamoon: ors Group创始人Jonathan Anderson估计，过去五年里中国有大约1万亿美元不知去向，原因在于监督不力和投资繁荣带来的巨大机会。
+21:11:boosure quit:Read error: Connection reset by peer
+21:12:cleamoon: 2333 @ravenwang：看完狂怒媳妇突然问我：二战是不是所有国家都参战了？我：差不多吧。媳妇：美国跟德国打，中国跟日本打？我：差不多吧… 媳妇：然后是不是跟世界杯一样，打胜的互相再打？我一口血喷了出来。
+21:12:cleamoon: 233333 @Hazel_Zhu：你闷资道么？鬼子要给他们的战犯船做动画了，对于舰娘这种反动、军国主义的文化产品，任何一个有良知的中国人都应该自觉、彻底的抵制她们。转发即可以获得99资材99螺丝99桶，我试过了是真的X
+21:13:Plough: 99桶不够我捞朝云的……
+21:13:varna: 99螺丝？！
+21:13:varna: 我转
+21:13:varna: 桶我也要
+21:13:varna: 不转不是舰队狗
+21:13:Plough: 北鼠没给箱子……
+21:13:varna: 另外指出一点
+21:14:varna: 战犯应该止于利根和伊8两舰，其余只按一般参战人员处理
+21:14:varna: 这就跟爱国青年不知道南京大屠杀在十二月，非得在512不转不是中国人一样
+21:15:cleamoon: 512是什么？
+21:16:hoxily: 地震
+21:16:hoxily: 汶川
+21:16:cleamoon: ...
+21:16:varna: 5.12汶川地震纪念日的时候有傻逼转发南京大屠杀纪念日的什么东西，不转不是中国人
+21:17:lh_mouse: 一九三七年十二月十三日么
+21:17:varna: ……中国人可以不知道南京大屠杀是哪一天，但不该在不知道的时候胡扯
+21:18:lhanjian: cleamoon, 岂止1万亿
+21:18:cleamoon: 大部分人是谁开始扯自己就开始扯了
+21:18:lhanjian: 中纪委给出的数字是人均1000美金（在海外）
+21:18:lhanjian: （难以追回的资金）
+21:19:cleamoon: 1万亿去向不明，被贪污的算是明的
+21:20:lhanjian: cleamoon, 这还只是在海外的。国内的没转移出去的黑金，不知道还要增加多少
+21:20:cleamoon: @某自来水公司经理
+21:21:lhanjian quit:Quit: 风光冉冉东西陌
+21:22:cleamoon: 铝合金又被拖走了
+21:23:varna: 铝！？
+21:23:varna: 哪有铝
+21:28:boosure joined channel
+21:35:FrankHB quit:Remote host closed the connection
+21:36:FrankHB joined channel
+21:36:lhanjian joined channel
+21:36:lhanjian: arch的自动关屏幕功能怎么取消？
+21:37:JQK quit:Read error: Connection reset by peer
+21:37:varna: 没试过
+21:41:JQK joined channel
+21:44:lh_cat joined channel
+21:46:condy: lhanjian: powermanager里设置presentation?
+21:47:lhanjian: 哪个power manager?
+21:47:condy: xfce4的.
+21:48:varna: 噗
+21:50:lhanjian: .
+21:50:lhanjian: 我没DE……
+21:50:Plough: 关屏幕？
+21:50:Plough: xset -dpms&xset s off不行么
+21:51:varna: Plough: 爆
+21:52:hoxily quit:Ping timeout: 264 seconds
+21:53:hoxily joined channel
+21:54:condy: lhanjian: 可以只装power-manager的.
+21:54:condy: 现在也是WM: herbstluftwm,开着xfce4-power-manager.
+21:59:lhanjian quit:Ping timeout: 264 seconds
+22:01:lhanjian joined channel
+22:02:cleamoon: lhanjian, xset s off 还是 xset -dpms
+22:03:lh_cat: condy, 爆照
+22:03:cleamoon: 其中之一，哪个忘了
+22:03:condy: 0.0
+22:05:lh_cat: condy: 爆照
+22:06:condy: QAQ
+22:10:Plough: xset s off关屏保
+22:10:Plough: xset -dpms关电源控制
+22:10:cleamoon: soga
+22:11:condy: 又涨知识了.
+22:12:varna: Plough: 爆
+22:15:lh_cat: condy 不爆照 怎么办
+22:16:condy: 捂脸.
+22:20:varna: 干他
+22:20:varna: 把他撸出去拖
+22:20:condy: 不要这么残忍嘛OJTZ
+22:23:varna: 那就拖出去撸
+22:25:condy: /o/
+22:27:cleamoon: 覆面算有不是暴力的算法吗
+22:29:hoxily quit:Ping timeout: 264 seconds
+22:30:lhanjian: xset -dpms 应该是对的
+22:30:hoxily joined channel
+22:33:cleamoon: 解压日文zip怎么什么编码得到的都是乱码...
+22:35:condy: 走了，大家腋间愉快!
+22:35:condy quit:Quit: leaving
+22:35:tutu_wind quit:Quit: WeeChat 0.4.3
+22:37:lhanjian: cleamoon, unzip -O ?
+22:38:lhanjian: 如果你是从国内用户那里下的，应该用unzip -O gbk 就好了
+22:39:dantmnf: LANG=ja_JP.SHIFT-JIS bsdtar xf baka.zip
+22:39:dantmnf: ^我经常这样搞
+22:40:lhanjian: bsdtar 还支持zip啊……
+22:41:lh_mouse: 改天做个 mcf archiver
+22:41:cleamoon: 似乎不是gtk编码... 而且也不带shift编码...
+22:44:dantmnf: gtk 编码是什么(
+22:47:lhanjian: gbk啦:)
+22:49:cleamoon: 也不对....
+22:49:OO_after quit:Ping timeout: 258 seconds
+22:50:cleamoon: 没办法检测是什么编码吗？
+22:50:lhanjian: file?
+22:51:cleamoon: file没显示zip的编码...
+22:53:endle quit:Quit: Leaving
+22:54:biergaizi quit:Quit: Konversation terminated!
+22:56:OO_after joined channel
+22:58:MisakaMikoto joined channel
+23:02:varna quit:Quit: leaving
+23:06:Plough quit:Remote host closed the connection
+23:11:Petrus07 quit:Quit: Leaving.
+23:17:lhanjian quit:Quit: 风光冉冉东西陌
+23:27:Sleepwalking quit:Ping timeout: 256 seconds
+23:46:erhandsome joined channel

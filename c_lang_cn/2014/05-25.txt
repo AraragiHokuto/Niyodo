@@ -1,0 +1,875 @@
+0:23 condy_ joined channel
+0:47 lh_mouse:geordi, { vector<int> v{1,2,3,4,5}; v.erase(v.end()); }
+0:47 geordi:Undefined behavior detected.
+0:48 lh_mouse:geordi, { vector<int> v{1,2,3,4,5}; v.erase(v.end(), v.end()); }
+0:48 geordi:<no output>
+1:0 condy_:geordi: << (0 && 12)
+1:0 geordi:false
+1:0 condy_:geordi: << (1 && 12)
+1:0 geordi:true
+1:0 condy_:geordi: {vector<int64_t> v(1L<<32);}
+1:0 geordi:Undefined behavior detected.
+1:1 condy_:geordi: {vector<int> v; cout<<v.max_size();}
+1:1 geordi:4611686018427387903
+1:1 condy_:geordi: {vector<int> v; cout<<hex<<v.max_size();}
+1:1 geordi:3fffffffffffffff
+1:38 randomclown joined channel
+2:12 xxxxxxxxx joined channel
+4:7 cleamoon joined channel
+6:20 cleamoon joined channel
+7:2 cleamoon joined channel
+7:7 condy joined channel
+7:55 wlemuel joined channel
+7:58 wlemuel joined channel
+9:31 iyzsong joined channel
+9:48 hysw:iyzsong: 把智商交出来
+9:50 iyzsong:hysw: hohoho
+9:51 hysw:搞定两份作业...
+9:51 hysw:还差一份...
+10:15 T3rm1n4t0r_:share music: fripside - black bullet
+10:31 whatofor joined channel
+10:44 JQK joined channel
+11:33 moehuster joined channel
+11:41 hoxily joined channel
+11:45 Plough joined channel
+11:58 xxxxxxxxx joined channel
+12:27 hoxily joined channel
+12:36 wlemuel joined channel
+12:40 hysw:Plough: 把智商交出来
+12:41 wlemuel joined channel
+12:44 xxxxxxxxx:"FVWM那样强的虚拟桌面功能" <- 这个是指什么?
+13:5 cuihao joined channel
+13:36 code_new joined channel
+14:44 varna joined channel
+14:44 varna:啊，有药娘
+14:44 xxxxxxxxx:去看抗中奇侠传
+14:44 hysw:varna: 把智商交出来
+14:45 varna:不给
+14:45 lh_mouse joined channel
+14:46 endle joined channel
+14:46 condy joined channel
+14:55 hysw:endle: 把智商交出来
+14:56 *hysw 被拓扑学虐死了... 讲课的家伙竟然出无解的题目...
+14:59 xia joined channel
+15:6 xxxxxxxxx:擦又开挂....
+15:6 varna:演到哪了
+15:7 varna:该开始九校战了吧？
+15:7 xxxxxxxxx:飞行中
+15:7 varna:都开始飞了啊……
+15:7 xxxxxxxxx:开战前就飞了
+15:9 varna:那个只是跳吧，常驻型飞行术式应该是在幻境摘星开始之前开发出来的
+15:9 *varna 今日又赌战舰两次，全输
+15:9 *varna 的RP都被大傻吸走了所以要努力把大傻练到改造
+15:10 xxxxxxxxx:http://puu.sh/90cB2.jpg <- 这个姿势不像跳...
+15:11 varna:噗
+15:11 varna:果然是开发出来了
+15:12 *Plough 在坑MathJax
+15:12 xxxxxxxxx:然后妹妹表示是常驻型重力控制魔法....
+15:13 Plough:其实我都有点打算用正则去艹Markdown了
+15:13 varna:md深坑，勿入……
+15:13 xxxxxxxxx:重力控制感觉比飞行还要挂b....
+15:13 Plough:翻了一下Text::Markdown::Hoedown的History,其实之前是可以扩展的
+15:13 Plough:不知道为啥他们给删了，然后文档还不更新……
+15:13 varna:这种逗比很多的
+15:14 varna:以前我用HTML::TagParser, 用一个方法取<div>取不出来，一怒之下直接按散列访问就取出来了
+15:14 Plough:……
+15:14 Plough:我还是去艹FFI::Raw好了
+15:14 varna:我觉得这个靠谱
+15:15 Plough:还有个听上去就很坑的办法
+15:15 varna:停药？
+15:15 Plough:my $rendered = `redcarpet`
+15:16 Plough:撸比的Hoedown绑定要好不少……
+15:18 Plough:或者用js在客户端替换，然后
+15:18 Plough:然后MathJax
+15:46 hope1 joined channel
+15:49 varna:HOHOHO
+15:49 lh_mouse:meow
+15:50 varna:鼻来、鼻来
+15:51 lh_mouse:挠你挠你
+15:51 varna:肉球来、肉球来
+15:54 xxxxxxxxx:化作李毅更护球 <- 这个id好像很屌
+15:55 varna:233333
+15:56 varna:第六艘
+15:56 varna:2411！
+15:56 lh_mouse:肉球是何物
+15:56 varna:猫爪上的肉垫
+15:57 *varna 终于拆了一艘偶像
+16:0 xxxxxxxxx:怎么感觉百度的离线下载越来越坑了...
+16:2 xxxxxxxxx:6KB/s....
+16:2 xxxxxxxxx:百度离线0KB/s
+16:4 varna:2333
+16:5 xxxxxxxxx:@varna http://www.hacg.me/wordpress/48327
+16:7 varna:thx
+16:8 varna:度盘没速度……
+16:20 xxxxxxxxx:http://www.bilibili.tv/video/av1141936/  @zealot
+16:21 Plough:FFI::Raw找不到当前目录下的so?
+16:30 *varna touchin'face
+16:51 FrankHB:http://www.hacg.me/wordpress/48393 2014年执业医师考试题库wwwww
+16:53 varna:233333
+16:53 varna:安产科？
+16:54 cleamoon:233333
+16:58 hope1 joined channel
+16:59 varna:HOHOHO~
+16:59 hope1:.
+16:59 varna:会长酱～
+16:59 xxxxxxxxx:这有啥...
+17:0 xxxxxxxxx:http://puu.sh/90hxA.jpg
+17:1 hope1:今天考试没碰到会长
+17:1 varna:之前碰到过啊
+17:2 hope1:之前没去
+17:2 varna:会长酱好可怜呢……
+17:3 cleamoon:海棠今天就考试啦
+17:3 hope1:也没联系我啊…
+17:3 hope1:国际部的，只是去试了下
+17:4 cleamoon:难道会长酱是金发巨乳萝莉
+17:4 varna:航母·苍龙、入手！
+17:5 hope1:面试题：”据说我们这有民主自由的校风，于是一些同学决定不穿校服了，评价一下“
+17:7 varna:这个好答
+17:7 varna:怎么可以不穿死库水！死库水上怎么可以没有名牌！
+17:7 varna:不穿死库水的一律归入援交少女好了！
+17:7 varna:以上！
+17:7 xxxxxxxxx:http://b.hiphotos.baidu.com/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=08eece4edf54564ef168ec6bd2b7f7e7/8718367adab44aed6fc94cb9b11c8701a08b87d6267fc3d4.jpg <- 这个算金发巨乳么? 看起来好像不太巨
+17:8 hope1:varna, 异端！
+17:8 varna:hope1: 难道海棠是比基尼派！
+17:9 hope1:那就更邪恶了
+17:9 varna:那是要什么？
+17:9 varna:全员市松裙子也不错
+17:9 xxxxxxxxx:就是 一定要果体才光明正大
+17:9 varna:果体没看头
+17:10 hope1:没看头+
+17:10 varna:又不是小孩子了，好奇果体干嘛……
+17:10 cleamoon:果体围裙
+17:10 xxxxxxxxx:你不觉得这样舔腋很方便么?
+17:10 varna:露腋就行了
+17:10 varna:果围可以
+17:10 xxxxxxxxx:再说果体又不一定全都能看到
+17:10 varna:我嚓WO酱！
+17:11 cleamoon:妹子全是果体围裙，汉子全是王之兜裆部
+17:11 varna:幸好只有擦伤
+17:12 varna:两个WO酱一起冒出来对练级实在不利……
+17:13 cleamoon:我发现wine d2变成了access violation
+17:13 varna:2333
+17:14 varna:燃料又开始蒸发了
+17:16 lh_mouse:哦艹  你们在讨论什么奇怪的东西
+17:16 lh_mouse:被工口球截图了！
+17:16 varna:哈哈哈哈
+17:16 condy joined channel
+17:16 varna:一航战居然截了我们的图
+17:16 varna:爆了他
+17:16 cleamoon:这有什么奇怪的
+17:19 xxxxxxxxx:http://www.bilibili.tv/video/av698075/ 神手工....
+17:19 varna:应该说最近一直没有集中讨论才是奇怪的
+17:20 hope1:求链接
+17:20 varna:hope1: 疼迅群，已关，未缓存，可找小耗
+17:21 hope1:lh_mouse, @
+17:23 xxxxxxxxx:一航战?
+17:23 varna:赤诚（城）
+17:23 varna:恥（赤）城
+17:26 varna:GAY 的战士虚渊玄 http://tieba.baidu.com/p/3064633160
+17:27 lh_mouse:hope1, 19782472
+17:28 varna:lh_mouse: web版的群消息缓存现在悲剧了
+17:29 hope1:不是imagebin啊
+17:30 varna:是进疼迅群的码吧
+17:31 hope1:哪个群
+17:31 varna:c艹吧官方群
+17:31 hope1:webqq好像没法加群了？
+17:32 xxxxxxxxx:http://www.bilibili.tv/video/av225243/ q3玩家都是怪物么....
+17:32 varna:有时候可以
+17:32 varna:xxxxxxxxx: 现存的q3玩家怪物居多
+17:32 xxxxxxxxx:肯定都是早泄....
+17:32 varna:不过defrag技巧有一部分不是实战的
+17:33 varna:一般的实战移动技术限于旋转跳和平移跳
+17:33 xxxxxxxxx:实战 == 飞尸?
+17:33 varna:飞尸不至于，不过如果非得玩什么榴弹跳BFG跳后果自负
+17:34 varna:电浆上墙之类的也根本没法实作
+17:34 varna:上是可以上，能活着走多远就是另一回事了
+17:34 varna:defrag不调物理参数，所以虽然全部技法都可以随意使用，但不少都会轰死自己
+17:38 xxxxxxxxx:http://www.bilibili.tv/video/av809746/ 太可怕了...
+17:40 varna:「在这次成功的击破之前，shio已经在这个图上花了25小时。」只花25小时就击破……
+17:40 cleamoon:擦，果然是我把d2玩坏了，重下一个就没事了
+17:40 varna:2333
+17:40 cleamoon:我记得就改了几个mpq呀...
+17:41 varna:叫你改mpq
+17:41 condy:geordi: << 123456.7
+17:41 geordi:123457
+17:41 condy:^ ?
+17:42 T2 joined channel
+17:42 varna:2333
+17:42 condy:geordi: { printf("%lf", 123456.7); }
+17:42 geordi:123456.700000
+17:43 condy:varna: 为啥cout会这样？
+17:43 *varna 不是c艹党
+17:43 condy:lh_mouse: ^
+17:44 condy:geordi: << 123456.7
+17:44 geordi:123457
+17:44 condy:lh_mouse: ^
+17:44 cleamoon:geordi, {cout << 123456.7}
+17:44 geordi:error: expected ';' before '}' token
+17:44 cleamoon:geordi, {cout << 123456.7;}
+17:44 geordi:123457
+17:45 varna:罗盘今天是要坑死我啊……
+17:46 cleamoon:本地测试也是相同结果，表示不冥觉立
+17:48 *varna 被WO酱打得泪流满面
+17:48 hope1 joined channel
+17:56 T2:condy, printf 不要带 l
+17:56 condy:T2: printf里lf和f不是一样的吗?
+17:56 T2:不一样
+17:56 Plough:geordi: << setprecision(5) << 123456.7
+17:56 geordi:1.2346e+05
+17:56 condy:geordi: {printf("%f", 123456.7); }
+17:56 geordi:123456.700000
+17:56 T2:至少C里不一样
+17:57 Plough:geordi: << setprecision(6) << 123456.7
+17:57 geordi:123457
+17:57 Plough:geordi: << setprecision(1) << 123456.7
+17:57 geordi:1e+05
+17:57 Plough:geordi: << setprecision(7) << 123456.7
+17:57 geordi:123456.7
+17:57 cleamoon:orz
+17:57 cleamoon:还有这坑爹设定
+17:57 Plough:显然是被进位了……
+17:57 Plough:geordi: << 123455.7
+17:57 geordi:123456
+17:57 Plough:geordi: << 123454.7
+17:57 geordi:123455
+17:58 cleamoon:cin/cout suck
+17:58 condy:原来如此。。。
+17:59 varna:赌船害人哪
+17:59 geordi:6
+17:59 Plough:geordi: { cout.setf(ios::showpoint);cout<<123456.7; }
+17:59 geordi:123457.
+17:59 liuzhoou joined channel
+18:0 cleamoon:hope1, 本地测试，g艹也一样的结果
+18:2 FrankHB:%g罢了
+18:2 Plough:http://imgs.xkcd.com/comics/purity.png
+18:3 varna:据说别的客户端都不好
+18:3 Plough:smartqq没图片……
+18:3 varna:哦那个
+18:3 Plough:个人觉得是神坑
+18:3 varna:那个极烂
+18:5 varna:哲学家们被数学家全灭了
+18:5 lh_mouse:condy, #pragma GCC poison(cout)
+18:5 Plough:其实那副图有个title
+18:5 Plough:"On the other hand, physicists like to say physics is to math as sex is to masturbation"
+18:6 varna:罗盘啊啊啊
+18:6 varna:终于让我打一次敌补给队了
+18:6 geordi:CPU time limit exceeded
+18:6 varna:2333
+18:6 cleamoon:我可不觉得纯数学可以推出现实
+18:7 varna:啊哈？
+18:7 varna:补给舰队就两艘补给船还有个Ru酱……
+18:8 geordi:<no output>
+18:9 geordi:t0.cpp:3:18: note: #pragma message: geordi [+ 2 discarded lines]
+18:10 cleamoon:高等化学确实就是粒子物理，分子生物和生物化学属于化学，但是生物也有一堆种群数量啦，生活习性啦，那些用化学解释的话比用电子移动解释我的zealdin为什么没攻击力还麻烦
+18:10 Plough:http://imgs.xkcd.com/comics/revolutionary.png
+18:11 cleamoon:心理学和生物没什么正经关系，部分心理学的内容还不能完全算做科学
+18:11 cleamoon:射会学没玩过，觉得似乎就是把你听的懂的说成你听不懂的
+18:11 varna:啊啊啊啊啊啊啊
+18:12 varna:不许揉电酱啊啊
+18:12 varna:@良化纲领
+18:12 Plough:http://imgs.xkcd.com/comics/abstraction.png
+18:12 xxxxxxxxx:@糖化缸里_
+18:13 condy:geordi: {cout<<123456.7;}#pragma gcc optimize(3)
+18:13 geordi:warning: ignoring #pragma gcc optimize
+18:13 condy:geordi: -w {cout<<123456.7;}#pragma gcc optimize(3)
+18:13 geordi:123457
+18:13 cleamoon:糖化肛里
+18:16 Plough:http://imgs.xkcd.com/comics/researcher_translation.png
+18:17 Plough:http://imgs.xkcd.com/comics/christmas_plans.png
+18:18 condy:http://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTc1Mw==&mid=200322134&idx=7&sn=73a656ce101d71be16d66586d1c9d58f&scene=2&from=timeline&isappinstalled=0#rd
+18:18 condy:涨知识了。
+18:18 cleamoon:这是英式说法？orz... 我一直以为这么说才是对的...
+18:19 cleamoon:鸡汤就别掺乎到我大科学里来了
+18:19 varna:condy: 不是什么传说中的最速降线吧
+18:19 xxxxxxxxx:没有重力的话呢?
+18:19 condy:varna: 是！！！
+18:19 cleamoon:就是最速降线
+18:19 varna:真是忽悠人
+18:19 cleamoon:和两点最短没关系
+18:20 cleamoon:直线还是最短的
+18:20 varna:说举例干嘛混进重力
+18:20 varna:距离
+18:20 varna:距离最短未必最快到达
+18:20 cleamoon:+
+18:20 varna:脑抽之前至少先甄别概念啊
+18:20 cleamoon:酱腺有速度加成
+18:20 cleamoon:更容易射
+18:21 *varna 提前四小时开始爆肝了
+18:21 xxxxxxxxx:感悟：不是看起来离目标远，就真的会慢很多，只要选对了路，一切都为时未晚。
+18:21 xxxxxxxxx:这是坑人的
+18:22 varna:别跟我提选路
+18:22 varna:今天罗盘把我坑进Boss点六次，我明明只想去打补给舰队
+18:22 cleamoon:在正确的时间用正确的精力做正确的事。除此之外都是鸡汤
+18:22 cleamoon:虽然我还是很喜欢鸡汤的
+18:23 xxxxxxxxx:鸡汤是好东西
+18:23 varna:鸽子汤也不错
+18:23 cleamoon:肉太少
+18:23 varna:要吃肉明明该烧鸡
+18:23 xxxxxxxxx:看谁不顺眼奶他几桶
+18:24 cleamoon:不喜欢太咸，清炖比较好
+18:24 varna:Ru酱！
+18:24 varna:这毛蛋啊！
+18:24 T3rm1n4t0r_ joined channel
+18:24 xxxxxxxxx:要是小球自带动力会怎么样?
+18:25 varna:会飞出去
+18:25 varna:这个过程称为jj fly
+18:25 cleamoon:什么叫自带动力
+18:26 varna:会提前SJ
+18:26 cleamoon:毛蛋还不错，就是毛略恶心
+18:26 xxxxxxxxx:cleamoon: 活珠子还是毛蛋?
+18:26 cleamoon:为什么我的sj第二个选词是sjaelland...
+18:26 cleamoon:xxxxxxxxx, ？？？
+18:27 varna:吃撑现在一次出击吃掉的燃料……
+18:28 xxxxxxxxx:另动力是说小球顺路自带向前
+18:29 cleamoon:v球 = ds/dt ?
+18:30 cleamoon:v重力 = int (dg/ds - dN/ds/m球) from 0 to s
+18:30 cleamoon:然后去解微分方程吧
+18:31 cleamoon:dN = grad dg * dg
+18:31 cleamoon:大概
+18:39 sarid joined channel
+18:43 T2:为什么我的transmission什么都不能下？
+18:44 varna:因为你撸少
+18:45 xxxxxxxxx:刚才被蚊子咬了然后去找杀虫剂 找到了以后找不到蚊子了...
+18:45 T2:varna, 我换deluge试试。
+18:46 cleamoon:被蚊子口交了之后很明显是要先清理现场
+18:47 T2:hope1`, 不是所有资源都是坏的吧orz
+18:47 T2:win下可以的。
+18:47 T2:deluge也可以。
+18:47 varna:被蚊子咬了之后涂肥 皂
+18:48 varna:第一舰队、予定五十分钟后出击……
+18:49 cleamoon:涂上火碱就不痒了
+18:54 T2:hope1`, 不知道
+18:56 condy:T2: deluge因为是python写的，上次有一个老司机的150G的资源，直接死了。2333
+18:59 xxxxxxxxx:去冲了个澡
+19:0 lh_mouse:我去  发现了个很严重的问题
+19:1 xxxxxxxxx:http://www.bilibili.tv/video/av1146307/ <- 水果
+19:3 varna:难道是门口被人放了耗药
+19:4 lh_mouse:我想重写 mcfbuild   结果发现 mcfbuild 依赖 libmcf.a 和 libmcfcrt.a
+19:4 lh_mouse:libmcf.a 和 libmcfcrt.a 还得用 mcfbuild 才能生成
+19:4 varna:23333
+19:5 varna:不同版本的mcfbuild生成的二进制本身应该没差别吧
+19:6 T2:condy, = =
+19:7 varna:WOWOWOWOWO
+19:10 cleamoon:23333
+19:14 ZzHiyori joined channel
+19:14 xxxxxxxxx:http://puu.sh/90nTV.jpg 
+19:15 varna:hope1`: 似乎bash会疼
+19:15 varna:hope1`: 不过你可以自己写那个display-progress
+19:16 varna:那个不麻烦
+19:17 varna:你从标准输出读进来，然后写个gtk textview用缓冲接一下标准输出就行了
+19:17 cleamoon:基王说的那个超贵的飞机  
+19:17 cleamoon:http://upload.wikimedia.org/wikipedia/commons/5/5e/Aurora_x-plane_3.jpg
+19:18 T2:http://yaocoder.blog.51cto.com/2668309/888374 2333
+19:18 xxxxxxxxx:不是 我的意思是虽然我也说不出这个翻译有什么问题 不过看上去很好笑
+19:19 cleamoon:翻译呀
+19:19 cleamoon:alpako看一下t2的那个链接写的对否
+19:19 varna:epoll的实际复杂度应该不到O(1)
+19:19 cleamoon:O(0)
+19:19 varna:用户侧的复杂度是O(1)无误，但底下有RBT, 这个需要一点列入考虑
+19:19 varna:s/不到/不止/
+19:20 varna:而流的概念引入干脆是错的
+19:20 varna:举例来说，UDP是报
+19:20 cleamoon:soga
+19:20 cleamoon:那就不看了
+19:20 T2:cleamoon, 我都2333了卧槽
+19:20 varna:原理性的东西那篇文章毛都没讲
+19:20 cleamoon:出门
+19:20 xxxxxxxxx:black aircraft production 黑色航天器生产
+19:20 cleamoon:不知道你2333的是哪点呀
+19:21 cleamoon:对这个我完全不懂
+19:21 varna:而且那篇文章根本没讲LT和ET的差别，对epoll效率来说两个可能差出去一些
+19:21 xxxxxxxxx:翻译成中文一下子就变得很好玩
+19:21 varna:一般来说推荐ET, 但需要人工避免饿死，这种东西那文里提都没提
+19:21 varna:只能说作者无能转者傻逼
+19:22 xxxxxxxxx:至于epoll的使用细节，请参考man和google，实现细节，请参阅linux kernel source。
+19:22 xxxxxxxxx:写的不错
+19:23 xxxxxxxxx:http://ergodox.org/ <- 这东西看上去好屌
+19:23 varna:燃6弹5484钢2040铝3257 # 啊哈哈
+19:24 varna:^ 努力避免喷铝卓有成效，只不过……
+19:24 varna:这个键盘看着不错
+19:25 varna:除了打东方巨疼之外
+19:27 sarid left channel
+19:30 xxxxxxxxx:似乎键位可改https://github.com/benblazak/ergodox-firmware
+19:38 T2 joined channel
+19:38 T2:狗日的拔劳资网线卧槽他妈
+19:40 T2:Am I still alive？
+19:41 T2:“使用LWP作为中间媒介的ULT”能实现？
+19:42 T2:我特么觉得天朝教材在逗我
+19:42 varna:怎么不能实现
+19:42 varna:你说说怎么没法用lwp做用户线程
+19:42 T2:“使用系统调用时将ULT接在LWP上，LWP不足则等待。” << 这种也可以？
+19:43 varna:你说说这话哪里错了吧
+19:43 varna:肯定有错
+19:46 T2:内核是按lwp调度的，ult对内核不可见，调度ult不使用lwp的流程？一个lwp里有可能有两个或以上ult在并行执行？
+19:47 T2:多对一也不是这个说法吧。
+19:47 T2:这伙计信誓旦旦地写了一整章
+19:48 xxxxxxxxx:http://www.bilibili.tv/video/av1145822/ 最后这招牛逼
+19:49 varna:T2: 为什么你每次说话都跑题
+19:49 T2:varna, 因为我很模糊。
+19:49 varna:T2: 那你说什么……
+19:49 T2:内存什么的我可能还清楚些。
+19:49 varna:哦？
+19:52 T2:所谓ULT的调度应该是把LWP中当前执行阶段完毕的上下文保存在对应的ULT的数据结构中，然后把下一个要执行的ULT的上下文设置好，就这么回事吧？
+19:53 varna:你的LWP是什么
+19:53 T2:内核支持线程。
+19:53 varna:姑且如此
+19:54 varna:提一句，先行提到lwp这个术语可能更多会指涉Solaris的lwp实现
+19:54 varna:现行
+19:54 T2:那书上根本就是一个概念。
+19:54 T2:KST和LWP没任何区别。
+19:54 varna:而且似乎你的书不太喜欢区分调度和重调度
+19:55 varna:别用那些缩写了，除了lwp之外你见过有人用这些的么……
+19:55 T2:没见过
+19:55 varna:2333
+19:55 lh_mouse:ult = user level thread?
+19:55 varna:目测是
+19:55 T2:lh_mouse, 嗯
+19:55 T2:我觉得要去读一点源码
+19:56 varna:我觉得你该动一下脑子
+19:57 T2:先吃饭去了，那群又在吼叫。
+19:57 T2:MLGB我蛋疼得要死。
+19:57 T2:去看看内核线程怎么实现可能就知道点了。
+19:58 varna:2333
+19:58 T2:MLGB本来劳资就什么都不知道
+19:58 T2:他还跟那儿扯淡
+19:58 T2:算了换本书。
+19:58 varna:@时臣
+19:58 T2:不讲可以别扯淡啊卧槽
+19:59 varna:@时臣
+19:59 varna:书不能不看，看了也教不会你多少东西
+19:59 varna:学到多少看你
+19:59 T2:这我知道
+20:0 T2:只是蛋疼吐个槽
+20:1 lh_mouse:洗澡澡
+20:1 varna:所谓吐槽，你可以理解为捧哏
+20:1 varna:相对地，装傻的一方就是逗哏
+20:2 xxxxxxxxx:配合卖傻的意思?
+20:2 varna:并非是被国内SNS狗理解为「抱怨」或者「调侃地批评」
+20:2 varna:相声不都这样
+20:2 varna:实际上就是漫才说法
+20:5 xxxxxxxxx:http://zh.wikipedia.org/wiki/%E5%90%90%E6%A7%BD
+20:8 xxxxxxxxx:用银桑的一句话向大家传达ツッコミ的精髓：“‘ツッコミ’承担的义务就是把装傻中搞笑的点简洁明了地传达给大家。” <- 原来如此
+20:9 varna:hope1`: gtk有io事件回调
+20:10 xxxxxxxxx:正太要搞什么?
+20:11 varna:旧的gdk_input_add系已经废弃
+20:11 varna:所以你可能被迫换用 https://developer.gnome.org/glib/unstable/glib-IO-Channels.html#g-io-add-watch-full
+20:12 varna:当然这个API看起来丑陋不堪
+20:12 xxxxxxxxx:新开个终端跑那个命令不行么?
+20:12 varna:哈哈哈哈
+20:12 varna:你也开始用这个了
+20:13 varna:...
+20:13 xxxxxxxxx:比如xterm -e 然后跟上要跑的东西
+20:14 varna:哦，thunar右键啊……
+20:15 varna:那不建议管道
+20:15 varna:推荐直接重写一个封装
+20:15 varna:举例来说，我不确认在用户误关窗口的情况下管道前面的那个进程会怎么样
+20:16 varna:虽说实际可能还是差不多
+20:16 varna:不会很危险
+20:16 T2:varna, “比如，同一时刻有5个ULT请求系统调用，而只有4个LWP，此时就有一个ULT必须等待。”
+20:16 T2:^原文
+20:17 varna:然后呢
+20:17 T2:只有4个LWP，“同一时刻”怎么可能有5个请求？
+20:17 varna:异步请求
+20:18 varna:或者卡住的同步请求
+20:18 T2:不懂
+20:18 T2:我去google看看
+20:18 lh_mouse:FCFS 么
+20:18 xxxxxxxxx:或许可以翻翻那些图形化的包管理工具下面的log是怎么搞的
+20:18 varna:你未必能谷歌出来
+20:18 T2:我能想到的就是开一个线程池阻塞掉
+20:19 varna:比如说你没用过异步的东西，或者没做过表面同步的东西，何必着急呢
+20:19 T2:在一个线程里开一堆coro
+20:19 varna:就不会简单点？
+20:19 T2:coro有请求就接到池里某个阻塞的线程上。
+20:19 varna:我再问句，就不能简单点？
+20:20 varna:hope1`: 噗？
+20:20 varna:hope1`: 那个可能是glib的东西
+20:22 varna:Perl::Gtk2是深坑，慎入
+20:22 varna:文档已经残了
+20:23 varna:gtk的接口本来就繁琐难看自以为是
+20:23 windforce joined channel
+20:23 varna:Perl绑定又没做完文档
+20:23 varna:结果略
+20:23 varna:我就骂一句，GNMB啊
+20:23 lh_mouse:GNU
+20:23 varna:搞个void *都gpointer
+20:24 varna:非得用自己那些乌七八糟类型强奸用户
+20:24 lh_mouse:winsdk 不也 typedef void *LPVOID; 么
+20:24 varna:然后还来个GIO Channel
+20:24 varna:以前的接口挺好的，干嘛非得改
+20:24 varna:gtk的传统是越改越烂
+20:25 windforce:<T2> 简单就是每个线程独自维护一些coro
+20:25 windforce:<T2> 然后根本不会出现这种状况。
+20:25 windforce:<T2> 因为每个线程同一时刻只有一个coro被调度运行
+20:25 windforce:刚刚又掉了。
+20:25 varna:这里区分一个术语
+20:25 windforce:好吧
+20:25 varna:虽然我也滥用
+20:25 varna:coro
+20:25 varna:coro和用户线程之间的界限和模糊，看你怎么看待
+20:25 windforce:就是每个内核线程独自维护一些用户态线程。
+20:26 varna:s/和/很/
+20:27 lh_mouse:一般而言内核线程数等于逻辑处理器核心数
+20:27 lh_mouse:所有用户线程就丢一个池里  谁有事干就拿走一个
+20:27 lh_mouse:时间片用完了放回来拿下一个
+20:28 windforce:我想想
+20:28 varna:时间片你怎么做的
+20:28 lh_mouse:还有 我不认同 LWP 这种概念
+20:28 lh_mouse:进程是死的  线程是活的
+20:28 varna:?
+20:28 varna:这个怎么说
+20:28 windforce:时钟中断或者内核调度。
+20:28 varna:windforce: 你别逗我
+20:29 windforce:这个没想
+20:29 windforce:时间片
+20:29 varna:我说小耗那个提法的时间片怎么做
+20:30 varna:定时器用什么，在哪里检测，怎么切换
+20:30 varna:这问题我以前坑过
+20:30 varna:比如现在用户线程拿的是什么也不知道的用户函数
+20:30 lh_mouse:时钟中断目测可以  但是精度不够啊
+20:30 varna:然后怎么搞个定时器来做分时/抢占
+20:31 varna:lh_mouse: 先不说精度，如果有做法就说一下吧
+20:32 lh_mouse:时钟中断把寄存器保存一下切另一个线程装上之前保存的寄存器不就行了
+20:33 varna:不是内核态
+20:33 varna:用户态
+20:33 varna:定时器是谁的
+20:34 varna:我以前被ALARM坑飞过，一个上下文切换出去直接崩了
+20:34 xxxxxxxxx:http://ws.q3df.org/model/conni_michelle/ 噗噗噗
+20:37 lh_mouse:懒得思考了
+20:38 varna:总之应该不是我用信号的姿势问题
+20:38 varna:以前也有DSB作死成功Linux直接跪的例子
+20:39 liuzhoou joined channel
+20:41 windforce:varna, 就是说不能有中断相应。
+20:41 windforce:响应？
+20:42 varna:什么意思？
+20:42 windforce:不能转内核态
+20:43 varna:我说用户线程切上下文呢……
+20:43 varna:求不跑题
+20:43 varna:举例来说，你注册SIGALRM, 然后试图在那里面重调度
+20:43 windforce:那就是说要实现个用户态定时器。
+20:43 varna:然后一个ucontext swap出去，直接吐核
+20:44 varna:至今我不知道怎么不吐
+20:44 varna:Nanodesu
+20:44 varna:Nano desu?
+20:45 varna:……原来电酱是用nano的啊……
+20:45 whatofor joined channel
+20:45 varna:……明明提督用的是vim...
+20:45 windforce:MLGB这还不如直接写个内核。
+20:45 windforce:死得舒服些。
+20:45 varna:别逃
+20:45 windforce:不能有r0
+20:46 varna:死了就死了，哪天想出来就写个看，非得找借口
+20:46 varna:写个内核谁都用不上，实用化太麻烦
+20:46 windforce:不能带中断响应
+20:46 windforce:只能自己模拟
+20:46 varna:原理性的东西谁都会做一点
+20:46 xxxxxxxxx:汇蓝鸟: 回复 EAgleLeo :不好了，羊驼被毒死了
+20:46 xxxxxxxxx:羊驼真可怜
+20:47 windforce:我想想哈。
+20:47 varna:最不行你接个8259接个8253把irq调好能动之后在irq stub里要求重调度
+20:47 varna:然后就是老套路
+20:47 varna:windforce: 你觉得你能想出来的话就想想
+20:47 varna:反正我现在也不会
+20:48 windforce:这是要在r3下模拟r0啊卧槽。
+20:48 varna:这不重要
+20:48 varna:重要的是你怎么提供个合适的定时器回调
+20:48 varna:hope1`: 别用内建的，用qun.qq.com那个看
+20:49 xxxxxxxxx:http://music.baidu.com/song/1301455#b568874ed91b3c593ba23ae8bef777a3  这个有人听过么?
+20:52 varna:我记得以前可以看通知和下载之类的
+20:52 varna:后来没试过了
+20:52 xxxxxxxxx:群分享之类的
+20:52 xxxxxxxxx:但是速度感人的要死
+20:52 varna:还行
+20:52 varna:两位数
+20:52 varna:hope1`: 用不用我帮你加
+20:52 varna:我手边有个win机器
+20:53 varna:hope1`: 之后你改一次密码就行，msg我吧
+20:53 xxxxxxxxx:.... 我印象中是差一点就不两位数了...
+20:53 Plough:折腾一天就搞了个登录出来……
+21:0 varna:lh_mouse: c艹群不允许加入了？
+21:4 FrankHB:菊长早就关了。
+21:4 varna:现在海棠打算加……
+21:4 windforce:xxxxxxxxx, nirvana有这歌？
+21:5 windforce:“我对不住Cobain”
+21:6 xxxxxxxxx:没搞懂引号内是啥...
+21:6 FrankHB:开了。
+21:6 varna:ok
+21:7 varna:已申请
+21:7 varna:记得改密码
+21:7 varna:我不确认这台win机器很干净，虽然平时一般都是我开Arch算数据
+21:8 varna:安全起见
+21:8 varna:虽然未必重要
+21:9 xxxxxxxxx:印象中wine国际版1.6可用
+21:9 xxxxxxxxx:腾讯物
+21:9 varna:十六铃请务必给我带个桶回来……
+21:10 xxxxxxxxx:带了一桶花生回来就是神作
+21:10 varna:电酱在休息！
+21:10 varna:十六铃怎么说也是中学生了
+21:11 varna:他们抽风了，cancel用默认的
+21:11 varna:webqq: 我们从未放弃治疗
+21:12 varna:http://tieba.baidu.com/p/3065569580
+21:17 varna:都会派大FA师2014-05-25 21:19:35	 金刚
+21:17 varna:东风谷 早苗2014-05-25 21:17:07	 无论发生什么,即使主人有许多女人，早苗还是会一直待在主人身边的！！！ 
+21:17 varna:糟苗啊糟苗
+21:20 varna:带桶回来了！十六铃好样的！
+21:20 varna:啊，十七铃了
+21:22 sismvg joined channel
+21:22 varna:噗，服务器怎么了……
+21:28 varna:手贱清了缓存，现在要重新下载了2333
+21:31 condy:geordi: << y0(1.0)
+21:31 geordi:0.088257
+21:32 condy:今天才知道math.h里y0这个函数....
+21:33 varna:看了man我也不知道这些贝塞尔函数干嘛的……
+21:34 sismvg:测试图形性能用的吧
+21:35 varna:噗
+21:35 varna:吃撑又大破了……
+21:35 sismvg:今天看鲁邦VS柯南。。。然后我想要@流言终结者
+21:35 sismvg:飞机被开洞不会有那么大的吸力啦
+21:37 sismvg:?
+21:38 sismvg:又要看没有文档的3D引擎了。。
+21:42 sismvg:请用4个字形容你喜欢的人-------------答:不喜欢我
+21:43 varna:奈什么普
+21:43 varna:^ 六字压四字
+21:44 xxxxxxxxx:不是白日做梦么?
+21:45 varna:做梦是谁
+21:45 varna:其实四个字刚好：古明地觉
+21:46 varna:丧心病狂 http://blog.sina.com.cn/s/articlelist_1257417500_0_1.html
+21:47 xxxxxxxxx:http://www.56.com/u84/v_NTg3MzU3NjE.html <- 用这个回答也行
+21:47 varna:2333
+21:47 sismvg:最近一个动画乱入另一个动画的事件变的越来越多了。。
+21:47 sismvg:233
+21:53 xxxxxxxxx:http://fc.5sing.com/12807849.html 哈哈哈 好逗啊
+21:55 varna:2333
+21:55 windforce:噗
+21:56 varna:出击的时候卡了是个毛蛋……
+21:56 windforce:2333
+21:56 xxxxxxxxx:http://www.songtaste.com/song/2523747/ 卧槽华语乐坛新用法
+21:57 windforce:xxxxxxxxx, 行不行了卧槽？
+21:57 windforce:出门右转，3000包夜。
+21:58 varna:糟了，战列舰全员被大傻传染，一律从下往上打炮……
+21:58 varna:敌方旗舰在上面啊！
+21:58 varna:如果你不知道往哪打，就往上面打！
+21:59 windforce:run queue 没看懂
+21:59 varna:糟
+21:59 varna:制空权丧失，弹着观测不能……
+21:59 windforce:好吧懂了。
+22:0 windforce:是进程优先级不是处理器优先级吧？
+22:0 windforce:卧槽他妈的翻译
+22:0 windforce:太叼了真的。
+22:1 windforce:process 和 processor 分不清么。
+22:1 xxxxxxxxx:http://tieba.baidu.com/p/3065523961 错别字好带感啊
+22:3 windforce:“我决定再也不看中文资料了。”
+22:3 varna:什么东西
+22:6 windforce:varna, http://en.wikipedia.org/wiki/Run_queue
+22:6 windforce:wiki 说的很清楚。
+22:6 windforce:有个中文版的源码剖析把我看吐了。
+22:7 varna:怎么写的
+22:7 windforce:我找照看
+22:7 windforce:找找
+22:8 windforce:varna, http://blog.csdn.net/bullbat/article/details/7160246
+22:11 varna:上不去
+22:11 Plough:10:11PM  up 71 days,  5:38, 2 users, load averages: 0.00, 0.00, 0.0010:11PM  up 71 days,  5:38, 2 users, load averages: 0.00, 0.00, 0.00
+22:11 varna:rq4ref
+22:11 Plough:噗
+22:11 Plough:这什么情况
+22:14 windforce:varna, 似乎没什么槽点，只不过说得不容易懂。
+22:14 varna:?
+22:14 windforce:http://blog.csdn.net/bullbat/article/details/7160246
+22:14 Plough:为啥load average会是0.00 0.00 0.00
+22:14 varna:你一顿喷之后的结果就是你不容易懂？
+22:14 varna:windforce: 跟你说上不去了……
+22:16 windforce:varna, http://pastebin.mozilla.org/5238183
+22:17 varna:thx
+22:18 windforce:客气傻
+22:18 windforce:啥
+22:19 windforce:对于这种1行代码10行注释的行为我表示给跪。
+22:20 windforce:看不懂，先扔。
+22:22 varna:...
+22:22 xxxxxxxxx:这注释是哪里人写的...
+22:22 varna:上来看LK没问题么？
+22:22 windforce:我只是想知道runqueue是个什么
+22:22 windforce:而已
+22:22 varna:啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+22:23 windforce:然后就翻到这个了。
+22:23 varna:连续两趟远征没给我桶……
+22:23 xxxxxxxxx:羊驼子收到两包花生
+22:24 sismvg:好牛掰的注释。
+22:24 windforce:台湾人说话就是这样了。
+22:24 windforce:比鸟语还费劲。
+22:25 varna:拼一个任务看看能不能拿回三百燃料
+22:26 xxxxxxxxx:完全没有燃料了会怎么样?
+22:26 xxxxxxxxx:删号重练?
+22:26 varna:啊啊啊啊啊啊
+22:26 varna:只是没法补给
+22:27 varna:怎么每次我缺东西的时候都遇到WO酱
+22:27 xxxxxxxxx:船没能量了还能开么?
+22:27 xxxxxxxxx:燃料...
+22:27 varna:命中回避下降
+22:27 Plough:突然想起来格式
+22:27 varna:RU酱立绘杀！？
+22:27 Plough:现在Perl的正则是咋实现的
+22:27 varna:我无耻地F5了
+22:28 Plough:Thompson NFA还是？
+22:28 varna:不确认
+22:30 Plough:好像不是……
+22:30 varna:太惨烈了这，现在我完全是在爆肝啊
+22:32 windforce:varna, http://blog.csdn.net/bullbat/article/details/7109927 另外那个博主有一篇定时器的。
+22:33 varna:内核定时器又没用
+22:33 windforce:哦哦
+22:33 windforce:看走眼了。
+22:33 Plough:似乎是因为Thompson NFA不好backtrack
+22:34 varna:windforce: 不是看走眼问题，你知道我那个悲剧的问题在哪么……
+22:34 windforce:没懂
+22:35 varna:所以说么
+22:36 windforce:还没看出回调的问题
+22:36 xxxxxxxxx:http://rimworldgame.com/  http://kickass.to/rimworld-alpha-3f-linux-t9018624.html
+22:37 varna:windforce: 简单来说就是信号处理函数里的ucontext swap吐了
+22:39 windforce:我想想，信号处理算是软中断响应？
+22:39 varna:你觉得自己能想清楚就想
+22:39 windforce:好吧
+22:39 varna:没必要认为摆在面前的问题都是自己能解决的
+22:39 windforce:我只是试图理解问题本身而已。
+22:40 varna:你猜猜这个问题的关键在哪
+22:40 xxxxxxxxx:baidu离线有个蛋蛋用处...
+22:40 varna:老话重提，这是实现，所以细致到实现
+22:40 whatofor:baidu离线是在不净网的时候, 下载H用的
+22:40 windforce:会阻塞当前线程？
+22:41 windforce:写写看吧
+22:41 xxxxxxxxx:也只有H能拖下来了....
+22:41 varna:233333333
+22:41 varna:彻底不靠谱
+22:41 windforce:理解不能
+22:41 varna:阻塞能吐核么
+22:41 windforce:只能瞎猜
+22:41 varna:理解不能你干嘛非得现场直播理解……
+22:42 varna:又不是要你一个回答
+22:42 windforce:好吧
+22:42 varna:你要是能回答我的各种问题，我就可以改行了
+22:42 windforce:2333，也对。
+22:43 xxxxxxxxx:改行舔腋?
+22:43 windforce:我先去研究下sigchild什么的man吧。
+22:43 *xxxxxxxxx 举出一件除了羊驼没人会做的事情
+22:45 windforce:2333
+22:45 varna:xxxxxxxxx: 我那个话拐了个弯
+22:45 varna:xxxxxxxxx: 所以别看漏成分，你就是典型看漏主语的
+22:46 windforce:话说我连那个 void * arg 都没想明白呢
+22:46 windforce:什么玩意都能用个 void * 解决么。
+22:46 xxxxxxxxx:看漏是说?
+22:46 windforce:也对
+22:47 windforce:那可以是个函数指针2333
+22:48 windforce:“好丑陋”
+22:48 varna:void *arg?
+22:49 varna:如果某处必须是个函数指针，我会给出函数指针的
+22:49 varna:不然它很可能不是个函数指针，或者是个参数打包
+22:51 windforce:varna, 啊，对，这玩意没闭包。
+22:51 windforce:所以不能是函数指针。
+22:51 windforce:不然也没参数可传。
+22:51 varna:唉
+22:51 varna:唉唉
+22:52 windforce:姿势弱了
+22:52 windforce:2333
+22:52 varna:不是知识问题
+22:52 varna:你只是在忽悠自己玩
+22:52 windforce:我还不太会思考。
+22:52 varna:如果让本部首页程度的新人看到就是「哇、好高端啊」的程度
+22:53 varna:所以说关键问题在于……十七铃这次能不能给我送个水桶回来……
+22:53 windforce:或者说我这个人思路本来就不清晰。
+22:53 varna:不然一航战那位就得继续大修五小时
+22:53 windforce:一大弱点啊
+22:55 windforce:我跟你最大的差距就是你远比我清晰了。
+22:55 windforce:好吧，似乎是个人就比我清晰。
+22:56 varna:我觉得最大的差距是你对幼女的爱不够
+22:56 varna:@驱逐舰的任务不仅是远征，还要每天轮流担任提督的秘书舰，被提督「逗」
+22:56 windforce:varna, 没那么夸张，我的san值早丢光了。
+22:57 varna:san值丢光的话你不至于觉得我那点程序不好读
+22:57 lh_mouse:san 值是什么东西
+22:57 windforce:好吧，似乎是爱不够。
+22:58 lh_mouse:睡觉了
+22:59 varna:鼠输送！鼠输送！
+22:59 windforce:varna, 早点睡吧会挂的。
+22:59 varna:今天睡过了
+22:59 varna:我得争取爆肝把大傻改出来
+22:59 windforce:好吧
+23:0 varna:只要过了二面就可以多多地练驱逐舰了
+23:0 varna:到时候电酱就可以大活跃
+23:0 varna:继续放在办公室里「逗」
+23:0 windforce:= =
+23:2 varna:电酱超可爱
+23:2 windforce:看出来了
+23:3 windforce:什么时候我也能放一只电酱可能就会很有爱了。
+23:3 windforce:好吧这是个鸡生蛋的问题。
+23:3 varna:你也去刷号吧
+23:3 xxxxxxxxx:T2也要当提督?
+23:4 xxxxxxxxx:另我还是没搞懂刚才羊驼说我漏看了是什么情况....
+23:5 windforce:xxxxxxxxx, 就是说，认为自己能解决所有问题的想法很幼稚。
+23:5 windforce:xxxxxxxxx, 你漏掉了主要的部分嗯。
+23:6 xxxxxxxxx:没有啊
+23:6 windforce:varna, 这个可以有。
+23:7 varna:这个不是主要部分
+23:7 windforce:xxxxxxxxx, 羊驼子是不会改行的。
+23:7 xxxxxxxxx:如果t2一下子就能明白的问题羊驼折腾了半天 那羊驼就只能去舔腋了 但是事实上羊驼不可能改行舔腋 所以说白了是t2需要锻炼的意思
+23:8 windforce:xxxxxxxxx, 不是。
+23:10 windforce:xxxxxxxxx, 保持学习，理智思考，冷静判断。
+23:10 windforce:差不多就是这样了。
+23:13 windforce:xxxxxxxxx, 理智思考就是“在你能力的范围内作出推理”，冷静判断就是“判断这个问题是不是在你能力范围内。”
+23:13 windforce:xxxxxxxxx, append 目前能力范围内。
+23:14 condy joined channel
+23:14 windforce:显然我san值系统崩坏了。
+23:14 windforce:2333
+23:15 varna:啊啊啊
+23:15 windforce:“其实它一直就是崩坏的。”
+23:15 iyzsong:0.0
+23:16 varna:高中同为禽兽的一头银兽已经过2-4了？
+23:16 windforce:= =
+23:16 varna:算了他比我早着任两天
+23:22 xxxxxxxxx:windforce: 你说那些和看漏有什么关系么?
+23:23 windforce:xxxxxxxxx, 有的。
+23:23 varna:看了个早漏……
+23:23 windforce:the
+23:23 windforce:     signal is normally blocked from further occurrence, the current process
+23:23 windforce:     context is saved, and a new one is built.
+23:24 windforce:…… 好吧似乎提示了点什么。
+23:24 windforce:所以没法保存上下文是么。
+23:24 varna:不是
+23:25 varna:简单来说，我猜有些状态是我在swapcontext的时候没能恢复的
+23:25 varna:那部分的代码我也不想去读了，既然之前已经有DSB用户阵亡过
+23:25 windforce:我再看看
+23:26 windforce:我靠先去睡了，这群真是烦人。
+23:26 windforce:“在家真不爽”
+23:26 xxxxxxxxx:迪拜不征收个人所得税 orzzzz
+23:27 varna:OTL
+23:27 windforce:我决定等我有了钱就去迪拜搞编译。
+23:27 xxxxxxxxx:且迪拜当地金融机构给出的薪酬待遇已经充分国际化
+23:28 windforce:迪拜环境确实很好。
+23:28 windforce:不只是穆斯林世界中。
+23:28 windforce:“就是太TM热了。”
+23:29 windforce:晚安，腋间愉快。
+23:29 varna:啊，北上出来了……
+23:30 xxxxxxxxx:啊啊啊啊啊百度网盘的下载有速度了!!!
+23:31 xxxxxxxxx:3KB/s
+23:31 xxxxxxxxx:估计明天早上我就能拖下来了
+23:31 varna:噗噗，那货怎么开始控欧派了，他以前的志愿不是开个孤儿院么
+23:33 xxxxxxxxx:迪拜这个毫无资源的荒漠小邦，10年来，GDP总值成长230%，其中，石油收入却仅占6%，而且2010年就可能用完。 orzzzzzzzz
+23:33 xxxxxxxxx:外国人占的比例超过80%
+23:34 xxxxxxxxx:无外汇管制，货币自由汇兑，资本和利润可100％汇回本国；无需交纳营业税、所得税；实行4％的低税率关税；进出口不实行货物配额限制等等
+23:34 xxxxxxxxx:这地方真屌
+23:35 xxxxxxxxx:迪拜
+23:37 varna:不要漏啊、燃油给我啊
+23:38 varna:给我啊、我要出击啊
+23:40 xxxxxxxxx:http://www.douban.com/group/topic/32146799/ 果然是传播xx的地方
+23:42 varna:啊，打捞队回来了
+23:45 *hoxily 爆 varna xxxxxxxxx
+23:45 xxxxxxxxx:噗噗噗 躺枪
+23:45 *varna 沟道夹断
+23:46 varna:xxxxxxxxx: 爆
+23:46 *hoxily 快速再生，再爆
+23:48 varna:这个屌会长出来？
+23:48 varna:割了下酒
+23:48 hoxily:p
+23:48 varna:泡酒里，就说是鹿鞭，拿出去卖
+23:48 varna:卖了之后我课金买电酱的nanodesu挂轴
+23:49 xxxxxxxxx:http://www.zhihu.com/question/21835010 
+23:49 varna:踏板啊
+23:53 xxxxxxxxx:连看个图片都要注册.... 这些论坛干脆登陆才能看贴好了
+23:58 xxxxxxxxx:http://bbs.chinaunix.net/thread-4113424-1-1.html <- 日文键盘
+23:59 varna:不如用日文输入法

@@ -1,0 +1,497 @@
+00:06 Mokou: 看起来二次曲线能用
+00:06 Mokou: 估计神主也不会用太复杂的变化曲线……
+00:07 lhanjian: 试试看尬舞
+00:08 varna: 尬之前务必打开重武器方向控制
+00:10 varna: 落点是很有趣的一件事
+00:11 Mokou: 对了，给你介绍一个神主的天才设计
+00:12 Mokou: 你如果试图复现他的虚拟机，那么给栈直接开一大块内存然后读偏移是不行的
+00:12 lhanjian: 尬舞的霸体还是不太够
+00:12 Mokou: 为什么呢，因为某些地址实际上不是内存
+00:12 Mokou: 是随机数
+00:12 varna: 我&
+00:13 Mokou: 是的，他的虚拟机里获得随机数不是调用函数，是读取特定地址
+00:13 Mokou: -9987是-1.0到1.0之间的随机数
+00:13 varna: 这个设计倒是很好理解
+00:13 Mokou: -9998是-pi到pi
+00:13 Mokou: -9999是0至1.0
+00:13 varna: 哈哈哈哈
+00:13 varna: DMA啊
+00:13 Mokou: -10000是不知道范围的随机整数
+00:14 varna: 神主果然还是喜欢老机器的人
+00:14 lhanjian: 不过街舞的普通攻击似乎削韧级别略差？
+00:14 varna: 特大剑模组
+00:14 Mokou: 我怀疑PC-98的设计一直在他脑子里阴魂不散……
+00:15 varna: 但古代操作系统的设计似乎从他的头脑里漏出去了
+00:15 Mokou: +
+00:15 IntPtr quit:Ping timeout: 260 seconds
+00:16 Mokou: 然而还有一个93号指令，也是随机数，不过是正态分布的
+00:16 Mokou: 这个就不DMA了
+00:17 varna: lhanjian: 尬舞比较尴尬，L1的韧性和削韧都不足以面对重武器抢攻，在特大剑里也算短的一种；看起来力C敏A加成应该走敏系，实际需要力敏一起点才能最大化面板（怀疑1.14之后修到了力C上位）
+00:17 varna: 面板倒是比起上个版本整整多了80
+00:18 Mokou: https://img.vim-cn.com/9e/60f4a7d5a29123836e5a350a0c80e845855bbe.jpg  神主自己的脚本长这样
+00:18 xhe quit:Ping timeout: 268 seconds
+00:18 varna: ...
+00:18 varna: 这到底得有多难看
+00:19 Mokou: 不知道跟谁学的
+00:19 varna: 抛弃各种实用的语言特性，自己发明了一个残疾的basic
+00:19 varna: 世界上的basic还不够多嘛
+00:19 Mokou: 好歹也是当年在PC-98上玩自修改代码的人……
+00:19 varna: 我驲，外面刚才有人呼救？
+00:19 Mokou: ……什么情况
+00:19 varna: 然后就没声了
+00:20 varna: 不知道什么状况，我在16楼，支援困难
+00:20 lhanjian: varna: 尬舞剑玩的挺愉悦的
+00:20 xhe joined channel
+00:20 lhanjian: 发生了什么？
+00:20 varna: 不知道
+00:21 varna: 看起来同行不止一人，似乎情绪安定了
+00:21 varna: 怀疑撞到了附近一个护崽的母狗
+00:21 Mokou: ……
+00:21 varna: 那狗气势挺神秘的
+00:22 varna: 之前晚上出去也吓过我一次
+00:22 varna: 非常淡定地尾行我过马路，作势扔石头都吓不回去
+00:22 varna: 也是拼了命
+00:22 Mokou: ……
+00:23 Mokou: 啊啊这一堆弹幕变换真蛋疼
+00:23 varna: lhanjian: 要不要试一次尬舞通关
+00:23 varna: 习惯之后你就会产生一种「这个真不错」的错觉，之后去竞技场体验人生
+00:24 Mokou: 应该是「这个可以有」
+00:24 lhanjian: 好啊
+00:24 Mokou: やりますねぇ
+00:24 lhanjian: 马上来五周目
+00:24 varna: sodayo
+00:24 lhanjian: 还有dlc2没推
+00:24 lhanjian: dlc1差条守墓人
+00:25 varna: 尬一下试试
+00:25 lhanjian: 不过没圆盘，不推也问题不大
+00:25 varna: 体验下贪刀=血亏的感觉
+00:26 lhanjian: 嗯
+00:26 lhanjian: 尬舞在自身韧性够的时候表现还行，只是削韧差了些
+00:27 lhanjian: 我拿螃蟹试试手
+00:27 varna: 那就继续下调标准，试试轻甲
+00:27 varna: 比如全套cos
+00:27 varna: 然后玩玩花样看
+00:27 varna: 我见过最刺激的一个哥们纯靠L1走位，禁普通移动和回避砍死了猎龙铠甲
+00:28 varna: 理解突破天际
+00:31 lhanjian: 伤害略低
+00:31 lhanjian: 不过考虑到实际上是单手
+00:31 lhanjian: 也过得去
+00:32 varna: 而且没法双手持
+00:33 xhe quit:Ping timeout: 255 seconds
+00:35 xhe joined channel
+00:35 lhanjian: 是的
+00:36 lhanjian: 而且弹反效果还不错
+00:36 varna: 中盾
+00:37 varna: 对古达和沙力万足够了
+00:38 varna: 实战程度的话，我自己至少需要刻苦受死
+00:39 lhanjian: 洛骑也能弹的不错
+00:40 varna: PvP我还是不敢出手，其一延迟不可预计，其二手法不好
+00:40 varna: 哦，还有其三
+00:40 varna: 神TM mong男
+00:40 varna: 总有两个伙计杀我杀得很爽快
+00:41 varna: 一个叫Hawaiian_chance, 古达头+圣堂盔甲
+00:41 varna: 开局先手特大剑神圣附魔，最近见到的时候技术又进步一些了，不完全是打反击
+00:41 varna: 还有一个叫Azrael的，同样重铠，轻重武器的距离计算很不错
+00:42 varna: 怀疑是个无锁爱好者
+00:44 Mokou quit:Ping timeout: 255 seconds
+00:44 Mokou joined channel
+00:44 varna: 呀
+00:44 varna: 今天周四了？
+00:44 Mokou: +
+00:45 varna: 前端明天中午再不上线，就快要达成延迟一周上线的成就了
+00:45 Mokou: 6666666
+00:45 varna: 虽然那伙计确实挺能拖的然而……
+00:45 Mokou: 妈德
+00:45 Mokou: 变换模式16类型1的介绍：
+00:45 Mokou: 1: A strange transform. Jugded by the player's position.
+00:45 varna: 2333333333
+00:46 varna: 二次自机狙？扰动自机狙？
+00:46 Mokou: 不知道
+00:46 lhanjian: 我现在左手再准备一把大剑
+00:46 varna: 这注释简直
+00:46 varna: lhanjian: ...
+00:46 Mokou: 大物忌正餐里蓝色札符的那个停顿变换
+00:46 Mokou: 具体怎么变的恐怕没人知道
+00:46 varna: 啊，那个
+00:47 varna: 确实
+00:49 varna: lhanjian: btw 不回去试试血源么
+00:49 varna: 高速掉帧的爽快战斗
+00:51 lhanjian: 差不多也是时候了
+00:52 lhanjian: 明天玩玩血缘
+00:52 xhe quit:Ping timeout: 276 seconds
+00:53 varna: 其实主要是造型帅气
+00:53 xhe joined channel
+00:55 lhanjian: 打守墓人有点辛苦
+00:56 varna: 需要控一下击杀进度
+00:56 Mokou: 噫，看错参数了
+00:56 Mokou: 那个变换其实是类型0……
+00:56 Mokou: 方向+r，速度变为s
+00:57 Mokou: 还好
+00:57 varna: 守墓人的节点差不多是不到半血的时候回一次体力，然后集中尽量打下去
+00:59 lhanjian: 还是先杀杀洛骑了
+01:00 lhanjian: 打里卡尔好了
+01:00 lhanjian: 看起来像个NPC的家伙
+01:00 varna: 然而其实高周目不用BUG附魔很难一气打死
+01:00 varna: 上次我打就是
+01:00 varna: 剩下大约两套的血，直接出大狼了
+01:00 varna: 看情况诱导一下，一挑二打掉守墓人
+01:01 varna: 之后就是基本的龙车套路
+01:01 varna: 但尬舞强度不够，被龙车压制也正常
+01:01 varna: 跟妖王混混会熟悉一点
+01:05 lhanjian: 被打断尬舞的感觉真不好
+01:06 lhanjian: 因为出手慢，想打断对手出手就有点疼
+01:06 xhe quit:Ping timeout: 240 seconds
+01:07 lhanjian: 里卡尔被我打落悬崖了……
+01:07 varna: 哦，基本做不到
+01:07 varna: 压制NPC的基本思路是直接打常态硬直
+01:08 varna: 第一击的落点放在敌人身上
+01:08 varna: 如果要破招，推荐第一击的匕首下刺打偏
+01:08 xhe joined channel
+01:08 varna: 让扫击从身侧身后出现
+01:09 varna: 运气好的话能破掉第二段，不好的话就得打滚了
+01:09 varna: L1两段之后第三段如果能连上，就补R1
+01:10 varna: 除非搏命否则没有第四段
+01:11 lhanjian: 我一般按一次，如果成功再按第二次，然后接轻攻击
+01:12 varna: 第二击慎重
+01:13 varna: 即使伤害成立，可能也该撤了
+01:13 varna: 连段成立的条件不是大剑命中而是匕首命中
+01:13 varna: 其余都是伪连
+01:19 lhanjian: 似乎弹反尬舞也是弹反匕首
+01:19 xhe quit:Ping timeout: 255 seconds
+01:20 varna: 多数人都会去预估匕首落点
+01:20 varna: 但其实对人类玩家，把匕首落点打准是很危险的
+01:21 xhe joined channel
+01:22 lh_mouse quit:Read error: Connection reset by peer
+01:22 lhanjian: 尬舞没有耗蓝的问题啊
+01:23 varna: 只是攻击而已
+01:23 varna: 不然我那些奥术早就放不出来了……
+01:25 lhanjian: 怪不得尬舞玩家大都是法爷
+01:26 varna: 尬舞玩家大多死绝了
+01:27 varna: 至于用法术，原因是王魂武器和附魔相性不合，尬舞又没法猥琐，回复用不来
+01:27 varna: 倒不如用灵魂系的法术
+01:27 varna: 而且不死队里也有魔法师，用起来很有气氛
+01:28 varna: 虽然深渊监视者看上去都是剑士，实际在设定集里也画了背着长弓的样子，应该是多才多艺的战士
+01:28 lhanjian: 尬舞玩家不少啊
+01:28 lhanjian: 后院，竞技场都有尬舞cosplay
+01:28 varna: 我在竞技场里见过的不超过十人
+01:28 IntPtr joined channel
+01:28 varna: 而且没有一个是coser
+01:29 varna: 怀疑其中有一两个是看我cosplay, 出于尊重才跟我血拼的
+01:29 varna: 哦不对
+01:29 varna: Lv180段位上见过一个不死队
+01:29 varna: 被他杀了
+01:30 varna: 不死队coser毕竟太难生存
+01:32 lhanjian: 我这个段位稍微多见些
+01:33 lhanjian: 虽然确实不强
+01:35 varna: 破尬舞和破小姐姐攻势类似，在第一段施展中霸体进去破掉第二段
+01:35 varna: 比如一个足够长的纵斩夯在头上
+01:35 varna: 狗头直接砸烂
+01:39 lhanjian: 所以才需要高韧性啊，我就要尬出来
+01:40 varna: 何必呢
+01:40 varna: 那时候你已经死了
+01:40 varna: 你凹出800-的时间，对方恐怕已经打出两击
+01:41 varna: 如果对方两击都不能把你打到危险血量，那也没必要跟他拼这个韧
+01:41 varna: 当然这是我自己的态度……也就是说，不去补足这个武器的弱点
+01:41 varna: 已经够弱了，补也补不回来
+01:42 lhanjian: 嗯
+01:44 lhanjian: 一般第二段不会轻易出手的吧
+01:44 varna: 很危险
+01:45 varna: 没打到的话一定是个至少可以被拉近距离的破绽
+01:46 IntPtr quit:Read error: Connection reset by peer
+01:46 IntPtr55 joined channel
+01:48 IntPtr55 quit:Client Quit
+01:50 IntPtr joined channel
+01:50 xhe quit:Ping timeout: 240 seconds
+01:51 lhanjian: 尬舞有趣啊
+01:52 xhe joined channel
+01:52 lhanjian: 可惜失去了特大剑双手持剑的高霸体
+02:01 xhe quit:Ping timeout: 246 seconds
+02:02 IntPtr: 冒泡防踢 (又回到了 vps 挂 irc 了
+02:03 xhe joined channel
+02:06 varna: http://img.vim-cn.com/b0/d23374103cb8d4a692b962aeaab580da48ce35.png 这次的壁纸slice
+02:10 Mokou: https://img.vim-cn.com/7c/d4d9083bf11931ff6ace8254dc6723a54eb2c0.jpg 
+02:20 xhe quit:Ping timeout: 246 seconds
+02:22 xhe joined channel
+02:28 xhe quit:Ping timeout: 240 seconds
+02:30 xhe joined channel
+02:36 xhe quit:Ping timeout: 255 seconds
+02:37 varna quit:Ping timeout: 248 seconds
+02:38 xhe joined channel
+02:47 xhe quit:Ping timeout: 260 seconds
+02:49 xhe joined channel
+03:04 Mokou quit:Quit: Lost terminal
+03:09 xhe quit:Ping timeout: 255 seconds
+03:11 xhe joined channel
+03:16 xhe quit:Ping timeout: 240 seconds
+03:18 xhe joined channel
+03:24 xhe quit:Ping timeout: 240 seconds
+03:26 xhe joined channel
+03:36 xhe quit:Ping timeout: 260 seconds
+03:38 xhe joined channel
+03:46 xhe quit:Ping timeout: 240 seconds
+03:48 xhe joined channel
+03:54 xhe quit:Ping timeout: 240 seconds
+03:56 xhe joined channel
+04:02 xhe quit:Ping timeout: 240 seconds
+04:04 xhe joined channel
+04:14 xhe quit:Ping timeout: 248 seconds
+04:16 xhe joined channel
+04:22 xhe quit:Ping timeout: 240 seconds
+04:24 xhe joined channel
+04:32 xhe quit:Ping timeout: 260 seconds
+04:34 xhe joined channel
+04:44 xhe quit:Ping timeout: 248 seconds
+04:46 xhe joined channel
+04:54 xhe quit:Ping timeout: 240 seconds
+04:56 xhe joined channel
+05:03 xhe quit:Ping timeout: 240 seconds
+05:04 xhe joined channel
+05:11 xhe quit:Ping timeout: 240 seconds
+05:13 xhe joined channel
+05:20 xhe quit:Ping timeout: 255 seconds
+05:22 xhe joined channel
+05:27 xhe quit:Ping timeout: 240 seconds
+05:29 xhe joined channel
+05:37 xhe quit:Ping timeout: 240 seconds
+05:39 xhe joined channel
+05:48 xhe quit:Ping timeout: 240 seconds
+05:50 xhe joined channel
+05:58 xhe quit:Ping timeout: 260 seconds
+06:00 xhe joined channel
+06:05 xhe quit:Ping timeout: 240 seconds
+06:07 xhe joined channel
+06:13 xhe quit:Ping timeout: 268 seconds
+06:15 xhe joined channel
+06:27 xhe quit:Ping timeout: 240 seconds
+06:29 xhe joined channel
+06:43 xhe quit:Ping timeout: 276 seconds
+06:44 xhe joined channel
+06:54 xhe quit:Ping timeout: 268 seconds
+06:55 xhe joined channel
+07:03 xhe quit:Ping timeout: 240 seconds
+07:05 xhe joined channel
+07:12 xhe quit:Ping timeout: 260 seconds
+07:14 xhe joined channel
+07:24 xhe quit:Ping timeout: 276 seconds
+07:25 Mokou joined channel
+07:31 xhe joined channel
+07:38 xhe quit:Ping timeout: 260 seconds
+07:39 xhe joined channel
+07:45 xhe quit:Ping timeout: 255 seconds
+07:47 xhe joined channel
+07:57 xhe quit:Ping timeout: 240 seconds
+07:59 xhe joined channel
+08:08 xhe quit:Ping timeout: 255 seconds
+08:10 xhe joined channel
+08:15 xhe quit:Ping timeout: 240 seconds
+08:17 xhe joined channel
+08:24 xhe quit:Ping timeout: 276 seconds
+08:26 xhe joined channel
+08:30 CyrusYzGTt quit:Ping timeout: 240 seconds
+08:33 xhe quit:Ping timeout: 240 seconds
+08:35 xhe joined channel
+08:40 xhe quit:Ping timeout: 255 seconds
+08:42 xhe joined channel
+08:47 CyrusYzGTt joined channel
+08:56 xhe quit:Ping timeout: 268 seconds
+08:57 xhe joined channel
+09:01 xhe quit:Read error: Connection reset by peer
+09:07 xhe joined channel
+09:46 xhe quit:Quit: leaving
+09:46 xhe joined channel
+10:09 c__ quit:Remote host closed the connection
+10:11 xhe quit:Ping timeout: 248 seconds
+10:22 StardustX joined channel
+10:37 lh_mouse joined channel
+10:51 Stevearzh quit:Ping timeout: 248 seconds
+10:57 Stevearzh joined channel
+11:04 Stevearzh quit:Ping timeout: 260 seconds
+11:04 Stevearzh joined channel
+11:27 Stevearzh quit:Ping timeout: 240 seconds
+11:33 Stevearzh joined channel
+11:39 Stevearzh quit:Ping timeout: 276 seconds
+11:48 xhe joined channel
+11:49 Stevearzh joined channel
+12:24 FrankHB joined channel
+14:19 Mokou quit:Ping timeout: 268 seconds
+15:16 StardustX quit:Quit: Leaving.
+16:09 Stevearzh quit:Read error: Connection reset by peer
+16:20 StardustX joined channel
+17:38 StardustX quit:Quit: Leaving.
+18:32 FrankHB quit:Ping timeout: 260 seconds
+18:34 iyzsong-m joined channel
+18:36 StardustX joined channel
+18:37 iyzsong-m: (；・∀・)
+18:45 * IntPtr _(:3
+18:46 iyzsong-m quit:Ping timeout: 246 seconds
+18:52 StardustX: _(┐「ε:)_ 
+18:53 iyzsong-m joined channel
+18:59 FrankHB joined channel
+19:04 iyzsong-m quit:Ping timeout: 260 seconds
+19:16 StardustX quit:Quit: Leaving.
+20:00 ronson joined channel
+20:00 ronson: 有人说话吗
+20:03 ronson left channel:"Ex-Chat"
+20:08 varna joined channel
+20:11 lh_mouse: strchr 弄掉一个分支之后比原来慢了。
+20:11 lh_mouse: 看起来好像是 SSE 指令依赖了。
+20:11 varna: ...
+20:11 varna: 换了一块ikbc f87
+20:11 varna: 感觉手感比c87稍微差一些
+20:11 varna: 松松的
+20:12 lh_mouse: [20:10:27] <varna> 松松的
+20:12 varna: ^ 色色的
+20:16 lh_mouse: 目前的情况反正就是分支多了不一定慢。
+20:16 lh_mouse: 艹 CRT 顶着 UB 上，各种越界读。
+20:16 iyzsong joined channel
+20:26 Stevearzh joined channel
+20:39 lh_mouse: Q:
+20:39 lh_mouse: Breakwa11 背后的实体（含所有身份），主要作品有哪些？除了 ShadowsocksR。
+20:39 lh_mouse: ------------
+20:39 lh_mouse: A:
+20:39 lh_mouse: 主要有作为 misakamm 时期的 EGE Library 和俄罗斯方块
+20:39 perr joined channel
+20:47 CyrusYzGTt quit:Ping timeout: 255 seconds
+21:03 varna: 啊啊
+21:03 varna: 哪里有幼女
+21:03 varna: 需要吸收幼女能量
+21:03 varna: 呜呼呼
+21:04 CyrusYzGTt joined channel
+21:07 Mokou joined channel
+21:12 iyzsong quit:Read error: Connection reset by peer
+21:15 Mokou: 噗
+21:15 Mokou: 连着造出两门41
+21:15 perr quit:Remote host closed the connection
+21:16 perr joined channel
+21:26 varna: 可怕的欧洲人
+21:29 Mokou: 然而46造不出来
+21:30 Mokou: varna: https://www.thpatch.net/wiki/How_to_patch_a_new_Touhou_game_in_a_couple_of_hours 里面写了不少坑点
+21:30 FrankHB quit:Ping timeout: 260 seconds
+21:34 varna: ...
+21:39 varna: 驲，这几天颈椎就没好过
+21:39 varna: 就是因为没有幼女给我揉啊！
+21:39 varna: 幼女幼女
+21:43 varna: f87这个击键背光还挺有意思的
+21:43 varna: 虽然根本看不见，但有时候想着「要不要去看一眼呢」
+21:43 varna: 感觉也满好的
+21:46 Mokou: 2333333 yuke打神灵庙不会用妖梦
+21:49 varna: 我试过一次E
+21:49 varna: 不过也只敢E
+21:49 varna: 四个自机里最不喜欢的还是贝奥兰迪
+21:51 Mokou: 他西行樱吹雪的时候Power不够，打不到Boss……
+21:54 varna: L难度uuz确实骇人
+21:54 Mokou: 然后他就高速扭过去了
+21:55 varna: 可怕
+21:58 varna: 吃了扑尔敏就犯困了
+21:59 varna: 咦，少前开夏活了
+21:59 varna: 完全不想打，不打了
+22:00 varna: 竖个旗：什么时候所有角色都有正经的冲锋衣装扮，我再爆肝
+22:00 varna: (｡･ω･)搞得跟窑子一样成何体桶
+22:00 Mokou: (｡･ω･)不就是窑子嘛
+22:01 Mokou: 哈哈哈哈二残没B进五面
+22:01 Mokou: 我看他怎么打
+22:02 varna: (｡･ω･)也许昨天还是窑子，但今天就是国安局特工！THE Division!
+22:06 Mokou: 2又14/15残2B进六面
+22:08 varna: ...
+22:08 Mokou: 3残1B见神子
+22:08 Mokou: 道中手滑按没一个B，还导致送B的灵出来之前就砍死了妖精
+22:09 Mokou: 血亏系列
+22:09 Mokou: 一非抱B
+22:09 Mokou: 一符炸
+22:10 Mokou: 二非炸
+22:10 Mokou: 二符撞
+22:10 Mokou: 三非炸
+22:11 Mokou: 三符炸
+22:11 Mokou: 四非收了
+22:11 Mokou: 四符收了
+22:12 Mokou: 五符灵界砍死
+22:12 Mokou: 六符炸&撞
+22:13 Mokou: 2B见终符……
+22:14 Mokou: 哈哈哈哈0残0B通了
+22:17 varna: _(:з」∠)_
+22:18 Mokou: 节目效果满分
+22:19 Mokou: HZC一面循环中
+22:20 varna: 若 鹭 姬
+22:21 Mokou: 哈哈哈哈哈见到人鱼也唱
+22:23 Mokou: 若鷺姫は皆のアイドル〜
+22:23 varna: 困得意识模糊，看看能不能把半血深度四的迷宫打掉
+22:24 varna: (｡･ω･)死斗！只剩本能的不死猎人羊驼！
+22:29 varna: 可怕，被小怪杀掉了
+22:31 varna: 卧槽这什么韧性！
+22:31 varna: 连着三个拼刀同归了
+22:33 Mokou: 3残3B进四面
+22:37 Junzki joined channel
+22:40 varna: 卧槽被秒了
+22:48 Mokou: 哈哈哈哈哈
+22:48 Mokou: 抱4又7/8B撞
+22:48 varna: 卧槽
+22:48 varna: 直死！
+22:51 varna: 又是直死……
+22:52 Mokou: 又一个B陪葬
+22:52 varna: 沾边死……
+22:52 Mokou: 感觉yuke应该是累了
+22:53 Mokou: 击破抱3B撞
+22:53 Mokou: 我觉得这把要疮
+22:55 Mokou: 2残进五面
+22:56 Mokou: 五面上来撞
+22:57 varna: 我嚓直接被秒
+22:57 Mokou: 抱1B撞
+22:57 varna: 太可怕了
+22:57 varna: 强制50%生命值上限的迷宫果然是最大难点
+22:59 Mokou: 2残见正邪
+22:59 Mokou: 一非扭
+23:00 varna: 我嚓被秒了
+23:00 Mokou: 一符撞
+23:01 lhanjian: 可怕
+23:02 Mokou: 正邪终符抱2B撞，疮了
+23:02 lhanjian: varna: 活尸剑圣那招反手出剑，太难反应格挡了
+23:03 varna: 我嚓这秒杀力
+23:03 varna: 我从未感觉到火狗有此魄力
+23:03 varna: lhanjian: 哪里的
+23:05 varna: 卧槽
+23:05 varna: 又被秒了……
+23:06 lhanjian: 就咕哒子门口的直剑活尸喽
+23:07 lh_mouse: 开艹 memcmp 。
+23:09 Mokou: http://wx4.sinaimg.cn/mw690/842e9604gy1fhytzf5o6nj20u01hc4qp.jpg NSFW
+23:10 varna: 半血被秒
+23:10 varna: 大致明白打法了，但简直痛苦到家
+23:13 varna: 一击……
+23:16 lh_mouse: CUM
+23:17 varna: 通过
+23:17 varna: (｡･ω･)一击直死？
+23:17 varna: (｡･ω･)狗车？
+23:18 varna: (｡･ω･)顶着生命值上限削弱50%照样击破
+23:22 lhanjian: 厉害了
+23:23 lhanjian: varna: 我们来对练弹反吧
+23:23 lhanjian: 法兰弹反大剑
+23:23 lhanjian: 堂堂狼箭步被砍得只剩弹反
+23:24 lhanjian: 法兰大剑本来的狼箭步战技真是屌爆了
+23:25 varna: 不练了，弹反这个东西我基本只用来解决特定问题
+23:25 lhanjian: 弹反咚咚咚的声音好听
+23:27 lhanjian: 法兰戒指对于法兰大剑没有价值，这点太搞笑了
+23:29 lhanjian: 玩家和路人兵拿到同一套装备简直是天地的差异
+23:30 varna: 韧性
+23:30 lhanjian: 招式也少啊
+23:30 lhanjian: 洛直，洛骑能多出三种动作
+23:31 lhanjian: 连枪哥都自带长枪横扫
+23:31 lhanjian: 更不说单手盾击了
+23:31 varna: 所以是时候血疗了
+23:31 varna: 武器炫酷，死状惨烈
+23:32 lhanjian: 那个背后重击才能处决的设定让我十分难受
+23:32 varna: 因为处决攻击强力到爆
+23:33 lhanjian: 枪反倒是很舒服
+23:34 varna: 也有硬派Boss, 无法处决，只能打肢解伤害
+23:34 varna: 刚才火狗就是
+23:34 varna: 头部击破之前，一鞭上去400+
+23:35 varna: 击破之后1.55k
+23:40 varna: 卧槽中机关了！
+23:40 varna: 瞬杀
+23:40 varna: 先不打了，道阻且长
+23:42 lhanjian: 黑魂似乎没有哪个boss不能处决的
+23:43 varna: 顺便一提，1.5k抽了好几鞭子的结果是火狗终于进P2了
+23:43 varna: 这货血应该超两万
+23:43 Junzki quit:Quit: Page closed
+23:43 varna: 迷宫debuff影响，我的血量大约630
+23:44 varna: 幸好大部分招式只是伪直死，真秒杀只有狗车一击
+23:44 varna: 不然我现在一喆掏在怪兽类敌人身上怎么也得六千多
+23:59 lhanjian: varna: 悬崖边跳街舞，摔死了，然后黑骑士也跟着我跳了……

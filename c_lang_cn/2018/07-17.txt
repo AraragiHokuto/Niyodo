@@ -1,0 +1,96 @@
+00:02 Raybih joined channel
+00:15 Raybih quit:
+00:29 varna quit:Ping timeout: 260 seconds
+01:43 lh_mouse quit:Ping timeout: 260 seconds
+02:45 geordi quit:Read error: Connection reset by peer
+02:49 geordi joined channel
+04:35 cleamoon_ joined channel
+08:39 zhangoke joined channel
+08:40 sixand joined channel
+08:40 zhangoke quit:Client Quit
+09:53 lh_mouse joined channel
+09:55 perr joined channel
+09:55 perr quit:Changing host
+09:55 perr joined channel
+09:58 perr quit:Client Quit
+10:30 lh_ideapad joined channel
+11:17 cleamoon_ quit:Quit: Connection closed for inactivity
+12:03 zhangoke joined channel
+12:10 zhangoke quit:Quit: zhangoke
+12:32 GreyHound joined channel
+12:44 meowray: lhanjian: https://github.com/autozimu/LanguageClient-neovim/issues/454 ^
+13:13 GreyHound quit:Read error: Connection reset by peer
+13:13 GreyHound joined channel
+14:17 sixand1 joined channel
+14:18 sixand quit:Ping timeout: 256 seconds
+14:18 sixand1 is now known as sixand
+15:04 sixand quit:Quit: sixand
+15:04 sixand joined channel
+15:04 sixand quit:Client Quit
+15:09 sixand joined channel
+15:30 lh_mouse: geordi, << is_destructible<int>::value
+15:30 geordi: true
+15:30 lh_mouse: geordi, << is_destructible<meowray>::value; struct meowray { ~meowray() = delete; };
+15:30 geordi: false
+15:31 lh_mouse: geordi, -r --clang -c struct wrapper { vector<meowray> v; };
+15:31 geordi: Success
+15:31 lh_mouse: geordi, remove --clang
+15:31 geordi: Success
+15:31 lh_mouse: geordi, show 
+15:31 geordi: -c  struct meowray { ~meowray() = delete; };struct wrapper { vector<meowray> v; };
+15:41 meowray: "赞👍 可以尝试在国内时间周日的午后或晚饭点儿在 V2EX 发个主题推广。这些时间看的人会多一点。"
+15:42 meowray: lh_mouse: struct rodent:animal{short limbs;long tail;};struct lh_mouse:rodent{...};準確嗎？
+16:06 \s is now known as \s_
+16:43 lhanjian: meowray: mew
+16:49 lhanjian: lh_mouse: 摸一下耗鼻子
+16:51 lh_cat joined channel
+16:52 lh_mouse quit:Ping timeout: 240 seconds
+16:57 Taggnostr3 quit:Ping timeout: 240 seconds
+16:57 Taggnostr2 joined channel
+17:06 Taggnostr3 joined channel
+17:07 Taggnostr2 quit:Ping timeout: 245 seconds
+17:12 Taggnostr3 quit:Ping timeout: 240 seconds
+17:13 Taggnostr2 joined channel
+18:02 lh_ideapad: lhanjian, 咬你。
+18:02 lhanjian: lh_ideapad: 放猫猫抓耗子～
+18:14 cleamoon_ joined channel
+19:05 GreyHound quit:Ping timeout: 240 seconds
+19:55 varna joined channel
+20:02 varna: 噗叽啪
+20:08 lh_ideapad quit:Ping timeout: 244 seconds
+20:11 lh_ideapad joined channel
+20:38 whocares_2 joined channel
+20:38 whocares_2_ quit:Ping timeout: 240 seconds
+20:41 cleamoon_ quit:Quit: Connection closed for inactivity
+20:44 lh_mouse joined channel
+20:46 lh_cat quit:Ping timeout: 256 seconds
+20:58 cc joined channel
+21:00 varna: (｡･ω･)唔姆唔姆
+21:04 lhanjian: varna: 黑魂1，下载中
+21:04 Taggnostr3 joined channel
+21:05 Taggnostr2 quit:Ping timeout: 256 seconds
+21:08 varna: (｡･ω･)唔姆，真香
+21:09 lhanjian: varna: 黑魂1我打死也不要这种炒冷饭的重置
+21:10 lhanjian: varna: emmmm，这个基亚兰，好玩
+21:18 varna: 噗叽啪
+21:22 lhanjian: 排什么粪
+21:22 varna: 这是先辈在分形
+21:24 lhanjian: 主题曲都没有
+21:31 lh_ideapad quit:Remote host closed the connection
+21:41 zhangoke joined channel
+21:44 zhangoke quit:Client Quit
+21:55 sixand quit:Ping timeout: 240 seconds
+21:59 lhanjian: 不死院
+22:08 lhanjian: you died
+22:20 lhanjian: varna: 火鸡场。露天的
+22:21 zhangoke joined channel
+22:29 cleamoon_ joined channel
+22:31 zhangoke quit:Quit: zhangoke
+22:53 Mokou: https://wx2.sinaimg.cn/mw690/5cf42c0fgy1ftcriwmpfij205306ydfu.jpg <- 羊驼子的日常
+22:53 varna: 其实也并不是这样
+22:54 varna: 麻美掉之后把下半身用一个T转接口连到颈部创口就可以了
+22:54 varna: 不然显得太失调
+23:10 lh_mouse: 喵喵。
+23:11 lh_ideapad joined channel
+23:22 cc quit:Quit: Make a better world!
+23:28 cleamoon_: uccu

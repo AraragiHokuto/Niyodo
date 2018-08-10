@@ -1,0 +1,661 @@
+00:12 lh_mouse quit:Read error: Connection reset by peer
+00:14 CyrusYzGTt joined channel
+00:15 doublehou joined channel
+00:30 doublehou quit:Ping timeout: 276 seconds
+00:32 lh_not_bot quit:Ping timeout: 260 seconds
+00:33 lh_not_bot joined channel
+01:04 lhanjian quit:Quit: Connection closed for inactivity
+02:31 cleamoon joined channel
+03:31 cleamoon quit:Ping timeout: 252 seconds
+03:46 Guest9122 quit:*.net *.split
+03:46 whocares_2 quit:*.net *.split
+03:46 geordi quit:*.net *.split
+03:46 CyrusYzGTt quit:*.net *.split
+03:55 Guest9122 joined channel
+03:55 whocares_2 joined channel
+03:55 geordi joined channel
+03:55 CyrusYzGTt joined channel
+03:57 stardust quit:Quit: Connection closed for inactivity
+04:00 cleamoon joined channel
+04:35 whocares_2_ joined channel
+04:37 whocares_2 quit:Ping timeout: 252 seconds
+06:50 cleamoon_ joined channel
+07:52 hoxily quit:Quit: Leaving
+08:56 cc joined channel
+09:05 lh_mouse joined channel
+09:07 iyzsong: 膜呀
+09:15 cleamoon quit:Ping timeout: 240 seconds
+09:44 CyrusYzGTt quit:Ping timeout: 240 seconds
+10:09 * lh_mouse slaps iyzsong around a bit with a large trout
+10:10 lh_mouse quit:Read error: Connection reset by peer
+10:10 lh_mouse joined channel
+10:55 cc quit:Remote host closed the connection
+10:55 cc joined channel
+11:34 whatofor_1 quit:Ping timeout: 260 seconds
+12:01 varna joined channel
+12:01 varna: lhanjian_ssh: 你上次给我的WA2只有IC和CC?
+12:02 whatofor joined channel
+12:03 varna: lhanjian_ssh: 还是说进coda需要把雪菜线通掉
+12:06 cc quit:Remote host closed the connection
+12:08 Dove joined channel
+12:19 randomclown joined channel
+12:36 randomclown quit:Quit: Leaving
+12:43 stardust joined channel
+13:53 * lh_mouse 雪菜碧池。
+14:00 Dove: 又一个白学家
+14:03 code_new joined channel
+14:03 code_new: varna: 爆
+14:09 varna: code_new: 爆
+14:10 code_new: 好久不见驼兄
+14:10 code_new: 开始工作了吗？
+14:10 varna: 没入职，目前在当雇佣军
+14:10 code_new: 哦哦
+14:12 code_new: 驼兄舰娘弃坑后感觉有些寂寞啊
+14:12 varna: 还好，我会继续关注
+14:13 code_new: 好吧
+14:13 varna: 只是我实在不想为皿煮和自由的大姐姐拼死作战了
+14:13 code_new: 2333
+14:14 varna: 我已经拼死作战了很长时间，快挺不住了
+14:14 lh_mouse: varna, 居然弃坑了？
+14:14 varna: 打一个甲等几乎是从肝里面榨东西出来
+14:14 code_new: 现在我还在E2吔屎
+14:14 varna: lh_mouse: 田中开始实装美帝的东西，我不高兴了
+14:14 code_new: 甲等已经不是凡人能打的了
+14:15 varna: 现在的甲等直接来了个六姬，这怎么也得二十万资源一千四五百桶吧
+14:15 lh_mouse: varna, 妳什么时候弃坑的。
+14:16 varna: 是“你”
+14:16 varna: 弃坑啊，今天中午
+14:17 code_new: 23333
+14:17 lh_mouse: varna, 甚好甚好。
+14:17 lh_mouse: 捉来做奴隶。
+14:17 varna: 昨天我流感很严重，歇了一天
+14:17 lh_mouse: varna, https://gcc.gnu.org/bugzilla/show_bug.cgi?id=70936
+14:17 varna: 不给你折腾，最近意识模糊
+14:18 code_new: 春季流感多发，可以考虑出门戴口罩
+14:18 varna: 口罩太麻烦了
+14:18 varna: 最近debian稳定的版本，内核能上3.14吧？
+14:19 varna: 今天我查了查centos, 尿得一塌糊涂
+14:19 code_new: 好久没用过RH和debian系了
+14:20 varna: 给办公室的测试服务器用的
+14:20 lh_mouse: lh_mouse@lhmouse-dev:~$ uname -a
+14:20 lh_mouse: Linux lhmouse-dev 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt20-1+deb8u4 (2016-02-29) x86_64 GNU/Linux
+14:20 varna: 3.16就好
+14:20 varna: gcc呢？
+14:20 lh_mouse: 4.9
+14:20 varna: 应该足够了
+14:20 varna: 我弄一套iso来
+14:23 lh_mouse: varna, 你是第一次装 debian 吗？
+14:23 varna: 很久以前装过一次
+14:24 varna: 那时候我还在用我初中时候的偷西瓜笔记本
+14:24 lh_mouse: varna, 那ヲ还是提两点：你只需要那个 CD1 的 ISO，也就几百 M；安装过程中问是否联网更新的那步一定一定要选 no，否则就会要 CD2。
+14:25 varna: 哦哦
+14:25 varna: 我现在在拖他们的liveCD
+14:25 varna: 用这个应该就够了？
+14:25 varna: 以前我那个debian 5直接连软件仓库刻了五张DVD, 不想重蹈覆辙了
+14:26 lh_mouse: 全部装好之后找个国内的源比如 163 的，直接把 /etc/apt/sources.list 整个覆盖掉（确保里面没有 cdrom 那一行）然后整个 sudo apt-get update && sudo apt-get dist-upgrade 全部更新一遍重启就 OK  。
+14:26 lh_mouse: varna, 不需要。 CD 里的东西不一定新。
+14:26 lh_mouse: 你可以装好系统之后手工装 gcc 什么的。
+14:27 varna: 嗯，我安好之后刷一遍吧
+14:27 lh_mouse: 默认的 SSH 是不装的，Desktop environment 是装的，这两个东西自己手工调一下。
+14:27 lh_mouse: ssh 基本是必选，desktop 可以不要。
+14:27 varna: ssh没有啊……这个得有
+14:27 lh_mouse: 它会问的。
+14:28 Dove: desktop还是装了吧
+14:28 Dove: 要不自己装个别的。
+14:28 varna: desktop我用不着，是给其他人用的
+14:28 lh_mouse: 不需要。
+14:28 lh_mouse: 日常用途 ssh 就够用。
+14:28 Dove: 太高端了
+14:28 varna: 那是安在测试服务器上的系统，我直接登上去并不需要什么桌面
+14:29 varna: 基本就是一条ssh xxx@yyyyyyy
+14:29 lh_mouse: varna, http://mirrors.163.com/.help/sources.list.jessie
+14:29 lh_mouse: 把 /etc/apt/sources.list 覆盖掉就行了。
+14:29 varna: ack
+14:29 varna: 看到这些了
+14:30 varna: Dove: p7文档的中文页面补上了自旋锁，那天我忘了
+14:30 varna: lhanjian_ssh: ^
+14:31 Dove: soga，多谢，我去看一下。
+14:31 varna: 顺便提一句，我自己写东西的时候不太用2.3那一节里提到的任何API
+14:32 Dove: 好吧
+14:33 varna: 如果你觉得自己需要更细致的IO控制，读一下libp7.h里一部分接口的实现
+14:33 varna: 那些东西可以当作demo
+14:33 Dove: 嗯
+14:33 Dove: p7我觉得我还是有希望读懂的orz
+14:34 Dove: 毕竟以前看过一些。
+14:35 varna: 那东西很简单，基本只是围绕几个想法展开的
+14:35 lh_mouse: varna, 提几个东西。
+14:35 varna: lh_mouse: 请讲
+14:35 lh_mouse: #define cpu_relax   __asm__("pause")   // __builtin_ia32_pause()
+14:36 varna: 这个我改一下
+14:36 lh_mouse: 自旋锁里 while(__atomic_exchange_n(&(spin->lock), 1, __ATOMIC_SEQ_CST))   这个 overkill 了。
+14:36 varna: CST的缘故？
+14:36 lh_mouse: 那是一方面。
+14:38 lh_mouse: while(__atomic_load_n(&lock, __ATOMIC_CONSUME) || __atomic_exchange_n(&n, 0, __ATOMIC_ACQ_REL)){ relax(); }
+14:38 lh_mouse: SEQ_CST 是第三个问题。
+14:38 lh_mouse: SEQ_CST 和 RELEASE 是有区别的。前者会多一个不必要的 mfence 指令，而在 i686 上后者是 no-op。
+14:39 varna: 这样啊……
+14:39 lh_mouse: while 那个条件写错饿了。
+14:39 lh_mouse: exchange 的操作数是 1 。
+14:40 lh_mouse: 真正需要 seq_cst 的代码其实并不多。
+14:40 varna: 基本上，SEQ_CST我得一点点拔掉
+14:41 varna: 这里多谢指教了
+14:43 varna: 已push, 注明了thanks to
+14:44 lh_mouse: 全部换成 acq_rel 问题是不大的。
+14:44 stardust quit:Quit: Connection closed for inactivity
+14:44 lh_mouse: http://paste.ubuntu.com/16211897/
+14:45 lh_mouse: producer 向 b1 和 b2 分别写入 1，但是这里有个问题。
+14:45 whatofor_1 joined channel
+14:45 lh_mouse: 哦不对。
+14:45 lh_mouse: b1 b2 换成非原子操作。
+14:45 lh_mouse: 稍等。
+14:46 lh_mouse: http://paste.ubuntu.com/16211902/
+14:46 lh_mouse: 好像还是不对。具体怎么写的忘了。
+14:48 whatofor quit:Ping timeout: 260 seconds
+14:51 lh_mouse: varna, http://en.cppreference.com/w/cpp/atomic/memory_order
+14:51 lh_mouse: Sequentially-consistent ordering
+14:52 varna: "plus a single total order exists in which all threads observe all modifications (see below) in the same order" 这里我以前倒是见过，不过忘了为何写自旋的时候要这么作死
+14:53 lh_mouse: 下面有个 example，两个线程分别往两个原子整型里写 1，然后用另外的线程先后读这两个对象。如果仅仅是 RELEASE 这里的问题就是，读者可能先读了 x 发现是 1 但是读了 y 发现是 0，同时另一个线程读了 y 发现是 1 读了 x 发现是 0 。
+14:56 varna: 明白这个意思了
+15:04 Matsune joined channel
+15:05 varna: 音音子来了
+15:05 varna: 捏他
+15:06 Matsune: 牙齿情况复杂
+15:06 Matsune: 我本来以为是个普通的蛀牙
+15:06 lh_mouse: Matsune, 爆照。
+15:06 Matsune: 结果x光一照 发现是颗没有换掉的乳牙
+15:07 Matsune: 新的牙齿发育畸形导致乳牙没掉
+15:07 Matsune: 新的牙齿长成了椭圆形。。。
+15:07 lh_mouse: Matsune 长乳牙了！
+15:07 Matsune: 横摊在我的牙龈里面
+15:07 lh_mouse: Matsune 长乳牙了！
+15:07 lh_mouse: Matsune 长乳牙了！
+15:07 varna: 频道的幼女越来越多了！
+15:07 Matsune: 哎 我还是牙齿都没还完的年纪
+15:08 varna: 幼女幼女！
+15:08 Matsune: 不过今天赚到了
+15:09 Matsune: 我去检查牙齿那个医生说 你这情况我不懂 把我强行变成了一个专家号
+15:09 Matsune: 换了个医生看了半天
+15:10 Matsune: 现在就是在纠结要不要拔牙
+15:10 Matsune: 医生说乳牙不拔过段时间可能自己就会掉了 但是里面的牙齿不知道有没有问题
+15:10 Matsune: 会不会发炎什么的
+15:11 varna: 要不你再换个专家问问……
+15:12 Matsune: 医生跟我说不管怎么样得拍一个ct
+15:12 Matsune: 要看看两颗牙齿的相互关系和位置
+15:13 Matsune: 下次得挂专科号了
+15:22 varna: (｡･ω･)ﾉ小春大法好
+15:24 Matsune: 那是什么大法
+15:24 varna: WA2
+15:25 varna: 昨天休息时候认真推了一遍closing chapter, 我已经看穿一切，不再觉得问题是雪菜vs和纱的二择了
+15:26 * lh_mouse 雪菜碧池。
+15:27 * lh_mouse 红学家白学家红白学家。
+15:27 varna: https://metacpan.org/pod/release/LAWALSH/P-1.1.35/lib/P.pm 今日推荐
+15:45 Dove: 你们这群熟练的白学家
+15:45 Dove: 我在找好看的美剧然而强行找不到。
+15:46 Dove: 先回家，嗯。
+15:46 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+16:02 Matsune: 【环球网报道 记者 余鹏飞】日本最大的黑社会暴力团体山口组(神户市)分裂后，脱离组织的团体集结成神户山口组(兵库县淡路市)，双方枪击事件持续发生，导致近期日本地下军火市场一路暴涨，甚至子弹的黑市价格已经涨至1万日元/枚。
+16:03 varna: ...
+16:24 stardust joined channel
+17:12 varna: ok, debian能用了
+17:13 varna: git clone  ナニソレイミワカンナイ  # _(:з」∠)_我驲这个剪切板
+17:28 varna: 手工补了一些库，看起来新的debian服务器可以用了
+17:28 varna: 旧的CentOS就留着当FastDFS的文件服务器了
+17:40 Dove joined channel
+17:41 Dove: 实习的招聘好少，还都是java，我就日了狗。
+17:41 varna: OTL
+17:42 Dove: 都进阿里了你就别卖萌了，服务端python都比C艹多，C艹跟erlang一个水平。
+17:43 Dove: 要求还很高，我TM还达不到。
+17:43 Dove: 结果实习薪水还不够房租的一半。
+17:43 varna: 阿里那个面试很简单的
+17:44 Dove: 对你来说很简单，我肯定没戏。
+17:44 Dove: 你入职时P5吧
+17:44 varna: 是
+17:44 Dove: 那还不错，你的话估计很快就可以上P7。
+17:45 lh_mouse: p7!
+17:45 varna: 做梦不如专注点
+17:45 varna: p7已经有了
+17:45 varna: 你看小耗都知道
+17:46 varna: 我觉得与其一天想着拿着高薪迎娶白富美走上人生巅峰，不如安心做事情去
+17:46 Dove: 我是进不去阿里了，面试考算法不？
+17:46 lh_mouse: 面试考怎么用 futex 写 mutex 。（大雾）
+17:47 varna: 三面问我的一个算法和机器学习有关
+17:47 Dove: 据说校招都是考基础，算法啊组成原理啊网络啊什么的。
+17:47 Dove: soga
+17:47 varna: 其余都是基础的事情，二面一个技术问题都没问
+17:48 lh_mouse: 看什么校。
+17:48 lh_mouse: 技术面的问题可能真的很少。当然ヲ还是倾向于技术。
+17:48 lh_mouse: を就见过笔试一半技术面试啥技术都没问的。
+17:49 lh_mouse: 虽然不是大地方。
+17:50 Dove: 反正我先慢慢撸，不太想撸算法，大不了不进BAT。
+17:50 varna: 不过我毕竟没笔试……
+17:50 varna: 算法也不用会麻烦的啊
+17:51 varna: 能解决一部分自己常见而基本的问题的程度就行
+17:51 Dove: 啥都不会呢先撸算法不是作死么。
+17:51 Dove: 常见基本算法我还是会一点的。
+17:52 Dove: 排序啊，深搜宽搜啊，什么二叉树的各种算法。
+17:52 varna: 缩手缩脚才是作死
+17:52 Dove: 好吧
+17:52 varna: 但是放开手脚还做不来的话，人就明白自己的手脚有多长了
+17:53 Dove: 没错
+17:54 varna: 到晚上还有些时间，看看把p7页面的第三部分写一点出来
+17:54 Dove: OTL
+18:19 lh_mouse: 某人不是说要写个读写锁么。
+18:20 varna: (｡･ω･)瓜子。
+18:20 iyzsong: (・.・;)
+18:23 lh_mouse: varna, ヲ觉得真没必要使用自旋锁。
+18:23 varna: 我这里互斥其实还多一个唤醒开销，不过如果你要说pthread该用互斥的话，这倒是正论
+18:24 varna: 毕竟我没提到的一点，是只要在临界区里没有重调度，那么实际上就是几个线程之间的事情
+18:25 varna: 如果一个coro暂时没竞争到，就转一会儿，不行换下一个，这样的节奏
+18:26 lh_mouse: glibc 的 pthread_mutex 有自旋。
+18:26 varna: 我知道
+18:26 lh_mouse: geordi, << sizeof(pthread_mutex_t)
+18:27 geordi: 40
+18:27 lh_mouse: 不过他那个 mutex 犯了一个致命错误。
+18:27 lh_mouse: 用同一个结构干两件事情。
+18:43 Mokou joined channel
+18:43 Mokou: 我起一卦决定今天是写程序还是打活动
+18:46 Mokou: 112112 兑为泽
+18:48 Mokou: 兌，說也。剛中而柔外，說以利貞，是以順乎天，而應乎人。說以先民，民忘其勞；說以犯難，民忘其死；說之大，民勸矣哉！
+18:48 Mokou: 我去吃屎了
+18:52 whatofor_1: 看不懂, 这是说左手写代码 右手打活动吗?
+18:57 lh_mouse: 大角虫！
+19:04 Mokou: varna: 哦，今晚维护
+19:04 Mokou: E6这么强是个Bug
+19:07 Mokou: 等等
+19:07 Mokou: 等等
+19:07 Mokou: 春イベ【開設！基地航空隊】の後半戦、拡張作戦・後段作戦に進まれている提督の皆さん、大変申し訳ありません、現在「航空撃滅戦」海域で敵が空襲しない・基地航空隊の敵ボスへの打撃力が少ない等の不具合が確認されています。
+19:08 Mokou: 这Bug是敌方不空袭？
+19:14 cleamoon_: 羊驼子竟然退坑了
+19:15 Dove: 退坑保平安
+19:16 Mokou: 过门神以后猫了
+19:16 cleamoon_: .....
+19:16 Dove: 你看，我说啥来着。
+19:16 Dove: 羊驼子估计是太忙了。
+19:16 Mokou: 是，你太他妈聪明了
+19:16 Mokou: 满意不
+19:17 Dove: 满意哈哈
+19:17 iyzsong: (#･∀･)
+19:17 Mokou: 这次如果我能打完活动，我拆依阿华
+19:17 Dove: iyzsong: 揉捏
+19:18 cleamoon_: 卧操
+19:18 cleamoon_: 黑旗怎么这么早立次毒誓
+19:19 xxxxxxxx joined channel
+19:19 cleamoon_: 这次怎么个难法
+19:19 Mokou: cleamoon_: 这次E7丙也就比夏活E7甲难点
+19:20 cleamoon_: 噗
+19:20 cleamoon_: 那打个帽子
+19:20 xxxxxxxx: 233 听说你想当丙督
+19:21 cleamoon_: 甲鱼得什么难度，E1开始就6-4级吗
+19:21 Mokou: cleamoon_: E7斩杀七个姬
+19:21 Mokou: 六个*
+19:21 wysaid joined channel
+19:21 cleamoon_: 噗
+19:21 Mokou: 旗舰850血270甲，底下主任两个院长两个神风姬
+19:22 cleamoon_: 这里理论上能斩吗
+19:22 Mokou: 神风姬195血167甲，作为对比院长400血160甲
+19:22 wysaid: 好热闹
+19:22 wysaid: http://tieba.baidu.com/p/4525188443  求挽尊， 只有吾辈还在坚守EGE么
+19:22 wysaid: 啊哈哈
+19:22 cleamoon_: 这堆都是需要夜战北上的实力呀
+19:22 Mokou: cleamoon_: 我这么说吧，如果旗舰护甲是0，那么魔王一发CI打到最高伤害刚刚好可以斩掉
+19:23 Mokou: 但有个好消息：Boss是陆基，不吃雷装
+19:23 cleamoon_: 噗
+19:23 Mokou: 雷巡是卵用的
+19:23 cleamoon_: 这打个毛子
+19:23 cleamoon_: 全军智商上线我觉得也斩不了吧
+19:23 Mokou: 这没法打
+19:23 Dove: wysaid: 好久不见，最近干吗呢？
+19:24 Mokou: E6基本上就是上次E7
+19:24 wysaid: Dove: 撸代码啊。。。
+19:24 cleamoon_: 360放弃医疗推广广告
+19:25 wysaid: 几年前就承诺没有的
+19:25 wysaid: 渣渣
+19:25 cleamoon_: 蹭了一个图呀
+19:25 wysaid: 360医疗几乎没收入
+19:25 cleamoon_: 幸亏不是E2就是E7难度
+19:25 wysaid: 毫不费力
+19:26 Dove: 人脸识别，看起来好难。
+19:27 wysaid: 哈哈， 开源的 
+19:27 xxxxxxxx: 几年后 路人A: 曾经舰娘也是个人人能打活动的游戏 路人B: 脑子烧坏了吧 怎么可能
+19:28 Mokou: 不打了
+19:28 varna quit:Ping timeout: 250 seconds
+19:29 cleamoon_: 我试试咸鱼
+19:30 varna joined channel
+19:30 wysaid joined channel
+19:30 wysaid: 哇擦
+19:31 wysaid: 怎么掉线了
+19:31 Dove: wysaid: OTL
+19:31 wysaid: Holy shit
+19:31 wysaid: 是不是错过了什么精彩内容
+19:31 wysaid: 准备下班， 吃饭
+19:31 Dove: 在哪上班呢现在？
+19:31 wysaid: 这年头好冷清啊， 发个水贴都没人挽尊
+19:32 wysaid: 帝都小公司呀
+19:32 wysaid: 你也在北京的吧
+19:32 wysaid: 不行了， 闪了
+19:32 wysaid: 吃饭去
+19:32 Dove: 8
+19:32 wysaid quit:Remote host closed the connection
+19:38 cleamoon_: Mokou, 黑旗打到哪里了
+19:44 varna quit:Ping timeout: 244 seconds
+19:47 code_new: E2斩不掉……
+19:47 code_new: 现在我都很难看见boss……
+19:55 cleamoon_: orz
+19:58 Mokou: cleamoon_: E2
+19:58 code_new: 无限劝退……
+19:58 Mokou: 但我不打了
+19:59 code_new: OTL
+19:59 cleamoon_: orz
+19:59 cleamoon_: 我咸鱼试试
+19:59 cleamoon_: 黑旗也退坑了？
+19:59 code_new: 我看我E2之后还是咸过去吧
+20:00 Mokou: 我观望
+20:00 varna joined channel
+20:00 Mokou: 羊驼子冒出来了
+20:00 varna: 路由器尿了
+20:00 varna: 刚才在跟人说话，路由器挂了不知道
+20:00 Mokou: ……
+20:00 code_new: ……
+20:01 varna: 我就说一个感受
+20:01 varna: 不用每半小时脑抽一次真TM爽啊
+20:01 Mokou: 说得好
+20:01 varna: 站起身的时候不用心算远征时间真好啊
+20:01 code_new: 23333
+20:01 cleamoon_: 卧操，这些肝帝，35级神风
+20:02 code_new: 我是用的chrome插件
+20:02 varna: 十一万油、十二万弹、十三万钢、九万铝、七百桶跟着我的一个利用停止都蒸发了
+20:02 code_new: 肝帝应该都婚了
+20:02 Mokou: 你利用停止乐安
+20:02 Mokou: 了啊*
+20:02 varna: 对
+20:03 Mokou: 有点可惜
+20:03 Mokou: 你那号卖个1k应该没问题
+20:03 code_new: 主要是少了一个话题
+20:03 Mokou: 话题不是问题
+20:04 Mokou: 我之所以没弃坑，就是觉得总得有人替诸君吃屎
+20:04 varna: 坚决不卖
+20:04 Mokou: 我大概会卖
+20:04 Mokou: 毕竟太穷了
+20:04 code_new: 我这E2的屎还没吔完
+20:04 varna: 我给全员截了图，所有的装备清单也都截下来了
+20:04 Mokou: 交给你了
+20:05 Mokou: varna: 你没保存个API_PORT？
+20:05 varna: 没存，麻烦
+20:05 varna: 我直接在改修界面截了一百七十三张图
+20:05 varna: 装备清单六十七张
+20:05 cleamoon_: 有人买吗？有的话我的号卖了吧
+20:05 Mokou: 我可以导入api_port
+20:05 cleamoon_: orz
+20:06 Mokou: cleamoon_: 你现在几条婚舰？
+20:06 cleamoon_: 0条
+20:06 Mokou: 图鉴差几条
+20:06 cleamoon_: 能婚的3条
+20:06 Mokou: 图鉴呢
+20:06 cleamoon_: 差远了....
+20:06 varna: 我之所以玩舰C，是因为有三百万人在玩，而且我的武ye勋shi比他们中的一两百万都多
+20:06 Mokou: 10块钱差不多
+20:06 cleamoon_: 噗
+20:06 cleamoon_: 好便宜
+20:07 varna: 但现在田中逼我吔舰改的shi，这我不能接受
+20:07 Mokou: 因为没看出你那帐号有什么值得买的……
+20:07 code_new: 难道日系船已经快出完了吗
+20:07 varna: 没呢
+20:07 Mokou: 要是算上驱逐舰还早呢
+20:07 cleamoon_: 确实没什么值得买的......
+20:08 varna: 但如果你不是驱逐舰和辅助舰爱好者，就没了
+20:08 Mokou: 我等信浓
+20:08 code_new: ……
+20:08 varna: 一万吨以上的、历史上存在过的东西，就剩信浓了吧
+20:08 varna: 说起来以后谁打推演
+20:08 varna: 也许我空出来的精神可以搞一套更好的脚本
+20:09 Mokou: 我打，不过其实我有个想法想试验下
+20:09 code_new: 我想参加炮击战
+20:09 varna: 以后吧
+20:09 varna: 这几个月我已经深陷邪恶狂热不能自拔
+20:10 cleamoon_: 下面出现的可能是林肯，肯尼迪，布什，甚至辽宁
+20:10 varna: 毕竟是p7的初次实战，得搞得好点
+20:12 varna: 其实现在我对脚本的重点考虑倒不是数值设定了
+20:12 Mokou: 说实话，夏活E7那个333甲出来的时候我都还有希望
+20:12 varna: 而是如何权衡差不多同时发生的大比例尺和小比例尺战斗
+20:12 Mokou: 这次我看到神姬collection，直接没兴趣了
+20:13 cleamoon_: 这6姬陆基削弱了也没法打呀
+20:13 varna: 这是舰改难度
+20:14 lh_mouse: 羊驼子弃坑，放鞭炮。
+20:14 varna: 我只说一个事情：14年的舰C不需要这么爆肝啊！
+20:14 * lh_mouse 拿起一只鞭炮塞进了 Mokou 的 PY 里。
+20:15 varna: 现在这个活动，你让我用四月底的战备去打丙，我觉得将将能通关
+20:15 varna: 田中在侮辱玩家的智力水平
+20:16 xxxxxxxx: varna: http://www.bilibili.com/video/av3533809/ 这个大概是实用技术?
+20:16 Dove: 有没有什么偏实用的数据库入门书籍推荐，MYSQL或者oracle都行。
+20:17 varna: xxxxxxxx: ...
+20:17 Dove: 数据库我完全不会也是囧。
+20:17 varna: 数据库我是野路子，基本什么都不会
+20:17 lh_mouse: 某人不是在研究读写锁么。
+20:18 varna: 我就说个事，关系数据库的日常小贴士有不少都是这耗科普给我的
+20:18 varna: 直到现在我还采取远离关系数据库的态度
+20:18 varna: p7的调用异步化也一直没做
+20:19 cleamoon_: 有没有什么理论向的数据库的书之类的
+20:19 Dove: 有个出到第七版的。
+20:19 Dove: 叫啥忘了。
+20:19 lh_mouse: 这耗。
+20:19 varna: 我见过一种两卷的厚书，但忘了叫什么；不理论，讲基础的实现
+20:19 Mokou: http://ww1.sinaimg.cn/mw690/b9dde13bgw1f3j6jyyfd6j20fy044gm5.jpg
+20:20 Mokou: http://ww2.sinaimg.cn/mw690/b9dde13bgw1f3j6jzg28ej20gf0dsmz9.jpg
+20:20 cleamoon_: 讲基础的实现会不会给人一种钦定的感觉
+20:21 lh_mouse: 没几个真去做实现的。
+20:22 Dove: 那我就过一遍学校发的数据库教材好了。
+20:22 varna: 你当科普
+20:22 cleamoon_: 数据库不是很赚钱吗，为什么没人做
+20:22 lh_mouse: 没听说过！
+20:23 cleamoon_: @oracle
+20:23 lh_mouse: oracle 说的就是真的啦？
+20:23 cleamoon_: 我觉得oracle的钱是真的....
+20:23 lh_mouse: 你们媒体千万要注意了，不要见着风是得雨，接到这些消息，媒体本身也要判断，明白这意思吗？ 假使这些完全无中生有的东西，你再帮他说一遍，你等于——你也有责任吧？！
+20:23 Dove: 编译原理上还说写编译器很赚钱呢。
+20:24 Dove: 虽然编译原理我看不懂，好费劲。
+20:24 lh_mouse: 王婆卖瓜。
+20:24 lh_mouse: GCC 不还是一帮义工。
+20:24 whatofor_1 is now known as whatofor
+20:24 cleamoon_: @百度
+20:24 Dove: 我很想学一下编译原理，然而书看不大懂也不知道怎么实现，有空研究研究吧。
+20:24 whatofor: 只看到写小说的说小说很赚钱
+20:25 Dove: 麻痹连书都看不懂的情况确实不多，编译原理做到了。
+20:25 lh_mouse: Dove, 你有这想法说明你就没怎么听过编译原理。
+20:25 Dove: 我们没这课。
+20:26 lh_mouse: ヲ没学过编译原理的时候也跟你是一样的想法。
+20:26 Dove: 学了发现比较简单？
+20:26 stardust: 编译器看上去不像是能赚钱的，除非和其它产品绑定
+20:26 Dove: 似乎都这么说。
+20:26 cleamoon_: 我校编译器的课，14节课，11节讲parser
+20:27 lh_mouse: ヲ们 8 节课 第一节绪论最后一节复习。
+20:28 Dove: 话说大学开的课我一门都没听过。
+20:28 lh_mouse: 整个跑马灯跑了一趟下来ヲ只敢手写 LL(1)。
+20:28 lh_mouse: Dove, 这就是你的不对了。
+20:28 code_new_ joined channel
+20:28 Dove: 好吧
+20:28 lhanjian joined channel
+20:29 cleamoon_: cs系的话不听课尚可忍，不做作业不可饶
+20:29 Dove: 反正龙书啃起来比较费劲
+20:29 Dove: 一般我感兴趣的方向我都是自己找个专著先啃
+20:30 Dove: 然而龙书打败了我。
+20:30 cleamoon_: 我校根本不用龙书
+20:30 code_new quit:Ping timeout: 244 seconds
+20:30 code_new_ is now known as code_new
+20:30 Dove: 虽然使劲看能看懂，但是不是一般的费劲。还记不住。
+20:30 lh_mouse: 一般ヲ感兴趣的地方都随手写点东西玩，写完就扔掉。
+20:31 Dove: 更不知道怎么实现
+20:31 lh_mouse: 所以你看这就是ヲ和你的区别。
+20:31 Dove: 话说你们NB的人似乎都这样。
+20:31 Dove: 我动手能力差
+20:32 cleamoon_: 理工科所有的内容都是动手 >> 读书吧
+20:32 lh_mouse: 上 下 其 手。
+20:32 cleamoon_: 没动手看书觉得满页都是重点，动完手觉得全书都是废话
+20:33 Dove: 我这几年就没怎么学，先把差不多的基础科普内容过一遍再写吧。
+20:34 Dove: 其实看书的时候多半也是在看废话，重点很少。
+20:34 stardust: 我也觉得直接上手写东西比较靠谱
+20:35 lh_mouse: ヲ觉得动手做就能弄出来的东西某人就是不愿意动手。
+20:35 Dove: 好吧我错了
+20:36 stardust: 基础的话那种上千页的大部头基本上也就能当工具书用
+20:36 geordi quit:Read error: Connection reset by peer
+20:37 geordi joined channel
+20:37 cleamoon_: 算导就很典型，学得时候觉得内容无比繁杂，用的时候发现书里什么都没写
+20:38 Dove: 嗯，我也要练习多动手，其实动手比较有意思。
+20:38 Dove: 算导我就看了前面几章，写了几个渣渣数据结构和算法，树讲完我就没看了。
+20:39 Dove: 羊驼说光看的话看再多算法书也学不会算法，所以后面的我就弃了。
+20:40 Dove: 然而算导已经算是我动手比较多的书了，还写了几个数据结构。
+20:41 Dove: 虽然接口不会设计，所以都没实用性。
+20:42 Dove: 各种算法像是动态规划什么的，看得时候觉得好有道理，看完了就不记得是什么了。
+20:43 lh_mouse: geordi, --version
+20:43 geordi: GCC 6.0.0 20151204 (experimental)
+20:43 lh_mouse: 这些将军是德国人民的渣渣（丢笔），没有荣誉感，称自己为将军，在军校呆了好几年，只 学会了怎么用刀叉吃饭！多少年了（爱娃闻声赶来），军队只会阻挠我的行动（格坦哭泣），所做的只是在扯我的后腿（元首敲桌子），我早该把所有 的······高级军官都处死，就像斯大林一样！······
+20:43 lh_mouse: 我从没进过学院，但我一个人征服了整个欧洲。叛徒······我从一开始就被人欺骗！对德国 人民的不可饶恕的背叛！但所有叛徒都要偿还，用他们自己的鲜血，他们将溺死在自己的血泊里！
+20:43 cleamoon_: 用膜法重写
+20:46 iyzsong: 感觉我写程序总是一脸(・.・;)，基本靠抄和猜 写过的再写也不熟练
+20:47 cleamoon_: 你不是先来的，所以不会这么熟练
+20:47 lh_mouse: 为什么你这么熟练啊。
+20:48 iyzsong: (つд⊂)
+20:48 Dove: iyzsong: 你跟我一样啊
+20:48 Dove: 一脸懵逼
+20:49 Dove: 我找到了一本评价比较好的比较薄的书。
+20:49 Dove: MYSQL必知必会
+20:53 hoxily joined channel
+20:58 Mokou: http://picpaste.com/CD17QjKP.png <- framebuffer
+20:58 Mokou: 当然动画是别想了
+20:58 varna: orz
+20:58 Mokou: 绘制极慢
+20:59 cleamoon_: orz
+21:03 iyzsong: orz
+21:07 code_new: orz
+21:07 FrankHB joined channel
+21:08 Dove: 不想看书，去看基本演绎法算了，实在找不到好看的美剧了。
+21:23 lh_cat joined channel
+21:25 hoxily: 天命玄鸟，降而生商。
+21:31 lhanjian: hoxily: 何故有此感概
+21:35 Mokou: lhanjian: 我猜是因爲看了我的截圖
+21:37 lh_mouse: Mokou, 爆。
+21:37 Mokou: lh_mouse: 肛
+21:37 lhanjian: Mokou: 哦哦哦，看起来是OS有了大进展？
+21:38 Mokou: lhanjian: 不算大進展，只是寫了個不到40行的framebuffer驅動
+21:38 lh_mouse: Mokou, 吃药。
+21:39 lhanjian: Mokou: soga
+21:46 guowang joined channel
+21:47 guowang: https://www.zhihu.com/people/skywind3000 哇 我知乎看见这个大神好厉害
+21:49 guowang: lh_mouse: 刚刚才知道游戏框架是个什么东西 = = https://github.com/lhmouse/poseidon
+22:00 varna: lhanjian: 小春大法好
+22:01 varna: 先撤
+22:01 varna quit:Quit: leaving
+22:03 CyrusYzGTt joined channel
+22:25 guowang quit:Remote host closed the connection
+22:26 lhanjian: code_new: 捏
+22:26 code_new: lhanjian: 揉jianjian
+22:29 lhanjian: code_new: newnew在外面玩吗？
+22:29 code_new: 在寝室里吔屎……
+22:31 lhanjian: code_new: 研究僧大成功？
+22:32 lhanjian: 哦哦哦，我真是后知后觉呢
+22:32 code_new: 只成功了不足20%_(:з」∠)_
+22:32 lhanjian: code_new: 啊？
+22:33 lhanjian: 难道不是考上了么？
+22:33 code_new: 现在只有托福考出来了
+22:33 lhanjian: ORZ托福
+22:33 Mokou: OTL
+22:33 Matsune: 我的牙齿酱GG了
+22:33 code_new: OTL
+22:35 lhanjian: Matsune: 肿么了？
+22:36 Matsune: lhanjian: 坏掉的是乳牙
+22:36 Matsune: 刚才吸了会毒
+22:36 lhanjian: Matsune: 乳牙是啥？
+22:36 lhanjian: ？？？
+22:36 lhanjian: 吸了个啥？
+22:36 Matsune: 超时空要塞的那个歌
+22:36 Matsune: http://www.bilibili.com/video/av3489792/
+22:37 Matsune: lhanjian: 本该在换牙的时候换掉的牙 但是新的牙齿发育畸形没长出来 所以旧的牙齿一直没掉 这样说这颗蛀牙十来年了
+22:38 lhanjian: Matsune: soga。其实可以找个靠谱的牙医整一下
+22:39 Matsune: lhanjian: 正畸科的牙医说乳牙没有保留价值了 因为牙根在发育的过程中已经快没了。。。
+22:39 Matsune: 那颗没长出来的牙齿他建议我也拔了 然后种颗新的 要割开牙龈拔牙
+22:41 stardust: Matsune, 吸毒现场 http://girigiri.love
+22:42 lhanjian: Matsune: 这歌棒棒棒
+22:42 Matsune: stardust: 你也在吸毒吗
+22:43 stardust: o(*≧▽≦)ツ
+22:43 Youmu joined channel
+22:45 Matsune: 考托福是要去美帝？
+22:45 code_new: 是的_(:з」∠)_
+22:45 Matsune: 准备去哪
+22:46 code_new: 报了很多学校，想等gre考出来以后再根据分数选
+22:46 Matsune: 我表哥之前也准备去美帝不过这一季度没申请到学校
+22:47 lhanjian: Matsune: 超时空要塞Delta好看吗？
+22:47 Matsune: lhanjian: 没看
+22:48 Matsune: 但我听说有高达华尔兹
+22:51 lhanjian: 发现S9ryne这个乐者都是这类的洗脑循环歌啊
+22:51 code_new: 这一季度晚了_(:з」∠)_我得等今年冬天了
+22:52 Matsune: 准备去学什么
+22:53 code_new: CS
+22:53 Matsune: 到研究生CS也细分了吧
+22:54 code_new: 细分的还没想好_(:з」∠)_
+22:55 Matsune: 神经上传（认真脸
+22:56 code_new: 这个感觉生物学涉及更多吧_(:з」∠)_ 
+22:56 cleamoon_: orz
+22:57 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:57 code_new: 话说CS里面有这个分支吗=。=
+22:58 cleamoon_: 有计算生物学
+22:59 code_new: 还是算了吧= =
+22:59 Matsune: 生物信息学
+22:59 Matsune: 我那学校把这个放在AI的分支下面
+23:00 xxxxxxxx: 然而那个音乐算洗脑么...
+23:00 code_new: 也有些道理
+23:00 Matsune: 研究什么大脑什么的 
+23:00 Matsune: 神经上传
+23:03 code_new: _(:з」∠)_ 生物太差了
+23:03 xxxxxxxx: 神经上船
+23:03 cleamoon_: yuri is my master
+23:03 code_new: 23333
+23:04 code_new: 尤里全是黑科技
+23:04 Matsune: 神经上传是人类未来的进化方向
+23:06 * Matsune 化身民科
+23:07 code_new: 祭音兄在读研吗
+23:09 Matsune: 今年本科毕业 然后接着读
+23:09 code_new: 哦哦
+23:10 code_new: 生物信息学？
+23:10 Matsune: 不是 读组合优化
+23:11 code_new: 哦哦
+23:13 lhanjian: http://music.163.com/#/m/song?id=28018277
+23:15 hoxily quit:Ping timeout: 240 seconds
+23:15 code_new: 回レ回レ回レ回レ回レ
+23:17 lhanjian: 这个Remix电音版超赞
+23:17 stardust: https://en.wikipedia.org/wiki/Wide_Mouth_Frog_protocol 这个协议是坠吼的
+23:18 lhanjian: 大嘴膜蛤协议？？！！
+23:19 lh_mouse: [23:00:57] <Matsune> 神经上传是人类未来的进化方向 // 胡说八道。
+23:19 lh_mouse: 泰伯利亚才是人类未来的进化方向。
+23:19 code_new: 长者协议
+23:19 lhanjian: code_new: 简明扼要
+23:20 code_new: lhanjian: 谢夸
+23:20 lhanjian: 突然发现把音乐声音开大了听，感觉好太多了
+23:22 code_new: 声音大了可以听到更多细节
+23:22 lhanjian: 对对对
+23:22 lhanjian: 那些背景乐器就好多了
+23:22 lhanjian: 忍不住想烧耳机了
+23:23 code_new: 壕
+23:23 lhanjian: 然而并不懂
+23:23 lhanjian: 玄学
+23:25 lh_mouse: 雪！菜！碧！池！
+23:26 code_new: 白学出没现场
+23:26 lhanjian: 小蚝怎么也白了
+23:27 code_new: 小耗玩了WA2吗
+23:27 lh_mouse: 不玩。
+23:28 code_new: _(:з」∠)_
+23:28 lh_mouse: lhanjian, (塞口球)
+23:28 lhanjian: 。。。
+23:29 lh_mouse: 0.0
+23:32 lhanjian: p站的r18区好工口啊
+23:34 lh_cat quit:Quit: Connection closed for inactivity
+23:36 code_new: 我这E2的屎今晚上是吔不完了。。
+23:36 Mokou: 睡覺
+23:36 Mokou: 諸君武運
+23:36 Mokou quit:Quit: 睡覺
+23:42 Matsune quit:Read error: Connection reset by peer
+23:50 xxxxxxxx: lhanjian:  我觉得你还是别开大了 另外多休息一下 说不定你听力减退了233
+23:51 lhanjian: xxxxxxxx: 我听力早就减退了……
+23:51 lhanjian: 不过确实应该休息下，多谢巨基
+23:56 xxxxxxxx: 我总有散热器的声音其实一直在伤害我的耳朵的错觉
+23:58 lhanjian: 耳鸣
+23:58 lhanjian: 不是啥好现象
+23:58 lhanjian: 其实就是听力损伤

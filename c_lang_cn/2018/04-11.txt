@@ -1,0 +1,262 @@
+00:15 cyrushmh joined channel
+00:18 CyrusYzGTt quit:Ping timeout: 240 seconds
+00:23 matchray: 阿里年假只有7天嗎
+00:23 matchray: 大多數轉算法崗的人都是和ML沒太大關係的？
+00:34 Dove quit:Read error: Connection reset by peer
+00:42 Stevearzh quit:Ping timeout: 256 seconds
+00:47 Stevearzh joined channel
+00:57 yangwan7 quit:Remote host closed the connection
+01:01 lh_ideapad quit:Remote host closed the connection
+01:11 Stevearzh quit:Read error: Connection reset by peer
+01:21 Stevearzh joined channel
+02:13 Stang quit:Quit: Connection closed for inactivity
+02:32 cleamoon_ quit:Quit: Connection closed for inactivity
+02:55 lh_mouse quit:Ping timeout: 265 seconds
+03:49 GreyHound__ quit:Ping timeout: 265 seconds
+05:31 Taggnostr quit:Remote host closed the connection
+05:31 Taggnostr joined channel
+05:40 jingjinghack quit:Remote host closed the connection
+05:40 jingjinghack joined channel
+06:58 whocares_2_ joined channel
+06:58 whocares_2 quit:Ping timeout: 240 seconds
+08:16 chenliang joined channel
+08:23 FrankHB quit:Ping timeout: 256 seconds
+08:55 GreyHound joined channel
+08:59 FrankHB joined channel
+09:05 yonka quit:Remote host closed the connection
+09:22 zb111 joined channel
+09:32 yangwang1999 joined channel
+09:33 yangwang1999 quit:Remote host closed the connection
+09:37 GreyHound quit:Read error: Connection reset by peer
+09:38 GreyHound joined channel
+09:50 yonka joined channel
+09:53 yonka_ joined channel
+09:53 yonka quit:Read error: Connection reset by peer
+09:56 yonka_ quit:Ping timeout: 240 seconds
+10:02 yonka joined channel
+10:11 zb111 quit:Ping timeout: 260 seconds
+11:35 zb111 joined channel
+11:37 GreyHound_ joined channel
+11:39 GreyHound quit:Ping timeout: 240 seconds
+12:49 GreyHound joined channel
+12:51 GreyHound_ quit:Ping timeout: 240 seconds
+12:53 kin3z joined channel
+13:52 iyzsong joined channel
+13:52 FrankHB quit:Read error: Connection reset by peer
+13:53 zb111 quit:Remote host closed the connection
+13:53 FrankHB joined channel
+13:59 Stang joined channel
+14:16 cleamoon_ joined channel
+14:29 zb111_ joined channel
+14:29 haha1 joined channel
+14:54 haha1 joined channel
+14:55 haha1: hi,everyone
+15:08 zb111_ quit:Ping timeout: 255 seconds
+15:16 cleamoon_: hi
+15:32 jin7boy joined channel
+15:43 Mokou: HELO
+15:56 GreyHound quit:Ping timeout: 240 seconds
+15:58 jin7boy quit:Quit: Leaving
+16:00 kin3z quit:Quit: Leaving
+16:30 lh_mouse joined channel
+16:34 hanjian_l: Mokou: halasho~
+16:41 cleamoon joined channel
+16:58 lh_ideapad joined channel
+17:03 iyzsong quit:Ping timeout: 264 seconds
+17:33 Mokou: hanjian_l: 话说有空给我带个路么
+17:33 hanjian_l: Mokou: 下班后说
+17:33 hanjian_l: 大概八点吧
+17:33 Mokou: 我想把那个+30%的月符文拿了
+17:33 Mokou: OK
+17:33 chenliang quit:Read error: Connection reset by peer
+17:35 hanjian_l: Mokou: 在哪儿拿？
+17:36 Mokou: hanjian_l: 曼西斯梦魇里把那个大眼球弄下去，然后去下面找它
+17:36 Mokou: 对着它赞美月亮到换手
+17:38 hanjian_l: 原来还要赞美月亮
+17:38 hanjian_l: 我好像没打到那么远
+17:44 Mokou: 那我找羊驼子吧（
+17:44 Mokou: 正好我去睡会
+17:52 lh_ideapad: geordi, { string s = "abc"; s.resize(6); for(int c : s){ cout <<hex <<(c & 0xFF) <<' '; } }
+17:52 geordi: 61 62 63 0 0 0 
+17:54 FrankHB quit:Quit: Konversation terminated!
+17:59 Stang quit:Quit: Connection closed for inactivity
+18:01 iyzsong joined channel
+18:03 hanjian_l: iyzsong: LEEE的微博帐号是多少啊
+18:03 lh_ideapad: geordi, { valarray<int> a{0,1,2,3}, b{4,5,6}; cout <<(a | b).size(); }
+18:03 geordi: /usr/local/include/c++/8.0.1/valarray:1179: _Expr<_BinClos<__bitwise_or, _ValArray, _ValArray, _Tp, _Tp>, __fun<__bitwise_or, _Tp>::result_type> operator|(const valarray<_Tp>&, const valarray<_Tp>&) [with _Tp = int; __fun<__bitwise_or, _Tp>::result_type = int]: Assertion '__v.size() == __w.size()' failed. [+ 1 discarded line]
+18:05 lh_ideapad: geordi, { valarray<int> a{0,1,2,3}, b{4,5,6}; cout <<sizeof(a | b).; }
+18:05 geordi: error: expected unqualified-id before ';' token
+18:05 lh_ideapad: geordi, erase last .
+18:05 geordi: 16
+18:05 lh_ideapad: geordi, { valarray<int> a{0,1,2,3,4,5,6,7,8}, b{4,5,6}; cout <<sizeof(a | b).; }
+18:05 geordi: error: expected unqualified-id before ';' token
+18:05 lh_ideapad: geordi, { valarray<int> a{0,1,2,3,4,5,6,7,8}, b{4,5,6}; cout <<sizeof(a | b); }
+18:05 geordi: 16
+18:13 cleamoon quit:Quit: cleamoon
+18:13 iyzsong: hanjian_l: Kontinuation?  i don't use weibo...
+18:14 hanjian_l: 哟西哦
+18:39 haha1 quit:
+18:39 haha1 joined channel
+18:58 iyzsong quit:Ping timeout: 264 seconds
+19:08 yonka quit:Remote host closed the connection
+19:11 yonka joined channel
+19:16 yonka quit:Ping timeout: 264 seconds
+19:59 iyzsong joined channel
+20:11 lh_ideapad quit:Remote host closed the connection
+20:19 yonka joined channel
+20:22 varna joined channel
+20:22 varna: (｡･ω･)ﾉ
+20:32 hanjian_l: varna: 造出g36c可
+20:32 hanjian_l: 了
+20:32 varna: 刚才又是一顿人肉运维
+20:33 hanjian_l: 渠道服把大破也解锁了
+20:33 hanjian_l: 终于可以舔立绘了
+20:40 lh_ideapad joined channel
+20:43 iyzsong quit:Ping timeout: 240 seconds
+20:47 hanjian_l: 噗，l3e回我了
+20:48 cleamoon_: 人 肉 运 维
+20:48 varna: 感觉自己把打魔兽的手速全用在这些破烂地方了
+20:50 hanjian_l: 撸管的手速呢？
+20:51 cleamoon_: 谁知道哪个软件的图标是个灯笼鱼？
+20:51 varna: 我撸管apm上不了一百八
+20:52 cleamoon_: 一百八orz
+20:54 hanjian_l: varna: 我问问看l3e怎么评价你
+20:54 varna: cleamoon_: 最好的时候180，后来堕落到120了
+20:55 hanjian_l: 你这是虚了啊
+20:55 hanjian_l: 早泄预备
+20:55 cleamoon_: 我最好的时候也就120
+20:55 varna: 废操你懂的
+20:55 cleamoon_: 我是越操作越乱类型
+20:57 varna: 给GPDP拷个gtk2火狐
+20:58 varna: 现在图形界面和开发环境都能动了
+20:58 cleamoon_: 说起操作，根据我的观察，无论是弹幕游戏还是格斗游戏，与其说很多高手是反应速度很神，不如说他们是知道怎么才能不进入需要反应速度的情况
+20:59 varna: 格斗其实很强调立回的
+20:59 cleamoon_: 我看东方高手的录像，感觉他们操作的量比我还少，但是操作的质量很高
+20:59 cleamoon_: 立回是啥
+20:59 varna: 但感觉如果能在短时间内作出那种判断，反应速度其实很快
+20:59 cleamoon_: GPDP好玩吗
+21:00 varna: 立回是个用来形容武打戏中间两方互相后撤、战术观察的名词
+21:00 varna: 挺好玩的
+21:00 cleamoon_: 触屏怎么处理的？
+21:00 varna: arch没什么问题（需要换一下内核，不然驱动偶尔抽风）
+21:00 varna: 触屏可以用
+21:00 varna: 不过我的GUI控件都比较小，不适合触屏
+21:00 varna: 也许搞个触控笔很方便
+21:01 cleamoon_: 我看很多格斗游戏的招数都和和弦似的，都是一整套一整套的
+21:01 cleamoon_: 屏幕觉得小吗？
+21:03 varna: 还好，我习惯了
+21:03 varna: 屏幕的锐度还不错
+21:03 varna: 1920x1080
+21:03 cleamoon_: 那还不错
+21:03 cleamoon_: 你是用来玩还是撸码？
+21:04 varna: 写码
+21:04 varna: 适合各种奇怪姿势，或者在公司午休时候自己玩儿
+21:05 hanjian_l: 绅士试试看铁拳
+21:05 hanjian_l: 不讲究搓招
+21:05 varna: 铁拳/魂之利刃的连段更难练吧
+21:06 varna: 神tm... udevd自爆了
+21:06 varna: 一发sigterm接一发sigkill都没杀掉他
+21:06 varna: 怕是又冻死在usb上
+21:07 cleamoon_: 难道不是姿势越奇怪越需要大的本子吗......
+21:08 cleamoon_: 一直想玩铁拳，不过一直没玩
+21:08 varna: 在公司公然掏出个十四吋本子写代码太嚣张了
+21:08 varna: 再说这东西里面还是intel呢
+21:08 varna: 想玩点龌龊东西也可以
+21:08 cleamoon_: 在公司写码不正常吗......
+21:09 varna: 草，udevd已经硬吃了两发sigkill
+21:09 varna: 我弃疗了
+21:09 varna: 基本上认定死在那个usb bug上……
+21:12 cleamoon_: 羊驼子买的哪款GPD？
+21:15 varna: pocket
+21:15 varna: 不是win
+21:19 cleamoon_: 意外的，贵
+21:19 varna: 这种东西最好是赌一波众筹价
+21:20 varna: 但是配置好了还挺好玩儿的
+21:20 iamcxl001 joined channel
+21:21 cleamoon_: 为什么不买win呢？
+21:21 hanjian_l: 龌龊东西是什么
+21:22 varna: cleamoon_: gpd win系列的玩意儿是用来玩游戏的，上面带些手柄
+21:22 varna: hanjian_l: 汇编
+21:24 varna: hanjian_l: 突然想到个问题啊，你会游泳么
+21:25 cleamoon_: varna: 带手柄多好，可以用来撸 fc 模拟器
+21:26 varna: 我fc游戏不及格，小时候直接进入了pc游戏的时代，之前只碰过pc上的pce模拟器……
+21:27 cleamoon_: 也可以玩 ps/gba 模拟器呀
+21:27 varna: 没意思_(:з」∠)_
+21:28 cleamoon_: 如果好的 psp 和 3ds 模拟器就好了
+21:37 cleamoon_: 问题 A reduce to 问题 B 就是说 能解决问题 B 就能解决问题 A 吧？
+21:37 varna: +
+21:44 hanjian_l: varna: 旱鸭子
+21:44 hanjian_l: 我小时候只有小霸王可以玩
+21:44 hanjian_l: 坦克大战圣手
+21:45 hanjian_l: 后来还玩了好多年的FC模拟器
+21:45 varna: 居然不会游泳
+21:45 varna: 难道你不是先辈？
+21:45 hanjian_l: 胆子小
+21:45 hanjian_l: 当然不是！！！
+21:45 hanjian_l: 恶臭不堪！
+21:48 cleamoon_: 坦克大战最多10关
+21:48 hanjian_l: 坦克大战130关
+21:48 hanjian_l: 双人的时候还不止
+21:50 cleamoon_: orz
+22:02 iyzsong joined channel
+22:13 yangwang1999 joined channel
+22:15 varna quit:Quit: Reconnecting
+22:16 GreyHound joined channel
+22:16 varna joined channel
+22:19 varna quit:Client Quit
+22:19 varna joined channel
+22:21 b0x0000 quit:Read error: Connection reset by peer
+22:25 lh_mouse: varna, 单目 - 叫作 unary negation operator 的话， 单目 + 叫什么？
+22:26 iyzsong quit:Ping timeout: 256 seconds
+22:27 hanjian_l: unary plus啊
+22:27 hanjian_l: positive?
+22:28 lh_mouse: positive 是形容词。
+22:28 lh_mouse: negative  negation  negate  
+22:28 lh_mouse: positive  ????   ????
+22:28 lh_mouse: position 是另一个意思了。
+22:29 hanjian_l: positive有noun形式的
+22:29 varna: 别扭
+22:29 varna: 我想想
+22:29 lh_mouse: negation 是 negate 的名词。
+22:29 varna: 这里的尴尬之处，在于unary +是没有动作的
+22:30 gauge: identity?
+22:30 hanjian_l: Unary Plus and Negation Operators: + and - - MSDN - Microsoft
+22:30 varna: identity和tautology之类的词太重了
+22:30 hanjian_l: lh_mouse: 微软就用的 https://msdn.microsoft.com/en-us/library/ewkkxkwb.aspx?f=255&MSPPError=-2147217396
+22:30 hanjian_l: Unary Plus Operator
+22:31 lh_mouse: varna, 有。
+22:31 varna: +v <-- 这是什么
+22:31 varna: 允许重载？
+22:31 lh_mouse: in C++ the unary plus operator can be applied to a pointer type while the unary negation operator cannot.
+22:31 varna: 条令就算了
+22:32 lh_mouse: If it applies to an object having class type, it forces the conversion to pointer or arithmetic types.
+22:32 lh_mouse: 有用。
+22:32 varna: ... 这已经陷入丢人的境地
+22:32 varna: 不过也罢
+22:32 lh_mouse: auto foo = [](int){ return 42; };   // 这是个 lambda 。
+22:32 varna: unary plus吧
+22:32 lh_mouse: auto foo = +[](int){ return 42; };   // 这是个指向函数的指针。
+22:32 varna: 让他就表示算术
+22:32 lh_mouse: 嘛。
+22:33 lh_mouse: 也好。
+22:37 gauge: 似乎 positive 的含义是引申自 posit
+22:37 lh_mouse: posit 的名词就是 position 。
+22:38 lh_mouse: position 可以是指动作，也可以是指目的。
+22:38 lh_mouse: 而且，position 也是动词。
+22:38 lh_mouse: negation 却不是。
+22:42 gauge: 嗯... position 的动词用法不是从拉丁文来的
+22:52 hanjian_l: https://www.douyu.com/2881221?1523457466562
+22:52 hanjian_l: ARMA3 Live BY lhj
+22:54 hanjian_l: varna: 
+23:00 hanjian_l: 无限死啊
+23:00 hanjian_l: varna: 
+23:07 hanjian_l:  打不过打不过
+23:21 varna quit:Ping timeout: 264 seconds
+23:26 varna joined channel
+23:26 varna: 哦瘊瘊
+23:31 hanjian_l: varna: 你错过了我直播arma
+23:32 Lost_Dream joined channel
+23:35 hanjian_l: 啊啊啊啊啊啊！
+23:38 lh_ideapad quit:Remote host closed the connection
+23:47 Lost_Dream quit:Remote host closed the connection
+23:52 varna: (｡･ω･)

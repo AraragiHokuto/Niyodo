@@ -1,0 +1,747 @@
+00:45 lh_mouse: geordi, << __builtin_ia32_tzcnt(10);
+00:45 geordi: error: '__builtin_ia32_tzcnt' was not declared in this scope
+00:45 lh_mouse: geordi, << __builtin_tzcnt(10);
+00:45 geordi: error: '__builtin_tzcnt' was not declared in this scope
+00:45 lh_mouse: geordi, << __builtin_ia32_lzcnt(10);
+00:45 geordi: error: '__builtin_ia32_lzcnt' was not declared in this scope
+00:46 lh_mouse: geordi, << __builtin_ia32_lzcnt_16(10);
+00:46 geordi: error: '__builtin_ia32_lzcnt_16' was not declared in this scope
+00:46 lh_mouse: geordi, << __builtin_ia32_lzcnt_u16(10);
+00:46 geordi: 12
+00:46 lh_mouse: geordi, << __builtin_ia32_tzcnt_u16(10);
+00:46 geordi: 1
+00:56 lh_mouse: geordi, << __builtin_ia32_lzcnt_16
+00:56 geordi: error: '__builtin_ia32_lzcnt_16' was not declared in this scope
+00:56 lh_mouse: geordi, << __builtin_ia32_lzcnt_16(10)
+00:56 geordi: Same error.
+00:56 lh_mouse: geordi, << __builtin_ia32_lzcnt_u16
+00:56 geordi: error: built-in function '__builtin_ia32_lzcnt_u16' must be directly called
+00:56 lh_mouse: geordi, --clang << __builtin_ia32_lzcnt_u16
+00:56 geordi: error: use of undeclared identifier '__builtin_ia32_lzcnt_u16'
+00:56 lh_mouse: geordi, --clang << __builtin_ia32_lzcnt_u16(10)
+00:56 geordi: Same error.
+00:56 lh_mouse: geordi, --clang << __builtin_ia32_lzcnt_16(10)
+00:56 geordi: error: use of undeclared identifier '__builtin_ia32_lzcnt_16'; did you mean '__builtin_ia32_lddqu256'? (fix known)
+01:06 lh_mouse quit:Ping timeout: 240 seconds
+01:34 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+03:25 whocares_2 quit:Remote host closed the connection
+03:25 whocares_2 joined channel
+04:42 Youmu quit:Quit: Connection closed for inactivity
+05:27 whocares_2 quit:Remote host closed the connection
+05:27 whocares_2 joined channel
+09:51 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+10:27 iyzsong joined channel
+10:40 Mokou joined channel
+10:55 yangmeng joined channel
+10:55 yangmeng: 从贴吧过来的
+10:56 yangmeng: I use linuxonandroid with irssi,but chinese cant use
+10:56 iyzsong: _(:з」∠)_
+10:58 yangmeng: 汉字显示诗歌问题
+11:00 lh_mouse joined channel
+11:19 yangmeng quit:Quit: leaving
+11:30 yangmeng joined channel
+11:46 iyzsong: 好晒的天 _(:з」∠)_
+12:04 \s quit:Remote host closed the connection
+12:04 \s joined channel
+12:04 \s quit:Changing host
+12:04 \s joined channel
+12:38 iyzsong-x joined channel
+12:42 iyzsong quit:Ping timeout: 255 seconds
+12:50 yangmeng joined channel
+12:51 yangmeng: 可以显示汉字了，在环境变量里，设置export LANG=en_US.UTF-8
+12:51 yangmeng: 没想到汉字环境变量要这般设置
+12:59 yangmeng joined channel
+13:06 JakesOs quit:Ping timeout: 255 seconds
+13:07 \ss joined channel
+13:09 \s quit:Ping timeout: 240 seconds
+13:21 \ss quit:Remote host closed the connection
+13:21 \ss joined channel
+13:31 yangmeng quit:Ping timeout: 248 seconds
+13:40 yangmeng joined channel
+13:56 varna joined channel
+13:56 Mokou: 一只羊驼子冒了出来
+13:56 varna: (｢・ω・)｢半夜偏头疼发作，从一点半疼到七点半
+13:56 varna: 还是熟悉的感觉，像是一根锥子从眼窝里捅进去搅拌
+13:57 Mokou: 这比喻号
+13:57 Mokou: 好*
+13:57 varna: 最狠的时候整个左半边脑袋都在疼
+13:57 Mokou: 劝退
+13:57 varna: 早上还有点昏昏沉沉的，于是打了一小时血源
+13:58 varna: (｡･ω･)被阿梅莉亚软妹杀了十次，各种慢心追打一击直死
+13:58 varna: 然后惊讶地发现土豆封锁居然不掉线了
+13:58 varna: 找了个看起来也像萌新的野队打任务，还算好玩
+13:59 Mokou: OK
+13:59 Mokou: 退避完了以后一口气大破三个
+13:59 varna: 现在几面了
+13:59 Mokou: E4前段
+13:59 varna: 可啪，E4又两段啊
+14:00 Mokou: 前段主任，最短四血
+14:00 Mokou: 后段主教
+14:01 varna: 今天悠闲下，明天还要加班救火
+14:01 Mokou: 关键是劝谁不好劝武大……
+14:01 Mokou: 一次两千钢
+14:02 varna: 我讲个笑话，产品一期8.28上线，但需求到8.17都差点没冻结
+14:02 varna: 相关系统依赖到8.21都未必能搞定
+14:02 varna: 最后钦定了：不提测直接上……
+14:02 Mokou: 66666666
+14:02 varna: 联调搞完就上，兹瓷不兹瓷啊
+14:03 Mokou: 快劝没一万钢了
+14:03 Mokou: 这五连劝简直蛋疼
+14:03 varna: 现在武大的护甲已经开始尴尬了？
+14:03 Mokou: 现在白天火力阈值180
+14:04 varna: 按说应该巴福武大的
+14:04 Mokou: 而苍蝇王命中率近乎100%
+14:04 varna: 就算出一个大型改修也可以
+14:04 Mokou: 一炮打卜死就是你死……
+14:04 varna: 不然死蝇之葬列一出，88搭载想卜死都卜行
+14:05 Mokou: varna: 另，逸国萌站搞出世界大战了
+14:05 varna: 啊？
+14:05 Mokou: 康娜和马修争八强，马修赢了
+14:05 varna: 这个我知道
+14:05 Mokou: 然后龙女仆厨激怒，一堆人开始投诉FGO
+14:05 varna: 论工口图还是马修多一些吧，我自己都用过
+14:06 Mokou: 正好FGO被和谐了
+14:06 varna: ...
+14:06 Mokou: 然后剧情你懂得
+14:06 varna: 逸群傻逼……
+14:07 Mokou: 反正BGO我AFK了
+14:07 varna: 少前昨天睡前打了个8-5
+14:08 varna: 现在我心态超级好，一两周上一次，日常演习都打不完
+14:08 Mokou: 第六连劝退
+14:08 Mokou: 还是个C败
+14:09 varna: 总觉得现在甲等玩家如果没有宇宙连装肝就得爽式刷闪了
+14:09 Mokou: 刷闪没用
+14:09 Mokou: 12女神都砸不过去
+14:10 Mokou: https://img.vim-cn.com/09/21ef998756a2312a94cf06c9943739d321d00e.png  进去的时候全队无破
+14:11 varna: (｡･ω･)ﾉMG4喷雾，这把就出MG4。
+14:11 varna: (｡･ω･)ﾉ呲呲。
+14:11 varna: (｢・ω・)｢喷雾是假的
+14:24 iyzsong-x quit:Read error: Connection reset by peer
+14:34 Mokou: http://wx4.sinaimg.cn/mw690/0067lFPQgy1fiouqxaci5j30gx06qaan.jpg 素质四连
+14:35 Mokou: 咦
+14:35 Mokou: 这麻将桌居然会出现塔酱啊
+14:36 Mokou: 【王石：京津高铁导致天津受损】王石在#亚布力夏季高峰会#谈到京津冀一体化时表示，谈了很多年但效果并不理想。“都说高铁改变中国，我看因为京津高铁反而导致天津受损了，到北京太方便了，它就像黑洞，把天津的资源全吸到北京去。原来到天津还得住一晚上，现在办完事就回来了”。
+14:38 varna: 道中这么多姬是什么鬼
+14:39 Mokou: 所以才那么多12女神
+14:39 Mokou: 6vs3
+14:39 Mokou: 这次忘带陆航了……
+14:39 Mokou: 由良两炮打歪，时雨中破
+14:39 Mokou: 雪风不CI
+14:39 Mokou: 时雨不CI
+14:40 Mokou: 绫波打歪
+14:40 Mokou: 欧根斩了，前段解决
+14:40 varna: orz
+14:40 Mokou: 这次主任不行啊
+14:40 Mokou: 只有137甲
+14:40 Mokou: 基本上E4前段只要进去就能打死
+14:41 Mokou: 接下来就是屎了……
+14:43 Mokou: 日
+14:43 Mokou: 我又忘带陆航了
+14:54 Mokou: 6vs1
+14:54 Mokou: 两个中破
+14:55 Mokou: 163/730
+14:55 Mokou: 欧根不CI
+14:55 Mokou: 不过这成绩也不错了
+14:56 Mokou: http://wx3.sinaimg.cn/mw690/9e6b7fdbly1fiozwnuavvj20es1d60xf.jpg jjboom
+14:58 varna: puuuuuuuuu
+15:01 Mokou: 啊，道中这六个群爹
+15:03 varna: ...
+15:10 Mokou: 210/730
+15:13 hycuihz joined channel
+15:16 varna: 再试试全境掉线能不能组到人
+15:19 yangmeng: 什么意思
+15:20 varna: The Division, 中译《全境封锁》，以疯狂掉线和明知疯狂掉线却仍然强行进行帧同步消息派发的架构著称
+15:20 varna: 在游戏中，玩家收集各种各样的战术少女辅助自己完成任务
+15:21 varna: 哦不对，串场了
+15:22 Mokou: 噫
+15:22 varna: 呀，组到人了
+15:22 varna: 真好
+15:22 Mokou: 武藏还没开炮就大破了
+15:23 Mokou: 6vs2
+15:24 Mokou: 40/730
+15:25 varna: 驲，还得跑路
+15:26 * Mokou 刷闪
+15:29 yangmeng: 什么游戏
+15:30 Mokou: 2014最火爆网页游戏
+15:41 yangmeng: 2014的啊，现在都2017了
+15:47 varna: 噫吁
+15:47 varna: 组来的这个哥们还挺会打的
+15:51 varna: (｢・ω・)｢跟他很自然地演出了一场交叉火力秀
+16:04 iyzsong joined channel
+16:18 * Mokou 退避了
+16:20 Mokou: 4vs1
+16:20 Mokou: 35/730
+16:22 varna: OTL
+16:22 varna: 不过这样斩杀就有点麻烦了
+16:22 Mokou: E4是仅次于E7的屎图
+16:22 Mokou: 只能指望打出这次的昼战效果，然后指望夜战欧根CI……
+16:23 Mokou: 噫
+16:23 Mokou: API请求卡了
+16:23 Mokou: 怕不是幌筵要炸
+16:24 Mokou: http://wx3.sinaimg.cn/mw690/e4beb8aegy1fiotfqthbtj20g70dswgs.jpg 今日份的大本营发表
+16:25 hycuihz quit:Quit: My Mac has gone to sleep. ZZZzzz…
+16:26 hycuihz joined channel
+16:26 varna: 啊，驲，团扑了
+16:33 Mokou: 绫波摔了
+16:33 Mokou: 时雨送回去
+16:36 Mokou: 4vs2
+16:36 Mokou: 370/730
+16:43 lh_mouse: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=81894
+16:44 lh_mouse: 为毛 tzcnt 没 doc 。
+16:44 whocares_2_ joined channel
+16:45 whocares_2 quit:Ping timeout: 255 seconds
+16:50 Mokou: OK，已经进斩杀了
+16:53 Mokou: varna: 看了一眼
+16:53 StardustX joined channel
+16:53 Mokou: 战舰法栖姬，装甲256
+16:54 StardustX quit:Client Quit
+17:00 Mokou: http://wx1.sinaimg.cn/mw690/9dda3dcegy1fioaemn6zjg208w050qv7.gif
+17:06 Mokou: 6vs2 四中破
+17:06 Mokou: 这盘没戏
+17:07 Mokou: 时雨不CI
+17:07 Mokou: 314/7
+17:07 Mokou: 314/730
+17:17 varna: 一阵恶战……
+17:17 Mokou: 门神大破三个
+17:18 Mokou: NE级一炮秒武藏
+17:19 Mokou: 红NE火力95，武藏甲119
+17:19 Mokou: 我还能说什么
+17:19 varna: 加上组来的两个伙计，上演了一场猥琐的炮台战……
+17:19 varna: 门神这么虎啊
+17:20 Mokou: 门神：莉改撸夜撸夜88爷群爹群爹
+17:20 varna: ...
+17:20 Mokou: 也就是说一般剧情是一队对着群爹打12个miss，然后二队被撸夜排队枪毙
+17:20 Mokou: 撸爷*
+17:23 hycuihz quit:Quit: My Mac has gone to sleep. ZZZzzz…
+17:24 Mokou: http://wx3.sinaimg.cn/mw690/6dd57921ly1fip5m8ioxbj20k00d5781.jpg 宫崎骏
+17:25 varna: 2333333333333
+17:26 Mokou: 群里有伙计上头了，表示这次要全甲，死鱼就退坑
+17:27 varna: 又一个上头的
+17:27 Mokou: 虽说我也打算甲
+17:27 Mokou: 丙对我来说和不打是一样的
+17:27 Mokou: (｡･ω･)谁要什么皇家方舟啊
+17:27 varna: 这几天全境封锁的土豆似乎好了非常多
+17:27 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+17:29 Mokou: 6vs2，三中破
+17:30 Mokou: 来了
+17:30 Mokou: 欧根雷达……
+17:30 Mokou: 246/730
+17:40 Mokou: varna: 我在twitch上开了个直播
+17:41 Mokou: 你要不要试试
+17:44 varna: rq 4 live
+17:44 Mokou: https://www.twitch.tv/abrahamhokuto
+17:45 Mokou: HK服务器
+17:47 Mokou: varna: 能连上么
+17:53 varna: 慢，等我打完这个本，用公司VPN连
+17:53 Mokou: ……我先进夜战了
+17:54 Mokou: 359/730 6vs1
+17:54 Mokou: 58/730
+18:09 varna: Mokou: 速度很好
+18:09 Mokou: OK
+18:09 Mokou: 虽说我在直播刷闪……
+18:10 varna: 居然带狗粮
+18:10 Mokou: 不然太烧钢和桶了
+18:10 Mokou: E7某无氪dalao花了100k油才打过去，钢估计更多……
+18:11 Mokou: 【广场舞大妈占领马路：车不敢撞我们[摊手]】近日，安徽合肥市龙图路与潜口路交叉口的大爷大妈们，广场舞跳出新高度，不仅跳舞时间长，还来到大马路上跳舞。马路一半的空间被大妈们霸占了。大妈：车子来不敢撞我们，要让着我们老年人。
+18:11 varna: 真姬儿丢人……
+18:11 varna: 流氓老了还是流氓
+18:12 varna: 可怕，开了四个建造渠的欧洲人
+18:12 Mokou: 之前岛城的暴走团最后似乎去学校操场了……
+18:12 Mokou: 明明是非洲人试图靠四槽偷渡
+18:12 Mokou: 结果最后也没成功
+18:12 varna: 噫，你这点钢够用么……
+18:12 Mokou: 大概不够
+18:12 Mokou: 然而打丙和不打是一样的
+18:12 Mokou: 丙就一个章……
+18:12 varna: 一个阿武隈都不到了，只能拼了
+18:13 Mokou: 看着来吧
+18:13 Mokou: 反正E7上不了武大
+18:13 lh_mouse: Mokou, 现充。
+18:13 Mokou: ^ 来自现充的嘲讽
+18:13 lh_mouse: 我不是现充。
+18:13 varna: 敷波这个衣服很好啊
+18:15 Mokou: http://wx4.sinaimg.cn/mw690/95dd0ad7ly1fip5o8dztwj20a70p0mzi.jpg
+18:19 varna: 如果你直播爽式刷闪估计会月入百万
+18:19 Mokou: 月出千万刷闪么
+18:20 varna: 啊，棒各比例失调的夏装立绘
+18:20 Mokou: varna: 对了，这次口尼西惨遭坑爹
+18:20 varna: ?
+18:20 Mokou: 等会我截张图
+18:22 Mokou: https://img.vim-cn.com/42/703566d70873884c13a1cd1dbf09b6fe7d4781.png 
+18:22 Mokou: ^ 欧洲姬是他画的
+18:23 varna: 「我华丽地坑了爹」
+18:23 Mokou: 虽说他现在已经斩掉了
+18:24 varna: 现在敌舰的起名越来越不含蓄了
+18:24 varna: 药丸
+18:24 Mokou: 反正已经毫无军国主义要素了
+18:24 varna: 以前还让人猜猜是南胖北胖新泽西
+18:24 varna: 现在直接点名
+18:24 varna: 真姬儿丢人
+18:25 varna: (｡･ω･)ﾉ对了有没有敢死队来跟我组团玩全境封锁啊（四小姐
+18:26 Mokou: (｡･ω･)你给我买台四小姐，我跟你玩 
+18:26 varna: (｡･ω･)你去日本买，四万圆一台Pro呢
+18:26 varna: 比国内便宜
+18:26 Mokou: (｡･ω･)没有钱
+18:26 varna: (｡･ω･)援交
+18:26 Mokou: (｡･ω･)援交花钱
+18:26 varna: (｡･ω･)那就去牛郎店打工
+18:27 Mokou: (｡･ω･)留学签证禁止，要不你办个探亲访友签证来做
+18:27 Mokou: 反正一次三万，两次就是一台
+18:27 varna: (｡･ω･)我肯定会因为侵犯幼女被遣返的
+18:27 Mokou: (｡･ω･)日本警方效率没那么高
+18:28 Mokou: 出击
+18:28 varna: 你要不要摆个家具玄学
+18:28 Mokou: 啥家具玄学
+18:28 varna: 居然不点米空鼻子
+18:28 Mokou: 就不点鼻子
+18:28 varna: 搞些欧洲家具
+18:28 Mokou: 然而这是苏伊士
+18:29 varna: 轮型对潜？
+18:29 Mokou: 有个传言是第一阵型只加对潜攻击，而轮型加对雷回避
+18:29 Mokou: 我用到现在感觉效果不错
+18:29 Mokou: 爽哥打E7的时候似乎也是轮型对潜
+18:30 * varna 反射性合十
+18:31 Mokou: twitch速度可以的话以后活动我也可以直播
+18:31 varna: 挂代理很好
+18:31 Mokou: 反正既然在国内上行带宽不成问题，那蝗国上行带宽更不成问题……
+18:31 lh_mouse: lhanjian, 上次那 sse4.2 strlen 有没有没测过越界的情况。
+18:32 lh_mouse: a b c '\0' | 下个页不可读 。 
+18:32 varna: 糟了
+18:33 varna: 要拖人的节奏
+18:33 Mokou: 反正拖不拖都打不过……
+18:33 Mokou: 倒是无所谓了
+18:33 Mokou: 看门神了
+18:34 Mokou: 门神脸不好的话慢状态进去能大破三个出来
+18:34 Mokou: 满*
+18:34 varna: 由良由良止
+18:34 Mokou: OK，剧透告诉我要拖人了
+18:36 Mokou: 上行卡了
+18:36 Mokou: 我重开一下
+18:38 Mokou: 重开了
+18:38 varna: (｢・ω・)｢
+18:38 Mokou: 关剧透
+18:38 varna: (｡･ω･)ﾉ变欧喷雾。
+18:38 varna: (｡･ω･)ﾉ呲呲。
+18:39 varna: ...
+18:39 Mokou: 正常现象……
+18:41 varna: 药丸
+18:41 Mokou: 95/730
+18:41 Mokou: 这次其实相当不错了
+18:41 Mokou: 啊，风云
+18:42 varna: 可怕的欧洲人
+18:42 Mokou: 不亏
+18:42 varna: 看个直播都能被晒到
+18:42 Mokou: 然而风云都多久以前的船了
+18:43 Mokou: 拆个长者
+18:43 Mokou: -1s
+18:43 varna: 忘了，查出来我有个十七级搬砖的
+18:43 Mokou: 欧洲人真可怕
+18:43 varna: 我嚓，拆长者
+18:43 varna: 可怕的欧洲人
+18:44 varna: 出击时候不点米空鼻子是不行的
+18:44 Mokou: 米空信徒真可怕
+18:44 varna: 米空自己都点
+18:44 varna: 这个我问过的
+18:45 Mokou: 米空神教真可怕
+18:47 Mokou: 说起来，你们那里有声音么
+18:48 varna: 有声音
+18:48 varna: 甚至包括你奇怪的BGM
+18:48 Mokou: BGM是新 宝 岛
+18:48 Mokou: https://www.bilibili.com/video/av7793943/index_1.html?t=273#page=1
+18:49 lhanjian: 直播有4Mbps上传，质量就不错了
+18:51 varna: 过了一年多，看舰C还有倒抽冷气的感觉
+18:51 Mokou: 所以道中我是开剧透的
+18:51 Mokou: 现在就关剧透了
+18:51 varna: 恐惧感深入骨髓
+18:51 varna: (｡･ω･)ﾉ变欧喷雾。
+18:52 varna: (｡･ω･)ﾉ呲呲。
+18:52 varna: bubu啊
+18:52 varna: 不错啊
+18:52 Mokou: 这次开幕不错
+18:52 varna: 没法说
+18:53 varna: 有风险
+18:53 Mokou: 这图不可能没风险的……
+18:53 Mokou: 开幕你不死三个，就是不错
+18:53 varna: 打完之后离期望比较远
+18:53 varna: 2k
+18:53 Mokou: 这次开幕至少保证了我能进夜战
+18:54 varna: 夏姬八打……
+18:54 Mokou: 正常
+18:54 Mokou: 没炮
+18:54 varna: 兔兔兔
+18:54 Mokou: 噫
+18:54 Mokou: 欧根雷达……
+18:55 * varna 惨叫出声
+18:55 * Mokou 一脸平板
+18:55 Mokou: 欧根一死这盘就没戏了
+18:55 varna: 时雨：残念呐
+18:55 Mokou: 我跟你讲
+18:55 Mokou: 斩杀阶段Boss277甲
+18:56 varna: ...
+18:56 Mokou: 丙级防空鸡削甲前285
+18:56 Mokou: 还是283来着
+18:56 varna: 驱逐舰需要一狗程度的火力
+18:56 Mokou: 然而丙级防空鸡血量235
+18:56 Mokou: 这玩意730
+18:56 varna: 防空姬是可以一击瞬杀的
+18:56 Mokou: 这次唯一的火力就是欧根
+18:56 varna: 然而防空姬之后我再没见到过类似的强力关底（艹秋风姬不算）
+18:56 Mokou: 而欧根是个二五仔……
+18:57 Mokou: H佬被欧根雷达卡了三天斩杀
+18:57 varna: 我对无敌的鸟海曾经还有点期望
+18:58 Mokou: 打不动
+18:58 iyzsong joined channel
+18:58 Mokou: 另外你一句无敌的鸟海把我奶死了
+18:58 varna: 吃雷了啊
+18:58 varna: 要不你入套700的
+18:58 Mokou: 直接回家吃桶
+18:58 Mokou: 我入了套雪亲王，从此雪风就没好好干过活……
+18:59 varna: 你那套没上色吧
+18:59 Mokou: 说实话这次我并不知道田中是怎么想的
+18:59 Mokou: 上了一点
+18:59 Mokou: 我跟你讲，E6主任削甲前149甲，可以上雷巡
+18:59 varna: 因为没上好妆所以不愿意干活
+18:59 Mokou: E6有削甲
+18:59 Mokou: E4没削甲
+18:59 varna: ...
+19:00 varna: 改天我还得找个吹冷风的东西给雪风清清灰
+19:00 Mokou: 等十分钟疲劳，顺便补闪……
+19:00 varna: 现在怕直接上毛刷会再折一个水龙头
+19:00 varna: 之前已经折了一个
+19:01 varna: 米空十月份开工，做完之后我看情况补个柜子罩起来
+19:01 varna: 不到能穿长袖的天气，不太敢作死喷漆
+19:01 varna: 八成喷一手
+19:01 Mokou: 2333333
+19:01 Mokou: 手套吧
+19:01 varna: 手套我都戴的，之前也没喷到袖子上
+19:02 varna: 不过还是防着点
+19:02 varna: 用军舰色的左酱鲁馆就有点……
+19:02 Mokou: E3倒是传说中有削甲，不过我没来得及测试
+19:02 Mokou: 今天上午一炮拍死了
+19:02 varna: 说起来十月份考虑补一套颜料+喷笔
+19:02 Mokou: 基本上E3的难度略高于一般活动的关底
+19:03 varna: 我之前试着用亚克力在丙烯底上做第二次打底，效果很不好
+19:03 varna: 虽说再用珐琅上第三层遮瑕可行，但毕竟已经悲剧了
+19:04 varna: 水性亚克力笔涂的最大悲剧是干掉之前根本看不出笔触，还以为画得挺好呢
+19:04 varna: 晾干之后整个舰都梵高了
+19:04 Mokou: 梵高2333333
+19:05 varna: 有个做战车的画出来不错，但那恐怕需要相当高的水准
+19:05 varna: 出门买点饮料点心
+19:05 varna: (｡･ω･)
+19:05 Mokou: 火狐的CPU用率又爆炸了
+19:05 Mokou: 我重开下
+19:18 lhanjian: 卧槽，祝福附魔的锋利洛特大这么强？
+19:23 Mokou: varna: 我刷完了
+19:25 fy quit:Remote host closed the connection
+19:26 fy joined channel
+19:27 varna: Mokou: 回来了
+19:27 Mokou: OK
+19:27 Mokou: 出击
+19:32 Mokou: 啊
+19:32 Mokou: 群爹这回避
+19:32 varna: ko ko
+19:36 Mokou: 关剧透
+19:37 varna: 我刷新下
+19:37 varna: 落后了一些帧数
+19:37 Mokou: twitch有延迟的
+19:38 Mokou: 卧槽这盘不错啊
+19:38 varna: +
+19:40 Mokou: 时雨绫波好样的
+19:40 varna: 我家绫波靠谱
+19:41 varna: 无敌的鸟海
+19:41 Mokou: 鸟海磨血的时候每次都挨打
+19:41 varna: 啊？米空还会恭喜作战成功的？
+19:41 Mokou: 会啊
+19:42 Mokou: 吃完饭打E5
+19:42 varna: 我教深入人肝
+19:52 Mokou: 对了，这次活动出现了金NE
+19:52 Mokou: E2Boss
+19:55 varna: 药丸
+19:55 varna: 即将加入七图全家桶
+19:55 Mokou: 血220甲115
+19:55 Mokou: 最后被阿贺野白天一炮拍死了
+20:03 varna: 直播卡住了？
+20:03 Mokou: 我这里上传是正常的
+20:04 Mokou: 可能刚才抽了下
+20:04 Mokou: 你刷新试试
+20:04 varna: 刷了，正在广告
+20:04 Mokou: 妈的这广告
+20:04 Mokou: “无论你以何种目的飞往欧洲”
+20:04 varna: 2333
+20:05 Mokou: 我也想知道我为什么要去欧洲
+20:05 Mokou: 我明明是蝗国的提督……
+20:14 varna: 新UI按钮真难看
+20:15 Mokou: 不知道娇喘怎么想的
+20:15 varna: 美工都忙着驲POI了么
+20:15 varna: 枕 营 业 疑 问
+20:15 Mokou: 至少不是INM营业
+20:15 Mokou: 别哪天来个红茶栖姬
+20:15 varna: 想起杭州一个地名：下沙
+20:15 Mokou: “进来吧，请”
+20:15 Mokou: 233333
+20:16 Mokou: 传 统 艺 能
+20:16 Mokou: 对了，据说宋朝人确实擅长用毒
+20:16 varna: 内 战 专 精
+20:16 Mokou: 杯酒释兵权的功臣们似乎很多都莫名其妙英年早逝了……
+20:21 varna: 直播掉了？
+20:21 Mokou: 刚才去上了个厕所
+20:21 Mokou: 刷新下吧
+20:21 Mokou: 噗，又掉了
+20:22 Mokou: 看来不是我锁屏的问题
+20:22 Mokou: 回来了
+20:23 varna: 头疼之后懵比了一整天
+20:24 varna: 今天还晕乎乎的
+20:41 cleamoon joined channel
+20:42 varna: 幼女来了
+20:42 varna: 爆他
+20:42 cleamoon: varna: 爆
+20:42 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/eh/zn_490879.jpg@596w_1l.jpg
+20:43 varna: 这都能水表
+20:43 Mokou: 这是挑社会主义的食
+20:44 Mokou: 新中国怎么可能有不好吃的饭菜
+20:44 varna: 沙
+20:44 Mokou: 即 逮 捕
+20:45 xhe joined channel
+20:46 Mokou: 直播还活着么
+20:46 varna: 活着
+20:46 Mokou: OK
+20:46 Mokou: 出击
+20:47 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/eh/xm_490944.jpg@596w_1l.jpg  #确定不是洋葱骑士报的？
+20:48 Mokou: 噗
+20:48 varna: 前有猫
+20:48 Mokou: 等疲劳
+20:48 varna: 猫了……
+20:48 Mokou: 这蛋疼的
+20:49 varna: ...
+20:49 varna: 连装猫
+20:50 Mokou: 网络不利
+20:50 Mokou: 我先等等
+20:51 varna: 为什么会变成这样呢？
+21:03 hycuihz joined channel
+21:09 varna: 啊啊
+21:09 varna: hycuihz: 有没有幼女/可爱的女装子、药娘、供弹具卸除子资源提供呢
+21:10 hycuihz: 什么鬼
+21:11 varna: 好想侵犯幼女啊
+21:11 Mokou: 重新测了一下那个哲学家测试，现在我变成了79%的晚期维特根斯坦……
+21:11 varna: 头疼了一晚上，晕乎了一天，代码写了不到两百行就写不动了，手头的游戏还没有一个休闲向的
+21:12 varna: 米汁断供
+21:12 Mokou: 来玩砍口类吧
+21:12 varna: 这样再没幼女，我整个人都要变成活尸
+21:12 Mokou: 这游戏很休闲的
+21:12 varna: (｡･ω･)在下是有立场的，不会和萌军站在一边打什么苏伊士
+21:12 varna: (｡･ω･)帝国主义亡我之心不死
+21:12 CyrusYzGTt joined channel
+21:12 Mokou: (｡･ω･)你们这些法西斯余孽
+21:13 Mokou: (｡･ω･)要识大局
+21:13 varna: 打了欧洲，最后还被赶回非洲打猎，欧洲人篡夺革命成果
+21:13 varna: 然后还有漫天遍地的奋斗逼
+21:13 cleamoon: 去玩野蛮5
+21:13 Mokou: 再来一盘，咦，天怎么亮了
+21:13 varna: (｡･ω･)ﾉ这正是「土豆烧熟了，再加牛肉——不须放P」
+21:14 varna: 还是想搞套实体版的SK5来
+21:14 Mokou: https://www.quotev.com/quiz/8888999/Which-government-most-closely-matches-your-political-views 政府测试
+21:14 Mokou: ^ 测试哪个国家最像你的政治观点
+21:16 * varna -> 深海
+21:16 * Mokou 蝗国
+21:16 Mokou: 我试图选出我国，然而总是选出北朝鲜……
+21:17 varna: 我明明选了禁枪禁大麻，为什么会变成这样
+21:17 Mokou: 你是不是没选允许A片和援交
+21:17 varna: 难道深海实现了共产主义，惊恐
+21:18 Mokou: 另，据说选无国家出来的会是丹麦……
+21:18 varna: 卖银禁止
+21:18 Mokou: 我选了允许卖银……
+21:18 varna: ...
+21:18 Mokou: 虽说卖银就如同吸毒一样，未必总是完全自愿，所以我不反对禁止
+21:19 varna: 卖银的性质比吸毒好不少，但副产物比较麻烦
+21:19 Mokou: 然后我选了允许堕胎
+21:19 varna: +
+21:19 varna: 允许堕胎、兹瓷死刑
+21:19 Mokou: +
+21:19 varna: 难道差距就是卖银……
+21:19 Mokou: 我也想问这个
+21:19 Mokou: 我选一下试试
+21:20 cleamoon: 嗯，很近，单卖
+21:20 Mokou: 禁止卖银——蝗国
+21:21 varna: ...
+21:21 Mokou: 看起来我日杂的帽子可以坐实了
+21:21 varna: (｡･ω･)你这精日
+21:21 Mokou: (｡･ω･)噫吁嚱，我明明是马克思主义者
+21:21 varna: (｡･ω･)我也是啊
+21:21 varna: (｡･ω･)最近我练字抄的都是共产党宣言
+21:21 cleamoon: 我选的允许卖淫不许种大妈
+21:21 Mokou: 同性婚姻和所得税呢
+21:22 varna: 兹瓷HOMO, 税选C
+21:22 cleamoon: 支持同性，税收是抢
+21:22 Mokou: 我选择1、婚姻不该被政府规制 2、B……
+21:22 varna: 2B
+21:22 Mokou: uccu
+21:22 varna: @滨风改二B型
+21:22 cleamoon: 哦，我也选的A
+21:23 Mokou: 实际上现在蝗国的同性婚姻应该就是这么实践的
+21:23 Mokou: 自行立一个类似婚姻的协议，决定财产分配之类的东西
+21:23 varna: 然后公证？
+21:23 Mokou: +
+21:23 Mokou: 毕竟蝗国很难立法允许同性婚姻
+21:23 varna: 实际上没有政府注册的婚姻关系，但有法律效力
+21:23 varna: 这样也可以
+21:24 Mokou: 这就是我对A选项的理解
+21:24 Mokou: 当然蝗国这里实际上是坑了
+21:24 varna: 我对A的理解是，政府不规制婚姻的话，官员就会大量占有妹子
+21:24 varna: (｡･ω･)这不行啊
+21:24 Mokou: 然而政府规制婚姻官员也大量占有妹子
+21:24 varna: (｡･ω･)那是因为还没有实现共产主义
+21:24 Mokou: 占有又不代表结婚
+21:24 varna: 实现之后，就能造很多2B小姐姐
+21:24 Mokou: (｡･ω･)你去实现啊！
+21:25 Mokou: (｡･ω･)u can u up
+21:25 varna: (｡･ω･)你看我现在一副无产者的样子
+21:25 varna: (｡･ω･)完全没有生产资料
+21:25 Mokou: 蝗国不但没立法允许同性婚姻，也不太可能
+21:25 Mokou: 因为他们犯了个二
+21:25 Mokou: 第二十四条 　婚姻は、両性の合意のみに基いて成立し、夫婦が同等の権利を有することを基本として、相互の協力により、維持されなければならない。
+21:25 Mokou: ○２ 　配偶者の選択、財産権、相続、住居の選定、離婚並びに婚姻及び家族に関するその他の事項に関しては、法律は、個人の尊厳と両性の本質的平等に立脚して、制定されなければならない。
+21:25 varna: 23333333333
+21:25 Mokou: ^ 日本国宪法
+21:26 cleamoon: 我对A的理解是，德国骨科
+21:26 Mokou: 允许同性婚姻需要修宪
+21:26 varna: 宪法贰了……
+21:26 varna: 宪法修正案第114514稿引入的第810条
+21:26 Mokou: 野 田 内 阁
+21:27 varna: 修了三遍啊三遍
+21:27 varna: (｡･ω･)ﾉ有没有敢死队来玩全境封锁的！萌新！萌新！
+21:28 Mokou: varna: 说起来，LN和TN的区别主要在哪
+21:29 varna: (｡･ω･)ﾉ血源也行！我可以捏新号，或者奉陪四五十级的一周目！
+21:29 varna: TN近乎难以名状，他的立场已经超出了自己的原则
+21:29 varna: 而LN的立场是明确的规则
+21:29 Mokou: 难以名状什么鬼
+21:29 Mokou: 主要是我想起来那个DND测试我测了个TN出来……
+21:29 varna: 一个TN角色往往会试图维持他认定的平衡，而不在意涉众（包括他自己）的状况
+21:30 varna: 天地不仁ry这个感觉
+21:30 Mokou: なるほど
+21:30 Mokou: 怪不得……
+21:30 varna: 但难以名状就在于实际上任何一个TN角色都没法跳出他自己的框架
+21:30 varna: 五步、五十步或者百步，都会掺杂个人色彩
+21:31 varna: 所以一个真正的TN立场者往往需要时间的磨练，得看历史的行程
+21:31 varna: 然而巫妖基本都是NE, 因为转化为不死生物会迫使人物失去一部分理性和常识
+21:32 Mokou: 忍野爻嘴上的自己能算TN么
+21:32 varna: 难说
+21:32 Mokou: 不考虑他是不是傲娇的话
+21:32 varna: DND的善恶观是绝对二元的
+21:32 varna: 但其他语境未必如此
+21:33 Mokou: 噫
+21:33 varna: 「常人皆CN」就是试图磨合这两种体系的翻译结果
+21:34 Mokou: 所以其实问题在于其他语境下未必有一个绝对的善恶标准么
+21:34 varna: +
+21:34 hycuihz quit:Ping timeout: 240 seconds
+21:34 varna: DND的中立是建立在善恶二元上的
+21:34 Mokou: 怪不得我一直搞不明白G和E的判断标准……
+21:35 varna: 而这个二元基本符号化了
+21:35 varna: 倒不如说，凡人的善恶观恰好和多元宇宙的二元对立相似
+21:35 varna: 但具体到实现会很惨，比如被遗忘的国度
+21:36 varna: 无论善恶，无信者都是要拉去糊墙的，很政治
+21:36 Mokou: 噫吁嚱
+21:36 varna: 龙枪人情很多，最著名的例子比如雷斯林马哲理
+21:36 varna: planescope则丰富多彩
+21:38 Mokou: 最近有点想入门一下DND世界了，有啥推荐么
+21:38 varna: 基本规则的话看规则书可以，不过只是规则，很硬而且越来越堕落
+21:39 varna: 小说的话我差不多也就陈词滥调地推荐几种
+21:39 varna: 被遗忘的国度可以从崔斯特杜垩登的故事开始，比如《黑暗精灵三部曲》
+21:39 varna: 基本武打片儿
+21:40 varna: 龙枪的话，《龙枪编年史》系列算是跑团流水帐，《龙枪传奇》则比较龙傲天，但第五纪元之后《落日》/《逝月》/《陨星》三部曲则又依赖前面几个的情怀
+21:41 varna: 有关法术和神术的资料也许看起来会稍微有趣些
+21:41 varna: 游戏的话推荐博德之门，增强版sbeam有售
+21:42 Mokou: OK
+21:42 Mokou: 开学之前我看看能解决多少
+21:44 varna: 龙枪我个人还算喜欢，不过仔细想想其实是类似武侠小说的情怀
+21:45 cleamoon: orz，感觉需要补的内容超多
+21:45 Mokou: 网络似乎没那么坑了
+21:45 Mokou: 直播还或者么
+21:45 Mokou: 活着*
+21:45 cleamoon: 在哪里直播？
+21:45 varna: 我电源快没了，先宕一下
+21:46 varna: 一边玩土豆一边看文字简介好了
+21:47 Mokou: OK
+21:48 Mokou: 那直播我先关了
+21:48 varna: 土豆要是能和少前联动就好了
+21:48 varna: OK
+21:51 varna: 比如说在游戏里推出UMP娘系列造型，我肯定会去搞一套
+21:52 Mokou: 出门劝退
+21:52 Mokou: 妈的纵横家……
+21:58 Mokou: 削甲大失败
+21:59 Mokou: 妈德又是北朝鲜
+21:59 Mokou: 不过这次和我朝只剩下一点差距了
+22:00 iyzsong: _(:з」∠)_
+22:00 Mokou: 号
+22:00 Mokou: 好
+22:00 Mokou: 选出来了
+22:04 Mokou: 长者点S
+22:05 Mokou: http://wx4.sinaimg.cn/mw690/6f2ea58agy1fipagxu6w1j20qo1b9td9.jpg “中央气象台....你找的网页工程师是.....哪里人？ ​​​​”
+22:06 Mokou: ^ FANG_XUE_FENG
+22:06 varna: 233333
+22:07 Mokou: 啊，港湾……
+22:10 Mokou: 啊，院长
+22:10 cleamoon: 233333
+22:10 Mokou: 削完甲打算顺便进趟Boss
+22:11 Mokou: 进去以后我发现我没弹药了
+22:15 varna: 终于匹配到人了
+22:19 Mokou: 劝退
+22:20 Mokou: 不过倒是削甲成功了
+22:23 Mokou: 小和摔了
+22:25 Mokou: 疲劳了
+22:25 Mokou: 今天先这样……
+22:25 Mokou: 休息下，舰娘们也休息下
+22:27 varna: _(:з」∠)_匹配到两个莽夫
+22:28 varna: 三个人被一堆掷弹兵喷火兵打得满地乱滚，我最后硬是把土豆打成黑魂
+22:34 iyzsong quit:Ping timeout: 240 seconds
+23:05 Arisaka joined channel
+23:06 varna: (｡･ω･)ﾉ
+23:15 Arisaka: (￣▽￣)~*
+23:18 varna: 名字总觉得好熟
+23:18 varna: arisaka = 有坂？
+23:18 Arisaka: 随便取的QAQ
+23:19 varna: 因为感觉像是三八大盖那个有坂……
+23:20 varna: (｡･ω･)ﾉ居然用颜文字卖萌，是否有意向成为/已经是妹子/女装子/药娘？
+23:22 Arisaka: 女装子有点吧。。。可惜身材不好
+23:22 Arisaka: 噫。。。
+23:22 cleamoon: 没事，这里有女装高手，比如varna什么的
+23:23 varna: (｢・ω・)｢贫乳是稀少资源！具稀有价值！
+23:23 varna: 我只负责女装精神文明建设
+23:23 varna: 不负责穿
+23:24 Arisaka: 不说了，女票拉我打农药∑(O_O；)
+23:24 varna: _(:з」∠)_
+23:24 varna: _(:з」∠)_生活作风糜烂
+23:24 Arisaka: 这么好的女装来源怎么能放过
+23:24 varna: 要不要吃点糖
+23:25 Mokou: 噫
+23:25 Mokou: 居然是现充
+23:25 Mokou: 烧
+23:26 cleamoon: 我听到了火的气味
+23:26 varna: 幼女的耳朵里会分泌鼻涕么……
+23:26 Mokou: 说不定是X液
+23:26 varna: 现在的幼女真可怕
+23:27 varna: 想想要不要躺床看会儿书睡了……
+23:27 varna: 明天还得日狗
+23:28 Mokou: 要不你也入个X1 Yoga
+23:28 Mokou: 很适合在床上用
+23:28 varna: 以后写码的本会考虑类似物
+23:28 varna: 不过手写板支持恶劣是个问题
+23:28 varna: 我又不想开vm
+23:29 Mokou: 其实手写本身已经没什么问题了，主要是AI设计
+23:29 Mokou: 按钮太小……
+23:29 Mokou: 以及屏幕键盘太坑
+23:29 varna: 屏幕键盘不能兼容功能键等于不能用
+23:29 Mokou: windoze都知道给我来个ctrl和shift，gnome就给我26个字母
+23:29 Mokou: 要不你试试搞个florence？
+23:29 Mokou: 不知道为啥，在我这直接sigsegv了
+23:29 varna: 以后再说，以后在说
+23:29 varna: 到时候说不定就有好用的产品了
+23:29 Mokou: +
+23:30 Mokou: 啊，之前那个是UI设计
+23:30 * Mokou 脑抽中……
+23:30 varna: 今天晚上土豆组野队全都是些莽夫……
+23:30 varna: Boss战没法拉人，然后两个哥们还不要命地抢占前沿阵地
+23:31 varna: 全躺了
+23:31 varna: 然后他们看我打了好几分钟的黑魂
+23:31 varna: 后来又组个一步不退娘
+23:36 varna: 躺了
+23:41 varna quit:Ping timeout: 240 seconds

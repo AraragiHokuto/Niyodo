@@ -1,0 +1,268 @@
+00:01 hoxily_ joined channel
+00:05 hoxily_ quit:Client Quit
+00:05 hoxily quit:Ping timeout: 268 seconds
+00:09 pjfloyd joined channel
+00:14 pjfloyd quit:Remote host closed the connection
+00:15 Izumo: 着陆
+00:25 cleamooon: 好快
+00:32 FrankHB: 衣锦的项羽下场并不咋地……
+00:39 LastAvengers joined channel
+00:43 LastAvengers quit:Client Quit
+00:45 varna: 哦瘊瘊
+00:51 cleamooon: varna, 我试了一下maple，虽然有点蛋疼，不过符号计算还是能做的
+00:51 varna: cleamooon: 能算积分？
+00:51 varna: 那挺厉害的
+00:51 cleamooon: 能，就是语法蛋疼
+00:52 varna: OTL, 解积分算法需要各种启发式
+00:53 cleamooon: 比较难的积分什么样，我试试
+00:53 varna: 不知道，我积分神渣……
+00:53 cleamooon: 积分理解就好了呗... 
+00:54 varna: 算起来拙计，难题也不会出……
+00:55 cleamooon: 我校就教了一个算法，partial
+00:56 varna: 你校居然教五岁幼女算法
+00:56 varna: 真可怕
+00:57 cleamooon: 我校一个教授教自己孙子集合论，然后，他在学校会各种神定义，但是，不会数数....
+00:58 varna: 会集合论的话只需要知道有前驱后缀就行了（笑）
+00:59 cleamooon: 前缀后缀？
+00:59 varna: 后继，撸多
+00:59 varna: 比如说，这个孙子知道0的后继的后继的……的后继
+01:00 cleamooon: 然后定义加法就很蛋疼了
+01:00 varna: 用丘奇数
+01:01 cleamooon: 我都忘了那是什么了...
+01:02 varna: 以自然数n来比喻，n ::= \f.\x.f[n](x), 其中f[n]代表复合n次f
+01:02 cleamooon: 总有一种lc的感觉
+01:02 varna: 就是lc
+01:03 cleamooon: orz
+01:07 varna: 看你这么说，总有种钦点的感觉
+01:10 cleamooon: 在学校选课应该偏应用一点还是偏理论一点
+01:10 varna: 理论
+01:10 varna: 应用知识自己可以补，工作时候也能学到
+01:11 cleamooon: soga
+01:14 cleamooon: 像ml这种，主要理论全是瓶颈，周边应用一片片的呢
+01:14 varna: 还是学理论
+01:14 varna: 学了理论才能发挥出来
+01:14 varna: 不然自己都瓶颈了
+01:15 cleamooon: soga
+01:15 cleamooon: 有道理
+01:16 FrankHB: 难道不是选作业少的老师好糊弄的么。
+01:17 cleamooon: 都没强制性作业
+01:17 varna: 这球对女教师有想法
+01:17 cleamooon: 而且我也不修cs...
+01:20 cleamooon: 强制 性作业
+01:39 Mokou joined channel
+01:39 Mokou: 到家
+01:39 varna: Mokou: 爆
+01:39 Mokou: 木毛特有的问候方式
+01:41 Mokou: 另外昨天有个悲剧
+01:41 Mokou: 我手一滑把所有的小箱子都拆了
+01:41 Mokou: 总共621个
+01:43 varna: OTL
+01:43 Mokou: 虽说亏得不多
+01:43 Mokou: 本身我也要拆六百多个
+01:48 pjfloyd joined channel
+01:51 pjfloyd quit:Remote host closed the connection
+01:52 cleamoon: orz
+02:01 cleamoon quit:Ping timeout: 250 seconds
+02:11 Mokou: 睡觉
+02:11 Mokou: 诸君武运
+02:11 Mokou quit:Quit: 睡觉
+02:43 Izumo quit:Quit: Connection closed for inactivity
+02:56 yimis quit:Quit: yimis
+03:07 Sasasu quit:Ping timeout: 244 seconds
+03:14 yimis joined channel
+03:18 yimis quit:Client Quit
+03:19 Sasasu joined channel
+03:36 lh_mouse quit:Read error: Connection reset by peer
+08:47 iyzsong joined channel
+09:09 iyzsong: morning!
+09:18 wlemuel joined channel
+09:31 LastAvengers joined channel
+09:54 LastAvengers quit:Quit: Srain0.05-git@0.376.a27899c close.
+09:58 fengyunljp joined channel
+10:16 fengyunljp quit:Remote host closed the connection
+10:57 fengyunljp joined channel
+11:11 xxxxxxxx joined channel
+11:16 tutu_wind joined channel
+11:34 yimis joined channel
+11:34 dantmnf quit:Ping timeout: 245 seconds
+11:36 dantmnf joined channel
+11:38 fengyunljp quit:Ping timeout: 244 seconds
+12:05 jin7boy joined channel
+12:06 jin7boy: 除了oracle jdk 和openjdk Linux下还有哪个jdk可用?
+12:10 jin7boy: zulu
+12:14 jin7boy quit:Quit: Leaving.
+12:29 varna: 来晚了
+12:29 varna: JDK还是建议用oracle的，openjdk性能差一些
+12:36 tutu_wind quit:Quit: WeeChat 1.5
+13:48 varna: http://www.xiami.com/album/282877 找到一个很久以前喜欢的专辑
+13:48 varna: cleamooon: ^ 这个碟推荐
+13:51 varna: 耳机发烧友也推荐下，我手头只有320k的mp3，但如果能找到更高音质的版本应该超赞
+14:58 iyzsong quit:Ping timeout: 265 seconds
+15:03 iyzsong joined channel
+15:16 T-J-M quit:Ping timeout: 260 seconds
+15:18 T-J-M joined channel
+15:19 wlemuel quit:Remote host closed the connection
+15:20 tutu_wind joined channel
+15:23 iyzsong quit:Ping timeout: 260 seconds
+15:28 iyzsong joined channel
+15:49 Sasasu quit:Quit: WeeChat 1.0.1
+15:49 Sasasu joined channel
+15:51 wlemuel joined channel
+15:57 prolog joined channel
+16:02 prolog: ♂
+16:02 wl_xxxxx joined channel
+16:03 prolog: 啊♂
+16:07 fengyunljp joined channel
+16:15 prolog left channel:"WeeChat 1.6"
+16:55 wl_xxxxx quit:Ping timeout: 244 seconds
+17:14 varna quit:Ping timeout: 260 seconds
+17:15 wl_xxxxx joined channel
+17:31 varna joined channel
+17:38 xzmsybzx joined channel
+17:39 xzmsybzx left channel:"WeeChat 1.6"
+17:40 lh_mouse joined channel
+17:40 Mokou joined channel
+17:41 Mokou: 一觉睡到现在……
+17:45 lh_mouse: 这 HOMO。
+17:47 Taggnostr quit:Ping timeout: 265 seconds
+17:51 Taggnostr joined channel
+17:54 LastAvengers joined channel
+18:06 wl_xxxxx quit:Ping timeout: 268 seconds
+18:10 varna: 回来了
+18:11 tutu_wind quit:Ping timeout: 268 seconds
+18:12 * varna 买了些芝麻糊和麦片
+18:14 Mokou:  【家有三星洗衣机的要注意了！这些型号可能爆炸！】目前，三星揭盖洗衣机已引起730起“爆炸”事故，其中9人受伤。昨日上午，三星宣布在美国召回280万台特定型号的洗衣机，但并未对中国市场出售的洗衣机是否存在同样问题作出答复。
+18:16 varna: 反正国货也会爆炸的
+18:17 Mokou: 最近三星怎么了
+18:17 Mokou: 清真了？
+18:18 varna: 比如说logo上多了一个月亮
+18:20 Mokou: 申穆N
+18:22 * varna 欲于环礁之城起舞
+18:23 varna: 现在水团人气怎么样？
+18:23 Mokou: 不清楚
+18:23 Mokou: 不过似乎没太看见缪斯林了
+18:24 varna: 这些人，完全不缪啊
+18:27 wl_xxxxx joined channel
+18:28 Mokou: http://ww1.sinaimg.cn/mw690/b6880c57gw1f9ezpsw5wwj21kw4ruqtg.jpg 老梗
+18:28 Mokou: 小伙与师兄开房后问其是否有艾滋 师兄:有
+18:30 varna: 233333333
+18:30 Mokou: http://ww4.sinaimg.cn/mw690/9c7297c7gw1f9ihs3ud6wj20gj0gqjsv.jpg
+18:30 varna: 这HOMO
+18:31 Mokou: 说别人是HOMO的才是HOMO得死！
+18:31 varna: NANODEATH?
+18:53 varna: 今天在外面看到一个被挡住的牌子，写着“〇真养生会馆”
+18:53 varna: 第一反应是迫真养生会馆
+18:55 FrankHB: sif缪剧情都结束了……
+18:55 FrankHB: http://gs.dengeki.com/news/20774/ 结果这本到现在还坑着……
+18:56 Mokou: varna: 申淫N
+18:56 FrankHB: 修真？清真？
+18:59 * varna 拍球
+19:01 fengyunljp quit:Ping timeout: 250 seconds
+19:06 iyzsong: 周末过得好快啊 (┙>∧<)┙へ┻┻
+19:07 varna: _(:з」∠)_你和噫噫噫出去玩儿，当然觉得过得快
+19:26 T-J-M quit:Quit: WeeChat 1.6
+19:28 iyzsong quit:Ping timeout: 260 seconds
+19:31 wl_xxxxx quit:Ping timeout: 250 seconds
+19:32 CyrusYzGTt joined channel
+19:33 iyzsong joined channel
+19:35 Mokou: _(:з」∠)_周末被我睡过去了
+19:35 varna: @周末
+19:36 iyzsong: _(:з」∠)_
+19:46 T-J-M joined channel
+19:55 varna: 啊啊，幼女，要侵犯幼女
+19:56 * varna 变成了靠幼女精气生存的妖怪
+20:01 Mokou: ^ 野兽化的羊驼先辈
+20:01 Mokou: 你渴不渴？
+20:03 varna: 沙
+20:14 wl_xxxxx joined channel
+20:15 iyzsong quit:Ping timeout: 250 seconds
+20:20 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+20:21 iyzsong joined channel
+20:32 cleamoon joined channel
+20:32 cleamoon: 法国第戎市的一名18岁男子将自己的无线网络设为Daesh 21，他因此遭到起诉，被定罪“赞美恐怖主义”，被判三个月的缓刑。Daesh是伊斯兰国的阿拉伯语缩写，21是第戎市所属的科多尔省的编号。这位男子是在新的反恐法律下遭到起诉的，这项在2014年通过的法律将公开赞美恐怖主义行动定为犯罪行为。违反该法律被定罪的人将面
+20:32 cleamoon: 临最高5年徒刑和7.5万欧元罚款。这位男子否认自己是恐怖分子，他一开始被判100小时社区服务，遭到拒绝后判了3个月缓刑。
+20:35 varna: cleamoon: 爆
+20:36 cleamoon: @OMGrz：还记得2012年反日游行中被砸穿头盖骨的西安人李建利吗？四年多了，他还没有离开医院，并且始终住在45号病床。因为开了一辆国产丰田，他被同胞砸车、暴打，险些丢命。妻子王菊玲后悔那天不该出门、后悔选错了路，恨过打人凶手蔡洋，最后她说：“归根结底，这事还是要怪日本人”//学医救不了……
+20:36 cleamoon: varna, 爆
+20:38 varna: 幼女居然爆我
+20:38 Mokou: 野 兽 因 子 扩 散
+20:39 varna: 这 里
+20:40 Mokou: 此↑处↓（文言）
+20:50 varna: 烧点水吃吃腋肖
+20:51 cleamoon: 啊啊啊，想要几个妹子玩玩
+20:51 varna: 我也想啊
+20:52 iyzsong: 一个就够了吧...
+20:54 varna: 你有噫噫噫了！
+20:54 iyzsong: 并没有 _(:з」∠)_
+20:54 cleamoon: 专情宋先生
+20:55 * iyzsong 已废..
+21:03 varna: 你不约噫噫噫去听演唱会什么的怎么行呢
+21:07 iyzsong: 约不到啊 0 0
+21:08 varna: 噫吁戲！
+21:11 wl_xxxxx quit:Ping timeout: 252 seconds
+21:16 cleamoon: 绑去
+21:23 varna: 啊啊好累
+21:24 varna: 挺过下周之后我应该能缓一缓
+21:24 varna: 这种时候要是有个妹子治愈我就好了，求帮忙介绍拐卖诱导
+21:25 Mokou: 你去游泳部看看，那里有可爱的后辈
+21:25 Mokou: 带他去阳台晒太阳就可以
+21:26 varna: ^ HoMokou
+21:27 varna: 这旗学了很多迫真的演技
+21:28 Mokou: †你改悔罢†
+21:30 iyzsong: 2333
+21:31 varna: iyzsong: 爆
+21:32 cleamoon: 然后被后辈逆推，成为了受
+21:34 Mokou: 不会的
+21:34 Mokou: 后辈被下药了
+21:37 Mokou: varna: http://2chcn.com/91613/
+21:38 varna: 哈哈哈哈
+21:59 Mokou quit:Quit: Lost terminal
+22:01 Mokou joined channel
+22:12 iyzsong quit:Ping timeout: 252 seconds
+22:13 LastAvengers joined channel
+22:15 Mokou: http://ww3.sinaimg.cn/mw690/beb35df0gw1f9ilwec6v8j20yi1pc4qp.jpg http://ww1.sinaimg.cn/mw690/beb35df0gw1f9ilw9p6x2j20yi1pc7wh.jpg 我就放两张图
+22:15 Mokou: varna: ^
+22:18 iyzsong joined channel
+22:20 Mokou: http://ww3.sinaimg.cn/mw690/6dd57921jw1f9h76hf7qjj20i408xt9x.jpg
+22:27 iyzsong quit:Ping timeout: 260 seconds
+22:32 iyzsong joined channel
+22:33 Mokou quit:Quit: Reconnecting
+22:37 iyzsong quit:Read error: Connection reset by peer
+22:41 Meow-J quit:Remote host closed the connection
+22:41 Meow-J joined channel
+22:44 iyzsong joined channel
+22:46 Mokou joined channel
+22:47 cleamoon: 这不就是个智障吗，还是每天+1s的比较好
+22:56 varna: Mokou: 这人智力到底缺陷到何种程度……
+22:56 Mokou: varna: 总之高中是上不了的
+22:56 Mokou: 评论：“元首：‘你TM当我废品收购站？’”
+22:57 cleamoon: 233333
+22:57 varna: 2333333
+23:01 Mokou: 【华裔老板被抢亮双刀：你一把刀我有两把】据报道，在澳大利亚昆士兰中国面店，一名持刀劫匪走进店里，递给老板一张纸条，上面写着“我有1把刀，把钱给我”。胡老板问他要多少，劫匪说全部都要。于是胡老板假意去厨房拿钱，随即抽出两把切肉刀大喊：“你有1把刀？我有两把！”吓得劫匪夺门而出
+23:01 Mokou: 。( Vista看天下 )
+23:02 cleamooon: 然后劫匪使出一招万剑归宗
+23:05 iyzsong: _(:з」∠)_
+23:07 wlemuel quit:Ping timeout: 244 seconds
+23:07 xxxxxxxx: 。胡老板问他要多少，劫匪说全部都要。于是胡老板假意去厨房拿钱，回来发现劫匪裤子都脱了，随即抽出两把切肉刀大喊：“你有1把刀？我有两把！”吓得劫匪夺门而出
+23:07 Mokou: ^ 基佬
+23:08 yimis quit:Quit: yimis
+23:08 varna: 可怕的基佬
+23:08 cleamooon: 基佬散布homo的气氛
+23:09 Mokou: 频道里的人都是HOMO!（绝望）
+23:19 Mokou: 卧槽
+23:19 Mokou: N站也有HTML5播放器了
+23:22 cleamooon: 反正b站播放器略慢
+23:32 Sasasu quit:Quit: WeeChat 1.0.1
+23:45 varna: H5播放器在我的ff上全死了
+23:47 Mokou: http://ww3.sinaimg.cn/mw690/71befb4cgw1f9h5yt215lj20k00dqmxw.jpg 从百草园到臭味书屋 
+23:47 varna: 这个P得好
+23:48 Mokou: 野兽先辈周树人说
+23:48 varna: 不过有一点缺陷
+23:48 varna: 抠完先辈的脸之后，应该用色相饱和度调一下红色和黄色
+23:48 varna: 原图的脸偏品红
+23:53 varna: 驲，新买的麦片自带糖……这我怎么往里面兑酱油
+23:54 Mokou: 你去附近的拉面摊吧
+23:54 varna: 我还有些挂面可以煮
+23:55 iyzsong: _(:з」∠)_
+23:57 cleamooon: 吃甜味的
+23:59 varna: 这个麦片买坑了

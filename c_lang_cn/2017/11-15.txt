@@ -1,0 +1,356 @@
+00:00 cleamoon_: 玻利维亚车神，羊驼冲锋龙卷风
+00:01 cleamoon_: Mokou: kindle 好用吗
+00:01 lhanjian: 不好用
+00:02 cleamoon_: 另外，offsetof 什么的写成函数也可以吧
+00:03 Mokou: 我觉得挺好的
+00:03 Mokou: cleamoon_: 怎么写
+00:04 cleamoon_: 淦，想了一下，好像没法写....
+00:05 cleamoon_: 好像只能靠编译器给值？
+00:06 varna: offsetof的问题不是值，是参数怎么写
+00:06 varna: 这里宏比函数容易到不知道哪里去了
+00:06 Mokou: varna: 值也稍微有点问题，如果是C艹的话
+00:07 Mokou: C艹里&可能被重载
+00:07 varna: 哦对
+00:07 cleamoon_: 嗯，确实
+00:07 Mokou: 所以C艹里似乎只能来个__builtin……
+00:07 varna: (｡･ω･)ﾉ带上了M4A1小公主和颓废娘Super-V
+00:08 cleamoon_: 参数似乎没法写
+00:10 varna: 小公主的手感果然没有ACR好
+00:10 varna: 不过总觉得雷明顿/马傻大和育碧有交易
+00:15 Mokou: https://wx2.sinaimg.cn/mw690/6ba51bbbgy1flhx4p9nxoj20ku5cz1kx.jpg 鸡汤
+00:17 cleamoon_: 说的就是我呀
+00:19 lhanjian: 我和ex就是这样
+00:19 lhanjian: 她很爱看我打游戏
+00:22 cleamoon_: 我发现好看的游戏很多玩着都难受，好玩的很多看着无聊
+00:22 whocares_2 quit:Ping timeout: 248 seconds
+00:22 whocares_2 joined channel
+00:30 Mokou: varna: 话说你入的那个蝗国伪毛笔是哪个牌子的
+00:30 Mokou: 明天我看看有没有力气去找找
+00:31 varna: 派通
+00:32 Mokou: OK
+00:32 Mokou: “查了查，这个ICD11只是草稿还在随时讨论修改且并没有被WHO批准，不能用于临床试验。有个Ferguson博士认为这条很容易被非民主国家用来把孩子送去有害的“治疗营””
+00:32 Mokou: ^ 乳华了
+00:32 lh_mouse: Mokou, 错了。 __builtin 的根本问题是 constexpr 。
+00:32 lh_mouse: 不 constexpr 根本无必要 builtin 。
+00:33 lh_mouse: 重载 operator & 的问题很容易解决。
+00:33 Mokou: 求教
+00:34 lh_mouse: template<typename _T>   inline _T *  addressof( const _T & __t) noexcept {  return const_cast<_T *>(   reinterpret_cast<const volatile _T *>(   &  reinterpret_cast<const volatile char &>(  __t  )  )  );  }
+00:35 Mokou: ……なるほど
+00:35 lh_mouse: geordi, { foo f; cout <<&f, addressof(f); } struct foo { void *operator&(){ return 0; } };
+00:35 geordi: 0, 0x7ffdfbdbf73f
+00:35 lhanjian: Mokou: 那个只是ICD11的草案，哪有这么快就更新ICD
+00:37 lhanjian: 国内是用国产的CIMD的，命名还在用ICD9，美国也用的自己的DSMIV
+00:37 Mokou: https://wx3.sinaimg.cn/mw690/006mwlwjgy1fli31gkojyj30hm1dg7wh.jpg 忒修斯铁道
+00:37 lhanjian: icd一向被批评的很多
+00:41 Mokou: https://wx2.sinaimg.cn/mw690/00616Ja7gy1flhrfx1hbpj30f006t0sy.jpg
+00:42 Mokou: lhanjian: 总之现在微博上一片绝望声，不过微博一贯如此
+00:42 Mokou: (｡･ω･)听得风是得雨
+00:50 CyrusYzGTt quit:Ping timeout: 240 seconds
+00:51 Mokou: https://www.zhihu.com/question/49693997
+01:08 CyrusYzGTt joined channel
+01:14 lh_mouse quit:Ping timeout: 240 seconds
+01:15 cleamoon_: 因为 23 = 11 + 4 + 5 - 1 + 4 比较容易算但 24 = 1*1 + 4*5 - 1 + 4 比较难算
+01:22 Mokou: 幼女特有的数学水平
+01:25 cleamoon_: 25就更蛋疼了 25 = 11 % 45 + 14
+01:34 Mokou: https://wx3.sinaimg.cn/mw690/679ee809gy1flhuczdyu1j20hs0gwgxo.jpg 锁屏
+01:35 cleamoon_: .........
+01:35 CyrusYzGTt quit:Read error: Connection timed out
+01:39 Mokou: steam的下载速度还是良心 https://usercontent.irccloud-cdn.com/file/uR06SMK4/2017-11-15-023908_1000x660_scrot.png
+01:45 CyrusYzGTt joined channel
+01:51 cleamoon_: orz
+01:51 cleamoon_: 比我硬盘读写都快
+02:05 lhanjian: varna: 八周目的守墓人也不好打
+02:18 lhanjian: 依然流放者莽死
+02:36 varna quit:Ping timeout: 240 seconds
+03:05 CyrusYzGTt quit:Ping timeout: 248 seconds
+03:23 CyrusYzGTt joined channel
+03:34 lhanjian: Youmu:
+03:34 lhanjian: 失眠了
+03:37 CyrusYzGTt quit:Ping timeout: 248 seconds
+04:15 CyrusYzGTt joined channel
+04:15 Youmu quit:Quit: Connection closed for inactivity
+04:16 cleamoon_ quit:Quit: Connection closed for inactivity
+08:50 lh_mouse joined channel
+09:06 L-ios1 joined channel
+09:07 L-ios quit:Ping timeout: 240 seconds
+09:08 zb111 joined channel
+09:09 L-ios1 quit:Read error: Connection reset by peer
+09:11 cleamoon_ joined channel
+09:12 L-ios joined channel
+09:14 L-ios quit:Read error: Connection reset by peer
+09:18 L-ios joined channel
+09:22 L-ios quit:Read error: Connection reset by peer
+09:25 L-ios joined channel
+09:33 MameYang joined channel
+09:53 Youmu joined channel
+10:06 L-ios quit:Remote host closed the connection
+10:09 L-ios joined channel
+10:21 Stevearzh quit:Quit: ZZZzzz…
+10:53 lh_mouse: geordi, << strlen("𤭢")
+10:53 geordi: 4
+11:05 Youmu: geordi: << strlen("中文")
+11:05 geordi: 6
+11:05 Youmu: geordi: << strlen("亹")
+11:05 geordi: 3
+11:10 lh_mouse: geordi, << strlen(" Youmu ")
+11:10 geordi: 7
+11:31 lh_mouse quit:Read error: Connection reset by peer
+11:34 lh_mouse joined channel
+12:28 MameYang quit:Remote host closed the connection
+12:28 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+12:47 MameYang joined channel
+14:15 \s joined channel
+14:15 \s quit:Changing host
+14:15 \s joined channel
+14:15 CyrusYzGTt quit:Ping timeout: 248 seconds
+14:25 zb111 quit:Ping timeout: 240 seconds
+14:43 CyrusYzGTt joined channel
+14:49 StardustX joined channel
+15:10 CyrusYzGTt quit:Read error: Connection timed out
+15:14 CyrusYzGTt joined channel
+15:48 StardustX quit:Ping timeout: 248 seconds
+16:00 _infinite_ quit:Ping timeout: 268 seconds
+16:05 infinite joined channel
+16:31 bzzzt quit:Ping timeout: 240 seconds
+16:45 L-ios1 joined channel
+16:45 L-ios quit:Ping timeout: 248 seconds
+16:45 L-ios1 is now known as L-ios
+17:31 lh_mouse: geordi, << sizeof(k); struct k { unsigned long b1 : 1; unsigned long b2 : 2; };
+17:31 geordi: 8
+17:31 lh_mouse: geordi, replace last long with long long
+17:31 geordi: 8
+17:31 lh_mouse: geordi, replace last long long with int
+17:31 geordi: 8
+17:31 lh_mouse: geordi, show
+17:31 geordi: << sizeof(k); struct k { unsigned long b1 : 1; unsigned int b2 : 2; };
+17:32 lh_mouse: << sizeof(k); struct k { unsigned long b1 : 31; unsigned int b2 : 2; };
+17:32 lh_mouse: geordi, << sizeof(k); struct k { unsigned long b1 : 31; unsigned int b2 : 2; };
+17:32 geordi: 8
+17:32 lh_mouse: geordi, << sizeof(k); struct k { unsigned long b1 : 63; unsigned int b2 : 2; };
+17:32 geordi: 16
+17:32 lh_mouse: geordi, << sizeof(k); struct k { unsigned long b1 : 62; unsigned int b2 : 2; };
+17:32 geordi: 8
+17:43 Dove joined channel
+18:43 MameYang quit:Remote host closed the connection
+18:44 MameYang joined channel
+19:09 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+19:10 \s joined channel
+19:10 \s quit:Changing host
+19:10 \s joined channel
+19:11 bzzzt joined channel
+19:20 iyzsong joined channel
+19:52 Dove: iyzsong: 233song，揉。
+19:59 iyzsong: _(:з」∠)_
+20:05 \s quit:Quit: My MacBook has gone to sleep. ZZZzzz…
+20:06 \s joined channel
+20:06 \s quit:Changing host
+20:06 \s joined channel
+20:10 varna joined channel
+20:10 varna: _(:з」∠)_幼女幼女平坦的胸口
+20:14 varna: Mokou: 今天在油管子上搜到一首叫YOU DIED的歌，还挺上口的
+20:18 Dove: 有个问题？python3中的不可变类型有哪些？
+20:18 Dove: 就是可以作为字典的键的
+20:18 Dove: 我知道list肯定不是
+20:19 Youmu: tuple
+20:19 Dove: tuple没有append之类的操作吧？我似乎太心急了，应该往后看看然后自己试试。
+20:20 Youmu: 没有
+20:20 Dove: item1, item2, item3= [1, 2], 2, 3 tup = (item1, item2, item3) print(tup) item1 = [2, 3] print(tup) tup[0].append(3) print(tup)
+20:21 Dove: 我试了一下这个代码，发现tuple的元素如果是list，则还是可能改变。
+20:21 Dove: 就是tup[0].append(3)行得通
+20:22 varna: ...
+20:22 varna: 跟tuple并无关系
+20:22 Youmu: py 里默认都是 ref 的
+20:22 Dove: 所以我就疑问到底怎么才算不可变类型
+20:23 Dove: 教程上很简单地提了这么一句，我往后看看试试。
+20:24 Dove: “键(key)必须使用不可变类型。” 原话，就这么一句。
+20:24 Dove: 没有上下文
+20:25 Dove: 大概专门讲到字典会提。
+20:25 iyzsong: 提供 __hash__ 方法的对象，或者说 isinstance(X, collections.abc.Hashable) == True
+20:26 Dove: 这么解释倒是行得通。
+20:27 Dove: 由于是初级教程，还是网页版，讲得不太细。
+20:41 Stevearzh joined channel
+20:46 cleamoon_: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/wh/hv_353929.jpg@596w_1l.jpg
+20:47 Dove: 不想看啦，练字去啦。
+20:48 Dove: loser撸过
+20:49 cleamoon_: 李不白：‏ 看完《攻守道》，最直观的感受就是有钱真好。天下武功，唯富不破；太极之道，以钱克刚；功夫再高，也怕天猫……那么多大咖，那么多武林高手，被钱打趴。基本上就是一个穿着19.9包邮淘宝绿棉袄的丑脸小怪物有钱人打死一船人。所谓赵本山的书法，马云的电影，于丹的学问，乃盛世的三大标志
+20:50 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0e/wh/51_359548.jpg@596w_1l.jpg
+20:55 varna: 呼，虚惊一场
+20:55 varna: 依赖天猫的平台，他们做了个技术改造，我这边差点没回归出来
+20:58 bzzzt quit:Remote host closed the connection
+20:58 cleamoon_: ......
+21:00 bzzzt joined channel
+21:03 lhanjian: varna: 流放者太猛了，整个游戏变得索然无味
+21:08 varna: (｡･ω･)ﾉ
+21:09 varna: 我驲哦
+21:09 varna: 潜入的时候被队友卖了……
+21:09 lhanjian: varna: 我现在Dps最高的武器已经是匕首了
+21:09 lhanjian: 简直无语啊
+21:09 varna: 真憋屈
+21:16 FrankHB joined channel
+21:20 bzzzt quit:Remote host closed the connection
+21:21 bzzzt joined channel
+21:23 Dove quit:Ping timeout: 260 seconds
+21:27 FrankHB quit:Ping timeout: 240 seconds
+21:28 cleamoon_: 对了，好久没见海棠姬了
+21:28 varna: 是啊
+21:28 varna: 大概在国外忙起来了
+21:28 cleamoon_: 或者左拥右抱了
+21:29 varna: (｡･ω･)
+21:30 lhanjian: varna: 能联机的游戏还是有点少
+21:31 varna: 也许明年联机怪物猎人吧
+21:32 cleamoon_: 怪猎又是四小姐？
+21:32 lhanjian: 是啊
+21:35 lhanjian: 其他平台表现都不佳
+21:35 lhanjian: 相对PS4而言，除非出到iOS/Andro上，不然基本上就只有PS4/Switch了
+21:39 cleamoon_: switch 太奇葩了，好好做一个移动游戏机不好吗
+21:39 bzzzt_ joined channel
+21:39 bzzzt quit:Read error: Connection reset by peer
+21:40 cleamoon_: 最重要的，没有口袋玩个锤子
+21:42 bzzzt_ quit:Remote host closed the connection
+21:42 bzzzt joined channel
+21:43 lhanjian: 精灵宝可梦会出的吧
+21:43 lhanjian: 还有秒天秒地的塞尔达啊
+21:45 cleamoon_: 3ds上下一款还没消息呢
+21:46 cleamoon_: 塞尔达确实看着还不错
+21:47 varna: 塞尔达正属于那种我看了就提不起兴趣的……
+21:47 varna: 毛蛋，满地都是SAM
+21:48 FrankHB joined channel
+21:51 cleamoon_: 其实minecraft很适合移动端游
+21:58 MameYang quit:Quit: Konversation terminated!
+22:06 cleamoon_: 塞尔达是乍一看很惊艳，实际一玩略无聊的代表
+22:08 varna: 最近体感过的平台类游戏，玩起来最悠闲的还是幽灵行动荒野
+22:14 cleamoon_: 那应该算platform游戏吗....
+22:17 varna: 很平台了
+22:19 cleamoon_: 俄罗斯国防部公布照片称，美国允许三辆伊斯兰国的卡车撤离战场。俄罗斯在社交媒体上公布了据称是无人机拍摄的照片，称这是“铁证如山”。然而，照片很快被发现是来自手游
+22:19 Dove joined channel
+22:20 varna: 2333
+22:20 Dove: 哎呀窝草，看完教程去读读python3标准比较靠谱。
+22:21 Dove: 反正估计也不会很长
+22:22 varna: (｡･ω･)颓废娘SuperV还挺好用的
+22:22 Dove: 这是什么东西？
+22:22 cleamoon_: 等等，幽灵行动是不是就是那个直升机平地漂移的那个游戏？
+22:23 varna: 不是
+22:23 cleamoon_: 不是呀....
+22:23 Dove: 明天礼拜4了，wow要更新了。
+22:24 Dove: 上线收低保
+22:25 Dove: 反正估计又是不能用的东西
+22:26 Dove: 编程还是难，一步步来。
+22:27 Dove: 思考编程问题的时候我还是很混乱
+22:28 Dove: 平时感觉不出来
+22:28 Mokou: varna: (｡･ω･)你这是非法网络越境
+22:28 Mokou: DARK SOULS SONG - YOU DIED?
+22:28 varna: +
+22:29 varna: (｡･ω･)遇到这种要强袭的场合，小公主还是不负我的
+22:30 varna: (｡･ω･)缉毒前线！
+22:31 Mokou: 噗
+22:31 Mokou: 最后是被打刀哥弹反了么……
+22:31 cleamoon_: 好听
+22:34 Dove: 并没有找到在哪能听
+22:35 Mokou: https://www.youtube.com/watch?v=i9D2mvoMKLE
+22:36 Dove: 被墙了的不算，我这里翻墙无力。
+22:36 Dove: 按说黑魂的音乐什么的应该有搬运。
+22:37 Dove: 果然 B站似乎有
+22:41 Dove: 要么就是我听的内容不对，感觉很一般。
+22:43 Mokou: 我倒是挺喜欢的
+22:43 Dove: 可能是我听的内容不对。
+22:45 Dove: 游戏音乐，感触比较深的就是寂静岭的promise。
+22:47 Dove: 山岡晃作品
+22:50 Dove: 还有就是最早的诛仙登录界面背景音乐。
+22:50 Dove: 找不到了，当初听到的时候感觉很惊艳。
+22:51 Dove: 寂静岭本身我倒是没玩过。
+22:52 Dove: 我玩过的游戏好少吖。
+22:56 Dove: 睡觉去了。
+22:56 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:56 lh_mouse: 我玩过的游戏好少吖。
+22:57 Mokou: 我玩过的游戏好少吖。
+23:01 Mokou: (｡･ω･)直播打尬舞队有人看么
+23:02 varna: 网卡
+23:03 lh_mouse: network card.
+23:03 lhanjian: Mokou:我看看
+23:05 lhanjian: Mokou: 还行
+23:06 varna: 一股大秦味儿
+23:06 varna: 堇了
+23:08 Mokou: 开了
+23:09 Mokou: https://www.twitch.tv/abrahamhokuto
+23:09 lhanjian: 看着呢
+23:12 lh_mouse quit:Read error: Connection reset by peer
+23:12 lhanjian: 红旗是非要看不死队打AB团啊
+23:12 Mokou: 不然没法输出啊
+23:12 lhanjian: 。。
+23:12 lhanjian: 阔剑没有滚戳的吗？
+23:13 varna: lhanjian: 为什么需要这种奇怪动作
+23:13 lhanjian: varna:好多动作都可以躲开后蹭不死队一下。
+23:14 varna: 我的意思是打他不用太讲究方法，勉强也好压制也好，过了就行
+23:14 varna: 滚戳反而不好初见抓时机
+23:14 varna: 而如果不初见，走位也够了
+23:14 cleamoon_: 刚打开就 you died 了
+23:15 infinite quit:Ping timeout: 260 seconds
+23:15 varna: 架盾保持警戒，侧走位看机会砍砍
+23:21 infinite joined channel
+23:21 Stevearzh quit:Ping timeout: 255 seconds
+23:23 Mokou: 玛德
+23:23 Mokou: 果然还是不能锁定
+23:23 varna: 可怕，这人即将成为大触
+23:23 Mokou: 你刚才也看见了……
+23:23 varna: 我没看直播，卡爆了
+23:23 Mokou: 锁定以后一个狼箭步直接强行让我背对另一个
+23:23 Mokou: 然后怒吃一刀
+23:23 varna: 背对也没关系
+23:24 Mokou: 会死啊……
+23:24 varna: 不会的，相信我
+23:24 Mokou: 但是刚才我死了
+23:24 varna: 你的破绽比他少
+23:24 lhanjian: 你保持满血能吃他两个狼箭步
+23:24 varna: (｡･ω･)要不你先撸一管
+23:24 lhanjian: 我也觉得红旗需要撸一管
+23:24 Mokou: 不是被狼箭步干掉
+23:24 Mokou: 是狼箭步引开视角让我背对另一个位，然后另一位接着一刀……
+23:25 lhanjian: 但是我看你的血厚的很
+23:25 varna: 血还挺多的，别怕
+23:25 varna: 保持高血线
+23:25 lhanjian: 而且你都没怎么喝血
+23:25 varna: 喝血需要掌握招式节奏
+23:25 varna: P1初见乱掉正常
+23:26 varna: 想想古达子怎么制裁喝血的
+23:26 varna: 如果他没硬直，看到喝血直接拔地而起……
+23:31 lhanjian: 这个背刺我喜欢
+23:32 cleamoon_: 总觉得翻滚太多了....
+23:33 Mokou: 过了……
+23:33 lhanjian: Nice Move
+23:33 lhanjian: 翻滚的挺好
+23:34 varna: cleamoon_: 减少翻滚量需要更熟练
+23:35 varna: 而如果半吊子，就会像我一样提高翻车率
+23:35 varna: P2背刺走反被两刀带走也是很惨的
+23:40 Mokou: 噗，黑骑士
+23:40 Mokou: 能绕过去么……
+23:40 varna: 活祭品之路？
+23:40 Mokou: varna: 往回推的路上
+23:40 varna: 那位不用管，跑酷拿余烬之后随意处理
+23:40 varna: 手里有盾的话安定背刺
+23:40 lhanjian: 黑骑士右边不是有小路么
+23:40 lhanjian: 可以拿到佣兵全套和法兰余烬
+23:41 Mokou: 法兰余烬怎么拿，跳下去么
+23:41 varna: 在黑骑士把守的下坡尽头
+23:42 lhanjian: 提哦下去
+23:42 lhanjian: 跳下去
+23:42 Mokou: 拿到了，果断一个骨片怂……
+23:42 varna: RUA
+23:43 cleamoon_: 熟练估计没办法，只能多打
+23:43 lhanjian: 骨片好像是我给你的？
+23:43 Mokou: lhanjian: 你给了我五十个，多的是我自己的
+23:43 varna: cleamoon_: 多打就好了，我自己体会深刻
+23:44 varna: 当然其实打些更快节奏的ACT提升更高
+23:44 Mokou: 法兰大剑+2入手
+23:45 varna: 法兰大剑的加点至少在一周目中前期不刷级的情况下和你现在的购点有点矛盾
+23:45 varna: 最终补正力C敏A，期望580+
+23:45 lhanjian: 法兰大剑其实还算是力敏武器
+23:45 varna: +
+23:46 varna: 看着是个敏系，但实际力敏才能最大化威力
+23:47 varna: 而且即使威力还算够，也浑身都是破绽
+23:47 varna: 只适合打手法比自己弱的敌人
+23:56 varna: 啊啊，不很微观的微观宇宙里充满了质子中子电子还有……
+23:59 Mokou: 下一个捷径在哪来着
+23:59 varna: 卡萨斯墓穴，还是套路教堂
+23:59 Mokou: 套路教堂，开了教堂的门了
+23:59 Mokou: 我是该先回去花下负担还是接着走到下一个捷径再回去
+23:59 varna: 随意

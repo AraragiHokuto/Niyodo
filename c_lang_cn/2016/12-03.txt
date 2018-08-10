@@ -1,0 +1,404 @@
+00:07 varna: 我驲，油性颜料溶解了
+00:07 varna: 右舷漆面补了三次，已死
+00:10 varna: 不知道往下用细砂纸打磨下会怎么样，但我手里最多到1000号……
+00:15 Mokou: ……
+00:15 Mokou: 我手里到是有2400号的
+00:20 mork quit:Ping timeout: 260 seconds
+00:22 mork joined channel
+00:23 varna: 分色也是左舷安定一点
+00:24 varna: 右舷有几处胶带漏了缝，明天用水性颜料补一下
+00:25 lh_cat: geordi, << TYPE<streambuf::openmode>
+00:25 geordi: error: 'openmode' is not a member of 'streambuf {aka streambuf}'
+00:25 lh_cat: geordi, << TYPE<ios::openmode>
+00:25 geordi: _Ios_Openmode
+00:26 varna: 教训就一个：XF-9不是TS-33的替代品……
+00:26 Mokou: 233333333
+00:26 Mokou: 水性漆和油性漆效果会有些差别的
+00:27 Mokou: 因为溶剂不同，溶质没法完全相同……
+00:27 varna: 不，这两个颜色完全不一样
+00:27 lh_cat: geordi, { stream s; } struct stream : istream { };
+00:27 Mokou: ……
+00:27 geordi: <no output>
+00:27 lh_cat: geordi, --clang { stream s; } struct stream : istream { };
+00:27 geordi: error: call to implicitly-deleted default constructor of 'stream'
+00:28 varna: 一个是Dull Red, 一个是Hull Red...
+00:28 lh_cat: geordi, --clang << is_base_of<string, stringbuf>::value
+00:28 geordi: 0
+00:29 lh_cat: geordi, --clang << is_default_constructible<istream>::value
+00:29 geordi: 0
+00:29 lh_cat: geordi, erase --clang
+00:29 geordi: false
+00:29 lh_cat: geordi, { stream s; } struct stream : istream { static_assert(is_default_constructible<istream>::value, ""); };
+00:29 geordi: error: static assertion failed
+00:31 Mokou: 妈的
+00:31 Mokou: 舰C剧场版1月来HK……
+00:32 varna: 效果上似乎XF-9要好一点，不过TS-33比较符合画图的一般认知
+00:32 varna: 稍稍有点后悔
+00:33 Mokou: _(:з」∠)_
+00:35 mork quit:Ping timeout: 268 seconds
+00:35 varna: 剪一小块1000号砂纸试试
+00:35 varna: 万一能抛得好看点
+00:35 lh_cat: geordi, --clang << is_base_of<istringbuf, istringstream>::value
+00:35 geordi: error: use of undeclared identifier 'istringbuf'
+00:35 lh_cat: geordi, --clang << is_base_of<stringbuf, istringstream>::value
+00:35 geordi: 0
+00:36 mork joined channel
+00:37 varna: 我驲磨秃了一块
+00:38 varna: 那个溶解的地方漏出来了
+00:38 varna: 再补一笔
+00:39 Meow-J quit:Remote host closed the connection
+00:39 Meow-J joined channel
+00:40 varna: 没救了……
+00:40 varna: 算了就这样吧
+00:41 Mokou: varna: 你听过kotlin么
+00:42 varna: 听过
+00:42 varna: 似乎还可以
+00:43 Mokou: 我考察一下
+00:44 varna: 左舷真的废了，明天我把它捆起来重新喷一次
+00:46 varna: 哦不对右舷
+00:48 cleamooon: 搞了材料后才觉得markov过程真是温暖人心的亲切
+00:57 mork quit:Ping timeout: 260 seconds
+00:59 mork joined channel
+01:03 lh_cat: geordi, << sizeof(basic_streambuf)
+01:03 geordi: error: invalid use of 'auto'
+01:03 lh_cat: geordi, << sizeof(streambuf)
+01:03 geordi: 64
+01:10 lh_cat: geordi, << sizeof(stringbuf)
+01:10 geordi: 104
+01:18 mork quit:Quit: Lost terminal
+01:35 lh_cat: geordi, << std::streambuf::in
+01:35 geordi: error: 'in' is not a member of 'streambuf {aka streambuf}'
+01:49 lh_cat: geordi, << PTRDIFF_MAX
+01:49 geordi: 9223372036854775807
+01:49 lh_cat: geordi, << SIZE_MAX
+01:49 geordi: 18446744073709551615
+02:00 lh_cat: geordi, { } struct base { virtual void bark() = 0; }; struct derived : base { int bark() override { return 1; } };
+02:00 geordi: error: conflicting return type specified for 'virtual int derived::bark()'
+02:08 iyzsong quit:Quit: bye.
+02:16 lh_cat: geordi, << char_traits<char>::eof()
+02:16 geordi: -1
+02:16 lh_cat: geordi, << char_traits<char>::not_eof()
+02:16 geordi: error: no matching function for call to 'char_traits<char>::not_eof()'
+02:16 lh_cat: geordi, << char_traits<char>::not_eof(-1)
+02:16 geordi: 0
+02:16 lh_cat: geordi, << char_traits<char>::not_eof(123)
+02:16 geordi: 123
+02:17 lh_cat: geordi, << char_traits<char>::not_eof(0)
+02:17 geordi: 0
+02:55 yimis joined channel
+03:04 Sasasu quit:Ping timeout: 240 seconds
+03:14 yimis quit:Quit: yimis
+03:18 Sasasu joined channel
+03:21 lh_cat quit:Ping timeout: 240 seconds
+03:47 M[m]9 joined channel
+04:05 cleamooon quit:Quit: Connection closed for inactivity
+05:53 xxxxxxxx quit:Quit: Leaving...
+06:30 Mokou quit:Remote host closed the connection
+08:05 Youmu quit:Quit: Connection closed for inactivity
+08:41 FrankHB quit:Ping timeout: 258 seconds
+09:03 varna quit:Ping timeout: 248 seconds
+09:04 lh_mouse joined channel
+09:09 varna joined channel
+09:16 cleamooon joined channel
+09:48 iyzsong-xx joined channel
+10:05 varna quit:Ping timeout: 260 seconds
+10:06 mork joined channel
+10:10 Sasasu quit:Quit: WeeChat 1.0.1
+10:12 Sasasu joined channel
+10:15 Sasasu quit:Client Quit
+10:17 Sasasu joined channel
+10:25 mork quit:Quit: Lost terminal
+10:35 Sasasu quit:Quit: WeeChat 1.0.1
+10:39 Sasasu joined channel
+11:02 iyzsong-xx: - -b
+11:10 mork joined channel
+11:51 mork quit:Ping timeout: 240 seconds
+11:53 mork joined channel
+11:55 cleamooon quit:Quit: Connection closed for inactivity
+11:58 iyzsong-xx quit:Ping timeout: 268 seconds
+11:59 iyzsong-xx joined channel
+12:15 varna joined channel
+12:16 * varna 稍微补了一下雪风的右舷颜料，感觉还好
+12:18 varna_ joined channel
+12:18 varna quit:Client Quit
+12:19 varna joined channel
+12:26 varna: http://www.bilibili.com/video/av7313477/ 阳炎不爆炸
+13:02 Izumo joined channel
+13:02 Izumo: 我面前有两只幼女
+13:03 varna: 可怕，求图
+13:03 Izumo: 她们下车了……
+13:04 varna: 咬住六点
+13:04 Izumo: 不过香港幼女真的超级多
+13:07 varna: 真是好地方
+13:07 Izumo: 另外听说舰c剧场版一月在香港上映
+13:08 varna: 不看了，太惊悚
+13:08 Izumo: 你不考虑来一趟么
+13:08 varna: 一月份我这边有一大堆技术改造，年假还是想陪家里人过
+13:08 Izumo: 噫吁嚱
+13:09 varna: 到三月份为止，运气好的话应该能阻止代码继续腐烂
+13:09 varna: 不然这样下去挺不了几个月，系统就变成了一堆垃圾山
+13:10 Izumo: 然后你就可以把六花当外援叫过来
+13:10 varna: 我桑巨棒
+13:13 varna: 右舷漆面救活了
+13:13 varna: 运气还不错
+13:13 Izumo: 恭喜
+13:14 varna: 早上我局部遮盖起来又喷了一次舰首
+13:14 Izumo: 何文田站真tm绕……
+13:16 varna: 下午补一下不匀的军舰色，再做甲板
+13:16 varna: 以后还是得买个喷笔
+13:17 Izumo: 继sbeam后又一深坑
+13:17 varna: sbeam还好，基本我不太挑新游戏
+13:18 varna: 反正我也没女朋友……
+13:18 Izumo: 来个shenzhen io
+13:19 varna: 喷罐还是得有耐心，没有喷涂架什么的话就小面积多次
+13:20 varna: 妄想一次喷好一个面的结果就是全面挂漆……
+13:22 varna: 昨晚有个哥们儿开门，看见黑漆漆的楼道里一个黑影戴着护目镜、口罩、头灯，拿一个长条状物呲呲地喷，估计也挺囧
+13:22 Izumo: 233333
+13:23 varna: 舰底的补土也没起到多少效果，这个板件底下有点组不好的部分，我没填好，结果上色以后还是有高低差
+13:24 varna: 做烟囱的时候得留点心了
+13:29 yimis joined channel
+13:29 yimis quit:Client Quit
+13:31 Mokou joined channel
+13:32 Mokou: 这回的考场除了比较偏以外其他都还不错
+13:32 Mokou: 人少，收卷快很多
+13:32 varna: 而且有很多幼女
+13:32 Mokou: +
+13:33 Mokou: 机场都看不见幼女，全是欧洲人
+13:33 varna: 而且有很多幼女
+13:33 Mokou: 而且通勤便宜
+13:34 Mokou: 亚博馆去一趟一百多
+13:34 Mokou: 这次直接观塘线转九巴17路，一共不到十块
+13:35 varna: 而且有很多幼女
+13:36 varna: 穿着白色丝袜的幼女
+13:36 varna: 都装备了裙子
+13:36 Mokou: 毕竟何文田是学校区……
+13:36 varna: 玛德天国
+13:36 Mokou: JK也有
+13:36 Mokou: 不过基本都有男朋友，看了伤心
+13:36 varna: 光源氏计划比较好
+13:37 Mokou: 叫个麦当劳
+13:37 * Mokou 肥宅生活
+13:38 * varna 麦记刚到
+13:38 Mokou: 噗，昨天7-11找给我的20里有一张渣打的
+13:38 Mokou: 我要不要留作音译的反面教材呢
+13:38 varna: 可以
+13:39 lh_mouse: [13:35:13] <varna> 而且有很多幼女
+13:39 lh_mouse: [13:35:47] <varna> 穿着白色丝袜的幼女
+13:39 Mokou: 确实是白丝+裙子
+13:40 Mokou: 前天我出油麻地站的时候面前就有一个
+13:40 lh_mouse: [13:39:19] <Mokou> 确实是白丝+裙子
+13:41 lh_mouse: 昨天打三国杀有意思。对面郭嘉，还有个甄姬曹丕，我们就一个刘禅，队友蒋琬费祎，本来 2v2 没什么胜算。
+13:41 lh_mouse: 曹丕估计是吃多了，把自己和郭嘉铁锁起来火攻，然后翻费祎，喂郭嘉桃子。
+13:42 lh_mouse: 前后这么弄掉两个桃，最后费祎砍了一刀郭嘉发现没桃子。
+13:42 lh_mouse: 然后我刘禅无脑放权，费祎也不杀曹丕，就是刷牌。
+13:43 lh_mouse: 甄姬一轮两张半，我们这面放权两回合一轮过八张牌。
+13:43 lh_mouse: 最后菜刀砍死。
+14:04 lh_cat joined channel
+14:06 lh_not_bot: sig 
+14:06 lh_not_bot: sig
+14:06 lh_mouse quit:Disconnected by services
+14:06 lh_cat is now known as lh_mouse
+14:07 * varna squeaks
+14:07 varna: 啊好冷
+14:08 varna: 红旗帮我拐骗几个幼女来暖暖身体吧
+14:08 Mokou: 你飞过来
+14:08 Mokou: 香港二十度呢
+14:08 varna: 飞呀！飞呀！
+14:08 varna: 总觉得军舰色买少了
+14:31 lh_mouse quit:Read error: Connection reset by peer
+14:32 FrankHB joined channel
+14:38 varna: 我驲，颜色不一样
+14:39 Mokou: ……
+14:40 Mokou: 开吃
+14:40 Mokou: 肥宅生活
+14:50 varna: 这下见鬼了
+14:51 varna: 最后补喷了一波，一些消磁电路被盖住了
+14:53 Mokou: ……
+14:57 varna: 不多想了，做甲板
+15:17 xxxxxxxx joined channel
+15:17 xxxxxxxx: 奥巴马致信广岛核爆资料馆 称应正视历史
+15:18 xxxxxxxx: 观海同志说的对啊
+15:31 Mokou: 【小萝莉长得太可爱就想带回家？一中国大妈涉嫌诱拐日本女童被捕】日本兵库县警方24日表示，一女童11月23日下午和家人一同前往该县长田区北町一家超市时，一位48岁的中国籍薛姓女士向待在超市2楼休息室的女童表示“一起走吧”，便牵着女童在店内闲逛，直到碰到女童母亲后便离开回家。女童母亲听闻
+15:31 Mokou: 后马上报警。薛姓女子到警所后向警方称，因为女童太可爱了，想带她回家，“并不是诱拐”。但她已被当地警方因诱拐罪而逮捕。（参考消息网）
+15:39 Mokou: 困死，先去睡会
+15:51 Izumo quit:Quit: Connection closed for inactivity
+18:14 iyzsong-xx quit:Read error: Connection reset by peer
+18:32 Youmu joined channel
+18:52 iyzsong joined channel
+18:56 varna: 调的甲板色总感觉像5谷的，不像雪风的
+19:03 Mokou quit:Ping timeout: 260 seconds
+19:04 Mokou joined channel
+19:06 varna: Mokou: 甲板色也买错了
+19:06 varna: 最后我用哑光白调了迫真的军舰色和甲板色出来
+19:07 Mokou: ……
+19:07 Mokou: 听着好悲惨
+19:08 varna: 军舰色没救，我得找个合适的比例
+19:09 varna: 水性佐镇灰比喷罐版浅很多
+19:09 varna: 炮艇灰又深很多
+19:11 varna: 舰底色估计也没救，得用哑光红调出来
+19:11 varna: 但如果这么搞的话，不如入喷笔+郡士军舰涂装套组……
+19:16 varna quit:Ping timeout: 240 seconds
+19:17 varna joined channel
+19:18 FrankHB quit:Remote host closed the connection
+19:19 FrankHB joined channel
+19:21 Mokou: http://ww2.sinaimg.cn/mw690/682ed37fgw1fadq55dg3hj211i07m3zy.jpg “游戏打多了吧”
+19:22 varna: 233333
+19:22 varna: 甲——（）
+19:24 Mokou: 咸
+19:24 Mokou: 出去买点饮料
+19:25 varna: 这人一看就是提督
+19:25 varna: 这人要出去喝幼女汁了
+19:37 * Mokou 喝可乐
+19:37 Mokou: 肥宅生活
+19:38 Mokou: 岛城便利店还是少了些
+19:38 Mokou: 像HK这样多方便……
+19:40 Mokou: http://www.bilibili.com/video/av7123713/ 大量一般逸民
+19:53 varna: 噫吁戲，舰尾甲板有个缝得填上
+19:53 varna: 这个就有点尴尬了，不好削不好打磨
+19:54 varna: 而且迫真的甲板色是按感觉配的……
+20:02 varna: Mokou: 被坑了，田宫有TS68/TS69两款甲板喷罐
+20:03 varna: 虽说雪风用不上这个，甲板结构喷的话能喷尿崩
+20:05 Mokou: 甲板还是涂吧
+20:06 Mokou: 另外据我经验，水性漆没干的时候颜色看上去会深很多
+20:06 Mokou: 不对，浅还是深来着……
+20:06 Mokou: 总之不一样
+20:15 Mokou: http://picpaste.com/rexbUNGi.jpg  好久没见到这么典型的了
+20:19 Sasasu quit:Read error: Connection reset by peer
+20:19 Sasasu joined channel
+20:35 varna: 玛德电表怎么抽风了……
+20:35 Youmu quit:Quit: Connection closed for inactivity
+20:36 Mokou: 又停电了？
+20:37 Mokou: 大和老给我造鱼雷
+20:37 varna: 这次更诡异，电量还有，我插卡看了一下，剩余电量瞬间变负数了
+20:37 Mokou: 6666666666
+20:38 Mokou: 造了个瓜出来
+20:38 varna: 玛德智障
+20:39 Mokou: 说起来他们是怎么搞出负数来的
+20:40 varna: 不知道，现在我也没电
+20:40 Mokou: 66666666
+20:40 Mokou: 你杭州的电网里都是些什么破玩意
+20:41 varna: 不知道，现在我挺上火的
+20:41 iyzsong: _(:з」∠)_
+20:42 mork quit:Remote host closed the connection
+20:46 varna: 智障……得明天才能来电了
+20:47 Mokou: ……
+20:48 varna: 我都不知道说什么好
+20:49 Mokou: 所以你杭州的东京级电网建到哪里去了
+20:50 varna: 我就知道他们连远程缴费都不支持
+20:50 varna: 而且那些负的电量到底是怎么出来的
+20:50 Mokou: 所以为什么要用负数
+20:50 Mokou: 为什么要用有符号数……
+20:51 varna: 诡异的是有余额的时候停电了
+20:51 Mokou: 运营爆破
+20:51 varna: 那个卡把我的用电量抵消了十度，之后剩下的部分折合成一个负数当作我的剩余电量
+20:51 varna: 原先的剩余电量蒸发了
+20:51 iyzsong: 2333
+20:52 Mokou: 6666666666
+20:52 Mokou: 然后他们现在已经下班了是么
+20:53 varna: 自然
+20:53 Mokou: 阿里式加班，请
+21:05 varna: 所以说杭州是二线城市，不是因为穷，而是因为基建仍然傻逼……
+21:09 varna: 玛德
+21:09 varna: 问下来原来有个傻逼把我的卡插到他自己表上了，然后这个卡不知为何还能用
+21:11 Mokou: ……
+21:11 Mokou: 然后数据坏了？
+21:12 varna: 我也不知道数据是怎么乱的
+21:12 Mokou: ……他为什么要用你的卡
+21:12 varna: 因为他智障
+21:12 varna: 估计是这个原因吧
+21:13 Mokou: 我觉得二线城市的理由里可以加一条居民素质了
+21:13 varna: 明天电业来修
+21:14 varna: 这也是够6的……
+21:14 Mokou: 牛逼飞了
+21:14 Mokou: 不做验证的么
+21:14 varna: 做的……
+21:14 Mokou: ……
+21:14 varna: 按说这种电表都会初始化一次，然而鬼知道出了什么问题
+21:15 Mokou: 炄妣
+21:15 varna: 玛德我是不是该开头灯做一下雪风
+21:15 varna: 不过万一气得手抖把补土搞歪了也不好
+21:22 Mokou: 噗
+21:22 Mokou: 有个伙计用来打lol的QQ号长期没登录，结果被企鹅回收了
+21:22 Mokou: 装备全部蒸发
+21:22 varna: 哈哈哈哈
+21:22 condy quit:Ping timeout: 248 seconds
+21:22 varna: 叫他打撸啊撸
+21:23 varna: 我在TB上看到一家店有卖便宜喷笔的
+21:23 condy joined channel
+21:25 M[m]9 left channel:"User left"
+21:28 varna: ￥197的气泵喷笔套装，总觉得奇异
+21:28 Mokou: 乌龟泵吧
+21:28 varna: +
+21:29 varna: 咦似乎不是
+21:29 varna: 算了，其实有这个也未必解决问题
+21:29 varna: 现在我稍微会用罐儿了
+21:29 varna: 今天喷甲板就没挂漆
+21:30 Mokou: 恭喜
+21:30 varna: 不过喷笔可以解决一个问题：水性油性颜料色差
+21:30 varna: 现在我挺头疼这个的，因为军舰色配不好
+21:31 varna: 明天试试用佐镇灰和炮艇灰混一下
+21:32 varna: 如果用喷笔合适的话，其实我可以直接入郡士的颜料
+21:33 Mokou: +
+21:34 Mokou: 不过我觉得你还是屯一波直接掏1k吧
+21:37 varna: 差别有多巨大
+21:39 Mokou: 没用过不清楚，不过毕竟贴吧里的人都强烈不建议买乌龟泵
+21:40 Mokou: 妈的
+21:40 Mokou: 网易云音乐HK用不了……
+21:40 Mokou: 啊，登录以后可以用了
+21:41 varna: 那就等我技术进步些再想设备的事，现在先用罐儿凑合着，不过下次也该试试郡士颜料了
+21:42 Mokou: 下次说不定你直接入田宫的板件了
+21:42 varna: 万一靠谱呢
+21:42 varna: 哦说得对
+21:42 varna: 长谷川这套的细节一般，舰尾的管线都做歪了
+21:43 Mokou: 现在看来还是田宫实力最强
+21:43 varna: 而且甲板为何要分三段
+21:43 Mokou: 亚马逊向我安利了七周七语言
+21:43 varna: 赤城转世么
+21:44 varna: 七周系列不适合一个人看
+21:44 Mokou: 田宫武藏都两段甲板……
+21:44 varna: 适合对着一群人批判
+21:44 Mokou: 反面教材么
+21:44 varna: 不算反面，但没什么趣味
+21:44 Mokou: なるほど
+21:45 Mokou: 以及松本行弘的程序世界
+21:45 varna: 而且田宫大和级的两段甲板是按分色分开的吧
+21:45 varna: 长谷川这个雪风舰尾是在木甲板的一条分隔线上断开的
+21:45 varna: 搞砸的话，那条线就糊了
+21:46 Mokou: 旧版件的武藏是在中间割开的
+21:46 varna: 中间的都比较坑
+21:46 Mokou: 毕竟太老了
+21:46 Mokou: 新大和应该是按分色来的
+21:46 varna: 分色隔开都不怎么用补土
+21:49 Mokou: 田宫的雪风甲板应该直接是一整片
+21:49 Mokou: 直接放上去刷一圈流缝就行，组合度很好
+21:49 varna: 高低都不用分，这个组合度得做得很好啊
+21:49 Mokou: +
+21:49 varna: 开模技术碾压
+21:50 varna: 看来大艇酱在哪里都是骗人的
+21:50 Mokou: 23333333
+21:52 Mokou: http://ww4.sinaimg.cn/mw690/9d5ae2f7jw1faait8m76aj21kw23uqv5.jpg 微博上看到的
+21:53 Mokou: 这个像邪教么
+21:53 varna: 为何我看到的是「妮可妮可妮 向着你的心妮可妮可妮」
+21:53 Mokou: 这拉拉人
+22:00 Mokou: http://us.sinaimg.cn/000fLiPHjx076TrovMmz0104010044wx0k01.mp4?Expires=1480776909&KID=unistore,video&ssig=RlJJVDCJRF 据说是西安的
+22:01 varna: 哈哈哈哈
+22:01 varna: 这哥们摔懵了么
+22:02 Mokou: 我就想知道他那牙花了多少钱
+22:03 varna: ￥114514
+22:04 Mokou: 挂着时钟的牙科诊所
+22:14 varna: 快没电了
+22:14 varna: 撤退睡觉
+22:14 varna: 武运
+22:14 varna quit:Quit: leaving
+22:30 H0P joined channel
+22:39 whocares_2 quit:Ping timeout: 244 seconds
+22:40 whocares_2 joined channel
+22:53 iyzsong quit:Quit: night.
+23:02 Sasasu quit:Ping timeout: 250 seconds
+23:06 H0P quit:Read error: Connection reset by peer
+23:07 H0P joined channel
+23:23 cleamooon joined channel
+23:29 Sasasu joined channel
+23:54 Mokou quit:Ping timeout: 265 seconds
+23:56 Mokou joined channel
+23:59 xxxxxxxxx joined channel

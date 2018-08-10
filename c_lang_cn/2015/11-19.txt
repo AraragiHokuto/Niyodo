@@ -1,0 +1,627 @@
+00:02 Flandre3 quit:Ping timeout: 240 seconds
+00:05 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151110142142]
+00:19 wlemuel quit:Ping timeout: 255 seconds
+00:26 Flandre4 quit:Quit: WeeChat 1.3
+00:27 libhanjian quit:Quit: Leaving
+00:31 Stevearzh quit:Remote host closed the connection
+00:32 lh_mouse quit:Read error: Connection reset by peer
+01:43 Stevearzh joined channel
+01:43 Stevearzh quit:Changing host
+01:43 Stevearzh joined channel
+03:39 Stevearzh quit:Remote host closed the connection
+03:40 Stevearz` joined channel
+03:48 boosure joined channel
+07:52 FrankHB quit:Ping timeout: 264 seconds
+08:01 hoxily joined channel
+08:08 RivDo joined channel
+08:31 FrankHB joined channel
+08:36 RivDo joined channel
+08:38 hoxily quit:Quit: Leaving
+08:41 RivDo quit:Ping timeout: 240 seconds
+08:58 RivDo joined channel
+09:12 lh_mouse joined channel
+09:16 FrankHB quit:Ping timeout: 276 seconds
+09:18 FrankHB joined channel
+09:20 RivDo joined channel
+09:29 RivDo quit:Ping timeout: 246 seconds
+09:31 RivDo joined channel
+09:35 x-iyzsong joined channel
+09:37 libhanjian joined channel
+10:11 FrankHB quit:Ping timeout: 276 seconds
+10:13 FrankHB joined channel
+10:24 erhandsome quit:Ping timeout: 250 seconds
+10:25 erhandsome joined channel
+10:27 code_new joined channel
+10:28 Stevearzh joined channel
+10:45 hoxily joined channel
+10:45 xxxxxxxx joined channel
+11:05 x-iyzsong joined channel
+11:18 Stevearzh quit:Ping timeout: 260 seconds
+11:19 Stevearzh joined channel
+12:00 RivDo quit:Quit: Leaving.
+12:01 RivDo joined channel
+12:19 RivDo quit:Ping timeout: 255 seconds
+12:39 Stevearzh quit:Quit: Quit...
+12:40 Stevearzh joined channel
+12:46 randomclown joined channel
+13:06 Stevearzh quit:Read error: Connection reset by peer
+13:09 Stevearzh joined channel
+13:20 code_new quit:Quit: leaving
+13:29 Stevearzh quit:Read error: Connection reset by peer
+13:35 molikto joined channel
+13:49 lh_mouse: geordi, { istringstream iss("123 456 789"); int a, b; iss >>a >>b; cout <<iss.str(); }
+13:49 geordi: 123 456 789
+13:58 libhanjian: istringstream 和 istream 有何差别》
+13:58 libhanjian: ？
+14:00 lh_mouse: istream 是抽象类。
+14:00 lh_mouse: istringstream 就是以 stringbuf 为 buffer 的 istream
+14:00 lh_mouse: ifstream 是以 filebuf 为 buffer 的 istream
+14:02 libhanjian: 哦
+14:04 lh_mouse: 洋沱好几天没来了。
+14:04 lh_mouse: 艹妹去了吧。
+14:05 libhanjian: 不知道
+14:05 libhanjian: 估计是做些学 术事儿去了
+14:16 FrankHB quit:Ping timeout: 276 seconds
+14:17 Stevearzh joined channel
+14:17 Stevearzh quit:Client Quit
+14:17 Stevearzh joined channel
+14:29 hoxily quit:Quit: Leaving
+14:33 RivDo joined channel
+14:35 RivDo quit:Client Quit
+14:37 hoxily joined channel
+14:42 RivDo joined channel
+14:44 Flandre joined channel
+14:48 FrankHB joined channel
+15:51 lh_cat joined channel
+15:53 lh_mouse quit:Ping timeout: 244 seconds
+16:03 Flandre1 joined channel
+16:03 Flandre quit:Read error: Connection reset by peer
+16:11 Flandre2 joined channel
+16:14 Flandre1 quit:Ping timeout: 240 seconds
+16:17 RivDo quit:Quit: Leaving.
+16:23 RivDo joined channel
+16:26 xxxxxxxx quit:Ping timeout: 240 seconds
+16:29 RivDo quit:Ping timeout: 252 seconds
+16:53 RivDo joined channel
+17:06 FrankHB quit:Ping timeout: 265 seconds
+17:08 Xilzzerts quit:Read error: Connection reset by peer
+17:08 Xilzzerts joined channel
+17:20 hoxily_ joined channel
+17:22 hoxily_ quit:Read error: Connection reset by peer
+17:22 hoxily_ joined channel
+17:24 hoxily_ quit:Client Quit
+17:24 hoxily_ joined channel
+17:25 hoxily_ quit:Read error: Connection reset by peer
+17:29 pocmon joined channel
+17:29 pocmon quit:Changing host
+17:29 pocmon joined channel
+17:38 Flandre3 joined channel
+17:38 Flandre2 quit:Read error: Connection reset by peer
+17:40 Flandre4 joined channel
+17:43 Flandre3 quit:Ping timeout: 272 seconds
+17:46 * pocmon is away: 闪不闪...
+17:46 * pocmon is back (gone 00:00:00)
+17:47 * pocmon is back (gone 00:00:02)
+17:47 * pocmon is away: 闪不闪...
+17:47 * pocmon is away: 闪不闪...
+17:49 Flandre4 quit:Read error: Connection reset by peer
+17:49 Flandre joined channel
+17:50 code_new joined channel
+17:52 Flandre1 joined channel
+17:55 Flandre quit:Ping timeout: 260 seconds
+17:56 molikto quit:Remote host closed the connection
+17:56 molikto joined channel
+18:02 Mokou joined channel
+18:05 Flandre1 quit:Read error: Connection reset by peer
+18:06 Flandre1 joined channel
+18:08 Flandre2 joined channel
+18:12 Flandre1 quit:Ping timeout: 264 seconds
+18:16 libhanjian quit:Remote host closed the connection
+18:28 Mokou: 卧槽天津风
+18:35 code_new: 欧rz
+18:35 code_new: E2出的？
+18:51 Mokou: +
+18:57 code_new: E2现在有稳定配置了吗
+18:59 boosure quit:Quit: Get your hand off of it
+19:00 Mokou: E2击破
+19:00 Mokou: 带路还是那样
+19:00 Mokou: 神通皋月三日月滨风雪风
+19:01 code_new: 五只船带路了……
+19:01 Mokou: 间宫
+19:01 Mokou: 女神
+19:01 Mokou: 饭团子
+19:01 Mokou: 打孔器
+19:02 Mokou: 勋章
+19:02 code_new: 你的皋月三日月多少级
+19:02 Mokou: 28、33
+19:02 Mokou: 先去吃饭
+19:25 code_new: 在E1花一万油弹捞船，结果稀有船只出了3谷风1风云1雪风1卯月
+19:26 Mokou: OTL
+19:28 code_new: wiki上关于E2掉落的情报好少……
+19:28 code_new: BOSS点的驱逐难道都是稀有吗……
+19:29 code_new: Mokou: 话说E2劝退如何
+19:30 code_new: 如果我带1级皋月和三日月会怎样……
+19:31 RivDo1 joined channel
+19:44 Stevearzh quit:Quit: Be back later...
+19:45 cleamoon joined channel
+19:45 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/3c/6e_174916.jpg
+19:47 Mokou: code_new: 劝退很鶸，但是不建议你用一级
+19:48 code_new: Mokou: 主要是怕闭幕雷击
+19:48 Mokou: 问题就是这个
+19:48 Mokou: Lv1我不确定能躲过去
+19:49 Mokou: 虽说那群后期爷爷带的都是反潜装
+19:49 code_new: ……
+19:49 code_new: 装备怎么配的
+19:49 code_new: 看论坛有个满桶配置……
+19:49 RivDo1 quit:Quit: Leaving.
+19:50 code_new: 18桶
+19:50 Mokou: 我是十个桶
+19:50 RivDo joined channel
+19:50 Mokou: 18桶打不赢
+19:50 code_new: 上道中和决战
+19:50 Mokou: 神通磨血175甲斩杀185甲，你算算
+19:50 cleamoon: 又是甲鱼？
+19:51 Mokou: E1和E2的甲都不难打
+19:51 cleamoon: 我看锁船是1235一套，4一套？
+19:52 Mokou: 123一套4一套
+19:52 Mokou: 我操这门神
+19:52 Mokou: 撸爷莉酱FCL红皮后期爷*23
+19:52 Mokou: 撸爷莉酱FCL红皮后期爷*2
+19:53 cleamoon: 5是都能用？
+19:53 Mokou: 是
+19:53 Mokou: 过去了……
+19:53 Mokou: 这门神太他妈可怕了
+19:53 Mokou: 还是单纵
+19:54 code_new: E3门神？
+19:54 Mokou: E3
+19:54 cleamoon: 看了一下奖励，也就E4甲的灰机还算有点用，不过打不过，继续咸鱼
+19:54 code_new: 不是复纵吗
+19:55 Mokou: 我刚才是单纵
+19:55 code_new: 好吧
+19:55 Mokou: 红皮后期爷的闭幕雷你想象一下
+19:55 Mokou: 水母姬好久不见
+19:55 Mokou: 水母姬金塔红塔tsu爷后期爷后期爷
+19:56 cleamoon: 这两天演习都遇到攻略队... 打不过...
+19:56 Mokou: 绫波跪了
+19:56 Mokou: 活动旗舰我不打演习
+19:57 cleamoon: orz
+19:57 Mokou: 期间*
+19:57 Mokou: 时雨跪了
+19:57 Mokou: 摩耶跪了
+19:57 code_new: E2一个桶3.5资源，S胜1.5倍
+19:57 code_new: A胜是不是1倍
+19:57 Mokou: A败
+19:57 Mokou: 不清楚
+19:58 Mokou: 91
+19:58 Mokou: 水母姬啊水母姬……
+19:58 Mokou: 现在的深海船没个170+护甲都不敢见人
+19:59 code_new: ……
+19:59 Flandre2 quit:Read error: Connection reset by peer
+20:00 code_new: 这次活动整一堆我没练的船让我打……
+20:00 code_new: 先捞点改造用的船把皋月三日月改满……
+20:00 Flandre2 joined channel
+20:00 cleamoon: orz
+20:01 Xilzzerts quit:Read error: Connection timed out
+20:02 Mokou: 出门劝退
+20:04 Flandre3 joined channel
+20:07 code_new: 活动时间两周，正好一天打一万资源_(:3
+20:08 Flandre2 quit:Ping timeout: 272 seconds
+20:14 Flandre3 quit:Read error: Connection reset by peer
+20:14 Flandre4 joined channel
+20:14 Mokou: 这次进Boss的状态还可以
+20:14 Mokou: 我看看能打成个什么样
+20:16 Mokou: T有利全队划水
+20:17 Mokou: 还好，1队三个中破
+20:17 Mokou: 夜战
+20:18 Mokou: 7/350
+20:24 RivDo quit:Quit: Leaving.
+20:24 Mokou: 绫波跪了
+20:27 Mokou: 二队已经死四个了
+20:27 Mokou: 一队接着死
+20:28 code_new: OTL
+20:28 Mokou: 你这是嘲讽么
+20:28 code_new: 嘲讽E3太强了
+20:29 iyzsong: 啊 啊 啊~
+20:29 Flandre joined channel
+20:29 Mokou: 总共六个大破
+20:29 code_new: 节哀
+20:29 RivDo joined channel
+20:29 Flandre4 quit:Read error: Connection reset by peer
+20:30 iyzsong: Flandre: 约约约~
+20:30 code_new: 感觉这次活动对新人极不友好
+20:30 Flandre1 joined channel
+20:30 Mokou: 这次活动对老人也没友好到哪去……
+20:31 Mokou: 四条新船两条要捞，还一捞就去E4E5
+20:31 code_new: 确实……
+20:31 Mokou: E4潜水姬，E5水雷战队夜战，你捞去吧
+20:31 code_new: 我皋月三日月僵尸丸都没练
+20:31 code_new: ……
+20:31 Mokou: 或者实在不行你走上路？
+20:32 code_new: 算了，我享受不了这个过程
+20:32 Mokou: 田中：反正上路也没多难，就是硬接CI脸扭罗盘而已（笑）
+20:34 Flandre quit:Ping timeout: 255 seconds
+20:34 code_new: 如果有船可捞的话还可以考虑
+20:34 Mokou: 捞船只有Boss点
+20:34 code_new: 感觉E2应该会有个捞船配置
+20:34 Mokou: E2中路配置其实就行
+20:34 Mokou: S率不算太敌
+20:34 Mokou: 低
+20:34 code_new: E1捞船消耗有点大
+20:35 code_new: 好吧
+20:35 code_new: 看今天我先试一下
+20:35 code_new: 估计打不了几场
+20:36 Mokou: 摩耶Lv86
+20:37 code_new: E3掉海风秋月瑞穂
+20:37 Mokou: E3不能S胜
+20:37 Mokou: 相信我，我到现在都没看出来S胜有什么可能
+20:37 code_new: ……凶残
+20:37 Mokou: 三次下来白天我就没打中过对面
+20:37 code_new: E2E3估计都得后期捞
+20:37 Mokou: 晚上？195甲表示在座的个位都是垃圾
+20:38 Mokou: 各位*
+20:38 Mokou: 摩耶中破
+20:38 Mokou: 哦对门神还得灭你几个
+20:39 Flandre2 joined channel
+20:39 code_new: ……
+20:40 Mokou: 开幕空袭还把妙高炸个小破
+20:40 Mokou: 支援直接6个miss
+20:40 Mokou: 开幕雷中破十六万钢
+20:40 Mokou: 你告诉我怎么S
+20:40 Flandre2 quit:Client Quit
+20:40 Mokou: 我甚至不知道这局能不能赢
+20:40 Mokou: 闭幕雷对面灭我三个
+20:41 code_new: ……
+20:41 Mokou: 一队大破一个了
+20:41 Mokou: 就是不打最下面那个后期爷
+20:41 Mokou: 白天就是要去打水母姬
+20:41 Mokou: 打掉就能赢，一炮就能打掉
+20:41 Mokou: 就是不打
+20:42 Flandre1 quit:Ping timeout: 244 seconds
+20:42 Mokou: 266/350
+20:44 RivDo quit:Quit: Leaving.
+20:52 code_new: 感觉这次活动的敌人智商都特别高……
+20:53 Mokou: 上次就这样了
+20:53 Mokou: 精准补刀，精准闪避
+20:54 code_new: 补刀简直神，还懂出战顺序
+20:54 Mokou: 35/350
+21:00 Stevearzh joined channel
+21:00 Stevearzh quit:Changing host
+21:00 Stevearzh joined channel
+21:07 Flandre joined channel
+21:08 Mokou: 金刚Lv93
+21:11 Stevearzh quit:Read error: Connection reset by peer
+21:12 Stevearzh joined channel
+21:12 Stevearzh quit:Changing host
+21:12 Stevearzh joined channel
+21:12 lh_cat quit:Read error: Connection reset by peer
+21:12 lh_cat joined channel
+21:13 code_new: 还有几次结束
+21:13 Mokou: 不知道，大概3或者4次
+21:13 code_new: 哦哦
+21:14 Mokou: 六闪支援公费旅游
+21:14 code_new: 感觉我可以少带点桶慢慢打 _(:3 毕竟还要捞船
+21:15 Mokou: E3的话桶带多带少都无所谓的
+21:15 Mokou: 反正白天根本打不死人，全靠二队夜战
+21:15 code_new: ……
+21:18 code_new: 悲剧……忘锁船，把三日月给皋月喂了
+21:18 Mokou: ……
+21:19 Mokou: poi中破了っぽい
+21:19 code_new: 中破无敌
+21:19 Mokou: 没关系，boss点开幕就该大破了
+21:19 Mokou: 那颗雷根本拦不住，点谁谁死
+21:19 code_new: ……
+21:20 Mokou: 别人家的水母
+21:20 code_new: 点到1队上还好
+21:20 Mokou: 开幕雷只能点二队
+21:20 code_new: 好吧
+21:21 Mokou: 开幕四个miss两个红色两位数
+21:21 Mokou: 妙高大破
+21:21 Mokou: 两个中破两个大破了
+21:22 code_new: 挺住
+21:22 Mokou: 挺不住
+21:22 Mokou: 对面还剩五个
+21:22 Mokou: 4vs5
+21:23 code_new: ……
+21:23 Mokou: 这红塔还他妈会CI
+21:23 code_new: 挺住拿A胜吧
+21:23 Mokou: A败
+21:23 Mokou: A败好办，然而我没瑞穗
+21:24 code_new: 瑞穗等打完再捞
+21:24 Mokou: 打完没法捞
+21:24 Mokou: 现在都没法S胜，到时候怎么打
+21:25 code_new: 1队可以上大船
+21:25 Mokou: 一队可以上大船，只是不能编成联合舰队
+21:25 code_new: ……
+21:25 Mokou: 不然我早上了
+21:26 Mokou: 我什么船都缺，就是不缺BB
+21:27 code_new: 我更喜欢CV
+21:27 Mokou: 我家CV等级最高的也就123
+21:27 code_new: Orz
+21:27 Mokou: 能上大船E3我就直接躺着过去了
+21:31 code_new: E3丙TP只有300啊_(:3
+21:31 Mokou: 是
+21:31 Mokou: 但是我的是八百_(:з」∠)_
+21:33 code_new: 好大的诱惑，好想打_(:з」∠)_
+21:34 code_new: 啊，速吸出了
+21:34 Mokou: OTL
+21:34 code_new: E1捞船结束
+21:34 Mokou: 欧洲人的掉落列表和我们是不一样的
+21:34 code_new: 我这是打掉多少油弹才掉的啊……
+21:35 Mokou: 我打掉多少油弹，连S胜都没见到几个
+21:35 code_new: 油弹花费大概每项一万五
+21:35 code_new: 还得捞一下三日月_(:з」∠)_
+21:36 Mokou: 等我这次回去看看
+21:36 code_new: 看什么
+21:36 Mokou: 资源消耗
+21:37 code_new: 哦哦
+21:37 Mokou: 门神T有利
+21:37 Mokou: 哈哈哈哈哈
+21:37 Mokou: 直接爆炸了
+21:38 code_new: ……
+21:38 Mokou: 进门之前二队一个中破一个小破
+21:38 Mokou: 我估计这次能吃个C败
+21:39 code_new: 快去洗脸
+21:40 Mokou: 开幕共计轰沉三，然而雪风爆炸了
+21:40 Mokou: 八万钢爆炸了
+21:40 Mokou: 电酱中破了
+21:40 Mokou: 时雨大破了
+21:40 code_new: ……
+21:41 Mokou: 140/350 夜战
+21:41 Mokou: 求水母姬不打重巡
+21:41 Mokou: 打雪风啊！打雪风啊！
+21:41 Mokou: 绫波……
+21:41 Mokou: 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+21:41 Mokou: 终于S胜一次
+21:41 code_new: Orz
+21:42 wlemuel joined channel
+21:42 Mokou: S胜是131 TP
+21:43 code_new: 带了15个桶2个大发？
+21:43 Mokou: 14桶1大法
+21:43 Mokou: 大发
+21:43 code_new: 哦哦
+21:44 Mokou: 打了13K弹药10K油
+21:44 code_new: wiki上的计算有误啊
+21:44 Flandre1 joined channel
+21:45 code_new: 然而E3已经快打完了
+21:45 code_new: 我E2还没动
+21:45 Mokou: 还差远呢
+21:45 Mokou: 另外计算每次
+21:45 Mokou: 没错
+21:45 Mokou: geordi: << 3.5 * (14.0 - 1.0) + 5.5 + 40.0
+21:45 geordi: 91
+21:45 Flandre quit:Read error: Connection reset by peer
+21:45 Mokou: geordi: << 91.0 * 1.44
+21:45 geordi: 131.04
+21:46 Flandre1 quit:Read error: Connection reset by peer
+21:46 Flandre2 joined channel
+21:46 code_new: 14-1？
+21:46 Mokou: 我估计是大破了一个桶
+21:46 Mokou: 不确定
+21:46 code_new: 好吧
+21:46 code_new: ……这有点凶残啊
+21:46 Mokou: 不凶残
+21:46 code_new: 大破了的桶就不算数了
+21:47 Mokou: 哦，你说这个
+21:47 Mokou: 田中妈毕竟飞起来了
+21:47 code_new: ……
+21:48 Mokou: 另外现在E5丙的难度比甲高
+21:48 code_new: 什么鬼……
+21:48 Mokou: 新的鱼雷艇
+21:48 Mokou: 官推说副炮有特效，然而带了以后还是各种miss
+21:49 Mokou: 然而鱼雷艇的纸面数据低
+21:49 code_new: wiki还没有E5的敌舰编成
+21:49 Mokou: 所以田中一看，丙级简单点吧
+21:49 code_new: ……
+21:49 Mokou: 丙级四个鱼雷艇，甲级随机出现两个鱼雷艇
+21:49 Mokou: 这差不多是四个防空姬摆在底下
+21:49 Mokou: 效果差不多
+21:50 Flandre3 joined channel
+21:50 code_new: 所以说现在鱼雷艇还没有对策？
+21:51 Mokou: 现在似乎只发现用飞机比较好炸
+21:51 code_new: 哈里发当时怎么炸的
+21:51 Mokou: 哈里发不打丙
+21:51 code_new: 舰攻还是舰爆
+21:52 code_new: 甲级不是随机出现两个吗
+21:52 Mokou: 随机出现的意思是随机可能不出现
+21:52 code_new: Orz
+21:53 Flandre2 quit:Ping timeout: 240 seconds
+21:57 Mokou: POI中破
+21:58 Mokou: 吹雪中破
+21:58 Mokou: 傻逼门神
+21:58 Mokou: 吹雪大破
+21:58 Mokou: 傻逼门神
+21:58 code_new: ……
+21:59 Mokou: 哈哈哈对面变成两个金塔了
+22:00 Mokou: 雪风中破
+22:00 Mokou: T不利
+22:00 Mokou: 这次赢不了了
+22:00 Mokou: 时雨中破
+22:01 code_new: 话说门神大破还继续进击吗
+22:01 Mokou: 退避
+22:01 code_new: 哦哦
+22:01 iyzsong:  一般回 'thank you' 都说什么啊，我现在都回个 'sure' ...
+22:02 Mokou: sure什么情况 ……
+22:02 code_new: you're welcome
+22:05 iyzsong: 好吧还是感觉 no problem 更好一点
+22:05 Mokou: http://tieba.baidu.com/p/4169072146 你感受一下
+22:06 code_new: 惨不忍睹……
+22:07 code_new: 这练度也不低啊……
+22:08 Mokou: E3Boss点的命中极其诡异
+22:08 cleamoon: iyzsong, 回 let's gaoji
+22:08 Mokou: 我一直怀疑是角川的猴子又传反参数了
+22:08 iyzsong: 2333
+22:09 code_new: 又
+22:09 Mokou: 98级的利根打对面这么多盘下来没打中机炮
+22:09 Mokou: 对面打我一打一个准
+22:09 Mokou: 几炮*
+22:09 code_new: ……
+22:09 Flandre4 joined channel
+22:09 Flandre3 quit:Read error: Connection reset by peer
+22:10 code_new: 我方命中低倒可以理解，联合舰队本来命中就低
+22:10 code_new: 但是敌方命中这么高是什么鬼……
+22:10 Mokou: 我到现在都没见塔酱miss过
+22:10 Mokou: 水母姬就不说了，点谁谁大破
+22:10 code_new: 简直雷爷
+22:11 Mokou: 雷爷是个垃圾
+22:11 Mokou: 雷爷只有一发开幕雷
+22:11 code_new: 虽然我没见过雷爷
+22:11 Mokou: 水母姬能打十个
+22:11 cleamoon: 大概是田中的母上大人喜欢上星际旅行了
+22:11 code_new: ……
+22:11 cleamoon: 捞船丙都能捞吗
+22:11 Mokou: 都能
+22:11 Flandre joined channel
+22:11 Mokou: 除了E5都别甲了
+22:11 Mokou: 不值
+22:11 cleamoon: E5有什么
+22:12 Mokou: 当然你想拿Fw109T可以打E4甲
+22:12 Mokou: E5有萩风
+22:12 Mokou: 甲等再送你两个勋章和一个甲章
+22:12 Mokou: 没了
+22:12 Mokou: 田中我去你妈的
+22:12 cleamoon: 两个勋章不错，但是我不会被恶魔魅惑的
+22:12 code_new: E5甲章应该需要全甲吧
+22:12 Mokou: E5甲就有甲章
+22:12 Mokou: 一直都是这样
+22:12 code_new: 好吧
+22:14 Flandre4 quit:Ping timeout: 250 seconds
+22:15 cleamoon: 田中教你怎么用五张图坑你八张图的资源
+22:16 Mokou: 夏活被骂完了秋活老老实实搞个“相当稳”的作战出来安抚一下多好
+22:16 Mokou: 结果非要玩什么新系统
+22:17 Mokou: 这回爽了，挨的骂不比夏活少
+22:18 cleamoon: 不早就说了是深海方面相当稳吗
+22:18 cleamoon: 你看这命中率，稳不稳
+22:19 Mokou: 深海稳得都开始做日常补给船了，天天吊打我
+22:19 cleamoon: 233333
+22:19 Mokou: E4干脆上了一堆潜艇开始做南西
+22:20 cleamoon: 233333
+22:20 code_new: 23333
+22:20 cleamoon: 其实田中是真 深海提督，他的练度是在不断上升的
+22:20 Mokou: 有人婚了鹿岛了……
+22:21 code_new: 这才一天……
+22:21 code_new: 真肝帝
+22:21 cleamoon: orz
+22:22 Mokou: 这人头皮都该没了
+22:22 cleamoon: 不过鹿岛确实很对我胃口
+22:22 Flandre quit:Read error: Connection reset by peer
+22:22 Flandre joined channel
+22:23 code_new: 看鹿岛立绘还以为是外国船
+22:23 cleamoon: +
+22:23 Mokou: 是友利奈绪
+22:23 cleamoon: 不过真 外国船确定不是深海叛徒吗
+22:24 code_new: 据说声优也是友利奈绪的
+22:24 Mokou: 意大利是
+22:25 Mokou: 利托里奥改名意大利的时候墨索里尼已经跪了
+22:26 Mokou: 鹿岛的声优似乎还没公布？
+22:27 code_new: 不清楚，听说的
+22:28 Mokou: 不过大法配的角色挺多的
+22:29 Flandre1 joined channel
+22:29 Mokou: 长门陆奥岛风球磨多摩木曾还有川内级都是她的
+22:29 Mokou: 门神完全胜利
+22:29 code_new: 我还以为是东山大法
+22:29 Mokou: 佐仓大法
+22:30 code_new: 佐仓大法九条船
+22:30 code_new: 东山大法十条
+22:31 Mokou: (´・ω・｀)你们又要引发战争吗
+22:31 Mokou: 开幕结束对面还剩三个
+22:31 Mokou: 然而摩耶中破绫波大破
+22:31 Flandre2 joined channel
+22:31 lh_mouse: 买的东西终于到了。
+22:31 Mokou: 摩耶也大破了
+22:31 Mokou: 壕
+22:32 code_new: 买的东西退了
+22:32 Mokou: 买的东西刚刚发货
+22:32 cleamoon: 没买东西
+22:32 lh_mouse: 57 块钱，上面写的擦银布。我以为是一张，结果送来是三张。
+22:32 Mokou: 4vs3
+22:32 Flandre quit:Ping timeout: 264 seconds
+22:32 Mokou: 壕TL
+22:32 code_new: 壕rz
+22:32 Mokou: 妙高下跪
+22:33 Mokou: A败
+22:33 code_new: 稳了
+22:33 code_new: ……
+22:33 Mokou: E3击破
+22:33 Mokou: 那智
+22:34 Mokou: 瑞穗估计还得等下次活动
+22:34 cleamoon: 卧槽，E4这什么诡异地图
+22:34 Mokou: 鹿岛的声优我感觉不像佐仓……
+22:34 code_new: 资源输送的图太恶心了
+22:34 Flandre1 quit:Ping timeout: 255 seconds
+22:34 Mokou: 四式水听
+22:34 cleamoon: 卧槽，新航母是字迹捞的？
+22:34 Mokou: E4捞
+22:34 Mokou: 四个螺丝
+22:35 Mokou: 勋章
+22:35 cleamoon: 日田中desu
+22:35 code_new: 这次活动只送两条船
+22:35 cleamoon: 岚也是捞的？
+22:35 code_new: 剩下两条都得捞
+22:35 code_new: 捞
+22:35 cleamoon: 日田中飞母
+22:36 code_new: 岚E5捞
+22:37 cleamoon: 以后干脆都不要那么多图了，就一张，所有东西都这里捞，运油联合舰队全程夜战带雷爷
+22:38 code_new: 就不能送几个强力的驱逐炮吗_(:з」∠)_
+22:38 Flandre3 joined channel
+22:39 code_new: 这次奖励的装备像屎一样
+22:39 hoxily quit:Quit: Leaving
+22:39 cleamoon: 带火力的飞机你怕不怕
+22:40 Mokou: 临阵婚武藏
+22:40 code_new: 才加两点
+22:40 Mokou: Lv100武藏GET
+22:40 cleamoon: orz
+22:40 code_new: Orz
+22:40 code_new: 至今还没婚舰
+22:41 cleamoon: 这次有明石吗
+22:41 Flandre4 joined channel
+22:41 Flandre2 quit:Read error: Connection reset by peer
+22:41 code_new: 有
+22:41 cleamoon: 哪张图
+22:41 code_new: E3可捞
+22:44 code_new: 想要江风和海风啊_(:з」∠)_
+22:44 Flandre3 quit:Ping timeout: 276 seconds
+22:44 code_new: 江风明明在E1的三个点都可捞，但是就是见不到
+22:48 code_new: 话说这次有照月可捞吗
+22:49 Flandre4 quit:Read error: Connection reset by peer
+22:49 Flandre4 joined channel
+22:51 Mokou: 不过鹿岛确实不错
+22:51 Mokou: 照月怎么可能……
+22:51 Mokou: 锁上锁上
+22:51 code_new: 明明速吸就可能了
+22:51 Mokou: 速吸是关底么
+22:52 code_new: ……
+22:52 code_new: 李白能捞吗
+22:52 cleamoon: 李白？
+22:52 Mokou: 李白？
+22:52 code_new: libeccio
+22:52 code_new: 好像这么拼
+22:52 Mokou: 不清楚
+22:52 cleamoon: 那我估计就是E3E4捞到死了
+22:52 Mokou: 另外这个词的意思是西南风
+22:53 code_new: 好吧
+22:53 cleamoon: 南西风
+22:54 Mokou: E4出门劝退
+22:55 pocmon quit:Ping timeout: 255 seconds
+22:55 code_new: 机动？水打？
+22:55 Mokou: 水打
+22:55 code_new: 单横潜艇吗_(:з」∠)_
+22:55 Mokou: 对
+22:56 code_new: 田中飞妈
+22:57 Mokou: 明天再打吧……
+22:57 Mokou: 睡觉，诸君武运
+22:57 Mokou quit:Quit: 睡觉
+23:01 Flandre joined channel
+23:03 Flandre quit:Read error: Connection reset by peer
+23:03 Flandre1 joined channel
+23:03 pocmon joined channel
+23:03 Flandre4 quit:Ping timeout: 240 seconds
+23:07 pocmon quit:Client Quit
+23:15 Flandre2 joined channel
+23:16 Flandre3 joined channel
+23:16 Flandre1 quit:Read error: Connection reset by peer
+23:17 Flandre2 quit:Read error: Connection reset by peer
+23:47 wlemuel quit:Ping timeout: 255 seconds
+23:50 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151110142142]
+23:52 molikto quit:Remote host closed the connection
+23:59 Flandre4 joined channel
+23:59 Flandre3 quit:Read error: Connection reset by peer

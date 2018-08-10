@@ -1,0 +1,268 @@
+00:00:lh_mouse: geordi, <<TYPE<typename make_unsigned<E>::type>; enum E : long long { };
+00:00:geordi: unsigned long
+00:06:acgtyrant quit:Ping timeout: 276 seconds
+00:06:lh_mouse: geordi, <<TYPE<X>; enum E { X = 1 };
+00:06:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and '<unresolved overloaded function type>')
+00:06:lh_mouse: geordi, <<TYPE(X); enum E { X = 1 };
+00:06:geordi: rvalue E
+00:06:lh_mouse: geordi, <<TYPE(X); enum { X = 1 };
+00:06:geordi: rvalue ._164
+00:21:MisakaMikoto quit:Ping timeout: 260 seconds
+00:23:MisakaMikoto joined channel
+00:37:MisakaMikoto quit:
+00:56:code_new quit:Remote host closed the connection
+01:17:hoxily quit:Ping timeout: 260 seconds
+01:26:hoxily joined channel
+01:36:hoxily quit:Ping timeout: 264 seconds
+01:50:cleamoon joined channel
+02:38:lh_mouse quit:Quit: night
+08:48:gansteed joined channel
+08:59:sismvg joined channel
+09:04:gansteed quit:Quit: Leaving
+09:13:acgtyrant joined channel
+09:29:iyzsong joined channel
+09:43:lh_mouse joined channel
+09:54:whatofor joined channel
+09:55:lh_mouse quit:Read error: Connection reset by peer
+09:57:lh_mouse joined channel
+09:58:wsyh: 还是拿数学作死算了
+10:00:lh_mouse: acgtyrant, 揉
+10:02:iyzsong: 0.0
+10:02:lh_mouse: iyzsong, 揉
+10:03:iyzsong: lh_mouse: 捏
+10:03:lh_mouse: iyzsong, 揉
+10:03:iyzsong: - -b
+10:11:hoxily|droid joined channel
+10:14:acgtyrant: lh_mouse, 我拒绝，以后再揉就Ｂ
+10:16:lh_mouse: B = ?
+10:24:acgtyrant: Block
+10:28:lh_mouse: 0 0
+10:29:lh_mouse: 欺负人！
+10:33:whatofor quit:Read error: Connection reset by peer
+10:33:whatofor joined channel
+10:36:sismvg: 我还太年轻了
+10:37:sismvg: 看到机器学习的招聘要求。。
+10:42:lh_mouse quit:Read error: Connection reset by peer
+10:53:lh_mouse joined channel
+10:56:endle joined channel
+10:59:sismvg_ joined channel
+11:00:sismvg quit:Ping timeout: 255 seconds
+11:04:Guest13416 joined channel
+11:05:Guest13416 quit:Client Quit
+11:17:wsyh: 会死人的课表...
+11:20:Sakairuka joined channel
+11:25:finalbos joined channel
+11:30:acgtyrant quit:Remote host closed the connection
+11:45:FrankHB quit:Ping timeout: 255 seconds
+11:47:Sakairuka left channel:
+11:48:FrankHB joined channel
+11:48:ZedFire joined channel
+11:56:finalbos quit:Ping timeout: 264 seconds
+12:18:lh_mouse: geordi, <<string(nullptr)
+12:18:geordi: terminate called after throwing an instance of 'logic_error' [+ 2 discarded lines]
+12:18:lh_mouse: geordi, { try { string s(nullptr); } catch(logic_error &e){ cout <<e.what(); } }
+12:18:geordi: basic_string::_S_construct null not valid
+12:19:finalbos joined channel
+12:35:finalbos quit:Read error: Connection reset by peer
+12:41:acgtyrant joined channel
+12:53:Xilzzerts joined channel
+12:53:Xilzzerts: 微软正在与沙盒游戏Minecraft制作方Mojang商讨收购事宜，作价20亿美金
+12:55:iyzsong: =o=
+12:57:lh_mouse: iyzsong, 揉
+13:03:sismvg: 跪
+13:08:ZedFire2 joined channel
+13:09:ZedFire quit:Ping timeout: 260 seconds
+13:11:finalbos joined channel
+13:15:finalbos left channel:
+13:16:varna joined channel
+13:16:varna: 药娘都哪去了
+13:47:hoxily|droid joined channel
+13:55:varna_ joined channel
+13:55:varna quit:Disconnected by services
+13:57:sismvg: wtf
+13:57:sismvg: 看到一大推招聘的，全部要求：熟悉MFC
+14:00:varna_ quit:Ping timeout: 264 seconds
+14:12:wsyh: 苹果又抽风了...
+14:12:wsyh: 难不成现在苹果开始抄袭三星了...
+14:17:varna joined channel
+14:17:varna: 路由崩溃了
+14:17:varna: 然后这些伙计就坐着发呆……
+14:20:sismvg: 假设决策树无法决策一个测试样例，那么应该把这个样例从测试集合中去掉
+14:20:sismvg: 还是算决策树出错呢？
+14:21:sismvg: varna:
+14:21:varna: 无法决策？
+14:22:varna: 形式化地说一下
+14:22:sismvg: 就是昨天的问题
+14:23:varna: 昨天只是你划分集合出错不是
+14:23:sismvg: 比如我有一个属性有A，B，C三个值，但是构建树的时候由于连续值离散化的副作用
+14:23:sismvg: 所以只有B，C两个值找到了
+14:23:varna: A值没有了造成什么
+14:24:sismvg: 一个训练样例有A，还有一个连续值
+14:24:sismvg: 然后再这一层找不到A这个值
+14:24:varna: 这话说的
+14:24:varna: 这么说吧
+14:24:varna: 我来提问
+14:24:varna: 首先这个属性的值域是什么
+14:24:sismvg: A，B，C
+14:25:varna: 那么为什么要离散化
+14:25:varna: 值域本身不是离散的么
+14:25:sismvg: 。
+14:25:sismvg: 让我思考一会
+14:26:varna: 值域不是测试用例中出现的取值集合
+14:26:wsyh: 抽风的水果连电池都不谈
+14:26:varna: 就是字面意义上的值域
+14:27:whocares_2 quit:Remote host closed the connection
+14:27:sismvg: 要是训练样例里没有出现这个值怎么弄呢
+14:27:varna: 你的阈值点不是针对当前的集合算出来的么
+14:28:varna: 如果阈值点决定一侧不存在，那就是不存在
+14:28:varna: 根本不可能对一个实数区间算阈值点啊，无限不可数的东西做不到
+14:29:* varna 网络不利，已经突入猫甩战
+14:33:sismvg: http://tieba.baidu.com/p/3286481487
+14:33:sismvg: 这是替身攻击！
+14:34:varna: @空吊猫太郎
+14:35:whocares_2 joined channel
+14:40:cleamoon: @夜神月
+15:15:endle quit:Ping timeout: 276 seconds
+15:18:endle joined channel
+15:21:sismvg: varna:那么假设训练样例里某个属性有2个值，但是测试样例里该属性有3个值怎么弄
+15:22:varna: 连续值的阈值点没问题，离散值训练覆盖不上是训练集失格
+15:24:wsyh quit:Ping timeout: 245 seconds
+15:25:sismvg: 给连续值分阈值点的时候也要保证划分出来的训练集要合格
+15:25:sismvg: soga
+15:26:sismvg: 但是怎么分明显是经验问题啊。似乎难以实现
+15:27:varna: 如果你有个看起来还可以的数据集就十折试试
+15:28:varna: 经验上我的数据集划分是训练：测试是2:1（随机）或者9:1（十折）
+15:31:sismvg: 只有14个样例
+15:31:sismvg: 我要google，我要vpn
+15:31:sismvg: tovpn挂了，15RMB废了
+15:33:sismvg: http://www.ithome.com/html/out/102667.htm
+16:04:sismvg: 刚刚看见两只公狗在。。
+16:06:varna: 噗
+16:06:varna: 爆了他们
+16:08:sismvg: master kamiu!
+16:34:sismvg: http://baike.baidu.com/view/1146807.htm?fr=aladdin
+16:34:sismvg: such terrbile
+16:40:cleamoon: 2333
+16:43:varna: 秋活据采访说是小型活动
+16:43:varna: 也就是说我可能屯几百桶和半户愚吕资源就可以了？
+16:44:sismvg: varna:你有写过决策树吗
+16:44:sismvg: 能给我看一下代码吗
+16:44:varna: 手头的代码只剩一个fuzzy id3了，还是perl的
+16:44:sismvg: 只要不是机器语言我都能看懂。。
+16:45:sismvg: 求
+16:45:ZedFire joined channel
+16:45:varna: https://pastebin.mozilla.org/6416993
+16:46:sismvg: 撸
+16:48:ZedFire2 quit:Ping timeout: 252 seconds
+16:51:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=15270df4b78f8c54e3d3c5270a282dee/727965a4462309f72a246608710e0cf3d7cad611.jpg
+16:52:sismvg: shift是嘛意思
+16:52:varna: 队列出队，缺省参数是@_
+16:52:varna: perldoc -f shift
+17:04:code_new joined channel
+17:05:varna: code_new: 爆
+17:06:code_new: varna, 闪
+17:07:varna: code_new: 中！
+17:08:code_new: varna, 回光反照
+17:09:code_new: s/反/返
+17:09:varna: 我尾行你六秒反正你就萎了
+17:09:code_new: 我喷了鬼父研发的香水
+17:10:code_new: 一次可以射 10回
+17:10:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=7e8320b4d739b6004dce0fbfd9513526/2324cf82b9014a909d4e65eaab773912b31bee2c.jpg
+17:11:code_new: 这都是在肝舰娘吗
+17:12:varna: 有个在演习的
+17:13:varna: 看看我自己的数据……
+17:14:varna: 出击4409/4524（97%胜），演习421/475（89%胜），远征1814/1838（99%成功）
+17:14:varna: 所谓肝不补脸玄不救非说的就是我这种黑鬼
+17:15:Xilzzerts: 国家明确认定的邪教组织共18个：小学生兄弟会、目隐团、巨人厨、索尼大法、东方大法、V+厨、东山文化、舰娘提督会、时臣利益保护协会、LL大法、C语言研究会、金坷垃护卫队、蓝猫神教、德意志第三帝国元首亲卫队、梁逸峰神教、兄贵哲♂学研究会、FFF异端审判会、德国骨科
+17:16:varna: 数了数，我中了九枪
+17:16:code_new: 5枪
+17:17:* varna 仍然保持提督上任每月千余次出击的平均水平
+17:28:lh_mouse: geordi, << weak_ptr<void>() == weak_ptr<int>();
+17:28:geordi: error: no match for 'operator<<' (operand types are 'ostream {aka ostream}' and 'weak_ptr<void>')
+17:28:lh_mouse: geordi, << (weak_ptr<void>() == weak_ptr<int>());
+17:28:geordi: error: no match for 'operator==' (operand types are 'weak_ptr<void>' and 'weak_ptr<int>')
+17:28:lh_mouse: geordi, replace void with int
+17:28:geordi: error: no match for 'operator==' (operand types are 'weak_ptr<int>' and 'weak_ptr<int>')
+17:33:Plough joined channel
+17:34:lh_mouse: Plough, 揉
+17:35:lh_mouse: 实际上我就用 shift 表示 pop_front
+17:35:lh_mouse: push = push_back  pop = pop_back  unshift = push_front  \shift = pop_front
+17:35:varna: Plough: 爆
+17:35:sismvg_ joined channel
+17:36:varna: lh_mouse: 正好这四个是perl的
+17:38:sismvg quit:Ping timeout: 252 seconds
+17:42:Plough: 等雪风酱修好就去一趟5-3
+17:44:varna: 第一批改造案结束了
+17:48:varna quit:Ping timeout: 252 seconds
+17:49:ZedFire quit:Ping timeout: 268 seconds
+17:49:Plough: 出门大傻就吃了两发CI……
+17:50:blackskygg joined channel
+17:51:Plough: 估计进不去
+17:51:Plough: 雾岛中破
+17:53:Plough: 第二点难得三只莉酱都没CI
+17:53:Plough: 补给船点
+17:55:Plough: 人生苦短
+17:55:Plough: 进去了……
+17:55:blackskygg quit:Client Quit
+17:56:Plough: 旗舰剩13点血
+17:56:Plough: 看看能不能灭掉
+17:57:Plough: 没斩掉
+18:01:Plough quit:Ping timeout: 246 seconds
+18:11:iyzsong quit:Quit: WeeChat 1.0
+18:23:PloughPhone joined channel
+18:24:Plough joined channel
+18:30:zzzzzzzz joined channel
+18:39:Plough: 塔姐一发大破雾岛
+18:39:Plough: 跟塔姐比莉酱算个鸟……
+18:48:Xilzzerts quit:Quit: Leaving
+19:22:Plough quit:Ping timeout: 246 seconds
+20:32:sismvg quit:Quit: ChatZilla 0.9.90.1 [Firefox 28.0/20140314220517]
+20:39:Petrus07 joined channel
+20:44:code_new quit:Quit: Leaving
+20:46:condy joined channel
+20:55:condy: geordi, << sizeof(A); struct A{char i; int j;} __attribute__((packed));
+20:55:geordi: 5
+20:55:condy: geordi, erase __attribute__((packed))
+20:55:geordi: 8
+21:13:Plough_ joined channel
+21:16:MisakaMikoto joined channel
+21:17:Plough_ quit:Ping timeout: 246 seconds
+21:32:hoxily joined channel
+21:33:MoeIcenowy joined channel
+21:33:MoeIcenowy quit:Client Quit
+21:37:lhanjian joined channel
+21:45:endle quit:Quit: Leaving
+21:46:lhanjian quit:Ping timeout: 264 seconds
+21:49:lhanjian joined channel
+22:19:PloughPhone quit:Ping timeout: 264 seconds
+22:27:MoeIcenowy joined channel
+22:29:MoeIcenowy quit:Client Quit
+22:35:hoxily quit:Ping timeout: 240 seconds
+22:41:code_new joined channel
+22:42:lhanjian: code_new, do
+22:43:code_new: lhanjian, 好久不见
+22:43:code_new: lhanjian, 揉揉揉
+22:43:lhanjian: code_new, nienienie
+22:43:lhanjian: 买了个linode VPS？
+22:44:code_new: 挂了个vpn..
+22:44:lhanjian: soga……
+22:44:code_new: 舰娘刷了无数遍.. 表示根本进不去
+22:45:lhanjian: 你得买日本节点的VPS才行吧……
+22:45:code_new: 一直是爆满= =挤不进去
+22:46:lhanjian: hohoho
+22:47:code_new: 还是去学日语吧= =
+22:47:hoxily joined channel
+22:47:gansteed joined channel
+23:17:Petrus07 quit:Quit: Leaving.
+23:18:acgtyrant quit:Remote host closed the connection
+23:19:acgtyrant joined channel
+23:20:whatofor quit:Read error: Connection reset by peer
+23:27:ZedFire joined channel
+23:34:cleamoon quit:Ping timeout: 264 seconds
+23:42:lhanjian quit:Quit: 风光冉冉东西陌
+23:46:gansteed quit:Quit: Leaving
+23:46:acgtyrant quit:Remote host closed the connection
+23:47:gansteed joined channel
+23:49:gansteed quit:Client Quit
+23:51:gansteed joined channel
+23:53:gansteed quit:Client Quit

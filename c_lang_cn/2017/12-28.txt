@@ -1,0 +1,132 @@
+00:14 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(4, 3, "lo"); }
+00:14 geordi: 3
+00:14 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(4, 3, "lo", 2); }
+00:14 geordi: 3
+00:14 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(4, 2, "lo"); }
+00:14 geordi: 3
+00:14 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(4, 2, "lo", 2); }
+00:14 geordi: 3
+00:14 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 3, "lo", 2); }
+00:14 geordi: 0
+00:15 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 3, "lo"); }
+00:15 geordi: 0
+00:15 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 3, "lok"); }
+00:15 geordi: -1
+00:15 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 3, "lok", 3); }
+00:15 geordi: -1
+00:15 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 3, "lok", 2); }
+00:15 geordi: 0
+00:15 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, 2, "lok"); }
+00:15 geordi: -1
+00:16 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, "lok", 2); }
+00:16 geordi: error: no matching function for call to 'string::compare(int, const char [4], int)'
+00:16 lh_mouse: geordi, { string s = "hello"; cout <<s.compare(3, string::npos, "lok", 2); }
+00:16 geordi: 0
+00:18 c_ joined channel
+00:19 c_ is now known as Guest10035
+00:44 lh_mouse quit:Ping timeout: 248 seconds
+01:05 nooooone joined channel
+02:17 Guest10035 quit:Quit: Guest10035
+02:36 nooooone quit:Remote host closed the connection
+02:36 nooooone joined channel
+02:40 nooooone quit:Ping timeout: 240 seconds
+03:12 cleamoon_ quit:Read error: Connection reset by peer
+03:13 Stang quit:Ping timeout: 252 seconds
+03:13 Meow-J_ quit:Ping timeout: 250 seconds
+03:14 Youmu quit:Ping timeout: 240 seconds
+03:14 Aldrich quit:Ping timeout: 250 seconds
+03:14 lhanjian quit:Ping timeout: 250 seconds
+03:31 cleamoon_ joined channel
+03:43 Aldrich joined channel
+03:51 Meow-J_ joined channel
+03:59 lhanjian joined channel
+03:59 Youmu joined channel
+04:00 Youmu is now known as Guest43103
+05:29 Stang joined channel
+08:06 Aldrich: lhanjian: 话说你那个自定义个人造型是怎么做到的
+08:11 zb111 joined channel
+08:19 \u: Aldrich: 你們都多少GB內存
+08:20 \u: 我不知道jacobdufault怎麼算的。如果他用很多線程的話，index過程會比結束階段多佔用很多
+08:55 lh_mouse joined channel
+09:15 YangMame joined channel
+09:53 lhanjian: Aldrich: 三角键啊
+09:54 ininke joined channel
+10:02 Aldrich: lhanjian: 没用，你说的是PSN的个人造型么
+10:10 Guest43103 is now known as Youmu
+10:11 Youmu is now known as Guest83121
+10:19 Guest83121 quit:Changing host
+10:19 Guest83121 joined channel
+10:19 Guest83121 quit:Changing host
+10:19 Guest83121 joined channel
+10:19 Guest83121 is now known as Mikan
+10:29 lh_mouse: geordi, namespace foo { } namespace = foo;
+10:29 geordi: error: expected identifier before '=' token
+10:30 lh_mouse: geordi, namespace foo { } namespace bar = foo; namespace bar { }
+10:30 geordi: error: namespace alias 'bar' not allowed here, assuming 'foo'
+10:30 lh_mouse: geordi, namespace foo { } namespace bar { } namespace bar = foo;
+10:30 geordi: error: 'namespace bar = foo;' conflicts with a previous declaration
+11:04 ininke quit:Read error: Connection reset by peer
+11:04 ininke joined channel
+11:11 Mikan is now known as Youmu
+11:14 bzzzt quit:Remote host closed the connection
+11:14 bzzzt joined channel
+12:33 ininkf joined channel
+12:36 ininke quit:Ping timeout: 272 seconds
+12:39 cleamoon_ quit:Quit: Connection closed for inactivity
+13:32 Amao_Three joined channel
+13:33 Amao_Three quit:Client Quit
+13:54 cleamoon_ joined channel
+15:08 YangMame quit:Remote host closed the connection
+15:08 cLeaMooN joined channel
+15:29 Stang quit:Quit: Connection closed for inactivity
+15:35 Aldrich: w
+15:35 Aldrich: 打错
+15:42 cLeaMooN quit:Remote host closed the connection
+16:11 lhanjian: cleamoon_: www
+16:14 lhanjian: Aldrich: www
+16:17 cleamoon_: lhanjian: 爆
+16:28 Stang joined channel
+16:54 ininkf quit:
+16:55 StardustX joined channel
+16:55 \s quit:Read error: Connection reset by peer
+17:02 \s joined channel
+17:02 \s quit:Changing host
+17:02 \s joined channel
+17:20 lhanjian: Youmu: LP
+17:21 lhanjian: cleamoon_: 快买ps4啊
+17:39 whocares_2_ joined channel
+17:40 whocares_2 quit:Ping timeout: 272 seconds
+17:43 zb111 quit:Ping timeout: 240 seconds
+17:57 Youmu: lhanjian: qwq
+18:03 lh_mouse: Youmu, 爆。
+19:45 iyzsong joined channel
+19:59 bzzzt quit:Ping timeout: 264 seconds
+20:00 bzzzt joined channel
+20:11 tiimmm joined channel
+21:04 CyrusYzGTt quit:Ping timeout: 265 seconds
+21:09 Stang quit:Quit: Connection closed for inactivity
+21:21 CyrusYzGTt joined channel
+21:24 Dove joined channel
+21:30 Dove: 啊，羊驼子不来。
+21:31 Dove: 算啦，睡觉去啦。
+21:32 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:32 c_ joined channel
+21:32 c_ is now known as Guest50092
+21:52 Pascal_fan joined channel
+22:05 Guest50092 quit:Quit: Guest50092
+22:14 Stevearzh quit:Ping timeout: 240 seconds
+22:17 Stevearzh joined channel
+22:58 c_ joined channel
+22:59 c_ is now known as Guest26975
+23:02 lh_mouse: geordi, __attribute__((__noinline__))  template<typename T> void foo(); 
+23:02 geordi: error: expected unqualified-id before 'template'
+23:02 bzzzt quit:Ping timeout: 240 seconds
+23:04 bzzzt joined channel
+23:22 iyzsong quit:Ping timeout: 265 seconds
+23:30 Stang_ joined channel
+23:30 Stang_ quit:Client Quit
+23:33 StardustX quit:Quit: Connection closed for inactivity
+23:44 Guest26975 quit:Quit: Guest26975
+23:46 whocares_2 joined channel
+23:46 whocares_2_ quit:Ping timeout: 240 seconds
+23:56 whocares_2 quit:Ping timeout: 248 seconds

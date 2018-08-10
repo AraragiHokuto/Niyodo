@@ -1,0 +1,950 @@
+00:01:Petrus07 quit:Quit: Leaving.
+00:18:yzld2002 quit:Quit: yzld2002
+00:27:OwenJia quit:Ping timeout: 256 seconds
+00:31:code_new quit:Quit: Leaving
+01:18:erhandsome quit:Ping timeout: 264 seconds
+01:31:boosure quit:Quit: Get your hand off of it
+02:12:lh_mouse quit:Quit: zzz
+04:18:whocares_2 quit:Remote host closed the connection
+04:21:whocares_2 joined channel
+04:24:boosure joined channel
+04:38:whocares_2 quit:Ping timeout: 260 seconds
+04:38:whocares_2 joined channel
+05:07:izmntuk quit:Quit: buh bye!
+06:16:whocares_2 quit:Remote host closed the connection
+07:05:cleamoon quit:Ping timeout: 272 seconds
+07:41:boosure quit:Ping timeout: 264 seconds
+08:11:boosure joined channel
+08:15:boosure quit:Ping timeout: 245 seconds
+08:19:boosure joined channel
+09:08:cleamoon joined channel
+09:16:hoxily|rest joined channel
+09:50:whatofor joined channel
+09:56:OwenJia joined channel
+09:57:lh_mouse joined channel
+09:59:Xilzzerts joined channel
+10:01:lh_mouse: geordi, { auto l = []{ cout <<"meow"; }; cout <<sizeof(l), TYPE(l); }
+10:01:geordi: 1, lvalue main::{lambda()#1}
+10:02:lh_mouse: geordi, { auto l = []{ cout <<"meow"; }; cout <<TYPE(l)(); }
+10:02:geordi: error: no match for call to '(string) ()'
+10:02:lh_mouse: geordi, replace TYPE with decltype
+10:02:geordi: error: use of deleted function 'main(int, char**)::<lambda()>::<lambda>()'
+10:32:boosure quit:Ping timeout: 260 seconds
+10:50:boosure joined channel
+10:54:lhanjian joined channel
+11:06:boosure quit:Quit: Get your hand off of it
+11:21:xxxxxxxx joined channel
+11:34:hoxily|rest joined channel
+11:39:xxxxxxxx: 噗噗噗东京吔屎鬼还有第二季....
+11:46:lh_mouse: geordi, << is_convertible<ios_base, istream>::value;
+11:46:geordi: false
+11:46:lh_mouse: geordi, swap ios_base and istream
+11:46:geordi: false
+11:46:lh_mouse: geordi, insert  * after base and insert  * after stream
+11:46:geordi: true
+11:46:lh_mouse: geordi, swap ios_base and istream
+11:46:geordi: false
+11:51:lh_mouse: geordi, << is_same<int *, int *__restrict__>::value;
+11:51:geordi: false
+11:52:lh_mouse: geordi,  << TYPE<int *__restrict__>;
+11:52:geordi: int* restrict
+11:52:lh_mouse: geordi, replace __restrict__ with restrict
+11:52:geordi: error: parse error in template argument list
+11:53:Stevearzh quit:Quit: Lingo: www.lingoirc.com
+11:55:yzld2002 joined channel
+12:02:lh_mouse: yzld2002, 揉
+12:06:Sleepwalking joined channel
+12:06:Sleepwalking: Dr. Slaney回邮件了
+12:07:Sleepwalking: 总之……这破事也没什么别的方法了
+12:08:Sleepwalking: 要么就用Downsampled FB
+12:09:Sleepwalking: 但是Baseband GTF好像是个很糟糕的LPF，我自己试了下发现低频各种被Aliasing掉
+12:11:Sleepwalking: 另外，调制以后再调制回去，信号变成复数了
+12:11:lh_mouse: Sleepwalking, 捏
+12:12:Sleepwalking: 对于DSFB也只能稍微地downsample一下，搞不好还得艹Polyphase FB...
+12:12:Sleepwalking: 好麻烦
+12:15:condy joined channel
+12:27:lh_mouse: condy, 爆照
+12:33:condy: QAQ
+12:41:OwenJia quit:Remote host closed the connection
+12:56:hoxily|rest joined channel
+13:00:Stevearzh joined channel
+13:03:xxxxxxxxx joined channel
+13:04:xxxxxxxx quit:Ping timeout: 244 seconds
+13:07:lhanjian: http://www.gdyfs.com/uploads/20141208/hhrov4wtqsm2538.jpg
+13:09:hoxily|rest1 joined channel
+13:12:hoxily|rest joined channel
+13:42:erhandsome joined channel
+13:44:lhanjian: procedure linkage table怎么翻译较好？
+13:46:T2 joined channel
+13:51:lhanjian quit:Ping timeout: 258 seconds
+13:51:condy: geordi: << TYPE(pid_t)
+13:51:geordi: error: template argument 1 is invalid
+13:51:condy: geordi: << TYPE<pid_t>
+13:52:geordi: int
+14:07:lhanjian joined channel
+14:09:condy: lhanjian: 直接PLT吧~
+14:16:erhandsome quit:Quit: leaving
+14:18:varna joined channel
+14:18:varna: condy: 爆
+14:18:varna: lhanjian: 爆
+14:18:varna: xxxxxxxxx: 爆
+14:18:varna: Sleepwalking: 爆爆
+14:19:FrankHB joined channel
+14:19:lhanjian: varna, 炸
+14:19:T2 quit:Quit: Leaving
+14:20:T2 joined channel
+14:20:T2 quit:Client Quit
+14:21:T2 joined channel
+14:21:T2: 异教经常乱码的样子
+14:21:condy: 0.0
+14:21:FrankHB: hysw: tieba.github.com那个update.sh太坑了，直接给覆盖空文件，搞了五分钟才发现没python3……修了一下。。。
+14:23:varna: 每逢周一都蛋疼得一塌糊涂
+14:27:T2: 我就好多啦，一周也就蛋疼七天而已。
+14:28:T2: 啊哈哈哈
+14:31:varna: 周一事情太多
+14:32:xxxxxxxxx: 我一周蛋疼十四天 因为我不孤睾
+14:32:T2: 2333
+14:33:varna: xxxxxxxxx: 爆
+14:41:varna: 演习三场，评价自上而下一个整齐的A S S
+14:46:FrankHB quit:Remote host closed the connection
+14:46:T2: 233
+14:47:FrankHB joined channel
+14:47:varna: 驱逐王不懂人心，但是会排单纵阵
+14:47:varna: 最近的大将越来越会花晒了，演习老板只能带三个……
+14:50:beefcafe quit:Ping timeout: 272 seconds
+14:50:lhanjian: peda-git，这玩意儿太好用了
+14:50:lhanjian: 墙裂推荐
+14:50:lhanjian: aur/peda-git
+14:51:beefcafe joined channel
+14:55:varna: lhanjian: 爆
+14:55:lh_mouse quit:Read error: Connection reset by peer
+14:56:T2: lhanjian, 唔
+14:56:xxxxxxxxx: 东京吔屎鬼要出第二季 羊驼知道么?
+14:56:varna: 知道
+14:56:T2: xxxxxxxxx, 那个好看么？中毒中二即视感。
+14:56:varna: 那个不好看
+14:57:varna: 动画作画不好，漫画的打斗场面让你看了都不容易读出是谁在打谁
+14:57:yzld2002 quit:Remote host closed the connection
+14:57:varna: 我仍然建议作者罚抄鸟山明漫画
+14:57:yzld2002 joined channel
+14:58:xxxxxxxxx: 吔屎鬼打吔屎鬼 吔屎鬼打人类 人类打吔屎鬼 吔屎鬼吔屎
+14:58:varna: 最后吔屎鬼真吔屎了
+14:58:T2: 什么打斗都能跟DB一样，那北斗和死神就不用混了。
+14:59:varna: 北斗那不是打斗，是篮球
+14:59:T2: 死神只有打斗和大招能看
+14:59:varna: 死神的打斗还算有特色，我觉得可以
+14:59:xxxxxxxxx: 篮球课
+14:59:varna: 大招挺有气势的
+14:59:T2: 是滴
+14:59:T2: 别的三流水准
+14:59:T2: 尤其是某女二人设
+15:00:xxxxxxxxx: 死神零番队都是怪物么?
+15:00:T2: oooooooorz
+15:00:T2: xxxxxxxxx, 领酱油的货你懂的。
+15:00:xxxxxxxxx: 而且怪物已经挂了一个了似乎
+15:00:T2: 现在还没发展到酱油
+15:00:varna: 零番队难道不都是逗比么
+15:00:lh_mouse joined channel
+15:00:T2: 不过快了。
+15:00:T2: 按照那个尿性最多10话之内
+15:01:xxxxxxxxx: 你说哪个是逗比?
+15:01:T2: xxxxxxxxx, 都是哦
+15:01:T2: orz
+15:01:condy: lhanjian: 和cgdb不兼容啊。
+15:02:lhanjian: 那没办法
+15:03:T2: 整个死神能保证不打酱油的只有一直打酱油的店老板而已
+15:03:T2: 挂比不算
+15:03:xxxxxxxxx: 那个挥笔的老和尚我觉得满有前途的
+15:04:T2: 朽木白哉刚出场明显更有前途，你看现在。
+15:05:xxxxxxxxx: 不是还没死么?
+15:05:T2: 没事还有隐藏挂比剑八桑
+15:05:varna: 你们要明白一月份搞不好还有活动
+15:05:xxxxxxxxx: http://puu.sh/dlQTe/2279ebdc76.jpg 有前途的证据
+15:06:varna: 啊，今天是珍珠港纪念日
+15:06:T2: 啊
+15:07:varna: 晚上人来了组织一波聚赌吧
+15:07:varna: 我想想要不要现场表演造大和
+15:07:xxxxxxxxx: 爆照吧
+15:08:varna: 肛旗吧
+15:10:hysw: -_-
+15:11:T2: = =
+15:12:hysw: FrankHB: 那种玩意回头重新找个template去写去...
+15:12:hysw: T2: 智商不够用了...
+15:12:T2: hysw, 那种东西我早就没有了。
+15:12:varna: 谁想造个奥义
+15:12:varna: 把utlc编译到c
+15:13:hysw: 改作业...
+15:14:T2: hysw, 其实你把一天的工作量压缩一半智商就可以翻倍。
+15:15:T2: hysw, 毕竟似乎没有比偷懒更考验智商的事情了。
+15:16:varna: 有
+15:16:varna: 找本子
+15:16:FrankHB: hysw: 不用template了，改好了。。。
+15:16:T2: varna, 也对
+15:16:FrankHB: varna: 然后就艹出半个Scheme？
+15:16:varna: 我曾经以为找到的那个偶像本子是纯爱本，结果最后偶像还是被拆了
+15:16:varna: FrankHB: 造着玩
+15:17:hysw: 哪天去用lisp写C算了....
+15:17:varna: 实际上gc运行时+一趟CPS大致已经出来半个scheme了，call/cc可以从CPS导出来
+15:18:hysw: PL课最后再那里拿let/cc玩...
+15:19:varna: 不过一趟CPS下来程序基本跟死尸没差别
+15:19:hysw: CPS...
+15:19:varna: 无差别CPS化毕竟是作死
+15:19:xxxxxxxxx: 我好像在哪里听过cps
+15:20:FrankHB: CPS下来的东西还要用户艹？
+15:20:hysw: Continuation-passing style
+15:20:varna: 不用了，那一趟已经是语义分析，大概会是很靠前的pass
+15:21:FrankHB: 也不见得要用CPS，只不过替代品在某种意义上都更作死罢了。
+15:21:varna: FrankHB: 爆
+15:21:hysw: SetJump...
+15:21:varna: 不用CPS就只能相信编译器，不过用了CPS其实还得相信编译器
+15:22:FrankHB: 不相信编译器可以相信解释器……
+15:22:FrankHB: ……至少我相信一般快不起来。
+15:22:varna: 都会很慢的
+15:23:FrankHB: ANF复杂度更高么。
+15:23:FrankHB: Cactus stack实际上艹起来不知道怎么样。
+15:23:varna: ANF略复杂，Cactus stack我干脆没读过
+15:23:varna: 而且ANF毕竟被yinwang黑过
+15:24:FrankHB: 怎么黑的来着。。。
+15:24:FrankHB: 导师？
+15:24:FrankHB: Cactus stack的下场会是体系结构黑科技不 可 避么。
+15:24:varna: “弄个ANF就能当终身教授”
+15:25:FrankHB: 这也算不上黑吧，王 根自己又不是终身教授。
+15:26:varna: yinwang现在在干什么
+15:26:FrankHB: 好像很久没动静了。
+15:26:hysw: 下半学期作死去艹分布式系统
+15:26:FrankHB: 咦整个yinwang.org被干掉了？
+15:27:varna: 哈哈哈哈
+15:28:hysw: github 233
+15:29:FrankHB: 其实算下来现在最不爽yinwang的是占了ydiff这个名字……
+15:29:varna: yydiff2333
+15:29:hysw: dyff
+15:29:FrankHB: alias ydiff=yslib-diff
+15:30:varna: yadiff yaydiff ayadiff
+15:30:FrankHB: 算了，大不了艹个带namespace的shell。
+15:30:xxxxxxxxx: YDiff
+15:30:FrankHB: FAT&NTFS 厨 激 怒。。。
+15:31:T2: FrankHB, ysdiff就好了
+15:31:FrankHB: 嘛，diff这种东西。。。还远着呢……
+15:32:T2: 还在撸SELECT的杯具掩面路过
+15:32:FrankHB: 编辑器支持不到位，光一个结构化比较用起来也麻烦。
+15:32:T2: 哦我日他哥数据库也要考试
+15:34:hysw: 回头监考去...
+15:35:hysw: 下学期考试考虑去做C语言课的助教算了...
+15:35:T2: 擦他妹4年靠40门真心大丈夫？
+15:35:T2: 算了。
+15:35:varna: 四年才四十门课？
+15:35:hysw: varna: -_-
+15:36:varna: 我本科大小烂课加一起78门
+15:36:hysw: 没有小课...
+15:36:hysw: 所有课的分值都一样(全年课例外)
+15:37:T2: varna, 只算了要考的。
+15:38:hysw: T2: 蹭课啥的几十门随便...
+15:38:varna: 我把不要考的扔掉大概也有至少六十门
+15:38:hysw: 下学期要死...
+15:38:varna: 国内课程比较水，应付不来是你自己的事
+15:38:T2: 而且向下取整了，另外我不选修所以大丈夫。
+15:38:T2: 果然还是应付不来。
+15:39:T2: （其实都是玩耍去了）
+15:39:varna: DNS怎么又跪了
+15:39:hysw: varna: 你干脆自己写DNS算了
+15:40:varna: hysw: 我懒，你来写吧
+15:40:hysw: 我表示DNS什么的稳定的很...
+15:41:varna: 喔喔喔喔哦哦
+15:41:varna: 圣诞NKC!
+15:41:varna: 圣诞NKC啊！
+15:41:hysw: 貌似是8.8.8.8
+15:41:hysw: 各种...操作系统课
+15:42:hysw: 竟然在4年级操作系统课上拿了比三年级操作系统课更高的分..
+15:43:varna: OS现在学术界有什么新动向么
+15:43:T2: 114 + 8.8.8.8撸过
+15:43:hysw: 貌似一堆分布式的货色...
+15:44:varna: 分布式从Prof.T的时代就开始了，现在也没产品啊
+15:44:hysw: 下学期如果作死的话会有一门分布式加上一门OS的课
+15:45:varna: 快作死
+15:45:hysw: 外加图论和算法
+15:45:varna: 不作死你拿什么出来秀啊
+15:45:varna: 反正能作死就敢作死，敢作死就不会死
+15:46:hysw: 本来就没什么好秀的...
+15:46:* varna 笑
+15:46:* hysw 被教授虐成翔中
+15:47:hysw: 教授表示要上CSC2227得在CSC469拿B+
+15:48:T2: hysw, 你拿过A-么？
+15:48:varna: 那就拿一个
+15:48:xxxxxxxx joined channel
+15:48:hysw: 物理学: B+
+15:48:hysw: A-倒还真没有过...
+15:49:varna: 能拿到的就去拿，拿不到的不必想，怎么看就是这么回事……
+15:49:T2: 物理学2333
+15:49:xxxxxxxxx quit:Ping timeout: 258 seconds
+15:50:T2: 果然学霸什么的必须强迫症
+15:50:hysw: 拿自己的电脑做benchmark完爆学校的TimingServer...
+15:51:hysw: T2: 我见过那种每门课都想拿100的学霸
+15:51:T2: hysw, 那种已经没救了。
+15:52:hysw: 大作业和那种学霸合作，表示质量无压力...
+15:53:T2: hysw, 从来没交过作业表示没压力
+15:53:hysw: -_-
+15:53:hysw: 作业占总分的大概50%
+15:54:T2: 从小学算起来的话我可能交过100次作业？
+15:54:varna: 好想侵犯药娘啊
+15:56:varna: 要不寒云吃点螺吧
+15:56:hysw: 背光键盘还是很好用的..
+15:56:varna: 最近温度一高，左shift就容易烫手
+15:57:hysw: 台式机飘过...
+15:58:T2: 本本也外接键盘撸过。
+15:58:hysw: 贵死人的机械键盘...
+15:59:xxxxxxxx: 我上次看到有人1500出HHKB pro2
+16:00:xxxxxxxx: 然后我第一想法是卧槽还真有这种土豪 
+16:01:T2: hysw, 青轴太吵了主要，茶轴又不爽，不划算。
+16:01:xxxxxxxx: T2 红轴吧
+16:01:hysw: T2: 茶轴路过
+16:01:T2: xxxxxxxx, 试试看
+16:02:xxxxxxxx: FL8000吧 
+16:04:hysw: 再抽风个半小时之后改作业去...
+16:05:hysw: Corsair的做工还是不错的，价格过高...
+16:05:xxxxxxxx: 土豪云....
+16:06:T2: hysw, 为什么改作业都是你的事？
+16:06:hysw: 助教这种玩意的工资还行...
+16:06:varna: 外接键盘带起来多不方便
+16:06:T2: 好吧
+16:07:xxxxxxxx: 可以藏在内裤里防爆
+16:07:T2: 你就是那种万恶的出作业的伙计吧
+16:07:hysw: 教授出作业...
+16:07:T2: 死ね
+16:08:hysw: 估计回头重新bind一下各种按键..
+16:08:T2: やっぱり死ね
+16:11:varna: xxxxxxxx: 爆
+16:13:cleamoon: @laoyang945：环球时报：“人治”中的人，是指领导人。“法治”中的法，也是按领导人的意思制定的法律法规。所以人治和法治，本质是一致的，既不能神化法治，也不能妖魔化人治。以人治为本源，以法治为实现人治的方法，我们就能打开善治之门 #有理有据
+16:14:xxxxxxxx: 不管你们支持不支持 我反正是支持了
+16:15:T2: 规则这种东西存在的意义就是让人打破的。
+16:15:varna: xxxxxxxx: 爆
+16:16:T2: 不过不能以人为本的人治还是死了好。
+16:16:cleamoon: @lvkaiwen：一哥们自己的亲身经历：有次他到帝都出差，住的如家，隔音效果巨差，本来就很烦躁，偏偏隔壁还传来嘿咻的声音，他觉得自己被“冒犯”了，就一边听着别人的叫声一边拍打着肚子。一分钟过后，隔壁没声音了。他还在无聊的拍着自己的肚子。 大概过了二十分钟，就听着隔壁有个女吼的说：“你看看人家。”
+16:17:T2: = =
+16:18:xxxxxxxx: 喜欢黄笑话的幼女
+16:18:varna: 2333
+16:19:cleamoon: 2333 http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/79/mj_210741.jpg
+16:19:varna: 2333
+16:20:xxxxxxxx: 现实中怎么可能这么整齐!
+16:20:T2: 话说20分钟除了啪啪啪什么声音都没出。。。
+16:20:varna: 鲤鱼
+16:21:T2: +
+16:21:xxxxxxxx: 他在边拍肚子边哲 学
+16:21:xxxxxxxx: 鲤鱼是啥?
+16:21:varna: 用鲤鱼
+16:22:xxxxxxxx: 拍肚子？
+16:23:T2: 怪不得隔壁的女人只能找个1分钟的
+16:24:T2: 我是这个意思
+16:24:varna: 好想侵犯药娘啊
+16:25:T2: 这个时候药娘们都还在上课吧
+16:25:T2: 除了某时差君
+16:26:xxxxxxxx: 说不定红旗又来姨妈了
+16:26:varna: 是肛旗
+16:27:T2: 姨妈一样能干
+16:28:T2: 怕什么
+16:29:cleamoon: 不是说不能吗
+16:30:varna: 他是痛经
+16:32:xxxxxxxx: http://imgsrc.baidu.com/forum/pic/item/2bbe1501213fb80e59e0509f35d12f2eb938941f.jpg 这个图片好
+16:33:T2: = =
+16:39:condy: 好哟～
+16:44:varna: condy: 爆
+16:44:condy: 不要啊！！！
+16:44:cleamoon: @Kayism：今天去学车，发现方向盘有点松，就问教练怎么回事？教练45度仰望天空，你之前有个学姐学车，遇到紧急情况，往后拉方向盘，嘴里还不停的喊，吁，吁，吁！
+16:44:cleamoon: 变受了
+16:45:varna: 23333333
+16:47:cleamoon: 当笔记本电脑电池的续航力不尽人意时，我们通常会将其丢弃，即使它仍然具有可用性。IBM的一项研究（PDF）发现，这些被丢弃的电池可以在某些没有或缺乏电网的地方为电灯供电。IBM的测试显示，70%的旧电池能在一整年内每天为一支LED灯供电超过4小时。研究人员今年在印度城市班加罗尔测试了这一概念。印度有大约四亿人远
+16:47:cleamoon: 离电网。IBM的团队创造被称为UrJar的设备，利用旧的锂离子电池为低功率直流电设备如电灯供电。
+16:48:cleamoon: DNA双螺旋结构发现者之一的詹姆斯·沃森成为第一位在世拍卖奖章的诺贝尔奖得主，他的奖章以410万美元拍出，超出了之前估计的最高350万美元的拍卖价。与他分享诺贝尔奖的弗朗西斯·克里克（Francis Crick）已于2004年去世，其家族在一年前将诺贝尔奖章以227万美元拍出。詹姆斯·沃森因为种族主义和性别歧视言论而不再受到学术
+16:48:cleamoon: 界的欢迎，他自称拍卖奖章是因为没有外部收入，虽然他多年来担任了多家公司的董事。对于拍卖所得，沃森表示想购买一些艺术品，捐出部分款项，以及“重新进入公共生活”。沃森曾说过，他对非洲的前景感到悲观，因为“我们的所有政策都是基于他们的智力与我们相等这一基础作出的——但所有的测试显示这不是真的 ”
+16:48:cleamoon: 。根据维基百科的数据，美国黑人和白人之间的IQ测试得分确实存在明显的差异，但IQ测试被认为不是有效的智力指数。
+16:50:T2: 某方面有效就够了
+16:51:varna: 比如吊长
+16:53:MisakaMikoto: ...
+16:54:T2: varna, 比这个的话也就难怪奥巴马上台了
+16:55:lh_mouse: 有人说美国总统是专业背黑锅的
+16:55:varna: 奥巴马是奈亚子的化身
+16:55:T2: lh_mouse, 当真你就输了
+16:56:lh_mouse: 发几条新闻
+16:56:lh_mouse: 周永康被开除党籍并移送司法 储百亮 
+16:56:lh_mouse: 原中共中央政治局常委、中央政法委书记周永康被开除党籍，移交司法起诉。其罪名包括受贿、协助亲友侵吞国有资产及泄露国家机密。 
+16:56:lh_mouse:  
+16:56:lh_mouse:  不甘心离去，黄之锋的绝食抗议 储百亮, ALAN WONG 
+16:56:lh_mouse: 香港“占中”日渐式微，面对不妥协的政府，黄之锋和四名学生上周一开始绝食。他说，这是“明知不可为而为之”，不愿运动空手而回。但在周六，虚弱的黄已停止绝食。 
+16:56:lh_mouse:  
+16:56:lh_mouse:  美军也门营救失败致两人质遇害 KAREEM FAHIM, ERIC SCHMITT 
+16:56:lh_mouse: 在也门基地组织威胁处决人质后，美军周六再次采取行动营救一名美国记者，但最终行动失败，导致该记者和一南非人质被害。这名南非人质原本要在次日获释。
+16:56:lh_mouse:  
+16:56:varna: 23333
+16:56:lh_mouse: 看下作者
+16:57:T2: 不带个人性自走GP03抗议个屁啊
+16:57:T2: 人形
+16:59:T2: 三倍速也是可以的，实在不行生化里那个三倍速可以凑合用
+17:00:varna: @卫宫切嗣
+17:01:T2: 不过有人形自走的话还是拿来放家里骑会比较好。
+17:01:T2: 物尽其用
+17:03:izmntuk joined channel
+17:04:T2: 真的，我一直觉得红色有角三倍速是在说Tyrant C
+17:08:Xilzzerts: ...
+17:09:hysw: 改作业之前还得生成pdf的图片版...
+17:09:hysw: 那群家伙难道不会用内嵌pdf么...
+17:09:cleamoon: hysw助教工资多少
+17:09:T2: Xilzzerts, 显然红暴是红色的，还长了角，还比绿色暴君快三倍。
+17:09:hysw: $42.05/hour
+17:09:cleamoon: 好多
+17:09:cleamoon: 我也要去做助教
+17:10:varna: 对了加拿大是不是能买到本国产的山寨M16
+17:10:T2: hysw, 卧槽尼玛我要去做助教。
+17:10:varna: T2: 考试都考不舒服还助教
+17:10:hysw: ...
+17:10:T2: varna, 好吧，其实以前连卷子都是我改的。
+17:11:hysw: 助教明显得改卷子...
+17:11:T2: 但是tmd居然没给钱
+17:11:T2: hysw, 你们高中有助教。
+17:11:T2: 好吧
+17:12:T2: 改一中午卷子能换一盒盒饭卧槽。
+17:12:cleamoon: http://www.bilibili.com/video/av1776436/
+17:13:hysw: 小学改大学卷子的选择题部分...
+17:13:hysw: 不过那时候我加法还行...
+17:13:hysw: 现在总是算错...
+17:13:cleamoon: 我去... 我们高中改卷子都算学习内容...
+17:14:T2: cleamoon, 我是作为不用做作业的交换条件。
+17:14:hysw: T2: -_-
+17:14:hysw: >w<
+17:14:hysw: =w=
+17:15:hysw: 改卷子这种事情是得保证正确性的...
+17:15:hysw: 否则哪个学生就开始找你麻烦了...
+17:15:T2: hysw, 他们不敢
+17:16:cleamoon: 他们一般直接抽你
+17:16:hysw: 曾经找教授要过总分的30%
+17:17:T2: 我朝高中学习积极性还是很强的，卷子都比较清晰也比较好改。
+17:17:lh_mouse: http://codepad.org/03T00BsR  带自旋的 FIFO 的 mutex
+17:18:T2: 无非就是这里少扣一分那样
+17:18:hoxily|rest joined channel
+17:19:varna: pause还是看着不顺
+17:19:lh_mouse: 比原来好看多了
+17:19:lh_mouse: 呃
+17:19:lh_mouse: pause 可以去掉   
+17:19:lh_mouse: 有自旋锁不用 pause 的么？
+17:20:varna: 大概没
+17:20:lh_mouse: 上面的看起来就是 windows 的 critical section 的实现
+17:20:lh_mouse: 没有竞态的时候非常快  俩原子操作就完事  根本不用进内核
+17:20:varna: 如果我自己写我还是会上futex, 毕竟线程实现不在我手里
+17:21:lh_mouse: futex 是基于进程间共享内存的么
+17:21:lh_mouse: 之前搜索的资料都说是进程间的
+17:22:varna: 可以是
+17:22:T2: 自旋带pause是pause一段时间么？
+17:22:T2: 那也不对额。
+17:22:T2: 做不到啊
+17:22:varna: T2: 别脑洞
+17:22:lh_mouse: 不太懂 futex 怎么造 mutex
+17:22:FrankHB: 可能陷入内核的东西有必要刻意做成进程内的么。
+17:22:lh_mouse: 当然有
+17:22:varna: 有
+17:23:lh_mouse: “可能”和“必然”当然区别很大
+17:23:varna: futex自带wait和wake
+17:23:lh_mouse: 要不是 windows  critical section 坑爹我可懒得自己造
+17:23:lh_mouse: 上面那个是 FIFO 的
+17:23:varna: mutex这种东西不少时候竞态很少
+17:23:varna: 没必要进内核，如果用户态能做干净就可以多用了，而不必纠结原子性和双缓冲
+17:23:lh_mouse: 第一  它是 FIFO 的   第二 没有竞态时候不陷入内核
+17:24:lh_mouse: 想个什么名字好
+17:25:lh_mouse: windows 里面 mutex 是另一个东西
+17:25:varna: fulock
+17:25:FrankHB: 如果有不陷入内核的替代呢。
+17:25:varna: fast userspace lock
+17:25:lh_mouse: 那就 FuLock 吧
+17:25:lh_mouse: s,Lo,,
+17:26:varna: 就这意思
+17:26:lh_mouse: windows vista 之前没有非重入锁
+17:26:lh_mouse: 后来出了一个可惜还不是 FIFO 的
+17:27:lh_mouse: 嘛 倒也是 windows 一贯的鸟样
+17:27:varna: 非FIFO突然就流行开了
+17:27:hysw: 锁本身已经够糟糕了...
+17:27:lh_mouse: 那是个 Reader Writer lock
+17:27:lh_mouse: 可以只当互斥锁来用
+17:27:FrankHB: 考虑到自己造FIFO比干掉FIFO容易吧。
+17:27:lh_mouse: 工藤 pthread_mutex 差不多 只有一个指针大小 没有 FIFO
+17:28:FrankHB: 工藤。。。
+17:28:lh_mouse: 自己造 FIFO 当然不容易
+17:28:lh_mouse: fvck
+17:28:lh_mouse: 输入法坑
+17:28:hysw: 期中考的各种坑... http://www.cdf.toronto.edu/~csc469h/fall/lectures/L5-NBS_RCU_TM.pdf
+17:28:FrankHB: 干掉FIFO造得不更多么。
+17:28:lh_mouse: FIFO 哪有那好造
+17:29:FrankHB: M$说This change increases performance significantly for most code.
+17:29:FrankHB: 不管了，反正造得出来就造吧。
+17:30:varna: 我觉得该爆一波恥球
+17:30:hysw: TicketLock貌似是FIFO的...
+17:30:varna: 很长时间没探讨他胖次什么颜色了
+17:30:lh_mouse: 前几天被 pthread_mutex 那种非 FIFO 的坑过
+17:30:izmntuk_ joined channel
+17:30:varna: 非FIFO的场合以前我都是手工均衡，后来我想想算了，疯狗抢翔去吧
+17:31:lh_mouse: 主线程 lock(); flag = true; unlock();  子线程 for(;;){ unlock(); lock(); if(flag) break; }  华丽死锁
+17:31:lh_mouse: 主线程死在 lock 上了
+17:31:varna: 子线程一直上锁
+17:32:lh_mouse: 是的  主线程睡着了
+17:33:varna: 本科我自己弄个自旋，就这么把自己弄个半死
+17:33:izmntuk quit:Ping timeout: 250 seconds
+17:33:FrankHB: 要指望FIFO就明确造FIFO，只是mutex这种东西无所谓，当作QoI得了。至少在公平调度和实时性没刷存在的场合可以接受。
+17:33:lh_mouse: 光自旋不行的
+17:33:lh_mouse: 但是事实是很多人连自旋都不会写  哪怕是不公平的
+17:34:T2: 躺枪
+17:34:lh_mouse: 嘛 造轮子开心
+17:34:varna: 有时候一个FIFO保证能省不少脑细胞
+17:35:T2: 大概知道怎么造抢翔的。
+17:35:izmntuk joined channel
+17:35:lh_mouse: 你把上面的 spin_lock() 拿去就是那东西了
+17:35:izmntuk_ quit:Ping timeout: 244 seconds
+17:35:FrankHB: 更多时候是死活indeterminate的东西没心情伺候。虽然到处都能无脑#pragma omp就更好了。
+17:36:T2: lh_mouse, soga
+17:36:varna: #pragma omp是找死
+17:37:lh_mouse: 还是不知道叫啥名字
+17:37:FrankHB: 基本上能跑得动的情况就没GC乱STW死得痛。
+17:37:lh_mouse: UserMutex
+17:37:lh_mouse: ??
+17:37:lh_mouse: 对应的叫 KernelMutex
+17:37:cleamoon: hysw, 多伦多每个科目都有自己的页面？
+17:38:varna: UserMutex也行
+17:38:code_new joined channel
+17:38:hysw: cleamoon: 教授愿意的话自己去做
+17:38:FrankHB: Utex...
+17:38:lh_mouse: UserMutex UserRecursiveMutex KernelMutex
+17:38:varna: uuuuu
+17:39:FrankHB: uuz...
+17:39:hysw: 改最后一道题的好处:一大堆人么做
+17:39:lh_mouse: 那那个叫 Ktex？
+17:39:FrankHB: 要逼格么。Sutex: smart userspace mutex
+17:39:hysw: KaTeX
+17:39:FrankHB: 虽然可能被理解成Slow……
+17:40:lh_mouse: 卡特赫滚出
+17:40:FrankHB: 赫卡特莫名中枪。。。
+17:40:lh_mouse: 就这个意思
+17:40:varna: 啊呀咔
+17:40:izmntuk_ joined channel
+17:40:lh_mouse: UCS
+17:40:lh_mouse: User-mode Critical Section
+17:40:FrankHB: UCS-4 ...
+17:40:lh_mouse: User-mode Critical Section version 4
+17:41:lh_mouse: Ebutex
+17:41:varna: MUCS
+17:41:lh_mouse: Earth Ball mUtex
+17:41:FrankHB: 直接叫CriticalFIFO得了。。。
+17:41:lh_mouse: Meowtex
+17:41:T2: sustex
+17:42:FrankHB: Moutex
+17:42:T2: smart userspace
+17:42:FrankHB: 听着像Multics...
+17:42:varna: Moutex不错
+17:42:izmntuk quit:Ping timeout: 256 seconds
+17:43:FrankHB: TEX from Motherfvcking OUterspace...
+17:44:lh_mouse: mutex 是不是 MUtual EXclusion?
+17:45:lh_mouse: MUTual EXclusion
+17:46:varna: 是
+17:46:T2: #define pause() asm volatile("pause": : :"memory") // 是这个玩意？
+17:46:T2: 果然汇编还是要学。
+17:46:lh_mouse: 是
+17:47:T2: 我想多了，我以为是别的什么。
+17:47:T2: 挂起之类的玩意。
+17:47:FrankHB: hysw: 日case说要tieba.github.com权限……
+17:47:T2: 继续select
+17:48:T2: 艹艹艹
+17:48:lh_mouse: 我也要
+17:49:FrankHB: https://github.com/orgs/tieba
+17:49:FrankHB: id呢。
+17:49:lh_mouse: 谁
+17:49:lh_mouse: 我吗  我就是 lhmouse
+17:50:T2: 出门打个酱油orz
+17:50:FrankHB: 好吧，先invite吱。
+17:50:lh_mouse: 吱汝妹
+17:50:T2 quit:Quit: Leaving
+17:51:lhanjian: 向另一个进程的STDIN输入数据，他不会像在终端上直接输入数据一样自动回车咋办？
+17:51:lh_mouse: 用 | ？
+17:52:varna: 你给他输入\n
+17:52:lhanjian: \n无用
+17:52:lh_mouse: 你用什么输入的
+17:52:varna: 对面是什么东西，你用什么输入的
+17:53:FrankHB: 好吧，吱不是我妹，我没有妹吱……
+17:53:lhanjian: 对面就是本地的一个read(FILENO_STDIN, buf, sizeof(buf));
+17:53:lh_mouse: FrankHB, 去你的
+17:53:lhanjian: perl -e '$|=1; print "syclover\x00\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\n";while(1){}' > /proc/`pgrep pwn200`/fd/0
+17:53:lhanjian: 我用的。
+17:53:lh_mouse: echo 路过
+17:54:lh_mouse: \r 呢？
+17:54:lhanjian: \n\r都没用
+17:54:lh_mouse: echo -e '\xFF' 呢
+17:55:lhanjian: 我刚才发的代码里已经有很多\xff了
+17:56:lhanjian: \xff \x00 \r \n 都没起到效果……
+17:56:varna: 对面没拿到LF?
+17:57:lhanjian: 对面终端已经显示出\n了
+17:57:varna: 然后呢
+17:57:lhanjian: 然后对面换行了。
+17:57:lhanjian: 但是read的阻塞没有结束
+17:57:varna: EOF
+17:58:lh_mouse: lhanjian, \xFF 是什么鸟蛋
+17:58:lh_mouse: 发 ^D
+18:01:lhanjian: \x04? 无用
+18:03:lh_mouse: lhanjian, 改成行缓冲试试
+18:03:hysw: ...
+18:03:lh_mouse: 如果你当成文件来读我记得缺省是块缓冲
+18:04:varna: 只要不是真从标准输入进的东西似乎都块缓冲
+18:04:lhanjian: varna, EOF就是\xFF吧？在C里面
+18:04:varna: 包括重定向
+18:04:T2 joined channel
+18:05:lh_mouse: lhanjian, 当然不是
+18:05:lh_mouse: geordi, << TYPE(EOF);
+18:05:geordi: rvalue int
+18:05:lhanjian: geordi, << EOF;
+18:05:geordi: -1
+18:05:lh_mouse: int(-1) 和 char(-1) 可不一样
+18:05:lh_mouse: EOF 是 int    满地的 getchar() 返回也是 int
+18:05:lh_mouse: 都不是 char
+18:08:lhanjian: 在不改对端代码的情况下，没办法了？
+18:08:dantmnf: 好像要关闭管道对方才会收到EOF？
+18:08:lhanjian: 嗯
+18:09:lhanjian: dantmnf, 我把他关了就行。但这不符合我的需求
+18:09:lhanjian: 先去做个实验
+18:11:dantmnf: ^D 也是告诉 shell 把 stdin 关掉吧...
+18:12:lh_mouse: In May 2014 the CVE system announced a vulnerability discovered in the Linux kernel's futex subsystem that allowed denial-of-service attacks or local privilege escalation.[2][3]
+18:13:varna: 23333
+18:13:varna: pthread跪了
+18:14:beefcafe quit:Ping timeout: 272 seconds
+18:15:beefcafe joined channel
+18:16:T2: 都被玩坏了
+18:17:cleamoon:  财新网的一篇专稿称，被广泛宣传为中国自主研发的TD-SCDMA 3G网络可能是有史以来最短命的3G网络。中国最大移动运营商已经不再追加TD-SCDMA的新建投资，TD-SCDMA网络将走向自然衰亡。当中国移动受命组建TD-SCDMA网时便明确要求制造商在组网时必须兼容TD-LTE，TD-SCDMA的命运就早已注定。根据野村证券的统计，截至2014年底，TD-SCDMA网
+18:17:cleamoon: 络建设累计投资超过1880亿元。加上中国移动投入的终端补贴、营销资源，保守估计投入远远超过2000亿元。“现在，TD-SCDMA网络的利用率约30%。随着TD-SCDMA用户转向4G，这笔巨大的投资永远收不回来了。”野村证券副总裁说。拥有30多年电信从业经验并曾在中国知名电信制造商担任高层的一位加拿大电信专家说，“中国的TD-SCDMA实
+18:17:cleamoon: 际上是把中国的电信企业引上了一条背离主流技术的路，等于是花中国移动的钱，在错误的技术方向上，培养了一批无法跟上国际主流技术的企业。”
+18:24:hysw: 满分的作业还真少见...
+18:30:cleamoon: swing麻烦死了...
+18:32:Plough joined channel
+18:33:whocares_2 joined channel
+18:34:varna: Plough: 刚聚赌出了半凤……
+18:35:Plough: varna: Orz
+18:36:Plough: 我先拿到Z1再大建
+18:37:Plough: 另外
+18:38:beefcafe quit:Remote host closed the connection
+18:38:Plough: http://picpaste.com/aee7HoTj.png 你们谁有这玩意
+18:40:condy: geordi: -w { auto fn = []{ cout << "foo"; }; int _; cout << &fn, &_; }
+18:40:geordi: 0x7fff7d070e7b, 0x7fff7d070e7c
+18:41:condy: geordi: -w { auto fn = []{ cout << "foo"; return 1; }; int _ = 10; cout << &fn, &_, fn(), _; }
+18:41:geordi: foo0x7fff69fa558b, 0x7fff69fa558c, 1, 10
+18:45:lhanjian: varna, 5月份的CVE，现在应该都修好了吧
+18:50:lh_mouse: condy, 爆照
+18:51:FrankHB quit:Remote host closed the connection
+18:51:lhanjian: 死都做不到“真正的回车”
+18:51:FrankHB joined channel
+18:58:FrankHB quit:Remote host closed the connection
+18:59:FrankHB joined channel
+19:05:cleamoon: 美国海军陆战队探测低可观测目标的雷达系统将从Windows升级到Linux。美国海军陆战队系统司令部的官员宣布了一份价值1020万美元的合同变更，诺斯洛普·格鲁门将负责将地面/空中任务定位雷达G/ATOR的操作系统从Windows XP迁移到Linux
+19:06:cleamoon: 2333  http://syanago.com/
+19:07:iyzsong joined channel
+19:09:FrankHB: 升级？
+19:09:FrankHB quit:Remote host closed the connection
+19:09:FrankHB joined channel
+19:14:cleamoon: 应该是迁移吧
+19:24:lhanjian: EOF by definition "is unequal to any valid character code". ……
+19:26:cleamoon: 2333
+19:30:xxxxxxxx: 谁搞个便娘....
+19:32:lhanjian: 模拟键盘输入简直可怕
+19:39:lhanjian: 终端的回车，是会被终端设备驱动生成EOF的。没办法走STREAM传这个EOF……
+19:42:condy: 涨知识了唉！!
+19:46:yzld2002 quit:Remote host closed the connection
+19:46:yzld2002 joined channel
+19:47:lhanjian: 耗子说的对。(int)-1 和 (char)-1完全是两个东西……
+19:48:iyzsong: - -
+19:48:condy: OAO
+19:50:condy: geordi: { int a = (unsigned char)-1, b = (signed char)-1; cout << a, b; }
+19:50:geordi: 255, -1
+19:50:condy: geordi: { int a = (int)-1; cout << a; }
+19:50:geordi: -1
+19:50:condy: lhanjian: ^ 这个区别？
+19:51:lhanjian: geordi, << (unsigned) -1;
+19:51:geordi: 4294967295
+19:51:lhanjian: geordi, << (unsigned char) -1;
+19:51:geordi: �
+19:51:lhanjian: geordi, << TYPE(-1);
+19:51:geordi: rvalue int
+19:51:lhanjian: geordi, << TYPE((unsigned char) -1);
+19:51:geordi: rvalue unsigned char
+20:04:code_new quit:Ping timeout: 256 seconds
+20:04:code_new joined channel
+20:09:lhanjian: 得用termios.h的货才能做到对其他终端比较靠谱的发送EOF
+20:09:lhanjian: EOF这个东西本身是不会传给终端里运行的进程的……
+20:12:lh_cat joined channel
+20:13:xxxxxxxx: http://www.bilibili.com/video/av1765889/
+20:29:Sleepwalking quit:Ping timeout: 260 seconds
+20:40:hoxily joined channel
+20:58:varna: 啊啊啊啊侵犯药娘
+21:05:Plough: varna: 我今天日常出了十小时
+21:05:lh_cat: 咱频道还算百度贴吧的？
+21:06:lh_cat: 和狗贴吧相提并论掉身价
+21:06:Plough: 喷出来发现是这个http://picpaste.com/ZbTZzILr.png
+21:06:lh_cat: 什么喷出来了
+21:06:varna: lh_cat: 要不你改了欢迎信息吧
+21:06:varna: Plough: 你还在玩那个不能夜战的私服么……
+21:07:Plough: varna: 私服主任70血
+21:07:Plough: 我这个是五百血
+21:07:Plough: 而且类型不是航空母舰，是北方栖姬
+21:07:varna: 给，羊味素
+21:07:Plough: 其实我是想说我知道为啥之前舰娘不加载了
+21:07:Plough: 他只认80端口……
+21:08:varna: ...
+21:08:Plough: 弄了下nginx，好了
+21:08:varna: 如果这个月还没有冬活消息，我就继续悠闲大建
+21:09:Plough: 今天刚拿到第一只斯图卡
+21:09:Plough: 周六应该就能拿到Z1
+21:09:Plough: 在这之前我都得穷死
+21:09:Plough: http://picpaste.com/UKd7flSn.png <-我的秘书
+21:10:Plough: 另外其实北方栖姬的那个“北方栖姬”类型是假的
+21:10:varna: 航空战舰吧
+21:10:Plough: 实际上她是航空战舰
+21:10:varna: 陆基我记得都这德行
+21:10:Plough: 今晚懒得折腾，我直接把航空战舰名字改了
+21:10:Plough: 明天加个类型玩玩
+21:10:hysw: 监考去...
+21:11:varna: 我还是继续宣传有没有人有兴趣玩海战兵棋的
+21:11:varna: 如果加上我能凑足三个人，我就尽快准备试试水……
+21:11:Plough: 先把今天日常做了
+21:12:Plough: http://picpaste.com/Gp64NMgY.png 幼女：“请给我最好的装备”
+21:14:varna: 黑鬼：大字有六种写法，其中有一半不认识
+21:14:Plough: 233333
+21:14:lh_cat: 改成“给，羊味素”？
+21:15:lh_cat: give, sheep flavour su?
+21:15:varna: sheep flavor element
+21:15:varna: 随你改了，怎么样都行
+21:15:lh_cat: 其实   昨天来个老外
+21:16:lh_cat: 我才发现是贴 提示是吧的消息
+21:16:lh_cat: fvck  
+21:16:lh_cat: 我讨厌手机
+21:17:varna: 那个是刚建频道时候我加的，方便贴吧群众找；现在贴吧已经这傻逼样了，爱找不找……
+21:17:varna: Plough: 哦对，12.12维护，圣诞NKC又要出来了
+21:18:Plough: 那珂酱Lv10+放置中
+21:18:lh_cat: 前年的事情了
+21:18:varna: 这回还有圣诞那珂改二
+21:18:varna: 绝赞好评
+21:19:Plough: 今天的5-4给加贺老师带上斯图卡
+21:19:Plough: 看看效果如何
+21:20:varna: 哦对，今天得了两个桶……
+21:21:varna: 先攒着，以后周回战果用
+21:21:varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=dba879b535d3d539c13d0fcb0abce850/b90e7bec54e736d13d6cd54398504fc2d5626979.jpg
+21:21:varna: ^ Nonima
+21:23:lhanjian: http://pastebin.mozilla.org/7853879
+21:23:lhanjian: 诸位帮我看看这点东西能不能跑起来……
+21:24:lhanjian: 发错了……
+21:24:lhanjian: 代码有点问题
+21:25:lh_cat quit:Ping timeout: 245 seconds
+21:25:varna: 噗
+21:25:varna: DMM = どうせ みんな 陆奥になる
+21:26:Plough: 陸奥になる〜
+21:26:Plough: 说起来我马上就要DMM了
+21:26:varna: 原来是这么个缩写啊
+21:26:Plough: 要赌铁相了……
+21:26:varna: 哦，陸……
+21:26:varna: 果然贴假名还是容易穿帮
+21:26:Plough: 233333
+21:26:erhandsome joined channel
+21:27:Plough: 斯图卡：对潜+5爆装+9命中+1
+21:27:lh_cat joined channel
+21:27:varna: 是这个好还是流改好呢……
+21:27:varna: 流改是雷装*1.5，舰爆是爆装*2
+21:27:varna: 想想还是流改略好
+21:28:Plough: 毕竟这是德国货
+21:28:Plough: 怎么能让蝗军败给德国
+21:28:varna: 德国海军确实不如蝗军……
+21:28:Plough: 德国人脑洞大
+21:28:Plough: 古斯塔夫放战舰上你怕不怕
+21:29:varna: 至于实为轻型重战的急降下爆击可能舰上攻击机某式一一型，那纯是个大坑
+21:29:Plough: 那啥……
+21:30:varna: 流改
+21:30:Plough: Soga
+21:31:Plough: 欧根似乎撸不动喔酱（或者是没打到？
+21:31:varna: 天山@飞不起来，流星@飞不稳当，流改？“那啥，岩本君，你帮我照顾照顾那边的神风队”
+21:31:Plough: 233333333
+21:31:varna: 欧根不至于打不动喔酱
+21:31:Plough: 那大概是没打到
+21:31:varna: 羽黑都能打动，欧根没理由；喔改另论，那个没有战舰以上火力确实
+21:31:Plough: 总之两炮过去总共撸了30点血
+21:32:varna: 不破甲是有可能的，别太指望
+21:32:Plough: 之前羽黑一炮打了40+
+21:32:Plough: 不过也有可能是装备问题
+21:32:Plough: 毕竟羽黑是两门四星三号炮……
+21:33:varna: 不改修的炮就那样
+21:33:Plough: 也不知道欧根炮啥时候能改
+21:33:varna: 舰队的舰队的舰队的舰队的舰队的摔了
+21:33:Plough: 东山急行系列
+21:34:Plough: btw
+21:34:Plough: 说实话，要是我是国服的那帮伙计我就自己撸一套
+21:34:Plough: 绝对不去反向舰娘
+21:34:varna: 我宁可找人玩纸上游戏去
+21:35:Plough: 我终于TM领教到临时工的威力了
+21:35:varna: 你们看这是高四十五米分十五层的舰桥！这不是什么肥希！
+21:35:Plough: 23333
+21:35:varna: 那时候造光学测距仪的不是尼康就是佳能
+21:37:Plough: 我给你看下mainD2.swf里的一个函数
+21:37:Plough: https://pastebin.mozilla.org/7854065
+21:39:Plough: 我是不知道他们用了什么黑魔法才搞出这样的玩意
+21:39:varna: 妈的
+21:39:varna: 这简直是自动生成的……
+21:40:varna: 这函数是干什么的
+21:40:Plough: 不知道
+21:40:Plough: 反正是在匹配到url里有"file:///"以后执行的
+21:40:varna: 噗
+21:40:varna: 噗哈哈哈
+21:41:varna: 日本程序员太可怕了
+21:41:Plough: 没有就是很正常的读Core.swf然后加载
+21:41:Plough: 有的话直接冲进这一坨里边……
+21:42:Plough: 其实要我猜的话他们大概是在用正则手动把硬编码的ip改掉
+21:42:Plough: 把http://xxx.xxx.xxx.xxx/改成file:///xxx/这样
+21:44:Plough: 熊野
+21:44:lh_cat: 标榜简单的语言容易产生垃圾
+21:45:lh_cat: 没人会用的语言的用户反倒都有两把刷子
+21:45:varna: 标榜简单的语言容易纵容渣实现，标榜包容的语言容易纵容文盲
+21:45:varna: 事情总是这样
+21:46:lhanjian: 惨绝人寰。为了在另一个pts里按下“真正的”回车。需要上ioctl……
+21:46:lhanjian: 这样\r就回解释为read结束阻塞……
+21:46:xxxxxxxx: 贺电
+21:49:xxxxxxxx: 卧槽刚才红旗发的那个是啥 我就看到满屏幕的new和RegExp
+21:49:Plough: 舰娘客户端里的某个函数
+21:49:varna: 舰娘客户端
+21:50:xxxxxxxx: 太可怕了....
+21:50:Plough: 反正我是放弃反编译了
+21:50:Plough: 直接拦请求都比看这个舒服……
+21:51:xxxxxxxx: 论如何保护源码....
+21:51:Plough: 羽黑Lv70了
+21:51:Plough: RJ
+21:51:lh_cat: 把源码编译为 perl 即可
+21:51:varna: 我来！
+21:51:varna: Plough: 羽黑65改
+21:52:Plough: 改了
+21:52:varna: 爆了没
+21:52:Plough: 不过Lv70一下我还是不敢拉去3-5
+21:52:Plough: 以下
+21:52:Plough: 下一轮旗舰换谁呢
+21:52:lh_cat: 回去洗个澡   刚一帮人抽烟  弄得头发一股烟味
+21:52:Plough: 摩耶？
+21:52:varna: 换个大 巡 洋 舰
+21:53:varna: 摩耶或者高雄爱宕
+21:53:Plough: 摩耶好了
+21:53:varna: 能力值都挺不错的
+21:53:Plough: 高雄爱宕之前我全拆了……
+21:53:varna: 那两位的能力即使单单一改也足够打一线了
+21:54:Plough: 下次捞到高雄留着，爱宕就算了
+21:54:Plough: 实在无爱
+21:55:varna: 至于鸟海……I BELIEVE! FIRE IT UP!
+21:55:Plough: 2333333
+21:55:lh_cat: 我觉得把名字全换成 a1 a2 a3 就能保护源码
+21:55:Plough: 反编译出来就是__var1__
+21:55:Plough: 这个问题倒不大
+21:55:Plough: 问题还是我刚才发的那玩意……
+21:56:varna: 那狗屎东西到底是怎么写出来的
+21:56:varna: 难道是某个Perl用户……细思恐极
+21:56:Plough: perl用户会大坨new么……
+21:56:lhanjian: Plough, OOPerl
+21:56:varna: Perl用户管你死活
+21:56:Plough: 23333
+21:56:varna: 万一还是个Moose异端
+21:57:varna: 我们有IV UV PV RV NV AV HV GV
+21:57:Plough: 娇喘都招了些什么样的人才啊……
+21:57:lh_cat: vv
+21:57:varna: 但是我们保证不会有HIV
+21:57:lh_cat: ^^vv<><>BA
+21:57:xxxxxxxx: @豆瓣
+21:58:Plough: 噗，我忘换旗舰了
+21:58:Plough: 算了演习换摩耶
+21:59:varna: 艾滋病的传播途径：血液、性交、母婴、豆瓣
+21:59:Plough: 羽黑随手就能拿个MVP，棒各都抢不过她
+21:59:Plough: 这点倒不错
+21:59:varna: 所以说，舰队的武斗派都是软妹
+21:59:varna: 我都开始认为这是故意设定的了
+21:59:Plough: @キリシマ
+21:59:varna: 雾岛不算
+22:00:varna: 他们自己作死被人当作火控射击试验品，还没带穿甲弹
+22:00:Plough: 233333
+22:00:Plough: 说起来我是不是该加个火控雷达了
+22:00:Plough: 命中+48
+22:00:varna: 不是绫波作死的话雾岛说不定连个闷屁都没有
+22:00:Plough: 高雄来了
+22:01:Plough: 一航战的演技系列，好在是Boss点……
+22:01:Plough: 噗
+22:02:Plough: 羽黑一炮爆了塔姐139点
+22:02:hoxily quit:Quit: Leaving
+22:02:Petrus07 joined channel
+22:02:varna: 毕竟今天是珍珠港，旧编制一航二航那四位就别演了吧……
+22:02:Plough: 制空确保情况下加贺被对面开幕直接撸成中破
+22:02:Plough: 爽不爽
+22:03:varna: 想想主任
+22:03:Plough: ……今天说啥出啥
+22:03:Plough: キリシマ
+22:03:Plough: 早知道出来之前我应该聊聊太太
+22:03:varna: 太太已经达到次男道上位水平
+22:03:varna: 十六万匹马力啊
+22:04:varna: 次男道毕业也不过就是二十万
+22:04:Plough: 利根和加贺泡一晚上
+22:04:Plough: 其他挂明石
+22:07:varna: 估计我周末还能再来发大和
+22:07:Plough: 周末我来发4772
+22:07:Plough: 四只一起赌
+22:10:Plough: 噗，今天我家船磕啥药了
+22:10:Plough: 没制空一打一个暴击
+22:10:varna: http://tieba.baidu.com/p/3456351433 这楼主已经疯了
+22:10:Plough: 233333333
+22:11:lhanjian: 走了
+22:11:lhanjian quit:Quit: Leaving
+22:12:Plough: 对面有大和，上魔王
+22:13:Plough: 对面太太智商真搞，一次撸大井一次撸北上……
+22:14:Plough: *真高
+22:14:varna: 论大和背后那个主炮如何开炮的灵魂画作 http://imgsrc.baidu.com/forum/w%3D580/sign=21f400cecaea15ce41eee00186013a25/7e9ac726cffc1e17a84de27a4990f603728de9ba.jpg
+22:14:Plough: 留了个欧根没打掉
+22:14:varna: 原帖 http://tieba.baidu.com/p/3455822964
+22:14:Plough: ……
+22:16:Plough: 噗
+22:16:Plough: 对面有战神，然后我点了个单纵
+22:16:varna: 大丈夫
+22:17:varna: 己方潜艇都弱爆了
+22:17:Plough: 3-2队，制空确保……
+22:17:Xilzzerts quit:Ping timeout: 250 seconds
+22:18:varna: 对了今天是不是没爆你
+22:19:Plough: 你该去自爆
+22:19:varna: Plough: 爆
+22:19:Plough: varna: 试制51cm三连装爆
+22:20:varna: 51cm三连装……延迟击发电路都救不了这东西的命中
+22:20:varna: 估计第三轮射击的散布跟第一轮没什么差别
+22:20:Plough: 大丈夫，我有火控雷达
+22:20:Plough: 反正命中只看数字
+22:20:varna: 这让我想起以前有国外友人买了劣质五六冲，然后上了个镜，开始校
+22:21:varna: 第一枪打出去了，校校打第二枪，震歪了
+22:21:Plough: 2333333
+22:21:varna: 我不知道他打没打第三枪，还是直接表尺打到一百米了事了
+22:22:lh_mouse: 待会洗澡去
+22:22:Plough: 单横对梯形六潜，然后明石中破了……
+22:22:Plough: 果然明石只能演习么
+22:23:varna: 明石擦边就是重伤，拉去演习吧
+22:23:Plough: 就是演习
+22:23:Plough: 不过光演习有点慢啊
+22:23:Plough: 现在才Lv22
+22:23:varna: 如果说实战的话，秋活期间贴吧有个dalao在E3刷船的时候确实带了明石
+22:24:varna: 演习就这样，不行你扔3-2当老板
+22:24:lh_mouse: 19:17 [Mingw-w64-public] MSYS2 is violating the GPL again
+22:24:lh_mouse: 19:01 Re: [Mingw-w64-public] MSYS2 is violating the GPL again
+22:24:lh_mouse: 什么情况
+22:24:Plough: 估计等不到，我得先练重巡
+22:25:varna: 噗？
+22:31:whatofor quit:Ping timeout: 250 seconds
+22:34:lhanjian joined channel
+22:34:lhanjian: varna, 爆炸
+22:35:lhanjian: 羊驼子要野战？
+22:35:lhanjian: 夜战……
+22:35:varna: 不夜战
+22:35:varna: 正常我一般是十一点左右回去
+22:39:condy quit:Quit: leaving
+22:48:Plough: 碎叫
+22:49:erhandsome quit:Read error: Connection reset by peer
+22:49:Plough quit:Quit: 碎叫
+22:55:lh_mouse: 0.0
+23:01:varna: 弄到个新玩具，回去想想怎么玩
+23:01:varna: 诸君夜间愉快、武运长久
+23:01:varna quit:Quit: leaving
+23:13:erhandsome joined channel
+23:14:iyzsong quit:Quit: bye!
+23:24:T2 quit:Quit: Leaving
+23:47:Petrus07 quit:Read error: Connection timed out
+23:47:Petrus07 joined channel
+23:59:Petrus07 quit:Quit: Leaving.

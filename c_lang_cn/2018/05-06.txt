@@ -1,0 +1,355 @@
+00:06 CyrusYzGTt quit:Read error: Connection timed out
+00:07 CyrusYzGTt joined channel
+00:08 hashjian_l: varna: .啪小姐姐
+00:09 matchray: clang大法好
+00:09 matchray: https://www.youtube.com/watch?v=xtE-f5Bxs2U
+00:09 hashjian_l: matchray: 码睿女装吧
+00:09 varna: 有点头疼
+00:10 matchray: clangd 的人 https://www.youtube.com/watch?v=BvjrZ3QioBI
+00:10 matchray: hashjian_l: 沒有女裝
+00:10 hashjian_l: matchray: 买条裙子
+00:12 hashjian_l: varna: 这么久了，可以看看医生了
+00:16 matchray: 你怎麼改名了
+00:18 hashjian_l: 哪里改名了
+00:18 matchray: hash
+00:19 hashjian_l: 码睿看错了，需要女装就能看正确了
+00:24 hashjian_l: varna: 弄点绿箭的薄荷糖可以缓解
+00:27 metter quit:Ping timeout: 256 seconds
+00:27 metter joined channel
+00:36 varna: hashjian_l: 我看了看协议，感觉之前的想法太糙了，硬造一个轮子也没意义；明天速攻一个demo实现出来看看你那边的东西可能做成什么样子
+00:39 hashjian_l: 协议？
+00:39 hashjian_l: DNS？
+00:39 hashjian_l: DNS的协议好多的
+00:40 \s joined channel
+00:40 varna: 我现在考虑的不是那些了
+00:41 varna: 虽说我感觉很奇怪的一点，不知道是气氛使然还是你们的个人风格
+00:41 varna: 感觉你们并不在意设计到底做成什么样子
+00:43 varna: DNS本身的事情，刚才看了一小圈，觉得就这样吧；现在我转而开始在意结构性的东西
+00:44 \s quit:Ping timeout: 260 seconds
+00:45 hashjian_l: 这个可能是因为没有长期的架构上演进的考量
+00:46 varna: 不完全是
+00:51 varna: 又想了想，真的不好搞得很自然
+00:52 hashjian_l: 主要是不知道东西以后会演化成什么样子，所以就让他随便突变了
+00:55 varna: 不，我的观点，其实是这个系统现有的设计是过分直白的
+00:55 varna: 即使上DDD, 也能搞出领域模型和黏合层来
+00:55 varna: 直觉另论
+00:56 varna: 唉唉
+00:57 varna: 要是这种项目实操过一回，也许就能三四成了解哪里该填实、哪里该留白了
+00:57 hashjian_l: 唉什么
+00:57 varna: 现在我再多说都是放屁
+00:57 hashjian_l: 可是同一个项目不可能做两次
+00:57 varna: 实操不等于从零做起……这是个逻辑性的问题
+01:00 hashjian_l: 即便是思考了这么多，我依然对接下来架构该怎么演进没有大概的思路
+01:00 varna: 和架构演进无关
+01:00 varna: 现有的东西已经够返工喝一壶了
+01:01 hashjian_l: 是的
+01:01 varna: 直白地说，现在这套服务，仅仅是把物理地存在的概念直接连起来
+01:01 hashjian_l: 当代码里充满“这东西设计的不对，不过现在没出问题，那就别动了”
+01:01 varna: 我不是说legacy
+01:01 hashjian_l: 就已经死了
+01:01 varna: legacy是可以控制的
+01:01 varna: 也可以适当防腐处理
+01:02 hashjian_l: 边直播魔兽边说
+01:02 varna: 算了，我自己先想想
+01:02 hashjian_l: https://www.douyu.com/2881221
+01:06 sixand joined channel
+01:06 hashjian_l: 不想打了
+01:06 hashjian_l: 哎
+01:09 hashjian_l: https://v.qq.com/x/page/u0639mi3tjp.html
+01:09 hashjian_l: varna: 大多数编程，不都是把“现实世界中存在的概念直接搬到代码里么”
+01:11 hashjian_l: varna: 然后羊驼子就点开了知乎
+01:12 varna: hashjian_l: 你被误导了
+01:13 varna: 如果设计是这么搞的，我会比较愿意赌这种系统在相对密集的业务迭代下活不过半年
+01:14 varna: btw 别告诉我你看知乎这种东西都没法一心二用三用……
+01:14 hashjian_l: 我的脑子只能可以来回调度，但是不能迫真并行
+01:15 varna: 分成一拍一拍的就好了
+01:19 hashjian_l: 我都怀疑系统会活的比项目久
+01:19 hashjian_l: 系统活得比产品久
+01:22 varna quit:Ping timeout: 263 seconds
+01:24 whocares_2_ joined channel
+01:24 whocares_2 quit:Ping timeout: 260 seconds
+01:31 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/ph/va_109754.jpg@596w_1l.jpg
+01:31 yonka quit:Remote host closed the connection
+01:35 hashjian_l: cleamoon_: 绅士来了
+01:35 hashjian_l: cleamoon_: 我猫要是长成这样就麻烦了
+01:44 hashjian_l: 莫名其妙想喝酒
+01:50 hashjian_l: cleamoon_: 
+01:50 matchray: hashjian_l: 長成這樣不如吃了
+01:59 hashjian_l: matchray: 喵喵不能吃！
+02:04 sixand quit:Remote host closed the connection
+02:11 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+02:14 cleamoon_: hashjian_l: 喝喝喝
+02:14 cleamoon_: 这样多好
+02:14 cleamoon_: 有手感
+02:24 hashjian_l: 手感？
+02:25 hashjian_l: 可惜病了不能喝酒
+02:26 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+02:44 cleamoon_: hashjian_l: 感冒？
+02:44 cleamoon_: 胖喵抱起来舒服
+02:47 hashjian_l: 那倒是
+02:47 hashjian_l: 老毛病啊
+02:47 hashjian_l: 肉肉的喵
+03:09 matchray: 胖貓抱不動
+03:27 yonka joined channel
+03:31 yonka quit:Ping timeout: 256 seconds
+04:50 yonka joined channel
+04:54 yonka quit:Ping timeout: 256 seconds
+05:53 cleamoon_: 不是何以解忧唯有杜康吗
+05:54 cleamoon_: 让猫抱
+09:21 yonka joined channel
+09:22 wlemuel joined channel
+09:23 yonka_ joined channel
+09:23 yonka quit:Read error: Connection reset by peer
+10:59 cc joined channel
+11:19 iyzsong joined channel
+11:21 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+11:25 yangwang1999 joined channel
+11:28 wlemuel joined channel
+11:30 yangwang1999 quit:Remote host closed the connection
+11:30 yangwang1999 joined channel
+11:35 varna joined channel
+11:37 varna: 噗叽啪
+11:43 Mokou: 羊驼先辈脱粪中
+11:52 whocares_2_ quit:Read error: Connection reset by peer
+11:52 whocares_2 joined channel
+11:55 varna: Mokou: 我哪里像先辈啊？
+11:56 Mokou: 自我论证，请
+12:06 varna: 好啊来啊？
+12:08 Mokou: varna: 对了，什么剑21出了
+12:09 varna: 嗯，但其实我一直不看这个系列
+12:09 Mokou: 其实我也 不看
+12:21 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+12:22 yonka_ quit:Remote host closed the connection
+12:24 varna quit:Quit: Reconnecting
+12:25 varna joined channel
+12:31 varna: (｡･ω･)ﾉ高清葛温德林测试版
+12:33 varna: 看起来必须等到下周才行
+12:33 yangwang1999 quit:Remote host closed the connection
+12:34 wlemuel joined channel
+12:46 condy quit:Quit: Airi
+12:46 condy joined channel
+12:47 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+12:48 varna: (｡･ω･)ﾉ延迟战士的胜利
+12:48 varna: 黄蜂处决带走一个特大剑猛男
+12:55 varna: 驲，恶魔爪痕……好脏
+12:55 varna: draw
+12:57 varna: 镰刀碎步小姐姐
+12:57 varna: 穿得好可爱
+12:57 varna: 最后一场，打完吃饭
+12:58 varna: MD 延迟战士……
+13:07 cc joined channel
+13:21 Mokou: https://wx1.sinaimg.cn/mw690/006XuVEhly1fqshijv3u2j30h30en427.jpg
+13:26 cleamoon_ quit:Quit: Connection closed for inactivity
+13:55 Mokou: https://wx4.sinaimg.cn/mw690/006XuVEhgy1fqqww4gny9j30jg0wcwfb.jpg 台湾
+13:57 hashjian_l: Mokou: 现充来了
+13:58 Mokou: 你们都是线虫
+13:58 NebulaMoe joined channel
+14:00 Mokou: https://wx4.sinaimg.cn/mw690/006XuVEhly1fqopulex0qj30go0kugly.jpg 手势
+14:10 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+14:18 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+14:21 iyzsong quit:Read error: Connection reset by peer
+14:25 iyzsong joined channel
+14:37 yangwang1999 joined channel
+15:11 cc joined channel
+15:27 zyd joined channel
+15:27 zyd quit:Client Quit
+15:31 yangwang1999 quit:Ping timeout: 240 seconds
+15:37 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+15:47 wlemuel joined channel
+15:47 varna: (｡･ω･)
+15:51 wlemuel quit:Max SendQ exceeded
+15:56 cc joined channel
+15:58 lh_mouse joined channel
+16:03 yangwan18 joined channel
+16:18 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+16:34 Mokou: 噗叽啪
+16:35 lh_mouse: 册那。
+16:42 varna: 噗叽啪
+16:44 varna: 遇到一个格斗战不及格的跑戳爱好者
+16:46 varna: 被直剑平砍连了1k+血的直剑侠……
+16:48 varna: 哈哈哈哈一个拔网线动作不够快的太阳骑士
+16:50 varna: 卧槽，黑什么剑
+16:50 varna: 一个无锁背刺把我带走了
+16:50 cc joined channel
+16:58 varna: 黑骑士大剑猛男
+16:58 varna: 应该搏命单反好了
+17:00 varna: 毒瘤蛤曲
+17:01 yangwang1999 joined channel
+17:02 yangwan18 quit:Ping timeout: 240 seconds
+17:08 yangwan32 joined channel
+17:10 yangwang1999 quit:Ping timeout: 240 seconds
+17:16 cc quit:Quit: My MacBook Air has gone to sleep. ZZZzzz…
+17:22 varna quit:Ping timeout: 256 seconds
+17:28 varna joined channel
+17:33 hashjian_l: varna: 约战
+17:34 lh_mouse: [17:33:14] 18<27hashjian_l18> varna: 约×
+17:38 hashjian_l: lh_mouse: 你是假的小耗
+17:39 * lh_mouse slaps hashjian_l around a bit with a large trout
+17:43 yangwan32 quit:Ping timeout: 260 seconds
+17:48 yangwang1999 joined channel
+18:08 hashjian_l: varna: 罪恶的法兰不死人接受罗斯理科的审判！
+18:09 lh_mouse quit:Read error: Connection reset by peer
+18:09 lh_mouse joined channel
+18:12 lh_not_bot quit:Ping timeout: 248 seconds
+18:13 hashjian_l: Stevearzh: 老司机你打到哪儿了
+18:13 lh_not_bot joined channel
+18:14 lh_not_bot quit:Client Quit
+18:15 lh_not_bot joined channel
+18:16 varna: hashjian_l: 不死队群众懒得理你们洛斯里克这种搞不出漂亮伪娘的基佬国并出去买晚饭吃
+18:17 condy quit:Quit: Airi
+18:17 condy joined channel
+18:22 lh_mouse: NSFW NSFW NSFW   https://smallyellowbook.github.io/
+18:23 wlemuel joined channel
+18:29 lh_ideapad joined channel
+18:46 condy: 口味有点清淡
+18:46 condy: 不喜
+18:48 varna: 口味有点清淡
+18:48 varna: 不喜
+18:50 Mokou: 口味有点清淡
+18:50 Mokou: 不喜
+18:50 Mokou: （二次便乘）
+18:55 varna: 救世啊
+19:00 yangwan24 joined channel
+19:00 yangwang1999 quit:Read error: Connection reset by peer
+19:05 yonka joined channel
+19:09 yonka quit:Ping timeout: 260 seconds
+19:29 hashjian_l: varna: 干一票？
+19:29 varna: hashjian_l: 这个点我不下副本，太卡
+19:29 hashjian_l: varna: 黑魂对战
+19:30 varna_ joined channel
+19:30 varna quit:Disconnected by services
+19:30 varna_ is now known as varna
+19:30 varna: hashjian_l: 这个点我不下副本，太卡
+19:31 hashjian_l: varna: 黑魂啊
+19:31 varna: 那就更懒了
+19:32 hashjian_l: uccu
+19:32 hashjian_l: 恶臭不堪
+19:32 varna: 讲道理，多数时候我不太喜欢跟熟人联机啊
+19:32 hashjian_l: uccu
+19:34 hashjian_l: 23333
+19:41 _31N108E joined channel
+19:42 yangwang1999 joined channel
+19:43 yangwan24 quit:Ping timeout: 260 seconds
+19:44 yangwang1999 quit:Read error: Connection reset by peer
+19:45 yangwang1999 joined channel
+19:49 iyzsong quit:Read error: Connection reset by peer
+19:51 hashjian_l: condy: 污
+19:51 condy: 啥东西污
+19:53 yangwan46 joined channel
+19:53 yangwang1999 quit:Ping timeout: 260 seconds
+19:53 iyzsong joined channel
+19:53 Mokou: https://www.weibo.com/tv/v/GeEMF9hbd?fid=1034:3aebd8f0f1772d95e728ce46ed2e6e28 迫真射击部
+19:55 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+19:58 yonka_ joined channel
+19:58 hashjian_l: Mokou: 哈哈哈哈哈哈哈恶臭不堪
+19:59 hashjian_l: varna: 羊驼子你的思考怎么样了
+20:00 wlemuel joined channel
+20:00 wlemuel quit:Client Quit
+20:03 varna: hashjian_l: 啊，你还好奇这个？
+20:03 hashjian_l: ？
+20:04 hashjian_l: 你不是说想想吗？然后就没下文了
+20:04 wlemuel joined channel
+20:05 varna: hashjian_l: 我觉得昨天我已经把主要的事情都说清楚了，剩下只需要考虑究竟是不做还是不做……
+20:05 hashjian_l: 那还是不做的
+20:05 varna: 你们的架构不动，再多想都没用啊
+20:06 varna: 没必要把精神一厢情愿地花在没法推进的东西上
+20:06 hashjian_l: 如果有必要把proxy抽出来了，那么架构就可以上新了
+20:07 varna: 怎么说呢，看你的说法，其实你的架构变更是被动的
+20:07 varna: 我倒不是鼓励过度设计
+20:08 varna: 但至少研发应该考虑，他们的设计离理想有多远
+20:08 varna: 不然说什么都是没法举一反三的挤牙膏过程
+20:09 hashjian_l: 堕落了堕落了
+20:15 varna: 现充是这样的
+20:18 hashjian_l: 每天宅家里还现充
+20:18 hashjian_l: 你才是现充，把小姐姐天天挂嘴边上
+20:19 lh_mouse: 有家就是现充。
+20:20 hashjian_l: 谁没有家
+20:20 lh_mouse: 反正上海没有。
+20:20 varna: 我哪里挂嘴上了
+20:20 _31N108E_ joined channel
+20:20 _31N108E_ quit:Remote host closed the connection
+20:21 hashjian_l: varna: 动不动就是 这样不行，不然自家小姐姐会吃了我
+20:21 varna: emmmmmm uccu
+20:21 varna: 吃了是shenmegui
+20:22 varna: 而且讲道理啊，你撩妹比我勤快多了
+20:23 _31N108E quit:Ping timeout: 260 seconds
+20:24 hashjian_l: 我勤快个啥，纯粹是无聊了把微信上所有人随机胡扯
+20:24 NebulaMoe quit:Remote host closed the connection
+20:24 hashjian_l: condy: coney撩了小姐姐没
+20:27 condy: hashjian_l: 你 /whois 看一下
+20:27 hashjian_l: ？
+20:27 hashjian_l: condy: 快来看啊！coney变现充了！！！！！
+20:28 varna: coney - condy
+20:28 varna: 可以啊
+20:28 varna: 等下，这个小姐姐是不是女装大佬
+20:28 _31N108E joined channel
+20:28 varna: 如果不是的话，condy还是可以变成女装子的
+20:31 hashjian_l: condy现充！无耻的承认了！
+20:34 Mokou: 你们这群人一个个都变了现充
+20:34 Mokou: 真可怕
+20:34 hashjian_l: 脑壳坏了脑壳坏了
+20:35 hashjian_l: 我是死宅
+20:35 hashjian_l: Mokou: 你这每天和妹子游山玩水打炮的现充
+20:35 Mokou: 完全没和妹子游山玩水打炮
+20:36 Mokou: 你不要听风是得雨
+20:36 CyrusYzGTt joined channel
+20:37 hashjian_l: 空穴来风未必无因，那就简略为和妹子打炮了
+20:37 hashjian_l: 吧
+20:37 Mokou: 并没有
+20:37 hashjian_l: 并没有中出？
+20:37 Mokou: 打炮是不可能打炮的，这辈子都不可能打炮的
+20:38 hashjian_l: 那就是揉舔撸了
+20:38 Mokou: 不存在的
+20:39 hashjian_l: 保持了纯的男女关系
+20:42 hashjian_l: 哎哎哎
+20:42 hashjian_l: 频道里充满了淫靡的气息
+20:42 _31N108E quit:Quit: Mutter: www.mutterirc.com
+20:45 yangwan46 quit:Read error: Connection reset by peer
+20:50 yangwan89 joined channel
+20:51 varna quit:Ping timeout: 268 seconds
+20:51 varna joined channel
+20:52 varna: lhj怕是春了……
+20:52 Mokou: https://wx2.sinaimg.cn/mw690/6dd57921ly1fr1wot1s07j20hs0zk48b.jpg 弃坑号
+20:52 hashjian_l: 我妈给我的？？！！
+20:52 hashjian_l: varna: 啥意思
+21:09 varna: 救 世 啊
+21:10 hashjian_l: 我只是不想动，又无聊
+21:11 Mokou: 我才知道大法的屏幕直接用热风枪吹下来就能换……
+21:14 NebulaMoe joined channel
+21:20 _31N108E joined channel
+21:32 _31N108E quit:Quit: Mutter: www.mutterirc.com
+21:33 _31N108E joined channel
+21:37 iyzsong: 2333
+21:53 _31N108E quit:Quit: Mutter: www.mutterirc.com
+21:53 _31N108E joined channel
+21:54 _31N108E quit:Client Quit
+22:08 fly_ joined channel
+22:14 yangwang1999 joined channel
+22:15 yangwan89 quit:Ping timeout: 256 seconds
+22:16 AndChat611184 joined channel
+22:17 AndChat611184 quit:Client Quit
+22:17 AndChat611184 joined channel
+22:25 hashjian_l: varna: 要是有什么软件工程的书可以细致地思考这个问题就好了
+22:25 hashjian_l: 不过就算有，我也不会把它放到高优先级去看吧
+22:31 lh_ideapad quit:Remote host closed the connection
+22:38 hashjian_l: 堕落了堕落了
+22:40 AndChat611184 quit:Quit: Bye
+22:42 hashjian_l: 左手一把LVOA，右手一把M4，打遍天下
+22:56 hashjian_l: 入手黑魂2
+22:59 yonka_ quit:Remote host closed the connection
+22:59 fly_ quit:Remote host closed the connection
+23:00 yonka joined channel
+23:12 varna quit:Ping timeout: 256 seconds
+23:18 lh_cat joined channel
+23:19 lh_mouse quit:Ping timeout: 268 seconds
+23:41 wlemuel quit:Quit: My Baby has gone to sleep. ZZZzzz…
+23:41 Stevearzh: hashjian_l: 艹到女法师了，艹完就把人干掉了
+23:42 hashjian_l: Stevearzh: .h可以不死的
+23:42 Stevearzh: 我看第一个第二个好像都是要干架的，第三个忘了
+23:43 Stevearzh: 血色公爵还没和我打昆特牌就上吊了
+23:44 hashjian_l: 噗噗噗
+23:45 hashjian_l: 巫师3不错吧
+23:45 iyzsong quit:Quit: ZNC 1.6.5 - http://znc.in
+23:46 Stevearzh: 唉，好多选项都选后悔了，又不想读档重来了。。
+23:49 Stevearzh quit:Quit: ZZZzzz…
+23:50 Stevearzh joined channel

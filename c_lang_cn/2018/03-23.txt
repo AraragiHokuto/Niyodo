@@ -1,0 +1,434 @@
+00:00 Mokou: 碰瓷，请
+00:01 varna: 这时候应该先跟妹子聊聊
+00:01 varna: 「那么请问你的年龄是」
+00:01 cleamoon_: 495
+00:02 Mokou: 是吸血鬼
+00:02 Mokou: varna: 对了
+00:03 Mokou: 我入了实体的映姬陪睡CD
+00:03 varna: orz
+00:03 cleamoon_: orz
+00:03 varna: uuz那部的vocal很好，能拿到的话也推荐
+00:04 cleamoon_: uuz那个越听越冷
+00:04 varna: 主要听歌
+00:04 varna: 改编曲的功力很赞
+00:05 cleamoon_: 还有歌？我都忘了...
+00:05 varna: 每部都有歌
+00:06 varna: 以前我听着uuz CD附的歌玩无冬2的资料片《背叛者的面具》，感觉和气氛超契合
+00:07 varna: 在黑岛和bio社早期的dnd游戏里，背叛者面具的剧情和气氛营造我觉得也是短篇中的超一流
+00:16 Mokou: varna: 日亚上最后一张被我拿下了
+00:16 varna: emmmmm
+00:16 varna: (｡･ω･)现充居然还听陪睡CD
+00:16 varna: (｡･ω･)真可怕
+00:17 varna: (｡･ω･)姐姐姐姐蕾姆蕾姆
+00:25 varna: _(:з」∠)_躺了，明天还要撕逼
+00:30 varna quit:Ping timeout: 276 seconds
+00:41 jimmylu2333-fedo joined channel
+00:46 jimmylu2333-fedo quit:Ping timeout: 240 seconds
+00:49 jimmylu2333-fedo joined channel
+02:32 jimmylu2333-fedo quit:Ping timeout: 240 seconds
+03:31 Mokou: hanjian_l: tim我跑起来而
+03:31 Mokou: hanjian_l: tim我跑起来了
+03:31 Mokou: aur里面就有
+03:50 matchray: tim是什么？three instruction machine?
+03:54 Mokou: 腾讯的新产品
+03:54 Mokou: 比QQ干净很多
+05:29 cleamoon_: Mokou: 这个？  https://aur.archlinux.org/packages/wine-tim/
+06:16 Mokou: cleamoon_: https://aur.archlinux.org/packages/deepin-wine-tim/
+08:09 iyzsong joined channel
+08:38 iyzsong: hello
+08:44 Dove joined channel
+08:54 lh_mouse joined channel
+09:39 lh_ideapad joined channel
+10:21 lh_ideapad quit:Ping timeout: 256 seconds
+10:27 lh_ideapad joined channel
+10:52 testtesttest joined channel
+11:19 testtesttest quit:Quit: testtesttest
+11:20 testtesttest joined channel
+11:26 FrankHB joined channel
+11:44 vito_ joined channel
+11:49 vito_ joined channel
+13:16 hanjian_l: 我一直都在用tim
+13:25 matchray: 可以和qq互通？
+13:27 lh_mouse: https://gist.github.com/lhmouse/135d99fba3da18ca9a0bf2d9caa8367a    这个能看吗？
+13:27 lh_mouse: DFA 可解析的。
+13:28 matchray: true/false keyword差評
+13:28 matchray: 沒有True/False
+13:29 lh_mouse: 大写去死。
+13:29 lh_mouse: 如果不支持中缀，这个是正则文法应该没什么问题。
+13:30 matchray: True/False必須是 data constructor
+13:30 matchray: keyword 很浪費的
+13:30 matchray: data Bool = False | True  -- Defined in ‘GHC.Types’
+13:41 lh_mouse: updated
+13:41 lh_mouse: 目测 LL(1) 可解。
+13:46 matchray: 是你設計的語言？
+13:48 matchray: null 也很醜
+13:48 matchray: 我難以接受它大寫
+13:48 matchray: 我難以接受它不大寫
+13:49 matchray: ++ 差評
+13:58 FrankHB: 辣鸡keyword。
+13:58 FrankHB: 大写滚粗。（你也配用大写？
+14:01 lh_mouse: 实际现在这个是没有 keyword 的。
+14:01 lh_mouse: null true false 都是 literal 。
+14:02 lh_mouse: 每一种 statement 都是前缀式的。
+14:02 lh_ideapad: if(foo){ } 是 if-statement，但是也没禁止 var if = 42;  (if = 3);
+14:03 lh_ideapad: keyword 只是为了 tokenizer 方便才创造的，实际并不一定需要。
+14:03 lh_ideapad: if = 3; 这个就 syntax error 了。
+14:08 matchray: FrankHB: 非大写滚粗
+14:08 matchray: 你們這羣不用Haskell的人
+14:10 FrankHB: HASKELL：蛤？
+14:10 FrankHB: statement滚粗。
+14:10 matchray: & | ^ 這麼多寶貴的符號被你拿去operator了
+14:10 FrankHB: (foo if)都不兹瓷，aji。
+14:10 matchray: 以後自定義操作符怎麼辦
+14:11 matchray: ternary 浪費
+14:11 FrankHB: (define & aji) ;打我啊
+14:11 FrankHB: infix滚回preprocessor。
+14:12 matchray: infixl 0 ?\ninfixl 1 :
+14:12 matchray: True ? x : _ = x
+14:12 matchray: False ? _ : y = y
+14:13 matchray: data Cond a = a : a 
+14:13 matchray: + lazy evaluation
+14:14 lh_ideapad: C 里 ternary expression 是 rvalue 。
+14:14 lh_ideapad: C艹 没糊干净。
+14:14 matchray: 垃圾{l,pr,x}value
+14:15 lh_ideapad: lua php js 这种有个大问题。 表达式的 lvalueness 是上下文相关的。
+14:15 lh_ideapad: prprvalue
+14:15 lh_ideapad: print a['b']; // null
+14:15 lh_ideapad: a['b'] = 'meow'; // null = 'meow';  蛤？ 
+14:16 matchray: js 的lvalueness?
+14:16 lh_ideapad: 一样的问题。
+14:17 lh_ideapad: 对一个 null 的 lvalue 赋值的对一个 null 的 rvalue 赋值的语义并不一样。
+14:17 matchray: what is a
+14:17 lh_ideapad: an object
+14:18 FrankHB: prprvalue...
+14:18 FrankHB: aji reference
+14:18 lh_ideapad: C艹 的 map 的 operator[] 总是返回一个不是 null 的左值，所以就没这问题了。
+14:22 matchray: 哦， 你是說如果 a['b'] == null
+14:22 matchray: 賦值會出問題
+14:22 testtesttest quit:Quit: testtesttest
+14:22 testtesttest joined channel
+14:23 lh_ideapad: 因为 null 左值和 null 右值不一样。
+14:23 lh_ideapad: $a = 1; // assignment to a null lvalue creates the variable.
+14:23 lh_ideapad: +$a = 1; // assignment to a null rvalue results in an error.
+14:26 matchray: 不會php
+14:26 lh_ideapad: print $a; print isset($a); // reading a null value does not create the variable.
+14:29 lh_ideapad: 就一个 print 会不会有啥看不懂的。
+14:46 lh_ideapad: geordi, << 0X20
+14:46 geordi: 32
+14:47 lh_ideapad: geordi, << 0X20P3
+14:47 geordi: 256
+14:52 lh_mouse: 看看还缺啥。
+14:52 lh_mouse: https://gist.github.com/lhmouse/135d99fba3da18ca9a0bf2d9caa8367a
+14:54 matchray: 沒有block comment
+14:54 matchray: comment is not statement
+14:55 matchray: foo(int a /* comment */)  # 你可以用textDocument/hover 獲得a的註釋
+14:56 matchray: arbitrary operator precedence難的話學習ocaml用首字符定義precedence
+14:56 matchray: && 這種沒用的東西
+14:56 matchray: (&&) :: Bool -> Bool -> Bool  -- Defined in ‘GHC.Classes’
+14:56 matchray: infixr 3 &&
+14:57 FrankHB: aji &&
+14:58 matchray: function -> fn
+14:58 matchray: 更好的是不區分functio 和variable
+14:58 FrankHB: xvalue怎么犯二不提，不区分出lvalue基本上要么残废要么zz。
+14:59 FrankHB: 要么就根本不兹瓷reference，要么就见到什么都是reference。
+14:59 matchray: do-while 垃圾
+14:59 matchray: 浪費了 do 用於monad
+14:59 FrankHB: do-while显然zz，我在C艹里都屏蔽掉了。
+14:59 FrankHB: 但原因不是什么肤浅的monad。
+14:59 FrankHB: 而是阻碍PTC。
+15:00 FrankHB: monad也是Robert Harper就能挂的zz了，不需要我多费事。
+15:00 FrankHB: 反正不如;。
+15:01 matchray: ???
+15:01 FrankHB: Haskell本身还有个zz就是默认lazy，搞得王根都能婊也是没谁了。
+15:01 FrankHB: Robert Harper（大意）：一个semicolon就能搞定的东西搞什么辣鸡monad。
+15:01 matchray: 你可以strictpragma
+15:02 matchray: 一個semicolon當然搞不定
+15:02 FrankHB: 反正我的语言里;的语义是可以直接用对象语言糊出来的，不用monad那么罗嗦的变通。
+15:03 FrankHB: 把那么坨傻大个类型系统放在依赖的顶层，表达能力已经叒鸡了。
+15:33 FrankHB: 说monad在这个问题上小题大做当然是有问题的。实际上用monad这里直接起作用的也只是monad law而已，甚至换个untyped的玩意儿仍然可以成立。
+15:38 Dove: ORZ，耻球又在玩什么？
+15:38 Dove: 算了，你说了我也听不懂，我还是弹弹琴。
+15:39 lh_mouse: all variables are passed by reference.
+15:41 Dove: orz
+15:53 FrankHB: Just simple: Haskell aji.
+15:53 FrankHB: 逃避first-class side effect的做法使它实际上根本就没有好好地把计算本身给抽象出来。
+15:54 FrankHB: Monad law在元语言里也对effect无可奈何。
+15:54 FrankHB: 还不一样要钦定pure？
+15:55 FrankHB: 说白了就是一坨：evaluation strategy。一股脑搞Haskell的恐怕很多是对rewriting system和abstract machine完全没概念的。
+15:55 FrankHB: lh_mouse: Crap design.
+15:55 FrankHB: 把reference干掉都砍不出个safe subset了？
+15:56 FrankHB: And who hold ownership?
+15:57 FrankHB: Why introduce administrative cost *besides* GC?
+15:57 FrankHB: 顺便学习gayva primitive + xjb box好榜样？
+16:17 hanjian_l: 求救求救 函数调用过程中，一个参数的结构体域被修改了，是怎么回事？
+16:17 hanjian_l: 用gdb的watch也侦测不到这个修改
+16:17 hanjian_l: lh_mouse: matchray FrankHB 
+16:17 hanjian_l: 伙计们求救
+16:18 hanjian_l: c->peer 调用前是0x7f1b480019a0 ，然后在被调用函数里，就变成c->peer 0x558c19d68210 了
+16:19 hanjian_l: https://www.irccloud.com/pastebin/2e1foEJF/
+16:21 testtesttest quit:Quit: testtesttest
+16:21 testtesttest joined channel
+16:23 hanjian_l: 神特么结构体item变了
+16:23 hanjian_l: 重新编译项目代码
+16:24 lh_ideapad: hanjian_l, watch -l c->peer
+16:24 hanjian_l: lh_ideapad: 这么我做了，无效
+16:24 hanjian_l: 不过问题已经解决了
+16:25 lh_ideapad: 你加 -l 了吗。
+16:25 hanjian_l: 加了
+16:25 hanjian_l: 我还没傻到这个程度
+16:25 hanjian_l: downstream = 0x0, upstream = 0x0, peer_name = 0x558c19e52770 ""//
+16:25 hanjian_l: downstream = 0x0, upstream = 0x0, authority = 0x558c19e52770, peer_name = 0x558c19d68210 "157.119.232.82:8000"//
+16:26 hanjian_l: 这个地方迷之消失了一个field
+16:28 hanjian_l: 不知道是编译器的原因还是调试器的原因
+16:37 lh_mouse: matchray, https://gist.github.com/lhmouse/135d99fba3da18ca9a0bf2d9caa8367a/revisions
+16:45 lh_ideapad quit:Ping timeout: 256 seconds
+16:51 lh_ideapad joined channel
+17:07 Dove quit:Read error: Connection reset by peer
+17:31 testtesttest quit:Ping timeout: 240 seconds
+18:03 lh_ideapad: geordi, << string("hello").compare(4. 3, "world");
+18:03 geordi: error: expected ')' before numeric constant (fix known)
+18:03 lh_ideapad: geordi, << string("hello").compare(4, 3, "world");
+18:03 geordi: -8
+18:03 lh_ideapad: geordi, replace 4 with 5
+18:03 geordi: -5
+18:03 lh_ideapad: geordi, replace 5 with 6
+18:03 geordi: terminated by out_of_range: basic_string::compare: __pos (which is 6) > this->size() (which is 5)
+18:12 FrankHB quit:Ping timeout: 260 seconds
+18:15 FrankHB joined channel
+18:18 FrankHB quit:Client Quit
+18:30 NebulaMoe joined channel
+18:31 lh_ideapad: https://github.com/lhmouse/asteria/stargazers
+18:31 lh_ideapad: 肉牛跟踪窝！
+18:36 NebulaMoe quit:
+18:43 NebulaMoe joined channel
+18:56 NebulaMoe quit:Remote host closed the connection
+18:56 NebulaMoe joined channel
+19:01 NebulaMoe_ joined channel
+19:02 NebulaMoe_ quit:Remote host closed the connection
+19:03 NebulaMoe quit:Ping timeout: 240 seconds
+19:17 NebulaMoe joined channel
+19:36 tiimmm joined channel
+20:08 tiimmm quit:Quit: Leaving
+20:30 Youmu: 为什么你的企业信息还是ZJU！
+20:30 Youmu: 该换啦！
+20:33 * lh_mouse slaps Youmu around a bit with a large trout
+20:35 cleamoon_: 以后自己开个公司就叫ZJU
+20:43 NebulaMoe_ joined channel
+20:43 NebulaMoe quit:Read error: Connection reset by peer
+20:46 NebulaMoe_ is now known as NebulaMoe
+20:53 jimmylu2333-fedo joined channel
+20:57 NebulaMoe quit:Remote host closed the connection
+21:14 lh_ideapad quit:Remote host closed the connection
+21:19 cleamoon_: https://usercontent.irccloud-cdn.com/file/b0en7mRN/1.jpg
+21:53 jimmylu2333-fedo quit:Ping timeout: 240 seconds
+21:54 Dove joined channel
+21:57 Dove: 2333
+21:57 Dove: topic真是大手笔
+21:58 varna joined channel
+21:59 Dove: varna: 我正在夸topic真是大手笔
+22:00 lh_mouse: varna, 
+22:00 lh_mouse: 讨论一个问题。
+22:00 lh_mouse: 我的设定，函数参数总是 pass by ref 的，而形如 var a = b; 或 a = b; 是深拷贝。
+22:00 lh_mouse: 这样有什么坑么。
+22:01 varna: 我想想
+22:01 varna: 补问一下，返回值呢
+22:02 lh_mouse: 呀，还真给忘了。
+22:03 lh_mouse: 不过这不是问题。
+22:03 lh_mouse: 我想的策略是引用计数的。
+22:03 lh_mouse: 所以，返回值并没有区别。
+22:03 lh_mouse: 如果返回形参就是引用，返回局部对象也是引用，但是不会是 dangling reference 。
+22:04 varna: 那我觉得对一个解决业务问题的语言来说，这个味道不坏
+22:04 lh_mouse: 谢谢。
+22:04 lh_mouse: 肉牛跟踪窝。
+22:04 lh_mouse: https://github.com/lhmouse/asteria/stargazers
+22:04 varna: 全引用的话，连人肉逃逸分析都没法做；全传值的话，rust化不可避
+22:05 varna: 小语言也不会做那么完备
+22:05 lh_mouse: 对。
+22:05 lh_mouse: js php 这种一会传值一会传引用，没什么一致性。
+22:05 lh_mouse: varna, https://github.com/lhmouse/asteria/blob/master/doc/syntax.txt
+22:06 lh_mouse: 大概想法是弄一个 C-like 的方言。
+22:06 lh_mouse: 中缀式完全用逆波兰可解吗？
+22:07 varna: 可解
+22:07 lh_mouse: 不考虑中缀式的优先级问题，上面的文法是完全的 III 型文法。
+22:07 cleamoon_: 全引用总觉得危险
+22:07 varna: 不过严格的中缀式是二元算符限定的
+22:08 varna: 三元算符OK么
+22:08 lh_mouse: 中缀式的想法，我是想先当连续中缀式解析掉，最后再管优先级问题。
+22:08 lh_mouse: ?: 么。
+22:08 varna: （尤其如果你不想做currying的话
+22:08 varna: 对
+22:08 lh_mouse: 当 postfix 解析的，大概想了下，应该洞。
+22:08 lh_mouse: 应该没事。
+22:08 lh_mouse: expression ::=
+22:08 lh_mouse: 	subexpression | prefix-expression | lambda-expression | infix-or-postfix-expression
+22:08 lh_mouse: infix-or-postfix-expression ::=
+22:08 lh_mouse: 	( literal | identifier ) (infix-trailer | postfix-trailer | ternary-trailer )
+22:09 lh_mouse: 这里有个 ternary-trailer 。，
+22:09 lh_mouse: ternary-trailer ::=
+22:09 lh_mouse: 	"?" expression ":" expression
+22:09 varna: 那就洞一下可解，也好
+22:09 lh_mouse: 这里不完整。
+22:09 lh_mouse: 中间的 expression 是非 greedy 的。没写。
+22:09 lh_mouse: else-statement 单列了，词法上不做限定了，丢给语法去弄。
+22:10 lh_mouse: 我想了下，III 型文法解析不了这个。
+22:10 lh_mouse: 所以现在除了 expression-statement 以外每种 statement 都有一个起始符，包括 label-statement 。，
+22:11 lh_mouse: 然后手写个 LL(1) 就可解。
+22:11 lh_mouse: tokenizer 可能费点事。
+22:11 varna: 嫌自动生成的太臭而长？
+22:12 lh_mouse: 怎么自动生成？ yy_* ？
+22:12 varna: +
+22:12 lh_mouse: 听过没用过。
+22:12 varna: tokenizer和parser的自动生成总是打包用的
+22:12 lh_mouse: 那东西叫啥来着。
+22:12 varna: lex/flex
+22:12 varna: yacc/bison
+22:12 lh_mouse: 窝看看。
+22:12 lh_mouse: Yacc (Yet Another Compiler-Compiler) is a computer program for the Unix operating system developed by Stephen C. Johnson. It is a Look Ahead Left-to-Right (LALR) parser generator, 
+22:13 Dove: 自动生成，听起来很NB的样子。
+22:13 lh_mouse: hmm  上面的文法是 DFA 可解的，窝手写个吧。
+22:13 varna: emmmm
+22:13 lh_mouse: Dove, gdb 用了这货，然后炸了。
+22:13 Dove: 2333
+22:13 lh_mouse: https://sourceware.org/bugzilla/show_bug.cgi?id=21057
+22:13 varna: lex/yacc工具链的接口很烂
+22:14 lh_mouse: tokenizer 真正的问题是输入流的状态太多。
+22:14 varna: 我就不推荐parsec系的邪教了
+22:15 lh_mouse: 如果所有输入都是连续的完整的内存块，就省事了。
+22:15 varna: 毕竟风格离你偏好太远
+22:15 lh_mouse: 嘛。
+22:20 GreyHound joined channel
+22:23 Dove: 羊驼子居然这么晚来了
+22:24 Dove: 哎尼玛我睡觉去了
+22:25 Dove: 诸君晚安，夜间愉快。
+22:25 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:27 varna: cleamoon_: 不行，看打精灵大门那关笑抽了
+22:28 hanjian_l: varna: 刷了不少箱子
+22:28 cleamoon_: varna: 毒奶他们也在2v2和1v1，看了他们打，我觉得我自己打得还好嘛
+22:28 varna: hanjian_l: 我拿到面具试戴之后万念俱灰地下线了
+22:29 varna: 真姬儿难看
+22:29 varna: cleamoon_: 估计就是为了娱乐观众在瞎打
+22:29 cleamoon_: varna: 不是，是真菜
+22:29 varna: ...
+22:30 cleamoon_: 2v2两家被ted一个兽族压着干
+22:30 varna: hanjian_l: 不过这周的装备你有什么需求……都是你平常不用的吧
+22:30 varna: ted还在打？
+22:30 varna: 而且转兽族了？
+22:30 cleamoon_: 娱乐嘛
+22:30 varna: 死鬼绿皮，誓不两立！誓不两立！
+22:31 cleamoon_: ted都三本了，91带着三辆车五个蜘蛛冲出来大叫还有谁
+22:31 * varna 建筑学不及格
+22:31 cleamoon_: 91 ud基地一般有三条路可供剑圣出入
+22:32 varna: ...
+22:34 cleamoon_: 我觉得现役选手可以1v3这群鸡....
+22:35 cleamoon_: 里面最强级的浩南练个胖子都能死个脚男
+22:37 hanjian_l: varna: 我就胡乱刷刷本，能出什么就出什么
+22:40 varna: 我有点想随性搞点机密猎人散件，但给我的都是A桥
+22:41 varna: 这样我用417的时候可以凑4死眼+2浪人+2猎人
+22:47 varna: 233333 飞艇秀一顿操作全都死光
+22:48 cleamoon_: （智）商之哀伤
+22:50 varna: 卧槽两级吃兵
+22:50 varna: 5级DK两级吃兵
+22:52 cleamoon_: 然而从来没用过
+22:54 cleamoon_: 全场就出了几只蜘蛛和车，靠ted赢了2v2之后，91表示“这个游戏太容易了，怪不得ted能得世界冠军”
+22:54 varna: 不对，他好像满血吃了侍僧
+22:55 cleamoon_: 噗
+22:56 GreyHound_ joined channel
+22:56 GreyHound quit:Ping timeout: 240 seconds
+23:03 varna: 不行太喜感了
+23:04 varna: 女王三个家，91一个家，两方对换
+23:05 cleamoon_: 23333
+23:05 cleamoon_: 之前森林里那关看了吗
+23:05 cleamoon_: 连战连败
+23:06 varna: 那关笑得肩疼
+23:08 varna: 最后疯狂大吼焕佳，阿尔萨斯单骑砍基地
+23:08 cleamoon_: 只要100下攻击就好了，啊，她怎么又来了
+23:08 varna: 还躲到敌人房子的视野里
+23:09 varna: 笑得发抖
+23:11 cleamoon_: 他至今不很明白维修费什么意思，宁死不爆人口
+23:12 jimmylu2333-fedo joined channel
+23:18 varna: 龙嘤换家233333
+23:19 varna: 笑尿了
+23:20 varna: 连着两波龙嘤
+23:20 cleamoon_: 生生打出了史诗感
+23:21 varna: 传送=传过去送
+23:21 cleamoon_: 233333
+23:22 varna: 空难哈哈哈哈哈
+23:23 cleamoon_: 铁头顶的话，海加尔山估计得打20次
+23:23 varna: 敌人这个编成不是爆几十人口蜘蛛就过了……
+23:23 varna: 反正是电脑，死了就接着爆
+23:23 cleamoon_: 91钟爱绞肉车
+23:24 varna: 但他采木断了吧
+23:24 varna: 哈哈哈哈一整队龙嘤来了
+23:25 varna: 卧槽为什么他在开邪恶狂热
+23:25 varna: 没有胖子没有瘟疫开邪恶狂热！
+23:25 cleamoon_: 嫌自己掉血不够
+23:26 jimmylu2333-fedo quit:Ping timeout: 264 seconds
+23:26 varna: 这么多龙嘤真的不用打万金油了……蜘蛛射爆
+23:27 cleamoon_: ud最后面的关25仔可怜91，没骗他，要不还得被用来拖地，不过ud最后打得太顺了，orc任务时25仔又开始骗了
+23:27 varna: 他守住达拉然了！？
+23:27 varna: 不过感觉91操作完全是星际的思路啊，大兵团A地板对战
+23:28 varna: 亡灵最强的优势就是集火秒人……
+23:28 cleamoon_: 守住了，而且比打女王还容易
+23:28 varna: ...
+23:28 cleamoon_: 现在基本定下来主族要用ud了
+23:28 varna: 完了
+23:29 varna: 一个开不出分矿的种族给星际选手用……
+23:30 cleamoon_: 达拉然打的时候单位配置还算对，想必有猛男指点，否则91的性格肯定全冰龙作死
+23:30 varna: 十九分钟前气势如虹，十九分钟开始一波力拔山兮，全歼敌主力之后打出gg
+23:30 cleamoon_: 全歼是不存在的，都不知道怎么出毁灭
+23:31 varna: 我记得以前fov打乱矿有过一个悲剧战例
+23:31 varna: 最后一波决战发挥很好，然后就输了
+23:32 cleamoon_: 91昨天还被毒奶随机乱干，剑圣来了都不知道怎么办，商店看了一圈唯独没看粉
+23:32 varna: 2333333333
+23:32 varna: 亡灵打兽族不买粉是找死
+23:32 cleamoon_: fov那个五级dk被射成筛子的那局
+23:32 varna: 亡灵卖家一波流打乱矿怎么想都没法赢
+23:33 cleamoon_: 基地口子太多，回防了还让剑圣砍死两个诗僧
+23:33 varna: 开局建筑学一般堵不住，要起一个冰塔
+23:33 cleamoon_: 我记得那局精灵的英雄被杀超过10次，但还是赢了
+23:34 cleamoon_: 起了，蜘蛛流开局
+23:34 varna: ...
+23:34 varna: 第一个蜘蛛出来之后就很容易守住啊
+23:34 cleamoon_: 毒奶也不是很会玩呀...... 
+23:34 cleamoon_: ud + 4蜘蛛
+23:34 varna: 前期4蜘蛛还是被压得出不来第五个_(:з」∠)_
+23:35 cleamoon_: 4蜘蛛都出门mf了
+23:35 varna: 2蜘蛛就可以出去了
+23:35 varna: 开局买粉买棒起冰塔
+23:35 cleamoon_: 不存在的
+23:35 varna: 低端局甚至可以不买粉
+23:36 varna: 等来人再买都行
+23:36 cleamoon_: 剑圣来了之后，91想的是，速牺牲深渊.......
+23:36 cleamoon_: 魔兽鬼才
+23:37 varna: ...
+23:37 varna: 完全是星际运营的做法
+23:37 varna: 不那么重视英雄和道具
+23:38 GreyHound_ quit:Read error: Connection reset by peer
+23:38 GreyHound joined channel
+23:38 cleamoon_: 现在倒是知道nc连击厉害了，但是也不能6蜘蛛打5熊+7鹿呀
+23:39 varna: 对面都熊鹿了，ud还走蜘蛛路线，药丸
+23:39 varna: 他的毁灭呢
+23:39 varna: 怕是没有……
+23:39 varna: 等下
+23:39 varna: 对ne走蜘蛛开局是个什么思路……
+23:40 cleamoon_: 随机呀
+23:40 cleamoon_: 就会一个蜘蛛开局，对方什么都蜘蛛
+23:40 varna: 哦
+23:40 cleamoon_: 毁灭不知道怎么造
+23:40 varna: 随机其实不如狗转蜘蛛开局，起一个MF小点的骷髅侦查
+23:41 cleamoon_: 对战一半的单位都没见过，不知道哪里来的跳的勇气
+23:41 varna: 亡灵的流派怎么打到后面都必须混搭万金油
+23:42 varna: 而且多数时候还有19min的限制……
+23:42 lh_mouse quit:Ping timeout: 240 seconds
+23:43 cleamoon_: 大家看了91的战役，纷纷表示对其钦佩，为了得滇军，真是努力了呀
+23:44 varna: 等等，为什么他90人口的一波总攻都能打成焕佳
+23:45 cleamoon_: 条状新陈代谢一样的阵型和不如不做的操作
+23:46 varna: xswl
+23:46 varna: 在场上没DK的情况下指挥亡灵部队强攻2333333
+23:49 cleamoon_: 下一关太阳井推荐留出大块时间看，你会得出瞎子还是不适合打游戏的结论
+23:50 varna: 三矿亡灵打成这样真的是奇迹
+23:52 cleamoon_: 三矿六兵营纯蜘蛛都不会那么惨
+23:52 varna: 怕是二五仔没告诉91，DK到底怎么用……
+23:53 cleamoon_: 告诉了呀，说了是个奶，但91想做个DPS
+23:54 varna: ...
+23:54 varna: 部队核心的司令塔就这么被活生生的变成了瞧峰

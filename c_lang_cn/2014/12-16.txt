@@ -1,0 +1,430 @@
+00:00:lh_mouse: 今日APPS：音乐软件AutoRap让你成为出色绕舌歌手
+00:00:lh_mouse: 看成 autocrap
+00:01:Stevearzh quit:Read error: Connection reset by peer
+00:01:Stevearzh joined channel
+00:02:Petrus07 quit:Quit: Leaving.
+00:02:cleamoon joined channel
+00:10:xxxxxxxx: cleamoon: 幼女家烧蛋炒饭会放酱油么?
+00:38:yzld2002 quit:Quit: yzld2002
+00:44:cleamoon: xxxxxxxx, 有时放，我不喜欢
+00:52:erhandsome quit:Quit: leaving
+00:56:lh_mouse quit:Read error: Connection reset by peer
+01:13:lh_cat: 羊羊羊不在
+01:26:Stevearzh quit:Quit: Lingo: www.lingoirc.com
+01:33:Stevearzh joined channel
+01:34:Stogov joined channel
+01:35:Stogov: 还有人没睡吗？
+01:36:Stogov quit:Client Quit
+02:47:Stevearzh quit:Quit: Lingo: www.lingoirc.com
+02:52:Stevearzh joined channel
+02:55:Stevearzh quit:Remote host closed the connection
+03:03:izmntuk joined channel
+04:05:FrankHB joined channel
+04:29:lh_cat quit:*.net *.split
+04:29:geordi quit:*.net *.split
+04:30:ChanServ quit:*.net *.split
+04:30:hoxily quit:*.net *.split
+04:30:dantmnf quit:*.net *.split
+04:30:izmntuk quit:*.net *.split
+04:30:FrankHB quit:*.net *.split
+04:30:cleamoon quit:*.net *.split
+04:30:xxxxxxxx quit:*.net *.split
+04:30:hysw quit:*.net *.split
+04:30:OO_after quit:*.net *.split
+04:30:uuair quit:*.net *.split
+04:31:FrankHB joined channel
+04:31:izmntuk joined channel
+04:31:cleamoon joined channel
+04:31:hoxily joined channel
+04:31:lh_cat joined channel
+04:31:MisakaMikoto|2 joined channel
+04:31:xxxxxxxx joined channel
+04:31:geordi joined channel
+04:31:dantmnf joined channel
+04:31:ChanServ joined channel
+04:31:uuair joined channel
+04:31:hysw joined channel
+04:31:OO_after joined channel
+05:15:izmntuk quit:Remote host closed the connection
+05:24:izmntuk joined channel
+05:56:izmntuk quit:Quit: buh bye!
+06:40:boosure joined channel
+07:22:xxxxxxxx quit:Quit: Leaving...
+08:26:whocares_2 joined channel
+09:04:lh_mouse joined channel
+09:18:Guest26215 joined channel
+09:19:Guest26215 left channel:"Leaving"
+09:21:Xilzzerts joined channel
+09:50:varna joined channel
+09:50:varna: 药娘都哪去了
+09:51:lh_mouse: 羊羊羊居然来了
+09:51:lh_mouse: varna, 想问你个问题来着  
+09:51:varna: 前几天流感了
+09:51:lh_mouse: 后来忘了
+09:51:varna: 昨天刚退烧，今天看差不多就衮来实验室了
+09:52:lh_mouse: 哦 对了  epoll 里面的一个 fd 如果被别人 close 了会如何
+09:52:varna: 会被删除出epoll
+09:52:varna: 所以不用特地ctl之
+09:52:lh_mouse: 没有通知？
+09:52:lh_mouse: 实测是这样
+09:52:varna: 没有
+09:53:lh_mouse: 有人说会 RDHUP  但是我就没用过 RDHUP
+09:53:varna: 没检测RDHUP过……
+09:53:lh_mouse: 这样内存会漏掉的
+09:53:mtxrym joined channel
+09:54:lh_mouse: 如果 epoll 持有 fd 的所有权 就不会有这情况（目前的做法）
+09:54:lh_mouse: 如果 epoll 持有 fd 的弱引用 因为没通知  弱引用没法释放
+09:54:lh_mouse: 这就是说内存漏了
+09:57:lh_mouse: epoll 持有强引用没法做句柄一类东西
+09:57:lh_mouse: 例如  on_client_connect() 返回一个唯一所有权的句柄  这样做不了
+09:58:varna: 所以恐怕只能包一层close
+09:59:lh_mouse: 后来想了想还真不能用弱引用
+09:59:varna: 刚才又看了看手册，RDHUP应该只是用来判别对端的
+09:59:lh_mouse: 有另一个问题
+10:00:varna: ?
+10:00:lh_mouse: 对于一个处于 SSL 握手状态的 socket  （TCP 握手完成 现在应该丢在 epoll 里   但是 SSL 握手还在进行  因此逻辑上是没有收到任何数据的）
+10:01:whatofor joined channel
+10:01:lh_mouse: 如果没有任何对象持有该连接的所有权  这个连接就被删掉了
+10:01:lh_mouse: 目前  epoll 持有其所有权所以问题不大
+10:04:varna: 你的设计上什么样的对象持有连接？
+10:06:mtxrym left channel:
+10:07:boosure quit:Quit: Get your hand off of it
+10:17:lh_mouse: 比如 session
+10:17:lh_mouse: 各种 session
+10:17:lh_mouse: HTTP 的   Websocket 的
+10:18:varna: soga
+10:18:lh_mouse: 还有 TCP 包装的简单链接
+10:19:LittleKey joined channel
+10:32:lh_mouse quit:Read error: Connection timed out
+10:33:lh_mouse joined channel
+10:35:cleamoon quit:Ping timeout: 264 seconds
+10:36:cleamoon joined channel
+10:39:lh_mouse: geordi, { (void)(false ? (void)0 : throw 123); }
+10:39:geordi: terminated by exception: 123
+10:39:lh_mouse: geordi, { false ? (void)0 : false ? (void)0 : throw 123; }
+10:39:geordi: Same output.
+10:40:lh_mouse: geordi, --precedence a ? b : c ? d : e
+10:40:geordi: a ? b : (c ? d : e)
+10:46:condy joined channel
+10:46:hoxily quit:Read error: Connection reset by peer
+10:47:hoxily joined channel
+11:18:lh_mouse: 靠  又发现 bug
+11:21:lh_mouse: https://github.com/lhmouse/MCF/commit/f1c440df7c234e3755d70521006c5a0973f44494?diff=split#diff-9a61734d3bcb6e0840c019b4a2a4dc21L299
+11:22:lh_mouse: 这货居然写道锁外面去了   哪天挂了都不知道怎么挂的
+11:37:lh_mouse: 非递归用户态锁 无竞态加锁解锁一千万次 时间  887.855403 ms
+11:38:lh_mouse: 用户态递归锁   916.867067 ms
+11:38:lh_mouse: 内核态递归锁   5883.489611 ms
+11:38:lh_mouse: 读写锁  读锁  7196.934957 ms  写锁  6938.263088 ms
+11:47:lh_mouse: 六线程并发  一百万次加锁解锁  用户态非递归锁 12541.325581 ms  用户态递归锁  12653.144229 ms   内核态递归锁  11619.276915 ms
+11:48:lh_mouse: 读锁  14617.849954 ms  写锁 16338.814030 ms
+11:49:lh_mouse: 作为对比   六线程并发 自旋锁  608.115018 ms
+11:50:varna: 无竞态毕竟自旋最好
+11:50:varna: 但是无竞态毕竟太理想了，我实操起来不少时候自旋坑
+11:51:lh_mouse: 锁多的时候竞态少
+11:51:lh_mouse: 锁少了竞态就多
+11:52:lh_mouse: 用户态递归锁就是带上限的自旋   超过了就陷入内核
+11:52:lh_mouse: 非递归锁 *
+11:54:varna: 不过这个数据至少可以警示下无脑滥用读写锁的用户
+11:55:lh_mouse: 读写锁是和用户态非递归锁反过来的
+11:55:lh_mouse: 如果读者重入了是不陷入内核的
+11:55:yzld2002 joined channel
+11:55:lh_mouse: 但是如果是写锁或者读者首次进入大概是必然陷入内核一次
+11:56:lh_mouse: 而且可能是两次
+11:57:varna: 以前乒乓一个用户线程轮子时候的情况就是如此
+11:58:varna: 即使在有竞态的情况下，读写锁也不优于互斥锁，就是因为这个
+11:58:varna: 不过那个乒乓本身只是重IO
+12:00:lh_mouse: 看起来只有操作非常耗时时候读写锁才有意义
+12:01:lh_mouse: 或许可以考虑自旋读写锁
+12:10:Stevearzh joined channel
+12:23:erhandsome joined channel
+12:29:Stevearzh quit:Quit: Be back later ...
+12:39:varna: 吃饭
+12:40:lh_mouse: 吃涮羊肉
+12:41:xxxxxxxx joined channel
+12:42:xxxxxxxx: varna 提前 爆你妹去
+12:50:Stevearzh joined channel
+13:18:lh_cat quit:Ping timeout: 245 seconds
+13:23:xxxxxxxxx joined channel
+13:24:varna: xxxxxxxx: 爆
+13:25:xxxxxxxx quit:Ping timeout: 250 seconds
+13:26:condy quit:Ping timeout: 272 seconds
+13:27:condy joined channel
+13:27:varna: condy: 爆
+13:27:condy: T_T
+13:35:lh_mouse: geordi, << FOO ();  \ #define FOO() 1
+13:35:geordi: 1
+13:35:lh_mouse quit:Quit: Meow
+13:36:lh_mouse joined channel
+13:36:lh_cat joined channel
+13:46:whatofor quit:Ping timeout: 264 seconds
+13:46:whatofor joined channel
+13:47:varna: 似乎还是有点低烧
+13:47:varna: 有没有药娘来帮我退个烧的……
+13:50:hysw: 你的智商剩余的太多了
+13:50:varna: 你没吃药，我不理你
+13:51:hysw: OS考试太可怕了...
+13:53:lh_cat quit:Ping timeout: 245 seconds
+14:01:FrankHB quit:Quit: Konversation terminated!
+14:02:FrankHB joined channel
+14:08:lh_cat joined channel
+14:09:FrankHB quit:Remote host closed the connection
+14:11:FrankHB joined channel
+14:15:FrankHB quit:Remote host closed the connection
+14:15:FrankHB joined channel
+14:32:FrankHB quit:Remote host closed the connection
+14:32:FrankHB joined channel
+14:44:yzld2002 quit:Quit: yzld2002
+14:49:lh_cat quit:Ping timeout: 245 seconds
+14:49:FrankHB quit:Ping timeout: 255 seconds
+14:50:hoxily quit:Ping timeout: 255 seconds
+14:55:lh_mouse: geordi, << is_scalar<void>::value;
+14:55:geordi: false
+14:55:lh_mouse: geordi, << is_scalar<void &>::value;
+14:55:geordi: error: cannot declare reference to 'void'
+14:59:condy: geordi: use void&&
+14:59:geordi: Same error.
+14:59:condy: geordi: show
+14:59:geordi: << is_scalar<void&& &>::value;
+14:59:condy: geordi: erase  &
+14:59:geordi: error: cannot declare reference to 'void'
+15:00:condy: geordi: -w { int&&&&&&& a=10; }
+15:00:geordi: error: cannot declare reference to 'int&&', which is not a typedef or a template type argument
+15:03:condy: geordi: erase &&&&
+15:03:geordi: error: String `&&&&` occurs multiple times.
+15:03:condy: geordi: erase first &&&&
+15:03:geordi: error: cannot declare reference to 'int&&', which is not a typedef or a template type argument
+15:03:condy: geordi: show
+15:03:geordi: -w { int&&& a=10; }
+15:04:condy: geordi: -c class base { virtual ~base() = 0; } base::~base() {}
+15:04:geordi: error: new types may not be defined in a return type
+15:04:condy: geordi: -c class base { virtual ~base() = 0; }; base::~base() {}
+15:04:geordi: Success
+15:10:xxxxxxxxx: 某贴: 问一下你们的图标为什么都是圆圆的，我是方方的，我也想弄成圆  回复:你是说弄成这样么？[图]    重点来了 幻の上帝: 有4个不圆……
+15:10:varna: （恥球照了照镜子）嗯，这四个不像我（撸）
+15:13:hoxily joined channel
+15:14:xxxxxxxxx: 顺带其实不圆的不止四个
+15:16:varna: xxxxxxxxx: 爆
+15:18:lh_mouse: geordi, << *******************************************foo();  decltype(auto) foo(){ return " condy 是笨蛋"; }
+15:18:geordi: error: invalid type argument of unary '*' (have 'char')
+15:18:lh_mouse: geordi, << (*******************************************foo)();  decltype(auto) foo(){ return " condy 是笨蛋"; }
+15:18:geordi:  condy 是笨蛋
+15:22:condy: QAQ
+15:23:condy: geordi: -w { cout << foo(); } auto foo() { return "BAKA!"; }
+15:23:geordi: BAKA!
+15:29:zhangyh26258 joined channel
+15:30:varna: “还有，山本海军大将率领七艘战列舰、一艘航空母舰、若干艘巡洋舰和驱逐舰在中途岛北西一带活动，我们在这次海战后好几个月都还不知道这个情况。” ——撕噗撸摁死 # 总 旗 舰 风 评 被 害
+15:34:Sleepwalking joined channel
+15:34:lh_cat joined channel
+15:35:varna: Sleepwalking: 爆爆
+15:37:hoxily quit:Ping timeout: 264 seconds
+15:37:hoxily joined channel
+15:38:condy: geordi: -w { shared_ptr<int> sp(new int[1024]); }
+15:38:geordi: error: tried to apply non-array operator delete to pointer returned by new[]. Aborted
+15:38:condy: geordi: -w { shared_ptr<int[1024]> sp(new int[1024]); }
+15:38:geordi: error: cannot convert 'int*' to 'int (*)[1024]' in initialization
+15:39:condy: geordi: -w { shared_ptr<int, delete[]> sp(new int[1024]); }
+15:39:geordi: error: wrong number of template arguments (2, should be 1)
+15:39:condy: geordi: -w { shared_ptr<int> sp(new int[1024], [](int* p){delete[] p;}; }
+15:39:geordi: error: Unexpected `}` after `] p;}; `. Expected ')', '/', or balanced code.
+15:40:condy: geordi: -w { shared_ptr<int> sp(new int[1024], [](int* p){delete[] p;}); }
+15:40:geordi: <no output>
+15:49:Stevearzh quit:Remote host closed the connection
+15:50:Stevearzh joined channel
+15:54:lh_cat quit:Ping timeout: 245 seconds
+16:04:erhandsome quit:Ping timeout: 265 seconds
+16:14:FrankHB joined channel
+16:24:lh_mouse: geordi, { foo<int> f; f.bar(); } template<typename T> struct foo { void bar(); }; template<typename T> void foo<T>::bar(){ cout <<"meow"; }
+16:24:geordi: meow
+16:24:lh_mouse: geordi, { foo<int> f; f.bar(); } template<typename T> struct foo { void bar(); }; template<> struct foo<int> { void bar(); }; template<typename T> void foo<T>::bar(){ cout <<"meow"; }
+16:24:geordi: undefined reference to `foo<int>::bar()'
+16:31:lh_cat joined channel
+16:36:varna: 撤退
+16:36:varna quit:Quit: leaving
+16:58:hoxily quit:Ping timeout: 245 seconds
+16:59:hoxily joined channel
+17:03:FrankHB quit:Ping timeout: 240 seconds
+17:14:izmntuk joined channel
+17:18:cleamoon_ joined channel
+17:31:condy: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3534.html (来自##c++-general)
+17:35:yzld2002 joined channel
+17:50:lh_cat quit:Ping timeout: 245 seconds
+17:52:T2 joined channel
+17:52:lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCF/SmartPointers/UniquePtr.hpp
+17:55:T2: well
+17:58:lh_mouse: geordi, << sizeof(tr1::shared_ptr<int>);
+17:58:geordi: error: 'tr1' has not been declared
+18:10:lh_mouse: geordi, << is_copy_constructible<unique_ptr<int>>::value
+18:10:geordi: false
+18:11:lh_cat joined channel
+18:26:erhandsome joined channel
+18:33:Plough joined channel
+19:06:T2: xxxxxxxxx, 确实是无聊爆了
+19:07:lh_cat quit:Ping timeout: 245 seconds
+19:09:cleamoon_ quit:Ping timeout: 265 seconds
+19:10:lh_mouse: condy, 爆照
+19:10:T2: +
+19:11:condy: QAQ
+19:11:T2: 别废话快爆照
+19:11:lh_mouse: condy, 爆照
+19:11:condy: 不要酱紫呀！！
+19:12:T2: 无聊爆了快点啊快点
+19:12:condy: (´・ω・｀)
+19:13:T2: 简直不能忍，干脆点不行么。
+19:13:condy: 不行。
+19:13:condy: geordi: << "hentai"
+19:13:geordi: hentai
+19:13:T2: xinie
+19:14:T2: 不行了，我去健身。
+19:16:condy: http://www.xiami.com/play?ids=/song/playlist/id/1769471358/object_name/default/object_id/0#loaded
+19:16:condy: 基佬快来一发呀！！
+19:17:lh_mouse: condy, 爆照
+19:17:condy: T_T
+19:17:T2: 不能忍我晕
+19:17:T2: 你这口味也过于...那啥了点...
+19:17:erhandsome quit:Ping timeout: 272 seconds
+19:17:lh_mouse: condy, 爆照
+19:18:condy: T2: 泥垢了.
+19:18:condy: geordi: << "死也不爆●﹏●"
+19:18:geordi: 死也不爆●﹏●
+19:18:lh_cat joined channel
+19:18:T2: 那还是死吧
+19:20:T2: 啊啊啊啊~~~~~我想杀个人。
+19:22:condy: 福利 http://v2ex.com/t/154344
+19:22:condy: 「wen.lu」正式开源，让 google 无处不在吧，么么哒
+19:23:T2: www.search.com
+19:24:cleamoon_ joined channel
+19:29:xxxxxxxxx: nginx....
+19:33:lh_bot joined channel
+19:36:Sleepwalking left channel:
+19:38:lh_bot quit:Ping timeout: 245 seconds
+19:41:T2: condy, 叼炸了。
+19:42:condy: 快护叼啊.
+19:42:lh_mouse: condy, 爆照
+19:42:condy: ...
+19:43:lh_mouse: condy, 爆照
+19:43:condy: 不爆
+20:08:T2: condy, 爆照
+20:08:condy: T2: 快抬尻！
+20:15:T2: nginx http://tengine.taobao.org/book/index.html 2333
+20:15:cleamoon_: T2: 无聊给我拿java写个传文件的gui程序
+20:16:T2: cleamoon_, 不会java也不会gui，话说这种东西不是满地都是么。
+20:16:cleamoon_: 作业不能随便拿
+20:16:T2: = =
+20:17:T2: 原来如此，我自己的都没写呢。
+20:17:cleamoon_: T2: 在上什么课
+20:17:T2: cleamoon_, MFC和网络。
+20:18:MisakaMikoto joined channel
+20:18:T2: MFC让做个时钟还是股票之类的玩意，网络是socket写个能通信的东西就行。
+20:19:cleamoon_: 为什么网络课的毕设比吾java的还简单…
+20:19:T2: 因为学校水？反正差不多。
+20:19:condy quit:Ping timeout: 260 seconds
+20:20:cleamoon_: 吾学校也水
+20:21:T2: 不会有我水的。
+20:21:condy joined channel
+20:22:izmntuk quit:Remote host closed the connection
+20:23:cleamoon_: 吾确实没有政治课
+20:23:T2: 介个不错
+20:24:T2: 我们只有政治课
+20:24:T2: 2333
+20:25:cleamoon_: 话说羊驼子这几天都没来？
+20:25:T2: 感康中吧
+20:26:T2: 他经常一个感康吃一周
+20:26:T2: 大概身体状况太差了吧
+20:26:cleamoon_: 以为又脱团了呢
+20:26:T2: 难说
+20:27:T2: 总之每次都说是流感
+20:27:T2: 就这样吧
+20:27:T2: 2333
+20:28:izmntuk joined channel
+20:30:lh_mouse: 流(tuo)感(tuan)
+20:31:T2: 2333
+20:33:lh_cat quit:Ping timeout: 245 seconds
+20:33:Plough: 话说T2你之前不是想跳舰娘坑么
+20:34:T2: Plough, 不是很对口味啊。
+20:34:Plough: soga
+20:34:T2: 你有私服的话可以玩耍一下
+20:34:T2: 没有就算了
+20:34:cleamoon_: 红旗在准备搞尻？
+20:35:Plough: 不玩官服直接上我这个私服没意思的
+20:35:T2: cleamoon_, 似乎是写了个私服
+20:35:T2: soga
+20:36:cleamoon_: 写个diablo私服呀
+20:36:T2: = =
+20:38:izmntuk quit:Ping timeout: 264 seconds
+20:38:xxxxxxxxx: 说起diablo2我就想说幼女真是坑
+20:38:xxxxxxxxx: 组织了一波 最后自己卡的动都动不了
+20:38:izmntuk joined channel
+20:39:cleamoon_: 国内服务器坑
+20:42:T2: 用国外服务器国内生意就不用做了
+20:42:T2: 又不是爱唯侦查
+20:44:T2: 国内服务器打大菠萝的时候清完三王之后都给老子回档，还连续三次。
+20:44:cleamoon_: 爱唯侦察是什么……
+20:45:T2: 草榴一样的玩意
+20:46:cleamoon_: 记下来
+20:47:T2: 好吧
+20:48:T2: cleamoon, 网址已发
+20:48:cleamoon_: 好的，回家去撸
+20:50:T2: = =
+20:55:lh_cat joined channel
+20:55:lh_cat quit:Signing in (lh_cat)
+20:55:lh_cat joined channel
+21:01:izmntuk quit:Ping timeout: 245 seconds
+21:02:izmntuk joined channel
+21:03:LittleKey quit:Quit: Leaving.
+21:05:Guest37514 quit:Ping timeout: 245 seconds
+21:13:erhandsome joined channel
+21:14:Plough: 昨天果然造出了那珂酱
+21:16:T2: http://www.bilibili.com/video/av1789622/ 啊啊啊
+21:22:T2: 这打斗还不如大河剧
+21:23:erhandsome quit:Ping timeout: 256 seconds
+21:24:T2: 不过一般水准以上了
+21:31:w15tp joined channel
+21:32:w15tp: 使用IP6可以不用翻墙就能打开谷歌？
+21:32:w15tp: http://ipv6.google.com/
+21:33:condy: Yup!
+21:34:condy: https
+21:39:w15tp: 主题的广告位招租什么意思。还真有人租赁？
+21:51:cleamoon_: google hk暂时解封了
+21:56:condy: cross DLL problems..
+21:56:zhangyh26258 quit:Quit: Leaving
+21:57:erhandsome joined channel
+22:00:w15tp1 joined channel
+22:02:w15tp quit:Ping timeout: 250 seconds
+22:02:w15tp1 quit:Read error: Connection reset by peer
+22:03:w15tp joined channel
+22:03:cleamoon_ quit:Ping timeout: 265 seconds
+22:05:w15tp quit:Read error: Connection reset by peer
+22:06:w15tp joined channel
+22:09:Xilzzerts quit:Ping timeout: 255 seconds
+22:11:lh_cat joined channel
+22:11:lh_cat: 我想起个问题
+22:11:lh_cat: tcp 为什么还没被淘汰
+22:16:erhandsome quit:Ping timeout: 244 seconds
+22:16:w15tp: 64 bytes from tf-in-x65.1e100.net: icmp_seq=3 ttl=58 time=367 ms
+22:16:w15tp: ping6 ipv6.google.com
+22:17:w15tp: 怎么会这么卡？
+22:17:w15tp: 4M网络。
+22:17:lh_cat: 看丢包率
+22:18:condy: 淘汰了我们用啥..
+22:21:condy: geordi: { shared_ptr<uint64_t> sp(new uint64_t); sp.reset(new int(0xff)); cout << *sp; }
+22:21:geordi: error: comparison between distinct pointer types 'int*' and 'long unsigned int*' lacks a cast
+22:23:izmntuk_ joined channel
+22:23:w15tp: 10 packets transmitted, 10 received, 0% packet loss, time 9008ms
+22:23:w15tp: 时间这么长。。
+22:25:w15tp1 joined channel
+22:26:w15tp1 quit:Remote host closed the connection
+22:28:w15tp quit:Ping timeout: 255 seconds
+22:29:lh_cat: ipv6？
+22:29:lh_cat: condy: sctp
+22:30:izmntuk quit:*.net *.split
+22:31:condy: 又一个没有听过的名词..
+22:31:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:36:cleamoon_ joined channel
+22:37:erhandsome joined channel
+22:40:condy: 大家腋间愉快～
+22:40:condy quit:Quit: leaving
+23:02:Petrus07 joined channel
+23:04:Plough quit:Remote host closed the connection
+23:58:T2: 碎叫
+23:58:T2: minna桑腋间愉快
+23:58:T2 quit:Quit: Leaving

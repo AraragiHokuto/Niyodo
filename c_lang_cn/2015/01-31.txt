@@ -1,0 +1,524 @@
+00:00 lh_mouse: [23:57:37] <cleamoon> 就是比如一个口袋里有好多个耻球，有个吃了开封菜有的没吃，如果你拿到多少吃了多少没吃的数据，那么算抓出吃了的概率很好算，如果你没拿到数据，就得算这个概率的可能分步... 似乎是这样...
+00:00 lh_mouse: FrankHB, 
+00:01 cleamoon: FrankHB, 你吃了开封菜吗
+00:01 hope1: 就是说拿出十个耻球，有三个吃了开封菜，要算概率？
+00:02 cleamoon: hope1, wiki似乎是说你不知道口袋里有多少耻球有多少吃了，然后算如果你知道的话你算出的概率的分步情况
+00:03 hope1: 都不知道要怎么算分布情况？
+00:04 cleamoon: 我怎么知道...
+00:04 cleamoon: wiki上的后验概率倒是清楚，就是B发生时A发生的可能性
+00:05 T2: 嗯，就是这个没错。
+00:05 cleamoon: 没学过贝叶斯概率，看wiki撸的，你最好还是问问谁懂的...
+00:05 T2: = =，一个贝叶斯劳资还能忽悠你。
+00:05 Plough quit:Quit: 碎叫
+00:09 POPOBE joined channel
+00:09 lh_mouse: POPOBE, 妹子快到碗里来
+00:10 POPOBE: oui 什么东西
+00:12 lh_mouse: POPOBE, 妹子快到碗里来
+00:12 FrankHB: 没。
+00:12 lh_mouse: 没什么
+00:15 POPOBE: k 晚安小伙伴们~
+00:15 POPOBE quit:
+00:17 lh_mouse: 一个口袋里有好多个耻球，有个吃了开封菜有的没吃
+00:18 lh_mouse: 从口袋里抓♂耻球
+00:18 tutu: 数学问题也能问啊
+00:18 lh_mouse: 睡了
+00:19 hope1: tutu, Feel welcome to discuss anything at any time
+00:19 lh_mouse quit:Quit: Meow
+00:20 tutu: … 明白了 …
+00:21 hope1: cleamoon, 感觉频率概率论似乎过于理想化了，一般都是只能获取部分现象的观测（现实世界），然后要估一个模型的概率，这样贝叶斯好像要有用一点
+00:23 cleamoon: hope1, 部分数据弄模型我学的方法都是直接线性匹配
+00:23 cleamoon: 出门
+00:35 shui quit:Ping timeout: 265 seconds
+00:36 hope1_ joined channel
+00:39 hope1 quit:Ping timeout: 255 seconds
+00:39 hope1` joined channel
+00:42 hope1 joined channel
+00:42 hope1_ quit:Ping timeout: 264 seconds
+01:01 yzld2002 quit:Quit: yzld2002
+01:06 hope1 quit:Ping timeout: 256 seconds
+01:08 hoxily1 quit:Quit: Bye
+01:27 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+01:49 code_new quit:Quit: Leaving
+02:17 tutu quit:Remote host closed the connection
+02:20 LittleKey quit:Quit: Leaving.
+03:56 FrankHB: 噗，我说怎么一个好好的pr就被吃了，原来发出去之后卡的半分钟里就被merge了……
+04:35 boosure joined channel
+06:09 FrankHB quit:Remote host closed the connection
+06:10 xxxxxxxx joined channel
+06:10 FrankHB joined channel
+06:40 condy_ joined channel
+06:44 condy quit:Ping timeout: 276 seconds
+07:42 lh_cat quit:Ping timeout: 272 seconds
+07:49 lh_cat joined channel
+08:42 hope1 joined channel
+08:44 hope1_ joined channel
+08:47 hope1 quit:Ping timeout: 255 seconds
+09:01 lh_mouse joined channel
+09:06 tutu joined channel
+09:06 tutu: morning ~
+09:11 lh_cat: tutu: 揪耳朵 
+09:36 hope1_: 早
+09:40 tutu: 都这么早
+09:40 xxxxxxxx: 很早么 我都觉得该吃午饭了...
+09:42 tutu: … 吊爆
+09:42 xxxxxxxx: 昨天睡得早
+09:43 tutu: 昨天2.半睡的
+09:43 tutu: 早上爬起来又死回去，又爬起来
+09:45 Plough joined channel
+09:49 hope1_ quit:Ping timeout: 244 seconds
+09:52 lh_cat quit:Ping timeout: 265 seconds
+09:54 whatofor joined channel
+09:54 lh_bot: tutu: 揪耳朵
+09:55 lh_bot: geordi: -c optional<int> v;
+09:55 geordi: Success
+09:57 lh_cat joined channel
+09:59 xxxxxxxx quit:Quit: Leaving...
+10:13 tutu: 卓越程序员密码  还是不错的
+10:13 lh_bot: tutu: 揪耳朵
+10:14 tutu: … … ！
+10:14 tutu: 揪坏了
+10:16 lh_bot: 呃
+10:16 lh_bot: 揉揉、
+10:17 tutu: lh_bot,推荐几本书吧
+10:18 lh_bot: 什么书
+10:18 tutu: 你觉得好哒
+10:19 lh_bot: 什么方面的
+10:20 tutu: 技术的，修养的，都可以
+10:20 lh_bot: 我基本不看什么实体书
+10:21 tutu: 那也得有书名吧
+10:21 tutu: 就算是pdf
+10:21 lh_bot:  http://open-std.org/JTC1/SC22/WG21/docs/papers/2014/n4296.pdf 
+10:21 lh_bot: 这个是 C++ 的国际标准
+10:23 tutu: T_T 标准！C的标准读的都吃力很
+10:23 tutu: 很吃力
+10:24 yzld2002 joined channel
+10:29 lh_bot: 没什么好看的    我还看过电子版的《1984》
+10:36 tutu: … 好吧，厉害，纯英语？
+10:37 lh_bot: 我都有  但是我只看过翻译的
+10:37 tutu: 哦哦，没有给学弟推荐的了？
+10:39 lh_bot: 没了吧  我书读得少
+10:42 condy joined channel
+10:43 lh_bot: condy: 爆照啦
+10:43 tutu: … …！
+10:44 tutu: 原来读标准可以行天下啊
+10:44 GODDOG joined channel
+10:45 condy_ quit:Ping timeout: 276 seconds
+10:46 lh_bot: 不太容易
+10:46 hope1_ joined channel
+10:47 tutu: 哦，好吧… 妹子今天没来
+10:57 lh_bot: condy: 爆照啦
+11:32 Petrus07 joined channel
+11:44 tutu: condy,上午结束喽
+11:44 lh_bot: condy: 爆照啦
+11:45 lh_bot: 隔壁的几个人都在啊
+11:45 lh_bot: JQK: 
+11:47 tutu: 隔壁老王 …
+11:47 condy: o.o
+11:48 lh_bot: condy: 爆照啦
+11:48 lh_bot: dantmnf: 
+11:48 lh_bot: OO_after: 
+11:48 lh_bot: Youmu: 
+11:48 lh_bot: 还有么
+11:48 lh_bot: 对了之前被赶走一个
+11:48 Youmu: condy: 爆照！
+11:48 lh_bot: Youmu 是 bot 吧
+11:48 lh_bot: condy: 这是自 攻 自 受么
+11:48 * Youmu 人家是可爱的妖妖梦
+11:51 * lh_bot slaps Youmu around a bit with a large trout
+11:52 tutu: … …！
+11:52 Plough: 会打人的小耗不是好小耗
+11:54 * lh_bot slaps Plough around a bit with a large trout
+11:54 lh_bot: const MCF::Argv vArgs; for(unsigned i = 0; i < vArgs.GetSize(); ++i){ System::Print(vArgs[i]); }  // 看起来有点疼
+11:59 hope1_ quit:Ping timeout: 244 seconds
+12:02 hope1_ joined channel
+12:18 tutu quit:Remote host closed the connection
+12:22 lh_bot: geordi: { foo(bar()); } template<typename T> void foo(T &){ cout <<TYPE<T>; } struct bar { };
+12:22 geordi: error: invalid initialization of non-const reference of type 'bar&' from an rvalue of type 'bar'
+12:40 smokeink joined channel
+12:45 smoking0 joined channel
+12:49 smokeink quit:Ping timeout: 264 seconds
+13:03 hope1 joined channel
+13:05 hope1_ quit:Ping timeout: 255 seconds
+13:07 lh_cat quit:Ping timeout: 245 seconds
+13:16 lh_cat joined channel
+13:26 hope1_ joined channel
+13:29 hope1 quit:Ping timeout: 264 seconds
+13:33 hope1_ quit:Ping timeout: 264 seconds
+13:47 pmM joined channel
+13:50 pmM1 joined channel
+13:53 * lh_bot bites Plough 
+13:54 pmM quit:Quit: 飘呀飘～～
+13:55 pmM1 quit:Remote host closed the connection
+14:00 hope1_ joined channel
+14:04 hope1_ quit:Ping timeout: 244 seconds
+14:08 tutu joined channel
+14:14 tutu_ joined channel
+14:16 tutu quit:Ping timeout: 276 seconds
+14:31 hope1_ joined channel
+14:36 hope1_ quit:Ping timeout: 264 seconds
+14:38 tutu_: kde有木有分屏软件啊，除了tmux
+14:39 dantmnf: konsole 自带
+14:39 tutu_: 肿么来？
+14:41 dantmnf: tutu_: http://i.imgur.com/uAnymiW.png
+14:41 dantmnf: (可能要用新版 konsole
+14:42 tutu_: 我是fc21
+14:42 tutu_: 擦，为毛你发的链接进不去呢？被墙了？
+14:43 condy: 这字体。。
+14:43 tutu_: …？
+14:43 dantmnf: http://img.vim-cn.com/5b/f4e5382aa3743459dda04eb610c3b589c31a4a.png 
+14:44 dantmnf: Qt5/KF5 自带字体发虚效果(
+14:44 tutu_: 这个和vim分屏没区别啊
+14:45 dantmnf: (反正我不怎么用分屏
+14:45 tutu_: 哦，知道了，我还是先用两个终端扛一下
+14:46 hope1_ joined channel
+14:51 hope1_ quit:Ping timeout: 255 seconds
+14:56 qq joined channel
+14:57 qq quit:Client Quit
+14:58 shield235 joined channel
+14:58 randomclown joined channel
+15:02 hope1_ joined channel
+15:02 shield235 quit:Ping timeout: 256 seconds
+15:06 Stevearzh quit:Remote host closed the connection
+15:07 hope1_ quit:Ping timeout: 244 seconds
+15:07 Stevearzh joined channel
+15:11 xiaojunyu joined channel
+15:13 xiaojunyu quit:Client Quit
+15:14 lh_bot: 多个终端各种完爆分屏
+15:15 lh_bot: ^M-F1234567
+15:33 hope1 joined channel
+15:38 hope1 quit:Ping timeout: 264 seconds
+15:41 smoking0 quit:Quit: Leaving
+15:50 17SABOO9H joined channel
+15:50 7JTAB8XF2 joined channel
+15:51 17SABOO9H: = =
+15:52 7JTAB8XF2 quit:Client Quit
+15:55 T2: 算，我注册一下。
+15:58 T2: 好吧，算了。
+16:27 whocares_2 quit:Ping timeout: 245 seconds
+16:27 whocares_2 joined channel
+16:28 lh_mouse quit:Read error: Connection reset by peer
+16:28 lh_mouse joined channel
+16:32 whocares_2 quit:Remote host closed the connection
+16:45 whocares_2 joined channel
+16:52 smokeink joined channel
+16:56 whocares_2 quit:Remote host closed the connection
+16:57 lh_bot: T2: 你两个 nick 可以用一个账号的
+16:57 T2: lh_bot: 没关系我也懒得登陆
+16:57 T2: = =
+16:59 condy: GROUP一下。
+17:00 * lh_bot slaps condy around a bit with a large trout
+17:00 lh_bot: 自己不珍惜 nick 我又有什么办法呢
+17:02 xxxxxxxx joined channel
+17:07 T2: = =
+17:08 lh_bot: 羊驼周末都不上线
+17:08 lh_bot: 羊驼把妹去啦
+17:08 lh_bot: （怨念中）
+17:08 T2: 不知道，要是把妹去了就好了嗯。
+17:08 lh_bot: 不好不好  我还没有♀呢
+17:08 tutu_: 我也没有
+17:08 xxxxxxxx: 把妹(laochuan)
+17:08 T2: 加把劲搞定妹子
+17:08 lh_bot: tutu_: 捏兔耳朵
+17:09 tutu_: 求妹纸
+17:10 tutu_: bot,赐我妹子
+17:10 T2: @POPOBE
+17:10 xxxxxxxx: 你改名叫马云大概很多人会赐你姨妈
+17:10 T2: 2333
+17:11 tutu_: 2333333
+17:13 tutu_: 马云大脑
+17:14 lh_bot: tutu_: 捏兔耳朵
+17:14 smokeink quit:Ping timeout: 264 seconds
+17:15 tutu_: 有一道菜叫马云大脑
+17:15 xxxxxxxx: 兔子肉好吃么?
+17:15 tutu_: … …！
+17:15 T2: 显然不能有
+17:15 lh_bot: 我不吃兔子肉
+17:15 tutu_: 怎么可以吃兔兔
+17:15 T2: 凉拌还不错啊
+17:15 tutu_: 兔兔那么可爱
+17:16 xxxxxxxx: 为啥不吃兔子肉?
+17:16 T2: 脸萌必须死
+17:16 smokeink joined channel
+17:17 tutu_: 没人知道这个梗啊
+17:17 lh_bot: 那兔？
+17:17 T2: 嘛，撸去了。
+17:18 tutu_: A站上的一个视频
+17:19 lh_bot: 从不去那种地方
+17:19 lh_bot: 被钓过去除外
+17:20 tutu_: 好吧，宅男都不去啊
+17:21 izmntuk quit:Ping timeout: 245 seconds
+17:32 lh_bot: 我不是宅男
+17:32 lh_bot: 或者说  我至少不是动漫宅
+17:33 lh_bot: tutu_: (/。\) 你看看像你么
+17:33 lh_bot: _∩∩_
+17:33 lh_bot: (/。\)
+17:35 lh_bot:  ∩∩ 
+17:35 lh_bot: (^。^)
+17:36 tutu_: … …
+17:36 tutu_: 厉害哦
+17:37 tutu_: bot,每天都这么悠闲啊
+17:37 lh_bot: 是啊
+17:39 tutu_: 羡慕ing
+17:39 lh_bot: 我要妹子呢
+17:39 tutu_: 我也要 …！
+17:40 lh_bot: 先给我！
+17:40 T2: = =
+17:41 tutu_: 好！
+17:41 T2: 看来我只能找死基佬聊天了...可惜他嫌我胸小...
+17:41 T2: tutu_: 这种时候还玩先来后到注孤生
+17:42 tutu_: ！
+17:43 tutu_:  … …！ 好吧，bot是前辈啊
+17:43 T2: 两码事，墙角该挖照样挖。
+17:43 lh_bot: T2: uccu
+17:43 T2: 2333
+17:43 lh_bot: 推过妹子的自觉
+17:44 T2: = =，我又没说我要抢。
+17:44 * lh_bot slaps T2 around a bit with a large trout
+17:44 T2: 你看你欺负人还不让别人管
+17:44 T2: 哎
+17:44 whocares_2 joined channel
+17:45 T2: 撸去了撸去了，哎。
+17:45 tutu_: atexit函数注册的清理函数是不是放到栈里的啊？
+17:45 tutu_: wait …
+17:45 tutu_: 还是全局？
+17:46 tutu_: 为毛执行顺序相反呢？
+17:46 lh_bot: tutu_: 全局的
+17:46 izmntuk joined channel
+17:47 tutu_: 那为啥执行顺序要反过来呢？
+17:47 tutu_: 故意这样哒。？
+17:47 lh_bot: 规定
+17:48 tutu_: 喔喔
+17:50 lh_cat quit:Ping timeout: 264 seconds
+17:50 smokeink quit:Ping timeout: 244 seconds
+17:50 tutu_: 我用gdb跟不到的说
+17:51 tutu_: 是不是我的debuginfo没下全？
+17:51 Plough: 你用gdb可以调试gdb
+17:51 tutu_: … 啊
+17:51 xxxxxxxx: 用gdb调试调试着gdb的gdb
+17:51 lh_cat joined channel
+17:52 tutu_: 只是想调a.out
+17:52 tutu_: 跟到函数里面去
+17:52 xxxxxxxx: 听上去就像一个绕口令一样
+17:53 tutu_: 确实很绕 ！
+17:57 tutu_: 还有什么办法啊？
+17:57 lh_bot: 什么办法
+17:58 lh_bot: 走了
+17:58 tutu_: …… 真的走啊？
+17:58 tutu_: 怎么跟到atexit里面
+18:00 Sleepwalking joined channel
+18:02 Sleepwalking: 处理器的浮点误差有可能产生不可重现的结果吗？
+18:02 Sleepwalking: 或者进行相同计算可能出现不同的结果？
+18:04 Sleepwalking: 拿octave跑一段没有rand的程序 每次clear掉，运行，出来一个不同的计算结果
+18:08 lh_cat: Sleepwalking: 喵
+18:09 T2: 我觉得应该没可能吧，我猜是别的地方的问题。
+18:10 lh_cat: 理论上是有这个可能的  取决于你用了什么运算
+18:10 lh_cat: 比如超越函数
+18:10 T2: 这就不清楚了orz...
+18:11 lh_cat: OJTZ
+18:12 T2: 计算姬要怎么算对数的我都不知道。
+18:13 T2: 三角也不知道...= =
+18:13 Sleepwalking: lh_bot: 一大堆对数
+18:13 lh_cat: 瞎蒙
+18:13 lh_cat: 不奇怪 
+18:13 Sleepwalking: 经常出现一堆0.00000......1相加减乘除
+18:13 Sleepwalking: 因为是算概率……
+18:14 lh_cat: 蝴蝶效应
+18:14 Sleepwalking: 但是真的会有随机误差吗
+18:14 lh_cat: Sleepwalking: 卖个，萌
+18:14 lh_cat: 可能会  取决于配置
+18:15 lh_cat: x87 的精度是可以调的
+18:15 lh_cat: 24 位  53 位  64 位
+18:16 Sleepwalking: 虽然每次运算都产生了较为合理的次优解，但是结果经常误差个10^300倍左右
+18:16 Sleepwalking: 233
+18:16 lh_cat: 据说 x87 的寄存器是 83 位的  未确认
+18:16 lh_cat: Sleepwalking: 卖个萌！
+18:16 Sleepwalking: 呸、
+18:17 lh_cat: uccu
+18:18 Sleepwalking: 新西兰和祖国的时差5h 坐了13小时飞机后感觉飘飘欲仙  这边还是夏天 呸、
+18:18 T2: 壕无人性
+18:19 Sleepwalking: 这廉价的旅行社把我们安排在wifi都要收费的Motel，毫无人性
+18:19 lh_cat: 壕
+18:19 lh_cat: 羊驼快来爆 Sleepwalking
+18:20 Sleepwalking: lh_cat: 过几天去澳洲还真可以看到羊驼……
+18:21 lh_cat: 你小心别被羊驼爆菊
+18:21 Sleepwalking: 。。。
+18:22 T2: 2333
+18:22 lh_cat: 米库酱  飘 飘 欲 仙
+18:25 shui joined channel
+18:35 izmntuk quit:Ping timeout: 245 seconds
+18:42 tutu_ quit:Remote host closed the connection
+18:46 Sleepwalking quit:Quit: Leaving.
+18:47 code_new joined channel
+18:52 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+19:19 lh_cat quit:Ping timeout: 255 seconds
+19:23 lh_cat joined channel
+19:23 biergaizi joined channel
+19:34 shui quit:Ping timeout: 264 seconds
+19:47 shui joined channel
+19:57 shui quit:Read error: Connection reset by peer
+20:04 cleamoon quit:Remote host closed the connection
+20:05 cleamoon joined channel
+20:12 lh_mouse: 0.0
+20:19 izmntuk joined channel
+20:48 condy: o.o
+20:52 T2 joined channel
+20:53 pocmon joined channel
+20:56 guangnrt joined channel
+21:14 smokeink joined channel
+21:28 guangnrt: ...
+21:28 guangnrt: 为什么今天就没有人了……
+21:28 cleamoon: 从来就没有人
+21:29 guangnrt: 0.0
+21:31 lh_mouse: guangnrt, 揉
+21:32 smokeink quit:Ping timeout: 244 seconds
+21:39 lh_mouse quit:Read error: Connection reset by peer
+21:43 guangnrt: lh_mouse 为何揉我
+21:46 smokeink joined channel
+21:54 smokeink quit:Ping timeout: 264 seconds
+21:56 smokeink joined channel
+22:00 T2: cleamoon: 概率应该是预估一个事件在它发生之前在特定条件下有多大可能发生的玩意，我发现数据本身在贝叶斯中算后验概率。
+22:01 T2: “对一个命题的置信度” 大概是这么理解吧
+22:02 cleamoon: 那这是后验概率呀
+22:04 T2: 然后基于后验概率反推还是什么，我没看懂，先撸网络。
+22:04 T2: 总之贝叶斯里已经发生的也算概率。
+22:05 T2: 至于主观本身似乎并不重要。
+22:05 cleamoon: ...
+22:05 T2: 重要的是置信度
+22:06 T2: 有足够的信度就行。
+22:06 T2: 这种玩意还是撸书，网上的伙计写的一些东西可能他们自己也不清楚。
+22:07 T2: 我TM至少看见了三种说法
+22:07 cleamoon: 置信度到底是什么
+22:08 T2: “相信这个命题的程度”
+22:09 T2: 或者说认为一个事件在某种条件下发生的可能性
+22:09 biergaizi_ joined channel
+22:10 cleamoon: 那不就是后验吗
+22:10 T2: 所以数据结果本身也算后验概率
+22:10 w15tp joined channel
+22:11 w15tp: 新年只有 3天假期。。OTL
+22:11 T2: 我似乎还是雾岛了ho棠
+22:11 tutu_wind joined channel
+22:12 cleamoon: 感觉你说的这个置信度不高
+22:12 biergaizi quit:Ping timeout: 255 seconds
+22:12 w15tp quit:Client Quit
+22:13 T2: 我TM只是看到数据算后验概率，然后就没了。
+22:13 T2: 然后网上也没什么特别的解释。
+22:14 T2: 无非就是复制粘贴“对一个命题的置信度”
+22:15 T2: 不管了，先撸网络去，这个留到信息论后面看。
+22:17 tutu_wind: ... 不知道在说什么 O.O
+22:17 xxxxxxxx quit:Quit: Leaving...
+22:18 T2: tutu_wind: 贝叶斯概率
+22:18 T2: 当然这跟贝叶斯本人没什么关系，他只是躺枪的。
+22:19 T2: 2333
+22:20 cleamoon: 网络撸的好长
+22:21 T2: 我朝的书说多不多但是也有几百页呢。
+22:22 T2: 我现在还是有点意识模糊没什么效率
+22:23 cleamoon: 去找羊驼被爆一爆就好了
+22:24 T2: 没用，恢复一段就好了。
+22:26 cleamoon: 被爆恢复的快
+22:26 tutu_wind: 我还只是一个网络的初学者
+22:28 T2: 我是差点挂掉，什么爆都没用的。
+22:31 iyzsong: o.O
+22:31 T2: iyzsong: 么么哒
+22:31 iyzsong: T2: Good night!
+22:31 T2: 晚安
+22:32 T2: 好梦
+22:32 iyzsong: - -b
+22:32 T2: = =
+22:34 whatofor_1 joined channel
+22:34 T2: tutu_wind: 我也只是看看我朝评职称教材罢了
+22:34 condy: 我总感觉 iyzsong 是整个频道最萌的。
+22:34 iyzsong: it's not true
+22:35 condy: It's the truth.
+22:36 whatofor quit:Ping timeout: 276 seconds
+22:37 iyzsong: actually, i'm a very boring man. sorry >.<
+22:38 whatofor_1 quit:Read error: Connection reset by peer
+22:38 condy: >_<
+22:38 T2: 这个频道的伙计大概都是了。
+22:39 FrankHB: 处男？
+22:40 FrankHB: 哦大绅士不是。
+22:40 T2: <@iyzsong> actually, i'm a very boring man. sorry >.<
+22:40 FrankHB: 好吧看见了。。。
+22:40 tutu_wind: 哈哈 。。。
+22:40 cleamoon: 肉牛：没中出就算处男
+22:41 condy: 233
+22:41 FrankHB: 2333
+22:41 tutu_wind: 中出 ： 是甚么意思啊
+22:41 T2: P，没当爹就算处男。
+22:42 T2: tutu_wind: 看书吧少年
+22:42 cleamoon: tutu_wind, 上初中时出家的意思
+22:42 tutu_wind: T2: 书上还有这个。。。 
+22:42 T2: 这年头居然还有人争当处男。
+22:42 tutu_wind: cleamoon: 可以这样理解么？
+22:42 T2: = =
+22:43 T2: 我只能说，世界真奇妙。
+22:43 T2: = =
+22:43 dantmnf: 那 我们中出了一个叛徒 是什么意思啊
+22:43 FrankHB: 魔法师和贫乳哪个更正义一点呢。
+22:43 cleamoon: tutu_wind, 你就这么理解吧
+22:44 T2: FrankHB: 公平即正义，2333。
+22:44 tutu_wind: cleamoon: 不行 ， 我得去百度
+22:44 cleamoon: 我们上初中时出家了一个叛徒
+22:44 FrankHB: 出家？
+22:45 cleamoon: 耻球的网络很有问题
+22:45 iyzsong: 2333
+22:45 T2: 很有问题+
+22:45 tutu_wind: ... cleamoon , 你骗银 ， 我就说这个词在哪见过 。 就是想不起来 
+22:46 FrankHB: [2015-01-31 22:41:54] <cleamoon> 我们上初中时出家了一个叛徒 。。。真是我问题么。。。
+22:47 cleamoon: FrankHB, <cleamoon> tutu_wind, 上初中时出家的意思
+22:48 tutu_wind: cleamoon: 。。。 inside ... 不说了 
+22:49 hoxily1 joined channel
+22:49 FrankHB: 好吧，中出→初中出家是吧。。。
+22:49 cleamoon: 是呀
+22:50 FrankHB: 之前中间隔了两行没看懂……
+22:50 T2: 你是耻球本人么...
+22:50 T2: = =
+22:50 T2: 好吧似乎是
+22:51 biergaizi_ quit:Remote host closed the connection
+22:51 biergaizi_ joined channel
+22:54 T2: 那我只能说你的网今天叼炸了。
+22:57 smoking0 joined channel
+22:58 code_new quit:Quit: Leaving
+23:00 smokeink quit:Ping timeout: 244 seconds
+23:01 T2: 碎叫，诸君夜间愉快。
+23:01 T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:02 tutu_wind: 睡这么早 。。。
+23:04 cleamoon: tutu_wind, 新人我记得是大学僧？
+23:04 tutu_wind: cleamoon: 对啊 。。。
+23:05 cleamoon: 学什么的呀
+23:05 tutu_wind: cleamoon: 计算机 。。。 学得很渣 。OoO
+23:06 iyzsong: me too.
+23:06 cleamoon: 怎么都是计算姬...
+23:06 tutu_wind: iyzsong: 你好哈 ， 都有@符 ，创建人？
+23:07 condy: founder是varna。
+23:07 cleamoon: tutu_wind, 玉子烧是op
+23:07 iyzsong: ^_^
+23:08 tutu_wind: 喔喔 ... 明白～ 
+23:08 smokeink joined channel
+23:08 tutu_wind: 以后会多多向大家学习。
+23:09 cleamoon: 这里能学到最多的是怎么制造药娘
+23:09 iyzsong: ...
+23:09 tutu_wind: ... o.O
+23:11 smoking0 quit:Ping timeout: 244 seconds
+23:16 guangnrt quit:Ping timeout: 244 seconds
+23:17 tutu_wind: linux 对进程所创建的线程数有没有限制啊 ，不考虑线程消耗资源和pid不够的情况。。。
+23:26 erhandsome joined channel
+23:31 iyzsong: go sleeping, see thou tomorrow.
+23:34 smoking0 joined channel
+23:38 smokeink quit:Ping timeout: 244 seconds
+23:38 pocmon quit:Quit: Leaving.
+23:44 smokeink joined channel
+23:47 smokk joined channel
+23:47 smoking0 quit:Ping timeout: 244 seconds
+23:48 blackskygg joined channel
+23:49 blackskygg: 推荐本线性代数的书吧，中英都可以，要放寒假了，总得找些消遣
+23:50 hoxily1 quit:Ping timeout: 272 seconds
+23:50 smokeink quit:Ping timeout: 255 seconds
+23:51 whocares_2 quit:Ping timeout: 276 seconds
+23:52 cleamoon: blackskygg, Elementary Linear Algebra with Applications
+23:53 blackskygg: 推荐理由
+23:54 whocares_2 joined channel
+23:54 cleamoon: 不知道其他的
+23:55 blackskygg: 我记得有一本名字就叫linear algebra的，不过好像很老了
+23:58 cleamoon: 那五所谓
+23:58 cleamoon: 无
+23:59 whocares_2 quit:Remote host closed the connection

@@ -1,0 +1,779 @@
+00:15 Meow-J quit:Quit: Connection closed for inactivity
+00:36 Mokou: 睡觉
+00:36 Mokou: 诸君武运
+00:36 Mokou quit:Quit: 睡觉
+00:48 ASenR quit:Remote host closed the connection
+01:18 Meow-J joined channel
+01:20 cleamoon_ quit:Ping timeout: 260 seconds
+01:21 StardustX left channel:"undefined"
+01:35 StardustX joined channel
+02:08 cleamoon_ joined channel
+04:34 Youmu quit:Quit: Connection closed for inactivity
+05:40 linearain joined channel
+05:41 linearain: hello
+06:10 linearain: hi
+06:43 linearain quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+06:55 Meow-J quit:Quit: Connection closed for inactivity
+07:16 tutu_wind joined channel
+07:18 tutu_wind: Morning ~
+07:27 tutu_wind quit:Ping timeout: 260 seconds
+08:20 tutu_wind joined channel
+08:28 tutu_wind quit:Ping timeout: 272 seconds
+08:31 tutu_wind joined channel
+09:18 sleepwalking joined channel
+09:19 cleamoon_ quit:Remote host closed the connection
+09:20 cleamoon_ joined channel
+09:22 tutu_wind quit:Ping timeout: 250 seconds
+09:34 FrankHB quit:Ping timeout: 276 seconds
+09:43 ASenR joined channel
+09:49 hoxily joined channel
+10:11 Meow-J joined channel
+10:13 pocmon joined channel
+10:13 pocmon quit:Changing host
+10:13 pocmon joined channel
+10:39 slowcoach quit:Quit: slowcoach
+10:39 slowcoach joined channel
+11:31 Youmu joined channel
+11:39 Mokou joined channel
+11:48 iyzsong: hi, boys!
+11:56 * Mokou 今天也在被元帅吊打
+11:58 Youmu: iyzsong: 0.0
+12:08 StardustX joined channel
+12:21 hatlist: 起床中
+12:21 pocmon quit:Ping timeout: 256 seconds
+12:22 slowcoach: hey
+12:25 pocmon joined channel
+12:25 pocmon quit:Changing host
+12:25 pocmon joined channel
+12:34 tutu_wind joined channel
+12:35 tutu joined channel
+12:54 hatelis joined channel
+12:55 tutu_wind quit:Ping timeout: 240 seconds
+12:57 tutu_wind joined channel
+13:04 lh_mouse joined channel
+13:15 iyzsong: 妙啊~
+13:15 hatelis quit:Remote host closed the connection
+13:20 ASenR_ joined channel
+13:20 ASenR quit:Ping timeout: 276 seconds
+13:26 hatelis joined channel
+13:31 xxxxxxxx joined channel
+13:34 pocmon quit:Quit: 闪...
+13:35 lh_mouse: alarm 到底是做咩的？
+13:38 tutu: lh_mouse, ???
+13:39 hatlist: Youmu: yooo
+13:42 lh_mouse: alarm()
+13:43 Mokou: alarm(2)？
+13:43 tutu: lh_mouse, 小耗为啥有这样疑问？
+13:44 lh_mouse: 日常。
+13:50 Youmu: 用来起床的（雾
+13:54 lh_mouse: Youmu, 快把胖次脱掉！
+13:59 lh_mouse: http://v.youku.com/v_show/id_XMjg1ODg0MTY4.html?from=y1.7-2   4年前 上传
+13:59 lh_mouse:  
+14:00 lh_mouse:   
+14:02 Youmu: lh_mouse: hentai!
+14:05 lh_mouse: http://v.ifeng.com/live/#270DE943-3CDF-45E1-8445-9403F93E80C4
+14:10 hatelis: lh_mouse, 一直觉得这个古老系统调用，就是古早时期的定时器实现。只不过现在大家都不用了
+14:14 tutu: +
+14:15 tutu: 偶尔测试程序用用。。。
+14:20 randomclown quit:Quit: Leaving
+14:21 ASenR_ is now known as ASenR
+14:21 lh_mouse: ヲ从来没用过。
+14:22 tutu_wind quit:Ping timeout: 255 seconds
+14:40 tutu_wind joined channel
+14:42 ASenR quit:Ping timeout: 246 seconds
+14:43 tutu quit:Ping timeout: 256 seconds
+14:59 tutu_wind quit:Quit: Leaving
+15:00 tutu_wind joined channel
+15:02 tutu joined channel
+15:06 tutu_wind quit:Ping timeout: 245 seconds
+15:08 hoxily quit:Quit: Leaving
+15:09 tutu quit:Read error: Connection reset by peer
+15:16 luxiaoyou joined channel
+15:21 hatelis quit:Remote host closed the connection
+15:22 hatelis joined channel
+15:50 hatelis: 处理日志好恶心
+15:51 hatelis: 我想给日志加入这行归属哪条请求，但是又不想把归属的标识信息混到代码逻辑里面去。
+15:53 hatelis quit:Remote host closed the connection
+15:53 hatelis joined channel
+15:53 hatelis quit:Client Quit
+15:53 hatelis joined channel
+16:08 tutu_wind joined channel
+16:08 hatelis quit:Remote host closed the connection
+16:09 sleepwalking quit:Ping timeout: 276 seconds
+16:12 hatelis joined channel
+16:29 varna joined channel
+16:29 Mokou: 羊驼子居然冒出来了
+16:29 varna: 提交已经推送
+16:29 Mokou: 了解
+16:29 varna: 现在waitk至少不是我心腹大患了
+16:30 * Mokou 在摸希尔微的头
+16:30 Mokou: 今天我才发现这玩意直接用node-webkit就可以跑，不用wine
+16:30 varna: 我刷点闪，开始2-5
+16:31 Mokou: 今天被元帅吊打了一通
+16:35 varna: hatelis: pull一下servcraft, 有小改
+16:35 hatelis: varna, 看到了。waitk本来是用来做什么的？
+16:36 varna: 曾经是挂在epoll上的回调数据，它记录fd、事件和coro
+16:36 varna: 我曾经不长大脑地给这玩意从分配器里开内存
+16:40 varna: 其实一个waitk的生存期，客观上从IO请求发起开始，到IO请求的包裹函数结束为止
+16:41 varna: 在coro进入IO阻塞之后，包裹函数仍然没有执行完，所以给waitk开堆（或者其他分配器）内存其实没必要
+16:41 varna: 然而我并不知道自己一开始为什么没这么想，大概是撸管撸少了
+16:41 hatelis: varna, 羊驼子只是看到event.data.ptr 就条件反射了而已
+16:42 varna: 而且这东西对一个协程在一时刻不会存在超过一个
+16:42 hatelis: 对
+16:43 hatelis: 等到swapcontext又切回来，其实说明epoll_wait已经响应这次IO操作完成了，用不着再保留waitk了
+16:43 varna: 这个切换是无条件的，无论fd上的性质如何
+16:43 varna: 所以能保证正确
+16:43 varna: 虽说也未必能快多少，但至少这样写好看一些
+16:45 hatelis: 那一坨代码至少是省掉了
+16:45 varna: 我不太喜欢动辄从分配器里搞内存出来，但C毕竟WU
+16:46 hatelis: 我们需要析构器？
+16:46 varna: 需要move
+16:49 hatelis: varna, 这样就可以用YourType get() {YourType ret; return move(ret);}？
+16:50 varna: 未必是get
+16:50 varna: 但至少不用***的
+16:50 hatelis: 比如？
+16:51 varna: T a = verb(blah)
+16:51 varna: 这样的东西可以很多
+16:51 hatelis: 其实就是需要右值引用，或者逃逸检测嘛
+16:52 varna: malloc肯定不讨人喜欢
+16:52 varna: 但我相信肯定有从业数年的大师教导我，你要开动态内存啊，对象持久啊
+16:52 tutu_wind quit:Ping timeout: 256 seconds
+16:52 varna: 最近贴吧里这种lowb似乎特多
+16:53 hatelis: 这种毕竟是一般做法
+16:53 varna: 然而要知耻
+16:53 varna: low没关系，知耻慎行就好
+16:54 varna: 就怕恬不知耻
+16:54 hatelis: 现在我们还是只能自己  YourType a;  init(&a, blahblah);   然后在函数调用结束自动销毁
+16:54 Youmu quit:Quit: Connection closed for inactivity
+16:55 varna: init还算好了
+16:55 varna: 至少我知道T a;这个操作一定成立
+16:55 varna: init失败也不一定很难堪
+16:56 hatelis: 看来init还是局限性很大
+16:56 hatelis quit:Quit: Leaving
+16:57 hatelis joined channel
+16:58 varna: init还行的
+16:59 varna: 我喜欢T a; init(&a, blah); 胜于T *a = newa(blah)
+16:59 hatelis: 但是如果我们期待能够 struct Ta { struct Tb { struct Tc } } 然后一个× 
+16:59 cleamoon_: 如果有个语言可以这些分配失败啦，越界啦，全都自动处理，处理程度到了你根本不需要考虑这些就好了
+16:59 hatelis: *也没有，好像init不够
+17:00 varna: cleamoon_: 你的意思是去掉怒撸噗的Java么
+17:00 hatelis: cleamoon_, 都可以，问题是你造不出理论计算机的物理实现。
+17:00 cleamoon_: varna, 怒撸噗是什么
+17:00 hatelis: http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1298.pdf
+17:00 varna: 2ch梗，null pointer exception
+17:01 hatelis: 原来他们也曾经研究贵这玩意儿
+17:01 cleamoon_: hatelis, 这个理论有了但是没实现？
+17:01 cleamoon_: java能做到这些？
+17:01 varna: 似乎是2ch上某个码畜吐槽Java的空指针异常，结果变成了2ch的通用梗
+17:01 Mokou: NULLPO!
+17:01 hatelis: cleamoon_, 你得处理分配失败，那怎么处理虚拟内存就是用完了的时候的情况？这个时候连让你抛异常的机会都没了
+17:01 varna: 你脑残，他就能帮你更脑残
+17:01 varna: 这是我的看法
+17:02 Mokou: 先去洗澡
+17:02 varna: 至于做科学计算的人，他们确实不需要关注这些，那么就得用些库了
+17:02 yzld2002 joined channel
+17:02 hatelis: cleamoon_, 本来设计理论计算机的时候，都是假设“无限长的纸带的”
+17:02 varna: 有限回绕其实也行
+17:02 varna: 只不过无限长方便
+17:03 varna: 另外就理论模型的优劣，我赞同yinwang的观点
+17:03 varna: 图灵机令人不适
+17:03 hatelis: Syntax: To be defined. stdc_cleanup(fptr).  要是真有这玩意儿，也不错啊
+17:03 varna: cleanup就是个delay, 也难看
+17:03 hatelis: 为什么说是个delay？
+17:04 varna: 而且它只能是try-catch-assure-finally的后两部分之一
+17:04 varna: 这没有为什么吧
+17:04 varna: 显然如此
+17:09 varna: 我突然注意到一个问题
+17:09 varna: 18:01 <+Mokou> 先去洗澡
+17:09 varna: 这红旗要去啪妹子了
+17:09 hatelis: varna, 话说move出来的存储空间，到底是归谁的？
+17:10 hatelis: 毕竟不可能真的把它从里面复制到外面
+17:11 varna: 不是看你移动构造怎么搞的么
+17:14 cleamoon_: 不是洗完了等着被啪吗
+17:15 varna: 哦(｡･ω･)ﾉ
+17:16 varna: 卡api_port...
+17:16 ASenR joined channel
+17:17 cleamoon_: 感觉cs是少有的理论很美好，现实很骨感的学科
+17:17 varna: 理论很不美好
+17:17 varna: 现实比理论好多了
+17:17 varna: 越界检测就不那么好做，我印象以前摩罗沙和我讨论过一次
+17:18 cleamoon_: 那属于现实吧
+17:18 varna: 当然你要说运行时检测，我只能笑笑不说话了
+17:18 varna: 我的意思是编译时越界检测……
+17:18 varna: 不是被花言巧语掩饰的防御性编程
+17:19 tutu_wind joined channel
+17:19 varna: 对了岚月酱来看看简明易懂的网络程序吧 http://cpp.ra2diy.com/forum.php?mod=viewthread&tid=46&extra=page%3D1
+17:19 hatelis: varna, 现在一个函数作用域内的越界检查了
+17:19 hatelis: 有
+17:19 hatelis: 然而作用不是很大
+17:19 varna: 现在[static X]似乎还没实现进gcc呢……
+17:20 varna: 至少我这里开多迂腐的检测都照样不鸟
+17:20 hatelis: {int a[9];  a[9] = 0; 这个已经可以检测了
+17:20 hatelis: {int a[9];  a[9] = 0;{ 这个已经可以检测了
+17:20 Youmu joined channel
+17:20 hatelis: {int a[9];  a[9] = 0;} 这个已经可以检测了
+17:20 varna: 我不是说这个
+17:20 varna: 你试试 { int a[static 9]; a[9] = 0xdeadbeef; }
+17:21 cleamoon_: 哦... 
+17:21 varna: 然后再来个 { int a[static 9]; a[n] = 0xdeadbeef; }
+17:21 varna: 也许最新版好一点了？
+17:22 hatelis: 这是什么鬼？
+17:22 varna: 定义数组时候static维数要求检测
+17:22 varna: 小耗提到过一次，后来我在C11里也翻到过（迫真）
+17:23 hatelis: 这和int a[9]差别何在？
+17:23 varna: a[9]不要求检测
+17:23 hatelis: 不要求检测啥
+17:23 varna: 越界啊……
+17:24 varna: 或者这些我们都不说
+17:25 varna: 只说对定义域内可见的数组（没退化的），如何在编译时检测这定义域内的下标越界
+17:25 varna: 未必要求Algol-like
+17:25 varna: 你可以假定其他的不变式或者前提
+17:25 varna: 但应当是编译时
+17:27 cleamoon_: 听起来感觉编译器也各种麻烦呀
+17:28 varna: 其实如果前端污的话，主要的麻烦还是后端了
+17:28 varna: 比较糟糕而流行的后端例如……gcc
+17:29 varna: (｡･ω･)ﾉ我带个晴岚出去看看能不能制空
+17:29 varna: 按说应该有基础制空9的？
+17:29 cleamoon_: gcc会死的，早晚llvm一桶田虾
+17:29 varna: 不会的，除非某个前端支持LK用过的所有gcc扩展……
+17:30 varna: 当然如果llvm真的实现分段栈了，那我就直接跪倒投敌
+17:30 varna: 噫！晴岚制空啦！
+17:31 varna: 这简直好顶赞，果然飞机熟练能无差别提供制空力的
+17:32 varna: 卡读取了，这就是莉改……
+17:32 cleamoon_: 只需要一个分段栈？那你给FA个补丁？
+17:33 varna: 我即使弄出来也会很污
+17:33 varna: 而且后端优化技术内讧也不是一两天的事了……
+17:34 varna: 以前我印象有关指针解引用方面的优化假设都搞出过活代码消除
+17:34 varna: 例子具体忘了，不过大体是一块不是死代码的东西被消掉
+17:35 hatelis: 我们还是等着Rust慢慢搞，虽然可能什么也搞不出
+17:35 condy: 0.0
+17:36 varna: (｡･ω･)ﾉ来个鲸！
+17:36 varna: 鲸鲸鲸！
+17:36 varna: 噫，夕云
+17:36 cleamoon_: 我比较希望谁弄个好看点的C
+17:36 varna: C艹，或者Rust
+17:37 cleamoon_: c艹学习难度突破天际
+17:37 varna: 那就Rust
+17:37 varna: 官网有凑合的教程
+17:37 varna: 写得很一般，不过算是各种特性都提了一点
+17:38 cleamoon_: rust很好吗
+17:39 varna: 还不错
+17:39 varna: 新Rust是我见过的比较好看的algol-like了
+17:39 hatelis: cleamoon, 扔掉C++里面没敢扔掉的C部分。然后让RAII作为主内存管理手法。然后加入现代该有的类型系统。
+17:39 cleamoon_: 各种功能也有？
+17:40 varna: 现代？
+17:40 hatelis: 算是”比较干净的C++“
+17:40 hatelis: varna, 或者说古代？
+17:40 varna: Rust那些人还是没敢引入正经的类型系统
+17:40 varna: 对于这个，我觉得随他们去吧
+17:40 hatelis: 总之递归类型有了，我觉得差不多能用了。
+17:40 varna: System F的问题不提出另外的解决办法，说类型系统就还是笑话
+17:40 varna: 差太多
+17:40 cleamoon_: 正经的？H-M吗
+17:41 varna: Forall T. P(T), where P(T) = forall T'. P'(T, T'), where P'(Tx, Ty) = forall T''. P''(Tx, Ty, T'')
+17:41 varna: 这东西直接在理论上杀败各种玩意儿……
+17:42 varna: H-M的局限很多的，我觉得有时候引入它不如引入一个鸵鸟
+17:42 hatelis: cleamoon_, 总之，如果嫌C东西太少，C++东西太多太杂，又嫌D拿GC当默认内存手法，那么Rust暂时是能接受的选择
+17:42 varna: 卧槽
+17:43 varna: FCL给我一个小破下马威
+17:43 varna: 不愧是四天王之五
+17:43 varna: 夜战求放过
+17:43 varna: CI...
+17:44 varna: 补了个中破
+17:44 cleamoon_: 鸵鸟是指哪个
+17:44 hatelis quit:Remote host closed the connection
+17:44 varna: cleamoon_: 是像鸵鸟把头埋到沙子里一样不管的策略
+17:44 cleamoon_: ......
+17:44 cleamoon_: utlc咯
+17:44 varna: 例子是C艹
+17:45 cleamoon_: c艹倒不是太多，只是各种小地方太奇怪
+17:45 varna: 各种人工痕迹，强行不正经搞，因为正攻其实也攻不下来
+17:45 varna: 你很难用一套代数规范C艹的类型规矩
+17:45 varna: 基本都是前十二铜表法时代的玩意
+17:45 varna: 换言之，缺乏一个基本法
+17:46 cleamoon_: 编译也要按照基本法
+17:46 varna: 尤其类型推断，我觉得要按照一个基本法来
+17:46 varna: 也不能说钦定就钦定了
+17:47 varna: 2-5连续两个昼战搞定，这有点伤RP啊
+17:49 cleamoon_: c艹：这个功能，你说我支不支持，我当然是支持的，但是支持我也不按照基本法
+17:49 varna: 怎么今天魔哈的时候没看见lhj
+17:50 cleamoon_: 肛掉了
+17:50 lhanjian_ joined channel
+17:50 varna: 噗，出新闻了
+17:50 varna: 当地时间1.2，深海俄勒冈州发生反政府武装暴动
+17:50 cleamoon_: 那个hatelis就是癞蛤酱吧？
+17:50 varna: 约150全副武装的民兵攻击政府办公楼
+17:50 varna: +
+17:51 lhanjian_: cleamoon_, 你问我兹此不兹此，我当然兹此，但是兹此我也没法按照基本法，因为根本没有这样一条基本法，总之，你们用C++是这样子，我用C++也是这样子
+17:51 cleamoon_: 噗
+17:51 varna: 并在脸书、油管子、推特上发表公告称将占领某野生动物保护区
+17:51 varna: 这个好乐啊
+17:51 cleamoon_: 噗
+17:52 varna: 这新闻我觉得值得继续关注
+17:53 varna: 深海本土居然发生武装暴动
+17:53 cleamoon_: c艹：一开始让我加入这个功能，我是拒绝的，你不能说让我加入我就加入，我得在c艹17试一下，我试了之后发现，duang
+17:53 varna: 难道是.50贝奥武夫对5.56NATO的逆袭
+17:53 luxiaoyou quit:Quit: Leaving.
+17:53 cleamoon_: 不过为什么占领保护区
+17:54 varna: 大概是因为没人
+17:54 varna: 我驲，卡读取了
+17:54 varna: 这是fclt啊
+17:54 luxiaoyou joined channel
+17:54 varna: 不歼灭就会送我回港的玩意儿
+17:54 varna: 好在压制了
+17:56 varna: 夜战一中破pass
+18:00 varna: 还是没有什么鲸
+18:02 cleamoon_: orz
+18:03 varna: 第四次出门，又见fclt
+18:03 varna: 神啊保佑我
+18:03 varna: 糟了
+18:03 varna: 直接大破送走……
+18:05 varna: 不补闪再来一次，悲剧了就补闪
+18:05 varna: 我驲，这姐俩跟我有仇么
+18:05 varna: 吃雷预定
+18:06 varna: 五漏偏逢连腋雨
+18:14 varna: cleamoon_: 大新闻，睾月要改二了
+18:16 cleamoon_: 噗
+18:16 cleamoon_: 怎么这种东西改二
+18:16 cleamoon_: 高雄改不好吗
+18:16 varna: 稍有武勋
+18:16 varna: 高雄的画师还在闹别扭吧
+18:16 cleamoon_: 换人
+18:17 cleamoon_: 让鹿岛画师上
+18:18 varna: 估计换人的话会风评被害，这种事情比较麻烦
+18:18 Mokou: 这种事情除非画师主动表示另请高明否则没法换吧
+18:18 varna: 舰C可以黄，但随意放弃立绘作者的头一开，以后的项目有谁来就难说了
+18:19 Mokou: http://www.360doc.com/content/15/1126/22/28115396_516161785.shtml#6857724-tsina-1-42800-ab004451db38415f12380708e56effe8
+18:19 sleepwalking joined channel
+18:19 tutu_wind quit:Read error: Connection reset by peer
+18:19 varna: 卧槽后面有问卷
+18:20 varna: sleepwalking: 爆
+18:22 cleamoon_: lhanjian_, 来做题了
+18:24 varna: 说起来有多少女法师呢
+18:24 varna: 嘛，不说女法师了，我实验室里连个法师都没有
+18:25 cleamoon_: 不应该是连个女都没有吗
+18:26 luxiaoyou1 joined channel
+18:27 varna: 长相平均的倒也有
+18:27 varna: 是不是开口跪程度我就不知道了
+18:27 cleamoon_: 你去问问
+18:27 varna: 懒得问
+18:27 varna: 有那个心思，我还不如刷一队闪
+18:27 cleamoon_: 你果然想要药娘
+18:27 luxiaoyou quit:Ping timeout: 256 seconds
+18:28 varna: 之前实验室有个妹子，一张嘴说话，那简直……
+18:28 varna: 怎么说呢，乡土风情
+18:30 cleamoon_: 比一开口就香港风情好
+18:31 varna: 香港风情的话还是先去练习跑步吧
+18:33 cleamoon_: 我觉得这里的主题可以加入膜法了
+18:33 varna: +
+18:33 iyzsong: o/z
+18:34 varna: 现充来了！
+18:34 varna: 哦对，昨天的天妇罗似乎有点奇异
+18:35 varna: 半夜做梦腹痛，直接疼醒，然后我机智地杀去厕所，冲到地方三秒钟之后吐了六次，清霜了
+18:35 varna: 清爽*
+18:35 varna: 那东西绝对有点坏
+18:35 iyzsong: 2333
+18:36 cleamoon_: 噗
+18:36 varna: 怎么看都是吃坏肚子了
+18:36 cleamoon_: 天妇罗多少钱
+18:37 varna: 十六
+18:39 cleamoon_: 16一条还是16一盘还是16自助
+18:40 varna: 一盘
+18:40 momoka joined channel
+18:40 varna: 我没要炸虾，各式蔬菜
+18:40 cleamoon_: 哦
+18:40 varna: 闪刷好了，继续
+18:40 cleamoon_: 那还能怎么不新鲜...
+18:40 varna: 鬼知道……
+18:41 cleamoon_: 放了20年的陈白菜
+18:41 varna: http://i3.tietuku.com/f2db8aa106dc042b.jpg 这图……
+18:41 Mokou: https://pic2.zhimg.com/f03ff893152968e25663199dc2498a75_b.png
+18:41 varna: 我一开始都没注意旁边的屏幕
+18:42 varna: 我驲
+18:42 varna: 2clt...
+18:42 Mokou: ……
+18:42 varna: 伙计们用力
+18:42 varna: 好歹打掉了……
+18:42 varna: 今天一共出击六次2-5，四次都是fclt
+18:42 varna: 显示了我军顶着倒塌的厕所也要上的决心
+18:43 varna: 夜战莉酱
+18:43 varna: 有照明弹无夜侦
+18:43 varna: CI!
+18:43 varna: 鸟海-32
+18:44 varna: safe
+18:46 cleamoon_: 这... 这题... 不会做
+18:46 lh_mouse: 《彭德怀反党反社会主义反对毛主席言行一百例》
+18:46 varna: 看着敌旗舰被弹的时候期望上方血条削减的我到底在想什么系列
+18:46 varna: 2/3 Bonuses!
+18:47 Mokou: https://pic2.zhimg.com/e32cba471bebe0b7002a9f8a83edfce5_b.jpeg
+18:47 varna: 233333333
+18:47 Mokou: 论能设定名字的游戏的悲剧之处
+18:47 cleamoon_: 我觉得膜法最重要的兴起原因还是古老的，词汇量缺乏和寻找共同感导致的人云亦云
+18:47 varna: 2-5结束，不过因为最后一次是满船位出击所以没有鲸
+18:48 lh_mouse: 吧务尽是猪: 回复 土耳其海军司令 :请问怎么改id？
+18:48 lh_mouse: Mokou, 
+18:48 Mokou: 换号
+18:48 cleamoon_: 233333333
+18:48 cleamoon_: 这游戏本打算下，不过这皮肤略受不了
+18:49 Mokou: 还好，只是稍微有点伤疤
+18:49 varna: 今天把1-5收拾了吧
+18:49 varna: 1-6就先不打了
+18:49 cleamoon_: 那是伤疤？我以为天生的呢
+18:49 Mokou: 天生的哪会这么奇怪
+18:49 cleamoon_: 5-3怎么办怎么办怎么办怎么办
+18:50 cleamoon_: soga
+18:50 varna: 刷闪，拼脸，夜战套
+18:50 hoxily joined channel
+18:50 cleamoon_: 那也许可以下载试试
+18:50 varna: 我桶不多了，就不演示5-3了……
+18:51 cleamoon_: 潜艇出击11次，至今打到boss旗舰0血
+18:51 varna: 潜艇啊
+18:51 varna: 潜艇11次还不算零头的
+18:52 varna: 有点想换个壁纸了
+18:53 varna: 什么时候高兴了，做个稀欧一x伊欧娜的
+18:53 Mokou: 我现在的壁纸是个九条藤
+18:54 varna: 看看一月份的1-5要爆炸多少回
+18:54 Mokou: 丶素墨画轻眉: 回复 土耳其海军司令 :那就没有必要深聊了我还以为遇到编程大手了 
+18:54 varna: 啊，忘带彩云了
+18:54 varna: 噗
+18:54 varna: 出门一发大破……
+18:54 Mokou: 我感觉我又碰上了一个大神
+18:54 varna: 太准
+18:55 varna: 这次一发中破……
+18:57 varna: 我的反潜运总是不好
+18:57 varna: 接下来就是祈祷不要旗舰大破了
+19:02 varna: 我桑一雷中破……
+19:02 varna: 这位今天卯足了劲跟我对杀啊
+19:06 luxiaoyou1 quit:Quit: Leaving.
+19:06 cleamoon_: http://tieba.baidu.com/p/4246647239
+19:09 varna: 哦对，《彭德怀一百例》是老谭写的
+19:09 varna: 我都忘这事了
+19:09 slowcoach_ joined channel
+19:10 slowcoach quit:Ping timeout: 250 seconds
+19:10 slowcoach_ is now known as slowcoach
+19:14 momoka quit:Quit: momoka
+19:17 varna: 原来只打了两次，我还以为打了三次
+19:17 * varna 意识模糊
+19:19 lh_mouse: http://v.ifeng.com/news/society/201601/017d7cda-de78-495b-b3ba-d2568e0e5cb9.shtml
+19:20 lh_mouse: 2016-01-02笑逐言开 晚婚假取消 大龄“单身狗”表示伤不起
+19:20 varna: 我看看这个
+19:20 varna: 我桑再次一雷中破……
+19:20 varna: 今天这雷太准了
+19:21 tutu_wind joined channel
+19:22 varna: 单身甲鱼，这说法不错
+19:23 cleamoon_: 单身蛤
+19:26 lh_mouse: http://news.163.com/api/15/1221/14/BBC8BJD0000155IV.html
+19:27 Mokou: 噗，NHK果然日奸台
+19:27 varna: 荷兰毕竟嫖娼大国……
+19:27 Mokou: 说秀吉直接写了“朝鲜侵略”四个大字
+19:28 varna: 屑 站 足 轻 潜 入 猴 山 风 评 被 害 逸 国 一 转 攻 势 朝 鲜 爆 破 不 可 避
+19:29 Mokou: 2333333
+19:29 cleamoon_: 好神奇，荷兰卖淫违法，买淫不违法，海盗国卖淫不违法，买淫违法
+19:30 cleamoon_: 对了，德鲁伊我发现了一个可以打，就是有点慢的玩法
+19:30 cleamoon_: 召唤熊然后用震荡波镇晕敌人
+19:30 varna: 噗噗噗
+19:30 varna: 这怎么打，熊被怪围起来也是一死吧
+19:31 cleamoon_: 输出大头是米山和熊
+19:31 cleamoon_: 熊还挺厚的，而且震荡波眩晕时间爆长...
+19:31 cleamoon_: 20级就10s
+19:31 varna: 3bb怎么办
+19:32 cleamoon_: 躲在角落等熊慢慢拍死
+19:32 varna: 那三个伙计弄死一罐蓝的熊也没问题吧……
+19:33 cleamoon_: 那就一地蓝的熊
+19:34 varna: 我觉得3bb悬
+19:34 varna: 拼米山吧
+19:34 tutu_wind quit:Quit: WeeChat 0.4.3
+19:34 varna: 米山装备得好
+19:34 cleamoon_: 膀胱没问题的，主角可是拥有两口喝干一口井而且不去厕所的高级膀胱
+19:34 cleamoon_: 基本是靠米山
+19:35 varna: 那就得比较壕了……然而壕的话暴力狼？
+19:35 cleamoon_: 熊的实力类似2-3个骷髅，然后一个米山，然后慢慢等
+19:35 cleamoon_: 暴力我用过别人存档，壕都忽上忽下的血
+19:35 varna: 2333333
+19:35 varna: 我听说玩的就是那个忽上忽下
+19:36 varna: 根本安定不住
+19:36 cleamoon_: 极限就是全力量的近程攻击
+19:36 cleamoon_: 你可以想象一下
+19:37 varna: 只不过一个壕狼可以忽上忽下，不壕的狼就是条瞬间回人形的野狗……
+19:38 varna: 全力有意义么？
+19:38 cleamoon_: 据说那个熊的打法，从A5最后一个传送点到见到baal大概需要20min... 够壕的话...
+19:38 varna: ...
+19:38 cleamoon_: 全力似乎攻击力高？
+19:38 varna: 也高不了多少吧
+19:38 varna: 感觉力也很亏
+19:38 cleamoon_: 很亏+
+19:38 varna: 虽然听说暴力狼就是点力的但仍然觉得亏
+19:39 cleamoon_: 还不如弓马的全敏，至少还加命中
+19:39 varna: +
+19:39 varna: 而且暴力狼不能格挡
+19:39 varna: 毒狼呢
+19:39 cleamoon_: 我试了一下毒招nec，结果就是骷髅站不住，毒环打不死....
+19:39 varna: 不太壕的话能玩么
+19:39 varna: 毒招总觉得得很壕
+19:40 cleamoon_: 毒狼还不错，我测试还能一战，不过没去过地狱
+19:40 varna: NM能打的话就比暴力狼强
+19:40 varna: 我那暴力狼打到NM就摇身一变成个狗
+19:40 cleamoon_: 毒招99级都完成不了... 所以要不选择骷髅站不住，要不选择8pp你自己没输出
+19:41 cleamoon_: NM应该能
+19:41 varna: 那就ok
+19:41 varna: 现在我压低标准了，不求通关只求NM
+19:41 varna: 穷鬼通关就那么几个玩法
+19:41 varna: 根本不好玩
+19:42 cleamoon_: NM的话可用的就多了，但也大多是法师
+19:42 varna: 法师就算了
+19:42 varna: d2里我最不喜欢玩的职业就是法师
+19:42 cleamoon_: 反正用谁都会成为法师
+19:42 cleamoon_: 挂比就只有弓马和电枪马
+19:43 Mokou: NHK居然说出了“给朝鲜人民造成了极大的人为伤害”
+19:43 Mokou: 不容易啊
+19:43 cleamoon_: 近战穷鬼似乎只有zeal和frenzy
+19:43 varna: 想想巨基的专心bb
+19:43 cleamoon_: NHK = 霓虹坑
+19:44 hoxily: 很有粪量的人搞了一个大箱子战网
+19:44 varna: 大箱子战网……
+19:44 varna: 不如单机
+19:44 hoxily: 类似大背包，只有一页。
+19:44 cleamoon_: 我见过有人弄了一个集气传送bar... 只因为bar施法速度和sor一样......
+19:45 hoxily: 那也得凑到200fcr啊
+19:45 hoxily: 有点难啊
+19:45 cleamoon_: 大箱子最重要的功能是共享，东西没什么可放的
+19:45 varna: 200fcr蛋疼
+19:45 cleamoon_: 对于壕们来说随便弄几个#33都是小事
+19:46 varna: 月初四个ex战果打掉了八十多桶_(:з」∠)_
+19:46 varna: 换个图
+19:46 cleamoon_: 如果弄到好弓羊驼子可以试试弓马，挺好玩的，炮轰自动瞄准
+19:46 varna: 弓马我试过穷逼玩法，也不错
+19:47 varna: 打NM没什么问题
+19:47 hoxily: 导引箭也是自动瞄准啊
+19:47 varna: 导引箭我觉得花哨
+19:47 varna: 费那些魔法就射一箭
+19:47 cleamoon_: 没炮轰多呀
+19:48 cleamoon_: 还有电枪也挺强
+19:48 cleamoon_: 就是进不了地狱
+19:48 varna: 电枪我改装备试过，很好
+19:48 varna: 蹲一辈子牛场吧
+19:48 varna: http://tieba.baidu.com/p/4247684186 这人在想什么……
+19:49 cleamoon_: 不用改装备吧...
+19:49 varna: 一般的枪还是弱气了点
+19:50 cleamoon_: 那是土壕的想法，我能用上加大库存就很高兴了
+19:50 cleamoon_: 现在在找好玩的少见的能通NM左右的练法
+19:51 cleamoon_: 穷逼的
+19:51 varna: 怒吼天尊？
+19:52 varna: 不过想起来，我那个弓马其实不算很穷
+19:52 varna: 拿了大箱子装备的
+19:53 varna: 虽然也就是社角久子和雷山德弓这程度……
+19:54 cleamoon_: orz
+19:54 varna: 社角久子应该是陷阱刺客N难度无脑KB出的
+19:54 varna: 雷山德弓忘了哪里搞到
+19:55 cleamoon_: 武学ass蛋疼
+19:57 varna: 武学打NM也行吧，虎击+蛇击+龙牙
+19:57 cleamoon_: 或者近战火sor
+19:57 varna: 附魔sor太壕玩不动……
+19:57 cleamoon_: 行是行，麻烦
+19:57 varna: 哦对，我那陷阱刺客有个巴特克的猛击，然而是无形的
+19:57 varna: 搞得我跑路都得躲着人
+19:57 cleamoon_: orz
+19:58 varna: 穷逼修不起无形装备……
+19:58 varna: 其实以前我以为虎击+蛇击很实用
+19:59 varna: 直到敌人把我一围，问我是要吸血吸蓝力战而亡，还是要来个爽快的
+20:00 varna: 同样的事情还发生在我一个zealdin身上，瓶子喝完了，被成吨骷髅围住，开了门点不进去
+20:00 varna: 然后就跟敌人生砍至死
+20:00 cleamoon_: 23333333
+20:01 cleamoon_: 如果装了大箱子那就可以解决，当场刷技能，改成鸡腿爆之
+20:02 luxiaoyou joined channel
+20:03 varna: 大箱子洗点得用修改器辅助吧，任务给的点数会消失
+20:03 luxiaoyou quit:Client Quit
+20:04 varna: 恶魔巢穴一点，技能书一点，衣卒尔两点
+20:06 cleamoon_: 会消失吗？
+20:07 varna: 会吧
+20:07 varna: 我记得那个洗点不准的？
+20:07 cleamoon_: orz
+20:08 cleamoon_: 那我估计损失惨重呀
+20:08 varna: 问问hoxily
+20:08 varna: hoxily: ^
+20:20 Mokou: 噗
+20:20 Mokou: 知乎有人整理了一套留学生被NHK要求交电视费的回答
+20:29 Mokou: 1月1日凌晨，芜湖职业技术学院涉外旅游专业20岁大二女生佩佩在学校对面一宾馆坠楼身亡。据悉，12月31日晚，佩佩与同校两名大一男生吃饭至凌晨，酒后到宾馆开房…
+20:29 Mokou: 与同校两名大一男生
+20:30 varna: 正常
+20:31 lh_mouse: 羊驼见得多啦！
+20:32 varna: _(:з」∠)_
+20:37 whocares_2_ quit:Remote host closed the connection
+20:39 whocares_2 joined channel
+20:40 Mokou: http://ww3.sinaimg.cn/bmiddle/7e948b4djw1ezml76aazrj20go0j6n0k.jpg
+20:41 lh_mouse: 大大大大大398: 看来你没学到什么东西啊。
+20:41 lh_mouse: 大大大大大398: 回复 大大大大大398 :竟然说跟效率没有什么关系。
+20:42 Mokou: 最近的大神好多啊
+20:42 varna: Mokou: 其实这种时候应该怒吼一声“安拉胡阿克巴ppoi”，看看对面什么反应
+20:43 Mokou: 然后你碰上了极端LL教徒，被砍死
+20:43 varna: _(:з」∠)_
+20:43 xxxxxxxx: LL好可怕
+20:47 xxxxxxxx: 上白瀧站（かみしらたき）位于北海道纹别郡远轻町，是北海道旅客铁道（JR北海道） 石北本线上的站。 目前仅一个去回班次停靠（下行7:04发4621D往网走与上行17:08发4626D往旭川），是公认有名的秘境车站。 上行4626D列车由本站到达次站上川站需耗费1小时8分，是目前日本两站单一区间行驶最久的列车。2016年（平成28年）3月26日 – 因使用者减少
+20:47 xxxxxxxx: 废止车站。
+20:48 xxxxxxxx: 我觉得这名字和帝球有关系
+20:48 xxxxxxxx: 但我说不出为啥...
+20:48 lh_mouse: 渧浗
+20:52 condy: http://img.vim-cn.com/a3/d3063a52f5568afb83ca5074df5d270b1fecf4.png  libstdc++ 的性能不够怎么办（
+20:53 varna: xxxxxxxx: 上白泽/白泽球/恥球
+20:53 lh_mouse: condy, ニ什么地方写坏了？
+20:54 condy: lh_mouse: 没写坏啊，就用了个 string, vector, 还是一开始就初始化好的（
+20:54 condy: 后期只是从 vector<string> 中随机取一个字符串。
+20:55 condy: 0.
+20:55 condy: 0.0
+20:57 ASenR quit:Remote host closed the connection
+20:57 lh_mouse: “精通”c 。
+20:58 varna: wow
+20:58 varna: 谁精通C的
+20:58 lh_mouse: 问：file scope 里丢一个 int i; 是声明还是定义，行为如何？
+20:58 varna: 我去膜拜下
+20:58 varna: 我赌五毛有人会说定义，而且不谈弱符号
+20:58 lh_mouse: 嘛。
+20:59 lh_mouse: 不说弱符号。
+20:59 lh_mouse: C 的残废导致能揪出一个坑也是老大不容易。
+20:59 lh_mouse: 上面就是一个比较大的坑。
+21:01 lhanjian_: cleamoon_, 这张卷子我能得高分
+21:01 lhanjian_ quit:Remote host closed the connection
+21:04 hatelis joined channel
+21:16 Mokou: 塔酱三连闪
+21:16 Mokou: 四连闪
+21:16 Mokou: 终结
+21:20 Mokou: varna: 我突然想到一个问题
+21:20 Mokou: 有没有《米空福音》？
+21:33 varna: 米空不需要福音
+21:33 varna: 你舔就对了
+21:34 Mokou: 米空没赐下经典么
+21:34 Youmu quit:Quit: Connection closed for inactivity
+21:35 varna: 米空存在着
+21:36 Mokou: 然而你看隔壁飞天面条神教都有八诫了
+21:38 Mokou: http://ww3.sinaimg.cn/bmiddle/b9dde13bgw1ezmmhga3xyj20hs0vlq54.jpg
+21:40 varna: 米空用他的假名启示人们
+21:40 varna: Mikonaheia
+21:40 varna: Mikon=神性，ahe=人性，ia=不可知性
+21:40 varna: 所以去舔就可以
+21:41 varna: 宗教和教义是用来统治人的，这一点即使没有意识到，也可以简单地读读基督教的历史发现
+21:41 varna: 当信仰形成宗教的时候，士师就被国王取代
+21:42 Mokou: 为什么我看到ahe就想在后面补个gao
+21:42 varna: 《士师记》的结尾还是挺有意思的，尤其跟《撒母耳记》连在一起看的话
+21:42 varna: 因为那个a是身为米空教三大祭司之一的我加上去的
+21:42 Mokou: uccu
+21:42 varna: 米空自己使用的名字是Mikonahia
+21:43 varna: 今天回去把机动部队战术的第三章译完吧……
+21:43 varna: 第四章一大堆字
+21:44 Mokou: 还在译啊
+21:44 Mokou: 要不要我帮忙？
+21:44 varna: 中间一直没管
+21:44 varna: 不用
+21:44 varna: 不然最后统稿的时候文笔不好办
+21:44 varna: 而且那个文档你不会愿意看的，扫描质量极差
+21:44 Mokou: 也是
+21:44 Mokou: 有没有源文档？
+21:44 varna: 没有
+21:45 Mokou: 源文件呢
+21:45 varna: https://pastebin.mozilla.org/8855717 样章
+21:45 varna: 只有一份深海军归档的玩意
+21:45 varna: 这个我懒得润色了，译成什么样算什么样
+21:45 Mokou: 总之我围观下……
+21:45 varna: http://pan.baidu.com/wap/link?uk=285432234&shareid=685040594&third=0
+21:46 varna: 必应搜到第一条居然就是我上传的……
+21:46 Mokou: thx
+21:46 Mokou: OTL
+21:47 varna: 第三章很羞耻啊
+21:47 varna: 全都是陆军的战例，而且中间还提及了马鹿的战役
+21:47 varna: 机动部队也怪不容易，这种文档烧掉算了，省得让陆军战后看着他们尼笑
+21:47 Youmu joined channel
+21:47 Mokou: 23333
+21:47 varna: “你不就是想送几个阿根廷丸么”
+21:48 varna: 另外总觉得英文转译这哥们的文笔也一般，二翻的时候有些地方得强行润色
+21:49 Mokou: 这是扫描的时候过曝了么……
+21:49 varna: 只是没墨了，于是办公室文员弄了点蛋黄酱
+21:49 Mokou: 23333
+22:05 varna: 噫
+22:05 varna: 后面好多图
+22:08 varna: 图的话我二值化一次，然后P上译文吧……
+22:08 Mokou: OTL
+22:08 varna: 后面那些图表超赞的
+22:08 varna: 图12有一个完整的哨戒线布置
+22:09 varna: 图13是二段索敌的部署图
+22:09 Mokou: 然而蛋黄酱
+22:09 varna: 而且深海军还给图13加了一注，他们有些线没看懂
+22:09 varna: 这搞不好是个二次创作
+22:10 Mokou: 看起来扫描效果还可以啊
+22:10 varna: 你仔细读读前面的章节
+22:10 Mokou: 我指后面的图
+22:10 varna: s c o e a 这几个字母我大多是放大+反色
+22:10 Mokou: 第一章就够呛……
+22:10 varna: 后面的就好太多了
+22:11 Mokou: 还是感觉这像是过曝了
+22:11 varna: 前面的章节有些句子甚至要放大2倍+反色+trie
+22:11 Mokou: 我锐化了半天放弃了
+22:11 varna: 一二章我已经译完了，后面好不少
+22:11 Mokou: OTL
+22:11 varna: 然而s c e o可能还有傻傻分不清的
+22:12 Mokou: 或者我帮你做下苦力？
+22:12 varna: 不用了
+22:12 varna: 这破玩意我直接弄一个pdf出来
+22:12 iyzsong: o/z
+22:12 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=38621fee7c899e51788e3a1c72a6d990/799f24c451da81cb34434fde5566d0160824316a.jpg
+22:14 varna: 中间还有些要小考据的玩意，总之我也简单查了一下资料
+22:25 Mokou: http://ww4.sinaimg.cn/mw1024/78f2cc43gw1ezmadcjng3j20d70qognk.jpg
+22:26 varna: 233333
+22:30 lh_mouse: c001q 亮出17CM2
+22:30 lh_mouse: 先了解一下相应的职位吧，以及职位的要求：
+22:30 lh_mouse: http://wenku.baidu.com/link?url=1mfUtUDlF4M5Kg3PO_YjsBAGaXyO3jedhgSvJv2s_xTdgpAxwBUum2YOt1Jd0nQosZI8b6T929vm2025-7nmu2NFsWrcmI7xbVOX8bbJOqG
+22:31 ASenR joined channel
+22:32 Mokou:  学习任何一门编程语言之前，我都建议你先学习汇编，这是基础中的基础。所有的所级语言中的很多设计理念，都离不开汇编中的一些基础知识。推荐王爽写的那本书，易学好懂。
+22:34 StardustX: lh_mouse, "file scope 里丢一个 int i;"为什么不是定义啊
+22:34 varna: 23333333333333333333
+22:34 Mokou: StardustX: 弱符号
+22:35 varna: 究竟是什么给了这些傻逼出来耍宝的自信……
+22:35 Mokou: 是他们的傻逼
+22:35 lh_mouse: StardustX, tentative definition 不算 definition。
+22:36 lh_mouse: 同样地， int a[]; 也不是 declaration。
+22:36 StardustX: o.o 那在C++里应该是吧
+22:36 lh_mouse: 虽然它根本就不可能是 definition。
+22:36 lh_mouse: C++ 里 int a; 是 definition，int a[] 是 ill-formed.
+22:37 varna: 这种言论其实直接删掉就行
+22:37 varna: 如果有赞同的，连楼炸掉
+22:37 varna: 屡教不改的直接一天
+22:37 Mokou: 吃我精准打击
+22:38 varna: 我已经放弃教化傻逼这件事了
+22:38 Mokou: 教化不来
+22:38 varna: 要么不管，要么直接消灭言论
+22:38 Mokou: 就像那天那个最后跟我炫耀他收了九个徒弟的大神
+22:38 Mokou: 没错，他是说完所有话我也说完所有话以后突然给我发的截图
+22:40 cleamoon_ quit:Ping timeout: 246 seconds
+22:41 lh_mouse: StardustX, 在同一个 TU 中，如果没有 external definition（带显式初始化的例如 int a = 1;），多个 tentative definition 的行为与在 TU 结尾使用一个 = 0 初始化的 external definition 相同。
+22:46 StardustX: lh_mouse, 就是说C里面可以写出int a;int a;这样的东西，而C++就不可以，是这样吗？
+22:47 lh_mouse: 是。
+22:47 Mokou: http://ww3.sinaimg.cn/bmiddle/78f2cc43gw1ezl08uy4ugj20he0p0dh1.jpg
+22:47 lh_mouse: C++ 里第二个算 redefinition。
+22:48 StardustX: sokka
+22:48 lh_mouse: so[u]ka
+22:48 varna: 这里没促音吧……
+22:49 lh_mouse: 没有。
+22:49 lh_mouse: so 长音。
+22:49 JQK quit:Quit: ZNC - 1.6.0 - http://znc.in
+22:49 dantmnf quit:Quit: ZNC - http://znc.in
+22:51 lh_mouse: 看起来 そうか 不能单用？
+22:51 lh_mouse: 单用翻译不出来。
+22:51 lh_mouse: 如果 か用在上半句的句尾倒是说得通。
+22:51 lh_mouse: https://translate.google.cn/#ja/en/%E3%81%9D%E3%81%86%E3%81%A7%E3%81%99%E3%80%82
+22:51 dantmnf joined channel
+22:52 varna: 谷歌翻译会兼顾惯用法么？
+22:52 Mokou: http://ww4.sinaimg.cn/bmiddle/6a6f34dfgw1ezm3gu5pi1j209x0dm75h.jpg
+22:52 * lh_mouse 不知道。
+22:53 varna: 撤了
+22:53 varna: 武运
+22:53 varna quit:Quit: leaving
+22:53 condy: o.o
+23:04 Mokou: 睡觉
+23:04 Mokou: 诸君武运
+23:04 Mokou quit:Quit: 睡觉
+23:06 hatelis quit:Quit: Leaving
+23:08 dantmnf quit:Quit: ZNC - http://znc.in
+23:11 dantmnf joined channel
+23:29 dantmnf quit:Quit: ZNC - http://znc.in
+23:31 dantmnf joined channel
+23:37 ASenR quit:Ping timeout: 272 seconds
+23:43 yzld2002 quit:Remote host closed the connection
+23:58 StardustX left channel:"undefined"

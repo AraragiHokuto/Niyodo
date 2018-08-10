@@ -1,0 +1,142 @@
+00:06 lucid quit:Remote host closed the connection
+00:14 Canny quit:Quit: Page closed
+00:29 lh_mouse quit:Read error: Connection reset by peer
+00:32 Youmu quit:Quit: Connection closed for inactivity
+00:37 stdstx quit:Quit: ZzZz
+01:03 condy quit:Ping timeout: 252 seconds
+01:05 condy joined channel
+01:16 cleamoon quit:Ping timeout: 260 seconds
+01:40 Mokou: 睡觉
+01:40 Mokou: 诸君武运
+01:40 Mokou quit:Quit: 睡觉
+04:28 Youmu joined channel
+04:36 condy quit:Ping timeout: 246 seconds
+04:38 condy joined channel
+05:56 condy quit:Ping timeout: 260 seconds
+05:58 condy joined channel
+06:40 cleamoon joined channel
+07:02 Youmu quit:Quit: Connection closed for inactivity
+07:45 wlemuel joined channel
+08:00 hoxily quit:Quit: Leaving
+08:14 hope1 joined channel
+08:15 hope1: 我！今！天！没！吃！药！感！觉！自！己！萌！萌！哒！
+08:33 cleamoon: 噗
+08:34 cleamoon: 海棠姬被玩坏了
+08:51 wlemuel quit:Ping timeout: 240 seconds
+08:53 lhanjian: hope1: 你不是认真的吧？
+09:25 lh_mouse joined channel
+09:34 lh_cat joined channel
+09:45 hope1: 吃了
+09:49 lh_mouse: 喵。
+10:13 hope1 quit:Ping timeout: 246 seconds
+10:20 cleamoon quit:Ping timeout: 240 seconds
+10:28 lh_mouse: 卷入中美黑客大战的普通美国人家 
+10:28 lh_mouse: NICOLE PERLROTH 
+10:28 lh_mouse: 在过去的46年里，凯特家在威斯康星的一座小城经营着一个焊接厂。他们没想到办公室那台旧电脑，居然被中国黑客所控制。硅谷的一家初创企业，也找上门来。 
+10:40 lh_mouse: << ('a' + 'b' - 'c')
+10:40 lh_mouse: geordi, ^
+10:40 geordi: 96
+10:41 lh_mouse: geordi, ^^
+10:41 geordi: error: expected unqualified-id before '^' token
+10:41 lh_mouse: geordi, undo and show
+10:41 geordi: << ('a' + 'b' - 'c')
+10:42 lh_mouse: geordi, << sizeof(aligned_storage<1, string, array<string, 100>>);
+10:42 geordi: error: wrong number of template arguments (3, should be at least 1)
+10:44 hope1 joined channel
+10:59 sottd joined channel
+10:59 sottd: gm
+11:08 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+11:08 hope1 quit:Ping timeout: 276 seconds
+11:46 lh_cat quit:Quit: Connection closed for inactivity
+11:55 sottd joined channel
+11:55 sottd: 腐国..原来甘道夫也是https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=monline_4_dg&wd=%E7%94%98%E9%81%93%E5%A4%AB%20%E5%90%8C%E5%BF%97&oq=%E7%94%98%E9%81%93%E5%A4%AB&rsv_pq=e92867c00027e1fb&rsv_t=93da5GIr%2B5uEPdPjrWuHo%2BveHwQyRZlenYiEt4LUnhjjyULhBlodbNVvcQKxWxjzrYWL&rqlang=cn&rsv_enter=1&rsv_sug3=18&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=3820&rsv_sug4=4811
+12:17 iyzsong-xx joined channel
+12:18 iyzsong-xx: -.-
+12:28 iyzsong-xx quit:Ping timeout: 240 seconds
+12:36 Mokou joined channel
+12:37 stdstx joined channel
+12:41 FrankHB joined channel
+13:48 february joined channel
+13:49 february quit:Client Quit
+13:59 whatofor_1 joined channel
+14:01 whatofor quit:Ping timeout: 250 seconds
+14:13 stardust joined channel
+14:19 hope1 joined channel
+14:24 hope1 quit:Ping timeout: 244 seconds
+14:26 sottd: no one
+14:34 FrankHB quit:Ping timeout: 240 seconds
+14:54 lhanjian: some one
+14:56 Mokou: The one
+14:56 lhanjian: Mokou: Orz救世主旗
+14:56 Mokou: 噫，其實我想的是The Elder……
+15:09 Youmu joined channel
+16:01 endle joined channel
+16:05 FrankHB joined channel
+16:10 endle quit:Quit: Leaving
+16:12 charles130 joined channel
+16:22 charles130 left channel:"Leaving"
+16:28 FrankHB quit:Read error: Connection reset by peer
+16:28 FrankHB joined channel
+16:29 lh_mouse quit:Read error: Connection reset by peer
+16:30 lh_mouse joined channel
+17:06 sottd: teast ok
+17:17 sottd: 大数据时代，把磁带机搬走要比用网络同步快..
+17:18 lh_mouse: 明摆着废话……
+17:18 lh_mouse: 寄硬盘比任何网络都快。
+17:28 Mokou: 連邦速遞的帶寬依然大於互聯網的總帶寬
+17:41 lh_mouse: geordi, { auto p = new tracked::B[3]{ B(), B() }; delete[] p; }
+17:41 geordi: error: 'B' was not declared in this scope
+17:42 lh_mouse: geordi, { using tracked::B; auto p = new B[3]{ B(), B() }; delete[] p; }
+17:42 geordi: new(B[]) B0* B1* B2* B2~ B1~ B0~ delete[B0, B1, B2]
+17:45 FrankHB: 寄硬盘丢包了怎么办。
+17:48 CyrusYzGTt joined channel
+17:49 lh_mouse: 重传。
+17:51 FrankHB quit:Ping timeout: 240 seconds
+17:52 sottd: 不支持ipv6怎么办?
+17:53 sottd: 苹果：你们都要给我兼容ipv6
+18:00 lh_mouse: 傻逼苹果。
+18:18 sottd: http://shehui.firefox.163.com/16/0613/13/H4CEDVX1ONPUGJ76.html
+18:19 sottd: 不知道有没有冰床什么的
+18:29 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+18:33 FrankHB joined channel
+18:36 lh_mouse quit:Read error: Connection reset by peer
+18:36 lh_mouse joined channel
+18:45 lh_mouse: 羊驼点的那个 md5 有 mcf 快么。
+18:46 whatofor joined channel
+18:49 whatofor_1 quit:Ping timeout: 264 seconds
+18:57 iyzsong joined channel
+18:57 Mokou quit:Ping timeout: 260 seconds
+18:58 Mokou joined channel
+19:04 iyzsong quit:Changing host
+19:04 iyzsong joined channel
+19:17 hoxily joined channel
+19:23 wlemuel joined channel
+19:39 CyrusYzGTt quit:Ping timeout: 258 seconds
+19:55 cleamoon joined channel
+20:05 cleamoon: 莆田系医院重现“百度推广”，推广成本增三倍。魏则西事件”后曾一度消失于百度搜索结果中的医疗类“推广”又重回大众视野，并再度出现了莆田系医院的身影。探针发现，使用百度搜索一些医疗类关键词时，莆田系医院的广告信息依旧被置顶在了搜索结果的最上方。不过和“魏则西事件”发生前相比，其数量则是有了大
+20:05 cleamoon: 幅减少，最多只有4条，此外之前使用的“推广”标志也已更名为更为醒目的“商业推广”。
+20:06 cleamoon_ joined channel
+20:12 cleamoon: 宫崎英高：《黑暗之魂》系列还未完结 你们给我等着
+21:11 stardust quit:Quit: Bye!
+21:11 stdstx is now known as stardustx
+21:34 iyzsong: 啊啊啊
+21:42 cleamoon_: 宋先生被爆了
+21:44 iyzsong: (°Д°)
+21:53 stardustx quit:Ping timeout: 250 seconds
+21:58 condy: iyzsong: Σ<(=っ°Д °)っ
+22:10 wlemuel quit:Ping timeout: 264 seconds
+22:10 stardustx joined channel
+22:16 wlemuel joined channel
+22:44 stardustx quit:Quit: Leaving
+23:11 CyrusYzGTt joined channel
+23:29 lh_mouse: geordi, -w <<'MCF'
+23:29 geordi: Link: Bus error
+23:29 lh_mouse: geordi, -w --clang <<'MCF'
+23:29 geordi: Link: Bus error
+23:29 lh_mouse: geordi, <<"aa"
+23:29 geordi: Link: Bus error
+23:30 wlemuel quit:Ping timeout: 250 seconds
+23:37 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+23:40 CyrusYzGTt joined channel
+23:42 iyzsong quit:Quit: bye.
+23:53 whatofor quit:Read error: Connection reset by peer

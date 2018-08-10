@@ -1,0 +1,1299 @@
+00:00 lh_cat: 所有 o 都读 e。带这个口音的基本就确定是东北的，
+00:00 lh_cat: 当然ヲ是不会这么读的，所以听不出来。
+00:01 lh_cat: 这里说的是 o 这个韵母，不是 uo 这个韵母。
+00:02 lh_cat: 加上声调稍微注意一下，儿化音少很多，说起来就不像东北话了。
+00:03 lh_cat: 哈尔滨话 福读上声，知道的知读阳平，等等。
+00:04 lh_cat: 所以就只是声调问题了。
+00:04 Mokou: geordi: << 149 + 36 + 8
+00:04 geordi: 193
+00:05 Mokou: geordi: << 77 + 93 + 4
+00:05 lh_cat: 话说在东北见面说土话会被当乡巴佬，
+00:05 geordi: 174
+00:05 hope1: 原来如此
+00:05 Sous-Titre: 这个是我 C 的代码：目前的问题就是找不到初始值。 你们想看的话：https://github.com/MrBowen/Paillier-on-C/blob/master/Paillier.c
+00:05 hope1: 感觉东北的各种歧视比较严重？
+00:05 cleamoon: 小耗是说相声的吧... 这么努力研究方言
+00:05 hope1: Sous-Titre, thx
+00:05 lh_cat: 自己歧视自己。
+00:06 lh_cat: 不是啊。
+00:06 hope1: 初始值是说大素数吗……
+00:06 Sous-Titre: 对的
+00:06 lh_cat: 日常装逼，
+00:06 Sous-Titre: 我对 irc 还不熟…… 发言@某个人的代码是什么………………
+00:06 hope1: Sous-Titre, 这样
+00:06 hope1: 只要提到对方nick就行
+00:07 Sous-Titre: ok
+00:07 cleamoon: 大素数？我记得n个9一个7是素数，n大概10
+00:07 Sous-Titre: hope1, 我的代码里有自动生成初始值
+00:07 lh_cat: 现在ヲ会故意冒充南方口音，显得是衣锦还乡的。
+00:07 hope1: 一般的客户端都支持只打首字母（或者足够消岐的前缀）然后Tab补全
+00:07 Sous-Titre: 这个是没有问题的 sageMath 代码：https://github.com/MrBowen/Paillier-on-SageMath/blob/master/Paillier.sage
+00:08 Sous-Titre: hope1: 果然打了昵称用 tab 就好
+00:08 cleamoon: 台湾口音？
+00:08 Sous-Titre: hope1: 我用的 weechat
+00:09 hope1: cleamoon: 竞赛一般10^9+7比较多，然后涉及到可能用快速Fourier变换求卷积的题会用一个奇怪的k*2^n+1的质数
+00:09 lh_cat: cleamoon: 你听过上海话“没”这个字的读音么，
+00:09 cleamoon: 哦，对，是+7
+00:09 cleamoon: 我都分不清上海话和广东话....
+00:09 lh_cat: 阳入 meh
+00:10 hope1: Sous-Titre: 你这getRandom好简单粗暴啊…… 大丈夫？
+00:10 lh_cat: 当普通话的阳平读 me ，把后面一半掐掉。
+00:10 Sous-Titre: hope1: 哈哈哈，没办法啊，要2^512 bit 的素数
+00:11 hope1: Sous-Titre: 感觉这个量级随机出来是质数的概率不大吧……
+00:11 lh_cat: 短音 meh 。这就是入声字。
+00:11 cleamoon: 好难读....
+00:11 Sous-Titre: hope1: 可以加你的微信么~~~~ 我拜师……
+00:12 Sous-Titre: hope1: 初步是这个要求，慢慢再完善，哈哈
+00:12 Sous-Titre: hope1: 我的微信 imonkey
+00:12 lh_cat: 听过就会了。ヲ经常故意这么说，因为短。
+00:12 hope1: 啊不对，应该期望ln次就行了…… 质数分布是n/ln n
+00:12 hope1: Sous-Titre: 噫…… 不要这样，有什么问题在公开的地方讨论比较好，在这说就行
+00:13 Sous-Titre: 好，哈哈哈
+00:13 hope1: 而且我不用微信
+00:13 Mokou: POI大波、十六万中破
+00:13 Mokou: 这游戏好难玩
+00:13 Sous-Titre: hope1: 我给你找个我看的相关文件哈。 我是用里面的公式。
+00:13 Mokou: 大和中破
+00:13 Mokou: 再见
+00:13 hope1: 我也只是知道一些竞赛上的常识而已
+00:14 Mokou: 俾斯麦中破
+00:14 hope1: 这个资料wiki上就有 https://en.wikipedia.org/wiki/Paillier_cryptosystem
+00:14 Sous-Titre: hope1: 就是这个：http://www.kc.org.tw/fleget/FileDownLoad.aspx?CDE=148 PDF 文件。 sage 也用的同样思路（先写的 sage），就可以完美运行……
+00:14 lh_cat: 故意读促音用来装逼。比如 what 这个词。
+00:15 Mokou: 智商永远不上线
+00:15 cleamoon: 海棠姬有徒弟了
+00:16 lh_cat: 说中国味英语就是因为官话母语的人往往给最后的 t 带上个韵母。
+00:17 hope1: cleamoon, 那岂不是贴吧伸手党的套路
+00:17 hope1: Sous-Titre, 所以具体的问题是？
+00:18 lh_cat: 海棠姬有男朋友了。
+00:18 cleamoon: hope1, 你可以要450呀
+00:18 hope1: while(mpz_cmp(numrandom, max) >= 0); 你这里写错了吧
+00:18 hope1: Line 36
+00:18 lh_cat: 450 贞操币，
+00:19 lh_cat: 后天就去上海辣。
+00:19 hope1: cleamoon: 说得有理
+00:19 lh_cat: 去钓妹吱辣。
+00:19 hope1: 诶，应该是“说得有理”还是“说的有理”呢？
+00:19 * hope1 语文不行
+00:19 lh_cat: 得。
+00:20 cleamoon: 得
+00:20 lh_cat: 的 R 地 F 得 TJ
+00:20 hope1: “你说的有理”可以理解为省略？
+00:21 hope1: 不太自然就是了
+00:21 lh_cat: 不可以。
+00:21 cleamoon: 这真不可以....
+00:21 hope1: R/F/TJ是什么
+00:21 lh_cat: 有理  是修饰 说 的。
+00:21 cleamoon: 不是一个语法
+00:21 lh_cat: 五笔的编码。
+00:22 hope1: 原来如此
+00:22 lh_cat: 所以的地得ヲ从来不会用错。
+00:23 hope1: 这的确是五笔的优势
+00:23 lh_cat: 打单字快。
+00:23 lh_cat: 《施氏食狮史》
+00:23 hope1: Sous-Titre: 你看Paillier.c Line 36是不是写错了
+00:23 hope1: 打拼音经常翻字翻半天……
+00:24 hope1: 不组词就效率很低
+00:24 lh_cat: 《石室诗士施氏食狮史》
+00:24 Sous-Titre: hope1: 现在问题在于 C，解密后，不是原来输入的值
+00:25 Mokou: 大和1-1刷闪刷个快中破
+00:25 lh_cat: 五笔能打不认识的字，和一些偏旁。覀灬氵
+00:25 hope1: hope1, 咦是我理解错了……
+00:25 lh_cat: 自摸！
+00:25 Sous-Titre: hope1: 我现在看，谢谢
+00:26 hope1: Sous-Titre, 不是我看错了
+00:26 lh_cat: 不过有时只知读音不知写法的就蛋疼了。
+00:27 Sous-Titre: hope1: 这个是为了确保还在 2^512 bit
+00:27 lh_cat: 很多繁体字ヲ都认识，但是不会写。
+00:27 cleamoon: Mokou, 你还是去洗脸吧
+00:27 cleamoon: 不会写+，打游戏认识的
+00:28 lh_cat: 拤rhhy
+00:28 Mokou: 我刷完就睡觉了
+00:28 Mokou: 还剩173钢，修船都修不起
+00:29 lh_cat: 鐵  qfag
+00:30 hatlist quit:Quit: Connection closed for inactivity
+00:30 lh_cat: 飛 nuth   这字有点问题。 
+00:31 lh_cat: 笔顺不对，ヲ写竖应该是第四笔。
+00:33 lh_cat: 横折钩 撇 点 竖 撇 撇 横折钩 撇 点
+00:33 Sub_title joined channel
+00:34 cleamoon: Mokou, 你都怎么配置的内核... 为什么我总是吐核... 我的电脑也不新鲜呀，大多数硬件都是intel的呀...
+00:34 Mokou: cleamoon: 我主要依靠lsmod和lspci……
+00:35 Mokou: 然后在内核里找对因
+00:35 Mokou: 对应
+00:35 cleamoon: Mokou, 然后呢？
+00:35 Mokou: 然后编译试试看，跪了就把输出记下来上网查查
+00:35 cleamoon: ...
+00:35 cleamoon: Mokou, 其他基本不改什么？
+00:36 Mokou: cleamoon: 先搞出个能用的然后一点一点去掉看上去没用的
+00:36 Mokou: 咦，我没敲上那个逗号……
+00:36 cleamoon: soga
+00:36 cleamoon: 我用genkernel都吐核
+00:36 Mokou: ……
+00:37 lh_cat quit:Ping timeout: 240 seconds
+00:40 Sub_title quit:Ping timeout: 240 seconds
+00:50 hope1: Sous-Titre: 你用相同的输入，在sage这里单步试试？
+00:51 hope1: 看看是到哪一步开始错的
+00:51 hope1: 把中间都打出来，printf大法调试……
+00:52 hope1: 咦，晚饭的泡面还没吃……
+00:53 hope1: 通宵
+00:53 lh_cat joined channel
+00:54 hope1: 竞赛的时候调试基本不用gdb，都是printf大法…… 打一大坨log然后目测错误
+00:55 hope1: gdb惟一的作用是segfault的时候看看是哪里触发的
+00:55 Sous-Titre: hope1: 我猜测可能是 div 的问题，我现在准备用其它办法把 div 换掉
+00:55 * hope1 是原始人
+00:55 Sous-Titre: 快去吃饭啊………………
+00:57 cleamoon: 通宵orz
+00:58 * cleamoon 原始人+
+00:58 hope1: 明天早上六点走，坐一上午车，所以…… 感觉起不来
+00:59 cleamoon: 回老家？
+00:59 hope1: 对，从老家回去
+00:59 cleamoon: orz
+01:00 Sous-Titre: 预祝一路顺风……
+01:02 hope1: div怎么会出问题……
+01:03 Sous-Titre: hope1: div 可能只返回整数部分，比如 3 div 2，只返回 1
+01:03 Sous-Titre: hope1: c 的结果最后总有个 %，我不知道是什么东西，正在搜……
+01:03 hope1: 趁泡面的时候写一下那个题试试…… 复习一下线性筛
+01:04 hope1: Sous-Titre: 哦，我知道怎么回事了
+01:04 hope1: Sous-Titre: 那个不是除，是乘法逆元
+01:04 hope1: Sous-Titre: 你当然不能直接div，因为全部运算都是模n^2意义下的吧
+01:04 Sous-Titre: 有的是 模 n
+01:05 Sous-Titre: 我现在代码里已经没有div 了，还是不行……
+01:06 hope1: 等等好像还真是……
+01:06 hope1: Note that the notation \frac{a}{b} does not denote the modular multiplication of a times the modular multiplicative inverse of b but rather the quotient of a divided by b, i.e., the largest integer value v \ge 0 to satisfy the relation a \ge vb.
+01:06 hope1: 那应该是对的啊
+01:07 Sous-Titre: 我更新下代码，简化掉了一个小方程
+01:07 hope1: 所以你观测到是哪里开始和sage版本不一致了
+01:09 Sous-Titre: hope1: https://github.com/MrBowen/Paillier-on-C/blob/master/Paillier.c
+01:09 Sous-Titre: 都一样啊…… 这就是问题……
+01:10 Sous-Titre: sage 我都是直接用模的方法， C 我是用方程来模
+01:11 Sous-Titre: 另外，计算的时候，c 用了维基百科的模公式，sage 那边是直接算的
+01:11 hope1: 我是说带进数值的时候呢
+01:11 hope1: 代
+01:11 Sous-Titre: 没区别。 不过因为加密方程里的 c 是随机值，没办法对比……
+01:11 Sous-Titre: 我现在准备把 r 改成定值看看
+01:12 hope1: 你可以试试强行让两边一样
+01:12 hope1: hardcode一下
+01:12 Sous-Titre: 恩
+01:12 hope1: 并没有看懂这个密码体系是什么原理……
+01:13 Sous-Titre: https://www.google.fr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwjzj8jQmvDKAhUGfA8KHRflBPIQFggoMAI&url=http%3A%2F%2Fwww.kc.org.tw%2Ffleget%2FFileDownLoad.aspx%3FCDE%3D148&usg=AFQjCNEP2xeC7TAXuDg_d30-HLhIf148CQ&sig2=DzQ9bmk7_b_KHfouYi37Zw
+01:13 Sous-Titre: http://www.kc.org.tw/fleget/FileDownLoad.aspx?CDE=148
+01:13 Sous-Titre: 这个链接
+01:13 Sous-Titre: 第三页
+01:13 Sous-Titre: 是个 PDF
+01:22 Sous-Titre: 突然发现所有的 Key 都是基于随机数 笑 cry。。。
+01:25 Sous-Titre: hope1: 我强制了所有的随机数，发现加密出来的效果就已经不一样了……
+01:27 Sous-Titre: hope1: 难道是 n 平方的问题？ 这个我就没办法对比了…… 感觉应该是它了……
+01:29 hope1: 吃完才发现忘记放酸菜了……
+01:29 Mokou: 睡觉
+01:29 Mokou: 诸君武运
+01:29 Sous-Titre: 晚安~~~
+01:29 Mokou quit:Quit: 睡觉
+01:29 hope1: 晚安
+01:29 Sous-Titre: 他退出的好快哈哈哈
+01:30 Sous-Titre: 酸菜当零食吧
+01:30 cleamoon: 酸菜orz
+01:30 hope1: 所以说这才是正确的调试方法
+01:30 cleamoon: 我都不吃酸菜
+01:30 hope1: 可以无脑地一步步打印中间结果233
+01:31 hope1: 算了，如果是泡椒还能当零食
+01:33 cleamoon: orz
+01:56 Sous-Titre quit:Ping timeout: 240 seconds
+02:05 hope1: 法国啊……
+02:18 cleamoon quit:Quit: Leaving
+02:29 Sous-Titre joined channel
+02:30 hope1: Sous-Titre: 你在法国上大学？
+03:48 lh_cat quit:Quit: Connection closed for inactivity
+04:29 Sous-Titre: hope1: 没睡呢吧
+04:29 Sous-Titre: 对啊对啊
+04:29 Sous-Titre: 我在法国
+04:29 Sous-Titre: hope1: 记得你要熬夜的……
+04:32 Sous-Titre: :-)
+04:36 hope1: 很厉害的样子
+05:10 hope1: 一直很想到欧洲去，但目前本科还是要去美国…… 欧洲的大学大概是什么样的？
+05:32 hope1: https://github.com/hope1/oi/blob/master/bzoj3884.cpp 这种题都能调两个小时我也是厉害…… _(:з」∠)_
+05:42 hope1 quit:Ping timeout: 250 seconds
+05:43 hope1 joined channel
+05:45 hope1 quit:Client Quit
+05:58 Sous-Titre quit:Ping timeout: 264 seconds
+06:22 xxxxxxxx quit:Quit: Leaving...
+07:11 hoxily joined channel
+07:23 hope1_ quit:Ping timeout: 276 seconds
+08:54 lss233 joined channel
+09:06 Stevearzh joined channel
+09:31 T-J-M joined channel
+09:32 liujingtu joined channel
+09:36 randomclown joined channel
+09:46 liujingtu quit:Ping timeout: 245 seconds
+09:49 lss233: .
+10:03 iyzsong: 2333
+10:08 varna joined channel
+10:12 endle joined channel
+10:20 endle quit:Quit: Leaving
+10:22 lss233 quit:Ping timeout: 260 seconds
+10:22 hatlist joined channel
+10:23 hatlist: 药丸
+10:25 iyzsong: 吃吃吃
+10:26 varna: 提提裤子
+10:27 hatlist: 吃不进
+10:29 StardustX joined channel
+10:40 hatlist: 没穿裤子都不能膜了
+10:42 cleamoon joined channel
+10:57 cleamoon quit:Remote host closed the connection
+10:58 cleamoon joined channel
+11:07 iyzsong: 0 0
+11:39 randomclown quit:Quit: Leaving
+11:44 iyzsong: 还是Google大法吼啊 :o
+12:06 StardustX quit:Quit: leaving
+12:26 iyzsong: •̀.̫•́✧
+12:26 varna: (｡･ω･)ﾉ
+12:44 xxxxxxxx joined channel
+12:50 hatlist quit:Quit: Connection closed for inactivity
+12:51 Mokou joined channel
+12:51 Mokou: varna: E3情况如何
+12:51 varna: Mokou: 刚打了个50/350，还剩750...
+12:52 Mokou: OTL
+12:52 varna: 至少得打两盘进斩杀
+12:52 varna: 我正补闪
+12:52 Mokou: 昨天大和去1-1刷个闪
+12:52 Mokou: 直接刷没五百钢
+12:52 varna: KTKM放弃CI了
+12:52 varna: 至今没见到一次
+12:52 Mokou: ……
+12:52 Mokou: 前哨二连大概也星
+12:52 Mokou: 也行
+12:53 Mokou: 毕竟就195甲
+12:53 varna: 我掏了两个OTO炮给OOI
+12:53 varna: 195应该期望一炮彻甲
+12:53 varna: 我没见过CLT两炮击杀
+12:53 varna: 主要原因是OOI被针对
+12:53 Mokou: 我见过一次
+12:53 Mokou: 就是那个OOI连躲三炮两CI然后二连拍死旗舰……
+12:54 Mokou: 可惜是前哨_(:з」∠)_
+12:54 Mokou: 跑出了一千多钢，修修船_(:з」∠)_
+12:55 varna: 刚出门双院长门神俩祖宗
+12:55 varna: 退避了大傻，不然也许能击杀的
+12:55 Mokou: 远征3怎么跑来着
+12:55 varna: 哦不对，单
+12:55 varna: 3忘了，你查吧
+12:55 Mokou: _(:з」∠)_当你学会享受这个过程
+12:55 Mokou: 不过我前哨基本都是刁民
+12:55 varna: 我前哨运气很好了
+12:55 varna: 再刁两三次应该就能进
+12:56 varna: 以后的甲等搞不好会假设玩家斩杀打米孔
+12:56 varna: 太难了
+12:57 Mokou: 以后联合舰队十二个姬
+12:59 Mokou: _(:з」∠)_啊，昨晚刷闪刷出三个小破
+12:59 Mokou: 大和67/105
+12:59 Mokou: 金刚62/90
+12:59 Mokou: 俾斯麦54/99
+12:59 Mokou: 那真的是1-1么
+13:00 varna: 一合酥
+13:00 xxxxxxxx: 活动期间流行的主力是不是都有debuff?
+13:01 Mokou: 还行，我家大和在院长面前表现挺好的
+13:01 varna: 还好吧
+13:01 varna: 刚才我那个昼战可是T不利
+13:01 varna: 但夜战打得不错
+13:01 Mokou: 其实我现在觉得T不利比有利好
+13:02 Mokou:  有利直接拍死你二队
+13:02 varna: 坚决不打米孔
+13:03 xxxxxxxx: 索罗斯：普京对欧盟的威胁比恐怖组织IS大
+13:03 varna: 本来也是这样吧？
+13:03 xxxxxxxx: 索罗斯在Project Syndicate发表的专栏文章中指出，美国和欧盟误以为俄罗斯可能成为打击IS的合作伙伴，其实普京现在的企图是“推动欧盟解体，最佳方式是让欧洲充斥叙利亚难民。”
+13:03 Mokou: _(:з」∠)_出击
+13:03 varna: 对了今天我又获赠一千万美元
+13:03 Mokou: 这次是全队85闪
+13:04 xxxxxxxx: varna: 我觉着欧盟不需要什么威胁 时间再长点大概自己就坚持不下去了
+13:04 varna: xxxxxxxx: 如果他们一下觉悟了，开除希腊……
+13:05 Mokou: 西方文明之始祖（确信）
+13:05 varna: 尿盟除名（唐突）
+13:06 Mokou: 看看院长怎么说
+13:06 Mokou: 第四
+13:06 Mokou: T不利
+13:06 Mokou: 棒各中破
+13:07 Mokou: 院长：真是漂亮的三层闪
+13:07 Mokou: 金刚小破
+13:07 Mokou: 三层闪（确信）
+13:07 Mokou: 金刚中破
+13:07 Mokou: 院长从不miss
+13:07 Mokou: 绫波中破
+13:08 Mokou: 三层闪（确信）
+13:08 Mokou: 我觉得已经不用打了
+13:08 varna: 先吃饭
+13:10 Mokou: 金刚大破
+13:10 Mokou: 这仗又废了，我好开心啊
+13:10 Mokou: 哈哈哈哈
+13:12 Mokou: 十六万大破
+13:12 Mokou: 同航
+13:13 Mokou: 武藏大破
+13:13 Mokou: 大井中破
+13:14 Mokou: 北上大破
+13:14 Mokou: 大井大破
+13:17 xxxxxxxx: 英国28岁女子威尔逊（Faye Wilson）上个月入境泰国时被海关拒绝入境，但原因却非常离奇，当时海关发现她的护照少了2页，要求她说明，不过她却脸红坚持不解释，导致无法入境。事后她才说出实情，原来几年前和朋友去酒吧狂欢时，她尿急到厕所小便，没带卫生纸，情急之下就把护照页撕下“利用”。
+13:17 xxxxxxxx: 揉脸
+13:21 Mokou: _(:з」∠)_没钢了
+13:54 hope1_ joined channel
+14:01 varna: 刷一下poippoi
+14:01 * Mokou 在1-6
+14:01 Mokou: 今天我打1-6都劝退
+14:04 Mokou: 猫了
+14:04 Mokou: 我去你妈的
+14:07 Mokou: _(:з」∠)_不打了，去4-2
+14:07 hope1_ quit:Remote host closed the connection
+14:09 hope1_ joined channel
+14:11 varna: 米空保佑
+14:11 varna: 单
+14:12 Mokou: 我赌五毛你会比我先打完
+14:12 varna: 我消耗品比你多
+14:12 varna: 卧槽
+14:12 varna: 大和一炮大破
+14:12 varna: 拖
+14:13 Mokou: 我就看看这次死鱼以后新米怎么嘲讽我
+14:14 varna: (｡･ω･)姬姬。
+14:14 varna: S
+14:14 Mokou: OTL
+14:15 varna: 求放过啊
+14:15 varna: 压码头都下场了……
+14:15 Stevearzh quit:Excess Flood
+14:15 Mokou: http://ww4.sinaimg.cn/bmiddle/6a4dabedgw1f0whn0dgspj20qo1be13i.jpg 哈哈哈哈腾讯新闻
+14:15 varna: 二改
+14:16 Stevearzh joined channel
+14:16 Mokou: http://ww3.sinaimg.cn/bmiddle/6a4dabedgw1f0whm7bl11j20qo1be11s.jpg http://ww1.sinaimg.cn/bmiddle/6a4dabedgw1f0whm9kwfsj20qo1beth6.jpg http://ww3.sinaimg.cn/bmiddle/6a4dabedgw1f0whmbvsgyj20qo1bek0w.jpg http://ww1.sinaimg.cn/bmiddle/6a4dabedgw1f0whmevgp6j20qo1beajb.jpg http://ww4.sinaimg.cn/bmiddle/6a4dabedgw1f0whmgv7hsj20qo1be47k.jpg http://ww4.sinaimg.cn/bmiddle/6a4dabedgw1f0whmilrcnj20qo1beq9h.jpg
+14:16 varna: 无伤过
+14:16 Mokou: 腾讯新闻这智商没救了
+14:16 varna: 这个T不利的炮战打得堪称典范
+14:16 Mokou: 欧洲人真可怕
+14:17 hope1_ quit:Ping timeout: 245 seconds
+14:17 varna: (｡･ω･)ﾉ好了伙计们，给我蹭10hp
+14:18 Mokou: http://ww2.sinaimg.cn/bmiddle/8744f5e0jw1f0wf2vako7j20qo0n3q4c.jpg
+14:18 varna: (｡･ω･)ﾉ把上一盘没打完的东西打完，然后我们再回去商量怎么搞大新闻
+14:18 varna: 敌不制空
+14:19 varna: 算是照顾我一下
+14:19 varna: 基本状况确保
+14:19 varna: POI中破
+14:20 varna: 十六万中破
+14:20 varna: 288 63 193
+14:20 varna: 5v(2+1)
+14:20 varna: 拼了
+14:20 Mokou: OTL
+14:20 varna: cI!
+14:21 varna: 34/450
+14:21 varna: 34/350
+14:21 varna: 不错
+14:21 Mokou: OTL
+14:21 Mokou: 别人家的E3甲
+14:21 varna: 打重巡姬的只有KTKM...
+14:21 varna: 其他人都在打下面那两个哑火的院长
+14:21 varna: 夜侦没触发有点可惜
+14:22 Mokou: 我家这情况肯定是打不到只剩34血的
+14:22 Mokou: 基本上都是剩个一百多点
+14:23 varna: 这次支援打掉院长五十多血，雷击我都没看……
+14:23 varna: 也许搞掉了一个祖宗，也许没有
+14:23 Mokou: 欧洲人太可怕
+14:23 varna: 然后开场平砍糊了重巡姬35血，(｡･ω･)ﾉ作战达成
+14:23 Mokou: 勋章有钢么
+14:23 varna: 没有
+14:24 Mokou: 日
+14:25 varna: 434/2.1k
+14:25 varna: 打进390就是胜利
+14:25 varna: 用脸拱也务必拱进去！补闪
+14:25 Stevearzh quit:Excess Flood
+14:26 varna: 哈哈哈
+14:26 varna: 红脸绫波一发CI 737收掉了那个孙子……
+14:27 Mokou: OTL
+14:34 Mokou: 我大概知道为啥我觉得粤语听起来略带感了
+14:34 Mokou: 我还挺喜欢入声的……
+14:35 varna: 声是谁
+14:35 Mokou: uccu
+14:36 varna: 俾斯麦不知道从哪里搞来一层薄闪
+14:36 varna: 看着怪好看，等会出门试试
+14:38 varna: 驲
+14:38 varna: 阿号那么保留还是刷完了
+14:40 Mokou: http://picpaste.com/yjx3bB3a.png
+14:40 Mokou: 如此惨烈
+14:41 Mokou: 我把ModRM拆出来吧
+14:41 Mokou: 还有REX
+14:43 varna: 余谈，我给飞鹰塞了一组12搭载紫电
+14:43 varna: 以后我刷刷那些熟练零战
+14:44 varna: 不过我为什么那么严肃呢……都要改行当丙督去了
+14:44 varna: 如果我以后打的敌水面部队都是几个撸，用支援也能直接炸死
+14:45 Mokou: http://ww1.sinaimg.cn/bmiddle/6db206c1gw1f0wjibaszlj20h00a7mxn.jpg _(:з」∠)_没有头发的人真可怕
+14:46 varna: 噗
+14:49 varna: (｡･ω･)ﾉ出击
+14:49 varna: 米空保佑
+14:50 varna: 双
+14:50 varna: 大和……
+14:50 Mokou: http://ww1.sinaimg.cn/bmiddle/8744f5e0jw1f0wj4by1bej20u01hce0y.jpg
+14:50 Mokou: _(:з」∠)_
+14:50 Mokou: 练度不够（确信）
+14:51 varna: 劝退
+14:51 Mokou: “刷闪十年功，大破一秒钟”
+14:52 varna: 可惜
+14:52 varna: 二队补四个两层
+15:07 varna: 刷闪卡了，残念
+15:08 varna: 全卡了……
+15:09 Mokou: _(:з」∠)_
+15:12 Mokou: 我看看能不能嘬个死，来个超精简的IL
+15:12 Mokou: ADD MUL DIV OR NOT JE这六条指令
+15:12 varna: chrome直接自己卡死了
+15:12 Mokou: ……
+15:14 varna: 这都什么鬼……
+15:15 varna: 还好，结算发出去了
+15:15 varna: 我这边的ISP似乎定期抽风
+15:15 Mokou: +
+15:23 xxxxxxxx: http://www.bilibili.com/video/av3808693/ orz
+15:23 xxxxxxxx: 视频预警
+15:23 varna: POI一百三……
+15:24 varna: 这是一个屡经大战不糊涂的POI
+15:28 xxxxxxxx: 看了想起以前那个东北话配音的 
+15:46 StardustX joined channel
+15:54 varna: 米空保佑
+15:54 varna: 单
+15:56 varna: KTKM 16/49
+15:56 varna: 可以一战
+15:57 varna: (｡･ω･)姬姬。
+15:57 varna: A
+15:58 varna: 门神
+15:58 varna: (｡･ω･)撸撸。
+15:59 varna: 无伤
+16:00 varna: (｡･ω･)姬姬姬。
+16:01 varna: 理想的炮战
+16:02 varna: 5+1打2大破……
+16:02 varna: 35/350 67/400进夜战……
+16:02 varna: 全面轰杀
+16:03 varna: 这打得难以超越
+16:10 Mokou: OTL
+16:10 Mokou: 斩了？
+16:11 varna: 没
+16:11 varna: 刚进斩杀，正在全面补闪
+16:11 Mokou: 目测一次过
+16:12 varna: 我跟你说，刚那个出击之前我学习了主体思想
+16:12 Mokou: 戴三块表都救不了我
+16:12 Mokou: 我赌一个武藏，这次你肯定又比我先斩
+16:13 xxxxxxxx: 一定是你戴的表部队
+16:13 varna: BGM换成了张韶涵《永昼》
+16:13 varna: 气氛比较好
+16:13 xxxxxxxx: 不对
+16:13 varna: 这他大爷的，一雷10%
+16:13 varna: 我是在用肝脏和钢铁对抗啊
+16:14 varna: 1-1大炼钢铁也快成活动特色了
+16:14 varna: 再加上院长那个王大锤一样的表情
+16:14 varna: 「八十」「八十」
+16:14 Mokou: 还需要两千钢才能修好船
+16:14 Mokou: 我活得很痛苦啊_(:з」∠)_
+16:14 varna: 只打两锤子就足够送回家
+16:15 Mokou: http://ww1.sinaimg.cn/bmiddle/71021e17jw1f0usovvwfgj20ci0gojs3.jpg “太不公平了，凭什么欺负人家爆竹！”
+16:15 varna: 对了斩杀那货是不是还有意大利特色的开幕？
+16:15 Mokou: 是
+16:15 varna: 干，这北上保不住啊
+16:15 Mokou: 一打一个大破
+16:15 varna: 刷闪又卡了……
+16:15 xxxxxxxx: http://www.jiemian.com/article/537705.html
+16:15 Mokou: 雷装刚刚好，田中算得很漂亮
+16:15 Mokou: 根本不会出保护
+16:15 xxxxxxxx: 这名字让人想念诗啊
+16:16 varna: 卧槽
+16:16 varna: 快念两句
+16:17 Mokou: 敢同院长争高下，不向主任让寸分
+16:17 iyzsong: 苟利国家生死以 岂能祸福趋避之？
+16:17 varna: 这姿势水平不行啊
+16:17 varna: 岂因
+16:18 varna: 这现充还得学习一个
+16:18 iyzsong: @度娘
+16:18 Mokou: 避趋之还是趋避之？
+16:18 * iyzsong 去学习一个..
+16:18 Mokou: 我记得是避趋之吧
+16:18 varna: 避趋之
+16:18 Mokou: 对应祸福
+16:18 varna: 这里是个互文
+16:18 varna: 祸避福趋无误
+16:19 varna: 榛名50/89出去直接刷
+16:19 varna: 小天使我信得过
+16:19 varna: 不到两年前5-3一炮通天的猛将
+16:20 varna: 斩杀KTKM我也不打算CI了
+16:21 varna: 太玄
+16:21 Mokou: http://ww2.sinaimg.cn/bmiddle/006dTn8Jgw1f0wh4uqkg4j30gl0a2t9v.jpg 哦
+16:21 varna: 驲……刷闪出击卡
+16:21 varna: 卧槽
+16:21 varna: 鹤了！
+16:21 Mokou: OTL
+16:22 varna: 惨了这下得重刷……
+16:22 Mokou: 1-1掉鹤
+16:22 Mokou: 太可怕
+16:24 varna: 青岛这边带宽很好，但是似乎总吃道中……
+16:25 Mokou: 所以需要防猫……
+16:25 varna: 现在只要读取基本都在丢包
+16:26 varna: 总之鹤了我认栽
+16:26 xxxxxxxx: 中新网2月11日电 据日本媒体报道，日本前首相小泉纯一郎10日在众多福岛核事故疏散者生活的福岛县磐城市演讲，强调“报废福岛核电站的所有反应堆，这是国民常识“。据报道，小泉纯一郎说：“让我们以福岛为榜样，向着值得去做的、充满梦想的"零核电"而奋斗”。
+16:26 xxxxxxxx: 为啥要零核电....
+16:27 Mokou: 因为要用爱发电
+16:27 varna: 因为199X年，那是一个春天……
+16:27 varna: 哈哈哈有个哥们被小鬼坑了
+16:27 varna: 今天孙子们回过神来了
+16:27 Mokou: 果然
+16:27 Mokou: 赚大了
+16:27 xxxxxxxx: 小泉在演讲中谈及人们在事故后不依赖核电也能生活，强调“零核电既不是空想也不是幻想。事实给出了证明”，“期待有一天会出现力争零核电的日本首相”。
+16:27 varna: 有个2血小鬼让上路捞船党强行A胜
+16:28 xxxxxxxx: 他们干脆别用电...
+16:28 * varna 用电
+16:28 xxxxxxxx: 一样能活....
+16:28 liujingtu joined channel
+16:28 * Mokou 用电
+16:29 Mokou: http://ww2.sinaimg.cn/bmiddle/6aa54acfgw1f0m5edshftj20c90dwmyf.jpg
+16:30 varna: 另一个方丈在133败之后造出了大凤
+16:30 xxxxxxxx: 卧槽这是原话么...
+16:30 varna: 此人大和已超过60败
+16:30 Mokou: 是
+16:30 Mokou: 你看学友抱着什么……
+16:30 varna: 那个不是妮可么？
+16:31 Mokou: 那个表情是学友
+16:31 Mokou: http://ww2.sinaimg.cn/large/645f3c7fgw1f0m9u28i2ig208w04qarw.gif
+16:31 varna: 原来是这个
+16:31 varna: 但为何我觉得像妮可
+16:32 Mokou: 你妮可中毒了
+16:32 Mokou: 快日真姬
+16:32 xxxxxxxx: 中毒无误
+16:32 varna: 巨基又要表演妮可妮可妮
+16:32 xxxxxxxx: 羊驼子转移话题中
+16:33 varna: 二队……
+16:33 xxxxxxxx: 日本一名提倡男性休产假的国会议员因婚外恋辞职
+16:33 varna: 俾斯麦两层，其余补一层
+16:35 xxxxxxxx: 新华社电 据巴基斯坦媒体10日报道，一辆液化气罐车当天在巴东部旁遮普省与另一辆汽车相撞并引发爆炸，造成包括10名小学生在内的至少15人死亡、20人受伤。和中国扯上关系  巴铁也爆炸
+16:37 xxxxxxxx: 日产力争今年在中国至少销售130万辆汽车 <- 我觉得他们可以先来中国修停车场
+16:43 xxxxxxxx: 2月9日上午，德州德城区一男子例行回老家上坟，没想到却发生了意外……上坟时燃放的二踢脚炸到该男子头部，二踢脚一头的水泥块直接炸进了脑内!该男子随即陷入深度昏迷、瞳孔散大，生命岌岌可危。
+16:43 xxxxxxxx: 那种不是要在地上挖个小坑插进去放的么....
+16:44 varna: 然而二踢脚为何威力如此巨大……
+16:45 xxxxxxxx: 鬼知道....
+17:19 varna: 斩杀第一点
+17:21 varna: 一中破全歼
+17:24 varna: 武藏榛名中破进
+17:26 Mokou: OTL
+17:28 varna: 33/390刁民
+17:28 varna: 还不错
+17:28 Mokou: OTL
+17:31 varna: 智商都超群了
+17:31 varna: 可惜随高甲
+17:33 varna: T不利出门
+17:34 varna: 俾斯麦中破
+17:35 varna: (｡･ω･)姬姬姬。
+17:35 varna: A
+17:36 varna: (｡･ω･)门神。
+17:36 varna: 同
+17:37 varna: 1沉1大破
+17:37 varna: 炮战通过
+17:37 varna: 武藏顺势刷闪，GJ
+17:38 varna: 拼了！
+17:39 Mokou: 估计斩了
+17:39 varna: 同航
+17:39 varna: 一个都没轰死
+17:39 varna: 榛名大破
+17:39 lss233 joined channel
+17:40 varna: 这太惨了
+17:40 varna: 我相信有希望
+17:40 varna: 俾斯麦大破
+17:40 varna: POI大破
+17:40 Mokou: 破三个挺正常
+17:40 varna: 十六万大破
+17:40 Mokou: ……
+17:41 varna: 3v5
+17:41 varna: 不错，拿了个A滚了……
+17:42 Mokou: ……
+17:43 varna: 修船的时候卡了，还好不是作战
+17:44 varna: 猫了
+17:47 varna: 再试一次，失败的话得补闪了
+17:49 cleamoon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ad/1e_166861.jpg
+17:49 varna: OOI中破
+17:50 varna: (｡･ω･)ﾉ姬姬。
+17:51 varna: A
+17:51 varna: 门神拼
+17:52 varna: 反航
+17:53 varna: 通过，不过撸改又把武藏干了个中破……
+17:53 varna: 拼了！
+17:54 Mokou: 目测斩了
+17:54 varna: 绫波中破，驱逐全灭
+17:54 varna: 反
+17:54 varna: 武藏炼钢
+17:55 Mokou: 金刚刷闪刷个小破
+17:55 varna: BSM小破
+17:55 varna: 十六万大破……
+17:55 Mokou: D败
+17:56 Mokou: 108级
+17:56 varna: 绫波大破
+17:56 Mokou: 不想说话
+17:56 varna: POI爆炸
+17:56 varna: 四选一失败……
+17:57 Mokou: ……
+17:59 varna: 补闪，再直接打估计都是浪费支援
+18:05 cleamoon quit:Remote host closed the connection
+18:06 Sous-Titre joined channel
+18:07 cleamoon joined channel
+18:07 varna: 武藏这每次带头大炼钢铁也不是个事……
+18:08 * Mokou 还剩116钢
+18:10 StardustX quit:Quit: leaving
+18:16 cleamoon quit:Remote host closed the connection
+18:18 cleamoon joined channel
+18:21 cleamoon: 谁用 yaourt -Sb readline 试一下编译 readline，看看是不是这个 找不到up 的错误其他地方也有
+18:21 varna: 不作死……
+18:22 varna: readline怎么了？
+18:22 cleamoon: 留一个安装包，之后 pacman -U 就能恢复
+18:22 cleamoon: readline的编译版似乎有特技
+18:22 lh_cat joined channel
+18:23 lh_cat: 好多新人。
+18:24 lh_cat: liujingtu lss233 爆照 。
+18:24 cleamoon: 流精图......
+18:24 varna: cleamoon: 现在不折腾，我正卡斩杀……
+18:24 lh_cat: uccu
+18:24 cleamoon: 为什么我的输入法自带这个
+18:25 varna: 流经图 # 我的是这个
+18:25 lh_cat: 拿窥窥拿自家。
+18:26 varna: 另外我想暴打code_new屁股
+18:26 varna: 他说这次活动不好练级？
+18:26 Mokou: 打打打
+18:26 Mokou: 1800
+18:26 Mokou: A胜
+18:26 varna: POI一眨眼就一百三了
+18:26 Mokou: 我大和都124了
+18:26 varna: 十六万还在疯狂升级
+18:27 varna: KTKM一级十万估计不会有明显增长
+18:27 Mokou: code_new一口毒奶干掉了全频道人……
+18:27 lh_cat: 话说，月经是猿类特有的？
+18:27 cleamoon: orz
+18:27 lh_cat: 造物主不公平啊。
+18:27 cleamoon: 很多人不都说鸡蛋就是鸡的月经？
+18:28 varna: 因为世界是一盘飞行的意面在一次严重酗酒之后创造的，所以减命中，RAmen
+18:28 lh_cat: 不是的。
+18:28 varna: 母鸡只是定期下蛋而已
+18:29 lh_cat: 月经是由于没有受精卵着床而坏死的子宫内膜和出血。
+18:29 lh_cat: 鸡蛋只是卵。
+18:31 lh_cat: 野生动物如果这样大出血估计都被天敌吃光了。
+18:32 cleamoon: soga
+18:36 cleamoon: varna, 羊驼子觉得想数据挖掘这类的以后会不会变得像码农一样
+18:42 endle joined channel
+18:43 liujingtu: cleamoon: 刘景途:-)
+18:44 hope1 joined channel
+18:45 iyzsong: 0 0
+18:47 cleamoon: soga
+18:47 cleamoon: 既然报名了，那就爆照吧
+18:57 lss233_ joined channel
+18:58 lh_cat: iyzsong: 摸 i玉子焼头。
+18:59 lh_cat: liujingtu: 新人吃药么。
+19:00 lh_cat:    刘景升
+19:01 lss233 quit:Ping timeout: 264 seconds
+19:04 randomclown joined channel
+19:07 lh_cat: QAQ
+19:12 lh_cat: 求祝福啊。
+19:12 lh_cat: 回上海去钓妹吱啦。
+19:17 liujingtu: lh_cat: 咱们名字好像:-)
+19:18 lh_cat: ？
+19:18 lh_cat: 哪里像。
+19:19 lh_cat: ヲ名字只有两个字啊。
+19:19 lh_cat: 刘景升是刘表啊。
+19:20 iyzsong: 祝爆炸
+19:20 lh_cat: iyzsong: 不说好听话。
+19:20 iyzsong: hope you boom!
+19:20 lh_cat: ヲ是在很认真地说。
+19:21 lh_cat: 不是，ヲ的要真去钓妹吱了。
+19:22 iyzsong: 0 0
+19:22 liujingtu: 奥 我误会了:-)
+19:22 iyzsong: 怎么钓？
+19:22 lss233_ quit:Ping timeout: 272 seconds
+19:22 lh_cat: 有小姑娘啊。
+19:23 lh_cat: 下手宜早不宜迟啊。
+19:23 cleamoon: orz
+19:24 cleamoon: 下次再上irc小耗就有一窝小小耗了
+19:24 iyzsong: 不明觉历
+19:24 lh_cat: 不会那么快吧啊喂。
+19:25 Stevearzh joined channel
+19:25 iyzsong: 1 1 2 3 5 ...
+19:26 cleamoon: 关键是有了妹子谁还上irc，见肉牛
+19:26 lh_cat: 不一定哦。
+19:26 lh_cat: 肉牛那货呵呵。
+19:28 Mokou: “中国国航的服务、机场休息室设计、服务态度、手机应用和网页体验的一致性超强，达到了中国乡村的普遍水平。”
+19:28 iyzsong: - -
+19:29 lh_cat: Mokou: 求祝福。
+19:29 cleamoon: 机场休息室不归国航管吧...
+19:29 Mokou: cleamoon: 国航的休息室为啥不归国航管
+19:29 hope1: 感觉国航还可以吧
+19:29 Mokou: lh_cat: 祝爆炸
+19:29 * hope1 并没有坐过头等舱
+19:29 cleamoon: 国航休息室是什么... 没见过...
+19:29 cleamoon: 没做过+
+19:29 * Mokou 并没有坐过头等舱
+19:30 Mokou: cleamoon: 海盗国大概不会有国航的休息室？
+19:30 iyzsong: 头等舱是啥？
+19:30 Mokou: 查了一下，SAT砸了_(:з」∠)_
+19:30 Mokou: 1840 _(:з」∠)_
+19:30 Mokou: 啊，人生如此艰难
+19:30 hope1: 咦，红旗要出国？
+19:30 Mokou: 准备出去
+19:30 cleamoon: 帝都我也没见过呀...
+19:30 hope1: 没关系，考新SAT
+19:30 Mokou: 你在首都机场里转转
+19:31 cleamoon: 应该要多少
+19:31 hope1: 我也挂掉了
+19:31 iyzsong: orz
+19:31 Mokou: 至少2000吧
+19:31 lh_cat: Mokou: 坏人！ QAQ 你们都欺负ヲ！
+19:31 cleamoon: 首机太tm大，每次都赶时间，没时间休息
+19:31 Mokou: lh_cat: 现充才爆炸，我这是祝你早日现充_(:з」∠)_
+19:31 Mokou: _(:з」∠)_
+19:31 iyzsong: http://blog.prepscholar.com/what-is-a-good-sat-score-a-bad-sat-score-an-excellent-sat-score 满分2400?
+19:31 cleamoon: _(:з」∠)_
+19:32 Mokou: 你坐啥，海盗航空？
+19:32 cleamoon: 国航呀
+19:32 hope1: 据我爸说如果航空公司超售了就可以坐到头等舱
+19:32 Mokou: ……
+19:32 lh_cat: Mokou: QAQ 不要爆炸嘛，
+19:32 Mokou: 国航居然不延误么
+19:32 cleamoon: 没有海盗航空
+19:32 Mokou: lh_cat: 现充当然要爆炸(｡･ω･)ﾉ
+19:32 Mokou: 噫
+19:32 cleamoon: 经常提前到......
+19:32 lh_cat: QAQ 不要！
+19:32 hope1: 打算去美帝？
+19:32 Mokou: 就要
+19:32 Mokou: 十一区
+19:32 Mokou: 我需要一个标准化考试成绩，而高考六月
+19:33 cleamoon: 延误也是上了灰机在灰机上等着......
+19:33 cleamoon: 会考？
+19:33 hope1: 十一区啊
+19:33 hope1: 会考233
+19:33 Mokou: 我在HK的时候是飞机去晚了……
+19:33 * Mokou 政治C
+19:33 Mokou: 所以我在赤蠟角转了半天
+19:33 * hope1 还没考政治，预计丙等
+19:34 Mokou: cleamoon: 看了一下，海盗国似乎可以坐北欧航空？
+19:34 cleamoon: 政治呀... 背书呀
+19:34 Mokou: 懒得背
+19:34 cleamoon: sas？贵得一逼
+19:34 Mokou: ……
+19:34 Mokou: 汉沙呢
+19:34 cleamoon: 基本都是转机...
+19:34 hope1: 北欧有不贵的东西吗，鱼？
+19:35 Mokou: 国航官网在我这里基本是废的
+19:35 cleamoon: 嗯，想了想，发现想不到...
+19:35 Mokou: 全日空飞瑞典么
+19:35 cleamoon: 花销比上海略高
+19:35 cleamoon: 估计不飞...
+19:36 Mokou: 你是飞哪个机场，我查一下看看……
+19:36 cleamoon: 哦，卡塔尔航空和阿联酋航空飞海盗...
+19:36 Mokou: ……
+19:36 cleamoon: arlanda airport
+19:36 Mokou: The page isn't redirecting properly
+19:36 Mokou: 国航你吔屎吧
+19:37 cleamoon: 23333
+19:37 cleamoon: 国航网站有自动涨价功能，有时会自动为你涨价
+19:37 Mokou: 卡塔尔似乎比国航便宜？
+19:37 Mokou: ……
+19:38 cleamoon: 谁敢做呀...
+19:38 Mokou: 卡塔尔似乎还好
+19:38 Mokou: 我查一下
+19:38 Mokou: 不过我总信不过非亚洲航空公司的飞机餐……
+19:38 cleamoon: FA航还不错
+19:39 Mokou: 但是比国航贵两倍
+19:39 cleamoon: 不过，去11区没什么必要选吧
+19:39 Mokou: 我查着玩
+19:39 Mokou: 去11区肯定全日空
+19:39 Mokou: 价格一致服务吊打
+19:39 cleamoon: 乖不得没妹子
+19:39 cleamoon: 全日空了
+19:40 Mokou: uccu
+19:40 Mokou: 卡塔尔五星级航空公司
+19:41 Mokou: 噫，全日空不飞ARN
+19:41 cleamoon: 票价太低，不敢做
+19:41 Mokou: 卡塔尔到目前为止没摔过飞机
+19:41 Mokou: 06年引擎熄火在浦东迫降过一次
+19:42 Mokou: 我觉得你可以考虑下
+19:42 cleamoon: 以后在说吧，暂时不做灰机
+19:42 cleamoon: 出门
+19:45 cleamoon quit:Read error: Connection reset by peer
+19:57 linearain joined channel
+19:58 linearain: hi
+19:59 iyzsong: hey :o
+20:06 linearain: whats new
+20:08 varna: (｡･ω･)ﾉHELO
+20:08 liujingtu quit:Ping timeout: 240 seconds
+20:08 varna: 我补点闪
+20:09 liujingtu joined channel
+20:10 * varna is fighting hard, playing kancolle
+20:11 varna: however there's a documentary film about Dehuai Peng I want to see...
+20:11 varna: interesting history
+20:14 linearain: whos he?
+20:14 liujingtu: 请教：我想写出这种格式的文章，一定要用Latex吗？还有什么方法呢？ http://picpaste.com/_________-xBJhkCyo.bmp
+20:16 iyzsong: 用HTML写吧(大雾)
+20:17 linearain: you still use win xp?
+20:17 liujingtu: iyzsong: 我会HTML，求个css...
+20:17 linearain: nice
+20:18 iyzsong: 2333
+20:18 linearain: you know about cg language? c for graphics by nvidia
+20:18 linearain: or qc quakec by id
+20:18 FrankHB quit:Ping timeout: 276 seconds
+20:19 liujingtu: linearain: Many thanks. But it looks like a huge monster.
+20:20 linearain: xp is popular in china?
+20:21 linearain: you torrent it right?
+20:21 hope1 quit:Ping timeout: 240 seconds
+20:21 liujingtu: linearain: a long time ago, it is. Now most of my friens are using Win7.
+20:22 iyzsong: liujingtu: 这样的? => https://github.com/tompollard/phd_thesis_markdown
+20:22 liujingtu: linearain: That's right. WinXP copy is pretty easy to find.
+20:23 linearain: can i ask what activation crack you use?
+20:23 liujingtu: iyzsong: 谢谢。我看下，不过我不太相信Markdown扩展能写PhD论文。
+20:23 liujingtu: linearain: Sorry. Do you mean something like CD-Key?
+20:23 linearain: i have win 7 64 but i would like to have xp for old games
+20:23 linearain: yes cd key
+20:23 liujingtu: 我还是用latex吧...
+20:24 linearain: i just heard torrented windows often have backdoors
+20:25 liujingtu: linearain: I haven't entered CD-key.. But I found this: (image uploading..)
+20:26 liujingtu: http://picpaste.com/upload.php
+20:26 liujingtu: http://picpaste.com/QQ_____________________-KUqP3C5T.png
+20:27 liujingtu: The second one. :)
+20:27 linearain: i see
+20:28 liujingtu: Looks it's a cracked copy. Maybe that's why I don't need to enter cd-key. :)
+20:28 linearain: they dont sell xp anymore i think
+20:28 liujingtu: backdoors you mentioned is really exist. I have to reinstall every month.
+20:29 linearain: really?
+20:29 linearain: wow
+20:29 liujingtu: yes. every month, my HTML file will be implanted Trojan.
+20:29 linearain: i never reinstall lol
+20:29 liujingtu: A vbscript Trojan
+20:30 linearain: the trojan is inside the xp you torrented probably
+20:30 liujingtu: It hijack svchost.exe, and make more HTMl file died.
+20:30 linearain: you should check md5 hash sum of the xp image
+20:31 linearain: compare to the genuine
+20:31 linearain: if they dont differ...
+20:32 liujingtu: I think it came from the Internet. Because a long time ago my Web Card have broken, and my computer is pretty good.
+20:32 linearain: its a good idea to buy old windows disks from ebay, at least you will be sure it has no trojans
+20:32 Sous-Titre: lol, I thought what you were talking to yourself...
+20:32 Sous-Titre: :-)
+20:33 Sous-Titre: the same length of your usernames
+20:33 linearain: here the internet goes down the drain when trust comes
+20:34 liujingtu: That's a good idea, thanks. :) I'm going to write my article. Talking with you is a pleasure.
+20:34 linearain: its different in my irc lol
+20:34 FrankHB joined channel
+20:34 Sous-Titre: but wait a minute, why you guys speak English?
+20:34 Sous-Titre: in a Chinese channel...
+20:34 liujingtu: linearain是个欧洲人
+20:34 Mokou: 立陶宛友人
+20:34 Sous-Titre: ok I see
+20:34 linearain: thanks hah
+20:35 linearain: did they badmouth me?
+20:35 Sous-Titre: I'm in France, maybe see u in the future :)
+20:35 Mokou: nope, i just told him that you are from lithuania
+20:35 linearain: im going to china
+20:35 Sous-Titre: welcome
+20:35 linearain: fuck france sorry
+20:36 Sous-Titre: we have a loooooooooot of food 
+20:36 linearain: food is my love
+20:36 Sous-Titre: I mean in China
+20:36 linearain: i want chinese dumplings with soy sauce
+20:36 Sous-Titre: Chinese food is the best in the world
+20:36 linearain: tons of rice too
+20:37 linearain: i believe
+20:37 Sous-Titre: I'll gonna watch Deadpool
+20:37 Sous-Titre: c u guys
+20:37 linearain: but im vegetarian kind of
+20:38 linearain: i can only eat small animals like insects lol
+20:38 linearain: bb
+20:38 Sous-Titre: insects, oh my ...
+20:39 Sous-Titre: Guang Zhou in a kind of these city...
+20:39 linearain: i heard
+20:39 Sous-Titre: c you :-)
+20:39 iyzsong: 安
+20:40 hatlist joined channel
+20:40 hatlist: 膜一下
+20:40 linearain: you should use linux
+20:40 Mokou: 中古汉语吧的傻逼简直不能看
+20:40 Mokou: http://tieba.baidu.com/p/1830285626 噫
+20:40 linearain: you can run windows programs with wine
+20:40 Mokou: 我试图上贴吧找资料就是个错误
+20:42 iyzsong: 为何要互相伤害 Q.Q
+20:43 linearain: are there any irc networks in china?
+20:48 linearain: anybody play openarena?
+20:49 linearain quit:Remote host closed the connection
+20:49 liujingtu: In order to prevent you think I'm old because I use XP, I made a solemn statement that I have used Debian for about 2 year, and Win7 for about 1 months, the only thing make me back to XP is the speed (Debian is slow because GNOME is slow). 为了防止大家觉得我不合群因为我用XP，我郑重声明下，我用过Debian差不多两年，用过一个月的Win7，用回XP的原因只是它们在这台机器上都太慢了... What worse, Debian
+20:49 liujingtu:  have no display driver. Debian还没有显卡驱动。In fact I prefer Debian than XP because its apt-get and its gcc. 实际上我更喜欢Debian因为它的软件包管理和内置的编译套件。
+20:50 liujingtu: 我靠 这货走了
+20:52 liujingtu quit:Quit: Leaving
+21:03 xxxxxxxx: 在化学课上，一些老师经常为无法区分“无水硫酸铜”和“五水硫酸铜”而苦恼，因为说的是普通话。但中古汉语就不会这样的。 <- 说得对 中古汉语里哪有这样的词
+21:09 FrankHB: spicy chicken XP, spicy chiken GNOME
+21:10 Sous-Titre quit:Ping timeout: 256 seconds
+21:17 xxxxxxxx: 我总觉着这些积极宣扬传统文化的脑子或多或少缺根筋...
+21:24 Mokou: 我甚至不确定他们有没有大脑
+21:33 liujingtu joined channel
+21:33 liujingtu quit:Client Quit
+21:38 lh_cat quit:Quit: Connection closed for inactivity
+21:40 hatlist: 我家乡话 重力 动力 冲力 基本上难以区分， 应该也是中古汉语的一种
+21:41 Mokou: 没有ch zh？
+21:42 hatlist: 都是一个发音
+21:42 hatlist: 都是接近于t
+21:42 hatlist: tong的音
+21:43 Mokou: 那有可能
+21:43 Mokou: 古无舌上音
+21:46 cleamoon joined channel
+21:47 iyzsong: ʕ•̀ω•́ʔ✧
+21:53 varna: 加了一个彭德怀buff
+21:53 Mokou: OTL
+21:54 Mokou: 今晚我不出击
+21:54 varna: 我感觉现在应该有对烟斗栖战鬼加成了
+21:54 varna: 刚才把看了两天的旧纪录片《彭德怀》看完
+21:55 * Mokou 还剩482钢
+21:55 varna: 今天的斩杀如果全都失败了，明天上双支援
+21:55 Mokou: 然后就成功了
+21:56 varna: 希望如此
+21:58 varna: 其实如果武大两位不大炼钢铁的话也许还能多打几仗
+21:59 varna: 不过对面毕竟太猛……
+21:59 Mokou: 你还剩多少
+21:59 varna: 58k油
+21:59 Mokou: OTL
+21:59 cleamoon: anyone uses wicd? i cannot connect to an open wireless network...
+21:59 varna: 这个会最先用完
+21:59 varna: cleamoon: enable wicd daemon first
+22:00 cleamoon: varna: done
+22:00 varna: and connecting failed?
+22:00 varna: (firmware sucks)
+22:00 cleamoon: yes
+22:01 varna: (firmware sucks)
+22:01 cleamoon: but it used to work
+22:01 varna: ...
+22:02 varna: physical access point sucks?
+22:02 cleamoon: journalctl -f gives dhcpcd not running
+22:02 cleamoon: sucks too
+22:02 hope1 joined channel
+22:02 varna: dhcpcd should be stopped first
+22:03 cleamoon: it is not even running...
+22:03 cleamoon: i haven't started it
+22:03 varna: and if you see some zombie dhcpcd...
+22:03 cleamoon: and the wired/wifi works at home but not at school
+22:03 varna: or some already-died-zombie dhcpcd...
+22:03 iyzsong: kill all daemons, run them foreground manually may give more insights (ーー;)
+22:04 varna: 233song+
+22:04 varna: 驲
+22:05 varna: 这橙子为何一股尿味
+22:05 varna: 我巴福加错了？
+22:05 iyzsong: 嘻
+22:05 cleamoon: 233
+22:05 cleamoon: now i have autovt getty ntpdate ntpd and remote-fs enabled and reboot
+22:06 liujingtu joined channel
+22:06 varna: well now we've got some english-speaking chinese people(?) around 23333
+22:07 cleamoon: you don't need to speak english......
+22:07 cleamoon: there is no pinyin on school's computer
+22:07 varna: 我明白了
+22:07 liujingtu: 求助：谁有academic.eb.com的帐号？能借我吗？
+22:07 varna: 那个纪录片最后有长者讲话
+22:08 Mokou: ……
+22:08 varna: 我加的是法师巴福，不是彭德怀巴福……
+22:08 Mokou: 然后沖波了？
+22:08 varna: liujingtu: 没……
+22:08 varna: 我还在补闪
+22:08 cleamoon: sudo wicd
+22:08 varna: 片子是电视上点播的
+22:08 cleamoon: i get wlp4s0 link is not ready
+22:08 cleamoon: enp5s0 link is not ready
+22:09 iyzsong: https://wiki.archlinux.org/index.php/Wireless_network_configuration#Manual_setup
+22:09 varna: manually setup...
+22:10 cleamoon: alright...
+22:11 varna: 一队还有两个两层
+22:13 iyzsong: 手动方便查锅 ʕ•ٹ•ʔ
+22:14 cleamoon: i'm running iwconfig wlan0 essid your_essid
+22:15 varna: and it will suck
+22:15 cleamoon: get ath9k 0000:04:00.0 wlp4s0: disabling HT as WMM/QoS is not supported by the AP
+22:16 varna: puuuu
+22:16 cleamoon: ath9k 0000:04:00.0 wlp4s0: disabling VHT as WMM/QoS is not supported by the AP
+22:16 cleamoon: wlp4s0 association with 00:1d:...... timed out
+22:16 varna: 噫，棒各要120了，大傻要126了……
+22:16 varna: 大和快94
+22:16 iyzsong: (¯―¯٥)
+22:17 varna: 俾某麦93级练了一半
+22:17 varna: 我一定要爆了code_new
+22:17 Mokou: 把码新叫过来
+22:17 varna: 码新必须爆
+22:18 varna: 这次田中的创意在于把特鲁克的门神和boss放在了一起，同时让MI的boss当了门神
+22:18 * varna 这样地概括说
+22:18 varna: 手滑
+22:18 varna: 让MI的boss当了一面boss
+22:18 Mokou: +
+22:18 varna: 出门两个院长照着我打
+22:19 varna: 露大白腿的时间还就那么一点点点点
+22:19 varna: 让我舔个卵！
+22:19 Mokou: KFC这官网简直智障
+22:19 Mokou: 我设置密码的时候可以带下划线
+22:19 varna: __________________________________________
+22:19 Mokou: 然后登录的时候他发现我输入的密码带下划线，不是字母和数字
+22:19 Mokou: 不让我登录
+22:20 Mokou: 这他妈6飞了
+22:20 varna: 233333333333333333333
+22:20 iyzsong: (；´∀｀)
+22:20 Mokou: 妈个鸡，我搞个麦记帐号
+22:20 cleamoon: and as for iwconfig wlan0 essid your_essid, i get wlp4s0 00:1d:..... denied association
+22:21 varna: Mokou: 别，长春没这个
+22:21 Mokou: ……
+22:21 varna: 麦当劳有，麦乐送别想
+22:21 Mokou: 什么鬼
+22:21 varna: 否则我早就不鸟上校了
+22:21 Mokou: 长春不送？
+22:21 varna: +
+22:21 Mokou: 6666666666
+22:21 Mokou: 汉堡王呢
+22:21 cleamoon: orz
+22:21 varna: 最近才开，我不知道送不送，不过也许你可以直接在JLU里面吃
+22:21 hoxily quit:Quit: Leaving
+22:22 Mokou: 那也行
+22:22 Mokou: 正好表演5-5
+22:22 varna: 学校里有店，我后来去吃过
+22:22 Mokou: 人多么
+22:22 varna: 别赶饭点
+22:22 varna: 否则你会突入一个木耳种植园
+22:23 Mokou: ……
+22:24 varna: 胃口不大的话请你吃甜点也行，我顺便膜一下面神
+22:24 varna: 沃尔玛对面有家咖啡馆的匹萨和面很好，不过我一般祈祷他们那个什么雪风姐不来上班
+22:24 cleamoon: orz
+22:24 cleamoon: so, what should i do...
+22:24 varna: 直接猫我一个骑脸夜战，印象深刻
+22:24 Mokou: 雪风姐……
+22:25 Mokou: 到时候我看看情况
+22:25 Mokou: 还有十多天呢
+22:25 Mokou: 啊，汉堡王外卖网站还没上线……
+22:25 varna: 汉堡王要吃的话可以搞点优惠券，花样多些
+22:26 varna: 我这种懒鬼到那儿消耗的总是九元小皇堡和大量薯条洋葱圈
+22:27 hope1: 开封菜唯一的优势就是外卖范围了
+22:28 varna: 噫，日内瓦公约不限定对作战人员使用凝固汽油弹的？
+22:29 varna: hope1: 上校糟蹋薯条，是阶级敌人
+22:29 hope1: 糟蹋薯条+
+22:30 hope1: 只点两块原味鸡套餐和全家桶
+22:30 hope1: 那个套餐里的土豆泥还行
+22:30 varna: 外卖套餐不送薯条
+22:30 varna: 土豆泥里面奶油味太重，我不喜欢奶油……
+22:30 varna: 我记得汉堡套餐外卖的薯条都被沙拉替代了
+22:31 varna: 而且长春人民经常忘送勺子
+22:31 varna: 而且长春人民经常忘送勺子
+22:31 Mokou: ……
+22:31 varna: 我就用北斗神拳奥义敲着碗底吃……
+22:31 Mokou: 666666
+22:31 hope1: 噫，难道各地开封菜还不一样吗
+22:31 varna: 估计是
+22:31 varna: 我记得外卖网站上声明了这点
+22:32 Mokou: 在济南的时候我倒是没要薯条
+22:32 xxxxxxxx: 狗头神拳奥义舔着碗底吃
+22:32 Mokou: 噗
+22:32 varna: 狗头！碗底捞！
+22:32 Mokou: 我随手打开了kfchk网站
+22:33 Mokou: 啊，有香辣鸡腿堡薯条套餐
+22:33 Mokou: 供应地区：仅限上海市，北京市、深圳市、广州市、南京市、苏州市、厦门市、福州市、青岛市、无锡市的肯德基宅急送送餐范围 
+22:33 varna: (｡･ω･)ﾉ青岛市
+22:33 Mokou: _(:з」∠)_但是在岛城我不用叫外卖
+22:33 varna: 可惜我回家肯定来吃老母的菜啊
+22:34 varna: 我鹤操刀支援
+22:34 Mokou: 或者找点非美式快餐外卖/
+22:34 Mokou: 或者找点非美式快餐外卖？
+22:35 varna: 很多，不过我不喜欢用他们的网站；另外也许你会被腻死，我不太清楚
+22:35 Mokou: ……
+22:35 varna: 加州牛肉面，拯救中国人
+22:35 varna: ^ 心跳
+22:35 varna: s/心跳/信条/
+22:36 Mokou: _(:з」∠)_
+22:37 varna: (｡･ω･)ﾉ一切反动派都是纸老虎！
+22:37 varna: (｡･ω･)ﾉ打倒美帝国主义！
+22:37 varna: (｡･ω･)ﾉ把田中批倒批臭踏上一只脚，让他永世不得翻身！
+22:37 varna: (｡･ω･)姬姬姬姬。
+22:38 * varna 一脸辛酸
+22:38 Mokou: _(:з」∠)_
+22:38 Mokou: 提督活得很痛苦啊
+22:38 varna: (｡･ω･)ﾉ发进！
+22:39 varna: 第一点
+22:39 cleamoon: by the way i can not connect to mobile hot spot neither. just network home works....
+22:39 varna: 反
+22:39 Mokou: “总觉得新版人民币有点臭臭的……”
+22:40 Mokou: 评论： @土包残念:成为偶像//@月刊勇者KuMa君:让所有组员 //@炭烧鸡腿堡加奶:对为了保护后辈而担下全部责任的运钞车司机，车主暴力团员谷冈所提出的和解条件是…//@夜宵君:不慎追尾了黑色高级车//@代码不存在:也许是因为运钞车司机过于疲惫 
+22:40 cleamoon: 233333
+22:40 varna: 武藏69/97 pass
+22:40 varna: 雷击后 61/400 15/400
+22:41 varna: 俾某麦成功保护了小女孩们
+22:41 varna: Mokou: 这个我觉得该是114514
+22:41 varna: (｡･ω･)姬姬。
+22:41 varna: S
+22:42 Mokou: OTL
+22:42 cleamoon: orz
+22:42 Mokou: (｡･ω･)姬姬我从来都是A……
+22:42 varna: 门神
+22:42 varna: (｡･ω･)爷爷。
+22:43 varna: -1
+22:43 varna: T不利
+22:43 varna: -1.5
+22:43 FrankHB: 然而我开封菜攒了一堆勺子……
+22:43 T_O_W joined channel
+22:43 varna: -1
+22:43 varna: -0.5
+22:44 varna: 完胜
+22:44 varna: FrankHB: 真羞耻
+22:44 T_O_W: 啥玩意？推演？
+22:44 T_O_W: 。。
+22:44 varna: T_O_W: 舰C
+22:44 T_O_W: ....
+22:44 varna: 看我除武藏小破以外全员无伤的队伍进去
+22:45 varna: 干！
+22:45 T_O_W: 半年没进坑..
+22:45 T-J-M quit:Ping timeout: 248 seconds
+22:45 varna: OTL
+22:45 varna: (｡･ω･)姬姬姬姬。
+22:45 varna: 飞鹰大破，大丈夫
+22:45 varna: 到着
+22:45 whocares_2 quit:Ping timeout: 240 seconds
+22:45 varna: 十六万大破，开幕合计1
+22:45 varna: 同航
+22:46 varna: 主任瘫痪
+22:46 varna: 主任废了
+22:46 varna: 武藏炼钢
+22:46 varna: POI中破
+22:46 hatlist: 膜
+22:47 varna: 俾斯麦中破
+22:47 cleamooon joined channel
+22:47 cleamoon quit:Quit: Page closed
+22:47 varna: 雷击
+22:47 varna: 4中破1小破，敌3，无先手
+22:47 varna: 拼了！
+22:48 varna: 252/390 C
+22:48 varna: 残念
+22:48 Mokou: _(:з」∠)_
+22:51 cleamooon: do you gays enable sound while playing kancolle
+22:51 varna: sound & no music
+22:52 Mokou: +
+22:52 cleamooon: voice?
+22:52 whocares_2 joined channel
+22:52 endle quit:Quit: Leaving
+22:52 varna: +
+22:57 varna: 卧槽
+22:58 varna: 出门大和中破……
+22:58 Mokou: 正常
+22:58 varna: 十六万中破
+22:58 cleamooon: time i first get this FA-King problem is after i reinstalled arch because i tried the shity gentoo
+22:58 varna: 算是通过了
+23:00 varna: (｡･ω･)姬姬姬。
+23:00 varna: 隼鹰30/55
+23:00 varna: 门神
+23:01 Sous-Titre joined channel
+23:01 varna: T不利
+23:01 varna: 擦伤全歼
+23:04 Mokou: OTL
+23:05 varna: 同航夜战五打五
+23:05 varna: 没先手
+23:05 Mokou: 估计斩了
+23:06 varna: 刁了
+23:06 Mokou: ……
+23:07 varna: 炮战打太差了
+23:10 varna: 单纯地运气差，各种单击
+23:11 varna: 结果夜战被人扫了一排
+23:11 varna: 夜战前*
+23:11 Mokou: ……
+23:11 varna: 五个能动的里面四个中破
+23:12 varna: RP没爆发，于是刁了，不过好歹2.5倍DP达成
+23:13 varna: 总体来说看着好可怜，进去的时候都高兴笑着
+23:13 Sous-Titre quit:Ping timeout: 240 seconds
+23:13 varna: 出来全跪了……
+23:14 Mokou: _(:з」∠)_
+23:14 Mokou: 而是你要享受这个过程
+23:14 varna: 总还有机会的
+23:15 varna: 但是我能不能撞上，就不知道了
+23:16 varna: 咱在还债啊
+23:19 varna: 以后舰C迟早要出合作打的活动
+23:19 varna: 这强度往下还会失控，不靠米孔根本压不住……
+23:19 Mokou: 但是你在岩川……
+23:19 varna: 大丈夫，岩川我也有熟人的
+23:20 Mokou: _(:з」∠)_但是我在幌筵
+23:20 Mokou: 没熟人
+23:20 varna: 你去卖卖PIGU...
+23:20 Mokou: 你帮我卖
+23:20 Mokou: 你适合女装
+23:20 varna: 这旗逃避女装
+23:21 Mokou: 这驼逃避女装
+23:21 cleamooon: co-op... i choose go die
+23:21 varna: 我得换个bgm
+23:21 Mokou: _(:з」∠)_打活动好累
+23:21 Mokou: 要不然再冲一波冲不动我就咸了吧
+23:21 varna: 张韶涵《亲爱的那不是Boss》
+23:22 varna: 轻松R&B
+23:22 Mokou: 划到二十号
+23:22 Mokou: 二十号开学，再打不过我直接咸
+23:22 liujingtu quit:Quit: Leaving
+23:22 cleamooon: Mokou is in the second year?
+23:22 varna: 3rd
+23:23 cleamooon: orz
+23:23 Mokou: 另外岚月酱这是fcitx爆炸了么……
+23:23 varna: 他在学校
+23:23 Mokou: 学校电脑？
+23:24 varna: +
+23:24 Mokou: _(:з」∠)_
+23:24 cleamooon: +
+23:24 cleamooon: wifi duanged
+23:25 Mokou: http://inputking.com/ 以前我在输入法没配置好的时候会先用这玩意顶替一下
+23:26 varna: 我还有54k油，也许米空会赐给我一个机会
+23:26 varna: 不过开战以来两天大炼钢铁已经烧掉了我不到四万钢
+23:27 cleamooon: 这还没有google translate方便呢.....
+23:27 varna: 噫，说出话来了
+23:27 Mokou: 很久以前了，那时候我还不会翻墙呢
+23:27 Mokou: 噫，口球被摘掉了
+23:27 cleamooon: uccu
+23:28 varna: 卧槽OOI升级了
+23:28 varna: 我必须爆死码新
+23:28 varna: Lv131你敢信
+23:28 Mokou: 码新今天都不敢来了
+23:28 varna: 兹来兹爆
+23:29 varna: 我仔细思考了一下防空姬和这个哪个更恶心
+23:30 varna: 然后放弃了思考
+23:30 varna: 也许还是防空姬更恶心
+23:33 Sous-Titre joined channel
+23:33 varna: 现在想想，第一次斩杀好可惜
+23:33 varna: 俾斯麦手气差了
+23:33 Mokou: 我可惜的斩杀不少
+23:34 Mokou: 比如说那个北大二连三选一
+23:34 Mokou: 结果全不徹甲
+23:34 varna: 否则十六万钢就可以写下夏秋冬三发直击大头目的传奇
+23:35 varna: 大丈夫，赢下这一仗的话，补给品数目对我来说就不那么重要了
+23:36 varna: (｡･ω･)ﾉ按照我最常处的军衔，我提请田中追赠我一个元帅！
+23:37 Mokou: OTL
+23:37 cleamooon: 1450 buckets left
+23:37 Mokou: (｡･ω･)ﾉ但是我突然想起一个问题
+23:37 Mokou: 三月我要冲排名
+23:37 cleamooon: orz
+23:37 varna: 活动至今已经砸了117桶
+23:38 varna: 还凑合
+23:38 Mokou: 300桶
+23:38 varna: 即使现在，我手里的耗材也比以前大决战的时候多
+23:38 varna: 我相信米空
+23:39 varna: 米空以失败让我明白世界的道理，启迪我走向人生尽头没有胜利的未来
+23:39 cleamooon: i wanna fish 米空
+23:39 varna: 还让我小舔两千口
+23:40 varna: 还让我小舔两千口（强调）
+23:40 cleamooon: @奋.. 好莱坞+宝莱坞+义乌 的编剧联合起来都出不了的梗：【《秦始皇与我》讲的是秦始皇穿越到现代爱上了我发现我不喜欢学习所以回去后焚书坑儒……[拜拜][拜拜]】」
+23:41 varna: ...
+23:41 varna: 卧槽
+23:41 varna: 换个BGM
+23:42 cleamooon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ae/qz_366413.jpg
+23:42 varna: 夢と葉桜 紅 # 跟电酱结婚之后早上爬回寝室时候听的歌
+23:44 cleamooon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ae/bm_405962.jpg
+23:44 cleamooon: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/ae/4z_470789.jpg
+23:45 varna: 2333333
+23:45 varna: 欠雪不错，看着挺欠的
+23:50 varna: 突入！
+23:51 varna: 同
+23:51 varna: 武藏29/97...
+23:51 Mokou: ……
+23:52 Mokou: 没关系中破能打孙子
+23:52 varna: pass
+23:52 varna: 能进去就行
+23:52 varna: 87/400
+23:53 varna: (｡･ω･)姬姬。
+23:53 varna: 27/97
+23:53 varna: 他们针对我
+23:54 varna: 同
+23:54 varna: 我日
+23:55 varna: 我拖不拖人
+23:55 varna: 拖人，上
+23:55 varna: 不会比不打更差
+23:56 varna: 反航
+23:57 varna: 大和炼钢……
+23:57 Mokou: http://imgs.xkcd.com/comics/tools.png
+23:57 varna: OOI中破
+23:58 varna: KTKM中破
+23:58 varna: CI!
+23:58 Mokou: ……
+23:59 varna: 42/390 刁民
+23:59 Mokou: ……
+23:59 varna: 残念

@@ -1,0 +1,1163 @@
+00:22:yzld2002 quit:Quit: yzld2002
+00:31:wlemuel quit:Ping timeout: 240 seconds
+00:32:wlemuel joined channel
+00:38:lh_mouse quit:Read error: Connection reset by peer
+00:46:Petrus07 quit:Quit: Leaving.
+00:51:wlemuel quit:Ping timeout: 255 seconds
+00:57:erhandsome quit:Remote host closed the connection
+01:17:Stevearzh quit:Remote host closed the connection
+01:18:Stevearzh joined channel
+02:06:xxxxxxxx joined channel
+02:22:ray- joined channel
+03:36:cleamoon quit:Remote host closed the connection
+03:38:cleamoon joined channel
+03:46:cleamoon_ joined channel
+03:53:cleamoon quit:Read error: Connection reset by peer
+03:57:cleamoon joined channel
+04:11:cleamoon quit:Quit: Leaving
+06:12:izmntuk quit:Quit: Lost terminal
+06:22:cleamoon_ quit:Remote host closed the connection
+06:24:cleamoon joined channel
+06:27:cleamoon quit:Remote host closed the connection
+06:28:cleamoon joined channel
+09:11:Xilzzerts joined channel
+09:15:lh_mouse joined channel
+10:05:iyzsong: o.o
+10:05:lh_mouse: O.O
+10:07:lh_mouse: geordi, { istringstream iss("abc"); istringstream_iterator<char> it(iss); cout <<*it, *it; ++it; cout <<*it; }
+10:07:geordi: error: 'istringstream_iterator' was not declared in this scope
+10:07:lh_mouse: geordi, replace istringstream_iterator with istream_iterator
+10:07:geordi: a, ab
+10:25:hysw: 智商不够用。。。
+10:34:cleamoon quit:Ping timeout: 255 seconds
+10:47:cleamoon joined channel
+10:52:TwitchGG joined channel
+11:26:Sleepwalking joined channel
+11:33:Xilzzert joined channel
+11:35:Xilzzerts quit:Ping timeout: 244 seconds
+12:00:Sleepwalking quit:Ping timeout: 256 seconds
+12:03:xxxxxxxx quit:Quit: Leaving...
+12:23:yzld2002 joined channel
+12:25:Sleepwalking joined channel
+12:26:T2 joined channel
+12:27:T2: xchat到期也是叼
+12:30:dantmnf: hexchat
+12:31:lh_mouse: hexchat 啊
+12:34:T2: 下不下来，似乎被墙了。
+12:38:T2: 似乎用chrome可以下kvirc
+12:39:iyzsong: T2: 要不要我的vps帐号 oio
+12:40:T2: iyzsong 不用啦，O(∩_∩)O
+12:40:dantmnf: 感觉像是推销一样（
+12:41:T2: dantmnf 泥垢
+12:46:T2: 换一下试试
+12:46:T2 quit:
+12:47:T2 joined channel
+12:47:T2: 这个似乎不错
+12:52:Sleepwalking: 看到一个论文，用两个语音合成系统分别模拟布什的声音，朗读《皇帝的新衣》并比较合成质量233
+12:52:Sleepwalking: 感觉作者是故意的
+12:53:Sleepwalking: In the experiments, we will apply both techniques to the problem of cloning the voice of George W. Bush (The 43rd President of the United States) and produce a short rendition of the introduction of a well known children’s story, “The Emperor’s New Clothes”.
+12:54:T2: Sleepwalking: CMU好玩么？
+12:55:Sleepwalking: T2: 被拒了 - -
+12:55:T2: Sleepwalking: 为毛啊？
+12:55:Sleepwalking: 据分析是硬指标不过线
+12:55:T2: 噗，硬指标。
+12:55:T2: 好吧
+12:56:T2: 这种东西完全没有过表示无压力。
+12:57:Stevearzh quit:Ping timeout: 244 seconds
+12:58:Stevearzh joined channel
+13:00:iyzsong: - -b
+13:00:T2: Sleepwalking: 没关系啦，都一样，听说去了也是自学orz。
+13:01:FrankHB: 有啥硬指标。。
+13:02:Sleepwalking: SAT
+13:02:FrankHB: 说起来这几十年应用领域CMU的存在感太那啥了。
+13:02:T2: iyzsong: 我已经是行为障碍了。
+13:02:FrankHB: 那没办法。。。
+13:02:T2: 作死得不能直视orz
+13:02:Sleepwalking: 阅读爆了……
+13:03:T2: Sleepwalking: 那个东西只能靠做也是没办法的。
+13:03:Sleepwalking: 是啊
+13:04:Sleepwalking: 隔壁的魔理莎录了吗
+13:04:T2: 那都小事
+13:09:T2: FrankHB: 还好吧，那种好事跟留学生似乎关系不大。
+13:12:T2: 睡一会儿去，昨晚上失眠卧槽。
+13:13:FrankHB: 是说相对BSD和MIT什么的。因为传统么……
+13:14:T2: FrankHB: 可能bsd和mit接的项目比较保密化也说不定。
+13:14:T2: 而且CMU的CS系本来也就不比谁差
+13:15:T2: 碎叫碎叫
+13:16:T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+13:28:yzld2002 quit:Quit: yzld2002
+13:31:sismvg joined channel
+13:32:sismvg: 我不能说什么了，百度盘的排序算法都能写错.
+13:50:Sleepwalking quit:Ping timeout: 245 seconds
+13:52:Sleepwalking joined channel
+13:56:ray- joined channel
+14:23:condy joined channel
+14:27:lh_mouse quit:Read error: Connection reset by peer
+14:27:lh_mouse joined channel
+14:28:FrankHB quit:Remote host closed the connection
+14:28:FrankHB joined channel
+14:34:boosure quit:Ping timeout: 245 seconds
+14:38:FrankHB quit:Remote host closed the connection
+14:39:FrankHB joined channel
+15:18:lh_mouse quit:Quit: Meow
+15:33:sismvg: 常年吧pron和porn搞混了》。
+15:40:varna joined channel
+15:40:varna: Sleepwalking: 爆
+15:42:sismvg: 撰写英文语法的人一定有强迫症
+15:42:sismvg: 定于，状语，补语，全两个字。。
+15:42:varna: 没文化真ry
+15:44:sismvg: 稍微长点好理解
+15:48:lh_mouse joined channel
+16:13:sismvg: 定冠词=有具体意义的冠词？
+16:14:varna: 2333
+16:14:varna: 你能分清特指和不特指吧
+16:14:varna: the vs. a/an
+16:24:sismvg: test
+16:28:varna: pong
+16:35:lh_bot: boom
+16:35:lh_bot: Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
+16:42:varna: ...为什么我上国内网站的丢包率反而远高于国外的
+16:44:sismvg: 哼正常啦
+16:45:sismvg: 最近几天无论什么网站都要刷好几次才行
+16:45:varna: 上维基都很快，国内的知网都坑……
+16:46:sismvg: 百度卡否？
+16:47:varna: 卡
+16:47:varna: 试了下贴吧很卡
+16:47:varna: 丢包率50%+
+16:47:sismvg: 各种acg论坛卡否？
+16:47:varna: 不去acg论坛
+16:47:sismvg: 本子站呢？
+16:48:varna: 本子站还行
+16:48:sismvg: 视频站呢
+16:48:varna: 懒得上了
+16:49:sismvg: 总之我这里基本都卡
+16:49:sismvg: 开vpn都比不开块》。
+16:50:varna: 链路的问题还是dns的问题
+16:51:sismvg: 不清楚
+16:52:sismvg: 兴许我上freenet的时候中病毒然后没查出来
+17:01:lh_bot: varna: 你教育网
+17:02:varna: 大概是某个gateway抽风了
+17:02:varna: 现在好多了
+17:18:izmntuk joined channel
+17:27:* sismvg 的心脏被刺上了gae bolg
+17:29:* varna 认为药元四的心脏被刺上的是gay bar
+17:32:sismvg: 荒野求生里贝叶经常跳伞，所以常常有绳子，但是真实的遇难状态下有刀都是奢求
+17:34:varna: 因为飞机上不会让你随身带刀的，所以你需要练习南斗圣拳
+17:45:TwitchGG quit:Ping timeout: 256 seconds
+17:47:cleamoon:  月光博客: ‏360搜索宣布正式推出独立品牌“好搜”搜索引擎，原域名将自动重定向到新域名，360声称“好搜”的宗旨是“不做坏事”，为人民服务。
+17:47:varna: http://tieba.baidu.com/p/3510935079
+17:48:varna: 问题是360的硬技术如果做不过百度，那他们只能靠元搜索来折腾
+17:48:varna: 而百度的搜索结果如何，大家都懂的
+17:50:cleamoon: 网民刘睿哲向北京文化局投诉索尼国行PS4没有锁区的新闻吸引了包括官媒（如新华网）在内的国内媒体的广泛报道，无意中创造了迫使索尼锁区国行版的舆论环境。中国政府推行一项政策或惩罚一家公司，通常会预先制造舆论环境。如当年Google遭到色情指控前CCTV找了该机构的实习生指责搜索巨人让人“心神不宁”。国行PS4尚未
+17:50:cleamoon: 正式上市，是否锁区目前还不完全清楚。这位网民的举报已经在PS4爱好者中引发了激烈的反响，他的身份被迅速人肉。这位网名雪封刃的百度贴吧用户随后发表公开声明，解释他举报的原因，“为了搞清楚有关部门到底在怎么想”。他声称自己是任天堂粉丝，希望索尼微软的主机都不锁区。
+17:50:lh_mouse: 某群验证问题  ：   ISO C++ 标准编号 <五位>
+17:50:lh_mouse: 好奇者自行百度 看看结果是啥
+17:51:cleamoon: 元搜索是什么...
+17:52:varna: 就是自己不做搜索，只dispatch需求，然后拿到别的SE的结果之后自己重新排序……
+17:52:cleamoon: ....
+17:53:cleamoon: 丰田汽车周一宣布，将无偿公开其持有的燃料电池车的全部约5680项相关专利。丰田认为要普及被称为“终极环保车”的燃料电池车，仅靠丰田1家企业的努力并不够。为了尽快普及燃料电池车，将采取极为罕见的举措，以推动跨越竞争对手和行业界限的开发竞争。汽车厂商面向非特定企业和团体全面公开新一代技术专利非常罕见
+17:53:cleamoon: 。此次提供的是丰田自身持有的燃料电池车的专利。旗下零部件企业持有的专利不在对象之内。关于通过氢和氧发生化学反应来发电的核心零部件“电堆（Stack）”、燃料箱、系统控制相关总计5610项专利，将免除截至2020年底的专利实施权费用。而关于加氢站的约70项相关专利，由于公共性高，将无限期无偿提供。2014年上半年电
+17:53:cleamoon: 动汽车制造商特斯拉宣布开放其电动汽车技术专利。
+17:53:sismvg: 嘛。。司马昭之心
+17:54:sismvg: 不这么做就会和等离子电视一个下场
+17:58:varna: http://imgsrc.baidu.com/forum/w%3D580/sign=be76c2d223a446237ecaa56aa8237246/e93470fae6cd7b894d05822b0c2442a7d8330ee4.jpg
+17:59:cleamoon: @fangshimin: 时报广场迎新的事如果发生在上海，公知会批评中国人素质差、上海当局管理能力低，要求有尊严、更高追求。发生在纽约，就成了自干五嘲笑美国人素质差、纽约当局管理能力低，替美国人民要求有尊严、更高追求。都是屁股决定脑袋。// @Misstingfan：从嘲笑转向讨论如何改变。
+18:03:FrankHB quit:Remote host closed the connection
+18:03:FrankHB joined channel
+18:11:sismvg: 我会嘲笑线虫作死就会死
+18:12:varna: 现充都不鸟你，他们继续泡妹子……
+18:13:sismvg: kesu
+18:13:sismvg: 我有等身手办妹子泡。。
+18:14:sismvg: 我有等身手办妹子。。
+18:14:sismvg: 我有等身手办。。手办。。。
+18:15:condy: sismvg: 拍个照，让吾辈欣赏一下。
+18:16:sismvg: 这是个段子而已
+18:16:sismvg: 等身手办一个就要50W日元啊
+18:16:condy: 欺骗人家感情！
+18:17:Sleepwalking: 这么便宜
+18:17:sismvg: 记得有个萨博的魔改卖出了90W日元
+18:18:sismvg: Sleepwalking:土豪
+18:18:Sleepwalking: ///
+18:18:sismvg: 50W日元大约2.5WRMB
+18:19:cleamoon: 3.5W吧
+18:19:sismvg: 20:1
+18:19:Sleepwalking: 按体积来算的话……
+18:20:sismvg: 应该按照质量
+18:20:sismvg: 等身手办一般都难以直视
+18:23:cleamoon: 等身手办  http://image2.sina.com.cn/ent/m/c/p/2007-05-01/U1819P28T3D1540882F328DT20070501113636.jpg
+18:24:varna: 2333
+18:25:sismvg: 我的眼睛
+18:26:dantmnf: wpcap
+18:26:lh_mouse: geordi, { istringstream iss("00 01 02 03"); int i; while(iss >> i); cout <<iss.good(), iss.bad(), iss.fail(), iss.eof(); }
+18:27:geordi: false, false, true, true
+18:27:izmntuk quit:Ping timeout: 245 seconds
+18:27:varna: http://www.bilibili.com/video/av1844322/
+18:30:sismvg: http://tieba.baidu.com/p/3511534170
+18:30:sismvg: 土豪，而且16级了..
+18:36:izmntuk joined channel
+18:37:endle joined channel
+18:38:T2 joined channel
+18:39:T2: varna: 那个，我先把单种配置给你吧。
+18:42:T2: 4dd，舰艏HE/HC，舰艉AP，数量1:1，每舰携带一枚闪光一枚烟雾弹，起始命令方向转北，以复纵阵savo岛以东待命。
+18:43:izmntuk quit:Ping timeout: 264 seconds
+18:43:sismvg: 一瞬间我以为你说的是神马项目的配置..
+18:43:sismvg: 结果我被欺骗了
+18:43:cleamoon: 在这里发？
+18:44:Sleepwalking left channel:
+18:44:T2: 2bb，主炮纯ap，每舰携带30发HE/HC5in副炮炮弹，4闪光2烟雾，起始命令方向225，航速15kt。
+18:44:T2: 指令确认。
+18:45:T2: cleamoon: 这没关系的。
+18:46:T2: cleamoon: 我反复算过了，他没有9dd从左边进来怎么都是死，从右边进来好像也得死。
+18:47:T2: cleamoon: 不确认，明天考完仔细算一下，主要是晚上失眠没事做。
+18:48:T2: sismvg: 项目个毛。
+18:49:T2: sismvg: 你看我像项目么。
+18:50:cleamoon: 话说，前天看到了很神奇的语言，浑身男受
+18:50:T2: 2333
+18:50:sismvg: 输入法暴露本性
+18:50:T2: 麻痹继续背书。
+18:51:T2: UML考得浑身舒爽卧槽。
+18:53:cleamoon: UML？你们也玩这个？
+18:53:Plough joined channel
+18:56:erhandsome joined channel
+18:58:Plough: varna: 你觉得SK4关于飞机数据的那几个公式要不要改
+18:58:T2: cleamoon: 嗯，我朝一贯善于给别人制造麻烦。
+19:00:T2: cleamoon: 最可恨的是等我解决了麻烦想解决它们的时候它们多半已经挂了，它们的继承者又在迫害下一代了。
+19:00:T2: cleamoon: 不知死活的东西们。
+19:06:cleamoon: 你能解决他们？
+19:07:sismvg: UML?
+19:08:sismvg: OML OTL UML CML
+19:10:T2: cleamoon: 人总要死的，何况那种逗比。
+19:14:cleamoon: 那种逗比正在拿着你的钱玩日版的ps4
+19:17:T2: cleamoon: 那都小事，他们先活过失去房地产的经济转型再说吧。
+19:18:T2: 它要作死，我就看个乐。
+19:18:T2: 多大事
+19:21:cleamoon: 那也是你要先活得过
+19:21:cleamoon: 失业也是从尔等开始
+19:22:T2: cleamoon: 崩到失业倒不至于，想让我失业也是有点难，你先饿死个10亿再说。
+19:23:cleamoon_ joined channel
+19:23:cleamoon: 你现在不就失业吗
+19:24:T2: 我是没毕业，性质不同。
+19:24:cleamoon: 你确定你毕业之后比全国80%+的人都抢手？
+19:25:T2: 这个还真是确定。
+19:25:cleamoon: 好的，等真被噗吧
+19:26:T2: 好吧
+19:29:T2: cleamoon: 我说阶敌，你们那边是怎么宣传的？
+19:30:T2: RMB A股和楼市同时崩盘节奏？直接说吧，那不可能。
+19:36:cleamoon_ quit:Ping timeout: 244 seconds
+19:36:cleamoon quit:Ping timeout: 264 seconds
+19:36:cleamoon_ joined channel
+19:37:cleamoon_: T2, 宣传什么？
+19:37:cleamoon__ joined channel
+19:38:T2: cleamoon_: 我感觉你说的就是我朝经济崩盘，14亿人失业节奏。
+19:38:cleamoon_: 没有没有，我说的是兲朝经济崩盘，然后你失业
+19:39:T2: 你要相信傻逼很多的，轮也轮不到我死。
+19:40:cleamoon_: 刨去9亿农民，2500万公务员，无数二代，富士康员工，还有几个人？
+19:43:T2: cleamoon_: 他敢让剩下的人死绝，他自己就该死了，只是他给的糖我看不上罢了。
+19:44:T2: 你太甜了喂。
+19:44:T2: 说这干嘛，闹心。
+19:45:T2: 艹幼女多有意思。
+19:46:T2: 2333
+19:46:cleamoon_: 我觉得别人都死不了
+19:46:T2: cleamoon_: 有句名言你听过么？敢作就不会死。
+19:46:cleamoon_: 没有
+19:46:cleamoon_: 事实证明了，作死就会死
+19:47:lhanjian joined channel
+19:47:T2: 好吧，不知道。
+19:48:T2: 干嘛说这么没意思的。
+19:49:cleamoon_: 打击你好玩呀
+19:49:cleamoon_: 反正看这里失业力最高的似乎就是你了
+19:50:T2: cleamoon_: 你找错对象了少年
+19:50:T2: 真的
+19:51:cleamoon_: 你还觉得哪个比你更有可能失业
+19:52:T2: cleamoon_: 泥垢啊，没完了是吧。
+19:54:T2: 我降低一下作死力就是了。
+19:54:T2: 行了吧
+19:54:T2: thx
+19:56:cleamoon_: 话说t2考什么烟酒僧
+19:56:T2: CS的烟酒僧吧。
+19:57:cleamoon_: 没有更详尽的分类了？
+19:57:T2: 数据挖掘吧，我不作死。
+19:57:T2: 行了吧。
+19:58:cleamoon_: 作死有什么好玩的
+19:58:T2: 也不是好玩，不知道怎么说，只是很不爽。
+19:59:T2: 经历有关
+19:59:cleamoon_: 对数挖不爽？
+19:59:T2: 这倒没，我对教育不爽。
+19:59:T2: 仅此而已
+20:00:sismvg: 失业力最高的明显是我.
+20:00:T2: sismvg: 你还小
+20:00:sismvg: 和年龄没关系
+20:01:sismvg: 找2年就一份工作还没了的我。。
+20:01:T2: 有的
+20:01:cleamoon_: 药元四不刚初中吗
+20:01:sismvg: 噗
+20:01:sismvg: 18了
+20:01:sismvg: http://tieba.baidu.com/p/3512014916
+20:01:cleamoon_: 对教育不爽没办法
+20:01:sismvg: 银魂进入完结状态
+20:01:sismvg: oh no 
+20:02:cleamoon_: 要不肉身翻墙，要不卖肉
+20:02:T2: 才18，人参是很长的，长到有时候都想吐，虽然真的过起来又太短。
+20:02:lhanjian: sismvg, 四元还没找到工作？
+20:02:sismvg: 木有
+20:02:lhanjian: 你咋才18？
+20:02:lhanjian: T2, 考完了？
+20:03:T2: lhanjian: 快了，明天一门考完。
+20:03:sismvg: 20反而高兴
+20:03:sismvg: 一大堆公司嫌我小我不要我
+20:03:lhanjian: T2, 好运。淡定。
+20:04:lhanjian: sismvg, 仅仅是因为年龄小？？？
+20:04:T2: lhanjian: 我尽量蛋定吧
+20:04:lhanjian: 那四元还行嘛
+20:04:sismvg: 嘛，烟过敏也是个问题
+20:04:sismvg: http://tieba.baidu.com/p/2715383027
+20:04:cleamoon_: 嫌 小，不 要 我
+20:04:sismvg: 3个offer,然后全是办公室有人天天抽烟擦
+20:05:T2: sismvg: 2333
+20:06:cleamoon_: 你去办公室抽大麻呗
+20:06:cleamoon_: 或者吃瑞典臭鱼
+20:06:cleamoon_: 或者排泄
+20:06:T2: cleamoon_: 不要乱教小朋友，乱交就算了。
+20:06:sismvg: 香烟对我的杀伤力就和蚊香对蚊子
+20:07:sismvg: 李字蚊香注意
+20:07:cleamoon_: 你可以试试瑞典臭鱼，那个东西对90%+的人类如同生化武器
+20:08:T2: sismvg: 好孩子
+20:08:T2: 吃药吧
+20:08:sismvg: 氯化钠
+20:09:T2: 是螺不是盐
+20:10:sismvg: 螺旋藻？
+20:10:T2: 2333
+20:14:sismvg: 看了牛粪火锅和瑞典臭鱼以后------我发现吃虫子也不是那么糟糕嘛。。
+20:14:cleamoon_: 当然
+20:15:T2: sismvg: 螺也挺好的，2333。
+20:21:lh_bot: 你们够了没
+20:22:T2: what？
+20:23:lhanjian: 毕竟是恶心人的话题。
+20:24:T2: 是绅士非要恶心人
+20:24:T2: （无辜）
+20:24:lh_bot: 半斤八两
+20:24:T2: 2333
+20:25:lh_bot: 原来“人家逗比”就是“我也可以逗比”的理由
+20:25:T2: 好吧，我错了。
+20:25:cleamoon__ quit:Ping timeout: 256 seconds
+20:26:T2: cleamoon_: 阶敌你随意作死就可以了，别找上我。
+20:28:lhanjian: 阶敌是啥？
+20:28:T2: lhanjian: 阶级敌人
+20:28:lh_bot: 放一条狗  叫你们乱咬
+20:28:T2: 2333
+20:28:cleamoon_: 是现充T2对吾等的称呼
+20:28:lhanjian: soga
+20:28:T2: cleamoon_: 万恶的剥削阶级管别人叫线虫不合适吧。
+20:29:T2: 2333
+20:29:lhanjian: 线虫与否取决于妹子有无吧
+20:29:T2: lhanjian: 我已经没有了。
+20:29:lhanjian: 吼吼
+20:29:T2: 我没有爱~2333。
+20:34:lhanjian quit:Excess Flood
+20:34:cleamoon__ joined channel
+20:35:sismvg: 现在手机越做越封闭，越做越难操作
+20:35:cleamoon_: 操 作
+20:36:sismvg: 随便拿一部安卓，10分钟才找到USB链接，藏得隐秘的要死
+20:37:T2: sismvg: 2333
+20:40:sismvg: 屏幕还越来越大。。大哥大都快没这么大了
+20:42:T2: sismvg: 没事学什么拍照木耳玩爪机？
+20:43:lhanjian joined channel
+20:43:sismvg: 我只是想要个性能好点的机子装adobe pdf而已
+20:44:T2: = =，那玩意不是太复古都能装吧。
+20:44:condy: Excess Flood...
+20:44:sismvg: 能装啊，但是很多pdf都很大
+20:44:condy: 大不过200MB吧。
+20:46:sismvg: 大多数小的机器都带不动
+20:53:GODDOG joined channel
+20:53:cleamoon_: 手机看不清
+20:54:condy: 上pad！
+20:54:sismvg: 可以看清啊
+20:54:sismvg: 30厘米距离直径3毫米的字没问题
+21:01:sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 28.0/20140314220517]
+21:17:Plough: 什么情况，重复战斗Bug又来了？
+21:22:varna: 亲测没有
+21:22:varna: 该南西还可以南西
+21:23:Plough: 补给船做完，南西不做
+21:23:varna: 目前出事的还是只有个别插件用户
+21:23:Plough: 另外你觉得SK4飞机数据的那几个公式要不要改一下
+21:23:varna: 你有新的公式？
+21:24:Plough: 没，我打算直接用原来的
+21:25:varna: 那就用原来的吧
+21:26:varna: 突然想到个词
+21:26:varna: Wakidare
+21:27:varna: 五腋雨（わきだれ）
+21:28:T2: 这是什么梗？
+21:29:varna: T2: 你的编成由我来定……
+21:29:lh_bot: meow
+21:29:T2: varna: 好吧。
+21:29:varna: 五月雨（さみだれ）->腋
+21:29:T2: 好吧
+21:29:varna: 因为五月雨的制服是露腋的
+21:29:T2: orz
+21:29:condy: `Ville: I won't use that crap unless I'm paid to do so, then.` -> cmake is crap. Orz!
+21:30:lh_mouse: condy is a baka.
+21:30:condy: ...
+21:30:condy: I'm really a baka.
+21:30:lh_bot: 送友爱部治 疗去
+21:31:FrankHB: 五月雨E还是卡三面。。
+21:34:POPOBE joined channel
+21:34:POPOBE: 大家好！
+21:34:varna: 你好
+21:34:T2: Hi
+21:34:POPOBE: 嘿嘿嘿~
+21:34:varna: 欢迎，这里是比较随意的频道，随意聊聊吧
+21:34:POPOBE: 还以为会没人，原来有人的啊
+21:34:lh_bot: 新人？
+21:34:varna: 没人
+21:34:lh_bot: 爆照爆三围
+21:34:POPOBE: 不新了，块进来一分多钟了
+21:34:varna: 这里的伙计大致有几类：恥球、机器人、禽兽、丧失
+21:35:varna: 人似乎不多
+21:35:* cleamoon_ 是绅士
+21:35:varna: 你是五岁幼女
+21:35:POPOBE: 没法打斜眼啊OuO
+21:35:POPOBE: 能用中文的感觉真棒
+21:35:lh_bot: ←_←
+21:35:POPOBE: 赞👍
+21:35:condy: →_→
+21:36:condy: urxvt赞！
+21:36:POPOBE: 怎么发图片--
+21:36:T2: POPOBE: 还有我是傻逼
+21:36:lh_bot: 冷场帝
+21:36:POPOBE: 还有c语言吧里面怎么都是伸手党…
+21:36:condy: http://picpaste.com
+21:36:varna: 哦，c语言吧里一直都是伸手党的
+21:36:T2: 所以不属于以上几类
+21:37:POPOBE: 好奇怪--就差没来要helloworld的程序了--
+21:37:varna: 我记得有
+21:37:lh_bot: geordi: << "hello world!";
+21:37:geordi: hello world!
+21:37:POPOBE: echo "hello world" 【linux赛高
+21:37:cleamoon_: 我记得有
+21:38:varna: perl -e 'print "hello world\n"'
+21:38:varna: shell实在太没法看，请大家都用perl
+21:38:POPOBE: 不会--太难--
+21:38:lh_bot: 滚去 php 了
+21:38:cleamoon_: python吧
+21:38:varna: shell太残，所以其实更难
+21:38:condy: python -c 'print("hello world")'
+21:38:POPOBE: phython 被窝用来当计算器-=-
+21:38:cleamoon_: 为什么都是p开头的
+21:38:T2: 2333
+21:38:lh_bot: 3p
+21:38:lh_bot: perl php py
+21:39:POPOBE: phython 奇怪了--
+21:39:POPOBE: 为什么每次
+21:39:POPOBE: 我都达成phython
+21:39:cleamoon_: prolog
+21:39:POPOBE: 感觉改不过来了
+21:39:varna: 因为你撸多了
+21:39:POPOBE: ←←
+21:39:varna: 你要不要瑞凤本，再撸几炮就好了
+21:39:POPOBE: →→
+21:40:POPOBE: gay.pornhub.com
+21:40:POPOBE: 不谢
+21:40:condy: 被反攻！
+21:40:varna: 我记得有gayhub的
+21:40:POPOBE: OuO
+21:40:POPOBE: 那是我常驻地OuO
+21:40:varna: 那好办了
+21:40:varna: 新人是HOMO, 大家排单纵阵
+21:41:varna: POPOBE: 爆
+21:41:POPOBE: ←←
+21:41:POPOBE: →→
+21:41:POPOBE: ←→
+21:41:POPOBE: →←
+21:41:POPOBE: 眼保健操！
+21:41:varna: 眼保健 操
+21:41:cleamoon_: ←→怎么做到
+21:41:POPOBE: OuO
+21:41:varna: cleamoon_: 啊嘿颜
+21:42:POPOBE: 后面带个小下划线的
+21:42:POPOBE: 都是逗比哈哈
+21:42:cleamoon_: 做了个→←，然后眼睛疼死了...
+21:42:cleamoon_: 现在还有人用pascal吗？
+21:42:varna: delphi大概还有
+21:42:POPOBE: OAO
+21:43:T2: POPOBE: 用常识推测他你会死的。
+21:43:cleamoon_: POPOBE: 爆
+21:43:POPOBE: ←←
+21:44:varna: 我可是雷击神教的信者
+21:44:POPOBE: 话说我刚刚去minecraft的频道
+21:44:xxxxxxxx joined channel
+21:44:T2: 这可是看板药娘
+21:44:POPOBE: 结果上来就被op呛了一句
+21:44:varna: xxxxxxxx: 爆
+21:44:varna: “你屌小别说话”？
+21:44:POPOBE: --
+21:44:T2: varna: 你要相信42年的鱼雷是打不中我的。
+21:44:varna: T2: 美国鱼雷和日本鱼雷是两个性质的东西
+21:44:POPOBE: shit on your desk and ask your boss why you are wrong
+21:45:varna: 另外如果你有疑问，可以问问岚月酱和肛旗，他们看了我的测试推演
+21:45:T2: 也是
+21:45:POPOBE: POPOBE: 哇塞可以自己诶特自己
+21:45:T2: 不过真的可以隔上万码吃30发？
+21:45:Plough: 我觉得铁相大概是我练的最快的一艘船了
+21:46:varna: 如果你的脑袋上塞了四十枚九三式等着命中，我不知道你怎么考虑鱼雷的全弹不命中率
+21:46:Plough: 0->75用了四天，包括一天攒弹药
+21:46:varna: 不是四枚，是四十枚
+21:46:T2: = =
+21:46:Plough: 不一定吃三十发
+21:46:POPOBE: -=-赶脚你们的谈话我有些看不懂呀
+21:46:Plough: 但是吃死你问题不大
+21:46:T2: 左转90接一回合闪避机动再左转90
+21:46:cleamoon_: 全弹不命中率不是大于90%吗
+21:46:T2: 2333
+21:46:Plough: 那是美国山寨鱼雷
+21:47:T2: 我数着接敌第五回合就这么干
+21:47:varna: cleamoon_: 最后院长的我没算，南方的大约是20%
+21:47:T2: = =
+21:47:cleamoon_: soga
+21:47:varna: T2: 我觉得你该正视规则而不是脑补
+21:47:T2: 好吧
+21:47:POPOBE: 有没有完minecraft的-=-
+21:47:cleamoon_: 那就炸死丫的
+21:47:T2: POPOBE: 有啊
+21:47:POPOBE: OuO
+21:47:varna: 你的后续机动只会修正速度和RTE, 我觉得如果你敢说鱼雷能躲的话应该懂得算命中率
+21:48:xxxxxxxx: 有没有玩robocraft的
+21:48:POPOBE: T2: 玩服务器的吗
+21:48:POPOBE: xxxxxxxx: 这毛
+21:48:xxxxxxxx: 球dalao带我打资源
+21:48:cleamoon_: POPOBE, 新人性别年龄三围取向是不是金发巨乳萝莉玩不玩东方舰娘吃不吃药
+21:48:T2: POPOBE: plough玩
+21:48:POPOBE: cleamoon_: 可以沉默吗-=-
+21:48:varna: 而我另外指出一点，一个典型的舷侧鱼雷全弹发射有RTE-1.5修正，而试图变更航向规避鱼雷是RTE+1.5
+21:48:Plough: 有段时间没动了
+21:48:Plough: 最近都在当舰狗
+21:49:T2: = =
+21:49:cleamoon_: POPOBE, 至少回答几个
+21:49:T2: 我转的可是180
+21:49:varna: 至于EM...我没听说过即使是三次元中的炮击/航弹向的EM能躲鱼雷
+21:49:T2: = =
+21:49:varna: 我不在意你转多少
+21:49:POPOBE: 喔--不是金发，吃药--
+21:49:cleamoon_: 二次元鱼雷
+21:49:lhanjian quit:Ping timeout: 245 seconds
+21:49:varna: 但是我觉得你该算一次鱼雷
+21:49:cleamoon_: varna, 新人吃药
+21:49:T2: 好的
+21:49:varna: 哦，吃药啊
+21:49:varna: 肛了他
+21:49:POPOBE: --
+21:50:T2: POPOBE: 爆
+21:50:cleamoon_: POPOBE: 爆
+21:50:POPOBE: 虽然你们这么直白，但总觉得我刚从minecraft channal出来的我啥都不怕了-=-
+21:50:varna: 我说过你转180是修正RTE, 另外你难道告诉我战列舰2min/180转向……
+21:50:xxxxxxxx: robocraft T9实在是打不下去...
+21:50:T2: varna: 不是，要4回合，但是接敌第五轮开始转神也打不中吧。
+21:51:varna: T2: 如果能打中你直播吃翔不
+21:51:T2: 何况前面还有2回合加速。
+21:51:varna: 要是你直播，我们可以现场来一次
+21:51:T2: 尼玛那真是42年的鱼雷？
+21:51:Plough: 用Open Broadcaster吧
+21:51:Plough: 我记得这个用来直播不错的
+21:51:varna: T2: 你的头脑里装的是什么东西，能告诉我么
+21:51:T2: 2042年吧
+21:52:Plough: 某UP主推荐过
+21:52:varna: 给我讲讲你的命中率计算过程吧
+21:52:T2: 不是，你发射鱼雷不考虑方向么？
+21:52:T2: 1W+码啊
+21:52:varna: 考虑，但你得明白规则里明确指出提前量被速度、角度、RTE共同决定
+21:53:cleamoon_: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/9m/dd_257920.jpg
+21:53:T2: 我航向西南，他从西北进来射角很烂的。
+21:53:varna: 哈哈哈哈
+21:53:varna: 啊哈哈哈哈哈哈哈哈
+21:53:varna: 又开始用bearing说事
+21:53:T2: 好吧
+21:54:varna: 那么我问你个问题吧
+21:54:POPOBE: 谁能告诉我暂时退出频道的命令是虾米--
+21:54:cleamoon_: 蓝翔
+21:54:varna: POPOBE: part
+21:54:POPOBE: 我回去查查help…
+21:54:POPOBE left channel:
+21:54:varna: T2: 0.96的四十次方是多少
+21:54:cleamoon_: 0
+21:54:POPOBE joined channel
+21:55:T2: varna: 0.195
+21:55:cleamoon_: geordi, <<pow(0.96, 40);
+21:55:POPOBE: 出到是出去了--但是/help 还是没用-=-
+21:55:geordi: 0.195366
+21:55:varna: 这是你的全弹不命中率
+21:55:cleamoon_: 我去，还真不是0
+21:55:varna: 或者我再宽限点
+21:55:T2: 这是3W码吧。
+21:55:T2: = =
+21:55:varna: 你自己算
+21:55:T2: 我不打算狙击了。
+21:56:varna: 0.97的四十次方大约是29.57%
+21:56:cleamoon_: 命中率略低
+21:56:lhanjian joined channel
+21:56:T2: 卧槽，这游戏是鱼雷神教吧。
+21:56:varna: 不是
+21:57:varna: 手册里会告诉你鱼雷是个坑
+21:57:varna: 但你得明白写手册的是个美国人
+21:57:T2: cleamoon_: 战列舰主炮命中本来就是3%
+21:57:T2: 院长那次是极端情况
+21:57:varna: 至于怎么活着打出四十枚鱼雷，这就看对面的水准了
+21:58:T2: 我不觉得我有李将军一半的脸所以还是算了。
+21:58:varna: 以弱胜强还拼主炮，简直是愚者所为
+21:58:varna: 所以你甚至都可以预估典型的交战形态、计算期望的参数并且给出对策
+21:58:cleamoon_: 我想看code人品爆发，90%的鱼雷命中率
+21:59:varna: 可能不好估计的是战斗位置
+21:59:varna: code_new上次鱼雷的脸就不错
+21:59:varna: 想想羽黑
+21:59:T2: 但是我手上的优势只有主炮和火控
+21:59:varna: 弱的是日军
+21:59:T2: soga
+21:59:Plough: 我可怜的羽黑啊
+21:59:T2: 日军怎么打出40鱼雷就不关我事了。
+21:59:varna: 哦，这态度可不行
+22:00:T2: 好吧
+22:00:varna: 如果你阻止不了敌人的作战计划，那么恐怕会有超历史的展开
+22:00:T2: 明天考完去看看。
+22:00:cleamoon_: 超历史233
+22:03:cleamoon_: 阻止不了就是米菌vs天元突破了
+22:04:T2: cleamoon_: 正常来说李将军早就该进阿灵顿了
+22:04:varna: 就鱼雷一事，我简单说个道理吧
+22:04:T2: 4000码两次鱼雷齐射居然都没中南方。
+22:05:varna: 一般来说图中标出的雷迹是象征性的，它甚至不具有瞄准意义
+22:05:T2: 然后三式弹作死完全是逗乐。
+22:05:T2: 好吧
+22:05:varna: 但这个雷迹对应了鱼雷的可能误命中范围
+22:06:T2: 所以说我绕还不行么。
+22:06:varna: 而模式化的鱼雷运动区中，转向、航速是否能让你脱离，这个因素一部分被计入RTE
+22:06:varna: 注意我说的是雷迹对应误命中范围
+22:06:T2: = =
+22:06:T2: 懂了
+22:06:varna: 实际上瞄准时假定给出提前量了
+22:07:T2: = =
+22:07:varna: 从FS到TS的雷迹的含义，是“若有具有类似运动趋势的目标越过此雷迹，会有较大概率被视为计入误中判别”
+22:07:T2: 我去研究一下鱼类怎么玩
+22:08:T2: 鱼雷
+22:08:varna: 一般在水雷战队的发令中，会用x集y散这样的术语
+22:08:varna: 方便期间，多数时候会是每散一座、每集一具
+22:09:varna: 假定鱼雷发出期间，TS以其运动趋势处于雷击被弹区域的中心
+22:10:varna: 那么在鱼雷到达之前，TS的运动实际上是对称于理想雷迹的
+22:10:varna: 针对这样的简化，把变数按先验计入速度、RTE和二项分布
+22:10:T2: 所以我就破坏这一点咯
+22:10:cleamoon_: .....
+22:11:T2: 到达之前加速接转向
+22:11:T2: 好吧应该减速。
+22:11:hoxily1 joined channel
+22:11:T2: 但是巡航速度太低只能加起来先
+22:11:varna: 你破坏不了命中的事实
+22:11:T2: 然后通过EM来减速
+22:12:varna: 实际上破坏雷击区命中的事实是一个：开火角度
+22:12:T2: 如果EM无效我也没辙。
+22:12:varna: 45forward/15aft
+22:12:cleamoon_: 舰队大概不是总指挥算这些吧，除了南云
+22:13:T2: 但是这个角度也破坏我的射击角度。
+22:13:varna: 开火角度实际上已经先验地限定了雷击区的范围，也即不在开火角度内的鱼雷即使发射也能被轻易规避
+22:13:varna: 所以我不变更鱼雷规则
+22:13:varna: cleamoon_: 如果是打，这些是水雷长；如果是躲，这些是航海长；南云以前是水雷科出身的，又擅长航海……
+22:14:T2: 真是9dd我就赌同航了，但是这个我主动放弃射击角度有点傻吧。
+22:14:varna: T2: 实际上我建议你简单地计算一个场景：同航战中一艘驱逐舰对另一艘驱逐舰施行雷击，bearing在航向正方向65
+22:14:cleamoon_: ......
+22:14:varna: 算起来很快，即使没有辅助表格，雷击公式也被简化得很容易计算了
+22:15:T2: 好的，主要同航也能增加我的火炮命中。
+22:15:varna: 比如说两艘特型之间进行的雷击训练
+22:15:varna: 这能帮助你直观地理解雷击规则和它的简化之处
+22:15:T2: 好的
+22:16:varna: 决定雷击命中的最终结果是hit factor, 这个参数决定命中的变数区间
+22:16:T2: 总之是概率咯
+22:16:varna: 至于42年的鱼雷……别忘了九三式鱼雷可是日本的决战兵器
+22:17:T2: 概率波什么的还是比较能接受2333.
+22:17:Plough: @带大发的决战兵器
+22:17:varna: 我取巡航速度36kt/44000yd 最大战速48kt/22000
+22:17:Stevearzh quit:Ping timeout: 244 seconds
+22:17:varna: 说概率波之前，我觉得你似乎该理解下更基本的概率……
+22:17:T2: 好的
+22:17:varna: 比如二项分布和贝叶斯，还有单纯的先验后验……
+22:18:varna: Plough: 那是宇〇缠的锅
+22:18:POPOBE: 刚刚挖出5个钻石…
+22:19:POPOBE: 好棒…
+22:19:varna: 虽然甲标的其实有个悲剧
+22:19:varna: 那东西确实不是人操鱼雷，但从来没有人指出那熊包玩意怎么回收
+22:19:Plough: 当回天使吧……
+22:20:varna: 2kt/100nm 6kt/80nm 19kt/18nm
+22:20:T2: POPOBE: 去土壕plough的服务器玩吧。
+22:20:varna: 假如要考虑驾驶员的生死，那么甲标的母舰的作战需要很仔细地安排
+22:20:POPOBE: 当然好-=-可是土豪让不让呢=-=
+22:20:Plough: 服务器早关了
+22:20:POPOBE: http://picpaste.com/2-qKCBZ5Qi.png
+22:20:Plough: 不是土豪挂不起……
+22:20:varna: 在条件不利的情况下，可能这样一个士兵就被理所当然地放弃了
+22:21:izmntuk joined channel
+22:21:POPOBE: 我有俩服务器倒是-=-
+22:21:POPOBE: 可惜每一个能带的懂得
+22:21:varna: 壕
+22:21:POPOBE: 没有一个可以带的动的
+22:21:Plough: 壕
+22:21:varna: 我觉得我们应该肛了新人
+22:21:POPOBE: 你懂得it7
+22:21:Plough: 肛之
+22:21:varna: 这样吧，肛旗你先做个表率
+22:21:T2: varna: 那个熊包玩意如果能回收这个作战也就不用玩了吧。
+22:21:varna: 你把裤子脱了，然后去脱他的
+22:21:POPOBE: 你们都是卡巴基佬么--
+22:22:Plough: 我表率怎么肛了你么
+22:22:varna: 你短
+22:22:T2: 想象神风有起落架。
+22:22:varna: 那个似乎是英国人的发明
+22:22:Plough: varna: 我有51cm单装炮
+22:22:varna: 日本人看着不错就学过去了，还被美军俘虏一两个
+22:22:POPOBE: Plough: 咱集资租服务器呗--
+22:22:T2: = =
+22:22:Plough: POPOBE: 没钱了
+22:23:Plough: 土豪来吧
+22:23:varna: 但是我的考虑是作战必有其道理
+22:23:POPOBE: --
+22:23:Plough: 我就不掺和了
+22:23:varna: 实际上我自己如果打一个图上推演，我也会认同舰队决战的战法
+22:23:varna: 因为我自己就造了水雷战队一击脱离的轮子，虽然没突入好……
+22:23:T2: orz
+22:24:varna: 但实际如何，还是得看喔酱
+22:24:T2: 2333
+22:24:varna: 说起来
+22:25:varna: 如果我以后弄一个航空战+对潜战的场景，有没有人预先报名
+22:25:T2: 对潜太难了。
+22:25:Plough: 对了
+22:25:varna: 基本上我做的剧本都会对日军有多少不利
+22:25:Plough: 珊瑚岛这场除了羊驼子还有谁来
+22:25:varna: 不是T2么
+22:25:Plough: 我先确认下
+22:26:T2: 我去。
+22:26:T2: 好吧我去。
+22:26:Plough: 中
+22:26:varna: 那决定下双方？
+22:26:Plough: 决定双方吧
+22:26:varna: 有人要五航战么？
+22:26:zzzzzzzz joined channel
+22:26:T2: 真打珊瑚岛？
+22:26:Plough: 珊瑚岛
+22:26:T2: 我无所谓双方
+22:26:T2: 海战0理解，
+22:27:T2: 在我看来都是炸
+22:27:Plough: 大丈夫，这场是小飞机
+22:27:POPOBE left channel:
+22:27:varna: 五航战对TF17
+22:27:varna: T2要哪边
+22:27:T2: 我随意的
+22:27:POPOBE joined channel
+22:28:varna: 那我就要日军吧
+22:28:T2: 反正哪边都是想当然自己捏一个出来。
+22:29:Plough: 那就羊驼子日军T2美军？
+22:29:T2: 嗯
+22:29:varna: ok
+22:29:Plough: 中
+22:29:varna: 假期晚一点时间吧
+22:29:varna: 下一场是1.18以后了
+22:29:Plough: 嗯
+22:29:T2: 是滴，我要研究一下
+22:29:varna: 正好也可以准备脚本之类的东西
+22:29:varna: 不然手操能累死人
+22:29:Plough: 我也需要一段时间补补知识
+22:29:izmntuk quit:Quit: buh bye!
+22:30:varna: 你需要一段时间补补裤子
+22:30:lh_mouse: 0.0
+22:30:Plough: 我需要让铁相练习练习用46炮炸人
+22:30:T2: 2333
+22:30:Plough: 先下了
+22:30:varna: 大本营、军令部和舰本一致认为你会单方面屁鼓疼
+22:30:Plough: 我是裁判，管你大本营干嘛
+22:30:condy quit:Quit: leaving
+22:30:varna: 大本营要报假新闻的
+22:31:varna: 一弄凿沉对面一个TF, 多带劲
+22:31:Plough: 总之等我自己研究得差不多了再跟双方具体说明
+22:31:Plough: 今天我先碎叫
+22:31:Plough quit:Quit: 碎叫
+22:31:varna: ok, 这之前我娱乐地先自己耍耍
+22:32:POPOBE: 那我也先下了-=-明儿还上课-=-
+22:32:POPOBE quit:Quit: leaving
+22:32:cleamoon_: 看来新人是幼药娘
+22:33:varna: 总之是可塑之材
+22:33:lh_mouse: 可塑什么
+22:34:varna: 塑胸
+22:34:GODDOG quit:Quit: leaving
+22:38:cleamoon_: 突然发现学校教的复分和我自己撸的一点联系都没有，定义都不一样，简直遭中
+22:39:hoxily1 quit:Quit: Bye
+22:40:cleamoon_: 真遭中了...
+22:41:cleamoon_: 课程是D难度，我看的错书是A难度，我说怎么哪里都好像不懂...
+22:44:POPOBE joined channel
+22:45:xxxxxxxx: 幼女表示看惯了A难度 D难度怎么都好像不懂
+22:45:POPOBE: -=-
+22:45:cleamoon_: 倒不是A太难，关键是一天只能看懂50-页不爽
+22:46:lh_mouse: POPOBE, 爆照
+22:46:izmntuk joined channel
+22:47:POPOBE: --
+22:47:POPOBE: 怕吓到你们
+22:48:lh_mouse: POPOBE, 爆照
+22:48:POPOBE: lh_mouse: 怕吓到你们
+22:48:lh_mouse: POPOBE, 爆照
+22:48:POPOBE: lh_mouse, 怕吓到你们
+22:48:lh_mouse: o.O
+22:48:POPOBE: O.o
+22:49:lh_mouse: 新人为何不爆照
+22:49:lh_mouse: 不爆照把你丢去喂羊驼
+22:49:xxxxxxxx: 〇。〇
+22:49:POPOBE: 那对新人你们为什么不爆照
+22:49:POPOBE: 不爆照把你丢去为河马--
+22:50:cleamoon_: 河马哪有羊驼可怕
+22:50:lh_mouse: 河马是谁
+22:50:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:50:lh_mouse: 羊驼 ^ varna 
+22:50:POPOBE: 河马把你拉出来的时候还会用尾巴打碎
+22:50:POPOBE: 你怕不怕
+22:50:varna: I, GMH
+22:50:lh_mouse: POPOBE, 不想混了？
+22:50:lh_mouse: [22:50:40] <POPOBE> 河马把你拉出来的时候还会用尾巴打碎 // 你这是谁
+22:51:lh_mouse: 你这是说谁 *
+22:51:varna: 我觉得问题不是说谁
+22:51:varna: 是“拉出来的时候”
+22:51:POPOBE: OaO
+22:51:cleamoon_: 拉出来的时候2333
+22:51:POPOBE: 憋生气呀--
+22:51:POPOBE: 你把我丢去为羊驼我也会被羊驼拉出来
+22:51:varna: 而我所关注的是之前那个河马的肛门里塞了什么
+22:51:xxxxxxxx: varna表示: 我， 肛门红
+22:51:lh_mouse: GMH 是什么
+22:51:varna: xxxxxxxx: 我操
+22:51:POPOBE: 我把你丢去喂河马
+22:51:varna: lh_mouse: GrassMudHorse
+22:51:POPOBE: 你也会被河马拉出来
+22:52:lh_mouse: POPOBE, 我不拿排泄物开玩笑
+22:52:lh_mouse: 同样  我也不拿生殖器或者生殖器附近的毛开玩笑
+22:52:POPOBE: 噗。。。。。
+22:52:varna: 没办法，不过你非得要求别人的话未免不够高雅
+22:52:POPOBE: kid frend channal
+22:53:xxxxxxxx: 用鼻毛开玩笑怎么样?
+22:53:varna: 排遗产物先不论，没谁喜欢被炸一身翔
+22:53:xxxxxxxx: 我鼻毛卡着牙了
+22:53:lh_mouse: 我没要求别人  我只要求你不准这么对［我］
+22:53:POPOBE: lh_mouse: 好的好的-=-不说不说
+22:54:varna: 不过s*x这事，只能说人心邪自然各种不能直视，而不能直视的人又希望欺骗自己，认为自己是个光明磊落不沾各种肮脏想法的人……
+22:54:cleamoon_: 前几天不是有个拉粪车爆炸了吗
+22:54:varna: 我就说那个
+22:54:POPOBE: 你是说武胸娘那件4情么
+22:54:varna: 那个群众实在太不幸了
+22:54:varna: 不是
+22:54:varna: 炸一身确实说那个车爆炸……
+22:55:cleamoon_: 是某地拉粪车爆炸了，场景恐怖
+22:55:varna: 至于s*x方面的言论是我一贯观点，其实也不是新花样
+22:55:varna: 想想鲁迅以前的文，照样黑半夜买春宫的老先生
+22:55:lh_mouse: s*x 是什么
+22:55:varna: 现象是夸张的，但脉络是普适的
+22:55:xxxxxxxx: 认为自己是个光明磊落不沾各种肮脏想法的人 被炸了一身翔
+22:55:varna: sex
+22:55:POPOBE: varna: 武胸娘OuO，本来看胸妥妥的，可惜被禁了
+22:55:varna: 我懒得看所以我不管
+22:56:lh_mouse: 看了也没用
+22:56:varna: 不过我还是那个观点，人要正视自己
+22:56:lh_mouse: 没三次元全部负分
+22:56:varna: 如果你觉得自己有救，那么赶紧来个彻底的救法
+22:56:varna: 不然就对自己诚实点
+22:56:lh_mouse: 找 妹 子 \(^o^)/
+22:57:POPOBE: lh_mouse: 好像高兴起来了呢-=-
+22:57:lh_mouse: POPOBE, 高兴？
+22:57:varna: 我们迫切地需要妹子
+22:57:POPOBE: 为啥到那个频道都被呛一脸--
+22:57:cleamoon_: 羊驼对肛旗说爆，我不会脑补全过程，如果你脑补完全过程三遍后进入贤者状态，然后骂羊驼低俗，那就是你自己的毛病了
+22:57:lhanjian quit:Ping timeout: 245 seconds
+22:57:varna: 但是你似乎看起来不像是个妹子
+22:57:varna: cleamoon_: 我还真会脑补一遍
+22:58:POPOBE: ←←在这种地方不能轻轻易暴露年龄性别之类的
+22:58:cleamoon_: 你难道会每说一遍就脱裤撸一管？
+22:58:lh_mouse: 我无所谓
+22:58:lh_mouse: 你来找我玩也行
+22:58:varna: 我不会撸一管，但我会想想我究竟怎么爆他……
+22:59:lh_mouse: 我又没钱  又没身份
+22:59:lh_mouse: 光脚不怕穿鞋的
+22:59:varna: 我来翻译下
+22:59:zzzzzzzz quit:Read error: Connection reset by peer
+22:59:xxxxxxxx: cleamoon_: 明显不可能 不然得多快
+22:59:varna: 没钱=比更没钱的人有钱 没身份=比更不靠谱的人显得更正当
+23:00:cleamoon_: 小耗不官二代吗
+23:00:varna: 不是圣人，多少都是如此
+23:00:lh_mouse: 这什么意思
+23:00:varna: 字面意思
+23:00:lh_mouse: cleamoon_, 正科级算什么官二代
+23:00:cleamoon_: 很算了
+23:00:POPOBE: 处大还是科大--、
+23:01:lh_mouse: 处
+23:01:lh_mouse: 国家  省部  厅局  县处  乡科
+23:01:POPOBE: 喔:-O
+23:01:cleamoon_: 月入超万的官二代，是没钱没身份，那我大概是什么都没了吧
+23:02:lh_mouse: 不是还一样出来打工
+23:02:cleamoon_: 镇和村呢？
+23:02:lh_mouse: 副厅都算苍蝇
+23:02:POPOBE: OuO我还是学生
+23:02:lh_mouse: cleamoon_, 村什么都不是
+23:02:varna: 比苍蝇大点的照样可以什么都不是，这个诸君可以相信我
+23:03:lh_mouse: 镇比县低一级  算副处
+23:03:POPOBE: 你们聊得话题好高深--
+23:03:varna: 比如比苍蝇大个两三圈之类的
+23:03:POPOBE: 我来问个轻松点的把-=- sizeof 到底是什么存在…
+23:03:varna: sizeof是个算符
+23:04:varna: 我就说一句
+23:04:varna: 省级以下可以是也可以不是，这个看人
+23:04:lh_mouse: 镇长和书记是副处  副镇长和副书记是正科
+23:04:lh_mouse: 看人  
+23:04:varna: 国家级我不知道，这辈子没接触过那么大的
+23:04:lh_mouse: 以及 是否站错队
+23:05:POPOBE: 那么乱…
+23:05:varna: 怎么说呢……地方越小、心思越窄、斗争从上面看来越好笑
+23:05:varna: 以例子来说
+23:05:lh_mouse: 以后说精通 c++ 的 可以问问他这个结果是多少
+23:05:varna: WJ要chaiqian
+23:06:lh_mouse: struct base { }; struct derived : base { base b; };  cout << sizeof(derived);
+23:06:varna: 怎么解决呢？把他家zhengwei的车开楼下，然后大家一起谈谈
+23:06:lh_mouse: geordi, cout << sizeof(derived); struct base { }; struct derived : base { base b; };  
+23:06:geordi: error: 'cout' does not name a type
+23:06:lh_mouse: geordi, erase cout
+23:06:geordi: 2
+23:07:lh_mouse: 说精通 C 的  可以问问他 sizeof('a') == sizeof(char) 是多少
+23:07:varna: 2333
+23:07:lh_mouse: 或者 sizeof(sizeof('a') == sizeof(char)) 是多少
+23:07:varna: 第一个问题估计一票1
+23:07:lh_mouse: 第一个迷惑性不够
+23:07:POPOBE: sizeof(true)
+23:07:varna: 噗
+23:07:lh_mouse: POPOBE, C 里是 int
+23:07:varna: 你已经死了
+23:07:varna: 'a'是int
+23:08:varna: char是1
+23:08:lh_mouse: op == 也是 int
+23:08:POPOBE: 噗…
+23:08:POPOBE: 不是说c++的么…
+23:08:varna: 00:07 < lh_mouse> 说精通 C 的  可以问问他 sizeof('a') == sizeof(char) 是多少
+23:08:lh_mouse: geordi, cout << sizeof(derived); struct base { }; struct dbl : base { double d; }; struct derived : base { dbl d; }; 
+23:08:geordi: error: 'cout' does not name a type
+23:08:lh_mouse: geordi, << sizeof(derived); struct base { }; struct dbl : base { double d; }; struct derived : base { dbl d; }; 
+23:08:geordi: 16
+23:08:lh_mouse: 这个比上面更坑点
+23:08:POPOBE: 是不是int型的大小也于机器-=-
+23:09:varna: int不定长
+23:09:POPOBE: 32位机子上貌似到65535就挂了
+23:09:varna: 哈哈哈哈哈哈哈哈和
+23:09:lh_mouse: 跟是不是 32 位没什么关系
+23:09:lh_mouse: int 只保证至少 16 位
+23:09:varna: 如果你对面是小耗，大概你已经被开除三回了
+23:10:lh_mouse: varna, 没本事
+23:10:POPOBE: 我没耐心看完c的书--
+23:10:POPOBE: 直接去看primer了-=-
+23:10:lh_mouse: 我就说一点   居然有人认为智能指针是奇技淫巧
+23:10:varna: ...
+23:10:varna: 哪村的
+23:11:lh_mouse: 居然有人认为写代码可以无视逻辑错误  例如从来不检查 malloc 返回值
+23:11:varna: 虽然malloc未必能让你活着看到NULL, 但是……
+23:11:POPOBE: QAQ我从来没用过malloc
+23:11:lh_mouse: varna, 我认为这世界没什么希望了
+23:12:varna: 世界挺大的
+23:12:varna: 走了
+23:12:lh_mouse: 而且就是有人以“别人很容易把你的程序搞挂”为理由认为“写逻辑正确的代码没什么用”
+23:12:varna: 诸君夜间愉快
+23:12:varna quit:Quit: leaving
+23:12:lh_mouse: ..
+23:12:POPOBE: OAO
+23:12:POPOBE: 跑的好快
+23:12:POPOBE: lh_mouse: 你看的什么书呢
+23:13:dantmnf: geordi: { *(int*)NULL = 1;}
+23:13:geordi: Undefined behavior detected.
+23:14:lh_mouse: POPOBE, http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf
+23:15:POPOBE: 看不来pdf…会头疼疼
+23:17:cleamoon_: 不看pdf看什么
+23:17:POPOBE: 不过谢谢啦
+23:17:POPOBE: 看纸质的…
+23:17:dantmnf: you need Kindle
+23:18:POPOBE: -=-
+23:18:POPOBE: 电纸书-=
+23:18:POPOBE: 没试过=-=
+23:18:POPOBE: 就是喜欢纸质的。。
+23:18:POPOBE: 阅读体验还是纸质的最棒
+23:19:cleamoon_: 壕
+23:20:POPOBE: 少买两件衣服而已--
+23:20:cleamoon_: 莫非是妹子？
+23:21:cleamoon_: 我已经几年没买衣服了
+23:21:POPOBE: 咳咳
+23:21:POPOBE: 高中穿校服
+23:22:cleamoon__: 原来是高中妹子
+23:23:POPOBE: ←←
+23:23:POPOBE: 高三算高中么
+23:23:lh_mouse: 直接说你是不是妹子吧
+23:23:POPOBE: 重要么--
+23:23:cleamoon__: 算妹子
+23:23:cleamoon__: 重要
+23:24:POPOBE: cleamoon__: 你的后面都带了两个下滑线了……
+23:24:cleamoon__: 猫又
+23:24:POPOBE: 你去用密码在nickserv里面验证下
+23:24:POPOBE: 先/nick cleamoon
+23:25:cleamoon__: 麻烦
+23:25:POPOBE: -=-
+23:25:POPOBE: 好吧-=-
+23:25:cleamoon__: 强迫症妹子
+23:25:POPOBE: ←←
+23:25:POPOBE: 我实在不想爆照--
+23:25:POPOBE: 你还是把我当汉字吧--
+23:26:POPOBE: 汉子
+23:26:cleamoon__: 妹子哪里人
+23:26:POPOBE: 先说好说出来不许地域歧视
+23:27:cleamoon__: 这里人类分步挺广的
+23:27:POPOBE: 北京--
+23:27:cleamoon__: 啊啊啊，好的，我收了
+23:27:POPOBE: 你也是》
+23:27:POPOBE: ？
+23:28:cleamoon__: 以前是
+23:28:cleamoon__: 哪个高中，我让基友去收
+23:28:POPOBE: --
+23:28:POPOBE: 实验--
+23:28:POPOBE: 实验知道不--
+23:28:cleamoon__: 实验中学？
+23:28:POPOBE: 恩
+23:28:cleamoon__: 那有高中部？
+23:29:POPOBE: 北师大附属实验中学
+23:29:POPOBE: 就在金融界上
+23:29:POPOBE: 西单哪儿
+23:29:cleamoon__: 哦哦哦，没听过
+23:29:POPOBE: 难道你只知道人大附--
+23:29:cleamoon__: 在人大附上过课，伙食不错
+23:30:POPOBE: 那你住在海淀咯
+23:30:POPOBE: 那肯定不知道西城的
+23:30:cleamoon__: 不是，奥数课
+23:30:POPOBE: -=-
+23:31:cleamoon__: 西城只上过四中
+23:31:POPOBE: 当时实验签掉了
+23:31:POPOBE: 不然就去四中了
+23:31:POPOBE: 离家还进
+23:31:POPOBE: 还有蛮大的游泳馆
+23:32:cleamoon__: 泳装妹子
+23:32:cleamoon__: 不过高三是要上大学吧
+23:32:POPOBE: 还有五个月
+23:32:POPOBE: 感觉不想学了--Y
+23:32:lh_mouse: 真是妹子？
+23:32:cleamoon__: 就生了？
+23:33:POPOBE: 不是，他yy的
+23:33:POPOBE: 事啊就要大学了
+23:33:POPOBE: 还不知道考什么
+23:33:cleamoon__: 打算去哪个大学
+23:34:POPOBE: 理工大都是群基佬
+23:34:cleamoon__: 我看是哪个基友收你
+23:34:POPOBE: 北航好像帅哥挺多
+23:34:cleamoon__: 不光是基佬，还有死宅呢
+23:34:POPOBE: 美妞儿还是人大多
+23:34:POPOBE: 说的就好像考得上一样
+23:34:cleamoon__: 中戏多
+23:34:POPOBE: 中戏艺考把
+23:35:cleamoon__: 不知道
+23:35:POPOBE: 你觉得一个用irc的女汉子能会艺术么
+23:35:cleamoon__: 你一定没听过女声版精忠报国
+23:36:cleamoon__: 完爆男声版
+23:36:POPOBE: 好久不听歌了
+23:36:cleamoon__: 估计学cs？
+23:36:POPOBE: 我
+23:36:POPOBE: ?
+23:36:cleamoon__: +
+23:37:POPOBE: 我学学语言吧
+23:37:cleamoon__: 什么语言？
+23:37:POPOBE: 德语？
+23:37:cleamoon__: 学瑞典语吧
+23:37:cleamoon__: 顺带学德语
+23:38:POPOBE: 不好--
+23:38:POPOBE: 只是想学点跟别人不一样的
+23:38:POPOBE: 现在德语学的人也越发的多了
+23:38:cleamoon__: 瑞典语很不一样
+23:38:cleamoon__: 没几个人会
+23:38:POPOBE: -=-
+23:38:POPOBE: 那我哪儿学得会
+23:39:cleamoon__: 我教你呀
+23:39:POPOBE: 窝巢
+23:39:cleamoon__: 绝对特殊，全北京都没几个会的
+23:40:POPOBE: 诶不过说实话，我学什么是我爸定--
+23:40:lh_mouse: 精灵语
+23:41:POPOBE: irc协议里面没有对图片的支持么
+23:41:lh_mouse: 没有
+23:41:cleamoon__: 难道你爸平时用30国语言讲话，然后最后定一个你要学的语言说？
+23:41:POPOBE: lh_mouse: 好奇怪啊，都那么多年了，难道图片不是必需的功能咯
+23:41:cleamoon__: 你可以自己写个客户端支持图片
+23:41:cleamoon__: 不是
+23:41:POPOBE: cleamoon__: 我爸学拉丁语的
+23:41:lh_mouse: POPOBE, 无必要
+23:42:cleamoon__: 哦，主教大人
+23:42:POPOBE: 他是医生
+23:42:POPOBE: 所以你懂得
+23:42:lh_mouse: 雷公助我
+23:42:POPOBE: 诶！话说我曾经还有个想法
+23:42:cleamoon__: 这我怎么懂的
+23:42:POPOBE: 写一个类似于报关离奇的音乐管理器
+23:42:cleamoon__: 报关离奇？
+23:42:POPOBE: 包管理器的音乐管理器
+23:43:cleamoon__: ......
+23:43:cleamoon__: 收费怎么破
+23:43:POPOBE: 像pacman apt-get一样get下音乐
+23:43:cleamoon__: 见spotify
+23:43:POPOBE: 你和我小熊说的一样
+23:43:lh_mouse: 我想的也是收费问题
+23:43:POPOBE: 小熊说除非什么时候音乐开元了--
+23:43:POPOBE: 开源
+23:44:POPOBE: 但是诱惑力还是好大
+23:44:cleamoon__: 你的玩具会说话？莫非你主修魔法
+23:44:POPOBE: 被你发现了-=-
+23:45:cleamoon__: 免费就行，开不开源不重要
+23:45:lh_mouse: 洗洗头发去
+23:45:POPOBE: ( ^_^ )/~~拜拜
+23:45:POPOBE: 但是还是很想做
+23:45:POPOBE: 但是
+23:45:POPOBE: 如果库不够大的话
+23:46:POPOBE: 找一个一个没有谁还来用--
+23:46:cleamoon__: 你可以弄类似ubuntu那个，订购了一个专辑就能加入源里面
+23:46:POPOBE: 不懂得ubuntu哪一类的--
+23:46:POPOBE: 我用arch的…
+23:46:POPOBE: 自生自灭了多年
+23:46:cleamoon__: 就是pacman的源
+23:46:cleamoon__: 订购了才能加源
+23:46:cleamoon__: 要不没有密钥
+23:46:POPOBE: 算了，先考试吧--
+23:47:cleamoon__: 设计不难的，aur里都有音乐
+23:47:POPOBE: 我做的东西--
+23:47:POPOBE: 永远都是--
+23:47:POPOBE: 只到能用的程度--
+23:47:cleamoon__: 那不足够了
+23:49:cleamoon__: 如果你的东西建立包总够容易，交款什么的方便，自然有人会来用
+23:49:POPOBE: 做大了会背版权找上门来
+23:49:POPOBE: 你想音乐都下到你手里了
+23:49:POPOBE: 谁还管版权啊--
+23:49:cleamoon__: 包管理器的好处在于自动解决依赖，音乐一般没有依赖，而且也很少有人会一次买几百个
+23:50:cleamoon__: 这就是你需要弄的，文件应该是只读的
+23:50:cleamoon__: 他再去录不是你的问题
+23:51:POPOBE: 是犯法的吧-=-
+23:51:POPOBE: 啊啊啊不去想了，越想越多…
+23:51:cleamoon__: 所以，见spotify
+23:51:POPOBE: 我去瞅瞅
+23:51:cleamoon__: 这个就是类似音乐包管理的
+23:52:xxxxxxxx: cleamoon_: 其实他想做的只是一个能播放音乐的文件管理器
+23:52:POPOBE: p2p合法化
+23:52:cleamoon__: p2p本来就不违法
+23:53:cleamoon__: 我记得gnome的那个可以播放音乐吧
+23:53:POPOBE: 不知道…我用kd用kde的
+23:53:cleamoon__: kde应该也行吧
+23:55:POPOBE: 之前还写了个基于socket的即时聊天服务器
+23:55:POPOBE: 写着写着发现irc
+23:55:POPOBE: 一下子动力就没了--
+23:55:T2: 叼叼叼
+23:56:cleamoon__: 如果这样的话，你能写的似乎只有强人工智能了
+23:56:POPOBE: 不会--
+23:56:cleamoon__: 其他的基本都有人做过或者在做了
+23:56:T2: 我先碎叫去了，明天早起。
+23:56:POPOBE: 哈哈突然想起来中学学java得时候
+23:57:T2: minna晚安，腋间愉快。
+23:57:POPOBE: 老师让写个输入特定语句回答特定句子的程序
+23:57:POPOBE: 晚安-=-
+23:57:T2 quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:57:POPOBE: 当时写完感觉自己可以写人工智能了-=-
+23:58:lh_mouse: 哇
+23:58:cleamoon__: 哇
+23:58:cleamoon__: 怎么做到的
+23:58:POPOBE: 别这样……
+23:58:xxxxxxxx: 人群之中钻出来一个光头
+23:58:POPOBE: 年少无知…
+23:58:POPOBE: 的过去……

@@ -1,0 +1,892 @@
+00:00:cleamoon__ quit:Ping timeout: 264 seconds
+00:01:lh_cat joined channel
+00:01:lh_cat quit:Changing host
+00:01:lh_cat joined channel
+00:06:lh_cat quit:Ping timeout: 240 seconds
+00:33:hoxily quit:Quit: WeeChat 1.0.1
+01:23:hysw joined channel
+01:31:lh_mouse: geordi, << ++1;
+01:31:geordi: error: lvalue required as increment operand
+01:31:lh_mouse: geordi, << + +1;
+01:31:geordi: 1
+01:33:lh_mouse quit:Read error: Connection reset by peer
+01:40:lh_cat joined channel
+01:40:lh_cat quit:Changing host
+01:40:lh_cat joined channel
+01:43:lh_cat: ⊙_⊙
+02:49:xxxxxxxx quit:Quit: Leaving...
+06:17:boosure joined channel
+08:10:geordi quit:Read error: Connection reset by peer
+08:14:geordi joined channel
+08:25:lhanjian joined channel
+08:44:geordi quit:Remote host closed the connection
+08:57:geordi joined channel
+09:00:Xilzzerts joined channel
+09:04:sismvg joined channel
+09:08:lhanjian: cleamoon, http://opinion.caixin.com/2013-07-10/100553786.html
+09:36:whatofor joined channel
+09:38:lhanjian quit:Quit: 风光冉冉东西陌
+09:39:sismvg: 还是一句话，光说没用，落实啊
+09:59:lh_mouse_ joined channel
+10:05:sismvg: http://tieba.baidu.com/p/3391618638
+10:05:sismvg: NTR
+11:01:lhjkk joined channel
+11:21:boosure quit:Quit: Get your hand off of it
+11:41:lh_cat quit:Ping timeout: 272 seconds
+12:00:sismvg: http://www.ithome.com/html/out/111004.htm
+12:00:sismvg: 卧槽。。
+12:00:sismvg: 球带
+12:08:lh_mouse: C++ 吧已阵亡
+12:35:lh_mouse: C++  吧已诈尸
+12:35:lhjkk quit:Read error: Connection reset by peer
+12:38:dantmnf: 只是抽了吧
+12:39:lh_mouse: geordi, -c int i = 1; decltype(i) k;
+12:39:geordi: Success
+12:40:lh_mouse: geordi, replace (i) with ((i))
+12:40:geordi: error: 'k' declared as reference but not initialized
+12:45:Guest88162 joined channel
+12:45:Guest88162 quit:Client Quit
+12:47:lh_cat joined channel
+12:51:sismvg: 菊花香瓜子。。
+12:56:biergaizi_ joined channel
+12:59:lh_cat quit:Ping timeout: 250 seconds
+13:00:biergaizi quit:Ping timeout: 250 seconds
+13:55:biergaizi_ quit:Remote host closed the connection
+13:55:lhjkk joined channel
+13:56:biergaizi_ joined channel
+14:14:sismvg: repeat SelectObject(dc,bitmap),2;
+14:34:sismvg: 悲剧啊悲剧
+14:34:sismvg: 刚才一个貌似HR电话的CALL过来了，但是在我拿起手机的瞬间崩溃了
+14:34:sismvg: 我还没记下电话号码啊
+14:38:xxxxxxxx joined channel
+14:38:hope1 joined channel
+14:40:varna joined channel
+14:40:varna: Xilzzerts: 爆
+14:40:varna: 报错了
+14:40:varna: 爆错了
+14:40:varna: xxxxxxxx: 爆
+14:40:varna: dantmnf: 爆
+14:40:varna: sismvg: 爆
+14:40:varna: lhjkk: 爆
+14:41:varna: FrankHB: 爆
+14:41:varna: .
+14:41:Xilzzerts: ...
+14:41:sismvg: varna:还差一个啊
+14:41:sismvg: 我要召唤神龙
+14:41:varna: 我多爆你一次就行了
+14:41:sismvg: 两个四星球是不行的
+14:42:lhjkk: 没电了
+14:42:sismvg: 神龙啊神龙，快点把我的枪兵属性去掉吧
+14:42:varna: 你是药元四，不是四星球
+14:42:sismvg: 我再也不玩热血江湖了
+14:43:sismvg: http://www.ithome.com/html/android/111040.htm
+14:43:sismvg: 小米与日本
+14:44:sismvg: 给所有UI特效师致敬
+14:45:hope1: ……
+14:46:xxxxxxxx: 热血江湖是啥?
+14:47:sismvg: ...
+14:47:sismvg: 某棒子游戏
+14:49:lhjkk: 我玩过
+14:49:lhjkk: 医生号
+14:49:lhjkk: 几年前的事情了
+14:49:xxxxxxxx: 医生?
+14:50:lhjkk: 奶。
+14:50:xxxxxxxx: 奶爸来亨鸡
+14:52:sismvg: 早知道我不玩枪兵了
+14:52:sismvg: 装备难搞还整天被人当眼中钉。。
+14:52:xxxxxxxx: http://tieba.baidu.com/p/1787844954
+14:53:xxxxxxxx: 卧槽 我偶然发现这样的东西....
+14:53:lhjkk: 我玩的时候，那个时候还没有远程输出职业
+14:53:lhjkk: 远程的只有
+14:53:lhjkk: 奶
+14:53:sismvg: 热血江湖-》嗑血江湖
+14:56:whocares_2 quit:Ping timeout: 258 seconds
+14:56:whocares_2 joined channel
+14:58:lhjkk quit:Read error: Connection reset by peer
+15:04:varna: gcc有没有禁用移除帧底优化的扩展呢……
+15:05:varna: 昨晚在试验奥术的时候发生了惨烈的爆炸事故
+15:05:sismvg: http://www.ithome.com/html/out/111002.htm
+15:05:sismvg: 快给大和装上
+15:06:varna: 那点口径还不够大和塞个鼻孔的
+15:08:cleamoon_ joined channel
+15:10:FrankHB: -O0
+15:11:varna: -O0就算了
+15:12:varna: 要不是-O0复现不能和valgrind指出silly argument for malloc我也不会去折腾这个
+15:27:hope1: 挂个脚本一个个选项试？
+15:28:cleamoon_: 什么毛病？O2挂了？
+15:32:varna: 基本不用试
+15:33:varna: 看起来是帧底优化把rbp干掉，结果拷贝局部变量的时候减出一个负值，然后挂了
+15:34:varna: 咦，今天HO棠怎么有时间了
+15:34:hope1: 机房
+15:34:varna: HO~
+15:35:lhjTSB joined channel
+15:35:varna: TSB...
+15:35:hope1: TSB?
+15:35:varna: 特……
+15:37:lhjTSB: 既视感啊
+15:37:cleamoon_: 羽立不用手机了？
+15:38:hope1: 手机麻烦
+15:40:hysw quit:Ping timeout: 260 seconds
+15:40:sismvg: 猫真是一种愚蠢的生物
+15:42:lhjTSB: @lh_cat
+15:43:hope1: 停一周课，竞赛之后两天就期中了……
+15:44:sismvg: 嗯，MS的结构体的诟病------结构体又长又大，平常不用的成员还多的吓死人
+15:44:sismvg: 感觉就像包皮垢
+15:44:cleamoon_: 噗
+15:44:lhjTSB: 平常不用？是未公开吧
+15:45:sismvg: 就是平常用不着啊。。
+15:45:sismvg: BITMAP_INFO_HEADER的后面的每米像素数
+15:46:cleamoon_: 平常用不着也就不需要管存不存在吧，药元四的屌用不着了要切掉吗
+15:46:varna: 咦，感觉孤岛危机系列的剧情还不错啊
+15:46:sismvg: 没法用列表初始化。
+15:47:sismvg: 要一个个varname.member=var;
+15:47:lhjTSB: varna.member=varna
+15:48:sismvg: 还有就是字符串结构，用惯了string以后再也回不到char*..
+15:51:sismvg: 最可恨的是VC6，不知道为什么他们写的库默认字符集都是ascii..
+15:51:lh_mouse: string 渣渣
+15:52:lhjTSB: lh_mouse, 耗子对于string是不是有更好的实现？
+15:53:lh_mouse: 明显有
+15:53:lh_mouse: 第一  给我干掉 ntmbs
+15:53:lh_mouse: 而且要严格区分 owning 和 non-owning 的
+15:54:lh_mouse: 在此基础上  不难包装出个 string + string_view
+15:54:lhjTSB: ntmbs? nmbs吧
+15:54:lhjTSB: 哦，看错了
+15:54:cleamoon_: 这个意义很大吗...
+15:55:lh_mouse: Ntll Terminated Mult-Byte String
+15:55:lh_mouse: Null*
+15:55:lh_mouse: 其实我想说的是 NTCS
+15:56:lh_mouse: 简单点  { shared_ptr<char> ptr; size_t len; } 也够完爆 std::string 了
+15:57:cleamoon_: utf怎么办...
+15:57:lh_mouse: 要是真是实现起来 用一个 shared_ptr 可以当 ntmbs 不过没 len...
+15:57:handlehard joined channel
+16:05:lh_mouse: 上面的实现做成 string 反而麻烦    单独一个 shared_ptr 可以 const
+16:06:whocares_2 quit:Remote host closed the connection
+16:06:handlehard quit:Ping timeout: 260 seconds
+16:06:whocares_2 joined channel
+16:07:handlehard joined channel
+16:08:handlehard quit:Client Quit
+16:08:lhjTSB quit:Remote host closed the connection
+16:09:lhjTSB joined channel
+16:09:lhjTSB quit:Remote host closed the connection
+16:12:lhjTSB joined channel
+16:15:lhjTSB_ joined channel
+16:16:FrankHB: { shared_ptr<char> ptr; size_t len; }这种笑话是怎么出来的。
+16:16:lh_mouse: 笑话个蛋
+16:16:FrankHB: 还要自己艹deleter？
+16:16:lh_mouse: 掰扯明白咋用的没
+16:17:lh_mouse: deleter 蛋
+16:17:FrankHB: 不是笑话就是2b。
+16:17:FrankHB: 艹shared_ptr不管析构？
+16:17:lh_mouse: 是  就跟你一样
+16:17:lh_mouse: allocate_shared   啊 智障
+16:17:lhjTSB quit:Ping timeout: 255 seconds
+16:17:FrankHB: _shared nmb啊，二货。
+16:17:condy joined channel
+16:17:FrankHB: 又在瞎j8 yy需求了。
+16:18:FrankHB: 就这种二货还不如libstdc艹的std::string。
+16:18:lh_mouse: 我甩起一个一个 string literal 一把糊到了帝球脸上
+16:18:FrankHB: string literal shared nmlgb
+16:19:FrankHB: 实现shared不shared你艹库管得着？
+16:21:FrankHB: shared_ptr<char>。。。呵呵呵你一没share上就明摆着被SSO直接爆粗翔。
+16:22:lhjTSB_ quit:Ping timeout: 255 seconds
+16:23:FrankHB: 我就问你，libstc++那种烂std::basic_string跟你这个比起来哪个更烂？
+16:24:sismvg: 刚才来个推销的，半天和我说这个防盗的东西，免费免费，然后只要维护费，1年60块。。
+16:24:lh_mouse: FrankHB, 这么健忘啊
+16:24:sismvg: 买个红外线也就5块啊
+16:25:lh_mouse: geordi, { const char str[] = "FrankHB 大傻逼";  shared_ptr<const char> sp(shared_ptr<void>(), str); cout <<sp.get(); }
+16:25:geordi: FrankHB 大傻逼
+16:25:FrankHB: geordi, cout << "耗吱大吱逼";
+16:25:geordi: error: 'cout' does not name a type
+16:25:lh_mouse: 233
+16:25:FrankHB: 噗。
+16:25:cleamoon_: 2333
+16:25:lh_mouse: FrankHB, 你看懂了没
+16:26:lh_mouse: 为啥用 shared_ptr
+16:26:FrankHB: geordi, {cout << "日吱";}
+16:26:geordi: 日吱
+16:26:lh_mouse: 是为了 CoW？
+16:26:lh_mouse: geordi, undo and again
+16:26:geordi: error: 'cout' does not name a type
+16:26:lh_mouse: geordi, undo and again
+16:26:geordi: FrankHB 大傻逼
+16:27:sismvg: georid<<"茉~~与其在这里炒还不如买点狗币去啊"
+16:27:geordi: 茉~~与其在这里炒还不如买点狗币去啊
+16:28:FrankHB: georid<<"doge滚粗"
+16:28:geordi: doge滚粗
+16:28:cleamoon_: 敢买doge的都是doge
+16:28:sismvg: georid<<"wow"
+16:28:geordi: wow
+16:29:sismvg: 刚才看了，这种报警设备的成本17块..
+16:29:cleamoon_: 耻球的淫兽里有string吗
+16:29:FrankHB: 艹编码的。
+16:30:lh_mouse: MCF 里也有  不过编码转换那部分我打算重构
+16:30:lh_mouse: 自己 git checkout HEAD~10
+16:31:FrankHB: 在string上节约存储没多少现实意义——你成天艹多大的string literal？大多数情况下论时间效率上随便一个SSO就爆你个shared_ptr的deleter——你能指望优化？呵呵。
+16:31:lh_mouse: FrankHB, 你再看一遍刚才那个   你告诉我哪里有 deleter
+16:31:lh_mouse: { const char str[] = "FrankHB 大傻逼";  shared_ptr<const char> sp(shared_ptr<void>(), str); cout <<sp.get(); }
+16:31:cleamoon_: 艹编码也行，掏出来溜溜就好了
+16:31:lh_mouse: 你告诉我 deleter 在哪里
+16:32:lh_mouse: FrankHB, 别人发的是什么都不看就瞎鸡巴吱吱
+16:33:cleamoon_: 对了，耻球在win下用什么编辑器/ide
+16:33:FrankHB: sp.get_deleter()
+16:34:FrankHB: 自己艹着看看生成多少代码再说。georid会告诉你二进制里有多少辣鸡？
+16:35:FrankHB: cleamoon_: 没意义，懒得管存储，后来直接包装basic_string了，就当是个convenient helper。反正早晚要重撸。
+16:35:FrankHB: 哦，顺便告诉你一件好事：如果你不艹make_shared和allocate_shared之类，deleter的破事会少一点。
+16:36:FrankHB: 不过这样么还是呵呵呵。
+16:36:lh_mouse: FrankHB, 你家 shared_ptr 有 get_deleter()？
+16:36:lh_mouse: 滚去读标准
+16:37:varna: 妈的
+16:38:FrankHB: get_deleter(sp)
+16:39:FrankHB: lh_mouse: 自己滚。
+16:39:cleamoon_: 各种重写狂魔
+16:39:lh_mouse: [16:34:08] 18<27FrankHB18> sp.get_deleter()
+16:39:lh_mouse: 这是谁写的
+16:40:varna: 怎么又无限读取了
+16:40:lh_mouse: 画个帝球贴门上  保佑程序不出 bug
+16:41:lh_mouse: 帝球他家 shared_ptr 有个成员函数  叫  get_deleter()     unique_ptr 哭了
+16:42:sismvg: 重写.1415926
+16:42:varna: 噗，gtksourceview的自动缩进都是些什么狗屁
+16:42:lh_mouse: varna, 画个帝球贴门上
+16:42:varna: 狗日的就不能弄个按语言的缩进规则
+16:43:lh_mouse: 白天可以吓跑 bug    不过晚上睡觉时候最好找块布遮起来
+16:43:varna: 做事做一半已经变成gtk惯例了么
+16:43:cleamoon_: 你就不会不用自带的...
+16:43:FrankHB: sp._M_get_deleter()
+16:43:FrankHB: 	  // _M_ptr needs to point to the newly constructed object.
+16:43:FrankHB: 	  // This relies on _Sp_counted_ptr_inplace::_M_get_deleter.
+16:43:FrankHB: 	  void* __p = _M_refcount._M_get_deleter(typeid(__tag));
+16:43:FrankHB: 呵呵呵呵呵。。。
+16:43:varna: cleamoon_: 你来重写/从头写一个控件？
+16:43:varna: 我可没那闲心一天到晚造GUI轮子
+16:43:lhjTSB_ joined channel
+16:43:lh_mouse: FrankHB, std::get_deleter 是模板不是函数
+16:44:cleamoon_: 这里的重写狂魔们会这么干
+16:44:lh_mouse: unique_ptr<foo>::get_deleter() 是货真价实的成员函数
+16:44:varna: 谁爱干谁干，谁能干谁干，反正我不干
+16:44:varna: 不干的就没必要放造轮子的屁
+16:45:FrankHB: 反正懒得被轮子干。
+16:45:FrankHB: 宁可保持对grubbish的无知。
+16:45:cleamoon_: 我估计你早晚得重写gui
+16:45:varna: 我最烦的就是手写gui
+16:46:lh_mouse: 有 GUI 就用   没 GUI 就用 CUI
+16:46:hope1: 一向手动缩进
+16:46:varna: 破事极多
+16:46:lhjTSB joined channel
+16:46:lh_mouse: 手动缩进倒无所谓  问题是不同编辑器缩进风格不一致
+16:46:varna: 五年前我确实是手工缩进的
+16:46:lh_mouse: 比如 SBVC 就认为花括号后面的缩进比上一行多一个
+16:47:lh_mouse: 我用过的任何编辑器都没这么干的 
+16:47:varna: 现在gtksourceview（以下，也包括gedit——因为用的是sourceview）的auto indent就是记录下你当前indent了多少次，连括号都不管
+16:47:FrankHB: 实在不爽匹配/^ /干掉得了。
+16:48:cleamoon_: 难道除了emacs有管括号的？
+16:48:varna: vim
+16:48:cleamoon_: ncurses也挺疼的
+16:48:lh_mouse: 最好是把除了 PP directive 以外的换行全干掉
+16:48:lhjTSB_ quit:Ping timeout: 244 seconds
+16:48:varna: nano我不知道，没用过那东西敲代码
+16:48:varna: emacs我有限地用了那几次，也都是emacs -w
+16:48:cleamoon_: vim又不用gtksourceview
+16:49:lh_mouse: Nano 自动缩进和上一行一致
+16:49:varna: 果然都这德行
+16:49:lh_mouse: 可以关掉  M-I
+16:49:varna: n++呢
+16:50:lh_mouse: n++ 是和上面非空的最后一行一致
+16:50:varna: }会给对应的缩进么
+16:50:hope1: 语言习惯也顶多是多数，不该强制，不如当插件
+16:50:lh_mouse: 你第一行打了个 tab   第二行空的  第三行和第一行一致
+16:50:lh_mouse: 不会
+16:50:lh_mouse: 一旦缩进确定就不会再变更
+16:50:varna: hope1: 提供个配置文件就行
+16:50:varna: 现在看来我得hack点东西出来
+16:51:varna: 总之都太疼了
+16:51:cleamoon_: 用emacs吧
+16:52:hope1: 自动缩进经常得手动处理，很麻烦，不如全手动
+16:52:varna: 我是六四开，四是手工的部分
+16:52:cleamoon_: 装一个插 件evil就用vim快捷键了
+16:52:varna: 我曾经用viper-mode
+16:53:cleamoon_: 那个据说疼
+16:53:lh_mouse: 坑爹的更多
+16:53:lh_mouse: 你知道 win 调整缩进用什么么
+16:54:lh_mouse: Tab 增加缩进    Shift-Tab 减少缩进     而且光标如果在行开头  这一行是不算的
+16:54:lh_mouse: nano 增加缩进是 Alt+Shift+]   光标在的那行也算
+16:54:varna: gtksourceview沿用了很多win的热键习惯
+16:54:lh_mouse: 反正各种坑爹
+16:54:varna: 但考虑行首
+16:55:lh_mouse: win 有个好  不管啥编辑器热键都差不多
+16:56:varna: 是
+16:56:lh_mouse: 其实鼠标是最大的热键……
+16:56:cleamoon_: @acme
+16:56:varna: 我换浮动式窗口管理器其实是懒得大部分时间双手键盘了，想悠闲点
+16:56:cleamoon_: 做成acme那样的，没有任何自动缩进
+16:57:varna: 我放弃了，反正tab和shift-tab还能用
+16:57:varna: 而且还有个问题，他们的补全菜单太难看
+16:58:cleamoon_: 模样无所谓吧...
+16:58:varna: 模样重要
+16:59:hope1: 用平铺式一样是一直用鼠标……
+16:59:cleamoon_: 模样除了慢慢撸没办法
+17:00:varna: 现在的风格是从vim的风格用脚本转过来的
+17:01:varna: http://picpaste.com/5ZTpMWJL.png
+17:01:FrankHB: 鼠标中键在win上的文本编辑器里基本是废物。
+17:03:lhjTSB: 用平铺式依然回避不了用鼠标
+17:03:FrankHB: lh_mouse: 你那玩意儿遇到动态库的string literal被干掉了怎么办。
+17:03:cleamoon__ joined channel
+17:03:cleamoon_ quit:Read error: Connection reset by peer
+17:03:lh_mouse: FrankHB, 动态库没法干净卸掉
+17:04:lh_mouse: 你就算不管 string literal  还有模板呢  RTTI table 呢
+17:04:lh_mouse: 这些都没法干掉的  所以结论就是为何世界和平请勿动态卸载动态库
+17:04:FrankHB: 实际会怎么样，直接crash？
+17:04:FrankHB: 哦，于是还得跟用户说，敢卸载动态库=自寻死路？
+17:05:lh_mouse: FrankHB, 是的
+17:05:FrankHB: 233
+17:05:lh_mouse: FrankHB, 你看我怎么弄的吧
+17:05:lh_mouse: 我把所有属于构造函数的东西包装成一个类，里面塞一个 scoped_ptr
+17:06:lh_mouse: 构造函数里面在全局静态表里面加一个回调
+17:06:lh_mouse: 所以 SO 一旦加载  你就得到这么个列表  但是里面的对象是不创建的
+17:07:lh_mouse: 然后  执行这个列表中的每一个回调  得到一堆 shared_ptr<void>
+17:07:lh_mouse: 这样可以塞到一个 vector 里
+17:07:lh_mouse: 需要卸载模块时候把这个 vector 清空即可   但是 内存是不卸载的
+17:07:lh_mouse: 哦 不是 scoped_ptr  是 weak_ptr
+17:07:FrankHB: dt
+17:07:cleamoon__ quit:Ping timeout: 250 seconds
+17:08:FrankHB: 算了，标准化之前也懒得多管，没坑爹需求最多艹艹dlsym/GetProcessAddr。
+17:08:lh_mouse: 于是你这要确保回调函数返回的 shared_ptr 是唯一持有者就行了
+17:08:lh_mouse: 实际上 poseidon 里面所有返回 shared_ptr 的几乎都是这么干的
+17:09:lhjTSB_ joined channel
+17:09:lh_mouse: 也就是说返回的所有权是唯一的  一旦 返回的 shared_ptr 被干掉对象就没了
+17:09:lh_mouse: 这里的例子适用于 servlet timer    event_handler
+17:10:cleamoon_ joined channel
+17:10:lh_mouse: auto handler = HttpServletManager::register(category, "/some/path", boost::bind(callback, bar));
+17:11:lh_mouse: 而且是懒惰删除的
+17:12:lhjTSB quit:Ping timeout: 245 seconds
+17:13:lh_mouse: FrankHB, dlsym 是 POSIX 标准
+17:13:lh_mouse: dlsym 是 GetProcAddr 的超集   
+17:15:lh_mouse: 就目前来看 poseidon 这种实现在 win 上破事反而更多   假定 上面那个对象是静态的  你只要把 this 丢给 dladdr 拿到基地址即可
+17:15:lh_mouse: win 怎么办  呵呵了
+17:19:lhjTSB joined channel
+17:20:Xilzzerts: lhjTSB (~lhjTSB@183.129.29.227) 已进入
+17:20:lhjTSB: Xilzzerts, 链路不稳
+17:21:lh_mouse: Xilzzerts, 揉
+17:21:lhjTSB_ quit:Ping timeout: 255 seconds
+17:24:cleamoon_: 老虎机进入了xil
+17:29:code_new joined channel
+17:30:cleamoon_: Google发布了一个测试网络流量安全性的工具Nogotofail，设计检测你正在使用的设备或应用程序是否能安全抵御已知的TLS/SSL漏洞，或是否存在错误配置。Nogotofail采用 Apache License 2.0授权，项目托管在GitHub上，允许任意使用，任何人都可以贡献代码，支持Android、iOS、Linux, Windows、Chrome OS、OSX，或任何能联网的设备。其名字Nogotofail显�
+17:30:lhjTSB: 乱码
+17:31:cleamoon_: google弄了个检测HTTPS流 量安 全性 的工具nogotofail
+17:31:Xilzzerts: Google的卫星上网呢
+17:32:Xilzzerts: 全球翻墙呢
+17:32:lhjTSB: 就算把铱星系统全送给谷歌，谷歌也搞不出全球翻墙吧
+17:33:lh_mouse: 翻什么
+17:33:cleamoon_: 搞不出+
+17:34:cleamoon_: 铀星都不够
+17:36:Xilzzerts: 錀星
+17:36:lh_mouse: cleamoon_, 揉
+17:37:varna: 好想侵犯点什么啊
+17:37:cleamoon_: 塞给小耗一个坚果
+17:37:lh_mouse: 0 0
+17:37:varna: 国产小耗不都是吃豆子和米的么
+17:37:lh_mouse: 我想吃鱼
+17:37:varna: 给模鼻子再说
+17:40:lhjTSB quit:Quit: Leaving
+17:40:cleamoon_: 国产小耗吃阳痿素
+17:41:cleamoon_: 不爱吃鱼，太麻烦
+17:41:cleamoon_: peko可以爆羽立
+17:44:lh_mouse: 吃你妹妹！
+17:45:lh_mouse: [15:49:51] 18<27sunnychen18> 有什么好玩的游戏？
+17:45:lh_mouse: [15:50:04] 18<27sunnychen18> 知道的推荐一个
+17:45:lh_mouse: [15:51:29] 20<lh_mouse>30 瘟疫公司？
+17:45:lh_mouse: [15:51:47] 20<lh_mouse>30 嘛   女装山脉……
+17:46:cleamoon_: 2333
+17:46:cleamoon_: @冲绳奴隶岛
+17:47:varna: 重生萝莉岛
+17:47:cleamoon_: 重口摔跤游戏
+17:47:varna: 女装山脉挺好的，我都打了
+17:48:cleamoon_: 去玩冲绳奴隶岛
+17:49:varna: 重生萝莉岛上来那个饮尿PLAY还行
+17:49:cleamoon_: 你去找耻球试试
+17:51:varna: 说起来小耗养起来好玩不？
+17:52:cleamoon_: 仓鼠还好，除了不认人
+17:52:varna: 不认人正常，毕竟智力大概没法跟猫狗比
+17:53:cleamoon_: 可以养，便宜
+17:53:varna: 会乱跑不？
+17:53:cleamoon_: 会
+17:53:varna: 那就麻烦
+17:53:cleamoon_: 所以养在笼子里
+17:53:varna: 养在笼子里的就不好玩了
+17:54:cleamoon_: 放养不如养只乌龟
+17:54:FrankHB: 怎么玩。
+17:54:cleamoon_: 啪啪啪呗
+17:55:varna: 以前看一个视频，把仓鼠放在手上模，会自行变扁
+17:55:cleamoon_: 养猫的话他会上笔记本帮你删除代码
+17:55:varna: 还可以拿着模鼻子玩
+17:55:varna: 实在不行还可以给那小耗弄个github repo
+17:56:cleamoon_: 或者养一只乌贼
+17:56:cleamoon_: 章鱼
+17:56:cleamoon_: 触手怪之类的
+17:57:varna: 在家吃乌贼章鱼太多
+17:58:cleamoon_: 你难道看到宠物会说“现在我们试图靠近他，他的蛋白质是牛肉的六倍”吗
+18:00:code_new_ joined channel
+18:00:varna: 不说，就流点口水
+18:00:varna: code_new_: 爆肝
+18:00:varna: 爆
+18:00:varna: 怎么一顺手肝就出来了
+18:00:cleamoon_: ......
+18:01:cleamoon_: 现实中见过的最奇怪的宠物是小变色龙
+18:02:lh_mouse: varna, 有没有判断一个宏是否为空的办法
+18:03:varna: lh_mouse: 我不知道怎么判断，#if里的东西都不好用
+18:03:code_new quit:Ping timeout: 265 seconds
+18:05:cleamoon_: 女生之间何必要那么计较，反正过几十年都是要一起去跳广场舞的！(zt)
+18:13:varna: 不用过几十年
+18:13:varna: 现在我看着实验室这堆天天在线电视剧的东北大妈就恶心
+18:14:code_new_: varna, 爆
+18:16:cleamoon_: 看什么电视剧？抗日剧？
+18:16:cleamoon_: 后宫剧？
+18:16:lh_mouse: 羊驼发出了嗷的声音
+18:17:code_new: 拿网速MVP
+18:18:varna: God knows
+18:18:lh_mouse: 羊驼
+18:18:lh_mouse: 有解了
+18:18:varna: 怎么解？
+18:18:lh_mouse: #define FIRST(_, ...) _
+18:18:varna: 2333
+18:19:lh_mouse: #define IS_EMPTY(x_) SECOND(FIRST(x_), 0, 1)
+18:19:lh_mouse: #define SECOND(_, r_, ...) r_
+18:19:cleamoon_: 怎么看起来这么鬼畜
+18:20:varna: 用途看着有限
+18:20:lh_mouse: 这是预处理器的正确使用姿势
+18:20:lh_mouse: varna, 用预处理展开生成两个构造函数  其中一个是缺省构造函数
+18:20:lh_mouse: 需要在 参数列表为空时踢掉第二个
+18:21:varna: 哦
+18:21:lh_mouse: 我果然是绝顶聪明
+18:21:lh_mouse: （叉腰）
+18:21:FrankHB: 艹什么PP。
+18:22:cleamoon_: 想到了肉牛头像
+18:22:varna: 果然c艹用户在对内作战方面获得了重大战果
+18:22:* varna 笑
+18:24:lh_mouse: FrankHB, #include "poseidon/main/player/protocol_generator.hpp"
+18:31:cleamoon_: 擦，ff太慢了，没法忍
+18:33:lh_mouse: varna, 对谁？
+18:33:varna: lh_mouse: 对c艹
+18:35:cleamoon_: perl用黑魔法，c艹直接召唤恶魔
+18:36:varna: c艹用户总是不愿自暴自弃
+18:36:cleamoon_: 自暴自肛
+18:36:varna: 该说是觉得自己有能呢，还是觉得语言有救呢……
+18:38:condy quit:Remote host closed the connection
+18:38:condy joined channel
+18:39:lh_mouse: 不对
+18:39:FrankHB: 因为其它实现都无能。
+18:39:sismvg: http://www.ithome.com/html/out/111091.htm
+18:39:sismvg: Come语言编程实战----2333333
+18:39:lh_mouse: 空的宏还是占一个地方
+18:39:condy: ⊙_⊙
+18:40:lh_mouse: 形参列表里面逗号比形参少一个才是万恶之源
+18:40:sismvg: 他那么多年都没看过CPP的置顶吗。。
+18:40:FrankHB: 需要逗号才是万恶之源。
+18:40:Plough joined channel
+18:41:lh_mouse: 我前面的做法是  在宏里面的每一项前面都加个逗号    展开结果前面加个 void  然后和他后面的逗号一起干掉
+18:41:cleamoon_: ithome打不开
+18:41:sismvg: 国外狗？
+18:41:biergaizi quit:Remote host closed the connection
+18:41:cleamoon_: 国外+
+18:42:cleamoon_: 你们需要s-expr的c艹
+18:42:biergaizi joined channel
+18:42:FrankHB: 早就想把屏幕安装在天花板上了。。。
+18:42:sismvg: 躺着看电视？
+18:43:sismvg: cleamoon_ 总之就是老码农的吐槽
+18:43:cleamoon_: 屏蔽国外ip吗？
+18:44:lh_mouse: 取到第一个 token 之后怎么办
+18:44:sismvg: 百度越来越坑了，搞出个吧主考核，结果3个吧主全挂了
+18:44:sismvg: 不清楚呢。。
+18:44:sismvg: 搜：当码农老去
+18:44:lh_mouse: cleamoon, 双向的
+18:45:cleamoon_: ......
+18:46:Xilzzerts quit:Quit: Leaving
+18:46:lh_mouse: 现在的问题是 如何使得一个宏在参数非空时展开出一个逗号  而为空时没有逗号
+18:47:lh_mouse: 貌似有戏
+18:47:FrankHB: GCC不早就有这种扩展么。
+18:47:lh_mouse: 不是扩展
+18:47:lh_mouse: 根本不需要
+18:47:lh_mouse: 我知道那个 ## __VA_ARGS__
+18:47:FrankHB: 不就是看你艹逗号太无趣才搞的。
+18:48:FrankHB: GCC：不要把有限的吱生浪费在艹逗号上。
+18:48:lh_mouse: 使用 (void, first) 展开一次
+18:48:lh_mouse: 用那个扩展也可以
+18:48:lh_mouse: 这里不用
+18:49:lh_mouse: 展开 (void, first, void) 然后把第一个 token 和它后面的逗号删掉
+18:49:lh_mouse: 如果 first 为空 我们得到 , void
+18:49:sismvg: http://tieba.baidu.com/p/3382196616?pn=3 -》》事实证明90%球种的邮箱都是QQ邮箱。。\
+18:49:lh_mouse: 否则  得到 first, void
+18:49:lh_mouse: fvck  还是不对
+18:51:lh_mouse: 不用扩展就始终是 逗号 = token - 1
+18:51:lh_mouse: 要么就是逗号  = token
+19:00:cleamoon_: 也就是说qq
+19:00:iyzsong joined channel
+19:01:cleamoon_: 有最大的奇特种
+19:01:lh_mouse: lh_mouse@ra2diy.com 飞过
+19:04:cleamoon__ joined channel
+19:04:cleamoon__ quit:Read error: Connection reset by peer
+19:08:cleamoon_ quit:Ping timeout: 265 seconds
+19:13:whatofor_1 joined channel
+19:13:whatofor quit:Read error: Connection reset by peer
+19:25:lh_mouse: 成了
+19:30:* hope1 aur -S cdecl
+19:31:cleamoon_ joined channel
+19:35:whatofor joined channel
+19:35:lhanjian joined channel
+19:38:whatofor_1 quit:Ping timeout: 244 seconds
+19:38:iyzsong: =.=
+19:39:lhanjian: =v=
+19:41:cleamoon_ quit:Read error: Connection reset by peer
+19:51:condy: niconiconi...
+19:51:cleamoon_ joined channel
+19:52:iyzsong: ...
+19:54:condy: ^_^
+19:59:lhanjian: condy, 你胸大你来讲
+19:59:condy: 我不是女孩子...
+19:59:condy: iyzsong: 
+20:11:lh_mouse: https://gustedt.wordpress.com/2010/06/08/detect-empty-macro-arguments/
+20:14:* sismvg condy早就成为女人了
+20:14:cleamoon_ quit:Read error: Connection reset by peer
+20:15:condy: QAQ
+20:15:* sismvg 大脑的海马区受损了
+20:15:sismvg: http://www.ithome.com/html/it/111067.htm
+20:30:Petrus07 joined channel
+20:37:JQK joined channel
+20:39:hoxily joined channel
+20:42:cleamoon_ joined channel
+20:56:Li_o joined channel
+20:56:cleamoon__ joined channel
+20:56:cleamoon_ quit:Read error: Connection reset by peer
+20:56:Li_o: XBMC找到了一大堆外国视频的插件。。
+20:56:Li_o: 优酷的真难找。
+20:57:cleamoon__ quit:Read error: Connection reset by peer
+20:57:cleamoon_ joined channel
+20:57:cleamoon_ quit:Read error: Connection reset by peer
+21:03:iyzsong: 喵～～
+21:05:Li_o: 。，
+21:12:sismvg: 谁是win7或者XP的系统啊
+21:13:Li_o: 我的是xp
+21:13:iyzsong: 我的是Emacs
+21:13:Li_o: 老爷机表示 win7亚历山大
+21:14:sismvg: 我需要一台XP或者win7 & support cpp11
+21:15:Li_o: 说普通话。
+21:16:varna: Plough: 肛
+21:16:sismvg: XP或者win7,支持C++11的编译器
+21:16:GODDOG joined channel
+21:16:varna: 药娘快出来被我侵犯
+21:16:hope1: &和||哪个优先级高……
+21:16:iyzsong: Emacs早就支持cxx14了
+21:16:sismvg: http://image.baidu.com/i?ct=503316480&z=0&tn=baiduimagedetail&ipn=d&word=%E5%96%B5%E5%B8%95%E6%96%AF%20%E6%89%8B%E5%8A%9E&step_word=&pn=20&spn=0&di=11419369621&rn=1&is=&istype=&ie=utf-8&oe=utf-8&in=22548&cl=2&lm=-1&st=&cs=3873974726%2C2847848333&os=3333799658%2C2161174050&adpicid=0&ln=284&fr=&fmq=1415193303871_R&ic=&s=&se=&sme=0&tab=&width=&height=&face=&ist=&jit=&cg=&objurl=http%3A%2F%2Fimgsrc.ba
+21:16:Li_o: ||
+21:16:sismvg: idu.com%2Fforum%2Fw%3D580%2Fsign%3D7c660ef3b1de9c82a665f9875c8080d2%2Fd7a5040828381f30071a6763ab014c086f06f000.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fv_z%26e3Bptjkw_z%26e3Bkwt17_z%26e3Bv54AzdH3FrAzdH3Fn80ma00m8m
+21:16:sismvg: 擦。。打错了
+21:16:hope1: 已经开始支持c++17了吧
+21:17:iyzsong: o.o 好吧
+21:17:lhanjian: C++17 ！！！！！！
+21:17:sismvg: C++1000000!
+21:17:varna: c++ 17!
+21:17:hope1: 应该还是叫c++1z……
+21:17:Li_o: XBMC的视频插件用起来感觉好别扭。。
+21:17:varna: 叫17!吧
+21:17:Li_o: 界面很像手机上的界面。~~ 
+21:17:sismvg: 叫2^17
+21:18:hope1: 2^17<17!
+21:18:varna: 一个排列一个组合，你说哪个吓人
+21:18:sismvg: 2^17更有码农的风味
+21:18:sismvg: 17!是数学家的事情
+21:18:varna: 未必
+21:19:varna: 当然如果你把码农的收入限制在月6kRMB以下大概差不多了
+21:19:FrankHB: geordi << (2^17);
+21:19:geordi: 19
+21:19:hope1: 233
+21:19:varna: 说起来为什么我开始关掉舰娘的BGM听东方音乐呢
+21:20:FrankHB: 因为你骨子里还是个东方厨么。
+21:20:varna: 我东方明明打得很差
+21:20:varna: 哦对，恥球吃不吃螺？
+21:23:lhanjian quit:Quit: 风光冉冉东西陌
+21:23:hope1: 调图论还是要用graphviz
+21:24:hope1: 可惜考场没有……
+21:24:endle joined channel
+21:25:varna: graphviz各种方便
+21:26:Li_o quit:Quit: Li_o
+21:27:cleamoon_ joined channel
+21:28:sismvg: 估计火影最后最后两话的杂志会被炒
+21:28:GODDOG: sismvg: 正解
+21:30:Petrus07 quit:Read error: Connection reset by peer
+21:30:varna: http://f.hiphotos.bdimg.com/album/s%3D1600%3Bq%3D90/sign=b4752cb30afa513d55aa68d80d5d6e8a/838ba61ea8d3fd1f64ce1b55324e251f94ca5f9d.jpg?v=tbs
+21:32:Petrus07 joined channel
+21:33:hoxily: geordi: pow(2.0, 17.0)
+21:33:geordi: error: expected constructor, destructor, or type conversion before '(' token
+21:33:hoxily: geordi: pow(2.0, 17.0);
+21:33:geordi: Same error.
+21:33:varna: geordi: << pow(2.0, 17.0)
+21:33:geordi: 131072
+21:35:sismvg: 掏出钱包怎么说？
+21:36:varna: tao chu qian bao
+21:36:sismvg:  - 
+21:36:sismvg: - - '
+21:36:condy: = =
+21:37:* condy GFW升级，我连两次元美少女的图片都看不了了.QAQ!
+21:38:varna: 嗒酱……
+21:38:varna: 一发中破
+21:40:GODDOG: condy: 是最近升级的吗 不过我这里倒是之前用不了的网址能用了
+21:40:cleamoon_ quit:Read error: Connection reset by peer
+21:40:cleamoon__ joined channel
+21:40:condy: 推的css直接挂了..
+21:40:condy: https://github.com/zxdrive/imouto.host
+21:44:cleamoon__: 各种2333
+21:46:sismvg: 233
+21:46:condy: 哪里233？
+21:47:sismvg: 233自己
+21:47:lh_cat joined channel
+21:47:sismvg: 少壮不努力，老大不知推
+21:47:sismvg: GFW强，则少年*
+21:49:sismvg: 现在唯一能访问youtube的方式就是飞到台湾去
+21:49:JQK quit:Quit: ChatZilla 0.9.91 [Firefox 27.0.1/20140212131424]
+21:49:lh_cat: 据说  apec 现场可以
+21:50:cleamoon__: apec现场应该可以
+21:50:cleamoon__: 话说，代理不行了？
+21:51:varna: 六月去国际会议中心，注册地方的工作人员跟我说会场wlan可以连上在线注册，结果最后谁都没连上……
+21:52:sismvg: 噗。。
+21:52:varna: 今天肛旗怎么不说话
+21:53:FrankHB: 不吃。
+21:53:sismvg: 坑的鸡？
+22:00:xxxxxxxx: 肛累了 说不出话
+22:00:xxxxxxxx: 话说谁进得了 c艹吧?
+22:01:varna: 我
+22:01:xxxxxxxx: 没有跳转到c吧?
+22:01:varna: 哦，c++啊……
+22:02:varna: 进不去了
+22:02:xxxxxxxx: 我有时候进得去 有时候进不去....
+22:03:cleamoon_ joined channel
+22:03:cleamoon__ quit:Read error: Connection reset by peer
+22:04:iyzsong: ...
+22:04:lh_mouse: 逗比百度
+22:04:Plough: 58要Lv70了……
+22:05:varna: Plough: 58已lv82
+22:05:Plough: varna: 要冲到第一页了
+22:05:Plough: 好不容易治疗初见成效现在又要悲剧的节奏……
+22:05:varna: 现在第一页最低lv84，第二页最高lv82...
+22:05:varna: 你得吃螺才行
+22:05:Plough: ……回去看一眼我家的情况
+22:06:lh_cat: 百度被帝球爆了
+22:08:Plough: 第一页最低、第二页最高Lv75
+22:08:xxxxxxxx: baidu员工被肉牛调戏 结果贴吧就又2B了
+22:08:Plough: 分别是大凤和隼鹰
+22:09:Plough: 第二页最低Lv61，第三页最高Lv60
+22:09:Plough: 但是跟在Lv51隈隈子后面的是Lv46的Lady……
+22:09:varna: 我清点下状况
+22:09:varna: 今晚我把响爷折腾出来……
+22:11:varna: 第一页118（电）～84（飞鹰/瑞凤），第二页82（I58）～73（山城），第三页73（I8）～62（利根），第四页61（千代田）～45（雷）
+22:12:condy: geordi: { int x = 0b10101010; cout<<bin<<x; }
+22:12:geordi: 10101010
+22:12:condy: geordi: replace bin with hex
+22:12:geordi: aa
+22:12:Plough: 第一页Lv86雾岛~Lv75大凤，第二页Lv75隼鹰-Lv61川内，第三页Lv60时雨~Lv45大屁股,第四页Lv44响爷~Lv35大小姐
+22:13:starda joined channel
+22:13:Plough: 战舰能用的是四只傻级，空母能用的是二航和大凤（以及将要能用的加贺），重巡能用的是妙高（以及将要能用的衣笠），航巡能用的是利根三隈（铃谷），轻巡川内神通（大屁股），驱逐天津风雪风时雨（POI）
+22:13:starda left channel:
+22:13:Plough: 总之还是虚
+22:13:varna: 虚+
+22:14:Plough: 我现在都开始去4-3做补给船了
+22:14:varna: ……
+22:14:varna: 谁来给北上大人一炮啊……
+22:15:varna: 算了换人
+22:15:varna: 能闪的仗打不了，要烧的桶逃不掉
+22:15:varna: 就这样了
+22:17:condy: geordi: { auto fn = [value = 1]() mutable { return ++value; }; cout << TYPE_DESC<decltype(fn)>; }
+22:17:geordi: main::{lambda()#1}
+22:17:varna: 啊，日，又卡
+22:18:condy: geordi: insert ,TYPE(fn) after >
+22:18:geordi: main::{lambda()#1}, lvalue main::{lambda()#1}
+22:18:biergaizi quit:Remote host closed the connection
+22:18:biergaizi joined channel
+22:19:condy: geordi: -w { auto fn = [](){}; void (*p)(void) = &fn; }
+22:19:geordi: error: cannot convert 'main(int, char**)::<lambda()>*' to 'void (*)()' in initialization
+22:19:condy: geordi: erase &
+22:19:geordi: <no output>
+22:19:GODDOG: 问个问题 makefile中多了一个endif 会不会有影响？ 
+22:19:varna: 怎么会多出来的
+22:20:condy: geordi: insert val=1 after [
+22:20:geordi: error: cannot convert 'main(int, char**)::<lambda()>' to 'void (*)()' in initialization
+22:20:GODDOG: varna: 不知道 看一个开源项目的源码 确实多出来了
+22:21:GODDOG: varna: 我用一个编辑器打开 未配对的ifeq和endif颜色是不一样的
+22:21:varna: 未必，编辑器的语法高亮毕竟不那么智能……
+22:21:cleamoon_: 祭音最近来过吗？
+22:22:GODDOG: varna: 确实是多了 我自己看过了 我的vim没这功能 才用Textmate打开确认一下的
+22:22:varna: ...
+22:22:varna: 那就不知道了
+22:22:Plough: 手上这只卓尔还是飞白
+22:22:varna: 噗，怎么还卡着
+22:22:Plough: 不知道是不是墨水的问题
+22:24:varna: 也不猫，就这么卡着是闹什么……
+22:24:Plough: 挑战你的极限
+22:24:Plough: 反正在我这边除非有岛风GO否则基本是没救了
+22:24:Plough: 一般就是吃饭回来一看是只猫
+22:25:varna: 还好出击结束了
+22:25:hope1 quit:Ping timeout: 245 seconds
+22:25:condy: geordi: << L_tmpnam
+22:25:geordi: 20
+22:25:varna: 今天服务器状况似乎特别糟糕
+22:25:cleamoon_: 因为apec吧
+22:26:Plough: 幌筵情况还好
+22:26:varna: 岩川和辛條湾已经不好了
+22:26:varna: 基本上干什么都巨大lag
+22:26:varna: 只好顶猫作战
+22:27:condy: geordi: << TYPE(atomic_bool)
+22:27:geordi: error: template argument 1 is invalid
+22:27:condy: geordi: << TYPE<atomic_bool>
+22:27:geordi: atomic_bool
+22:27:Plough: 另外今天演习把我吓尿了
+22:27:Plough: 我三个Lv80+的大战舰三个空母带着7个烈风5个紫电改二去和对面2DD2CV2BB对肛
+22:28:Plough: 结果制空确保的情况下我方一炮一个miss对方两只Lv70+的扶桑级一炮一个大破
+22:28:Plough: 命中最高的是带了三门主炮的小天使
+22:28:Plough: 命中惩罚？呵呵呵
+22:28:varna: 又一个F5
+22:29:Plough: 另外三主炮配置白天可以二连？
+22:29:varna: 不确认
+22:29:Plough: 今天演习就这情况
+22:29:Plough: 小天使各种二连神命中……
+22:29:varna: 现在我干脆无限小黑船……
+22:29:Plough: 能打A胜全靠小天使
+22:29:Plough: ……
+22:30:varna: 卡了一分半总算进去了
+22:30:Plough: 总之似乎三主炮配置白天也能一战
+22:30:varna: 无所谓了，反正瓜岛那会我也是这么熬过来的……
+22:30:Plough: 不过是46+41+试制356
+22:30:varna: 三主炮配置推图太差
+22:30:Plough: 演习似乎大丈夫
+22:31:Plough: 不知道练级怎么样，过段时间给长门试试
+22:31:varna: 演习只上低级战舰
+22:31:Plough: 低级战舰我就D败了
+22:31:Plough: 打不中
+22:31:varna: 不至于
+22:31:Plough: 至于
+22:31:Plough: Lv80+的傻级都给我各种miss
+22:31:Plough: 大傻还带了个22改四
+22:31:varna: 我现在演习一般都是四十到六十级的驱逐和重巡，然后一个陆奥押阵
+22:32:varna: 除了太欧的必须换阵容之外，其他的还都能打
+22:32:* condy 大家腋间愉快！
+22:32:Plough: 那大概是因为是傻级……
+22:32:condy quit:Quit: leaving
+22:32:varna: ……今天实在太卡
+22:32:Plough: 明天用长门试试
+22:33:varna: 三炮毕竟各种缺火力
+22:33:Plough: 缺火力？
+22:33:varna: CI 1.5倍，二连两发1.2倍
+22:33:varna: 出率不够大概是索敌不够
+22:33:Plough: 不CI，但是今天演习棒各带着三主炮出了两次二连
+22:33:condy joined channel
+22:34:GODDOG: varna: 是我错了
+22:34:varna: 至今为止我从没在正式场合用过三主炮
+22:34:Plough: 我在5-4周回的时候试试好了
+22:34:Plough: 毕竟三个主炮扔过去棒各火力直接冲上160……
+22:34:varna: 没用啊……双46+91应该有154吧？
+22:35:Plough: 貌似是156
+22:35:varna: 那足够了
+22:35:Plough: 不过我不知道夜战CI是啥情况
+22:36:Plough: 能打院长就好了……
+22:36:varna: 夜战只能拼触接和夜侦了
+22:37:varna: 夜侦我目前给雾岛装着，毕竟火力稍微高一点，虽然等级低
+22:37:varna: 目前应该是lv89，毕竟实战的时候不多，最近演习也轮不到第一页……
+22:38:Plough: 演习的时候扔给棒各了
+22:38:Plough: 不过毕竟中破棒各放旗舰用照明弹能搞出90%的CI率
+22:39:varna: 战舰放照明弹太亏了吧……
+22:39:Plough: 如果能打院长的话我觉得大概可以一试
+22:39:sismvg quit:Quit: file
+22:39:Plough: 照明蛋是我方全体补正还是只给放的船补正来着
+22:39:varna: 似乎是下调对面CI率的
+22:40:varna: 补正己方CI率应该靠夜间触接
+22:40:Plough: wiki上的数据是我方+5%敌方-10%
+22:40:varna: 哦
+22:40:varna: 那应该是全体
+22:40:Plough: 那就大丈夫
+22:40:Plough: 不过即使照明蛋不触发也有85%
+22:40:Plough: 小破75%无破65%
+22:40:Plough: 总之我觉得值得一试
+22:41:varna: 体感没那么高，尤其考虑到对面可能有50+运的东西
+22:41:varna: 一个简单的评价方法是看5-5夜战能不能击杀
+22:42:varna: 毕竟常规图大部分的头目战都比较弱（包括6-2）
+22:42:Plough: 等打完活动我去5-5作死试试
+22:42:varna: 总之今天还是要顶猫作战
+22:43:Plough: 3-5劝退报仇的时候给我的感觉概率不低，不过那是两主一副……
+22:44:lh_mouse: 羊羊羊
+22:44:lh_mouse: 你看看这个
+22:44:lh_mouse: https://gcc.gnu.org/onlinedocs/cpp/Self-Referential-Macros.html
+22:44:lh_mouse: 这文档是傻逼么
+22:44:varna: on it
+22:45:lh_mouse: #define foo (4 + foo)  这是合法的宏定义？
+22:45:lh_mouse: geordi, -c #define foo (4 + foo)
+22:45:geordi: Success
+22:45:lh_mouse: geordi, -c \ #define foo (4 + foo) \
+22:45:geordi: Success
+22:45:lh_mouse: 我去
+22:45:lh_mouse: gcc 报错了
+22:45:lh_mouse: test.c:1:14: error: expected identifier or '(' before numeric constant
+22:45:varna: 噗
+22:45:varna: 这什么逗乐东西
+22:45:lh_mouse: g++ 也报错了
+22:45:lh_mouse: E:\Desktop>g++ test.c
+22:45:lh_mouse: test.c:1:14: error: expected unqualified-id before numeric constant
+22:45:lh_mouse:  #define foo (4 + foo)
+22:47:varna: lh_mouse: 我的不报错
+22:47:varna: 估计是mingw的问题
+22:47:cleamoon_: 这个问题在哪...
+22:47:varna: 在于疼
+22:49:lh_mouse: varna, 
+22:49:lh_mouse: #define foo (4 + foo)
+22:49:lh_mouse: int foo;
+22:49:Plough: 确认3主炮白天可二连
+22:49:lh_mouse: geordi, -c \ #define foo (4 + foo) \ int foo;
+22:49:geordi: error: expected unqualified-id before numeric constant
+22:49:lh_mouse: 他说 foo 是一个宏同时是一个变量
+22:49:Plough: 先碎叫
+22:49:Plough quit:Quit: 碎叫
+22:49:condy: o.o
+22:50:varna: ...
+22:50:lh_mouse: condy, 爆照
+22:51:condy: 0.0
+22:54:varna: condy: 爆照
+22:58:lh_mouse: varna, 我说 gcc 是烧饼
+22:58:varna: ...
+22:58:varna: 你自己搞个int foo本来就是在闹吧……
+22:59:lh_mouse: varna, wtf
+22:59:lh_mouse: 醒醒
+22:59:lh_mouse: 喂喂 一千减七是多少
+22:59:lh_mouse: geordi, int foo;
+22:59:geordi: Success
+23:00:GODDOG: 没看懂
+23:00:varna: #define foo (4 + foo)
+23:00:varna: where foo is also a variable in your program. 
+23:01:varna: 都已经这样了还试图试验，试验跪了开始噗，这不是闹是干什么……
+23:01:whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:02:condy: ...
+23:02:varna: 自鸣得意的两种情况之一而已
+23:02:condy: geordi, { cout<< foo; } \#define foo (4+foo)
+23:02:geordi: error: 'foo' was not declared in this scope
+23:05:GODDOG quit:Ping timeout: 256 seconds
+23:06:GODDOG joined channel
+23:08:lh_mouse: varna, 我在等 ICE 呢
+23:09:lh_mouse: 那文档说会 run out of memory
+23:10:GODDOG quit:Client Quit
+23:12:varna: 我觉得只是他们文档写得太烂
+23:12:varna: 刚才我试的是
+23:13:varna: void bar(void) { int foo; LF #define foo (4 + foo) LF foo = 0; }
+23:13:varna: 这个跪
+23:13:varna: 但是跪的理由是foo = 0要一个左值操作数
+23:13:varna: 而s/foo = 0/foo/
+23:13:varna: 就没问题
+23:15:lh_mouse: varna, ISO C 明确说明宏展开遇到自己就停止展开（虽然我不确定 C89 如何   C99 至少应该如此）
+23:16:lh_mouse: 我不知道 GNU 弄这么个脱裤子放屁的文档是不是针对 C89 的
+23:16:lh_mouse: 而且还不是旧版文档
+23:16:varna: gcc的新版文档也信不过
+23:17:varna: 老实说挺差的
+23:17:Petrus07 quit:Quit: Leaving.
+23:23:iyzsong quit:Quit: bye!
+23:26:FrankHB: 你刨祖坟看看是哪个版本的手册。
+23:32:condy quit:Remote host closed the connection
+23:33:cleamoon__ joined channel
+23:33:cleamoon_ quit:Read error: Connection reset by peer
+23:38:lhjkk joined channel
+23:45:hysw joined channel
+23:56:lhjkkk joined channel
+23:56:lhjkk quit:Read error: Connection reset by peer

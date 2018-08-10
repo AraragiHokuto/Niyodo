@@ -1,0 +1,226 @@
+00:00 iyzsong quit:Ping timeout: 240 seconds
+00:15 lh_mouse: https://github.com/lhmouse/git-workflow-zh/blob/master/basic-command-reference.md
+00:26 varna: 出去扔点垃圾醒醒脑
+00:42 matchray: mthread??
+00:45 lh_mouse quit:Ping timeout: 265 seconds
+00:50 varna: machine thread, 其实就是go里的M
+00:52 varna: 呀，四小姐的系统又要更新了
+01:07 Aldrich: varna: 对了，我入了一套桌游用骰子
+01:07 Aldrich: 以后SK4也可以骰实体骰子了
+01:10 varna: 呀，还是被砍死了
+01:11 Aldrich: 卧槽，氟硝西泮效果好强
+01:11 Aldrich: 现在我整个人都是晕的
+01:12 varna: 精神不太能集中了，最后试一次
+01:12 yonka quit:Remote host closed the connection
+01:16 varna: 不行，彻底集中不了了
+01:16 varna: P2连续两个先读都是错的
+01:24 cleamoon_: Aldrich: 旗酱怎么吃这个
+01:26 matchray: 我需要花一些把 cquery 設計描述下，問問怎麼設計 on-disk storage 好
+01:34 varna quit:Ping timeout: 240 seconds
+12:35 Oyodo joined channel
+14:03 Aldrich: cleamoon_: 因为之前失眠一直压不住
+14:08 testuser joined channel
+14:09 testuser: 我想到一种galgame
+14:09 hanjian_l: Aldrich: 现在安定了没
+14:09 Aldrich: hanjian_l: 还好，氟硝西泮效果超强
+14:09 testuser: 可以让玩家触摸屏幕然后现办法反馈给玩家妹子的手感
+14:09 testuser: 绝对大卖
+14:09 Aldrich: hanjian_l: https://zh.wikipedia.org/wiki/%E6%B0%9F%E7%A1%9D%E8%A5%BF%E6%B3%AE
+14:10 testuser: 但是,我从来没有摸过妹子，谁知道妹子的手感是什么样的
+14:14 lh_not_bot: testuser: 怂。
+14:20 lh_mouse: https://gcc-mcf.lhmouse.com/   GCC 7.3 RC1 added.
+14:30 testuser quit:Quit: Page closed
+15:03 matchray: std::function<double(double &)> add(double& a) {
+15:03 matchray:     std::function<double (double &)> func =[&](double &x) {
+15:03 matchray:         return x*a;
+15:03 matchray:     };
+15:03 matchray:     return func;
+15:03 matchray: }
+15:03 matchray: add(x) 返回值還能調用吧
+15:03 matchray: std::function<double(double &)> add2(double a) {
+15:03 matchray:     std::function<double (double &)> func =[&](double &x) {
+15:03 matchray:         return x*a; };
+15:03 matchray:     return func;
+15:03 matchray: }
+15:03 matchray: add2(x) 返回值調用是UB?
+15:03 matchray: 但是 -fsanitize=undefined 不報錯的
+15:05 lh_mouse: UB 是一切行为的 superset 。
+15:12 lh_mouse: matchray, 贴代码的话，尝试合并到一行；或者找个 paste 网站。  
+15:12 lh_mouse: 当然 /cs TAXONOMY #c_lang_cn 有很多。
+15:12 matchray: function<int(int &)> mul(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } // 使用 mul(3) 返回值是uB?
+15:12 matchray: /cs 是啥？
+15:13 lh_mouse: /cs == /chanserv 
+15:13 lh_mouse: 如果你的客户端不支持，尝试  /alias cs quote chanserv
+15:13 matchray: 還有這種命令
+15:13 lh_mouse: matchray, mul3 在哪。
+15:14 lh_mouse: geordi, << mul(123); function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; }
+15:14 geordi: error: 'mul' was not declared in this scope
+15:14 lh_mouse: geordi, << mul3(123); function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; }
+15:14 geordi: error: no match for 'operator<<' in 'cout << mul3(int)()' (operand types are 'ostream' {aka 'ostream'} and 'function<int(int&)>')
+15:14 matchray: mul(int a) {.....} 我理解爲參數在函數返回後就被銷毀了；因此 auto g = mul(3); g(x) 應該是 ub
+15:15 lh_mouse: geordi, << mul3(123)(4); function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; }
+15:15 geordi: error: no match for call to '(function<int(int&)>) (int)'
+15:15 lh_mouse: geordi, << mul3(123)(bb); function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } int bb = 4;
+15:15 geordi: 492
+15:15 lh_mouse: geordi, { auto fn = mul3(123); cerr <<fn(bb); }   function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } int bb = 4;
+15:15 geordi: 492
+15:15 lh_mouse: geordi, { auto fn = mul3(123); cerr <<fn(bb) <<"fancy "; }   function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } int bb = 4;
+15:16 geordi: 492fancy 
+15:16 lh_mouse: matchray, 是的。
+15:16 matchray: 現在 godbolt.org 很流行啊，還能 MSVC
+15:16 matchray: 印象中還可以 #include <http://xxxxxxx/xx> 
+15:17 lh_mouse: geordi, { auto fn = mul3(123); poison_the_stack(); cerr <<fn(bb); }   function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } int bb = 4;  void poison_the_stack(){ array<volatile char, 1000> a; a.fill(42); }
+15:17 geordi: error: cannot bind non-const lvalue reference of type 'const volatile value_type&' {aka 'const volatile char&'} to an rvalue of type 'value_type' {aka 'char'}
+15:17 lh_mouse: geordi, { auto fn = mul3(123); poison_the_stack(); cerr <<fn(bb); }   function<int(int &)> mul3(int a) { function<int (int &)> func=[&](int &x) {return x*a;}; return func; } int bb = 4;  void poison_the_stack(){ auto ptr = (volatile char *)__builtin_alloca(1000); std::fill_n(ptr, 1000, 42); }
+15:17 geordi: 492
+15:18 * lh_mouse gives up.
+15:18 matchray: https://godbolt.org/g/8E1KKf
+15:24 lh_mouse: 0.0
+16:14 hitman-usa joined channel
+16:16 hitman-usa quit:Client Quit
+16:19 matchray: 垃圾 LanguageClient-neovim
+16:19 matchray: 不遵守協議的
+16:37 lh_mouse: 0.0
+16:37 * lh_mouse slaps matchray around a bit with a large trout
+16:37 lh_mouse: 喵。
+16:38 lh_mouse: 诶，比不起 mr 大犇。窝什么都不会。
+16:42 matchray: ........
+16:42 matchray: 比起大老鼠，我C++什麼都不懂
+16:51 StardustX: 大佬们又开始了商业互吹
+16:52 lh_mouse: 不不不，哪有 StardustX 见多识广。
+16:53 StardustX: 我连西方国家都没有去过
+16:54 lh_mouse: 不，我想你只需要一个 apply for professor 。
+16:55 hanjian_l: matchray: 怎么回事？
+16:55 matchray: 還行。我搞錯了
+16:55 hanjian_l: matchray: 作者要反革命，要弃坑？
+16:55 matchray: languageclient-neovim 沒錯
+16:55 hanjian_l: matchray: 哦
+16:55 hanjian_l: 拨乱反正了
+16:55 matchray: cquery 沒區分 RequestMessage NotificationMessage
+16:55 matchray: 顯示友好錯誤比較困難
+16:58 lh_mouse: 窝也是不区分的。
+16:58 lh_mouse: 这个区分由发送者决定。
+16:59 lh_mouse: 发送者决定是否要求回执，接收者根据需要发送回执。
+16:59 lh_mouse: 这样的可扩展性比写死在 message 里好很多。
+16:59 matchray: 客戶端都把 TypeScript   id: number 作爲hash table的key
+17:59 hanjian_l: matchray: rr-project实际用起来怎么样
+18:00 cleamoon_: Aldrich: 用退黑素就好了... 别用这么nb的东西呀...
+18:00 hanjian_l: cleamoon_: 医生的专业建议，我们就不用多想了
+18:00 Aldrich: 直接给我上了每天4mg
+18:01 Aldrich: 效果拔群，自从上了高中以后我就没睡过这么好过
+18:01 cleamoon_: 哦，医生说的呀.....
+18:01 Aldrich: 那当然，毕竟处方药
+18:01 yonka quit:Remote host closed the connection
+18:01 Aldrich: 能随便买的话我校学生估计能屯一堆
+18:01 cleamoon_: 我以为旗酱媛交时在黑市买的呢
+18:02 yonka joined channel
+18:02 hanjian_l: cleamoon_: 绅士是不是动心了
+18:02 cleamoon_: 顺便前几天老仙奶了一口遭到天“日本有什么好大学呀，我记得遭到天不错”
+18:03 Aldrich: 我校是不错啊
+18:03 cleamoon_: 然而我睡眠没啥问题.... 如果不犯病不会睡不着
+18:03 Aldrich: 政经和文学部都有下药传统
+18:03 cleamoon_: 是不错呀，但那是老仙呀
+18:03 Aldrich: 还推动了日本集体强奸罪的立法
+18:04 Aldrich: (｡･ω･)你看多厉害
+18:04 hanjian_l: Aldrich: 出共党分子吗？
+18:04 cleamoon_: 噗，什么鬼
+18:04 Aldrich: hanjian_l: 估计不少
+18:05 Aldrich: 当年全共斗的时候我校也是主要参与者之一
+18:05 hanjian_l: 我记得音酱说他们学校是最左的大学之一
+18:05 Aldrich: cleamoon_: https://en.wikipedia.org/wiki/Super_Free
+18:06 yonka quit:Ping timeout: 248 seconds
+18:07 yonka joined channel
+18:09 cleamoon_: 嗯，这很av
+18:09 hanjian_l: Aldrich: 继承革命先烈们的优良传统
+18:09 Aldrich: 据说受害人其实达数百人之众
+18:10 hanjian_l: 原来贵校就是当年长者自己给自己鼓掌的地方
+18:10 cleamoon_: 数百人才合逻辑，那么大俱乐部那么长时间就15人，他们怎么吸引的新人
+18:11 Aldrich: 但最后被定罪的只有那么几个
+18:11 Aldrich: 导致舆论炎上，所以日本才多了集体强奸罪……
+18:12 cleamoon_: ......
+18:12 yonka quit:Ping timeout: 240 seconds
+18:14 yonka joined channel
+18:19 yonka quit:Ping timeout: 240 seconds
+18:22 yonka joined channel
+18:27 yonka quit:Ping timeout: 260 seconds
+18:29 hanjian_l: 啊，又过去了一周
+18:48 Aldrich: hanjian_l: 音酱我记得是京大来着？
+18:48 hanjian_l: Aldrich: 嗯
+18:49 Aldrich: 那基本上和我校一个级别的
+18:49 Aldrich: 极左
+18:51 cleamoon_: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/5x/v9_30385.jpg@596w_1l.jpg
+18:52 hanjian_l: cleamoon_: 腾讯也比威望迪长啊
+18:52 hanjian_l: 好
+18:53 Aldrich: GTMD维旺迪
+18:55 hanjian_l: 腾讯是榨油，维望迪是炸肉啊
+18:55 Aldrich: cleamoon_: 另外褪黑素八成对我是没用的
+18:56 Aldrich: 氯硝西泮都救不了我，嗑下去只能睡六小时
+18:56 Aldrich: 这六小时之前还有在床上辗转反侧五小时……
+18:58 cleamoon_: 噗
+18:58 cleamoon_: 这旗可以去调查俱乐部了，都药不倒的
+18:59 Aldrich: 昨天那4mg氟硝西泮倒是让我睡了半天
+19:01 cleamoon_: 你可以让大夫给你多开些然后在学校贩卖
+19:03 Aldrich:  我校现在用更高级手法了，不需要下药
+19:03 Aldrich: 现在是直接借学校名义泡外校妹子，然后打一炮就甩
+19:03 Aldrich: 甚至都不违法
+19:04 Aldrich: 明大的那帮人才下药，而且还没下对剂量……
+19:04 cleamoon_: 这学校名义太好用了，不行，我要留学
+19:06 hanjian_l: cleamoon_: 你海盗不流行约炮吗
+19:07 cleamoon_: 海盗流行，然而我校都是死宅
+19:08 cleamoon_: 而且大多是喝高了直接干，然而我不喝酒
+19:08 Aldrich: 注意找文科
+19:08 Aldrich: 据说我校理工科童真率高达97%
+19:08 Aldrich: 童贞*
+19:10 cleamoon_: 你去收了他们的童贞
+19:11 Aldrich: 你这五岁幼女过来说不定就会被我校学生送童贞……
+19:12 cleamoon_: 允许嫖宿幼女？
+19:12 Aldrich: 未成年就可以
+19:12 Aldrich: 日本成年20岁
+19:12 cleamoon_: orz
+19:13 cleamoon_: 生不逢时，不该离开日本呀
+19:13 cleamoon_: 上穴
+19:14 Aldrich: 今晚几点开始跑团？
+19:14 Aldrich: hanjian_l: 
+19:14 Aldrich: cleamoon_: 
+19:14 Aldrich: StardustX: 
+19:14 cleamoon_: 一小时后？
+19:14 Aldrich: 这剧本很短，两到三小时应该就能搞定
+19:14 Aldrich: OK
+19:14 Aldrich: 其他人也没问题么
+19:32 hitman-usa joined channel
+19:32 varna joined channel
+19:33 varna: Aldrich, 几点开团？
+19:33 Aldrich: varna: 岚月酱建议1h之后，我在等其他人反馈
+19:33 Aldrich: 另，#clcn_coc
+19:33 varna: ok
+19:45 hitman-usa quit:Ping timeout: 255 seconds
+19:45 hitman-hk joined channel
+19:46 hitman-hk quit:Client Quit
+19:47 hitman-usa joined channel
+19:51 hitman-usa quit:Client Quit
+19:52 hitman-usa joined channel
+19:55 yonka joined channel
+19:56 Youmu: 在玩部落冲突？
+19:57 Aldrich: Youmu: 克苏鲁的呼唤
+20:02 varna: yonka, YO
+20:11 Youmu: 0.0 原来是TRPG 游戏，我了解一下
+20:23 hanjian_l: 随意
+20:26 bzzzt quit:Ping timeout: 248 seconds
+20:27 erhandsome quit:Ping timeout: 248 seconds
+20:28 erhandsome joined channel
+20:38 bzzzt joined channel
+20:42 iyzsong joined channel
+21:04 iyzsong: hello :-
+21:09 hitman-usa quit:Quit: hitman-usa
+21:22 varna: 呜呼呼
+21:24 condy: iyzsong: 0.0
+21:25 hanjian_l: varna: 羊驼子试试cquery
+21:27 varna: 我在厂里开发……
+21:27 hanjian_l: 砖
+21:28 varna: 周末又是值班+加班
+21:38 iyzsong: orz
+21:39 iyzsong: condy: hug a hug
+22:05 varna quit:Ping timeout: 268 seconds
+22:19 varna joined channel
+23:17 varna: MD 现在老恶魔王都能把我连死……两招即可
+23:46 lh_mouse quit:Ping timeout: 260 seconds

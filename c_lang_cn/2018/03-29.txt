@@ -1,0 +1,320 @@
+00:00 varna: 看看怎么顶着开镜之后超过五秒钟不到十帧的bug灭了他们
+00:04 xieyuheng joined channel
+00:04 varna: (｡･ω･)ﾉ
+00:04 xieyuheng: hi
+00:04 varna: 欢迎欢迎
+00:04 hanjian_l: 顺手蹭了你胜利的奖励
+00:07 xieyuheng: 这频道主题是 c 语言 ?
+00:08 hanjian_l: 随意的不全是
+00:08 varna: 随意
+00:08 varna: 基本上取决于你有多少主题了
+00:09 xieyuheng: varna: 你不是 bot ?
+00:09 varna: 我是xym大神制造的bot
+00:09 xieyuheng: 'ip 125.120.60.67
+00:09 xieyuheng: xym 是谁
+00:09 varna: 是神
+00:09 xieyuheng: 小姨妈?
+00:11 xieyuheng is now known as XYH
+00:14 XYH left channel:"ERC (IRC client for Emacs 25.3.1)"
+00:18 hanjian_l: 不刷了
+00:18 hanjian_l: 刷不出孤星啊
+00:25 hanjian_l: 机密真难刷
+00:33 hanjian_l: varna: 这机密真不好刷
+00:34 matchray: 爲什麼出來一個小藥壺
+00:34 varna: emmmmm 处理个线上问题
+00:34 hanjian_l: 最快的半自动狙是哪把？
+00:34 lh_mouse: the array is too large and cannot be allocated.
+00:35 lh_mouse: 读起来好奇怪。
+00:35 NebulaMoe quit:Quit: 睡觉
+00:39 varna: hanjian_l: 不知道，不过不用考虑太多，dmr基本在275-300 rpm
+00:47 hanjian_l: 哪把后坐力小？
+00:50 varna: heel/devil/svd > scarh > m1a
+00:50 varna: 狙击枪缩圈我印象是靠准确的
+00:50 varna: 不要加稳定
+00:50 varna: 首弹稳定度靠死眼就够了
+01:30 lh_ideapad joined channel
+01:30 varna quit:Ping timeout: 264 seconds
+01:36 lh_ideapad quit:Remote host closed the connection
+01:41 lh_mouse quit:Ping timeout: 252 seconds
+02:49 cleamoon_ quit:Quit: Connection closed for inactivity
+03:45 Youmu quit:Ping timeout: 276 seconds
+03:45 Youmu joined channel
+05:05 cleamoon_ joined channel
+05:40 whocares_2_ joined channel
+05:41 whocares_2 quit:Ping timeout: 264 seconds
+06:21 xuri joined channel
+06:26 xuri quit:Remote host closed the connection
+07:13 runwei quit:Remote host closed the connection
+07:13 runwei joined channel
+07:39 jingjinghack quit:Remote host closed the connection
+07:40 jingjinghack joined channel
+07:54 runwei quit:Remote host closed the connection
+07:55 runwei joined channel
+07:55 runwei quit:Remote host closed the connection
+07:57 runwei joined channel
+08:23 yonka joined channel
+08:28 yonka quit:Ping timeout: 264 seconds
+08:41 lh_mouse joined channel
+08:41 iyzsong-m joined channel
+08:45 iyzsong-m quit:Client Quit
+09:00 runwei quit:Remote host closed the connection
+09:00 runwei joined channel
+09:02 runwei quit:Remote host closed the connection
+09:39 yonka joined channel
+09:41 lh_ideapad joined channel
+09:43 yonka quit:Ping timeout: 240 seconds
+09:48 yonka joined channel
+09:48 yonka quit:Remote host closed the connection
+09:48 yonka joined channel
+10:20 NebulaMoe joined channel
+11:22 runwei joined channel
+11:23 * hanjian_l matchray: 现在mr酱不用cquery那用什么呢?
+11:24 lh_ideapad: geordi, -c struct foo { foo(const foo &); } foo::foo(const foo &) = delete;
+11:24 geordi: error: new types may not be defined in a return type
+11:24 lh_ideapad: geordi, -c struct foo { foo(const foo &); }; foo::foo(const foo &) = delete;
+11:24 geordi: error: deleted definition of 'foo::foo(const foo&)'
+11:32 matchray: hanjian_l: 在用
+11:33 matchray: 闹翻和不用不一样的
+11:34 lh_ideapad: geordi, -c template<typename T> struct matchray { };  template<typename T> using baka = matchray<T>;  extern template class baka<int>;
+11:34 geordi: error: using alias template specialization 'baka<int>' {aka 'matchray<int>'} after 'class'
+11:48 lh_ideapad: geordi, <<operator->(foo()); struct foo { const char * operator->(){ return "meow"; } };
+11:48 geordi: error: 'operator->' not defined
+11:48 lh_ideapad: geordi, <<foo().operator->(); struct foo { const char * operator->(){ return "meow"; } };
+11:48 geordi: meow
+11:48 lh_ideapad: geordi, <<operator->(foo()); struct foo { }; const char * operator->(foo){ return "meow"; }
+11:48 geordi: error: 'const char* operator->(foo)' must be a nonstatic member function
+11:48 lh_ideapad: geordi, <<operator++(foo()); struct foo { }; const char * operator++(foo, int){ return "meow"; }
+11:48 geordi: error: too few arguments to function 'const char* operator++(foo, int)'
+11:49 lh_ideapad: geordi, <<foo().operator++(0); struct foo { }; const char * operator++(foo, int){ return "meow"; }
+11:49 geordi: error: 'struct foo' has no member named 'operator++'
+11:49 lh_ideapad: geordi, <<foo()++; struct foo { }; const char * operator++(foo, int){ return "meow"; }
+11:49 geordi: meow
+11:49 Stevearzh quit:Read error: Connection reset by peer
+11:49 Stevearzh joined channel
+12:07 Linyu joined channel
+12:09 Linyu quit:Quit: Ex-Chat
+12:10 matchray: hanjian_l: 用emacs吧。我已经说服一个用vim的歪果仁了
+12:11 matchray: https://ptpb.pw/UF8d.jpg
+12:11 matchray: LanguageClient-neovim今天终于实现preview window textDocument/hover了
+12:11 matchray: 没有精力看，毕竟UI差距和emacs不是半点
+12:11 matchray: hanjian_l: oni 还有点希望
+12:11 matchray: terminal neovim无救
+12:12 hanjian_l: matchray: 我不用emacs，ssh的时候，emacs默认都没有的
+12:12 hanjian_l: matchray: oni？
+12:13 matchray: onivim/oni
+12:13 matchray: emacs -nw 啊
+12:14 matchray: https://emacs-china.org/t/topic/5365/9 amosbird
+12:14 matchray: 他是结合tmux用的
+12:24 cleamoon_ quit:Quit: Connection closed for inactivity
+12:26 iyzsong-m joined channel
+12:27 iyzsong-m: (#･∀･)
+12:43 iyzsong-m quit:Ping timeout: 240 seconds
+13:00 jingjinghack quit:Read error: Connection reset by peer
+13:01 jingjinghack joined channel
+13:05 lh_mouse: sudo ln -sf /usr/bin/nano /usr/bin/vim
+13:05 lh_mouse: sudo ln -sf /usr/bin/nano /usr/bin/emacs
+13:08 matchray: sudo ln -sf nano /usr/local/bin/vim
+13:08 matchray: vim一般不能亂symlink
+13:09 matchray: 因爲它會找VIMRUNTIME ..大約是這個名字
+13:10 lh_ideapad: sudo apt-get purge vim
+13:11 matchray: sudo apt purge xemacs
+13:11 Dove joined channel
+13:13 matchray: https://github.com/hlissner/doom-emacs 強烈推薦，代碼寫得很好
+13:13 matchray: 要用 https://github.com/hlissner/doom-emacs/tree/develop
+13:28 runwei quit:Remote host closed the connection
+13:28 runwei joined channel
+13:49 lh_ideapad: 招人写表达式计算。
+13:54 matchray: 報名
+13:54 matchray: top-down operator precedence
+13:58 matchray: apt -vvv moo
+13:58 matchray: This APT has Super Mouse Powers.
+14:02 lh_mouse: matchray, https://github.com/lhmouse/asteria/blob/master/doc/syntax.txt#L108  蛋疼呢。
+14:04 matchray: expression-opt = expression ?
+14:06 lh_ideapad: expression-opt ::=  expression  |  ""
+14:06 lh_ideapad: 这 opt 的意思很明白了。
+14:06 lh_ideapad: 我打个比方。
+14:06 lh_ideapad: aa ::=  "b" | "c" | ""     则 aa ;
+14:07 lh_ideapad: aa ::= PCRE("[bc]?")
+14:07 Dove: 我家电脑开个浏览器都卡
+14:07 matchray: 我的意思不應該用 ""
+14:07 matchray: 應該用 ?
+14:08 lh_ideapad: 故意的。
+14:08 lh_ideapad: 实际上 expression-list ::= expression *  就行。
+14:08 lh_ideapad: 但是 * ?  这种用 DFA 不可解。
+14:10 lh_ideapad: 上面的文法用 DFA 是可解的。
+14:11 lh_ideapad: 也就是 3 型文法。
+16:03 \s quit:Ping timeout: 256 seconds
+16:06 cleamoon_ joined channel
+16:10 FrankHB joined channel
+16:23 \s joined channel
+16:27 cleamoon_: 哈勃天文望远镜发现了一个没有暗物质的星系
+16:29 FrankHB: dark♂物质
+16:33 lh_ideapad: geordi, -c struct foo { struct bar meow(); };  struct bar { };  bar foo::meow();
+16:33 geordi: error: declaration of 'bar foo::meow()' outside of class is not definition
+16:33 cleamoon_: 耻 球
+16:34 lh_ideapad: geordi, -c struct foo { struct bar meow(); };  struct foo::bar { };  foo::bar foo::meow();
+16:34 geordi: error: qualified name does not name a class before '{' token
+16:34 lh_ideapad: geordi, -c struct foo { struct bar meow(); };  struct bar { };  bar foo::meow(){ }
+16:34 geordi: warning: no return statement in function returning non-void
+16:34 lh_ideapad: geordi, -c struct foo { struct bar meow(); };  struct bar { };  bar foo::meow(){ return { }; }
+16:34 geordi: Success
+17:13 iyzsong-m joined channel
+17:24 iyzsong-m quit:Ping timeout: 264 seconds
+17:25 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+17:41 xuri joined channel
+17:42 xuri quit:Client Quit
+17:55 iyzsong-m joined channel
+17:57 iyzsong-m: ←_←
+17:58 FrankHB quit:Quit: Konversation terminated!
+18:07 liulanghaitun joined channel
+18:09 iyzsong-m: →_→
+18:14 iyzsong-m quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+18:28 varna joined channel
+18:35 iyzsong-m joined channel
+18:36 cleamoon_: varna: 爆
+18:37 iyzsong-m quit:Client Quit
+18:41 varna: cleamoon_: 爆
+18:44 varna: 下个月末就有高清葛温德林了
+18:44 cleamoon_: 重制？
+18:44 varna: +
+18:45 varna: 不过也只是高清化
+18:45 cleamoon_: ....
+18:45 varna: 并不是三代引擎
+18:45 cleamoon_: 玩法完全不变？
+18:46 varna: 改善联机玩法（大概和魂三/血源一样）和操作体验（比如移除坑爹的锁定四向翻滚）
+18:47 cleamoon_: 哦，那估计还是有人会买的
+18:47 varna: 我应该会买
+18:47 varna: 高清葛温德林
+18:47 varna: 舔爆
+18:49 varna: (｡･ω･)ﾉ想积极一点，我买了这个重制版，老贼圈到钱了，就可以专心做新游戏
+18:49 cleamoon_: 前方 有 巨大 宝箱，舌，很有用
+18:50 cleamoon_: 然后老贼去新宿各种大保健
+18:54 varna: https://www.bilibili.com/video/av21273132 高兴帝
+18:55 varna: 便 乘 龙
+18:58 cleamoon_: 希望神主不会哪天突然便 乘 homo 
+18:59 varna: 他已经是木毛了
+19:03 cleamoon_: 啊啊啊，没有91的战役视频看我要死了
+19:03 cleamoon_: 最近他被当成抹布各种摩擦，估计战役得等等
+19:03 varna: 复习太太血源
+19:03 lichun joined channel
+19:04 lichun: 程序员的发展之路 大家有和见解
+19:05 cleamoon_: 21天精通C++，从入门到自杀
+19:05 iyzsong-m joined channel
+19:05 varna: emmmmm 问得有点突然，而且多数人说出来也没什么适性吧
+19:05 varna: you-are-what-you-speak爱好者和向往现充的两派之间也一定会打
+19:07 cleamoon_: 比起那种哲 学 性的讨论，还是讨论一下你四十岁还干不干得动码农吧
+19:08 varna: 在垂直业务团队未必，毕竟事情费事、业务也容易失控，乌七八糟的心思费太多了
+19:10 lichun: 个人想法，技术是相当重要的，但是没把技术结合实际 完全体现不出其中的价值所在
+19:11 iyzsong-m: (#･∀･)
+19:12 varna: 价值是做给别人的
+19:12 cleamoon_: 展开的业务也麻烦呀...
+19:12 varna: 当然自己如果觉得价值很重要，那没问题
+19:12 varna: 但没必要用别人的价值强加在技术上
+19:12 cleamoon_: 技术是工具，价值是用工具解决问题
+19:12 varna: 怎么说咧
+19:13 varna: 不少时候一旦谈到价值，就容易有销售风格的鸡血冲过来
+19:13 cleamoon_: http://netgeek.biz/archives/115434  真的有靠光合作用生活的非植物
+19:13 varna: 加上不少开发者——老实说，在哲学性或者历史性的事情上考虑得也很少，或者压根就反智
+19:14 varna: 然后考虑这种形而上的事情还一根筋，非得认到一个truth
+19:14 cleamoon_: “软件就该开源，知识产权吔屎拉”
+19:15 varna: 瞬间一个电话炸过来，我还以为是线上问题……
+19:17 iyzsong-m: (´・ω・｀)
+19:19 * varna 把黑魂打成了魂斗罗
+19:22 CyrusYzGTt quit:Ping timeout: 276 seconds
+19:24 lichun: @+varna， 是做技术后转去做销售吗
+19:24 varna: nay
+19:25 iyzsong-m: 如何获得可爱的小姐姐？
+19:26 varna: lichun: 我这种人当然转不了销售
+19:27 varna: 当然反过来我还是要黑一句的
+19:28 varna: 总有些的地得分不清的人鼓吹业务导向技术
+19:28 varna: 搞得不是东风压倒西风，就是西风压倒东风一样
+19:28 varna: (｡･ω･)人以群分
+19:29 cleamoon_: 感觉业务导向技术是一句废话呀，科技书加点当然要以需求为标准
+19:31 lichun: 业务导向技术从一定层面来说也是对的
+19:31 varna: 话其实怎么说都能说通
+19:32 varna: 但如果看到这句话本身只看了它本身，我也不想多解释了
+19:34 iyzsong-m quit:Ping timeout: 260 seconds
+19:36 iyzsong-m joined channel
+19:38 CyrusYzGTt joined channel
+19:42 cleamoon_: 这句话难道除了字面意义还有什么禅机
+19:43 varna: 这个嘛
+19:43 hanjian_l: varna: 竟然在黑魂
+19:43 varna: 直白地说，看你信不信别人说这个话的时候是否这个意思
+19:44 varna: s/否//
+19:48 cleamoon_: 这句话我觉得就不该有需要说出来的时候....
+19:52 iyzsong-m: 技术不是架构说了算么，关市场和产品什么事。。。
+19:53 varna: iyzsong-m: 那是挺幸福的……快速迭代的时候就看技术方强势与否了
+19:55 iyzsong-m: 2333
+20:02 hanjian_l: uccu
+20:04 cleamoon_: 我日，又要下雪了.....
+20:05 varna: 雪
+20:07 cleamoon_: 雪
+20:10 iyzsong-m quit:Ping timeout: 248 seconds
+20:11 hanjian_l: varna: Mokou 怎么突然魂起来了
+20:13 cleamoon_: hanjian_l: 梨花酱来玩D2吧
+20:14 cleamoon_: 气氛，游戏性什么的不比现代RPG低
+20:14 varna: +
+20:14 cleamoon_: 杂事自由度略低一点，不能种田钓鱼养猫
+20:16 hanjian_l: varna: 来打发电厂吧，每日挑战
+20:16 varna: 摸了
+20:17 hanjian_l: 出了肥罗的氧气面罩
+20:30 runwei quit:Remote host closed the connection
+20:35 lh_cat joined channel
+20:39 iyzsong-m joined channel
+20:39 lh_mouse quit:Ping timeout: 276 seconds
+20:40 lichun quit:Read error: Connection reset by peer
+20:40 lichun joined channel
+20:42 whocares_2_ quit:Read error: Connection reset by peer
+20:43 whocares_2 joined channel
+20:46 lichun: 因为里有什么准确的形容 零散的 碎片的这种意思
+20:46 lichun: 因为
+20:47 lichun: 英文，不好意思
+20:49 cleamoon_: scattered?
+20:49 varna: scattered
+20:50 lh_ideapad: cleamoon_, 爆。
+20:50 cleamoon_: 这耗子怎么也开始爆了
+20:51 lh_ideapad: varna, 窝有个新厅的想法。
+20:51 varna: (｡･ω･)ﾉ
+20:52 lh_ideapad: 窝现在在 asteria 里，如果指针形参是可空的，它的名字就一定以 _opt 结尾。
+20:52 lh_ideapad: 如果一个函数返回指针或 optional ，它的名字也以 _opt 结尾。
+20:52 varna: 我X
+20:53 lh_ideapad: Value_ptr<Variable> create_variable_opt(Stored_value &&value_opt);
+20:53 lh_ideapad: void set_variable(Value_ptr<Variable> &variable, Stored_value &&value_opt);
+20:53 lh_ideapad: 好像很装逼。
+20:53 cleamoon_: 我选择咖喱
+20:54 liulanghaitun quit:Remote host closed the connection
+20:55 lh_ideapad: lh_mouse@lhmouse-ideapad ~/Desktop/asteria $ time make -j8 > /dev/null
+20:55 lh_ideapad: ar: `u' modifier ignored since `D' is the default (see `U')
+20:55 lh_ideapad: real	0m7.550s
+20:57 condy quit:Ping timeout: 240 seconds
+20:57 lichun: scattered?
+20:58 liulanghaitun joined channel
+20:59 lichun: 比如我想把IT技术瓦解掉，每天只写100个汉字 加两三张图片，这个标题怎么起
+20:59 condy joined channel
+20:59 lichun: Xxxx Technology
+20:59 cleamoon_: 这句话中文我都看不懂....
+21:00 lichun: @+varna
+21:00 lichun: 意思是说 现在市场上讲内核的书太多了，不好下手
+21:02 varna: 同不懂这句中文什么意思
+21:02 varna: 这里说的应该是分解吧
+21:02 varna: divide
+21:06 iyzsong-m quit:Ping timeout: 256 seconds
+21:06 cleamoon_: 不好下手怎么讲？是不知道该读哪个还是作者太多杀不过来
+21:12 iyzsong-m joined channel
+21:14 lh_ideapad: 您查询的IP:218.106.154.158
+21:14 lh_ideapad: 本站数据：福建省福州市 联通
+21:25 lh_cat is now known as lh_mouse
+21:29 lh_ideapad quit:Remote host closed the connection
+21:32 iyzsong-m quit:Ping timeout: 268 seconds
+21:35 whocares_2 quit:Ping timeout: 263 seconds
+21:36 whocares_2 joined channel
+22:21 jingjinghack quit:Remote host closed the connection
+22:21 lh_ideapad joined channel
+22:21 jingjinghack joined channel
+22:31 varna quit:Read error: Connection reset by peer
+22:32 varna joined channel
+23:15 NebulaMoe quit:Remote host closed the connection
+23:22 yonka quit:Remote host closed the connection
+23:32 lh_ideapad quit:Remote host closed the connection
+23:51 Mokou: https://wx3.sinaimg.cn/mw690/006anXukgy1fpu0ck48sdj30ku0gwwgu.jpg 大东亚共荣了
+23:51 cleamoon_: 什么鬼

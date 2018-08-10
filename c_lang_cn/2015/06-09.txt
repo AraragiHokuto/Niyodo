@@ -1,0 +1,244 @@
+00:06 xxxxxxxx: 苹果的又在吹13了
+00:06 hope1_ quit:Ping timeout: 256 seconds
+00:08 cleamoon__: 什么
+00:08 xxxxxxxx: 发布会
+00:08 xxxxxxxx: B站直播里
+00:09 xxxxxxxx: 标题是2015苹果全球开发者大会 然后开始讲他们和U2乐队合作
+00:09 cleamoon__: .....
+00:12 hysw: cleamoon__: 烧
+00:12 cleamoon__: 现充烧FFF团员啦
+00:13 cleamoon__: 水果发什么新鲜东西了吗
+00:13 hysw: cleamoon__: 明显不是线虫...
+00:13 cleamoon__: 明显是现充
+00:14 hysw: /me 每天只能喝茶解闷的明显就不可能是线虫
+00:15 cleamoon__: 连茶都喝不起的看着你
+00:16 * lolisa 认为说自己不是线虫的海洋生物只是在掩盖事实
+00:16 hysw: cleamoon__: 茶叶啥的明显不贵...
+00:16 xxxxxxxx: 他只是因为我们漏掉了学霸的属性感到生气
+00:16 cleamoon__: 现充学霸云
+00:16 hysw: xxxxxxxx: 我是学渣...
+00:17 cleamoon__: 欧皇肝帝基
+00:17 hysw: 现充学霸是不可能没妹纸的 -_-
+00:17 hysw: 木有妹纸...
+00:18 cleamoon__: 你是基佬，有很多汉子
+00:18 lolisa: 海洋生物没有妹子
+00:18 lolisa: 海洋生物只有妹子s
+00:18 hysw: lolisa: 爆智商
+00:19 xxxxxxxx: 五发出了个22电碳....
+00:19 xxxxxxxx: 感觉有点亏....
+00:20 * hysw 继续刷课去... https://www.coursera.org/course/socialpsychology
+00:21 cleamoon__: 你为什么不直接在学校爆课
+00:21 hysw: cleamoon__: 懒得去...
+00:23 lh_mouse: geordi, -c { foo f("aa"); } struct foo { foo(string &&); };
+00:23 geordi: Success
+00:23 lh_mouse: geordi, -c { string s; foo f(s); } struct foo { foo(string &&); };
+00:23 geordi: error: cannot bind '__cxx11::string {aka __cxx11::string}' lvalue to '__cxx11::string&& {aka __cxx11::string&&}'
+00:59 tutu__ quit:Quit: -a- Connection Timed Out
+01:03 tutu_ joined channel
+01:24 tutu__ joined channel
+01:25 lh_mouse: geordi, { tracked::B b; bind(foo, move(b))(); } void foo(tracked::B){ }
+01:25 geordi: B0* B0=>B1* B1=>B2* B1~ B3*(B2) B3~ B2~ B0~
+01:26 wlemuel joined channel
+01:28 tutu_ quit:Ping timeout: 265 seconds
+01:31 wlemuel quit:Ping timeout: 256 seconds
+01:40 tutu__ quit:Remote host closed the connection
+01:45 lh_mouse: geordi, << max(cb, 1); size_t cb = 2;
+01:45 geordi: error: no matching function for call to 'max(size_t&, int)'
+01:45 hysw: geordi: <<
+01:45 geordi: error: expected primary-expression before ';' token
+01:45 hysw: geordi: <_<
+01:45 geordi: error: expected unqualified-id before '<' token
+01:46 hysw: geordi: -_-
+01:46 geordi: error: expected unqualified-id before '-' token
+01:48 condy: geordi: (0.0)
+01:48 geordi: error: cannot convert 'double' to 'const char*' for argument '1' to 'int printf(const char*, ...)'
+01:50 hysw: geordi: {-_-}
+01:50 geordi: error: '_' was not declared in this scope
+01:53 condy: geordi: ('0.0')
+01:53 geordi: error: invalid conversion from 'int' to 'const char*'
+01:53 condy: geordi: ("0.0")
+01:53 geordi: 0.0
+01:56 cleamoon__ quit:Ping timeout: 255 seconds
+01:59 ld-linux_a23 joined channel
+02:03 lh_mouse quit:Read error: Connection reset by peer
+02:09 molikto joined channel
+02:10 hysw: molikto: 爆智商╮(￣▽￣)╭
+02:10 ASenR quit:Quit: Lost terminal
+02:11 molikto: hysw: so adorable
+02:11 hysw: molikto: To 作死 or not to 作死, that is not a problem < this is a fact
+02:15 molikto_ joined channel
+02:15 molikto quit:Read error: Connection reset by peer
+02:18 hysw: molikto_: 爆智商(°Д°)
+02:18 molikto_: hysw: 0吧
+02:18 molikto_: 今天刚刚被骗5000块钱
+02:19 condy: geordi: << TYPE<common_type_t<size_t,int>>
+02:19 geordi: unsigned long
+02:19 condy: geordi: << TYPE<size_t>
+02:19 geordi: unsigned long
+02:19 molikto_: what is this condy/georid thing?
+02:23 condy: 我不是机器人啊！
+02:24 hysw: condy: <<╮(￣▽￣)╭
+02:24 molikto_: 你们真可爱...
+02:24 molikto_: 我死后请把我葬在这个聊天室吧
+02:25 hysw: 继续作死刷coursera去了...
+02:25 condy: geordi: <<╮(￣▽￣)╭
+02:25 geordi: error: stray '\342' in program
+02:25 molikto_: geordi: wtf
+02:25 geordi: error: 'wtf' does not name a type
+02:26 molikto_: geordi: 1/0
+02:26 geordi: error: expected unqualified-id before numeric constant
+02:29 molikto_ quit:Remote host closed the connection
+02:46 tutu_wind quit:Quit: WeeChat 1.1.1
+03:47 cleamoon__ joined channel
+04:42 lolisa quit:Quit: meow
+04:57 cleamoon__ quit:Ping timeout: 258 seconds
+04:58 cleamoon__ joined channel
+05:04 wlemuel joined channel
+05:09 wlemuel quit:Ping timeout: 276 seconds
+07:25 cleamoon__ quit:Quit: Leaving
+07:50 wlemuel joined channel
+07:55 wlemuel quit:Ping timeout: 276 seconds
+08:03 xxxxxxxx quit:Quit: Leaving...
+08:20 wlemuel joined channel
+08:40 wlemuel quit:Ping timeout: 252 seconds
+09:04 ASenR joined channel
+09:09 lh_mouse joined channel
+09:39 cleamoon quit:Ping timeout: 245 seconds
+09:41 cleamoon joined channel
+10:13 Xilzzerts joined channel
+10:15 ASenR quit:Quit: Lost terminal
+10:38 sleepwalking joined channel
+10:39 sleepwalking: 每当自己实现的EM算法终于能够收敛时，我仿佛看到马路油浮起来了
+10:41 * lh_not_bot slaps sleepwalking around a bit with a large trout
+10:42 lh_not_bot: geordi: -c struct foo { virtual void vf(); }; struct bar : foo { virtual void vf() override; }; struct baz { virtual void vf(); }; struct derived : bar, baz { };
+10:42 geordi: Success
+10:42 lh_not_bot: geordi: -c { derived d; d.vf(); } struct foo { virtual void vf(); }; struct bar : foo { virtual void vf() override; }; struct baz { virtual void vf(); }; struct derived : bar, baz { };
+10:42 geordi: error: request for member 'vf' is ambiguous
+10:42 lh_not_bot: geordi: -c { derived d; static_cast<foo &>(d).vf(); } struct foo { virtual void vf(); }; struct bar : foo { virtual void vf() override; }; struct baz { virtual void vf(); }; struct derived : bar, baz { };
+10:42 geordi: Success
+10:43 lh_not_bot: geordi: -c struct foo { virtual void vf() = 0; }; struct bar : foo { virtual void vf() override; }; struct baz { virtual void vf(); }; struct derived : bar, baz { };
+10:43 geordi: Success
+10:45 tutu_wind joined channel
+11:01 ld-linux_a23 joined channel
+11:04 hysw: sleepwalking: OTL
+11:04 hysw: 赶紧去斯坦福
+11:05 sleepwalking: hysw, 被拒了好么
+11:05 hysw: sleepwalking: OTL
+11:05 hysw: 你竟然真申请了...
+11:05 hysw: 说！你收到什么offer了？
+11:05 sleepwalking: 最好的只有。。uiuc
+11:06 sleepwalking: 和uwaterloo
+11:07 hysw: OTL
+11:07 hysw: UIUC...
+11:07 sleepwalking: 又不是工程学院
+11:07 hysw: 啥学院？
+11:08 sleepwalking: Liberal Arts & Science...
+11:08 hysw: OTL
+11:08 hysw: 某弱校的Art&Science学院的学渣表示顶礼膜拜
+11:09 sleepwalking: ……
+11:10 hysw: 我还是滚去哪个三本混文凭算了...
+11:10 hysw: 不过貌似我高考连三本都不一定考的上...
+11:11 hysw: ╮(￣▽￣)╭
+11:14 hysw: 上大学的主要目的：从教授那里弄reference letter和研究如何和妹纸交流...
+11:14 hysw: sleepwalking: 准备去UIUC?
+11:14 sleepwalking: 三
+11:14 sleepwalking: 是
+11:14 lh_not_bot: sleepwalking: 捏脸
+11:15 hysw: sleepwalking: 竟然没去MIT/UCB
+11:16 sleepwalking: UCB被wl了
+11:16 hysw: sleepwalking: OTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTL
+11:16 sleepwalking: 然后拒
+11:17 hysw: 你如果去UCB的话明年我来找你...
+11:17 sleepwalking: 卧槽你转UCB？
+11:17 lh_not_bot: sleepwalking: 捏脸
+11:17 hysw: exchange
+11:17 sleepwalking: 死学霸。。
+11:18 hysw: 如果大学期间找不到妹纸的话就去申请类似Stanford/MIT/UCB的PhD... 估计会被拒成翔...
+11:18 lh_not_bot: geordi: -c struct foo { virtual void vf() = 0; }; struct bar : foo { virtual void vf() override; }; struct baz : foo { virtual void vf(); }; struct derived : bar, baz { };
+11:18 geordi: Success
+11:19 sleepwalking: 这两者有什么联系？
+11:20 hysw: sleepwalking: 很明显的有联系...
+11:24 hysw: sleepwalking: 不过本校的PhD估计没什么问题...
+11:25 sleepwalking: 你是说推荐吗
+11:26 hysw: 找妹纸明显比申请PhD还麻烦...
+11:27 hysw: 本校反正也认识几个教授，成绩还不算学渣中最糟糕的，所以估计没问题
+11:29 hysw: sleepwalking: 在大学里想找个合适的的同学圈难度太高...
+11:31 hysw: sleepwalking: 智商智商智商智商智商智商智商智商智商智商智商智商智商智商
+11:36 * hysw 至今没搞懂为啥一堆大学都愿意设立分校区...
+11:42 molikto joined channel
+11:43 hysw: molikto: 赶紧去把 sleepwalking 的智商抢走...
+11:45 lh_mouse: molikto, 爆照
+11:47 molikto quit:Ping timeout: 256 seconds
+11:54 whatofor_1 joined channel
+11:54 whatofor quit:Read error: Connection reset by peer
+12:01 molikto joined channel
+12:08 molikto quit:Remote host closed the connection
+12:10 ld-linux_a23 joined channel
+12:13 molikto joined channel
+12:15 molikto quit:Remote host closed the connection
+12:48 OO_after quit:Ping timeout: 265 seconds
+12:53 molikto joined channel
+13:26 molikto quit:Remote host closed the connection
+13:30 xxxxxxxx joined channel
+13:49 xxxxxxxxx joined channel
+13:51 xxxxxxxx quit:Ping timeout: 264 seconds
+13:54 sleepwalking quit:Quit: Ex-Chat
+13:58 zgh1 joined channel
+14:02 molikto joined channel
+14:07 xxxxxxxxx: https://software.nasa.gov
+14:11 ld-linux_a23 joined channel
+14:20 Plough joined channel
+14:22 tutu_wind quit:Quit: WeeChat 1.1.1
+14:28 xxxxxxxx joined channel
+14:30 xxxxxxxxx quit:Ping timeout: 252 seconds
+14:36 xxxxxxxx: 然而今天的开发并没有昨天运气那么好 只有13 14 21 33 和一个水观
+18:30 clcn_logbot joined channel
+19:00 ld-linux_a23 joined channel
+19:04 wlemuel joined channel
+19:10 xxxxxxxx: 六月猫头好多啊
+19:11 molikto quit:Remote host closed the connection
+19:12 molikto joined channel
+19:14 whocares_2 quit:Ping timeout: 246 seconds
+19:17 molikto quit:Ping timeout: 264 seconds
+19:31 molikto joined channel
+19:53 Xilzzerts quit:Read error: Connection reset by peer
+19:53 Xilzzerts joined channel
+20:26 Xilzzert joined channel
+20:27 lh_not_bot: geordi: -c extern const int i = 1;
+20:27 geordi: Success
+20:27 lh_not_bot: geordi: -c extern int i = 1;
+20:27 geordi: warning: 'i' initialized and declared 'extern'
+20:29 Xilzzerts quit:Ping timeout: 256 seconds
+20:32 molikto quit:Remote host closed the connection
+20:33 molikto joined channel
+20:43 tutu_wind joined channel
+20:45 molikto quit:Remote host closed the connection
+20:49 lhjkk joined channel
+20:49 lh_not_bot: geordi: --clang -c extern const int i = 1;
+20:49 geordi: Success
+20:50 lh_not_bot: geordi: --clang -c extern int i = 1;
+20:50 geordi: warning: 'extern' variable has an initializer
+20:51 tutu_wind: lhanjian: 0.0
+20:51 lhanjian: 0 0
+20:54 molikto joined channel
+20:59 wlemuel quit:Ping timeout: 258 seconds
+21:03 lhjkkk joined channel
+21:05 wlemuel joined channel
+21:06 JQK quit:Read error: Connection reset by peer
+21:07 lhanjian quit:Ping timeout: 252 seconds
+21:07 JQK joined channel
+21:10 wlemuel quit:Remote host closed the connection
+21:10 wlemuel joined channel
+21:14 ASenR joined channel
+21:14 lhanjian quit:Quit: Leaving
+21:31 endle joined channel
+21:35 molikto_ joined channel
+21:35 molikto quit:Read error: Connection reset by peer
+21:38 lhjkk joined channel
+22:09 tutu_wind quit:Remote host closed the connection
+22:32 Plough quit:Remote host closed the connection
+22:54 whocares_2 joined channel
+22:58 whocares_2 quit:Ping timeout: 276 seconds
+22:59 whocares_2 joined channel
+23:30 endle quit:Quit: Leaving
+23:44 lhjkk quit:Ping timeout: 244 seconds

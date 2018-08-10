@@ -1,0 +1,205 @@
+00:09 Sasasu quit:*.net *.split
+00:09 condy quit:*.net *.split
+00:09 dantmnf quit:*.net *.split
+00:14 Sasasu joined channel
+00:14 condy joined channel
+00:14 dantmnf joined channel
+00:17 rvier_roit[m] quit:Ping timeout: 245 seconds
+00:17 lh_ideapad quit:Remote host closed the connection
+00:18 NebulaMoe1 quit:Ping timeout: 260 seconds
+00:31 Taggnostr2 joined channel
+00:32 Taggnostr3 quit:Ping timeout: 240 seconds
+00:34 lh_mouse: https://files.lhmouse.com/%e5%90%9b%e3%81%8c%e5%a5%bd%e3%81%8d%e3%81%a0%e3%81%a8%e5%8f%ab%e3%81%b3%e3%81%9f%e3%81%84.mp3
+00:39 matchray: 老鼠唱的？
+00:40 matchray: 阿里巴巴好像招了很多编译器人也去7-1上海的llvm dev
+00:42 lh_mouse: 对。
+00:43 matchray: 哇
+00:45 Taggnostr3 joined channel
+00:47 Taggnostr2 quit:Ping timeout: 256 seconds
+00:50 matchray: VS的调试 https://github.com/llvm-mirror/llvm/blob/master/utils/LLVMVisualizers/llvm.natvis
+01:00 lh_mouse: 唱得怪怪的，
+01:01 iyzsong-x: orz
+01:01 lh_mouse: 这个录音之后加了 +0.5s -18dB 的混响，然后混音的。
+01:05 NebulaMoe1 joined channel
+01:14 matchray: 給老鼠鼓掌
+01:16 lh_mouse quit:Ping timeout: 260 seconds
+01:30 Taggnostr2 joined channel
+01:31 Taggnostr3 quit:Ping timeout: 240 seconds
+01:51 rvier_roit[m] joined channel
+01:57 iyzsong-x quit:Ping timeout: 260 seconds
+02:06 _31N108E joined channel
+02:10 _31N108E quit:Client Quit
+02:45 _31N108E joined channel
+03:45 _31N108E quit:Quit: Mutter: www.mutterirc.com
+04:10 cleamoon_ joined channel
+04:17 whocares_2 joined channel
+04:18 whocares_2_ quit:Ping timeout: 256 seconds
+06:05 CyrusYzGTt quit:Quit: 大道無形，生育天地；大道無情，運行日月；大道無名，長養萬物。
+07:19 zhangoke joined channel
+07:38 zhangoke quit:Quit: zhangoke
+10:08 lh_mouse joined channel
+10:27 lh_ideapad joined channel
+10:29 zhangoke joined channel
+10:40 iyzsong joined channel
+10:44 leemeng joined channel
+10:49 zhangoke quit:Quit: zhangoke
+10:49 leemeng quit:Ping timeout: 260 seconds
+10:49 LM_ joined channel
+11:10 lh_mouse quit:Read error: Connection reset by peer
+11:16 lh_mouse joined channel
+11:24 Frinsecta joined channel
+11:30 lh_ideapad quit:Remote host closed the connection
+11:31 lh_ideapad joined channel
+11:35 lh_ideapad quit:Remote host closed the connection
+11:37 lh_ideapad joined channel
+11:46 Frinsecta quit:Read error: Connection reset by peer
+11:46 Frinsecta joined channel
+11:48 iyzsong quit:Quit: ZNC 1.7.0 - https://znc.in
+11:49 iyzsong joined channel
+11:50 Frinsecta quit:Remote host closed the connection
+12:39 LM_ quit:Quit: leaving
+12:39 lh_mouse quit:Read error: Connection reset by peer
+12:40 lh_mouse joined channel
+12:46 iyzsong: 0.0
+13:06 lh_ideapad: geordi, << is_complete<void>
+13:06 geordi: error: 'is_complete' was not declared in this scope
+13:06 lh_ideapad: geordi, << is_complete_type<void>::value
+13:06 geordi: error: 'is_complete_type' was not declared in this scope
+13:18 varna joined channel
+13:40 lh_ideapad: geordi, -c { void(); }
+13:40 geordi: Success
+13:40 lh_ideapad: geordi, --clang -c { void(); }
+13:40 geordi: Success
+13:40 lh_ideapad: geordi, --clang -c { +void(); }
+13:40 geordi: error: invalid argument type 'void' to unary expression
+13:40 lh_ideapad: geordi, --clang -c { 42, void(); }
+13:40 geordi: Success
+13:40 lh_ideapad: geordi, --clang -c { void(0,1,2); }
+13:40 geordi: error: excess elements in scalar initializer
+13:42 lh_ideapad: varna, 明天几点到。
+13:45 varna: lh_ideapad: 计划午前，不过我网上没法取票，等会得去车站买
+13:57 lh_ideapad: 12306 不行么，
+13:57 lh_ideapad: 或者，附近没有代售点？
+13:58 lh_ideapad: 到了的话告诉窝。泥有窝的电话的吧，
+13:58 varna: 139那个？
+13:59 varna: 护照买起来坑一点
+14:23 rvier_roit[m] quit:Ping timeout: 260 seconds
+14:24 NebulaMoe1 quit:Ping timeout: 276 seconds
+14:46 lh_ideapad: 那是没办法。
+14:47 lh_ideapad: varna, https://files.lhmouse.com/%e5%90%9b%e3%81%8c%e5%a5%bd%e3%81%8d%e3%81%a0%e3%81%a8%e5%8f%ab%e3%81%b3%e3%81%9f%e3%81%84.mp3   昨天新录的。
+14:49 cleamoon_ quit:Quit: Connection closed for inactivity
+15:20 zhangoke joined channel
+15:36 NebulaMoe1 joined channel
+15:58 zhangoke quit:Quit: zhangoke
+15:59 Mokou: varna: C2正在努力让BLOCK-1在夏天实装
+15:59 Mokou: 另外白露改二了
+15:59 Mokou: 等我改二了就把你们都杀了.jpg
+16:00 lh_mouse: Mokou, 爆。
+16:09 matchray: 你們要去哪裏
+16:09 matchray: 羨慕
+16:20 rvier_roit[m] joined channel
+17:30 FrankHB joined channel
+17:33 varna: lh_ideapad: 差不多中午到，11:30发车
+17:48 varna: matchray: 变成小姐姐吧
+18:20 FrankHB quit:Remote host closed the connection
+18:21 FrankHB joined channel
+18:21 lh_ideapad quit:Remote host closed the connection
+19:12 varna: Mokou: 昨天晚上顶着一刀直死落命几十回把九州篇的立花斩了，感觉仁王确实值得再推荐下
+19:12 varna: 怀疑我落命数里有超过七十回是他贡献的
+19:15 varna: 怨灵鬼、飞缘魔、夜枭、伪立花加起来应该将将二十回
+19:42 lhanjian: varna: ( •̀∀•́ )
+19:44 lhanjian: varna: 你在哪列
+19:46 varna: 去的时候3车
+19:47 varna: MD 某个苹果设备一阵爆裂般的ARP
+19:54 lhanjian: varna: 同列，我是 03车06C
+19:56 varna: 我驲，怎么还在疯狂ARP storm
+19:56 varna: 风暴停了，然而这货被挂了个什么东西
+19:57 varna: ARP表也不是这么个学习法
+19:57 varna: 直接遍历子网发询问请求太反常了
+19:57 varna: 卧槽还在继续
+20:02 varna: 看起来还是并发阵发的，一次几个连续小段儿
+20:04 Vassis joined channel
+20:04 Vassis: 感觉精分又要发作了
+20:09 zhangoke joined channel
+20:11 zhangoke quit:Client Quit
+20:19 Vassis: 我尼玛是真的惨，2333。
+20:23 Vassis: let it be
+20:26 Vassis quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+20:48 Vassis joined channel
+20:55 varna: 换了个狗子壁纸 https://img.vim-cn.com/d8/42232498933bab242cb7c314ea0ad2468e2c47.png / 素材 https://www.pixiv.net/member_illust.php?mode=manga&illust_id=56969377
+20:57 Vassis: 还不错啊
+20:59 CyrusYzGTt joined channel
+21:00 varna: 现在仔细想想，AR小队里最性格最讨喜的就是狗子了……
+21:01 Vassis: 没玩过
+21:08 iyzsong: 0.0
+21:09 Vassis: 算了，我去睡觉了。
+21:09 Vassis quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+21:12 varna: https://img.vim-cn.com/a4/289b4ac6ad535fe96ae7f0855615ed6a243d93.png 重新渲染了下字体明暗
+21:26 lhanjian: varna:狗子也很实用
+21:28 varna: 榴弹被buff了？
+21:28 varna: 还是改二了
+21:29 varna: 狗子原来也就是Tier2
+23:04 lh_mouse: varna, 到哪站。
+23:04 lh_mouse: 来过上海吗，认得路吗。
+23:04 varna: lh_mouse: 虹桥
+23:05 varna: 路肯定不认得，上海滴滴方便么
+23:05 lh_mouse: 二号线往浦东机场方向直接到张江高科。
+23:05 lh_mouse: 坐地铁。
+23:05 lh_mouse: 你介意中午吃个饭么。
+23:06 varna: 可以有 btw 我和lhj一起过去
+23:06 lh_cat joined channel
+23:06 lh_mouse quit:Disconnected by services
+23:07 lh_cat is now known as lh_mouse
+23:07 lh_mouse: 噢。
+23:08 lh_mouse: 二号到陆家嘴直接出来吧，估计五十分钟。
+23:08 lh_mouse: varna, 到虹桥告诉我一声。
+23:09 condy quit:Ping timeout: 240 seconds
+23:10 varna_ joined channel
+23:10 varna quit:Disconnected by services
+23:10 varna_ is now known as varna
+23:14 condy joined channel
+23:23 cleamoon_ joined channel
+23:32 lh_ideapad joined channel
+23:33 lhanjian: varna: lh_mouse 好的很好的很
+23:35 varna: (｡･ω･)ﾉ
+23:37 cleamoon_: 羊驼子出现了
+23:39 varna: 昨晚落命超过七十回，没力气露面了……
+23:40 cleamoon_: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0f/yx/4e_321174.jpg@596w_1l.jpg
+23:40 cleamoon_: ......
+23:42 varna: 真立花的居合斩基本上直死
+23:42 Mokou: 仁王死亡惩罚如何
+23:42 varna: 我差不多要和他稳定输出6-7个回合，中间失误一次中个武技就死了
+23:42 varna: 杰落命嘛，落着玩儿
+23:43 varna: 掉点魂而已
+23:43 varna: 不过他的药收集起来很麻烦
+23:43 Mokou: 那倒是可以试试
+23:43 Mokou: 听说有堆Boss倾向？
+23:44 varna: 没那么夸张
+23:46 cleamoon_: 我记得真立花可以正义的大爆弹制裁？
+23:46 varna: 我等级低，只打完第一章主线就顺势去打他了，也没什么武技
+23:46 varna: 中间可能有二十次左右的落命是弹反失败
+23:47 cleamoon_: .......
+23:47 varna: 后来我放弃节操，变强了
+23:47 varna: 跟他正常地打了会儿黑魂
+23:48 varna: 抓体力不够的时候去埋刀，弹反只弹上段跳斩，手里5个药吃了4个
+23:49 varna: 武器就是一般的太刀，因为武技不全所以也只用中段
+23:53 cleamoon_: 最后还是过了？
+23:53 varna: 过了
+23:53 varna: 初期没武技，打得跟黑魂一样，巨没观赏性
+23:54 matchray: 參加llvm 了？
+23:54 matchray: 羨慕。這次沒跑回去
+23:54 varna: 去围观而已，相关的技术基础我可是基本没有
+23:54 varna: 顺便除四害
+23:54 matchray: 不需要基礎
+23:55 matchray: 我現在有餘閒會給fbsd幫幫忙 https://reviews.llvm.org/D48257
+23:55 varna: 只需要二十一天……
+23:55 matchray: 貓論
+23:55 varna: 猫论啊……
+23:55 matchray: 不管黑貓白貓
+23:56 varna: 我以为说的是范畴论_(:з」∠)_
+23:56 cleamoon_: 竟然去除了四害
+23:56 varna: 既然去上海了，肯定得除四害
+23:56 matchray: varna教我寫compiler-rt
+23:57 varna: (｡･ω･)ﾉ那是什么，完全不会写！请变成小姐姐给我讲解下
+23:59 varna: 明天各种下雨啊……
+23:59 varna: 保险起见带个伞

@@ -1,0 +1,139 @@
+00:12 cleamooon: 边撸管边吐血边喷同行
+00:13 yimis joined channel
+00:14 yimis quit:Client Quit
+00:17 Mokou: http://ww4.sinaimg.cn/mw690/d16b135fjw1fag1d2qf4uj20qo0zkwl5.jpg 岛城特色神奇字体
+00:17 varna: 三撸可以打，上个炮击
+00:17 yimis joined channel
+00:17 Mokou: 三撸需要支援？
+00:18 varna: 小和很可怜啊！
+00:18 yimis quit:Client Quit
+00:18 Mokou: 不虚，大和先拍死
+00:21 cleamooon: 这字体不错
+00:21 Stevearzh quit:Remote host closed the connection
+00:26 varna: 下的船模教程里居然有700水线八万钢的例子
+00:26 varna: (｡･ω･)ﾉ雪菜！
+00:41 lh_mouse quit:Ping timeout: 268 seconds
+00:50 cleamooon: @Nanozuki  马虎室友，做了饭把饭留在电饭煲里面不收拾，不知道过了多少天。我今天打开电饭煲…..竟然，一股酒香！！我天，真是个人才，不说了
+00:51 Mokou: http://ww1.sinaimg.cn/mw690/006qfAh0jw1fagdeji8d1j30g707zjtm.jpg
+00:55 cleamooon: 有人去看吗
+01:22 varna: 武运
+01:22 varna quit:Quit: leaving
+02:21 Mokou: 睡了
+02:21 Mokou: 诸君武运
+02:21 Mokou quit:Quit: 睡觉
+03:29 aeromax[m] quit:*.net *.split
+03:29 Slap_Bot quit:*.net *.split
+03:35 aeromax[m] joined channel
+04:50 whocares_2_ quit:Remote host closed the connection
+05:11 aeromax[m] quit:Ping timeout: 250 seconds
+05:15 cleamooon quit:Quit: Connection closed for inactivity
+05:16 whocares_2 joined channel
+05:16 Flandre__ quit:Ping timeout: 245 seconds
+06:01 aeromax[m] joined channel
+06:20 Flandre__ joined channel
+07:18 lhanjian: 感觉我现在的生活方式和诸君有时差……
+07:42 Sasasu joined channel
+08:05 Youmu quit:Quit: Connection closed for inactivity
+08:25 FrankHB quit:Ping timeout: 248 seconds
+08:55 FrankHB joined channel
+08:57 iyzsong-xx joined channel
+09:02 yimis joined channel
+09:02 yimis quit:Client Quit
+09:18 Youmu joined channel
+09:20 Youmu quit:Changing host
+09:20 Youmu joined channel
+09:37 Mokou joined channel
+11:00 yimis joined channel
+11:00 yimis quit:Client Quit
+11:01 yimis joined channel
+11:01 yimis quit:Client Quit
+11:13 lh_mouse joined channel
+11:45 Sasasu quit:Quit: WeeChat 1.0.1
+12:15 february joined channel
+12:17 Sasasu joined channel
+12:21 february quit:Quit: Leaving
+12:32 iyzsong-xx: = =
+13:00 lh_cat joined channel
+13:03 lh_mouse quit:Ping timeout: 260 seconds
+13:21 kin3z joined channel
+14:09 sleepwalking joined channel
+14:32 sleepwalking quit:Ping timeout: 248 seconds
+14:46 lh_cat is now known as lh_mouse
+14:46 lh_mouse: geordi, { istringstream iss("123");
+14:46 geordi: error: Unexpected end of request. Expected '}' or balanced code.
+14:46 lh_mouse: geordi, { istringstream iss("a b c");  iss >>'a'; }
+14:46 geordi: error: no match for 'operator>>' in 'iss >> 'a'' (operand types are 'istringstream {aka istringstream}' and 'char')
+14:52 lh_mouse: geordi, { array<int, g("abc")> a; cout <<sizeof(a); } constexpr unsigned g(const char *s){ return s[0] + s[1] + s[2]; }
+14:52 geordi: 1176
+15:38 Youmu: geordi: { assert(1176 == ('a'+'b'+'c')*4); }
+15:38 geordi: <no output>
+16:09 whatofor quit:Ping timeout: 244 seconds
+16:24 whatofor joined channel
+17:05 cleamooon joined channel
+17:07 iyzsong-xx: x.x
+17:38 kin3z quit:Quit: Leaving
+18:04 iyzsong-xx quit:Read error: Connection reset by peer
+18:07 FrankHB quit:Ping timeout: 260 seconds
+18:35 FrankHB joined channel
+18:59 iyzsong joined channel
+19:17 yimis joined channel
+19:25 yimis quit:Quit: yimis
+19:43 Stevearzh joined channel
+21:25 cleamooon quit:Quit: Connection closed for inactivity
+21:27 Mokou quit:Ping timeout: 260 seconds
+21:27 Mokou joined channel
+21:51 Taggnostr2 quit:Ping timeout: 265 seconds
+21:53 Taggnostr joined channel
+22:03 cleamooon joined channel
+22:03 geordi quit:Remote host closed the connection
+22:04 geordi joined channel
+22:40 Sasasu quit:Ping timeout: 265 seconds
+22:47 iyzsong quit:Quit: night.
+22:48 Sasasu joined channel
+22:53 sleepwalking joined channel
+23:06 lh_mouse: geordi, { } template<typename T> struct my_allocator : std::allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template vector<int, my_allocator>;
+23:06 geordi: error: type/value mismatch at argument 2 in template parameter list for 'template<class _Tp, class _Allocator> class vector'
+23:06 lh_mouse: geordi, { } template<typename T> struct my_allocator : std::allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template class vector<int, my_allocator>;
+23:06 geordi: Same error.
+23:07 lh_mouse: geordi, { } template<typename T> struct my_allocator : allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template class vector<int, my_allocator<int>>;
+23:07 geordi: error: explicit instantiation of 'template<class _Tp, class _Allocator> class vector' outside its namespace must use a nested-name-specifier
+23:07 lh_mouse: geordi, { } template<typename T> struct my_allocator : allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template class std::vector<int, my_allocator<int>>;
+23:07 geordi: <no output>
+23:07 lh_mouse: geordi, { } template<typename T> struct my_allocator final : allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template class std::vector<int, my_allocator<int>>;
+23:07 geordi: error: cannot derive from 'final' base 'my_allocator<int>' in derived type '_Vector_base<int, my_allocator<int> >::_Vector_impl'
+23:07 lh_mouse: geordi, --clang { } template<typename T> struct my_allocator final : allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; }; template class std::vector<int, my_allocator<int>>;
+23:07 geordi: <no output>
+23:08 lh_mouse: geordi, <<sizeof(std::vector<int, my_allocator<int>>); template<typename T> struct my_allocator : allocator<T> { template<typename U> struct rebind { using type = my_allocator<U>; }; };
+23:08 geordi: 56
+23:09 lh_mouse: geordi, use --clang
+23:09 geordi: 24
+23:27 varna joined channel
+23:27 varna: _(:з」∠)_练习干扫失败了
+23:30 * lh_mouse slaps varna around a bit with a large trout
+23:30 Stevearzh quit:Remote host closed the connection
+23:30 Stevearzh joined channel
+23:30 Stevearzh quit:Changing host
+23:30 Stevearzh joined channel
+23:31 * varna poies
+23:32 Stevearzh quit:Remote host closed the connection
+23:32 Stevearzh joined channel
+23:32 Stevearzh quit:Changing host
+23:32 Stevearzh joined channel
+23:33 Stevearzh quit:Remote host closed the connection
+23:34 Stevearzh joined channel
+23:34 Stevearzh quit:Changing host
+23:34 Stevearzh joined channel
+23:34 Stevearzh quit:Remote host closed the connection
+23:34 Stevearzh joined channel
+23:34 Stevearzh quit:Changing host
+23:34 Stevearzh joined channel
+23:51 Stevearzh quit:Remote host closed the connection
+23:51 Stevearzh joined channel
+23:51 Stevearzh quit:Changing host
+23:51 Stevearzh joined channel
+23:52 Stevearzh quit:Remote host closed the connection
+23:52 varna: ...
+23:52 Stevearzh joined channel
+23:52 Stevearzh quit:Changing host
+23:52 Stevearzh joined channel
+23:59 Sasasu quit:Quit: WeeChat 1.0.1

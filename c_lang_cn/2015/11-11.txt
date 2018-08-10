@@ -1,0 +1,942 @@
+00:09 whocares_2 quit:Ping timeout: 246 seconds
+00:09 whocares_2_ joined channel
+00:14 lh_cat joined channel
+00:15 cihsop: 都没人说话
+00:15 cihsop: ?好吧，这又不是QQ
+00:16 cihsop: 域名购买后 刚刚整的那个 github提供的静态主页 就相当于 “空间“？
+00:18 yzld2002 quit:Remote host closed the connection
+00:18 lh_mouse quit:Ping timeout: 250 seconds
+00:28 cihsop quit:Remote host closed the connection
+02:11 FrankHB joined channel
+03:01 cleamoon_ joined channel
+03:04 cleamoon quit:Ping timeout: 250 seconds
+04:56 cleamoon_ quit:Quit: Leaving
+05:26 boosure joined channel
+05:28 lh_cat quit:Read error: Connection reset by peer
+06:24 FrankHB quit:Ping timeout: 265 seconds
+06:37 Xilzzerts joined channel
+06:39 Xilzzert quit:Ping timeout: 250 seconds
+07:17 RivDo joined channel
+07:24 RivDo quit:Ping timeout: 250 seconds
+07:38 RivDo joined channel
+08:35 RivDo quit:Ping timeout: 244 seconds
+08:48 RivDo joined channel
+08:53 etby joined channel
+09:00 x-iyzsong joined channel
+09:30 xxxxxxxx quit:Quit: Leaving...
+09:46 libhanjian joined channel
+09:46 RivDo joined channel
+10:06 cleamoon joined channel
+10:33 RivDo joined channel
+10:37 RivDo quit:Ping timeout: 252 seconds
+10:40 libhanjian quit:Remote host closed the connection
+10:40 libhanjian joined channel
+10:41 RivDo joined channel
+10:41 etby quit:Ping timeout: 240 seconds
+10:54 etby joined channel
+10:58 varna joined channel
+11:15 cleamoon quit:Ping timeout: 265 seconds
+11:18 Flandre joined channel
+11:34 sismvg joined channel
+11:34 sismvg: http://www.ithome.com/html/it/187965.htm
+11:35 varna: 这哪里找来的坐台木耳……
+11:36 sismvg: 我会很愿意老板把他10岁的女儿带过来的
+11:37 varna: 少将区的演习真是悲剧，一大堆自以为是的废物……
+11:40 varna: 对了，gcc现在还不给nested function用attribute optimize么
+11:45 varna: https://pastebin.mozilla.org/8851855 虽说只是这个demo的话，gcc似乎还没能宰了我
+11:54 Meow-J joined channel
+11:57 sismvg: 倒买倒卖真是暴利
+11:58 Flandre1 joined channel
+11:58 Flandre quit:Read error: Connection reset by peer
+11:58 sismvg: http://www.ithome.com/html/it/187970.htm
+12:03 libhanjian: varna, 只要投降用clang就……
+12:03 libhanjian quit:Quit: Leaving
+12:03 libhanjian joined channel
+12:05 varna: libhanjian: 然而那是苹果的东西
+12:06 libhanjian: varna, clang不算吧
+12:06 libhanjian: 只是烧了点钱而已
+12:07 varna: 然后clang还不保证兼容所有gcc扩展
+12:08 varna: 如果哪天这东西真崩溃大了，我宁可转向libgccjit也不去用clang的block syntax
+12:10 Flandre2 joined channel
+12:14 Flandre1 quit:Ping timeout: 260 seconds
+12:15 RivDo quit:Remote host closed the connection
+12:19 RivDo joined channel
+12:27 RivDo quit:Ping timeout: 260 seconds
+12:33 x-iyzsong: WoW
+12:34 varna: x-iyzsong: 噫噫噫
+12:37 cihsop joined channel
+12:37 cihsop: 考驾照还真是刺激
+12:39 x-iyzsong: orz
+12:40 RivDo joined channel
+12:41 cihsop: o.O
+12:41 Flandre3 joined channel
+12:41 varna: OTL
+12:42 Flandre2 quit:Ping timeout: 276 seconds
+12:42 cihsop: 好几个x的那个id没上。
+12:43 varna: 其实那些x是他以前度娘id打码的结果
+12:43 varna: 你要找巨基？
+12:43 cihsop: 好吧。
+12:44 cihsop quit:Remote host closed the connection
+12:50 Flandre4 joined channel
+12:51 yzld2002 joined channel
+12:53 Flandre3 quit:Ping timeout: 240 seconds
+12:55 Flandre joined channel
+12:56 libhanjian: varna, 这个放心，除非苹果不想搞iOS ObjC了，否则这个Clang的block syntax还是比较稳健的
+12:56 Flandre4 quit:Ping timeout: 250 seconds
+12:56 sismvg: http://thvideo.tv/
+12:57 lh_mouse joined channel
+13:07 Flandre1 joined channel
+13:10 Flandre quit:Ping timeout: 246 seconds
+13:29 RivDo quit:Ping timeout: 252 seconds
+13:53 libhanjian quit:Remote host closed the connection
+13:53 libhanjian joined channel
+13:56 tutu_wind joined channel
+13:59 Flandre1 quit:Ping timeout: 250 seconds
+14:02 tutu_wind quit:Ping timeout: 240 seconds
+14:08 Flandre1 joined channel
+14:09 varna: libhanjian: 我不是说不稳健，我就是烦跟那些破语言挂钩的东西
+14:10 tutu joined channel
+14:15 Guest98862 quit:Read error: Connection reset by peer
+14:19 varna: http://tieba.baidu.com/p/4153532006
+14:21 sismvg: 按理说他活不了那么久才对
+14:21 sismvg: 最近不小心吃了太多螃蟹都肚子疼的要命。。
+14:22 varna: 这是个很古老的段子了
+14:22 varna: 我见到这段子的时候最多大二
+14:23 varna: 虽然吔屎确实会造出大肠杆菌感染
+14:23 varna: 不过非凡哥似乎还挺胖的
+14:27 varna: 年底要报销了，还得问问编辑部什么时候交版面费……
+14:28 lh_mouse: (｡･ω･)ﾉ 
+14:29 varna: (｡･ω･)ﾉ写了封邮件过去，几天不回再打电话
+14:30 lh_mouse: geordi, -c { f(); } auto f = []{ return; };
+14:30 geordi: Success
+14:41 varna: http://tieba.baidu.com/p/4153524692
+14:42 lh_mouse: geordi, `<< __STDC_HOSTED__
+14:42 geordi: error: stray '`' in program
+14:42 lh_mouse: geordi, << __STDC_HOSTED__
+14:42 geordi: 1
+14:42 lh_mouse: geordi, << __STDC__
+14:42 geordi: 1
+14:43 lh_mouse: geordi, << __STDC_VERSION__
+14:43 geordi: error: '__STDC_VERSION__' was not declared in this scope
+14:44 lh_mouse: geordi, << __STDC_ISO_10646__
+14:44 geordi: 201103
+14:55 lh_mouse: varna, ping
+14:55 lh_mouse: void foo(int a[staic 10]); 这种写法用过么
+14:55 lh_mouse: s,staic,static,
+14:55 varna: 没用过，这个是什么意思？
+14:56 lh_mouse: 我也想问这个问题
+14:56 lh_mouse: cppreference 说是 bound checking  我试了一下发现没鸟用
+14:57 varna: 我写个东西试试
+14:57 libhanjian: gcc的新版本也老说自己支持边界检查，但是也大都没卵用
+14:59 varna: 我把警告开到最高也没有人拦我
+14:59 lh_mouse: 我直接  -Wall -Wextra -pedantic
+14:59 varna: 没用，直接pass...
+14:59 lh_mouse: 按 ISO C      If the keyword static also appears within the [ and ] of the array type derivation, then for each call to the function, the value of the corresponding actual argument shall provide access to the first element of an array with at least as many elements as specified by the size expression.
+15:00 lh_mouse: 看起来是 'shall'
+15:00 lh_mouse: 也就是说万一违反了就 UB      于是没卵用
+15:00 lh_mouse: 跟没有一样
+15:00 varna: 〇疼
+15:01 lh_mouse: 〇
+15:02 lh_mouse: 〇
+15:03 * sismvg 又一次见证了土豪的战争
+15:04 varna: 今天的metacpan也没什么亮点
+15:12 lh_mouse: geordi, -c class base { base(); public: static unique_ptr<base> create(){ struct derived : base { }; return make_unique<derived>(); } };
+15:12 geordi: Success
+15:13 lh_mouse: geordi, -c class base { base(); }; unique_ptr<base> create(){ struct derived : base { }; return make_unique<derived>(); }
+15:13 geordi: error: use of deleted function 'create()::derived::derived()'
+15:18 RivDo joined channel
+15:19 lh_mouse: RivDo, 爆照
+15:19 RivDo: = =
+15:20 Xilzzerts: 越界检测是gcc新加的那个AddressSanitizer吗
+15:20 lh_mouse: RivDo, 爆照
+15:22 RivDo: 不爆
+15:22 varna: 这次活动打通了我Syu一次，看看新的gcc怎么说
+15:22 lh_mouse: RivDo, 爆照
+15:22 lh_mouse: RivDo, 要么你吃药吧
+15:22 cleamoon joined channel
+15:24 RivDo: lh_mouse：吃药？
+15:24 RivDo quit:Quit: Leaving.
+15:24 RivDo joined channel
+15:25 varna: http://tieba.baidu.com/p/4139054070 这都多少年前的骗术了，然而5L就有上钩的……
+15:27 sismvg: 刚才来了个电话：您的手机有异常使用情况，将于11月11号两点停机，人工咨询请按9
+15:27 sismvg: 咦,他们怎么知道我在火奴鲁鲁？
+15:29 RivDo quit:Ping timeout: 260 seconds
+15:31 varna: 上个月办了实名等级，这月倒是被送了1GB流量
+15:31 varna: 登记*
+15:34 cleamoon: orz
+15:34 lh_mouse: 我看标题只能理解成“自己”是说楼主
+15:36 varna: 不过这1GB必须本月内用完，总之用不完也无所谓……反正是本来也没有的东西
+15:41 varna: cleamoon: 官推今天放话说驱逐舰练度重要了
+15:41 varna: 虽然你可以大体当一句P话看
+15:42 sismvg_ joined channel
+15:42 Flandre2 joined channel
+15:42 lh_mouse: Flandre2, 捏捏
+15:42 Flandre2: OuO
+15:42 Flandre2: 不让捏
+15:43 Flandre1 quit:Ping timeout: 244 seconds
+15:43 sismvg quit:Ping timeout: 244 seconds
+15:43 * lh_mouse has kicked Flandre from #c_lang_cn (（╯°□°）╯︵ ʎpuoɔ )
+15:43 cleamoon: @帝子降 学院晚上有个关于女性解放的讲座，女生必须参加，要签到。
+15:43 cleamoon: 噗，驱逐练度重要的话，我选择狗带
+15:44 lh_not_bot quit:Ping timeout: 244 seconds
+15:45 lh_not_bot joined channel
+15:47 cleamoon: 我其实觉得现在光棍节买东西这么疯狂有一部分原因是都集中这天买了...... 并不是经济有多好...
+15:48 varna: 只要宣传一下，就有大批的妹子去网购吧？
+15:49 varna: cleamoon: http://www.bilibili.com/video/av3188984/
+15:50 cleamoon: 智障妹子很多，有钱妹子也不少，但智障还有钱的真心没那么多，真把经济托付给二奶呀
+15:51 varna: 架不住人多啊，我实验室还有妹子网购大批便宜咖啡呢
+15:51 cleamoon: 顺便，天猫在0点6分发布了一个“17分钟突破百亿”的软文......
+15:51 varna: 结果自己喝不掉就宣传合资买
+15:52 varna: 于是我出钱买了两盒，偶尔喝喝
+15:52 varna: 雀巢那个安定的猫尿味儿
+15:52 cleamoon: 这种凑不了几个钱的
+15:53 varna: 人多
+15:53 lh_mouse: 安定躺枪
+15:54 varna: 我喝的就是雀巢……
+15:54 varna: 别的是香精味，喝多了不如猫尿
+15:54 varna: 好歹猫尿味能喝出耐尿性
+15:56 sismvg: 女孩终于鼓足勇气向男孩表白，害羞地问男孩：“你喜欢我吗？” 男孩说：“不喜欢。” 女孩伤心欲绝，转身要走。 这时男孩叫住了女孩，对她说：“傻瓜，你还没问我爱不爱你呀。” 女孩破涕为笑：“那你爱不爱我？” “不爱。”
+15:58 varna: 哦瘊瘊
+15:58 * varna 没有女朋友
+16:00 * sismvg 知道大家都没有女票
+16:00 RivDo joined channel
+16:01 sismvg: rich man free ,poor man put down
+16:02 sismvg: 要不要加个get?
+16:03 cleamoon: 不知道你要说什么
+16:04 varna: 幼女+1
+16:05 varna: http://www.bilibili.com/video/av3183852/ XLC
+16:05 cleamoon: 30驱都做完了还是没有朝潮
+16:05 varna: 岚月酱帮我下个本子吧（似乎不H）？
+16:06 varna: http://g.e-hentai.org/g/870295/b30caa800a/ 这个，说是矶波的
+16:07 sismvg: poor man get put down<-模仿守望者的句式，put down不知道具体该怎么翻译，大概意思是穷人只能死
+16:07 cleamoon: 略微一看似乎不H
+16:07 cleamoon: 怎么发给你
+16:07 varna: 尺寸多大？
+16:08 cleamoon: 18cm左右
+16:08 varna: 邮箱附件吧， sceneviper at hotmail.com
+16:09 cleamoon: 哦，你说文件尺寸呀，8.4m
+16:09 varna: 邮箱吧，这个看着不大
+16:10 cleamoon: 等我下完了
+16:10 cleamoon: 这个估计得一会
+16:10 varna: thx a lot
+16:10 cleamoon: urwcm
+16:11 varna: 这个缩略语看着像什么窗口管理器
+16:12 cleamoon: 写一个窗口管理器叫蛤蛤？打开文件的程序叫续 一秒
+16:13 cleamoon: 出门
+16:19 cleamoon quit:Ping timeout: 255 seconds
+16:25 varna: http://www.bilibili.com/video/av1458344/ 三十六相妮可妮可妮
+16:29 boosure quit:Read error: Connection reset by peer
+16:53 Xilzzert joined channel
+16:56 Xilzzerts quit:Ping timeout: 260 seconds
+17:09 cleamoon joined channel
+17:21 cleamoon quit:Ping timeout: 240 seconds
+17:36 cleamoon joined channel
+17:41 etby quit:Read error: Connection reset by peer
+17:43 cleamoon: 有没有办法查看当前不明确用malloc或者new能得到大概多大内存的办法
+17:45 cleamoon: 就是比如 int* a; 之后我直接用a++几次才算作大死
+17:45 cleamoon: 不是生产环境，oi级别的
+17:46 lh_mouse: 没有
+17:47 lh_mouse: linux 上你用 malloc 会调用 mmap    你用 mmap 分配一些页只是获得了一段地址空间   你试图访问这个空间的时候才会造成实际的内存调度
+17:47 cleamoon: 那有查看最多能malloc多少的函数吗
+17:47 lh_mouse: 所以malloc 成功返回也不一定有内存可以用
+17:47 cleamoon: .......
+17:47 lh_mouse: 不清楚
+17:47 lh_mouse: 这里我想着重强调两个事情
+17:48 lh_mouse: 第一个   即使内存不够也有 swap 垫着
+17:48 lh_mouse: 第二个  你没法保证哪下不玩脱被内核丢个 SIGKILL 过来
+17:49 cleamoon: malloc也不能保证？
+17:50 lh_mouse: 如果是 glibc 的 malloc 就是这样
+17:50 lh_mouse: 比如 malloc(SIZE_MAX >> 1) 基本必然会返回 0
+17:50 lh_mouse: 但是如果小步快走  就不一定
+17:51 lh_mouse: 更多的情况是即使被 OOM kill 也不会返回 0
+17:52 cleamoon: 不是说malloc太慢，不推荐小步吗
+17:52 lh_mouse: linux 上面   比如 64 位系统   地址空间很大   即使内存很小也可以跑很大的程序
+17:52 lh_mouse: 那说法过时了
+17:52 lh_mouse: malloc 又不一定是 ptmalloc
+17:53 lh_mouse: 代价是跑得很慢  但是很难就分配失败
+17:55 varna: malloc可能被适配到sbrk和mmap, 至于分配限定的估算，对Linux来说推荐看一下过提交比例
+17:55 varna: 但至少明确的是，成功的linux malloc返回的内存很可能是被过提交的
+17:56 varna: malloc在小块上未必慢、在小块上未必差，但如果你真搞一大堆小块申请就没什么救了
+17:58 cleamoon: 那么遇到一个大list时怎么办，一次弄一堆崩，弄少了慢
+17:58 cleamoon: 这个问题是生产环境的
+17:59 varna: 多大
+17:59 varna: 另外有没有热点数据
+17:59 varna: 所谓热点，就是明显比其他数据更频繁访问的
+17:59 cleamoon: 比如200M？
+17:59 varna: 两百兆不是事
+18:00 varna: 你是在做计算吧
+18:00 cleamoon: 假设没有，但是指向经常变
+18:00 varna: 指向是什么意思？
+18:00 cleamoon: 不，是之前的脑洞
+18:00 varna: 是说迭代器的位置？
+18:00 cleamoon: 就是经常换指向下一个哪个
+18:00 varna: 其实这个200MB的列表如果是在线地建立起来的，可能就会用掉数个块
+18:00 cleamoon: 迭代器+
+18:01 varna: 迭代器我不太关心，不过200MB确实不大
+18:01 varna: 你有很多这样的表？
+18:01 cleamoon: 哦，那2G个呢
+18:01 varna: 2G个200MB的表？你需要一些冗余阵列和多几台的服务器
+18:02 varna: 如果是单个2GB期望均匀大致遍历式访问的表，你可以维护一点缓存
+18:02 cleamoon: 不，2G个20B的表
+18:02 varna: 那愚蠢不堪
+18:03 varna: 40GB的表不如一个K-V数据库
+18:03 cleamoon: soga
+18:03 varna: 如果它挺大但又不太大，可以考虑一个没什么事务的数据库
+18:03 varna: 然后撞大运看它够快不够快
+18:03 varna: 不过这个问题原本是什么样的？
+18:04 varna: 要是说2G个20B的表（这本身已经不太可能了），或许你假设了一个场景？
+18:04 cleamoon: 假设的
+18:04 varna: 哦……
+18:05 cleamoon: 原本的应该是10M个5B的左右的
+18:05 varna: 5B是什么东西，小结构？
+18:05 varna: 现在一个指针都8B长呢
+18:05 cleamoon: 小结构+
+18:05 varna: 50MB的数据已经无所谓了吧……
+18:05 cleamoon: 那是5字节？
+18:05 varna: 你是说Billion么……
+18:06 cleamoon: 不是，就是字节呀
+18:06 varna: 哦，那应该可以粗暴处理的
+18:06 cleamoon: 一个指针8字节？
+18:06 varna: 64位常见的指针
+18:06 cleamoon: 就是5个sizeof int
+18:06 varna: 那是预估常见不少于20B了
+18:06 varna: 虽说也够小
+18:07 varna: 不过如果你担心可能一次开不出来，可以考虑做一个简单的分配wrapper
+18:08 varna: 一次出数（十）/几十MB
+18:08 varna: 不够了再出
+18:08 varna: 失败了就考虑读文件或者按偏移交换
+18:08 cleamoon: 我之前是malloc了10M次......
+18:08 varna: 那样不太好
+18:09 varna: 空间上很浪费的，malloc常见的实现里会有首部或者尾部元数据至少其一，附加对齐
+18:09 cleamoon: soga
+18:09 varna: 对齐一般也不会比一个机器字更少，所以不如一次出稍微大的一块
+18:09 varna: 10M个小块，这估计对ptmalloc来说也超出了小块桶的能力……
+18:09 lh_mouse: 如果反复分配去配   用 tcmalloc 就能对付
+18:10 lh_mouse: jemalloc 也可以考虑
+18:10 cleamoon: 怎么这么多种....
+18:10 lh_mouse: 如果是特殊场合  比如嵌入式单线程   可以上 dlmalloc
+18:10 varna: 因为第三方malloc实现可以解决一些性能问题，而不必跟我一样罹患心理疾病
+18:12 cleamoon: 自己撸malloc？这基本快到自己撸内核的级别了
+18:12 libhanjian: malloc比内核还是好写吧
+18:12 libhanjian quit:Remote host closed the connection
+18:13 lh_mouse: 好写跟写好是两回事
+18:13 varna: 内核是让人直接放弃的
+18:13 varna: malloc是一个人也能写好，但写好难
+18:13 lh_mouse: https://github.com/lhmouse/MCF/blob/master/MCFCRT/env/thunk.c   NAIVE solution
+18:14 varna: ^ 按E可以赛艇
+18:16 varna: 好想爆个谁啊
+18:17 cleamoon: varna, 爆
+18:17 varna: 这幼女
+18:18 varna: 啊，忘了查邮箱
+18:18 varna: 幸好编辑部和岚月酱都没来信
+18:19 cleamoon: 已经下了0.1%
+18:20 varna: 233333
+18:32 cleamoon quit:Ping timeout: 260 seconds
+18:32 hoxily joined channel
+18:32 cleamoon joined channel
+18:33 cleamoon: 很多人都说js很快美神奇，有试过的吗
+18:34 varna: js经常把火狐搞崩溃
+18:34 varna: 这个我试过
+18:34 varna: kc wikia就直接弄死过我
+18:34 cleamoon: ......
+18:34 varna: 照例七点钟出去吃饭
+18:35 cleamoon: 那个是一页内容太多动态的更多的例子
+18:36 varna: 日本的wiki就做得很朴素
+18:36 cleamoon: 我这里的牛们都喜欢玩js
+18:37 cleamoon: 之前ff每次开kc wikia都要抱着必死的决心
+18:37 varna: js那样的语言说不定也好玩
+18:37 cleamoon: 他们写js编译器之类的.....
+18:38 varna: 解释器吧？
+18:38 varna: 或者他们要把js编译到什么上？
+18:38 cleamoon: 真是编译器，虽然不知道完成程度
+18:39 varna: 编译到什么语言？
+18:39 cleamoon: 不确定
+18:40 varna: 不过比起这个，先敬佩下愿意写过程式语言语法分析的人……
+18:40 varna: 文法有点多，让人@提不起劲
+18:40 cleamoon: 不过似乎他们还喜欢鬼畜c...
+18:40 varna: IOCCC?
+18:40 Mokou joined channel
+18:41 cleamoon: 有人还把stdlib重写了80%呢...  用一个hack过的clang...
+18:42 varna: malloc的wrapper在stdlib的范畴里，不过他为什么要跟clang挂钩
+18:43 varna: 懒得处理去掉缺省链接的情况么
+18:44 cleamoon: 他们想要一个支持template的好用的C，然后发现最好就是stdlib和编译器一起改，然后就一暑假改了个支持template，比linux原生快，满眼define的c........
+18:44 varna: 那种应该不用去骇clang吧
+18:45 varna: 我记得gcc是可以加挂pass的
+18:45 varna: 但为什么要动stdlib
+18:45 cleamoon: 不过只支持intel cpu linux 64 clang
+18:46 cleamoon: clang改的不多，似乎只是为了编译快点
+18:46 varna: stdlib里基本都是杂物，跟运行时环境关系最多的差不多是内存管理、程序中止、环境变量和宽字符
+18:46 varna: 这些里面他们要用到什么东西？内存管理要挂新的库，也可以直接hook掉malloc啊
+18:47 varna: 余下就是需要一个模板pass
+18:47 cleamoon: 那似乎改的是glibc？反正是那个包含c所有实现的玩意
+18:47 cleamoon: 我不确定是哪个
+18:47 varna: 应该是patch了一下glibc吧
+18:47 varna: 这个有可能
+18:48 cleamoon: 原生的都没用，就用了20%的原生代码，写的新的
+18:48 varna: 那么问题来了……系统调用wrapper留下了么
+18:48 cleamoon: 我看过一点，就感觉这凭什么没有bug
+18:48 varna: glibc可不止是C标准库
+18:48 cleamoon: 那我怎么知道
+18:48 varna: 那是C运行时库
+18:49 cleamoon: 运行时我确定改了
+18:49 cleamoon: 当然，他们不叫c
+18:50 varna: 这就有点麻烦了，我觉得这和他们的想法基本无关
+18:50 cleamoon: 他们只是想撸一个新语言
+18:50 varna: 感觉上patch掉的应该是ANSI C的部分
+18:50 varna: 然后补上系统调用wrapper
+18:50 varna: 之后在这个子集上测试
+18:50 cleamoon: ansi c确实都没了
+18:50 varna: 前端后端都用C, 在里面加PASS
+18:51 varna: 这个工程量一个暑假应该有戏
+18:51 cleamoon: 很有可能是这样
+18:51 varna: 只是有点绕远了……
+18:51 Mokou: 噗
+18:51 Mokou: 演习的时候遇到一个挂自己微博名的
+18:51 Mokou: 我过去一看，Py……
+18:51 varna: 那样还不如自己做一个前端，然后把后端交给llvm, 同时兼容Linux so
+18:51 varna: py...
+18:52 Mokou: “幌筵提督 PSO2三船 osu! Mania 码农(预定) ”
+18:52 cleamoon: 据说写了7k行define.....
+18:52 Mokou: 舰队名：“Python”
+18:52 varna: 那么多define...
+18:52 varna: 就冲这舰队名，我觉得也该拉出1cl5dd跟他决战
+18:52 Mokou: 婚北上单舰
+18:52 Mokou: 直接被武藏一炮拍死了
+18:52 cleamoon: 你改名叫perl
+18:52 varna: 哦，那就用KTKM跟他单挑
+18:53 Mokou: 挑不过
+18:53 varna: 敌人没有中破保护的，大丈夫
+18:53 Mokou: 我家北上大人只有Lv98
+18:53 varna: 足够了
+18:53 Mokou: 开幕一个miss直接跪了
+18:53 varna: 你要摆单横阵
+18:53 varna: 相信一舰也能横过来
+18:53 varna: 至少在我方雷命中的意味上
+18:54 Mokou: 你要知道在我这里是我方回避0，敌方回避充分大
+18:54 varna: 现在为了一点C接口，我都快把灵魂卖给撸西法了
+18:54 Mokou: 什么一堆七十五级的重巡带着双炮双电探，夜战对着Lv80的轻母连着三个二连打不中
+18:54 Mokou: 这都成日常了
+18:54 cleamoon: 羊驼子要变药娘啦
+18:54 Mokou: 羊驼子要变药娘啦
+18:54 varna: 我是要肛药娘
+18:55 Mokou: 日
+18:55 varna: 把灵魂卖给撸西法那位圣徒也就是对着伪娘动画兴奋而已
+18:55 Mokou: 一群洗地党……
+18:55 varna: 现在洗地党洗得我三天里要输两盘
+18:55 Mokou: 开幕大破我一个中破我三个
+18:55 varna: 我也就只好随他们去了
+18:55 cleamoon: 我都看yooooo撸过，并不觉得有什么问题
+18:55 varna: 实在懒得跟他们决战
+18:56 varna: 一天能赢够任务数目就行
+18:56 Mokou: 我又不能带照月
+18:56 Mokou: 而且对面这中破保护太他妈恶心忍了
+18:56 Mokou: 人
+18:56 varna: 你带小和跟他们嘟一嘟，虽然没什么用
+18:56 Mokou: 小和等级暂时够了，我得把经验让给别人
+18:57 varna: 洗地党不是这么就能拦住的
+18:57 Mokou: 主要是我得婚武藏
+18:57 varna: 我现在也就用十六万钢保一下剩下的人，结果今天上来就输一盘
+18:57 cleamoon: 洗地党是什么
+18:57 varna: 一上来好多好多流改
+18:57 varna: 然后己方就有一些爆炸的
+18:58 Mokou: 等武藏撤下去了我都不知道演习该怎么打
+18:58 cleamoon: 哦，那个
+18:58 varna: 挺麻烦的，现在欠雪还在爆炸呢
+18:58 Mokou: 主要是我现在的队伍比较小
+18:58 Mokou: 武藏日向衣笠（能代|矢矧）欠雪三隈
+18:58 varna: 大丈夫，不用大舰就准备好输了……
+18:58 Mokou: 我方还没出手，又中破两个了
+18:59 varna: 我最近的演习队是速吸欠雪十六万神通矶风沼跃
+18:59 Mokou: 而且他们还特喜欢带个潜艇
+18:59 Mokou: 而且你的反潜要员还总是会在可能的最后顺序出手
+18:59 cleamoon: 我现在演习就不知道怎么打，上练级队一天输9场，上主力带航母的遇到4个罚站cv
+18:59 varna: 打不掉是正常的
+18:59 Mokou: 而且你的反潜要员还总是会被集火
+18:59 varna: 我遇到带潜艇的直接单横
+18:59 varna: 因为我压根不带反潜装
+18:59 varna: 一百五的稀欧一也好，二十多的战神也好，一律直接炸
+19:00 varna: 炸不掉我就认了
+19:00 Mokou: 我带满三式套单横炸Lv9的潜艇都能miss
+19:00 varna: 别怂
+19:00 varna: 炸一千盘悲剧九十盘也不算什么
+19:00 varna: 反正我全员都反潜，炸不掉他我可能就直接gg了
+19:00 Mokou: 以对面潜艇的正常练度，炸一千盘我差不多能悲剧五百盘……
+19:00 varna: 索性陪对面耍耍
+19:01 varna: 反正一般遇到的潜艇都在六十级到逼婚这个段位上
+19:01 Mokou: 各种2SBB3CVB1SS
+19:01 Mokou: 我都不知道幌筵的大将都怎么了
+19:01 Mokou: 我一般是这样
+19:01 Mokou: 水上舰队带SS，SS一般70+
+19:01 Mokou: 纯SS，一般最低Lv120
+19:02 varna: 我宁可输也不跟对面全力决战
+19:02 varna: 没意思
+19:02 Mokou: 所以撤掉武藏以后就麻烦……
+19:02 Mokou: 还剩74K经验
+19:02 varna: 加一个开幕雷好了，虽说打不掉，但是有个期待
+19:03 Mokou: 木曾的开幕雷没卵用
+19:03 Mokou: 北大浪费经验
+19:03 varna: 十六万
+19:03 Mokou: 十六万更没用
+19:03 varna: 那个开幕雷足够扫掉大部分小船，打错常有，随她去
+19:03 Mokou: 我家十六万只比木曾高十级
+19:03 sismvg: 欢迎鉴赏 http://img.vim-cn.com/80/1d0b0a0d429116bdd712a6f3b5cb409a7d534a.png 
+19:04 Mokou: 5-5一个D败是945来着？
+19:04 varna: 是
+19:04 Mokou: OK
+19:04 Mokou: 等会我带着三隈去一趟
+19:04 varna: 三隈我最近不想带着演习了，六十出头凑合用吧
+19:04 Mokou: 三隈Lv29
+19:04 varna: 最上级的回避怎么都不行的，真要上场了就用联合舰队buff和刷闪来解决
+19:05 Mokou: 最上爸爸是信仰
+19:05 Mokou: 十五门主炮你怕不怕
+19:05 * Mokou 干了一瓶防冻液
+19:05 varna: 昨天晚上我久违地开了FL做了点复健练习
+19:06 Mokou: 我好久没碰FL……
+19:06 varna: 每次重新滚回去打的时候都感觉LF好爽啊
+19:06 cleamoon quit:Ping timeout: 252 seconds
+19:06 varna: 虽说吃敌人一个照面护盾就快不行了
+19:06 varna: 不过不跟他照面就ok
+19:06 Mokou: GFW你妈死了
+19:08 Mokou: 妈了个逼活动前浪费我一个桶
+19:08 varna: 给C做promise就是麻烦
+19:09 varna: 出去吃饭
+19:09 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151029151421]
+19:11 Mokou: 第五门三号炮GET
+19:14 cleamoon joined channel
+19:17 code_new joined channel
+19:26 Bluek4041 joined channel
+19:29 cleamoon_ joined channel
+19:32 cleamoon quit:Ping timeout: 246 seconds
+19:41 cleamoon_ quit:Ping timeout: 252 seconds
+19:44 wlemuel joined channel
+19:44 cleamoon_ joined channel
+19:54 Flandre quit:Ping timeout: 250 seconds
+20:04 varna: 好想肛个谁啊！
+20:06 varna: 果然今天不做南西，算下来也就三千钢
+20:06 varna: 总觉得这次活动之后我就会弹尽粮绝
+20:08 cleamoon_: 钢弹油都八万足够咸鱼了吧
+20:08 cleamoon_: 差不多都应该够咸鱼两遍了吧...
+20:09 varna: 两遍不知道，一遍加上你那一千几百桶如果不作死的话怎么都够了，说不定还能打甲
+20:12 libhanjian joined channel
+20:12 cleamoon_: 不甲，我只要船
+20:13 cleamoon_: 锁船太可怕
+20:13 varna: 看情况安排吧，有捞头就冲一把
+20:14 cleamoon_: 如果只有甲鱼最后图捞派拉斯，我就选择狗带
+20:14 cleamoon_: 至今为止最难的活动是哪次？
+20:15 varna: 如果把同时期提督水准算上，那大概是13秋
+20:15 varna: 如果论情报战，那就是14夏
+20:15 varna: 单纯恶意自然是15夏
+20:16 cleamoon_: 13秋的时候大家都不知道怎么玩？
+20:16 cleamoon_: 情报战是什么鬼
+20:17 varna: 13秋的时候大家练度和资源都不足，也没有现在这些捞资源方便的远征
+20:18 varna: 14夏锁船第一次实装，说是AL-MI两段锁，然而隐蔽地注明了希望攻略最深处的提督请温存战力
+20:18 cleamoon_: ........
+20:18 varna: 当然并没有人知道他们最后要在参与了AL、MI作战的舰不能出击、不能支援的情况下用常规队去打两个院长
+20:19 varna: 仅此一次，帖条不能参与非本阶段作战支援
+20:19 cleamoon_: 田中恶意极古老呀
+20:19 varna: 奖励是矶风
+20:19 cleamoon_: 噗
+20:19 varna: E5云龙，E4失禁风，E3熟练整备员，E2米空，E1春雨
+20:20 cleamoon_: 这是被封印的讥讽都出来做饭的节奏吗
+20:20 cleamoon_: 我怎么觉得米空比较好
+20:20 lhjkk joined channel
+20:21 varna: 米空和云龙算是阶段性奖励了
+20:21 varna: 即使不能通关，各层次的玩家也稍微有点甜头的意思
+20:22 FrankHB joined channel
+20:22 cleamoon_: 我有一种明年夏天敌人会出现联合舰队的预感
+20:23 varna: 那就黑暗了
+20:23 cleamoon_: 感觉是每年的夏天恶意都增加
+20:23 varna: 到时候就是「敌空母任务群本队」
+20:23 varna: 夏活总是比较难
+20:24 varna: 今天难得饿起来了，昨天感冒刚好，肠胃反应略重……
+20:25 cleamoon_: 你吃了什么，米空吗
+20:25 varna: 我吃了米空汁
+20:26 cleamoon_: 怪不得难受
+20:26 varna: 最近想吃得清淡点，基本就是素菜和米饭了，然后拌些米空汁和电浆
+20:26 cleamoon_: 那不都是灌肠用的东西吗
+20:27 varna: 米空汁可以促进人体合成夜战素
+20:27 cleamoon_: 清淡：茶水泡饭就咸鱼
+20:28 varna: 这样即使我困到沾床就倒也可以在睡前打三盘freelancer并且在意识不清的时候瞄准
+20:28 cleamoon_: 为什么不是dld
+20:29 Flandre joined channel
+20:29 varna: 因为困的时候实在做不到了，东方得头疼的时候打，可以镇痛
+20:29 iyzsong:  2333
+20:29 cleamoon_: 又困又头疼又感冒又想撸呢
+20:30 Flandre quit:Read error: Connection reset by peer
+20:30 Flandre1 joined channel
+20:30 varna: 一片感康下去，抓一本书躺床上，看不进去的时候就可以睡了
+20:32 Flandre2 joined channel
+20:33 libhanjian left channel:"Leaving"
+20:34 cleamoon_: 我以为你会是左手自由幸运E，右手东方地灵地，脚踩米空H抱枕，头顶九瓶泡腾剂呢
+20:34 Flandre1 quit:Ping timeout: 240 seconds
+20:35 varna: 三十八度烧大半天不退的时候我才会考虑吃扑热息痛
+20:36 cleamoon_: 你不试试座药
+20:37 varna: 不试了
+20:37 wlemuel quit:Ping timeout: 240 seconds
+20:37 cihsop joined channel
+20:37 varna: 我觉得妹子可能有退烧效果，然而我并没有女朋友
+20:37 varna: 所以感冒的时候我忠实地执行了对上呼吸道感染第一法：喝热水
+20:38 cihsop: 应该是喝药
+20:38 varna: 我不是板蓝根信徒
+20:38 cihsop: 上呼吸道感染喝水你确定有用。
+20:38 cleamoon_: 可怜的羊驼子连左手都没有
+20:38 varna: 来片感康压制下症状就好了
+20:38 cihsop: 身体素质好
+20:38 varna: 不是治病，只是调理下
+20:38 cleamoon_: 从鼻子里喝肯定管用
+20:38 iyzsong: - -b
+20:39 varna: 动辄吃药是身体好的人或者病入膏肓的人才做的事情
+20:39 varna: 确认是流感的话倒是可以用抗病毒的东西，然而看情况
+20:39 cleamoon_: 那我这种打死不吃药的呢
+20:39 varna: 你可以练kuma轮功
+20:39 varna: 进行立体的航空炮雷击战之后应该会有起色
+20:40 cihsop: 库 码 论功。。。
+20:40 varna: kumarinkou
+20:40 varna: 只是多了个尾音而已
+20:40 varna: 而且岚月酱是五岁幼女吧
+20:40 varna: 幼女吃药影响第二性征发育
+20:40 cleamoon_: 我开始练kuma了
+20:41 varna: kuma不错，不过立绘我不喜欢……
+20:41 wlemuel joined channel
+20:41 cleamoon_: 如果我宣传越吃越大是不是第二天药店就被买垮了
+20:41 RivDo quit:Ping timeout: 240 seconds
+20:42 varna: 你得到国内来说
+20:42 cleamoon_: kuma还好，尤其是和服的
+20:42 cleamoon_: 多摩不行，他也配叫猫
+20:42 varna: 在瑞典，说不定你的说服力还没有宣传杀光犹太人的新教徒多
+20:43 Mokou: 双11破财64元
+20:43 cleamoon_: 我的说服力还是很高的，我只要在饭馆贴上我们用福岛的鱼那客人能少一半
+20:43 varna: 233333
+20:44 varna: 鬼才信那些鱼要绕半个地球到你们那餐馆
+20:44 cleamoon_: 有个姐们上次就问我来得......
+20:44 varna: 那姐们有脚么
+20:44 varna: 没脚的话也许是春雨姬装的
+20:46 Mokou: 然而福岛县的面积相当于两个斯都省……
+20:46 cleamoon_: 那姐们问了半天三文鱼的产地，然后要了份素的......
+20:46 wlemuel quit:Ping timeout: 250 seconds
+20:46 varna: 点的什么菜？
+20:46 cleamoon_: 素的寿司
+20:47 wlemuel joined channel
+20:47 cihsop: git clone git@github.com:w15tp/blog
+20:47 varna: 寿司我只吃过海产品的……素的用什么？
+20:47 hoxily quit:Read error: Connection reset by peer
+20:47 cihsop: 已经存在的路径
+20:47 varna: https://github.com/w15tp/blog/blob/gh-pages/index.html ...
+20:47 cleamoon_: 鳄梨豆腐海草的卵之类的
+20:47 cihsop: 这个指令不是从 我网站里的内容下载到电脑里？
+20:48 varna: cihsop: clone产生一个git仓库的本地副本
+20:48 varna: cleamoon_: 听着不好吃，把鳄梨去掉也许就好吃了
+20:48 Flandre2 quit:Read error: Connection reset by peer
+20:49 cleamoon_: 羊驼子不喜欢鳄梨？
+20:49 varna: 我没吃过，只是想像一下牛油果这个东西……
+20:49 Flandre2 joined channel
+20:49 cihsop: 不就是直接把你指定的路径文件直接复制（克隆）到你本地里？
+20:49 cihsop: 然后又有个指令可以让你本地的上传到网络里。
+20:50 cihsop: 网上是这么解释的。
+20:50 cihsop: clone(克隆)代码、修改
+20:50 cihsop: 在任意盘根目录下(本例为D盘)把代码clone下来
+20:50 cihsop: [plain] view plaincopy
+20:50 cihsop:     $ git clone git@github.com:itmyline/blog.git  
+20:50 varna: cihsop: 他们这么说你就信么
+20:50 varna: 而且你的github repo旁边明明有一个用来clone的URL
+20:50 varna: 用那个就行
+20:50 iyzsong: 油梨记得并不是这个样子 没有这么大个核呀
+20:51 varna: git这东西维护一个版本仓库，而不是一个网盘
+20:51 cleamoon_: 哦，其实呢，还是挺，难吃的...
+20:52 varna: 我觉得用海带和豆腐做的话应该会挺好吃
+20:53 cihsop: 维护一个版本仓库“不就是同步的过程” 和网盘什么区别。
+20:53 cleamoon_: 成熟而且新鲜的鳄梨还好，但是非常难挑
+20:53 cihsop: “虽然很蠢可我还是不懂“
+20:54 varna: 版本仓库会维护历史信息
+20:54 cleamoon_: +，还有自创的手卷之类的
+20:54 varna: 看一下你自己的提交历史就大致有个感觉了
+20:54 varna: 也会试着处理冲突，可以做一点回滚，诸如此类
+20:55 cihsop: 对了clone的时候如果本地有 blog文件时。（同步过了）
+20:55 cihsop: 我再重复执行指令 就没法成功。
+20:55 cleamoon_: 哦哦哦，我好像弄到朝潮了
+20:55 cihsop: 不是应该直接覆盖？
+20:56 varna: 你重复执行什么？
+20:56 varna: 连续两次clone?
+20:56 cihsop: 恩
+20:56 varna: ...
+20:56 cihsop: 如果嫌麻烦能不能把帮助页面发过来？
+20:56 cihsop: 百度这里实在没找到
+20:56 varna: man git
+20:56 cihsop: 一大堆教程。
+20:56 cihsop: 哦
+20:58 varna: clone之后如果需要同步，pull一下（假如你只有一个分支，这无所谓）
+20:58 cihsop: 恩
+20:58 iyzsong: cihsop: https://git-scm.com/book/zh/v2
+20:59 cihsop: 可爱的中文。
+20:59 sismvg joined channel
+21:01 sismvg_ joined channel
+21:04 sismvg quit:Ping timeout: 276 seconds
+21:06 sismvg joined channel
+21:06 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=eb129bbe53fbb2fb342b581a7f482043/0c993112b31bb0514ae520cb307adab448ede07b.jpg
+21:06 sismvg: 2333333
+21:06 sismvg: 作者你在哪里学的
+21:07 Flandre2 quit:Ping timeout: 246 seconds
+21:07 Flandre2 joined channel
+21:07 iyzsong: 2333
+21:08 cihsop: 直接记录快照，而非差异比较
+21:08 cihsop: 这算什么优势？
+21:09 cihsop: 前者比后者快？（因为后者是 |“比较”|）？
+21:09 asdf2 joined channel
+21:11 cleamoon_: qq？我看到了什么
+21:11 varna: cihsop: 节省些计算
+21:12 cleamoon_: 难道古老的版本不转换成diff存？
+21:12 cihsop: 哦
+21:13 asdf2: 什么？
+21:13 varna: cleamoon_: 拖历史的时候能少算点
+21:14 xxxxxxxx joined channel
+21:14 lh_mouse: asdf2, 爆照
+21:14 Mokou: varna: 我现在突然觉得Kusari那边也是在玩历史梗……
+21:14 varna: 设定上是
+21:14 varna: 不过我觉得玩法一般般
+21:15 asdf2: 这都行
+21:15 Mokou: 现在的Kusari是法鸡傀儡
+21:15 Mokou: 戊辰战争中援助德川幕府的就是法国……
+21:15 cleamoon__ joined channel
+21:16 varna: 可惜GRN的HF太丑了
+21:17 xxxxxxxx: 昨天说的神族梦遗的剧情 圣堂武士 塔达林 净化者求同存异 统一抗战
+21:18 cleamoon_ quit:Ping timeout: 252 seconds
+21:18 xxxxxxxx: 多时髦
+21:18 varna: 塔达林都软化了？！
+21:18 varna: 他们是不是还要戒毒？
+21:18 Flandre3 joined channel
+21:18 xxxxxxxx: 不 被埃蒙骗了之后像复仇
+21:19 varna: 这剧情写的
+21:19 cleamoon__: 统一抗战，然后被淦翻，结局，神作
+21:19 varna: 有没有说Duran到底是谁？
+21:20 xxxxxxxx: 反正埃蒙的那个手下被干死了
+21:20 varna: 那大概就是他
+21:20 xxxxxxxx: 我一直以为那个就是杜兰
+21:21 Flandre2 quit:Ping timeout: 252 seconds
+21:21 cihsop: varna:没法对你ping ?
+21:21 varna: 咦，我的客户端不响应CTCP Ping了》
+21:22 varna: 咦，我的客户端不响应CTCP Ping了？
+21:22 varna: 22:21 CTCP ERRMSG reply from cihsop: PING  :Unhandled CTCP command
+21:22 xxxxxxxx: 不对还有隐刀那个部落也抗战了
+21:22 cihsop: 哦
+21:22 varna: 没有问题的样子
+21:22 varna: 我收到了lhj的测试
+21:22 xxxxxxxx: 最后除了塔达林之中依然不愿加入圣堂武士的一部分人 都统一了
+21:22 lhjkk: 我/PING varna 了一次
+21:23 cihsop: 成功了？
+21:23 xxxxxxxx: 然而这个结果我觉着并不算好
+21:23 lhjkk: 但/CTCP varna ping不太对
+21:23 cleamoon__ quit:Ping timeout: 240 seconds
+21:23 xxxxxxxx: 因为凯姐成了萨尔纳加...
+21:23 lhjkk: ctcp version正常
+21:23 asdf2: 这东西能发照片
+21:23 asdf2: ？？
+21:23 cihsop: 同样
+21:23 cihsop: linux x86是什么鬼。
+21:24 varna: 凯莉根变成Xel'Naga算是正解吧
+21:24 cihsop: 不是 ubuntu fedora 或者红旗。
+21:24 cihsop: arch也不是
+21:24 varna: 不是所有的包都带发行版标识的
+21:24 cihsop: 其实我只想找找 跟某人私聊的指令。
+21:24 varna: /msg
+21:25 lhjkk: 用/msg chsop fxxkyou
+21:25 cihsop: 有时候见你们说话都是 w15tp:  此时我的ID是深色的。
+21:25 xxxxxxxx: 渣渣拉领导虫群不算好事 而神族费了八辈子劲 最后凯姐出来收好处
+21:25 varna: 那个是客户端的处理
+21:25 varna: 凯莉根的进化也是Overmind的计划吧
+21:25 asdf2: 我这见到的你是红色的
+21:25 varna: 本来Z和P就是Xel'Naga的两线
+21:26 cihsop: 你见到了我的跟你说的 “ ihjkk: like this"  此时你的ID是深色？ 而且没有另外开窗口？
+21:26 xxxxxxxx: 不是主宰的计划 在萨尔纳加居住的地方有语言刀锋女王会成为萨尔纳加
+21:26 xxxxxxxx: 预言
+21:27 asdf2: 洗洗先
+21:27 varna: 这剧情真悲剧啊
+21:28 xxxxxxxx: 而且萨尔纳加轮回的守护者是个长得像克总的玩艺...
+21:28 varna: 噗噗噗
+21:28 lhjkk: cihsop, like this
+21:28 varna: 这些人的想象力到头了么
+21:29 varna: 一个纯粹能量体都比克总帅啊
+21:29 cihsop: lhjkk, 这也是高亮？
+21:29 cihsop: 我这边看着不是/。
+21:29 varna: 比如用一整个恒星来维持的能量体
+21:29 lhjkk: cihsop, 看到了
+21:29 cihsop: OK/。
+21:29 cihsop: 问题解决。虽然这不算“问题”
+21:30 xxxxxxxx: 他用塔萨达的身份呼唤凯姐和大主教去就他
+21:30 randomclown joined channel
+21:30 xxxxxxxx: 就出来之后长得像个克总...
+21:30 varna: ...
+21:30 varna: 原先看到的塔萨达也是他？
+21:31 varna: 另外阿坦尼斯就是一代里那个不穿裤子就上飞机的
+21:31 randomclown: 五百年不上IRC, 名字都被freenode删了
+21:31 xxxxxxxx: 我迷糊....
+21:31 varna: randomclown: 欢迎回来，前段时间确实清理了nick
+21:31 sismvg: 虚空之遗精校版
+21:32 randomclown: ugh, xterm的unicode支持真差
+21:32 randomclown: be right back
+21:32 randomclown left channel:"WeeChat 1.3"
+21:38 randomclown joined channel
+21:38 varna: 啊啊啊啊啊啊啊啊啊啊啊啊啊啊药娘都哪去了
+21:39 randomclown: close
+21:40 Mokou: GIMP作图真他妈麻烦……
+21:40 cleamoon joined channel
+21:41 varna: 夯！
+21:41 Mokou: 我总不能手动算插值然后一个一个像素点着平滑……
+21:42 varna: 你要作曲线啊
+21:43 Mokou: +
+21:43 varna: 凭手感的贝塞尔不行的话就用octave吧？
+21:43 Mokou: 已经有了
+21:43 cleamoon: 看到这捉急剧情我突然不想要war4了
+21:43 Mokou: 主要是边缘全是锯齿
+21:43 varna: 好好玩war3，就当什么也没发生过……
+21:43 varna: war3已经是战术动作游戏的杰作了
+21:44 varna: 啊，算错了……今天弄来4k钢
+21:44 varna: 不过要把资源爆发上去果然还得南西
+21:44 cleamoon: 不过虫姐变成了Xel’Naga又能怎么样
+21:45 varna: 大概就可以取个发明出家为尼……
+21:45 varna: 法名*
+21:45 xxxxxxxx: 能击败埃蒙
+21:45 cleamoon: 噗
+21:45 varna: 埃蒙的角色类似于萨格拉斯吧……
+21:46 xxxxxxxx: 埃蒙似乎是之前被迫升格成萨尔纳加的
+21:46 randomclown joined channel
+21:46 Mokou: varna: gimp能不能对一个已经存在的图形的边缘进行平滑操作？
+21:46 Mokou: 一堆锯齿看着太他妈蛋疼了
+21:46 xxxxxxxx: 他觉着天人两格 一次又一次的轮回不是他想要的
+21:47 varna: Mokou: 不能，推荐你复制一份图层，然后对副本用一次选择性高斯模糊和一次钝化蒙版，然后微调图层透明度和叠加方式试试
+21:47 cleamoon: 能干死混合物就好了，有A梦一个也做不了什么，又不是姓哆啦的
+21:47 varna: xxxxxxxx: 这怨妇的剧情……
+21:48 cleamoon: 嘛，不管剧情了，好玩就好
+21:48 cleamoon: 别是真重制了一下sc1就发布了
+21:49 randomclown: 很久以前我在#freenode求到了一个cloak现在#freenode里居然没人哩了
+21:49 varna: ……
+21:49 varna: 大丈夫，果奔吧
+21:50 varna: 不行就挂个代理
+21:50 randomclown: haha
+21:50 varna: 总之欢迎回来，好久不见
+21:51 sismvg: http://www.ithome.com/html/it/188161.htm
+21:51 cleamoon: 这是谁来的？
+21:51 varna: 虽说这里的话题仍然大部分时候很废萌，多数时候很色情
+21:51 varna: randomclown以前跟我介绍过binary lambda calculus
+21:51 varna: 我大四的时候吧
+21:51 cleamoon: soga
+21:51 sismvg: 还有很多哲 学家
+21:51 randomclown: 多少年了？
+21:52 varna: 三年了
+21:52 cleamoon: 老夫老妻了
+21:52 varna: 子在川上曰，逝者如斯夫，先刷个闪
+21:53 sismvg: 果然e-hentai有一群专门抓loli本的人
+21:53 sismvg: 抓住就删
+21:53 randomclown quit:Changing host
+21:53 randomclown joined channel
+21:53 varna: 萝莉本我多数时候喜欢看全年龄的
+21:53 randomclown: sad panda啦
+21:54 randomclown: sismvg:
+21:54 sismvg: 正太也抓。。
+21:54 varna: 这药元四开始搞基……
+21:54 varna: 频道里的基佬真是越来越多了
+21:54 randomclown: brb
+21:54 randomclown quit:Quit: Leaving
+21:54 sismvg: 但是正太x大姐姐的时候却放过了。。无法理解
+21:55 randomclown joined channel
+21:56 randomclown: 现在都工作了吧？
+21:56 sismvg quit:Quit: sleep
+21:57 varna: 没实习入职
+21:58 cleamoon: 每次捞到船我都想，为什么击沉了敌人的船我能捞到船呢，而且是满血带装备的，可是当时却不能立刻用，应该是击沉了之后金光四射，然后浮上来一个女神，她说“你掉下去的是这些物体还是这个舰娘呢”然后我们很诚实的说我们掉下去的都是弹药，然后女神就把他们都给我们了，但是因为没有激活，新舰娘不能用，只能拖
+21:58 cleamoon: 回去，所以才疲劳，回港后把敌人的沉船打碎榨汁喂给舰娘就能复活了
+21:58 randomclown: 时间真是不等人啊
+21:59 randomclown: sismvg不知道exhentai吗？
+21:59 cleamoon: 没捞到船，甚至没攻击也会累，因为每次出击见到敌军就会想起自己人生第一次吃的是什么，导致精神疲劳
+22:00 varna: 吃的是瘪么……
+22:00 cleamoon: 这个随机小丑和羊驼子一个学校？
+22:00 varna: 不知道
+22:01 cleamoon: 吃的是敌军的尸体呀
+22:01 varna: 只是在我建频道挺早的时候就冒泡的人了
+22:01 varna: 这频道倒也还活了不少时间，制造了相当程度的工口情报，我TM还真是对不起社会啊
+22:03 cleamoon: 你可以自掘于人民以谐天下
+22:03 varna: 我觉得该掘了红旗
+22:03 randomclown: pt站有人玩吗？
+22:04 varna: 我基本不耍这些下载类的……
+22:05 randomclown: 国外很火啊
+22:05 varna: 尤其是对上传有要求的东西，因为我这里屋子出口路由器的带宽并不好
+22:05 xxxxxxxx: 工口情报?
+22:05 cleamoon: 劈腿站？
+22:05 varna: 多数时候我会手工ban掉努力上传的用户
+22:05 varna: 所以我自己也不会去榨这个带宽
+22:06 randomclown: 我一般用盒子
+22:06 varna: cleamoon: 基本上就是受邀请的私人B2B
+22:06 varna: 不会被强行当公交车
+22:08 cleamoon: soga
+22:08 cleamoon: 那咱们弄一个？
+22:08 varna: 我不弄，对这个兴趣缺缺……
+22:09 cleamoon: 肛一肛你就有了
+22:09 varna: 爆红旗吧
+22:09 Mokou: 你自爆
+22:09 cleamoon: Mokou, 爆
+22:09 cihsop: 有时候觉得每天上上班。“类似老婆热炕头”的那种理想实在是无聊。
+22:09 Mokou: cleamoon: 肛
+22:10 cleamoon: cihsop, 实在理解不了你的“”是什么意思
+22:11 cihsop: 他们也许并不满意现在的工作。“就像我的同事，老员工。干了好几年工资不高。而他们也大多25+，他们是无能为力争取更好地，还是“习惯于接受事实”？“
+22:12 cihsop: 又脑抽了。这问题我都觉得超级中二。
+22:12 varna: 孔老二曾经说过，学而不思则罔、思而不学则殆
+22:12 varna: 这话挺好的
+22:12 cleamoon: 马上25却毕业还早的感受到了巨大的负能量冲击
+22:12 varna: 你才五岁
+22:12 cihsop: 5岁+1
+22:12 cleamoon: 快25了
+22:13 varna: 是五岁幼女
+22:13 randomclown: 你们都比我大！
+22:13 cihsop: 起码你会这些技能。“有点歧视。
+22:13 cleamoon: 就算是五岁也快25了
+22:13 varna: randomclown: 你是说，你难道是三岁幼女！
+22:13 varna: prpr
+22:13 varna: 総員！舔击战用意！
+22:13 cihsop: “其实工作做好了干什么都一样。只是有时候“习惯”的力量还真是可怕“
+22:13 varna: 舔！
+22:14 randomclown: varna, 对
+22:14 varna: prpr
+22:14 cihsop: 上年在外地工作非常“不甘心“，天天努力学习。回到家里后“舒适“的工作环境真是。。。
+22:14 cihsop: 这就是“保暖不思进取？”
+22:15 cihsop: 不说了。“浓浓的中二之气”
+22:15 * varna 不思进取
+22:15 varna: 说错了
+22:15 * varna 不练香取
+22:15 cihsop: 不练香取？
+22:16 * Mokou 不练香取
+22:16 lh_mouse: 寝取
+22:16 varna: 这耗
+22:16 * lh_mouse slaps varna around a bit with 鱽鲇鲈鲜鲟鲑鲫鲤鳕鳗鳟鳝
+22:16 * varna nanodies
+22:16 varna: cihsop: https://en.wikipedia.org/wiki/Japanese_cruiser_Katori
+22:17 cleamoon quit:Ping timeout: 240 seconds
+22:18 varna: 说起来，现在表面上被RST的就是zh.wikipedia.org啊
+22:18 cihsop: o.O
+22:21 varna: 啊啊啊啊好想侵犯个谁啊，可爱就行
+22:22 cleamoon joined channel
+22:26 Mokou: 睡了
+22:26 Mokou: 诸君武运
+22:26 Mokou quit:Quit: 睡觉
+22:28 varna: 我馹！
+22:28 varna: 三队的闪又掉完了……明天再说
+22:39 varna: 撤了
+22:39 varna: 武运
+22:39 varna quit:Quit: leaving
+22:41 cleamoon quit:Ping timeout: 246 seconds
+22:47 wlemuel quit:Ping timeout: 264 seconds
+22:48 cihsop: 武运 ？什么意思
+23:04 cihsop quit:Quit: cihsop
+23:13 Flandre3 quit:Read error: Connection reset by peer
+23:14 Flandre3 joined channel
+23:14 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 42.0/20151103081951]
+23:20 Flandre4 joined channel
+23:23 Flandre3 quit:Ping timeout: 250 seconds
+23:26 Flandre4 quit:Ping timeout: 252 seconds
+23:27 Flandre4 joined channel
+23:28 cleamoon joined channel
+23:32 cleamoon quit:Ping timeout: 246 seconds
+23:40 cleamoon joined channel
+23:44 yzld2002 quit:Remote host closed the connection
+23:46 cleamoon quit:Ping timeout: 250 seconds
+23:49 Flandre joined channel
+23:49 Flandre4 quit:Read error: Connection reset by peer
+23:50 Flandre1 joined channel
+23:54 Flandre quit:Ping timeout: 265 seconds

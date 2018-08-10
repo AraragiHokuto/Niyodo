@@ -1,0 +1,351 @@
+00:00:T2: = =
+00:02:T2: 先碎叫了，腋间愉快。
+00:02:T2 quit:Quit: Leaving
+00:02:lh_cat: 我要妹子
+00:04:AngelC: 碎叫
+00:05:AngelC quit:Quit: Leaving
+00:06:JQK_Phone joined channel
+00:15:code_new quit:Remote host closed the connection
+00:15:cleamoon__ quit:Ping timeout: 258 seconds
+00:19:erhandsome quit:Quit: leaving
+00:30:cleamoon__ joined channel
+00:53:lh_mouse quit:Read error: Connection reset by peer
+01:49:JQK_Phone quit:Quit: struct zuo {bool die;}; zuo si[1000];
+02:18:izmntuk_ joined channel
+02:27:izmntuk quit:*.net *.split
+02:27:cleamoon quit:*.net *.split
+02:31:cleamoon joined channel
+02:39:izmntuk_ quit:Quit: Reconnecting
+02:40:izmntuk joined channel
+03:02:izmntuk quit:Ping timeout: 265 seconds
+03:11:izmntuk joined channel
+03:18:cleamoon quit:Remote host closed the connection
+03:27:xxxxxxxx quit:Quit: Leaving...
+03:38:cleamoon joined channel
+04:03:izmntuk quit:Ping timeout: 250 seconds
+05:16:cleamoon quit:Ping timeout: 272 seconds
+05:17:boosure joined channel
+05:35:cleamoon joined channel
+08:26:whocares_2 quit:Ping timeout: 258 seconds
+08:28:whocares_2 joined channel
+08:50:whocares_2 quit:Ping timeout: 272 seconds
+08:51:whocares_2 joined channel
+09:07:lh_mouse joined channel
+09:11:iyzsong: lh_cat: done, cat@108.61.250.36
+09:34:T2 joined channel
+09:38:yzld2002 joined channel
+10:00:whatofor joined channel
+10:06:lh_mouse: iyzsong, 0.0
+10:14:iyzsong: lh_mouse: 能不能用啊..
+10:15:iyzsong: lh_mouse: 我把你用户名换成lh_mouse了 - -b
+10:16:lh_mouse: 0.0
+10:17:lh_mouse: lh_mouse@lhmouse-dev:~$ ssh -i ~/.ssh/id_rsa lh_mouse@108.61.250.36
+10:17:lh_mouse: Warning: Permanently added '108.61.250.36' (ECDSA) to the list of known hosts.
+10:17:lh_mouse: [lh_mouse@insane:~]$ 
+10:34:cleamoon__ quit:Ping timeout: 250 seconds
+10:35:cleamoon quit:Ping timeout: 250 seconds
+10:37:cleamoon joined channel
+10:38:cleamoon__ joined channel
+10:42:erhandsome joined channel
+11:06:lh_mouse: geordi, { istringstream iss("0123456789"); char temp[5]; iss >> temp; cout << !!iss, temp; }
+11:06:geordi: true, 0123456789*** stack smashing detected ***: /geordi/run/t terminated [+ 1 discarded line]
+11:06:lh_mouse: geordi, { istringstream iss("0123456789"); char temp[5]; iss >> setwidth(5) >> temp; cout << !!iss, temp; }
+11:06:geordi: error: 'setwidth' was not declared in this scope
+11:06:lh_mouse: geordi, { istringstream iss("0123456789"); char temp[5]; iss >> setw(5) >> temp; cout << !!iss, temp; }
+11:06:geordi: true, 0123
+11:17:erhandsome quit:Ping timeout: 240 seconds
+11:17:erhandsome joined channel
+11:18:lh_mouse_ joined channel
+11:21:lh_mouse quit:Ping timeout: 258 seconds
+11:40:erhandsome quit:Ping timeout: 245 seconds
+11:41:erhandsome joined channel
+11:53:erhandsome quit:Ping timeout: 240 seconds
+11:54:Xilzzerts quit:Read error: Connection reset by peer
+11:54:AngelC joined channel
+11:56:erhandsome joined channel
+11:57:AngelC: qaq
+11:57:AngelC: QAQ
+11:57:AngelC: 古代汉语。。
+11:59:lh_mouse_ quit:Quit: Meow
+11:59:lh_mouse joined channel
+12:23:lh_mouse: geordi, << L'喵'
+12:23:geordi: ?
+12:23:lh_mouse: geordi, << std::hex <<int(L'喵')
+12:23:geordi: 55b5
+12:41:AngelC quit:Quit: Leaving
+12:46:Stevearzh quit:Quit: Quit...
+12:48:Stevearzh joined channel
+13:03:erhandsome quit:Remote host closed the connection
+13:03:erhandsome joined channel
+13:29:lh_mouse: geordi, { istringstream iss("trueaabbcc"); bool b; char temp[100]; iss >>std::boolalpha >>b >>temp; cout <<temp; }
+13:29:geordi: aabbcc
+13:31:lh_mouse: geordi, replace true with TRUe
+13:31:geordi: .N=�
+13:31:lh_mouse: geordi, insert >>std::uppercase after boolalpha
+13:31:geordi: .N=�
+13:31:lh_mouse: geordi, replace TRUe with TRUE
+13:31:geordi: .N=�
+13:31:lh_mouse: geordi, show
+13:31:geordi: { istringstream iss("TRUEaabbcc"); bool b; char temp[100]; iss >>std::boolalpha>>std::uppercase >>b >>temp; cout <<temp; }
+13:35:condy joined channel
+13:38:JustinLei joined channel
+13:42:condy: https://images.plurk.com/7iqWdtMGAjUh4AfopKuxPX.jpg
+13:42:condy: 233
+13:43:AngelC joined channel
+13:44:AngelC: 哈。。
+13:47:lh_mouse: TwitchGG, 新人？
+13:48:TwitchGG: lh_mouse: 在这算新人吧
+13:48:condy: 这个nick好像在啊见过。
+13:48:condy: s/啊/哪
+13:49:TwitchGG: 啊？哪儿啊？
+13:51:condy: zhihu?
+13:51:lh_cat: IP地址: 112.1.113.112江苏省常州市 移动
+13:51:TwitchGG: 哦，我知乎确实也有这个帐号
+13:52:AngelC: 。。。
+13:52:TwitchGG: 但是没回答过问题也没有提过问题啊
+13:52:TwitchGG: 。。。
+13:52:condy: ...
+13:52:condy: 印象中以GG结尾的
+13:52:TwitchGG: ：）
+13:53:AngelC: 话说安卓有Irc客户端么。。
+13:54:condy: yaaic.
+13:56:lh_mouse: geordi, << std::uppercase <<std::boolalpha <<true;
+13:56:geordi: true
+13:56:lh_mouse: geordi, replace true with 1.0/0.0
+13:56:geordi: INF
+13:57:lh_mouse: geordi, prepend no before boolalpha
+13:57:geordi: INF
+13:57:lh_mouse: geordi, show
+13:57:geordi: << std::uppercase <<std::noboolalpha <<1.0/0.0;
+13:57:lh_mouse: 逗比
+13:57:TwitchGG: ？
+13:58:TwitchGG: 程序猿？
+13:59:TwitchGG left channel:"Linkinus - http://linkinus.com"
+14:00:TwitchGG joined channel
+14:00:AngelC2 joined channel
+14:00:lh_cat: geordi: { printf("%f", 1.0 / 0.0); }
+14:00:geordi: inf
+14:00:lh_cat: geordi: use %F
+14:00:geordi: INFf
+14:00:AngelC2: ...
+14:00:lh_cat: geordi: show
+14:00:geordi: { printf("%Ff", 1.0 / 0.0); }
+14:01:lh_cat: geordi: undo and replace %f with %F
+14:01:geordi: INF
+14:01:lh_cat: stream 就是个逗比
+14:03:pocmon joined channel
+14:10:lhanjian joined channel
+14:10:whatofor quit:Ping timeout: 245 seconds
+14:11:lhanjian: T2: 考完了？
+14:12:T2: lhanjian, 明天早上9点
+14:12:lhanjian: soga
+14:12:T2: 我只想说卧槽他妈
+14:12:T2: 2333
+14:13:lhanjian: 2333
+14:14:condy quit:Ping timeout: 250 seconds
+14:14:whatofor joined channel
+14:14:T2: 死记硬背中 无解节奏
+14:15:lhanjian: 淡定放松
+14:15:T2: 蛋定我就又要晚一年毕业了
+14:15:T2: = =
+14:16:T2: 毕不了业我一定去炸了教育部，不开玩笑。
+14:16:lhanjian: 放心，再糟糕，你还能调剂嘛
+14:17:T2: 至少三硝酸甘油酯怎么做我还是记得的。
+14:17:lhanjian: 别想太多，放松看书
+14:18:T2: 嗯
+14:21:T2: 要做成实用炸弹不挥发还要填充物和引信麻烦点
+14:30:lhanjian quit:Quit: Yaaic - Yet another Android IRC client - http://www.yaaic.org
+14:30:lhanjian joined channel
+14:31:lhanjian quit:Client Quit
+14:32:lhanjian joined channel
+14:32:T2: 话说小时候做来玩把煤房给炸塌了orz
+14:32:condy joined channel
+14:32:lhanjian: t2的黑历史真强大
+14:33:T2: 那个时候呆萌
+14:33:T2: 相当物理学家来着
+14:33:T2: 想当
+14:34:T2: 结果现在被大物坑，人参就这么讽刺。
+14:34:lhanjian: 噗
+14:35:T2: 2333
+14:42:AngelC2 quit:Ping timeout: 245 seconds
+14:46:AngelC2 joined channel
+14:46:AngelC2: ……
+14:46:AngelC2: 古代汉语又要废
+14:47:AngelC2: 1000多页……
+14:47:AngelC2: TM比标准还难读……
+14:49:iyzsong: orz
+14:49:Stevearzh quit:Read error: Connection reset by peer
+14:52:pocmon quit:Quit: 飘来又飘去～
+14:55:T2: AngelC, 2333
+14:58:Stevearzh joined channel
+15:03:AngelC2 quit:Ping timeout: 244 seconds
+15:15:lhanjian quit:Ping timeout: 256 seconds
+15:22:condy quit:Ping timeout: 250 seconds
+15:29:condy joined channel
+15:39:condy quit:Ping timeout: 250 seconds
+15:51:condy joined channel
+16:03:AngelC2 joined channel
+16:10:AngelC2 quit:Ping timeout: 255 seconds
+16:13:AngelC2 joined channel
+16:15:izmntuk joined channel
+16:18:AngelC2 quit:Ping timeout: 240 seconds
+16:18:AngelC2 joined channel
+16:31:leocook joined channel
+16:53:condy: iyzsong: thx.
+16:53:condy: 终于会用了..
+16:54:hysw: rm -rf condy
+16:54:condy: QAQ
+16:59:whocares_2 quit:Remote host closed the connection
+17:03:whocares_2 joined channel
+17:05:iyzsong: o.o
+17:06:iyzsong: condy: 用mosh登录 很流畅
+17:12:condy quit:Ping timeout: 250 seconds
+17:15:condy joined channel
+17:22:condy quit:Ping timeout: 250 seconds
+17:25:erhandsome quit:Ping timeout: 258 seconds
+17:25:erhandsome joined channel
+17:28:condy joined channel
+17:31:condy: vps上也用Nix啊..
+17:45:TwitchGG quit:Ping timeout: 244 seconds
+17:48:GODDOG joined channel
+17:49:condy quit:Remote host closed the connection
+17:54:YoumuSama joined channel
+18:16:GODDOG quit:Quit: leaving
+18:16:GODDOG joined channel
+18:18:YoumuSama quit:Ping timeout: 240 seconds
+18:19:YoumuSama joined channel
+18:21:lh_mouse: 113.140.86.66
+18:21:xxxxxxxx joined channel
+18:24:YoumuSama: O.O
+18:24:YoumuSama: nick不一样了.
+18:24:AngelC: what happend。。
+18:25:YoumuSama: 查水表。
+18:25:boosure quit:Quit: Get your hand off of it
+18:31:xxxxxxxxx joined channel
+18:31:xxxxxxxx quit:Read error: Connection reset by peer
+18:38:Plough joined channel
+18:54:AngelC2 quit:Ping timeout: 245 seconds
+19:11:AngelC: 话说。。
+19:11:YoumuSama: ?
+19:12:YoumuSama: geordi: << "AngelC: 爆照"
+19:12:geordi: AngelC: 爆照
+19:13:iyzsong: =.=
+19:25:hysw: 还是叛变到Windows去算了...
+19:26:hysw: DRM神码的太可怕了...
+19:26:GODDOG quit:Quit: leaving
+19:27:code_new joined channel
+19:29:lh_cat: YoumuSama: 自己不爆照有脸叫别人爆照？
+19:29:AngelC: 。。。
+19:29:AngelC: +1
+19:29:YoumuSama: QAQ
+19:29:AngelC: QwQ
+19:30:lh_cat: 羊驼没来
+19:31:lh_cat: 红旗酱又不说话
+19:34:iyzsong: any recommends for interesting things? :- 
+19:35:YoumuSama: 程序员的二大浪漫是操作系统、编译原理...来自zhihu.
+19:36:hysw: YoumuSama: 明显不对...
+19:37:hysw: 你把图论数论群论之类的扔哪里去了？
+19:37:iyzsong: TODO and FIXME
+19:37:YoumuSama: 那是数学家的浪漫.
+19:37:YoumuSama: http://www.zhihu.com/question/27221581 程序员的三大浪漫是操作系统、编译原理和图形学，那么数学家的三大浪漫是什么？
+19:38:hysw: YoumuSama:外加你忘了分布式
+19:39:YoumuSama: =,= 不懂分布式..
+19:39:hysw: Linux下试图运行DRM的Windows程序完全是作死...
+19:39:Stevearzh quit:Ping timeout: 245 seconds
+19:39:YoumuSama: https://isocpp.org/blog/2014/12/myths-1
+19:39:YoumuSama: 今天看到了这个..
+19:42:YoumuSama: iyzsong: 撸sml的编译器... alpoka现在不是在搞这个吗..
+19:42:hysw: 刺客信条4这鬼玩意...
+19:42:iyzsong: YoumuSama: too long..
+19:43:hysw: YoumuSama: 用ASM去写个Haskell编译器估计会比较好玩
+19:43:YoumuSama: O.O
+19:43:YoumuSama: 作死就会死.
+19:43:lh_cat: MCF::MNotation 支持匿名的值了！
+19:44:iyzsong: unknown but sound powerful to me..
+19:45:lh_cat: geordi: << std::string(p, p); constexpr const char *p = nullptr;
+19:45:geordi: <no output>
+19:47:Stevearzh joined channel
+19:51:YoumuSama: 啥时候能到用户态..Orz
+19:59:lh_cat: geordi: { istringstream iss("123"); bool b; string s; iss >>b >>s; cout <<b <<s; }
+19:59:geordi: true
+20:00:lh_cat: geordi: { istringstream iss("123"); bool b; string s; iss >>boolalpha >>b >>s; cout <<b <<s; }
+20:00:geordi: false
+20:00:lh_cat: geordi: { int n = 12345; istringstream iss("aa"); iss >>n; cout <<n; }
+20:00:geordi: 0
+20:07:YoumuSama: geordi: { int n = 12345; istringstream iss("aa"); iss >>n; cout<<n; assert(cout.fail()); }
+20:07:geordi: 0Assertion `cout.fail()' fails.
+20:17:AngelC quit:Quit: Lost terminal
+20:21:Stevearzh quit:Quit: Quit...
+20:26:Stevearzh joined channel
+20:28:lh_cat: geordi: << TYPE(1e2);
+20:28:geordi: rvalue double
+20:29:lh_cat: geordi: { istringstream iss("0x1p4"); double d = 123; iss >> d; cout << d; }
+20:29:geordi: 0
+20:29:lh_cat: 渣渣
+20:29:lh_cat: geordi: << 0x1p4;
+20:29:geordi: 16
+20:30:YoumuSama: geordi: undo and replace double with int
+20:30:geordi: 0
+20:30:YoumuSama: ...
+20:30:YoumuSama: geordi: show
+20:30:geordi: { istringstream iss("0x1p4"); int d = 123; iss >> d; cout << d; }
+20:32:YoumuSama: geordi: erase 0x
+20:32:geordi: 1
+20:32:YoumuSama: geordi: << 1p4
+20:32:geordi: error: unable to find numeric literal operator 'operator""p4'
+20:32:YoumuSama: geordi: << 0x1p4
+20:32:geordi: 16
+20:37:lh_mouse: geordi, { int k; istringstream iss("012345.678"); string s; iss >>k >>s; cout <<k <<s; }
+20:37:geordi: 12345.678
+20:38:lh_mouse: geordi, { int k; istringstream iss("012345.678"); string s; iss >>k, s; cout <<k <<s; }
+20:38:geordi: warning: right operand of comma operator has no effect
+20:38:lh_cat: geordi: undo and preoend '|' << before last s
+20:38:geordi: error: Unexpected `preoend` after `undo and `. Expected edit command.
+20:38:lh_cat: geordi: undo and prepend '|' << before last s
+20:38:geordi: 12345|.678
+20:49:AngelC joined channel
+20:50:AngelC: 吱吱。。。
+20:50:lh_cat: ?
+20:51:AngelC: 你的alv_tree里面UpdateRecur有点略屌了。。
+20:51:YoumuSama: avl*
+20:52:lh_cat: ?
+20:53:AngelC: avl...
+20:53:AngelC: 手抖了。。
+20:59:leocook quit:Quit: leocook
+21:18:Stevearzh quit:Ping timeout: 250 seconds
+21:25:AngelC_ joined channel
+21:28:AngelC quit:Ping timeout: 244 seconds
+22:16:AngelC_ quit:Quit: Leaving
+22:26:sismvg joined channel
+22:27:YoumuSama: 药娘这么晚了还上线...
+22:27:sismvg: http://zhidao.baidu.com/daily/view?id=3442 你看我用2次针头那么多年不也没得艾滋？
+22:27:sismvg: ...常识是一种可怕的东西
+22:30:YoumuSama: = =
+22:32:sismvg: 不是肝城就是舰娘 这怎么了
+22:33:sismvg: C87太可怕
+22:35:T2: 碎叫碎叫，明天烤试。
+22:35:YoumuSama: https://lh6.googleusercontent.com/-CyfFIoppuoI/VKKlwGi2l0I/AAAAAAAAyCA/61fuqGYbmdk/w0/VUTF%29%607XDF3%5D4K%24NFF%40EP%5DF.jpg
+22:35:YoumuSama: 小姨子赛高！
+22:36:sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=35e35d6075094b36db921be593cd7c00/ce8dfe246b600c33830a7d77194c510fd8f9a108.jpg
+22:36:sismvg: 道德沦丧。世风日下。google这里上不去
+22:36:YoumuSama: 500！
+22:37:Stevearzh joined channel
+22:37:sismvg: no jr no evil
+22:38:Petrus07 joined channel
+22:38:YoumuSama: 巨乳还是挺好的。
+22:38:T2: sismvg, 道德是什么逗比玩意？世风这种东西从来就没存在过吧？
+22:38:YoumuSama: 虽然看着爽...
+22:39:sismvg: 有研究表明喜欢JR的人生活压力较大
+22:39:YoumuSama: 明天尻试，感觉要跪。
+22:39:sismvg: uccu
+22:39:sismvg: 这就是压力
+22:39:YoumuSama: 走了，大家腋间愉快！
+22:39:T2: 碎叫碎叫
+22:39:YoumuSama quit:Quit: WeeChat 1.0.1
+22:39:T2: 那不是鸭梨，是脑残。
+22:39:T2: 2333
+22:39:T2 quit:Quit: Leaving
+22:42:Plough quit:Quit: 碎叫
+23:16:cleamoon quit:Remote host closed the connection
+23:41:Timetvs joined channel
+23:57:Petrus07 quit:Quit: Leaving.

@@ -1,0 +1,543 @@
+00:18 stardustx quit:Read error: Connection reset by peer
+00:52 cleamoooon joined channel
+00:53 Mokou quit:Quit: Lost terminal
+00:53 Mokou joined channel
+00:56 cleamooon quit:Ping timeout: 260 seconds
+01:14 cleamoooon quit:Ping timeout: 260 seconds
+02:25 CyrusYzGTt quit:Ping timeout: 276 seconds
+02:38 CyrusYzGTt joined channel
+02:45 Mokou: 睡覺
+02:45 Mokou: 諸君武運
+02:45 Mokou quit:Quit: 睡覺
+02:58 Youmu quit:Quit: Connection closed for inactivity
+06:05 Mokou joined channel
+06:47 id10086 quit:Ping timeout: 260 seconds
+08:02 cleamoon joined channel
+08:06 Youmu joined channel
+08:26 FrankHB quit:Ping timeout: 244 seconds
+08:35 CyrusYzGTt quit:Ping timeout: 250 seconds
+08:57 FrankHB joined channel
+09:32 lh_mouse joined channel
+09:45 Justin_Snake joined channel
+09:47 Justin_Snake: 不知道为什么，被c_lang_zh ban了
+09:48 Justin_Snake: 不过我都隔了几个月没有上irc
+09:48 Youmu: Justin_Snake: vip才可以上哦
+09:50 Justin_Snake: 这样子呀，没事了，第一次加入可以上的，然后隔了一段时间没有用就被ban了，还以为做错了什么，谢谢解答
+10:01 Youmu: Justin_Snake: 只有被invite的才可以加入的
+10:19 stardustx joined channel
+10:54 Oyodo joined channel
+11:00 FrankHB quit:Ping timeout: 260 seconds
+11:12 stardustx quit:Ping timeout: 250 seconds
+11:37 stardustx joined channel
+11:41 lh_mouse: Justin_Snake, please connect to the server via SSL.
+11:46 Justin_Snake quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+11:54 Youmu: lh_mouse: 0.0 原来是这样啊
+11:57 Justin_Snake joined channel
+12:31 FrankHB joined channel
+12:36 sottd joined channel
+12:36 sottd: http://img.vim-cn.com/f9/bfafde149cb2c16f4a0d9f5ce0d8d0e4c26f58.png 
+12:36 sottd: 233333
+12:39 stardustx: sottd, 并没有找到笑点
+12:40 sottd: 被模板弄得头痛的我很理解她
+13:01 sottd: alahama akbama
+13:02 sottd quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160502172042]
+13:37 stardustx quit:Ping timeout: 250 seconds
+13:37 FrankHB quit:Ping timeout: 252 seconds
+13:41 lh_mouse: geordi, { kick(); } namesapce ns { } namespace y { using namespace ns; }  namesapce ns { void kick(){ BARK; } } using namespace y;
+13:41 geordi: error: 'namesapce' does not name a type
+13:41 lh_mouse: geordi, { kick(); } namespace ns { } namespace y { using namespace ns; }  namesapce ns { void kick(){ BARK; } } using namespace y;
+13:41 geordi: Same error.
+13:41 lh_mouse: geordi, { kick(); } namespace ns { } namespace y { using namespace ns; }  namespace ns { void kick(){ BARK; } } using namespace y;
+13:41 geordi: ns::kick()
+13:58 lh_mouse: geordi, << sizeof(pthread_rwlock_t)
+13:58 geordi: 56
+13:59 lh_mouse: geordi, << sizeof(foo(1)); int foo(int) = delete;
+13:59 geordi: error: use of deleted function 'int foo(int)'
+14:02 varna joined channel
+14:03 varna: (｡･ω･)买了件白学T-shirt
+14:03 varna: 夏天穿的圆领短袖不够了，正好添置一个
+14:12 lh_mouse: varna, 啥时候来杭州。
+14:12 lh_mouse: 不来魔都溜一圈么。
+14:12 lh_mouse: varna, 提一个事情到杭州和上海的机票可能差很多钱。
+14:14 varna: 杭州彻底定七月份了，今年毕业证得6.30前后发
+14:15 varna: 咦，青岛到上海好便宜
+14:15 lh_mouse: varna, 你看。
+14:15 varna: 胡乱一搜，山航甚至有不到六百元的
+14:16 lh_not_bot: varna: 上海到杭州单程高铁或动车才八九十块钱。
+14:16 varna: 好顶赞，那去的时候魔都转杭州了
+14:17 lh_not_bot: 跟大巴一样到火车站现买都可以。ヲ都跑了三趟了。
+14:17 varna: 这个好
+14:17 varna: 不过你跑杭州去……把妹？
+14:17 lh_not_bot: ヲ上学时候面试总要回去啊……
+14:18 varna: 哦对_(:з」∠)_
+14:18 Youmu quit:Quit: Connection closed for inactivity
+14:20 Mokou: 羊駝子要在臨安府登基了？
+14:20 varna: (｡･ω･)这旗不老实
+14:20 varna: 今天萝莉节，网上衣服也有打折的
+14:21 Mokou: 你準備買買買麼
+14:21 varna: https://detail.tmall.com/item.htm?id=529555562185&ali_refid=a3_430583_1006:1103495264:N:%E5%8A%A8%E6%BC%AB%E5%A4%8F%E8%A3%85%E5%A5%B3:93a8966f52abb9b9737ad0e54c5cc0ef&ali_trackid=1_93a8966f52abb9b9737ad0e54c5cc0ef&spm=a230r.1.14.1.Yd67Du 于是凹了这么一件
+14:21 varna: 已经买了
+14:21 Mokou: 噫，小心走在路上被人打死
+14:21 varna: 之前收藏了一件“谈笑风生”的，产品被下架了
+14:22 Mokou: ……
+14:22 varna: 暴必续
+14:22 varna: 想想还是穿白学比较安全，至少没有郑智问题
+14:22 Mokou: 今天弄了個硯臺弄了塊墨，還沒發貨
+14:23 varna: 壕！
+14:23 varna: 昨晚睡前看了看马三角，制作还挺精良的
+14:23 Mokou: 壕個咭咭
+14:24 T-J-M quit:Quit: 吾去矣
+14:24 varna: 说起来，你以后要是真弄了个能用的、不自行申请动态内存的http parser, 我确实打算用
+14:24 varna: picohttpparser很好，但行为夹缠不清
+14:25 Mokou: 了解，不過Izumo那個坑不一定啥時候填……
+14:25 varna: ^ 撩妹的可怕现充
+14:25 Mokou: ^ 撩妹的可怕現充
+14:25 varna: 我完全没妹撩
+14:25 Mokou: 你以前有接近二百個妹子
+14:26 varna: 一百七十三个
+14:26 Mokou: 你看
+14:26 varna: (｡･ω･)杉浦小和
+14:26 T-J-M joined channel
+14:27 varna: http://tieba.baidu.com/p/4583722661 撕逼啦！
+14:27 Mokou: 什麼鬼
+14:40 endle joined channel
+14:57 Mokou: 【支付宝昵称变“宝宝”，用户褒贬不一】今天儿童节，许多人今晨惊奇发现自己的支付宝昵称后加了“宝宝”二字。对于这一变化，用户褒贬不一。一些人表示喜欢这个暖心的创意，一些表示不喜欢这种强制的做法，更不乏有人表示讨厌“宝宝”这个称谓。#支付宝昵称变“宝宝”# 
+14:57 Mokou: 你怎么看？R#支付宝昵称变“宝宝”#，你怎么看？
+14:57 Mokou: ^ 滾你媽的支付寶
+14:57 varna: 马云：我觉得你们都是傻逼，所以给你们加个后缀，你们拥抱变化
+14:58 varna: 他怎么不要求私有成员全都后缀_呢
+14:58 Mokou: 傻逼飛了，強行讓我當巨嬰
+14:59 stardustx joined channel
+14:59 stardustx quit:Client Quit
+14:59 stardustx joined channel
+15:00 varna: 国内用户很多习惯被绑架，而产品设计者很多习惯绑架用户……
+15:01 Mokou: 噫，那貼似乎沒撕起來啊？
+15:01 varna: 真遗憾，再等等
+15:02 lh_mouse: [14:26:56] <lh_mouse> If an I/O error occurred while reading from or writing to the file system during close(), it may return -1 with errno set to [EIO]; if this error is returned, the state of fildes is unspecified.  // This is why I hate POSIX.
+15:02 Mokou: 【特朗普怒斥西方记者】昨天，这位very angry的总统候选人可算把美国媒体都得罪了一遍，他用“卑鄙、不诚实”等词来警告记者，不要老想在他身上搞个大新闻
+15:03 varna: POSIX的秩序有时候需要以默许崩溃来保障……
+15:04 varna: 23333西方记者
+15:04 varna: 我觉得特郎普上台的话，白宫会变成白共啊
+15:04 lh_mouse: [14:32:31] <lh_mouse> If you close() a failed-to-close fd you get a double close (thus undefined behavior) on some systems and if you don't do that you get a fd leak on the other systems, thanks to the Portable OS Interface X being completely unportable.
+15:05 Mokou: 雞尾酒店升赤旗！川普來當總書記！
+15:08 varna: 很快我们就能占领米国了
+15:09 varna: 然后从西海岸反攻亚太，封锁白令海、马六甲、南太平洋
+15:09 varna: (｡･ω･)ﾉ呜哈哈哈！
+15:09 Mokou: http://ww3.sinaimg.cn/mw690/78f2cc43gw1f4fjj5asywj20rs1fo129.jpg 遊戲發售進度表
+15:10 varna: 2%
+15:10 Mokou: G胖數不到3
+15:11 varna: 啊，马三角的部分原画工作在第二话得到了有效的缓解……
+15:12 varna: 比如说阴影和瞳孔反光都没画
+15:12 Mokou: ……
+15:15 varna: 而且剧情上一句话不说也不好，有一种钦定的感觉
+15:24 Mokou: varna: http://tieba.baidu.com/p/4582722513
+15:25 varna: 驲
+15:26 varna: 我都不知道该说什么好
+15:29 xxxxxxxx quit:Quit: Leaving...
+15:31 Mokou: http://img.2chcn.com/2016/05/10021.jpg
+15:33 varna: 津巴布韦23333
+15:52 lh_not_bot: Mokou: medusa 更新了下。
+15:53 lh_not_bot: 加了个 throttle 如果一级卡带宽，二级获取不再会直接吃光带宽（未测试）。
+15:54 varna: throttle # 很有气氛的命名啊
+15:56 varna: puuuuuu我突然意识到一个鬼畜
+15:56 varna: BSP的空战支持跟G力没什么关系的超·廉价英麦曼回旋？
+15:57 Mokou: lh_not_bot: 了解
+15:58 varna: 提速大角度爬升-boost-倒飞手工改平
+15:58 Mokou: ……
+15:58 varna: 之前我试着练习用这个动作凹运输船……
+15:58 varna: 这飞机模拟得真魔法
+16:00 Mokou: 大丈夫，想想魔法雷霆零戰700km
+16:00 Mokou: km/h
+16:00 varna: @喷水加力荣二一
+16:03 varna: 我之前还节操地以为零战只能打操纵杆
+16:03 varna: 后来我试着按了一下boost, 直接爆出速度，意识有点模糊
+16:03 lh_not_bot: Mokou: 艹果然写错了。
+16:04 lh_not_bot: 重新 pull 下。
+16:05 Mokou: 受到
+16:05 Mokou: 收到
+16:05 varna: ^ 受
+16:06 soloman joined channel
+16:07 lh_not_bot: 现在应该不会出现一次下载大文件然后本地 stop 掉炸内存的情况了。
+16:07 lh_not_bot: Mokou: 保险起见ヲ还是建议用脚本开个循环或者用 ulimit -Sv 卡下地址空间。
+16:07 lh_not_bot: 如果真 overcommit 了随时都可能会被内核干掉。
+16:08 Mokou: 了解，不過爆炸了我手動重啓下也成
+16:08 Mokou: 反正就我自己用
+16:08 lh_not_bot: Poseidon 能够处理内存不足的情况，但是前提是别吃 SIGKILL 。
+16:08 lh_not_bot: 否则神仙难救。
+16:08 Mokou: _(:з」∠)_
+16:09 Mokou: 噗，Intel要換LGA3647？
+16:09 * varna 做了个强行节流的下载
+16:09 lh_not_bot: Mokou: sudo nano /usr/etc/poseidon-medusa/medusa.conf
+16:10 lh_not_bot: 加一个   fetch_max_single_pipeline_size = 268435456  # 限制传输速度用。  
+16:10 lh_not_bot: 默认是 64k 。
+16:10 lh_not_bot: 网络延迟高的话可以加大。
+16:10 Mokou: 了解
+16:12 Mokou: http://ww2.sinaimg.cn/mw690/7993fbc7gw1f4fkuti2z9j20hv0jfdh5.jpg
+16:13 varna: (｡･ω･)ﾉ路亚拯救鱼塘
+16:13 lh_mouse: [15:49:58] <varna> throttle # 很有气氛的命名啊 // 节流阀。
+16:13 Mokou: http://music.163.com/#/song?id=412785583 現在的人一言不合就開始膜
+16:14 varna: lh_mouse: 对，但总觉得是在天上翻滚的什么东西
+16:14 Mokou: 天上翻滾的什麼東西+
+16:14 varna: 钦个定啊钦个定啊钦个定早苗啊 2333333
+16:14 lh_mouse: varna, 什么。
+16:15 varna: 比如战斗机
+16:16 Mokou: http://ww4.sinaimg.cn/mw690/eb2db764gw1f4fs9dk2wbj20hs0vkad5.jpg ん？
+16:16 varna: puuuuuuu
+16:17 varna: 以前有个黑暗的民航飞行员真的从地上把客机带点横滚地拉起来了
+16:17 Mokou: ……哪種
+16:17 whocares_2_ joined channel
+16:17 varna: 不知道那伙计后来有没有丢掉工作
+16:18 whocares_2 quit:Ping timeout: 244 seconds
+16:18 varna: 正常起飞不是直接抬头么……他还加了个侧滚
+16:18 lh_mouse: varna, thrash?
+16:18 varna: 飞机就斜着起来了
+16:18 varna: lh_mouse: throttle无误
+16:18 Mokou: 不，我是說飛機是哪種
+16:18 varna: 看不清，视频太模糊了
+16:18 varna: 只能看出是喷气式客机
+16:18 Mokou: 總覺得客機這麼重的玩意不好控制……
+16:19 Mokou: http://ww1.sinaimg.cn/mw690/820f43e8gw1f4fkh461idj208v07iaai.jpg
+16:19 varna: 23333
+16:19 varna: 这有点贰啊……
+16:19 varna: 似乎还有个韩国民航试图用肚子着陆
+16:19 Mokou: ……不是起落架放不下來？
+16:19 varna: 在地上咕了几下，横竖停下来了
+16:20 varna: 起落架不像彻底下来
+16:20 varna: 最后颠了几下停住了
+16:20 Mokou: 那估計是起落架鎖不上只能機腹着陸……
+16:20 varna: +
+16:21 Mokou: @燈泡幹掉大飛機 
+16:23 Mokou: 說到韓國，前幾天大韓有架飛機還在羽田機場着了不是
+16:23 varna: puuu?
+16:24 Mokou: 滑跑時左引擎突然冒火，中斷起飛了，沒出人命
+16:24 varna: ...
+16:24 Mokou: 啊，是架773
+16:27 varna: btw问个事情，BSP里面锁定操作的效果和BSM一样么
+16:28 Mokou: 忘了……
+16:29 Mokou: 出去趟
+16:38 endle quit:Quit: Leaving
+16:42 Youmu joined channel
+16:58 lh_mouse: 卧槽。
+16:58 lh_mouse: http://mprc.pku.edu.cn/~ruankunliang/gpl3.html
+16:59 lh_mouse: 这是和ヲ一起做毕业设计那个大神。
+16:59 varna: OTL
+16:59 lh_mouse: varna, FSF 已经采纳为 unofficial translation 了。
+16:59 varna: _(:з」∠)_
+17:03 Mokou: 回來了
+17:05 Mokou: http://ww3.sinaimg.cn/mw690/8b4ee17agw1f4frb4k9e3j20j60g4780.jpg -1s
+17:06 Mokou: 【孤注一掷：安倍不仅准备推迟加税 
+17:06 Mokou: 还要推“十万亿日元”刺激】据日媒，日本首相安倍晋三将在宣布推迟上调消费税的同时，寻求追加额外的5-10万亿日元预算规模。这无疑将对日本政府的财政形成巨大压力。此前，媒体称安倍已同意将消费税上调延迟两年半。安倍将于当地时间今天下午6点召开新闻发布会。
+17:06 Mokou: ^ 轉發：#国之将亡，满地舰娘。露腿卖肉，儿童偶像。企业造假，人口下降。利率为负，经济滞涨。昭和遗老盼军国，平成肥宅追偶像。一意孤行作大死，汇率降，安倍皇。#
+17:07 varna: 换句话说，田中是在救国？
+17:07 Mokou: 噫
+17:08 Mokou: 用　心　良　苦
+17:09 varna: 这次马三角的音乐挺赞的
+17:10 Mokou: 17▼UIの強化 (追記) ・【他艦娘装備中】リストで選んだ装備は、そのまま改装中の艦娘に装備することも可能です。 ・【ストック装備】をクリックすることで、これまで通りの操作に戻ります。
+17:10 Mokou: 噫，UI強化
+17:10 varna: 终于能替换已装备的武装了啊
+17:10 Mokou: +
+17:11 varna: 三年零两个月的进步
+17:11 varna: 六花POI也是不容易
+17:11 Mokou: 噫，HF前突入E6的提督發了新飛機……
+17:12 Mokou: 08▼春イベ追加/お詫びの褒賞配信 1/3 5/5(木)の臨時メンテナンス実施までに前段作戦を攻略突破し、後段作戦に作戦参加可能となっていた提督方に ・一式陸攻 二二型甲(先行配信) をお贈りいたします。 ※同装備は先行配信です。
+17:12 Mokou: 09▼春イベ追加/お詫びの褒賞配信 2/3 5/4(水)未明の初期不具合アナウンス時点で既に後段作戦に参加され、後段作戦で交戦中の提督方に ・陸軍飛行戦隊の指揮机(先行配信) をお贈りいたします。 ※同家具は先行配信です。
+17:12 Mokou: 10▼春イベ追加/お詫びの褒賞配信 3/3 春イベント2016は実装に不具合が多く、大変申し訳ありませんでした。 全ての提督方に、特注季節家具 ・紫陽花の壁紙 ・紫陽花の床 お贈りいたします。 また、お詫び掛け軸 ・反省の掛け軸 を家具屋さんで受け取ることも可能です。
+17:12 varna: 噗
+17:12 varna: 那个要职人啊
+17:12 varna: 而且谁要挂轴，我们要看六花POI露出胸部道歉
+17:12 varna: 要看宫川若菜果体小裙子
+17:13 Mokou: 說不定你把掛軸的swf拆開，發現裏面有隱藏的圖像文件
+17:13 varna: btw把wmii换掉的这两年，我明白了一点：电影里那些堆了一屏终端的事情不是假的
+17:13 Mokou: 23333333
+17:13 varna: 如果只用一个1366x768屏幕的话，终端就是能堆一屏幕
+17:14 Mokou: 如果不止用一個1366x768屏幕的話，終端能堆好幾屏幕……
+17:14 varna: (｡･ω･)ﾉ以前的第二屏单独给舰C
+17:14 Mokou: 我第二屏是deadbeef + irc + 艦C + 文檔
+17:14 Mokou: 主屏幕放Firefox或者Emacs
+17:16 Mokou: 03▼【新任務】の追加実装 計三種類の新任務が追加実装されます。 ●新編「水雷戦隊」を含む艦隊を再編成せよ！ ●新編艦隊、南西諸島防衛線へ急行せよ！ ●鎮守府近海航路の安全確保を強化せよ！ ※「特注家具職人」の入手も可能です。 ※各任務受諾には受諾条件の達成が必要です。
+17:16 Mokou: 我突然感覺不用做任務真好
+17:16 varna: 唉唉
+17:16 Mokou: 04▼特殊家具【鎮守府カウンターバー】の更新 春イベで実装された新艦娘、駆逐艦「神風」「春風」「親潮」、重巡洋艦「Pola」、戦艦「Iowa」にそれぞれ対応した鎮守府カウンタバー更新を実施します。 新飲食カテゴリーも追加されました。
+17:16 Mokou: 05▼【家具屋さん】お品書きの更新 1/3 家具屋さんのお品書きが更新され、新家具含む季節家具の取扱いが開始されます。 ・皐月の壁紙 new! ・皐月の窓 new! ・皐月の机 new! ※BGM付 ・しょうぶ和箪笥 ・レインコート＆傘掛け ・紫陽花鉢の提督机
+17:16 Mokou: 06▼【家具屋さん】お品書きの更新 2/3 家具屋さんで、下記の新家具/復活家具の取扱いが開始されます。 ・鮎の季節の壁紙 new! ・梅雨の季節の床 new! ・てるてる坊主の窓 ・紫陽花の窓 ・新緑のフローリング ・戦艦タイルの床 ・海軍基地航空隊の机 new!
+17:16 Mokou: 07▼【家具屋さん】お品書きの更新 3/3 家具屋さんで、新家具含む下記の季節家具の取扱いが開始されます。 ・梅雨の緑カーテン窓 ※BGM付 ・梅雨の壁紙 ・藤の壁紙 new! ・藤と水面の床 new! ※BGM付 ※家具コイン長寿向け/ダイナミック割引可
+17:17 Mokou: 現代和風壁紙還是沒有啊……
+17:17 varna: 啊，官推酱又打错字了
+17:17 varna: 作为一个法师，我一下子就意识到是“家具币长者向”
+17:17 Mokou: 2333333
+17:17 Mokou: 11▼期間限定「卯月」祭り終了 期間限定で四月より特定通常海域において「卯月」と邂逅しやすいようになっていた「卯月」祭りが終了。通常通りのドロップとなりました。 ※「明石」が期間限定で序盤海域で邂逅可能な状態は継続しています。
+17:17 Mokou: 12▼表示不具合等の修正 下記修正を実施いたしました。 ・「神風改」の補給バナー背景表示の修正 ・「戦績」表示で表示される母港BGM曲名の一部修正
+17:17 Mokou: ^ 又修Bug，看了感覺真可憐
+17:18 Mokou: 13▼【梅雨mode】艦娘の季節限定実装 昨年実装した梅雨mode艦娘に加えて、 夕雲型駆逐艦「早霜」 夕雲型駆逐艦「清霜」 綾波型駆逐艦「曙」 白露型駆逐艦「夕立改二」 水上機母艦「瑞穂」※梅雨mode差分 に「梅雨mode」グラフィックを季節限定実装いたします。
+17:18 Mokou: 14▼金剛型戦艦の主砲フィット属性の上方修正 金剛型高速戦艦「金剛」「比叡」「榛名」「霧島」における主砲の命中率フィット属性が上方修正されます。35.6cm連装砲及び同三連装砲等運用時の命中率がさらに向上します。 ※改/改二も上方修正されます。
+17:18 Mokou: 15▼陸上作戦機(陸上攻撃機/局地戦闘機)ロック/解除可能に ストック装備の「・・・」(その他)選択で、艦娘への搭載はできませんが、陸上作戦機(陸上攻撃機/局地戦闘機)のロック/ロック解除が可能になります。
+17:18 Mokou: 16▼UIの強化 「改装」で装備を選ぶ際、ストック装備リストの右上に新設された【他艦娘装備中】ボタンをクリックすることで、他艦娘に装備している装備を探すことが可能となります。再度リスト右上の【ストック装備】をクリックすることで通常のリストに戻ります。お役立てください。
+17:18 varna: 现在干脆说356命中强化了
+17:19 varna: 其实356炮真的不坏，但这游戏火力泛滥、雷装又怎么堆都不够
+17:19 Mokou: +
+17:19 varna: 总觉得米日双方对356的态度有两个代表
+17:19 Mokou: 關鍵是魚雷傷害根本就不該這麼算啊……
+17:19 varna: BSP的我桑神力vs田中的356渣渣
+17:19 varna: 目前的雷装应该被计入雷命中了，但命中很谜
+17:19 Mokou: 還有之前的WoWS
+17:20 Mokou: 然而大和也不敢隨便吃魚雷
+17:20 varna: SK4的雷命中算法现在我也不容易想出一个纸面好操作的方法，有GUI的话会好很多
+17:20 varna: 不然计算量太可怕了
+17:20 Mokou: SK4大概本來就是想讓你畫圖的？
+17:21 varna: 但SK4的雷命中全都是线性散布带+一射线判定
+17:21 varna: 作为推演估算来说还凑合，但现在是21世纪
+17:21 varna: 我觉得他的公式只适合小推演速算
+17:22 Mokou: 【メンテナンス完了をお待ちの提督の皆さんへ】 現在「艦これ」稼働全サーバ群はメンテナンス作業の最終段階ですが、開放前チェックで一部に異常が発生しており、確認と対応中です。大変申し訳ありません、今暫くの間、アクセスをお待ちいただけますと助かります。
+17:22 varna: 对电子游戏来说都有点过分简化了
+17:22 Mokou: 你打算怎麼做
+17:22 varna: 我需要一个单射线命中估算式
+17:22 varna: 然后按射法算出真实射线判定
+17:23 varna: 或者可以退一步
+17:23 varna: 提供多种射法的命中估算-命中数估算
+17:23 varna: 但我觉得水雷爱好者不会喜欢这么模糊的雷击算法
+17:24 Mokou: http://ww1.sinaimg.cn/mw690/c48ddc8cgw1f4fuf6l794j204q05k748.jpg 誠意滿滿（迫真）的道歉掛軸
+17:26 varna: 这字像谁的……
+17:26 varna: 神通比这个小，我桑比这个扭，武藏完全是暴走族，我猜大和
+17:26 Mokou: 等會維護完了我把大和的字翻出來對一下
+17:27 Mokou: 海色官推：“【道歉挂轴】迷之搞得好像我们提督自己犯错一样，我宁愿挂个田中的脑袋”
+17:27 varna: 23333333333333
+17:27 varna: 对了之前捞的那个田中花圈可以拿出来啊！
+17:27 varna: 那么多人去捞的
+17:28 Mokou: 我賭五毛很快就會有魔改
+17:29 varna: 有人忘把飞机拆下来了，正在犹豫要不要退坑
+17:29 Mokou: ……忘把飛機拆下來什麼鬼
+17:30 varna: 精锐机组都留在拉包尔了
+17:30 Mokou: 陸航可以拆吧
+17:30 Mokou: 剛纔官推說的
+17:30 varna: 哦？
+17:30 varna: 舰载机呢？
+17:30 Mokou: 應該是指的陸基航空隊可以拆飛機？
+17:31 varna: 不知道能不能给他还回去
+17:32 varna: 啊，早霜，早霜好赞啊
+17:32 Mokou: 真要飛了我看就棄了吧
+17:32 Mokou: 這遊戲太蠢了
+17:32 varna: 早霜居然是小圆脸
+17:32 varna: 喔哈哈哈
+17:32 varna: 清霜这个二逼的表情简直好玩
+17:33 varna: 藤川的立绘进步了不少，真可惜
+17:33 varna: 还有瑞穗的万能小盒子，变成梗算了
+17:34 varna: 真可惜，驱逐舰每次看都那么浪漫
+17:34 Mokou: 你再註冊個ID當丙督
+17:35 varna: 不玩了，凑家底会累死的
+17:35 varna: 我看着新花样哭鼻子就好
+17:35 varna: ……我说怎么耳机噪音巨大+三接头稳定工作，原来半截插头还露在外面
+17:36 Mokou: ……
+17:36 varna: 现在这个耳机的转换开关扳到三接头末端会突变成四接头
+17:36 Mokou: 神奇的耳機……
+17:37 varna: 得往上稍微推1mm+走到一个看上去稳定的位置
+17:37 varna: 有时候被东西挤或者碰到就又会回到先进的四接头状态
+17:37 Mokou: ……
+17:37 Mokou: 發工資以後你弄個好點的耳塞吧
+17:37 varna: 麻烦
+17:38 varna: 耳塞是消耗品，一年花四十块钱不亏
+17:39 Mokou: 噗，我看錯了
+17:40 varna: 我之前在一台机器上装BSP, 锁定没法正常工作：无论我鼠标指到哪，它都会自己去切下一个目标，仿佛我焦点不在窗口里
+17:40 Mokou: 那個官推不是說陸航可以拆，而是說陸航飛機不能裝到航媽上但可以上鎖……
+17:40 varna: 哈哈哈
+17:40 Mokou: 棄了吧
+17:40 varna: 那伙计估计完了
+17:40 varna: 这航空兵全灭啊
+17:40 Mokou: 【メンテナンス完了をお待ちの提督の皆さんへ】 現在「艦これ」稼働全サーバ群はメンテナンス作業の最終段階ですが、開放前チェックで一部に異常が発生しており、再投入&再開放準備作業中です。大変申し訳ありません、今暫くの間、アクセスをお待ちいただけますようお願い申し上げます。
+17:40 Mokou: 不過我也沒拆
+17:41 Mokou: 我感覺中招的人應該不少，看看運營怎麼處理
+17:41 varna: 不过我觉得刚才那个再投入-开放可能跟陆航在拉包尔回不来有关
+17:41 varna: 但他们的DBA真的能做对事情么
+17:41 varna: btw昨天就有人计划要用九六战碰瓷了
+17:41 Mokou: 然後你發現你多了十六架飛機，全是你放在第一隊第一格的飛燕
+17:42 varna: 但三式战很卵吧，现在用熟练021还好
+17:42 Mokou: 不是很卵，是完全卵
+17:43 varna: 真可怜
+17:43 Mokou: 啊，飛機被正常地拆下來了
+17:43 Mokou: 難得啊
+17:43 varna: ...
+17:43 varna: 神啊
+17:43 Mokou: 陸攻都在
+17:43 varna: 这怎么做到的
+17:43 Mokou: 友永隊長和村田隊長也在
+17:43 varna: 他们的DBA终于正常了？
+17:44 Mokou: 不，你要相信這只是小概率事件
+17:44 Mokou: 第一發大建也有可能出大和的
+17:44 varna: 我以为友永队长是时候引咎出go击die了
+17:44 Mokou: 2333333
+17:45 Mokou: 結果那個反省掛軸還要我自己跑去買
+17:45 varna: 当然要你去反省
+17:45 varna: (｡･ω･)斩不掉怪你，不怪大本营
+17:46 Mokou: 藤地板看起來似乎還行，但是十六萬
+17:46 Mokou: 我買不買呢
+17:46 varna: 职人有折扣吧
+17:46 Mokou: 我就是在考慮扔不扔手上這個職人
+17:46 varna: 扔吧
+17:46 varna: 紫阳花系列家具都难看
+17:46 Mokou: 扔
+17:46 Mokou: 六千
+17:46 varna: 镇守府风铃你也有了
+17:46 Mokou: +
+17:46 varna: 那个基地航空队桌子不知道怎么样
+17:47 Mokou: 我覺得一般
+17:47 varna: 哦瘊瘊
+17:47 Mokou: http://picpaste.com/Fho87rhI.png
+17:48 Mokou: 拆50個小箱子把傢俱幣補回去
+17:49 Mokou: 這字不像大和的
+17:50 Mokou: 大和的字比這更狂放些
+17:52 Mokou: 換下壁紙就可以下線的感覺真他媽爽
+17:52 varna: 啊，这桌子好难看
+17:52 Mokou: 是吧
+17:54 varna: 其实一开始他们推荐我看马三角，我是拒绝的
+17:54 varna: 后来听说里面有续命要素，就去看了
+17:57 Mokou: 說起來，畫師是怎麼搞出來這些掛軸的
+17:58 Mokou: 找個原型然後照着描？
+17:58 varna: 书法会请专人吧
+17:58 varna: 我记得以前看动画里有专门请来题字的人
+17:58 Mokou: 不過這麼多種風格……
+17:58 varna: 业余程度就好
+17:58 varna: 田中人脉应该是ok的
+17:58 Mokou: 也是
+17:59 varna: 他还可以让POI去枕营业呢
+18:00 Mokou: 噫，怎麼不讓POI給我枕營業
+18:00 Mokou: 我幫他們修Bug
+18:00 varna: POI觉得没有bug, 并向你丢了一个猫
+18:02 varna: 噫，为何淘宝给我推荐真姬手办
+18:04 Mokou: 這是在提醒你趕快去西木野醫院
+18:08 Mokou: 噫，硯臺發的是韵不達……
+18:09 varna: ...
+18:11 varna: http://www.bilibili.com/video/av3179556/ 污妖王段子合集，NSFW
+18:40 lh_not_bot: 宣传 gcc 6.1.1 的时候带上 mcf 私货是不是很不道德……
+18:43 varna: 当然不是
+18:43 varna: (｡･ω･)ﾉ因为MCF的不道德会把这个宣传的不道德盖过去！
+18:44 lh_not_bot: 已经够道德了。
+18:44 lh_not_bot: 带上的是 mcfgthread 。
+18:45 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/wiki/env-gthread.h#8-int-__gthread_mutex_destroy__gthread_mutex_t-__mutex  每次看到都想笑。
+18:46 varna: does nothing...上次浏览的时候一眼看到这里
+18:48 lh_mouse: 还有这个。  https://github.com/lhmouse/mcfgthread/wiki/env-condition_variable.h#5-size_t-_mcfcrt_broadcastconditionvariable_mcfcrt_conditionvariable-pconditionvariable
+18:48 lh_mouse: ヲ很奇怪为什么 futex 需要提供 wake one 和 wake all 两个操作。
+18:52 varna: 我猜可能是要应对读写锁实现
+18:54 lh_mouse: ヲ的意思是 wake() 叫用户提供一个 count 。
+18:59 lh_mouse: geordi, << sizeof(long double), alignof(long double);
+18:59 geordi: 16, 16
+19:01 lh_mouse: geordi, { long double d; fill_n((char *)&d, 16, 0xAA); d = 0.12345; for(int i = 0; i < 16; ++i){ printf("%02hhx ", ((char *)&d)[i]); } }
+19:01 geordi: 00 e0 93 87 85 5a d3 fc fb 3f aa aa aa aa aa aa 
+19:01 lh_mouse: varna, AT&T 里面比如 fld tbyte ptr[rax + 10h] 这种怎么写。
+19:05 varna: tbyte没试过_(:з」∠)_
+19:06 varna: 96对齐的话你试试指令直接用后缀t呢
+19:07 varna: fldt -0x10(%rax)
+19:07 varna: 撸多
+19:07 varna: +0x10(%rax)
+19:08 Youmu quit:Quit: Connection closed for inactivity
+19:09 varna: 出去买点面包
+19:10 iyzsong: （ ・∀・）
+19:12 cc joined channel
+19:19 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+19:20 cc joined channel
+19:47 hoxily joined channel
+19:52 cleamoon: 在美国的得克萨斯州，与17岁女孩有性接触是合法的，但持有18岁以下青少年的裸照则被认为是儿童色情。51岁的休斯顿数学辅导员Aldo Leiva因为手机上有一名17岁女孩的裸照而被控持有儿童色情，面临20年徒刑和被终生登记为性罪犯。这位17岁的女孩是他的女友，两人的关系是在女孩的母亲发现手机上的裸照后才曝光的。女孩告诉
+19:52 cleamoon: 调查人员他们之间发生过自愿的性关系。但检察官认为，他的职务并不包括与学生发展不恰当的关系。当地法官已经发出了两人禁止接触的法庭命令。法庭文件显示，Leiva向警方提供了自己的手机，并解锁了手机。两人被指通过短信进行了蝙蝠侠和罗宾的性幻想角色扮演。
+19:53 varna: 这还真是……
+19:54 varna: 要是有职务包括与学生发生不正当关系，我会直接去考证
+19:54 cleamoon: 有呀，学生的鬼父就包括不正当关系
+19:55 varna: 再看一话马三角就回去了
+19:55 varna: 今天也要洗点衣服
+19:56 cleamoon: 欧洲法院发表意见书称，公司可以禁止穆斯林员工带头巾，前提是公司同样也禁止员工在工作场所佩戴其他宗教标志。欧洲法院的意见是针对比利时穆斯林女性阿卡比塔对其前雇主的诉讼。阿卡比塔曾是比利时安全公司G4S前台，出于宗教原因在工作场所佩戴头巾。公司在阿卡比塔拒绝摘下头巾后将其开除。
+19:56 cleamoon: 在现充的道路上越走越远
+19:56 varna: LL衣服也不让穿的意思？
+19:57 cleamoon: 【北京市检察机关依法决定对五人立案侦查】日前，北京市昌平区人民检察院完成对“雷洋涉嫌嫖娼被民警采取强制约束措施后死亡”线索的初查工作，认为符合立案侦查条件。北京市人民检察院第四分院依法决定对昌平区公安分局东小口派出所民警邢某某等五人进行立案侦查，按程序通知家属。
+19:57 cleamoon: LL的衣服肯定不让穿呀
+19:57 varna: 真可怕
+19:59 cleamoon: 柯西积分、柯西公式、柯西不等式、柯西定理、柯西函数、柯西矩阵、柯西分布、柯西变换、柯西准则、柯西算子、柯西序列、柯西系统、柯西主值、柯西条件、柯西形式、柯西问题、柯西数据、柯西积、柯西核、柯西中值定理等等。。。。（via网易公开课）  #谁穿越回去弄死他
+20:02 cleamoon: 某种奇特生物  http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/nj/7p_353100.jpg@596w_1l.jpg
+20:03 iyzsong: (つд⊂)
+20:03 varna: puuuuu
+20:03 varna: 我以为只有小耗能变扁
+20:04 cleamoon: 喵似乎只要加热就能变扁
+20:05 cleamoon: @老乐大爷 肉棒底下出孝子
+20:06 varna: 为何马三角这片如此奇怪
+20:07 varna: 目前看了五话，包含了这些要素：钦定，续命，黑框眼镜，西方记者，榨取利益
+20:08 Mokou: 封 禁 不 可 避
+20:08 Mokou: 對了，前幾天太祖提督漫畫的作者來上海了
+20:08 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/nh/ag_309160.gif@596w_1l.gif  谁知道这是什么玩意
+20:08 varna: ...
+20:08 cleamoon: 噗
+20:09 varna: 这应该是爱马仕？
+20:09 Mokou: 評論：“即 逮 捕”
+20:09 cleamoon: 他打算加入山下吗？
+20:09 Mokou: 沒，他去延安聖地巡禮了一圈然後回去了
+20:09 cc quit:Quit: My Mac has gone to sleep. ZZZzzz…
+20:10 cleamoon: ......
+20:10 varna: puuuuuuuuuu
+20:10 Mokou quit:Quit: Reconnecting
+20:10 Mokou_ joined channel
+20:11 varna: 啊！看到白学场景了！
+20:11 Mokou_ is now known as Mokou
+20:13 Mokou: http://picpaste.com/vUmTnRgl.png 第二天過E7甲的dalao
+20:14 cleamoon: http://www.zhihu.com/question/25273709/answer/54725943?f3fb8ead20=306db30c39acc5324dc4c02791de9edf
+20:15 varna: 17->18 23333333
+20:16 varna: 哈哈哈这dalao露馅了
+20:16 Mokou: 裝 逼 大 失 敗
+20:16 varna: 咦我怎么觉得鮟鱇鱼要跪
+20:17 varna: 又是雪菜站位又是林明美flag
+20:17 Mokou: http://ww4.sinaimg.cn/mw690/b1e290cbjw1f4ey4jci4gj20k00jfq4e.jpg 作死系列
+20:18 varna: ...
+20:20 Mokou: http://ww2.sinaimg.cn/mw690/4ab553d5gw1f4coo9i8syj20h00cvdir.jpg 啊，我記錯了，是上海的中共一大會址……
+20:20 xxxxxxxx joined channel
+20:20 cleamoon: 新华社没搞个大新闻？
+20:21 varna: ...
+20:21 varna: 历史的经验：日共都是怂逼，靠不住
+20:22 Mokou: 日共慫逼++++
+20:22 xxxxxxxx: 233
+20:23 cleamoon: 日共不是很喜欢抱大腿吗
+20:24 varna: 撤退
+20:24 Mokou: 那位還在賓館裏看了抗日劇、去了上海的漫展……
+20:24 varna: 我祈祷那个白学Tshirt两三天能到，据说发货很快
+20:24 Mokou: 然後快遞拖了三天才派送
+20:24 cleamoon: 羊驼子希望早日被打死
+20:25 varna: btw前几天我才知道，跟我们一起答辩的那珂酱其实会说中文，他就是想恶心底下的老师
+20:25 Mokou: ……
+20:25 varna quit:Quit: leaving
+20:25 cleamoon: .......
+20:27 cleamoon: 我还以为这衬衫能多写点呢
+20:27 xxxxxxxx: 体位刁钻
+20:27 cleamoon: 把白学全文写上
+20:39 cc joined channel
+20:43 cc quit:Ping timeout: 240 seconds
+20:44 id10086 joined channel
+20:55 iyzsong: 0.0
+21:20 condy: iyzsong: 0.0
+21:58 whatofor quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+22:34 lhanjian joined channel
+22:43 hoxily quit:Quit: Leaving
+23:09 chocolat_ joined channel
+23:09 chocolat_ quit:Client Quit
+23:10 chocolat_ joined channel
+23:10 chocolat_ quit:Client Quit
+23:36 hope1: 本来想考前去开一点短期抗焦虑药物的，还是怂了
+23:37 condy: 我还以为是利他林之类的……（好吃药比较好，嗯 
+23:37 cleamoon: 海棠姬很紧张吗？
+23:38 condy: s/好/少
+23:42 id10086 quit:Ping timeout: 260 seconds
+23:43 hope1: 感觉不知道怎么跟医生描述症状，然后当时感觉好些了的样子低估了症状，然后好像短期内会影响认知功能的样子，然后反正就怂了没去……
+23:43 hope1: 都是借口啦
+23:44 cleamoon: 影响认知？也就是说现在啪啪啪海棠姬不会被发现？
+23:45 hope1: 一直都这样，感觉自己描述不清楚症状然后就很抗拒去医院…… 虽然应该是非常知道去医院的必要性吧
+23:47 cleamoon: 描述不清楚症状和抗拒去医院感觉没什么联系呀....
+23:48 hope1: 描述不清楚就没法诊断吧…… 时间也不多
+23:49 cleamoon: soga
+23:49 cleamoon: 那你为什么觉得一定要去医院呢？护士很萌吗
+23:50 hope1: 反正考完回来再看了。不知道该挂心理咨询还是神经内科……
+23:51 cleamoon: 考sat？
+23:53 hope1: 因为整天都很难受啊。最近有时候会焦虑发作，但其他时候也会强迫性的觉得自己很糟糕，完全没法工作，或者说根本不想工作吧
+23:53 hope1: 对
+23:54 hope1: 啊啊，描述不清楚。老实说，我自己都不知道是什么样的，我有时候会觉得自己在伪装症状……
+23:54 cleamoon: 你想工作还早着呢
+23:55 hope1: 指学习，或者任何需要生产力的实际事物
+23:55 cleamoon: 推荐你看个漫画，“漫画心疗系”，也许有帮助
+23:55 hope1: 比方说马上就要考sat了，但这两周我压根没有做任何复习
+23:55 hope1: thx
+23:56 cleamoon: 不想工作，焦虑，强迫性的觉得自己糟糕，会不会是因为懒，然后导致很多事情没做，然后导致自我厌恶，然后更容易懒呢？
+23:58 cleamoon: 海棠姬有没有给自己预定一个很高的目标呢？
+23:58 hope1: 肯定有这个原因，但我觉得不只是。即便当我完全清楚地了解并认可这个道理，下决心去做一些具体的事情的时候，也会遇到问题。较机械化的刷题还好，但写作就会有很大的麻烦
+23:59 cleamoon: 写作很需要心情的，尤其很多人很讨厌写作，这就容易导致 “拖延 - 自我厌恶”的恶性循环
+23:59 cleamoon: 感觉海棠姬没有大毛病，就是典型宅出来的

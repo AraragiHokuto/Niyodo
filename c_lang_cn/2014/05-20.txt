@@ -1,0 +1,1027 @@
+0:55 hope1 joined channel
+1:52 T3rmin4t0r_ joined channel
+2:32 wsyh joined channel
+6:40 tsuki joined channel
+8:42 iyzsong joined channel
+8:43 wsyh:iyzsong: 被集合论虐成翔了...
+8:45 iyzsong:o_o
+8:46 iyzsong:早~
+8:54 silencly07 joined channel
+9:1 sismvg joined channel
+9:2 lh_mouse joined channel
+9:9 sismvg:旋风管家都开始玩NTR了。。、
+9:27 hope1 joined channel
+9:29 xxxxxxxxx joined channel
+9:36 condy joined channel
+9:41 lh_mouse:geordi, { foo<int>().bar(); } template<typename T> struct foo { static void bar(); }; template<> void foo<int>::bar(){ BARK; } template<> void foo<char>::bar(){ BARK; }
+9:41 geordi:foo<int>::bar()
+9:43 T2 joined channel
+9:53 wsyh:T2: 把智商交出来
+9:55 T2:ws
+9:55 T2:wsyh, 2333
+9:59 zzzzzzzz joined channel
+10:9 condy1 joined channel
+10:14 wsyh:zzzzzzzz: 把智商交出来
+10:14 wsyh:condy1: 把智商交出来
+10:18 condy1:wsyh: 已为负。
+10:19 zzzzzzzz:wsyh, 7智商已用尽
+10:31 condy1:geordi: { ifstream ifs(__FILE__); cout << ifs.rdbuff();}
+10:31 geordi:error: 'ifstream' has no member named 'rdbuff'
+10:31 condy1:geordi: { ifstream ifs(__FILE__); cout << ifs.rdbuf();}
+10:31 geordi:#include "prelude.hpp" [+ 3 discarded lines]
+10:32 condy1:geordi: { ifstream ifs(__FILE__); string s; while(ifs >> s) cout <<s<<" ";}
+10:32 geordi:#include "prelude.hpp" using namespace std; int main(int argc, char * argv[]){ ifstream ifs(__FILE__); string s; while(ifs >> s) cout <<s<<" ";} 
+10:44 wsyh:为什么有那么一堆作业要解决...
+10:46 iyzsong:w.w
+10:46 wsyh:统计学的无聊货...
+10:48 *wsyh 好希望能有一只没有学霸属性的可爱的同时具有数学娘和文学娘属性的计算姬来帮我写作业...
+10:50 oxsard joined channel
+10:53 wsyh:oxsard: 把智商交出来
+10:53 sismvg:数学娘和文学娘不是自带学霸属性？
+10:54 wsyh:sismvg: 不一定
+10:54 sismvg:何？
+10:55 sismvg:话说分户口好麻烦
+11:0 sismvg:www.baidu.com
+11:16 lh_mouse:geordi, { unique_ptr<int> p1(new int(123)); unique_ptr<const int> p2(move(p1)); } 
+11:16 geordi:<no output>
+11:17 lh_mouse:geordi, { int i; int *p = &i; const int *p2 = static_cast<const int *>(p); }
+11:17 geordi:warning: unused variable 'p2'
+11:17 lh_mouse:geordi, prepend -w
+11:17 geordi:<no output>
+11:17 lh_mouse:geordi, replace static_cast with const_cast
+11:17 geordi:<no output>
+11:17 lh_mouse:geordi, replace const_cast with reinterpret_cast
+11:17 geordi:<no output>
+11:21 lh_mouse:geordi, { bar(); } struct foo { foo(int){ } }; foo bar(){ int i = 3; return i; }
+11:21 geordi:<no output>
+11:21 lh_mouse:geordi, prepend explicit  before foo(int)
+11:21 geordi:error: could not convert 'i' from 'int' to 'foo'
+11:28 condy_1 joined channel
+11:29 condy_1:geordi, { ofstream ofs("baka.txt", ios::out); ofs << "baka" << endl; ofs.close(); }
+11:29 geordi:<no output>
+11:30 condy_1:geordi, { ifstream ifs("baka.txt"); cout << ifs.rdbuf();}
+11:30 geordi:<no output>
+11:30 condy_1:geordi, { ifstream ifs("baka.txt"); string s; ifs >> s; cout << s << endl; }
+11:30 geordi:<no output>
+11:31 condy_1:geordi, {  ofstream ofs("baka.txt", ios::out); ofs << "baka" << endl; ofs.close(); ifstream ifs("baka.txt"); cout << ifs.rdbuf(); ifs.close(); }
+11:31 geordi:<no output>
+11:32 condy_1:geordi, { ifstream ifs(__FILE__); cout<<ifs.rdbuf(); }
+11:32 geordi:#include "prelude.hpp" [+ 3 discarded lines]
+11:35 condy_1:geordi, { ofstream ofs("baka.txt", ios::out): if (ofs.is_open()) cout << "GJ" << endl; else cout << "HHHHH" << endl; }
+11:35 geordi:error: expected ',' or ';' before ':' token
+11:35 condy_1:geordi, { ofstream ofs("baka.txt", ios::out); if (ofs.is_open()) cout << "GJ" << endl; else cout << "HHHHH" << endl; }
+11:35 geordi:HHHHH
+11:37 condy_1:geordi, { ofstream ofs("baka.txt", ios::out); if (ofs) cout << "GJ" << endl; else cout << "HHHHH" << endl; }
+11:37 geordi:HHHHH
+11:40 condy_1:geordi, << wstring(10, L'烧');
+11:40 geordi:??????????
+11:40 condy_1:geordi, << wstring(10, L'烧')
+11:40 geordi:??????????
+11:41 condy_1:geordi, << wstring(10, '烧')
+11:41 geordi:warning: multi-character character constant
+11:41 condy_1:geordi, -w << wstring(10, '烧')
+11:41 geordi:??????????
+11:42 condy_1:geordi, << "我还是不会用啊"
+11:42 geordi:我还是不会用啊
+11:42 condy_1:geordi, {vector<string> v(10, "我真的会用"); cout << v; }
+11:42 geordi:{"\xe6\x88\x91\xe7\x9c\x9f\xe7\x9a\x84\xe4\xbc\x9a\xe7\x94\xa8", "\xe6\x88\x91\xe7\x9c\x9f\xe7\x9a\x84\xe4\xbc\x9a\xe7\x94\xa8", "\xe6\x88\x91\xe7\x9c\x9f\xe7\x9a\x84\xe4\xbc\x9a\xe7\x94\xa8", "\xe6\x88\x91\xe7\x9c\x9f\xe7\x9a\x84\xe4\xbc\x9a\xe7\x94\xa8", "\xe6\x88\x91\xe7\x9c\x9f\xe7\x9a\x84\xe4\xbc\x9a\xe7\x94\xa8", "\xe6\x88\x91\xe7\x9c\x9f\xe7
+11:42 condy_1:geordi, {vector<string> v(10, string("我真的会用")); cout << v; }
+11:42 geordi:No change in output.
+11:43 condy_1:geordi, {vector<string> v(10, string("我真的会用")); for(auto& i : v)cout<<i<<endl; }
+11:43 geordi:我真的会用 [+ 9 discarded lines]
+11:43 condy_1:geordi, {vector<string> v(10, string("我真的会用")); for(auto& i : v)cout<<i<<ends; }
+11:43 geordi:我真的会用我真的会用我真的会用我真的会用我真的会用我真的会用我真的会用我真的会用我真的会用我真的会用
+11:44 condy_1:geordi, << TYPE_DESC(int)
+11:44 geordi:error: template argument 1 is invalid
+11:44 condy_1:geordi, << TYPE(int)
+11:44 geordi:Same error.
+11:44 condy_1:geordi, << TYPE_DES(int)
+11:44 geordi:error: expected primary-expression before 'int'
+11:45 condy_1 left channel
+11:45 condy_1 joined channel
+11:46 lh_mouse:geordi, replace ( with < and replace ) with >
+11:46 geordi:error: 'TYPE_DES' was not declared in this scope
+11:46 lh_mouse:geordi, append C after DES
+11:46 geordi:integer
+11:46 lh_mouse:geordi, show
+11:46 geordi:<< TYPE_DESC<int>
+11:46 condy_1:geordi,<< TYPE_DESC<int*>
+11:46 geordi:pointer to an integer
+11:47 condy_1:geordi, { int (*fp)(const void*, const void*); cout << TYPE_DESC<fp>; }
+11:47 geordi:error: the value of 'fp' is not usable in a constant expression
+11:47 condy_1:geordi, { typedef int (*fp)(const void*, const void*); cout << TYPE_DESC<fp>; }
+11:47 geordi:pointer to a function taking 2 pointers to constant void and returning an integer
+11:48 lh_mouse:geordi, -make-type for(;;){ file >> luokka; getline(file, nimi); if(!file){ break; } cout << nimi <<": luokka " << luokka << endl; }
+11:48 geordi:error: No such option: -m
+11:48 lh_mouse:geordi, --make-type pointer to a function taking 2 pointers to constant void and returning an integer
+11:48 geordi:error: Unexpected ` ` after `taking 2`. Expected parameter-declaration.
+11:49 condy_1:geordi, --make-type pointer to a function taking 1 pointers to constant void and returning an integer
+11:49 geordi:error: Unexpected ` ` after `taking 1`. Expected parameter-declaration.
+11:49 condy_1:geordi, --make-type pointer to a function taking 1 pointer to constant void and returning an integer
+11:49 geordi:Same error.
+11:49 condy_1:geordi, --make-type pointer to an integer
+11:49 geordi:int*
+11:50 oxsard joined channel
+11:52 condy_1:geordi, --make-type pointer to a function taking a pointer to constant void and returning an integer
+11:52 geordi:int(*)(const void *)
+11:52 condy_1:geordi, --make-type pointer to a function taking two pointers to constant void and returning an integer
+11:52 geordi:int(*)(const void *, const void *)
+11:53 condy_1:geordi, show
+11:53 geordi:make type pointer to a function taking two pointers to constant void and returning an integer
+11:53 condy_1:geordi,  make type pointer to a function taking two pointers to constant void and returning an integer
+11:53 geordi:int(*)(const void *, const void *)
+12:17 code_new joined channel
+12:31 wsyh:看上去明天可以逃课...
+13:40 tsuki joined channel
+13:58 Zirx joined channel
+14:14 Xilzzerts joined channel
+14:28 varna joined channel
+14:29 varna:频道lambda药娘团招收高剂量药娘
+14:29 varna:H.B.Flankoi 今天有人给了我一个喵球。放在水面上或者用手摸腹部就会发亮
+14:36 sismvg:今天银行都欺负我未成年
+14:36 sismvg:不给我开网银
+14:37 iyzsong:2333
+14:37 varna:sismvg: 快来跟我交配
+14:37 sismvg:然后去要毕业证，结果学校附近要开什么亚洲峰会还是什么的，所有老师停止对学生的见面
+14:37 varna:2333
+14:37 sismvg:白做了1个小时的车
+14:38 *varna 把ev14拆得只剩根枪管子和扳机组了，连上机匣都不算
+14:38 sismvg:话说百度实习工资多少。。
+14:38 varna:sismvg: 忘了，以前有个伙计去了质量部还不是什么的反正也给他几千
+14:39 sismvg:百度一面还没来，然后一个别的公司给了我offer..4000一月
+14:40 wsyh joined channel
+14:40 varna:你觉得能去百度么……能的话我记得百度应该不少于这个数
+14:40 varna:菊座：“现在的女生，夏天穿裙子也就算了，竟然还穿安全裤。难道我还会偷看你吗？ 难道人与人之间的这点信任都没了？我愤怒的从地上爬了起来”
+14:40 sismvg:不清楚。。反正我是错了一题
+14:41 sismvg:还有一题没有最优解
+14:41 varna:写上你正在吃螺，有点迷糊
+14:42 sismvg:买不起螺
+14:42 varna:螺内酯不贵吧
+14:42 condy1 joined channel
+14:43 sismvg:我一天3餐只有10块预算。。。
+14:43 varna:那只好三鲜伊面了……
+14:44 lh_mouse:varna, https://github.com/lhmouse/MCF/blob/master/Projects/Test2/main.cpp
+14:44 condy1:这么拮据。。。
+14:44 sismvg:自己会做菜。。所以从不担心吃不饱。。
+14:44 varna:lh_mouse: connecting
+14:44 varna:lh_mouse: 这是现在的序列化接口？
+14:44 candy76041820 joined channel
+14:45 lh_mouse:暂时是  不过太难看  所以目测过几天得重做
+14:45 varna:lh_mouse: 我觉得还行
+14:45 sismvg:printf cout 令人纠结
+14:45 varna:printf好，cout惨
+14:46 sismvg:cout太烦
+14:46 sismvg:cscanf大法保平安
+14:46 lh_mouse:varna, 太长了
+14:47 varna:lh_mouse: 但是看着还干净
+14:48 sismvg:自己撸个format还有scanf好了
+14:48 varna:有现成的干嘛自己写
+14:48 sismvg:能撸正则
+14:49 varna:正则用来输入太疼
+14:49 sismvg:boost.format不忍直视
+14:49 varna:不如一行一\阁下/
+14:49 varna:很快你自己都不会用那些惨不忍睹的装备了正则的输入
+14:49 sismvg:http://blog.csdn.net/fq_hayate/article/details/9123689
+14:49 lh_mouse:先写个好用的数据串行化用的容器
+14:49 lh_mouse:考虑几个需求吧
+14:50 lh_mouse:第一 是否需要小缓冲区优化
+14:50 sismvg:以前撸的。。速度慢了60%
+14:50 lh_mouse:第二  双端队列  很基本的需求
+14:50 varna:sismvg: 正则怎么优化的
+14:50 varna:sismvg: 懒得开代理上csdn blog了，我这连不上
+14:50 lh_mouse:第三  既然是双端队列 标准实现是块链  那么每块都等大还是不等大
+14:50 sismvg:换引擎呗
+14:50 varna:不是自己写么
+14:50 varna:都上个re2/pcre了何必扔进io
+14:51 sismvg:方便点
+14:51 varna:本来character class就够用，结果你集成个正则进去强X用户跟你一起慢……
+14:51 sismvg:可以屏蔽掉正则
+14:51 sismvg:虽然还没实现 233
+14:51 varna:@我们可以不用SCAR牙刷版来刷牙
+14:52 varna:准确来说应该是Mk16 CQC
+14:52 sismvg:CQC听起来很叼
+14:53 varna:只是短枪管
+14:53 sismvg:中国CQC认证过了不？
+14:53 varna:不是那个CQC
+14:54 sismvg:I know
+14:54 sismvg:简历上写中职学历，结果发现自己还没毕业，BIG 麻烦
+14:56 varna:谁问爆谁就是了
+14:56 sismvg:我对12岁以上都没兴趣
+14:57 varna:原来药元四喜欢被正太爆
+14:57 sismvg:噗
+14:57 sismvg:话说农行未成年能网银，其他银行似乎不行
+14:58 varna:啊哈哈
+14:58 sismvg:我该怎么说呢。。。
+14:59 lh_mouse:geordi, { bar *p = 0; cout <<(foo *)bar; } struct foo { virtual ~foo(){ } }; struct bar : virtual foo { };
+14:59 geordi:error: expected primary-expression before ';' token
+14:59 sismvg:撸unix去了
+14:59 varna:告诉他们你亟需邮购螺内酯
+14:59 wsyh joined channel
+15:6 sismvg joined channel
+15:10 condy1:geordi: { foo* p = 0; p->bar(); } struct foo { void bar() { cout << "bar"; } };
+15:10 geordi:bar
+15:10 sismvg:银行的程序员又用jsquery来确认IE浏览器了。。
+15:16 lh_mouse:geordi, { register void *rip; __asm__("movq %%rip, %%rax; " : "=a"(rip)); cout <<rip; }
+15:16 geordi:error: operand type mismatch for `movq'
+15:17 lh_mouse:geordi, { register void *rip; __asm__(".intel_syntax noprefix; mov rax, rip ; .att_syntax; " : "=a"(rip)); cout <<rip; }
+15:17 geordi:error: unsupported instruction `mov'
+15:18 lh_mouse:geordi, { register void *rip; __asm__(".intel_syntax noprefix; call next; next: pop rax ; .att_syntax; " : "=a"(rip)); cout <<rip; }
+15:18 geordi:0x402fcc
+15:18 xxxxxxxxx:http://www.p5w.net/news/cjxw/201405/t20140520_604679.htm
+15:20 sismvg:骇客：我们的同志已经打入了敌人的内部
+15:20 sismvg:今天看到银行装XP ..
+15:24 varna:爆了他啊
+15:25 xxxxxxxxx:为啥指明不许装win8?
+15:25 varna:因为这届的内鬼改和GNU合作了
+15:26 xxxxxxxxx:我还以为改和NSA合作了
+15:26 sismvg:不是某天朝无版图？
+15:26 varna:RMS: 计划通。 盖茨：五五开。
+15:26 sismvg:233
+15:27 sismvg:盖茨不管这个了
+15:27 varna:计画通
+15:27 code_new joined channel
+15:27 varna:似乎该这么写过来
+15:27 sismvg:配图呢？
+15:27 varna:sismvg: 盖茨表面把权力交给三哥CEO # 阴谋论
+15:27 varna:我操谁把我舰娘页面卡住了
+15:28 sismvg:盖茨的股票不是没有CEO 多吗？
+15:28 varna:果然这个点国内的提督志愿者也磨刀霍霍啊
+15:28 varna:sismvg: 这是阴谋论所以略
+15:28 sismvg:三点半为何？
+15:29 sismvg:石头门被某天朝公司代理了。。。
+15:29 sismvg:命运石之门-》马克思之门
+15:30 varna:sismvg: 这次又「夕方以降」
+15:30 varna:马克思哪里不好
+15:31 sismvg:理解不能
+15:31 varna:换成马克思之门以后就能走女仆线了
+15:31 sismvg:马克思不能攻略啊
+15:31 varna:马克思可是搞了女仆的无产阶级革命导师
+15:31 zzzzzzz joined channel
+15:31 sismvg:我还太年轻了
+15:31 varna:你们赤化程度不足，就是因为你们不搞女仆，或者搞了但没怀孕
+15:32 sismvg:我还是觉得攻略马克思本人比较有刺激感
+15:32 varna:爆了他
+15:32 sismvg:斯大林不同意
+15:32 varna:丝妲琳是修正主义者，不管他
+15:32 xxxxxxxxx:@T2
+15:33 varna:他再嚷嚷就MG42伺候
+15:33 varna:元首马上开扇
+15:35 sismvg:元首-》现实税-》床上的亚丝娜不懂你想法
+15:36 sismvg:马路上的现充不懂我的愤怒
+15:36 varna:对欠日奈毫无好感
+15:36 varna:刀剑女角就觉得诗乃不错
+15:36 varna:结果还是个八百米内拿个亚夜花二式敲人的中二
+15:37 varna:十一区人就不懂得世界上有小口径狙击枪么
+15:37 xxxxxxxxx:十一区居民懂八百里
+15:37 varna:大亚联盟表示我们已经拦不住特尉一家人
+15:38 varna:特尉出生之前他们一家就把上合的魔法开发水平打回了解放前
+15:39 sismvg:天朝已经开发出了能跑800里的机枪子弹
+15:39 sismvg:白血球都打不了那么远
+15:39 xxxxxxxxx:局座都学陨石了
+15:40 sismvg:@jojo
+15:40 varna:吃我质量爆散（Material Burst）口牙
+15:40 varna:xxxxxxxxx: 少将都会火球术
+15:40 sismvg:还是双色的
+15:41 varna:对了米库酱吃药没？
+15:42 lh_mouse:geordi, << sizeof(list<int>);
+15:42 geordi:16
+15:43 varna:geordi: << 小耗
+15:43 geordi:error: stray '\345' in program
+15:43 varna:geordi: << "小耗"
+15:43 geordi:小耗
+15:43 candy76041820:geordi, {std::wcout<<sizeof(std::vector<int>::iterator)<<std::endl;}
+15:43 geordi:8
+15:43 lh_mouse:geordi, << sizeof(forward_list<int>);
+15:43 geordi:8
+15:43 candy76041820:geordi, {std::wcout<<sizeof(int*)<<std::endl;}
+15:43 geordi:8
+15:44 candy76041820:geordi, {std::wcout<<std::is_same<std::vector<int>::iterator, int*>::value<<std::endl;}
+15:44 geordi:false
+15:44 xxxxxxxxx:民警9条救命短信说动前女友劝回轻生男
+15:45 sismvg:吊
+15:45 lh_mouse:geordi, << TYPE<vector<int>::iterator>;
+15:45 geordi:vector<int, allocator<int> >::iterator 
+15:46 sismvg:geordi, <<typeid(std::vector<int>::iterator>.name()
+15:46 geordi:error: Unexpected end of request. Expected ')' or balanced code.
+15:46 sismvg:geordi, <<typeid(std::vector<int>::iterator>).name()
+15:46 geordi:error: expected primary-expression before '>' token
+15:46 sismvg:geordi, <<typeid(std::vector<int>::iterator).name()
+15:46 geordi:vector<int, allocator<int> >::iterator
+15:46 sismvg:geordi, <<typeid(std::vector<int>::iterator).raw_name()
+15:46 geordi:error: 'const struct type_strings_detail::type_info' has no member named 'raw_name'
+15:47 sismvg:geordi, <<typeid(std::_If<1,0,10>::type).name()
+15:47 geordi:error: '_If' is not a member of 'std'
+15:47 sismvg:geordi, <<typeid(std::if_<1,0,10>::type).name()
+15:47 geordi:error: 'if_' is not a member of 'std'
+15:48 sismvg:geordi,{__asm{}}
+15:48 geordi:error: expected '(' before '{' token
+15:48 xxxxxxxxx:中国国防科技大学、Canonical今天联合宣布，OpenStack云系统正式进驻天河二号。
+15:49 xxxxxxxxx:哈哈哈看来不是GNU的老和尚
+15:49 varna:Canonical...
+15:49 varna:做ubuntu那些货？
+15:49 xxxxxxxxx:现在，Canonical的系统和服务已经全面“占领”天河二号，包括Ubuntu Server操作系统(确切地说是中国定制版Kylin Cloud Linux)、Ubuntu OpenStack、Ubuntu Juju(云服务流程引擎)。OpenStack已经运行在256个节点上，未来几个月内将会部署到超过6400个节点。
+15:49 varna:果然
+15:49 varna:唉唉
+15:49 sismvg:难以相信的性能
+15:50 candy76041820:↑（禁止政府机关采购 Win8）他们对电脑要求很低的，紧急时刻网页最小化！word最大化！显示器瞬间转向90°，能顺利完成这一连贯动作不顿卡就行。
+15:50 sismvg:我好像懂了什么
+15:51 varna:我就一个mod-1切工作区
+15:51 varna:刚才某副教授进来说点零碎事情，我反射性地完成了一个高度优化的战术动作
+15:51 varna:后方的幼女得到了充分保护
+15:51 xxxxxxxxx:3、所有投标产品须提供主流电商销售地址，市场上无完全一致型号的，需提供一款同系列同配置（或略低于投报产品配置）的产品销售网址。投标产品投标价格不得高于电商销售价格（操作系统原因导致价格高于电商售价的，请说明操作系统导致的价格变化，扣除操作系统导致的价格变化后，价格不得高于电商销售价格）。
+15:51 xxxxxxxxx:http://detail.zol.com.cn/os/index271508.shtml
+15:52 xxxxxxxxx:我好像懂了什么
+15:52 candy76041820:草，178 上散华礼弥也被封了。
+15:52 varna:2333
+15:52 sismvg:看权利的游戏
+15:52 varna:sismvg: 杀与艹之歌？
+15:52 sismvg:不要说出事实
+15:52 varna:以前我还是西式奇幻厨的时候也没碰过冰火
+15:52 sismvg:这集很精彩的
+15:52 varna:所以现在我还是不碰
+15:52 sismvg:小恶魔爆发了
+15:53 varna:不过就是个四面道中
+15:53 varna:不过就是个四面道中
+15:59 xxxxxxxxx:天河2号原来是用Xeon E5-2692v2 的...
+15:59 varna:@小耗
+16:0 varna:@全耗门fire
+16:1 xxxxxxxxx:全耗门...
+16:1 candy76041820:BURRRRRRRRRRNINNNNNNNNNGU MAIIIIIIIIIICE！！
+16:1 varna:MiDESU
+16:2 whocares_2 joined channel
+16:3 candy76041820:啊，下回做个机器人，每次耗子发言就吱，药娘 / 新人来了就爆。
+16:3 varna:爆药娘要有诚意
+16:4 candy76041820:第一时间爆还没诚意？
+16:4 varna:人家辛苦吃药变成了药娘，得自己爆才行
+16:4 candy76041820:那还不是你爆是你的 JJ 爆呢。
+16:4 xxxxxxxxx:然后进进出出的时候就会看到机器人在不停爆....
+16:4 varna:candy76041820: 是分身，分身
+16:4 candy76041820:笑什么！基佬！你也该爆！
+16:4 geordi:0
+16:5 varna:传基头四！
+16:5 candy76041820:师～父～
+16:5 varna:2333
+16:6 varna:试试Gtk2::GladeXML
+16:6 candy76041820:另外羊驼是下半身思考所以 JJ 才是本体？
+16:6 varna:精虫才是本体
+16:7 geordi:warning: null argument where non-null required (argument 2)
+16:7 geordi:-1
+16:7 candy76041820:exec 系列开不了非可执行文件吧……
+16:8 geordi:error: expected unqualified-id before 'if'
+16:8 geordi:Operation not permitted: dup
+16:8 varna:只绑定到加载器，如果不可执行就跪
+16:9 varna:EACCES Search permission is denied for a directory listed in the new process  image  file's  path prefix, or the new process image file denies execution permission.
+16:9 candy76041820:geordi, int main(int argc, char **argv[0]){execlp(argv[0], "");return 0;}
+16:9 geordi:error: ISO C++ forbids zero-size array 'argv'
+16:9 candy76041820:geordi, int main(int argc, char **argv){execlp(argv[0], "");return 0;}
+16:9 varna:exec(3P)
+16:9 geordi:<no output>
+16:10 candy76041820:geordi, int main(int argc, char **argv){wprintf(L"Go!");execlp(argv[0], "");return 0;}
+16:10 geordi:Go!
+16:10 candy76041820:啊咧？
+16:11 varna:geordi, int main(int argc, char *argv[]) { printf("%d", execlp(argv[0], ""); return 0; }
+16:11 geordi:error: Unexpected `}` after `return 0; `. Expected ')', '/', or balanced code.
+16:11 varna:geordi, int main(int argc, char *argv[]) { printf("%d", execlp(argv[0], "")); return 0; }
+16:11 geordi:-1
+16:11 varna:.
+16:11 richselian joined channel
+16:11 varna:揉舔撸来了
+16:11 varna:爆他
+16:11 candy76041820:爆
+16:12 candy76041820:geordi, int main(int argc, char **argv){wprintf("%hs", argv[0]); return 0;}
+16:12 geordi:error: cannot convert 'const char*' to 'const wchar_t*' for argument '1' to 'int wprintf(const wchar_t*, ...)'
+16:12 candy76041820:geordi, int main(int argc, char **argv){wprintf(L"%hs", argv[0]); return 0;}
+16:12 geordi:/t
+16:12 candy76041820:...
+16:13 geordi:CPU time limit exceeded
+16:13 candy76041820:噗
+16:14 geordi:Operation not permitted: dup
+16:15 candy76041820:http://www.bilibili.tv/video/av578203/ 真·翔
+16:15 richselian:疼
+16:17 varna:叫你ML
+16:17 varna:生活作风糜烂不疼才怪
+16:18 richselian:acmol大神搬到旁边的工位来了。。
+16:19 varna:爆了他
+16:20 iyzsong joined channel
+16:22 xxxxxxxxx:http://legal.gmw.cn/2014-05/20/content_11371467.htm 丧病
+16:23 varna:啊，好用了
+16:23 varna:原来这个module用的是旧式的libglade, 不是gtkbuilder
+16:24 varna:现在我也有VB类似物了
+16:26 *hoxily 肛 varna
+16:27 *varna 无意识地使用了奥义「沟道夹断」
+16:28 xxxxxxxxx:还好不是截断
+16:28 varna:总之已经断了
+16:30 *hoxily 断了……
+16:31 richselian:正太被夹了？
+16:31 varna:richselian: 你已经虚弱到分不清五字符和六字符的差别了么
+16:31 xxxxxxxxx:贵圈真乱
+16:32 varna:xxxxxxxxx: 爆
+16:33 varna:米库酱：本部的绅士们最喜欢调戏这种楼主了，楼主走好；听说帝球当年11岁就开始撸Scheme了。
+16:33 varna:^ 明明是用Basic写H Game
+16:33 varna:怎么讹传成Scheme了
+16:33 xxxxxxxxx:帝球的体型和()比较类似?
+16:34 varna:幻の上帝: 回复 _craftG :13岁。
+16:34 varna:2333
+16:34 varna:xxxxxxxxx: ( . )
+16:34 varna:consphere ( . )
+16:35 varna:「连理之球」
+16:36 hope1 joined channel
+16:37 varna:三露子： http://imgsrc.baidu.com/forum/w%3D580%3B/sign=f49c215b56e736d158138c00ab6b4ec2/d009b3de9c82d158802d3636820a19d8bd3e428d.jpg
+16:38 lh_mouse:geordi, { string str1("meow"); string str2 = str1; *(char *)str2.c_str() = 'a'; << str1; }
+16:38 geordi:error: expected primary-expression before '<<' token
+16:38 lh_mouse:geordi, { string str1("meow"); string str2 = str1; *(char *)str2.c_str() = 'a'; cout << str1; }
+16:38 geordi:aeow
+16:40 hoxily:geordi: { char *p = "hello string"; cout << p << '.'; p[0] = 'H'; p[6] = 'S'; cout << p;}
+16:40 geordi:warning: deprecated conversion from string constant to 'char*'
+16:41 hoxily:没有输出？
+16:42 geordi:hello string. Undefined behavior detected.
+16:42 geordi:-w { char *p = "hello string"; cout << p << '.'; p[0] = 'H'; p[6] = 'S'; cout << p;}
+16:46 condy:竟然没有编译错误。
+16:46 hoxily:[hoxily@hoxily c]$ ./a.out
+16:46 hoxily:Segmentation fault (core dumped)
+16:46 xxxxxxxxx:http://www.blendernation.com/wp-content/uploads/2008/11/bill_sketch01_lg.jpg <- 三耗子(兔子?)
+16:47 richselian:疼
+16:47 richselian:到底谁被夹了
+16:47 varna:richselian: hoxily, 应该是你后辈
+16:47 xxxxxxxxx:谁疼谁被夹了
+16:47 varna:xxxxxxxxx: 这明明是免子
+16:48 xxxxxxxxx:varna: 尾巴呢?
+16:48 varna:xxxxxxxxx: 夹断了
+16:49 varna:因为改了
+16:49 xxxxxxxxx:http://www.deviantart.com/morelikethis/334717699
+16:49 varna:lisp方言往往不実装克里化
+16:53 T2 joined channel
+16:53 sismvg:我理解了非洲人民的痛苦
+16:53 varna:sismvg: 被迫被ubuntu资助？
+16:53 candy76041820:>驼 明明是非洲提督。
+16:54 varna:噗
+16:54 sismvg:5ks/s
+16:54 sismvg:网速
+16:54 *varna 努力把自己的头捏成一个T型
+16:54 xxxxxxxxx:又不是小耗 哪来那么柔软
+16:55 candy76041820:>SG 你知足吧，早上百度盘第一秒 1M 然后 800K 700K 一路掉到 200B，一共十多 M 的东西你先给我冲下 8M 来然后细水长流是何居心。
+16:55 sismvg:迅雷可以一直1M/s
+16:56 varna:whocares[0]: 我不知道历史情况，但这么做不至于很危害效率，不然按lisp实现的习惯(+ 1) 2很可能就是个续延……
+16:56 xxxxxxxxx:candy76041820: 没给你搞出个错误就不错了...
+16:56 candy76041820:>SG 谁知道今天早上百度抽风来着……
+16:56 varna:我现在还抽风呢
+16:57 varna:必须pause-resume一次才有速度
+16:57 sismvg:你有整个电信抽风惨？
+16:57 varna:不然就www
+16:57 sismvg:我这里有一次抽了2天
+16:57 varna:@提督
+16:57 sismvg:结果换个谷歌的DNS竟然好了。。
+16:58 xxxxxxxxx:换DNS有效真是幸福,,,
+16:58 candy76041820:>EA 你以为我没碰到啊？上次下三国无双给我第八分卷 CRC 损坏，联合给我报第一分卷出错的 WinZIP 一起谋杀了我一个上午。
+16:58 varna:Mozilla还没解决imagebin的问题啊
+16:58 candy76041820:>SG 你那是电信，有我方宽疼？另外今天早上校园网所有网站全没速度。
+16:59 sismvg:校园网就算了吧。。
+16:59 varna:小圆网可以下LEEE
+16:59 sismvg:火狐浏览器你对着文件选择窗口会导致火狐整个崩溃
+16:59 varna:你火狐什么版本……
+16:59 candy76041820:>SG 然后方宽下所有诊断命令什么 ping 什么 tracert 全部失效。
+16:59 sismvg:28
+16:59 varna:我也28为何不崩溃
+16:59 xxxxxxxxx:candy76041820: 我说的是下载的时候到60% 80% 90%的时候然后弹个网络错误啥的
+17:0 candy76041820:>EA 断点续传……
+17:0 sismvg:系统？
+17:0 varna:sismvg: Linux shiki 3.14.1-1-ARCH #1 SMP PREEMPT Mon Apr 14 20:40:47 CEST 2014 x86_64 GNU/Linux
+17:0 xxxxxxxxx:错了直接删除临时文件的
+17:0 sismvg:windows
+17:0 xxxxxxxxx:不像暂停
+17:0 varna:2333
+17:0 sismvg:8.1 65
+17:0 sismvg:64
+17:0 sismvg:3个版本都这样
+17:0 candy76041820:>EA 百度盘不干这事。
+17:0 varna:windows为什么不用IE
+17:0 candy76041820:啊，调查，谁 B 站域名是 bilibili.kankanews.com？
+17:1 varna:现在的IE不是做得挺漂亮么
+17:1 sismvg:windows为什么要用IE
+17:1 xxxxxxxxx:我反正遇到过
+17:1 varna:我觉得win下面IE的界面比火狐好看
+17:1 sismvg:虽然漂亮，但是有点鬼畜的问题
+17:1 sismvg:比如支支持IE的网站碰到IE11就提示不是IE。。
+17:1 varna:某楼主：看了异形后，对异形的繁殖能力很羡慕啊！ 
+17:1 varna:sismvg: 我记得可以在配置里改agent的？
+17:1 xxxxxxxxx:30M的东西一天也没搞下来 然后装了客户端一会就好了
+17:2 sismvg:不可以。
+17:2 candy76041820:>EA 叫你不早装……
+17:2 *varna 循环喵帕斯至今
+17:2 sismvg:你们都用什么下百度的东西啊
+17:2 candy76041820:>EA 或曰，叫你用 IE 下……
+17:2 varna:\文文/ http://www.bilibili.tv/video/av1005163/
+17:2 varna:sismvg: 实验室找个windows机器用客户端
+17:3 varna:两百兆之内直接浏览器
+17:3 varna:噗，upload 1.9x
+17:3 sismvg:迅雷大法，wget大法
+17:3 varna:flash怎么了
+17:3 xxxxxxxxx:我那时候百度的客户端莫名其妙开机就cpu99%
+17:3 candy76041820:我怎么没有。
+17:3 varna:我就听个喵帕斯直接给我刷处理落
+17:3 sismvg:你不知道客户端程序员多渣
+17:3 xxxxxxxxx:谁知道...
+17:3 sismvg:他们用苹果的屏幕来开发。。
+17:4 varna:噗？
+17:4 sismvg:看他们客户端程序员似乎用的苹果的显示器，还是超大的那种。
+17:4 candy76041820:<打开 CWPA 点五线谱玩>
+17:4 varna:苹果的咸湿器没什么特别啊
+17:4 sismvg:但是太大了
+17:5 varna:candy76041820: \文文/
+17:5 candy76041820:大还不好？
+17:5 varna:太大了，药元四受不了了
+17:5 sismvg:我说的是用户体验
+17:5 varna:就是体验啊
+17:6 sismvg:我的屏幕小
+17:6 varna:太大了，以药元四为代表的用户受不了了
+17:6 sismvg:放学不要走
+17:6 varna:来信爆
+17:6 sismvg:你出公交费
+17:6 varna:我只出月工交费
+17:7 varna:上脑了，听着妖怪之山脑补兵车行
+17:7 varna:我到底是有多喜欢兵车行……
+17:7 sismvg:》》？
+17:8 xxxxxxxxx:http://zh.wikipedia.org/wiki/Retina%E6%98%BE%E7%A4%BA%E5%B1%8F <- 果物?
+17:8 sismvg:我应该在个工资要求上写5000的
+17:8 candy76041820:啊，发现一个疑似扒谱错误，似乎该从 F#6 降到 E6。
+17:8 sismvg:为什么我会犯2写4000～5000
+17:9 varna:sismvg: 该写多少，呜～十铃？
+17:9 varna:candy76041820: 你果然会扒谱
+17:9 candy76041820:只是直觉而已。
+17:9 varna:不许黑觉大人
+17:10 sismvg:算了，反正没有正式面谈不能确定多少。。
+17:10 varna:实习工资？
+17:10 sismvg:某小公司工资
+17:10 candy76041820:>驼 觉明明是直板的！
+17:10 varna:so~nanoHA?
+17:11 candy76041820:>驼 そーなの那珂ー这样？
+17:11 varna:拆了！都拆了！
+17:11 candy76041820:不说前五艘不拆么？
+17:12 varna:还没当上提督所以不算
+17:12 sismvg:冰雪女皇要13亿美元票房了。。
+17:12 varna:当上之后前五艘绝对不拆
+17:12 xxxxxxxxx:@提督好快
+17:12 varna:xxxxxxxxx: 抬尻
+17:12 varna:sismvg: 就那个水雷奇缘？
+17:13 sismvg:漏尿奇缘
+17:13 xxxxxxxxx:漏尿?
+17:13 varna:一开始看到标题，我还以为是哪里的提督组织了水雷战队
+17:13 varna:后来才发现不是水雷是冰雪，顿时毫无兴趣
+17:13 cuihao joined channel
+17:13 sismvg:百合系列
+17:14 sismvg:最近BG的月来越少了
+17:14 varna:哲 学也少了
+17:14 sismvg:不是百合就是搞基，看来无性繁殖的时代来了
+17:14 varna:http://imgsrc.baidu.com/forum/w%3D580%3B/sign=7538c9a0f4246b607b0eb27cdbc31b4c/a044ad345982b2b71b93ae3733adcbef76099b31.jpg
+17:14 varna:津·KAZUYA
+17:17 varna:HOHOHO`
+17:17 sismvg:看来C86是去不了了
+17:18 sismvg:话说从十一区带和谐物回来会怎么样
+17:19 varna:你要去？
+17:19 sismvg:我想找若木谈谈人生和小爆虾
+17:20 varna:若木？
+17:20 sismvg:若木明喜
+17:20 varna:你要是去了帮我捎点dokidoki系列回来……
+17:22 sismvg:不知道会不会被马克思没收
+17:22 varna:谁知道呢
+17:22 sismvg:我想要亚丝娜的抱枕
+17:23 varna:欠日奈无爱
+17:23 sismvg:红白和西瓜也好
+17:24 varna:红白有人约好给我画了
+17:24 varna:西瓜好办，先灌几斤二锅头你就看什么都像西瓜
+17:25 sismvg:角怎么办？
+17:25 varna:几斤下去还没醉？再喝
+17:26 sismvg:别担心，100克下去我就死了。。
+17:26 sismvg:资产10W证明才能拿签证。。
+17:26 varna:2333
+17:26 sismvg:而且是年收入
+17:27 varna:这是去博丽社消费的节奏啊
+17:27 sismvg:淘宝似乎不让代购了
+17:28 T2:varna, 记录型信号量必须整个都是原语么？
+17:28 varna:啊？
+17:29 T2:比方说 wait(S) {--S.value; if(S.value <= 0) block(S.L);}
+17:29 varna:你这么写了只好如此，但是这个写法本身有误导性
+17:30 T2:这整个都得是原子操作？
+17:30 varna:你应该fetch & add
+17:30 T2:关键还有个block
+17:30 varna:block不重要
+17:30 T2:原来乳此
+17:30 varna:一个block的糙实现可以直接放弃runnable直接回resched
+17:31 varna:但是这种地方直接一个指令减&取
+17:31 varna:其他的部分都和计数器无关
+17:32 T2:就是说 wait(S) { >> if(--S.value <= 0)) << block(S.L);}
+17:32 T2:这一部分必须原子操作？
+17:32 varna:if不必
+17:33 T2:我再想想
+17:33 T2:另外锁总线是怎么回事？
+17:33 varna:--S.value得保证
+17:33 varna:数据总线上锁，保证确实只有一个CPU在访问主存
+17:34 varna:教科书说关中断都是扯淡
+17:34 T2:那就直接 sub eax 1 就行？
+17:34 varna:--S.value
+17:34 varna:实际上这里往往是保证S.value--
+17:35 T2:哦哦哦
+17:35 varna:我提示到这里，你猜猜sub [er]ax, 1够不够
+17:35 T2:那不行。
+17:37 T2:fetch eax [S.value's addr] sub eax 1 store [S.value's addr] eax 必须1指令完成？
+17:37 T2:漂亮艹
+17:37 T2:sync走起吧
+17:37 varna:唉
+17:38 varna:如果你要求不高的话，xadd可以保证prefix --
+17:40 varna:sync的话也是x系列
+17:40 varna:另外你昨天似乎在纠结指令地址和pc/ip?
+17:40 T2:varna, 你跟我说那个我知道了嗯，检测ZF标志位。
+17:40 varna:T2: 啊？
+17:41 T2:varna, 没事了，那个我知道了，ibm 的体系结构上没有 pc 寄存器。
+17:41 varna:检查ZF干嘛，你只需要做一个xadd出来
+17:41 varna:剩下的继续写c
+17:41 T2:就你上次给我说那个指令。
+17:41 varna:ibm?
+17:41 varna:ibm的东西我还真不知道
+17:42 T2:varna, ibm的体系上把instrucion address存在psw里了。
+17:42 varna:你为什么看ibm的体系？
+17:42 xxxxxxxxx:大概是捡到了好遗产
+17:43 iyzsong:||-_-||
+17:43 T2:我只是看到PCB保存现场要存psw，所以好奇里面有什么东西而已。
+17:43 varna:而且psw这个术语我现在极少见，最后一次见类似的缩写也是形如菊击枪的msr
+17:43 varna:T2: psw?
+17:44 varna:T2: 搞那么严肃干嘛
+17:44 T2:program status word
+17:44 varna:这个疼术语
+17:44 varna:而且疼得不是地方，一股古老的六指味
+17:44 varna:就跟*CB一样
+17:44 T2:应该说是汇编教材都太古老了点。
+17:45 varna:你怎么搞到了ibm的汇编教材……
+17:45 T2:似乎得上个手册
+17:45 varna:手册算了
+17:45 varna:intel手册太长，只有字典价值
+17:45 candy76041820:>驼 PSW 我就只记得 51 里有这玩意来着。
+17:46 candy76041820:另外是我点错音符了还是他扒谱扒错了，总觉得和声 track 不大对劲的样子。调调音量试试。
+17:46 T2:现在的很多汇编教材都是教如何在保护模式下用汇编调用API的，似乎讲到内存地址空间的都很少。
+17:46 varna:51我已经不忍直视
+17:47 varna:T2: 保护模式不碍事，即使你写内核我也建议你直接用grub进保护模式再做初始化
+17:47 varna:实模式那套公文没必要一遍一遍来
+17:47 T2:varna, 内核先忍住比较好。
+17:47 varna:又疼又没意思
+17:47 varna:我觉得你应该不是忍住的问题
+17:48 varna:不然直接用JamesM的tutorial, 一天一章，九天就可以了
+17:48 candy76041820:NT2 是该忍住不做死的问题。
+17:48 candy76041820:作死。
+17:48 varna:（我建议新人不做VFS实现）
+17:48 xxxxxxxxx:http://www.freebsd.org/doc/zh_CN.UTF-8/books/handbook/
+17:48 xxxxxxxxx:还有这种东西...
+17:48 varna:手册好差劲
+17:48 varna:跟Archwiki学学啊
+17:49 xxxxxxxxx:先有arch那么多用户再说
+17:49 varna:+
+17:49 xxxxxxxxx:另昨天某张图上表示还真有人用arch搞服务器
+17:49 xxxxxxxxx:而且还挺多的
+17:50 iyzsong:没啥不能搞的..
+17:50 varna:八八霰居然还有出口型……
+17:50 varna:难道卖塔利班斯坦么
+17:51 candy76041820:不就是 97 狙么，5.56x45
+17:52 candy76041820:卖塔利班斯坦的话得改 7.62x39 的吧？
+17:53 varna:那个可怕的东西真的有人买么
+17:54 varna:简直是在凑收回香港一样
+17:54 xxxxxxxxx:http://book.douban.com/subject/1440885/ <- 这东西有人看过么?
+17:55 candy76041820:http://www.firearmsworld.net/china/sr/qbu88/px316.jpg 果然黑墨镜才是提升逼格的正解。
+17:56 xxxxxxxxx:不是蓝帽子么...
+17:56 varna:我还是想捏上次那个试枪哥们的脸
+17:56 varna:好大一嘟肉都摞枪托上了
+17:56 varna:xxxxxxxxx: 蓝帽子必须打
+17:57 lh_mouse:geordi, { array<int, 5> a; cout << a; }
+17:57 geordi:{4223120, 0, 4206384, 0, -892242224}
+17:57 xxxxxxxxx:金将军的脸上有那么肉么?
+17:58 varna:似乎还少点
+18:0 xxxxxxxxx:http://211.136.10.12/videoplayer/manual.pdf?ich_u_r_i=ad3d07b9c48d0ce108a57546d2f401a3&ich_s_t_a_r_t=0&ich_e_n_d=0&ich_k_e_y=1445058920750963502496&ich_t_y_p_e=1&ich_d_i_s_k_i_d=1&ich_u_n_i_t=1
+18:0 *varna 还在听喵帕斯
+18:4 xxxxxxxxx:http://puu.sh/8TG21.jpg @王 根
+18:4 candy76041820:好吧，和声 track 稀奇古怪的也罢了，起码还算能听，可你那符头到底是画到间上了是画到线上了？！
+18:5 varna:不好玩
+18:5 xxxxxxxxx:公民防范恐怖袭击手册 - 中华人民共和国公安部 orzzzz
+18:7 T2:好吧，那就试试JamesM
+18:7 varna:1. 夜战第一 2. 不要信下挂榴弹 3. 出门先涂油 4. 野战地点要熟练不要乱打 5. 别信5.8，敌人没那玩意，打完一箱子你就死吧
+18:8 T2:OK
+18:8 varna:刚才那个是公民茅厕解放全国纲要
+18:8 varna:不是操作系统
+18:8 T2:好吧
+18:9 candy76041820:不算公民吧？
+18:9 varna:啊，这个嘛，雇佣兵的成分是很复杂的，啊，我们一刀切，啊，这个是不对的
+18:10 xxxxxxxxx:羊驼在说啥..?
+18:10 varna:xxxxxxxxx: 在指导作战
+18:11 xxxxxxxxx:出门涂油是啥
+18:11 varna:出门涂点迷彩油
+18:11 xxxxxxxxx:我还以为要自焚呢...
+18:11 varna:ja2里这些便宜货比买各种高档伪装服都好用
+18:11 varna:除了夜战服
+18:12 candy76041820:点完改 patch，Synth Voice + Pad 4 (Choir) 音量 127:40 似乎效果不错的样子。果然配器重要。
+18:12 varna:点完改帕琪？
+18:14 varna:开刷
+18:14 xxxxxxxxx:快拜拜顶座
+18:14 varna:亚夜花！
+18:14 varna:撸撸撸撸撸
+18:14 xxxxxxxxx:另外可以拜拜普陀山
+18:17 xxxxxxxxx:http://www.cclw.net/gospel/new/zengdaosouce/ 《真道手册》 王永信牧师 著 
+18:18 xxxxxxxxx:太可怕了
+18:18 varna:他会放电么？
+18:18 xxxxxxxxx:不清楚
+18:21 candy76041820:>驼 刷上号了么你就 IRC
+18:23 xxxxxxxxx:此运动约七年前开始于加拿大多伦多市，信徒们被按手祷告后，很多倒在地上狂笑数小时，被认为是受圣灵的记号，故称为"圣笑"(Holy Laughter)。其后不久，倒地之人在狂笑之后，更进一步作出动物鸣叫的声音。至此，一般信徒开始远离他们，甚至多数灵恩派的教会也与他们隔绝。
+18:23 varna:candy76041820: 一分钟一次，快了会被封
+18:25 candy76041820:竖琴 + 弦乐器拨奏的效果似乎挺像古筝，顺带一提 Koto 简直没法听。
+18:26 T2:哦哦，还要多个cmp
+18:27 cleamoon:23333  http://photo3.fanfou.com/n0/0a/nh/7b_350055.jpg
+18:32 cleamoon:穷疯了  http://item.taobao.com/item.htm?id=39011463240
+18:32 iyzsong:orz
+18:36 varna:亚夜花！
+18:38 varna:亚夜花请赐我一个帐号吧！
+18:38 xxxxxxxxx:F91拜了拜普陀山随机总能出虫族 羊驼也可以试试拜拜普陀山
+18:39 varna:我信亚夜花
+18:39 varna:WOWOWOWOWOWOWOWO
+18:40 varna:扔个ヲ酱 http://imgsrc.baidu.com/forum/w%3D580/sign=93880914708b4710ce2ffdc4f3cec3b2/d143ad4bd11373f0ab2b9eaaa60f4bfbfbed04ea.jpg
+18:42 xxxxxxxxx:http://hdw.eweb4.com/wallpapers/9511/ <- 这个rl科学么?
+18:43 cleamoon:这个好，收做壁纸
+18:43 candy76041820:ヲ
+18:43 varna:ヲヲヲヲヲヲヲヲヲ
+18:43 candy76041820:啊。果然这德行。
+18:43 varna:发型好评，乳量差评
+18:43 candy76041820:老娘叫天龙！怕了吧！
+18:43 varna:灵梦是平的
+18:44 xxxxxxxxx:http://hdw.eweb4.com/out/967825.html @hope1`
+18:45 richselian:疼
+18:45 candy76041820:爆。
+18:46 candy76041820:http://zh.moegirl.org/%E6%88%98%E5%9B%BD%E5%A4%A7%E6%88%98 轻小说《魔王勇者》 魔王（饰演织田信长）←明明就是本色出演
+18:46 xxxxxxxxx:http://p1.pichost.me/i/24/1466237.jpg 受姬党慎入
+18:47 varna:缓存已清，继续刷
+18:47 candy76041820:http://zh.moegirl.org/%E8%88%B0%E9%98%9FCollection:%E7%A6%BB%E5%B2%9B%E6%A0%96%E9%AC%BC 合法萝莉？
+18:49 varna:吃药！
+18:51 varna:H.B.Flankoi 肥者，撸宅也。金文解曰：月，肉也。巴，手也。月巴，手撸肉棒也。故肥者，撸宅也。
+18:51 varna:撸宅在此！
+18:52 varna:恋恋受舔！
+18:52 xxxxxxxxx:@赤诚郝斌
+18:53 richselian:触手猴子的《緑眼のジェラシー》大好
+18:53 varna:不喜触手猴
+18:53 varna:东方改曲还是摇滚比较好
+18:53 varna:richselian: 你该听这个 http://www.bilibili.tv/video/av1005163/
+18:54 cleamoon:明显是交响和民乐好
+18:54 varna:交响太坑
+18:55 xxxxxxxxx:交响是啥 好吃么?
+18:55 richselian:赞
+18:55 varna:放弃熟女改攻略幼女吧
+18:55 varna:是时候给芳文社画上句号了
+18:56 cleamoon:交响好的少，全加起来也就两集里番
+18:56 varna:那太少
+18:56 varna:本来神主的作曲就不太上台面，交响起来……
+18:56 cleamoon:民乐也就一集里番
+18:56 xxxxxxxxx:两集里番?
+18:57 varna:摇滚可以洗脑
+18:57 cleamoon:th音乐拥有多杂广的优点，缺点是99%都很难听
+18:57 varna:旋死有些好评的
+18:57 varna:我觉得难听的也就90%
+18:57 cleamoon:...
+18:57 varna:HOHOHO`
+18:57 cleamoon:whisper record不错，不过似乎和东方没什么关系
+18:57 xxxxxxxxx:@贝多芬加成
+18:58 varna:毫无贝多芬
+18:58 *varna 正打魔兽一样四线
+18:59 xxxxxxxxx:http://www.cclw.net/gospel/new/zengdaosouce/htm/14.html 
+18:59 hope1 joined channel
+18:59 varna:这里的太监是个误译
+19:0 varna:不是宦官，丁丁是有的
+19:0 varna:保罗不单"在会堂里"，"在家中"，并且"每日在市上"与人对噗(徒十七17)。
+19:1 Plough joined channel
+19:1 varna:信或不信-一开始就要先知道他是否已经确实信哥。可向他发问："你信春哥吗？""你复活了吗？"
+19:1 cleamoon:只是比较喜欢弦乐而已
+19:1 *varna 喜欢幼女
+19:1 candy76041820:说到 TH 音乐，为啥几乎没人混 TH08_01 和 _02？
+19:2 cleamoon:改了没原版好听
+19:2 varna:VAN
+19:3 varna:啊，亚夜花放了新图册
+19:3 varna:亚夜花舔舔
+19:6 candy76041820:苍天若是肯开眼，立马还我包子脸！
+19:6 varna:.
+19:6 varna:啊哈哈哈！
+19:6 varna:啊哈哈哈哈哈哈哈哈
+19:6 xxxxxxxxx:包子脸糖
+19:6 Plough:varna: 我突然反应过来，都用perl了还玩什么Template
+19:6 varna:啊哈哈哈哈哈哈哈哈哈哈哈
+19:6 Plough:打算直接<<EOF
+19:6 xxxxxxxxx:刷到了?
+19:6 varna:似乎是
+19:6 hope1:谁写个批量下载图册的脚本
+19:7 Plough:哪个图册？
+19:7 cleamoon:wget -m
+19:7 hope1:终于刷到了啊
+19:7 hope1:贴吧
+19:7 Plough:哪个？
+19:7 varna:啊哈哈哈哈哈哈
+19:7 hope1:http://tieba.baidu.com/photo/g?kw=c语言#!/g/catidall
+19:8 varna:集合了亚夜花和糖果的神通力终于刷到了
+19:8 candy76041820:\ 腋 /
+19:8 Plough:所有图？
+19:8 hope1:+
+19:8 varna:第一艘选谁呢
+19:8 candy76041820:>Plough >Hope ACDown 似乎直接支持。
+19:9 hope1:我看看
+19:9 xxxxxxxxx:为啥要批量?
+19:9 xxxxxxxxx:全都存起来么?
+19:9 varna:那谁，丛云，涟，电，五月雨
+19:9 varna:就选电了
+19:9 candy76041820:>驼 当然是主角括号笑了。第二选择电。
+19:9 varna:已电
+19:10 xxxxxxxxx:杨教授?
+19:10 Plough:全是XHR……
+19:10 sismvg:步兵队
+19:11 varna:通信error是什么状况……
+19:11 sismvg:不好好的吗？
+19:11 iyzsong:2333
+19:11 candy76041820:……
+19:11 varna:似乎这个代理有时候会别扭
+19:11 cleamoon:23333
+19:11 xxxxxxxxx:不用重刷吧?
+19:11 cleamoon:喜闻乐见
+19:11 varna:不用
+19:11 cleamoon:必须用呀
+19:12 xxxxxxxxx:不用就好 不然羊驼又要对着顶座撸管了
+19:12 varna:似乎是代理尿了
+19:12 sismvg:看到写纯爱的本子我都害怕
+19:12 varna:谁告诉我现在几点了
+19:12 sismvg:19：12
+19:12 varna:谢
+19:12 sismvg:菊花
+19:12 hope1:下个新版本
+19:13 sismvg:什么东西
+19:13 varna:本日火曜日の「艦これ」新規着任サーバ開放、全着任枠【終了】致しました。
+19:13 varna:终于当上提督了啊
+19:13 varna:啊哈哈哈
+19:13 varna:tutorial刷出来了
+19:13 sismvg:性福的日子终于来了
+19:13 sismvg:整天被SM 
+19:13 cleamoon:升陽话看不懂
+19:13 xxxxxxxxx:终于可以好快乐
+19:13 xxxxxxxxx:了
+19:14 varna:我终于从东欧战线转到海战了
+19:14 varna:撤退
+19:14 sismvg:CCTV：一青年男子在辽宁号上做俯卧撑，自称正在和舰娘啪啪啪
+19:15 xxxxxxxxx:哈哈哈
+19:15 sismvg:刚好EXIT
+19:19 hope1:不行，AcDown用不了…… Plough .
+19:20 hope1:似乎是改版后就不行了
+19:21 lh_mouse:http://clang-developers.42468.n3.nabble.com/libcxx-fails-to-build-with-g-as-of-version-4-9-0-td4039180.html
+19:21 cleamoon:++
+19:36 condy1 joined channel
+19:36 sismvg:三体告诉我们不要惹富二代还有技术宅
+19:37 xxxxxxxxx:Y
+19:37 slowcoach joined channel
+19:39 condy1:~chatzilla@unaffiliated/slowcoach -> unaffiliated是怎么来的？
+19:39 sismvg:condy 和condy1有什么基情吗？
+19:40 slowcoach:condy1: unaffiliated?
+19:40 xxxxxxxxx:自攻自受?
+19:41 iyzsong:求解gnunet怎么用..
+19:41 iyzsong:看了许多个半天没明白 >.<
+19:43 hope1:condy1, cloak，freenode.net/faq.shtml
+19:44 slowcoach:condy1: 哦哦 想起来了 是cloak
+19:44 slowcoach:不过今天貌似没成功啊
+19:49 xxxxxxxxx:iyzsong: 不是有使用文档么?
+19:51 iyzsong:xxxxxxxxx: 看不懂啊.. 我这没有gnunet-setup(gtk界面)
+19:51 xxxxxxxxx:装个去
+19:51 iyzsong:一个peer都没有  不过我可以自己publish一个文件 再自己下载..
+19:52 xxxxxxxxx:....真是寂寞
+19:53 iyzsong:也说不定是NAT/防火墙的原因 -_-
+19:54 xxxxxxxxx:下次去装个看看里面有没有福利
+19:54 iyzsong:估计会有很多牛头人..
+19:58 hope1:一个人都没有233
+19:58 xxxxxxxxx:其实我觉得很可能是实际上就是一个人都没有
+19:59 hope1:https://gnunet.org/ 这不是还在维护吗
+19:59 hope1:+
+19:59 iyzsong:o.o 我认为是很有前景的项目啊
+20:0 hope1:所以看来骗到了很多经费
+20:1 hope1:https://gnunet.org/bot/log/gnunet
+20:1 hope1:23333
+20:2 iyzsong:=o=
+20:12 T3rmin4t0r_ joined channel
+20:15 condy2 joined channel
+20:17 Zirconi joined channel
+20:26 T3rmin4t0r_:啊 TI4 奖金破600W了
+20:29 hope1:TI4?
+20:33 T3rmin4t0r_:dota2
+20:33 iyzsong:steam的linux版本不能直视啊
+20:34 hope1:至少能跑起来……
+20:34 iyzsong:自己装了从glibc,xorg,mesa...各种库 还带man和文档
+20:35 hope1:啊？
+20:35 hope1:反正multilib/steam没问题
+20:35 slowcoach:就和折腾lfs似的？
+20:35 iyzsong:能用倒是能用
+20:37 xxxxxxxxx:iyzsong: 新发行版?
+20:38 slowcoach:iyzsong: 巨巨 怎么发表情
+20:38 iyzsong:slowcoach: 啊 - -b
+20:38 slowcoach:游戏多么 steam linux
+20:38 condy2:o.O
+20:38 condy2:\-_-/
+20:38 condy2:-_-
+20:38 slowcoach:=  =
+20:38 condy2:=_=
+20:39 iyzsong:xxxxxxxxx: 我上次用的arch 然后steam在~/.local/steam(大概是)安装了一群软件(估计来自ubuntu)/手册/文档..
+20:39 iyzsong:至少有2GB
+20:40 iyzsong:我看到的 只有7、8个..
+20:40 slowcoach:=       =
+20:40 iyzsong:除了steam，也可以试试desura
+20:41 hope1:还真是……
+20:41 hope1:2.5G	Steam/
+20:42 iyzsong:v.v
+20:43 condy2:^ 表情帝！！
+20:45 iyzsong:我是笨蛋
+20:45 slowcoach:desura看起来不错的样子
+20:47 iyzsong:怎么付钱..
+20:54 lh_mouse:论猪一样的队友和神一样的队友 http://web.sanguosha.com/220/play.html?rac=MDM1ODJlZTIwYTE3MTVkZTA2YTMwZjJiZDAyNTcxMWU=&rid=ODg0ZA==
+20:56 candy76041820 joined channel
+20:59 code_new joined channel
+20:59 candy76041820:嗯哼，现在开始直播羊驼造小学生。
+21:0 hope1:他去犯罪了？
+21:0 candy76041820:新手选择了电，然后用喷灯烧出了一只朝潮。
+21:0 candy76041820:另一个建造还有 02:30
+21:1 candy76041820:顺带一提开发装备失败了。
+21:6 candy76041820 joined channel
+21:7 candy76041820:造了个深雪。
+21:7 hope1:舰娘么
+21:9 candy76041820:无限载入中……n
+21:10 candy76041820:战斗开始，首战无伤
+21:11 candy76041820:第二战，载入中
+21:12 candy76041820:炮击战 1kill，1 中破
+21:13 lh_mouse:糖果姬
+21:13 candy76041820:第二战一中破一小破
+21:13 candy76041820:捡到了凉风
+21:15 candy76041820:任务结束，回港再次建造，建造时间 17:30 和 19:30
+21:18 candy76041820:出击 1-2，首战神回避完胜
+21:19 candy76041820:捡到了矶波
+21:19 candy76041820:第二战阵型不利
+21:20 candy76041820:我方两艘大破，不追击
+21:20 candy76041820:羊驼决定在 1-1 多刷刷级
+21:21 sismvg joined channel
+21:23 sheyu joined channel
+21:23 candy76041820:去演习瞅了一眼，被吓回来了
+21:24 candy76041820:又去 1-1 刷了
+21:25 sismvg:什么演戏
+21:25 sismvg:演习
+21:25 candy76041820:你吃药去就告诉你。
+21:25 sismvg:刚吃完冰棍
+21:25 xxxxxxxxx:羊驼和糖球又在炒饭?
+21:25 candy76041820:首战秒了一只驱逐
+21:27 candy76041820:第二战敌方没变，一只轻巡两只驱逐
+21:27 candy76041820:突入夜战，电秒了剩下一只驱逐
+21:27 candy76041820:捡到一只文月
+21:28 sismvg:舰娘是页游？
+21:28 candy76041820:可立绘还没刷出来……
+21:29 sismvg:还是玩我的魔兽去吧
+21:29 candy76041820:工厂还剩三分钟和六分钟。
+21:30 sismvg:今天终于把一个ORPG的boss给全通了。。最后一个boss弄我的差点被吓死
+21:32 sismvg:极黑的OP开始和巨人的OP走同一路线了
+21:32 candy76041820:工厂造好一个，然后连接中断了……
+21:33 sismvg:233
+21:33 xxxxxxxxx:太屌了 某视频表示 全球共产主义的失败 -> 马克思主义者和反战人士转而关注环境问题 举着绿色的大棋反对资本主义 工业化 经济增长 -> 鼓吹二氧化碳引起温室效应
+21:33 sismvg:精简到10个字以内
+21:33 xxxxxxxxx:全是马克思的错
+21:34 candy76041820:四元飒是个大傻逼，十个字以内。
+21:34 sismvg:你的智商被吃了
+21:35 sismvg:得到魔兽世界的服务器源代码，以为如获珍宝
+21:35 sismvg:结果没有架构和readme。。
+21:36 candy76041820_ joined channel
+21:37 candy76041820_:首战被中破两个，撤退。
+21:38 candy76041820_:造好了荒潮。
+21:40 candy76041820:羊驼不死心，又去挑战 1-2 了
+21:40 candy76041820:捡到了弹药
+21:41 candy76041820:轻巡驱逐驱逐，炮击收了一只驱逐，雷击收了轻巡，夜战打出了 1 伤害……
+21:42 sismvg:啊哈哈哈。。。找不到初中毕业证了。。
+21:42 candy76041820:完胜，捡到了敷波
+21:42 sismvg:big trouble
+21:44 candy76041820:最后一场出击，1-2
+21:46 candy76041820:炮击收一驱逐雷击收一驱逐，夜战完胜，被大破一只中破一只，捡到了 TAMA
+21:47 zzzzzzzz joined channel
+21:48 candy76041820:奖励一只白雪
+21:50 candy76041820:开了第二舰队
+22:0 T2:麻痹，揉程真的丧病，2333。
+22:7 hoxily joined channel
+22:12 sismvg:goroutine更加桑病
+22:16 condy joined channel
+22:47 tsuki joined channel
+22:58 bxvgjabzfhw joined channel
+23:11 condy:geordi, {printf("%.3lf", 3.1415926);}
+23:11 geordi:3.142
+23:11 condy:geordi, {printf("%.3f", 3.1415926);}
+23:11 geordi:3.142
+23:12 condy:今天dev-cpp竟然只能用%f来输出。。2333
+23:18 w15tp joined channel
+23:19 w15tp:话说今年的扫黄力度还真是大。
+23:20 w15tp:连 快博都被封了 
+23:21 w15tp:可是我在网上下载的 老版本快博竟然还能更新，只是下载速度很慢 。
+23:21 w15tp:这是什么情况
+23:21 condy_ joined channel
+23:31 endle joined channel
+23:47 cleamoon joined channel
+23:48 endle:问个问题
+23:48 endle:win 下，我获得了 c:\data 的handle（data是一个文件夹）
+23:49 endle:接着，我通过这个 handle 遍历 c:\data\*
+23:49 endle:应该怎么做？
+23:51 T2 joined channel
+23:57 T2:static inline void wait(semaphore_t *s) { __asm__ __volatile__(LOCK_PREFIX "decl %0" : "+m" (s->v)); if(s->v <= 0) block(s->L); } << 似乎可以这么玩？
+23:58 T2:算了先睡觉

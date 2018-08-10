@@ -1,0 +1,424 @@
+00:00 lhanjian_ircclou: condy: 么么哒
+00:01 condy: lhanjian_ircclou: =-=
+00:02 lhanjian_ircclou: condy: codepad 504惹，打不开
+00:02 cleamoon joined channel
+00:03 condy: lhanjian_ircclou: 哦！ http://paste.pound-python.org/show/umaoMOgLXZQYsvh6JSLq/
+00:04 Stardust joined channel
+00:04 lhanjian_ircclou: condy: 使用赋值等号无法在多种类型的情况下初始化？
+00:05 lhanjian_ircclou: 哦，对，要用等号，就得再为operator + (int n) 弄个实现了
+00:06 condy: 不是 =-=
+00:06 Stardust: lhanjian_ircclou, 用等号是copy initialization
+00:07 lhanjian_ircclou: Stardust: 哦……
+00:09 cleamooon joined channel
+00:09 cleamoon quit:Read error: Connection reset by peer
+00:11 lhanjian_ircclou: 结果还是没有弄明白
+00:11 condy: lhanjian_ircclou: 你开 -fno-elide-constructors 就知道了 =-=
+00:12 cleamooon: 应该做一个解释所有c艹坑的网站
+00:13 lhanjian_ircclou: cleamooon: 我觉得早就有了
+00:14 cleamooon: read the f@cking standard.zha zha ？
+00:18 cleamooon: http://www.solidot.org/story?sid=47387  评论有个德棍
+00:18 miao233_ quit:Quit: Leaving.
+00:18 lhanjian_ircclou: condy: 真是c艹啊
+00:20 condy: :o
+00:24 wlemuel joined channel
+00:25 yzld2002 quit:Remote host closed the connection
+00:28 vimtoy joined channel
+00:29 Stardust quit:Quit: Lost terminal
+00:34 vimtoy joined channel
+00:42 Stardust joined channel
+00:44 wlemuel quit:Quit: leaving
+00:49 Stevearzh quit:Ping timeout: 260 seconds
+00:51 Stevearzh joined channel
+00:54 Stevearzh quit:Excess Flood
+00:57 Stevearzh joined channel
+01:10 vimtoy quit:Remote host closed the connection
+01:35 Youmu quit:Quit: Connection closed for inactivity
+01:41 Stevearzh quit:Excess Flood
+01:43 Stevearzh joined channel
+01:52 cleamooon quit:Ping timeout: 248 seconds
+04:01 lhanjian_ircclou quit:Quit: Connection closed for inactivity
+04:07 hope1_ joined channel
+04:43 hope1_ quit:Ping timeout: 260 seconds
+04:43 hope1_ joined channel
+04:57 hope1_ quit:Remote host closed the connection
+05:07 guowang joined channel
+05:11 guowang quit:Ping timeout: 264 seconds
+05:35 miao233_ joined channel
+06:07 Stevearzh quit:Ping timeout: 246 seconds
+06:55 lh_mouse joined channel
+07:04 miao233_ quit:Remote host closed the connection
+07:05 miao233_ joined channel
+07:10 miao233_ quit:Quit: Leaving.
+08:07 hope1_ joined channel
+08:23 hope1_ quit:Ping timeout: 276 seconds
+08:25 hope1_ joined channel
+08:29 Stevearzh joined channel
+08:48 lhanjian_ircclou joined channel
+08:51 Youmu joined channel
+09:04 Xilzzerts joined channel
+09:07 hope1_ quit:Ping timeout: 260 seconds
+09:08 hope1_ joined channel
+09:19 hope1_ quit:Ping timeout: 244 seconds
+09:19 hope1_ joined channel
+09:34 tutu_wind joined channel
+09:34 tutu_wind: morning ~
+09:39 whatofor joined channel
+09:40 lh_cat joined channel
+09:41 lh_cat: lhanjian_ircclou: 居然。
+09:41 lhanjian_ircclou: 居然？
+09:42 lhanjian_ircclou: lh_cat:
+09:43 lh_cat: 居然ニ也在用 irccloud 。
+09:43 lhanjian_ircclou: 我一直在用
+09:43 lh_cat: 没发现。
+09:43 lhanjian_ircclou: 之前hatlist都是在用irccloud
+09:44 lhanjian_ircclou: 我在考虑要不要买个年付费
+09:44 lh_cat: 怎么换 nick 了。
+09:44 lhanjian_ircclou: 换回来好
+09:44 lh_cat: 你会去手机。
+09:44 lh_cat: s:会去:什么:
+09:44 lhanjian_ircclou: 安卓 ios 都在用
+09:44 lhanjian_ircclou: 5s
+09:45 lh_cat: 呃。
+09:45 lhanjian_ircclou: 主要用5s
+09:46 lh_cat: 跪。
+09:46 lh_cat: 来上海玩么。
+09:47 lhanjian_ircclou: 想，不过没有时间表
+09:47 lhanjian_ircclou: 去玩的话，不知道上海有啥好玩的地方
+09:48 lh_cat: 喵。
+09:48 lh_cat: 喵。
+09:53 tutu_wind: 喵~ 
+09:54 Stevearzh quit:Ping timeout: 276 seconds
+09:56 Stevearzh joined channel
+10:03 Stevearzh quit:Excess Flood
+10:03 Stevearzh joined channel
+10:06 Stevearzh quit:Client Quit
+10:06 hope1_: iyzsong, 医生觉得我不算是典型的抑郁症状、没有自残自杀倾向、还可以继续正常生活没有造成严重影响，还是做个量表先看下心理咨询，咨询师觉得有必要再过来
+10:07 lhanjian_ircclou: hope1_: 好消息。
+10:08 iyzsong: hope1_: 吼啊
+10:10 Flandre` joined channel
+10:10 lh_mouse: lhanjian_ircclou, 乃的 nick 太长了。
+10:10 lhanjian_ircclou: lh_mouse: ok.
+10:11 iyzsong: 是用核磁共振诊断么..
+10:11 lhanjian is now known as lhanjian_ssh
+10:11 lhanjian_ircclou is now known as lhanjian
+10:11 lhanjian: Done
+10:12 lh_mouse: lhanjian, 摸头。
+10:12 lhanjian: lh_mouse: 不给摸
+10:12 lhanjian is now known as Guest81574
+10:12 lh_mouse: http://img.vim-cn.com/50/2e6a366a344b5ab4afc53f730229b9af356abc.png
+10:12 Guest81574 is now known as lhanjian_
+10:14 Flandre`: Orz
+10:14 lhanjian_ is now known as lhanjian
+10:15 lh_mouse: geordi, << "??<"
+10:15 geordi: warning: trigraph ??< ignored, use -trigraphs to enable
+10:16 lh_mouse: geordi, -w << "??<"
+10:16 geordi: ??<
+10:16 lh_mouse: geordi, -w << ??<&??>{ return "hello"; }
+10:16 geordi: error: expected primary-expression before '?' token
+10:17 lhanjian: lh_mouse: 其实是窝故意没打那个d，所以看起来好像被吃掉了一样
+10:18 lh_mouse: geordi, --clang << ??(&??){ return "hello"; }()
+10:18 geordi: error: expected expression
+10:18 hope1 joined channel
+10:18 lh_mouse: hope1_, 揉。
+10:18 lhanjian: hope1_: 海棠可以用irccloud，这样就不用担心掉线掉log了。而且irccloud直连比较稳定点
+10:18 hope1_ quit:Ping timeout: 240 seconds
+10:19 lhanjian: hope1: 海棠可以用irccloud，这样就不用担心掉线掉log了。而且irccloud直连比较稳定点
+10:19 lh_mouse: 窝窝窝窝窝窝窝窝窝。
+10:19 hope1: iyzsong, 不，我只描述了一下症状
+10:19 hope1: lhanjian, 手机也可以？
+10:19 lhanjian: hope1: iOS/Andro/Web 都有
+10:19 hope1: 我看看
+10:20 * iyzsong 自挂 tmux/weechat+irc-relay
+10:21 Flandre`: iyzsong: 用闪雄？
+10:21 Flandre`: iyzsong: 用闪熊？
+10:21 iyzsong: 什么东西?
+10:22 hope1: 重性抑郁大概也不是用MRI诊断吧……
+10:22 Flandre`: iyzsong: https://github.com/glowing-bear/glowing-bear
+10:22 Flandre`: iyzsong: 只可惜是 webui =-=
+10:22 iyzsong: hope1: 2333 那岂不是根本没谱
+10:23 iyzsong: Flandre`: 还不错的样子~
+10:23 Flandre`: iyzsong: :D
+10:26 hope1: 诶等下好像是可以MRI……
+10:26 hope1: 但是据说
+10:26 hope1: http://www.who.int/mental_health/management/depression/zh/
+10:27 hope1: quote 非专家的初级卫生保健人员即能可靠地诊断和治疗抑郁症。
+10:27 iyzsong: 噢 :-
+10:28 hope1: 不过你说得对，说不定医生只是觉得不严重不想开药而已……
+10:30 iyzsong: 可以理解..
+10:42 hope1_ joined channel
+10:45 hope1 quit:Ping timeout: 252 seconds
+10:48 lh_mouse: 医生一定是觉得海棠姬已经无药可救了。（光速逃）
+10:49 lhanjian: “（逃）”这个式子太知乎某轮厨风，不喜欢
+10:52 hope1_ quit:Ping timeout: 276 seconds
+11:09 * iyzsong 去超市买吃得啦 Q.Q
+11:10 Flandre`: iyzsong: 好厉害！
+11:10 iyzsong: = =
+11:15 Stevearzh joined channel
+11:30 hope1 joined channel
+11:30 hope1: lhanjian, 没有google play, 能不能发个irccloud的离线package?
+11:31 lhanjian: hope1: https://apkpure.com/irccloud/com.irccloud.android
+11:31 lhanjian: https://usercontent.irccloud-cdn.com/file/HM2QBAJ2/IRCCloud_v2.6_apkpure.com.apk
+11:31 hope1: lh_mouse, 想来也是如此
+11:31 hope1: thx
+11:37 lhanjian: amazon cloudfront的速度还真快
+11:37 lh_mouse: lhanjian, 摸摸，以后不发了。
+11:37 lhanjian: lh_mouse: 我也就是说着玩
+11:37 lh_mouse: 呃。
+11:38 iyzsong: .(；・∀・)
+11:48 lhanjian: send() failed (1: Operation not permitted)
+11:51 lh_cat quit:Quit: Connection closed for inactivity
+12:15 Youmu quit:Quit: Connection closed for inactivity
+12:25 hope1: lhanjian, IRCCloud won't run without Google Play
+12:26 lhanjian: 忽略
+12:26 lhanjian: 点屏幕空白处
+12:28 hope1_ joined channel
+12:29 iyzsong: 2333
+12:32 hope1 quit:Ping timeout: 244 seconds
+12:50 Youmu joined channel
+13:00 hope1_: 大清要完还买不买得到
+13:08 Stevearzh quit:Excess Flood
+13:09 Stevearzh joined channel
+13:57 Stevearzh quit:Max SendQ exceeded
+13:59 Stevearzh joined channel
+14:01 lh_mouse: geordi, << TYPE<remove_const<const int &>>
+14:01 geordi: remove_const<int const&> 
+14:01 lh_mouse: geordi, insert _t after first const
+14:01 geordi: int const&
+14:02 lh_mouse: geordi, << is_nothrow_move_constructible<string>::value
+14:02 geordi: true
+14:02 lh_mouse: geordi, << is_nothrow_move_constructible<const string>::value
+14:02 geordi: false
+14:03 CyrusYzGTt quit:Read error: Connection timed out
+14:04 CyrusYzGTt joined channel
+15:29 tutu_wind is now known as tutu_leaving
+15:43 lh_mouse quit:Read error: Connection reset by peer
+15:49 hope1_ quit:Remote host closed the connection
+15:49 hope1_ joined channel
+16:15 Youmu quit:Quit: Connection closed for inactivity
+17:32 whocares_2_ quit:Ping timeout: 276 seconds
+17:34 tutu1 joined channel
+17:35 tutu_leaving quit:Ping timeout: 244 seconds
+17:35 tutu1 is now known as tutu_wind
+17:44 lh_mouse joined channel
+17:58 buffon137 joined channel
+18:08 whatofor_1 joined channel
+18:08 whatofor quit:Read error: Connection reset by peer
+18:20 buffon137 quit:Quit: Leaving
+18:21 Xilzzerts quit:Quit: Leaving
+18:30 lh_mouse: geordi, using T = struct U { int a; };
+18:30 geordi: Success
+18:30 lh_mouse: geordi, show
+18:30 geordi: using T = struct U { int a; };
+18:32 Flandre`: geordi: { cout<<T{123}.a; } using T = struct U { int a; };
+18:32 geordi: 123
+18:36 iyzsong: 困 Z.Z
+18:37 Flandre`: iyzsong: 尻一下
+18:38 whocares_2 joined channel
+18:42 Mokou joined channel
+18:49 iyzsong: 玩啥好呀 ?o/.\o?
+18:51 tutu_wind: iyzsong: 摸摸头～
+18:55 Youmu joined channel
+19:00 guowang joined channel
+19:04 Mokou quit:Ping timeout: 264 seconds
+19:05 Mokou joined channel
+19:15 guowang quit:Ping timeout: 244 seconds
+19:22 Flandre`: iyzsong: 你不是在玩 guile 吗
+19:22 Flandre`: iyzsong: 可以玩 scala 呀
+19:22 Flandre`: iyzsong: 还有 haskell
+19:22 Flandre`: iyzsong: 还有 Perl
+19:22 Flandre`: iyzsong: 还有 iYzSOng
+19:31 Mokou: 强行劝退
+19:32 iyzsong: - -
+19:33 Flandre`: iyzsong: o.o
+19:37 Mokou: 又一个瑞鹤……
+19:42 wlemuel joined channel
+19:50 Stevearzh quit:Quit: ZZZzzz…
+19:51 wlemuel quit:Quit: leaving
+19:52 wlemuel joined channel
+19:56 wlemuel quit:Client Quit
+19:56 wlemuel joined channel
+20:01 iyzsong: 吼 :o
+20:09 whocares_2 quit:Ping timeout: 276 seconds
+20:10 whocares_2 joined channel
+20:13 Mokou: 出门劝退
+20:14 Mokou: 今天这5-4简直吃了屎
+20:39 Mokou: 熊野Lv89
+20:44 lh_mouse quit:Read error: Connection reset by peer
+20:44 lh_mouse joined channel
+20:52 Mokou: 劝退*3
+20:53 Mokou: 他妈今天打的都是些什么屎
+20:59 iyzsong: 0 0
+21:06 cleamoon joined channel
+21:08 T-J-M joined channel
+21:25 hoxily joined channel
+21:26 tutu_wind: 0.0
+21:33 Stevearzh joined channel
+21:35 Youmu quit:Quit: Connection closed for inactivity
+21:39 lh_mouse: geordi, << foo<int, double>; template<typename T, typename U> constexpr bool foo = false; template<typename U> constexpr bool foo<int, U> = true;
+21:39 geordi: true
+21:42 Mokou: 终于打完了
+21:42 Mokou: 大凤Lv131、瑞鹤Lv119、鸟海Lv113、飞龙Lv98
+21:45 Youmu joined channel
+21:53 Flandre` quit:
+22:00 miao233_ joined channel
+22:05 miao233_ quit:Remote host closed the connection
+22:06 lhanjian: 副能量回潮了！终于是真正的自己啦！
+22:06 lhanjian: 没！意！思！真！没！意！思！
+22:06 miao233_ joined channel
+22:09 cleamoon: 东东枪: 刚听同事说，运动后需要及时补充高GI值的食物，比如米饭、香蕉、巧克力什么的，因为运动会消耗人体内的糖原，而糖原主要存在于肌肉和肝脏中，一旦没有及时补充糖原，你的肌肉、肝脏就会被自己消耗掉……越想越可怕，决定以后还是要多注意，再也不要做运动了。
+22:10 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cm/tc_356513.jpg@596w_1l.jpg  似乎是新宿
+22:10 Mokou: @伪皇宫站中国风柱子 
+22:10 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cm/fm_51786.jpg@596w_1l.jpg
+22:11 cleamoon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/cm/3r_320182.jpg@596w_1l.jpg
+22:12 tutu_wind quit:Ping timeout: 276 seconds
+22:12 lhanjian: 噗，副能量->负能量
+22:12 iyzsong: 2333
+22:14 cleamoon: 电子邮件@符号的提出者及电子邮件标准的主要开发者Ray Tomlinson去世，享年74岁。
+22:15 * lhanjian 差点气得把鼠标键盘扔了
+22:15 lh_mouse: 快扔！
+22:16 Mokou: 这耗惟恐频道不乱
+22:17 lh_mouse: 在京东上买的新鞋到了。
+22:17 cleamoon: lhanjian, 怎么了？股市又跌了？
+22:17 lhanjian: lh_mouse: 晒晒晒
+22:17 lhanjian: cleamoon: 没什么，和海棠一样，觉得“没意思”
+22:18 lh_mouse: ヲ又买了两双白鞋……
+22:18 lhanjian: 没（习？）什（惯？）么了（？）
+22:18 lh_mouse: ヲ所有鞋都是白的。
+22:18 lhanjian: lh_mouse: 小白鼠？
+22:18 lh_mouse: 搞的没鞋子配西服了。
+22:18 * lh_mouse slaps lh_mouse around a bit with a large trout
+22:18 lh_mouse: 呃。
+22:18 * lh_mouse slaps lhanjian around a bit with a large trout
+22:18 lhanjian: 抓到了！— lh_mouse slaps lh_mouse around a bit with a large trout
+22:19 lhanjian: 小耗左手打右脸！
+22:19 lh_mouse: YOU DID'T SEE THAT.
+22:20 lhanjian: But i got it
+22:20 Mokou: nozuonodieyutry
+22:21 cleamoon: 觉得没意思就膜蛤吧
+22:21 lhanjian: cleamoon: 昨晚在西溪湿地跑步，看到了长者的题的八个大字，依然屹立不倒。
+22:21 lhanjian: 然并卵
+22:22 * Stardust 也觉得没意思( ˊ_>ˋ)
+22:22 cleamoon: 八个字是谈笑风生，闷声发财？
+22:22 lhanjian: 一想到以后几十年都是这样没意思过，简直觉得没意思呢（？）
+22:22 lhanjian: cleamoon: 西溪国家湿地公园
+22:23 Stardust left channel:"undefined"
+22:23 cleamoon: 以后几十年呢，我连以后几十天都不确定能不能这么过
+22:23 Mokou: 睡觉
+22:24 Mokou: 诸君武运
+22:24 Mokou quit:Quit: 睡觉
+22:24 lhanjian: cleamoon: 。
+22:25 iyzsong: 0 0
+22:25 lhanjian: 算了，累了，负能量都喷不出来了
+22:25 cleamoon: O O O
+22:25 * lhanjian 先敷衍一下自己
+22:26 cleamoon: 这个应该叫什么，中年危机还是更年期？
+22:27 iyzsong: 好想糊口啊~
+22:27 lhanjian: cleamoon: 年轻人过于重视自己，最后又被社会碾碎的过渡期
+22:28 lhanjian: cleamoon: 要不然就变成螳臂当车的歹徒，要不然就勉强自己成为开车碾死那个歹徒的人
+22:29 cleamoon: soga
+22:29 cleamoon: 在学校还没被打击够的意思？
+22:29 lhanjian: cleamoon: 在学校都是缩着，打个啥啊
+22:30 lh_mouse: lhanjian, 到上海来么。
+22:30 lhanjian: lh_mouse: 小耗问我也没用。去玩的话，还没抽出时间，去生存的话，还没找到工作
+22:30 cleamoon: 去小蚝那里工作呀
+22:31 cleamoon: 在学校就应该认识到自己是渣渣了吧
+22:31 cleamoon: 还是说你在学校是学神？
+22:31 lh_mouse: geordi, { int a, const b, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:31 geordi: error: expected unqualified-id before 'const'
+22:31 lhanjian: cleamoon: 当然也是渣渣啊，不过在学校可以缩起来啊。反正不会饿死
+22:32 lh_mouse: geordi, { int *a, const b, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:32 geordi: Same error.
+22:32 lh_mouse: geordi, { int *a, *const b, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:32 geordi: error: uninitialized const 'b'
+22:32 lh_mouse: geordi, { int *a, const* b, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:32 geordi: error: expected unqualified-id before 'const'
+22:32 lh_mouse: geordi, { int a, (const b) = 2, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:32 geordi: Same error.
+22:32 cleamoon: soga
+22:32 lh_mouse: geordi, { int a, const (b) = 2, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:32 geordi: Still same error.
+22:33 lh_mouse: geordi, { int a, const (*b) = 2, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:33 geordi: Again, same error.
+22:33 lh_mouse: geordi, { int a, *const b = &a, c; cout <<TYPE(a), TYPE(b), TYPE(c); }
+22:33 geordi: lvalue int, lvalue int* const, lvalue int
+22:33 hope1_ quit:Ping timeout: 260 seconds
+22:33 cleamoon: 用中二的话说：你还没有认识到生命的可贵
+22:33 lhanjian: cleamoon: 怎么没认识到。我小学的时候，就差点因为药物过敏死了
+22:34 lhanjian: cleamoon: http://www.sda.gov.cn/yxc/1.htm 就是这种药。我特么现在还记得
+22:34 cleamoon: 所以说是中二的话，正确的说是你还没到底
+22:35 cleamoon: 噗，还有批文呀
+22:35 lhanjian: cleamoon: 等我真死了，也就无所谓认识不认识了
+22:35 lhanjian: “主要的严重不良反应表现为过敏性休克、全身过敏反应和×××呼吸困难×××等，并有死亡病例发生。但目前鱼腥草注射液等七个注射剂相关不良反应的产生原因、发生机制、可否通过干预措施避免等方面尚不明确，需进一步深入研究。”
+22:35 lhanjian: 我就是呼吸困难
+22:35 lhanjian: 反正没经历过，你不知道那种看着自己一点点无法呼吸的感觉有多dark
+22:35 lhanjian: 感觉着
+22:36 iyzsong: orz
+22:36 cleamoon: 我经历过的.... 煤气中毒...
+22:36 lhanjian: 煤气中毒是直接晕掉吧
+22:36 lhanjian: 晕死吧
+22:36 cleamoon: 不知道像不像，反正是直接瘫了
+22:36 lhanjian: 也对
+22:36 lhanjian: 那种“来不及了，就这样”的感觉吧
+22:36 miao233_ quit:Remote host closed the connection
+22:37 cleamoon: 当时的话，似乎没觉得什么，就是身体没使唤了
+22:37 lhanjian: 。。。
+22:37 cleamoon: 知觉和刚睡醒时差不多
+22:37 cleamoon: 身体的听觉触觉什么的都在
+22:37 lhanjian: 我当时是一边狂喘着，一边试图说两句最后的话，可惜只能吐出两个模糊的字眼
+22:37 cleamoon: orz
+22:38 lhanjian: “闷……”
+22:38 cleamoon: 简直了
+22:38 lhanjian: 那样真残忍呢，要是挂了，就是死在我爹怀里，自己死了还要给别人造成一生的黑暗呢
+22:38 endle joined channel
+22:38 cleamoon: 后来抢救回来的还是自然恢复的？
+22:39 lhanjian: cleamoon: 当场拔了输液的药，往大医院送。好在我不是最严重的那种人，拔了以后就逐渐缓解了。
+22:39 hoxily quit:Quit: Leaving
+22:39 miao233_ joined channel
+22:40 lhanjian: 如果是我一个人在输液，可能就没人给我拔掉输液管了吧
+22:40 cleamoon: 煤气中毒那次是rp爆发了，发作前5min我出了趟门，呼吸了2min左右空气，要不，现在这里就是在UUZ旁边发信息了
+22:40 cleamoon: orz
+22:40 cleamoon: 这超危险呀
+22:40 lhanjian: 是啊
+22:40 lhanjian: 药物过敏
+22:40 iyzsong: olz
+22:40 lhanjian: 而且还是输液
+22:40 cleamoon: 没皮试之类的？
+22:40 lhanjian: 当时江西省卫生厅公布，5死若干伤
+22:40 cleamoon: 输液本身就很危险
+22:41 lhanjian: cleamoon:  你也看到卫生厅的公告了，之前根本没研究出这种中成药输液有过敏问题
+22:41 lhanjian: 卫生部
+22:41 cleamoon: 可不可以搞医院/药厂/卫生部？
+22:42 cleamoon: 中成药和tm普通药有毛子区别
+22:42 lhanjian: cleamoon: 对啊。当时哪里懂。后来知道是药物过敏，还是看报纸报道省卫生厅的公告，如果他们死不承认，恐怕我根本就不会知道是过敏吧
+22:42 lhanjian: cleamoon: 中成药是中药制剂。所谓“普通药”是化工产品吧
+22:43 cleamoon: 最亏的应该是因为死不承认挂了
+22:43 lhanjian: cleamoon: 对于那些死了的伙计来说，承不承认又有什么区别呢
+22:43 cleamoon: 中药制剂是物理反应做出来的？用LHC轰击黄连制成的？
+22:43 lhanjian: 不知道
+22:44 cleamoon: 对于那些死了的伙计的家人来说，区别很大
+22:44 lh_mouse: 中药分两种，有经验的是瞎蒙，没经验的是扯犊子。
+22:45 lhanjian: cleamoon: 谁知道呢
+22:45 cleamoon: 谁都知道的
+22:46 lh_mouse: cleamoon, 爆照。
+22:46 lhanjian: 从报纸上只有卫生厅的公告来看，在和谐大潮下，大概他们折腾过政府了我也不知道
+22:47 hope1_ joined channel
+22:47 cleamoon: 你家人又没挂...
+22:48 cleamoon: 海棠姬来了
+22:48 lhanjian: 。。。
+22:48 lh_mouse: 海棠姬来了！
+22:48 lh_mouse: 大家捏她。
+22:48 cleamoon: hope1_, 捏
+22:49 lh_mouse: hope1_, 捏。
+22:49 lhanjian: hope1_: 捏
+22:49 hope1_: 啥
+22:53 cleamoon: 出门
+22:54 cleamooon joined channel
+22:54 cleamoon quit:Read error: Connection reset by peer
+22:59 mazhibin joined channel
+23:01 mazhibin: any body?
+23:02 lhanjian: mazhibin: 
+23:03 cleamooon quit:Ping timeout: 248 seconds
+23:14 endle quit:Quit: Leaving
+23:27 iyzsong: (๑´•.̫ • `๑)
+23:39 miao233_ quit:Quit: Leaving.
+23:44 cleamoon joined channel

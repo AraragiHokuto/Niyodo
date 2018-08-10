@@ -1,0 +1,367 @@
+00:31 cleamooon joined channel
+00:34 cleamoon quit:Ping timeout: 252 seconds
+00:42 Silver joined channel
+00:42 Silver is now known as Guest7223
+00:45 SilverElf quit:Ping timeout: 250 seconds
+00:54 xxxxxxxx quit:Quit: Leaving...
+00:55 lh_cat joined channel
+00:59 lh_mouse quit:Ping timeout: 276 seconds
+01:14 cleamooon quit:Ping timeout: 250 seconds
+01:36 Guest7223 quit:Read error: Connection reset by peer
+01:37 lh_cat quit:Read error: Connection reset by peer
+01:56 Mokou: 睡觉
+01:56 Mokou: 诸君武运
+01:56 Mokou quit:Quit: 睡觉
+02:08 Youmu quit:Quit: Connection closed for inactivity
+04:22 whocares_2_ joined channel
+04:23 whocares_2 quit:Ping timeout: 250 seconds
+05:05 cleamoon joined channel
+07:33 id10086 joined channel
+08:08 id10086 quit:Read error: Connection reset by peer
+08:20 id10086 joined channel
+08:47 id10086 quit:Ping timeout: 264 seconds
+08:54 cc joined channel
+09:24 lh_mouse joined channel
+09:34 xxxxxxxx joined channel
+10:26 Guest9122 quit:Ping timeout: 252 seconds
+10:31 xu0o0 joined channel
+10:31 xu0o0 is now known as Guest53562
+10:37 varna joined channel
+10:37 varna: (｡･ω･)
+10:38 Guest53562 quit:Ping timeout: 244 seconds
+10:47 xu0o0- joined channel
+11:27 T-J-M quit:Quit: 吾去矣
+11:27 T-J-M joined channel
+11:45 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki/env-gthread.h  完成了。
+11:45 lh_mouse: varna, 求意见。
+12:03 varna: 只有一个疑问
+12:03 Youmu joined channel
+12:04 varna: 你的cond wait-signal有假唤醒的问题么？
+12:04 lh_mouse: 不保证没有。
+12:04 varna: 这倒不是问题，我觉得可以在文档里提一句
+12:05 lh_mouse: 这个 header 只提供 wrapper 所以就不提这个事情了。
+12:05 varna: 哦哦
+12:05 lh_mouse: varna, https://github.com/lhmouse/mcfgthread/wiki/env-condition_variable.h#2-bool-_mcfcrt_waitforconditionvariable_mcfcrt_conditionvariable-pconditionvariable-_mcfcrt_conditionvariableunlockcallback-pfnunlockcallback-_mcfcrt_conditionvariablerelockcallback-pfnrelockcallback-intptr_t-ncontext-uint64_t-u64untilfastmonoclock
+12:05 lh_mouse: Remarks 
+12:05 lh_mouse: 好♂长的链接。
+12:05 varna: 看到了，thx4ref
+12:11 iyzsong-xx joined channel
+12:13 lh_not_bot quit:Ping timeout: 276 seconds
+12:19 lh_not_bot joined channel
+12:27 varna: xxxxxxxx: http://tieba.baidu.com/p/4532031399?see_lz=1 Plugy 127pp
+12:34 lh_mouse: 审稿啦，老爷们。
+12:34 lh_mouse: https://github.com/lhmouse/mcfgthread/wiki
+12:35 lh_mouse: 有问题发 issue 。 
+12:35 xxxxxxxx: varna: 我总觉得这神作死...
+12:36 varna: xxxxxxxx: 这货A3直接被一个自爆炸死了
+12:45 cc quit:Remote host closed the connection
+12:46 cc joined channel
+13:15 lucid joined channel
+13:35 Matsune joined channel
+14:18 Mokou joined channel
+14:19 Mokou: http://ww3.sinaimg.cn/mw690/4fe59379gw1f49wka9u4aj21bf0qo7cj.jpg “這TM什麼牌子的扶梯”
+14:24 lucid quit:Ping timeout: 250 seconds
+14:44 varna: 好想侵犯妹子啊
+14:45 Mokou: 啊，看了少戰劇場版的人發出了這樣的感想：
+14:45 Mokou: “快拿符紙來啊，牛頓的棺材要壓不住啦！”
+14:46 varna: 其实我有个错觉，很多实战场景和想定看起来都比钻头和炮弹推进有意思，但制作商不做是因为萌二不买账
+14:47 Mokou: _(:з」∠)_
+14:47 varna: 说到热兵器大片，还得看米畜_(:з」∠)_
+14:49 xxxxxxxx quit:Quit: Leaving...
+14:49 varna: http://tieba.baidu.com/p/4573537423 C语言吧的小吧已经堕落到这种程度了？
+14:49 Mokou: ……
+14:49 Mokou: 這吧沒救了
+14:52 cc: 不懂~
+14:57 T-J-M quit:Quit: 吾去矣
+14:57 varna: http://tieba.baidu.com/p/4573281279
+15:00 Mokou: 噫，大韓的飛機着了啊
+15:01 Matsune: 他们怎么都说四十多岁晚了。。。我爸就四十多岁学C搞单片机来着。。。
+15:03 varna: 不算晚，反正这事摊到谁头上都得下长时间功夫
+15:03 varna: 但平常人活一天少一天，长者活一天则多活44.39年
+15:04 Mokou: Error? Excited!
+15:14 id10086 joined channel
+15:17 varna: root!
+15:18 Youmu quit:Quit: Connection closed for inactivity
+15:27 Matsune: 10086
+15:35 lh_mouse quit:Read error: Connection timed out
+15:35 id10086 quit:Read error: Connection reset by peer
+15:35 lh_mouse joined channel
+16:04 Mokou: http://ww2.sinaimg.cn/mw690/ed3ac991jw1f48untry9ej20c80m6wib.jpg
+16:05 varna: 哈哈哈哈
+16:07 varna: 自此之后三年里，每年六月的结婚日都成了这位新娘的伤心纪念日
+16:08 Mokou: 一言不合就白
+16:08 id10086 joined channel
+16:08 varna: 梦里不觉球已深，铝尽油绝续何人？
+16:09 varna: 所以我最后的疑问是，雪菜究竟有没有把自己揉穿……
+16:12 Mokou: 噫
+16:12 varna: 据说coda的HCG里是没有血的
+16:12 varna: 而考虑到特典小说2……
+16:14 Mokou: 只是我一通電話就會有二百個田園女權主義者來罵你直男癌
+17:16 Mokou: 刚刚叫一个在图书馆大声打电话的人他妈的安静点！
+17:16 Mokou: 旁边的人都忍不住为我鼓掌。
+17:16 Mokou: 于是我也叫他们他妈的安静点！
+17:16 Mokou: ——primawesome
+17:22 varna: 233333
+17:23 xxxxxxxx joined channel
+17:23 Youmu joined channel
+17:42 cc quit:Remote host closed the connection
+18:13 iyzsong-xx quit:Remote host closed the connection
+18:20 Mokou: http://ww4.sinaimg.cn/mw690/c0788b86gw1f4a29m9rkkj20go0e2gnd.jpg NHK：“奥巴马访问广岛”；日视：“奥巴马访问广岛”；TBS：”奥巴马访问广岛“；富士：”奥巴马访问广岛“；朝日：”奥巴马访问广岛“；东京电视台：”奥巴马访问广岛“！！！
+18:23 varna: 233333
+18:45 cleamoon quit:Ping timeout: 244 seconds
+18:52 Mokou: http://ww3.sinaimg.cn/mw690/e36c21dbjw1f49sgsgh8cj20ku112n3i.jpg 陸自的新徽標，很清真
+18:52 xxxxxxxx: 什么东京电视台最近是不是出大事了 往日作风呢...
+18:52 varna: 大概被清真了
+18:53 xxxxxxxx: 陆自得那个图 一般来说刀和鞘通常都是一样长的么?
+18:54 varna: 鞘要比刃长一点，尤其日本刀
+18:55 varna: 日本刀是卡在鞘里的，目的是护住刃部
+18:55 xxxxxxxx: 省得前面被磕断?
+18:56 varna: 类似的理由
+18:56 varna: 尽量只固定少接触
+18:56 xxxxxxxx: 然而这个图上鞘是故意拉长的?
+18:57 varna: 也许是为了美观
+18:57 varna: 本来日本人就倾向于腿短的样子
+18:58 Mokou: 把我天頂星科技的唐刀拿來
+19:00 xxxxxxxx: 所以唐刀到底怎么说?
+19:00 Mokou: 按我之前查的資料來看似乎商家吹水&小將愛國的成分偏多
+19:01 Mokou: 真正的唐刀大概沒有那麼IMBA
+19:01 Mokou: 不過唐刀資料畢竟少
+19:02 xxxxxxxx: 出土的实物都没有么233
+19:03 lh_mouse quit:Ping timeout: 258 seconds
+19:29 cleamoon joined channel
+19:30 cleamoon: varna, 昨天名为lag的恶魔吞掉了半个lut galem，然后我就挂了
+19:30 cleamoon: 最后也没到18
+19:31 cleamooon joined channel
+19:34 cleamooon: http://photo.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/mw/y4_233298.jpg@596w_1l.jpg
+19:34 xxxxxxxx: 我发觉我完全可以用双手剑镶嵌骷髅当副手武器...
+19:34 cleamooon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/mx/3k_42953.jpg@596w_1l.jpg
+19:34 cleamooon: http://photo2.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/mx/m2_85545.jpg@596w_1l.jpg
+19:35 cleamooon: 然后你就死了
+19:35 cleamoon quit:Ping timeout: 264 seconds
+19:35 xxxxxxxx: 我用之前那个矛都不会死...
+19:36 xxxxxxxx: 双手剑现在牺牲伤害66-154 命中951
+19:37 cleamooon: 下幕你就会死成狗了
+19:38 cleamooon: 娃娃焦作人
+19:41 lh_mouse joined channel
+19:45 xxxxxxxx: 幼女要不要fcr的戒指?
+19:45 cleamooon quit:Ping timeout: 264 seconds
+19:46 Mokou: 啊，文明6有進步了
+19:46 Mokou: 天朝終於不是首都北京一分上海了，現在首都變成西安了
+19:46 Mokou: 雖說領袖是秦始皇……
+19:47 cleamooon joined channel
+19:48 xxxxxxxx: 啊说错了 我拿的是双刃大刀 双手13-30伤害
+19:48 xxxxxxxx: 然后就掉了影之牙...
+19:50 cleamooon: 我只要加四防和技能的东西
+19:50 cleamooon: 其他都不重要
+19:51 xxxxxxxx: 那个三孔盾牌给你你往上面加些钻石如何2333
+19:53 cleamooon: 不要
+19:54 cleamooon: 圣骑专用盾自带四防
+19:54 xxxxxxxx: 所以说那个就是三孔小盾(专用盾)啊
+19:54 xxxxxxxx: 自带+6的抗性
+19:55 cleamooon: 哦，还是不需要，很快就有好东西了
+19:56 cleamooon: 不过你那个无法冰冻是好东西
+19:56 xxxxxxxx: 那个就是药能带的太少了...
+19:57 varna: xxxxxxxx: 我去吃饭，等会回来开？
+19:57 xxxxxxxx: 行吧
+19:58 varna: ok
+20:04 cleamooon quit:Ping timeout: 258 seconds
+20:05 cleamooon joined channel
+20:07 cleamooon: 我在听讲座.....
+20:11 xxxxxxxx: 砸锅卖铁买了个+2祝福锤 +2瞄准的权杖233
+20:11 cleamooon: orz
+20:11 cleamooon: 你有钱
+20:12 xxxxxxxx: 不然也是拿去赌博用的233
+20:13 cleamooon: 小心以后复活不了米山
+20:16 cleamooon: 不过到噩梦就好了，随便个东西都几万
+20:18 Youmu quit:Quit: Connection closed for inactivity
+20:19 lh_mouse quit:Read error: Connection reset by peer
+20:20 lh_mouse joined channel
+20:22 cleamooon quit:Ping timeout: 272 seconds
+20:26 xxxxxxxx: 拿着影之牙肛死了新人杀手233
+20:30 cleamooon joined channel
+20:30 cleamooon: 新人杀手是什么
+20:31 xxxxxxxx: 督瑞尔...
+20:31 cleamooon: orz
+20:31 cleamooon: 好快
+20:33 xxxxxxxx: 拿到了bloodrise所以影之牙可以下班了...
+20:34 cleamooon: bloodrise是什么
+20:35 xxxxxxxx: 暗金流星锤
+20:35 cleamooon: orz
+20:36 cleamooon: 欧皇的升起
+20:42 varna: 回来了
+20:42 varna: 巨基C主？
+20:42 varna: 有盒子之后任务比较无所谓了，不过让我出一下骨矛吧……
+20:42 cleamooon quit:Ping timeout: 250 seconds
+20:43 xxxxxxxx: 我刚打完督瑞尔..
+20:43 varna: 那我C吧
+20:43 varna: c_lang_cn deadbeef
+20:44 xxxxxxxx: 羊驼要FCR么?
+20:44 varna: 要
+20:44 varna: 你们要吸血诅咒支援么
+20:45 cleamooon joined channel
+20:45 varna: cleamooon: c_lang_cn deadbeef
+20:45 cleamooon: 等等，我还没开呢....
+20:45 varna: cleamooon: 你开窗口模式
+20:45 varna: 全屏可能有兼容性问题
+20:45 cleamooon: 羊驼子不用去做任务了，我把杖什么的给你
+20:45 varna: ok
+20:46 cleamooon: 窗口模式就没问题了？
+20:46 varna: 窗口也许就没问题了
+20:46 varna: 你们都多少级了？
+20:46 cleamooon: 哦，等一下
+20:46 cleamooon: 我17
+20:46 varna: 我也17
+20:46 varna: 巨基二十多了吧
+20:46 xxxxxxxx: 21
+20:47 varna: 拿杖之后走哪，飞神秘庇护所？
+20:47 cleamooon: 不过羊驼子吃饭时间好长
+20:47 cleamooon: +
+20:47 varna: 我出去买了点东西
+20:50 xxxxxxxx: 箱子那里还有些东西羊驼看看有没有有用的233
+20:51 varna: 头盔给幼女吧，另外我这有个全抗4的项链幼女要不要
+20:51 cleamooon: 不需要...
+20:51 varna: 那我卖钱了
+20:52 cleamooon: 窗口不行，黑得跟金刚如来似的
+20:52 varna: 往下估计我也要上演砸锅卖铁买法杖的故事
+20:52 xxxxxxxx: 我刚把那个盾上弄了几个钻石 然后现在似乎+26抗
+20:52 cleamooon: 我至今就买了一个手套，还有15000....
+20:52 varna: 我只有两万五
+20:53 cleamooon: 基王有钱
+20:53 xxxxxxxx: 并没有多少...
+20:53 varna: 算了我买个+1骨矛的吧
+20:53 varna: 一万五就搞定了
+20:53 varna: 过这村没这店了
+20:54 cleamooon: 我载入一半了
+20:54 cleamooon: white都需要什么
+20:54 varna: Dol'Io
+20:54 cleamooon: orz
+20:54 cleamooon: 暂时别想了
+20:55 xxxxxxxx: 幼女那边又杖么?
+20:56 varna: 有
+20:56 varna: 直接飞神秘庇护所好了
+20:56 cleamooon: 怎么没人呀....
+20:56 varna: 箱子附近有衣森哈德头盔
+20:56 varna: 幼女要不要
+20:57 cleamooon: 我看看
+20:58 cleamooon: 在d2里说吧
+20:58 varna: ok
+20:58 cleamooon: 在学校没那么多屏幕了...
+20:58 xxxxxxxx: 我开的这个门羊驼能进来么?
+20:58 varna: 不能
+20:58 varna: xxxxxxxx: d2里说吧，幼女看不见
+20:58 CyrusYzGTt joined channel
+20:58 CyrusYzGTt quit:Changing host
+20:58 CyrusYzGTt joined channel
+20:59 xxxxxxxx: 等幼女进来了我运送一趟那个杖给羊驼做一下任务大概才能进来...
+21:05 hoxily joined channel
+21:44 id10086 quit:Ping timeout: 240 seconds
+22:33 alcross joined channel
+22:35 alcross quit:Read error: Connection reset by peer
+22:48 Mokou: http://ww3.sinaimg.cn/mw690/005N2QgRjw1f45la9gdhvj30rs0t7q81.jpg “一架在拉包尔附近执行搜救任务的PBY水上飞机上的机枪手”
+23:06 CyrusYzGTt quit:Ping timeout: 250 seconds
+23:17 Youmu joined channel
+23:19 CyrusYzGTt joined channel
+23:44 varna: Mokou: puuuuuuu
+23:44 cleamooon: 羊驼子退的时候攻击力多少
+23:44 varna: 100+吧
+23:44 cleamooon: soga
+23:45 cleamooon: 我去找找wp，下次可以指路
+23:45 varna: 加装备我有8级骨矛和不到10级骨墙
+23:45 cleamooon: 我估计portal不可能剩下...
+23:45 varna: 活得非常辛苦
+23:45 cleamooon: 9级hammer
+23:45 * xxxxxxxx 也觉得挺辛苦233
+23:45 cleamooon: 我在等30级食尸
+23:45 cleamooon: 有了那个我就不需要药了
+23:45 varna: 现在我把所有点数都投到energy上了
+23:46 varna: 拼命磕瓶子
+23:46 varna: insight猴年码月呢
+23:46 varna: 刚才我基本是看到比较大的怪，就给贴个life tap
+23:47 varna: 巨基打了能吸血
+23:47 cleamooon: 找到了，下次我指路
+23:47 varna: 小怪就看心情了
+23:47 cleamooon: 不过得一路打过来....
+23:47 varna: 群殴的时候有时候会给外围贴衰老，内圈贴吸血
+23:47 varna: 主要麻烦是尸爆半径不够
+23:48 cleamooon: 现在小坨怪我根本没法打，两瓶药打死一个怪
+23:48 varna: 你左键开牺牲吧
+23:48 cleamooon: 能食尸之后我就可以一路请过来了
+23:48 varna: 好歹能打打
+23:48 cleamooon: 牺牲也要魔呀...
+23:48 cleamooon: 而且我也没学牺牲
+23:48 varna: 牺牲不费魔
+23:48 varna: 哦对
+23:49 xxxxxxxx: 我有21级牺牲233 4级zeal
+23:49 varna: 23333333
+23:49 varna: 巨基LM不够？
+23:49 cleamooon: 21级牺牲 4级zeal？
+23:49 cleamooon: 这什么诡异情况
+23:49 xxxxxxxx: 单手的不够233
+23:49 varna: 牺牲加热诚伤害的
+23:49 varna: 影之牙9%LM...
+23:49 cleamooon: 那为什么不直接加zeal....
+23:49 varna: 笑得不行
+23:50 varna: 要不巨基做个手工艺品吧
+23:50 varna: 我有珠宝
+23:50 cleamooon: concentration和圣盾和zeal加满
+23:50 varna: 不
+23:50 cleamooon: 剩下的再考虑
+23:50 xxxxxxxx: 我刚弄了个扩展的金手套233
+23:50 cleamooon: orz
+23:50 varna: 圣盾加到格挡75%就行
+23:50 cleamooon: 也可以
+23:50 varna: 集中光环不如狂热，前期硬撑下来过渡
+23:50 cleamooon: 不过zeal无所谓，技能点多
+23:51 varna: zeal加满，牺牲加满，狂热加满
+23:51 cleamooon: 哦，总是记错
+23:51 varna: 剩下随意
+23:51 varna: 单机的话可以救赎一点拯救一点
+23:51 cleamooon: 拯救可以
+23:51 cleamooon: 救赎就算了
+23:51 cleamooon: 救赎4个前置
+23:51 varna: 我还挺喜欢吃尸的
+23:51 varna: 显得很带感
+23:52 xxxxxxxx: http://diablo.gamepedia.com/Zealot_by_lMarcusl 这里是这么加的
+23:52 varna: 十点吃尸2333333
+23:52 xxxxxxxx: 他只加了13级zeal 我也不知道为何
+23:52 cleamooon: 10点吃屎.....
+23:52 varna: 这位也是虎，zeal不加满但加了十点吃尸……
+23:52 cleamooon: 有病吧
+23:52 varna: 二十点圣盾浪费了
+23:53 cleamooon: 反正也没用
+23:53 varna: 圣骑用职业大盾加一些敏不用很多圣盾的
+23:53 varna: 复仇点一级可以，但物免怪实际上可以绕
+23:53 cleamooon: 多余的点数其实可以给盾击，实在打不中了换盾击
+23:53 varna: 蝗虫没办法的话找个有诅咒的东西凑合下
+23:53 varna: 另外这哥们加祈祷和圣洁是怎么回事……
+23:54 xxxxxxxx: 皇冠之盾我现在开圣盾的显示的格档73%...
+23:54 varna: zealot直接热诚狂热走起，最多拯救撑抗，没有圣洁的事啊……
+23:54 cleamooon: 一级复仇没审判没虚区的
+23:54 cleamooon: 那个是前置....
+23:54 varna: 哦对
+23:54 cleamooon: 圣盾一下30点魔法，持续30s，所以我不放...
+23:54 varna: 祈祷藐视圣洁圣跑……吃个尸这么费事
+23:55 varna: 腿丁跑位好了，圣盾低点没事
+23:55 xxxxxxxx: 包里有个战戟
+23:55 varna: 我家米山拒绝升级，你们用吧
+23:55 xxxxxxxx: 需要力量113...
+23:55 varna: 到后面我换个力量米山
+23:55 xxxxxxxx: 我家米山刚从A2重新雇佣 然而力量只有80左右
+23:55 cleamooon: 我要不要换圣冰？
+23:56 varna: 别，饶我一命
+23:56 varna: 不过也行
+23:56 varna: 反正你是主力输出，巨基次之，我是酱油的
+23:56 cleamooon: HM的combat是荆棘光环吧？
+23:56 varna: 是
+23:56 cleamooon: 尸爆输出挺高的，不想废掉
+23:56 varna: 超卵的
+23:57 varna: 尸爆我半径不够，往后找点装备
+23:58 cleamooon: 到HM会有我的concentration加攻击，基王的狂热加命中，你的力量加攻击，基王的米山加命中，那我干脆就还这个防御好了
+23:59 varna: 也行
+23:59 varna: 防御米山也能一直用
+23:59 varna: 看了下刚才那个build的说明，作者居然相信战斗中吃尸
+23:59 cleamooon: 这样等于少了一个回血的卵用米山
+23:59 xxxxxxxx: 我觉着先加牺牲也不是坏事 zeal现在老打不中..
+23:59 cleamooon: 噗
+23:59 cleamooon: 打不中是AR太低了
+23:59 varna: zeal到后面也打不中，超坑的

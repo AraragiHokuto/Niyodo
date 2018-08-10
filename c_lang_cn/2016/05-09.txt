@@ -1,0 +1,259 @@
+00:06 code_new quit:Quit: ChatZilla 0.9.92 [Firefox 46.0.1/20160503215307]
+00:08 lh_mouse: http://melpon.org/wandbox/permlink/YTdqOUCPqDXCzoLt
+00:09 TommyJerryMairo joined channel
+00:09 T-J-M quit:Ping timeout: 260 seconds
+00:10 TommyJerryMairo is now known as T-J-M
+00:28 wlemuel joined channel
+00:39 T-J-M quit:Quit: 吾去矣
+00:39 T-J-M joined channel
+00:48 FrankHB quit:Ping timeout: 246 seconds
+00:51 wlemuel quit:Ping timeout: 244 seconds
+00:56 lh_mouse quit:Quit: I have China's blessing!
+00:57 xxxxxxxxx joined channel
+01:00 xxxxxxxx quit:Ping timeout: 260 seconds
+01:00 hoxily quit:Quit: Leaving
+01:14 Mokou quit:Remote host closed the connection
+01:21 cleamoon quit:Ping timeout: 244 seconds
+01:57 arch_ quit:Quit: 离开
+02:10 CyrusYzGTt quit:Ping timeout: 276 seconds
+02:11 cleamoon joined channel
+03:03 cleamoon quit:Ping timeout: 250 seconds
+04:27 cleamoon joined channel
+04:42 Youmu joined channel
+07:19 Youmu quit:Quit: Connection closed for inactivity
+08:06 wlemuel joined channel
+08:34 wlemuel quit:Ping timeout: 250 seconds
+08:42 CyrusYzGTt joined channel
+08:55 FrankHB joined channel
+09:09 cleamoon quit:Read error: Connection reset by peer
+09:16 cleamoon joined channel
+09:20 lh_mouse joined channel
+09:34 cleamoon quit:Ping timeout: 246 seconds
+09:44 CyrusYzGTt quit:Ping timeout: 240 seconds
+10:02 whatofor joined channel
+10:30 cc joined channel
+10:47 lh_mouse: geordi, { int a; a = (int)&a; cout <<a; }
+10:47 geordi: error: cast from 'int*' to 'int' loses precision
+10:47 lh_mouse: geordi, { int *a; int b = 123; a = (int *)b; cout <<a; }
+10:47 geordi: warning: cast to pointer from integer of different size
+10:47 lh_mouse: geordi, use -w
+10:47 geordi: 0x7b
+11:11 whatofor quit:Ping timeout: 244 seconds
+11:11 whatofor_1 joined channel
+11:12 iyzsong: (#･∀･)
+11:27 xxxxxxxxx quit:Quit: Leaving...
+11:32 jin7boy joined channel
+11:36 jin7boy quit:Read error: Connection reset by peer
+11:37 Youmu joined channel
+12:08 iyzsong: 啊 (TдT)
+12:15 Mokou joined channel
+12:22 guowang joined channel
+12:23 guowang: 心疼 刚刚面试又挂了
+12:27 FrankHB quit:Ping timeout: 244 seconds
+12:30 FrankHB joined channel
+12:36 Stevearzh quit:Quit: ZZZzzz…
+13:06 Mokou quit:Quit: Lost terminal
+13:06 Mokou joined channel
+13:47 FrankHB quit:Ping timeout: 252 seconds
+13:58 FrankHB joined channel
+14:03 Stevearzh joined channel
+14:03 Stevearzh quit:Client Quit
+14:04 guowang quit:Ping timeout: 265 seconds
+14:07 Stevearzh joined channel
+14:19 Youmu quit:Quit: Connection closed for inactivity
+14:59 varna joined channel
+14:59 Mokou: 羊駝子冒出來了
+15:00 * varna 想揉妹子
+15:03 * lh_mouse 想揉妹子
+15:35 Youmu joined channel
+16:18 Mokou: http://ww4.sinaimg.cn/mw690/e4beb8aegw1f3nu93hndxj20c80qhgoi.jpg
+16:19 Mokou: 出去趟
+16:23 Mokou: ……下雨了
+16:46 Stevearzh quit:Quit: ZZZzzz…
+16:48 * cc 上海今晚有雨
+16:49 Stevearzh joined channel
+16:52 FrankHB quit:Ping timeout: 244 seconds
+16:52 varna: 工口球是不是一种口球？
+16:54 lh_mouse: 是。
+16:54 varna: (｡･ω･)ﾉ
+17:06 Mokou: varna: 對了，我聽說Zak死在了E4
+17:12 varna: 哈哈哈哈
+17:12 varna: E4为何会死人的
+17:13 Mokou: 鬼知道
+17:13 varna: 难点不都是登陆战么
+17:13 Mokou: 他是不是又用021了
+17:13 Mokou: E4我一路腳打過去的
+17:13 varna: 零战刷满练度也有25制空
+17:13 varna: 他不会用新人航空队出去打的吧
+17:14 Mokou: 難說，他不會去刷熟練度吧
+17:14 varna: ...
+17:14 Mokou: 不過也不對啊
+17:14 Mokou: Boss點沒制空
+17:14 Mokou: 有飛機飛出來就是確保
+17:14 varna: ...
+17:14 Mokou: 到底怎麼死人的……
+17:16 varna: 他是不是低保出去打的
+17:21 lh_mouse: varna, 有个事情，你来评评理。
+17:21 lh_mouse: ヲ先说一下背景。
+17:21 varna: (｡･ω･)ﾉ
+17:22 Matsune joined channel
+17:22 lh_mouse: C艹的 thread_local 依赖了 GNU 的 emulated TLS，也就是和 __thread 以及 C 的 _Thread_local 是一路货。
+17:22 lh_mouse: GNU 在 Windows 上用了 emutls，于是这里内存不够就 abort() 。
+17:23 lh_mouse: ヲ认为这个接口过于傻逼导致没法艹干净的实现，所以干脆 #pragma poison thread_local 。
+17:23 lh_mouse: 但是帝球认为 ISO “允许不炸的实现”而用户用了会炸的实现所以责任用户自负。
+17:24 lh_mouse: 这里的问题是这种傻逼接口根本不可能做到完全不炸。
+17:24 varna: 我见过那个emulated TLS hook系列，觉得在有另行替代的情况下poison比较好些
+17:25 lh_mouse: LoadLibrary 根本不支持静态 TLS （动态加载具有非零大小的静态 TLS 表的 DLL 在 XP 之前是无解的）。
+17:26 varna: 你这里是用MCF model的TLS把他们全踢掉了？
+17:29 lh_mouse: 只能是 emulated  那部分。
+17:29 lh_mouse: 内存不够还是得 abort() 。
+17:29 varna: 也行了
+17:30 lh_mouse: 本来的接口就没法处理这情况。
+17:30 lh_mouse: varna, http://paste.ubuntu.com/16316387/
+17:32 varna: 在这种事情上我是实现派
+17:32 lh_mouse: 帝球认为“标准允许不炸”，然而目前这 emutls 完全不可能做到不炸。
+17:33 varna: 而且钦定单线程是在找死啊……
+17:34 FrankHB joined channel
+17:34 varna: 我觉得残废是一回事，但内存不够是摆在我面前的一回事
+17:34 varna: 宁可先跟内存过不去
+17:39 Mokou: 恥球冒出來了
+17:39 * varna 拽出一床被子
+17:42 cc quit:Remote host closed the connection
+17:46 Mokou: 哦對了，還有個笑話
+17:46 Mokou: 前天羣裏有人給我發了張《高校艦隊》的截圖
+17:47 Mokou: 你知道他們怎麼對付460炮彈麼
+17:47 varna: 扭？
+17:47 Mokou: “用炮彈迎擊炮彈”
+17:47 varna: ...
+17:47 FrankHB quit:Ping timeout: 244 seconds
+17:47 Mokou: 掏出長十醬咣一發過去了
+17:48 Mokou: 這是海自贊助的
+17:48 varna: 海自估计都在打活动，没时间管剧本
+17:49 Mokou: 所以說俾斯麥精確吊射彈藥庫並不是神論（確信）
+18:05 lh_mouse: [17:28:57] <lh_mouse> 帝球认为“标准允许不炸”，然而目前这 emutls 完全不可能做到不炸。
+18:05 lh_mouse: [17:29:34] <varna> 而且钦定单线程是在找死啊……
+18:05 lh_mouse: 帝球显然就是这么认为的。
+18:07 * varna shrugs
+18:07 varna: 这实在有点残念
+18:09 varna: http://www.bilibili.com/video/av758532/ 物理引擎
+18:09 lh_mouse: 所以帝球整天吱标准也没吱出个能用的实现。
+18:09 lh_mouse: 接口辣鸡了所以实现不可能不辣鸡。
+18:09 lh_mouse: 严格来说 thread_local 可以不比 _Thread_local 烂，因为可以丢 bad_alloc 。
+18:10 lh_mouse: 但是丢 namesapce scope 还是要求在线程开始时候初始化，所以依然辣鸡。
+18:14 lh_mouse quit:Read error: Connection reset by peer
+18:14 lh_mouse joined channel
+18:28 FrankHB joined channel
+18:38 Stevearzh quit:Remote host closed the connection
+18:39 Stevearzh joined channel
+18:45 varna: Mokou: 刚有个伙计的舰改bug了，存档和游戏本体一起蒸发
+18:46 Mokou: ……這都不光吃存檔了？
+18:46 Mokou: 666666
+18:46 varna: 啊，是内存卡坏了
+18:46 Mokou: ……
+18:46 Mokou: 嚇死我了
+18:47 Mokou: 有一遊戲，化爲長蛇，口有毒牙，不以嚙人，自嚙其身
+18:47 varna: 我日
+18:47 varna: 是舰改的锅
+18:47 Mokou: ……
+18:47 Mokou: 有一遊戲，化爲長蛇，口有毒牙，不以嚙人，自嚙其身
+18:47 varna: 游戏把内存卡搞坏了
+18:47 Mokou: 牛逼飛了
+18:47 Mokou: 貼吧還是？
+18:47 varna: 这怎么做到的
+18:48 Mokou: 他們怎麼幹翻硬件的
+18:48 varna: 贴吧一个伙计，他重插内存卡之后游戏还在
+18:48 varna: 不过存档似乎还是消失了
+18:48 Mokou: ……
+18:49 Mokou: 他們不是把FS艹了把
+18:49 Mokou: 吧*
+18:49 varna: 走API的话怎么会那么容易把元数据炸了……
+18:49 Mokou: 鬼知道……
+18:50 varna: 都神了
+18:52 Mokou: 這纔是牛逼的程序員啊
+18:52 Mokou: 我搦暴了
+18:54 iyzsong: orz
+18:56 varna: 今天官推什么都没敢说
+18:56 varna: 估计之前被骂怂了
+18:56 Mokou: 23333
+18:57 Mokou: 日，線條好抖
+18:57 Mokou: 所以小學的時候我國畫到底怎麼學的
+18:57 Mokou: 到現在毛筆都不會用……
+18:57 varna: 你试着用念力握笔
+18:58 lh_mouse: [18:53:49] <varna> 你试着用念力握○
+18:58 varna: 硕鼠硕鼠……
+18:59 varna: 念起这种东西就容易让人想到，上台念两句诗这个传统是不是从东周开始的？
+19:00 Mokou: 殷商就開始了吧
+19:00 Mokou: 天命玄鳥降而生商
+19:06 varna: https://www.zhihu.com/question/21697008/answer/95438575
+19:07 stardust: 戒色吧高级会员
+19:08 varna: 噗，E7最新情报
+19:08 varna: 你需要凑一个珍珠港带路
+19:09 varna: 当然历史上去的水面直卫队编制是比叡雾岛、利根筑摩、一水战（阿武隈、十七驱、十八驱）
+19:09 varna: 群众觉得利根、筑摩、阿武隈、霞就可以
+19:10 varna: 二队还不能带战舰，这下乐了
+19:11 varna: 机动部队二队没战舰，容易事故啊……
+19:13 Stevearzh quit:Remote host closed the connection
+19:13 Stevearzh joined channel
+19:15 Stevearzh quit:Client Quit
+19:19 varna: http://www.bilibili.com/video/av4602339/ 唱腔不错
+19:25 cleamoon joined channel
+19:26 varna: 两千桶幼女来了
+19:26 cleamoon: varna, 爆
+19:29 varna: 幼女真可怕
+19:29 Mokou: 後面不是純靠核彈麼
+19:30 cleamoon: 官方调查认为，“百度搜索相关关键词竞价排名结果客观上对魏则西选择就医产生了影响，百度竞价排名机制存在付费竞价权重过高、商业推广标识不清等问题，影响了搜索结果的公正性和客观性，容易误导网民，必须立即整改。”
+19:30 Mokou: 不然爲什麼這次又出來魚礁戰術了……
+19:33 cleamoon: 意大利籍的宾夕法尼亚大学经济学助理教授Guido Menzio在飞机上运算一组微分方程，引起旁边乘客的怀疑并报告航班工作人员，致使航班发生延误。他在Facebook上发帖（Google镜像）谈到此番经历，表示“难以置信”，并且觉得好笑。
+19:33 varna: 必须整改，然而能有多大用处呢……
+19:35 code_new joined channel
+19:36 cleamoon: https://github.com/wishstudio/flinux   这个似乎不错
+19:36 cleamoon: 整改就是没用了
+19:36 cleamoon: 不知道为什么没有处罚机制
+19:37 varna: starred + watching
+19:39 Youmu quit:Quit: Connection closed for inactivity
+19:40 hoxily joined channel
+19:41 cleamoon: http://photo1.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/jv/85_63001.jpg@596w_1l.jpg
+19:41 FrankHB: varna: 00:08的弹幕亮了……
+19:46 varna: FrankHB: puuuuuuuuuuuuuuuuuuuuuuuuu
+19:46 varna: rox是GAY!?
+19:46 varna: 弹幕@00:08：“我被你掰弯了张力我喜欢你，我此生无悔认识你”
+19:52 cleamoon: http://www.china.org.cn/chinese/2014-10/17/content_33791702.htm
+19:53 iyzsong: 2333
+19:53 iyzsong: 好想舔妹子啊 >.<
+19:55 cleamoon: A Huge Piece of Glass Just Fell Off Shanghai Tower
+20:08 xxxxxxxx joined channel
+20:09 xxxxxxxxx joined channel
+20:12 cleamoon: 长短不一，形态各异的基王来了
+20:13 xxxxxxxx quit:Ping timeout: 276 seconds
+20:16 lh_cat joined channel
+20:34 Stevearzh joined channel
+20:39 cleamoon: http://m.weibo.cn/1195908387/DuHs1gUZP
+20:39 whocares_2 joined channel
+20:39 whocares_2_ quit:Ping timeout: 260 seconds
+20:48 wlemuel joined channel
+21:02 wlemuel quit:Ping timeout: 240 seconds
+21:03 wlemuel joined channel
+21:04 lekkerbit joined channel
+21:25 CyrusYzGTt joined channel
+21:31 Mokou: 我想抱你呀 邀请你回答 朋友在争老司机的头衔我该如何用一句话击溃他们? 
+21:31 Mokou: Excuse me?
+21:32 cleamoon: 23333
+21:32 Mokou: 爲什麼我總被邀請回答奇怪的問題
+21:32 lh_mouse: /nick Traffic Police
+21:33 Mokou: 這個好
+21:33 lh_mouse: /nick TheOldTrafficPolice
+21:33 lh_mouse: 老交警
+21:34 cleamoon: 你可以说你是老女司机呀
+21:34 Mokou: 你是幼女司機
+21:36 iyzsong: (´・ω・｀)
+21:56 cleamoon quit:Ping timeout: 252 seconds
+22:24 lh_cat quit:Quit: Connection closed for inactivity
+22:28 Matsune quit:Read error: Connection reset by peer
+22:30 Matsune joined channel
+22:34 lh_mouse quit:Read error: Connection reset by peer
+22:37 cleamoon joined channel
+22:44 lekkerbit quit:Ping timeout: 260 seconds
+22:53 f00x quit:Quit: 离开
+23:08 Youmu joined channel
+23:14 f00x joined channel
+23:18 wlemuel quit:Ping timeout: 240 seconds

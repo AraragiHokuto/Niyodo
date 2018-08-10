@@ -1,0 +1,323 @@
+00:00 lh_cat: 第二，热备机制不能保证可用性。
+00:00 varna: 没法保证完全可用
+00:00 varna: 基本上是靠数量和运维堆出来的
+00:01 dexter__ joined channel
+00:01 lh_cat: 第三，硬件利用率太低，
+00:01 varna: 是的
+00:01 varna: 第三个对应用不多的业务线来说近乎致命
+00:01 lh_cat: 我就问问你们 zk 怎么用的。
+00:01 lh_cat: 我感觉，没用。
+00:02 varna: 没什么太大用
+00:02 lh_cat: 业务和 zk 之间链接丢失直接回家了。
+00:02 varna: 我自己拿他来并不是真正做很麻烦的分布式，就是用来做一个fast retry的锁占有者
+00:02 lh_cat: 和没有 zk 的时候没区别。
+00:02 varna: 而且业务和ZK之间连接就是可能丢，即使同机房部署也一样
+00:03 lh_cat: 我有个想法。zk 的角色弄中心式的类似单机 redis 。
+00:03 dexter__ left channel:"Good Bye"
+00:04 dexter__ joined channel
+00:04 varna: 网线被挖了怎么破
+00:04 lh_cat: 在此基础上封装互斥语义，类似 rabbit mq 。
+00:04 varna: 还是说只是逻辑中心
+00:04 lh_cat: 对，拿不到访问令牌的业务服务器禁止修改数据。
+00:05 rivdo joined channel
+00:05 varna: 我说的那个fast retry和这个做法类似
+00:05 lh_cat: 这有个问题，拿到令牌之后掉线不好处理。
+00:05 varna: ZK锁占有是个令牌
+00:05 varna: 但ZK的临时锁我印象有坑
+00:05 varna: 断掉之后也不保证能清掉
+00:06 lh_cat: 这难处理。
+00:06 lh_cat: 清掉也不是不清也不是。
+00:06 varna: zk感觉在EPHEMERAL上硬坑很多
+00:06 varna: etcd和consul我没试过
+00:08 lh_cat: 我是这想法，用一个带读写锁语义的 key value 元来管理，类似 redis ：      https://github.com/lhmouse/poseidon-circe/blob/master/protocol/messages_pilot.hpp
+00:08 lh_cat: 有个问题。
+00:08 lh_cat: 这语义难弄成分布式，
+00:09 lh_cat: 或者，考虑牺牲可用性，维护一致性和分区容错（key 哈希丢不同区），
+00:10 lh_cat: 如此，维护高一致性，但是动态扩容反而成了问题。
+00:10 varna: 我的疑问是，做这些的根本其实是在看重硬件利用率？
+00:10 lh_cat: raft 好像没法动态扩容。
+00:11 varna: raft我印象可以
+00:11 lh_cat: 不全是。我现在想把业务做成对等的可动态扩容的。
+00:12 varna: 其实这感觉就和分布式走远了
+00:12 lh_cat: raft 不是基于多数一致么，总数得已知吧。
+00:12 lh_cat: 噢？
+00:12 varna: 对等可扩的暴力解法应该是直接走集群+业务存储分离吧
+00:13 lh_cat: 一致性不好保证。
+00:13 varna: +
+00:13 varna: 存储的一致性需要巨大的解决成本
+00:13 lh_cat: 我现在不考虑保证绝对可用，但是一致性依然困难。
+00:14 lh_cat: pacelc 考虑 pc+ec 。
+00:14 xhe quit:Ping timeout: 256 seconds
+00:14 lh_cat: 不可动态扩容，万一遇到吃 oom 炸了就不好办了。
+00:15 lh_cat: 不过话说回来，游戏和电商是太不一样。
+00:15 varna: 感觉很不一样
+00:15 varna: 我的大部分一致性问题都可以转嫁到存储头上
+00:16 varna: 并且能容忍削峰填谷限流
+00:16 varna: 内存状态很少
+00:16 hanjian_l: raft我记得协议推荐节点不要超过5个
+00:16 lh_cat: 主流数据库，rdb 性能太辣鸡除了 pgsql ，nosql 的太不成气候。
+00:17 varna: nosql不适合用来确保主流用法
+00:17 varna: 做数据仓库倒是很好
+00:17 lh_cat: hanjian_l: raft 同步数据量和数量平方成正比。
+00:17 varna: 今天我还去DA那边问了下，他们已经放弃sql了
+00:17 lh_cat: da 是？
+00:17 varna: 数据分析的两个字头
+00:18 lh_cat: 那个是不适合 。
+00:18 lh_cat: 我们如果做的是 cdn 无脑下发倒也没一致性什么事了。
+00:19 varna: 游戏确实是个问题
+00:19 lh_cat: 关键就是可能有修改，还得保证一致。
+00:19 lh_cat: 回头我想想怎么搞，
+00:19 lh_cat: 谢谢羊驼。🐸
+00:20 varna: _(:з」∠)_
+00:23 lh_cat: hanjian_l: raft 的问题有三个。
+00:23 lh_cat: 第一，如果 出现 2 3 分区这情况，2 的所有主机都不可用。
+00:24 lh_cat: 少数方的所有主机都不可用，而且无法直接 force failure 。
+00:24 lh_cat: 这是比较蛋疼的，是待提交状态，不成功也不失败。
+00:26 lh_cat: 第二，所有从机负载都相等，所以，加从机不会降低整体负载，
+00:26 lh_cat: 这样，分布式除了容灾就没意义了。
+00:26 cc quit:Quit: xc:www.chnxc.net
+00:27 lh_cat: 第三，所有写操作都经过主，所以主机很可能成为性能瓶颈。
+00:28 lh_cat: 如果说还有什么那就是主从关系依然需要额外记录。
+00:28 Aldrich: varna: 悲報：國服魔神柱把服務器炸了
+00:28 varna: 但主要还是那三件
+00:29 lh_cat: 业务不能在不知道主从的时候随便找个机器就发了，
+00:29 lh_cat: varna: 当然这都是次要的，
+00:31 dexter__ quit:Quit: dexter__
+00:44 condy: 。。。
+00:45 condy: 但我看 phx-store 的实现就是写在 master 上，然后通过同步其其他节点的
+00:45 condy: s/其/至/
+00:46 condy: 而且主要就是容灾 =-=
+00:46 Aldrich: https://wx2.sinaimg.cn/mw690/6a41d3e5ly1fnr0r3bev6j20d009wgm9.jpg
+00:46 condy: 毕竟这只是数据一致性协议而已 =-=
+00:49 hanjian_l: https://usercontent.irccloud-cdn.com/file/AKw6UiVN/852735560_16552.jpg
+00:52 hanjian_l: 就是这只猫🐱
+00:53 varna: 挺不错的猫，草它
+00:59 hanjian_l: cod8毛军依然用AK47也是醉了
+01:10 wlemuel quit:Ping timeout: 246 seconds
+01:15 matchray: 不喜欢黄色的
+01:16 varna: 看着软塌塌的不错
+01:16 matchray: lh_not_bot: autoautomake
+01:18 varna: 黑色的猫会催人早睡早起所以很麻烦
+01:22 hanjian_l: varna: https://youtu.be/RsWX6GYSTxc
+01:23 hanjian_l: matchray: 猫猫很乖的
+01:27 matchray: 白色的好
+01:27 matchray: rainbow cat https://github.com/jacobdufault/cquery/wiki/Emacs#semantic-highlighting
+01:29 tcheng joined channel
+01:37 varna quit:Ping timeout: 256 seconds
+02:16 yonka quit:Remote host closed the connection
+02:17 yonka joined channel
+02:21 yonka quit:Ping timeout: 264 seconds
+02:40 cleamoon_ quit:Quit: Connection closed for inactivity
+03:15 lh_cat quit:Quit: Connection closed for inactivity
+03:45 CiiC joined channel
+03:45 NccT quit:Ping timeout: 240 seconds
+04:03 CiiC is now known as NccT
+04:04 NccT quit:Changing host
+04:04 NccT joined channel
+04:22 IntPtr quit:Quit: Ping timeout (120 seconds)
+04:26 IntPtr joined channel
+08:44 lh_mouse joined channel
+09:40 yonka joined channel
+11:02 tcheng quit:Quit: Leaving
+11:29 ininke joined channel
+11:31 wlemuel joined channel
+11:46 ininke quit:Read error: Connection reset by peer
+11:55 ininke joined channel
+12:28 bzzzt quit:Ping timeout: 240 seconds
+12:28 bzzzt joined channel
+13:07 lh_mouse: http://a4.qpic.cn/psb?/V10bt7Da3gsIo3/OyZA169uKmIQICZns5VNZYCnZgscHJYhQOknnZLhcGs!/b/dPMAAAAAAAAA&ek=1&kp=1&pt=0&bo=YgIEAmICBAIRECc!&vuin=1337555126&tm=1516770000&sce=50-1-1&rf=4-0
+13:35 ininke quit:Read error: Connection reset by peer
+13:43 ininke joined channel
+13:57 ininke quit:Ping timeout: 256 seconds
+14:02 ininke joined channel
+14:42 rivdo_ joined channel
+14:42 L-ios quit:Quit: L-ios
+14:44 rivdo quit:Ping timeout: 256 seconds
+14:47 L-ios joined channel
+14:53 matchray: hanjian_l: https://github.com/cquery-project/cquery/wiki/Initialization-options  index.comments用0；我打算默认检索注释了，LanguageClient-neovim会显示不正常
+14:53 wlemuel quit:Ping timeout: 256 seconds
+14:54 wlemuel joined channel
+14:54 matchray: 只有用了默认值，才能让愤怒的vim用户去找autozimu麻烦
+14:56 hanjian_l: 好
+15:06 fallofyoux64 joined channel
+15:11 lh_mouse: 论傻逼 Git ：   https://github.com/lhmouse/git-workflow-zh/blob/master/basic-command-reference.jpg
+15:14 matchray: https://github.com/cquery-project/cquery/issues/342#issuecomment-360041410
+15:14 matchray: 把 namespace 看作 variable 还是 function 还是 type?
+15:16 ininke quit:
+15:17 cleamoon_ joined channel
+15:18 cleamoon_: hanjian_l: at
+15:18 hanjian_l: cleamoon_: got
+15:18 hanjian_l: cleamoon_: ?
+15:20 hanjian_l: cleamoon_: ...
+15:20 cleamoon_: hanjian_l: 一般电脑上网时会把电脑的信息一起发出去？
+15:20 hanjian_l: cleamoon_: 你用浏览器就很100%暴露了吧
+15:20 hanjian_l: hanjian_l: 不过这么问太外行了，总之肯定是有的
+15:21 cleamoon_: 那么准确点，如果你控制网络，有没有可能屏蔽某一个电脑
+15:21 cleamoon_: 而不是某一个帐号
+15:21 hanjian_l: cleamoon_: 当然可以吧
+15:22 hanjian_l: 虽然特征会变，不过总还是有特征
+15:22 cleamoon_: hanjian_l: 那样不是得需要得到这台电脑的信息吗
+15:22 hanjian_l: cleamoon_: MAC地址？
+15:22 cleamoon_: 这些特征会在改变os后依然相似？
+15:22 hanjian_l: MAC你不改就不变
+15:22 hanjian_l: 这个是网卡自带的编号
+15:23 cleamoon_: soga
+15:23 cleamoon_: 这还真不知道，我以为MAC是随机生成的
+15:23 cleamoon_: 除了MAC呢，一般还会得到什么信息
+15:23 hanjian_l: 而且如果是运营商的话，你的拨号信息和你的个人信息是绑定的
+15:24 cleamoon_: 总不能得到bios的信息吧
+15:24 hanjian_l: 不知道
+15:24 cleamoon_: 如果用个人信息那就是屏蔽帐号了呀
+15:24 hanjian_l: 嗯
+15:26 cleamoon_: 如果只是一般的OS上一般的wifi，那应该不会发太奇怪的东西吧
+15:27 hanjian_l: 不知道，太模糊了，说不好
+15:28 cleamoon_: hanjian_l: 哦，那用类似wireshark的工具可以看发了些什么吗
+15:28 hanjian_l: 可以
+15:31 cleamoon_: 好的，我试试
+15:34 cleamoon_: hanjian_l: 你们又玩克总了吗
+15:37 hanjian_l: cleamoon_: 克总？
+15:37 cleamoon_: hanjian_l: CoC
+15:38 hanjian_l: 哦，没
+15:41 Aldrich: cleamoon_: 你来么
+15:42 cleamoon_: Aldrich: 来呀，什么时候
+15:42 Aldrich: 先等我考虑下用什么模组
+15:42 Aldrich: 短期内估计不会有
+15:42 Aldrich: 而且其实这次我想当PL……
+15:42 cleamoon_: Aldrich: 春节前？
+15:43 Aldrich: 看吧
+15:43 Aldrich: 我想让羊驼子当KP
+15:43 cleamoon_: 这游戏如果能写个bot就好了
+15:43 Aldrich: 这游戏如果要写bot，你需要先开发一个强AI……
+15:43 Aldrich: 比如遇上你们直接去踢原田光家门的时候
+15:44 Aldrich: 剧本里根本没有原田光家
+15:44 Aldrich: 全是我自己现编的
+15:44 cleamoon_: .......
+15:44 cleamoon_: 那就只能牺牲自由度了
+15:44 Aldrich: CoC每一次跑团，其实都是PL和KP一起讲述一个故事
+15:44 Aldrich: 所以这里我要钦点一下lhj
+15:44 Aldrich: 你那疯狂超游……
+15:46 cleamoon_: PL是做什么的
+15:46 Aldrich: 把自己代入角色
+15:46 Aldrich: 所以才叫TRPG，这是个RPG
+15:48 cleamoon_: 哦，player？
+15:48 Aldrich: +
+15:48 Aldrich: KP是Keeper
+15:50 hanjian_l: 你想想看，我初见灰心哥就给他一个背刺，我是什么玩家
+15:51 Aldrich: 你是刁民
+15:51 cleamoon_: 这不很正常吗
+15:51 Aldrich: 刁民太厉害的话我会考虑直接撕卡的
+15:51 Aldrich: 毕竟KP必须保证游戏可以进行下去
+15:52 cleamoon_: 撕卡和撕票有什么区别
+15:53 Aldrich: 撕票一般只是变成尸体，撕卡一般是变成肉饼
+15:55 cleamoon_: 就差点烹饪而已
+16:06 hanjian_l: 真是药丸
+16:07 Aldrich: 而且还有个问题，就是你一直在试图代行我的职责……
+16:07 Aldrich: CoC的技能其实是这样的
+16:08 Aldrich: 玩家先说出他想要达成的目标
+16:08 Aldrich: 然后KP提议玩家使用的技能
+16:08 Aldrich: 玩家掷骰，KP决定这个掷骰结果意味着什么
+16:08 Aldrich: 这些东西你全自己抢过去了
+16:08 hanjian_l: 噗噗噗
+16:09 Aldrich: 比如说说服
+16:09 hanjian_l: 噗噗噗
+16:09 Aldrich: 你一脚踹开原田光家的门，她一定会报警
+16:09 Aldrich: 这种时候说服是没用的
+16:09 cleamoon_: 那样不就没自由度了吗....
+16:09 Aldrich: cleamoon_: 为什么没有
+16:09 cleamoon_: 那样可以写成GAL呀
+16:09 Aldrich: 你们决定如何行动
+16:09 cleamoon_: 你只有选择权
+16:10 Aldrich: 但你的选择近乎无穷多
+16:10 Aldrich: 只不过每个选择都用相应的后果
+16:10 Aldrich: 考虑一下现实中的情况吧，你家门被人一脚踹开了，他怎么可能说服你不报警
+16:10 Aldrich: 就算说服了你不报警，他难道能说服你完全信任他么
+16:11 Aldrich: lhj对这个情况直接两个骰子扔过去，然后就让对方把自己的一生都揭露出来了
+16:11 Aldrich: 这就完全没有合理性了……
+16:12 cleamoon_: 但是选择是KP提供的呀....
+16:12 Aldrich: 不，玩家提议目标
+16:13 Aldrich: KP判断这个目标是否合理
+16:13 cleamoon_: 目标其实不多，至少从上次来看能做的不很多
+16:13 Aldrich: 产生争议而且争议不太大的话，就掷骰决定
+16:13 Aldrich: 因为那个剧本是个线性的
+16:13 Aldrich: 新手入门向剧本
+16:13 Aldrich: 其实有 很多自由度很高的剧本的
+16:15 cleamoon_: soga
+16:15 hanjian_l: soga
+16:15 hanjian_l: 应该直接玩高自由度，多选项的剧本
+16:16 hanjian_l: 不然就变成手打故事了
+16:16 Aldrich: 那时间太长了
+16:16 Aldrich: 等有时间让羊驼子当KP
+16:16 Aldrich: 比如说过年？
+16:16 hanjian_l: 中场休息，下次接着打啊
+16:16 Aldrich: 总感觉中场休息容易破坏气氛
+16:17 hanjian_l: “上集回顾”
+16:17 hanjian_l: 没办法，大块的时间不多
+16:17 Aldrich: 总之下次看情况试试吧
+16:17 Aldrich: 我也想当一回PL
+16:17 Aldrich: 有人要当KP么
+16:18 cleamoon_: 需要大块时间只能暴肝
+16:26 hanjian_l: Aldrich: 下次红旗可以来个，“强行错误选项直接BAD Ending“
+16:26 hanjian_l: Aldrich: 下次红旗可以来个，“强行错误选项直接雪菜解决“
+16:26 Aldrich: hanjian_l: 那就不好玩了
+16:26 Aldrich: 作死其实也是游戏的一部分
+16:26 Aldrich: 因为可以获得情报
+16:27 hanjian_l: 虽然人手动模拟的游戏，然而还是太考验人了
+16:28 Aldrich: 毕竟TRPG……
+16:30 cleamoon_: 作死可以san或者hp大减
+16:34 lh_not_bot: 01:16 < matchray> lh_not_bot: autoautomake // ?
+16:34 hanjian_l: 我们还是联机玩honeyselect吧 Aldrich cleamoon_ 
+16:35 cleamoon_: 啥游戏
+16:36 hanjian_l: cleamoon_: I社大作
+16:38 hanjian_l: cleamoon_: NSFW
+16:38 cleamoon_: 那个捏人的？
+16:39 hanjian_l: cleamoon_: 最近两个月好像还出了个PlayHome
+16:41 cleamoon_: 那游戏游戏性很差....
+16:41 cleamoon_: 捏完了人基本就完了
+16:44 hanjian_l: cleamoon_: PlayHome应该是可玩的
+16:44 hanjian_l: cleamoon_: https://www.zhihu.com/question/65000267
+16:45 hanjian_l: 以前的 尾行 是真的可玩性不错的
+16:45 cleamoon_: 尾行不错
+16:48 cleamoon_: 不过这游戏没法多人吧.....
+16:49 hanjian_l: 随口一说
+16:49 hanjian_l: 就连galgame也没多人的吧
+16:52 cleamoon_: 有个游戏可以试试，就是那个一个人想一个很神奇的故事，但只说部分，其他人问问题然后猜真相，回答只有真假
+17:01 zb111 joined channel
+17:02 hanjian_l: cleamoon_: 还是绅士来开车吧
+17:25 cleamoon_: 那个是个猎奇类的语言游戏，很多地方都有引用
+17:25 cleamoon_: 比如很有名的企鹅肉的梗
+17:29 hanjian_l: rr-project 代码真的可以倒着运行
+17:36 lh_mouse: geordi,  << result && (std::cout << 1) ; bool result = 1;
+17:36 geordi: true1
+17:39 zb111 quit:Ping timeout: 268 seconds
+18:32 rivdo_ quit:Read error: Connection reset by peer
+18:32 rivdo__ joined channel
+18:58 rivdo__ quit:Quit: Leaving
+19:09 Dove joined channel
+19:16 ksqsf joined channel
+19:32 wlemuel quit:Ping timeout: 240 seconds
+19:54 wlemuel joined channel
+20:03 wlemuel quit:Ping timeout: 248 seconds
+20:38 Youmu: hanjian_l: 这游戏不错啊
+20:42 hanjian_l: 什么游戏？
+20:48 L-ios quit:Quit: L-ios
+21:06 iyzsong joined channel
+21:35 wlemuel joined channel
+22:00 Youmu: hanjian_l: play home
+22:00 hanjian_l: 哦
+22:00 hanjian_l: Youmu: 玩起来怎么样
+22:02 hanjian_l: Aldrich: 车
+22:39 lh_mouse: 车是什么。
+23:00 iyzsong quit:Ping timeout: 246 seconds
+23:02 iyzsong joined channel
+23:06 lh_mouse: https://github.com/lhmouse/git-workflow-zh/blob/master/basic-command-reference.md  
+23:06 lh_mouse: 话说。
+23:06 lh_mouse: 还有什么要加的。
+23:06 lh_mouse: checkout 没地方写了。
+23:07 lh_mouse: 不过，checkout 太乱了，需要单列。
+23:13 hanjian_l: lh_mouse: 幽灵行动荒野
+23:13 lh_mouse: 没兴趣。
+23:13 hanjian_l: 。
+23:20 wlemuel quit:Ping timeout: 240 seconds
+23:28 iyzsong quit:Ping timeout: 260 seconds
+23:49 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:53 ksqsf quit:Ping timeout: 268 seconds

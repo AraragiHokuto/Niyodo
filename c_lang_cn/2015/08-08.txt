@@ -1,0 +1,458 @@
+00:00 xxxxxxxxx joined channel
+00:01 xxxxxxxx quit:Ping timeout: 255 seconds
+00:01 Mokou: 睡觉
+00:01 Mokou: 诸君武运
+00:01 Mokou quit:Quit: 睡觉
+00:12 lh_mouse: hope1, 又不只要你一人给钱
+00:22 FrankHB quit:Ping timeout: 265 seconds
+00:54 lh_mouse quit:Read error: Connection reset by peer
+00:58 molikto quit:Remote host closed the connection
+01:00 cleamoon joined channel
+01:38 molikto joined channel
+01:39 molikto_ joined channel
+01:39 molikto quit:Read error: Connection reset by peer
+01:45 molikto_ quit:Remote host closed the connection
+01:47 molikto joined channel
+02:41 Meow-J joined channel
+03:01 Meow-J joined channel
+03:37 Ivan97 quit:Quit: Connection closed for inactivity
+04:02 molikto quit:Remote host closed the connection
+04:34 boosure joined channel
+05:18 xxxxxxxxx quit:Quit: Leaving...
+06:30 cleamoon_ joined channel
+06:39 boosure|2 joined channel
+06:51 boosure quit:*.net *.split
+07:24 geordi quit:Remote host closed the connection
+07:24 geordi joined channel
+07:34 boosure quit:Changing host
+07:34 boosure joined channel
+08:12 cleamoon quit:Quit: Leaving
+08:15 Yoooooooumu joined channel
+08:49 Yoooooooumu quit:Ping timeout: 244 seconds
+09:38 lh_mouse joined channel
+10:17 hoxily joined channel
+10:19 whatofor_1 joined channel
+10:21 whatofor quit:Ping timeout: 246 seconds
+10:24 Ivan97 joined channel
+10:43 whatofor joined channel
+10:46 whatofor_1 quit:Ping timeout: 240 seconds
+10:49 lh_cat joined channel
+10:49 lh_not_bot: geordi: << sizeof(list<int>::iterator)
+10:49 geordi: 40
+10:50 lh_not_bot: geordi: << sizeof(vector<int>::iterator)
+10:50 geordi: 40
+10:50 lh_not_bot: geordi: << sizeof(map<int, int>::iterator)
+10:50 geordi: 40
+10:50 lh_not_bot: geordi: << sizeof(deque<int>::iterator)
+10:50 geordi: 64
+10:53 lh_mouse quit:Ping timeout: 240 seconds
+10:59 endle joined channel
+11:06 whatofor_1 joined channel
+11:08 whatofor quit:Ping timeout: 244 seconds
+11:16 Mokou joined channel
+11:49 whatofor joined channel
+11:52 whatofor_1 quit:Ping timeout: 252 seconds
+11:56 sismvg joined channel
+11:56 sismvg: 卧槽，外面天气太奇怪了，顶着中午的太阳，下着阵雨。。
+12:10 wlemuel joined channel
+12:39 endle quit:Quit: Leaving
+13:00 molikto joined channel
+13:00 lh_mouse quit:Read error: Connection reset by peer
+13:01 lh_mouse joined channel
+13:07 ASenR joined channel
+13:12 hysw: 哪天去读读seL4的证明去...
+13:13 FrankHB joined channel
+13:14 FrankHB: 下载大小:   1373.22 MiB/全部安装大小：  7643.60 MiB/净更新大小：  1432.62 MiB
+13:14 FrankHB: 滚得酸爽。。
+13:24 sismvg: win10?
+13:24 * sismvg 讨厌windows的程序崩溃时强制记录日志..
+13:25 FrankHB: win2012r2+msys2
+13:27 sismvg quit:Read error: Connection reset by peer
+13:34 varna joined channel
+13:34 varna: 实验室半边电源瘫痪，连着我的路由器一起跪了
+13:34 varna: 最后强行翻出一个插排把电源顺到我这边来，去掉了旁边一台机器的显示器……
+13:36 FrankHB: qt5一个包300m。。。
+13:37 FrankHB: 错了，800m。。
+13:40 Mokou: ……
+13:40 Mokou: 坂上之云里203高地那段的日军似乎是由解放军扮演的
+13:40 varna: ...
+13:41 varna: Mokou: https://pastebin.mozilla.org/8842125 裁判小结
+13:41 Mokou: 喔喔喔
+13:41 Mokou: 准备拜读
+13:43 varna: 活动之前应该给稻芳多练点级好了
+13:44 Mokou: Orz
+13:44 Mokou: 我先看完坂上之云
+13:44 varna: 现在演到哪了
+13:46 Mokou: 儿玉代乃木打203
+13:46 varna: 哦哦
+13:46 varna: 也是大事件……
+13:46 Mokou: 据说司马辽太郎是乃木黑……
+13:47 Mokou: 我估计回头我还得去读读历史
+13:47 varna: 日俄的事情么……总也没法说那么清楚
+13:48 Mokou: 打下来了……
+13:48 Mokou: 马鹿板载中
+13:49 varna: 陆奥八十，下面开始给女武神旗舰
+13:50 Mokou: 马鹿：“毛熊八嘎吃我280大屌”
+13:51 whatofor_1 joined channel
+13:51 varna: 可惜几十年之后给他们一个356大吊都高兴得要死
+13:52 FrankHB: arch现在有没有用_GLIBCXX_USE_CXX11_ABI=0？
+13:52 varna: 我查查
+13:53 FrankHB:  mingw-w64-x86_64-qt5-5.5.0-1-any     618.8 MiB  mingw-w64-x86_64-qemu-2.3.0-1-any    123.0 MiB ……
+13:54 whatofor quit:Ping timeout: 244 seconds
+13:54 varna: 应该没有强行包括
+13:54 FrankHB: 。
+13:54 FrankHB: 那么果然新的包都不兼容么。
+13:54 FrankHB: 整个系统重做滚了几个G？
+13:54 varna: 似乎不用重做
+13:55 FrankHB: ...
+13:55 varna: 我印象pkgbuild里有检测这个宏
+13:55 FrankHB: 不兼容gcc-libs然后不包括旧ABI不是差不多砍掉重来么。
+13:56 varna: 但依赖应该是跟着升级的，除非你保留了太多没有升级的aur货……
+13:57 FrankHB: msys2的升级是把[mingw]和[mingw-test]替换了，太可啪了。。。
+13:57 varna: ...
+13:57 varna: 不过massive rebuild不可避免
+13:57 Mokou: 您的好友「乌里杨诺夫同志」上线
+13:57 varna: 这没错
+13:58 FrankHB: 我还是干掉bash啥的从cmd进去升级算了。。省得挂。。。
+13:58 FrankHB: Total Installed Size:  7639.42 MiB。。。
+13:58 varna: gcc 5开始，C艹ABI就被革得糟糕了……不过我一直以为这个负担主要在ABS端
+13:59 Mokou: 下集要升Z字旗了
+13:59 varna: 噗
+13:59 varna: 糟了
+13:59 varna: 这混球偷模塞了个稀欧一进来，我一堆水雷战队排了个单纵
+13:59 varna: 我用心吃败
+13:59 Ivan97 quit:Ping timeout: 240 seconds
+14:01 Ivan97 joined channel
+14:05 JQK quit:Ping timeout: 252 seconds
+14:05 Mokou: ……
+14:08 JQK joined channel
+14:08 Mokou: 话说把CAP巡逻时间上调到三小时如何
+14:09 Mokou: 我记得MI的时候日军CAP换得没那么频繁
+14:10 varna: 也成
+14:10 Mokou: 我现在的考虑是把CAP尽量等分成三队v
+14:10 Mokou: 两队在空中，一队待命
+14:10 Mokou: 循环轮换
+14:11 Mokou: 当然有必要的话也可以紧急起飞
+14:11 Mokou: 都敌机直上了你还吃个卵早餐
+14:11 varna: 死前吃个饭团子
+14:12 Mokou: 给我上飞机吃去
+14:12 varna: 蝗国人真可怕
+14:13 * Mokou 是杀人的多闻丸
+14:14 Mokou: 练小姨子的时候煮了五只战神
+14:14 Mokou: 等会喂给大凤
+14:14 varna: 没找到神通本子
+14:14 Mokou: e绅士呢
+14:15 varna: e绅士我这里必须开代理
+14:15 Mokou: ……似乎也不多
+14:15 Mokou: ex不用
+14:16 varna: 而且从未见过高质量神通本
+14:16 varna: 都是拔本
+14:16 Mokou: +
+14:17 Mokou: 大家都去找爱duang了
+14:17 Mokou: 巨乳异端
+14:18 Mokou: 下午全是日德兰……
+14:20 varna: 噗
+14:20 varna: 神通加了语音啊
+14:20 Mokou: 噗？
+14:20 varna: 夏季母港，被提督邀请去看烟花
+14:20 Mokou: 卧槽
+14:20 Mokou: 这货在晒船吧
+14:21 Mokou: 大和武藏大凤401罗马朝霜
+14:21 varna: 毫无新意
+14:21 Mokou: 然而并不能晒到我
+14:21 Mokou: 给米空上个三式套复纵
+14:21 Mokou: 好在他大和Lv140，经验不坑
+14:22 varna: 明天神通就能95
+14:22 Mokou: Orz
+14:22 varna: 还有两千多经验
+14:22 varna: 可惜活动之前电酱或许来不及一百三了
+14:23 Mokou: 白天按死他四个，只剩武大
+14:23 Mokou: 吃我非提之怒
+14:23 Mokou: 武藏爆了
+14:24 Mokou: 大和爆了
+14:24 Mokou: 十六万钢Lv78了
+14:25 Mokou: 好奇怪的3-2队
+14:25 Mokou: 八万钢衣笠苍龙太太木曾雷巡
+14:26 varna: 看着像3-3低耗北方
+14:26 varna: 衣笠提供基本的炮击火力，其余开幕扫地
+14:26 Mokou: 3-3为何带潜艇
+14:26 Mokou: 而且衣笠没一改
+14:26 varna: 哦，就五个啊
+14:26 varna: 噗
+14:27 varna: 这有点奇特
+14:27 Mokou: 感觉这洗地力度不太够
+14:27 varna: 干什么都不对劲，大概是不得要领
+14:27 Mokou: 又没有战舰……
+14:27 Mokou: 也不是坑人队，虽然有制空但应该是攻击队提供的
+14:28 varna: 爆战就能制空，我自己的3-2队就用爆战
+14:28 Mokou: 我一般用彗星
+14:28 Mokou: 最近练航妈比较多
+14:29 Mokou: 我觉得十六万钢的中破立绘画得更好怎么破……
+14:29 varna: 因为脸圆了
+14:30 varna: 啊，明天应该有戏
+14:30 varna: 电酱还有不到一万经验就一百三了
+14:30 Mokou: 4-3吧
+14:30 Mokou: 你看我都敢去
+14:30 varna: 不必，演习旗舰就行
+14:31 Mokou: 足柄小姐距离退出演习队还有两千经验
+14:31 Mokou: 我得考虑替补了……
+14:31 varna: 西湖帖又被顶上来了
+14:32 Mokou: 说到西湖
+14:32 Mokou: http://tieba.baidu.com/p/3944063414
+14:32 varna: ...
+14:33 Mokou: 演习打完
+14:33 varna: 终于九百桶
+14:33 Mokou: 给大凤喂一组战神
+14:33 Mokou: 1171桶
+14:36 varna: 哦瘊瘊下周一就要吃瘪了，我好兴奋啊，我好兴奋啊
+14:37 Mokou: 抖M驼
+14:38 varna: 希望别出什么双院长了
+14:38 Mokou: http://imgsrc.baidu.com/forum/pic/item/89bcc95494eef01f0b8ccd8be3fe9925bd317d93.jpg 其实最早下定决心给大凤喂运是因为这张图
+14:38 Mokou: 虽说后来我才知道这本子是Ayuest画的……
+14:38 varna: 哦，那个提督
+14:38 varna: Ayuest的本子我留了金刚、大凤、飞龙、大和
+14:39 Mokou: 我留了大凤、天津风和大和
+14:39 lh_mouse: 这不是马路油么
+14:39 Mokou: 其他的没看
+14:39 varna: 是
+14:39 varna: 噗，真有人买了欠雪尺
+14:39 Mokou: ……
+14:39 Mokou: 我考虑过来一个的，不过带去学校怕被老师看舰
+14:39 Mokou: 看见
+14:40 varna: 噗，那人量的时候为何掏出一把九五后期型
+14:40 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=98d6b6487df40ad115e4c7eb672d1151/fefd86fdfc0392454425607f8194a4c27c1e25e5.jpg
+14:41 Mokou: 噗
+14:41 varna: 而且短了
+14:41 Mokou: 大概是因为再长就是轰沉了？
+14:41 varna: 九五全长大约70+cm
+14:41 Mokou: ……
+14:41 Mokou: 这真是轰沉
+14:42 Mokou: 顶进去duang一下
+14:42 varna: 吔我五点八！
+14:42 varna: 而且看上面的一侧六个散热孔，这模型做的还真是现用的九五
+14:43 varna: http://imgsrc.baidu.com/forum/pic/item/f328d816fdfaaf51a0ea02cf8a5494eef01f7a6c.jpg 果然是缩放的模型，但确实不是九七
+14:44 Mokou: 16运大凤GET
+14:44 varna: OTL
+14:45 Mokou: 然而你早就喂过了
+14:45 varna: 我没喂电酱
+14:45 Mokou: 你喂狗了
+14:45 varna: 活动之后继续喂狗
+14:45 ASenR quit:Ping timeout: 244 seconds
+14:45 Mokou: OTL
+14:45 varna: 喂好了之后做五连鱼雷
+14:47 molikto quit:Remote host closed the connection
+14:47 ASenR joined channel
+14:48 Mokou: 我对CI没啥特别爱好，先喂大凤
+14:48 Mokou: 至少大凤现在退出茶会了
+14:50 varna: 我的CI也基本限于绫波POI北上电酱
+14:50 varna: 但是现在能实战的CI只有绫波
+14:52 Dove joined channel
+14:52 Mokou: 不过喂给大凤毕竟没卵用……
+14:53 varna: 舰C的乐趣就在于做没卵用的事情
+14:53 Mokou: 婚都结了，那点命中基本可以无视
+14:53 Mokou: +
+14:53 varna: 变强力谁不会啊，花时间练级养装备就是了
+14:53 varna: 然而不好玩
+14:54 whatofor joined channel
+14:54 Mokou: 不过说起来，Ayuest的本子我基本上都是拿来看剧情的……
+14:54 Mokou: 很少拿来用
+14:55 varna: 我基本不太用舰娘R18本
+14:55 varna: 反倒舰幼有撸点
+14:55 Mokou: 已报警
+14:55 * varna 已抱井
+14:55 Mokou: 不过舰幼里的大凤胸口有钢板……
+14:55 molikto joined channel
+14:56 varna: 对着赤城撸
+14:56 whatofor_1 quit:Ping timeout: 246 seconds
+14:57 Mokou: 然而Ayuest的那个渊田同人是怎么回事
+14:57 Mokou: “多闻丸的话才不会做换装这种事啊”
+14:57 Mokou: 多闻丸会把三层肚皮改回来然后用航妈和对方进行炮击战
+14:58 lh_mouse: 求问航母怎么炮击战
+14:58 varna: Ayuest三观不正
+14:58 Mokou: 20cm炮啊
+14:58 varna: lh_mouse: 航母的炮击战实际上是第二次、第三次攻击
+14:58 varna: 至于炮击
+14:58 varna: 20cm炮
+14:59 varna: 角田〇治还训话说如果飞机打光了就用隼鹰撞过去
+14:59 Mokou: 列克星顿酱也有8in炮的
+14:59 lh_mouse: 那也配叫炮？
+14:59 Mokou: 可以打
+14:59 lh_mouse: 是可以打
+14:59 Mokou: 重巡主炮怎么不叫炮……
+14:59 varna: 20cm是旧式的重巡主炮了
+14:59 lh_mouse: 我想知道航母上怎么会装这种炮
+14:59 Mokou: 历史就是装了这种炮
+14:59 varna: 诡异的思路所致
+15:00 Mokou: 当时没人知道航妈该怎么用
+15:00 varna: 后来大家熟练了就开始装防空炮
+15:00 lh_mouse: 装炮你干脆去做重巡啊
+15:00 molikto quit:Ping timeout: 246 seconds
+15:00 Mokou: 列克太太的主炮我记得现在还放在真珠湾做纪念
+15:00 varna: 然而超越时代的上帝视角只能自慰用
+15:00 Mokou: 拆了以后一个月太太就爆炸了
+15:00 lh_mouse: 航母甲板和重巡甲板分别吃一发航弹结果如何
+15:01 Mokou: 我记得那时候还没有俯冲轰炸机吧
+15:01 varna: 早期航母直接穿了，重巡甲板问题不会那么严重
+15:01 Mokou: 基本上是鱼雷机
+15:01 varna: 因为发动机功率问题
+15:01 varna: 飞机不好
+15:01 lh_mouse: 航母防护力完全不及重巡
+15:01 ASenR quit:Ping timeout: 244 seconds
+15:01 Mokou: 论防护列克星顿没准真能吊打重巡……
+15:01 Mokou: 战巡的船体怎么样也比重巡靠谱
+15:02 molikto joined channel
+15:02 Mokou: 飞行甲板是另一回事
+15:02 varna: 观瞄没法说，而且有一部分航母确实是重巡舰体
+15:02 varna: 1/1
+15:02 lh_mouse: 沙恩当年打沉航母就是因为一发 280 直接把跑道炸出个窟窿
+15:02 varna: 直白地说，早期的航母运用有一部分困惑于这东西该如何协同作战
+15:03 varna: 所以看待奇异的火炮设置的时候，也最好把航母是毫无疑问的主力舰这个观念暂时去掉……
+15:03 varna: 诸如竞技神、兰利和凤翔那样的舰，怎么想也不容易作为主力
+15:03 Mokou: +
+15:03 ASenR joined channel
+15:03 Mokou: 所以CV-2上带个主炮挺正常的
+15:04 Mokou: 更何况还是七烟囱神教的船体
+15:04 varna: 至于后来，蝗军不也想清楚了航母的炮位设置么
+15:04 Mokou: 8门16in都能扛，8in肯定没问题
+15:04 varna: 弄出几个防空平台
+15:04 varna: 好歹能打两炮
+15:05 Mokou: 然而九六神炮和日军那悲剧的液压……
+15:05 Mokou: 供弹系统也不太性
+15:05 Mokou: 不太行*
+15:13 Mokou: 说起来，Zak似乎很少用小和对空CI？
+15:13 Mokou: 我老看见他搞个初霜或者baki
+15:18 ASenR quit:Ping timeout: 246 seconds
+15:18 varna: 这就跟他放飞机一样奇妙……
+15:20 Mokou: 2333
+15:20 Mokou: 真·看爱提督
+15:29 molikto quit:Remote host closed the connection
+15:29 molikto joined channel
+15:32 varna quit:Ping timeout: 244 seconds
+15:53 Mokou: 羊驼子那里的外网出口全部爆炸了
+15:56 lh_not_bot: 有人用阿里云的主机扫描我 vps 的开放端口
+15:56 lh_not_bot: 2015-08-08 15:40:47.068 02 [P   ] WARN  Inacceptable voice HTTP request: uri = /flash_upload.php, prefix = /texas/voice/ #src/voice_http_session.cpp:77
+15:56 lh_not_bot: 2015-08-08 15:40:48.202 02 [P   ] WARN  Inacceptable voice HTTP request: uri = /yp/job.php, prefix = /texas/voice/ #src/voice_http_session.cpp:77
+15:56 lh_not_bot: 还有 /phpadmin   /wp 啥的
+15:57 lh_not_bot: 2015-08-08 15:54:37.027 02 [P   ] WARN  Inacceptable voice HTTP request: uri = /cgi-bin/php, prefix = /texas/voice/ #src/voice_http_session.cpp:77
+15:57 lh_not_bot: 这货还真以为这是 php 写的服务器啊
+16:05 lh_not_bot: 2015-08-08 16:02:27.817 02 [P   ] WARN  Inacceptable voice HTTP request: uri = /manage/fckeditor/editor/filemanager/connectors/aspx/upload.aspx, prefix = /texas/voice/ #src/voice_http_session.cpp:77
+16:05 lh_not_bot: 真是不♀依♀不♀饶
+16:16 lh_not_bot: 吼吓人啊   虚惊一场
+16:16 lh_not_bot: 云盾扫描的ip段您可以参考
+16:16 lh_not_bot: http://help.aliyun.com/knowledge_detail/5975223.html?spm=5176.7618386.5.3.vwGTPb
+16:17 lh_not_bot: 121.42.0.0/24这个是云盾扫描的ip，您可以放心的  
+16:17 tutu_wind joined channel
+16:19 hope1_ joined channel
+16:19 hope1 quit:Read error: Connection reset by peer
+16:27 whatofor_1 joined channel
+16:29 whatofor quit:Ping timeout: 252 seconds
+16:35 hope1_ quit:Read error: Connection reset by peer
+16:35 hope1_ joined channel
+17:03 Dove quit:Ping timeout: 245 seconds
+17:04 hope1_ quit:Ping timeout: 240 seconds
+17:12 lh_mouse: geordi, -c auto p = new int[];
+17:12 geordi: error: expected primary-expression before ']' token
+17:13 molikto quit:Remote host closed the connection
+17:22 lh_not_bot quit:Quit: Reconnecting
+17:23 lh_not_bot joined channel
+17:30 whatofor joined channel
+17:32 whatofor_1 quit:Ping timeout: 255 seconds
+17:33 molikto joined channel
+17:37 Dove joined channel
+17:41 ASenR joined channel
+18:02 molikto quit:Ping timeout: 244 seconds
+18:02 molikto joined channel
+18:10 molikto quit:Remote host closed the connection
+18:15 wlemuel quit:Ping timeout: 244 seconds
+18:16 wlemuel joined channel
+18:34 sismvg joined channel
+18:35 sismvg: win10 cortant真是屌，连你的键盘记录，马甲邮件+主账户邮件全部都要收集，手写记录也逃不掉，全同步到云端
+18:36 sismvg: MS也开始学起天朝公司了，原本隐私记录在安装时全部都是disable的，现在全部给你enable
+18:47 hope1 joined channel
+18:57 ASenR quit:Remote host closed the connection
+19:14 whatofor quit:Read error: Connection reset by peer
+19:19 cleamoon_ quit:Ping timeout: 250 seconds
+19:24 hoxily quit:Quit: Leaving
+19:32 ASenR joined channel
+19:33 sismvg quit:Ping timeout: 255 seconds
+19:34 iyzsong: 我回来了 o.o
+19:36 cleamoon_ joined channel
+19:52 tutu_wind quit:Ping timeout: 252 seconds
+19:54 lh_mouse: http://v.ifeng.com/ent/mingxing/201508/014d31ce-99aa-43a1-8af2-98d1b5991e7e.shtml
+20:09 tutu_wind joined channel
+20:22 ASenR quit:Ping timeout: 244 seconds
+20:29 JQK joined channel
+21:06 sismvg joined channel
+21:06 sismvg: C88的新本子来了
+21:06 molikto joined channel
+21:21 hoxily joined channel
+21:21 xiongmao86 joined channel
+21:21 xiongmao86 quit:Client Quit
+21:22 code_new joined channel
+21:24 Mokou: code_new: http://tieba.baidu.com/p/3956857573 羊驼子对上次那场推演的小结
+21:24 Mokou: 另外珊瑚海你要不要来打一把
+21:24 code_new: Mokou, 多谢
+21:25 code_new: Mokou, 如果在10月份的话可以……
+21:25 Mokou: 10月份我高三……
+21:25 Mokou: 那我再问下别人
+21:25 code_new: 8,9月事比较多……
+21:25 Mokou: 成，我先问下别人
+21:25 code_new: 好的
+21:29 tutu_wind quit:Remote host closed the connection
+21:42 code_new: Mokou, 演习最后的结果是什么
+21:42 code_new: s/演习/推演
+21:43 zrobot joined channel
+21:43 zrobot: 啊　找到组织啦
+21:43 Mokou: 稍等，我把战报给你
+21:43 Mokou: code_new: http://report.chikyuuschool.com/south_pacific.html
+21:43 code_new: Mokou, 多谢
+21:45 code_new: 这个战报做得好棒0.0
+21:45 Mokou: 航空战一部分是用perl生成的，其他的基本上是我手码的……
+21:46 code_new: 感觉再加上一张初始图就更好了
+21:46 Mokou: 这个之后准备加的
+21:47 code_new: 哦哦
+21:47 Mokou: 毕竟这页面上还写着两个TODO……
+21:47 code_new: = =好吧
+21:50 endle joined channel
+21:50 lh_mouse left channel:"Meow"
+21:53 beefcafe quit:Ping timeout: 240 seconds
+21:54 beefcafe joined channel
+21:56 beefcafe1 quit:Ping timeout: 250 seconds
+21:57 cafebeef joined channel
+21:57 ASenR joined channel
+22:08 Ivan97 quit:Ping timeout: 245 seconds
+22:09 Ivan97 joined channel
+22:12 zrobot quit:Quit: Leaving
+22:13 lh_not_bot quit:Ping timeout: 260 seconds
+22:14 lh_not_bot joined channel
+22:15 hoxily quit:Ping timeout: 272 seconds
+22:15 Ivan97 quit:Ping timeout: 245 seconds
+22:17 Ivan97 joined channel
+22:23 Mokou: 珊瑚海那场找到忍了
+22:23 Mokou: 人*
+22:28 code_new: Mokou, 哪里的
+22:30 Mokou: 上次的美军
+22:30 code_new: 哦哦
+22:31 molikto quit:Read error: Connection reset by peer
+22:32 molikto joined channel
+22:33 Dove quit:Read error: Connection reset by peer
+22:33 cafebeef quit:Ping timeout: 240 seconds
+22:35 cafebeef joined channel
+22:36 ASenR quit:Ping timeout: 250 seconds
+22:43 cafebeef quit:Ping timeout: 240 seconds
+22:45 cafebeef joined channel
+22:45 endle quit:Quit: Leaving
+22:53 Zero0 joined channel
+22:56 Zrobot quit:Quit: 离开
+23:19 sismvg quit:Read error: Connection reset by peer
+23:32 cleamoon__ joined channel
+23:33 cleamoon_ quit:Ping timeout: 260 seconds
+23:35 ASenR joined channel
+23:35 ASenR quit:Client Quit
+23:36 ASenR joined channel
+23:45 ASenR quit:Ping timeout: 260 seconds
+23:47 code_new quit:Quit: Leaving
+23:49 tutu_wind joined channel
+23:58 Mokou: 睡觉
+23:58 Mokou: 诸君武运
+23:58 Mokou quit:Quit: 睡觉

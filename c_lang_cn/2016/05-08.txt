@@ -1,0 +1,698 @@
+00:00 Josh4all: 机器人不需要上班啊
+00:01 * lh_mouse slaps Josh4all around a bit with a large trout
+00:02 Josh4all: 啊啊啊，痛死了
+00:02 Josh4all: 对了，你知道怎么在自己的IRC频道嵌入机器人么
+00:03 wlemuel quit:Ping timeout: 240 seconds
+00:13 lh_mouse: Josh4all, 自己写一个么。
+00:13 cc quit:Quit: xc:www.chnxc.net
+00:14 Josh4all: 阿勒，还得自己写吗？
+00:14 Josh4all: 不能直接第三方引入？
+00:15 lh_mouse: 第三方的也可以，反正自己折腾。
+00:15 hoxily quit:Quit: Leaving
+00:24 lh_mouse: 【int128】幻の上帝<frankhb@vip.qq.com>  0:20:19
+00:24 lh_mouse: 资源不足导致整个环境炸妈，不需要恢复，有何疑问？
+00:25 lh_mouse: 黑历史存档。
+00:29 Josh4all quit:Ping timeout: 260 seconds
+00:35 Josh4all joined channel
+00:46 CyrusYzGTt quit:Ping timeout: 265 seconds
+01:07 Mokou quit:Remote host closed the connection
+01:17 Josh4all left channel:"WeeChat 1.5"
+01:18 T-J-M quit:Ping timeout: 244 seconds
+01:21 T-J-M joined channel
+01:31 Stevearzh quit:Quit: Quit...
+01:33 Stevearzh joined channel
+02:09 Youmu quit:Quit: Connection closed for inactivity
+02:10 lh_mouse quit:Read error: Connection reset by peer
+02:12 cleamoon joined channel
+02:14 cleamoon quit:Client Quit
+04:08 stardust quit:Ping timeout: 265 seconds
+04:38 Youmu joined channel
+06:49 Youmu quit:Quit: Connection closed for inactivity
+08:22 CyrusYzGTt joined channel
+08:54 CyrusYzGTt quit:Ping timeout: 250 seconds
+09:15 Stevearzh quit:Quit: ZZZzzz…
+09:40 Stevearzh joined channel
+10:08 guowang quit:Remote host closed the connection
+10:44 tutu_wind joined channel
+10:44 tutu_wind: 喵~
+10:57 iyzsong: (・.・;)
+11:15 Mokou joined channel
+11:26 cleamoon_ quit:Remote host closed the connection
+11:27 Dove joined channel
+11:29 Mokou quit:Remote host closed the connection
+11:34 Mokou joined channel
+11:38 Josh4all joined channel
+11:38 Josh4all: 上午好！
+11:49 xxxxxxxx: 中午了...
+11:50 Josh4all: = =
+11:56 iyzsong: (つд⊂)
+11:57 tutu_wind quit:Ping timeout: 246 seconds
+11:59 Josh4all: iyzsong: 您这是什么表情？
+12:00 iyzsong: 捂脸逃(
+12:33 hoxily joined channel
+12:57 wlemuel joined channel
+13:18 xxxxxxxx quit:Quit: Leaving...
+13:25 doublehou joined channel
+13:28 doublehou quit:Client Quit
+13:37 Youmu joined channel
+13:40 stardust joined channel
+13:42 wlemuel quit:Ping timeout: 260 seconds
+13:45 Josh4all left channel:"WeeChat 1.5"
+14:02 stardust quit:Ping timeout: 246 seconds
+14:28 Matsune joined channel
+14:40 Matsune quit:Read error: Connection reset by peer
+14:42 Matsune joined channel
+15:29 varna joined channel
+15:29 varna: 哦瘊瘊
+15:30 Mokou: 羊駝子冒出來了
+15:31 Mokou: 我先測試一下通信
+15:31 Mokou: varna: https://www.twitch.tv/abrahamhokuto 你那邊怎麼樣
+15:32 varna: connecting
+15:32 varna: seems avaliable
+15:32 Mokou: OK
+15:32 varna: 驲
+15:32 Mokou: 等我刷完閃直播
+15:32 varna: 启用flash之后页面刷了一遍
+15:32 Mokou: _(:з」∠)_
+15:32 varna: 你现在离线中？
+15:33 Mokou: 關了
+15:33 varna: ok
+15:33 Mokou: 我現在只能直播刷閃
+15:33 varna: btw, 显卡2的菜单BGM好带感啊
+15:33 varna: 本科时候怎么就没意识到这点
+15:33 varna: 估计是当时文青程度不够的锅
+15:33 Mokou: varna: 另外我說個笑話
+15:33 Mokou: 現在推斷這次E6的削甲條件包括擊破E5
+15:33 varna: 被推翻了
+15:34 varna: 昨天有个E5没斩的也马萨卡
+15:34 Mokou: 對
+15:34 Mokou: 馬薩卡然後水氣球
+15:34 varna: ...
+15:34 Mokou: 疑似Bug
+15:34 varna: POI还是别写程序了，换我吧
+15:34 Mokou: 簡直六飛了
+15:34 varna: 我比POI厉害多了
+15:35 Mokou: 我都不知道爲何他們的程序如此奇妙
+15:36 Mokou: 不過twitch能用的話到好了
+15:36 Mokou: 以後我可以在linux下直播
+15:36 varna: E5那个鞭姬是什么东西，航母还是基地？
+15:36 Mokou: 基地吧
+15:37 Mokou: 放的應該是陸爆
+15:37 Mokou: 本隊刷完以後支援刷兩層
+15:37 Mokou: 我先不上道中
+15:37 Mokou: ……結果我現在刷起三層閃來都沒感覺了
+15:37 varna: 昨天用糖果机器开显卡2，我把他的支架风扇和外接乘凉电风扇都开了
+15:38 condy quit:Ping timeout: 260 seconds
+15:38 varna: 800x600 低运动模糊 高清纹理 DX11启用 其余选项都开到了“高（笑）”
+15:38 Mokou: ……其實我寧可低特效高分辨率
+15:38 Mokou: 字幕高清也是高清的
+15:39 varna: 显卡2最低特效是“高”，你懂的……
+15:39 Mokou: ……
+15:39 varna: 从高开始一共四档，我都不知道说什么好
+15:39 Mokou: 聽着跟海色那個E6難度投票一樣
+15:39 varna: 就这样，刚出场的户外场景都卡
+15:40 Mokou: 本海域難度：1、難度低 2、難度低 3、難度低 4、難度低
+15:40 condy joined channel
+15:40 varna: 我都没法好好瞄准，只好照着敌兵的屁股一打二十发，差不多就把他们打死了
+15:40 Mokou: 233333
+15:40 stardust joined channel
+15:40 Mokou: 我覺得你還是買臺式機吧
+15:41 varna: 没办法的话就只好再说了
+15:41 Mokou: http://ww3.sinaimg.cn/mw690/0065hfBtgw1f3ntes3v3ej30hd0ehq3s.jpg
+15:41 varna: 但如果没什么大问题的话，我还是希望体验下显卡2和3的超人类战士……
+15:42 varna: 开甲挡一枪、隐形如憋尿的纳米服2.0
+15:44 Mokou: 這次活動居然把我DD鎖沒了
+15:44 Mokou: 現在E6我要麼頂着隨機溝強上，要麼練個大潮
+15:44 varna: 这次要十五个左右？
+15:44 Mokou: 我算一下
+15:46 varna: uuuu
+15:46 varna: 打错终端了
+15:46 Mokou: 到現在爲止我用了19個
+15:47 Mokou: 23333
+15:47 varna: 那倒还够，输送大队是不是可以拉很多六七十级的来凑数？
+15:47 Mokou: 雙支援可能可以
+15:48 varna: 只能双支援了
+15:48 varna: 不然被打成狗
+15:48 Mokou: 但坑點在於E2需要大發
+15:48 varna: 塞艇啊……响爷去吧
+15:48 Mokou: E2我上睦月如月打的你信麼
+15:49 varna: 基本上睦月如月皋月这种
+15:49 varna: 最多响爷领衔，别的意义不大了
+15:58 Mokou: ……和朋友在吃饭，聊到舰娘，旁边桌坐的一个人突然冲我们来了一句“田中飞妈！这次活动能打吗？不能打”……气氛变得有些尴尬
+15:58 varna: 23333333333
+15:58 varna: 全球三百万提督呢
+15:58 varna: http://tieba.baidu.com/f?ie=utf-8&kw=%E5%85%88%E7%9F%A5&fr=search 这个吧好玩
+15:59 Mokou: 這都什麼鬼
+16:00 varna: 《神经》233333
+16:02 Mokou: 神風 25+36
+16:03 Mokou: 啊，29
+16:03 Mokou: ……28
+16:03 Mokou: varna: 我開串流了
+16:04 varna: (｡･ω･)ﾉ
+16:05 varna: http://www.godjiao.com/ 卧槽，邪教
+16:05 varna: 缓冲中
+16:07 varna: 缓冲不出来了
+16:07 Mokou: ……
+16:07 varna: F5
+16:07 Mokou: 你刷新下？
+16:07 varna: 正刷新
+16:07 varna: http://www.godjiao.com/bbs/forum.php?mod=viewthread&tid=553&extra=page%3D1 邪教教主的号被人盗了
+16:08 varna: 还在缓冲
+16:08 Mokou: 23333
+16:08 Mokou: 唔，要不然你掛個代理緩衝下
+16:08 varna: 麻烦
+16:08 Mokou: 某HKer表示他那邊沒問題
+16:08 varna: 啊，出了一个图
+16:08 xxxxxxxx joined channel
+16:09 varna: 不行，成吨的RST
+16:10 Mokou: ……
+16:10 Mokou: 等會我換東京試試
+16:13 Mokou: 看我臉接擼爺二連
+16:14 stardust left channel:"undefined"
+16:14 stardust76 joined channel
+16:14 stardust76 is now known as stardust
+16:15 stardust quit:Changing host
+16:15 stardust joined channel
+16:15 stardust quit:Remote host closed the connection
+16:16 stardust joined channel
+16:18 Mokou: varna: 換東京了，你再試試？
+16:20 varna: 我试试
+16:21 lh_mouse joined channel
+16:22 varna: http://www.godjiao.com/wx.html 笑崩，亮点在后面
+16:22 Mokou: 噫，貓了
+16:23 Mokou: 有個奇怪的現象
+16:23 Mokou: 我把代理換成poseidon以後偶爾會有連接正常但是請求失敗的情況
+16:24 varna: 不行，现在我连twitch都刷不出来了
+16:24 Mokou: medusa/
+16:24 Mokou: medusa*
+16:24 Mokou: ……
+16:24 lh_mouse: Mokou, 妳脸黑。
+16:25 Mokou: lh_mouse: 不，我的意思是艦C服務器返回的信息表示請求無效
+16:25 lh_mouse: 支持 HTTPS 么。
+16:26 lh_mouse: HTTPS 走 tunnel 可能好一些。
+16:26 varna: 我天，这邪教教主是个给一……
+16:26 Mokou: 請求是http的
+16:26 varna: http://www.godjiao.com/rj/198409.htm
+16:26 varna: 亮点自寻
+16:26 lh_mouse: 如果直接走 HTTP 服务器没有在十秒之内给出响应就会掉线。
+16:26 Mokou: HTTP請求正常地完成了
+16:27 Mokou: 但是返回的json裏"api_result"值是100
+16:27 Mokou: 這個值我是用了medusa以後才見過
+16:27 Mokou: 總之之後我再找找到底是什麼情況
+16:28 lh_mouse: 那就不知道了。
+16:32 Mokou: http://ww2.sinaimg.cn/mw690/3bccbb37gw1f3nz2yfv1ej20fk0boaam.jpg
+16:34 varna: puuu
+16:35 Mokou: http://ww1.sinaimg.cn/mw690/006njjiwjw1f3nvjkgpsoj30f007c3z6.jpg
+16:37 varna: 然后警察就把他爆了
+16:37 Mokou: 噫
+16:37 Mokou: 誰畫本本子
+16:38 Mokou: varna: 現在你能打開twitch麼
+16:39 varna: 我试试
+16:40 Mokou: 我這邊streaming的上行速度倒是很穩定……
+16:41 varna: 刷出来了
+16:42 Mokou: OK
+16:43 Mokou: 雖說我現在在直播刷閃
+16:43 Mokou: 刀哥：“一觉起来发现我家狗趴在在我床边陪着我。感觉好温馨阿。 可是刚下床就踩到了一坨软软的狗屎。”
+16:44 varna: 又卡了
+16:44 Mokou: _(:з」∠)_
+16:44 Mokou: 有點蛋疼，國內的直播平臺又沒法用
+16:45 varna: 还凑合，现在一顿一顿的
+16:45 Mokou: 現在是首爾，東京離咱倆更遠
+16:45 varna: 现在我正在一边看邪教教主的日记一边看直播
+16:53 varna: 啊，欧皇掏出了火箭弹……
+16:53 Mokou: 火箭彈什麼鬼
+16:59 varna: 不行，还是卡崩
+16:59 Mokou: 噫，我這邊串流速度往下掉了
+17:00 Mokou: 換東京了，你刷新下
+17:00 varna: F5
+17:00 Mokou: 剛纔我串流速度直接掉到250
+17:00 varna: 好了
+17:01 varna: 至少现在一次能出不到一秒
+17:01 Mokou: _(:з」∠)_
+17:01 varna: 啊，能动弹了
+17:01 varna: 真不容易……
+17:01 varna: 你家小和居然不摔？
+17:01 Mokou: ~不太摔
+17:02 Mokou: 日，我這邊直接變0了
+17:02 Mokou: 媽的我換個網站試試
+17:09 Mokou: 找不到，我狗呔
+17:09 Mokou: 比特率調成600，先將就下吧
+17:10 varna: reconnecting
+17:11 Mokou: 國內這些直播平臺簡直毒瘤
+17:11 varna: 似乎好多了
+17:11 Mokou: 現在是臺北
+17:11 varna: 高清的锅吧
+17:11 lh_mouse: Mokou, Motou.
+17:12 Mokou: 應該不是，現在串流速度能到800
+17:12 Mokou: 啊，300了
+17:12 Mokou: 啊，0了
+17:12 Mokou: 娘西皮
+17:12 lh_mouse: Mokou, Motou.
+17:12 Mokou: 我用個扭曲的方法
+17:13 code_new joined channel
+17:13 Mokou: 現在能維持在800
+17:14 varna: 看着挺顺的
+17:15 varna: 然而我还在用显卡2那个凄厉的菜单BGM淹没你配的
+17:15 Mokou: 我這次連東京服務器，中間用學派服務器加了層代理
+17:17 varna: 你duang地一声掉下去了
+17:17 lh_mouse: Mokou, medusa 的服务器在洛杉矶。
+17:17 Mokou: 噗？
+17:17 Mokou: lh_mouse: 在東京
+17:17 lh_mouse: 你自己部的？
+17:17 Mokou: +
+17:17 lh_mouse: 我戳？
+17:17 lh_mouse: 居然有人玩这个。
+17:17 Mokou: 本地一級東京二級
+17:18 Mokou: SS被GFW干太狠
+17:18 lh_mouse: Mokou, 摸头摸头摸头。
+17:18 Mokou: 噫，還真炸了
+17:18 Mokou: 重開了
+17:19 varna: 哦瘊瘊
+17:19 Mokou: 又炸了
+17:19 Mokou: 我懷疑是proxychains的鍋
+17:20 Mokou: 麻煩死了
+17:20 Mokou: 重開了
+17:22 Mokou: {'api_result': 100, 'api_result_msg': '申し訳ありませんがブラウザを再起動し再ログインしてください。'}
+17:22 varna: 你看错了
+17:22 Mokou: ^ 用medusa以後偶爾會有這樣的返回
+17:22 varna: 是“申 RE N”
+17:24 varna: 对了，据说爱荷华老师的英语教材也出来了
+17:24 varna: 取得了原来那个什么老师教材的授权
+17:24 Mokou: ……
+17:29 T-J-M quit:Quit: 吾去矣
+17:29 TommyJerryMairo joined channel
+17:30 TommyJerryMairo is now known as T-J-M
+17:36 lh_mouse: Mokou, 注意 medusa 会给你加上 X-Forwarded-For .
+17:36 lh_mouse: 你需要改代码去掉这个，否则就会被识别出真的 IP。
+17:36 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=5b0e4b78082442a7ae0efdade142ad95/553ac0dbb6fd526615494defac18972bd60736d9.jpg 核弹都是骗人的
+17:38 Mokou: lh_mouse: 这个应该无所谓
+17:39 lh_mouse: 妳把请求打印出来看一下吧。
+17:39 Mokou: 准备这么干
+17:40 lh_mouse: 你能找到地方吗？
+17:40 Mokou: 不用找地方，我直接本地开个舰C服务器试试
+17:42 T-J-M quit:Ping timeout: 276 seconds
+17:42 Mokou: 算了不刷了，我先这么大
+17:42 Mokou: 打*
+17:42 varna: 你先这～么大
+17:43 * varna 摆出鸟海手势
+17:43 Mokou: 串流开着
+17:43 Mokou: 刚才我妈在看视频
+17:46 Mokou: 挂代理倒是能保证速度，但是偶尔会断线
+17:46 xxxxxxxx: https://www.zhihu.com/question/29651667 药丸
+17:56 Mokou: 直播刷閃
+18:12 varna: away一会儿
+18:18 Dove quit:Ping timeout: 240 seconds
+18:32 T-J-M joined channel
+18:36 lh_mouse: http://www.fun.tv/vplay/v-3835778/  22:30
+18:37 varna: 回来了
+18:37 varna: 驲，红旗直播间还卡着
+18:38 Mokou: 我關了
+18:38 Mokou: 等我吃完飯回來再繼續
+18:38 varna: ……离线都没卡出来
+18:38 lh_mouse: 直播女装吗？
+18:38 varna: 也是迷糊
+18:38 varna: lh_mouse: 直播ヤシ
+18:38 Mokou: lh_mouse: 那是羊駝子
+18:39 varna: 我是冲锋衣爱好者
+18:40 varna: 穿户外风格的衣服是正道，药娘红旗才穿女装
+18:40 Mokou: 先去吃飯
+18:40 Mokou: 吃了半天屎，我先去吃點正常的食物
+18:43 T-J-M quit:Ping timeout: 276 seconds
+18:47 Dove joined channel
+19:00 lh_mouse: geordi, << sizeof(set<int, my_comp>); struct my_comp { bool operator()(int a, int b){ return a < b; } };
+19:00 geordi: 72
+19:00 lh_mouse: geordi, << sizeof(set<int, my_comp>); struct my_comp { bool operator()(int a, int b){ return a < b; } char c[100]; };
+19:00 geordi: 168
+19:00 varna: 唉唉，C标准委员会什么时候给C加拷贝构造、移动构造和算符重载啊
+19:01 Mokou: 田中母親落地之時
+19:02 iyzsong: - -b
+19:02 varna: 即使只有拷贝和operator=也可以
+19:02 varna: 我也想要一个带引用计数的指针
+19:03 Mokou: 想要+
+19:03 Mokou: 然而語法該怎麼來
+19:03 varna: 瞎丁日来！
+19:03 Mokou: http://ww1.sinaimg.cn/mw690/6bc5a83ajw1f3ciryqzpnj20c815h0yf.jpg
+19:04 varna: 不过其实这有一连串麻烦
+19:05 Mokou: しずま起初是画了吹雪型的草稿给田中看，而田中看到后的反应就是「岛风！」，然后就改成岛风了。
+19:05 Mokou: http://ww2.sinaimg.cn/mw690/e4beb8aegw1f3o61yx249j20go0h3juq.jpg
+19:05 varna: 因为有类型兼容问题，所以得有重载
+19:05 varna: 结果破事都来了
+19:05 Mokou: +
+19:05 varna: 一 转 守 势 变 更 不 行 委 员 会 爆 破
+19:06 Mokou: 光名字粉碎就得讓C脫離高級彙編吧
+19:06 varna: C一直有粉碎
+19:06 varna: 要是欠雪画成这样子的话，我对舰C的好感度会直接下调一档次
+19:06 varna: “这不就是插画家都喜欢的军武娘样子么”
+19:06 Mokou: 你這看胖次的變態
+19:07 varna: 早期C实现的很多粉碎是标明调用约定的
+19:10 varna: Mokou: 求帮我个忙：生成一个太平洋附近的经纬，判断离中途岛和约翰斯顿岛哪个近
+19:10 varna: 离中途岛近，我就去吃面；否则去吃米饭
+19:10 Mokou: 我來一個
+19:11 lh_mouse: geordi, << (rand() % 1)
+19:11 geordi: 0
+19:11 lh_mouse: geordi, again
+19:11 geordi: 0
+19:11 lh_mouse: geordi, again
+19:11 geordi: 0
+19:11 lh_mouse: geordi, again
+19:11 geordi: 0
+19:12 lh_mouse: geordi, << "羊驼是不是 baka？" <<"不是"[(1-(rand() % 1)) * 3];
+19:12 geordi: 羊驼是不是 baka？�
+19:12 lh_mouse: R 
+19:12 Mokou: 26.80N
+19:13 Mokou: 57.81E
+19:14 varna: 28.5N 177.3W vs 16.6N 169.17W
+19:15 varna: 目测该吃面
+19:15 Mokou: 等等我經度是不是取反了
+19:15 Mokou: 5781E在不在太平洋上
+19:15 varna: 不在
+19:15 Mokou: 噫
+19:16 Mokou: 我重來
+19:17 varna: geordi: <<"不是"[1]
+19:17 geordi: �
+19:17 varna: geordi: <<"不是"[3]
+19:17 geordi: �
+19:17 varna: geordi: <<&("不是"[3])
+19:17 geordi: 是
+19:18 varna: 正好我导个mp3
+19:18 varna: 下的OST全是m4a
+19:19 Mokou: 106.92E
+19:20 varna: 感觉还是离中途岛近
+19:20 varna: 纬度的权重比较大的样子
+19:22 varna: 另外这次中枢姬在哪？珍珠港？
+19:23 Mokou_ joined channel
+19:23 Mokou: 吃麵吧
+19:23 Mokou: 雖說這個點也不在太平洋上……
+19:23 Mokou quit:Quit: Reconnecting
+19:23 Mokou_: 吃麵吧
+19:23 varna: 那就吃乌冬
+19:24 Mokou_: 應該是珍珠港
+19:24 Mokou_: 所以這次其實是日軍衝過去搶了Iowa
+19:24 Mokou_ is now known as Mokou
+19:25 varna: 最后那个“越过波涛”基本就是登陆圣地亚哥运送振动弹头……
+19:26 Mokou: 今天老蘇跟我說，這其實就是友軍艦隊
+19:26 varna: 日 米 亲 善 D S S Q 横 须 贺 驻 军 欢 喜 强 奸 高 发 不 可 避
+19:26 Mokou: 按照怨靈說，現在美帝已經被深海滅國了，只剩下日本作爲人類的希望
+19:26 Mokou: 所以我們是去拯救尚未被同化的盟友美軍艦隊
+19:26 Mokou: 迫真友軍艦隊
+19:27 Mokou: 我問他：“你信麼？” “不信”
+19:28 * varna 在航空击灭战前夕去视察航空队的时候被深海陆战突袭分队击毙，烧得稀烂，可以蘸蒜泥吃，人甚至不能说“这是羊驼夫子”
+19:29 Mokou: 拉包爾的羣衆終於吃上了肉
+19:29 varna: 最后的neta是《列王纪》，太久没读忘了是上卷还是下卷
+19:31 varna: 余谈，其实在C里强行造个带计数的指针也能弄出来，就是丑
+19:31 Mokou: pointer_assign麼
+19:32 Mokou: 手動重載
+19:32 Mokou: 啊，微米黑一片糊
+19:37 Mokou: 串流開了
+19:39 Matsune: 据外媒8日报道，美国一名大学经济学教授在机舱里等待飞机起飞时演算微积分公式，被邻座一名女乘客怀疑写暗号策划恐怖袭击，结果被赶下飞机接受调查。
+19:53 cleamoon joined channel
+20:19 varna: 为何我每次刷新都能看见小和在刷闪
+20:20 Mokou: 因爲我又被打回來了
+20:20 varna: (｡･ω･)强烈要求主播衮粗直播平台
+20:20 varna: (｡･ω･)总给我看刷闪
+20:20 varna: 噗，掉线了
+20:21 varna: ……我下意识地想去点那个「次」
+20:21 Mokou: (｡･ω･)你行你上
+20:21 Mokou: 233333
+20:21 Mokou: 沒救了
+20:21 varna: 太习惯了
+20:24 varna: 咦，你战果还不错啊
+20:24 varna: 几千资源打到半血了
+20:24 Mokou: 挺好
+20:24 Mokou: 前幾圖挺容易的
+20:25 varna: 啊啊小和
+20:25 varna: 呜呼呼
+20:25 varna: 连接又断了……
+20:26 Mokou: _(:з」∠)_
+20:27 varna: 对了两千桶幼女这次进度到哪里了？
+20:28 Mokou: 两千桶幼女23333
+20:28 Mokou: 说起来你要不要去livecoding.tv上直播写代码？
+20:28 varna: 不要
+20:28 varna: 我写代码慢
+20:28 Mokou: 你给他们看爆炸
+20:28 Mokou: 千亿级特效
+20:29 varna: 基本上都是先写一点渣，然后就地重构，一天之后发现重构的是屑
+20:29 Mokou: 233333
+20:29 varna: 下午away那会儿我删掉了不到一百五十行
+20:29 varna: 那些代码被我滚了三次，最后整个文件删掉了事
+20:31 varna: 现在基本能直播的不是前端就是全栈吧
+20:31 varna: 或者IDE支持eval的玩意
+20:31 varna: 不然死都不知道怎么死的
+20:31 Mokou: 我见到的大部分是前端
+20:31 varna: 之前我上服务器测试下载速度，duang一下就炸了
+20:32 varna: 然后我在本地复现，也炸
+20:32 Mokou: 不然像我这样的去直播，观众只看到我的qemu在不断重启
+20:32 varna: gdb断进去发现一个平凡的malloc自爆了
+20:32 Mokou: ……
+20:32 cleamoon: 我陪羊驼子弃坑了
+20:32 varna: 然后我才想起来编译脚本忘写-jemalloc
+20:32 Mokou: 噗
+20:32 varna: cleamoon: ...
+20:32 Mokou: 你把桶给我啊！
+20:32 varna: 手滑，-ljemalloc
+20:32 varna: 我弃坑只飞了七百桶，你那是两千桶啊
+20:33 varna: 不过这次确实是粪活动
+20:33 Mokou: 我这辈子都没见过两千桶
+20:33 cleamoon: 几千也没什么区别吧
+20:33 cleamoon: 我反正没删号
+20:33 varna: 有，给我两千，我能通关
+20:33 Mokou: 没什么区别，就是能通和不能通的区别而已
+20:33 varna: 尽管我通关之后可能真的会倒地
+20:33 Mokou: 你看这次日本提督都骂人了
+20:33 Mokou: 夏活的时候日本提督多有礼貌
+20:33 varna: 不过老实说即使我能通关，我都觉得自己不会去打
+20:34 * Mokou 
+20:34 * Mokou 坚持ヤシ
+20:34 Mokou: 我简直是皇国模范
+20:34 Mokou: 要是没记错的话，我桶应该比你少
+20:34 varna: 至少少三十
+20:34 cleamoon: 甲鱼通关吗
+20:35 varna: 我最后是700+
+20:35 Mokou: 死鱼通关
+20:35 varna: 说通关就是全甲
+20:35 Mokou: 打完就猝死了，没差
+20:35 cleamoon: orz
+20:35 varna: 不过猝死可能性真的不排除
+20:36 varna: 总之这次活动就交给联合舰队的背锅侠，小旗痔三郎中将了
+20:36 Mokou: 当年铁底打尿血，我看这次运营能不能搞出个大新闻
+20:36 cleamoon: 现在多少甲鱼了
+20:36 Mokou: 应该挺多了
+20:36 Mokou: 现在能搓核弹
+20:36 varna: 现在每个区怎么也得有五到十个了吧
+20:36 Mokou: 应该不止
+20:36 Mokou: 据说E7开幕八轮过去基本不剩什么了
+20:37 varna: 那是欧洲人的说法
+20:37 Mokou: 欧洲人哪有那么少
+20:37 varna: 葵姐的开幕似乎还在崩呢
+20:37 Mokou: 欧非差距
+20:37 Mokou: 我觉得E5直播起来巨无聊
+20:37 varna: 后面也就是看核弹
+20:37 Mokou: 所以这次活动是粪
+20:38 Mokou: 一点意思都没有
+20:38 Mokou: 炸就行了
+20:38 varna: 以后会更粪的
+20:38 Mokou: 我等信浓
+20:38 Mokou: 如果这个月我还能回点资源的话，下个月我就把大凤练上155
+20:39 Mokou: 随时准备弃坑
+20:39 varna: 南无三……
+20:39 cleamoon: http://www.zhihu.com/question/45422388  比我听说的干净多了
+20:39 varna: cleamoon: 所以他们为什么几百年来一直坚持糟蹋好吃的鱼……
+20:40 Mokou: 因为欧洲鞑子不会吃？
+20:40 Mokou: varna: 对了，我听说唐朝也是把粪便往街上排的
+20:40 cleamoon: 这个做出来也是吃的呀
+20:40 Mokou: 不过唐人比较文明，他们是在围墙上挖个排水孔
+20:41 cleamoon: 虽然出口标识是生化武器，但是还是用来吃的
+20:41 varna: 穿着纳米生化服吃翔都比吃这个强
+20:41 cleamoon: http://photo3.fanfou.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0c/jr/0f_129795.jpg@596w_1l.jpg
+20:41 varna: 好歹前者是自动分解
+20:41 Mokou: http://picpaste.com/LXeIxFdV.jpg
+20:41 varna: 罐头鱼要从嘴里吃紧去
+20:41 varna: 吃进去*
+20:41 Mokou: 对了，你是提督的话是不是不需要纳米生化服？
+20:41 varna: 你说的对
+20:42 cleamoon: 这个也是自动分解，吃之前能吃的部分就都自动分解了
+20:42 varna: 看到第一题我还能想到谁……
+20:42 varna: 这个测试下来之后我有严重的自杀倾向
+20:43 varna: 而且是通过分享生命来自杀
+20:43 Mokou: +
+20:43 cleamoon: 多好
+20:43 Mokou: 活着很好，我选择作死
+20:43 lh_mouse: 原来ヲ当年还做过这东西。 http://img.vim-cn.com/e7/78deeea462903ab37825cf13fa817a00967d72.png
+20:44 lh_mouse: 这个现在这个字可以换成 MCF 。
+20:46 cleamoon: 这是什么
+20:47 varna: cleamoon: 所以这个鱼罐头除了臭气冲天之外，有好吃的地方么？
+20:49 cleamoon: 看别人吃好玩算吗
+20:50 varna: 不算
+20:50 varna: 要自己吃着好吃的办法
+20:50 cleamoon: 有自己能吃的办法，好吃的估计悬
+20:50 varna: 另外看别人吃得用望远镜吧
+20:50 varna: 不然味道应该会沾在身上
+20:51 Mokou: 用咣三九
+20:51 cleamoon: 可以看视频呀
+20:51 varna: 以前被骗着弄了一个据吹是毛子造的仿军品望远镜
+20:51 varna: 我看了很多回，也研究了用法
+20:52 varna: 最后结论，要么是我近视太厉害不适合这套透镜，要么这东西是给坦克兵用的
+20:52 cleamoon: 然后看到了古神？
+20:52 varna: 上面的标度根本看不清楚
+20:52 Mokou: ……
+20:52 varna: 不来两斤防冻液我心里没底
+20:53 varna: 啊，说起来我突然想到一个名人：上坂堇提督不知道ヤシ愉快否
+20:53 Mokou: http://ww3.sinaimg.cn/mw690/006cA5sDgw1f3o8sp3d87j30ez08dgm7.jpg
+20:53 cleamoon: 在明知会给部分用户带来问题的情况下，微软将Windows 7更新KB3133977从“可选（即默认不安装）”调整为“推荐（默认安装）”。该补丁修复了一个BitLocker停止工作和服务崩溃的问题。在“已知问题”中，微软称，该补丁会导致华硕主板的电脑无法启动，在BIOS屏幕产生一个Secure Boot错误，这个问题发生的原因是华硕允许主板启用Se
+20:53 cleamoon: cure Boot，即使Windows 7并不支持Secure Boot。对这一问题，微软推荐用户升级到Windows 10，因为Windows 10能利用Secure Boot。微软的做法遭致了争议。华硕则给出了关闭Secure Boot的方法。
+20:55 varna: 但我听说win10可能把整个磁盘刷成砖
+20:55 Mokou: 对这一问题，微软表示i'm your father
+20:56 varna: 咦，中枢姬有特技的，损坏了还能打
+20:56 varna: 这个好厉害？
+20:56 Mokou: 能打
+20:56 Mokou: 我觉得厉害的是猴子
+20:56 Mokou: 出击
+20:56 varna: 那不往死里打……基本进去不核弹就F5吧，没戏的
+20:56 varna: 姬姬姬姬炮炮谁受得了
+20:57 Mokou: 进都进去了
+20:57 Mokou: 差点点去E4……
+20:57 Mokou: 意识模糊
+20:58 varna: 不行我卡崩了
+20:58 Mokou: 打着好累
+20:58 Mokou: 连接断了
+20:58 varna: 今天我完整看到的过程只有刷闪
+20:58 Mokou: 你等等
+20:58 Mokou: 恢复了
+20:58 varna: 不，连接好的时候我也没看到出击……
+20:58 Mokou: ……
+20:58 Mokou: 现在你刷新下呢
+20:58 varna: 我试试
+20:59 Mokou: 又断了……
+20:59 Mokou: 恢复了
+21:00 varna: 看到了
+21:00 varna: 啊，卡了
+21:00 Mokou: _(:з」∠)_
+21:00 varna: 又动了一秒钟
+21:00 Mokou: 蛋疼飞了
+21:01 Mokou: 劝退了
+21:02 varna: 我还是一个战斗画面都看不到_(:з」∠)_
+21:03 Mokou: _(:з」∠)_
+21:03 Mokou: 出击了
+21:03 varna: F5
+21:03 Mokou: 你一F5我就断……
+21:03 cleamoon: twitch ?
+21:03 Mokou: +
+21:03 varna: +
+21:03 varna: https://www.twitch.tv/abrahamhokuto
+21:03 cleamoon: 不愧是同居的人
+21:04 Mokou: 断了
+21:05 varna: (｡･ω･)屑主播露出胸部谢罪！
+21:05 Mokou: 没有
+21:05 varna: ^ 平的
+21:05 Mokou: 要不然你飞来岛城，我给你现场直播
+21:06 cleamoon: 结果露出了香蕉
+21:06 varna: 现在机票估计得过1k吧
+21:07 Mokou: 现在你能看到吗
+21:07 varna: 我再刷新下
+21:08 varna: 刚才整个页面都没加载出来
+21:08 Mokou: ……
+21:08 T-J-M joined channel
+21:08 Mokou: 我觉得我们都需要代理
+21:08 varna: 看到了
+21:08 Mokou: OK
+21:08 Mokou: 看到那个八八爷了把
+21:08 varna: 看到你点了单纵然后……卡了
+21:08 Mokou: ……
+21:08 Mokou: 估计等会他就会把我打回家
+21:08 varna: 好了
+21:08 varna: 又卡了
+21:08 Mokou: ……
+21:09 varna: 这比昨天那个显卡2好多了
+21:09 Mokou: 过去了
+21:09 varna: 昨天我打开面甲，眼前就一片漆黑
+21:09 Mokou: 再不行等会我调成240p
+21:10 Mokou: 或者我研究下能不能在本地搞个串流服务器，点对点直播
+21:10 varna: 我估计昨天那个服务器的显卡玩彩虹六号维加斯2应该没问题
+21:10 CyrusYzGTt joined channel
+21:10 Mokou: 看我脸接二连
+21:11 varna: 我曾经想跟糖果联机R6V2战役，然而多人游戏需要连育碧的服务器
+21:11 varna: 嗯
+21:11 Mokou: Q: 为什么EA是美国最烂的游戏公司？
+21:11 varna: 不行，我卡在了门神索敌开始
+21:11 Mokou: ……
+21:13 Mokou: 然后我又要直播刷闪了
+21:14 cleamoon: orz
+21:14 xxxxxxxx: http://www.bilibili.com/video/av4568483/ 这种场合吸毒大概会得梅毒吧
+21:15 Mokou: 我先关一下串流
+21:15 varna: 我来听听这个
+21:16 lh_mouse: 火星物：小国和小国之间有矛盾，联合国一调解，矛盾没了。小国和大国之间有矛盾，联合国一调解，小国没了。大国和大国之间有矛盾，联合国一调解，联合国没了。
+21:17 varna: 为何我听这个完全不会中毒……
+21:17 varna: 至今缪斯歌曲里最让我恐惧的就是梅毒城
+21:17 xxxxxxxx: 因为这个不够魔性233
+21:17 varna: 但这个流行的GILIGILI eye完全魔性不起来
+21:18 Mokou: +
+21:18 Mokou: 我都不知道这有什么魔性的
+21:18 varna: 大概把它变成攻略战BGM就可以了
+21:18 varna: 所有桥段固定的战斗都会让人陷入恐怖的回忆
+21:20 cleamoon: 攻略bgm，论文bgm，马拉松bgm，加班bgm
+21:20 xxxxxxxx: 实际上我确实是把它当作BGM用了233
+21:21 varna: 梅毒城甚至可以用敌炮击声打拍子
+21:21 varna: 打到第一次副歌之前算一次劝退
+21:21 varna: http://www.bilibili.com/video/av4592955/ 燃一下，savior of songs
+21:24 xxxxxxxx:  吸毒那个里面我觉着元首那个挥舞荧光棒的表情比较魔性
+21:25 xxxxxxxx: 不过刚才那个视频里没有
+21:26 Mokou: varna: http://www.hitbox.tv/AbrahamHokuto 你试试这里
+21:26 Mokou: 这个我不用代理就能串流，不过我不知道你们那边看着怎么样
+21:26 varna: 空降中
+21:27 xxxxxxxx: 似乎并没有空难
+21:28 varna: 空难中
+21:28 Mokou: _(:з」∠)_
+21:28 xxxxxxxx: 中途空难...
+21:28 xxxxxxxx: 两三秒空难一下
+21:29 varna: 脸着地了
+21:29 Mokou: 疼
+21:29 Mokou: 页面能打开么
+21:29 Youmu quit:Quit: Connection closed for inactivity
+21:29 xxxxxxxx: 能
+21:30 varna: +
+21:30 Mokou: 视频卡？
+21:30 varna: 加载不出来
+21:30 Mokou: ……
+21:30 varna: 我接个电话
+21:36 CyrusYzGTt quit:Ping timeout: 276 seconds
+21:43 Matsune quit:Read error: Connection reset by peer
+21:44 T-J-M quit:Ping timeout: 240 seconds
+21:50 T-J-M joined channel
+21:51 CyrusYzGTt joined channel
+21:58 guowang joined channel
+22:03 FrankHB joined channel
+22:23 doublehou joined channel
+22:43 guowang: 睡觉 = =
+22:43 guowang left channel:"ERC (IRC client for Emacs 24.5.1)"
+22:51 varna quit:Quit: leaving
+23:24 doublehou quit:Excess Flood
+23:24 Dove quit:Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/
+23:25 doublehou joined channel
+23:31 Mokou: http://live.chikyuuschool.com/ 你們試試這裏卡不卡
+23:34 cleamoon: orz
+23:34 T-J-M quit:Ping timeout: 246 seconds
+23:34 lh_mouse: 有一点卡的。
+23:35 Mokou: 現在呢
+23:36 cleamoon: 我这里不卡，不过清晰度简直了
+23:36 lh_mouse: Mokou, 一顿一顿。
+23:36 Mokou: _(:з」∠)_
+23:36 Mokou: linode線路還是坑
+23:37 lh_mouse: 比亚马逊好。
+23:37 lh_mouse: Mokou, 妳明天不上课啊，
+23:37 Mokou: 不上
+23:38 Mokou: 算了，我先把閃打沒
+23:38 code_new: 无法建立连接_(:з」∠)_
+23:38 Mokou: ……
+23:38 Mokou: 無法建立連接什麼鬼
+23:38 Mokou: 哪裏掛了
+23:38 arch_ joined channel
+23:39 code_new: 直接报了Error: xxx time-out trying to establish a netconnection
+23:39 Mokou: ……
+23:39 Mokou: 坑
+23:41 doublehou quit:Ping timeout: 260 seconds
+23:43 T-J-M joined channel
+23:49 code_new: Mokou: 连上来，流畅度还可以
+23:49 code_new: 大概20s一卡
+23:50 Mokou: 20s一卡可能是設置的問題，總之我先這麼來
+23:50 Mokou: 明天再仔細配置
+23:50 code_new: OTL

@@ -1,0 +1,1151 @@
+00:16 Mokou quit:Read error: Connection reset by peer
+01:49 lh_mouse quit:Read error: Connection reset by peer
+02:19 Meow-J joined channel
+02:36 boosure joined channel
+02:37 boosure quit:Changing host
+02:37 boosure joined channel
+03:45 cleamoon: lhanjian, 撕都人口是1M
+07:37 xxxxxxxx quit:Quit: Leaving...
+08:13 FrankHB quit:Ping timeout: 255 seconds
+08:15 tutu_wind: morning ~
+08:33 FrankHB joined channel
+08:45 sou_ joined channel
+08:59 Youmu` joined channel
+09:18 lh_mouse joined channel
+09:50 Mokou joined channel
+09:57 hausir joined channel
+10:07 boosure quit:Quit: Get your hand off of it
+10:12 hausir quit:Remote host closed the connection
+10:19 sismvg joined channel
+10:23 sismvg: How much pay that you can sell it? 要付多少你才会卖这个东西？（对吗）
+10:24 sismvg: 还是要用let?
+10:25 hausir joined channel
+10:26 cleamoon: sismvg, how much should i pay so you will sell IT?
+10:27 lh_mouse: how much do you charge for it?
+10:27 lh_mouse: hausir, 新人爆照
+10:29 molikto joined channel
+10:32 sismvg: thank
+10:36 molikto quit:Remote host closed the connection
+10:38 hausir: 咋爆照啊
+10:38 hausir: lh_mouse: 
+10:39 tutu_wind: hausir: img.vim-cn.com 
+10:40 tutu_wind: lh_mouse: 要爆照了 , 围观了 ~ 
+10:40 hausir: lh_mouse: 裸照要不
+10:41 lh_mouse: 0 0
+10:41 lh_mouse: 发呀
+10:42 hausir: 忘了我都不是新人了 我前天就来了
+10:42 lh_mouse: hausir, 爆照
+10:45 hausir: 没照啊 新电脑
+10:56 molikto joined channel
+10:58 Stevearzh joined channel
+10:58 Stevearzh quit:Changing host
+10:58 Stevearzh joined channel
+11:28 Youmu` joined channel
+11:34 beefcafe quit:Ping timeout: 240 seconds
+11:36 beefcafe joined channel
+11:37 sismvg: 列空间和零空间玩起了换妻游戏
+11:37 tutu_wind: lh_mouse: 小耗 , 是不是要避免 send 再 send 这种情况?
+11:39 tutu_wind: lh_mouse: 可是传文件的时候 , 需要先传一个文件size 过去 ,之后才是内容 ~ 这样肿么避免?
+11:40 FrankHB quit:Read error: Connection reset by peer
+11:41 FrankHB joined channel
+11:47 Mokou quit:Quit: reboot
+11:49 Plough joined channel
+11:51 sismvg: WSASend有一个WSABUF*参数可以传输多个块
+11:51 sismvg: 连续两次send是没有问题的，只要你别再别的线程对同一个socket send
+11:52 sismvg: 实在不行自己控制缓冲区吧
+11:54 Xilzzert: 自定义协议
+11:54 Xilzzert: 比如前几位是长度啥的
+11:59 tutu_wind: ok ~ 类似于 TLV 那种了
+12:00 tutu_wind: sismvg: 自己控制缓冲区啊 , setsockopt 那样 ?
+12:02 Plough joined channel
+12:02 sismvg: 你自己做一个缓冲区，然后把数据复制和长度复制进去再发送
+12:04 tutu_wind: sismvg: 嗯 , 好 ~ 
+12:04 Mokou quit:Ping timeout: 244 seconds
+12:09 tutu_wind: 阿里嘎多 ~ sismvg Xilzzert 
+12:24 Youmu` joined channel
+12:33 hausir quit:Remote host closed the connection
+13:11 Xilzzerts joined channel
+13:13 Xilzzert quit:Ping timeout: 240 seconds
+13:23 x-iyzsong joined channel
+13:42 hoxily joined channel
+13:45 Xilzzerts quit:Ping timeout: 265 seconds
+13:57 varna joined channel
+13:57 varna: 雨季到了，又是一个交配的季节
+13:59 varna: 我先打打演习，然后解决perl的问题
+14:00 varna: 所以说这些混球为什么就不能把ABI版本号和perl版本号分开呢……
+14:02 varna: 11:37 tutu_wind: lh_mouse: 小耗 , 是不是要避免 send 再 send 这种情况?
+14:02 varna: 没关系
+14:03 lh_mouse: [11:48:14] <sismvg> 连续两次send是没有问题的，只要你别再别的线程对同一个socket send // qnmd
+14:03 varna: 那些号称vector系的不如send
+14:03 sismvg: 求教
+14:03 varna: 跟线程什么关系
+14:04 lh_mouse: [13:59:22] <varna> 11:37 tutu_wind: lh_mouse: 小耗 , 是不是要避免 send 再 send 这种情况? // TCP 上 send send read 有很严重的性能问题  除非设定 nodelay
+14:05 lh_mouse: s,read,recv,
+14:05 lh_mouse: http://blog.csdn.net/dog250/article/details/21303679   TCP的Nagle算法和延迟ACK
+14:07 lh_mouse: https://github.com/lhmouse/poseidon/blob/master/src/tcp_session_base.cpp?ts=4#L210 // 这个是接口  注意数据并不是这里发送的
+14:08 lh_mouse: 实现在 157 行上  epoll 调用的   所以不是一个线程
+14:08 varna: ngx我记得默认是关nodelay的
+14:08 varna: s/关/开/
+14:09 varna: 如果你要做类似http感觉的业务，与其拼send-recv形式，不如强行nodelay
+14:10 varna: 不然即使你用按向量而非按单缓冲的send也没救
+14:10 lh_mouse: 我的意见和羊驼相反
+14:10 varna: 哦？
+14:10 varna: 求理由，这个我有点好奇
+14:10 lh_mouse: 或者你用 poseidon 写 HTTP    poseidon 已经在接口层面上规避了这样的问题
+14:11 varna: 接口层面……
+14:12 lh_mouse: 是的  你调用两次 session->send() 最后很大机会是一起发出去的
+14:12 varna: 毕竟不是所有时候都能拼MSS的
+14:12 lh_mouse: 这里我故意写了很大
+14:13 varna: 不够大的东西被手工拼进去？
+14:13 varna: 还是只是骗一下nagle
+14:14 lh_not_bot: 单次最大 send 是 4K
+14:14 lh_not_bot: 这样做的初衷是避免有 socket 被饿死
+14:15 lh_not_bot: 而且也没法区别对待内网和公网 mss 不一致的情况
+14:16 lh_not_bot: 所以弄了个比较大的数字  这样可以一定程度少操心    至于 mss 是多少  丢给 tcp 就是了
+14:16 varna: 其实以前我的写法很作死，是多个MTU拼一个连续发送事件开nodelay
+14:16 lh_not_bot: session 接口上的 send 的作用就是拼包
+14:17 varna: 不过现在我也倾向单次4kb, 虽然还是有缓冲区花样
+14:17 lh_not_bot: 连续 send 会一起发出去   而且 send 自身和系统调用一样保证是原子
+14:17 varna: 而且照样开nodelay
+14:17 varna: send你有锁？
+14:17 lh_not_bot: nodelay 可以手动关掉
+14:17 lh_not_bot: 你以为啊
+14:17 lh_not_bot: send 当然有锁
+14:17 lh_not_bot: session 上面有个 buffer 锁
+14:17 varna: 疼
+14:17 lh_not_bot: 哪里疼
+14:18 sou_ quit:Remote host closed the connection
+14:18 varna: 廉价的原子，虽然你那么做也没什么更好的办法
+14:18 lh_not_bot: 先说个事情  明确一下这里的 send 是啥
+14:18 lh_not_bot: 我指的 send 是 session::send 
+14:18 lh_not_bot: 系统调用的 send 这里换个词 用 ::write 表示
+14:18 varna: 是把包压够4k的那个wrapper么
+14:19 lh_not_bot: 是  不一定够
+14:19 varna: 我不是说实际的IO写
+14:19 lh_not_bot: 只要 epoll 可以写就会触发  有多少写多少   最多 4k
+14:20 lh_not_bot: session 上的锁可以改成自旋锁  这里的操作都非常廉价
+14:20 lh_not_bot: 包括 send   其实就是两个链表串起来
+14:20 sou_ joined channel
+14:21 varna: 廉价倒还其次，我以前吃过一个廉价热点上自旋的亏
+14:21 lh_not_bot: syncSend 也是非常廉价的  它第一次获取锁  看看有多少数据 如果有数据就［拷贝］出来 然后第一次释放锁
+14:21 lh_not_bot: 这时它就可以 ::write 了  它不管里面的数据是什么  也不知道边界
+14:22 lh_not_bot: 写完以后 ::write 返回实际写入的字节数  这时 第二次获取锁  把这些字节从 buffer 里删掉  再释放锁
+14:22 varna: session上的缓冲是共用的啊
+14:22 lh_not_bot: 谁和谁
+14:22 varna: 这么说吧
+14:22 varna: session上始终用的是“那个”缓冲？
+14:23 lh_not_bot: 这个缓冲是仅仅用于 send 的
+14:23 lh_not_bot: 是个字节队列
+14:23 varna: 明白了
+14:23 lh_not_bot: 任何线程可以用 session::send 向队列中追加数据      epoll 线程调用 session::syncSend 从队列中取数据
+14:24 varna: 我开始喜欢这个做法了
+14:24 lh_not_bot: 这整个操作附带了拼包的效应   
+14:24 lh_not_bot: 也就是 mss 什么破事通通丢给 tcp
+14:24 lh_not_bot: 而从实现上并不会出现 ::send 一次发了十几个字节的情况
+14:25 lh_not_bot: 当然如果只有这么多数据……
+14:26 varna: 那近乎业务失误
+14:27 lh_not_bot: 我假定用户往 session 里第一次塞数据之后  直到 epoll 线程接收到 cond var 的条件判定并开始迭代到当前 session 之前  可能会有额外的 send
+14:27 lh_not_bot: send 获取锁之后只是链表拼接  这个操作可以很快
+14:28 varna: 快不是问题，别太热点
+14:28 lh_not_bot: 这个要测出来才知道
+14:28 varna: 我有一个很快的链表，但以前我被放错了位置的自旋坑去很多时间
+14:28 lh_not_bot: session 这里都有 profiler  可以看
+14:28 varna: 当时是做coro
+14:29 Xilzzerts joined channel
+14:29 lh_not_bot: varna: 你能处理 csv 格式的吧
+14:29 lh_not_bot: wps 什么的
+14:29 varna: wps能
+14:29 varna: 别的csv解析，其实我用Perl模组
+14:30 * varna 开始修理perl
+14:32 varna: 似乎有超过十个模组破损了
+14:33 varna: 我日
+14:33 varna: Data::Dumper....
+14:33 varna: 神啊
+14:43 lh_not_bot: varna: 
+14:43 lh_not_bot: http://paste.ubuntu.com/12212472/
+14:44 varna: thx4data
+14:44 lh_not_bot: 123 行往后是美国的服务器
+14:44 lh_not_bot: 时间单位是 ns 也就是 e-9 秒
+14:45 lh_not_bot: nsTotal 控制流进入当前函数到退出当前函数的时间
+14:45 lh_not_bot: nsExclusive  (nsTotal - 子函数的时间)
+14:46 lh_not_bot: samples 是流过的次数
+14:46 sou_ quit:Remote host closed the connection
+14:48 lh_not_bot: scheduleFiber 目测写坏了   还是 setjmp/longjmp 太慢了
+14:49 varna: 我操他大爷
+14:49 lh_not_bot: 哦  应该不是
+14:49 varna: 我炸掉了整个/usr/lib/perl5/site_perl
+14:49 varna: it works
+14:49 sou_ joined channel
+14:50 lh_not_bot: 0.0
+14:50 varna: 然而我的cpan第三方模组都在里面
+14:50 lh_not_bot: varna: 上次那个咣咣羊  又在鼓吹不处理内存分配失败了
+14:50 lh_not_bot: 然后说帝球   “你是不会做工程的”
+14:50 varna: 不处理失败怎么办，吃sigsegv或者直接死么
+14:50 lh_not_bot: 或许是吧
+14:53 varna: ok, 欠雪终于能启动了
+14:54 varna: 还好我扒掉了大部分依赖，里面gtk相关的部分是我手工桥接过去的C程序
+14:54 lh_not_bot: 我觉得加了协程以后这里的 profiler 就不准了
+14:54 varna: 昨晚回去因为fubuki起不来，一晚上都不高兴
+14:55 varna: 现在你用coro做什么？
+14:57 lh_not_bot: 比如异步数据库请求怎么实现
+14:57 varna: 哦……
+15:00 varna: Perl什么都好，就是库管理简直是我见过的语言里最烂的
+15:00 varna: 第二烂的是Java
+15:04 Plough quit:Read error: Connection reset by peer
+15:09 Mokou joined channel
+15:09 varna: Mokou: 我把perl暂时救活了
+15:14 Mokou quit:Ping timeout: 272 seconds
+15:15 Mokou joined channel
+15:16 Mokou: 恭喜
+15:16 Mokou: 话说在cpan还活着的情况下该怎么救？
+15:17 varna: cpan进去之后upgrade命令能救么
+15:18 Mokou: 我试试
+15:18 varna: 战神GET
+15:18 varna: 喂狗大业9/15
+15:21 Mokou: OTL
+15:21 varna: 接下来再出一个，战神的问题就基本初步解决了
+15:23 varna: 至少现在欠雪能动
+15:23 varna: 其他的东西如果崩溃了，我再手工补依赖
+15:26 Mokou: 说起来，三代大E是不是也要出来了……
+15:28 varna: 要出么？
+15:28 varna: 我以前似乎听说深海在削减机动部队经费呢
+15:28 Mokou: 然而订单都下了，名字都起好了
+15:30 Mokou:  Can't load '/usr/lib/perl5/site_perl/auto/Class/XSAccessor/XSAccessor.so' for module Class::XSAccessor: /usr/lib/perl5/site_perl/auto/Class/XSAccessor/XSAccessor.so: undefined symbol: Perl_xs_version_bootcheck at /usr/share/perl5/core_perl/XSLoader.pm line 70.
+15:30 varna: 我Kusari海军从开普勒的烈风星云奋勇突进到诺福克船厂坚决歼灭敌人噻喲
+15:30 Mokou: test直接爆炸
+15:30 varna: core_perl...
+15:30 varna: 哦，site_perl
+15:30 varna: 不行的话你只剩一个办法了
+15:30 varna: 备份所有的site_perl
+15:30 varna: 然后把它们炸了
+15:31 Mokou: 我有这个打算
+15:31 Mokou: 不过毕竟是最后手段……
+15:31 varna: 温婉做法没用的
+15:31 varna: 我刚才移除了所有报错的模组
+15:31 varna: 然后 Attempt to reload Scalar/Util.pm aborted
+15:32 Mokou: ……
+15:32 Mokou: 我想的是pacman -R
+15:32 varna: 没用
+15:32 varna: 现在的问题是，一部分核心模组现在被移入了perl核心
+15:33 varna: 但site_perl还在坚持抽风
+15:33 varna: 假如你不用那些utilities, perl可以正常允许
+15:33 varna: 运行*
+15:33 varna: 然而CPAN和MakeMaker并不吃这一套
+15:33 Mokou: 就是这样
+15:33 Mokou: pacman -R
+15:33 Mokou: rm -rf site_perl
+15:33 Mokou: 然后从头来
+15:33 varna: 那样不用从头安装
+15:33 varna: 但是依赖得补
+15:34 varna: 我现在就处于一个惰性补依赖的状况
+15:35 Mokou: 啊
+15:35 Mokou: 三代大E要到2025才服役……
+15:36 Mokou: However, in an effort to save costs, the Congressional Research Service indicates that the Navy Department is reviewing the possibility of extending the length of time used to build both John F. Kennedy (CVN-79) and Enterprise by two years. If approved, the ship would not enter service until 2027 and prevent any instance of 12 carriers being in service at any one time.
+15:36 Mokou: 我们的敌人在国会！
+15:37 varna: 军国主义者和帝国主义者的斗争还在继续……
+15:39 hausir joined channel
+15:54 varna: 卧槽，昨天那照片上的人真是田中？
+15:57 varna: 贴吧回复：
+15:57 varna: 私は百戦錬磨の强者で、见识が高い。ええと…私が访れていない西侧の国なんてないよ。
+15:57 varna: すまんが、今日、一人の年长者として君达と接しているんだ。私はジャーナリストじゃないけど、十分な见识があると自负している。君たちにちょっとだけ、人生経験を语りたい。
+15:57 varna: 中国には、「こっそり一攫千金」という谚がある。何も言わないことが一番いいと私は思う。お前たちはね、ナイーブ！
+15:58 Mokou: 很有可能
+15:58 Mokou: 有人专门去分析了官推上照片的角度……
+15:58 Mokou: 23333
+15:59 Mokou: http://imgsrc.baidu.com/forum/pic/item/09c18aefce1b9d162e37a519f5deb48f8d5464d9.jpg
+16:00 varna: 23333
+16:00 varna: 我方队伍战术交流笑尿
+16:01 Mokou: “随便挑一个打了啊？”
+16:01 varna: 随便挑一个っぽい
+16:02 Mokou: 不过现在爱宕确实极其坑爹
+16:02 Mokou: 船是好船
+16:02 Mokou: 然而看起来就很厉害，还是金币船
+16:02 Mokou: 所以刚入坑的火鸡都跑去买爱宕……
+16:02 varna: 爱宕这个舰吧，她仍然是世界上最厉害的舰（之一）
+16:03 varna: 咦，我摔到少将段位了
+16:03 Mokou: 中将
+16:03 varna: 我说怎么今天遇到八十多级的伙计
+16:03 Mokou: 而且毛子现在的组队比较坑爹
+16:04 Mokou: 一队一起分房
+16:04 Mokou: 按队伍里等级最高的船来分……
+16:04 Mokou: 爱宕八级船，所以你让爱宕拉个一级船都能进十级房
+16:04 Mokou: 什么爱宕组个凤翔进去遇见白龙
+16:04 varna: 其实我觉得地图可以自带编成
+16:07 Mokou: 地图自带编成其实有个麻烦
+16:07 Mokou: 玩家凑不齐……
+16:07 varna: 不齐的加AI
+16:08 Mokou: 哪边AI多哪边输
+16:08 varna: 或者最好给每类舰都加一个大家都能拿到的入门科技
+16:08 Mokou: 只限定舰种？
+16:08 varna: 类似这样的
+16:08 Mokou: 那还是会大和对三笠吧
+16:08 varna: 那没办法
+16:09 Mokou: http://imgsrc.baidu.com/forum/w%3D580/sign=60b7ae288335e5dd902ca5d746c7a7f5/6ac91bd3d539b600158641cdef50352ac65cb703.jpg
+16:09 Mokou: 三条大姐姐中间混入了一条铁王八……
+16:21 Mokou: http://ww3.sinaimg.cn/bmiddle/7aa6b8bdjw1e7r4cgq0erg20hs4fmgry.gif
+16:22 varna: 好长
+16:23 varna: 我觉得现在驱邪是不是可以用欠雪尺？
+16:23 Mokou: 我看看欠雪尺多少钱
+16:23 Mokou: 20
+16:24 varna: ...
+16:24 varna: 连运费都不如……
+16:24 Mokou: 还有一个五块的
+16:24 varna: 233333
+16:24 Mokou: 你要不要考虑来一个
+16:24 varna: 问问那个五块的店主，他都用什么设备
+16:24 varna: 我就不来了
+16:27 varna: 卧槽低保中MNB...
+16:27 varna: 真北上
+16:28 varna: 喷了再来一发
+16:28 varna: 卧槽还不是MNB, 是长门
+16:28 Mokou quit:Ping timeout: 256 seconds
+16:29 varna: 下一发4:20
+16:30 Mokou joined channel
+16:30 Mokou: Realtek真棒
+16:30 Mokou: 我现在每重连一次只能保持五秒的连接
+16:30 Mokou: 然后就得netctl restart
+16:31 Mokou: 表面有保护纸膜，收到后注意撕除，背后白色的是喷绘面不可以动！！不能沾水和其他奇怪的液体！！
+16:31 varna: ...
+16:31 varna: 奇怪的液体
+16:32 Mokou: 哦
+16:32 Mokou: 20那家包邮
+16:32 Mokou: 5块那家快递费15
+16:32 varna: 一样的啊
+16:33 Mokou: 一样的……
+16:37 Mokou: 不过这个似乎是山寨物
+16:37 Mokou: 官方版非卖
+16:39 Mokou: Realtek你赢了
+16:39 Mokou: 我重启
+16:39 Mokou quit:Quit: reboot
+16:40 Mokou joined channel
+16:43 Mokou_ joined channel
+16:43 Mokou quit:Read error: Connection reset by peer
+16:46 varna: 我耳机上为何会有血……
+16:46 Mokou: ……
+16:46 Mokou: 膜破了？
+16:47 varna: 似乎是某处蹭破皮了
+16:50 varna: http://xrying.com/fei/yangsheng/13265.html 卧槽这文碉堡了
+16:51 varna: 我看到马孔多和田中在天上飞
+16:52 varna: 不对，这整个新闻网都疯了……
+16:52 varna: 翻了四篇新闻，就没一个像样的
+17:11 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=b65518d3d23f8794d3ff4826e21b0ead/accdd554564e9258f5197d859a82d158cdbf4e9e.jpg
+17:11 sismvg: tolove 10月号封面
+17:12 sismvg: 这篇文章讲的是啥 顺带玛丽苏的话:@overload
+17:12 sismvg: overlord
+17:14 qwerty250 joined channel
+17:25 sismvg: 打雷了，今天作死在外面洗澡吧
+17:27 lh_mouse: qwerty250, 摸头
+17:29 Xilzzerts: 昨天面试的一个说epoll并不适合HTTP Server
+17:30 Xilzzerts: 貌似他的意思是epoll适合长连接，不适合HTTP这种一请求完就断开的
+17:30 lh_not_bot: 谁告诉你 HTTP 一定请求完就断开的
+17:31 lh_not_bot: 而且不用 epoll 你用什么 IO 模型  多进程 多线程 select 还是什么
+17:31 sismvg: http1.0?
+17:31 Xilzzerts: 他用的多线程，我感觉就是搞不定epoll偷得懒
+17:32 lh_not_bot: 对等的多线程？
+17:32 lh_not_bot: 每个 socket 一个线程？
+17:32 Xilzzerts: 对啊
+17:32 lh_not_bot: 这不就是 ISAPI 的模型么   现在死得差不多了
+17:34 Xilzzerts: 毕竟一个大三的做到这样不错了，可惜他投的高级C/CPP
+17:35 sismvg: ....
+17:35 Xilzzerts: 还认为free函数是传入的指针的类型来释放的
+17:35 sismvg: 为什么总是有人喜欢把C/CPP放在一起呢
+17:36 Xilzzerts: 如果指针类型变了，free就会出问题
+17:36 sismvg: @多重继承
+17:38 varna: 大三怎么连epoll干什么都不知道……
+17:39 varna: 而且对等的多线程用p7啊
+17:39 varna: 无脑fork on connection的lwp实现
+17:39 varna: 红旗用了都说好
+17:40 FrankHB quit:Ping timeout: 265 seconds
+17:51 Mokou: http://ww3.sinaimg.cn/bmiddle/9ccc7711gw1evigi87kjuj20850hq40s.jpg
+17:51 varna: 卧槽
+17:51 x-iyzsong: 0.0
+17:52 tutu_wind: 小耗的 session::send() 里面有缓冲链表啊 , 每次发送实际上是在session::send()对应的链表上拼起来啊 ... 好棒,相当于关了nodely?
+17:58 tutu_wind: lh_not_bot: 添加到到链表缓冲后再发送 , 那epoll 的写事件在什么时机注册呢 ? 每次有线程调 session::send ? 
+17:59 FrankHB joined channel
+18:00 varna: tutu_wind: epoll的写事件是直接按fd打标签的……
+18:01 Xilzzerts: 我感觉一大半在职业生涯里面根本没机会听说epoll。。。
+18:01 sismvg: win10 的system进程吃了我800M的内存
+18:02 sismvg: win8的时候连100M都吃不到，难道是以前没有算虚拟内存?
+18:06 tutu_wind: varna: 啊,我一直都是要发送数据时,才注册写事件 ... 等下一次触发写,把缓冲区的东西发出去 ... 还是没理解epoll ... 我再去看书撸
+18:07 tutu_wind: 阿里嘎多 varna lh_mouse Xilzzerts sismvg mua
+18:07 varna: 如果你没开EPOLLONESHOT就不用每次都注册
+18:09 tutu_wind: varna: 我再去看文档和书 ~ meow ~
+18:12 FrankHB: 我win2012r2就吃了正好多800M^
+18:12 FrankHB: ……虽然是我自己倒腾的。
+18:12 varna: KFC的锅？
+18:14 FrankHB: 咦你咋知道我锅了……小 计：242.0元 | 外送费(wow桶满99元免外)：0.0元
+18:15 varna: wow桶……看到广告上有
+18:17 FrankHB: 无人惨十人惨好不划算。。。
+18:17 FrankHB: 五人餐。。
+18:17 FrankHB: 开封菜的饮料太贵。。
+18:21 varna: 唔唔，无惨啊，明白了
+18:24 sou_ quit:Remote host closed the connection
+18:30 hysw quit:*.net *.split
+18:31 Mokou: 其实我现在开始有点纠结到底读什么了
+18:32 Mokou: 不留校跑出来当码农，每月10K以上的话其实也不错……
+18:32 varna: 不怎么样
+18:33 hysw joined channel
+18:33 varna: 房子大概是买不到的，当几年游击部队之后你就只剩撸了
+18:33 Mokou: 至少饿不死
+18:33 Mokou: 留校也买不到房子吧
+18:34 varna: 难说
+18:36 Mokou: 留校更穷不是……
+18:36 varna: 但是安定点
+18:36 Mokou: 安定指？
+18:36 varna: 我不太了解现在学校的政策了
+18:36 varna: 如果你有考虑得打听一下
+18:37 Mokou: 总之都是没房子
+18:37 varna: 你不是现充么……家里拿首付大丈夫
+18:37 Mokou: 这么看留校的好处就只剩暑假可以打活动了……
+18:37 Mokou: 我穷
+18:38 Mokou: 家里要有钱给我拿首付我就不用高考了
+18:38 varna: 就直接搞尻？
+18:38 Mokou: 你可以考虑去搞尻
+18:38 Mokou: 工资大概比阿里高……
+18:39 varna: 搞药娘不是得花钱么
+18:39 Mokou: 你去卖尻
+18:40 varna: 那个我不合适
+18:40 sismvg: 土豪 跪
+18:41 varna: 我来几发电探压压鲸
+18:41 Mokou: 总之我现在有点纠结
+18:41 varna: 想读计算机也行
+18:41 Mokou: 虽说身为21世纪天朝的城市居民，我饿死的可能性不大，但还是纠结
+18:41 varna: 因为留校其实很麻烦，你读国内的一等高校，毕业之后当然是去二等
+18:42 Mokou: 我想肉身翻墙，但我没钱
+18:43 varna: 五发出个13……
+18:43 Mokou: ……
+18:43 Mokou: 留不留校这件事我还有八年的时间去纠结
+18:43 Mokou: 然而读什么这件事只剩下一年了
+18:44 varna: 读计算机不错
+18:44 Mokou: 其实我不想读计算机只是觉得i+++++i蛋疼
+18:44 Mokou: 读数学的话出来找工作好找吗
+18:44 varna: 不好找
+18:45 varna: 国内理科工作很麻烦
+18:45 Mokou: 不一定找数学相关，码农也成
+18:45 varna: 问题是你可能没多少心思写码了
+18:45 Mokou: 我就是不知道数学系硕士跟码农有没有什么鸟关系
+18:45 varna: 混个及格的数学不如混个八九十的cs
+18:45 Mokou: 也是
+18:45 varna: 后者你机会还多
+18:45 Mokou: 两个学位一起拿呢
+18:46 Mokou: 实在不行我试试这么来
+18:46 varna: 我不知道这方面的规定
+18:46 varna: 但我的感觉是在专业里成绩混得好点，你机会能多
+18:46 varna: 保送也好学院推荐也好，可能都沾边
+18:47 Mokou: 那我主修CS，顺便去蹭蹭数学/理论物理？
+18:47 Mokou: 这两个其实只是兴趣
+18:47 varna: 国内的major建议你问问到底是个什么状况
+18:48 varna: 毕竟现在学分制甚至都没能普及
+18:48 Mokou: 现在的问题是后天报道的时候班主任要求我们报个志愿大学上去
+18:48 varna: 那个没用吧
+18:48 Mokou: 没用，但我总得糊弄一个上去
+18:48 varna: 填个你觉得分数够的糊弄下好了
+18:49 Mokou: 我不想填海大，但是我不知道其他哪个是分数够还看起来比较靠谱的……
+18:49 varna: 海兵
+18:49 Xilzzerts quit:Read error: Connection reset by peer
+18:50 varna: 你参考下南方的大学？
+18:50 Mokou: 现在的期号太后了，想晋升得等猴年马月
+18:50 varna: 找个段位不太高的
+18:50 Mokou: 或者我先按CS来吧
+18:50 varna: 也行
+18:50 Mokou: CS的话你觉得哪个好些
+18:50 Mokou: 基佬大学么
+18:51 varna: cs我的建议就是按分数随便填了
+18:51 varna: 清华北大上交牛人多，其余的……
+18:51 Mokou: ……
+18:51 Mokou: 或者明天我上网查查排名
+18:51 varna: 我报基佬大学是因为这个保底
+18:51 Mokou: 我信不信排名不重要，重要的是班主任信不信……
+18:52 varna: 当时我分数挺尴尬的，7k+的名次想想那就滚去东北改造几年吧
+18:52 varna: 结果没改造好，变成了舰狗
+18:52 Mokou: ……
+18:52 Mokou: 话说你当时是为什么选了CS？
+18:53 varna: 我觉得我干这行就行
+18:53 xxxxxxxx joined channel
+18:53 biergaizi joined channel
+18:53 varna: 以前胡乱弄过点C语言，搞过点竞赛，觉得也行，那就CS吧
+18:53 Mokou: なるほど
+18:56 Mokou: 看了一下12年的排名
+18:57 Mokou: 清华 国防科技大 北大 北航 哈工大 上交大 浙大
+18:57 Mokou: 我突然感觉前十跟我没什么鸟关系了
+18:58 Mokou: 噗
+18:58 Mokou: 今年浙大理科录取分数线683
+18:59 varna: 山东的虚高问题压根就没解决啊
+18:59 varna: 赶快用全国卷就好了
+18:59 Mokou: 因为我们这届才开始用全国卷
+18:59 Mokou: 所以其实还有一个麻烦
+19:00 Mokou: 鬼知道我们这届分数会变成什么鸟样……
+19:00 varna: 大丈夫，要有信心
+19:00 Mokou: 我记得是河南还是哪里来着
+19:00 varna: 荷兰人多
+19:00 Mokou: 历史第一次用全国卷
+19:00 Mokou: 平均分37
+19:00 Mokou: 平均分
+19:00 varna: 别管那个
+19:00 varna: 荷兰和山东的前一万名曾经都比较正常
+19:00 Mokou: 主要是我没法估分速
+19:00 Mokou: 分数
+19:00 varna: 后来山东出卷如尿崩
+19:01 varna: 我们实在顶不住平度一中了
+19:01 Mokou: 现在贰中还是顶不住……
+19:01 varna: 高二的时候有个那里转来的伙计，叫陈衍超，我们一般把他名字速读成欠艹
+19:01 varna: 后来才发现他是个牧师
+19:01 Mokou: ……
+19:02 Mokou: 牧师什么鬼
+19:02 varna: 然后班上几个联盟玩家就出去玩了一晚上（我是部落的）
+19:02 Mokou: ……
+19:02 Youmu` joined channel
+19:02 Mokou: 山口山啊
+19:02 varna: 回来之后才知道那网吧有木马，损失合计5000g
+19:02 Mokou: ……
+19:02 varna: 剧情峰回路转
+19:02 Mokou: 当年我看山口山客户端太大了就没下
+19:03 varna: 贰中一直坚持自生自灭政策
+19:03 Mokou: 这不挺好么
+19:03 varna: 作业也不多留
+19:03 varna: 我觉得相当明智
+19:03 Mokou: +
+19:03 varna: 你想努力，就自己干
+19:03 varna: 像我这种不开窍的中二，那就吃一堑长一智
+19:04 Mokou: 然而上大学是目的
+19:04 Mokou: 我先去吃饭
+19:04 tutu_wind left channel:"撸去"
+19:06 varna: 我喝点拌西北风的咖啡，明天要请code_new吃一顿……
+19:06 xxxxxxxx: 你俩要约炮了?
+19:07 varna: 我——按李团长的说法——得找个机会干他一炮
+19:08 OwenJia joined channel
+19:08 OwenJia quit:Changing host
+19:08 OwenJia joined channel
+19:10 molikto quit:Remote host closed the connection
+19:11 OwenJia quit:Client Quit
+19:12 xxxxxxxx: 日本AV举世闻名，但近年网上盗版严重，加上日本人口老化、少子化问题持续，令AV业界陷入衰落危机。据香港《文汇报》8月27日报道，日本作家中村淳彦最近出版新书《AV产业之冲击》，引述66岁知名AV导演村西彻回顾业界昔日光辉，还有的公司在挑战之下把目光投向中国、泰国及越南等海外市场的情况。
+19:13 varna: 这些人便不懂得发掘本国瑰宝
+19:13 varna: 为何不去niconico看看
+19:13 xxxxxxxx: 国内允许买卖这样的东西?
+19:14 varna: 不允许
+19:14 varna: 但估计希望招揽外国籍演员
+19:14 xxxxxxxx: 　AV收入大不如前，业界近年逐渐把目光投向海外市场，其中中、泰、越等地经济发展迅速，成为当地厂商发展新目标。
+19:15 varna: 卧槽
+19:15 varna: 这不科学，我国卖毛片是违法的吧？
+19:15 xxxxxxxx: 我也觉着是违法的
+19:15 varna: 之前不还查了一批
+19:16 xxxxxxxx: 天朝有个叫 制作贩卖传播淫秽物品罪 的罪名
+19:18 Stevearzh quit:Quit: ERC (IRC client for Emacs 24.5.1)
+19:18 xxxxxxxx: 我真搞不懂是写稿子的人抽了 还是11区那群人二了
+19:19 varna: 这些记者啊，有一个有点
+19:19 varna: 优点*
+19:22 sismvg quit:Quit: ChatZilla 0.9.92 [Firefox 39.0.3/20150806001005]
+19:25 Mokou: 你和code_new面基了？
+19:25 varna: 他要来考英语
+19:25 Mokou: 你顺便手把手教他当裁判吧
+19:25 Mokou: 能找到第三个裁判我们就可以轮换着打了
+19:25 varna: 其实我觉得裁判最重要的是常识
+19:25 varna: 玩家的提案往往真实，然而手册并不能涵盖
+19:26 Mokou: 然而我并没有多少常识
+19:26 varna: 只要裁判有处理这种情况的自信，那么其他的就是查手册的工作
+19:26 Mokou: 我这种顺着炮术一路点下去的……
+19:26 Mokou: 炮术方面的常识我倒是可以给他点科普资料
+19:27 varna: 兴趣第一，到时候随便聊聊就好
+19:27 Mokou: 比如说亚特兰大三分钟洗死大和
+19:27 Mokou: 这种事情只有毛子能做出来
+19:27 Mokou: 今天我测试了
+19:27 Mokou: 以亚特兰大的输出洗死大和的时间不超过三分钟
+19:27 Mokou: 没错，满血到击沉
+19:27 Mokou: 没错，不用鱼雷
+19:28 varna: 还是没平衡好啊
+19:28 xxxxxxxx: 平衡这种东西早晚人家要黑拿锉刀
+19:28 Mokou: 平衡倒是平衡好了，只是不科学
+19:28 Mokou: 因为其实亚特兰大在大和面前活不过两秒
+19:29 Mokou: 我那个是摆了个靶子大和测试的
+19:29 Mokou: 然而即使你真的把大姐姐摆在那让人正面上，以亚特兰大的小手枪也打不出什么伤害……
+19:29 Mokou: 舰桥上的测距仪能打碎
+19:30 Mokou: 九六神炮能打飞
+19:30 Mokou: 然后就干不了什么了
+19:30 varna: 把舰桥拆下来让他打，他也打不动啊……
+19:30 Mokou: 能吵死舰长
+19:31 Mokou: 其实这也是我建议HE不造成直接伤害的原因
+19:31 Mokou: 不然你算一下
+19:31 Mokou: 两条后期爷爷的输出对大和的输出高过一条Iowa
+19:32 Mokou: 两条后期爷爷对大和的输出高过一条Iowa
+19:32 varna: 特定场合特定伤害吧
+19:32 Mokou: +
+19:32 varna: 这件事情我觉得交给裁判和剧本最好
+19:32 varna: 不然细则一写一大堆
+19:33 varna: 哑弹砸雪风还能阵亡三人呢
+19:33 Mokou: 是
+19:33 Mokou: SK4里过穿我记得是不造成CD的？
+19:34 varna: 对
+19:35 varna: 哑弹和过穿都只打出基础DF
+19:35 Mokou: 然而大和一发过穿直接把约翰斯顿航速降到17kt
+19:35 varna: 别的效果一律没有
+19:35 varna: 那个应该连轮机部都砸了
+19:35 Mokou: 因为被过穿的是后部轮机舱
+19:35 Mokou: 直接砸烂
+19:35 varna: 所以这点很麻烦
+19:35 varna: 以阳炎十八铁人和爷爷来说
+19:35 Mokou: 所以严格模拟的话坑太多了……
+19:35 varna: 前者的轮机部是锅炉在前涡轮在后的
+19:36 varna: 但爷爷则是锅炉组-涡轮组配对放置
+19:36 varna: 过穿了怎么说都疼
+19:36 varna: 各种麻烦，所以有时候我就看心情粗暴来了
+19:36 Mokou: 很多事情没法不粗暴
+19:37 Mokou: 比如说穿甲弹的弹种
+19:37 Mokou: 比如说脱被冒
+19:37 varna: 但有一点改动我还是想体现
+19:37 varna: 就是电风扇飞机的暖机步骤
+19:37 Mokou: 比如说引信延时时间和过穿率的关系
+19:37 Mokou: 这个我也想弄
+19:37 varna: 这个可以简单地影响美日双方的吞吐率
+19:37 Mokou: 不过毕竟我只懂点火炮……
+19:37 varna: 另外就是携带定数
+19:38 varna: 虽然缺数据，但蓝大之前跟我提过这方面的问题
+19:38 varna: 一般航空鱼雷不会带太多
+19:38 Mokou: 是
+19:38 varna: 都玩成舰C, 我蛋疼
+19:39 Mokou: 然而WoWS里水面舰的鱼雷都没有定数
+19:39 Mokou: 什么tsu爷炮雷CI轰死女儿
+19:40 Mokou: 然后再轰个妙义
+19:40 Mokou: 然后再轰个铁王八
+19:40 varna: BS:M都有弹数……
+19:40 Mokou: 你要这么想
+19:40 Mokou: BS:P不仅没有弹数，还可以在飞机上造鱼雷
+19:41 Mokou: 某主播买到岛风了……
+19:42 varna: BS:P那简直了
+19:42 xxxxxxxx: http://www.bilibili.com/video/av2424560/
+19:42 varna: 游戏做得很漂亮，但也不用这么平易近人……
+19:43 Mokou: 毛子再怎么样也没做出自动瞄准来
+19:43 varna: 又是造鱼雷又是补鼻子的
+19:43 Mokou: 只是稍微修正一下落点
+19:43 varna: 还有自动瞄准
+19:43 varna: 我都觉得羞耻
+19:43 Mokou: 自动瞄准最恶心了
+19:43 Mokou: 直接变成无脑突突突
+19:43 Mokou: 噗
+19:43 Mokou: 然后那主播开始cos岛风了
+19:43 Mokou: http://live.bilibili.com/5052
+19:43 varna: 我突然想起个事啊
+19:44 varna: 夏活前那些要穿女装的都哪去了
+19:44 Mokou: 日风扇去了
+19:45 varna: “这里初中汪，前几天存的优衣库视频被家长看见了，然后今天家长问优衣库是怎么回事，这里脑一抽就拍了三下手( ´_ゝ｀)”
+19:45 biergaizi quit:Ping timeout: 244 seconds
+19:45 varna: 这哥们好机智啊？
+19:45 Mokou: 噗
+19:45 Mokou: 突然反应过来了
+19:45 varna: 且不论其目的，表达方式很有趣
+19:46 varna: “初中 小学的东西 确实简单炸了...我小学还听听课,一样全班第二进...后来去宏达（私立学校）...初中..就是按照自己来,我上课喜欢看其他书...当然不是什么漫画本什么的...再后来因为这个事情跟老师闹翻,我这个人是犟...最后天天上课睡觉,老师们已经不想管我了...中考考了一中线...读到高中..感觉又是简单
+19:46 varna: 到爆炸...然后不读了..回家..后面家里人给我买了个文凭...现在我已经上班了...管帐的,基本都是玩玩电脑...工资也有4000k...偶尔去隔壁做做淘宝美工..有提成,这些都是自学的...”
+19:46 varna: 工资4000k
+19:46 Mokou: 屌
+19:46 xxxxxxxx: orz
+19:47 Mokou: 4000k似乎不够在岛城租个好点的房子……
+19:47 Mokou: 租完就剩1k了
+19:47 Mokou: 噗
+19:47 Mokou: 噗
+19:47 Mokou: 我猜反应过来
+19:47 Mokou: 才
+19:47 varna: 4000k啊
+19:47 Mokou: 4000k……
+19:47 varna: 另外青岛最坑的就是高日德海景房
+19:47 Mokou: 为什么不打4m
+19:47 varna: 又冷又湿又贵
+19:47 Mokou: 高日德海景房7k
+19:48 varna: 先前不都10k+么
+19:48 Mokou: 那我查到的那个大概破点……
+19:48 varna: 壕们买了之后反应过来了：这鬼地方连养老都不行
+19:48 molikto joined channel
+19:48 Mokou: 我还是喜欢靠山
+19:48 varna: 你让老人住个动辄吹风的地方……
+19:48 Mokou: 山里多舒服
+19:49 varna: 壮哉我浮山土馒头
+19:49 varna: 哦对
+19:49 varna: 浮山里还真造了个estate之类的东西
+19:49 varna: 我没搞明白那些开发商接下来想干什么
+19:49 Mokou: ……
+19:49 Mokou: 午山呢
+19:49 varna: 虽说隔的不远地方就是青岛软件院
+19:49 varna: 园*
+19:50 Mokou: 虽说我对贰中的唯一印象就是吃个麦记要坐四站车
+19:50 varna: 一大堆年轻力壮的处男应该能镇住入口那一排粽子
+19:50 Mokou: 而且听说那边治安差些？
+19:50 varna: 治安不错
+19:50 varna: 市南区，就在青大背后
+19:50 varna: 门口是交警
+19:50 Mokou: 我说贰中那
+19:50 varna: 贰中那里也行
+19:50 varna: 但是你别走远
+19:50 varna: 远了就是崂山，你懂的
+19:51 Mokou: 那是有点麻烦
+19:51 varna: 尸捞人-崂山那一线上我以前去的时候就是城乡结合部
+19:51 biergaizi joined channel
+19:51 varna: 但贰中那附近是崂山区还可以的地方
+19:51 Mokou: 走远点能2k买个处女么
+19:51 varna: 崂山进山的地方建设得不错
+19:51 varna: 但我不觉得那地方治安会好，太冷清了，基本都是公路什么的
+19:51 biergaizi quit:Remote host closed the connection
+19:52 xxxxxxxx: 4000K能买到多少处女?
+19:52 Mokou: 4000k不用买
+19:52 varna: 然而浮山那个estate入口处真的是一排粽子
+19:52 biergaizi joined channel
+19:52 varna: 我去爬山的时候走那个路，能看到孝敬的黄纸
+19:52 Mokou: ……
+19:52 Mokou: 这么看还是观象山好
+19:53 varna: 观象山那边建得漂亮
+19:53 varna: 浮山以前是这么个情况
+19:53 varna: 原来金门路附近一个大坟场
+19:53 varna: 后来盖了小学（我读的那里）
+19:54 varna: 然后浮山又是一个大死灵山
+19:54 Mokou: ……
+19:54 varna: 政府出面帖通知搞工程要搬坟，但因为种种原因并没有搬干净
+19:54 Mokou: 童男童女大丈夫么
+19:54 varna: 所以现在还处于一个半吊子状态
+19:55 xxxxxxxx: 羊驼去念一段perl
+19:55 varna: 大丈夫，我自己小学六年只在操场上见过一个家父郭xx之墓的墓碑残骸……
+19:55 varna: 跟几个串了钢筋的水泥板堆在一起
+19:55 Mokou: 操场上什么鬼
+19:55 varna: 上面隶书刻得还挺好看的
+19:56 varna: 当时操场反正就是个大土场子，周围堆些废建材
+19:56 Mokou: 小时候看到这种东西晚上不会不敢睡觉么
+19:56 sakura joined channel
+19:56 varna: 不会
+19:56 varna: 倒是以前买的生化危机2吓得我一塌糊涂
+19:57 Mokou: ……
+19:57 varna: 小时候境界不够
+19:57 varna: 长大了对丧尸没什么感觉，倒是学会自己吓唬自己
+19:57 Mokou: 比如说“这把肯定掉沟”？
+19:57 sakura: 小时候看个骷髅头都睡不着觉
+19:57 varna: 那是肯定要掉沟的
+19:58 sakura: 生化危机电影倒是没感觉
+19:58 varna: 生化危机电影我今天还想看看的
+19:58 sakura: 不过生化危机4开始
+19:58 varna: 喝西北风也得就点东西下饭
+19:58 sakura: 越来越垃圾
+19:58 Mokou: 烹调西北风的时候有没有什么讲究？
+19:58 varna: 生化危机电影我就觉得1-3好看
+19:58 sakura: 5就是彻底一坨
+19:59 varna: 有，别脱裤子
+19:59 Mokou: 你试过脱裤子的？
+19:59 sakura: 黑人死的不明不白
+19:59 varna: 在宿舍试过
+19:59 sakura: 烹调西北风是什么
+19:59 varna: 大四的时候国庆节没多少钱了，吃的东西主要是三鲜伊面和西北风
+20:00 varna: 当然也主要是不想动银行卡
+20:00 varna: 这次是我万万没想到，万万没想到学院假期不发钱
+20:00 Mokou: 神秘小卡片里有多少钱
+20:00 Mokou: 足够买下角川么
+20:00 sakura: ......
+20:00 hausir quit:
+20:00 varna: 买不下……
+20:01 Mokou: 田中的初夜呢
+20:01 sakura: 上学就这待遇 毕业了不会去中石化吧
+20:01 Mokou: 他去阿里
+20:01 sakura: 比如几块钱的鲍鱼什么的..
+20:01 Mokou: 几块钱的鲍鱼肯定有病
+20:01 varna: 研究生都有补助款的
+20:02 Mokou: 不然怎么可能这么便宜
+20:02 sakura: 中石化食堂
+20:02 sakura: 应该没这问题吧..
+20:02 Mokou: 我觉得你没看懂
+20:03 sakura: 额
+20:03 varna: 是我跟学校那套系统接口的银行卡上没钱了
+20:03 varna: 平时都按月发实验室补助和助研款
+20:03 Mokou: 话说你一个月大概能进账多少
+20:03 sakura: 今天一口气追上gate
+20:03 varna: 助研五百，实验室补助最多五百
+20:03 Mokou: ……
+20:03 Mokou: 好惨
+20:03 sakura: 陆自真可怜
+20:03 varna: 吃食堂还好
+20:04 varna: 但是假期食堂基本关门……
+20:04 sakura: 明明导弹能解决的事非得近距离开炮
+20:04 Mokou: 太坑
+20:04 sakura: 所以我支持abe
+20:04 varna: 我买塑料小人的时候日圆没跌这么狠，我怒黑安倍酱
+20:05 varna: 不然那个北上大人应该还能再便宜点
+20:05 Mokou: 破五再连任，破四当天皇
+20:05 varna: 毕竟安倍进三
+20:05 varna: 那个看着超级赞的喔酱也不降价
+20:05 varna: 我索性断念
+20:05 Mokou: 反正我还是希望日元使劲跌
+20:06 Mokou: 氪戒指便宜
+20:06 Mokou: 喔酱是哪个
+20:07 varna: 有个写实向的
+20:07 varna: 品名我忘了
+20:07 Mokou: https://item.taobao.com/item.htm?spm=a230r.1.14.1.sho8LH&id=43241452941&ns=1&abbucket=11#detail
+20:07 Mokou: 这个？
+20:08 varna: 啊对
+20:08 Mokou: 哦
+20:08 varna: 卧槽又涨了？
+20:08 Mokou: 我买不起……
+20:08 Mokou: ……以前多少？
+20:08 varna: 我记得先前的报价不到七百啊
+20:09 varna: 难道那是预订款
+20:09 Mokou: 估计是了
+20:10 varna: 这个喔酱之前参展的时候看着就巨赞，然而赞的东西大多都贵得要死
+20:10 Mokou: 然而我只剩300块钱了
+20:11 varna: 我卡上还剩十大元
+20:13 Mokou: 一条亚特兰大248
+20:13 Mokou: 直接穷疯
+20:13 varna: 还好之前三十块钱弄了不少廉价咖啡
+20:13 varna: 用力喝
+20:13 Mokou: 保证睡眠么
+20:14 varna: 好歹有点味道
+20:14 Mokou: 我倒不介意喝白水……
+20:14 varna: 肚饿，晚上回去用剩下的一毛零钱卷点三鲜伊面吃
+20:15 Mokou: 话说阿里那13k~18k是税前还是税后？
+20:15 varna: 税前吧
+20:15 Mokou: 税后大概多少
+20:15 varna: 不知道，看怎么分比例了
+20:15 varna: 像小耗那样似乎就是奖金多
+20:15 Mokou: 我想算算我得当多久码农才能买到Xeon
+20:15 varna: 卧槽大鱼
+20:16 Mokou: 瑞穗？
+20:16 varna: 我在实验室抽屉里挖出一堆一毛的零钱和一个一块硬币
+20:16 Mokou: ……
+20:16 Mokou: 总共多少
+20:16 varna: 我数数
+20:17 varna: 两块八
+20:17 Mokou: 壕rz
+20:17 varna: 这能吃两袋面呢，明天就可以开荤了
+20:19 varna: 我一直有个问题
+20:20 varna: 防空姬穿的是超情趣的吊带装还是上面点缀了吊带的白连衣裙？
+20:20 xxxxxxxx: 我还以为是 帝球的胖次 如果存在 是什么颜色
+20:20 Mokou: 我感觉是后者
+20:20 varna: 我也感觉是后者
+20:20 varna: 腰上有一些褶子，像是衣服
+20:20 Mokou: shizuma怎么说
+20:20 varna: 他光解释沼跃
+20:21 Mokou: 你找个女提督去勾引他，然后问问
+20:21 xxxxxxxx: 我这里看萌娘百科怎么reset了
+20:21 Mokou: 他大概比洗吧福更绅士
+20:22 xxxxxxxx: Mokou: 我觉得有女提督羊驼自己就上了
+20:22 Mokou: 有的\
+20:22 Mokou: 有的
+20:22 varna: rst了
+20:22 varna: 不过我相信是白连衣裙还有个理由
+20:22 xxxxxxxx: 难道被墙了?
+20:22 Mokou: rst+
+20:22 varna: 就防空姬的胸型来说，胸口的装饰盖不住左胸激凸处
+20:22 Mokou: 不是被墙
+20:23 Mokou: 部队
+20:23 Mokou: 不对
+20:23 Mokou: 好像真是被墙了……
+20:25 xxxxxxxx: 233
+20:25 xxxxxxxx: 下一个被墙的会是哪里呢?
+20:26 sakura quit:Ping timeout: 255 seconds
+20:26 varna: http://xrying.com/ 这里
+20:27 varna: 这网站我收藏了
+20:27 varna: 太屌
+20:29 Mokou: 噗
+20:29 Mokou: 毛子搞出了一个神奇的Bug
+20:29 Mokou: Iowa现在有黑洞装甲，掉血掉到一定程度之后几乎打不出伤害……
+20:31 varna: ...
+20:31 Mokou: 460mm粗的一式弹糊脸上直接叮当一声
+20:33 xxxxxxxx: 把这个网站和红歌会放一块
+20:33 varna: 最近转冷了
+20:33 varna: 明天14-21度，POI
+20:37 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=493b9b86a5cc7cd9fa2d34d1093a203f/5fdf8db1cb134954ecb7680f504e9258d1094a34.jpg
+20:40 varna: 堂堂兄贵吧居然有人表示吾作舔足那作受不了
+20:40 varna: 这不太行啊
+20:41 xxxxxxxx: 堂堂舰C吧还有表示配置对了一次过的呢
+20:41 varna: xxxxxxxx: 爆
+20:45 varna: 看到新闻播音员总想起Martin Wannamaker...
+20:50 xxxxxxxx: http://imgsrc.baidu.com/forum/pic/item/8d4d8f8065380cd74f0d939ba744ad345982816c.jpg
+20:51 varna: 轻母装母飞母……
+20:55 Mokou: http://ww1.sinaimg.cn/bmiddle/a552f1e8gw1eviks3ac1kj20c60pdq5j.jpg 气球炸弹原来是有原型的啊
+20:59 xxxxxxxx: 又是陆军搞的东西...
+20:59 Mokou: http://ww2.sinaimg.cn/bmiddle/9e6b7fdbjw1evi9n0alqbj20ig0owju3.jpg
+20:59 xxxxxxxx: 陆军怎么总搞些不靠谱的东西...
+21:00 varna: 晴岚是海军搞的，这点陆军可以甩锅
+21:05 FrankHB quit:Ping timeout: 265 seconds
+21:09 xxxxxxxx: 不过如果现在做气球炸弹 会不会比当时靠谱些?
+21:11 Mokou: http://tieba.baidu.com/p/4005782687
+21:12 varna: 2333
+21:13 varna: 我突然想到这么个模型
+21:13 endle joined channel
+21:13 varna: 记一个活人可度量的参数集合为S, 而一个丧尸也用S中的变量来度量
+21:14 FrankHB joined channel
+21:14 varna: 又设区别活人、丧尸的阈值模糊集为Z
+21:15 varna: 那么一个具有k%比例丧尸的系统，在规定了啃食率和传播率的情况下，第一个相对可以称为稳态的比例是什么样的
+21:15 varna: 换句话说，对模糊阈值集Z而言，有多少新米丧失会被老丧失吃掉……
+21:15 Mokou: OTL
+21:16 varna: 总觉得丧失严格不互吃这个丧失电影定律不那么合宜
+21:16 varna: 舔舔似乎也会吃几个丧失的
+21:16 xxxxxxxx: 不是有互吃变异之类的说法么?
+21:17 varna: 好像是有
+21:17 varna: 但是忘了什么地方提到了
+21:17 varna: 不过这个模型主要目指模拟一般的杂鱼丧失稳态……
+21:18 Mokou: 阿里税后的月薪能有10K吗
+21:18 varna: 我猜有
+21:18 Mokou: 那似乎还行啊
+21:18 varna: 不然我就真的要穷死了
+21:18 varna: 只是我猜
+21:18 Mokou: 3k租房
+21:18 varna: 总之好不好就那样了
+21:18 Mokou: 奢侈点1k饭钱
+21:18 Mokou: 还剩下6k
+21:18 Mokou: 两个月能买个方盒子台式机
+21:19 varna: 总之我确实没学车
+21:19 varna: 反正买不起……
+21:19 Mokou: 地铁
+21:19 Mokou: 还可以当个痴汉什么的
+21:19 varna: 说得好
+21:20 xxxxxxxx: 现实大概是羊驼在地铁里被大妈挤来挤去
+21:20 varna: 不过我觉得前述的丧失模型确实值得稍微探讨一下……
+21:22 varna: 不过互吃变异到底是生化哪一代的说法来着
+21:24 xxxxxxxx: 不记得...
+21:25 varna: 可能就是说舔舔
+21:27 code_new joined channel
+21:28 varna: 或者这个模型在考虑互吃的基础上可以更复杂
+21:28 varna: 比如说把阈值集Z变成一个可吃-不可吃的阶跃判定标准Z*
+21:28 varna: 这样活人-新米丧失-大丧失-舔舔就都能区分出来了
+21:29 varna: 不过我想不出比较好的办法处理这个Z*
+21:29 varna: 所以不想了
+21:29 Mokou: 瞎搞一通，搞了个8888的配置单出来……
+21:30 varna: 好贵！
+21:30 Mokou: 还成，两个月工资
+21:30 Mokou: Xeon E3 + R9 390X……
+21:30 varna: 我希望的台式机能控制在三千以上就好
+21:30 xxxxxxxx: v3？ v4?
+21:30 Mokou: 我要是配台式机可能直接上APU了
+21:30 Mokou: v3
+21:31 Mokou: 这里面有3299花在显卡上……
+21:31 varna: 我就是这么考虑的，显卡可以渣
+21:31 Mokou: 那APU吧
+21:32 varna: 23333 看生化危机都有人刷“和善的眼神”
+21:32 varna: 即使现在，我也不怎么想去4-5……
+21:33 varna: 还冒出了一个新的战点：吮指原味鸡 vs 黄金脆皮鸡……
+21:34 code_new: 至今还没打5-3……
+21:34 varna: 顺带一提我支持吮指原味鸡
+21:34 varna: code_new: 爆
+21:35 code_new: varna: 话说按长春的温度需要穿一条秋裤吗
+21:35 varna: 目前不需要
+21:35 varna: 明天14-21度，POI
+21:35 code_new: 好的
+21:35 varna: 后天也大致是这温度（略高），不过别穿太薄
+21:35 code_new: 沈阳这边高个4度
+21:35 xxxxxxxx: 有人说舔舔的游戏设定是二次感染
+21:35 code_new: 好的
+21:36 varna: 最近我觉得是降温了
+21:36 varna: xxxxxxxx: 我记得有这么个说法
+21:36 varna: 但我宁可相信舔舔是游戏平衡性的第一个受害者
+21:36 Mokou: 瞎搞一通，8758
+21:36 varna: 因为没有更厉害的杂兵怪物了所以弄出来一个
+21:36 Mokou: 3758
+21:36 Mokou: 不要显示器的话扣掉579
+21:37 Mokou: 不要SSD的话扣掉519
+21:37 varna: 说起来，PS2上有两作生化危机挺好玩的
+21:37 varna: biohazard: outbreak
+21:37 varna: 国内的译名应该是叫《逃出生天》
+21:37 Mokou: 一个月就搞定了
+21:37 Mokou: 你可以第二个月再加显卡
+21:37 xxxxxxxx: 还指出电影中则是人工培养
+21:37 varna: 剧情紧凑角色多，气氛也挺好
+21:37 varna: 还有感染率设定，防止玩家虐尸成瘾
+21:40 varna: 显示器我反而喜欢不大的
+21:40 varna: 大了总觉得别扭
+21:40 Mokou: 19.5
+21:40 varna: 太大了
+21:40 Mokou: 再小的买不到了
+21:40 varna: 再小两吋的现在还有么
+21:41 Mokou: 你要是不介意方屏的话应该有
+21:41 varna: ...
+21:41 xxxxxxxx: 你可以考虑去找二手的说不定有....
+21:41 Mokou: 二手的有个麻烦
+21:41 Mokou: 发黄
+21:41 varna: 我介意，那还是用大的吧
+21:41 Mokou: 灯管老化
+21:41 varna: 我喜欢长宽比看着扁一点的，这样壁纸构图比较容易
+21:41 Mokou: 这个没得救，校准不了
+21:41 Mokou: +
+21:41 Mokou: 话说你有弄个台式机的计划？
+21:41 varna: 目前没有
+21:42 Mokou: 工作以后呢
+21:42 code_new quit:Read error: Connection reset by peer
+21:42 varna: 看情况
+21:42 Mokou: 我想搞个台式机玩WoWS
+21:42 Mokou: 然而没钱
+21:42 varna: 比起钱，说不定你会先没精力玩……
+21:43 code_new joined channel
+21:43 Mokou: 每天下班打一盘
+21:43 Mokou: 像空母决战一样
+21:43 varna: 那应该还好
+21:44 Mokou: 反正一盘顶多二十分钟
+21:44 Mokou: 又不是兵棋……
+21:44 varna: 不过我怀疑那之前你会先有个女朋友
+21:44 Mokou: 不可能的
+21:44 varna: 那就一堆炮友
+21:44 xxxxxxxx: 我不怀疑 我确信
+21:44 Mokou: 不会有妹子去研究怎么判定脱被冒的
+21:45 Mokou: 炮友更不会有
+21:45 varna: 会有妹子找你的，这个我确信
+21:45 xxxxxxxx: 至于有了女朋友会不会像羊驼一样被吓尿然后逃我就不知道了...
+21:45 varna: 现在的大学生很饥渴
+21:45 Mokou: 会的
+21:45 Mokou: 不超过三分钟
+21:47 xxxxxxxx: 不超过三分钟就给妹子发卡了
+21:47 Mokou: 不超过三分钟妹子就掉头跑了
+21:48 Mokou: http://ww2.sinaimg.cn/bmiddle/6920d8dfgw1evimyyf58xj20zk0qojxg.jpg 亮点自寻
+21:48 code_new: 看来之前有很多妹子被红旗发卡了
+21:48 Mokou: 并没有
+21:48 Mokou: 妹子们都是自行吓跑的
+21:48 varna: 2333333
+21:49 varna: 〇头一直摆
+21:49 Mokou: 这店太屌……
+21:49 xxxxxxxx: 妹子们: 啊红旗来了 好害羞 逃
+21:49 varna: +
+21:50 Mokou: 害羞个屁
+21:50 Mokou: 明显是被吓到了
+21:50 code_new: Mokou: 快爆照
+21:50 xxxxxxxx: 过几年就是 啊红旗来了 我要好好表现一下 不然就变成圣斗士了
+21:50 Mokou: 不照
+21:50 Mokou: 太丑
+21:50 varna: 现充的气场和我这种鬼畜是不一样的
+21:51 Mokou: 鬼畜何苦为难鬼畜
+21:51 varna: 我只想赣猊僻衍
+21:51 code_new: 2333
+21:51 xxxxxxxx: 四头基暴露本性
+21:51 Mokou: 你竿缁给毗研
+21:52 varna: 基喊捉基
+21:52 Mokou: 总之一月真有10k的话似乎还不错
+21:52 Mokou: 然而我感觉我并不能挣到那么多
+21:52 xxxxxxxx: 基喊基喊基
+21:53 varna: Mokou: 计算机系的工作比其他理科好找
+21:53 varna: 至少第一份如此
+21:53 Mokou: 然后我找到工作了，去和一帮洗剪吹一起写css
+21:53 Mokou: 每月3k
+21:53 varna: 不，是你当上CEO, 迎娶白富美，走上人生巅峰
+21:54 Mokou: 然后醒了，发现我还没斩掉E7
+21:54 xxxxxxxx: 然后遇到一个白富美的女提督
+21:54 Mokou: 然后醒了
+21:54 varna: （科）技之亚美？
+21:55 Mokou: 亚美怎么可能遇上我这种萌新
+21:55 varna: 所以亚美到底开没开科技呢
+21:56 Mokou: 不知道
+21:56 varna: ...
+21:56 Mokou: 不过那个黄金舰队确实不一般
+21:56 Mokou: 然而开科技的话他是怎么活这么久的
+21:57 varna: 不知道
+21:57 Mokou: 传言他已经开了两年了
+21:57 Mokou: 铁底之后就开始……
+21:57 varna: 我觉得开脚本的幸存者应该都相对低调
+21:58 Mokou: +
+21:58 sakura joined channel
+21:59 sakura: 。
+22:00 sakura quit:Remote host closed the connection
+22:11 sakura joined channel
+22:12 varna: 好想侵犯女提督啊
+22:12 Mokou: 你不是认识很多女提督么
+22:13 varna: 我跟那个群里的萌新怒撕了几句，退群了
+22:13 sakura: 不就是女提du..
+22:13 Mokou: 什么鬼
+22:14 varna: 就是那位问我“能做的你都做到了吗”
+22:14 sakura: 最喜欢璃璃子大人的路过
+22:14 varna: 我回了句“我做的你能做到么”
+22:14 Mokou: 他怎么回
+22:14 sakura: 我艹 id没被抢
+22:14 varna: “呵呵”
+22:15 Mokou: 呵你妈个逼，有话说话没话闭嘴
+22:15 Mokou: 理亏了强行呵呵一下就能找回面子么
+22:15 sakura: 一头雾水 做什么事？
+22:16 Mokou: 羊驼子和萌新撕逼那事
+22:16 sakura: 理亏了犯弱智得人多的是 呵呵算轻了。。。
+22:16 Mokou: 不过这就退群了啊
+22:16 sakura: 我和同学撕的时候
+22:16 varna: 往下反正也是冷嘲热讽，我省几句为好
+22:17 Mokou: A比B烂不能证明B好
+22:17 Mokou: 不过我总感觉怒退群有点像迁怒他人……
+22:17 varna: 这就跟有人跟我说二十多发没出大和，我只能鼓励对方说，一百发以内有相当可能见到一样……
+22:18 varna: 看成分了
+22:18 yzld2002 joined channel
+22:18 Mokou: 这是哪个群，qh那个还是？
+22:18 varna: qh那个我一直加着
+22:19 varna: 几个新人加上几个和我同期的伙计
+22:19 Mokou: 我现在基本只去35群……
+22:19 Mokou: 不过现在变成老苏群了，原因不明
+22:19 varna: 35之前在qh那群里吃瘪
+22:19 sakura: 其实我扔到呵呵这种满地打滚的时候 直接复读机。。
+22:19 varna: 他似乎发了个假舰爆图，被口球10min
+22:19 varna: 然后不高兴就退了……
+22:19 Mokou: 噗
+22:20 sakura: 碰到 打错
+22:20 Mokou: 35脾气比较爆
+22:20 varna: 他觉得不爽，这个也没办法，虽说qh那里10min口球其实更多是调侃
+22:20 Mokou: 是
+22:20 varna: 35脾气比较爆这个能看出来
+22:20 Mokou: 他在群里天天给别人口球呢
+22:20 Mokou: 不过我们那里的口球一般就几秒，意思一下就解了
+22:21 varna: 基本都是意思一下
+22:21 varna: 但35估计是搞错了什么
+22:21 varna: 亚顿有阵子口球都塞爆了
+22:21 Mokou: 大概是
+22:21 Mokou: 其实现在这个35群是新35群
+22:21 Mokou: 只加了一部分熟人的
+22:21 varna: L射中间也弄得不高兴，他不太喜欢这么调侃，不过加群退群也没人在意……
+22:21 sakura quit:Remote host closed the connection
+22:21 varna: 反正那群的主要人员还是70w之前的熟人，互相闹闹气也就算了
+22:21 Mokou: 当年他和别人撕逼，直接退了他原来那个群……
+22:22 varna: 至少有一点现在是安全的
+22:22 varna: 侧马尾应该打通了，不必直播破〇
+22:22 Mokou: 23333
+22:22 Mokou: 然而你不是应该觉得可惜么
+22:23 Mokou: 没打通的话你去帮忙破个〇
+22:23 varna: 那是qh熟人
+22:23 varna: 我记得圣GAY王只授权我进行杏子药娘化企划……
+22:24 varna: 他指出，杏子是理想的女朋友，只有一点不合适
+22:24 varna: 杏子是男的
+22:24 Mokou: 我就知道
+22:24 sakura joined channel
+22:25 varna: 其实我也赞同他这个观点
+22:25 varna: 不过杏子本人不太赞同
+22:25 sakura quit:Remote host closed the connection
+22:26 Mokou: 我去打一盘WoWS
+22:26 Mokou quit:Quit: reboot
+22:28 Plough joined channel
+22:28 Plough: 其实有时候我觉得win用起来也不错
+22:29 Plough: 不过不知道为什么，我总感觉敲程序的时候windows下的延迟比linux打
+22:29 Plough: 大*
+22:29 varna: win的GUI有时候觉得有点卡
+22:29 Plough: +
+22:29 varna: 大概你还得多插几条内存
+22:29 Plough: 然而理论上X不是应该更慢么
+22:30 varna: 理论上确实如此，但是……
+22:30 Plough: 世界如此奇妙……
+22:32 Plough: 接着用亚特兰大打电脑
+22:34 hoxily quit:Ping timeout: 244 seconds
+22:34 Plough: 说起来，似乎很多人都认为亚特兰大更像DD啊……
+22:34 varna: 12.7cm的缘故么
+22:34 varna: 但那个黑铁刺猬一点都不驱逐啊……
+22:34 Plough: 127 鱼雷 脆
+22:35 varna: 倒不如说不祥感满载
+22:39 endle quit:Quit: Leaving
+22:43 hoxily joined channel
+22:44 Plough: 然而你说他是巡洋舰的话，看看克爹……
+22:44 Plough: 总之我感觉亚特兰大算是一般一般
+22:44 Plough: 一半一半
+22:45 varna: 克里夫兰已经扭曲了
+22:45 varna: 非要说的话，算是时代的哀嚎……
+22:45 varna: 当然对于二战时代的人来说，我知道的后事太多了
+22:45 Plough: “炮舰的时代过去了”么
+22:45 varna: 差不多是这个意思
+22:49 varna: 当然其实我也是有神通情怀的_(:з」∠)_
+22:56 Plough: 阿嘿颜大法好
+22:57 Plough: 虽说我觉得阿嘿颜不一定能干过亚特兰大
+22:57 Plough: 噗
+22:57 Plough: 这盘有个北卡……
+22:57 varna: 试图以弱胜强最后被疯狂打脸是情怀的来源之一
+22:57 varna: 不过可惜只有情怀
+22:57 varna: 别的一律没有
+23:01 varna: 撤退
+23:01 varna: 诸君武运
+23:01 varna quit:Quit: leaving
+23:07 lh_cat joined channel
+23:10 lh_mouse quit:Ping timeout: 260 seconds
+23:13 hoxily quit:Ping timeout: 265 seconds
+23:15 hoxily joined channel
+23:28 hoxily quit:Read error: Connection reset by peer
+23:28 hoxily joined channel
+23:38 code_new quit:Quit: bye
+23:52 benzrf joined channel
+23:53 benzrf: how is this different from #mandarin?
+23:57 cleamoon: benzrf, there is no connection to that
+23:57 cleamoon: beside most of us speak mandarin

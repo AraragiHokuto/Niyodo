@@ -1,0 +1,655 @@
+00:03 xxxxxxxx: FrankHB: 帝球在么?
+00:06 ppts quit:Ping timeout: 252 seconds
+00:08 yzld2002 quit:Quit: yzld2002
+00:20 xxxxxxxxx joined channel
+00:22 xxxxxxxx quit:Ping timeout: 252 seconds
+00:33 lh_cat quit:Quit: Connection closed for inactivity
+00:52 Matsune quit:Read error: Connection reset by peer
+01:19 hoxily quit:Quit: Leaving
+01:26 cleamoon joined channel
+01:37 wlemuel quit:Quit: Lost terminal
+01:43 FrankHB: ?
+01:46 xxxxxxxxx: 帝球那项目里头的<nds.h>是啥东西?
+01:47 xxxxxxxxx: http://devkitpro.org/ 那个?
+01:49 xxxxxxxxx: 还有tools里面那个msys2-pacman-update.sh 里面并没有-Sy..
+01:54 xxxxxxxxx: 还爆了一堆‘wcstold’不是‘std’的成员 之类的东西 <- 这个看上去是msys2需要什么其他的配置?
+01:55 whocares_2 joined channel
+02:06 FrankHB: nds.h是devkitpro里的libnds。
+02:07 FrankHB: msys2-pacman-update.sh只是装必要的工具，-Syu还是自己搞的。。。
+02:07 xxxxxxxxx: 名字写了update.....
+02:08 FrankHB: 好吧，原来有，后来给干掉了。。
+02:08 FrankHB: 那就再加上。
+02:10 FrankHB: wcstold是哪里跳的错误。
+02:10 FrankHB: 我这里没动过什么特别的，没遇到过这个问题。
+02:13 whatofor_1 joined channel
+02:15 xxxxxxxxx: YBase/include/libdefect/string.h:74:9: 错误：‘::wcstold’尚未声明
+02:15 xxxxxxxxx:  using ::wcstold;
+02:15 xxxxxxxxx: ../../YBase/include/libdefect/string.h: 在函数‘long double std::stold(const wstring&, std::size_t*)’中:
+02:15 xxxxxxxxx: ../../YBase/include/libdefect/string.h:139:55: 错误：‘wcstold’不是‘std’的成员
+02:17 whatofor quit:Ping timeout: 256 seconds
+02:18 FrankHB: ::wcstold找得到么。
+02:18 xxxxxxxxx: 似乎找不到
+02:19 xxxxxxxxx: 另外vs打开的话arm相关的都会加载失败
+02:21 FrankHB: 加载失败什么情况。。
+02:21 FrankHB: 红线？
+02:21 FrankHB: libdefect/string.h 38行加上#include <cwchar>再试试？
+02:23 xxxxxxxxx: http://puu.sh/hsVKa/8e3594fe9c.png 这样的情况
+02:24 lh_mouse quit:Read error: Connection reset by peer
+02:26 xxxxxxxxx: FrankHB: 似乎需要加上cwchar比较多...
+02:28 FrankHB: 还有哪里有问题？
+02:31 xxxxxxxxx: 等等....
+02:33 FrankHB: 直接用wcs的就两个文件，这里加上应该就没问题了。
+02:35 xxxxxxxxx: 然而还是报了和修改之前一样... 不过我似乎应该先去折腾依赖...
+02:37 FrankHB: 依赖……？
+02:39 xxxxxxxxx: libnds之类的东西
+02:39 FrankHB: libnds你不编译DS的就不用啊。。。
+02:39 FrankHB: 先直接试MinGW吧。
+02:40 FrankHB: msys/mingw32/i686-w64-mingw32/include/wchar.h和msys/mingw32/include/c++/4.9.2/string在的话应该就不会有这个问题吧。
+02:41 * xxxxxxxxx 直接 tools/install-sysroot.sh
+02:42 FrankHB: 怪了，那怎么会有nds.h的问题。。
+02:44 FrankHB: ==，你gcc路径哪个？
+02:45 xxxxxxxxx: 也许是pacman装上的那个...?
+02:45 FrankHB: which gcc
+02:46 xxxxxxxxx:  /usr/bin/gcc
+02:46 FrankHB: ...那个不是mingw的啊。
+02:46 FrankHB: 那个是msys2的。
+02:47 FrankHB: 得用mingw32_shell.bat进去或者手动设置PATH让/mingw32/bin在前面。
+02:48 FrankHB: 什么平台都检查不对才自动DS了。但是奇怪的一点是就是msys的gcc也该在检查_WIN32的时候停下来吧（虽然我没试过）。
+02:53 * xxxxxxxxx 没有仔细阅读MSYS2相关的文档直接打开了MSYS2的shell
+02:54 xxxxxxxxx: cc1plus.exe: warning: ./stdinc.h.gch: created by a different GCC executable 这个怎么搞?
+02:55 FrankHB: ...这个当前手动清理吧。
+02:55 FrankHB: build目录下找到*.gch通通干掉就是了。
+02:57 xxxxxxxxx: 竟然手动清理.....
+02:58 xxxxxxxxx:  1 [main] make 7796 child_info_fork::abort: S:\msys32\usr\bin\msys-unistring-2.dll: Loaded to different address: parent(0x440000) != child(0x5F0000)
+02:58 xxxxxxxxx: make: fork: Resource temporarily unavailable
+02:58 xxxxxxxxx: lto-wrapper: make returned 2 exit status
+02:58 xxxxxxxxx: S:/msys32/mingw32/bin/../lib/gcc/i686-w64-mingw32/4.9.2/../../../../i686-w64-mingw32/bin/ld.exe: lto-wrapper failed
+02:58 xxxxxxxxx: collect2.exe: error: ld returned 1 exit status
+03:00 FrankHB: pacman -Syu了以后先退出一下bash。
+03:00 FrankHB: 大概这里用了NT黑科技，否则是dll也干不掉的。
+03:03 lh_cat joined channel
+03:14 xxxxxxxxx: 然而用mingw32编译似乎就很顺利....
+03:16 FrankHB: 本来就是mingw32的……
+03:16 FrankHB: 我在奇怪为什么检查到MSYS编译器为什么会直接溜到DS那里。。。
+03:17 FrankHB: 总之wiki页面Prerequisitions.zh-CN.md先更新一下。
+03:20 FrankHB: ok.
+03:21 boosure joined channel
+03:21 FrankHB: 全部安装大小：  201.94 MiB 。。。看来还得装一会儿。。。
+03:27 cleamoon__ joined channel
+04:52 cleamoon quit:Ping timeout: 252 seconds
+04:54 cleamoon joined channel
+05:13 lh_cat quit:Quit: Connection closed for inactivity
+06:20 lh_not_bot quit:Ping timeout: 256 seconds
+06:21 lh_not_bot joined channel
+06:32 boosure quit:Ping timeout: 256 seconds
+06:49 boosure joined channel
+06:51 cleamoon quit:Read error: Connection reset by peer
+06:52 cleamoon joined channel
+07:08 hoxily joined channel
+07:39 xxxxxxxxx quit:Quit: Leaving...
+07:48 lhanjian joined channel
+07:50 izmntuk joined channel
+08:02 cleamoon quit:Ping timeout: 256 seconds
+08:17 izmntuk quit:Quit: leaving
+08:19 cleamoon joined channel
+08:20 boosure quit:Quit: Get your hand off of it
+08:28 xxxxxxxx joined channel
+08:39 izmntuk joined channel
+08:51 beefcafe quit:Quit: Unwilling to leave, unable to stay...
+08:53 beefcafe joined channel
+08:54 cafebeef quit:Quit: Unwilling to leave, unable to stay...
+09:01 cafebeef joined channel
+09:13 lh_mouse joined channel
+09:16 lhanjian_ joined channel
+09:23 izmntuk quit:Quit: re-
+09:24 izmntuk joined channel
+09:30 cleamoon__ quit:Ping timeout: 255 seconds
+09:37 cleamoon quit:Ping timeout: 250 seconds
+09:39 cleamoon joined channel
+09:56 hoxily quit:Quit: Leaving
+10:06 Guest57971 quit:Quit: Reconnecting
+10:06 lh_not_bot joined channel
+10:14 yzld2002 joined channel
+10:17 pocmon joined channel
+10:19 cleamoon__ joined channel
+10:42 izmntuk quit:Quit: reboot
+10:44 izmntuk joined channel
+10:58 izmntuk quit:Read error: Connection reset by peer
+11:03 izmntuk joined channel
+11:11 cleamoon quit:Ping timeout: 264 seconds
+11:12 cleamoon joined channel
+11:25 cleamoon quit:Ping timeout: 256 seconds
+11:26 cleamoon joined channel
+12:24 pocmon quit:Quit: Leaving.
+12:34 lh_cat joined channel
+12:36 lh_cat: 你们都是笨蛋！
+12:37 * lhanjian_ 是笨蛋
+12:45 whatofor joined channel
+12:46 iyzsong: v.v
+12:48 whatofor_1 quit:Ping timeout: 255 seconds
+13:31 pocmon joined channel
+13:47 cleamoon quit:Ping timeout: 265 seconds
+13:48 cleamoon joined channel
+13:56 cleamoon quit:Ping timeout: 250 seconds
+13:57 cleamoon joined channel
+14:26 cleamoon quit:Ping timeout: 250 seconds
+14:27 cleamoon joined channel
+14:42 xeirrr joined channel
+14:53 lh_cat quit:Quit: Connection closed for inactivity
+15:02 pocmon quit:Read error: Connection reset by peer
+15:11 FrankHB quit:Ping timeout: 244 seconds
+15:15 sismvg joined channel
+15:15 sismvg: http://imgsrc.baidu.com/forum/w%3D580/sign=6a5d1a200c24ab18e016e13f05fae69a/2765ae1ea8d3fd1f790f5d3c354e251f94ca5fa4.jpg
+15:15 sismvg: 战神包青天 233
+15:18 varna joined channel
+15:18 varna: xxxxxxxx: 爆
+15:18 varna: lhanjian: 爆
+15:18 varna: lhanjian_: 爆
+15:19 lhanjian_: varna, 揉
+15:19 varna: 居然不炸了
+15:19 lhanjian_: varna, 没力气了
+15:19 xxxxxxxx: 羊驼快准备探路
+15:21 varna: 翻了下log, 又看到摩罗沙在给proof传教
+15:21 varna: 我比较赞同岚月酱的意见，也即证明是用来改进理论/发现问题的
+15:21 varna: 很难写下一个真正的Q.E.D.
+15:22 varna: 一味鼓吹证明带来的软件正确性，如同试图使用类型系统保证契约的正确性一样过分天真
+15:22 varna: 我宁可称这方法为infernece或者deduction
+15:23 varna: 这次我不开荒
+15:30 sismvg: http://www.ithome.com/html/it/144426.htm
+15:30 varna: “像武昌火车站这样人流量大的点位”
+15:42 xxxxxxxx: 智能手机刺激新产业 下水道资源回收 翻新 低价再出售一条龙2333
+15:42 varna: xxxxxxxx: Good Job
+15:44 sismvg: 给udp加上防丢包能力会多影响效率？
+15:44 varna: 你打算怎么加
+15:44 Xilzzerts: 直接上TCP不就得了
+15:44 varna: 如果你只打算做文件传输，有一个现成的协议UDT可用
+15:45 sismvg: 超时重传
+15:45 varna: TCP在高带宽延时网络上的效果不好
+15:45 sismvg: 不关心顺序
+15:45 varna: 然后你被维护了成吨的超时定时器？
+15:45 sismvg: 没有。。
+15:45 varna: 我假设你的UDP报是按MTU切分的，不然可以洗洗睡了
+15:46 varna: UDP发大报=作大死
+15:47 whocares_2 quit:Ping timeout: 256 seconds
+15:47 FrankHB joined channel
+15:51 lh_cat joined channel
+15:54 lh_mouse quit:Ping timeout: 245 seconds
+16:04 xeirrr joined channel
+16:05 xeirrr: Varna: 爆
+16:07 varna: xeirrr: 你这基佬
+16:11 xxxxxxxx: 不开荒的羊驼算什么羊鱼
+16:13 izmntuk quit:Quit: leaving
+16:14 varna: 我穷，开不起荒……
+16:15 xeirrr: ...
+16:34 OO_after quit:Ping timeout: 264 seconds
+16:39 OO_after joined channel
+16:39 varna: http://imgsrc.baidu.com/forum/w%3D580/sign=036174674ac2d562f208d0e5d71090f3/5fe3b203918fa0ecb2a3be0a239759ee3d6ddb01.jpg
+16:41 izmntuk joined channel
+16:43 OO_after quit:Ping timeout: 245 seconds
+16:46 OO_after joined channel
+16:49 xxxxxxxx: 然后我感觉我大概都没有"在座"的机会
+16:51 varna: 丙等不锁船
+16:51 varna: 用力打不要怂
+16:52 varna: 官推说只有甲乙锁
+17:06 xeirrr quit:Read error: Connection reset by peer
+17:18 xxxxxxxx: varna 那如果第一阶段不打丙后面打丙船会被锁么?
+17:21 varna: xxxxxxxx: 不知道
+17:24 cleamoon__: 羊驼子赶紧甲鱼开荒
+17:26 cleamoon__: http://mtmos.com/v1/mss_3d027b52ec5a4d589e68050845611e68/ff/n0/0b/jw/aq_429706.jpg  不恨sfw的图
+17:27 varna: 我开不动，等dalao
+17:27 cleamoon__: 江苏征首笔微信红包个人所得税 发300万交税75万
+17:27 varna: 如果上得去，今晚我就收收远征看看热闹
+17:29 cleamoon__: 刚才看新闻，某条新闻说多位国会议员致贺，我看成了多位国会议员被殴...
+17:29 cleamoon__: 我到底怎么做到的...
+17:30 cleamoon__: 从上周日开始，中国境内的Chrome和IE用户报告访问嵌入Facebook Connect脚本的网站会自动定向到开源网站wpkg.org和旅游网站ptraveler.com。到了周二，域名投毒力度显然加大了，几乎任何浏览器（Tor浏览器除外）访问境外网站都会被重定向到wpkg.org。类似百度脚本在国内的流行度，Facebook脚本在国外也被广泛使用，有少许影响力的网站
+17:30 cleamoon__: 多会嵌入Facebook脚本。上个月大炮劫持了百度脚本发动攻击，这个月它投毒了connect.facebook.net的域名解析，wpkg.org则无辜中枪，这一策略早在今年初就被使用。路透社报道称，wpkg项目首席开发者Tomasz Chmielewski表示他们不清楚为什么来自中国的流量会被重定向到他们的网站。这看起来不是一个事故，而是有意为之，整个DNS投毒已
+17:30 cleamoon__: 经持续了3天。为了避免重定向
+17:31 varna: 不止是偷渡
+17:31 varna: 投毒*
+17:31 varna: 干脆有劫持
+17:31 varna: 另外有一批被重定向的流量就来自岛风狗……
+17:34 cleamoon__: WPKG is an automated software deployment, upgrade and removal program for Windows. 看起来挺有用呀
+17:35 iyzsong: - -b
+17:48 yzld2002 quit:Remote host closed the connection
+17:50 yzld2002 joined channel
+17:51 cleamoon__: 啊，舰娘登陆不上...
+17:52 varna: 维护推迟了
+17:52 varna: 目前恐怕得等到北京时间八点半之后
+17:53 cleamoon__: .....
+17:54 yzld2002 quit:Remote host closed the connection
+17:55 cleamoon__: 维护娘的下体掉出了板子
+17:55 yzld2002 joined channel
+17:56 FrankHB quit:Remote host closed the connection
+17:56 FrankHB joined channel
+18:07 Xilzzerts: + 3、选择 /home 分区 （每创建一个用户的文档地址，所在分区）
+18:07 Xilzzerts: 期望容量 1024
+18:07 Xilzzerts: + 4、选择 /data 分区 （如果为服务器最好给个存放数据的分区）
+18:07 Xilzzerts: 期望容器 1024
+18:07 Xilzzerts: 内部一个神奇的教程
+18:16 xiaoxi joined channel
+18:28 cleamoon__ quit:Ping timeout: 255 seconds
+18:35 xxxxxxxx: 啥教程球围观
+18:45 Plough joined channel
+18:46 izmntuk quit:Quit: leaving
+18:46 varna: Plough: 掘
+18:47 Plough: varna: 肛
+18:47 Plough: 我就知道六点不可能维护完
+18:47 varna: 八点二十
+18:47 varna: 我晚点再回来看E0的状况
+18:47 varna: 估计一段时间之内都登不上去
+18:49 Plough: 反正我接着玩各种clicker
+18:51 varna: cookie clicker?
+18:51 Plough: 和civ clicker
+18:51 Plough: 两个同时开才是正道，不然等死……
+18:51 varna: 本来想跟你推荐WITP: AE的
+18:51 varna: 不过想想322页的手册和巨烂的UI还是算了
+18:51 Plough: 之前看到你说过
+18:52 varna: 如果菜单做得像样点，手册大概能省掉一半
+18:52 Plough: 啊咧，官推开始挤牙膏了？
+18:52 varna: 都是废话
+18:52 Plough: 果然
+18:52 varna: E2葛城
+18:52 Plough: 另外果然是葛城
+18:52 Plough: ……意大利
+18:52 Plough: 我猜中了一只，看看另一只
+18:53 varna: 利托里奥……
+18:53 Plough: 利托里奥后来改名叫意大利了
+18:53 Plough: 我就看看立绘如何
+18:53 varna: 我主要关注E5和E6要不要联合舰队
+18:53 Plough: 这决定了我这一百块钱买的是戒指还是刀片
+18:54 varna: 目前的情报只说了第一阶段的E2/E4
+18:54 Plough: 后来我才反应过来是我看错了
+18:54 Plough: 总之我祈祷E5别来个联合舰队
+18:54 Plough: 不然两个机动部队八条航母没了
+18:54 Plough: 我上哪弄八条航母……
+18:55 theJian joined channel
+18:55 varna: 机动部队最低是2cv1cvl吧
+18:55 Plough: 制空
+18:55 Plough: 而且我可用的正航不多
+18:56 Plough: 大凤加贺二航二航二，没了
+18:56 Plough: 啊，已经进化到Metropolis了
+18:56 Plough: 昨晚睡前还是Large City……
+18:57 varna: 打捞限定：高波
+18:57 varna: 第一阶段后半段
+18:58 Plough: 反正我不专门捞……
+18:58 varna: 我就想在晓的腹股沟上铭刻胜利
+18:58 Plough: Thinkpad的雾面屏看着这么舒服，怎么能砸了呢
+19:03 varna: 二十分钟之后开始E0，我先回避下
+19:04 Plough: 一小时二十分吧
+19:04 Plough: 現在実施中の「艦これ」全サーバ群共通メンテナンス＆アップデートは、後半段階に移行しています。作業進捗に【遅れ】が発生しており、申し訳ありません。現時点の作業完了見込みは【21:20】を予定しています。このあと、本日のアップデート情報をお知らせしてまいります。
+19:04 Plough: 有人准备开始拆包了
+19:05 Plough: varna: 05▼新システム【能動分岐】について
+19:05 Plough: これまで「艦これ」では、全ての艦隊針路分岐において艦隊編成などの条件等を含む羅針盤分岐でしたが、本日のアップデートにより一部の海域ポイントにおいて、提督の能動的な判断によって艦隊の針路選択が可能な「能動分岐」が実装されます。
+19:05 Plough: 这什么鬼
+19:05 Plough: 我操，自选路线！？
+19:07 Plough: 噗
+19:07 Plough: 二式大艇
+19:10 Plough: 磕药炮改五星
+19:10 Plough: 运营疯了
+19:19 whocares_2 joined channel
+19:19 cleamoon__ joined channel
+19:21 cleamoon__: dalao开荒要多久？
+19:30 moon717 joined channel
+19:32 cleamoon__: 自选路线？什么意思？
+19:37 izmntuk joined channel
+19:37 Plough: 少部分点罗盘娘罢工了，自己挑路线
+19:38 Plough: 另外，理事长回来了
+19:38 Plough: 最后一张图难度十四星
+19:38 Plough: 我咸了
+19:39 cleamoon__: 也就是会两头门神吧
+19:39 cleamoon__: 噗
+19:40 cleamoon__: 奖励公布了吗
+19:41 Plough: E2葛城E4利托里奥
+19:41 Plough: 我操
+19:41 Plough: 罗马……
+19:42 cleamoon__: 这都什么鬼
+19:42 cleamoon__ quit:Read error: Connection reset by peer
+19:42 Plough: 罗马这个丧货怎么出来了
+19:42 Plough: 我要维内托酱啊
+19:43 cleamoon__ joined channel
+19:44 Plough: 我操
+19:44 Plough: 罗马还是掉落
+19:44 Plough: 这玩个屁
+19:49 Plough: 关底奖励秋津洲
+19:49 Plough: 运营你妈飞了
+19:50 cleamoon__: 秋津洲是什么鬼
+19:51 Plough: 水母
+19:51 Plough: 为什么有二式大艇很明显了
+19:51 cleamoon__: .........
+19:55 xiaoxi quit:Ping timeout: 276 seconds
+20:01 Plough: 噗
+20:01 Plough: 为什么利托里奥胸部那么大
+20:01 Plough: 刀片预订
+20:05 Plough: 岛田你他妈也磕错药了么
+20:05 Plough: 利托里奥简直丑飞
+20:06 Matsune joined channel
+20:08 cleamoon__: 哪里有信息？官推？
+20:09 Plough: 拆包
+20:09 Plough: http://www.twitch.tv/jetrico
+20:10 cleamoon__: ......
+20:11 cleamoon__: 多了个战舰？
+20:12 cleamoon__: 我去，这图怎么那么鬼畜
+20:13 cleamoon__: 这个战舰好霸气
+20:15 lh_not_bot: g++ 4.7 又成功地把老子坑了
+20:15 lh_not_bot: 操他妈的   查了半天 segment fault
+20:15 lh_not_bot: 函数默认形参用 { }  直接他妈当聚合初始化了
+20:15 cleamoon__: 为什么不用clang
+20:27 xiaoxi joined channel
+20:31 cleamoon__ quit:Read error: Connection reset by peer
+20:33 cleamoon__ joined channel
+20:41 theJian quit:Remote host closed the connection
+20:44 cleamoon__: 舰女人还是进不去
+20:48 xiaoxi quit:Remote host closed the connection
+20:58 theJian joined channel
+20:58 lh_not_bot: lhanjian_: https://github.com/lhmouse/poseidon/blob/master/template-src/mmain.cpp
+20:58 lh_not_bot: lhanjian: 
+20:58 lhanjian_: roger
+21:00 cleamoon__ quit:Ping timeout: 256 seconds
+21:02 theJian quit:Client Quit
+21:03 cleamoon__ joined channel
+21:03 theJian joined channel
+21:04 theJian quit:Max SendQ exceeded
+21:05 theJian joined channel
+21:06 lh_not_bot: lhanjian_: src/http/client.hpp   85 行    StreamBuffer entity = StreamBuffer() 改成 StreamBuffer entity = { } 编译没问题   一运行就 SIGSEGV
+21:06 lh_not_bot: g++ 4.7.2   -std=c++11
+21:09 cleamoon__ quit:Ping timeout: 256 seconds
+21:09 lhanjian_: lh_not_bot, 现在耗子的进展到哪儿了？
+21:09 lolisa joined channel
+21:10 lh_cat: lhanjian_, http client
+21:13 cleamoon__ joined channel
+21:20 cleamoon__ quit:Ping timeout: 256 seconds
+21:20 sismvg: http://bbs.soul-plus.org/read.php?tid=135810
+21:20 sismvg: 233333333333
+21:24 varna: E0开始
+21:25 varna: E1莉改啊
+21:25 Plough: 罗马的立绘还是没出来
+21:25 Plough: 是
+21:25 Plough: 不过斩杀阶段二号位是那珂酱
+21:25 varna: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=e3c76b8ed5a20cf44690fed746324a36/f11f3a292df5e0fe23606508596034a85edf72bb.jpg 这什么破玩意……
+21:26 lh_not_bot: lhanjian_: 你用什么版本的编译器
+21:26 Plough: 所以我在怀疑这到底是不是岛田画得
+21:26 lhanjian_: g++ (GCC) 4.9.2 20150304 (prerelease)
+21:26 Plough: 的*
+21:26 lhanjian_: clang version 3.6.0 (tags/RELEASE_360/final)
+21:26 varna: Plough: 看着不像，岛田是强袭魔女那个画风
+21:27 Plough: 总之刀片
+21:27 Plough: 我就看看罗马什么样
+21:27 varna: 活动开始时的资源数：109200/99965/111925/52814+791
+21:27 varna: E1是水雷屋啊，开干
+21:27 Plough: 另外横镇猫屋佐伯湾炸了
+21:28 varna: 2333
+21:28 varna: 猫屋……
+21:28 Plough: 运营把锅甩给了海外提督
+21:28 Plough: 「艦これ」全サーバ群メンテナンス＆アップデート、作業完了しています。提督の皆さん、大変お待たせしました！メンテ完了前後から、海外からと思われるイレギュラーなアクセスが急増しています。一部サーバ群では接続が不安定となる可能性があります。現在、対応と対策に入っています。
+21:28 varna: 强行海外
+21:28 varna: 我上不上道中支援呢……
+21:29 Plough: E1似乎很水
+21:29 Plough: 我建议你先看看
+21:29 varna: 我看到甲等阵容了
+21:29 varna: 但是我有点担心第三点
+21:29 lh_mouse: lhanjian_, 你试试我刚才说那个问题
+21:29 lh_mouse: 4.7.2 可重现
+21:30 varna: 先试一次
+21:31 varna: 神通（85）POI（113）小和（97）绫波（96）欠雪（92）岛风（83）
+21:31 varna: 走起
+21:32 endle joined channel
+21:32 varna: 第一点1cl5dd无伤过
+21:32 varna: HE级flagship RO级爷爷*2 RO级*2
+21:33 varna: 走下路试试
+21:33 varna: 下路第一点潜艇
+21:33 lhanjian_: compiling
+21:34 sismvg: 内存不足
+21:34 varna: Ka级flagship Ka级*3
+21:34 varna: 无伤通过
+21:35 varna: 下路第三战
+21:35 varna: 复纵3cl3dd
+21:35 varna: 压制，通过
+21:35 varna: 小和-7hp
+21:36 varna: 索敌进
+21:36 Plough: 幌筵炸了
+21:36 lhanjian_: lh_mouse, $./bin/poseidon ./etc/poseidon/ 运行无误
+21:36 lhanjian_: FATAL MyClient::~MyClient() #template-src/mmain.cpp:583
+21:37 Plough: 还好我机智地没出击
+21:37 varna: POI强行吃桶……
+21:37 varna: 昼战结束，雷击POI大破
+21:37 varna: 简直北上
+21:38 varna: 谷风
+21:38 Plough: 欧rz
+21:38 lh_not_bot: lhanjian_: 故意的
+21:38 lh_not_bot: 我一般测试用 FATAL 的日志
+21:38 varna: POI吃桶，小和扔渠里修，换米空上
+21:39 lh_not_bot: lhanjian_: 这个 HTTPS 的客户端应该还堪用
+21:39 lhanjian_: HTTPS的客户端？
+21:40 lhanjian_: 实现https proxy的时候，其实并不需要https proxy
+21:40 lhanjian_: 实现https proxy的时候，其实并不需要https client,是https server就行了
+21:42 sismvg: 嗯。。天气预报终于准一次了
+21:42 Plough: 幌筵直接把我踢回了顺序接线
+21:43 sismvg: 有没有类似 “初始化锁“的东西，用于同步多个线程初始化?
+21:44 whatofor quit:Read error: Connection reset by peer
+21:44 varna: sismvg: 你可以用条件变量
+21:48 lolisa quit:Quit: Leaving
+21:48 sismvg quit:Quit: ChatZilla 0.9.91.1 [Firefox 37.0.1/20150402191859]
+21:49 izmntuk quit:Quit: leaving
+21:49 Xilzzerts quit:Ping timeout: 248 seconds
+21:50 lh_cat joined channel
+21:57 FrankHB: std::call_once
+21:57 varna: FrankHB: 这个比POSIX的那东西如何
+22:00 FrankHB: 至少表面上干净了点。
+22:01 varna: 这样啊
+22:01 varna: 不过C艹的东西我有理由相信好点，毕竟C没闭包各种难受
+22:03 lhanjian_: void * void * void * void * void * ……
+22:04 varna: 我都受够void *了，最后干脆让Perl有调用C函数的能力……
+22:04 varna: 强行给定原型元数据和函数指针，从Perl里传参调用
+22:05 varna: 现在fubuki的大部分用户需求（比如保存、读取、undo、redo）都走了这个口……
+22:05 varna: 另外对咸鱼的提醒
+22:06 varna: 目前看来，难度上调下调都不能跳级
+22:06 varna: 目前看来，难度上调下调都不能跳级
+22:06 varna: 目前看来，难度上调下调都不能跳级
+22:06 varna: 请慎重安排攻略阵容
+22:06 lh_cat: 庭审中，出现了中国诉讼史上罕见一幕：被告人及辩护律师称这桩犯罪行为是本方当事人所做，公诉方称被告人没有实施某桩犯罪行为。
+22:07 varna: E1甲极弱，建议诸君量力安排
+22:07 iyzsong: -.-
+22:07 varna: 推荐的阵容是2cl4dd, 路线是下路，索敌要求不确认
+22:09 varna: 对E1甲攻略的伙计（大概主要是肛旗和EA）指出，C点有雷巡
+22:11 wsyh quit:Remote host closed the connection
+22:11 Plough: 了解
+22:11 Plough: 然而我根本上不去游戏
+22:12 varna: 今晚我E2都不太想打……
+22:13 lh_cat: plough 的度狗帐号是啥来着
+22:13 Plough: 看到意大利的立绘我也不想打了
+22:13 wsyh joined channel
+22:13 Plough: lh_cat: @土耳其海军司令 
+22:13 lh_cat: 是这个？
+22:14 varna: 是
+22:14 lh_cat: 一起就是？
+22:14 izmntuk joined channel
+22:14 varna: E1门神有超厉害的驱逐舰掉落
+22:14 varna: E1门神有超厉害的驱逐舰掉落
+22:14 lh_cat: 一直
+22:15 varna: 不是
+22:15 varna: 他换过几个号
+22:15 lh_cat: 以前的呢
+22:15 Plough: 啥DD
+22:15 varna: Plough: 绫波
+22:15 Plough: ……
+22:15 varna: lh_cat: 沙皇、北斗
+22:16 varna: 还有些别的
+22:16 Plough: DreamHL->凤凰院红旗->战地3->北斗->沙皇->土耳其海军司令
+22:16 lh_cat: 沙皇海军司令？
+22:17 lh_mouse quit:Read error: Connection reset by peer
+22:17 lhanjian_ quit:Quit: Leaving
+22:17 lh_cat: 沙皇海军司令？
+22:17 lhanjian quit:Remote host closed the connection
+22:17 Plough: 北斗换沙皇纯粹是意外
+22:17 lh_mouse joined channel
+22:17 Plough: 北斗被禁登了，我随便找的ID
+22:18 varna: 什么鬼……
+22:18 lh_cat: 这俩是神 id 哇
+22:18 Plough: 禁登的理由应该是涉嫌ID交易
+22:18 Plough: 苏格拉底也在我受伤
+22:18 Plough: 手上*
+22:19 lh_cat: 你给的不够多
+22:19 Plough: 沙皇有人预订了，还没付款
+22:19 Plough: 其实那段时间是管理组偶尔大姨妈一次
+22:19 varna: 卧槽32不够用了
+22:19 Plough: 我认识的不少人都中枪了
+22:19 lh_cat: 你是卖号的？
+22:20 Plough: @空之境界 @东方project 之类的
+22:20 Plough: 以前玩过一段时间
+22:20 lh_cat: 土豪
+22:20 Plough: 不壕
+22:20 Plough: 我玩的都是便宜的
+22:20 hysw joined channel
+22:21 varna: 太见鬼了
+22:21 wsyh quit:Ping timeout: 255 seconds
+22:21 lh_cat: 土豪
+22:21 varna: 目前32只能优先供应骑脸
+22:23 varna: 斩杀烧一个支援
+22:23 lh_cat: 卖号是小打小闹
+22:23 varna: 不过现在贴吧的各种东西都可以交易了吧……
+22:24 Plough: 早就可以了
+22:24 Plough: 只是现在管理组亲自来捞油了而已
+22:26 varna: POI徒手一发爆雷炸翻小黄鱼……
+22:26 Plough: ……
+22:26 varna: 斩杀门神单纵
+22:27 varna: 压制
+22:27 varna: 全队无伤进斩杀
+22:27 Plough: Orz
+22:27 varna: 门神掉了个JB...
+22:27 Plough: ……水母？
+22:28 varna: 矶波
+22:28 varna: 支援撸掉两个
+22:28 varna: 昼战剩NKC和莉改
+22:28 varna: 神通大破绫波大破，4v2
+22:28 varna: 对面2中破
+22:29 varna: 斩杀
+22:29 varna: S
+22:29 varna: 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+22:29 varna: 天津风
+22:30 varna: 奖励间宫、伊良糊、职人、51
+22:30 Plough: 欧rz
+22:30 Plough: 51!?
+22:30 varna: 以上，五血无劝退
+22:30 Plough: 第二门51!?
+22:30 Plough: 打打打
+22:31 varna: 先等等
+22:31 varna: 哦无所谓了
+22:32 Plough: 我操
+22:32 varna: 你的战力去E2甲也是砍瓜切菜
+22:32 Plough: 罗马也这破德行
+22:32 Plough: 玩个屁
+22:32 Plough: 这哪个画师干的
+22:32 Plough: 我去砍死他
+22:32 Plough: shizuma……
+22:33 varna: SHIZUMAAAAAAAAAAAAAAAAAA!?
+22:33 varna: 他居然能画崩！？
+22:33 Plough: 不对
+22:33 Plough: shizuma画的是秋津洲……
+22:33 Plough: 喔喔
+22:34 Plough: 天津风既视感
+22:34 varna: 求链接
+22:34 sleepwalking joined channel
+22:35 varna: sleepwalking: 爆
+22:35 Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=e3c76b8ed5a20cf44690fed746324a36/f11f3a292df5e0fe23606508596034a85edf72bb.jpg
+22:35 sleepwalking: 这是本学期正常上课的最后一个星期
+22:35 * sleepwalking 在高中三年第一次连翘课2天
+22:36 sleepwalking: 这两天感冒，正好把那该死的商务课逃掉了
+22:37 varna: 等下
+22:37 varna: E5 Boss是什么
+22:37 varna: 抓包有说法么
+22:37 varna: Plough: 秋津洲呢？
+22:37 sleepwalking: 然后明天去交一个专利申请文件，又能名正言顺翘一天课；星期四只有两节课，计划通
+22:37 Plough: varna: 不是在右边么
+22:37 Plough: 噗
+22:37 varna: 噗？
+22:38 Plough: 我被X的中键坑了
+22:38 Plough: http://imgsrc.baidu.com/forum/w%3D580%3B/sign=90d394ed942397ddd679980c69b9b3b7/fcfaaf51f3deb48f79bf0cd4f51f3a292cf578e2.jpg
+22:38 Plough: 这次应该是队的
+22:38 Plough: 对的*
+22:38 varna: thx
+22:38 varna: 秋津洲很赞
+22:39 varna: 战舰见鬼去吧，谁爱捞谁捞去
+22:39 Plough: 太可惜了
+22:39 varna: 哦，E5 Boss 240甲无所谓
+22:39 Plough: 明明是那么漂亮的舰体……
+22:39 Plough: 路基？
+22:39 varna: 泊地水鬼 430hp/240甲 陆基
+22:39 varna: 武大三式弹伺候
+22:39 Plough: 泊地水鬼23333
+22:40 varna: 常规舰队，甲等斩杀看来武大比较稳
+22:40 Plough: 大丈夫，这次我有武大了
+22:40 Plough: E6有情报么
+22:41 Plough: 港湾水鬼……
+22:41 varna: 陆基！？
+22:41 Plough: 不是
+22:41 Plough: 这个应该是前面的
+22:41 varna: 那应该是E4吧
+22:41 varna: 斯里兰卡姬
+22:41 Plough: 应该是
+22:42 varna: E6应该是和皇家海军决战
+22:42 Plough: E6是理事长
+22:42 varna: ...
+22:42 Plough: 我只关心卫队
+22:42 varna: 熟悉的味道，我的意思是咸味
+22:42 Plough: 理事长我又不是没见过
+22:42 varna: http://tieba.baidu.com/p/3730309082 这里是贴吧dalao比肝的推图贴，值得关注
+22:43 Plough: 美帝的新泽西，比你们不知高到哪里去了！（摆手）唉，我和她谈笑风生！（大拇指）
+22:43 varna: 比肝比较肝，他家高雄在饼号作战的时候打出过一个数字820+的骇人伤害
+22:43 varna: 而且还打了两次
+22:43 Plough: ……
+22:44 varna: 官方似乎暂时放弃幌筵了
+22:44 varna: 连个P都没放
+22:45 Plough: 运营的亲妈已经飞出大气层
+22:45 Plough: 明天回来我再看看
+22:45 sleepwalking quit:Quit: Ex-Chat
+22:45 varna: E4港湾水鬼确认
+22:46 Plough: E2和E3呢
+22:46 varna: E2和E3据说不强
+22:46 varna: 不过道中情况不知道
+22:47 varna: http://tieba.baidu.com/p/3730451362
+22:47 Plough: E2装甲空母姬……
+22:47 varna: E2攻略
+22:47 varna: 噗
+22:47 varna: 挡枪姬？
+22:47 varna: 这不是随便就能虐杀的么……
+22:47 Plough: 英国佬是不是有条装母来着
+22:47 code_new joined channel
+22:47 varna: 挡枪姬简直弱爆了啊
+22:48 varna: 机动部队干过去就可以了吧
+22:48 Plough: 大概是
+22:48 Plough: 我看看有没有E3的情报
+22:48 varna: 然而今晚吃多了有点迷糊，先不作战
+22:48 varna: 而且我二队挂水上机了
+22:48 code_new: 你们E2过了0.0
+22:48 varna: 没
+22:48 varna: E2懒得今天打了
+22:48 Plough: 我根本进不去游戏你跟我提推图？
+22:49 code_new: 我还是等5.1再开始吧
+22:49 varna: 目前的资源数：108525/99214/111773/52844+785
+22:49 code_new: Orz
+22:49 Plough: E3 Boss是补给船……
+22:49 Plough: 这都什么鬼
+22:49 varna: 这太愉悦了，我有点害怕
+22:49 code_new: 我还是保持在每项40k+
+22:49 Plough: 然后E6给你摆三个理事长在那
+22:50 varna: 鬼知道他们能给甲等搞出什么来
+22:50 Plough: “你打啊？你倒是打啊？你打谁啊？”
+22:50 varna: 总之我做好了长期战的准备
+22:50 Plough: 我先去睡觉了
+22:50 Plough: 明天回来看看幌筵情况如何
+22:50 varna: 我也逛逛回去了
+22:50 Plough quit:Quit: 睡觉
+22:50 varna: 啊，论文收到了
+22:50 varna: 这样就放心了
+22:50 izmntuk quit:Quit: leaving
+22:54 varna: code_new: 另外前两面不锁船，可以全力攻略（虽然就目前我的第一手经验和看到的情报，不必使出全力就很愉快）
+22:55 endle quit:Quit: Leaving
+22:56 yzld2002 quit:Quit: yzld2002
+23:00 varna: 撤退
+23:00 varna: 诸君武运
+23:00 varna quit:Quit: leaving
+23:39 theJian quit:Quit: Leaving
+23:42 xxxxxxxx: https://crafter.im/  卧槽
+23:43 * xxxxxxxx 上去把演习打了再说
+23:43 dantmnf: 文莱的 E0 太感人...
+23:44 dantmnf: 白坑我两桶
