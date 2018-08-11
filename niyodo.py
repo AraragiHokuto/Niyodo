@@ -1,4 +1,4 @@
-import mysql.connector
+import psycopg2
 import datetime
 import socket
 import json
@@ -23,7 +23,7 @@ MSGRE = re.compile(":([a-zA-Z0-9_\-\\\[\]{}^|]+)![^ ]+ ([A-Z]+) {} *:?(.*)".form
 QUITRE = re.compile(":([a-zA-Z0-9_\-\\\[\]{}^|]+)![^ ]+ QUIT *:?(.*)")
 ACTIONRE = re.compile("[^ ]*ACTION[^ ]* (.*)\x01")
 
-def on_recv(sock, message):
+def on_recv(sock, dbcnx, message):
     print(message)
     
     now = datetime.datetime.now()
@@ -54,12 +54,10 @@ def on_recv(sock, message):
 
     print(sender, msgtype, msgcontent)
     
-    cnx = mysql.connector.Connect(pool_name = "niyodo", **config["database"])
-    cursor = cnx.cursor()
+    cursor = dbcnx.cursor()
     cursor.execute("INSERT INTO message (type, sender, datetime, content) VALUES (%s, %s, %s, %s)",
                    (msgtype, sender, now, msgcontent))
-    cnx.commit()
-    cnx.close()
+    dbcnx.commit()
 
 if __name__ == "__main__":
     while True:
@@ -72,5 +70,9 @@ if __name__ == "__main__":
                     msg += sock.recv(4096)
             except OSError:
                 break
-            
-            on_recv(sock, msg.decode().strip())
+
+        cnx = psycopg2.connect(**config["database"])
+        try:
+            on_recv(sock, cnx, msg.decode().strip())
+        finally:
+            cnx.close()
