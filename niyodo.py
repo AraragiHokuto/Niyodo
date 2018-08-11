@@ -3,6 +3,7 @@ import datetime
 import socket
 import json
 import re
+import traceback
 
 with open("config.json") as f:
     config = json.load(f)
@@ -69,10 +70,11 @@ if __name__ == "__main__":
                 while b"\r\n" not in msg:        
                     msg += sock.recv(4096)
             except OSError:
+                traceback.print_exc()
                 break
 
-        cnx = psycopg2.connect(**config["database"])
-        try:
-            on_recv(sock, cnx, msg.decode().strip())
-        finally:
-            cnx.close()
+            cnx = psycopg2.connect(**config["database"])
+            try:
+                on_recv(sock, cnx, msg.decode().strip())
+            finally:
+                cnx.close()
