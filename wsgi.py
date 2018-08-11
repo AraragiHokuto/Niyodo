@@ -18,7 +18,7 @@ def index():
 def list_years():
     cnx = psycopg2.connect(**config["database"])
     cursor = cnx.cursor()
-    cursor.execute("SELECT DISTINCT DATE_PART('year', datetime) as year FROM message ORDER BY year")
+    cursor.execute("SELECT DATE_PART('year', datetime) as year FROM message GROUP BY year ORDER BY year")
 
     ret = ""
     for year, in cursor:
