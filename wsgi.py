@@ -1,6 +1,6 @@
 import flask
 import json
-import mysql.connector
+import psycopg2
 
 with open("config.json") as f:
     config = json.load(f)
@@ -13,36 +13,36 @@ def index():
 
 @app.route("/c_lang_cn/")
 def list_years():
-    cnx = mysql.connector.Connect(pool_name="niyodo", **config["database"])
+    cnx = psycopg2.connect(**config["database"])
     cursor = cnx.cursor()
-    cursor.execute("SELECT DISTINCT YEAR(datetime) FROM message ORDER BY datetime")
+    cursor.execute("SELECT DISTINCT DATE_PART('year', datetime) as year FROM message ORDER BY year")
 
     ret = ""
     for year, in cursor:
-        ret += '<a href="{0}/">{0}/</a><br>'.format(year)
+        ret += '<a href="{0}/">{0}/</a><br>'.format(int(year))
 
     return '<!DOCTYPE html><head><title>c_lang_cn</title><body>{}</body></html>'.format(ret)
 
 @app.route("/c_lang_cn/<year>/")
 def list_files(year):
-    cnx = mysql.connector.Connect(pool_name="niyodo", **config["database"])
+    cnx = psycopg2.connect(**config["database"])
     cursor = cnx.cursor()
-    cursor.execute("SELECT DISTINCT MONTH(datetime), DAY(datetime) FROM message "
-                            "WHERE YEAR(datetime) = %s ORDER BY datetime, id", (year, ))
+    cursor.execute("SELECT DISTINCT DATE_PART('month', datetime) as month, DATE_PART('day', datetime) as day FROM message "
+                   "WHERE DATE_PART('year', datetime) = %s ORDER BY month, day", (year, ))
     
     ret = ""
     for month, day in cursor:
-        ret += '<a href="{month:02d}-{day:02d}.txt">{month:02d}-{day:02d}.txt</a><br>'.format(month=month, day=day)
+        ret += '<a href="{month:02d}-{day:02d}.txt">{month:02d}-{day:02d}.txt</a><br>'.format(month=int(month), day=int(day))
 
     cnx.close()
-    return "<!DOCTYPE html><head><title>{}</title></head><body>{}</body></html>".format(year, ret)
+    return "<!DOCTYPE html><head><title>{}</title></head><body>{}</body></html>".format(int(year), ret)
 
 @app.route("/c_lang_cn/<year>/<month>-<day>.txt")
 def show_content(year, month, day):
-    cnx = mysql.connector.Connect(pool_name="niyodo", **config["database"])
+    cnx = psycopg2.connect(**config["database"])
     cursor = cnx.cursor()
     cursor.execute("SELECT sender, datetime, type, content FROM message "
-                            "WHERE YEAR(datetime) = %s AND MONTH(datetime) = %s AND DAY(datetime) = %s "
+                   "WHERE DATE_PART('year', datetime) = %s AND DATE_PART('month', datetime) = %s AND DATE_PART('day', datetime) = %s "
                             "ORDER BY datetime, id", (year, month, day))
 
     ret = ""
