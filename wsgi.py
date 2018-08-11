@@ -1,15 +1,18 @@
 import flask
 import json
 import psycopg2
+import html
 
 with open("config.json") as f:
     config = json.load(f)
 
 app = flask.Flask(__name__)
+app.jinja_env.line_statement_prefix = '#'
+app.jinja_env.line_comment_prefix = '///'
 
 @app.route("/")
 def index():
-    return '<!DOCTYPE html><head><title>Index</title></head><body><a href="c_lang_cn/">c_lang_cn/</a></body></html>'
+    return flask.render_template("index.tmpl")
 
 @app.route("/c_lang_cn/")
 def list_years():
@@ -32,7 +35,7 @@ def list_files(year):
     
     ret = ""
     for month, day in cursor:
-        ret += '<a href="{month:02d}-{day:02d}.txt">{month:02d}-{day:02d}.txt</a><br>'.format(month=int(month), day=int(day))
+        ret += '<a href="{month:02d}-{day:02d}.txt">{month:02d}-{day:02d}.html</a><br>'.format(month=int(month), day=int(day))
 
     cnx.close()
     return "<!DOCTYPE html><head><title>{}</title></head><body>{}</body></html>".format(int(year), ret)
@@ -41,27 +44,36 @@ def list_files(year):
 def show_content(year, month, day):
     cnx = psycopg2.connect(**config["database"])
     cursor = cnx.cursor()
-    cursor.execute("SELECT sender, datetime, type, content FROM message "
+    cursor.execute("SELECT id, sender, datetime, type, content FROM message "
                    "WHERE DATE_PART('year', datetime) = %s AND DATE_PART('month', datetime) = %s AND DATE_PART('day', datetime) = %s "
                             "ORDER BY datetime, id", (year, month, day))
 
-    ret = ""
-    for sender, datetime, msgtype, message in cursor:
-        content = ""
-        if msgtype == "ACTION":
-            content = "* {} {}".format(sender, message)
-        elif msgtype == "PRIVMSG":
-            content = "{}: {}".format(sender, message)
-        elif msgtype == "JOIN":
-            content = "{} joined channel".format(sender)
-        elif msgtype == "PART":
-            content = "{} left channel".format(sender)
-        elif msgtype == "QUIT":
-            content = "{} quit".format(sender)
-
-        ret += "{:02d}:{:02d} {}\n".format(datetime.hour, datetime.minute, content)
-    
+    ret = flask.render_template("content.tmpl", cursor = cursor, year = year, month = month, day = day)
     cnx.close()
-    response = flask.make_response(ret)
-    response.headers["Content-Type"] = "text/plain"
-    return response
+    return ret
+
+@app.route("/search")
+def search():
+    query_string = flask.request.args.get('s')
+
+    cursor = None
+    cnx = psycopg2.connect(**config["database"])
+    if query_string:
+        try:
+            cursor = cnx.cursor()
+            cursor.execute("SELECT id, datetime, sender, "
+                           "pgroonga_highlight_html(content, pgroonga_query_extract_keywords(%s)) FROM message "
+                           "WHERE type = 'PRIVMSG' AND content &@~ %s "
+                           "ORDER BY datetime DESC", (query_string, query_string))
+        except:
+            cnx.close()
+            raise
+        
+        title = "{} - Search".format(html.escape(query_string))
+    else:
+        query_string = ""
+        title = "Search"
+        
+    ret = flask.render_template('search.tmpl', cursor=cursor, query_string=query_string, title=title)
+    cnx.close()
+    return ret

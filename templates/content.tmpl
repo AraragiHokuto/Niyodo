@@ -1,0 +1,29 @@
+/// -*- mode:jinja2 -*-
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>{{ year }}/{{ month }}/{{ day }}</title>
+  </head>
+  <body>
+    # for id, sender, datetime, msgtype, message in cursor
+    # if msgtype == "ACTION"
+    # set content = "* {} {}".format(sender, message)
+    # elif msgtype == "PRIVMSG"
+    # set content = "{}: {}".format(sender, message)
+    # elif msgtype == "JOIN"  
+    # set content = "{} joined channel".format(sender)  
+    # elif msgtype == "PART"
+    # set content = "{} left channel".format(sender)
+    # elif msgtype == "QUIT"
+    # set content = "{} quit".format(sender)
+    # else
+    # set content = ""
+    # endif
+    # if content != ""
+    <p id="{{ id }}" style="margin: 0">{{ datetime.strftime("%H:%M") }} {{ content }}</p>
+    # endif
+    # endfor
+  </body>
+</html>

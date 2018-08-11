@@ -1,0 +1,18 @@
+/// -*- mode:jinja2 -*-
+
+# extends "base.tmpl"
+
+# block content
+<form id="search" method="GET" action="/search" style="text-align:center;">
+  <input id="search-text" type="text" name="s" value="{{ query_string }}">
+  <input id="search-submit" type="submit" value="search">
+</form>
+# if cursor
+<div class="result-entry"></div>
+# for id, datetime, sender, html in cursor
+<div class="result-entry">
+<a href="c_lang_cn/{{ datetime.strftime("%Y/%m-%d.txt") }}#{{ id }}">{{ datetime.strftime("%y-%m-%d %H:%M") }} {{ sender }}: {{ html | safe }}</a>
+</div>
+# endfor
+# endif
+# endblock
