@@ -24,7 +24,7 @@ function Message(message: Message) {
     let datetime
     if (message.datetime.length == 3) {
 	let hour = padStart(message.datetime[0].toString(), 2, "00")
-	let minute = padStart(message.datetime[0].toString(), 2, "00")
+	let minute = padStart(message.datetime[1].toString(), 2, "00")
 	datetime = <span>{hour}:{minute} </span>
     } else {
 	let year = message.datetime[0].toString()
